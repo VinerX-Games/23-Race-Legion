@@ -1364,6 +1364,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_TestTest= null
 real array income
 real array incomeW
 real array disincome
