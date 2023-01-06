@@ -1,0 +1,97 @@
+﻿Frame "TEXT" "MyTextTemplate" { 
+	FontColor 1.0 1.0 1.0 1.0, 
+	FontShadowColor 0.0 0.0 0.0 1.0,
+	FontShadowOffset 0.002 -0.002,
+}
+
+Frame "TEXT" "Gold01" INHERITS "MyTextTemplate" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.01, "",
+ 	Text "0",
+}
+
+Frame "TEXT" "Gold02" INHERITS "MyTextTemplate" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.008, "",
+ 	Text "0",
+}
+
+Frame "TEXT" "Wood01" INHERITS "MyTextTemplate" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.01, "",
+ 	Text "0",
+}
+
+Frame "TEXT" "Wood02" INHERITS "MyTextTemplate" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.008, "",
+ 	Text "0",
+}
+
+Frame "TEXT" "Income01" INHERITS "MyTextTemplate" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.01, "",
+ 	Text "0",
+}
+
+Frame "TEXT" "Income02" INHERITS "MyTextTemplate" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.008, "",
+ 	Text "0",
+}
+
+Frame "TEXT" "Income0201" INHERITS "MyTextTemplate" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.01, "",
+ 	Text "0",
+}
+
+Frame "TEXT" "Income0202" INHERITS "MyTextTemplate" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.008, "",
+ 	Text "0",
+}
+
+Frame "TEXT" "Income0301" INHERITS "MyTextTemplate" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.01, "",
+ 	Text "0",
+}
+
+Frame "TEXT" "Income0302" INHERITS "MyTextTemplate" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.008, "",
+ 	Text "0",
+}
+
+Frame "TEXT" "MyTextTemplateHP" { 
+	FontColor 1.0 0.45 0.45 1.0, 
+	FontShadowColor 0.0 0.0 0.0 1.0,
+	FontShadowOffset 0.001 -0.001,
+}
+
+Frame "TEXT" "HPText" INHERITS "MyTextTemplateHP" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.012, "",
+ 	Text "0",
+}
+
+Frame "TEXT" "MyTextTemplateMP" { 
+	FontColor 0.53 0.85 1.0 1.0, 
+	FontShadowColor 0.0 0.0 0.0 1.0,
+	FontShadowOffset 0.001 -0.001,
+}
+
+Frame "TEXT" "MPText" INHERITS "MyTextTemplateMP" {
+	DecorateFileNames,
+	FrameFont "MasterFont", 0.012, "",
+ 	Text "0",
+}
+
+Frame "SIMPLEBUTTON" "FontInterface" {
+        Width 0.5765,
+	Height 0.135,
+		Texture "FontInterfaceTexture" {
+			File "FontInterface.blp",  
+		}
+}
