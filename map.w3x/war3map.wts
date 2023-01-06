@@ -136843,7 +136843,7 @@ STRING 22528
 }
 
 STRING 22529
-// Units: h0J1 (|cffd45e19Полу дикий ворген|r), EditorSuffix (Name - Editor Suffix)
+// Units: h0IM (|cffd45e19Ферма|r), EditorSuffix (Name - Editor Suffix)
 {
 (Воргены)
 }
@@ -136998,7 +136998,7 @@ STRING 22553
 }
 
 STRING 22554
-// Units: h0J1 (|cffd45e19Полу дикий ворген|r), Ubertip (Tooltip - Extended)
+// Units: h0IW (|cffd45e19Рыцарь|r), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
 Могучий верховой воин. Может изучить «Дрессировку животных». |n|n|cffffcc00Атакует наземные цели.|r
@@ -137071,7 +137071,7 @@ STRING 22565
 }
 
 STRING 22566
-// Units: h0IM (|cffd45e19Ферма|r), EditorSuffix (Name - Editor Suffix)
+// Units: h0IN (|cffd45e19Алтарь |r), EditorSuffix (Name - Editor Suffix)
 {
 (Воргены)
 }
@@ -137107,7 +137107,7 @@ STRING 22571
 }
 
 STRING 22572
-// Units: h0IN (|cffd45e19Алтарь |r), EditorSuffix (Name - Editor Suffix)
+// Units: h0IO (|cffd45e19Казармы|r), EditorSuffix (Name - Editor Suffix)
 {
 (Воргены)
 }
@@ -137149,7 +137149,7 @@ Q
 }
 
 STRING 22579
-// Units: h0IO (|cffd45e19Казармы|r), EditorSuffix (Name - Editor Suffix)
+// Units: h0IQ (|cffd45e19Кузница|r), EditorSuffix (Name - Editor Suffix)
 {
 (Воргены)
 }
@@ -137181,7 +137181,7 @@ STRING 22583
 }
 
 STRING 22584
-// Units: h0IQ (|cffd45e19Кузница|r), EditorSuffix (Name - Editor Suffix)
+// Units: h0IR (|cffd45e19Военная академия|r), EditorSuffix (Name - Editor Suffix)
 {
 (Воргены)
 }
@@ -137307,7 +137307,7 @@ STRING 22604
 }
 
 STRING 22605
-// Units: h0IW (|cffd45e19Рыцарь|r), Ubertip (Tooltip - Extended)
+// Units: h0IX (|cffd45e19Ворген друид|r), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
 Могучий верховой воин. Может изучить «Дрессировку животных». |n|n|cffffcc00Атакует наземные цели.|r
@@ -137362,7 +137362,7 @@ STRING 22613
 }
 
 STRING 22614
-// Units: h0IR (|cffd45e19Военная академия|r), EditorSuffix (Name - Editor Suffix)
+// Units: h0IS (|cffd45e19Храм друидов|r), EditorSuffix (Name - Editor Suffix)
 {
 (Воргены)
 }
@@ -137380,7 +137380,7 @@ STRING 22616
 }
 
 STRING 22617
-// Units: h0IS (|cffd45e19Храм друидов|r), EditorSuffix (Name - Editor Suffix)
+// Units: h0IT (|cffd45e19Постройщик|r), EditorSuffix (Name - Editor Suffix)
 {
 (Воргены)
 }
@@ -137711,7 +137711,7 @@ STRING 22671
 }
 
 STRING 22672
-// Units: h0IT (|cffd45e19Постройщик|r), EditorSuffix (Name - Editor Suffix)
+// Units: h0IV (|cffd45e19Стрелок|r), EditorSuffix (Name - Editor Suffix)
 {
 (Воргены)
 }
@@ -137753,7 +137753,7 @@ STRING 22678
 }
 
 STRING 22679
-// Units: h0IV (|cffd45e19Стрелок|r), EditorSuffix (Name - Editor Suffix)
+// Units: h0IW (|cffd45e19Рыцарь|r), EditorSuffix (Name - Editor Suffix)
 {
 (Воргены)
 }
@@ -138766,7 +138766,7 @@ STRING 22834
 }
 
 STRING 22835
-// Units: h0IW (|cffd45e19Рыцарь|r), EditorSuffix (Name - Editor Suffix)
+// Units: h0IX (|cffd45e19Ворген друид|r), EditorSuffix (Name - Editor Suffix)
 {
 (Воргены)
 }
@@ -138871,7 +138871,7 @@ STRING 22851
 }
 
 STRING 22852
-// Units: h0IX (|cffd45e19Ворген друид|r), EditorSuffix (Name - Editor Suffix)
+// Units: o02T (|cffd45e19Катапульта|r), EditorSuffix (Name - Editor Suffix)
 {
 (Воргены)
 }
@@ -138889,14 +138889,14 @@ STRING 22854
 }
 
 STRING 22855
-// Units: h0IX (|cffd45e19Ворген друид|r), Ubertip (Tooltip - Extended)
+// Units: h0IZ (|cffd45e19Рыцарь|r), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
 Могучий верховой воин. Может изучить «Дрессировку животных». |n|n|cffffcc00Атакует наземные цели.|r
 }
 
 STRING 22856
-// Units: o02T (|cffd45e19Катапульта|r), EditorSuffix (Name - Editor Suffix)
+// Units: h0J0 (|cffd45e19Ворген маг|r), EditorSuffix (Name - Editor Suffix)
 {
 (Воргены)
 }
@@ -138914,7 +138914,7 @@ STRING 22858
 }
 
 STRING 22859
-// Units: h0IZ (|cffd45e19Рыцарь|r), Ubertip (Tooltip - Extended)
+// Units: h0J1 (|cffd45e19Полу дикий ворген|r), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
 Могучий верховой воин. Может изучить «Дрессировку животных». |n|n|cffffcc00Атакует наземные цели.|r
@@ -138940,7 +138940,7 @@ STRING 22862
 }
 
 STRING 22863
-// Units: h0J0 (|cffd45e19Ворген маг|r), EditorSuffix (Name - Editor Suffix)
+// Units: h0J1 (|cffd45e19Полу дикий ворген|r), EditorSuffix (Name - Editor Suffix)
 {
 (Воргены)
 }
@@ -148411,6 +148411,12 @@ STRING 24421
 ), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|nГерой-всадник, возглавляющий армию бандитов, берущий все риски на себя и наносящий урон по большому количеству войск врага.
+}
+
+STRING 24422
+// Abilities: A04K (|cff6f2583Муссон|r), EditorSuffix (Editor Suffix)
+{
+(Медив?)
 }
 
 STRING 24423

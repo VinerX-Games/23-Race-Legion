@@ -1252,7 +1252,6 @@ trigger gg_trg_Player3VassalTo1_Back= null
 trigger gg_trg_P1_Vs_P2_P3_P4= null
 trigger gg_trg_ResO= null
 trigger gg_trg_ResO_Copy= null
-trigger gg_trg_TestTest= null
 unit gg_unit_n01B_0849= null
 unit gg_unit_h09O_0541= null
 unit gg_unit_n003_1002= null
@@ -1364,7 +1363,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_TestTest= null
 real array income
 real array incomeW
 real array disincome
@@ -39013,20 +39011,6 @@ function InitTrig_ResO_Copy takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: TestTest
-//
-// 123123123
-//===========================================================================
-function Trig_TestTest_Actions takes nothing returns nothing
-endfunction
-
-//===========================================================================
-function InitTrig_TestTest takes nothing returns nothing
-    set gg_trg_TestTest=CreateTrigger()
-    call TriggerAddAction(gg_trg_TestTest, function Trig_TestTest_Actions)
-endfunction
-
-//===========================================================================
 function InitCustomTriggers takes nothing returns nothing
     call InitTrig_runSeachHandle()
     call InitTrig_Unit_Indexer()
@@ -39840,7 +39824,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_P1_Vs_P2_P3_P4()
     call InitTrig_ResO()
     call InitTrig_ResO_Copy()
-    call InitTrig_TestTest()
 endfunction
 
 //===========================================================================
