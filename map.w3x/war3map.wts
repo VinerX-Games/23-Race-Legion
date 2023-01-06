@@ -12153,7 +12153,8 @@ STRING 2012
 }
 
 STRING 2013
-// Abilities: A00X (Волшебный огонь), EditorSuffix (Editor Suffix)
+// Units: H0J2 (|cffd45e19Верховный охотник|r
+), EditorSuffix (Name - Editor Suffix)
 {
 (Бандиты)
 }
@@ -12177,13 +12178,13 @@ STRING 2016
 }
 
 STRING 2017
-// Abilities: A029 (Резня слабаков), EditorSuffix (Editor Suffix)
+// Abilities: A00X (Волшебный огонь), EditorSuffix (Editor Suffix)
 {
 (Бандиты)
 }
 
 STRING 2018
-// Abilities: A013 (Морозный доспех), EditorSuffix (Editor Suffix)
+// Abilities: A029 (Резня слабаков), EditorSuffix (Editor Suffix)
 {
 (Бандиты)
 }
@@ -13211,7 +13212,7 @@ STRING 2188
 }
 
 STRING 2189
-// Abilities: A0IP (Горючая смесь), EditorSuffix (Editor Suffix)
+// Abilities: A013 (Морозный доспех), EditorSuffix (Editor Suffix)
 {
 (Бандиты)
 }
@@ -35508,19 +35509,19 @@ STRING 5883
 }
 
 STRING 5884
-// Abilities: AHpx (|cff008080Феникс|r), Researchhotkey (Hotkey - Learn)
+// Units: h0J1 (|cffd45e19Полу дикий ворген|r), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 5885
-// Abilities: AHpx (|cff008080Феникс|r), Hotkey (Hotkey - Normal)
+// Abilities: AHpx (|cff008080Феникс|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 5886
-// Abilities: AHmt (Массовая телепортация), Researchhotkey (Hotkey - Learn)
+// Abilities: AHpx (|cff008080Феникс|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -35724,7 +35725,7 @@ STRING 5919
 }
 
 STRING 5920
-// Abilities: AHmt (Массовая телепортация), Hotkey (Hotkey - Normal)
+// Abilities: AHmt (Массовая телепортация), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -36516,7 +36517,7 @@ STRING 6050
 }
 
 STRING 6051
-// Abilities: AUls (Рой саранчи), Researchhotkey (Hotkey - Learn)
+// Abilities: AHmt (Массовая телепортация), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -36864,13 +36865,13 @@ STRING 6107
 }
 
 STRING 6108
-// Abilities: AUls (Рой саранчи), Hotkey (Hotkey - Normal)
+// Abilities: AUls (Рой саранчи), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 6109
-// Abilities: AEtq (Спокойствие), Researchhotkey (Hotkey - Learn)
+// Abilities: AUls (Рой саранчи), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -37260,7 +37261,7 @@ rats
 }
 
 STRING 6174
-// Abilities: AEtq (Спокойствие), Hotkey (Hotkey - Normal)
+// Abilities: AEtq (Спокойствие), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -37302,7 +37303,7 @@ rmnx
 }
 
 STRING 6181
-// Abilities: Aast (Дух предков), Hotkey (Hotkey - Normal)
+// Abilities: AEtq (Спокойствие), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -37345,7 +37346,7 @@ rhpx
 }
 
 STRING 6188
-// Abilities: A00A (Починка), Hotkey (Hotkey - Normal)
+// Abilities: Aast (Дух предков), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -37420,7 +37421,7 @@ STRING 6199
 }
 
 STRING 6200
-// Abilities: A00T (Самолечение), Hotkey (Hotkey - Normal)
+// Abilities: A00A (Починка), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -37494,7 +37495,7 @@ STRING 6211
 }
 
 STRING 6212
-// Abilities: A01J (Жажда крови), Hotkey (Hotkey - Normal)
+// Abilities: A00T (Самолечение), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -38722,7 +38723,7 @@ STRING 6413
 }
 
 STRING 6414
-// Abilities: A01J (Жажда крови), Unhotkey (Hotkey - Turn Off)
+// Abilities: A01J (Жажда крови), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -38776,7 +38777,7 @@ STRING 6422
 }
 
 STRING 6423
-// Abilities: A01Q (Призыв магического эксперемента |cff0000ffльда), Hotkey (Hotkey - Normal)
+// Abilities: A01J (Жажда крови), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -39862,7 +39863,7 @@ E
 }
 
 STRING 6604
-// Abilities: A01W (Призыв магического эксперемента |cffff6400огня), Hotkey (Hotkey - Normal)
+// Abilities: A01Q (Призыв магического эксперемента |cff0000ffльда), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -39874,7 +39875,7 @@ STRING 6605
 }
 
 STRING 6606
-// Abilities: A023 (Огненный Торнадо), Researchhotkey (Hotkey - Learn)
+// Abilities: A01W (Призыв магического эксперемента |cffff6400огня), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -42392,7 +42393,8 @@ C
 }
 
 STRING 7025
-// Abilities: A0I3 (Небольшой скачок), Hotkey (Hotkey - Normal)
+// Units: H0J2 (|cffd45e19Верховный охотник|r
+), Hotkey (Hotkey)
 {
 C
 }
@@ -42410,7 +42412,7 @@ STRING 7027
 }
 
 STRING 7028
-// Abilities: A023 (Огненный Торнадо), Hotkey (Hotkey - Normal)
+// Abilities: A023 (Огненный Торнадо), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -42422,13 +42424,13 @@ E
 }
 
 STRING 7030
-// Abilities: A0W9 (|cff008080Огонь|r), Hotkey (Hotkey - Normal)
+// Abilities: A0I3 (Небольшой скачок), Hotkey (Hotkey - Normal)
 {
 C
 }
 
 STRING 7031
-// Upgrades: R006 (Шрапнель), Hotkey (Hotkey)
+// Abilities: A0W9 (|cff008080Огонь|r), Hotkey (Hotkey - Normal)
 {
 C
 }
@@ -42578,7 +42580,7 @@ STRING 7055
 }
 
 STRING 7056
-// Abilities: A029 (Резня слабаков), Hotkey (Hotkey - Normal)
+// Abilities: A023 (Огненный Торнадо), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -42872,43 +42874,43 @@ STRING 7104
 }
 
 STRING 7105
-// Abilities: A029 (Резня слабаков), Researchhotkey (Hotkey - Learn)
+// Abilities: A029 (Резня слабаков), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7106
-// Abilities: A02M (Волшебный Сглаз), Researchhotkey (Hotkey - Learn)
+// Abilities: A029 (Резня слабаков), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7107
-// Abilities: A02M (Волшебный Сглаз), Hotkey (Hotkey - Normal)
+// Abilities: A02M (Волшебный Сглаз), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7108
-// Abilities: A03I (|cff0064ffЛедяные оковы|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A02M (Волшебный Сглаз), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7109
-// Abilities: A03I (|cff0064ffЛедяные оковы|r), Hotkey (Hotkey - Normal)
+// Abilities: A03I (|cff0064ffЛедяные оковы|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7110
-// Abilities: A03P (|cffff0000Апокалипсис|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A03I (|cff0064ffЛедяные оковы|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7111
-// Abilities: A03P (|cffff0000Апокалипсис|r), Hotkey (Hotkey - Normal)
+// Abilities: A03P (|cffff0000Апокалипсис|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -43053,43 +43055,43 @@ STRING 7134
 }
 
 STRING 7135
-// Abilities: A03S (|cff6f2583Массовая телепортация|r), Hotkey (Hotkey - Normal)
+// Abilities: A03P (|cffff0000Апокалипсис|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7136
-// Abilities: A03V (|cff961e7dМассовая телепортация|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A03S (|cff6f2583Массовая телепортация|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7137
-// Abilities: A03V (|cff961e7dМассовая телепортация|r), Hotkey (Hotkey - Normal)
+// Abilities: A03V (|cff961e7dМассовая телепортация|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7138
-// Abilities: A040 (|cffffff00Изгнание|r), Hotkey (Hotkey - Normal)
+// Abilities: A03V (|cff961e7dМассовая телепортация|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7139
-// Abilities: A04B (|cff0064ffПризыв Магических Артефактов|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A040 (|cffffff00Изгнание|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7140
-// Abilities: A04B (|cff0064ffПризыв Магических Артефактов|r), Hotkey (Hotkey - Normal)
+// Abilities: A04B (|cff0064ffПризыв Магических Артефактов|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7141
-// Abilities: A04K (|cff6f2583Муссон|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A04B (|cff0064ffПризыв Магических Артефактов|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -43235,43 +43237,43 @@ STRING 7164
 }
 
 STRING 7165
-// Abilities: A04K (|cff6f2583Муссон|r), Hotkey (Hotkey - Normal)
+// Abilities: A04K (|cff6f2583Муссон|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7166
-// Abilities: A04W (|cffffff00Свет небес|r), EditorSuffix (Editor Suffix)
+// Abilities: A04K (|cff6f2583Муссон|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7167
-// Abilities: A04W (|cffffff00Свет небес|r), Hotkey (Hotkey - Normal)
+// Abilities: A04W (|cffffff00Свет небес|r), EditorSuffix (Editor Suffix)
 {
 R
 }
 
 STRING 7168
-// Abilities: A06C (|cffffff00Благодать|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A04W (|cffffff00Свет небес|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7169
-// Abilities: A06C (|cffffff00Благодать|r), Hotkey (Hotkey - Normal)
+// Abilities: A06C (|cffffff00Благодать|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7170
-// Abilities: A06G (|cff808080Спокойствие|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A06C (|cffffff00Благодать|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7171
-// Abilities: A06G (|cff808080Спокойствие|r), Hotkey (Hotkey - Normal)
+// Abilities: A06G (|cff808080Спокойствие|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -43415,43 +43417,43 @@ STRING 7194
 }
 
 STRING 7195
-// Abilities: A06Y (|cff64c800Массовый бонус к броне|r), Hotkey (Hotkey - Normal)
+// Abilities: A06G (|cff808080Спокойствие|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7196
-// Abilities: A077 (|cff0064ffАбсолютная Защита|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A06Y (|cff64c800Массовый бонус к броне|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7197
-// Abilities: A05H (|cff64c800Оглушающий удар|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A077 (|cff0064ffАбсолютная Защита|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 7198
-// Abilities: A05H (|cff64c800Оглушающий удар|r), Hotkey (Hotkey - Normal)
+// Abilities: A05H (|cff64c800Оглушающий удар|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7199
-// Abilities: A05H (|cff64c800Оглушающий удар|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A05H (|cff64c800Оглушающий удар|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7200
-// Abilities: A07B (|cff64c800Массовое исцеление|r), Hotkey (Hotkey - Normal)
+// Abilities: A05H (|cff64c800Оглушающий удар|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 7201
-// Abilities: A07B (|cff64c800Массовое исцеление|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A07B (|cff64c800Массовое исцеление|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -43595,43 +43597,43 @@ STRING 7224
 }
 
 STRING 7225
-// Abilities: A07V (Метка охотника), Researchhotkey (Hotkey - Learn)
+// Abilities: A07B (|cff64c800Массовое исцеление|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7226
-// Abilities: A08L (|cffffff00Воскрешение|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A07V (Метка охотника), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7227
-// Abilities: A08S (Ал'Ар), Researchhotkey (Hotkey - Learn)
+// Abilities: A08L (|cffffff00Воскрешение|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 7228
-// Abilities: A08S (Ал'Ар), Hotkey (Hotkey - Normal)
+// Abilities: A08S (Ал'Ар), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7229
-// Abilities: A092 (|cffff1900Возмездие свыше|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A08S (Ал'Ар), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7230
-// Abilities: A092 (|cffff1900Возмездие свыше|r), Hotkey (Hotkey - Normal)
+// Abilities: A092 (|cffff1900Возмездие свыше|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7231
-// Abilities: A099 (|cffff1900Рунический Топор|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A092 (|cffff1900Возмездие свыше|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -43776,43 +43778,43 @@ STRING 7254
 }
 
 STRING 7255
-// Abilities: A09A (|cffff1900Рунический Топор|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A099 (|cffff1900Рунический Топор|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7256
-// Abilities: A09M (|cffff1900Фанатики|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A09A (|cffff1900Рунический Топор|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7257
-// Abilities: A09M (|cffff1900Фанатики|r), Hotkey (Hotkey - Normal)
+// Abilities: A09M (|cffff1900Фанатики|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7258
-// Abilities: A0AI (|cff6f3c83Ярость Бездны|r), Hotkey (Hotkey - Normal)
+// Abilities: A09M (|cffff1900Фанатики|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7259
-// Abilities: A0AT (Уменьшить уровень коррупции), Hotkey (Hotkey - Normal)
+// Abilities: A0AI (|cff6f3c83Ярость Бездны|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7260
-// Abilities: A0B0 (|cffc8e6ffУкрепить Город|r), Hotkey (Hotkey - Normal)
+// Abilities: A0AT (Уменьшить уровень коррупции), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7261
-// Abilities: A0B7 (|cff6f3c83Призыв Забытого|r), Hotkey (Hotkey - Normal)
+// Abilities: A0B0 (|cffc8e6ffУкрепить Город|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -43866,7 +43868,7 @@ A
 }
 
 STRING 7270
-// Abilities: A0B7 (|cff6f3c83Призыв Забытого|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B7 (|cff6f3c83Призыв Забытого|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -43960,43 +43962,43 @@ STRING 7284
 }
 
 STRING 7285
-// Abilities: A0B7 (|cff6f3c83Призыв Забытого|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0B7 (|cff6f3c83Призыв Забытого|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7286
-// Abilities: A0B8 (|cff6f3c83Ужасающий вой|r), Hotkey (Hotkey - Normal)
+// Abilities: A0B7 (|cff6f3c83Призыв Забытого|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 7287
-// Abilities: S000 (|cff6f3c83Возмездие|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0B8 (|cff6f3c83Ужасающий вой|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7288
-// Abilities: S000 (|cff6f3c83Возмездие|r), Hotkey (Hotkey - Normal)
+// Abilities: S000 (|cff6f3c83Возмездие|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7289
-// Abilities: A0C3 (|cff6e6e6eТоксины|r), Hotkey (Hotkey - Normal)
+// Abilities: S000 (|cff6f3c83Возмездие|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7290
-// Abilities: A0C3 (|cff6e6e6eТоксины|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0C3 (|cff6e6e6eТоксины|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7291
-// Abilities: A0CN (|cff6e6e6eОживление мертвых|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0C3 (|cff6e6e6eТоксины|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -44343,43 +44345,43 @@ STRING 7348
 }
 
 STRING 7349
-// Abilities: A0CN (|cff6e6e6eОживление мертвых|r), Hotkey (Hotkey - Normal)
+// Abilities: A0CN (|cff6e6e6eОживление мертвых|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7350
-// Abilities: A0CQ (|cff00c800Пожирание|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CN (|cff6e6e6eОживление мертвых|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7351
-// Abilities: A0CQ (|cff00c800Пожирание|r), Hotkey (Hotkey - Normal)
+// Abilities: A0CQ (|cff00c800Пожирание|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7352
-// Abilities: A0CZ (|cff6e6e6eКоролевское Оживление|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CQ (|cff00c800Пожирание|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7353
-// Abilities: A0CZ (|cff6e6e6eКоролевское Оживление|r), Hotkey (Hotkey - Normal)
+// Abilities: A0CZ (|cff6e6e6eКоролевское Оживление|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7354
-// Abilities: A0D0 (|cff6e6e6eЗов проклятых|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0CZ (|cff6e6e6eКоролевское Оживление|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7355
-// Abilities: A0D0 (|cff6e6e6eЗов проклятых|r), Hotkey (Hotkey - Normal)
+// Abilities: A0D0 (|cff6e6e6eЗов проклятых|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -44690,43 +44692,43 @@ STRING 7406
 }
 
 STRING 7407
-// Abilities: A0D7 (Артобстрел на себя), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D0 (|cff6e6e6eЗов проклятых|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7408
-// Abilities: A0D7 (Артобстрел на себя), Hotkey (Hotkey - Normal)
+// Abilities: A0D7 (Артобстрел на себя), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7409
-// Abilities: A0DD (Доспехи ведьмака), Researchhotkey (Hotkey - Learn)
+// Abilities: A0D7 (Артобстрел на себя), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7410
-// Abilities: A0DJ (Арканитовый Страж), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DD (Доспехи ведьмака), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7411
-// Abilities: A0DJ (Арканитовый Страж), Hotkey (Hotkey - Normal)
+// Abilities: A0DJ (Арканитовый Страж), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7412
-// Abilities: A0DR (Поле саморемонта), Researchhotkey (Hotkey - Learn)
+// Abilities: A0DJ (Арканитовый Страж), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7413
-// Abilities: A0EC (|cff805a32Обряд перевоплощения|r), Hotkey (Hotkey - Normal)
+// Abilities: A0DR (Поле саморемонта), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -45063,43 +45065,43 @@ STRING 7468
 }
 
 STRING 7469
-// Abilities: A0EC (|cff805a32Обряд перевоплощения|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0EC (|cff805a32Обряд перевоплощения|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7470
-// Abilities: A0EL (Временно), Hotkey (Hotkey - Normal)
+// Abilities: A0EC (|cff805a32Обряд перевоплощения|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 7471
-// Abilities: A0EL (Временно), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0EL (Временно), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7472
-// Abilities: A0EP (|cff805a32Аватар берсерка|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EL (Временно), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 7473
-// Abilities: A0EP (|cff805a32Аватар берсерка|r), Hotkey (Hotkey - Normal)
+// Abilities: A0EP (|cff805a32Аватар берсерка|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7474
-// Abilities: A0EP (|cff805a32Аватар берсерка|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0EP (|cff805a32Аватар берсерка|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7475
-// Abilities: A0ET (|cff805a32Зов|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EP (|cff805a32Аватар берсерка|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -45249,43 +45251,43 @@ STRING 7499
 }
 
 STRING 7500
-// Abilities: A0ET (|cff805a32Зов|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0ET (|cff805a32Зов|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7501
-// Abilities: A0EX (|cff805a32Руны Спасения|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0ET (|cff805a32Зов|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 7502
-// Abilities: A0EX (|cff805a32Руны Спасения|r), Hotkey (Hotkey - Normal)
+// Abilities: A0EX (|cff805a32Руны Спасения|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7503
-// Abilities: A0EX (|cff805a32Руны Спасения|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0EX (|cff805a32Руны Спасения|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7504
-// Abilities: A0FK (|cff008000Ярость природы|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0EX (|cff805a32Руны Спасения|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 7505
-// Abilities: A0FK (|cff008000Ярость природы|r), Hotkey (Hotkey - Normal)
+// Abilities: A0FK (|cff008000Ярость природы|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 7506
-// Abilities: A0FM (|cff008000Облик совухи|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FK (|cff008000Ярость природы|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -46070,7 +46072,7 @@ STRING 7636
 }
 
 STRING 7637
-// Abilities: A0FM (|cff008000Облик совухи|r), Hotkey (Hotkey - Normal)
+// Abilities: A0FM (|cff008000Облик совухи|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -46322,7 +46324,7 @@ STRING 7678
 }
 
 STRING 7679
-// Upgrades: R00Y (Горючая смесь), Hotkey (Hotkey)
+// Upgrades: R006 (Шрапнель), Hotkey (Hotkey)
 {
 C
 }
@@ -46364,7 +46366,7 @@ STRING 7685
 }
 
 STRING 7686
-// Upgrades: R01S (Магический контроль), Hotkey (Hotkey)
+// Upgrades: R00Y (Горючая смесь), Hotkey (Hotkey)
 {
 C
 }
@@ -47177,13 +47179,13 @@ STRING 7820
 }
 
 STRING 7821
-// Abilities: A0FM (|cff008000Облик совухи|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0FM (|cff008000Облик совухи|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 7822
-// Abilities: A0FX (|cff008000Спокойствие|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0FM (|cff008000Облик совухи|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -49001,7 +49003,7 @@ A
 }
 
 STRING 8125
-// Abilities: A0FX (|cff008000Спокойствие|r), Hotkey (Hotkey - Normal)
+// Abilities: A0FX (|cff008000Спокойствие|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -49396,7 +49398,7 @@ E
 }
 
 STRING 8189
-// Abilities: A0GE (|cff6464ffЩит маны|r), Hotkey (Hotkey - Normal)
+// Abilities: A0FX (|cff008000Спокойствие|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -49991,19 +49993,19 @@ STRING 8287
 }
 
 STRING 8288
-// Abilities: A0GE (|cff6464ffЩит маны|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0GE (|cff6464ffЩит маны|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 8289
-// Abilities: A0GR (|cff6464ffЗащита маны|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GE (|cff6464ffЩит маны|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 8290
-// Abilities: A0GR (|cff6464ffЗащита маны|r), Hotkey (Hotkey - Normal)
+// Abilities: A0GR (|cff6464ffЗащита маны|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -50231,13 +50233,13 @@ E
 }
 
 STRING 8328
-// Abilities: A0GU (|cff6464ffМагический вампиризм|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GR (|cff6464ffЗащита маны|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 8329
-// Abilities: A0GU (|cff6464ffМагический вампиризм|r), Hotkey (Hotkey - Normal)
+// Abilities: A0GU (|cff6464ffМагический вампиризм|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -50657,13 +50659,13 @@ V
 }
 
 STRING 8399
-// Upgrades: R01Z (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R01S (Магический контроль), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 8400
-// Upgrades: R02C (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
+// Upgrades: R01Z (Шрапнель), Hotkey (Hotkey)
 {
 C
 }
@@ -50701,13 +50703,13 @@ STRING 8405
 }
 
 STRING 8406
-// Upgrades: R02V (Защита), Hotkey (Hotkey)
+// Upgrades: R02C (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 8407
-// Upgrades: R03I (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R02V (Защита), Hotkey (Hotkey)
 {
 C
 }
@@ -55347,7 +55349,7 @@ STRING 9174
 }
 
 STRING 9175
-// Abilities: A0GU (|cff6464ffМагический вампиризм|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0GU (|cff6464ffМагический вампиризм|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -62102,7 +62104,7 @@ X
 }
 
 STRING 10295
-// Upgrades: R03D (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R03I (Шрапнель), Hotkey (Hotkey)
 {
 C
 }
@@ -62600,7 +62602,7 @@ STRING 10377
 }
 
 STRING 10378
-// Upgrades: R03P (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R03D (Шрапнель), Hotkey (Hotkey)
 {
 C
 }
@@ -63527,7 +63529,7 @@ C
 }
 
 STRING 10531
-// Upgrades: R03R (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R03P (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 C
 }
@@ -64494,7 +64496,7 @@ STRING 10691
 }
 
 STRING 10692
-// Abilities: A0GX (|cff6464ffРазящие стрелы|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GU (|cff6464ffМагический вампиризм|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -65192,7 +65194,7 @@ STRING 10807
 }
 
 STRING 10808
-// Abilities: A0GX (|cff6464ffРазящие стрелы|r), Hotkey (Hotkey - Normal)
+// Abilities: A0GX (|cff6464ffРазящие стрелы|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -68037,7 +68039,7 @@ STRING 11280
 }
 
 STRING 11281
-// Abilities: A0GX (|cff6464ffРазящие стрелы|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0GX (|cff6464ffРазящие стрелы|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -68109,7 +68111,7 @@ C
 }
 
 STRING 11293
-// Upgrades: R04M (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R03R (Шрапнель), Hotkey (Hotkey)
 {
 C
 }
@@ -68187,19 +68189,19 @@ Q
 }
 
 STRING 11306
-// Abilities: A0H2 (|cff6464ffМана взрыв|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0GX (|cff6464ffРазящие стрелы|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 11307
-// Abilities: A0H2 (|cff6464ffМана взрыв|r), Hotkey (Hotkey - Normal)
+// Abilities: A0H2 (|cff6464ffМана взрыв|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 11308
-// Abilities: A0H2 (|cff6464ffМана взрыв|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0H2 (|cff6464ffМана взрыв|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -68229,13 +68231,13 @@ C
 }
 
 STRING 11313
-// Upgrades: R04U (Опутывание), Hotkey (Hotkey)
+// Upgrades: R04M (Шрапнель), Hotkey (Hotkey)
 {
 C
 }
 
 STRING 11314
-// Upgrades: R051 (Опутывание), Hotkey (Hotkey)
+// Upgrades: R04U (Опутывание), Hotkey (Hotkey)
 {
 C
 }
@@ -68561,13 +68563,13 @@ W
 }
 
 STRING 11368
-// Abilities: A0HP (|cff805a32Врайкулы |r), Hotkey (Hotkey - Normal)
+// Abilities: A0H2 (|cff6464ffМана взрыв|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
 
 STRING 11369
-// Abilities: A0HQ (Эльфы Крови), Hotkey (Hotkey - Normal)
+// Abilities: A0HP (|cff805a32Врайкулы |r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -68818,13 +68820,13 @@ W
 }
 
 STRING 11409
-// Abilities: A0I8 (|cff006480Оплетение|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0HQ (Эльфы Крови), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 11410
-// Abilities: A0I8 (|cff006480Оплетение|r), Hotkey (Hotkey - Normal)
+// Abilities: A0I8 (|cff006480Оплетение|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -69145,7 +69147,7 @@ W
 }
 
 STRING 11463
-// Abilities: A0IE (|cff006480Аура метаморфоз|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0I8 (|cff006480Оплетение|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -69277,7 +69279,7 @@ F
 }
 
 STRING 11485
-// Upgrades: R05D (Закопаться), Hotkey (Hotkey)
+// Upgrades: R051 (Опутывание), Hotkey (Hotkey)
 {
 C
 }
@@ -69355,7 +69357,7 @@ A
 }
 
 STRING 11498
-// Upgrades: R06R (Защита), Hotkey (Hotkey)
+// Upgrades: R05D (Закопаться), Hotkey (Hotkey)
 {
 C
 }
@@ -69754,7 +69756,7 @@ STRING 11563
 }
 
 STRING 11564
-// Upgrades: R073 (Атаки чудовищ,Улучшенные атаки чудовищ,Уси), Hotkey (Hotkey)
+// Upgrades: R06R (Защита), Hotkey (Hotkey)
 {
 C
 }
@@ -69772,7 +69774,7 @@ C
 }
 
 STRING 11567
-// Upgrades: R086 (Сокрушение), Hotkey (Hotkey)
+// Upgrades: R073 (Атаки чудовищ,Улучшенные атаки чудовищ,Уси), Hotkey (Hotkey)
 {
 C
 }
@@ -69838,7 +69840,7 @@ STRING 11577
 }
 
 STRING 11578
-// Abilities: A0IE (|cff006480Аура метаморфоз|r), Hotkey (Hotkey - Normal)
+// Abilities: A0IE (|cff006480Аура метаморфоз|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -70123,7 +70125,7 @@ STRING 11624
 }
 
 STRING 11625
-// Abilities: A0IE (|cff006480Аура метаморфоз|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0IE (|cff006480Аура метаморфоз|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -70220,7 +70222,7 @@ STRING 11640
 }
 
 STRING 11641
-// Abilities: A0IM (|cff006480Рой саранчи|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IE (|cff006480Аура метаморфоз|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -70604,7 +70606,7 @@ STRING 11700
 }
 
 STRING 11701
-// Abilities: A0IM (|cff006480Рой саранчи|r), Hotkey (Hotkey - Normal)
+// Abilities: A0IM (|cff006480Рой саранчи|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -72543,7 +72545,7 @@ STRING 12021
 }
 
 STRING 12022
-// Abilities: A0IM (|cff006480Рой саранчи|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0IM (|cff006480Рой саранчи|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -72743,7 +72745,7 @@ STRING 12054
 }
 
 STRING 12055
-// Abilities: A0J1 (Призыв Силитидов-Танков), Researchhotkey (Hotkey - Learn)
+// Abilities: A0IM (|cff006480Рой саранчи|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -72821,7 +72823,7 @@ STRING 12067
 }
 
 STRING 12068
-// Abilities: A0J1 (Призыв Силитидов-Танков), Hotkey (Hotkey - Normal)
+// Abilities: A0J1 (Призыв Силитидов-Танков), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -74580,7 +74582,7 @@ STRING 12355
 }
 
 STRING 12356
-// Abilities: A0KR (Сон), Hotkey (Hotkey - Normal)
+// Abilities: A0J1 (Призыв Силитидов-Танков), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -75267,7 +75269,7 @@ STRING 12467
 }
 
 STRING 12468
-// Abilities: A0LK (Призвать |cff6f6483Щупальце|r), Hotkey (Hotkey - Normal)
+// Abilities: A0KR (Сон), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -75663,7 +75665,7 @@ W
 }
 
 STRING 12534
-// Abilities: A0M9 (|cff008000Реинкарнация|r), Hotkey (Hotkey - Normal)
+// Abilities: A0LK (Призвать |cff6f6483Щупальце|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -76247,7 +76249,7 @@ STRING 12628
 }
 
 STRING 12629
-// Upgrades: R08D (Ярость вурдалака), Hotkey (Hotkey)
+// Upgrades: R086 (Сокрушение), Hotkey (Hotkey)
 {
 C
 }
@@ -77367,7 +77369,7 @@ STRING 12813
 }
 
 STRING 12814
-// Abilities: A0MF (|cff008000Короззия скверны|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0M9 (|cff008000Реинкарнация|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -77637,7 +77639,7 @@ D
 }
 
 STRING 12859
-// Abilities: A0MI (|cff804619Ритуал перевоплощения|r), Hotkey (Hotkey - Normal)
+// Abilities: A0MF (|cff008000Короззия скверны|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -77685,7 +77687,7 @@ STRING 12866
 }
 
 STRING 12867
-// Abilities: A0MI (|cff804619Ритуал перевоплощения|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0MI (|cff804619Ритуал перевоплощения|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -77949,7 +77951,7 @@ STRING 12910
 }
 
 STRING 12911
-// Abilities: A0MK (Разведка), Hotkey (Hotkey - Normal)
+// Abilities: A0MI (|cff804619Ритуал перевоплощения|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -78736,7 +78738,7 @@ Z
 }
 
 STRING 13041
-// Abilities: A0MP (|cff008000Щит скверны|r), Hotkey (Hotkey - Normal)
+// Abilities: A0MK (Разведка), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -78938,7 +78940,7 @@ STRING 13073
 }
 
 STRING 13074
-// Abilities: S006 (|cff008000Огненный метеорит |r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0MP (|cff008000Щит скверны|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -78986,7 +78988,7 @@ S
 }
 
 STRING 13082
-// Abilities: S006 (|cff008000Огненный метеорит |r), Hotkey (Hotkey - Normal)
+// Abilities: S006 (|cff008000Огненный метеорит |r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -79160,7 +79162,7 @@ STRING 13107
 }
 
 STRING 13108
-// Abilities: A0MW (|cff008000Сон|r), Hotkey (Hotkey - Normal)
+// Abilities: S006 (|cff008000Огненный метеорит |r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -79172,7 +79174,7 @@ E
 }
 
 STRING 13110
-// Abilities: A0N4 (Резня в тени), Hotkey (Hotkey - Normal)
+// Abilities: A0MW (|cff008000Сон|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -79516,7 +79518,7 @@ STRING 13161
 }
 
 STRING 13162
-// Abilities: A0N6 (|cff008000Мастерство скверны|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0N4 (Резня в тени), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -79540,7 +79542,7 @@ W
 }
 
 STRING 13166
-// Abilities: A0ND (|cff008000Апокалипсис|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0N6 (|cff008000Мастерство скверны|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -79582,7 +79584,7 @@ S
 }
 
 STRING 13173
-// Upgrades: R08I (Улучшение до берсерка), Hotkey (Hotkey)
+// Upgrades: R08D (Ярость вурдалака), Hotkey (Hotkey)
 {
 C
 }
@@ -79594,7 +79596,7 @@ D
 }
 
 STRING 13175
-// Upgrades: R0AH (Сделать друидов-хищников адептами,Сделать ), Hotkey (Hotkey)
+// Upgrades: R08I (Улучшение до берсерка), Hotkey (Hotkey)
 {
 C
 }
@@ -80181,7 +80183,7 @@ STRING 13272
 }
 
 STRING 13273
-// Abilities: A0ND (|cff008000Апокалипсис|r), Hotkey (Hotkey - Normal)
+// Abilities: A0ND (|cff008000Апокалипсис|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -80199,7 +80201,7 @@ S
 }
 
 STRING 13276
-// Abilities: A0NU (|cff809600Пламенная боль|r), Hotkey (Hotkey - Normal)
+// Abilities: A0ND (|cff008000Апокалипсис|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -81017,7 +81019,7 @@ STRING 13410
 }
 
 STRING 13411
-// Abilities: A0NU (|cff809600Пламенная боль|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NU (|cff809600Пламенная боль|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -81508,7 +81510,7 @@ STRING 13490
 }
 
 STRING 13491
-// Abilities: A0NU (|cff809600Пламенная боль|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0NU (|cff809600Пламенная боль|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -81962,7 +81964,7 @@ STRING 13565
 }
 
 STRING 13566
-// Abilities: A0NV (|cff809600Клинки скверны|r), Hotkey (Hotkey - Normal)
+// Abilities: A0NU (|cff809600Пламенная боль|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -82010,7 +82012,7 @@ STRING 13573
 }
 
 STRING 13574
-// Abilities: A0NV (|cff809600Клинки скверны|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NV (|cff809600Клинки скверны|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -82391,7 +82393,7 @@ STRING 13635
 }
 
 STRING 13636
-// Abilities: A0NV (|cff809600Клинки скверны|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0NV (|cff809600Клинки скверны|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -82415,7 +82417,7 @@ W
 }
 
 STRING 13640
-// Abilities: A0NZ (|cff809600Метаморфоза|r), Hotkey (Hotkey - Normal)
+// Abilities: A0NV (|cff809600Клинки скверны|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -84731,13 +84733,13 @@ STRING 14019
 }
 
 STRING 14020
-// Abilities: A0NZ (|cff809600Метаморфоза|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0NZ (|cff809600Метаморфоза|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14021
-// Abilities: A0OQ (|cff008080Пламенное перерождение|r), Hotkey (Hotkey - Normal)
+// Abilities: A0NZ (|cff809600Метаморфоза|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -84811,7 +84813,7 @@ STRING 14029
 }
 
 STRING 14030
-// Abilities: A0OR (|cff008080Наводнение|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OQ (|cff008080Пламенное перерождение|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -86248,13 +86250,13 @@ STRING 14266
 }
 
 STRING 14267
-// Abilities: A0OR (|cff008080Наводнение|r), Hotkey (Hotkey - Normal)
+// Abilities: A0OR (|cff008080Наводнение|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 14268
-// Abilities: A0P1 (|cff008080Грозовые Облака|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0OR (|cff008080Наводнение|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -86272,19 +86274,19 @@ E
 }
 
 STRING 14271
-// Abilities: A0P1 (|cff008080Грозовые Облака|r), Hotkey (Hotkey - Normal)
+// Abilities: A0P1 (|cff008080Грозовые Облака|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 14272
-// Abilities: A0P5 (|cff008080Каменная ярость|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0P1 (|cff008080Грозовые Облака|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14273
-// Abilities: A0P5 (|cff008080Каменная ярость|r), Hotkey (Hotkey - Normal)
+// Abilities: A0P5 (|cff008080Каменная ярость|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -86296,7 +86298,7 @@ E
 }
 
 STRING 14275
-// Abilities: A0P7 (|cff008080Кольцо огня |r), Hotkey (Hotkey - Normal)
+// Abilities: A0P5 (|cff008080Каменная ярость|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -86566,7 +86568,7 @@ STRING 14319
 }
 
 STRING 14320
-// Abilities: A0PL (|cff808000Кара леса|r), Hotkey (Hotkey - Normal)
+// Abilities: A0P7 (|cff008080Кольцо огня |r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -86578,7 +86580,7 @@ E
 }
 
 STRING 14322
-// Abilities: A0PL (|cff808000Кара леса|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PL (|cff808000Кара леса|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -86994,7 +86996,7 @@ E
 }
 
 STRING 14391
-// Abilities: A0PP (|cff808000Корни мира|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PL (|cff808000Кара леса|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -87006,7 +87008,7 @@ E
 }
 
 STRING 14393
-// Abilities: A0PP (|cff808000Корни мира|r), Hotkey (Hotkey - Normal)
+// Abilities: A0PP (|cff808000Корни мира|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -88130,7 +88132,7 @@ STRING 14578
 }
 
 STRING 14579
-// Abilities: A0PT (|cff808000Вихрь клинков|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0PP (|cff808000Корни мира|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -88208,7 +88210,7 @@ STRING 14591
 }
 
 STRING 14592
-// Abilities: A0PT (|cff808000Вихрь клинков|r), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (|cff808000Вихрь клинков|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -88220,7 +88222,7 @@ E
 }
 
 STRING 14594
-// Abilities: A0QW (|cff808000Рассеивание заклинаний|r), Hotkey (Hotkey - Normal)
+// Abilities: A0PT (|cff808000Вихрь клинков|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -90602,19 +90604,19 @@ STRING 14979
 }
 
 STRING 14980
-// Abilities: A0QW (|cff808000Рассеивание заклинаний|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0QW (|cff808000Рассеивание заклинаний|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 14981
-// Abilities: A0QW (|cff808000Рассеивание заклинаний|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0QW (|cff808000Рассеивание заклинаний|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 14982
-// Abilities: A0QZ (|cff8080ffРеинкарнация|r), Hotkey (Hotkey - Normal)
+// Abilities: A0QW (|cff808000Рассеивание заклинаний|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -91009,7 +91011,7 @@ STRING 15046
 }
 
 STRING 15047
-// Abilities: A0R1 (|cff8080ffЧастица изумрудного сна|r), Hotkey (Hotkey - Normal)
+// Abilities: A0QZ (|cff8080ffРеинкарнация|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -91155,7 +91157,7 @@ STRING 15070
 }
 
 STRING 15071
-// Abilities: A0R1 (|cff8080ffЧастица изумрудного сна|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R1 (|cff8080ffЧастица изумрудного сна|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -91759,7 +91761,7 @@ STRING 15164
 }
 
 STRING 15165
-// Upgrades: R0AK (Защита), Hotkey (Hotkey)
+// Upgrades: R0AH (Сделать друидов-хищников адептами,Сделать ), Hotkey (Hotkey)
 {
 C
 }
@@ -92019,7 +92021,7 @@ STRING 15203
 }
 
 STRING 15204
-// Upgrades: R0CU (Сила Луны,Мощь Луны,Могущество Луны), Hotkey (Hotkey)
+// Upgrades: R0AK (Защита), Hotkey (Hotkey)
 {
 C
 }
@@ -93470,7 +93472,7 @@ STRING 15434
 }
 
 STRING 15435
-// Abilities: A0R8 (|cff8080ffПожар|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R1 (|cff8080ffЧастица изумрудного сна|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -95269,7 +95271,7 @@ STRING 15730
 }
 
 STRING 15731
-// Abilities: A0R8 (|cff8080ffПожар|r), Hotkey (Hotkey - Normal)
+// Abilities: A0R8 (|cff8080ffПожар|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -95281,7 +95283,7 @@ E
 }
 
 STRING 15733
-// Abilities: A0TD (Экспериментальные аккумуляторы), Researchhotkey (Hotkey - Learn)
+// Abilities: A0R8 (|cff8080ffПожар|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -95443,13 +95445,13 @@ STRING 15759
 }
 
 STRING 15760
-// Abilities: A0TK (Ракетопад), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TD (Экспериментальные аккумуляторы), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 15761
-// Abilities: A0TM (|cff64c800Наследная Ловкость|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0TK (Ракетопад), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -95716,7 +95718,7 @@ E
 }
 
 STRING 15805
-// Abilities: A0UE (Добавить континент: Нордскол), Hotkey (Hotkey - Normal)
+// Abilities: A0TM (|cff64c800Наследная Ловкость|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -95728,7 +95730,7 @@ STRING 15806
 }
 
 STRING 15807
-// Abilities: A0UP (Убрать континент: Нордскол), Hotkey (Hotkey - Normal)
+// Abilities: A0UE (Добавить континент: Нордскол), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -96883,7 +96885,7 @@ W
 }
 
 STRING 15995
-// Abilities: A0VJ (Выбрать специализацию), Hotkey (Hotkey - Normal)
+// Abilities: A0UP (Убрать континент: Нордскол), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -96907,13 +96909,13 @@ W
 }
 
 STRING 15999
-// Abilities: A0VP (Специализация: разведка), Hotkey (Hotkey - Normal)
+// Abilities: A0VJ (Выбрать специализацию), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 16000
-// Abilities: A0VT (Темный призыв), Hotkey (Hotkey - Normal)
+// Abilities: A0VP (Специализация: разведка), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -99724,19 +99726,19 @@ STRING 16447
 }
 
 STRING 16448
-// Abilities: A0WZ (|cfff08080Ярость|r), Hotkey (Hotkey - Normal)
+// Abilities: A0VT (Темный призыв), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 16449
-// Abilities: A0WZ (|cfff08080Ярость|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WZ (|cfff08080Ярость|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 16450
-// Abilities: A0XA (|cfff08080Вспышка Света|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0WZ (|cfff08080Ярость|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -99754,7 +99756,7 @@ rhpx
 }
 
 STRING 16453
-// Abilities: A0XA (|cfff08080Вспышка Света|r), Hotkey (Hotkey - Normal)
+// Abilities: A0XA (|cfff08080Вспышка Света|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -99784,19 +99786,19 @@ STRING 16457
 }
 
 STRING 16458
-// Abilities: A0XG (Режим дальнего боя), Hotkey (Hotkey - Normal)
+// Abilities: A0XA (|cfff08080Вспышка Света|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 16459
-// Abilities: A0XG (Режим дальнего боя), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XG (Режим дальнего боя), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 16460
-// Abilities: A0XG (Режим дальнего боя), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0XG (Режим дальнего боя), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -100172,7 +100174,7 @@ E
 }
 
 STRING 16517
-// Abilities: A0XZ (|cfff08080Генеральская забава|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0XG (Режим дальнего боя), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -100650,7 +100652,7 @@ X
 }
 
 STRING 16595
-// Abilities: A0XZ (|cfff08080Генеральская забава|r), Hotkey (Hotkey - Normal)
+// Abilities: A0XZ (|cfff08080Генеральская забава|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -100854,7 +100856,7 @@ F
 }
 
 STRING 16629
-// Abilities: A0Y4 (Темный призыв), Hotkey (Hotkey - Normal)
+// Abilities: A0XZ (|cfff08080Генеральская забава|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -101647,13 +101649,13 @@ E
 }
 
 STRING 16760
-// Abilities: A0Y7 (|cfff08080Огненный ливень|r), Hotkey (Hotkey - Normal)
+// Abilities: A0Y4 (Темный призыв), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 16761
-// Abilities: A0Y7 (|cfff08080Огненный ливень|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Y7 (|cfff08080Огненный ливень|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -101665,7 +101667,7 @@ E
 }
 
 STRING 16763
-// Abilities: A0YV (Орда), Hotkey (Hotkey - Normal)
+// Abilities: A0Y7 (|cfff08080Огненный ливень|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
@@ -101689,19 +101691,19 @@ W
 }
 
 STRING 16767
-// Abilities: A0Z1 (|cffd45e19Рев|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0YV (Орда), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 16768
-// Abilities: A0Z1 (|cffd45e19Рев|r), Unhotkey (Hotkey - Turn Off)
+// Abilities: A0Z1 (|cffd45e19Рев|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 16769
-// Abilities: A0ZN (|cfff08080Прибавка к золоту|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A0Z1 (|cffd45e19Рев|r), Unhotkey (Hotkey - Turn Off)
 {
 R
 }
@@ -102284,13 +102286,13 @@ W
 }
 
 STRING 16864
-// Abilities: A0ZN (|cfff08080Прибавка к золоту|r), Hotkey (Hotkey - Normal)
+// Abilities: A0ZN (|cfff08080Прибавка к золоту|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 16865
-// Abilities: A0XX (|cff6f2583Рев апокалипсиса|r), Hotkey (Hotkey - Normal)
+// Abilities: A0ZN (|cfff08080Прибавка к золоту|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -102647,55 +102649,55 @@ STRING 16923
 }
 
 STRING 16924
-// Abilities: A10E (|cff8080ffПожирание магии|r), Hotkey (Hotkey - Normal)
+// Abilities: A0XX (|cff6f2583Рев апокалипсиса|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 16925
-// Abilities: A10E (|cff8080ffПожирание магии|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A10E (|cff8080ffПожирание магии|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 16926
-// Abilities: A10K (|cff483d8bТемный Портал|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A10E (|cff8080ffПожирание магии|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 16927
-// Abilities: A10K (|cff483d8bТемный Портал|r), Hotkey (Hotkey - Normal)
+// Abilities: A10K (|cff483d8bТемный Портал|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 16928
-// Abilities: A10S (|cff483d8bПространство Бездны|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A10K (|cff483d8bТемный Портал|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 16929
-// Abilities: A10S (|cff483d8bПространство Бездны|r), Hotkey (Hotkey - Normal)
+// Abilities: A10S (|cff483d8bПространство Бездны|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 16930
-// Abilities: A10T (|cff483d8bРой саранчи|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A10S (|cff483d8bПространство Бездны|r), Hotkey (Hotkey - Normal)
 {
 R
 }
 
 STRING 16931
-// Abilities: A10T (|cff483d8bРой саранчи|r), Hotkey (Hotkey - Normal)
+// Abilities: A10T (|cff483d8bРой саранчи|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 16932
-// Abilities: A10U (|cff483d8bРой саранчи|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A10T (|cff483d8bРой саранчи|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -110611,13 +110613,13 @@ STRING 18246
 }
 
 STRING 18247
-// Abilities: A10U (|cff483d8bРой саранчи|r), Hotkey (Hotkey - Normal)
+// Abilities: A10U (|cff483d8bРой саранчи|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 18248
-// Abilities: A10V (|cff483d8bРой саранчи|r), Researchhotkey (Hotkey - Learn)
+// Abilities: A10U (|cff483d8bРой саранчи|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -111741,7 +111743,7 @@ STRING 18434
 }
 
 STRING 18435
-// Abilities: A00J (Рывок), EditorSuffix (Editor Suffix)
+// Abilities: A0IP (Горючая смесь), EditorSuffix (Editor Suffix)
 {
 (Бандиты)
 }
@@ -111801,13 +111803,13 @@ STRING 18444
 }
 
 STRING 18445
-// Abilities: A10V (|cff483d8bРой саранчи|r), Hotkey (Hotkey - Normal)
+// Abilities: A10V (|cff483d8bРой саранчи|r), Researchhotkey (Hotkey - Learn)
 {
 R
 }
 
 STRING 18446
-// Upgrades: Rora (Железное оружие дальнего боя,Ториевое оруж), Hotkey (Hotkey)
+// Abilities: A10V (|cff483d8bРой саранчи|r), Hotkey (Hotkey - Normal)
 {
 R
 }
@@ -119279,7 +119281,7 @@ E
 }
 
 STRING 19690
-// Upgrades: R018 (Шрапнель), Hotkey (Hotkey)
+// Upgrades: Rora (Железное оружие дальнего боя,Ториевое оруж), Hotkey (Hotkey)
 {
 R
 }
@@ -125743,7 +125745,7 @@ STRING 20751
 }
 
 STRING 20752
-// Upgrades: R01H (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R018 (Шрапнель), Hotkey (Hotkey)
 {
 R
 }
@@ -125791,7 +125793,7 @@ D
 }
 
 STRING 20760
-// Upgrades: R02R (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
+// Upgrades: R01H (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 R
 }
@@ -126302,7 +126304,7 @@ STRING 20842
 }
 
 STRING 20843
-// Upgrades: R04I (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R02R (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
 {
 R
 }
@@ -126916,7 +126918,7 @@ STRING 20944
 }
 
 STRING 20945
-// Upgrades: R04J (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R04I (Шрапнель), Hotkey (Hotkey)
 {
 R
 }
@@ -126982,7 +126984,7 @@ STRING 20955
 }
 
 STRING 20956
-// Upgrades: R04K (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R04J (Шрапнель), Hotkey (Hotkey)
 {
 R
 }
@@ -127024,7 +127026,7 @@ STRING 20962
 }
 
 STRING 20963
-// Upgrades: R04L (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R04K (Шрапнель), Hotkey (Hotkey)
 {
 R
 }
@@ -127521,7 +127523,7 @@ STRING 21041
 }
 
 STRING 21042
-// Upgrades: R04M (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R04L (Шрапнель), Hotkey (Hotkey)
 {
 R
 }
@@ -127751,7 +127753,7 @@ W
 }
 
 STRING 21080
-// Upgrades: R04N (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R04M (Шрапнель), Hotkey (Hotkey)
 {
 R
 }
@@ -127763,7 +127765,7 @@ STRING 21081
 }
 
 STRING 21082
-// Upgrades: R04O (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R04N (Шрапнель), Hotkey (Hotkey)
 {
 R
 }
@@ -129036,7 +129038,7 @@ STRING 21292
 }
 
 STRING 21293
-// Upgrades: R04P (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R04O (Шрапнель), Hotkey (Hotkey)
 {
 R
 }
@@ -131228,13 +131230,13 @@ R
 }
 
 STRING 21644
-// Upgrades: R04R (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R04P (Шрапнель), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 21645
-// Upgrades: R056 (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R04R (Шрапнель), Hotkey (Hotkey)
 {
 R
 }
@@ -132309,13 +132311,13 @@ STRING 21805
 }
 
 STRING 21806
-// Upgrades: R04Q (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R056 (Шрапнель), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 21807
-// Upgrades: R05W (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R04Q (Шрапнель), Hotkey (Hotkey)
 {
 R
 }
@@ -136478,7 +136480,7 @@ R
 }
 
 STRING 22469
-// Upgrades: R06Z (Атаки чудовищ,Улучшенные атаки чудовищ,Уси), Hotkey (Hotkey)
+// Upgrades: R05W (Шрапнель), Hotkey (Hotkey)
 {
 R
 }
@@ -136840,6 +136842,12 @@ STRING 22528
 |cff483d8bКультист|r
 }
 
+STRING 22529
+// Units: h0J1 (|cffd45e19Полу дикий ворген|r), EditorSuffix (Name - Editor Suffix)
+{
+(Воргены)
+}
+
 STRING 22530
 // Units: h0HY (|cff483d8bАлтарь Древних Богов|r), Tip (Tooltip - Basic)
 {
@@ -136953,6 +136961,12 @@ STRING 22547
 Обучить |cff483d8bБезликого Воина|r
 }
 
+STRING 22548
+// Units: h0J1 (|cffd45e19Полу дикий ворген|r), Name (Name)
+{
+|cffd45e19Полу дикий ворген|r
+}
+
 STRING 22549
 // Units: h0IE (|cff483d8bМагическая Сущность Бездны|r), Tip (Tooltip - Basic)
 {
@@ -136965,6 +136979,12 @@ STRING 22550
 |cff483d8bБессмертый Безликий|r
 }
 
+STRING 22551
+// Units: h0J1 (|cffd45e19Полу дикий ворген|r), Tip (Tooltip - Basic)
+{
+Обучить |cffd45e19Полу дикий ворген|r
+}
+
 STRING 22552
 // Units: h0IF (|cff483d8bБессмертый Безликий|r), Tip (Tooltip - Basic)
 {
@@ -136975,6 +136995,13 @@ STRING 22553
 // Abilities: A10I (|cff483d8bКрепкий Панцирь|r), Name (Name)
 {
 |cff483d8bКрепкий Панцирь|r
+}
+
+STRING 22554
+// Units: h0J1 (|cffd45e19Полу дикий ворген|r), Ubertip (Tooltip - Extended)
+{
+|cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычная|r|n
+Могучий верховой воин. Может изучить «Дрессировку животных». |n|n|cffffcc00Атакует наземные цели.|r
 }
 
 STRING 22555
@@ -137527,7 +137554,7 @@ STRING 22645
 }
 
 STRING 22646
-// Upgrades: R085 (Ярость вурдалака), Hotkey (Hotkey)
+// Upgrades: R06Z (Атаки чудовищ,Улучшенные атаки чудовищ,Уси), Hotkey (Hotkey)
 {
 R
 }
@@ -137570,7 +137597,7 @@ STRING 22652
 }
 
 STRING 22653
-// Upgrades: R09B (Защита), Hotkey (Hotkey)
+// Upgrades: R085 (Ярость вурдалака), Hotkey (Hotkey)
 {
 R
 }
@@ -137738,7 +137765,7 @@ STRING 22680
 }
 
 STRING 22681
-// Upgrades: R0AE (Прочные шкуры,Усиленные шкуры,Непробиваем�), Hotkey (Hotkey)
+// Upgrades: R09B (Защита), Hotkey (Hotkey)
 {
 R
 }
@@ -138177,7 +138204,7 @@ STRING 22749
 }
 
 STRING 22750
-// Upgrades: R0AW (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+// Upgrades: R0AE (Прочные шкуры,Усиленные шкуры,Непробиваем�), Hotkey (Hotkey)
 {
 R
 }
@@ -138769,6 +138796,14 @@ STRING 22839
 Изучить |cff483d8bСотресение Бездны|r
 }
 
+STRING 22840
+// Units: H0J2 (|cffd45e19Верховный охотник|r
+), Name (Name)
+{
+|cffd45e19Верховный охотник|r
+
+}
+
 STRING 22841
 // Upgrades: R0DJ (Защита), Hotkey (Hotkey)
 {
@@ -138966,13 +139001,13 @@ R
 }
 
 STRING 22873
-// Upgrades: R0B7 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0AW (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 22874
-// Upgrades: R0DK (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
+// Upgrades: R0B7 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 R
 }
@@ -147917,6 +147952,14 @@ STRING 24348
 Изучить |cff483d8bСотресение Бездны|r
 }
 
+STRING 24349
+// Units: H0J2 (|cffd45e19Верховный охотник|r
+), Awakentip (Tooltip - Awaken)
+{
+Воскресить |cffd45e19Верховного охотника|r
+
+}
+
 STRING 24350
 // Buffs/Effects: B069 (), Bufftip (Tooltip)
 {
@@ -148017,6 +148060,14 @@ STRING 24366
 // Abilities: A100 (Внутренний жар), Ubertip (Tooltip - Normal - Extended)
 {
 Окружает врага огнем, наносящим |cff008080<ANso,DataA4> урона/сек|r. Жертва не может применять способности, а ее атаки наносят на|cff008080 <ANso,DataC4,%>%|r меньше урона. |nВремя действия: |cff008080<ANso,Dur4> сек.|r
+}
+
+STRING 24367
+// Units: H0J2 (|cffd45e19Верховный охотник|r
+), Tip (Tooltip - Basic)
+{
+Призвать |cffd45e19Верховного охотника|r
+
 }
 
 STRING 24368
@@ -148288,7 +148339,7 @@ W
 }
 
 STRING 24410
-// Upgrades: R0DP (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+// Upgrades: R0DK (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
 {
 R
 }
@@ -148306,7 +148357,7 @@ R
 }
 
 STRING 24413
-// Upgrades: R0DW (Грабеж), Hotkey (Hotkey)
+// Upgrades: R0DP (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
 {
 R
 }
@@ -148345,5 +148396,711 @@ STRING 24419
 // Upgrades: R0EL (Длинноствольные мушкеты), Ubertip (Tooltip - Extended)
 {
 Добавляет способность|cff483d8b Сущности Бездны|r
+}
+
+STRING 24420
+// Units: H0J2 (|cffd45e19Верховный охотник|r
+), Revivetip (Tooltip - Revive)
+{
+Воскресить |cffd45e19Верховного охотника|r
+
+}
+
+STRING 24421
+// Units: H0J2 (|cffd45e19Верховный охотник|r
+), Ubertip (Tooltip - Extended)
+{
+|cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|nГерой-всадник, возглавляющий армию бандитов, берущий все риски на себя и наносящий урон по большому количеству войск врага.
+}
+
+STRING 24423
+// Abilities: A00J (Рывок), EditorSuffix (Editor Suffix)
+{
+(Бандиты)
+}
+
+STRING 24424
+// Upgrades: R0CU (Сила Луны,Мощь Луны,Могущество Луны), Hotkey (Hotkey)
+{
+C
+}
+
+STRING 24425
+// Upgrades: R0DW (Грабеж), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 24426
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), EditorSuffix (Editor Suffix)
+{
+(Ворген)
+}
+
+STRING 24427
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 24428
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 24429
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 24430
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 24431
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 24432
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 24433
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cffd45e19Мифриловые мечи|r
+}
+
+STRING 24434
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cffd45e19Мифриловые мечи|r
+}
+
+STRING 24435
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cffd45e19Стальные мечи|r
+}
+
+STRING 24436
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cffd45e19Стальные мечи|r
+}
+
+STRING 24437
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cffd45e19Железные мечи|r
+}
+
+STRING 24438
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cffd45e19Мифриловые мечи|r |cffffff00[6]|r
+}
+
+STRING 24439
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cffd45e19Железные мечи|r
+}
+
+STRING 24440
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cffd45e19Мифриловые мечи|r |cffffff00[5]|r
+}
+
+STRING 24441
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cffd45e19Стальные мечи|r |cffffff00[4]|r
+}
+
+STRING 24442
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cffd45e19Стальные мечи|r |cffffff00[3]|r
+}
+
+STRING 24443
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cffd45e19Железные мечи|r |cffffff00[2]|r
+}
+
+STRING 24444
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cffd45e19Железные мечи|r |cffffff00[1]|r
+}
+
+STRING 24445
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинам |cffd45e19Гилнеаса|r
+}
+
+STRING 24446
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинам |cffd45e19Гилнеаса|r
+}
+
+STRING 24447
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинам |cffd45e19Гилнеаса|r
+}
+
+STRING 24448
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинам |cffd45e19Гилнеаса|r
+}
+
+STRING 24449
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинам |cffd45e19Гилнеаса|r
+}
+
+STRING 24450
+// Upgrades: R0EM (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинам |cffd45e19Гилнеаса|r
+}
+
+STRING 24451
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 24452
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 24453
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 24454
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cffd45e19Железная броня|r
+}
+
+STRING 24455
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cffd45e19Стальная броня|r
+}
+
+STRING 24456
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cffd45e19Железная броня|r
+}
+
+STRING 24457
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cffd45e19Мифриловая броня|r
+}
+
+STRING 24458
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cffd45e19Мифриловая броня|r
+}
+
+STRING 24459
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cffd45e19Стальная броня|r
+}
+
+STRING 24460
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cffd45e19Железная броня|r |cffffff00[1]|r
+}
+
+STRING 24461
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cffd45e19Железная броня|r |cffffff00[2]|r
+}
+
+STRING 24462
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cffd45e19Стальная броня|r |cffffff00[3]|r
+}
+
+STRING 24463
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cffd45e19Мифриловая броня|r |cffffff00[6]|r
+}
+
+STRING 24464
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cffd45e19Мифриловая броня|r |cffffff00[5]|r
+}
+
+STRING 24465
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cffd45e19Стальная броня|r |cffffff00[4]|r
+}
+
+STRING 24466
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню воинам |cffd45e19Гилнеаса|r.
+}
+
+STRING 24467
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню воинам |cffd45e19Гилнеаса|r.
+}
+
+STRING 24468
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню воинам |cffd45e19Гилнеаса|r.
+}
+
+STRING 24469
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 24470
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 24471
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 24472
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), EditorSuffix (Editor Suffix)
+{
+(Воргены)
+}
+
+STRING 24473
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню воинам |cffd45e19Гилнеаса|r.
+}
+
+STRING 24474
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню воинам |cffd45e19Гилнеаса|r.
+}
+
+STRING 24475
+// Upgrades: R0EN (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню воинам |cffd45e19Гилнеаса|r.
+}
+
+STRING 24476
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Name (Name)
+{
+|cffd45e19Черный порох|r
+}
+
+STRING 24477
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Name (Name)
+{
+|cffd45e19Черный порох|r
+}
+
+STRING 24478
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Name (Name)
+{
+|cffd45e19Бездымный порох|r
+}
+
+STRING 24479
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Tip (Tooltip)
+{
+Исследовать |cffd45e19Черный порох|r |cffffff00[1]|r
+}
+
+STRING 24480
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Tip (Tooltip)
+{
+Исследовать |cffd45e19Черный порох|r |cffffff00[2]|r
+}
+
+STRING 24481
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Tip (Tooltip)
+{
+Исследовать |cffd45e19Бездымный порох|r |cffffff00[3]|r
+}
+
+STRING 24482
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Ubertip (Tooltip - Extended)
+{
+Увеличивает урон от дистанционных атак стрелков и артилерии.
+}
+
+STRING 24483
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Ubertip (Tooltip - Extended)
+{
+Увеличивает урон от дистанционных атак стрелков и артилерии.
+}
+
+STRING 24484
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Ubertip (Tooltip - Extended)
+{
+Увеличивает урон от дистанционных атак стрелков и артилерии.
+}
+
+STRING 24485
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 24486
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 24487
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 24488
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), EditorSuffix (Editor Suffix)
+{
+(Воргены)
+}
+
+STRING 24489
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 24490
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 24491
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Hotkey (Hotkey)
+{
+W
+}
+
+STRING 24492
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Name (Name)
+{
+|cffd45e19Обогащенный порох|r
+}
+
+STRING 24493
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Name (Name)
+{
+|cffd45e19Обогащенный порох|r
+}
+
+STRING 24494
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Name (Name)
+{
+|cffd45e19Бездымный порох|r
+}
+
+STRING 24495
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Tip (Tooltip)
+{
+Исследовать |cffd45e19Обогащенный порох|r |cffffff00[6]|r
+}
+
+STRING 24496
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Tip (Tooltip)
+{
+Исследовать |cffd45e19Обогащенный порох|r |cffffff00[5]|r
+}
+
+STRING 24497
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Tip (Tooltip)
+{
+Исследовать |cffd45e19Бездымный порох|r |cffffff00[4]|r
+}
+
+STRING 24498
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Ubertip (Tooltip - Extended)
+{
+Увеличивает урон от дистанционных атак стрелков и артилерии.
+}
+
+STRING 24499
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Ubertip (Tooltip - Extended)
+{
+Увеличивает урон от дистанционных атак стрелков и артилерии.
+}
+
+STRING 24500
+// Upgrades: R0EO (Черный порох,Бездымный порох,Обогащенный п), Ubertip (Tooltip - Extended)
+{
+Увеличивает урон от дистанционных атак стрелков и артилерии.
+}
+
+STRING 24501
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Name (Name)
+{
+|cffd45e19Накидки из клепаной кожи|r
+}
+
+STRING 24502
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Name (Name)
+{
+|cffd45e19Накидки из армированной кожи|r
+}
+
+STRING 24503
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Tip (Tooltip)
+{
+Исследовать |cffd45e19Накидки из клепаной кожи|r |cffffff00[1]|r
+}
+
+STRING 24504
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Tip (Tooltip)
+{
+Исследовать |cffd45e19Накидки из клепаной кожи|r |cffffff00[2]|r
+}
+
+STRING 24505
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Tip (Tooltip)
+{
+Исследовать |cffd45e19Накидки из армированной кожи|r |cffffff00[3]|r
+}
+
+STRING 24506
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Tip (Tooltip)
+{
+Исследовать |cffd45e19Накидки из драконьей кожи|r |cffffff00[6]|r
+}
+
+STRING 24507
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Tip (Tooltip)
+{
+Исследовать |cffd45e19Накидки из драконьей кожи|r |cffffff00[5]|r
+}
+
+STRING 24508
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Tip (Tooltip)
+{
+Исследовать |cffd45e19Накидки из армированной кожи|r |cffffff00[4]|r
+}
+
+STRING 24509
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Name (Name)
+{
+|cffd45e19Накидки из драконьей кожи|r
+}
+
+STRING 24510
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Name (Name)
+{
+|cffd45e19Накидки из драконьей кожи|r
+}
+
+STRING 24511
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Name (Name)
+{
+|cffd45e19Накидки из армированной кожи|r
+}
+
+STRING 24512
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Ubertip (Tooltip - Extended)
+{
+Усиливают броню стрелков и магов.
+}
+
+STRING 24513
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Ubertip (Tooltip - Extended)
+{
+Усиливают броню стрелков и магов.
+}
+
+STRING 24514
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Ubertip (Tooltip - Extended)
+{
+Усиливают броню стрелков и магов.
+}
+
+STRING 24515
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 24516
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 24517
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 24518
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), EditorSuffix (Editor Suffix)
+{
+(Воргены)
+}
+
+STRING 24519
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Ubertip (Tooltip - Extended)
+{
+Усиливают броню стрелков и магов.
+}
+
+STRING 24520
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Ubertip (Tooltip - Extended)
+{
+Усиливают броню стрелков и магов.
+}
+
+STRING 24521
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Ubertip (Tooltip - Extended)
+{
+Усиливают броню стрелков и магов.
+}
+
+STRING 24522
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Name (Name)
+{
+|cffd45e19Накидки из клепаной кожи|r
+}
+
+STRING 24523
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 24524
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 24525
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 24526
+// Upgrades: R0EQ (Железные мечи,Стальные мечи,Мифриловые меч), effect1 (Effect 1)
+{
+rats
+}
+
+STRING 24527
+// Upgrades: R0EQ (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cffd45e19Нутро зверя|r
+}
+
+STRING 24528
+// Upgrades: R0EQ (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cffd45e19Нутро зверя|r
+}
+
+STRING 24529
+// Upgrades: R0EQ (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cffd45e19Нутро зверя|r
+}
+
+STRING 24530
+// Upgrades: R0EQ (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cffd45e19Нутро зверя|r
+}
+
+STRING 24531
+// Upgrades: R0EQ (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cffd45e19Нутро зверя|r
+}
+
+STRING 24532
+// Upgrades: R0EQ (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cffd45e19Нутро зверя|r
+}
+
+STRING 24533
+// Upgrades: R0EQ (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Позволяет воргенам в звериной форме при атаке разрывать броню и ткани врагов, что приводит к |cffd45e19кровотичению|r. Увеличивает скорость боя на |cffd45e197%|r.
+}
+
+STRING 24534
+// Upgrades: R0EQ (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Позволяет воргенам в звериной форме при атаке разрывать броню и ткани врагов, что приводит к |cffd45e19кровотичению|r. Увеличивает скорость боя на |cffd45e197%|r.
+}
+
+STRING 24535
+// Upgrades: R0EQ (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Позволяет воргенам в звериной форме при атаке разрывать броню и ткани врагов, что приводит к |cffd45e19кровотичению|r. Увеличивает скорость боя на |cffd45e197%|r.
+}
+
+STRING 24536
+// Upgrades: R0EQ (Железные мечи,Стальные мечи,Мифриловые меч), EditorSuffix (Editor Suffix)
+{
+(Воргены)
+}
+
+STRING 24537
+// Units: H0J2 (|cffd45e19Верховный охотник|r
+), Propernames (Proper Names)
+{
+|cffd45e19Бузан Охотник|r
 }
 
