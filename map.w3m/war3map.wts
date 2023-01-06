@@ -149708,24 +149708,6 @@ STRING 24632
 Исследовать |cff483d8bУкрепление Плазмы|r |cffe1d700[4-й уровень]|r
 }
 
-STRING 24633
-// Upgrades: R0ES (Нечестивая броня,Улучшенная нечестивая бр�), Ubertip (Tooltip - Extended)
-{
-Усиливает броню Сущностей
-}
-
-STRING 24634
-// Upgrades: R0ES (Нечестивая броня,Улучшенная нечестивая бр�), Ubertip (Tooltip - Extended)
-{
-Усиливает броню Сущностей
-}
-
-STRING 24635
-// Upgrades: R0ES (Нечестивая броня,Улучшенная нечестивая бр�), Ubertip (Tooltip - Extended)
-{
-Усиливает броню Сущностей
-}
-
 STRING 24636
 // Upgrades: R0ES (Нечестивая броня,Улучшенная нечестивая бр�), Hotkey (Hotkey)
 {
@@ -149760,24 +149742,6 @@ STRING 24641
 // Upgrades: R0ES (Нечестивая броня,Улучшенная нечестивая бр�), Hotkey (Hotkey)
 {
 S
-}
-
-STRING 24642
-// Upgrades: R0ES (Нечестивая броня,Улучшенная нечестивая бр�), Ubertip (Tooltip - Extended)
-{
-Усиливает броню Сущностей
-}
-
-STRING 24643
-// Upgrades: R0ES (Нечестивая броня,Улучшенная нечестивая бр�), Ubertip (Tooltip - Extended)
-{
-Усиливает броню Сущностей
-}
-
-STRING 24644
-// Upgrades: R0ES (Нечестивая броня,Улучшенная нечестивая бр�), Ubertip (Tooltip - Extended)
-{
-Усиливает броню Сущностей
 }
 
 STRING 24645
@@ -150567,6 +150531,12 @@ rman
 }
 
 STRING 24776
+// Upgrades: R0ES (Нечестивая броня,Улучшенная нечестивая бр�), Ubertip (Tooltip - Extended)
+{
+rhpo
+}
+
+STRING 24777
 // Upgrades: R0EX (Нечестивая сила,Нечестивая мощь,Нечестивы�), effect1 (Effect 1)
 {
 rhpo
