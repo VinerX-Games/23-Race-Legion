@@ -20,12 +20,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -226,6 +226,7 @@ integer array udg_HordeNavyPrice
 integer array udg_HordeMagicPrice
 integer array udg_HordeTechPrice
 unit udg_TombOfSargeras= null
+group udg_FacelessLumberBuildings= null
 
     // Generated
 rect gg_rct_Region_000= null
@@ -1371,6 +1372,12 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_LumberTest= null
+trigger gg_trg_FinishFaceBuild= null
+trigger gg_trg_DeadFaceBuild= null
+trigger gg_trg_Spell= null
+trigger gg_trg_SpellRes= null
+trigger gg_trg_AutoShield_Copy= null
 real array income
 real array incomeW
 real array disincome
@@ -1625,7 +1632,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1633,33 +1640,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1667,19 +1674,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -2218,6 +2225,7 @@ function InitGlobals takes nothing returns nothing
         set i=i + 1
     endloop
 
+    set udg_FacelessLumberBuildings=CreateGroup()
 endfunction
 
 //***************************************************************************
@@ -5003,8 +5011,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'e032', 415.9, - 29917.2, 355.287, 'e032')
     set u=BlzCreateUnitWithSkin(p, 'e032', 508.0, - 29904.5, 335.269, 'e032')
     set u=BlzCreateUnitWithSkin(p, 'e032', 515.6, - 29755.1, 333.247, 'e032')
-    set u=BlzCreateUnitWithSkin(p, 'H0J2', - 6998.8, - 26696.5, 226.500, 'H0J2')
-    call SetHeroLevel(u, 25, false)
+    set u=BlzCreateUnitWithSkin(p, 'u02D', - 18467.5, - 13557.1, 350.101, 'u02D')
     set u=BlzCreateUnitWithSkin(p, 'opeo', - 1957.6, - 29824.5, 271.943, 'opeo')
     set u=BlzCreateUnitWithSkin(p, 'h0GU', - 1437.3, - 26775.3, 271.854, 'h0GU')
     set u=BlzCreateUnitWithSkin(p, 'h0GV', - 2041.6, - 26846.6, 272.760, 'h0GV')
@@ -5013,9 +5020,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0GX', - 1487.3, - 27157.4, 264.927, 'h0GX')
     set u=BlzCreateUnitWithSkin(p, 'h0GY', - 935.9, - 26851.2, 283.582, 'h0GY')
     set u=BlzCreateUnitWithSkin(p, 'h0J5', - 3816.1, - 30024.1, 180.750, 'h0J5')
-    set u=BlzCreateUnitWithSkin(p, 'H0J6', - 7218.5, - 26726.5, 277.300, 'H0J6')
-    call SetHeroLevel(u, 25, false)
-    set u=BlzCreateUnitWithSkin(p, 'O02P', - 4981.2, - 29946.6, 263.582, 'O02P')
+    set u=BlzCreateUnitWithSkin(p, 'u02D', - 4005.9, - 26178.3, 350.101, 'u02D')
+    set u=BlzCreateUnitWithSkin(p, 'h0I9', - 4398.5, - 26268.8, 109.657, 'h0I9')
     set u=BlzCreateUnitWithSkin(p, 'h0HE', - 1608.4, - 27139.7, 268.307, 'h0HE')
     set u=BlzCreateUnitWithSkin(p, 'h0GS', - 2397.9, - 26955.2, 269.261, 'h0GS')
     set u=BlzCreateUnitWithSkin(p, 'h0GS', - 2497.3, - 26970.2, 269.260, 'h0GS')
@@ -5057,31 +5063,16 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o02T', - 6723.3, - 27002.8, 277.132, 'o02T')
     set u=BlzCreateUnitWithSkin(p, 'h0IY', - 6267.3, - 26881.2, 269.940, 'h0IY')
     set u=BlzCreateUnitWithSkin(p, 'h0IZ', - 6489.2, - 26877.8, 227.710, 'h0IZ')
-    set u=BlzCreateUnitWithSkin(p, 'H0HR', - 3412.5, - 28124.3, 279.770, 'H0HR')
-    call SetHeroLevel(u, 25, false)
-    call SelectHeroSkill(u, 'A0MZ')
-    call SelectHeroSkill(u, 'A0MZ')
-    call SelectHeroSkill(u, 'A0MZ')
-    call IssueImmediateOrder(u, "")
-    set u=BlzCreateUnitWithSkin(p, 'U029', - 3652.6, - 27824.2, 275.694, 'U029')
-    set u=BlzCreateUnitWithSkin(p, 'u02D', - 4005.9, - 26178.3, 350.101, 'u02D')
+    set u=BlzCreateUnitWithSkin(p, 'h0I9', - 18860.1, - 13647.5, 109.657, 'h0I9')
+    set u=BlzCreateUnitWithSkin(p, 'u02D', - 18462.0, - 14190.9, 350.101, 'u02D')
+    set u=BlzCreateUnitWithSkin(p, 'h0I9', - 18854.6, - 14281.4, 109.657, 'h0I9')
     set u=BlzCreateUnitWithSkin(p, 'h0J0', - 6825.3, - 26983.3, 273.609, 'h0J0')
     set u=BlzCreateUnitWithSkin(p, 'h0J1', - 6946.1, - 26998.4, 325.897, 'h0J1')
     set u=BlzCreateUnitWithSkin(p, 'h0J4', - 5103.1, - 27607.1, 303.790, 'h0J4')
-    set u=BlzCreateUnitWithSkin(p, 'H0J7', - 7382.3, - 26699.7, 272.990, 'H0J7')
-    call SetHeroLevel(u, 25, false)
-    set u=BlzCreateUnitWithSkin(p, 'H0J8', - 7562.6, - 26752.2, 287.290, 'H0J8')
-    call SetHeroLevel(u, 25, false)
+    set u=BlzCreateUnitWithSkin(p, 'u02D', - 4005.9, - 26178.3, 350.101, 'u02D')
+    set u=BlzCreateUnitWithSkin(p, 'h0I9', - 4398.5, - 26268.8, 109.657, 'h0I9')
     set u=BlzCreateUnitWithSkin(p, 'o02S', - 5834.2, - 29266.4, 273.600, 'o02S')
     set u=BlzCreateUnitWithSkin(p, 'o02J', - 5686.3, - 29549.0, 279.110, 'o02J')
-    set u=BlzCreateUnitWithSkin(p, 'N047', - 2152.2, - 28932.8, 300.452, 'N047')
-    call SetHeroLevel(u, 25, false)
-    set u=BlzCreateUnitWithSkin(p, 'N046', - 2339.1, - 28936.9, 345.805, 'N046')
-    call SetHeroLevel(u, 25, false)
-    set u=BlzCreateUnitWithSkin(p, 'N045', - 2485.8, - 28928.8, 130.818, 'N045')
-    call SetHeroLevel(u, 25, false)
-    set u=BlzCreateUnitWithSkin(p, 'N040', - 2660.3, - 28932.8, 77.126, 'N040')
-    call SetHeroLevel(u, 25, false)
     set u=BlzCreateUnitWithSkin(p, 'n04S', - 5501.3, - 29397.9, 250.750, 'n04S')
     set u=BlzCreateUnitWithSkin(p, 'h0I9', - 4409.9, - 25840.7, 265.828, 'h0I9')
     set u=BlzCreateUnitWithSkin(p, 'h0IA', - 4288.3, - 25815.5, 262.925, 'h0IA')
@@ -5097,26 +5088,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'ohun', - 6227.1, - 29468.3, 270.051, 'ohun')
     set u=BlzCreateUnitWithSkin(p, 'orai', - 5381.2, - 29180.5, 291.644, 'orai')
     set u=BlzCreateUnitWithSkin(p, 'otau', - 5115.0, - 29220.1, 285.829, 'otau')
-    set u=BlzCreateUnitWithSkin(p, 'N04P', - 1912.0, - 28902.3, 241.480, 'N04P')
-    call SetHeroLevel(u, 25, false)
-    call SelectHeroSkill(u, 'A0YY')
-    call SelectHeroSkill(u, 'A0YY')
-    call SelectHeroSkill(u, 'A0YY')
-    call SelectHeroSkill(u, 'A0YY')
-    call IssueImmediateOrder(u, "")
-    call SelectHeroSkill(u, 'A0YX')
-    call SelectHeroSkill(u, 'A0YX')
-    call SelectHeroSkill(u, 'A0YX')
-    call SelectHeroSkill(u, 'A0YX')
-    call IssueImmediateOrder(u, "")
-    call SelectHeroSkill(u, 'A0Z2')
-    call SelectHeroSkill(u, 'A0Z2')
-    call SelectHeroSkill(u, 'A0Z2')
-    call SelectHeroSkill(u, 'A0Z2')
-    call IssueImmediateOrder(u, "")
-    call SelectHeroSkill(u, 'A0XX')
-    call SelectHeroSkill(u, 'A0XX')
-    call IssueImmediateOrder(u, "")
     set u=BlzCreateUnitWithSkin(p, 'ocat', - 6134.5, - 30170.9, 258.969, 'ocat')
     set u=BlzCreateUnitWithSkin(p, 'okod', - 5384.0, - 29430.7, 270.055, 'okod')
     set u=BlzCreateUnitWithSkin(p, 'o026', - 5745.6, - 30194.1, 268.517, 'o026')
@@ -5159,10 +5130,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o02L', - 5285.7, - 29759.6, 268.750, 'o02L')
     set u=BlzCreateUnitWithSkin(p, 'h0F4', - 1927.9, - 26891.7, 256.564, 'h0F4')
     set u=BlzCreateUnitWithSkin(p, 'h0IB', - 4502.5, - 25851.0, 259.966, 'h0IB')
-    set u=BlzCreateUnitWithSkin(p, 'U02I', - 4706.8, - 26202.6, 233.630, 'U02I')
-    call SetHeroLevel(u, 25, false)
-    set u=BlzCreateUnitWithSkin(p, 'U02G', - 4521.7, - 26208.3, 258.000, 'U02G')
-    call SetHeroLevel(u, 25, false)
     set u=BlzCreateUnitWithSkin(p, 'h0IH', - 5443.4, - 29877.1, 272.940, 'h0IH')
 endfunction
 
@@ -5174,7 +5141,6 @@ function CreateUnitsForPlayer1 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'N04Q', - 1583.0, - 28880.8, 230.280, 'N04Q')
     set u=BlzCreateUnitWithSkin(p, 'o00W', - 7066.4, - 28566.2, 262.367, 'o00W')
     set u=BlzCreateUnitWithSkin(p, 'o02O', - 4979.6, - 29590.9, 264.097, 'o02O')
 endfunction
@@ -5188,18 +5154,6 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'e02M', - 3164.7, - 27897.6, 92.277, 'e02M')
-endfunction
-
-//===========================================================================
-function CreateUnitsForPlayer4 takes nothing returns nothing
-    local player p= Player(4)
-    local unit u
-    local integer unitID
-    local trigger t
-    local real life
-
-    set u=BlzCreateUnitWithSkin(p, 'U02H', - 4290.5, - 26191.4, 268.610, 'U02H')
-    call SetHeroLevel(u, 25, false)
 endfunction
 
 //===========================================================================
@@ -5842,7 +5796,6 @@ function CreatePlayerUnits takes nothing returns nothing
     call CreateUnitsForPlayer0()
     call CreateUnitsForPlayer1()
     call CreateUnitsForPlayer3()
-    call CreateUnitsForPlayer4()
     call CreateUnitsForPlayer21()
 endfunction
 
@@ -19509,6 +19462,271 @@ endfunction
 
 
 //===========================================================================
+// Trigger: ZdaniyaBezlik
+//===========================================================================
+function Trig_ZdaniyaBezlik_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0LK' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ZdaniyaBezlik_Actions takes nothing returns nothing
+    set udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
+    call CreateNUnitsAtLoc(1, 'n01T', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
+endfunction
+
+//===========================================================================
+function InitTrig_ZdaniyaBezlik takes nothing returns nothing
+    set gg_trg_ZdaniyaBezlik=CreateTrigger()
+    call DisableTrigger(gg_trg_ZdaniyaBezlik)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_ZdaniyaBezlik, Condition(function Trig_ZdaniyaBezlik_Conditions))
+    call TriggerAddAction(gg_trg_ZdaniyaBezlik, function Trig_ZdaniyaBezlik_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ZdaniyaBezlik Copy
+//===========================================================================
+function Trig_ZdaniyaBezlik_Copy_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0LN' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ZdaniyaBezlik_Copy_Actions takes nothing returns nothing
+    set udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
+    call CreateNUnitsAtLoc(1, 'n01Q', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
+endfunction
+
+//===========================================================================
+function InitTrig_ZdaniyaBezlik_Copy takes nothing returns nothing
+    set gg_trg_ZdaniyaBezlik_Copy=CreateTrigger()
+    call DisableTrigger(gg_trg_ZdaniyaBezlik_Copy)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_ZdaniyaBezlik_Copy, Condition(function Trig_ZdaniyaBezlik_Copy_Conditions))
+    call TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy, function Trig_ZdaniyaBezlik_Copy_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ZdaniyaBezlik Copy Copy
+//===========================================================================
+function Trig_ZdaniyaBezlik_Copy_Copy_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0LM' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ZdaniyaBezlik_Copy_Copy_Actions takes nothing returns nothing
+    set udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
+    call CreateNUnitsAtLoc(1, 'n01S', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
+endfunction
+
+//===========================================================================
+function InitTrig_ZdaniyaBezlik_Copy_Copy takes nothing returns nothing
+    set gg_trg_ZdaniyaBezlik_Copy_Copy=CreateTrigger()
+    call DisableTrigger(gg_trg_ZdaniyaBezlik_Copy_Copy)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik_Copy_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_ZdaniyaBezlik_Copy_Copy, Condition(function Trig_ZdaniyaBezlik_Copy_Copy_Conditions))
+    call TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy_Copy, function Trig_ZdaniyaBezlik_Copy_Copy_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ZdaniyaBezlik Copy Copy 2
+//===========================================================================
+function Trig_ZdaniyaBezlik_Copy_Copy_2_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0LO' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ZdaniyaBezlik_Copy_Copy_2_Actions takes nothing returns nothing
+    set udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
+    call CreateNUnitsAtLoc(1, 'n01R', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
+endfunction
+
+//===========================================================================
+function InitTrig_ZdaniyaBezlik_Copy_Copy_2 takes nothing returns nothing
+    set gg_trg_ZdaniyaBezlik_Copy_Copy_2=CreateTrigger()
+    call DisableTrigger(gg_trg_ZdaniyaBezlik_Copy_Copy_2)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik_Copy_Copy_2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_ZdaniyaBezlik_Copy_Copy_2, Condition(function Trig_ZdaniyaBezlik_Copy_Copy_2_Conditions))
+    call TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy_Copy_2, function Trig_ZdaniyaBezlik_Copy_Copy_2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ZdaniyaBezlik Copy Copy 2 Copy
+//===========================================================================
+function Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0LP' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Actions takes nothing returns nothing
+    set udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
+    call CreateNUnitsAtLoc(1, 'n01U', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
+endfunction
+
+//===========================================================================
+function InitTrig_ZdaniyaBezlik_Copy_Copy_2_Copy takes nothing returns nothing
+    set gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy=CreateTrigger()
+    call DisableTrigger(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy, Condition(function Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Conditions))
+    call TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy, function Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: FinishFaceBuild
+//===========================================================================
+function Trig_FinishFaceBuild_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'h0HZ' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_FinishFaceBuild_Actions takes nothing returns nothing
+    call GroupAddUnitSimple(GetConstructedStructure(), udg_FacelessLumberBuildings)
+endfunction
+
+//===========================================================================
+function InitTrig_FinishFaceBuild takes nothing returns nothing
+    set gg_trg_FinishFaceBuild=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_FinishFaceBuild, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    call TriggerAddCondition(gg_trg_FinishFaceBuild, Condition(function Trig_FinishFaceBuild_Conditions))
+    call TriggerAddAction(gg_trg_FinishFaceBuild, function Trig_FinishFaceBuild_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: DeadFaceBuild
+//===========================================================================
+function Trig_DeadFaceBuild_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h0HZ' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_DeadFaceBuild_Actions takes nothing returns nothing
+    call GroupRemoveUnitSimple(GetTriggerUnit(), udg_FacelessLumberBuildings)
+endfunction
+
+//===========================================================================
+function InitTrig_DeadFaceBuild takes nothing returns nothing
+    set gg_trg_DeadFaceBuild=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_DeadFaceBuild, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_DeadFaceBuild, Condition(function Trig_DeadFaceBuild_Conditions))
+    call TriggerAddAction(gg_trg_DeadFaceBuild, function Trig_DeadFaceBuild_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: LumberTest
+//===========================================================================
+
+
+
+function Trig_LumberTest_Func001Func001A takes nothing returns nothing
+    local texttag t= CreateTextTag()
+    local player p= udg_LocalPlayer
+    local string s= I2S(5)
+    call AdjustPlayerStateBJ(5, p, PLAYER_STATE_RESOURCE_LUMBER)
+    call DisplayTextToPlayer(Player(0), 0, 0, "Der")
+    call SetTextTagText(t, s, 0)
+    call SetTextTagPos(t, GetDestructableX(GetEnumDestructable()), GetDestructableY(GetEnumDestructable()), 0)
+    call SetTextTagPermanent(t, false)
+    call SetTextTagLifespan(t, 2.00)
+    call SetTextTagFadepoint(t, 2.00)
+    call SetTextTagVelocity(t, 75.00, 90)
+    
+    
+   
+    call DestroyTextTag(t)
+    set t=null
+    set p=null
+endfunction
+
+
+function Trig_LumberTest_Actions takes nothing returns nothing
+    local group g= udg_FacelessLumberBuildings
+    local destructable d
+    local unit u= null
+    call DisplayTextToPlayer(Player(0), 0, 0, "RAb")
+    loop
+        set u=FirstOfGroup(g)
+        exitwhen u == null
+        
+        
+        set udg_LocalPlayer=GetOwningPlayer(u)
+        call EnumDestructablesInCircleBJ(500.00, GetUnitLoc(u), function Trig_LumberTest_Func001Func001A)
+    
+        call GroupRemoveUnit(g, u)
+    endloop
+    
+    
+    call DestroyGroup(g)
+    set u=null
+    set g=null
+endfunction
+
+//===========================================================================
+function InitTrig_LumberTest takes nothing returns nothing
+    set gg_trg_LumberTest=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_LumberTest, 5.00)
+    call TriggerAddAction(gg_trg_LumberTest, function Trig_LumberTest_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Spell
+//===========================================================================
+function Trig_Spell_Conditions takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A122', GetAttacker()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Spell_Actions takes nothing returns nothing
+    call UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.01 ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
+endfunction
+
+//===========================================================================
+function InitTrig_Spell takes nothing returns nothing
+    set gg_trg_Spell=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Spell, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_Spell, Condition(function Trig_Spell_Conditions))
+    call TriggerAddAction(gg_trg_Spell, function Trig_Spell_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: SpellRes
+//===========================================================================
+function Trig_SpellRes_Conditions takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A123', GetKillingUnitBJ()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_SpellRes_Actions takes nothing returns nothing
+    call BlzEndUnitAbilityCooldown(GetKillingUnitBJ(), 'A123')
+endfunction
+
+//===========================================================================
+function InitTrig_SpellRes takes nothing returns nothing
+    set gg_trg_SpellRes=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_SpellRes, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_SpellRes, Condition(function Trig_SpellRes_Conditions))
+    call TriggerAddAction(gg_trg_SpellRes, function Trig_SpellRes_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: StartHorde
 //===========================================================================
 function Trig_StartHorde_Func001A takes nothing returns nothing
@@ -21022,7 +21240,7 @@ function Trig_NavyLight_Actions takes nothing returns nothing
     
     
     //Зандалары
-    if GetPlayerTechCount(p, 'h0J4', true) == 1 then
+    if GetPlayerTechCount(p, 'h0F3', true) == 1 then
         set i=2
         set b=1
         
@@ -21075,6 +21293,8 @@ function Trig_TrallHordeForever_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(p)
     local group g= CreateGroup()
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 15
+    
+    //Запретил ветки
     call SetPlayerTechMaxAllowed(p, 'R0DY', 0)
     call SetPlayerTechMaxAllowed(p, 'R0DX', 0)
     call SetPlayerTechMaxAllowed(p, 'R0DZ', 0)
@@ -21102,6 +21322,9 @@ function Trig_Compromise_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(p)
     local group g= CreateGroup()
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 6
+    
+    
+    //Запретил другие ветки
     call SetPlayerTechMaxAllowed(p, 'R0EH', 0)
     call SetPlayerTechMaxAllowed(p, 'R0E9', 0)
     
@@ -21498,6 +21721,10 @@ function Trig_CommonHome_Actions takes nothing returns nothing
     
     call SetPlayerTechMaxAllowed(p, 'R0F3', 1)
     call SetPlayerTechMaxAllowed(p, 'R0F4', 1)
+    
+    
+    call SetPlayerTechMaxAllowed(p, 'R0EI', 0)
+    call SetPlayerTechMaxAllowed(p, 'R0E9', 0)
     set p=null
     set u=null
     
@@ -22085,6 +22312,28 @@ function InitTrig_IronStar takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_IronStar, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_IronStar, Condition(function Trig_IronStar_Conditions))
     call TriggerAddAction(gg_trg_IronStar, function Trig_IronStar_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: AutoShield Copy
+//===========================================================================
+function Trig_AutoShield_Copy_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A124' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_AutoShield_Copy_Actions takes nothing returns nothing
+    call IssueTargetOrderBJ(GetTriggerUnit(), "antimagicshell", GetSpellTargetUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_AutoShield_Copy takes nothing returns nothing
+    set gg_trg_AutoShield_Copy=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AutoShield_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_AutoShield_Copy, Condition(function Trig_AutoShield_Copy_Conditions))
+    call TriggerAddAction(gg_trg_AutoShield_Copy, function Trig_AutoShield_Copy_Actions)
 endfunction
 
 //===========================================================================
@@ -32871,126 +33120,6 @@ function InitTrig_Titan2 takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: ZdaniyaBezlik
-//===========================================================================
-function Trig_ZdaniyaBezlik_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0LK' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ZdaniyaBezlik_Actions takes nothing returns nothing
-    set udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
-    call CreateNUnitsAtLoc(1, 'n01T', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
-endfunction
-
-//===========================================================================
-function InitTrig_ZdaniyaBezlik takes nothing returns nothing
-    set gg_trg_ZdaniyaBezlik=CreateTrigger()
-    call DisableTrigger(gg_trg_ZdaniyaBezlik)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_ZdaniyaBezlik, Condition(function Trig_ZdaniyaBezlik_Conditions))
-    call TriggerAddAction(gg_trg_ZdaniyaBezlik, function Trig_ZdaniyaBezlik_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: ZdaniyaBezlik Copy
-//===========================================================================
-function Trig_ZdaniyaBezlik_Copy_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0LN' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ZdaniyaBezlik_Copy_Actions takes nothing returns nothing
-    set udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
-    call CreateNUnitsAtLoc(1, 'n01Q', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
-endfunction
-
-//===========================================================================
-function InitTrig_ZdaniyaBezlik_Copy takes nothing returns nothing
-    set gg_trg_ZdaniyaBezlik_Copy=CreateTrigger()
-    call DisableTrigger(gg_trg_ZdaniyaBezlik_Copy)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_ZdaniyaBezlik_Copy, Condition(function Trig_ZdaniyaBezlik_Copy_Conditions))
-    call TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy, function Trig_ZdaniyaBezlik_Copy_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: ZdaniyaBezlik Copy Copy
-//===========================================================================
-function Trig_ZdaniyaBezlik_Copy_Copy_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0LM' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ZdaniyaBezlik_Copy_Copy_Actions takes nothing returns nothing
-    set udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
-    call CreateNUnitsAtLoc(1, 'n01S', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
-endfunction
-
-//===========================================================================
-function InitTrig_ZdaniyaBezlik_Copy_Copy takes nothing returns nothing
-    set gg_trg_ZdaniyaBezlik_Copy_Copy=CreateTrigger()
-    call DisableTrigger(gg_trg_ZdaniyaBezlik_Copy_Copy)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik_Copy_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_ZdaniyaBezlik_Copy_Copy, Condition(function Trig_ZdaniyaBezlik_Copy_Copy_Conditions))
-    call TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy_Copy, function Trig_ZdaniyaBezlik_Copy_Copy_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: ZdaniyaBezlik Copy Copy 2
-//===========================================================================
-function Trig_ZdaniyaBezlik_Copy_Copy_2_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0LO' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ZdaniyaBezlik_Copy_Copy_2_Actions takes nothing returns nothing
-    set udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
-    call CreateNUnitsAtLoc(1, 'n01R', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
-endfunction
-
-//===========================================================================
-function InitTrig_ZdaniyaBezlik_Copy_Copy_2 takes nothing returns nothing
-    set gg_trg_ZdaniyaBezlik_Copy_Copy_2=CreateTrigger()
-    call DisableTrigger(gg_trg_ZdaniyaBezlik_Copy_Copy_2)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik_Copy_Copy_2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_ZdaniyaBezlik_Copy_Copy_2, Condition(function Trig_ZdaniyaBezlik_Copy_Copy_2_Conditions))
-    call TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy_Copy_2, function Trig_ZdaniyaBezlik_Copy_Copy_2_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: ZdaniyaBezlik Copy Copy 2 Copy
-//===========================================================================
-function Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0LP' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Actions takes nothing returns nothing
-    set udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
-    call CreateNUnitsAtLoc(1, 'n01U', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
-endfunction
-
-//===========================================================================
-function InitTrig_ZdaniyaBezlik_Copy_Copy_2_Copy takes nothing returns nothing
-    set gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy=CreateTrigger()
-    call DisableTrigger(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy, Condition(function Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Conditions))
-    call TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy, function Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: StartBuildingArg
 //===========================================================================
 
@@ -39656,6 +39785,16 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Defend()
     call InitTrig_Heal()
     call InitTrig_EnterKazna()
+    call InitTrig_ZdaniyaBezlik()
+    call InitTrig_ZdaniyaBezlik_Copy()
+    call InitTrig_ZdaniyaBezlik_Copy_Copy()
+    call InitTrig_ZdaniyaBezlik_Copy_Copy_2()
+    call InitTrig_ZdaniyaBezlik_Copy_Copy_2_Copy()
+    call InitTrig_FinishFaceBuild()
+    call InitTrig_DeadFaceBuild()
+    call InitTrig_LumberTest()
+    call InitTrig_Spell()
+    call InitTrig_SpellRes()
     call InitTrig_StartHorde()
     call InitTrig_StartHorde_Copy()
     call InitTrig_HordeOn()
@@ -39704,6 +39843,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_BerserkTrol()
     call InitTrig_AutoSetkaH()
     call InitTrig_IronStar()
+    call InitTrig_AutoShield_Copy()
     call InitTrig_GnomesOn()
     call InitTrig_GnomesStart()
     call InitTrig_GelbinSpellAttacked()
@@ -40025,11 +40165,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_km2()
     call InitTrig_Titan()
     call InitTrig_Titan2()
-    call InitTrig_ZdaniyaBezlik()
-    call InitTrig_ZdaniyaBezlik_Copy()
-    call InitTrig_ZdaniyaBezlik_Copy_Copy()
-    call InitTrig_ZdaniyaBezlik_Copy_Copy_2()
-    call InitTrig_ZdaniyaBezlik_Copy_Copy_2_Copy()
     call InitTrig_StartBuildingArg()
     call InitTrig_CanselBuildingArg()
     call InitTrig_Hero_Limits_Ent()
@@ -40579,7 +40714,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
