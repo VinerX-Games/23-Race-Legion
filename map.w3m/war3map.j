@@ -20,12 +20,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -519,6 +519,7 @@ trigger gg_trg_Race_Kult_Sum_Molota_O= null
 trigger gg_trg_Race_Nerubs_O= null
 trigger gg_trg_Race_Silitids_O= null
 trigger gg_trg_Race_Gnomes= null
+trigger gg_trg_Race_Gilneas= null
 trigger gg_trg_Page1_O= null
 trigger gg_trg_Page2_O= null
 trigger gg_trg_Page3_O= null
@@ -642,6 +643,8 @@ trigger gg_trg_F2_Map= null
 trigger gg_trg_ToKill2= null
 trigger gg_trg_Emerald_Dream_TP_O= null
 trigger gg_trg_Emerald_Dream_TP_OFF_O= null
+trigger gg_trg_StartHorde_Copy_2= null
+trigger gg_trg_LegGer= null
 trigger gg_trg_TrainHeroGiveItem= null
 trigger gg_trg_LimitHero_Exep= null
 trigger gg_trg_Hero_Limits_General_Copy= null
@@ -672,6 +675,7 @@ trigger gg_trg_Defend= null
 trigger gg_trg_Heal= null
 trigger gg_trg_EnterKazna= null
 trigger gg_trg_StartHorde= null
+trigger gg_trg_StartHorde_Copy= null
 trigger gg_trg_HordeOn= null
 trigger gg_trg_K1T1= null
 trigger gg_trg_K1T2= null
@@ -1621,7 +1625,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1629,33 +1633,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1663,19 +1667,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -4920,7 +4924,6 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h037', - 3264.0, - 26560.0, 270.000, 'h037')
     set u=BlzCreateUnitWithSkin(p, 'h0IP', - 5632.0, - 26240.0, 270.000, 'h0IP')
     set u=BlzCreateUnitWithSkin(p, 'h0GN', - 96.0, - 29984.0, 270.000, 'h0GN')
-    set u=BlzCreateUnitWithSkin(p, 'h0GQ', - 544.0, - 29216.0, 270.000, 'h0GQ')
     set u=BlzCreateUnitWithSkin(p, 'obar', - 1600.0, - 29760.0, 270.000, 'obar')
     set u=BlzCreateUnitWithSkin(p, 'h0EP', - 2624.0, - 29696.0, 270.000, 'h0EP')
     set u=BlzCreateUnitWithSkin(p, 'h0IQ', - 5696.0, - 26560.0, 270.000, 'h0IQ')
@@ -4997,6 +5000,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'e032', 415.9, - 29917.2, 355.287, 'e032')
     set u=BlzCreateUnitWithSkin(p, 'e032', 508.0, - 29904.5, 335.269, 'e032')
     set u=BlzCreateUnitWithSkin(p, 'e032', 515.6, - 29755.1, 333.247, 'e032')
+    set u=BlzCreateUnitWithSkin(p, 'H0J2', - 6998.8, - 26696.5, 226.500, 'H0J2')
+    call SetHeroLevel(u, 25, false)
     set u=BlzCreateUnitWithSkin(p, 'opeo', - 1957.6, - 29824.5, 271.943, 'opeo')
     set u=BlzCreateUnitWithSkin(p, 'h0GU', - 1437.3, - 26775.3, 271.854, 'h0GU')
     set u=BlzCreateUnitWithSkin(p, 'h0GV', - 2041.6, - 26846.6, 272.760, 'h0GV')
@@ -5005,6 +5010,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0GX', - 1487.3, - 27157.4, 264.927, 'h0GX')
     set u=BlzCreateUnitWithSkin(p, 'h0GY', - 935.9, - 26851.2, 283.582, 'h0GY')
     set u=BlzCreateUnitWithSkin(p, 'h0J5', - 3816.1, - 30024.1, 180.750, 'h0J5')
+    set u=BlzCreateUnitWithSkin(p, 'H0J6', - 7218.5, - 26726.5, 277.300, 'H0J6')
+    call SetHeroLevel(u, 25, false)
     set u=BlzCreateUnitWithSkin(p, 'O02P', - 4981.2, - 29946.6, 263.582, 'O02P')
     set u=BlzCreateUnitWithSkin(p, 'h0HE', - 1608.4, - 27139.7, 268.307, 'h0HE')
     set u=BlzCreateUnitWithSkin(p, 'h0GS', - 2397.9, - 26955.2, 269.261, 'h0GS')
@@ -5058,6 +5065,10 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0J0', - 6825.3, - 26983.3, 273.609, 'h0J0')
     set u=BlzCreateUnitWithSkin(p, 'h0J1', - 6946.1, - 26998.4, 325.897, 'h0J1')
     set u=BlzCreateUnitWithSkin(p, 'h0J4', - 5103.1, - 27607.1, 303.790, 'h0J4')
+    set u=BlzCreateUnitWithSkin(p, 'H0J7', - 7382.3, - 26699.7, 272.990, 'H0J7')
+    call SetHeroLevel(u, 25, false)
+    set u=BlzCreateUnitWithSkin(p, 'H0J8', - 7562.6, - 26752.2, 287.290, 'H0J8')
+    call SetHeroLevel(u, 25, false)
     set u=BlzCreateUnitWithSkin(p, 'o02S', - 5834.2, - 29266.4, 273.599, 'o02S')
     set u=BlzCreateUnitWithSkin(p, 'o02J', - 5686.3, - 29549.0, 279.110, 'o02J')
     set u=BlzCreateUnitWithSkin(p, 'N047', - 2152.2, - 28932.8, 300.452, 'N047')
@@ -5596,6 +5607,7 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'e033', - 20613.2, 21499.9, 270.000, 'e033')
     set u=BlzCreateUnitWithSkin(p, 'e033', - 22199.9, 21835.6, 270.000, 'e033')
     set u=BlzCreateUnitWithSkin(p, 'e033', - 22425.0, 21434.4, 270.000, 'e033')
+    set u=BlzCreateUnitWithSkin(p, 'h0J9', 11808.0, 3168.0, 270.000, 'h0J9')
     set gg_unit_h0BA_0361=BlzCreateUnitWithSkin(p, 'h0BA', 5312.0, 2688.0, 270.000, 'h0BA')
     call WaygateSetDestination(gg_unit_h0BA_0361, GetRectCenterX(gg_rct_Region_015), GetRectCenterY(gg_rct_Region_015))
     call WaygateActivate(gg_unit_h0BA_0361, true)
@@ -12248,6 +12260,32 @@ function InitTrig_Race_Gnomes takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: Race Gilneas
+//===========================================================================
+function Trig_Race_Gilneas_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A121' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Gilneas_Actions takes nothing returns nothing
+    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    call CreateNUnitsAtLoc(5, 'h0IT', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    call SetPlayerTechResearchedSwap('R0BX', 1, GetOwningPlayer(GetTriggerUnit()))
+    call RemoveUnit(GetSpellAbilityUnit())
+    call RemoveLocation(udg_LocalPosition2)
+endfunction
+
+//===========================================================================
+function InitTrig_Race_Gilneas takes nothing returns nothing
+    set gg_trg_Race_Gilneas=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Gilneas, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_Race_Gilneas, Condition(function Trig_Race_Gilneas_Conditions))
+    call TriggerAddAction(gg_trg_Race_Gilneas, function Trig_Race_Gilneas_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: Page1 O
 //===========================================================================
 function Trig_Page1_O_Conditions takes nothing returns boolean
@@ -12272,6 +12310,7 @@ function Trig_Page1_O_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0OK', GetTriggerUnit())
     call UnitAddAbilityBJ('A0HZ', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0YV', GetTriggerUnit())
+    call UnitRemoveAbilityBJ('A121', GetTriggerUnit())
 endfunction
 
 //===========================================================================
@@ -12339,6 +12378,7 @@ endfunction
 
 function Trig_Page3_O_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0YV', GetTriggerUnit())
+    call UnitAddAbilityBJ('A121', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QQ', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QN', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0HO', GetTriggerUnit())
@@ -18586,6 +18626,100 @@ function InitTrig_Emerald_Dream_TP_OFF_O takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: StartHorde Copy 2
+//===========================================================================
+function Trig_StartHorde_Copy_2_Func001A takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('H0J2', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H0J6', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H0J7', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H0J8', 1, GetEnumPlayer())
+endfunction
+
+function Trig_StartHorde_Copy_2_Actions takes nothing returns nothing
+    call ForForce(udg_AllPlayers, function Trig_StartHorde_Copy_2_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_StartHorde_Copy_2 takes nothing returns nothing
+    set gg_trg_StartHorde_Copy_2=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_StartHorde_Copy_2, 0.01)
+    call TriggerAddAction(gg_trg_StartHorde_Copy_2, function Trig_StartHorde_Copy_2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: LegGer
+//===========================================================================
+function Trig_LegGer_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A11U' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LegGer_Func001Func001Func002Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 4 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LegGer_Func001Func001Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 3 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LegGer_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LegGer_Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LegGer_Actions takes nothing returns nothing
+    if ( Trig_LegGer_Func001C() ) then
+        call UnitAddAbilityBJ('A11V', GetTriggerUnit())
+        call TriggerSleepAction(15.00)
+        call UnitRemoveAbilityBJ('A11V', GetTriggerUnit())
+    else
+        if ( Trig_LegGer_Func001Func001C() ) then
+            call UnitAddAbilityBJ('A11W', GetTriggerUnit())
+            call TriggerSleepAction(15.00)
+            call UnitRemoveAbilityBJ('A11W', GetTriggerUnit())
+        else
+            if ( Trig_LegGer_Func001Func001Func002C() ) then
+                call UnitAddAbilityBJ('A11X', GetTriggerUnit())
+                call TriggerSleepAction(15.00)
+                call UnitRemoveAbilityBJ('A11X', GetTriggerUnit())
+            else
+                if ( Trig_LegGer_Func001Func001Func002Func002C() ) then
+                    call UnitAddAbilityBJ('A11Y', GetTriggerUnit())
+                    call TriggerSleepAction(15.00)
+                    call UnitRemoveAbilityBJ('A11Y', GetTriggerUnit())
+                else
+                endif
+            endif
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_LegGer takes nothing returns nothing
+    set gg_trg_LegGer=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_LegGer, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_LegGer, Condition(function Trig_LegGer_Conditions))
+    call TriggerAddAction(gg_trg_LegGer, function Trig_LegGer_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: TrainHeroGiveItem
 //===========================================================================
 function Trig_TrainHeroGiveItem_Conditions takes nothing returns boolean
@@ -19408,6 +19542,45 @@ function InitTrig_StartHorde takes nothing returns nothing
     set gg_trg_StartHorde=CreateTrigger()
     call TriggerRegisterTimerEventSingle(gg_trg_StartHorde, 0.01)
     call TriggerAddAction(gg_trg_StartHorde, function Trig_StartHorde_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: StartHorde Copy
+//===========================================================================
+function Trig_StartHorde_Copy_Func001A takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('Oshd', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('Otch', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('Ofar', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('Obla', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('o029', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('o02B', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('h0CY', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0D1', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0D2', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0D3', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0E0', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0E1', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0E3', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0E4', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0E5', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0E9', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0EA', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0EE', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0EI', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0EH', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0F4', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0F3', 0, GetEnumPlayer())
+endfunction
+
+function Trig_StartHorde_Copy_Actions takes nothing returns nothing
+    call ForForce(udg_AllPlayers, function Trig_StartHorde_Copy_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_StartHorde_Copy takes nothing returns nothing
+    set gg_trg_StartHorde_Copy=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_StartHorde_Copy, 0.01)
+    call TriggerAddAction(gg_trg_StartHorde_Copy, function Trig_StartHorde_Copy_Actions)
 endfunction
 
 //===========================================================================
@@ -38902,6 +39075,42 @@ function InitTrig_KillSomeUnitsAndItems takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: KillTestUnits O
+//===========================================================================
+function Trig_KillTestUnits_O_Func001002 takes nothing returns boolean
+    return ( RectContainsUnit(gg_rct_TestRegion, GetFilterUnit()) == true )
+endfunction
+
+function Trig_KillTestUnits_O_Func003Func001C takes nothing returns boolean
+    if ( not ( IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_KillTestUnits_O_Func003A takes nothing returns nothing
+    if ( Trig_KillTestUnits_O_Func003Func001C() ) then
+        call SetPlayerTechMaxAllowedSwap(GetUnitTypeId(GetEnumUnit()), 2, GetEnumPlayer())
+    else
+    endif
+    call RemoveUnit(GetEnumUnit())
+endfunction
+
+function Trig_KillTestUnits_O_Actions takes nothing returns nothing
+    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Func001002)
+    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Func003A)
+    call GroupClear(udg_LocalOtrad2)
+endfunction
+
+//===========================================================================
+function InitTrig_KillTestUnits_O takes nothing returns nothing
+    set gg_trg_KillTestUnits_O=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O, 0.01)
+    call TriggerAddAction(gg_trg_KillTestUnits_O, function Trig_KillTestUnits_O_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: KillTestUnits Command
 //===========================================================================
 function Trig_KillTestUnits_Command_Func001002 takes nothing returns boolean
@@ -39318,6 +39527,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Race_Nerubs_O()
     call InitTrig_Race_Silitids_O()
     call InitTrig_Race_Gnomes()
+    call InitTrig_Race_Gilneas()
     call InitTrig_Page1_O()
     call InitTrig_Page2_O()
     call InitTrig_Page3_O()
@@ -39421,6 +39631,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ToKill2()
     call InitTrig_Emerald_Dream_TP_O()
     call InitTrig_Emerald_Dream_TP_OFF_O()
+    call InitTrig_StartHorde_Copy_2()
+    call InitTrig_LegGer()
     call InitTrig_TrainHeroGiveItem()
     call InitTrig_LimitHero_Exep()
     call InitTrig_Hero_Limits_General_Copy()
@@ -39442,6 +39654,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Heal()
     call InitTrig_EnterKazna()
     call InitTrig_StartHorde()
+    call InitTrig_StartHorde_Copy()
     call InitTrig_HordeOn()
     call InitTrig_K1T1()
     call InitTrig_K1T2()
@@ -39977,6 +40190,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
     call InitTrig_KillSomeUnitsAndItems()
+    call InitTrig_KillTestUnits_O()
     call InitTrig_KillTestUnits_Command()
     call InitTrig_KillMagaz()
     call InitTrig_Setlvl()
@@ -40362,7 +40576,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
