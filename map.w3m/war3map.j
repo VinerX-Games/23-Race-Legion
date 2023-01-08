@@ -2459,31 +2459,34 @@ function TimedUpdate takes unit u,player p returns boolean
             set income[pi]=income[pi] + 100
 
             
-        else
+        elseif GetUnitAbilityLevel(u, 'A0AY') < 5 then
             set income[pi]=income[pi] + 100
             call IncUnitAbilityLevel(u, 'A0AY')
-            if GetUnitAbilityLevel(u, 'A0AY') == 5 then
-                call BlzUnitHideAbility(u, 'A0AZ', true)
-                call BlzUnitDisableAbility(u, 'A0AZ', true, true)
-                
-                //Развитие
-                call BlzUnitHideAbility(u, 'A10G', true)
-                call BlzUnitDisableAbility(u, 'A10G', true, true)
-            endif
+            
+        elseif GetUnitAbilityLevel(u, 'A0AY') >= 5 then
+            set income[pi]=income[pi] + 100
+            call BlzUnitHideAbility(u, 'A0AZ', true)
+            call BlzUnitDisableAbility(u, 'A0AZ', true, true)
+            
+            //Развитие
+            call BlzUnitHideAbility(u, 'A10G', true)
+            call BlzUnitDisableAbility(u, 'A10G', true, true)
         endif
         
         //Lumber
         if GetUnitAbilityLevel(u, 'A0B5') == 0 then
             call UnitAddAbility(u, 'A0B5')
             set incomeW[pi]=incomeW[pi] + 50.00
-        else
-        
+        elseif GetUnitAbilityLevel(u, 'A0B5') < 5 then
             call IncUnitAbilityLevel(u, 'A0B5')
             set incomeW[pi]=incomeW[pi] + 50.00
-            if GetUnitAbilityLevel(u, 'A0B5') == 5 then
-                call BlzUnitHideAbility(u, 'A0B1', true)
-                call BlzUnitDisableAbility(u, 'A0B1', true, true)
-            endif
+        elseif GetUnitAbilityLevel(u, 'A0B5') >= 5 then
+            call BlzUnitHideAbility(u, 'A0B1', true)
+            call BlzUnitDisableAbility(u, 'A0B1', true, true)
+            
+            //Развитие
+            call BlzUnitHideAbility(u, 'A10G', true)
+            call BlzUnitDisableAbility(u, 'A10G', true, true)
         endif
         
         
@@ -5069,7 +5072,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     call SetHeroLevel(u, 25, false)
     set u=BlzCreateUnitWithSkin(p, 'H0J8', - 7562.6, - 26752.2, 287.290, 'H0J8')
     call SetHeroLevel(u, 25, false)
-    set u=BlzCreateUnitWithSkin(p, 'o02S', - 5834.2, - 29266.4, 273.599, 'o02S')
+    set u=BlzCreateUnitWithSkin(p, 'o02S', - 5834.2, - 29266.4, 273.600, 'o02S')
     set u=BlzCreateUnitWithSkin(p, 'o02J', - 5686.3, - 29549.0, 279.110, 'o02J')
     set u=BlzCreateUnitWithSkin(p, 'N047', - 2152.2, - 28932.8, 300.452, 'N047')
     call SetHeroLevel(u, 25, false)
@@ -5287,10 +5290,11 @@ function CreateNeutralHostileBuildings takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h01B', 23968.0, 16608.0, 270.000, 'h01B')
     set u=BlzCreateUnitWithSkin(p, 'h07J', 20320.0, - 3616.0, 270.000, 'h07J')
     set u=BlzCreateUnitWithSkin(p, 'h07I', 16192.0, - 14464.0, 270.000, 'h07I')
-    set u=BlzCreateUnitWithSkin(p, 'h0DC', - 4976.9, - 16674.2, 267.394, 'h0DC')
+    set u=BlzCreateUnitWithSkin(p, 'h0DC', - 4992.0, - 16704.0, 270.000, 'h0DC')
     set gg_unit_h09W_0236=BlzCreateUnitWithSkin(p, 'h09W', - 3456.0, - 20352.0, 270.000, 'h09W')
     set u=BlzCreateUnitWithSkin(p, 'h07K', 26528.0, - 3488.0, 326.837, 'h07K')
     set gg_unit_h07N_0238=BlzCreateUnitWithSkin(p, 'h07N', 29344.0, - 352.0, 184.292, 'h07N')
+    set u=BlzCreateUnitWithSkin(p, 'h0GJ', - 9504.0, - 25824.0, 270.000, 'h0GJ')
     set gg_unit_h0A3_0241=BlzCreateUnitWithSkin(p, 'h0A3', - 1856.0, - 13056.0, 270.000, 'h0A3')
     set u=BlzCreateUnitWithSkin(p, 'h06I', 21600.0, - 21856.0, 270.000, 'h06I')
     set u=BlzCreateUnitWithSkin(p, 'h00K', 22816.0, - 7712.0, 270.000, 'h00K')
@@ -5305,7 +5309,7 @@ function CreateNeutralHostileBuildings takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0HW', - 25664.0, 15872.0, 270.000, 'h0HW')
     set gg_unit_h081_0257=BlzCreateUnitWithSkin(p, 'h081', 26816.0, 11520.0, 270.000, 'h081')
     set gg_unit_h07Y_0262=BlzCreateUnitWithSkin(p, 'h07Y', 16192.0, 16064.0, 270.000, 'h07Y')
-    set u=BlzCreateUnitWithSkin(p, 'h0A4', - 6912.0, - 12800.0, 342.299, 'h0A4')
+    set u=BlzCreateUnitWithSkin(p, 'h0A4', - 6912.0, - 12800.0, 270.000, 'h0A4')
     set u=BlzCreateUnitWithSkin(p, 'h0B0', 14336.0, - 29568.0, 270.000, 'h0B0')
     set gg_unit_h0BI_0340=BlzCreateUnitWithSkin(p, 'h0BI', 9344.0, 4352.0, 270.000, 'h0BI')
     set gg_unit_h0AW_0341=BlzCreateUnitWithSkin(p, 'h0AW', 3872.0, 3872.0, 270.000, 'h0AW')
@@ -5364,7 +5368,7 @@ function CreateNeutralHostileBuildings takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h08P', - 25600.0, - 1280.0, 270.000, 'h08P')
     set u=BlzCreateUnitWithSkin(p, 'h08Q', - 24640.0, 3392.0, 16.968, 'h08Q')
     set u=BlzCreateUnitWithSkin(p, 'h0II', 23936.0, 19520.0, 270.000, 'h0II')
-    set u=BlzCreateUnitWithSkin(p, 'h09X', - 2432.0, - 19328.0, 162.017, 'h09X')
+    set u=BlzCreateUnitWithSkin(p, 'h09X', - 2432.0, - 19328.0, 270.000, 'h09X')
     set u=BlzCreateUnitWithSkin(p, 'h09S', 2880.0, - 16768.0, 270.000, 'h09S')
     set gg_unit_h04L_0458=BlzCreateUnitWithSkin(p, 'h04L', 27488.0, - 10464.0, 270.000, 'h04L')
     set u=BlzCreateUnitWithSkin(p, 'h04J', 25824.0, - 10784.0, 270.000, 'h04J')
@@ -5377,10 +5381,10 @@ function CreateNeutralHostileBuildings takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h08Z', - 21312.0, 9408.0, 270.000, 'h08Z')
     set u=BlzCreateUnitWithSkin(p, 'h090', - 21632.0, 16704.0, 300.000, 'h090')
     set u=BlzCreateUnitWithSkin(p, 'h091', - 24992.0, 13088.0, 270.000, 'h091')
-    set u=BlzCreateUnitWithSkin(p, 'h0AJ', - 8256.0, - 19008.0, 342.241, 'h0AJ')
+    set u=BlzCreateUnitWithSkin(p, 'h0AJ', - 8256.0, - 19008.0, 270.000, 'h0AJ')
     set u=BlzCreateUnitWithSkin(p, 'h0AK', - 2368.0, - 15040.0, 270.000, 'h0AK')
-    set gg_unit_h0AK_0488=BlzCreateUnitWithSkin(p, 'h0AK', - 7296.0, - 21376.0, 1.033, 'h0AK')
-    set u=BlzCreateUnitWithSkin(p, 'h09Y', - 1024.0, - 17536.0, 294.812, 'h09Y')
+    set gg_unit_h0AK_0488=BlzCreateUnitWithSkin(p, 'h0AK', - 7296.0, - 21376.0, 270.000, 'h0AK')
+    set u=BlzCreateUnitWithSkin(p, 'h09Y', - 1024.0, - 17536.0, 270.000, 'h09Y')
     set gg_unit_h09Z_0492=BlzCreateUnitWithSkin(p, 'h09Z', - 5760.0, - 22528.0, 335.327, 'h09Z')
     set gg_unit_h0AL_0496=BlzCreateUnitWithSkin(p, 'h0AL', - 8512.0, - 21120.0, 78.157, 'h0AL')
     set u=BlzCreateUnitWithSkin(p, 'h092', - 21664.0, 13408.0, 270.000, 'h092')
@@ -5611,7 +5615,6 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     set gg_unit_h0BA_0361=BlzCreateUnitWithSkin(p, 'h0BA', 5312.0, 2688.0, 270.000, 'h0BA')
     call WaygateSetDestination(gg_unit_h0BA_0361, GetRectCenterX(gg_rct_Region_015), GetRectCenterY(gg_rct_Region_015))
     call WaygateActivate(gg_unit_h0BA_0361, true)
-    set u=BlzCreateUnitWithSkin(p, 'h07Q', - 9504.0, - 25824.0, 270.000, 'h07Q')
     set u=BlzCreateUnitWithSkin(p, 'n043', - 6208.0, - 28032.0, 270.000, 'n043')
     set gg_unit_n006_0438=BlzCreateUnitWithSkin(p, 'n006', 25638.3, - 14626.9, 141.053, 'n006')
     call WaygateSetDestination(gg_unit_n006_0438, GetRectCenterX(gg_rct_DarkPortal2), GetRectCenterY(gg_rct_DarkPortal2))
