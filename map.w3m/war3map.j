@@ -5001,7 +5001,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0GU', - 1437.3, - 26775.3, 271.854, 'h0GU')
     set u=BlzCreateUnitWithSkin(p, 'h0GV', - 2041.6, - 26846.6, 272.760, 'h0GV')
     set u=BlzCreateUnitWithSkin(p, 'h0GW', - 1397.3, - 27131.4, 251.856, 'h0GW')
-    set u=BlzCreateUnitWithSkin(p, 'o02U', - 6183.5, - 29862.8, - 81.914, 'o02U')
+    set u=BlzCreateUnitWithSkin(p, 'o02U', - 6183.5, - 29862.8, 278.086, 'o02U')
     set u=BlzCreateUnitWithSkin(p, 'h0GX', - 1487.3, - 27157.4, 264.927, 'h0GX')
     set u=BlzCreateUnitWithSkin(p, 'h0GY', - 935.9, - 26851.2, 283.582, 'h0GY')
     set u=BlzCreateUnitWithSkin(p, 'h0J5', - 3816.1, - 30024.1, 180.750, 'h0J5')
@@ -38902,42 +38902,6 @@ function InitTrig_KillSomeUnitsAndItems takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: KillTestUnits O
-//===========================================================================
-function Trig_KillTestUnits_O_Func001002 takes nothing returns boolean
-    return ( RectContainsUnit(gg_rct_TestRegion, GetFilterUnit()) == true )
-endfunction
-
-function Trig_KillTestUnits_O_Func003Func001C takes nothing returns boolean
-    if ( not ( IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO) == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_KillTestUnits_O_Func003A takes nothing returns nothing
-    if ( Trig_KillTestUnits_O_Func003Func001C() ) then
-        call SetPlayerTechMaxAllowedSwap(GetUnitTypeId(GetEnumUnit()), 2, GetEnumPlayer())
-    else
-    endif
-    call RemoveUnit(GetEnumUnit())
-endfunction
-
-function Trig_KillTestUnits_O_Actions takes nothing returns nothing
-    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Func001002)
-    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Func003A)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_KillTestUnits_O takes nothing returns nothing
-    set gg_trg_KillTestUnits_O=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O, 0.01)
-    call TriggerAddAction(gg_trg_KillTestUnits_O, function Trig_KillTestUnits_O_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: KillTestUnits Command
 //===========================================================================
 function Trig_KillTestUnits_Command_Func001002 takes nothing returns boolean
@@ -40013,7 +39977,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
     call InitTrig_KillSomeUnitsAndItems()
-    call InitTrig_KillTestUnits_O()
     call InitTrig_KillTestUnits_Command()
     call InitTrig_KillMagaz()
     call InitTrig_Setlvl()

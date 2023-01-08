@@ -151014,7 +151014,7 @@ A
 }
 
 STRING 24849
-// Upgrades: R0EZ (Сделать волшебниц адептами,Сделать волшеб�), EditorSuffix (Editor Suffix)
+// Upgrades: R0EZ (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
 {
 A
 }
@@ -151104,13 +151104,13 @@ STRING 24863
 }
 
 STRING 24864
-// Upgrades: R0EZ (Сделать волшебниц адептами,Сделать волшеб�), Name (Name)
+// Upgrades: R0EZ (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
 {
 A
 }
 
 STRING 24865
-// Upgrades: R0EZ (Сделать волшебниц адептами,Сделать волшеб�), Name (Name)
+// Upgrades: R0F0 (Длинноствольные мушкеты), EditorSuffix (Editor Suffix)
 {
 A
 }
@@ -151134,13 +151134,13 @@ STRING 24868
 }
 
 STRING 24869
-// Upgrades: R0EZ (Сделать волшебниц адептами,Сделать волшеб�), Tip (Tooltip)
+// Upgrades: R0F0 (Длинноствольные мушкеты), Hotkey (Hotkey)
 {
 A
 }
 
 STRING 24870
-// Upgrades: R0EZ (Сделать волшебниц адептами,Сделать волшеб�), Tip (Tooltip)
+// Upgrades: R0F1 (Длинноствольные мушкеты), EditorSuffix (Editor Suffix)
 {
 A
 }
@@ -151170,57 +151170,27 @@ W
 }
 
 STRING 24875
-// Upgrades: R0EZ (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
-{
-A
-}
-
-STRING 24876
-// Upgrades: R0EZ (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
-{
-A
-}
-
-STRING 24877
-// Upgrades: R0F0 (Длинноствольные мушкеты), EditorSuffix (Editor Suffix)
-{
-A
-}
-
-STRING 24878
-// Upgrades: R0F0 (Длинноствольные мушкеты), Hotkey (Hotkey)
-{
-A
-}
-
-STRING 24879
-// Upgrades: R0F1 (Длинноствольные мушкеты), EditorSuffix (Editor Suffix)
-{
-A
-}
-
-STRING 24880
-// Upgrades: R0F1 (Длинноствольные мушкеты), Name (Name)
-{
-|cffd45e19Познания магии|r
-}
-
-STRING 24881
 // Upgrades: R0F2 (Сделать волшебниц адептами,Сделать волшеб�), EditorSuffix (Editor Suffix)
 {
 A
 }
 
-STRING 24882
+STRING 24876
 // Upgrades: R0F2 (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
 {
 A
 }
 
-STRING 24883
+STRING 24877
 // Upgrades: R0F2 (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
 {
 A
+}
+
+STRING 24880
+// Upgrades: R0EZ (Сделать волшебниц адептами,Сделать волшеб�), Name (Name)
+{
+|cffd45e19Познания магии|r
 }
 
 STRING 24884
@@ -151455,5 +151425,35 @@ STRING 24922
 // Upgrades: R0EV (Нечестивая сила,Нечестивая мощь,Нечестивы�), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 24923
+// Upgrades: R0EZ (Сделать волшебниц адептами,Сделать волшеб�), EditorSuffix (Editor Suffix)
+{
+(Воргены)
+}
+
+STRING 24924
+// Upgrades: R0EZ (Сделать волшебниц адептами,Сделать волшеб�), Name (Name)
+{
+|cffd45e19Познания магии|r
+}
+
+STRING 24925
+// Upgrades: R0EZ (Сделать волшебниц адептами,Сделать волшеб�), Tip (Tooltip)
+{
+|cffd45e19Познания магии|r
+}
+
+STRING 24926
+// Upgrades: R0EZ (Сделать волшебниц адептами,Сделать волшеб�), Tip (Tooltip)
+{
+|cffd45e19Познания магии|r
+}
+
+STRING 24927
+// Upgrades: R0F1 (Длинноствольные мушкеты), Name (Name)
+{
+|cffd45e19Познания магии|r
 }
 
