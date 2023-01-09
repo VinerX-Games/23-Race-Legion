@@ -1382,6 +1382,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_SpandFarm= null
 real array income
 real array incomeW
 real array disincome
@@ -1494,6 +1495,7 @@ integer max= 0
     
 multiboarditem array MultiboardItem
 integer array MultiboardItemOwnerIndex
+texttag TT
 unit TryBuild_u
 group Navy= CreateGroup()
 group Port= CreateGroup()
@@ -5014,7 +5016,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'e032', 415.9, - 29917.2, 355.287, 'e032')
     set u=BlzCreateUnitWithSkin(p, 'e032', 508.0, - 29904.5, 335.269, 'e032')
     set u=BlzCreateUnitWithSkin(p, 'e032', 515.6, - 29755.1, 333.247, 'e032')
-    set u=BlzCreateUnitWithSkin(p, 'u02D', - 18467.5, - 13557.1, 350.101, 'u02D')
     set u=BlzCreateUnitWithSkin(p, 'opeo', - 1957.6, - 29824.5, 271.943, 'opeo')
     set u=BlzCreateUnitWithSkin(p, 'h0GU', - 1437.3, - 26775.3, 271.854, 'h0GU')
     set u=BlzCreateUnitWithSkin(p, 'h0GV', - 2041.6, - 26846.6, 272.760, 'h0GV')
@@ -5066,8 +5067,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o02T', - 6723.3, - 27002.8, 277.132, 'o02T')
     set u=BlzCreateUnitWithSkin(p, 'h0IY', - 6267.3, - 26881.2, 269.940, 'h0IY')
     set u=BlzCreateUnitWithSkin(p, 'h0IZ', - 6489.2, - 26877.8, 227.710, 'h0IZ')
-    set u=BlzCreateUnitWithSkin(p, 'h0I9', - 18860.1, - 13647.5, 109.657, 'h0I9')
-    set u=BlzCreateUnitWithSkin(p, 'h0I9', - 19051.0, - 13672.8, 109.657, 'h0I9')
     set u=BlzCreateUnitWithSkin(p, 'o02W', - 5106.8, - 29351.5, 241.790, 'o02W')
     set u=BlzCreateUnitWithSkin(p, 'h0J0', - 6825.3, - 26983.3, 273.609, 'h0J0')
     set u=BlzCreateUnitWithSkin(p, 'h0J1', - 6946.1, - 26998.4, 325.897, 'h0J1')
@@ -19766,45 +19765,63 @@ endfunction
 //===========================================================================
 
 
-
-function Trig_LumberTest_Func001Func001A takes nothing returns nothing
-    local texttag t= CreateTextTag()
-    local player p= udg_LocalPlayer
-    local string s= I2S(5)
-    call AdjustPlayerStateBJ(5, p, PLAYER_STATE_RESOURCE_LUMBER)
-    call DisplayTextToPlayer(Player(0), 0, 0, "Der")
-    call SetTextTagText(t, s, 0)
-    call SetTextTagPos(t, GetDestructableX(GetEnumDestructable()), GetDestructableY(GetEnumDestructable()), 0)
-    call SetTextTagPermanent(t, false)
-    call SetTextTagLifespan(t, 2.00)
-    call SetTextTagFadepoint(t, 2.00)
-    call SetTextTagVelocity(t, 75.00, 90)
-    
-    
-   
+function KillTextTag takes nothing returns nothing
+    local texttag t= TT
+    call TriggerSleepAction(3)
     call DestroyTextTag(t)
     set t=null
-    set p=null
 endfunction
 
 
+function TT2 takes nothing returns nothing
+    local texttag t= CreateTextTag()
+    local player p= Player(0)
+    local string s= I2S(5)
+    local destructable f= GetEnumDestructable()
+    local location l= GetDestructableLoc(f)
+    call AdjustPlayerStateBJ(5, p, PLAYER_STATE_RESOURCE_LUMBER)
+    
+    
+    set t=CreateTextTagLocBJ(s, l, 0, 10, 0.00, 100, 0.00, 0)
+    call SetTextTagPermanentBJ(t, false)
+    call SetTextTagLifespanBJ(t, 3.00)
+    call SetTextTagVelocityBJ(t, 50.00, 90)
+    call SetTextTagFadepointBJ(t, 1.00)
+
+    call RemoveLocation(l)
+    set l=null
+    set f=null
+    set TT=t
+    set t=null
+    set p=null
+    set s=null
+    call ExecuteFunc("KillTextTag")
+endfunction
+    
+
+
 function Trig_LumberTest_Actions takes nothing returns nothing
-    local group g= udg_FacelessLumberBuildings
+    local group g= CreateGroup()
     local destructable d
     local unit u= null
-    call DisplayTextToPlayer(Player(0), 0, 0, "RAb")
+    local location l
+    
+    call GroupAddGroup(udg_FacelessLumberBuildings, g)
     loop
         set u=FirstOfGroup(g)
         exitwhen u == null
         
         
         set udg_LocalPlayer=GetOwningPlayer(u)
-        call EnumDestructablesInCircleBJ(500.00, GetUnitLoc(u), function Trig_LumberTest_Func001Func001A)
-    
+        set l=GetUnitLoc(u)
+        call EnumDestructablesInCircleBJ(500.00, l, function TT2)
+        
+        call RemoveLocation(l)
         call GroupRemoveUnit(g, u)
     endloop
     
-    
+    call RemoveLocation(l)
+    set l=null
     call DestroyGroup(g)
     set u=null
     set g=null
@@ -19863,6 +19880,19 @@ function InitTrig_SpellRes takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_SpellRes, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(gg_trg_SpellRes, Condition(function Trig_SpellRes_Conditions))
     call TriggerAddAction(gg_trg_SpellRes, function Trig_SpellRes_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: SpandFarm
+//===========================================================================
+function Trig_SpandFarm_Actions takes nothing returns nothing
+    call SetPlayerAbilityAvailableBJ(false, 'A11G', Player(0))
+endfunction
+
+//===========================================================================
+function InitTrig_SpandFarm takes nothing returns nothing
+    set gg_trg_SpandFarm=CreateTrigger()
+    call TriggerAddAction(gg_trg_SpandFarm, function Trig_SpandFarm_Actions)
 endfunction
 
 //===========================================================================
@@ -39939,6 +39969,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_LumberTest()
     call InitTrig_Spell()
     call InitTrig_SpellRes()
+    call InitTrig_SpandFarm()
     call InitTrig_StartHorde()
     call InitTrig_StartHorde_Copy()
     call InitTrig_HordeOn()
