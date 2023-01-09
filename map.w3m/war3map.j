@@ -675,6 +675,16 @@ trigger gg_trg_Vozd= null
 trigger gg_trg_Defend= null
 trigger gg_trg_Heal= null
 trigger gg_trg_EnterKazna= null
+trigger gg_trg_ZdaniyaBezlik= null
+trigger gg_trg_ZdaniyaBezlik_Copy= null
+trigger gg_trg_ZdaniyaBezlik_Copy_Copy= null
+trigger gg_trg_ZdaniyaBezlik_Copy_Copy_2= null
+trigger gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy= null
+trigger gg_trg_FinishFaceBuild= null
+trigger gg_trg_DeadFaceBuild= null
+trigger gg_trg_LumberTest= null
+trigger gg_trg_Spell= null
+trigger gg_trg_SpellRes= null
 trigger gg_trg_StartHorde= null
 trigger gg_trg_StartHorde_Copy= null
 trigger gg_trg_HordeOn= null
@@ -724,6 +734,7 @@ trigger gg_trg_BerserkTrol= null
 trigger gg_trg_AutoSetkaH= null
 trigger gg_trg_IronStar= null
 trigger gg_trg_SiegeEffect= null
+trigger gg_trg_AutoShield_Copy= null
 trigger gg_trg_GnomesOn= null
 trigger gg_trg_GnomesStart= null
 trigger gg_trg_GelbinSpellAttacked= null
@@ -1058,11 +1069,6 @@ trigger gg_trg_km= null
 trigger gg_trg_km2= null
 trigger gg_trg_Titan= null
 trigger gg_trg_Titan2= null
-trigger gg_trg_ZdaniyaBezlik= null
-trigger gg_trg_ZdaniyaBezlik_Copy= null
-trigger gg_trg_ZdaniyaBezlik_Copy_Copy= null
-trigger gg_trg_ZdaniyaBezlik_Copy_Copy_2= null
-trigger gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy= null
 trigger gg_trg_StartBuildingArg= null
 trigger gg_trg_CanselBuildingArg= null
 trigger gg_trg_Hero_Limits_Ent= null
@@ -1372,12 +1378,10 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_LumberTest= null
-trigger gg_trg_FinishFaceBuild= null
-trigger gg_trg_DeadFaceBuild= null
-trigger gg_trg_Spell= null
-trigger gg_trg_SpellRes= null
-trigger gg_trg_AutoShield_Copy= null
+trigger gg_trg_Skorost1= null
+trigger gg_trg_Skorost2= null
+trigger gg_trg_Sila1= null
+trigger gg_trg_Sila2= null
 real array income
 real array incomeW
 real array disincome
@@ -4957,7 +4961,6 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0I4', - 3392.0, - 25664.0, 270.000, 'h0I4')
     set u=BlzCreateUnitWithSkin(p, 'h0I2', - 3904.0, - 25664.0, 270.000, 'h0I2')
     set u=BlzCreateUnitWithSkin(p, 'h0I6', - 3264.0, - 25344.0, 270.000, 'h0I6')
-    set u=BlzCreateUnitWithSkin(p, 'h0I5', - 3456.0, - 25280.0, 270.000, 'h0I5')
     set u=BlzCreateUnitWithSkin(p, 'h0I1', - 4416.0, - 25664.0, 270.000, 'h0I1')
     set u=BlzCreateUnitWithSkin(p, 'h0ER', - 3936.0, - 28256.0, 270.000, 'h0ER')
     set u=BlzCreateUnitWithSkin(p, 'n012', - 3200.0, - 28480.0, 270.000, 'n012')
@@ -5019,9 +5022,9 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o02U', - 6183.5, - 29862.8, 278.086, 'o02U')
     set u=BlzCreateUnitWithSkin(p, 'h0GX', - 1487.3, - 27157.4, 264.927, 'h0GX')
     set u=BlzCreateUnitWithSkin(p, 'h0GY', - 935.9, - 26851.2, 283.582, 'h0GY')
-    set u=BlzCreateUnitWithSkin(p, 'h0J5', - 3816.1, - 30024.1, - 87.993, 'h0J5')
+    set u=BlzCreateUnitWithSkin(p, 'h0J5', - 3816.1, - 30024.1, 272.007, 'h0J5')
     set u=BlzCreateUnitWithSkin(p, 'u02D', - 4005.9, - 26178.3, 350.101, 'u02D')
-    set u=BlzCreateUnitWithSkin(p, 'h0I9', - 4398.5, - 26268.8, 109.657, 'h0I9')
+    set u=BlzCreateUnitWithSkin(p, 'h0I9', - 4398.5, - 26268.8, 109.660, 'h0I9')
     set u=BlzCreateUnitWithSkin(p, 'h0HE', - 1608.4, - 27139.7, 268.307, 'h0HE')
     set u=BlzCreateUnitWithSkin(p, 'h0GS', - 2397.9, - 26955.2, 269.261, 'h0GS')
     set u=BlzCreateUnitWithSkin(p, 'h0GS', - 2497.3, - 26970.2, 269.260, 'h0GS')
@@ -5072,15 +5075,15 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'u02D', - 4005.9, - 26178.3, 350.101, 'u02D')
     set u=BlzCreateUnitWithSkin(p, 'h0I9', - 4398.5, - 26268.8, 109.657, 'h0I9')
     set u=BlzCreateUnitWithSkin(p, 'n04T', - 3731.1, - 30038.3, 284.520, 'n04T')
-    set u=BlzCreateUnitWithSkin(p, 'n04U', - 3643.5, - 30032.9, - 74.967, 'n04U')
+    set u=BlzCreateUnitWithSkin(p, 'n04U', - 3643.5, - 30032.9, 285.033, 'n04U')
     set u=BlzCreateUnitWithSkin(p, 'o02S', - 5834.2, - 29266.4, 273.600, 'o02S')
     set u=BlzCreateUnitWithSkin(p, 'o02J', - 5686.3, - 29549.0, 279.110, 'o02J')
     set u=BlzCreateUnitWithSkin(p, 'o02X', - 3570.3, - 29882.8, 285.910, 'o02X')
     set u=BlzCreateUnitWithSkin(p, 'n04S', - 5501.3, - 29397.9, 250.750, 'n04S')
     set u=BlzCreateUnitWithSkin(p, 'h0I9', - 4409.9, - 25840.7, 265.828, 'h0I9')
     set u=BlzCreateUnitWithSkin(p, 'h0IA', - 4288.3, - 25815.5, 262.925, 'h0IA')
-    set u=BlzCreateUnitWithSkin(p, 'h0IF', - 3582.6, - 25805.8, 246.849, 'h0IF')
-    set u=BlzCreateUnitWithSkin(p, 'h0IG', - 3406.7, - 25854.5, 265.689, 'h0IG')
+    set u=BlzCreateUnitWithSkin(p, 'h0IF', - 3582.6, - 25805.8, 246.850, 'h0IF')
+    set u=BlzCreateUnitWithSkin(p, 'h0IG', - 3406.7, - 25854.5, 265.690, 'h0IG')
     set u=BlzCreateUnitWithSkin(p, 'h0IE', - 3987.2, - 25805.7, 285.561, 'h0IE')
     set u=BlzCreateUnitWithSkin(p, 'h0IC', - 3589.3, - 26119.4, 255.468, 'h0IC')
     set u=BlzCreateUnitWithSkin(p, 'h0ID', - 3888.8, - 25837.2, 259.736, 'h0ID')
@@ -5156,7 +5159,7 @@ function CreateUnitsForPlayer2 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h0JA', - 3714.2, - 29810.5, - 80.478, 'h0JA')
+    set u=BlzCreateUnitWithSkin(p, 'h0JA', - 3714.2, - 29810.5, 279.522, 'h0JA')
 endfunction
 
 //===========================================================================
@@ -11671,6 +11674,32 @@ function InitTrig_Race_Alliance_O takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Alliance_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
     call TriggerAddCondition(gg_trg_Race_Alliance_O, Condition(function Trig_Race_Alliance_O_Conditions))
     call TriggerAddAction(gg_trg_Race_Alliance_O, function Trig_Race_Alliance_O_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Race Bezlikie O
+//===========================================================================
+function Trig_Race_Bezlikie_O_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0HW' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Bezlikie_O_Actions takes nothing returns nothing
+    call SetPlayerTechResearchedSwap('R0F9', 1, GetOwningPlayer(GetTriggerUnit()))
+    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    call CreateNUnitsAtLoc(3, 'u02D', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    call RemoveUnit(GetSpellAbilityUnit())
+    call RemoveLocation(udg_LocalPosition2)
+endfunction
+
+//===========================================================================
+function InitTrig_Race_Bezlikie_O takes nothing returns nothing
+    set gg_trg_Race_Bezlikie_O=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Bezlikie_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_Race_Bezlikie_O, Condition(function Trig_Race_Bezlikie_O_Conditions))
+    call TriggerAddAction(gg_trg_Race_Bezlikie_O, function Trig_Race_Bezlikie_O_Actions)
 endfunction
 
 //===========================================================================
@@ -19477,6 +19506,96 @@ endfunction
 
 
 //===========================================================================
+// Trigger: Sila2
+//===========================================================================
+function Trig_Sila2_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0F7' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Sila2_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0F8', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Sila2 takes nothing returns nothing
+    set gg_trg_Sila2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Sila2, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_Sila2, Condition(function Trig_Sila2_Conditions))
+    call TriggerAddAction(gg_trg_Sila2, function Trig_Sila2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Sila1
+//===========================================================================
+function Trig_Sila1_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0F7' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Sila1_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0F8', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Sila1 takes nothing returns nothing
+    set gg_trg_Sila1=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Sila1, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Sila1, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_Sila1, Condition(function Trig_Sila1_Conditions))
+    call TriggerAddAction(gg_trg_Sila1, function Trig_Sila1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Skorost2
+//===========================================================================
+function Trig_Skorost2_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0F8' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Skorost2_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0F7', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Skorost2 takes nothing returns nothing
+    set gg_trg_Skorost2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Skorost2, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_Skorost2, Condition(function Trig_Skorost2_Conditions))
+    call TriggerAddAction(gg_trg_Skorost2, function Trig_Skorost2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Skorost1
+//===========================================================================
+function Trig_Skorost1_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0F8' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Skorost1_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0F7', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Skorost1 takes nothing returns nothing
+    set gg_trg_Skorost1=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Skorost1, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Skorost1, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_Skorost1, Condition(function Trig_Skorost1_Conditions))
+    call TriggerAddAction(gg_trg_Skorost1, function Trig_Skorost1_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: ZdaniyaBezlik
 //===========================================================================
 function Trig_ZdaniyaBezlik_Conditions takes nothing returns boolean
@@ -19708,7 +19827,7 @@ function Trig_Spell_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_Spell_Actions takes nothing returns nothing
-    call UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.01 ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
+    call UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.05 ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
 endfunction
 
 //===========================================================================
@@ -39653,6 +39772,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_CircleMove_Code()
     call InitTrig_Race_Night_Elves_O()
     call InitTrig_Race_Alliance_O()
+    call InitTrig_Race_Bezlikie_O()
     call InitTrig_Race_Stromgard_O()
     call InitTrig_Race_Dragon_O()
     call InitTrig_Race_Argvinol_O()
@@ -39800,6 +39920,10 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Defend()
     call InitTrig_Heal()
     call InitTrig_EnterKazna()
+    call InitTrig_Sila2()
+    call InitTrig_Sila1()
+    call InitTrig_Skorost2()
+    call InitTrig_Skorost1()
     call InitTrig_ZdaniyaBezlik()
     call InitTrig_ZdaniyaBezlik_Copy()
     call InitTrig_ZdaniyaBezlik_Copy_Copy()
