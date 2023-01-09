@@ -20,12 +20,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -689,6 +689,7 @@ trigger gg_trg_DeadFaceBuild= null
 trigger gg_trg_LumberTest= null
 trigger gg_trg_Spell= null
 trigger gg_trg_SpellRes= null
+trigger gg_trg_SpandFarm= null
 trigger gg_trg_StartHorde= null
 trigger gg_trg_StartHorde_Copy= null
 trigger gg_trg_HordeOn= null
@@ -1382,7 +1383,10 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_SpandFarm= null
+trigger gg_trg_PandaSecondAttack= null
+trigger gg_trg_Zandalars= null
+trigger gg_trg_NightBorn= null
+trigger gg_trg_F2_Copy= null
 real array income
 real array incomeW
 real array disincome
@@ -1638,7 +1642,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1646,33 +1650,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1680,19 +1684,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -2482,9 +2486,6 @@ function TimedUpdate takes unit u,player p returns boolean
             call BlzUnitHideAbility(u, 'A0AZ', true)
             call BlzUnitDisableAbility(u, 'A0AZ', true, true)
             
-            //Развитие
-            call BlzUnitHideAbility(u, 'A10G', true)
-            call BlzUnitDisableAbility(u, 'A10G', true, true)
         endif
         
         //Lumber
@@ -2498,11 +2499,16 @@ function TimedUpdate takes unit u,player p returns boolean
             call BlzUnitHideAbility(u, 'A0B1', true)
             call BlzUnitDisableAbility(u, 'A0B1', true, true)
             
+            
+        endif
+        
+        if GetUnitAbilityLevel(u, 'A0AY') + GetUnitAbilityLevel(u, 'A0B5') >= 10 then
             //Развитие
             call BlzUnitHideAbility(u, 'A10G', true)
             call BlzUnitDisableAbility(u, 'A10G', true, true)
-        endif
         
+        
+        endif
         
         call UpdateGraf(pi)
         set u=null
@@ -5096,14 +5102,14 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'ocat', - 6134.5, - 30170.9, 258.969, 'ocat')
     set u=BlzCreateUnitWithSkin(p, 'okod', - 5384.0, - 29430.7, 270.055, 'okod')
     set u=BlzCreateUnitWithSkin(p, 'o026', - 5745.6, - 30194.1, 268.517, 'o026')
-    set u=BlzCreateUnitWithSkin(p, 'oshm', - 6053.7, - 29846.7, 269.130, 'oshm')
+    set u=BlzCreateUnitWithSkin(p, 'oshm', - 6202.8, - 29666.3, 269.130, 'oshm')
     set u=BlzCreateUnitWithSkin(p, 'ospw', - 6194.5, - 29772.3, 295.760, 'ospw')
     set u=BlzCreateUnitWithSkin(p, 'otbk', - 5898.0, - 29470.6, 273.181, 'otbk')
     set u=BlzCreateUnitWithSkin(p, 'o01E', - 6009.3, - 29262.0, 274.865, 'o01E')
     set u=BlzCreateUnitWithSkin(p, 'o01Q', - 5737.6, - 29254.9, 275.840, 'o01Q')
-    set u=BlzCreateUnitWithSkin(p, 'o01S', - 5283.1, - 29428.8, 315.500, 'o01S')
+    set u=BlzCreateUnitWithSkin(p, 'o01S', - 5283.1, - 29428.8, - 83.966, 'o01S')
     set u=BlzCreateUnitWithSkin(p, 'o024', - 5432.0, - 29760.3, 245.398, 'o024')
-    set u=BlzCreateUnitWithSkin(p, 'o01U', - 4907.1, - 29193.4, 275.519, 'o01U')
+    set u=BlzCreateUnitWithSkin(p, 'o01U', - 4907.1, - 29193.4, 275.520, 'o01U')
     set u=BlzCreateUnitWithSkin(p, 'o01V', - 5705.9, - 29744.6, 280.369, 'o01V')
     set u=BlzCreateUnitWithSkin(p, 'o01X', - 6125.6, - 29470.4, 272.880, 'o01X')
     set u=BlzCreateUnitWithSkin(p, 'o01Y', - 5689.6, - 29460.0, 276.959, 'o01Y')
@@ -5111,10 +5117,10 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o01Z', - 5285.0, - 29175.7, 282.179, 'o01Z')
     set u=BlzCreateUnitWithSkin(p, 'o01O', - 5743.2, - 29181.8, 275.460, 'o01O')
     set u=BlzCreateUnitWithSkin(p, 'o01F', - 6264.1, - 29197.7, 289.180, 'o01F')
-    set u=BlzCreateUnitWithSkin(p, 'o01M', - 5016.6, - 29213.9, 271.768, 'o01M')
+    set u=BlzCreateUnitWithSkin(p, 'o01M', - 5016.6, - 29213.9, 271.770, 'o01M')
     set u=BlzCreateUnitWithSkin(p, 'h0CY', - 5284.4, - 30132.5, 273.335, 'h0CY')
     set u=BlzCreateUnitWithSkin(p, 'o020', - 6031.4, - 30223.4, 261.166, 'o020')
-    set u=BlzCreateUnitWithSkin(p, 'o021', - 5002.0, - 29344.1, 273.352, 'o021')
+    set u=BlzCreateUnitWithSkin(p, 'o021', - 5002.0, - 29344.1, 273.350, 'o021')
     set u=BlzCreateUnitWithSkin(p, 'o025', - 5448.7, - 29831.8, 266.237, 'o025')
     set u=BlzCreateUnitWithSkin(p, 'o02A', - 5646.8, - 29263.2, 273.210, 'o02A')
     set u=BlzCreateUnitWithSkin(p, 'o02D', - 5607.3, - 29451.7, 277.661, 'o02D')
@@ -5126,9 +5132,9 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h06Z', - 7261.5, - 28380.7, 280.083, 'h06Z')
     set u=BlzCreateUnitWithSkin(p, 'o02E', - 5359.4, - 29059.4, 272.233, 'o02E')
     set u=BlzCreateUnitWithSkin(p, 'o02F', - 5800.0, - 29454.3, 260.574, 'o02F')
-    set u=BlzCreateUnitWithSkin(p, 'o028', - 5596.3, - 30180.4, 280.094, 'o028')
-    set u=BlzCreateUnitWithSkin(p, 'o02G', - 5950.3, - 29752.7, 274.700, 'o02G')
-    set u=BlzCreateUnitWithSkin(p, 'o02I', - 5353.4, - 29757.8, 280.763, 'o02I')
+    set u=BlzCreateUnitWithSkin(p, 'o028', - 5596.3, - 30180.4, 280.090, 'o028')
+    set u=BlzCreateUnitWithSkin(p, 'o02G', - 5968.7, - 29670.3, 274.700, 'o02G')
+    set u=BlzCreateUnitWithSkin(p, 'o02I', - 5363.2, - 29823.6, 280.763, 'o02I')
     set u=BlzCreateUnitWithSkin(p, 'o02M', - 5460.9, - 29429.3, 272.260, 'o02M')
     set u=BlzCreateUnitWithSkin(p, 'o02H', - 5451.6, - 29196.6, 272.760, 'o02H')
     set u=BlzCreateUnitWithSkin(p, 'o02K', - 6297.2, - 30164.2, 253.730, 'o02K')
@@ -10792,7 +10798,7 @@ function Trig_Upgrade_Gold_C_Actions takes nothing returns nothing
 
 
     call IncUnitAbilityLevel(GetTriggerUnit(), 'A0AY')
-    if GetUnitAbilityLevel(GetTriggerUnit(), 'A0AY') == 5 then
+    if GetUnitAbilityLevel(GetTriggerUnit(), 'A0AY') >= 5 then
         call BlzUnitHideAbility(GetTriggerUnit(), 'A0AZ', true)
         call BlzUnitDisableAbility(GetTriggerUnit(), 'A0AZ', true, true)
     endif
@@ -10831,7 +10837,7 @@ function Trig_Upgrade_Lumber_Actions takes nothing returns nothing
     
     call IncUnitAbilityLevel(GetTriggerUnit(), 'A0B5')
     
-    if GetUnitAbilityLevel(GetTriggerUnit(), 'A0B5') == 5 then
+    if GetUnitAbilityLevel(GetTriggerUnit(), 'A0B5') >= 5 then
         call BlzUnitHideAbility(GetTriggerUnit(), 'A0B1', true)
         call BlzUnitDisableAbility(GetTriggerUnit(), 'A0B1', true, true)
     endif
@@ -20445,7 +20451,16 @@ function Trig_K1T4_Actions takes nothing returns nothing
 
     endif
     
-    
+    if GetPlayerTechCount(p, 'R0EE', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) != 1 then
+        set b=0
+        set i=1
+        loop //Pandaren
+                set a[0]=a[0] + 1
+                set a[a[0]]='o02W'
+                set b=b + 1
+                exitwhen b >= i
+        endloop
+    endif
     
     
     set i=GetRandomInt(1, a[0])
@@ -20839,16 +20854,28 @@ function Trig_KM1_Actions takes nothing returns nothing
     local unit u
     local integer pi= GetPlayerId(p)
     
-    
-    //1 юнит
     set a[0]=0
-    set i=4
-    loop //Шаман
-            set a[0]=a[0] + 1
-            set a[a[0]]='o01J'
-            set b=b + 1
-            exitwhen b >= i
-    endloop
+    //1 юнит
+    if GetPlayerTechCount(p, 'R0E9', true) < 1 then
+        
+        set i=4
+        loop //Шаман
+                set a[0]=a[0] + 1
+                set a[a[0]]='o01J'
+                set b=b + 1
+                exitwhen b >= i
+        endloop
+    else
+        
+        set i=4
+        loop //Колдун
+                set a[0]=a[0] + 1
+                set a[a[0]]='o02G'
+                set b=b + 1
+                exitwhen b >= i
+        endloop
+    
+    endif
     
     // Духостранник
     if GetPlayerTechCount(p, 'R0E9', true) < 1 then
@@ -20873,20 +20900,20 @@ function Trig_KM1_Actions takes nothing returns nothing
     endloop
     
     
-    //Драконья пасть - колдун
-    if GetPlayerTechCount(p, 'R0E1', true) == 1 and GetPlayerTechCount(p, 'R0EH', true) < 1 then
-        set i=1
-        set b=1
-        
-        loop
-            set a[0]=a[0] + 1
-            set a[a[0]]='o02G'
-            
-            set b=b + 1
-            exitwhen b >= i
-        endloop
-
-    endif
+//    //Драконья пасть - колдун
+//    if GetPlayerTechCount(p,'R0E1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o02G'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
     
     // Зачарователь
     if GetPlayerTechCount(p, 'R0F4', true) >= 1 then
@@ -21320,7 +21347,19 @@ function Trig_NavyHeavy_Actions takes nothing returns nothing
     
     endif
 
-    
+    if GetPlayerTechCount(p, 'R0D3', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) != 1 then
+        set i=1
+        set b=1
+        
+        loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='o0I5'
+            
+            set b=b + 1
+            exitwhen b >= i
+        endloop
+
+    endif
     
     
     
@@ -21409,7 +21448,7 @@ function Trig_NavyLight_Actions takes nothing returns nothing
     
     
     //Зандалары
-    if GetPlayerTechCount(p, 'h0F3', true) == 1 then
+    if GetPlayerTechCount(p, 'R0F3', true) == 1 then
         set i=2
         set b=1
         
@@ -21423,6 +21462,20 @@ function Trig_NavyLight_Actions takes nothing returns nothing
 
     endif
     
+    //Зандалары
+    if GetPlayerTechCount(p, 'R0E4', true) == 1 then
+        set i=2
+        set b=1
+        
+        loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0JB'
+            
+            set b=b + 1
+            exitwhen b >= i
+        endloop
+
+    endif
     
     set i=GetRandomInt(1, a[0])
     set b=a[i]
@@ -21646,15 +21699,17 @@ function Trig_Forsaken_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 3
+    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 4
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 3
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 1
-    set udg_HordeTechPrice[pi]=udg_HordeTechPrice[pi] - 1
+    
+    set udg_HordeNavyPrice[pi]=udg_HordeNavyPrice[pi] - 1
     
     
     call ChangeLandUnitsNow(p , pi)
     call ChangeEliteUnitsNow(p , pi)
-    call ChangeTechUnitsNow(p , pi)
+    
+    call ChangeNavyUnitsNow(p , pi)
     
     
     
@@ -21686,9 +21741,10 @@ function Trig_BloodElf_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 3
+    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 4
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 3
     set udg_HordeMagicPrice[pi]=udg_HordeMagicPrice[pi] - 5
+    set udg_HordeNavyPrice[pi]=udg_HordeNavyPrice[pi] - 1
     call ChangeLandUnitsNow(p , pi)
     call ChangeMagicUnitsNow(p , pi)
     
@@ -21824,7 +21880,7 @@ function Trig_CommonHome_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     local group g= CreateGroup()
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 5
+    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 4
 
 
     
@@ -21849,7 +21905,7 @@ function Trig_CommonHome_Actions takes nothing returns nothing
     // Бонусы ЧГ -
     if GetPlayerTechCount(p, 'R0D1', true) == 1 then
         set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 3
-    set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] + 5
+        set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] + 5
         
     endif
     call SetPlayerTechResearched(p, 'R0D1', 2)
@@ -21905,6 +21961,70 @@ function InitTrig_CommonHome takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_CommonHome, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
     call TriggerAddCondition(gg_trg_CommonHome, Condition(function Trig_CommonHome_Conditions))
     call TriggerAddAction(gg_trg_CommonHome, function Trig_CommonHome_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Zandalars
+//===========================================================================
+function Trig_Zandalars_Conditions takes nothing returns boolean
+    return GetResearched() == 'R0F3'
+endfunction
+
+function Trig_Zandalars_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    
+    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 3
+    set udg_HordeNavyPrice[pi]=udg_HordeNavyPrice[pi] - 4
+    
+    call ChangeNavyUnitsNow(p , pi)
+    
+    
+ 
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_Zandalars takes nothing returns nothing
+    set gg_trg_Zandalars=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Zandalars, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_Zandalars, Condition(function Trig_Zandalars_Conditions))
+    call TriggerAddAction(gg_trg_Zandalars, function Trig_Zandalars_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: NightBorn
+//===========================================================================
+function Trig_NightBorn_Conditions takes nothing returns boolean
+    return GetResearched() == 'R0F3'
+endfunction
+
+function Trig_NightBorn_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    
+    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 3
+    set udg_HordeMagicPrice[pi]=udg_HordeMagicPrice[pi] - 5
+    
+    call ChangeMagicUnitsNow(p , pi)
+    
+    
+ 
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_NightBorn takes nothing returns nothing
+    set gg_trg_NightBorn=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_NightBorn, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_NightBorn, Condition(function Trig_NightBorn_Conditions))
+    call TriggerAddAction(gg_trg_NightBorn, function Trig_NightBorn_Actions)
 endfunction
 
 
@@ -21983,7 +22103,7 @@ function Trig_DragonHorde_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
 
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 3
+    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 4
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 5
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 3
 
@@ -22124,7 +22244,7 @@ function Trig_TrueHorde_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     local group g= CreateGroup()
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 5
+    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 12
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 5
 
 
@@ -22297,10 +22417,12 @@ function Trig_BuyGoblins_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
 
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 2
-    set udg_HordeTechPrice[pi]=udg_HordeTechPrice[pi] - 10
-
+    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 4
+    set udg_HordeTechPrice[pi]=udg_HordeTechPrice[pi] - 7
+    set udg_HordeNavyPrice[pi]=udg_HordeNavyPrice[pi] - 3
+    
     call ChangeTechUnitsNow(p , pi)
+    call ChangeNavyUnitsNow(p , pi)
     
     call SetPlayerTechResearched(p, 'R0E8', 1) // Разрешает особую технику
    
@@ -22329,7 +22451,7 @@ function Trig_Magnatavrs_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     
-    set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 3
+    set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 2
 
     call ChangeLandUnitsNow(p , pi)
     
@@ -22360,7 +22482,7 @@ function Trig_DeathKnights_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(p)
 
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 1
-    set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 5
+    set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 3
 
     call ChangeEliteUnitsNow(p , pi)
     
@@ -22503,6 +22625,39 @@ function InitTrig_AutoShield_Copy takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_AutoShield_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_AutoShield_Copy, Condition(function Trig_AutoShield_Copy_Conditions))
     call TriggerAddAction(gg_trg_AutoShield_Copy, function Trig_AutoShield_Copy_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: PandaSecondAttack
+//===========================================================================
+function Trig_PandaSecondAttack_Conditions takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A129', GetAttacker()) > 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_PandaSecondAttack_Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A12A', GetAttacker()) == 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_PandaSecondAttack_Actions takes nothing returns nothing
+    if ( Trig_PandaSecondAttack_Func001C() ) then
+        call UnitAddAbilityBJ('A12A', GetAttacker())
+    else
+        call UnitRemoveAbilityBJ('A12A', GetAttacker())
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_PandaSecondAttack takes nothing returns nothing
+    set gg_trg_PandaSecondAttack=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_PandaSecondAttack, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_PandaSecondAttack, Condition(function Trig_PandaSecondAttack_Conditions))
+    call TriggerAddAction(gg_trg_PandaSecondAttack, function Trig_PandaSecondAttack_Actions)
 endfunction
 
 //===========================================================================
@@ -40002,6 +40157,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_BeginCommonHome()
     call InitTrig_CanselCommonHome()
     call InitTrig_CommonHome()
+    call InitTrig_Zandalars()
+    call InitTrig_NightBorn()
     call InitTrig_StartUnitedOrcs()
     call InitTrig_BlackMountainHorde()
     call InitTrig_DragonHorde()
@@ -40019,6 +40176,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_AutoSetkaH()
     call InitTrig_IronStar()
     call InitTrig_AutoShield_Copy()
+    call InitTrig_PandaSecondAttack()
     call InitTrig_GnomesOn()
     call InitTrig_GnomesStart()
     call InitTrig_GelbinSpellAttacked()
@@ -40889,7 +41047,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
