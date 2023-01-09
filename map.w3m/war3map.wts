@@ -136238,6 +136238,14 @@ STRING 22428
 Q
 }
 
+STRING 22429
+// Units: h0IM (|cffd45e19Ферма|r), Ubertip (Tooltip - Extended)
+{
+|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальное количество инкома.
+
+|cffffff00Приносит 30 инкома|r
+}
+
 STRING 22430
 // Abilities: A10G (Развитие города), Tip (Tooltip - Normal)
 {
@@ -136256,10 +136264,28 @@ STRING 22432
 (Безликие)
 }
 
+STRING 22433
+// Units: h0IR (|cffd45e19Военная академия|r), Ubertip (Tooltip - Extended)
+{
+|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nМастера военного и магического дела |cffd45e19Гилнеаса|r, проходят свое обучение в Академии.
+}
+
 STRING 22434
 // Units: h0I7 (|cff9370dbСущность Страха|r), EditorSuffix (Name - Editor Suffix)
 {
 (Безликие)
+}
+
+STRING 22435
+// Units: h0IS (|cffd45e19Храм друидов|r), Ubertip (Tooltip - Extended)
+{
+|cff7dc87dВремя строительства:|r |cffaaf0aa60 сек.|r|n|nМесто концентрации и отдыха друидов, позволяет улучшать их способности.
+}
+
+STRING 22436
+// Units: h0IU (|cffd45e19Пехотинец|r), Tip (Tooltip - Basic)
+{
+Обучить |cffd45e19Пехотинца|r
 }
 
 STRING 22437
@@ -136290,6 +136316,13 @@ STRING 22441
 // Units: h0IA (|cff9370dbБезликий разрушитель|r), EditorSuffix (Name - Editor Suffix)
 {
 (Безликие)
+}
+
+STRING 22442
+// Units: h0IV (|cffd45e19Стрелок|r), Ubertip (Tooltip - Extended)
+{
+|cff7dc87dВремя подготовки:|r |cffaaf0aa26 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальний бой|r|n
+Меткий стрелок, эффективный на дальних дистанциях. Можно снарядить длинноствольным мушкетом. |n|n|cffffcc00Атакует наземные и воздушные цели.|r
 }
 
 STRING 22443
@@ -136943,14 +136976,6 @@ STRING 22581
 Построить |cffd45e19Ферму|r
 }
 
-STRING 22582
-// Units: h0IM (|cffd45e19Ферма|r), Ubertip (Tooltip - Extended)
-{
-|cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.
-
-|cffffff00Приносит 20 инкома|r
-}
-
 STRING 22583
 // Units: h0IN (|cffd45e19Алтарь |r), Name (Name)
 {
@@ -137281,12 +137306,6 @@ STRING 22639
 Построить |cffd45e19Военная академия|r
 }
 
-STRING 22640
-// Units: h0IR (|cffd45e19Военная академия|r), Ubertip (Tooltip - Extended)
-{
-|cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nПозволяет нанимать осадные машины , и строить орудия сады.
-}
-
 STRING 22641
 // Upgrades: R05W (Шрапнель), Hotkey (Hotkey)
 {
@@ -137466,12 +137485,6 @@ STRING 22670
 // Abilities: A10R (|cff483d8bАура Бездны|r), Name (Name)
 {
 |cff483d8bАура Бездны|r
-}
-
-STRING 22671
-// Units: h0IS (|cffd45e19Храм друидов|r), Ubertip (Tooltip - Extended)
-{
-|cff7dc87dВремя строительства:|r |cffaaf0aa60 сек.|r|n|nПризывает ночнорожденных к любви ко всей жизни. Позволяет нанимать войска защищающие и востанавливающие жизнь в любом ее проявлении.
 }
 
 STRING 22672
@@ -138517,7 +138530,7 @@ STRING 22832
 }
 
 STRING 22833
-// Units: h0IU (|cffd45e19Пехотинец|r), Tip (Tooltip - Basic)
+// Units: h0IY (|cffd45e19Пехотинец|r), Tip (Tooltip - Basic)
 {
 Обучить |cffd45e19Пехотинеца|r
 }
@@ -138545,13 +138558,6 @@ STRING 22837
 // Units: h0IV (|cffd45e19Стрелок|r), Tip (Tooltip - Basic)
 {
 Обучить |cffd45e19Стрелка|r
-}
-
-STRING 22838
-// Units: h0IV (|cffd45e19Стрелок|r), Ubertip (Tooltip - Extended)
-{
-|cff7dc87dВремя подготовки:|r |cffaaf0aa26 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaДальни бой|r|n
-Меткий стрелок, эффективный на дальних дистанциях. Можно снарядить длинноствольным мушкетом. |n|n|cffffcc00Атакует наземные и воздушные цели.|r
 }
 
 STRING 22839
@@ -138717,12 +138723,6 @@ STRING 22865
 // Units: h0IY (|cffd45e19Пехотинец|r), Name (Name)
 {
 |cffd45e19Пехотинец|r
-}
-
-STRING 22866
-// Units: h0IY (|cffd45e19Пехотинец|r), Tip (Tooltip - Basic)
-{
-Обучить |cffd45e19Пехотинеца|r
 }
 
 STRING 22867
