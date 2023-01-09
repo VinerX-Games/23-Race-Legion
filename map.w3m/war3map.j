@@ -11687,10 +11687,10 @@ function Trig_Race_Bezlikie_O_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_Race_Bezlikie_O_Actions takes nothing returns nothing
-    call SetPlayerTechResearchedSwap('R0F9', 1, GetOwningPlayer(GetTriggerUnit()))
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call CreateNUnitsAtLoc(3, 'u02D', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     call RemoveUnit(GetSpellAbilityUnit())
+    call SetPlayerTechResearchedSwap('R0F9', 1, GetOwningPlayer(GetTriggerUnit()))
     call RemoveLocation(udg_LocalPosition2)
 endfunction
 
@@ -12310,6 +12310,7 @@ function Trig_Page1_O_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0OK', GetTriggerUnit())
     call UnitAddAbilityBJ('A0HZ', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0YV', GetTriggerUnit())
+    call UnitRemoveAbilityBJ('A0HW', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A121', GetTriggerUnit())
 endfunction
 
@@ -12378,6 +12379,7 @@ endfunction
 
 function Trig_Page3_O_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0YV', GetTriggerUnit())
+    call UnitAddAbilityBJ('A0HW', GetTriggerUnit())
     call UnitAddAbilityBJ('A121', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QQ', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QN', GetTriggerUnit())
@@ -19820,6 +19822,9 @@ endfunction
 // Trigger: Spell
 //===========================================================================
 function Trig_Spell_Conditions takes nothing returns boolean
+    if ( not ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) != true ) ) then
+        return false
+    endif
     if ( not ( GetUnitAbilityLevelSwapped('A122', GetAttacker()) == 1 ) ) then
         return false
     endif
@@ -19827,7 +19832,7 @@ function Trig_Spell_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_Spell_Actions takes nothing returns nothing
-    call UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.05 ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
+    call UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.02 ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
 endfunction
 
 //===========================================================================
