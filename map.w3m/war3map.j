@@ -675,6 +675,10 @@ trigger gg_trg_Vozd= null
 trigger gg_trg_Defend= null
 trigger gg_trg_Heal= null
 trigger gg_trg_EnterKazna= null
+trigger gg_trg_Sila2= null
+trigger gg_trg_Sila1= null
+trigger gg_trg_Skorost2= null
+trigger gg_trg_Skorost1= null
 trigger gg_trg_ZdaniyaBezlik= null
 trigger gg_trg_ZdaniyaBezlik_Copy= null
 trigger gg_trg_ZdaniyaBezlik_Copy_Copy= null
@@ -1378,10 +1382,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_Skorost1= null
-trigger gg_trg_Skorost2= null
-trigger gg_trg_Sila1= null
-trigger gg_trg_Sila2= null
 real array income
 real array incomeW
 real array disincome
