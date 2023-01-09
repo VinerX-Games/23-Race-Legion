@@ -20,12 +20,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -692,7 +692,6 @@ trigger gg_trg_Spell= null
 trigger gg_trg_SpellRes= null
 trigger gg_trg_SpandFarm= null
 trigger gg_trg_StartHorde= null
-trigger gg_trg_StartHorde_Copy= null
 trigger gg_trg_HordeOn= null
 trigger gg_trg_K1T1= null
 trigger gg_trg_K1T2= null
@@ -1387,6 +1386,8 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_Counters= null
+hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
 real array disincome
@@ -1499,7 +1500,6 @@ integer max= 0
     
 multiboarditem array MultiboardItem
 integer array MultiboardItemOwnerIndex
-texttag TT
 unit TryBuild_u
 group Navy= CreateGroup()
 group Port= CreateGroup()
@@ -1642,7 +1642,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1650,33 +1650,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1684,19 +1684,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -2245,9 +2245,6 @@ endfunction
 //***************************************************************************
 //***************************************************************************
 //*  CommonHash
-//globals
-//    hashtable CommonHash = InitHashtable()
-//endglobals
 //
 //
 //// Для работа надо номер игрока, ид юнита
@@ -12384,7 +12381,6 @@ endfunction
 
 function Trig_Page3_O_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0YV', GetTriggerUnit())
-    call UnitAddAbilityBJ('A0HW', GetTriggerUnit())
     call UnitAddAbilityBJ('A121', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QQ', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QN', GetTriggerUnit())
@@ -19723,125 +19719,6 @@ function InitTrig_ZdaniyaBezlik_Copy_Copy_2_Copy takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: FinishFaceBuild
-//===========================================================================
-function Trig_FinishFaceBuild_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'h0HZ' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_FinishFaceBuild_Actions takes nothing returns nothing
-    call GroupAddUnitSimple(GetConstructedStructure(), udg_FacelessLumberBuildings)
-endfunction
-
-//===========================================================================
-function InitTrig_FinishFaceBuild takes nothing returns nothing
-    set gg_trg_FinishFaceBuild=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_FinishFaceBuild, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
-    call TriggerAddCondition(gg_trg_FinishFaceBuild, Condition(function Trig_FinishFaceBuild_Conditions))
-    call TriggerAddAction(gg_trg_FinishFaceBuild, function Trig_FinishFaceBuild_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: DeadFaceBuild
-//===========================================================================
-function Trig_DeadFaceBuild_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h0HZ' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_DeadFaceBuild_Actions takes nothing returns nothing
-    call GroupRemoveUnitSimple(GetTriggerUnit(), udg_FacelessLumberBuildings)
-endfunction
-
-//===========================================================================
-function InitTrig_DeadFaceBuild takes nothing returns nothing
-    set gg_trg_DeadFaceBuild=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_DeadFaceBuild, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(gg_trg_DeadFaceBuild, Condition(function Trig_DeadFaceBuild_Conditions))
-    call TriggerAddAction(gg_trg_DeadFaceBuild, function Trig_DeadFaceBuild_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: LumberTest
-//===========================================================================
-
-
-function KillTextTag takes nothing returns nothing
-    local texttag t= TT
-    call TriggerSleepAction(3)
-    call DestroyTextTag(t)
-    set t=null
-endfunction
-
-
-function TT2 takes nothing returns nothing
-    local texttag t= CreateTextTag()
-    local player p= Player(0)
-    local string s= I2S(5)
-    local destructable f= GetEnumDestructable()
-    local location l= GetDestructableLoc(f)
-    call AdjustPlayerStateBJ(5, p, PLAYER_STATE_RESOURCE_LUMBER)
-    
-    
-    set t=CreateTextTagLocBJ(s, l, 0, 10, 0.00, 100, 0.00, 0)
-    call SetTextTagPermanentBJ(t, false)
-    call SetTextTagLifespanBJ(t, 3.00)
-    call SetTextTagVelocityBJ(t, 50.00, 90)
-    call SetTextTagFadepointBJ(t, 1.00)
-
-    call RemoveLocation(l)
-    set l=null
-    set f=null
-    set TT=t
-    set t=null
-    set p=null
-    set s=null
-    call ExecuteFunc("KillTextTag")
-endfunction
-    
-
-
-function Trig_LumberTest_Actions takes nothing returns nothing
-    local group g= CreateGroup()
-    local destructable d
-    local unit u= null
-    local location l
-    
-    call GroupAddGroup(udg_FacelessLumberBuildings, g)
-    loop
-        set u=FirstOfGroup(g)
-        exitwhen u == null
-        
-        
-        set udg_LocalPlayer=GetOwningPlayer(u)
-        set l=GetUnitLoc(u)
-        call EnumDestructablesInCircleBJ(500.00, l, function TT2)
-        
-        call RemoveLocation(l)
-        call GroupRemoveUnit(g, u)
-    endloop
-    
-    call RemoveLocation(l)
-    set l=null
-    call DestroyGroup(g)
-    set u=null
-    set g=null
-endfunction
-
-//===========================================================================
-function InitTrig_LumberTest takes nothing returns nothing
-    set gg_trg_LumberTest=CreateTrigger()
-    call TriggerRegisterTimerEventPeriodic(gg_trg_LumberTest, 5.00)
-    call TriggerAddAction(gg_trg_LumberTest, function Trig_LumberTest_Actions)
-endfunction
-
-
-//===========================================================================
 // Trigger: Spell
 //===========================================================================
 function Trig_Spell_Conditions takes nothing returns boolean
@@ -19886,97 +19763,6 @@ function InitTrig_SpellRes takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_SpellRes, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(gg_trg_SpellRes, Condition(function Trig_SpellRes_Conditions))
     call TriggerAddAction(gg_trg_SpellRes, function Trig_SpellRes_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: SpandFarm
-//===========================================================================
-function Trig_SpandFarm_Actions takes nothing returns nothing
-    call SetPlayerAbilityAvailableBJ(false, 'A11G', Player(0))
-endfunction
-
-//===========================================================================
-function InitTrig_SpandFarm takes nothing returns nothing
-    set gg_trg_SpandFarm=CreateTrigger()
-    call TriggerAddAction(gg_trg_SpandFarm, function Trig_SpandFarm_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: StartHorde
-//===========================================================================
-function Trig_StartHorde_Func001A takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('Oshd', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('Otch', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('Ofar', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('Obla', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('o029', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('o02B', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('h0CY', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0D1', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0D2', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0D3', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0E0', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0E1', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0E3', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0E4', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0E5', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0E9', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0EA', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0EE', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0EI', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0EH', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0F4', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0F3', 0, GetEnumPlayer())
-endfunction
-
-function Trig_StartHorde_Actions takes nothing returns nothing
-    call ForForce(udg_AllPlayers, function Trig_StartHorde_Func001A)
-endfunction
-
-//===========================================================================
-function InitTrig_StartHorde takes nothing returns nothing
-    set gg_trg_StartHorde=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_StartHorde, 0.01)
-    call TriggerAddAction(gg_trg_StartHorde, function Trig_StartHorde_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: StartHorde Copy
-//===========================================================================
-function Trig_StartHorde_Copy_Func001A takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('Oshd', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('Otch', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('Ofar', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('Obla', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('o029', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('o02B', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('h0CY', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0D1', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0D2', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0D3', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0E0', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0E1', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0E3', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0E4', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0E5', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0E9', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0EA', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0EE', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0EI', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0EH', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0F4', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0F3', 0, GetEnumPlayer())
-endfunction
-
-function Trig_StartHorde_Copy_Actions takes nothing returns nothing
-    call ForForce(udg_AllPlayers, function Trig_StartHorde_Copy_Func001A)
-endfunction
-
-//===========================================================================
-function InitTrig_StartHorde_Copy takes nothing returns nothing
-    set gg_trg_StartHorde_Copy=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_StartHorde_Copy, 0.01)
-    call TriggerAddAction(gg_trg_StartHorde_Copy, function Trig_StartHorde_Copy_Actions)
 endfunction
 
 //===========================================================================
@@ -20043,15 +19829,11 @@ function Trig_K1T1_Conditions takes nothing returns boolean
     return GetUnitTypeId(GetTrainedUnit()) == 'ogru'
 endfunction
 
-function Trig_K1T1_Actions takes nothing returns nothing
+function T1Count takes player p returns nothing
     local integer array a
     local integer i= 0
     local integer b= 0
-    local player p= GetOwningPlayer(GetTriggerUnit())
-    local location l= GetUnitRallyPoint(GetTriggerUnit())
-    local unit u
     local integer pi= GetPlayerId(p)
-    
     
     //1 юнит
     set a[0]=0
@@ -20102,10 +19884,38 @@ function Trig_K1T1_Actions takes nothing returns nothing
             set b=b + 1
             exitwhen b >= i
         endloop
-
     endif
-    set i=GetRandomInt(1, a[0])
-    set b=a[i]
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("T1_0"), a[0])
+    set i=1
+    loop
+        exitwhen i == a[0]
+        
+        call SaveInteger(CommonHash, pi, StringHash("T1") + i, a[i])
+        set i=i + 1
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_K1T1_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("T1_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, StringHash("T1") + i)
     
     set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -20139,15 +19949,12 @@ function Trig_K1T2_Conditions takes nothing returns boolean
     return GetUnitTypeId(GetTrainedUnit()) == 'o01N'
 endfunction
 
-function Trig_K1T2_Actions takes nothing returns nothing
+
+function T2Count takes player p returns nothing
     local integer array a
     local integer i= 0
     local integer b= 0
-    local player p= GetOwningPlayer(GetTriggerUnit())
-    local location l= GetUnitRallyPoint(GetTriggerUnit())
-    local unit u
     local integer pi= GetPlayerId(p)
-    
     
     //1 юнит
     set a[0]=0
@@ -20181,8 +19988,38 @@ function Trig_K1T2_Actions takes nothing returns nothing
                 exitwhen b >= i
         endloop
     endif
-    set i=GetRandomInt(1, a[0])
-    set b=a[i]
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("T2_0"), a[0])
+    set i=1
+    loop
+        exitwhen i == a[0]
+        
+        call SaveInteger(CommonHash, pi, StringHash("T2") + i, a[i])
+        set i=i + 1
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+function Trig_K1T2_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    // 
+    set i=LoadInteger(CommonHash, pi, StringHash("T2_0"))
+
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, StringHash("T2") + i)
+    //
     
     set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -20217,15 +20054,11 @@ function Trig_K1T2b_Conditions takes nothing returns boolean
     return GetUnitTypeId(GetTrainedUnit()) == 'o029'
 endfunction
 
-function Trig_K1T2b_Actions takes nothing returns nothing
+function T2bCount takes player p returns nothing
     local integer array a
     local integer i= 0
     local integer b= 0
-    local player p= GetOwningPlayer(GetTriggerUnit())
-    local location l= GetUnitRallyPoint(GetTriggerUnit())
-    local unit u
     local integer pi= GetPlayerId(p)
-    
     
     //1 юнит
     set a[0]=0
@@ -20248,8 +20081,39 @@ function Trig_K1T2b_Actions takes nothing returns nothing
             exitwhen b >= i
     endloop
     
-    set i=GetRandomInt(1, a[0])
-    set b=a[i]
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("T2b_0"), a[0])
+    set i=1
+    loop
+        exitwhen i == a[0]
+        
+        call SaveInteger(CommonHash, pi, StringHash("T2b") + i, a[i])
+        set i=i + 1
+    endloop
+    
+    
+    
+    
+endfunction
+
+function Trig_K1T2b_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    
+    
+    // 
+    set i=LoadInteger(CommonHash, pi, StringHash("T2b_0"))
+
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, StringHash("T2b") + i)
+    //
     
     set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -20284,15 +20148,11 @@ function Trig_K1TCav_Conditions takes nothing returns boolean
     return GetUnitTypeId(GetTrainedUnit()) == 'orai'
 endfunction
 
-function Trig_K1TCav_Actions takes nothing returns nothing
+function TCavCount takes player p returns nothing
     local integer array a
     local integer i= 0
     local integer b= 0
-    local player p= GetOwningPlayer(GetTriggerUnit())
-    local location l= GetUnitRallyPoint(GetTriggerUnit())
-    local unit u
     local integer pi= GetPlayerId(p)
-    
     
     //1 юнит
     set a[0]=0
@@ -20351,10 +20211,36 @@ function Trig_K1TCav_Actions takes nothing returns nothing
     endif
     
     
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("TCav_0"), a[0])
+    set i=1
+    loop
+        exitwhen i == a[0]
+        
+        call SaveInteger(CommonHash, pi, StringHash("TCav") + i, a[i])
+        set i=i + 1
+    endloop
     
     
-    set i=GetRandomInt(1, a[0])
-    set b=a[i]
+    
+    
+endfunction
+function Trig_K1TCav_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    
+    // 
+    set i=LoadInteger(CommonHash, pi, StringHash("TCav_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, StringHash("TCav") + i)
+    //
     
     set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -20389,15 +20275,12 @@ function Trig_K1T4_Conditions takes nothing returns boolean
     return GetUnitTypeId(GetTrainedUnit()) == 'otau'
 endfunction
 
-function Trig_K1T4_Actions takes nothing returns nothing
+
+function T3Count takes player p returns nothing
     local integer array a
     local integer i= 0
     local integer b= 0
-    local player p= GetOwningPlayer(GetTriggerUnit())
-    local location l= GetUnitRallyPoint(GetTriggerUnit())
-    local unit u
     local integer pi= GetPlayerId(p)
-    
     
     //1 юнит
     set a[0]=0
@@ -20463,8 +20346,39 @@ function Trig_K1T4_Actions takes nothing returns nothing
     endif
     
     
-    set i=GetRandomInt(1, a[0])
-    set b=a[i]
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("T3_0"), a[0])
+    set i=1
+    loop
+        exitwhen i == a[0]
+        
+        call SaveInteger(CommonHash, pi, StringHash("T3") + i, a[i])
+        set i=i + 1
+    endloop
+    
+    
+    
+    
+endfunction
+
+function Trig_K1T4_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    
+    
+    
+    // 
+    set i=LoadInteger(CommonHash, pi, StringHash("T3_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, StringHash("T3") + i)
+    //
     
     set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     set udg_Price=GetUnitGoldCost(GetUnitTypeId(u))
@@ -20501,15 +20415,11 @@ function Trig_K2T1_Conditions takes nothing returns boolean
     return GetUnitTypeId(GetTrainedUnit()) == 'ohun'
 endfunction
 
-function Trig_K2T1_Actions takes nothing returns nothing
+function K1Count takes player p returns nothing
     local integer array a
     local integer i= 0
     local integer b= 0
-    local player p= GetOwningPlayer(GetTriggerUnit())
-    local location l= GetUnitRallyPoint(GetTriggerUnit())
-    local unit u
     local integer pi= GetPlayerId(p)
-    
     
     //1 юнит
     set a[0]=0
@@ -20551,8 +20461,38 @@ function Trig_K2T1_Actions takes nothing returns nothing
 //
 //    endif
     
-    set i=GetRandomInt(1, a[0])
-    set b=a[i]
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("K1_0"), a[0])
+    set i=1
+    loop
+        exitwhen i == a[0]
+        
+        call SaveInteger(CommonHash, pi, StringHash("K1") + i, a[i])
+        set i=i + 1
+    endloop
+    
+    
+    
+    
+endfunction
+
+function Trig_K2T1_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    
+    // 
+    set i=LoadInteger(CommonHash, pi, StringHash("K1_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, StringHash("K1") + i)
+    //
     
     set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -20588,15 +20528,13 @@ function Trig_K2T2_Conditions takes nothing returns boolean
     return GetUnitTypeId(GetTrainedUnit()) == 'o01P'
 endfunction
 
-function Trig_K2T2_Actions takes nothing returns nothing
+function K2Count takes player p returns nothing
     local integer array a
     local integer i= 0
     local integer b= 0
-    local player p= GetOwningPlayer(GetTriggerUnit())
-    local location l= GetUnitRallyPoint(GetTriggerUnit())
-    local unit u
     local integer pi= GetPlayerId(p)
-    set a[0]=0
+    
+   set a[0]=0
     
     
     
@@ -20642,8 +20580,37 @@ function Trig_K2T2_Actions takes nothing returns nothing
 
     endif
     
-    set i=GetRandomInt(1, a[0])
-    set b=a[i]
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("K2_0"), a[0])
+    set i=1
+    loop
+        exitwhen i == a[0]
+        
+        call SaveInteger(CommonHash, pi, StringHash("K2") + i, a[i])
+        set i=i + 1
+    endloop
+    
+    
+    
+    
+endfunction
+
+function Trig_K2T2_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    // 
+    set i=LoadInteger(CommonHash, pi, StringHash("K2_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, StringHash("K2") + i)
+    //
+    
     set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
 
     call UnitAddAbility(u, 'OR00')
@@ -20675,13 +20642,10 @@ function Trig_K2T2b_Conditions takes nothing returns boolean
     return GetUnitTypeId(GetTrainedUnit()) == 'o02B'
 endfunction
 
-function Trig_K2T2b_Actions takes nothing returns nothing
+function K2bCount takes player p returns nothing
     local integer array a
     local integer i= 0
     local integer b= 0
-    local player p= GetOwningPlayer(GetTriggerUnit())
-    local location l= GetUnitRallyPoint(GetTriggerUnit())
-    local unit u
     local integer pi= GetPlayerId(p)
     set a[0]=0
     
@@ -20729,8 +20693,35 @@ function Trig_K2T2b_Actions takes nothing returns nothing
 
     endif
     
-    set i=GetRandomInt(1, a[0])
-    set b=a[i]
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("K2b_0"), a[0])
+    set i=1
+    loop
+        exitwhen i == a[0]
+        
+        call SaveInteger(CommonHash, pi, StringHash("K2b") + i, a[i])
+        set i=i + 1
+    endloop
+    
+    
+    
+    
+endfunction
+
+function Trig_K2T2b_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    // 
+    set i=LoadInteger(CommonHash, pi, StringHash("K2b_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, StringHash("K2b") + i)
+    //
     set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
 
     //Elite
@@ -20763,15 +20754,13 @@ function Trig_K2T3_Conditions takes nothing returns boolean
     return GetUnitTypeId(GetTrainedUnit()) == 'okod'
 endfunction
 
-function Trig_K2T3_Actions takes nothing returns nothing
+function K3Count takes player p returns nothing
     local integer array a
     local integer i= 0
     local integer b= 0
-    local player p= GetOwningPlayer(GetTriggerUnit())
-    local location l= GetUnitRallyPoint(GetTriggerUnit())
-    local unit u
     local integer pi= GetPlayerId(p)
     set a[0]=0
+
     
     
     // Kodo-orc
@@ -20810,9 +20799,38 @@ function Trig_K2T3_Actions takes nothing returns nothing
 
     
     
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("K3_0"), a[0])
+    set i=1
+    loop
+        exitwhen i == a[0]
+        
+        call SaveInteger(CommonHash, pi, StringHash("K3") + i, a[i])
+        set i=i + 1
+    endloop
     
-    set i=GetRandomInt(1, a[0])
-    set b=a[i]
+    
+    
+    
+endfunction
+
+function Trig_K2T3_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    
+    // 
+    set i=LoadInteger(CommonHash, pi, StringHash("K3_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, StringHash("K3") + i)
+    //
+    
     set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
 
@@ -21664,6 +21682,22 @@ function InitTrig_YesRight takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: Counters
+//===========================================================================
+function countAll takes player p returns nothing
+    call T1Count(p)
+    call T2Count(p)
+    call T2bCount(p)
+    call TCavCount(p)
+    call T3Count(p)
+    
+    call K1Count(p)
+    call K2Count(p)
+    call K2bCount(p)
+    call K3Count(p)
+endfunction
+
+//===========================================================================
 // Trigger: StartCommonHome
 //===========================================================================
 function Trig_StartCommonHome_Conditions takes nothing returns boolean
@@ -21698,7 +21732,7 @@ function Trig_Forsaken_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
-    
+    call countAll(p)
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 4
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 3
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 1
@@ -21740,7 +21774,7 @@ function Trig_BloodElf_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
-    
+    call countAll(p)
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 4
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 3
     set udg_HordeMagicPrice[pi]=udg_HordeMagicPrice[pi] - 5
@@ -21782,7 +21816,7 @@ function Trig_Pandarens_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
-    
+    call countAll(p)
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 2
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 2
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 1
@@ -21881,7 +21915,7 @@ function Trig_CommonHome_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(p)
     local group g= CreateGroup()
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 4
-
+    call countAll(p)
 
     
     
@@ -21975,7 +22009,7 @@ function Trig_Zandalars_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
-    
+    call countAll(p)
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 3
     set udg_HordeNavyPrice[pi]=udg_HordeNavyPrice[pi] - 4
     
@@ -22007,7 +22041,7 @@ function Trig_NightBorn_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
-    
+    call countAll(p)
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 3
     set udg_HordeMagicPrice[pi]=udg_HordeMagicPrice[pi] - 5
     
@@ -22065,7 +22099,7 @@ function Trig_BlackMountainHorde_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
-    
+    call countAll(p)
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 3
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 5
 
@@ -22102,7 +22136,7 @@ function Trig_DragonHorde_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
-
+    call countAll(p)
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 4
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 5
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 3
@@ -22143,7 +22177,7 @@ function Trig_CorCron_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(p)
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 2
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 5
-
+    call countAll(p)
 
     call ChangeEliteUnitsNow(p , pi)
     
@@ -22246,7 +22280,7 @@ function Trig_TrueHorde_Actions takes nothing returns nothing
     local group g= CreateGroup()
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 12
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 5
-
+    call countAll(p)
 
     call ChangeEliteUnitsNow(p , pi)
     
@@ -22333,7 +22367,7 @@ function Trig_IronHorde_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
-
+    call countAll(p)
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 5
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 8
     set udg_HordeNavyPrice[pi]=udg_HordeNavyPrice[pi] - 3
@@ -22416,7 +22450,7 @@ function Trig_BuyGoblins_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
-
+    call countAll(p)
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 4
     set udg_HordeTechPrice[pi]=udg_HordeTechPrice[pi] - 7
     set udg_HordeNavyPrice[pi]=udg_HordeNavyPrice[pi] - 3
@@ -22450,7 +22484,7 @@ function Trig_Magnatavrs_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
-    
+    call countAll(p)
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 2
 
     call ChangeLandUnitsNow(p , pi)
@@ -22480,7 +22514,7 @@ function Trig_DeathKnights_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
-
+    call countAll(p)
     set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 1
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 3
 
@@ -22658,6 +22692,46 @@ function InitTrig_PandaSecondAttack takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_PandaSecondAttack, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_PandaSecondAttack, Condition(function Trig_PandaSecondAttack_Conditions))
     call TriggerAddAction(gg_trg_PandaSecondAttack, function Trig_PandaSecondAttack_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: StartHorde
+//===========================================================================
+function Trig_StartHorde_Func001A takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('Oshd', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('Otch', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('Ofar', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('Obla', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('o029', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('o02B', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('h0CY', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0D1', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0D2', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0D3', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0E0', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0E1', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0E3', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0E4', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0E5', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0E9', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0EA', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0EE', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0EI', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0EH', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0F4', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0F3', 0, GetEnumPlayer())
+    call countAll(GetEnumPlayer())
+endfunction
+
+function Trig_StartHorde_Actions takes nothing returns nothing
+    call ForForce(udg_AllPlayers, function Trig_StartHorde_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_StartHorde takes nothing returns nothing
+    set gg_trg_StartHorde=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_StartHorde, 0.01)
+    call TriggerAddAction(gg_trg_StartHorde, function Trig_StartHorde_Actions)
 endfunction
 
 //===========================================================================
@@ -40119,14 +40193,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ZdaniyaBezlik_Copy_Copy()
     call InitTrig_ZdaniyaBezlik_Copy_Copy_2()
     call InitTrig_ZdaniyaBezlik_Copy_Copy_2_Copy()
-    call InitTrig_FinishFaceBuild()
-    call InitTrig_DeadFaceBuild()
-    call InitTrig_LumberTest()
     call InitTrig_Spell()
     call InitTrig_SpellRes()
-    call InitTrig_SpandFarm()
-    call InitTrig_StartHorde()
-    call InitTrig_StartHorde_Copy()
     call InitTrig_HordeOn()
     call InitTrig_K1T1()
     call InitTrig_K1T2()
@@ -40150,6 +40218,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_YesLeft()
     call InitTrig_NoRight()
     call InitTrig_YesRight()
+    //Function not found: call InitTrig_Counters()
     call InitTrig_StartCommonHome()
     call InitTrig_Forsaken()
     call InitTrig_BloodElf()
@@ -40177,6 +40246,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_IronStar()
     call InitTrig_AutoShield_Copy()
     call InitTrig_PandaSecondAttack()
+    call InitTrig_StartHorde()
     call InitTrig_GnomesOn()
     call InitTrig_GnomesStart()
     call InitTrig_GelbinSpellAttacked()
@@ -41047,7 +41117,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
