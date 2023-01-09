@@ -634,6 +634,7 @@ trigger gg_trg_Connect_Portal_2= null
 trigger gg_trg_Connect_Portal_3= null
 trigger gg_trg_Connect_Portal_4= null
 trigger gg_trg_F2= null
+trigger gg_trg_F2_Copy= null
 trigger gg_trg_F2_Start= null
 trigger gg_trg_F2_Map_2= null
 trigger gg_trg_F2_AreaMidBig= null
@@ -722,6 +723,8 @@ trigger gg_trg_Pandarens= null
 trigger gg_trg_BeginCommonHome= null
 trigger gg_trg_CanselCommonHome= null
 trigger gg_trg_CommonHome= null
+trigger gg_trg_Zandalars= null
+trigger gg_trg_NightBorn= null
 trigger gg_trg_StartUnitedOrcs= null
 trigger gg_trg_BlackMountainHorde= null
 trigger gg_trg_DragonHorde= null
@@ -740,6 +743,7 @@ trigger gg_trg_AutoSetkaH= null
 trigger gg_trg_IronStar= null
 trigger gg_trg_SiegeEffect= null
 trigger gg_trg_AutoShield_Copy= null
+trigger gg_trg_PandaSecondAttack= null
 trigger gg_trg_GnomesOn= null
 trigger gg_trg_GnomesStart= null
 trigger gg_trg_GelbinSpellAttacked= null
@@ -1383,10 +1387,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_PandaSecondAttack= null
-trigger gg_trg_Zandalars= null
-trigger gg_trg_NightBorn= null
-trigger gg_trg_F2_Copy= null
 real array income
 real array incomeW
 real array disincome
@@ -5107,7 +5107,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'otbk', - 5898.0, - 29470.6, 273.181, 'otbk')
     set u=BlzCreateUnitWithSkin(p, 'o01E', - 6009.3, - 29262.0, 274.865, 'o01E')
     set u=BlzCreateUnitWithSkin(p, 'o01Q', - 5737.6, - 29254.9, 275.840, 'o01Q')
-    set u=BlzCreateUnitWithSkin(p, 'o01S', - 5283.1, - 29428.8, - 83.966, 'o01S')
+    set u=BlzCreateUnitWithSkin(p, 'o01S', - 5283.1, - 29428.8, 276.034, 'o01S')
     set u=BlzCreateUnitWithSkin(p, 'o024', - 5432.0, - 29760.3, 245.398, 'o024')
     set u=BlzCreateUnitWithSkin(p, 'o01U', - 4907.1, - 29193.4, 275.520, 'o01U')
     set u=BlzCreateUnitWithSkin(p, 'o01V', - 5705.9, - 29744.6, 280.369, 'o01V')
