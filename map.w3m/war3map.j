@@ -20,12 +20,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -676,6 +676,8 @@ trigger gg_trg_Vozd= null
 trigger gg_trg_Defend= null
 trigger gg_trg_Heal= null
 trigger gg_trg_EnterKazna= null
+trigger gg_trg_Sluga_qqgsarona= null
+trigger gg_trg_qqgsaron_Fall= null
 trigger gg_trg_Sila2= null
 trigger gg_trg_Sila1= null
 trigger gg_trg_Skorost2= null
@@ -1296,16 +1298,21 @@ unit gg_unit_h0BL_0603= null
 unit gg_unit_n003_0097= null
 unit gg_unit_n03D_0666= null
 unit gg_unit_n006_0438= null
+unit gg_unit_n03B_0665= null
 unit gg_unit_h00E_0106= null
 unit gg_unit_h00F_0105= null
 unit gg_unit_h00M_0113= null
+unit gg_unit_n03B_0664= null
 unit gg_unit_n003_0027= null
+unit gg_unit_n03C_0663= null
+unit gg_unit_n03C_0662= null
 unit gg_unit_h09M_0539= null
 unit gg_unit_n003_0025= null
 unit gg_unit_h00W_0145= null
 unit gg_unit_n003_0024= null
 unit gg_unit_h09Z_0492= null
 unit gg_unit_n00W_0446= null
+unit gg_unit_n03C_0661= null
 unit gg_unit_n04O_0136= null
 unit gg_unit_n00W_0442= null
 unit gg_unit_n003_0022= null
@@ -1350,6 +1357,7 @@ unit gg_unit_h0E2_0011= null
 unit gg_unit_n006_0023= null
 unit gg_unit_h08G_0419= null
 unit gg_unit_h0BJ_0602= null
+unit gg_unit_n03C_0660= null
 unit gg_unit_h07O_0251= null
 unit gg_unit_n001_0847= null
 unit gg_unit_h08F_0862= null
@@ -1364,6 +1372,8 @@ unit gg_unit_n01B_0850= null
 unit gg_unit_h0AP_0552= null
 unit gg_unit_n03A_0657= null
 unit gg_unit_h0BH_0601= null
+unit gg_unit_n03B_0659= null
+unit gg_unit_n03B_0658= null
 unit gg_unit_n003_0060= null
 unit gg_unit_n01D_0904= null
 unit gg_unit_n04E_0048= null
@@ -1387,17 +1397,9 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_Sluga_qqgsarona= null
-unit gg_unit_u02D_0075= null
-unit gg_unit_n03C_0660= null
-unit gg_unit_n03C_0661= null
-unit gg_unit_n03C_0663= null
-unit gg_unit_n03C_0662= null
-unit gg_unit_n03B_0664= null
-unit gg_unit_n03B_0665= null
-unit gg_unit_n03B_0658= null
-unit gg_unit_n03B_0659= null
-trigger gg_trg_qqgsaron_Fall= null
+trigger gg_trg_Spell1_Copy_2= null
+trigger gg_trg_KillTestUnits_O_Copy= null
+trigger gg_trg_GarraoshMassBloodlast= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1653,7 +1655,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1661,33 +1663,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1695,19 +1697,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -5102,6 +5104,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0IG', - 3406.7, - 25854.5, 265.690, 'h0IG')
     set u=BlzCreateUnitWithSkin(p, 'h0IE', - 3987.2, - 25805.7, 285.561, 'h0IE')
     set u=BlzCreateUnitWithSkin(p, 'h0IC', - 3589.3, - 26119.4, 255.468, 'h0IC')
+    set u=BlzCreateUnitWithSkin(p, 'O02P', - 4903.2, - 30021.2, 268.060, 'O02P')
+    call SetHeroLevel(u, 25, false)
     set u=BlzCreateUnitWithSkin(p, 'h0ID', - 3888.8, - 25837.2, 259.736, 'h0ID')
     set u=BlzCreateUnitWithSkin(p, 'o023', - 5792.7, - 29745.9, 272.250, 'o023')
     set u=BlzCreateUnitWithSkin(p, 'opeo', - 6201.1, - 28833.8, 229.973, 'opeo')
@@ -5828,7 +5832,7 @@ function CreateNeutralPassive takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h03E', - 23224.2, - 22174.3, 282.180, 'h03E')
-    set u=BlzCreateUnitWithSkin(p, 'n04R', - 4659.7, - 29849.8, 280.438, 'n04R')
+    set u=BlzCreateUnitWithSkin(p, 'n04R', - 4523.2, - 29573.1, 280.438, 'n04R')
 endfunction
 
 //===========================================================================
@@ -12408,6 +12412,7 @@ endfunction
 
 function Trig_Page3_O_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0YV', GetTriggerUnit())
+    call UnitAddAbilityBJ('A0HW', GetTriggerUnit())
     call UnitAddAbilityBJ('A121', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QQ', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QN', GetTriggerUnit())
@@ -19936,7 +19941,7 @@ function T1Count takes player p returns nothing
     endif
     //4 юнит андеды
     if GetPlayerTechCount(p, 'R0D3', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) != 1 then
-        set i=1
+        set i=2
         set b=1
         
         loop
@@ -19952,10 +19957,12 @@ function T1Count takes player p returns nothing
     call SaveInteger(CommonHash, pi, StringHash("T1_0"), a[0])
     set i=1
     loop
-        exitwhen i == a[0]
+        
         
         call SaveInteger(CommonHash, pi, StringHash("T1") + i, a[i])
         set i=i + 1
+        
+        exitwhen i == a[0]
     endloop
     
     
@@ -20042,7 +20049,7 @@ function T2Count takes player p returns nothing
     
     if GetPlayerTechCount(p, 'R0EE', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) != 1 then
         set b=0
-        set i=1
+        set i=2
         loop //Pandaren
                 set a[0]=a[0] + 1
                 set a[a[0]]='o02S'
@@ -20055,10 +20062,11 @@ function T2Count takes player p returns nothing
     call SaveInteger(CommonHash, pi, StringHash("T2_0"), a[0])
     set i=1
     loop
-        exitwhen i == a[0]
+        
         
         call SaveInteger(CommonHash, pi, StringHash("T2") + i, a[i])
         set i=i + 1
+        exitwhen i == a[0]
     endloop
     
     
@@ -20135,7 +20143,7 @@ function T2bCount takes player p returns nothing
     endloop
     
     set b=0
-    set i=1
+    set i=2
     loop //Огр
             set a[0]=a[0] + 1
             set a[a[0]]='o01O'
@@ -20147,10 +20155,11 @@ function T2bCount takes player p returns nothing
     call SaveInteger(CommonHash, pi, StringHash("T2b_0"), a[0])
     set i=1
     loop
-        exitwhen i == a[0]
+       
         
         call SaveInteger(CommonHash, pi, StringHash("T2b") + i, a[i])
         set i=i + 1
+        exitwhen i == a[0]
     endloop
     
     
@@ -20259,7 +20268,7 @@ function TCavCount takes player p returns nothing
     endif
     //Магнатавр
     if GetPlayerTechCount(p, 'R0E5', true) == 1 then
-        set i=1
+        set i=2
         set b=1
         
         loop
@@ -20277,10 +20286,11 @@ function TCavCount takes player p returns nothing
     call SaveInteger(CommonHash, pi, StringHash("TCav_0"), a[0])
     set i=1
     loop
-        exitwhen i == a[0]
+        
         
         call SaveInteger(CommonHash, pi, StringHash("TCav") + i, a[i])
         set i=i + 1
+        exitwhen i == a[0]
     endloop
     
     
@@ -20383,7 +20393,7 @@ function T3Count takes player p returns nothing
     
     //Death knight
     if GetPlayerTechCount(p, 'R0E3', true) == 1 then
-        set i=1
+        set i=2
         set b=1
         
         loop
@@ -20398,7 +20408,7 @@ function T3Count takes player p returns nothing
     
     if GetPlayerTechCount(p, 'R0EE', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) != 1 then
         set b=0
-        set i=1
+        set i=2
         loop //Pandaren
                 set a[0]=a[0] + 1
                 set a[a[0]]='o02W'
@@ -20412,10 +20422,11 @@ function T3Count takes player p returns nothing
     call SaveInteger(CommonHash, pi, StringHash("T3_0"), a[0])
     set i=1
     loop
-        exitwhen i == a[0]
+        
         
         call SaveInteger(CommonHash, pi, StringHash("T3") + i, a[i])
         set i=i + 1
+        exitwhen i == a[0]
     endloop
     
     
@@ -20499,7 +20510,7 @@ function K1Count takes player p returns nothing
     
     //Орк
     set b=0
-    set i=1
+    set i=2
     loop
             set a[0]=a[0] + 1
             set a[a[0]]='o01X'
@@ -20528,10 +20539,11 @@ function K1Count takes player p returns nothing
     call SaveInteger(CommonHash, pi, StringHash("K1_0"), a[0])
     set i=1
     loop
-        exitwhen i == a[0]
+        
         
         call SaveInteger(CommonHash, pi, StringHash("K1") + i, a[i])
         set i=i + 1
+        exitwhen i == a[0]
     endloop
     
     
@@ -20601,7 +20613,7 @@ function K2Count takes player p returns nothing
     
     
     if GetPlayerTechCount(p, 'R0E9', true) < 1 then
-        set i=3
+        set i=4
         // Troll
         loop
                 set a[0]=a[0] + 1
@@ -20614,7 +20626,7 @@ function K2Count takes player p returns nothing
     
     // black mountain orc
     if GetPlayerTechCount(p, 'R0D1', true) == 1 then
-        set i=1
+        set i=2
         set b=1
         
         loop
@@ -20629,7 +20641,7 @@ function K2Count takes player p returns nothing
     
     //Goblin sniper
     if GetPlayerTechCount(p, 'R0E4', true) == 1 then
-        set i=1
+        set i=2
         set b=1
         
         loop
@@ -20646,10 +20658,11 @@ function K2Count takes player p returns nothing
     call SaveInteger(CommonHash, pi, StringHash("K2_0"), a[0])
     set i=1
     loop
-        exitwhen i == a[0]
+        
         
         call SaveInteger(CommonHash, pi, StringHash("K2") + i, a[i])
         set i=i + 1
+        exitwhen i == a[0]
     endloop
     
     
@@ -20759,10 +20772,11 @@ function K2bCount takes player p returns nothing
     call SaveInteger(CommonHash, pi, StringHash("K2b_0"), a[0])
     set i=1
     loop
-        exitwhen i == a[0]
+        
         
         call SaveInteger(CommonHash, pi, StringHash("K2b") + i, a[i])
         set i=i + 1
+        exitwhen i == a[0]
     endloop
     
     
@@ -20865,10 +20879,11 @@ function K3Count takes player p returns nothing
     call SaveInteger(CommonHash, pi, StringHash("K3_0"), a[0])
     set i=1
     loop
-        exitwhen i == a[0]
+        
         
         call SaveInteger(CommonHash, pi, StringHash("K3") + i, a[i])
         set i=i + 1
+        exitwhen i == a[0]
     endloop
     
     
@@ -20938,7 +20953,7 @@ function Trig_KM1_Actions takes nothing returns nothing
     //1 юнит
     if GetPlayerTechCount(p, 'R0E9', true) < 1 then
         
-        set i=4
+        set i=5
         loop //Шаман
                 set a[0]=a[0] + 1
                 set a[a[0]]='o01J'
@@ -20971,7 +20986,7 @@ function Trig_KM1_Actions takes nothing returns nothing
     
     
     set b=1
-    set i=1
+    set i=2
     loop //Огр-маг
             set a[0]=a[0] + 1
             set a[a[0]]='o01K'
@@ -20997,7 +21012,7 @@ function Trig_KM1_Actions takes nothing returns nothing
     
     // Зачарователь
     if GetPlayerTechCount(p, 'R0F4', true) >= 1 then
-        set i=1
+        set i=2
         set b=1
         
         loop
@@ -21063,7 +21078,7 @@ function Trig_KM2_Actions takes nothing returns nothing
   
     // Магистр
     if GetPlayerTechCount(p, 'R0D2', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) != 1 then
-        set i=1
+        set i=2
         set b=1
         
         loop
@@ -21077,7 +21092,7 @@ function Trig_KM2_Actions takes nothing returns nothing
     endif
     // Темный шаман
     if GetPlayerTechCount(p, 'R0E9', true) == 1 then
-        set i=1
+        set i=2
         set b=1
         
         loop
@@ -21140,7 +21155,7 @@ function Trig_KM3_Actions takes nothing returns nothing
     //1 юнит
     if GetPlayerTechCount(p, 'R0E9', true) < 1 then
         
-        set i=3
+        set i=4
         loop //Знахарь
                 set a[0]=a[0] + 1
                 set a[a[0]]='o024'
@@ -21149,7 +21164,7 @@ function Trig_KM3_Actions takes nothing returns nothing
         endloop
     else
         
-        set i=2
+        set i=3
         loop //Темный маг
                 set a[0]=a[0] + 1
                 set a[a[0]]='o02L'
@@ -21165,7 +21180,7 @@ function Trig_KM3_Actions takes nothing returns nothing
     // Ведьмак
     if GetPlayerTechCount(p, 'R0D2', true) >= 1 and GetPlayerTechCount(p, 'R0E9', true) != 1 then
         set i=1
-        set b=1
+        set b=2
         
         loop
             set a[0]=a[0] + 1
@@ -21180,11 +21195,26 @@ function Trig_KM3_Actions takes nothing returns nothing
     // Медик
     if GetPlayerTechCount(p, 'R0E4', true) >= 1 then
         set i=1
-        set b=1
+        set b=2
         
         loop
             set a[0]=a[0] + 1
             set a[a[0]]='o02I'
+            
+            set b=b + 1
+            exitwhen b >= i
+        endloop
+
+    endif
+    
+    // Killer
+    if GetPlayerTechCount(p, 'R0D3', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) != 1 then
+        set i=1
+        set b=2
+        
+        loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0IH'
             
             set b=b + 1
             exitwhen b >= i
@@ -21426,14 +21456,14 @@ function Trig_NavyHeavy_Actions takes nothing returns nothing
         endloop
     
     endif
-
+    //Отреки
     if GetPlayerTechCount(p, 'R0D3', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) != 1 then
-        set i=1
+        set i=2
         set b=1
         
         loop
             set a[0]=a[0] + 1
-            set a[a[0]]='o0I5'
+            set a[a[0]]='h0I5'
             
             set b=b + 1
             exitwhen b >= i
@@ -21488,7 +21518,7 @@ function Trig_NavyLight_Actions takes nothing returns nothing
     
     //1 юнит
     set b=0
-    set i=3
+    set i=4
     loop // Fregat
             set a[0]=a[0] + 1
             set a[a[0]]='h0D6'
@@ -21498,7 +21528,7 @@ function Trig_NavyLight_Actions takes nothing returns nothing
 
     //4 юнит андеды
     if GetPlayerTechCount(p, 'R0D3', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) != 1 then
-        set i=1
+        set i=2
         set b=1
         
         loop
@@ -21513,7 +21543,7 @@ function Trig_NavyLight_Actions takes nothing returns nothing
     
     //4 юнит андеды
     if GetPlayerTechCount(p, 'R0D2', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) != 1 then
-        set i=1
+        set i=2
         set b=1
         
         loop
@@ -22757,6 +22787,50 @@ function InitTrig_PandaSecondAttack takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: GarraoshMassBloodlast
+//===========================================================================
+function Trig_GarraoshMassBloodlast_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A12M' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_GarraoshMassBloodlast_Func002002 takes nothing returns boolean
+    return ( 0 == 0 )
+endfunction
+
+function Trig_GarraoshMassBloodlast_Func007A takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    set udg_LocalUnit2=GetLastCreatedUnit()
+    call TriggerExecute(gg_trg_ToKill2)
+    call UnitAddAbilityBJ('A12L', GetLastCreatedUnit())
+    call SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
+    call SetUnitAbilityLevelSwapped('A12L', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A12M', GetTriggerUnit()))
+    call IssueTargetOrderBJ(GetLastCreatedUnit(), "bloodlust", GetEnumUnit())
+endfunction
+
+function Trig_GarraoshMassBloodlast_Actions takes nothing returns nothing
+    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    set udg_Boolexpr=Condition(function Trig_GarraoshMassBloodlast_Func002002)
+    set udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
+    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 500, udg_Boolexpr)
+    call RemoveLocation(udg_LocalPosition2)
+    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    call ForGroupBJ(udg_LocalOtrad2, function Trig_GarraoshMassBloodlast_Func007A)
+    call RemoveLocation(udg_LocalPosition2)
+    call GroupClear(udg_LocalOtrad2)
+endfunction
+
+//===========================================================================
+function InitTrig_GarraoshMassBloodlast takes nothing returns nothing
+    set gg_trg_GarraoshMassBloodlast=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_GarraoshMassBloodlast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_GarraoshMassBloodlast, Condition(function Trig_GarraoshMassBloodlast_Conditions))
+    call TriggerAddAction(gg_trg_GarraoshMassBloodlast, function Trig_GarraoshMassBloodlast_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: StartHorde
 //===========================================================================
 function Trig_StartHorde_Func001A takes nothing returns nothing
@@ -22764,6 +22838,7 @@ function Trig_StartHorde_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('Otch', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('Ofar', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('Obla', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('O02P', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('o029', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('o02B', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('h0CY', 0, GetEnumPlayer())
@@ -35438,7 +35513,7 @@ function Trig_ArthasNova_Func007A takes nothing returns nothing
     call TriggerExecute(gg_trg_ToKill2)
     call UnitAddAbilityBJ('A0WF', GetLastCreatedUnit())
     call SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    call SetUnitAbilityLevelSwapped('A0WF', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A08R', GetTriggerUnit()))
+    call SetUnitAbilityLevelSwapped('A0WF', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A0WF', GetTriggerUnit()))
     call IssueTargetOrderBJ(GetLastCreatedUnit(), "frostnova", GetEnumUnit())
 endfunction
 
@@ -35446,7 +35521,7 @@ function Trig_ArthasNova_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     set udg_Boolexpr=Condition(function Trig_ArthasNova_Func002002)
     set udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 175, udg_Boolexpr)
+    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 240, udg_Boolexpr)
     call RemoveLocation(udg_LocalPosition2)
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call ForGroupBJ(udg_LocalOtrad2, function Trig_ArthasNova_Func007A)
@@ -38146,7 +38221,13 @@ function Trig_SecondChance_Func003Func007001002 takes nothing returns boolean
 endfunction
 
 function Trig_SecondChance_Func003Func007A takes nothing returns nothing
-    call RemoveUnit(GetEnumUnit())
+    local unit u= GetEnumUnit()
+    local player p= GetOwningPlayer(u)
+    local integer id= GetUnitTypeId(u)
+    call RemoveUnit(u)
+    call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
+    set p=null
+    set u=null
 endfunction
 
 function Trig_SecondChance_Func003Func008C takes nothing returns boolean
@@ -38194,23 +38275,40 @@ function InitTrig_SecondChance takes nothing returns nothing
     call TriggerAddAction(gg_trg_SecondChance, function Trig_SecondChance_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: GG
 //===========================================================================
 function Trig_GG_Func004A takes nothing returns nothing
-    if IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) then
-        call SetUnitOwner(GetEnumUnit(), Player(25), true)
+    local unit u= GetEnumUnit()
+    local integer id= GetUnitTypeId(u)
+    local player p= GetOwningPlayer(u)
+    if IsUnitInGroup(u, udg_ZahvatBuildings) then
+        call SetUnitOwner(u, Player(25), true)
     else
-        call KillUnit(GetEnumUnit())
-        call RemoveUnit(GetEnumUnit())
+        call KillUnit(u)
+        call RemoveUnit(u)
+        if IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) then
+            call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
+        endif
     endif
+    set u=null
+    set p=null
 endfunction
 
 function Trig_GG_Actions takes nothing returns nothing
+    local integer pi= GetPlayerId(GetTriggerPlayer())
     call DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) + "|cffff0000 - Решил проиграть и удалил всех своих юнитов !|r" ))
     call GroupEnumUnitsOfPlayer(udg_LocalOtrad2, GetTriggerPlayer(), null)
     call ForGroupBJ(udg_LocalOtrad2, function Trig_GG_Func004A)
     call GroupClear(udg_LocalOtrad2)
+    set income[pi]=0
+    set incomeW[pi]=0
+    set disincome[pi]=0
+    set logistic[pi]=0
+    set corruption[pi]=0
+    set balance[pi]=0
+    set additional[pi]=0
 endfunction
 
 //===========================================================================
@@ -39248,9 +39346,9 @@ function InitTrig_Qogg_Die takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: Spell1
+// Trigger: Spell1 Copy 2
 //===========================================================================
-function Trig_Spell1_Func008C takes nothing returns boolean
+function Trig_Spell1_Copy_2_Func008C takes nothing returns boolean
     if ( not ( GetTriggerUnit() == gg_unit_n03A_0657 ) ) then
         return false
     endif
@@ -39260,90 +39358,96 @@ function Trig_Spell1_Func008C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_Spell1_Conditions takes nothing returns boolean
-    if ( not Trig_Spell1_Func008C() ) then
+function Trig_Spell1_Copy_2_Conditions takes nothing returns boolean
+    if ( not Trig_Spell1_Copy_2_Func008C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_Spell1_Func003C takes nothing returns boolean
+function Trig_Spell1_Copy_2_Func003C takes nothing returns boolean
     if ( not ( udg_LocalInteger == 1 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_Spell1_Func004C takes nothing returns boolean
+function Trig_Spell1_Copy_2_Func004C takes nothing returns boolean
     if ( not ( udg_LocalInteger == 2 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_Spell1_Func005C takes nothing returns boolean
+function Trig_Spell1_Copy_2_Func005C takes nothing returns boolean
     if ( not ( udg_LocalInteger == 3 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_Spell1_Func006C takes nothing returns boolean
+function Trig_Spell1_Copy_2_Func006C takes nothing returns boolean
     if ( not ( udg_LocalInteger == 4 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_Spell1_Func007C takes nothing returns boolean
+function Trig_Spell1_Copy_2_Func007C takes nothing returns boolean
     if ( not ( udg_LocalInteger == 5 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_Spell1_Actions takes nothing returns nothing
+function Trig_Spell1_Copy_2_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
     set udg_LocalPosition2=GetRandomLocInRect(gg_rct_Region_083)
     set udg_LocalInteger=GetRandomInt(1, 5)
-    if ( Trig_Spell1_Func003C() ) then
-        call CreateNUnitsAtLoc(1, 'n04C', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
+    if ( Trig_Spell1_Copy_2_Func003C() ) then
+        call CreateNUnitsAtLoc(1, 'n04C', p, udg_LocalPosition2, bj_UNIT_FACING)
         call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
         return
     else
     endif
-    if ( Trig_Spell1_Func004C() ) then
-        call CreateNUnitsAtLoc(1, 'n03C', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
+    if ( Trig_Spell1_Copy_2_Func004C() ) then
+        call CreateNUnitsAtLoc(1, 'n03C', p, udg_LocalPosition2, bj_UNIT_FACING)
         call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
         return
     else
     endif
-    if ( Trig_Spell1_Func005C() ) then
-        call CreateNUnitsAtLoc(1, 'n04K', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
+    if ( Trig_Spell1_Copy_2_Func005C() ) then
+        call CreateNUnitsAtLoc(1, 'n04K', p, udg_LocalPosition2, bj_UNIT_FACING)
         call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
         return
     else
     endif
-    if ( Trig_Spell1_Func006C() ) then
-        call CreateNUnitsAtLoc(1, 'n04L', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
+    if ( Trig_Spell1_Copy_2_Func006C() ) then
+        call CreateNUnitsAtLoc(1, 'n04L', p, udg_LocalPosition2, bj_UNIT_FACING)
         call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
         return
     else
     endif
-    if ( Trig_Spell1_Func007C() ) then
-        call CreateNUnitsAtLoc(1, 'n04J', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
+    if ( Trig_Spell1_Copy_2_Func007C() ) then
+        call CreateNUnitsAtLoc(1, 'n04J', p, udg_LocalPosition2, bj_UNIT_FACING)
         call UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
         return
     else
     endif
+    
+    set p=null
+    set u=null
 endfunction
 
 //===========================================================================
-function InitTrig_Spell1 takes nothing returns nothing
-    set gg_trg_Spell1=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Spell1, EVENT_PLAYER_UNIT_SPELL_CAST)
-    call TriggerAddCondition(gg_trg_Spell1, Condition(function Trig_Spell1_Conditions))
-    call TriggerAddAction(gg_trg_Spell1, function Trig_Spell1_Actions)
+function InitTrig_Spell1_Copy_2 takes nothing returns nothing
+    set gg_trg_Spell1_Copy_2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Spell1_Copy_2, EVENT_PLAYER_UNIT_SPELL_CAST)
+    call TriggerAddCondition(gg_trg_Spell1_Copy_2, Condition(function Trig_Spell1_Copy_2_Conditions))
+    call TriggerAddAction(gg_trg_Spell1_Copy_2, function Trig_Spell1_Copy_2_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: AncientGods add MindControl Copy
@@ -39667,40 +39771,38 @@ function InitTrig_KillSomeUnitsAndItems takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: KillTestUnits O
+// Trigger: KillTestUnits O Copy
 //===========================================================================
-function Trig_KillTestUnits_O_Func001002 takes nothing returns boolean
+function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
     return ( RectContainsUnit(gg_rct_TestRegion, GetFilterUnit()) == true )
 endfunction
 
-function Trig_KillTestUnits_O_Func003Func001C takes nothing returns boolean
-    if ( not ( IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO) == true ) ) then
-        return false
+function Trig_KillTestUnits_O_Copy_Func003A takes nothing returns nothing
+    local unit u= GetEnumUnit()
+    local player p= GetOwningPlayer(u)
+    local integer id= GetUnitTypeId(u)
+    if IsUnitType(u, UNIT_TYPE_HERO) then
+        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
     endif
-    return true
+    call RemoveUnit(u)
+    set u=null
+    set p=null
 endfunction
 
-function Trig_KillTestUnits_O_Func003A takes nothing returns nothing
-    if ( Trig_KillTestUnits_O_Func003Func001C() ) then
-        call SetPlayerTechMaxAllowedSwap(GetUnitTypeId(GetEnumUnit()), 2, GetEnumPlayer())
-    else
-    endif
-    call RemoveUnit(GetEnumUnit())
-endfunction
-
-function Trig_KillTestUnits_O_Actions takes nothing returns nothing
-    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Func001002)
+function Trig_KillTestUnits_O_Copy_Actions takes nothing returns nothing
+    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Copy_Func001002)
     call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Func003A)
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Copy_Func003A)
     call GroupClear(udg_LocalOtrad2)
 endfunction
 
 //===========================================================================
-function InitTrig_KillTestUnits_O takes nothing returns nothing
-    set gg_trg_KillTestUnits_O=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O, 0.01)
-    call TriggerAddAction(gg_trg_KillTestUnits_O, function Trig_KillTestUnits_O_Actions)
+function InitTrig_KillTestUnits_O_Copy takes nothing returns nothing
+    set gg_trg_KillTestUnits_O_Copy=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O_Copy, 0.01)
+    call TriggerAddAction(gg_trg_KillTestUnits_O_Copy, function Trig_KillTestUnits_O_Copy_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: KillTestUnits Command
@@ -39710,7 +39812,16 @@ function Trig_KillTestUnits_Command_Func001002 takes nothing returns boolean
 endfunction
 
 function Trig_KillTestUnits_Command_Func003A takes nothing returns nothing
-    call RemoveUnit(GetEnumUnit())
+    local unit u= GetEnumUnit()
+    local player p= GetOwningPlayer(u)
+    local integer id= GetUnitTypeId(u)
+    if IsUnitType(u, UNIT_TYPE_HERO) then
+        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
+    endif
+    call RemoveUnit(u)
+    set u=null
+    set p=null
+    
 endfunction
 
 function Trig_KillTestUnits_Command_Actions takes nothing returns nothing
@@ -39726,6 +39837,7 @@ function InitTrig_KillTestUnits_Command takes nothing returns nothing
     call TriggerRegisterPlayerChatEvent(gg_trg_KillTestUnits_Command, Player(0), "kill", true)
     call TriggerAddAction(gg_trg_KillTestUnits_Command, function Trig_KillTestUnits_Command_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: KillMagaz
@@ -40309,6 +40421,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_IronStar()
     call InitTrig_AutoShield_Copy()
     call InitTrig_PandaSecondAttack()
+    call InitTrig_GarraoshMassBloodlast()
     call InitTrig_StartHorde()
     call InitTrig_GnomesOn()
     call InitTrig_GnomesStart()
@@ -40786,7 +40899,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_AncienGods_Add_MassAttak()
     call InitTrig_AncientGods_add_MindControl()
     call InitTrig_Qogg_Die()
-    call InitTrig_Spell1()
+    call InitTrig_Spell1_Copy_2()
     call InitTrig_AncientGods_add_MindControl_Copy()
     call InitTrig_AncienGods_Add_MassAttak_Copy()
     call InitTrig_Qtun_17k_o()
@@ -40794,7 +40907,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
     call InitTrig_KillSomeUnitsAndItems()
-    call InitTrig_KillTestUnits_O()
+    call InitTrig_KillTestUnits_O_Copy()
     call InitTrig_KillTestUnits_Command()
     call InitTrig_KillMagaz()
     call InitTrig_Setlvl()
@@ -41180,7 +41293,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
