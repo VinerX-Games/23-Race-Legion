@@ -5106,6 +5106,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0IC', - 3589.3, - 26119.4, 255.468, 'h0IC')
     set u=BlzCreateUnitWithSkin(p, 'O02P', - 4903.2, - 30021.2, 268.060, 'O02P')
     call SetHeroLevel(u, 25, false)
+    set u=BlzCreateUnitWithSkin(p, 'Othr', - 5065.1, - 30050.9, 268.490, 'Othr')
     set u=BlzCreateUnitWithSkin(p, 'h0ID', - 3888.8, - 25837.2, 259.736, 'h0ID')
     set u=BlzCreateUnitWithSkin(p, 'o023', - 5792.7, - 29745.9, 272.250, 'o023')
     set u=BlzCreateUnitWithSkin(p, 'opeo', - 6201.1, - 28833.8, 229.973, 'opeo')
@@ -5390,7 +5391,7 @@ function CreateNeutralHostileBuildings takes nothing returns nothing
     set gg_unit_h0AK_0488=BlzCreateUnitWithSkin(p, 'h0AK', - 7296.0, - 21376.0, 270.000, 'h0AK')
     set u=BlzCreateUnitWithSkin(p, 'h09Y', - 1024.0, - 17536.0, 270.000, 'h09Y')
     set gg_unit_h09Z_0492=BlzCreateUnitWithSkin(p, 'h09Z', - 5760.0, - 22528.0, 335.327, 'h09Z')
-    set gg_unit_h0AL_0496=BlzCreateUnitWithSkin(p, 'h0AL', - 8512.0, - 21120.0, 78.157, 'h0AL')
+    set gg_unit_h0AL_0496=BlzCreateUnitWithSkin(p, 'h0AL', - 8512.0, - 21120.0, 270.000, 'h0AL')
     set u=BlzCreateUnitWithSkin(p, 'h092', - 21664.0, 13408.0, 270.000, 'h092')
     set u=BlzCreateUnitWithSkin(p, 'h095', - 29888.0, 19136.0, 270.000, 'h095')
     set u=BlzCreateUnitWithSkin(p, 'h096', - 21888.0, 11264.0, 270.000, 'h096')
@@ -5406,7 +5407,7 @@ function CreateNeutralHostileBuildings takes nothing returns nothing
     set gg_unit_h09O_0541=BlzCreateUnitWithSkin(p, 'h09O', 2144.0, 20000.0, 270.000, 'h09O')
     set u=BlzCreateUnitWithSkin(p, 'h09R', 3904.0, 18944.0, 270.000, 'h09R')
     set u=BlzCreateUnitWithSkin(p, 'h0AY', 13184.0, - 24352.0, 304.459, 'h0AY')
-    set gg_unit_h0AM_0550=BlzCreateUnitWithSkin(p, 'h0AM', - 2494.1, - 22644.7, 108.950, 'h0AM')
+    set gg_unit_h0AM_0550=BlzCreateUnitWithSkin(p, 'h0AM', - 2496.0, - 22656.0, 270.000, 'h0AM')
     set gg_unit_h0AP_0552=BlzCreateUnitWithSkin(p, 'h0AP', - 1792.0, 8192.0, 270.000, 'h0AP')
     set u=BlzCreateUnitWithSkin(p, 'h0AQ', - 448.0, 6656.0, 270.000, 'h0AQ')
     set u=BlzCreateUnitWithSkin(p, 'h0AT', - 1120.0, 5024.0, 334.915, 'h0AT')
@@ -6998,7 +6999,7 @@ function Trig_NextMenu_Actions takes nothing returns nothing
     else
         set ModeBuildingI=0
     endif
-    
+    call KillUnit(ModeBuilding)
     call RemoveUnit(ModeBuilding)
     if ModeBuildingI == 0 then
         set ModeBuilding=CreateUnitAtLoc(Player(0), 'n04G', l, 0)
