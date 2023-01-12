@@ -3637,7 +3637,7 @@ STRING 599
 }
 
 STRING 600
-// Abilities: A0LT (Рассеивание), Name (Name)
+// Abilities: A0LT (Рассеивание), Researchtip (Tooltip - Learn)
 {
 Рассеивание
 }
@@ -3649,7 +3649,7 @@ STRING 601
 }
 
 STRING 602
-// Abilities: A0LT (Рассеивание), Researchtip (Tooltip - Learn)
+// Abilities: A0LT (Рассеивание), Researchubertip (Tooltip - Learn - Extended)
 {
 Рассеивание
 }
@@ -21449,7 +21449,7 @@ STRING 3553
 }
 
 STRING 3554
-// Upgrades: Rowt (Сделать духостранников адептами,Сделать д�), Hotkey (Hotkey)
+// Abilities: A12Q (Случайная раса\фракция), Hotkey (Hotkey - Normal)
 {
 S
 }
@@ -22872,13 +22872,13 @@ S
 }
 
 STRING 3790
-// Upgrades: Rhri (Длинноствольные мушкеты), Hotkey (Hotkey)
+// Upgrades: Rowt (Сделать духостранников адептами,Сделать д�), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 3791
-// Upgrades: R003 (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+// Upgrades: Rhri (Длинноствольные мушкеты), Hotkey (Hotkey)
 {
 S
 }
@@ -25203,7 +25203,7 @@ S
 }
 
 STRING 4178
-// Upgrades: R00N (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R003 (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
 {
 S
 }
@@ -25695,7 +25695,7 @@ A
 }
 
 STRING 4260
-// Upgrades: R00T (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R00N (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -29123,7 +29123,7 @@ S
 }
 
 STRING 4824
-// Upgrades: R010 (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
+// Upgrades: R00T (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -29225,13 +29225,13 @@ S
 }
 
 STRING 4841
-// Upgrades: R01A (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
+// Upgrades: R010 (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 4842
-// Upgrades: R01B (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
+// Upgrades: R01A (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
 {
 S
 }
@@ -29453,7 +29453,7 @@ STRING 4878
 }
 
 STRING 4879
-// Upgrades: R01M (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R01B (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
 {
 S
 }
@@ -37158,7 +37158,7 @@ STRING 6156
 }
 
 STRING 6157
-// Upgrades: R01P (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
+// Upgrades: R01M (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -40295,19 +40295,19 @@ S
 }
 
 STRING 6676
-// Upgrades: R01Y (Улучшенные луки), Hotkey (Hotkey)
+// Upgrades: R01P (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 6677
-// Upgrades: R02A (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
+// Upgrades: R01Y (Улучшенные луки), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 6678
-// Upgrades: R02E (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
+// Upgrades: R02A (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
 {
 S
 }
@@ -42501,7 +42501,7 @@ Q
 }
 
 STRING 7043
-// Upgrades: R02M (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
+// Upgrades: R02E (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
 {
 S
 }
@@ -43843,7 +43843,7 @@ A
 }
 
 STRING 7266
-// Upgrades: R02N (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
+// Upgrades: R02M (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
 {
 S
 }
@@ -46851,7 +46851,7 @@ Z
 }
 
 STRING 7767
-// Upgrades: R02O (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
+// Upgrades: R02N (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
 {
 S
 }
@@ -46893,7 +46893,7 @@ A
 }
 
 STRING 7774
-// Upgrades: R02Z (Защита), Hotkey (Hotkey)
+// Upgrades: R02O (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
 {
 S
 }
@@ -48313,7 +48313,7 @@ STRING 8009
 }
 
 STRING 8010
-// Upgrades: R038 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R02Z (Защита), Hotkey (Hotkey)
 {
 S
 }
@@ -50394,7 +50394,7 @@ S
 }
 
 STRING 8355
-// Upgrades: R03A (Защита), Hotkey (Hotkey)
+// Upgrades: R038 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -53186,7 +53186,7 @@ A
 }
 
 STRING 8815
-// Upgrades: R03M (Защита), Hotkey (Hotkey)
+// Upgrades: R03A (Защита), Hotkey (Hotkey)
 {
 S
 }
@@ -53222,7 +53222,7 @@ S
 }
 
 STRING 8821
-// Upgrades: R03O (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R03M (Защита), Hotkey (Hotkey)
 {
 S
 }
@@ -53722,7 +53722,7 @@ S
 }
 
 STRING 8904
-// Upgrades: R03T (Защита), Hotkey (Hotkey)
+// Upgrades: R03O (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -53734,7 +53734,7 @@ S
 }
 
 STRING 8906
-// Upgrades: R03X (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
+// Upgrades: R03T (Защита), Hotkey (Hotkey)
 {
 S
 }
@@ -54418,7 +54418,7 @@ STRING 9019
 }
 
 STRING 9020
-// Upgrades: R041 (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
+// Upgrades: R03X (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
 {
 S
 }
@@ -55650,7 +55650,7 @@ STRING 9224
 }
 
 STRING 9225
-// Upgrades: R04B (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R041 (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
 {
 S
 }
@@ -58160,7 +58160,7 @@ W
 }
 
 STRING 9642
-// Upgrades: R04E (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R04B (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -60517,7 +60517,7 @@ S
 }
 
 STRING 10032
-// Upgrades: R04S (Опутывание), Hotkey (Hotkey)
+// Upgrades: R04E (Шрапнель), Hotkey (Hotkey)
 {
 S
 }
@@ -63882,13 +63882,13 @@ Z
 }
 
 STRING 10590
-// Upgrades: R04X (Опутывание), Hotkey (Hotkey)
+// Upgrades: R04S (Опутывание), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 10591
-// Upgrades: R050 (Опутывание), Hotkey (Hotkey)
+// Upgrades: R04X (Опутывание), Hotkey (Hotkey)
 {
 S
 }
@@ -63900,7 +63900,7 @@ S
 }
 
 STRING 10593
-// Upgrades: R054 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R050 (Опутывание), Hotkey (Hotkey)
 {
 S
 }
@@ -65990,7 +65990,7 @@ STRING 10936
 }
 
 STRING 10937
-// Abilities: A0LT (Рассеивание), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A0LT (Рассеивание), Ubertip (Tooltip - Normal - Extended)
 {
 Рассеивание
 }
@@ -68278,7 +68278,7 @@ Q
 }
 
 STRING 11321
-// Upgrades: R05V (Стальная броня,Ториевая броня,Арканитовая ), Hotkey (Hotkey)
+// Upgrades: R054 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -68700,7 +68700,7 @@ A
 }
 
 STRING 11391
-// Upgrades: R060 (Каннибализм), Hotkey (Hotkey)
+// Upgrades: R05V (Стальная броня,Ториевая броня,Арканитовая ), Hotkey (Hotkey)
 {
 S
 }
@@ -68867,7 +68867,7 @@ Q
 }
 
 STRING 11417
-// Upgrades: R062 (Каннибализм), Hotkey (Hotkey)
+// Upgrades: R060 (Каннибализм), Hotkey (Hotkey)
 {
 S
 }
@@ -69128,7 +69128,7 @@ Q
 }
 
 STRING 11460
-// Upgrades: R068 (Каннибализм), Hotkey (Hotkey)
+// Upgrades: R062 (Каннибализм), Hotkey (Hotkey)
 {
 S
 }
@@ -69302,7 +69302,7 @@ A
 }
 
 STRING 11489
-// Upgrades: R06C (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R068 (Каннибализм), Hotkey (Hotkey)
 {
 S
 }
@@ -69833,7 +69833,7 @@ Q
 }
 
 STRING 11577
-// Abilities: A0LT (Рассеивание), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0LT (Рассеивание), Name (Name)
 {
 Рассеивание
 }
@@ -71851,7 +71851,7 @@ STRING 11906
 }
 
 STRING 11907
-// Upgrades: R06I (Защита), Hotkey (Hotkey)
+// Upgrades: R06C (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -72870,7 +72870,7 @@ STRING 12075
 }
 
 STRING 12076
-// Upgrades: R06M (Защита), Hotkey (Hotkey)
+// Upgrades: R06I (Защита), Hotkey (Hotkey)
 {
 S
 }
@@ -73129,13 +73129,13 @@ STRING 12118
 }
 
 STRING 12119
-// Upgrades: R06P (Защита), Hotkey (Hotkey)
+// Upgrades: R06M (Защита), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 12120
-// Upgrades: R06T (Защита), Hotkey (Hotkey)
+// Upgrades: R06P (Защита), Hotkey (Hotkey)
 {
 S
 }
@@ -73147,7 +73147,7 @@ S
 }
 
 STRING 12122
-// Upgrades: R06W (Прочные шкуры,Усиленные шкуры,Непробиваем�), Hotkey (Hotkey)
+// Upgrades: R06T (Защита), Hotkey (Hotkey)
 {
 S
 }
@@ -76724,7 +76724,7 @@ STRING 12707
 }
 
 STRING 12708
-// Upgrades: R076 (Броня чудовищ,Улучшенная броня чудовищ,Уси), Hotkey (Hotkey)
+// Upgrades: R06W (Прочные шкуры,Усиленные шкуры,Непробиваем�), Hotkey (Hotkey)
 {
 S
 }
@@ -78052,7 +78052,7 @@ S
 }
 
 STRING 12928
-// Upgrades: R078 (Каннибализм), Hotkey (Hotkey)
+// Upgrades: R076 (Броня чудовищ,Улучшенная броня чудовищ,Уси), Hotkey (Hotkey)
 {
 S
 }
@@ -78713,13 +78713,13 @@ D
 }
 
 STRING 13037
-// Upgrades: R07P (Каннибализм), Hotkey (Hotkey)
+// Upgrades: R078 (Каннибализм), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 13038
-// Upgrades: R07Z (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+// Upgrades: R07P (Каннибализм), Hotkey (Hotkey)
 {
 S
 }
@@ -79571,7 +79571,7 @@ S
 }
 
 STRING 13171
-// Upgrades: R082 (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+// Upgrades: R07Z (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
 {
 S
 }
@@ -83803,7 +83803,7 @@ STRING 13870
 }
 
 STRING 13871
-// Upgrades: R004 (Улучшение до берсерка), Hotkey (Hotkey)
+// Upgrades: R082 (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
 {
 S
 }
@@ -84860,7 +84860,7 @@ STRING 14037
 }
 
 STRING 14038
-// Upgrades: R08M (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R004 (Улучшение до берсерка), Hotkey (Hotkey)
 {
 S
 }
@@ -87516,7 +87516,7 @@ S
 }
 
 STRING 14477
-// Upgrades: R08V (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R08M (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -88431,7 +88431,7 @@ S
 }
 
 STRING 14627
-// Upgrades: R090 (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
+// Upgrades: R08V (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -88701,7 +88701,7 @@ S
 }
 
 STRING 14672
-// Upgrades: R091 (Грубая сила), Hotkey (Hotkey)
+// Upgrades: R090 (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
 {
 S
 }
@@ -91125,7 +91125,7 @@ STRING 15065
 }
 
 STRING 15066
-// Upgrades: R092 (Защита), Hotkey (Hotkey)
+// Upgrades: R091 (Грубая сила), Hotkey (Hotkey)
 {
 S
 }
@@ -93477,7 +93477,7 @@ R
 }
 
 STRING 15436
-// Upgrades: R098 (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
+// Upgrades: R092 (Защита), Hotkey (Hotkey)
 {
 S
 }
@@ -96059,7 +96059,7 @@ S
 }
 
 STRING 15862
-// Upgrades: R09H (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+// Upgrades: R098 (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
 {
 S
 }
@@ -96077,7 +96077,7 @@ S
 }
 
 STRING 15865
-// Upgrades: R09R (Защита), Hotkey (Hotkey)
+// Upgrades: R09H (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
 {
 S
 }
@@ -99004,7 +99004,7 @@ S
 }
 
 STRING 16329
-// Upgrades: R09U (Защита), Hotkey (Hotkey)
+// Upgrades: R09R (Защита), Hotkey (Hotkey)
 {
 S
 }
@@ -99022,7 +99022,7 @@ S
 }
 
 STRING 16332
-// Upgrades: R09X (Защита), Hotkey (Hotkey)
+// Upgrades: R09U (Защита), Hotkey (Hotkey)
 {
 S
 }
@@ -99052,7 +99052,7 @@ S
 }
 
 STRING 16337
-// Upgrades: R0A0 (Защита), Hotkey (Hotkey)
+// Upgrades: R09X (Защита), Hotkey (Hotkey)
 {
 S
 }
@@ -102888,7 +102888,7 @@ D
 }
 
 STRING 16963
-// Upgrades: R0AI (Улучшенные луки), Hotkey (Hotkey)
+// Upgrades: R0A0 (Защита), Hotkey (Hotkey)
 {
 S
 }
@@ -103366,7 +103366,7 @@ STRING 17041
 }
 
 STRING 17042
-// Abilities: A12O (|cffff370bПризвать Кор'Крон), Researchhotkey (Hotkey - Learn)
+// Abilities: A12O (|cffff370bПризвать Охрану), Researchhotkey (Hotkey - Learn)
 {
 Q
 }
@@ -103762,7 +103762,7 @@ STRING 17107
 }
 
 STRING 17108
-// Abilities: A12O (|cffff370bПризвать Кор'Крон), Hotkey (Hotkey - Normal)
+// Abilities: A12O (|cffff370bПризвать Охрану), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -105960,7 +105960,7 @@ STRING 17472
 }
 
 STRING 17473
-// Upgrades: R0AM (Рассеяние чар), Hotkey (Hotkey)
+// Upgrades: R0AI (Улучшенные луки), Hotkey (Hotkey)
 {
 S
 }
@@ -106002,7 +106002,7 @@ STRING 17479
 }
 
 STRING 17480
-// Upgrades: R0AN (Рассеяние чар), Hotkey (Hotkey)
+// Upgrades: R0AM (Рассеяние чар), Hotkey (Hotkey)
 {
 S
 }
@@ -106044,7 +106044,7 @@ STRING 17486
 }
 
 STRING 17487
-// Upgrades: R0AR (Улучшение до берсерка), Hotkey (Hotkey)
+// Upgrades: R0AN (Рассеяние чар), Hotkey (Hotkey)
 {
 S
 }
@@ -106548,19 +106548,19 @@ STRING 17570
 }
 
 STRING 17571
-// Upgrades: R0AU (Улучшение до берсерка), Hotkey (Hotkey)
+// Upgrades: R0AR (Улучшение до берсерка), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 17572
-// Upgrades: R0B1 (Улучшение до берсерка), Hotkey (Hotkey)
+// Upgrades: R0AU (Улучшение до берсерка), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 17573
-// Upgrades: R0B3 (Улучшение до берсерка), Hotkey (Hotkey)
+// Upgrades: R0B1 (Улучшение до берсерка), Hotkey (Hotkey)
 {
 S
 }
@@ -106656,7 +106656,7 @@ STRING 17588
 }
 
 STRING 17589
-// Upgrades: R0B8 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0B3 (Улучшение до берсерка), Hotkey (Hotkey)
 {
 S
 }
@@ -108346,19 +108346,19 @@ S
 }
 
 STRING 17870
-// Upgrades: R0B5 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0B8 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 17871
-// Upgrades: R0BE (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0B5 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
 
 STRING 17872
-// Upgrades: R0BJ (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BE (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -108604,7 +108604,7 @@ S
 }
 
 STRING 17913
-// Upgrades: R0BK (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BJ (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -108850,7 +108850,7 @@ S
 }
 
 STRING 17954
-// Upgrades: R0BL (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BK (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -109102,7 +109102,7 @@ S
 }
 
 STRING 17996
-// Upgrades: R0BM (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BL (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -109348,7 +109348,7 @@ S
 }
 
 STRING 18037
-// Upgrades: R0BN (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BM (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -109594,7 +109594,7 @@ S
 }
 
 STRING 18078
-// Upgrades: R0BO (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BN (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -109840,7 +109840,7 @@ S
 }
 
 STRING 18119
-// Upgrades: R0BP (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BO (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -110184,7 +110184,7 @@ S
 }
 
 STRING 18176
-// Upgrades: R0BQ (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BP (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -110430,7 +110430,7 @@ S
 }
 
 STRING 18217
-// Upgrades: R0BR (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BQ (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -135023,7 +135023,7 @@ S
 }
 
 STRING 22235
-// Upgrades: R0DE (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BR (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -136725,7 +136725,7 @@ STRING 22508
 }
 
 STRING 22509
-// Upgrades: R0DO (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+// Upgrades: R0DE (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -141785,7 +141785,7 @@ STRING 23332
 }
 
 STRING 23333
-// Upgrades: R0EB (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
+// Upgrades: R0DO (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
 {
 S
 }
@@ -143523,7 +143523,7 @@ Q
 }
 
 STRING 23615
-// Upgrades: R0EK (Длинноствольные мушкеты), Hotkey (Hotkey)
+// Upgrades: R0EB (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
 {
 S
 }
@@ -148263,16 +148263,40 @@ STRING 24400
 |cff483d8bСотресение Бездны|r [|cffffcc004-й уровень|r]
 }
 
+STRING 24401
+// Abilities: A12O (|cffff370bПризвать Охрану), Name (Name)
+{
+|cffff370bПризвать Охрану
+}
+
 STRING 24402
 // Abilities: A10Z (|cff9370dbСила Бездны|r), EditorSuffix (Editor Suffix)
 {
 (Безликие)
 }
 
+STRING 24403
+// Abilities: A12O (|cffff370bПризвать Охрану), Ubertip (Tooltip - Normal - Extended)
+{
+Призывает воинов ближнего боя.
+}
+
 STRING 24404
 // Abilities: A12H (|cff9370dbАнтимагическая аура|r), Name (Name)
 {
 |cff9370dbАнтимагическая аура|r
+}
+
+STRING 24405
+// Abilities: A12O (|cffff370bПризвать Охрану), Ubertip (Tooltip - Normal - Extended)
+{
+Призывает воинов ближнего боя.
+}
+
+STRING 24406
+// Abilities: A12O (|cffff370bПризвать Охрану), Ubertip (Tooltip - Normal - Extended)
+{
+Призывает воинов ближнего боя.
 }
 
 STRING 24407
@@ -148330,7 +148354,7 @@ Q
 }
 
 STRING 24416
-// Upgrades: R0EL (Длинноствольные мушкеты), Hotkey (Hotkey)
+// Upgrades: R0EK (Длинноствольные мушкеты), Hotkey (Hotkey)
 {
 S
 }
@@ -148929,7 +148953,7 @@ STRING 24514
 }
 
 STRING 24515
-// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0EL (Длинноствольные мушкеты), Hotkey (Hotkey)
 {
 S
 }
@@ -149715,7 +149739,7 @@ STRING 24635
 }
 
 STRING 24636
-// Upgrades: R0ES (Нечестивая броня,Улучшенная нечестивая бр�), Hotkey (Hotkey)
+// Upgrades: R0EP (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 S
 }
@@ -150216,6 +150240,24 @@ STRING 24716
 Увеличивает урон от атак всех Сущностей
 }
 
+STRING 24717
+// Abilities: A12O (|cffff370bПризвать Охрану), Ubertip (Tooltip - Normal - Extended)
+{
+Призывает воинов ближнего боя.
+}
+
+STRING 24718
+// Units: h0JF (|cffd45e19Марадон), Name (Name)
+{
+|cffd45e19Марадон
+}
+
+STRING 24719
+// Units: h0JG (|cffd45e19Крепость Оперенной Луны|r), Name (Name)
+{
+|cffd45e19Крепость Оперенной Луны|r
+}
+
 STRING 24720
 // Upgrades: R0ES (Нечестивая броня,Улучшенная нечестивая бр�), EditorSuffix (Editor Suffix)
 {
@@ -150264,76 +150306,58 @@ STRING 24727
 A
 }
 
+STRING 24728
+// Abilities: A12Q (Случайная раса\фракция), Name (Name)
+{
+Случайная раса\фракция
+}
+
+STRING 24729
+// Abilities: A12Q (Случайная раса\фракция), Tip (Tooltip - Normal)
+{
+|cffff00ffС|r|cffff00ecл|r|cffff00d8у|r|cffff00c5ч|r|cffff00b1а|r|cffff009dй|r|cffff008aн|r|cffff0076а|r|cffff0063я|r|cffff004f |r|cffff003bр|r|cffff0028а|r|cffff0014с|r|cffff0000а|r
+}
+
 STRING 24730
-// Abilities: A12O (|cffff370bПризвать Кор'Крон), Name (Name)
+// Abilities: A12O (|cffff370bПризвать Охрану), Researchubertip (Tooltip - Learn - Extended)
 {
 |cffff370bПризвать Кор'Крон
 }
 
 STRING 24731
-// Abilities: A12O (|cffff370bПризвать Кор'Крон), Researchtip (Tooltip - Learn)
+// Abilities: A12O (|cffff370bПризвать Охрану), Researchtip (Tooltip - Learn)
 {
 Изучить «|cffff370bПризвать Кор'Крон|r»
 }
 
-STRING 24732
-// Abilities: A12O (|cffff370bПризвать Кор'Крон), Researchubertip (Tooltip - Learn - Extended)
-{
-|cffff370bПризвать Кор'Крон
-}
-
 STRING 24733
-// Abilities: A12O (|cffff370bПризвать Кор'Крон), EditorSuffix (Editor Suffix)
+// Abilities: A12O (|cffff370bПризвать Охрану), EditorSuffix (Editor Suffix)
 {
 (Орда Гаррош)
 }
 
 STRING 24734
-// Abilities: A12O (|cffff370bПризвать Кор'Крон), Tip (Tooltip - Normal)
+// Abilities: A12O (|cffff370bПризвать Охрану), Tip (Tooltip - Normal)
 {
 Призвать Кор'Крон
 }
 
-STRING 24735
-// Abilities: A12O (|cffff370bПризвать Кор'Крон), Ubertip (Tooltip - Normal - Extended)
-{
-Призывает 4 мощных боевых единиц - Кор'Кронцев.
-}
-
-STRING 24736
-// Abilities: A12O (|cffff370bПризвать Кор'Крон), Ubertip (Tooltip - Normal - Extended)
-{
-Призывает 4 мощных боевых единиц - Кор'Кронцев.
-}
-
 STRING 24737
-// Abilities: A12O (|cffff370bПризвать Кор'Крон), Tip (Tooltip - Normal)
+// Abilities: A12O (|cffff370bПризвать Охрану), Tip (Tooltip - Normal)
 {
 Призвать Кор'Крон
 }
 
 STRING 24738
-// Abilities: A12O (|cffff370bПризвать Кор'Крон), Tip (Tooltip - Normal)
+// Abilities: A12O (|cffff370bПризвать Охрану), Tip (Tooltip - Normal)
 {
 Призвать Кор'Крон
 }
 
 STRING 24739
-// Abilities: A12O (|cffff370bПризвать Кор'Крон), Tip (Tooltip - Normal)
+// Abilities: A12O (|cffff370bПризвать Охрану), Tip (Tooltip - Normal)
 {
 Призвать Кор'Крон
-}
-
-STRING 24740
-// Abilities: A12O (|cffff370bПризвать Кор'Крон), Ubertip (Tooltip - Normal - Extended)
-{
-Призывает 4 мощных боевых единиц - Кор'Кронцев.
-}
-
-STRING 24741
-// Abilities: A12O (|cffff370bПризвать Кор'Крон), Ubertip (Tooltip - Normal - Extended)
-{
-Призывает 4 мощных боевых единиц - Кор'Кронцев.
 }
 
 STRING 24742
@@ -150898,7 +150922,7 @@ W
 }
 
 STRING 24835
-// Upgrades: R0EX (Нечестивая сила,Нечестивая мощь,Нечестивы�), Hotkey (Hotkey)
+// Upgrades: R0ES (Нечестивая броня,Улучшенная нечестивая бр�), Hotkey (Hotkey)
 {
 S
 }
@@ -153151,6 +153175,24 @@ STRING 25196
 |cffff0000ИСКЛЮЧАЕТ ВОЗМОЖНСТЬ СДЕЛАТЬ АЛЬТЕРНАТИВЫНЙ ГРЕЙД|r
 }
 
+STRING 25197
+// Abilities: A12Q (Случайная раса\фракция), Ubertip (Tooltip - Normal - Extended)
+{
+Выбирает случайную расу из имеющихся. 
+}
+
+STRING 25198
+// Abilities: A12Q (Случайная раса\фракция), EditorSuffix (Editor Suffix)
+{
+{Выбор Расы
+}
+
+STRING 25199
+// Upgrades: R0F1 (Длинноствольные мушкеты), Hotkey (Hotkey)
+{
+S
+}
+
 STRING 25218
 // Upgrades: R0EJ (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
 {
@@ -154864,7 +154906,7 @@ STRING 25532
 }
 
 STRING 25533
-// Upgrades: R0F1 (Длинноствольные мушкеты), Hotkey (Hotkey)
+// Upgrades: R0EX (Нечестивая сила,Нечестивая мощь,Нечестивы�), Hotkey (Hotkey)
 {
 S
 }
