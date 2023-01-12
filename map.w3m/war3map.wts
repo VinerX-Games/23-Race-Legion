@@ -153158,7 +153158,7 @@ STRING 25198
 }
 
 STRING 25199
-// Upgrades: R0F1 (Длинноствольные мушкеты), Hotkey (Hotkey)
+// Upgrades: R0EX (Нечестивая сила,Нечестивая мощь,Нечестивы�), Hotkey (Hotkey)
 {
 S
 }
@@ -153322,7 +153322,7 @@ C
 }
 
 STRING 25226
-// Upgrades: R0F8 (Авиабомбы), Hotkey (Hotkey)
+// Upgrades: R0DP (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
 {
 R
 }
@@ -155208,7 +155208,7 @@ STRING 25532
 }
 
 STRING 25533
-// Upgrades: R0EX (Нечестивая сила,Нечестивая мощь,Нечестивы�), Hotkey (Hotkey)
+// Upgrades: R0F1 (Длинноствольные мушкеты), Hotkey (Hotkey)
 {
 S
 }
@@ -155418,13 +155418,13 @@ STRING 25561
 }
 
 STRING 25562
-// Upgrades: R0DP (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+// Upgrades: R0DW (Грабеж), Hotkey (Hotkey)
 {
 R
 }
 
 STRING 25563
-// Upgrades: R0DW (Грабеж), Hotkey (Hotkey)
+// Upgrades: R0F8 (Авиабомбы), Hotkey (Hotkey)
 {
 R
 }
