@@ -20,12 +20,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE___SpellHero='A06P'
-constant integer SpellSleepAOE___SpellCast='A06O'
-constant string SpellSleepAOE___SpellOrder="sleep"
-constant integer SpellSleepAOE___DummyID='u000'
-constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE___DummyUnit
+constant integer SpellSleepAOE__SpellHero='A06P'
+constant integer SpellSleepAOE__SpellCast='A06O'
+constant string SpellSleepAOE__SpellOrder="sleep"
+constant integer SpellSleepAOE__DummyID='u000'
+constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE__DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -1409,8 +1409,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_Spell_Copy= null
-trigger gg_trg_Untitled_Trigger_005= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1667,7 +1665,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE___getRange takes integer level returns integer
+    function SpellSleepAOE__getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1675,33 +1673,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
-            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
+            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
+            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE___anon__0 takes nothing returns boolean
-            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE__anon__0 takes nothing returns boolean
+            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE___anon__2 takes nothing returns boolean
+            function SpellSleepAOE__anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE___anon__1 takes nothing returns nothing
+        function SpellSleepAOE__anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1709,19 +1707,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE___onInit takes nothing returns nothing
+    function SpellSleepAOE__onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
+        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
         set t=null
     endfunction
 
@@ -5003,7 +5001,7 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0HH', - 576.0, - 27520.0, 270.000, 'h0HH')
     set u=BlzCreateUnitWithSkin(p, 'h0IR', - 6528.0, - 26688.0, 270.000, 'h0IR')
     set u=BlzCreateUnitWithSkin(p, 'h0IS', - 6080.0, - 26752.0, 270.000, 'h0IS')
-    set u=BlzCreateUnitWithSkin(p, 'h0JD', - 3584.0, - 29440.0, 270.000, 'h0JD')
+    set u=BlzCreateUnitWithSkin(p, 'h0JD', - 3584.0, - 29312.0, 270.000, 'h0JD')
     set u=BlzCreateUnitWithSkin(p, 'h0HZ', - 4768.0, - 25184.0, 270.000, 'h0HZ')
     set u=BlzCreateUnitWithSkin(p, 'h0HY', - 3712.0, - 25280.0, 270.000, 'h0HY')
     set u=BlzCreateUnitWithSkin(p, 'u02E', - 4160.0, - 25536.0, 270.000, 'u02E')
@@ -5028,15 +5026,15 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'owtw', - 6656.0, - 29632.0, 270.000, 'owtw')
     set u=BlzCreateUnitWithSkin(p, 'ovln', - 4640.0, - 29600.0, 270.000, 'ovln')
     set u=BlzCreateUnitWithSkin(p, 'osld', - 6784.0, - 29312.0, 270.000, 'osld')
-    set u=BlzCreateUnitWithSkin(p, 'h0JI', - 3104.0, - 29088.0, 270.000, 'h0JI')
-    set u=BlzCreateUnitWithSkin(p, 'h0JJ', - 3840.0, - 29312.0, 270.000, 'h0JJ')
-    set u=BlzCreateUnitWithSkin(p, 'h0JK', - 3712.0, - 29056.0, 270.000, 'h0JK')
+    set u=BlzCreateUnitWithSkin(p, 'h0JI', - 3232.0, - 30368.0, 270.000, 'h0JI')
+    set u=BlzCreateUnitWithSkin(p, 'h0JJ', - 3200.0, - 29760.0, 270.000, 'h0JJ')
+    set u=BlzCreateUnitWithSkin(p, 'h0JK', - 3200.0, - 30016.0, 270.000, 'h0JK')
     set u=BlzCreateUnitWithSkin(p, 'h0JL', - 4128.0, - 29088.0, 270.000, 'h0JL')
     set u=BlzCreateUnitWithSkin(p, 'h0JM', - 4096.0, - 29824.0, 270.000, 'h0JM')
     set u=BlzCreateUnitWithSkin(p, 'h0JO', - 3520.0, - 28928.0, 270.000, 'h0JO')
-    set u=BlzCreateUnitWithSkin(p, 'h0JP', - 3040.0, - 29472.0, 270.000, 'h0JP')
+    set u=BlzCreateUnitWithSkin(p, 'h0JP', - 2976.0, - 29280.0, 270.000, 'h0JP')
     set u=BlzCreateUnitWithSkin(p, 'h01Z', - 5920.0, - 28064.0, 270.000, 'h01Z')
-    set u=BlzCreateUnitWithSkin(p, 'h0JQ', - 2976.0, - 29792.0, 270.000, 'h0JQ')
+    set u=BlzCreateUnitWithSkin(p, 'h0JQ', - 2592.0, - 30304.0, 270.000, 'h0JQ')
     set u=BlzCreateUnitWithSkin(p, 'h0I8', - 4128.0, - 25184.0, 270.000, 'h0I8')
     set u=BlzCreateUnitWithSkin(p, 'h0I7', - 4448.0, - 25184.0, 270.000, 'h0I7')
     set u=BlzCreateUnitWithSkin(p, 'h0IJ', - 6432.0, - 25760.0, 270.000, 'h0IJ')
@@ -5122,22 +5120,21 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o02T', - 6723.3, - 27002.8, 277.132, 'o02T')
     set u=BlzCreateUnitWithSkin(p, 'h0IY', - 6267.3, - 26881.2, 269.940, 'h0IY')
     set u=BlzCreateUnitWithSkin(p, 'h0IZ', - 6489.2, - 26877.8, 227.710, 'h0IZ')
-    set u=BlzCreateUnitWithSkin(p, 'n04V', - 3870.5, - 29667.8, 293.810, 'n04V')
-    set u=BlzCreateUnitWithSkin(p, 'h0JC', - 3746.9, - 29968.3, 284.928, 'h0JC')
+    set u=BlzCreateUnitWithSkin(p, 'n04V', - 3614.0, - 30049.5, 293.810, 'n04V')
+    set u=BlzCreateUnitWithSkin(p, 'h0JC', - 3670.2, - 29838.6, 284.928, 'h0JC')
     set u=BlzCreateUnitWithSkin(p, 'o02W', - 5106.8, - 29351.5, 241.790, 'o02W')
     set u=BlzCreateUnitWithSkin(p, 'h0J0', - 6825.3, - 26983.3, 273.609, 'h0J0')
     set u=BlzCreateUnitWithSkin(p, 'h0J1', - 6946.1, - 26998.4, 325.897, 'h0J1')
     set u=BlzCreateUnitWithSkin(p, 'h0J4', - 5103.1, - 27607.1, 303.790, 'h0J4')
     set u=BlzCreateUnitWithSkin(p, 'u02D', - 4005.9, - 26178.3, 350.101, 'u02D')
     set u=BlzCreateUnitWithSkin(p, 'h0I9', - 4398.5, - 26268.8, 109.657, 'h0I9')
-    set u=BlzCreateUnitWithSkin(p, 'u02C', - 3629.8, - 29811.5, - 68.611, 'u02C')
+    set u=BlzCreateUnitWithSkin(p, 'u02C', - 3611.5, - 30395.4, 291.389, 'u02C')
     set u=BlzCreateUnitWithSkin(p, 'n04T', - 3772.0, - 29829.8, 284.520, 'n04T')
-    set u=BlzCreateUnitWithSkin(p, 'n04U', - 3455.5, - 29812.9, 285.033, 'n04U')
+    set u=BlzCreateUnitWithSkin(p, 'n04U', - 3572.6, - 29824.6, 285.033, 'n04U')
     set u=BlzCreateUnitWithSkin(p, 'o02S', - 5834.2, - 29266.4, 273.600, 'o02S')
     set u=BlzCreateUnitWithSkin(p, 'o02J', - 5686.3, - 29549.0, 279.110, 'o02J')
-    set u=BlzCreateUnitWithSkin(p, 'h0JA', - 3744.0, - 29570.2, 279.522, 'h0JA')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
-    set u=BlzCreateUnitWithSkin(p, 'o02X', - 3257.7, - 29551.8, 285.910, 'o02X')
+    set u=BlzCreateUnitWithSkin(p, 'h0JA', - 3481.4, - 30068.1, 279.522, 'h0JA')
+    set u=BlzCreateUnitWithSkin(p, 'o02X', - 3745.9, - 30367.6, 261.904, 'o02X')
     set u=BlzCreateUnitWithSkin(p, 'n04S', - 5501.3, - 29397.9, 250.750, 'n04S')
     set u=BlzCreateUnitWithSkin(p, 'h0I9', - 4409.9, - 25840.7, 265.828, 'h0I9')
     set u=BlzCreateUnitWithSkin(p, 'h0IA', - 4288.3, - 25815.5, 262.925, 'h0IA')
@@ -5186,7 +5183,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n03S', 511.5, - 25485.8, 20.710, 'n03S')
     set u=BlzCreateUnitWithSkin(p, 'n03P', - 440.2, - 25539.6, 124.039, 'n03P')
     set u=BlzCreateUnitWithSkin(p, 'n03M', - 741.2, - 25582.0, 48.715, 'n03M')
-    set u=BlzCreateUnitWithSkin(p, 'h0JN', - 3643.4, - 29978.1, 266.210, 'h0JN')
+    set u=BlzCreateUnitWithSkin(p, 'h0JN', - 3468.2, - 29833.9, 266.210, 'h0JN')
     set u=BlzCreateUnitWithSkin(p, 'h06Z', - 7261.5, - 28380.7, 280.083, 'h06Z')
     set u=BlzCreateUnitWithSkin(p, 'o02E', - 5359.4, - 29059.4, 272.233, 'o02E')
     set u=BlzCreateUnitWithSkin(p, 'o02F', - 5800.0, - 29454.3, 260.574, 'o02F')
@@ -5199,6 +5196,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o02L', - 5285.7, - 29759.6, 268.750, 'o02L')
     set u=BlzCreateUnitWithSkin(p, 'h0F4', - 1927.9, - 26891.7, 256.564, 'h0F4')
     set u=BlzCreateUnitWithSkin(p, 'h0IB', - 4502.5, - 25851.0, 259.966, 'h0IB')
+    set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, - 69.765, 'n04X')
     set u=BlzCreateUnitWithSkin(p, 'h0IH', - 5443.4, - 29877.1, 272.940, 'h0IH')
 endfunction
 
@@ -5212,6 +5210,17 @@ function CreateUnitsForPlayer1 takes nothing returns nothing
 
     set u=BlzCreateUnitWithSkin(p, 'o00W', - 7066.4, - 28566.2, 262.367, 'o00W')
     set u=BlzCreateUnitWithSkin(p, 'o02O', - 4979.6, - 29590.9, 264.097, 'o02O')
+endfunction
+
+//===========================================================================
+function CreateUnitsForPlayer2 takes nothing returns nothing
+    local player p= Player(2)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u=BlzCreateUnitWithSkin(p, 'n04Y', - 3839.2, - 30069.7, - 63.320, 'n04Y')
 endfunction
 
 //===========================================================================
@@ -5867,6 +5876,7 @@ endfunction
 function CreatePlayerUnits takes nothing returns nothing
     call CreateUnitsForPlayer0()
     call CreateUnitsForPlayer1()
+    call CreateUnitsForPlayer2()
     call CreateUnitsForPlayer3()
     call CreateUnitsForPlayer21()
 endfunction
@@ -11932,9 +11942,8 @@ function Trig_Race_Illidari_O_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call CreateNUnitsAtLoc(5, 'h0EI', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     call SetPlayerTechResearchedSwap('R07H', 1, GetOwningPlayer(GetTriggerUnit()))
-    call RemoveUnit(GetSpellAbilityUnit())
-    call SetPlayerTechResearchedSwap('R001', 1, GetOwningPlayer(GetTriggerUnit()))
     call ConditionalTriggerExecute(gg_trg_IllidaryOn)
+    call RemoveUnit(GetSpellAbilityUnit())
     call RemoveLocation(udg_LocalPosition2)
 endfunction
 
@@ -11960,8 +11969,8 @@ function Trig_Race_Bandits_O_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call CreateNUnitsAtLoc(5, 'h002', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     call SetPlayerTechResearchedSwap('R00G', 1, GetOwningPlayer(GetTriggerUnit()))
-    call RemoveUnit(GetSpellAbilityUnit())
     call TriggerExecute(gg_trg_BanditsOn)
+    call RemoveUnit(GetSpellAbilityUnit())
     call RemoveLocation(udg_LocalPosition2)
 endfunction
 
@@ -12040,8 +12049,8 @@ function Trig_Race_Blood_Elves_O_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call CreateNUnitsAtLoc(5, 'h04K', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     call SetPlayerTechResearchedSwap('R07C', 1, GetOwningPlayer(GetTriggerUnit()))
-    call RemoveUnit(GetSpellAbilityUnit())
     call ConditionalTriggerExecute(gg_trg_BloodElvesOn)
+    call RemoveUnit(GetSpellAbilityUnit())
     call RemoveLocation(udg_LocalPosition2)
 endfunction
 
@@ -12067,8 +12076,8 @@ function Trig_Race_Horde_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call CreateNUnitsAtLoc(5, 'opeo', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     call SetPlayerTechResearchedSwap('R0DV', 1, GetOwningPlayer(GetTriggerUnit()))
-    call RemoveUnit(GetSpellAbilityUnit())
     call ConditionalTriggerExecute(gg_trg_HordeOn)
+    call RemoveUnit(GetSpellAbilityUnit())
     call RemoveLocation(udg_LocalPosition2)
 endfunction
 
@@ -12093,9 +12102,9 @@ endfunction
 function Trig_Race_Dalaran_O_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call CreateNUnitsAtLoc(3, 'u001', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    call SetPlayerTechResearchedSwap('R0BW', 1, GetOwningPlayer(GetTriggerUnit()))
     call RemoveUnit(GetSpellAbilityUnit())
     call RemoveLocation(udg_LocalPosition2)
-    call SetPlayerTechResearchedSwap('R0BW', 1, GetOwningPlayer(GetTriggerUnit()))
 endfunction
 
 //===========================================================================
@@ -12330,7 +12339,6 @@ endfunction
 function Trig_Race_Gilneas_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call CreateNUnitsAtLoc(5, 'h0IT', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    call SetPlayerTechResearchedSwap('R0BX', 1, GetOwningPlayer(GetTriggerUnit()))
     call RemoveUnit(GetSpellAbilityUnit())
     call RemoveLocation(udg_LocalPosition2)
 endfunction
@@ -12375,24 +12383,149 @@ function Trig_Race_Random_Func006C takes nothing returns boolean
 endfunction
 
 function Trig_Race_Random_Func007C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 4 ) ) then
+        return false
+    endif
     return true
 endfunction
 
 function Trig_Race_Random_Func008C takes nothing returns boolean
-    if ( not ( CountUnitsInGroup(GetUnitsInRectAll(GetPlayableMapRect())) == 1 ) ) then
+    if ( not ( udg_LocalInteger == 5 ) ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_Race_Random_Func009C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 6 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func010C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 7 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func011C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 8 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func012C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 9 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func013C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 10 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func014C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 11 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func015C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 12 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func016C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 13 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func017C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 14 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func018C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 15 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func019C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 16 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func020C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 17 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func021C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 18 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func022C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 19 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func023C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 20 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func024C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 21 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func025C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 22 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func026C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 23 ) ) then
+        return false
+    endif
     return true
 endfunction
 
 function Trig_Race_Random_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call RemoveUnit(GetSpellAbilityUnit())
-    set udg_LocalInteger=GetRandomInt(1, 20)
+    set udg_LocalInteger=GetRandomInt(1, 23)
     if ( Trig_Race_Random_Func004C() ) then
         call CreateNUnitsAtLoc(5, 'h0G9', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
         call SetPlayerTechResearchedSwap('R001', 1, GetOwningPlayer(GetTriggerUnit()))
@@ -12405,15 +12538,119 @@ function Trig_Race_Random_Actions takes nothing returns nothing
     else
     endif
     if ( Trig_Race_Random_Func006C() ) then
+        call CreateNUnitsAtLoc(5, 'n030', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R0A2', 1, GetOwningPlayer(GetTriggerUnit()))
+        call RemoveLocation(udg_LocalPosition2)
     else
     endif
-    if ( (true) ) then // INLINED!!
+    if ( Trig_Race_Random_Func007C() ) then
+        call CreateNUnitsAtLoc(5, 'n00V', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R07E', 1, GetOwningPlayer(GetTriggerUnit()))
+        call TriggerExecute(gg_trg_GoblinsOn)
     else
     endif
     if ( Trig_Race_Random_Func008C() ) then
+        call CreateNUnitsAtLoc(8, 'e02Y', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R0AO', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
-    if ( (true) ) then // INLINED!!
+    if ( Trig_Race_Random_Func009C() ) then
+        call CreateNUnitsAtLoc(5, 'h0EI', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R07H', 1, GetOwningPlayer(GetTriggerUnit()))
+        call ConditionalTriggerExecute(gg_trg_IllidaryOn)
+    else
+    endif
+    if ( Trig_Race_Random_Func010C() ) then
+        call CreateNUnitsAtLoc(5, 'h002', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R00G', 1, GetOwningPlayer(GetTriggerUnit()))
+        call TriggerExecute(gg_trg_BanditsOn)
+    else
+    endif
+    if ( Trig_Race_Random_Func011C() ) then
+        call CreateNUnitsAtLoc(5, 'h014', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R07B', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_Race_Random_Func012C() ) then
+        call CreateNUnitsAtLoc(3, 'u00P', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R07I', 1, GetOwningPlayer(GetTriggerUnit()))
+        call ConditionalTriggerExecute(gg_trg_UndeadOn)
+    else
+    endif
+    if ( Trig_Race_Random_Func013C() ) then
+        call CreateNUnitsAtLoc(5, 'h04K', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R07C', 1, GetOwningPlayer(GetTriggerUnit()))
+        call ConditionalTriggerExecute(gg_trg_BloodElvesOn)
+    else
+    endif
+    if ( Trig_Race_Random_Func014C() ) then
+        call CreateNUnitsAtLoc(5, 'opeo', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R0DV', 1, GetOwningPlayer(GetTriggerUnit()))
+        call ConditionalTriggerExecute(gg_trg_HordeOn)
+    else
+    endif
+    if ( Trig_Race_Random_Func015C() ) then
+        call CreateNUnitsAtLoc(3, 'u001', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R0BW', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_Race_Random_Func016C() ) then
+        call CreateNUnitsAtLoc(5, 'h013', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R07D', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_Race_Random_Func017C() ) then
+        call CreateNUnitsAtLoc(5, 'h0CJ', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R07J', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_Race_Random_Func018C() ) then
+        call CreateNUnitsAtLoc(5, 'h012', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R07G', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_Race_Random_Func019C() ) then
+        call CreateNUnitsAtLoc(5, 'h0C9', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R07F', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_Race_Random_Func020C() ) then
+        call CreateNUnitsAtLoc(5, 'o00J', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R07K', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_Race_Random_Func021C() ) then
+        call CreateNUnitsAtLoc(3, 'h0BE', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R07N', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_Race_Random_Func022C() ) then
+        call CreateNUnitsAtLoc(3, 'h0BE', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R07N', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_Race_Random_Func023C() ) then
+        call CreateNUnitsAtLoc(8, 'e01G', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R0BV', 1, GetOwningPlayer(GetTriggerUnit()))
+        call ConditionalTriggerExecute(gg_trg_SilitidsOn)
+    else
+    endif
+    if ( Trig_Race_Random_Func024C() ) then
+        call CreateNUnitsAtLoc(5, 'h0FA', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call CreateNUnitsAtLoc(1, 'h0FX', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R0BX', 1, GetOwningPlayer(GetTriggerUnit()))
+        call ConditionalTriggerExecute(gg_trg_GnomesOn)
+    else
+    endif
+    if ( Trig_Race_Random_Func025C() ) then
+        call CreateNUnitsAtLoc(5, 'h0FA', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call CreateNUnitsAtLoc(1, 'h0FX', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R0BX', 1, GetOwningPlayer(GetTriggerUnit()))
+        call ConditionalTriggerExecute(gg_trg_GnomesOn)
+    else
+    endif
+    if ( Trig_Race_Random_Func026C() ) then
+        call CreateNUnitsAtLoc(5, 'h0IT', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     else
     endif
     call RemoveLocation(udg_LocalPosition2)
@@ -12454,6 +12691,7 @@ function Trig_Page1_O_Actions takes nothing returns nothing
     call UnitRemoveAbilityBJ('A0YV', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0HW', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A121', GetTriggerUnit())
+    call UnitRemoveAbilityBJ('A12Q', GetTriggerUnit())
 endfunction
 
 //===========================================================================
@@ -12522,6 +12760,7 @@ endfunction
 function Trig_Page3_O_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0YV', GetTriggerUnit())
     call UnitAddAbilityBJ('A121', GetTriggerUnit())
+    call UnitAddAbilityBJ('A12Q', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QQ', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QN', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0HO', GetTriggerUnit())
@@ -19967,49 +20206,11 @@ endfunction
 //===========================================================================
 function InitTrig_Spell takes nothing returns nothing
     set gg_trg_Spell=CreateTrigger()
+    call DisableTrigger(gg_trg_Spell)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_Spell, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_Spell, Condition(function Trig_Spell_Conditions))
     call TriggerAddAction(gg_trg_Spell, function Trig_Spell_Actions)
 endfunction
-
-//===========================================================================
-// Trigger: Spell Copy
-//===========================================================================
-function Trig_Spell_Copy_Conditions takes nothing returns boolean
-    if ( not ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) != true ) ) then
-        return false
-    endif
-    if ( not ( GetUnitAbilityLevelSwapped('A122', GetAttacker()) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Spell_Copy_Actions takes nothing returns nothing
-    call UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.02 ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
-endfunction
-
-//===========================================================================
-function InitTrig_Spell_Copy takes nothing returns nothing
-    set gg_trg_Spell_Copy=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Spell_Copy, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_Spell_Copy, Condition(function Trig_Spell_Copy_Conditions))
-    call TriggerAddAction(gg_trg_Spell_Copy, function Trig_Spell_Copy_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Untitled Trigger 005
-//===========================================================================
-function Trig_Untitled_Trigger_005_Actions takes nothing returns nothing
-endfunction
-
-//===========================================================================
-function InitTrig_Untitled_Trigger_005 takes nothing returns nothing
-    set gg_trg_Untitled_Trigger_005=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Untitled_Trigger_005, EVENT_PLAYER_UNIT_DAMAGED)
-    call TriggerAddAction(gg_trg_Untitled_Trigger_005, function Trig_Untitled_Trigger_005_Actions)
-endfunction
-
 
 //===========================================================================
 // Trigger: SpellRes
@@ -22562,7 +22763,7 @@ endfunction
 
 function NoNeORc takes nothing returns boolean
     local integer id= GetUnitTypeId(GetFilterUnit())
-    return ( id == 'ospw' or id == 'o026' or id == 'o025' or id == 'o024' or id == 'o023' or id == 'o01G' or id == 'o01L' or id == 'o01F' or id == 'o01H' or id == 'otbk' )
+    return ( id == 'ospw' or id == 'o026' or id == 'o025' or id == 'o024' or id == 'o023' or id == 'o01G' or id == 'o01L' or id == 'o01F' or id == 'o01H' or id == 'otbk' or id == 'o02M' or id == 'o02S' or id == 'o02W' )
 
 endfunction
 
@@ -40736,8 +40937,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ZdaniyaBezlik_Copy_Copy_2()
     call InitTrig_ZdaniyaBezlik_Copy_Copy_2_Copy()
     call InitTrig_Spell()
-    call InitTrig_Spell_Copy()
-    call InitTrig_Untitled_Trigger_005()
     call InitTrig_SpellRes()
     call InitTrig_HordeOn()
     call InitTrig_K1T1()
@@ -41667,7 +41866,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE___onInit")
+call ExecuteFunc("SpellSleepAOE__onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
