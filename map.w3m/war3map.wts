@@ -44499,12 +44499,6 @@ STRING 7374
 |cffd45e19Крепость Стражей Пустотыr
 }
 
-STRING 7375
-// Units: h04I (|cffd45e19Форт Молота Ужасаr), Name (Name)
-{
-|cffd45e19Форт Молота Ужасаr
-}
-
 STRING 7376
 // Units: h04J (|cffd45e19Камерунr), Name (Name)
 {
@@ -155841,5 +155835,23 @@ STRING 25619
 // Upgrades: R0FA (Нечестивая сила,Нечестивая мощь,Нечестивы�), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 25620
+// Units: h04I (|cffd45e19Форт Молота Ужаса), Name (Name)
+{
+|cffd45e19Форт Молота Ужаса
+}
+
+STRING 25621
+// Abilities: A0TF (Разобрать бедолагу), Researchtip (Tooltip - Learn)
+{
+Разобрать бедолагу
+}
+
+STRING 25622
+// Abilities: A0TF (Разобрать бедолагу), Researchubertip (Tooltip - Learn - Extended)
+{
+Убивает механичекого юнита, тем самым получая его здоровье.
 }
 
