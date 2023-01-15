@@ -20,12 +20,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE___SpellHero='A06P'
-constant integer SpellSleepAOE___SpellCast='A06O'
-constant string SpellSleepAOE___SpellOrder="sleep"
-constant integer SpellSleepAOE___DummyID='u000'
-constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE___DummyUnit
+constant integer SpellSleepAOE__SpellHero='A06P'
+constant integer SpellSleepAOE__SpellCast='A06O'
+constant string SpellSleepAOE__SpellOrder="sleep"
+constant integer SpellSleepAOE__DummyID='u000'
+constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE__DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -426,7 +426,9 @@ trigger gg_trg_BrokenIsled_7_spell_off= null
 trigger gg_trg_BrokenIsled_7_set= null
 trigger gg_trg_Standart= null
 trigger gg_trg_DarkMode_Spell= null
+trigger gg_trg_OpenModeSpell= null
 trigger gg_trg_StartDarkMode= null
+trigger gg_trg_StartOpenMode= null
 trigger gg_trg_StartDarkMode_Command= null
 trigger gg_trg_OfDarkModeCommand= null
 trigger gg_trg_Timer= null
@@ -1408,8 +1410,8 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_StartOpenMode= null
-trigger gg_trg_OpenModeSpell= null
+trigger gg_trg_RotStart= null
+trigger gg_trg_Attacked= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1666,7 +1668,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE___getRange takes integer level returns integer
+    function SpellSleepAOE__getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1674,33 +1676,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
-            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
+            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
+            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE___anon__0 takes nothing returns boolean
-            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE__anon__0 takes nothing returns boolean
+            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE___anon__2 takes nothing returns boolean
+            function SpellSleepAOE__anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE___anon__1 takes nothing returns nothing
+        function SpellSleepAOE__anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1708,19 +1710,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE___onInit takes nothing returns nothing
+    function SpellSleepAOE__onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
+        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
         set t=null
     endfunction
 
@@ -5028,7 +5030,6 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'ovln', - 4640.0, - 29600.0, 270.000, 'ovln')
     set u=BlzCreateUnitWithSkin(p, 'osld', - 6784.0, - 29312.0, 270.000, 'osld')
     set u=BlzCreateUnitWithSkin(p, 'h0JI', - 3232.0, - 30368.0, 270.000, 'h0JI')
-    set u=BlzCreateUnitWithSkin(p, 'h0JJ', - 3200.0, - 29760.0, 270.000, 'h0JJ')
     set u=BlzCreateUnitWithSkin(p, 'h0JK', - 3200.0, - 30016.0, 270.000, 'h0JK')
     set u=BlzCreateUnitWithSkin(p, 'h0JL', - 4128.0, - 29088.0, 270.000, 'h0JL')
     set u=BlzCreateUnitWithSkin(p, 'h0JM', - 3776.0, - 29632.0, 270.000, 'h0JM')
@@ -5211,11 +5212,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 754.9, - 27567.0, 187.452, 'o02Y')
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 790.2, - 27350.7, 193.845, 'o02Y')
     set u=BlzCreateUnitWithSkin(p, 'h05P', - 4430.8, - 26979.3, 262.801, 'h05P')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'h0GI', - 4041.0, - 26928.6, 320.800, 'h0GI')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'h0GI', - 4060.8, - 27086.3, 119.963, 'h0GI')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'h0JS', - 4487.5, - 27118.3, 236.760, 'h0JS')
     set u=BlzCreateUnitWithSkin(p, 'h0JS', - 4541.0, - 27146.3, 108.493, 'h0JS')
 endfunction
@@ -20233,6 +20231,51 @@ function InitTrig_SpellRes takes nothing returns nothing
     call TriggerAddCondition(gg_trg_SpellRes, Condition(function Trig_SpellRes_Conditions))
     call TriggerAddAction(gg_trg_SpellRes, function Trig_SpellRes_Actions)
 endfunction
+
+//===========================================================================
+// Trigger: RotStart
+//===========================================================================
+function Trig_RotStart_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A134' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_RotStart_Actions takes nothing returns nothing
+    call UnitAddAbilityBJ('A132', GetTriggerUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_RotStart takes nothing returns nothing
+    set gg_trg_RotStart=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_RotStart, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_RotStart, Condition(function Trig_RotStart_Conditions))
+    call TriggerAddAction(gg_trg_RotStart, function Trig_RotStart_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Attacked
+//===========================================================================
+function Trig_Attacked_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetAttacker(), 'A132') > 0
+endfunction
+
+function Trig_Attacked_Actions takes nothing returns nothing
+    local unit u= GetAttacker()
+    call TriggerSleepAction(0.5)
+    call UnitRemoveAbility(u, 'A132')
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_Attacked takes nothing returns nothing
+    set gg_trg_Attacked=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Attacked, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_Attacked, Condition(function Trig_Attacked_Conditions))
+    call TriggerAddAction(gg_trg_Attacked, function Trig_Attacked_Actions)
+endfunction
+
 
 //===========================================================================
 // Trigger: HordeOn
@@ -40905,6 +40948,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ZdaniyaBezlik_Copy_Copy_2_Copy()
     call InitTrig_Spell()
     call InitTrig_SpellRes()
+    call InitTrig_RotStart()
+    call InitTrig_Attacked()
     call InitTrig_HordeOn()
     call InitTrig_K1T1()
     call InitTrig_K1T2()
@@ -41832,7 +41877,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE___onInit")
+call ExecuteFunc("SpellSleepAOE__onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
