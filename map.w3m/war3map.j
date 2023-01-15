@@ -20,12 +20,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -623,8 +623,7 @@ trigger gg_trg_AbordachSystemDefence2_O= null
 trigger gg_trg_NotGrade= null
 trigger gg_trg_ManabobmaStart= null
 trigger gg_trg_Manabomba= null
-trigger gg_trg_Untitled_Trigger_001= null
-trigger gg_trg_Manabomba_Copy= null
+trigger gg_trg_Manabomba2= null
 trigger gg_trg_README= null
 trigger gg_trg_Portal_Connect= null
 trigger gg_trg_Portal_Periodic= null
@@ -1409,6 +1408,8 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_StartOpenMode= null
+trigger gg_trg_OpenModeSpell= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1665,7 +1666,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1673,33 +1674,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1707,19 +1708,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -5030,7 +5031,7 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0JJ', - 3200.0, - 29760.0, 270.000, 'h0JJ')
     set u=BlzCreateUnitWithSkin(p, 'h0JK', - 3200.0, - 30016.0, 270.000, 'h0JK')
     set u=BlzCreateUnitWithSkin(p, 'h0JL', - 4128.0, - 29088.0, 270.000, 'h0JL')
-    set u=BlzCreateUnitWithSkin(p, 'h0JM', - 4096.0, - 29824.0, 270.000, 'h0JM')
+    set u=BlzCreateUnitWithSkin(p, 'h0JM', - 3776.0, - 29632.0, 270.000, 'h0JM')
     set u=BlzCreateUnitWithSkin(p, 'h0JO', - 3136.0, - 29120.0, 270.000, 'h0JO')
     set u=BlzCreateUnitWithSkin(p, 'h0JP', - 3680.0, - 29152.0, 270.000, 'h0JP')
     set u=BlzCreateUnitWithSkin(p, 'h01Z', - 5920.0, - 28064.0, 270.000, 'h01Z')
@@ -5199,7 +5200,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0IB', - 4502.5, - 25851.0, 259.966, 'h0IB')
     set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, 290.235, 'n04X')
     set u=BlzCreateUnitWithSkin(p, 'h0IH', - 5443.4, - 29877.1, 272.940, 'h0IH')
-    set u=BlzCreateUnitWithSkin(p, 'o02X', - 877.9, - 28134.5, 190.594, 'o02X')
+    set u=BlzCreateUnitWithSkin(p, 'o02X', - 898.6, - 28110.9, 190.594, 'o02X')
     set u=BlzCreateUnitWithSkin(p, 'o02X', - 903.7, - 27945.7, 190.594, 'o02X')
     set u=BlzCreateUnitWithSkin(p, 'o02X', - 921.3, - 27728.1, 190.594, 'o02X')
     set u=BlzCreateUnitWithSkin(p, 'o02X', - 935.8, - 27521.1, 190.594, 'o02X')
@@ -5209,6 +5210,14 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 749.2, - 27789.5, 180.938, 'o02Y')
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 754.9, - 27567.0, 187.452, 'o02Y')
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 790.2, - 27350.7, 193.845, 'o02Y')
+    set u=BlzCreateUnitWithSkin(p, 'h05P', - 4430.8, - 26979.3, 262.801, 'h05P')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    set u=BlzCreateUnitWithSkin(p, 'h0GI', - 4041.0, - 26928.6, 320.800, 'h0GI')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    set u=BlzCreateUnitWithSkin(p, 'h0GI', - 4060.8, - 27086.3, 119.963, 'h0GI')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    set u=BlzCreateUnitWithSkin(p, 'h0JS', - 4487.5, - 27118.3, 236.760, 'h0JS')
+    set u=BlzCreateUnitWithSkin(p, 'h0JS', - 4541.0, - 27146.3, 108.493, 'h0JS')
 endfunction
 
 //===========================================================================
@@ -5431,6 +5440,7 @@ function CreateNeutralHostileBuildings takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0AJ', - 8256.0, - 19008.0, 270.000, 'h0AJ')
     set u=BlzCreateUnitWithSkin(p, 'h0AK', - 2368.0, - 15040.0, 270.000, 'h0AK')
     set gg_unit_h0AK_0488=BlzCreateUnitWithSkin(p, 'h0AK', - 7296.0, - 21376.0, 270.000, 'h0AK')
+    set u=BlzCreateUnitWithSkin(p, 'h08M', - 21792.0, - 16160.0, 270.000, 'h08M')
     set u=BlzCreateUnitWithSkin(p, 'h09Y', - 1024.0, - 17536.0, 270.000, 'h09Y')
     set gg_unit_h09Z_0492=BlzCreateUnitWithSkin(p, 'h09Z', - 5760.0, - 22528.0, 335.327, 'h09Z')
     set gg_unit_h0AL_0496=BlzCreateUnitWithSkin(p, 'h0AL', - 8512.0, - 21120.0, 270.000, 'h0AL')
@@ -5876,6 +5886,7 @@ function CreateNeutralPassive takes nothing returns nothing
 
     set u=BlzCreateUnitWithSkin(p, 'h03E', - 23224.2, - 22174.3, 282.180, 'h03E')
     set u=BlzCreateUnitWithSkin(p, 'n04R', - 4523.2, - 29573.1, 280.438, 'n04R')
+    set u=BlzCreateUnitWithSkin(p, 'h05P', - 5139.5, - 26185.9, 330.754, 'h05P')
 endfunction
 
 //===========================================================================
@@ -9266,6 +9277,29 @@ function InitTrig_DarkMode_Spell takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: OpenModeSpell
+//===========================================================================
+function Trig_OpenModeSpell_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A131' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_OpenModeSpell_Actions takes nothing returns nothing
+    set udg_SET_VISIBLE_MODE=2
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_25625")
+endfunction
+
+//===========================================================================
+function InitTrig_OpenModeSpell takes nothing returns nothing
+    set gg_trg_OpenModeSpell=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_OpenModeSpell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_OpenModeSpell, Condition(function Trig_OpenModeSpell_Conditions))
+    call TriggerAddAction(gg_trg_OpenModeSpell, function Trig_OpenModeSpell_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: StartDarkMode
 //===========================================================================
 function Trig_StartDarkMode_Conditions takes nothing returns boolean
@@ -9296,6 +9330,35 @@ function InitTrig_StartDarkMode takes nothing returns nothing
     call TriggerRegisterTimerExpireEventBJ(gg_trg_StartDarkMode, udg_LobbyTime)
     call TriggerAddCondition(gg_trg_StartDarkMode, Condition(function Trig_StartDarkMode_Conditions))
     call TriggerAddAction(gg_trg_StartDarkMode, function Trig_StartDarkMode_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: StartOpenMode
+//===========================================================================
+function Trig_StartOpenMode_Conditions takes nothing returns boolean
+    if ( not ( udg_SET_VISIBLE_MODE == 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_StartOpenMode_Func002A takes nothing returns nothing
+    call FogModifierStop(udg_Visibl[GetConvertedPlayerId(GetEnumPlayer())])
+    call DestroyFogModifier(udg_Visibl[GetConvertedPlayerId(GetEnumPlayer())])
+    call CreateFogModifierRectBJ(true, GetEnumPlayer(), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
+endfunction
+
+function Trig_StartOpenMode_Actions takes nothing returns nothing
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_7375")
+    call ForForce(udg_AllPlayers, function Trig_StartOpenMode_Func002A)
+endfunction
+
+//===========================================================================
+function InitTrig_StartOpenMode takes nothing returns nothing
+    set gg_trg_StartOpenMode=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_StartOpenMode, udg_LobbyTime)
+    call TriggerAddCondition(gg_trg_StartOpenMode, Condition(function Trig_StartOpenMode_Conditions))
+    call TriggerAddAction(gg_trg_StartOpenMode, function Trig_StartOpenMode_Actions)
 endfunction
 
 //===========================================================================
@@ -10121,7 +10184,7 @@ function Trig_TimerIncome_Actions takes nothing returns nothing
                
             endif
             
-            set t=GetPlayerTechCount(p, 'R0D1', true)
+            set t=GetPlayerTechCount(p, 'R0DV', true)
             if t >= 1 then
                 set additional[i]=disincome[i] * ( udg_HordeMainPrice[i] / ( - 100.0 ) )
                 if EcLog then
@@ -10208,30 +10271,12 @@ endfunction
 //
 // Для захватываемых
 //===========================================================================
-
-
-
-
-
-
-
-
-
-
-
-
 function Trig_UnitIncomeEnterDis_Conditions takes nothing returns boolean
     local integer id= GetUnitTypeId(GetEnteringUnit())
     return GetUnitState(GetEnteringUnit(), UNIT_STATE_LIFE) > 0 and not ( id == 'H0BN' or id == 'H0GB' or id == 'e02Z' or id == 'h0GA' ) and GetUnitAbilityLevel(GetEnteringUnit(), 'A0Z5') == 0
 endfunction
 
 //function CheckedEnter takes unit u, player p, integer pi
-
-
-
-
-
-
 
 function Trig_UnitIncomeEnterDis_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
@@ -17300,52 +17345,23 @@ function InitTrig_ManabobmaStart takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: Manabomba
+// Trigger: Manabomba2
 //
 // У условии спел каста манабомбы
 //===========================================================================
-function Trig_Manabomba_Conditions takes nothing returns boolean
+function Trig_Manabomba2_Conditions takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A0TS' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_Manabomba_Func038Func002A takes nothing returns nothing
-    call SetUnitLifeBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) - 25.00 ))
-endfunction
-
-function Trig_Manabomba_Func040Func002A takes nothing returns nothing
-    call SetUnitLifeBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) - 25.00 ))
-endfunction
-
-function Trig_Manabomba_Func042Func002A takes nothing returns nothing
-    call SetUnitLifeBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) - 25.00 ))
-endfunction
-
-function Trig_Manabomba_Func044Func002A takes nothing returns nothing
-    call SetUnitLifeBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) - 25.00 ))
-endfunction
-
-function Trig_Manabomba_Func046Func002A takes nothing returns nothing
-    call SetUnitLifeBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) - 25.00 ))
-endfunction
-
-function Trig_Manabomba_Func048Func002A takes nothing returns nothing
-    call SetUnitLifeBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) - 50.00 ))
-endfunction
-
-function Trig_Manabomba_Func051A takes nothing returns nothing
-    call SetUnitLifeBJ(GetEnumUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetEnumUnit()) - 250.00 ))
-endfunction
-
-function Trig_Manabomba_Actions takes nothing returns nothing
+function Trig_Manabomba2_Actions takes nothing returns nothing
     local location p
     local effect e
     local unit u1
     local unit u2
     // Удаляю спел манабомбы
-    call UnitRemoveAbilityBJ('A0TS', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0TT', GetTriggerUnit())
     // Юнит кастер
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -17364,7 +17380,7 @@ function Trig_Manabomba_Actions takes nothing returns nothing
     set u1=udg_Unit[1]
     set u2=udg_Unit[2]
     set p=udg_LocalPosition3
-    call TriggerSleepAction(( DistanceBetweenPoints(udg_LocalPosition2, udg_LocalPosition3) / 200.00 ))
+    call TriggerSleepAction(( DistanceBetweenPoints(udg_LocalPosition2, udg_LocalPosition3) / 300.00 ))
     call RemoveLocation(udg_LocalPosition2)
     set udg_LocalPosition3=p
     set udg_Unit[1]=u1
@@ -17381,9 +17397,7 @@ function Trig_Manabomba_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        set udg_LocalOtrad2=GetUnitsInRangeOfLocAll(200.00, udg_LocalPosition3)
-        call ForGroupBJ(udg_LocalOtrad2, function Trig_Manabomba_Func038Func002A)
-        call GroupClear(udg_LocalOtrad2)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 200.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -17392,9 +17406,7 @@ function Trig_Manabomba_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        set udg_LocalOtrad2=GetUnitsInRangeOfLocAll(225.00, udg_LocalPosition3)
-        call ForGroupBJ(udg_LocalOtrad2, function Trig_Manabomba_Func040Func002A)
-        call GroupClear(udg_LocalOtrad2)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 235.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -17403,9 +17415,7 @@ function Trig_Manabomba_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        set udg_LocalOtrad2=GetUnitsInRangeOfLocAll(250.00, udg_LocalPosition3)
-        call ForGroupBJ(udg_LocalOtrad2, function Trig_Manabomba_Func042Func002A)
-        call GroupClear(udg_LocalOtrad2)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 260.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -17414,9 +17424,7 @@ function Trig_Manabomba_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        set udg_LocalOtrad2=GetUnitsInRangeOfLocAll(250.00, udg_LocalPosition3)
-        call ForGroupBJ(udg_LocalOtrad2, function Trig_Manabomba_Func044Func002A)
-        call GroupClear(udg_LocalOtrad2)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 260.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -17425,9 +17433,7 @@ function Trig_Manabomba_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        set udg_LocalOtrad2=GetUnitsInRangeOfLocAll(275.00, udg_LocalPosition3)
-        call ForGroupBJ(udg_LocalOtrad2, function Trig_Manabomba_Func046Func002A)
-        call GroupClear(udg_LocalOtrad2)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 275.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -17436,16 +17442,13 @@ function Trig_Manabomba_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=3
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        set udg_LocalOtrad2=GetUnitsInRangeOfLocAll(700.00, udg_LocalPosition3)
-        call ForGroupBJ(udg_LocalOtrad2, function Trig_Manabomba_Func048Func002A)
-        call GroupClear(udg_LocalOtrad2)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 700.00, udg_LocalPosition3, 80.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
     set udg_LocalPosition3=p
-    set udg_LocalOtrad2=GetUnitsInRangeOfLocAll(700.00, udg_LocalPosition3)
-    call ForGroupBJ(udg_LocalOtrad2, function Trig_Manabomba_Func051A)
-    call GroupClear(udg_LocalOtrad2)
+    call UnitDamagePointLoc(GetTriggerUnit(), 0, 700.00, udg_LocalPosition3, 350.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+    call UnitRemoveAbilityBJ('A0TS', GetTriggerUnit())
     call RemoveLocation(udg_LocalPosition3)
     set udg_LocalEffect=e
     set e=null
@@ -17454,25 +17457,11 @@ function Trig_Manabomba_Actions takes nothing returns nothing
 endfunction
 
 //===========================================================================
-function InitTrig_Manabomba takes nothing returns nothing
-    set gg_trg_Manabomba=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Manabomba, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
-    call TriggerAddCondition(gg_trg_Manabomba, Condition(function Trig_Manabomba_Conditions))
-    call TriggerAddAction(gg_trg_Manabomba, function Trig_Manabomba_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: Untitled Trigger 001
-//===========================================================================
-function Trig_Untitled_Trigger_001_Actions takes nothing returns nothing
-    call UnitDamagePointLoc(GetTriggerUnit(), 0, 500, udg_LocalPosition2, 25.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
-endfunction
-
-//===========================================================================
-function InitTrig_Untitled_Trigger_001 takes nothing returns nothing
-    set gg_trg_Untitled_Trigger_001=CreateTrigger()
-    call TriggerAddAction(gg_trg_Untitled_Trigger_001, function Trig_Untitled_Trigger_001_Actions)
+function InitTrig_Manabomba2 takes nothing returns nothing
+    set gg_trg_Manabomba2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Manabomba2, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(gg_trg_Manabomba2, Condition(function Trig_Manabomba2_Conditions))
+    call TriggerAddAction(gg_trg_Manabomba2, function Trig_Manabomba2_Actions)
 endfunction
 
 //===========================================================================
@@ -20867,8 +20856,7 @@ function Trig_K1T4_Actions takes nothing returns nothing
     //
     
     set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
-    set udg_Price=GetUnitGoldCost(GetUnitTypeId(u))
-    set disincome[pi]=disincome[pi] + ( udg_Price * 0.10 )
+    
     
     
     // Elite Price
@@ -22286,6 +22274,7 @@ function Trig_BloodElf_Actions takes nothing returns nothing
     set udg_HordeNavyPrice[pi]=udg_HordeNavyPrice[pi] - 1
     call ChangeLandUnitsNow(p , pi)
     call ChangeMagicUnitsNow(p , pi)
+    call ChangeNavyUnitsNow(p , pi)
     
     
     
@@ -40347,40 +40336,6 @@ function InitTrig_KillSomeUnitsAndItems takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: KillTestUnits O Copy
-//===========================================================================
-function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
-    return ( RectContainsUnit(gg_rct_TestRegion, GetFilterUnit()) == true )
-endfunction
-
-function Trig_KillTestUnits_O_Copy_Func003A takes nothing returns nothing
-    local unit u= GetEnumUnit()
-    local player p= GetOwningPlayer(u)
-    local integer id= GetUnitTypeId(u)
-    if IsUnitType(u, UNIT_TYPE_HERO) then
-        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
-    endif
-    call RemoveUnit(u)
-    set u=null
-    set p=null
-endfunction
-
-function Trig_KillTestUnits_O_Copy_Actions takes nothing returns nothing
-    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Copy_Func001002)
-    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Copy_Func003A)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_KillTestUnits_O_Copy takes nothing returns nothing
-    set gg_trg_KillTestUnits_O_Copy=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O_Copy, 0.01)
-    call TriggerAddAction(gg_trg_KillTestUnits_O_Copy, function Trig_KillTestUnits_O_Copy_Actions)
-endfunction
-
-
-//===========================================================================
 // Trigger: KillTestUnits Command
 //===========================================================================
 function Trig_KillTestUnits_Command_Func001002 takes nothing returns boolean
@@ -40738,7 +40693,9 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_BrokenIsled_7_set()
     call InitTrig_Standart()
     call InitTrig_DarkMode_Spell()
+    call InitTrig_OpenModeSpell()
     call InitTrig_StartDarkMode()
+    call InitTrig_StartOpenMode()
     call InitTrig_StartDarkMode_Command()
     call InitTrig_OfDarkModeCommand()
     call InitTrig_Timer()
@@ -40895,8 +40852,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_AbordachSystemDefence1_O()
     call InitTrig_AbordachSystemDefence2_O()
     call InitTrig_ManabobmaStart()
-    call InitTrig_Manabomba()
-    call InitTrig_Untitled_Trigger_001()
+    call InitTrig_Manabomba2()
     call InitTrig_Portal_Connect()
     call InitTrig_Portal_Periodic()
     call InitTrig_Portal_Target()
@@ -41491,7 +41447,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
     call InitTrig_KillSomeUnitsAndItems()
-    call InitTrig_KillTestUnits_O_Copy()
     call InitTrig_KillTestUnits_Command()
     call InitTrig_KillMagaz()
     call InitTrig_Setlvl()
@@ -41877,7 +41832,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
