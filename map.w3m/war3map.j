@@ -698,6 +698,8 @@ trigger gg_trg_LumberTest= null
 trigger gg_trg_Spell= null
 trigger gg_trg_SpellRes= null
 trigger gg_trg_SpandFarm= null
+trigger gg_trg_RotStart= null
+trigger gg_trg_Attacked= null
 trigger gg_trg_HordeOn= null
 trigger gg_trg_K1T1= null
 trigger gg_trg_K1T2= null
@@ -1410,8 +1412,10 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_RotStart= null
-trigger gg_trg_Attacked= null
+trigger gg_trg_ManabombaDead= null
+trigger gg_trg_Spell2= null
+trigger gg_trg_CreateFFarm= null
+trigger gg_trg_DeadFFarm= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -2544,6 +2548,35 @@ function TimedUpdate takes unit u,player p returns boolean
         return false
     endif
 endfunction
+//***************************************************************************
+//*  ChangeSpellLimit
+
+
+//function OnlyFaselessFarms takes nothing returns boolean
+//    return GetUnitTypeId(GetFilterUnit())=='u02E'
+//
+//endfunction
+
+
+//
+//function FaselessFarmLimit takes player p returns nothing
+//    local integer i
+//    local integer NowLimit = GetPlayerTechMaxAllowed(p,'u02E')
+//    local group g = CreateGroup()
+//    //local boolexpr b = Condition(function OnlyFaselessFarms)
+//    set i = GetPlayerUnitTypeCount(p,'u02E')
+//    
+//    if i <= NowLimit then
+//        call SetPlayerAbilityAvailable(p,'u02E',true)
+//    else
+//        call SetPlayerAbilityAvailable(p,'u02E',true)
+//    endif
+//    
+//    
+//    //call DestroyBoolExpr(b)
+//    //set b = null
+//
+//endfunction
 //***************************************************************************
 //*  Counters
 //globals
@@ -5145,9 +5178,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0IG', - 3406.7, - 25854.5, 265.690, 'h0IG')
     set u=BlzCreateUnitWithSkin(p, 'h0IE', - 3987.2, - 25805.7, 285.561, 'h0IE')
     set u=BlzCreateUnitWithSkin(p, 'h0IC', - 3589.3, - 26119.4, 255.468, 'h0IC')
-    set u=BlzCreateUnitWithSkin(p, 'O02P', - 4903.2, - 30021.2, 268.060, 'O02P')
-    call SetHeroLevel(u, 25, false)
-    set u=BlzCreateUnitWithSkin(p, 'Othr', - 2148.9, - 29035.8, 268.490, 'Othr')
     set u=BlzCreateUnitWithSkin(p, 'h0ID', - 3888.8, - 25837.2, 259.736, 'h0ID')
     set u=BlzCreateUnitWithSkin(p, 'o023', - 5792.7, - 29745.9, 272.250, 'o023')
     set u=BlzCreateUnitWithSkin(p, 'opeo', - 6201.1, - 28833.8, 229.973, 'opeo')
@@ -9501,6 +9531,7 @@ function Trig_FarmStart_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('h0F9', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h0EC', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('otrb', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('u02E', udg_LocalInteger, udg_LocalPlayer)
     set udg_LocalInteger=20
     call SetPlayerTechMaxAllowedSwap('h077', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('u019', udg_LocalInteger, udg_LocalPlayer)
@@ -9633,6 +9664,7 @@ function Trig_FarmTier2_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('h0FL', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h0EC', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('otrb', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('u02E', udg_LocalInteger, udg_LocalPlayer)
     set udg_LocalInteger=40
     call SetPlayerTechMaxAllowedSwap('h077', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('u019', udg_LocalInteger, udg_LocalPlayer)
@@ -9738,6 +9770,7 @@ function Trig_FarmTier2_Res_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('h0FL', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h0EC', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('otrb', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('u02E', udg_LocalInteger, udg_LocalPlayer)
     set udg_LocalInteger=40
     call SetPlayerTechMaxAllowedSwap('u019', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h077', udg_LocalInteger, udg_LocalPlayer)
@@ -9861,6 +9894,7 @@ function Trig_FarmTier3_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('h0FL', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h0EC', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('otrb', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('u02E', udg_LocalInteger, udg_LocalPlayer)
     set udg_LocalInteger=60
     call SetPlayerTechMaxAllowedSwap('u019', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h077', udg_LocalInteger, udg_LocalPlayer)
@@ -9966,6 +10000,7 @@ function Trig_FarmTier3_Res_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('h0FL', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h0EC', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('otrb', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('u02E', udg_LocalInteger, udg_LocalPlayer)
     set udg_LocalInteger=60
     call SetPlayerTechMaxAllowedSwap('u019', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h077', udg_LocalInteger, udg_LocalPlayer)
@@ -17332,6 +17367,8 @@ function Trig_ManabobmaStart_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0TT', GetTriggerUnit())
     call BlzSetUnitMaxHP(GetTriggerUnit(), 2200)
     call RemoveItem(GetManipulatedItem())
+    call TriggerRegisterUnitEvent(gg_trg_ManabombaDead, GetTriggerUnit(), EVENT_UNIT_DEATH)
+    call TriggerRegisterUnitEvent(gg_trg_Manabomba2, GetTriggerUnit(), EVENT_UNIT_SPELL_CHANNEL)
 endfunction
 
 //===========================================================================
@@ -17457,9 +17494,127 @@ endfunction
 //===========================================================================
 function InitTrig_Manabomba2 takes nothing returns nothing
     set gg_trg_Manabomba2=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Manabomba2, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(gg_trg_Manabomba2, Condition(function Trig_Manabomba2_Conditions))
     call TriggerAddAction(gg_trg_Manabomba2, function Trig_Manabomba2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: ManabombaDead
+//
+// У условии спел каста манабомбы
+//===========================================================================
+function Trig_ManabombaDead_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0TS' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ManabombaDead_Actions takes nothing returns nothing
+    local location p
+    local effect e
+    local unit u1
+    local unit u2
+    // Удаляю спел манабомбы
+    call UnitRemoveAbilityBJ('A0TT', GetTriggerUnit())
+    // Юнит кастер
+    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    call CreateNUnitsAtLoc(1, 'h05P', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    set udg_Unit[1]=GetLastCreatedUnit()
+    call BlzSetUnitRealFieldBJ(udg_Unit[1], UNIT_RF_FLY_HEIGHT, GetUnitDefaultFlyHeight(GetTriggerUnit()))
+    call UnitAddAbilityBJ('A0TU', udg_Unit[1])
+    // Юнит жертва
+    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    call CreateNUnitsAtLoc(1, 'h0GI', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition3, bj_UNIT_FACING)
+    set udg_Unit[2]=GetLastCreatedUnit()
+    call BlzSetUnitRealFieldBJ(udg_Unit[2], UNIT_RF_FLY_HEIGHT, GetUnitDefaultFlyHeight(GetTriggerUnit()))
+    call SetUnitPathing(udg_Unit[1], false)
+    call SetUnitPathing(udg_Unit[2], false)
+    call IssueTargetOrderBJ(udg_Unit[1], "firebolt", udg_Unit[2])
+    set u1=udg_Unit[1]
+    set u2=udg_Unit[2]
+    set p=udg_LocalPosition3
+    call TriggerSleepAction(( DistanceBetweenPoints(udg_LocalPosition2, udg_LocalPosition3) / 300.00 ))
+    call RemoveLocation(udg_LocalPosition2)
+    set udg_LocalPosition3=p
+    set udg_Unit[1]=u1
+    set udg_Unit[2]=u2
+    set u1=null
+    set u2=null
+    call RemoveUnit(udg_Unit[1])
+    call RemoveUnit(udg_Unit[2])
+    call AddSpecialEffectLocBJ(udg_LocalPosition3, "war3mapImported\\MagicExplosion.mdx")
+    call AddSpecialEffectLocBJ(udg_LocalPosition3, "ForceField03.mdx")
+    set udg_LocalEffect=GetLastCreatedEffectBJ()
+    set e=udg_LocalEffect
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=2
+    loop
+        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 200.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call TriggerSleepAction(0.25)
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
+    endloop
+    set udg_LocalPosition3=p
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=2
+    loop
+        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 235.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call TriggerSleepAction(0.25)
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
+    endloop
+    set udg_LocalPosition3=p
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=2
+    loop
+        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 260.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call TriggerSleepAction(0.25)
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
+    endloop
+    set udg_LocalPosition3=p
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=2
+    loop
+        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 260.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call TriggerSleepAction(0.25)
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
+    endloop
+    set udg_LocalPosition3=p
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=2
+    loop
+        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 275.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call TriggerSleepAction(0.25)
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
+    endloop
+    set udg_LocalPosition3=p
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=3
+    loop
+        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 700.00, udg_LocalPosition3, 80.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call TriggerSleepAction(0.25)
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
+    endloop
+    set udg_LocalPosition3=p
+    call UnitDamagePointLoc(GetTriggerUnit(), 0, 700.00, udg_LocalPosition3, 350.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+    call UnitRemoveAbilityBJ('A0TS', GetTriggerUnit())
+    call RemoveLocation(udg_LocalPosition3)
+    set udg_LocalEffect=e
+    set e=null
+    set p=null
+    call DestroyEffectBJ(udg_LocalEffect)
+endfunction
+
+//===========================================================================
+function InitTrig_ManabombaDead takes nothing returns nothing
+    set gg_trg_ManabombaDead=CreateTrigger()
+    call TriggerAddCondition(gg_trg_ManabombaDead, Condition(function Trig_ManabombaDead_Conditions))
+    call TriggerAddAction(gg_trg_ManabombaDead, function Trig_ManabombaDead_Actions)
 endfunction
 
 //===========================================================================
@@ -20182,54 +20337,6 @@ function InitTrig_ZdaniyaBezlik_Copy_Copy_2_Copy takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy, Condition(function Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Conditions))
     call TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy, function Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Spell
-//===========================================================================
-function Trig_Spell_Conditions takes nothing returns boolean
-    if ( not ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) != true ) ) then
-        return false
-    endif
-    if ( not ( GetUnitAbilityLevelSwapped('A122', GetAttacker()) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Spell_Actions takes nothing returns nothing
-    call UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.02 ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
-endfunction
-
-//===========================================================================
-function InitTrig_Spell takes nothing returns nothing
-    set gg_trg_Spell=CreateTrigger()
-    call DisableTrigger(gg_trg_Spell)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Spell, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_Spell, Condition(function Trig_Spell_Conditions))
-    call TriggerAddAction(gg_trg_Spell, function Trig_Spell_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: SpellRes
-//===========================================================================
-function Trig_SpellRes_Conditions takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A123', GetKillingUnitBJ()) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_SpellRes_Actions takes nothing returns nothing
-    call BlzEndUnitAbilityCooldown(GetKillingUnitBJ(), 'A123')
-endfunction
-
-//===========================================================================
-function InitTrig_SpellRes takes nothing returns nothing
-    set gg_trg_SpellRes=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_SpellRes, EVENT_PLAYER_UNIT_DEATH)
-    call TriggerAddCondition(gg_trg_SpellRes, Condition(function Trig_SpellRes_Conditions))
-    call TriggerAddAction(gg_trg_SpellRes, function Trig_SpellRes_Actions)
 endfunction
 
 //===========================================================================
@@ -40896,6 +41003,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_AbordachSystemDefence2_O()
     call InitTrig_ManabobmaStart()
     call InitTrig_Manabomba2()
+    call InitTrig_ManabombaDead()
     call InitTrig_Portal_Connect()
     call InitTrig_Portal_Periodic()
     call InitTrig_Portal_Target()
@@ -40946,8 +41054,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ZdaniyaBezlik_Copy_Copy()
     call InitTrig_ZdaniyaBezlik_Copy_Copy_2()
     call InitTrig_ZdaniyaBezlik_Copy_Copy_2_Copy()
-    call InitTrig_Spell()
-    call InitTrig_SpellRes()
     call InitTrig_RotStart()
     call InitTrig_Attacked()
     call InitTrig_HordeOn()
