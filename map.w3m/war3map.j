@@ -624,8 +624,9 @@ trigger gg_trg_AbordachSystemDefence1_O= null
 trigger gg_trg_AbordachSystemDefence2_O= null
 trigger gg_trg_NotGrade= null
 trigger gg_trg_ManabobmaStart= null
-trigger gg_trg_Manabomba= null
 trigger gg_trg_Manabomba2= null
+trigger gg_trg_ManabombaDead= null
+trigger gg_trg_Manabomba= null
 trigger gg_trg_README= null
 trigger gg_trg_Portal_Connect= null
 trigger gg_trg_Portal_Periodic= null
@@ -692,11 +693,14 @@ trigger gg_trg_ZdaniyaBezlik_Copy= null
 trigger gg_trg_ZdaniyaBezlik_Copy_Copy= null
 trigger gg_trg_ZdaniyaBezlik_Copy_Copy_2= null
 trigger gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy= null
+trigger gg_trg_CreateFFarm= null
+trigger gg_trg_DeadFFarm= null
 trigger gg_trg_FinishFaceBuild= null
 trigger gg_trg_DeadFaceBuild= null
 trigger gg_trg_LumberTest= null
-trigger gg_trg_Spell= null
+trigger gg_trg_Spell2= null
 trigger gg_trg_SpellRes= null
+trigger gg_trg_Spell= null
 trigger gg_trg_SpandFarm= null
 trigger gg_trg_RotStart= null
 trigger gg_trg_Attacked= null
@@ -1412,10 +1416,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_ManabombaDead= null
-trigger gg_trg_Spell2= null
-trigger gg_trg_CreateFFarm= null
-trigger gg_trg_DeadFFarm= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -5268,6 +5268,7 @@ function CreateUnitsForPlayer2 takes nothing returns nothing
     local trigger t
     local real life
 
+    set u=BlzCreateUnitWithSkin(p, 'h0AD', - 4223.3, - 27520.4, 138.201, 'h0AD')
     set u=BlzCreateUnitWithSkin(p, 'n04Y', - 3839.2, - 30069.7, 296.680, 'n04Y')
 endfunction
 
