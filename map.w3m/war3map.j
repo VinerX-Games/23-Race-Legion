@@ -20,12 +20,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE___SpellHero='A06P'
-constant integer SpellSleepAOE___SpellCast='A06O'
-constant string SpellSleepAOE___SpellOrder="sleep"
-constant integer SpellSleepAOE___DummyID='u000'
-constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE___DummyUnit
+constant integer SpellSleepAOE__SpellHero='A06P'
+constant integer SpellSleepAOE__SpellCast='A06O'
+constant string SpellSleepAOE__SpellOrder="sleep"
+constant integer SpellSleepAOE__DummyID='u000'
+constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE__DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -651,6 +651,7 @@ trigger gg_trg_F2_Map= null
 trigger gg_trg_ToKill2= null
 trigger gg_trg_Emerald_Dream_TP_O= null
 trigger gg_trg_Emerald_Dream_TP_OFF_O= null
+trigger gg_trg_murlokiEnd= null
 trigger gg_trg_NagaPas= null
 trigger gg_trg_StartHorde_Copy_2= null
 trigger gg_trg_LegGer= null
@@ -1417,6 +1418,12 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_nagi= null
+trigger gg_trg_murloki= null
+trigger gg_trg_Nagi2= null
+trigger gg_trg_Nagi= null
+trigger gg_trg_murlo2= null
+trigger gg_trg_Murlok= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1673,7 +1680,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE___getRange takes integer level returns integer
+    function SpellSleepAOE__getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1681,33 +1688,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
-            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
+            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
+            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE___anon__0 takes nothing returns boolean
-            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE__anon__0 takes nothing returns boolean
+            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE___anon__2 takes nothing returns boolean
+            function SpellSleepAOE__anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE___anon__1 takes nothing returns nothing
+        function SpellSleepAOE__anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1715,19 +1722,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE___onInit takes nothing returns nothing
+    function SpellSleepAOE__onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
+        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
         set t=null
     endfunction
 
@@ -5019,6 +5026,8 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
+    set u=BlzCreateUnitWithSkin(p, 'h0JX', - 3392.0, - 26880.0, 270.000, 'h0JX')
+    set u=BlzCreateUnitWithSkin(p, 'h0JY', - 3008.0, - 26880.0, 270.000, 'h0JY')
     set u=BlzCreateUnitWithSkin(p, 'h0IP', - 5632.0, - 26240.0, 270.000, 'h0IP')
     set u=BlzCreateUnitWithSkin(p, 'h0GN', - 96.0, - 29984.0, 270.000, 'h0GN')
     set u=BlzCreateUnitWithSkin(p, 'obar', - 1600.0, - 29760.0, 270.000, 'obar')
@@ -5085,7 +5094,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'nnmg', - 4055.5, - 27931.4, 308.374, 'nnmg')
-    set u=BlzCreateUnitWithSkin(p, 'ebal', - 2573.4, - 28582.5, 84.270, 'ebal')
     set u=BlzCreateUnitWithSkin(p, 'nnsw', - 3872.0, - 27940.1, 314.790, 'nnsw')
     set u=BlzCreateUnitWithSkin(p, 'e031', 49.7, - 30262.1, 283.027, 'e031')
     set u=BlzCreateUnitWithSkin(p, 'e031', - 36.2, - 30280.2, 168.513, 'e031')
@@ -5195,16 +5203,18 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
     set u=BlzCreateUnitWithSkin(p, 'h05P', - 4430.8, - 26979.3, 262.801, 'h05P')
     set u=BlzCreateUnitWithSkin(p, 'h0GI', - 4041.0, - 26928.6, 320.800, 'h0GI')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'h0GI', - 4060.8, - 27086.3, 119.963, 'h0GI')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'n056', - 3042.8, - 27826.5, 266.647, 'n056')
     set u=BlzCreateUnitWithSkin(p, 'H0JU', - 2933.8, - 28272.3, 256.530, 'H0JU')
     call SetHeroLevel(u, 25, false)
     set u=BlzCreateUnitWithSkin(p, 'H0JV', - 2705.8, - 28333.0, 251.260, 'H0JV')
     call SetHeroLevel(u, 25, false)
     set u=BlzCreateUnitWithSkin(p, 'n04Z', - 3852.1, - 28190.8, 275.381, 'n04Z')
-    set u=BlzCreateUnitWithSkin(p, 'n050', - 3429.3, - 28212.2, 125.094, 'n050')
-    set u=BlzCreateUnitWithSkin(p, 'n052', - 3633.3, - 28199.6, 83.433, 'n052')
-    set u=BlzCreateUnitWithSkin(p, 'n053', - 3270.3, - 28232.8, 347.959, 'n053')
+    set u=BlzCreateUnitWithSkin(p, 'n050', - 3328.2, - 27866.1, 125.094, 'n050')
+    set u=BlzCreateUnitWithSkin(p, 'n052', - 3546.1, - 27803.4, 83.433, 'n052')
+    set u=BlzCreateUnitWithSkin(p, 'n053', - 3887.8, - 27772.9, 347.959, 'n053')
     set u=BlzCreateUnitWithSkin(p, 'N054', - 3057.3, - 28226.4, 179.570, 'N054')
     call SetHeroLevel(u, 25, false)
 endfunction
@@ -19161,6 +19171,168 @@ function InitTrig_Emerald_Dream_TP_OFF_O takes nothing returns nothing
     set gg_trg_Emerald_Dream_TP_OFF_O=CreateTrigger()
     call TriggerRegisterLeaveRectSimple(gg_trg_Emerald_Dream_TP_OFF_O, gg_rct_EmeraldDream)
     call TriggerAddAction(gg_trg_Emerald_Dream_TP_OFF_O, function Trig_Emerald_Dream_TP_OFF_O_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Murlok
+//===========================================================================
+function Trig_Murlok_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0FF' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Murlok_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0FE', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Murlok takes nothing returns nothing
+    set gg_trg_Murlok=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Murlok, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_Murlok, Condition(function Trig_Murlok_Conditions))
+    call TriggerAddAction(gg_trg_Murlok, function Trig_Murlok_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: murlo2
+//===========================================================================
+function Trig_murlo2_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0FF' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_murlo2_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0FE', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_murlo2 takes nothing returns nothing
+    set gg_trg_murlo2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_murlo2, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_murlo2, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_murlo2, Condition(function Trig_murlo2_Conditions))
+    call TriggerAddAction(gg_trg_murlo2, function Trig_murlo2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Nagi
+//===========================================================================
+function Trig_Nagi_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0FE' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Nagi_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0FF', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Nagi takes nothing returns nothing
+    set gg_trg_Nagi=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_Nagi, Condition(function Trig_Nagi_Conditions))
+    call TriggerAddAction(gg_trg_Nagi, function Trig_Nagi_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Nagi2
+//===========================================================================
+function Trig_Nagi2_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0FE' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Nagi2_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0FF', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Nagi2 takes nothing returns nothing
+    set gg_trg_Nagi2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi2, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi2, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_Nagi2, Condition(function Trig_Nagi2_Conditions))
+    call TriggerAddAction(gg_trg_Nagi2, function Trig_Nagi2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: nagi
+//===========================================================================
+function Trig_nagi_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0FE' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_nagi_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('n035', - 1, GetOwningPlayer(GetTriggerUnit()))
+    call DisableTrigger(gg_trg_elem2led_O)
+endfunction
+
+//===========================================================================
+function InitTrig_nagi takes nothing returns nothing
+    set gg_trg_nagi=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_nagi, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_nagi, Condition(function Trig_nagi_Conditions))
+    call TriggerAddAction(gg_trg_nagi, function Trig_nagi_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: murloki
+//===========================================================================
+function Trig_murloki_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0FF' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_murloki_Func002A takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('n053', - 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('n052', - 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('n050', - 1, GetEnumPlayer())
+endfunction
+
+function Trig_murloki_Actions takes nothing returns nothing
+    call DisableTrigger(gg_trg_murlokiEnd)
+    call ForForce(udg_AllPlayers, function Trig_murloki_Func002A)
+endfunction
+
+//===========================================================================
+function InitTrig_murloki takes nothing returns nothing
+    set gg_trg_murloki=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_murloki, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_murloki, Condition(function Trig_murloki_Conditions))
+    call TriggerAddAction(gg_trg_murloki, function Trig_murloki_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: murlokiEnd
+//===========================================================================
+function Trig_murlokiEnd_Func001A takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('n053', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('n052', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('n050', 0, GetEnumPlayer())
+endfunction
+
+function Trig_murlokiEnd_Actions takes nothing returns nothing
+    call ForForce(udg_AllPlayers, function Trig_murlokiEnd_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_murlokiEnd takes nothing returns nothing
+    set gg_trg_murlokiEnd=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_murlokiEnd, 5)
+    call TriggerAddAction(gg_trg_murlokiEnd, function Trig_murlokiEnd_Actions)
 endfunction
 
 //===========================================================================
@@ -41039,6 +41211,13 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ToKill2()
     call InitTrig_Emerald_Dream_TP_O()
     call InitTrig_Emerald_Dream_TP_OFF_O()
+    call InitTrig_Murlok()
+    call InitTrig_murlo2()
+    call InitTrig_Nagi()
+    call InitTrig_Nagi2()
+    call InitTrig_nagi()
+    call InitTrig_murloki()
+    call InitTrig_murlokiEnd()
     call InitTrig_NagaPas()
     call InitTrig_StartHorde_Copy_2()
     call InitTrig_LegGer()
@@ -42001,7 +42180,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE___onInit")
+call ExecuteFunc("SpellSleepAOE__onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
