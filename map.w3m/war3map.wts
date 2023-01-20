@@ -43728,6 +43728,12 @@ STRING 7246
 Декор(Стальгорн)Здание3
 }
 
+STRING 7247
+// Abilities: A13E (Бонус к скорости передвижения (Общее)), Name (Name)
+{
+Бонус к скорости передвижения (Общее)
+}
+
 STRING 7248
 // Abilities: A0DB (Вихрь клинков), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -156421,6 +156427,18 @@ STRING 25717
 // Units: n050 (|cff42a8f6Мурлок-Мутант|r), EditorSuffix (Name - Editor Suffix)
 {
 (Наги)
+}
+
+STRING 25718
+// Abilities: A13F (Бонус к скорости атаки), EditorSuffix (Editor Suffix)
+{
+Общее скрыто
+}
+
+STRING 25719
+{
+Добавил
+
 }
 
 STRING 25720

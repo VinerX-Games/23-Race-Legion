@@ -4,6 +4,10 @@ constant boolean LIBRARY_Example=true
 framehandle gameUI
 framehandle Gold01
 framehandle Gold02
+     
+framehandle Food01
+framehandle Food02
+     
 framehandle Wood01
 framehandle Wood02
 framehandle Income01
@@ -346,6 +350,7 @@ camerasetup gg_cam_GW5= null
 camerasetup gg_cam_GW1= null
 sound gg_snd_oep_82_nzothfish_whispers_offset_periodic_ambient_09__2_u= null
 sound gg_snd_QuestLog= null
+sound gg_snd_BerserkerCaster= null
 trigger gg_trg_runSeachHandle= null
 trigger gg_trg_Unit_Indexer= null
 trigger gg_trg___________________________u= null
@@ -622,6 +627,7 @@ trigger gg_trg_Naim_Rapair_O= null
 trigger gg_trg_Abordach_D_or_Ot= null
 trigger gg_trg_AbordachSystemDefence1_O= null
 trigger gg_trg_AbordachSystemDefence2_O= null
+trigger gg_trg_MageTp= null
 trigger gg_trg_NotGrade= null
 trigger gg_trg_ManabobmaStart= null
 trigger gg_trg_Manabomba2= null
@@ -651,6 +657,12 @@ trigger gg_trg_F2_Map= null
 trigger gg_trg_ToKill2= null
 trigger gg_trg_Emerald_Dream_TP_O= null
 trigger gg_trg_Emerald_Dream_TP_OFF_O= null
+trigger gg_trg_Murlok= null
+trigger gg_trg_murlo2= null
+trigger gg_trg_Nagi= null
+trigger gg_trg_Nagi2= null
+trigger gg_trg_nagi= null
+trigger gg_trg_murloki= null
 trigger gg_trg_murlokiEnd= null
 trigger gg_trg_NagaPas= null
 trigger gg_trg_StartHorde_Copy_2= null
@@ -1418,12 +1430,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_nagi= null
-trigger gg_trg_murloki= null
-trigger gg_trg_Nagi2= null
-trigger gg_trg_Nagi= null
-trigger gg_trg_murlo2= null
-trigger gg_trg_Murlok= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1538,6 +1544,7 @@ integer max= 0
     
 multiboarditem array MultiboardItem
 integer array MultiboardItemOwnerIndex
+texttag TT
 unit TryBuild_u
 group Navy= CreateGroup()
 group Port= CreateGroup()
@@ -1550,6 +1557,7 @@ endglobals
 native GetUnitGoldCost takes integer unitid returns integer
 native GetUnitWoodCost takes integer unitid returns integer
 native UnitAlive takes unit id returns boolean
+native GetPlayerUnitTypeCount takes player p, integer unitid returns integer
 
 
 //library Example:
@@ -1577,17 +1585,25 @@ call BlzFrameSetAbsPoint(HPText, FRAMEPOINT_CENTER, 0.3245, 0.1195)
 set MPText=BlzCreateFrame("MPText", gameUI, 0, 0)
 call BlzFrameSetAbsPoint(MPText, FRAMEPOINT_CENTER, 0.4755, 0.1195)
 
+set Food01=BlzCreateFrame("Food01", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(Food01, FRAMEPOINT_CENTER, 0.28, 0.08)
+
+set Food02=BlzCreateFrame("Food02", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(Food02, FRAMEPOINT_CENTER, 0.28, 0.07)
+
+
+
 set Gold01=BlzCreateFrame("Gold01", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Gold01, FRAMEPOINT_CENTER, 0.28, 0.065)
+call BlzFrameSetAbsPoint(Gold01, FRAMEPOINT_CENTER, 0.28, 0.05)
 
 set Gold02=BlzCreateFrame("Gold02", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Gold02, FRAMEPOINT_CENTER, 0.28, 0.055)
+call BlzFrameSetAbsPoint(Gold02, FRAMEPOINT_CENTER, 0.28, 0.04)
 
 set Wood01=BlzCreateFrame("Wood01", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Wood01, FRAMEPOINT_CENTER, 0.28, 0.035)
+call BlzFrameSetAbsPoint(Wood01, FRAMEPOINT_CENTER, 0.28, 0.02)
 
 set Wood02=BlzCreateFrame("Wood02", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Wood02, FRAMEPOINT_CENTER, 0.28, 0.025)
+call BlzFrameSetAbsPoint(Wood02, FRAMEPOINT_CENTER, 0.28, 0.01)
 
 set Income01=BlzCreateFrame("Income01", gameUI, 0, 0)
 call BlzFrameSetAbsPoint(Income01, FRAMEPOINT_CENTER, 0.23, 0.08)
@@ -2558,33 +2574,32 @@ function TimedUpdate takes unit u,player p returns boolean
 endfunction
 //***************************************************************************
 //*  ChangeSpellLimit
-
-
+//
+//
 //function OnlyFaselessFarms takes nothing returns boolean
 //    return GetUnitTypeId(GetFilterUnit())=='u02E'
 //
 //endfunction
-
-
 //
-//function FaselessFarmLimit takes player p returns nothing
-//    local integer i
-//    local integer NowLimit = GetPlayerTechMaxAllowed(p,'u02E')
-//    local group g = CreateGroup()
-//    //local boolexpr b = Condition(function OnlyFaselessFarms)
-//    set i = GetPlayerUnitTypeCount(p,'u02E')
-//    
-//    if i <= NowLimit then
-//        call SetPlayerAbilityAvailable(p,'u02E',true)
-//    else
-//        call SetPlayerAbilityAvailable(p,'u02E',true)
-//    endif
-//    
-//    
-//    //call DestroyBoolExpr(b)
-//    //set b = null
 //
-//endfunction
+//
+function FaselessFarmLimit takes player p returns nothing
+    local integer i
+    local integer NowLimit= GetPlayerTechMaxAllowed(p, 'u02E')
+    local group g= CreateGroup()
+    //local boolexpr b = Condition(function OnlyFaselessFarms)
+    set i=GetPlayerUnitTypeCount(p, 'u02E')
+    
+    if i <= NowLimit then
+        call SetPlayerAbilityAvailable(p, 'u02E', true)
+    else
+        call SetPlayerAbilityAvailable(p, 'u02E', false)
+    endif
+    
+    
+    call DestroyGroup(g)
+    set g=null
+endfunction
 //***************************************************************************
 //*  Counters
 //globals
@@ -4983,6 +4998,10 @@ function InitSounds takes nothing returns nothing
     call SetSoundParamsFromLabel(gg_snd_QuestLog, "QuestUpdate")
     call SetSoundDuration(gg_snd_QuestLog, 2275)
     call SetSoundVolume(gg_snd_QuestLog, 80)
+    set gg_snd_BerserkerCaster=CreateSound("Units/Orc/Grunt/BerserkerCaster.flac", false, true, true, 0, 0, "SpellsEAX")
+    call SetSoundParamsFromLabel(gg_snd_BerserkerCaster, "BerserkerRage")
+    call SetSoundDuration(gg_snd_BerserkerCaster, 2092)
+    call SetSoundVolume(gg_snd_BerserkerCaster, 127)
 endfunction
 
 //***************************************************************************
@@ -5203,9 +5222,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
     set u=BlzCreateUnitWithSkin(p, 'h05P', - 4430.8, - 26979.3, 262.801, 'h05P')
     set u=BlzCreateUnitWithSkin(p, 'h0GI', - 4041.0, - 26928.6, 320.800, 'h0GI')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'h0GI', - 4060.8, - 27086.3, 119.963, 'h0GI')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'n056', - 3042.8, - 27826.5, 266.647, 'n056')
     set u=BlzCreateUnitWithSkin(p, 'H0JU', - 2933.8, - 28272.3, 256.530, 'H0JU')
     call SetHeroLevel(u, 25, false)
@@ -5299,6 +5316,7 @@ function CreateNeutralHostileBuildings takes nothing returns nothing
 
     set u=BlzCreateUnitWithSkin(p, 'h05O', 26400.0, - 24864.0, 270.000, 'h05O')
     set u=BlzCreateUnitWithSkin(p, 'h06E', 30496.0, - 20128.0, 270.000, 'h06E')
+    set u=BlzCreateUnitWithSkin(p, 'h05F', - 18272.0, - 20960.0, 270.000, 'h05F')
     set gg_unit_h09P_0009=BlzCreateUnitWithSkin(p, 'h09P', 8032.0, 21408.0, 270.000, 'h09P')
     set gg_unit_h0AG_0010=BlzCreateUnitWithSkin(p, 'h0AG', - 10112.0, - 11648.0, 270.000, 'h0AG')
     set gg_unit_h0E2_0011=BlzCreateUnitWithSkin(p, 'h0E2', - 17056.0, - 6880.0, 270.000, 'h0E2')
@@ -5326,6 +5344,7 @@ function CreateNeutralHostileBuildings takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h00N', 22304.0, - 11936.0, 270.000, 'h00N')
     set gg_unit_h00M_0113=BlzCreateUnitWithSkin(p, 'h00M', 15904.0, - 16096.0, 270.000, 'h00M')
     set u=BlzCreateUnitWithSkin(p, 'h06G', 27104.0, - 18528.0, 270.000, 'h06G')
+    set gg_unit_h0A0_0120=BlzCreateUnitWithSkin(p, 'h0A0', 640.0, - 21760.0, 270.000, 'h0A0')
     set u=BlzCreateUnitWithSkin(p, 'h00V', 20896.0, - 5984.0, 270.000, 'h00V')
     set gg_unit_h00W_0145=BlzCreateUnitWithSkin(p, 'h00W', 25120.0, 27232.0, 270.199, 'h00W')
     set u=BlzCreateUnitWithSkin(p, 'h01B', 23968.0, 16608.0, 270.000, 'h01B')
@@ -5590,7 +5609,6 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     set gg_unit_n003_0118=BlzCreateUnitWithSkin(p, 'n003', - 28544.0, - 13440.0, 270.000, 'n003')
     call WaygateSetDestination(gg_unit_n003_0118, GetRectCenterX(gg_rct_QtunIn), GetRectCenterY(gg_rct_QtunIn))
     call WaygateActivate(gg_unit_n003_0118, true)
-    set gg_unit_h0A0_0120=BlzCreateUnitWithSkin(p, 'h0A0', 640.0, - 21760.0, 270.000, 'h0A0')
     set gg_unit_n003_0123=BlzCreateUnitWithSkin(p, 'n003', - 13952.0, - 19584.0, 270.000, 'n003')
     call WaygateSetDestination(gg_unit_n003_0123, GetRectCenterX(gg_rct_QtunOu2), GetRectCenterY(gg_rct_QtunOu2))
     call WaygateActivate(gg_unit_n003_0123, true)
@@ -6180,6 +6198,7 @@ endfunction
 
 
 
+
 // Штука собственного производства, для того чтобы "починить земену юнитов"
 function ReplaceUnit takes unit whichUnit,integer newUnitId,integer unitStateMethod returns unit
     local unit oldUnit= whichUnit
@@ -6639,11 +6658,13 @@ function Trig_Hide_Default_UI_And_Reshow_some_Actions takes nothing returns noth
     // TextResourses
     call BlzFrameSetText(BlzGetFrameByName("Gold01", 0), "|cffd6ad66Золото:")
     call BlzFrameSetText(BlzGetFrameByName("Wood01", 0), "|cffd6ad66Дерево:")
+    call BlzFrameSetText(BlzGetFrameByName("Food01", 0), "Лимит Героев")
     call BlzFrameSetText(BlzGetFrameByName("Income01", 0), "|cffd6ad66Доход:")
     call BlzFrameSetText(BlzGetFrameByName("Income0201", 0), "|cffd6ad66Расход:")
     call BlzFrameSetText(BlzGetFrameByName("Income0301", 0), "|cffd6ad66Баланс:")
     call BlzFrameSetText(BlzGetFrameByName("Gold02", 0), "0")
     call BlzFrameSetText(BlzGetFrameByName("Wood02", 0), "0")
+    call BlzFrameSetText(BlzGetFrameByName("Food02", 0), "0")
     call BlzFrameSetText(BlzGetFrameByName("Income02", 0), "0")
     call BlzFrameSetText(BlzGetFrameByName("Income0202", 0), "0")
     call BlzFrameSetText(BlzGetFrameByName("Income0302", 0), "0")
@@ -6652,6 +6673,14 @@ function Trig_Hide_Default_UI_And_Reshow_some_Actions takes nothing returns noth
     call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT, 0))
     call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT, 0), FRAMEPOINT_CENTER, 0.4, 0.55)
     call BlzFrameSetScale(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT, 0), 2.06)
+    
+    
+    
+    //call BlzFrameSetVisible(BlzGetFrameByName("Food01",0), true)
+    //call BlzFrameSetVisible(BlzGetFrameByName("Food02",0), true)
+    //call BlzFrameClearAllPoints(BlzGetFrameByName("Food01",0),0))
+    //call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT,0), FRAMEPOINT_CENTER, 0.4, 0.55)
+    //call BlzFrameSetScale(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT,0), 2.06)
 endfunction
 
 //===========================================================================
@@ -6660,6 +6689,7 @@ function InitTrig_Hide_Default_UI_And_Reshow_some takes nothing returns nothing
     call TriggerRegisterTimerEventSingle(gg_trg_Hide_Default_UI_And_Reshow_some, 0.00)
     call TriggerAddAction(gg_trg_Hide_Default_UI_And_Reshow_some, function Trig_Hide_Default_UI_And_Reshow_some_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: ResoursesInterface
@@ -6670,6 +6700,7 @@ function Trig_ResoursesInterface_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(p)
     local integer gold= ( GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) )
     local integer wood= ( GetPlayerState(p, PLAYER_STATE_RESOURCE_LUMBER) )
+    local integer food= ( GetPlayerState(p, PLAYER_STATE_RESOURCE_FOOD_USED) )
     local integer i= 0
     local unit u
     local group g= CreateGroup()
@@ -6694,6 +6725,7 @@ function Trig_ResoursesInterface_Actions takes nothing returns nothing
     call BlzFrameSetText(BlzGetFrameByName("MPText", 0), I2S(R2I(mana[pi])))
     call BlzFrameSetText(BlzGetFrameByName("Gold02", 0), I2S(gold))
     call BlzFrameSetText(BlzGetFrameByName("Wood02", 0), I2S(wood))
+    call BlzFrameSetText(BlzGetFrameByName("Food02", 0), I2S(food))
     call BlzFrameSetText(BlzGetFrameByName("Income02", 0), I2S(R2I(income[pi])))
     
     
@@ -17309,6 +17341,30 @@ function InitTrig_AbordachSystemDefence2_O takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: MageTp
+//===========================================================================
+function Trig_MageTp_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A0IO'
+endfunction
+
+function Trig_MageTp_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    call UnitAddAbility(u, 'Avul')
+    call TriggerSleepAction(0.35)
+    call UnitRemoveAbility(u, 'Avul')
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_MageTp takes nothing returns nothing
+    set gg_trg_MageTp=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_MageTp, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(gg_trg_MageTp, Condition(function Trig_MageTp_Conditions))
+    call TriggerAddAction(gg_trg_MageTp, function Trig_MageTp_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: ManabobmaStart
 //===========================================================================
 function Trig_ManabobmaStart_Conditions takes nothing returns boolean
@@ -17493,7 +17549,7 @@ function Trig_ManabombaDead_Actions takes nothing returns nothing
     set u1=udg_Unit[1]
     set u2=udg_Unit[2]
     set p=udg_LocalPosition3
-    call TriggerSleepAction(( DistanceBetweenPoints(udg_LocalPosition2, udg_LocalPosition3) / 300.00 ))
+    call TriggerSleepAction(( DistanceBetweenPoints(udg_LocalPosition2, udg_LocalPosition3) / 600.00 ))
     call RemoveLocation(udg_LocalPosition2)
     set udg_LocalPosition3=p
     set udg_Unit[1]=u1
@@ -20529,6 +20585,241 @@ function InitTrig_ZdaniyaBezlik_Copy_Copy_2_Copy takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: CreateFFarm
+//===========================================================================
+function Trig_CreateFFarm_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A11G'
+endfunction
+
+function Trig_CreateFFarm_Actions takes nothing returns nothing
+    call FaselessFarmLimit(GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_CreateFFarm takes nothing returns nothing
+    set gg_trg_CreateFFarm=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_CreateFFarm, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_CreateFFarm, Condition(function Trig_CreateFFarm_Conditions))
+    call TriggerAddAction(gg_trg_CreateFFarm, function Trig_CreateFFarm_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: DeadFFarm
+//===========================================================================
+function Trig_DeadFFarm_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTriggerUnit()) == 'u02E'
+endfunction
+
+function Trig_DeadFFarm_Actions takes nothing returns nothing
+    call FaselessFarmLimit(GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_DeadFFarm takes nothing returns nothing
+    set gg_trg_DeadFFarm=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_DeadFFarm, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_DeadFFarm, Condition(function Trig_DeadFFarm_Conditions))
+    call TriggerAddAction(gg_trg_DeadFFarm, function Trig_DeadFFarm_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: FinishFaceBuild
+//===========================================================================
+function Trig_FinishFaceBuild_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'h0HZ' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_FinishFaceBuild_Actions takes nothing returns nothing
+    call GroupAddUnitSimple(GetConstructedStructure(), udg_FacelessLumberBuildings)
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_25719")
+endfunction
+
+//===========================================================================
+function InitTrig_FinishFaceBuild takes nothing returns nothing
+    set gg_trg_FinishFaceBuild=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_FinishFaceBuild, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    call TriggerAddCondition(gg_trg_FinishFaceBuild, Condition(function Trig_FinishFaceBuild_Conditions))
+    call TriggerAddAction(gg_trg_FinishFaceBuild, function Trig_FinishFaceBuild_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: DeadFaceBuild
+//===========================================================================
+function Trig_DeadFaceBuild_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h0HZ' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_DeadFaceBuild_Actions takes nothing returns nothing
+    call GroupRemoveUnitSimple(GetTriggerUnit(), udg_FacelessLumberBuildings)
+endfunction
+
+//===========================================================================
+function InitTrig_DeadFaceBuild takes nothing returns nothing
+    set gg_trg_DeadFaceBuild=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_DeadFaceBuild, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_DeadFaceBuild, Condition(function Trig_DeadFaceBuild_Conditions))
+    call TriggerAddAction(gg_trg_DeadFaceBuild, function Trig_DeadFaceBuild_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: LumberTest
+//===========================================================================
+
+
+function KillTextTag takes nothing returns nothing
+    local texttag t= TT
+    call TriggerSleepAction(3)
+    call DestroyTextTag(t)
+    set t=null
+endfunction
+
+
+function TT2 takes nothing returns nothing
+    local texttag t= CreateTextTag()
+    local player p= Player(0)
+    local string s= I2S(5)
+    local destructable f= GetEnumDestructable()
+    local location l= Location(GetDestructableX(f), GetDestructableY(f))
+    
+    call DisplayTextToPlayer(Player(0), 0, 0, "Луп разрушаемых")
+    call AdjustPlayerStateBJ(5, p, PLAYER_STATE_RESOURCE_LUMBER)
+    
+    
+    set t=CreateTextTagLocBJ(s, l, 0, 10, 0.00, 100, 0.00, 0)
+    call SetTextTagPermanent(t, false)
+    call SetTextTagLifespan(t, 3.00)
+    call SetTextTagVelocity(t, 50.00, 90)
+    call SetTextTagFadepoint(t, 1.00)
+
+    call RemoveLocation(l)
+    set l=null
+    set f=null
+    set TT=t
+    set t=null
+    set p=null
+    set s=null
+    call ExecuteFunc("KillTextTag")
+endfunction
+    
+
+
+function Trig_LumberTest_Actions takes nothing returns nothing
+    local group g= CreateGroup()
+    local destructable d
+    local unit u= null
+    local location l
+    local rect r
+    
+    local real radius
+    local real centerX
+    local real centerY
+    call DisplayTextToPlayer(Player(0), 0, 0, "0")
+    call GroupAddGroup(udg_FacelessLumberBuildings, g)
+    //call DisplayTextToPlayer(Player(0),0,0, I2S(CountUnitsInGroup(g)))
+    loop
+        set u=FirstOfGroup(g)
+        exitwhen u == null
+        
+        call DisplayTextToPlayer(Player(0), 0, 0, "Луп")
+        set udg_LocalPlayer=GetOwningPlayer(u)
+        set l=GetUnitLoc(u)
+        //call EnumDestructablesInCircleBJ( 500.00, l, function TT2 )
+        
+        
+        set radius=650
+        
+        //set r = GetRectFromCircleBJ(loc, radius)
+        //set centerX = GetLocationX(l)
+        //set centerY = GetLocationY(l)
+        
+        set bj_enumDestructableCenter=l
+        set bj_enumDestructableRadius=radius
+        set r=GetRectFromCircleBJ(l, radius)
+        //set r = Rect(centerX - radius, centerY - radius, centerX + radius, centerY + radius)
+        call DisplayTextToPlayer(Player(0), 0, 0, "Луп2")
+        call EnumDestructablesInRect(r, filterEnumDestructablesInCircleBJ, function TT2)
+        call RemoveRect(r)
+        
+        
+        
+        
+        
+        
+        call RemoveLocation(l)
+        call GroupRemoveUnit(g, u)
+        set r=null
+        set l=null
+        call TriggerSleepAction(0.01)
+    endloop
+    call RemoveRect(r)
+    set r=null
+    call RemoveLocation(l)
+    set l=null
+    call DestroyGroup(g)
+    set u=null
+    set g=null
+endfunction
+
+//===========================================================================
+function InitTrig_LumberTest takes nothing returns nothing
+    set gg_trg_LumberTest=CreateTrigger()
+    //call DisableTrigger(gg_trg_LumberTest)
+    call TriggerRegisterTimerEventPeriodic(gg_trg_LumberTest, 5.00)
+    call TriggerAddAction(gg_trg_LumberTest, function Trig_LumberTest_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Spell2
+//===========================================================================
+function Trig_Spell2_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetAttacker(), 'A122') == 1 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE)
+endfunction
+
+function Trig_Spell2_Actions takes nothing returns nothing
+    call UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.01 ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
+endfunction
+
+//===========================================================================
+function InitTrig_Spell2 takes nothing returns nothing
+    set gg_trg_Spell2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Spell2, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_Spell2, Condition(function Trig_Spell2_Conditions))
+    call TriggerAddAction(gg_trg_Spell2, function Trig_Spell2_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: SpellRes
+//===========================================================================
+function Trig_SpellRes_Conditions takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A123', GetKillingUnitBJ()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_SpellRes_Actions takes nothing returns nothing
+    call BlzEndUnitAbilityCooldown(GetKillingUnitBJ(), 'A123')
+endfunction
+
+//===========================================================================
+function InitTrig_SpellRes takes nothing returns nothing
+    set gg_trg_SpellRes=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_SpellRes, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_SpellRes, Condition(function Trig_SpellRes_Conditions))
+    call TriggerAddAction(gg_trg_SpellRes, function Trig_SpellRes_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: RotStart
 //===========================================================================
 function Trig_RotStart_Conditions takes nothing returns boolean
@@ -20554,13 +20845,13 @@ endfunction
 // Trigger: Attacked
 //===========================================================================
 function Trig_Attacked_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetAttacker(), 'A132') > 0
+    return GetUnitAbilityLevel(GetAttacker(), 'A134') > 0
 endfunction
 
 function Trig_Attacked_Actions takes nothing returns nothing
     local unit u= GetAttacker()
     call TriggerSleepAction(0.5)
-    call UnitRemoveAbility(u, 'A132')
+    call UnitRemoveAbility(u, 'A134')
     set u=null
 endfunction
 
@@ -23375,18 +23666,57 @@ endfunction
 function Trig_BerserkOrc_Actions takes nothing returns nothing
     local unit u
     local integer i= GetRandomInt(1, 10)
-    
+    local sound s= gg_snd_BerserkerCaster
     if i == 1 then
         set u=GetAttacker()
         
-        call UnitAddAbility(u, 'A0Z9')
-        call TriggerSleepAction(0.650)
-        call IssueImmediateOrder(u, "berserk")
-        call TriggerSleepAction(0.70)
-        call UnitRemoveAbility(u, 'A0Z9')
+        call UnitAddAbility(u, 'A13F')
+        call UnitAddAbility(u, 'A13E')
+        
+            
+        call AttachSoundToUnit(s, u)
+        call SetSoundVolume(s, 100)
+        call StartSound(s)
+        call KillSoundWhenDone(s)
+        
+        
+        
+        call TriggerSleepAction(7)
+
+        call UnitRemoveAbility(u, 'A13F')
+        call UnitRemoveAbility(u, 'A13E')
     endif
     set u=null
 endfunction
+
+
+//
+//function Trig_BerserkOrc_Actions takes nothing returns nothing
+//    local unit u
+//    local integer i = GetRandomInt(1, 10)
+//    local sound s 
+//    if i == 1 then
+//        set u = GetAttacker()
+//        
+//        call UnitAddAbility( u,'A13F' )
+//        call UnitAddAbility( u,'A13E' )
+//        
+//        set s =CreateSound(2gg_snd_BerserkerCaster, false, false, true, 12700, 12700, "")
+//        call AttachSoundToUnit(s, u)
+//        call SetSoundVolume(s, 100)
+//        //call PlaySound(gg_snd_BerserkerCaster)
+//        
+//        call StartSound(s)
+//        call KillSoundWhenDone(s)
+//        
+//        
+//        call TriggerSleepAction( 7 )
+//
+//        call UnitRemoveAbility( u,'A13F' )
+//        call UnitRemoveAbility( u,'A13E' )
+//    endif
+//    set u = null
+//endfunction
 
 //===========================================================================
 function InitTrig_BerserkOrc takes nothing returns nothing
@@ -41190,6 +41520,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Abordach_D_or_Ot()
     call InitTrig_AbordachSystemDefence1_O()
     call InitTrig_AbordachSystemDefence2_O()
+    call InitTrig_MageTp()
     call InitTrig_ManabobmaStart()
     call InitTrig_Manabomba2()
     call InitTrig_ManabombaDead()
@@ -41251,6 +41582,13 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ZdaniyaBezlik_Copy_Copy()
     call InitTrig_ZdaniyaBezlik_Copy_Copy_2()
     call InitTrig_ZdaniyaBezlik_Copy_Copy_2_Copy()
+    call InitTrig_CreateFFarm()
+    call InitTrig_DeadFFarm()
+    call InitTrig_FinishFaceBuild()
+    call InitTrig_DeadFaceBuild()
+    call InitTrig_LumberTest()
+    call InitTrig_Spell2()
+    call InitTrig_SpellRes()
     call InitTrig_RotStart()
     call InitTrig_Attacked()
     call InitTrig_HordeOn()
@@ -41816,11 +42154,13 @@ endfunction
 function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_runSeachHandle)
     call ConditionalTriggerExecute(gg_trg_Unit_Indexer)
+    call ConditionalTriggerExecute(gg_trg_Hide_Default_UI_And_Reshow_some)
     call ConditionalTriggerExecute(gg_trg_ResoursesInterface)
     call ConditionalTriggerExecute(gg_trg_Interface)
     call ConditionalTriggerExecute(gg_trg_MainInfo)
     call ConditionalTriggerExecute(gg_trg_Initial_things)
     call ConditionalTriggerExecute(gg_trg_InitForEconomics)
+    call ConditionalTriggerExecute(gg_trg_LumberTest)
     call ConditionalTriggerExecute(gg_trg_BloodClose)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForNavy)
