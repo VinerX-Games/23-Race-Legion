@@ -51975,7 +51975,7 @@ STRING 8616
 }
 
 STRING 8617
-// Units: n04T (|cff964296Мертвый воин|r), EditorSuffix (Name - Editor Suffix)
+// Abilities: A0BX (|cff6e6e6eПорча|r), EditorSuffix (Editor Suffix)
 {
 (нежить)
 }
@@ -52011,7 +52011,7 @@ STRING 8622
 }
 
 STRING 8623
-// Units: n04U (|cff964296Страж Смерти|r), EditorSuffix (Name - Editor Suffix)
+// Abilities: A0BZ (|cff6e6e6eЯдовитое вещество |r), EditorSuffix (Editor Suffix)
 {
 (нежить)
 }
@@ -52305,7 +52305,7 @@ STRING 8671
 }
 
 STRING 8672
-// Units: n04V (|cff964296Убийца|r), EditorSuffix (Name - Editor Suffix)
+// Abilities: A0C4 (|cff6e6e6eНевосприимчивость к магии|r), EditorSuffix (Editor Suffix)
 {
 (нежить)
 }
@@ -52425,7 +52425,7 @@ STRING 8691
 }
 
 STRING 8692
-// Units: n04X (|cff964296Мертвый маг), EditorSuffix (Name - Editor Suffix)
+// Abilities: A0C6 (|cff6e6e6eУжасные эксперементы|r), EditorSuffix (Editor Suffix)
 {
 (нежить)
 }
@@ -53269,7 +53269,7 @@ STRING 8828
 }
 
 STRING 8829
-// Units: n04Y (|cff964296Банши), EditorSuffix (Name - Editor Suffix)
+// Buffs/Effects: B02P (), EditorSuffix (Editor Suffix)
 {
 (нежить)
 }
@@ -65860,7 +65860,7 @@ STRING 10914
 }
 
 STRING 10915
-// Abilities: A0BX (|cff6e6e6eПорча|r), EditorSuffix (Editor Suffix)
+// Upgrades: R0DQ (Улучшенные топоры,Улучшенные пилы), EditorSuffix (Editor Suffix)
 {
 (нежить)
 }
@@ -136550,12 +136550,6 @@ STRING 22479
 Усиливает плазму Сущностей, повышая из броню
 }
 
-STRING 22480
-// Units: h0JC (|cff964296Лучница|r), EditorSuffix (Name - Editor Suffix)
-{
-(врайкул)(Дальник)
-}
-
 STRING 22481
 // Units: h0IF (|cff9370dbБессмертый страж|r), EditorSuffix (Name - Editor Suffix)
 {
@@ -136815,12 +136809,6 @@ STRING 22523
 // Units: h0JJ (|cff964296Казармы), Hotkey (Hotkey)
 {
 T
-}
-
-STRING 22524
-// Abilities: A0BZ (|cff6e6e6eЯдовитое вещество |r), EditorSuffix (Editor Suffix)
-{
-(нежить)
 }
 
 STRING 22525
@@ -151477,7 +151465,7 @@ STRING 24919
 }
 
 STRING 24920
-// Abilities: A134 (Активировать Гниль), EditorSuffix (Editor Suffix)
+// Units: n04T (|cff964296Мертвый воин|r), EditorSuffix (Name - Editor Suffix)
 {
 (Отрекшиеся)
 }
@@ -153094,18 +153082,6 @@ STRING 25185
 // Units: o02X (|cff964296Гнилевозка), Name (Name)
 {
 |cff964296Гнилевозка
-}
-
-STRING 25186
-// Abilities: A0C4 (|cff6e6e6eНевосприимчивость к магии|r), EditorSuffix (Editor Suffix)
-{
-(нежить)
-}
-
-STRING 25187
-// Abilities: A0C6 (|cff6e6e6eУжасные эксперементы|r), EditorSuffix (Editor Suffix)
-{
-(нежить)
 }
 
 STRING 25188
@@ -155630,12 +155606,6 @@ STRING 25585
 |cff964296Темный следопыт|r
 }
 
-STRING 25586
-// Units: h0JN (|cff964296Темный следопыт|r), EditorSuffix (Name - Editor Suffix)
-{
-(врайкул)(Дальник)
-}
-
 STRING 25587
 // Units: h0JN (|cff964296Темный следопыт|r), Tip (Tooltip - Basic)
 {
@@ -155778,18 +155748,6 @@ STRING 25609
 // Units: n04Y (|cff964296Банши), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa20 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaОбычный|r|n|nЛегкий воин ближнего боя. Способен на |cff6e6e6eКанибализм|r.
-}
-
-STRING 25610
-// Buffs/Effects: B02P (), EditorSuffix (Editor Suffix)
-{
-(нежить)
-}
-
-STRING 25611
-// Upgrades: R0DQ (Улучшенные топоры,Улучшенные пилы), EditorSuffix (Editor Suffix)
-{
-(нежить)
 }
 
 STRING 25612
@@ -157912,5 +157870,881 @@ STRING 25959
 // Units: O02Z (|cffff370bГенерал Орды), Ubertip (Tooltip - Extended)
 {
 Герой-воин. Мастер ближнего боя, способный выдержать значительный урон. Может изучить «Ударную волну», «Громовую поступь», «Ауру выносливости» и «Реинкарнацию».
+}
+
+STRING 25960
+// Units: n04U (|cff964296Страж Смерти|r), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25961
+// Units: h0JA (|cff964296Валкира|r), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25962
+// Units: o02X (|cff964296Гнилевозка), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25963
+// Units: n04V (|cff964296Убийца|r), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25964
+// Units: h0JC (|cff964296Лучница|r), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25965
+// Units: u02C (|cff964296Поганище|r), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25966
+// Units: h0JD (|cff964296Брошенный дом), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25967
+// Units: h0JI (|cff964296Лабаратория), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25968
+// Units: h0JJ (|cff964296Казармы), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25969
+// Units: h0JK (|cff964296Мастеская смерти), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25970
+// Units: h0JL (|cff964296Бастион), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25971
+// Units: h0JM (|cff964296Башня), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25972
+// Units: h0JN (|cff964296Темный следопыт|r), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25973
+// Units: h0JO (|cff964296Кузня), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25974
+// Units: h0JP (|cff964296Ратуша), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25975
+// Units: h0JQ (|cff964296Крепость), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25976
+// Units: n04X (|cff964296Мертвый маг), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25977
+// Units: n04Y (|cff964296Банши), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25978
+// Units: o02Y (|cff964296Улучшенная Гнилевозка), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25979
+// Units: h0JR (|cff964296Алтарь Королевы), EditorSuffix (Name - Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25980
+// Abilities: A134 (Активировать Гниль), EditorSuffix (Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25981
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), EditorSuffix (Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 25982
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 25983
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 25984
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 25985
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 25986
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Name (Name)
+{
+|cff964296Улучшенные инструменты
+}
+
+STRING 25987
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Name (Name)
+{
+|cff964296Улучшенные инструменты
+}
+
+STRING 25988
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Name (Name)
+{
+|cff964296Улучшенные инструменты
+}
+
+STRING 25989
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Name (Name)
+{
+|cff964296Улучшенные инструменты
+}
+
+STRING 25990
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Name (Name)
+{
+|cff964296Улучшенные инструменты
+}
+
+STRING 25991
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Name (Name)
+{
+|cff964296Улучшенные инструменты
+}
+
+STRING 25992
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Tip (Tooltip)
+{
+Исследовать улучшенные инструменты
+}
+
+STRING 25993
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Tip (Tooltip)
+{
+Исследовать улучшенные инструменты
+}
+
+STRING 25994
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Tip (Tooltip)
+{
+Исследовать улучшенные инструменты
+}
+
+STRING 25995
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Tip (Tooltip)
+{
+Исследовать улучшенные инструменты
+}
+
+STRING 25996
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Tip (Tooltip)
+{
+Исследовать улучшенные инструменты
+}
+
+STRING 25997
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Tip (Tooltip)
+{
+Исследовать улучшенные инструменты
+}
+
+STRING 25998
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Ubertip (Tooltip - Extended)
+{
+Увеличивают объем переносимой работниками древесины на 5.
+}
+
+STRING 25999
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Ubertip (Tooltip - Extended)
+{
+Увеличивают объем переносимой работниками древесины на 5.
+}
+
+STRING 26000
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Ubertip (Tooltip - Extended)
+{
+Увеличивают объем переносимой работниками древесины на 5.
+}
+
+STRING 26001
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Ubertip (Tooltip - Extended)
+{
+Увеличивают объем переносимой работниками древесины на 5.
+}
+
+STRING 26002
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Ubertip (Tooltip - Extended)
+{
+Увеличивают объем переносимой работниками древесины на 5.
+}
+
+STRING 26003
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Ubertip (Tooltip - Extended)
+{
+Увеличивают объем переносимой работниками древесины на 5.
+}
+
+STRING 26004
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 26005
+// Upgrades: R0FI (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 26006
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cff964296Железные мечи|r
+}
+
+STRING 26007
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cff964296Железные мечи|r
+}
+
+STRING 26008
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cff964296Железные мечи|r
+}
+
+STRING 26009
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cff964296Железные мечи|r
+}
+
+STRING 26010
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cff964296Железные мечи|r
+}
+
+STRING 26011
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cff964296Железные мечи|r
+}
+
+STRING 26012
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cff964296железные мечи|r
+}
+
+STRING 26013
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cff964296железные мечи|r
+}
+
+STRING 26014
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cff964296железные мечи|r
+}
+
+STRING 26015
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cff964296железные мечи|r
+}
+
+STRING 26016
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cff964296железные мечи|r
+}
+
+STRING 26017
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cff964296железные мечи|r
+}
+
+STRING 26018
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинов ближнего боя |cff964296Отрекшихся.
+}
+
+STRING 26019
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинов ближнего боя |cff964296Отрекшихся.
+}
+
+STRING 26020
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинов ближнего боя |cff964296Отрекшихся.
+}
+
+STRING 26021
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 26022
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 26023
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 26024
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 26025
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 26026
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 26027
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), EditorSuffix (Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 26028
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинов ближнего боя |cff964296Отрекшихся.
+}
+
+STRING 26029
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинов ближнего боя |cff964296Отрекшихся.
+}
+
+STRING 26030
+// Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинов ближнего боя |cff964296Отрекшихся.
+}
+
+STRING 26031
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cff964296Железная броня|r
+}
+
+STRING 26032
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cff964296Железная броня|r
+}
+
+STRING 26033
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cff964296Железная броня|r
+}
+
+STRING 26034
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cff964296Железная броня|r
+}
+
+STRING 26035
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cff964296Железная броня|r
+}
+
+STRING 26036
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cff964296Железная броня|r
+}
+
+STRING 26037
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 26038
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 26039
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 26040
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 26041
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 26042
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+A
+}
+
+STRING 26043
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cff964296железную броню|r
+}
+
+STRING 26044
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cff964296железную броню|r
+}
+
+STRING 26045
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cff964296железную броню|r
+}
+
+STRING 26046
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cff964296железную броню|r
+}
+
+STRING 26047
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cff964296железную броню|r
+}
+
+STRING 26048
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cff964296железную броню|r
+}
+
+STRING 26049
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню  воинов ближнего боя |cff964296Отрекшихся.
+}
+
+STRING 26050
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню  воинов ближнего боя |cff964296Отрекшихся.
+}
+
+STRING 26051
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню  воинов ближнего боя |cff964296Отрекшихся.
+}
+
+STRING 26052
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), EditorSuffix (Editor Suffix)
+{
+(Отрекшися)
+}
+
+STRING 26053
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню  воинов ближнего боя |cff964296Отрекшихся.
+}
+
+STRING 26054
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню  воинов ближнего боя |cff964296Отрекшихся.
+}
+
+STRING 26055
+// Upgrades: R0FK (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню  воинов ближнего боя |cff964296Отрекшихся.
+}
+
+STRING 26056
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cff964296Железные снаряды|r
+}
+
+STRING 26057
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cff964296Железные снаряды|r
+}
+
+STRING 26058
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cff964296Железные снаряды|r
+}
+
+STRING 26059
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cff964296Железные снаряды|r
+}
+
+STRING 26060
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cff964296Железные снаряды|r
+}
+
+STRING 26061
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Name (Name)
+{
+|cff964296Железные снаряды|r
+}
+
+STRING 26062
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cff964296железные снаряды|r
+}
+
+STRING 26063
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cff964296железные снаряды|r
+}
+
+STRING 26064
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cff964296железные снаряды|r
+}
+
+STRING 26065
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cff964296железные снаряды|r
+}
+
+STRING 26066
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cff964296железные снаряды|r
+}
+
+STRING 26067
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Tip (Tooltip)
+{
+Исследовать |cff964296железные снаряды|r
+}
+
+STRING 26068
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинов дальнего боя |cff964296Отрекшихся.
+}
+
+STRING 26069
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинов дальнего боя |cff964296Отрекшихся.
+}
+
+STRING 26070
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинов дальнего боя |cff964296Отрекшихся.
+}
+
+STRING 26071
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 26072
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 26073
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 26074
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 26075
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 26076
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+{
+Q
+}
+
+STRING 26077
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), EditorSuffix (Editor Suffix)
+{
+(Отрекшиеся)
+}
+
+STRING 26078
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинов дальнего боя |cff964296Отрекшихся.
+}
+
+STRING 26079
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинов дальнего боя |cff964296Отрекшихся.
+}
+
+STRING 26080
+// Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Ubertip (Tooltip - Extended)
+{
+Увеличивают урон от атак воинов дальнего боя |cff964296Отрекшихся.
+}
+
+STRING 26081
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cff964296Легкая броня|r
+}
+
+STRING 26082
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cff964296Легкая броня|r
+}
+
+STRING 26083
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cff964296Легкая броня|r
+}
+
+STRING 26084
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cff964296Легкая броня|r
+}
+
+STRING 26085
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cff964296Легкая броня|r
+}
+
+STRING 26086
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Name (Name)
+{
+|cff964296Легкая броня|r
+}
+
+STRING 26087
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 26088
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 26089
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 26090
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 26091
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 26092
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+{
+S
+}
+
+STRING 26093
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cff964296Легкую броню|r
+}
+
+STRING 26094
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cff964296Легкую броню|r
+}
+
+STRING 26095
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cff964296Легкую броню|r
+}
+
+STRING 26096
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cff964296Легкую броню|r
+}
+
+STRING 26097
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cff964296Легкую броню|r
+}
+
+STRING 26098
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
+{
+Исследовать |cff964296Легкую броню|r
+}
+
+STRING 26099
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню  воинов дальнего боя |cff964296Отрекшихся.
+}
+
+STRING 26100
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню  воинов дальнего боя |cff964296Отрекшихся.
+}
+
+STRING 26101
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню  воинов дальнего боя |cff964296Отрекшихся.
+}
+
+STRING 26102
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), EditorSuffix (Editor Suffix)
+{
+(Отрекшися)
+}
+
+STRING 26103
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню  воинов дальнего боя |cff964296Отрекшихся.
+}
+
+STRING 26104
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню  воинов дальнего боя |cff964296Отрекшихся.
+}
+
+STRING 26105
+// Upgrades: R0FM (Железная броня,Стальная броня,Мифриловая б), Ubertip (Tooltip - Extended)
+{
+Усиливает броню  воинов дальнего боя |cff964296Отрекшихся.
 }
 
