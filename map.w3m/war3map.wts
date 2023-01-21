@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-23 Race Legion 0.9150
+23 Race Legion 0.95
 }
 
 STRING 4
@@ -59903,6 +59903,30 @@ STRING 9929
 Атака наносит больше урона.
 }
 
+STRING 9930
+// Abilities: A13H (Берсек), Name (Name)
+{
+Берсек
+}
+
+STRING 9931
+// Abilities: A13H (Берсек), EditorSuffix (Editor Suffix)
+{
+(Орда скрыто Тролль)
+}
+
+STRING 9932
+// Abilities: A0Z9 (Берсерк), Tip (Tooltip - Normal)
+{
+Ярость
+}
+
+STRING 9933
+// Abilities: A13F (Бонус к скорости атаки 20%), Name (Name)
+{
+Бонус к скорости атаки 20%
+}
+
 STRING 9934
 // Abilities: A0E0 (Разрывные пули), EditorSuffix (Editor Suffix)
 {
@@ -59967,6 +59991,12 @@ STRING 9944
 // Abilities: A0E1 (Большая Красная Кнопка (БКК)), EditorSuffix (Editor Suffix)
 {
 (Галликикс)
+}
+
+STRING 9945
+// Abilities: A13F (Бонус к скорости атаки 20%), EditorSuffix (Editor Suffix)
+{
+Общее скрыто
 }
 
 STRING 9946
@@ -60051,6 +60081,30 @@ STRING 9959
 // Doodads: D09X (Пики норт), Name (Name)
 {
 Пики норт
+}
+
+STRING 9960
+// Abilities: A13I (Бонус к скорости атаки 50%), Name (Name)
+{
+Бонус к скорости атаки 50%
+}
+
+STRING 9961
+// Units: O02Z (|cffff370bГенерал Орды), Name (Name)
+{
+|cffff370bГенерал Орды
+}
+
+STRING 9962
+// Units: O02Z (|cffff370bГенерал Орды), Propernames (Proper Names)
+{
+Мар Громовой Рог
+}
+
+STRING 9963
+// Units: O02Z (|cffff370bГенерал Орды), Awakentip (Tooltip - Awaken)
+{
+Воскресить |cffff370bГенерала Орды
 }
 
 STRING 9964
@@ -156376,7 +156430,7 @@ STRING 25717
 }
 
 STRING 25718
-// Abilities: A13F (Бонус к скорости атаки), EditorSuffix (Editor Suffix)
+// Abilities: A13I (Бонус к скорости атаки 50%), EditorSuffix (Editor Suffix)
 {
 Общее скрыто
 }
@@ -156988,6 +157042,12 @@ STRING 25818
 |cff42a8f6Двойной удар|r
 }
 
+STRING 25819
+// Units: O02Z (|cffff370bГенерал Орды), Tip (Tooltip - Basic)
+{
+Нанять |cffff370bГенерала Орды
+}
+
 STRING 25820
 // Abilities: A13A (|cff42a8f6Двойной удар|r), Tip (Tooltip - Normal)
 {
@@ -157004,6 +157064,12 @@ STRING 25822
 // Abilities: A13A (|cff42a8f6Двойной удар|r), Tip (Tooltip - Normal)
 {
 |cff42a8f6Двойной удар|r
+}
+
+STRING 25823
+// Units: O02Z (|cffff370bГенерал Орды), Revivetip (Tooltip - Revive)
+{
+Воскресить |cffff370bГенерала Орды
 }
 
 STRING 25824
@@ -157840,5 +157906,11 @@ STRING 25958
 // Upgrades: R0F7 (Авиабомбы), Hotkey (Hotkey)
 {
 E
+}
+
+STRING 25959
+// Units: O02Z (|cffff370bГенерал Орды), Ubertip (Tooltip - Extended)
+{
+Герой-воин. Мастер ближнего боя, способный выдержать значительный урон. Может изучить «Ударную волну», «Громовую поступь», «Ауру выносливости» и «Реинкарнацию».
 }
 
