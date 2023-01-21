@@ -1430,6 +1430,9 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_StartTableCode= null
+trigger gg_trg_Rep= null
+trigger gg_trg_Untitled_Trigger_001= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1688,6 +1691,9 @@ call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0), true)
 call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0))
 call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0), FRAMEPOINT_CENTER, 0.11, 0.067)
 call BlzFrameSetScale(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0), 0.9)
+
+//call BlzFrameSetVisible(BlzFrameGetParent(BlzGetFrameByName("ORIGIN_FRAME_HERO_BAR",0)),true)
+   // call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR,0), true)
 
 endfunction
 
@@ -5932,7 +5938,7 @@ function CreateRegions takes nothing returns nothing
     set gg_rct_Region_002=Rect(128.0, - 23904.0, 416.0, - 23680.0)
     set gg_rct_Teldrassil=Rect(- 27584.0, 18528.0, - 27136.0, 18944.0)
     set gg_rct_Region_005=Rect(- 27168.0, 18624.0, - 26880.0, 18880.0)
-    set gg_rct_TestRegion=Rect(- 8576.0, - 30656.0, 5536.0, - 24640.0)
+    set gg_rct_TestRegion=Rect(- 8576.0, - 30720.0, 5536.0, - 24640.0)
     set gg_rct_DarkPortal1=Rect(25024.0, - 14624.0, 26048.0, - 13920.0)
     set gg_rct_DarkPortal2=Rect(29152.0, - 24224.0, 30208.0, - 23328.0)
     set gg_rct_Region_009=Rect(- 29472.0, 19456.0, - 28768.0, 19936.0)
@@ -5987,7 +5993,7 @@ function CreateRegions takes nothing returns nothing
     set gg_rct_Yog1_7=Rect(- 23520.0, - 25664.0, - 23392.0, - 25568.0)
     set gg_rct_Yog1_8=Rect(- 23968.0, - 25664.0, - 23840.0, - 25600.0)
     set gg_rct_Shops=Rect(- 30496.0, 30144.0, - 29952.0, 30624.0)
-    set gg_rct_HostRegion=Rect(- 24096.0, - 23808.0, - 22784.0, - 20256.0)
+    set gg_rct_HostRegion=Rect(- 24192.0, - 24064.0, - 22624.0, - 20192.0)
     set gg_rct_Kalim=Rect(- 30688.0, - 18688.0, - 10720.0, 24992.0)
     set gg_rct_Nord=Rect(- 18144.0, 15520.0, 11200.0, 30720.0)
     set gg_rct_Pandaria=Rect(- 10816.0, - 25312.0, 7776.0, - 8032.0)
@@ -6674,8 +6680,8 @@ function Trig_Hide_Default_UI_And_Reshow_some_Actions takes nothing returns noth
     call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT, 0), FRAMEPOINT_CENTER, 0.4, 0.55)
     call BlzFrameSetScale(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT, 0), 2.06)
     
-    
-    
+    call BlzFrameSetVisible(BlzFrameGetParent(BlzGetFrameByName("ORIGIN_FRAME_HERO_BAR", 0)), true)
+    call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR, 0), true)
     //call BlzFrameSetVisible(BlzGetFrameByName("Food01",0), true)
     //call BlzFrameSetVisible(BlzGetFrameByName("Food02",0), true)
     //call BlzFrameClearAllPoints(BlzGetFrameByName("Food01",0),0))
@@ -6762,6 +6768,22 @@ endfunction
 //===========================================================================
 // Trigger: Interface
 //===========================================================================
+//===========================================================================
+// Trigger: Untitled Trigger 001
+//===========================================================================
+//function Trig_Untitled_Trigger_001_Actions takes nothing returns nothing
+//    call BlzFrameSetVisible(BlzFrameGetParent(BlzGetFrameByName("ORIGIN_FRAME_HERO_BAR",0)),true)
+//    call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR,0), true)
+//endfunction
+//
+////===========================================================================
+//function InitTrig_Untitled_Trigger_001 takes nothing returns nothing
+//    set gg_trg_Untitled_Trigger_001 = CreateTrigger(  )
+//    call TriggerRegisterTimerEventSingle( gg_trg_Untitled_Trigger_001, 2.00 )
+//    call TriggerAddAction( gg_trg_Untitled_Trigger_001, function Trig_Untitled_Trigger_001_Actions )
+//endfunction
+//
+//
 //===========================================================================
 // Trigger: MainInfo
 //===========================================================================
@@ -11165,15 +11187,15 @@ function InitTrig_StartN takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: StartTable
+// Trigger: StartTableCode
 //===========================================================================
-function Trig_StartTable_Func002002001001 takes nothing returns boolean
+function Trig_StartTableCode_Func002002001001 takes nothing returns boolean
     return ( GetPlayerSlotState(GetFilterPlayer()) == PLAYER_SLOT_STATE_PLAYING )
 endfunction
 
-function Trig_StartTable_Actions takes nothing returns nothing
+function Trig_StartTableCode_Actions takes nothing returns nothing
     local integer i= 0
-    set udg_PlayersCount=CountPlayersInForceBJ(GetPlayersMatching(Condition(function Trig_StartTable_Func002002001001)))
+    set udg_PlayersCount=CountPlayersInForceBJ(GetPlayersMatching(Condition(function Trig_StartTableCode_Func002002001001)))
     set Multiboard=CreateMultiboard()
     call MultiboardSetRowCount(Multiboard, udg_PlayersCount + 1)
     call MultiboardSetColumnCount(Multiboard, 2)
@@ -11193,6 +11215,8 @@ function Trig_StartTable_Actions takes nothing returns nothing
             set MultiboardItem[max * 2]=MultiboardGetItem(Multiboard, max, 0)
             set MultiboardItem[max * 2 + 1]=MultiboardGetItem(Multiboard, max, 1)
             set udg_LocalText2=( ( I2S(GetConvertedPlayerId(Player(i))) + ". " ) + GetPlayerName(Player(i)) )
+                        
+            set udg_LocalText2=SubString("0", 0, StringLength(udg_LocalText2) - 4)
             call MultiboardSetItemValue(MultiboardItem[max * 2], udg_LocalText2)
             call MultiboardSetItemWidth(MultiboardItem[max * 2], 0.12)
             call MultiboardSetItemValue(MultiboardItem[max * 2 + 1], "0")
@@ -11206,11 +11230,12 @@ function Trig_StartTable_Actions takes nothing returns nothing
 endfunction
 
 //===========================================================================
-function InitTrig_StartTable takes nothing returns nothing
-    set gg_trg_StartTable=CreateTrigger()
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_StartTable, udg_LobbyTime)
-    call TriggerAddAction(gg_trg_StartTable, function Trig_StartTable_Actions)
+function InitTrig_StartTableCode takes nothing returns nothing
+    set gg_trg_StartTableCode=CreateTrigger()
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_StartTableCode, udg_LobbyTime)
+    call TriggerAddAction(gg_trg_StartTableCode, function Trig_StartTableCode_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: Name command O
@@ -11730,7 +11755,9 @@ function Trig_CircleMove_Code_Actions takes nothing returns nothing
     local group g= CreateGroup()
     local unit u
     set udg_LocCircle=BlzGetTriggerPlayerMousePosition()
-    if not ( IsTerrainPathableBJ(udg_LocCircle, PATHING_TYPE_WALKABILITY) or RectContainsLoc(gg_rct_HostRegion, udg_LocCircle) ) then
+    if not ( IsTerrainPathableBJ(udg_LocCircle, PATHING_TYPE_WALKABILITY) or RectContainsLoc(gg_rct_HostRegion, udg_LocCircle) or RectContainsLoc(gg_rct_TestRegion, udg_LocCircle) or RectContainsLoc(gg_rct_EmeraldDream, udg_LocCircle) ) then
+    
+    
         
         set bj_groupEnumTypeId='h0HJ'
         call GroupEnumUnitsOfPlayer(g, GetTriggerPlayer(), filterGetUnitsOfPlayerAndTypeId)
@@ -27845,6 +27872,7 @@ function Trig_TrutenStartUpgrade_Actions takes nothing returns nothing
     local integer i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     set udg_LocalPosition[15]=GetUnitLoc(GetTriggerUnit())
     call CreateNUnitsAtLoc(1, 'h0DE', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[15], bj_UNIT_FACING)
+    call UnitApplyTimedLifeBJ(75.00, 'BTLF', GetLastCreatedUnit())
     call SetUnitAnimation(GetLastCreatedUnit(), "stand")
     call GroupAddUnitSimple(GetLastCreatedUnit(), udg_Kokon)
     set udg_UnitsCount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=( udg_UnitsCount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] - 1 )
@@ -28383,12 +28411,13 @@ endfunction
 
 
 function Trig_SpawnTimer_Func001A takes nothing returns nothing
+    local integer id= GetUnitTypeId(GetEnumUnit())
     set udg_LocalPosition[16]=GetUnitLoc(GetEnumUnit())
     call CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), 'e01I', udg_LocalPosition[16], bj_UNIT_FACING)
-    if GetUnitTypeId(GetEnumUnit()) == 'e021' then
+    if id == 'e021' then
         call CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), 'e01I', udg_LocalPosition[16], bj_UNIT_FACING)
 
-    elseif GetUnitTypeId(GetEnumUnit()) == 'e020' then
+    elseif id == 'e020' then
         call CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), 'e01I', udg_LocalPosition[16], bj_UNIT_FACING)
         call CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), 'e01I', udg_LocalPosition[16], bj_UNIT_FACING)
     endif
@@ -39293,6 +39322,57 @@ endfunction
 
 
 //===========================================================================
+// Trigger: Rep
+//===========================================================================
+
+function RepForOneHero takes nothing returns nothing
+    if IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO) and GetOwningPlayer(GetEnumUnit()) == GetTriggerPlayer() then
+        call ReplaceUnit2(GetEnumUnit() , GetUnitTypeId(GetEnumUnit()) , bj_UNIT_STATE_METHOD_RELATIVE)
+    endif
+endfunction
+
+function Trig_Rep_Actions takes nothing returns nothing
+    local player p= GetTriggerPlayer()
+    local group g= CreateGroup()
+    call GroupEnumUnitsSelected(g, p, null)
+    call ForGroup(g, function RepForOneHero)
+    call DestroyGroup(g)
+    set g=null
+    set p=null
+endfunction
+
+//===========================================================================
+function InitTrig_Rep takes nothing returns nothing
+    set gg_trg_Rep=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(0), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(1), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(2), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(3), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(4), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(5), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(6), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(7), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(8), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(9), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(10), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(11), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(12), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(13), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(14), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(15), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(16), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(17), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(18), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(19), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(20), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(21), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(22), "-rep", true)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(23), "-rep", true)
+    call TriggerAddAction(gg_trg_Rep, function Trig_Rep_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: StolicaKill
 //===========================================================================
 function Trig_StolicaKill_Func002Func001C takes nothing returns boolean
@@ -41294,6 +41374,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Hide_Default_UI_And_Reshow_some()
     call InitTrig_ResoursesInterface()
     //Function not found: call InitTrig_Interface()
+    //Function not found: call InitTrig_Untitled_Trigger_001()
     call InitTrig_MainInfo()
     call InitTrig_Initial_things()
     call InitTrig_StartLobby()
@@ -41403,7 +41484,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Upgrade_Income()
     call InitTrig_Globals()
     call InitTrig_StartN()
-    call InitTrig_StartTable()
+    call InitTrig_StartTableCode()
     call InitTrig_Name_command_O()
     call InitTrig_DieT_C()
     call InitTrig_UnitsToBuildingSituation2()
@@ -42089,6 +42170,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_PortUnitLeave()
     call InitTrig_MainFloatUnitsLeave()
     call InitTrig_Kill()
+    call InitTrig_Rep()
     call InitTrig_StolicaKill()
     call InitTrig_Camera_command_O()
     call InitTrig_SecondChance()
