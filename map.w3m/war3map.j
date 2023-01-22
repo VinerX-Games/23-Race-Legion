@@ -1,12 +1,12 @@
 globals
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -1418,6 +1418,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_Demontag= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1548,7 +1549,7 @@ native GetPlayerUnitTypeCount takes player p, integer unitid returns integer
 
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1556,33 +1557,33 @@ native GetPlayerUnitTypeCount takes player p, integer unitid returns integer
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1590,19 +1591,19 @@ native GetPlayerUnitTypeCount takes player p, integer unitid returns integer
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -5019,7 +5020,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0IF', - 3582.6, - 25805.8, 246.850, 'h0IF')
     set u=BlzCreateUnitWithSkin(p, 'h0IG', - 3406.7, - 25854.5, 265.690, 'h0IG')
     set u=BlzCreateUnitWithSkin(p, 'h0IE', - 3987.2, - 25805.7, 285.561, 'h0IE')
-    set u=BlzCreateUnitWithSkin(p, 'h0IC', - 3589.3, - 26119.4, 255.468, 'h0IC')
+    set u=BlzCreateUnitWithSkin(p, 'h0IC', - 3589.3, - 26119.4, 255.470, 'h0IC')
     set u=BlzCreateUnitWithSkin(p, 'nsnp', - 3704.0, - 27926.9, 65.294, 'nsnp')
     set u=BlzCreateUnitWithSkin(p, 'nmyr', - 3547.6, - 27971.6, 348.651, 'nmyr')
     set u=BlzCreateUnitWithSkin(p, 'nnrg', - 3331.6, - 27991.2, 40.376, 'nnrg')
@@ -5027,9 +5028,11 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'nmpe', - 2989.8, - 27974.4, 4.900, 'nmpe')
     set u=BlzCreateUnitWithSkin(p, 'h0ID', - 3888.8, - 25837.2, 259.736, 'h0ID')
     set u=BlzCreateUnitWithSkin(p, 'o023', - 5792.7, - 29745.9, 272.250, 'o023')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'opeo', - 6201.1, - 28833.8, 229.973, 'opeo')
     set u=BlzCreateUnitWithSkin(p, 'ogru', - 6124.1, - 29267.2, 273.128, 'ogru')
     set u=BlzCreateUnitWithSkin(p, 'o01K', - 6045.8, - 29755.1, 267.390, 'o01K')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'ohun', - 6227.1, - 29468.3, 270.051, 'ohun')
     set u=BlzCreateUnitWithSkin(p, 'orai', - 5381.2, - 29180.5, 291.644, 'orai')
     set u=BlzCreateUnitWithSkin(p, 'otau', - 5115.0, - 29220.1, 285.829, 'otau')
@@ -5037,14 +5040,18 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'okod', - 5384.0, - 29430.7, 270.055, 'okod')
     set u=BlzCreateUnitWithSkin(p, 'o026', - 5745.6, - 30194.1, 268.517, 'o026')
     set u=BlzCreateUnitWithSkin(p, 'oshm', - 6202.8, - 29666.3, 269.130, 'oshm')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'ospw', - 6194.5, - 29772.3, 295.760, 'ospw')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'otbk', - 5898.0, - 29470.6, 273.181, 'otbk')
     set u=BlzCreateUnitWithSkin(p, 'o01E', - 6009.3, - 29262.0, 274.865, 'o01E')
     set u=BlzCreateUnitWithSkin(p, 'o01Q', - 5737.6, - 29254.9, 275.840, 'o01Q')
     set u=BlzCreateUnitWithSkin(p, 'o01S', - 5283.1, - 29428.8, 276.034, 'o01S')
     set u=BlzCreateUnitWithSkin(p, 'o024', - 5432.0, - 29760.3, 245.398, 'o024')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'o01U', - 4907.1, - 29193.4, 275.520, 'o01U')
     set u=BlzCreateUnitWithSkin(p, 'o01V', - 5705.9, - 29744.6, 280.369, 'o01V')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'o01X', - 6125.6, - 29470.4, 272.880, 'o01X')
     set u=BlzCreateUnitWithSkin(p, 'o01Y', - 5689.6, - 29460.0, 276.959, 'o01Y')
     set u=BlzCreateUnitWithSkin(p, 'o01H', - 6253.7, - 29285.4, 317.390, 'o01H')
@@ -5069,11 +5076,15 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o02F', - 5800.0, - 29454.3, 260.574, 'o02F')
     set u=BlzCreateUnitWithSkin(p, 'o028', - 5596.3, - 30180.4, 280.090, 'o028')
     set u=BlzCreateUnitWithSkin(p, 'o02G', - 5968.7, - 29670.3, 274.700, 'o02G')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'o02I', - 5363.2, - 29823.6, 280.763, 'o02I')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'o02M', - 5460.9, - 29429.3, 272.260, 'o02M')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'o02H', - 5451.6, - 29196.6, 272.760, 'o02H')
     set u=BlzCreateUnitWithSkin(p, 'o02K', - 6297.2, - 30164.2, 253.730, 'o02K')
     set u=BlzCreateUnitWithSkin(p, 'o02L', - 5285.7, - 29759.6, 268.750, 'o02L')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'h0IB', - 4502.5, - 25851.0, 259.966, 'h0IB')
     set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, 290.235, 'n04X')
     set u=BlzCreateUnitWithSkin(p, 'h0IH', - 5443.4, - 29877.1, 272.940, 'h0IH')
@@ -7127,6 +7138,7 @@ function Trig_UpgradeStolica_Actions takes nothing returns nothing
     call BlzSetUnitMaxHP(GetTriggerUnit(), 10000)
     call UnitAddAbilityBJ('A0I6', GetTriggerUnit())
     call BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, ( "|cffd45e19Столица:|r " + GetUnitName(GetTriggerUnit()) ))
+    call UnitAddAbilityBJ('A145', GetTriggerUnit())
 endfunction
 
 //===========================================================================
@@ -7148,7 +7160,7 @@ function Trig_MakeStolica_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_MakeStolica_Func008A takes nothing returns nothing
+function Trig_MakeStolica_Func009A takes nothing returns nothing
     call UnitShareVisionBJ(true, GetTriggerUnit(), GetEnumPlayer())
 endfunction
 
@@ -7158,9 +7170,10 @@ function Trig_MakeStolica_Actions takes nothing returns nothing
     call SetUnitLifeBJ(GetTriggerUnit(), 10000.00)
     call BlzSetUnitArmor(GetTriggerUnit(), 30.00)
     call UnitAddAbilityBJ('A0I6', GetTriggerUnit())
+    call UnitAddAbilityBJ('A145', GetTriggerUnit())
     call BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, ( "|cffd45e19Столица:|r " + GetUnitName(GetTriggerUnit()) ))
     call GroupAddUnitSimple(GetTriggerUnit(), udg_StolicaGroups)
-    call ForForce(GetPlayersAll(), function Trig_MakeStolica_Func008A)
+    call ForForce(GetPlayersAll(), function Trig_MakeStolica_Func009A)
 endfunction
 
 //===========================================================================
@@ -10401,8 +10414,6 @@ function Trig_UnitIncomeConstructed_Actions takes nothing returns nothing
             set income[pi]=( income[pi] + ( 100.00 * I2R(GetUnitAbilityLevel(u, 'A0AY')) ) )
     elseif GetUnitAbilityLevel(u, 'A0SM') >= 1 then
         set income[pi]=( income[pi] + ( 75.00 * I2R(GetUnitAbilityLevel(u, 'A0SM')) ) )
-    elseif GetUnitAbilityLevel(u, 'A0VS') == 1 then
-        set income[pi]=( income[pi] + 100 )
     endif
     
     
@@ -10554,10 +10565,12 @@ function Trig_DeadAddCheck_Actions takes nothing returns nothing
                     set income[pi]=( income[pi] - ( 100.00 * I2R(GetUnitAbilityLevel(u, 'A0AY')) ) )
             elseif GetUnitAbilityLevel(u, 'A0SM') >= 1 then
                 set income[pi]=( income[pi] - ( 75.00 * I2R(GetUnitAbilityLevel(u, 'A0SM')) ) )
-            elseif GetUnitAbilityLevel(u, 'A0VS') == 1 then
+            endif
+            
+            if GetUnitAbilityLevel(u, 'A0VS') == 1 then
                 set income[pi]=( income[pi] - 100 )
             endif
-        
+            
             set i=GetUnitAbilityLevel(u, 'A0B5')
             if i > 0 then
                 set incomeW[pi]=incomeW[pi] - ( 50.00 * i )
@@ -10881,6 +10894,7 @@ function Trig_DeadSituastion_O_Actions takes nothing returns nothing
         set udg_TombOfSargeras=u2
         call WaygateActivateBJ(true, u2)
         call WaygateSetDestinationLocBJ(u2, GetRectCenter(gg_rct_Region_015))
+        call WaygateActivateBJ(true, u2)
     endif
     
     
@@ -11021,6 +11035,7 @@ function Trig_Upgrade_Kontrol_Actions takes nothing returns nothing
     call BlzSetUnitRealFieldBJ(GetTriggerUnit(), UNIT_RF_SIGHT_RADIUS, 6500.00)
     call UnitAddTypeBJ(UNIT_TYPE_FLYING, GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0VJ', GetTriggerUnit())
+    call UnitAddAbilityBJ('A146', GetTriggerUnit())
 endfunction
 
 //===========================================================================
@@ -11047,6 +11062,7 @@ endfunction
 function Trig_Upgrade_Razved_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0MK', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0VJ', GetTriggerUnit())
+    call UnitAddAbilityBJ('A146', GetTriggerUnit())
 endfunction
 
 //===========================================================================
@@ -11073,6 +11089,7 @@ endfunction
 function Trig_Upgrade_Oborona_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0VR', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0VJ', GetTriggerUnit())
+    call UnitAddAbilityBJ('A146', GetTriggerUnit())
 endfunction
 
 //===========================================================================
@@ -11099,6 +11116,7 @@ endfunction
 function Trig_Upgrade_Mobile_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0VT', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0VJ', GetTriggerUnit())
+    call UnitAddAbilityBJ('A146', GetTriggerUnit())
 endfunction
 
 //===========================================================================
@@ -11127,6 +11145,7 @@ function Trig_Upgrade_Income_Actions takes nothing returns nothing
     
     
     call UnitRemoveAbility(GetTriggerUnit(), 'A0VJ')
+    call UnitAddAbility(GetTriggerUnit(), 'A146')
 endfunction
 
 //===========================================================================
@@ -11135,6 +11154,35 @@ function InitTrig_Upgrade_Income takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Income, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Upgrade_Income, Condition(function Trig_Upgrade_Income_Conditions))
     call TriggerAddAction(gg_trg_Upgrade_Income, function Trig_Upgrade_Income_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Demontag
+//===========================================================================
+function Trig_Demontag_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A146' and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+function Trig_Demontag_Actions takes nothing returns nothing
+    local integer pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    call UnitRemoveAbility(GetTriggerUnit(), 'A146')
+    call UnitAddAbility(GetTriggerUnit(), 'A0VJ')
+    if GetUnitAbilityLevel(GetTriggerUnit(), 'A0VS') == 1 then
+        set income[pi]=income[pi] - 100
+        call UnitRemoveAbility(GetTriggerUnit(), 'A0VS')
+    endif
+    call UnitRemoveAbility(GetTriggerUnit(), 'A0VR')
+    call UnitRemoveAbility(GetTriggerUnit(), 'A0VT')
+    call UnitRemoveAbility(GetTriggerUnit(), 'A0MK')
+endfunction
+
+//===========================================================================
+function InitTrig_Demontag takes nothing returns nothing
+    set gg_trg_Demontag=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Demontag, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_Demontag, Condition(function Trig_Demontag_Conditions))
+    call TriggerAddAction(gg_trg_Demontag, function Trig_Demontag_Actions)
 endfunction
 
 
@@ -11198,7 +11246,7 @@ function Trig_StartTableCode_Actions takes nothing returns nothing
             set MultiboardItem[max * 2 + 1]=MultiboardGetItem(Multiboard, max, 1)
             set udg_LocalText2=( ( I2S(GetConvertedPlayerId(Player(i))) + ". " ) + GetPlayerName(Player(i)) )
                         
-            set udg_LocalText2=SubString("0", 0, StringLength(udg_LocalText2) - 4)
+            set udg_LocalText2=SubString(udg_LocalText2, 0, StringLength(udg_LocalText2) - 4)
             call MultiboardSetItemValue(MultiboardItem[max * 2], udg_LocalText2)
             call MultiboardSetItemWidth(MultiboardItem[max * 2], 0.12)
             call MultiboardSetItemValue(MultiboardItem[max * 2 + 1], "0")
@@ -17360,7 +17408,7 @@ endfunction
 function Trig_MageTp_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     call UnitAddAbility(u, 'Avul')
-    call TriggerSleepAction(0.35)
+    call TriggerSleepAction(0.6)
     call UnitRemoveAbility(u, 'Avul')
     set u=null
 endfunction
@@ -18655,7 +18703,11 @@ function Trig_F2_Map_2_Func015001002 takes nothing returns boolean
 endfunction
 
 function Trig_F2_Map_2_Func016001002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('A0SJ', GetFilterUnit()) == 1 )
+    return ( GetUnitAbilityLevelSwapped('A0SJ', GetFilterUnit()) == 2 )
+endfunction
+
+function Trig_F2_Map_2_Func017001002 takes nothing returns boolean
+    return ( GetUnitAbilityLevelSwapped('A0VZ', GetFilterUnit()) == 1 )
 endfunction
 
 function Trig_F2_Map_2_Actions takes nothing returns nothing
@@ -18675,6 +18727,7 @@ function Trig_F2_Map_2_Actions takes nothing returns nothing
     call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_Map_2_Func014001002)), udg_LocalOtrad2)
     call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_Map_2_Func015001002)), udg_LocalOtrad2)
     call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_Map_2_Func016001002)), udg_LocalOtrad2)
+    call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_Map_2_Func017001002)), udg_LocalOtrad2)
     set udg_F_Group[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_LocalOtrad2
 endfunction
 
@@ -18805,7 +18858,11 @@ function Trig_F2_AreaMidBig_Func015001002 takes nothing returns boolean
 endfunction
 
 function Trig_F2_AreaMidBig_Func016001002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('A0SJ', GetFilterUnit()) == 1 )
+    return ( GetUnitAbilityLevelSwapped('A0SJ', GetFilterUnit()) == 2 )
+endfunction
+
+function Trig_F2_AreaMidBig_Func017001002 takes nothing returns boolean
+    return ( GetUnitAbilityLevelSwapped('A0VZ', GetFilterUnit()) == 1 )
 endfunction
 
 function Trig_F2_AreaMidBig_Actions takes nothing returns nothing
@@ -18825,6 +18882,7 @@ function Trig_F2_AreaMidBig_Actions takes nothing returns nothing
     call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func014001002)), udg_LocalOtrad2)
     call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func015001002)), udg_LocalOtrad2)
     call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func016001002)), udg_LocalOtrad2)
+    call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func017001002)), udg_LocalOtrad2)
     set udg_F_Group[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_LocalOtrad2
     call RemoveLocation(udg_LocalPosition2)
 endfunction
@@ -18956,7 +19014,11 @@ function Trig_F2_AreaMid_Func015001002 takes nothing returns boolean
 endfunction
 
 function Trig_F2_AreaMid_Func016001002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('A0SJ', GetFilterUnit()) == 1 )
+    return ( GetUnitAbilityLevelSwapped('A0SJ', GetFilterUnit()) == 2 )
+endfunction
+
+function Trig_F2_AreaMid_Func017001002 takes nothing returns boolean
+    return ( GetUnitAbilityLevelSwapped('A0VZ', GetFilterUnit()) == 1 )
 endfunction
 
 function Trig_F2_AreaMid_Actions takes nothing returns nothing
@@ -18976,6 +19038,7 @@ function Trig_F2_AreaMid_Actions takes nothing returns nothing
     call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func014001002)), udg_LocalOtrad2)
     call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func015001002)), udg_LocalOtrad2)
     call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func016001002)), udg_LocalOtrad2)
+    call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func017001002)), udg_LocalOtrad2)
     set udg_F_Group[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_LocalOtrad2
     call RemoveLocation(udg_LocalPosition2)
 endfunction
@@ -19107,7 +19170,11 @@ function Trig_F2_AreaSmall_Func015001002 takes nothing returns boolean
 endfunction
 
 function Trig_F2_AreaSmall_Func016001002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('A0SJ', GetFilterUnit()) == 1 )
+    return ( GetUnitAbilityLevelSwapped('A0SJ', GetFilterUnit()) == 2 )
+endfunction
+
+function Trig_F2_AreaSmall_Func017001002 takes nothing returns boolean
+    return ( GetUnitAbilityLevelSwapped('A0VZ', GetFilterUnit()) == 1 )
 endfunction
 
 function Trig_F2_AreaSmall_Actions takes nothing returns nothing
@@ -19127,6 +19194,7 @@ function Trig_F2_AreaSmall_Actions takes nothing returns nothing
     call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func014001002)), udg_LocalOtrad2)
     call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func015001002)), udg_LocalOtrad2)
     call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func016001002)), udg_LocalOtrad2)
+    call GroupRemoveGroup(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func017001002)), udg_LocalOtrad2)
     set udg_F_Group[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_LocalOtrad2
     call RemoveLocation(udg_LocalPosition2)
 endfunction
@@ -20819,207 +20887,6 @@ function InitTrig_SpellRes takes nothing returns nothing
     call TriggerAddCondition(gg_trg_SpellRes, Condition(function Trig_SpellRes_Conditions))
     call TriggerAddAction(gg_trg_SpellRes, function Trig_SpellRes_Actions)
 endfunction
-
-//===========================================================================
-// Trigger: Usual
-//===========================================================================
-function Trig_Usual_Conditions takes nothing returns boolean
-    return GetSpellAbilityId() == 'A142'
-endfunction
-
-function Trig_Usual_Actions takes nothing returns nothing
-    local unit u= GetTriggerUnit()
-    call UnitRemoveAbility(u, 'A13P')
-    call UnitRemoveAbility(u, 'A13Q')
-    call UnitAddAbility(u, 'A13L')
-    call BlzStartUnitAbilityCooldown(u, 'A13L', 12)
-    set u=null
-endfunction
-
-//===========================================================================
-function InitTrig_Usual takes nothing returns nothing
-    set gg_trg_Usual=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Usual, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_Usual, Condition(function Trig_Usual_Conditions))
-    call TriggerAddAction(gg_trg_Usual, function Trig_Usual_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: StartAttackUsual
-//===========================================================================
-function Trig_StartAttackUsual_Conditions takes nothing returns boolean
-    return BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13L') <= 0.00
-endfunction
-
-function Trig_StartAttackUsual_Actions takes nothing returns nothing
-    local unit u= GetAttacker()
-    call UnitAddAbility(u, 'A132')
-    call BlzStartUnitAbilityCooldown(u, 'A13L', 10.00)
-endfunction
-
-//===========================================================================
-function InitTrig_StartAttackUsual takes nothing returns nothing
-    set gg_trg_StartAttackUsual=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackUsual, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_StartAttackUsual, Condition(function Trig_StartAttackUsual_Conditions))
-    call TriggerAddAction(gg_trg_StartAttackUsual, function Trig_StartAttackUsual_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: EndAttackUsual
-//===========================================================================
-function Trig_EndAttackUsual_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A132') > 0
-endfunction
-
-function Trig_EndAttackUsual_Actions takes nothing returns nothing
-    call UnitRemoveAbility(GetEventDamageSource(), 'A132')
-endfunction
-
-//===========================================================================
-function InitTrig_EndAttackUsual takes nothing returns nothing
-    set gg_trg_EndAttackUsual=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackUsual, EVENT_PLAYER_UNIT_DAMAGED)
-    call TriggerAddCondition(gg_trg_EndAttackUsual, Condition(function Trig_EndAttackUsual_Conditions))
-    call TriggerAddAction(gg_trg_EndAttackUsual, function Trig_EndAttackUsual_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: Korroz
-//===========================================================================
-function Trig_Korroz_Conditions takes nothing returns boolean
-    return GetSpellAbilityId() == 'A143'
-endfunction
-
-function Trig_Korroz_Actions takes nothing returns nothing
-    local unit u= GetTriggerUnit()
-    call UnitRemoveAbility(u, 'A13L')
-    call UnitRemoveAbility(u, 'A13P')
-    call UnitAddAbility(u, 'A13Q')
-    call BlzStartUnitAbilityCooldown(u, 'A13Q', 12)
-    set u=null
-endfunction
-
-//===========================================================================
-function InitTrig_Korroz takes nothing returns nothing
-    set gg_trg_Korroz=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Korroz, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_Korroz, Condition(function Trig_Korroz_Conditions))
-    call TriggerAddAction(gg_trg_Korroz, function Trig_Korroz_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: StartAttackCorroz
-//===========================================================================
-function Trig_StartAttackCorroz_Conditions takes nothing returns boolean
-    return BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13N') <= 0.00
-endfunction
-
-function Trig_StartAttackCorroz_Actions takes nothing returns nothing
-    local unit u= GetAttacker()
-    call UnitAddAbility(u, 'A13U')
-    call BlzStartUnitAbilityCooldown(u, 'A13N', 10.00)
-endfunction
-
-//===========================================================================
-function InitTrig_StartAttackCorroz takes nothing returns nothing
-    set gg_trg_StartAttackCorroz=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackCorroz, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_StartAttackCorroz, Condition(function Trig_StartAttackCorroz_Conditions))
-    call TriggerAddAction(gg_trg_StartAttackCorroz, function Trig_StartAttackCorroz_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: EndAttackCorroz
-//===========================================================================
-function Trig_EndAttackCorroz_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13U') > 0
-endfunction
-
-function Trig_EndAttackCorroz_Actions takes nothing returns nothing
-    call UnitRemoveAbility(GetEventDamageSource(), 'A13U')
-endfunction
-
-//===========================================================================
-function InitTrig_EndAttackCorroz takes nothing returns nothing
-    set gg_trg_EndAttackCorroz=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackCorroz, EVENT_PLAYER_UNIT_DAMAGED)
-    call TriggerAddCondition(gg_trg_EndAttackCorroz, Condition(function Trig_EndAttackCorroz_Conditions))
-    call TriggerAddAction(gg_trg_EndAttackCorroz, function Trig_EndAttackCorroz_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: Safety
-//===========================================================================
-function Trig_Safety_Conditions takes nothing returns boolean
-    return GetSpellAbilityId() == 'A144'
-endfunction
-
-function Trig_Safety_Actions takes nothing returns nothing
-    local unit u= GetTriggerUnit()
-    call UnitRemoveAbility(u, 'A13L')
-    call UnitRemoveAbility(u, 'A13Q')
-    call UnitAddAbility(u, 'A13P')
-    call BlzStartUnitAbilityCooldown(u, 'A13P', 12)
-    set u=null
-endfunction
-
-//===========================================================================
-function InitTrig_Safety takes nothing returns nothing
-    set gg_trg_Safety=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Safety, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_Safety, Condition(function Trig_Safety_Conditions))
-    call TriggerAddAction(gg_trg_Safety, function Trig_Safety_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: StartAttackSafety
-//===========================================================================
-function Trig_StartAttackSafety_Conditions takes nothing returns boolean
-    return BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13P') <= 0.00
-endfunction
-
-function Trig_StartAttackSafety_Actions takes nothing returns nothing
-    local unit u= GetAttacker()
-    call UnitAddAbility(u, 'A13R')
-    call BlzStartUnitAbilityCooldown(u, 'A13P', 10.00)
-endfunction
-
-//===========================================================================
-function InitTrig_StartAttackSafety takes nothing returns nothing
-    set gg_trg_StartAttackSafety=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackSafety, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_StartAttackSafety, Condition(function Trig_StartAttackSafety_Conditions))
-    call TriggerAddAction(gg_trg_StartAttackSafety, function Trig_StartAttackSafety_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: EndAttackSafety
-//===========================================================================
-function Trig_EndAttackSafety_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13R') > 0
-endfunction
-
-function Trig_EndAttackSafety_Actions takes nothing returns nothing
-    call UnitRemoveAbility(GetEventDamageSource(), 'A13R')
-endfunction
-
-//===========================================================================
-function InitTrig_EndAttackSafety takes nothing returns nothing
-    set gg_trg_EndAttackSafety=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackSafety, EVENT_PLAYER_UNIT_DAMAGED)
-    call TriggerAddCondition(gg_trg_EndAttackSafety, Condition(function Trig_EndAttackSafety_Conditions))
-    call TriggerAddAction(gg_trg_EndAttackSafety, function Trig_EndAttackSafety_Actions)
-endfunction
-
 
 //===========================================================================
 // Trigger: HordeOn
@@ -23059,6 +22926,8 @@ function Trig_BloodElf_Actions takes nothing returns nothing
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 3
     set udg_HordeMagicPrice[pi]=udg_HordeMagicPrice[pi] - 5
     set udg_HordeNavyPrice[pi]=udg_HordeNavyPrice[pi] - 1
+    set udg_HordeTechPrice[pi]=udg_HordeTechPrice[pi] - 1
+    call ChangeTechUnitsNow(p , pi)
     call ChangeLandUnitsNow(p , pi)
     call ChangeMagicUnitsNow(p , pi)
     call ChangeNavyUnitsNow(p , pi)
@@ -41240,6 +41109,40 @@ function InitTrig_KillSomeUnitsAndItems takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: KillTestUnits O Copy
+//===========================================================================
+function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
+    return ( RectContainsUnit(gg_rct_TestRegion, GetFilterUnit()) == true )
+endfunction
+
+function Trig_KillTestUnits_O_Copy_Func003A takes nothing returns nothing
+    local unit u= GetEnumUnit()
+    local player p= GetOwningPlayer(u)
+    local integer id= GetUnitTypeId(u)
+    if IsUnitType(u, UNIT_TYPE_HERO) then
+        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
+    endif
+    call RemoveUnit(u)
+    set u=null
+    set p=null
+endfunction
+
+function Trig_KillTestUnits_O_Copy_Actions takes nothing returns nothing
+    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Copy_Func001002)
+    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Copy_Func003A)
+    call GroupClear(udg_LocalOtrad2)
+endfunction
+
+//===========================================================================
+function InitTrig_KillTestUnits_O_Copy takes nothing returns nothing
+    set gg_trg_KillTestUnits_O_Copy=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O_Copy, 0.01)
+    call TriggerAddAction(gg_trg_KillTestUnits_O_Copy, function Trig_KillTestUnits_O_Copy_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: KillTestUnits Command
 //===========================================================================
 function Trig_KillTestUnits_Command_Func001002 takes nothing returns boolean
@@ -41636,6 +41539,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Upgrade_Oborona()
     call InitTrig_Upgrade_Mobile()
     call InitTrig_Upgrade_Income()
+    call InitTrig_Demontag()
     call InitTrig_Globals()
     call InitTrig_StartN()
     call InitTrig_StartTableCode()
@@ -41824,15 +41728,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_LumberTest()
     call InitTrig_Spell2()
     call InitTrig_SpellRes()
-    call InitTrig_Usual()
-    call InitTrig_StartAttackUsual()
-    call InitTrig_EndAttackUsual()
-    call InitTrig_Korroz()
-    call InitTrig_StartAttackCorroz()
-    call InitTrig_EndAttackCorroz()
-    call InitTrig_Safety()
-    call InitTrig_StartAttackSafety()
-    call InitTrig_EndAttackSafety()
     call InitTrig_HordeOn()
     call InitTrig_K1T1()
     call InitTrig_K1T2()
@@ -42377,6 +42272,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
     call InitTrig_KillSomeUnitsAndItems()
+    call InitTrig_KillTestUnits_O_Copy()
     call InitTrig_KillTestUnits_Command()
     call InitTrig_KillMagaz()
     call InitTrig_Setlvl()
@@ -42408,6 +42304,7 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_BloodClose)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForNavy)
+    call ConditionalTriggerExecute(gg_trg_KillTestUnits_O_Copy)
 endfunction
 
 //***************************************************************************
@@ -42763,7 +42660,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
