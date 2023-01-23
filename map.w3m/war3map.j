@@ -507,6 +507,7 @@ trigger gg_trg_Race_Nerubs_O= null
 trigger gg_trg_Race_Silitids_O= null
 trigger gg_trg_Race_Gnomes= null
 trigger gg_trg_Race_Gilneas= null
+trigger gg_trg_Race_Nagi= null
 trigger gg_trg_Race_Random= null
 trigger gg_trg_Page1_O= null
 trigger gg_trg_Page2_O= null
@@ -694,6 +695,15 @@ trigger gg_trg_Spell2= null
 trigger gg_trg_SpellRes= null
 trigger gg_trg_Spell= null
 trigger gg_trg_SpandFarm= null
+trigger gg_trg_Killing= null
+trigger gg_trg_StartAttackKilling= null
+trigger gg_trg_EndAttackKilling= null
+trigger gg_trg_Infect= null
+trigger gg_trg_StartAttackInfect= null
+trigger gg_trg_EndAttackInfect= null
+trigger gg_trg_Zagraz= null
+trigger gg_trg_StartAttackZagraz= null
+trigger gg_trg_EndAttackZagraz= null
 trigger gg_trg_Usual= null
 trigger gg_trg_StartAttackUsual= null
 trigger gg_trg_EndAttackUsual= null
@@ -1419,15 +1429,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_Killing= null
-trigger gg_trg_StartAttackKilling= null
-trigger gg_trg_EndAttackKilling= null
-trigger gg_trg_EndAttackInfect= null
-trigger gg_trg_StartAttackInfect= null
-trigger gg_trg_Infect= null
-trigger gg_trg_EndAttackZagraz= null
-trigger gg_trg_StartAttackZagraz= null
-trigger gg_trg_Zagraz= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -4999,6 +5000,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0J5', - 3894.0, - 29881.6, 272.007, 'h0J5')
     set u=BlzCreateUnitWithSkin(p, 'u02D', - 4005.9, - 26178.3, 350.101, 'u02D')
     set u=BlzCreateUnitWithSkin(p, 'h0I9', - 4398.5, - 26268.8, 109.660, 'h0I9')
+    set u=BlzCreateUnitWithSkin(p, 'n051', - 3885.6, - 28077.0, 261.260, 'n051')
     set u=BlzCreateUnitWithSkin(p, 'h0IT', - 6121.2, - 26975.3, 277.970, 'h0IT')
     set u=BlzCreateUnitWithSkin(p, 'h0EI', - 6182.1, - 26985.0, 237.080, 'h0EI')
     set u=BlzCreateUnitWithSkin(p, 'h0IU', - 6268.4, - 26975.4, 253.330, 'h0IU')
@@ -5761,6 +5763,7 @@ function CreateNeutralPassive takes nothing returns nothing
 
     set u=BlzCreateUnitWithSkin(p, 'h03E', - 23224.2, - 22174.3, 282.180, 'h03E')
     set u=BlzCreateUnitWithSkin(p, 'n04R', - 4523.2, - 29573.1, 280.438, 'n04R')
+    set u=BlzCreateUnitWithSkin(p, 'n057', - 2786.2, - 27940.2, 205.044, 'n057')
     set u=BlzCreateUnitWithSkin(p, 'h05P', - 5139.5, - 26185.9, 330.754, 'h05P')
 endfunction
 
@@ -12488,6 +12491,31 @@ function InitTrig_Race_Gilneas takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: Race Nagi
+//===========================================================================
+function Trig_Race_Nagi_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A14O' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Nagi_Actions takes nothing returns nothing
+    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    call CreateNUnitsAtLoc(5, 'nmpe', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    call RemoveUnit(GetSpellAbilityUnit())
+    call RemoveLocation(udg_LocalPosition2)
+endfunction
+
+//===========================================================================
+function InitTrig_Race_Nagi takes nothing returns nothing
+    set gg_trg_Race_Nagi=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Nagi, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_Race_Nagi, Condition(function Trig_Race_Nagi_Conditions))
+    call TriggerAddAction(gg_trg_Race_Nagi, function Trig_Race_Nagi_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: Race Random
 //===========================================================================
 function Trig_Race_Random_Conditions takes nothing returns boolean
@@ -12827,6 +12855,7 @@ function Trig_Page1_O_Actions takes nothing returns nothing
     call UnitRemoveAbilityBJ('A0YV', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0HW', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A121', GetTriggerUnit())
+    call UnitRemoveAbilityBJ('A14O', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A12Q', GetTriggerUnit())
 endfunction
 
@@ -12897,6 +12926,7 @@ function Trig_Page3_O_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0YV', GetTriggerUnit())
     call UnitAddAbilityBJ('A0HW', GetTriggerUnit())
     call UnitAddAbilityBJ('A121', GetTriggerUnit())
+    call UnitAddAbilityBJ('A14O', GetTriggerUnit())
     call UnitAddAbilityBJ('A12Q', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QQ', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QN', GetTriggerUnit())
@@ -19310,6 +19340,7 @@ endfunction
 
 function Trig_Murlok_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('R0FE', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('Rnsw', 1, GetOwningPlayer(GetTriggerUnit()))
 endfunction
 
 //===========================================================================
@@ -19422,6 +19453,10 @@ function Trig_murloki_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_murloki_Func002A takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('nnsw', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('nmyr', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('nnrg', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('n051', 1, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('n053', - 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('n052', - 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('n050', - 1, GetEnumPlayer())
@@ -19670,6 +19705,9 @@ endfunction
 function Trig_Hero_Limits_General_Copy_Func001A takes nothing returns nothing
     // -----------------------
     call SetPlayerTechMaxAllowedSwap('H048', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H0JU', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('N054', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H0JV', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('H03S', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('H028', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('H03H', 1, GetEnumPlayer())
@@ -41941,6 +41979,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Race_Silitids_O()
     call InitTrig_Race_Gnomes()
     call InitTrig_Race_Gilneas()
+    call InitTrig_Race_Nagi()
     call InitTrig_Race_Random()
     call InitTrig_Page1_O()
     call InitTrig_Page2_O()
