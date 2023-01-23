@@ -1,4 +1,25 @@
 globals
+//globals from Example:
+constant boolean LIBRARY_Example=true
+framehandle gameUI
+framehandle Gold01
+framehandle Gold02
+framehandle Wood01
+framehandle Wood02
+framehandle Food01m
+framehandle Food02m
+framehandle Income01
+framehandle Income02
+framehandle Income0201
+framehandle Income0202
+framehandle Income0301
+framehandle Income0302
+framehandle HPText
+framehandle MPText
+framehandle FontInterface
+
+
+//endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
 constant integer SpellSleepAOE__SpellHero='A06P'
@@ -1521,6 +1542,8 @@ group array AiUnitsToPort
 integer TryPort_pi
 integer array Grades
 
+real array hp
+real array mana
 integer ModeBuildingI= 0
 unit ModeBuilding= null
 
@@ -1557,6 +1580,140 @@ native UnitAlive takes unit id returns boolean
 native GetPlayerUnitTypeCount takes player p, integer unitid returns integer
 
 
+//library Example:
+
+
+function init takes nothing returns nothing
+    local framehandle itemButtonFrame0= BlzGetFrameByName("InventoryButton_0", 0)
+    local framehandle itemButtonFrame1= BlzGetFrameByName("InventoryButton_1", 0)
+    local framehandle itemButtonFrame2= BlzGetFrameByName("InventoryButton_2", 0)
+    local framehandle itemButtonFrame3= BlzGetFrameByName("InventoryButton_3", 0)
+    local framehandle itemButtonFrame4= BlzGetFrameByName("InventoryButton_4", 0)
+    local framehandle itemButtonFrame5= BlzGetFrameByName("InventoryButton_5", 0)
+    local framehandle itemButtonFrame6= BlzGetFrameByName("InventoryButton_6", 0)
+    set gameUI=BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0)
+    call BlzFrameSetText(BlzGetFrameByName("InventoryText", 0), "")
+    call BlzLoadTOCFile("war3mapImported\\tocs.toc")
+
+    set FontInterface=BlzCreateSimpleFrame("FontInterface", gameUI, 0)
+
+    call BlzFrameSetAbsPoint(FontInterface, FRAMEPOINT_CENTER, 0.461, 0.067)
+
+set HPText=BlzCreateFrame("HPText", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(HPText, FRAMEPOINT_CENTER, 0.3245, 0.1195)
+
+set MPText=BlzCreateFrame("MPText", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(MPText, FRAMEPOINT_CENTER, 0.4755, 0.1195)
+
+set Gold01=BlzCreateFrame("Gold01", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(Gold01, FRAMEPOINT_CENTER, 0.28, 0.08)
+
+set Gold02=BlzCreateFrame("Gold02", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(Gold02, FRAMEPOINT_CENTER, 0.28, 0.07)
+
+set Wood01=BlzCreateFrame("Wood01", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(Wood01, FRAMEPOINT_CENTER, 0.28, 0.05)
+
+set Wood02=BlzCreateFrame("Wood02", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(Wood02, FRAMEPOINT_CENTER, 0.28, 0.04)
+
+set Food01m=BlzCreateFrame("Food01", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(Food01m, FRAMEPOINT_CENTER, 0.28, 0.02)
+
+set Food02m=BlzCreateFrame("Food02", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(Food02m, FRAMEPOINT_CENTER, 0.28, 0.01)
+
+
+
+set Income01=BlzCreateFrame("Income01", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(Income01, FRAMEPOINT_CENTER, 0.23, 0.08)
+
+set Income02=BlzCreateFrame("Income02", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(Income02, FRAMEPOINT_CENTER, 0.23, 0.07)
+
+set Income0201=BlzCreateFrame("Income0201", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(Income0201, FRAMEPOINT_CENTER, 0.23, 0.05)
+
+set Income0202=BlzCreateFrame("Income0202", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(Income0202, FRAMEPOINT_CENTER, 0.23, 0.04)
+
+set Income0301=BlzCreateFrame("Income0301", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(Income0301, FRAMEPOINT_CENTER, 0.23, 0.02)
+
+set Income0302=BlzCreateFrame("Income0302", gameUI, 0, 0)
+call BlzFrameSetAbsPoint(Income0302, FRAMEPOINT_CENTER, 0.23, 0.01)
+
+    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_0", 0))
+    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_1", 0))
+    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_2", 0))
+    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_3", 0))
+    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_4", 0))
+    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_5", 0))
+    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_6", 0))
+    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_7", 0))
+    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_8", 0))
+    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_9", 0))
+    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_10", 0))
+    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_11", 0))
+    call BlzFrameClearAllPoints(itemButtonFrame0)
+    call BlzFrameClearAllPoints(itemButtonFrame1)
+    call BlzFrameClearAllPoints(itemButtonFrame2)
+    call BlzFrameClearAllPoints(itemButtonFrame3)
+    call BlzFrameClearAllPoints(itemButtonFrame4)
+    call BlzFrameClearAllPoints(itemButtonFrame5)
+    call BlzFrameSetAbsPoint(itemButtonFrame0, FRAMEPOINT_BOTTOM, 0.540, 0.090)
+    call BlzFrameSetAbsPoint(itemButtonFrame1, FRAMEPOINT_BOTTOM, 0.572, 0.090)
+    call BlzFrameSetAbsPoint(itemButtonFrame2, FRAMEPOINT_BOTTOM, 0.604, 0.090)
+    call BlzFrameSetAbsPoint(itemButtonFrame3, FRAMEPOINT_BOTTOM, 0.636, 0.090)
+    call BlzFrameSetAbsPoint(itemButtonFrame4, FRAMEPOINT_BOTTOM, 0.668, 0.090)
+    call BlzFrameSetAbsPoint(itemButtonFrame5, FRAMEPOINT_BOTTOM, 0.700, 0.090)
+
+    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_0", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.120, 0.050)
+
+    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_1", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.160, 0.050)
+
+    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_2", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.200, 0.050)
+
+    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_3", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.240, 0.050)
+
+    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_4", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.280, 0.050)
+
+    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_5", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.320, 0.050)
+
+    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_6", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.120, 0.010)
+
+    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_7", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.160, 0.010)
+
+    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_8", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.200, 0.010)
+
+    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_9", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.240, 0.010)
+
+    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_10", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.280, 0.010)
+
+    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_11", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.320, 0.010)
+
+    call BlzFrameSetVisible(BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 0)), true)
+
+    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 0))
+    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 1))
+    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 2))
+    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 3))
+
+    call BlzFrameSetPoint(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, - 0.12, 0.58)
+    call BlzFrameSetPoint(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 1), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, - 0.04, 0.58)
+    call BlzFrameSetPoint(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 2), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.04, 0.58)
+    call BlzFrameSetPoint(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 3), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.12, 0.58)
+
+call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0), true)
+call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0))
+call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0), FRAMEPOINT_CENTER, 0.11, 0.067)
+call BlzFrameSetScale(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0), 0.9)
+
+endfunction
+
+
+
+//library Example ends
 //library SpellSleepAOE:
 
     function SpellSleepAOE__getRange takes integer level returns integer
@@ -4908,8 +5065,6 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h0JX', - 3392.0, - 26880.0, 270.000, 'h0JX')
-    set u=BlzCreateUnitWithSkin(p, 'h0JY', - 3008.0, - 26880.0, 270.000, 'h0JY')
     set u=BlzCreateUnitWithSkin(p, 'h0IP', - 5632.0, - 26240.0, 270.000, 'h0IP')
     set u=BlzCreateUnitWithSkin(p, 'h0GN', - 96.0, - 29984.0, 270.000, 'h0GN')
     set u=BlzCreateUnitWithSkin(p, 'obar', - 1600.0, - 29760.0, 270.000, 'obar')
@@ -4926,7 +5081,6 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0I4', - 3392.0, - 25664.0, 270.000, 'h0I4')
     set u=BlzCreateUnitWithSkin(p, 'h0I2', - 3904.0, - 25664.0, 270.000, 'h0I2')
     set u=BlzCreateUnitWithSkin(p, 'h0I6', - 3264.0, - 25344.0, 270.000, 'h0I6')
-    set u=BlzCreateUnitWithSkin(p, 'nnad', - 3328.0, - 27264.0, 270.000, 'nnad')
     set u=BlzCreateUnitWithSkin(p, 'h0I1', - 4416.0, - 25664.0, 270.000, 'h0I1')
     set u=BlzCreateUnitWithSkin(p, 'ovln', - 6432.0, - 28896.0, 270.000, 'ovln')
     set u=BlzCreateUnitWithSkin(p, 'ogre', - 6240.0, - 28512.0, 270.000, 'ogre')
@@ -4942,7 +5096,6 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'ovln', - 4640.0, - 29600.0, 270.000, 'ovln')
     set u=BlzCreateUnitWithSkin(p, 'osld', - 6784.0, - 29312.0, 270.000, 'osld')
     set u=BlzCreateUnitWithSkin(p, 'h0JI', - 3232.0, - 30368.0, 270.000, 'h0JI')
-    set u=BlzCreateUnitWithSkin(p, 'nnfm', - 3648.0, - 27264.0, 270.000, 'nnfm')
     set u=BlzCreateUnitWithSkin(p, 'h0JK', - 3200.0, - 30016.0, 270.000, 'h0JK')
     set u=BlzCreateUnitWithSkin(p, 'h0JL', - 4128.0, - 29088.0, 270.000, 'h0JL')
     set u=BlzCreateUnitWithSkin(p, 'h0JM', - 3776.0, - 29632.0, 270.000, 'h0JM')
@@ -4959,12 +5112,6 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0IM', - 6272.0, - 26240.0, 270.000, 'h0IM')
     set u=BlzCreateUnitWithSkin(p, 'h0IN', - 6016.0, - 26240.0, 270.000, 'h0IN')
     set u=BlzCreateUnitWithSkin(p, 'h0JR', - 3264.0, - 29504.0, 270.000, 'h0JR')
-    set u=BlzCreateUnitWithSkin(p, 'n055', - 3840.0, - 27264.0, 270.000, 'n055')
-    set u=BlzCreateUnitWithSkin(p, 'h0JW', - 4032.0, - 27264.0, 270.000, 'h0JW')
-    set u=BlzCreateUnitWithSkin(p, 'nnsg', - 3136.0, - 27264.0, 270.000, 'nnsg')
-    set u=BlzCreateUnitWithSkin(p, 'nnsa', - 3520.0, - 27264.0, 270.000, 'nnsa')
-    set u=BlzCreateUnitWithSkin(p, 'nntt', - 3712.0, - 26880.0, 270.000, 'nntt')
-    set u=BlzCreateUnitWithSkin(p, 'nntg', - 4224.0, - 27264.0, 270.000, 'nntg')
 endfunction
 
 //===========================================================================
@@ -4975,8 +5122,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'nnmg', - 4055.5, - 27931.4, 308.374, 'nnmg')
-    set u=BlzCreateUnitWithSkin(p, 'nnsw', - 3872.0, - 27940.1, 314.790, 'nnsw')
     set u=BlzCreateUnitWithSkin(p, 'e031', 49.7, - 30262.1, 283.027, 'e031')
     set u=BlzCreateUnitWithSkin(p, 'e031', - 36.2, - 30280.2, 168.513, 'e031')
     set u=BlzCreateUnitWithSkin(p, 'e031', - 36.4, - 30150.0, 351.617, 'e031')
@@ -5000,7 +5145,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0J5', - 3894.0, - 29881.6, 272.007, 'h0J5')
     set u=BlzCreateUnitWithSkin(p, 'u02D', - 4005.9, - 26178.3, 350.101, 'u02D')
     set u=BlzCreateUnitWithSkin(p, 'h0I9', - 4398.5, - 26268.8, 109.660, 'h0I9')
-    set u=BlzCreateUnitWithSkin(p, 'n051', - 3885.6, - 28077.0, 261.260, 'n051')
     set u=BlzCreateUnitWithSkin(p, 'h0IT', - 6121.2, - 26975.3, 277.970, 'h0IT')
     set u=BlzCreateUnitWithSkin(p, 'h0EI', - 6182.1, - 26985.0, 237.080, 'h0EI')
     set u=BlzCreateUnitWithSkin(p, 'h0IU', - 6268.4, - 26975.4, 253.330, 'h0IU')
@@ -5032,11 +5176,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0IG', - 3406.7, - 25854.5, 265.690, 'h0IG')
     set u=BlzCreateUnitWithSkin(p, 'h0IE', - 3987.2, - 25805.7, 285.561, 'h0IE')
     set u=BlzCreateUnitWithSkin(p, 'h0IC', - 3589.3, - 26119.4, 255.470, 'h0IC')
-    set u=BlzCreateUnitWithSkin(p, 'nsnp', - 3704.0, - 27926.9, 65.294, 'nsnp')
-    set u=BlzCreateUnitWithSkin(p, 'nmyr', - 3547.6, - 27971.6, 348.651, 'nmyr')
-    set u=BlzCreateUnitWithSkin(p, 'nnrg', - 3331.6, - 27991.2, 40.376, 'nnrg')
-    set u=BlzCreateUnitWithSkin(p, 'nhyc', - 3146.2, - 27993.2, 296.497, 'nhyc')
-    set u=BlzCreateUnitWithSkin(p, 'nmpe', - 2989.8, - 27974.4, 4.900, 'nmpe')
     set u=BlzCreateUnitWithSkin(p, 'h0ID', - 3888.8, - 25837.2, 259.736, 'h0ID')
     set u=BlzCreateUnitWithSkin(p, 'o023', - 5792.7, - 29745.9, 272.250, 'o023')
     set u=BlzCreateUnitWithSkin(p, 'opeo', - 6201.1, - 28833.8, 229.973, 'opeo')
@@ -5090,20 +5229,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, 290.235, 'n04X')
     set u=BlzCreateUnitWithSkin(p, 'h0IH', - 5443.4, - 29877.1, 272.940, 'h0IH')
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
-    set u=BlzCreateUnitWithSkin(p, 'h05P', - 4430.8, - 26979.3, 262.801, 'h05P')
-    set u=BlzCreateUnitWithSkin(p, 'h0GI', - 4041.0, - 26928.6, 320.800, 'h0GI')
-    set u=BlzCreateUnitWithSkin(p, 'h0GI', - 4060.8, - 27086.3, 119.963, 'h0GI')
-    set u=BlzCreateUnitWithSkin(p, 'n056', - 3042.8, - 27826.5, 266.647, 'n056')
-    set u=BlzCreateUnitWithSkin(p, 'H0JU', - 2933.8, - 28272.3, 256.530, 'H0JU')
-    call SetHeroLevel(u, 25, false)
-    set u=BlzCreateUnitWithSkin(p, 'H0JV', - 2705.8, - 28333.0, 251.260, 'H0JV')
-    call SetHeroLevel(u, 25, false)
-    set u=BlzCreateUnitWithSkin(p, 'n04Z', - 3852.1, - 28190.8, 275.381, 'n04Z')
-    set u=BlzCreateUnitWithSkin(p, 'n050', - 3328.2, - 27866.1, 125.094, 'n050')
-    set u=BlzCreateUnitWithSkin(p, 'n052', - 3546.1, - 27803.4, 83.433, 'n052')
-    set u=BlzCreateUnitWithSkin(p, 'n053', - 3887.8, - 27772.9, 347.959, 'n053')
-    set u=BlzCreateUnitWithSkin(p, 'N054', - 3057.3, - 28226.4, 179.570, 'N054')
-    call SetHeroLevel(u, 25, false)
 endfunction
 
 //===========================================================================
@@ -5763,7 +5888,6 @@ function CreateNeutralPassive takes nothing returns nothing
 
     set u=BlzCreateUnitWithSkin(p, 'h03E', - 23224.2, - 22174.3, 282.180, 'h03E')
     set u=BlzCreateUnitWithSkin(p, 'n04R', - 4523.2, - 29573.1, 280.438, 'n04R')
-    set u=BlzCreateUnitWithSkin(p, 'n057', - 2786.2, - 27940.2, 205.044, 'n057')
     set u=BlzCreateUnitWithSkin(p, 'h05P', - 5139.5, - 26185.9, 330.754, 'h05P')
 endfunction
 
@@ -6483,292 +6607,149 @@ endfunction
 //===========================================================================
 // Trigger: Hide Default UI And Reshow some
 //===========================================================================
-//function Trig_Hide_Default_UI_And_Reshow_some_Actions takes nothing returns nothing
-//    call BlzHideOriginFrames(true)
-//    call BlzFrameSetVisible(BlzGetFrameByName("ConsoleUIBackdrop",0), false)
-//    // -
-//    // -
-//    // Hide Inventory Cover
-//    call BlzFrameSetAlpha(BlzGetFrameByName("SimpleInventoryCover", 0), 0)
-//    // -
-//    // Show Minimap
-//    call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0), true)
-//    call BlzFrameSetVisible(BlzGetFrameByName("MinimapButtonBar", 0), true)
-//    call BlzFrameClearAllPoints(BlzGetFrameByName("MinimapButtonBar", 0))
-//    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 0))
-//    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 0), FRAMEPOINT_CENTER, 0.1825, 0.114)
-//    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 1))
-//    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 1), FRAMEPOINT_CENTER, 0.1825, 0.089)
-//    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 2))
-//    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 2), FRAMEPOINT_CENTER, 0.1825, 0.064)
-//    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 3))
-//    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 3), FRAMEPOINT_CENTER, 0.1825, 0.039)
-//    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 4))
-//    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 4), FRAMEPOINT_CENTER, 0.1825, 0.014)
-//    // Show 3D Face
-//    call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0), true)
-//    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0))
-//    call BlzFrameSetSize(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0), 0.047, 0.042)
-//    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0), FRAMEPOINT_CENTER, 0.4, 0.133)
-//    // Show Inventory, without unitInfo
-//    call BlzFrameSetVisible(BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)), true)
-//    // Show UnitInfos parent to show inventory and unit info
-//    call BlzFrameSetVisible(BlzFrameGetParent(BlzGetFrameByName("SimpleInfoPanelUnitDetail",0)),true)
-//    // Show Hero Icons at the left top of the screen
-//    call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR,0), true)
-//    //  //Quests, Menu, Allies, Log
-//    call BlzFrameSetVisible(BlzGetFrameByName("UpperButtonBarFrame",0),true)
-//    // //Gold, Lumber, food and Upkeep; also enables /fps /ping /apm
-//    call BlzFrameClearAllPoints(BlzGetFrameByName("ConsoleUI",0))
-//    call BlzFrameSetScale(BlzFrameGetChild(BlzGetFrameByName("ConsoleUI",0),5), 0.001)
-//    call BlzFrameSetVisible(BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0),true)
-//    call BlzFrameSetVisible(BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7),true)
-//    call BlzFrameClearAllPoints(BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7))
-//    call BlzFrameSetPoint(BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, -0.34, 0.14)
-//    call BlzFrameClearAllPoints(BlzFrameGetParent(BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0)))
-//    call BlzFrameSetAbsPoint(BlzFrameGetParent(BlzGetFrameByName("SimpleInfoPanelUnitDetail",0)), FRAMEPOINT_BOTTOM, 0.40, -0.006)
-//    // TextResourses
-//    call BlzFrameSetText(BlzGetFrameByName("Gold01",0), "|cffd6ad66Золото:")
-//    call BlzFrameSetText(BlzGetFrameByName("Wood01",0), "|cffd6ad66Дерево:")
-//    call BlzFrameSetText(BlzGetFrameByName("Income01",0), "|cffd6ad66Доход:")
-//    call BlzFrameSetText(BlzGetFrameByName("Income0201",0), "|cffd6ad66Расход:")
-//    call BlzFrameSetText(BlzGetFrameByName("Income0301",0), "|cffd6ad66Баланс:")
-//    call BlzFrameSetText(BlzGetFrameByName("Gold02",0), "0")
-//    call BlzFrameSetText(BlzGetFrameByName("Wood02",0), "0")
-//    call BlzFrameSetText(BlzGetFrameByName("Income02",0), "0")
-//    call BlzFrameSetText(BlzGetFrameByName("Income0202",0), "0")
-//    call BlzFrameSetText(BlzGetFrameByName("Income0302",0), "0")
-//    // HP MP
-//    call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT,0), true)
-//    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT,0))
-//    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT,0), FRAMEPOINT_CENTER, 0.4, 0.55)
-//    call BlzFrameSetScale(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT,0), 2.06)
-//endfunction
-//
-////===========================================================================
-//function InitTrig_Hide_Default_UI_And_Reshow_some takes nothing returns nothing
-//    set gg_trg_Hide_Default_UI_And_Reshow_some = CreateTrigger(  )
-//    call TriggerRegisterTimerEventSingle( gg_trg_Hide_Default_UI_And_Reshow_some, 0.00 )
-//    call TriggerAddAction( gg_trg_Hide_Default_UI_And_Reshow_some, function Trig_Hide_Default_UI_And_Reshow_some_Actions )
-//endfunction
-//
-//
+function Trig_Hide_Default_UI_And_Reshow_some_Actions takes nothing returns nothing
+    call BlzHideOriginFrames(true)
+    call BlzFrameSetVisible(BlzGetFrameByName("ConsoleUIBackdrop", 0), false)
+    // -
+    // -
+    // Hide Inventory Cover
+    call BlzFrameSetAlpha(BlzGetFrameByName("SimpleInventoryCover", 0), 0)
+    // -
+    // Show Minimap
+    call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0), true)
+    call BlzFrameSetVisible(BlzGetFrameByName("MinimapButtonBar", 0), true)
+    call BlzFrameClearAllPoints(BlzGetFrameByName("MinimapButtonBar", 0))
+    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 0))
+    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 0), FRAMEPOINT_CENTER, 0.1825, 0.114)
+    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 1))
+    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 1), FRAMEPOINT_CENTER, 0.1825, 0.089)
+    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 2))
+    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 2), FRAMEPOINT_CENTER, 0.1825, 0.064)
+    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 3))
+    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 3), FRAMEPOINT_CENTER, 0.1825, 0.039)
+    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 4))
+    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 4), FRAMEPOINT_CENTER, 0.1825, 0.014)
+    // Show 3D Face
+    call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0), true)
+    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0))
+    call BlzFrameSetSize(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0), 0.047, 0.042)
+    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0), FRAMEPOINT_CENTER, 0.4, 0.133)
+    // Show Inventory, without unitInfo
+    call BlzFrameSetVisible(BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)), true)
+    // Show UnitInfos parent to show inventory and unit info
+    call BlzFrameSetVisible(BlzFrameGetParent(BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0)), true)
+    // Show Hero Icons at the left top of the screen
+    call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR, 0), true)
+    call BlzFrameSetVisible(BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR, 0)), true)
+    //  //Quests, Menu, Allies, Log
+    call BlzFrameSetVisible(BlzGetFrameByName("UpperButtonBarFrame", 0), true)
+    // //Gold, Lumber, food and Upkeep; also enables /fps /ping /apm
+    //call BlzFrameClearAllPoints(BlzGetFrameByName("ConsoleUI",0))
+    call BlzFrameSetScale(BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 5), 0.001)
+    call BlzFrameSetVisible(BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0), true)
+    call BlzFrameSetVisible(BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7), true)
+    call BlzFrameClearAllPoints(BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7))
+    call BlzFrameSetPoint(BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, - 0.34, 0.14)
+    call BlzFrameClearAllPoints(BlzFrameGetParent(BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0)))
+    call BlzFrameSetAbsPoint(BlzFrameGetParent(BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0)), FRAMEPOINT_BOTTOM, 0.40, - 0.006)
+    // TextResourses
+    call BlzFrameSetText(BlzGetFrameByName("Gold01", 0), "|cffd6ad66Золото:")
+    call BlzFrameSetText(BlzGetFrameByName("Wood01", 0), "|cffd6ad66Дерево:")
+    
+    call BlzFrameSetText(BlzGetFrameByName("Income01", 0), "|cffd6ad66Доход:")
+    call BlzFrameSetText(BlzGetFrameByName("Income0201", 0), "|cffd6ad66Расход:")
+    call BlzFrameSetText(BlzGetFrameByName("Income0301", 0), "|cffd6ad66Баланс:")
+    call BlzFrameSetText(BlzGetFrameByName("Gold02", 0), "0")
+    call BlzFrameSetText(BlzGetFrameByName("Wood02", 0), "0")
+    call BlzFrameSetText(BlzGetFrameByName("Income02", 0), "0")
+    call BlzFrameSetText(BlzGetFrameByName("Income0202", 0), "0")
+    call BlzFrameSetText(BlzGetFrameByName("Income0302", 0), "0")
+    // HP MP
+    call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT, 0), true)
+    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT, 0))
+    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT, 0), FRAMEPOINT_CENTER, 0.4, 0.55)
+    call BlzFrameSetScale(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT, 0), 2.06)
+endfunction
+
+//===========================================================================
+function InitTrig_Hide_Default_UI_And_Reshow_some takes nothing returns nothing
+    set gg_trg_Hide_Default_UI_And_Reshow_some=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_Hide_Default_UI_And_Reshow_some, 0.00)
+    call TriggerAddAction(gg_trg_Hide_Default_UI_And_Reshow_some, function Trig_Hide_Default_UI_And_Reshow_some_Actions)
+endfunction
+
+
 //===========================================================================
 // Trigger: ResoursesInterface
 //===========================================================================
-//globals
-//    real array hp
-//    real array mana
-//endglobals
-//function Trig_ResoursesInterface_Actions takes nothing returns nothing
-//    
-//    local player p = GetLocalPlayer()
-//    local integer pi = GetPlayerId(p)
-//    local integer gold = (GetPlayerState( p, PLAYER_STATE_RESOURCE_GOLD ))
-//    local integer wood = (GetPlayerState( p, PLAYER_STATE_RESOURCE_LUMBER ))
-//    local integer i = 0
-//    local unit u
-//    local group g = CreateGroup()
-//    loop
-//        exitwhen i>23
-//        
-//        
-//        call GroupEnumUnitsSelected(g,Player(i),null)
-//        set u = FirstOfGroup(g)
-//        set hp[i]=GetUnitState(u,UNIT_STATE_LIFE)
-//        set mana[i]=GetUnitState(u,UNIT_STATE_MANA)
-//    
-//        call GroupClear(g)
-//        set i=i+1
-//    endloop
-//
-//
-//    //call BlzFrameSetText(BlzGetFrameByName("HPText",0), BlzFrameGetText(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT,0)))
-//    //call BlzFrameSetText(BlzGetFrameByName("MPText",0), BlzFrameGetText(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_MANA_TEXT,0)))
-//    
-//    call BlzFrameSetText(BlzGetFrameByName("HPText",0),I2S(R2I(hp[pi])))
-//    call BlzFrameSetText(BlzGetFrameByName("MPText",0), I2S(R2I(mana[pi])))
-//    call BlzFrameSetText(BlzGetFrameByName("Gold02",0), I2S(gold))
-//    call BlzFrameSetText(BlzGetFrameByName("Wood02",0), I2S(wood))
-//    call BlzFrameSetText(BlzGetFrameByName("Income02",0), I2S(R2I(income[pi])))
-//    
-//    
-//    
-//    if DisOn then
-//        call BlzFrameSetText(BlzGetFrameByName("Income0202",0), I2S(R2I(disincome[pi])))
-//    else
-//        call BlzFrameSetText(BlzGetFrameByName("Income0202",0), "|cffffff00"+I2S(R2I(disincome[pi]))+"(0)|r" )
-//    endif
-//    
-//    if balance[pi]>0 then
-//        call BlzFrameSetText(BlzGetFrameByName("Income0302",0), "|cff00ff00"+"+"+I2S(R2I(balance[pi]))+"|r")
-//    elseif balance[pi]==0 then 
-//        call BlzFrameSetText(BlzGetFrameByName("Income0302",0), "|cffffff00"+I2S(R2I(balance[pi]))+"|r")
-//    else
-//        call BlzFrameSetText(BlzGetFrameByName("Income0302",0), "|cffff0000"+I2S(R2I(balance[pi]))+"|r")
-//    endif
-//    
-//  
-//  
-//    call GroupClear(g)
-//    call DestroyGroup(g)
-//    set u = null
-//    set g = null
-//    set p = null
-//endfunction
-//
-////===========================================================================
-//function InitTrig_ResoursesInterface takes nothing returns nothing
-//    set gg_trg_ResoursesInterface = CreateTrigger(  )
-//    call TriggerRegisterTimerEvent( gg_trg_ResoursesInterface, 0.10, true )
-//    call TriggerAddAction( gg_trg_ResoursesInterface, function Trig_ResoursesInterface_Actions )
-//endfunction
+function Trig_ResoursesInterface_Actions takes nothing returns nothing
+    
+    local player p= GetLocalPlayer()
+    local integer pi= GetPlayerId(p)
+    local integer gold= ( GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) )
+    local integer wood= ( GetPlayerState(p, PLAYER_STATE_RESOURCE_LUMBER) )
+    local integer food= ( GetPlayerState(p, PLAYER_STATE_RESOURCE_FOOD_USED) )
+    local integer i= 0
+    local unit u
+    local group g= CreateGroup()
+    loop
+        exitwhen i > 23
+        
+        
+        call GroupEnumUnitsSelected(g, Player(i), null)
+        set u=FirstOfGroup(g)
+        set hp[i]=GetUnitState(u, UNIT_STATE_LIFE)
+        set mana[i]=GetUnitState(u, UNIT_STATE_MANA)
+    
+        call GroupClear(g)
+        set i=i + 1
+    endloop
+
+
+    //call BlzFrameSetText(BlzGetFrameByName("HPText",0), BlzFrameGetText(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT,0)))
+    //call BlzFrameSetText(BlzGetFrameByName("MPText",0), BlzFrameGetText(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_MANA_TEXT,0)))
+    
+    call BlzFrameSetText(BlzGetFrameByName("HPText", 0), I2S(R2I(hp[pi])))
+    call BlzFrameSetText(BlzGetFrameByName("MPText", 0), I2S(R2I(mana[pi])))
+    call BlzFrameSetText(BlzGetFrameByName("Gold02", 0), I2S(gold))
+    call BlzFrameSetText(BlzGetFrameByName("Wood02", 0), I2S(wood))
+    call BlzFrameSetText(BlzGetFrameByName("Food02m", 0), I2S(food))
+    call BlzFrameSetText(BlzGetFrameByName("Income02", 0), I2S(R2I(income[pi])))
+    
+    
+    
+    if DisOn then
+        call BlzFrameSetText(BlzGetFrameByName("Income0202", 0), I2S(R2I(disincome[pi])))
+    else
+        call BlzFrameSetText(BlzGetFrameByName("Income0202", 0), "|cffffff00" + I2S(R2I(disincome[pi])) + "(0)|r")
+    endif
+    
+    if balance[pi] > 0 then
+        call BlzFrameSetText(BlzGetFrameByName("Income0302", 0), "|cff00ff00+" + I2S(R2I(balance[pi])) + "|r")
+    elseif balance[pi] == 0 then
+        call BlzFrameSetText(BlzGetFrameByName("Income0302", 0), "|cffffff00" + I2S(R2I(balance[pi])) + "|r")
+    else
+        call BlzFrameSetText(BlzGetFrameByName("Income0302", 0), "|cffff0000" + I2S(R2I(balance[pi])) + "|r")
+    endif
+    
+  
+  
+    call GroupClear(g)
+    call DestroyGroup(g)
+    set u=null
+    set g=null
+    set p=null
+endfunction
+
+//===========================================================================
+function InitTrig_ResoursesInterface takes nothing returns nothing
+    set gg_trg_ResoursesInterface=CreateTrigger()
+    call TriggerRegisterTimerEvent(gg_trg_ResoursesInterface, 0.10, true)
+    call TriggerAddAction(gg_trg_ResoursesInterface, function Trig_ResoursesInterface_Actions)
+endfunction
 //===========================================================================
 // Trigger: Interface
 //===========================================================================
-//library Example initializer init
-//
-//globals
-//     framehandle gameUI
-//     framehandle Gold01
-//     framehandle Gold02
-//     framehandle Wood01
-//     framehandle Wood02
-//     framehandle Income01
-//     framehandle Income02
-//     framehandle Income0201
-//     framehandle Income0202
-//     framehandle Income0301
-//     framehandle Income0302
-//     framehandle HPText
-//     framehandle MPText
-//     framehandle FontInterface
-//
-//
-//endglobals
-//
-//function init takes nothing returns nothing
-//    local framehandle itemButtonFrame0 = BlzGetFrameByName("InventoryButton_0", 0)
-//    local framehandle itemButtonFrame1 = BlzGetFrameByName("InventoryButton_1", 0)
-//    local framehandle itemButtonFrame2 = BlzGetFrameByName("InventoryButton_2", 0)
-//    local framehandle itemButtonFrame3 = BlzGetFrameByName("InventoryButton_3", 0)
-//    local framehandle itemButtonFrame4 = BlzGetFrameByName("InventoryButton_4", 0)
-//    local framehandle itemButtonFrame5 = BlzGetFrameByName("InventoryButton_5", 0)
-//    local framehandle itemButtonFrame6 = BlzGetFrameByName("InventoryButton_6", 0)
-//    set gameUI = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0)
-//    call BlzFrameSetText(BlzGetFrameByName("InventoryText",0), "")
-//    call BlzLoadTOCFile("war3mapImported\\tocs.toc")
-//
-//    set FontInterface = BlzCreateSimpleFrame("FontInterface", gameUI, 0)
-//
-//    call BlzFrameSetAbsPoint(FontInterface, FRAMEPOINT_CENTER, 0.461, 0.067)
-//
-//set HPText = BlzCreateFrame("HPText", gameUI, 0, 0)
-//call BlzFrameSetAbsPoint(HPText, FRAMEPOINT_CENTER, 0.3245, 0.1195)
-//
-//set MPText = BlzCreateFrame("MPText", gameUI, 0, 0)
-//call BlzFrameSetAbsPoint(MPText, FRAMEPOINT_CENTER, 0.4755, 0.1195)
-//
-//set Gold01 = BlzCreateFrame("Gold01", gameUI, 0, 0)
-//call BlzFrameSetAbsPoint(Gold01, FRAMEPOINT_CENTER, 0.28, 0.065)
-//
-//set Gold02 = BlzCreateFrame("Gold02", gameUI, 0, 0)
-//call BlzFrameSetAbsPoint(Gold02, FRAMEPOINT_CENTER, 0.28, 0.055)
-//
-//set Wood01 = BlzCreateFrame("Wood01", gameUI, 0, 0)
-//call BlzFrameSetAbsPoint(Wood01, FRAMEPOINT_CENTER, 0.28, 0.035)
-//
-//set Wood02 = BlzCreateFrame("Wood02", gameUI, 0, 0)
-//call BlzFrameSetAbsPoint(Wood02, FRAMEPOINT_CENTER, 0.28, 0.025)
-//
-//set Income01 = BlzCreateFrame("Income01", gameUI, 0, 0)
-//call BlzFrameSetAbsPoint(Income01, FRAMEPOINT_CENTER, 0.23, 0.08)
-//
-//set Income02 = BlzCreateFrame("Income02", gameUI, 0, 0)
-//call BlzFrameSetAbsPoint(Income02, FRAMEPOINT_CENTER, 0.23, 0.07)
-//
-//set Income0201 = BlzCreateFrame("Income0201", gameUI, 0, 0)
-//call BlzFrameSetAbsPoint(Income0201, FRAMEPOINT_CENTER, 0.23, 0.05)
-//
-//set Income0202 = BlzCreateFrame("Income0202", gameUI, 0, 0)
-//call BlzFrameSetAbsPoint(Income0202, FRAMEPOINT_CENTER, 0.23, 0.04)
-//
-//set Income0301 = BlzCreateFrame("Income0301", gameUI, 0, 0)
-//call BlzFrameSetAbsPoint(Income0301, FRAMEPOINT_CENTER, 0.23, 0.02)
-//
-//set Income0302 = BlzCreateFrame("Income0302", gameUI, 0, 0)
-//call BlzFrameSetAbsPoint(Income0302, FRAMEPOINT_CENTER, 0.23, 0.01)
-//
-//    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_0", 0))
-//    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_1", 0))
-//    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_2", 0))
-//    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_3", 0))
-//    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_4", 0))
-//    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_5", 0))
-//    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_6", 0))
-//    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_7", 0))
-//    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_8", 0))
-//    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_9", 0))
-//    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_10", 0))
-//    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_11", 0))
-//    call BlzFrameClearAllPoints(itemButtonFrame0)
-//    call BlzFrameClearAllPoints(itemButtonFrame1)
-//    call BlzFrameClearAllPoints(itemButtonFrame2)
-//    call BlzFrameClearAllPoints(itemButtonFrame3)
-//    call BlzFrameClearAllPoints(itemButtonFrame4)
-//    call BlzFrameClearAllPoints(itemButtonFrame5)
-//    call BlzFrameSetAbsPoint(itemButtonFrame0, FRAMEPOINT_BOTTOM, 0.540, 0.090)
-//    call BlzFrameSetAbsPoint(itemButtonFrame1, FRAMEPOINT_BOTTOM, 0.572, 0.090)
-//    call BlzFrameSetAbsPoint(itemButtonFrame2, FRAMEPOINT_BOTTOM, 0.604, 0.090)
-//    call BlzFrameSetAbsPoint(itemButtonFrame3, FRAMEPOINT_BOTTOM, 0.636, 0.090)
-//    call BlzFrameSetAbsPoint(itemButtonFrame4, FRAMEPOINT_BOTTOM, 0.668, 0.090)
-//    call BlzFrameSetAbsPoint(itemButtonFrame5, FRAMEPOINT_BOTTOM, 0.700, 0.090)
-//
-//    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_0", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.120, 0.050)
-//
-//    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_1", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.160, 0.050)
-//
-//    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_2", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.200, 0.050)
-//
-//    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_3", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.240, 0.050)
-//
-//    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_4", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.280, 0.050)
-//
-//    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_5", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.320, 0.050)
-//
-//    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_6", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.120, 0.010)
-//
-//    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_7", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.160, 0.010)
-//
-//    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_8", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.200, 0.010)
-//
-//    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_9", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.240, 0.010)
-//
-//    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_10", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.280, 0.010)
-//
-//    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_11", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.320, 0.010)
-//
-//    call BlzFrameSetVisible(BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 0)),true)
-//
-//    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 0))
-//    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 1))
-//    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 2))
-//    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 3))
-//
-//    call BlzFrameSetPoint(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, -0.12, 0.58)
-//    call BlzFrameSetPoint(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 1), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, -0.04, 0.58)
-//    call BlzFrameSetPoint(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 2), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.04, 0.58)
-//    call BlzFrameSetPoint(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 3), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.12, 0.58)
-//
-//call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0), true)
-//call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP,0))
-//call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP,0), FRAMEPOINT_CENTER, 0.11, 0.067)
-//call BlzFrameSetScale(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP,0), 0.9)
-//
-//endfunction
-//
-//
-//endlibrary
 //===========================================================================
 // Trigger: MainInfo
 //===========================================================================
@@ -10220,20 +10201,20 @@ function Trig_TimerIncome_Actions takes nothing returns nothing
             set t=GetPlayerTechCount(p, 'R04O', true)
             if t > 1 then
                 set corruption[i]=( disincome[i] * ( ( t - 1 ) * 0.15 ) )
-                //if EcLog then
+                if EcLog then
                     set udg_LocalText2=( "Коррупция" + I2S(R2I(corruption[i])) )
                     call DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-                //endif
+                endif
                
             endif
             
             set t=GetPlayerTechCount(p, 'R0DV', true)
             if t >= 1 then
                 set additional[i]=disincome[i] * ( udg_HordeMainPrice[i] / ( - 100.0 ) )
-                //if EcLog then
+                if EcLog then
                     set udg_LocalText2=( "Дополнительно: " + I2S(R2I(additional[i])) )
                     call DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-               // endif
+                endif
                
             endif
               
@@ -10245,20 +10226,20 @@ function Trig_TimerIncome_Actions takes nothing returns nothing
         
         
         
-        //if EcLog then
+        if EcLog then
                 set udg_LocalText2=( "Доход: " + R2S(income[i]) )
                 call DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
                 set udg_LocalText2=( "Расход: " + R2S(disincome[i]) )
                 call DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
                 set udg_LocalText2=( "Логистика: " + R2S(logistic[i]) )
                 call DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-               // set udg_LocalText2 = ( "Юнитов: " + I2S(udg_UnitsCount[i])) 
-             //   call DisplayTimedTextToPlayer( p, 0, 0,7, udg_LocalText2 )
+                set udg_LocalText2=( "Юнитов: " + I2S(udg_UnitsCount[i]) )
+                call DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
                 set udg_LocalText2=( "Итого: " + R2S(balance[i]) )
                 call DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
                 set udg_LocalText2=( "Древесины: " + R2S(incomeW[i]) )
                 call DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-        //endif
+        endif
         
         call SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) + R2I(balance[i]))
         call SetPlayerState(p, PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(p, PLAYER_STATE_RESOURCE_LUMBER) + R2I(incomeW[i]))
@@ -17431,7 +17412,8 @@ endfunction
 // Trigger: MageTp
 //===========================================================================
 function Trig_MageTp_Conditions takes nothing returns boolean
-    return GetSpellAbilityId() == 'A0IO'
+    local integer id= GetSpellAbilityId()
+    return id == 'A0IO' or id == 'A0VT' or id == 'A0Y4' or id == 'A0YK' or id == 'A0I0'
 endfunction
 
 function Trig_MageTp_Actions takes nothing returns nothing
@@ -20926,408 +20908,6 @@ function InitTrig_SpellRes takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: Killing
-//===========================================================================
-function Trig_Killing_Conditions takes nothing returns boolean
-    return GetSpellAbilityId() == 'A14C'
-endfunction
-
-function Trig_Killing_Actions takes nothing returns nothing
-    local unit u= GetTriggerUnit()
-    call UnitRemoveAbility(u, 'A13O')
-    call UnitRemoveAbility(u, 'A13N')
-    call UnitAddAbility(u, 'A13M')
-    call BlzStartUnitAbilityCooldown(u, 'A13M', 12)
-    set u=null
-endfunction
-
-//===========================================================================
-function InitTrig_Killing takes nothing returns nothing
-    set gg_trg_Killing=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Killing, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_Killing, Condition(function Trig_Killing_Conditions))
-    call TriggerAddAction(gg_trg_Killing, function Trig_Killing_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: StartAttackKilling
-//===========================================================================
-function Trig_StartAttackKilling_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetAttacker(), 'A13M') != 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13M') <= 0.00 )
-endfunction
-
-function Trig_StartAttackKilling_Actions takes nothing returns nothing
-    local unit u= GetAttacker()
-    call UnitAddAbility(u, 'A13T')
-    call BlzStartUnitAbilityCooldown(u, 'A13M', 10.00)
-endfunction
-
-//===========================================================================
-function InitTrig_StartAttackKilling takes nothing returns nothing
-    set gg_trg_StartAttackKilling=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackKilling, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_StartAttackKilling, Condition(function Trig_StartAttackKilling_Conditions))
-    call TriggerAddAction(gg_trg_StartAttackKilling, function Trig_StartAttackKilling_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: EndAttackKilling
-//===========================================================================
-function Trig_EndAttackKilling_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13T') > 0
-endfunction
-
-function Trig_EndAttackKilling_Actions takes nothing returns nothing
-    call UnitRemoveAbility(GetEventDamageSource(), 'A13T')
-endfunction
-
-//===========================================================================
-function InitTrig_EndAttackKilling takes nothing returns nothing
-    set gg_trg_EndAttackKilling=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackKilling, EVENT_PLAYER_UNIT_DAMAGED)
-    call TriggerAddCondition(gg_trg_EndAttackKilling, Condition(function Trig_EndAttackKilling_Conditions))
-    call TriggerAddAction(gg_trg_EndAttackKilling, function Trig_EndAttackKilling_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: Infect
-//===========================================================================
-function Trig_Infect_Conditions takes nothing returns boolean
-    return GetSpellAbilityId() == 'A14E'
-endfunction
-
-function Trig_Infect_Actions takes nothing returns nothing
-    local unit u= GetTriggerUnit()
-    call UnitRemoveAbility(u, 'A13O')
-    call UnitRemoveAbility(u, 'A13M')
-    call UnitAddAbility(u, 'A13N')
-    call BlzStartUnitAbilityCooldown(u, 'A13N', 12)
-    set u=null
-endfunction
-
-//===========================================================================
-function InitTrig_Infect takes nothing returns nothing
-    set gg_trg_Infect=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Infect, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_Infect, Condition(function Trig_Infect_Conditions))
-    call TriggerAddAction(gg_trg_Infect, function Trig_Infect_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: StartAttackInfect
-//===========================================================================
-function Trig_StartAttackInfect_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetAttacker(), 'A13N') != 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13N') <= 0.00 )
-endfunction
-
-function Trig_StartAttackInfect_Actions takes nothing returns nothing
-    local unit u= GetAttacker()
-    call UnitAddAbility(u, 'A13S')
-    call BlzStartUnitAbilityCooldown(u, 'A13N', 10.00)
-endfunction
-
-//===========================================================================
-function InitTrig_StartAttackInfect takes nothing returns nothing
-    set gg_trg_StartAttackInfect=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackInfect, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_StartAttackInfect, Condition(function Trig_StartAttackInfect_Conditions))
-    call TriggerAddAction(gg_trg_StartAttackInfect, function Trig_StartAttackInfect_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: EndAttackInfect
-//===========================================================================
-function Trig_EndAttackInfect_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13S') > 0
-endfunction
-
-function Trig_EndAttackInfect_Actions takes nothing returns nothing
-    call UnitRemoveAbility(GetEventDamageSource(), 'A13S')
-endfunction
-
-//===========================================================================
-function InitTrig_EndAttackInfect takes nothing returns nothing
-    set gg_trg_EndAttackInfect=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackInfect, EVENT_PLAYER_UNIT_DAMAGED)
-    call TriggerAddCondition(gg_trg_EndAttackInfect, Condition(function Trig_EndAttackInfect_Conditions))
-    call TriggerAddAction(gg_trg_EndAttackInfect, function Trig_EndAttackInfect_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: Zagraz
-//===========================================================================
-function Trig_Zagraz_Conditions takes nothing returns boolean
-    return GetSpellAbilityId() == 'A14D'
-endfunction
-
-function Trig_Zagraz_Actions takes nothing returns nothing
-    local unit u= GetTriggerUnit()
-    call UnitRemoveAbility(u, 'A13N')
-    call UnitRemoveAbility(u, 'A13M')
-    call UnitAddAbility(u, 'A13O')
-    call BlzStartUnitAbilityCooldown(u, 'A13O', 12)
-    set u=null
-endfunction
-
-//===========================================================================
-function InitTrig_Zagraz takes nothing returns nothing
-    set gg_trg_Zagraz=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Zagraz, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_Zagraz, Condition(function Trig_Zagraz_Conditions))
-    call TriggerAddAction(gg_trg_Zagraz, function Trig_Zagraz_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: StartAttackZagraz
-//===========================================================================
-function Trig_StartAttackZagraz_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetAttacker(), 'A13O') != 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13O') <= 0.00 )
-endfunction
-
-function Trig_StartAttackZagraz_Actions takes nothing returns nothing
-    local unit u= GetAttacker()
-    call UnitAddAbility(u, 'A13V')
-    call BlzStartUnitAbilityCooldown(u, 'A13V', 10.00)
-endfunction
-
-//===========================================================================
-function InitTrig_StartAttackZagraz takes nothing returns nothing
-    set gg_trg_StartAttackZagraz=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackZagraz, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_StartAttackZagraz, Condition(function Trig_StartAttackZagraz_Conditions))
-    call TriggerAddAction(gg_trg_StartAttackZagraz, function Trig_StartAttackZagraz_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: EndAttackZagraz
-//===========================================================================
-function Trig_EndAttackZagraz_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13V') > 0
-endfunction
-
-function Trig_EndAttackZagraz_Actions takes nothing returns nothing
-    call UnitRemoveAbility(GetEventDamageSource(), 'A13V')
-endfunction
-
-//===========================================================================
-function InitTrig_EndAttackZagraz takes nothing returns nothing
-    set gg_trg_EndAttackZagraz=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackZagraz, EVENT_PLAYER_UNIT_DAMAGED)
-    call TriggerAddCondition(gg_trg_EndAttackZagraz, Condition(function Trig_EndAttackZagraz_Conditions))
-    call TriggerAddAction(gg_trg_EndAttackZagraz, function Trig_EndAttackZagraz_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: Usual
-//===========================================================================
-function Trig_Usual_Conditions takes nothing returns boolean
-    return GetSpellAbilityId() == 'A142'
-endfunction
-
-function Trig_Usual_Actions takes nothing returns nothing
-    local unit u= GetTriggerUnit()
-    call UnitRemoveAbility(u, 'A13P')
-    call UnitRemoveAbility(u, 'A13Q')
-    call UnitAddAbility(u, 'A13L')
-    call BlzStartUnitAbilityCooldown(u, 'A13L', 12)
-    set u=null
-endfunction
-
-//===========================================================================
-function InitTrig_Usual takes nothing returns nothing
-    set gg_trg_Usual=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Usual, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_Usual, Condition(function Trig_Usual_Conditions))
-    call TriggerAddAction(gg_trg_Usual, function Trig_Usual_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: StartAttackUsual
-//===========================================================================
-function Trig_StartAttackUsual_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetAttacker(), 'A13L') != 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13L') <= 0.00 )
-endfunction
-
-function Trig_StartAttackUsual_Actions takes nothing returns nothing
-    local unit u= GetAttacker()
-    call UnitAddAbility(u, 'A132')
-    call BlzStartUnitAbilityCooldown(u, 'A13L', 10.00)
-endfunction
-
-//===========================================================================
-function InitTrig_StartAttackUsual takes nothing returns nothing
-    set gg_trg_StartAttackUsual=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackUsual, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_StartAttackUsual, Condition(function Trig_StartAttackUsual_Conditions))
-    call TriggerAddAction(gg_trg_StartAttackUsual, function Trig_StartAttackUsual_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: EndAttackUsual
-//===========================================================================
-function Trig_EndAttackUsual_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A132') > 0
-endfunction
-
-function Trig_EndAttackUsual_Actions takes nothing returns nothing
-    call UnitRemoveAbility(GetEventDamageSource(), 'A132')
-endfunction
-
-//===========================================================================
-function InitTrig_EndAttackUsual takes nothing returns nothing
-    set gg_trg_EndAttackUsual=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackUsual, EVENT_PLAYER_UNIT_DAMAGED)
-    call TriggerAddCondition(gg_trg_EndAttackUsual, Condition(function Trig_EndAttackUsual_Conditions))
-    call TriggerAddAction(gg_trg_EndAttackUsual, function Trig_EndAttackUsual_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: Korroz
-//===========================================================================
-function Trig_Korroz_Conditions takes nothing returns boolean
-    return GetSpellAbilityId() == 'A143'
-endfunction
-
-function Trig_Korroz_Actions takes nothing returns nothing
-    local unit u= GetTriggerUnit()
-    call UnitRemoveAbility(u, 'A13L')
-    call UnitRemoveAbility(u, 'A13P')
-    call UnitAddAbility(u, 'A13Q')
-    call BlzStartUnitAbilityCooldown(u, 'A13Q', 12)
-    set u=null
-endfunction
-
-//===========================================================================
-function InitTrig_Korroz takes nothing returns nothing
-    set gg_trg_Korroz=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Korroz, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_Korroz, Condition(function Trig_Korroz_Conditions))
-    call TriggerAddAction(gg_trg_Korroz, function Trig_Korroz_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: StartAttackCorroz
-//===========================================================================
-function Trig_StartAttackCorroz_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetAttacker(), 'A13N') != 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13N') <= 0.00 )
-endfunction
-
-function Trig_StartAttackCorroz_Actions takes nothing returns nothing
-    local unit u= GetAttacker()
-    call UnitAddAbility(u, 'A13U')
-    call BlzStartUnitAbilityCooldown(u, 'A13N', 10.00)
-endfunction
-
-//===========================================================================
-function InitTrig_StartAttackCorroz takes nothing returns nothing
-    set gg_trg_StartAttackCorroz=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackCorroz, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_StartAttackCorroz, Condition(function Trig_StartAttackCorroz_Conditions))
-    call TriggerAddAction(gg_trg_StartAttackCorroz, function Trig_StartAttackCorroz_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: EndAttackCorroz
-//===========================================================================
-function Trig_EndAttackCorroz_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13U') > 0
-endfunction
-
-function Trig_EndAttackCorroz_Actions takes nothing returns nothing
-    call UnitRemoveAbility(GetEventDamageSource(), 'A13U')
-endfunction
-
-//===========================================================================
-function InitTrig_EndAttackCorroz takes nothing returns nothing
-    set gg_trg_EndAttackCorroz=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackCorroz, EVENT_PLAYER_UNIT_DAMAGED)
-    call TriggerAddCondition(gg_trg_EndAttackCorroz, Condition(function Trig_EndAttackCorroz_Conditions))
-    call TriggerAddAction(gg_trg_EndAttackCorroz, function Trig_EndAttackCorroz_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: Safety
-//===========================================================================
-function Trig_Safety_Conditions takes nothing returns boolean
-    return GetSpellAbilityId() == 'A144'
-endfunction
-
-function Trig_Safety_Actions takes nothing returns nothing
-    local unit u= GetTriggerUnit()
-    call UnitRemoveAbility(u, 'A13L')
-    call UnitRemoveAbility(u, 'A13Q')
-    call UnitAddAbility(u, 'A13P')
-    call BlzStartUnitAbilityCooldown(u, 'A13P', 12)
-    set u=null
-endfunction
-
-//===========================================================================
-function InitTrig_Safety takes nothing returns nothing
-    set gg_trg_Safety=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Safety, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_Safety, Condition(function Trig_Safety_Conditions))
-    call TriggerAddAction(gg_trg_Safety, function Trig_Safety_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: StartAttackSafety
-//===========================================================================
-function Trig_StartAttackSafety_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetAttacker(), 'A13P') != 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13P') <= 0.00 )
-endfunction
-
-function Trig_StartAttackSafety_Actions takes nothing returns nothing
-    local unit u= GetAttacker()
-    call UnitAddAbility(u, 'A13R')
-    call BlzStartUnitAbilityCooldown(u, 'A13P', 10.00)
-endfunction
-
-//===========================================================================
-function InitTrig_StartAttackSafety takes nothing returns nothing
-    set gg_trg_StartAttackSafety=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackSafety, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_StartAttackSafety, Condition(function Trig_StartAttackSafety_Conditions))
-    call TriggerAddAction(gg_trg_StartAttackSafety, function Trig_StartAttackSafety_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: EndAttackSafety
-//===========================================================================
-function Trig_EndAttackSafety_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13R') > 0
-endfunction
-
-function Trig_EndAttackSafety_Actions takes nothing returns nothing
-    call UnitRemoveAbility(GetEventDamageSource(), 'A13R')
-endfunction
-
-//===========================================================================
-function InitTrig_EndAttackSafety takes nothing returns nothing
-    set gg_trg_EndAttackSafety=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackSafety, EVENT_PLAYER_UNIT_DAMAGED)
-    call TriggerAddCondition(gg_trg_EndAttackSafety, Condition(function Trig_EndAttackSafety_Conditions))
-    call TriggerAddAction(gg_trg_EndAttackSafety, function Trig_EndAttackSafety_Actions)
-endfunction
-
-
-//===========================================================================
 // Trigger: HordeOn
 //===========================================================================
 function Trig_HordeOn_Actions takes nothing returns nothing
@@ -23503,7 +23083,7 @@ function Trig_CommonHome_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     local group g= CreateGroup()
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 4
+    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 10
     call countAll(p)
 
     
@@ -23879,7 +23459,7 @@ function Trig_TrueHorde_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     local group g= CreateGroup()
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 12
+    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 15
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 5
     call countAll(p)
 
@@ -24618,7 +24198,6 @@ function Trig_GnomesStart_Func002A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('H0GE', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('H0GC', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('H0GG', 1, GetEnumPlayer())
-    call SetPlayerAbilityAvailableBJ(false, 'A0SJ', GetEnumPlayer())
     call SetPlayerAbilityAvailableBJ(false, 'A0SH', GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0C4', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0C3', 0, GetEnumPlayer())
@@ -27225,7 +26804,7 @@ endfunction
 
 function Trig_SGT_1_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('R0CI', 0, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('R0CM', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0CM', 0, GetOwningPlayer(GetTriggerUnit()))
     set udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     call TriggerExecute(gg_trg_All_Gnomes)
 endfunction
@@ -27763,7 +27342,6 @@ endfunction
 
 function Trig_Klap_Klap_LUM_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('R0BP', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerAbilityAvailableBJ(true, 'A0SJ', GetOwningPlayer(GetTriggerUnit()))
 endfunction
 
 //===========================================================================
@@ -41548,6 +41126,40 @@ function InitTrig_KillSomeUnitsAndItems takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: KillTestUnits O Copy
+//===========================================================================
+function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
+    return ( RectContainsUnit(gg_rct_TestRegion, GetFilterUnit()) == true )
+endfunction
+
+function Trig_KillTestUnits_O_Copy_Func003A takes nothing returns nothing
+    local unit u= GetEnumUnit()
+    local player p= GetOwningPlayer(u)
+    local integer id= GetUnitTypeId(u)
+    if IsUnitType(u, UNIT_TYPE_HERO) then
+        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
+    endif
+    call RemoveUnit(u)
+    set u=null
+    set p=null
+endfunction
+
+function Trig_KillTestUnits_O_Copy_Actions takes nothing returns nothing
+    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Copy_Func001002)
+    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Copy_Func003A)
+    call GroupClear(udg_LocalOtrad2)
+endfunction
+
+//===========================================================================
+function InitTrig_KillTestUnits_O_Copy takes nothing returns nothing
+    set gg_trg_KillTestUnits_O_Copy=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O_Copy, 0.01)
+    call TriggerAddAction(gg_trg_KillTestUnits_O_Copy, function Trig_KillTestUnits_O_Copy_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: KillTestUnits Command
 //===========================================================================
 function Trig_KillTestUnits_Command_Func001002 takes nothing returns boolean
@@ -41834,8 +41446,8 @@ endfunction
 function InitCustomTriggers takes nothing returns nothing
     call InitTrig_runSeachHandle()
     call InitTrig_Unit_Indexer()
-    //Function not found: call InitTrig_Hide_Default_UI_And_Reshow_some()
-    //Function not found: call InitTrig_ResoursesInterface()
+    call InitTrig_Hide_Default_UI_And_Reshow_some()
+    call InitTrig_ResoursesInterface()
     //Function not found: call InitTrig_Interface()
     call InitTrig_MainInfo()
     call InitTrig_Initial_things()
@@ -42134,24 +41746,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_LumberTest()
     call InitTrig_Spell2()
     call InitTrig_SpellRes()
-    call InitTrig_Killing()
-    call InitTrig_StartAttackKilling()
-    call InitTrig_EndAttackKilling()
-    call InitTrig_Infect()
-    call InitTrig_StartAttackInfect()
-    call InitTrig_EndAttackInfect()
-    call InitTrig_Zagraz()
-    call InitTrig_StartAttackZagraz()
-    call InitTrig_EndAttackZagraz()
-    call InitTrig_Usual()
-    call InitTrig_StartAttackUsual()
-    call InitTrig_EndAttackUsual()
-    call InitTrig_Korroz()
-    call InitTrig_StartAttackCorroz()
-    call InitTrig_EndAttackCorroz()
-    call InitTrig_Safety()
-    call InitTrig_StartAttackSafety()
-    call InitTrig_EndAttackSafety()
     call InitTrig_HordeOn()
     call InitTrig_K1T1()
     call InitTrig_K1T2()
@@ -42696,6 +42290,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
     call InitTrig_KillSomeUnitsAndItems()
+    call InitTrig_KillTestUnits_O_Copy()
     call InitTrig_KillTestUnits_Command()
     call InitTrig_KillMagaz()
     call InitTrig_Setlvl()
@@ -42727,6 +42322,7 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_BloodClose)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForNavy)
+    call ConditionalTriggerExecute(gg_trg_KillTestUnits_O_Copy)
 endfunction
 
 //***************************************************************************
@@ -43082,6 +42678,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
+call ExecuteFunc("init")
 call ExecuteFunc("SpellSleepAOE__onInit")
 
     call InitGlobals()
