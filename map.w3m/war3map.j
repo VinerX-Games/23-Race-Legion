@@ -716,6 +716,7 @@ trigger gg_trg_Spell2= null
 trigger gg_trg_SpellRes= null
 trigger gg_trg_Spell= null
 trigger gg_trg_SpandFarm= null
+trigger gg_trg_BansheeAuto= null
 trigger gg_trg_ResGmilDamage= null
 trigger gg_trg_Killing= null
 trigger gg_trg_StartAttackKilling= null
@@ -1451,7 +1452,10 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_BansheeAuto= null
+trigger gg_trg_Race_Forsaken= null
+trigger gg_trg_MassInvis= null
+trigger gg_trg_StartBandits_Copy= null
+trigger gg_trg_Ult= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -5154,10 +5158,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n052', - 3517.3, - 27626.9, 50.121, 'n052')
     set u=BlzCreateUnitWithSkin(p, 'n050', - 3299.3, - 27637.6, 164.130, 'n050')
     set u=BlzCreateUnitWithSkin(p, 'n04Z', - 4051.0, - 27780.2, 129.038, 'n04Z')
-    set u=BlzCreateUnitWithSkin(p, 'N058', - 3905.8, - 30499.5, 344.040, 'N058')
-    set u=BlzCreateUnitWithSkin(p, 'O030', - 4077.8, - 30492.1, 10.500, 'O030')
-    set u=BlzCreateUnitWithSkin(p, 'O031', - 4017.0, - 30587.2, 266.095, 'O031')
-    set u=BlzCreateUnitWithSkin(p, 'u02P', - 3407.5, - 30115.1, - 89.810, 'u02P')
+    set u=BlzCreateUnitWithSkin(p, 'u02P', - 3407.5, - 30115.1, 270.191, 'u02P')
     set u=BlzCreateUnitWithSkin(p, 'h0IT', - 6121.2, - 26975.3, 277.970, 'h0IT')
     set u=BlzCreateUnitWithSkin(p, 'h0EI', - 6182.1, - 26985.0, 237.080, 'h0EI')
     set u=BlzCreateUnitWithSkin(p, 'h0IU', - 6268.4, - 26975.4, 253.330, 'h0IU')
@@ -12522,6 +12523,31 @@ function InitTrig_Race_Nagi takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: Race Forsaken
+//===========================================================================
+function Trig_Race_Forsaken_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A155' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Forsaken_Actions takes nothing returns nothing
+    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    call CreateNUnitsAtLoc(5, 'h0J5', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    call RemoveUnit(GetSpellAbilityUnit())
+    call RemoveLocation(udg_LocalPosition2)
+endfunction
+
+//===========================================================================
+function InitTrig_Race_Forsaken takes nothing returns nothing
+    set gg_trg_Race_Forsaken=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Forsaken, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_Race_Forsaken, Condition(function Trig_Race_Forsaken_Conditions))
+    call TriggerAddAction(gg_trg_Race_Forsaken, function Trig_Race_Forsaken_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: Race Random
 //===========================================================================
 function Trig_Race_Random_Conditions takes nothing returns boolean
@@ -12863,6 +12889,7 @@ function Trig_Page1_O_Actions takes nothing returns nothing
     call UnitRemoveAbilityBJ('A121', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A14O', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A12Q', GetTriggerUnit())
+    call UnitRemoveAbilityBJ('A155', GetTriggerUnit())
 endfunction
 
 //===========================================================================
@@ -12933,6 +12960,7 @@ function Trig_Page3_O_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0HW', GetTriggerUnit())
     call UnitAddAbilityBJ('A121', GetTriggerUnit())
     call UnitAddAbilityBJ('A14O', GetTriggerUnit())
+    call UnitAddAbilityBJ('A155', GetTriggerUnit())
     call UnitAddAbilityBJ('A12Q', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QQ', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QN', GetTriggerUnit())
@@ -20931,6 +20959,93 @@ function InitTrig_SpellRes takes nothing returns nothing
     call TriggerAddCondition(gg_trg_SpellRes, Condition(function Trig_SpellRes_Conditions))
     call TriggerAddAction(gg_trg_SpellRes, function Trig_SpellRes_Actions)
 endfunction
+
+//===========================================================================
+// Trigger: StartBandits Copy
+//===========================================================================
+function Trig_StartBandits_Copy_Func001A takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('N058', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('O031', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('O030', 1, GetEnumPlayer())
+endfunction
+
+function Trig_StartBandits_Copy_Actions takes nothing returns nothing
+    call ForForce(udg_AllPlayers, function Trig_StartBandits_Copy_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_StartBandits_Copy takes nothing returns nothing
+    set gg_trg_StartBandits_Copy=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_StartBandits_Copy, 0.01)
+    call TriggerAddAction(gg_trg_StartBandits_Copy, function Trig_StartBandits_Copy_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Ult
+//===========================================================================
+function Trig_Ult_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A15B'
+endfunction
+
+function Trig_Ult_Actions takes nothing returns nothing
+    local location loc= GetSpellTargetLoc()
+    
+    call CreateItem('I01X', GetLocationX(loc), GetLocationY(loc))
+    
+    call RemoveLocation(loc)
+    set loc=null
+endfunction
+
+//===========================================================================
+function InitTrig_Ult takes nothing returns nothing
+    set gg_trg_Ult=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Ult, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_Ult, Condition(function Trig_Ult_Conditions))
+    call TriggerAddAction(gg_trg_Ult, function Trig_Ult_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: MassInvis
+//===========================================================================
+function Trig_MassInvis_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A158'
+endfunction
+
+function MI2 takes nothing returns boolean
+    return ( GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer )
+endfunction
+
+function Trig_MassInvis_Actions2 takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    set udg_LocalUnit2=GetLastCreatedUnit()
+    call TriggerExecute(gg_trg_ToKill2)
+    call UnitAddAbilityBJ('A159', GetLastCreatedUnit())
+    call SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
+    //call SetUnitAbilityLevelSwapped( 'A159', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A158', GetTriggerUnit()) )
+    call IssueTargetOrderBJ(GetLastCreatedUnit(), "invisibility", GetEnumUnit())
+endfunction
+
+function Trig_MassInvis_Actions takes nothing returns nothing
+    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    set udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
+    set udg_Boolexpr=Condition(function MI2)
+    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 500, udg_Boolexpr)
+    call RemoveLocation(udg_LocalPosition2)
+    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    call ForGroupBJ(udg_LocalOtrad2, function Trig_MassInvis_Actions2)
+    call RemoveLocation(udg_LocalPosition2)
+    call GroupClear(udg_LocalOtrad2)
+endfunction
+
+//===========================================================================
+function InitTrig_MassInvis takes nothing returns nothing
+    set gg_trg_MassInvis=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_MassInvis, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_MassInvis, Condition(function Trig_MassInvis_Conditions))
+    call TriggerAddAction(gg_trg_MassInvis, function Trig_MassInvis_Actions)
+endfunction
+
 
 //===========================================================================
 // Trigger: BansheeAuto
@@ -42066,6 +42181,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Race_Gnomes()
     call InitTrig_Race_Gilneas()
     call InitTrig_Race_Nagi()
+    call InitTrig_Race_Forsaken()
     call InitTrig_Race_Random()
     call InitTrig_Page1_O()
     call InitTrig_Page2_O()
@@ -42220,6 +42336,9 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_LumberTest()
     call InitTrig_Spell2()
     call InitTrig_SpellRes()
+    call InitTrig_StartBandits_Copy()
+    call InitTrig_Ult()
+    call InitTrig_MassInvis()
     call InitTrig_BansheeAuto()
     call InitTrig_ResGmilDamage()
     call InitTrig_Killing()
