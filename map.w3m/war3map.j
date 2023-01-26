@@ -1450,6 +1450,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_ResGmilDamage= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -5153,6 +5154,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n050', - 3299.3, - 27637.6, 164.130, 'n050')
     set u=BlzCreateUnitWithSkin(p, 'n04Z', - 4051.0, - 27780.2, 129.038, 'n04Z')
     set u=BlzCreateUnitWithSkin(p, 'N058', - 3905.8, - 30499.5, 344.040, 'N058')
+    set u=BlzCreateUnitWithSkin(p, 'O030', - 4077.8, - 30492.1, 10.500, 'O030')
+    set u=BlzCreateUnitWithSkin(p, 'O031', - 4017.0, - 30587.2, 266.095, 'O031')
     set u=BlzCreateUnitWithSkin(p, 'h0IT', - 6121.2, - 26975.3, 277.970, 'h0IT')
     set u=BlzCreateUnitWithSkin(p, 'h0EI', - 6182.1, - 26985.0, 237.080, 'h0EI')
     set u=BlzCreateUnitWithSkin(p, 'h0IU', - 6268.4, - 26975.4, 253.330, 'h0IU')
@@ -20927,6 +20930,430 @@ function InitTrig_SpellRes takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: ResGmilDamage
+//===========================================================================
+function Trig_ResGmilDamage_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0FB' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_ResGmilDamage_Actions takes nothing returns nothing
+    call SetPlayerTechResearchedSwap('R0FW', GetPlayerTechCountSimple('R0FB', Player(0)), GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_ResGmilDamage takes nothing returns nothing
+    set gg_trg_ResGmilDamage=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_ResGmilDamage, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_ResGmilDamage, Condition(function Trig_ResGmilDamage_Conditions))
+    call TriggerAddAction(gg_trg_ResGmilDamage, function Trig_ResGmilDamage_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Killing
+//===========================================================================
+function Trig_Killing_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A14C'
+endfunction
+
+function Trig_Killing_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    call UnitRemoveAbility(u, 'A13O')
+    call UnitRemoveAbility(u, 'A13N')
+    call UnitAddAbility(u, 'A13M')
+    call BlzStartUnitAbilityCooldown(u, 'A13M', 12)
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_Killing takes nothing returns nothing
+    set gg_trg_Killing=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Killing, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_Killing, Condition(function Trig_Killing_Conditions))
+    call TriggerAddAction(gg_trg_Killing, function Trig_Killing_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: StartAttackKilling
+//===========================================================================
+function Trig_StartAttackKilling_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetAttacker(), 'A13M') != 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13M') <= 0.00 )
+endfunction
+
+function Trig_StartAttackKilling_Actions takes nothing returns nothing
+    local unit u= GetAttacker()
+    call UnitAddAbility(u, 'A13T')
+    call BlzStartUnitAbilityCooldown(u, 'A13M', 10.00)
+endfunction
+
+//===========================================================================
+function InitTrig_StartAttackKilling takes nothing returns nothing
+    set gg_trg_StartAttackKilling=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackKilling, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_StartAttackKilling, Condition(function Trig_StartAttackKilling_Conditions))
+    call TriggerAddAction(gg_trg_StartAttackKilling, function Trig_StartAttackKilling_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: EndAttackKilling
+//===========================================================================
+function Trig_EndAttackKilling_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13T') > 0
+endfunction
+
+function Trig_EndAttackKilling_Actions takes nothing returns nothing
+    call UnitRemoveAbility(GetEventDamageSource(), 'A13T')
+endfunction
+
+//===========================================================================
+function InitTrig_EndAttackKilling takes nothing returns nothing
+    set gg_trg_EndAttackKilling=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackKilling, EVENT_PLAYER_UNIT_DAMAGED)
+    call TriggerAddCondition(gg_trg_EndAttackKilling, Condition(function Trig_EndAttackKilling_Conditions))
+    call TriggerAddAction(gg_trg_EndAttackKilling, function Trig_EndAttackKilling_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Infect
+//===========================================================================
+function Trig_Infect_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A14E'
+endfunction
+
+function Trig_Infect_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    call UnitRemoveAbility(u, 'A13O')
+    call UnitRemoveAbility(u, 'A13M')
+    call UnitAddAbility(u, 'A13N')
+    call BlzStartUnitAbilityCooldown(u, 'A13N', 12)
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_Infect takes nothing returns nothing
+    set gg_trg_Infect=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Infect, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_Infect, Condition(function Trig_Infect_Conditions))
+    call TriggerAddAction(gg_trg_Infect, function Trig_Infect_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: StartAttackInfect
+//===========================================================================
+function Trig_StartAttackInfect_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetAttacker(), 'A13N') != 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13N') <= 0.00 )
+endfunction
+
+function Trig_StartAttackInfect_Actions takes nothing returns nothing
+    local unit u= GetAttacker()
+    call UnitAddAbility(u, 'A13S')
+    call BlzStartUnitAbilityCooldown(u, 'A13N', 10.00)
+endfunction
+
+//===========================================================================
+function InitTrig_StartAttackInfect takes nothing returns nothing
+    set gg_trg_StartAttackInfect=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackInfect, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_StartAttackInfect, Condition(function Trig_StartAttackInfect_Conditions))
+    call TriggerAddAction(gg_trg_StartAttackInfect, function Trig_StartAttackInfect_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: EndAttackInfect
+//===========================================================================
+function Trig_EndAttackInfect_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13S') > 0
+endfunction
+
+function Trig_EndAttackInfect_Actions takes nothing returns nothing
+    call UnitRemoveAbility(GetEventDamageSource(), 'A13S')
+endfunction
+
+//===========================================================================
+function InitTrig_EndAttackInfect takes nothing returns nothing
+    set gg_trg_EndAttackInfect=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackInfect, EVENT_PLAYER_UNIT_DAMAGED)
+    call TriggerAddCondition(gg_trg_EndAttackInfect, Condition(function Trig_EndAttackInfect_Conditions))
+    call TriggerAddAction(gg_trg_EndAttackInfect, function Trig_EndAttackInfect_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Zagraz
+//===========================================================================
+function Trig_Zagraz_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A14D'
+endfunction
+
+function Trig_Zagraz_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    call UnitRemoveAbility(u, 'A13N')
+    call UnitRemoveAbility(u, 'A13M')
+    call UnitAddAbility(u, 'A13O')
+    call BlzStartUnitAbilityCooldown(u, 'A13O', 12)
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_Zagraz takes nothing returns nothing
+    set gg_trg_Zagraz=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Zagraz, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_Zagraz, Condition(function Trig_Zagraz_Conditions))
+    call TriggerAddAction(gg_trg_Zagraz, function Trig_Zagraz_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: StartAttackZagraz
+//===========================================================================
+function Trig_StartAttackZagraz_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetAttacker(), 'A13O') != 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13O') <= 0.00 )
+endfunction
+
+function Trig_StartAttackZagraz_Actions takes nothing returns nothing
+    local unit u= GetAttacker()
+    call UnitAddAbility(u, 'A13V')
+    call BlzStartUnitAbilityCooldown(u, 'A13V', 10.00)
+endfunction
+
+//===========================================================================
+function InitTrig_StartAttackZagraz takes nothing returns nothing
+    set gg_trg_StartAttackZagraz=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackZagraz, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_StartAttackZagraz, Condition(function Trig_StartAttackZagraz_Conditions))
+    call TriggerAddAction(gg_trg_StartAttackZagraz, function Trig_StartAttackZagraz_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: EndAttackZagraz
+//===========================================================================
+function Trig_EndAttackZagraz_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13V') > 0
+endfunction
+
+function Trig_EndAttackZagraz_Actions takes nothing returns nothing
+    call UnitRemoveAbility(GetEventDamageSource(), 'A13V')
+endfunction
+
+//===========================================================================
+function InitTrig_EndAttackZagraz takes nothing returns nothing
+    set gg_trg_EndAttackZagraz=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackZagraz, EVENT_PLAYER_UNIT_DAMAGED)
+    call TriggerAddCondition(gg_trg_EndAttackZagraz, Condition(function Trig_EndAttackZagraz_Conditions))
+    call TriggerAddAction(gg_trg_EndAttackZagraz, function Trig_EndAttackZagraz_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Usual
+//===========================================================================
+function Trig_Usual_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A142'
+endfunction
+
+function Trig_Usual_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    call UnitRemoveAbility(u, 'A13P')
+    call UnitRemoveAbility(u, 'A13Q')
+    call UnitAddAbility(u, 'A13L')
+    call BlzStartUnitAbilityCooldown(u, 'A13L', 12)
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_Usual takes nothing returns nothing
+    set gg_trg_Usual=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Usual, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_Usual, Condition(function Trig_Usual_Conditions))
+    call TriggerAddAction(gg_trg_Usual, function Trig_Usual_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: StartAttackUsual
+//===========================================================================
+function Trig_StartAttackUsual_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetAttacker(), 'A13L') != 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13L') <= 0.00 )
+endfunction
+
+function Trig_StartAttackUsual_Actions takes nothing returns nothing
+    local unit u= GetAttacker()
+    call UnitAddAbility(u, 'A132')
+    call BlzStartUnitAbilityCooldown(u, 'A13L', 10.00)
+endfunction
+
+//===========================================================================
+function InitTrig_StartAttackUsual takes nothing returns nothing
+    set gg_trg_StartAttackUsual=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackUsual, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_StartAttackUsual, Condition(function Trig_StartAttackUsual_Conditions))
+    call TriggerAddAction(gg_trg_StartAttackUsual, function Trig_StartAttackUsual_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: EndAttackUsual
+//===========================================================================
+function Trig_EndAttackUsual_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetEventDamageSource(), 'A132') > 0
+endfunction
+
+function Trig_EndAttackUsual_Actions takes nothing returns nothing
+    call UnitRemoveAbility(GetEventDamageSource(), 'A132')
+endfunction
+
+//===========================================================================
+function InitTrig_EndAttackUsual takes nothing returns nothing
+    set gg_trg_EndAttackUsual=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackUsual, EVENT_PLAYER_UNIT_DAMAGED)
+    call TriggerAddCondition(gg_trg_EndAttackUsual, Condition(function Trig_EndAttackUsual_Conditions))
+    call TriggerAddAction(gg_trg_EndAttackUsual, function Trig_EndAttackUsual_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Korroz
+//===========================================================================
+function Trig_Korroz_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A143'
+endfunction
+
+function Trig_Korroz_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    call UnitRemoveAbility(u, 'A13L')
+    call UnitRemoveAbility(u, 'A13P')
+    call UnitAddAbility(u, 'A13Q')
+    call BlzStartUnitAbilityCooldown(u, 'A13Q', 12)
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_Korroz takes nothing returns nothing
+    set gg_trg_Korroz=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Korroz, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_Korroz, Condition(function Trig_Korroz_Conditions))
+    call TriggerAddAction(gg_trg_Korroz, function Trig_Korroz_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: StartAttackCorroz
+//===========================================================================
+function Trig_StartAttackCorroz_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetAttacker(), 'A13N') != 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13N') <= 0.00 )
+endfunction
+
+function Trig_StartAttackCorroz_Actions takes nothing returns nothing
+    local unit u= GetAttacker()
+    call UnitAddAbility(u, 'A13U')
+    call BlzStartUnitAbilityCooldown(u, 'A13N', 10.00)
+endfunction
+
+//===========================================================================
+function InitTrig_StartAttackCorroz takes nothing returns nothing
+    set gg_trg_StartAttackCorroz=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackCorroz, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_StartAttackCorroz, Condition(function Trig_StartAttackCorroz_Conditions))
+    call TriggerAddAction(gg_trg_StartAttackCorroz, function Trig_StartAttackCorroz_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: EndAttackCorroz
+//===========================================================================
+function Trig_EndAttackCorroz_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13U') > 0
+endfunction
+
+function Trig_EndAttackCorroz_Actions takes nothing returns nothing
+    call UnitRemoveAbility(GetEventDamageSource(), 'A13U')
+endfunction
+
+//===========================================================================
+function InitTrig_EndAttackCorroz takes nothing returns nothing
+    set gg_trg_EndAttackCorroz=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackCorroz, EVENT_PLAYER_UNIT_DAMAGED)
+    call TriggerAddCondition(gg_trg_EndAttackCorroz, Condition(function Trig_EndAttackCorroz_Conditions))
+    call TriggerAddAction(gg_trg_EndAttackCorroz, function Trig_EndAttackCorroz_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Safety
+//===========================================================================
+function Trig_Safety_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A144'
+endfunction
+
+function Trig_Safety_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    call UnitRemoveAbility(u, 'A13L')
+    call UnitRemoveAbility(u, 'A13Q')
+    call UnitAddAbility(u, 'A13P')
+    call BlzStartUnitAbilityCooldown(u, 'A13P', 12)
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_Safety takes nothing returns nothing
+    set gg_trg_Safety=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Safety, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_Safety, Condition(function Trig_Safety_Conditions))
+    call TriggerAddAction(gg_trg_Safety, function Trig_Safety_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: StartAttackSafety
+//===========================================================================
+function Trig_StartAttackSafety_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetAttacker(), 'A13P') != 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13P') <= 0.00 )
+endfunction
+
+function Trig_StartAttackSafety_Actions takes nothing returns nothing
+    local unit u= GetAttacker()
+    call UnitAddAbility(u, 'A13R')
+    call BlzStartUnitAbilityCooldown(u, 'A13P', 10.00)
+endfunction
+
+//===========================================================================
+function InitTrig_StartAttackSafety takes nothing returns nothing
+    set gg_trg_StartAttackSafety=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartAttackSafety, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_StartAttackSafety, Condition(function Trig_StartAttackSafety_Conditions))
+    call TriggerAddAction(gg_trg_StartAttackSafety, function Trig_StartAttackSafety_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: EndAttackSafety
+//===========================================================================
+function Trig_EndAttackSafety_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13R') > 0
+endfunction
+
+function Trig_EndAttackSafety_Actions takes nothing returns nothing
+    call UnitRemoveAbility(GetEventDamageSource(), 'A13R')
+endfunction
+
+//===========================================================================
+function InitTrig_EndAttackSafety takes nothing returns nothing
+    set gg_trg_EndAttackSafety=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_EndAttackSafety, EVENT_PLAYER_UNIT_DAMAGED)
+    call TriggerAddCondition(gg_trg_EndAttackSafety, Condition(function Trig_EndAttackSafety_Conditions))
+    call TriggerAddAction(gg_trg_EndAttackSafety, function Trig_EndAttackSafety_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: HordeOn
 //===========================================================================
 function Trig_HordeOn_Actions takes nothing returns nothing
@@ -23961,9 +24388,9 @@ function Thrallenum takes nothing returns nothing
     call CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     set udg_LocalUnit2=GetLastCreatedUnit()
     call TriggerExecute(gg_trg_ToKill2)
-    call UnitAddAbilityBJ('AOcl', GetLastCreatedUnit())
+    call UnitAddAbilityBJ('A14V', GetLastCreatedUnit())
     call SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    call SetUnitAbilityLevelSwapped('AOcl', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A12X', GetTriggerUnit()))
+    call SetUnitAbilityLevelSwapped('A14V', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A12X', GetTriggerUnit()))
     call IssueTargetOrderBJ(GetLastCreatedUnit(), "chainlightning", GetEnumUnit())
 endfunction
 
@@ -41768,6 +42195,25 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_LumberTest()
     call InitTrig_Spell2()
     call InitTrig_SpellRes()
+    call InitTrig_ResGmilDamage()
+    call InitTrig_Killing()
+    call InitTrig_StartAttackKilling()
+    call InitTrig_EndAttackKilling()
+    call InitTrig_Infect()
+    call InitTrig_StartAttackInfect()
+    call InitTrig_EndAttackInfect()
+    call InitTrig_Zagraz()
+    call InitTrig_StartAttackZagraz()
+    call InitTrig_EndAttackZagraz()
+    call InitTrig_Usual()
+    call InitTrig_StartAttackUsual()
+    call InitTrig_EndAttackUsual()
+    call InitTrig_Korroz()
+    call InitTrig_StartAttackCorroz()
+    call InitTrig_EndAttackCorroz()
+    call InitTrig_Safety()
+    call InitTrig_StartAttackSafety()
+    call InitTrig_EndAttackSafety()
     call InitTrig_HordeOn()
     call InitTrig_K1T1()
     call InitTrig_K1T2()
