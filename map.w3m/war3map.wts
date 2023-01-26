@@ -88074,13 +88074,13 @@ W
 }
 
 STRING 14570
-// Abilities: A0OJ (|cff809600Поражающий удар|r), EditorSuffix (Editor Suffix)
+// Abilities: A0UV (|cff809600Вспышка скверны|r), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
 
 STRING 14571
-// Abilities: A0UV (|cff809600Вспышка скверны|r), EditorSuffix (Editor Suffix)
+// Upgrades: R08T (Сила Луны,Мощь Луны,Могущество Луны), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
@@ -88110,19 +88110,19 @@ Q
 }
 
 STRING 14576
-// Upgrades: R08T (Сила Луны,Мощь Луны,Могущество Луны), EditorSuffix (Editor Suffix)
-{
-(Иллидарии)
-}
-
-STRING 14577
 // Upgrades: R08U (Лунные доспехи,Улучшенные лунные доспехи,У), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
 
-STRING 14578
+STRING 14577
 // Upgrades: R08V (Доспехи из клепаной кожи,Доспехи из армиро�), EditorSuffix (Editor Suffix)
+{
+(Иллидарии)
+}
+
+STRING 14578
+// Upgrades: R08W (Железные мечи,Стальные мечи,Мифриловые меч), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
@@ -88272,7 +88272,7 @@ A
 }
 
 STRING 14603
-// Upgrades: R08W (Железные мечи,Стальные мечи,Мифриловые меч), EditorSuffix (Editor Suffix)
+// Upgrades: R08X (Сила Луны,Мощь Луны,Могущество Луны), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
@@ -88506,19 +88506,19 @@ STRING 14639
 }
 
 STRING 14640
-// Upgrades: R08X (Сила Луны,Мощь Луны,Могущество Луны), EditorSuffix (Editor Suffix)
-{
-(Иллидарии)
-}
-
-STRING 14641
 // Upgrades: R08Y (Защита), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
 
-STRING 14642
+STRING 14641
 // Upgrades: R08Z (Сделать волшебниц адептами,Сделать волшеб�), EditorSuffix (Editor Suffix)
+{
+(Иллидарии)
+}
+
+STRING 14642
+// Upgrades: R090 (Сделать волшебниц адептами,Сделать волшеб�), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
@@ -88572,7 +88572,7 @@ STRING 14650
 }
 
 STRING 14651
-// Upgrades: R090 (Сделать волшебниц адептами,Сделать волшеб�), EditorSuffix (Editor Suffix)
+// Upgrades: R091 (Грубая сила), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
@@ -89049,7 +89049,7 @@ STRING 14728
 }
 
 STRING 14729
-// Upgrades: R091 (Грубая сила), EditorSuffix (Editor Suffix)
+// Upgrades: R092 (Защита), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
@@ -89061,13 +89061,13 @@ Z
 }
 
 STRING 14731
-// Upgrades: R092 (Защита), EditorSuffix (Editor Suffix)
+// Upgrades: R093 (Сделать волшебниц адептами,Сделать волшеб�), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
 
 STRING 14732
-// Upgrades: R093 (Сделать волшебниц адептами,Сделать волшеб�), EditorSuffix (Editor Suffix)
+// Upgrades: R096 (Защита), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
@@ -89537,7 +89537,7 @@ STRING 14807
 }
 
 STRING 14808
-// Upgrades: R096 (Защита), EditorSuffix (Editor Suffix)
+// Upgrades: R097 (Улучшенные топоры,Улучшенные пилы), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
@@ -89791,13 +89791,13 @@ W
 }
 
 STRING 14850
-// Upgrades: R097 (Улучшенные топоры,Улучшенные пилы), EditorSuffix (Editor Suffix)
+// Upgrades: R098 (Сделать волшебниц адептами,Сделать волшеб�), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
 
 STRING 14851
-// Upgrades: R098 (Сделать волшебниц адептами,Сделать волшеб�), EditorSuffix (Editor Suffix)
+// Upgrades: R099 (Защита), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
@@ -89815,7 +89815,7 @@ STRING 14853
 }
 
 STRING 14854
-// Upgrades: R099 (Защита), EditorSuffix (Editor Suffix)
+// Upgrades: R09A (Защита), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
@@ -89860,7 +89860,7 @@ STRING 14860
 }
 
 STRING 14861
-// Upgrades: R09A (Защита), EditorSuffix (Editor Suffix)
+// Upgrades: R09B (Защита), EditorSuffix (Editor Suffix)
 {
 (Иллидарии)
 }
@@ -89902,12 +89902,6 @@ STRING 14867
 // Upgrades: R09B (Защита), Tip (Tooltip)
 {
 Исследовать «|cff809600Приоритет Орки|r»
-}
-
-STRING 14868
-// Upgrades: R09B (Защита), EditorSuffix (Editor Suffix)
-{
-(Иллидарии)
 }
 
 STRING 14869
@@ -139568,6 +139562,12 @@ STRING 22971
 // Abilities: A10O (|cff483d8bОтражение Бездны|r), Ubertip (Tooltip - Normal - Extended)
 {
 Создает <AOmi,DataA4> иллюзорную копию мастера клинка и снимает с него магические эффекты. |nВремя действия: <AOmi,Dur4> сек.
+}
+
+STRING 22972
+// Abilities: A0OJ (|cff809600Поражающий удар|r), EditorSuffix (Editor Suffix)
+{
+(Иллидарии Иллидан)
 }
 
 STRING 22973

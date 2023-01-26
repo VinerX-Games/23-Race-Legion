@@ -529,6 +529,7 @@ trigger gg_trg_Race_Silitids_O= null
 trigger gg_trg_Race_Gnomes= null
 trigger gg_trg_Race_Gilneas= null
 trigger gg_trg_Race_Nagi= null
+trigger gg_trg_Race_Forsaken= null
 trigger gg_trg_Race_Random= null
 trigger gg_trg_Page1_O= null
 trigger gg_trg_Page2_O= null
@@ -716,6 +717,9 @@ trigger gg_trg_Spell2= null
 trigger gg_trg_SpellRes= null
 trigger gg_trg_Spell= null
 trigger gg_trg_SpandFarm= null
+trigger gg_trg_StartBandits_Copy= null
+trigger gg_trg_Ult= null
+trigger gg_trg_MassInvis= null
 trigger gg_trg_BansheeAuto= null
 trigger gg_trg_ResGmilDamage= null
 trigger gg_trg_Killing= null
@@ -1452,10 +1456,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_Race_Forsaken= null
-trigger gg_trg_MassInvis= null
-trigger gg_trg_StartBandits_Copy= null
-trigger gg_trg_Ult= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -5158,6 +5158,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n052', - 3517.3, - 27626.9, 50.121, 'n052')
     set u=BlzCreateUnitWithSkin(p, 'n050', - 3299.3, - 27637.6, 164.130, 'n050')
     set u=BlzCreateUnitWithSkin(p, 'n04Z', - 4051.0, - 27780.2, 129.038, 'n04Z')
+    set u=BlzCreateUnitWithSkin(p, 'E026', - 3158.0, - 28773.4, 294.772, 'E026')
     set u=BlzCreateUnitWithSkin(p, 'u02P', - 3407.5, - 30115.1, 270.191, 'u02P')
     set u=BlzCreateUnitWithSkin(p, 'h0IT', - 6121.2, - 26975.3, 277.970, 'h0IT')
     set u=BlzCreateUnitWithSkin(p, 'h0EI', - 6182.1, - 26985.0, 237.080, 'h0EI')
