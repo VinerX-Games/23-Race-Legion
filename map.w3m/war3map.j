@@ -5159,6 +5159,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n050', - 3299.3, - 27637.6, 164.130, 'n050')
     set u=BlzCreateUnitWithSkin(p, 'n04Z', - 4051.0, - 27780.2, 129.038, 'n04Z')
     set u=BlzCreateUnitWithSkin(p, 'E026', - 3158.0, - 28773.4, 294.772, 'E026')
+    set u=BlzCreateUnitWithSkin(p, 'N059', - 2907.2, - 30315.1, 278.850, 'N059')
     set u=BlzCreateUnitWithSkin(p, 'u02P', - 3407.5, - 30115.1, 270.191, 'u02P')
     set u=BlzCreateUnitWithSkin(p, 'h0IT', - 6121.2, - 26975.3, 277.970, 'h0IT')
     set u=BlzCreateUnitWithSkin(p, 'h0EI', - 6182.1, - 26985.0, 237.080, 'h0EI')
