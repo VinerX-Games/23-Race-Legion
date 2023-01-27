@@ -5170,7 +5170,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0IY', - 6267.3, - 26881.2, 269.940, 'h0IY')
     set u=BlzCreateUnitWithSkin(p, 'h0IZ', - 6489.2, - 26877.8, 227.710, 'h0IZ')
     set u=BlzCreateUnitWithSkin(p, 'n04V', - 3614.0, - 30049.5, 293.810, 'n04V')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'h0JC', - 3670.2, - 29838.6, 284.928, 'h0JC')
     set u=BlzCreateUnitWithSkin(p, 'o02W', - 5106.8, - 29351.5, 241.790, 'o02W')
     set u=BlzCreateUnitWithSkin(p, 'h0J0', - 6825.3, - 26983.3, 273.609, 'h0J0')
@@ -5181,11 +5180,9 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'u02C', - 3616.5, - 30386.2, 291.390, 'u02C')
     set u=BlzCreateUnitWithSkin(p, 'n04T', - 3772.0, - 29829.8, 284.520, 'n04T')
     set u=BlzCreateUnitWithSkin(p, 'n04U', - 3572.6, - 29824.6, 285.033, 'n04U')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'o02S', - 5834.2, - 29266.4, 273.600, 'o02S')
     set u=BlzCreateUnitWithSkin(p, 'o02J', - 5686.3, - 29549.0, 279.110, 'o02J')
     set u=BlzCreateUnitWithSkin(p, 'h0JA', - 3481.4, - 30068.1, 279.522, 'h0JA')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'o02X', - 3745.9, - 30367.6, 270.107, 'o02X')
     set u=BlzCreateUnitWithSkin(p, 'n04S', - 5501.3, - 29397.9, 250.750, 'n04S')
     set u=BlzCreateUnitWithSkin(p, 'h0I9', - 4409.9, - 25840.7, 265.828, 'h0I9')
@@ -5233,7 +5230,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n03P', - 440.2, - 25539.6, 124.039, 'n03P')
     set u=BlzCreateUnitWithSkin(p, 'n03M', - 741.2, - 25582.0, 48.715, 'n03M')
     set u=BlzCreateUnitWithSkin(p, 'h0JN', - 3468.2, - 29833.9, 266.210, 'h0JN')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'h06Z', - 7261.5, - 28380.7, 280.083, 'h06Z')
     set u=BlzCreateUnitWithSkin(p, 'o02E', - 5359.4, - 29059.4, 272.233, 'o02E')
     set u=BlzCreateUnitWithSkin(p, 'o02F', - 5800.0, - 29454.3, 260.574, 'o02F')
@@ -5246,9 +5242,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o02L', - 5285.7, - 29759.6, 268.750, 'o02L')
     set u=BlzCreateUnitWithSkin(p, 'h0IB', - 4502.5, - 25851.0, 259.966, 'h0IB')
     set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, 290.235, 'n04X')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'n04Y', - 3839.2, - 30069.7, 296.680, 'n04Y')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'h0IH', - 5443.4, - 29877.1, 272.940, 'h0IH')
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
 endfunction
@@ -5274,6 +5268,17 @@ function CreateUnitsForPlayer2 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'u02J', - 2840.3, - 30096.9, 29.137, 'u02J')
+endfunction
+
+//===========================================================================
+function CreateUnitsForPlayer3 takes nothing returns nothing
+    local player p= Player(3)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u=BlzCreateUnitWithSkin(p, 'O031', - 3014.8, - 29789.9, 279.990, 'O031')
 endfunction
 
 //===========================================================================
@@ -5922,6 +5927,7 @@ function CreatePlayerUnits takes nothing returns nothing
     call CreateUnitsForPlayer0()
     call CreateUnitsForPlayer1()
     call CreateUnitsForPlayer2()
+    call CreateUnitsForPlayer3()
     call CreateUnitsForPlayer21()
 endfunction
 
@@ -7234,6 +7240,14 @@ endfunction
 function Trig_RebebmerToBuild_Actions takes nothing returns nothing
     call TriggerSleepAction(300.00)
     call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4745")
+    call TriggerSleepAction(120.00)
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_27017")
+    call TriggerSleepAction(60.00)
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_27018")
+    call TriggerSleepAction(60.00)
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_27019")
+    call TriggerSleepAction(60.00)
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_27020")
 endfunction
 
 //===========================================================================
@@ -21098,7 +21112,7 @@ function Trig_ResGmilDamage_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ResGmilDamage_Actions takes nothing returns nothing
-    call SetPlayerTechResearchedSwap('R0FW', GetPlayerTechCountSimple('R0FB', Player(0)), GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechResearchedSwap('R0FW', GetPlayerTechCountSimple('R0FB', GetOwningPlayer(GetTriggerUnit())), GetOwningPlayer(GetTriggerUnit()))
 endfunction
 
 //===========================================================================
@@ -33266,24 +33280,8 @@ endfunction
 //===========================================================================
 // Trigger: BlinkToUnit attack
 //===========================================================================
-function Trig_BlinkToUnit_attack_Func002C takes nothing returns boolean
-    if ( ( GetUnitAbilityLevelSwapped('A0MZ', GetAttacker()) == 1 ) ) then
-        return true
-    endif
-    if ( ( GetUnitAbilityLevelSwapped('A0MZ', GetAttacker()) == 2 ) ) then
-        return true
-    endif
-    if ( ( GetUnitAbilityLevelSwapped('A0MZ', GetAttacker()) == 3 ) ) then
-        return true
-    endif
-    if ( ( GetUnitAbilityLevelSwapped('A0MZ', GetAttacker()) == 4 ) ) then
-        return true
-    endif
-    return false
-endfunction
-
 function Trig_BlinkToUnit_attack_Conditions takes nothing returns boolean
-    if ( not Trig_BlinkToUnit_attack_Func002C() ) then
+    if ( not ( GetUnitAbilityLevelSwapped('A0MZ', GetAttacker()) >= 1 ) ) then
         return false
     endif
     return true
@@ -33323,7 +33321,7 @@ endfunction
 //===========================================================================
 // Trigger: DelAttackSpel
 //===========================================================================
-function Trig_DelAttackSpel_Func001C takes nothing returns boolean
+function Trig_DelAttackSpel_Func002C takes nothing returns boolean
     if ( ( GetUnitAbilityLevelSwapped('A0N2', GetAttacker()) > 1 ) ) then
         return true
     endif
@@ -33334,13 +33332,14 @@ function Trig_DelAttackSpel_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_DelAttackSpel_Conditions takes nothing returns boolean
-    if ( not Trig_DelAttackSpel_Func001C() ) then
+    if ( not Trig_DelAttackSpel_Func002C() ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_DelAttackSpel_Actions takes nothing returns nothing
+    call SetUnitAbilityLevelSwapped('A0MZ', GetAttacker(), GetUnitAbilityLevelSwapped('A0N0', udg_LocalUnit[19]))
     call UnitRemoveAbilityBJ('A0N0', GetAttacker())
     call UnitRemoveAbilityBJ('A0N2', GetAttacker())
 endfunction
@@ -33472,7 +33471,7 @@ function Trig_AutoChance_Func002C takes nothing returns boolean
 endfunction
 
 function Trig_AutoChance_Actions takes nothing returns nothing
-    set udg_LocalInteger=GetRandomInt(1, 110)
+    set udg_LocalInteger=GetRandomInt(1, 135)
     if ( Trig_AutoChance_Func002C() ) then
         call AdjustPlayerStateBJ(150, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
         call AdjustPlayerStateBJ(50, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
@@ -33518,7 +33517,7 @@ function Trig_AutoChance_2_Func003C takes nothing returns boolean
 endfunction
 
 function Trig_AutoChance_2_Actions takes nothing returns nothing
-    set udg_LocalInteger=GetRandomInt(1, 110)
+    set udg_LocalInteger=GetRandomInt(1, 135)
     if ( Trig_AutoChance_2_Func003C() ) then
         call AdjustPlayerStateBJ(200, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
         call AdjustPlayerStateBJ(75, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
@@ -33564,7 +33563,7 @@ function Trig_AutoChance_3_Func002C takes nothing returns boolean
 endfunction
 
 function Trig_AutoChance_3_Actions takes nothing returns nothing
-    set udg_LocalInteger=GetRandomInt(1, 110)
+    set udg_LocalInteger=GetRandomInt(1, 135)
     if ( Trig_AutoChance_3_Func002C() ) then
         call AdjustPlayerStateBJ(250, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
         call AdjustPlayerStateBJ(100, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
