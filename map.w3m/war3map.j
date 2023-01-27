@@ -21031,10 +21031,10 @@ function Trig_MassInvis_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     set udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     set udg_Boolexpr=Condition(function MI2)
-    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 500, udg_Boolexpr)
+    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 650, udg_Boolexpr)
     call RemoveLocation(udg_LocalPosition2)
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    call ForGroupBJ(udg_LocalOtrad2, function Trig_MassInvis_Actions2)
+    call ForGroup(udg_LocalOtrad2, function Trig_MassInvis_Actions2)
     call RemoveLocation(udg_LocalPosition2)
     call GroupClear(udg_LocalOtrad2)
 endfunction
@@ -21095,16 +21095,36 @@ endfunction
 //===========================================================================
 // Trigger: Killing
 //===========================================================================
+function IsAndPlag takes nothing returns boolean
+    return GetUnitTypeId(GetFilterUnit()) == 'o02Y'
+endfunction
+
 function Trig_Killing_Conditions takes nothing returns boolean
     return GetSpellAbilityId() == 'A14C'
 endfunction
 
 function Trig_Killing_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
-    call UnitRemoveAbility(u, 'A13O')
-    call UnitRemoveAbility(u, 'A13N')
-    call UnitAddAbility(u, 'A13M')
-    call BlzStartUnitAbilityCooldown(u, 'A13M', 12)
+    local player p= GetOwningPlayer(u)
+    local group g= CreateGroup()
+    local boolexpr b= Condition(function IsAndPlag)
+    call GroupEnumUnitsSelected(g, p, b)
+    loop
+        set u=FirstOfGroup(g)
+        exitwhen u == null
+        
+        call UnitRemoveAbility(u, 'A13O')
+        call UnitRemoveAbility(u, 'A13N')
+        call UnitAddAbility(u, 'A13M')
+        call BlzStartUnitAbilityCooldown(u, 'A13M', 12)
+        call GroupRemoveUnit(g, u)
+        set u=null
+    endloop
+    
+    
+    call DestroyGroup(g)
+    set g=null
+    set p=null
     set u=null
 endfunction
 
@@ -21168,10 +21188,24 @@ endfunction
 
 function Trig_Infect_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
-    call UnitRemoveAbility(u, 'A13O')
-    call UnitRemoveAbility(u, 'A13M')
-    call UnitAddAbility(u, 'A13N')
-    call BlzStartUnitAbilityCooldown(u, 'A13N', 12)
+    local player p= GetOwningPlayer(u)
+    local group g= CreateGroup()
+    local boolexpr b=  Condition(function IsAndPlag)
+    call GroupEnumUnitsSelected(g, p, b)
+    loop
+        set u=FirstOfGroup(g)
+        exitwhen u == null
+        call UnitRemoveAbility(u, 'A13O')
+        call UnitRemoveAbility(u, 'A13M')
+        call UnitAddAbility(u, 'A13N')
+        call BlzStartUnitAbilityCooldown(u, 'A13N', 12)
+        call GroupRemoveUnit(g, u)
+        set u=null
+    endloop
+    
+    call DestroyGroup(g)
+    set g=null
+    set p=null
     set u=null
 endfunction
 
@@ -21235,10 +21269,24 @@ endfunction
 
 function Trig_Zagraz_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
-    call UnitRemoveAbility(u, 'A13N')
-    call UnitRemoveAbility(u, 'A13M')
-    call UnitAddAbility(u, 'A13O')
-    call BlzStartUnitAbilityCooldown(u, 'A13O', 12)
+    local player p= GetOwningPlayer(u)
+    local group g= CreateGroup()
+    local boolexpr b=  Condition(function IsAndPlag)
+    call GroupEnumUnitsSelected(g, p, b)
+    loop
+        set u=FirstOfGroup(g)
+        exitwhen u == null
+        call UnitRemoveAbility(u, 'A13N')
+        call UnitRemoveAbility(u, 'A13M')
+        call UnitAddAbility(u, 'A13O')
+        call BlzStartUnitAbilityCooldown(u, 'A13O', 12)
+        call GroupRemoveUnit(g, u)
+        set u=null
+    endloop
+    
+    call DestroyGroup(g)
+    set g=null
+    set p=null
     set u=null
 endfunction
 
@@ -21389,7 +21437,7 @@ endfunction
 // Trigger: StartAttackCorroz
 //===========================================================================
 function Trig_StartAttackCorroz_Conditions takes nothing returns boolean
-    return GetUnitAbilityLevel(GetAttacker(), 'A13N') != 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13N') <= 0.00 )
+    return GetUnitAbilityLevel(GetAttacker(), 'A13Q') != 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13Q') <= 0.00 )
 endfunction
 
 function Trig_StartAttackCorroz_Actions takes nothing returns nothing
