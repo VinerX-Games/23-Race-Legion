@@ -22,12 +22,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -381,6 +381,7 @@ trigger gg_trg_MOD_stolica_Start= null
 trigger gg_trg_MOD_feoda_O_Set= null
 trigger gg_trg_MOD_feoda_O_Set_Spell= null
 trigger gg_trg_MOD_feoda_O_Start= null
+trigger gg_trg_MOD_stolica_Start_Copy= null
 trigger gg_trg_FeodalDead= null
 trigger gg_trg_FeodalDead2= null
 trigger gg_trg_DoNotAttackSenior= null
@@ -1458,7 +1459,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_MOD_stolica_Start_Copy= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1725,7 +1725,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1733,33 +1733,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1767,19 +1767,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -5173,6 +5173,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n052', - 3517.3, - 27626.9, 50.121, 'n052')
     set u=BlzCreateUnitWithSkin(p, 'n050', - 3299.3, - 27637.6, 164.130, 'n050')
     set u=BlzCreateUnitWithSkin(p, 'n04Z', - 4051.0, - 27780.2, 129.038, 'n04Z')
+    set u=BlzCreateUnitWithSkin(p, 'n05D', - 1457.8, - 26146.4, 263.370, 'n05D')
     set u=BlzCreateUnitWithSkin(p, 'N059', - 2907.2, - 30315.1, 278.850, 'N059')
     set u=BlzCreateUnitWithSkin(p, 'u02P', - 3407.5, - 30115.1, 270.191, 'u02P')
     set u=BlzCreateUnitWithSkin(p, 'e00I', - 2384.5, - 26036.5, 65.206, 'e00I')
@@ -5275,6 +5276,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'Emfr', - 1570.7, - 25743.1, 239.707, 'Emfr')
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
     set u=BlzCreateUnitWithSkin(p, 'Etyr', - 1773.8, - 25570.0, 257.877, 'Etyr')
+    set u=BlzCreateUnitWithSkin(p, 'emtg', - 2510.3, - 25852.8, 302.650, 'emtg')
 endfunction
 
 //===========================================================================
@@ -5309,7 +5311,7 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'O031', - 3014.8, - 29789.9, 279.990, 'O031')
-    set u=BlzCreateUnitWithSkin(p, 'emtg', - 2510.3, - 25852.8, 302.646, 'emtg')
+    set u=BlzCreateUnitWithSkin(p, 'efdr', - 1896.1, - 25912.3, 143.101, 'efdr')
 endfunction
 
 //===========================================================================
@@ -19597,7 +19599,8 @@ function Trig_murloki_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_murloki_Func002A takes nothing returns nothing
+function Trig_murloki_Actions takes nothing returns nothing
+    call DisableTrigger(gg_trg_murlokiEnd)
     call SetPlayerTechMaxAllowedSwap('nnsw', 1, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('nmyr', 1, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('nnrg', 1, GetOwningPlayer(GetTriggerUnit()))
@@ -19605,11 +19608,6 @@ function Trig_murloki_Func002A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('n053', - 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('n052', - 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('n050', - 1, GetEnumPlayer())
-endfunction
-
-function Trig_murloki_Actions takes nothing returns nothing
-    call DisableTrigger(gg_trg_murlokiEnd)
-    call ForForce(udg_AllPlayers, function Trig_murloki_Func002A)
 endfunction
 
 //===========================================================================
@@ -19623,14 +19621,10 @@ endfunction
 //===========================================================================
 // Trigger: murlokiEnd
 //===========================================================================
-function Trig_murlokiEnd_Func001A takes nothing returns nothing
+function Trig_murlokiEnd_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('n053', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('n052', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('n050', 0, GetEnumPlayer())
-endfunction
-
-function Trig_murlokiEnd_Actions takes nothing returns nothing
-    call ForForce(udg_AllPlayers, function Trig_murlokiEnd_Func001A)
 endfunction
 
 //===========================================================================
@@ -41915,75 +41909,6 @@ function InitTrig_Spell1_Copy takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: KillTestUnits O Copy
-//===========================================================================
-function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
-    return ( RectContainsUnit(gg_rct_TestRegion, GetFilterUnit()) == true )
-endfunction
-
-function Trig_KillTestUnits_O_Copy_Func003A takes nothing returns nothing
-    local unit u= GetEnumUnit()
-    local player p= GetOwningPlayer(u)
-    local integer id= GetUnitTypeId(u)
-    if IsUnitType(u, UNIT_TYPE_HERO) then
-        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
-    endif
-    call RemoveUnit(u)
-    set u=null
-    set p=null
-endfunction
-
-function Trig_KillTestUnits_O_Copy_Actions takes nothing returns nothing
-    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Copy_Func001002)
-    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Copy_Func003A)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_KillTestUnits_O_Copy takes nothing returns nothing
-    set gg_trg_KillTestUnits_O_Copy=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O_Copy, 0.01)
-    call TriggerAddAction(gg_trg_KillTestUnits_O_Copy, function Trig_KillTestUnits_O_Copy_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: KillTestUnits Command
-//===========================================================================
-function Trig_KillTestUnits_Command_Func001002 takes nothing returns boolean
-    return ( RectContainsUnit(gg_rct_TestRegion, GetFilterUnit()) == true )
-endfunction
-
-function Trig_KillTestUnits_Command_Func003A takes nothing returns nothing
-    local unit u= GetEnumUnit()
-    local player p= GetOwningPlayer(u)
-    local integer id= GetUnitTypeId(u)
-    if IsUnitType(u, UNIT_TYPE_HERO) then
-        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
-    endif
-    call RemoveUnit(u)
-    set u=null
-    set p=null
-    
-endfunction
-
-function Trig_KillTestUnits_Command_Actions takes nothing returns nothing
-    set udg_Boolexpr=Condition(function Trig_KillTestUnits_Command_Func001002)
-    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_Command_Func003A)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_KillTestUnits_Command takes nothing returns nothing
-    set gg_trg_KillTestUnits_Command=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(gg_trg_KillTestUnits_Command, Player(0), "kill", true)
-    call TriggerAddAction(gg_trg_KillTestUnits_Command, function Trig_KillTestUnits_Command_Actions)
-endfunction
-
-
-//===========================================================================
 // Trigger: KillMagaz
 //===========================================================================
 function Trig_KillMagaz_Actions takes nothing returns nothing
@@ -43102,8 +43027,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_HP_24k_O()
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
-    call InitTrig_KillTestUnits_O_Copy()
-    call InitTrig_KillTestUnits_Command()
     call InitTrig_KillMagaz()
     call InitTrig_Setlvl()
     call InitTrig_A1()
@@ -43134,7 +43057,6 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_BloodClose)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForNavy)
-    call ConditionalTriggerExecute(gg_trg_KillTestUnits_O_Copy)
 endfunction
 
 //***************************************************************************
@@ -43491,7 +43413,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
