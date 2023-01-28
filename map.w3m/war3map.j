@@ -1134,6 +1134,7 @@ trigger gg_trg_km= null
 trigger gg_trg_km2= null
 trigger gg_trg_Titan= null
 trigger gg_trg_Titan2= null
+trigger gg_trg_EntSell_Copy= null
 trigger gg_trg_StartBuildingArg= null
 trigger gg_trg_CanselBuildingArg= null
 trigger gg_trg_Hero_Limits_Ent= null
@@ -1457,7 +1458,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_EntSell_Copy= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -5091,11 +5091,18 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0I4', - 3392.0, - 25664.0, 270.000, 'h0I4')
     set u=BlzCreateUnitWithSkin(p, 'h0I2', - 3904.0, - 25664.0, 270.000, 'h0I2')
     set u=BlzCreateUnitWithSkin(p, 'h0I6', - 3264.0, - 25344.0, 270.000, 'h0I6')
+    set u=BlzCreateUnitWithSkin(p, 'etol', - 2336.0, - 25312.0, 270.000, 'etol')
+    set u=BlzCreateUnitWithSkin(p, 'etoa', - 1952.0, - 25312.0, 270.000, 'etoa')
     set u=BlzCreateUnitWithSkin(p, 'h0I1', - 4416.0, - 25664.0, 270.000, 'h0I1')
+    set u=BlzCreateUnitWithSkin(p, 'etoe', - 1568.0, - 25312.0, 270.000, 'etoe')
+    set u=BlzCreateUnitWithSkin(p, 'emow', - 1280.0, - 25408.0, 270.000, 'emow')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    set u=BlzCreateUnitWithSkin(p, 'eate', - 1344.0, - 25728.0, 270.000, 'eate')
     set u=BlzCreateUnitWithSkin(p, 'ovln', - 6432.0, - 28896.0, 270.000, 'ovln')
     set u=BlzCreateUnitWithSkin(p, 'ogre', - 6240.0, - 28512.0, 270.000, 'ogre')
     set u=BlzCreateUnitWithSkin(p, 'ostr', - 5536.0, - 28640.0, 270.000, 'ostr')
     set u=BlzCreateUnitWithSkin(p, 'ofrt', - 5024.0, - 28640.0, 270.000, 'ofrt')
+    set u=BlzCreateUnitWithSkin(p, 'eaom', - 2752.0, - 25664.0, 270.000, 'eaom')
     set u=BlzCreateUnitWithSkin(p, 'h0H4', - 4544.0, - 29376.0, 270.000, 'h0H4')
     set u=BlzCreateUnitWithSkin(p, 'oalt', - 6912.0, - 29824.0, 270.000, 'oalt')
     set u=BlzCreateUnitWithSkin(p, 'obar', - 6784.0, - 28864.0, 270.000, 'obar')
@@ -5106,12 +5113,14 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'ovln', - 4640.0, - 29600.0, 270.000, 'ovln')
     set u=BlzCreateUnitWithSkin(p, 'osld', - 6784.0, - 29312.0, 270.000, 'osld')
     set u=BlzCreateUnitWithSkin(p, 'h0JI', - 3232.0, - 30368.0, 270.000, 'h0JI')
+    set u=BlzCreateUnitWithSkin(p, 'eaoe', - 2752.0, - 26048.0, 270.000, 'eaoe')
     set u=BlzCreateUnitWithSkin(p, 'h0JK', - 3200.0, - 30016.0, 270.000, 'h0JK')
     set u=BlzCreateUnitWithSkin(p, 'h0JL', - 4128.0, - 29088.0, 270.000, 'h0JL')
     set u=BlzCreateUnitWithSkin(p, 'h0JM', - 3776.0, - 29632.0, 270.000, 'h0JM')
     set u=BlzCreateUnitWithSkin(p, 'h0JO', - 3136.0, - 29120.0, 270.000, 'h0JO')
     set u=BlzCreateUnitWithSkin(p, 'h0JP', - 3680.0, - 29152.0, 270.000, 'h0JP')
     set u=BlzCreateUnitWithSkin(p, 'h01Z', - 5920.0, - 28064.0, 270.000, 'h01Z')
+    set u=BlzCreateUnitWithSkin(p, 'eaow', - 2816.0, - 26432.0, 270.000, 'eaow')
     set u=BlzCreateUnitWithSkin(p, 'h0JQ', - 3872.0, - 29088.0, 270.000, 'h0JQ')
     set u=BlzCreateUnitWithSkin(p, 'h0I8', - 4128.0, - 25184.0, 270.000, 'h0I8')
     set u=BlzCreateUnitWithSkin(p, 'h0I7', - 4448.0, - 25184.0, 270.000, 'h0I7')
@@ -5121,6 +5130,10 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0IO', - 6592.0, - 26240.0, 270.000, 'h0IO')
     set u=BlzCreateUnitWithSkin(p, 'h0IM', - 6272.0, - 26240.0, 270.000, 'h0IM')
     set u=BlzCreateUnitWithSkin(p, 'h0IN', - 6016.0, - 26240.0, 270.000, 'h0IN')
+    set u=BlzCreateUnitWithSkin(p, 'edob', - 1024.0, - 25920.0, 270.000, 'edob')
+    set u=BlzCreateUnitWithSkin(p, 'etrp', - 1088.0, - 26304.0, 270.000, 'etrp')
+    set u=BlzCreateUnitWithSkin(p, 'edos', - 1344.0, - 26560.0, 270.000, 'edos')
+    set u=BlzCreateUnitWithSkin(p, 'eaom', - 2176.0, - 26304.0, 270.000, 'eaom')
     set u=BlzCreateUnitWithSkin(p, 'h0JR', - 3264.0, - 29504.0, 270.000, 'h0JR')
 endfunction
 
@@ -5163,6 +5176,29 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'E026', - 3158.0, - 28773.4, 294.772, 'E026')
     set u=BlzCreateUnitWithSkin(p, 'N059', - 2907.2, - 30315.1, 278.850, 'N059')
     set u=BlzCreateUnitWithSkin(p, 'u02P', - 3407.5, - 30115.1, 270.191, 'u02P')
+    set u=BlzCreateUnitWithSkin(p, 'e00I', - 2384.5, - 26036.5, 65.206, 'e00I')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    set u=BlzCreateUnitWithSkin(p, 'e00J', - 2165.1, - 26036.7, 357.111, 'e00J')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    set u=BlzCreateUnitWithSkin(p, 'e00H', - 2523.7, - 26031.5, 202.100, 'e00H')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    set u=BlzCreateUnitWithSkin(p, 'earc', - 1815.4, - 26032.7, 347.772, 'earc')
+    set u=BlzCreateUnitWithSkin(p, 'edry', - 1981.1, - 26025.0, 208.131, 'edry')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    set u=BlzCreateUnitWithSkin(p, 'ebal', - 1639.4, - 26031.8, 225.051, 'ebal')
+    set u=BlzCreateUnitWithSkin(p, 'edot', - 1512.3, - 26044.8, 98.869, 'edot')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    set u=BlzCreateUnitWithSkin(p, 'edoc', - 1382.1, - 26060.4, 49.275, 'edoc')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    set u=BlzCreateUnitWithSkin(p, 'esen', - 1757.5, - 25920.6, 271.667, 'esen')
+    set u=BlzCreateUnitWithSkin(p, 'Ekee', - 1941.2, - 25749.6, 299.793, 'Ekee')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    set u=BlzCreateUnitWithSkin(p, 'E011', - 2097.2, - 25720.5, 64.678, 'E011')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    set u=BlzCreateUnitWithSkin(p, 'E012', - 2337.2, - 25705.0, - 85.990, 'E012')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    set u=BlzCreateUnitWithSkin(p, 'E00W', - 1699.3, - 25742.4, - 86.640, 'E00W')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'h0IT', - 6121.2, - 26975.3, 277.970, 'h0IT')
     set u=BlzCreateUnitWithSkin(p, 'h0EI', - 6182.1, - 26985.0, 237.080, 'h0EI')
     set u=BlzCreateUnitWithSkin(p, 'h0IU', - 6268.4, - 26975.4, 253.330, 'h0IU')
@@ -5247,7 +5283,11 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, 290.235, 'n04X')
     set u=BlzCreateUnitWithSkin(p, 'n04Y', - 3839.2, - 30069.7, 296.680, 'n04Y')
     set u=BlzCreateUnitWithSkin(p, 'h0IH', - 5443.4, - 29877.1, 272.940, 'h0IH')
+    set u=BlzCreateUnitWithSkin(p, 'Emfr', - 1570.7, - 25743.1, 239.707, 'Emfr')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
+    set u=BlzCreateUnitWithSkin(p, 'Etyr', - 1773.8, - 25570.0, 257.877, 'Etyr')
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
 endfunction
 
 //===========================================================================
@@ -5282,6 +5322,7 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'O031', - 3014.8, - 29789.9, 279.990, 'O031')
+    set u=BlzCreateUnitWithSkin(p, 'emtg', - 2510.3, - 25852.8, - 57.354, 'emtg')
 endfunction
 
 //===========================================================================
@@ -41846,29 +41887,6 @@ function InitTrig_Spell1_Copy takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: KillSomeUnitsAndItems
-//===========================================================================
-function Trig_KillSomeUnitsAndItems_Func001A takes nothing returns nothing
-    call RemoveItem(GetEnumItem())
-endfunction
-
-function Trig_KillSomeUnitsAndItems_Func002A takes nothing returns nothing
-    call RemoveUnit(GetEnumUnit())
-endfunction
-
-function Trig_KillSomeUnitsAndItems_Actions takes nothing returns nothing
-    call EnumItemsInRectBJ(gg_rct_NoItems, function Trig_KillSomeUnitsAndItems_Func001A)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_NoItems), function Trig_KillSomeUnitsAndItems_Func002A)
-endfunction
-
-//===========================================================================
-function InitTrig_KillSomeUnitsAndItems takes nothing returns nothing
-    set gg_trg_KillSomeUnitsAndItems=CreateTrigger()
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_KillSomeUnitsAndItems, udg_LobbyTime)
-    call TriggerAddAction(gg_trg_KillSomeUnitsAndItems, function Trig_KillSomeUnitsAndItems_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: KillTestUnits O Copy
 //===========================================================================
 function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
@@ -43055,7 +43073,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_HP_24k_O()
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
-    call InitTrig_KillSomeUnitsAndItems()
     call InitTrig_KillTestUnits_O_Copy()
     call InitTrig_KillTestUnits_Command()
     call InitTrig_KillMagaz()
