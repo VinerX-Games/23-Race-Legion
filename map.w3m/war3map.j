@@ -457,7 +457,7 @@ trigger gg_trg_TimerIncome= null
 trigger gg_trg_EclogOn= null
 trigger gg_trg_EclogOff= null
 trigger gg_trg_UnitIncomeEnter= null
-trigger gg_trg_UnitIncomeEnterDis= null
+trigger gg_trg_UnitIncomeEnterDisCommon= null
 trigger gg_trg_UnitIncomeConstructed= null
 trigger gg_trg_Gob_Potreblenie= null
 trigger gg_trg_Silitid_Potreblenie= null
@@ -1456,6 +1456,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_UnitIncomeEnterAlredyDead= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -10349,24 +10350,36 @@ endfunction
 
 
 //===========================================================================
-// Trigger: UnitIncomeEnterDis
+// Trigger: UnitIncomeEnterDisCommon
 //
 // Для захватываемых
 //===========================================================================
-function Trig_UnitIncomeEnterDis_Conditions takes nothing returns boolean
+function Trig_UnitIncomeEnterDisCommon_Conditions takes nothing returns boolean
     local integer id= GetUnitTypeId(GetEnteringUnit())
-    return GetUnitState(GetEnteringUnit(), UNIT_STATE_LIFE) > 0 and not ( id == 'H0BN' or id == 'H0GB' or id == 'e02Z' or id == 'h0GA' ) and GetUnitAbilityLevel(GetEnteringUnit(), 'A0Z5') == 0
+    return not ( id == 'H0BN' or id == 'H0GB' or id == 'e02Z' or id == 'h0GA' ) and GetUnitAbilityLevel(GetEnteringUnit(), 'A0Z5') == 0
 endfunction
 
 //function CheckedEnter takes unit u, player p, integer pi
 
-function Trig_UnitIncomeEnterDis_Actions takes nothing returns nothing
+function Trig_UnitIncomeEnterDisCommon_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
-    call TriggerSleepAction(0.15)
+    
     //call DisplayTextToPlayer(p,0,0,("Увидел вход"+GetUnitName(u)))
     
+    if GetUnitState(GetEnteringUnit(), UNIT_STATE_LIFE) < 1 then
+        if not IsUnitInGroup(u, DeadGroup) then
+            call GroupAddUnit(DeadGroup, u)
+            call TriggerRegisterUnitStateEvent(gg_trg_DeadRessurected, u, UNIT_STATE_LIFE, GREATER_THAN, 0.60)
+        endif
+        
+        set u=null
+        set p=null
+        return
+    endif
+    
+    call TriggerSleepAction(0.15)
     if IsUnitType(u, UNIT_TYPE_STRUCTURE) then
         if IsUnitInGroup(u, udg_BuildedSctructure[1]) then
             set income[pi]=income[pi] + I2R(GetUnitFoodMade(u))
@@ -10427,12 +10440,12 @@ function Trig_UnitIncomeEnterDis_Actions takes nothing returns nothing
 endfunction
 
 //===========================================================================
-function InitTrig_UnitIncomeEnterDis takes nothing returns nothing
-    set gg_trg_UnitIncomeEnterDis=CreateTrigger()
-    //call TriggerRegisterEnterRegion( gg_trg_UnitIncomeEnterDis, Allmap,null)
-    call TriggerRegisterEnterRectSimple(gg_trg_UnitIncomeEnterDis, GetPlayableMapRect())
-    call TriggerAddCondition(gg_trg_UnitIncomeEnterDis, Condition(function Trig_UnitIncomeEnterDis_Conditions))
-    call TriggerAddAction(gg_trg_UnitIncomeEnterDis, function Trig_UnitIncomeEnterDis_Actions)
+function InitTrig_UnitIncomeEnterDisCommon takes nothing returns nothing
+    set gg_trg_UnitIncomeEnterDisCommon=CreateTrigger()
+    //call TriggerRegisterEnterRegion( gg_trg_UnitIncomeEnterDisCommon, Allmap,null)
+    call TriggerRegisterEnterRectSimple(gg_trg_UnitIncomeEnterDisCommon, GetPlayableMapRect())
+    call TriggerAddCondition(gg_trg_UnitIncomeEnterDisCommon, Condition(function Trig_UnitIncomeEnterDisCommon_Conditions))
+    call TriggerAddAction(gg_trg_UnitIncomeEnterDisCommon, function Trig_UnitIncomeEnterDisCommon_Actions)
 endfunction
 
 
@@ -35585,12 +35598,13 @@ endfunction
 
 function Trig_StartBuildingArg_Conditions takes nothing returns boolean
     local integer id= GetUnitTypeId(GetConstructingStructure())
-    return id == 'e02B' or id == 'e02F' or id == 'e02H' or id == 'eo2I' or id == 'e02I'
+    return id == 'e02B' or id == 'e02F' or id == 'e02H' or id == 'eo2I' or id == 'e02I' or id == 'e02G'
 endfunction
 
 function Trig_StartBuildingArg_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     set disincome[pi]=disincome[pi] - 6
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
     call UpdateGraf(pi)
     call Enter(GetTriggerUnit())
 endfunction
@@ -35610,12 +35624,13 @@ endfunction
 
 function Trig_CanselBuildingArg_Conditions takes nothing returns boolean
     local integer id= GetUnitTypeId(GetTriggerUnit())
-    return id == 'e02B' or id == 'e02F' or id == 'e02H' or id == 'eo2I' or id == 'e02I'
+    return id == 'e02B' or id == 'e02F' or id == 'e02H' or id == 'eo2I' or id == 'e02I' or id == 'e02G'
 endfunction
 
 function Trig_CanselBuildingArg_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     set disincome[pi]=disincome[pi] + 6
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] + 1
     call UpdateGraf(pi)
     call Enter(GetTriggerUnit())
 endfunction
@@ -41918,7 +41933,7 @@ function Trig_Setlvl_Func001001002 takes nothing returns boolean
 endfunction
 
 function Trig_Setlvl_Func001A takes nothing returns nothing
-    call SetHeroLevelBJ(GetEnumUnit(), S2I(SubStringBJ(GetEventPlayerChatString(), 7, 9)), false)
+    call SetHeroLevelBJ(GetEnumUnit(), S2I(SubStringBJ(GetEventPlayerChatString(), 8, 10)), false)
 endfunction
 
 function Trig_Setlvl_Actions takes nothing returns nothing
@@ -41928,9 +41943,7 @@ endfunction
 //===========================================================================
 function InitTrig_Setlvl takes nothing returns nothing
     set gg_trg_Setlvl=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(gg_trg_Setlvl, Player(0), "setlvl", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Setlvl, Player(1), "setlvl", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Setlvl, Player(2), "setlvl", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Setlvl, Player(0), "-setlvl", false)
     call TriggerAddAction(gg_trg_Setlvl, function Trig_Setlvl_Actions)
 endfunction
 
@@ -42239,7 +42252,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_TimerIncome()
     call InitTrig_EclogOn()
     call InitTrig_EclogOff()
-    call InitTrig_UnitIncomeEnterDis()
+    call InitTrig_UnitIncomeEnterDisCommon()
     call InitTrig_UnitIncomeConstructed()
     call InitTrig_Gob_Potreblenie()
     call InitTrig_Silitid_Potreblenie()

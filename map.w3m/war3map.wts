@@ -153043,7 +153043,7 @@ STRING 25182
 }
 
 STRING 25183
-// Abilities: A14Y (Скрыться), EditorSuffix (Editor Suffix)
+// Units: N058 (|cff964296Темный Следопыт), EditorSuffix (Name - Editor Suffix)
 {
 Отрекшиеся
 }
@@ -154027,7 +154027,7 @@ STRING 25338
 }
 
 STRING 25339
-// Units: N058 (|cff964296Темный Следопыт), EditorSuffix (Name - Editor Suffix)
+// Units: O030 (|cff964296Устранитель), EditorSuffix (Name - Editor Suffix)
 {
 Отрекшиеся
 }
@@ -159370,7 +159370,7 @@ STRING 26207
 }
 
 STRING 26208
-// Units: O030 (|cff964296Устранитель), EditorSuffix (Name - Editor Suffix)
+// Units: O031 (|cff964296Аптекарь), EditorSuffix (Name - Editor Suffix)
 {
 Отрекшиеся
 }
@@ -161238,7 +161238,7 @@ STRING 26514
 }
 
 STRING 26515
-// Units: O031 (|cff964296Аптекарь), EditorSuffix (Name - Editor Suffix)
+// Units: N059 (|cff964296Королева Отрекшихся), EditorSuffix (Name - Editor Suffix)
 {
 Отрекшиеся
 }
@@ -161250,13 +161250,13 @@ STRING 26516
 }
 
 STRING 26517
-// Units: N059 (|cff964296Королева Отрекшихся), EditorSuffix (Name - Editor Suffix)
+// Abilities: A141 (|cff964296Порождение Гнили), EditorSuffix (Editor Suffix)
 {
 Отрекшиеся
 }
 
 STRING 26518
-// Abilities: A141 (|cff964296Порождение Гнили), EditorSuffix (Editor Suffix)
+// Abilities: A14Q (|cff964296Одержимость), EditorSuffix (Editor Suffix)
 {
 Отрекшиеся
 }
@@ -161364,7 +161364,7 @@ STRING 26535
 }
 
 STRING 26536
-// Abilities: A14Q (|cff964296Одержимость), EditorSuffix (Editor Suffix)
+// Abilities: A14U (|cff964296Универсальная защита), EditorSuffix (Editor Suffix)
 {
 Отрекшиеся
 }
@@ -162358,7 +162358,7 @@ STRING 26698
 }
 
 STRING 26699
-// Abilities: A14U (|cff964296Универсальная защита), EditorSuffix (Editor Suffix)
+// Abilities: A14Y (Скрыться), EditorSuffix (Editor Suffix)
 {
 Отрекшиеся
 }
