@@ -1458,6 +1458,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_MOD_stolica_Start_Copy= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -5096,7 +5097,6 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0I1', - 4416.0, - 25664.0, 270.000, 'h0I1')
     set u=BlzCreateUnitWithSkin(p, 'etoe', - 1568.0, - 25312.0, 270.000, 'etoe')
     set u=BlzCreateUnitWithSkin(p, 'emow', - 1280.0, - 25408.0, 270.000, 'emow')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'eate', - 1344.0, - 25728.0, 270.000, 'eate')
     set u=BlzCreateUnitWithSkin(p, 'ovln', - 6432.0, - 28896.0, 270.000, 'ovln')
     set u=BlzCreateUnitWithSkin(p, 'ogre', - 6240.0, - 28512.0, 270.000, 'ogre')
@@ -5173,32 +5173,21 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n052', - 3517.3, - 27626.9, 50.121, 'n052')
     set u=BlzCreateUnitWithSkin(p, 'n050', - 3299.3, - 27637.6, 164.130, 'n050')
     set u=BlzCreateUnitWithSkin(p, 'n04Z', - 4051.0, - 27780.2, 129.038, 'n04Z')
-    set u=BlzCreateUnitWithSkin(p, 'E026', - 3158.0, - 28773.4, 294.772, 'E026')
     set u=BlzCreateUnitWithSkin(p, 'N059', - 2907.2, - 30315.1, 278.850, 'N059')
     set u=BlzCreateUnitWithSkin(p, 'u02P', - 3407.5, - 30115.1, 270.191, 'u02P')
     set u=BlzCreateUnitWithSkin(p, 'e00I', - 2384.5, - 26036.5, 65.206, 'e00I')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'e00J', - 2165.1, - 26036.7, 357.111, 'e00J')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'e00H', - 2523.7, - 26031.5, 202.100, 'e00H')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'earc', - 1815.4, - 26032.7, 347.772, 'earc')
     set u=BlzCreateUnitWithSkin(p, 'edry', - 1981.1, - 26025.0, 208.131, 'edry')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'ebal', - 1639.4, - 26031.8, 225.051, 'ebal')
     set u=BlzCreateUnitWithSkin(p, 'edot', - 1512.3, - 26044.8, 98.869, 'edot')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'edoc', - 1382.1, - 26060.4, 49.275, 'edoc')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'esen', - 1757.5, - 25920.6, 271.667, 'esen')
     set u=BlzCreateUnitWithSkin(p, 'Ekee', - 1941.2, - 25749.6, 299.793, 'Ekee')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'E011', - 2097.2, - 25720.5, 64.678, 'E011')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
-    set u=BlzCreateUnitWithSkin(p, 'E012', - 2337.2, - 25705.0, - 85.990, 'E012')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
-    set u=BlzCreateUnitWithSkin(p, 'E00W', - 1699.3, - 25742.4, - 86.640, 'E00W')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
+    set u=BlzCreateUnitWithSkin(p, 'E012', - 2337.2, - 25705.0, 274.010, 'E012')
+    set u=BlzCreateUnitWithSkin(p, 'E00W', - 1699.3, - 25742.4, 273.360, 'E00W')
     set u=BlzCreateUnitWithSkin(p, 'h0IT', - 6121.2, - 26975.3, 277.970, 'h0IT')
     set u=BlzCreateUnitWithSkin(p, 'h0EI', - 6182.1, - 26985.0, 237.080, 'h0EI')
     set u=BlzCreateUnitWithSkin(p, 'h0IU', - 6268.4, - 26975.4, 253.330, 'h0IU')
@@ -5284,10 +5273,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n04Y', - 3839.2, - 30069.7, 296.680, 'n04Y')
     set u=BlzCreateUnitWithSkin(p, 'h0IH', - 5443.4, - 29877.1, 272.940, 'h0IH')
     set u=BlzCreateUnitWithSkin(p, 'Emfr', - 1570.7, - 25743.1, 239.707, 'Emfr')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
     set u=BlzCreateUnitWithSkin(p, 'Etyr', - 1773.8, - 25570.0, 257.877, 'Etyr')
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
 endfunction
 
 //===========================================================================
@@ -5322,7 +5309,7 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'O031', - 3014.8, - 29789.9, 279.990, 'O031')
-    set u=BlzCreateUnitWithSkin(p, 'emtg', - 2510.3, - 25852.8, - 57.354, 'emtg')
+    set u=BlzCreateUnitWithSkin(p, 'emtg', - 2510.3, - 25852.8, 302.646, 'emtg')
 endfunction
 
 //===========================================================================
@@ -7282,6 +7269,7 @@ endfunction
 // Trigger: RebebmerToBuild
 //===========================================================================
 function Trig_RebebmerToBuild_Actions takes nothing returns nothing
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_2405")
     call TriggerSleepAction(300.00)
     call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4745")
     call TriggerSleepAction(120.00)
@@ -7470,6 +7458,7 @@ function Trig_MOD_stolica_Start_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_UpgradeStolica)
     call EnableTrigger(gg_trg_StolicaDead)
     call EnableTrigger(gg_trg_StolicaTime)
+    call TriggerExecute(gg_trg_RebebmerToBuild)
 endfunction
 
 //===========================================================================
@@ -7553,6 +7542,39 @@ function InitTrig_MOD_feoda_O_Start takes nothing returns nothing
     call TriggerRegisterPlayerChatEvent(gg_trg_MOD_feoda_O_Start, Player(0), "-mod feod", true)
     call TriggerAddCondition(gg_trg_MOD_feoda_O_Start, Condition(function Trig_MOD_feoda_O_Start_Conditions))
     call TriggerAddAction(gg_trg_MOD_feoda_O_Start, function Trig_MOD_feoda_O_Start_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: MOD stolica Start Copy
+//===========================================================================
+function Trig_MOD_stolica_Start_Copy_Conditions takes nothing returns boolean
+    if ( not ( udg_GameMode == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_MOD_stolica_Start_Copy_Func005A takes nothing returns nothing
+    call SetPlayerAbilityAvailableBJ(true, 'A0IQ', GetEnumPlayer())
+endfunction
+
+function Trig_MOD_stolica_Start_Copy_Actions takes nothing returns nothing
+    call DisplayTextToForce(udg_AllPlayers, "TRIGSTR_2404")
+    call ForForce(udg_AllPlayers, function Trig_MOD_stolica_Start_Copy_Func005A)
+    call EnableTrigger(gg_trg_MakeStolica)
+    call EnableTrigger(gg_trg_UpgradeStolica)
+    call EnableTrigger(gg_trg_StolicaDead)
+    call EnableTrigger(gg_trg_StolicaTime)
+    call TriggerExecute(gg_trg_RebebmerToBuild)
+endfunction
+
+//===========================================================================
+function InitTrig_MOD_stolica_Start_Copy takes nothing returns nothing
+    set gg_trg_MOD_stolica_Start_Copy=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(gg_trg_MOD_stolica_Start_Copy, Player(0), "-mod st", true)
+    call TriggerRegisterTimerExpireEventBJ(gg_trg_MOD_stolica_Start_Copy, udg_LobbyTime)
+    call TriggerAddCondition(gg_trg_MOD_stolica_Start_Copy, Condition(function Trig_MOD_stolica_Start_Copy_Conditions))
+    call TriggerAddAction(gg_trg_MOD_stolica_Start_Copy, function Trig_MOD_stolica_Start_Copy_Actions)
 endfunction
 
 //===========================================================================
@@ -35281,16 +35303,18 @@ endfunction
 // Trigger: IllyAgile
 //===========================================================================
 function Trig_IllyAgile_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0NH' ) ) then
-        return false
-    endif
-    return true
+    return GetSpellAbilityId() == 'A0NH'
 endfunction
 
 function Trig_IllyAgile_Actions takes nothing returns nothing
-    call UnitAddAbilityBJ('A0NI', GetTriggerUnit())
+    
+    local unit u= GetTriggerUnit()
+    call UnitAddAbility(u, 'A0NI')
     call TriggerSleepAction(25.00)
-    call UnitRemoveAbilityBJ('A0NI', GetTriggerUnit())
+    call UnitRemoveAbility(u, 'A0NI')
+    set u=null
+    
+    
 endfunction
 
 //===========================================================================
@@ -35302,20 +35326,21 @@ function InitTrig_IllyAgile takes nothing returns nothing
     call TriggerAddAction(gg_trg_IllyAgile, function Trig_IllyAgile_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: IllyPain
 //===========================================================================
+
 function Trig_IllyPain_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0NU' ) ) then
-        return false
-    endif
-    return true
+    return GetSpellAbilityId() == 'A0NU'
 endfunction
 
 function Trig_IllyPain_Actions takes nothing returns nothing
-    call UnitAddAbilityBJ('A0NT', GetTriggerUnit())
+    local unit u= GetTriggerUnit()
+    call UnitAddAbility(u, 'A0NT')
     call TriggerSleepAction(20.00)
-    call UnitRemoveAbilityBJ('A0NT', GetTriggerUnit())
+    call UnitRemoveAbility(u, 'A0NT')
+    set u=null
 endfunction
 
 //===========================================================================
@@ -35327,20 +35352,20 @@ function InitTrig_IllyPain takes nothing returns nothing
     call TriggerAddAction(gg_trg_IllyPain, function Trig_IllyPain_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: IlliKnives
 //===========================================================================
 function Trig_IlliKnives_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0NV' ) ) then
-        return false
-    endif
-    return true
+    return GetSpellAbilityId() == 'A0NV'
 endfunction
 
 function Trig_IlliKnives_Actions takes nothing returns nothing
-    call UnitAddAbilityBJ('A0NY', GetTriggerUnit())
-    call TriggerSleepAction(25.00)
-    call UnitRemoveAbilityBJ('A0NY', GetTriggerUnit())
+    local unit u= GetTriggerUnit()
+    call UnitAddAbility(u, 'A0NY')
+    call TriggerSleepAction(20.00)
+    call UnitRemoveAbility(u, 'A0NY')
+    set u=null
 endfunction
 
 //===========================================================================
@@ -35352,20 +35377,23 @@ function InitTrig_IlliKnives takes nothing returns nothing
     call TriggerAddAction(gg_trg_IlliKnives, function Trig_IlliKnives_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: IllyAttack
 //===========================================================================
 function Trig_IllyAttack_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0OJ' ) ) then
-        return false
-    endif
-    return true
+    return GetSpellAbilityId() == 'A0OJ'
 endfunction
 
 function Trig_IllyAttack_Actions takes nothing returns nothing
-    call UnitAddAbilityBJ('A0OI', GetTriggerUnit())
+
+    
+    local unit u= GetTriggerUnit()
+    call UnitAddAbility(u, 'A0OI')
     call TriggerSleepAction(10.00)
-    call UnitRemoveAbilityBJ('A0OI', GetTriggerUnit())
+    call UnitRemoveAbility(u, 'A0OI')
+    set u=null
+
 endfunction
 
 //===========================================================================
@@ -35376,6 +35404,7 @@ function InitTrig_IllyAttack takes nothing returns nothing
     call TriggerAddCondition(gg_trg_IllyAttack, Condition(function Trig_IllyAttack_Conditions))
     call TriggerAddAction(gg_trg_IllyAttack, function Trig_IllyAttack_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: RuvokAutoIlly
@@ -35653,7 +35682,6 @@ endfunction
 //===========================================================================
 function InitTrig_EntSell_Copy takes nothing returns nothing
     set gg_trg_EntSell_Copy=CreateTrigger()
-    call DisableTrigger(gg_trg_EntSell_Copy)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_EntSell_Copy, EVENT_PLAYER_UNIT_SELL)
     call TriggerAddCondition(gg_trg_EntSell_Copy, Condition(function Trig_EntSell_Copy_Conditions))
     call TriggerAddAction(gg_trg_EntSell_Copy, function Trig_EntSell_Copy_Actions)
@@ -42230,6 +42258,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_MOD_feoda_O_Set()
     call InitTrig_MOD_feoda_O_Set_Spell()
     call InitTrig_MOD_feoda_O_Start()
+    call InitTrig_MOD_stolica_Start_Copy()
     call InitTrig_FeodalDead()
     call InitTrig_DoNotAttackSenior()
     call InitTrig_AllPlayers_and_vassals()

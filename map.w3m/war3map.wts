@@ -6324,7 +6324,7 @@ STRING 1045
 }
 
 STRING 1046
-// Abilities: A01D (Позвать собак), EditorSuffix (Editor Suffix)
+// Abilities: A01D (Призвать собак), EditorSuffix (Editor Suffix)
 {
 (бандиты)
 }
@@ -8597,12 +8597,6 @@ STRING 1423
 |cff008080Торнадо|r [|cffffcc004-й уровень|r]
 }
 
-STRING 1424
-// Abilities: A01D (Позвать собак), Name (Name)
-{
-Позвать собак
-}
-
 STRING 1425
 // Upgrades: R00M (Железная броня,Стальная броня,Мифриловая б), EditorSuffix (Editor Suffix)
 {
@@ -9271,61 +9265,61 @@ STRING 1535
 }
 
 STRING 1536
-// Abilities: A01D (Позвать собак), Tip (Tooltip - Normal)
+// Abilities: A01D (Призвать собак), Tip (Tooltip - Normal)
 {
 Призыв псов [|cffffcc001-й уровень|r]
 }
 
 STRING 1537
-// Abilities: A01D (Позвать собак), Tip (Tooltip - Normal)
+// Abilities: A01D (Призвать собак), Tip (Tooltip - Normal)
 {
 Призыв псов [|cffffcc002-й уровень|r]
 }
 
 STRING 1538
-// Abilities: A01D (Позвать собак), Tip (Tooltip - Normal)
+// Abilities: A01D (Призвать собак), Tip (Tooltip - Normal)
 {
 Призыв псов [|cffffcc003-й уровень|r]
 }
 
 STRING 1539
-// Abilities: A01D (Позвать собак), Tip (Tooltip - Normal)
+// Abilities: A01D (Призвать собак), Tip (Tooltip - Normal)
 {
 Призыв псов [|cffffcc004-й уровень|r]
 }
 
 STRING 1540
-// Abilities: A01D (Позвать собак), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01D (Призвать собак), Ubertip (Tooltip - Normal - Extended)
 {
 Призыв псов, которые будут сражаться на вашей стороне.
 }
 
 STRING 1541
-// Abilities: A01D (Позвать собак), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01D (Призвать собак), Ubertip (Tooltip - Normal - Extended)
 {
 Призыв псов, которые будут сражаться на вашей стороне.
 }
 
 STRING 1542
-// Abilities: A01D (Позвать собак), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01D (Призвать собак), Ubertip (Tooltip - Normal - Extended)
 {
 Призыв псов, которые будут сражаться на вашей стороне.
 }
 
 STRING 1543
-// Abilities: A01D (Позвать собак), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A01D (Призвать собак), Ubertip (Tooltip - Normal - Extended)
 {
 Призыв псов, которые будут сражаться на вашей стороне.
 }
 
 STRING 1544
-// Abilities: A01D (Позвать собак), Researchtip (Tooltip - Learn)
+// Abilities: A01D (Призвать собак), Researchtip (Tooltip - Learn)
 {
 Изучить «Призыв псов» [|cffffcc00%d-й уровень|r]
 }
 
 STRING 1545
-// Abilities: A01D (Позвать собак), Researchubertip (Tooltip - Learn - Extended)
+// Abilities: A01D (Призвать собак), Researchubertip (Tooltip - Learn - Extended)
 {
 Призывает псов, сражающихся на вашей стороне.
 }
@@ -14502,6 +14496,16 @@ STRING 2403
 (Врайкулы)
 }
 
+STRING 2404
+{
+Включен режим |cffd45e19столиц!|r Постройти их |cffff0000до начала расходов!|r
+}
+
+STRING 2405
+{
+Не забудьте построить |cffffff00Столицы |rдо |cffff0000расходов, |rиначе вы |cffff0000проиграете!|r
+}
+
 STRING 2406
 // Buffs/Effects: B00K (), Bufftip (Tooltip)
 {
@@ -14542,6 +14546,12 @@ STRING 2412
 // Units: h04T (Ткач смерти), Tip (Tooltip - Basic)
 {
 Обучить ткача смерти
+}
+
+STRING 2413
+// Units: n05A (Боевой пес), Name (Name)
+{
+Боевой пес
 }
 
 STRING 2414
@@ -14628,6 +14638,12 @@ STRING 2427
 Око бездны
 }
 
+STRING 2428
+// Units: n05A (Боевой пес), Tip (Tooltip - Basic)
+{
+Призыв пса
+}
+
 STRING 2429
 // Abilities: A03B (Нечестивое бешенство), EditorSuffix (Editor Suffix)
 {
@@ -14658,6 +14674,12 @@ STRING 2433
 Связывает 7 воинов между собой. <Aspl,DataA1,%>% получаемого каждым связанным воином урона распределяется между всеми ними. |nВремя действия: <Aspl,Dur1> сек.
 }
 
+STRING 2434
+// Units: n05A (Боевой пес), Ubertip (Tooltip - Extended)
+{
+Воин ближнего боя. 
+}
+
 STRING 2435
 // Units: o00F (Взор бездны), Name (Name)
 {
@@ -14668,6 +14690,18 @@ STRING 2436
 // Units: h04U (Виновник страданий), Tip (Tooltip - Basic)
 {
 Обучить виновника страданий
+}
+
+STRING 2437
+// Units: n05A (Боевой пес), EditorSuffix (Name - Editor Suffix)
+{
+левел 2
+}
+
+STRING 2438
+// Units: n05B (Боевой пес), Name (Name)
+{
+Боевой пес
 }
 
 STRING 2439
@@ -14714,6 +14748,12 @@ STRING 2445
 |cff0096ffАура мороза|r
 }
 
+STRING 2446
+// Units: n05B (Боевой пес), Tip (Tooltip - Basic)
+{
+Призыв пса
+}
+
 STRING 2447
 // Abilities: A03D (|cff0096ffАура мороза|r), Tip (Tooltip - Normal)
 {
@@ -14750,16 +14790,40 @@ STRING 2452
 |cff0096ffАура мороза|r
 }
 
+STRING 2453
+// Units: n05B (Боевой пес), Ubertip (Tooltip - Extended)
+{
+Воин ближнего боя. 
+}
+
+STRING 2454
+// Units: n05B (Боевой пес), EditorSuffix (Name - Editor Suffix)
+{
+левел 3
+}
+
 STRING 2455
 // Units: h0BP (|cff805a32Заклинательница Рун|r), Hotkey (Hotkey)
 {
 Q
 }
 
+STRING 2456
+// Units: n05C (Боевой пес), Name (Name)
+{
+Боевой пес
+}
+
 STRING 2457
 // Abilities: A03E (Зачарованое оружие), Tip (Tooltip - Normal)
 {
 Зачарованое оружие
+}
+
+STRING 2458
+// Units: n05C (Боевой пес), Tip (Tooltip - Basic)
+{
+Призыв пса
 }
 
 STRING 2459
@@ -14772,6 +14836,12 @@ STRING 2460
 // Abilities: A03F (Зачарованое оружие), Tip (Tooltip - Normal)
 {
 Зачарованое оружие
+}
+
+STRING 2461
+// Units: n05C (Боевой пес), Ubertip (Tooltip - Extended)
+{
+Воин ближнего боя. 
 }
 
 STRING 2462
@@ -36677,6 +36747,12 @@ STRING 6089
 Кель
 }
 
+STRING 6090
+// Units: n05C (Боевой пес), EditorSuffix (Name - Editor Suffix)
+{
+левел 4
+}
+
 STRING 6091
 // Units: e013 (|cff6464ffШал'дорайская воительница|r), Name (Name)
 {
@@ -36813,12 +36889,6 @@ STRING 6113
 // Abilities: A08U (Огромная огненная глыба), Name (Name)
 {
 Огромная огненная глыба
-}
-
-STRING 6114
-// Abilities: A08U (Огромная огненная глыба), Researchtip (Tooltip - Learn)
-{
-Изучить "Огромную огненную глыбу"[%d-й уровень]
 }
 
 STRING 6115
@@ -94873,6 +94943,18 @@ STRING 15676
 Построить |cff808000Святилище леса|r
 }
 
+STRING 15677
+// Abilities: ANrf (Огненный ливень), EditorSuffix (Editor Suffix)
+{
+(общее Q)
+}
+
+STRING 15678
+// Abilities: A01D (Призвать собак), Name (Name)
+{
+Призвать собак
+}
+
 STRING 15679
 // Units: e02T (|cff7f8f18Древний Висп|r), EditorSuffix (Name - Editor Suffix)
 {
@@ -104207,6 +104289,12 @@ STRING 17196
 // Abilities: A0JX (Бонус к всему), EditorSuffix (Editor Suffix)
 {
 !(+5)
+}
+
+STRING 17197
+// Abilities: A08U (Огромная огненная глыба), Researchtip (Tooltip - Learn)
+{
+Изучить Огромную огненную глыбу
 }
 
 STRING 17198
@@ -131382,6 +131470,12 @@ STRING 21681
 |cff008000Востановление здоровья (75).|r
 |cff008000Радиус действия (300).|r
 
+}
+
+STRING 21682
+// Abilities: A08U (Огромная огненная глыба), EditorSuffix (Editor Suffix)
+{
+(ЭК Кель
 }
 
 STRING 21683
