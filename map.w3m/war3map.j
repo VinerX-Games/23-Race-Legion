@@ -22,12 +22,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -623,7 +623,20 @@ trigger gg_trg_Ne_dam_flagman_Ot= null
 trigger gg_trg_Aura_Flagmana_Vinoslivost_O= null
 trigger gg_trg_Aura_Flagmana_Metkost_O= null
 trigger gg_trg_Aura_Flagmana_Stoikost_O= null
+trigger gg_trg_Init= null
+trigger gg_trg_Unit_Loaded= null
+trigger gg_trg_Unit_Death= null
+trigger gg_trg_Unit_Issued_Order= null
+trigger gg_trg_Remove_Unit_From_LoadedGroup= null
+trigger gg_trg_All_Message= null
+trigger gg_trg_TransportingUnitArray_Message= null
+trigger gg_trg_Select_Unit= null
+trigger gg_trg_Magic_Pogruzka_Ot_Copy= null
+trigger gg_trg_MassPosadkaOld= null
+trigger gg_trg_MassPosadka2= null
 trigger gg_trg_NoToMuch= null
+trigger gg_trg_Count_minus_passengers_Copy= null
+trigger gg_trg_Count_plus_passengers_Copy= null
 trigger gg_trg_Colision_1_s= null
 trigger gg_trg_Linkor_reaserch_BoakOr_O= null
 trigger gg_trg_Naim_Bok_pushky_O= null
@@ -1470,19 +1483,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_Count_plus_passengers_Copy= null
-trigger gg_trg_Count_minus_passengers_Copy= null
-trigger gg_trg_MassPosadka2= null
-trigger gg_trg_MassPosadkaOld= null
-trigger gg_trg_Magic_Pogruzka_Ot_Copy= null
-trigger gg_trg_Select_Unit= null
-trigger gg_trg_TransportingUnitArray_Message= null
-trigger gg_trg_All_Message= null
-trigger gg_trg_Remove_Unit_From_LoadedGroup= null
-trigger gg_trg_Unit_Issued_Order= null
-trigger gg_trg_Unit_Death= null
-trigger gg_trg_Unit_Loaded= null
-trigger gg_trg_Init= null
+trigger gg_trg_MassMindControl= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1750,7 +1751,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1758,33 +1759,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1792,19 +1793,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -2362,6 +2363,15 @@ endfunction
 //*  Custom Script Code
 //*
 //***************************************************************************
+//***************************************************************************
+//*  RandomFunction
+
+function Random takes integer Chance,integer FromAll returns boolean
+    
+    local integer i= GetRandomInt(1, FromAll)
+    return i <= Chance
+
+endfunction
 //***************************************************************************
 //*  CommonHash
 //
@@ -21509,8 +21519,17 @@ endfunction
 
 function Trig_Ult_Actions takes nothing returns nothing
     local location loc= GetSpellTargetLoc()
+    local integer i= GetRandomInt(1, 4)
     
-    call CreateItem('I01X', GetLocationX(loc), GetLocationY(loc))
+    if i == 1 then
+        call CreateItem('I01X', GetLocationX(loc), GetLocationY(loc))
+    elseif i == 2 then
+        call CreateItem('I01V', GetLocationX(loc), GetLocationY(loc))
+    elseif i == 3 then
+        call CreateItem('I01Y', GetLocationX(loc), GetLocationY(loc))
+    else
+        call CreateItem('I01W', GetLocationX(loc), GetLocationY(loc))
+    endif
     
     call RemoveLocation(loc)
     set loc=null
@@ -22109,6 +22128,49 @@ endfunction
 
 
 //===========================================================================
+// Trigger: MassMindControl
+//===========================================================================
+function Trig_MassMindControl_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A15P' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_MassMindControl_Func002002 takes nothing returns boolean
+    return ( 0 == 0 )
+endfunction
+
+function Trig_MassMindControl_Func007A takes nothing returns nothing
+    call CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    set udg_LocalUnit2=GetLastCreatedUnit()
+    call TriggerExecute(gg_trg_ToKill2)
+    call UnitAddAbilityBJ('A0KF', GetLastCreatedUnit())
+    call SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
+    call IssueTargetOrderBJ(GetLastCreatedUnit(), "charm", GetEnumUnit())
+endfunction
+
+function Trig_MassMindControl_Actions takes nothing returns nothing
+    set udg_LocalPosition2=GetSpellTargetLoc()
+    set udg_Boolexpr=Condition(function Trig_MassMindControl_Func002002)
+    set udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
+    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 130, udg_Boolexpr)
+    call RemoveLocation(udg_LocalPosition2)
+    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    call ForGroupBJ(udg_LocalOtrad2, function Trig_MassMindControl_Func007A)
+    call RemoveLocation(udg_LocalPosition2)
+    call GroupClear(udg_LocalOtrad2)
+endfunction
+
+//===========================================================================
+function InitTrig_MassMindControl takes nothing returns nothing
+    set gg_trg_MassMindControl=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_MassMindControl, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_MassMindControl, Condition(function Trig_MassMindControl_Conditions))
+    call TriggerAddAction(gg_trg_MassMindControl, function Trig_MassMindControl_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: HordeOn
 //===========================================================================
 function Trig_HordeOn_Actions takes nothing returns nothing
@@ -22639,6 +22701,10 @@ function T3Count takes player p returns nothing
         loop // Таурен
                 set a[0]=a[0] + 1
                 set a[a[0]]='o01L'
+                
+                if Random(1 , 20) then
+                    set a[a[0]]='o032'
+                endif
                 set b=b + 1
                 exitwhen b >= i
         endloop
@@ -42347,6 +42413,75 @@ function InitTrig_Spell1_Copy takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: KillTestUnits O Copy
+//===========================================================================
+function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
+    return RectContainsUnit(gg_rct_TestRegion, GetFilterUnit())
+endfunction
+
+function Trig_KillTestUnits_O_Copy_Func003A takes nothing returns nothing
+    local unit u= GetEnumUnit()
+    local player p= GetOwningPlayer(u)
+    local integer id= GetUnitTypeId(u)
+    if IsUnitType(u, UNIT_TYPE_HERO) then
+        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
+    endif
+    call RemoveUnit(u)
+    set u=null
+    set p=null
+endfunction
+
+function Trig_KillTestUnits_O_Copy_Actions takes nothing returns nothing
+    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Copy_Func001002)
+    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Copy_Func003A)
+    call GroupClear(udg_LocalOtrad2)
+endfunction
+
+//===========================================================================
+function InitTrig_KillTestUnits_O_Copy takes nothing returns nothing
+    set gg_trg_KillTestUnits_O_Copy=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O_Copy, 0.01)
+    call TriggerAddAction(gg_trg_KillTestUnits_O_Copy, function Trig_KillTestUnits_O_Copy_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: KillTestUnits Command
+//===========================================================================
+function Trig_KillTestUnits_Command_Func001002 takes nothing returns boolean
+    return ( RectContainsUnit(gg_rct_TestRegion, GetFilterUnit()) == true )
+endfunction
+
+function Trig_KillTestUnits_Command_Func003A takes nothing returns nothing
+    local unit u= GetEnumUnit()
+    local player p= GetOwningPlayer(u)
+    local integer id= GetUnitTypeId(u)
+    if IsUnitType(u, UNIT_TYPE_HERO) then
+        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
+    endif
+    call RemoveUnit(u)
+    set u=null
+    set p=null
+    
+endfunction
+
+function Trig_KillTestUnits_Command_Actions takes nothing returns nothing
+    set udg_Boolexpr=Condition(function Trig_KillTestUnits_Command_Func001002)
+    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_Command_Func003A)
+    call GroupClear(udg_LocalOtrad2)
+endfunction
+
+//===========================================================================
+function InitTrig_KillTestUnits_Command takes nothing returns nothing
+    set gg_trg_KillTestUnits_Command=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(gg_trg_KillTestUnits_Command, Player(0), "kill", true)
+    call TriggerAddAction(gg_trg_KillTestUnits_Command, function Trig_KillTestUnits_Command_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: KillMagaz
 //===========================================================================
 function Trig_KillMagaz_Actions takes nothing returns nothing
@@ -42934,6 +43069,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Safety()
     call InitTrig_StartAttackSafety()
     call InitTrig_EndAttackSafety()
+    call InitTrig_MassMindControl()
     call InitTrig_HordeOn()
     call InitTrig_K1T1()
     call InitTrig_K1T2()
@@ -43478,6 +43614,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_HP_24k_O()
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
+    call InitTrig_KillTestUnits_O_Copy()
+    call InitTrig_KillTestUnits_Command()
     call InitTrig_KillMagaz()
     call InitTrig_Setlvl()
     call InitTrig_A1()
@@ -43509,6 +43647,7 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_BloodClose)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForNavy)
+    call ConditionalTriggerExecute(gg_trg_KillTestUnits_O_Copy)
 endfunction
 
 //***************************************************************************
@@ -43865,7 +44004,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
