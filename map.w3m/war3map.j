@@ -1459,6 +1459,12 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_Elf1= null
+trigger gg_trg_Elf2= null
+trigger gg_trg_Krug1= null
+trigger gg_trg_Krug2= null
+trigger gg_trg_murloki_Copy= null
+trigger gg_trg_murlokiEnd_Copy= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -5187,17 +5193,18 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n052', - 3517.3, - 27626.9, 50.121, 'n052')
     set u=BlzCreateUnitWithSkin(p, 'n050', - 3299.3, - 27637.6, 164.130, 'n050')
     set u=BlzCreateUnitWithSkin(p, 'n04Z', - 4051.0, - 27780.2, 129.038, 'n04Z')
+    set u=BlzCreateUnitWithSkin(p, 'n05D', - 1457.8, - 26146.4, 263.370, 'n05D')
     set u=BlzCreateUnitWithSkin(p, 'N059', - 2907.2, - 30315.1, 278.850, 'N059')
     set u=BlzCreateUnitWithSkin(p, 'u02P', - 3407.5, - 30115.1, 270.191, 'u02P')
     set u=BlzCreateUnitWithSkin(p, 'e00I', - 2384.5, - 26036.5, 65.206, 'e00I')
-    set u=BlzCreateUnitWithSkin(p, 'e00J', - 2165.1, - 26036.7, 357.111, 'e00J')
+    set u=BlzCreateUnitWithSkin(p, 'e00J', - 1577.7, - 26136.4, 357.111, 'e00J')
     set u=BlzCreateUnitWithSkin(p, 'e00H', - 2523.7, - 26031.5, 202.100, 'e00H')
-    set u=BlzCreateUnitWithSkin(p, 'earc', - 1815.4, - 26032.7, 347.772, 'earc')
+    set u=BlzCreateUnitWithSkin(p, 'earc', - 2266.9, - 26035.9, 347.772, 'earc')
     set u=BlzCreateUnitWithSkin(p, 'edry', - 1981.1, - 26025.0, 208.131, 'edry')
-    set u=BlzCreateUnitWithSkin(p, 'ebal', - 1639.4, - 26031.8, 225.051, 'ebal')
+    set u=BlzCreateUnitWithSkin(p, 'ebal', - 1849.2, - 25988.3, 225.051, 'ebal')
     set u=BlzCreateUnitWithSkin(p, 'edot', - 1512.3, - 26044.8, 98.869, 'edot')
     set u=BlzCreateUnitWithSkin(p, 'edoc', - 1382.1, - 26060.4, 49.275, 'edoc')
-    set u=BlzCreateUnitWithSkin(p, 'esen', - 1757.5, - 25920.6, 271.667, 'esen')
+    set u=BlzCreateUnitWithSkin(p, 'esen', - 2226.7, - 25920.4, 271.667, 'esen')
     set u=BlzCreateUnitWithSkin(p, 'Ekee', - 1941.2, - 25749.6, 299.793, 'Ekee')
     set u=BlzCreateUnitWithSkin(p, 'E011', - 2097.2, - 25720.5, 64.678, 'E011')
     set u=BlzCreateUnitWithSkin(p, 'E012', - 2337.2, - 25705.0, 274.010, 'E012')
@@ -5289,6 +5296,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'Emfr', - 1570.7, - 25743.1, 239.707, 'Emfr')
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
     set u=BlzCreateUnitWithSkin(p, 'Etyr', - 1773.8, - 25570.0, 257.877, 'Etyr')
+    set u=BlzCreateUnitWithSkin(p, 'emtg', - 2510.3, - 25852.8, 302.650, 'emtg')
 endfunction
 
 //===========================================================================
@@ -5323,7 +5331,7 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'O031', - 3014.8, - 29789.9, 279.990, 'O031')
-    set u=BlzCreateUnitWithSkin(p, 'emtg', - 2510.3, - 25852.8, 302.646, 'emtg')
+    set u=BlzCreateUnitWithSkin(p, 'efdr', - 1896.1, - 25912.3, 143.101, 'efdr')
 endfunction
 
 //===========================================================================
@@ -19500,6 +19508,139 @@ function InitTrig_Emerald_Dream_TP_OFF_O takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: murlokiEnd Copy
+//===========================================================================
+function Trig_murlokiEnd_Copy_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('e00J', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('edot', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('edoc', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('n05D', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_murlokiEnd_Copy takes nothing returns nothing
+    set gg_trg_murlokiEnd_Copy=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_murlokiEnd_Copy, 5)
+    call TriggerAddAction(gg_trg_murlokiEnd_Copy, function Trig_murlokiEnd_Copy_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: murloki Copy
+//===========================================================================
+function Trig_murloki_Copy_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0G1' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_murloki_Copy_Actions takes nothing returns nothing
+    call DisableTrigger(gg_trg_murlokiEnd_Copy)
+    call SetPlayerTechMaxAllowedSwap('e00J', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('edot', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('edoc', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('n05D', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_murloki_Copy takes nothing returns nothing
+    set gg_trg_murloki_Copy=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_murloki_Copy, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_murloki_Copy, Condition(function Trig_murloki_Copy_Conditions))
+    call TriggerAddAction(gg_trg_murloki_Copy, function Trig_murloki_Copy_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Krug2
+//===========================================================================
+function Trig_Krug2_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0G1' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Krug2_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0G2', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Krug2 takes nothing returns nothing
+    set gg_trg_Krug2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Krug2, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Krug2, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_Krug2, Condition(function Trig_Krug2_Conditions))
+    call TriggerAddAction(gg_trg_Krug2, function Trig_Krug2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Krug1
+//===========================================================================
+function Trig_Krug1_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0G1' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Krug1_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0G2', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Krug1 takes nothing returns nothing
+    set gg_trg_Krug1=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Krug1, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_Krug1, Condition(function Trig_Krug1_Conditions))
+    call TriggerAddAction(gg_trg_Krug1, function Trig_Krug1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Elf2
+//===========================================================================
+function Trig_Elf2_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0G2' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Elf2_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0G1', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Elf2 takes nothing returns nothing
+    set gg_trg_Elf2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Elf2, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Elf2, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_Elf2, Condition(function Trig_Elf2_Conditions))
+    call TriggerAddAction(gg_trg_Elf2, function Trig_Elf2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Elf1
+//===========================================================================
+function Trig_Elf1_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0G2' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Elf1_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0G1', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Elf1 takes nothing returns nothing
+    set gg_trg_Elf1=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Elf1, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_Elf1, Condition(function Trig_Elf1_Conditions))
+    call TriggerAddAction(gg_trg_Elf1, function Trig_Elf1_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: Murlok
 //===========================================================================
 function Trig_Murlok_Conditions takes nothing returns boolean
@@ -19511,7 +19652,7 @@ endfunction
 
 function Trig_Murlok_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('R0FE', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('Rnsw', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('Rnsw', 0, GetOwningPlayer(GetTriggerUnit()))
 endfunction
 
 //===========================================================================
@@ -41933,75 +42074,6 @@ function InitTrig_Spell1_Copy takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: KillTestUnits O Copy
-//===========================================================================
-function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
-    return RectContainsUnit(gg_rct_TestRegion, GetFilterUnit())
-endfunction
-
-function Trig_KillTestUnits_O_Copy_Func003A takes nothing returns nothing
-    local unit u= GetEnumUnit()
-    local player p= GetOwningPlayer(u)
-    local integer id= GetUnitTypeId(u)
-    if IsUnitType(u, UNIT_TYPE_HERO) then
-        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
-    endif
-    call RemoveUnit(u)
-    set u=null
-    set p=null
-endfunction
-
-function Trig_KillTestUnits_O_Copy_Actions takes nothing returns nothing
-    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Copy_Func001002)
-    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Copy_Func003A)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_KillTestUnits_O_Copy takes nothing returns nothing
-    set gg_trg_KillTestUnits_O_Copy=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O_Copy, 0.01)
-    call TriggerAddAction(gg_trg_KillTestUnits_O_Copy, function Trig_KillTestUnits_O_Copy_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: KillTestUnits Command
-//===========================================================================
-function Trig_KillTestUnits_Command_Func001002 takes nothing returns boolean
-    return ( RectContainsUnit(gg_rct_TestRegion, GetFilterUnit()) == true )
-endfunction
-
-function Trig_KillTestUnits_Command_Func003A takes nothing returns nothing
-    local unit u= GetEnumUnit()
-    local player p= GetOwningPlayer(u)
-    local integer id= GetUnitTypeId(u)
-    if IsUnitType(u, UNIT_TYPE_HERO) then
-        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
-    endif
-    call RemoveUnit(u)
-    set u=null
-    set p=null
-    
-endfunction
-
-function Trig_KillTestUnits_Command_Actions takes nothing returns nothing
-    set udg_Boolexpr=Condition(function Trig_KillTestUnits_Command_Func001002)
-    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_Command_Func003A)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_KillTestUnits_Command takes nothing returns nothing
-    set gg_trg_KillTestUnits_Command=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(gg_trg_KillTestUnits_Command, Player(0), "kill", true)
-    call TriggerAddAction(gg_trg_KillTestUnits_Command, function Trig_KillTestUnits_Command_Actions)
-endfunction
-
-
-//===========================================================================
 // Trigger: KillMagaz
 //===========================================================================
 function Trig_KillMagaz_Actions takes nothing returns nothing
@@ -42506,6 +42578,12 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ToKill2()
     call InitTrig_Emerald_Dream_TP_O()
     call InitTrig_Emerald_Dream_TP_OFF_O()
+    call InitTrig_murlokiEnd_Copy()
+    call InitTrig_murloki_Copy()
+    call InitTrig_Krug2()
+    call InitTrig_Krug1()
+    call InitTrig_Elf2()
+    call InitTrig_Elf1()
     call InitTrig_Murlok()
     call InitTrig_murlo2()
     call InitTrig_Nagi()
@@ -43120,8 +43198,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_HP_24k_O()
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
-    call InitTrig_KillTestUnits_O_Copy()
-    call InitTrig_KillTestUnits_Command()
     call InitTrig_KillMagaz()
     call InitTrig_Setlvl()
     call InitTrig_A1()
@@ -43152,7 +43228,6 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_BloodClose)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForNavy)
-    call ConditionalTriggerExecute(gg_trg_KillTestUnits_O_Copy)
 endfunction
 
 //***************************************************************************
