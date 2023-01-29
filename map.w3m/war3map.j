@@ -22,12 +22,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE___SpellHero='A06P'
-constant integer SpellSleepAOE___SpellCast='A06O'
-constant string SpellSleepAOE___SpellOrder="sleep"
-constant integer SpellSleepAOE___DummyID='u000'
-constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE___DummyUnit
+constant integer SpellSleepAOE__SpellHero='A06P'
+constant integer SpellSleepAOE__SpellCast='A06O'
+constant string SpellSleepAOE__SpellOrder="sleep"
+constant integer SpellSleepAOE__DummyID='u000'
+constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE__DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -229,6 +229,15 @@ integer array udg_HordeMagicPrice
 integer array udg_HordeTechPrice
 unit udg_TombOfSargeras= null
 group udg_FacelessLumberBuildings= null
+group udg_LoadedGroup= null
+group udg_TransportingGroup= null
+integer udg_StopOrder= 0
+integer udg_TransportingIncrement= 0
+integer udg_TransportingMin= 0
+unit array udg_TransportingUnitArray
+group array udg_LoadedGroupArray
+unit udg_TempUnit02= null
+unit udg_TempUnit01= null
 
     // Generated
 rect gg_rct_Region_000= null
@@ -614,11 +623,7 @@ trigger gg_trg_Ne_dam_flagman_Ot= null
 trigger gg_trg_Aura_Flagmana_Vinoslivost_O= null
 trigger gg_trg_Aura_Flagmana_Metkost_O= null
 trigger gg_trg_Aura_Flagmana_Stoikost_O= null
-trigger gg_trg_Magic_Pogruzka_Ot= null
-trigger gg_trg_MassPosadka= null
 trigger gg_trg_NoToMuch= null
-trigger gg_trg_Count_minus_passengers= null
-trigger gg_trg_Count_plus_passengers= null
 trigger gg_trg_Colision_1_s= null
 trigger gg_trg_Linkor_reaserch_BoakOr_O= null
 trigger gg_trg_Naim_Bok_pushky_O= null
@@ -660,6 +665,12 @@ trigger gg_trg_F2_Map= null
 trigger gg_trg_ToKill2= null
 trigger gg_trg_Emerald_Dream_TP_O= null
 trigger gg_trg_Emerald_Dream_TP_OFF_O= null
+trigger gg_trg_murlokiEnd_Copy= null
+trigger gg_trg_murloki_Copy= null
+trigger gg_trg_Krug2= null
+trigger gg_trg_Krug1= null
+trigger gg_trg_Elf2= null
+trigger gg_trg_Elf1= null
 trigger gg_trg_Murlok= null
 trigger gg_trg_murlo2= null
 trigger gg_trg_Nagi= null
@@ -1459,12 +1470,19 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_Elf1= null
-trigger gg_trg_Elf2= null
-trigger gg_trg_Krug1= null
-trigger gg_trg_Krug2= null
-trigger gg_trg_murloki_Copy= null
-trigger gg_trg_murlokiEnd_Copy= null
+trigger gg_trg_Count_plus_passengers_Copy= null
+trigger gg_trg_Count_minus_passengers_Copy= null
+trigger gg_trg_MassPosadka2= null
+trigger gg_trg_MassPosadkaOld= null
+trigger gg_trg_Magic_Pogruzka_Ot_Copy= null
+trigger gg_trg_Select_Unit= null
+trigger gg_trg_TransportingUnitArray_Message= null
+trigger gg_trg_All_Message= null
+trigger gg_trg_Remove_Unit_From_LoadedGroup= null
+trigger gg_trg_Unit_Issued_Order= null
+trigger gg_trg_Unit_Death= null
+trigger gg_trg_Unit_Loaded= null
+trigger gg_trg_Init= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1474,6 +1492,7 @@ real array corruption
 real array balance
 real array additional
 region Allmap= CreateRegion()
+group SubGroup2= CreateGroup()
 location array PointForAi
 hashtable AiData= InitHashtable()
 
@@ -1731,7 +1750,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE___getRange takes integer level returns integer
+    function SpellSleepAOE__getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1739,33 +1758,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
-            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
+            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
+            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE___anon__0 takes nothing returns boolean
-            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE__anon__0 takes nothing returns boolean
+            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE___anon__2 takes nothing returns boolean
+            function SpellSleepAOE__anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE___anon__1 takes nothing returns nothing
+        function SpellSleepAOE__anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1773,19 +1792,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE___onInit takes nothing returns nothing
+    function SpellSleepAOE__onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
+        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
         set t=null
     endfunction
 
@@ -2325,6 +2344,17 @@ function InitGlobals takes nothing returns nothing
     endloop
 
     set udg_FacelessLumberBuildings=CreateGroup()
+    set udg_LoadedGroup=CreateGroup()
+    set udg_TransportingGroup=CreateGroup()
+    set udg_TransportingIncrement=0
+    set udg_TransportingMin=0
+    set i=0
+    loop
+        exitwhen ( i > 8000 )
+        set udg_LoadedGroupArray[i]=CreateGroup()
+        set i=i + 1
+    endloop
+
 endfunction
 
 //***************************************************************************
@@ -2621,6 +2651,26 @@ function TimedUpdate takes unit u,player p returns boolean
         return false
     endif
 endfunction
+//***************************************************************************
+//*  SubGroup2
+
+function GetRandomSubGroup2 takes integer count,group sourceGroup returns group
+    call GroupClear(SubGroup2)
+
+    set bj_randomSubGroupGroup=SubGroup2
+    set bj_randomSubGroupWant=count
+    set bj_randomSubGroupTotal=CountUnitsInGroup(sourceGroup)
+
+    if ( bj_randomSubGroupWant <= 0 or bj_randomSubGroupTotal <= 0 ) then
+        return SubGroup2
+    endif
+
+    set bj_randomSubGroupChance=I2R(bj_randomSubGroupWant) / I2R(bj_randomSubGroupTotal)
+    call ForGroup(sourceGroup, function GetRandomSubGroupEnum)
+    return SubGroup2
+
+endfunction
+
 //***************************************************************************
 //*  ChangeSpellLimit
 //
@@ -16456,6 +16506,9 @@ function Trig_Aura_Flagmana_Vinoslivost_O_Conditions takes nothing returns boole
     if ( not ( GetSpellAbilityId() == 'A00F' ) ) then
         return false
     endif
+    if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
+        return false
+    endif
     return true
 endfunction
 
@@ -16467,7 +16520,6 @@ endfunction
 //===========================================================================
 function InitTrig_Aura_Flagmana_Vinoslivost_O takes nothing returns nothing
     set gg_trg_Aura_Flagmana_Vinoslivost_O=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Vinoslivost_O, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Vinoslivost_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Aura_Flagmana_Vinoslivost_O, Condition(function Trig_Aura_Flagmana_Vinoslivost_O_Conditions))
     call TriggerAddAction(gg_trg_Aura_Flagmana_Vinoslivost_O, function Trig_Aura_Flagmana_Vinoslivost_O_Actions)
@@ -16478,6 +16530,9 @@ endfunction
 //===========================================================================
 function Trig_Aura_Flagmana_Metkost_O_Conditions takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A00E' ) ) then
+        return false
+    endif
+    if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
         return false
     endif
     return true
@@ -16491,7 +16546,6 @@ endfunction
 //===========================================================================
 function InitTrig_Aura_Flagmana_Metkost_O takes nothing returns nothing
     set gg_trg_Aura_Flagmana_Metkost_O=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Metkost_O, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Metkost_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Aura_Flagmana_Metkost_O, Condition(function Trig_Aura_Flagmana_Metkost_O_Conditions))
     call TriggerAddAction(gg_trg_Aura_Flagmana_Metkost_O, function Trig_Aura_Flagmana_Metkost_O_Actions)
@@ -16502,6 +16556,9 @@ endfunction
 //===========================================================================
 function Trig_Aura_Flagmana_Stoikost_O_Conditions takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A00C' ) ) then
+        return false
+    endif
+    if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
         return false
     endif
     return true
@@ -16515,98 +16572,261 @@ endfunction
 //===========================================================================
 function InitTrig_Aura_Flagmana_Stoikost_O takes nothing returns nothing
     set gg_trg_Aura_Flagmana_Stoikost_O=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Stoikost_O, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Stoikost_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Aura_Flagmana_Stoikost_O, Condition(function Trig_Aura_Flagmana_Stoikost_O_Conditions))
     call TriggerAddAction(gg_trg_Aura_Flagmana_Stoikost_O, function Trig_Aura_Flagmana_Stoikost_O_Actions)
 endfunction
 
 //===========================================================================
-// Trigger: MassPosadka
+// Trigger: Init
 //===========================================================================
-function Trig_MassPosadka_Conditions takes nothing returns boolean
+function Trig_Init_Actions takes nothing returns nothing
+    call GroupClear(udg_LoadedGroup)
+    call GroupClear(udg_TransportingGroup)
+    set udg_StopOrder=String2OrderIdBJ("stop")
+    set udg_TransportingIncrement=1
+    set udg_TransportingMin=udg_TransportingIncrement
+endfunction
+
+//===========================================================================
+function InitTrig_Init takes nothing returns nothing
+    set gg_trg_Init=CreateTrigger()
+    call TriggerAddAction(gg_trg_Init, function Trig_Init_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Unit Loaded
+//===========================================================================
+function Trig_Unit_Loaded_Func002C takes nothing returns boolean
+    if ( not ( IsUnitInGroup(GetTransportUnitBJ(), udg_TransportingGroup) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Unit_Loaded_Actions takes nothing returns nothing
+    if ( Trig_Unit_Loaded_Func002C() ) then
+    else
+        call SetUnitUserData(GetTransportUnitBJ(), udg_TransportingIncrement)
+        set udg_TransportingUnitArray[udg_TransportingIncrement]=GetTransportUnitBJ()
+        call GroupAddUnitSimple(GetTransportUnitBJ(), udg_TransportingGroup)
+        set udg_LoadedGroupArray[udg_TransportingIncrement]=CreateGroup()
+        set udg_TransportingIncrement=( udg_TransportingIncrement + 1 )
+    endif
+    call GroupAddUnitSimple(GetLoadedUnitBJ(), udg_LoadedGroupArray[GetUnitUserData(GetTransportUnitBJ())])
+    call GroupAddUnitSimple(GetLoadedUnitBJ(), udg_LoadedGroup)
+    set udg_TempUnit02=GetTransportUnitBJ()
+endfunction
+
+//===========================================================================
+function InitTrig_Unit_Loaded takes nothing returns nothing
+    set gg_trg_Unit_Loaded=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Unit_Loaded, EVENT_PLAYER_UNIT_LOADED)
+    call TriggerAddAction(gg_trg_Unit_Loaded, function Trig_Unit_Loaded_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Unit Death
+//===========================================================================
+function Trig_Unit_Death_Conditions takes nothing returns boolean
+    if ( not ( IsUnitInGroup(GetDyingUnit(), udg_LoadedGroup) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Unit_Death_Actions takes nothing returns nothing
+    set udg_TempUnit01=GetDyingUnit()
+    call ConditionalTriggerExecute(gg_trg_Remove_Unit_From_LoadedGroup)
+endfunction
+
+//===========================================================================
+function InitTrig_Unit_Death takes nothing returns nothing
+    set gg_trg_Unit_Death=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Unit_Death, EVENT_PLAYER_UNIT_DEATH)
+    call TriggerAddCondition(gg_trg_Unit_Death, Condition(function Trig_Unit_Death_Conditions))
+    call TriggerAddAction(gg_trg_Unit_Death, function Trig_Unit_Death_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Unit Issued Order
+//===========================================================================
+function Trig_Unit_Issued_Order_Conditions takes nothing returns boolean
+    if ( not ( IsUnitInGroup(GetOrderedUnit(), udg_LoadedGroup) == true ) ) then
+        return false
+    endif
+    if ( not ( GetIssuedOrderIdBJ() == udg_StopOrder ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Unit_Issued_Order_Actions takes nothing returns nothing
+    set udg_TempUnit01=GetOrderedUnit()
+    call ConditionalTriggerExecute(gg_trg_Remove_Unit_From_LoadedGroup)
+endfunction
+
+//===========================================================================
+function InitTrig_Unit_Issued_Order takes nothing returns nothing
+    set gg_trg_Unit_Issued_Order=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Unit_Issued_Order, EVENT_PLAYER_UNIT_ISSUED_ORDER)
+    call TriggerAddCondition(gg_trg_Unit_Issued_Order, Condition(function Trig_Unit_Issued_Order_Conditions))
+    call TriggerAddAction(gg_trg_Unit_Issued_Order, function Trig_Unit_Issued_Order_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Remove Unit From LoadedGroup
+//===========================================================================
+function Trig_Remove_Unit_From_LoadedGroup_Func002Func001C takes nothing returns boolean
+    if ( not ( IsUnitInGroup(udg_TempUnit01, udg_LoadedGroupArray[GetForLoopIndexA()]) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Remove_Unit_From_LoadedGroup_Actions takes nothing returns nothing
+    call GroupRemoveUnitSimple(udg_TempUnit01, udg_LoadedGroup)
+    set bj_forLoopAIndex=udg_TransportingMin
+    set bj_forLoopAIndexEnd=( udg_TransportingIncrement - 1 )
+    loop
+        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+        if ( Trig_Remove_Unit_From_LoadedGroup_Func002Func001C() ) then
+            call GroupRemoveUnitSimple(udg_TempUnit01, udg_LoadedGroupArray[GetForLoopIndexA()])
+            set udg_TempUnit02=udg_TransportingUnitArray[GetForLoopIndexA()]
+        else
+        endif
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
+    endloop
+endfunction
+
+//===========================================================================
+function InitTrig_Remove_Unit_From_LoadedGroup takes nothing returns nothing
+    set gg_trg_Remove_Unit_From_LoadedGroup=CreateTrigger()
+    call TriggerAddAction(gg_trg_Remove_Unit_From_LoadedGroup, function Trig_Remove_Unit_From_LoadedGroup_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: All Message
+//===========================================================================
+function Trig_All_Message_Actions takes nothing returns nothing
+    call DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( "Всего погруженных на карте: " + I2S(CountUnitsInGroup(udg_LoadedGroup)) ))
+endfunction
+
+//===========================================================================
+function InitTrig_All_Message takes nothing returns nothing
+    set gg_trg_All_Message=CreateTrigger()
+    call TriggerRegisterPlayerEventEndCinematic(gg_trg_All_Message, Player(0))
+    call TriggerAddAction(gg_trg_All_Message, function Trig_All_Message_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: TransportingUnitArray Message
+//===========================================================================
+function Trig_TransportingUnitArray_Message_Func001C takes nothing returns boolean
+    if ( not ( IsUnitInGroup(udg_TempUnit02, udg_TransportingGroup) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_TransportingUnitArray_Message_Actions takes nothing returns nothing
+    if ( Trig_TransportingUnitArray_Message_Func001C() ) then
+        call DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "На " + GetUnitName(udg_TempUnit02) ) + ( " погружено: " + I2S(CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(udg_TempUnit02)])) ) ))
+    else
+        call DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "На " + GetUnitName(udg_TempUnit02) ) + " ещё никто никогда не погружался." ))
+    endif
+    call UnitAddIndicatorBJ(udg_TempUnit02, 100, 100, 100, 0)
+endfunction
+
+//===========================================================================
+function InitTrig_TransportingUnitArray_Message takes nothing returns nothing
+    set gg_trg_TransportingUnitArray_Message=CreateTrigger()
+    call TriggerAddAction(gg_trg_TransportingUnitArray_Message, function Trig_TransportingUnitArray_Message_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Select Unit
+//===========================================================================
+function Trig_Select_Unit_Actions takes nothing returns nothing
+    set udg_TempUnit02=GetTriggerUnit()
+    call ConditionalTriggerExecute(gg_trg_TransportingUnitArray_Message)
+endfunction
+
+//===========================================================================
+function InitTrig_Select_Unit takes nothing returns nothing
+    set gg_trg_Select_Unit=CreateTrigger()
+    call DisableTrigger(gg_trg_Select_Unit)
+    call TriggerRegisterPlayerSelectionEventBJ(gg_trg_Select_Unit, Player(0), true)
+    call TriggerAddAction(gg_trg_Select_Unit, function Trig_Select_Unit_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: MassPosadkaOld
+//===========================================================================
+function Trig_MassPosadkaOld_Conditions takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A00I' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_MassPosadka_Func006002 takes nothing returns boolean
+function Trig_MassPosadkaOld_Func006002 takes nothing returns boolean
     return ( IsUnitSelected(GetFilterUnit(), GetOwningPlayer(GetTriggerUnit())) == true )
 endfunction
 
-function Trig_MassPosadka_Func008Func001Func002C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A0SP', GetEnumUnit()) <= 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_MassPosadka_Func008Func001C takes nothing returns boolean
+function Trig_MassPosadkaOld_Func008Func001C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetTriggerUnit()) == GetUnitTypeId(GetEnumUnit()) ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_MassPosadka_Func008A takes nothing returns nothing
-    if ( Trig_MassPosadka_Func008Func001C() ) then
+function Trig_MassPosadkaOld_Func008A takes nothing returns nothing
+    if ( Trig_MassPosadkaOld_Func008Func001C() ) then
         call GroupAddUnitSimple(GetEnumUnit(), udg_LocalOtrad)
-        if ( Trig_MassPosadka_Func008Func001Func002C() ) then
-            set udg_LocalInteger=( udg_LocalInteger + 10 )
-        else
-            set udg_LocalInteger=( udg_LocalInteger + 10 )
-            set udg_LocalInteger=( udg_LocalInteger - GetUnitAbilityLevelSwapped('A0SP', GetEnumUnit()) )
-        endif
-        set udg_LocalInteger=( udg_LocalInteger - ( GetUnitAbilityLevelSwapped('A0SP', GetEnumUnit()) - 1 ) )
+        set udg_LocalInteger=( udg_LocalInteger + 10 )
+        set udg_LocalInteger=( udg_LocalInteger - CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(GetEnumUnit())]) )
     else
     endif
 endfunction
 
-function Trig_MassPosadka_Func010002001001001001 takes nothing returns boolean
+function Trig_MassPosadkaOld_Func010002001001001001 takes nothing returns boolean
     return ( true == true )
 endfunction
 
-function Trig_MassPosadka_Func010002001001001002 takes nothing returns boolean
+function Trig_MassPosadkaOld_Func010002001001001002 takes nothing returns boolean
     return ( GetOwningPlayer(GetFilterUnit()) == GetOwningPlayer(GetTriggerUnit()) )
 endfunction
 
-function Trig_MassPosadka_Func010002001001001 takes nothing returns boolean
+function Trig_MassPosadkaOld_Func010002001001001 takes nothing returns boolean
     return GetBooleanAnd((true == true), (GetOwningPlayer(GetFilterUnit()) == GetOwningPlayer(GetTriggerUnit()))) // INLINED!!
 endfunction
 
-function Trig_MassPosadka_Func010002001001002 takes nothing returns boolean
+function Trig_MassPosadkaOld_Func010002001001002 takes nothing returns boolean
     return ( GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) == 0 )
 endfunction
 
-function Trig_MassPosadka_Func010002001001 takes nothing returns boolean
+function Trig_MassPosadkaOld_Func010002001001 takes nothing returns boolean
     return GetBooleanAnd((GetBooleanAnd((true == true), (GetOwningPlayer(GetFilterUnit()) == GetOwningPlayer(GetTriggerUnit())))), (GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) == 0)) // INLINED!!
 endfunction
 
-function Trig_MassPosadka_Func010002001002 takes nothing returns boolean
+function Trig_MassPosadkaOld_Func010002001002 takes nothing returns boolean
     return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true )
 endfunction
 
-function Trig_MassPosadka_Func010002001 takes nothing returns boolean
+function Trig_MassPosadkaOld_Func010002001 takes nothing returns boolean
     return GetBooleanAnd((GetBooleanAnd((GetBooleanAnd((true == true), (GetOwningPlayer(GetFilterUnit()) == GetOwningPlayer(GetTriggerUnit())))), (GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) == 0))), (IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true)) // INLINED!!
 endfunction
 
-function Trig_MassPosadka_Func010002002 takes nothing returns boolean
+function Trig_MassPosadkaOld_Func010002002 takes nothing returns boolean
     return ( GetUnitAbilityLevelSwapped('Slo3', GetFilterUnit()) == 0 )
 endfunction
 
-function Trig_MassPosadka_Func010002 takes nothing returns boolean
+function Trig_MassPosadkaOld_Func010002 takes nothing returns boolean
     return GetBooleanAnd((GetBooleanAnd((GetBooleanAnd((GetBooleanAnd((true == true), (GetOwningPlayer(GetFilterUnit()) == GetOwningPlayer(GetTriggerUnit())))), (GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) == 0))), (IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true))), (GetUnitAbilityLevelSwapped('Slo3', GetFilterUnit()) == 0)) // INLINED!!
 endfunction
 
-function Trig_MassPosadka_Func014Func003C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A0SP', GetEnumUnit()) <= 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_MassPosadka_Func014Func006A takes nothing returns nothing
+function Trig_MassPosadkaOld_Func014Func006A takes nothing returns nothing
     set udg_LocalUnit[15]=GetEnumUnit()
     call TriggerExecute(gg_trg_Colision_1_s)
     call SetUnitPathing(GetEnumUnit(), false)
@@ -16615,49 +16835,128 @@ function Trig_MassPosadka_Func014Func006A takes nothing returns nothing
     call GroupRemoveUnitSimple(GetEnumUnit(), udg_LocalOtrad2)
 endfunction
 
-function Trig_MassPosadka_Func014A takes nothing returns nothing
+function Trig_MassPosadkaOld_Func014A takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetEnumUnit())
     set udg_LocalUnit2=GetEnumUnit()
-    if ( Trig_MassPosadka_Func014Func003C() ) then
-        set udg_LocalInteger=10
-    else
-        set udg_LocalInteger=( 11 - GetUnitAbilityLevelSwapped('A0SP', GetEnumUnit()) )
-    endif
+    set udg_LocalInteger=( 10 - CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(GetEnumUnit())]) )
     // Выбираю рандомно юнитов, в колве необходимом для корабля.
     set udg_LocalOtrad3=GetRandomSubGroup(udg_LocalInteger, udg_LocalOtrad2)
-    call ForGroupBJ(udg_LocalOtrad3, function Trig_MassPosadka_Func014Func006A)
+    call ForGroupBJ(udg_LocalOtrad3, function Trig_MassPosadkaOld_Func014Func006A)
     call GroupClear(udg_LocalOtrad3)
     call GroupRemoveUnitSimple(GetEnumUnit(), udg_LocalOtrad)
     call RemoveLocation(udg_LocalPosition2)
 endfunction
 
-function Trig_MassPosadka_Actions takes nothing returns nothing
+function Trig_MassPosadkaOld_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetSpellTargetLoc()
     call GroupAddUnitSimple(GetTriggerUnit(), udg_LocalOtrad)
     // Добавляю корабли (в селекте игрока) в группу, считаю свободные места
     set udg_LocalInteger=0
     set udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    set udg_Boolexpr=Condition(function Trig_MassPosadka_Func006002)
+    set udg_Boolexpr=Condition(function Trig_MassPosadkaOld_Func006002)
     call GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
-    call ForGroupBJ(udg_LocalOtrad2, function Trig_MassPosadka_Func008A)
+    call ForGroupBJ(udg_LocalOtrad2, function Trig_MassPosadkaOld_Func008A)
     // Делаю группу из юнитов не кораблей и не зданий.
-    set udg_Boolexpr=Condition(function Trig_MassPosadka_Func010002)
+    set udg_Boolexpr=Condition(function Trig_MassPosadkaOld_Func010002)
     call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 250, udg_Boolexpr)
     call RemoveLocation(udg_LocalPosition2)
     // Перебираю корабли
-    call ForGroupBJ(udg_LocalOtrad, function Trig_MassPosadka_Func014A)
+    call ForGroupBJ(udg_LocalOtrad, function Trig_MassPosadkaOld_Func014A)
     call GroupClear(udg_LocalOtrad)
     call GroupClear(udg_LocalOtrad2)
     call GroupClear(udg_LocalOtrad3)
 endfunction
 
 //===========================================================================
-function InitTrig_MassPosadka takes nothing returns nothing
-    set gg_trg_MassPosadka=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_MassPosadka, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_MassPosadka, Condition(function Trig_MassPosadka_Conditions))
-    call TriggerAddAction(gg_trg_MassPosadka, function Trig_MassPosadka_Actions)
+function InitTrig_MassPosadkaOld takes nothing returns nothing
+    set gg_trg_MassPosadkaOld=CreateTrigger()
+    call DisableTrigger(gg_trg_MassPosadkaOld)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_MassPosadkaOld, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_MassPosadkaOld, Condition(function Trig_MassPosadkaOld_Conditions))
+    call TriggerAddAction(gg_trg_MassPosadkaOld, function Trig_MassPosadkaOld_Actions)
 endfunction
+
+//===========================================================================
+// Trigger: MassPosadka2
+//===========================================================================
+function Trig_MassPosadka2_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A00I'
+endfunction
+
+function Trig_MassPosadka_Copy_Func006002 takes nothing returns boolean
+    return IsUnitSelected(GetFilterUnit(), GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+
+function Trig_MassPosadka_Copy_Func008A takes nothing returns nothing
+    if GetUnitTypeId(GetTriggerUnit()) == GetUnitTypeId(GetEnumUnit()) then
+        call GroupAddUnit(udg_LocalOtrad, GetEnumUnit())
+        set udg_LocalInteger=( udg_LocalInteger + 10 )
+        set udg_LocalInteger=( udg_LocalInteger - CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(GetEnumUnit())]) )
+    endif
+endfunction
+
+
+function Trig_MassPosadka_Copy_Func010002 takes nothing returns boolean
+    return GetOwningPlayer(GetFilterUnit()) == GetOwningPlayer(GetTriggerUnit()) and GetUnitAbilityLevel(GetFilterUnit(), 'A001') == 0 and IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true and GetUnitAbilityLevel(GetFilterUnit(), 'Slo3') == 0
+endfunction
+
+function Trig_MassPosadka_Copy_Func014Func006A takes nothing returns nothing
+    set udg_LocalUnit[15]=GetEnumUnit()
+    call TriggerExecute(gg_trg_Colision_1_s)
+    call SetUnitPathing(GetEnumUnit(), false)
+    call SetUnitPositionLoc(GetEnumUnit(), udg_LocalPosition2)
+    call IssueTargetOrder(GetEnumUnit(), "smart", udg_LocalUnit2)
+    call GroupRemoveUnit(udg_LocalOtrad2, GetEnumUnit())
+endfunction
+
+function Trig_MassPosadka_Copy_Func014A takes nothing returns nothing
+    set udg_LocalPosition2=GetUnitLoc(GetEnumUnit())
+    set udg_LocalUnit2=GetEnumUnit()
+    set udg_LocalInteger=( 10 - CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(GetEnumUnit())]) )
+    // Выбираю рандомно юнитов, в колве необходимом для корабля.
+    set udg_LocalOtrad3=GetRandomSubGroup2(udg_LocalInteger , udg_LocalOtrad2)
+    call ForGroup(udg_LocalOtrad3, function Trig_MassPosadka_Copy_Func014Func006A)
+    call GroupClear(udg_LocalOtrad3)
+    call GroupRemoveUnit(udg_LocalOtrad, GetEnumUnit())
+    call RemoveLocation(udg_LocalPosition2)
+endfunction
+
+function Trig_MassPosadka2_Actions takes nothing returns nothing
+    set udg_LocalPosition2=GetSpellTargetLoc()
+    call GroupAddUnit(udg_LocalOtrad, GetTriggerUnit())
+    
+    
+    
+    // Добавляю корабли (в селекте игрока) в группу, считаю свободные места
+    set udg_LocalInteger=0
+    set udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
+    set udg_Boolexpr=Condition(function Trig_MassPosadka_Copy_Func006002)
+    call GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
+    call ForGroup(udg_LocalOtrad2, function Trig_MassPosadka_Copy_Func008A)
+    
+    
+    
+    // Делаю группу из юнитов не кораблей и не зданий.
+    set udg_Boolexpr=Condition(function Trig_MassPosadka_Copy_Func010002)
+    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 250, udg_Boolexpr)
+    call RemoveLocation(udg_LocalPosition2)
+    
+    // Перебираю корабли
+    call ForGroup(udg_LocalOtrad, function Trig_MassPosadka_Copy_Func014A)
+    call GroupClear(udg_LocalOtrad)
+    call GroupClear(udg_LocalOtrad2)
+    call GroupClear(udg_LocalOtrad3)
+endfunction
+
+//===========================================================================
+function InitTrig_MassPosadka2 takes nothing returns nothing
+    set gg_trg_MassPosadka2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_MassPosadka2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_MassPosadka2, Condition(function Trig_MassPosadka2_Conditions))
+    call TriggerAddAction(gg_trg_MassPosadka2, function Trig_MassPosadka2_Actions)
+endfunction
+
 
 //===========================================================================
 // Trigger: NoToMuch
@@ -16690,54 +16989,6 @@ function InitTrig_NoToMuch takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_NoToMuch, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_NoToMuch, Condition(function Trig_NoToMuch_Conditions))
     call TriggerAddAction(gg_trg_NoToMuch, function Trig_NoToMuch_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Count minus passengers
-//===========================================================================
-function Trig_Count_minus_passengers_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'Sdro' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Count_minus_passengers_Actions takes nothing returns nothing
-    call SetUnitAbilityLevelSwapped('A0SP', GetTriggerUnit(), ( 11 - GetUnitAbilityLevelSwapped('A0SP', GetTriggerUnit()) ))
-endfunction
-
-//===========================================================================
-function InitTrig_Count_minus_passengers takes nothing returns nothing
-    set gg_trg_Count_minus_passengers=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Count_minus_passengers, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    call TriggerAddCondition(gg_trg_Count_minus_passengers, Condition(function Trig_Count_minus_passengers_Conditions))
-    call TriggerAddAction(gg_trg_Count_minus_passengers, function Trig_Count_minus_passengers_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Count plus passengers
-//===========================================================================
-function Trig_Count_plus_passengers_Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A0SP', GetTransportUnitBJ()) == 0 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Count_plus_passengers_Actions takes nothing returns nothing
-    if ( Trig_Count_plus_passengers_Func001C() ) then
-        call UnitAddAbilityBJ('A0SP', GetTransportUnitBJ())
-        call IncUnitAbilityLevelSwapped('A0SP', GetTransportUnitBJ())
-    else
-        call IncUnitAbilityLevelSwapped('A0SP', GetTransportUnitBJ())
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_Count_plus_passengers takes nothing returns nothing
-    set gg_trg_Count_plus_passengers=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Count_plus_passengers, EVENT_PLAYER_UNIT_LOADED)
-    call TriggerAddAction(gg_trg_Count_plus_passengers, function Trig_Count_plus_passengers_Actions)
 endfunction
 
 //===========================================================================
@@ -35832,10 +36083,21 @@ function Trig_EntSell_Copy_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_EntSell_Copy_Func001C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_EntSell_Copy_Actions takes nothing returns nothing
-    set udg_LocalPosition2=GetUnitRallyPoint(GetTriggerUnit())
-    call IssuePointOrderLocBJ(GetSoldUnit(), "move", udg_LocalPosition2)
-    call RemoveLocation(udg_LocalPosition2)
+    if ( Trig_EntSell_Copy_Func001C() ) then
+        set udg_LocalPosition2=GetUnitRallyPoint(GetTriggerUnit())
+        call IssuePointOrderLocBJ(GetSoldUnit(), "move", udg_LocalPosition2)
+        call RemoveLocation(udg_LocalPosition2)
+    else
+        call RemoveUnit(GetSoldUnit())
+    endif
 endfunction
 
 //===========================================================================
@@ -37535,7 +37797,7 @@ endfunction
 //===========================================================================
 // Trigger: UndeadSell
 //===========================================================================
-function Trig_UndeadSell_Func001C takes nothing returns boolean
+function Trig_UndeadSell_Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetTriggerUnit()) == 'n012' ) ) then
         return true
     endif
@@ -37552,16 +37814,27 @@ function Trig_UndeadSell_Func001C takes nothing returns boolean
 endfunction
 
 function Trig_UndeadSell_Conditions takes nothing returns boolean
-    if ( not Trig_UndeadSell_Func001C() ) then
+    if ( not Trig_UndeadSell_Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UndeadSell_Func001C takes nothing returns boolean
+    if ( not ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_UndeadSell_Actions takes nothing returns nothing
-    set udg_LocalPosition2=GetUnitRallyPoint(GetTriggerUnit())
-    call IssuePointOrderLocBJ(GetSoldUnit(), "move", udg_LocalPosition2)
-    call RemoveLocation(udg_LocalPosition2)
+    if ( Trig_UndeadSell_Func001C() ) then
+        set udg_LocalPosition2=GetUnitRallyPoint(GetTriggerUnit())
+        call IssuePointOrderLocBJ(GetSoldUnit(), "move", udg_LocalPosition2)
+        call RemoveLocation(udg_LocalPosition2)
+    else
+        call RemoveUnit(GetSoldUnit())
+    endif
 endfunction
 
 //===========================================================================
@@ -42540,10 +42813,17 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Aura_Flagmana_Vinoslivost_O()
     call InitTrig_Aura_Flagmana_Metkost_O()
     call InitTrig_Aura_Flagmana_Stoikost_O()
-    call InitTrig_MassPosadka()
+    call InitTrig_Init()
+    call InitTrig_Unit_Loaded()
+    call InitTrig_Unit_Death()
+    call InitTrig_Unit_Issued_Order()
+    call InitTrig_Remove_Unit_From_LoadedGroup()
+    call InitTrig_All_Message()
+    call InitTrig_TransportingUnitArray_Message()
+    call InitTrig_Select_Unit()
+    call InitTrig_MassPosadkaOld()
+    call InitTrig_MassPosadka2()
     call InitTrig_NoToMuch()
-    call InitTrig_Count_minus_passengers()
-    call InitTrig_Count_plus_passengers()
     call InitTrig_Colision_1_s()
     call InitTrig_Linkor_reaserch_BoakOr_O()
     call InitTrig_Naim_Bok_pushky_O()
@@ -43224,6 +43504,7 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_MainInfo)
     call ConditionalTriggerExecute(gg_trg_Initial_things)
     call ConditionalTriggerExecute(gg_trg_InitForEconomics)
+    call ConditionalTriggerExecute(gg_trg_Init)
     call ConditionalTriggerExecute(gg_trg_LumberTest)
     call ConditionalTriggerExecute(gg_trg_BloodClose)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
@@ -43584,7 +43865,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE___onInit")
+call ExecuteFunc("SpellSleepAOE__onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
