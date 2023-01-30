@@ -745,6 +745,7 @@ trigger gg_trg_Spell= null
 trigger gg_trg_SpandFarm= null
 trigger gg_trg_StartBandits_Copy= null
 trigger gg_trg_Ult= null
+trigger gg_trg_Banshe= null
 trigger gg_trg_MassInvis= null
 trigger gg_trg_BansheeAuto= null
 trigger gg_trg_ResGmilDamage= null
@@ -1484,7 +1485,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_Banshe= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
