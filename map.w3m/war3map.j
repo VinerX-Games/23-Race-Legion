@@ -22,12 +22,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE___SpellHero='A06P'
-constant integer SpellSleepAOE___SpellCast='A06O'
-constant string SpellSleepAOE___SpellOrder="sleep"
-constant integer SpellSleepAOE___DummyID='u000'
-constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE___DummyUnit
+constant integer SpellSleepAOE__SpellHero='A06P'
+constant integer SpellSleepAOE__SpellCast='A06O'
+constant string SpellSleepAOE__SpellOrder="sleep"
+constant integer SpellSleepAOE__DummyID='u000'
+constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE__DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -540,6 +540,7 @@ trigger gg_trg_Race_Silitids_O= null
 trigger gg_trg_Race_Gnomes= null
 trigger gg_trg_Race_Gilneas= null
 trigger gg_trg_Race_Nagi= null
+trigger gg_trg_Race_nightelf= null
 trigger gg_trg_Race_Forsaken= null
 trigger gg_trg_Race_Random= null
 trigger gg_trg_Page1_O= null
@@ -678,22 +679,6 @@ trigger gg_trg_F2_Map= null
 trigger gg_trg_ToKill2= null
 trigger gg_trg_Emerald_Dream_TP_O= null
 trigger gg_trg_Emerald_Dream_TP_OFF_O= null
-trigger gg_trg_DruidEnd= null
-trigger gg_trg_Druid= null
-trigger gg_trg_Krug2= null
-trigger gg_trg_Krug1= null
-trigger gg_trg_Elf2= null
-trigger gg_trg_Elf1= null
-trigger gg_trg_Murlok= null
-trigger gg_trg_murlo2= null
-trigger gg_trg_Nagi= null
-trigger gg_trg_Nagi2= null
-trigger gg_trg_nagi= null
-trigger gg_trg_murloki= null
-trigger gg_trg_murlokiEnd= null
-trigger gg_trg_NagaPas= null
-trigger gg_trg_StartHorde_Copy_2= null
-trigger gg_trg_LegGer= null
 trigger gg_trg_TrainHeroGiveItem= null
 trigger gg_trg_LimitHero_Exep= null
 trigger gg_trg_Hero_Limits_General_Copy= null
@@ -1110,6 +1095,22 @@ trigger gg_trg_AutoManaSteal= null
 trigger gg_trg_AutoShield= null
 trigger gg_trg_ResearhRobbery= null
 trigger gg_trg_RobberyTrain= null
+trigger gg_trg_DruidEnd= null
+trigger gg_trg_Druid= null
+trigger gg_trg_Krug2= null
+trigger gg_trg_Krug1= null
+trigger gg_trg_Elf2= null
+trigger gg_trg_Elf1= null
+trigger gg_trg_Murlok= null
+trigger gg_trg_murlo2= null
+trigger gg_trg_Nagi= null
+trigger gg_trg_Nagi2= null
+trigger gg_trg_nagi= null
+trigger gg_trg_murloki= null
+trigger gg_trg_murlokiEnd= null
+trigger gg_trg_NagaPas= null
+trigger gg_trg_StartHorde_Copy_2= null
+trigger gg_trg_LegGer= null
 trigger gg_trg_flot1_Copy_O= null
 trigger gg_trg_flot2_Copy_O= null
 trigger gg_trg_arm1_Copy_O= null
@@ -1351,11 +1352,11 @@ trigger gg_trg_KillSomeUnitsAndItems= null
 trigger gg_trg_FastReseach= null
 trigger gg_trg_KillTestUnits_O= null
 trigger gg_trg_KillTestUnits_O_Copy= null
-trigger gg_trg_KillTestUnits_Command= null
 trigger gg_trg_KillMagaz= null
 trigger gg_trg_Setlvl= null
 trigger gg_trg_A1= null
 trigger gg_trg_Second_O= null
+trigger gg_trg_KillTestUnits_Command= null
 trigger gg_trg_Player2VassalTo1_Back_Copy= null
 trigger gg_trg_Player2VassalTo1_Copy= null
 trigger gg_trg_Visible_Copy= null
@@ -1485,7 +1486,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_Race_nightelf= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1753,7 +1753,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE___getRange takes integer level returns integer
+    function SpellSleepAOE__getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1761,33 +1761,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
-            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
+            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
+            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE___anon__0 takes nothing returns boolean
-            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE__anon__0 takes nothing returns boolean
+            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE___anon__2 takes nothing returns boolean
+            function SpellSleepAOE__anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE___anon__1 takes nothing returns nothing
+        function SpellSleepAOE__anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1795,19 +1795,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE___onInit takes nothing returns nothing
+    function SpellSleepAOE__onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
+        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
         set t=null
     endfunction
 
@@ -2401,6 +2401,7 @@ function ClearEc takes integer pi returns nothing
     set corruption[pi]=0
     set balance[pi]=0
     set additional[pi]=0
+    set udg_UnitsCount[pi]=0
 endfunction
 
 //call ClearEc(GetPlayerId(GetEnumPlayer()))
@@ -2601,7 +2602,7 @@ function DelCountDis takes unit u,integer pi returns nothing
     call UpdateGraf(pi)
     
     
-
+    set u=null
 endfunction
 //***************************************************************************
 //*  TimedUpdate
@@ -10529,7 +10530,7 @@ function Trig_UnitIncomeEnterDisCommon_Actions takes nothing returns nothing
     
     //call DisplayTextToPlayer(p,0,0,("Увидел вход"+GetUnitName(u)))
     
-    if GetUnitState(GetEnteringUnit(), UNIT_STATE_LIFE) < 1 then
+    if GetUnitState(GetEnteringUnit(), UNIT_STATE_LIFE) < 0.7 then
         if not IsUnitInGroup(u, DeadGroup) then
             call GroupAddUnit(DeadGroup, u)
             call TriggerRegisterUnitStateEvent(gg_trg_DeadRessurected, u, UNIT_STATE_LIFE, GREATER_THAN, 0.60)
@@ -10553,7 +10554,7 @@ function Trig_UnitIncomeEnterDisCommon_Actions takes nothing returns nothing
             endif
         endif
     else
-        if not ( GetUnitAbilityLevel(u, 'BUan') > 0 or u == null or IsUnitType(u, UNIT_TYPE_STRUCTURE) or IsUnitType(u, UNIT_TYPE_SUMMONED) ) then
+        if not ( GetUnitAbilityLevel(u, 'BUan') > 0 or u == null or IsUnitType(u, UNIT_TYPE_SUMMONED) ) then
             
             set udg_UnitsCount[pi]=udg_UnitsCount[pi] + 1
             //call DisplayTextToPlayer(p,0,0,I2S(udg_UnitsCount[pi]))
@@ -13190,7 +13191,6 @@ endfunction
 
 function Trig_Page3_O_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0YV', GetTriggerUnit())
-    call UnitAddAbilityBJ('A0HW', GetTriggerUnit())
     call UnitAddAbilityBJ('A121', GetTriggerUnit())
     call UnitAddAbilityBJ('A14O', GetTriggerUnit())
     call UnitAddAbilityBJ('A155', GetTriggerUnit())
@@ -21138,7 +21138,7 @@ function Trig_Banshe_Actions takes nothing returns nothing
         set u=FirstOfGroup(g)
         exitwhen u == null
         if GetOwningPlayer(u) != GetOwningPlayer(GetTriggerUnit()) then
-            call UnitDamageTargetBJ(GetTriggerUnit(), u, 500, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_DEATH)
+            call UnitDamageTargetBJ(GetTriggerUnit(), u, 450, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_DEATH)
         endif
         call GroupRemoveUnit(g, u)
         set u=null
@@ -21759,10 +21759,10 @@ endfunction
 function Trig_MassMindControl_Func007A takes nothing returns nothing
     call CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     set udg_LocalUnit2=GetLastCreatedUnit()
-    call TriggerExecute(gg_trg_ToKill2)
-    call UnitAddAbilityBJ('A0KF', GetLastCreatedUnit())
+    call UnitAddAbilityBJ('A15V', GetLastCreatedUnit())
     call SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
     call IssueTargetOrderBJ(GetLastCreatedUnit(), "charm", GetEnumUnit())
+    call TriggerExecute(gg_trg_ToKill2)
 endfunction
 
 function Trig_MassMindControl_Actions takes nothing returns nothing
@@ -28705,7 +28705,7 @@ endfunction
 
 function Trig_StartBuildingSil_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
-    set disincome[pi]=disincome[pi] - 6.25
+    set disincome[pi]=disincome[pi] - 7 //GetUnitGoldCost(GetTriggerUnit())*
     call UpdateGraf(pi)
     call Enter(GetTriggerUnit())
 endfunction
@@ -28733,10 +28733,13 @@ function Trig_CanselBuildingSil_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     
     //set disincome[pi]=disincome[pi]+6.25
-    set disincome[pi]=disincome[pi] + 6.25 //+10 // я хз с чего
+    set disincome[pi]=disincome[pi] + 7 //
     call UpdateGraf(pi)
     call Enter(GetTriggerUnit())
 endfunction
+
+
+
 
 //===========================================================================
 function InitTrig_CanselBuildingSil takes nothing returns nothing
@@ -28798,7 +28801,6 @@ function Trig_TrutenStartUpgrade_Actions takes nothing returns nothing
     call UnitApplyTimedLifeBJ(75.00, 'BTLF', GetLastCreatedUnit())
     call SetUnitAnimation(GetLastCreatedUnit(), "stand")
     call GroupAddUnitSimple(GetLastCreatedUnit(), udg_Kokon)
-    set udg_UnitsCount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=( udg_UnitsCount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] - 1 )
     set i=0
     call RemoveLocation(udg_LocalPosition[16])
     call RemoveLocation(udg_LocalPosition[15])
@@ -28818,7 +28820,7 @@ endfunction
 //
 // Триггер срабатывает, когда личинка заканчивает свое превращение в юнита.
 //===========================================================================
-function Trig_LichinkaFinish_Func004C takes nothing returns boolean
+function Trig_LichinkaFinish_Func007C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetTriggerUnit()) == 'e01G' ) ) then
         return true
     endif
@@ -28853,129 +28855,115 @@ function Trig_LichinkaFinish_Func004C takes nothing returns boolean
 endfunction
 
 function Trig_LichinkaFinish_Conditions takes nothing returns boolean
-    if ( not Trig_LichinkaFinish_Func004C() ) then
+    if ( not Trig_LichinkaFinish_Func007C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_LichinkaFinish_Func005C takes nothing returns boolean
+function Trig_LichinkaFinish_Func008C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'e01I' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_LichinkaFinish_Func007002001 takes nothing returns boolean
+function Trig_LichinkaFinish_Func010002001 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'e01H' )
 endfunction
 
-function Trig_LichinkaFinish_Func007002002001 takes nothing returns boolean
+function Trig_LichinkaFinish_Func010002002001 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'e020' )
 endfunction
 
-function Trig_LichinkaFinish_Func007002002002 takes nothing returns boolean
+function Trig_LichinkaFinish_Func010002002002 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'e021' )
 endfunction
 
-function Trig_LichinkaFinish_Func007002002 takes nothing returns boolean
+function Trig_LichinkaFinish_Func010002002 takes nothing returns boolean
     return GetBooleanOr((GetUnitTypeId(GetFilterUnit()) == 'e020'), (GetUnitTypeId(GetFilterUnit()) == 'e021')) // INLINED!!
 endfunction
 
-function Trig_LichinkaFinish_Func007002 takes nothing returns boolean
+function Trig_LichinkaFinish_Func010002 takes nothing returns boolean
     return GetBooleanOr((GetUnitTypeId(GetFilterUnit()) == 'e01H'), (GetBooleanOr((GetUnitTypeId(GetFilterUnit()) == 'e020'), (GetUnitTypeId(GetFilterUnit()) == 'e021')))) // INLINED!!
 endfunction
 
-function Trig_LichinkaFinish_Func010Func002C takes nothing returns boolean
+function Trig_LichinkaFinish_Func013Func002C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'e01G' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_LichinkaFinish_Func010A takes nothing returns nothing
+function Trig_LichinkaFinish_Func013A takes nothing returns nothing
     set udg_LocalPosition[17]=GetUnitRallyPoint(GetEnumUnit())
-    if ( Trig_LichinkaFinish_Func010Func002C() ) then
+    if ( Trig_LichinkaFinish_Func013Func002C() ) then
         call IssueTargetDestructableOrder(GetTriggerUnit(), "harvest", GetUnitRallyDestructable(GetEnumUnit()))
     else
         call IssuePointOrderLocBJ(GetTriggerUnit(), "attack", udg_LocalPosition[17])
     endif
 endfunction
 
-function Trig_LichinkaFinish_Func014Func001C takes nothing returns boolean
+function Trig_LichinkaFinish_Func017Func001C takes nothing returns boolean
     if ( not ( R2I(DistanceBetweenPoints(GetUnitLoc(GetEnumUnit()), udg_LocalPosition[16])) <= 30 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_LichinkaFinish_Func014A takes nothing returns nothing
-    if ( Trig_LichinkaFinish_Func014Func001C() ) then
+function Trig_LichinkaFinish_Func017A takes nothing returns nothing
+    if ( Trig_LichinkaFinish_Func017Func001C() ) then
         call GroupRemoveUnitSimple(GetEnumUnit(), udg_Kokon)
         call RemoveUnit(GetEnumUnit())
     else
     endif
 endfunction
 
-function Trig_LichinkaFinish_Func017Func004002001 takes nothing returns boolean
+function Trig_LichinkaFinish_Func020Func004002001 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'e01H' )
 endfunction
 
-function Trig_LichinkaFinish_Func017Func004002002001 takes nothing returns boolean
+function Trig_LichinkaFinish_Func020Func004002002001 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'e020' )
 endfunction
 
-function Trig_LichinkaFinish_Func017Func004002002002 takes nothing returns boolean
+function Trig_LichinkaFinish_Func020Func004002002002 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'e021' )
 endfunction
 
-function Trig_LichinkaFinish_Func017Func004002002 takes nothing returns boolean
+function Trig_LichinkaFinish_Func020Func004002002 takes nothing returns boolean
     return GetBooleanOr((GetUnitTypeId(GetFilterUnit()) == 'e020'), (GetUnitTypeId(GetFilterUnit()) == 'e021')) // INLINED!!
 endfunction
 
-function Trig_LichinkaFinish_Func017Func004002 takes nothing returns boolean
+function Trig_LichinkaFinish_Func020Func004002 takes nothing returns boolean
     return GetBooleanOr((GetUnitTypeId(GetFilterUnit()) == 'e01H'), (GetBooleanOr((GetUnitTypeId(GetFilterUnit()) == 'e020'), (GetUnitTypeId(GetFilterUnit()) == 'e021')))) // INLINED!!
 endfunction
 
-function Trig_LichinkaFinish_Func017Func006A takes nothing returns nothing
+function Trig_LichinkaFinish_Func020Func006A takes nothing returns nothing
     call IssueTargetDestructableOrder(GetLastCreatedUnit(), "harvest", GetUnitRallyDestructable(GetEnumUnit()))
 endfunction
 
-function Trig_LichinkaFinish_Func017Func009002001 takes nothing returns boolean
+function Trig_LichinkaFinish_Func020Func009002001 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'e01H' )
 endfunction
 
-function Trig_LichinkaFinish_Func017Func009002002001 takes nothing returns boolean
+function Trig_LichinkaFinish_Func020Func009002002001 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'e020' )
 endfunction
 
-function Trig_LichinkaFinish_Func017Func009002002002 takes nothing returns boolean
+function Trig_LichinkaFinish_Func020Func009002002002 takes nothing returns boolean
     return ( GetUnitTypeId(GetFilterUnit()) == 'e021' )
 endfunction
 
-function Trig_LichinkaFinish_Func017Func009002002 takes nothing returns boolean
+function Trig_LichinkaFinish_Func020Func009002002 takes nothing returns boolean
     return GetBooleanOr((GetUnitTypeId(GetFilterUnit()) == 'e020'), (GetUnitTypeId(GetFilterUnit()) == 'e021')) // INLINED!!
 endfunction
 
-function Trig_LichinkaFinish_Func017Func009002 takes nothing returns boolean
+function Trig_LichinkaFinish_Func020Func009002 takes nothing returns boolean
     return GetBooleanOr((GetUnitTypeId(GetFilterUnit()) == 'e01H'), (GetBooleanOr((GetUnitTypeId(GetFilterUnit()) == 'e020'), (GetUnitTypeId(GetFilterUnit()) == 'e021')))) // INLINED!!
 endfunction
 
-function Trig_LichinkaFinish_Func017Func011C takes nothing returns boolean
-    if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_LichinkaFinish_Func017C takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'e01G' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_LichinkaFinish_Func020Func006C takes nothing returns boolean
+function Trig_LichinkaFinish_Func020Func011C takes nothing returns boolean
     if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
         return false
     endif
@@ -28983,41 +28971,55 @@ function Trig_LichinkaFinish_Func020Func006C takes nothing returns boolean
 endfunction
 
 function Trig_LichinkaFinish_Func020C takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'e01Z' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_LichinkaFinish_Func023Func004C takes nothing returns boolean
-    if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_LichinkaFinish_Func023Func006Func008C takes nothing returns boolean
-    if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'e01G' ) ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_LichinkaFinish_Func023Func006C takes nothing returns boolean
-    if ( not ( GetPlayerTechCountSimple('R089', GetOwningPlayer(GetTriggerUnit())) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_LichinkaFinish_Func023Func008Func003Func005C takes nothing returns boolean
     if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_LichinkaFinish_Func023Func008Func003C takes nothing returns boolean
+function Trig_LichinkaFinish_Func023C takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'e01Z' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LichinkaFinish_Func026Func004C takes nothing returns boolean
+    if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LichinkaFinish_Func026Func006Func008C takes nothing returns boolean
+    if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LichinkaFinish_Func026Func006C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R089', GetOwningPlayer(GetTriggerUnit())) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LichinkaFinish_Func026Func008Func003Func005C takes nothing returns boolean
+    if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LichinkaFinish_Func026Func008Func003C takes nothing returns boolean
     if ( not ( udg_LocalInteger >= 1 ) ) then
         return false
     endif
@@ -29027,28 +29029,28 @@ function Trig_LichinkaFinish_Func023Func008Func003C takes nothing returns boolea
     return true
 endfunction
 
-function Trig_LichinkaFinish_Func023Func008C takes nothing returns boolean
+function Trig_LichinkaFinish_Func026Func008C takes nothing returns boolean
     if ( not ( GetPlayerTechCountSimple('R085', GetOwningPlayer(GetTriggerUnit())) == 1 ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_LichinkaFinish_Func023C takes nothing returns boolean
+function Trig_LichinkaFinish_Func026C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'e02W' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_LichinkaFinish_Func026Func007C takes nothing returns boolean
+function Trig_LichinkaFinish_Func029Func007C takes nothing returns boolean
     if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_LichinkaFinish_Func026C takes nothing returns boolean
+function Trig_LichinkaFinish_Func029C takes nothing returns boolean
     if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'e01Q' ) ) then
         return false
     endif
@@ -29061,35 +29063,36 @@ endfunction
 function Trig_LichinkaFinish_Actions takes nothing returns nothing
     local integer i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     local unit u= GetTriggerUnit()
-    set udg_UnitsCount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=( udg_UnitsCount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 1 )
-    if ( Trig_LichinkaFinish_Func005C() ) then
+    // хз откуда 2, уже все забыл))) и баг пофиксил без понимания.
+    set udg_UnitsCount[i]=udg_UnitsCount[i] + 1
+    if ( Trig_LichinkaFinish_Func008C() ) then
         call MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
         set i=0
     else
     endif
     set udg_LocalPosition[16]=GetUnitLoc(GetTriggerUnit())
-    set udg_Boolexpr=Condition(function Trig_LichinkaFinish_Func007002)
+    set udg_Boolexpr=Condition(function Trig_LichinkaFinish_Func010002)
     call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[16], 300, udg_Boolexpr)
     // Куда идти если рядом есть улей
-    call ForGroupBJ(udg_LocalOtrad2, function Trig_LichinkaFinish_Func010A)
+    call ForGroupBJ(udg_LocalOtrad2, function Trig_LichinkaFinish_Func013A)
     call GroupClear(udg_LocalOtrad2)
     call SetUnitLifePercentBJ(GetTriggerUnit(), 100)
     // Удаление кокона
-    call ForGroupBJ(udg_Kokon, function Trig_LichinkaFinish_Func014A)
+    call ForGroupBJ(udg_Kokon, function Trig_LichinkaFinish_Func017A)
     // Трутень
     // ----
-    if ( Trig_LichinkaFinish_Func017C() ) then
+    if ( Trig_LichinkaFinish_Func020C() ) then
         call AddCountDis(u , i)
         call CreateNUnitsAtLoc(1, 'e01G', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[16], bj_UNIT_FACING)
         set udg_LocalPosition[18]=GetUnitLoc(GetLastCreatedUnit())
-        set udg_Boolexpr=Condition(function Trig_LichinkaFinish_Func017Func004002)
+        set udg_Boolexpr=Condition(function Trig_LichinkaFinish_Func020Func004002)
         call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[18], 300, udg_Boolexpr)
-        call ForGroupBJ(udg_LocalOtrad2, function Trig_LichinkaFinish_Func017Func006A)
+        call ForGroupBJ(udg_LocalOtrad2, function Trig_LichinkaFinish_Func020Func006A)
         call IssueTargetDestructableOrder(GetLastCreatedUnit(), "harvest", GetUnitRallyDestructable(GetEnumUnit()))
         set udg_LocalPosition[17]=GetUnitLoc(GetLastCreatedUnit())
-        set udg_Boolexpr=Condition(function Trig_LichinkaFinish_Func017Func009002)
+        set udg_Boolexpr=Condition(function Trig_LichinkaFinish_Func020Func009002)
         call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[17], 300, udg_Boolexpr)
-        if ( Trig_LichinkaFinish_Func017Func011C() ) then
+        if ( Trig_LichinkaFinish_Func020Func011C() ) then
             call SelectUnitAddForPlayer(GetLastCreatedUnit(), GetOwningPlayer(GetTriggerUnit()))
         else
         endif
@@ -29097,13 +29100,13 @@ function Trig_LichinkaFinish_Actions takes nothing returns nothing
     endif
     // Слизень
     // ----
-    if ( Trig_LichinkaFinish_Func020C() ) then
+    if ( Trig_LichinkaFinish_Func023C() ) then
         call UnitAddAbilityBJ('A0VH', GetTriggerUnit())
         call UnitAddAbilityBJ('A0VH', GetLastCreatedUnit())
         call AddCountDis(u , i)
         call CreateNUnitsAtLoc(1, 'e01Z', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[16], bj_UNIT_FACING)
         call IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
-        if ( Trig_LichinkaFinish_Func020Func006C() ) then
+        if ( Trig_LichinkaFinish_Func023Func006C() ) then
             call SelectUnitAddForPlayer(GetLastCreatedUnit(), GetOwningPlayer(GetTriggerUnit()))
         else
         endif
@@ -29111,23 +29114,23 @@ function Trig_LichinkaFinish_Actions takes nothing returns nothing
     endif
     // Солдат т1
     // ----
-    if ( Trig_LichinkaFinish_Func023C() ) then
+    if ( Trig_LichinkaFinish_Func026C() ) then
         call CreateNUnitsAtLoc(1, 'e02W', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[16], bj_UNIT_FACING)
         call IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
         // Выбор
-        if ( Trig_LichinkaFinish_Func023Func004C() ) then
+        if ( Trig_LichinkaFinish_Func026Func004C() ) then
             call SelectUnitAddForPlayer(GetLastCreatedUnit(), GetOwningPlayer(GetTriggerUnit()))
         else
         endif
         // Плодовитость
-        if ( Trig_LichinkaFinish_Func023Func006C() ) then
+        if ( Trig_LichinkaFinish_Func026Func006C() ) then
             call SetUnitAbilityLevelSwapped('A0VH', GetLastCreatedUnit(), 2)
             call SetUnitAbilityLevelSwapped('A0VH', GetTriggerUnit(), 2)
             call AddCountDis(u , i)
             call CreateNUnitsAtLoc(1, 'e02W', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[16], bj_UNIT_FACING)
             call SetUnitAbilityLevelSwapped('A0VH', GetLastCreatedUnit(), 2)
             call IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
-            if ( Trig_LichinkaFinish_Func023Func006Func008C() ) then
+            if ( Trig_LichinkaFinish_Func026Func006Func008C() ) then
                 call SelectUnitAddForPlayer(GetLastCreatedUnit(), GetOwningPlayer(GetTriggerUnit()))
             else
             endif
@@ -29135,13 +29138,13 @@ function Trig_LichinkaFinish_Actions takes nothing returns nothing
             call AddCountDis(u , i)
         endif
         // Танк
-        if ( Trig_LichinkaFinish_Func023Func008C() ) then
+        if ( Trig_LichinkaFinish_Func026Func008C() ) then
             call AddCountDis(u , i)
             set udg_LocalInteger=GetRandomInt(1, 100)
-            if ( Trig_LichinkaFinish_Func023Func008Func003C() ) then
+            if ( Trig_LichinkaFinish_Func026Func008Func003C() ) then
                 call CreateNUnitsAtLoc(1, 'e01P', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[16], bj_UNIT_FACING)
                 call IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
-                if ( Trig_LichinkaFinish_Func023Func008Func003Func005C() ) then
+                if ( Trig_LichinkaFinish_Func026Func008Func003Func005C() ) then
                     call SelectUnitAddForPlayer(GetLastCreatedUnit(), GetOwningPlayer(GetTriggerUnit()))
                 else
                 endif
@@ -29153,13 +29156,13 @@ function Trig_LichinkaFinish_Actions takes nothing returns nothing
     endif
     // ----
     // Оса
-    if ( Trig_LichinkaFinish_Func026C() ) then
+    if ( Trig_LichinkaFinish_Func029C() ) then
         call CreateNUnitsAtLoc(1, 'e01Q', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[16], bj_UNIT_FACING)
         call UnitAddAbilityBJ('A0VH', GetTriggerUnit())
         call UnitAddAbilityBJ('A0VH', GetLastCreatedUnit())
         call AddCountDis(u , i)
         call IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
-        if ( Trig_LichinkaFinish_Func026Func007C() ) then
+        if ( Trig_LichinkaFinish_Func029Func007C() ) then
             call SelectUnitAddForPlayer(GetLastCreatedUnit(), GetOwningPlayer(GetTriggerUnit()))
         else
         endif
@@ -29171,6 +29174,7 @@ function Trig_LichinkaFinish_Actions takes nothing returns nothing
     call RemoveLocation(udg_LocalPosition[16])
     call RemoveLocation(udg_LocalPosition[17])
     call RemoveLocation(udg_LocalPosition[18])
+    set u=null
 endfunction
 
 //===========================================================================
@@ -40973,6 +40977,7 @@ function Trig_GG_Actions takes nothing returns nothing
     set corruption[pi]=0
     set balance[pi]=0
     set additional[pi]=0
+    set udg_UnitsCount[pi]=0
 endfunction
 
 //===========================================================================
@@ -42554,6 +42559,41 @@ function InitTrig_Second_O takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: KillTestUnits Command
+//===========================================================================
+function Trig_KillTestUnits_Command_Func001002 takes nothing returns boolean
+    return ( RectContainsUnit(gg_rct_TestRegion, GetFilterUnit()) == true )
+endfunction
+
+function Trig_KillTestUnits_Command_Func003A takes nothing returns nothing
+    local unit u= GetEnumUnit()
+    local player p= GetOwningPlayer(u)
+    local integer id= GetUnitTypeId(u)
+    if IsUnitType(u, UNIT_TYPE_HERO) then
+        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
+    endif
+    call RemoveUnit(u)
+    set u=null
+    set p=null
+    
+endfunction
+
+function Trig_KillTestUnits_Command_Actions takes nothing returns nothing
+    set udg_Boolexpr=Condition(function Trig_KillTestUnits_Command_Func001002)
+    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_Command_Func003A)
+    call GroupClear(udg_LocalOtrad2)
+endfunction
+
+//===========================================================================
+function InitTrig_KillTestUnits_Command takes nothing returns nothing
+    set gg_trg_KillTestUnits_Command=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(gg_trg_KillTestUnits_Command, Player(0), "kill", true)
+    call TriggerAddAction(gg_trg_KillTestUnits_Command, function Trig_KillTestUnits_Command_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: Player2VassalTo1 Back Copy
 //===========================================================================
 function Trig_Player2VassalTo1_Back_Copy_Conditions takes nothing returns boolean
@@ -43620,6 +43660,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Setlvl()
     call InitTrig_A1()
     call InitTrig_Second_O()
+    call InitTrig_KillTestUnits_Command()
     call InitTrig_Player2VassalTo1_Back_Copy()
     call InitTrig_Player2VassalTo1_Copy()
     call InitTrig_Visible_Copy()
@@ -44003,7 +44044,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE___onInit")
+call ExecuteFunc("SpellSleepAOE__onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
