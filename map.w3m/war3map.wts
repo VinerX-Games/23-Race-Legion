@@ -48112,7 +48112,7 @@ X
 }
 
 STRING 7983
-// Abilities: A0HL (Ночные Эльфы), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0HL (|cff0f81c3Ночные Эльфы|r), Ubertip (Tooltip - Normal - Extended)
 {
 Заполни меня
 }
@@ -64482,21 +64482,9 @@ STRING 10693
 }
 
 STRING 10694
-// Abilities: A0HL (Ночные Эльфы), EditorSuffix (Editor Suffix)
+// Abilities: A0HL (|cff0f81c3Ночные Эльфы|r), EditorSuffix (Editor Suffix)
 {
 {Выбор Расы
-}
-
-STRING 10695
-// Abilities: A0HL (Ночные Эльфы), Name (Name)
-{
-Ночные Эльфы
-}
-
-STRING 10696
-// Abilities: A0HL (Ночные Эльфы), Tip (Tooltip - Normal)
-{
-Ночные Эльфы
 }
 
 STRING 10697
@@ -86962,7 +86950,7 @@ STRING 14389
 }
 
 STRING 14390
-// Abilities: A0HL (Ночные Эльфы), Hotkey (Hotkey - Normal)
+// Abilities: A0HL (|cff0f81c3Ночные Эльфы|r), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -165937,5 +165925,35 @@ STRING 27300
 // Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 27301
+// Abilities: A0HL (|cff0f81c3Ночные Эльфы|r), Name (Name)
+{
+|cff0f81c3Ночные Эльфы|r
+}
+
+STRING 27302
+// Abilities: A0HL (|cff0f81c3Ночные Эльфы|r), Tip (Tooltip - Normal)
+{
+|cff0f81c3Ночные Эльфы|r
+}
+
+STRING 27303
+// Upgrades: R0G4 (Коралловая чешуя,Хитиновая чешуя,Костяная ), Name (Name)
+{
+|cff0f81c3Ночные эльфы|r
+}
+
+STRING 27304
+// Upgrades: R0G4 (Коралловая чешуя,Хитиновая чешуя,Костяная ), Tip (Tooltip)
+{
+|cff0f81c3Ночные эльфы|r
+}
+
+STRING 27305
+// Upgrades: R0G4 (Коралловая чешуя,Хитиновая чешуя,Костяная ), Ubertip (Tooltip - Extended)
+{
+Организация, состоящая полностью из людей и ставящая своей целью уничтожение всей нежити и ее пособников на территории бывшего Лордерона
 }
 

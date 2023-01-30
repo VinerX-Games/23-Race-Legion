@@ -1485,6 +1485,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_Race_nightelf= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -12726,6 +12727,32 @@ function InitTrig_Race_Nagi takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Nagi, EVENT_PLAYER_UNIT_SPELL_FINISH)
     call TriggerAddCondition(gg_trg_Race_Nagi, Condition(function Trig_Race_Nagi_Conditions))
     call TriggerAddAction(gg_trg_Race_Nagi, function Trig_Race_Nagi_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Race nightelf
+//===========================================================================
+function Trig_Race_nightelf_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0HL' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_nightelf_Actions takes nothing returns nothing
+    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    call CreateNUnitsAtLoc(6, 'ewsp', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    call SetPlayerTechResearchedSwap('R0G4', 1, GetOwningPlayer(GetTriggerUnit()))
+    call RemoveUnit(GetSpellAbilityUnit())
+    call RemoveLocation(udg_LocalPosition2)
+endfunction
+
+//===========================================================================
+function InitTrig_Race_nightelf takes nothing returns nothing
+    set gg_trg_Race_nightelf=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Race_nightelf, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_Race_nightelf, Condition(function Trig_Race_nightelf_Conditions))
+    call TriggerAddAction(gg_trg_Race_nightelf, function Trig_Race_nightelf_Actions)
 endfunction
 
 //===========================================================================
@@ -34402,10 +34429,10 @@ endfunction
 // Trigger: DruidEnd
 //===========================================================================
 function Trig_DruidEnd_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('e00J', - 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('edot', - 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('edoc', - 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('n05D', - 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('e00J', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('edot', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('edoc', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('n05D', 0, GetOwningPlayer(GetTriggerUnit()))
 endfunction
 
 //===========================================================================
@@ -42851,6 +42878,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Race_Gnomes()
     call InitTrig_Race_Gilneas()
     call InitTrig_Race_Nagi()
+    call InitTrig_Race_nightelf()
     call InitTrig_Race_Forsaken()
     call InitTrig_Race_Random()
     call InitTrig_Page1_O()
