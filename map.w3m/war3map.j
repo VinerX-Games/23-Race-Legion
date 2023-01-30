@@ -22,12 +22,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -678,8 +678,8 @@ trigger gg_trg_F2_Map= null
 trigger gg_trg_ToKill2= null
 trigger gg_trg_Emerald_Dream_TP_O= null
 trigger gg_trg_Emerald_Dream_TP_OFF_O= null
-trigger gg_trg_murlokiEnd_Copy= null
-trigger gg_trg_murloki_Copy= null
+trigger gg_trg_DruidEnd= null
+trigger gg_trg_Druid= null
 trigger gg_trg_Krug2= null
 trigger gg_trg_Krug1= null
 trigger gg_trg_Elf2= null
@@ -1752,7 +1752,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1760,33 +1760,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1794,19 +1794,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -19771,460 +19771,6 @@ function InitTrig_Emerald_Dream_TP_OFF_O takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: murlokiEnd Copy
-//===========================================================================
-function Trig_murlokiEnd_Copy_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('e00J', 0, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('edot', 0, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('edoc', 0, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('n05D', 0, GetOwningPlayer(GetTriggerUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_murlokiEnd_Copy takes nothing returns nothing
-    set gg_trg_murlokiEnd_Copy=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_murlokiEnd_Copy, 5)
-    call TriggerAddAction(gg_trg_murlokiEnd_Copy, function Trig_murlokiEnd_Copy_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: murloki Copy
-//===========================================================================
-function Trig_murloki_Copy_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0G1' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_murloki_Copy_Actions takes nothing returns nothing
-    call DisableTrigger(gg_trg_murlokiEnd_Copy)
-    call SetPlayerTechMaxAllowedSwap('e00J', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('edot', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('edoc', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('n05D', 1, GetOwningPlayer(GetTriggerUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_murloki_Copy takes nothing returns nothing
-    set gg_trg_murloki_Copy=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_murloki_Copy, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerAddCondition(gg_trg_murloki_Copy, Condition(function Trig_murloki_Copy_Conditions))
-    call TriggerAddAction(gg_trg_murloki_Copy, function Trig_murloki_Copy_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Krug2
-//===========================================================================
-function Trig_Krug2_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0G1' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Krug2_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0G2', 0, GetOwningPlayer(GetTriggerUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_Krug2 takes nothing returns nothing
-    set gg_trg_Krug2=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Krug2, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Krug2, EVENT_PLAYER_UNIT_RESEARCH_START)
-    call TriggerAddCondition(gg_trg_Krug2, Condition(function Trig_Krug2_Conditions))
-    call TriggerAddAction(gg_trg_Krug2, function Trig_Krug2_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Krug1
-//===========================================================================
-function Trig_Krug1_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0G1' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Krug1_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0G2', 1, GetOwningPlayer(GetTriggerUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_Krug1 takes nothing returns nothing
-    set gg_trg_Krug1=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Krug1, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
-    call TriggerAddCondition(gg_trg_Krug1, Condition(function Trig_Krug1_Conditions))
-    call TriggerAddAction(gg_trg_Krug1, function Trig_Krug1_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Elf2
-//===========================================================================
-function Trig_Elf2_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0G2' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Elf2_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0G1', 0, GetOwningPlayer(GetTriggerUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_Elf2 takes nothing returns nothing
-    set gg_trg_Elf2=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Elf2, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Elf2, EVENT_PLAYER_UNIT_RESEARCH_START)
-    call TriggerAddCondition(gg_trg_Elf2, Condition(function Trig_Elf2_Conditions))
-    call TriggerAddAction(gg_trg_Elf2, function Trig_Elf2_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Elf1
-//===========================================================================
-function Trig_Elf1_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0G2' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Elf1_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0G1', 1, GetOwningPlayer(GetTriggerUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_Elf1 takes nothing returns nothing
-    set gg_trg_Elf1=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Elf1, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
-    call TriggerAddCondition(gg_trg_Elf1, Condition(function Trig_Elf1_Conditions))
-    call TriggerAddAction(gg_trg_Elf1, function Trig_Elf1_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Murlok
-//===========================================================================
-function Trig_Murlok_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0FF' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Murlok_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0FE', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('Rnsw', 0, GetOwningPlayer(GetTriggerUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_Murlok takes nothing returns nothing
-    set gg_trg_Murlok=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Murlok, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
-    call TriggerAddCondition(gg_trg_Murlok, Condition(function Trig_Murlok_Conditions))
-    call TriggerAddAction(gg_trg_Murlok, function Trig_Murlok_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: murlo2
-//===========================================================================
-function Trig_murlo2_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0FF' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_murlo2_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0FE', 0, GetOwningPlayer(GetTriggerUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_murlo2 takes nothing returns nothing
-    set gg_trg_murlo2=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_murlo2, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_murlo2, EVENT_PLAYER_UNIT_RESEARCH_START)
-    call TriggerAddCondition(gg_trg_murlo2, Condition(function Trig_murlo2_Conditions))
-    call TriggerAddAction(gg_trg_murlo2, function Trig_murlo2_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Nagi
-//===========================================================================
-function Trig_Nagi_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0FE' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Nagi_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0FF', 1, GetOwningPlayer(GetTriggerUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_Nagi takes nothing returns nothing
-    set gg_trg_Nagi=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
-    call TriggerAddCondition(gg_trg_Nagi, Condition(function Trig_Nagi_Conditions))
-    call TriggerAddAction(gg_trg_Nagi, function Trig_Nagi_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Nagi2
-//===========================================================================
-function Trig_Nagi2_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0FE' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Nagi2_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0FF', 0, GetOwningPlayer(GetTriggerUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_Nagi2 takes nothing returns nothing
-    set gg_trg_Nagi2=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi2, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi2, EVENT_PLAYER_UNIT_RESEARCH_START)
-    call TriggerAddCondition(gg_trg_Nagi2, Condition(function Trig_Nagi2_Conditions))
-    call TriggerAddAction(gg_trg_Nagi2, function Trig_Nagi2_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: nagi
-//===========================================================================
-function Trig_nagi_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0FE' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_nagi_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('n035', - 1, GetOwningPlayer(GetTriggerUnit()))
-    call DisableTrigger(gg_trg_elem2led_O)
-endfunction
-
-//===========================================================================
-function InitTrig_nagi takes nothing returns nothing
-    set gg_trg_nagi=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_nagi, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerAddCondition(gg_trg_nagi, Condition(function Trig_nagi_Conditions))
-    call TriggerAddAction(gg_trg_nagi, function Trig_nagi_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: murloki
-//===========================================================================
-function Trig_murloki_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0FF' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_murloki_Actions takes nothing returns nothing
-    call DisableTrigger(gg_trg_murlokiEnd)
-    call SetPlayerTechMaxAllowedSwap('nnsw', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('nmyr', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('nnrg', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('n051', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('n053', - 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('n052', - 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('n050', - 1, GetEnumPlayer())
-endfunction
-
-//===========================================================================
-function InitTrig_murloki takes nothing returns nothing
-    set gg_trg_murloki=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_murloki, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerAddCondition(gg_trg_murloki, Condition(function Trig_murloki_Conditions))
-    call TriggerAddAction(gg_trg_murloki, function Trig_murloki_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: murlokiEnd
-//===========================================================================
-function Trig_murlokiEnd_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('n053', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('n052', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('n050', 0, GetEnumPlayer())
-endfunction
-
-//===========================================================================
-function InitTrig_murlokiEnd takes nothing returns nothing
-    set gg_trg_murlokiEnd=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_murlokiEnd, 5)
-    call TriggerAddAction(gg_trg_murlokiEnd, function Trig_murlokiEnd_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: NagaPas
-//===========================================================================
-function Trig_NagaPas_Conditions takes nothing returns boolean
-    if ( not ( GetLearnedSkillBJ() == 'A13A' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NagaPas_Func002Func001Func002Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A13A', GetTriggerUnit()) == 4 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NagaPas_Func002Func001Func002C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A13A', GetTriggerUnit()) == 3 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NagaPas_Func002Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A13A', GetTriggerUnit()) == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NagaPas_Func002C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A13A', GetTriggerUnit()) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_NagaPas_Actions takes nothing returns nothing
-    if ( Trig_NagaPas_Func002C() ) then
-        call UnitAddAbilityBJ('A136', GetTriggerUnit())
-    else
-        if ( Trig_NagaPas_Func002Func001C() ) then
-            call UnitAddAbilityBJ('A137', GetTriggerUnit())
-            call UnitRemoveAbilityBJ('A136', GetTriggerUnit())
-        else
-            if ( Trig_NagaPas_Func002Func001Func002C() ) then
-                call UnitAddAbilityBJ('A138', GetTriggerUnit())
-                call UnitRemoveAbilityBJ('A137', GetTriggerUnit())
-            else
-                if ( Trig_NagaPas_Func002Func001Func002Func001C() ) then
-                    call UnitAddAbilityBJ('A139', GetTriggerUnit())
-                    call UnitRemoveAbilityBJ('A138', GetTriggerUnit())
-                else
-                endif
-            endif
-        endif
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_NagaPas takes nothing returns nothing
-    set gg_trg_NagaPas=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_NagaPas, EVENT_PLAYER_HERO_SKILL)
-    call TriggerAddCondition(gg_trg_NagaPas, Condition(function Trig_NagaPas_Conditions))
-    call TriggerAddAction(gg_trg_NagaPas, function Trig_NagaPas_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: StartHorde Copy 2
-//===========================================================================
-function Trig_StartHorde_Copy_2_Func001A takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('H0J2', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('H0J6', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('H0J7', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('H0J8', 1, GetEnumPlayer())
-endfunction
-
-function Trig_StartHorde_Copy_2_Actions takes nothing returns nothing
-    call ForForce(udg_AllPlayers, function Trig_StartHorde_Copy_2_Func001A)
-endfunction
-
-//===========================================================================
-function InitTrig_StartHorde_Copy_2 takes nothing returns nothing
-    set gg_trg_StartHorde_Copy_2=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_StartHorde_Copy_2, 0.01)
-    call TriggerAddAction(gg_trg_StartHorde_Copy_2, function Trig_StartHorde_Copy_2_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: LegGer
-//===========================================================================
-function Trig_LegGer_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A11U' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_LegGer_Func001Func001Func002Func002C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 4 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_LegGer_Func001Func001Func002C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 3 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_LegGer_Func001Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_LegGer_Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_LegGer_Actions takes nothing returns nothing
-    if ( Trig_LegGer_Func001C() ) then
-        call UnitAddAbilityBJ('A11V', GetTriggerUnit())
-        call TriggerSleepAction(15.00)
-        call UnitRemoveAbilityBJ('A11V', GetTriggerUnit())
-    else
-        if ( Trig_LegGer_Func001Func001C() ) then
-            call UnitAddAbilityBJ('A11W', GetTriggerUnit())
-            call TriggerSleepAction(15.00)
-            call UnitRemoveAbilityBJ('A11W', GetTriggerUnit())
-        else
-            if ( Trig_LegGer_Func001Func001Func002C() ) then
-                call UnitAddAbilityBJ('A11X', GetTriggerUnit())
-                call TriggerSleepAction(15.00)
-                call UnitRemoveAbilityBJ('A11X', GetTriggerUnit())
-            else
-                if ( Trig_LegGer_Func001Func001Func002Func002C() ) then
-                    call UnitAddAbilityBJ('A11Y', GetTriggerUnit())
-                    call TriggerSleepAction(15.00)
-                    call UnitRemoveAbilityBJ('A11Y', GetTriggerUnit())
-                else
-                endif
-            endif
-        endif
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_LegGer takes nothing returns nothing
-    set gg_trg_LegGer=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_LegGer, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_LegGer, Condition(function Trig_LegGer_Conditions))
-    call TriggerAddAction(gg_trg_LegGer, function Trig_LegGer_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: TrainHeroGiveItem
 //===========================================================================
 function Trig_TrainHeroGiveItem_Conditions takes nothing returns boolean
@@ -34853,6 +34399,460 @@ function InitTrig_RobberyTrain takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: DruidEnd
+//===========================================================================
+function Trig_DruidEnd_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('e00J', - 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('edot', - 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('edoc', - 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('n05D', - 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_DruidEnd takes nothing returns nothing
+    set gg_trg_DruidEnd=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_DruidEnd, 5)
+    call TriggerAddAction(gg_trg_DruidEnd, function Trig_DruidEnd_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Druid
+//===========================================================================
+function Trig_Druid_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0G1' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Druid_Actions takes nothing returns nothing
+    call DisableTrigger(gg_trg_DruidEnd)
+    call SetPlayerTechMaxAllowedSwap('e00J', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('edot', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('edoc', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('n05D', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Druid takes nothing returns nothing
+    set gg_trg_Druid=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Druid, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_Druid, Condition(function Trig_Druid_Conditions))
+    call TriggerAddAction(gg_trg_Druid, function Trig_Druid_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Krug2
+//===========================================================================
+function Trig_Krug2_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0G1' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Krug2_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0G2', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Krug2 takes nothing returns nothing
+    set gg_trg_Krug2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Krug2, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Krug2, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_Krug2, Condition(function Trig_Krug2_Conditions))
+    call TriggerAddAction(gg_trg_Krug2, function Trig_Krug2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Krug1
+//===========================================================================
+function Trig_Krug1_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0G1' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Krug1_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0G2', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Krug1 takes nothing returns nothing
+    set gg_trg_Krug1=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Krug1, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_Krug1, Condition(function Trig_Krug1_Conditions))
+    call TriggerAddAction(gg_trg_Krug1, function Trig_Krug1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Elf2
+//===========================================================================
+function Trig_Elf2_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0G2' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Elf2_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0G1', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Elf2 takes nothing returns nothing
+    set gg_trg_Elf2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Elf2, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Elf2, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_Elf2, Condition(function Trig_Elf2_Conditions))
+    call TriggerAddAction(gg_trg_Elf2, function Trig_Elf2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Elf1
+//===========================================================================
+function Trig_Elf1_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0G2' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Elf1_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0G1', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Elf1 takes nothing returns nothing
+    set gg_trg_Elf1=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Elf1, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_Elf1, Condition(function Trig_Elf1_Conditions))
+    call TriggerAddAction(gg_trg_Elf1, function Trig_Elf1_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Murlok
+//===========================================================================
+function Trig_Murlok_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0FF' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Murlok_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0FE', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('Rnsw', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Murlok takes nothing returns nothing
+    set gg_trg_Murlok=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Murlok, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_Murlok, Condition(function Trig_Murlok_Conditions))
+    call TriggerAddAction(gg_trg_Murlok, function Trig_Murlok_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: murlo2
+//===========================================================================
+function Trig_murlo2_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0FF' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_murlo2_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0FE', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_murlo2 takes nothing returns nothing
+    set gg_trg_murlo2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_murlo2, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_murlo2, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_murlo2, Condition(function Trig_murlo2_Conditions))
+    call TriggerAddAction(gg_trg_murlo2, function Trig_murlo2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Nagi
+//===========================================================================
+function Trig_Nagi_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0FE' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Nagi_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0FF', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Nagi takes nothing returns nothing
+    set gg_trg_Nagi=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_Nagi, Condition(function Trig_Nagi_Conditions))
+    call TriggerAddAction(gg_trg_Nagi, function Trig_Nagi_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Nagi2
+//===========================================================================
+function Trig_Nagi2_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0FE' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Nagi2_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0FF', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Nagi2 takes nothing returns nothing
+    set gg_trg_Nagi2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi2, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi2, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_Nagi2, Condition(function Trig_Nagi2_Conditions))
+    call TriggerAddAction(gg_trg_Nagi2, function Trig_Nagi2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: nagi
+//===========================================================================
+function Trig_nagi_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0FE' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_nagi_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('n035', - 1, GetOwningPlayer(GetTriggerUnit()))
+    call DisableTrigger(gg_trg_elem2led_O)
+endfunction
+
+//===========================================================================
+function InitTrig_nagi takes nothing returns nothing
+    set gg_trg_nagi=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_nagi, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_nagi, Condition(function Trig_nagi_Conditions))
+    call TriggerAddAction(gg_trg_nagi, function Trig_nagi_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: murloki
+//===========================================================================
+function Trig_murloki_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0FF' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_murloki_Actions takes nothing returns nothing
+    call DisableTrigger(gg_trg_murlokiEnd)
+    call SetPlayerTechMaxAllowedSwap('nnsw', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('nmyr', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('nnrg', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('n051', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('n053', - 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('n052', - 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('n050', - 1, GetEnumPlayer())
+endfunction
+
+//===========================================================================
+function InitTrig_murloki takes nothing returns nothing
+    set gg_trg_murloki=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_murloki, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_murloki, Condition(function Trig_murloki_Conditions))
+    call TriggerAddAction(gg_trg_murloki, function Trig_murloki_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: murlokiEnd
+//===========================================================================
+function Trig_murlokiEnd_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('n053', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('n052', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('n050', 0, GetEnumPlayer())
+endfunction
+
+//===========================================================================
+function InitTrig_murlokiEnd takes nothing returns nothing
+    set gg_trg_murlokiEnd=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_murlokiEnd, 5)
+    call TriggerAddAction(gg_trg_murlokiEnd, function Trig_murlokiEnd_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: NagaPas
+//===========================================================================
+function Trig_NagaPas_Conditions takes nothing returns boolean
+    if ( not ( GetLearnedSkillBJ() == 'A13A' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_NagaPas_Func002Func001Func002Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A13A', GetTriggerUnit()) == 4 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_NagaPas_Func002Func001Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A13A', GetTriggerUnit()) == 3 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_NagaPas_Func002Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A13A', GetTriggerUnit()) == 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_NagaPas_Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A13A', GetTriggerUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_NagaPas_Actions takes nothing returns nothing
+    if ( Trig_NagaPas_Func002C() ) then
+        call UnitAddAbilityBJ('A136', GetTriggerUnit())
+    else
+        if ( Trig_NagaPas_Func002Func001C() ) then
+            call UnitAddAbilityBJ('A137', GetTriggerUnit())
+            call UnitRemoveAbilityBJ('A136', GetTriggerUnit())
+        else
+            if ( Trig_NagaPas_Func002Func001Func002C() ) then
+                call UnitAddAbilityBJ('A138', GetTriggerUnit())
+                call UnitRemoveAbilityBJ('A137', GetTriggerUnit())
+            else
+                if ( Trig_NagaPas_Func002Func001Func002Func001C() ) then
+                    call UnitAddAbilityBJ('A139', GetTriggerUnit())
+                    call UnitRemoveAbilityBJ('A138', GetTriggerUnit())
+                else
+                endif
+            endif
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_NagaPas takes nothing returns nothing
+    set gg_trg_NagaPas=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_NagaPas, EVENT_PLAYER_HERO_SKILL)
+    call TriggerAddCondition(gg_trg_NagaPas, Condition(function Trig_NagaPas_Conditions))
+    call TriggerAddAction(gg_trg_NagaPas, function Trig_NagaPas_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: StartHorde Copy 2
+//===========================================================================
+function Trig_StartHorde_Copy_2_Func001A takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('H0J2', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H0J6', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H0J7', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H0J8', 1, GetEnumPlayer())
+endfunction
+
+function Trig_StartHorde_Copy_2_Actions takes nothing returns nothing
+    call ForForce(udg_AllPlayers, function Trig_StartHorde_Copy_2_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_StartHorde_Copy_2 takes nothing returns nothing
+    set gg_trg_StartHorde_Copy_2=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_StartHorde_Copy_2, 0.01)
+    call TriggerAddAction(gg_trg_StartHorde_Copy_2, function Trig_StartHorde_Copy_2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: LegGer
+//===========================================================================
+function Trig_LegGer_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A11U' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LegGer_Func001Func001Func002Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 4 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LegGer_Func001Func001Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 3 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LegGer_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LegGer_Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_LegGer_Actions takes nothing returns nothing
+    if ( Trig_LegGer_Func001C() ) then
+        call UnitAddAbilityBJ('A11V', GetTriggerUnit())
+        call TriggerSleepAction(15.00)
+        call UnitRemoveAbilityBJ('A11V', GetTriggerUnit())
+    else
+        if ( Trig_LegGer_Func001Func001C() ) then
+            call UnitAddAbilityBJ('A11W', GetTriggerUnit())
+            call TriggerSleepAction(15.00)
+            call UnitRemoveAbilityBJ('A11W', GetTriggerUnit())
+        else
+            if ( Trig_LegGer_Func001Func001Func002C() ) then
+                call UnitAddAbilityBJ('A11X', GetTriggerUnit())
+                call TriggerSleepAction(15.00)
+                call UnitRemoveAbilityBJ('A11X', GetTriggerUnit())
+            else
+                if ( Trig_LegGer_Func001Func001Func002Func002C() ) then
+                    call UnitAddAbilityBJ('A11Y', GetTriggerUnit())
+                    call TriggerSleepAction(15.00)
+                    call UnitRemoveAbilityBJ('A11Y', GetTriggerUnit())
+                else
+                endif
+            endif
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_LegGer takes nothing returns nothing
+    set gg_trg_LegGer=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_LegGer, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_LegGer, Condition(function Trig_LegGer_Conditions))
+    call TriggerAddAction(gg_trg_LegGer, function Trig_LegGer_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: flot1 Copy O
 //===========================================================================
 function Trig_flot1_Copy_O_Conditions takes nothing returns boolean
@@ -42455,75 +42455,6 @@ function InitTrig_Spell1_Copy takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: KillTestUnits O Copy
-//===========================================================================
-function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
-    return RectContainsUnit(gg_rct_TestRegion, GetFilterUnit())
-endfunction
-
-function Trig_KillTestUnits_O_Copy_Func003A takes nothing returns nothing
-    local unit u= GetEnumUnit()
-    local player p= GetOwningPlayer(u)
-    local integer id= GetUnitTypeId(u)
-    if IsUnitType(u, UNIT_TYPE_HERO) then
-        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
-    endif
-    call RemoveUnit(u)
-    set u=null
-    set p=null
-endfunction
-
-function Trig_KillTestUnits_O_Copy_Actions takes nothing returns nothing
-    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Copy_Func001002)
-    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Copy_Func003A)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_KillTestUnits_O_Copy takes nothing returns nothing
-    set gg_trg_KillTestUnits_O_Copy=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O_Copy, 0.01)
-    call TriggerAddAction(gg_trg_KillTestUnits_O_Copy, function Trig_KillTestUnits_O_Copy_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: KillTestUnits Command
-//===========================================================================
-function Trig_KillTestUnits_Command_Func001002 takes nothing returns boolean
-    return ( RectContainsUnit(gg_rct_TestRegion, GetFilterUnit()) == true )
-endfunction
-
-function Trig_KillTestUnits_Command_Func003A takes nothing returns nothing
-    local unit u= GetEnumUnit()
-    local player p= GetOwningPlayer(u)
-    local integer id= GetUnitTypeId(u)
-    if IsUnitType(u, UNIT_TYPE_HERO) then
-        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
-    endif
-    call RemoveUnit(u)
-    set u=null
-    set p=null
-    
-endfunction
-
-function Trig_KillTestUnits_Command_Actions takes nothing returns nothing
-    set udg_Boolexpr=Condition(function Trig_KillTestUnits_Command_Func001002)
-    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_Command_Func003A)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_KillTestUnits_Command takes nothing returns nothing
-    set gg_trg_KillTestUnits_Command=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(gg_trg_KillTestUnits_Command, Player(0), "kill", true)
-    call TriggerAddAction(gg_trg_KillTestUnits_Command, function Trig_KillTestUnits_Command_Actions)
-endfunction
-
-
-//===========================================================================
 // Trigger: KillMagaz
 //===========================================================================
 function Trig_KillMagaz_Actions takes nothing returns nothing
@@ -43035,22 +42966,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ToKill2()
     call InitTrig_Emerald_Dream_TP_O()
     call InitTrig_Emerald_Dream_TP_OFF_O()
-    call InitTrig_murlokiEnd_Copy()
-    call InitTrig_murloki_Copy()
-    call InitTrig_Krug2()
-    call InitTrig_Krug1()
-    call InitTrig_Elf2()
-    call InitTrig_Elf1()
-    call InitTrig_Murlok()
-    call InitTrig_murlo2()
-    call InitTrig_Nagi()
-    call InitTrig_Nagi2()
-    call InitTrig_nagi()
-    call InitTrig_murloki()
-    call InitTrig_murlokiEnd()
-    call InitTrig_NagaPas()
-    call InitTrig_StartHorde_Copy_2()
-    call InitTrig_LegGer()
     call InitTrig_TrainHeroGiveItem()
     call InitTrig_LimitHero_Exep()
     call InitTrig_Hero_Limits_General_Copy()
@@ -43439,6 +43354,22 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_AutoShield()
     call InitTrig_ResearhRobbery()
     call InitTrig_RobberyTrain()
+    call InitTrig_DruidEnd()
+    call InitTrig_Druid()
+    call InitTrig_Krug2()
+    call InitTrig_Krug1()
+    call InitTrig_Elf2()
+    call InitTrig_Elf1()
+    call InitTrig_Murlok()
+    call InitTrig_murlo2()
+    call InitTrig_Nagi()
+    call InitTrig_Nagi2()
+    call InitTrig_nagi()
+    call InitTrig_murloki()
+    call InitTrig_murlokiEnd()
+    call InitTrig_NagaPas()
+    call InitTrig_StartHorde_Copy_2()
+    call InitTrig_LegGer()
     call InitTrig_flot1_Copy_O()
     call InitTrig_flot2_Copy_O()
     call InitTrig_arm1_Copy_O()
@@ -43657,8 +43588,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_HP_24k_O()
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
-    call InitTrig_KillTestUnits_O_Copy()
-    call InitTrig_KillTestUnits_Command()
     call InitTrig_KillMagaz()
     call InitTrig_Setlvl()
     call InitTrig_A1()
@@ -43690,7 +43619,6 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_BloodClose)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForNavy)
-    call ConditionalTriggerExecute(gg_trg_KillTestUnits_O_Copy)
 endfunction
 
 //***************************************************************************
@@ -44047,7 +43975,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
