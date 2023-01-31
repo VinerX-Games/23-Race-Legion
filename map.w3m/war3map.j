@@ -5270,9 +5270,17 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'edoc', - 1382.1, - 26060.4, 49.275, 'edoc')
     set u=BlzCreateUnitWithSkin(p, 'esen', - 2226.7, - 25920.4, 271.667, 'esen')
     set u=BlzCreateUnitWithSkin(p, 'Ekee', - 1941.2, - 25749.6, 299.793, 'Ekee')
+    call SetHeroLevel(u, 25, false)
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'E011', - 2097.2, - 25720.5, 64.678, 'E011')
+    call SetHeroLevel(u, 25, false)
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'E012', - 2337.2, - 25705.0, 274.010, 'E012')
+    call SetHeroLevel(u, 25, false)
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'E00W', - 1699.3, - 25742.4, 273.360, 'E00W')
+    call SetHeroLevel(u, 25, false)
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'h0IT', - 6121.2, - 26975.3, 277.970, 'h0IT')
     set u=BlzCreateUnitWithSkin(p, 'h0EI', - 6182.1, - 26985.0, 237.080, 'h0EI')
     set u=BlzCreateUnitWithSkin(p, 'h0IU', - 6268.4, - 26975.4, 253.330, 'h0IU')
@@ -5357,9 +5365,13 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, 290.235, 'n04X')
     set u=BlzCreateUnitWithSkin(p, 'n04Y', - 3839.2, - 30069.7, 296.680, 'n04Y')
     set u=BlzCreateUnitWithSkin(p, 'h0IH', - 5443.4, - 29877.1, 272.940, 'h0IH')
-    set u=BlzCreateUnitWithSkin(p, 'Emfr', - 1570.7, - 25743.1, 239.707, 'Emfr')
+    set u=BlzCreateUnitWithSkin(p, 'Emfr', - 1570.7, - 25743.1, 239.710, 'Emfr')
+    call SetHeroLevel(u, 25, false)
+    call SetUnitState(u, UNIT_STATE_MANA, 1066)
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
     set u=BlzCreateUnitWithSkin(p, 'Etyr', - 1773.8, - 25570.0, 257.877, 'Etyr')
+    call SetHeroLevel(u, 25, false)
+    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'emtg', - 2510.3, - 25852.8, 302.650, 'emtg')
 endfunction
 
@@ -34664,8 +34676,6 @@ function Trig_nagi_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_nagi_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('n035', - 1, GetOwningPlayer(GetTriggerUnit()))
-    call DisableTrigger(gg_trg_elem2led_O)
 endfunction
 
 //===========================================================================
@@ -34688,13 +34698,6 @@ endfunction
 
 function Trig_murloki_Actions takes nothing returns nothing
     call DisableTrigger(gg_trg_murlokiEnd)
-    call SetPlayerTechMaxAllowedSwap('nnsw', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('nmyr', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('nnrg', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('n051', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('n053', - 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('n052', - 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('n050', - 1, GetEnumPlayer())
 endfunction
 
 //===========================================================================
