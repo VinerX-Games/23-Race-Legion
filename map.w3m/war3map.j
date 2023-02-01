@@ -1486,6 +1486,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_malfurionPas= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -5238,6 +5239,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0GO', - 662.3, - 29616.7, 70.348, 'h0GO')
     set u=BlzCreateUnitWithSkin(p, 'h0GO', - 580.0, - 29622.0, 37.443, 'h0GO')
     set u=BlzCreateUnitWithSkin(p, 'h0GO', - 589.7, - 29748.2, 211.966, 'h0GO')
+    set u=BlzCreateUnitWithSkin(p, 'E026', - 2511.2, - 26447.9, 266.900, 'E026')
+    call SetHeroLevel(u, 25, false)
     set u=BlzCreateUnitWithSkin(p, 'e032', 425.6, - 29760.6, 331.534, 'e032')
     set u=BlzCreateUnitWithSkin(p, 'e032', 415.9, - 29917.2, 355.287, 'e032')
     set u=BlzCreateUnitWithSkin(p, 'e032', 508.0, - 29904.5, 335.269, 'e032')
@@ -5265,16 +5268,12 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'esen', - 2226.7, - 25920.4, 271.667, 'esen')
     set u=BlzCreateUnitWithSkin(p, 'Ekee', - 1941.2, - 25749.6, 299.793, 'Ekee')
     call SetHeroLevel(u, 25, false)
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'E011', - 2097.2, - 25720.5, 64.678, 'E011')
     call SetHeroLevel(u, 25, false)
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'E012', - 2337.2, - 25705.0, 274.010, 'E012')
     call SetHeroLevel(u, 25, false)
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'E00W', - 1699.3, - 25742.4, 273.360, 'E00W')
     call SetHeroLevel(u, 25, false)
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'h0IT', - 6121.2, - 26975.3, 277.970, 'h0IT')
     set u=BlzCreateUnitWithSkin(p, 'h0EI', - 6182.1, - 26985.0, 237.080, 'h0EI')
     set u=BlzCreateUnitWithSkin(p, 'h0IU', - 6268.4, - 26975.4, 253.330, 'h0IU')
@@ -5365,7 +5364,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
     set u=BlzCreateUnitWithSkin(p, 'Etyr', - 1773.8, - 25570.0, 257.877, 'Etyr')
     call SetHeroLevel(u, 25, false)
-    call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'emtg', - 2510.3, - 25852.8, 302.650, 'emtg')
 endfunction
 
@@ -34436,6 +34434,38 @@ function InitTrig_RobberyTrain takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: malfurionPas
+//===========================================================================
+function Trig_malfurionPas_Conditions takes nothing returns boolean
+    if ( not ( GetLearnedSkillBJ() == 'A160' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_malfurionPas_Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A160', GetTriggerUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_malfurionPas_Actions takes nothing returns nothing
+    if ( Trig_malfurionPas_Func002C() ) then
+        call UnitAddAbilityBJ('A161', GetTriggerUnit())
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_malfurionPas takes nothing returns nothing
+    set gg_trg_malfurionPas=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_malfurionPas, EVENT_PLAYER_HERO_SKILL)
+    call TriggerAddCondition(gg_trg_malfurionPas, Condition(function Trig_malfurionPas_Conditions))
+    call TriggerAddAction(gg_trg_malfurionPas, function Trig_malfurionPas_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: DruidEnd
 //===========================================================================
 function Trig_DruidEnd_Actions takes nothing returns nothing
@@ -43419,6 +43449,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_AutoShield()
     call InitTrig_ResearhRobbery()
     call InitTrig_RobberyTrain()
+    call InitTrig_malfurionPas()
     call InitTrig_DruidEnd()
     call InitTrig_Druid()
     call InitTrig_Krug2()
