@@ -32447,12 +32447,6 @@ STRING 5378
 |cff008000Сила природы|r
 }
 
-STRING 5379
-// Abilities: A0FV (|cff008000Сила природы|r), Ubertip (Tooltip - Normal - Extended)
-{
-Призывает несколько духов природы.
-}
-
 STRING 5380
 // Abilities: A07K (Огненное лассо), Ubertip (Tooltip - Normal - Extended)
 {
@@ -32539,24 +32533,6 @@ STRING 5393
 Исследовать "Стационарные магические источники"
 }
 
-STRING 5394
-// Abilities: A0FV (|cff008000Сила природы|r), Ubertip (Tooltip - Normal - Extended)
-{
-Призывает несколько духов природы.
-}
-
-STRING 5395
-// Abilities: A0FV (|cff008000Сила природы|r), Ubertip (Tooltip - Normal - Extended)
-{
-Призывает несколько духов природы.
-}
-
-STRING 5396
-// Abilities: A0FV (|cff008000Сила природы|r), Ubertip (Tooltip - Normal - Extended)
-{
-Призывает несколько духов природы.
-}
-
 STRING 5397
 // Abilities: A0FV (|cff008000Сила природы|r), Name (Name)
 {
@@ -32591,12 +32567,6 @@ STRING 5402
 // Abilities: A0FV (|cff008000Сила природы|r), Researchtip (Tooltip - Learn)
 {
 Изучить «|cff008000Сила природы|r»
-}
-
-STRING 5403
-// Abilities: A0FV (|cff008000Сила природы|r), Researchubertip (Tooltip - Learn - Extended)
-{
-Призывает несколько духов природы.
 }
 
 STRING 5404
@@ -92569,7 +92539,7 @@ STRING 15291
 }
 
 STRING 15292
-// Abilities: A0II (Кокон), EditorSuffix (Editor Suffix)
+// Units: o034 (|cff0f81c3Гнев леса|r), EditorSuffix (Name - Editor Suffix)
 {
 (2)
 }
@@ -166185,20 +166155,14 @@ STRING 27338
 |cff0f81c3Гнев Леса|r
 }
 
-STRING 27339
-// Abilities: A15W (|cff0f81c3Гнев Леса|r), Researchubertip (Tooltip - Learn - Extended)
-{
-Призывает из-под земли корни, которые обездвиживают и обезвреживают врагов в области, а также наносят урон. |n|n|cffffcc001-й уровень:|r <AEer,DataA1> урона/сек. в течение <AEer,Dur1> сек. |n|cffffcc002-й уровень:|r <AEer,DataA2> урона/сек. в течение <AEer,Dur2> сек. |n|cffffcc003-й уровень:|r <AEer,DataA3> урона/сек. в течение <AEer,Dur3> сек.
-}
-
 STRING 27340
-// Abilities: S00B (|cff0f81c3Гнев леса|r), Name (Name)
+// Units: o034 (|cff0f81c3Гнев леса|r), Name (Name)
 {
 |cff0f81c3Гнев леса|r
 }
 
 STRING 27341
-// Abilities: S00B (|cff0f81c3Гнев леса|r), Tip (Tooltip - Normal)
+// Abilities: S00B (|cff0f81c3Гнев леса|r), Name (Name)
 {
 |cff0f81c3Гнев леса|r
 }
@@ -166222,25 +166186,25 @@ STRING 27344
 }
 
 STRING 27345
-// Abilities: A15X (|cff0f81c3Гнев леса|r), Name (Name)
+// Abilities: S00B (|cff0f81c3Гнев леса|r), Tip (Tooltip - Normal)
 {
 |cff0f81c3Гнев леса|r
 }
 
 STRING 27346
-// Abilities: A15X (|cff0f81c3Гнев леса|r), Tip (Tooltip - Normal)
+// Abilities: A15X (|cff0f81c3Гнев леса|r), Name (Name)
 {
 |cff0f81c3Гнев леса|r
 }
 
 STRING 27347
-// Abilities: A15X (|cff0f81c3Гнев леса|r), EditorSuffix (Editor Suffix)
+// Abilities: A161 (|cff0f81c3Покровительство друидов|r), EditorSuffix (Editor Suffix)
 {
 (Дамаг)
 }
 
 STRING 27348
-// Buffs/Effects: B06M (), Bufftip (Tooltip)
+// Abilities: A15X (|cff0f81c3Гнев леса|r), Tip (Tooltip - Normal)
 {
 |cff0f81c3Гнев леса|r
 }
@@ -166433,12 +166397,6 @@ STRING 27379
 |cff0f81c3Покровительство друидов|r
 }
 
-STRING 27380
-// Abilities: A161 (|cff0f81c3Покровительство друидов|r), EditorSuffix (Editor Suffix)
-{
-(Дамаг)
-}
-
 STRING 27381
 // Abilities: A161 (|cff0f81c3Покровительство друидов|r), Researchtip (Tooltip - Learn)
 {
@@ -166580,5 +166538,126 @@ STRING 27403
 // Upgrades: R0G5 (Сила Луны,Мощь Луны,Могущество Луны), Hotkey (Hotkey)
 {
 E
+}
+
+STRING 27404
+// Abilities: A0FV (|cff008000Сила природы|r), Ubertip (Tooltip - Normal - Extended)
+{
+Призывает могучих энтов на помощь эльфам и друидам. |n|n|cffffcc001-й уровень:|r 1 Энт.
+}
+
+STRING 27405
+// Abilities: A0FV (|cff008000Сила природы|r), Ubertip (Tooltip - Normal - Extended)
+{
+Призывает могучих энтов на помощь эльфам и друидам. |n|n|cffffcc002-й уровень:|r 2 Энта.|n
+}
+
+STRING 27406
+// Abilities: A0FV (|cff008000Сила природы|r), Ubertip (Tooltip - Normal - Extended)
+{
+Призывает могучих энтов на помощь эльфам и друидам.
+ |n|cffffcc003-й уровень:|r 3 Энта.|n
+}
+
+STRING 27407
+// Abilities: A0FV (|cff008000Сила природы|r), Ubertip (Tooltip - Normal - Extended)
+{
+Призывает могучих энтов на помощь эльфам и друидам. |n|n|cffffcc004-й уровень:|r 4 Энта.
+}
+
+STRING 27408
+// Abilities: A0FV (|cff008000Сила природы|r), Researchubertip (Tooltip - Learn - Extended)
+{
+Призывает могучих энтов на помощь эльфам и друидам. |n|n|cffffcc001-й уровень:|r 1 Энт.|n|cffffcc002-й уровень:|r 2 Энта.|n|cffffcc003-й уровень:|r 3 Энта.|n|cffffcc004-й уровень:|r 4 Энта.
+}
+
+STRING 27409
+// Abilities: A0II (Кокон), EditorSuffix (Editor Suffix)
+{
+(2)
+}
+
+STRING 27410
+// Abilities: A15W (|cff0f81c3Гнев Леса|r), Researchubertip (Tooltip - Learn - Extended)
+{
+Призывает из-под земли корни, которые обездвиживают и обезвреживают врагов в области, а также наносят урон. |n|n|cffffcc001-й уровень:|r 500% урона/сек. от числа регенерации юнита, в течение 5 сек. |n|cffffcc002-й уровень:|r 500% урона/сек. от числа регенерации юнита, в течение 10 сек. |n|cffffcc003-й уровень:|r 800% урона/сек. от числа регенерации юнита, в течение 15 сек. |n|cffffcc004-й уровень:|r 800% урона/сек. от числа регенерации юнита, в течение 20 сек. 
+}
+
+STRING 27411
+// Abilities: A15X (|cff0f81c3Гнев леса|r), EditorSuffix (Editor Suffix)
+{
+(Дамаг)5
+}
+
+STRING 27412
+// Abilities: A163 (|cff0f81c3Гнев леса|r), Tip (Tooltip - Normal)
+{
+Нечистая аура [|cffffcc004-й уровень|r]
+}
+
+STRING 27413
+// Abilities: A163 (|cff0f81c3Гнев леса|r), Ubertip (Tooltip - Normal - Extended)
+{
++<AUau,DataA4,%>% к скорости передвижения находящихся рядом союзников и бонус к регенерации их здоровья.
+}
+
+STRING 27414
+// Abilities: A163 (|cff0f81c3Гнев леса|r), Name (Name)
+{
+|cff0f81c3Гнев леса|r
+}
+
+STRING 27415
+// Abilities: A163 (|cff0f81c3Гнев леса|r), Tip (Tooltip - Normal)
+{
+|cff0f81c3Гнев леса|r
+}
+
+STRING 27416
+// Abilities: A163 (|cff0f81c3Гнев леса|r), EditorSuffix (Editor Suffix)
+{
+(Дамаг)8
+}
+
+STRING 27417
+// Buffs/Effects: B06M (), Bufftip (Tooltip)
+{
+|cff0f81c3Гнев леса|r
+}
+
+STRING 27418
+// Units: n05G (|cff0f81c3Совух-берсерк|r), Name (Name)
+{
+|cff0f81c3Совух-берсерк|r
+}
+
+STRING 27419
+// Units: n05G (|cff0f81c3Совух-берсерк|r), EditorSuffix (Name - Editor Suffix)
+{
+(Ночные эльфы)
+}
+
+STRING 27420
+// Abilities: A164 (|cff0f81c3Облик совы|r), Name (Name)
+{
+|cff0f81c3Облик совы|r
+}
+
+STRING 27421
+// Abilities: A164 (|cff0f81c3Облик совы|r), Tip (Tooltip - Normal)
+{
+|cff0f81c3Облик совы|r
+}
+
+STRING 27422
+// Abilities: A164 (|cff0f81c3Облик совы|r), Untip (Tooltip - Turn Off)
+{
+Облик |cff0f81c3ночного эльфа|r
+}
+
+STRING 27423
+// Abilities: A164 (|cff0f81c3Облик совы|r), Unubertip (Tooltip - Turn Off - Extended)
+{
+Превращает |cff0f81c3друида|r в |cff0f81c3ночного эльфа|r.
 }
 
