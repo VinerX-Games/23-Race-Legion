@@ -25128,6 +25128,12 @@ STRING 4165
 Дренеи)
 }
 
+STRING 4166
+{
+Видимость для теста. Не выключить.
+
+}
+
 STRING 4167
 // Abilities: A0A5 (Расход топлива), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -25228,6 +25234,12 @@ STRING 4183
 // Upgrades: R02J (Сделать жрецов адептами,Сделать жрецов мас), Tip (Tooltip)
 {
 Мастерство |cff808080Пеплоустов |r
+}
+
+STRING 4184
+// Units: h0JA (|cff964296Валькира|r), Name (Name)
+{
+|cff964296Валькира|r
 }
 
 STRING 4185
@@ -30554,6 +30566,12 @@ STRING 5062
 |cff008000Воскресить Кенария|r
 }
 
+STRING 5063
+// Units: h0JA (|cff964296Валькира|r), Tip (Tooltip - Basic)
+{
+Обучить |cff964296Валькиру|r
+}
+
 STRING 5064
 // Units: E012 (|cff008000Полубог|r), Propernames (Proper Names)
 {
@@ -32447,6 +32465,12 @@ STRING 5378
 |cff008000Сила природы|r
 }
 
+STRING 5379
+// Abilities: A0TP (!Пожирание магии), EditorSuffix (Editor Suffix)
+{
+(Наплечник даларана
+}
+
 STRING 5380
 // Abilities: A07K (Огненное лассо), Ubertip (Tooltip - Normal - Extended)
 {
@@ -32531,6 +32555,12 @@ STRING 5393
 // Upgrades: R03I (Шрапнель), Tip (Tooltip)
 {
 Исследовать "Стационарные магические источники"
+}
+
+STRING 5394
+// Abilities: A14P (|cff964296Одержимость), EditorSuffix (Editor Suffix)
+{
+(автокаст отрекшиеся)
 }
 
 STRING 5397
@@ -34522,7 +34552,7 @@ STRING 5727
 }
 
 STRING 5728
-// Units: h0JA (|cff964296Валкира|r), Hotkey (Hotkey)
+// Units: h0JA (|cff964296Валькира|r), Hotkey (Hotkey)
 {
 R
 }
@@ -152981,12 +153011,6 @@ STRING 25181
 Обучить |cffd45e19Легендарного колдуна|r
 }
 
-STRING 25182
-// Units: h0JA (|cff964296Валкира|r), Name (Name)
-{
-|cff964296Валкира|r
-}
-
 STRING 25183
 // Units: N058 (|cff964296Темный Следопыт), EditorSuffix (Name - Editor Suffix)
 {
@@ -157824,7 +157848,7 @@ STRING 25960
 }
 
 STRING 25961
-// Units: h0JA (|cff964296Валкира|r), EditorSuffix (Name - Editor Suffix)
+// Units: h0JA (|cff964296Валькира|r), EditorSuffix (Name - Editor Suffix)
 {
 (Отрекшиеся)
 }
@@ -162449,12 +162473,6 @@ STRING 26724
 Z
 }
 
-STRING 26725
-// Abilities: A14P (|cff964296Одержимость), EditorSuffix (Editor Suffix)
-{
-(отрекшиеся)
-}
-
 STRING 26726
 // Upgrades: R0FY (Болезнетворное облако), effect1 (Effect 1)
 {
@@ -163809,12 +163827,6 @@ STRING 26951
 // Units: n04U (|cff964296Страж Смерти|r), Tip (Tooltip - Basic)
 {
 Обучить |cff964296Стража Смерти|r
-}
-
-STRING 26952
-// Units: h0JA (|cff964296Валкира|r), Tip (Tooltip - Basic)
-{
-Обучить |cff964296Валкиру|r
 }
 
 STRING 26953
@@ -165316,7 +165328,7 @@ STRING 27202
 }
 
 STRING 27203
-// Units: h0JA (|cff964296Валкира|r), Ubertip (Tooltip - Extended)
+// Units: h0JA (|cff964296Валькира|r), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa45 сек.|r|n|cff7dc87dТип атаки:|r |cffaaf0aaМагический|r
 

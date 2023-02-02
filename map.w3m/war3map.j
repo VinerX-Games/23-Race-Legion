@@ -1487,6 +1487,8 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_MindControl= null
+trigger gg_trg_OpemVis= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -12771,6 +12773,7 @@ endfunction
 function Trig_Race_Forsaken_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call CreateNUnitsAtLoc(5, 'h0J5', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    call SetPlayerTechResearchedSwap('R0G3', 1, GetOwningPlayer(GetTriggerUnit()))
     call RemoveUnit(GetSpellAbilityUnit())
     call RemoveLocation(udg_LocalPosition2)
 endfunction
@@ -21761,10 +21764,10 @@ endfunction
 function Trig_MassMindControl_Func007A takes nothing returns nothing
     call CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     set udg_LocalUnit2=GetLastCreatedUnit()
+    call TriggerExecute(gg_trg_ToKill2)
     call UnitAddAbilityBJ('A15V', GetLastCreatedUnit())
     call SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
     call IssueTargetOrderBJ(GetLastCreatedUnit(), "charm", GetEnumUnit())
-    call TriggerExecute(gg_trg_ToKill2)
 endfunction
 
 function Trig_MassMindControl_Actions takes nothing returns nothing
@@ -21786,6 +21789,32 @@ function InitTrig_MassMindControl takes nothing returns nothing
     call TriggerAddCondition(gg_trg_MassMindControl, Condition(function Trig_MassMindControl_Conditions))
     call TriggerAddAction(gg_trg_MassMindControl, function Trig_MassMindControl_Actions)
 endfunction
+
+//===========================================================================
+// Trigger: MindControl
+//===========================================================================
+function Trig_MindControl_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A14Q'
+endfunction
+
+function Trig_MindControl_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local unit u2= GetSpellTargetUnit()
+    local integer pi= GetPlayerId(GetOwningPlayer(u))
+    set disincome[pi]=disincome[pi] - 14.5 // ( GetUnitGoldCost(u)*0.1)
+    call AddCountDis(u2 , pi)
+    call DelCountDis(u2 , GetPlayerId(GetOwningPlayer(u2)))
+    //call RemoveUnit( GetSpellTargetUnit() )
+endfunction
+
+//===========================================================================
+function InitTrig_MindControl takes nothing returns nothing
+    set gg_trg_MindControl=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_MindControl, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_MindControl, Condition(function Trig_MindControl_Conditions))
+    call TriggerAddAction(gg_trg_MindControl, function Trig_MindControl_Actions)
+endfunction
+
 
 //===========================================================================
 // Trigger: HordeOn
@@ -42512,6 +42541,40 @@ function InitTrig_Spell1_Copy takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: KillTestUnits O Copy
+//===========================================================================
+function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
+    return RectContainsUnit(gg_rct_TestRegion, GetFilterUnit())
+endfunction
+
+function Trig_KillTestUnits_O_Copy_Func003A takes nothing returns nothing
+    local unit u= GetEnumUnit()
+    local player p= GetOwningPlayer(u)
+    local integer id= GetUnitTypeId(u)
+    if IsUnitType(u, UNIT_TYPE_HERO) then
+        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
+    endif
+    call RemoveUnit(u)
+    set u=null
+    set p=null
+endfunction
+
+function Trig_KillTestUnits_O_Copy_Actions takes nothing returns nothing
+    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Copy_Func001002)
+    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Copy_Func003A)
+    call GroupClear(udg_LocalOtrad2)
+endfunction
+
+//===========================================================================
+function InitTrig_KillTestUnits_O_Copy takes nothing returns nothing
+    set gg_trg_KillTestUnits_O_Copy=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O_Copy, 0.01)
+    call TriggerAddAction(gg_trg_KillTestUnits_O_Copy, function Trig_KillTestUnits_O_Copy_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: KillMagaz
 //===========================================================================
 function Trig_KillMagaz_Actions takes nothing returns nothing
@@ -42790,6 +42853,27 @@ function InitTrig_ResO_Copy takes nothing returns nothing
     set gg_trg_ResO_Copy=CreateTrigger()
     call TriggerRegisterPlayerChatEvent(gg_trg_ResO_Copy, Player(0), "reson", true)
     call TriggerAddAction(gg_trg_ResO_Copy, function Trig_ResO_Copy_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: OpemVis
+//===========================================================================
+function Trig_OpemVis_Func003A takes nothing returns nothing
+    call FogModifierStop(udg_Visibl[GetConvertedPlayerId(GetEnumPlayer())])
+    call DestroyFogModifier(udg_Visibl[GetConvertedPlayerId(GetEnumPlayer())])
+    call CreateFogModifierRectBJ(true, GetEnumPlayer(), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
+endfunction
+
+function Trig_OpemVis_Actions takes nothing returns nothing
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_4166")
+    call ForForce(udg_AllPlayers, function Trig_OpemVis_Func003A)
+endfunction
+
+//===========================================================================
+function InitTrig_OpemVis takes nothing returns nothing
+    set gg_trg_OpemVis=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(gg_trg_OpemVis, Player(0), "OpenVis", true)
+    call TriggerAddAction(gg_trg_OpemVis, function Trig_OpemVis_Actions)
 endfunction
 
 //===========================================================================
@@ -43121,6 +43205,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_StartAttackSafety()
     call InitTrig_EndAttackSafety()
     call InitTrig_MassMindControl()
+    call InitTrig_MindControl()
     call InitTrig_HordeOn()
     call InitTrig_K1T1()
     call InitTrig_K1T2()
@@ -43682,6 +43767,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_HP_24k_O()
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
+    call InitTrig_KillTestUnits_O_Copy()
     call InitTrig_KillMagaz()
     call InitTrig_Setlvl()
     call InitTrig_A1()
@@ -43697,6 +43783,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_P1_Vs_P2_P3_P4()
     call InitTrig_ResO()
     call InitTrig_ResO_Copy()
+    call InitTrig_OpemVis()
 endfunction
 
 //===========================================================================
@@ -43714,6 +43801,7 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_BloodClose)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForNavy)
+    call ConditionalTriggerExecute(gg_trg_KillTestUnits_O_Copy)
 endfunction
 
 //***************************************************************************
