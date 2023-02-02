@@ -755,6 +755,7 @@ trigger gg_trg_EndAttackSafety= null
 trigger gg_trg_RotStart= null
 trigger gg_trg_Attacked= null
 trigger gg_trg_MassMindControl= null
+trigger gg_trg_MassMindControl2= null
 trigger gg_trg_MindControlBanc= null
 trigger gg_trg_MindControlDarkR= null
 trigger gg_trg_HordeOn= null
@@ -1492,7 +1493,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_MassMindControl2= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -3007,7 +3007,7 @@ function f_EnemyUnitN takes nothing returns boolean
     local real x= GetUnitX(u)
     local real y= GetUnitY(u)
     
-    if IsPlayerEnemy(p, CheckPlayer) and ( IsUnitInGroup(u, udg_CityNearWater) or IsUnitInGroup(u, Navy) or IsUnitInGroup(u, Port) ) and not RectContainsCoords(gg_rct_NoWater1, x, y) and not RectContainsCoords(gg_rct_NoWater2, x, y) and not RectContainsCoords(gg_rct_NoWater3, x, y) then
+    if IsPlayerEnemy(p, CheckPlayer) and ( IsUnitInGroup(u, udg_CityNearWater) or IsUnitInGroup(u, Navy) or IsUnitInGroup(u, Port) ) and not ( RectContainsCoords(gg_rct_NoWater1, x, y) or RectContainsCoords(gg_rct_NoWater2, x, y) or RectContainsCoords(gg_rct_NoWater3, x, y) or WaygateIsActive(u) ) then
         set u=null
         return true
     else
@@ -3043,7 +3043,7 @@ endfunction
 //Гланый фильтр для войск, кому надо отдать приказ
 function f_Lazy takes nothing returns boolean
     local integer i= GetUnitCurrentOrder(GetFilterUnit())
-    set LazyCount=0
+    //set LazyCount = 0
 //    return IsUnitInGroup(GetFilterUnit(),udg_Ai_army[GetPlayerId(GetOwningPlayer(GetFilterUnit()))])  /*
 //*/  and ( i ==  851972 or i == 851976 or i == 0 )
     if IsUnitInGroup(GetFilterUnit(), udg_Ai_army[GetPlayerId(GetOwningPlayer(GetFilterUnit()))]) and ( i == 851972 or i == 851976 or i == 0 ) then
@@ -3057,7 +3057,14 @@ endfunction
 
 function f_LazyN takes nothing returns boolean
     local integer i= GetUnitCurrentOrder(GetFilterUnit())
-    return IsUnitInGroup(GetFilterUnit(), udg_Ai_navy[GetPlayerId(GetOwningPlayer(GetFilterUnit()))]) and ( i == 851972 or i == 851976 or i == 0 )
+    
+    return IsUnitInGroup(GetFilterUnit(), udg_Ai_navy[GetPlayerId(GetOwningPlayer(GetFilterUnit()))]) and ( i == 851972 or i == 851976 or i == 0 ) //then
+     //   set LazyCount = LazyCount + 1
+    //    return true
+ //   else 
+  //      return false
+        
+  //  endif
 
 endfunction
 
@@ -3726,9 +3733,14 @@ function TryAttackN takes nothing returns nothing
 
     set i=1
     loop
-        exitwhen i > 10
         set CheckPlayer=GetOwningPlayer(u)
-        call GroupEnumUnitsInRange(g, x, y, 6600 * I2R(i), udg_B_EnemyUnitN)
+        if i < 10 then
+            
+            call GroupEnumUnitsInRange(g, x, y, 6600 * I2R(i), udg_B_EnemyUnitN)
+        else
+            call GroupEnumUnitsInRect(g, GetWorldBounds(), udg_B_EnemyUnitN)
+        endif
+        
         
         if FirstOfGroup(g) != null then
             set u2=GroupPickRandomUnit(g)
@@ -3746,10 +3758,12 @@ function TryAttackN takes nothing returns nothing
                 call IssuePointOrder(u2, "attack", x2, y2)
                 call GroupRemoveUnit(g3, u2)
             endloop
-            
+            exitwhen true
         endif
         
+        exitwhen i > 10
         set i=i + 1
+        
     endloop
 
     set u2=null
@@ -6045,6 +6059,7 @@ function CreateNeutralPassive takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h03E', - 23224.2, - 22174.3, 282.180, 'h03E')
+    set u=BlzCreateUnitWithSkin(p, 'h0K1', - 23683.1, - 22645.5, - 21.994, 'h0K1')
     set u=BlzCreateUnitWithSkin(p, 'n04R', - 4523.2, - 29573.1, 280.438, 'n04R')
     set u=BlzCreateUnitWithSkin(p, 'h05P', - 5139.5, - 26185.9, 330.754, 'h05P')
 endfunction
@@ -7032,10 +7047,22 @@ function Trig_StartLobby_Func008C takes nothing returns boolean
     return true
 endfunction
 
+function Trig_StartLobby_Func014Func003C takes nothing returns boolean
+    if ( not ( GetEnumPlayer() != Player(0) ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_StartLobby_Func014A takes nothing returns nothing
     call CameraSetupApplyForPlayer(true, gg_cam_HostRegion, GetEnumPlayer(), 0)
     call SetCameraFieldForPlayer(GetEnumPlayer(), CAMERA_FIELD_TARGET_DISTANCE, 3400.00, 0.00)
-    call CreateNUnitsAtLoc(1, 'h0GA', GetEnumPlayer(), udg_LocalPosition2, bj_UNIT_FACING)
+    if ( Trig_StartLobby_Func014Func003C() ) then
+        set udg_LocalPosition2=GetRandomLocInRect(gg_rct_HostRegion)
+        call CreateNUnitsAtLoc(1, 'h0GA', GetEnumPlayer(), udg_LocalPosition2, bj_UNIT_FACING)
+        call RemoveLocation(udg_LocalPosition2)
+    else
+    endif
 endfunction
 
 function Trig_StartLobby_Actions takes nothing returns nothing
@@ -19067,7 +19094,7 @@ function Trig_F2_2_Actions takes nothing returns nothing
     local location loc= GetSpellTargetLoc()
     
     //set g = udg_F_Group[pi+1]
-    call GroupAddGroup(g, udg_F_Group[pi + 1])
+    call GroupAddGroup(udg_F_Group[pi + 1], g)
     loop
     
         set u=FirstOfGroup(g)
@@ -21216,7 +21243,7 @@ function Trig_Banshe_Actions takes nothing returns nothing
         set u=FirstOfGroup(g)
         exitwhen u == null
         if GetOwningPlayer(u) != GetOwningPlayer(GetTriggerUnit()) then
-            call UnitDamageTargetBJ(GetTriggerUnit(), u, 450, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_DEATH)
+            call UnitDamageTargetBJ(GetTriggerUnit(), u, 225, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_DEATH)
         endif
         call GroupRemoveUnit(g, u)
         set u=null
@@ -21830,28 +21857,29 @@ function Trig_MassMindControl2_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_MassMindControl2_Func003002 takes nothing returns boolean
+function Trig_MassMindControl2_Func002002 takes nothing returns boolean
     return ( 0 == 0 )
 endfunction
 
-function Trig_MassMindControl2_Func008A takes nothing returns nothing
+function Trig_MassMindControl2_Func007A takes nothing returns nothing
     call CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_27438")
     set udg_LocalUnit2=GetLastCreatedUnit()
     call TriggerExecute(gg_trg_ToKill2)
     call UnitAddAbilityBJ('A15V', GetLastCreatedUnit())
+    call UnitAddAbilityBJ('ACch', GetLastCreatedUnit())
     call SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
     call IssueTargetOrderBJ(GetLastCreatedUnit(), "charm", GetEnumUnit())
 endfunction
 
 function Trig_MassMindControl2_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetSpellTargetLoc()
-    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_27438")
-    set udg_Boolexpr=Condition(function Trig_MassMindControl2_Func003002)
+    set udg_Boolexpr=Condition(function Trig_MassMindControl2_Func002002)
     set udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 225, udg_Boolexpr)
     call RemoveLocation(udg_LocalPosition2)
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    call ForGroupBJ(udg_LocalOtrad2, function Trig_MassMindControl2_Func008A)
+    call ForGroupBJ(udg_LocalOtrad2, function Trig_MassMindControl2_Func007A)
     call RemoveLocation(udg_LocalPosition2)
     call GroupClear(udg_LocalOtrad2)
 endfunction
@@ -39361,7 +39389,7 @@ function PlayerArmy takes nothing returns nothing
         call ForceRemovePlayer(udg_BotsActive, p)
         set pi=GetPlayerId(p)
         
-        
+        set LazyCount=0
         call GroupEnumUnitsOfPlayer(g, p, B_Lazy)
         
         if FirstOfGroup(g) != null then
@@ -39469,6 +39497,7 @@ function PlayerNavy takes nothing returns nothing
         
         set p=ForcePickRandomPlayer(udg_BotsActiveB)
         call ForceRemovePlayer(udg_BotsActiveB, p)
+        //set LazyCount=0
         call GroupEnumUnitsOfPlayer(g, p, B_LazyN)
         if FirstOfGroup(g) != null then
  
@@ -42686,6 +42715,40 @@ function InitTrig_Spell1_Copy takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: KillTestUnits O Copy
+//===========================================================================
+function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
+    return RectContainsUnit(gg_rct_TestRegion, GetFilterUnit())
+endfunction
+
+function Trig_KillTestUnits_O_Copy_Func003A takes nothing returns nothing
+    local unit u= GetEnumUnit()
+    local player p= GetOwningPlayer(u)
+    local integer id= GetUnitTypeId(u)
+    if IsUnitType(u, UNIT_TYPE_HERO) then
+        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
+    endif
+    call RemoveUnit(u)
+    set u=null
+    set p=null
+endfunction
+
+function Trig_KillTestUnits_O_Copy_Actions takes nothing returns nothing
+    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Copy_Func001002)
+    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Copy_Func003A)
+    call GroupClear(udg_LocalOtrad2)
+endfunction
+
+//===========================================================================
+function InitTrig_KillTestUnits_O_Copy takes nothing returns nothing
+    set gg_trg_KillTestUnits_O_Copy=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O_Copy, 0.01)
+    call TriggerAddAction(gg_trg_KillTestUnits_O_Copy, function Trig_KillTestUnits_O_Copy_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: KillMagaz
 //===========================================================================
 function Trig_KillMagaz_Actions takes nothing returns nothing
@@ -43882,6 +43945,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_HP_24k_O()
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
+    call InitTrig_KillTestUnits_O_Copy()
     call InitTrig_KillMagaz()
     call InitTrig_Setlvl()
     call InitTrig_A1()
@@ -43915,6 +43979,7 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_BloodClose)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForNavy)
+    call ConditionalTriggerExecute(gg_trg_KillTestUnits_O_Copy)
 endfunction
 
 //***************************************************************************
