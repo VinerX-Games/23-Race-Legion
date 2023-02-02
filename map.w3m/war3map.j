@@ -668,7 +668,7 @@ trigger gg_trg_Connect_Portal_2= null
 trigger gg_trg_Connect_Portal_3= null
 trigger gg_trg_Connect_Portal_4= null
 trigger gg_trg_F2= null
-trigger gg_trg_F2_Copy= null
+trigger gg_trg_F2_2= null
 trigger gg_trg_F2_Start= null
 trigger gg_trg_F2_Map_2= null
 trigger gg_trg_F2_AreaMidBig= null
@@ -728,7 +728,7 @@ trigger gg_trg_Spell2= null
 trigger gg_trg_SpellRes= null
 trigger gg_trg_Spell= null
 trigger gg_trg_SpandFarm= null
-trigger gg_trg_StartBandits_Copy= null
+trigger gg_trg_ForsacenStarrt= null
 trigger gg_trg_Ult= null
 trigger gg_trg_Banshe= null
 trigger gg_trg_MassInvis= null
@@ -756,6 +756,7 @@ trigger gg_trg_RotStart= null
 trigger gg_trg_Attacked= null
 trigger gg_trg_MassMindControl= null
 trigger gg_trg_MindControlBanc= null
+trigger gg_trg_MindControlDarkR= null
 trigger gg_trg_HordeOn= null
 trigger gg_trg_K1T1= null
 trigger gg_trg_K1T2= null
@@ -1117,6 +1118,8 @@ trigger gg_trg_flot1_Copy_O= null
 trigger gg_trg_flot2_Copy_O= null
 trigger gg_trg_arm1_Copy_O= null
 trigger gg_trg_arm2_Copy_O= null
+trigger gg_trg_BuidT1= null
+trigger gg_trg_BuidAny= null
 trigger gg_trg_Auto_set_Copy_O= null
 trigger gg_trg_Red_Orden= null
 trigger gg_trg_Red_Orden_cansel= null
@@ -1489,9 +1492,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_BuidT1= null
-trigger gg_trg_BuidAny= null
-trigger gg_trg_MindControlDarkR= null
+trigger gg_trg_MassMindControl2= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -5444,7 +5445,7 @@ function CreateUnitsForPlayer21 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'hfoo', - 1503.6, - 27620.6, 32.817, 'hfoo')
     set u=BlzCreateUnitWithSkin(p, 'hfoo', - 1450.1, - 27779.6, 152.803, 'hfoo')
     set u=BlzCreateUnitWithSkin(p, 'hfoo', - 1494.4, - 27879.5, 182.939, 'hfoo')
-    set u=BlzCreateUnitWithSkin(p, 'hfoo', - 1950.6, - 28064.9, 65.931, 'hfoo')
+    set u=BlzCreateUnitWithSkin(p, 'hfoo', - 1950.6, - 28064.9, 65.930, 'hfoo')
     set u=BlzCreateUnitWithSkin(p, 'hfoo', - 1799.6, - 28055.6, 338.488, 'hfoo')
     set u=BlzCreateUnitWithSkin(p, 'hfoo', - 1671.0, - 28046.2, 271.634, 'hfoo')
     set u=BlzCreateUnitWithSkin(p, 'hfoo', - 1917.1, - 27461.5, 354.847, 'hfoo')
@@ -5485,6 +5486,7 @@ function CreateNeutralHostileBuildings takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h06F', 25952.0, - 21152.0, 270.000, 'h06F')
     set u=BlzCreateUnitWithSkin(p, 'h06D', 19808.0, - 23584.0, 270.000, 'h06D')
     set u=BlzCreateUnitWithSkin(p, 'h04H', 26592.0, - 11936.0, 270.000, 'h04H')
+    set u=BlzCreateUnitWithSkin(p, 'h09H', - 2176.0, 27840.0, 270.000, 'h09H')
     set gg_unit_h093_0091=BlzCreateUnitWithSkin(p, 'h093', - 25120.0, 22816.0, 312.383, 'h093')
     set gg_unit_h00F_0105=BlzCreateUnitWithSkin(p, 'h00F', - 14624.0, 10016.0, 270.000, 'h00F')
     set gg_unit_h00E_0106=BlzCreateUnitWithSkin(p, 'h00E', - 13984.0, 32.0, 270.000, 'h00E')
@@ -5497,6 +5499,7 @@ function CreateNeutralHostileBuildings takes nothing returns nothing
     set gg_unit_h00M_0113=BlzCreateUnitWithSkin(p, 'h00M', 15904.0, - 16096.0, 270.000, 'h00M')
     set u=BlzCreateUnitWithSkin(p, 'h06G', 27104.0, - 18528.0, 270.000, 'h06G')
     set gg_unit_h0A0_0120=BlzCreateUnitWithSkin(p, 'h0A0', 640.0, - 21760.0, 270.000, 'h0A0')
+    set gg_unit_h09V_0137=BlzCreateUnitWithSkin(p, 'h09V', 4800.0, - 19456.0, 270.000, 'h09V')
     set u=BlzCreateUnitWithSkin(p, 'h00V', 20896.0, - 5984.0, 270.000, 'h00V')
     set gg_unit_h00W_0145=BlzCreateUnitWithSkin(p, 'h00W', 25120.0, 27232.0, 270.199, 'h00W')
     set u=BlzCreateUnitWithSkin(p, 'h01B', 23968.0, 16608.0, 270.000, 'h01B')
@@ -5770,7 +5773,6 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     set gg_unit_n04O_0136=BlzCreateUnitWithSkin(p, 'n04O', - 29619.3, 19824.6, 340.943, 'n04O')
     call WaygateSetDestination(gg_unit_n04O_0136, GetRectCenterX(gg_rct_Region_010), GetRectCenterY(gg_rct_Region_010))
     call WaygateActivate(gg_unit_n04O_0136, true)
-    set gg_unit_h09V_0137=BlzCreateUnitWithSkin(p, 'h09V', 4800.0, - 19456.0, 270.000, 'h09V')
     set u=BlzCreateUnitWithSkin(p, 'e033', - 25577.8, 19178.6, 270.000, 'e033')
     set u=BlzCreateUnitWithSkin(p, 'e033', - 25167.2, 19659.3, 270.000, 'e033')
     set u=BlzCreateUnitWithSkin(p, 'e033', - 25500.6, 19584.8, 270.000, 'e033')
@@ -7390,32 +7392,22 @@ endfunction
 //===========================================================================
 // Trigger: StolicaTime
 //===========================================================================
-function Trig_StolicaTime_Func001Func001Func001001002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('A0IQ', GetFilterUnit()) != 0 )
-endfunction
-
-function Trig_StolicaTime_Func001Func001Func001A takes nothing returns nothing
-    call IssueImmediateOrderBJ(GetEnumUnit(), "windwalk")
-    call DisplayTextToForce(GetPlayersAll(), ( GetPlayerName(GetEnumPlayer()) + " - |cffff0000почти проиграл|r, его |cffd45e19столица |r не не была построена ко времени, а потому была установлена автоматически." ))
-    return
-endfunction
-
-function Trig_StolicaTime_Func001Func001Func002C takes nothing returns boolean
+function Trig_StolicaTime_Func001Func001Func001Func001C takes nothing returns boolean
     if ( not ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_StolicaTime_Func001Func001Func003Func001C takes nothing returns boolean
+function Trig_StolicaTime_Func001Func001Func001Func002Func001C takes nothing returns boolean
     if ( not ( IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) == true ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_StolicaTime_Func001Func001Func003A takes nothing returns nothing
-    if ( Trig_StolicaTime_Func001Func001Func003Func001C() ) then
+function Trig_StolicaTime_Func001Func001Func001Func002A takes nothing returns nothing
+    if ( Trig_StolicaTime_Func001Func001Func001Func002Func001C() ) then
         call SetUnitOwner(GetEnumUnit(), Player(PLAYER_NEUTRAL_AGGRESSIVE), true)
     else
         call KillUnit(GetEnumUnit())
@@ -7423,12 +7415,33 @@ function Trig_StolicaTime_Func001Func001Func003A takes nothing returns nothing
     endif
 endfunction
 
-function Trig_StolicaTime_Func001Func001Func005001001002 takes nothing returns boolean
+function Trig_StolicaTime_Func001Func001Func001Func004001002 takes nothing returns boolean
+    return ( GetUnitAbilityLevelSwapped('A0IQ', GetFilterUnit()) != 0 )
+endfunction
+
+function Trig_StolicaTime_Func001Func001Func001Func004A takes nothing returns nothing
+    call IssueImmediateOrderBJ(GetEnumUnit(), "windwalk")
+    call DisplayTextToForce(GetPlayersAll(), ( GetPlayerName(GetEnumPlayer()) + " - |cffff0000почти проиграл|r, его |cffd45e19столица |r не не была построена ко времени, а потому была установлена автоматически." ))
+    return
+endfunction
+
+function Trig_StolicaTime_Func001Func001Func001Func005001001002 takes nothing returns boolean
+    return ( GetUnitAbilityLevelSwapped('A0IQ', GetFilterUnit()) != 0 )
+endfunction
+
+function Trig_StolicaTime_Func001Func001Func001C takes nothing returns boolean
+    if ( not ( CountUnitsInGroup(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func005001001002))) != 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_StolicaTime_Func001Func001Func002001001002 takes nothing returns boolean
     return ( IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups) == true )
 endfunction
 
 function Trig_StolicaTime_Func001Func001C takes nothing returns boolean
-    if ( not ( CountUnitsInGroup(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func005001001002))) == 1 ) ) then
+    if ( not ( CountUnitsInGroup(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func002001001002))) == 1 ) ) then
         return false
     endif
     return true
@@ -7437,13 +7450,16 @@ endfunction
 function Trig_StolicaTime_Func001A takes nothing returns nothing
     if ( Trig_StolicaTime_Func001Func001C() ) then
     else
-        call ForGroupBJ(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001001002)), function Trig_StolicaTime_Func001Func001Func001A)
-        if ( Trig_StolicaTime_Func001Func001Func002C() ) then
-            call DisplayTextToForce(GetPlayersAll(), ( GetPlayerName(GetEnumPlayer()) + " - |cffff0000проиграл|r, его |cffd45e19столица |r не построена ко времени. :(" ))
+        if ( Trig_StolicaTime_Func001Func001Func001C() ) then
+            call ForGroupBJ(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func004001002)), function Trig_StolicaTime_Func001Func001Func001Func004A)
         else
+            if ( Trig_StolicaTime_Func001Func001Func001Func001C() ) then
+                call DisplayTextToForce(GetPlayersAll(), ( GetPlayerName(GetEnumPlayer()) + " - |cffff0000проиграл|r, его |cffd45e19столица |r не построена ко времени. :(" ))
+            else
+            endif
+            call ForGroupBJ(GetUnitsOfPlayerAll(GetEnumPlayer()), function Trig_StolicaTime_Func001Func001Func001Func002A)
+            call ClearEc(GetPlayerId(GetEnumPlayer()))
         endif
-        call ForGroupBJ(GetUnitsOfPlayerAll(GetEnumPlayer()), function Trig_StolicaTime_Func001Func001Func003A)
-        call ClearEc(GetPlayerId(GetEnumPlayer()))
     endif
 endfunction
 
@@ -7463,21 +7479,12 @@ endfunction
 // Trigger: StolicaDead
 //===========================================================================
 function Trig_StolicaDead_Conditions takes nothing returns boolean
-    if ( not ( IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) == true ) ) then
-        return false
-    endif
-    return true
+    return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups)
 endfunction
 
-function Trig_StolicaDead_Func003Func001C takes nothing returns boolean
-    if ( not ( IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) == true ) ) then
-        return false
-    endif
-    return true
-endfunction
 
 function Trig_StolicaDead_Func003A takes nothing returns nothing
-    if ( Trig_StolicaDead_Func003Func001C() ) then
+    if IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) then
         call SetUnitOwner(GetEnumUnit(), Player(PLAYER_NEUTRAL_AGGRESSIVE), true)
     else
         call KillUnit(GetEnumUnit())
@@ -19045,6 +19052,63 @@ function InitTrig_F2 takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: F2 2
+//===========================================================================
+function Trig_F2_2_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A167'
+endfunction
+
+function Trig_F2_2_Actions takes nothing returns nothing
+    local integer pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    local group g= CreateGroup()
+    local group g0= CreateGroup()
+    local unit u
+    local integer i= 0
+    local location loc= GetSpellTargetLoc()
+    
+    //set g = udg_F_Group[pi+1]
+    call GroupAddGroup(g, udg_F_Group[pi + 1])
+    loop
+    
+        set u=FirstOfGroup(g)
+        if u == null then
+            call GroupPointOrderLoc(g0, "attack", loc)
+            exitwhen true
+        endif
+             
+        if i == 12 then
+            call GroupPointOrderLoc(g0, "attack", loc)
+            set i=0
+            call GroupClear(g0)
+            
+        else
+        
+        endif
+        set i=i + 1
+        call GroupAddUnit(g0, u)
+        call GroupRemoveUnit(g, u)
+        set u=null
+    endloop
+
+
+    call DestroyGroup(g)
+    call DestroyGroup(g0)
+    set g=null
+    set g0=null
+    call RemoveLocation(loc)
+    set loc=null
+endfunction
+
+//===========================================================================
+function InitTrig_F2_2 takes nothing returns nothing
+    set gg_trg_F2_2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_F2_2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_F2_2, Condition(function Trig_F2_2_Conditions))
+    call TriggerAddAction(gg_trg_F2_2, function Trig_F2_2_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: F2 Start
 //===========================================================================
 function Trig_F2_Start_Conditions takes nothing returns boolean
@@ -21080,23 +21144,23 @@ function InitTrig_SpellRes takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: StartBandits Copy
+// Trigger: ForsacenStarrt
 //===========================================================================
-function Trig_StartBandits_Copy_Func001A takes nothing returns nothing
+function Trig_ForsacenStarrt_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('N058', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('O031', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('O030', 1, GetEnumPlayer())
 endfunction
 
-function Trig_StartBandits_Copy_Actions takes nothing returns nothing
-    call ForForce(udg_AllPlayers, function Trig_StartBandits_Copy_Func001A)
+function Trig_ForsacenStarrt_Actions takes nothing returns nothing
+    call ForForce(udg_AllPlayers, function Trig_ForsacenStarrt_Func001A)
 endfunction
 
 //===========================================================================
-function InitTrig_StartBandits_Copy takes nothing returns nothing
-    set gg_trg_StartBandits_Copy=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_StartBandits_Copy, 0.01)
-    call TriggerAddAction(gg_trg_StartBandits_Copy, function Trig_StartBandits_Copy_Actions)
+function InitTrig_ForsacenStarrt takes nothing returns nothing
+    set gg_trg_ForsacenStarrt=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_ForsacenStarrt, 0.01)
+    call TriggerAddAction(gg_trg_ForsacenStarrt, function Trig_ForsacenStarrt_Actions)
 endfunction
 
 //===========================================================================
@@ -21757,20 +21821,20 @@ endfunction
 
 
 //===========================================================================
-// Trigger: MassMindControl
+// Trigger: MassMindControl2
 //===========================================================================
-function Trig_MassMindControl_Conditions takes nothing returns boolean
+function Trig_MassMindControl2_Conditions takes nothing returns boolean
     if ( not ( GetSpellAbilityId() == 'A15P' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_MassMindControl_Func002002 takes nothing returns boolean
+function Trig_MassMindControl2_Func003002 takes nothing returns boolean
     return ( 0 == 0 )
 endfunction
 
-function Trig_MassMindControl_Func007A takes nothing returns nothing
+function Trig_MassMindControl2_Func008A takes nothing returns nothing
     call CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     set udg_LocalUnit2=GetLastCreatedUnit()
     call TriggerExecute(gg_trg_ToKill2)
@@ -21779,24 +21843,25 @@ function Trig_MassMindControl_Func007A takes nothing returns nothing
     call IssueTargetOrderBJ(GetLastCreatedUnit(), "charm", GetEnumUnit())
 endfunction
 
-function Trig_MassMindControl_Actions takes nothing returns nothing
+function Trig_MassMindControl2_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetSpellTargetLoc()
-    set udg_Boolexpr=Condition(function Trig_MassMindControl_Func002002)
+    call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_27438")
+    set udg_Boolexpr=Condition(function Trig_MassMindControl2_Func003002)
     set udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 150, udg_Boolexpr)
+    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 225, udg_Boolexpr)
     call RemoveLocation(udg_LocalPosition2)
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    call ForGroupBJ(udg_LocalOtrad2, function Trig_MassMindControl_Func007A)
+    call ForGroupBJ(udg_LocalOtrad2, function Trig_MassMindControl2_Func008A)
     call RemoveLocation(udg_LocalPosition2)
     call GroupClear(udg_LocalOtrad2)
 endfunction
 
 //===========================================================================
-function InitTrig_MassMindControl takes nothing returns nothing
-    set gg_trg_MassMindControl=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_MassMindControl, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_MassMindControl, Condition(function Trig_MassMindControl_Conditions))
-    call TriggerAddAction(gg_trg_MassMindControl, function Trig_MassMindControl_Actions)
+function InitTrig_MassMindControl2 takes nothing returns nothing
+    set gg_trg_MassMindControl2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_MassMindControl2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_MassMindControl2, Condition(function Trig_MassMindControl2_Conditions))
+    call TriggerAddAction(gg_trg_MassMindControl2, function Trig_MassMindControl2_Actions)
 endfunction
 
 //===========================================================================
@@ -35095,6 +35160,7 @@ endfunction
 function Trig_BuidAny_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     set income[pi]=income[pi] - 30
+    call UpdateGraf(pi)
 endfunction
 
 //===========================================================================
@@ -43179,6 +43245,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Portal_Disconnect()
     call InitTrig_Connect_Portal_2()
     call InitTrig_F2()
+    call InitTrig_F2_2()
     call InitTrig_F2_Start()
     call InitTrig_F2_Map_2()
     call InitTrig_F2_AreaMidBig()
@@ -43225,7 +43292,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_LumberTest()
     call InitTrig_Spell2()
     call InitTrig_SpellRes()
-    call InitTrig_StartBandits_Copy()
+    call InitTrig_ForsacenStarrt()
     call InitTrig_Ult()
     call InitTrig_Banshe()
     call InitTrig_MassInvis()
@@ -43249,7 +43316,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Safety()
     call InitTrig_StartAttackSafety()
     call InitTrig_EndAttackSafety()
-    call InitTrig_MassMindControl()
+    call InitTrig_MassMindControl2()
     call InitTrig_MindControlBanc()
     call InitTrig_MindControlDarkR()
     call InitTrig_HordeOn()
