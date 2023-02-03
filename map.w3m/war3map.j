@@ -5422,7 +5422,6 @@ function CreateUnitsForPlayer3 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'O031', - 3014.8, - 29789.9, 279.990, 'O031')
     set u=BlzCreateUnitWithSkin(p, 'efdr', - 1896.1, - 25912.3, 143.101, 'efdr')
 endfunction
 
@@ -6059,7 +6058,7 @@ function CreateNeutralPassive takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'h03E', - 23224.2, - 22174.3, 282.180, 'h03E')
-    set u=BlzCreateUnitWithSkin(p, 'h0K1', - 23683.1, - 22645.5, - 21.994, 'h0K1')
+    set u=BlzCreateUnitWithSkin(p, 'h0K1', - 23683.1, - 22645.5, 338.006, 'h0K1')
     set u=BlzCreateUnitWithSkin(p, 'n04R', - 4523.2, - 29573.1, 280.438, 'n04R')
     set u=BlzCreateUnitWithSkin(p, 'h05P', - 5139.5, - 26185.9, 330.754, 'h05P')
 endfunction
@@ -33549,6 +33548,7 @@ function Trig_BanditsOn_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_AutoSvita)
     call EnableTrigger(gg_trg_AutoStaya)
     call EnableTrigger(gg_trg_AutoManaSteal)
+    call EnableTrigger(gg_trg_AutoShield)
     call EnableTrigger(gg_trg_ResearhRobbery)
     call EnableTrigger(gg_trg_RobberyTrain)
     
