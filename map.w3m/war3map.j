@@ -1496,6 +1496,8 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_VaishArrow= null
+trigger gg_trg_Buria= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -5262,17 +5264,11 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0GO', - 662.3, - 29616.7, 70.348, 'h0GO')
     set u=BlzCreateUnitWithSkin(p, 'h0GO', - 580.0, - 29622.0, 37.443, 'h0GO')
     set u=BlzCreateUnitWithSkin(p, 'h0GO', - 589.7, - 29748.2, 211.966, 'h0GO')
-    set u=BlzCreateUnitWithSkin(p, 'N059', - 2343.0, - 28181.4, 0.000, 'N059')
-    call SetHeroLevel(u, 25, false)
-    call SetUnitState(u, UNIT_STATE_MANA, 1430)
     set u=BlzCreateUnitWithSkin(p, 'e032', 425.6, - 29760.6, 331.534, 'e032')
     set u=BlzCreateUnitWithSkin(p, 'e032', 415.9, - 29917.2, 355.287, 'e032')
     set u=BlzCreateUnitWithSkin(p, 'e032', 508.0, - 29904.5, 335.269, 'e032')
     set u=BlzCreateUnitWithSkin(p, 'e032', 515.6, - 29755.1, 333.247, 'e032')
     set u=BlzCreateUnitWithSkin(p, 'opeo', - 1957.6, - 29824.5, 271.943, 'opeo')
-    set u=BlzCreateUnitWithSkin(p, 'N058', - 2107.5, - 28403.1, 327.831, 'N058')
-    call SetHeroLevel(u, 25, false)
-    call SetUnitState(u, UNIT_STATE_MANA, 1144)
     set u=BlzCreateUnitWithSkin(p, 'o02U', - 6183.5, - 29862.8, 278.086, 'o02U')
     set u=BlzCreateUnitWithSkin(p, 'h0J5', - 3894.0, - 29881.6, 272.007, 'h0J5')
     set u=BlzCreateUnitWithSkin(p, 'u02D', - 4005.9, - 26178.3, 350.101, 'u02D')
@@ -5281,8 +5277,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n050', - 3299.3, - 27637.6, 164.130, 'n050')
     set u=BlzCreateUnitWithSkin(p, 'n04Z', - 4051.0, - 27780.2, 129.038, 'n04Z')
     set u=BlzCreateUnitWithSkin(p, 'n05D', - 1457.8, - 26146.4, 263.370, 'n05D')
-    set u=BlzCreateUnitWithSkin(p, 'N059', - 2828.0, - 29336.6, 278.850, 'N059')
-    call SetHeroLevel(u, 25, false)
     set u=BlzCreateUnitWithSkin(p, 'u02P', - 3407.5, - 30115.1, 270.191, 'u02P')
     set u=BlzCreateUnitWithSkin(p, 'e00I', - 2384.5, - 26036.5, 65.206, 'e00I')
     set u=BlzCreateUnitWithSkin(p, 'e00J', - 1577.7, - 26136.4, 357.111, 'e00J')
@@ -6062,7 +6056,6 @@ function CreateNeutralPassive takes nothing returns nothing
 
     set u=BlzCreateUnitWithSkin(p, 'h03E', - 23224.2, - 22174.3, 282.180, 'h03E')
     set u=BlzCreateUnitWithSkin(p, 'h0K1', - 23683.1, - 22645.5, 338.006, 'h0K1')
-    set u=BlzCreateUnitWithSkin(p, 'Hvsh', - 3556.9, - 27786.0, 246.222, 'Hvsh')
     set u=BlzCreateUnitWithSkin(p, 'n04R', - 4523.2, - 29573.1, 280.438, 'n04R')
     set u=BlzCreateUnitWithSkin(p, 'h05P', - 5139.5, - 26185.9, 330.754, 'h05P')
 endfunction
@@ -32744,31 +32737,17 @@ endfunction
 //===========================================================================
 // Trigger: Souz
 //===========================================================================
-function Trig_Souz_Func009C takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A02Y' ) ) then
-        return false
-    endif
-    if ( not ( UnitHasBuffBJ(GetSpellTargetUnit(), 'B00J') == false ) ) then
-        return false
-    endif
-    return true
-endfunction
+
 
 function Trig_Souz_Conditions takes nothing returns boolean
-    if ( not Trig_Souz_Func009C() ) then
-        return false
-    endif
-    return true
+    return GetSpellAbilityId() == 'A02Y' and GetUnitAbilityLevel(GetSpellTargetUnit(), 'A16H') != 1
 endfunction
 
 function Trig_Souz_Actions takes nothing returns nothing
-    local unit u
-    set udg_LocalUnit[11]=GetSpellTargetUnit()
-    call BlzSetUnitMaxHP(udg_LocalUnit[11], ( BlzGetUnitMaxHP(udg_LocalUnit[11]) + 100 ))
-    set u=udg_LocalUnit[11]
+    local unit u= GetSpellTargetUnit()
+    call UnitAddAbility(u, 'A16H')
     call TriggerSleepAction(35.00)
-    set udg_LocalUnit[11]=u
-    call BlzSetUnitMaxHP(udg_LocalUnit[11], ( BlzGetUnitMaxHP(udg_LocalUnit[11]) - 100 ))
+    call UnitRemoveAbility(u, 'A16H')
     set u=null
 endfunction
 
@@ -32780,6 +32759,7 @@ function InitTrig_Souz takes nothing returns nothing
     call TriggerAddCondition(gg_trg_Souz, Condition(function Trig_Souz_Conditions))
     call TriggerAddAction(gg_trg_Souz, function Trig_Souz_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: ArcanaIscachenie
@@ -34922,6 +34902,63 @@ function InitTrig_Nagi2 takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: Buria
+//===========================================================================
+function Trig_Buria_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A16E'
+endfunction
+
+function Trig_Buria_Actions takes nothing returns nothing
+    local location loc= GetSpellTargetLoc()
+    local unit u2= CreateUnitAtLoc(GetOwningPlayer(GetTriggerUnit()), 'ntor', loc, bj_UNIT_FACING)
+    call UnitApplyTimedLife(u2, 'BTLF', 30.00)
+    set u2=null
+    call RemoveLocation(loc)
+    set loc=null
+endfunction
+
+//===========================================================================
+function InitTrig_Buria takes nothing returns nothing
+    set gg_trg_Buria=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Buria, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_Buria, Condition(function Trig_Buria_Conditions))
+    call TriggerAddAction(gg_trg_Buria, function Trig_Buria_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: VaishArrow
+//===========================================================================
+function Trig_VaishArrow_Conditions takes nothing returns boolean
+    return UnitHasBuffBJ(GetTriggerUnit(), 'B06P')
+endfunction
+
+function Trig_VaishArrow_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local unit u2
+    local location loc= GetUnitLoc(u)
+    set u2=CreateUnitAtLoc(GetOwningPlayer(GetEventDamageSource()), 'H0BN', loc, bj_UNIT_FACING)
+    call TriggerExecute(gg_trg_ToKill2)
+    call UnitAddAbility(u2, 'A16D')
+    call SetUnitManaBJ(u2, 1111111.00)
+    call SetUnitAbilityLevel(u2, 'A16D', GetUnitAbilityLevel(GetEventDamageSource(), 'A16C'))
+    call IssueTargetOrder(u2, "frostnova", u)
+    call RemoveLocation(loc)
+    set loc=null
+    set u=null
+    set u2=null
+endfunction
+
+//===========================================================================
+function InitTrig_VaishArrow takes nothing returns nothing
+    set gg_trg_VaishArrow=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_VaishArrow, EVENT_PLAYER_UNIT_DAMAGED)
+    call TriggerAddCondition(gg_trg_VaishArrow, Condition(function Trig_VaishArrow_Conditions))
+    call TriggerAddAction(gg_trg_VaishArrow, function Trig_VaishArrow_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: NagaPas
 //===========================================================================
 function Trig_NagaPas_Conditions takes nothing returns boolean
@@ -35172,52 +35209,6 @@ function InitTrig_arm2_Copy_O takes nothing returns nothing
     call TriggerAddCondition(gg_trg_arm2_Copy_O, Condition(function Trig_arm2_Copy_O_Conditions))
     call TriggerAddAction(gg_trg_arm2_Copy_O, function Trig_arm2_Copy_O_Actions)
 endfunction
-
-//===========================================================================
-// Trigger: BuidT1
-//===========================================================================
-function Trig_BuidT1_Conditions takes nothing returns boolean
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h0CO' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_BuidT1_Actions takes nothing returns nothing
-    call UnitAddAbilityBJ('Asud', GetTriggerUnit())
-    call AddUnitToStockBJ('h0G8', GetTriggerUnit(), 2, 2)
-endfunction
-
-//===========================================================================
-function InitTrig_BuidT1 takes nothing returns nothing
-    set gg_trg_BuidT1=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_BuidT1, EVENT_PLAYER_UNIT_UPGRADE_FINISH)
-    call TriggerAddCondition(gg_trg_BuidT1, Condition(function Trig_BuidT1_Conditions))
-    call TriggerAddAction(gg_trg_BuidT1, function Trig_BuidT1_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: BuidAny
-//===========================================================================
-function Trig_BuidAny_Conditions takes nothing returns boolean
-    local integer id= GetUnitTypeId(GetTriggerUnit())
-    return id == 'h0HG' or id == 'h0CV' or id == 'h0CO' or id == 'h0CU' or id == 'h0CR' or id == 'h0CT' or id == 'h0CS' or id == 'u01A'
-endfunction
-
-function Trig_BuidAny_Actions takes nothing returns nothing
-    local integer pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
-    set income[pi]=income[pi] - 30
-    call UpdateGraf(pi)
-endfunction
-
-//===========================================================================
-function InitTrig_BuidAny takes nothing returns nothing
-    set gg_trg_BuidAny=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_BuidAny, EVENT_PLAYER_UNIT_UPGRADE_FINISH)
-    call TriggerAddCondition(gg_trg_BuidAny, Condition(function Trig_BuidAny_Conditions))
-    call TriggerAddAction(gg_trg_BuidAny, function Trig_BuidAny_Actions)
-endfunction
-
 
 //===========================================================================
 // Trigger: Auto set Copy O
@@ -42768,40 +42759,6 @@ function InitTrig_Spell1_Copy takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: KillTestUnits O Copy
-//===========================================================================
-function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
-    return RectContainsUnit(gg_rct_TestRegion, GetFilterUnit())
-endfunction
-
-function Trig_KillTestUnits_O_Copy_Func003A takes nothing returns nothing
-    local unit u= GetEnumUnit()
-    local player p= GetOwningPlayer(u)
-    local integer id= GetUnitTypeId(u)
-    if IsUnitType(u, UNIT_TYPE_HERO) then
-        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
-    endif
-    call RemoveUnit(u)
-    set u=null
-    set p=null
-endfunction
-
-function Trig_KillTestUnits_O_Copy_Actions takes nothing returns nothing
-    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Copy_Func001002)
-    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Copy_Func003A)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_KillTestUnits_O_Copy takes nothing returns nothing
-    set gg_trg_KillTestUnits_O_Copy=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O_Copy, 0.01)
-    call TriggerAddAction(gg_trg_KillTestUnits_O_Copy, function Trig_KillTestUnits_O_Copy_Actions)
-endfunction
-
-
-//===========================================================================
 // Trigger: KillMagaz
 //===========================================================================
 function Trig_KillMagaz_Actions takes nothing returns nothing
@@ -43775,6 +43732,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_MurlocFin()
     call InitTrig_Nagi()
     call InitTrig_Nagi2()
+    call InitTrig_Buria()
+    call InitTrig_VaishArrow()
     call InitTrig_NagaPas()
     call InitTrig_StartHorde_Copy_2()
     call InitTrig_LegGer()
@@ -43782,8 +43741,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_flot2_Copy_O()
     call InitTrig_arm1_Copy_O()
     call InitTrig_arm2_Copy_O()
-    call InitTrig_BuidT1()
-    call InitTrig_BuidAny()
     call InitTrig_Auto_set_Copy_O()
     call InitTrig_Red_Orden()
     call InitTrig_Red_Orden_cansel()
@@ -43999,7 +43956,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_HP_24k_O()
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
-    call InitTrig_KillTestUnits_O_Copy()
     call InitTrig_KillMagaz()
     call InitTrig_Setlvl()
     call InitTrig_A1()
@@ -44033,7 +43989,6 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_BloodClose)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForNavy)
-    call ConditionalTriggerExecute(gg_trg_KillTestUnits_O_Copy)
 endfunction
 
 //***************************************************************************
