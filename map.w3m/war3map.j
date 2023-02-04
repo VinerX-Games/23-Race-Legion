@@ -743,6 +743,7 @@ trigger gg_trg_EndAttackInfect= null
 trigger gg_trg_Zagraz= null
 trigger gg_trg_StartAttackZagraz= null
 trigger gg_trg_EndAttackZagraz= null
+trigger gg_trg_StartAttackCorroz_Copy= null
 trigger gg_trg_Usual= null
 trigger gg_trg_StartAttackUsual= null
 trigger gg_trg_EndAttackUsual= null
@@ -1105,6 +1106,8 @@ trigger gg_trg_KrugFin= null
 trigger gg_trg_ElfBegFin= null
 trigger gg_trg_ElfCan= null
 trigger gg_trg_malfurionPas= null
+trigger gg_trg_StartBuildingTree= null
+trigger gg_trg_CanselBuildingTree= null
 trigger gg_trg_NagaStart= null
 trigger gg_trg_MurlokCan= null
 trigger gg_trg_MurlokBeg= null
@@ -1493,9 +1496,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_CanselBuildingTree= null
-trigger gg_trg_StartBuildingTree= null
-trigger gg_trg_StartAttackCorroz_Copy= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -6062,6 +6062,7 @@ function CreateNeutralPassive takes nothing returns nothing
 
     set u=BlzCreateUnitWithSkin(p, 'h03E', - 23224.2, - 22174.3, 282.180, 'h03E')
     set u=BlzCreateUnitWithSkin(p, 'h0K1', - 23683.1, - 22645.5, 338.006, 'h0K1')
+    set u=BlzCreateUnitWithSkin(p, 'Hvsh', - 3556.9, - 27786.0, 246.222, 'Hvsh')
     set u=BlzCreateUnitWithSkin(p, 'n04R', - 4523.2, - 29573.1, 280.438, 'n04R')
     set u=BlzCreateUnitWithSkin(p, 'h05P', - 5139.5, - 26185.9, 330.754, 'h05P')
 endfunction
