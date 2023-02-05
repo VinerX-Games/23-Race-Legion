@@ -22,12 +22,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -1498,6 +1498,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_StolicaAttacked= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1596,6 +1597,7 @@ real array mana
 integer ModeBuildingI= 0
 unit ModeBuilding= null
 
+boolean array cap_time
 boolexpr IncomeBuildings
 boolexpr IncomeLumber
 boolexpr DisFilter
@@ -1765,7 +1767,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1773,33 +1775,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1807,19 +1809,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -2387,6 +2389,16 @@ function Random takes integer Chance,integer FromAll returns boolean
 
 endfunction
 //***************************************************************************
+//*  InitThings
+function InitThings takes nothing returns nothing
+    local integer i= 0
+    loop
+        exitwhen i == 25
+        set cap_time[i]=false
+        set i=i + 1
+    endloop
+endfunction
+//***************************************************************************
 //*  CommonHash
 //
 //
@@ -2448,10 +2460,10 @@ function RandomLoc takes nothing returns location
         set udg_LocalPoint=Location(26964, - 24472)
     elseif i2 == 9 then
         set udg_LocalPoint=Location(20274, - 27753)
-    elseif i2 == 8 then
-        set udg_LocalPoint=Location(12250, - 27749)
-    elseif i2 == 9 then
-        set udg_LocalPoint=Location(- 7506, - 19236)
+   // elseif i2 == 8 then
+     //   set udg_LocalPoint = Location(12250,-27749)
+   // elseif i2 == 9 then
+   //     set udg_LocalPoint = Location(-7506,-19236)
     elseif i2 == 10 then
         set udg_LocalPoint=Location(- 18339, - 13192)
     elseif i2 == 11 then
@@ -6953,7 +6965,7 @@ function Trig_Initial_things_Func002A takes nothing returns nothing
     set udg_Visibl[GetConvertedPlayerId(GetEnumPlayer())]=GetLastCreatedFogModifier()
 endfunction
 
-function Trig_Initial_things_Func018A takes nothing returns nothing
+function Trig_Initial_things_Func019A takes nothing returns nothing
     call SetPlayerAbilityAvailableBJ(false, 'A0IQ', GetEnumPlayer())
     call SetPlayerAllianceStateBJ(GetEnumPlayer(), Player(12), bj_ALLIANCE_UNALLIED)
     call SetPlayerAllianceStateBJ(Player(12), GetEnumPlayer(), bj_ALLIANCE_UNALLIED)
@@ -6967,6 +6979,7 @@ function Trig_Initial_things_Actions takes nothing returns nothing
     call SetPlayerStateBJ(Player(PLAYER_NEUTRAL_PASSIVE), PLAYER_STATE_RESOURCE_GOLD, 100000)
     call SetPlayerStateBJ(Player(PLAYER_NEUTRAL_PASSIVE), PLAYER_STATE_RESOURCE_LUMBER, 100000)
     call StartInc()
+    call InitThings()
     // ------------------------------------------
     call SetPlayerColorBJ(Player(12), ConvertPlayerColor(24), true)
     call SetPlayerColorBJ(Player(15), ConvertPlayerColor(24), true)
@@ -6975,7 +6988,7 @@ function Trig_Initial_things_Actions takes nothing returns nothing
     call SetMapFlag(MAP_ALLIANCE_CHANGES_HIDDEN, false)
     call SetMapFlag(MAP_LOCK_RESOURCE_TRADING, false)
     call SetGameSpeed(MAP_SPEED_FASTEST)
-    call ForForce(udg_AllPlayers, function Trig_Initial_things_Func018A)
+    call ForForce(udg_AllPlayers, function Trig_Initial_things_Func019A)
 endfunction
 
 //===========================================================================
@@ -7324,7 +7337,7 @@ function Trig_MakeStolica_Conditions takes nothing returns boolean
     return true
 endfunction
 
-function Trig_MakeStolica_Func010A takes nothing returns nothing
+function Trig_MakeStolica_Func011A takes nothing returns nothing
     call UnitShareVisionBJ(true, GetTriggerUnit(), GetEnumPlayer())
 endfunction
 
@@ -7338,7 +7351,8 @@ function Trig_MakeStolica_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A145', GetTriggerUnit())
     call BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, ( "|cffd45e19Столица:|r " + GetUnitName(GetTriggerUnit()) ))
     call GroupAddUnitSimple(GetTriggerUnit(), udg_StolicaGroups)
-    call ForForce(GetPlayersAll(), function Trig_MakeStolica_Func010A)
+    call TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, GetTriggerUnit(), EVENT_UNIT_ATTACKED)
+    call ForForce(GetPlayersAll(), function Trig_MakeStolica_Func011A)
 endfunction
 
 //===========================================================================
@@ -7536,6 +7550,35 @@ function InitTrig_StolicaDead takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_StolicaDead, EVENT_PLAYER_UNIT_DEATH)
     call TriggerAddCondition(gg_trg_StolicaDead, Condition(function Trig_StolicaDead_Conditions))
     call TriggerAddAction(gg_trg_StolicaDead, function Trig_StolicaDead_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: StolicaAttacked
+//===========================================================================
+
+
+function Trig_StolicaAttacked_Conditions takes nothing returns boolean
+    return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups)
+endfunction
+
+function Trig_StolicaAttacked_Actions takes nothing returns nothing
+    local integer pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    if cap_time[pi] == true then
+        call DisplayTextToPlayer(Player(pi), 0, 0, "TRIGSTR_27508")
+        set cap_time[pi]=false
+        call TriggerSleepAction(300)
+        set cap_time[pi]=true
+    endif
+    
+endfunction
+
+//===========================================================================
+function InitTrig_StolicaAttacked takes nothing returns nothing
+    set gg_trg_StolicaAttacked=CreateTrigger()
+    //call TriggerRegisterAnyUnitEventBJ( gg_trg_StolicaAttacked, EVENT_PLAYER_UNIT_ATTACKED )
+    call TriggerAddCondition(gg_trg_StolicaAttacked, Condition(function Trig_StolicaAttacked_Conditions))
+    call TriggerAddAction(gg_trg_StolicaAttacked, function Trig_StolicaAttacked_Actions)
 endfunction
 
 
@@ -42768,6 +42811,40 @@ function InitTrig_Spell1_Copy takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: KillTestUnits O Copy
+//===========================================================================
+function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
+    return RectContainsUnit(gg_rct_TestRegion, GetFilterUnit())
+endfunction
+
+function Trig_KillTestUnits_O_Copy_Func003A takes nothing returns nothing
+    local unit u= GetEnumUnit()
+    local player p= GetOwningPlayer(u)
+    local integer id= GetUnitTypeId(u)
+    if IsUnitType(u, UNIT_TYPE_HERO) then
+        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
+    endif
+    call RemoveUnit(u)
+    set u=null
+    set p=null
+endfunction
+
+function Trig_KillTestUnits_O_Copy_Actions takes nothing returns nothing
+    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Copy_Func001002)
+    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Copy_Func003A)
+    call GroupClear(udg_LocalOtrad2)
+endfunction
+
+//===========================================================================
+function InitTrig_KillTestUnits_O_Copy takes nothing returns nothing
+    set gg_trg_KillTestUnits_O_Copy=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O_Copy, 0.01)
+    call TriggerAddAction(gg_trg_KillTestUnits_O_Copy, function Trig_KillTestUnits_O_Copy_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: KillMagaz
 //===========================================================================
 function Trig_KillMagaz_Actions takes nothing returns nothing
@@ -43092,6 +43169,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_RebebmerToBuild()
     call InitTrig_StolicaTime()
     call InitTrig_StolicaDead()
+    call InitTrig_StolicaAttacked()
     call InitTrig_MOD_feoda_O_set_spell()
     call InitTrig_MOD_stolica_Set()
     call InitTrig_MOD_stolica_Start()
@@ -43965,6 +44043,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_HP_24k_O()
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
+    call InitTrig_KillTestUnits_O_Copy()
     call InitTrig_KillMagaz()
     call InitTrig_Setlvl()
     call InitTrig_A1()
@@ -43998,6 +44077,7 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_BloodClose)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForNavy)
+    call ConditionalTriggerExecute(gg_trg_KillTestUnits_O_Copy)
 endfunction
 
 //***************************************************************************
@@ -44354,7 +44434,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
