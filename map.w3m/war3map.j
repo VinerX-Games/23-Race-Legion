@@ -5203,6 +5203,7 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0EP', - 2624.0, - 29696.0, 270.000, 'h0EP')
     set u=BlzCreateUnitWithSkin(p, 'h0IQ', - 5696.0, - 26560.0, 270.000, 'h0IQ')
     set u=BlzCreateUnitWithSkin(p, 'ogre', - 1120.0, - 29728.0, 270.000, 'ogre')
+    set u=BlzCreateUnitWithSkin(p, 'n043', - 2944.0, - 26624.0, 270.000, 'n043')
     set u=BlzCreateUnitWithSkin(p, 'h0HH', 0.0, - 26560.0, 270.000, 'h0HH')
     set u=BlzCreateUnitWithSkin(p, 'h0IR', - 6528.0, - 26688.0, 270.000, 'h0IR')
     set u=BlzCreateUnitWithSkin(p, 'h0IS', - 6080.0, - 26752.0, 270.000, 'h0IS')
@@ -5710,8 +5711,8 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     set gg_unit_n003_0028=BlzCreateUnitWithSkin(p, 'n003', 16192.0, - 5952.0, 270.000, 'n003')
     call WaygateSetDestination(gg_unit_n003_0028, GetRectCenterX(gg_rct_TrainIn), GetRectCenterY(gg_rct_TrainIn))
     call WaygateActivate(gg_unit_n003_0028, true)
-    set gg_unit_n04E_0048=BlzCreateUnitWithSkin(p, 'n04E', - 30080.0, 30400.0, 270.000, 'n04E')
-    call SetUnitColor(gg_unit_n04E_0048, ConvertPlayerColor(0))
+    set u=BlzCreateUnitWithSkin(p, 'n04E', - 30080.0, 30400.0, 270.000, 'n04E')
+    call SetUnitColor(u, ConvertPlayerColor(0))
     set u=BlzCreateUnitWithSkin(p, 'n01M', - 30400.0, 30528.0, 270.000, 'n01M')
     call SetUnitColor(u, ConvertPlayerColor(0))
     set u=BlzCreateUnitWithSkin(p, 'n01L', - 30400.0, 30400.0, 270.000, 'n01L')
@@ -34606,6 +34607,7 @@ function Trig_StartNight_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('edot', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('edoc', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('n05D', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('n05H', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('E00V', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('E011', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('E00W', 1, GetEnumPlayer())
@@ -34664,6 +34666,7 @@ function Trig_KrugCan_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('Remk', 1, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('Remg', 1, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('Reib', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0GB', 1, GetOwningPlayer(GetTriggerUnit()))
 endfunction
 
 //===========================================================================
@@ -34689,6 +34692,7 @@ function Trig_KrugFin_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('edot', - 1, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('edoc', - 1, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('n05D', - 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('n05H', - 1, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('earc', 0, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('esen', 0, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('e00I', 0, GetOwningPlayer(GetTriggerUnit()))
@@ -34714,11 +34718,15 @@ function Trig_ElfBegFin_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_ElfBegFin_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0GB', 1, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('R0G1', 0, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('Redc', 0, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('Reeb', 0, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('Reec', 0, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('Redt', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0G9', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0GA', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0G8', 0, GetOwningPlayer(GetTriggerUnit()))
 endfunction
 
 //===========================================================================
@@ -42804,20 +42812,6 @@ endfunction
 
 
 //===========================================================================
-// Trigger: KillMagaz
-//===========================================================================
-function Trig_KillMagaz_Actions takes nothing returns nothing
-    call RemoveUnit(gg_unit_n04E_0048)
-endfunction
-
-//===========================================================================
-function InitTrig_KillMagaz takes nothing returns nothing
-    set gg_trg_KillMagaz=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(gg_trg_KillMagaz, Player(0), "killmagaz", true)
-    call TriggerAddAction(gg_trg_KillMagaz, function Trig_KillMagaz_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: Setlvl
 //===========================================================================
 function Trig_Setlvl_Func001001002 takes nothing returns boolean
@@ -44003,7 +43997,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
     call InitTrig_KillTestUnits_O_Copy()
-    call InitTrig_KillMagaz()
     call InitTrig_Setlvl()
     call InitTrig_A1()
     call InitTrig_Second_O()
