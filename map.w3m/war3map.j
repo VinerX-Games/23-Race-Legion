@@ -1499,6 +1499,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_Minitank_3= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -27075,6 +27076,29 @@ function InitTrig_Minitank_2_beg takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: Minitank 3
+//===========================================================================
+function Trig_Minitank_3_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0BT' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Minitank_3_Actions takes nothing returns nothing
+    set udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
+    call TriggerExecute(gg_trg_All_Gnomes)
+endfunction
+
+//===========================================================================
+function InitTrig_Minitank_3 takes nothing returns nothing
+    set gg_trg_Minitank_3=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Minitank_3, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_Minitank_3, Condition(function Trig_Minitank_3_Conditions))
+    call TriggerAddAction(gg_trg_Minitank_3, function Trig_Minitank_3_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: Minitank 3 can
 //===========================================================================
 function Trig_Minitank_3_can_Conditions takes nothing returns boolean
@@ -34785,6 +34809,62 @@ function InitTrig_malfurionPas takes nothing returns nothing
     call TriggerAddCondition(gg_trg_malfurionPas, Condition(function Trig_malfurionPas_Conditions))
     call TriggerAddAction(gg_trg_malfurionPas, function Trig_malfurionPas_Actions)
 endfunction
+
+//===========================================================================
+// Trigger: StartBuildingTree
+//
+// Тут расписать все айди юнитов, в которых превращаются светлячки и его цену
+//===========================================================================
+
+function Trig_StartBuildingTree_Conditions takes nothing returns boolean
+    local integer id= GetUnitTypeId(GetConstructingStructure())
+    return id == 'etoa' or id == 'etol' or id == 'etoe' or id == 'eaoe' or id == 'eaom' or id == 'eaow' or id == 'etrp'
+endfunction
+
+function Trig_StartBuildingTree_Actions takes nothing returns nothing
+    local integer pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    set disincome[pi]=disincome[pi] - 6
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    call UpdateGraf(pi)
+    call Enter(GetTriggerUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_StartBuildingTree takes nothing returns nothing
+    set gg_trg_StartBuildingTree=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_StartBuildingTree, EVENT_PLAYER_UNIT_CONSTRUCT_START)
+    call TriggerAddCondition(gg_trg_StartBuildingTree, Condition(function Trig_StartBuildingTree_Conditions))
+    call TriggerAddAction(gg_trg_StartBuildingTree, function Trig_StartBuildingTree_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: CanselBuildingTree
+//
+// Тут расписать все айди юнитов, в которых превращаются светлячки и его цену
+//===========================================================================
+
+function Trig_CanselBuildingTree_Conditions takes nothing returns boolean
+    local integer id= GetUnitTypeId(GetTriggerUnit())
+    return id == 'etoa' or id == 'etol' or id == 'etoe' or id == 'eaoe' or id == 'eaom' or id == 'eaow' or id == 'etrp'
+endfunction
+
+function Trig_CanselBuildingTree_Actions takes nothing returns nothing
+    local integer pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    set disincome[pi]=disincome[pi] + 6
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] + 1
+    call UpdateGraf(pi)
+    call Enter(GetTriggerUnit())
+endfunction
+
+//===========================================================================
+function InitTrig_CanselBuildingTree takes nothing returns nothing
+    set gg_trg_CanselBuildingTree=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_CanselBuildingTree, EVENT_PLAYER_UNIT_CONSTRUCT_CANCEL)
+    call TriggerAddCondition(gg_trg_CanselBuildingTree, Condition(function Trig_CanselBuildingTree_Conditions))
+    call TriggerAddAction(gg_trg_CanselBuildingTree, function Trig_CanselBuildingTree_Actions)
+endfunction
+
 
 //===========================================================================
 // Trigger: NagaStart
@@ -43547,6 +43627,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Minitank_2()
     call InitTrig_Minitank_2_can()
     call InitTrig_Minitank_2_beg()
+    call InitTrig_Minitank_3()
     call InitTrig_Minitank_3_can()
     call InitTrig_Minitank_3_beg()
     call InitTrig_UniTank_start()
@@ -43767,6 +43848,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ElfBegFin()
     call InitTrig_ElfCan()
     call InitTrig_malfurionPas()
+    call InitTrig_StartBuildingTree()
+    call InitTrig_CanselBuildingTree()
     call InitTrig_NagaStart()
     call InitTrig_MurlokCan()
     call InitTrig_MurlokBeg()
