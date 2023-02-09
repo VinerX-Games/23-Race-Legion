@@ -22,12 +22,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE___SpellHero='A06P'
-constant integer SpellSleepAOE___SpellCast='A06O'
-constant string SpellSleepAOE___SpellOrder="sleep"
-constant integer SpellSleepAOE___DummyID='u000'
-constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE___DummyUnit
+constant integer SpellSleepAOE__SpellHero='A06P'
+constant integer SpellSleepAOE__SpellCast='A06O'
+constant string SpellSleepAOE__SpellOrder="sleep"
+constant integer SpellSleepAOE__DummyID='u000'
+constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE__DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -1500,6 +1500,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_LortemarArmorActive= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1768,7 +1769,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE___getRange takes integer level returns integer
+    function SpellSleepAOE__getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1776,33 +1777,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
-            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
+            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
+            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE___anon__0 takes nothing returns boolean
-            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE__anon__0 takes nothing returns boolean
+            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE___anon__2 takes nothing returns boolean
+            function SpellSleepAOE__anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE___anon__1 takes nothing returns nothing
+        function SpellSleepAOE__anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1810,19 +1811,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE___onInit takes nothing returns nothing
+    function SpellSleepAOE__onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
+        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
         set t=null
     endfunction
 
@@ -2395,7 +2396,7 @@ function InitThings takes nothing returns nothing
     local integer i= 0
     loop
         exitwhen i == 25
-        set cap_time[i]=false
+        set cap_time[i]=true
         set i=i + 1
     endloop
 endfunction
@@ -5491,10 +5492,10 @@ function CreateNeutralHostileBuildings takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h06I', 21600.0, - 21856.0, 270.000, 'h06I')
     set u=BlzCreateUnitWithSkin(p, 'h00K', 22816.0, - 7712.0, 270.000, 'h00K')
     set u=BlzCreateUnitWithSkin(p, 'h08R', - 16448.0, - 5632.0, 270.000, 'h08R')
-    set u=BlzCreateUnitWithSkin(p, 'h0A1', - 1152.0, - 16256.0, 270.000, 'h0A1')
+    set u=BlzCreateUnitWithSkin(p, 'h0A1', - 1088.0, - 16192.0, 270.000, 'h0A1')
     set u=BlzCreateUnitWithSkin(p, 'h04I', - 21856.0, - 1376.0, 270.000, 'h04I')
     set u=BlzCreateUnitWithSkin(p, 'h08V', - 16448.0, 3904.0, 270.000, 'h08V')
-    set u=BlzCreateUnitWithSkin(p, 'h07L', 23392.0, - 3232.0, 270.000, 'h07L')
+    set u=BlzCreateUnitWithSkin(p, 'h07L', 23328.0, - 3168.0, 270.000, 'h07L')
     set gg_unit_h07O_0251=BlzCreateUnitWithSkin(p, 'h07O', 29408.0, - 3360.0, 270.000, 'h07O')
     set u=BlzCreateUnitWithSkin(p, 'h07P', 25376.0, 2080.0, 270.000, 'h07P')
     set u=BlzCreateUnitWithSkin(p, 'h084', 12768.0, 11872.0, 270.000, 'h084')
@@ -7383,22 +7384,26 @@ endfunction
 //===========================================================================
 // Trigger: StolicaTime
 //===========================================================================
-function Trig_StolicaTime_Func001Func001Func001Func001C takes nothing returns boolean
+function Trig_StolicaTime_Func001Func001Func001Func001001001002 takes nothing returns boolean
+    return ( GetUnitAbilityLevelSwapped('A0IQ', GetFilterUnit()) != 0 )
+endfunction
+
+function Trig_StolicaTime_Func001Func001Func001Func003C takes nothing returns boolean
     if ( not ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_StolicaTime_Func001Func001Func001Func002Func001C takes nothing returns boolean
+function Trig_StolicaTime_Func001Func001Func001Func004Func001C takes nothing returns boolean
     if ( not ( IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) == true ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_StolicaTime_Func001Func001Func001Func002A takes nothing returns nothing
-    if ( Trig_StolicaTime_Func001Func001Func001Func002Func001C() ) then
+function Trig_StolicaTime_Func001Func001Func001Func004A takes nothing returns nothing
+    if ( Trig_StolicaTime_Func001Func001Func001Func004Func001C() ) then
         call SetUnitOwner(GetEnumUnit(), Player(PLAYER_NEUTRAL_AGGRESSIVE), true)
     else
         call KillUnit(GetEnumUnit())
@@ -7406,22 +7411,12 @@ function Trig_StolicaTime_Func001Func001Func001Func002A takes nothing returns no
     endif
 endfunction
 
-function Trig_StolicaTime_Func001Func001Func001Func004001002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('A0IQ', GetFilterUnit()) != 0 )
-endfunction
-
-function Trig_StolicaTime_Func001Func001Func001Func004A takes nothing returns nothing
-    call IssueImmediateOrderBJ(GetEnumUnit(), "windwalk")
-    call DisplayTextToForce(GetPlayersAll(), ( GetPlayerName(GetEnumPlayer()) + " - |cffff0000почти проиграл|r, его |cffd45e19столица |r не не была построена ко времени, а потому была установлена автоматически." ))
-    return
-endfunction
-
-function Trig_StolicaTime_Func001Func001Func001Func005001001002 takes nothing returns boolean
+function Trig_StolicaTime_Func001Func001Func001Func006001001002 takes nothing returns boolean
     return ( GetUnitAbilityLevelSwapped('A0IQ', GetFilterUnit()) != 0 )
 endfunction
 
 function Trig_StolicaTime_Func001Func001Func001C takes nothing returns boolean
-    if ( not ( CountUnitsInGroup(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func005001001002))) != 0 ) ) then
+    if ( not ( CountUnitsInGroup(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func006001001002))) != 0 ) ) then
         return false
     endif
     return true
@@ -7442,13 +7437,14 @@ function Trig_StolicaTime_Func001A takes nothing returns nothing
     if ( Trig_StolicaTime_Func001Func001C() ) then
     else
         if ( Trig_StolicaTime_Func001Func001Func001C() ) then
-            call ForGroupBJ(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func004001002)), function Trig_StolicaTime_Func001Func001Func001Func004A)
+            call IssueImmediateOrderBJ(GroupPickRandomUnit(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func001001001002))), "windwalk")
+            call DisplayTextToForce(GetPlayersAll(), ( GetPlayerName(GetEnumPlayer()) + " - |cffffff00почти проиграл|r|r, его |cffd45e19столица|r не не была построена ко времени, а потому была установлена автоматически." ))
         else
-            if ( Trig_StolicaTime_Func001Func001Func001Func001C() ) then
+            if ( Trig_StolicaTime_Func001Func001Func001Func003C() ) then
                 call DisplayTextToForce(GetPlayersAll(), ( GetPlayerName(GetEnumPlayer()) + " - |cffff0000проиграл|r, его |cffd45e19столица |r не построена ко времени. :(" ))
             else
             endif
-            call ForGroupBJ(GetUnitsOfPlayerAll(GetEnumPlayer()), function Trig_StolicaTime_Func001Func001Func001Func002A)
+            call ForGroupBJ(GetUnitsOfPlayerAll(GetEnumPlayer()), function Trig_StolicaTime_Func001Func001Func001Func004A)
             call ClearEc(GetPlayerId(GetEnumPlayer()))
         endif
     endif
@@ -7519,7 +7515,7 @@ endfunction
 
 function Trig_StolicaAttacked_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
-    if cap_time[pi] == true then
+    if cap_time[pi] then
         call DisplayTextToPlayer(Player(pi), 0, 0, "TRIGSTR_27508")
         set cap_time[pi]=false
         call TriggerSleepAction(300)
@@ -31773,8 +31769,8 @@ endfunction
 //===========================================================================
 function Trig_BloodElvesOn_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_KaelMassAstral)
-    call EnableTrigger(gg_trg_LortemarAddArmor)
-    
+    //call EnableTrigger( gg_trg_LortemarAddArmor )
+    call EnableTrigger(gg_trg_LortemarArmorActive)
     call EnableTrigger(gg_trg_Arcana)
     call EnableTrigger(gg_trg_ArcanaBegin)
     call EnableTrigger(gg_trg_ArcanaCansel)
@@ -31925,27 +31921,34 @@ function InitTrig_KaelMassAstral takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: LortemarAddArmor
+// Trigger: LortemarArmorActive
 //===========================================================================
-function Trig_LortemarAddArmor_Conditions takes nothing returns boolean
-    if ( not ( GetLearnedSkillBJ() == 'A0DD' ) ) then
-        return false
-    endif
-    return true
+function Trig_LortemarArmorActive_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A16M'
 endfunction
 
-function Trig_LortemarAddArmor_Actions takes nothing returns nothing
-    call UnitAddAbilityBJ('ACmi', GetTriggerUnit())
+function Trig_LortemarArmorActive_Actions takes nothing returns nothing
+
+    
+    local unit u= GetTriggerUnit()
+    call UnitAddAbility(u, 'A0DD')
+    call UnitAddAbility(u, 'ACmi')
+    call TriggerSleepAction(20.00)
+    call UnitRemoveAbility(u, 'A0DD')
+    call UnitRemoveAbility(u, 'ACmi')
+    set u=null
+
 endfunction
 
 //===========================================================================
-function InitTrig_LortemarAddArmor takes nothing returns nothing
-    set gg_trg_LortemarAddArmor=CreateTrigger()
-    call DisableTrigger(gg_trg_LortemarAddArmor)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_LortemarAddArmor, EVENT_PLAYER_HERO_SKILL)
-    call TriggerAddCondition(gg_trg_LortemarAddArmor, Condition(function Trig_LortemarAddArmor_Conditions))
-    call TriggerAddAction(gg_trg_LortemarAddArmor, function Trig_LortemarAddArmor_Actions)
+function InitTrig_LortemarArmorActive takes nothing returns nothing
+    set gg_trg_LortemarArmorActive=CreateTrigger()
+    call DisableTrigger(gg_trg_LortemarArmorActive)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_LortemarArmorActive, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_LortemarArmorActive, Condition(function Trig_LortemarArmorActive_Conditions))
+    call TriggerAddAction(gg_trg_LortemarArmorActive, function Trig_LortemarArmorActive_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: Arcana
@@ -43767,7 +43770,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_BloodElvesOn()
     call InitTrig_Start_Elves_O()
     call InitTrig_KaelMassAstral()
-    call InitTrig_LortemarAddArmor()
+    call InitTrig_LortemarArmorActive()
     call InitTrig_Arcana()
     call InitTrig_ArcanaBegin()
     call InitTrig_ArcanaCansel()
@@ -44470,7 +44473,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE___onInit")
+call ExecuteFunc("SpellSleepAOE__onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
