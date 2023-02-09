@@ -1,5 +1,5 @@
 [Misc]
-AgiDefenseBonus=0.15
+AgiDefenseBonus=0.23
 DisplayBuildingStatus=1
 DrainGivesBonusLife=1
 DrainGivesBonusMana=1
