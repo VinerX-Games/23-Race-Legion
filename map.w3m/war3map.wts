@@ -23373,6 +23373,12 @@ STRING 3873
 Рассекающий удар
 }
 
+STRING 3874
+// Abilities: A0JP (Божественный щит), EditorSuffix (Editor Suffix)
+{
+(длит 10 кд 60)
+}
+
 STRING 3875
 // Buffs/Effects: B013 (ЭК), Bufftip (Tooltip)
 {
@@ -27100,6 +27106,12 @@ STRING 4490
 |cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.
 
 |cffffff00Приносит 20 инкома|r
+}
+
+STRING 4491
+// Buffs/Effects: B06Q (), EditorSuffix (Editor Suffix)
+{
+(Вайш кольцо льда)
 }
 
 STRING 4492
@@ -168250,12 +168262,6 @@ STRING 27700
 |cff008000-(+10) к ловкости.|r
 
 Спасает в самую трудную минуту.
-}
-
-STRING 27701
-// Abilities: A0JP (Божественный щит), EditorSuffix (Editor Suffix)
-{
-(длит 10 кд 35)
 }
 
 STRING 27702
