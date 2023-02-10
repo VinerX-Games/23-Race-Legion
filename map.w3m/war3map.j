@@ -5274,7 +5274,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'opeo', - 1957.6, - 29824.5, 271.943, 'opeo')
     set u=BlzCreateUnitWithSkin(p, 'o02U', - 6183.5, - 29862.8, 278.086, 'o02U')
     set u=BlzCreateUnitWithSkin(p, 'h0J5', - 3894.0, - 29881.6, 272.007, 'h0J5')
-    set u=BlzCreateUnitWithSkin(p, 'u02D', - 4005.9, - 26178.3, 350.101, 'u02D')
+    set u=BlzCreateUnitWithSkin(p, 'u02D', - 4736.0, - 25473.8, 350.101, 'u02D')
     set u=BlzCreateUnitWithSkin(p, 'h0I9', - 4398.5, - 26268.8, 109.660, 'h0I9')
     set u=BlzCreateUnitWithSkin(p, 'n052', - 3517.3, - 27626.9, 50.121, 'n052')
     set u=BlzCreateUnitWithSkin(p, 'n050', - 3299.3, - 27637.6, 164.130, 'n050')
@@ -5310,7 +5310,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0IF', - 3582.6, - 25805.8, 246.850, 'h0IF')
     set u=BlzCreateUnitWithSkin(p, 'h0IG', - 3406.7, - 25854.5, 265.690, 'h0IG')
     set u=BlzCreateUnitWithSkin(p, 'h0IE', - 3987.2, - 25805.7, 285.561, 'h0IE')
-    set u=BlzCreateUnitWithSkin(p, 'h0IC', - 3589.3, - 26119.4, 255.470, 'h0IC')
+    set u=BlzCreateUnitWithSkin(p, 'h0IC', - 3229.4, - 25863.7, 255.470, 'h0IC')
     set u=BlzCreateUnitWithSkin(p, 'h0ID', - 3888.8, - 25837.2, 259.736, 'h0ID')
     set u=BlzCreateUnitWithSkin(p, 'o023', - 5792.7, - 29745.9, 272.250, 'o023')
     set u=BlzCreateUnitWithSkin(p, 'opeo', - 6201.1, - 28833.8, 229.973, 'opeo')
@@ -5387,6 +5387,8 @@ function CreateUnitsForPlayer2 takes nothing returns nothing
     local real life
 
     set u=BlzCreateUnitWithSkin(p, 'N058', - 2607.5, - 28585.5, 203.814, 'N058')
+    set u=BlzCreateUnitWithSkin(p, 'h0K2', - 3751.7, - 25806.9, 273.509, 'h0K2')
+    set u=BlzCreateUnitWithSkin(p, 'e009', - 3723.0, - 25980.1, 273.685, 'e009')
     set u=BlzCreateUnitWithSkin(p, 'u02J', - 2840.3, - 30096.9, 29.137, 'u02J')
 endfunction
 
@@ -21112,7 +21114,7 @@ function Trig_Spell2_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_Spell2_Actions takes nothing returns nothing
-    call UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.01 ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
+    call UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.014 ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
 endfunction
 
 //===========================================================================
