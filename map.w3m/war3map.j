@@ -391,9 +391,7 @@ trigger gg_trg_MOD_stolica_Start= null
 trigger gg_trg_MOD_feoda_O_Set= null
 trigger gg_trg_MOD_feoda_O_Set_Spell= null
 trigger gg_trg_MOD_feoda_O_Start= null
-trigger gg_trg_MOD_stolica_Start_Copy= null
 trigger gg_trg_FeodalDead= null
-trigger gg_trg_FeodalDead2= null
 trigger gg_trg_DoNotAttackSenior= null
 trigger gg_trg_AllPlayers_and_vassals= null
 trigger gg_trg_RepairToMuch_O= null
@@ -1501,6 +1499,8 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_DoNotAttackSenior2= null
+trigger gg_trg_FeodalDead2= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1600,6 +1600,9 @@ integer ModeBuildingI= 0
 unit ModeBuilding= null
 
 boolean array cap_time
+force array Vassals
+player array Senior
+unit array Capital
 boolexpr IncomeBuildings
 boolexpr IncomeLumber
 boolexpr DisFilter
@@ -2397,7 +2400,16 @@ function InitThings takes nothing returns nothing
     loop
         exitwhen i == 25
         set cap_time[i]=true
+        set Vassals[i]=CreateForce()
+        set Senior[i]=null
+        set Capital[i]=null
+        
+        
+        
+        
+        
         set i=i + 1
+        
     endloop
 endfunction
 //***************************************************************************
@@ -7665,8 +7677,8 @@ function Trig_MOD_feoda_O_Start_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_MakeStolica)
     call EnableTrigger(gg_trg_UpgradeStolica)
     call EnableTrigger(gg_trg_StolicaTime)
-    call EnableTrigger(gg_trg_FeodalDead)
-    call EnableTrigger(gg_trg_DoNotAttackSenior)
+    call EnableTrigger(gg_trg_FeodalDead2)
+    call EnableTrigger(gg_trg_DoNotAttackSenior2)
     call SetMapFlag(MAP_LOCK_ALLIANCE_CHANGES, true)
     call SetMapFlag(MAP_ALLIANCE_CHANGES_HIDDEN, true)
 endfunction
@@ -7678,39 +7690,6 @@ function InitTrig_MOD_feoda_O_Start takes nothing returns nothing
     call TriggerRegisterPlayerChatEvent(gg_trg_MOD_feoda_O_Start, Player(0), "-mod feod", true)
     call TriggerAddCondition(gg_trg_MOD_feoda_O_Start, Condition(function Trig_MOD_feoda_O_Start_Conditions))
     call TriggerAddAction(gg_trg_MOD_feoda_O_Start, function Trig_MOD_feoda_O_Start_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: MOD stolica Start Copy
-//===========================================================================
-function Trig_MOD_stolica_Start_Copy_Conditions takes nothing returns boolean
-    if ( not ( udg_GameMode == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_MOD_stolica_Start_Copy_Func005A takes nothing returns nothing
-    call SetPlayerAbilityAvailableBJ(true, 'A0IQ', GetEnumPlayer())
-endfunction
-
-function Trig_MOD_stolica_Start_Copy_Actions takes nothing returns nothing
-    call DisplayTextToForce(udg_AllPlayers, "TRIGSTR_2404")
-    call ForForce(udg_AllPlayers, function Trig_MOD_stolica_Start_Copy_Func005A)
-    call EnableTrigger(gg_trg_MakeStolica)
-    call EnableTrigger(gg_trg_UpgradeStolica)
-    call EnableTrigger(gg_trg_StolicaDead)
-    call EnableTrigger(gg_trg_StolicaTime)
-    call TriggerExecute(gg_trg_RebebmerToBuild)
-endfunction
-
-//===========================================================================
-function InitTrig_MOD_stolica_Start_Copy takes nothing returns nothing
-    set gg_trg_MOD_stolica_Start_Copy=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(gg_trg_MOD_stolica_Start_Copy, Player(0), "-mod st", true)
-    call TriggerRegisterTimerExpireEventBJ(gg_trg_MOD_stolica_Start_Copy, udg_LobbyTime)
-    call TriggerAddCondition(gg_trg_MOD_stolica_Start_Copy, Condition(function Trig_MOD_stolica_Start_Copy_Conditions))
-    call TriggerAddAction(gg_trg_MOD_stolica_Start_Copy, function Trig_MOD_stolica_Start_Copy_Actions)
 endfunction
 
 //===========================================================================
@@ -7887,6 +7866,139 @@ function InitTrig_FeodalDead takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: FeodalDead2
+//===========================================================================
+
+//3 сек неуяза
+function CapTime takes nothing returns nothing
+    local unit u= udg_LocalUnit3
+    call SetUnitLifePercentBJ(u, 100)
+    call UnitAddAbility(u, 'Avul')
+    call TriggerSleepAction(3)
+    call UnitRemoveAbility(u, 'Avul')
+endfunction
+
+
+function ClearOldAllies takes player p returns nothing
+    local player p0= Senior[GetPlayerId(p)]
+    call ForceRemovePlayer(Vassals[GetPlayerId(p0)], p)
+    call SetPlayerAllianceStateBJ(p, p0, bj_ALLIANCE_UNALLIED)
+    call SetPlayerAllianceStateBJ(p0, p, bj_ALLIANCE_UNALLIED)
+    call SetForceAllianceStateBJ(GetForceOfPlayer(p), Vassals[GetPlayerId(p0)], bj_ALLIANCE_UNALLIED)
+    call SetForceAllianceStateBJ(Vassals[GetPlayerId(p0)], GetForceOfPlayer(p), bj_ALLIANCE_UNALLIED)
+    set p0=null
+endfunction
+
+function NewAlly takes player p returns nothing
+    local player p3= Senior[GetPlayerId(p)]
+    call SetPlayerAllianceStateBJ(p, p3, bj_ALLIANCE_ALLIED_UNITS)
+    call SetPlayerAllianceStateBJ(p3, p, bj_ALLIANCE_ALLIED_VISION)
+    call SetForceAllianceStateBJ(GetForceOfPlayer(p), Vassals[GetPlayerId(p3)], bj_ALLIANCE_ALLIED_VISION)
+    call SetForceAllianceStateBJ(Vassals[GetPlayerId(p3)], GetForceOfPlayer(p), bj_ALLIANCE_ALLIED_VISION)
+    set p3=null
+endfunction
+
+
+function ChangeAlly takes nothing returns nothing
+    local player p= udg_LocalPlayer
+    local player p0= GetEnumPlayer()
+    
+    call DisplayTextToForce(udg_AllPlayers, GetPlayerName(p0) + " - игроком захвачен игроком " + GetPlayerName(p))
+    call ClearOldAllies(p0)
+    set Senior[GetPlayerId(p0)]=p
+    call ForceAddPlayer(Vassals[GetPlayerId(p)], p0)
+    call NewAlly(p0)
+    
+    set p=null
+    set p0=null
+endfunction
+
+function Trig_FeodalDead2_Conditions takes nothing returns boolean
+    return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) and GetUnitLifePercent(GetTriggerUnit()) <= 99.00
+endfunction
+
+function Trig_FeodalDead2_Actions takes nothing returns nothing
+    local player p=GetOwningPlayer(GetTriggerUnit())
+    local integer pi= GetPlayerId(p)
+    
+    local player p2=GetOwningPlayer(GetAttacker())
+    local integer pi2=GetPlayerId(p2)
+    
+    local integer pi3
+    local player p3
+    
+    set udg_LocalUnit3=GetTriggerUnit()
+    call ExecuteFunc("CapTime")
+    
+    //Захватил свободный
+    if Senior[pi2] == null then
+        //свободного
+        call DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) + " - игроком захвачен игроком " + GetPlayerName(p2))
+        if Senior[pi] == null then
+            
+            set Senior[pi]=p2
+            call ForceAddPlayer(Vassals[pi2], p)
+            call NewAlly(p)
+            
+            if CountPlayersInForceBJ(Vassals[pi]) != 0 then
+                set udg_LocalPlayer=p2
+                call ForForce(Vassals[pi], function ChangeAlly)
+            endif
+            
+        //Чужого вассала
+        else
+            call ClearOldAllies(p)
+            set Senior[pi]=p2
+            call ForceAddPlayer(Vassals[pi2], p)
+            call NewAlly(p)
+            
+        endif
+    //Захватил чей-то вассал
+    else
+        set p3=Senior[pi2]
+        set pi3=GetPlayerId(p3)
+        call DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) + " - игроком захвачен игроком " + GetPlayerName(p3))
+        //свободного
+        if Senior[pi] == null then
+            
+            set Senior[pi]=p3
+            call ForceAddPlayer(Vassals[pi3], p)
+            call NewAlly(p)
+            
+            if CountPlayersInForceBJ(Vassals[pi]) != 0 then
+                set udg_LocalPlayer=p3
+                call ForForce(Vassals[pi], function ChangeAlly)
+            endif
+            
+        
+        //Чужого вассала
+        else
+            call ClearOldAllies(p)
+            set Senior[pi]=p3
+            call ForceAddPlayer(Vassals[pi3], p)
+            call NewAlly(p)
+            
+        endif
+       
+    endif
+
+    //set u = null
+    set p=null
+    set p2=null
+    set p3=null
+endfunction
+
+//===========================================================================
+function InitTrig_FeodalDead2 takes nothing returns nothing
+    set gg_trg_FeodalDead2=CreateTrigger()
+    call DisableTrigger(gg_trg_FeodalDead2)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_FeodalDead2, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_FeodalDead2, Condition(function Trig_FeodalDead2_Conditions))
+    call TriggerAddAction(gg_trg_FeodalDead2, function Trig_FeodalDead2_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: DoNotAttackSenior
 //===========================================================================
 function Trig_DoNotAttackSenior_Conditions takes nothing returns boolean
@@ -7908,6 +8020,27 @@ function InitTrig_DoNotAttackSenior takes nothing returns nothing
     call TriggerAddCondition(gg_trg_DoNotAttackSenior, Condition(function Trig_DoNotAttackSenior_Conditions))
     call TriggerAddAction(gg_trg_DoNotAttackSenior, function Trig_DoNotAttackSenior_Actions)
 endfunction
+
+//===========================================================================
+// Trigger: DoNotAttackSenior2
+//===========================================================================
+function Trig_DoNotAttackSenior2_Conditions takes nothing returns boolean
+    return IsPlayerInForce(GetOwningPlayer(GetAttacker()), Vassals[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))])
+endfunction
+
+function Trig_DoNotAttackSenior2_Actions takes nothing returns nothing
+    call IssueImmediateOrder(GetAttacker(), "stop")
+endfunction
+
+//===========================================================================
+function InitTrig_DoNotAttackSenior2 takes nothing returns nothing
+    set gg_trg_DoNotAttackSenior2=CreateTrigger()
+    call DisableTrigger(gg_trg_DoNotAttackSenior2)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_DoNotAttackSenior2, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_DoNotAttackSenior2, Condition(function Trig_DoNotAttackSenior2_Conditions))
+    call TriggerAddAction(gg_trg_DoNotAttackSenior2, function Trig_DoNotAttackSenior2_Actions)
+endfunction
+
 
 //===========================================================================
 // Trigger: AllPlayers and vassals
@@ -43203,9 +43336,10 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_MOD_feoda_O_Set()
     call InitTrig_MOD_feoda_O_Set_Spell()
     call InitTrig_MOD_feoda_O_Start()
-    call InitTrig_MOD_stolica_Start_Copy()
     call InitTrig_FeodalDead()
+    call InitTrig_FeodalDead2()
     call InitTrig_DoNotAttackSenior()
+    call InitTrig_DoNotAttackSenior2()
     call InitTrig_AllPlayers_and_vassals()
     call InitTrig_Only_Eastern()
     call InitTrig_Leave_Easten()
