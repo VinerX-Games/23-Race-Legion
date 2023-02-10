@@ -392,7 +392,9 @@ trigger gg_trg_MOD_feoda_O_Set= null
 trigger gg_trg_MOD_feoda_O_Set_Spell= null
 trigger gg_trg_MOD_feoda_O_Start= null
 trigger gg_trg_FeodalDead= null
+trigger gg_trg_FeodalDead2= null
 trigger gg_trg_DoNotAttackSenior= null
+trigger gg_trg_DoNotAttackSenior2= null
 trigger gg_trg_AllPlayers_and_vassals= null
 trigger gg_trg_RepairToMuch_O= null
 trigger gg_trg_Only_Eastern= null
@@ -1499,8 +1501,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_DoNotAttackSenior2= null
-trigger gg_trg_FeodalDead2= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -5398,7 +5398,6 @@ function CreateUnitsForPlayer2 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'N058', - 2607.5, - 28585.5, 203.814, 'N058')
     set u=BlzCreateUnitWithSkin(p, 'h0K2', - 3751.7, - 25806.9, 273.509, 'h0K2')
     set u=BlzCreateUnitWithSkin(p, 'e009', - 3723.0, - 25980.1, 273.685, 'e009')
     set u=BlzCreateUnitWithSkin(p, 'u02J', - 2840.3, - 30096.9, 29.137, 'u02J')
@@ -7914,7 +7913,7 @@ function ChangeAlly takes nothing returns nothing
 endfunction
 
 function Trig_FeodalDead2_Conditions takes nothing returns boolean
-    return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) and GetUnitLifePercent(GetTriggerUnit()) <= 99.00
+    return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) and GetUnitLifePercent(GetTriggerUnit()) <= 15.00
 endfunction
 
 function Trig_FeodalDead2_Actions takes nothing returns nothing
@@ -25554,6 +25553,7 @@ endfunction
 function Trig_HeroSell_Actions takes nothing returns nothing
     set udg_LocalReal2=GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit())
     set udg_LocalReal2=( udg_LocalReal2 * I2R(GetUnitAbilityLevelSwapped('A0TF', GetTriggerUnit())) )
+    set udg_LocalReal2=( udg_LocalReal2 * 0.25 )
     call SetUnitLifeBJ(GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) + udg_LocalReal2 ))
     call KillUnit(GetSpellTargetUnit())
 endfunction
