@@ -17260,7 +17260,7 @@ S
 }
 
 STRING 2861
-// Units: H0GE (Фронтовой Гений), Hotkey (Hotkey)
+// Units: H0GE (|c00FBCA04Фронтовой Гений), Hotkey (Hotkey)
 {
 X
 }
@@ -37699,7 +37699,7 @@ STRING 6243
 }
 
 STRING 6244
-// Units: H0GD (Фронтовой Гений), Hotkey (Hotkey)
+// Units: H0GD (|c00FBCA04Фронтовой Гений), Hotkey (Hotkey)
 {
 C
 }
@@ -37790,7 +37790,7 @@ STRING 6258
 }
 
 STRING 6259
-// Units: H0GF (Фронтовой Гений), Hotkey (Hotkey)
+// Units: H0GF (|c00FBCA04Фронтовой Гений), Hotkey (Hotkey)
 {
 C
 }
@@ -42379,7 +42379,7 @@ STRING 7022
 }
 
 STRING 7023
-// Units: H0GG (Стрелок-ветеран), Hotkey (Hotkey)
+// Units: H0GG (|c00FBCA04Стрелок-ветеран), Hotkey (Hotkey)
 {
 C
 }
@@ -55793,7 +55793,7 @@ STRING 9248
 }
 
 STRING 9249
-// Units: H0GC (Танк УТ v1.23), Hotkey (Hotkey)
+// Units: H0GC (|c00FBCA04Танк УТ v1.23), Hotkey (Hotkey)
 {
 Z
 }
@@ -79215,7 +79215,7 @@ STRING 13115
 }
 
 STRING 13116
-// Abilities: A08G (|cffff1900Боевой кличь|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A08G (|cffff1900Боевой кличь|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 +<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек.
 |cff008000Радиус действия (500).|r
@@ -79227,15 +79227,6 @@ STRING 13117
 Дает дополнительный урон |cffff1900инквизитору|r, так же поджигает атакованых врагов.
 |cff008000Дополнительный урон(5).|r
 |cff008000Урон от поджога (2).|r
-
-}
-
-STRING 13118
-// Abilities: A08M (|cffff1900Массовая благодать|r), Ubertip (Tooltip - Normal - Extended)
-{
-Востанавливает хп союзникам по близости.
-|cff008000Востановление здоровья (125).|r
-|cff008000Радиус действия (300).|r
 
 }
 
@@ -82028,13 +82019,6 @@ STRING 13576
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|n
 Один из лучших воинов ближнего боя в ордене, мастер дуели.
-}
-
-STRING 13577
-// Abilities: A08G (|cffff1900Боевой кличь|r), Unubertip (Tooltip - Turn Off - Extended)
-{
-+<Aroa,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <Aroa,Dur1> сек.
-|cff008000Радиус действия (500).|r
 }
 
 STRING 13578
@@ -93185,22 +93169,10 @@ STRING 15389
 Бьет по земле, нанося |cff008080<AHtc,DataA3>|r урона находящимся рядом наземным врагам и замедляя их передвижение на |cff008080<AHtc,DataC3,%>%|r и атаку на |cff008080<AHtc,DataD3,%>%.|r
 }
 
-STRING 15390
-// Abilities: A09J (|cffff1900Вдохновляющая Речь|r), Ubertip (Tooltip - Normal - Extended)
-{
-Произносит вдохновляющую речь, поднимая базовый урон союзников.|n|cffffcc002-й уровень:|r |cff008080+ 45% к урону.|r
-}
-
 STRING 15391
 // Abilities: A09J (|cffff1900Вдохновляющая Речь|r), Researchubertip (Tooltip - Learn - Extended)
 {
 Произносит вдохновляющую речь, поднимая базовый урон союзников.|n|cffffcc001-й уровень:|r |cff008080+ 35% к урону.|r|n|cffffcc002-й уровень:|r |cff008080+ 45% к урону.|r
-}
-
-STRING 15392
-// Abilities: A09J (|cffff1900Вдохновляющая Речь|r), Ubertip (Tooltip - Normal - Extended)
-{
-Произносит вдохновляющую речь, поднимая базовый урон союзников.|n|cffffcc001-й уровень:|r |cff008080+ 35% к урону.|r
 }
 
 STRING 15393
@@ -106481,7 +106453,7 @@ STRING 17560
 }
 
 STRING 17561
-// Units: H0GC (Танк УТ v1.23), EditorSuffix (Name - Editor Suffix)
+// Units: H0GC (|c00FBCA04Танк УТ v1.23), EditorSuffix (Name - Editor Suffix)
 {
 (Гномы)
 }
@@ -106799,7 +106771,7 @@ STRING 17613
 }
 
 STRING 17614
-// Units: H0GE (Фронтовой Гений), EditorSuffix (Name - Editor Suffix)
+// Units: H0GE (|c00FBCA04Фронтовой Гений), EditorSuffix (Name - Editor Suffix)
 {
 (Гномы)
 }
@@ -106931,7 +106903,7 @@ STRING 17635
 }
 
 STRING 17636
-// Units: H0GG (Стрелок-ветеран), EditorSuffix (Name - Editor Suffix)
+// Units: H0GG (|c00FBCA04Стрелок-ветеран), EditorSuffix (Name - Editor Suffix)
 {
 (Гномы)
 }
@@ -119027,34 +118999,10 @@ STRING 19648
 (НЭ)
 }
 
-STRING 19649
-// Units: H0GC (Танк УТ v1.23), Name (Name)
-{
-Танк УТ v1.23
-}
-
 STRING 19650
-// Units: H0GC (Танк УТ v1.23), Propernames (Proper Names)
+// Units: H0GC (|c00FBCA04Танк УТ v1.23), Propernames (Proper Names)
 {
 Экипаж "Улет",Экипаж "Сила Гнормегана",Команда Мегабрякса,Команда Всюдублеска
-}
-
-STRING 19651
-// Units: H0GC (Танк УТ v1.23), Awakentip (Tooltip - Awaken)
-{
-Восстановить Танк УТ v1.23
-}
-
-STRING 19652
-// Units: H0GC (Танк УТ v1.23), Tip (Tooltip - Basic)
-{
-Создать Танк УТ v1.23
-}
-
-STRING 19653
-// Units: H0GC (Танк УТ v1.23), Revivetip (Tooltip - Revive)
-{
-Восстановить Танк УТ v1.23
 }
 
 STRING 19654
@@ -119110,32 +119058,26 @@ STRING 19662
 Запустить игру
 }
 
-STRING 19663
-// Units: H0GD (Фронтовой Гений), Name (Name)
-{
-Фронтовой Гений
-}
-
 STRING 19664
-// Units: H0GD (Фронтовой Гений), Propernames (Proper Names)
+// Units: H0GD (|c00FBCA04Фронтовой Гений), Propernames (Proper Names)
 {
 Шайботайло,Стальнокрут,Шурупоклакс,Всюдунилли
 }
 
 STRING 19665
-// Units: H0GD (Фронтовой Гений), Awakentip (Tooltip - Awaken)
+// Units: H0GD (|c00FBCA04Фронтовой Гений), Awakentip (Tooltip - Awaken)
 {
 Воскресить Фронтового Гения
 }
 
 STRING 19666
-// Units: H0GD (Фронтовой Гений), Tip (Tooltip - Basic)
+// Units: H0GD (|c00FBCA04Фронтовой Гений), Tip (Tooltip - Basic)
 {
 Нанять Фронтового Гения
 }
 
 STRING 19667
-// Units: H0GD (Фронтовой Гений), Revivetip (Tooltip - Revive)
+// Units: H0GD (|c00FBCA04Фронтовой Гений), Revivetip (Tooltip - Revive)
 {
 Воскресить Фронтового Гения
 }
@@ -119296,37 +119238,31 @@ STRING 19693
 }
 
 STRING 19694
-// Units: H0GD (Фронтовой Гений), EditorSuffix (Name - Editor Suffix)
+// Units: H0GD (|c00FBCA04Фронтовой Гений), EditorSuffix (Name - Editor Suffix)
 {
 (Гномы 1 лвл)
 }
 
-STRING 19695
-// Units: H0GE (Фронтовой Гений), Name (Name)
-{
-Фронтовой Гений
-}
-
 STRING 19696
-// Units: H0GE (Фронтовой Гений), Propernames (Proper Names)
+// Units: H0GE (|c00FBCA04Фронтовой Гений), Propernames (Proper Names)
 {
 Шайботайло,Стальнокрут,Шурупоклакс,Всюдунилли
 }
 
 STRING 19697
-// Units: H0GE (Фронтовой Гений), Awakentip (Tooltip - Awaken)
+// Units: H0GF (|c00FBCA04Фронтовой Гений), Awakentip (Tooltip - Awaken)
 {
 Воскресить Фронтового Гения
 }
 
 STRING 19698
-// Units: H0GE (Фронтовой Гений), Tip (Tooltip - Basic)
+// Units: H0GF (|c00FBCA04Фронтовой Гений), Tip (Tooltip - Basic)
 {
 Нанять Фронтового Гения
 }
 
 STRING 19699
-// Units: H0GE (Фронтовой Гений), Revivetip (Tooltip - Revive)
+// Units: H0GF (|c00FBCA04Фронтовой Гений), Revivetip (Tooltip - Revive)
 {
 Воскресить Фронтового Гения
 }
@@ -119337,34 +119273,10 @@ STRING 19700
 R
 }
 
-STRING 19701
-// Units: H0GF (Фронтовой Гений), Name (Name)
-{
-Фронтовой Гений
-}
-
 STRING 19702
-// Units: H0GF (Фронтовой Гений), Propernames (Proper Names)
+// Units: H0GF (|c00FBCA04Фронтовой Гений), Propernames (Proper Names)
 {
 Шайботайло,Стальнокрут,Шурупоклакс,Всюдунилли
-}
-
-STRING 19703
-// Units: H0GF (Фронтовой Гений), Awakentip (Tooltip - Awaken)
-{
-Воскресить Фронтового Гения
-}
-
-STRING 19704
-// Units: H0GF (Фронтовой Гений), Tip (Tooltip - Basic)
-{
-Нанять Фронтового Гения
-}
-
-STRING 19705
-// Units: H0GF (Фронтовой Гений), Revivetip (Tooltip - Revive)
-{
-Воскресить Фронтового Гения
 }
 
 STRING 19706
@@ -119374,7 +119286,7 @@ STRING 19706
 }
 
 STRING 19707
-// Units: H0GF (Фронтовой Гений), EditorSuffix (Name - Editor Suffix)
+// Units: H0GF (|c00FBCA04Фронтовой Гений), EditorSuffix (Name - Editor Suffix)
 {
 (Гномы 2 лвл)
 }
@@ -119619,34 +119531,10 @@ STRING 19747
 (Гномы)
 }
 
-STRING 19748
-// Units: H0GG (Стрелок-ветеран), Name (Name)
-{
-Стрелок-ветеран
-}
-
 STRING 19749
-// Units: H0GG (Стрелок-ветеран), Propernames (Proper Names)
+// Units: H0GG (|c00FBCA04Стрелок-ветеран), Propernames (Proper Names)
 {
 Дзынекрут,Брякобаск,Пародзяньс,Искроватт
-}
-
-STRING 19750
-// Units: H0GG (Стрелок-ветеран), Awakentip (Tooltip - Awaken)
-{
-Воскресить стрелка-ветерана
-}
-
-STRING 19751
-// Units: H0GG (Стрелок-ветеран), Tip (Tooltip - Basic)
-{
-Нанять стрелка-ветерана
-}
-
-STRING 19752
-// Units: H0GG (Стрелок-ветеран), Revivetip (Tooltip - Revive)
-{
-Воскресить стрелка-ветерана
 }
 
 STRING 19753
@@ -120806,7 +120694,7 @@ STRING 19945
 }
 
 STRING 19946
-// Upgrades: R0C7 (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
+// Upgrades: R0C9 (Доспехи из клепаной кожи,Доспехи из армиро�), effect2 (Effect 2)
 {
 rmvx
 }
@@ -120893,12 +120781,6 @@ STRING 19960
 // Upgrades: R0C9 (Доспехи из клепаной кожи,Доспехи из армиро�), Tip (Tooltip)
 {
 Дополнительный слой брони
-}
-
-STRING 19961
-// Upgrades: R0C9 (Доспехи из клепаной кожи,Доспехи из армиро�), Ubertip (Tooltip - Extended)
-{
-Увеличивает здоровье танка "Венец".
 }
 
 STRING 19962
@@ -121071,7 +120953,7 @@ STRING 19989
 }
 
 STRING 19990
-// Upgrades: R0DG (Дрессировка животных), effect2 (Effect 2)
+// Upgrades: R0C7 (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
 {
 rmvx
 }
@@ -121302,13 +121184,13 @@ E
 }
 
 STRING 20027
-// Units: H0GC (Танк УТ v1.23), Ubertip (Tooltip - Extended)
+// Units: H0GC (|c00FBCA04Танк УТ v1.23), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaИнтеллект |r|nЭлитный танк, способный поддержать войско гномов мощью своих хитрых механизмов.
 }
 
 STRING 20028
-// Units: H0GG (Стрелок-ветеран), Ubertip (Tooltip - Extended)
+// Units: H0GG (|c00FBCA04Стрелок-ветеран), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaЛовкость |r|nГном, настрелявший на своем веку в немалое количество целей. 
 }
@@ -121332,19 +121214,19 @@ STRING 20031
 }
 
 STRING 20032
-// Units: H0GD (Фронтовой Гений), Ubertip (Tooltip - Extended)
+// Units: H0GD (|c00FBCA04Фронтовой Гений), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|nГерой гномов, возомнивший, что он равен по силе другим воинам Азерота. Причем, его уникальный экзоскелет призван это доказать...
 }
 
 STRING 20033
-// Units: H0GE (Фронтовой Гений), Ubertip (Tooltip - Extended)
+// Units: H0GE (|c00FBCA04Фронтовой Гений), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|nГерой гномов, возомнивший, что он равен по силе другим воинам Азерота. Причем, его уникальный экзоскелет призван это доказать...
 }
 
 STRING 20034
-// Units: H0GF (Фронтовой Гений), Ubertip (Tooltip - Extended)
+// Units: H0GF (|c00FBCA04Фронтовой Гений), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa55 сек.|r|n|cff7dc87dТип Героя:|r |cffaaf0aaОбычный |r|n|cff7dc87dОсновная характеристика:|r |cffaaf0aaСила |r|nГерой гномов, возомнивший, что он равен по силе другим воинам Азерота. Причем, его уникальный экзоскелет призван это доказать...
 }
@@ -127199,7 +127081,7 @@ STRING 20988
 }
 
 STRING 20989
-// Upgrades: R0F0 (Длинноствольные мушкеты), effect1 (Effect 1)
+// Upgrades: R0DG (Дрессировка животных), effect2 (Effect 2)
 {
 rmvx
 }
@@ -149448,6 +149330,12 @@ STRING 24596
 |cff9370dbПары саронита|r |cffffd700[2-й уровень]|r
 }
 
+STRING 24597
+// Units: H0GC (|c00FBCA04Танк УТ v1.23), Name (Name)
+{
+|c00FBCA04Танк УТ v1.23
+}
+
 STRING 24598
 // Abilities: A12J (|cff9370dbПары саронита|r), EditorSuffix (Editor Suffix)
 {
@@ -149641,6 +149529,12 @@ STRING 24629
 // Abilities: A12J (|cff9370dbПары саронита|r), Tip (Tooltip - Normal)
 {
 |cff9370dbПары саронита|r |cffffd700[1-й уровень]|r
+}
+
+STRING 24630
+// Units: H0GC (|c00FBCA04Танк УТ v1.23), Awakentip (Tooltip - Awaken)
+{
+Восстановить |c00FBCA04Танк УТ v1.23
 }
 
 STRING 24631
@@ -151003,7 +150897,7 @@ STRING 24853
 }
 
 STRING 24854
-// Upgrades: R0F6 (Длинноствольные мушкеты), effect1 (Effect 1)
+// Upgrades: R0F0 (Длинноствольные мушкеты), effect1 (Effect 1)
 {
 rmvx
 }
@@ -151503,7 +151397,7 @@ STRING 24934
 }
 
 STRING 24935
-// Upgrades: R0FE (Знак ночного зрения), effect2 (Effect 2)
+// Upgrades: R0F6 (Длинноствольные мушкеты), effect1 (Effect 1)
 {
 rmvx
 }
@@ -153063,10 +152957,46 @@ STRING 25189
 |cffffd7004-й уровень:|r |cff483d8b4-х кратный урон|r
 }
 
+STRING 25190
+// Units: H0GC (|c00FBCA04Танк УТ v1.23), Tip (Tooltip - Basic)
+{
+Создать |c00FBCA04Танк УТ v1.23
+}
+
+STRING 25191
+// Units: H0GC (|c00FBCA04Танк УТ v1.23), Revivetip (Tooltip - Revive)
+{
+Восстановить |c00FBCA04Танк УТ v1.23
+}
+
 STRING 25192
 // Upgrades: R0EH (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Орда)
+}
+
+STRING 25193
+// Units: H0GD (|c00FBCA04Фронтовой Гений), Name (Name)
+{
+|c00FBCA04Фронтовой Гений
+}
+
+STRING 25194
+// Units: H0GE (|c00FBCA04Фронтовой Гений), Name (Name)
+{
+|c00FBCA04Фронтовой Гений
+}
+
+STRING 25195
+// Units: H0GE (|c00FBCA04Фронтовой Гений), Awakentip (Tooltip - Awaken)
+{
+Воскресить |c00FBCA04Фронтового Гения
+}
+
+STRING 25196
+// Units: H0GE (|c00FBCA04Фронтовой Гений), Tip (Tooltip - Basic)
+{
+Нанять |c00FBCA04Фронтового Гения
 }
 
 STRING 25197
@@ -153383,6 +153313,12 @@ STRING 25248
 E
 }
 
+STRING 25249
+// Units: H0GE (|c00FBCA04Фронтовой Гений), Revivetip (Tooltip - Revive)
+{
+Воскресить |c00FBCA04Фронтового Гения
+}
+
 STRING 25250
 // Abilities: A12X (Цепная молния), Tip (Tooltip - Normal)
 {
@@ -153393,6 +153329,76 @@ STRING 25251
 // Upgrades: R0ET (Нечестивая сила,Нечестивая мощь,Нечестивы�), EditorSuffix (Editor Suffix)
 {
 (Безликие)
+}
+
+STRING 25252
+// Units: H0GF (|c00FBCA04Фронтовой Гений), Name (Name)
+{
+|c00FBCA04Фронтовой Гений
+}
+
+STRING 25253
+// Units: H0GG (|c00FBCA04Стрелок-ветеран), Name (Name)
+{
+|c00FBCA04Стрелок-ветеран
+}
+
+STRING 25254
+// Units: H0GG (|c00FBCA04Стрелок-ветеран), Awakentip (Tooltip - Awaken)
+{
+Воскресить |c00FBCA04Стрелка-ветерана
+}
+
+STRING 25255
+// Units: H0GG (|c00FBCA04Стрелок-ветеран), Tip (Tooltip - Basic)
+{
+Нанять |c00FBCA04Стрелка-ветерана
+}
+
+STRING 25256
+// Units: H0GG (|c00FBCA04Стрелок-ветеран), Revivetip (Tooltip - Revive)
+{
+Воскресить |c00FBCA04Стрелка-ветерана
+}
+
+STRING 25257
+// Abilities: A088 (|cffff1900Внутренний огонь|r), Ubertip (Tooltip - Normal - Extended)
+{
++<A088,DataA1,%>% к урону и +<A088,DataB1> к броне союзника. |nВремя действия: <A088f,Dur1> сек.
+}
+
+STRING 25258
+// Abilities: A08G (|cffff1900Боевой кличь|r), Ubertip (Tooltip - Normal - Extended)
+{
++<A08G,DataA1,%>% к урону находящихся рядом союзников. |nВремя действия: <A08G,Dur1> сек.
+|cff008000Радиус действия (500).|r
+}
+
+STRING 25259
+// Abilities: A08M (|cffff1900Массовая благодать|r), Ubertip (Tooltip - Normal - Extended)
+{
+Востанавливает хп союзникам по близости.
+|cff008000Востановление здоровья (115).|r
+|cff008000Радиус действия (300).|r
+
+}
+
+STRING 25260
+// Abilities: A09J (|cffff1900Вдохновляющая Речь|r), Ubertip (Tooltip - Normal - Extended)
+{
+Произносит вдохновляющую речь, поднимая базовый урон союзников.|n|cffffcc002-й уровень:|r |cff008080+ 40% к урону.|r
+}
+
+STRING 25261
+// Abilities: A09J (|cffff1900Вдохновляющая Речь|r), Ubertip (Tooltip - Normal - Extended)
+{
+Произносит вдохновляющую речь, поднимая базовый урон союзников.|n|cffffcc001-й уровень:|r |cff008080+ 30% к урону.|r
+}
+
+STRING 25262
+// Abilities: A09J (|cffff1900Вдохновляющая Речь|r), EditorSuffix (Editor Suffix)
+{
+(?Алый Орден
 }
 
 STRING 25263
@@ -155134,6 +155140,18 @@ STRING 25545
 // Upgrades: R0F7 (Авиабомбы), Tip (Tooltip)
 {
 Исследовать |cff9370dbРазвить силу|r |cffffd700[6-й уровень]|r
+}
+
+STRING 25546
+// Upgrades: R0C9 (Доспехи из клепаной кожи,Доспехи из армиро�), Ubertip (Tooltip - Extended)
+{
+Увеличивает здоровье танка "Венец" на 250 единиц, но уменьшает его скорость передвижения на 30 единиц.
+}
+
+STRING 25547
+// Upgrades: R0G1 (Знак хищника), effect3 (Effect 3)
+{
+rmvx
 }
 
 STRING 25552
@@ -156946,7 +156964,7 @@ STRING 25848
 }
 
 STRING 25849
-// Upgrades: R0FF (Знак ночного зрения), effect2 (Effect 2)
+// Upgrades: R0FE (Знак ночного зрения), effect2 (Effect 2)
 {
 rmvx
 }
@@ -157175,7 +157193,7 @@ rats
 }
 
 STRING 25885
-// Upgrades: R0G0 (Сделать банши адептами,Сделать банши масте), effect4 (Effect 4)
+// Upgrades: R0FF (Знак ночного зрения), effect2 (Effect 2)
 {
 rmvx
 }
@@ -163992,7 +164010,7 @@ STRING 27013
 }
 
 STRING 27014
-// Upgrades: R0G1 (Знак хищника), effect3 (Effect 3)
+// Upgrades: R0G0 (Сделать банши адептами,Сделать банши масте), effect4 (Effect 4)
 {
 rmvx
 }
