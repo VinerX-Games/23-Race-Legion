@@ -155291,7 +155291,7 @@ STRING 25550
 }
 
 STRING 25551
-// Units: o03A (|cffd2b48cАрена|r), Ubertip (Tooltip - Extended)
+// Units: h0IO (|cffd45e19Казармы|r), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск.
 }
@@ -162412,7 +162412,7 @@ STRING 26723
 }
 
 STRING 26724
-// Upgrades: R0FH (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
+// Upgrades: R0FW (Болезнетворное облако), Hotkey (Hotkey)
 {
 Z
 }
@@ -165168,7 +165168,7 @@ R
 }
 
 STRING 27184
-// Upgrades: R0FW (Болезнетворное облако), Hotkey (Hotkey)
+// Upgrades: R0FY (Болезнетворное облако), Hotkey (Hotkey)
 {
 Z
 }
@@ -167878,7 +167878,7 @@ STRING 27624
 }
 
 STRING 27625
-// Units: h0IO (|cffd45e19Казармы|r), Ubertip (Tooltip - Extended)
+// Units: o03A (|cffd2b48cАрена|r), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя подготовки:|r |cffaaf0aa60 сек.|r|n|nЗдание для подготовки базовых войск. Обучает новые типы войск, позволяет изучать улучшение для разных видов войск.
 }
@@ -168830,7 +168830,7 @@ Z
 }
 
 STRING 27776
-// Upgrades: R0FY (Болезнетворное облако), Hotkey (Hotkey)
+// Upgrades: R0GE (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
 {
 Z
 }
@@ -169203,7 +169203,7 @@ STRING 27830
 }
 
 STRING 27831
-// Upgrades: R0FT (Сделать банши адептами,Сделать банши масте), Hotkey (Hotkey)
+// Upgrades: R0FH (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
 {
 R
 }
@@ -169795,9 +169795,9 @@ X
 }
 
 STRING 27929
-// Upgrades: R0GE (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
+// Units: hfoo (|cff7878ffРядовой пехотинец), Name (Name)
 {
-Z
+|cff7878ffРядовой пехотинец
 }
 
 STRING 27930
@@ -170574,5 +170574,575 @@ STRING 28049
 // Upgrades: R0GD (Нечестивая сила,Нечестивая мощь,Нечестивы�), effect1 (Effect 1)
 {
 rhpo
+}
+
+STRING 28050
+// Upgrades: R0FT (Сделать банши адептами,Сделать банши масте), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 28051
+// Upgrades: R0GF (Грабеж), Name (Name)
+{
+Откл
+}
+
+STRING 28052
+// Upgrades: R0GF (Грабеж), Name (Name)
+{
+Лютый грабеж
+}
+
+STRING 28053
+// Upgrades: R0GF (Грабеж), Name (Name)
+{
+Рьяный грабеж
+}
+
+STRING 28054
+// Upgrades: R0GF (Грабеж), Tip (Tooltip)
+{
+Откл
+}
+
+STRING 28055
+// Upgrades: R0GF (Грабеж), Tip (Tooltip)
+{
+Лютый грабеж
+}
+
+STRING 28056
+// Upgrades: R0GF (Грабеж), Tip (Tooltip)
+{
+Рьяный грабеж
+}
+
+STRING 28057
+// Upgrades: R0GF (Грабеж), Ubertip (Tooltip - Extended)
+{
+Откл
+}
+
+STRING 28058
+// Upgrades: R0GF (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28059
+// Upgrades: R0GF (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28060
+// Upgrades: R0GF (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28061
+// Upgrades: R0GF (Грабеж), Name (Name)
+{
+|cffd2b48cЛовля Синих Огроннов
+}
+
+STRING 28062
+// Upgrades: R0GF (Грабеж), Tip (Tooltip)
+{
+|cffd2b48cЛовля Синих Огроннов
+}
+
+STRING 28063
+// Upgrades: R0GF (Грабеж), EditorSuffix (Editor Suffix)
+{
+(Огры)
+}
+
+STRING 28064
+// Upgrades: R0GG (Грабеж), Name (Name)
+{
+Откл
+}
+
+STRING 28065
+// Upgrades: R0GG (Грабеж), Name (Name)
+{
+Лютый грабеж
+}
+
+STRING 28066
+// Upgrades: R0GG (Грабеж), Name (Name)
+{
+Рьяный грабеж
+}
+
+STRING 28067
+// Upgrades: R0GG (Грабеж), Tip (Tooltip)
+{
+Откл
+}
+
+STRING 28068
+// Upgrades: R0GG (Грабеж), Tip (Tooltip)
+{
+Лютый грабеж
+}
+
+STRING 28069
+// Upgrades: R0GG (Грабеж), Tip (Tooltip)
+{
+Рьяный грабеж
+}
+
+STRING 28070
+// Upgrades: R0GG (Грабеж), Ubertip (Tooltip - Extended)
+{
+Откл
+}
+
+STRING 28071
+// Upgrades: R0GG (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28072
+// Upgrades: R0GG (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28073
+// Upgrades: R0GG (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28074
+// Upgrades: R0GG (Грабеж), Name (Name)
+{
+|cffd2b48cЛовля Красных Огроннов
+}
+
+STRING 28075
+// Upgrades: R0GG (Грабеж), Tip (Tooltip)
+{
+|cffd2b48cЛовля Красных Огроннов
+}
+
+STRING 28076
+// Upgrades: R0GG (Грабеж), EditorSuffix (Editor Suffix)
+{
+(Огры)
+}
+
+STRING 28077
+// Upgrades: R0GH (Грабеж), Name (Name)
+{
+Откл
+}
+
+STRING 28078
+// Upgrades: R0GH (Грабеж), Name (Name)
+{
+Лютый грабеж
+}
+
+STRING 28079
+// Upgrades: R0GH (Грабеж), Name (Name)
+{
+Рьяный грабеж
+}
+
+STRING 28080
+// Upgrades: R0GH (Грабеж), Tip (Tooltip)
+{
+Откл
+}
+
+STRING 28081
+// Upgrades: R0GH (Грабеж), Tip (Tooltip)
+{
+Лютый грабеж
+}
+
+STRING 28082
+// Upgrades: R0GH (Грабеж), Tip (Tooltip)
+{
+Рьяный грабеж
+}
+
+STRING 28083
+// Upgrades: R0GH (Грабеж), Ubertip (Tooltip - Extended)
+{
+Откл
+}
+
+STRING 28084
+// Upgrades: R0GH (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28085
+// Upgrades: R0GH (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28086
+// Upgrades: R0GH (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28087
+// Upgrades: R0GH (Грабеж), Name (Name)
+{
+|cffd2b48cЛовля Огроннов
+}
+
+STRING 28088
+// Upgrades: R0GH (Грабеж), Tip (Tooltip)
+{
+|cffd2b48cЛовля Огроннов
+}
+
+STRING 28089
+// Upgrades: R0GH (Грабеж), EditorSuffix (Editor Suffix)
+{
+(Огры)
+}
+
+STRING 28090
+// Upgrades: R0GI (Грабеж), Name (Name)
+{
+Откл
+}
+
+STRING 28091
+// Upgrades: R0GI (Грабеж), Name (Name)
+{
+Лютый грабеж
+}
+
+STRING 28092
+// Upgrades: R0GI (Грабеж), Name (Name)
+{
+Рьяный грабеж
+}
+
+STRING 28093
+// Upgrades: R0GI (Грабеж), Tip (Tooltip)
+{
+Откл
+}
+
+STRING 28094
+// Upgrades: R0GI (Грабеж), Tip (Tooltip)
+{
+Лютый грабеж
+}
+
+STRING 28095
+// Upgrades: R0GI (Грабеж), Tip (Tooltip)
+{
+Рьяный грабеж
+}
+
+STRING 28096
+// Upgrades: R0GI (Грабеж), Ubertip (Tooltip - Extended)
+{
+Откл
+}
+
+STRING 28097
+// Upgrades: R0GI (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28098
+// Upgrades: R0GI (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28099
+// Upgrades: R0GI (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28100
+// Upgrades: R0GI (Грабеж), Name (Name)
+{
+|cffd2b48cЛовля Черных Гроннов
+}
+
+STRING 28101
+// Upgrades: R0GI (Грабеж), Tip (Tooltip)
+{
+|cffd2b48cЛовля Черных Гроннов
+}
+
+STRING 28102
+// Upgrades: R0GI (Грабеж), EditorSuffix (Editor Suffix)
+{
+(Огры)
+}
+
+STRING 28103
+// Upgrades: R0GJ (Грабеж), Name (Name)
+{
+Откл
+}
+
+STRING 28104
+// Upgrades: R0GJ (Грабеж), Name (Name)
+{
+Лютый грабеж
+}
+
+STRING 28105
+// Upgrades: R0GJ (Грабеж), Name (Name)
+{
+Рьяный грабеж
+}
+
+STRING 28106
+// Upgrades: R0GJ (Грабеж), Tip (Tooltip)
+{
+Откл
+}
+
+STRING 28107
+// Upgrades: R0GJ (Грабеж), Tip (Tooltip)
+{
+Лютый грабеж
+}
+
+STRING 28108
+// Upgrades: R0GJ (Грабеж), Tip (Tooltip)
+{
+Рьяный грабеж
+}
+
+STRING 28109
+// Upgrades: R0GJ (Грабеж), Ubertip (Tooltip - Extended)
+{
+Откл
+}
+
+STRING 28110
+// Upgrades: R0GJ (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28111
+// Upgrades: R0GJ (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28112
+// Upgrades: R0GJ (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 28113
+// Upgrades: R0GJ (Грабеж), Name (Name)
+{
+|cffd2b48cЛовля Черных Гроннов
+}
+
+STRING 28114
+// Upgrades: R0GJ (Грабеж), Tip (Tooltip)
+{
+|cffd2b48cЛовля Черных Гроннов
+}
+
+STRING 28115
+// Upgrades: R0GJ (Грабеж), EditorSuffix (Editor Suffix)
+{
+(Огры)
+}
+
+STRING 28116
+// Units: hpea (|cff7878ffРаботник), Name (Name)
+{
+|cff7878ffРаботник
+}
+
+STRING 28117
+// Units: hsor (|cff7878ffМаг (Урон)), Name (Name)
+{
+|cff7878ffМаг (Урон)
+}
+
+STRING 28118
+// Units: hrif (|cff7878ffРядовой стрелок), Name (Name)
+{
+|cff7878ffРядовой стрелок
+}
+
+STRING 28119
+// Units: hkni (|cff7878ffКавалерия), Name (Name)
+{
+|cff7878ffКавалерия
+}
+
+STRING 28120
+// Units: hmtm (|cff7878ffОсадный боец), Name (Name)
+{
+|cff7878ffОсадный боец
+}
+
+STRING 28121
+// Units: hmtt (|cff7878ffТехника Альянса), Name (Name)
+{
+|cff7878ffТехника Альянса
+}
+
+STRING 28122
+// Units: hmpr (|cff7878ffМаг (Поддержка)), Name (Name)
+{
+|cff7878ffМаг (Поддержка)
+}
+
+STRING 28123
+// Units: hspt (|cff7878ffМаг (Специализированный)), Name (Name)
+{
+|cff7878ffМаг (Специализированный)
+}
+
+STRING 28124
+// Units: hhou (|cff7878ffФерма), Name (Name)
+{
+|cff7878ffФерма
+}
+
+STRING 28125
+// Units: hkee (|cff7878ffФорт), Name (Name)
+{
+|cff7878ffФорт
+}
+
+STRING 28126
+// Units: hgtw (|cff7878ffСторожевая башня), Name (Name)
+{
+|cff7878ffСторожевая башня
+}
+
+STRING 28127
+// Units: htow (|cff7878ffРатуша), Name (Name)
+{
+|cff7878ffРатуша
+}
+
+STRING 28128
+// Units: hctw (|cff7878ffОрудийная башня), Name (Name)
+{
+|cff7878ffОрудийная башня
+}
+
+STRING 28129
+// Units: harm (|cff7878ffМастерская), Name (Name)
+{
+|cff7878ffМастерская
+}
+
+STRING 28130
+// Units: hatw (|cff7878ffМагическая башня), Name (Name)
+{
+|cff7878ffМагическая башня
+}
+
+STRING 28131
+// Units: hlum (|cff7878ffЛесопилка), Name (Name)
+{
+|cff7878ffЛесопилка
+}
+
+STRING 28132
+// Units: hbla (|cff7878ffКузница), Name (Name)
+{
+|cff7878ffКузница
+}
+
+STRING 28133
+// Units: hbar (|cff7878ffКазармы), Name (Name)
+{
+|cff7878ffКазармы
+}
+
+STRING 28134
+// Units: hcas (|cff7878ffЗамок), Name (Name)
+{
+|cff7878ffЗамок
+}
+
+STRING 28135
+// Units: hwtw (|cff7878ffДозорная башня), Name (Name)
+{
+|cff7878ffДозорная башня
+}
+
+STRING 28136
+// Units: hars (|cff7878ffВолшебное святилище), Name (Name)
+{
+|cff7878ffВолшебное святилище
+}
+
+STRING 28137
+// Units: hvlt (|cff7878ffВолшебное хранилище), Name (Name)
+{
+|cff7878ffВолшебное хранилище
+}
+
+STRING 28138
+// Units: halt (|cff7878ffАлтарь королей), Name (Name)
+{
+|cff7878ffАлтарь королей
+}
+
+STRING 28139
+// Units: hgra (|cff7878ffПосольство), Name (Name)
+{
+|cff7878ffПосольство
+}
+
+STRING 28140
+// Units: h0K4 (|cff7878ffОсновной пехотинец), Name (Name)
+{
+|cff7878ffОсновной пехотинец
+}
+
+STRING 28141
+// Units: h0K4 (|cff7878ffОсновной пехотинец), EditorSuffix (Name - Editor Suffix)
+{
+(Альянс)
+}
+
+STRING 28142
+// Units: h0K5 (|cff7878ffОсновной стрелок), Name (Name)
+{
+|cff7878ffОсновной стрелок
+}
+
+STRING 28143
+// Units: h0K6 (|cff7878ffЭлитный стрелок), Name (Name)
+{
+|cff7878ffЭлитный стрелок
+}
+
+STRING 28144
+// Units: h0K7 (|cff7878ffЭлитный пехотинец), Name (Name)
+{
+|cff7878ffЭлитный пехотинец
 }
 
