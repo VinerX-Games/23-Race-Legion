@@ -543,6 +543,7 @@ trigger gg_trg_Race_Gilneas= null
 trigger gg_trg_Race_Nagi= null
 trigger gg_trg_Race_nightelf= null
 trigger gg_trg_Race_Forsaken= null
+trigger gg_trg_Race_Ogres= null
 trigger gg_trg_Race_Random= null
 trigger gg_trg_Page1_O= null
 trigger gg_trg_Page2_O= null
@@ -5344,7 +5345,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n053', - 3770.3, - 27594.7, 176.468, 'n053')
     set u=BlzCreateUnitWithSkin(p, 'o03F', - 1167.6, - 30073.8, 241.278, 'o03F')
     set u=BlzCreateUnitWithSkin(p, 'o03H', - 1453.3, - 30043.9, 267.393, 'o03H')
-    set u=BlzCreateUnitWithSkin(p, 'o03I', - 1593.2, - 30028.7, 348.442, 'o03I')
+    set u=BlzCreateUnitWithSkin(p, 'o03I', - 1593.2, - 30028.7, - 70.903, 'o03I')
     set u=BlzCreateUnitWithSkin(p, 'o03G', - 1302.8, - 30050.7, 276.754, 'o03G')
     set u=BlzCreateUnitWithSkin(p, 'o03L', - 1421.7, - 30299.5, 279.259, 'o03L')
     set u=BlzCreateUnitWithSkin(p, 'h0K4', - 6365.0, - 29242.5, 285.581, 'h0K4')
@@ -5395,31 +5396,28 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0IC', - 3229.4, - 25863.7, 255.470, 'h0IC')
     set u=BlzCreateUnitWithSkin(p, 'o03P', - 783.1, - 30332.8, 242.838, 'o03P')
     set u=BlzCreateUnitWithSkin(p, 'o03O', - 634.2, - 30311.3, 230.269, 'o03O')
-    set u=BlzCreateUnitWithSkin(p, 'o03U', - 241.2, - 30352.1, 270.412, 'o03U')
-    set u=BlzCreateUnitWithSkin(p, 'o03V', - 90.7, - 30357.4, 257.923, 'o03V')
-    set u=BlzCreateUnitWithSkin(p, 'o03T', - 397.8, - 30375.1, 273.168, 'o03T')
+    set u=BlzCreateUnitWithSkin(p, 'o03U', 119.1, - 30253.7, 171.305, 'o03U')
+    set u=BlzCreateUnitWithSkin(p, 'o03V', 247.9, - 30505.3, 257.923, 'o03V')
+    set u=BlzCreateUnitWithSkin(p, 'o03T', - 456.6, - 30362.6, 141.462, 'o03T')
     set u=BlzCreateUnitWithSkin(p, 'hspt', - 6158.5, - 29722.9, 277.189, 'hspt')
     set u=BlzCreateUnitWithSkin(p, 'hmtt', - 6228.1, - 29926.0, 264.515, 'hmtt')
     set u=BlzCreateUnitWithSkin(p, 'hmtm', - 6381.5, - 29924.3, 7.823, 'hmtm')
     set u=BlzCreateUnitWithSkin(p, 'hsor', - 6302.5, - 29715.8, 272.669, 'hsor')
-    set u=BlzCreateUnitWithSkin(p, 'o03Q', - 358.0, - 30519.3, 266.206, 'o03Q')
+    set u=BlzCreateUnitWithSkin(p, 'o03Q', - 358.0, - 30519.3, 197.296, 'o03Q')
     set u=BlzCreateUnitWithSkin(p, 'h0ID', - 3888.8, - 25837.2, 259.736, 'h0ID')
     set u=BlzCreateUnitWithSkin(p, 'hmpr', - 6410.6, - 29713.4, 264.494, 'hmpr')
     set u=BlzCreateUnitWithSkin(p, 'h0K7', - 6237.5, - 29251.8, 280.730, 'h0K7')
-    set u=BlzCreateUnitWithSkin(p, 'o03R', - 215.6, - 30531.1, 272.514, 'o03R')
+    set u=BlzCreateUnitWithSkin(p, 'o03R', - 215.6, - 30531.1, 213.064, 'o03R')
     set u=BlzCreateUnitWithSkin(p, 'n03V', - 184.5, - 25512.8, 358.737, 'n03V')
     set u=BlzCreateUnitWithSkin(p, 'n03Y', 173.1, - 25475.0, 316.746, 'n03Y')
     set u=BlzCreateUnitWithSkin(p, 'n03S', 511.5, - 25485.8, 20.710, 'n03S')
     set u=BlzCreateUnitWithSkin(p, 'n03P', - 440.2, - 25539.6, 124.039, 'n03P')
     set u=BlzCreateUnitWithSkin(p, 'n03M', - 741.2, - 25582.0, 48.715, 'n03M')
     set u=BlzCreateUnitWithSkin(p, 'h0JN', - 3468.2, - 29833.9, 266.210, 'h0JN')
-    set u=BlzCreateUnitWithSkin(p, 'o03S', - 52.2, - 30532.9, 272.032, 'o03S')
-    set u=BlzCreateUnitWithSkin(p, 'N05K', 514.4, - 30215.1, 271.029, 'N05K')
+    set u=BlzCreateUnitWithSkin(p, 'o03S', - 52.2, - 30532.9, 216.378, 'o03S')
     set u=BlzCreateUnitWithSkin(p, 'h0IB', - 4502.5, - 25851.0, 259.966, 'h0IB')
     set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, 290.235, 'n04X')
     set u=BlzCreateUnitWithSkin(p, 'n04Y', - 3839.2, - 30069.7, 296.680, 'n04Y')
-    set u=BlzCreateUnitWithSkin(p, 'N05J', 707.3, - 30189.8, 262.958, 'N05J')
-    set u=BlzCreateUnitWithSkin(p, 'N05L', 346.7, - 30223.4, 266.644, 'N05L')
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
 endfunction
 
@@ -5431,7 +5429,7 @@ function CreateUnitsForPlayer1 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'o03W', - 1312.9, - 29653.6, 278.729, 'o03W')
+    set u=BlzCreateUnitWithSkin(p, 'o03W', - 961.6, - 29921.5, 210.333, 'o03W')
 endfunction
 
 //===========================================================================
@@ -13012,6 +13010,31 @@ function InitTrig_Race_Forsaken takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: Race Ogres
+//===========================================================================
+function Trig_Race_Ogres_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A17N' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Ogres_Actions takes nothing returns nothing
+    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    call CreateNUnitsAtLoc(5, 'o03W', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    call RemoveUnit(GetSpellAbilityUnit())
+    call RemoveLocation(udg_LocalPosition2)
+endfunction
+
+//===========================================================================
+function InitTrig_Race_Ogres takes nothing returns nothing
+    set gg_trg_Race_Ogres=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Ogres, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_Race_Ogres, Condition(function Trig_Race_Ogres_Conditions))
+    call TriggerAddAction(gg_trg_Race_Ogres, function Trig_Race_Ogres_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: Race Random
 //===========================================================================
 function Trig_Race_Random_Conditions takes nothing returns boolean
@@ -13354,6 +13377,7 @@ function Trig_Page1_O_Actions takes nothing returns nothing
     call UnitRemoveAbilityBJ('A14O', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A12Q', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A155', GetTriggerUnit())
+    call UnitRemoveAbilityBJ('A17N', GetTriggerUnit())
 endfunction
 
 //===========================================================================
@@ -13426,6 +13450,7 @@ function Trig_Page3_O_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A14O', GetTriggerUnit())
     call UnitAddAbilityBJ('A155', GetTriggerUnit())
     call UnitAddAbilityBJ('A12Q', GetTriggerUnit())
+    call UnitAddAbilityBJ('A17N', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QQ', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QN', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0HO', GetTriggerUnit())
@@ -13470,6 +13495,7 @@ function Trig_Page4_O_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A0QN', GetTriggerUnit())
     call UnitAddAbilityBJ('A0SD', GetTriggerUnit())
     call UnitAddAbilityBJ('A0I1', GetTriggerUnit())
+    call UnitAddAbilityBJ('A0Y0', GetTriggerUnit())
     call UnitAddAbilityBJ('A0Y0', GetTriggerUnit())
 endfunction
 
@@ -20302,7 +20328,15 @@ endfunction
 //===========================================================================
 function Trig_OgresStart_Func001A takes nothing returns nothing
     // Запрещаем всех юнитов, открываемых по грейду.
-    call SetPlayerTechMaxAllowedSwap('N058', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('o03U', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('o03V', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('o03T', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('o03S', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('o03R', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('o03Q', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('N05J', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('N05K', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('N05L', 1, GetEnumPlayer())
 endfunction
 
 function Trig_OgresStart_Actions takes nothing returns nothing
@@ -44093,6 +44127,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Race_Nagi()
     call InitTrig_Race_nightelf()
     call InitTrig_Race_Forsaken()
+    call InitTrig_Race_Ogres()
     call InitTrig_Race_Random()
     call InitTrig_Page1_O()
     call InitTrig_Page2_O()
