@@ -168630,6 +168630,12 @@ STRING 27748
 |cff7dc87dВремя подготовки:|r |cffaaf0aa70 сек.|r|n|nХранит добытую древесину. |nДает доступ к улучшениям для доспехов и оружия, а также позволяет строить укрепления.
 }
 
+STRING 27749
+// Units: h0K8 (|cff7878ffСтрельбище), Name (Name)
+{
+|cff7878ffСтрельбище
+}
+
 STRING 27750
 // Upgrades: R0FH (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
 {
@@ -172549,6 +172555,12 @@ STRING 28366
 // Upgrades: R0GL (Стальное оружие ближнего боя,Ториевое оруж), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 28367
+// Units: h0K8 (|cff7878ffСтрельбище), EditorSuffix (Name - Editor Suffix)
+{
+(Альянс)
 }
 
 STRING 28369

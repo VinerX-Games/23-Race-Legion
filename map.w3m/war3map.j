@@ -22,12 +22,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -1794,7 +1794,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1802,33 +1802,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1836,19 +1836,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -5308,13 +5308,14 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'htow', - 6624.0, - 28512.0, 270.000, 'htow')
     set u=BlzCreateUnitWithSkin(p, 'hkee', - 6432.0, - 28512.0, 270.000, 'hkee')
     set u=BlzCreateUnitWithSkin(p, 'hcas', - 6176.0, - 28512.0, 270.000, 'hcas')
-    set u=BlzCreateUnitWithSkin(p, 'halt', - 5696.0, - 29248.0, 270.000, 'halt')
+    set u=BlzCreateUnitWithSkin(p, 'halt', - 5312.0, - 29248.0, 270.000, 'halt')
     set u=BlzCreateUnitWithSkin(p, 'hvlt', - 7040.0, - 28864.0, 270.000, 'hvlt')
     set u=BlzCreateUnitWithSkin(p, 'hbar', - 6656.0, - 29248.0, 270.000, 'hbar')
-    set u=BlzCreateUnitWithSkin(p, 'harm', - 6656.0, - 29952.0, 270.000, 'harm')
-    set u=BlzCreateUnitWithSkin(p, 'hars', - 6656.0, - 29696.0, 270.000, 'hars')
+    set u=BlzCreateUnitWithSkin(p, 'harm', - 6656.0, - 30016.0, 270.000, 'harm')
+    set u=BlzCreateUnitWithSkin(p, 'hars', - 6656.0, - 29760.0, 270.000, 'hars')
     set u=BlzCreateUnitWithSkin(p, 'hhou', - 6144.0, - 28928.0, 270.000, 'hhou')
-    set u=BlzCreateUnitWithSkin(p, 'hgra', - 5632.0, - 29696.0, 270.000, 'hgra')
+    set u=BlzCreateUnitWithSkin(p, 'hgra', - 5760.0, - 29696.0, 270.000, 'hgra')
+    set u=BlzCreateUnitWithSkin(p, 'h0K8', - 6656.0, - 29504.0, 270.000, 'h0K8')
     set u=BlzCreateUnitWithSkin(p, 'h0JI', - 3232.0, - 30368.0, 270.000, 'h0JI')
     set u=BlzCreateUnitWithSkin(p, 'h0JK', - 3200.0, - 30016.0, 270.000, 'h0JK')
     set u=BlzCreateUnitWithSkin(p, 'h0JL', - 4128.0, - 29088.0, 270.000, 'h0JL')
@@ -5345,7 +5346,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n053', - 3770.3, - 27594.7, 176.468, 'n053')
     set u=BlzCreateUnitWithSkin(p, 'o03F', - 1167.6, - 30073.8, 241.278, 'o03F')
     set u=BlzCreateUnitWithSkin(p, 'o03H', - 1453.3, - 30043.9, 267.393, 'o03H')
-    set u=BlzCreateUnitWithSkin(p, 'o03I', - 1593.2, - 30028.7, - 70.903, 'o03I')
+    set u=BlzCreateUnitWithSkin(p, 'o03I', - 1593.2, - 30028.7, 289.097, 'o03I')
     set u=BlzCreateUnitWithSkin(p, 'o03G', - 1302.8, - 30050.7, 276.754, 'o03G')
     set u=BlzCreateUnitWithSkin(p, 'o03L', - 1421.7, - 30299.5, 279.259, 'o03L')
     set u=BlzCreateUnitWithSkin(p, 'h0K4', - 6365.0, - 29242.5, 285.581, 'h0K4')
@@ -7936,6 +7937,13 @@ function NewAlly takes player p returns nothing
 endfunction
 
 
+function Freedom takes nothing returns nothing
+    local player p= GetEnumPlayer()
+    call DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) + " - стал свободен")
+    call ClearOldAllies(p)
+    set p=null
+endfunction
+
 function ChangeAlly takes nothing returns nothing
     local player p= udg_LocalPlayer
     local player p0= GetEnumPlayer()
@@ -7971,6 +7979,8 @@ function Trig_FeodalDead2_Actions takes nothing returns nothing
     
         call ClearPlayer(p)
         call DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) + " - решил уничтожить свою столицу - зачем?")
+        call ForForce(Vassals[pi], function Freedom)
+        
         set p=null
         set p2=null
         set p3=null
@@ -13510,38 +13520,26 @@ endfunction
 //===========================================================================
 // Trigger: Leave Ot
 //===========================================================================
-function Trig_Leave_Ot_Func002002 takes nothing returns boolean
+function Trig_Leave_Ot_Func003002 takes nothing returns boolean
     return ( GetOwningPlayer(GetFilterUnit()) == GetTriggerPlayer() )
 endfunction
 
-function Trig_Leave_Ot_Func004Func001C takes nothing returns boolean
+function Trig_Leave_Ot_Func005Func001C takes nothing returns boolean
     if ( not ( IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) == true ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_Leave_Ot_Func004A takes nothing returns nothing
-    if ( Trig_Leave_Ot_Func004Func001C() ) then
+function Trig_Leave_Ot_Func005A takes nothing returns nothing
+    if ( Trig_Leave_Ot_Func005Func001C() ) then
     else
         call KillUnit(GetEnumUnit())
         call RemoveUnit(GetEnumUnit())
     endif
 endfunction
 
-function Trig_Leave_Ot_Func006Func001A takes nothing returns nothing
-    set bj_forLoopAIndex=1
-    set bj_forLoopAIndexEnd=24
-    loop
-        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), GetTriggerPlayer(), bj_ALLIANCE_UNALLIED)
-        call SetPlayerAllianceStateBJ(GetTriggerPlayer(), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
-        set bj_forLoopAIndex=bj_forLoopAIndex + 1
-    endloop
-    call DisplayTextToForce(GetPlayersAll(), ( GetPlayerName(ConvertedPlayer(GetForLoopIndexA())) + "|cff00ff00 - свободен!|r" ))
-endfunction
-
-function Trig_Leave_Ot_Func006C takes nothing returns boolean
+function Trig_Leave_Ot_Func007C takes nothing returns boolean
     if ( not ( IsTriggerEnabled(gg_trg_FeodalDead) == true ) ) then
         return false
     endif
@@ -13549,14 +13547,14 @@ function Trig_Leave_Ot_Func006C takes nothing returns boolean
 endfunction
 
 function Trig_Leave_Ot_Actions takes nothing returns nothing
+    local integer pi= GetPlayerId(GetTriggerPlayer())
     call DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) + "|cffff0000 - покинул игру!|r" ))
-    set udg_Boolexpr=Condition(function Trig_Leave_Ot_Func002002)
+    set udg_Boolexpr=Condition(function Trig_Leave_Ot_Func003002)
     call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
-    call ForGroupBJ(udg_LocalOtrad2, function Trig_Leave_Ot_Func004A)
+    call ForGroupBJ(udg_LocalOtrad2, function Trig_Leave_Ot_Func005A)
     call GroupClear(udg_LocalOtrad2)
-    if ( Trig_Leave_Ot_Func006C() ) then
-        call ForForce(udg_Vassals[GetConvertedPlayerId(GetTriggerPlayer())], function Trig_Leave_Ot_Func006Func001A)
-        call ForceClear(udg_Vassals[GetConvertedPlayerId(GetTriggerPlayer())])
+    if ( Trig_Leave_Ot_Func007C() ) then
+        call ForForce(Vassals[pi], function Freedom)
     else
     endif
 endfunction
@@ -34629,7 +34627,7 @@ function Trig_AutoChance_Func002C takes nothing returns boolean
 endfunction
 
 function Trig_AutoChance_Actions takes nothing returns nothing
-    set udg_LocalInteger=GetRandomInt(1, 135)
+    set udg_LocalInteger=GetRandomInt(1, 200)
     if ( Trig_AutoChance_Func002C() ) then
         call AdjustPlayerStateBJ(150, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
         call AdjustPlayerStateBJ(50, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
@@ -34675,7 +34673,7 @@ function Trig_AutoChance_2_Func003C takes nothing returns boolean
 endfunction
 
 function Trig_AutoChance_2_Actions takes nothing returns nothing
-    set udg_LocalInteger=GetRandomInt(1, 135)
+    set udg_LocalInteger=GetRandomInt(1, 200)
     if ( Trig_AutoChance_2_Func003C() ) then
         call AdjustPlayerStateBJ(200, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
         call AdjustPlayerStateBJ(75, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
@@ -34721,7 +34719,7 @@ function Trig_AutoChance_3_Func002C takes nothing returns boolean
 endfunction
 
 function Trig_AutoChance_3_Actions takes nothing returns nothing
-    set udg_LocalInteger=GetRandomInt(1, 135)
+    set udg_LocalInteger=GetRandomInt(1, 200)
     if ( Trig_AutoChance_3_Func002C() ) then
         call AdjustPlayerStateBJ(250, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
         call AdjustPlayerStateBJ(100, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
@@ -42133,6 +42131,7 @@ function Trig_GG_Actions takes nothing returns nothing
     call DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) + "|cffff0000 - Решил проиграть и удалил всех своих юнитов !|r" ))
     call GroupEnumUnitsOfPlayer(udg_LocalOtrad2, GetTriggerPlayer(), null)
     call ForGroupBJ(udg_LocalOtrad2, function Trig_GG_Func004A)
+    call ForForce(Vassals[pi], function Freedom)
     call GroupClear(udg_LocalOtrad2)
     set income[pi]=0
     set incomeW[pi]=0
@@ -45284,7 +45283,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
