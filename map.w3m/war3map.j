@@ -687,9 +687,24 @@ trigger gg_trg_Hero_Limits_General= null
 trigger gg_trg_OgresStart= null
 trigger gg_trg_OgresHpSpell2= null
 trigger gg_trg_OrgesHpSpell= null
+trigger gg_trg_BegYel= null
+trigger gg_trg_CanYel= null
+trigger gg_trg_FinYel= null
 trigger gg_trg_BegRed= null
 trigger gg_trg_CanRed= null
 trigger gg_trg_FinRed= null
+trigger gg_trg_BegBlue= null
+trigger gg_trg_CanBlue= null
+trigger gg_trg_FinBlue= null
+trigger gg_trg_Begred= null
+trigger gg_trg_Canred= null
+trigger gg_trg_Finred= null
+trigger gg_trg_BegWhite= null
+trigger gg_trg_CanWhite= null
+trigger gg_trg_FinWhite= null
+trigger gg_trg_BegBlack= null
+trigger gg_trg_CanBlack= null
+trigger gg_trg_FinBlack= null
 trigger gg_trg_GeneralRegen= null
 trigger gg_trg_Pribavka_k_zoloty= null
 trigger gg_trg_StromgardOn= null
@@ -5327,12 +5342,12 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
 
     set u=BlzCreateUnitWithSkin(p, 'n051', - 3770.5, - 27765.0, 59.493, 'n051')
     set u=BlzCreateUnitWithSkin(p, 'n053', - 3770.3, - 27594.7, 176.468, 'n053')
-    set u=BlzCreateUnitWithSkin(p, 'o03F', - 1183.6, - 30026.8, 241.278, 'o03F')
-    set u=BlzCreateUnitWithSkin(p, 'o03H', - 1469.3, - 29996.9, 267.393, 'o03H')
-    set u=BlzCreateUnitWithSkin(p, 'o03I', - 1609.2, - 29981.8, 348.442, 'o03I')
-    set u=BlzCreateUnitWithSkin(p, 'o03G', - 1318.8, - 30003.7, 276.754, 'o03G')
+    set u=BlzCreateUnitWithSkin(p, 'o03F', - 1167.6, - 30073.8, 241.278, 'o03F')
+    set u=BlzCreateUnitWithSkin(p, 'o03H', - 1453.3, - 30043.9, 267.393, 'o03H')
+    set u=BlzCreateUnitWithSkin(p, 'o03I', - 1593.2, - 30028.7, 348.442, 'o03I')
+    set u=BlzCreateUnitWithSkin(p, 'o03G', - 1302.8, - 30050.7, 276.754, 'o03G')
     set u=BlzCreateUnitWithSkin(p, 'o03L', - 1421.7, - 30299.5, 279.259, 'o03L')
-    set u=BlzCreateUnitWithSkin(p, 'h0K4', - 6365.0, - 29242.5, - 74.419, 'h0K4')
+    set u=BlzCreateUnitWithSkin(p, 'h0K4', - 6365.0, - 29242.5, 285.581, 'h0K4')
     set u=BlzCreateUnitWithSkin(p, 'h0K2', - 3751.7, - 25806.9, 273.509, 'h0K2')
     set u=BlzCreateUnitWithSkin(p, 'e009', - 3723.0, - 25980.1, 273.685, 'e009')
     set u=BlzCreateUnitWithSkin(p, 'h0J5', - 3894.0, - 29881.6, 272.007, 'h0J5')
@@ -5345,8 +5360,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n05I', - 3104.3, - 25817.3, 265.240, 'n05I')
     set u=BlzCreateUnitWithSkin(p, 'u02P', - 3407.5, - 30115.1, 270.191, 'u02P')
     set u=BlzCreateUnitWithSkin(p, 'o03M', - 1307.1, - 30278.8, 273.470, 'o03M')
-    set u=BlzCreateUnitWithSkin(p, 'o03K', - 1574.8, - 30280.0, 279.726, 'o03K')
-    set u=BlzCreateUnitWithSkin(p, 'o03N', - 940.8, - 30349.2, 107.076, 'o03N')
+    set u=BlzCreateUnitWithSkin(p, 'o03K', - 1574.8, - 30280.0, 279.342, 'o03K')
+    set u=BlzCreateUnitWithSkin(p, 'o03N', - 940.8, - 30349.2, 274.329, 'o03N')
     set u=BlzCreateUnitWithSkin(p, 'h0IT', - 6121.2, - 26975.3, 277.970, 'h0IT')
     set u=BlzCreateUnitWithSkin(p, 'h0EI', - 6182.1, - 26985.0, 237.080, 'h0EI')
     set u=BlzCreateUnitWithSkin(p, 'h0IU', - 6268.4, - 26975.4, 253.330, 'h0IU')
@@ -5358,7 +5373,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0IZ', - 6489.2, - 26877.8, 227.710, 'h0IZ')
     set u=BlzCreateUnitWithSkin(p, 'n04V', - 3614.0, - 30049.5, 293.810, 'n04V')
     set u=BlzCreateUnitWithSkin(p, 'h0JC', - 3670.2, - 29838.6, 284.928, 'h0JC')
-    set u=BlzCreateUnitWithSkin(p, 'hkni', - 6101.7, - 29223.0, - 78.828, 'hkni')
+    set u=BlzCreateUnitWithSkin(p, 'hkni', - 6101.7, - 29223.0, 281.172, 'hkni')
     set u=BlzCreateUnitWithSkin(p, 'h0J0', - 6825.3, - 26983.3, 273.609, 'h0J0')
     set u=BlzCreateUnitWithSkin(p, 'h0J1', - 6946.1, - 26998.4, 325.897, 'h0J1')
     set u=BlzCreateUnitWithSkin(p, 'h0J4', - 5103.1, - 27607.1, 303.790, 'h0J4')
@@ -5368,7 +5383,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n04T', - 3772.0, - 29829.8, 284.520, 'n04T')
     set u=BlzCreateUnitWithSkin(p, 'n04U', - 3572.6, - 29824.6, 285.033, 'n04U')
     set u=BlzCreateUnitWithSkin(p, 'hrif', - 6407.2, - 29479.7, 259.779, 'hrif')
-    set u=BlzCreateUnitWithSkin(p, 'h0K5', - 6298.2, - 29485.1, - 82.602, 'h0K5')
+    set u=BlzCreateUnitWithSkin(p, 'h0K5', - 6298.2, - 29485.1, 277.398, 'h0K5')
     set u=BlzCreateUnitWithSkin(p, 'h0JA', - 3481.4, - 30068.1, 279.522, 'h0JA')
     set u=BlzCreateUnitWithSkin(p, 'o02X', - 3745.9, - 30367.6, 270.107, 'o02X')
     set u=BlzCreateUnitWithSkin(p, 'h0K6', - 6176.1, - 29475.7, 268.629, 'h0K6')
@@ -5383,22 +5398,22 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o03U', - 241.2, - 30352.1, 270.412, 'o03U')
     set u=BlzCreateUnitWithSkin(p, 'o03V', - 90.7, - 30357.4, 257.923, 'o03V')
     set u=BlzCreateUnitWithSkin(p, 'o03T', - 397.8, - 30375.1, 273.168, 'o03T')
-    set u=BlzCreateUnitWithSkin(p, 'hspt', - 6158.5, - 29722.9, - 82.811, 'hspt')
+    set u=BlzCreateUnitWithSkin(p, 'hspt', - 6158.5, - 29722.9, 277.189, 'hspt')
     set u=BlzCreateUnitWithSkin(p, 'hmtt', - 6228.1, - 29926.0, 264.515, 'hmtt')
     set u=BlzCreateUnitWithSkin(p, 'hmtm', - 6381.5, - 29924.3, 7.823, 'hmtm')
     set u=BlzCreateUnitWithSkin(p, 'hsor', - 6302.5, - 29715.8, 272.669, 'hsor')
-    set u=BlzCreateUnitWithSkin(p, 'o03Q', - 395.4, - 30197.2, 266.206, 'o03Q')
+    set u=BlzCreateUnitWithSkin(p, 'o03Q', - 358.0, - 30519.3, 266.206, 'o03Q')
     set u=BlzCreateUnitWithSkin(p, 'h0ID', - 3888.8, - 25837.2, 259.736, 'h0ID')
     set u=BlzCreateUnitWithSkin(p, 'hmpr', - 6410.6, - 29713.4, 264.494, 'hmpr')
-    set u=BlzCreateUnitWithSkin(p, 'h0K7', - 6237.5, - 29251.8, - 79.270, 'h0K7')
-    set u=BlzCreateUnitWithSkin(p, 'o03R', - 260.4, - 30173.1, 272.514, 'o03R')
+    set u=BlzCreateUnitWithSkin(p, 'h0K7', - 6237.5, - 29251.8, 280.730, 'h0K7')
+    set u=BlzCreateUnitWithSkin(p, 'o03R', - 215.6, - 30531.1, 272.514, 'o03R')
     set u=BlzCreateUnitWithSkin(p, 'n03V', - 184.5, - 25512.8, 358.737, 'n03V')
     set u=BlzCreateUnitWithSkin(p, 'n03Y', 173.1, - 25475.0, 316.746, 'n03Y')
     set u=BlzCreateUnitWithSkin(p, 'n03S', 511.5, - 25485.8, 20.710, 'n03S')
     set u=BlzCreateUnitWithSkin(p, 'n03P', - 440.2, - 25539.6, 124.039, 'n03P')
     set u=BlzCreateUnitWithSkin(p, 'n03M', - 741.2, - 25582.0, 48.715, 'n03M')
     set u=BlzCreateUnitWithSkin(p, 'h0JN', - 3468.2, - 29833.9, 266.210, 'h0JN')
-    set u=BlzCreateUnitWithSkin(p, 'o03S', - 97.1, - 30174.9, 272.032, 'o03S')
+    set u=BlzCreateUnitWithSkin(p, 'o03S', - 52.2, - 30532.9, 272.032, 'o03S')
     set u=BlzCreateUnitWithSkin(p, 'N05K', 514.4, - 30215.1, 271.029, 'N05K')
     set u=BlzCreateUnitWithSkin(p, 'h0IB', - 4502.5, - 25851.0, 259.966, 'h0IB')
     set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, 290.235, 'n04X')
@@ -5406,6 +5421,17 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'N05J', 707.3, - 30189.8, 262.958, 'N05J')
     set u=BlzCreateUnitWithSkin(p, 'N05L', 346.7, - 30223.4, 266.644, 'N05L')
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
+endfunction
+
+//===========================================================================
+function CreateUnitsForPlayer1 takes nothing returns nothing
+    local player p= Player(1)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u=BlzCreateUnitWithSkin(p, 'o03W', - 1312.9, - 29653.6, 278.729, 'o03W')
 endfunction
 
 //===========================================================================
@@ -6063,6 +6089,7 @@ endfunction
 //===========================================================================
 function CreatePlayerUnits takes nothing returns nothing
     call CreateUnitsForPlayer0()
+    call CreateUnitsForPlayer1()
     call CreateUnitsForPlayer2()
     call CreateUnitsForPlayer21()
 endfunction
@@ -20436,10 +20463,78 @@ function InitTrig_OrgesHpSpell takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: BegYel
+//===========================================================================
+function Trig_BegYel_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GH' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_BegYel_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0GF', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0GG', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_BegYel takes nothing returns nothing
+    set gg_trg_BegYel=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_BegYel, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_BegYel, Condition(function Trig_BegYel_Conditions))
+    call TriggerAddAction(gg_trg_BegYel, function Trig_BegYel_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: CanYel
+//===========================================================================
+function Trig_CanYel_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GH' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_CanYel_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0GF', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0GG', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_CanYel takes nothing returns nothing
+    set gg_trg_CanYel=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_CanYel, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_CanYel, Condition(function Trig_CanYel_Conditions))
+    call TriggerAddAction(gg_trg_CanYel, function Trig_CanYel_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: FinYel
+//===========================================================================
+function Trig_FinYel_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GH' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_FinYel_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('o03Q', - 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_FinYel takes nothing returns nothing
+    set gg_trg_FinYel=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_FinYel, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_FinYel, Condition(function Trig_FinYel_Conditions))
+    call TriggerAddAction(gg_trg_FinYel, function Trig_FinYel_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: BegRed
 //===========================================================================
 function Trig_BegRed_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0GF' ) ) then
+    if ( not ( GetResearched() == 'R0GG' ) ) then
         return false
     endif
     return true
@@ -20447,7 +20542,7 @@ endfunction
 
 function Trig_BegRed_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('R0GH', 0, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('R0GG', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0GF', 0, GetOwningPlayer(GetTriggerUnit()))
 endfunction
 
 //===========================================================================
@@ -20462,7 +20557,7 @@ endfunction
 // Trigger: CanRed
 //===========================================================================
 function Trig_CanRed_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0GF' ) ) then
+    if ( not ( GetResearched() == 'R0GG' ) ) then
         return false
     endif
     return true
@@ -20470,7 +20565,7 @@ endfunction
 
 function Trig_CanRed_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('R0GH', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('R0GG', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0GF', 1, GetOwningPlayer(GetTriggerUnit()))
 endfunction
 
 //===========================================================================
@@ -20485,14 +20580,14 @@ endfunction
 // Trigger: FinRed
 //===========================================================================
 function Trig_FinRed_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0GF' ) ) then
+    if ( not ( GetResearched() == 'R0GG' ) ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_FinRed_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('o03R', - 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('o03S', - 1, GetOwningPlayer(GetTriggerUnit()))
 endfunction
 
 //===========================================================================
@@ -20501,6 +20596,278 @@ function InitTrig_FinRed takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_FinRed, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
     call TriggerAddCondition(gg_trg_FinRed, Condition(function Trig_FinRed_Conditions))
     call TriggerAddAction(gg_trg_FinRed, function Trig_FinRed_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: BegBlue
+//===========================================================================
+function Trig_BegBlue_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GF' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_BegBlue_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0GH', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0GG', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_BegBlue takes nothing returns nothing
+    set gg_trg_BegBlue=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_BegBlue, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_BegBlue, Condition(function Trig_BegBlue_Conditions))
+    call TriggerAddAction(gg_trg_BegBlue, function Trig_BegBlue_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: CanBlue
+//===========================================================================
+function Trig_CanBlue_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GF' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_CanBlue_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0GH', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0GG', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_CanBlue takes nothing returns nothing
+    set gg_trg_CanBlue=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_CanBlue, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_CanBlue, Condition(function Trig_CanBlue_Conditions))
+    call TriggerAddAction(gg_trg_CanBlue, function Trig_CanBlue_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: FinBlue
+//===========================================================================
+function Trig_FinBlue_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GF' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_FinBlue_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('o03R', - 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_FinBlue takes nothing returns nothing
+    set gg_trg_FinBlue=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_FinBlue, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_FinBlue, Condition(function Trig_FinBlue_Conditions))
+    call TriggerAddAction(gg_trg_FinBlue, function Trig_FinBlue_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Begred
+//===========================================================================
+function Trig_Begred_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GI' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Begred_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0GK', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0GJ', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Begred takes nothing returns nothing
+    set gg_trg_Begred=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Begred, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_Begred, Condition(function Trig_Begred_Conditions))
+    call TriggerAddAction(gg_trg_Begred, function Trig_Begred_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Canred
+//===========================================================================
+function Trig_Canred_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GI' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Canred_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0GJ', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0GK', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Canred takes nothing returns nothing
+    set gg_trg_Canred=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Canred, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_Canred, Condition(function Trig_Canred_Conditions))
+    call TriggerAddAction(gg_trg_Canred, function Trig_Canred_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Finred
+//===========================================================================
+function Trig_Finred_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GI' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Finred_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('o03V', - 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Finred takes nothing returns nothing
+    set gg_trg_Finred=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Finred, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_Finred, Condition(function Trig_Finred_Conditions))
+    call TriggerAddAction(gg_trg_Finred, function Trig_Finred_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: BegWhite
+//===========================================================================
+function Trig_BegWhite_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GK' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_BegWhite_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0GJ', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0GI', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_BegWhite takes nothing returns nothing
+    set gg_trg_BegWhite=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_BegWhite, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_BegWhite, Condition(function Trig_BegWhite_Conditions))
+    call TriggerAddAction(gg_trg_BegWhite, function Trig_BegWhite_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: CanWhite
+//===========================================================================
+function Trig_CanWhite_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GK' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_CanWhite_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0GI', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0GJ', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_CanWhite takes nothing returns nothing
+    set gg_trg_CanWhite=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_CanWhite, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_CanWhite, Condition(function Trig_CanWhite_Conditions))
+    call TriggerAddAction(gg_trg_CanWhite, function Trig_CanWhite_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: FinWhite
+//===========================================================================
+function Trig_FinWhite_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GK' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_FinWhite_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('o03U', - 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_FinWhite takes nothing returns nothing
+    set gg_trg_FinWhite=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_FinWhite, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_FinWhite, Condition(function Trig_FinWhite_Conditions))
+    call TriggerAddAction(gg_trg_FinWhite, function Trig_FinWhite_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: BegBlack
+//===========================================================================
+function Trig_BegBlack_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GJ' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_BegBlack_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0GK', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0GI', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_BegBlack takes nothing returns nothing
+    set gg_trg_BegBlack=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_BegBlack, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_BegBlack, Condition(function Trig_BegBlack_Conditions))
+    call TriggerAddAction(gg_trg_BegBlack, function Trig_BegBlack_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: CanBlack
+//===========================================================================
+function Trig_CanBlack_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GJ' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_CanBlack_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0GI', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0GK', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_CanBlack takes nothing returns nothing
+    set gg_trg_CanBlack=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_CanBlack, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_CanBlack, Condition(function Trig_CanBlack_Conditions))
+    call TriggerAddAction(gg_trg_CanBlack, function Trig_CanBlack_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: FinBlack
+//===========================================================================
+function Trig_FinBlack_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GJ' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_FinBlack_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('o03T', - 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_FinBlack takes nothing returns nothing
+    set gg_trg_FinBlack=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_FinBlack, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_FinBlack, Condition(function Trig_FinBlack_Conditions))
+    call TriggerAddAction(gg_trg_FinBlack, function Trig_FinBlack_Actions)
 endfunction
 
 //===========================================================================
@@ -43847,9 +44214,24 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_OgresStart()
     call InitTrig_OgresHpSpell2()
     call InitTrig_OrgesHpSpell()
+    call InitTrig_BegYel()
+    call InitTrig_CanYel()
+    call InitTrig_FinYel()
     call InitTrig_BegRed()
     call InitTrig_CanRed()
     call InitTrig_FinRed()
+    call InitTrig_BegBlue()
+    call InitTrig_CanBlue()
+    call InitTrig_FinBlue()
+    call InitTrig_Begred()
+    call InitTrig_Canred()
+    call InitTrig_Finred()
+    call InitTrig_BegWhite()
+    call InitTrig_CanWhite()
+    call InitTrig_FinWhite()
+    call InitTrig_BegBlack()
+    call InitTrig_CanBlack()
+    call InitTrig_FinBlack()
     call InitTrig_GeneralRegen()
     call InitTrig_Pribavka_k_zoloty()
     call InitTrig_StromgardOn()
