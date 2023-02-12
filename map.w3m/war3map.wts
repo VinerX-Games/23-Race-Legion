@@ -82027,6 +82027,12 @@ STRING 13576
 Один из лучших воинов ближнего боя в ордене, мастер дуели.
 }
 
+STRING 13577
+// Units: h0K6 (|cff7878ffЭлитный стрелок), EditorSuffix (Name - Editor Suffix)
+{
+(Альянс)
+}
+
 STRING 13578
 // Abilities: A08P (|cffff1900Аура Воеводы|r), Unubertip (Tooltip - Turn Off - Extended)
 {
@@ -119029,6 +119035,12 @@ STRING 19650
 Экипаж "Улет",Экипаж "Сила Гнормегана",Команда Мегабрякса,Команда Всюдублеска
 }
 
+STRING 19651
+// Units: h0K7 (|cff7878ffЭлитный пехотинец), EditorSuffix (Name - Editor Suffix)
+{
+(Альянс)
+}
+
 STRING 19652
 // Units: o036 (|cffd2b48cСвиноферма|r), EditorSuffix (Name - Editor Suffix)
 {
@@ -119345,6 +119357,12 @@ STRING 19704
 // Units: o038 (|cffd2b48cСторожевая башня|r), Name (Name)
 {
 |cffd2b48cСторожевая башня|r
+}
+
+STRING 19705
+// Units: h0K8 (|cff7878ffСтрельбище), EditorSuffix (Name - Editor Suffix)
+{
+(Альянс)
 }
 
 STRING 19706
@@ -155265,6 +155283,12 @@ STRING 25549
 |cffd2b48cАрена|r
 }
 
+STRING 25550
+// Units: h0K9 (|cff7878ffСтрелок), Name (Name)
+{
+|cff7878ffСтрелок
+}
+
 STRING 25551
 // Units: h0IO (|cffd45e19Казармы|r), Ubertip (Tooltip - Extended)
 {
@@ -169173,6 +169197,12 @@ STRING 27835
 |cffd2b48cКрепость огров|r
 }
 
+STRING 27836
+// Units: h0K9 (|cff7878ffСтрелок), EditorSuffix (Name - Editor Suffix)
+{
+(Альянс)
+}
+
 STRING 27837
 // Units: o03D (|cffd2b48cКрепость огров|r), Ubertip (Tooltip - Extended)
 {
@@ -169189,6 +169219,12 @@ STRING 27839
 // Units: o03E (|cffd2b48cЦитадель огров|r), Name (Name)
 {
 |cffd2b48cЦитадель огров|r
+}
+
+STRING 27840
+// Units: h0KA (|cff7878ffЛучник), Name (Name)
+{
+|cff7878ffЛучник
 }
 
 STRING 27841
@@ -169516,10 +169552,28 @@ STRING 27894
 |cffd2b48cВоеначальник Огров|r
 }
 
+STRING 27895
+// Units: h0KA (|cff7878ffЛучник), EditorSuffix (Name - Editor Suffix)
+{
+(Альянс)
+}
+
 STRING 27896
 // Units: N05K (|cffd2b48cВождь Огров|r), Revivetip (Tooltip - Revive)
 {
 Воскресить |cff6f3c83Военачальник Культа|r
+}
+
+STRING 27897
+// Units: h0KB (|cff7878ffАрбалетчик), Name (Name)
+{
+|cff7878ffАрбалетчик
+}
+
+STRING 27898
+// Units: h0KB (|cff7878ffАрбалетчик), EditorSuffix (Name - Editor Suffix)
+{
+(Альянс)
 }
 
 STRING 27899
@@ -169528,10 +169582,40 @@ STRING 27899
 (Огры)
 }
 
+STRING 27900
+// Units: h0KC (|cff7878ffПехотинец), Name (Name)
+{
+|cff7878ffПехотинец
+}
+
 STRING 27901
 // Units: N05K (|cffd2b48cВождь Огров|r), Name (Name)
 {
 |cffd2b48cВождь Огров|r
+}
+
+STRING 27902
+// Units: h0KC (|cff7878ffПехотинец), EditorSuffix (Name - Editor Suffix)
+{
+(Альянс)
+}
+
+STRING 27903
+// Units: h0KD (|cff7878ffРядовой пехотинец), Name (Name)
+{
+|cff7878ffРядовой пехотинец
+}
+
+STRING 27904
+// Units: h0KD (|cff7878ffРядовой пехотинец), EditorSuffix (Name - Editor Suffix)
+{
+(Альянс)
+}
+
+STRING 27905
+// Units: h0KE (|cff7878ffНаездник на грифоне), Name (Name)
+{
+|cff7878ffНаездник на грифоне
 }
 
 STRING 27906
@@ -169540,10 +169624,40 @@ STRING 27906
 (Огры)
 }
 
+STRING 27907
+// Units: h0KF (|cff7878ffПаладин), Name (Name)
+{
+|cff7878ffПаладин
+}
+
 STRING 27908
 // Units: N05L (|cffd2b48cЗнахарь Огров|r), Name (Name)
 {
 |cffd2b48cЗнахарь Огров|r
+}
+
+STRING 27909
+// Units: h0KF (|cff7878ffПаладин), EditorSuffix (Name - Editor Suffix)
+{
+(Альянс)
+}
+
+STRING 27910
+// Units: h0KG (|cff7878ffТяжелый пехотинец), Name (Name)
+{
+|cff7878ffТяжелый пехотинец
+}
+
+STRING 27911
+// Units: h0KG (|cff7878ffТяжелый пехотинец), EditorSuffix (Name - Editor Suffix)
+{
+(Альянс)
+}
+
+STRING 27912
+// Units: h0KH (|cff7878ffВсадник), Name (Name)
+{
+|cff7878ffВсадник
 }
 
 STRING 27913
@@ -169623,6 +169737,12 @@ STRING 27925
 // Upgrades: R0GN (Железное оружие дальнего боя,Ториевое оруж), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 27926
+// Units: h0KI (|cff7878ffОсадная башня), Name (Name)
+{
+|cff7878ffОсадная башня
 }
 
 STRING 27927
@@ -169843,6 +169963,12 @@ STRING 27957
 // Abilities: A16V (|cffd2b48cВолна исцеления|r), EditorSuffix (Editor Suffix)
 {
 (Огры)
+}
+
+STRING 27958
+// Units: h0KJ (|cff7878ffОсадный танк), Name (Name)
+{
+|cff7878ffОсадный танк
 }
 
 STRING 27959
@@ -170267,6 +170393,18 @@ STRING 28025
 // Upgrades: R0E2 (Длинноствольные мушкеты), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
+}
+
+STRING 28026
+// Units: h0KK (|cff7878ffЛордеронец-Ветеран), Name (Name)
+{
+|cff7878ffЛордеронец-Ветеран
+}
+
+STRING 28027
+// Units: h0KK (|cff7878ffЛордеронец-Ветеран), EditorSuffix (Name - Editor Suffix)
+{
+(Альянс)
 }
 
 STRING 28028
@@ -172382,7 +172520,7 @@ Q
 }
 
 STRING 28367
-// Units: h0K8 (|cff7878ffСтрельбище), EditorSuffix (Name - Editor Suffix)
+// Units: h0K5 (|cff7878ffОсновной стрелок), EditorSuffix (Name - Editor Suffix)
 {
 (Альянс)
 }
