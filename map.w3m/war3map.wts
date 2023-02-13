@@ -160972,41 +160972,6 @@ STRING 26488
 
 }
 
-STRING 26489
-// Abilities: A12I (|cff9370dbСаронитовый Панцирь|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff9370dbВезакс|r покрывается дополнительным саранитовым хитином, что заметно сильно увеличивает его живучесть.
-
-|cffffd7002-й Уровень:|r |cff9370db-17 поглащения урона мин.урон 8|r
-
-}
-
-STRING 26490
-// Abilities: A12I (|cff9370dbСаронитовый Панцирь|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff9370dbВезакс|r покрывается дополнительным саранитовым хитином, что заметно сильно увеличивает его живучесть.
-
-|cffffd7003-й Уровень:|r |cff9370db-19 поглащения урона мин.урон 8|r
-
-}
-
-STRING 26491
-// Abilities: A12I (|cff9370dbСаронитовый Панцирь|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff9370dbВезакс|r покрывается дополнительным саранитовым хитином, что заметно сильно увеличивает его живучесть.
-
-|cffffd7004-й Уровень:|r |cff9370db-21 поглащения урона мин.урон 8|r
-}
-
-STRING 26492
-// Abilities: A12I (|cff9370dbСаронитовый Панцирь|r), Ubertip (Tooltip - Normal - Extended)
-{
-|cff9370dbВезакс|r покрывается дополнительным саранитовым хитином, что заметно сильно увеличивает его живучесть.
-
-|cffffd7001-й Уровень:|r |cff9370db-15 поглащения урона мин.урон 8|r
-
-}
-
 STRING 26493
 // Abilities: A12P (|cffff370bЯрость Адского Крика), Ubertip (Tooltip - Normal - Extended)
 {
@@ -170840,13 +170805,13 @@ G
 }
 
 STRING 28100
-// Upgrades: R0GI (Грабеж), Tip (Tooltip)
+// Upgrades: R0GJ (Грабеж), Name (Name)
 {
 |cffd2b48cЛовля Черных Гроннов
 }
 
 STRING 28101
-// Upgrades: R0GJ (Грабеж), Name (Name)
+// Upgrades: R0GJ (Грабеж), Tip (Tooltip)
 {
 |cffd2b48cЛовля Черных Гроннов
 }
@@ -170915,18 +170880,6 @@ STRING 28112
 // Upgrades: R0GJ (Грабеж), Hotkey (Hotkey)
 {
 G
-}
-
-STRING 28113
-// Upgrades: R0GJ (Грабеж), Tip (Tooltip)
-{
-|cffd2b48cЛовля Черных Гроннов
-}
-
-STRING 28114
-// Upgrades: R0GK (Грабеж), Tip (Tooltip)
-{
-|cffd2b48cЛовля Черных Гроннов
 }
 
 STRING 28115
@@ -172006,7 +171959,7 @@ STRING 28277
 }
 
 STRING 28278
-// Units: h0KN (|cff7878ffЛучница), EditorSuffix (Name - Editor Suffix)
+// Units: h0KK (|cff7878ffЛордеронец-Ветеран), EditorSuffix (Name - Editor Suffix)
 {
 (Альянс)
 }
@@ -172066,7 +172019,7 @@ STRING 28287
 }
 
 STRING 28288
-// Units: h0KO (|cff7878ffДворфийский стрелок), EditorSuffix (Name - Editor Suffix)
+// Units: h0KN (|cff7878ffЛучница), EditorSuffix (Name - Editor Suffix)
 {
 (Альянс)
 }
@@ -172520,25 +172473,25 @@ STRING 28360
 }
 
 STRING 28361
-// Upgrades: R0GF (Грабеж), EditorSuffix (Editor Suffix)
+// Abilities: A17O (|cffd2b48cДеморолизующий звук|r), EditorSuffix (Editor Suffix)
 {
 (Огры)
 }
 
 STRING 28362
-// Upgrades: R0GG (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0GF (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Огры)
 }
 
 STRING 28363
-// Upgrades: R0GH (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0GG (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Огры)
 }
 
 STRING 28364
-// Upgrades: R0GI (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0GH (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Огры)
 }
@@ -172556,7 +172509,7 @@ Q
 }
 
 STRING 28367
-// Units: h0KK (|cff7878ffЛордеронец-Ветеран), EditorSuffix (Name - Editor Suffix)
+// Units: h0KO (|cff7878ffДворфийский стрелок), EditorSuffix (Name - Editor Suffix)
 {
 (Альянс)
 }
@@ -172568,13 +172521,13 @@ STRING 28368
 }
 
 STRING 28369
-// Upgrades: R0GJ (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0GI (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Огры)
 }
 
 STRING 28370
-// Upgrades: R0GK (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0GJ (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Огры)
 }
@@ -172591,26 +172544,35 @@ STRING 28372
 |cff7878ffЦелитель
 }
 
+STRING 28373
+// Abilities: A12I (|cff9370dbСаронитовый Панцирь|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff9370dbВезакс|r покрывается дополнительным саранитовым хитином, что заметно сильно увеличивает его живучесть.
+
+|cffffd7002-й Уровень:|r |cff9370db-17 поглащения урона мин.урон 3|r
+
+}
+
 STRING 28374
-// Upgrades: R0GL (Стальное оружие ближнего боя,Ториевое оруж), EditorSuffix (Editor Suffix)
+// Upgrades: R0GK (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Огры)
 }
 
 STRING 28375
-// Upgrades: R0GM (Стальная броня,Ториевая броня,Арканитовая ), EditorSuffix (Editor Suffix)
+// Upgrades: R0GL (Стальное оружие ближнего боя,Ториевое оруж), EditorSuffix (Editor Suffix)
 {
 (Огры)
 }
 
 STRING 28376
-// Upgrades: R0GN (Железное оружие дальнего боя,Ториевое оруж), EditorSuffix (Editor Suffix)
+// Upgrades: R0GM (Стальная броня,Ториевая броня,Арканитовая ), EditorSuffix (Editor Suffix)
 {
 (Огры)
 }
 
 STRING 28377
-// Upgrades: R0GO (Грубая сила), EditorSuffix (Editor Suffix)
+// Upgrades: R0GN (Железное оружие дальнего боя,Ториевое оруж), EditorSuffix (Editor Suffix)
 {
 (Огры)
 }
@@ -172619,42 +172581,6 @@ STRING 28378
 // Upgrades: R0GQ (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
 {
 E
-}
-
-STRING 28379
-// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), Name (Name)
-{
-|cffff370bОбучение боевых магов (1)
-}
-
-STRING 28380
-// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), Name (Name)
-{
-|cffff370bОбучение боевых магов (2)
-}
-
-STRING 28381
-// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), Tip (Tooltip)
-{
-|cffff370bОбучение боевых магов (1)
-}
-
-STRING 28382
-// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), Tip (Tooltip)
-{
-|cffff370bОбучение боевых магов (2)
-}
-
-STRING 28383
-// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), Name (Name)
-{
-|cffff370bОбучение боевых магов (3)
-}
-
-STRING 28384
-// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), Tip (Tooltip)
-{
-|cffff370bОбучение боевых магов (3)
 }
 
 STRING 28385
@@ -172682,33 +172608,9 @@ S
 }
 
 STRING 28389
-// Upgrades: R0GP (Регенерация троллей,Улучшенная регенераци), EditorSuffix (Editor Suffix)
+// Upgrades: R0GO (Грубая сила), EditorSuffix (Editor Suffix)
 {
 (Огры)
-}
-
-STRING 28390
-// Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), Name (Name)
-{
-|cffff370bОбучение магов поддержки (1)
-}
-
-STRING 28391
-// Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), Name (Name)
-{
-|cffff370bОбучение магов поддержки (2)
-}
-
-STRING 28392
-// Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), Tip (Tooltip)
-{
-|cffff370bОбучение магов поддержки (1)
-}
-
-STRING 28393
-// Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), Tip (Tooltip)
-{
-|cffff370bОбучение магов поддержки (2)
 }
 
 STRING 28394
@@ -172735,18 +172637,6 @@ STRING 28397
 A
 }
 
-STRING 28398
-// Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), Name (Name)
-{
-|cffff370bОбучение магов поддержки (3)
-}
-
-STRING 28399
-// Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), Tip (Tooltip)
-{
-|cffff370bОбучение магов поддержки (3)
-}
-
 STRING 28400
 // Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), Ubertip (Tooltip - Extended)
 {
@@ -172760,33 +172650,9 @@ STRING 28401
 }
 
 STRING 28402
-// Upgrades: R0GQ (Улучшенные топоры,Улучшенные пилы), EditorSuffix (Editor Suffix)
+// Upgrades: R0GP (Регенерация троллей,Улучшенная регенераци), EditorSuffix (Editor Suffix)
 {
 (Огры)
-}
-
-STRING 28403
-// Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), Name (Name)
-{
-|cffff370bОбучение Шаманов Мок`Натала (1)
-}
-
-STRING 28404
-// Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), Name (Name)
-{
-|cffff370bОбучение Шаманов Мок`Натала (2)
-}
-
-STRING 28405
-// Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), Tip (Tooltip)
-{
-|cffff370bОбучение Шаманов Мок`Натала (1)
-}
-
-STRING 28406
-// Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), Tip (Tooltip)
-{
-|cffff370bОбучение Шаманов Мок`Натала (2)
 }
 
 STRING 28407
@@ -172813,18 +172679,6 @@ STRING 28410
 A
 }
 
-STRING 28411
-// Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), Name (Name)
-{
-|cffff370bОбучение Шаманов Мок`Натала (3)
-}
-
-STRING 28412
-// Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), Tip (Tooltip)
-{
-|cffff370bОбучение Шаманов Мок`Натала (3)
-}
-
 STRING 28413
 // Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), Ubertip (Tooltip - Extended)
 {
@@ -172838,7 +172692,7 @@ STRING 28414
 }
 
 STRING 28415
-// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), EditorSuffix (Editor Suffix)
+// Upgrades: R0GQ (Улучшенные топоры,Улучшенные пилы), EditorSuffix (Editor Suffix)
 {
 (Огры)
 }
@@ -172862,6 +172716,15 @@ STRING 28418
 Построить |cffd2b48cПристанище|r
 }
 
+STRING 28419
+// Abilities: A12I (|cff9370dbСаронитовый Панцирь|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff9370dbВезакс|r покрывается дополнительным саранитовым хитином, что заметно сильно увеличивает его живучесть.
+
+|cffffd7003-й Уровень:|r |cff9370db-19 поглащения урона мин.урон 3|r
+
+}
+
 STRING 28420
 // Units: o036 (|cffd2b48cСвиноферма|r), Tip (Tooltip - Basic)
 {
@@ -172872,6 +172735,14 @@ STRING 28421
 // Units: o03J (|cffd2b48cПристанище магов|r), Tip (Tooltip - Basic)
 {
 Построить |cffd2b48cПристанище магов|r
+}
+
+STRING 28422
+// Abilities: A12I (|cff9370dbСаронитовый Панцирь|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff9370dbВезакс|r покрывается дополнительным саранитовым хитином, что заметно сильно увеличивает его живучесть.
+
+|cffffd7004-й Уровень:|r |cff9370db-21 поглащения урона мин.урон 3|r
 }
 
 STRING 28423
@@ -172893,13 +172764,13 @@ S
 }
 
 STRING 28426
-// Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), EditorSuffix (Editor Suffix)
+// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), EditorSuffix (Editor Suffix)
 {
 (Огры)
 }
 
 STRING 28427
-// Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), EditorSuffix (Editor Suffix)
+// Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), EditorSuffix (Editor Suffix)
 {
 (Огры)
 }
@@ -172911,9 +172782,18 @@ STRING 28428
 }
 
 STRING 28429
-// Upgrades: R0GU (Опутывание), EditorSuffix (Editor Suffix)
+// Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), EditorSuffix (Editor Suffix)
 {
 (Огры)
+}
+
+STRING 28430
+// Abilities: A12I (|cff9370dbСаронитовый Панцирь|r), Ubertip (Tooltip - Normal - Extended)
+{
+|cff9370dbВезакс|r покрывается дополнительным саранитовым хитином, что заметно сильно увеличивает его живучесть.
+
+|cffffd7001-й Уровень:|r |cff9370db-15 поглащения урона мин.урон 3|r
+
 }
 
 STRING 28431
@@ -173163,5 +173043,161 @@ STRING 28471
 // Upgrades: R0GQ (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
 {
 E
+}
+
+STRING 28472
+// Abilities: A17O (|cffd2b48cДеморолизующий звук|r), Name (Name)
+{
+|cffd2b48cДеморолизующий звук|r
+}
+
+STRING 28473
+// Abilities: A17O (|cffd2b48cДеморолизующий звук|r), Tip (Tooltip - Normal)
+{
+|cffd2b48cДеморолизующий звук|r
+}
+
+STRING 28474
+// Abilities: A17O (|cffd2b48cДеморолизующий звук|r), Ubertip (Tooltip - Normal - Extended)
+{
+Уменьшает урон враждеских солдат на 10%
+}
+
+STRING 28475
+// Upgrades: R0GI (Грабеж), Tip (Tooltip)
+{
+|cffd2b48cЛовля Красных Гроннов
+}
+
+STRING 28476
+// Upgrades: R0GK (Грабеж), Tip (Tooltip)
+{
+|cffd2b48cЛовля Белых Гроннов
+}
+
+STRING 28477
+// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), Name (Name)
+{
+|cffd2b48cОбучение боевых магов (1)|r
+}
+
+STRING 28478
+// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), Name (Name)
+{
+|cffd2b48cОбучение боевых магов (2)|r
+}
+
+STRING 28479
+// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), Tip (Tooltip)
+{
+|cffd2b48cОбучение боевых магов (1)|r
+}
+
+STRING 28480
+// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), Tip (Tooltip)
+{
+|cffd2b48cОбучение боевых магов (2)|r
+}
+
+STRING 28481
+// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), Name (Name)
+{
+|cffd2b48cОбучение боевых магов (3)|r
+}
+
+STRING 28482
+// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), Tip (Tooltip)
+{
+|cffd2b48cОбучение боевых магов (3)|r
+}
+
+STRING 28483
+// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), Ubertip (Tooltip - Extended)
+{
+Увеличивает запас здоровья и маны боевых магов ,ускоряет регенерацию их маны, а также обучает их новым способностям.
+}
+
+STRING 28484
+// Upgrades: R0GR (Сделать духостранников адептами,Сделать д�), Ubertip (Tooltip - Extended)
+{
+Увеличивает запас здоровья и маны боевых магов ,ускоряет регенерацию их маны, а также обучает их новым способностям.
+}
+
+STRING 28485
+// Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), Name (Name)
+{
+|cffd2b48cОбучение магов поддержки (1)|r
+}
+
+STRING 28486
+// Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), Name (Name)
+{
+|cffd2b48cОбучение магов поддержки (2)|r
+}
+
+STRING 28487
+// Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), Tip (Tooltip)
+{
+|cffd2b48cОбучение магов поддержки (1)|r
+}
+
+STRING 28488
+// Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), Tip (Tooltip)
+{
+|cffd2b48cОбучение магов поддержки (2)|r
+}
+
+STRING 28489
+// Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), Name (Name)
+{
+|cffd2b48cОбучение магов поддержки (3)|r
+}
+
+STRING 28490
+// Upgrades: R0GS (Сделать шаманов адептами,Сделать шаманов м), Tip (Tooltip)
+{
+|cffd2b48cОбучение магов поддержки (3)|r
+}
+
+STRING 28491
+// Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), Name (Name)
+{
+|cffd2b48cОбучение Шаманов Мок`Натала (1)|r
+}
+
+STRING 28492
+// Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), Name (Name)
+{
+|cffd2b48cОбучение Шаманов Мок`Натала (2)|r
+}
+
+STRING 28493
+// Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), Tip (Tooltip)
+{
+|cffd2b48cОбучение Шаманов Мок`Натала (1)|r
+}
+
+STRING 28494
+// Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), Tip (Tooltip)
+{
+|cffd2b48cОбучение Шаманов Мок`Натала (2)|r
+}
+
+STRING 28495
+// Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), Name (Name)
+{
+|cffd2b48cОбучение Шаманов Мок`Натала (3)|r
+}
+
+STRING 28496
+// Upgrades: R0GT (Сделать шаманов адептами,Сделать шаманов м), Tip (Tooltip)
+{
+|cffd2b48cОбучение Шаманов Мок`Натала (3)|r
+}
+
+STRING 28497
+// Upgrades: R0GU (Опутывание), EditorSuffix (Editor Suffix)
+{
+(Огры)
 }
 
