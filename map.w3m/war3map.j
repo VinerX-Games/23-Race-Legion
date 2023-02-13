@@ -22,12 +22,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -222,7 +222,7 @@ group array udg_Ai_navy
 timer udg_TimerToChangeAi= null
 boolean array udg_HeroFirstYes
 integer array udg_HordeLandPrice
-integer array udg_HordeMainPrice
+integer array udg_MainPrice
 integer array udg_HordeElitePrice
 integer array udg_HordeNavyPrice
 integer array udg_HordeMagicPrice
@@ -751,6 +751,9 @@ trigger gg_trg_Spell2= null
 trigger gg_trg_SpellRes= null
 trigger gg_trg_Spell= null
 trigger gg_trg_SpandFarm= null
+trigger gg_trg_AllyOn= null
+trigger gg_trg_AK1T1= null
+trigger gg_trg_AK1T2= null
 trigger gg_trg_ForsacenStarrt= null
 trigger gg_trg_Ult= null
 trigger gg_trg_Banshe= null
@@ -805,7 +808,6 @@ trigger gg_trg_NoLeft= null
 trigger gg_trg_YesLeft= null
 trigger gg_trg_NoRight= null
 trigger gg_trg_YesRight= null
-trigger gg_trg_Counters= null
 trigger gg_trg_StartCommonHome= null
 trigger gg_trg_Forsaken= null
 trigger gg_trg_BloodElf= null
@@ -1523,7 +1525,21 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_AK1T1= null
+trigger gg_trg_OldStormwindForever= null
+trigger gg_trg_AK1Cav= null
+trigger gg_trg_AK1T3= null
+trigger gg_trg_StartAlliance= null
+trigger gg_trg_ACounters= null
+trigger gg_trg_AK2T3= null
+trigger gg_trg_AK2T2= null
+trigger gg_trg_AK2T1= null
+trigger gg_trg_AM3= null
+trigger gg_trg_AM2= null
+trigger gg_trg_AM1= null
+trigger gg_trg_AE2= null
+trigger gg_trg_AE1= null
+trigger gg_trg_AN2= null
+trigger gg_trg_AN1= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1795,7 +1811,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1803,33 +1819,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1837,19 +1853,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -2232,7 +2248,7 @@ function InitGlobals takes nothing returns nothing
     set udg_Total_hero=0
     set udg_Random_Hero=0
     set udg_Players_hero=CreateForce()
-    set udg_SET_TimerTime=23
+    set udg_SET_TimerTime=25
     set udg_SET_VISIBLE_MODE=0
     set i=0
     loop
@@ -2356,7 +2372,7 @@ function InitGlobals takes nothing returns nothing
     set i=0
     loop
         exitwhen ( i > 25 )
-        set udg_HordeMainPrice[i]=0
+        set udg_MainPrice[i]=0
         set i=i + 1
     endloop
 
@@ -2807,55 +2823,6 @@ function FaselessFarmLimit takes player p returns nothing
     call DestroyGroup(g)
     set g=null
 endfunction
-//***************************************************************************
-//*  Counters
-//globals
-//    integer array K1T1
-//    integer array K1T2
-//    integer array K1T2b  
-//    integer array K1TCav 
-//    integer array K1T4
-//    
-//    integer array K2T1
-//    integer array K2T2
-//    integer array K2T2b  
-//    integer array K2T3 
-//    
-//    integer array KM1
-//    integer array KM2
-//    integer array KM3
-//    
-//    integer array Tech1
-//    integer array Tech2
-//    
-//    integer array NH
-//    integer array NL
-//
-//
-//endglobals
-//
-//function SetZeroHorde takes nothing returns nothing
-//    set K1T1[0]=0
-//    set K1T2[0]=0
-//    set K1T2b[0]=0  
-//    set K1TCav[0]=0 
-//    set K1T4[0]=0
-//    
-//    set K2T1[0]=0
-//    set K2T2[0]=0
-//    set K2T2b[0]=0  
-//    set K2T3[0]=0 
-//    
-//    set KM1[0]=0
-//    set KM2[0]=0
-//    set KM3[0]=0
-//    
-//    set Tech1[0]=0
-//    set Tech2[0]=0
-//    
-//    set NH[0]=0
-//    set NL[0]=0
-//endfunction
 //***************************************************************************
 //*  HordeLandUnits
 function HordeLandUnits takes nothing returns boolean
@@ -5350,7 +5317,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o03I', - 1593.2, - 30028.7, 289.097, 'o03I')
     set u=BlzCreateUnitWithSkin(p, 'o03G', - 1302.8, - 30050.7, 276.754, 'o03G')
     set u=BlzCreateUnitWithSkin(p, 'o03L', - 1421.7, - 30299.5, 279.259, 'o03L')
-    set u=BlzCreateUnitWithSkin(p, 'h0K4', - 6262.7, - 28916.5, - 83.781, 'h0K4')
+    set u=BlzCreateUnitWithSkin(p, 'h0K4', - 6262.7, - 28916.5, 276.219, 'h0K4')
     set u=BlzCreateUnitWithSkin(p, 'h0K2', - 3751.7, - 25806.9, 273.509, 'h0K2')
     set u=BlzCreateUnitWithSkin(p, 'e009', - 3723.0, - 25980.1, 273.685, 'e009')
     set u=BlzCreateUnitWithSkin(p, 'h0J5', - 3894.0, - 29881.6, 272.007, 'h0J5')
@@ -5415,33 +5382,37 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0KB', - 6116.3, - 29442.7, 289.195, 'h0KB')
     set u=BlzCreateUnitWithSkin(p, 'h0KD', - 6502.0, - 29062.7, 274.614, 'h0KD')
     set u=BlzCreateUnitWithSkin(p, 'h0KE', - 5958.3, - 29063.9, 282.217, 'h0KE')
-    set u=BlzCreateUnitWithSkin(p, 'h0KF', - 5689.5, - 29066.7, - 84.486, 'h0KF')
+    set u=BlzCreateUnitWithSkin(p, 'h0KF', - 5689.5, - 29066.7, 275.514, 'h0KF')
     set u=BlzCreateUnitWithSkin(p, 'h0KG', - 5756.4, - 29055.7, 270.691, 'h0KG')
     set u=BlzCreateUnitWithSkin(p, 'h0KH', - 6036.6, - 29067.7, 276.587, 'h0KH')
     set u=BlzCreateUnitWithSkin(p, 'h0KI', - 5743.6, - 30263.9, 271.831, 'h0KI')
-    set u=BlzCreateUnitWithSkin(p, 'h0KJ', - 6011.8, - 30460.7, - 88.757, 'h0KJ')
+    set u=BlzCreateUnitWithSkin(p, 'h0KJ', - 6011.8, - 30460.7, 271.243, 'h0KJ')
     set u=BlzCreateUnitWithSkin(p, 'h0KK', - 5723.3, - 29429.7, 267.101, 'h0KK')
     set u=BlzCreateUnitWithSkin(p, 'h0KL', - 6402.2, - 29850.8, 262.497, 'h0KL')
     set u=BlzCreateUnitWithSkin(p, 'h0KM', - 6105.2, - 29820.8, 282.348, 'h0KM')
     set u=BlzCreateUnitWithSkin(p, 'h0KN', - 6509.7, - 29419.9, 273.358, 'h0KN')
     set u=BlzCreateUnitWithSkin(p, 'h0KO', - 6186.5, - 29462.9, 269.884, 'h0KO')
     set u=BlzCreateUnitWithSkin(p, 'n05M', - 743.0, - 30568.9, 179.544, 'n05M')
-    set u=BlzCreateUnitWithSkin(p, 'h0KR', - 6430.9, - 29070.6, - 80.101, 'h0KR')
-    set u=BlzCreateUnitWithSkin(p, 'h0KS', - 6140.6, - 30455.6, - 85.003, 'h0KS')
+    set u=BlzCreateUnitWithSkin(p, 'h0KR', - 6430.9, - 29070.6, 279.899, 'h0KR')
+    set u=BlzCreateUnitWithSkin(p, 'h0KS', - 6140.6, - 30455.6, 274.997, 'h0KS')
     set u=BlzCreateUnitWithSkin(p, 'h0KU', - 6477.4, - 29843.7, 280.240, 'h0KU')
-    set u=BlzCreateUnitWithSkin(p, 'h0KT', - 6194.7, - 29831.9, - 74.921, 'h0KT')
-    set u=BlzCreateUnitWithSkin(p, 'h0KV', - 6452.2, - 29907.1, - 71.148, 'h0KV')
-    set u=BlzCreateUnitWithSkin(p, 'h0KW', - 6101.7, - 29072.7, - 86.175, 'h0KW')
-    set u=BlzCreateUnitWithSkin(p, 'h0KX', - 5837.9, - 29072.6, - 61.286, 'h0KX')
-    set u=BlzCreateUnitWithSkin(p, 'h0KQ', - 5853.2, - 29791.0, - 78.605, 'h0KQ')
+    set u=BlzCreateUnitWithSkin(p, 'h0KT', - 6194.7, - 29831.9, 285.079, 'h0KT')
+    set u=BlzCreateUnitWithSkin(p, 'h0KV', - 6452.2, - 29907.1, 288.852, 'h0KV')
+    set u=BlzCreateUnitWithSkin(p, 'h0KW', - 6101.7, - 29072.7, 273.825, 'h0KW')
+    set u=BlzCreateUnitWithSkin(p, 'h0KX', - 5837.9, - 29072.6, 298.714, 'h0KX')
+    set u=BlzCreateUnitWithSkin(p, 'h0KQ', - 5853.2, - 29791.0, 281.395, 'h0KQ')
     set u=BlzCreateUnitWithSkin(p, 'o03R', - 215.6, - 30531.1, 213.064, 'o03R')
-    set u=BlzCreateUnitWithSkin(p, 'h0KY', - 6188.7, - 29887.9, - 77.500, 'h0KY')
+    set u=BlzCreateUnitWithSkin(p, 'h0KY', - 6188.7, - 29887.9, 282.500, 'h0KY')
+    set u=BlzCreateUnitWithSkin(p, 'h0KZ', - 6352.3, - 30314.3, - 78.025, 'h0KZ')
     set u=BlzCreateUnitWithSkin(p, 'n03V', - 184.5, - 25512.8, 358.737, 'n03V')
     set u=BlzCreateUnitWithSkin(p, 'n03Y', 173.1, - 25475.0, 316.746, 'n03Y')
     set u=BlzCreateUnitWithSkin(p, 'n03S', 511.5, - 25485.8, 20.710, 'n03S')
     set u=BlzCreateUnitWithSkin(p, 'n03P', - 440.2, - 25539.6, 124.039, 'n03P')
     set u=BlzCreateUnitWithSkin(p, 'n03M', - 741.2, - 25582.0, 48.715, 'n03M')
     set u=BlzCreateUnitWithSkin(p, 'h0JN', - 3468.2, - 29833.9, 266.210, 'h0JN')
+    set u=BlzCreateUnitWithSkin(p, 'hpea', - 4871.7, - 29776.1, 268.020, 'hpea')
+    set u=BlzCreateUnitWithSkin(p, 'hpea', - 4876.0, - 29723.5, 292.102, 'hpea')
+    set u=BlzCreateUnitWithSkin(p, 'hpea', - 4969.0, - 29795.4, 170.348, 'hpea')
     set u=BlzCreateUnitWithSkin(p, 'o03S', - 52.2, - 30532.9, 216.378, 'o03S')
     set u=BlzCreateUnitWithSkin(p, 'h0IB', - 4502.5, - 25851.0, 259.966, 'h0IB')
     set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, 290.235, 'n04X')
@@ -10692,9 +10663,10 @@ function Trig_TimerIncome_Actions takes nothing returns nothing
                
             endif
             
-            set t=GetPlayerTechCount(p, 'R0DV', true)
+            //Общий модификатор расходов
+            set t=GetPlayerTechCount(p, 'R0DV', true) + GetPlayerTechCount(p, 'R0GZ', true)
             if t >= 1 then
-                set additional[i]=disincome[i] * ( udg_HordeMainPrice[i] / ( - 100.0 ) )
+                set additional[i]=disincome[i] * ( udg_MainPrice[i] / ( - 100.0 ) )
                 if EcLog then
                     set udg_LocalText2=( "Дополнительно: " + I2S(R2I(additional[i])) )
                     call DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
@@ -21972,6 +21944,43 @@ function InitTrig_SpellRes takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: AllyOn
+//===========================================================================
+function Trig_AllyOn_Actions takes nothing returns nothing
+    
+    call EnableTrigger(gg_trg_AK1T1)
+//    call EnableTrigger( gg_trg_K1T2 )
+//    call EnableTrigger( gg_trg_K1T2b )
+//    call EnableTrigger( gg_trg_K1TCav )
+//    call EnableTrigger( gg_trg_K1T4)
+//    
+//    call EnableTrigger( gg_trg_K2T1 )
+//    call EnableTrigger( gg_trg_K2T2 )
+//    call EnableTrigger( gg_trg_K2T2b )
+//    call EnableTrigger( gg_trg_K2T3)
+//
+//
+//    call EnableTrigger( gg_trg_KM1 )
+//    call EnableTrigger( gg_trg_KM2 )
+//    call EnableTrigger( gg_trg_KM3 )
+// 
+//    call EnableTrigger( gg_trg_TechT1 )
+//    call EnableTrigger( gg_trg_TechT2 )
+//    
+//    call EnableTrigger( gg_trg_NavyHeavy )
+//    call EnableTrigger( gg_trg_NavyLight )
+    
+    
+endfunction
+
+//===========================================================================
+function InitTrig_AllyOn takes nothing returns nothing
+    set gg_trg_AllyOn=CreateTrigger()
+    call TriggerAddAction(gg_trg_AllyOn, function Trig_AllyOn_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: AK1T1
 //===========================================================================
 function Trig_AK1T1_Conditions takes nothing returns boolean
@@ -22091,7 +22100,7 @@ function Trig_AK1T1_Actions takes nothing returns nothing
     
     
     set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
-    call UnitAddAbility(u, 'A0YU')
+    call UnitAddAbility(u, 'A17P')
     call IssuePointOrderLoc(u, "attack", l)
     call RemoveLocation(l)
     set p=null
@@ -22107,6 +22116,1870 @@ function InitTrig_AK1T1 takes nothing returns nothing
     call TriggerAddAction(gg_trg_AK1T1, function Trig_AK1T1_Actions)
 endfunction
 
+
+//===========================================================================
+// Trigger: AK1T2
+//===========================================================================
+function Trig_AK1T2_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'h0K4'
+endfunction
+
+function AT2Count takes player p returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local integer pi= GetPlayerId(p)
+    
+    // Штормград простой
+    set a[0]=0
+    set i=4
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KC'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+    
+//    //Лордеронец
+//    set i = 1 
+//    set b = 1
+//    
+//    loop
+//        set a[0] = a[0] + 1
+//        set a[ a[0] ] = 'h0KR'
+//        
+//        set b = b + 1
+//        exitwhen b >= i
+//    endloop
+    
+    
+//    
+//    //2 юнит Черной гора
+//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01E'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //3 юнит - эльфы
+//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01F'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //4 юнит андеды
+//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 2 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01H'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//    endif
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("AT2_0"), a[0])
+    set i=1
+    loop
+        
+        
+        call SaveInteger(CommonHash, pi, StringHash("AT2") + i, a[i])
+        set i=i + 1
+        
+        exitwhen i > a[0]
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_AK1T2_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("AT2_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, ( StringHash("AT2") + i ))
+    
+    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    
+   
+    //call UnitAddAbility(u,'OR00')
+    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
+    
+    
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    call UnitAddAbility(u, 'A17P')
+    call IssuePointOrderLoc(u, "attack", l)
+    call RemoveLocation(l)
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_AK1T2 takes nothing returns nothing
+    set gg_trg_AK1T2=CreateTrigger()
+    //call DisableTrigger(gg_trg_AK1T2)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AK1T2, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_AK1T2, Condition(function Trig_AK1T2_Conditions))
+    call TriggerAddAction(gg_trg_AK1T2, function Trig_AK1T2_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: AK1Cav
+//===========================================================================
+function Trig_AK1Cav_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'hkni'
+endfunction
+
+function ACavCount takes player p returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local integer pi= GetPlayerId(p)
+    
+    // Штормград простой
+    set a[0]=0
+    set i=4
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KH'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+    
+    // Штормград грифон
+    set b=1
+    set i=3
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KE'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+
+    //Лордеронец
+    set i=1
+    set b=1
+    
+    loop
+        set a[0]=a[0] + 1
+        set a[a[0]]='h0KW'
+        
+        set b=b + 1
+        exitwhen b >= i
+    endloop
+    
+    
+//    
+//    //2 юнит Черной гора
+//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01E'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //3 юнит - эльфы
+//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01F'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //4 юнит андеды
+//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 2 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01H'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//    endif
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("ACav_0"), a[0])
+    set i=1
+    loop
+        
+        
+        call SaveInteger(CommonHash, pi, StringHash("ACav") + i, a[i])
+        set i=i + 1
+        
+        exitwhen i > a[0]
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_AK1Cav_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("ACav_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, ( StringHash("ACav") + i ))
+    
+    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    
+   
+    //call UnitAddAbility(u,'OR00')
+    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
+    
+    
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    call UnitAddAbility(u, 'A17P')
+    call IssuePointOrderLoc(u, "attack", l)
+    call RemoveLocation(l)
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_AK1Cav takes nothing returns nothing
+    set gg_trg_AK1Cav=CreateTrigger()
+    //call DisableTrigger(gg_trg_AK1Cav)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AK1Cav, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_AK1Cav, Condition(function Trig_AK1Cav_Conditions))
+    call TriggerAddAction(gg_trg_AK1Cav, function Trig_AK1Cav_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: AK1T3
+//===========================================================================
+function Trig_AK1T3_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'h0K7'
+endfunction
+
+function AT3Count takes player p returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local integer pi= GetPlayerId(p)
+    
+    // Штормград простой
+    set a[0]=0
+    set i=4
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KG'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+    
+//    //Лордеронец
+//    set i = 1 
+//    set b = 1
+//    
+//    loop
+//        set a[0] = a[0] + 1
+//        set a[ a[0] ] = 'h0KR'
+//        
+//        set b = b + 1
+//        exitwhen b >= i
+//    endloop
+    
+    
+//    
+//    //2 юнит Черной гора
+//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01E'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //3 юнит - эльфы
+//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01F'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //4 юнит андеды
+//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 2 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01H'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//    endif
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("ACav_0"), a[0])
+    set i=1
+    loop
+        
+        
+        call SaveInteger(CommonHash, pi, StringHash("ACav") + i, a[i])
+        set i=i + 1
+        
+        exitwhen i > a[0]
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_AK1T3_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("ACav_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, ( StringHash("ACav") + i ))
+    
+    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    
+   
+    //call UnitAddAbility(u,'OR00')
+    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
+    
+    
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    call UnitAddAbility(u, 'A17P')
+    call IssuePointOrderLoc(u, "attack", l)
+    call RemoveLocation(l)
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_AK1T3 takes nothing returns nothing
+    set gg_trg_AK1T3=CreateTrigger()
+    //call DisableTrigger(gg_trg_AK1T3)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AK1T3, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_AK1T3, Condition(function Trig_AK1T3_Conditions))
+    call TriggerAddAction(gg_trg_AK1T3, function Trig_AK1T3_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: AK2T1
+//===========================================================================
+function Trig_AK2T1_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'hrif'
+endfunction
+
+function AK1Count takes player p returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local integer pi= GetPlayerId(p)
+    
+    // Human
+    set a[0]=0
+    set i=4
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KA'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+    
+    //High elf
+    set i=1
+    set b=1
+    
+    loop
+        set a[0]=a[0] + 1
+        set a[a[0]]='h0L2'
+        
+        set b=b + 1
+        exitwhen b >= i
+    endloop
+    
+    
+//    
+//    //2 юнит Черной гора
+//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01E'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //3 юнит - эльфы
+//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01F'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //4 юнит андеды
+//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 2 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01H'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//    endif
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("AK1_0"), a[0])
+    set i=1
+    loop
+        
+        
+        call SaveInteger(CommonHash, pi, StringHash("AK1") + i, a[i])
+        set i=i + 1
+        
+        exitwhen i > a[0]
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_AK2T1_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("AK1_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, ( StringHash("AK1") + i ))
+    
+    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    
+   
+    //call UnitAddAbility(u,'OR00')
+    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
+    
+    
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    call UnitAddAbility(u, 'A17P')
+    call IssuePointOrderLoc(u, "attack", l)
+    call RemoveLocation(l)
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_AK2T1 takes nothing returns nothing
+    set gg_trg_AK2T1=CreateTrigger()
+    //call DisableTrigger(gg_trg_AK2T1)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AK2T1, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_AK2T1, Condition(function Trig_AK2T1_Conditions))
+    call TriggerAddAction(gg_trg_AK2T1, function Trig_AK2T1_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: AK2T2
+//===========================================================================
+function Trig_AK2T2_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'h0K5'
+endfunction
+
+function AK2Count takes player p returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local integer pi= GetPlayerId(p)
+    
+    // Dwarf
+    set a[0]=0
+    set i=4
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KO'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+    
+    // Human
+    set i=1
+    set b=1
+    
+    loop
+        set a[0]=a[0] + 1
+        set a[a[0]]='h0KB'
+        
+        set b=b + 1
+        exitwhen b >= i
+    endloop
+    
+    
+//    
+//    //2 юнит Черной гора
+//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01E'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //3 юнит - эльфы
+//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01F'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //4 юнит андеды
+//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 2 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01H'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//    endif
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("AK2_0"), a[0])
+    set i=1
+    loop
+        
+        
+        call SaveInteger(CommonHash, pi, StringHash("AK2") + i, a[i])
+        set i=i + 1
+        
+        exitwhen i > a[0]
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_AK2T2_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("AK2_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, ( StringHash("AK2") + i ))
+    
+    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    
+   
+    //call UnitAddAbility(u,'OR00')
+    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
+    
+    
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    call UnitAddAbility(u, 'A17P')
+    call IssuePointOrderLoc(u, "attack", l)
+    call RemoveLocation(l)
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_AK2T2 takes nothing returns nothing
+    set gg_trg_AK2T2=CreateTrigger()
+    //call DisableTrigger(gg_trg_AK2T2)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AK2T2, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_AK2T2, Condition(function Trig_AK2T2_Conditions))
+    call TriggerAddAction(gg_trg_AK2T2, function Trig_AK2T2_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: AK2T3
+//===========================================================================
+function Trig_AK2T3_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'h0K6'
+endfunction
+
+function AK3Count takes player p returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local integer pi= GetPlayerId(p)
+    
+    // Штормград простой
+    set a[0]=0
+    set i=4
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0K9'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+    
+    //Лордеронец
+    set i=1
+    set b=1
+    
+    loop
+        set a[0]=a[0] + 1
+        set a[a[0]]='h0KK'
+        
+        set b=b + 1
+        exitwhen b >= i
+    endloop
+    
+    
+//    
+//    //2 юнит Черной гора
+//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01E'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //3 юнит - эльфы
+//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01F'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //4 юнит андеды
+//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 2 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01H'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//    endif
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("AK3_0"), a[0])
+    set i=1
+    loop
+        
+        
+        call SaveInteger(CommonHash, pi, StringHash("AK3") + i, a[i])
+        set i=i + 1
+        
+        exitwhen i > a[0]
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_AK2T3_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("AK3_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, ( StringHash("AK3") + i ))
+    
+    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    
+   
+    //call UnitAddAbility(u,'OR00')
+    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
+    
+    
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    call UnitAddAbility(u, 'A17P')
+    call IssuePointOrderLoc(u, "attack", l)
+    call RemoveLocation(l)
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_AK2T3 takes nothing returns nothing
+    set gg_trg_AK2T3=CreateTrigger()
+    //call DisableTrigger(gg_trg_AK2T3)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AK2T3, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_AK2T3, Condition(function Trig_AK2T3_Conditions))
+    call TriggerAddAction(gg_trg_AK2T3, function Trig_AK2T3_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: AM1
+//===========================================================================
+function Trig_AM1_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'hmpr'
+endfunction
+
+function AM1Count takes player p returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local integer pi= GetPlayerId(p)
+    
+    // High elf
+    set a[0]=0
+    set i=2
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KU'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+    
+    //High eldf sorc
+    set b=0
+    set i=2
+    loop
+        set a[0]=a[0] + 1
+        set a[a[0]]='h0KV'
+        
+        set b=b + 1
+        exitwhen b >= i
+    endloop
+    
+    //Human
+    set i=1
+    set b=1
+    
+    loop
+        set a[0]=a[0] + 1
+        set a[a[0]]='h0KL'
+        
+        set b=b + 1
+        exitwhen b >= i
+    endloop
+    
+    
+//    
+//    //2 юнит Черной гора
+//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01E'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //3 юнит - эльфы
+//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01F'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //4 юнит андеды
+//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 2 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01H'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//    endif
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("AM1_0"), a[0])
+    set i=1
+    loop
+        
+        
+        call SaveInteger(CommonHash, pi, StringHash("AM1") + i, a[i])
+        set i=i + 1
+        
+        exitwhen i > a[0]
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_AM1_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("AM1_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, ( StringHash("AM1") + i ))
+    
+    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    
+   
+    //call UnitAddAbility(u,'OR00')
+    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
+    
+    
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    call UnitAddAbility(u, 'A17P')
+    call IssuePointOrderLoc(u, "attack", l)
+    call RemoveLocation(l)
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_AM1 takes nothing returns nothing
+    set gg_trg_AM1=CreateTrigger()
+    //call DisableTrigger(gg_trg_AM1)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AM1, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_AM1, Condition(function Trig_AM1_Conditions))
+    call TriggerAddAction(gg_trg_AM1, function Trig_AM1_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: AM2
+//===========================================================================
+function Trig_AM2_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'hsor'
+endfunction
+
+function AM2Count takes player p returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local integer pi= GetPlayerId(p)
+    
+    // Human
+    set a[0]=0
+    set i=4
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KM'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+    
+ 
+    
+//    
+//    //2 юнит Черной гора
+//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01E'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //3 юнит - эльфы
+//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01F'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //4 юнит андеды
+//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 2 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01H'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//    endif
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("AM2_0"), a[0])
+    set i=1
+    loop
+        
+        
+        call SaveInteger(CommonHash, pi, StringHash("AM2") + i, a[i])
+        set i=i + 1
+        
+        exitwhen i > a[0]
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_AM2_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("AM2_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, ( StringHash("AM2") + i ))
+    
+    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    
+   
+    //call UnitAddAbility(u,'OR00')
+    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
+    
+    
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    call UnitAddAbility(u, 'A17P')
+    call IssuePointOrderLoc(u, "attack", l)
+    call RemoveLocation(l)
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_AM2 takes nothing returns nothing
+    set gg_trg_AM2=CreateTrigger()
+    //call DisableTrigger(gg_trg_AM2)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AM2, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_AM2, Condition(function Trig_AM2_Conditions))
+    call TriggerAddAction(gg_trg_AM2, function Trig_AM2_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: AM3
+//===========================================================================
+function Trig_AM3_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'hspt'
+endfunction
+
+function AM3Count takes player p returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local integer pi= GetPlayerId(p)
+    
+    // Штормград простой
+    set a[0]=0
+    set i=4
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KC'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+    
+//    //Лордеронец
+//    set i = 1 
+//    set b = 1
+//    
+//    loop
+//        set a[0] = a[0] + 1
+//        set a[ a[0] ] = 'h0KR'
+//        
+//        set b = b + 1
+//        exitwhen b >= i
+//    endloop
+    
+    
+//    
+//    //2 юнит Черной гора
+//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01E'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //3 юнит - эльфы
+//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01F'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //4 юнит андеды
+//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 2 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01H'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//    endif
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("AM3_0"), a[0])
+    set i=1
+    loop
+        
+        
+        call SaveInteger(CommonHash, pi, StringHash("AM3") + i, a[i])
+        set i=i + 1
+        
+        exitwhen i > a[0]
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_AM3_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("AM3_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, ( StringHash("AM3") + i ))
+    
+    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    
+   
+    //call UnitAddAbility(u,'OR00')
+    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
+    
+    
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    call UnitAddAbility(u, 'A17P')
+    call IssuePointOrderLoc(u, "attack", l)
+    call RemoveLocation(l)
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_AM3 takes nothing returns nothing
+    set gg_trg_AM3=CreateTrigger()
+    //call DisableTrigger(gg_trg_AM3)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AM3, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_AM3, Condition(function Trig_AM3_Conditions))
+    call TriggerAddAction(gg_trg_AM3, function Trig_AM3_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: AE1
+//===========================================================================
+function Trig_AE1_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'hmtm'
+endfunction
+
+function AE1Count takes player p returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local integer pi= GetPlayerId(p)
+    
+    // Dwarf
+    set a[0]=0
+    set i=4
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KZ'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+//    
+//    //Лордеронец
+//    set i = 1 
+//    set b = 1
+//    
+//    loop
+//        set a[0] = a[0] + 1
+//        set a[ a[0] ] = 'h0KR'
+//        
+//        set b = b + 1
+//        exitwhen b >= i
+//    endloop
+//    
+    
+//    
+//    //2 юнит Черной гора
+//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01E'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //3 юнит - эльфы
+//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01F'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //4 юнит андеды
+//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 2 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01H'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//    endif
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("AE1_0"), a[0])
+    set i=1
+    loop
+        
+        
+        call SaveInteger(CommonHash, pi, StringHash("AE1") + i, a[i])
+        set i=i + 1
+        
+        exitwhen i > a[0]
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_AE1_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("AE1_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, ( StringHash("AE1") + i ))
+    
+    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    
+   
+    //call UnitAddAbility(u,'OR00')
+    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
+    
+    
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    call UnitAddAbility(u, 'A17P')
+    call IssuePointOrderLoc(u, "attack", l)
+    call RemoveLocation(l)
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_AE1 takes nothing returns nothing
+    set gg_trg_AE1=CreateTrigger()
+    //call DisableTrigger(gg_trg_AE1)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AE1, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_AE1, Condition(function Trig_AE1_Conditions))
+    call TriggerAddAction(gg_trg_AE1, function Trig_AE1_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: AE2
+//===========================================================================
+function Trig_AE2_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'hmtt'
+endfunction
+
+function AE2Count takes player p returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local integer pi= GetPlayerId(p)
+    
+    // Old Tank
+    set a[0]=0
+    set i=4
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KJ'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+    
+//    //Лордеронец
+//    set i = 1 
+//    set b = 1
+//    
+//    loop
+//        set a[0] = a[0] + 1
+//        set a[ a[0] ] = 'h0KR'
+//        
+//        set b = b + 1
+//        exitwhen b >= i
+//    endloop
+    
+    
+//    
+//    //2 юнит Черной гора
+//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01E'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //3 юнит - эльфы
+//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01F'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //4 юнит андеды
+//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 2 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01H'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//    endif
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("AE2_0"), a[0])
+    set i=1
+    loop
+        
+        
+        call SaveInteger(CommonHash, pi, StringHash("AE2") + i, a[i])
+        set i=i + 1
+        
+        exitwhen i > a[0]
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_AE2_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("AE2_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, ( StringHash("AE2") + i ))
+    
+    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    
+   
+    //call UnitAddAbility(u,'OR00')
+    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
+    
+    
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    call UnitAddAbility(u, 'A17P')
+    call IssuePointOrderLoc(u, "attack", l)
+    call RemoveLocation(l)
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_AE2 takes nothing returns nothing
+    set gg_trg_AE2=CreateTrigger()
+    //call DisableTrigger(gg_trg_AE2)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AE2, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_AE2, Condition(function Trig_AE2_Conditions))
+    call TriggerAddAction(gg_trg_AE2, function Trig_AE2_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: AN1
+//===========================================================================
+function Trig_AN1_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'h0L0'
+endfunction
+
+function AN1Count takes player p returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local integer pi= GetPlayerId(p)
+    
+    // Штормград простой
+    set a[0]=0
+    set i=4
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KD'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+    
+    //Лордеронец
+    set i=1
+    set b=1
+    
+    loop
+        set a[0]=a[0] + 1
+        set a[a[0]]='h0KR'
+        
+        set b=b + 1
+        exitwhen b >= i
+    endloop
+    
+    
+//    
+//    //2 юнит Черной гора
+//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01E'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //3 юнит - эльфы
+//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01F'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //4 юнит андеды
+//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 2 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01H'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//    endif
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("AN1_0"), a[0])
+    set i=1
+    loop
+        
+        
+        call SaveInteger(CommonHash, pi, StringHash("AN1") + i, a[i])
+        set i=i + 1
+        
+        exitwhen i > a[0]
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_AN1_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("AN1_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, ( StringHash("AN1") + i ))
+    
+    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    
+   
+    //call UnitAddAbility(u,'OR00')
+    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
+    
+    
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    
+    call IssuePointOrderLoc(u, "attack", l)
+    call RemoveLocation(l)
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_AN1 takes nothing returns nothing
+    set gg_trg_AN1=CreateTrigger()
+    //call DisableTrigger(gg_trg_AN1)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AN1, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_AN1, Condition(function Trig_AN1_Conditions))
+    call TriggerAddAction(gg_trg_AN1, function Trig_AN1_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: AN2
+//===========================================================================
+function Trig_AN2_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'h0L1'
+endfunction
+
+function AN2Count takes player p returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local integer pi= GetPlayerId(p)
+    
+    // Штормград простой
+    set a[0]=0
+    set i=4
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KC'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+    
+//    //Лордеронец
+//    set i = 1 
+//    set b = 1
+//    
+//    loop
+//        set a[0] = a[0] + 1
+//        set a[ a[0] ] = 'h0KR'
+//        
+//        set b = b + 1
+//        exitwhen b >= i
+//    endloop
+    
+    
+//    
+//    //2 юнит Черной гора
+//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01E'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //3 юнит - эльфы
+//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01F'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //4 юнит андеды
+//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 2 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01H'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//    endif
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("AE2_0"), a[0])
+    set i=1
+    loop
+        
+        
+        call SaveInteger(CommonHash, pi, StringHash("AE2") + i, a[i])
+        set i=i + 1
+        
+        exitwhen i > a[0]
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_AN2_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("AE2_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, ( StringHash("AE2") + i ))
+    
+    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    
+   
+    //call UnitAddAbility(u,'OR00')
+    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
+    
+    
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    
+    call IssuePointOrderLoc(u, "attack", l)
+    call RemoveLocation(l)
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_AN2 takes nothing returns nothing
+    set gg_trg_AN2=CreateTrigger()
+    //call DisableTrigger(gg_trg_AN2)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AN2, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_AN2, Condition(function Trig_AN2_Conditions))
+    call TriggerAddAction(gg_trg_AN2, function Trig_AN2_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: OldStormwindForever
+//===========================================================================
+function Trig_OldStormwindForever_Conditions takes nothing returns boolean
+    return GetResearched() == 'R0DW'
+endfunction
+
+function Trig_OldStormwindForever_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    set udg_MainPrice[pi]=udg_MainPrice[pi] - 15
+    
+    //Запретил ветки
+    //call SetPlayerTechMaxAllowed(p,'R0DY',0)
+   // call SetPlayerTechMaxAllowed(p,'R0DX',0)
+    //call SetPlayerTechMaxAllowed(p,'R0DZ',0)
+endfunction
+
+//===========================================================================
+function InitTrig_OldStormwindForever takes nothing returns nothing
+    set gg_trg_OldStormwindForever=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_OldStormwindForever, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_OldStormwindForever, Condition(function Trig_OldStormwindForever_Conditions))
+    call TriggerAddAction(gg_trg_OldStormwindForever, function Trig_OldStormwindForever_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: ACounters
+//===========================================================================
+function AcountAll takes player p returns nothing
+    call AT1Count(p)
+    call AT2Count(p)
+    //call AT2bCount(p)
+    call ACavCount(p)
+    call AT3Count(p)
+    
+    call AK1Count(p)
+    call AK2Count(p)
+    //call AK2bCount(p)
+    call AK3Count(p)
+    
+    
+    call AM1Count(p)
+    call AM2Count(p)
+    call AM3Count(p)
+    
+    call AE1Count(p)
+    call AE2Count(p)
+    
+    call AN1Count(p)
+    call AN2Count(p)
+endfunction
+
+//===========================================================================
+// Trigger: StartAlliance
+//===========================================================================
+function Trig_StartAlliance_Func002A takes nothing returns nothing
+    call AcountAll(GetEnumPlayer())
+endfunction
+
+function Trig_StartAlliance_Actions takes nothing returns nothing
+    call ForForce(udg_AllPlayers, function Trig_StartAlliance_Func002A)
+endfunction
+
+//===========================================================================
+function InitTrig_StartAlliance takes nothing returns nothing
+    set gg_trg_StartAlliance=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_StartAlliance, 0.01)
+    call TriggerAddAction(gg_trg_StartAlliance, function Trig_StartAlliance_Actions)
+endfunction
 
 //===========================================================================
 // Trigger: ForsacenStarrt
@@ -24707,7 +26580,7 @@ function Trig_TrallHordeForever_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     local group g= CreateGroup()
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 15
+    set udg_MainPrice[pi]=udg_MainPrice[pi] - 15
     
     //Запретил ветки
     call SetPlayerTechMaxAllowed(p, 'R0DY', 0)
@@ -24736,7 +26609,7 @@ function Trig_Compromise_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     local group g= CreateGroup()
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 6
+    set udg_MainPrice[pi]=udg_MainPrice[pi] - 6
     
     
     //Запретил другие ветки
@@ -24908,7 +26781,7 @@ function Trig_Forsaken_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call countAll(p)
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 4
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 4
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 3
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 1
     
@@ -24950,7 +26823,7 @@ function Trig_BloodElf_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call countAll(p)
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 4
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 4
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 3
     set udg_HordeMagicPrice[pi]=udg_HordeMagicPrice[pi] - 5
     set udg_HordeNavyPrice[pi]=udg_HordeNavyPrice[pi] - 1
@@ -24995,7 +26868,7 @@ function Trig_Pandarens_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call countAll(p)
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 2
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 2
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 2
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 1
     call ChangeLandUnitsNow(p , pi)
@@ -25092,7 +26965,7 @@ function Trig_CommonHome_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     local group g= CreateGroup()
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 10
+    set udg_MainPrice[pi]=udg_MainPrice[pi] - 10
     call countAll(p)
 
     
@@ -25116,7 +26989,7 @@ function Trig_CommonHome_Actions takes nothing returns nothing
     
     // Бонусы ЧГ -
     if GetPlayerTechCount(p, 'R0D1', true) == 1 then
-        set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 3
+        set udg_MainPrice[pi]=udg_MainPrice[pi] - 3
         set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] + 5
         
     endif
@@ -25125,7 +26998,7 @@ function Trig_CommonHome_Actions takes nothing returns nothing
     
     // Бонусы Драконьей пасти  -
     if GetPlayerTechCount(p, 'R0E1', true) == 1 then
-        set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 3
+        set udg_MainPrice[pi]=udg_MainPrice[pi] - 3
         set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] + 5
         set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] + 3
         
@@ -25134,7 +27007,7 @@ function Trig_CommonHome_Actions takes nothing returns nothing
      
     // Бонусы Кор Крон  -
     if GetPlayerTechCount(p, 'R0E0', true) == 1 then
-        set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 2
+        set udg_MainPrice[pi]=udg_MainPrice[pi] - 2
         set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] + 5
         
     endif
@@ -25188,7 +27061,7 @@ function Trig_Zandalars_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call countAll(p)
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 3
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 3
     set udg_HordeNavyPrice[pi]=udg_HordeNavyPrice[pi] - 4
     
     call ChangeNavyUnitsNow(p , pi)
@@ -25220,7 +27093,7 @@ function Trig_NightBorn_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call countAll(p)
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 3
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 3
     set udg_HordeMagicPrice[pi]=udg_HordeMagicPrice[pi] - 5
     
     call ChangeMagicUnitsNow(p , pi)
@@ -25278,7 +27151,7 @@ function Trig_BlackMountainHorde_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call countAll(p)
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 3
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 3
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 5
 
     call ChangeLandUnitsNow(p , pi)
@@ -25315,7 +27188,7 @@ function Trig_DragonHorde_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call countAll(p)
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 4
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 4
     set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] - 5
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 3
 
@@ -25353,7 +27226,7 @@ function Trig_CorCron_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 2
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 2
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 5
     call countAll(p)
 
@@ -25468,7 +27341,7 @@ function Trig_TrueHorde_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     local group g= CreateGroup()
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 15
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 15
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 5
     call countAll(p)
 
@@ -25492,7 +27365,7 @@ function Trig_TrueHorde_Actions takes nothing returns nothing
     
     // Бонусы отреков  -
     if GetPlayerTechCount(p, 'R0D2', true) == 1 then
-        set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 3
+        set udg_MainPrice[pi]=udg_MainPrice[pi] - 3
         set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] + 5
         
     endif
@@ -25500,7 +27373,7 @@ function Trig_TrueHorde_Actions takes nothing returns nothing
     
     // Бонусы бладов -
     if GetPlayerTechCount(p, 'R0D2', true) == 1 then
-        set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 3
+        set udg_MainPrice[pi]=udg_MainPrice[pi] - 3
         set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] + 5
         
     endif
@@ -25508,7 +27381,7 @@ function Trig_TrueHorde_Actions takes nothing returns nothing
     
     // Бонусы пандаренов  -
     if GetPlayerTechCount(p, 'R0E0', true) == 1 then
-        set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] - 2
+        set udg_MainPrice[pi]=udg_MainPrice[pi] - 2
         set udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] + 2
         set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] + 1
         
@@ -25558,7 +27431,7 @@ function Trig_IronHorde_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call countAll(p)
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 5
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 5
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 8
     set udg_HordeNavyPrice[pi]=udg_HordeNavyPrice[pi] - 3
 
@@ -25641,7 +27514,7 @@ function Trig_BuyGoblins_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call countAll(p)
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 4
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 4
     set udg_HordeTechPrice[pi]=udg_HordeTechPrice[pi] - 7
     set udg_HordeNavyPrice[pi]=udg_HordeNavyPrice[pi] - 3
     
@@ -25705,7 +27578,7 @@ function Trig_DeathKnights_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call countAll(p)
-    set udg_HordeMainPrice[pi]=udg_HordeMainPrice[pi] + 1
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 1
     set udg_HordeElitePrice[pi]=udg_HordeElitePrice[pi] - 3
 
     call ChangeEliteUnitsNow(p , pi)
@@ -44463,7 +46336,24 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_LumberTest()
     call InitTrig_Spell2()
     call InitTrig_SpellRes()
+    call InitTrig_AllyOn()
     call InitTrig_AK1T1()
+    call InitTrig_AK1T2()
+    call InitTrig_AK1Cav()
+    call InitTrig_AK1T3()
+    call InitTrig_AK2T1()
+    call InitTrig_AK2T2()
+    call InitTrig_AK2T3()
+    call InitTrig_AM1()
+    call InitTrig_AM2()
+    call InitTrig_AM3()
+    call InitTrig_AE1()
+    call InitTrig_AE2()
+    call InitTrig_AN1()
+    call InitTrig_AN2()
+    call InitTrig_OldStormwindForever()
+    //Function not found: call InitTrig_ACounters()
+    call InitTrig_StartAlliance()
     call InitTrig_ForsacenStarrt()
     call InitTrig_Ult()
     call InitTrig_Banshe()
@@ -45448,7 +47338,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
