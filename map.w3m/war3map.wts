@@ -160972,6 +160972,30 @@ STRING 26488
 
 }
 
+STRING 26489
+// Units: h0KD (|cff7878ffШтормградский воитель), Name (Name)
+{
+|cff7878ffШтормградский воитель
+}
+
+STRING 26490
+// Units: h0KQ (|cff7878ffМудрец), Name (Name)
+{
+|cff7878ffМудрец
+}
+
+STRING 26491
+// Units: h0KR (|cff7878ffПехотинец Лордерона), Name (Name)
+{
+|cff7878ffПехотинец Лордерона
+}
+
+STRING 26492
+// Units: h0KS (|cff7878ffСтарый танк), Name (Name)
+{
+|cff7878ffСтарый танк
+}
+
 STRING 26493
 // Abilities: A12P (|cffff370bЯрость Адского Крика), Ubertip (Tooltip - Normal - Extended)
 {
@@ -169614,7 +169638,7 @@ STRING 27910
 }
 
 STRING 27911
-// Units: h0KD (|cff7878ffРядовой пехотинец), EditorSuffix (Name - Editor Suffix)
+// Units: h0KD (|cff7878ffШтормградский воитель), EditorSuffix (Name - Editor Suffix)
 {
 (Альянс)
 }
@@ -169720,12 +169744,6 @@ STRING 27928
 // Upgrades: R0FU (Болезнетворное облако), Hotkey (Hotkey)
 {
 X
-}
-
-STRING 27929
-// Units: h0KD (|cff7878ffРядовой пехотинец), Name (Name)
-{
-|cff7878ffРядовой пехотинец
 }
 
 STRING 27930
@@ -170880,6 +170898,18 @@ STRING 28112
 // Upgrades: R0GJ (Грабеж), Hotkey (Hotkey)
 {
 G
+}
+
+STRING 28113
+// Units: h0KT (|cff7878ffДруид), Name (Name)
+{
+|cff7878ffДруид
+}
+
+STRING 28114
+// Units: h0KV (|cff7878ffВолшебница), Name (Name)
+{
+|cff7878ffВолшебница
 }
 
 STRING 28115
@@ -172539,7 +172569,7 @@ STRING 28371
 }
 
 STRING 28372
-// Units: h0KQ (|cff7878ffЦелитель), Name (Name)
+// Units: h0KU (|cff7878ffЦелитель), Name (Name)
 {
 |cff7878ffЦелитель
 }
@@ -172581,6 +172611,42 @@ STRING 28378
 // Upgrades: R0GQ (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
 {
 E
+}
+
+STRING 28379
+// Units: h0KW (|cff7878ffКавалерист Лордерона), Name (Name)
+{
+|cff7878ffКавалерист Лордерона
+}
+
+STRING 28380
+// Units: h0KX (|cff7878ffВоздаятель), Name (Name)
+{
+|cff7878ffВоздаятель
+}
+
+STRING 28381
+// Units: h0KX (|cff7878ffВоздаятель), EditorSuffix (Name - Editor Suffix)
+{
+(Альянс)
+}
+
+STRING 28382
+// Units: h0KY (|cff7878ffГном-кудесник), Name (Name)
+{
+|cff7878ffГном-кудесник
+}
+
+STRING 28383
+// Abilities: A17P (Графика: Флаг Альянса), Name (Name)
+{
+Графика: Флаг Альянса
+}
+
+STRING 28384
+// Abilities: A17P (Графика: Флаг Альянса), Tip (Tooltip - Normal)
+{
+Графика: Свечение героя
 }
 
 STRING 28385
