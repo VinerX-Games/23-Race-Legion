@@ -127618,25 +127618,25 @@ STRING 21058
 }
 
 STRING 21059
-// Abilities: A0VI (Кол-во убийств), EditorSuffix (Editor Suffix)
+// Units: h0L3 (|cfff08080Застрельщик), EditorSuffix (Name - Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21060
-// Abilities: A0WG (Защита), EditorSuffix (Editor Suffix)
+// Abilities: A0VI (Кол-во убийств), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21061
-// Abilities: A0WJ (|cfff08080Внутренний огонь|r), EditorSuffix (Editor Suffix)
+// Abilities: A0WG (Защита), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21062
-// Abilities: A0WP (|cfff08080Критический удар|r), EditorSuffix (Editor Suffix)
+// Abilities: A0WJ (|cfff08080Внутренний огонь|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -127650,7 +127650,7 @@ STRING 21063
 }
 
 STRING 21064
-// Abilities: A0WQ (|cfff08080Дрессировка животных|r), EditorSuffix (Editor Suffix)
+// Abilities: A0WP (|cfff08080Критический удар|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -127662,43 +127662,43 @@ STRING 21065
 }
 
 STRING 21066
-// Abilities: A0WR (|cfff08080Дрессировка животных|r), EditorSuffix (Editor Suffix)
+// Abilities: A0WQ (|cfff08080Дрессировка животных|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21067
-// Abilities: A0WS (|cfff08080Аура выносливости|r), EditorSuffix (Editor Suffix)
+// Abilities: A0WR (|cfff08080Дрессировка животных|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21068
-// Abilities: A0WX (Бонус к скорости атаки), EditorSuffix (Editor Suffix)
+// Abilities: A0WS (|cfff08080Аура выносливости|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21069
-// Abilities: A0WY (Благословение Элуны), EditorSuffix (Editor Suffix)
+// Abilities: A0WX (Бонус к скорости атаки), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21070
-// Abilities: A0WY (Благословение Элуны), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WY (Благословение Элуны), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21071
-// Abilities: A0WZ (|cfff08080Ярость|r), EditorSuffix (Editor Suffix)
+// Abilities: A0WY (Благословение Элуны), Ubertip (Tooltip - Normal - Extended)
 {
 (Стромгард)
 }
 
 STRING 21072
-// Abilities: A0WZ (|cfff08080Ярость|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WZ (|cfff08080Ярость|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -127794,13 +127794,13 @@ Y
 }
 
 STRING 21088
-// Abilities: A0WZ (|cfff08080Ярость|r), Tip (Tooltip - Normal)
+// Abilities: A0WZ (|cfff08080Ярость|r), Ubertip (Tooltip - Normal - Extended)
 {
 (Стромгард)
 }
 
 STRING 21089
-// Abilities: A0WZ (|cfff08080Ярость|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A0WZ (|cfff08080Ярость|r), Tip (Tooltip - Normal)
 {
 (Стромгард)
 }
@@ -127826,7 +127826,7 @@ STRING 21092
 }
 
 STRING 21093
-// Abilities: A0X1 (|cfff08080Аура света|r), EditorSuffix (Editor Suffix)
+// Abilities: A0WZ (|cfff08080Ярость|r), Ubertip (Tooltip - Normal - Extended)
 {
 (Стромгард)
 }
@@ -127922,7 +127922,7 @@ STRING 21108
 }
 
 STRING 21109
-// Abilities: A0X2 (|cfff08080Массовое исцеление|r), EditorSuffix (Editor Suffix)
+// Abilities: A0X1 (|cfff08080Аура света|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -127994,7 +127994,7 @@ STRING 21120
 }
 
 STRING 21121
-// Abilities: A0X3 (|cfff08080Воскрешение|r), EditorSuffix (Editor Suffix)
+// Abilities: A0X2 (|cfff08080Массовое исцеление|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -128210,7 +128210,7 @@ W
 }
 
 STRING 21157
-// Abilities: A0X4 (|cfff08080Сокрушение|r), EditorSuffix (Editor Suffix)
+// Abilities: A0X3 (|cfff08080Воскрешение|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -128414,7 +128414,7 @@ STRING 21190
 }
 
 STRING 21191
-// Abilities: A0X5 (|cfff08080Свет небес|r), EditorSuffix (Editor Suffix)
+// Abilities: A0X4 (|cfff08080Сокрушение|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -128516,7 +128516,7 @@ STRING 21207
 }
 
 STRING 21208
-// Abilities: A0X7 (|cfff08080Аватар|r), EditorSuffix (Editor Suffix)
+// Abilities: A0X5 (|cfff08080Свет небес|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -128714,7 +128714,7 @@ T
 }
 
 STRING 21241
-// Abilities: A0X8 (|cfff08080Духовная Сила|r), EditorSuffix (Editor Suffix)
+// Abilities: A0X7 (|cfff08080Аватар|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -129256,7 +129256,7 @@ Q
 }
 
 STRING 21330
-// Abilities: A0X9 (|cfff08080Критический удар|r), EditorSuffix (Editor Suffix)
+// Abilities: A0X8 (|cfff08080Духовная Сила|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -129358,13 +129358,13 @@ W
 }
 
 STRING 21347
-// Abilities: A0XA (|cfff08080Вспышка Света|r), EditorSuffix (Editor Suffix)
+// Abilities: A0X9 (|cfff08080Критический удар|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21348
-// Abilities: A0X6 (|cfff08080Жгучая броня|r), EditorSuffix (Editor Suffix)
+// Abilities: A0XA (|cfff08080Вспышка Света|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -129382,7 +129382,7 @@ ratx
 }
 
 STRING 21351
-// Abilities: A0X0 (|cfff08080Гвардейцы|r), EditorSuffix (Editor Suffix)
+// Abilities: A0X6 (|cfff08080Жгучая броня|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -129394,7 +129394,7 @@ STRING 21352
 }
 
 STRING 21353
-// Abilities: A0XL (Кара света), EditorSuffix (Editor Suffix)
+// Abilities: A0X0 (|cfff08080Гвардейцы|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -129418,7 +129418,7 @@ STRING 21356
 }
 
 STRING 21357
-// Abilities: A0XN (|cfff08080Командирская аура|r), EditorSuffix (Editor Suffix)
+// Abilities: A0XL (Кара света), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -129532,7 +129532,7 @@ E
 }
 
 STRING 21376
-// Abilities: A0XO (|cfff08080Кара Света|r), EditorSuffix (Editor Suffix)
+// Abilities: A0XN (|cfff08080Командирская аура|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -129551,7 +129551,7 @@ STRING 21378
 }
 
 STRING 21379
-// Abilities: A0XQ (|cfff08080Аура Защиты|r), EditorSuffix (Editor Suffix)
+// Abilities: A0XO (|cfff08080Кара Света|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -129563,7 +129563,7 @@ STRING 21380
 }
 
 STRING 21381
-// Abilities: A0XR (|cfff08080Массовая Защиты|r), EditorSuffix (Editor Suffix)
+// Abilities: A0XQ (|cfff08080Аура Защиты|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -129587,7 +129587,7 @@ STRING 21384
 }
 
 STRING 21385
-// Abilities: A0XT (|cfff08080Массовое исцеление|r), EditorSuffix (Editor Suffix)
+// Abilities: A0XR (|cfff08080Массовая Защиты|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -129641,7 +129641,7 @@ STRING 21393
 }
 
 STRING 21394
-// Abilities: A0XV (|cfff08080Призыв элементаля воды|r), EditorSuffix (Editor Suffix)
+// Abilities: A0XT (|cfff08080Массовое исцеление|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -129653,13 +129653,13 @@ STRING 21395
 }
 
 STRING 21396
-// Abilities: A0XW (|cfff08080Ударная волна|r), EditorSuffix (Editor Suffix)
+// Abilities: A0XV (|cfff08080Призыв элементаля воды|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21397
-// Abilities: A0XZ (|cfff08080Генеральская забава|r), EditorSuffix (Editor Suffix)
+// Abilities: A0XW (|cfff08080Ударная волна|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -129957,7 +129957,7 @@ W
 }
 
 STRING 21444
-// Abilities: A0Y7 (|cfff08080Огненный ливень|r), EditorSuffix (Editor Suffix)
+// Abilities: A0XZ (|cfff08080Генеральская забава|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -130185,19 +130185,19 @@ W
 }
 
 STRING 21481
-// Abilities: A0XY (|cfff08080Регенерация|r), EditorSuffix (Editor Suffix)
+// Abilities: A0Y7 (|cfff08080Огненный ливень|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21482
-// Abilities: A0XU (|cfff08080Свет небес|r), EditorSuffix (Editor Suffix)
+// Abilities: A0XY (|cfff08080Регенерация|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21483
-// Abilities: A0YO (Спел Никама), EditorSuffix (Editor Suffix)
+// Abilities: A0XU (|cfff08080Свет небес|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -130385,13 +130385,13 @@ E
 }
 
 STRING 21511
-// Abilities: A0WH (|cfff08080Разъедающий огонь|r), EditorSuffix (Editor Suffix)
+// Abilities: A0YO (Спел Никама), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21512
-// Abilities: A0WK (|cfff08080Огненная стрела|r), EditorSuffix (Editor Suffix)
+// Abilities: A0WH (|cfff08080Разъедающий огонь|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -130540,7 +130540,7 @@ E
 }
 
 STRING 21535
-// Abilities: A0WL (|cfff08080Проклятие|r), EditorSuffix (Editor Suffix)
+// Abilities: A0WK (|cfff08080Огненная стрела|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -130580,7 +130580,7 @@ W
 }
 
 STRING 21541
-// Abilities: A0WM (|cfff08080Волна исцеления|r), EditorSuffix (Editor Suffix)
+// Abilities: A0WL (|cfff08080Проклятие|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -130863,7 +130863,7 @@ STRING 21583
 }
 
 STRING 21584
-// Abilities: A0WN (|cfff08080Рассеивание заклинаний|r), EditorSuffix (Editor Suffix)
+// Abilities: A0WM (|cfff08080Волна исцеления|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -131013,7 +131013,7 @@ E
 }
 
 STRING 21609
-// Abilities: A0XM (|cfff08080Сторожевая Башня|r), EditorSuffix (Editor Suffix)
+// Abilities: A0WN (|cfff08080Рассеивание заклинаний|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -131326,13 +131326,13 @@ STRING 21660
 }
 
 STRING 21661
-// Abilities: A0ZM (|cfff08080Мультишот|r), EditorSuffix (Editor Suffix)
+// Abilities: A0XM (|cfff08080Сторожевая Башня|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21662
-// Abilities: A0ZN (|cfff08080Прибавка к золоту|r), EditorSuffix (Editor Suffix)
+// Abilities: A0ZM (|cfff08080Мультишот|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -131401,19 +131401,19 @@ R
 }
 
 STRING 21673
-// Abilities: A0ZP (|cfff08080Налоги|r), EditorSuffix (Editor Suffix)
+// Abilities: A0ZN (|cfff08080Прибавка к золоту|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21674
-// Abilities: A0ZQ (|cfff08080Магический котелок|r), EditorSuffix (Editor Suffix)
+// Abilities: A0ZP (|cfff08080Налоги|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21675
-// Abilities: A0ZS (Аура исцеляющего идола), EditorSuffix (Editor Suffix)
+// Abilities: A0ZQ (|cfff08080Магический котелок|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -131728,7 +131728,7 @@ STRING 21722
 }
 
 STRING 21723
-// Abilities: A0ZT (|cfff08080Казначеский талант|r), EditorSuffix (Editor Suffix)
+// Abilities: A0ZS (Аура исцеляющего идола), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -131776,7 +131776,7 @@ STRING 21730
 }
 
 STRING 21731
-// Abilities: A173 (|cffd2b48cЯрость|r), Tip (Tooltip - Normal)
+// Abilities: A0ZT (|cfff08080Казначеский талант|r), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -132056,19 +132056,19 @@ R
 }
 
 STRING 21774
-// Upgrades: R0DA (Железные мечи,Стальные мечи,Мифриловые меч), EditorSuffix (Editor Suffix)
+// Abilities: A173 (|cffd2b48cЯрость|r), Tip (Tooltip - Normal)
 {
 (Стромгард)
 }
 
 STRING 21775
-// Upgrades: R0DB (Черный порох,Бездымный порох,Обогащенный п), EditorSuffix (Editor Suffix)
+// Upgrades: R0DA (Железные мечи,Стальные мечи,Мифриловые меч), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 21776
-// Upgrades: R0DC (Железная броня,Стальная броня,Мифриловая б), EditorSuffix (Editor Suffix)
+// Upgrades: R0DB (Черный порох,Бездымный порох,Обогащенный п), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -132134,7 +132134,7 @@ STRING 21786
 }
 
 STRING 21787
-// Upgrades: R0DD (Черный порох,Бездымный порох,Обогащенный п), EditorSuffix (Editor Suffix)
+// Upgrades: R0DC (Железная броня,Стальная броня,Мифриловая б), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -133205,7 +133205,7 @@ STRING 21947
 }
 
 STRING 21948
-// Upgrades: R0DE (Доспехи из клепаной кожи,Доспехи из армиро�), EditorSuffix (Editor Suffix)
+// Upgrades: R0DD (Черный порох,Бездымный порох,Обогащенный п), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -133886,7 +133886,7 @@ F
 }
 
 STRING 22058
-// Upgrades: R0DG (Дрессировка животных), EditorSuffix (Editor Suffix)
+// Upgrades: R0DE (Доспехи из клепаной кожи,Доспехи из армиро�), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -143425,7 +143425,7 @@ STRING 23604
 }
 
 STRING 23605
-// Upgrades: R0DH (Бонус к урону от «Боевых барабанов»), EditorSuffix (Editor Suffix)
+// Upgrades: R0DG (Дрессировка животных), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -143544,7 +143544,7 @@ STRING 23623
 }
 
 STRING 23624
-// Upgrades: R0DI (Сделать жрецов адептами,Сделать жрецов мас), EditorSuffix (Editor Suffix)
+// Upgrades: R0DH (Бонус к урону от «Боевых барабанов»), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -143692,13 +143692,13 @@ STRING 23646
 }
 
 STRING 23647
-// Upgrades: R0DK (Сделать жрецов адептами,Сделать жрецов мас), EditorSuffix (Editor Suffix)
+// Upgrades: R0DI (Сделать жрецов адептами,Сделать жрецов мас), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 23648
-// Upgrades: R0DJ (Защита), EditorSuffix (Editor Suffix)
+// Upgrades: R0DK (Сделать жрецов адептами,Сделать жрецов мас), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -143716,7 +143716,7 @@ STRING 23650
 }
 
 STRING 23651
-// Upgrades: R0DL (Улучшенные топоры,Улучшенные пилы), EditorSuffix (Editor Suffix)
+// Upgrades: R0DJ (Защита), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -143935,13 +143935,13 @@ STRING 23685
 }
 
 STRING 23686
-// Upgrades: R0DM (Улучшенная кладка,Усиленная кладка,Магиче�), EditorSuffix (Editor Suffix)
+// Upgrades: R0DL (Улучшенные топоры,Улучшенные пилы), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 23687
-// Upgrades: R0DN (Железная броня,Стальная броня,Мифриловая б), EditorSuffix (Editor Suffix)
+// Upgrades: R0DM (Улучшенная кладка,Усиленная кладка,Магиче�), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -144024,13 +144024,13 @@ STRING 23699
 }
 
 STRING 23700
-// Upgrades: R0DO (Железная броня,Стальная броня,Мифриловая б), EditorSuffix (Editor Suffix)
+// Upgrades: R0DN (Железная броня,Стальная броня,Мифриловая б), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
 
 STRING 23701
-// Upgrades: R0DP (Железная броня,Стальная броня,Мифриловая б), EditorSuffix (Editor Suffix)
+// Upgrades: R0DO (Железная броня,Стальная броня,Мифриловая б), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -169954,6 +169954,12 @@ STRING 27957
 (Огры)
 }
 
+STRING 27958
+// Units: h0L3 (|cfff08080Застрельщик), Name (Name)
+{
+|cfff08080Застрельщик
+}
+
 STRING 27959
 // Abilities: A16Y (|cffd2b48cРеинкарнация|r), Tip (Tooltip - Normal)
 {
@@ -170373,7 +170379,7 @@ STRING 28024
 }
 
 STRING 28025
-// Upgrades: R0E2 (Длинноствольные мушкеты), EditorSuffix (Editor Suffix)
+// Upgrades: R0DP (Железная броня,Стальная броня,Мифриловая б), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
 }
@@ -171950,6 +171956,12 @@ STRING 28271
 // Upgrades: R0GN (Железное оружие дальнего боя,Ториевое оруж), Name (Name)
 {
 |cffd2b48cАрканитовое оружие дальнего боя|r
+}
+
+STRING 28272
+// Units: h0L3 (|cfff08080Застрельщик), Tip (Tooltip - Basic)
+{
+|cfff08080Застрельщик
 }
 
 STRING 28273
@@ -174561,5 +174573,11 @@ STRING 28702
 // Upgrades: R0H0 (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
+}
+
+STRING 28703
+// Upgrades: R0E2 (Длинноствольные мушкеты), EditorSuffix (Editor Suffix)
+{
+(Стромгард)
 }
 
