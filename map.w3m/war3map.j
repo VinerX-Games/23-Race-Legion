@@ -1541,6 +1541,8 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_MakeStolicaAbs= null
+trigger gg_trg_StolicaTime_Copy= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -2434,6 +2436,15 @@ function Random takes integer Chance,integer FromAll returns boolean
 
 endfunction
 //***************************************************************************
+//*  UpdateGraph
+function UpdateGraf takes integer pi returns nothing
+    if DisOn then
+            set balance[pi]=income[pi] - disincome[pi] + corruption[pi] - logistic[pi] + additional[pi]
+        else
+            set balance[pi]=income[pi]
+    endif
+endfunction
+//***************************************************************************
 //*  InitThings
 function InitThings takes nothing returns nothing
     local integer i= 0
@@ -2485,6 +2496,8 @@ function ClearPlayer takes player p returns nothing
     set balance[pi]=0
     set additional[pi]=0
     set udg_UnitsCount[pi]=0
+    call UpdateGraf(pi)
+    call MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[pi] * 2 + 1], "0")
 endfunction
 //***************************************************************************
 //*  CommonHash
@@ -2631,15 +2644,6 @@ function Enter takes unit u returns nothing
     
 
     set p=null
-endfunction
-//***************************************************************************
-//*  UpdateGraph
-function UpdateGraf takes integer pi returns nothing
-    if DisOn then
-            set balance[pi]=income[pi] - disincome[pi] + corruption[pi] - logistic[pi] + additional[pi]
-        else
-            set balance[pi]=income[pi]
-    endif
 endfunction
 //***************************************************************************
 //*  CountAddDis
@@ -5284,7 +5288,6 @@ function CreateBuildingsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'hars', - 6848.0, - 29824.0, 270.000, 'hars')
     set u=BlzCreateUnitWithSkin(p, 'hhou', - 5632.0, - 28800.0, 270.000, 'hhou')
     set u=BlzCreateUnitWithSkin(p, 'hgra', - 5376.0, - 29760.0, 270.000, 'hgra')
-    set u=BlzCreateUnitWithSkin(p, 'h0K8', - 6912.0, - 29376.0, 270.000, 'h0K8')
     set u=BlzCreateUnitWithSkin(p, 'h0JI', - 3232.0, - 30368.0, 270.000, 'h0JI')
     set u=BlzCreateUnitWithSkin(p, 'h0JK', - 3200.0, - 30016.0, 270.000, 'h0JK')
     set u=BlzCreateUnitWithSkin(p, 'h0JL', - 4128.0, - 29088.0, 270.000, 'h0JL')
@@ -5377,7 +5380,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0ID', - 3888.8, - 25837.2, 259.736, 'h0ID')
     set u=BlzCreateUnitWithSkin(p, 'hmpr', - 6410.6, - 29713.4, 264.494, 'hmpr')
     set u=BlzCreateUnitWithSkin(p, 'h0K7', - 6003.6, - 28906.1, 280.730, 'h0K7')
-    set u=BlzCreateUnitWithSkin(p, 'h0K9', - 5799.9, - 29433.0, 281.893, 'h0K9')
+    set u=BlzCreateUnitWithSkin(p, 'hwat', - 5616.0, - 29213.1, - 76.368, 'hwat')
+    set u=BlzCreateUnitWithSkin(p, 'h0K9', - 5799.9, - 29433.0, 281.890, 'h0K9')
     set u=BlzCreateUnitWithSkin(p, 'h0KA', - 6432.7, - 29424.6, 301.364, 'h0KA')
     set u=BlzCreateUnitWithSkin(p, 'h0KC', - 6245.4, - 29051.5, 264.829, 'h0KC')
     set u=BlzCreateUnitWithSkin(p, 'h0KB', - 6116.3, - 29442.7, 289.195, 'h0KB')
@@ -5388,7 +5392,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0KH', - 6036.6, - 29067.7, 276.587, 'h0KH')
     set u=BlzCreateUnitWithSkin(p, 'h0KI', - 5743.6, - 30263.9, 271.831, 'h0KI')
     set u=BlzCreateUnitWithSkin(p, 'h0KJ', - 6011.8, - 30460.7, 271.243, 'h0KJ')
-    set u=BlzCreateUnitWithSkin(p, 'h0KK', - 5723.3, - 29429.7, 267.101, 'h0KK')
+    set u=BlzCreateUnitWithSkin(p, 'h0KK', - 5723.3, - 29429.7, 267.100, 'h0KK')
     set u=BlzCreateUnitWithSkin(p, 'h0KL', - 6402.2, - 29850.8, 262.497, 'h0KL')
     set u=BlzCreateUnitWithSkin(p, 'h0KM', - 6105.2, - 29820.8, 282.348, 'h0KM')
     set u=BlzCreateUnitWithSkin(p, 'h0KN', - 6509.7, - 29419.9, 273.358, 'h0KN')
@@ -5414,12 +5418,15 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'hpea', - 4871.7, - 29776.1, 268.020, 'hpea')
     set u=BlzCreateUnitWithSkin(p, 'hpea', - 4876.0, - 29723.5, 292.102, 'hpea')
     set u=BlzCreateUnitWithSkin(p, 'hpea', - 4969.0, - 29795.4, 170.348, 'hpea')
-    set u=BlzCreateUnitWithSkin(p, 'h0GS', - 1910.5, - 26189.6, - 86.732, 'h0GS')
-    set u=BlzCreateUnitWithSkin(p, 'h0GV', - 1829.6, - 26174.8, - 77.705, 'h0GV')
+    set u=BlzCreateUnitWithSkin(p, 'h0GS', - 1910.5, - 26189.6, 273.268, 'h0GS')
+    set u=BlzCreateUnitWithSkin(p, 'h0GV', - 1829.6, - 26174.8, 282.295, 'h0GV')
     set u=BlzCreateUnitWithSkin(p, 'h0GW', - 1712.7, - 26145.6, 36.673, 'h0GW')
-    set u=BlzCreateUnitWithSkin(p, 'H0HA', - 1870.8, - 25992.4, - 76.755, 'H0HA')
+    set u=BlzCreateUnitWithSkin(p, 'H0HA', - 1870.8, - 25992.4, 283.245, 'H0HA')
     set u=BlzCreateUnitWithSkin(p, 'h0GU', - 1747.6, - 25945.0, 267.530, 'h0GU')
-    set u=BlzCreateUnitWithSkin(p, 'h0L3', - 2011.9, - 26021.7, - 80.111, 'h0L3')
+    set u=BlzCreateUnitWithSkin(p, 'h0L3', - 2011.9, - 26021.7, 279.889, 'h0L3')
+    set u=BlzCreateUnitWithSkin(p, 'hmil', - 6359.4, - 28786.0, 197.540, 'hmil')
+    set u=BlzCreateUnitWithSkin(p, 'hwt2', - 5544.2, - 29280.2, - 86.287, 'hwt2')
+    set u=BlzCreateUnitWithSkin(p, 'hwt3', - 5593.8, - 29326.8, - 75.266, 'hwt3')
     set u=BlzCreateUnitWithSkin(p, 'o03S', - 52.2, - 30532.9, 216.378, 'o03S')
     set u=BlzCreateUnitWithSkin(p, 'h0IB', - 4502.5, - 25851.0, 259.966, 'h0IB')
     set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, 290.235, 'n04X')
@@ -7441,26 +7448,26 @@ endfunction
 //===========================================================================
 // Trigger: StolicaTime
 //===========================================================================
-function Trig_StolicaTime_Func001Func001Func001Func001001001002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('A0IQ', GetFilterUnit()) != 0 )
+function Trig_StolicaTime_Func001Func001Func001Func011A takes nothing returns nothing
+    call UnitShareVisionBJ(true, GetTriggerUnit(), GetEnumPlayer())
 endfunction
 
-function Trig_StolicaTime_Func001Func001Func001Func003C takes nothing returns boolean
+function Trig_StolicaTime_Func001Func001Func001Func013C takes nothing returns boolean
     if ( not ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_StolicaTime_Func001Func001Func001Func004Func001C takes nothing returns boolean
+function Trig_StolicaTime_Func001Func001Func001Func014Func001C takes nothing returns boolean
     if ( not ( IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) == true ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_StolicaTime_Func001Func001Func001Func004A takes nothing returns nothing
-    if ( Trig_StolicaTime_Func001Func001Func001Func004Func001C() ) then
+function Trig_StolicaTime_Func001Func001Func001Func014A takes nothing returns nothing
+    if ( Trig_StolicaTime_Func001Func001Func001Func014Func001C() ) then
         call SetUnitOwner(GetEnumUnit(), Player(PLAYER_NEUTRAL_AGGRESSIVE), true)
     else
         call KillUnit(GetEnumUnit())
@@ -7468,12 +7475,12 @@ function Trig_StolicaTime_Func001Func001Func001Func004A takes nothing returns no
     endif
 endfunction
 
-function Trig_StolicaTime_Func001Func001Func001Func006001001002 takes nothing returns boolean
+function Trig_StolicaTime_Func001Func001Func001Func016001001002 takes nothing returns boolean
     return ( GetUnitAbilityLevelSwapped('A0IQ', GetFilterUnit()) != 0 )
 endfunction
 
 function Trig_StolicaTime_Func001Func001Func001C takes nothing returns boolean
-    if ( not ( CountUnitsInGroup(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func006001001002))) != 0 ) ) then
+    if ( not ( CountUnitsInGroup(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func016001001002))) != 0 ) ) then
         return false
     endif
     return true
@@ -7491,20 +7498,32 @@ function Trig_StolicaTime_Func001Func001C takes nothing returns boolean
 endfunction
 
 function Trig_StolicaTime_Func001A takes nothing returns nothing
+    local unit u
     if ( Trig_StolicaTime_Func001Func001C() ) then
     else
         if ( Trig_StolicaTime_Func001Func001Func001C() ) then
-            call IssueImmediateOrderBJ(GroupPickRandomUnit(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func001001001002))), "windwalk")
+            set u=GroupPickRandomUnit(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func016001001002)))
+            call BlzSetUnitMaxHP(u, 10000)
+            call SetUnitLifeBJ(u, 10000.00)
+            call BlzSetUnitRealFieldBJ(u, UNIT_RF_SIGHT_RADIUS, 600.00)
+            call BlzSetUnitArmor(u, 30.00)
+            call UnitAddAbilityBJ('A0I6', u)
+            call UnitAddAbilityBJ('A145', u)
+            call BlzSetUnitStringFieldBJ(u, UNIT_SF_NAME, ( "|cffd45e19Столица:|r " + GetUnitName(u) ))
+            call GroupAddUnitSimple(u, udg_StolicaGroups)
+            call TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, u, EVENT_UNIT_ATTACKED)
+            call ForForce(GetPlayersAll(), function Trig_StolicaTime_Func001Func001Func001Func011A)
             call DisplayTextToForce(GetPlayersAll(), ( GetPlayerName(GetEnumPlayer()) + " - |cffffff00почти проиграл|r|r, его |cffd45e19столица|r не не была построена ко времени, а потому была установлена автоматически." ))
         else
-            if ( Trig_StolicaTime_Func001Func001Func001Func003C() ) then
+            if ( Trig_StolicaTime_Func001Func001Func001Func013C() ) then
                 call DisplayTextToForce(GetPlayersAll(), ( GetPlayerName(GetEnumPlayer()) + " - |cffff0000проиграл|r, его |cffd45e19столица |r не построена ко времени. :(" ))
             else
             endif
-            call ForGroupBJ(GetUnitsOfPlayerAll(GetEnumPlayer()), function Trig_StolicaTime_Func001Func001Func001Func004A)
+            call ForGroupBJ(GetUnitsOfPlayerAll(GetEnumPlayer()), function Trig_StolicaTime_Func001Func001Func001Func014A)
             call ClearEc(GetPlayerId(GetEnumPlayer()))
         endif
     endif
+    set u=null
 endfunction
 
 function Trig_StolicaTime_Actions takes nothing returns nothing
@@ -7518,6 +7537,7 @@ function InitTrig_StolicaTime takes nothing returns nothing
     call TriggerRegisterTimerExpireEventBJ(gg_trg_StolicaTime, udg_IncomeTimerFirst)
     call TriggerAddAction(gg_trg_StolicaTime, function Trig_StolicaTime_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: StolicaDead
@@ -20216,15 +20236,12 @@ function Trig_Hero_Limits_General_Copy_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('H0H8', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('H0H9', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('H0H7', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('H0HB', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('U02H', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('U02G', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('U02I', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('H0HL', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H0HB', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('H0HA', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('h02Z', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('h0HX', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('h0I3', 0, GetEnumPlayer())
 endfunction
 
 function Trig_Hero_Limits_General_Copy_Actions takes nothing returns nothing
@@ -20987,11 +21004,8 @@ function Trig_StromgardOn_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_MassArmy)
     call EnableTrigger(gg_trg_ShieldUp)
     call EnableTrigger(gg_trg_MassArmy)
-    call EnableTrigger(gg_trg_PaladinHpSpell)
-    call EnableTrigger(gg_trg_PaladinHpSpell2)
-    call EnableTrigger(gg_trg_Vozd)
-    call EnableTrigger(gg_trg_Heal)
-    call EnableTrigger(gg_trg_Defend)
+    
+    
     
     
 endfunction
@@ -21224,230 +21238,6 @@ function InitTrig_ShieldUp takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ShieldUp, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_ShieldUp, Condition(function Trig_ShieldUp_Conditions))
     call TriggerAddAction(gg_trg_ShieldUp, function Trig_ShieldUp_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: PaladinHpSpell
-//===========================================================================
-function Trig_PaladinHpSpell_Conditions takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A0WZ', GetTriggerUnit()) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_PaladinHpSpell_Func001Func001Func007C takes nothing returns boolean
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 75.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_PaladinHpSpell_Func001Func001C takes nothing returns boolean
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 50.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_PaladinHpSpell_Func001C takes nothing returns boolean
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 25.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_PaladinHpSpell_Actions takes nothing returns nothing
-    if ( Trig_PaladinHpSpell_Func001C() ) then
-        call UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-        call UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-        call UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-        call SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 3)
-        call SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 3)
-        call SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 3)
-    else
-        if ( Trig_PaladinHpSpell_Func001Func001C() ) then
-            call UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-            call UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-            call UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-            call SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 2)
-            call SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 2)
-            call SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 2)
-        else
-            if ( Trig_PaladinHpSpell_Func001Func001Func007C() ) then
-                call UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-                call UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-                call UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-                call SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 1)
-                call SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 1)
-                call SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 1)
-            else
-                call UnitRemoveAbilityBJ('A0WW', GetTriggerUnit())
-                call UnitRemoveAbilityBJ('A0WX', GetTriggerUnit())
-                call UnitRemoveAbilityBJ('A0WY', GetTriggerUnit())
-            endif
-        endif
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_PaladinHpSpell takes nothing returns nothing
-    set gg_trg_PaladinHpSpell=CreateTrigger()
-    call DisableTrigger(gg_trg_PaladinHpSpell)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_PaladinHpSpell, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_PaladinHpSpell, Condition(function Trig_PaladinHpSpell_Conditions))
-    call TriggerAddAction(gg_trg_PaladinHpSpell, function Trig_PaladinHpSpell_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: PaladinHpSpell2
-//===========================================================================
-function Trig_PaladinHpSpell2_Conditions takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A0WZ', GetTriggerUnit()) == 2 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_PaladinHpSpell2_Func001Func001Func007C takes nothing returns boolean
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 95.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_PaladinHpSpell2_Func001Func001C takes nothing returns boolean
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 70.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_PaladinHpSpell2_Func001C takes nothing returns boolean
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 45.00 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_PaladinHpSpell2_Actions takes nothing returns nothing
-    if ( Trig_PaladinHpSpell2_Func001C() ) then
-        call UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-        call UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-        call UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-        call SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 3)
-        call SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 3)
-        call SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 3)
-    else
-        if ( Trig_PaladinHpSpell2_Func001Func001C() ) then
-            call UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-            call UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-            call UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-            call SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 2)
-            call SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 2)
-            call SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 2)
-        else
-            if ( Trig_PaladinHpSpell2_Func001Func001Func007C() ) then
-                call UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-                call UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-                call UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-                call SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 1)
-                call SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 1)
-                call SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 1)
-            else
-                call UnitRemoveAbilityBJ('A0WW', GetTriggerUnit())
-                call UnitRemoveAbilityBJ('A0WX', GetTriggerUnit())
-                call UnitRemoveAbilityBJ('A0WY', GetTriggerUnit())
-            endif
-        endif
-    endif
-endfunction
-
-//===========================================================================
-function InitTrig_PaladinHpSpell2 takes nothing returns nothing
-    set gg_trg_PaladinHpSpell2=CreateTrigger()
-    call DisableTrigger(gg_trg_PaladinHpSpell2)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_PaladinHpSpell2, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_PaladinHpSpell2, Condition(function Trig_PaladinHpSpell2_Conditions))
-    call TriggerAddAction(gg_trg_PaladinHpSpell2, function Trig_PaladinHpSpell2_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Vozd
-//===========================================================================
-function Trig_Vozd_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0XI' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Vozd_Actions takes nothing returns nothing
-    call SetPlayerAbilityAvailableBJ(false, 'A0XI', GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('H0H7', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerAbilityAvailableBJ(false, 'A0XH', GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerAbilityAvailableBJ(false, 'A0XJ', GetOwningPlayer(GetTriggerUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_Vozd takes nothing returns nothing
-    set gg_trg_Vozd=CreateTrigger()
-    call DisableTrigger(gg_trg_Vozd)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Vozd, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    call TriggerAddCondition(gg_trg_Vozd, Condition(function Trig_Vozd_Conditions))
-    call TriggerAddAction(gg_trg_Vozd, function Trig_Vozd_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Defend
-//===========================================================================
-function Trig_Defend_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0XH' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Defend_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('H0H9', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerAbilityAvailableBJ(false, 'A0XH', GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerAbilityAvailableBJ(false, 'A0XI', GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerAbilityAvailableBJ(false, 'A0XJ', GetOwningPlayer(GetTriggerUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_Defend takes nothing returns nothing
-    set gg_trg_Defend=CreateTrigger()
-    call DisableTrigger(gg_trg_Defend)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Defend, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    call TriggerAddCondition(gg_trg_Defend, Condition(function Trig_Defend_Conditions))
-    call TriggerAddAction(gg_trg_Defend, function Trig_Defend_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Heal
-//===========================================================================
-function Trig_Heal_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0XJ' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Heal_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('H0H8', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerAbilityAvailableBJ(false, 'A0XH', GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerAbilityAvailableBJ(false, 'A0XI', GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerAbilityAvailableBJ(false, 'A0XJ', GetOwningPlayer(GetTriggerUnit()))
-endfunction
-
-//===========================================================================
-function InitTrig_Heal takes nothing returns nothing
-    set gg_trg_Heal=CreateTrigger()
-    call DisableTrigger(gg_trg_Heal)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Heal, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    call TriggerAddCondition(gg_trg_Heal, Condition(function Trig_Heal_Conditions))
-    call TriggerAddAction(gg_trg_Heal, function Trig_Heal_Actions)
 endfunction
 
 //===========================================================================
@@ -21956,6 +21746,15 @@ endfunction
 function Trig_AllyOn_Actions takes nothing returns nothing
     
     call EnableTrigger(gg_trg_AK1T1)
+    
+    
+    call EnableTrigger(gg_trg_Vozd)
+    call EnableTrigger(gg_trg_Heal)
+    call EnableTrigger(gg_trg_Defend)
+    call EnableTrigger(gg_trg_PaladinHpSpell)
+    call EnableTrigger(gg_trg_PaladinHpSpell2)
+    
+    
 //    call EnableTrigger( gg_trg_K1T2 )
 //    call EnableTrigger( gg_trg_K1T2b )
 //    call EnableTrigger( gg_trg_K1TCav )
@@ -23944,6 +23743,230 @@ endfunction
 
 
 //===========================================================================
+// Trigger: PaladinHpSpell
+//===========================================================================
+function Trig_PaladinHpSpell_Conditions takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A0WZ', GetTriggerUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_PaladinHpSpell_Func001Func001Func007C takes nothing returns boolean
+    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 75.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_PaladinHpSpell_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 50.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_PaladinHpSpell_Func001C takes nothing returns boolean
+    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 25.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_PaladinHpSpell_Actions takes nothing returns nothing
+    if ( Trig_PaladinHpSpell_Func001C() ) then
+        call UnitAddAbilityBJ('A0WY', GetTriggerUnit())
+        call UnitAddAbilityBJ('A0WX', GetTriggerUnit())
+        call UnitAddAbilityBJ('A0WW', GetTriggerUnit())
+        call SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 3)
+        call SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 3)
+        call SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 3)
+    else
+        if ( Trig_PaladinHpSpell_Func001Func001C() ) then
+            call UnitAddAbilityBJ('A0WY', GetTriggerUnit())
+            call UnitAddAbilityBJ('A0WX', GetTriggerUnit())
+            call UnitAddAbilityBJ('A0WW', GetTriggerUnit())
+            call SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 2)
+            call SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 2)
+            call SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 2)
+        else
+            if ( Trig_PaladinHpSpell_Func001Func001Func007C() ) then
+                call UnitAddAbilityBJ('A0WY', GetTriggerUnit())
+                call UnitAddAbilityBJ('A0WX', GetTriggerUnit())
+                call UnitAddAbilityBJ('A0WW', GetTriggerUnit())
+                call SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 1)
+                call SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 1)
+                call SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 1)
+            else
+                call UnitRemoveAbilityBJ('A0WW', GetTriggerUnit())
+                call UnitRemoveAbilityBJ('A0WX', GetTriggerUnit())
+                call UnitRemoveAbilityBJ('A0WY', GetTriggerUnit())
+            endif
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_PaladinHpSpell takes nothing returns nothing
+    set gg_trg_PaladinHpSpell=CreateTrigger()
+    call DisableTrigger(gg_trg_PaladinHpSpell)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_PaladinHpSpell, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_PaladinHpSpell, Condition(function Trig_PaladinHpSpell_Conditions))
+    call TriggerAddAction(gg_trg_PaladinHpSpell, function Trig_PaladinHpSpell_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: PaladinHpSpell2
+//===========================================================================
+function Trig_PaladinHpSpell2_Conditions takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A0WZ', GetTriggerUnit()) == 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_PaladinHpSpell2_Func001Func001Func007C takes nothing returns boolean
+    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 95.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_PaladinHpSpell2_Func001Func001C takes nothing returns boolean
+    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 70.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_PaladinHpSpell2_Func001C takes nothing returns boolean
+    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 45.00 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_PaladinHpSpell2_Actions takes nothing returns nothing
+    if ( Trig_PaladinHpSpell2_Func001C() ) then
+        call UnitAddAbilityBJ('A0WY', GetTriggerUnit())
+        call UnitAddAbilityBJ('A0WX', GetTriggerUnit())
+        call UnitAddAbilityBJ('A0WW', GetTriggerUnit())
+        call SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 3)
+        call SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 3)
+        call SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 3)
+    else
+        if ( Trig_PaladinHpSpell2_Func001Func001C() ) then
+            call UnitAddAbilityBJ('A0WY', GetTriggerUnit())
+            call UnitAddAbilityBJ('A0WX', GetTriggerUnit())
+            call UnitAddAbilityBJ('A0WW', GetTriggerUnit())
+            call SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 2)
+            call SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 2)
+            call SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 2)
+        else
+            if ( Trig_PaladinHpSpell2_Func001Func001Func007C() ) then
+                call UnitAddAbilityBJ('A0WY', GetTriggerUnit())
+                call UnitAddAbilityBJ('A0WX', GetTriggerUnit())
+                call UnitAddAbilityBJ('A0WW', GetTriggerUnit())
+                call SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 1)
+                call SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 1)
+                call SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 1)
+            else
+                call UnitRemoveAbilityBJ('A0WW', GetTriggerUnit())
+                call UnitRemoveAbilityBJ('A0WX', GetTriggerUnit())
+                call UnitRemoveAbilityBJ('A0WY', GetTriggerUnit())
+            endif
+        endif
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_PaladinHpSpell2 takes nothing returns nothing
+    set gg_trg_PaladinHpSpell2=CreateTrigger()
+    call DisableTrigger(gg_trg_PaladinHpSpell2)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_PaladinHpSpell2, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_PaladinHpSpell2, Condition(function Trig_PaladinHpSpell2_Conditions))
+    call TriggerAddAction(gg_trg_PaladinHpSpell2, function Trig_PaladinHpSpell2_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Vozd
+//===========================================================================
+function Trig_Vozd_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0XI' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Vozd_Actions takes nothing returns nothing
+    call SetPlayerAbilityAvailableBJ(false, 'A0XI', GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('H0H7', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerAbilityAvailableBJ(false, 'A0XH', GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerAbilityAvailableBJ(false, 'A0XJ', GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Vozd takes nothing returns nothing
+    set gg_trg_Vozd=CreateTrigger()
+    call DisableTrigger(gg_trg_Vozd)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Vozd, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_Vozd, Condition(function Trig_Vozd_Conditions))
+    call TriggerAddAction(gg_trg_Vozd, function Trig_Vozd_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Defend
+//===========================================================================
+function Trig_Defend_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0XH' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Defend_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('H0H9', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerAbilityAvailableBJ(false, 'A0XH', GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerAbilityAvailableBJ(false, 'A0XI', GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerAbilityAvailableBJ(false, 'A0XJ', GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Defend takes nothing returns nothing
+    set gg_trg_Defend=CreateTrigger()
+    call DisableTrigger(gg_trg_Defend)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Defend, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_Defend, Condition(function Trig_Defend_Conditions))
+    call TriggerAddAction(gg_trg_Defend, function Trig_Defend_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Heal
+//===========================================================================
+function Trig_Heal_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A0XJ' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Heal_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('H0H8', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerAbilityAvailableBJ(false, 'A0XH', GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerAbilityAvailableBJ(false, 'A0XI', GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerAbilityAvailableBJ(false, 'A0XJ', GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Heal takes nothing returns nothing
+    set gg_trg_Heal=CreateTrigger()
+    call DisableTrigger(gg_trg_Heal)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Heal, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_Heal, Condition(function Trig_Heal_Conditions))
+    call TriggerAddAction(gg_trg_Heal, function Trig_Heal_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: ACounters
 //===========================================================================
 function AcountAll takes player p returns nothing
@@ -23975,6 +23998,11 @@ endfunction
 //===========================================================================
 function Trig_StartAlliance_Func002A takes nothing returns nothing
     call AcountAll(GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('h02Z', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('h0HX', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('h0I3', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('Hamg', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('Hmkg', 1, GetEnumPlayer())
 endfunction
 
 function Trig_StartAlliance_Actions takes nothing returns nothing
@@ -28087,7 +28115,6 @@ function Trig_GnomesStart_Func002A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('H0GE', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('H0GC', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('H0GG', 1, GetEnumPlayer())
-    call SetPlayerAbilityAvailableBJ(true, 'A0SJ', GetEnumPlayer())
     call SetPlayerAbilityAvailableBJ(false, 'A0SH', GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0C4', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0C3', 0, GetEnumPlayer())
@@ -43864,16 +43891,6 @@ endfunction
 //===========================================================================
 // Trigger: Kill
 //===========================================================================
-function Trig_Kill_Func002Func001Func001C takes nothing returns boolean
-    if ( not ( IsUnitInGroup(GetEnumUnit(), udg_StolicaGroups) == true ) ) then
-        return false
-    endif
-    if ( not ( GetOwningPlayer(GetEnumUnit()) == GetTriggerPlayer() ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_Kill_Func002Func001Func003C takes nothing returns boolean
     if ( not ( IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) != true ) ) then
         return false
@@ -43898,11 +43915,15 @@ function Trig_Kill_Func002A takes nothing returns nothing
     if ( Trig_Kill_Func002Func001C() ) then
         call KillUnit(GetEnumUnit())
     else
-        if ( Trig_Kill_Func002Func001Func001C() ) then
-            call KillUnit(GetEnumUnit())
-            set udg_LocalPlayer=GetTriggerPlayer()
-            call ConditionalTriggerExecute(gg_trg_StolicaKill)
-        else
+        if IsUnitInGroup(GetEnumUnit(), udg_StolicaGroups) and GetOwningPlayer(GetEnumUnit()) == GetTriggerPlayer() then
+            
+            if udg_GameMode == 2 then
+                call SetUnitLifePercentBJ(GetEnumUnit(), 15.00)
+            else
+                call KillUnit(GetEnumUnit())
+                set udg_LocalPlayer=GetTriggerPlayer()
+                call ConditionalTriggerExecute(gg_trg_StolicaKill)
+            endif
         endif
     endif
 endfunction
@@ -45694,40 +45715,6 @@ function InitTrig_Spell1_Copy takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: KillTestUnits O Copy
-//===========================================================================
-function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
-    return RectContainsUnit(gg_rct_TestRegion, GetFilterUnit())
-endfunction
-
-function Trig_KillTestUnits_O_Copy_Func003A takes nothing returns nothing
-    local unit u= GetEnumUnit()
-    local player p= GetOwningPlayer(u)
-    local integer id= GetUnitTypeId(u)
-    if IsUnitType(u, UNIT_TYPE_HERO) then
-        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
-    endif
-    call RemoveUnit(u)
-    set u=null
-    set p=null
-endfunction
-
-function Trig_KillTestUnits_O_Copy_Actions takes nothing returns nothing
-    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Copy_Func001002)
-    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
-    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Copy_Func003A)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_KillTestUnits_O_Copy takes nothing returns nothing
-    set gg_trg_KillTestUnits_O_Copy=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O_Copy, 0.01)
-    call TriggerAddAction(gg_trg_KillTestUnits_O_Copy, function Trig_KillTestUnits_O_Copy_Actions)
-endfunction
-
-
-//===========================================================================
 // Trigger: Setlvl
 //===========================================================================
 function Trig_Setlvl_Func001001002 takes nothing returns boolean
@@ -46320,11 +46307,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_MassArmy()
     call InitTrig_UpSystem()
     call InitTrig_ShieldUp()
-    call InitTrig_PaladinHpSpell()
-    call InitTrig_PaladinHpSpell2()
-    call InitTrig_Vozd()
-    call InitTrig_Defend()
-    call InitTrig_Heal()
     call InitTrig_EnterKazna()
     call InitTrig_Sluga_qqgsarona()
     call InitTrig_Sila2()
@@ -46359,6 +46341,11 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_AN1()
     call InitTrig_AN2()
     call InitTrig_OldStormwindForever()
+    call InitTrig_PaladinHpSpell()
+    call InitTrig_PaladinHpSpell2()
+    call InitTrig_Vozd()
+    call InitTrig_Defend()
+    call InitTrig_Heal()
     //Function not found: call InitTrig_ACounters()
     call InitTrig_StartAlliance()
     call InitTrig_ForsacenStarrt()
@@ -46955,7 +46942,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_HP_24k_O()
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
-    call InitTrig_KillTestUnits_O_Copy()
     call InitTrig_Setlvl()
     call InitTrig_A1()
     call InitTrig_Second_O()
@@ -46988,7 +46974,6 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_BloodClose)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForNavy)
-    call ConditionalTriggerExecute(gg_trg_KillTestUnits_O_Copy)
 endfunction
 
 //***************************************************************************
