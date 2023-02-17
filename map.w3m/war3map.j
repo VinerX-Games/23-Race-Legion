@@ -379,10 +379,12 @@ trigger gg_trg_NextMenu= null
 trigger gg_trg_SaveSelection= null
 trigger gg_trg_UpgradeStolica= null
 trigger gg_trg_MakeStolica= null
+trigger gg_trg_MakeStolicaAbs= null
 trigger gg_trg_Mod_classic= null
 trigger gg_trg_Mod_classic_spell= null
 trigger gg_trg_RebebmerToBuild= null
 trigger gg_trg_StolicaTime= null
+trigger gg_trg_StolicaTime_Copy= null
 trigger gg_trg_StolicaDead= null
 trigger gg_trg_StolicaAttacked= null
 trigger gg_trg_MOD_feoda_O_set_spell= null
@@ -725,11 +727,6 @@ trigger gg_trg_Proffesian= null
 trigger gg_trg_MassArmy= null
 trigger gg_trg_UpSystem= null
 trigger gg_trg_ShieldUp= null
-trigger gg_trg_PaladinHpSpell= null
-trigger gg_trg_PaladinHpSpell2= null
-trigger gg_trg_Vozd= null
-trigger gg_trg_Defend= null
-trigger gg_trg_Heal= null
 trigger gg_trg_EnterKazna= null
 trigger gg_trg_Sluga_qqgsarona= null
 trigger gg_trg_qqgsaron_Fall= null
@@ -767,6 +764,11 @@ trigger gg_trg_AE2= null
 trigger gg_trg_AN1= null
 trigger gg_trg_AN2= null
 trigger gg_trg_OldStormwindForever= null
+trigger gg_trg_PaladinHpSpell= null
+trigger gg_trg_PaladinHpSpell2= null
+trigger gg_trg_Vozd= null
+trigger gg_trg_Defend= null
+trigger gg_trg_Heal= null
 trigger gg_trg_ACounters= null
 trigger gg_trg_StartAlliance= null
 trigger gg_trg_ForsacenStarrt= null
@@ -1541,8 +1543,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_MakeStolicaAbs= null
-trigger gg_trg_StolicaTime_Copy= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -5380,7 +5380,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0ID', - 3888.8, - 25837.2, 259.736, 'h0ID')
     set u=BlzCreateUnitWithSkin(p, 'hmpr', - 6410.6, - 29713.4, 264.494, 'hmpr')
     set u=BlzCreateUnitWithSkin(p, 'h0K7', - 6003.6, - 28906.1, 280.730, 'h0K7')
-    set u=BlzCreateUnitWithSkin(p, 'hwat', - 5616.0, - 29213.1, - 76.368, 'hwat')
+    set u=BlzCreateUnitWithSkin(p, 'hwat', - 5616.0, - 29213.1, 283.632, 'hwat')
     set u=BlzCreateUnitWithSkin(p, 'h0K9', - 5799.9, - 29433.0, 281.890, 'h0K9')
     set u=BlzCreateUnitWithSkin(p, 'h0KA', - 6432.7, - 29424.6, 301.364, 'h0KA')
     set u=BlzCreateUnitWithSkin(p, 'h0KC', - 6245.4, - 29051.5, 264.829, 'h0KC')
@@ -5425,8 +5425,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0GU', - 1747.6, - 25945.0, 267.530, 'h0GU')
     set u=BlzCreateUnitWithSkin(p, 'h0L3', - 2011.9, - 26021.7, 279.889, 'h0L3')
     set u=BlzCreateUnitWithSkin(p, 'hmil', - 6359.4, - 28786.0, 197.540, 'hmil')
-    set u=BlzCreateUnitWithSkin(p, 'hwt2', - 5544.2, - 29280.2, - 86.287, 'hwt2')
-    set u=BlzCreateUnitWithSkin(p, 'hwt3', - 5593.8, - 29326.8, - 75.266, 'hwt3')
+    set u=BlzCreateUnitWithSkin(p, 'hwt2', - 5544.2, - 29280.2, 273.713, 'hwt2')
+    set u=BlzCreateUnitWithSkin(p, 'hwt3', - 5593.8, - 29326.8, 284.734, 'hwt3')
     set u=BlzCreateUnitWithSkin(p, 'o03S', - 52.2, - 30532.9, 216.378, 'o03S')
     set u=BlzCreateUnitWithSkin(p, 'h0IB', - 4502.5, - 25851.0, 259.966, 'h0IB')
     set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, 290.235, 'n04X')
@@ -13559,6 +13559,7 @@ endfunction
 
 function Trig_Leave_Ot_Func005A takes nothing returns nothing
     if ( Trig_Leave_Ot_Func005Func001C() ) then
+        call SetUnitOwner(GetEnumUnit(), Player(PLAYER_NEUTRAL_AGGRESSIVE), true)
     else
         call KillUnit(GetEnumUnit())
         call RemoveUnit(GetEnumUnit())
@@ -13566,7 +13567,7 @@ function Trig_Leave_Ot_Func005A takes nothing returns nothing
 endfunction
 
 function Trig_Leave_Ot_Func007C takes nothing returns boolean
-    if ( not ( IsTriggerEnabled(gg_trg_FeodalDead) == true ) ) then
+    if ( not ( IsTriggerEnabled(gg_trg_FeodalDead2) == true ) ) then
         return false
     endif
     return true
@@ -45715,6 +45716,40 @@ function InitTrig_Spell1_Copy takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: KillTestUnits O Copy
+//===========================================================================
+function Trig_KillTestUnits_O_Copy_Func001002 takes nothing returns boolean
+    return RectContainsUnit(gg_rct_TestRegion, GetFilterUnit())
+endfunction
+
+function Trig_KillTestUnits_O_Copy_Func003A takes nothing returns nothing
+    local unit u= GetEnumUnit()
+    local player p= GetOwningPlayer(u)
+    local integer id= GetUnitTypeId(u)
+    if IsUnitType(u, UNIT_TYPE_HERO) then
+        call SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
+    endif
+    call RemoveUnit(u)
+    set u=null
+    set p=null
+endfunction
+
+function Trig_KillTestUnits_O_Copy_Actions takes nothing returns nothing
+    set udg_Boolexpr=Condition(function Trig_KillTestUnits_O_Copy_Func001002)
+    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
+    call ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), function Trig_KillTestUnits_O_Copy_Func003A)
+    call GroupClear(udg_LocalOtrad2)
+endfunction
+
+//===========================================================================
+function InitTrig_KillTestUnits_O_Copy takes nothing returns nothing
+    set gg_trg_KillTestUnits_O_Copy=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_KillTestUnits_O_Copy, 0.01)
+    call TriggerAddAction(gg_trg_KillTestUnits_O_Copy, function Trig_KillTestUnits_O_Copy_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: Setlvl
 //===========================================================================
 function Trig_Setlvl_Func001001002 takes nothing returns boolean
@@ -46942,6 +46977,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Qtun_HP_24k_O()
     call InitTrig_Qtun_Die()
     call InitTrig_Spell1_Copy()
+    call InitTrig_KillTestUnits_O_Copy()
     call InitTrig_Setlvl()
     call InitTrig_A1()
     call InitTrig_Second_O()
@@ -46974,6 +47010,7 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_BloodClose)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
     call ConditionalTriggerExecute(gg_trg_PereborPlayerForNavy)
+    call ConditionalTriggerExecute(gg_trg_KillTestUnits_O_Copy)
 endfunction
 
 //***************************************************************************
