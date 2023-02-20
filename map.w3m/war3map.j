@@ -708,6 +708,7 @@ trigger gg_trg_FinWhite= null
 trigger gg_trg_BegBlack= null
 trigger gg_trg_CanBlack= null
 trigger gg_trg_FinBlack= null
+trigger gg_trg_UltDanath= null
 trigger gg_trg_GeneralRegen= null
 trigger gg_trg_Pribavka_k_zoloty= null
 trigger gg_trg_StromgardOn= null
@@ -5427,6 +5428,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'hmil', - 6359.4, - 28786.0, 197.540, 'hmil')
     set u=BlzCreateUnitWithSkin(p, 'hwt2', - 5544.2, - 29280.2, 273.713, 'hwt2')
     set u=BlzCreateUnitWithSkin(p, 'hwt3', - 5593.8, - 29326.8, 284.734, 'hwt3')
+    set u=BlzCreateUnitWithSkin(p, 'H0L4', - 1470.0, - 26026.6, 334.313, 'H0L4')
     set u=BlzCreateUnitWithSkin(p, 'o03S', - 52.2, - 30532.9, 216.378, 'o03S')
     set u=BlzCreateUnitWithSkin(p, 'h0IB', - 4502.5, - 25851.0, 259.966, 'h0IB')
     set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, 290.235, 'n04X')
@@ -20924,6 +20926,45 @@ function InitTrig_FinBlack takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_FinBlack, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
     call TriggerAddCondition(gg_trg_FinBlack, Condition(function Trig_FinBlack_Conditions))
     call TriggerAddAction(gg_trg_FinBlack, function Trig_FinBlack_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UltDanath
+//
+// Вот рабочий триггер. Никаких глобальных переменных.
+// В условиях: (Ability beng cast) равно "Здесь ставь способность которая применяется на юнита"
+// Описываю действия:
+// 1. Создаем локальную переменную юнита
+// 2. Даем юниту на которого применяется способность "Невидимость", способность "Змеиная ловкость"
+// 3. В локальную переменную юнита вписываем юнита на которого применена способность
+// 4. Сколько времени у юнита будет дополнительная способность
+// 5. По истечении времени забираем у юнита дополнительную способность
+// В 5 строке 'AEev' - это код способности 'Змеиная ловкость'
+// Если что-то не понятно - обращайся.
+// by Dragonear for xgm.guru
+//===========================================================================
+function Trig_UltDanath_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A17S' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UltDanath_Actions takes nothing returns nothing
+    local unit u
+    call UnitAddAbilityBJ('A17T', GetTriggerUnit())
+    set u=GetTriggerUnit()
+    call PolledWait(30.00)
+    call UnitRemoveAbilityBJ('A17T', u)
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_UltDanath takes nothing returns nothing
+    set gg_trg_UltDanath=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UltDanath, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(gg_trg_UltDanath, Condition(function Trig_UltDanath_Conditions))
+    call TriggerAddAction(gg_trg_UltDanath, function Trig_UltDanath_Actions)
 endfunction
 
 //===========================================================================
@@ -46332,6 +46373,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_BegBlack()
     call InitTrig_CanBlack()
     call InitTrig_FinBlack()
+    call InitTrig_UltDanath()
     call InitTrig_GeneralRegen()
     call InitTrig_Pribavka_k_zoloty()
     call InitTrig_StromgardOn()
