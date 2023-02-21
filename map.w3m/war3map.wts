@@ -58194,7 +58194,7 @@ STRING 9647
 }
 
 STRING 9648
-// Upgrades: R06L (Защита), effect2 (Effect 2)
+// Upgrades: R06E (Железные мечи,Стальные мечи,Мифриловые меч), effect1 (Effect 1)
 {
 ratx
 }
@@ -76320,7 +76320,7 @@ STRING 12640
 }
 
 STRING 12641
-// Upgrades: R08Q (Сделать волшебниц адептами,Сделать волшеб�), effect3 (Effect 3)
+// Upgrades: R06L (Защита), effect2 (Effect 2)
 {
 ratx
 }
@@ -76779,7 +76779,7 @@ STRING 12716
 }
 
 STRING 12717
-// Upgrades: R08R (Сделать волшебниц адептами,Сделать волшеб�), effect3 (Effect 3)
+// Upgrades: R08Q (Сделать волшебниц адептами,Сделать волшеб�), effect3 (Effect 3)
 {
 ratx
 }
@@ -89017,7 +89017,7 @@ rmvx
 }
 
 STRING 14724
-// Upgrades: R095 (Сделать сирен адептами,Сделать сирен масте), effect2 (Effect 2)
+// Upgrades: R08R (Сделать волшебниц адептами,Сделать волшеб�), effect3 (Effect 3)
 {
 ratx
 }
@@ -89122,7 +89122,7 @@ rats
 }
 
 STRING 14741
-// Upgrades: R096 (Защита), effect2 (Effect 2)
+// Upgrades: R095 (Сделать сирен адептами,Сделать сирен масте), effect2 (Effect 2)
 {
 ratx
 }
@@ -89827,7 +89827,7 @@ W
 }
 
 STRING 14856
-// Upgrades: R099 (Защита), effect1 (Effect 1)
+// Upgrades: R096 (Защита), effect2 (Effect 2)
 {
 ratx
 }
@@ -89917,7 +89917,7 @@ W
 }
 
 STRING 14870
-// Upgrades: R09B (Защита), effect1 (Effect 1)
+// Upgrades: R099 (Защита), effect1 (Effect 1)
 {
 ratx
 }
@@ -97412,7 +97412,7 @@ STRING 16079
 }
 
 STRING 16080
-// Upgrades: R09C (Защита), effect1 (Effect 1)
+// Upgrades: R09B (Защита), effect1 (Effect 1)
 {
 ratx
 }
@@ -98485,7 +98485,7 @@ STRING 16247
 }
 
 STRING 16248
-// Upgrades: R09Q (Защита), effect1 (Effect 1)
+// Upgrades: R09C (Защита), effect1 (Effect 1)
 {
 ratx
 }
@@ -103028,7 +103028,7 @@ STRING 16987
 }
 
 STRING 16988
-// Upgrades: R0AS (Улучшение до берсерка), effect1 (Effect 1)
+// Upgrades: R09Q (Защита), effect1 (Effect 1)
 {
 ratx
 }
@@ -105937,7 +105937,7 @@ STRING 17470
 }
 
 STRING 17471
-// Upgrades: R0B8 (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
+// Upgrades: R0AS (Улучшение до берсерка), effect1 (Effect 1)
 {
 ratx
 }
@@ -108569,7 +108569,7 @@ STRING 17908
 }
 
 STRING 17909
-// Upgrades: R0BK (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
+// Upgrades: R0B8 (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
 {
 ratx
 }
@@ -117516,7 +117516,7 @@ STRING 19398
 }
 
 STRING 19399
-// Upgrades: R0CA (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
+// Upgrades: R0BK (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
 {
 ratx
 }
@@ -120008,7 +120008,7 @@ STRING 19812
 }
 
 STRING 19813
-// Upgrades: R0CL (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
+// Upgrades: R0CA (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
 {
 ratx
 }
@@ -120726,7 +120726,7 @@ STRING 19932
 }
 
 STRING 19933
-// Upgrades: R0CO (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
+// Upgrades: R0CL (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
 {
 ratx
 }
@@ -120997,7 +120997,7 @@ STRING 19977
 }
 
 STRING 19978
-// Upgrades: R0CR (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
+// Upgrades: R0CO (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
 {
 ratx
 }
@@ -124027,6 +124027,12 @@ STRING 20469
 W
 }
 
+STRING 20470
+// Abilities: A15W (|cff0f81c3Гнев Леса|r), Ubertip (Tooltip - Normal - Extended)
+{
+Призывает из-под земли корни, которые обездвиживают и обезвреживают врагов в области, а также наносят урон. |n|n|cffffcc001-й уровень:|r 500% урона/сек. от числа регенерации юнита, в течение 5 сек. |n
+}
+
 STRING 20471
 // Abilities: A0Z4 (Турель), Hotkey (Hotkey - Normal)
 {
@@ -125350,7 +125356,7 @@ rhpx
 }
 
 STRING 20689
-// Upgrades: R0D5 (Шрапнель), effect3 (Effect 3)
+// Upgrades: R0CR (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
 {
 ratx
 }
@@ -127371,7 +127377,7 @@ STRING 21018
 }
 
 STRING 21019
-// Upgrades: R0D6 (Шрапнель), effect2 (Effect 2)
+// Upgrades: R0D5 (Шрапнель), effect3 (Effect 3)
 {
 ratx
 }
@@ -127939,7 +127945,7 @@ A
 }
 
 STRING 21113
-// Upgrades: R0DH (Бонус к урону от «Боевых барабанов»), effect1 (Effect 1)
+// Upgrades: R0D6 (Шрапнель), effect2 (Effect 2)
 {
 ratx
 }
@@ -129369,7 +129375,7 @@ STRING 21349
 }
 
 STRING 21350
-// Upgrades: R0DP (Железная броня,Стальная броня,Мифриловая б), effect1 (Effect 1)
+// Upgrades: R0DH (Бонус к урону от «Боевых барабанов»), effect1 (Effect 1)
 {
 ratx
 }
@@ -131780,7 +131786,7 @@ STRING 21731
 }
 
 STRING 21732
-// Upgrades: R0G2 (Знак хищника), effect2 (Effect 2)
+// Upgrades: R0DP (Железная броня,Стальная броня,Мифриловая б), effect1 (Effect 1)
 {
 ratx
 }
@@ -132238,17 +132244,6 @@ STRING 21798
 Очень нестандартная броня для мага.
 
 |cff808080Тяжелая броня - понижает скорость передвижения - 20 ед.|r
-}
-
-STRING 21799
-// Items: I01P (|cff0064ffКрушитель|r), Ubertip (Tooltip - Extended)
-{
-|cff008000-(20%) больше урона наносит зданиям.|r
-|cff008000-(+10) к урону.|r
-
-Слишком большой размах.
-
-|cff808080Тяжелая оружие - понижает скорость боя на 5%.|r
 }
 
 STRING 21800
@@ -143320,6 +143315,25 @@ STRING 23592
 // Units: o02Q (Возвести |cfff08080Сторожевую башню|r), Name (Name)
 {
 Возвести |cfff08080Сторожевую башню|r
+}
+
+STRING 23593
+// Abilities: A15W (|cff0f81c3Гнев Леса|r), Ubertip (Tooltip - Normal - Extended)
+{
+Призывает из-под земли корни, которые обездвиживают и обезвреживают врагов в области, а также наносят урон. |n|cffffcc002-й уровень:|r 500% урона/сек. от числа регенерации юнита, в течение 10 сек. |n
+}
+
+STRING 23594
+// Abilities: A15W (|cff0f81c3Гнев Леса|r), Ubertip (Tooltip - Normal - Extended)
+{
+Призывает из-под земли корни, которые обездвиживают и обезвреживают врагов в области, а также наносят урон. |n
+|cffffcc003-й уровень:|r 800% урона/сек. от числа регенерации юнита, в течение 15 сек. |n
+}
+
+STRING 23595
+// Abilities: A15W (|cff0f81c3Гнев Леса|r), Ubertip (Tooltip - Normal - Extended)
+{
+Призывает из-под земли корни, которые обездвиживают и обезвреживают врагов в области, а также наносят урон. |n|n|cffffcc004-й уровень:|r 800% урона/сек. от числа регенерации юнита, в течение 20 сек. 
 }
 
 STRING 23596
@@ -169928,6 +169942,12 @@ STRING 27957
 (Огры)
 }
 
+STRING 27958
+// Upgrades: R0G2 (Знак хищника), effect2 (Effect 2)
+{
+ratx
+}
+
 STRING 27959
 // Abilities: A16Y (|cffd2b48cРеинкарнация|r), Tip (Tooltip - Normal)
 {
@@ -171924,6 +171944,17 @@ STRING 28271
 // Upgrades: R0GN (Железное оружие дальнего боя,Ториевое оруж), Name (Name)
 {
 |cffd2b48cАрканитовое оружие дальнего боя|r
+}
+
+STRING 28272
+// Items: I01P (|cff0064ffКрушитель|r), Ubertip (Tooltip - Extended)
+{
+|cff008000-(10%) больше урона наносит зданиям.|r
+|cff008000-(+10) к урону.|r
+
+Слишком большой размах.
+
+|cff808080Тяжелая оружие - понижает скорость боя на 5%.|r
 }
 
 STRING 28273
