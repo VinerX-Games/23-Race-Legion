@@ -1,4 +1,7 @@
 globals
+//globals from A1:
+constant boolean LIBRARY_A1=true
+//endglobals from A1
 //globals from Example:
 constant boolean LIBRARY_Example=true
 framehandle gameUI
@@ -22,12 +25,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE___SpellHero='A06P'
-constant integer SpellSleepAOE___SpellCast='A06O'
-constant string SpellSleepAOE___SpellOrder="sleep"
-constant integer SpellSleepAOE___DummyID='u000'
-constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE___DummyUnit
+constant integer SpellSleepAOE__SpellHero='A06P'
+constant integer SpellSleepAOE__SpellCast='A06O'
+constant string SpellSleepAOE__SpellOrder="sleep"
+constant integer SpellSleepAOE__DummyID='u000'
+constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE__DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -518,7 +521,6 @@ trigger gg_trg_CircleMove01= null
 trigger gg_trg_CircleMove01_Copy= null
 trigger gg_trg_CircleMove_Code= null
 trigger gg_trg_Race_Night_Elves_O= null
-trigger gg_trg_Race_Alliance_O= null
 trigger gg_trg_Race_Bezlikie_O= null
 trigger gg_trg_Race_Stromgard_O= null
 trigger gg_trg_Race_Dragon_O= null
@@ -546,6 +548,7 @@ trigger gg_trg_Race_Nagi= null
 trigger gg_trg_Race_nightelf= null
 trigger gg_trg_Race_Forsaken= null
 trigger gg_trg_Race_Ogres= null
+trigger gg_trg_Race_Alliance_O= null
 trigger gg_trg_Race_Random= null
 trigger gg_trg_Page1_O= null
 trigger gg_trg_Page2_O= null
@@ -726,6 +729,7 @@ trigger gg_trg_Priziv= null
 trigger gg_trg_Professian2= null
 trigger gg_trg_Proffesian= null
 trigger gg_trg_MassArmy= null
+trigger gg_trg_MassArmyOld= null
 trigger gg_trg_UpSystem= null
 trigger gg_trg_ShieldUp= null
 trigger gg_trg_EnterKazna= null
@@ -751,8 +755,8 @@ trigger gg_trg_SpandFarm= null
 trigger gg_trg_AllyOn= null
 trigger gg_trg_AK1T1= null
 trigger gg_trg_AK1T2= null
-trigger gg_trg_AK1Cav= null
 trigger gg_trg_AK1T3= null
+trigger gg_trg_AK1Cav= null
 trigger gg_trg_AK2T1= null
 trigger gg_trg_AK2T2= null
 trigger gg_trg_AK2T3= null
@@ -764,6 +768,7 @@ trigger gg_trg_AE2= null
 trigger gg_trg_AN1= null
 trigger gg_trg_AN2= null
 trigger gg_trg_OldStormwindForever= null
+trigger gg_trg_MassMolot= null
 trigger gg_trg_PaladinHpSpell= null
 trigger gg_trg_PaladinHpSpell2= null
 trigger gg_trg_Vozd= null
@@ -1543,6 +1548,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_MagicUsk= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1678,6 +1684,14 @@ native UnitAlive takes unit id returns boolean
 native GetPlayerUnitTypeCount takes player p, integer unitid returns integer
 
 
+//library A1:
+
+function EnemEl takes nothing returns boolean
+    return GetOwningPlayer(GetFilterUnit()) != udg_LocalPlayer
+endfunction
+
+
+//library A1 ends
 //library Example:
 
 
@@ -1814,7 +1828,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE___getRange takes integer level returns integer
+    function SpellSleepAOE__getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1822,33 +1836,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
-            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
+            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
+            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE___anon__0 takes nothing returns boolean
-            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE__anon__0 takes nothing returns boolean
+            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE___anon__2 takes nothing returns boolean
+            function SpellSleepAOE__anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE___anon__1 takes nothing returns nothing
+        function SpellSleepAOE__anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1856,19 +1870,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE___onInit takes nothing returns nothing
+    function SpellSleepAOE__onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
+        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
         set t=null
     endfunction
 
@@ -5381,7 +5395,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'hmpr', - 6410.6, - 29713.4, 264.494, 'hmpr')
     set u=BlzCreateUnitWithSkin(p, 'h0K7', - 6003.6, - 28906.1, 280.730, 'h0K7')
     set u=BlzCreateUnitWithSkin(p, 'hwat', - 5616.0, - 29213.1, 283.632, 'hwat')
-    set u=BlzCreateUnitWithSkin(p, 'h0K9', - 5799.9, - 29433.0, 281.890, 'h0K9')
+    set u=BlzCreateUnitWithSkin(p, 'h0K9', - 5799.9, - 29433.0, 128.171, 'h0K9')
     set u=BlzCreateUnitWithSkin(p, 'h0KA', - 6432.7, - 29424.6, 301.364, 'h0KA')
     set u=BlzCreateUnitWithSkin(p, 'h0KC', - 6245.4, - 29051.5, 264.829, 'h0KC')
     set u=BlzCreateUnitWithSkin(p, 'h0KB', - 6116.3, - 29442.7, 289.195, 'h0KB')
@@ -5429,9 +5443,11 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'hwt3', - 5593.8, - 29326.8, 284.734, 'hwt3')
     set u=BlzCreateUnitWithSkin(p, 'H0L4', - 1470.0, - 26026.6, 334.313, 'H0L4')
     set u=BlzCreateUnitWithSkin(p, 'o03S', - 52.2, - 30532.9, 216.378, 'o03S')
+    set u=BlzCreateUnitWithSkin(p, 'h0KH', - 5214.6, - 28588.6, 178.164, 'h0KH')
     set u=BlzCreateUnitWithSkin(p, 'h0IB', - 4502.5, - 25851.0, 259.966, 'h0IB')
     set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, 290.235, 'n04X')
     set u=BlzCreateUnitWithSkin(p, 'n04Y', - 3839.2, - 30069.7, 296.680, 'n04Y')
+    set u=BlzCreateUnitWithSkin(p, 'h0KG', - 5398.1, - 28963.6, 210.766, 'h0KG')
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
 endfunction
 
@@ -6577,39 +6593,16 @@ function ReplaceUnit2 takes unit whichUnit,integer newUnitId,integer unitStateMe
     return bj_lastReplacedUnit
     
 endfunction
-//
-//
-//library Example initializer init
-//
-//globals
-//      framehandle gameUI
-//      framehandle butClassic
-//      framehandle frame
-//endglobals
-//
-//function click takes nothing returns nothing 
-//   call DisplayTimedTextToForce( GetPlayersAll(), 10.00, "Классический мод")
-//endfunction
-//
-//function init takes nothing returns nothing
-//   local trigger trig = CreateTrigger()
-//   set gameUI = BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0)
-//   set frame = BlzCreateFrameByType("BACKDROP","",gameUI, "StandardFrameTemplate", 0)
-//   call BlzFrameSetSize(frame,0.7, 0.7)
-//   call BlzFrameSetAbsPoint(frame, FRAMEPOINT_CENTER, 0.4, 0.3)
-//   call BlzFrameSetTexture(frame, "ModSelect.blp", 0, true) 
-//   
-//   set butClassic = BlzCreateFrameByType("BUTTON","", gameUI,"StandardFrameTemplate", 0)
-//   call BlzFrameSetSize (butClassic, 0.2, 0.3)
-//   call BlzFrameSetAbsPoint (butClassic, FRAMEPOINT_CENTER, 0.0, 0.3)
-//   call BlzHideOriginFrames(true)
-//   call BlzFrameSetVisible(BlzGetFrameByName("ConsoleUIBackdrop", 0), false)
-//   call BlzTriggerRegisterFrameEvent(trig, butClassic, FRAMEEVENT_CONTROL_CLICK)
-//   call TriggerAddAction(trig, function click)
-//   
-//endfunction
-//
-//endlibrary
+
+
+
+
+function ReturnFPS takes nothing returns nothing
+    local framehandle fps= BlzGetFrameByName("ResourceBarFrame", 0)
+    call BlzFrameSetVisible(fps, true)
+    call BlzFrameClearAllPoints(fps)
+    call BlzFrameSetAbsPoint(fps, FRAMEPOINT_CENTER, 0.95, 0.62)
+endfunction
 //***************************************************************************
 //*
 //*  Triggers
@@ -6933,7 +6926,7 @@ function Trig_ResoursesInterface_Actions takes nothing returns nothing
     else
         call BlzFrameSetText(BlzGetFrameByName("Income0302", 0), "|cffff0000" + I2S(R2I(balance[pi])) + "|r")
     endif
-    
+    call ReturnFPS()
   
   
     call GroupClear(g)
@@ -7450,7 +7443,7 @@ endfunction
 // Trigger: StolicaTime
 //===========================================================================
 function Trig_StolicaTime_Func001Func001Func001Func011A takes nothing returns nothing
-    call UnitShareVisionBJ(true, GetTriggerUnit(), GetEnumPlayer())
+    call UnitShareVision(udg_LocalUnit2, GetEnumPlayer(), true)
 endfunction
 
 function Trig_StolicaTime_Func001Func001Func001Func013C takes nothing returns boolean
@@ -7480,30 +7473,20 @@ function Trig_StolicaTime_Func001Func001Func001Func016001001002 takes nothing re
     return ( GetUnitAbilityLevelSwapped('A0IQ', GetFilterUnit()) != 0 )
 endfunction
 
-function Trig_StolicaTime_Func001Func001Func001C takes nothing returns boolean
-    if ( not ( CountUnitsInGroup(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func016001001002))) != 0 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_StolicaTime_Func001Func001Func002001001002 takes nothing returns boolean
-    return ( IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups) == true )
-endfunction
-
-function Trig_StolicaTime_Func001Func001C takes nothing returns boolean
-    if ( not ( CountUnitsInGroup(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func002001001002))) == 1 ) ) then
-        return false
-    endif
-    return true
+    return IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups)
 endfunction
 
 function Trig_StolicaTime_Func001A takes nothing returns nothing
     local unit u
-    if ( Trig_StolicaTime_Func001Func001C() ) then
+    local group g
+    set g=GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func002001001002))
+    if CountUnitsInGroup(g) >= 1 then
     else
-        if ( Trig_StolicaTime_Func001Func001Func001C() ) then
-            set u=GroupPickRandomUnit(GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func016001001002)))
+        call GroupClear(g)
+        set g=GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func016001001002))
+        if CountUnitsInGroup(g) != 0 then
+            set u=GroupPickRandomUnit(g)
             call BlzSetUnitMaxHP(u, 10000)
             call SetUnitLifeBJ(u, 10000.00)
             call BlzSetUnitRealFieldBJ(u, UNIT_RF_SIGHT_RADIUS, 600.00)
@@ -7511,13 +7494,14 @@ function Trig_StolicaTime_Func001A takes nothing returns nothing
             call UnitAddAbilityBJ('A0I6', u)
             call UnitAddAbilityBJ('A145', u)
             call BlzSetUnitStringFieldBJ(u, UNIT_SF_NAME, ( "|cffd45e19Столица:|r " + GetUnitName(u) ))
-            call GroupAddUnitSimple(u, udg_StolicaGroups)
+            call GroupAddUnit(udg_StolicaGroups, u)
             call TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, u, EVENT_UNIT_ATTACKED)
-            call ForForce(GetPlayersAll(), function Trig_StolicaTime_Func001Func001Func001Func011A)
-            call DisplayTextToForce(GetPlayersAll(), ( GetPlayerName(GetEnumPlayer()) + " - |cffffff00почти проиграл|r|r, его |cffd45e19столица|r не не была построена ко времени, а потому была установлена автоматически." ))
+            set udg_LocalUnit2=u
+            call ForForce(udg_AllPlayers, function Trig_StolicaTime_Func001Func001Func001Func011A)
+            call DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetEnumPlayer()) + " - |cffffff00почти проиграл|r|r, его |cffd45e19столица|r не не была построена ко времени, а потому была установлена автоматически." ))
         else
             if ( Trig_StolicaTime_Func001Func001Func001Func013C() ) then
-                call DisplayTextToForce(GetPlayersAll(), ( GetPlayerName(GetEnumPlayer()) + " - |cffff0000проиграл|r, его |cffd45e19столица |r не построена ко времени. :(" ))
+                call DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetEnumPlayer()) + " - |cffff0000проиграл|r, его |cffd45e19столица |r не построена ко времени. :(" ))
             else
             endif
             call ForGroupBJ(GetUnitsOfPlayerAll(GetEnumPlayer()), function Trig_StolicaTime_Func001Func001Func001Func014A)
@@ -7525,6 +7509,9 @@ function Trig_StolicaTime_Func001A takes nothing returns nothing
         endif
     endif
     set u=null
+    call DestroyGroup(g)
+    set g=null
+    
 endfunction
 
 function Trig_StolicaTime_Actions takes nothing returns nothing
@@ -12340,28 +12327,6 @@ function InitTrig_Race_Night_Elves_O takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: Race Alliance O
-//===========================================================================
-function Trig_Race_Alliance_O_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A02A' ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Race_Alliance_O_Actions takes nothing returns nothing
-    call DisplayTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), "TRIGSTR_21300")
-endfunction
-
-//===========================================================================
-function InitTrig_Race_Alliance_O takes nothing returns nothing
-    set gg_trg_Race_Alliance_O=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Alliance_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    call TriggerAddCondition(gg_trg_Race_Alliance_O, Condition(function Trig_Race_Alliance_O_Conditions))
-    call TriggerAddAction(gg_trg_Race_Alliance_O, function Trig_Race_Alliance_O_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: Race Bezlikie O
 //===========================================================================
 function Trig_Race_Bezlikie_O_Conditions takes nothing returns boolean
@@ -12401,7 +12366,7 @@ function Trig_Race_Stromgard_O_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call CreateNUnitsAtLoc(5, 'h0G9', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     call RemoveUnit(GetSpellAbilityUnit())
-    call SetPlayerTechResearchedSwap('R001', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechResearchedSwap('R0H3', 1, GetOwningPlayer(GetTriggerUnit()))
     call TriggerExecute(gg_trg_StromgardOn)
     call RemoveLocation(udg_LocalPosition2)
 endfunction
@@ -13072,6 +13037,33 @@ function InitTrig_Race_Ogres takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: Race Alliance O
+//===========================================================================
+function Trig_Race_Alliance_O_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A02A' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Alliance_O_Actions takes nothing returns nothing
+    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    call CreateNUnitsAtLoc(5, 'hpea', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    call RemoveUnit(GetSpellAbilityUnit())
+    call ConditionalTriggerExecute(gg_trg_AllyOn)
+    call SetPlayerTechResearchedSwap('R0GZ', 1, GetOwningPlayer(GetTriggerUnit()))
+    call RemoveLocation(udg_LocalPosition2)
+endfunction
+
+//===========================================================================
+function InitTrig_Race_Alliance_O takes nothing returns nothing
+    set gg_trg_Race_Alliance_O=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Alliance_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
+    call TriggerAddCondition(gg_trg_Race_Alliance_O, Condition(function Trig_Race_Alliance_O_Conditions))
+    call TriggerAddAction(gg_trg_Race_Alliance_O, function Trig_Race_Alliance_O_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: Race Random
 //===========================================================================
 function Trig_Race_Random_Conditions takes nothing returns boolean
@@ -13415,6 +13407,7 @@ function Trig_Page1_O_Actions takes nothing returns nothing
     call UnitRemoveAbilityBJ('A12Q', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A155', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A17N', GetTriggerUnit())
+    call UnitRemoveAbilityBJ('A02A', GetTriggerUnit())
 endfunction
 
 //===========================================================================
@@ -21156,52 +21149,21 @@ endfunction
 //===========================================================================
 // Trigger: MassArmy
 //===========================================================================
-function Trig_MassArmy_Func001Func001C takes nothing returns boolean
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'h0GS' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'h0GV' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'h0GU' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'h0GW' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'h0GX' ) ) then
-        return true
-    endif
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'h0GT' ) ) then
-        return true
-    endif
-    return false
-endfunction
-
-function Trig_MassArmy_Func001C takes nothing returns boolean
-    if ( not Trig_MassArmy_Func001Func001C() ) then
-        return false
-    endif
-    if ( not ( GetPlayerTechCountSimple('R0D6', GetOwningPlayer(GetTriggerUnit())) == 1 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
 function Trig_MassArmy_Conditions takes nothing returns boolean
-    if ( not Trig_MassArmy_Func001C() ) then
-        return false
-    endif
-    return true
+    local integer id=GetUnitTypeId(GetTrainedUnit())
+    return GetPlayerTechCountSimple('R0D6', GetOwningPlayer(GetTriggerUnit())) == 1 and ( id == 'h0GS' or id == 'h0GV' or id == 'h0GU' or id == 'h0GW' or id == 'h0GX' or id == 'h0L3' )
 endfunction
 
 function Trig_MassArmy_Actions takes nothing returns nothing
-    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    call CreateNUnitsAtLoc(1, GetUnitTypeId(GetTrainedUnit()), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    call RemoveLocation(udg_LocalPosition2)
-    set udg_LocalPosition2=GetUnitRallyPoint(GetTriggerUnit())
-    call IssuePointOrderLocBJ(GetTrainedUnit(), "move", udg_LocalPosition2)
-    call RemoveLocation(udg_LocalPosition2)
+    local location l= GetUnitLoc(GetTriggerUnit())
+    local unit u=  CreateUnitAtLoc(GetOwningPlayer(GetTriggerUnit()), GetUnitTypeId(GetTrainedUnit()), l, bj_UNIT_FACING)
+    call RemoveLocation(l)
+    set l=GetUnitRallyPoint(GetTriggerUnit())
+    call IssuePointOrderLoc(GetTrainedUnit(), "move", l)
+    call IssuePointOrderLoc(u, "move", l)
+    call RemoveLocation(l)
+    set l=null
+    set u=null
 endfunction
 
 //===========================================================================
@@ -21212,6 +21174,7 @@ function InitTrig_MassArmy takes nothing returns nothing
     call TriggerAddCondition(gg_trg_MassArmy, Condition(function Trig_MassArmy_Conditions))
     call TriggerAddAction(gg_trg_MassArmy, function Trig_MassArmy_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: UpSystem
@@ -22103,6 +22066,143 @@ endfunction
 
 
 //===========================================================================
+// Trigger: AK1T3
+//===========================================================================
+function Trig_AK1T3_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'h0K7'
+endfunction
+
+function AT3Count takes player p returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local integer pi= GetPlayerId(p)
+    
+    // Штормград простой
+    set a[0]=0
+    set i=4
+    loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KG'
+            set b=b + 1
+            exitwhen b >= i
+    endloop
+    
+    //Лордеронец
+    set i=1
+    set b=1
+    
+    loop
+        set a[0]=a[0] + 1
+        set a[a[0]]='h0KF'
+        
+        set b=b + 1
+        exitwhen b >= i
+    endloop
+    
+    
+//    
+//    //2 юнит Черной гора
+//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01E'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //3 юнит - эльфы
+//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 1 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01F'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//
+//    endif
+//    //4 юнит андеды
+//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
+//        set i = 2 
+//        set b = 1
+//        
+//        loop
+//            set a[0] = a[0] + 1
+//            set a[ a[0] ] = 'o01H'
+//            
+//            set b = b + 1
+//            exitwhen b >= i
+//        endloop
+//    endif
+    
+    //Long Containment
+    call SaveInteger(CommonHash, pi, StringHash("AT3_0"), a[0])
+    set i=1
+    loop
+        
+        
+        call SaveInteger(CommonHash, pi, StringHash("AT3") + i, a[i])
+        set i=i + 1
+        
+        exitwhen i > a[0]
+    endloop
+    
+    
+    
+    
+endfunction
+
+
+
+function Trig_AK1T3_Actions takes nothing returns nothing
+    local integer array a
+    local integer i= 0
+    local integer b= 0
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    local location l= GetUnitRallyPoint(GetTriggerUnit())
+    local unit u
+    local integer pi= GetPlayerId(p)
+    
+    
+    set i=LoadInteger(CommonHash, pi, StringHash("AT3_0"))
+    set i=GetRandomInt(1, i)
+    set b=LoadInteger(CommonHash, pi, ( StringHash("AT3") + i ))
+    
+    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    
+   
+    //call UnitAddAbility(u,'OR00')
+    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
+    
+    
+    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
+    call UnitAddAbility(u, 'A17P')
+    call IssuePointOrderLoc(u, "attack", l)
+    call RemoveLocation(l)
+    set p=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_AK1T3 takes nothing returns nothing
+    set gg_trg_AK1T3=CreateTrigger()
+    //call DisableTrigger(gg_trg_AK1T3)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AK1T3, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_AK1T3, Condition(function Trig_AK1T3_Conditions))
+    call TriggerAddAction(gg_trg_AK1T3, function Trig_AK1T3_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: AK1Cav
 //===========================================================================
 function Trig_AK1Cav_Conditions takes nothing returns boolean
@@ -22246,143 +22346,6 @@ function InitTrig_AK1Cav takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_AK1Cav, EVENT_PLAYER_UNIT_TRAIN_FINISH)
     call TriggerAddCondition(gg_trg_AK1Cav, Condition(function Trig_AK1Cav_Conditions))
     call TriggerAddAction(gg_trg_AK1Cav, function Trig_AK1Cav_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: AK1T3
-//===========================================================================
-function Trig_AK1T3_Conditions takes nothing returns boolean
-    return GetUnitTypeId(GetTrainedUnit()) == 'h0K7'
-endfunction
-
-function AT3Count takes player p returns nothing
-    local integer array a
-    local integer i= 0
-    local integer b= 0
-    local integer pi= GetPlayerId(p)
-    
-    // Штормград простой
-    set a[0]=0
-    set i=4
-    loop
-            set a[0]=a[0] + 1
-            set a[a[0]]='h0KG'
-            set b=b + 1
-            exitwhen b >= i
-    endloop
-    
-//    //Лордеронец
-//    set i = 1 
-//    set b = 1
-//    
-//    loop
-//        set a[0] = a[0] + 1
-//        set a[ a[0] ] = 'h0KR'
-//        
-//        set b = b + 1
-//        exitwhen b >= i
-//    endloop
-    
-    
-//    
-//    //2 юнит Черной гора
-//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
-//        set i = 1 
-//        set b = 1
-//        
-//        loop
-//            set a[0] = a[0] + 1
-//            set a[ a[0] ] = 'o01E'
-//            
-//            set b = b + 1
-//            exitwhen b >= i
-//        endloop
-//
-//    endif
-//    //3 юнит - эльфы
-//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
-//        set i = 1 
-//        set b = 1
-//        
-//        loop
-//            set a[0] = a[0] + 1
-//            set a[ a[0] ] = 'o01F'
-//            
-//            set b = b + 1
-//            exitwhen b >= i
-//        endloop
-//
-//    endif
-//    //4 юнит андеды
-//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
-//        set i = 2 
-//        set b = 1
-//        
-//        loop
-//            set a[0] = a[0] + 1
-//            set a[ a[0] ] = 'o01H'
-//            
-//            set b = b + 1
-//            exitwhen b >= i
-//        endloop
-//    endif
-    
-    //Long Containment
-    call SaveInteger(CommonHash, pi, StringHash("ACav_0"), a[0])
-    set i=1
-    loop
-        
-        
-        call SaveInteger(CommonHash, pi, StringHash("ACav") + i, a[i])
-        set i=i + 1
-        
-        exitwhen i > a[0]
-    endloop
-    
-    
-    
-    
-endfunction
-
-
-
-function Trig_AK1T3_Actions takes nothing returns nothing
-    local integer array a
-    local integer i= 0
-    local integer b= 0
-    local player p= GetOwningPlayer(GetTriggerUnit())
-    local location l= GetUnitRallyPoint(GetTriggerUnit())
-    local unit u
-    local integer pi= GetPlayerId(p)
-    
-    
-    set i=LoadInteger(CommonHash, pi, StringHash("ACav_0"))
-    set i=GetRandomInt(1, i)
-    set b=LoadInteger(CommonHash, pi, ( StringHash("ACav") + i ))
-    
-    set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
-    
-   
-    //call UnitAddAbility(u,'OR00')
-    //call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
-    
-    
-    set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
-    call UnitAddAbility(u, 'A17P')
-    call IssuePointOrderLoc(u, "attack", l)
-    call RemoveLocation(l)
-    set p=null
-    set u=null
-endfunction
-
-//===========================================================================
-function InitTrig_AK1T3 takes nothing returns nothing
-    set gg_trg_AK1T3=CreateTrigger()
-    //call DisableTrigger(gg_trg_AK1T3)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_AK1T3, EVENT_PLAYER_UNIT_TRAIN_FINISH)
-    call TriggerAddCondition(gg_trg_AK1T3, Condition(function Trig_AK1T3_Conditions))
-    call TriggerAddAction(gg_trg_AK1T3, function Trig_AK1T3_Actions)
 endfunction
 
 
@@ -23785,6 +23748,96 @@ endfunction
 
 
 //===========================================================================
+// Trigger: MagicUsk
+//===========================================================================
+function Trig_MagicUsk_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A180' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_MagicUsk_Actions takes nothing returns nothing
+    local unit u
+    set udg_LocalUnit[11]=GetSpellTargetUnit()
+    call UnitAddAbilityBJ('A182', udg_LocalUnit[11])
+    set u=udg_LocalUnit[11]
+    call TriggerSleepAction(17.00)
+    set udg_LocalUnit[11]=u
+    call UnitRemoveAbilityBJ('A182', udg_LocalUnit[11])
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_MagicUsk takes nothing returns nothing
+    set gg_trg_MagicUsk=CreateTrigger()
+    call DisableTrigger(gg_trg_MagicUsk)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_MagicUsk, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_MagicUsk, Condition(function Trig_MagicUsk_Conditions))
+    call TriggerAddAction(gg_trg_MagicUsk, function Trig_MagicUsk_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: MassMolot
+//===========================================================================
+function Trig_MassMolot_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'AHtb'
+endfunction
+
+
+
+function Trig_MassMolot_Actions takes nothing returns nothing
+    local location l= GetUnitLoc(GetTriggerUnit())
+    local player p= GetOwningPlayer(GetTriggerUnit())
+    
+    local boolexpr bex= Condition(function EnemEl)
+    local integer level= GetUnitAbilityLevelSwapped('AHtb', GetTriggerUnit())
+    local group g= CreateGroup()
+    local unit u
+    local unit u2
+    local integer i= 0
+    set udg_LocalPlayer=p
+    call GroupEnumUnitsInRangeOfLoc(g, l, 400, bex)
+    
+    call RemoveLocation(l)
+    set l=GetUnitLoc(GetTriggerUnit())
+    loop
+        set u=FirstOfGroup(g)
+        exitwhen i >= ( 3 * level ) or u == null
+        
+        set u2=CreateUnitAtLoc(p, 'H0BN', l, bj_UNIT_FACING)
+        set udg_LocalUnit2=u2
+        call TriggerExecute(gg_trg_ToKill2)
+        call UnitAddAbility(u2, 'A17Z')
+        call SetUnitManaBJ(u2, 1111111.00)
+        call SetUnitAbilityLevel(u2, 'A17Z', level)
+        call IssueTargetOrder(u2, "thunderbolt", u)
+        
+        set i=i + 1
+        call GroupRemoveUnit(g, u)
+    endloop
+    
+    
+    set u=null
+    call DestroyGroup(g)
+    set g=null
+    call RemoveLocation(l)
+    set p=null
+    call DestroyBoolExpr(bex)
+    set u2=null
+    set bex=null
+endfunction
+
+//===========================================================================
+function InitTrig_MassMolot takes nothing returns nothing
+    set gg_trg_MassMolot=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_MassMolot, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_MassMolot, Condition(function Trig_MassMolot_Conditions))
+    call TriggerAddAction(gg_trg_MassMolot, function Trig_MassMolot_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: PaladinHpSpell
 //===========================================================================
 function Trig_PaladinHpSpell_Conditions takes nothing returns boolean
@@ -24014,15 +24067,13 @@ endfunction
 function AcountAll takes player p returns nothing
     call AT1Count(p)
     call AT2Count(p)
-    //call AT2bCount(p)
+
     call ACavCount(p)
     call AT3Count(p)
     
     call AK1Count(p)
     call AK2Count(p)
-    //call AK2bCount(p)
     call AK3Count(p)
-    
     
     call AM1Count(p)
     call AM2Count(p)
@@ -24045,6 +24096,7 @@ function Trig_StartAlliance_Func002A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('h0I3', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('Hamg', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('Hmkg', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('h0KI', 0, GetEnumPlayer())
 endfunction
 
 function Trig_StartAlliance_Actions takes nothing returns nothing
@@ -27893,9 +27945,6 @@ function Trig_ThrallMolnya_Conditions takes nothing returns boolean
     return GetSpellAbilityId() == 'A12X'
 endfunction
 
-function EnemEl takes nothing returns boolean
-    return ( GetOwningPlayer(GetFilterUnit()) != udg_LocalPlayer )
-endfunction
 
 function Thrallenum takes nothing returns nothing
     call CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -46206,7 +46255,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_CircleMove01()
     call InitTrig_CircleMove_Code()
     call InitTrig_Race_Night_Elves_O()
-    call InitTrig_Race_Alliance_O()
     call InitTrig_Race_Bezlikie_O()
     call InitTrig_Race_Stromgard_O()
     call InitTrig_Race_Dragon_O()
@@ -46234,6 +46282,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Race_nightelf()
     call InitTrig_Race_Forsaken()
     call InitTrig_Race_Ogres()
+    call InitTrig_Race_Alliance_O()
     call InitTrig_Race_Random()
     call InitTrig_Page1_O()
     call InitTrig_Page2_O()
@@ -46405,8 +46454,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_AllyOn()
     call InitTrig_AK1T1()
     call InitTrig_AK1T2()
-    call InitTrig_AK1Cav()
     call InitTrig_AK1T3()
+    call InitTrig_AK1Cav()
     call InitTrig_AK2T1()
     call InitTrig_AK2T2()
     call InitTrig_AK2T3()
@@ -46418,6 +46467,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_AN1()
     call InitTrig_AN2()
     call InitTrig_OldStormwindForever()
+    call InitTrig_MagicUsk()
+    call InitTrig_MassMolot()
     call InitTrig_PaladinHpSpell()
     call InitTrig_PaladinHpSpell2()
     call InitTrig_Vozd()
@@ -47409,7 +47460,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE___onInit")
+call ExecuteFunc("SpellSleepAOE__onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
