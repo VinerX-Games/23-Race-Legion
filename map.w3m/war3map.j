@@ -475,6 +475,7 @@ trigger gg_trg_EclogOff= null
 trigger gg_trg_UnitIncomeEnter= null
 trigger gg_trg_UnitIncomeEnterDisCommon= null
 trigger gg_trg_UnitIncomeConstructed= null
+trigger gg_trg_UnitIncomeUpgrade= null
 trigger gg_trg_UnitIncomeEnterAlredyDead= null
 trigger gg_trg_Gob_Potreblenie= null
 trigger gg_trg_Silitid_Potreblenie= null
@@ -992,6 +993,8 @@ trigger gg_trg_ChoseLich= null
 trigger gg_trg_ChoseUnits2= null
 trigger gg_trg_ChoseUnits= null
 trigger gg_trg_ChoseUnits_Cod= null
+trigger gg_trg_TweenBrothers= null
+trigger gg_trg_TweenChange= null
 trigger gg_trg_StartBuildingSil= null
 trigger gg_trg_CanselBuildingSil= null
 trigger gg_trg_TrutenStartUpgrade= null
@@ -1549,7 +1552,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_UnitIncomeUpgrade= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -23341,7 +23343,7 @@ function AE2Count takes player p returns nothing
     set i=4
     loop
             set a[0]=a[0] + 1
-            set a[a[0]]='h0KJ'
+            set a[a[0]]='h0KS'
             set b=b + 1
             exitwhen b >= i
     endloop
@@ -23482,18 +23484,18 @@ function AN1Count takes player p returns nothing
             set b=b + 1
             exitwhen b >= i
     endloop
-    
-    //Лордеронец
-    set i=1
-    set b=1
-    
-    loop
-        set a[0]=a[0] + 1
-        set a[a[0]]='h0KR'
-        
-        set b=b + 1
-        exitwhen b >= i
-    endloop
+//    
+//    //Лордеронец
+//    set i = 1 
+//    set b = 1
+//    
+//    loop
+//        set a[0] = a[0] + 1
+//        set a[ a[0] ] = 'h0KR'
+//        
+//        set b = b + 1
+//        exitwhen b >= i
+//    endloop
     
     
 //    
@@ -31616,6 +31618,7 @@ function Trig_StartSilitids_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('U024', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('U025', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('U023', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('U02R', 0, GetEnumPlayer())
 endfunction
 
 function Trig_StartSilitids_Actions takes nothing returns nothing
@@ -31856,6 +31859,80 @@ function InitTrig_ChoseUnits2 takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_ChoseUnits2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_ChoseUnits2, Condition(function Trig_ChoseUnits2_Conditions))
     call TriggerAddAction(gg_trg_ChoseUnits2, function Trig_ChoseUnits2_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: TweenBrothers
+//===========================================================================
+function Trig_TweenBrothers_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTrainedUnit()) == 'U02R'
+endfunction
+
+function Trig_TweenBrothers_Actions takes nothing returns nothing
+    local unit u= CreateUnit(GetOwningPlayer(GetTrainedUnit()), 'U02S', GetUnitX(GetTrainedUnit()), GetUnitY(GetTrainedUnit()), bj_UNIT_FACING)
+    call UnitAddAbility(u, 'A187')
+    call IssueTargetOrder(u, "spiritlink", GetTrainedUnit())
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_TweenBrothers takes nothing returns nothing
+    set gg_trg_TweenBrothers=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_TweenBrothers, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_TweenBrothers, Condition(function Trig_TweenBrothers_Conditions))
+    call TriggerAddAction(gg_trg_TweenBrothers, function Trig_TweenBrothers_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: TweenChange
+//===========================================================================
+function Trig_TweenChange_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A188'
+endfunction
+
+function Brothers takes nothing returns boolean
+    local integer id= GetUnitTypeId(GetFilterUnit())
+    return id == 'U02R' or id == 'U02S'
+endfunction
+
+function Trig_TweenChange_Actions takes nothing returns nothing
+    local unit u=  GetTriggerUnit()
+    local integer id= GetUnitTypeId(u)
+    local player p= GetOwningPlayer(u)
+    local group g= CreateGroup()
+    local boolexpr bex= Condition(function Brothers)
+    local unit u2
+    local real x= GetUnitX(u)
+    local real y= GetUnitY(u)
+    local integer lvl= GetUnitAbilityLevel(u, 'A188')
+    call GroupEnumUnitsOfPlayer(g, p, bex)
+    call GroupRemoveUnit(g, GetTriggerUnit())
+    set u2=FirstOfGroup(g)
+    if u2 != null then
+        call SetUnitPosition(u, GetUnitX(u2), GetUnitY(u2))
+        call SetUnitPosition(u2, x, y)
+        call SetUnitLifePercentBJ(u, ( GetUnitLifePercent(u) + 10 * lvl ))
+        call SetUnitLifePercentBJ(u2, ( GetUnitLifePercent(u2) + 10 * lvl ))
+    endif
+    
+    
+    
+    call DestroyGroup(g)
+    set g=null
+    call DestroyBoolExpr(bex)
+    set p=null
+    set bex=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_TweenChange takes nothing returns nothing
+    set gg_trg_TweenChange=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_TweenChange, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_TweenChange, Condition(function Trig_TweenChange_Conditions))
+    call TriggerAddAction(gg_trg_TweenChange, function Trig_TweenChange_Actions)
 endfunction
 
 
@@ -46700,6 +46777,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_StartSilitids()
     call InitTrig_ChoseLich()
     call InitTrig_ChoseUnits2()
+    call InitTrig_TweenBrothers()
+    call InitTrig_TweenChange()
     call InitTrig_StartBuildingSil()
     call InitTrig_CanselBuildingSil()
     call InitTrig_TrutenStartUpgrade()
