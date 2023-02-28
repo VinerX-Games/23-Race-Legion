@@ -2912,7 +2912,7 @@ STRING 480
 }
 
 STRING 481
-// Units: h01O (|cffffff00Озаренный|r Паладин ), Hotkey (Hotkey)
+// Units: h01O (|cffffff00Озаренный Паладин |r), Hotkey (Hotkey)
 {
 R
 }
@@ -3917,7 +3917,7 @@ STRING 646
 }
 
 STRING 647
-// Units: h01O (|cffffff00Озаренный|r Паладин ), EditorSuffix (Name - Editor Suffix)
+// Units: h01O (|cffffff00Озаренный Паладин |r), EditorSuffix (Name - Editor Suffix)
 {
 (дренеи)
 }
@@ -23051,7 +23051,7 @@ STRING 3819
 }
 
 STRING 3820
-// Units: h01O (|cffffff00Озаренный|r Паладин ), Casterupgradename (Caster Upgrade Names)
+// Units: h01O (|cffffff00Озаренный Паладин |r), Casterupgradename (Caster Upgrade Names)
 {
 Неофит,Адепт,Мастер
 }
@@ -68782,7 +68782,7 @@ STRING 11401
 }
 
 STRING 11402
-// Units: h01O (|cffffff00Озаренный|r Паладин ), Tip (Tooltip - Basic)
+// Units: h01O (|cffffff00Озаренный Паладин |r), Tip (Tooltip - Basic)
 {
 Обучить Дренея Палада (|cffffff00Озаренный|r)
 }
@@ -118027,6 +118027,12 @@ STRING 19483
 (Атака)(Древние боги)
 }
 
+STRING 19484
+// Units: h01O (|cffffff00Озаренный Паладин |r), Name (Name)
+{
+|cffffff00Озаренный Паладин |r
+}
+
 STRING 19485
 // Abilities: A0T9 (Лассо убийцы), Name (Name)
 {
@@ -136814,12 +136820,6 @@ STRING 22530
 // Abilities: A0WU (|cffd2b48cУдарная волна|r), Researchhotkey (Hotkey - Learn)
 {
 Q
-}
-
-STRING 22531
-// Units: h01O (|cffffff00Озаренный|r Паладин ), Name (Name)
-{
-|cffffff00Озаренный|r Паладин 
 }
 
 STRING 22532
