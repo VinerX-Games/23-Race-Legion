@@ -1552,6 +1552,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_BuidAltar= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -2515,6 +2516,8 @@ function ClearPlayer takes player p returns nothing
     set udg_UnitsCount[pi]=0
     call UpdateGraf(pi)
     call MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[pi] * 2 + 1], "0")
+    call SetPlayerStateBJ(Player(pi), PLAYER_STATE_RESOURCE_GOLD, 0)
+    call SetPlayerStateBJ(Player(pi), PLAYER_STATE_RESOURCE_LUMBER, 0)
 endfunction
 //***************************************************************************
 //*  CommonHash
@@ -7553,29 +7556,11 @@ function Trig_StolicaDead_Conditions takes nothing returns boolean
     return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups)
 endfunction
 
-
-function Trig_StolicaDead_Func003A takes nothing returns nothing
-    if IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) then
-        call SetUnitOwner(GetEnumUnit(), Player(PLAYER_NEUTRAL_AGGRESSIVE), true)
-    else
-        call KillUnit(GetEnumUnit())
-        call RemoveUnit(GetEnumUnit())
-    endif
-endfunction
-
 function Trig_StolicaDead_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerAbilityAvailableBJ(true, 'A0IQ', GetOwningPlayer(GetTriggerUnit()))
     call DisplayTextToForce(GetPlayersAll(), ( GetPlayerName(GetOwningPlayer(GetTriggerUnit())) + " - |cffff0000проиграл|r, его |cffd45e19столица |rуничтожена." ))
-    call ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetTriggerUnit())), function Trig_StolicaDead_Func003A)
-    
-    set income[pi]=0
-    set incomeW[pi]=0
-    set disincome[pi]=0
-    set logistic[pi]=0
-    set corruption[pi]=0
-    set balance[pi]=0
-    set additional[pi]=0
+    call ClearPlayer(Player(pi))
 endfunction
 
 //===========================================================================
@@ -11103,7 +11088,7 @@ function Trig_DeadAddCheck_Actions takes nothing returns nothing
 
     if not IsUnitInGroup(u, DeadGroup) then
         call GroupAddUnit(DeadGroup, u)
-        call TriggerRegisterUnitStateEvent(gg_trg_DeadRessurected, u, UNIT_STATE_LIFE, GREATER_THAN, 1)
+        call TriggerRegisterUnitStateEvent(gg_trg_DeadRessurected, u, UNIT_STATE_LIFE, GREATER_THAN, 0.4)
     endif
     set u=null
 endfunction
@@ -12966,6 +12951,7 @@ endfunction
 function Trig_Race_Nagi_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call CreateNUnitsAtLoc(5, 'nmpe', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    call SetPlayerTechResearchedSwap('R0FS', 1, GetOwningPlayer(GetTriggerUnit()))
     call RemoveUnit(GetSpellAbilityUnit())
     call RemoveLocation(udg_LocalPosition2)
 endfunction
@@ -13253,10 +13239,38 @@ function Trig_Race_Random_Func026C takes nothing returns boolean
     return true
 endfunction
 
+function Trig_Race_Random_Func027C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 24 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func028C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 25 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func029C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 26 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Race_Random_Func030C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 27 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_Race_Random_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call RemoveUnit(GetSpellAbilityUnit())
-    set udg_LocalInteger=GetRandomInt(1, 23)
+    set udg_LocalInteger=GetRandomInt(1, 27)
     if ( Trig_Race_Random_Func004C() ) then
         call CreateNUnitsAtLoc(5, 'h0G9', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
         call SetPlayerTechResearchedSwap('R001', 1, GetOwningPlayer(GetTriggerUnit()))
@@ -13271,7 +13285,6 @@ function Trig_Race_Random_Actions takes nothing returns nothing
     if ( Trig_Race_Random_Func006C() ) then
         call CreateNUnitsAtLoc(5, 'n030', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
         call SetPlayerTechResearchedSwap('R0A2', 1, GetOwningPlayer(GetTriggerUnit()))
-        call RemoveLocation(udg_LocalPosition2)
     else
     endif
     if ( Trig_Race_Random_Func007C() ) then
@@ -13381,7 +13394,27 @@ function Trig_Race_Random_Actions takes nothing returns nothing
     else
     endif
     if ( Trig_Race_Random_Func026C() ) then
+        call SetPlayerTechResearchedSwap('R0FX', 1, GetOwningPlayer(GetTriggerUnit()))
         call CreateNUnitsAtLoc(5, 'h0IT', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    else
+    endif
+    if ( Trig_Race_Random_Func027C() ) then
+        call CreateNUnitsAtLoc(5, 'nmpe', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R0FS', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_Race_Random_Func028C() ) then
+        call CreateNUnitsAtLoc(6, 'ewsp', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R0G4', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_Race_Random_Func029C() ) then
+        call CreateNUnitsAtLoc(5, 'h0J5', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R0G3', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_Race_Random_Func030C() ) then
+        call CreateNUnitsAtLoc(5, 'o03W', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     else
     endif
     call RemoveLocation(udg_LocalPosition2)
@@ -13559,27 +13592,7 @@ endfunction
 //===========================================================================
 // Trigger: Leave Ot
 //===========================================================================
-function Trig_Leave_Ot_Func003002 takes nothing returns boolean
-    return ( GetOwningPlayer(GetFilterUnit()) == GetTriggerPlayer() )
-endfunction
-
-function Trig_Leave_Ot_Func005Func001C takes nothing returns boolean
-    if ( not ( IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Leave_Ot_Func005A takes nothing returns nothing
-    if ( Trig_Leave_Ot_Func005Func001C() ) then
-        call SetUnitOwner(GetEnumUnit(), Player(PLAYER_NEUTRAL_AGGRESSIVE), true)
-    else
-        call KillUnit(GetEnumUnit())
-        call RemoveUnit(GetEnumUnit())
-    endif
-endfunction
-
-function Trig_Leave_Ot_Func007C takes nothing returns boolean
+function Trig_Leave_Ot_Func004C takes nothing returns boolean
     if ( not ( IsTriggerEnabled(gg_trg_FeodalDead2) == true ) ) then
         return false
     endif
@@ -13589,11 +13602,8 @@ endfunction
 function Trig_Leave_Ot_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(GetTriggerPlayer())
     call DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) + "|cffff0000 - покинул игру!|r" ))
-    set udg_Boolexpr=Condition(function Trig_Leave_Ot_Func003002)
-    call GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
-    call ForGroupBJ(udg_LocalOtrad2, function Trig_Leave_Ot_Func005A)
-    call GroupClear(udg_LocalOtrad2)
-    if ( Trig_Leave_Ot_Func007C() ) then
+    call ClearPlayer(Player(pi))
+    if ( Trig_Leave_Ot_Func004C() ) then
         call ForForce(Vassals[pi], function Freedom)
     else
     endif
@@ -17849,6 +17859,9 @@ function Trig_Abordach_D_or_Ot_Func018Func017Func009Func001C takes nothing retur
     if ( not ( IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO) == true ) ) then
         return false
     endif
+    if ( not ( IsUnitLoadedBJ(GetEnumUnit()) == true ) ) then
+        return false
+    endif
     return true
 endfunction
 
@@ -17914,8 +17927,18 @@ function Trig_Abordach_D_or_Ot_Func018Func021Func011002 takes nothing returns bo
     return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true )
 endfunction
 
+function Trig_Abordach_D_or_Ot_Func018Func021Func015Func001C takes nothing returns boolean
+    if ( not ( IsUnitLoadedBJ(GetEnumUnit()) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_Abordach_D_or_Ot_Func018Func021Func015A takes nothing returns nothing
-    call KillUnit(GetEnumUnit())
+    if ( Trig_Abordach_D_or_Ot_Func018Func021Func015Func001C() ) then
+        call KillUnit(GetEnumUnit())
+    else
+    endif
 endfunction
 
 function Trig_Abordach_D_or_Ot_Func018Func021C takes nothing returns boolean
@@ -18284,7 +18307,7 @@ function Trig_Manabomba2_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call UnitDamagePointLoc(GetTriggerUnit(), 0, 200.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 200.00, udg_LocalPosition3, 65.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -18293,7 +18316,7 @@ function Trig_Manabomba2_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call UnitDamagePointLoc(GetTriggerUnit(), 0, 235.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 235.00, udg_LocalPosition3, 65.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -18302,7 +18325,7 @@ function Trig_Manabomba2_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call UnitDamagePointLoc(GetTriggerUnit(), 0, 260.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 260.00, udg_LocalPosition3, 65.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -18311,7 +18334,7 @@ function Trig_Manabomba2_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call UnitDamagePointLoc(GetTriggerUnit(), 0, 260.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 260.00, udg_LocalPosition3, 65.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -18320,7 +18343,7 @@ function Trig_Manabomba2_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call UnitDamagePointLoc(GetTriggerUnit(), 0, 275.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 275.00, udg_LocalPosition3, 65.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -18329,12 +18352,12 @@ function Trig_Manabomba2_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=3
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call UnitDamagePointLoc(GetTriggerUnit(), 0, 700.00, udg_LocalPosition3, 80.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 700.00, udg_LocalPosition3, 100.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
     set udg_LocalPosition3=p
-    call UnitDamagePointLoc(GetTriggerUnit(), 0, 700.00, udg_LocalPosition3, 350.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+    call UnitDamagePointLoc(GetTriggerUnit(), 0, 700.00, udg_LocalPosition3, 400.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
     call UnitRemoveAbilityBJ('A0TS', GetTriggerUnit())
     call RemoveLocation(udg_LocalPosition3)
     set udg_LocalEffect=e
@@ -18396,7 +18419,7 @@ function Trig_ManabombaDead_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call UnitDamagePointLoc(GetTriggerUnit(), 0, 200.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 200.00, udg_LocalPosition3, 65.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -18405,7 +18428,7 @@ function Trig_ManabombaDead_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call UnitDamagePointLoc(GetTriggerUnit(), 0, 235.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 235.00, udg_LocalPosition3, 65.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -18414,7 +18437,7 @@ function Trig_ManabombaDead_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call UnitDamagePointLoc(GetTriggerUnit(), 0, 260.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 260.00, udg_LocalPosition3, 65.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -18423,7 +18446,7 @@ function Trig_ManabombaDead_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call UnitDamagePointLoc(GetTriggerUnit(), 0, 260.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 260.00, udg_LocalPosition3, 65.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -18432,7 +18455,7 @@ function Trig_ManabombaDead_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=2
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call UnitDamagePointLoc(GetTriggerUnit(), 0, 275.00, udg_LocalPosition3, 45.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 275.00, udg_LocalPosition3, 65.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -18441,7 +18464,7 @@ function Trig_ManabombaDead_Actions takes nothing returns nothing
     set bj_forLoopAIndexEnd=3
     loop
         exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
-        call UnitDamagePointLoc(GetTriggerUnit(), 0, 700.00, udg_LocalPosition3, 80.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
+        call UnitDamagePointLoc(GetTriggerUnit(), 0, 700.00, udg_LocalPosition3, 100.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC)
         call TriggerSleepAction(0.25)
         set bj_forLoopAIndex=bj_forLoopAIndex + 1
     endloop
@@ -20542,9 +20565,29 @@ function Trig_BegYel_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_BegYel_Func001C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R0GF', GetOwningPlayer(GetTriggerUnit())) != 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_BegYel_Func002C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R0GG', GetOwningPlayer(GetTriggerUnit())) != 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_BegYel_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0GF', 0, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('R0GG', 0, GetOwningPlayer(GetTriggerUnit()))
+    if ( Trig_BegYel_Func001C() ) then
+        call SetPlayerTechMaxAllowedSwap('R0GG', 0, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_BegYel_Func002C() ) then
+        call SetPlayerTechMaxAllowedSwap('R0GF', 0, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
 endfunction
 
 //===========================================================================
@@ -20565,9 +20608,29 @@ function Trig_CanYel_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_CanYel_Func001C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R0GF', GetOwningPlayer(GetTriggerUnit())) != 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_CanYel_Func002C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R0GG', GetOwningPlayer(GetTriggerUnit())) != 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_CanYel_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0GF', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('R0GG', 1, GetOwningPlayer(GetTriggerUnit()))
+    if ( Trig_CanYel_Func001C() ) then
+        call SetPlayerTechMaxAllowedSwap('R0GG', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_CanYel_Func002C() ) then
+        call SetPlayerTechMaxAllowedSwap('R0GF', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
 endfunction
 
 //===========================================================================
@@ -20610,9 +20673,29 @@ function Trig_BegRed_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_BegRed_Func001C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R0GF', GetOwningPlayer(GetTriggerUnit())) != 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_BegRed_Func002C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R0GH', GetOwningPlayer(GetTriggerUnit())) != 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_BegRed_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0GH', 0, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('R0GF', 0, GetOwningPlayer(GetTriggerUnit()))
+    if ( Trig_BegRed_Func001C() ) then
+        call SetPlayerTechMaxAllowedSwap('R0GH', 0, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_BegRed_Func002C() ) then
+        call SetPlayerTechMaxAllowedSwap('R0GF', 0, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
 endfunction
 
 //===========================================================================
@@ -20633,9 +20716,29 @@ function Trig_CanRed_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_CanRed_Func001C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R0GF', GetOwningPlayer(GetTriggerUnit())) != 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_CanRed_Func002C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R0GH', GetOwningPlayer(GetTriggerUnit())) != 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_CanRed_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0GH', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('R0GF', 1, GetOwningPlayer(GetTriggerUnit()))
+    if ( Trig_CanRed_Func001C() ) then
+        call SetPlayerTechMaxAllowedSwap('R0GH', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_CanRed_Func002C() ) then
+        call SetPlayerTechMaxAllowedSwap('R0GF', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
 endfunction
 
 //===========================================================================
@@ -20678,9 +20781,29 @@ function Trig_BegBlue_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_BegBlue_Func001C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R0GG', GetOwningPlayer(GetTriggerUnit())) != 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_BegBlue_Func002C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R0GH', GetOwningPlayer(GetTriggerUnit())) != 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_BegBlue_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0GH', 0, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('R0GG', 0, GetOwningPlayer(GetTriggerUnit()))
+    if ( Trig_BegBlue_Func001C() ) then
+        call SetPlayerTechMaxAllowedSwap('R0GH', 0, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_BegBlue_Func002C() ) then
+        call SetPlayerTechMaxAllowedSwap('R0GG', 0, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
 endfunction
 
 //===========================================================================
@@ -20701,9 +20824,29 @@ function Trig_CanBlue_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_CanBlue_Func001C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R0GG', GetOwningPlayer(GetTriggerUnit())) != 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_CanBlue_Func002C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R0GH', GetOwningPlayer(GetTriggerUnit())) != 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_CanBlue_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0GH', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechMaxAllowedSwap('R0GG', 1, GetOwningPlayer(GetTriggerUnit()))
+    if ( Trig_CanBlue_Func001C() ) then
+        call SetPlayerTechMaxAllowedSwap('R0GH', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
+    if ( Trig_CanBlue_Func002C() ) then
+        call SetPlayerTechMaxAllowedSwap('R0GG', 1, GetOwningPlayer(GetTriggerUnit()))
+    else
+    endif
 endfunction
 
 //===========================================================================
@@ -38357,6 +38500,29 @@ function InitTrig_arm2_Copy_O takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: BuidAltar
+//===========================================================================
+function Trig_BuidAltar_Conditions takes nothing returns boolean
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h0CV' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_BuidAltar_Actions takes nothing returns nothing
+    call UnitAddAbilityBJ('Asud', GetTriggerUnit())
+    call AddUnitToStockBJ('h07A', GetTriggerUnit(), 1, 1)
+endfunction
+
+//===========================================================================
+function InitTrig_BuidAltar takes nothing returns nothing
+    set gg_trg_BuidAltar=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_BuidAltar, EVENT_PLAYER_UNIT_UPGRADE_FINISH)
+    call TriggerAddCondition(gg_trg_BuidAltar, Condition(function Trig_BuidAltar_Conditions))
+    call TriggerAddAction(gg_trg_BuidAltar, function Trig_BuidAltar_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: Auto set Copy O
 //===========================================================================
 function Trig_Auto_set_Copy_O_Conditions takes nothing returns boolean
@@ -46951,6 +47117,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_flot2_Copy_O()
     call InitTrig_arm1_Copy_O()
     call InitTrig_arm2_Copy_O()
+    call InitTrig_BuidAltar()
     call InitTrig_Auto_set_Copy_O()
     call InitTrig_Red_Orden()
     call InitTrig_Red_Orden_cansel()
