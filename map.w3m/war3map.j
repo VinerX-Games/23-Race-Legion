@@ -1178,6 +1178,7 @@ trigger gg_trg_flot2_Copy_O= null
 trigger gg_trg_arm1_Copy_O= null
 trigger gg_trg_arm2_Copy_O= null
 trigger gg_trg_BuidT1= null
+trigger gg_trg_BuidAltar= null
 trigger gg_trg_BuidAny= null
 trigger gg_trg_Auto_set_Copy_O= null
 trigger gg_trg_Red_Orden= null
@@ -1552,7 +1553,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_BuidAltar= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
