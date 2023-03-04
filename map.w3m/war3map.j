@@ -5457,6 +5457,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n04X', - 3703.7, - 30054.3, 290.235, 'n04X')
     set u=BlzCreateUnitWithSkin(p, 'n04Y', - 3839.2, - 30069.7, 296.680, 'n04Y')
     set u=BlzCreateUnitWithSkin(p, 'h0KG', - 5398.1, - 28963.6, 210.766, 'h0KG')
+    set u=BlzCreateUnitWithSkin(p, 'hmil', - 6559.5, - 29898.9, 245.519, 'hmil')
     set u=BlzCreateUnitWithSkin(p, 'h0KP', - 6489.5, - 30480.2, 320.528, 'h0KP')
     set u=BlzCreateUnitWithSkin(p, 'h0LU', - 5747.4, - 29799.1, 264.303, 'h0LU')
     set u=BlzCreateUnitWithSkin(p, 'h0LH', - 584.8, - 25986.1, 273.098, 'h0LH')
@@ -5936,7 +5937,6 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     set gg_unit_n00W_0446=BlzCreateUnitWithSkin(p, 'n00W', 22745.3, - 21938.2, 314.133, 'n00W')
     call WaygateSetDestination(gg_unit_n00W_0446, GetRectCenterX(gg_rct_Region_013), GetRectCenterY(gg_rct_Region_013))
     call WaygateActivate(gg_unit_n00W_0446, true)
-    set u=BlzCreateUnitWithSkin(p, 'h0EV', - 5504.0, - 29952.0, 270.000, 'h0EV')
     set gg_unit_n00W_0589=BlzCreateUnitWithSkin(p, 'n00W', 16831.5, 9698.2, 20.279, 'n00W')
     call WaygateSetDestination(gg_unit_n00W_0589, GetRectCenterX(gg_rct_Region_012), GetRectCenterY(gg_rct_Region_012))
     call WaygateActivate(gg_unit_n00W_0589, true)
@@ -22265,20 +22265,20 @@ function AT3Count takes player p returns nothing
             set b=b + 1
             exitwhen b >= i
     endloop
-    
-    //Лордеронец
-    set i=1
-    set b=1
-    
-    loop
-        set a[0]=a[0] + 1
-        set a[a[0]]='h0KF'
-        
-        set b=b + 1
-        exitwhen b >= i
-    endloop
-    
-    
+//    
+//    // Паладин
+//    set i = 1 
+//    set b = 1
+//    
+//    loop
+//        set a[0] = a[0] + 1
+//        set a[ a[0] ] = 'h0KF'
+//        
+//        set b = b + 1
+//        exitwhen b >= i
+//    endloop
+//    
+//    
 //    
 //    //2 юнит Черной гора
 //    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
