@@ -5458,21 +5458,22 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n04Y', - 3839.2, - 30069.7, 296.680, 'n04Y')
     set u=BlzCreateUnitWithSkin(p, 'h0KG', - 5398.1, - 28963.6, 210.766, 'h0KG')
     set u=BlzCreateUnitWithSkin(p, 'h0KP', - 6489.5, - 30480.2, 320.528, 'h0KP')
-    set u=BlzCreateUnitWithSkin(p, 'h0KC', - 6338.4, - 29136.0, 211.625, 'h0KC')
-    set u=BlzCreateUnitWithSkin(p, 'h0LH', - 584.8, - 25986.1, - 86.902, 'h0LH')
+    set u=BlzCreateUnitWithSkin(p, 'h0LU', - 5747.4, - 29799.1, 264.303, 'h0LU')
+    set u=BlzCreateUnitWithSkin(p, 'h0LH', - 584.8, - 25986.1, 273.098, 'h0LH')
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
-    set u=BlzCreateUnitWithSkin(p, 'h0LI', - 528.5, - 25973.1, - 87.188, 'h0LI')
-    set u=BlzCreateUnitWithSkin(p, 'h0LJ', - 188.5, - 25985.2, - 86.045, 'h0LJ')
-    set u=BlzCreateUnitWithSkin(p, 'h0LK', - 655.1, - 25998.6, - 71.400, 'h0LK')
-    set u=BlzCreateUnitWithSkin(p, 'h0LL', - 128.6, - 25975.4, - 86.631, 'h0LL')
+    set u=BlzCreateUnitWithSkin(p, 'h0LI', - 528.5, - 25973.1, 272.812, 'h0LI')
+    set u=BlzCreateUnitWithSkin(p, 'h0LJ', - 188.5, - 25985.2, 273.955, 'h0LJ')
+    set u=BlzCreateUnitWithSkin(p, 'h0LK', - 655.1, - 25998.6, 288.600, 'h0LK')
+    set u=BlzCreateUnitWithSkin(p, 'h0LL', - 128.6, - 25975.4, 273.370, 'h0LL')
     set u=BlzCreateUnitWithSkin(p, 'h0LN', - 64.9, - 25983.0, 269.751, 'h0LN')
-    set u=BlzCreateUnitWithSkin(p, 'h0LO', - 897.7, - 26043.2, - 80.618, 'h0LO')
-    set u=BlzCreateUnitWithSkin(p, 'h0LP', - 326.6, - 25996.7, - 86.541, 'h0LP')
+    set u=BlzCreateUnitWithSkin(p, 'h0LO', - 897.7, - 26043.2, 279.382, 'h0LO')
+    set u=BlzCreateUnitWithSkin(p, 'h0LP', - 326.6, - 25996.7, 273.459, 'h0LP')
     set u=BlzCreateUnitWithSkin(p, 'h0LQ', - 803.5, - 26024.0, 286.510, 'h0LQ')
-    set u=BlzCreateUnitWithSkin(p, 'h0LR', - 464.1, - 25985.1, - 80.216, 'h0LR')
+    set u=BlzCreateUnitWithSkin(p, 'h0LR', - 464.1, - 25985.1, 279.784, 'h0LR')
     set u=BlzCreateUnitWithSkin(p, 'h0LS', 158.0, - 25966.5, 258.254, 'h0LS')
     set u=BlzCreateUnitWithSkin(p, 'h0LT', 252.5, - 25962.6, 268.856, 'h0LT')
-    set u=BlzCreateUnitWithSkin(p, 'h0LV', - 389.5, - 25993.9, - 89.693, 'h0LV')
+    set u=BlzCreateUnitWithSkin(p, 'h0LW', - 6424.3, - 29137.2, 281.938, 'h0LW')
+    set u=BlzCreateUnitWithSkin(p, 'h0LV', - 389.5, - 25993.9, 270.307, 'h0LV')
 endfunction
 
 //===========================================================================
@@ -11101,7 +11102,8 @@ function Trig_DeadAddCheck_Actions takes nothing returns nothing
 
     if not IsUnitInGroup(u, DeadGroup) then
         call GroupAddUnit(DeadGroup, u)
-        call TriggerRegisterUnitStateEvent(gg_trg_DeadRessurected, u, UNIT_STATE_LIFE, GREATER_THAN, 0.4)
+        call SetUnitLifeBJ(u, 0)
+        call TriggerRegisterUnitStateEvent(gg_trg_DeadRessurected, u, UNIT_STATE_LIFE, GREATER_THAN, 0)
     endif
     set u=null
 endfunction
@@ -13546,6 +13548,7 @@ function Trig_Page3_O_Actions takes nothing returns nothing
     call UnitAddAbilityBJ('A155', GetTriggerUnit())
     call UnitAddAbilityBJ('A12Q', GetTriggerUnit())
     call UnitAddAbilityBJ('A17N', GetTriggerUnit())
+    call UnitAddAbilityBJ('A02A', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QQ', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0QN', GetTriggerUnit())
     call UnitRemoveAbilityBJ('A0HO', GetTriggerUnit())
@@ -23368,19 +23371,19 @@ function AE1Count takes player p returns nothing
             set b=b + 1
             exitwhen b >= i
     endloop
-//    
-//    //Лордеронец
-//    set i = 1 
-//    set b = 1
-//    
-//    loop
-//        set a[0] = a[0] + 1
-//        set a[ a[0] ] = 'h0KR'
-//        
-//        set b = b + 1
-//        exitwhen b >= i
-//    endloop
-//    
+    
+    //Cannon
+    set i=1
+    set b=1
+    
+    loop
+        set a[0]=a[0] + 1
+        set a[a[0]]='h0KP'
+        
+        set b=b + 1
+        exitwhen b >= i
+    endloop
+    
     
 //    
 //    //2 юнит Черной гора
@@ -23563,12 +23566,12 @@ function AE2Count takes player p returns nothing
 //    endif
     
     //Long Containment
-    call SaveInteger(CommonHash, pi, StringHash("AE2_0"), a[0])
+    call SaveInteger(CommonHash, pi, StringHash("AEE2_0"), a[0])
     set i=1
     loop
         
         
-        call SaveInteger(CommonHash, pi, StringHash("AE2") + i, a[i])
+        call SaveInteger(CommonHash, pi, StringHash("AEE2") + i, a[i])
         set i=i + 1
         
         exitwhen i > a[0]
@@ -23591,9 +23594,9 @@ function Trig_AE2_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(p)
     
     
-    set i=LoadInteger(CommonHash, pi, StringHash("AE2_0"))
+    set i=LoadInteger(CommonHash, pi, StringHash("AEE2_0"))
     set i=GetRandomInt(1, i)
-    set b=LoadInteger(CommonHash, pi, ( StringHash("AE2") + i ))
+    set b=LoadInteger(CommonHash, pi, ( StringHash("AEE2") + i ))
     
     set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -23603,7 +23606,7 @@ function Trig_AE2_Actions takes nothing returns nothing
     
     
     set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
-    call UnitAddAbility(u, 'A17P')
+    //call UnitAddAbility(u,'A17P')
     call IssuePointOrderLoc(u, "attack", l)
     call RemoveLocation(l)
     set p=null
