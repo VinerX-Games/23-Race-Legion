@@ -5413,7 +5413,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'hwat', - 5616.0, - 29213.1, 283.632, 'hwat')
     set u=BlzCreateUnitWithSkin(p, 'h0K9', - 5799.9, - 29433.0, 128.171, 'h0K9')
     set u=BlzCreateUnitWithSkin(p, 'h0KA', - 6432.7, - 29424.6, 301.364, 'h0KA')
-    set u=BlzCreateUnitWithSkin(p, 'h0KC', - 6245.4, - 29051.5, 264.829, 'h0KC')
+    set u=BlzCreateUnitWithSkin(p, 'h0KC', - 6245.4, - 29051.5, 264.830, 'h0KC')
     set u=BlzCreateUnitWithSkin(p, 'h0KB', - 6116.3, - 29442.7, 289.195, 'h0KB')
     set u=BlzCreateUnitWithSkin(p, 'h0KD', - 6502.0, - 29062.7, 274.614, 'h0KD')
     set u=BlzCreateUnitWithSkin(p, 'h0KE', - 5958.3, - 29063.9, 282.217, 'h0KE')
@@ -21936,7 +21936,7 @@ function Trig_AllyOn_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_Defend)
     call EnableTrigger(gg_trg_PaladinHpSpell)
     call EnableTrigger(gg_trg_PaladinHpSpell2)
-    
+    call EnableTrigger(gg_trg_MagicUsk)
     
 //    call EnableTrigger( gg_trg_K1T2 )
 //    call EnableTrigger( gg_trg_K1T2b )
