@@ -25,12 +25,12 @@ framehandle FontInterface
 //endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE___SpellHero='A06P'
-constant integer SpellSleepAOE___SpellCast='A06O'
-constant string SpellSleepAOE___SpellOrder="sleep"
-constant integer SpellSleepAOE___DummyID='u000'
-constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE___DummyUnit
+constant integer SpellSleepAOE__SpellHero='A06P'
+constant integer SpellSleepAOE__SpellCast='A06O'
+constant string SpellSleepAOE__SpellOrder="sleep"
+constant integer SpellSleepAOE__DummyID='u000'
+constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE__DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -1553,6 +1553,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_Upgrade= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1832,7 +1833,7 @@ endfunction
 //library Example ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE___getRange takes integer level returns integer
+    function SpellSleepAOE__getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1840,33 +1841,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
-            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
+            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
+            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE___anon__0 takes nothing returns boolean
-            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE__anon__0 takes nothing returns boolean
+            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE___anon__2 takes nothing returns boolean
+            function SpellSleepAOE__anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE___anon__1 takes nothing returns nothing
+        function SpellSleepAOE__anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1874,19 +1875,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE___onInit takes nothing returns nothing
+    function SpellSleepAOE__onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
+        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
         set t=null
     endfunction
 
@@ -9991,6 +9992,8 @@ function Trig_FarmStart_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('otrb', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('u02E', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h0JD', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('hhou', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('o036', udg_LocalInteger, udg_LocalPlayer)
     set udg_LocalInteger=20
     call SetPlayerTechMaxAllowedSwap('h077', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('u019', udg_LocalInteger, udg_LocalPlayer)
@@ -10082,6 +10085,12 @@ function Trig_FarmTier2_Func001Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetTriggerUnit()) == 'h0JQ' ) ) then
         return true
     endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hkee' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'o03D' ) ) then
+        return true
+    endif
     return false
 endfunction
 
@@ -10106,6 +10115,7 @@ function Trig_FarmTier2_Actions takes nothing returns nothing
     set udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     set udg_TierLevel[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=2
     call DisplayTextToForce(GetForceOfPlayer(udg_LocalPlayer), "TRIGSTR_1960")
+    call SetPlayerTechResearchedSwap('R0HP', 1, udg_LocalPlayer)
     set udg_LocalInteger=12
     call SetPlayerTechMaxAllowedSwap('h0HU', udg_LocalInteger, udg_LocalPlayer)
     set udg_LocalInteger=30
@@ -10131,6 +10141,9 @@ function Trig_FarmTier2_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('otrb', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('u02E', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h0JD', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('o036', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('hhou', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('o036', udg_LocalInteger, udg_LocalPlayer)
     set udg_LocalInteger=40
     call SetPlayerTechMaxAllowedSwap('h077', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('u019', udg_LocalInteger, udg_LocalPlayer)
@@ -10239,6 +10252,8 @@ function Trig_FarmTier2_Res_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('otrb', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('u02E', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h0JD', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('hhou', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('o036', udg_LocalInteger, udg_LocalPlayer)
     set udg_LocalInteger=40
     call SetPlayerTechMaxAllowedSwap('u019', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h077', udg_LocalInteger, udg_LocalPlayer)
@@ -10316,10 +10331,16 @@ function Trig_FarmTier3_Func002Func002C takes nothing returns boolean
     if ( ( GetUnitTypeId(GetTriggerUnit()) == 'ofrt' ) ) then
         return true
     endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'o03E' ) ) then
+        return true
+    endif
     if ( ( GetUnitTypeId(GetTriggerUnit()) == 'h0I8' ) ) then
         return true
     endif
     if ( ( GetUnitTypeId(GetTriggerUnit()) == 'h0JL' ) ) then
+        return true
+    endif
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'hcas' ) ) then
         return true
     endif
     return false
@@ -10348,6 +10369,7 @@ function Trig_FarmTier3_Actions takes nothing returns nothing
     call DisplayTextToForce(GetForceOfPlayer(udg_LocalPlayer), "TRIGSTR_2384")
     set udg_LocalInteger=12
     call SetPlayerTechMaxAllowedSwap('h0HU', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechResearchedSwap('R0HP', 2, udg_LocalPlayer)
     set udg_LocalInteger=45
     call SetPlayerTechMaxAllowedSwap('h0H2', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h05Y', udg_LocalInteger, udg_LocalPlayer)
@@ -10371,6 +10393,8 @@ function Trig_FarmTier3_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('otrb', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('u02E', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h0JD', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('hhou', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('o036', udg_LocalInteger, udg_LocalPlayer)
     set udg_LocalInteger=60
     call SetPlayerTechMaxAllowedSwap('u019', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h077', udg_LocalInteger, udg_LocalPlayer)
@@ -10479,6 +10503,8 @@ function Trig_FarmTier3_Res_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('otrb', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('u02E', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h0JD', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('hhou', udg_LocalInteger, udg_LocalPlayer)
+    call SetPlayerTechMaxAllowedSwap('o036', udg_LocalInteger, udg_LocalPlayer)
     set udg_LocalInteger=60
     call SetPlayerTechMaxAllowedSwap('u019', udg_LocalInteger, udg_LocalPlayer)
     call SetPlayerTechMaxAllowedSwap('h077', udg_LocalInteger, udg_LocalPlayer)
@@ -37044,7 +37070,7 @@ endfunction
 function Trig_AutoChance_Actions takes nothing returns nothing
     set udg_LocalInteger=GetRandomInt(1, 200)
     if ( Trig_AutoChance_Func002C() ) then
-        call AdjustPlayerStateBJ(150, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
+        call AdjustPlayerStateBJ(225, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
         call AdjustPlayerStateBJ(50, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
         call IssueImmediateOrderBJ(GetAttacker(), "berserk")
     else
@@ -37090,7 +37116,7 @@ endfunction
 function Trig_AutoChance_2_Actions takes nothing returns nothing
     set udg_LocalInteger=GetRandomInt(1, 200)
     if ( Trig_AutoChance_2_Func003C() ) then
-        call AdjustPlayerStateBJ(200, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
+        call AdjustPlayerStateBJ(300, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
         call AdjustPlayerStateBJ(75, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
         call IssueImmediateOrderBJ(GetAttacker(), "berserk")
     else
@@ -37126,6 +37152,27 @@ function Trig_AutoChance_3_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_AutoChance_3_Func002Func001C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetAttacker()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_AutoChance_3_Func002Func002C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetAttacker()) == 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_AutoChance_3_Func002Func003C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetAttacker()) == 3 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_AutoChance_3_Func002C takes nothing returns boolean
     if ( not ( udg_LocalInteger <= ( GetUnitAbilityLevelSwapped('A00M', GetAttacker()) * 1 ) ) ) then
         return false
@@ -37136,8 +37183,21 @@ endfunction
 function Trig_AutoChance_3_Actions takes nothing returns nothing
     set udg_LocalInteger=GetRandomInt(1, 200)
     if ( Trig_AutoChance_3_Func002C() ) then
-        call AdjustPlayerStateBJ(250, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
-        call AdjustPlayerStateBJ(100, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
+        if ( Trig_AutoChance_3_Func002Func001C() ) then
+            call AdjustPlayerStateBJ(800, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
+            call AdjustPlayerStateBJ(350, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
+        else
+        endif
+        if ( Trig_AutoChance_3_Func002Func002C() ) then
+            call AdjustPlayerStateBJ(550, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
+            call AdjustPlayerStateBJ(250, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
+        else
+        endif
+        if ( Trig_AutoChance_3_Func002Func003C() ) then
+            call AdjustPlayerStateBJ(250, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
+            call AdjustPlayerStateBJ(100, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
+        else
+        endif
         call IssueImmediateOrderBJ(GetAttacker(), "berserk")
     else
     endif
@@ -37825,6 +37885,61 @@ function InitTrig_RobberyTrain takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_RobberyTrain, EVENT_PLAYER_UNIT_TRAIN_FINISH)
     call TriggerAddCondition(gg_trg_RobberyTrain, Condition(function Trig_RobberyTrain_Conditions))
     call TriggerAddAction(gg_trg_RobberyTrain, function Trig_RobberyTrain_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Upgrade
+//===========================================================================
+function Trig_Upgrade_Conditions takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A00M', GetTriggerUnit()) == 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Upgrade_Func002C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Upgrade_Func003C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Upgrade_Func004C takes nothing returns boolean
+    if ( not ( GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetTriggerUnit())) == 4 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Upgrade_Actions takes nothing returns nothing
+    if ( Trig_Upgrade_Func002C() ) then
+        call SetUnitAbilityLevelSwapped('A00M', GetTrainedUnit(), 2)
+    else
+    endif
+    if ( Trig_Upgrade_Func003C() ) then
+        call SetUnitAbilityLevelSwapped('A00M', GetTrainedUnit(), 3)
+    else
+    endif
+    if ( Trig_Upgrade_Func004C() ) then
+        call SetUnitAbilityLevelSwapped('A00M', GetTrainedUnit(), 4)
+    else
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_Upgrade takes nothing returns nothing
+    set gg_trg_Upgrade=CreateTrigger()
+    call DisableTrigger(gg_trg_Upgrade)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    call TriggerAddCondition(gg_trg_Upgrade, Condition(function Trig_Upgrade_Conditions))
+    call TriggerAddAction(gg_trg_Upgrade, function Trig_Upgrade_Actions)
 endfunction
 
 //===========================================================================
@@ -47109,6 +47224,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_AutoShield()
     call InitTrig_ResearhRobbery()
     call InitTrig_RobberyTrain()
+    call InitTrig_Upgrade()
     call InitTrig_StartNight()
     call InitTrig_KrugBeg()
     call InitTrig_KrugCan()
@@ -47739,7 +47855,7 @@ function main takes nothing returns nothing
     call InitBlizzard()
 
 call ExecuteFunc("init")
-call ExecuteFunc("SpellSleepAOE___onInit")
+call ExecuteFunc("SpellSleepAOE__onInit")
 
     call InitGlobals()
     call InitCustomTriggers()
