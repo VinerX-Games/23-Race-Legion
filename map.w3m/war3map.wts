@@ -25051,7 +25051,7 @@ STRING 4152
 }
 
 STRING 4153
-// Units: h0HU (|cfff08080рынок|r), Hotkey (Hotkey)
+// Units: h0HU (|cfff08080Рынок|r), Hotkey (Hotkey)
 {
 D
 }
@@ -121603,21 +121603,9 @@ STRING 20078
 }
 
 STRING 20079
-// Abilities: A00M (Грабеж), Ubertip (Tooltip - Normal - Extended)
+// Units: h0HU (|cfff08080Рынок|r), Name (Name)
 {
-Нанося урон врагам, этот воин добывает ресурсы.
-}
-
-STRING 20080
-// Abilities: A00M (Грабеж), Ubertip (Tooltip - Normal - Extended)
-{
-Нанося урон врагам, этот воин добывает ресурсы.
-}
-
-STRING 20081
-// Abilities: A00M (Грабеж), Ubertip (Tooltip - Normal - Extended)
-{
-Нанося урон врагам, этот воин добывает ресурсы.
+|cfff08080Рынок|r
 }
 
 STRING 20082
@@ -127577,7 +127565,7 @@ STRING 21053
 }
 
 STRING 21054
-// Units: h0HU (|cfff08080рынок|r), EditorSuffix (Name - Editor Suffix)
+// Units: h0HU (|cfff08080Рынок|r), EditorSuffix (Name - Editor Suffix)
 {
 (Стромгард)
 }
@@ -127795,7 +127783,7 @@ STRING 21089
 }
 
 STRING 21090
-// Units: h0HU (|cfff08080рынок|r), Ubertip (Tooltip - Extended)
+// Units: h0HU (|cfff08080Рынок|r), Ubertip (Tooltip - Extended)
 {
 |cff7dc87dВремя строительства:|r |cffaaf0aa35 сек.|r|n|nПредоставляет припасы, увеличивая максимальную количество инкома.
 
@@ -127956,12 +127944,6 @@ STRING 21116
 // Abilities: A0ZT (|cfff08080Казначеский талант|r), Researchtip (Tooltip - Learn)
 {
 |cfff08080Казначеский талант|r
-}
-
-STRING 21117
-// Units: h0HU (|cfff08080рынок|r), Name (Name)
-{
-|cfff08080рынок|r
 }
 
 STRING 21118
@@ -129119,7 +129101,7 @@ STRING 21308
 }
 
 STRING 21309
-// Units: h0HU (|cfff08080рынок|r), Tip (Tooltip - Basic)
+// Units: h0HU (|cfff08080Рынок|r), Tip (Tooltip - Basic)
 {
 Построить |cfff08080Рынок|r
 }
@@ -150701,13 +150683,13 @@ STRING 24807
 }
 
 STRING 24808
-// Abilities: A18M (|cff7878ffЗачарованное оружие), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A108 (Передела), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
 
 STRING 24809
-// Abilities: A18P (|cff7878ffКатапультирование), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10A (Магическая стойкость), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
@@ -151423,7 +151405,7 @@ STRING 24925
 }
 
 STRING 24926
-// Abilities: A108 (Передела), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A10A (Магическая стойкость), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
@@ -152191,7 +152173,7 @@ STRING 25052
 }
 
 STRING 25053
-// Abilities: A10A (Магическая стойкость), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A122 (|cff9370dbКража будущего|r), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
@@ -153683,7 +153665,7 @@ STRING 25295
 }
 
 STRING 25296
-// Abilities: A10A (Магическая стойкость), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A122 (|cff9370dbКража будущего|r), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
@@ -153701,7 +153683,7 @@ STRING 25298
 }
 
 STRING 25299
-// Abilities: A122 (|cff9370dbКража будущего|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A129 (Неожиданный удар), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
@@ -174453,6 +174435,12 @@ STRING 28690
 C
 }
 
+STRING 28691
+// Abilities: A00M (Грабеж), Ubertip (Tooltip - Normal - Extended)
+{
+Нанося урон врагам, этот воин добывает ресурсы. Также, атакуя врага, у юнита есть шанс улучшиться (Уровень Грабежа * 2 \ 100 %)
+}
+
 STRING 28692
 // Upgrades: R0FJ (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
 {
@@ -174598,7 +174586,7 @@ STRING 28715
 }
 
 STRING 28716
-// Abilities: A18P (|cff7878ffКатапультирование), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A129 (Неожиданный удар), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
@@ -177579,7 +177567,7 @@ STRING 29203
 }
 
 STRING 29204
-// Abilities: A18P (|cff7878ffКатапультирование), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A129 (Неожиданный удар), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
@@ -177639,25 +177627,25 @@ STRING 29213
 }
 
 STRING 29214
-// Abilities: A122 (|cff9370dbКража будущего|r), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A129 (Неожиданный удар), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
 
 STRING 29215
-// Abilities: A129 (Неожиданный удар), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18F (|cff7878ffСтойкость Штормградца), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
 
 STRING 29216
-// Abilities: A129 (Неожиданный удар), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18F (|cff7878ffСтойкость Штормградца), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
 
 STRING 29217
-// Abilities: A129 (Неожиданный удар), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18F (|cff7878ffСтойкость Штормградца), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
@@ -177735,25 +177723,25 @@ STRING 29229
 }
 
 STRING 29230
-// Abilities: A129 (Неожиданный удар), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18F (|cff7878ffСтойкость Штормградца), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
 
 STRING 29231
-// Abilities: A18F (|cff7878ffСтойкость Штормградца), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18H (|cff7878ffНеубиваемые), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
 
 STRING 29232
-// Abilities: A18F (|cff7878ffСтойкость Штормградца), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18H (|cff7878ffНеубиваемые), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
 
 STRING 29233
-// Abilities: A18F (|cff7878ffСтойкость Штормградца), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18H (|cff7878ffНеубиваемые), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
@@ -179154,25 +179142,25 @@ STRING 29464
 }
 
 STRING 29465
-// Abilities: A18F (|cff7878ffСтойкость Штормградца), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18H (|cff7878ffНеубиваемые), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
 
 STRING 29466
-// Abilities: A18H (|cff7878ffНеубиваемые), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18M (|cff7878ffЗачарованное оружие), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
 
 STRING 29467
-// Abilities: A18H (|cff7878ffНеубиваемые), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18M (|cff7878ffЗачарованное оружие), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
 
 STRING 29468
-// Abilities: A18H (|cff7878ffНеубиваемые), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18M (|cff7878ffЗачарованное оружие), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
@@ -179280,7 +179268,7 @@ STRING 29485
 }
 
 STRING 29486
-// Abilities: A18P (|cff7878ffКатапультирование), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18M (|cff7878ffЗачарованное оружие), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
@@ -179358,25 +179346,25 @@ STRING 29498
 }
 
 STRING 29499
-// Abilities: A18H (|cff7878ffНеубиваемые), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18P (|cff7878ffКатапультирование), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
 
 STRING 29500
-// Abilities: A18M (|cff7878ffЗачарованное оружие), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18P (|cff7878ffКатапультирование), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
 
 STRING 29501
-// Abilities: A18M (|cff7878ffЗачарованное оружие), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18P (|cff7878ffКатапультирование), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
 
 STRING 29502
-// Abilities: A18M (|cff7878ffЗачарованное оружие), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A18P (|cff7878ffКатапультирование), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
@@ -179481,5 +179469,17 @@ STRING 29519
 // Upgrades: R0FU (Болезнетворное облако), Hotkey (Hotkey)
 {
 X
+}
+
+STRING 29520
+// Abilities: A00M (Грабеж), Ubertip (Tooltip - Normal - Extended)
+{
+Нанося урон врагам, этот воин добывает ресурсы. Также, атакуя врага, у юнита есть шанс улучшиться (Уровень Грабежа * 2 \ 100 %)
+}
+
+STRING 29521
+// Abilities: A00M (Грабеж), Ubertip (Tooltip - Normal - Extended)
+{
+Нанося урон врагам, этот воин добывает ресурсы. Также, атакуя врага, у юнита есть шанс улучшиться (Уровень Грабежа * 2 \ 100 %)
 }
 

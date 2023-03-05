@@ -1315,6 +1315,7 @@ trigger gg_trg_Resurrection_Ot= null
 trigger gg_trg_ArthasResurrection= null
 trigger gg_trg_ArthasCoils= null
 trigger gg_trg_ArthasNova= null
+trigger gg_trg_No2SameItems= null
 trigger gg_trg_____________________________________001_Copy_2_Copy_4= null
 trigger gg_trg_____________________________________001_Copy_2_Copy_Copy_Copy_2= null
 trigger gg_trg_Pole_astrala_Elems= null
@@ -1554,7 +1555,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_No2SameItems= null
+trigger gg_trg_RobberyOfPlayer= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -10941,6 +10942,51 @@ function InitTrig_UnitIncomeConstructed takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_UnitIncomeConstructed, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
     call TriggerAddCondition(gg_trg_UnitIncomeConstructed, Condition(function Trig_UnitIncomeConstructed_Conditions))
     call TriggerAddAction(gg_trg_UnitIncomeConstructed, function Trig_UnitIncomeConstructed_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: UnitIncomeUpgrade
+//===========================================================================
+function Trig_UnitIncomeUpgrade_Conditions takes nothing returns boolean
+    return GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) > 0 and GetUnitFoodMade(GetConstructedStructure()) >= 1
+endfunction
+
+function Trig_UnitIncomeUpgrade_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    local real r= I2R(GetUnitFoodMade(u))
+    
+    //Добавляю инком
+    
+    
+    if GetUnitAbilityLevel(u, 'A0LG') >= 1 then
+        if r == 200 then
+            set income[pi]=income[pi] + 170
+        elseif r == 300 then
+            set income[pi]=income[pi] + 100
+        
+        endif
+           
+    elseif GetUnitTypeId(u) == 'h0HU' then
+        set income[pi]=income[pi] + 40
+    endif
+    
+    
+    call UpdateGraf(pi)
+    
+    
+    set u=null
+    set p=null
+endfunction
+
+//===========================================================================
+function InitTrig_UnitIncomeUpgrade takes nothing returns nothing
+    set gg_trg_UnitIncomeUpgrade=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_UnitIncomeUpgrade, EVENT_PLAYER_UNIT_UPGRADE_FINISH)
+    call TriggerAddCondition(gg_trg_UnitIncomeUpgrade, Condition(function Trig_UnitIncomeUpgrade_Conditions))
+    call TriggerAddAction(gg_trg_UnitIncomeUpgrade, function Trig_UnitIncomeUpgrade_Actions)
 endfunction
 
 
@@ -37062,10 +37108,10 @@ endfunction
 // Trigger: AutoChance
 //===========================================================================
 function Trig_AutoChance_Func003C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A000', GetAttacker()) >= 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped('A000', GetEventDamageSource()) >= 1 ) ) then
         return false
     endif
-    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker())) == true ) ) then
+    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource())) == true ) ) then
         return false
     endif
     return true
@@ -37079,7 +37125,7 @@ function Trig_AutoChance_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_AutoChance_Func002C takes nothing returns boolean
-    if ( not ( udg_LocalInteger <= ( GetUnitAbilityLevelSwapped('A00M', GetAttacker()) * 1 ) ) ) then
+    if ( not ( udg_LocalInteger <= ( GetUnitAbilityLevelSwapped('A00M', GetEventDamageSource()) * 1 ) ) ) then
         return false
     endif
     return true
@@ -37088,9 +37134,9 @@ endfunction
 function Trig_AutoChance_Actions takes nothing returns nothing
     set udg_LocalInteger=GetRandomInt(1, 200)
     if ( Trig_AutoChance_Func002C() ) then
-        call AdjustPlayerStateBJ(225, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
-        call AdjustPlayerStateBJ(50, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
-        call IssueImmediateOrderBJ(GetAttacker(), "berserk")
+        call AdjustPlayerStateBJ(225, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_GOLD)
+        call AdjustPlayerStateBJ(50, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_LUMBER)
+        call IssueImmediateOrderBJ(GetEventDamageSource(), "berserk")
     else
     endif
 endfunction
@@ -37099,7 +37145,7 @@ endfunction
 function InitTrig_AutoChance takes nothing returns nothing
     set gg_trg_AutoChance=CreateTrigger()
     call DisableTrigger(gg_trg_AutoChance)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_AutoChance, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AutoChance, EVENT_PLAYER_UNIT_DAMAGED)
     call TriggerAddCondition(gg_trg_AutoChance, Condition(function Trig_AutoChance_Conditions))
     call TriggerAddAction(gg_trg_AutoChance, function Trig_AutoChance_Actions)
 endfunction
@@ -37108,10 +37154,10 @@ endfunction
 // Trigger: AutoChance 2
 //===========================================================================
 function Trig_AutoChance_2_Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A01A', GetAttacker()) >= 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped('A01A', GetEventDamageSource()) >= 1 ) ) then
         return false
     endif
-    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker())) == true ) ) then
+    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource())) == true ) ) then
         return false
     endif
     return true
@@ -37125,7 +37171,7 @@ function Trig_AutoChance_2_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_AutoChance_2_Func003C takes nothing returns boolean
-    if ( not ( udg_LocalInteger <= ( GetUnitAbilityLevelSwapped('A00M', GetAttacker()) * 1 ) ) ) then
+    if ( not ( udg_LocalInteger <= ( GetUnitAbilityLevelSwapped('A00M', GetEventDamageSource()) * 1 ) ) ) then
         return false
     endif
     return true
@@ -37134,9 +37180,9 @@ endfunction
 function Trig_AutoChance_2_Actions takes nothing returns nothing
     set udg_LocalInteger=GetRandomInt(1, 200)
     if ( Trig_AutoChance_2_Func003C() ) then
-        call AdjustPlayerStateBJ(300, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
-        call AdjustPlayerStateBJ(75, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
-        call IssueImmediateOrderBJ(GetAttacker(), "berserk")
+        call AdjustPlayerStateBJ(300, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_GOLD)
+        call AdjustPlayerStateBJ(75, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_LUMBER)
+        call IssueImmediateOrderBJ(GetEventDamageSource(), "berserk")
     else
     endif
 endfunction
@@ -37145,7 +37191,7 @@ endfunction
 function InitTrig_AutoChance_2 takes nothing returns nothing
     set gg_trg_AutoChance_2=CreateTrigger()
     call DisableTrigger(gg_trg_AutoChance_2)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_AutoChance_2, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AutoChance_2, EVENT_PLAYER_UNIT_DAMAGED)
     call TriggerAddCondition(gg_trg_AutoChance_2, Condition(function Trig_AutoChance_2_Conditions))
     call TriggerAddAction(gg_trg_AutoChance_2, function Trig_AutoChance_2_Actions)
 endfunction
@@ -37154,10 +37200,10 @@ endfunction
 // Trigger: AutoChance 3
 //===========================================================================
 function Trig_AutoChance_3_Func003C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetAttacker()) >= 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetEventDamageSource()) >= 1 ) ) then
         return false
     endif
-    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker())) == true ) ) then
+    if ( not ( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource())) == true ) ) then
         return false
     endif
     return true
@@ -37171,28 +37217,28 @@ function Trig_AutoChance_3_Conditions takes nothing returns boolean
 endfunction
 
 function Trig_AutoChance_3_Func002Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetAttacker()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetEventDamageSource()) == 1 ) ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_AutoChance_3_Func002Func002C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetAttacker()) == 2 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetEventDamageSource()) == 2 ) ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_AutoChance_3_Func002Func003C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetAttacker()) == 3 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetEventDamageSource()) == 3 ) ) then
         return false
     endif
     return true
 endfunction
 
 function Trig_AutoChance_3_Func002C takes nothing returns boolean
-    if ( not ( udg_LocalInteger <= ( GetUnitAbilityLevelSwapped('A00M', GetAttacker()) * 1 ) ) ) then
+    if ( not ( udg_LocalInteger <= ( GetUnitAbilityLevelSwapped('A00M', GetEventDamageSource()) * 1 ) ) ) then
         return false
     endif
     return true
@@ -37202,21 +37248,21 @@ function Trig_AutoChance_3_Actions takes nothing returns nothing
     set udg_LocalInteger=GetRandomInt(1, 200)
     if ( Trig_AutoChance_3_Func002C() ) then
         if ( Trig_AutoChance_3_Func002Func001C() ) then
-            call AdjustPlayerStateBJ(800, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
-            call AdjustPlayerStateBJ(350, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
+            call AdjustPlayerStateBJ(800, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_GOLD)
+            call AdjustPlayerStateBJ(350, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_LUMBER)
         else
         endif
         if ( Trig_AutoChance_3_Func002Func002C() ) then
-            call AdjustPlayerStateBJ(550, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
-            call AdjustPlayerStateBJ(250, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
+            call AdjustPlayerStateBJ(550, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_GOLD)
+            call AdjustPlayerStateBJ(250, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_LUMBER)
         else
         endif
         if ( Trig_AutoChance_3_Func002Func003C() ) then
-            call AdjustPlayerStateBJ(250, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
-            call AdjustPlayerStateBJ(100, GetOwningPlayer(GetAttacker()), PLAYER_STATE_RESOURCE_GOLD)
+            call AdjustPlayerStateBJ(250, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_GOLD)
+            call AdjustPlayerStateBJ(100, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_LUMBER)
         else
         endif
-        call IssueImmediateOrderBJ(GetAttacker(), "berserk")
+        call IssueImmediateOrderBJ(GetEventDamageSource(), "berserk")
     else
     endif
 endfunction
@@ -37225,7 +37271,7 @@ endfunction
 function InitTrig_AutoChance_3 takes nothing returns nothing
     set gg_trg_AutoChance_3=CreateTrigger()
     call DisableTrigger(gg_trg_AutoChance_3)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_AutoChance_3, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_AutoChance_3, EVENT_PLAYER_UNIT_DAMAGED)
     call TriggerAddCondition(gg_trg_AutoChance_3, Condition(function Trig_AutoChance_3_Conditions))
     call TriggerAddAction(gg_trg_AutoChance_3, function Trig_AutoChance_3_Actions)
 endfunction
@@ -37959,6 +38005,31 @@ function InitTrig_Upgrade takes nothing returns nothing
     call TriggerAddCondition(gg_trg_Upgrade, Condition(function Trig_Upgrade_Conditions))
     call TriggerAddAction(gg_trg_Upgrade, function Trig_Upgrade_Actions)
 endfunction
+
+//===========================================================================
+// Trigger: RobberyOfPlayer
+//===========================================================================
+function Trig_RobberyOfPlayer_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetEventDamageSource(), 'A00M') >= 1
+endfunction
+
+function Trig_RobberyOfPlayer_Actions takes nothing returns nothing
+    local integer i= GetUnitGoldCost(GetUnitTypeId(GetTriggerUnit()))
+    local integer lvl= GetUnitAbilityLevel(GetEventDamageSource(), 'A00M')
+    
+    set i=R2I(i * 0.25 * lvl)
+    call AdjustPlayerStateBJ(- i, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_GOLD)
+endfunction
+
+//===========================================================================
+function InitTrig_RobberyOfPlayer takes nothing returns nothing
+    set gg_trg_RobberyOfPlayer=CreateTrigger()
+    call DisableTrigger(gg_trg_RobberyOfPlayer)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_RobberyOfPlayer, EVENT_PLAYER_UNIT_DAMAGED)
+    call TriggerAddCondition(gg_trg_RobberyOfPlayer, Condition(function Trig_RobberyOfPlayer_Conditions))
+    call TriggerAddAction(gg_trg_RobberyOfPlayer, function Trig_RobberyOfPlayer_Actions)
+endfunction
+
 
 //===========================================================================
 // Trigger: StartNight
@@ -46662,6 +46733,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_EclogOff()
     call InitTrig_UnitIncomeEnterDisCommon()
     call InitTrig_UnitIncomeConstructed()
+    call InitTrig_UnitIncomeUpgrade()
     call InitTrig_Gob_Potreblenie()
     call InitTrig_Silitid_Potreblenie()
     call InitTrig_DeadAddCheck()
@@ -47269,6 +47341,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ResearhRobbery()
     call InitTrig_RobberyTrain()
     call InitTrig_Upgrade()
+    call InitTrig_RobberyOfPlayer()
     call InitTrig_StartNight()
     call InitTrig_KrugBeg()
     call InitTrig_KrugCan()
@@ -47538,6 +47611,7 @@ function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_MainInfo)
     call ConditionalTriggerExecute(gg_trg_Initial_things)
     call ConditionalTriggerExecute(gg_trg_InitForEconomics)
+    call ConditionalTriggerExecute(gg_trg_UnitIncomeUpgrade)
     call ConditionalTriggerExecute(gg_trg_Init)
     call ConditionalTriggerExecute(gg_trg_LumberTest)
     call ConditionalTriggerExecute(gg_trg_BloodClose)
