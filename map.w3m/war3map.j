@@ -1153,6 +1153,7 @@ trigger gg_trg_AutoManaSteal= null
 trigger gg_trg_AutoShield= null
 trigger gg_trg_ResearhRobbery= null
 trigger gg_trg_RobberyTrain= null
+trigger gg_trg_Upgrade= null
 trigger gg_trg_StartNight= null
 trigger gg_trg_KrugBeg= null
 trigger gg_trg_KrugCan= null
@@ -1553,7 +1554,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_Upgrade= null
+trigger gg_trg_No2SameItems= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -41842,6 +41843,40 @@ function InitTrig_ArthasNova takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: No2SameItems
+//===========================================================================
+
+function Trig_No2SameItems_Actions takes nothing returns nothing
+    local location l= GetUnitLoc(GetTriggerUnit())
+    local integer i=0
+    set bj_forLoopAIndex=1
+    set bj_forLoopAIndexEnd=6
+    loop
+        exitwhen bj_forLoopAIndex > bj_forLoopAIndexEnd
+        if GetItemTypeId(GetManipulatedItem()) == GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) then
+            set i=i + 1
+        endif
+        set bj_forLoopAIndex=bj_forLoopAIndex + 1
+    endloop
+    
+    if i >= 2 then
+        call UnitDropItemPointLoc(GetTriggerUnit(), GetManipulatedItem(), l)
+        call DisplayTextToPlayer(GetOwningPlayer(GetTriggerUnit()), 0, 0, "TRIGSTR_1254")
+    
+    endif
+    call RemoveLocation(l)
+    set l=null
+endfunction
+
+//===========================================================================
+function InitTrig_No2SameItems takes nothing returns nothing
+    set gg_trg_No2SameItems=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_No2SameItems, EVENT_PLAYER_UNIT_PICKUP_ITEM)
+    call TriggerAddAction(gg_trg_No2SameItems, function Trig_No2SameItems_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: Безымянный триггер 001 Copy 2 Copy 4
 //===========================================================================
 function Trig_____________________________________001_Copy_2_Copy_4_Conditions takes nothing returns boolean
@@ -44691,20 +44726,12 @@ function Trig_GG_Func004A takes nothing returns nothing
 endfunction
 
 function Trig_GG_Actions takes nothing returns nothing
-    local integer pi= GetPlayerId(GetTriggerPlayer())
+    //local integer pi = GetPlayerId(GetTriggerPlayer())
     call DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) + "|cffff0000 - Решил проиграть и удалил всех своих юнитов !|r" ))
-    call GroupEnumUnitsOfPlayer(udg_LocalOtrad2, GetTriggerPlayer(), null)
-    call ForGroupBJ(udg_LocalOtrad2, function Trig_GG_Func004A)
-    call ForForce(Vassals[pi], function Freedom)
-    call GroupClear(udg_LocalOtrad2)
-    set income[pi]=0
-    set incomeW[pi]=0
-    set disincome[pi]=0
-    set logistic[pi]=0
-    set corruption[pi]=0
-    set balance[pi]=0
-    set additional[pi]=0
-    set udg_UnitsCount[pi]=0
+    //call GroupEnumUnitsOfPlayer( udg_LocalOtrad2, GetTriggerPlayer(), null )
+    //call ForGroupBJ( udg_LocalOtrad2, function Trig_GG_Func004A )
+    //call ForForce(Vassals[pi], function Freedom)
+    call ClearPlayer(GetTriggerPlayer())
 endfunction
 
 //===========================================================================
@@ -47387,6 +47414,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ArthasResurrection()
     call InitTrig_ArthasCoils()
     call InitTrig_ArthasNova()
+    call InitTrig_No2SameItems()
     call InitTrig_____________________________________001_Copy_2_Copy_4()
     call InitTrig_____________________________________001_Copy_2_Copy_Copy_Copy_2()
     call InitTrig_Pole_astrala_Elems()
