@@ -1556,6 +1556,8 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_RRR= null
+trigger gg_trg_Spell_Copy= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -20647,6 +20649,71 @@ function InitTrig_OrgesHpSpell takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_OrgesHpSpell, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_OrgesHpSpell, Condition(function Trig_OrgesHpSpell_Conditions))
     call TriggerAddAction(gg_trg_OrgesHpSpell, function Trig_OrgesHpSpell_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Spell Copy
+//===========================================================================
+function Trig_Spell_Copy_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A18Q' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Spell_Copy_Actions takes nothing returns nothing
+    set udg_LocalUnit2=GetSpellAbilityUnit()
+    call EnableTrigger(gg_trg_RRR)
+    // Ждать время отлёта юнитов 1.10+ 0.15 каждый лвл
+    call TriggerSleepAction(( 1.10 + ( 0.15 * I2R(GetUnitAbilityLevelSwapped('A18Q', udg_LocalUnit2)) ) ))
+    call DisableTrigger(gg_trg_RRR)
+    // Удалить переменную
+    set udg_LocalUnit2=null
+endfunction
+
+//===========================================================================
+function InitTrig_Spell_Copy takes nothing returns nothing
+    set gg_trg_Spell_Copy=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Spell_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_Spell_Copy, Condition(function Trig_Spell_Copy_Conditions))
+    call TriggerAddAction(gg_trg_Spell_Copy, function Trig_Spell_Copy_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: RRR
+//===========================================================================
+function Trig_RRR_Func001001003001 takes nothing returns boolean
+    return ( IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(udg_LocalUnit2)) == true )
+endfunction
+
+function Trig_RRR_Func001001003002 takes nothing returns boolean
+    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) == false )
+endfunction
+
+function Trig_RRR_Func001001003 takes nothing returns boolean
+    return GetBooleanAnd((IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(udg_LocalUnit2)) == true), (IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) == false)) // INLINED!!
+endfunction
+
+function Trig_RRR_Func001A takes nothing returns nothing
+    // Эта переменная отвечает за скорость отлёта 7+ 3 каждый лвл
+    set udg_LocalPosition2=PolarProjectionBJ(GetUnitLoc(GetEnumUnit()), ( 7.00 + ( 4.00 * I2R(GetUnitAbilityLevelSwapped('A18Q', udg_LocalUnit2)) ) ), ( GetUnitFacing(GetEnumUnit()) + 180.00 ))
+    // Это действие по которому юниты двигаються по переменной
+    call SetUnitPositionLoc(GetEnumUnit(), udg_LocalPosition2)
+    // Урон каждые 0.04 сек 1+ 2 каждый лвл 
+    call UnitDamageTargetBJ(udg_LocalUnit2, GetEnumUnit(), ( 1.00 + ( 2.00 * I2R(GetUnitAbilityLevelSwapped('A18Q', udg_LocalUnit2)) ) ), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+    // Удаление переменной
+    call RemoveLocation(udg_LocalPosition2)
+endfunction
+
+function Trig_RRR_Actions takes nothing returns nothing
+    call ForGroupBJ(GetUnitsInRangeOfLocMatching(( 450.00 + ( 55.00 * I2R(GetUnitAbilityLevelSwapped('A18Q', udg_LocalUnit2)) ) ), GetUnitLoc(udg_LocalUnit2), Condition(function Trig_RRR_Func001001003)), function Trig_RRR_Func001A)
+endfunction
+
+//===========================================================================
+function InitTrig_RRR takes nothing returns nothing
+    set gg_trg_RRR=CreateTrigger()
+    call TriggerRegisterTimerEventPeriodic(gg_trg_RRR, 0.04)
+    call TriggerAddAction(gg_trg_RRR, function Trig_RRR_Actions)
 endfunction
 
 //===========================================================================
@@ -46898,6 +46965,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_OgresStart()
     call InitTrig_OgresHpSpell2()
     call InitTrig_OrgesHpSpell()
+    call InitTrig_Spell_Copy()
+    call InitTrig_RRR()
     call InitTrig_BegYel()
     call InitTrig_CanYel()
     call InitTrig_FinYel()
