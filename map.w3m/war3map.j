@@ -2,27 +2,6 @@ globals
 //globals from A1:
 constant boolean LIBRARY_A1=true
 //endglobals from A1
-//globals from Example:
-constant boolean LIBRARY_Example=true
-framehandle gameUI
-framehandle Gold01
-framehandle Gold02
-framehandle Wood01
-framehandle Wood02
-framehandle Food01m
-framehandle Food02m
-framehandle Income01
-framehandle Income02
-framehandle Income0201
-framehandle Income0202
-framehandle Income0301
-framehandle Income0302
-framehandle HPText
-framehandle MPText
-framehandle FontInterface
-
-
-//endglobals from Example
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
 constant integer SpellSleepAOE___SpellHero='A06P'
@@ -697,6 +676,7 @@ trigger gg_trg_OrgesHpSpell= null
 trigger gg_trg_Gruul= null
 trigger gg_trg_Spell_Copy= null
 trigger gg_trg_RRR= null
+trigger gg_trg_RRR_Copy= null
 trigger gg_trg_BegYel= null
 trigger gg_trg_CanYel= null
 trigger gg_trg_FinYel= null
@@ -1559,7 +1539,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_RRR_Copy= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -1653,8 +1632,6 @@ group array AiUnitsToPort
 integer TryPort_pi
 integer array Grades
 
-real array hp
-real array mana
 integer ModeBuildingI= 0
 unit ModeBuilding= null
 
@@ -1704,140 +1681,6 @@ endfunction
 
 
 //library A1 ends
-//library Example:
-
-
-function init takes nothing returns nothing
-    local framehandle itemButtonFrame0= BlzGetFrameByName("InventoryButton_0", 0)
-    local framehandle itemButtonFrame1= BlzGetFrameByName("InventoryButton_1", 0)
-    local framehandle itemButtonFrame2= BlzGetFrameByName("InventoryButton_2", 0)
-    local framehandle itemButtonFrame3= BlzGetFrameByName("InventoryButton_3", 0)
-    local framehandle itemButtonFrame4= BlzGetFrameByName("InventoryButton_4", 0)
-    local framehandle itemButtonFrame5= BlzGetFrameByName("InventoryButton_5", 0)
-    local framehandle itemButtonFrame6= BlzGetFrameByName("InventoryButton_6", 0)
-    set gameUI=BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0)
-    call BlzFrameSetText(BlzGetFrameByName("InventoryText", 0), "")
-    call BlzLoadTOCFile("war3mapImported\\tocs.toc")
-
-    set FontInterface=BlzCreateSimpleFrame("FontInterface", gameUI, 0)
-
-    call BlzFrameSetAbsPoint(FontInterface, FRAMEPOINT_CENTER, 0.461, 0.067)
-
-set HPText=BlzCreateFrame("HPText", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(HPText, FRAMEPOINT_CENTER, 0.3245, 0.1195)
-
-set MPText=BlzCreateFrame("MPText", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(MPText, FRAMEPOINT_CENTER, 0.4755, 0.1195)
-
-set Gold01=BlzCreateFrame("Gold01", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Gold01, FRAMEPOINT_CENTER, 0.28, 0.08)
-
-set Gold02=BlzCreateFrame("Gold02", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Gold02, FRAMEPOINT_CENTER, 0.28, 0.07)
-
-set Wood01=BlzCreateFrame("Wood01", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Wood01, FRAMEPOINT_CENTER, 0.28, 0.05)
-
-set Wood02=BlzCreateFrame("Wood02", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Wood02, FRAMEPOINT_CENTER, 0.28, 0.04)
-
-set Food01m=BlzCreateFrame("Food01", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Food01m, FRAMEPOINT_CENTER, 0.28, 0.02)
-
-set Food02m=BlzCreateFrame("Food02", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Food02m, FRAMEPOINT_CENTER, 0.28, 0.01)
-
-
-
-set Income01=BlzCreateFrame("Income01", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Income01, FRAMEPOINT_CENTER, 0.23, 0.08)
-
-set Income02=BlzCreateFrame("Income02", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Income02, FRAMEPOINT_CENTER, 0.23, 0.07)
-
-set Income0201=BlzCreateFrame("Income0201", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Income0201, FRAMEPOINT_CENTER, 0.23, 0.05)
-
-set Income0202=BlzCreateFrame("Income0202", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Income0202, FRAMEPOINT_CENTER, 0.23, 0.04)
-
-set Income0301=BlzCreateFrame("Income0301", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Income0301, FRAMEPOINT_CENTER, 0.23, 0.02)
-
-set Income0302=BlzCreateFrame("Income0302", gameUI, 0, 0)
-call BlzFrameSetAbsPoint(Income0302, FRAMEPOINT_CENTER, 0.23, 0.01)
-
-    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_0", 0))
-    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_1", 0))
-    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_2", 0))
-    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_3", 0))
-    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_4", 0))
-    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_5", 0))
-    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_6", 0))
-    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_7", 0))
-    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_8", 0))
-    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_9", 0))
-    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_10", 0))
-    call BlzFrameClearAllPoints(BlzGetFrameByName("CommandButton_11", 0))
-    call BlzFrameClearAllPoints(itemButtonFrame0)
-    call BlzFrameClearAllPoints(itemButtonFrame1)
-    call BlzFrameClearAllPoints(itemButtonFrame2)
-    call BlzFrameClearAllPoints(itemButtonFrame3)
-    call BlzFrameClearAllPoints(itemButtonFrame4)
-    call BlzFrameClearAllPoints(itemButtonFrame5)
-    call BlzFrameSetAbsPoint(itemButtonFrame0, FRAMEPOINT_BOTTOM, 0.540, 0.090)
-    call BlzFrameSetAbsPoint(itemButtonFrame1, FRAMEPOINT_BOTTOM, 0.572, 0.090)
-    call BlzFrameSetAbsPoint(itemButtonFrame2, FRAMEPOINT_BOTTOM, 0.604, 0.090)
-    call BlzFrameSetAbsPoint(itemButtonFrame3, FRAMEPOINT_BOTTOM, 0.636, 0.090)
-    call BlzFrameSetAbsPoint(itemButtonFrame4, FRAMEPOINT_BOTTOM, 0.668, 0.090)
-    call BlzFrameSetAbsPoint(itemButtonFrame5, FRAMEPOINT_BOTTOM, 0.700, 0.090)
-
-    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_0", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.120, 0.050)
-
-    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_1", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.160, 0.050)
-
-    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_2", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.200, 0.050)
-
-    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_3", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.240, 0.050)
-
-    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_4", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.280, 0.050)
-
-    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_5", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.320, 0.050)
-
-    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_6", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.120, 0.010)
-
-    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_7", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.160, 0.010)
-
-    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_8", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.200, 0.010)
-
-    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_9", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.240, 0.010)
-
-    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_10", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.280, 0.010)
-
-    call BlzFrameSetPoint(BlzGetFrameByName("CommandButton_11", 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.320, 0.010)
-
-    call BlzFrameSetVisible(BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 0)), true)
-
-    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 0))
-    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 1))
-    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 2))
-    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 3))
-
-    call BlzFrameSetPoint(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 0), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, - 0.12, 0.58)
-    call BlzFrameSetPoint(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 1), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, - 0.04, 0.58)
-    call BlzFrameSetPoint(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 2), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.04, 0.58)
-    call BlzFrameSetPoint(BlzGetOriginFrame(ORIGIN_FRAME_SYSTEM_BUTTON, 3), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, 0.12, 0.58)
-
-call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0), true)
-call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0))
-call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0), FRAMEPOINT_CENTER, 0.11, 0.067)
-call BlzFrameSetScale(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0), 0.9)
-
-endfunction
-
-
-
-//library Example ends
 //library SpellSleepAOE:
 
     function SpellSleepAOE___getRange takes integer level returns integer
@@ -2532,6 +2375,192 @@ function ClearPlayer takes player p returns nothing
     call SetPlayerStateBJ(Player(pi), PLAYER_STATE_RESOURCE_GOLD, 0)
     call SetPlayerStateBJ(Player(pi), PLAYER_STATE_RESOURCE_LUMBER, 0)
 endfunction
+//***************************************************************************
+//*  PlayerUI
+function UISetup takes nothing returns nothing
+	//Local Variables
+ local framehandle fh= null
+ local framehandle chatButton= null
+ local framehandle questButton= null
+ local framehandle allyButton= null
+ local framehandle MiniMap= null
+ local framehandle gridButtons= null
+ local framehandle imageTest= BlzCreateFrameByType("BACKDROP", "image", BlzGetFrameByName("ConsoleUIBackdrop", 0), "ButtonBackdropTemplate", 0)
+	
+	//Top UI & System Buttons
+	set fh=BlzGetFrameByName("UpperButtonBarFrame", 0)
+	call BlzFrameSetVisible(fh, true)
+	set allyButton=BlzGetFrameByName("UpperButtonBarAlliesButton", 0)
+	set fh=BlzGetFrameByName("UpperButtonBarMenuButton", 0)
+	set chatButton=BlzGetFrameByName("UpperButtonBarChatButton", 0)
+	set questButton=BlzGetFrameByName("UpperButtonBarQuestsButton", 0)
+	call BlzFrameClearAllPoints(fh)
+	call BlzFrameClearAllPoints(allyButton)
+	call BlzFrameClearAllPoints(chatButton)
+	call BlzFrameClearAllPoints(questButton)
+	call BlzFrameSetAbsPoint(questButton, FRAMEPOINT_TOPLEFT, 0.05, 0.6)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPLEFT, - 0.03, 0.6)
+	call BlzFrameSetAbsPoint(allyButton, FRAMEPOINT_TOPLEFT, 0.05, 0.583)
+	call BlzFrameSetAbsPoint(chatButton, FRAMEPOINT_TOPLEFT, - 0.03, 0.583)
+	
+	//Hiding clock UI and creating new frame bar
+	call BlzFrameSetTexture(imageTest, "UI\\ResourceBar.tga", 0, true)
+	call BlzFrameSetPoint(imageTest, FRAMEPOINT_TOP, BlzGetOriginFrame(ORIGIN_FRAME_WORLD_FRAME, 0), FRAMEPOINT_TOP, 0, 0)
+	call BlzFrameSetSize(imageTest, 0.52, 0.025)
+	call BlzFrameSetLevel(imageTest, 1)
+	
+	//Food
+	set fh=BlzGetFrameByName("ResourceBarSupplyText", 0)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.640, 0.5965)
+	
+	//Upkeep
+	set fh=BlzGetFrameByName("ResourceBarUpkeepText", 0)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.8, 0.6965)
+	
+	//Gold
+	set fh=BlzGetFrameByName("ResourceBarGoldText", 0)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.329, 0.5965)
+	
+	//Lumber
+	set fh=BlzGetFrameByName("ResourceBarLumberText", 0)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.546, 0.5965)
+	
+	//Bottom UI & Idle Worker Icon
+	set fh=BlzGetFrameByName("ConsoleUI", 0)
+	set fh=BlzFrameGetChild(fh, 7)
+	call BlzFrameClearAllPoints(fh)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.09, 0.179)
+	
+	//Remove Deadspace
+	set fh=BlzGetFrameByName("ConsoleUI", 0)
+	call BlzFrameSetVisible(BlzFrameGetChild(fh, 5), false)
+	
+	//Minimap
+	set MiniMap=BlzGetFrameByName("MiniMapFrame", 0)
+	call BlzFrameSetVisible(MiniMap, true)
+	call BlzFrameClearAllPoints(MiniMap)
+	call BlzFrameSetAbsPoint(MiniMap, FRAMEPOINT_BOTTOMLEFT, 0.0525, 0.0)
+	call BlzFrameSetAbsPoint(MiniMap, FRAMEPOINT_TOPRIGHT, 0.2125, 0.141)
+	
+	//Minimap Buttons
+	set fh=BlzGetFrameByName("MinimapSignalButton", 0)
+	call BlzFrameClearAllPoints(fh)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_BOTTOMLEFT, 0.222, 0.116)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.242, 0.136)
+	call BlzFrameSetTexture(fh, "UI\\ButtonBorder.dds", 0, true)
+	set fh=BlzGetFrameByName("MiniMapAllyButton", 0)
+	call BlzFrameClearAllPoints(fh)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_BOTTOMLEFT, 0.242, 0.116)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.262, 0.136)
+	call BlzFrameSetTexture(fh, "UI\\ButtonBorder.dds", 0, true)
+	set fh=BlzGetFrameByName("MiniMapTerrainButton", 0)
+	call BlzFrameClearAllPoints(fh)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_BOTTOMLEFT, 0.262, 0.116)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.282, 0.136)
+	call BlzFrameSetTexture(fh, "UI\\ButtonBorder.dds", 0, true)
+	set fh=BlzGetFrameByName("MiniMapCreepButton", 0)
+	call BlzFrameSetVisible(fh, false)
+	set fh=BlzGetFrameByName("FormationButton", 0)
+	call BlzFrameSetVisible(fh, false)
+	
+	//Minimap Border
+	set fh=BlzCreateFrameByType("BACKDROP", "MinimapBorder", MiniMap, "", 0)
+	call BlzFrameSetPoint(fh, FRAMEPOINT_TOPLEFT, MiniMap, FRAMEPOINT_TOPLEFT, 0, 0)
+	call BlzFrameSetPoint(fh, FRAMEPOINT_BOTTOMRIGHT, MiniMap, FRAMEPOINT_BOTTOMRIGHT, 0, 0)
+	call BlzFrameSetTexture(fh, "UI\\MiniMapBorder.dds", 0, true)
+	
+	//Tooltips
+	set fh=BlzGetOriginFrame(ORIGIN_FRAME_TOOLTIP, 0)
+	call BlzFrameSetVisible(fh, true)
+	set fh=BlzGetOriginFrame(ORIGIN_FRAME_UBERTOOLTIP, 0)
+	call BlzFrameSetVisible(fh, true)
+	call BlzFrameClearAllPoints(fh)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_BOTTOMRIGHT, 0.7725, 0.141)
+	
+	//Command Buttons
+	set gridButtons=BlzGetFrameByName("CommandBarFrame", 0)
+	call BlzFrameSetVisible(gridButtons, true)
+	call BlzFrameClearAllPoints(gridButtons)
+	call BlzFrameSetAbsPoint(gridButtons, FRAMEPOINT_BOTTOMLEFT, 0.5950, 0.005)
+	
+	//Backdrop
+	set fh=BlzGetFrameByName("ConsoleUIBackdrop", 0)
+	call BlzFrameClearAllPoints(fh)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_BOTTOMLEFT, 0.052, 0)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.770, 0.141)
+	
+	//Command buttons border
+	set fh=BlzCreateFrameByType("BACKDROP", "CommandBorder", MiniMap, "", 0)
+	call BlzFrameSetPoint(fh, FRAMEPOINT_TOPLEFT, gridButtons, FRAMEPOINT_TOPLEFT, - 0.007, 0.007)
+	call BlzFrameSetPoint(fh, FRAMEPOINT_BOTTOMRIGHT, gridButtons, FRAMEPOINT_BOTTOMRIGHT, 0.0025, - 0.005)
+	call BlzFrameSetTexture(fh, "UI\\CommandCard.dds", 0, true)
+	
+	// Prevent multiplayer desyncs by forcing the creation of the QuestDialog frame
+	call BlzFrameClick(BlzGetFrameByName("UpperButtonBarQuestsButton", 0))
+	call ForceUICancel()
+	
+	// Expand TextArea
+	call BlzFrameSetPoint(BlzGetFrameByName("QuestDisplay", 0), FRAMEPOINT_TOPLEFT, BlzGetFrameByName("QuestDetailsTitle", 0), FRAMEPOINT_BOTTOMLEFT, 0.003, - 0.003)
+	call BlzFrameSetPoint(BlzGetFrameByName("QuestDisplay", 0), FRAMEPOINT_BOTTOMRIGHT, BlzGetFrameByName("QuestDisplayBackdrop", 0), FRAMEPOINT_BOTTOMRIGHT, - 0.003, 0.)
+	
+	// Relocate button
+	call BlzFrameSetPoint(BlzGetFrameByName("QuestDisplayBackdrop", 0), FRAMEPOINT_BOTTOM, BlzGetFrameByName("QuestBackdrop", 0), FRAMEPOINT_BOTTOM, 0., 0.017)
+	call BlzFrameClearAllPoints(BlzGetFrameByName("QuestAcceptButton", 0))
+	call BlzFrameSetPoint(BlzGetFrameByName("QuestAcceptButton", 0), FRAMEPOINT_TOPRIGHT, BlzGetFrameByName("QuestBackdrop", 0), FRAMEPOINT_TOPRIGHT, - 0.016, - 0.016)
+	call BlzFrameSetText(BlzGetFrameByName("QuestAcceptButton", 0), "×")
+	call BlzFrameSetSize(BlzGetFrameByName("QuestAcceptButton", 0), 0.03, 0.03)
+
+	// Add back ally resource icons
+	call BlzFrameSetTexture(BlzGetFrameByName("InfoPanelIconAllyGoldIcon", 7), "UI\\RGReplacement.dds", 0, false)
+	call BlzFrameSetTexture(BlzGetFrameByName("InfoPanelIconAllyWoodIcon", 7), "UI\\RLReplacement.dds", 0, false)
+	call BlzFrameSetTexture(BlzGetFrameByName("InfoPanelIconAllyFoodIcon", 7), "UI\\RSReplacement.dds", 0, false)
+	
+endfunction
+
+// scope init begins
+function init__Init takes nothing returns nothing
+	call UISetup()
+endfunction
+// scope init ends
+//***************************************************************************
+//*  IncomeTooltip
+function Face2 takes nothing returns nothing
+local framehandle face= null
+local framehandle faceHover= null
+local framehandle tooltip= null
+local framehandle IncomeTextFr= null
+
+call BlzLoadTOCFile("war3mapimported\\BoxedText.toc")
+set face=BlzCreateFrameByType("BACKDROP", "Face", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+set faceHover=BlzCreateFrameByType("FRAME", "FaceFrame", face, "", 0)
+set IncomeTextFr=BlzCreateFrameByType("TEXT", "MyTextFrame", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
+set tooltip=BlzCreateFrame("BoxedText", face, 0, 0)
+call BlzFrameSetText(IncomeTextFr, "999999")
+call BlzFrameSetAbsPoint(IncomeTextFr, FRAMEPOINT_TOPRIGHT, 0.2337, 0.5937)
+call BlzFrameSetEnable(IncomeTextFr, false)
+call BlzFrameSetScale(IncomeTextFr, 1.075)
+call BlzFrameSetTextAlignment(IncomeTextFr, TEXT_JUSTIFY_CENTER, TEXT_JUSTIFY_LEFT)
+call BlzFrameSetAllPoints(faceHover, face)
+call BlzFrameSetTooltip(faceHover, tooltip)
+
+call BlzFrameSetSize(face, 0.085, 0.015)
+call BlzFrameSetAbsPoint(face, FRAMEPOINT_TOPRIGHT, 0.239, 0.5965)
+call BlzFrameSetAbsPoint(tooltip, FRAMEPOINT_TOPRIGHT, 0.289, 0.5685)
+call BlzFrameSetPoint(tooltip, FRAMEPOINT_BOTTOM, face, FRAMEPOINT_TOP, 0.0, - 0.1)
+call BlzFrameSetSize(tooltip, 0.03, 0.03)
+
+call BlzFrameSetText(BlzGetFrameByName("BoxedTextValue", 0), "Инком = Доходы-Расходы")
+call BlzFrameSetText(BlzGetFrameByName("BoxedTextTitle", 0), "Инком")
+
+call BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
+
+endfunction
+
+// scope init2 begins
+function init2__Init takes nothing returns nothing
+    call Face2()
+endfunction
+// scope init2 ends
 //***************************************************************************
 //*  CommonHash
 //
@@ -5488,20 +5517,6 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0LT', 252.5, - 25962.6, 268.856, 'h0LT')
     set u=BlzCreateUnitWithSkin(p, 'h0LW', - 6424.3, - 29137.2, 281.938, 'h0LW')
     set u=BlzCreateUnitWithSkin(p, 'h0LV', - 389.5, - 25993.9, 270.307, 'h0LV')
-    set u=BlzCreateUnitWithSkin(p, 'N05O', - 18072.0, - 12205.8, 273.920, 'N05O')
-    call SetHeroLevel(u, 25, false)
-    call SelectHeroSkill(u, 'A18S')
-    call SelectHeroSkill(u, 'A18S')
-    call IssueImmediateOrder(u, "")
-    call SelectHeroSkill(u, 'A18R')
-    call SelectHeroSkill(u, 'A18R')
-    call IssueImmediateOrder(u, "")
-    call SelectHeroSkill(u, 'A18U')
-    call SelectHeroSkill(u, 'A18U')
-    call IssueImmediateOrder(u, "")
-    call SelectHeroSkill(u, 'A18Q')
-    call SelectHeroSkill(u, 'A18Q')
-    call IssueImmediateOrder(u, "")
 endfunction
 
 //===========================================================================
@@ -5519,16 +5534,6 @@ function CreateUnitsForPlayer1 takes nothing returns nothing
     call SetHeroLevel(u, 25, false)
     set u=BlzCreateUnitWithSkin(p, 'N05O', - 1382.4, - 28748.8, 273.920, 'N05O')
     call SetHeroLevel(u, 25, false)
-    set u=BlzCreateUnitWithSkin(p, 'h06L', - 18256.8, - 12332.8, 209.801, 'h06L')
-    set u=BlzCreateUnitWithSkin(p, 'h06L', - 18236.3, - 12003.0, 32.795, 'h06L')
-    set u=BlzCreateUnitWithSkin(p, 'h06L', - 18291.8, - 12013.6, 54.582, 'h06L')
-    set u=BlzCreateUnitWithSkin(p, 'h06L', - 17965.4, - 11853.1, 99.045, 'h06L')
-    set u=BlzCreateUnitWithSkin(p, 'h06L', - 17839.9, - 12145.1, 129.742, 'h06L')
-    set u=BlzCreateUnitWithSkin(p, 'h06L', - 17992.2, - 12418.8, 68.282, 'h06L')
-    set u=BlzCreateUnitWithSkin(p, 'h06L', - 18174.5, - 12436.7, 245.695, 'h06L')
-    set u=BlzCreateUnitWithSkin(p, 'h06L', - 18317.1, - 12144.4, 278.842, 'h06L')
-    set u=BlzCreateUnitWithSkin(p, 'h06L', - 17890.2, - 11794.3, 31.114, 'h06L')
-    set u=BlzCreateUnitWithSkin(p, 'h06L', - 18370.0, - 12473.3, 142.706, 'h06L')
 endfunction
 
 //===========================================================================
@@ -6875,152 +6880,6 @@ function InitTrig_Unit_Indexer takes nothing returns nothing
     call TriggerAddAction(gg_trg_Unit_Indexer, function Trig_Unit_Indexer_Actions)
 endfunction
 
-//===========================================================================
-// Trigger: Hide Default UI And Reshow some
-//===========================================================================
-function Trig_Hide_Default_UI_And_Reshow_some_Actions takes nothing returns nothing
-    call BlzHideOriginFrames(true)
-    call BlzFrameSetVisible(BlzGetFrameByName("ConsoleUIBackdrop", 0), false)
-    // -
-    // -
-    // Hide Inventory Cover
-    call BlzFrameSetAlpha(BlzGetFrameByName("SimpleInventoryCover", 0), 0)
-    // -
-    // Show Minimap
-    call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP, 0), true)
-    call BlzFrameSetVisible(BlzGetFrameByName("MinimapButtonBar", 0), true)
-    call BlzFrameClearAllPoints(BlzGetFrameByName("MinimapButtonBar", 0))
-    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 0))
-    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 0), FRAMEPOINT_CENTER, 0.1825, 0.114)
-    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 1))
-    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 1), FRAMEPOINT_CENTER, 0.1825, 0.089)
-    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 2))
-    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 2), FRAMEPOINT_CENTER, 0.1825, 0.064)
-    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 3))
-    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 3), FRAMEPOINT_CENTER, 0.1825, 0.039)
-    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 4))
-    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_MINIMAP_BUTTON, 4), FRAMEPOINT_CENTER, 0.1825, 0.014)
-    // Show 3D Face
-    call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0), true)
-    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0))
-    call BlzFrameSetSize(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0), 0.047, 0.042)
-    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT, 0), FRAMEPOINT_CENTER, 0.4, 0.133)
-    // Show Inventory, without unitInfo
-    call BlzFrameSetVisible(BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_ITEM_BUTTON, 0)), true)
-    // Show UnitInfos parent to show inventory and unit info
-    call BlzFrameSetVisible(BlzFrameGetParent(BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0)), true)
-    // Show Hero Icons at the left top of the screen
-    call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR, 0), true)
-    call BlzFrameSetVisible(BlzFrameGetParent(BlzGetOriginFrame(ORIGIN_FRAME_HERO_BAR, 0)), true)
-    //  //Quests, Menu, Allies, Log
-    call BlzFrameSetVisible(BlzGetFrameByName("UpperButtonBarFrame", 0), true)
-    // //Gold, Lumber, food and Upkeep; also enables /fps /ping /apm
-    //call BlzFrameClearAllPoints(BlzGetFrameByName("ConsoleUI",0))
-    call BlzFrameSetScale(BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 5), 0.001)
-    call BlzFrameSetVisible(BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0), true)
-    call BlzFrameSetVisible(BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7), true)
-    call BlzFrameClearAllPoints(BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7))
-    call BlzFrameSetPoint(BlzFrameGetChild(BlzGetFrameByName("ConsoleUI", 0), 7), FRAMEPOINT_BOTTOM, gameUI, FRAMEPOINT_BOTTOM, - 0.34, 0.14)
-    call BlzFrameClearAllPoints(BlzFrameGetParent(BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0)))
-    call BlzFrameSetAbsPoint(BlzFrameGetParent(BlzGetFrameByName("SimpleInfoPanelUnitDetail", 0)), FRAMEPOINT_BOTTOM, 0.40, - 0.006)
-    // TextResourses
-    call BlzFrameSetText(BlzGetFrameByName("Gold01", 0), "|cffd6ad66Золото:")
-    call BlzFrameSetText(BlzGetFrameByName("Wood01", 0), "|cffd6ad66Дерево:")
-    
-    call BlzFrameSetText(BlzGetFrameByName("Income01", 0), "|cffd6ad66Доход:")
-    call BlzFrameSetText(BlzGetFrameByName("Income0201", 0), "|cffd6ad66Расход:")
-    call BlzFrameSetText(BlzGetFrameByName("Income0301", 0), "|cffd6ad66Баланс:")
-    call BlzFrameSetText(BlzGetFrameByName("Gold02", 0), "0")
-    call BlzFrameSetText(BlzGetFrameByName("Wood02", 0), "0")
-    call BlzFrameSetText(BlzGetFrameByName("Income02", 0), "0")
-    call BlzFrameSetText(BlzGetFrameByName("Income0202", 0), "0")
-    call BlzFrameSetText(BlzGetFrameByName("Income0302", 0), "0")
-    // HP MP
-    call BlzFrameSetVisible(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT, 0), true)
-    call BlzFrameClearAllPoints(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT, 0))
-    call BlzFrameSetAbsPoint(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT, 0), FRAMEPOINT_CENTER, 0.4, 0.55)
-    call BlzFrameSetScale(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT, 0), 2.06)
-endfunction
-
-//===========================================================================
-function InitTrig_Hide_Default_UI_And_Reshow_some takes nothing returns nothing
-    set gg_trg_Hide_Default_UI_And_Reshow_some=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_Hide_Default_UI_And_Reshow_some, 0.00)
-    call TriggerAddAction(gg_trg_Hide_Default_UI_And_Reshow_some, function Trig_Hide_Default_UI_And_Reshow_some_Actions)
-endfunction
-
-
-//===========================================================================
-// Trigger: ResoursesInterface
-//===========================================================================
-function Trig_ResoursesInterface_Actions takes nothing returns nothing
-    
-    local player p= GetLocalPlayer()
-    local integer pi= GetPlayerId(p)
-    local integer gold= ( GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) )
-    local integer wood= ( GetPlayerState(p, PLAYER_STATE_RESOURCE_LUMBER) )
-    local integer food= ( GetPlayerState(p, PLAYER_STATE_RESOURCE_FOOD_USED) )
-    local integer i= 0
-    local unit u
-    local group g= CreateGroup()
-    loop
-        exitwhen i > 23
-        
-        
-        call GroupEnumUnitsSelected(g, Player(i), null)
-        set u=FirstOfGroup(g)
-        set hp[i]=GetUnitState(u, UNIT_STATE_LIFE)
-        set mana[i]=GetUnitState(u, UNIT_STATE_MANA)
-    
-        call GroupClear(g)
-        set i=i + 1
-    endloop
-
-
-    //call BlzFrameSetText(BlzGetFrameByName("HPText",0), BlzFrameGetText(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_HP_TEXT,0)))
-    //call BlzFrameSetText(BlzGetFrameByName("MPText",0), BlzFrameGetText(BlzGetOriginFrame(ORIGIN_FRAME_PORTRAIT_MANA_TEXT,0)))
-    
-    call BlzFrameSetText(BlzGetFrameByName("HPText", 0), I2S(R2I(hp[pi])))
-    call BlzFrameSetText(BlzGetFrameByName("MPText", 0), I2S(R2I(mana[pi])))
-    call BlzFrameSetText(BlzGetFrameByName("Gold02", 0), I2S(gold))
-    call BlzFrameSetText(BlzGetFrameByName("Wood02", 0), I2S(wood))
-    call BlzFrameSetText(BlzGetFrameByName("Food02m", 0), I2S(food))
-    call BlzFrameSetText(BlzGetFrameByName("Income02", 0), I2S(R2I(income[pi])))
-    
-    
-    
-    if DisOn then
-        call BlzFrameSetText(BlzGetFrameByName("Income0202", 0), I2S(R2I(disincome[pi])))
-    else
-        call BlzFrameSetText(BlzGetFrameByName("Income0202", 0), "|cffffff00" + I2S(R2I(disincome[pi])) + "(0)|r")
-    endif
-    
-    if balance[pi] > 0 then
-        call BlzFrameSetText(BlzGetFrameByName("Income0302", 0), "|cff00ff00+" + I2S(R2I(balance[pi])) + "|r")
-    elseif balance[pi] == 0 then
-        call BlzFrameSetText(BlzGetFrameByName("Income0302", 0), "|cffffff00" + I2S(R2I(balance[pi])) + "|r")
-    else
-        call BlzFrameSetText(BlzGetFrameByName("Income0302", 0), "|cffff0000" + I2S(R2I(balance[pi])) + "|r")
-    endif
-    call ReturnFPS()
-  
-  
-    call GroupClear(g)
-    call DestroyGroup(g)
-    set u=null
-    set g=null
-    set p=null
-endfunction
-
-//===========================================================================
-function InitTrig_ResoursesInterface takes nothing returns nothing
-    set gg_trg_ResoursesInterface=CreateTrigger()
-    call TriggerRegisterTimerEvent(gg_trg_ResoursesInterface, 0.10, true)
-    call TriggerAddAction(gg_trg_ResoursesInterface, function Trig_ResoursesInterface_Actions)
-endfunction
-//===========================================================================
-// Trigger: Interface
-//===========================================================================
 //===========================================================================
 // Trigger: MainInfo
 //===========================================================================
@@ -46731,9 +46590,6 @@ endfunction
 function InitCustomTriggers takes nothing returns nothing
     call InitTrig_runSeachHandle()
     call InitTrig_Unit_Indexer()
-    call InitTrig_Hide_Default_UI_And_Reshow_some()
-    call InitTrig_ResoursesInterface()
-    //Function not found: call InitTrig_Interface()
     call InitTrig_MainInfo()
     call InitTrig_Initial_things()
     call InitTrig_StartLobby()
@@ -47700,9 +47556,6 @@ endfunction
 function RunInitializationTriggers takes nothing returns nothing
     call ConditionalTriggerExecute(gg_trg_runSeachHandle)
     call ConditionalTriggerExecute(gg_trg_Unit_Indexer)
-    call ConditionalTriggerExecute(gg_trg_Hide_Default_UI_And_Reshow_some)
-    call ConditionalTriggerExecute(gg_trg_ResoursesInterface)
-    call ConditionalTriggerExecute(gg_trg_Interface)
     call ConditionalTriggerExecute(gg_trg_MainInfo)
     call ConditionalTriggerExecute(gg_trg_Initial_things)
     call ConditionalTriggerExecute(gg_trg_InitForEconomics)
@@ -48068,8 +47921,9 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("init")
 call ExecuteFunc("SpellSleepAOE___onInit")
+call UISetup() // INLINED!!
+call Face2() // INLINED!!
 
     call InitGlobals()
     call InitCustomTriggers()
