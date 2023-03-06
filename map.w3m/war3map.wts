@@ -97366,13 +97366,6 @@ STRING 16073
 Призвать |cff008080Огненную птицу|r
 }
 
-STRING 16074
-// Abilities: A01S (|cffff3200Кольцо огня|r), Ubertip (Tooltip - Normal - Extended)
-{
-Наносит |cff0080804 урона/сек|r. находящимся рядом врагам.
-|cff008000Радиус действия (220).|r
-}
-
 STRING 16075
 // Abilities: A0QI (|cff008080Бросок валуна|r), Name (Name)
 {
@@ -121608,6 +121601,18 @@ STRING 20079
 |cfff08080Рынок|r
 }
 
+STRING 20080
+// Units: h0KC (|cff7878ffПехотинец), EditorSuffix (Name - Editor Suffix)
+{
+Т2 (Альянс)
+}
+
+STRING 20081
+// Units: h0KD (|cff7878ffШтормградский воитель), EditorSuffix (Name - Editor Suffix)
+{
+Т1 (Альянс)
+}
+
 STRING 20082
 // Abilities: A00M (Грабеж), Ubertip (Tooltip - Normal - Extended)
 {
@@ -127946,6 +127951,12 @@ STRING 21116
 |cfff08080Казначеский талант|r
 }
 
+STRING 21117
+// Units: h0KK (|cff7878ffЛордеронец-Ветеран), EditorSuffix (Name - Editor Suffix)
+{
+Т3 (Альянс)
+}
+
 STRING 21118
 // Abilities: A0WL (|cfff08080Проклятие|r), Hotkey (Hotkey - Normal)
 {
@@ -129045,13 +129056,6 @@ STRING 21299
 A
 }
 
-STRING 21300
-{
-К сожалению, альянс еще не готов.
-
-
-}
-
 STRING 21301
 // Abilities: A10K (|cff483d8bТемный Портал|r), Hotkey (Hotkey - Normal)
 {
@@ -129711,23 +129715,6 @@ STRING 21410
 // Abilities: A10M (|cff483d8bРазрушение|r), Hotkey (Hotkey - Normal)
 {
 E
-}
-
-STRING 21411
-// Abilities: A0Y7 (|cfff08080Огненный ливень|r), Ubertip (Tooltip - Normal - Extended)
-{
-Обрушивает на указанную область волны огня. Каждая волна наносит урон мгновенно и урона/сек. 
-Волн: |cfff0808025 |r
-|cffffcc002-й уровень:|r |cfff0808090 ед. урона, 35 ед. периодического урона, длительность 3 сек.|r
-}
-
-STRING 21412
-// Abilities: A0Y7 (|cfff08080Огненный ливень|r), Ubertip (Tooltip - Normal - Extended)
-{
-Обрушивает на указанную область волны огня. Каждая волна наносит урон мгновенно и урона/сек. 
-Волн: |cfff0808015 |r
-|cffffcc001-й уровень:|r |cfff0808060 ед. урона, 25 ед. периодического урона, длительность 3 сек.|r
-
 }
 
 STRING 21413
@@ -131520,7 +131507,7 @@ Q
 }
 
 STRING 21694
-// Abilities: A184 (|cff7878ffКольцо Огня), Hotkey (Hotkey - Normal)
+// Abilities: A184 (|cff7878ffКольцо огня), Hotkey (Hotkey - Normal)
 {
 W
 }
@@ -169531,7 +169518,7 @@ STRING 27901
 }
 
 STRING 27902
-// Units: h0KC (|cff7878ffПехотинец), EditorSuffix (Name - Editor Suffix)
+// Units: h0KF (|cff7878ffПаладин), EditorSuffix (Name - Editor Suffix)
 {
 (Альянс)
 }
@@ -169543,7 +169530,7 @@ STRING 27903
 }
 
 STRING 27904
-// Units: h0KD (|cff7878ffШтормградский воитель), EditorSuffix (Name - Editor Suffix)
+// Units: h0KG (|cff7878ffТяжелый пехотинец), EditorSuffix (Name - Editor Suffix)
 {
 (Альянс)
 }
@@ -169573,7 +169560,7 @@ STRING 27908
 }
 
 STRING 27909
-// Units: h0KF (|cff7878ffПаладин), EditorSuffix (Name - Editor Suffix)
+// Units: h0KN (|cff7878ffЛучница), EditorSuffix (Name - Editor Suffix)
 {
 (Альянс)
 }
@@ -169585,7 +169572,7 @@ STRING 27910
 }
 
 STRING 27911
-// Units: h0KG (|cff7878ffТяжелый пехотинец), EditorSuffix (Name - Editor Suffix)
+// Units: h0KX (|cff7878ffВоздаятель), EditorSuffix (Name - Editor Suffix)
 {
 (Альянс)
 }
@@ -170322,7 +170309,7 @@ STRING 28026
 }
 
 STRING 28027
-// Units: h0KK (|cff7878ffЛордеронец-Ветеран), EditorSuffix (Name - Editor Suffix)
+// Units: h0L0 (Фрегат), EditorSuffix (Name - Editor Suffix)
 {
 (Альянс)
 }
@@ -171006,7 +170993,7 @@ STRING 28140
 }
 
 STRING 28141
-// Units: h0KN (|cff7878ffЛучница), EditorSuffix (Name - Editor Suffix)
+// Units: h0L1 (Линкор), EditorSuffix (Name - Editor Suffix)
 {
 (Альянс)
 }
@@ -171931,7 +171918,7 @@ STRING 28277
 }
 
 STRING 28278
-// Units: h0KO (|cff7878ffДворфийский стрелок), EditorSuffix (Name - Editor Suffix)
+// Units: h0L2 (|cff7878ffЛучница), EditorSuffix (Name - Editor Suffix)
 {
 (Альянс)
 }
@@ -171991,7 +171978,7 @@ STRING 28287
 }
 
 STRING 28288
-// Units: h0KX (|cff7878ffВоздаятель), EditorSuffix (Name - Editor Suffix)
+// Units: h0LU (|cff7878ffАгент ШРУ), EditorSuffix (Name - Editor Suffix)
 {
 (Альянс)
 }
@@ -172478,7 +172465,7 @@ Q
 }
 
 STRING 28367
-// Units: h0L0 (Фрегат), EditorSuffix (Name - Editor Suffix)
+// Units: h0LX (|cff7878ffСтрелок|r), EditorSuffix (Name - Editor Suffix)
 {
 (Альянс)
 }
@@ -172565,7 +172552,7 @@ STRING 28380
 }
 
 STRING 28381
-// Units: h0L1 (Линкор), EditorSuffix (Name - Editor Suffix)
+// Abilities: A180 (|cff7878ffЧары неуловимости), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -173740,7 +173727,7 @@ Z
 }
 
 STRING 28575
-// Units: h0L2 (|cff7878ffЛучница), EditorSuffix (Name - Editor Suffix)
+// Abilities: A181 (|cff7878ffРассеивание заклинаний), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -173908,7 +173895,7 @@ Z
 }
 
 STRING 28603
-// Units: h0LU (|cff7878ffАгент ШРУ), EditorSuffix (Name - Editor Suffix)
+// Abilities: A183 (|cff7878ffСнежная буря|r), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -174076,7 +174063,7 @@ STRING 28630
 }
 
 STRING 28631
-// Units: h0LW (|cff7878ffШтормградский воитель), EditorSuffix (Name - Editor Suffix)
+// Abilities: A185 (|cff7878ffОгненные ядра), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -174172,7 +174159,7 @@ Z
 }
 
 STRING 28647
-// Units: h0LX (|cff7878ffСтрелок|r), EditorSuffix (Name - Editor Suffix)
+// Abilities: A18C (|cff7878ffБронебойные патроны|r), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -174316,13 +174303,13 @@ E
 }
 
 STRING 28671
-// Abilities: A180 (|cff7878ffЧары неуловимости), EditorSuffix (Editor Suffix)
+// Abilities: A18D (|cff7878ffРазрывные патроны|r), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
 
 STRING 28672
-// Abilities: A181 (|cff7878ffРассеивание заклинаний), EditorSuffix (Editor Suffix)
+// Abilities: A184 (|cff7878ffКольцо огня), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -174400,7 +174387,7 @@ STRING 28684
 }
 
 STRING 28685
-// Abilities: A183 (|cff7878ffСнежная буря|r), EditorSuffix (Editor Suffix)
+// Abilities: A18G (|cff7878ffРанящие удары), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -175636,13 +175623,13 @@ STRING 28887
 }
 
 STRING 28888
-// Abilities: A185 (|cff7878ffОгненные ядра), EditorSuffix (Editor Suffix)
+// Abilities: A18I (|cff7878ffЗачарованное оружие), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
 
 STRING 28889
-// Abilities: A18C (|cff7878ffБронебойные патроны|r), EditorSuffix (Editor Suffix)
+// Abilities: A18L (Прикрытие танка), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -175660,13 +175647,13 @@ Z
 }
 
 STRING 28892
-// Abilities: A18D (|cff7878ffРазрывные патроны|r), EditorSuffix (Editor Suffix)
+// Abilities: A18N (Ледяные стрелы), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
 
 STRING 28893
-// Abilities: A184 (|cff7878ffКольцо Огня), EditorSuffix (Editor Suffix)
+// Upgrades: R0GV (Сила Луны,Мощь Луны,Могущество Луны), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -175743,7 +175730,7 @@ Q
 }
 
 STRING 28904
-// Abilities: A18G (|cff7878ffРанящие удары), EditorSuffix (Editor Suffix)
+// Upgrades: R0GW (Сила Луны,Мощь Луны,Могущество Луны), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -176967,7 +176954,7 @@ STRING 29103
 }
 
 STRING 29104
-// Abilities: A18I (|cff7878ffЗачарованное оружие), EditorSuffix (Editor Suffix)
+// Upgrades: R0GX (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -177045,7 +177032,7 @@ STRING 29116
 }
 
 STRING 29117
-// Abilities: A18L (Прикрытие танка), EditorSuffix (Editor Suffix)
+// Upgrades: R0GY (Сила Луны,Мощь Луны,Могущество Луны), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -177123,7 +177110,7 @@ STRING 29129
 }
 
 STRING 29130
-// Abilities: A18N (Ледяные стрелы), EditorSuffix (Editor Suffix)
+// Upgrades: R0H0 (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -177201,7 +177188,7 @@ STRING 29142
 }
 
 STRING 29143
-// Upgrades: R0GV (Сила Луны,Мощь Луны,Могущество Луны), EditorSuffix (Editor Suffix)
+// Upgrades: R0H5 (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -177279,7 +177266,7 @@ STRING 29155
 }
 
 STRING 29156
-// Upgrades: R0GW (Сила Луны,Мощь Луны,Могущество Луны), EditorSuffix (Editor Suffix)
+// Upgrades: R0H6 (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -177357,7 +177344,7 @@ STRING 29168
 }
 
 STRING 29169
-// Upgrades: R0GX (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0H7 (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -177435,7 +177422,7 @@ STRING 29181
 }
 
 STRING 29182
-// Upgrades: R0GY (Сила Луны,Мощь Луны,Могущество Луны), EditorSuffix (Editor Suffix)
+// Upgrades: R0H8 (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -177513,7 +177500,7 @@ STRING 29194
 }
 
 STRING 29195
-// Upgrades: R0H0 (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0H9 (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -177552,12 +177539,6 @@ STRING 29201
 // Upgrades: R0HO (Черный порох,Бездымный порох,Обогащенный п), Ubertip (Tooltip - Extended)
 {
 Увеличивает урон от магических атак.
-}
-
-STRING 29202
-// Abilities: A184 (|cff7878ffКольцо Огня), Ubertip (Tooltip - Normal - Extended)
-{
-Окутывает цель пламенем, который наносит 5 урона/сек. находящимся рядом войскам, в том числе механизмам. |nВремя действия: <Alsh,Dur1> сек.
 }
 
 STRING 29203
@@ -177759,13 +177740,13 @@ S
 }
 
 STRING 29236
-// Upgrades: R0H5 (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HA (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
 
 STRING 29237
-// Upgrades: R0H6 (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HB (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -177843,7 +177824,7 @@ STRING 29249
 }
 
 STRING 29250
-// Upgrades: R0H7 (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HC (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -177855,7 +177836,7 @@ STRING 29251
 }
 
 STRING 29252
-// Upgrades: R0H8 (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HD (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -177879,13 +177860,13 @@ A
 }
 
 STRING 29256
-// Upgrades: R0H9 (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HE (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
 
 STRING 29257
-// Upgrades: R0HA (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HF (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -178024,18 +178005,6 @@ STRING 29278
 |cff7878ffОгненные ядра
 }
 
-STRING 29279
-// Abilities: A184 (|cff7878ffКольцо Огня), Name (Name)
-{
-|cff7878ffКольцо Огня
-}
-
-STRING 29280
-// Abilities: A184 (|cff7878ffКольцо Огня), Tip (Tooltip - Normal)
-{
-|cff7878ffКольцо Огня
-}
-
 STRING 29281
 // Abilities: A18H (|cff7878ffНеубиваемые), Name (Name)
 {
@@ -178139,7 +178108,7 @@ STRING 29297
 }
 
 STRING 29298
-// Upgrades: R0HB (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HG (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -178217,7 +178186,7 @@ STRING 29310
 }
 
 STRING 29311
-// Upgrades: R0HC (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HH (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -178295,7 +178264,7 @@ STRING 29323
 }
 
 STRING 29324
-// Upgrades: R0HD (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HI (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -178373,7 +178342,7 @@ STRING 29336
 }
 
 STRING 29337
-// Upgrades: R0HE (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HJ (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -178451,7 +178420,7 @@ STRING 29349
 }
 
 STRING 29350
-// Upgrades: R0HF (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HK (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -178529,7 +178498,7 @@ STRING 29362
 }
 
 STRING 29363
-// Upgrades: R0HG (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HL (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -178607,7 +178576,7 @@ STRING 29375
 }
 
 STRING 29376
-// Upgrades: R0HH (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HM (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -178685,7 +178654,7 @@ STRING 29388
 }
 
 STRING 29389
-// Upgrades: R0HI (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HN (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -178763,7 +178732,7 @@ STRING 29401
 }
 
 STRING 29402
-// Upgrades: R0HJ (Грабеж), EditorSuffix (Editor Suffix)
+// Upgrades: R0HO (Черный порох,Бездымный порох,Обогащенный п), EditorSuffix (Editor Suffix)
 {
 (Альянс)
 }
@@ -178840,12 +178809,6 @@ STRING 29414
 |cff7878ffВопрос Клана Черного Железа
 }
 
-STRING 29415
-// Upgrades: R0HK (Грабеж), EditorSuffix (Editor Suffix)
-{
-(Альянс)
-}
-
 STRING 29416
 // Upgrades: R0HN (Грабеж), Name (Name)
 {
@@ -178916,12 +178879,6 @@ STRING 29427
 // Upgrades: R0HN (Грабеж), Tip (Tooltip)
 {
 |cff7878ffПамять о Лотаре
-}
-
-STRING 29428
-// Upgrades: R0HL (Грабеж), EditorSuffix (Editor Suffix)
-{
-(Альянс)
 }
 
 STRING 29429
@@ -179249,24 +179206,6 @@ STRING 29482
 E
 }
 
-STRING 29483
-// Upgrades: R0HM (Грабеж), EditorSuffix (Editor Suffix)
-{
-(Альянс)
-}
-
-STRING 29484
-// Upgrades: R0HN (Грабеж), EditorSuffix (Editor Suffix)
-{
-(Альянс)
-}
-
-STRING 29485
-// Upgrades: R0HO (Черный порох,Бездымный порох,Обогащенный п), EditorSuffix (Editor Suffix)
-{
-(Альянс)
-}
-
 STRING 29486
 // Abilities: A18M (|cff7878ffЗачарованное оружие), Ubertip (Tooltip - Normal - Extended)
 {
@@ -179481,5 +179420,72 @@ STRING 29521
 // Abilities: A00M (Грабеж), Ubertip (Tooltip - Normal - Extended)
 {
 Нанося урон врагам, этот воин добывает ресурсы. Также, атакуя врага, у юнита есть шанс улучшиться (Уровень Грабежа * 2 \ 100 %)
+}
+
+STRING 29522
+// Units: h0KO (|cff7878ffДворфийский стрелок), EditorSuffix (Name - Editor Suffix)
+{
+Т2 (Альянс)
+}
+
+STRING 29523
+// Units: h0KR (|cff7878ffПехотинец Лордерона), EditorSuffix (Name - Editor Suffix)
+{
+Т1 Альянс
+}
+
+STRING 29524
+// Units: h0LW (|cff7878ffШтормградский воитель), EditorSuffix (Name - Editor Suffix)
+{
+Т1 (Альянс)
+}
+
+STRING 29525
+// Abilities: A01S (|cffff3200Кольцо огня|r), Ubertip (Tooltip - Normal - Extended)
+{
+Наносит |cff0080806 урона/сек|r. находящимся рядом врагам.
+|cff008000Радиус действия (220).|r
+}
+
+STRING 29526
+// Abilities: A0Y7 (|cfff08080Огненный ливень|r), Ubertip (Tooltip - Normal - Extended)
+{
+Обрушивает на указанную область волны огня. Каждая волна наносит урон мгновенно и некоторое кол-вл урона/сек. 
+Волн: |cfff0808015 |r
+|cffffcc002-й уровень:|r |cfff0808090 ед. урона, 25ед. периодического урона|r
+
+}
+
+STRING 29527
+// Abilities: A0Y7 (|cfff08080Огненный ливень|r), Ubertip (Tooltip - Normal - Extended)
+{
+Обрушивает на указанную область волны огня. Каждая волна наносит урон мгновенно и некоторое кол-вл урона/сек. 
+Волн: |cfff0808010 |r
+|cffffcc001-й уровень:|r |cfff0808060 ед. урона, 20 ед. периодического урона|r
+
+}
+
+STRING 29528
+// Abilities: A183 (|cff7878ffСнежная буря|r), Ubertip (Tooltip - Normal - Extended)
+{
+Обрушивает на указанную область 8 волн ледяных осколков, каждая из которых наносит 40 урона.
+}
+
+STRING 29529
+// Abilities: A184 (|cff7878ffКольцо огня), Name (Name)
+{
+|cff7878ffКольцо огня
+}
+
+STRING 29530
+// Abilities: A184 (|cff7878ffКольцо огня), Tip (Tooltip - Normal)
+{
+|cff7878ffКольцо огня
+}
+
+STRING 29531
+// Abilities: A184 (|cff7878ffКольцо огня), Ubertip (Tooltip - Normal - Extended)
+{
+Окутывает цель пламенем, который наносит 6 урона/сек. находящимся рядом войскам, в том числе механизмам. |nВремя действия: 15 сек.
 }
 
