@@ -1539,6 +1539,14 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_Test= null
+trigger gg_trg_ResoursesInterface_Copy= null
+framehandle face= null
+framehandle faceHover= null
+framehandle tooltip= null
+framehandle tooltipTitle= null
+framehandle tooltipBody= null
+framehandle IncomeTextFr= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -2308,9 +2316,9 @@ endfunction
 //*  UpdateGraph
 function UpdateGraf takes integer pi returns nothing
     if DisOn then
-            set balance[pi]=income[pi] - disincome[pi] + corruption[pi] - logistic[pi] + additional[pi]
-        else
-            set balance[pi]=income[pi]
+        set balance[pi]=income[pi] - disincome[pi] + corruption[pi] - logistic[pi] + additional[pi]
+    else
+        set balance[pi]=income[pi]
     endif
 endfunction
 //***************************************************************************
@@ -2524,17 +2532,20 @@ endfunction
 // scope init ends
 //***************************************************************************
 //*  IncomeTooltip
+
+
+
+
 function Face2 takes nothing returns nothing
-local framehandle face= null
-local framehandle faceHover= null
-local framehandle tooltip= null
-local framehandle IncomeTextFr= null
+
 
 call BlzLoadTOCFile("war3mapimported\\BoxedText.toc")
 set face=BlzCreateFrameByType("BACKDROP", "Face", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
 set faceHover=BlzCreateFrameByType("FRAME", "FaceFrame", face, "", 0)
 set IncomeTextFr=BlzCreateFrameByType("TEXT", "MyTextFrame", BlzGetOriginFrame(ORIGIN_FRAME_GAME_UI, 0), "", 0)
 set tooltip=BlzCreateFrame("BoxedText", face, 0, 0)
+set tooltipBody=BlzGetFrameByName("BoxedTextValue", 0)
+set tooltipTitle=BlzGetFrameByName("BoxedTextTitle", 0)
 call BlzFrameSetText(IncomeTextFr, "999999")
 call BlzFrameSetAbsPoint(IncomeTextFr, FRAMEPOINT_TOPRIGHT, 0.2337, 0.5937)
 call BlzFrameSetEnable(IncomeTextFr, false)
@@ -2549,8 +2560,8 @@ call BlzFrameSetAbsPoint(tooltip, FRAMEPOINT_TOPRIGHT, 0.289, 0.5685)
 call BlzFrameSetPoint(tooltip, FRAMEPOINT_BOTTOM, face, FRAMEPOINT_TOP, 0.0, - 0.1)
 call BlzFrameSetSize(tooltip, 0.03, 0.03)
 
-call BlzFrameSetText(BlzGetFrameByName("BoxedTextValue", 0), "Инком = Доходы-Расходы")
-call BlzFrameSetText(BlzGetFrameByName("BoxedTextTitle", 0), "Инком")
+call BlzFrameSetText(tooltipBody, "Инком = Доходы-Расходы")
+call BlzFrameSetText(tooltipTitle, "Инком")
 
 call BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 
@@ -6880,6 +6891,66 @@ function InitTrig_Unit_Indexer takes nothing returns nothing
     call TriggerAddAction(gg_trg_Unit_Indexer, function Trig_Unit_Indexer_Actions)
 endfunction
 
+//===========================================================================
+// Trigger: Test
+//===========================================================================
+function Trig_Test_Actions takes nothing returns nothing
+    call BlzFrameSetText(tooltipBody, "123")
+    call BlzFrameSetText(tooltipTitle, "321")
+
+
+endfunction
+
+//===========================================================================
+function InitTrig_Test takes nothing returns nothing
+    set gg_trg_Test=CreateTrigger()
+    call TriggerRegisterTimerEventSingle(gg_trg_Test, 5)
+    call TriggerAddAction(gg_trg_Test, function Trig_Test_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: ResoursesInterface Copy
+//===========================================================================
+function Trig_ResoursesInterface_Copy_Actions takes nothing returns nothing
+    
+    local player p= GetLocalPlayer()
+    local integer pi= GetPlayerId(p)
+    local string text
+    local real other= corruption[pi] + additional[pi]
+    
+    //if DisOn then
+      //  call BlzFrameSetText(BlzGetFrameByName("Income0202",0), I2S(R2I(disincome[pi])))
+   // else
+       // call BlzFrameSetText(BlzGetFrameByName("Income0202",0), "|cffffff00"+I2S(R2I(disincome[pi]))+"(0)|r" )
+   // endif
+    
+    call BlzFrameSetText(IncomeTextFr, R2S(balance[pi]))
+    
+    if balance[pi] > 0 then
+        call BlzFrameSetText(tooltipTitle, "Профицит")
+    elseif balance[pi] == 0 then
+        call BlzFrameSetText(tooltipTitle, "Нулевой баланс")
+    else
+        call BlzFrameSetText(tooltipTitle, "Дефицит")
+    endif
+    //set balance[pi]=income[pi]-disincome[pi]+corruption[pi]-logistic[pi]+additional[pi]
+    
+    set text=R2S(income[pi]) + "-" + R2S(disincome[pi]) + "-" + R2S(logistic[pi]) + " и " + R2S(other) + "|n |cffbeffa0Доходы|r - |cffffb4a0Расходы|r-|cffffb4a0Логистика|r и Прочее"
+    //set text = "Доход("+R2S(income[pi])+")-Расход("+R2S()+")|n-Логистика("+R2S(logistic[pi])+")"+"|n прочие элементы в разработке"
+    call BlzFrameSetText(tooltipBody, text)
+    
+    
+    set text=null
+    set p=null
+endfunction
+
+//===========================================================================
+function InitTrig_ResoursesInterface_Copy takes nothing returns nothing
+    set gg_trg_ResoursesInterface_Copy=CreateTrigger()
+    call TriggerRegisterTimerEvent(gg_trg_ResoursesInterface_Copy, 0.10, true)
+    call TriggerAddAction(gg_trg_ResoursesInterface_Copy, function Trig_ResoursesInterface_Copy_Actions)
+endfunction
 //===========================================================================
 // Trigger: MainInfo
 //===========================================================================
@@ -46590,6 +46661,8 @@ endfunction
 function InitCustomTriggers takes nothing returns nothing
     call InitTrig_runSeachHandle()
     call InitTrig_Unit_Indexer()
+    call InitTrig_Test()
+    call InitTrig_ResoursesInterface_Copy()
     call InitTrig_MainInfo()
     call InitTrig_Initial_things()
     call InitTrig_StartLobby()
