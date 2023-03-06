@@ -4,12 +4,12 @@ constant boolean LIBRARY_A1=true
 //endglobals from A1
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE___SpellHero='A06P'
-constant integer SpellSleepAOE___SpellCast='A06O'
-constant string SpellSleepAOE___SpellOrder="sleep"
-constant integer SpellSleepAOE___DummyID='u000'
-constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE___DummyUnit
+constant integer SpellSleepAOE__SpellHero='A06P'
+constant integer SpellSleepAOE__SpellCast='A06O'
+constant string SpellSleepAOE__SpellOrder="sleep"
+constant integer SpellSleepAOE__DummyID='u000'
+constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE__DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -347,6 +347,7 @@ trigger gg_trg_OPT_G= null
 trigger gg_trg_Opt_PG= null
 trigger gg_trg_Opt_Point= null
 trigger gg_trg_Opt_Point_Copy= null
+trigger gg_trg_ResoursesInterface_Copy= null
 trigger gg_trg_Hide_Default_UI_And_Reshow_some= null
 trigger gg_trg_ResoursesInterface= null
 trigger gg_trg_Interface= null
@@ -1539,8 +1540,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_Test= null
-trigger gg_trg_ResoursesInterface_Copy= null
 framehandle face= null
 framehandle faceHover= null
 framehandle tooltip= null
@@ -1691,7 +1690,7 @@ endfunction
 //library A1 ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE___getRange takes integer level returns integer
+    function SpellSleepAOE__getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1699,33 +1698,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
-            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
+            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
+            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE___anon__0 takes nothing returns boolean
-            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE__anon__0 takes nothing returns boolean
+            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE___anon__2 takes nothing returns boolean
+            function SpellSleepAOE__anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE___anon__1 takes nothing returns nothing
+        function SpellSleepAOE__anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1733,19 +1732,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE___onInit takes nothing returns nothing
+    function SpellSleepAOE__onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
+        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
         set t=null
     endfunction
 
@@ -2451,25 +2450,28 @@ function UISetup takes nothing returns nothing
 	call BlzFrameSetAbsPoint(MiniMap, FRAMEPOINT_TOPRIGHT, 0.2125, 0.141)
 	
 	//Minimap Buttons
-	set fh=BlzGetFrameByName("MinimapSignalButton", 0)
+	set fh=BlzGetFrameByName("MiniMapCreepButton", 0)
 	call BlzFrameClearAllPoints(fh)
-	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_BOTTOMLEFT, 0.222, 0.116)
-	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.242, 0.136)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_BOTTOMLEFT, 0.214, 0.116)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.234, 0.136)
 	call BlzFrameSetTexture(fh, "UI\\ButtonBorder.dds", 0, true)
 	set fh=BlzGetFrameByName("MiniMapAllyButton", 0)
 	call BlzFrameClearAllPoints(fh)
-	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_BOTTOMLEFT, 0.242, 0.116)
-	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.262, 0.136)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_BOTTOMLEFT, 0.234, 0.116)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.254, 0.136)
 	call BlzFrameSetTexture(fh, "UI\\ButtonBorder.dds", 0, true)
 	set fh=BlzGetFrameByName("MiniMapTerrainButton", 0)
 	call BlzFrameClearAllPoints(fh)
-	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_BOTTOMLEFT, 0.262, 0.116)
-	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.282, 0.136)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_BOTTOMLEFT, 0.254, 0.116)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.274, 0.136)
 	call BlzFrameSetTexture(fh, "UI\\ButtonBorder.dds", 0, true)
-	set fh=BlzGetFrameByName("MiniMapCreepButton", 0)
+	set fh=BlzGetFrameByName("MinimapSignalButton", 0)
 	call BlzFrameSetVisible(fh, false)
 	set fh=BlzGetFrameByName("FormationButton", 0)
-	call BlzFrameSetVisible(fh, false)
+    call BlzFrameClearAllPoints(fh)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_BOTTOMLEFT, 0.274, 0.116)
+	call BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.294, 0.136)
+	call BlzFrameSetTexture(fh, "UI\\ButtonBorder.dds", 0, true)
 	
 	//Minimap Border
 	set fh=BlzCreateFrameByType("BACKDROP", "MinimapBorder", MiniMap, "", 0)
@@ -6892,24 +6894,6 @@ function InitTrig_Unit_Indexer takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: Test
-//===========================================================================
-function Trig_Test_Actions takes nothing returns nothing
-    call BlzFrameSetText(tooltipBody, "123")
-    call BlzFrameSetText(tooltipTitle, "321")
-
-
-endfunction
-
-//===========================================================================
-function InitTrig_Test takes nothing returns nothing
-    set gg_trg_Test=CreateTrigger()
-    call TriggerRegisterTimerEventSingle(gg_trg_Test, 5)
-    call TriggerAddAction(gg_trg_Test, function Trig_Test_Actions)
-endfunction
-
-
-//===========================================================================
 // Trigger: ResoursesInterface Copy
 //===========================================================================
 function Trig_ResoursesInterface_Copy_Actions takes nothing returns nothing
@@ -6925,18 +6909,20 @@ function Trig_ResoursesInterface_Copy_Actions takes nothing returns nothing
        // call BlzFrameSetText(BlzGetFrameByName("Income0202",0), "|cffffff00"+I2S(R2I(disincome[pi]))+"(0)|r" )
    // endif
     
-    call BlzFrameSetText(IncomeTextFr, R2S(balance[pi]))
     
     if balance[pi] > 0 then
-        call BlzFrameSetText(tooltipTitle, "Профицит")
+        call BlzFrameSetText(IncomeTextFr, "|cffbeffa0" + I2S(R2I(balance[pi])))
+        call BlzFrameSetText(tooltipTitle, "|cffbeffa0Профицит")
     elseif balance[pi] == 0 then
+        call BlzFrameSetText(IncomeTextFr, I2S(R2I(balance[pi])))
         call BlzFrameSetText(tooltipTitle, "Нулевой баланс")
     else
-        call BlzFrameSetText(tooltipTitle, "Дефицит")
+        call BlzFrameSetText(IncomeTextFr, "|cffffb4a0" + I2S(R2I(balance[pi])))
+        call BlzFrameSetText(tooltipTitle, "|cffffb4a0Дефицит")
     endif
     //set balance[pi]=income[pi]-disincome[pi]+corruption[pi]-logistic[pi]+additional[pi]
     
-    set text=R2S(income[pi]) + "-" + R2S(disincome[pi]) + "-" + R2S(logistic[pi]) + " и " + R2S(other) + "|n |cffbeffa0Доходы|r - |cffffb4a0Расходы|r-|cffffb4a0Логистика|r и Прочее"
+    set text="|cffbeffa0" + I2S(R2I(income[pi])) + "|r-(|cffffb4a0" + I2S(R2I(disincome[pi])) + "|r+|cffffb4a0" + I2S(R2I(logistic[pi])) + "|r)|n |cffbeffa0Доходы|r - (|cffffb4a0Расходы|r+|cffffb4a0Логистика|r)"
     //set text = "Доход("+R2S(income[pi])+")-Расход("+R2S()+")|n-Логистика("+R2S(logistic[pi])+")"+"|n прочие элементы в разработке"
     call BlzFrameSetText(tooltipBody, text)
     
@@ -46661,7 +46647,6 @@ endfunction
 function InitCustomTriggers takes nothing returns nothing
     call InitTrig_runSeachHandle()
     call InitTrig_Unit_Indexer()
-    call InitTrig_Test()
     call InitTrig_ResoursesInterface_Copy()
     call InitTrig_MainInfo()
     call InitTrig_Initial_things()
@@ -47661,7 +47646,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(1), 1)
     call ForcePlayerStartLocation(Player(1), 1)
     call SetPlayerColor(Player(1), ConvertPlayerColor(1))
-    call SetPlayerRacePreference(Player(1), RACE_PREF_ORC)
+    call SetPlayerRacePreference(Player(1), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(1), false)
     call SetPlayerController(Player(1), MAP_CONTROL_USER)
 
@@ -47669,7 +47654,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(2), 2)
     call ForcePlayerStartLocation(Player(2), 2)
     call SetPlayerColor(Player(2), ConvertPlayerColor(2))
-    call SetPlayerRacePreference(Player(2), RACE_PREF_UNDEAD)
+    call SetPlayerRacePreference(Player(2), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(2), false)
     call SetPlayerController(Player(2), MAP_CONTROL_USER)
 
@@ -47677,7 +47662,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(3), 3)
     call ForcePlayerStartLocation(Player(3), 3)
     call SetPlayerColor(Player(3), ConvertPlayerColor(3))
-    call SetPlayerRacePreference(Player(3), RACE_PREF_NIGHTELF)
+    call SetPlayerRacePreference(Player(3), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(3), false)
     call SetPlayerController(Player(3), MAP_CONTROL_USER)
 
@@ -47693,7 +47678,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(5), 5)
     call ForcePlayerStartLocation(Player(5), 5)
     call SetPlayerColor(Player(5), ConvertPlayerColor(5))
-    call SetPlayerRacePreference(Player(5), RACE_PREF_ORC)
+    call SetPlayerRacePreference(Player(5), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(5), false)
     call SetPlayerController(Player(5), MAP_CONTROL_USER)
 
@@ -47701,7 +47686,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(6), 6)
     call ForcePlayerStartLocation(Player(6), 6)
     call SetPlayerColor(Player(6), ConvertPlayerColor(6))
-    call SetPlayerRacePreference(Player(6), RACE_PREF_UNDEAD)
+    call SetPlayerRacePreference(Player(6), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(6), false)
     call SetPlayerController(Player(6), MAP_CONTROL_USER)
 
@@ -47709,7 +47694,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(7), 7)
     call ForcePlayerStartLocation(Player(7), 7)
     call SetPlayerColor(Player(7), ConvertPlayerColor(7))
-    call SetPlayerRacePreference(Player(7), RACE_PREF_NIGHTELF)
+    call SetPlayerRacePreference(Player(7), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(7), false)
     call SetPlayerController(Player(7), MAP_CONTROL_USER)
 
@@ -47725,7 +47710,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(9), 9)
     call ForcePlayerStartLocation(Player(9), 9)
     call SetPlayerColor(Player(9), ConvertPlayerColor(9))
-    call SetPlayerRacePreference(Player(9), RACE_PREF_ORC)
+    call SetPlayerRacePreference(Player(9), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(9), false)
     call SetPlayerController(Player(9), MAP_CONTROL_USER)
 
@@ -47733,7 +47718,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(10), 10)
     call ForcePlayerStartLocation(Player(10), 10)
     call SetPlayerColor(Player(10), ConvertPlayerColor(10))
-    call SetPlayerRacePreference(Player(10), RACE_PREF_UNDEAD)
+    call SetPlayerRacePreference(Player(10), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(10), false)
     call SetPlayerController(Player(10), MAP_CONTROL_USER)
 
@@ -47741,7 +47726,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(11), 11)
     call ForcePlayerStartLocation(Player(11), 11)
     call SetPlayerColor(Player(11), ConvertPlayerColor(11))
-    call SetPlayerRacePreference(Player(11), RACE_PREF_NIGHTELF)
+    call SetPlayerRacePreference(Player(11), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(11), false)
     call SetPlayerController(Player(11), MAP_CONTROL_USER)
 
@@ -47757,7 +47742,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(13), 13)
     call ForcePlayerStartLocation(Player(13), 13)
     call SetPlayerColor(Player(13), ConvertPlayerColor(13))
-    call SetPlayerRacePreference(Player(13), RACE_PREF_ORC)
+    call SetPlayerRacePreference(Player(13), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(13), false)
     call SetPlayerController(Player(13), MAP_CONTROL_USER)
 
@@ -47765,7 +47750,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(14), 14)
     call ForcePlayerStartLocation(Player(14), 14)
     call SetPlayerColor(Player(14), ConvertPlayerColor(14))
-    call SetPlayerRacePreference(Player(14), RACE_PREF_UNDEAD)
+    call SetPlayerRacePreference(Player(14), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(14), false)
     call SetPlayerController(Player(14), MAP_CONTROL_USER)
 
@@ -47773,7 +47758,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(15), 15)
     call ForcePlayerStartLocation(Player(15), 15)
     call SetPlayerColor(Player(15), ConvertPlayerColor(15))
-    call SetPlayerRacePreference(Player(15), RACE_PREF_NIGHTELF)
+    call SetPlayerRacePreference(Player(15), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(15), false)
     call SetPlayerController(Player(15), MAP_CONTROL_NEUTRAL)
 
@@ -47789,7 +47774,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(17), 17)
     call ForcePlayerStartLocation(Player(17), 17)
     call SetPlayerColor(Player(17), ConvertPlayerColor(17))
-    call SetPlayerRacePreference(Player(17), RACE_PREF_ORC)
+    call SetPlayerRacePreference(Player(17), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(17), false)
     call SetPlayerController(Player(17), MAP_CONTROL_USER)
 
@@ -47797,7 +47782,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(18), 18)
     call ForcePlayerStartLocation(Player(18), 18)
     call SetPlayerColor(Player(18), ConvertPlayerColor(18))
-    call SetPlayerRacePreference(Player(18), RACE_PREF_UNDEAD)
+    call SetPlayerRacePreference(Player(18), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(18), false)
     call SetPlayerController(Player(18), MAP_CONTROL_USER)
 
@@ -47805,7 +47790,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(19), 19)
     call ForcePlayerStartLocation(Player(19), 19)
     call SetPlayerColor(Player(19), ConvertPlayerColor(19))
-    call SetPlayerRacePreference(Player(19), RACE_PREF_NIGHTELF)
+    call SetPlayerRacePreference(Player(19), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(19), false)
     call SetPlayerController(Player(19), MAP_CONTROL_USER)
 
@@ -47821,7 +47806,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(21), 21)
     call ForcePlayerStartLocation(Player(21), 21)
     call SetPlayerColor(Player(21), ConvertPlayerColor(21))
-    call SetPlayerRacePreference(Player(21), RACE_PREF_ORC)
+    call SetPlayerRacePreference(Player(21), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(21), false)
     call SetPlayerController(Player(21), MAP_CONTROL_USER)
 
@@ -47829,7 +47814,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(22), 22)
     call ForcePlayerStartLocation(Player(22), 22)
     call SetPlayerColor(Player(22), ConvertPlayerColor(22))
-    call SetPlayerRacePreference(Player(22), RACE_PREF_UNDEAD)
+    call SetPlayerRacePreference(Player(22), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(22), false)
     call SetPlayerController(Player(22), MAP_CONTROL_USER)
 
@@ -47837,7 +47822,7 @@ function InitCustomPlayerSlots takes nothing returns nothing
     call SetPlayerStartLocation(Player(23), 23)
     call ForcePlayerStartLocation(Player(23), 23)
     call SetPlayerColor(Player(23), ConvertPlayerColor(23))
-    call SetPlayerRacePreference(Player(23), RACE_PREF_NIGHTELF)
+    call SetPlayerRacePreference(Player(23), RACE_PREF_HUMAN)
     call SetPlayerRaceSelectable(Player(23), false)
     call SetPlayerController(Player(23), MAP_CONTROL_USER)
 
@@ -47994,7 +47979,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("SpellSleepAOE___onInit")
+call ExecuteFunc("SpellSleepAOE__onInit")
 call UISetup() // INLINED!!
 call Face2() // INLINED!!
 
