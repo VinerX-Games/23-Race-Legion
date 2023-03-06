@@ -694,6 +694,8 @@ trigger gg_trg_Hero_Limits_General= null
 trigger gg_trg_OgresStart= null
 trigger gg_trg_OgresHpSpell2= null
 trigger gg_trg_OrgesHpSpell= null
+trigger gg_trg_Spell_Copy= null
+trigger gg_trg_RRR= null
 trigger gg_trg_BegYel= null
 trigger gg_trg_CanYel= null
 trigger gg_trg_FinYel= null
@@ -1556,8 +1558,7 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_RRR= null
-trigger gg_trg_Spell_Copy= null
+trigger gg_trg_Gruul= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
@@ -20649,6 +20650,32 @@ function InitTrig_OrgesHpSpell takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_OrgesHpSpell, EVENT_PLAYER_UNIT_ATTACKED)
     call TriggerAddCondition(gg_trg_OrgesHpSpell, Condition(function Trig_OrgesHpSpell_Conditions))
     call TriggerAddAction(gg_trg_OrgesHpSpell, function Trig_OrgesHpSpell_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Gruul
+//===========================================================================
+function Trig_Gruul_Conditions takes nothing returns boolean
+    if ( not ( GetLearnedSkillBJ() == 'A18S' ) ) then
+        return false
+    endif
+    if ( not ( GetUnitAbilityLevelSwapped('A18S', GetTriggerUnit()) >= 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Gruul_Actions takes nothing returns nothing
+    call UnitAddAbilityBJ('A18T', GetTriggerUnit())
+    call SetUnitAbilityLevelSwapped('A18T', GetTriggerUnit(), GetUnitAbilityLevelSwapped('A18S', GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_Gruul takes nothing returns nothing
+    set gg_trg_Gruul=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Gruul, EVENT_PLAYER_HERO_SKILL)
+    call TriggerAddCondition(gg_trg_Gruul, Condition(function Trig_Gruul_Conditions))
+    call TriggerAddAction(gg_trg_Gruul, function Trig_Gruul_Actions)
 endfunction
 
 //===========================================================================
@@ -46965,6 +46992,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_OgresStart()
     call InitTrig_OgresHpSpell2()
     call InitTrig_OrgesHpSpell()
+    call InitTrig_Gruul()
     call InitTrig_Spell_Copy()
     call InitTrig_RRR()
     call InitTrig_BegYel()
