@@ -37337,7 +37337,7 @@ STRING 6186
 }
 
 STRING 6187
-// Upgrades: R05I (Сделать некромантов адептами,Сделать некр�), effect2 (Effect 2)
+// Upgrades: R05H (Болезнетворное облако), effect1 (Effect 1)
 {
 rhpx
 }
@@ -46500,7 +46500,7 @@ STRING 7708
 }
 
 STRING 7709
-// Upgrades: R05J (Сделать некромантов адептами,Сделать некр�), effect2 (Effect 2)
+// Upgrades: R05I (Сделать некромантов адептами,Сделать некр�), effect2 (Effect 2)
 {
 rhpx
 }
@@ -46650,7 +46650,7 @@ STRING 7733
 }
 
 STRING 7734
-// Upgrades: R061 (Каннибализм), effect2 (Effect 2)
+// Upgrades: R05J (Сделать некромантов адептами,Сделать некр�), effect2 (Effect 2)
 {
 rhpx
 }
@@ -52531,7 +52531,7 @@ STRING 8709
 }
 
 STRING 8710
-// Upgrades: R05I (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
+// Upgrades: R05K (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
 {
 Увеличивает урон нежити, при этом понижая хп.
 Урон (+2)
@@ -52539,7 +52539,7 @@ STRING 8710
 }
 
 STRING 8711
-// Upgrades: R05I (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
+// Upgrades: R05K (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
 {
 Увеличивает урон нежити, при этом понижая хп.
 Урон (+2)
@@ -52553,7 +52553,7 @@ ratx
 }
 
 STRING 8713
-// Upgrades: R064 (Каннибализм), effect2 (Effect 2)
+// Upgrades: R061 (Каннибализм), effect2 (Effect 2)
 {
 rhpx
 }
@@ -52583,7 +52583,7 @@ STRING 8717
 }
 
 STRING 8718
-// Upgrades: R05I (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
+// Upgrades: R05K (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
 {
 Увеличивает урон нежити, при этом понижая хп.
 Урон (+2)
@@ -52591,7 +52591,7 @@ STRING 8718
 }
 
 STRING 8719
-// Upgrades: R05I (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
+// Upgrades: R05M (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
 {
 Увеличивает урон нежити, при этом понижая хп.
 Урон (+2)
@@ -52646,22 +52646,6 @@ STRING 8727
 |cff6e6e6eОстановить разложение|r
 }
 
-STRING 8728
-// Upgrades: R05J (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
-{
-Увеличивает хп нежити, при этом понижая урон.
-Урон (-2)
-Хп (+10)
-}
-
-STRING 8729
-// Upgrades: R05J (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
-{
-Увеличивает хп нежити, при этом понижая урон.
-Урон (-2)
-Хп (+10)
-}
-
 STRING 8730
 // Upgrades: R068 (Каннибализм), effect3 (Effect 3)
 {
@@ -52669,7 +52653,7 @@ ratx
 }
 
 STRING 8731
-// Upgrades: R065 (Каннибализм), effect2 (Effect 2)
+// Upgrades: R064 (Каннибализм), effect2 (Effect 2)
 {
 rhpx
 }
@@ -52696,22 +52680,6 @@ STRING 8735
 // Upgrades: R05J (Сделать некромантов адептами,Сделать некр�), Tip (Tooltip)
 {
 |cff6e6e6eОстановить разложение|r
-}
-
-STRING 8736
-// Upgrades: R05J (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
-{
-Увеличивает хп нежити, при этом понижая урон.
-Урон (-2)
-Хп (+10)
-}
-
-STRING 8737
-// Upgrades: R05J (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
-{
-Увеличивает хп нежити, при этом понижая урон.
-Урон (-2)
-Хп (+10)
 }
 
 STRING 8738
@@ -52768,14 +52736,6 @@ STRING 8746
 После смерти |cff6e6e6eПоганища|r, с его трупа создаются вурдалаки. Со временем они деградируют.
 }
 
-STRING 8747
-// Upgrades: R05K (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
-{
-Увеличивает урон нежити, при этом понижая хп.
-Урон (+2)
-Хп (-10)
-}
-
 STRING 8748
 // Upgrades: R05K (Сделать некромантов адептами,Сделать некр�), effect1 (Effect 1)
 {
@@ -52804,22 +52764,6 @@ STRING 8752
 // Upgrades: R05K (Сделать некромантов адептами,Сделать некр�), Tip (Tooltip)
 {
 |cff6e6e6eУсугубить Разложение |r
-}
-
-STRING 8753
-// Upgrades: R05K (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
-{
-Увеличивает урон нежити, при этом понижая хп.
-Урон (+2)
-Хп (-10)
-}
-
-STRING 8754
-// Upgrades: R05K (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
-{
-Увеличивает урон нежити, при этом понижая хп.
-Урон (+2)
-Хп (-10)
 }
 
 STRING 8755
@@ -53282,14 +53226,6 @@ STRING 8831
 // Abilities: A0DS (Шипастая Броня), Ubertip (Tooltip - Normal - Extended)
 {
 Покрывает броню шипами, которые дают +5 к броне и отражают <AUts,DataA1,%>% получаемого в ближнем бою урона в атакующих врагов.
-}
-
-STRING 8832
-// Upgrades: R05M (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
-{
-Увеличивает урон нежити, при этом понижая хп.
-Урон (+2)
-Хп (-10)
 }
 
 STRING 8833
@@ -58145,7 +58081,7 @@ rmnr
 }
 
 STRING 9640
-// Upgrades: R066 (Каннибализм), effect2 (Effect 2)
+// Upgrades: R065 (Каннибализм), effect2 (Effect 2)
 {
 rhpx
 }
@@ -63281,7 +63217,7 @@ STRING 10489
 }
 
 STRING 10490
-// Upgrades: R067 (Каннибализм), effect2 (Effect 2)
+// Upgrades: R066 (Каннибализм), effect2 (Effect 2)
 {
 rhpx
 }
@@ -65211,7 +65147,7 @@ Z
 }
 
 STRING 10810
-// Upgrades: R068 (Каннибализм), effect2 (Effect 2)
+// Upgrades: R067 (Каннибализм), effect2 (Effect 2)
 {
 rhpx
 }
@@ -75990,7 +75926,7 @@ STRING 12585
 }
 
 STRING 12586
-// Upgrades: R06T (Защита), effect3 (Effect 3)
+// Upgrades: R068 (Каннибализм), effect2 (Effect 2)
 {
 rhpx
 }
@@ -76827,7 +76763,7 @@ rats
 }
 
 STRING 12725
-// Upgrades: R071 (Атаки чудовищ,Улучшенные атаки чудовищ,Уси), effect1 (Effect 1)
+// Upgrades: R06T (Защита), effect3 (Effect 3)
 {
 rhpx
 }
@@ -88947,7 +88883,7 @@ rmvx
 }
 
 STRING 14713
-// Upgrades: R07U (Каннибализм), effect1 (Effect 1)
+// Upgrades: R071 (Атаки чудовищ,Улучшенные атаки чудовищ,Уси), effect1 (Effect 1)
 {
 rhpx
 }
@@ -89128,7 +89064,7 @@ ratx
 }
 
 STRING 14742
-// Upgrades: R08R (Сделать волшебниц адептами,Сделать волшеб�), effect1 (Effect 1)
+// Upgrades: R07U (Каннибализм), effect1 (Effect 1)
 {
 rhpx
 }
@@ -89872,7 +89808,7 @@ W
 }
 
 STRING 14863
-// Upgrades: R094 (Сделать сирен адептами,Сделать сирен масте), effect2 (Effect 2)
+// Upgrades: R08R (Сделать волшебниц адептами,Сделать волшеб�), effect1 (Effect 1)
 {
 rhpx
 }
@@ -91181,7 +91117,7 @@ rats
 }
 
 STRING 15076
-// Upgrades: R096 (Защита), effect3 (Effect 3)
+// Upgrades: R094 (Сделать сирен адептами,Сделать сирен масте), effect2 (Effect 2)
 {
 rhpx
 }
@@ -93960,12 +93896,6 @@ STRING 15515
 // Abilities: A0CP (|cff6e6e6eЗов смерти|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff008080+<Aroa,DataA1,%>%|r к урону находящихся рядом союзников. |nВремя действия: |cff008080<Aroa,Dur1> сек.|r
-}
-
-STRING 15516
-// Abilities: A0CQ (|cff00c800Пожирание|r), Researchubertip (Tooltip - Learn - Extended)
-{
-Выпускает несколько ликов скверны, нанося урон находящимся рядом врагам. |n|n|cffffcc001-й уровень:|r |cff008080<AEfk,DataA1> урона каждой цели, кол-во целей 18.|r |n|cffffcc002-й уровень:|r |cff008080<AEfk,DataA2> урона каждой цели, кол-во целей 25.|r
 }
 
 STRING 15517
@@ -97366,6 +97296,12 @@ STRING 16073
 Призвать |cff008080Огненную птицу|r
 }
 
+STRING 16074
+// Abilities: A0CQ (|cff00c800Пожирание|r), Researchubertip (Tooltip - Learn - Extended)
+{
+Выпускает несколько ликов скверны, нанося урон находящимся рядом врагам. |n|n|cffffcc001-й уровень:|r |cff008080300 урона каждой цели, кол-во целей 18.|r |n|cffffcc002-й уровень:|r |cff008080450 урона каждой цели, кол-во целей 25.|r
+}
+
 STRING 16075
 // Abilities: A0QI (|cff008080Бросок валуна|r), Name (Name)
 {
@@ -97445,7 +97381,7 @@ STRING 16085
 }
 
 STRING 16086
-// Upgrades: R09A (Защита), effect1 (Effect 1)
+// Upgrades: R096 (Защита), effect3 (Effect 3)
 {
 rhpx
 }
@@ -98480,7 +98416,7 @@ ratx
 }
 
 STRING 16249
-// Upgrades: R09E (Защита), effect1 (Effect 1)
+// Upgrades: R09A (Защита), effect1 (Effect 1)
 {
 rhpx
 }
@@ -98538,7 +98474,7 @@ rmnx
 }
 
 STRING 16258
-// Upgrades: R09M (Сила Луны,Мощь Луны,Могущество Луны), effect1 (Effect 1)
+// Upgrades: R09E (Защита), effect1 (Effect 1)
 {
 rhpx
 }
@@ -98877,7 +98813,7 @@ STRING 16311
 }
 
 STRING 16312
-// Upgrades: R09Q (Защита), effect2 (Effect 2)
+// Upgrades: R09M (Сила Луны,Мощь Луны,Могущество Луны), effect1 (Effect 1)
 {
 rhpx
 }
@@ -99727,7 +99663,7 @@ STRING 16451
 }
 
 STRING 16452
-// Upgrades: R09R (Защита), effect2 (Effect 2)
+// Upgrades: R09Q (Защита), effect2 (Effect 2)
 {
 rhpx
 }
@@ -100362,7 +100298,7 @@ STRING 16551
 }
 
 STRING 16552
-// Upgrades: R09X (Защита), effect1 (Effect 1)
+// Upgrades: R09R (Защита), effect2 (Effect 2)
 {
 rhpx
 }
@@ -102936,7 +102872,7 @@ X
 }
 
 STRING 16975
-// Upgrades: R0AI (Улучшенные луки), effect1 (Effect 1)
+// Upgrades: R09X (Защита), effect1 (Effect 1)
 {
 rhpx
 }
@@ -102978,7 +102914,7 @@ X
 }
 
 STRING 16982
-// Upgrades: R0AQ (Улучшение до берсерка), effect1 (Effect 1)
+// Upgrades: R0AI (Улучшенные луки), effect1 (Effect 1)
 {
 rhpx
 }
@@ -104038,7 +103974,7 @@ STRING 17157
 }
 
 STRING 17158
-// Upgrades: R0AR (Улучшение до берсерка), effect1 (Effect 1)
+// Upgrades: R0AQ (Улучшение до берсерка), effect1 (Effect 1)
 {
 rhpx
 }
@@ -108922,7 +108858,7 @@ STRING 17969
 }
 
 STRING 17970
-// Upgrades: R0B3 (Улучшение до берсерка), effect1 (Effect 1)
+// Upgrades: R0AR (Улучшение до берсерка), effect1 (Effect 1)
 {
 rhpx
 }
@@ -120884,7 +120820,7 @@ STRING 19961
 }
 
 STRING 19962
-// Upgrades: R0BL (Доспехи из клепаной кожи,Доспехи из армиро�), effect2 (Effect 2)
+// Upgrades: R0B3 (Улучшение до берсерка), effect1 (Effect 1)
 {
 rhpx
 }
@@ -120950,7 +120886,7 @@ STRING 19972
 }
 
 STRING 19973
-// Upgrades: R0C9 (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
+// Upgrades: R0BL (Доспехи из клепаной кожи,Доспехи из армиро�), effect2 (Effect 2)
 {
 rhpx
 }
@@ -125333,7 +125269,7 @@ W
 }
 
 STRING 20688
-// Upgrades: R0CP (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
+// Upgrades: R0C9 (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
 {
 rhpx
 }
@@ -129387,7 +129323,7 @@ radl
 }
 
 STRING 21355
-// Upgrades: R0D6 (Шрапнель), effect1 (Effect 1)
+// Upgrades: R0CP (Доспехи из клепаной кожи,Доспехи из армиро�), effect1 (Effect 1)
 {
 rhpx
 }
@@ -131650,7 +131586,7 @@ R
 }
 
 STRING 21714
-// Upgrades: R0DO (Железная броня,Стальная броня,Мифриловая б), effect1 (Effect 1)
+// Upgrades: R0D6 (Шрапнель), effect1 (Effect 1)
 {
 rhpx
 }
@@ -131716,7 +131652,7 @@ STRING 21724
 }
 
 STRING 21725
-// Upgrades: R0EC (Сила Луны,Мощь Луны,Могущество Луны), effect3 (Effect 3)
+// Upgrades: R0DO (Железная броня,Стальная броня,Мифриловая б), effect1 (Effect 1)
 {
 rhpx
 }
@@ -142239,7 +142175,7 @@ W
 }
 
 STRING 23422
-// Upgrades: R0EF (Сила Луны,Мощь Луны,Могущество Луны), effect1 (Effect 1)
+// Upgrades: R0EC (Сила Луны,Мощь Луны,Могущество Луны), effect3 (Effect 3)
 {
 rhpx
 }
@@ -153294,7 +153230,7 @@ STRING 25233
 }
 
 STRING 25234
-// Upgrades: R0F7 (Авиабомбы), effect1 (Effect 1)
+// Upgrades: R0EF (Сила Луны,Мощь Луны,Могущество Луны), effect1 (Effect 1)
 {
 rhpx
 }
@@ -153472,7 +153408,7 @@ STRING 25262
 }
 
 STRING 25263
-// Upgrades: R0F8 (Авиабомбы), effect1 (Effect 1)
+// Upgrades: R0F7 (Авиабомбы), effect1 (Effect 1)
 {
 rhpx
 }
@@ -160337,7 +160273,7 @@ rmnx
 }
 
 STRING 26393
-// Upgrades: R0FQ (Опутывание), effect2 (Effect 2)
+// Upgrades: R0F8 (Авиабомбы), effect1 (Effect 1)
 {
 rhpx
 }
@@ -160535,7 +160471,7 @@ rmnx
 }
 
 STRING 26426
-// Upgrades: R0G1 (Знак хищника), effect1 (Effect 1)
+// Upgrades: R0FQ (Опутывание), effect2 (Effect 2)
 {
 rhpx
 }
@@ -167511,7 +167447,7 @@ STRING 27575
 }
 
 STRING 27576
-// Upgrades: R0G2 (Знак хищника), effect1 (Effect 1)
+// Upgrades: R0G1 (Знак хищника), effect1 (Effect 1)
 {
 rhpx
 }
@@ -167649,7 +167585,7 @@ rats
 }
 
 STRING 27599
-// Upgrades: R0G8 (Знак хищника), effect1 (Effect 1)
+// Upgrades: R0G2 (Знак хищника), effect1 (Effect 1)
 {
 rhpx
 }
@@ -170417,7 +170353,7 @@ rmnx
 }
 
 STRING 28042
-// Upgrades: R0GA (Знак хищника), effect2 (Effect 2)
+// Upgrades: R0G8 (Знак хищника), effect1 (Effect 1)
 {
 rhpx
 }
@@ -173661,7 +173597,7 @@ rats
 }
 
 STRING 28561
-// Upgrades: R0GV (Сила Луны,Мощь Луны,Могущество Луны), effect3 (Effect 3)
+// Upgrades: R0GA (Знак хищника), effect2 (Effect 2)
 {
 rhpx
 }
@@ -174087,7 +174023,7 @@ STRING 28631
 }
 
 STRING 28632
-// Upgrades: R0GY (Сила Луны,Мощь Луны,Могущество Луны), effect1 (Effect 1)
+// Upgrades: R0GV (Сила Луны,Мощь Луны,Могущество Луны), effect3 (Effect 3)
 {
 rhpx
 }
@@ -179826,5 +179762,81 @@ STRING 29575
 -<Assk,DataC1> от получаемого горным великаном урона от атак. Минимальный урон от атак: <Assk,DataB1>.
 
 Увеличивает регенерациию Здоровья
+}
+
+STRING 29576
+// Upgrades: R05H (Болезнетворное облако), Ubertip (Tooltip - Extended)
+{
+Дает поганищам болезнетворную ауру, которая наносит находящимся рядом врагам <Aap1,DataB1> урона/сек. в течение <Aap1,DataA1> сек. Мясные фургоны испускают болезнетворное облако при каждой атаке, нанося находящимся рядом врагам <Aap2,DataB1> урона/сек. в течение <Aap2,DataA1> сек. |nБолезнетворное облако не действует на нежить. Увеличивает здоровье Поганищу 250.
+}
+
+STRING 29577
+// Upgrades: R05I (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
+{
+Увеличивает урон нежити, при этом понижая хп.
+Урон (+4)
+Хп (-35)
+}
+
+STRING 29578
+// Upgrades: R05I (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
+{
+Увеличивает урон нежити, при этом понижая хп.
+Урон (+4)
+Хп (-35)
+}
+
+STRING 29579
+// Upgrades: R05I (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
+{
+Увеличивает урон нежити, при этом понижая хп.
+Урон (+4)
+Хп (-35)
+}
+
+STRING 29580
+// Upgrades: R05I (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
+{
+Увеличивает урон нежити, при этом понижая хп.
+Урон (+4)
+Хп (-35)
+}
+
+STRING 29581
+// Upgrades: R05J (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
+{
+Увеличивает хп нежити, при этом понижая урон.
+Урон (-4)
+Хп (+35)
+}
+
+STRING 29582
+// Upgrades: R05J (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
+{
+Увеличивает хп нежити, при этом понижая урон.
+Урон (-4)
+Хп (+35)
+}
+
+STRING 29583
+// Upgrades: R05J (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
+{
+Увеличивает хп нежити, при этом понижая урон.
+Урон (-4)
+Хп (+35)
+}
+
+STRING 29584
+// Upgrades: R05J (Сделать некромантов адептами,Сделать некр�), Ubertip (Tooltip - Extended)
+{
+Увеличивает хп нежити, при этом понижая урон.
+Урон (-4)
+Хп (+35)
+}
+
+STRING 29585
+// Upgrades: R0GY (Сила Луны,Мощь Луны,Могущество Луны), effect1 (Effect 1)
+{
+rhpx
 }
 

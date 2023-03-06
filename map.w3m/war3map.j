@@ -694,6 +694,7 @@ trigger gg_trg_Hero_Limits_General= null
 trigger gg_trg_OgresStart= null
 trigger gg_trg_OgresHpSpell2= null
 trigger gg_trg_OrgesHpSpell= null
+trigger gg_trg_Gruul= null
 trigger gg_trg_Spell_Copy= null
 trigger gg_trg_RRR= null
 trigger gg_trg_BegYel= null
@@ -1558,7 +1559,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_Gruul= null
 hashtable CommonHash= InitHashtable()
 real array income
 real array incomeW
