@@ -127157,7 +127157,7 @@ STRING 20987
 Огромную благодарность выражаем:
 Union of Creators - лучшее объединение картоделов
 Теордор - лучший тестировщик
-Муся - фиксы моделей и тесты
+Муся(Дед) - фиксы моделей и тесты
 rsfghd - святой человек, без него код карты был бы гораздо хуже
 Ageron - помощь по карте и оформелнию
 Ресурсу XGM за консультации по многим вопросам: 
@@ -129709,6 +129709,12 @@ STRING 21410
 // Abilities: A10M (|cff483d8bРазрушение|r), Hotkey (Hotkey - Normal)
 {
 E
+}
+
+STRING 21412
+// Upgrades: R0HQ (Грабеж), Name (Name)
+{
+Большой грабеж
 }
 
 STRING 21413
@@ -175103,6 +175109,12 @@ STRING 28804
 (Стромгард)
 }
 
+STRING 28805
+// Upgrades: R0HQ (Грабеж), Name (Name)
+{
+Лютый грабеж
+}
+
 STRING 28806
 // Upgrades: R0FL (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
 {
@@ -175149,6 +175161,12 @@ STRING 28813
 // Upgrades: R0H1 (Шрапнель), Tip (Tooltip)
 {
 Исследовать |cfff08080шрапнель|r
+}
+
+STRING 28814
+// Upgrades: R0HQ (Грабеж), Name (Name)
+{
+Рьяный грабеж
 }
 
 STRING 28815
@@ -177523,6 +177541,12 @@ STRING 29201
 Увеличивает урон от магических атак.
 }
 
+STRING 29202
+// Upgrades: R0HQ (Грабеж), Tip (Tooltip)
+{
+Большой грабеж
+}
+
 STRING 29203
 // Abilities: A18E (|cff7878ffСтойкость Штомградцев), EditorSuffix (Editor Suffix)
 {
@@ -177887,6 +177911,18 @@ STRING 29262
 |cffffcc002-й уровень:|r |cfff080802 Пехотинца|r
 }
 
+STRING 29263
+// Upgrades: R0HQ (Грабеж), Tip (Tooltip)
+{
+Лютый грабеж
+}
+
+STRING 29264
+// Upgrades: R0HQ (Грабеж), Tip (Tooltip)
+{
+Рьяный грабеж
+}
+
 STRING 29265
 // Abilities: A0XH (|cff7878ffСпециализация Паладина - Защита), Name (Name)
 {
@@ -177975,6 +178011,12 @@ STRING 29279
 // Abilities: A18Q (Ударная волна), Researchubertip (Tooltip - Learn - Extended)
 {
 Отталкивает врагов от Геральда.
+}
+
+STRING 29280
+// Upgrades: R0HQ (Грабеж), Ubertip (Tooltip - Extended)
+{
+Атакуя вражеские здания, юниты ближнего боя воруют золото.
 }
 
 STRING 29281
@@ -178781,6 +178823,12 @@ STRING 29414
 |cff7878ffВопрос Клана Черного Железа
 }
 
+STRING 29415
+// Upgrades: R0HQ (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
 STRING 29416
 // Upgrades: R0HN (Грабеж), Name (Name)
 {
@@ -178851,6 +178899,12 @@ STRING 29427
 // Upgrades: R0HN (Грабеж), Tip (Tooltip)
 {
 |cff7878ffПамять о Лотаре
+}
+
+STRING 29428
+// Upgrades: R0HQ (Грабеж), Hotkey (Hotkey)
+{
+G
 }
 
 STRING 29429
@@ -179690,6 +179744,12 @@ STRING 29566
 E
 }
 
+STRING 29567
+// Upgrades: R0HQ (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
 STRING 29568
 // Upgrades: R0GU (Опутывание), EditorSuffix (Editor Suffix)
 {
@@ -179892,5 +179952,179 @@ STRING 29597
 // Upgrades: R0GL (Стальное оружие ближнего боя,Ториевое оруж), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 29598
+// Upgrades: R0HQ (Грабеж), Name (Name)
+{
+|cff7878ffЧеловечество важнее всего
+}
+
+STRING 29599
+// Upgrades: R0HQ (Грабеж), Tip (Tooltip)
+{
+|cff7878ffЧеловечество важнее всего
+}
+
+STRING 29600
+// Upgrades: R0HQ (Грабеж), EditorSuffix (Editor Suffix)
+{
+(Альянс)
+}
+
+STRING 29601
+// Upgrades: R0HR (Грабеж), Name (Name)
+{
+Большой грабеж
+}
+
+STRING 29602
+// Upgrades: R0HR (Грабеж), Name (Name)
+{
+Лютый грабеж
+}
+
+STRING 29603
+// Upgrades: R0HR (Грабеж), Name (Name)
+{
+Рьяный грабеж
+}
+
+STRING 29604
+// Upgrades: R0HR (Грабеж), Tip (Tooltip)
+{
+Большой грабеж
+}
+
+STRING 29605
+// Upgrades: R0HR (Грабеж), Tip (Tooltip)
+{
+Лютый грабеж
+}
+
+STRING 29606
+// Upgrades: R0HR (Грабеж), Tip (Tooltip)
+{
+Рьяный грабеж
+}
+
+STRING 29607
+// Upgrades: R0HR (Грабеж), Ubertip (Tooltip - Extended)
+{
+Атакуя вражеские здания, юниты ближнего боя воруют золото.
+}
+
+STRING 29608
+// Upgrades: R0HR (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 29609
+// Upgrades: R0HR (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 29610
+// Upgrades: R0HR (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 29611
+// Upgrades: R0HR (Грабеж), Name (Name)
+{
+|cff7878ffВнутреннее развитие
+}
+
+STRING 29612
+// Upgrades: R0HR (Грабеж), Tip (Tooltip)
+{
+|cff7878ffВнутреннее развитие
+}
+
+STRING 29613
+// Upgrades: R0HR (Грабеж), EditorSuffix (Editor Suffix)
+{
+(Альянс)
+}
+
+STRING 29614
+// Upgrades: R0HS (Грабеж), Name (Name)
+{
+Большой грабеж
+}
+
+STRING 29615
+// Upgrades: R0HS (Грабеж), Name (Name)
+{
+Лютый грабеж
+}
+
+STRING 29616
+// Upgrades: R0HS (Грабеж), Name (Name)
+{
+Рьяный грабеж
+}
+
+STRING 29617
+// Upgrades: R0HS (Грабеж), Tip (Tooltip)
+{
+Большой грабеж
+}
+
+STRING 29618
+// Upgrades: R0HS (Грабеж), Tip (Tooltip)
+{
+Лютый грабеж
+}
+
+STRING 29619
+// Upgrades: R0HS (Грабеж), Tip (Tooltip)
+{
+Рьяный грабеж
+}
+
+STRING 29620
+// Upgrades: R0HS (Грабеж), Ubertip (Tooltip - Extended)
+{
+Атакуя вражеские здания, юниты ближнего боя воруют золото.
+}
+
+STRING 29621
+// Upgrades: R0HS (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 29622
+// Upgrades: R0HS (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 29623
+// Upgrades: R0HS (Грабеж), Hotkey (Hotkey)
+{
+G
+}
+
+STRING 29624
+// Upgrades: R0HS (Грабеж), Name (Name)
+{
+|cff7878ffРасширение Альянса
+}
+
+STRING 29625
+// Upgrades: R0HS (Грабеж), Tip (Tooltip)
+{
+|cff7878ffРасширение Альянса
+}
+
+STRING 29626
+// Upgrades: R0HS (Грабеж), EditorSuffix (Editor Suffix)
+{
+(Альянс)
 }
 

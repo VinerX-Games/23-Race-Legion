@@ -752,7 +752,7 @@ trigger gg_trg_AE1= null
 trigger gg_trg_AE2= null
 trigger gg_trg_AN1= null
 trigger gg_trg_AN2= null
-trigger gg_trg_OldStormwindForever= null
+trigger gg_trg_OldAllianceForever= null
 trigger gg_trg_MagicUsk= null
 trigger gg_trg_MassMolot= null
 trigger gg_trg_PaladinHpSpell= null
@@ -1540,6 +1540,8 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_FinStormwind= null
+trigger gg_trg_BegStormwind= null
 framehandle face= null
 framehandle faceHover= null
 framehandle tooltip= null
@@ -24016,32 +24018,56 @@ endfunction
 
 
 //===========================================================================
-// Trigger: OldStormwindForever
+// Trigger: OldAllianceForever
 //===========================================================================
-function Trig_OldStormwindForever_Conditions takes nothing returns boolean
+function Trig_OldAllianceForever_Conditions takes nothing returns boolean
     return GetResearched() == 'R0DW'
 endfunction
 
-function Trig_OldStormwindForever_Actions takes nothing returns nothing
+function Trig_OldAllianceForever_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     set udg_MainPrice[pi]=udg_MainPrice[pi] - 15
     
     //Запретил ветки
-    //call SetPlayerTechMaxAllowed(p,'R0DY',0)
-   // call SetPlayerTechMaxAllowed(p,'R0DX',0)
-    //call SetPlayerTechMaxAllowed(p,'R0DZ',0)
+    call SetPlayerTechMaxAllowed(p, 'R0HS', 0)
+    call SetPlayerTechMaxAllowed(p, 'R0HR', 0)
+    call SetPlayerTechMaxAllowed(p, 'R0HQ', 0)
 endfunction
 
 //===========================================================================
-function InitTrig_OldStormwindForever takes nothing returns nothing
-    set gg_trg_OldStormwindForever=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_OldStormwindForever, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerAddCondition(gg_trg_OldStormwindForever, Condition(function Trig_OldStormwindForever_Conditions))
-    call TriggerAddAction(gg_trg_OldStormwindForever, function Trig_OldStormwindForever_Actions)
+function InitTrig_OldAllianceForever takes nothing returns nothing
+    set gg_trg_OldAllianceForever=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_OldAllianceForever, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_OldAllianceForever, Condition(function Trig_OldAllianceForever_Conditions))
+    call TriggerAddAction(gg_trg_OldAllianceForever, function Trig_OldAllianceForever_Actions)
 endfunction
 
+
+//===========================================================================
+// Trigger: FinStormwind
+//===========================================================================
+function Trig_FinStormwind_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0HR' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_FinStormwind_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0H6', 1, GetOwningPlayer(GetTriggerUnit()))
+    // -
+    call SetPlayerTechMaxAllowedSwap('R0GX', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_FinStormwind takes nothing returns nothing
+    set gg_trg_FinStormwind=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_FinStormwind, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_FinStormwind, Condition(function Trig_FinStormwind_Conditions))
+    call TriggerAddAction(gg_trg_FinStormwind, function Trig_FinStormwind_Actions)
+endfunction
 
 //===========================================================================
 // Trigger: MagicUsk
@@ -24385,7 +24411,7 @@ endfunction
 //===========================================================================
 // Trigger: StartAlliance
 //===========================================================================
-function Trig_StartAlliance_Func002A takes nothing returns nothing
+function Trig_StartAlliance_Func001A takes nothing returns nothing
     call AcountAll(GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('h02Z', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('h0HX', 0, GetEnumPlayer())
@@ -24393,10 +24419,28 @@ function Trig_StartAlliance_Func002A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('Hamg', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('Hmkg', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('h0KI', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HM', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HL', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HK', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HJ', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HI', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HH', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HG', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HF', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HE', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HD', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HB', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HA', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0H9', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0H8', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0H7', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0H6', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0H5', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HN', 0, GetEnumPlayer())
 endfunction
 
 function Trig_StartAlliance_Actions takes nothing returns nothing
-    call ForForce(udg_AllPlayers, function Trig_StartAlliance_Func002A)
+    call ForForce(udg_AllPlayers, function Trig_StartAlliance_Func001A)
 endfunction
 
 //===========================================================================
@@ -46983,7 +47027,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_AE2()
     call InitTrig_AN1()
     call InitTrig_AN2()
-    call InitTrig_OldStormwindForever()
+    call InitTrig_OldAllianceForever()
+    call InitTrig_FinStormwind()
     call InitTrig_MagicUsk()
     call InitTrig_MassMolot()
     call InitTrig_PaladinHpSpell()
