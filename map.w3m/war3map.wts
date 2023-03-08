@@ -9642,6 +9642,12 @@ STRING 1596
 |cffff0000Пламя феникса|r
 }
 
+STRING 1597
+// Abilities: Ahea (Исцеление), Tip (Tooltip - Normal)
+{
+Исцеление
+}
+
 STRING 1598
 // Units: h02B (|cffd45e19Легендарный жрец|r), Hotkey (Hotkey)
 {
@@ -13878,7 +13884,7 @@ STRING 2300
 }
 
 STRING 2301
-// Abilities: A00W (Огненная стрела), Untip (Tooltip - Turn Off)
+// Abilities: Ahea (Исцеление), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -13890,7 +13896,7 @@ STRING 2302
 }
 
 STRING 2303
-// Abilities: A00W (Огненная стрела), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: Ahea (Исцеление), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -14106,25 +14112,25 @@ STRING 2338
 }
 
 STRING 2339
-// Abilities: A01J (Жажда крови), Untip (Tooltip - Turn Off)
+// Abilities: A00W (Огненная стрела), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
 
 STRING 2340
-// Abilities: A02U (Чародейская стрела), Untip (Tooltip - Turn Off)
+// Abilities: A01J (Жажда крови), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
 
 STRING 2341
-// Abilities: A01J (Жажда крови), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A00W (Огненная стрела), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
 
 STRING 2342
-// Abilities: A02U (Чародейская стрела), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A01J (Жажда крови), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -22479,7 +22485,7 @@ STRING 3725
 }
 
 STRING 3726
-// Abilities: A02Z (Стрела скверны), Untip (Tooltip - Turn Off)
+// Abilities: A02U (Чародейская стрела), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -22491,7 +22497,7 @@ STRING 3727
 }
 
 STRING 3728
-// Abilities: A02Z (Стрела скверны), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A02U (Чародейская стрела), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -29732,7 +29738,7 @@ STRING 4926
 }
 
 STRING 4927
-// Abilities: A04X (|cffffff00Свет небес|r), Untip (Tooltip - Turn Off)
+// Abilities: A02Z (Стрела скверны), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -29900,13 +29906,13 @@ rmov
 }
 
 STRING 4955
-// Abilities: A05U (|cffffffb4Зачарованные стрелы|r), Untip (Tooltip - Turn Off)
+// Abilities: A04X (|cffffff00Свет небес|r), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
 
 STRING 4956
-// Abilities: A04X (|cffffff00Свет небес|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A02Z (Стрела скверны), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -29952,7 +29958,7 @@ STRING 4962
 }
 
 STRING 4963
-// Abilities: A05U (|cffffffb4Зачарованные стрелы|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A04X (|cffffff00Свет небес|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -33039,7 +33045,7 @@ STRING 5474
 }
 
 STRING 5475
-// Abilities: A07D (Чародейская стрела), Untip (Tooltip - Turn Off)
+// Abilities: A05U (|cffffffb4Зачарованные стрелы|r), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -33051,7 +33057,7 @@ STRING 5476
 }
 
 STRING 5477
-// Abilities: A07D (Чародейская стрела), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A05U (|cffffffb4Зачарованные стрелы|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -33159,7 +33165,7 @@ STRING 5494
 }
 
 STRING 5495
-// Abilities: A07O (Стрела скверны), Untip (Tooltip - Turn Off)
+// Abilities: A07D (Чародейская стрела), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -33171,7 +33177,7 @@ STRING 5496
 }
 
 STRING 5497
-// Abilities: A07O (Стрела скверны), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A07D (Чародейская стрела), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -33267,7 +33273,7 @@ STRING 5512
 }
 
 STRING 5513
-// Abilities: A07Q (Огненная стрела), Untip (Tooltip - Turn Off)
+// Abilities: A07O (Стрела скверны), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -33279,7 +33285,7 @@ STRING 5514
 }
 
 STRING 5515
-// Abilities: A07Q (Огненная стрела), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A07O (Стрела скверны), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -33443,6 +33449,12 @@ STRING 5542
 // Units: h0D6 (Фрегат), Ubertip (Tooltip - Extended)
 {
 Корабль, предназначенный для морских битв.
+}
+
+STRING 5543
+// Abilities: Ahea (Исцеление), Ubertip (Tooltip - Normal - Extended)
+{
+Восполняет <Ahea,DataA1> здоровья раненому союзнику. Не действует на технику.
 }
 
 STRING 5544
@@ -53940,7 +53952,7 @@ STRING 8944
 }
 
 STRING 8945
-// Abilities: A0CK (|cff6e6e6eВоскрешение мертвых|r), Untip (Tooltip - Turn Off)
+// Abilities: A07Q (Огненная стрела), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -53958,7 +53970,7 @@ STRING 8947
 }
 
 STRING 8948
-// Abilities: A0CK (|cff6e6e6eВоскрешение мертвых|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A07Q (Огненная стрела), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -81093,7 +81105,7 @@ STRING 13427
 }
 
 STRING 13428
-// Abilities: A0FQ (|cff008000Ледяные стрелы|r), Untip (Tooltip - Turn Off)
+// Abilities: A0CK (|cff6e6e6eВоскрешение мертвых|r), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -81243,7 +81255,7 @@ STRING 13452
 }
 
 STRING 13453
-// Abilities: A0FQ (|cff008000Ледяные стрелы|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0CK (|cff6e6e6eВоскрешение мертвых|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -81560,7 +81572,7 @@ STRING 13503
 }
 
 STRING 13504
-// Abilities: A0MA (|cff008000Дары скверны|r), Untip (Tooltip - Turn Off)
+// Abilities: A0FQ (|cff008000Ледяные стрелы|r), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -81578,7 +81590,7 @@ STRING 13506
 }
 
 STRING 13507
-// Abilities: A0MA (|cff008000Дары скверны|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0FQ (|cff008000Ледяные стрелы|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -84376,7 +84388,7 @@ STRING 13967
 }
 
 STRING 13968
-// Abilities: A0MG (|cff008000Создание Скверны|r), Untip (Tooltip - Turn Off)
+// Abilities: A0MA (|cff008000Дары скверны|r), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -95471,7 +95483,7 @@ STRING 15770
 }
 
 STRING 15771
-// Abilities: A0NA (|cff008000Сгусток скверны|r), Untip (Tooltip - Turn Off)
+// Abilities: A0MG (|cff008000Создание Скверны|r), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -95489,7 +95501,7 @@ STRING 15773
 }
 
 STRING 15774
-// Abilities: A0MG (|cff008000Создание Скверны|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0MA (|cff008000Дары скверны|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -96983,13 +96995,13 @@ STRING 16017
 }
 
 STRING 16018
-// Abilities: A0PR (|cff808000Наращивание мускулатуры|r), Untip (Tooltip - Turn Off)
+// Abilities: A0NA (|cff008000Сгусток скверны|r), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
 
 STRING 16019
-// Abilities: A0PR (|cff808000Наращивание мускулатуры|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0MG (|cff008000Создание Скверны|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -119714,7 +119726,7 @@ STRING 19769
 }
 
 STRING 19770
-// Abilities: A0QC (|cff008080Ледяные стрелы|r), Untip (Tooltip - Turn Off)
+// Abilities: A0PR (|cff808000Наращивание мускулатуры|r), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -155626,7 +155638,7 @@ STRING 25617
 }
 
 STRING 25618
-// Abilities: A0TJ (Разрывные снаряды), Untip (Tooltip - Turn Off)
+// Abilities: A0QC (|cff008080Ледяные стрелы|r), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -162880,7 +162892,7 @@ STRING 26814
 }
 
 STRING 26815
-// Abilities: A0QC (|cff008080Ледяные стрелы|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0PR (|cff808000Наращивание мускулатуры|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -162898,7 +162910,7 @@ STRING 26817
 }
 
 STRING 26818
-// Abilities: A15C (|cff964296Стимуляторы), Untip (Tooltip - Turn Off)
+// Abilities: A0TJ (Разрывные снаряды), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -162910,7 +162922,7 @@ STRING 26819
 }
 
 STRING 26820
-// Abilities: A15C (|cff964296Стимуляторы), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A0QC (|cff008080Ледяные стрелы|r), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -166594,7 +166606,7 @@ STRING 27428
 }
 
 STRING 27429
-// Abilities: A166 (|cff964296Воскрешение мертвых), Untip (Tooltip - Turn Off)
+// Abilities: A15C (|cff964296Стимуляторы), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -166612,7 +166624,7 @@ STRING 27431
 }
 
 STRING 27432
-// Abilities: A166 (|cff964296Воскрешение мертвых), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A15C (|cff964296Стимуляторы), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -166991,7 +167003,7 @@ STRING 27494
 }
 
 STRING 27495
-// Abilities: A16C (Ледяные стрелы), Untip (Tooltip - Turn Off)
+// Abilities: A166 (|cff964296Воскрешение мертвых), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -167009,7 +167021,7 @@ STRING 27497
 }
 
 STRING 27498
-// Abilities: A16C (Ледяные стрелы), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A166 (|cff964296Воскрешение мертвых), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -170254,7 +170266,7 @@ STRING 28017
 }
 
 STRING 28018
-// Abilities: A175 (|cffd2b48cСокрушающий удар|r |cffffff00[1-й уровень]|r), Untip (Tooltip - Turn Off)
+// Abilities: A16C (Ледяные стрелы), Untip (Tooltip - Turn Off)
 {
 |cffc3dbffПКМ – включить автоприменение.|r
 }
@@ -170272,7 +170284,7 @@ STRING 28020
 }
 
 STRING 28021
-// Abilities: A175 (|cffd2b48cСокрушающий удар|r |cffffff00[1-й уровень]|r), Unubertip (Tooltip - Turn Off - Extended)
+// Abilities: A16C (Ледяные стрелы), Unubertip (Tooltip - Turn Off - Extended)
 {
 |cffc3dbffПКМ – отключить автоприменение.|r
 }
@@ -170299,6 +170311,12 @@ STRING 28025
 // Upgrades: R0DO (Железная броня,Стальная броня,Мифриловая б), EditorSuffix (Editor Suffix)
 {
 (Стромгард)
+}
+
+STRING 28026
+// Abilities: A175 (|cffd2b48cСокрушающий удар|r |cffffff00[1-й уровень]|r), Untip (Tooltip - Turn Off)
+{
+|cffc3dbffПКМ – включить автоприменение.|r
 }
 
 STRING 28027
@@ -177090,18 +177108,6 @@ STRING 29127
 G
 }
 
-STRING 29128
-// Upgrades: R0H6 (Грабеж), Name (Name)
-{
-|cff7878ffСоздать Седьмой Легион
-}
-
-STRING 29129
-// Upgrades: R0H6 (Грабеж), Tip (Tooltip)
-{
-|cff7878ffСоздать Седьмой Легион
-}
-
 STRING 29130
 // Upgrades: R0GY (Сила Луны,Мощь Луны,Могущество Луны), EditorSuffix (Editor Suffix)
 {
@@ -179412,7 +179418,7 @@ STRING 29513
 }
 
 STRING 29514
-// Upgrades: R0HP (Грабеж), effect1 (Effect 1)
+// Upgrades: R0H7 (Грабеж), effect1 (Effect 1)
 {
 rlev
 }
@@ -180389,5 +180395,59 @@ STRING 29671
 // Abilities: A02P (|cffff0000Пламя феникса|r), Ubertip (Tooltip - Normal - Extended)
 {
 Выпускает в секторе перед собой огненного феникса , наносящегог  70 урона врагам на своем пути.
+}
+
+STRING 29672
+// Abilities: A175 (|cffd2b48cСокрушающий удар|r |cffffff00[1-й уровень]|r), Unubertip (Tooltip - Turn Off - Extended)
+{
+|cffc3dbffПКМ – отключить автоприменение.|r
+}
+
+STRING 29673
+// Upgrades: R0H6 (Грабеж), Name (Name)
+{
+|cff7878ffСформировать Седьмой Легион
+}
+
+STRING 29674
+// Upgrades: R0H6 (Грабеж), Tip (Tooltip)
+{
+|cff7878ffСформировать Седьмой Легион
+}
+
+STRING 29675
+// Upgrades: R0HP (Грабеж), effect1 (Effect 1)
+{
+rlev
+}
+
+STRING 29676
+// Units: hspt (|cff7878ffМаг (Специализированный)), Ubertip (Tooltip - Extended)
+{
+Боевая единица с специальными задачами.
+}
+
+STRING 29677
+// Upgrades: R0H6 (Грабеж), Ubertip (Tooltip - Extended)
+{
+Пока пустышка но - 5% к доходам
+}
+
+STRING 29678
+// Upgrades: R0H7 (Грабеж), Ubertip (Tooltip - Extended)
+{
+Паладина откроет и + 5% расходы
+}
+
+STRING 29679
+// Upgrades: R0HA (Грабеж), Ubertip (Tooltip - Extended)
+{
++ инвизники + 5% расходы
+}
+
+STRING 29680
+// Upgrades: R0HH (Грабеж), Ubertip (Tooltip - Extended)
+{
+-10 к расходам, только штормградцы
 }
 

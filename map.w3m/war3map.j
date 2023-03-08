@@ -4,12 +4,12 @@ constant boolean LIBRARY_A1=true
 //endglobals from A1
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -457,6 +457,8 @@ trigger gg_trg_UnitIncomeEnter= null
 trigger gg_trg_UnitIncomeEnterDisCommon= null
 trigger gg_trg_UnitIncomeConstructed= null
 trigger gg_trg_UnitIncomeUpgrade= null
+trigger gg_trg_ChoseUnitForTest= null
+trigger gg_trg_HPTest= null
 trigger gg_trg_UnitIncomeEnterAlredyDead= null
 trigger gg_trg_Gob_Potreblenie= null
 trigger gg_trg_Silitid_Potreblenie= null
@@ -1549,8 +1551,10 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_HPTest= null
-trigger gg_trg_ChoseUnitForTest= null
+trigger gg_trg_BegStorm= null
+trigger gg_trg_CanStorm= null
+trigger gg_trg_BegForever= null
+trigger gg_trg_CanForver= null
 framehandle face= null
 framehandle faceHover= null
 framehandle tooltip= null
@@ -1701,7 +1705,7 @@ endfunction
 //library A1 ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1709,33 +1713,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1743,19 +1747,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -2539,7 +2543,7 @@ function UISetup takes nothing returns nothing
 endfunction
 
 // scope init begins
-function init___Init takes nothing returns nothing
+function init__Init takes nothing returns nothing
 	call UISetup()
 endfunction
 // scope init ends
@@ -2581,7 +2585,7 @@ call BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 endfunction
 
 // scope init2 begins
-function init2___Init takes nothing returns nothing
+function init2__Init takes nothing returns nothing
     call Face2()
 endfunction
 // scope init2 ends
@@ -6947,10 +6951,10 @@ function Trig_ResoursesInterface_Copy_Actions takes nothing returns nothing
     //Пояснение
     set text2="|n|cffbeffa0Доходы|r - (|cffffb4a0Расходы|r+|cffffb4a0Логистика|r)"
     if GetPlayerTechCount(p, 'R04O', true) > 0 then
-        set text2=text + "+коррупция"
+        set text2=text2 + "+коррупция"
     endif
     if GetPlayerTechCount(p, 'R0DV', true) + GetPlayerTechCount(p, 'R0GZ', true) > 0 then
-        set text2=text + "и дополнительно"
+        set text2=text2 + " и дополнительно"
     endif
     //set text = "Доход("+R2S(income[pi])+")-Расход("+R2S()+")|n-Логистика("+R2S(logistic[pi])+")"+"|n прочие элементы в разработке"
     call BlzFrameSetText(tooltipBody, text + text2)
@@ -22123,17 +22127,18 @@ function AT1Count takes player p returns nothing
     endloop
     
     //Лордеронец
-    set i=1
-    set b=1
-    
-    loop
-        set a[0]=a[0] + 1
-        set a[a[0]]='h0KR'
+    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+        set i=1
+        set b=1
         
-        set b=b + 1
-        exitwhen b >= i
-    endloop
-    
+        loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KR'
+            
+            set b=b + 1
+            exitwhen b >= i
+        endloop
+    endif
     
 //    
 //    //2 юнит Черной гора
@@ -22547,18 +22552,19 @@ function ACavCount takes player p returns nothing
             exitwhen b >= i
     endloop
 
-    //Лордеронец
-    set i=1
-    set b=1
-    
-    loop
-        set a[0]=a[0] + 1
-        set a[a[0]]='h0KW'
+    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+        //Лордеронец
+        set i=1
+        set b=1
         
-        set b=b + 1
-        exitwhen b >= i
-    endloop
-    
+        loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KW'
+            
+            set b=b + 1
+            exitwhen b >= i
+        endloop
+    endif
     
 //    
 //    //2 юнит Черной гора
@@ -22684,20 +22690,21 @@ function AK1Count takes player p returns nothing
             exitwhen b >= i
     endloop
     
-    //High elf
-    set i=1
-    set b=1
-    
-    loop
-        set a[0]=a[0] + 1
-        set a[a[0]]='h0L2'
+    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+        //High elf
+        set i=1
+        set b=1
         
-        set b=b + 1
-        exitwhen b >= i
-    endloop
+        loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0L2'
+            
+            set b=b + 1
+            exitwhen b >= i
+        endloop
+    endif
     
-    
-    if GetPlayerTechCount(p, 'R0H5', true) == 1 then
+    if GetPlayerTechCount(p, 'R0H5', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
         //High elf
         set i=1
         set b=1
@@ -22823,16 +22830,18 @@ function AK2Count takes player p returns nothing
     local integer i= 0
     local integer b= 0
     local integer pi= GetPlayerId(p)
-    
-    // Dwarf
     set a[0]=0
-    set i=4
-    loop
-            set a[0]=a[0] + 1
-            set a[a[0]]='h0KO'
-            set b=b + 1
-            exitwhen b >= i
-    endloop
+    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+        // Dwarf
+        
+        set i=4
+        loop
+                set a[0]=a[0] + 1
+                set a[a[0]]='h0KO'
+                set b=b + 1
+                exitwhen b >= i
+        endloop
+    endif
     
     // Human
     set i=1
@@ -22971,18 +22980,19 @@ function AK3Count takes player p returns nothing
             exitwhen b >= i
     endloop
     
-    //Лордеронец
-    set i=1
-    set b=1
-    
-    loop
-        set a[0]=a[0] + 1
-        set a[a[0]]='h0KK'
+    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+        //Лордеронец
+        set i=1
+        set b=1
         
-        set b=b + 1
-        exitwhen b >= i
-    endloop
-    
+        loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0KK'
+            
+            set b=b + 1
+            exitwhen b >= i
+        endloop
+    endif
     
 //    
 //    //2 юнит Черной гора
@@ -23097,27 +23107,32 @@ function AM1Count takes player p returns nothing
     local integer i= 0
     local integer b= 0
     local integer pi= GetPlayerId(p)
-    
-    // High elf
     set a[0]=0
-    set i=2
-    loop
+    
+    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+        // High elf
+        
+        set i=2
+        loop
+                set a[0]=a[0] + 1
+                set a[a[0]]='h0KU'
+                set b=b + 1
+                exitwhen b >= i
+        endloop
+    endif
+    
+    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+        //High eldf sorc
+        set b=0
+        set i=2
+        loop
             set a[0]=a[0] + 1
-            set a[a[0]]='h0KU'
+            set a[a[0]]='h0KV'
+            
             set b=b + 1
             exitwhen b >= i
-    endloop
-    
-    //High eldf sorc
-    set b=0
-    set i=2
-    loop
-        set a[0]=a[0] + 1
-        set a[a[0]]='h0KV'
-        
-        set b=b + 1
-        exitwhen b >= i
-    endloop
+        endloop
+    endif
     
     //Human
     set i=1
@@ -23371,11 +23386,13 @@ function AM3Count takes player p returns nothing
     local integer i= 0
     local integer b= 0
     local integer pi= GetPlayerId(p)
+    set a[0]=0
     
     // ШРУ
     if GetPlayerTechCount(p, 'R0HA', true) >= 1 then
-        set a[0]=0
+        
         set i=4
+        set b=0
         loop
                 set a[0]=a[0] + 1
                 set a[a[0]]='h0LU'
@@ -23511,16 +23528,17 @@ function AE1Count takes player p returns nothing
     local integer b= 0
     local integer pi= GetPlayerId(p)
     
-    // Dwarf
-    set a[0]=0
-    set i=4
-    loop
-            set a[0]=a[0] + 1
-            set a[a[0]]='h0KZ'
-            set b=b + 1
-            exitwhen b >= i
-    endloop
-    
+    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+        // Dwarf
+        set a[0]=0
+        set i=4
+        loop
+                set a[0]=a[0] + 1
+                set a[a[0]]='h0KZ'
+                set b=b + 1
+                exitwhen b >= i
+        endloop
+    endif
     //Cannon
     set i=1
     set b=1
@@ -23989,12 +24007,12 @@ function AN2Count takes player p returns nothing
 //    endif
     
     //Long Containment
-    call SaveInteger(CommonHash, pi, StringHash("AE2_0"), a[0])
+    call SaveInteger(CommonHash, pi, StringHash("AN2_0"), a[0])
     set i=1
     loop
         
         
-        call SaveInteger(CommonHash, pi, StringHash("AE2") + i, a[i])
+        call SaveInteger(CommonHash, pi, StringHash("AN2") + i, a[i])
         set i=i + 1
         
         exitwhen i > a[0]
@@ -24017,9 +24035,9 @@ function Trig_AN2_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(p)
     
     
-    set i=LoadInteger(CommonHash, pi, StringHash("AE2_0"))
+    set i=LoadInteger(CommonHash, pi, StringHash("AN2_0"))
     set i=GetRandomInt(1, i)
-    set b=LoadInteger(CommonHash, pi, ( StringHash("AE2") + i ))
+    set b=LoadInteger(CommonHash, pi, ( StringHash("AN2") + i ))
     
     set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -24045,6 +24063,31 @@ function InitTrig_AN2 takes nothing returns nothing
     call TriggerAddAction(gg_trg_AN2, function Trig_AN2_Actions)
 endfunction
 
+
+//===========================================================================
+// Trigger: ACounters
+//===========================================================================
+function AcountAll takes player p returns nothing
+    call AT1Count(p)
+    call AT2Count(p)
+
+    call ACavCount(p)
+    call AT3Count(p)
+    
+    call AK1Count(p)
+    call AK2Count(p)
+    call AK3Count(p)
+    
+    call AM1Count(p)
+    call AM2Count(p)
+    call AM3Count(p)
+    
+    call AE1Count(p)
+    call AE2Count(p)
+    
+    call AN1Count(p)
+    call AN2Count(p)
+endfunction
 
 //===========================================================================
 // Trigger: OldAllianceForever
@@ -24073,6 +24116,94 @@ function InitTrig_OldAllianceForever takes nothing returns nothing
     call TriggerAddAction(gg_trg_OldAllianceForever, function Trig_OldAllianceForever_Actions)
 endfunction
 
+
+//===========================================================================
+// Trigger: BegStorm
+//===========================================================================
+function Trig_BegStorm_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0HR' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_BegStorm_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0GX', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_BegStorm takes nothing returns nothing
+    set gg_trg_BegStorm=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_BegStorm, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_BegStorm, Condition(function Trig_BegStorm_Conditions))
+    call TriggerAddAction(gg_trg_BegStorm, function Trig_BegStorm_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: CanStorm
+//===========================================================================
+function Trig_CanStorm_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0HR' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_CanStorm_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0GX', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_CanStorm takes nothing returns nothing
+    set gg_trg_CanStorm=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_CanStorm, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_CanStorm, Condition(function Trig_CanStorm_Conditions))
+    call TriggerAddAction(gg_trg_CanStorm, function Trig_CanStorm_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: BegForever
+//===========================================================================
+function Trig_BegForever_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GX' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_BegForever_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0HR', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_BegForever takes nothing returns nothing
+    set gg_trg_BegForever=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_BegForever, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_BegForever, Condition(function Trig_BegForever_Conditions))
+    call TriggerAddAction(gg_trg_BegForever, function Trig_BegForever_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: CanForver
+//===========================================================================
+function Trig_CanForver_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0GX' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_CanForver_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0HR', 1, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_CanForver takes nothing returns nothing
+    set gg_trg_CanForver=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_CanForver, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    call TriggerAddCondition(gg_trg_CanForver, Condition(function Trig_CanForver_Conditions))
+    call TriggerAddAction(gg_trg_CanForver, function Trig_CanForver_Actions)
+endfunction
 
 //===========================================================================
 // Trigger: CanDoOld
@@ -24117,16 +24248,22 @@ endfunction
 // Trigger: FinStormwind
 //===========================================================================
 function Trig_FinStormwind_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0HR' ) ) then
-        return false
-    endif
-    return true
+    return GetResearched() == 'R0HR'
 endfunction
 
 function Trig_FinStormwind_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0H6', 1, GetOwningPlayer(GetTriggerUnit()))
-    // -
-    call SetPlayerTechMaxAllowedSwap('R0GX', 0, GetOwningPlayer(GetTriggerUnit()))
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    call AcountAll(p)
+    
+    call SetPlayerTechMaxAllowed(p, 'R0H6', 1)
+
+
+
+    call SetPlayerTechMaxAllowed(p, 'R0GX', 0)
+    
+    
 endfunction
 
 //===========================================================================
@@ -24137,18 +24274,23 @@ function InitTrig_FinStormwind takes nothing returns nothing
     call TriggerAddAction(gg_trg_FinStormwind, function Trig_FinStormwind_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: Fin7Legion
 //===========================================================================
 function Trig_Fin7Legion_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0H6' ) ) then
-        return false
-    endif
-    return true
+    
+    return GetResearched() == 'R0H6'
 endfunction
 
 function Trig_Fin7Legion_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0HA', 1, GetOwningPlayer(GetTriggerUnit()))
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    call AcountAll(p)
+    
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 5
+    call SetPlayerTechMaxAllowed(p, 'R0HA', 1)
 endfunction
 
 //===========================================================================
@@ -24159,19 +24301,22 @@ function InitTrig_Fin7Legion takes nothing returns nothing
     call TriggerAddAction(gg_trg_Fin7Legion, function Trig_Fin7Legion_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: FinSRU
 //===========================================================================
 function Trig_FinSRU_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0HA' ) ) then
-        return false
-    endif
-    return true
+    return GetResearched() == 'R0HA'
 endfunction
 
 function Trig_FinSRU_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0H7', 1, GetOwningPlayer(GetTriggerUnit()))
-    call SetPlayerTechResearchedSwap('R0H0', 1, GetOwningPlayer(GetTriggerUnit()))
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    call AcountAll(p)
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 5
+    call SetPlayerTechMaxAllowed(p, 'R0H7', 1)
+    call SetPlayerTechResearched(p, 'R0H0', 1)
 endfunction
 
 //===========================================================================
@@ -24182,18 +24327,21 @@ function InitTrig_FinSRU takes nothing returns nothing
     call TriggerAddAction(gg_trg_FinSRU, function Trig_FinSRU_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: FinHoly
 //===========================================================================
 function Trig_FinHoly_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0H7' ) ) then
-        return false
-    endif
-    return true
+    return GetResearched() == 'R0H7'
 endfunction
 
 function Trig_FinHoly_Actions takes nothing returns nothing
-    call SetPlayerTechMaxAllowedSwap('R0HH', 1, GetOwningPlayer(GetTriggerUnit()))
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    call AcountAll(p)
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 5
+    call SetPlayerTechMaxAllowed(p, 'R0HH', 1)
 endfunction
 
 //===========================================================================
@@ -24204,17 +24352,23 @@ function InitTrig_FinHoly takes nothing returns nothing
     call TriggerAddAction(gg_trg_FinHoly, function Trig_FinHoly_Actions)
 endfunction
 
+
 //===========================================================================
 // Trigger: StormwindFirst
 //===========================================================================
 function Trig_StormwindFirst_Conditions takes nothing returns boolean
-    if ( not ( GetResearched() == 'R0HH' ) ) then
-        return false
-    endif
-    return true
+    return GetResearched() == 'R0HH'
 endfunction
 
 function Trig_StormwindFirst_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    set udg_MainPrice[pi]=udg_MainPrice[pi] - 10
+    call AcountAll(p)
+
+
+
 endfunction
 
 //===========================================================================
@@ -24224,6 +24378,7 @@ function InitTrig_StormwindFirst takes nothing returns nothing
     call TriggerAddCondition(gg_trg_StormwindFirst, Condition(function Trig_StormwindFirst_Conditions))
     call TriggerAddAction(gg_trg_StormwindFirst, function Trig_StormwindFirst_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: HolyHelp
@@ -24567,31 +24722,6 @@ function InitTrig_Heal takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: ACounters
-//===========================================================================
-function AcountAll takes player p returns nothing
-    call AT1Count(p)
-    call AT2Count(p)
-
-    call ACavCount(p)
-    call AT3Count(p)
-    
-    call AK1Count(p)
-    call AK2Count(p)
-    call AK3Count(p)
-    
-    call AM1Count(p)
-    call AM2Count(p)
-    call AM3Count(p)
-    
-    call AE1Count(p)
-    call AE2Count(p)
-    
-    call AN1Count(p)
-    call AN2Count(p)
-endfunction
-
-//===========================================================================
 // Trigger: StartAlliance
 //===========================================================================
 function Trig_StartAlliance_Func001A takes nothing returns nothing
@@ -24622,7 +24752,6 @@ function Trig_StartAlliance_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('R0HN', 0, GetEnumPlayer())
     // ---
     call SetPlayerTechMaxAllowedSwap('R0HQ', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0HR', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0HS', 0, GetEnumPlayer())
 endfunction
 
@@ -47214,7 +47343,12 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_AE2()
     call InitTrig_AN1()
     call InitTrig_AN2()
+    //Function not found: call InitTrig_ACounters()
     call InitTrig_OldAllianceForever()
+    call InitTrig_BegStorm()
+    call InitTrig_CanStorm()
+    call InitTrig_BegForever()
+    call InitTrig_CanForver()
     call InitTrig_CanDoOld()
     call InitTrig_FinStormwind()
     call InitTrig_Fin7Legion()
@@ -47229,7 +47363,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Vozd()
     call InitTrig_Defend()
     call InitTrig_Heal()
-    //Function not found: call InitTrig_ACounters()
     call InitTrig_StartAlliance()
     call InitTrig_ForsacenStarrt()
     call InitTrig_Ult()
@@ -48217,7 +48350,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 call UISetup() // INLINED!!
 call Face2() // INLINED!!
 
