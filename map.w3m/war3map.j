@@ -760,6 +760,7 @@ trigger gg_trg_FinSRU= null
 trigger gg_trg_FinHoly= null
 trigger gg_trg_StormwindFirst= null
 trigger gg_trg_BegStormwind= null
+trigger gg_trg_HolyHelp= null
 trigger gg_trg_MagicUsk= null
 trigger gg_trg_MassMolot= null
 trigger gg_trg_PaladinHpSpell= null
@@ -1547,7 +1548,6 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
-trigger gg_trg_HolyHelp= null
 framehandle face= null
 framehandle faceHover= null
 framehandle tooltip= null
@@ -2536,7 +2536,7 @@ function UISetup takes nothing returns nothing
 endfunction
 
 // scope init begins
-function init___Init takes nothing returns nothing
+function init__Init takes nothing returns nothing
 	call UISetup()
 endfunction
 // scope init ends
@@ -2578,7 +2578,7 @@ call BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 endfunction
 
 // scope init2 begins
-function init2___Init takes nothing returns nothing
+function init2__Init takes nothing returns nothing
     call Face2()
 endfunction
 // scope init2 ends
@@ -11134,10 +11134,9 @@ function Trig_DeadAddCheck_Actions takes nothing returns nothing
     
 
 
-
+    call SetUnitLifeBJ(u, 0)
     if not IsUnitInGroup(u, DeadGroup) then
         call GroupAddUnit(DeadGroup, u)
-        call SetUnitLifeBJ(u, 0)
         call TriggerRegisterUnitStateEvent(gg_trg_DeadRessurected, u, UNIT_STATE_LIFE, GREATER_THAN, 0)
     endif
     set u=null

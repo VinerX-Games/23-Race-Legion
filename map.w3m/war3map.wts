@@ -9642,12 +9642,6 @@ STRING 1596
 |cffff0000Пламя феникса|r
 }
 
-STRING 1597
-// Abilities: A02P (|cffff0000Пламя феникса|r), Ubertip (Tooltip - Normal - Extended)
-{
-Выпускает в секторе перед собой огненного феникса , наносящих по <AUcs,DataA1> урона врагам на своем пути.
-}
-
 STRING 1598
 // Units: h02B (|cffd45e19Легендарный жрец|r), Hotkey (Hotkey)
 {
@@ -13143,7 +13137,7 @@ STRING 2177
 }
 
 STRING 2178
-// Abilities: A02F (Огненные стрелы), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A07T (Огненные стрелы), Ubertip (Tooltip - Normal - Extended)
 {
 +10 урона от огня к атакам. Каждый выстрел расходует10 маны.
 }
@@ -33449,12 +33443,6 @@ STRING 5542
 // Units: h0D6 (Фрегат), Ubertip (Tooltip - Extended)
 {
 Корабль, предназначенный для морских битв.
-}
-
-STRING 5543
-// Abilities: A07T (Огненные стрелы), Ubertip (Tooltip - Normal - Extended)
-{
-+10 урона от огня к атакам. Каждый выстрел расходует10 маны.
 }
 
 STRING 5544
@@ -170313,12 +170301,6 @@ STRING 28025
 (Стромгард)
 }
 
-STRING 28026
-// Units: h0KK (|cff7878ffЛордеронец-Ветеран), Name (Name)
-{
-|cff7878ffЛордеронец-Ветеран
-}
-
 STRING 28027
 // Units: h0L0 (Фрегат), EditorSuffix (Name - Editor Suffix)
 {
@@ -176468,7 +176450,7 @@ STRING 29022
 }
 
 STRING 29023
-// Units: h0KK (|cff7878ffЛордеронец-Ветеран), EditorSuffix (Name - Editor Suffix)
+// Units: h0KK (|cff7878ffВетеран Лордерона), EditorSuffix (Name - Editor Suffix)
 {
 Т3 (Альянс)
 }
@@ -180389,5 +180371,23 @@ STRING 29668
 // Upgrades: R0HP (Грабеж), Tip (Tooltip)
 {
 Дефектов нет
+}
+
+STRING 29669
+// Units: h0KK (|cff7878ffВетеран Лордерона), Name (Name)
+{
+|cff7878ffВетеран Лордерона
+}
+
+STRING 29670
+// Abilities: A02F (Огненные стрелы), Ubertip (Tooltip - Normal - Extended)
+{
++13 урона от огня к атакам. Каждый выстрел расходует10 маны.
+}
+
+STRING 29671
+// Abilities: A02P (|cffff0000Пламя феникса|r), Ubertip (Tooltip - Normal - Extended)
+{
+Выпускает в секторе перед собой огненного феникса , наносящегог  70 урона врагам на своем пути.
 }
 
