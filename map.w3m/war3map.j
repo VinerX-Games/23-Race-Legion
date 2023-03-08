@@ -220,6 +220,7 @@ unit array udg_TransportingUnitArray
 group array udg_LoadedGroupArray
 unit udg_TempUnit02= null
 unit udg_TempUnit01= null
+unit udg_TestUnit= null
 
     // Generated
 rect gg_rct_Region_000= null
@@ -1548,6 +1549,8 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_HPTest= null
+trigger gg_trg_ChoseUnitForTest= null
 framehandle face= null
 framehandle faceHover= null
 framehandle tooltip= null
@@ -2536,7 +2539,7 @@ function UISetup takes nothing returns nothing
 endfunction
 
 // scope init begins
-function init__Init takes nothing returns nothing
+function init___Init takes nothing returns nothing
 	call UISetup()
 endfunction
 // scope init ends
@@ -2578,7 +2581,7 @@ call BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 endfunction
 
 // scope init2 begins
-function init2__Init takes nothing returns nothing
+function init2___Init takes nothing returns nothing
     call Face2()
 endfunction
 // scope init2 ends
@@ -6909,6 +6912,7 @@ function Trig_ResoursesInterface_Copy_Actions takes nothing returns nothing
     local player p= GetLocalPlayer()
     local integer pi= GetPlayerId(p)
     local string text
+    local string text2
     local real other= corruption[pi] + additional[pi]
     
     //if DisOn then
@@ -6930,9 +6934,26 @@ function Trig_ResoursesInterface_Copy_Actions takes nothing returns nothing
     endif
     //set balance[pi]=income[pi]-disincome[pi]+corruption[pi]-logistic[pi]+additional[pi]
     
-    set text="|cffbeffa0" + I2S(R2I(income[pi])) + "|r-(|cffffb4a0" + I2S(R2I(disincome[pi])) + "|r+|cffffb4a0" + I2S(R2I(logistic[pi])) + "|r)|n|cffbeffa0Доходы|r - (|cffffb4a0Расходы|r+|cffffb4a0Логистика|r)"
+    
+    //Цифры
+    set text="|cffbeffa0" + I2S(R2I(income[pi])) + "|r-(|cffffb4a0" + I2S(R2I(disincome[pi])) + "|r+|cffffb4a0" + I2S(R2I(logistic[pi])) + "|r)"
+    if GetPlayerTechCount(p, 'R04O', true) > 0 then
+        set text=text + " + " + R2S(corruption[pi])
+    endif
+    if GetPlayerTechCount(p, 'R0DV', true) + GetPlayerTechCount(p, 'R0GZ', true) > 0 then
+        set text=text + " и " + R2S(additional[pi])
+    endif
+    
+    //Пояснение
+    set text2="|n|cffbeffa0Доходы|r - (|cffffb4a0Расходы|r+|cffffb4a0Логистика|r)"
+    if GetPlayerTechCount(p, 'R04O', true) > 0 then
+        set text2=text + "+коррупция"
+    endif
+    if GetPlayerTechCount(p, 'R0DV', true) + GetPlayerTechCount(p, 'R0GZ', true) > 0 then
+        set text2=text + "и дополнительно"
+    endif
     //set text = "Доход("+R2S(income[pi])+")-Расход("+R2S()+")|n-Логистика("+R2S(logistic[pi])+")"+"|n прочие элементы в разработке"
-    call BlzFrameSetText(tooltipBody, text)
+    call BlzFrameSetText(tooltipBody, text + text2)
     
     
     set text=null
@@ -10697,7 +10718,7 @@ function Trig_TimerIncome_Actions takes nothing returns nothing
                
             endif
               
-            set balance[i]=income[i] - disincome[i] + corruption[i] - logistic[i] + additional[i]
+            set balance[i]=income[i] - disincome[i] - logistic[i] + corruption[i] + additional[i]
         else
             set balance[i]=income[i]
         endif
@@ -11137,7 +11158,7 @@ function Trig_DeadAddCheck_Actions takes nothing returns nothing
     call SetUnitLifeBJ(u, 0)
     if not IsUnitInGroup(u, DeadGroup) then
         call GroupAddUnit(DeadGroup, u)
-        call TriggerRegisterUnitStateEvent(gg_trg_DeadRessurected, u, UNIT_STATE_LIFE, GREATER_THAN, 0)
+        call TriggerRegisterUnitStateEvent(gg_trg_DeadRessurected, u, UNIT_STATE_LIFE, GREATER_THAN, 0.01)
     endif
     set u=null
 endfunction
@@ -11169,7 +11190,7 @@ function Trig_DeadRessurected_Actions takes nothing returns nothing
 
     call Enter(u)
     
-    if IsUnitType(u, UNIT_TYPE_HERO) == true then
+    if IsUnitType(u, UNIT_TYPE_HERO) then
         set disincome[pi]=( disincome[pi] + 100.00 )
         if GetUnitAbilityLevel(u, 'A0ZT') != 0 then
             set income[pi]=income[pi] + ( 100 + GetUnitAbilityLevel(u, 'A0ZT') * 100 )
