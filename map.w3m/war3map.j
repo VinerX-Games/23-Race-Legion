@@ -2549,7 +2549,7 @@ function UISetup takes nothing returns nothing
 endfunction
 
 // scope init begins
-function init__Init takes nothing returns nothing
+function init___Init takes nothing returns nothing
 	call UISetup()
 endfunction
 // scope init ends
@@ -2591,7 +2591,7 @@ call BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 endfunction
 
 // scope init2 begins
-function init2__Init takes nothing returns nothing
+function init2___Init takes nothing returns nothing
     call Face2()
 endfunction
 // scope init2 ends

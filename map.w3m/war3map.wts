@@ -181225,3 +181225,27 @@ STRING 29807
 Открывает новую способность всадникам и увеличивает их здоровье на 125 ед. +2% Расходов.
 }
 
+STRING 29808
+// Destructibles: B00C (+SilitusTree), Name (Name)
+{
++SilitusTree
+}
+
+STRING 29809
+// Doodads: D0BQ (++Geyser), Name (Name)
+{
+++Geyser
+}
+
+STRING 29810
+// Doodads: D0BR (++Mushrooms Silithid), Name (Name)
+{
+++Mushrooms Silithid
+}
+
+STRING 29811
+// Doodads: D0BS (++Mushrooms Silithid), Name (Name)
+{
+++Mushrooms Silithid
+}
+
