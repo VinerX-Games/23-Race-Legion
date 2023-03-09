@@ -1555,8 +1555,11 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+<<<<<<< HEAD
 trigger gg_trg_TweenBrothersRev= null
 trigger gg_trg_TweenBrothersDead= null
+=======
+>>>>>>> 111a08afc70d6ea7f7f37d4328356e4d5c95a528
 framehandle face= null
 framehandle faceHover= null
 framehandle tooltip= null
@@ -5535,22 +5538,40 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0KG', - 5398.1, - 28963.6, 210.766, 'h0KG')
     set u=BlzCreateUnitWithSkin(p, 'hmil', - 6559.5, - 29898.9, 245.519, 'hmil')
     set u=BlzCreateUnitWithSkin(p, 'h0KP', - 6489.5, - 30480.2, 320.528, 'h0KP')
+<<<<<<< HEAD
     set u=BlzCreateUnitWithSkin(p, 'h0LU', - 5747.4, - 29799.1, 264.300, 'h0LU')
     set u=BlzCreateUnitWithSkin(p, 'h0LH', - 584.8, - 25986.1, 273.098, 'h0LH')
+=======
+    set u=BlzCreateUnitWithSkin(p, 'h0LU', - 5747.4, - 29799.1, 264.303, 'h0LU')
+    set u=BlzCreateUnitWithSkin(p, 'h0LH', - 855.6, - 26559.4, 273.098, 'h0LH')
+>>>>>>> 111a08afc70d6ea7f7f37d4328356e4d5c95a528
     set u=BlzCreateUnitWithSkin(p, 'o02Y', - 3448.5, - 30405.4, 263.505, 'o02Y')
-    set u=BlzCreateUnitWithSkin(p, 'h0LI', - 528.5, - 25973.1, 272.812, 'h0LI')
-    set u=BlzCreateUnitWithSkin(p, 'h0LJ', - 188.5, - 25985.2, 273.955, 'h0LJ')
-    set u=BlzCreateUnitWithSkin(p, 'h0LK', - 655.1, - 25998.6, 288.600, 'h0LK')
-    set u=BlzCreateUnitWithSkin(p, 'h0LL', - 128.6, - 25975.4, 273.370, 'h0LL')
-    set u=BlzCreateUnitWithSkin(p, 'h0LN', - 64.9, - 25983.0, 269.751, 'h0LN')
-    set u=BlzCreateUnitWithSkin(p, 'h0LO', - 897.7, - 26043.2, 279.382, 'h0LO')
-    set u=BlzCreateUnitWithSkin(p, 'h0LP', - 326.6, - 25996.7, 273.459, 'h0LP')
-    set u=BlzCreateUnitWithSkin(p, 'h0LQ', - 803.5, - 26024.0, 286.510, 'h0LQ')
-    set u=BlzCreateUnitWithSkin(p, 'h0LR', - 464.1, - 25985.1, 279.784, 'h0LR')
+    set u=BlzCreateUnitWithSkin(p, 'h0LI', - 774.3, - 26539.7, 272.812, 'h0LI')
+    set u=BlzCreateUnitWithSkin(p, 'h0LJ', - 124.5, - 26354.9, 273.955, 'h0LJ')
+    set u=BlzCreateUnitWithSkin(p, 'h0LK', - 675.8, - 26062.0, 288.600, 'h0LK')
+    set u=BlzCreateUnitWithSkin(p, 'h0LL', - 297.7, - 26362.4, 273.370, 'h0LL')
+    set u=BlzCreateUnitWithSkin(p, 'h0LN', 136.1, - 26323.7, 269.751, 'h0LN')
+    set u=BlzCreateUnitWithSkin(p, 'h0LO', - 1167.5, - 25980.0, 279.382, 'h0LO')
+    set u=BlzCreateUnitWithSkin(p, 'h0LP', - 568.6, - 26051.8, 273.459, 'h0LP')
+    set u=BlzCreateUnitWithSkin(p, 'h0LQ', - 1073.3, - 25960.8, 286.510, 'h0LQ')
+    set u=BlzCreateUnitWithSkin(p, 'h0LR', - 587.2, - 26396.4, 279.784, 'h0LR')
     set u=BlzCreateUnitWithSkin(p, 'h0LS', 158.0, - 25966.5, 258.254, 'h0LS')
     set u=BlzCreateUnitWithSkin(p, 'h0LT', 252.5, - 25962.6, 268.856, 'h0LT')
+<<<<<<< HEAD
     set u=BlzCreateUnitWithSkin(p, 'h0LW', - 6424.3, - 29137.2, 281.940, 'h0LW')
     set u=BlzCreateUnitWithSkin(p, 'h0LV', - 389.5, - 25993.9, 270.307, 'h0LV')
+=======
+    set u=BlzCreateUnitWithSkin(p, 'h0LW', - 6424.3, - 29137.2, 281.938, 'h0LW')
+    set u=BlzCreateUnitWithSkin(p, 'h0LV', - 514.3, - 26387.4, 270.307, 'h0LV')
+    set u=BlzCreateUnitWithSkin(p, 'h0LY', - 111.7, - 26532.9, 269.993, 'h0LY')
+    set u=BlzCreateUnitWithSkin(p, 'h0LZ', - 773.3, - 26450.9, 267.062, 'h0LZ')
+    set u=BlzCreateUnitWithSkin(p, 'h0M0', - 856.4, - 26454.8, 258.406, 'h0M0')
+    set u=BlzCreateUnitWithSkin(p, 'h0M1', 6.2, - 26340.1, - 86.334, 'h0M1')
+    set u=BlzCreateUnitWithSkin(p, 'h0M2', - 282.7, - 26521.2, - 89.302, 'h0M2')
+    set u=BlzCreateUnitWithSkin(p, 'h0M4', - 842.0, - 26699.5, 261.758, 'h0M4')
+    set u=BlzCreateUnitWithSkin(p, 'h0M3', 353.8, - 26293.5, 264.570, 'h0M3')
+    set u=BlzCreateUnitWithSkin(p, 'h0M5', - 115.1, - 26118.7, 266.482, 'h0M5')
+>>>>>>> 111a08afc70d6ea7f7f37d4328356e4d5c95a528
 endfunction
 
 //===========================================================================
