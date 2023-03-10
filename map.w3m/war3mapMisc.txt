@@ -1,5 +1,10 @@
 [Misc]
 AgiDefenseBonus=0.2
+DamageBonusChaos=1.00,1.00,1.00,0.60,1.00,0.80,0.80,1.00
+DamageBonusMagic=1.25,0.75,2.00,0.35,1.00,0.60,0.05,1.00
+DamageBonusPierce=2.00,0.75,1.00,0.35,1.00,0.60,0.05,1.50
+DamageBonusSiege=1.00,0.50,1.00,1.50,1.00,0.60,0.05,1.50
+DamageBonusSpells=1.00,1.00,1.00,1.00,1.00,0.80,0.05,1.00
 DisplayBuildingStatus=1
 DrainGivesBonusLife=1
 DrainGivesBonusMana=1
