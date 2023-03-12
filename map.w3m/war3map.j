@@ -24735,12 +24735,13 @@ endfunction
 function Trig_Kristall_Actions takes nothing returns nothing
     local boolexpr bex= Condition(function Trig_Kristall_Func001001003)
     local location loc= GetSpellTargetLoc()
-    local group g= GetUnitsInRangeOfLocMatching(50.00, loc, bex)
+    local group g= CreateGroup()
+    call GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 50, bex)
     call ForGroup(g, function Trig_Kristall_Func001A)
+    
+    
     call DestroyBoolExpr(bex)
     set bex=null
-    call RemoveLocation(loc)
-    set loc=null
     call DestroyGroup(g)
     set g=null
     
