@@ -3614,7 +3614,7 @@ STRING 597
 }
 
 STRING 598
-// Items: I00W (|cff0064ffОдияние Даларана|r), Ubertip (Tooltip - Extended)
+// Items: I00W (|cff0064ffОдеяние Даларана|r), Ubertip (Tooltip - Extended)
 {
 |cff008000-Позволяет призывать элементалей воды.|r
 |cff008000-(10 ед.) к интеллекту.|r
@@ -74114,14 +74114,8 @@ STRING 12282
 Боковые орудия 2
 }
 
-STRING 12283
-// Items: I00W (|cff0064ffОдияние Даларана|r), Name (Name)
-{
-|cff0064ffОдияние Даларана|r
-}
-
 STRING 12284
-// Items: I00W (|cff0064ffОдияние Даларана|r), Tip (Tooltip - Basic)
+// Items: I01U (|cff0064ffРадужное Сосредоточие|r), Tip (Tooltip - Basic)
 {
 Купить |cff0064ffОдияние Даларана|r
 }
@@ -76530,7 +76524,7 @@ STRING 12677
 }
 
 STRING 12678
-// Items: I00W (|cff0064ffОдияние Даларана|r), Description (Description)
+// Items: I00W (|cff0064ffОдеяние Даларана|r), Description (Description)
 {
 2 уровень
 }
@@ -153134,12 +153128,6 @@ STRING 25208
 |cff0064ffРадужное Сосредоточие|r
 }
 
-STRING 25209
-// Items: I01U (|cff0064ffРадужное Сосредоточие|r), Tip (Tooltip - Basic)
-{
-Купить |cff0064ffОдияние Даларана|r
-}
-
 STRING 25210
 // Items: I01U (|cff0064ffРадужное Сосредоточие|r), Ubertip (Tooltip - Extended)
 {
@@ -181531,6 +181519,12 @@ STRING 29858
 Антимагический кристалл
 }
 
+STRING 29859
+// Items: I00W (|cff0064ffОдеяние Даларана|r), Name (Name)
+{
+|cff0064ffОдеяние Даларана|r
+}
+
 STRING 29860
 // Abilities: A19G (Эредарская Руна), Name (Name)
 {
@@ -181793,6 +181787,12 @@ STRING 29903
 // Upgrades: R0GL (Стальное оружие ближнего боя,Ториевое оруж), Hotkey (Hotkey)
 {
 Q
+}
+
+STRING 29904
+// Items: I00W (|cff0064ffОдеяние Даларана|r), Tip (Tooltip - Basic)
+{
+Купить |cff0064ffОдеяние Даларана|r
 }
 
 STRING 29905
