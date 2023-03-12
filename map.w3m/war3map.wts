@@ -74115,7 +74115,7 @@ STRING 12282
 }
 
 STRING 12283
-// Abilities: A19Q (Львиная пушка), Tip (Tooltip - Normal)
+// Abilities: ANc1 (Кассетные ракеты), Tip (Tooltip - Normal)
 {
 Кассетные ракеты [|cffffcc004-й уровень|r]
 }
@@ -104240,7 +104240,7 @@ Q
 }
 
 STRING 17193
-// Abilities: ANc1 (Кассетные ракеты), Tip (Tooltip - Normal)
+// Abilities: A18U (Броски камней), Tip (Tooltip - Normal)
 {
 Кассетные ракеты [|cffffcc004-й уровень|r]
 }
@@ -179690,7 +179690,7 @@ STRING 29559
 }
 
 STRING 29560
-// Abilities: A18U (Броски камней), Tip (Tooltip - Normal)
+// Abilities: A19Q (Львиная пушка), Tip (Tooltip - Normal)
 {
 Кассетные ракеты [|cffffcc004-й уровень|r]
 }
