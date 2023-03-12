@@ -4,12 +4,12 @@ constant boolean LIBRARY_A1=true
 //endglobals from A1
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE___SpellHero='A06P'
-constant integer SpellSleepAOE___SpellCast='A06O'
-constant string SpellSleepAOE___SpellOrder="sleep"
-constant integer SpellSleepAOE___DummyID='u000'
-constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE___DummyUnit
+constant integer SpellSleepAOE__SpellHero='A06P'
+constant integer SpellSleepAOE__SpellCast='A06O'
+constant string SpellSleepAOE__SpellOrder="sleep"
+constant integer SpellSleepAOE__DummyID='u000'
+constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE__DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -1564,6 +1564,9 @@ unit gg_unit_h0BB_0343= null
 unit gg_unit_h0AU_0344= null
 unit gg_unit_h09N_0346= null
 unit gg_unit_h0BA_0361= null
+trigger gg_trg_ArchontMode= null
+trigger gg_trg_ArchontModeOff= null
+trigger gg_trg_Subsidies= null
 framehandle face= null
 framehandle faceHover= null
 framehandle tooltip= null
@@ -1714,7 +1717,7 @@ endfunction
 //library A1 ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE___getRange takes integer level returns integer
+    function SpellSleepAOE__getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1722,33 +1725,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
-            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
+            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
+            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE___anon__0 takes nothing returns boolean
-            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE__anon__0 takes nothing returns boolean
+            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE___anon__2 takes nothing returns boolean
+            function SpellSleepAOE__anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE___anon__1 takes nothing returns nothing
+        function SpellSleepAOE__anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1756,19 +1759,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE___onInit takes nothing returns nothing
+    function SpellSleepAOE__onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
+        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
         set t=null
     endfunction
 
@@ -2558,7 +2561,7 @@ function UISetup takes nothing returns nothing
 endfunction
 
 // scope init begins
-function init__Init takes nothing returns nothing
+function init___Init takes nothing returns nothing
 	call UISetup()
 endfunction
 // scope init ends
@@ -2600,7 +2603,7 @@ call BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 endfunction
 
 // scope init2 begins
-function init2__Init takes nothing returns nothing
+function init2___Init takes nothing returns nothing
     call Face2()
 endfunction
 // scope init2 ends
@@ -5427,6 +5430,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n050', - 3299.3, - 27637.6, 164.130, 'n050')
     set u=BlzCreateUnitWithSkin(p, 'n04Z', - 4051.0, - 27780.2, 129.038, 'n04Z')
     set u=BlzCreateUnitWithSkin(p, 'n05I', - 3104.3, - 25817.3, 265.240, 'n05I')
+    set u=BlzCreateUnitWithSkin(p, 'h0KJ', - 5938.7, - 30476.9, 271.240, 'h0KJ')
+    set u=BlzCreateUnitWithSkin(p, 'h0KG', - 5756.4, - 29055.7, 270.690, 'h0KG')
     set u=BlzCreateUnitWithSkin(p, 'o03M', - 1307.1, - 30278.8, 273.470, 'o03M')
     set u=BlzCreateUnitWithSkin(p, 'o03K', - 1574.8, - 30280.0, 279.342, 'o03K')
     set u=BlzCreateUnitWithSkin(p, 'o03N', - 940.8, - 30349.2, 274.329, 'o03N')
@@ -5477,6 +5482,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0KF', - 5689.5, - 29066.7, 275.510, 'h0KF')
     set u=BlzCreateUnitWithSkin(p, 'h0KG', - 5756.4, - 29055.7, 270.690, 'h0KG')
     set u=BlzCreateUnitWithSkin(p, 'h0KH', - 6036.6, - 29067.7, 276.590, 'h0KH')
+    set u=BlzCreateUnitWithSkin(p, 'h0KI', - 5743.6, - 30263.9, 271.830, 'h0KI')
     set u=BlzCreateUnitWithSkin(p, 'h0KK', - 5723.3, - 29429.7, 267.100, 'h0KK')
     set u=BlzCreateUnitWithSkin(p, 'h0KL', - 6402.2, - 29850.8, 262.500, 'h0KL')
     set u=BlzCreateUnitWithSkin(p, 'h0KM', - 6105.2, - 29820.8, 282.348, 'h0KM')
@@ -5538,9 +5544,7 @@ function CreateUnitsForPlayer1 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h0KJ', - 5938.7, - 30476.9, 271.240, 'h0KJ')
     set u=BlzCreateUnitWithSkin(p, 'o03W', - 961.6, - 29921.5, 210.333, 'o03W')
-    set u=BlzCreateUnitWithSkin(p, 'h0KI', - 5743.6, - 30263.9, 271.830, 'h0KI')
     set u=BlzCreateUnitWithSkin(p, 'N05O', - 1382.4, - 28748.8, 273.920, 'N05O')
     call SetHeroLevel(u, 25, false)
     set u=BlzCreateUnitWithSkin(p, 'N05O', - 1382.4, - 28748.8, 273.920, 'N05O')
@@ -24507,7 +24511,7 @@ function Trig_Decentralization_Actions takes nothing returns nothing
     //call SetPlayerTechMaxAllowed(p, 'R0HE', 1)
 
 
-
+    call SetPlayerTechMaxAllowed(p, 'R0HC', 1)
     
     
     
@@ -24651,7 +24655,7 @@ function Trig_StormwindFirst_Actions takes nothing returns nothing
     call AcountAll(p)
 
     call SetPlayerTechMaxAllowed(p, 'R0HN', 1)
-
+    call SetPlayerTechMaxAllowed(p, 'R0HC', 1)
 endfunction
 
 //===========================================================================
@@ -25108,7 +25112,6 @@ function Trig_StartAlliance_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('h0I3', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('Hamg', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('Hmkg', 1, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('h0KI', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0HM', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0HL', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0HK', 0, GetEnumPlayer())
@@ -25127,6 +25130,7 @@ function Trig_StartAlliance_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('R0H6', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0H5', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0HN', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HC', 0, GetEnumPlayer())
     // ---
     call SetPlayerTechMaxAllowedSwap('R0HQ', 0, GetEnumPlayer())
 endfunction
@@ -45669,6 +45673,105 @@ endfunction
 
 
 //===========================================================================
+// Trigger: ArchontMode
+//===========================================================================
+function CorrectNumber takes integer pi2 returns boolean
+    return pi2 >= 1 and pi2 <= 24 and pi2 != 13 and pi2 != 16
+endfunction
+
+
+function Trig_ArchontMode_Actions takes nothing returns nothing
+    local string s= SubStringBJ(GetEventPlayerChatString(), 8, 10)
+    local integer pi2= S2I(udg_LocalText2)
+    local integer pi1= GetPlayerId(GetTriggerPlayer())
+    if CorrectNumber(pi2) then
+        call SetPlayerAllianceStateBJ(Player(pi1), Player(pi2), bj_ALLIANCE_ALLIED_ADVUNITS)
+    endif
+   
+endfunction
+
+//===========================================================================
+function InitTrig_ArchontMode takes nothing returns nothing
+    local integer i= 0
+    set gg_trg_ArchontMode=CreateTrigger()
+    loop
+        exitwhen i > 23
+        
+        call TriggerRegisterPlayerChatEvent(gg_trg_ArchontMode, Player(i), "-arhont", false)
+        
+        set i=i + 1
+    endloop
+    
+    call TriggerAddAction(gg_trg_ArchontMode, function Trig_ArchontMode_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: ArchontModeOff
+//===========================================================================
+
+
+function Trig_ArchontModeOff_Actions takes nothing returns nothing
+    local string s= SubStringBJ(GetEventPlayerChatString(), 8, 10)
+    local integer pi2= S2I(udg_LocalText2)
+    local integer pi1= GetPlayerId(GetTriggerPlayer())
+    if CorrectNumber(pi2) then
+        call SetPlayerAllianceBJ(Player(pi1), ALLIANCE_SHARED_ADVANCED_CONTROL, false, Player(pi2))
+    endif
+   
+endfunction
+
+//===========================================================================
+function InitTrig_ArchontModeOff takes nothing returns nothing
+    local integer i= 0
+    set gg_trg_ArchontModeOff=CreateTrigger()
+    loop
+        exitwhen i > 23
+        
+        call TriggerRegisterPlayerChatEvent(gg_trg_ArchontModeOff, Player(i), "-arhoff", false)
+        
+        set i=i + 1
+    endloop
+    
+    call TriggerAddAction(gg_trg_ArchontModeOff, function Trig_ArchontModeOff_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Subsidies
+//===========================================================================
+//struct
+//    integer pi1
+//    integer pi2
+//    boolean g
+//    integer number
+//a
+//
+//
+//endstruct
+//
+//
+//
+//
+//
+//function Trig_Subsidies_Conditions takes nothing returns boolean
+//
+//endfunction
+//
+//function Trig_Subsidies_Actions takes nothing returns nothing
+//
+//
+//endfunction
+//
+////===========================================================================
+//function InitTrig_Subsidies takes nothing returns nothing
+//    set gg_trg_Subsidies = CreateTrigger(  )
+//    call TriggerAddCondition( gg_trg_Subsidies, Condition( function Trig_Subsidies_Conditions ) )
+//    call TriggerAddAction( gg_trg_Subsidies, function Trig_Subsidies_Actions )
+//endfunction
+//
+//
+//===========================================================================
 // Trigger: Red color
 //
 // 
@@ -48393,6 +48496,9 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Camera_command_O()
     call InitTrig_SecondChance()
     call InitTrig_GG()
+    call InitTrig_ArchontMode()
+    call InitTrig_ArchontModeOff()
+    //Function not found: call InitTrig_Subsidies()
     call InitTrig_Red_color()
     call InitTrig_Blue_color()
     call InitTrig_Teal_color()
@@ -48819,7 +48925,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("SpellSleepAOE___onInit")
+call ExecuteFunc("SpellSleepAOE__onInit")
 call UISetup() // INLINED!!
 call Face2() // INLINED!!
 
