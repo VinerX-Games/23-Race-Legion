@@ -41,12 +41,6 @@ STRING 6
 |cff805a32Точный удар|r
 }
 
-STRING 7
-// Units: C001 (|cffd45e19Stormwind|r), Name (Name)
-{
-|cffd45e19Stormwind|r
-}
-
 STRING 8
 // Abilities: A0E3 (|cff805a32Ярость севера|r), Tip (Tooltip - Normal)
 {
@@ -699,12 +693,6 @@ STRING 115
 Крепость Стражей Пустоты
 }
 
-STRING 116
-// Units: h07T (|cffd45e19Луносвет|r), Name (Name)
-{
-|cffd45e19Луносвет|r
-}
-
 STRING 117
 // Units: n006 (Темный портал), Name (Name)
 {
@@ -781,12 +769,6 @@ STRING 129
 // Abilities: A0DY (|cff805a32Обряд перевоплощения|r), Name (Name)
 {
 |cff805a32Обряд перевоплощения|r
-}
-
-STRING 130
-// Units: h00D (|cffd45e19Оргриммар|r), Name (Name)
-{
-|cffd45e19Оргриммар|r
 }
 
 STRING 131
@@ -886,12 +868,6 @@ STRING 145
 ТРОЛЛИ: стена 2
 }
 
-STRING 146
-// Units: h00E (|cffd45e19Крепость Острова Эха|r), Name (Name)
-{
-|cffd45e19Крепость Острова Эха|r
-}
-
 STRING 147
 // Doodads: D01D (ТРОЛЛИ: мост), Name (Name)
 {
@@ -902,12 +878,6 @@ STRING 148
 // Doodads: D01E (ТРОЛЛИ: дом), Name (Name)
 {
 ТРОЛЛИ: дом
-}
-
-STRING 149
-// Units: h00F (|cffd45e19Гавань Трюмных Вод|r), Name (Name)
-{
-|cffd45e19Гавань Трюмных Вод|r
 }
 
 STRING 150
@@ -950,18 +920,6 @@ STRING 156
 // Doodads: D01L (Камень), Name (Name)
 {
 Камень
-}
-
-STRING 157
-// Units: h00G (|cffd45e19Перекресток|r), Name (Name)
-{
-|cffd45e19Перекресток|r
-}
-
-STRING 158
-// Units: h08F (|cffd45e19Кабестан|r), Name (Name)
-{
-|cffd45e19Кабестан|r
 }
 
 STRING 159
@@ -1016,12 +974,6 @@ STRING 167
 // Doodads: D01S (Кладбище), Name (Name)
 {
 Кладбище
-}
-
-STRING 168
-// Units: h00I (|cffd45e19Штормград|r), Name (Name)
-{
-|cffd45e19Штормград|r
 }
 
 STRING 169
@@ -1096,22 +1048,10 @@ STRING 180
 Западный край дом 2
 }
 
-STRING 181
-// Units: h00J (|cffd45e19Мертвые Копи|r), Name (Name)
-{
-|cffd45e19Мертвые Копи|r
-}
-
 STRING 182
 // Abilities: AHre (Воскрешение), Ubertip (Tooltip - Normal - Extended)
 {
 Воскрешает до <AHre,DataA2> находящихся рядом союзников.
-}
-
-STRING 183
-// Units: h00K (|cffd45e19Темнолесье|r), Name (Name)
-{
-|cffd45e19Темнолесье|r
 }
 
 STRING 184
@@ -1130,12 +1070,6 @@ STRING 186
 // Doodads: D026 (Сумеречный лес Портал), Name (Name)
 {
 Сумеречный лес Портал
-}
-
-STRING 187
-// Units: h00L (|cffd45e19Зул'Гуруб|r), Name (Name)
-{
-|cffd45e19Зул'Гуруб|r
 }
 
 STRING 188
@@ -1166,18 +1100,6 @@ STRING 192
 // Doodads: D024 (Торнадо), Name (Name)
 {
 Торнадо
-}
-
-STRING 193
-// Units: h00M (|cffd45e19Пиратская Бухта|r), Name (Name)
-{
-|cffd45e19Пиратская Бухта|r
-}
-
-STRING 194
-// Units: h00N (|cffd45e19Каражан|r), Name (Name)
-{
-|cffd45e19Каражан|r
 }
 
 STRING 195
@@ -1342,12 +1264,6 @@ STRING 220
 |cff805a32Ужасающий вой|r
 }
 
-STRING 221
-// Units: h00R (|cffd45e19Приозерье|r), Name (Name)
-{
-|cffd45e19Приозерье|r
-}
-
 STRING 222
 // Doodads: D02F (Вулкан), Name (Name)
 {
@@ -1401,12 +1317,6 @@ STRING 230
 // Units: U023 (|cffd45e19Пророк|r), Name (Name)
 {
 |cffd45e19Пророк|r
-}
-
-STRING 231
-// Units: h00V (|cffd45e19Крепость Черной Горы|r), Name (Name)
-{
-|cffd45e19Крепость Черной Горы|r
 }
 
 STRING 232
@@ -1629,12 +1539,6 @@ STRING 268
 // Units: okod (|cffff370bЭлитный стрелок Орды|r), Hotkey (Hotkey)
 {
 E
-}
-
-STRING 269
-// Units: h00W (|cffd45e19Солнечный колодец|r), Name (Name)
-{
-|cffd45e19Солнечный колодец|r
 }
 
 STRING 270
@@ -2472,34 +2376,10 @@ STRING 407
 rhpx
 }
 
-STRING 408
-// Units: h072 (|cffd45e19Азжол-Неруб), Name (Name)
-{
-|cffd45e19Азжол-Неруб
-}
-
-STRING 409
-// Units: h0DN (|cffd45e19Ан'кахет: Старое Королевство), Name (Name)
-{
-|cffd45e19Ан'кахет: Старое Королевство
-}
-
-STRING 410
-// Units: h0DO (|cffd45e19Ульдуар(внутренний)|r), Name (Name)
-{
-|cffd45e19Ульдуар(внутренний)|r
-}
-
 STRING 411
 // Doodads: D080 (Корни), Name (Name)
 {
 Корни
-}
-
-STRING 412
-// Units: h0DP (|cffd45e19Тенегорн|r), Name (Name)
-{
-|cffd45e19Тенегорн|r
 }
 
 STRING 413
@@ -2904,12 +2784,6 @@ STRING 479
 R
 }
 
-STRING 480
-// Units: h0DC (|cffd45e19Крепость Пандарийской Стены|r), Name (Name)
-{
-|cffd45e19Крепость Пандарийской Стены|r
-}
-
 STRING 481
 // Units: h01O (|cffffff00Озаренный Паладин |r), Hotkey (Hotkey)
 {
@@ -3016,12 +2890,6 @@ STRING 498
 // Abilities: A0EQ (|cff805a32Тяжелые доспехи|r), Tip (Tooltip - Normal)
 {
 |cff805a32Тяжелые доспехи|r
-}
-
-STRING 499
-// Units: h0DD (|cffd45e19Сик'Весс|r), Name (Name)
-{
-|cffd45e19Сик'Весс|r
 }
 
 STRING 500
@@ -3739,12 +3607,6 @@ STRING 617
 // Units: h01A (|cff64c800Морской волк|r), EditorSuffix (Name - Editor Suffix)
 {
 (кул-Тирас)
-}
-
-STRING 618
-// Units: h01B (|cffd45e19Смертхольм|r), Name (Name)
-{
-|cffd45e19Смертхольм|r
 }
 
 STRING 619
@@ -13376,12 +13238,6 @@ STRING 2216
 (ЭК)
 }
 
-STRING 2217
-// Units: h093 (|cffd45e19Дарнас|r), Name (Name)
-{
-|cffd45e19Дарнас|r
-}
-
 STRING 2218
 // Buffs/Effects: B00F (), Buffubertip (Tooltip - Extended)
 {
@@ -17959,12 +17815,6 @@ STRING 2977
 // Abilities: A0P1 (|cff008080Грозовые Облака|r), Name (Name)
 {
 |cff008080Грозовые Облака|r
-}
-
-STRING 2978
-// Units: h00T (|cffd45e19Мрачный свод|r), Name (Name)
-{
-|cffd45e19Мрачный свод|r
 }
 
 STRING 2979
@@ -30463,12 +30313,6 @@ STRING 5045
 Изучить «|cff008000Смертельный выстрел|r» [|cffffcc00%d-й уровень|r]
 }
 
-STRING 5046
-// Units: h05O (|cffd45e19Цитадель Адского Пламени|r), Name (Name)
-{
-|cffd45e19Цитадель Адского Пламени|r
-}
-
 STRING 5047
 // Abilities: A0FT (|cff008000Смертельный выстрел|r), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -40873,12 +40717,6 @@ STRING 6772
 (сумеречный Молот
 }
 
-STRING 6773
-// Units: h06D (|cffd45e19Резервуар Кривого Клыка|r), Name (Name)
-{
-|cffd45e19Резервуар Кривого Клыка|r
-}
-
 STRING 6774
 // Doodads: D04I (Трубы занготропь), Name (Name)
 {
@@ -41582,34 +41420,10 @@ STRING 6890
 Увеличивает урон всех|cff4040ff ночнорожденных|r, сражающихся в ближнем бою.
 }
 
-STRING 6891
-// Units: h06F (|cffd45e19Зона 51|r), Name (Name)
-{
-|cffd45e19Зона 51|r
-}
-
 STRING 6892
 // Doodads: D052 (Демоны генератор), Name (Name)
 {
 Демоны генератор
-}
-
-STRING 6893
-// Units: h06G (|cffd45e19Штормовая Вершина|r), Name (Name)
-{
-|cffd45e19Штормовая Вершина|r
-}
-
-STRING 6894
-// Units: h06H (|cffd45e19Форт Камнерогов|r), Name (Name)
-{
-|cffd45e19Форт Камнерогов|r
-}
-
-STRING 6895
-// Units: h06I (|cffd45e19Оплот Громоборцев|r), Name (Name)
-{
-|cffd45e19Оплот Громоборцев|r
 }
 
 STRING 6896
@@ -42094,24 +41908,6 @@ STRING 6975
 (ночнорожденные)
 }
 
-STRING 6976
-// Units: h07B (|cffd45e19Гарадар|r), Name (Name)
-{
-|cffd45e19Гарадар|r
-}
-
-STRING 6977
-// Units: h07C (|cffd45e19Ошу'Гун|r), Name (Name)
-{
-|cffd45e19Ошу'Гун|r
-}
-
-STRING 6978
-// Units: h07D (|cffd45e19Бастион Вечной Скорби|r), Name (Name)
-{
-|cffd45e19Бастион Вечной Скорби|r
-}
-
 STRING 6979
 // Doodads: D056 (Ошугун), Name (Name)
 {
@@ -42134,18 +41930,6 @@ STRING 6982
 // Units: n00W (Портал Легиона), Name (Name)
 {
 Портал Легиона
-}
-
-STRING 6983
-// Units: h07E (|cffd45e19Аункиндон|r), Name (Name)
-{
-|cffd45e19Аункиндон|r
-}
-
-STRING 6984
-// Units: h07F (|cffd45e19Шатратт|r), Name (Name)
-{
-|cffd45e19Шатратт|r
 }
 
 STRING 6985
@@ -44490,27 +44274,9 @@ STRING 7373
 |cffd45e19Алый Орден|r
 }
 
-STRING 7374
-// Units: h04H (|cffd45e19Крепость Стражей Пустотыr), Name (Name)
-{
-|cffd45e19Крепость Стражей Пустотыr
-}
-
 STRING 7375
 {
 Работает режим полной видимости - наблюдайте за вашими союзниками и врагами!
-}
-
-STRING 7376
-// Units: h04J (|cffd45e19Камерунr), Name (Name)
-{
-|cffd45e19Камерунr
-}
-
-STRING 7377
-// Units: h04L (|cffd45e19Храм Атал'Хаккара), Name (Name)
-{
-|cffd45e19Храм Атал'Хаккара
 }
 
 STRING 7378
@@ -45424,34 +45190,16 @@ STRING 7529
 |cff008000+400% |rк скорости атаки, но |cff008000+20%|r к получаемому урону.
 }
 
-STRING 7530
-// Units: h07I (|cffd45e19Лагерь Кром'Гол|r), Name (Name)
-{
-|cffd45e19Лагерь Кром'Гол|r
-}
-
 STRING 7531
 // Doodads: D05Y (Дамми черное 2 (стена-прямоугольник) малое), Name (Name)
 {
 Дамми черное 2 (стена-прямоугольник) малое
 }
 
-STRING 7532
-// Units: h07J (|cffd45e19Лагерь Братства Тория|r), Name (Name)
-{
-|cffd45e19Лагерь Братства Тория|r
-}
-
 STRING 7533
 // Doodads: D05S (Казармы Дворфы ЧЖ), Name (Name)
 {
 Казармы Дворфы ЧЖ
-}
-
-STRING 7534
-// Units: h07K (|cffd45e19Фюзель|r), Name (Name)
-{
-|cffd45e19Фюзель|r
 }
 
 STRING 7535
@@ -45470,12 +45218,6 @@ STRING 7537
 // Doodads: D061 (ГОБЛИНЫ: дом), Name (Name)
 {
 ГОБЛИНЫ: дом
-}
-
-STRING 7538
-// Units: h07L (|cffd45e19Каргат|r), Name (Name)
-{
-|cffd45e19Каргат|r
 }
 
 STRING 7539
@@ -45820,18 +45562,6 @@ STRING 7595
 (Гоблины)
 }
 
-STRING 7596
-// Units: h07O (|cffd45e19Лагерь "Высокий Берег"|r), Name (Name)
-{
-|cffd45e19Лагерь "Высокий Берег"|r
-}
-
-STRING 7597
-// Units: h07P (|cffd45e19Гранатовый Редут|r), Name (Name)
-{
-|cffd45e19Гранатовый Редут|r
-}
-
 STRING 7598
 // Doodads: D066 (Туман фиолетовый), Name (Name)
 {
@@ -46010,12 +45740,6 @@ STRING 7627
 // Doodads: D06J (Трубы Гномреган), Name (Name)
 {
 Трубы Гномреган
-}
-
-STRING 7628
-// Units: h07Q (|cffd45e19Старая Наковальня|r), Name (Name)
-{
-|cffd45e19Старая Наковальня|r
 }
 
 STRING 7629
@@ -48320,12 +48044,6 @@ STRING 8011
 Герой дальнего боя.
 }
 
-STRING 8012
-// Units: h05F (|cffd45e19Пик Черной Горы|r), Name (Name)
-{
-|cffd45e19Пик Черной Горы|r
-}
-
 STRING 8013
 // Upgrades: Rnam (Коралловая чешуя,Хитиновая чешуя,Костяная ), Hotkey (Hotkey)
 {
@@ -48463,12 +48181,6 @@ STRING 8035
 Общее
 }
 
-STRING 8036
-// Units: h07M (|cffd45e19Сумеречный бастион|r), Name (Name)
-{
-|cffd45e19Сумеречный бастион|r
-}
-
 STRING 8037
 // Abilities: AUfn (Кольцо льда), Researchhotkey (Hotkey - Learn)
 {
@@ -48529,124 +48241,10 @@ STRING 8046
 Увеличивает урон всех|cff4040ff ночнорожденных|r, сражающихся в ближнем бою.
 }
 
-STRING 8047
-// Units: h07U (|cffd45e19Зул'Аман|r), Name (Name)
-{
-|cffd45e19Зул'Аман|r
-}
-
-STRING 8048
-// Units: h07V (|cffd45e19Столица|r), Name (Name)
-{
-|cffd45e19Столица|r
-}
-
-STRING 8049
-// Units: h07W (|cffd45e19Андорал|r), Name (Name)
-{
-|cffd45e19Андорал|r
-}
-
-STRING 8050
-// Units: h07X (|cffd45e19Дольный очаг|r), Name (Name)
-{
-|cffd45e19Дольный очаг|r
-}
-
-STRING 8051
-// Units: h07Y (|cffd45e19Монастырь Алого Ордена|r), Name (Name)
-{
-|cffd45e19Монастырь Алого Ордена|r
-}
-
-STRING 8052
-// Units: h07Z (|cffd45e19Стратхольм|r), Name (Name)
-{
-|cffd45e19Стратхольм|r
-}
-
-STRING 8053
-// Units: h080 (|cffd45e19Некроситет|r), Name (Name)
-{
-|cffd45e19Некроситет|r
-}
-
-STRING 8054
-// Units: h081 (|cffd45e19Длань Тира|r), Name (Name)
-{
-|cffd45e19Длань Тира|r
-}
-
-STRING 8055
-// Units: h082 (|cffd45e19Заоблачный пик|r), Name (Name)
-{
-|cffd45e19Заоблачный пик|r
-}
-
-STRING 8056
-// Units: h083 (|cffd45e19Часовня Последней Надежды|r), Name (Name)
-{
-|cffd45e19Часовня Последней Надежды|r
-}
-
 STRING 8057
 // Upgrades: R06N (Защита), Tip (Tooltip)
 {
 |cff6464ffИсследование маны|r
-}
-
-STRING 8058
-// Units: h085 (|cffd45e19Джинта'Алор|r), Name (Name)
-{
-|cffd45e19Джинта'Алор|r
-}
-
-STRING 8059
-// Units: h086 (|cffd45e19Крепость Темного Клыка|r), Name (Name)
-{
-|cffd45e19Крепость Темного Клыка|r
-}
-
-STRING 8060
-// Units: h087 (|cffd45e19Стромгард|r), Name (Name)
-{
-|cffd45e19Стромгард|r
-}
-
-STRING 8061
-// Units: h088 (|cffd45e19Крепость Альтерака|r), Name (Name)
-{
-|cffd45e19Крепость Альтерака|r
-}
-
-STRING 8062
-// Units: h089 (|cffd45e19Южнобережье|r), Name (Name)
-{
-|cffd45e19Южнобережье|r
-}
-
-STRING 8063
-// Units: h08A (|cffd45e19Гавань Менетилов|r), Name (Name)
-{
-|cffd45e19Гавань Менетилов|r
-}
-
-STRING 8064
-// Units: h084 (|cffd45e19Похоронный Звон|r), Name (Name)
-{
-|cffd45e19Похоронный Звон|r
-}
-
-STRING 8065
-// Units: h08B (|cffd45e19Крепость Фенриса|r), Name (Name)
-{
-|cffd45e19Крепость Фенриса|r
-}
-
-STRING 8066
-// Units: h08C (|cffd45e19Деревня Сломанного Клыка|r), Name (Name)
-{
-|cffd45e19Деревня Сломанного Клыка|r
 }
 
 STRING 8067
@@ -50838,7 +50436,7 @@ STRING 8428
 }
 
 STRING 8429
-// Units: h08E (|cffd45e19Гилнеас|r), Name (Name)
+// Abilities: A121 (|cffd45e19Гилнеас|r), Name (Name)
 {
 |cffd45e19Гилнеас|r
 }
@@ -50861,304 +50459,16 @@ STRING 8432
 A
 }
 
-STRING 8433
-// Units: h08G (|cffd45e19Терамор|r), Name (Name)
-{
-|cffd45e19Терамор|r
-}
-
-STRING 8434
-// Units: h08H (|cffd45e19Пещеры Времени|r), Name (Name)
-{
-|cffd45e19Пещеры Времени|r
-}
-
-STRING 8435
-// Units: h08I (|cffd45e19Зул'Фаракк|r), Name (Name)
-{
-|cffd45e19Зул'Фаракк|r
-}
-
-STRING 8436
-// Units: h08J (|cffd45e19Терраса Создателя|r), Name (Name)
-{
-|cffd45e19Терраса Создателя|r
-}
-
-STRING 8437
-// Units: h08K (|cffd45e19Крепость Кенария|r), Name (Name)
-{
-|cffd45e19Крепость Кенария|r
-}
-
-STRING 8438
-// Units: h08L (|cffd45e19Храм Анкиража|r), Name (Name)
-{
-|cffd45e19Храм Анкиража|r
-}
-
-STRING 8439
-// Units: h08M (|cffd45e19Чертоги Созидания|r), Name (Name)
-{
-|cffd45e19Чертоги Созидания|r
-}
-
-STRING 8440
-// Units: h08N (|cffd45e19Рамхакен|r), Name (Name)
-{
-|cffd45e19Рамхакен|r
-}
-
-STRING 8441
-// Units: h08O (|cffd45e19Трон Четырех Ветров|r), Name (Name)
-{
-|cffd45e19Трон Четырех Ветров|r
-}
-
-STRING 8442
-// Units: h08P (|cffd45e19Забытый Город|r), Name (Name)
-{
-|cffd45e19Забытый Город|r
-}
-
-STRING 8443
-// Units: h08Q (|cffd45e19Громовой Утес|r), Name (Name)
-{
-|cffd45e19Громовой Утес|r
-}
-
-STRING 8444
-// Units: h08R (|cffd45e19Логово Ониксии|r), Name (Name)
-{
-|cffd45e19Логово Ониксии|r
-}
-
-STRING 8445
-// Units: h08S (|cffd45e19Кенарийские Заросли|r), Name (Name)
-{
-|cffd45e19Кенарийские Заросли|r
-}
-
-STRING 8446
-// Units: h08T (|cffd45e19Форт Триумфа|r), Name (Name)
-{
-|cffd45e19Форт Триумфа|r
-}
-
-STRING 8447
-// Units: h08U (|cffd45e19Крепость Отчаяния|r), Name (Name)
-{
-|cffd45e19Крепость Отчаяния|r
-}
-
-STRING 8448
-// Units: h08V (|cffd45e19Колючий Холм|r), Name (Name)
-{
-|cffd45e19Колючий Холм|r
-}
-
-STRING 8449
-// Units: h08W (|cffd45e19Крепость Кром'Гар|r), Name (Name)
-{
-|cffd45e19Крепость Кром'Гар|r
-}
-
 STRING 8450
 // Upgrades: R06Q (Защита), Name (Name)
 {
 |cff6464ffИсследование маны|r
 }
 
-STRING 8451
-// Units: h08X (|cffd45e19Пик Каменного Когтя|r), Name (Name)
-{
-|cffd45e19Пик Каменного Когтя|r
-}
-
-STRING 8452
-// Units: h08Y (|cffd45e19Астранаар|r), Name (Name)
-{
-|cffd45e19Астранаар|r
-}
-
-STRING 8453
-// Units: h08Z (|cffd45e19Застава Расщепленного Дерева|r), Name (Name)
-{
-|cffd45e19Застава Расщепленного Дерева|r
-}
-
-STRING 8454
-// Units: h090 (|cffd45e19Ночная Гавань|r), Name (Name)
-{
-|cffd45e19Ночная Гавань|r
-}
-
-STRING 8455
-// Units: h091 (|cffd45e19Застава Отравленной Крови|r), Name (Name)
-{
-|cffd45e19Застава Отравленной Крови|r
-}
-
-STRING 8456
-// Units: h092 (|cffd45e19Мировое Древо|r), Name (Name)
-{
-|cffd45e19Мировое Древо|r
-}
-
 STRING 8457
 // Upgrades: R066 (Каннибализм), Tip (Tooltip)
 {
 Исследовать |cff805a32Древнee учение Короля-Лича|r
-}
-
-STRING 8458
-// Units: h094 (|cffd45e19Экзодар|r), Name (Name)
-{
-|cffd45e19Экзодар|r
-}
-
-STRING 8459
-// Units: h00H (|cffd45e19Круговзор|r), Name (Name)
-{
-|cffd45e19Круговзор|r
-}
-
-STRING 8460
-// Units: h095 (|cffd45e19Энергоблок|r), Name (Name)
-{
-|cffd45e19Энергоблок|r
-}
-
-STRING 8461
-// Units: h096 (|cffd45e19Шпиль Сурфурона|r), Name (Name)
-{
-|cffd45e19Шпиль Сурфурона|r
-}
-
-STRING 8462
-// Units: h097 (|cffd45e19Крепость Отваги|r), Name (Name)
-{
-|cffd45e19Крепость Отваги|r
-}
-
-STRING 8463
-// Units: h098 (|cffd45e19Дозор Творцов|r), Name (Name)
-{
-|cffd45e19Дозор Творцов|r
-}
-
-STRING 8464
-// Units: h099 (|cffd45e19Обитель Творцов|r), Name (Name)
-{
-|cffd45e19Обитель Творцов|r
-}
-
-STRING 8465
-// Units: h09A (|cffd45e19Гавань Натиска|r), Name (Name)
-{
-|cffd45e19Гавань Натиска|r
-}
-
-STRING 8466
-// Units: h09B (|cffd45e19Крепость Песни Войны|r), Name (Name)
-{
-|cffd45e19Крепость Песни Войны|r
-}
-
-STRING 8467
-// Units: h09C (|cffd45e19Нексус|r), Name (Name)
-{
-|cffd45e19Нексус|r
-}
-
-STRING 8468
-// Units: h09D (|cffd45e19Храмовый Город Энкила|r), Name (Name)
-{
-|cffd45e19Храмовый Город Энкила|r
-}
-
-STRING 8469
-// Units: h09E (|cffd45e19Крепость Ледяных Оков|r), Name (Name)
-{
-|cffd45e19Крепость Ледяных Оков|r
-}
-
-STRING 8470
-// Units: h09F (|cffd45e19Храм Драконьего Покоя|r), Name (Name)
-{
-|cffd45e19Храм Драконьего Покоя|r
-}
-
-STRING 8471
-// Units: h09G (|cffd45e19Цитадель Ледяной Короны|r), Name (Name)
-{
-|cffd45e19Цитадель Ледяной Короны|r
-}
-
-STRING 8472
-// Units: h09H (|cffd45e19Колизей Серебрянного Авангарда|r), Name (Name)
-{
-|cffd45e19Колизей Серебрянного Авангарда|r
-}
-
-STRING 8473
-// Units: h09I (|cffd45e19Храм Штормов|r), Name (Name)
-{
-|cffd45e19Храм Штормов|r
-}
-
-STRING 8474
-// Units: h09J (|cffd45e19Терраса Творцов|r), Name (Name)
-{
-|cffd45e19Терраса Творцов|r
-}
-
-STRING 8475
-// Units: h09K (|cffd45e19Зул'Драк), Name (Name)
-{
-|cffd45e19Зул'Драк
-}
-
-STRING 8476
-// Units: h09L (|cffd45e19Крепость Драк'Тарон), Name (Name)
-{
-|cffd45e19Крепость Драк'Тарон
-}
-
-STRING 8477
-// Units: h09M (|cffd45e19Новый Дольный Очаг|r), Name (Name)
-{
-|cffd45e19Новый Дольный Очаг|r
-}
-
-STRING 8478
-// Units: h09N (|cffd45e19Хранилище Титанов|r), Name (Name)
-{
-|cffd45e19Хранилище Титанов|r
-}
-
-STRING 8479
-// Units: h09O (|cffd45e19Бухта Торговцев|r), Name (Name)
-{
-|cffd45e19Бухта Торговцев|r
-}
-
-STRING 8480
-// Units: h09P (|cffd45e19Дун Аргол|r), Name (Name)
-{
-|cffd45e19Дун Аргол|r
-}
-
-STRING 8481
-// Units: h09Q (|cffd45e19Крепость Утгард|r), Name (Name)
-{
-|cffd45e19Крепость Утгард|r
-}
-
-STRING 8482
-// Units: h09R (|cffd45e19Крепость Западной Стражи|r), Name (Name)
-{
-|cffd45e19Крепость Западной Стражи|r
 }
 
 STRING 8483
@@ -51179,28 +50489,10 @@ STRING 8485
 Дом Панд 2
 }
 
-STRING 8486
-// Units: h09S (|cffd45e19Храм Нефритовой Змеи|r), Name (Name)
-{
-|cffd45e19Храм Нефритовой Змеи|r
-}
-
-STRING 8487
-// Units: h09T (|cffd45e19Монастырь Тянь|r), Name (Name)
-{
-|cffd45e19Монастырь Тянь|r
-}
-
 STRING 8488
 // Destructibles: B00O (Дерево Пандария), Name (Name)
 {
 Дерево Пандария
-}
-
-STRING 8489
-// Units: h09U (|cffd45e19Деревня Лап'Дон|r), Name (Name)
-{
-|cffd45e19Деревня Лап'Дон|r
 }
 
 STRING 8490
@@ -51233,12 +50525,6 @@ STRING 8494
 Дерево импорт 3
 }
 
-STRING 8495
-// Units: h09V (|cffd45e19Святилище Ордоса|r), Name (Name)
-{
-|cffd45e19Святилище Ордоса|r
-}
-
 STRING 8496
 // Doodads: D087 (Ша), Name (Name)
 {
@@ -51251,28 +50537,10 @@ STRING 8497
 Rock Pillar Панды
 }
 
-STRING 8498
-// Units: h09W (|cffd45e19Хмелеварня Буйных Поттеров|r), Name (Name)
-{
-|cffd45e19Хмелеварня Буйных Поттеров|r
-}
-
 STRING 8499
 // Doodads: D089 (Стена панд), Name (Name)
 {
 Стена панд
-}
-
-STRING 8500
-// Units: h09X (|cffd45e19Полугорье|r), Name (Name)
-{
-|cffd45e19Полугорье|r
-}
-
-STRING 8501
-// Units: h09Y (|cffd45e19Терраса Вечной Весны|r), Name (Name)
-{
-|cffd45e19Терраса Вечной Весны|r
 }
 
 STRING 8502
@@ -51285,24 +50553,6 @@ STRING 8503
 // Destructibles: B00V (Дерево импорт синее), Name (Name)
 {
 Дерево импорт синее
-}
-
-STRING 8504
-// Units: h09Z (|cffd45e19Крепость Покорителей|r), Name (Name)
-{
-|cffd45e19Крепость Покорителей|r
-}
-
-STRING 8505
-// Units: h0A0 (|cffd45e19Львиный Лагерь|r), Name (Name)
-{
-|cffd45e19Львиный Лагерь|r
-}
-
-STRING 8506
-// Units: h0A1 (|cffd45e19Дворец Могу'Шан|r), Name (Name)
-{
-|cffd45e19Дворец Могу'Шан|r
 }
 
 STRING 8507
@@ -51557,22 +50807,10 @@ STRING 8547
 Стена норт 2 зиккурат
 }
 
-STRING 8548
-// Units: h0A3 (|cffd45e19Храм Белого Тигра|r), Name (Name)
-{
-|cffd45e19Храм Белого Тигра|r
-}
-
 STRING 8549
 // Upgrades: R05M (Сделать некромантов адептами,Сделать некр�), effect1 (Effect 1)
 {
 rarm
-}
-
-STRING 8550
-// Units: h0A4 (|cffd45e19Монастырь Шадо'Пан|r), Name (Name)
-{
-|cffd45e19Монастырь Шадо'Пан|r
 }
 
 STRING 8551
@@ -56021,12 +55259,6 @@ STRING 9288
 Деревья Осенние кастом  красные 2
 }
 
-STRING 9289
-// Units: h0AF (|cffd45e19Храм Нюцзао|r), Name (Name)
-{
-|cffd45e19Храм Нюцзао|r
-}
-
 STRING 9290
 // Doodads: D08F (Дом Панд Синий), Name (Name)
 {
@@ -56051,22 +55283,10 @@ STRING 9293
 Стена Панд Синяя
 }
 
-STRING 9294
-// Units: h0AG (|cffd45e19Храм Шанзце'Дао|r), Name (Name)
-{
-|cffd45e19Храм Шанзце'Дао|r
-}
-
 STRING 9295
 // Doodads: D08J (Кисталл оранжевый), Name (Name)
 {
 Кисталл оранжевый
-}
-
-STRING 9296
-// Units: h0AH (|cffd45e19Цитадель Властелина Грома|r), Name (Name)
-{
-|cffd45e19Цитадель Властелина Грома|r
 }
 
 STRING 9297
@@ -56099,42 +55319,6 @@ STRING 9301
 Корни
 }
 
-STRING 9302
-// Units: h0AJ (|cffd45e19Сердце Страха|r), Name (Name)
-{
-|cffd45e19Сердце Страха|r
-}
-
-STRING 9303
-// Units: h0AK (|cffd45e19Деревня Бинан|r), Name (Name)
-{
-|cffd45e19Деревня Бинан|r
-}
-
-STRING 9304
-// Units: h0AL (|cffd45e19Зан'Весс|r), Name (Name)
-{
-|cffd45e19Зан'Весс|r
-}
-
-STRING 9305
-// Units: h0AM (|cffd45e19Храм Красного Журавля|r), Name (Name)
-{
-|cffd45e19Храм Красного Журавля|r
-}
-
-STRING 9306
-// Units: h0AN (|cffd45e19Громовой Тотем|r), Name (Name)
-{
-|cffd45e19Громовой Тотем|r
-}
-
-STRING 9307
-// Units: h0AO (|cffd45e19Небесный Рог|r), Name (Name)
-{
-|cffd45e19Небесный Рог|r
-}
-
 STRING 9308
 // Destructibles: B012 (Деревья (Осенние) Крутогорье), Name (Name)
 {
@@ -56151,12 +55335,6 @@ STRING 9310
 // Units: h03Y (|cffff6464Рыцарь крови|r), Tip (Tooltip - Basic)
 {
 Обучить |cffff6464Рыцаря крови|r
-}
-
-STRING 9311
-// Units: h0AP (|cffd45e19Крепость Черной Ладьи|r), Name (Name)
-{
-|cffd45e19Крепость Черной Ладьи|r
 }
 
 STRING 9312
@@ -56207,18 +55385,6 @@ STRING 9319
 Логово Мурлока 2
 }
 
-STRING 9320
-// Units: h0AQ (|cffd45e19Деревня близ Рощи Кенария|r), Name (Name)
-{
-|cffd45e19Деревня близ Рощи Кенария|r
-}
-
-STRING 9321
-// Units: h0AR (|cffd45e19Древо Кошмара|r), Name (Name)
-{
-|cffd45e19Древо Кошмара|r
-}
-
 STRING 9322
 // Destructibles: B015 (Деревья Кошмара), Name (Name)
 {
@@ -56243,28 +55409,10 @@ STRING 9325
 Кошмар Портал
 }
 
-STRING 9326
-// Units: h0AS (|cffd45e19Академия Нар'Таласа|r), Name (Name)
-{
-|cffd45e19Академия Нар'Таласа|r
-}
-
-STRING 9327
-// Units: h0AT (|cffd45e19Покой Лазурного Крыла|r), Name (Name)
-{
-|cffd45e19Покой Лазурного Крыла|r
-}
-
 STRING 9328
 // Doodads: D08W (Расколотые островадекор колонна), Name (Name)
 {
 Расколотые островадекор колонна
-}
-
-STRING 9329
-// Units: h0AU (|cffd45e19Фараноар|r), Name (Name)
-{
-|cffd45e19Фараноар|r
 }
 
 STRING 9330
@@ -56289,12 +55437,6 @@ STRING 9333
 // Doodads: D090 (Шпиль Легиона), Name (Name)
 {
 Шпиль Легиона
-}
-
-STRING 9334
-// Units: h0AV (|cffd45e19Цитадель Лунных Стражей|r), Name (Name)
-{
-|cffd45e19Цитадель Лунных Стражей|r
 }
 
 STRING 9335
@@ -56331,12 +55473,6 @@ STRING 9340
 // Doodads: D092 (Сурамар круг), Name (Name)
 {
 Сурамар круг
-}
-
-STRING 9341
-// Units: h0AW (|cffd45e19Сурамар|r), Name (Name)
-{
-|cffd45e19Сурамар|r
 }
 
 STRING 9342
@@ -56393,22 +55529,10 @@ STRING 9350
 Дерево Легиона
 }
 
-STRING 9351
-// Units: h0AX (|cffd45e19Престол Триумвирата|r), Name (Name)
-{
-|cffd45e19Престол Триумвирата|r
-}
-
 STRING 9352
 // Doodads: D09A (Арка Дренеев 2), Name (Name)
 {
 Арка Дренеев 2
-}
-
-STRING 9353
-// Units: h0AY (|cffd45e19Предел Триумвирата|r), Name (Name)
-{
-|cffd45e19Предел Триумвирата|r
 }
 
 STRING 9354
@@ -56447,34 +55571,10 @@ STRING 9359
 Камни легиона
 }
 
-STRING 9360
-// Units: h0AZ (|cffd45e19Ксенодар|r), Name (Name)
-{
-|cffd45e19Ксенодар|r
-}
-
-STRING 9361
-// Units: h0B0 (|cffd45e19Прибежище Крокулов|r), Name (Name)
-{
-|cffd45e19Прибежище Крокулов|r
-}
-
 STRING 9362
 // Doodads: D09H (Виндикар Портал), Name (Name)
 {
 Виндикар Портал
-}
-
-STRING 9363
-// Units: h0B1 (|cffd45e19Корабль Кил'Джедена|r), Name (Name)
-{
-|cffd45e19Корабль Кил'Джедена|r
-}
-
-STRING 9364
-// Units: h0B2 (|cffd45e19Крепость Нат'Ракса|r), Name (Name)
-{
-|cffd45e19Крепость Нат'Ракса|r
 }
 
 STRING 9365
@@ -56489,70 +55589,16 @@ STRING 9366
 Цепь Зеленая
 }
 
-STRING 9367
-// Units: h0B4 (|cffd45e19Оружейная огня скверны|r), Name (Name)
-{
-|cffd45e19Оружейная огня скверны|r
-}
-
-STRING 9368
-// Units: h0B5 (|cffd45e19Тигель Душ|r), Name (Name)
-{
-|cffd45e19Тигель Душ|r
-}
-
-STRING 9369
-// Units: h0B3 (|cffd45e19Анторус, пылающий трон (внешний)|r), Name (Name)
-{
-|cffd45e19Анторус, пылающий трон (внешний)|r
-}
-
 STRING 9370
 // Destructibles: B01D (Энергетический мост Демоны), Name (Name)
 {
 Энергетический мост Демоны
 }
 
-STRING 9371
-// Units: h0B6 (|cffd45e19Анторус, пылающий трон (внутренний)|r), Name (Name)
-{
-|cffd45e19Анторус, пылающий трон (внутренний)|r
-}
-
-STRING 9372
-// Units: h0B7 (|cffd45e19Тел'Анор|r), Name (Name)
-{
-|cffd45e19Тел'Анор|r
-}
-
-STRING 9373
-// Units: h0B8 (|cffd45e19Хридшал|r), Name (Name)
-{
-|cffd45e19Хридшал|r
-}
-
-STRING 9374
-// Units: h0B9 (|cffd45e19Чертоги Доблести|r), Name (Name)
-{
-|cffd45e19Чертоги Доблести|r
-}
-
 STRING 9375
 // Units: h0BA (|cffd45e19Гробница Саргераса|r), Name (Name)
 {
 |cffd45e19Гробница Саргераса|r
-}
-
-STRING 9376
-// Units: h0BB (|cffd45e19Вершина Избавления|r), Name (Name)
-{
-|cffd45e19Вершина Избавления|r
-}
-
-STRING 9377
-// Units: h0BC (|cffd45e19Хауствальд), Name (Name)
-{
-|cffd45e19Хауствальд
 }
 
 STRING 9378
@@ -57873,18 +56919,6 @@ STRING 9596
 Руины Вайшира
 }
 
-STRING 9597
-// Units: h0BG (|cffd45e19Неспира|r), Name (Name)
-{
-|cffd45e19Неспира|r
-}
-
-STRING 9598
-// Units: h0BH (|cffd45e19Л'Горек|r), Name (Name)
-{
-|cffd45e19Л'Горек|r
-}
-
 STRING 9599
 // Destructibles: B01E (Дерево Вайшира), Name (Name)
 {
@@ -57909,18 +56943,6 @@ STRING 9602
 Торнадо Синее
 }
 
-STRING 9603
-// Units: h0BI (|cffd45e19Поместье Седогрива|r), Name (Name)
-{
-|cffd45e19Поместье Седогрива|r
-}
-
-STRING 9604
-// Units: h0BJ (|cffd45e19Крепость Барадин|r), Name (Name)
-{
-|cffd45e19Крепость Барадин|r
-}
-
 STRING 9605
 // Doodads: D09R (Большой туман шаблон синий), Name (Name)
 {
@@ -57933,18 +56955,6 @@ STRING 9606
 Торнадо Красное
 }
 
-STRING 9607
-// Units: h0BK (|cffd45e19Прибамбаск|r), Name (Name)
-{
-|cffd45e19Прибамбаск|r
-}
-
-STRING 9608
-// Units: h0BL (|cffd45e19Кезан|r), Name (Name)
-{
-|cffd45e19Кезан|r
-}
-
 STRING 9609
 // Doodads: D09T (Гоблины магаз), Name (Name)
 {
@@ -57955,12 +56965,6 @@ STRING 9610
 // Doodads: D09U (Гоблины Завод), Name (Name)
 {
 Гоблины Завод
-}
-
-STRING 9611
-// Units: h0BM (|cffd45e19Гавань Галливикса|r), Name (Name)
-{
-|cffd45e19Гавань Галливикса|r
 }
 
 STRING 9612
@@ -59927,12 +58931,6 @@ STRING 9934
 (Галливикс)
 }
 
-STRING 9935
-// Units: h0E2 (|cffd45e19Гоночная Баржа|r), Name (Name)
-{
-|cffd45e19Гоночная Баржа|r
-}
-
 STRING 9936
 // Units: h009 (|cffd45e19Бастион воров|r), Ubertip (Tooltip - Extended)
 {
@@ -60657,12 +59655,6 @@ STRING 10056
 // Upgrades: R06Y (Защита), Name (Name)
 {
 |cff6464ffРодство с маной|r
-}
-
-STRING 10057
-// Units: h0DQ (|cffd45e19Огненные Недра|r), Name (Name)
-{
-|cffd45e19Огненные Недра|r
 }
 
 STRING 10058
@@ -65435,12 +64427,6 @@ STRING 10847
 Массовая Телепортация
 }
 
-STRING 10848
-// Units: h0CX (|cffd45e19Оплот Серебрянного Авангарда|r), Name (Name)
-{
-|cffd45e19Оплот Серебрянного Авангарда|r
-}
-
 STRING 10849
 // Abilities: A0AO (|cff6f3c83Порождение щупальца|r), Researchhotkey (Hotkey - Learn)
 {
@@ -68737,18 +67723,6 @@ STRING 11396
 Обучить рабочего
 }
 
-STRING 11397
-// Units: h06E (|cffd45e19Крепость Бурь|r), Name (Name)
-{
-|cffd45e19Крепость Бурь|r
-}
-
-STRING 11398
-// Units: h0DI (|cffd45e19Крепость Озера Ледяных Оков|r), Name (Name)
-{
-|cffd45e19Крепость Озера Ледяных Оков|r
-}
-
 STRING 11399
 // Abilities: A0D6 (Колотов), Researchhotkey (Hotkey - Learn)
 {
@@ -69413,7 +68387,7 @@ STRING 11507
 }
 
 STRING 11508
-// Units: h092 (|cffd45e19Мировое Древо|r), Description (Description)
+// Units: h092 (|cfffc8c32Мировое Древо|r), Description (Description)
 {
 final_export2.mdl 4
 }
@@ -71353,18 +70327,6 @@ STRING 11825
 // Upgrades: R07Z (Железная броня,Стальная броня,Мифриловая б), Tip (Tooltip)
 {
 Исследовать выживаемость |cffffff00(уровень 6)|r
-}
-
-STRING 11826
-// Units: h0DJ (|cffd45e19Деревня Призрачной Луны|r), Name (Name)
-{
-|cffd45e19Деревня Призрачной Луны|r
-}
-
-STRING 11827
-// Units: h0DK (|cffd45e19Черный храм), Name (Name)
-{
-|cffd45e19Черный храм
 }
 
 STRING 11828
@@ -81627,12 +80589,6 @@ STRING 13512
 // Abilities: A0MR (|cff008000Кожа покрытая скверной|r), Ubertip (Tooltip - Normal - Extended)
 {
 |cff008000-20|r от получаемого урона от атак. Минимальный урон от атак: |cff0080003|r.
-}
-
-STRING 13513
-// Units: h0E3 (|cffd45e19Крепость Северной Стражи|r), Name (Name)
-{
-|cffd45e19Крепость Северной Стражи|r
 }
 
 STRING 13514
@@ -97654,12 +96610,6 @@ STRING 16121
 // Abilities: A0U9 (Произвести реженоги), Hotkey (Hotkey - Normal)
 {
 Q
-}
-
-STRING 16122
-// Units: h0F8 (|cffd45e19Глубинные вершины|r), Name (Name)
-{
-|cffd45e19Глубинные вершины|r
 }
 
 STRING 16123
@@ -116236,18 +115186,6 @@ STRING 19185
 Стальгорн Балка
 }
 
-STRING 19186
-// Units: h0GJ (|cffd45e19Стальгорн|r), Name (Name)
-{
-|cffd45e19Стальгорн|r
-}
-
-STRING 19187
-// Units: h0GK (|cffd45e19Гномреган|r), Name (Name)
-{
-|cffd45e19Гномреган|r
-}
-
 STRING 19188
 // Upgrades: R0C6 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
@@ -116389,12 +115327,6 @@ STRING 19211
 Гномреган стена
 }
 
-STRING 19212
-// Units: h0GL (|cffd45e19Ульдаман|r), Name (Name)
-{
-|cffd45e19Ульдаман|r
-}
-
 STRING 19213
 // Upgrades: R0C8 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
@@ -116522,12 +115454,6 @@ STRING 19234
 // Upgrades: R0BH (Доспехи из клепаной кожи,Доспехи из армиро�), EditorSuffix (Editor Suffix)
 {
 (Гномы)
-}
-
-STRING 19235
-// Units: h0GM (|cffd45e19Грим Батол), Name (Name)
-{
-|cffd45e19Грим Батол
 }
 
 STRING 19236
@@ -121920,12 +120846,6 @@ STRING 20130
 Призывает из-под земли шипы, нанося урон наземным врагам на прямой линии и подбрасывая их. |n|n|cffffcc001-й уровень:|r |cff00808080 урона, 0.6 сек. оглушения.|r |n|cffffcc002-й уровень:|r |cff008080100 урона, 1.2 сек. оглушения.|r|r |n|cffffcc003-й уровень:|r |cff008080120 урона, 1.7 сек. оглушения.|r|n|cffffcc004-й уровень:|r |cff008080140 урона, 2.4 сек. оглушения.|r
 }
 
-STRING 20131
-// Units: h0BF (|cffd45e19Руины Вайшира|r), Name (Name)
-{
-|cffd45e19Руины Вайшира|r
-}
-
 STRING 20132
 // Doodads: D0AU (Балка Дворфы), Name (Name)
 {
@@ -122245,12 +121165,6 @@ STRING 20182
 // Upgrades: R021 (Шрапнель), Ubertip (Tooltip - Extended)
 {
 Баллисты получают возможность закрепляться на местности, тем самым повышая скорость атаки, снижая получаемый урон, но жертвуя мобильностью.
-}
-
-STRING 20183
-// Units: h07N (|cffd45e19Порт Драконьей Пасти|r), Name (Name)
-{
-|cffd45e19Порт Драконьей Пасти|r
 }
 
 STRING 20184
@@ -135840,12 +134754,6 @@ STRING 22375
 (Орда)
 }
 
-STRING 22376
-// Units: h0HW (|cffd45e19Лорданель|r), Name (Name)
-{
-|cffd45e19Лорданель|r
-}
-
 STRING 22377
 // Doodads: D0BM (Кель'Талас Стена), Name (Name)
 {
@@ -136445,12 +135353,6 @@ STRING 22474
 Усиливает плазму Сущностей, повышая из броню
 }
 
-STRING 22475
-// Units: h0II (|cffd45e19Деревня Легкий Ветерок|r), Name (Name)
-{
-|cffd45e19Деревня Легкий Ветерок|r
-}
-
 STRING 22476
 // Units: h0IE (|cff9370dbМагическая Сущность Бездны|r), EditorSuffix (Name - Editor Suffix)
 {
@@ -136727,12 +135629,6 @@ STRING 22521
 // Abilities: A17J (|cffd2b48cУдар молотом|r), Hotkey (Hotkey - Normal)
 {
 Q
-}
-
-STRING 22522
-// Units: h0JE (|cffd45e19Крепость Дарнхольд|r), Name (Name)
-{
-|cffd45e19Крепость Дарнхольд|r
 }
 
 STRING 22523
@@ -150138,18 +149034,6 @@ STRING 24717
 Призывает воинов ближнего боя.
 }
 
-STRING 24718
-// Units: h0JF (|cffd45e19Марадон), Name (Name)
-{
-|cffd45e19Марадон
-}
-
-STRING 24719
-// Units: h0JG (|cffd45e19Крепость Оперенной Луны|r), Name (Name)
-{
-|cffd45e19Крепость Оперенной Луны|r
-}
-
 STRING 24720
 // Abilities: A126 (|cff9370dbЯрость Бездны|r), EditorSuffix (Editor Suffix)
 {
@@ -152748,12 +151632,6 @@ STRING 25147
 (Воргены)
 }
 
-STRING 25148
-// Units: h0J9 (|cffd45e19Темное древо|r), Name (Name)
-{
-|cffd45e19Темное древо|r
-}
-
 STRING 25149
 // Abilities: A120 (|cffd45e19Зов Полубога|r), Researchubertip (Tooltip - Learn - Extended)
 {
@@ -152819,13 +151697,13 @@ STRING 25158
 }
 
 STRING 25159
-// Abilities: A121 (|cffd45e19Гилнеас|r), Name (Name)
+// Abilities: A121 (|cffd45e19Гилнеас|r), Tip (Tooltip - Normal)
 {
 |cffd45e19Гилнеас|r
 }
 
 STRING 25160
-// Abilities: A121 (|cffd45e19Гилнеас|r), Tip (Tooltip - Normal)
+// Upgrades: R0FX (Коралловая чешуя,Хитиновая чешуя,Костяная ), Name (Name)
 {
 |cffd45e19Гилнеас|r
 }
@@ -155647,12 +154525,6 @@ STRING 25619
 // Upgrades: R049 (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
 {
 Q
-}
-
-STRING 25620
-// Units: h04I (|cffd45e19Форт Молота Ужаса), Name (Name)
-{
-|cffd45e19Форт Молота Ужаса
 }
 
 STRING 25621
@@ -162124,12 +160996,6 @@ E
 }
 
 STRING 26687
-// Upgrades: R0FX (Коралловая чешуя,Хитиновая чешуя,Костяная ), Name (Name)
-{
-|cffd45e19Гилнеас|r
-}
-
-STRING 26688
 // Upgrades: R0FX (Коралловая чешуя,Хитиновая чешуя,Костяная ), Tip (Tooltip)
 {
 |cffd45e19Гилнеас|r
@@ -172568,6 +171434,12 @@ STRING 28381
 (Альянс)
 }
 
+STRING 28382
+// Units: C001 (|cfffc8c32Stormwind|r), Name (Name)
+{
+|cfffc8c32Stormwind|r
+}
+
 STRING 28383
 // Abilities: A17P (Графика: Флаг Альянса), Name (Name)
 {
@@ -181267,6 +180139,12 @@ STRING 29815
 Отравленные стрелы
 }
 
+STRING 29816
+// Units: h00F (|cfffc8c32Гавань Трюмных Вод|r), Name (Name)
+{
+|cfffc8c32Гавань Трюмных Вод|r
+}
+
 STRING 29817
 // Abilities: A199 (|cff7878ffСовиная разведка), Ubertip (Tooltip - Normal - Extended)
 {
@@ -181283,6 +180161,12 @@ STRING 29819
 // Buffs/Effects: B06Y (), Bufftip (Tooltip)
 {
 Совиная разведка
+}
+
+STRING 29820
+// Units: h00G (|cfffc8c32Перекресток|r), Name (Name)
+{
+|cfffc8c32Перекресток|r
 }
 
 STRING 29821
@@ -181337,6 +180221,12 @@ STRING 29829
 // Abilities: A19D (|cff7878ffВозрождение|r), Tip (Tooltip - Normal)
 {
 Возрождение|r
+}
+
+STRING 29830
+// Units: h07B (|cfffc8c32Гарадар|r), Name (Name)
+{
+|cfffc8c32Гарадар|r
 }
 
 STRING 29831
@@ -181429,6 +180319,18 @@ STRING 29845
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
 }
 
+STRING 29846
+// Units: h07D (|cfffc8c32Бастион Вечной Скорби|r), Name (Name)
+{
+|cfffc8c32Бастион Вечной Скорби|r
+}
+
+STRING 29847
+// Units: h07E (|cfffc8c32Аункиндон|r), Name (Name)
+{
+|cfffc8c32Аункиндон|r
+}
+
 STRING 29848
 // Upgrades: R0GC (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
 {
@@ -181507,10 +180409,22 @@ STRING 29860
 Эредарская Руна
 }
 
+STRING 29861
+// Units: h07P (|cfffc8c32Гранатовый Редут|r), Name (Name)
+{
+|cfffc8c32Гранатовый Редут|r
+}
+
 STRING 29862
 // Abilities: A19H (|cff7878ffАура Эредарской Ауры), Tip (Tooltip - Normal)
 {
 Аура Эредарской Ауры
+}
+
+STRING 29863
+// Units: h07W (|cfffc8c32Андорал|r), Name (Name)
+{
+|cfffc8c32Андорал|r
 }
 
 STRING 29864
@@ -181523,6 +180437,12 @@ STRING 29865
 // Abilities: A19J (|cff7878ffКристалл антимагии), Tip (Tooltip - Normal)
 {
 Кристалл антимагии
+}
+
+STRING 29866
+// Units: h08A (|cfffc8c32Гавань Менетилов|r), Name (Name)
+{
+|cfffc8c32Гавань Менетилов|r
 }
 
 STRING 29867
@@ -181541,6 +180461,12 @@ STRING 29869
 // Abilities: A19K (|cff7878ffИсцеляющий реликт), Tip (Tooltip - Normal)
 {
 Исцеляющий реликт
+}
+
+STRING 29870
+// Units: h08E (|cfffc8c32Гилнеас|r), Name (Name)
+{
+|cfffc8c32Гилнеас|r
 }
 
 STRING 29871
@@ -181651,6 +180577,12 @@ STRING 29888
 Помощь
 }
 
+STRING 29889
+// Units: h08H (|cfffc8c32Пещеры Времени|r), Name (Name)
+{
+|cfffc8c32Пещеры Времени|r
+}
+
 STRING 29890
 // Abilities: A19N (|cff7878ffПодпушечный огнемет), EditorSuffix (Editor Suffix)
 {
@@ -181661,6 +180593,12 @@ STRING 29891
 // Abilities: A19O (|cff7878ffПодпушечный огнемет), Tip (Tooltip - Normal)
 {
 Подпушечный огнемет
+}
+
+STRING 29892
+// Units: h08N (|cfffc8c32Рамкахен|r), Name (Name)
+{
+|cfffc8c32Рамкахен|r
 }
 
 STRING 29893
@@ -181709,6 +180647,18 @@ STRING 29900
 // Abilities: A19N (|cff7878ffПодпушечный огнемет), Ubertip (Tooltip - Normal - Extended)
 {
 "Существует вероятность, что при выстреле урон понесет не только враг, но и|cffff0000 сама техника|r. Лучше купите страховку" - менеджер ТК.
+}
+
+STRING 29901
+// Units: h08Y (|cfffc8c32Астранаар|r), Name (Name)
+{
+|cfffc8c32Астранаар|r
+}
+
+STRING 29902
+// Units: h09A (|cfffc8c32Гавань Натиска|r), Name (Name)
+{
+|cfffc8c32Гавань Натиска|r
 }
 
 STRING 29903
@@ -181867,6 +180817,12 @@ STRING 29928
 (Альянс)
 }
 
+STRING 29929
+// Units: h09O (|cfffc8c32Бухта Торговцев|r), Name (Name)
+{
+|cfffc8c32Бухта Торговцев|r
+}
+
 STRING 29930
 // Buffs/Effects: BEah (), EditorSuffix (Editor Suffix)
 {
@@ -181889,6 +180845,12 @@ STRING 29933
 // Upgrades: R0HB (Грабеж), Ubertip (Tooltip - Extended)
 {
 Открывает т2 и т3 мили юнитов пандаренов, но повышает расходы на 5%.
+}
+
+STRING 29934
+// Units: h0AN (|cfffc8c32Громовой Тотем|r), Name (Name)
+{
+|cfffc8c32Громовой Тотем|r
 }
 
 STRING 29935
@@ -182099,5 +181061,1043 @@ STRING 29969
 // Upgrades: R001 (Грабеж), EditorSuffix (Editor Suffix)
 {
 (Альянс)
+}
+
+STRING 29970
+// Units: h0AS (|cfffc8c32Академия Нар'Таласа|r), Name (Name)
+{
+|cfffc8c32Академия Нар'Таласа|r
+}
+
+STRING 29971
+// Units: h0B3 (|cfffc8c32Анторус, пылающий трон (внешний)|r), Name (Name)
+{
+|cfffc8c32Анторус, пылающий трон (внешний)|r
+}
+
+STRING 29972
+// Units: h0B6 (|cfffc8c32Анторус, пылающий трон (внутренний)|r), Name (Name)
+{
+|cfffc8c32Анторус, пылающий трон (внутренний)|r
+}
+
+STRING 29973
+// Units: h0BB (|cfffc8c32Вершина Избавления|r), Name (Name)
+{
+|cfffc8c32Вершина Избавления|r
+}
+
+STRING 29974
+// Units: h0BM (|cfffc8c32Гавань Галливикса|r), Name (Name)
+{
+|cfffc8c32Гавань Галливикса|r
+}
+
+STRING 29975
+// Units: h072 (|cfffc8c32Азжол-Неруб), Name (Name)
+{
+|cfffc8c32Азжол-Неруб
+}
+
+STRING 29976
+// Units: h0DN (|cfffc8c32Ан'кахет: Старое Королевство), Name (Name)
+{
+|cfffc8c32Ан'кахет: Старое Королевство
+}
+
+STRING 29977
+// Units: h0E2 (|cfffc8c32Гоночная Баржа|r), Name (Name)
+{
+|cfffc8c32Гоночная Баржа|r
+}
+
+STRING 29978
+// Units: h0F8 (|cfffc8c32Глубинные вершины|r), Name (Name)
+{
+|cfffc8c32Глубинные вершины|r
+}
+
+STRING 29979
+// Units: h0GK (|cfffc8c32Гномреган|r), Name (Name)
+{
+|cfffc8c32Гномреган|r
+}
+
+STRING 29980
+// Units: h0GM (|cfffc8c32Грим Батол), Name (Name)
+{
+|cfffc8c32Грим Батол
+}
+
+STRING 29981
+// Units: h00D (|cfffc8c32Оргриммар|r), Name (Name)
+{
+|cfffc8c32Оргриммар|r
+}
+
+STRING 29982
+// Units: h00E (|cfffc8c32Крепость Островов Эха|r), Name (Name)
+{
+|cfffc8c32Крепость Островов Эха|r
+}
+
+STRING 29983
+// Units: h00I (|cfffc8c32Штормград|r), Name (Name)
+{
+|cfffc8c32Штормград|r
+}
+
+STRING 29984
+// Units: h00J (|cfffc8c32Мертвые Копи|r), Name (Name)
+{
+|cfffc8c32Мертвые Копи|r
+}
+
+STRING 29985
+// Units: h00K (|cfffc8c32Темнолесье|r), Name (Name)
+{
+|cfffc8c32Темнолесье|r
+}
+
+STRING 29986
+// Units: h00L (|cfffc8c32Зул'Гуруб|r), Name (Name)
+{
+|cfffc8c32Зул'Гуруб|r
+}
+
+STRING 29987
+// Units: h00M (|cfffc8c32Пиратская Бухта|r), Name (Name)
+{
+|cfffc8c32Пиратская Бухта|r
+}
+
+STRING 29988
+// Units: h00N (|cfffc8c32Каражан|r), Name (Name)
+{
+|cfffc8c32Каражан|r
+}
+
+STRING 29989
+// Units: h00R (|cfffc8c32Приозерье|r), Name (Name)
+{
+|cfffc8c32Приозерье|r
+}
+
+STRING 29990
+// Units: h00V (|cfffc8c32Крепость Черной Горы|r), Name (Name)
+{
+|cfffc8c32Крепость Черной Горы|r
+}
+
+STRING 29991
+// Units: h00W (|cfffc8c32Солнечный колодец|r), Name (Name)
+{
+|cfffc8c32Солнечный колодец|r
+}
+
+STRING 29992
+// Units: h01B (|cfffc8c32Смертхольм|r), Name (Name)
+{
+|cfffc8c32Смертхольм|r
+}
+
+STRING 29993
+// Units: h05O (|cfffc8c32Цитадель Адского Пламени|r), Name (Name)
+{
+|cfffc8c32Цитадель Адского Пламени|r
+}
+
+STRING 29994
+// Units: h06D (|cfffc8c32Резервуар Кривого Клыка|r), Name (Name)
+{
+|cfffc8c32Резервуар Кривого Клыка|r
+}
+
+STRING 29995
+// Units: h06E (|cfffc8c32Крепость Бурь|r), Name (Name)
+{
+|cfffc8c32Крепость Бурь|r
+}
+
+STRING 29996
+// Units: h06F (|cfffc8c32Зона 51|r), Name (Name)
+{
+|cfffc8c32Зона 51|r
+}
+
+STRING 29997
+// Units: h06G (|cfffc8c32Штормовая Вершина|r), Name (Name)
+{
+|cfffc8c32Штормовая Вершина|r
+}
+
+STRING 29998
+// Units: h06H (|cfffc8c32Форт Камнерогов|r), Name (Name)
+{
+|cfffc8c32Форт Камнерогов|r
+}
+
+STRING 29999
+// Units: h06I (|cfffc8c32Оплот Громоборцев|r), Name (Name)
+{
+|cfffc8c32Оплот Громоборцев|r
+}
+
+STRING 30000
+// Units: h07C (|cfffc8c32Ошу'Гун|r), Name (Name)
+{
+|cfffc8c32Ошу'Гун|r
+}
+
+STRING 30001
+// Units: h07F (|cfffc8c32Шатратт|r), Name (Name)
+{
+|cfffc8c32Шатратт|r
+}
+
+STRING 30002
+// Units: h04H (|cfffc8c32Крепость Стражей Пустотыr), Name (Name)
+{
+|cfffc8c32Крепость Стражей Пустотыr
+}
+
+STRING 30003
+// Units: h04I (|cfffc8c32Форт Молота Ужаса), Name (Name)
+{
+|cfffc8c32Форт Молота Ужаса
+}
+
+STRING 30004
+// Units: h04J (|cfffc8c32Камерунr), Name (Name)
+{
+|cfffc8c32Камерунr
+}
+
+STRING 30005
+// Units: h04L (|cfffc8c32Храм Атал'Хаккара), Name (Name)
+{
+|cfffc8c32Храм Атал'Хаккара
+}
+
+STRING 30006
+// Units: h07I (|cfffc8c32Лагерь Кром'Гол|r), Name (Name)
+{
+|cfffc8c32Лагерь Кром'Гол|r
+}
+
+STRING 30007
+// Units: h07J (|cfffc8c32Лагерь Братства Тория|r), Name (Name)
+{
+|cfffc8c32Лагерь Братства Тория|r
+}
+
+STRING 30008
+// Units: h07K (|cfffc8c32Фюзель|r), Name (Name)
+{
+|cfffc8c32Фюзель|r
+}
+
+STRING 30009
+// Units: h07L (|cfffc8c32Каргат|r), Name (Name)
+{
+|cfffc8c32Каргат|r
+}
+
+STRING 30010
+// Units: h07M (|cfffc8c32Сумеречный бастион|r), Name (Name)
+{
+|cfffc8c32Сумеречный бастион|r
+}
+
+STRING 30011
+// Units: h07N (|cfffc8c32Порт Драконьей Пасти|r), Name (Name)
+{
+|cfffc8c32Порт Драконьей Пасти|r
+}
+
+STRING 30012
+// Units: h07O (|cfffc8c32Лагерь "Высокий Берег"|r), Name (Name)
+{
+|cfffc8c32Лагерь "Высокий Берег"|r
+}
+
+STRING 30013
+// Units: h07Q (|cfffc8c32Старая Наковальня|r), Name (Name)
+{
+|cfffc8c32Старая Наковальня|r
+}
+
+STRING 30014
+// Units: h07T (|cfffc8c32Луносвет|r), Name (Name)
+{
+|cfffc8c32Луносвет|r
+}
+
+STRING 30015
+// Units: h07U (|cfffc8c32Зул'Аман|r), Name (Name)
+{
+|cfffc8c32Зул'Аман|r
+}
+
+STRING 30016
+// Units: h07V (|cfffc8c32Столица|r), Name (Name)
+{
+|cfffc8c32Столица|r
+}
+
+STRING 30017
+// Units: h07X (|cfffc8c32Дольный очаг|r), Name (Name)
+{
+|cfffc8c32Дольный очаг|r
+}
+
+STRING 30018
+// Units: h07Y (|cfffc8c32Монастырь Алого Ордена|r), Name (Name)
+{
+|cfffc8c32Монастырь Алого Ордена|r
+}
+
+STRING 30019
+// Units: h07Z (|cfffc8c32Стратхольм|r), Name (Name)
+{
+|cfffc8c32Стратхольм|r
+}
+
+STRING 30020
+// Units: h080 (|cfffc8c32Некроситет|r), Name (Name)
+{
+|cfffc8c32Некроситет|r
+}
+
+STRING 30021
+// Units: h081 (|cfffc8c32Длань Тира|r), Name (Name)
+{
+|cfffc8c32Длань Тира|r
+}
+
+STRING 30022
+// Units: h082 (|cfffc8c32Заоблачный пик|r), Name (Name)
+{
+|cfffc8c32Заоблачный пик|r
+}
+
+STRING 30023
+// Units: h083 (|cfffc8c32Часовня Последней Надежды|r), Name (Name)
+{
+|cfffc8c32Часовня Последней Надежды|r
+}
+
+STRING 30024
+// Units: h084 (|cfffc8c32Похоронный Звон|r), Name (Name)
+{
+|cfffc8c32Похоронный Звон|r
+}
+
+STRING 30025
+// Units: h085 (|cfffc8c32Джинта'Алор|r), Name (Name)
+{
+|cfffc8c32Джинта'Алор|r
+}
+
+STRING 30026
+// Units: h086 (|cfffc8c32Крепость Темного Клыка|r), Name (Name)
+{
+|cfffc8c32Крепость Темного Клыка|r
+}
+
+STRING 30027
+// Units: h087 (|cfffc8c32Стромгард|r), Name (Name)
+{
+|cfffc8c32Стромгард|r
+}
+
+STRING 30028
+// Units: h088 (|cfffc8c32Крепость Альтерака|r), Name (Name)
+{
+|cfffc8c32Крепость Альтерака|r
+}
+
+STRING 30029
+// Units: h089 (|cfffc8c32Южнобережье|r), Name (Name)
+{
+|cfffc8c32Южнобережье|r
+}
+
+STRING 30030
+// Units: h08B (|cfffc8c32Крепость Фенриса|r), Name (Name)
+{
+|cfffc8c32Крепость Фенриса|r
+}
+
+STRING 30031
+// Units: h08C (|cfffc8c32Деревня Сломанного Клыка|r), Name (Name)
+{
+|cfffc8c32Деревня Сломанного Клыка|r
+}
+
+STRING 30032
+// Units: h08F (|cfffc8c32Кабестан|r), Name (Name)
+{
+|cfffc8c32Кабестан|r
+}
+
+STRING 30033
+// Units: h08G (|cfffc8c32Терамор|r), Name (Name)
+{
+|cfffc8c32Терамор|r
+}
+
+STRING 30034
+// Units: h08I (|cfffc8c32Зул'Фаракк|r), Name (Name)
+{
+|cfffc8c32Зул'Фаракк|r
+}
+
+STRING 30035
+// Units: h08J (|cfffc8c32Терраса Создателя|r), Name (Name)
+{
+|cfffc8c32Терраса Создателя|r
+}
+
+STRING 30036
+// Units: h08K (|cfffc8c32Крепость Кенария|r), Name (Name)
+{
+|cfffc8c32Крепость Кенария|r
+}
+
+STRING 30037
+// Units: h08L (|cfffc8c32Храм Анкиража|r), Name (Name)
+{
+|cfffc8c32Храм Анкиража|r
+}
+
+STRING 30038
+// Units: h08M (|cfffc8c32Чертоги Созидания|r), Name (Name)
+{
+|cfffc8c32Чертоги Созидания|r
+}
+
+STRING 30039
+// Units: h08O (|cfffc8c32Трон Четырех Ветров|r), Name (Name)
+{
+|cfffc8c32Трон Четырех Ветров|r
+}
+
+STRING 30040
+// Units: h08P (|cfffc8c32Забытый Город|r), Name (Name)
+{
+|cfffc8c32Забытый Город|r
+}
+
+STRING 30041
+// Units: h08Q (|cfffc8c32Громовой Утес|r), Name (Name)
+{
+|cfffc8c32Громовой Утес|r
+}
+
+STRING 30042
+// Units: h08R (|cfffc8c32Логово Ониксии|r), Name (Name)
+{
+|cfffc8c32Логово Ониксии|r
+}
+
+STRING 30043
+// Units: h08S (|cfffc8c32Кенарийские Заросли|r), Name (Name)
+{
+|cfffc8c32Кенарийские Заросли|r
+}
+
+STRING 30044
+// Units: h08T (|cfffc8c32Форт Триумфа|r), Name (Name)
+{
+|cfffc8c32Форт Триумфа|r
+}
+
+STRING 30045
+// Units: h08U (|cfffc8c32Крепость Отчаяния|r), Name (Name)
+{
+|cfffc8c32Крепость Отчаяния|r
+}
+
+STRING 30046
+// Units: h08V (|cfffc8c32Колючий Холм|r), Name (Name)
+{
+|cfffc8c32Колючий Холм|r
+}
+
+STRING 30047
+// Units: h08W (|cfffc8c32Крепость Кром'Гар|r), Name (Name)
+{
+|cfffc8c32Крепость Кром'Гар|r
+}
+
+STRING 30048
+// Units: h08X (|cfffc8c32Пик Каменного Когтя|r), Name (Name)
+{
+|cfffc8c32Пик Каменного Когтя|r
+}
+
+STRING 30049
+// Units: h08Z (|cfffc8c32Застава Расщепленного Дерева|r), Name (Name)
+{
+|cfffc8c32Застава Расщепленного Дерева|r
+}
+
+STRING 30050
+// Units: h090 (|cfffc8c32Ночная Гавань|r), Name (Name)
+{
+|cfffc8c32Ночная Гавань|r
+}
+
+STRING 30051
+// Units: h091 (|cfffc8c32Застава Отравленной Крови|r), Name (Name)
+{
+|cfffc8c32Застава Отравленной Крови|r
+}
+
+STRING 30052
+// Units: h092 (|cfffc8c32Мировое Древо|r), Name (Name)
+{
+|cfffc8c32Мировое Древо|r
+}
+
+STRING 30053
+// Units: h093 (|cfffc8c32Дарнас|r), Name (Name)
+{
+|cfffc8c32Дарнас|r
+}
+
+STRING 30054
+// Units: h094 (|cfffc8c32Экзодар|r), Name (Name)
+{
+|cfffc8c32Экзодар|r
+}
+
+STRING 30055
+// Units: h00H (|cfffc8c32Круговзор|r), Name (Name)
+{
+|cfffc8c32Круговзор|r
+}
+
+STRING 30056
+// Units: h095 (|cfffc8c32Энергоблок|r), Name (Name)
+{
+|cfffc8c32Энергоблок|r
+}
+
+STRING 30057
+// Units: h096 (|cfffc8c32Шпиль Сурфурона|r), Name (Name)
+{
+|cfffc8c32Шпиль Сурфурона|r
+}
+
+STRING 30058
+// Units: h097 (|cfffc8c32Крепость Отваги|r), Name (Name)
+{
+|cfffc8c32Крепость Отваги|r
+}
+
+STRING 30059
+// Units: h098 (|cfffc8c32Дозор Творцов|r), Name (Name)
+{
+|cfffc8c32Дозор Творцов|r
+}
+
+STRING 30060
+// Units: h099 (|cfffc8c32Обитель Творцов|r), Name (Name)
+{
+|cfffc8c32Обитель Творцов|r
+}
+
+STRING 30061
+// Units: h09B (|cfffc8c32Крепость Песни Войны|r), Name (Name)
+{
+|cfffc8c32Крепость Песни Войны|r
+}
+
+STRING 30062
+// Units: h09C (|cfffc8c32Нексус|r), Name (Name)
+{
+|cfffc8c32Нексус|r
+}
+
+STRING 30063
+// Units: h09D (|cfffc8c32Храмовый Город Энкила|r), Name (Name)
+{
+|cfffc8c32Храмовый Город Энкила|r
+}
+
+STRING 30064
+// Units: h09E (|cfffc8c32Крепость Ледяных Оков|r), Name (Name)
+{
+|cfffc8c32Крепость Ледяных Оков|r
+}
+
+STRING 30065
+// Units: h09F (|cfffc8c32Храм Драконьего Покоя|r), Name (Name)
+{
+|cfffc8c32Храм Драконьего Покоя|r
+}
+
+STRING 30066
+// Units: h09G (|cfffc8c32Цитадель Ледяной Короны|r), Name (Name)
+{
+|cfffc8c32Цитадель Ледяной Короны|r
+}
+
+STRING 30067
+// Units: h09H (|cfffc8c32Колизей Серебрянного Авангарда|r), Name (Name)
+{
+|cfffc8c32Колизей Серебрянного Авангарда|r
+}
+
+STRING 30068
+// Units: h09I (|cfffc8c32Храм Штормов|r), Name (Name)
+{
+|cfffc8c32Храм Штормов|r
+}
+
+STRING 30069
+// Units: h09J (|cfffc8c32Терраса Творцов|r), Name (Name)
+{
+|cfffc8c32Терраса Творцов|r
+}
+
+STRING 30070
+// Units: h09K (|cfffc8c32Зул'Драк), Name (Name)
+{
+|cfffc8c32Зул'Драк
+}
+
+STRING 30071
+// Units: h09L (|cfffc8c32Крепость Драк'Тарон), Name (Name)
+{
+|cfffc8c32Крепость Драк'Тарон
+}
+
+STRING 30072
+// Units: h09M (|cfffc8c32Новый Дольный Очаг|r), Name (Name)
+{
+|cfffc8c32Новый Дольный Очаг|r
+}
+
+STRING 30073
+// Units: h09N (|cfffc8c32Хранилище Титанов|r), Name (Name)
+{
+|cfffc8c32Хранилище Титанов|r
+}
+
+STRING 30074
+// Units: h09P (|cfffc8c32Дун Аргол|r), Name (Name)
+{
+|cfffc8c32Дун Аргол|r
+}
+
+STRING 30075
+// Units: h09Q (|cfffc8c32Крепость Утгард|r), Name (Name)
+{
+|cfffc8c32Крепость Утгард|r
+}
+
+STRING 30076
+// Units: h09R (|cfffc8c32Крепость Западной Стражи|r), Name (Name)
+{
+|cfffc8c32Крепость Западной Стражи|r
+}
+
+STRING 30077
+// Units: h09S (|cfffc8c32Храм Нефритовой Змеи|r), Name (Name)
+{
+|cfffc8c32Храм Нефритовой Змеи|r
+}
+
+STRING 30078
+// Units: h09T (|cfffc8c32Монастырь Тянь|r), Name (Name)
+{
+|cfffc8c32Монастырь Тянь|r
+}
+
+STRING 30079
+// Units: h09U (|cfffc8c32Деревня Лап'Дон|r), Name (Name)
+{
+|cfffc8c32Деревня Лап'Дон|r
+}
+
+STRING 30080
+// Units: h09V (|cfffc8c32Святилище Ордоса|r), Name (Name)
+{
+|cfffc8c32Святилище Ордоса|r
+}
+
+STRING 30081
+// Units: h09W (|cfffc8c32Хмелеварня Буйных Поттеров|r), Name (Name)
+{
+|cfffc8c32Хмелеварня Буйных Поттеров|r
+}
+
+STRING 30082
+// Units: h09X (|cfffc8c32Полугорье|r), Name (Name)
+{
+|cfffc8c32Полугорье|r
+}
+
+STRING 30083
+// Units: h09Y (|cfffc8c32Терраса Вечной Весны|r), Name (Name)
+{
+|cfffc8c32Терраса Вечной Весны|r
+}
+
+STRING 30084
+// Units: h09Z (|cfffc8c32Крепость Покорителей|r), Name (Name)
+{
+|cfffc8c32Крепость Покорителей|r
+}
+
+STRING 30085
+// Units: h0A0 (|cfffc8c32Львиный Лагерь|r), Name (Name)
+{
+|cfffc8c32Львиный Лагерь|r
+}
+
+STRING 30086
+// Units: h0A1 (|cfffc8c32Дворец Могу'Шан|r), Name (Name)
+{
+|cfffc8c32Дворец Могу'Шан|r
+}
+
+STRING 30087
+// Units: h0A3 (|cfffc8c32Храм Белого Тигра|r), Name (Name)
+{
+|cfffc8c32Храм Белого Тигра|r
+}
+
+STRING 30088
+// Units: h0A4 (|cfffc8c32Монастырь Шадо'Пан|r), Name (Name)
+{
+|cfffc8c32Монастырь Шадо'Пан|r
+}
+
+STRING 30089
+// Units: h0AF (|cfffc8c32Храм Нюцзао|r), Name (Name)
+{
+|cfffc8c32Храм Нюцзао|r
+}
+
+STRING 30090
+// Units: h0AG (|cfffc8c32Храм Шанзце'Дао|r), Name (Name)
+{
+|cfffc8c32Храм Шанзце'Дао|r
+}
+
+STRING 30091
+// Units: h0AH (|cfffc8c32Цитадель Властелина Грома|r), Name (Name)
+{
+|cfffc8c32Цитадель Властелина Грома|r
+}
+
+STRING 30092
+// Units: h0AJ (|cfffc8c32Сердце Страха|r), Name (Name)
+{
+|cfffc8c32Сердце Страха|r
+}
+
+STRING 30093
+// Units: h0AK (|cfffc8c32Деревня Бинан|r), Name (Name)
+{
+|cfffc8c32Деревня Бинан|r
+}
+
+STRING 30094
+// Units: h0AL (|cfffc8c32Зан'Весс|r), Name (Name)
+{
+|cfffc8c32Зан'Весс|r
+}
+
+STRING 30095
+// Units: h0AM (|cfffc8c32Храм Красного Журавля|r), Name (Name)
+{
+|cfffc8c32Храм Красного Журавля|r
+}
+
+STRING 30096
+// Units: h0AO (|cfffc8c32Небесный Рог|r), Name (Name)
+{
+|cfffc8c32Небесный Рог|r
+}
+
+STRING 30097
+// Units: h0AP (|cfffc8c32Крепость Черной Ладьи|r), Name (Name)
+{
+|cfffc8c32Крепость Черной Ладьи|r
+}
+
+STRING 30098
+// Units: h0AQ (|cfffc8c32Деревня близ Рощи Кенария|r), Name (Name)
+{
+|cfffc8c32Деревня близ Рощи Кенария|r
+}
+
+STRING 30099
+// Units: h0AR (|cfffc8c32Древо Кошмара|r), Name (Name)
+{
+|cfffc8c32Древо Кошмара|r
+}
+
+STRING 30100
+// Units: h0AT (|cfffc8c32Покой Лазурного Крыла|r), Name (Name)
+{
+|cfffc8c32Покой Лазурного Крыла|r
+}
+
+STRING 30101
+// Units: h0AU (|cfffc8c32Фараноар|r), Name (Name)
+{
+|cfffc8c32Фараноар|r
+}
+
+STRING 30102
+// Units: h0AV (|cfffc8c32Цитадель Лунных Стражей|r), Name (Name)
+{
+|cfffc8c32Цитадель Лунных Стражей|r
+}
+
+STRING 30103
+// Units: h0AW (|cfffc8c32Сурамар|r), Name (Name)
+{
+|cfffc8c32Сурамар|r
+}
+
+STRING 30104
+// Units: h0AX (|cfffc8c32Престол Триумвирата|r), Name (Name)
+{
+|cfffc8c32Престол Триумвирата|r
+}
+
+STRING 30105
+// Units: h0AY (|cfffc8c32Предел Триумвирата|r), Name (Name)
+{
+|cfffc8c32Предел Триумвирата|r
+}
+
+STRING 30106
+// Units: h0AZ (|cfffc8c32Ксенодар|r), Name (Name)
+{
+|cfffc8c32Ксенодар|r
+}
+
+STRING 30107
+// Units: h0B0 (|cfffc8c32Прибежище Крокулов|r), Name (Name)
+{
+|cfffc8c32Прибежище Крокулов|r
+}
+
+STRING 30108
+// Units: h0B1 (|cfffc8c32Корабль Кил'Джедена|r), Name (Name)
+{
+|cfffc8c32Корабль Кил'Джедена|r
+}
+
+STRING 30109
+// Units: h0B2 (|cfffc8c32Крепость Нат'Ракса|r), Name (Name)
+{
+|cfffc8c32Крепость Нат'Ракса|r
+}
+
+STRING 30110
+// Units: h0B4 (|cfffc8c32Оружейная огня скверны|r), Name (Name)
+{
+|cfffc8c32Оружейная огня скверны|r
+}
+
+STRING 30111
+// Units: h0B5 (|cfffc8c32Тигель Душ|r), Name (Name)
+{
+|cfffc8c32Тигель Душ|r
+}
+
+STRING 30112
+// Units: h0B7 (|cfffc8c32Тел'Анор|r), Name (Name)
+{
+|cfffc8c32Тел'Анор|r
+}
+
+STRING 30113
+// Units: h0B8 (|cfffc8c32Хридшал|r), Name (Name)
+{
+|cfffc8c32Хридшал|r
+}
+
+STRING 30114
+// Units: h0B9 (|cfffc8c32Чертоги Доблести|r), Name (Name)
+{
+|cfffc8c32Чертоги Доблести|r
+}
+
+STRING 30115
+// Units: h0BC (|cfffc8c32Хауствальд), Name (Name)
+{
+|cfffc8c32Хауствальд
+}
+
+STRING 30116
+// Units: h0BF (|cfffc8c32Руины Вайшира|r), Name (Name)
+{
+|cfffc8c32Руины Вайшира|r
+}
+
+STRING 30117
+// Units: h0BG (|cfffc8c32Неспира|r), Name (Name)
+{
+|cfffc8c32Неспира|r
+}
+
+STRING 30118
+// Units: h0BH (|cfffc8c32Л'Горек|r), Name (Name)
+{
+|cfffc8c32Л'Горек|r
+}
+
+STRING 30119
+// Units: h0BI (|cfffc8c32Поместье Седогрива|r), Name (Name)
+{
+|cfffc8c32Поместье Седогрива|r
+}
+
+STRING 30120
+// Units: h0BJ (|cfffc8c32Крепость Барадин|r), Name (Name)
+{
+|cfffc8c32Крепость Барадин|r
+}
+
+STRING 30121
+// Units: h0BK (|cfffc8c32Прибамбаск|r), Name (Name)
+{
+|cfffc8c32Прибамбаск|r
+}
+
+STRING 30122
+// Units: h0BL (|cfffc8c32Кезан|r), Name (Name)
+{
+|cfffc8c32Кезан|r
+}
+
+STRING 30123
+// Units: h00T (|cfffc8c32Мрачный свод|r), Name (Name)
+{
+|cfffc8c32Мрачный свод|r
+}
+
+STRING 30124
+// Units: h0CX (|cfffc8c32Оплот Серебрянного Авангарда|r), Name (Name)
+{
+|cfffc8c32Оплот Серебрянного Авангарда|r
+}
+
+STRING 30125
+// Units: h0DC (|cfffc8c32Крепость Пандарийской Стены|r), Name (Name)
+{
+|cfffc8c32Крепость Пандарийской Стены|r
+}
+
+STRING 30126
+// Units: h0DD (|cfffc8c32Сик'Весс|r), Name (Name)
+{
+|cfffc8c32Сик'Весс|r
+}
+
+STRING 30127
+// Units: h0DI (|cfffc8c32Крепость Озера Ледяных Оков|r), Name (Name)
+{
+|cfffc8c32Крепость Озера Ледяных Оков|r
+}
+
+STRING 30128
+// Units: h0DJ (|cfffc8c32Деревня Призрачной Луны|r), Name (Name)
+{
+|cfffc8c32Деревня Призрачной Луны|r
+}
+
+STRING 30129
+// Units: h0DK (|cfffc8c32Черный храм), Name (Name)
+{
+|cfffc8c32Черный храм
+}
+
+STRING 30130
+// Units: h0DO (|cfffc8c32Ульдуар(внутренний)|r), Name (Name)
+{
+|cfffc8c32Ульдуар(внутренний)|r
+}
+
+STRING 30131
+// Units: h0DP (|cfffc8c32Тенегорн|r), Name (Name)
+{
+|cfffc8c32Тенегорн|r
+}
+
+STRING 30132
+// Units: h05F (|cfffc8c32Пик Черной Горы|r), Name (Name)
+{
+|cfffc8c32Пик Черной Горы|r
+}
+
+STRING 30133
+// Units: h0DQ (|cfffc8c32Огненные Недра|r), Name (Name)
+{
+|cfffc8c32Огненные Недра|r
+}
+
+STRING 30134
+// Units: h0E3 (|cfffc8c32Крепость Северной Стражи|r), Name (Name)
+{
+|cfffc8c32Крепость Северной Стражи|r
+}
+
+STRING 30135
+// Units: h0GJ (|cfffc8c32Стальгорн|r), Name (Name)
+{
+|cfffc8c32Стальгорн|r
+}
+
+STRING 30136
+// Units: h0GL (|cfffc8c32Ульдаман|r), Name (Name)
+{
+|cfffc8c32Ульдаман|r
+}
+
+STRING 30137
+// Units: h0HW (|cfffc8c32Лорданель|r), Name (Name)
+{
+|cfffc8c32Лорданель|r
+}
+
+STRING 30138
+// Units: h0II (|cfffc8c32Деревня Легкий Ветерок|r), Name (Name)
+{
+|cfffc8c32Деревня Легкий Ветерок|r
+}
+
+STRING 30139
+// Units: h0J9 (|cfffc8c32Темное древо|r), Name (Name)
+{
+|cfffc8c32Темное древо|r
+}
+
+STRING 30140
+// Units: h0JE (|cfffc8c32Крепость Дарнхольд|r), Name (Name)
+{
+|cfffc8c32Крепость Дарнхольд|r
+}
+
+STRING 30141
+// Units: h0JF (|cfffc8c32Марадон), Name (Name)
+{
+|cfffc8c32Марадон
+}
+
+STRING 30142
+// Units: h0JG (|cfffc8c32Крепость Оперенной Луны|r), Name (Name)
+{
+|cfffc8c32Крепость Оперенной Луны|r
 }
 
