@@ -775,6 +775,7 @@ trigger gg_trg_RememberLothar= null
 trigger gg_trg_BegStormwind= null
 trigger gg_trg_TankFire= null
 trigger gg_trg_Kristall= null
+trigger gg_trg_Kristall2= null
 trigger gg_trg_HolyHelp= null
 trigger gg_trg_MagicUsk= null
 trigger gg_trg_MassMolot= null
@@ -1123,7 +1124,7 @@ trigger gg_trg_StrannikC= null
 trigger gg_trg_PaladinF= null
 trigger gg_trg_PaladinB= null
 trigger gg_trg_PaladinC= null
-trigger gg_trg_FireShielDamage= null
+trigger gg_trg_FireShielDamageUniversal= null
 trigger gg_trg_BanditsOn= null
 trigger gg_trg_StartBandits= null
 trigger gg_trg_VoevodaSpell= null
@@ -24326,7 +24327,7 @@ function Trig_Drayenay_Actions takes nothing returns nothing
     call AcountAll(p)
     set udg_MainPrice[pi]=udg_MainPrice[pi] + 5
     call SetPlayerTechMaxAllowed(p, 'R0HB', 1)
-
+    call SetPlayerTechResearched(p, 'R0H0', 1)
 
 
     
@@ -24574,6 +24575,55 @@ function InitTrig_RememberLothar takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_RememberLothar, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
     call TriggerAddCondition(gg_trg_RememberLothar, Condition(function Trig_RememberLothar_Conditions))
     call TriggerAddAction(gg_trg_RememberLothar, function Trig_RememberLothar_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: TankFire
+//===========================================================================
+function Trig_TankFire_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetAttacker(), 'A19N') > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker()))
+endfunction
+
+function Trig_TankFire_Actions takes nothing returns nothing
+    local unit u= GetAttacker()
+    local unit u2= GetTriggerUnit()
+    if Random(7 , 100) then
+        call IssueTargetOrder(u, "breathoffire", u2)
+    endif
+    
+    set u=null
+    set u2=null
+endfunction
+
+//===========================================================================
+function InitTrig_TankFire takes nothing returns nothing
+    set gg_trg_TankFire=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_TankFire, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_TankFire, Condition(function Trig_TankFire_Conditions))
+    call TriggerAddAction(gg_trg_TankFire, function Trig_TankFire_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Kristall2
+//===========================================================================
+function Trig_Kristall2_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A19S'
+endfunction
+
+function Trig_Kristall2_Actions takes nothing returns nothing
+    local unit u=  CreateUnit(GetOwningPlayer(GetTriggerUnit()), 'o040', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), bj_UNIT_FACING)
+    call IssueImmediateOrder(u, "manaflareon")
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_Kristall2 takes nothing returns nothing
+    set gg_trg_Kristall2=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Kristall2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_Kristall2, Condition(function Trig_Kristall2_Conditions))
+    call TriggerAddAction(gg_trg_Kristall2, function Trig_Kristall2_Actions)
 endfunction
 
 
@@ -24949,8 +24999,8 @@ function Trig_StartAlliance_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('R0HN', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0HC', 0, GetEnumPlayer())
     // ---
-    call SetPlayerTechMaxAllowedSwap('R0HQ', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0HR', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HS', 0, GetEnumPlayer())
 endfunction
 
 function Trig_StartAlliance_Actions takes nothing returns nothing
@@ -35753,7 +35803,7 @@ function Trig_BloodElvesOn_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_LigthBuild)
     
     
-    call EnableTrigger(gg_trg_FireShielDamage)
+    call EnableTrigger(gg_trg_FireShielDamageUniversal)
     
     call EnableTrigger(gg_trg_Porcha)
     call EnableTrigger(gg_trg_FirePodgogStrela)
@@ -37485,9 +37535,9 @@ function InitTrig_PaladinC takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: FireShielDamage
+// Trigger: FireShielDamageUniversal
 //===========================================================================
-function Trig_FireShielDamage_Func002C takes nothing returns boolean
+function Trig_FireShielDamageUniversal_Func002C takes nothing returns boolean
     if ( not ( IsUnitType(GetAttacker(), UNIT_TYPE_MELEE_ATTACKER) == true ) ) then
         return false
     endif
@@ -37497,24 +37547,23 @@ function Trig_FireShielDamage_Func002C takes nothing returns boolean
     return true
 endfunction
 
-function Trig_FireShielDamage_Conditions takes nothing returns boolean
-    if ( not Trig_FireShielDamage_Func002C() ) then
+function Trig_FireShielDamageUniversal_Conditions takes nothing returns boolean
+    if ( not Trig_FireShielDamageUniversal_Func002C() ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_FireShielDamage_Actions takes nothing returns nothing
-    call SetUnitLifeBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetAttacker()) - 15.00 ))
+function Trig_FireShielDamageUniversal_Actions takes nothing returns nothing
+    call UnitDamageTargetBJ(GetTriggerUnit(), GetAttacker(), 15.00, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_FIRE)
 endfunction
 
 //===========================================================================
-function InitTrig_FireShielDamage takes nothing returns nothing
-    set gg_trg_FireShielDamage=CreateTrigger()
-    call DisableTrigger(gg_trg_FireShielDamage)
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_FireShielDamage, EVENT_PLAYER_UNIT_ATTACKED)
-    call TriggerAddCondition(gg_trg_FireShielDamage, Condition(function Trig_FireShielDamage_Conditions))
-    call TriggerAddAction(gg_trg_FireShielDamage, function Trig_FireShielDamage_Actions)
+function InitTrig_FireShielDamageUniversal takes nothing returns nothing
+    set gg_trg_FireShielDamageUniversal=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_FireShielDamageUniversal, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(gg_trg_FireShielDamageUniversal, Condition(function Trig_FireShielDamageUniversal_Conditions))
+    call TriggerAddAction(gg_trg_FireShielDamageUniversal, function Trig_FireShielDamageUniversal_Actions)
 endfunction
 
 //===========================================================================
@@ -45231,7 +45280,7 @@ endfunction
 //===========================================================================
 
 function RepForOneHero takes nothing returns nothing
-    if IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO) and GetOwningPlayer(GetEnumUnit()) == GetTriggerPlayer() then
+    if ( IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO) or GetUnitAbilityLevel(GetEnumUnit(), 'Bvul') > 0 ) and GetOwningPlayer(GetEnumUnit()) == GetTriggerPlayer() then
         call ReplaceUnit2(GetEnumUnit() , GetUnitTypeId(GetEnumUnit()) , bj_UNIT_STATE_METHOD_RELATIVE)
     endif
 endfunction
@@ -45494,15 +45543,17 @@ endfunction
 // Trigger: ArchontMode
 //===========================================================================
 function CorrectNumber takes integer pi2 returns boolean
-    return pi2 >= 1 and pi2 <= 24 and pi2 != 13 and pi2 != 16
+    return ( pi2 >= 1 and pi2 <= 24 and pi2 != 13 and pi2 != 16 )
 endfunction
 
 
 function Trig_ArchontMode_Actions takes nothing returns nothing
     local string s= SubStringBJ(GetEventPlayerChatString(), 8, 10)
-    local integer pi2= S2I(udg_LocalText2)
+    local integer pi2= S2I(s)
     local integer pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) then
+        //call DisplayTextToPlayer(Player(pi1),0,0,"Вы попытались дать полный контоль игроку "+GetPlayerName(Player(pi2)))
+        //call DisplayTextToPlayer(Player(pi1),0,0,"Вам попытались дать полный контоль игрок "+GetPlayerName(Player(pi1)))
         call SetPlayerAllianceStateBJ(Player(pi1), Player(pi2), bj_ALLIANCE_ALLIED_ADVUNITS)
     endif
    
@@ -45531,7 +45582,7 @@ endfunction
 
 function Trig_ArchontModeOff_Actions takes nothing returns nothing
     local string s= SubStringBJ(GetEventPlayerChatString(), 8, 10)
-    local integer pi2= S2I(udg_LocalText2)
+    local integer pi2= S2I(s)
     local integer pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) then
         call SetPlayerAllianceBJ(Player(pi1), ALLIANCE_SHARED_ADVANCED_CONTROL, false, Player(pi2))
@@ -47707,6 +47758,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_FinHoly()
     call InitTrig_StormwindFirst()
     call InitTrig_RememberLothar()
+    call InitTrig_TankFire()
+    call InitTrig_Kristall2()
     call InitTrig_HolyHelp()
     call InitTrig_MagicUsk()
     call InitTrig_MassMolot()
@@ -48045,7 +48098,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_PaladinF()
     call InitTrig_PaladinB()
     call InitTrig_PaladinC()
-    call InitTrig_FireShielDamage()
+    call InitTrig_FireShielDamageUniversal()
     call InitTrig_BanditsOn()
     call InitTrig_StartBandits()
     call InitTrig_BlinkToUnit_attack()
