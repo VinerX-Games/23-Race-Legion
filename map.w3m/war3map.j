@@ -2561,7 +2561,7 @@ function UISetup takes nothing returns nothing
 endfunction
 
 // scope init begins
-function init___Init takes nothing returns nothing
+function init__Init takes nothing returns nothing
 	call UISetup()
 endfunction
 // scope init ends
@@ -2603,7 +2603,7 @@ call BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 endfunction
 
 // scope init2 begins
-function init2___Init takes nothing returns nothing
+function init2__Init takes nothing returns nothing
     call Face2()
 endfunction
 // scope init2 ends
@@ -5382,6 +5382,13 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'o042', - 6234.2, - 29119.9, 262.167, 'o042')
     set u=BlzCreateUnitWithSkin(p, 'hfoo', - 6520.2, - 28941.0, 259.263, 'hfoo')
     set u=BlzCreateUnitWithSkin(p, 'o043', - 6078.7, - 29130.8, 280.087, 'o043')
+<<<<<<< Updated upstream
+=======
+    set u=BlzCreateUnitWithSkin(p, 'n052', - 3517.3, - 27626.9, 50.121, 'n052')
+    set u=BlzCreateUnitWithSkin(p, 'n050', - 3299.3, - 27637.6, 164.130, 'n050')
+    set u=BlzCreateUnitWithSkin(p, 'n04Z', - 4051.0, - 27780.2, 129.038, 'n04Z')
+    set u=BlzCreateUnitWithSkin(p, 'n05I', - 3104.3, - 25817.3, 265.240, 'n05I')
+>>>>>>> Stashed changes
     set u=BlzCreateUnitWithSkin(p, 'h0KJ', - 5975.3, - 30278.8, 271.240, 'h0KJ')
     set u=BlzCreateUnitWithSkin(p, 'h0KG', - 5756.4, - 29055.7, 270.690, 'h0KG')
     set u=BlzCreateUnitWithSkin(p, 'hkni', - 5809.7, - 28895.5, 281.172, 'hkni')
@@ -5389,7 +5396,10 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0K5', - 6118.9, - 29305.2, 277.398, 'h0K5')
     set u=BlzCreateUnitWithSkin(p, 'h0K6', - 5812.8, - 29317.1, 268.629, 'h0K6')
     set u=BlzCreateUnitWithSkin(p, 'hspt', - 5782.2, - 29696.3, 277.189, 'hspt')
+<<<<<<< Updated upstream
     call SetUnitState(u, UNIT_STATE_MANA, 0)
+=======
+>>>>>>> Stashed changes
     set u=BlzCreateUnitWithSkin(p, 'hmtt', - 6034.3, - 30037.9, 264.510, 'hmtt')
     set u=BlzCreateUnitWithSkin(p, 'hmtm', - 6383.4, - 30027.2, 320.751, 'hmtm')
     set u=BlzCreateUnitWithSkin(p, 'hsor', - 6105.0, - 29710.5, 272.669, 'hsor')
@@ -5430,7 +5440,10 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0KQ', - 5853.2, - 29791.0, 281.390, 'h0KQ')
     call SetUnitState(u, UNIT_STATE_MANA, 0)
     set u=BlzCreateUnitWithSkin(p, 'h0KY', - 6188.7, - 29887.9, 282.500, 'h0KY')
+<<<<<<< Updated upstream
     call SetUnitState(u, UNIT_STATE_MANA, 0)
+=======
+>>>>>>> Stashed changes
     set u=BlzCreateUnitWithSkin(p, 'h0KZ', - 6388.9, - 30116.2, 281.975, 'h0KZ')
     set u=BlzCreateUnitWithSkin(p, 'hpea', - 4871.7, - 29776.1, 268.020, 'hpea')
     set u=BlzCreateUnitWithSkin(p, 'hpea', - 4876.0, - 29723.5, 292.102, 'hpea')
@@ -5460,6 +5473,35 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
 endfunction
 
 //===========================================================================
+<<<<<<< Updated upstream
+=======
+function CreateUnitsForPlayer1 takes nothing returns nothing
+    local player p= Player(1)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u=BlzCreateUnitWithSkin(p, 'o03W', - 961.6, - 29921.5, 210.333, 'o03W')
+    set u=BlzCreateUnitWithSkin(p, 'N05O', - 1382.4, - 28748.8, 273.920, 'N05O')
+    call SetHeroLevel(u, 25, false)
+    set u=BlzCreateUnitWithSkin(p, 'N05O', - 1382.4, - 28748.8, 273.920, 'N05O')
+    call SetHeroLevel(u, 25, false)
+endfunction
+
+//===========================================================================
+function CreateUnitsForPlayer3 takes nothing returns nothing
+    local player p= Player(3)
+    local unit u
+    local integer unitID
+    local trigger t
+    local real life
+
+    set u=BlzCreateUnitWithSkin(p, 'h02M', - 5305.4, - 30114.3, 212.140, 'h02M')
+endfunction
+
+//===========================================================================
+>>>>>>> Stashed changes
 function CreateUnitsForPlayer21 takes nothing returns nothing
     local player p= Player(21)
     local unit u
@@ -45502,6 +45544,7 @@ endfunction
 
 
 //===========================================================================
+<<<<<<< Updated upstream
 // Trigger: ArchontMode
 //===========================================================================
 function CorrectNumber takes integer pi2 returns boolean
@@ -45567,6 +45610,8 @@ endfunction
 
 
 //===========================================================================
+=======
+>>>>>>> Stashed changes
 // Trigger: Red color
 //
 // 
@@ -48289,8 +48334,11 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Camera_command_O()
     call InitTrig_SecondChance()
     call InitTrig_GG()
+<<<<<<< Updated upstream
     call InitTrig_ArchontMode()
     call InitTrig_ArchontModeOff()
+=======
+>>>>>>> Stashed changes
     call InitTrig_Red_color()
     call InitTrig_Blue_color()
     call InitTrig_Teal_color()
