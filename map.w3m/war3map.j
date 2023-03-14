@@ -24999,8 +24999,7 @@ function Trig_StartAlliance_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('R0HN', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0HC', 0, GetEnumPlayer())
     // ---
-    call SetPlayerTechMaxAllowedSwap('R0HR', 0, GetEnumPlayer())
-    call SetPlayerTechMaxAllowedSwap('R0HS', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HQ', 0, GetEnumPlayer())
 endfunction
 
 function Trig_StartAlliance_Actions takes nothing returns nothing
@@ -45552,8 +45551,8 @@ function Trig_ArchontMode_Actions takes nothing returns nothing
     local integer pi2= S2I(s)
     local integer pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) then
-        //call DisplayTextToPlayer(Player(pi1),0,0,"Вы попытались дать полный контоль игроку "+GetPlayerName(Player(pi2)))
-        //call DisplayTextToPlayer(Player(pi1),0,0,"Вам попытались дать полный контоль игрок "+GetPlayerName(Player(pi1)))
+        call DisplayTextToPlayer(Player(pi1), 0, 0, "Вы попытались дать полный контоль игроку " + GetPlayerName(Player(pi2)))
+        call DisplayTextToPlayer(Player(pi1), 0, 0, "Вам попытался дать полный контоль игрок " + GetPlayerName(Player(pi1)))
         call SetPlayerAllianceStateBJ(Player(pi1), Player(pi2), bj_ALLIANCE_ALLIED_ADVUNITS)
     endif
    
@@ -45585,6 +45584,8 @@ function Trig_ArchontModeOff_Actions takes nothing returns nothing
     local integer pi2= S2I(s)
     local integer pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) then
+        call DisplayTextToPlayer(Player(pi1), 0, 0, "Вы попытались отключить полный контоль игроку " + GetPlayerName(Player(pi2)))
+        call DisplayTextToPlayer(Player(pi1), 0, 0, "Вам попытался отключить полный контоль игрок " + GetPlayerName(Player(pi1)))
         call SetPlayerAllianceBJ(Player(pi1), ALLIANCE_SHARED_ADVANCED_CONTROL, false, Player(pi2))
     endif
    
