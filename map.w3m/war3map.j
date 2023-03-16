@@ -4,12 +4,12 @@ constant boolean LIBRARY_A1=true
 //endglobals from A1
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -263,12 +263,9 @@ rect gg_rct_DarkM_2= null
 rect gg_rct_DarkM_3= null
 rect gg_rct_DarkM_4= null
 rect gg_rct_AzNer_2= null
-rect gg_rct_AzNer_3= null
-rect gg_rct_AzNer_4= null
 rect gg_rct_AzNer_5= null
 rect gg_rct_Nord_1= null
 rect gg_rct_Nord_2= null
-rect gg_rct_Nord_3= null
 rect gg_rct_Nord_5= null
 rect gg_rct_AzNer1= null
 rect gg_rct_Nord4= null
@@ -471,8 +468,6 @@ trigger gg_trg_LimitDereva_O= null
 trigger gg_trg_Cities_Start_O= null
 trigger gg_trg_Cities_Start_2= null
 trigger gg_trg_DeadSituastion_O= null
-trigger gg_trg_Cities_Zaxvat_O= null
-trigger gg_trg_Cities_Zaxvat_O_Copy= null
 trigger gg_trg_Upgrade_Gold= null
 trigger gg_trg_Upgrade_Gold_C= null
 trigger gg_trg_Upgrade_Lumber= null
@@ -568,14 +563,9 @@ trigger gg_trg_Tomb= null
 trigger gg_trg_Portal10= null
 trigger gg_trg_Portal11= null
 trigger gg_trg_Portal12= null
-trigger gg_trg_Azner_1= null
 trigger gg_trg_Azner_2= null
-trigger gg_trg_Azner_3= null
-trigger gg_trg_Azner_4= null
 trigger gg_trg_Azner_5= null
-trigger gg_trg_Nord_1= null
 trigger gg_trg_Nord_2= null
-trigger gg_trg_Nord_3= null
 trigger gg_trg_Nord_4= null
 trigger gg_trg_Nord_5= null
 trigger gg_trg_QtunOut= null
@@ -1468,7 +1458,6 @@ unit gg_unit_n01D_0903= null
 unit gg_unit_h0AW_0341= null
 unit gg_unit_h07N_0238= null
 unit gg_unit_h0BM_0604= null
-unit gg_unit_n003_0999= null
 unit gg_unit_h0BL_0603= null
 unit gg_unit_n003_0097= null
 unit gg_unit_n03D_0666= null
@@ -1530,7 +1519,6 @@ unit gg_unit_h097_0502= null
 unit gg_unit_n003_0941= null
 unit gg_unit_n003_0942= null
 unit gg_unit_n003_0943= null
-unit gg_unit_n003_0951= null
 unit gg_unit_n003_0952= null
 unit gg_unit_n003_0995= null
 unit gg_unit_h0E2_0011= null
@@ -1547,7 +1535,6 @@ unit gg_unit_h087_0403= null
 unit gg_unit_h089_0405= null
 unit gg_unit_h08A_0406= null
 unit gg_unit_h0F8_0045= null
-unit gg_unit_n003_1003= null
 unit gg_unit_n01B_0850= null
 unit gg_unit_h0AP_0552= null
 unit gg_unit_h09P_0009= null
@@ -1718,7 +1705,7 @@ endfunction
 //library A1 ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1726,33 +1713,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1760,19 +1747,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -2562,7 +2549,7 @@ function UISetup takes nothing returns nothing
 endfunction
 
 // scope init begins
-function init___Init takes nothing returns nothing
+function init__Init takes nothing returns nothing
 	call UISetup()
 endfunction
 // scope init ends
@@ -2604,7 +2591,7 @@ call BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 endfunction
 
 // scope init2 begins
-function init2___Init takes nothing returns nothing
+function init2__Init takes nothing returns nothing
     call Face2()
 endfunction
 // scope init2 ends
@@ -5573,8 +5560,8 @@ function CreateNeutralHostileBuildings takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h09E', - 7968.0, 22944.0, 270.000, 'h09E')
     set u=BlzCreateUnitWithSkin(p, 'h099', - 11360.0, 25504.0, 270.000, 'h099')
     set u=BlzCreateUnitWithSkin(p, 'h098', - 8288.0, 25632.0, 270.000, 'h098')
-    set u=BlzCreateUnitWithSkin(p, 'h0DN', - 27136.0, - 25344.0, 270.000, 'h0DN')
-    set u=BlzCreateUnitWithSkin(p, 'h072', - 30528.0, - 30528.0, 270.000, 'h072')
+    set u=BlzCreateUnitWithSkin(p, 'h0DN', - 30400.0, - 27776.0, 30.820, 'h0DN')
+    set u=BlzCreateUnitWithSkin(p, 'h072', - 27200.0, - 26112.0, - 52.197, 'h072')
     set u=BlzCreateUnitWithSkin(p, 'h08J', - 23520.0, - 7776.0, 270.000, 'h08J')
     set gg_unit_h0AF_0383=BlzCreateUnitWithSkin(p, 'h0AF', - 8704.0, - 14976.0, 270.000, 'h0AF')
     set gg_unit_h07T_0385=BlzCreateUnitWithSkin(p, 'h07T', 25440.0, 22880.0, 270.000, 'h07T')
@@ -5659,9 +5646,9 @@ function CreateNeutralHostileBuildings takes nothing returns nothing
     set gg_unit_h0BJ_0602=BlzCreateUnitWithSkin(p, 'h0BJ', 9600.0, 2048.0, 270.000, 'h0BJ')
     set gg_unit_h0BL_0603=BlzCreateUnitWithSkin(p, 'h0BL', - 7648.0, - 2464.0, 270.000, 'h0BL')
     set gg_unit_h0BM_0604=BlzCreateUnitWithSkin(p, 'h0BM', - 10144.0, - 544.0, 270.000, 'h0BM')
-    set u=BlzCreateUnitWithSkin(p, 'h0DO', - 23712.0, - 27232.0, 270.000, 'h0DO')
+    set u=BlzCreateUnitWithSkin(p, 'h0DO', - 22944.0, - 28768.0, 270.000, 'h0DO')
     set u=BlzCreateUnitWithSkin(p, 'h0DP', - 21664.0, - 27808.0, 270.000, 'h0DP')
-    set gg_unit_n03A_0657=BlzCreateUnitWithSkin(p, 'n03A', - 23680.0, - 25984.0, 270.000, 'n03A')
+    set gg_unit_n03A_0657=BlzCreateUnitWithSkin(p, 'n03A', - 24064.0, - 26496.0, 270.000, 'n03A')
     set t=CreateTrigger()
     call TriggerRegisterUnitEvent(t, gg_unit_n03A_0657, EVENT_UNIT_DEATH)
     call TriggerRegisterUnitEvent(t, gg_unit_n03A_0657, EVENT_UNIT_CHANGE_OWNER)
@@ -5697,14 +5684,14 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n01X', - 27430.6, - 21836.2, 334.500, 'n01X')
     set u=BlzCreateUnitWithSkin(p, 'n01X', - 26142.4, - 21819.5, 67.689, 'n01X')
     set u=BlzCreateUnitWithSkin(p, 'n01X', - 26088.6, - 21269.9, 338.279, 'n01X')
-    set gg_unit_n03B_0658=BlzCreateUnitWithSkin(p, 'n03B', - 23352.9, - 26369.5, 126.631, 'n03B')
-    set gg_unit_n03B_0659=BlzCreateUnitWithSkin(p, 'n03B', - 24035.4, - 26337.8, 60.003, 'n03B')
-    set gg_unit_n03C_0660=BlzCreateUnitWithSkin(p, 'n03C', - 23850.4, - 26423.9, 313.307, 'n03C')
-    set gg_unit_n03C_0661=BlzCreateUnitWithSkin(p, 'n03C', - 23485.5, - 26429.4, 214.250, 'n03C')
-    set gg_unit_n03C_0662=BlzCreateUnitWithSkin(p, 'n03C', - 24031.0, - 25795.2, 313.307, 'n03C')
-    set gg_unit_n03C_0663=BlzCreateUnitWithSkin(p, 'n03C', - 23337.9, - 25807.4, 214.254, 'n03C')
-    set gg_unit_n03B_0664=BlzCreateUnitWithSkin(p, 'n03B', - 23864.7, - 25660.1, 305.879, 'n03B')
-    set gg_unit_n03B_0665=BlzCreateUnitWithSkin(p, 'n03B', - 23468.9, - 25676.6, 200.958, 'n03B')
+    set gg_unit_n03B_0658=BlzCreateUnitWithSkin(p, 'n03B', - 23736.9, - 26881.5, 126.631, 'n03B')
+    set gg_unit_n03B_0659=BlzCreateUnitWithSkin(p, 'n03B', - 24419.4, - 26849.8, 60.003, 'n03B')
+    set gg_unit_n03C_0660=BlzCreateUnitWithSkin(p, 'n03C', - 24234.4, - 26935.9, 313.307, 'n03C')
+    set gg_unit_n03C_0661=BlzCreateUnitWithSkin(p, 'n03C', - 23869.5, - 26941.4, 214.250, 'n03C')
+    set gg_unit_n03C_0662=BlzCreateUnitWithSkin(p, 'n03C', - 24415.0, - 26307.2, 313.307, 'n03C')
+    set gg_unit_n03C_0663=BlzCreateUnitWithSkin(p, 'n03C', - 23721.9, - 26319.4, 214.254, 'n03C')
+    set gg_unit_n03B_0664=BlzCreateUnitWithSkin(p, 'n03B', - 24248.7, - 26172.1, 305.879, 'n03B')
+    set gg_unit_n03B_0665=BlzCreateUnitWithSkin(p, 'n03B', - 23852.9, - 26188.6, 200.958, 'n03B')
     set u=BlzCreateUnitWithSkin(p, 'n03E', - 15339.6, - 21154.6, 317.865, 'n03E')
     set u=BlzCreateUnitWithSkin(p, 'n03E', - 15262.7, - 21755.7, 36.541, 'n03E')
     set u=BlzCreateUnitWithSkin(p, 'n03E', - 15465.0, - 21465.8, 21.051, 'n03E')
@@ -5775,8 +5762,8 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     set gg_unit_n003_0097=BlzCreateUnitWithSkin(p, 'n003', - 12672.0, 19648.0, 270.000, 'n003')
     call WaygateSetDestination(gg_unit_n003_0097, GetRectCenterX(gg_rct_AzNer1), GetRectCenterY(gg_rct_AzNer1))
     call WaygateActivate(gg_unit_n003_0097, true)
-    set gg_unit_n003_0098=BlzCreateUnitWithSkin(p, 'n003', - 30464.0, - 27456.0, 270.000, 'n003')
-    call WaygateSetDestination(gg_unit_n003_0098, GetRectCenterX(gg_rct_Nord4), GetRectCenterY(gg_rct_Nord4))
+    set gg_unit_n003_0098=BlzCreateUnitWithSkin(p, 'n003', - 30016.0, - 25856.0, 270.000, 'n003')
+    call WaygateSetDestination(gg_unit_n003_0098, GetRectCenterX(gg_rct_Nord_5), GetRectCenterY(gg_rct_Nord_5))
     call WaygateActivate(gg_unit_n003_0098, true)
     set gg_unit_n003_0117=BlzCreateUnitWithSkin(p, 'n003', - 27840.0, - 14016.0, 270.000, 'n003')
     call WaygateSetDestination(gg_unit_n003_0117, GetRectCenterX(gg_rct_QtunIn2), GetRectCenterY(gg_rct_QtunIn2))
@@ -5946,12 +5933,9 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     call SetUnitColor(u, ConvertPlayerColor(10))
     set u=BlzCreateUnitWithSkin(p, 'n01C', 28352.0, 2240.0, 270.000, 'n01C')
     call SetUnitColor(u, ConvertPlayerColor(10))
-    set gg_unit_n003_0951=BlzCreateUnitWithSkin(p, 'n003', - 3392.0, 21632.0, 270.000, 'n003')
-    call WaygateSetDestination(gg_unit_n003_0951, GetRectCenterX(gg_rct_AzNer_2), GetRectCenterY(gg_rct_AzNer_2))
-    call WaygateActivate(gg_unit_n003_0951, true)
-    set gg_unit_n003_0952=BlzCreateUnitWithSkin(p, 'n003', 4800.0, 20352.0, 270.000, 'n003')
-    call WaygateSetDestination(gg_unit_n003_0952, GetRectCenterX(gg_rct_AzNer_3), GetRectCenterY(gg_rct_AzNer_3))
-    call WaygateActivate(gg_unit_n003_0952, true)
+    set u=BlzCreateUnitWithSkin(p, 'n003', 4800.0, 20352.0, 270.000, 'n003')
+    call WaygateSetDestination(u, GetRectCenterX(gg_rct_AzNer_2), GetRectCenterY(gg_rct_AzNer_2))
+    call WaygateActivate(u, true)
     set u=BlzCreateUnitWithSkin(p, 'n01C', 24896.0, 5760.0, 270.000, 'n01C')
     call SetUnitColor(u, ConvertPlayerColor(10))
     set u=BlzCreateUnitWithSkin(p, 'n01C', 25536.0, 9664.0, 270.000, 'n01C')
@@ -6028,19 +6012,13 @@ function CreateNeutralPassiveBuildings takes nothing returns nothing
     call SetUnitColor(u, ConvertPlayerColor(10))
     set u=BlzCreateUnitWithSkin(p, 'n01C', 9344.0, - 28864.0, 270.000, 'n01C')
     call SetUnitColor(u, ConvertPlayerColor(10))
-    set gg_unit_n003_0995=BlzCreateUnitWithSkin(p, 'n003', - 6592.0, 28032.0, 270.000, 'n003')
-    call WaygateSetDestination(gg_unit_n003_0995, GetRectCenterX(gg_rct_AzNer_4), GetRectCenterY(gg_rct_AzNer_4))
-    call WaygateActivate(gg_unit_n003_0995, true)
-    set gg_unit_n003_0999=BlzCreateUnitWithSkin(p, 'n003', - 30592.0, - 25344.0, 270.000, 'n003')
-    call WaygateSetDestination(gg_unit_n003_0999, GetRectCenterX(gg_rct_Nord_5), GetRectCenterY(gg_rct_Nord_5))
-    call WaygateActivate(gg_unit_n003_0999, true)
-    set gg_unit_n003_1002=BlzCreateUnitWithSkin(p, 'n003', - 25472.0, - 25280.0, 270.000, 'n003')
+    set u=BlzCreateUnitWithSkin(p, 'n003', - 6592.0, 28032.0, 270.000, 'n003')
+    call WaygateSetDestination(u, GetRectCenterX(gg_rct_AzNer1), GetRectCenterY(gg_rct_AzNer1))
+    call WaygateActivate(u, true)
+    set gg_unit_n003_1002=BlzCreateUnitWithSkin(p, 'n003', - 24064.0, - 30080.0, 270.000, 'n003')
     call WaygateSetDestination(gg_unit_n003_1002, GetRectCenterX(gg_rct_Nord_1), GetRectCenterY(gg_rct_Nord_1))
     call WaygateActivate(gg_unit_n003_1002, true)
-    set gg_unit_n003_1003=BlzCreateUnitWithSkin(p, 'n003', - 27264.0, - 30592.0, 270.000, 'n003')
-    call WaygateSetDestination(gg_unit_n003_1003, GetRectCenterX(gg_rct_Nord_3), GetRectCenterY(gg_rct_Nord_3))
-    call WaygateActivate(gg_unit_n003_1003, true)
-    set gg_unit_n003_1004=BlzCreateUnitWithSkin(p, 'n003', - 23104.0, - 30592.0, 270.000, 'n003')
+    set gg_unit_n003_1004=BlzCreateUnitWithSkin(p, 'n003', - 29952.0, - 29888.0, 270.000, 'n003')
     call WaygateSetDestination(gg_unit_n003_1004, GetRectCenterX(gg_rct_Nord_2), GetRectCenterY(gg_rct_Nord_2))
     call WaygateActivate(gg_unit_n003_1004, true)
     set gg_unit_n01Y_1012=BlzCreateUnitWithSkin(p, 'n01Y', - 30311.0, - 20685.7, 327.488, 'n01Y')
@@ -6136,15 +6114,12 @@ function CreateRegions takes nothing returns nothing
     set gg_rct_DarkM_2=Rect(19584.0, - 6496.0, 20288.0, - 6048.0)
     set gg_rct_DarkM_3=Rect(19552.0, - 5152.0, 20064.0, - 4736.0)
     set gg_rct_DarkM_4=Rect(- 21920.0, - 25056.0, - 21376.0, - 24512.0)
-    set gg_rct_AzNer_2=Rect(- 27584.0, - 30688.0, - 26912.0, - 30272.0)
-    set gg_rct_AzNer_3=Rect(- 23456.0, - 30688.0, - 22848.0, - 30240.0)
-    set gg_rct_AzNer_4=Rect(- 30720.0, - 25696.0, - 30176.0, - 25184.0)
-    set gg_rct_AzNer_5=Rect(- 25824.0, - 25728.0, - 25152.0, - 25152.0)
+    set gg_rct_AzNer_2=Rect(- 30112.0, - 29984.0, - 29504.0, - 29408.0)
+    set gg_rct_AzNer_5=Rect(- 24384.0, - 30144.0, - 23776.0, - 29440.0)
     set gg_rct_Nord_1=Rect(1600.0, 28352.0, 2624.0, 29120.0)
     set gg_rct_Nord_2=Rect(4288.0, 19872.0, 4992.0, 20544.0)
-    set gg_rct_Nord_3=Rect(- 3776.0, 21344.0, - 3264.0, 21952.0)
     set gg_rct_Nord_5=Rect(- 6688.0, 27648.0, - 5792.0, 28384.0)
-    set gg_rct_AzNer1=Rect(- 30688.0, - 27648.0, - 30368.0, - 27264.0)
+    set gg_rct_AzNer1=Rect(- 30240.0, - 26208.0, - 29728.0, - 25600.0)
     set gg_rct_Nord4=Rect(- 12800.0, 19392.0, - 12352.0, 19712.0)
     set gg_rct_Yog1_1=Rect(- 23264.0, - 26560.0, - 23136.0, - 26432.0)
     set gg_rct_Yog1_2=Rect(- 24224.0, - 26528.0, - 24096.0, - 26400.0)
@@ -6165,7 +6140,7 @@ function CreateRegions takes nothing returns nothing
     set gg_rct_BrokenIsles=Rect(- 10752.0, - 8032.0, 8320.0, 15584.0)
     set gg_rct_Region_066=Rect(9920.0, - 1152.0, 9952.0, - 1120.0)
     set gg_rct_BlackMountain=Rect(- 22144.0, - 30720.0, - 17664.0, - 19040.0)
-    set gg_rct_Azgel=Rect(- 30720.0, - 30720.0, - 22400.0, - 25024.0)
+    set gg_rct_Azgel=Rect(- 30720.0, - 30272.0, - 22400.0, - 24576.0)
     set gg_rct_Ankirag=Rect(- 16896.0, - 22272.0, - 13184.0, - 19072.0)
     set gg_rct_GnomreganIn=Rect(- 14400.0, - 24320.0, - 13280.0, - 23392.0)
     set gg_rct_TrainIn=Rect(- 16768.0, - 26336.0, - 15808.0, - 25856.0)
@@ -15169,61 +15144,6 @@ function InitTrig_Portal12 takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: Azner 1
-//===========================================================================
-function Trig_Azner_1_Conditions takes nothing returns boolean
-    if ( not ( GetTriggerUnit() == gg_unit_n003_0995 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Azner_1_Func002002001001 takes nothing returns boolean
-    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true )
-endfunction
-
-function Trig_Azner_1_Func002002001002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0 )
-endfunction
-
-function Trig_Azner_1_Func002002001 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true), (GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0)) // INLINED!!
-endfunction
-
-function Trig_Azner_1_Func002002002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) == 0 )
-endfunction
-
-function Trig_Azner_1_Func002002 takes nothing returns boolean
-    return GetBooleanAnd((GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true), (GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0))), (GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) == 0)) // INLINED!!
-endfunction
-
-function Trig_Azner_1_Func004A takes nothing returns nothing
-    // ----
-    set udg_LocalPosition[14]=GetRandomLocInRect(gg_rct_AzNer_4)
-    // ----
-    call SetUnitPositionLoc(GetEnumUnit(), udg_LocalPosition[14])
-    call RemoveLocation(udg_LocalPosition[14])
-endfunction
-
-function Trig_Azner_1_Actions takes nothing returns nothing
-    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    set udg_Boolexpr=Condition(function Trig_Azner_1_Func002002)
-    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 1250, udg_Boolexpr)
-    call ForGroupBJ(udg_LocalOtrad2, function Trig_Azner_1_Func004A)
-    call RemoveLocation(udg_LocalPosition2)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_Azner_1 takes nothing returns nothing
-    set gg_trg_Azner_1=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Azner_1, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    call TriggerAddCondition(gg_trg_Azner_1, Condition(function Trig_Azner_1_Conditions))
-    call TriggerAddAction(gg_trg_Azner_1, function Trig_Azner_1_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: Azner 2
 //===========================================================================
 function Trig_Azner_2_Conditions takes nothing returns boolean
@@ -15276,116 +15196,6 @@ function InitTrig_Azner_2 takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_Azner_2, EVENT_PLAYER_UNIT_SPELL_FINISH)
     call TriggerAddCondition(gg_trg_Azner_2, Condition(function Trig_Azner_2_Conditions))
     call TriggerAddAction(gg_trg_Azner_2, function Trig_Azner_2_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Azner 3
-//===========================================================================
-function Trig_Azner_3_Conditions takes nothing returns boolean
-    if ( not ( GetTriggerUnit() == gg_unit_n003_0951 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Azner_3_Func002002001001 takes nothing returns boolean
-    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true )
-endfunction
-
-function Trig_Azner_3_Func002002001002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0 )
-endfunction
-
-function Trig_Azner_3_Func002002001 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true), (GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0)) // INLINED!!
-endfunction
-
-function Trig_Azner_3_Func002002002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) == 0 )
-endfunction
-
-function Trig_Azner_3_Func002002 takes nothing returns boolean
-    return GetBooleanAnd((GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true), (GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0))), (GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) == 0)) // INLINED!!
-endfunction
-
-function Trig_Azner_3_Func004A takes nothing returns nothing
-    // ----
-    set udg_LocalPosition[14]=GetRandomLocInRect(gg_rct_AzNer_2)
-    // ----
-    call SetUnitPositionLoc(GetEnumUnit(), udg_LocalPosition[14])
-    call RemoveLocation(udg_LocalPosition[14])
-endfunction
-
-function Trig_Azner_3_Actions takes nothing returns nothing
-    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    set udg_Boolexpr=Condition(function Trig_Azner_3_Func002002)
-    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 1250, udg_Boolexpr)
-    call ForGroupBJ(udg_LocalOtrad2, function Trig_Azner_3_Func004A)
-    call RemoveLocation(udg_LocalPosition2)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_Azner_3 takes nothing returns nothing
-    set gg_trg_Azner_3=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Azner_3, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    call TriggerAddCondition(gg_trg_Azner_3, Condition(function Trig_Azner_3_Conditions))
-    call TriggerAddAction(gg_trg_Azner_3, function Trig_Azner_3_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Azner 4
-//===========================================================================
-function Trig_Azner_4_Conditions takes nothing returns boolean
-    if ( not ( GetTriggerUnit() == gg_unit_n003_0952 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Azner_4_Func002002001001 takes nothing returns boolean
-    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true )
-endfunction
-
-function Trig_Azner_4_Func002002001002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0 )
-endfunction
-
-function Trig_Azner_4_Func002002001 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true), (GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0)) // INLINED!!
-endfunction
-
-function Trig_Azner_4_Func002002002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) == 0 )
-endfunction
-
-function Trig_Azner_4_Func002002 takes nothing returns boolean
-    return GetBooleanAnd((GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true), (GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0))), (GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) == 0)) // INLINED!!
-endfunction
-
-function Trig_Azner_4_Func004A takes nothing returns nothing
-    // ----
-    set udg_LocalPosition[14]=GetRandomLocInRect(gg_rct_AzNer_3)
-    // ----
-    call SetUnitPositionLoc(GetEnumUnit(), udg_LocalPosition[14])
-    call RemoveLocation(udg_LocalPosition[14])
-endfunction
-
-function Trig_Azner_4_Actions takes nothing returns nothing
-    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    set udg_Boolexpr=Condition(function Trig_Azner_4_Func002002)
-    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 1250, udg_Boolexpr)
-    call ForGroupBJ(udg_LocalOtrad2, function Trig_Azner_4_Func004A)
-    call RemoveLocation(udg_LocalPosition2)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_Azner_4 takes nothing returns nothing
-    set gg_trg_Azner_4=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Azner_4, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    call TriggerAddCondition(gg_trg_Azner_4, Condition(function Trig_Azner_4_Conditions))
-    call TriggerAddAction(gg_trg_Azner_4, function Trig_Azner_4_Actions)
 endfunction
 
 //===========================================================================
@@ -15444,61 +15254,6 @@ function InitTrig_Azner_5 takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: Nord 1
-//===========================================================================
-function Trig_Nord_1_Conditions takes nothing returns boolean
-    if ( not ( GetTriggerUnit() == gg_unit_n003_0999 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Nord_1_Func002002001001 takes nothing returns boolean
-    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true )
-endfunction
-
-function Trig_Nord_1_Func002002001002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0 )
-endfunction
-
-function Trig_Nord_1_Func002002001 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true), (GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0)) // INLINED!!
-endfunction
-
-function Trig_Nord_1_Func002002002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) == 0 )
-endfunction
-
-function Trig_Nord_1_Func002002 takes nothing returns boolean
-    return GetBooleanAnd((GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true), (GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0))), (GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) == 0)) // INLINED!!
-endfunction
-
-function Trig_Nord_1_Func004A takes nothing returns nothing
-    // ----
-    set udg_LocalPosition[14]=GetRandomLocInRect(gg_rct_Nord_5)
-    // ----
-    call SetUnitPositionLoc(GetEnumUnit(), udg_LocalPosition[14])
-    call RemoveLocation(udg_LocalPosition[14])
-endfunction
-
-function Trig_Nord_1_Actions takes nothing returns nothing
-    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    set udg_Boolexpr=Condition(function Trig_Nord_1_Func002002)
-    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 1250, udg_Boolexpr)
-    call ForGroupBJ(udg_LocalOtrad2, function Trig_Nord_1_Func004A)
-    call RemoveLocation(udg_LocalPosition2)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_Nord_1 takes nothing returns nothing
-    set gg_trg_Nord_1=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Nord_1, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    call TriggerAddCondition(gg_trg_Nord_1, Condition(function Trig_Nord_1_Conditions))
-    call TriggerAddAction(gg_trg_Nord_1, function Trig_Nord_1_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: Nord 2
 //===========================================================================
 function Trig_Nord_2_Conditions takes nothing returns boolean
@@ -15551,61 +15306,6 @@ function InitTrig_Nord_2 takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_Nord_2, EVENT_PLAYER_UNIT_SPELL_FINISH)
     call TriggerAddCondition(gg_trg_Nord_2, Condition(function Trig_Nord_2_Conditions))
     call TriggerAddAction(gg_trg_Nord_2, function Trig_Nord_2_Actions)
-endfunction
-
-//===========================================================================
-// Trigger: Nord 3
-//===========================================================================
-function Trig_Nord_3_Conditions takes nothing returns boolean
-    if ( not ( GetTriggerUnit() == gg_unit_n003_1003 ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Nord_3_Func002002001001 takes nothing returns boolean
-    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true )
-endfunction
-
-function Trig_Nord_3_Func002002001002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0 )
-endfunction
-
-function Trig_Nord_3_Func002002001 takes nothing returns boolean
-    return GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true), (GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0)) // INLINED!!
-endfunction
-
-function Trig_Nord_3_Func002002002 takes nothing returns boolean
-    return ( GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) == 0 )
-endfunction
-
-function Trig_Nord_3_Func002002 takes nothing returns boolean
-    return GetBooleanAnd((GetBooleanAnd((IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true), (GetUnitAbilityLevelSwapped('Sch5', GetFilterUnit()) == 0))), (GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) == 0)) // INLINED!!
-endfunction
-
-function Trig_Nord_3_Func004A takes nothing returns nothing
-    // ----
-    set udg_LocalPosition[14]=GetRandomLocInRect(gg_rct_Nord_3)
-    // ----
-    call SetUnitPositionLoc(GetEnumUnit(), udg_LocalPosition[14])
-    call RemoveLocation(udg_LocalPosition[14])
-endfunction
-
-function Trig_Nord_3_Actions takes nothing returns nothing
-    set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    set udg_Boolexpr=Condition(function Trig_Nord_3_Func002002)
-    call GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 1250, udg_Boolexpr)
-    call ForGroupBJ(udg_LocalOtrad2, function Trig_Nord_3_Func004A)
-    call RemoveLocation(udg_LocalPosition2)
-    call GroupClear(udg_LocalOtrad2)
-endfunction
-
-//===========================================================================
-function InitTrig_Nord_3 takes nothing returns nothing
-    set gg_trg_Nord_3=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Nord_3, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    call TriggerAddCondition(gg_trg_Nord_3, Condition(function Trig_Nord_3_Conditions))
-    call TriggerAddAction(gg_trg_Nord_3, function Trig_Nord_3_Actions)
 endfunction
 
 //===========================================================================
@@ -47591,14 +47291,9 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Portal10()
     call InitTrig_Portal11()
     call InitTrig_Portal12()
-    call InitTrig_Azner_1()
     call InitTrig_Azner_2()
-    call InitTrig_Azner_3()
-    call InitTrig_Azner_4()
     call InitTrig_Azner_5()
-    call InitTrig_Nord_1()
     call InitTrig_Nord_2()
-    call InitTrig_Nord_3()
     call InitTrig_Nord_4()
     call InitTrig_Nord_5()
     call InitTrig_QtunOut()
@@ -48760,7 +48455,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 call UISetup() // INLINED!!
 call Face2() // INLINED!!
 
