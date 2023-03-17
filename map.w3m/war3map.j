@@ -4,12 +4,12 @@ constant boolean LIBRARY_A1=true
 //endglobals from A1
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE___SpellHero='A06P'
-constant integer SpellSleepAOE___SpellCast='A06O'
-constant string SpellSleepAOE___SpellOrder="sleep"
-constant integer SpellSleepAOE___DummyID='u000'
-constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE___DummyUnit
+constant integer SpellSleepAOE__SpellHero='A06P'
+constant integer SpellSleepAOE__SpellCast='A06O'
+constant string SpellSleepAOE__SpellOrder="sleep"
+constant integer SpellSleepAOE__DummyID='u000'
+constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE__DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -1703,7 +1703,7 @@ endfunction
 //library A1 ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE___getRange takes integer level returns integer
+    function SpellSleepAOE__getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1711,33 +1711,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
-            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
+            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
+            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE___anon__0 takes nothing returns boolean
-            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE__anon__0 takes nothing returns boolean
+            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE___anon__2 takes nothing returns boolean
+            function SpellSleepAOE__anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE___anon__1 takes nothing returns nothing
+        function SpellSleepAOE__anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1745,19 +1745,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE___onInit takes nothing returns nothing
+    function SpellSleepAOE__onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
+        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
         set t=null
     endfunction
 
@@ -5364,19 +5364,19 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     local trigger t
     local real life
 
-    set u=BlzCreateUnitWithSkin(p, 'h0LI', - 494.4, - 26092.7, - 84.126, 'h0LI')
-    set u=BlzCreateUnitWithSkin(p, 'h0LK', - 401.8, - 26097.5, - 88.040, 'h0LK')
-    set u=BlzCreateUnitWithSkin(p, 'h0LJ', - 574.1, - 26085.5, - 77.068, 'h0LJ')
-    set u=BlzCreateUnitWithSkin(p, 'h0LL', - 471.0, - 26237.7, - 87.566, 'h0LL')
-    set u=BlzCreateUnitWithSkin(p, 'h0LM', - 531.1, - 26249.7, - 85.094, 'h0LM')
-    set u=BlzCreateUnitWithSkin(p, 'h0LN', - 395.6, - 26229.5, - 82.251, 'h0LN')
+    set u=BlzCreateUnitWithSkin(p, 'h0LI', - 494.4, - 26092.7, 275.874, 'h0LI')
+    set u=BlzCreateUnitWithSkin(p, 'h0LK', - 401.8, - 26097.5, 271.960, 'h0LK')
+    set u=BlzCreateUnitWithSkin(p, 'h0LJ', - 574.1, - 26085.5, 282.932, 'h0LJ')
+    set u=BlzCreateUnitWithSkin(p, 'h0LL', - 471.0, - 26237.7, 272.434, 'h0LL')
+    set u=BlzCreateUnitWithSkin(p, 'h0LM', - 531.1, - 26249.7, 274.906, 'h0LM')
+    set u=BlzCreateUnitWithSkin(p, 'h0LN', - 395.6, - 26229.5, 277.749, 'h0LN')
     set u=BlzCreateUnitWithSkin(p, 'h0LO', - 289.3, - 26067.6, 266.281, 'h0LO')
-    set u=BlzCreateUnitWithSkin(p, 'h0LQ', - 898.4, - 26098.7, - 81.737, 'h0LQ')
+    set u=BlzCreateUnitWithSkin(p, 'h0LQ', - 898.4, - 26098.7, 278.263, 'h0LQ')
     set u=BlzCreateUnitWithSkin(p, 'h0M1', - 795.5, - 26126.7, 5.889, 'h0M1')
     set u=BlzCreateUnitWithSkin(p, 'h0LV', - 701.4, - 26100.6, 286.752, 'h0LV')
-    set u=BlzCreateUnitWithSkin(p, 'h0LP', - 915.9, - 26264.9, - 80.644, 'h0LP')
+    set u=BlzCreateUnitWithSkin(p, 'h0LP', - 915.9, - 26264.9, 279.356, 'h0LP')
     set u=BlzCreateUnitWithSkin(p, 'h0M0', - 821.9, - 26247.5, 245.277, 'h0M0')
-    set u=BlzCreateUnitWithSkin(p, 'h0LR', - 697.1, - 26223.9, - 78.173, 'h0LR')
+    set u=BlzCreateUnitWithSkin(p, 'h0LR', - 697.1, - 26223.9, 281.827, 'h0LR')
     set u=BlzCreateUnitWithSkin(p, 'h0LZ', - 5875.1, - 29417.3, 282.340, 'h0LZ')
     set u=BlzCreateUnitWithSkin(p, 'o042', - 6234.2, - 29119.9, 262.167, 'o042')
     set u=BlzCreateUnitWithSkin(p, 'o043', - 5836.0, - 29164.5, 280.087, 'o043')
@@ -48456,7 +48456,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("SpellSleepAOE___onInit")
+call ExecuteFunc("SpellSleepAOE__onInit")
 call UISetup() // INLINED!!
 call Face2() // INLINED!!
 
