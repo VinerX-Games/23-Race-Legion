@@ -751,15 +751,25 @@ trigger gg_trg_BegEvery= null
 trigger gg_trg_CanEvery= null
 trigger gg_trg_BegForever= null
 trigger gg_trg_CanForver= null
-trigger gg_trg_FinAllies= null
+trigger gg_trg_NewAllies= null
 trigger gg_trg_NightElf= null
 trigger gg_trg_Drayenay= null
 trigger gg_trg_APandarens= null
+trigger gg_trg_BegDec= null
 trigger gg_trg_Decentralization= null
+trigger gg_trg_OldAllies= null
+trigger gg_trg_LordaeronAndTeramor= null
+trigger gg_trg_Gilneas= null
+trigger gg_trg_Kultiras= null
+trigger gg_trg_BegArat= null
+trigger gg_trg_Arathor= null
+trigger gg_trg_Stromgarge= null
+trigger gg_trg_Dalaran= null
 trigger gg_trg_FinStormwind= null
 trigger gg_trg_Fin7Legion= null
 trigger gg_trg_FinSRU= null
 trigger gg_trg_FinHoly= null
+trigger gg_trg_BegStorm= null
 trigger gg_trg_StormwindFirst= null
 trigger gg_trg_RememberLothar= null
 trigger gg_trg_BegStormwind= null
@@ -767,7 +777,9 @@ trigger gg_trg_TankFire= null
 trigger gg_trg_Kristall= null
 trigger gg_trg_Kristall2= null
 trigger gg_trg_HolyHelp= null
+trigger gg_trg_WorgenSpell= null
 trigger gg_trg_MagicUsk= null
+trigger gg_trg_Illusions= null
 trigger gg_trg_MassMolot= null
 trigger gg_trg_PaladinHpSpell= null
 trigger gg_trg_PaladinHpSpell2= null
@@ -2547,7 +2559,7 @@ function UISetup takes nothing returns nothing
 endfunction
 
 // scope init begins
-function init__Init takes nothing returns nothing
+function init___Init takes nothing returns nothing
 	call UISetup()
 endfunction
 // scope init ends
@@ -2589,7 +2601,7 @@ call BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 endfunction
 
 // scope init2 begins
-function init2__Init takes nothing returns nothing
+function init2___Init takes nothing returns nothing
     call Face2()
 endfunction
 // scope init2 ends
@@ -5377,15 +5389,22 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0LP', - 915.9, - 26264.9, 279.356, 'h0LP')
     set u=BlzCreateUnitWithSkin(p, 'h0M0', - 821.9, - 26247.5, 245.277, 'h0M0')
     set u=BlzCreateUnitWithSkin(p, 'h0LR', - 697.1, - 26223.9, 281.827, 'h0LR')
+    set u=BlzCreateUnitWithSkin(p, 'h0M3', - 6110.8, - 29516.2, 281.670, 'h0M3')
+    set u=BlzCreateUnitWithSkin(p, 'h0M2', - 5726.4, - 29185.4, 276.850, 'h0M2')
+    set u=BlzCreateUnitWithSkin(p, 'h0M5', - 6103.6, - 29895.3, 281.280, 'h0M5')
+    set u=BlzCreateUnitWithSkin(p, 'h0M7', - 5791.1, - 29529.9, 275.940, 'h0M7')
+    set u=BlzCreateUnitWithSkin(p, 'h0M8', - 5754.3, - 29773.4, 262.340, 'h0M8')
+    set u=BlzCreateUnitWithSkin(p, 'h0M9', - 6472.6, - 29161.0, 281.185, 'h0M9')
     set u=BlzCreateUnitWithSkin(p, 'h0LZ', - 5875.1, - 29417.3, 282.340, 'h0LZ')
-    set u=BlzCreateUnitWithSkin(p, 'o042', - 6234.2, - 29119.9, 262.167, 'o042')
+    set u=BlzCreateUnitWithSkin(p, 'h0MA', - 6024.8, - 29295.7, 267.910, 'h0MA')
+    set u=BlzCreateUnitWithSkin(p, 'o042', - 6234.2, - 29119.9, 262.170, 'o042')
     set u=BlzCreateUnitWithSkin(p, 'o043', - 5836.0, - 29164.5, 280.087, 'o043')
     set u=BlzCreateUnitWithSkin(p, 'h0KJ', - 5975.3, - 30278.8, 271.240, 'h0KJ')
     set u=BlzCreateUnitWithSkin(p, 'h0KG', - 5756.4, - 29055.7, 270.690, 'h0KG')
     set u=BlzCreateUnitWithSkin(p, 'hmtt', - 6034.3, - 30037.9, 264.510, 'hmtt')
     set u=BlzCreateUnitWithSkin(p, 'hmtm', - 6383.4, - 30027.2, 320.751, 'hmtm')
     set u=BlzCreateUnitWithSkin(p, 'hwat', - 5616.0, - 29213.1, 283.632, 'hwat')
-    set u=BlzCreateUnitWithSkin(p, 'h0K9', - 5799.9, - 29433.0, 128.170, 'h0K9')
+    set u=BlzCreateUnitWithSkin(p, 'h0K9', - 5799.9, - 29433.0, 277.440, 'h0K9')
     set u=BlzCreateUnitWithSkin(p, 'h0KA', - 6432.7, - 29424.6, 301.360, 'h0KA')
     set u=BlzCreateUnitWithSkin(p, 'h0KC', - 6245.4, - 29051.5, 264.830, 'h0KC')
     set u=BlzCreateUnitWithSkin(p, 'h0KB', - 6116.3, - 29442.7, 289.190, 'h0KB')
@@ -5405,10 +5424,10 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0KU', - 6477.4, - 29843.7, 280.240, 'h0KU')
     set u=BlzCreateUnitWithSkin(p, 'h0KT', - 6194.7, - 29831.9, 285.080, 'h0KT')
     set u=BlzCreateUnitWithSkin(p, 'h0KV', - 6452.2, - 29907.1, 288.852, 'h0KV')
-    set u=BlzCreateUnitWithSkin(p, 'h0KW', - 6101.7, - 29072.7, 273.820, 'h0KW')
+    set u=BlzCreateUnitWithSkin(p, 'h0KW', - 6029.6, - 29193.4, 273.820, 'h0KW')
     set u=BlzCreateUnitWithSkin(p, 'h0KX', - 5837.9, - 29072.6, 298.710, 'h0KX')
     set u=BlzCreateUnitWithSkin(p, 'h0KQ', - 5853.2, - 29791.0, 281.390, 'h0KQ')
-    set u=BlzCreateUnitWithSkin(p, 'h0KY', - 6385.9, - 29887.0, 282.500, 'h0KY')
+    set u=BlzCreateUnitWithSkin(p, 'h0KY', - 6457.7, - 29945.6, 282.500, 'h0KY')
     set u=BlzCreateUnitWithSkin(p, 'h0KZ', - 6388.9, - 30116.2, 281.975, 'h0KZ')
     set u=BlzCreateUnitWithSkin(p, 'hpea', - 4871.7, - 29776.1, 268.020, 'hpea')
     set u=BlzCreateUnitWithSkin(p, 'hpea', - 4876.0, - 29723.5, 292.102, 'hpea')
@@ -5417,7 +5436,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'hwt2', - 5544.2, - 29280.2, 273.713, 'hwt2')
     set u=BlzCreateUnitWithSkin(p, 'hwt3', - 5593.8, - 29326.8, 284.734, 'hwt3')
     set u=BlzCreateUnitWithSkin(p, 'h0KP', - 6590.2, - 30129.0, 320.528, 'h0KP')
-    set u=BlzCreateUnitWithSkin(p, 'h0LU', - 5747.4, - 29799.1, 264.300, 'h0LU')
+    set u=BlzCreateUnitWithSkin(p, 'h0LU', - 5666.3, - 29758.8, 264.300, 'h0LU')
     set u=BlzCreateUnitWithSkin(p, 'h0LS', 158.0, - 25966.5, 258.254, 'h0LS')
     set u=BlzCreateUnitWithSkin(p, 'h0LT', 252.5, - 25962.6, 268.856, 'h0LT')
     set u=BlzCreateUnitWithSkin(p, 'h0LW', - 6424.3, - 29137.2, 281.940, 'h0LW')
@@ -21692,6 +21711,11 @@ function AT1Count takes player p returns nothing
         set i=1
         set b=1
         
+        // интеграция лордеронцев
+        if GetPlayerTechCount(p, 'R0HV', true) > 1 then
+            set i=i + 2
+        endif
+        
         loop
             set a[0]=a[0] + 1
             set a[a[0]]='h0KR'
@@ -22029,6 +22053,26 @@ function AT3Count takes player p returns nothing
             exitwhen b >= i
         endloop
     endif
+    
+    
+    
+    if GetPlayerTechCount(p, 'R0H9', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+        //Worgen
+        set i=1
+        set b=1
+        //Араторская
+        if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+            set i=i + 1
+        endif
+        
+        loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0M2'
+            
+            set b=b + 1
+            exitwhen b >= i
+        endloop
+    endif
 //    
 //    //2 юнит Черной гора
 //    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
@@ -22170,6 +22214,10 @@ function ACavCount takes player p returns nothing
         set i=1
         set b=1
         
+        if GetPlayerTechCount(p, 'R0HV', true) > 1 then
+            set i=i + 2
+        endif
+        
         loop
             set a[0]=a[0] + 1
             set a[a[0]]='h0KW'
@@ -22178,6 +22226,20 @@ function ACavCount takes player p returns nothing
             exitwhen b >= i
         endloop
     endif
+    
+    
+    if GetPlayerTechCount(p, 'R0HJ', true) > 0 then
+        // Штормград грифон
+        set b=1
+        set i=3
+        loop
+                set a[0]=a[0] + 1
+                set a[a[0]]='h0MA'
+                set b=b + 1
+                exitwhen b >= i
+        endloop
+    endif
+    
     
 //    
 //    //2 юнит Черной гора
@@ -22464,7 +22526,10 @@ function AK2Count takes player p returns nothing
     // Human
     set i=1
     set b=1
-    
+    //Араторская прибавка
+        if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+            set i=i + 2
+        endif
     loop
         set a[0]=a[0] + 1
         set a[a[0]]='h0KB'
@@ -22472,6 +22537,22 @@ function AK2Count takes player p returns nothing
         set b=b + 1
         exitwhen b >= i
     endloop
+    
+    //Ворген
+    if GetPlayerTechCount(p, 'R0H9', true) == 1 and GetPlayerTechCount(p, 'R0EH', true) < 1 then
+        set i=3
+        set b=1
+        
+        loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0M3'
+            
+            set b=b + 1
+            exitwhen b >= i
+        endloop
+
+    endif
+    
     
     
 //    
@@ -22603,6 +22684,11 @@ function AK3Count takes player p returns nothing
         set i=1
         set b=1
         
+        // интеграция лордеронцев
+        if GetPlayerTechCount(p, 'R0HV', true) > 1 then
+            set i=i + 2
+        endif
+        
         loop
             set a[0]=a[0] + 1
             set a[a[0]]='h0KK'
@@ -22628,6 +22714,26 @@ function AK3Count takes player p returns nothing
             exitwhen b >= i
         endloop
     endif
+    
+    
+    if GetPlayerTechCount(p, 'R0H9', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+        //Kultiras 
+        set i=1
+        set b=1
+        //Араторская прибавка
+        if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+            set i=i + 1
+        endif
+        loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0M7'
+            
+            set b=b + 1
+            exitwhen b >= i
+        endloop
+    endif
+    
+    
 //    
 //    //2 юнит Черной гора
 //    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
@@ -22785,6 +22891,10 @@ function AM1Count takes player p returns nothing
     //Human
     set i=1
     set b=1
+    //Араторская прибавка
+    if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+        set i=i + 1
+    endif
     
     loop
         set a[0]=a[0] + 1
@@ -22936,6 +23046,25 @@ function AM2Count takes player p returns nothing
         endloop
     endif
     
+    
+    if GetPlayerTechCount(p, 'R0HD', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+        //Kultiras
+        set i=1
+        set b=1
+        //Arathor
+        if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+            set i=i + 1
+        endif
+        
+        loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0M5'
+            
+            set b=b + 1
+            exitwhen b >= i
+        endloop
+    endif
+    
 //    
 //    //2 юнит Черной гора
 //    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
@@ -23056,6 +23185,12 @@ function AM3Count takes player p returns nothing
         
         set i=4
         set b=0
+        
+        
+        //Араторская прибавка
+        if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+            set i=i + 1
+        endif
         loop
                 set a[0]=a[0] + 1
                 set a[a[0]]='h0LU'
@@ -23081,61 +23216,21 @@ function AM3Count takes player p returns nothing
         endloop
     endif
     
-//    //Лордеронец
-//    set i = 1 
-//    set b = 1
-//    
-//    loop
-//        set a[0] = a[0] + 1
-//        set a[ a[0] ] = 'h0KR'
-//        
-//        set b = b + 1
-//        exitwhen b >= i
-//    endloop
     
-    
-//    
-//    //2 юнит Черной гора
-//    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
-//        set i = 1 
-//        set b = 1
-//        
-//        loop
-//            set a[0] = a[0] + 1
-//            set a[ a[0] ] = 'o01E'
-//            
-//            set b = b + 1
-//            exitwhen b >= i
-//        endloop
-//
-//    endif
-//    //3 юнит - эльфы
-//    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
-//        set i = 1 
-//        set b = 1
-//        
-//        loop
-//            set a[0] = a[0] + 1
-//            set a[ a[0] ] = 'o01F'
-//            
-//            set b = b + 1
-//            exitwhen b >= i
-//        endloop
-//
-//    endif
-//    //4 юнит андеды
-//    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
-//        set i = 2 
-//        set b = 1
-//        
-//        loop
-//            set a[0] = a[0] + 1
-//            set a[ a[0] ] = 'o01H'
-//            
-//            set b = b + 1
-//            exitwhen b >= i
-//        endloop
-//    endif
+    if GetPlayerTechCount(p, 'R0HI', true) == 1 then
+        //Dalaran
+        set i=1
+        set b=2
+        
+        loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0M8'
+            
+            set b=b + 1
+            exitwhen b >= i
+        endloop
+    endif
+
     
     //Long Containment
     call SaveInteger(CommonHash, pi, StringHash("AM3_0"), a[0])
@@ -23222,7 +23317,10 @@ function AE1Count takes player p returns nothing
     //Cannon
     set i=1
     set b=1
-    
+    //Араторская прибавка
+    if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+        set i=i + 3
+    endif
     loop
         set a[0]=a[0] + 1
         set a[a[0]]='h0KP'
@@ -23509,15 +23607,35 @@ function AN1Count takes player p returns nothing
     local integer b= 0
     local integer pi= GetPlayerId(p)
     
-    // Штормград простой
+    // Шаблон флота
     set a[0]=0
     set i=4
     loop
             set a[0]=a[0] + 1
-            set a[a[0]]='h0KD'
+            set a[a[0]]='h00Y'
             set b=b + 1
             exitwhen b >= i
     endloop
+    
+    
+    // Галеоны култираса
+    if GetPlayerTechCount(p, 'R0HD', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+        set i=3
+        set b=1
+        
+        loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0M6'
+            
+            set b=b + 1
+            exitwhen b >= i
+        endloop
+
+    endif
+    
+    
+    
+    
 //    
 //    //Лордеронец
 //    set i = 1 
@@ -23646,12 +23764,12 @@ function AN2Count takes player p returns nothing
     local integer b= 0
     local integer pi= GetPlayerId(p)
     
-    // Штормград простой
+    // Шаблон линкора
     set a[0]=0
     set i=4
     loop
             set a[0]=a[0] + 1
-            set a[a[0]]='h0KC'
+            set a[a[0]]='h00Z'
             set b=b + 1
             exitwhen b >= i
     endloop
@@ -23833,6 +23951,9 @@ function Trig_BegEvery_Func001C takes nothing returns boolean
     if ( ( GetResearched() == 'R0HR' ) ) then
         return true
     endif
+    if ( ( GetResearched() == 'R0HQ' ) ) then
+        return true
+    endif
     return false
 endfunction
 
@@ -23865,6 +23986,9 @@ function Trig_CanEvery_Func001Func001C takes nothing returns boolean
     if ( not ( GetPlayerTechCountSimple('R0HR', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
         return false
     endif
+    if ( not ( GetPlayerTechCountSimple('R0HQ', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+        return false
+    endif
     return true
 endfunction
 
@@ -23875,6 +23999,22 @@ function Trig_CanEvery_Func001Func002C takes nothing returns boolean
     if ( not ( GetPlayerTechCountSimple('R0HS', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
         return false
     endif
+    if ( not ( GetPlayerTechCountSimple('R0HQ', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_CanEvery_Func001Func003C takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0HQ' ) ) then
+        return false
+    endif
+    if ( not ( GetPlayerTechCountSimple('R0HS', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+        return false
+    endif
+    if ( not ( GetPlayerTechCountSimple('R0HR', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+        return false
+    endif
     return true
 endfunction
 
@@ -23883,6 +24023,9 @@ function Trig_CanEvery_Func001C takes nothing returns boolean
         return true
     endif
     if ( Trig_CanEvery_Func001Func002C() ) then
+        return true
+    endif
+    if ( Trig_CanEvery_Func001Func003C() ) then
         return true
     endif
     return false
@@ -23920,6 +24063,7 @@ endfunction
 function Trig_BegForever_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('R0HR', 0, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('R0HS', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0HQ', 0, GetOwningPlayer(GetTriggerUnit()))
 endfunction
 
 //===========================================================================
@@ -23943,6 +24087,7 @@ endfunction
 function Trig_CanForver_Actions takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('R0HR', 1, GetOwningPlayer(GetTriggerUnit()))
     call SetPlayerTechMaxAllowedSwap('R0HS', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0HQ', 1, GetOwningPlayer(GetTriggerUnit()))
 endfunction
 
 //===========================================================================
@@ -23954,13 +24099,13 @@ function InitTrig_CanForver takes nothing returns nothing
 endfunction
 
 //===========================================================================
-// Trigger: FinAllies
+// Trigger: NewAllies
 //===========================================================================
-function Trig_FinAllies_Conditions takes nothing returns boolean
+function Trig_NewAllies_Conditions takes nothing returns boolean
     return GetResearched() == 'R0HS'
 endfunction
 
-function Trig_FinAllies_Actions takes nothing returns nothing
+function Trig_NewAllies_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
@@ -23976,11 +24121,11 @@ function Trig_FinAllies_Actions takes nothing returns nothing
 endfunction
 
 //===========================================================================
-function InitTrig_FinAllies takes nothing returns nothing
-    set gg_trg_FinAllies=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_FinAllies, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    call TriggerAddCondition(gg_trg_FinAllies, Condition(function Trig_FinAllies_Conditions))
-    call TriggerAddAction(gg_trg_FinAllies, function Trig_FinAllies_Actions)
+function InitTrig_NewAllies takes nothing returns nothing
+    set gg_trg_NewAllies=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_NewAllies, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_NewAllies, Condition(function Trig_NewAllies_Conditions))
+    call TriggerAddAction(gg_trg_NewAllies, function Trig_NewAllies_Actions)
 endfunction
 
 
@@ -23996,7 +24141,7 @@ function Trig_NightElf_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call AcountAll(p)
-    set udg_MainPrice[pi]=udg_MainPrice[pi] + 5
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 6
     call SetPlayerTechMaxAllowed(p, 'R0H8', 1)
 
 
@@ -24027,7 +24172,7 @@ function Trig_Drayenay_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call AcountAll(p)
-    set udg_MainPrice[pi]=udg_MainPrice[pi] + 5
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 6
     call SetPlayerTechMaxAllowed(p, 'R0HB', 1)
     call SetPlayerTechResearched(p, 'R0H0', 1)
 
@@ -24058,7 +24203,7 @@ function Trig_APandarens_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call AcountAll(p)
-    set udg_MainPrice[pi]=udg_MainPrice[pi] + 5
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 6
     
     
     if GetPlayerTechCount(p, 'R001', true) < 1 then
@@ -24082,6 +24227,30 @@ endfunction
 
 
 //===========================================================================
+// Trigger: BegDec
+//===========================================================================
+function Trig_BegDec_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0HE' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_BegDec_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0HG', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0HH', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0HF', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_BegDec takes nothing returns nothing
+    set gg_trg_BegDec=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_BegDec, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_BegDec, Condition(function Trig_BegDec_Conditions))
+    call TriggerAddAction(gg_trg_BegDec, function Trig_BegDec_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: Decentralization
 //===========================================================================
 function Trig_Decentralization_Conditions takes nothing returns boolean
@@ -24098,7 +24267,7 @@ function Trig_Decentralization_Actions takes nothing returns nothing
 
 
     call SetPlayerTechMaxAllowed(p, 'R0HC', 1)
-    
+    call SetPlayerTechResearched(p, 'R001', 1)
     
     
 endfunction
@@ -24109,6 +24278,252 @@ function InitTrig_Decentralization takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_Decentralization, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
     call TriggerAddCondition(gg_trg_Decentralization, Condition(function Trig_Decentralization_Conditions))
     call TriggerAddAction(gg_trg_Decentralization, function Trig_Decentralization_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: OldAllies
+//===========================================================================
+function Trig_OldAllies_Conditions takes nothing returns boolean
+    return GetResearched() == 'R0HQ'
+endfunction
+
+function Trig_OldAllies_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    call AcountAll(p)
+    
+    call SetPlayerTechMaxAllowed(p, 'R0HV', 1)
+
+
+
+    call SetPlayerTechMaxAllowed(p, 'R0GX', 0)
+    
+    
+endfunction
+
+//===========================================================================
+function InitTrig_OldAllies takes nothing returns nothing
+    set gg_trg_OldAllies=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_OldAllies, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_OldAllies, Condition(function Trig_OldAllies_Conditions))
+    call TriggerAddAction(gg_trg_OldAllies, function Trig_OldAllies_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: LordaeronAndTeramor
+//===========================================================================
+function Trig_LordaeronAndTeramor_Conditions takes nothing returns boolean
+    return GetResearched() == 'R0HV'
+endfunction
+
+function Trig_LordaeronAndTeramor_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    call AcountAll(p)
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 6
+    call SetPlayerTechMaxAllowed(p, 'R0H9', 1)
+
+
+
+    
+    
+    
+endfunction
+
+//===========================================================================
+function InitTrig_LordaeronAndTeramor takes nothing returns nothing
+    set gg_trg_LordaeronAndTeramor=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_LordaeronAndTeramor, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_LordaeronAndTeramor, Condition(function Trig_LordaeronAndTeramor_Conditions))
+    call TriggerAddAction(gg_trg_LordaeronAndTeramor, function Trig_LordaeronAndTeramor_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Gilneas
+//===========================================================================
+function Trig_Gilneas_Conditions takes nothing returns boolean
+    return GetResearched() == 'R0H9'
+endfunction
+
+function Trig_Gilneas_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    call AcountAll(p)
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 6
+    call SetPlayerTechMaxAllowed(p, 'R0HD', 1)
+
+
+
+    
+    
+    
+endfunction
+
+//===========================================================================
+function InitTrig_Gilneas takes nothing returns nothing
+    set gg_trg_Gilneas=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Gilneas, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_Gilneas, Condition(function Trig_Gilneas_Conditions))
+    call TriggerAddAction(gg_trg_Gilneas, function Trig_Gilneas_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Kultiras
+//===========================================================================
+function Trig_Kultiras_Conditions takes nothing returns boolean
+    return GetResearched() == 'R0HD'
+endfunction
+
+function Trig_Kultiras_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    call AcountAll(p)
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 6
+    
+
+
+    if GetPlayerTechCount(p, 'R001', true) < 1 then
+        call SetPlayerTechMaxAllowed(p, 'R0HG', 1)
+        
+    endif
+    
+    
+    
+endfunction
+
+//===========================================================================
+function InitTrig_Kultiras takes nothing returns nothing
+    set gg_trg_Kultiras=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Kultiras, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_Kultiras, Condition(function Trig_Kultiras_Conditions))
+    call TriggerAddAction(gg_trg_Kultiras, function Trig_Kultiras_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: BegArat
+//===========================================================================
+function Trig_BegArat_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0HG' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_BegArat_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0HE', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0HH', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0HF', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_BegArat takes nothing returns nothing
+    set gg_trg_BegArat=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_BegArat, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_BegArat, Condition(function Trig_BegArat_Conditions))
+    call TriggerAddAction(gg_trg_BegArat, function Trig_BegArat_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: Arathor
+//===========================================================================
+function Trig_Arathor_Conditions takes nothing returns boolean
+    return GetResearched() == 'R0HG'
+endfunction
+
+function Trig_Arathor_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    call AcountAll(p)
+    set udg_MainPrice[pi]=udg_MainPrice[pi] - 3
+    call SetPlayerTechMaxAllowed(p, 'R0HJ', 1)
+    call SetPlayerTechMaxAllowed(p, 'R0HI', 1)
+    call SetPlayerTechMaxAllowed(p, 'R0HC', 1)
+    call SetPlayerTechResearched(p, 'R001', 1)
+
+
+    
+    
+    
+endfunction
+
+//===========================================================================
+function InitTrig_Arathor takes nothing returns nothing
+    set gg_trg_Arathor=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Arathor, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_Arathor, Condition(function Trig_Arathor_Conditions))
+    call TriggerAddAction(gg_trg_Arathor, function Trig_Arathor_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Stromgarge
+//===========================================================================
+function Trig_Stromgarge_Conditions takes nothing returns boolean
+    return GetResearched() == 'R0HJ'
+endfunction
+
+function Trig_Stromgarge_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    call AcountAll(p)
+    set udg_MainPrice[pi]=udg_MainPrice[pi] - 4
+    
+
+
+
+    
+    
+    
+endfunction
+
+//===========================================================================
+function InitTrig_Stromgarge takes nothing returns nothing
+    set gg_trg_Stromgarge=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Stromgarge, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_Stromgarge, Condition(function Trig_Stromgarge_Conditions))
+    call TriggerAddAction(gg_trg_Stromgarge, function Trig_Stromgarge_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Dalaran
+//===========================================================================
+function Trig_Dalaran_Conditions takes nothing returns boolean
+    return GetResearched() == 'R0HI'
+endfunction
+
+function Trig_Dalaran_Actions takes nothing returns nothing
+    local unit u= GetTriggerUnit()
+    local player p= GetOwningPlayer(u)
+    local integer pi= GetPlayerId(p)
+    call AcountAll(p)
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 6
+    
+
+    call SetPlayerTechResearched(p, 'R0H0', 1)
+
+    
+    
+    
+endfunction
+
+//===========================================================================
+function InitTrig_Dalaran takes nothing returns nothing
+    set gg_trg_Dalaran=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Dalaran, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_Dalaran, Condition(function Trig_Dalaran_Conditions))
+    call TriggerAddAction(gg_trg_Dalaran, function Trig_Dalaran_Actions)
 endfunction
 
 
@@ -24157,7 +24572,7 @@ function Trig_Fin7Legion_Actions takes nothing returns nothing
     local integer pi= GetPlayerId(p)
     call AcountAll(p)
     
-    set udg_MainPrice[pi]=udg_MainPrice[pi] + 5
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 6
     call SetPlayerTechMaxAllowed(p, 'R0HA', 1)
 endfunction
 
@@ -24182,7 +24597,7 @@ function Trig_FinSRU_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call AcountAll(p)
-    set udg_MainPrice[pi]=udg_MainPrice[pi] + 3
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 6
     call SetPlayerTechMaxAllowed(p, 'R0H7', 1)
     call SetPlayerTechResearched(p, 'R0H0', 1)
 endfunction
@@ -24208,11 +24623,11 @@ function Trig_FinHoly_Actions takes nothing returns nothing
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
     call AcountAll(p)
-    set udg_MainPrice[pi]=udg_MainPrice[pi] + 5
+    set udg_MainPrice[pi]=udg_MainPrice[pi] + 6
     
     if GetPlayerTechCount(p, 'R001', true) < 1 then
         call SetPlayerTechMaxAllowed(p, 'R0HH', 1)
-        call SetPlayerTechResearched(p, 'R001', 1)
+        
     endif
  
 endfunction
@@ -24227,6 +24642,30 @@ endfunction
 
 
 //===========================================================================
+// Trigger: BegStorm
+//===========================================================================
+function Trig_BegStorm_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0HH' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_BegStorm_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('R0HE', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0HG', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('R0HF', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_BegStorm takes nothing returns nothing
+    set gg_trg_BegStorm=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_BegStorm, EVENT_PLAYER_UNIT_RESEARCH_START)
+    call TriggerAddCondition(gg_trg_BegStorm, Condition(function Trig_BegStorm_Conditions))
+    call TriggerAddAction(gg_trg_BegStorm, function Trig_BegStorm_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: StormwindFirst
 //===========================================================================
 function Trig_StormwindFirst_Conditions takes nothing returns boolean
@@ -24237,11 +24676,37 @@ function Trig_StormwindFirst_Actions takes nothing returns nothing
     local unit u= GetTriggerUnit()
     local player p= GetOwningPlayer(u)
     local integer pi= GetPlayerId(p)
-    set udg_MainPrice[pi]=udg_MainPrice[pi] - 7
+    set udg_MainPrice[pi]=udg_MainPrice[pi] - 3
+    
+    
+    
+    // Бонусы левая 
+    if GetPlayerTechCount(p, 'R0HS', true) == 1 then
+        set udg_MainPrice[pi]=udg_MainPrice[pi] - 6
+    endif
+    if GetPlayerTechCount(p, 'R0H8', true) == 1 then
+        set udg_MainPrice[pi]=udg_MainPrice[pi] - 6
+    endif
+    if GetPlayerTechCount(p, 'R0HB', true) == 1 then
+        set udg_MainPrice[pi]=udg_MainPrice[pi] - 6
+    endif
+    
+    //Центр
+    if GetPlayerTechCount(p, 'R0H9', true) == 1 then
+        set udg_MainPrice[pi]=udg_MainPrice[pi] - 6
+    endif
+    if GetPlayerTechCount(p, 'R0H9', true) == 1 then
+        set udg_MainPrice[pi]=udg_MainPrice[pi] - 6
+    endif
+    if GetPlayerTechCount(p, 'R0HD', true) == 1 then
+        set udg_MainPrice[pi]=udg_MainPrice[pi] - 6
+    endif
+    
     call AcountAll(p)
 
     call SetPlayerTechMaxAllowed(p, 'R0HN', 1)
     call SetPlayerTechMaxAllowed(p, 'R0HC', 1)
+    call SetPlayerTechResearched(p, 'R001', 1)
 endfunction
 
 //===========================================================================
@@ -24357,6 +24822,33 @@ endfunction
 
 
 //===========================================================================
+// Trigger: WorgenSpell
+//===========================================================================
+function Trig_WorgenSpell_Conditions takes nothing returns boolean
+    return GetUnitAbilityLevel(GetEventDamageSource(), 'A19X') > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
+endfunction
+
+function Trig_WorgenSpell_Actions takes nothing returns nothing
+    local unit u= GetEventDamageSource()
+    local real i=  GetUnitStateSwap(UNIT_STATE_MANA, u) + 10
+    call SetUnitManaBJ(u, i)
+    if i >= 100 then
+        call IssueImmediateOrder(u, "frenzyon")
+    endif
+    
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_WorgenSpell takes nothing returns nothing
+    set gg_trg_WorgenSpell=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_WorgenSpell, EVENT_PLAYER_UNIT_DAMAGED)
+    call TriggerAddCondition(gg_trg_WorgenSpell, Condition(function Trig_WorgenSpell_Conditions))
+    call TriggerAddAction(gg_trg_WorgenSpell, function Trig_WorgenSpell_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: MagicUsk
 //===========================================================================
 function Trig_MagicUsk_Conditions takes nothing returns boolean
@@ -24380,11 +24872,39 @@ endfunction
 //===========================================================================
 function InitTrig_MagicUsk takes nothing returns nothing
     set gg_trg_MagicUsk=CreateTrigger()
-    call DisableTrigger(gg_trg_MagicUsk)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_MagicUsk, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_MagicUsk, Condition(function Trig_MagicUsk_Conditions))
     call TriggerAddAction(gg_trg_MagicUsk, function Trig_MagicUsk_Actions)
 endfunction
+
+//===========================================================================
+// Trigger: Illusions
+//===========================================================================
+function Trig_Illusions_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A1A5'
+endfunction
+
+function Trig_Illusions_Actions takes nothing returns nothing
+    local unit u= GetSpellTargetUnit()
+
+    call UnitAddAbility(u, 'AInv')
+    call UnitAddItemByIdSwapped('I020', u)
+
+    call TriggerSleepAction(2)
+
+    call UnitRemoveAbility(u, 'AInv')
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_Illusions takes nothing returns nothing
+    set gg_trg_Illusions=CreateTrigger()
+    //call DisableTrigger( gg_trg_Illusions )
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_Illusions, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_Illusions, Condition(function Trig_Illusions_Conditions))
+    call TriggerAddAction(gg_trg_Illusions, function Trig_Illusions_Actions)
+endfunction
+
 
 //===========================================================================
 // Trigger: MassMolot
@@ -24700,8 +25220,8 @@ function Trig_StartAlliance_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('R0H5', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0HN', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0HC', 0, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('R0HV', 0, GetEnumPlayer())
     // ---
-    call SetPlayerTechMaxAllowedSwap('R0HQ', 0, GetEnumPlayer())
 endfunction
 
 function Trig_StartAlliance_Actions takes nothing returns nothing
@@ -47445,21 +47965,33 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_CanEvery()
     call InitTrig_BegForever()
     call InitTrig_CanForver()
-    call InitTrig_FinAllies()
+    call InitTrig_NewAllies()
     call InitTrig_NightElf()
     call InitTrig_Drayenay()
     call InitTrig_APandarens()
+    call InitTrig_BegDec()
     call InitTrig_Decentralization()
+    call InitTrig_OldAllies()
+    call InitTrig_LordaeronAndTeramor()
+    call InitTrig_Gilneas()
+    call InitTrig_Kultiras()
+    call InitTrig_BegArat()
+    call InitTrig_Arathor()
+    call InitTrig_Stromgarge()
+    call InitTrig_Dalaran()
     call InitTrig_FinStormwind()
     call InitTrig_Fin7Legion()
     call InitTrig_FinSRU()
     call InitTrig_FinHoly()
+    call InitTrig_BegStorm()
     call InitTrig_StormwindFirst()
     call InitTrig_RememberLothar()
     call InitTrig_TankFire()
     call InitTrig_Kristall2()
     call InitTrig_HolyHelp()
+    call InitTrig_WorgenSpell()
     call InitTrig_MagicUsk()
+    call InitTrig_Illusions()
     call InitTrig_MassMolot()
     call InitTrig_PaladinHpSpell()
     call InitTrig_PaladinHpSpell2()
