@@ -1565,6 +1565,7 @@ unit gg_unit_h09W_0236= null
 unit gg_unit_n003_0117= null
 unit gg_unit_h093_0091= null
 unit gg_unit_h09V_0137= null
+trigger gg_trg_Untitled_Trigger_001= null
 framehandle face= null
 framehandle faceHover= null
 framehandle tooltip= null
@@ -5397,6 +5398,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0M9', - 6472.6, - 29161.0, 281.185, 'h0M9')
     set u=BlzCreateUnitWithSkin(p, 'h0LZ', - 5875.1, - 29417.3, 282.340, 'h0LZ')
     set u=BlzCreateUnitWithSkin(p, 'h0MA', - 6024.8, - 29295.7, 267.910, 'h0MA')
+    set u=BlzCreateUnitWithSkin(p, 'h0MB', - 6538.7, - 29878.7, 256.680, 'h0MB')
     set u=BlzCreateUnitWithSkin(p, 'o042', - 6234.2, - 29119.9, 262.170, 'o042')
     set u=BlzCreateUnitWithSkin(p, 'o043', - 5836.0, - 29164.5, 280.087, 'o043')
     set u=BlzCreateUnitWithSkin(p, 'h0KJ', - 5975.3, - 30278.8, 271.240, 'h0KJ')
@@ -24886,13 +24888,22 @@ endfunction
 
 function Trig_Illusions_Actions takes nothing returns nothing
     local unit u= GetSpellTargetUnit()
+    
+    if not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
+        if IsUnitType(u, UNIT_TYPE_HERO) then
+            call UnitAddItemByIdSwapped('I020', u)
+        else
+            call UnitAddAbility(u, 'AInv')
+            call UnitAddItemByIdSwapped('I020', u)
+            call TriggerSleepAction(1)
 
-    call UnitAddAbility(u, 'AInv')
-    call UnitAddItemByIdSwapped('I020', u)
+            call UnitRemoveAbility(u, 'AInv')
+        endif
+        
+    endif
+    
 
-    call TriggerSleepAction(2)
-
-    call UnitRemoveAbility(u, 'AInv')
+    
     set u=null
 endfunction
 
@@ -24903,6 +24914,27 @@ function InitTrig_Illusions takes nothing returns nothing
     call TriggerRegisterAnyUnitEventBJ(gg_trg_Illusions, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_Illusions, Condition(function Trig_Illusions_Conditions))
     call TriggerAddAction(gg_trg_Illusions, function Trig_Illusions_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: Untitled Trigger 001
+//===========================================================================
+function Trig_Untitled_Trigger_001_Conditions takes nothing returns boolean
+    if ( not ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Untitled_Trigger_001_Actions takes nothing returns nothing
+endfunction
+
+//===========================================================================
+function InitTrig_Untitled_Trigger_001 takes nothing returns nothing
+    set gg_trg_Untitled_Trigger_001=CreateTrigger()
+    call TriggerAddCondition(gg_trg_Untitled_Trigger_001, Condition(function Trig_Untitled_Trigger_001_Conditions))
+    call TriggerAddAction(gg_trg_Untitled_Trigger_001, function Trig_Untitled_Trigger_001_Actions)
 endfunction
 
 
@@ -47992,6 +48024,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_WorgenSpell()
     call InitTrig_MagicUsk()
     call InitTrig_Illusions()
+    call InitTrig_Untitled_Trigger_001()
     call InitTrig_MassMolot()
     call InitTrig_PaladinHpSpell()
     call InitTrig_PaladinHpSpell2()
