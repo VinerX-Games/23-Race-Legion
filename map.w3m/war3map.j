@@ -4,12 +4,12 @@ constant boolean LIBRARY_A1=true
 //endglobals from A1
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -1573,6 +1573,8 @@ trigger gg_trg_SandStrikeReserv= null
 trigger gg_trg_SandStrikeAlliance= null
 trigger gg_trg_VariarTaunt= null
 trigger gg_trg_Level2= null
+trigger gg_trg_Untitled_Trigger_001= null
+trigger gg_trg_Observer= null
 framehandle face= null
 framehandle faceHover= null
 framehandle tooltip= null
@@ -1701,6 +1703,7 @@ texttag TT
 unit TryBuild_u
 group Navy= CreateGroup()
 group Port= CreateGroup()
+force Observers= CreateForce()
 
 trigger l__library_init
 
@@ -1723,7 +1726,7 @@ endfunction
 //library A1 ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1731,33 +1734,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1765,19 +1768,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -25149,9 +25152,22 @@ function Trig_VariarTaunt_Conditions takes nothing returns boolean
     return true
 endfunction
 
+function Trig_VariarTaunt_Func004C takes nothing returns boolean
+    if ( not ( GetUnitAbilityLevelSwapped('A1AL', GetTriggerUnit()) > 1 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_VariarTaunt_Actions takes nothing returns nothing
     call BlzUnitHideAbility(GetTriggerUnit(), 'A1AL', true)
     call UnitAddAbilityBJ('A1AK', GetTriggerUnit())
+    call UnitAddAbilityBJ('A1AJ', GetTriggerUnit())
+    if ( Trig_VariarTaunt_Func004C() ) then
+        call SetUnitAbilityLevelSwapped('A1AJ', GetTriggerUnit(), 2)
+        call SetUnitAbilityLevelSwapped('A1AK', GetTriggerUnit(), 2)
+    else
+    endif
 endfunction
 
 //===========================================================================
@@ -25185,6 +25201,7 @@ endfunction
 function Trig_Level2_Actions takes nothing returns nothing
     if ( Trig_Level2_Func001C() ) then
         call SetUnitAbilityLevelSwapped('A1AK', GetTriggerUnit(), 2)
+        call SetUnitAbilityLevelSwapped('A1AJ', GetTriggerUnit(), 2)
     else
     endif
 endfunction
@@ -45940,6 +45957,10 @@ function Trig_SecondChance_Func003Func008C takes nothing returns boolean
     if ( not ( udg_LocalInteger != 16 ) ) then
         return false
     endif
+    if IsPlayerInForce(ConvertedPlayer(udg_LocalInteger), Observers) then
+        call DisplayTimedTextToForce(GetPlayersAll(), 5.00, ( ( "Хост " + GetPlayerName(GetTriggerPlayer()) ) + ( " смог дать зрителю " + ( GetPlayerName(ConvertedPlayer(udg_LocalInteger)) + " второй шанс!" ) ) ))
+        return false
+    endif
     return true
 endfunction
 
@@ -46039,6 +46060,34 @@ endfunction
 
 
 //===========================================================================
+// Trigger: Observer
+//===========================================================================
+
+function Trig_Observer_Actions takes nothing returns nothing
+    call ClearPlayer(GetTriggerPlayer())
+    call ForceAddPlayer(Observers, GetTriggerPlayer())
+    call CreateFogModifierRectBJ(true, GetTriggerPlayer(), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
+    
+   
+   
+endfunction
+
+//===========================================================================
+function InitTrig_Observer takes nothing returns nothing
+    local integer i= 0
+    set gg_trg_Observer=CreateTrigger()
+    loop
+        exitwhen i > 23
+        
+        call TriggerRegisterPlayerChatEvent(gg_trg_ArchontMode, Player(i), "-observer", true)
+        
+        set i=i + 1
+    endloop
+    call TriggerAddAction(gg_trg_Observer, function Trig_Observer_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: ArchontMode
 //===========================================================================
 function CorrectNumber takes integer pi2 returns boolean
@@ -46048,11 +46097,11 @@ endfunction
 
 function Trig_ArchontMode_Actions takes nothing returns nothing
     local string s= SubStringBJ(GetEventPlayerChatString(), 8, 10)
-    local integer pi2= S2I(s)
+    local integer pi2= S2I(s) - 1
     local integer pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) then
-        call DisplayTextToPlayer(Player(pi1), 0, 0, "Вы попытались дать полный контоль игроку " + GetPlayerName(Player(pi2)))
-        call DisplayTextToPlayer(Player(pi1), 0, 0, "Вам попытался дать полный контоль игрок " + GetPlayerName(Player(pi1)))
+        call DisplayTextToPlayer(Player(pi1), 0, 0, "Вы попытались дать полный контоль игроку " + GetPlayerName(Player(pi2)) + " номер " + I2S(pi2))
+        call DisplayTextToPlayer(Player(pi2), 0, 0, "Вам попытался дать полный контоль игрок " + GetPlayerName(Player(pi1)))
         call SetPlayerAllianceStateBJ(Player(pi1), Player(pi2), bj_ALLIANCE_ALLIED_ADVUNITS)
     endif
    
@@ -46075,16 +46124,29 @@ endfunction
 
 
 //===========================================================================
+// Trigger: Untitled Trigger 001
+//===========================================================================
+function Trig_Untitled_Trigger_001_Actions takes nothing returns nothing
+    call SetPlayerAllianceStateBJ(Player(0), Player(1), bj_ALLIANCE_ALLIED_ADVUNITS)
+endfunction
+
+//===========================================================================
+function InitTrig_Untitled_Trigger_001 takes nothing returns nothing
+    set gg_trg_Untitled_Trigger_001=CreateTrigger()
+    call TriggerAddAction(gg_trg_Untitled_Trigger_001, function Trig_Untitled_Trigger_001_Actions)
+endfunction
+
+//===========================================================================
 // Trigger: ArchontModeOff
 //===========================================================================
 
 
 function Trig_ArchontModeOff_Actions takes nothing returns nothing
     local string s= SubStringBJ(GetEventPlayerChatString(), 8, 10)
-    local integer pi2= S2I(s)
+    local integer pi2= S2I(s) - 1
     local integer pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) then
-        call DisplayTextToPlayer(Player(pi1), 0, 0, "Вы попытались отключить полный контоль игроку " + GetPlayerName(Player(pi2)))
+        call DisplayTextToPlayer(Player(pi1), 0, 0, "Вы попытались отключить полный контоль игроку " + GetPlayerName(Player(pi2)) + " номер " + I2S(pi2))
         call DisplayTextToPlayer(Player(pi1), 0, 0, "Вам попытался отключить полный контоль игрок " + GetPlayerName(Player(pi1)))
         call SetPlayerAllianceBJ(Player(pi1), ALLIANCE_SHARED_ADVANCED_CONTROL, false, Player(pi2))
     endif
@@ -48847,7 +48909,9 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Camera_command_O()
     call InitTrig_SecondChance()
     call InitTrig_GG()
+    call InitTrig_Observer()
     call InitTrig_ArchontMode()
+    call InitTrig_Untitled_Trigger_001()
     call InitTrig_ArchontModeOff()
     call InitTrig_Red_color()
     call InitTrig_Blue_color()
@@ -49274,7 +49338,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 call UISetup() // INLINED!!
 call Face2() // INLINED!!
 
