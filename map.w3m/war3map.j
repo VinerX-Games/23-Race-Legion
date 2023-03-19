@@ -757,6 +757,11 @@ trigger gg_trg_Drayenay= null
 trigger gg_trg_APandarens= null
 trigger gg_trg_BegDec= null
 trigger gg_trg_Decentralization= null
+trigger gg_trg_BegUnion= null
+trigger gg_trg_Union= null
+trigger gg_trg_VoidElfes= null
+trigger gg_trg_LightArmy= null
+trigger gg_trg_BlackIron= null
 trigger gg_trg_OldAllies= null
 trigger gg_trg_LordaeronAndTeramor= null
 trigger gg_trg_Gilneas= null
@@ -1565,11 +1570,8 @@ unit gg_unit_h09W_0236= null
 unit gg_unit_n003_0117= null
 unit gg_unit_h093_0091= null
 unit gg_unit_h09V_0137= null
-trigger gg_trg_BegUnion= null
-trigger gg_trg_Union= null
-trigger gg_trg_VoidElfes= null
-trigger gg_trg_LightArmy= null
-trigger gg_trg_BlackIron= null
+trigger gg_trg_SandStrikeReserv= null
+trigger gg_trg_SandStrikeAlliance= null
 framehandle face= null
 framehandle faceHover= null
 framehandle tooltip= null
@@ -5405,6 +5407,8 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'h0MB', - 6538.7, - 29878.7, 256.680, 'h0MB')
     set u=BlzCreateUnitWithSkin(p, 'h0MC', - 6206.3, - 29888.4, 279.580, 'h0MC')
     set u=BlzCreateUnitWithSkin(p, 'o044', - 6056.5, - 30421.7, 269.448, 'o044')
+    set u=BlzCreateUnitWithSkin(p, 'H0MD', - 5174.5, - 30190.6, 245.300, 'H0MD')
+    set u=BlzCreateUnitWithSkin(p, 'O02P', - 5325.3, - 30188.2, 269.510, 'O02P')
     set u=BlzCreateUnitWithSkin(p, 'o042', - 6234.2, - 29119.9, 262.170, 'o042')
     set u=BlzCreateUnitWithSkin(p, 'o043', - 5836.0, - 29164.5, 280.087, 'o043')
     set u=BlzCreateUnitWithSkin(p, 'h0KJ', - 5975.3, - 30278.8, 271.240, 'h0KJ')
@@ -12272,6 +12276,7 @@ function Trig_Race_Stromgard_O_Actions takes nothing returns nothing
     call CreateNUnitsAtLoc(5, 'h0G9', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     call RemoveUnit(GetSpellAbilityUnit())
     call SetPlayerTechResearchedSwap('R0H3', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechResearchedSwap('R0HY', 1, GetOwningPlayer(GetTriggerUnit()))
     call TriggerExecute(gg_trg_StromgardOn)
     call RemoveLocation(udg_LocalPosition2)
 endfunction
@@ -12616,6 +12621,7 @@ function Trig_Race_KulTiras_O_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call CreateNUnitsAtLoc(5, 'h013', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     call SetPlayerTechResearchedSwap('R07D', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechResearchedSwap('R0HX', 1, GetOwningPlayer(GetTriggerUnit()))
     call RemoveUnit(GetSpellAbilityUnit())
     call RemoveLocation(udg_LocalPosition2)
 endfunction
@@ -12959,6 +12965,9 @@ function Trig_Race_Alliance_Actions takes nothing returns nothing
     call RemoveUnit(GetSpellAbilityUnit())
     call ConditionalTriggerExecute(gg_trg_AllyOn)
     call SetPlayerTechResearchedSwap('R0GZ', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechResearchedSwap('R0HX', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechResearchedSwap('R0HW', 1, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechResearchedSwap('R0HY', 1, GetOwningPlayer(GetTriggerUnit()))
     call RemoveLocation(udg_LocalPosition2)
 endfunction
 
@@ -13169,12 +13178,21 @@ function Trig_Race_Random_Func030C takes nothing returns boolean
     return true
 endfunction
 
+function Trig_Race_Random_Func031C takes nothing returns boolean
+    if ( not ( udg_LocalInteger == 28 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
 function Trig_Race_Random_Actions takes nothing returns nothing
     set udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     call RemoveUnit(GetSpellAbilityUnit())
-    set udg_LocalInteger=GetRandomInt(1, 27)
+    set udg_LocalInteger=GetRandomInt(1, 28)
     if ( Trig_Race_Random_Func004C() ) then
         call CreateNUnitsAtLoc(5, 'h0G9', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R0H3', 1, GetOwningPlayer(GetTriggerUnit()))
+        call SetPlayerTechResearchedSwap('R0HY', 1, GetOwningPlayer(GetTriggerUnit()))
         call TriggerExecute(gg_trg_StromgardOn)
     else
     endif
@@ -13242,6 +13260,7 @@ function Trig_Race_Random_Actions takes nothing returns nothing
     if ( Trig_Race_Random_Func016C() ) then
         call CreateNUnitsAtLoc(5, 'h013', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
         call SetPlayerTechResearchedSwap('R07D', 1, GetOwningPlayer(GetTriggerUnit()))
+        call SetPlayerTechResearchedSwap('R0HX', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
     if ( Trig_Race_Random_Func017C() ) then
@@ -13291,6 +13310,7 @@ function Trig_Race_Random_Actions takes nothing returns nothing
         call CreateNUnitsAtLoc(5, 'h0FA', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
         call CreateNUnitsAtLoc(1, 'h0FX', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
         call SetPlayerTechResearchedSwap('R0BX', 1, GetOwningPlayer(GetTriggerUnit()))
+        call SetPlayerTechResearchedSwap('R0HW', 1, GetOwningPlayer(GetTriggerUnit()))
         call ConditionalTriggerExecute(gg_trg_GnomesOn)
     else
     endif
@@ -13316,6 +13336,14 @@ function Trig_Race_Random_Actions takes nothing returns nothing
     endif
     if ( Trig_Race_Random_Func030C() ) then
         call CreateNUnitsAtLoc(5, 'o03W', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    else
+    endif
+    if ( Trig_Race_Random_Func031C() ) then
+        call CreateNUnitsAtLoc(5, 'hpea', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        call SetPlayerTechResearchedSwap('R0GZ', 1, GetOwningPlayer(GetTriggerUnit()))
+        call SetPlayerTechResearchedSwap('R0HX', 1, GetOwningPlayer(GetTriggerUnit()))
+        call SetPlayerTechResearchedSwap('R0HW', 1, GetOwningPlayer(GetTriggerUnit()))
+        call SetPlayerTechResearchedSwap('R0HY', 1, GetOwningPlayer(GetTriggerUnit()))
     else
     endif
     call RemoveLocation(udg_LocalPosition2)
@@ -21732,7 +21760,21 @@ function AT1Count takes player p returns nothing
             exitwhen b >= i
         endloop
     endif
-  
+    //Stromgarge
+    if GetPlayerTechCount(p, 'R0HJ', true) > 0 then
+        set i=3
+        set b=1
+        
+      
+        
+        loop
+            set a[0]=a[0] + 1
+            set a[a[0]]='h0M9'
+            
+            set b=b + 1
+            exitwhen b >= i
+        endloop
+    endif
     
     //Long Containment
     call SaveInteger(CommonHash, pi, StringHash("AT1_0"), a[0])
@@ -23160,11 +23202,11 @@ function AM3Count takes player p returns nothing
     
     if GetPlayerTechCount(p, 'R0HI', true) == 1 then
         //Dalaran
-        set i=1
-        set b=2
+        set i=3
+        set b=0
         //Араторская прибавка
         if GetPlayerTechCount(p, 'R0HG', true) > 0 then
-            set i=i + 1
+            set i=i + 2
         endif
         loop
             set a[0]=a[0] + 1
@@ -25014,16 +25056,12 @@ endfunction
 function Trig_Illusions_Actions takes nothing returns nothing
     local unit u= GetSpellTargetUnit()
     
-    if not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
-        if IsUnitType(u, UNIT_TYPE_HERO) then
-            call UnitAddItemByIdSwapped('I020', u)
-        else
-            call UnitAddAbility(u, 'AInv')
-            call UnitAddItemByIdSwapped('I020', u)
-            call TriggerSleepAction(1)
+    if not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_HERO) then
+        call UnitAddAbility(u, 'AInv')
+        call UnitAddItemByIdSwapped('I020', u)
+        call TriggerSleepAction(1)
 
-            call UnitRemoveAbility(u, 'AInv')
-        endif
+        call UnitRemoveAbility(u, 'AInv')
         
     endif
     
@@ -25357,7 +25395,10 @@ function Trig_StartAlliance_Func001A takes nothing returns nothing
     call SetPlayerTechMaxAllowedSwap('h0HX', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('h0I3', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('Hamg', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H0ME', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('Hmkg', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H0MF', 1, GetEnumPlayer())
+    call SetPlayerTechMaxAllowedSwap('H0MD', 1, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0HM', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0HL', 0, GetEnumPlayer())
     call SetPlayerTechMaxAllowedSwap('R0HK', 0, GetEnumPlayer())
@@ -40461,7 +40502,7 @@ function Trig_IllidaryOn_Actions takes nothing returns nothing
     call EnableTrigger(gg_trg_IlliKnives)
     call EnableTrigger(gg_trg_IllyAttack)
     call EnableTrigger(gg_trg_RuvokAutoIlly)
-    call EnableTrigger(gg_trg_SandStrike)
+    //call EnableTrigger( gg_trg_SandStrike )
 
    
 endfunction
@@ -40866,10 +40907,54 @@ endfunction
 //===========================================================================
 function InitTrig_SandStrike takes nothing returns nothing
     set gg_trg_SandStrike=CreateTrigger()
-    call DisableTrigger(gg_trg_SandStrike)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_SandStrike, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(gg_trg_SandStrike, Condition(function Trig_SandStrike_Conditions))
     call TriggerAddAction(gg_trg_SandStrike, function Trig_SandStrike_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: SandStrikeAlliance
+//===========================================================================
+function Trig_SandStrikeAlliance_Conditions takes nothing returns boolean
+    if ( not ( GetSpellAbilityId() == 'A1AG' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_SandStrikeAlliance_Func001C takes nothing returns boolean
+    if ( not ( udg_SSinteger[0] == 0 ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_SandStrikeAlliance_Actions takes nothing returns nothing
+    if ( Trig_SandStrikeAlliance_Func001C() ) then
+        call EnableTrigger(gg_trg_Sand_Strike_Loop)
+    else
+    endif
+    set udg_SSinteger[0]=( udg_SSinteger[0] + 1 )
+    set udg_SSinteger[1]=( udg_SSinteger[1] + 1 )
+    set udg_SScaster[udg_SSinteger[1]]=GetTriggerUnit()
+    call SetUnitPathing(udg_SScaster[udg_SSinteger[1]], false)
+    set udg_SSfacing[udg_SSinteger[1]]=GetUnitFacing(udg_SScaster[udg_SSinteger[1]])
+    set udg_SSpointcaster[udg_SSinteger[1]]=GetUnitLoc(udg_SScaster[udg_SSinteger[1]])
+    set udg_SSdamage[udg_SSinteger[1]]=( 5.00 + I2R(GetUnitAbilityLevelSwapped('A1AG', udg_SScaster[udg_SSinteger[1]])) )
+    set udg_SStargetpoint[udg_SSinteger[1]]=GetSpellTargetLoc()
+    set udg_SSeffect[udg_SSinteger[1]]="Abilities\\Weapons\\AncientProtectorMissile\\AncientProtectorMissile.mdl"
+    set udg_SS[udg_SSinteger[1]]=( GetUnitAbilityLevelSwapped('A1AG', udg_SScaster[udg_SSinteger[1]]) + 30 )
+    call PauseUnitBJ(true, GetTriggerUnit())
+    call RemoveLocation(udg_SSpointcaster[udg_SSinteger[1]])
+    call RemoveLocation(udg_SStargetpoint[udg_SSinteger[1]])
+endfunction
+
+//===========================================================================
+function InitTrig_SandStrikeAlliance takes nothing returns nothing
+    set gg_trg_SandStrikeAlliance=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_SandStrikeAlliance, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_SandStrikeAlliance, Condition(function Trig_SandStrikeAlliance_Conditions))
+    call TriggerAddAction(gg_trg_SandStrikeAlliance, function Trig_SandStrikeAlliance_Actions)
 endfunction
 
 //===========================================================================
@@ -48589,6 +48674,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_IllyAttack()
     call InitTrig_RuvokAutoIlly()
     call InitTrig_SandStrike()
+    call InitTrig_SandStrikeAlliance()
     call InitTrig_Sand_Strike_Loop()
     call InitTrig_km()
     call InitTrig_km2()
