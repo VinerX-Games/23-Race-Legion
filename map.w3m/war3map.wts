@@ -17,7 +17,7 @@ STRING 2
 
 STRING 3
 {
-23 Race Legion 0.965
+23 Race Legion 0.966
 }
 
 STRING 4
@@ -140545,7 +140545,7 @@ Q
 }
 
 STRING 23142
-// Abilities: A1AM (Талант - провокация), Hotkey (Hotkey - Normal)
+// Abilities: A1AM (Талант - Провокация), Hotkey (Hotkey - Normal)
 {
 Q
 }
@@ -151923,7 +151923,7 @@ Q
 }
 
 STRING 25011
-// Abilities: A1AO (Хватка титана), Hotkey (Hotkey - Normal)
+// Abilities: A1AO (Талант - Хватка титана), Hotkey (Hotkey - Normal)
 {
 E
 }
@@ -183655,12 +183655,6 @@ STRING 30211
 Открывает голема черного железа, но повышает расходы на 2%.
 }
 
-STRING 30212
-// Abilities: A1AM (Талант - провокация), Name (Name)
-{
-Талант - провокация
-}
-
 STRING 30213
 // Upgrades: R0GQ (Улучшенные топоры,Улучшенные пилы), Hotkey (Hotkey)
 {
@@ -184070,25 +184064,19 @@ STRING 30280
 }
 
 STRING 30281
-// Abilities: A1AO (Хватка титана), Name (Name)
+// Abilities: A1AR (Хватка титана), Name (Name)
 {
 Хватка титана
 }
 
 STRING 30282
-// Abilities: A1AO (Хватка титана), Tip (Tooltip - Normal)
+// Abilities: A1AR (Хватка титана), Tip (Tooltip - Normal)
 {
 Хватка титана
 }
 
-STRING 30283
-// Abilities: A1AO (Хватка титана), Ubertip (Tooltip - Normal - Extended)
-{
-Скорость боя героя значительно вырасатает, а атаки восполняют ему здоровье в размере 6% от нанесенного урона.
-}
-
 STRING 30284
-// Abilities: A1AM (Талант - провокация), EditorSuffix (Editor Suffix)
+// Abilities: A1AM (Талант - Провокация), EditorSuffix (Editor Suffix)
 {
 (Вариан Альянс)
 }
@@ -184115,12 +184103,6 @@ STRING 30288
 // Abilities: A1AG (Рывок), Researchtip (Tooltip - Learn)
 {
 Рывок
-}
-
-STRING 30289
-// Abilities: A1AP (Бонус к скорости атаки), EditorSuffix (Editor Suffix)
-{
-(Альянс Вариан 25%/40%)
 }
 
 STRING 30290
@@ -184327,12 +184309,6 @@ STRING 30323
 (Альянс Вариан)
 }
 
-STRING 30324
-// Abilities: A1AK (Бонус к здоровью), EditorSuffix (Editor Suffix)
-{
-(Альянс Вариан 1500,3000)
-}
-
 STRING 30325
 // Abilities: A1AL (Выбрать талант), Name (Name)
 {
@@ -184345,26 +184321,14 @@ STRING 30326
 (Альянс Вариан)
 }
 
-STRING 30327
-// Abilities: A1AM (Талант - провокация), Tip (Tooltip - Normal)
-{
-Талант - защита
-}
-
-STRING 30328
-// Abilities: A1AS (Талант - Удар коллоса), Tip (Tooltip - Normal)
-{
-Талант - защита
-}
-
 STRING 30329
-// Abilities: A1AM (Талант - провокация), Ubertip (Tooltip - Normal - Extended)
+// Abilities: A1AM (Талант - Провокация), Ubertip (Tooltip - Normal - Extended)
 {
 Герой получает способность "Провакация" и повышенное здоровье.
 }
 
 STRING 30330
-// Abilities: A1AO (Хватка титана), EditorSuffix (Editor Suffix)
+// Abilities: A1AO (Талант - Хватка титана), EditorSuffix (Editor Suffix)
 {
 (Вариан Альянс)
 }
@@ -184442,7 +184406,7 @@ W
 }
 
 STRING 30343
-// Abilities: A1AR (Хватка титана), Name (Name)
+// Abilities: A1AR (Хватка титана), Tip (Tooltip - Normal)
 {
 Хватка титана
 }
@@ -184451,12 +184415,6 @@ STRING 30344
 // Upgrades: R0HQ (Грабеж), Hotkey (Hotkey)
 {
 W
-}
-
-STRING 30345
-// Abilities: A1AR (Хватка титана), Tip (Tooltip - Normal)
-{
-Хватка титана
 }
 
 STRING 30346
@@ -184517,12 +184475,6 @@ STRING 30355
 // Abilities: A1AL (Выбрать талант), Ubertip (Tooltip - Normal - Extended)
 {
 После изучения позволяет выбрать талант героя.
-}
-
-STRING 30356
-// Abilities: A1AR (Хватка титана), Tip (Tooltip - Normal)
-{
-Хватка титана
 }
 
 STRING 30357
@@ -184615,22 +184567,10 @@ STRING 30371
 Талант - Удар коллоса
 }
 
-STRING 30372
-// Abilities: A1AS (Талант - Удар коллоса), Ubertip (Tooltip - Normal - Extended)
-{
-Герой получает способность "Провакация" и повышенное здоровье.
-}
-
 STRING 30373
 // Abilities: A1AS (Талант - Удар коллоса), EditorSuffix (Editor Suffix)
 {
 (Вариан Альянс)
-}
-
-STRING 30374
-// Abilities: A1AT (Бонус к урону), EditorSuffix (Editor Suffix)
-{
-(Вариан Альянс 35/70)
 }
 
 STRING 30375
@@ -184739,5 +184679,65 @@ STRING 30392
 // Upgrades: R0HV (Грабеж), Hotkey (Hotkey)
 {
 W
+}
+
+STRING 30393
+// Abilities: A1AK (Бонус к здоровью), EditorSuffix (Editor Suffix)
+{
+(Альянс Вариан 2000,3500)
+}
+
+STRING 30394
+// Abilities: A1AM (Талант - Провокация), Name (Name)
+{
+Талант - Провокация
+}
+
+STRING 30395
+// Abilities: A1AM (Талант - Провокация), Tip (Tooltip - Normal)
+{
+Талант - Провокация
+}
+
+STRING 30396
+// Abilities: A1AO (Талант - Хватка титана), Name (Name)
+{
+Талант - Хватка титана
+}
+
+STRING 30397
+// Abilities: A1AO (Талант - Хватка титана), Tip (Tooltip - Normal)
+{
+Талант - Хватка титана
+}
+
+STRING 30398
+// Abilities: A1AO (Талант - Хватка титана), Ubertip (Tooltip - Normal - Extended)
+{
+Скорость боя героя значительно вырасатает, а атаки восполняют ему здоровье в размере 12% от нанесенного урона.
+}
+
+STRING 30399
+// Abilities: A1AP (Бонус к скорости атаки), EditorSuffix (Editor Suffix)
+{
+(Альянс Вариан 35%/50%)
+}
+
+STRING 30400
+// Abilities: A1AS (Талант - Удар коллоса), Tip (Tooltip - Normal)
+{
+Талант - Удар коллоса
+}
+
+STRING 30401
+// Abilities: A1AS (Талант - Удар коллоса), Ubertip (Tooltip - Normal - Extended)
+{
+Герой получает способность "Удар колосса" и повышенный урон от атак.
+}
+
+STRING 30402
+// Abilities: A1AT (Бонус к урону), EditorSuffix (Editor Suffix)
+{
+(Вариан Альянс 40/80)
 }
 
