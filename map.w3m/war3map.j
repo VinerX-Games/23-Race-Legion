@@ -4,12 +4,12 @@ constant boolean LIBRARY_A1=true
 //endglobals from A1
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE___SpellHero='A06P'
-constant integer SpellSleepAOE___SpellCast='A06O'
-constant string SpellSleepAOE___SpellOrder="sleep"
-constant integer SpellSleepAOE___DummyID='u000'
-constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE___DummyUnit
+constant integer SpellSleepAOE__SpellHero='A06P'
+constant integer SpellSleepAOE__SpellCast='A06O'
+constant string SpellSleepAOE__SpellOrder="sleep"
+constant integer SpellSleepAOE__DummyID='u000'
+constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE__DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -785,6 +785,11 @@ trigger gg_trg_WorgenSpell= null
 trigger gg_trg_MagicUsk= null
 trigger gg_trg_Illusions= null
 trigger gg_trg_MassMolot= null
+trigger gg_trg_VariarTaunt= null
+trigger gg_trg_VariarTitan= null
+trigger gg_trg_VariarDamager= null
+trigger gg_trg_Level2= null
+trigger gg_trg_SandStrikeAlliance= null
 trigger gg_trg_PaladinHpSpell= null
 trigger gg_trg_PaladinHpSpell2= null
 trigger gg_trg_Vozd= null
@@ -1239,6 +1244,7 @@ trigger gg_trg_IlliKnives= null
 trigger gg_trg_IllyAttack= null
 trigger gg_trg_RuvokAutoIlly= null
 trigger gg_trg_SandStrike= null
+trigger gg_trg_SandStrikeReserv= null
 trigger gg_trg_Sand_Strike_Loop= null
 trigger gg_trg_km= null
 trigger gg_trg_km2= null
@@ -1392,6 +1398,7 @@ trigger gg_trg_Del= null
 trigger gg_trg_Camera_command_O= null
 trigger gg_trg_SecondChance= null
 trigger gg_trg_GG= null
+trigger gg_trg_Observer= null
 trigger gg_trg_ArchontMode= null
 trigger gg_trg_ArchontModeOff= null
 trigger gg_trg_Subsidies= null
@@ -1569,12 +1576,6 @@ unit gg_unit_h09W_0236= null
 unit gg_unit_n003_0117= null
 unit gg_unit_h093_0091= null
 unit gg_unit_h09V_0137= null
-trigger gg_trg_SandStrikeReserv= null
-trigger gg_trg_SandStrikeAlliance= null
-trigger gg_trg_VariarTaunt= null
-trigger gg_trg_Level2= null
-trigger gg_trg_Untitled_Trigger_001= null
-trigger gg_trg_Observer= null
 framehandle face= null
 framehandle faceHover= null
 framehandle tooltip= null
@@ -1726,7 +1727,7 @@ endfunction
 //library A1 ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE___getRange takes integer level returns integer
+    function SpellSleepAOE__getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1734,33 +1735,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
-            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
+            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
+            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE___anon__0 takes nothing returns boolean
-            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE__anon__0 takes nothing returns boolean
+            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE___anon__2 takes nothing returns boolean
+            function SpellSleepAOE__anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE___anon__1 takes nothing returns nothing
+        function SpellSleepAOE__anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1768,19 +1769,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE___onInit takes nothing returns nothing
+    function SpellSleepAOE__onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
+        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
         set t=null
     endfunction
 
@@ -2570,7 +2571,7 @@ function UISetup takes nothing returns nothing
 endfunction
 
 // scope init begins
-function init__Init takes nothing returns nothing
+function init___Init takes nothing returns nothing
 	call UISetup()
 endfunction
 // scope init ends
@@ -2612,7 +2613,7 @@ call BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 endfunction
 
 // scope init2 begins
-function init2__Init takes nothing returns nothing
+function init2___Init takes nothing returns nothing
     call Face2()
 endfunction
 // scope init2 ends
@@ -25179,31 +25180,91 @@ function InitTrig_VariarTaunt takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: VariarTitan
+//===========================================================================
+function Trig_VariarTitan_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A1AO'
+endfunction
+
+
+function Trig_VariarTitan_Actions takes nothing returns nothing
+    call BlzUnitHideAbility(GetTriggerUnit(), 'A1AL', true)
+    call UnitAddAbilityBJ('A1AP', GetTriggerUnit())
+    call UnitAddAbilityBJ('A1AQ', GetTriggerUnit())
+    call UnitAddAbilityBJ('A1AR', GetTriggerUnit())
+    if GetUnitAbilityLevelSwapped('A1AL', GetTriggerUnit()) > 1 then
+        call SetUnitAbilityLevelSwapped('A1AQ', GetTriggerUnit(), 2)
+        call SetUnitAbilityLevelSwapped('A1AR', GetTriggerUnit(), 2)
+    endif
+    
+    
+endfunction
+
+//===========================================================================
+function InitTrig_VariarTitan takes nothing returns nothing
+    set gg_trg_VariarTitan=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_VariarTitan, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_VariarTitan, Condition(function Trig_VariarTitan_Conditions))
+    call TriggerAddAction(gg_trg_VariarTitan, function Trig_VariarTitan_Actions)
+endfunction
+
+
+//===========================================================================
+// Trigger: VariarDamager
+//===========================================================================
+function Trig_VariarDamager_Conditions takes nothing returns boolean
+    return GetSpellAbilityId() == 'A1AS'
+endfunction
+
+
+function Trig_VariarDamager_Actions takes nothing returns nothing
+    call BlzUnitHideAbility(GetTriggerUnit(), 'A1AL', true)
+    call UnitAddAbilityBJ('A1AU', GetTriggerUnit())
+    call UnitAddAbilityBJ('A1AT', GetTriggerUnit())
+    
+    if GetUnitAbilityLevelSwapped('A1AL', GetTriggerUnit()) > 1 then
+        call SetUnitAbilityLevelSwapped('A1AU', GetTriggerUnit(), 2)
+        call SetUnitAbilityLevelSwapped('A1AT', GetTriggerUnit(), 2)
+    endif
+    
+    
+endfunction
+
+//===========================================================================
+function InitTrig_VariarDamager takes nothing returns nothing
+    set gg_trg_VariarDamager=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_VariarDamager, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_VariarDamager, Condition(function Trig_VariarDamager_Conditions))
+    call TriggerAddAction(gg_trg_VariarDamager, function Trig_VariarDamager_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: Level2
 //===========================================================================
 function Trig_Level2_Conditions takes nothing returns boolean
-    if ( not ( GetLearnedSkillBJ() == 'A1AL' ) ) then
-        return false
-    endif
-    if ( not ( GetLearnedSkillLevel() == 2 ) ) then
-        return false
-    endif
-    return true
+    return GetLearnedSkillBJ() == 'A1AL' and GetLearnedSkillLevel() == 2
 endfunction
 
-function Trig_Level2_Func001C takes nothing returns boolean
-    if ( not ( GetUnitAbilityLevelSwapped('A1AJ', GetTriggerUnit()) != 0 ) ) then
-        return false
-    endif
-    return true
-endfunction
 
 function Trig_Level2_Actions takes nothing returns nothing
-    if ( Trig_Level2_Func001C() ) then
+    //Tank
+    if GetUnitAbilityLevelSwapped('A1AJ', GetTriggerUnit()) != 0 then
         call SetUnitAbilityLevelSwapped('A1AK', GetTriggerUnit(), 2)
         call SetUnitAbilityLevelSwapped('A1AJ', GetTriggerUnit(), 2)
-    else
     endif
+    //Titan
+    if GetUnitAbilityLevelSwapped('A1AR', GetTriggerUnit()) != 0 then
+        call SetUnitAbilityLevelSwapped('A1AR', GetTriggerUnit(), 2)
+        call SetUnitAbilityLevelSwapped('A1AQ', GetTriggerUnit(), 2)
+    endif
+    //Damager
+    if GetUnitAbilityLevelSwapped('A1AU', GetTriggerUnit()) != 0 then
+        call SetUnitAbilityLevelSwapped('A1AU', GetTriggerUnit(), 2)
+        call SetUnitAbilityLevelSwapped('A1AT', GetTriggerUnit(), 2)
+    endif
+    
+    
 endfunction
 
 //===========================================================================
@@ -25213,6 +25274,7 @@ function InitTrig_Level2 takes nothing returns nothing
     call TriggerAddCondition(gg_trg_Level2, Condition(function Trig_Level2_Conditions))
     call TriggerAddAction(gg_trg_Level2, function Trig_Level2_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: SandStrikeAlliance
@@ -26867,9 +26929,7 @@ function T3Count takes player p returns nothing
                 set a[0]=a[0] + 1
                 set a[a[0]]='o01L'
                 
-                if Random(1 , 20) then
-                    set a[a[0]]='o032'
-                endif
+                
                 set b=b + 1
                 exitwhen b >= i
         endloop
@@ -26960,6 +27020,10 @@ function Trig_K1T4_Actions takes nothing returns nothing
     set b=LoadInteger(CommonHash, pi, StringHash("T3") + i)
     //
     
+    //Тен Тотем
+    if b == 'o01L' and Random(1 , 25) then
+        set b='o032'
+    endif
     set u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
     
@@ -26967,7 +27031,7 @@ function Trig_K1T4_Actions takes nothing returns nothing
     // Elite Price
     call UnitAddAbility(u, 'A0UX')
     call SetUnitAbilityLevel(u, 'OR00', 35 + udg_HordeElitePrice[pi])
-
+    
 
     set udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
     call UnitAddAbility(u, 'A0YU')
@@ -46124,19 +46188,6 @@ endfunction
 
 
 //===========================================================================
-// Trigger: Untitled Trigger 001
-//===========================================================================
-function Trig_Untitled_Trigger_001_Actions takes nothing returns nothing
-    call SetPlayerAllianceStateBJ(Player(0), Player(1), bj_ALLIANCE_ALLIED_ADVUNITS)
-endfunction
-
-//===========================================================================
-function InitTrig_Untitled_Trigger_001 takes nothing returns nothing
-    set gg_trg_Untitled_Trigger_001=CreateTrigger()
-    call TriggerAddAction(gg_trg_Untitled_Trigger_001, function Trig_Untitled_Trigger_001_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: ArchontModeOff
 //===========================================================================
 
@@ -48339,6 +48390,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Illusions()
     call InitTrig_MassMolot()
     call InitTrig_VariarTaunt()
+    call InitTrig_VariarTitan()
+    call InitTrig_VariarDamager()
     call InitTrig_Level2()
     call InitTrig_SandStrikeAlliance()
     call InitTrig_PaladinHpSpell()
@@ -48911,7 +48964,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_GG()
     call InitTrig_Observer()
     call InitTrig_ArchontMode()
-    call InitTrig_Untitled_Trigger_001()
     call InitTrig_ArchontModeOff()
     call InitTrig_Red_color()
     call InitTrig_Blue_color()
@@ -49338,7 +49390,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("SpellSleepAOE___onInit")
+call ExecuteFunc("SpellSleepAOE__onInit")
 call UISetup() // INLINED!!
 call Face2() // INLINED!!
 
