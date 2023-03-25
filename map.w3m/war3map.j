@@ -7345,28 +7345,6 @@ function Trig_StolicaTime_Func001Func001Func001Func011A takes nothing returns no
     call UnitShareVision(udg_LocalUnit2, GetEnumPlayer(), true)
 endfunction
 
-function Trig_StolicaTime_Func001Func001Func001Func013C takes nothing returns boolean
-    if ( not ( GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_StolicaTime_Func001Func001Func001Func014Func001C takes nothing returns boolean
-    if ( not ( IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) == true ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_StolicaTime_Func001Func001Func001Func014A takes nothing returns nothing
-    if ( Trig_StolicaTime_Func001Func001Func001Func014Func001C() ) then
-        call SetUnitOwner(GetEnumUnit(), Player(PLAYER_NEUTRAL_AGGRESSIVE), true)
-    else
-        call KillUnit(GetEnumUnit())
-        call RemoveUnit(GetEnumUnit())
-    endif
-endfunction
 
 function Trig_StolicaTime_Func001Func001Func001Func016001001002 takes nothing returns boolean
     return GetUnitAbilityLevelSwapped('A0IQ', GetFilterUnit()) != 0
@@ -7400,12 +7378,13 @@ function Trig_StolicaTime_Func001A takes nothing returns nothing
             call ForForce(udg_AllPlayers, function Trig_StolicaTime_Func001Func001Func001Func011A)
             call DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetEnumPlayer()) + " - |cffffff00почти проиграл|r|r, его |cffd45e19столица|r не не была построена ко времени, а потому была установлена автоматически." ))
         else
-            if ( Trig_StolicaTime_Func001Func001Func001Func013C() ) then
+            if GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING then
                 call DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetEnumPlayer()) + " - |cffff0000проиграл|r, его |cffd45e19столица |r не построена ко времени. :(" ))
             else
             endif
-            call ForGroupBJ(GetUnitsOfPlayerAll(GetEnumPlayer()), function Trig_StolicaTime_Func001Func001Func001Func014A)
-            call ClearEc(GetPlayerId(GetEnumPlayer()))
+            
+            call ClearPlayer(GetEnumPlayer())
+            
         endif
     endif
     set u=null
@@ -7415,7 +7394,7 @@ function Trig_StolicaTime_Func001A takes nothing returns nothing
 endfunction
 
 function Trig_StolicaTime_Actions takes nothing returns nothing
-    call ForForce(GetPlayersAll(), function Trig_StolicaTime_Func001A)
+    call ForForce(udg_AllPlayers, function Trig_StolicaTime_Func001A)
 endfunction
 
 //===========================================================================
@@ -46274,7 +46253,7 @@ endfunction
 //===========================================================================
 
 function RepForOneHero takes nothing returns nothing
-    if ( IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO) or GetUnitAbilityLevel(GetEnumUnit(), 'Bvul') > 0 ) and GetOwningPlayer(GetEnumUnit()) == GetTriggerPlayer() then
+    if GetOwningPlayer(GetEnumUnit()) == GetTriggerPlayer() then
         call ReplaceUnit2(GetEnumUnit() , GetUnitTypeId(GetEnumUnit()) , bj_UNIT_STATE_METHOD_RELATIVE)
     endif
 endfunction
@@ -46542,6 +46521,7 @@ endfunction
 //===========================================================================
 
 function Trig_Observer_Actions takes nothing returns nothing
+    call DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "Вы попытались стать наблюдателем")
     call ClearPlayer(GetTriggerPlayer())
     call ForceAddPlayer(Observers, GetTriggerPlayer())
     call CreateFogModifierRectBJ(true, GetTriggerPlayer(), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
@@ -46557,7 +46537,7 @@ function InitTrig_Observer takes nothing returns nothing
     loop
         exitwhen i > 23
         
-        call TriggerRegisterPlayerChatEvent(gg_trg_ArchontMode, Player(i), "-observer", true)
+        call TriggerRegisterPlayerChatEvent(gg_trg_Observer, Player(i), "-observer", true)
         
         set i=i + 1
     endloop

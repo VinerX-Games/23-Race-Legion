@@ -117663,13 +117663,13 @@ STRING 19426
 }
 
 STRING 19427
-// Abilities: A1B7 (Стать Слугой К'Туна), Tip (Tooltip - Normal)
+// Units: h0MG (Стать Слугой К'Туна), Name (Name)
 {
 Стать Слугой К'Туна
 }
 
 STRING 19428
-// Abilities: A1B7 (Стать Слугой К'Туна), Ubertip (Tooltip - Normal - Extended)
+// Units: h0MG (Стать Слугой К'Туна), Ubertip (Tooltip - Extended)
 {
 К'Тун переходит под ваш контроль. В некоторыъ режимах столица переносится на него (или создается).
 }
@@ -121874,7 +121874,7 @@ STRING 20122
 }
 
 STRING 20123
-// Abilities: A1B7 (Стать Слугой К'Туна), Name (Name)
+// Units: h0MG (Стать Слугой К'Туна), Tip (Tooltip - Basic)
 {
 Стать Слугой К'Туна
 }
@@ -185270,19 +185270,19 @@ STRING 30491
 }
 
 STRING 30492
-// Units: h0MG (Стать Слугой К'Туна), Name (Name)
+// Abilities: A1B7 (Стать Слугой К'Туна), Tip (Tooltip - Normal)
 {
 Стать Слугой К'Туна
 }
 
 STRING 30493
-// Units: h0MG (Стать Слугой К'Туна), Ubertip (Tooltip - Extended)
+// Abilities: A1B7 (Стать Слугой К'Туна), Ubertip (Tooltip - Normal - Extended)
 {
 К'Тун переходит под ваш контроль. В некоторыъ режимах столица переносится на него (или создается).
 }
 
 STRING 30494
-// Units: h0MG (Стать Слугой К'Туна), Tip (Tooltip - Basic)
+// Abilities: A1B7 (Стать Слугой К'Туна), Name (Name)
 {
 Стать Слугой К'Туна
 }
