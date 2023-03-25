@@ -4,12 +4,12 @@ constant boolean LIBRARY_A1=true
 //endglobals from A1
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE___SpellHero='A06P'
-constant integer SpellSleepAOE___SpellCast='A06O'
-constant string SpellSleepAOE___SpellOrder="sleep"
-constant integer SpellSleepAOE___DummyID='u000'
-constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE___DummyUnit
+constant integer SpellSleepAOE__SpellHero='A06P'
+constant integer SpellSleepAOE__SpellCast='A06O'
+constant string SpellSleepAOE__SpellOrder="sleep"
+constant integer SpellSleepAOE__DummyID='u000'
+constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE__DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -1007,6 +1007,8 @@ trigger gg_trg_Klap_Klap_War_small= null
 trigger gg_trg_Klap_Klap_War_big= null
 trigger gg_trg_SilitidsOn= null
 trigger gg_trg_StartSilitids= null
+trigger gg_trg_QTunServe= null
+trigger gg_trg_QTunAye= null
 trigger gg_trg_ChoseLich= null
 trigger gg_trg_ChoseLich_Copy= null
 trigger gg_trg_ChoseUnits2= null
@@ -1022,6 +1024,7 @@ trigger gg_trg_TrutenStartUpgrade= null
 trigger gg_trg_LichinkaFinish= null
 trigger gg_trg_LichinkaFinish_Copy= null
 trigger gg_trg_KokonDead= null
+trigger gg_trg_SpellBook= null
 trigger gg_trg_SpawnLich= null
 trigger gg_trg_TypeOfSpawn1_war= null
 trigger gg_trg_TypeOfSpawn2_bee= null
@@ -1590,9 +1593,6 @@ unit gg_unit_h09W_0236= null
 unit gg_unit_n003_0117= null
 unit gg_unit_h093_0091= null
 unit gg_unit_h09V_0137= null
-trigger gg_trg_SpellBook= null
-trigger gg_trg_QTunServe= null
-trigger gg_trg_QTunAye= null
 framehandle face= null
 framehandle faceHover= null
 framehandle tooltip= null
@@ -1744,7 +1744,7 @@ endfunction
 //library A1 ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE___getRange takes integer level returns integer
+    function SpellSleepAOE__getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1752,33 +1752,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
-            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
+            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
+            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE___anon__0 takes nothing returns boolean
-            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE__anon__0 takes nothing returns boolean
+            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE___anon__2 takes nothing returns boolean
+            function SpellSleepAOE__anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE___anon__1 takes nothing returns nothing
+        function SpellSleepAOE__anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1786,19 +1786,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE___onInit takes nothing returns nothing
+    function SpellSleepAOE__onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
+        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
         set t=null
     endfunction
 
@@ -33126,21 +33126,18 @@ endfunction
 // Trigger: QTunServe
 //===========================================================================
 function Trig_QTunServe_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A1B7' ) ) then
-        return false
-    endif
-    if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
+    if ( not ( GetUnitTypeId(GetTrainedUnit()) == 'h0MG' ) ) then
         return false
     endif
     return true
 endfunction
 
-function Trig_QTunServe_Func002A takes nothing returns nothing
-    call SetUnitOwner(GetEnumUnit(), GetOwningPlayer(GetSpellAbilityUnit()), true)
+function Trig_QTunServe_Func003A takes nothing returns nothing
+    call SetUnitOwner(GetEnumUnit(), GetOwningPlayer(GetTriggerUnit()), true)
 endfunction
 
-function Trig_QTunServe_Func003A takes nothing returns nothing
-    call SetPlayerAbilityAvailableBJ(false, 'A1B7', GetEnumPlayer())
+function Trig_QTunServe_Func004A takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('h0MG', 0, GetEnumPlayer())
 endfunction
 
 function Trig_QTunServe_Func005001002 takes nothing returns boolean
@@ -33152,25 +33149,27 @@ function Trig_QTunServe_Func005A takes nothing returns nothing
     call ReplaceUnitBJ(GetEnumUnit(), GetUnitTypeId(GetEnumUnit()), bj_UNIT_STATE_METHOD_RELATIVE)
 endfunction
 
-function Trig_QTunServe_Func007A takes nothing returns nothing
+function Trig_QTunServe_Func009A takes nothing returns nothing
     call UnitShareVisionBJ(true, gg_unit_n03D_0666, GetEnumPlayer())
 endfunction
 
 function Trig_QTunServe_Actions takes nothing returns nothing
+    call RemoveUnit(GetTrainedUnit())
     call DisplayTextToForce(GetPlayersAll(), "TRIGSTR_30489")
-    call ForGroupBJ(GetUnitsInRectOfPlayer(gg_rct_Ankirag, Player(PLAYER_NEUTRAL_AGGRESSIVE)), function Trig_QTunServe_Func002A)
-    call ForForce(GetPlayersAll(), function Trig_QTunServe_Func003A)
-    call GroupAddUnitSimple(gg_unit_n03D_0666, udg_StolicaGroups)
+    call ForGroupBJ(GetUnitsInRectOfPlayer(gg_rct_Ankirag, Player(PLAYER_NEUTRAL_AGGRESSIVE)), function Trig_QTunServe_Func003A)
+    call ForForce(GetPlayersAll(), function Trig_QTunServe_Func004A)
     call ForGroupBJ(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_QTunServe_Func005001002)), function Trig_QTunServe_Func005A)
+    call GroupAddUnitSimple(gg_unit_n03D_0666, udg_StolicaGroups)
+    call BlzSetUnitStringFieldBJ(gg_unit_n03D_0666, UNIT_SF_NAME, ( "|cffd45e19Столица:|r " + GetUnitName(gg_unit_n03D_0666) ))
     call TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, gg_unit_n03D_0666, EVENT_UNIT_ATTACKED)
-    call ForForce(GetPlayersAll(), function Trig_QTunServe_Func007A)
+    call ForForce(GetPlayersAll(), function Trig_QTunServe_Func009A)
     call SetUnitAbilityLevelSwapped('A0W0', gg_unit_n03D_0666, 2)
 endfunction
 
 //===========================================================================
 function InitTrig_QTunServe takes nothing returns nothing
     set gg_trg_QTunServe=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_QTunServe, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_QTunServe, EVENT_PLAYER_UNIT_TRAIN_FINISH)
     call TriggerAddCondition(gg_trg_QTunServe, Condition(function Trig_QTunServe_Conditions))
     call TriggerAddAction(gg_trg_QTunServe, function Trig_QTunServe_Actions)
 endfunction
@@ -49820,7 +49819,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("SpellSleepAOE___onInit")
+call ExecuteFunc("SpellSleepAOE__onInit")
 call UISetup() // INLINED!!
 call Face2() // INLINED!!
 
