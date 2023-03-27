@@ -5723,7 +5723,14 @@ function CreateNeutralHostile takes nothing returns nothing
 
     set u=BlzCreateUnitWithSkin(p, 'n03J', - 15462.6, - 21419.4, 310.516, 'n03J')
     set u=BlzCreateUnitWithSkin(p, 'n03J', - 15424.9, - 21634.4, 15.821, 'n03J')
+    set u=BlzCreateUnitWithSkin(p, 'n01W', - 28352.1, - 21268.2, 96.760, 'n01W')
+    set u=BlzCreateUnitWithSkin(p, 'n01W', - 27964.8, - 22073.9, 96.760, 'n01W')
+    set u=BlzCreateUnitWithSkin(p, 'n01W', - 29056.8, - 22893.6, 96.760, 'n01W')
+    set u=BlzCreateUnitWithSkin(p, 'n01W', - 29499.5, - 21654.9, 96.760, 'n01W')
     set u=BlzCreateUnitWithSkin(p, 'hfoo', - 1652.7, - 27605.8, 153.374, 'hfoo')
+    set u=BlzCreateUnitWithSkin(p, 'n01W', - 26919.5, - 23156.0, 96.760, 'n01W')
+    set u=BlzCreateUnitWithSkin(p, 'n01W', - 27253.2, - 22354.7, 96.760, 'n01W')
+    set u=BlzCreateUnitWithSkin(p, 'n01X', - 26629.5, - 21704.0, 30.400, 'n01X')
     set u=BlzCreateUnitWithSkin(p, 'n03E', - 14728.0, - 21476.9, 187.283, 'n03E')
     set u=BlzCreateUnitWithSkin(p, 'n03J', - 14809.0, - 21629.9, 163.182, 'n03J')
     set u=BlzCreateUnitWithSkin(p, 'n03J', - 14791.2, - 21313.1, 208.638, 'n03J')
@@ -5732,7 +5739,6 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n01W', - 28711.6, - 21890.9, 96.760, 'n01W')
     set u=BlzCreateUnitWithSkin(p, 'n01W', - 29139.1, - 20987.4, 96.760, 'n01W')
     set u=BlzCreateUnitWithSkin(p, 'n01W', - 28536.2, - 23022.2, 96.760, 'n01W')
-    set u=BlzCreateUnitWithSkin(p, 'n01W', - 26289.8, - 23633.2, 96.760, 'n01W')
     set u=BlzCreateUnitWithSkin(p, 'n01X', - 27430.6, - 21836.2, 334.500, 'n01X')
     set u=BlzCreateUnitWithSkin(p, 'n01X', - 26142.4, - 21819.5, 67.689, 'n01X')
     set u=BlzCreateUnitWithSkin(p, 'n01X', - 26088.6, - 21269.9, 338.279, 'n01X')
@@ -5751,7 +5757,6 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n03E', - 14845.1, - 21168.3, 230.272, 'n03E')
     set u=BlzCreateUnitWithSkin(p, 'n03E', - 15095.4, - 21097.6, 287.640, 'n03E')
     set u=BlzCreateUnitWithSkin(p, 'n01X', - 27618.2, - 21104.9, 109.878, 'n01X')
-    set u=BlzCreateUnitWithSkin(p, 'n01X', - 26744.4, - 21403.8, 30.400, 'n01X')
 endfunction
 
 //===========================================================================
@@ -7347,7 +7352,7 @@ endfunction
 
 
 function Trig_StolicaTime_Func001Func001Func001Func016001001002 takes nothing returns boolean
-    return GetUnitAbilityLevelSwapped('A0IQ', GetFilterUnit()) != 0
+    return GetUnitAbilityLevel(GetFilterUnit(), 'A0IQ') != 0
 endfunction
 
 function Trig_StolicaTime_Func001Func001Func002001001002 takes nothing returns boolean
@@ -7356,13 +7361,13 @@ endfunction
 
 function Trig_StolicaTime_Func001A takes nothing returns nothing
     local unit u
-    local group g
-    set g=GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func002001001002))
-    if CountUnitsInGroup(g) >= 1 then
+    local group g= CreateGroup()
+    call GroupEnumUnitsOfPlayer(g, GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func002001001002))
+    if FirstOfGroup(g) != null then
     else
         call GroupClear(g)
-        set g=GetUnitsOfPlayerMatching(GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func016001001002))
-        if CountUnitsInGroup(g) != 0 then
+        call GroupEnumUnitsOfPlayer(g, GetEnumPlayer(), Condition(function Trig_StolicaTime_Func001Func001Func001Func016001001002))
+        if FirstOfGroup(g) != null then
             set u=GroupPickRandomUnit(g)
             call SetPlayerAbilityAvailableBJ(false, 'A0IQ', GetEnumPlayer())
             call BlzSetUnitMaxHP(u, 10000)
@@ -7380,7 +7385,6 @@ function Trig_StolicaTime_Func001A takes nothing returns nothing
         else
             if GetPlayerSlotState(GetEnumPlayer()) == PLAYER_SLOT_STATE_PLAYING then
                 call DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetEnumPlayer()) + " - |cffff0000проиграл|r, его |cffd45e19столица |r не построена ко времени. :(" ))
-            else
             endif
             
             call ClearPlayer(GetEnumPlayer())
@@ -7395,6 +7399,7 @@ endfunction
 
 function Trig_StolicaTime_Actions takes nothing returns nothing
     call ForForce(udg_AllPlayers, function Trig_StolicaTime_Func001A)
+    call DisplayTextToPlayer(Player(0), 0, 0, "Тестирование: поток не отрубился")
 endfunction
 
 //===========================================================================

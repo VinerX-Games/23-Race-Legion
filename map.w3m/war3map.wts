@@ -55635,6 +55635,12 @@ STRING 9222
 |cffd45e19Демоны
 }
 
+STRING 9223
+// Abilities: A079 (|cff64c800Критический Выстрел|r), Ubertip (Tooltip - Normal - Extended)
+{
+Дает <A079,DataA4>%-й шанс нанести <A079,DataB4>-кратный урон при атаке.
+}
+
 STRING 9224
 // Abilities: A0W0 (Порождение щупальца), EditorSuffix (Editor Suffix)
 {
@@ -79417,12 +79423,6 @@ STRING 13147
 // Abilities: A05I (|cff64c800Меткий Выстрел|r), Ubertip (Tooltip - Normal - Extended)
 {
 Стреляет, оглушая врага на , героя (0.8), солдата (5) сек. и нанося 400 урона.
-}
-
-STRING 13148
-// Abilities: A079 (|cff64c800Критический Выстрел|r), Ubertip (Tooltip - Normal - Extended)
-{
-Дает <AOcr,DataA4>%-й шанс нанести 2-кратный урон при атаке.
 }
 
 STRING 13149
@@ -126354,6 +126354,12 @@ STRING 20856
 // Items: I01R (Знак К'Туна), Name (Name)
 {
 Знак К'Туна
+}
+
+STRING 20857
+// Abilities: A079 (|cff64c800Критический Выстрел|r), Ubertip (Tooltip - Normal - Extended)
+{
+Дает <A079,DataA1>%-й шанс нанести <A079,DataB1>-кратный урон при атаке.
 }
 
 STRING 20858
@@ -185052,6 +185058,18 @@ STRING 30446
 // Upgrades: R0GW (Сила Луны,Мощь Луны,Могущество Луны), Hotkey (Hotkey)
 {
 X
+}
+
+STRING 30447
+// Abilities: A079 (|cff64c800Критический Выстрел|r), Ubertip (Tooltip - Normal - Extended)
+{
+Дает <A079,DataA2>%-й шанс нанести <A079,DataB2>-кратный урон при атаке.
+}
+
+STRING 30448
+// Abilities: A079 (|cff64c800Критический Выстрел|r), Ubertip (Tooltip - Normal - Extended)
+{
+Дает <A079,DataA3>%-й шанс нанести <A079,DataB3>-кратный урон при атаке.
 }
 
 STRING 30456
