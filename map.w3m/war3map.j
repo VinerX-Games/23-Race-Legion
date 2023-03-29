@@ -572,6 +572,7 @@ globals
     trigger                 gg_trg_Nord_2              = null
     trigger                 gg_trg_Nord_4              = null
     trigger                 gg_trg_Nord_5              = null
+    trigger                 gg_trg_HrenPoimiHareUdaliatPortalu = null
     trigger                 gg_trg_QtunOut             = null
     trigger                 gg_trg_QtunOut2            = null
     trigger                 gg_trg_QtunIn              = null
@@ -1420,8 +1421,13 @@ globals
     trigger                 gg_trg_SecondChance        = null
     trigger                 gg_trg_GG                  = null
     trigger                 gg_trg_Observer            = null
+    trigger                 gg_trg_ObserverOff         = null
     trigger                 gg_trg_ArchontMode         = null
     trigger                 gg_trg_ArchontModeOff      = null
+    trigger                 gg_trg_ForSoldUnitsSelect  = null
+    trigger                 gg_trg_ForSoldUnitsDesel   = null
+    trigger                 gg_trg_InitGlobals         = null
+    trigger                 gg_trg_ForSoldUnitsDeselect = null
     trigger                 gg_trg_Subsidies           = null
     trigger                 gg_trg_Red_color           = null
     trigger                 gg_trg_Blue_color          = null
@@ -1564,6 +1570,7 @@ globals
     unit                    gg_unit_n003_0941          = null
     unit                    gg_unit_n003_0942          = null
     unit                    gg_unit_n003_0943          = null
+    unit                    gg_unit_n003_0995          = null
     unit                    gg_unit_h0E2_0011          = null
     unit                    gg_unit_n006_0023          = null
     unit                    gg_unit_h08G_0419          = null
@@ -1597,13 +1604,6 @@ globals
     unit                    gg_unit_n003_0117          = null
     unit                    gg_unit_h093_0091          = null
     unit                    gg_unit_h09V_0137          = null
-    trigger                 gg_trg_ObserverOff         = null
-    trigger                 gg_trg_HrenPoimiHareUdaliatPortalu = null
-    unit                    gg_unit_n003_0995          = null
-    trigger                 gg_trg_ForSoldUnitsSelect  = null
-    trigger                 gg_trg_ForSoldUnitsDeselect = null
-    trigger                 gg_trg_ForSoldUnitsDesel   = null
-    trigger                 gg_trg_InitGlobals         = null
 endglobals
 
 function InitGlobals takes nothing returns nothing
@@ -5342,6 +5342,7 @@ function CreateUnitsForPlayer0 takes nothing returns nothing
     set u = BlzCreateUnitWithSkin( p, 'o044', -6056.5, -30421.7, 269.448, 'o044' )
     set u = BlzCreateUnitWithSkin( p, 'o042', -6234.2, -29119.9, 262.170, 'o042' )
     set u = BlzCreateUnitWithSkin( p, 'o043', -5836.0, -29164.5, 280.087, 'o043' )
+    set u = BlzCreateUnitWithSkin( p, 'h0MH', -1056.6, -25708.3, -80.259, 'h0MH' )
     set u = BlzCreateUnitWithSkin( p, 'h0KJ', -5975.3, -30278.8, 271.240, 'h0KJ' )
     set u = BlzCreateUnitWithSkin( p, 'h0KG', -5756.4, -29055.7, 270.690, 'h0KG' )
     set u = BlzCreateUnitWithSkin( p, 'hmtt', -6034.3, -30037.9, 264.510, 'hmtt' )
