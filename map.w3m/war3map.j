@@ -4,12 +4,12 @@ constant boolean LIBRARY_A1=true
 //endglobals from A1
 //globals from SpellSleepAOE:
 constant boolean LIBRARY_SpellSleepAOE=true
-constant integer SpellSleepAOE__SpellHero='A06P'
-constant integer SpellSleepAOE__SpellCast='A06O'
-constant string SpellSleepAOE__SpellOrder="sleep"
-constant integer SpellSleepAOE__DummyID='u000'
-constant player SpellSleepAOE__DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
-unit SpellSleepAOE__DummyUnit
+constant integer SpellSleepAOE___SpellHero='A06P'
+constant integer SpellSleepAOE___SpellCast='A06O'
+constant string SpellSleepAOE___SpellOrder="sleep"
+constant integer SpellSleepAOE___DummyID='u000'
+constant player SpellSleepAOE___DummyOwner=Player(PLAYER_NEUTRAL_PASSIVE)
+unit SpellSleepAOE___DummyUnit
 //endglobals from SpellSleepAOE
     // User-defined
 integer array udg_Income
@@ -483,7 +483,6 @@ trigger gg_trg_Globals= null
 trigger gg_trg_StartN= null
 trigger gg_trg_StartTable= null
 trigger gg_trg_StartTableCode= null
-trigger gg_trg_Name_command_O= null
 trigger gg_trg_EnterT= null
 trigger gg_trg_DieT= null
 trigger gg_trg_DieT_C= null
@@ -661,6 +660,7 @@ trigger gg_trg_F2_Map= null
 trigger gg_trg_ToKill2= null
 trigger gg_trg_Emerald_Dream_TP_O= null
 trigger gg_trg_Emerald_Dream_TP_OFF_O= null
+trigger gg_trg_MageTPSell= null
 trigger gg_trg_TrainHeroGiveItem= null
 trigger gg_trg_LimitHero_Exep= null
 trigger gg_trg_Hero_Limits_General_Copy= null
@@ -1207,7 +1207,8 @@ trigger gg_trg_MurlokBeg= null
 trigger gg_trg_MurlocFin= null
 trigger gg_trg_Nagi= null
 trigger gg_trg_Nagi2= null
-trigger gg_trg_Buria= null
+trigger gg_trg_NagaFinish= null
+trigger gg_trg_VaishBuria= null
 trigger gg_trg_VaishArrow= null
 trigger gg_trg_NagaPas= null
 trigger gg_trg_StartHorde_Copy_2= null
@@ -1414,6 +1415,8 @@ trigger gg_trg_Rep= null
 trigger gg_trg_StolicaKill= null
 trigger gg_trg_Del= null
 trigger gg_trg_Camera_command_O= null
+trigger gg_trg_Name_command_O= null
+trigger gg_trg_UName_command= null
 trigger gg_trg_SecondChance= null
 trigger gg_trg_GG= null
 trigger gg_trg_Observer= null
@@ -1600,6 +1603,7 @@ unit gg_unit_h09W_0236= null
 unit gg_unit_n003_0117= null
 unit gg_unit_h093_0091= null
 unit gg_unit_h09V_0137= null
+trigger gg_trg_Untitled_Trigger_001= null
 framehandle face= null
 framehandle faceHover= null
 framehandle tooltip= null
@@ -1733,6 +1737,7 @@ integer array OwnGold
 integer array OwnLumber
 integer array GoldDifference
 integer array LumberDifference
+boolean array NotOwnRes
 
 trigger l__library_init
 
@@ -1755,7 +1760,7 @@ endfunction
 //library A1 ends
 //library SpellSleepAOE:
 
-    function SpellSleepAOE__getRange takes integer level returns integer
+    function SpellSleepAOE___getRange takes integer level returns integer
         local integer array range
         set range[1]=185 // 2 уровень
         set range[2]=275 // 3 уровень
@@ -1763,33 +1768,33 @@ endfunction
         set range[4]=430
         return range[level]
     endfunction
-    function SpellSleepAOE__DummyCastBuff takes unit caster,unit target returns nothing
+    function SpellSleepAOE___DummyCastBuff takes unit caster,unit target returns nothing
         if ( GetUnitState(target, UNIT_STATE_LIFE) > 0.405 ) then
-            call SetUnitX(SpellSleepAOE__DummyUnit, GetUnitX(target))
-            call SetUnitY(SpellSleepAOE__DummyUnit, GetUnitY(target))
-            call SetUnitAbilityLevel(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE__SpellHero))
-            call IssueTargetOrder(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellOrder, target)
+            call SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
+            call SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
+            call SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
+            call IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
         endif
     endfunction
-        function SpellSleepAOE__anon__0 takes nothing returns boolean
-            return SpellSleepAOE__SpellHero == GetSpellAbilityId()
+        function SpellSleepAOE___anon__0 takes nothing returns boolean
+            return SpellSleepAOE___SpellHero == GetSpellAbilityId()
         endfunction
-            function SpellSleepAOE__anon__2 takes nothing returns boolean
+            function SpellSleepAOE___anon__2 takes nothing returns boolean
                 return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and not ( IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit())) ) and not ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) )
             endfunction
-        function SpellSleepAOE__anon__1 takes nothing returns nothing
+        function SpellSleepAOE___anon__1 takes nothing returns nothing
             local location loc=GetSpellTargetLoc()
             local real x=GetLocationX(loc)
             local real y=GetLocationY(loc)
             local group g=CreateGroup()
             local unit u
-            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE__getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE__SpellHero))), Condition(function SpellSleepAOE__anon__2))
+            call GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(function SpellSleepAOE___anon__2))
             loop
                 set u=FirstOfGroup(g)
                 if ( u == null ) then
                     exitwhen true
                 endif
-                call SpellSleepAOE__DummyCastBuff(GetTriggerUnit() , u)
+                call SpellSleepAOE___DummyCastBuff(GetTriggerUnit() , u)
                 call GroupRemoveUnit(g, u)
             endloop
             call RemoveLocation(loc)
@@ -1797,19 +1802,19 @@ endfunction
             set loc=null
             set g=null
         endfunction
-    function SpellSleepAOE__onInit takes nothing returns nothing
+    function SpellSleepAOE___onInit takes nothing returns nothing
         local trigger t=CreateTrigger()
         local integer i
-        set SpellSleepAOE__DummyUnit=CreateUnit(SpellSleepAOE__DummyOwner, SpellSleepAOE__DummyID, 0, 0, 0)
-        call UnitAddAbility(SpellSleepAOE__DummyUnit, SpellSleepAOE__SpellCast)
+        set SpellSleepAOE___DummyUnit=CreateUnit(SpellSleepAOE___DummyOwner, SpellSleepAOE___DummyID, 0, 0, 0)
+        call UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
         set i=0
         loop
         exitwhen ( i >= bj_MAX_PLAYER_SLOTS )
             call TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, null)
         set i=i + 1
         endloop
-        call TriggerAddCondition(t, Condition(function SpellSleepAOE__anon__0))
-        call TriggerAddAction(t, function SpellSleepAOE__anon__1)
+        call TriggerAddCondition(t, Condition(function SpellSleepAOE___anon__0))
+        call TriggerAddAction(t, function SpellSleepAOE___anon__1)
         set t=null
     endfunction
 
@@ -2600,7 +2605,7 @@ function UISetup takes nothing returns nothing
 endfunction
 
 // scope init begins
-function init___Init takes nothing returns nothing
+function init__Init takes nothing returns nothing
 	call UISetup()
 endfunction
 // scope init ends
@@ -2642,7 +2647,7 @@ call BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 endfunction
 
 // scope init2 begins
-function init2___Init takes nothing returns nothing
+function init2__Init takes nothing returns nothing
     call Face2()
 endfunction
 // scope init2 ends
@@ -11687,57 +11692,6 @@ endfunction
 
 
 //===========================================================================
-// Trigger: Name command O
-//===========================================================================
-function Trig_Name_command_O_Conditions takes nothing returns boolean
-    if ( not ( SubStringBJ(GetEventPlayerChatString(), 1, 6) == "-name " ) ) then
-        return false
-    endif
-    return true
-endfunction
-
-function Trig_Name_command_O_Actions takes nothing returns nothing
-    local integer i= GetPlayerId(GetTriggerPlayer())
-    set udg_LocalText2=GetEventPlayerChatString()
-    set udg_LocalText2=SubStringBJ(udg_LocalText2, 7, 50)
-    call SetPlayerName(GetTriggerPlayer(), udg_LocalText2)
-    set udg_LocalText2=( ( I2S(GetConvertedPlayerId(GetTriggerPlayer())) + ". " ) + udg_LocalText2 )
-    call MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 0], udg_LocalText2)
-    set i=0
-endfunction
-
-//===========================================================================
-function InitTrig_Name_command_O takes nothing returns nothing
-    set gg_trg_Name_command_O=CreateTrigger()
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(0), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(1), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(2), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(3), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(4), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(5), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(6), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(7), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(8), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(9), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(10), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(11), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(12), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(13), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(14), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(15), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(16), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(17), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(18), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(20), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(19), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(21), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(22), "-name ", false)
-    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(23), "-name ", false)
-    call TriggerAddCondition(gg_trg_Name_command_O, Condition(function Trig_Name_command_O_Conditions))
-    call TriggerAddAction(gg_trg_Name_command_O, function Trig_Name_command_O_Actions)
-endfunction
-
-//===========================================================================
 // Trigger: DieT C
 //===========================================================================
 function Trig_DieT_C_Conditions takes nothing returns boolean
@@ -19892,6 +19846,65 @@ function InitTrig_Emerald_Dream_TP_OFF_O takes nothing returns nothing
     call TriggerRegisterLeaveRectSimple(gg_trg_Emerald_Dream_TP_OFF_O, gg_rct_EmeraldDream)
     call TriggerAddAction(gg_trg_Emerald_Dream_TP_OFF_O, function Trig_Emerald_Dream_TP_OFF_O_Actions)
 endfunction
+
+//===========================================================================
+// Trigger: MageTPSell
+//===========================================================================
+function Trig_MageTPSell_Conditions takes nothing returns boolean
+    return GetUnitTypeId(GetTriggerUnit()) == 'h07A'
+endfunction
+
+function Trig_EntSell_Copy_Func002Func001C takes nothing returns boolean
+    if ( not ( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_EntSell_Copy_Func002Func002C takes nothing returns boolean
+    if ( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) ) then
+        return true
+    endif
+    if ( ( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ) ) then
+        return true
+    endif
+    return false
+endfunction
+
+function Trig_EntSell_Copy_Func002C takes nothing returns boolean
+    if ( not Trig_EntSell_Copy_Func002Func002C() ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_MageTPSell_Actions takes nothing returns nothing
+    local integer pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    if ( Trig_EntSell_Copy_Func002C() ) then
+        if ( Trig_EntSell_Copy_Func002Func001C() ) then
+            call SetUnitOwner(GetSoldUnit(), GetOwningPlayer(GetTriggerUnit()), true)
+            call DelCountDis(GetSoldUnit() , GetPlayerId(GetOwningPlayer(GetSoldUnit())))
+            set GoldDifference[pi]=GoldDifference[pi] - GetUnitGoldCost(GetUnitTypeId(GetSoldUnit()))
+            set LumberDifference[pi]=LumberDifference[pi] - GetUnitWoodCost(GetUnitTypeId(GetSoldUnit()))
+        else
+        endif
+        set udg_LocalPosition2=GetUnitRallyPoint(GetTriggerUnit())
+        call IssuePointOrderLocBJ(GetSoldUnit(), "move", udg_LocalPosition2)
+        call RemoveLocation(udg_LocalPosition2)
+    else
+        call RemoveUnit(GetSoldUnit())
+        call DelCountDis(GetSoldUnit() , GetPlayerId(GetOwningPlayer(GetSoldUnit())))
+    endif
+endfunction
+
+//===========================================================================
+function InitTrig_MageTPSell takes nothing returns nothing
+    set gg_trg_MageTPSell=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_MageTPSell, EVENT_PLAYER_UNIT_SELL)
+    call TriggerAddCondition(gg_trg_MageTPSell, Condition(function Trig_MageTPSell_Conditions))
+    call TriggerAddAction(gg_trg_MageTPSell, function Trig_MageTPSell_Actions)
+endfunction
+
 
 //===========================================================================
 // Trigger: TrainHeroGiveItem
@@ -38813,32 +38826,52 @@ endfunction
 // Trigger: Edvin Ult
 //===========================================================================
 function Trig_Edvin_Ult_Conditions takes nothing returns boolean
-    if ( not ( GetSpellAbilityId() == 'A0N4' ) ) then
-        return false
-    endif
-    return true
+    return GetSpellAbilityId() == 'A0N4'
 endfunction
 
-function Trig_Edvin_Ult_Func003A takes nothing returns nothing
-    set udg_LocalPosition[15]=GetUnitLoc(GetEnumUnit())
-    call SetUnitPositionLocFacingLocBJ(GetTriggerUnit(), udg_LocalPosition[15], udg_LocalPosition[15])
-    call AddSpecialEffectLocBJ(udg_LocalPosition[15], "Objects\\Spawnmodels\\Human\\HumanBlood\\HumanBloodLarge1.mdl")
-    call RemoveLocation(udg_LocalPosition[15])
-    call UnitDamageTargetBJ(GetTriggerUnit(), GetEnumUnit(), 350.00, ATTACK_TYPE_MELEE, DAMAGE_TYPE_NORMAL)
-    call DestroyEffectBJ(GetLastCreatedEffectBJ())
-    call TriggerSleepAction(0.10)
-endfunction
 
 function Trig_Edvin_Ult_Actions takes nothing returns nothing
-    set udg_LocalOtrad=GetUnitsInRangeOfLocAll(200.00, GetSpellTargetLoc())
-    set udg_LocalPosition[14]=GetUnitLoc(GetTriggerUnit())
-    call ForGroupBJ(GetRandomSubGroup(16, udg_LocalOtrad), function Trig_Edvin_Ult_Func003A)
-    call GroupClear(udg_LocalOtrad)
-    call RemoveLocation(udg_LocalPosition[14])
-    call UnitAddAbilityBJ('A0N5', GetTriggerUnit())
-    call BlzUnitDisableAbility(GetTriggerUnit(), 'A0N1', true, true)
-    call IssueImmediateOrderBJ(GetTriggerUnit(), "windwalk")
-    call BlzUnitDisableAbility(GetTriggerUnit(), 'A0N1', false, false)
+    local unit u= GetTriggerUnit()
+    local unit u2
+    local group g= CreateGroup()
+    local effect e
+    call GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 200.00, null)
+    
+    
+    
+    loop
+        set u2=FirstOfGroup(g)
+        exitwhen u2 == null
+        
+        if GetOwningPlayer(u2) != GetOwningPlayer(u) then
+            
+            call SetUnitX(u, GetUnitX(u2))
+            call SetUnitX(u, GetUnitX(u2))
+            set e=AddSpecialEffect("Objects\\Spawnmodels\\Human\\HumanBlood\\HumanBloodLarge1.mdl", GetUnitX(u2), GetUnitY(u2))
+            call UnitDamageTargetBJ(u, u2, 300 * GetUnitAbilityLevel(u, 'A0N4'), ATTACK_TYPE_MELEE, DAMAGE_TYPE_NORMAL)
+                 
+            
+            call TriggerSleepAction(0.10)
+            call DestroyEffect(e)
+        endif
+        
+        call GroupRemoveUnit(g, u2)
+    endloop
+    
+    
+    
+    
+    call UnitAddAbility(u, 'A0N5')
+    call BlzUnitDisableAbility(u, 'A0N1', true, true)
+    call IssueImmediateOrder(u, "windwalk")
+    call BlzUnitDisableAbility(u, 'A0N1', false, false)
+    
+    
+    call DestroyGroup(g)
+    set g=null
+    set u=null
+    set u2=null
+    set e=null
 endfunction
 
 //===========================================================================
@@ -38849,6 +38882,7 @@ function InitTrig_Edvin_Ult takes nothing returns nothing
     call TriggerAddCondition(gg_trg_Edvin_Ult, Condition(function Trig_Edvin_Ult_Conditions))
     call TriggerAddAction(gg_trg_Edvin_Ult, function Trig_Edvin_Ult_Actions)
 endfunction
+
 
 //===========================================================================
 // Trigger: Del1FromTable C
@@ -40166,20 +40200,45 @@ endfunction
 //===========================================================================
 function InitTrig_Nagi2 takes nothing returns nothing
     set gg_trg_Nagi2=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi2, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
     call TriggerRegisterAnyUnitEventBJ(gg_trg_Nagi2, EVENT_PLAYER_UNIT_RESEARCH_START)
     call TriggerAddCondition(gg_trg_Nagi2, Condition(function Trig_Nagi2_Conditions))
     call TriggerAddAction(gg_trg_Nagi2, function Trig_Nagi2_Actions)
 endfunction
 
 //===========================================================================
-// Trigger: Buria
+// Trigger: NagaFinish
 //===========================================================================
-function Trig_Buria_Conditions takes nothing returns boolean
+function Trig_NagaFinish_Conditions takes nothing returns boolean
+    if ( not ( GetResearched() == 'R0FE' ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_NagaFinish_Actions takes nothing returns nothing
+    call SetPlayerTechMaxAllowedSwap('n051', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('n057', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('nnsw', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('nmyr', 0, GetOwningPlayer(GetTriggerUnit()))
+    call SetPlayerTechMaxAllowedSwap('nnrg', 0, GetOwningPlayer(GetTriggerUnit()))
+endfunction
+
+//===========================================================================
+function InitTrig_NagaFinish takes nothing returns nothing
+    set gg_trg_NagaFinish=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_NagaFinish, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    call TriggerAddCondition(gg_trg_NagaFinish, Condition(function Trig_NagaFinish_Conditions))
+    call TriggerAddAction(gg_trg_NagaFinish, function Trig_NagaFinish_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: VaishBuria
+//===========================================================================
+function Trig_VaishBuria_Conditions takes nothing returns boolean
     return GetSpellAbilityId() == 'A16E'
 endfunction
 
-function Trig_Buria_Actions takes nothing returns nothing
+function Trig_VaishBuria_Actions takes nothing returns nothing
     local location loc= GetSpellTargetLoc()
     local unit u2= CreateUnitAtLoc(GetOwningPlayer(GetTriggerUnit()), 'ntor', loc, bj_UNIT_FACING)
     call UnitApplyTimedLife(u2, 'BTLF', 30.00)
@@ -40189,11 +40248,11 @@ function Trig_Buria_Actions takes nothing returns nothing
 endfunction
 
 //===========================================================================
-function InitTrig_Buria takes nothing returns nothing
-    set gg_trg_Buria=CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(gg_trg_Buria, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    call TriggerAddCondition(gg_trg_Buria, Condition(function Trig_Buria_Conditions))
-    call TriggerAddAction(gg_trg_Buria, function Trig_Buria_Actions)
+function InitTrig_VaishBuria takes nothing returns nothing
+    set gg_trg_VaishBuria=CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(gg_trg_VaishBuria, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(gg_trg_VaishBuria, Condition(function Trig_VaishBuria_Conditions))
+    call TriggerAddAction(gg_trg_VaishBuria, function Trig_VaishBuria_Actions)
 endfunction
 
 
@@ -46550,6 +46609,111 @@ function InitTrig_Camera_command_O takes nothing returns nothing
 endfunction
 
 //===========================================================================
+// Trigger: Name command O
+//===========================================================================
+function Trig_Name_command_O_Conditions takes nothing returns boolean
+    if ( not ( SubStringBJ(GetEventPlayerChatString(), 1, 6) == "-name " ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_Name_command_O_Actions takes nothing returns nothing
+    local integer i= GetPlayerId(GetTriggerPlayer())
+    set udg_LocalText2=GetEventPlayerChatString()
+    set udg_LocalText2=SubStringBJ(udg_LocalText2, 7, 50)
+    call SetPlayerName(GetTriggerPlayer(), udg_LocalText2)
+    set udg_LocalText2=( ( I2S(GetConvertedPlayerId(GetTriggerPlayer())) + ". " ) + udg_LocalText2 )
+    call MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 0], udg_LocalText2)
+    set i=0
+endfunction
+
+//===========================================================================
+function InitTrig_Name_command_O takes nothing returns nothing
+    set gg_trg_Name_command_O=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(0), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(1), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(2), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(3), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(4), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(5), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(6), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(7), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(8), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(9), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(10), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(11), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(12), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(13), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(14), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(15), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(16), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(17), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(18), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(20), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(19), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(21), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(22), "-name ", false)
+    call TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(23), "-name ", false)
+    call TriggerAddCondition(gg_trg_Name_command_O, Condition(function Trig_Name_command_O_Conditions))
+    call TriggerAddAction(gg_trg_Name_command_O, function Trig_Name_command_O_Actions)
+endfunction
+
+//===========================================================================
+// Trigger: UName command
+//===========================================================================
+function Trig_UName_command_Conditions takes nothing returns boolean
+    if ( not ( SubStringBJ(GetEventPlayerChatString(), 1, 7) == "-uname " ) ) then
+        return false
+    endif
+    return true
+endfunction
+
+function Trig_UName_command_Actions takes nothing returns nothing
+    local integer i= GetPlayerId(GetTriggerPlayer())
+    local unit u
+    local group g= CreateGroup()
+    set udg_LocalText2=GetEventPlayerChatString()
+    set udg_LocalText2=SubStringBJ(udg_LocalText2, 7, 50)
+    
+    call SyncSelections()
+    call GroupEnumUnitsSelected(g, GetTriggerPlayer(), null)
+    loop
+        set u=FirstOfGroup(g)
+        exitwhen u == null
+        call BlzSetUnitName(u, udg_LocalText2)
+        
+        call GroupRemoveUnit(g, u)
+    
+    endloop
+    
+    
+    
+    call DestroyGroup(g)
+    set g=null
+    set u=null
+endfunction
+
+//===========================================================================
+function InitTrig_UName_command takes nothing returns nothing
+    local integer i= 0
+    set gg_trg_UName_command=CreateTrigger()
+    
+    loop
+        exitwhen i > 23
+        call TriggerRegisterPlayerChatEvent(gg_trg_UName_command, Player(i), "-uname ", false)
+    
+        
+        
+        
+        set i=i + 1
+    endloop
+    call TriggerAddCondition(gg_trg_UName_command, Condition(function Trig_UName_command_Conditions))
+    call TriggerAddAction(gg_trg_UName_command, function Trig_UName_command_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: SecondChance
 //===========================================================================
 function Trig_SecondChance_Func003Func007001002 takes nothing returns boolean
@@ -46778,6 +46942,24 @@ endfunction
 
 
 //===========================================================================
+// Trigger: Untitled Trigger 001
+//===========================================================================
+function Trig_Untitled_Trigger_001_Actions takes nothing returns nothing
+    call MultiboardDisplayBJ(false, GetLastCreatedMultiboard())
+    call MultiboardDisplayBJ(true, Multiboard)
+    call TriggerSleepAction(7)
+    call MultiboardDisplayBJ(true, GetLastCreatedMultiboard())
+endfunction
+
+//===========================================================================
+function InitTrig_Untitled_Trigger_001 takes nothing returns nothing
+    set gg_trg_Untitled_Trigger_001=CreateTrigger()
+    call TriggerRegisterPlayerChatEvent(gg_trg_Untitled_Trigger_001, Player(0), "A3", true)
+    call TriggerAddAction(gg_trg_Untitled_Trigger_001, function Trig_Untitled_Trigger_001_Actions)
+endfunction
+
+
+//===========================================================================
 // Trigger: ArchontModeOff
 //===========================================================================
 
@@ -46824,19 +47006,21 @@ function Trig_ForSoldUnitsSelect_Actions takes nothing returns nothing
     local player mainplayer= GetOwningPlayer(GetTriggerUnit())
     local player general= GetTriggerPlayer()
     local integer pi= GetPlayerId(general)
-    
+    set NotOwnRes[pi]=true
     set OwnGold[pi]=GetPlayerState(general, PLAYER_STATE_RESOURCE_GOLD)
-    set OwnLumber[pi]=GetPlayerState(general, PLAYER_STATE_RESOURCE_GOLD)
+    set OwnLumber[pi]=GetPlayerState(general, PLAYER_STATE_RESOURCE_LUMBER)
     call SetPlayerStateBJ(general, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(mainplayer, PLAYER_STATE_RESOURCE_GOLD))
     call SetPlayerStateBJ(general, PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(mainplayer, PLAYER_STATE_RESOURCE_LUMBER))
+    
+    
+    set mainplayer=null
+    set general=null
 endfunction
 
 //===========================================================================
 function InitTrig_ForSoldUnitsSelect takes nothing returns nothing
     local integer i= 0
     set gg_trg_ForSoldUnitsSelect=CreateTrigger()
-    
-    call TriggerAddCondition(gg_trg_ForSoldUnitsSelect, Condition(function Trig_ForSoldUnitsSelect_Conditions))
     
     
     
@@ -46851,6 +47035,8 @@ function InitTrig_ForSoldUnitsSelect takes nothing returns nothing
     
     
     
+    call TriggerAddCondition(gg_trg_ForSoldUnitsSelect, Condition(function Trig_ForSoldUnitsSelect_Conditions))
+      
     call TriggerAddAction(gg_trg_ForSoldUnitsSelect, function Trig_ForSoldUnitsSelect_Actions)
 endfunction
 
@@ -46868,16 +47054,21 @@ function Trig_ForSoldUnitsDesel_Actions takes nothing returns nothing
     local player general= GetTriggerPlayer()
     local integer pi= GetPlayerId(general)
    
-    call SetPlayerStateBJ(general, PLAYER_STATE_RESOURCE_GOLD, OwnGold[pi])
-    call SetPlayerStateBJ(general, PLAYER_STATE_RESOURCE_LUMBER, OwnLumber[pi])
+    if NotOwnRes[pi] then
+        call SetPlayerStateBJ(general, PLAYER_STATE_RESOURCE_GOLD, OwnGold[pi])
+        call SetPlayerStateBJ(general, PLAYER_STATE_RESOURCE_LUMBER, OwnLumber[pi])
+        
+        
+        //Что там
+        
+        call SetPlayerStateBJ(mainplayer, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(mainplayer, PLAYER_STATE_RESOURCE_GOLD) + GoldDifference[pi])
+        call SetPlayerStateBJ(mainplayer, PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(mainplayer, PLAYER_STATE_RESOURCE_LUMBER) + LumberDifference[pi])
+        set GoldDifference[pi]=0
+        set LumberDifference[pi]=0
+    endif
     
-    
-    //Что там
-    
-    call SetPlayerStateBJ(mainplayer, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(mainplayer, PLAYER_STATE_RESOURCE_GOLD) + GoldDifference[pi])
-    call SetPlayerStateBJ(mainplayer, PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(mainplayer, PLAYER_STATE_RESOURCE_LUMBER) + LumberDifference[pi])
-    set GoldDifference[pi]=0
-    set LumberDifference[pi]=0
+    set mainplayer=null
+    set general=null
 endfunction
 
 //===========================================================================
@@ -46905,11 +47096,13 @@ endfunction
 function Trig_InitGlobals_Actions takes nothing returns nothing
     local integer i= 0
     loop
+        exitwhen i > 23
         set OwnGold[i]=0
         set OwnLumber[i]=0
         set GoldDifference[i]=0
         set LumberDifference[i]=0
-        exitwhen i > 23
+        set NotOwnRes[i]=false
+        
         
         set i=i + 1
     endloop
@@ -48839,7 +49032,6 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Globals()
     call InitTrig_StartN()
     call InitTrig_StartTableCode()
-    call InitTrig_Name_command_O()
     call InitTrig_DieT_C()
     call InitTrig_UnitsToBuildingSituation2()
     call InitTrig_CanselSituation2()
@@ -48983,6 +49175,7 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_ToKill2()
     call InitTrig_Emerald_Dream_TP_O()
     call InitTrig_Emerald_Dream_TP_OFF_O()
+    call InitTrig_MageTPSell()
     call InitTrig_TrainHeroGiveItem()
     call InitTrig_LimitHero_Exep()
     call InitTrig_Hero_Limits_General_Copy()
@@ -49494,7 +49687,8 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_MurlocFin()
     call InitTrig_Nagi()
     call InitTrig_Nagi2()
-    call InitTrig_Buria()
+    call InitTrig_NagaFinish()
+    call InitTrig_VaishBuria()
     call InitTrig_VaishArrow()
     call InitTrig_NagaPas()
     call InitTrig_StartHorde_Copy_2()
@@ -49680,11 +49874,14 @@ function InitCustomTriggers takes nothing returns nothing
     call InitTrig_Rep()
     call InitTrig_StolicaKill()
     call InitTrig_Camera_command_O()
+    call InitTrig_Name_command_O()
+    call InitTrig_UName_command()
     call InitTrig_SecondChance()
     call InitTrig_GG()
     call InitTrig_Observer()
     call InitTrig_ObserverOff()
     call InitTrig_ArchontMode()
+    call InitTrig_Untitled_Trigger_001()
     call InitTrig_ArchontModeOff()
     call InitTrig_ForSoldUnitsSelect()
     call InitTrig_ForSoldUnitsDesel()
@@ -50115,7 +50312,7 @@ function main takes nothing returns nothing
     call CreateAllUnits()
     call InitBlizzard()
 
-call ExecuteFunc("SpellSleepAOE__onInit")
+call ExecuteFunc("SpellSleepAOE___onInit")
 call UISetup() // INLINED!!
 call Face2() // INLINED!!
 
