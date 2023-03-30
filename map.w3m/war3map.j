@@ -660,6 +660,7 @@ trigger gg_trg_F2_Map= null
 trigger gg_trg_ToKill2= null
 trigger gg_trg_Emerald_Dream_TP_O= null
 trigger gg_trg_Emerald_Dream_TP_OFF_O= null
+trigger gg_trg_MageTpSell= null
 trigger gg_trg_TrainHeroGiveItem= null
 trigger gg_trg_LimitHero_Exep= null
 trigger gg_trg_Hero_Limits_General_Copy= null
@@ -1603,7 +1604,6 @@ unit gg_unit_h09W_0236= null
 unit gg_unit_n003_0117= null
 unit gg_unit_h093_0091= null
 unit gg_unit_h09V_0137= null
-trigger gg_trg_MageTpSell= null
 framehandle face= null
 framehandle faceHover= null
 framehandle tooltip= null
@@ -2605,7 +2605,7 @@ function UISetup takes nothing returns nothing
 endfunction
 
 // scope init begins
-function init__Init takes nothing returns nothing
+function init___Init takes nothing returns nothing
 	call UISetup()
 endfunction
 // scope init ends
@@ -2647,7 +2647,7 @@ call BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 endfunction
 
 // scope init2 begins
-function init2__Init takes nothing returns nothing
+function init2___Init takes nothing returns nothing
     call Face2()
 endfunction
 // scope init2 ends
