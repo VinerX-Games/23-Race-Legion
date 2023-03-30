@@ -91991,7 +91991,7 @@ STRING 15202
 }
 
 STRING 15203
-// Upgrades: R0GO (Грубая сила), Hotkey (Hotkey)
+// Upgrades: R05M (Сделать некромантов адептами,Сделать некр�), Hotkey (Hotkey)
 {
 D
 }
@@ -98989,7 +98989,7 @@ S
 }
 
 STRING 16333
-// Upgrades: R05M (Сделать некромантов адептами,Сделать некр�), Hotkey (Hotkey)
+// Upgrades: R05Q (Нечестивая броня,Улучшенная нечестивая бр�), Hotkey (Hotkey)
 {
 D
 }
@@ -103849,7 +103849,7 @@ W
 }
 
 STRING 17129
-// Upgrades: R05Q (Нечестивая броня,Улучшенная нечестивая бр�), Hotkey (Hotkey)
+// Upgrades: R05R (Ярость вурдалака), Hotkey (Hotkey)
 {
 D
 }
@@ -103961,7 +103961,7 @@ W
 }
 
 STRING 17148
-// Upgrades: R05R (Ярость вурдалака), Hotkey (Hotkey)
+// Upgrades: R04Q (Шрапнель), Hotkey (Hotkey)
 {
 D
 }
@@ -104159,7 +104159,7 @@ STRING 17180
 }
 
 STRING 17181
-// Upgrades: R04Q (Шрапнель), Hotkey (Hotkey)
+// Upgrades: R061 (Каннибализм), Hotkey (Hotkey)
 {
 D
 }
@@ -106009,19 +106009,19 @@ S
 }
 
 STRING 17488
-// Upgrades: R061 (Каннибализм), Hotkey (Hotkey)
-{
-D
-}
-
-STRING 17489
 // Upgrades: R064 (Каннибализм), Hotkey (Hotkey)
 {
 D
 }
 
-STRING 17490
+STRING 17489
 // Upgrades: R067 (Каннибализм), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 17490
+// Upgrades: R06F (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
 {
 D
 }
@@ -106165,7 +106165,7 @@ D
 }
 
 STRING 17514
-// Upgrades: R06F (Железная броня,Стальная броня,Мифриловая б), Hotkey (Hotkey)
+// Upgrades: R06J (Стрижающие клинки), Hotkey (Hotkey)
 {
 D
 }
@@ -106303,7 +106303,7 @@ STRING 17536
 }
 
 STRING 17537
-// Upgrades: R06J (Стрижающие клинки), Hotkey (Hotkey)
+// Upgrades: R071 (Атаки чудовищ,Улучшенные атаки чудовищ,Уси), Hotkey (Hotkey)
 {
 D
 }
@@ -106453,13 +106453,13 @@ STRING 17561
 }
 
 STRING 17562
-// Upgrades: R071 (Атаки чудовищ,Улучшенные атаки чудовищ,Уси), Hotkey (Hotkey)
+// Upgrades: R07T (Каннибализм), Hotkey (Hotkey)
 {
 D
 }
 
 STRING 17563
-// Upgrades: R07T (Каннибализм), Hotkey (Hotkey)
+// Upgrades: R07W (Каннибализм), Hotkey (Hotkey)
 {
 D
 }
@@ -106909,7 +106909,7 @@ D
 }
 
 STRING 17638
-// Upgrades: R07W (Каннибализм), Hotkey (Hotkey)
+// Upgrades: R081 (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
 {
 D
 }
@@ -107209,13 +107209,13 @@ D
 }
 
 STRING 17688
-// Upgrades: R081 (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+// Upgrades: R08B (Ярость вурдалака), Hotkey (Hotkey)
 {
 D
 }
 
 STRING 17689
-// Upgrades: R08B (Ярость вурдалака), Hotkey (Hotkey)
+// Upgrades: R08N (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
 {
 D
 }
@@ -107521,7 +107521,7 @@ D
 }
 
 STRING 17740
-// Upgrades: R08N (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
+// Upgrades: R08X (Сила Луны,Мощь Луны,Могущество Луны), Hotkey (Hotkey)
 {
 D
 }
@@ -107821,7 +107821,7 @@ D
 }
 
 STRING 17790
-// Upgrades: R08X (Сила Луны,Мощь Луны,Могущество Луны), Hotkey (Hotkey)
+// Upgrades: R093 (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
 {
 D
 }
@@ -108209,7 +108209,7 @@ D
 }
 
 STRING 17854
-// Upgrades: R093 (Сделать волшебниц адептами,Сделать волшеб�), Hotkey (Hotkey)
+// Upgrades: R095 (Сделать сирен адептами,Сделать сирен масте), Hotkey (Hotkey)
 {
 D
 }
@@ -111509,7 +111509,7 @@ E
 }
 
 STRING 18403
-// Upgrades: R095 (Сделать сирен адептами,Сделать сирен масте), Hotkey (Hotkey)
+// Upgrades: R09V (Защита), Hotkey (Hotkey)
 {
 D
 }
@@ -111521,7 +111521,7 @@ Q
 }
 
 STRING 18405
-// Upgrades: R09V (Защита), Hotkey (Hotkey)
+// Upgrades: R09O (Сделать друидов-хищников адептами,Сделать ), Hotkey (Hotkey)
 {
 D
 }
@@ -111533,13 +111533,13 @@ D
 }
 
 STRING 18407
-// Upgrades: R09O (Сделать друидов-хищников адептами,Сделать ), Hotkey (Hotkey)
+// Upgrades: R0AH (Сделать друидов-хищников адептами,Сделать ), Hotkey (Hotkey)
 {
 D
 }
 
 STRING 18408
-// Upgrades: R0AH (Сделать друидов-хищников адептами,Сделать ), Hotkey (Hotkey)
+// Upgrades: R0AS (Улучшение до берсерка), Hotkey (Hotkey)
 {
 D
 }
@@ -111683,7 +111683,7 @@ W
 }
 
 STRING 18432
-// Upgrades: R0AS (Улучшение до берсерка), Hotkey (Hotkey)
+// Upgrades: R0AZ (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
 {
 D
 }
@@ -112813,7 +112813,7 @@ STRING 18619
 }
 
 STRING 18620
-// Upgrades: R0AZ (Железные мечи,Стальные мечи,Мифриловые меч), Hotkey (Hotkey)
+// Upgrades: R0B6 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -113296,7 +113296,7 @@ STRING 18698
 }
 
 STRING 18699
-// Upgrades: R0B6 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0B7 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -113308,7 +113308,7 @@ D
 }
 
 STRING 18701
-// Upgrades: R0B7 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0B9 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -113452,7 +113452,7 @@ D
 }
 
 STRING 18725
-// Upgrades: R0B9 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BA (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -113494,7 +113494,7 @@ X
 }
 
 STRING 18732
-// Upgrades: R0BA (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BB (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -113658,7 +113658,7 @@ D
 }
 
 STRING 18759
-// Upgrades: R0BB (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0B5 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -113806,7 +113806,7 @@ STRING 18782
 }
 
 STRING 18783
-// Upgrades: R0B5 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BC (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -113818,7 +113818,7 @@ D
 }
 
 STRING 18785
-// Upgrades: R0BC (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BD (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -113975,7 +113975,7 @@ D
 }
 
 STRING 18811
-// Upgrades: R0BD (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BE (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -114119,7 +114119,7 @@ STRING 18834
 }
 
 STRING 18835
-// Upgrades: R0BE (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BF (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -114131,7 +114131,7 @@ D
 }
 
 STRING 18837
-// Upgrades: R0BF (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BG (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -114275,7 +114275,7 @@ D
 }
 
 STRING 18861
-// Upgrades: R0BG (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BH (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -114423,7 +114423,7 @@ STRING 18884
 }
 
 STRING 18885
-// Upgrades: R0BH (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BI (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -114435,7 +114435,7 @@ D
 }
 
 STRING 18887
-// Upgrades: R0BI (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0BT (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -114579,7 +114579,7 @@ D
 }
 
 STRING 18911
-// Upgrades: R0BT (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0C0 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -114723,7 +114723,7 @@ STRING 18934
 }
 
 STRING 18935
-// Upgrades: R0C0 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0C1 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -114735,7 +114735,7 @@ D
 }
 
 STRING 18937
-// Upgrades: R0C1 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0C2 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -114879,7 +114879,7 @@ D
 }
 
 STRING 18961
-// Upgrades: R0C2 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0C4 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -115023,7 +115023,7 @@ STRING 18984
 }
 
 STRING 18985
-// Upgrades: R0C4 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0C5 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -115035,7 +115035,7 @@ D
 }
 
 STRING 18987
-// Upgrades: R0C5 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0C6 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -115179,7 +115179,7 @@ D
 }
 
 STRING 19011
-// Upgrades: R0C6 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0C8 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -115323,7 +115323,7 @@ STRING 19034
 }
 
 STRING 19035
-// Upgrades: R0C8 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0C9 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -115335,7 +115335,7 @@ D
 }
 
 STRING 19037
-// Upgrades: R0C9 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CA (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -118901,7 +118901,7 @@ F
 }
 
 STRING 19634
-// Upgrades: R0CA (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CB (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -119040,7 +119040,7 @@ E
 }
 
 STRING 19657
-// Upgrades: R0CB (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CC (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -119058,7 +119058,7 @@ D
 }
 
 STRING 19660
-// Upgrades: R0CC (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CD (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -119441,7 +119441,7 @@ D
 }
 
 STRING 19724
-// Upgrades: R0CD (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CE (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -123960,7 +123960,7 @@ STRING 20463
 }
 
 STRING 20464
-// Upgrades: R0CE (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CF (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -132435,7 +132435,7 @@ F
 }
 
 STRING 21836
-// Upgrades: R0CF (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CG (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -132536,7 +132536,7 @@ D
 }
 
 STRING 21852
-// Upgrades: R0CG (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CH (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -132578,7 +132578,7 @@ D
 }
 
 STRING 21859
-// Upgrades: R0CH (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CI (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -139525,7 +139525,7 @@ Q
 }
 
 STRING 22982
-// Upgrades: R0CI (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CJ (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -141683,7 +141683,7 @@ STRING 23335
 }
 
 STRING 23336
-// Upgrades: R0CJ (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CK (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -155839,7 +155839,7 @@ STRING 25656
 }
 
 STRING 25657
-// Upgrades: R0CK (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CL (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -155851,7 +155851,7 @@ D
 }
 
 STRING 25659
-// Upgrades: R0CL (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CM (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -155971,7 +155971,7 @@ STRING 25676
 }
 
 STRING 25677
-// Upgrades: R0CM (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CN (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -163922,7 +163922,7 @@ STRING 26991
 }
 
 STRING 26992
-// Upgrades: R0CN (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CO (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -164012,7 +164012,7 @@ STRING 27006
 }
 
 STRING 27007
-// Upgrades: R0CO (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CP (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -164060,7 +164060,7 @@ rmvx
 }
 
 STRING 27015
-// Upgrades: R0CP (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CQ (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -165100,7 +165100,7 @@ A
 }
 
 STRING 27189
-// Upgrades: R0CQ (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CR (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -167216,7 +167216,7 @@ STRING 27535
 }
 
 STRING 27536
-// Upgrades: R0CR (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0CS (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -167400,7 +167400,7 @@ STRING 27563
 }
 
 STRING 27564
-// Upgrades: R0CS (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0C3 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -168327,7 +168327,7 @@ D
 }
 
 STRING 27715
-// Upgrades: R0C3 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
+// Upgrades: R0C7 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
 {
 D
 }
@@ -168453,19 +168453,19 @@ STRING 27735
 }
 
 STRING 27736
-// Upgrades: R0C7 (Доспехи из клепаной кожи,Доспехи из армиро�), Hotkey (Hotkey)
-{
-D
-}
-
-STRING 27737
 // Upgrades: R0D4 (Шрапнель), Hotkey (Hotkey)
 {
 D
 }
 
-STRING 27738
+STRING 27737
 // Upgrades: R0EB (Сделать жрецов адептами,Сделать жрецов мас), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 27738
+// Upgrades: R0G0 (Сделать банши адептами,Сделать банши масте), Hotkey (Hotkey)
 {
 D
 }
@@ -173043,13 +173043,13 @@ D
 }
 
 STRING 28465
-// Upgrades: R0G0 (Сделать банши адептами,Сделать банши масте), Hotkey (Hotkey)
+// Upgrades: R0G7 (Знак хищника), Hotkey (Hotkey)
 {
 D
 }
 
 STRING 28466
-// Upgrades: R0G7 (Знак хищника), Hotkey (Hotkey)
+// Upgrades: R0GD (Нечестивая сила,Нечестивая мощь,Нечестивы�), Hotkey (Hotkey)
 {
 D
 }
@@ -184902,7 +184902,7 @@ STRING 30430
 }
 
 STRING 30431
-// Upgrades: R0GD (Нечестивая сила,Нечестивая мощь,Нечестивы�), Hotkey (Hotkey)
+// Upgrades: R0GO (Грубая сила), Hotkey (Hotkey)
 {
 D
 }
