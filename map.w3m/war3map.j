@@ -5749,6 +5749,8 @@ function CreateNeutralHostile takes nothing returns nothing
     set u=BlzCreateUnitWithSkin(p, 'n01W', - 26919.5, - 23156.0, 96.760, 'n01W')
     set u=BlzCreateUnitWithSkin(p, 'n01W', - 27253.2, - 22354.7, 96.760, 'n01W')
     set u=BlzCreateUnitWithSkin(p, 'n01X', - 26629.5, - 21704.0, 30.400, 'n01X')
+    set u=BlzCreateUnitWithSkin(p, 'n05Q', - 2225.2, 22011.0, - 81.146, 'n05Q')
+    set u=BlzCreateUnitWithSkin(p, 'nbdo', - 2043.0, 21963.4, 249.035, 'nbdo')
     set u=BlzCreateUnitWithSkin(p, 'n03E', - 14728.0, - 21476.9, 187.283, 'n03E')
     set u=BlzCreateUnitWithSkin(p, 'n03J', - 14809.0, - 21629.9, 163.182, 'n03J')
     set u=BlzCreateUnitWithSkin(p, 'n03J', - 14791.2, - 21313.1, 208.638, 'n03J')
