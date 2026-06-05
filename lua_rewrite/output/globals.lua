@@ -407,6 +407,38 @@ G.gX = 0
 G.gY = 0
 G.gPlayer = nil
 G.gPi = 0
+G.gId = 0
+G.LazyCount = 0
+G.CheckId = 0
+
+-- AI filter boolexprs (set by SetBools)
+G.Altars = nil
+G.ToHeal = nil
+G.B_LazyW = nil
+G.B_Worker = nil
+G.B_LazyT = nil
+G.B_Lazy = nil
+G.B_LazyN = nil
+G.B_LazyF = nil
+G.Harwest = nil
+G.B_OnlyNeaded = nil
+G.B_NavalBases = nil
+G.B_Hero = nil
+G.B_HeroD = nil
+G.B_InAiArmy = nil
+G.B_InAiNavy = nil
+G.udg_B_EnemyUnitN = nil
+G.udg_B_EnemyUnit = nil
+G.udg_B_EnemyUnitP = nil
+G.PortB = nil
+G.FixZ = nil
+G.LiveHero = nil
+G.B_FixUnvul = nil
+
+G.Navy = nil
+G.Port = nil
+G.PortalBuildingAi = nil
+G.AiRace = {}
 
 -- Magic constants
 G.JASS_MAX_ARRAY_SIZE = 32768
