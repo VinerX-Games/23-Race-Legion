@@ -1,0 +1,191 @@
+{
+  "source_path": "C:\\Games\\23 Race\\23-Race-Legion\\lua_rewrite\\war3map.lua",
+  "source_sha256": "7eadc67e321df55d2121d5f848d21791533a8453df49e68556ab72d5c954bbf4",
+  "section_count": 23,
+  "sections": [
+    {
+      "name": "prelude",
+      "file": "00_prelude.lua",
+      "category": "prelude",
+      "start_line": 1,
+      "end_line": 126,
+      "library_name": null
+    },
+    {
+      "name": "globals",
+      "file": "01_globals.lua",
+      "category": "globals",
+      "start_line": 127,
+      "end_line": 2557,
+      "library_name": null
+    },
+    {
+      "name": "pre_library_functions",
+      "file": "02_pre_library_functions.lua",
+      "category": "functions",
+      "start_line": 2558,
+      "end_line": 2635,
+      "library_name": null
+    },
+    {
+      "name": "library:A1",
+      "file": "libraries/01_A1.lua",
+      "category": "library",
+      "start_line": 2636,
+      "end_line": 2641,
+      "library_name": "A1"
+    },
+    {
+      "name": "library:AA",
+      "file": "libraries/02_AA.lua",
+      "category": "library",
+      "start_line": 2642,
+      "end_line": 2643,
+      "library_name": "AA"
+    },
+    {
+      "name": "library:AI",
+      "file": "libraries/03_AI.lua",
+      "category": "library",
+      "start_line": 2644,
+      "end_line": 2659,
+      "library_name": "AI"
+    },
+    {
+      "name": "library:AI0",
+      "file": "libraries/04_AI0.lua",
+      "category": "library",
+      "start_line": 2660,
+      "end_line": 3000,
+      "library_name": "AI0"
+    },
+    {
+      "name": "library:ArmyBonus",
+      "file": "libraries/05_ArmyBonus.lua",
+      "category": "library",
+      "start_line": 3001,
+      "end_line": 3014,
+      "library_name": "ArmyBonus"
+    },
+    {
+      "name": "library:Global",
+      "file": "libraries/06_Global.lua",
+      "category": "library",
+      "start_line": 3015,
+      "end_line": 3323,
+      "library_name": "Global"
+    },
+    {
+      "name": "library:LibNewFunctions",
+      "file": "libraries/07_LibNewFunctions.lua",
+      "category": "library",
+      "start_line": 3324,
+      "end_line": 3569,
+      "library_name": "LibNewFunctions"
+    },
+    {
+      "name": "library:RandomLocs",
+      "file": "libraries/08_RandomLocs.lua",
+      "category": "library",
+      "start_line": 3570,
+      "end_line": 3608,
+      "library_name": "RandomLocs"
+    },
+    {
+      "name": "library:SpellSleepAOE",
+      "file": "libraries/09_SpellSleepAOE.lua",
+      "category": "library",
+      "start_line": 3609,
+      "end_line": 3683,
+      "library_name": "SpellSleepAOE"
+    },
+    {
+      "name": "library:common",
+      "file": "libraries/10_common.lua",
+      "category": "library",
+      "start_line": 3684,
+      "end_line": 3691,
+      "library_name": "common"
+    },
+    {
+      "name": "library:LibDifferentAiStuff",
+      "file": "libraries/11_LibDifferentAiStuff.lua",
+      "category": "library",
+      "start_line": 3692,
+      "end_line": 4047,
+      "library_name": "LibDifferentAiStuff"
+    },
+    {
+      "name": "library:SanctifiedEnchantment",
+      "file": "libraries/12_SanctifiedEnchantment.lua",
+      "category": "library",
+      "start_line": 4048,
+      "end_line": 4315,
+      "library_name": "SanctifiedEnchantment"
+    },
+    {
+      "name": "library:Races",
+      "file": "libraries/13_Races.lua",
+      "category": "library",
+      "start_line": 4316,
+      "end_line": 7182,
+      "library_name": "Races"
+    },
+    {
+      "name": "library:AI2",
+      "file": "libraries/14_AI2.lua",
+      "category": "library",
+      "start_line": 7183,
+      "end_line": 7348,
+      "library_name": "AI2"
+    },
+    {
+      "name": "generated_runtime",
+      "file": "80_generated_runtime.lua",
+      "category": "generated_runtime",
+      "start_line": 7349,
+      "end_line": 61684,
+      "library_name": null
+    },
+    {
+      "name": "init_custom_triggers",
+      "file": "90_InitCustomTriggers.lua",
+      "category": "entrypoint",
+      "start_line": 61685,
+      "end_line": 63010,
+      "library_name": null
+    },
+    {
+      "name": "run_initialization_triggers",
+      "file": "91_RunInitializationTriggers.lua",
+      "category": "entrypoint",
+      "start_line": 63011,
+      "end_line": 63035,
+      "library_name": null
+    },
+    {
+      "name": "map_setup",
+      "file": "92_map_setup.lua",
+      "category": "entrypoint",
+      "start_line": 63036,
+      "end_line": 63360,
+      "library_name": null
+    },
+    {
+      "name": "main",
+      "file": "93_main.lua",
+      "category": "entrypoint",
+      "start_line": 63361,
+      "end_line": 63403,
+      "library_name": null
+    },
+    {
+      "name": "config",
+      "file": "94_config.lua",
+      "category": "entrypoint",
+      "start_line": 63404,
+      "end_line": 63440,
+      "library_name": null
+    }
+  ]
+}
