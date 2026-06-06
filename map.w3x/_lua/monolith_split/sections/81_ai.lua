@@ -261,13 +261,87 @@ function AiDispatchNaval(u, pi)
     end
 end
 
----@param id integer
+-- ====================================================================
+-- Phase 3: data-driven Strateg (research / techUp) engine.
+-- def.strateg = {
+--   gradeCap = 100,
+--   steps = {
+--     { at=17, action="research", rows={{bld,tech,cap},...} },
+--     { at=17, action="random", branches={ {{bld,tech,cap},...}, ...} },
+--     { at=25, action="techUp", from=bldT1, to=bldT2, cap=3 },
+--     { at=45, action="fleet", wall=bldWall },
+--     { at=20, action="tryBuy" },
+--     { at=60, action="mageTp" },
+--     -- gate="name" on any step for conditional execution
+--     -- before=N to run when i < N
+--   },
+-- }
+-- def.ecoWeights = { [FourCC('h0N2')]=1, [FourCC('h0N5')]=2, ... }
+-- ====================================================================
+---@param i integer
 ---@param pi integer
-function AiDispatchStrategEC(id, pi)
-    local race = AiRaceOf(pi)
-    if race ~= nil and race.strategEC ~= nil then
-        race.strategEC(id)
+---@param p player
+---@param def table
+---@return boolean
+function AiRunStrateg(i, pi, p, def)
+    local s = def.strategData
+    if not s then return false end
+    if Grades[pi] >= s.gradeCap then
+        warRace(Grades[pi], p)
+        return true
     end
+    if s.pre and s.pre(i, pi, p) then
+    end
+    for _, step in ipairs(s.steps) do
+        if step.at and i <= step.at then goto cont end
+        if step.before and i >= step.before then goto cont end
+        if step.gate then
+            local g = def.gates and def.gates[step.gate]
+            if g and not g(pi) then goto cont end
+        end
+        local a = step.action
+        if a == "research" or a == "random" then
+            local rows = step.rows
+            if a == "random" and step.branches then
+                rows = step.branches[GetRandomInt(1, #step.branches)]
+            end
+            if rows then
+                for _, up in ipairs(rows) do
+                    MakeGradeCheckCap(p, up[1], up[2], up[3])
+                end
+            end
+        elseif a == "techUp" then
+            if getAiCount(pi, step.to) < step.cap then
+                BuildT(p, step.from, step.to)
+            end
+        elseif a == "fleet" then
+            strategFleetGrades(i, p, step.wall)
+        elseif a == "tryBuy" then
+            if GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) > 2000 then
+                TryBuy(p, i)
+            end
+        elseif a == "mageTp" then
+            if getAiCount(pi, FourCC('h07A')) < (step.cap or (i / 35)) then
+                MakeMageTp(pi)
+            end
+        end
+        ::cont::
+    end
+    return true
+end
+
+---@param id integer
+---@param def table
+---@return boolean
+function AiRunStrategEC(id, def)
+    local w = def.ecoWeights
+    if not w then return false end
+    local add = w[id]
+    if add then
+        udg_LocalInteger3 = udg_LocalInteger3 + add
+        return true
+    end
+    return false
 end
 
 ---@param i integer
@@ -275,8 +349,27 @@ end
 ---@param p player
 function AiDispatchStrateg(i, pi, p)
     local race = AiRaceOf(pi)
-    if race ~= nil and race.strateg ~= nil then
-        race.strateg(i, pi, p)
+    if race ~= nil then
+        if race.strategData ~= nil and AiRunStrateg(i, pi, p, race) then
+            return
+        end
+        if race.strateg ~= nil then
+            race.strateg(i, pi, p)
+        end
+    end
+end
+
+---@param id integer
+---@param pi integer
+function AiDispatchStrategEC(id, pi)
+    local race = AiRaceOf(pi)
+    if race ~= nil then
+        if race.ecoWeights ~= nil and AiRunStrategEC(id, race) then
+            return
+        end
+        if race.strategEC ~= nil then
+            race.strategEC(id)
+        end
     end
 end
 
@@ -377,6 +470,53 @@ RegisterAiRace("Scarlet", {
             return false
         end,
     },
+    ecoWeights = {
+        [FourCC('h05Y')] = 1, [FourCC('h05U')] = 2,
+        [FourCC('h05V')] = 5, [FourCC('h05W')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        pre = function(i, pi, p)
+            if i > 65 and getAiCount(pi, FourCC('h05V')) >= 1 then
+                local r = GetRandomInt(1, 2)
+                if r == 1 then
+                    MakeGradeCheckCap(p, FourCC('h05W'), FourCC('R040'), 1)
+                    SaveBoolean(AiData, pi, FourCC('R040'), true)
+                else
+                    MakeGradeCheckCap(p, FourCC('h05W'), FourCC('R03Z'), 1)
+                    SaveBoolean(AiData, pi, FourCC('R03Z'), true)
+                end
+                MakeGradeCheckCap(p, FourCC('h068'), FourCC('R044'), 3)
+                MakeGradeCheckCap(p, FourCC('h068'), FourCC('R043'), 3)
+                MakeGradeCheckCap(p, FourCC('h068'), FourCC('R042'), 3)
+                MakeGradeCheckCap(p, FourCC('h068'), FourCC('R041'), 3)
+            end
+        end,
+        steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h060'), FourCC('R04B'), 6}, {FourCC('h060'), FourCC('R04A'), 6}, {FourCC('h060'), FourCC('R049'), 6}, {FourCC('h060'), FourCC('R048'), 6}, {FourCC('h060'), FourCC('R04C'), 6},
+                {FourCC('h062'), FourCC('RHac'), 6}, {FourCC('h062'), FourCC('Rhlh'), 6},
+                {FourCC('h05Z'), FourCC('R03K'), 3},
+            }},
+            { at = 17, action = "tryBuy" },
+            { at = 35, gate = "tier2", action = "research", rows = {
+                {FourCC('h05Z'), FourCC('R03W'), 2}, {FourCC('h05Z'), FourCC('R03V'), 2},
+                {FourCC('h05Z'), FourCC('R03L'), 2}, {FourCC('h05Z'), FourCC('R03M'), 2},
+                {FourCC('h061'), FourCC('R03Y'), 3}, {FourCC('h061'), FourCC('R03X'), 3},
+            }},
+            { at = 35, gate = "tier2", action = "random", branches = {
+                { {FourCC('h064'), FourCC('R03T'), 6} },
+                { {FourCC('h064'), FourCC('R03S'), 6} },
+            }},
+            { at = 35, gate = "tier2", action = "research", rows = {
+                {FourCC('h064'), FourCC('R047'), 6}, {FourCC('h064'), FourCC('R046'), 6}, {FourCC('h064'), FourCC('R045'), 6}, {FourCC('h064'), FourCC('R03U'), 6},
+            }},
+            { at = 45, action = "fleet", wall = FourCC('h011') },
+            { at = 25, action = "techUp", from = FourCC('h05U'), to = FourCC('h05V'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h05V'), to = FourCC('h05W'), cap = 3 },
+            { at = 60, action = "mageTp" },
+        },
+    },
     chooseBuild = ChooseBuildings_ScarletOrden,
     perebor = PereborBuildings_ScarletOrden,
     join = Join_Skarlet,
@@ -428,6 +568,37 @@ RegisterAiRace("BloodElves", {
         },
         worker = { id = FourCC('h04K'), cap = 20,
                    from = { FourCC('h04C') } },
+    },
+    ecoWeights = {
+        [FourCC('h04M')] = 1, [FourCC('h04C')] = 2,
+        [FourCC('h04B')] = 5, [FourCC('h04A')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h04R'), FourCC('R01L'), 6}, {FourCC('h04R'), FourCC('R01J'), 6}, {FourCC('h04R'), FourCC('R01K'), 6}, {FourCC('h04R'), FourCC('R01M'), 6} },
+                { {FourCC('h04R'), FourCC('R01R'), 6}, {FourCC('h04Q'), FourCC('R03I'), 6}, {FourCC('h04Q'), FourCC('R03J'), 6}, {FourCC('h04Q'), FourCC('R01N'), 6} },
+                { {FourCC('h04Q'), FourCC('R01T'), 6}, {FourCC('h04Q'), FourCC('R03E'), 6}, {FourCC('h04Q'), FourCC('R03F'), 6}, {FourCC('h04D'), FourCC('R03K'), 1} },
+            }},
+            { at = 35, gate = "tier2", action = "random", branches = {
+                { {FourCC('h04D'), FourCC('R01Y'), 1}, {FourCC('h04D'), FourCC('R01X'), 1}, {FourCC('h04D'), FourCC('R01W'), 2}, {FourCC('h04E'), FourCC('R0BU'), 1}, {FourCC('h04E'), FourCC('R01O'), 6} },
+                { {FourCC('h04E'), FourCC('R01P'), 6}, {FourCC('h04E'), FourCC('R01Q'), 6}, {FourCC('h04E'), FourCC('R01S'), 1}, {FourCC('h04G'), FourCC('R03N'), 6}, {FourCC('h04G'), FourCC('R021'), 6} },
+                { {FourCC('h04G'), FourCC('R021'), 6}, {FourCC('h04G'), FourCC('R03Q'), 6}, {FourCC('h04G'), FourCC('R021'), 6}, {FourCC('h04G'), FourCC('Rhcd'), 6} },
+            }},
+            { at = 35, gate = "tier2", action = "random", branches = {
+                { {FourCC('h04F'), FourCC('R03R'), 3} },
+                { {FourCC('h04F'), FourCC('R01H'), 3} },
+                { {FourCC('h04F'), FourCC('R01I'), 3} },
+                { {FourCC('h04F'), FourCC('R01G'), 3} },
+                { {FourCC('h04F'), FourCC('R01D'), 3} },
+            }},
+            { at = 45, gate = "tier2", action = "fleet", wall = FourCC('h011') },
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h04C'), to = FourCC('h04B'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h04B'), to = FourCC('h04A'), cap = 3 },
+            { at = 60, action = "mageTp", cap = 3 },
+        },
     },
     chooseBuild = ChooseBuildings_BloodElves,
     perebor = PereborBuildings2_BloodElves,
@@ -492,6 +663,23 @@ RegisterAiRace("Goblins", {
             { FourCC('h06N'), 3, gate = "grades8" },
             { FourCC('h078'), 3, gate = "grades8" },
             { FourCC('h06M'), 3, gate = "grades8" },
+        },
+    },
+    ecoWeights = {
+        [FourCC('h077')] = 1, [FourCC('h070')] = 4,
+    },
+    strategData = {
+        gradeCap = 150,
+        steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h076'), FourCC('R04P'), 6}, {FourCC('h076'), FourCC('R04E'), 6}, {FourCC('h076'), FourCC('R04F'), 6}, {FourCC('h076'), FourCC('R04G'), 6}, {FourCC('h076'), FourCC('R04H'), 6},
+                {FourCC('h076'), FourCC('R04I'), 6}, {FourCC('h076'), FourCC('R04J'), 6}, {FourCC('h076'), FourCC('R04K'), 6}, {FourCC('h076'), FourCC('R04L'), 6}, {FourCC('h076'), FourCC('R04M'), 6},
+                {FourCC('h079'), FourCC('R056'), 6}, {FourCC('h079'), FourCC('R07A'), 6}, {FourCC('h079'), FourCC('R05X'), 6}, {FourCC('h079'), FourCC('R05Y'), 6}, {FourCC('h079'), FourCC('R04N'), 6},
+                {FourCC('h079'), FourCC('R04Q'), 6}, {FourCC('h079'), FourCC('R04R'), 6}, {FourCC('h079'), FourCC('R053'), 6}, {FourCC('h079'), FourCC('R05W'), 6},
+                {FourCC('h070'), FourCC('R0D4'), 6},
+            }},
+            { at = 17, action = "tryBuy" },
+            { at = 60, action = "mageTp" },
         },
     },
     chooseBuild = ChooseBuildings_Goblins,
@@ -566,6 +754,27 @@ RegisterAiRace("Naga", {
     branches = {
         murloc = function(pi) return GetPlayerTechResearched(Player(pi), FourCC('R0FF'), true) end,
     },
+    ecoWeights = {
+        [FourCC('nnfm')] = 1, [FourCC('nntt')] = 4,
+        [FourCC('h0JX')] = 6, [FourCC('h0JY')] = 8,
+    },
+    strategData = {
+        gradeCap = 150,
+        steps = {
+            { before = 50, action = "research", rows = {
+                {FourCC('nntt'), FourCC('R0FE'), 1}, {FourCC('nntt'), FourCC('R0FF'), 1},
+            }},
+            { at = 17, action = "research", rows = {
+                {FourCC('h0JW'), FourCC('R0FD'), 6}, {FourCC('h0JW'), FourCC('R0FH'), 6}, {FourCC('h0JW'), FourCC('Rnat'), 6}, {FourCC('h0JW'), FourCC('Rnam'), 6}, {FourCC('h0JW'), FourCC('Rnsb'), 6},
+                {FourCC('nnsa'), FourCC('Rnsw'), 6}, {FourCC('nnsa'), FourCC('Rnsi'), 6},
+                {FourCC('nnsg'), FourCC('R0FR'), 6}, {FourCC('nnsg'), FourCC('Rnen'), 6},
+            }},
+            { at = 17, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('nntt'), to = FourCC('h0JX'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h0JX'), to = FourCC('h0JY'), cap = 3 },
+            { at = 60, action = "mageTp" },
+        },
+    },
     join = Join_Naga,
     strateg = Strateg_Naga,
     strategEC = Strateg_Naga_EC,
@@ -627,6 +836,33 @@ RegisterAiRace("Horde", {
         },
         worker = { id = FourCC('opeo'), cap = 25,
                    from = { FourCC('ogre'), FourCC('ostr'), FourCC('ofrt') } },
+    },
+    ecoWeights = {
+        [FourCC('nnfm')] = 1, [FourCC('ogre')] = 4,
+        [FourCC('ostr')] = 6, [FourCC('ofrt')] = 8,
+    },
+    strategData = {
+        gradeCap = 150,
+        steps = {
+            { before = 50, action = "research", rows = {
+                {FourCC('nntt'), FourCC('R0FE'), 1}, {FourCC('nntt'), FourCC('R0FF'), 1},
+            }},
+            { at = 17, action = "research", rows = {
+                {FourCC('ogre'), FourCC('Ropg'), 1},
+                {FourCC('ofor'), FourCC('R0G5'), 6}, {FourCC('ofor'), FourCC('R0E6'), 6}, {FourCC('ofor'), FourCC('Rome'), 6}, {FourCC('ofor'), FourCC('Roar'), 6}, {FourCC('ofor'), FourCC('Rora'), 6}, {FourCC('ofor'), FourCC('Rosp'), 3}, {FourCC('ofor'), FourCC('Rorb'), 3},
+                {FourCC('obar'), FourCC('R0EC'), 3}, {FourCC('obea'), FourCC('R0ED'), 3}, {FourCC('otto'), FourCC('R0EF'), 3},
+                {FourCC('osld'), FourCC('Rost'), 3}, {FourCC('osld'), FourCC('Rowt'), 3}, {FourCC('osld'), FourCC('Rowd'), 3},
+            }},
+            { at = 17, action = "tryBuy" },
+            { at = 17, action = "fleet", wall = FourCC('h0HO') },
+            { action = "random", branches = {
+                { {FourCC('ovln'), FourCC('R0F3'), 1}, {FourCC('ovln'), FourCC('R0F4'), 1}, {FourCC('ovln'), FourCC('R0EH'), 1}, {FourCC('ovln'), FourCC('R0EI'), 1} },
+                { {FourCC('ovln'), FourCC('R0EE'), 1}, {FourCC('ovln'), FourCC('R0EA'), 1}, {FourCC('ovln'), FourCC('R0E9'), 1}, {FourCC('ovln'), FourCC('R0E5'), 1} },
+                { {FourCC('ovln'), FourCC('R0E4'), 1}, {FourCC('ovln'), FourCC('R0E3'), 1}, {FourCC('ovln'), FourCC('R0E1'), 1}, {FourCC('ovln'), FourCC('R0E0'), 1} },
+                { {FourCC('ovln'), FourCC('R0DZ'), 1}, {FourCC('ovln'), FourCC('R0DY'), 1}, {FourCC('ovln'), FourCC('R0DX'), 1}, {FourCC('ovln'), FourCC('R0DW'), 1} },
+                { {FourCC('ovln'), FourCC('R0EB'), 1}, {FourCC('ovln'), FourCC('R0EH'), 1}, {FourCC('ovln'), FourCC('R0DZ'), 1}, {FourCC('ovln'), FourCC('R0E5'), 1} },
+            }},
+        },
     },
     chooseBuild = ChooseBuildings_Horde,
     perebor = PereborBuildings_Horde,
@@ -693,6 +929,28 @@ RegisterAiRace("JungleTrolls", {
     },
     branches = {
         jt = function(pi) return JungleTrollsBranchIsBlack(pi) end,
+    },
+    -- Phase 3 declarative strategy (engine: AiRunStrateg).
+    ecoWeights = {
+        [FourCC('h0N2')] = 1,
+        [FourCC('h0N5')] = 2,
+        [FourCC('h0N1')] = 5,
+        [FourCC('h0N6')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h0N3'), FourCC('R0I8'), 6}, {FourCC('h0N3'), FourCC('R0I9'), 6}, {FourCC('h0N3'), FourCC('R0IA'), 6}, {FourCC('h0N3'), FourCC('R0II'), 2} },
+                { {FourCC('h0MY'), FourCC('R0IK'), 6}, {FourCC('h0MY'), FourCC('R0IM'), 6}, {FourCC('h0N2'), FourCC('R0IJ'), 6} },
+                { {FourCC('h0MX'), FourCC('R0IB'), 6}, {FourCC('h0MX'), FourCC('R0IC'), 6}, {FourCC('h0MX'), FourCC('R0ID'), 6} },
+                { {FourCC('h0MW'), FourCC('R0IL'), 6}, {FourCC('h0MW'), FourCC('R0IN'), 6}, {FourCC('h0MW'), FourCC('R0IJ'), 6} },
+            }},
+            { at = 45, action = "fleet", wall = FourCC('h0D3') },
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h0N5'), to = FourCC('h0N1'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h0N1'), to = FourCC('h0N6'), cap = 3 },
+        },
     },
     chooseBuild = ChooseBuildings_JungleTrolls,
     perebor = PereborBuildings2_JungleTrolls,

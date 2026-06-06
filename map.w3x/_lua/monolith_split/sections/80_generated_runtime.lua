@@ -7063,6 +7063,9 @@ function Trig_DeadSituastion_Actions()
 	local id = GetUnitTypeId(u)
 	local u3 = GetKillingUnit()
 	local p = GetOwningPlayer(u3)
+	if p == nil then
+		p = Player(PLAYER_NEUTRAL_AGGRESSIVE)
+	end
 	local pi0 = GetPlayerId(GetOwningPlayer(u))
 	local pi = GetPlayerId(p)
 	local i
@@ -7079,10 +7082,6 @@ function Trig_DeadSituastion_Actions()
 	end
 	
 	-- Потом выбирать рандомного юнита рядом.
-	if p == nil then
-		p = Player(PLAYER_NEUTRAL_AGGRESSIVE)
-		pi = PLAYER_NEUTRAL_AGGRESSIVE
-	end
 	u2 = CreateUnit(p, GetUnitTypeId(u), GetUnitX(u), GetUnitY(u), GetUnitFacing(u))
 	GroupAddUnit(udg_ZahvatBuildings, u2)
 	BlzSetUnitArmor(u2, 3)
