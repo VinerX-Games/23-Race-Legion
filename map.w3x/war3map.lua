@@ -57205,32 +57205,198 @@ function AiDispatchStrategEC(id, pi)
 end
 
 ---@param id integer
----@param attacker unit
+---@param u unit
 ---@param target unit
 ---@param p player
-function AiDispatchAttacker(id, attacker, target, p)
+---@param def table
+---@return boolean
+function AiRunAttacker(id, u, target, p, def)
+    local tbl = def.attacker
+    if tbl == nil then
+        return false
+    end
+    if tbl.pre ~= nil then
+        for _, pre in ipairs(tbl.pre) do
+            if GetRandomInt(1, pre.chance or 1) == 1 then
+                if pre.terrain == "water" and not IsTerrainPathable(GetUnitX(u), GetUnitY(u), PATHING_TYPE_WALKABILITY) then
+                    if pre.notAbil == nil or GetUnitAbilityLevel(u, pre.notAbil) == 0 then
+                        _castAbility(u, pre, nil, nil)
+                        if pre.ret then
+                            return true
+                        end
+                    end
+                end
+            end
+        end
+    end
+    local unitAbils = tbl[#tbl] and tbl or tbl -- detect array-or-map
+    local entries = tbl[id]
+    if entries == nil then
+        for _, entry in ipairs(tbl) do
+            if entry[id] ~= nil then
+                entries = entry[id]
+                break
+            end
+        end
+    end
+    if entries == nil then
+        if tbl.post ~= nil then
+            return _castAbilityEntry(u, id, target, tbl.post)
+        end
+        return false
+    end
+    for _, entry in ipairs(entries) do
+        if GetRandomInt(1, entry.chance or 5) == 1 then
+            if entry.notStructure and IsUnitType(target, UNIT_TYPE_STRUCTURE) then
+                -- skip
+            elseif entry.hp ~= nil and GetUnitStatePercent(u, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE) >= entry.hp then
+                -- skip: HP too high
+            elseif entry.range ~= nil then
+                local dx = GetUnitX(u) - GetUnitX(target)
+                local dy = GetUnitY(u) - GetUnitY(target)
+                if SquareRoot(dx * dx + dy * dy) > entry.range then
+                    -- skip: too far
+                else
+                    _castAbility(u, entry, target, p)
+                    break
+                end
+            else
+                _castAbility(u, entry, target, p)
+                break
+            end
+        end
+    end
+    if tbl.post ~= nil then
+        _castAbilityEntry(u, id, target, tbl.post)
+    end
+    return true
+end
+
+---@param u unit
+---@param entry table
+---@param target unit|nil
+---@param p player|nil
+function _castAbility(u, entry, target, p)
+    local tp = entry.type or "target"
+    if tp == "immediate" then
+        IssueImmediateOrder(u, entry.order)
+    elseif tp == "heal" and p ~= nil then
+        gUnit2 = nil
+        gGroup = gGroup or CreateGroup()
+        GroupEnumUnitsInRange(gGroup, GetUnitX(target), GetUnitY(target), entry.allyRange or 550, ToHeal)
+        gUnit2 = GroupPickRandomUnit2(gGroup)
+        if gUnit2 ~= nil then
+            IssueTargetOrder(u, entry.order, gUnit2)
+        end
+    elseif tp == "point" and target ~= nil then
+        IssuePointOrder(u, entry.order, GetUnitX(target), GetUnitY(target))
+    elseif tp == "self" then
+        IssuePointOrder(u, entry.order, GetUnitX(u), GetUnitY(u))
+    elseif target ~= nil then
+        IssueTargetOrder(u, entry.order, target)
+    end
+end
+
+function _castAbilityEntry(u, id, target, entries)
+    for _, entry in ipairs(entries) do
+        if entry.needAbil ~= nil and GetUnitAbilityLevel(u, entry.needAbil) == 0 then
+            -- skip
+        elseif GetRandomInt(1, entry.chance or 4) == 1 then
+            _castAbility(u, entry, target, nil)
+            break
+        end
+    end
+    return false
+end
+
+---@param id integer
+---@param u unit
+---@param target unit
+---@param p player
+function AiDispatchAttacker(id, u, target, p)
     local pi = GetPlayerId(p)
     local race = AiRaceOf(pi)
-    if race ~= nil and race.attacker ~= nil then
-        race.attacker(id, attacker, target, p)
+    if race ~= nil then
+        if race.attackerData ~= nil and AiRunAttacker(id, u, target, p, race) then
+            return
+        end
+        if race.attacker ~= nil then
+            race.attacker(id, u, target, p)
+        end
     end
+end
+
+---@param u unit
+---@param pi integer
+---@param def table
+---@return boolean
+function AiRunAttacked(u, pi, def)
+    local tbl = def.attackedData
+    if tbl == nil then
+        return false
+    end
+    local id = GetUnitTypeId(u)
+    local entries = tbl[id]
+    if entries == nil then
+        return false
+    end
+    for _, entry in ipairs(entries) do
+        if GetRandomInt(1, entry.chance or 4) == 1 then
+            _castAbility(u, entry, nil, nil)
+            break
+        end
+    end
+    return true
 end
 
 ---@param u unit
 ---@param pi integer
 function AiDispatchAttacked(u, pi)
     local race = AiRaceOf(pi)
-    if race ~= nil and race.attacked ~= nil then
-        race.attacked(u)
+    if race ~= nil then
+        if race.attackedData ~= nil and AiRunAttacked(u, pi, race) then
+            return
+        end
+        if race.attacked ~= nil then
+            race.attacked(u)
+        end
     end
+end
+
+---@param u unit
+---@param def table
+---@return boolean
+function AiRunGetLvl(u, def)
+    local tbl = def.getLvlData
+    if tbl == nil then
+        return false
+    end
+    local id = GetUnitTypeId(u)
+    local cfg = tbl[id]
+    if cfg == nil then
+        return false
+    end
+    local lvl = GetHeroLevel(u)
+    if lvl == 6 or lvl == 10 then
+        SelectHeroSkill(u, cfg.ult or 0)
+    elseif cfg.skills ~= nil then
+        local i = GetRandomInt(1, #cfg.skills)
+        SelectHeroSkill(u, cfg.skills[i])
+    end
+    return true
 end
 
 ---@param u unit
 ---@param pi integer
 function AiDispatchGetLvl(u, pi)
     local race = AiRaceOf(pi)
-    if race ~= nil and race.getLvl ~= nil then
-        race.getLvl(u)
+    if race ~= nil then
+        if race.getLvlData ~= nil and AiRunGetLvl(u, race) then
+            return
+        end
+        if race.getLvl ~= nil then
+            race.getLvl(u)
+        end
     end
 end
 
@@ -58023,6 +58189,25 @@ RegisterAiRace("Nerubs", {
             { at = 20, action = "tryBuy" },
             { at = 25, action = "techUp", from = FourCC('h0CO'), to = FourCC('h0CP'), cap = 3 },
             { at = 55, action = "techUp", from = FourCC('h0CP'), to = FourCC('h0CQ'), cap = 3 },
+        },
+    },
+    attackerData = {
+        [FourCC('u01C')] = {
+            { order = "parasite", chance = 4, type = "target" },
+        },
+        [FourCC('u01H')] = {
+            { order = "heal", chance = 3, type = "heal", allyRange = 550 },
+            { order = "dispel", chance = 3, type = "point" },
+            { order = "lightningshield", chance = 3, type = "target" },
+        },
+        [FourCC('u01D')] = {
+            { order = "thunderbolt", chance = 4, type = "target" },
+            { order = "ward", chance = 4, type = "point" },
+            { order = "entanglingroots", chance = 4, type = "target" },
+        },
+        [FourCC('u01E')] = {
+            { order = "web", chance = 4, type = "target" },
+            { order = "raisedead", chance = 5, type = "point" },
         },
     },
     join = Join_Nerubs,
