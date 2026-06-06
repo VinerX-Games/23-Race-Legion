@@ -42901,6 +42901,7 @@ function Trig_SecondChance_Actions()
     local t= SecondChance[GetPlayerId(ConvertedPlayer(udg_LocalInteger))]
     udg_LocalText2=SubStringBJ(GetEventPlayerChatString(), 12, 13)
     udg_LocalInteger=S2I(udg_LocalText2)
+    ProbeLogWrite("[CHAT] -raceselect target=" .. tostring(udg_LocalInteger))
     if ( Trig_SecondChance_Func003C() ) then
         udg_LocalPosition2=(StartLoc[GetRandomInt(0, StartLocCount - 1)]) -- INLINED!!
         DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Хост " .. GetPlayerName(GetTriggerPlayer()) .. " дал игроку " .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " второй шанс!")
@@ -42927,6 +42928,29 @@ function InitTrig_SecondChance()
     gg_trg_SecondChance=CreateTrigger()
     TriggerRegisterPlayerChatEvent(gg_trg_SecondChance, Player(0), "-raceselect", false)
     TriggerAddAction(gg_trg_SecondChance, Trig_SecondChance_Actions)
+end
+function BridgeRaceSelect(target_index)
+    local target_player = ConvertedPlayer(target_index)
+    local t = SecondChance[GetPlayerId(target_player)]
+    udg_LocalPosition2=(StartLoc[GetRandomInt(0, StartLocCount - 1)])
+    DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Bridge gave player " .. GetPlayerName(target_player) .. " race selection")
+    DisplayTimedTextToPlayer(target_player, 0, 0, 15.00, "You have 15 minutes to place your capital")
+    CreateNUnitsAtLoc(1, FourCC('h0HJ'), target_player, udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerStateBJ(target_player, PLAYER_STATE_RESOURCE_GOLD, 5000)
+    SetPlayerStateBJ(target_player, PLAYER_STATE_RESOURCE_LUMBER, 5000)
+    udg_LocalInteger = target_index
+    ForGroupBJ(GetUnitsOfPlayerMatching(target_player, Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
+    if udg_GameMode == 1 or udg_GameMode == 2 then
+        if t == nil then
+            t=CreateTimer()
+            SecondChance[GetPlayerId(target_player)]=t
+        end
+        TimerStart(t, 60 * 15, false, SecondChanceTimer)
+        SavePlayerHandle(Hash, GetHandleId(t), 0, target_player)
+    end
+    ProbeLogWrite("[BRIDGE] race_select target=" .. tostring(target_index))
+    target_player = nil
+    t = nil
 end
 --===========================================================================
 -- Trigger: GG
@@ -45166,6 +45190,7 @@ function Trig_CreateAi_Conditions()
 end
 function Trig_CreateAi_Actions()
     gPi=S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) - 1
+    ProbeLogWrite("[CHAT] -ai target=" .. tostring(gPi + 1))
     createAiPlayer(gPi)
 end
 --===========================================================================
@@ -45174,6 +45199,29 @@ function InitTrig_CreateAi()
     TriggerRegisterPlayerChatEvent(gg_trg_CreateAi, Player(0), "-ai", false)
     TriggerAddCondition(gg_trg_CreateAi, Condition(Trig_CreateAi_Conditions))
     TriggerAddAction(gg_trg_CreateAi, Trig_CreateAi_Actions)
+end
+function BridgeDispatchCommand(op, arg, sequence)
+    local target = tonumber(arg)
+    if op == "ping" then
+        ProbeLogWrite("[BRIDGE] ping seq=" .. tostring(sequence) .. " arg=" .. tostring(arg))
+        return
+    end
+    if target == nil then
+        error("bridge command requires numeric arg: " .. tostring(op))
+    end
+    if target < 1 or target > 24 then
+        error("bridge target out of range: " .. tostring(target))
+    end
+    if op == "create_ai" then
+        createAiPlayer(target - 1)
+        ProbeLogWrite("[BRIDGE] create_ai target=" .. tostring(target))
+        return
+    end
+    if op == "race_select" then
+        BridgeRaceSelect(target)
+        return
+    end
+    error("unknown bridge command: " .. tostring(op))
 end
 --===========================================================================
 -- Trigger: OchetStart

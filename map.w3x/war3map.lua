@@ -8,6 +8,20 @@ _G.InitFatal = nil
 _G.ProbeLogFile = "23Race_probe_log.pld"
 _G.ProbeLogLines = {}
 _G.ProbeLogFlushEnabled = false
+_G.BridgeSyncPrefix = "23RaceCmd"
+_G.BridgeManifestFile = "23race_cmd_manifest.pld"
+_G.BridgeCommandFilePrefix = "23race_cmd_"
+_G.BridgeCarrierAbilityId = FourCC('ANav')
+_G.BridgeCarrierTooltipLevel = 0
+_G.BridgeCarrierBaseline = nil
+_G.BridgeManifestCount = nil
+_G.BridgeManifestRequested = false
+_G.BridgeNextLoadSequence = 1
+_G.BridgeCommands = {}
+_G.BridgeElapsed = 0.0
+_G.BridgeTickInterval = 0.25
+_G.BridgeDispatchCommand = nil
+_G.BridgePollTimer = nil
 local function probeLogSanitize(message)
     local text = tostring(message)
     text = text:gsub("[\r\n]", " | ")
@@ -45,6 +59,148 @@ function ProbeStep(label, fn)
     end
     ProbeLogWrite("[STEP] " .. label .. " :: error :: " .. tostring(result))
     error(result, 0)
+end
+local function bridgeSplit(text, separator)
+    local parts = {}
+    local start = 1
+    local sep_len = string.len(separator)
+    while true do
+        local pos = string.find(text, separator, start, true)
+        if pos == nil then
+            parts[#parts + 1] = string.sub(text, start)
+            break
+        end
+        parts[#parts + 1] = string.sub(text, start, pos - 1)
+        start = pos + sep_len
+    end
+    return parts
+end
+local function bridgeCommandFilename(sequence)
+    return string.format("%s%04d.pld", BridgeCommandFilePrefix, sequence)
+end
+function BridgeQueueCommand(sequence, at_seconds, op, arg)
+    if BridgeCommands[sequence] ~= nil then
+        ProbeLogWrite("[BRIDGE] duplicate seq=" .. tostring(sequence))
+        return
+    end
+    BridgeCommands[sequence] = {
+        sequence = sequence,
+        at_seconds = at_seconds,
+        op = op,
+        arg = arg,
+        done = false,
+    }
+    ProbeLogWrite("[BRIDGE] queued seq=" .. tostring(sequence) .. " at=" .. tostring(at_seconds) .. " op=" .. tostring(op) .. " arg=" .. tostring(arg))
+end
+function BridgeHandleSyncData(data)
+    local parts = bridgeSplit(tostring(data), "|")
+    local kind = parts[1]
+    if kind == "manifest" then
+        local count = tonumber(parts[2])
+        if count == nil then
+            ProbeLogWrite("[BRIDGE] bad manifest payload=" .. tostring(data))
+            return
+        end
+        BridgeManifestCount = count
+        ProbeLogWrite("[BRIDGE] manifest count=" .. tostring(count))
+        return
+    end
+    if kind == "cmd" then
+        local sequence = tonumber(parts[2])
+        local at_seconds = tonumber(parts[3])
+        local op = parts[4]
+        local arg = parts[5]
+        if sequence == nil or at_seconds == nil or op == nil or op == "" then
+            ProbeLogWrite("[BRIDGE] bad cmd payload=" .. tostring(data))
+            return
+        end
+        BridgeQueueCommand(sequence, at_seconds, op, arg)
+        return
+    end
+    ProbeLogWrite("[BRIDGE] unknown payload=" .. tostring(data))
+end
+function BridgeConsumePayloadFromFile(path)
+    local baseline = BridgeCarrierBaseline
+    if baseline == nil then
+        baseline = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
+        BridgeCarrierBaseline = baseline
+    end
+    local current_value
+    pcall(function()
+        Preloader(path)
+    end)
+    current_value = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
+    if current_value == nil or current_value == baseline then
+        return false
+    end
+    BlzSetAbilityTooltip(BridgeCarrierAbilityId, baseline, BridgeCarrierTooltipLevel)
+    ProbeLogWrite("[BRIDGE] payload file=" .. tostring(path) .. " data=" .. tostring(current_value))
+    BridgeHandleSyncData(current_value)
+    return true
+end
+function BridgeRequestManifest()
+    if not BridgeManifestRequested then
+        BridgeManifestRequested = true
+        ProbeLogWrite("[BRIDGE] request manifest")
+    end
+    BridgeConsumePayloadFromFile(BridgeManifestFile)
+end
+function BridgeRequestNextCommand()
+    if BridgeManifestCount == nil or BridgeNextLoadSequence > BridgeManifestCount then
+        return
+    end
+    local filename = bridgeCommandFilename(BridgeNextLoadSequence)
+    if BridgeConsumePayloadFromFile(filename) then
+        ProbeLogWrite("[BRIDGE] loaded file=" .. filename)
+        BridgeNextLoadSequence = BridgeNextLoadSequence + 1
+    else
+        ProbeLogWrite("[BRIDGE] waiting file=" .. filename)
+    end
+end
+function BridgeTick()
+    BridgeElapsed = BridgeElapsed + BridgeTickInterval
+    if BridgeManifestCount == nil then
+        BridgeRequestManifest()
+    elseif BridgeNextLoadSequence <= BridgeManifestCount then
+        BridgeRequestNextCommand()
+    end
+    for sequence, command in pairs(BridgeCommands) do
+        if not command.done and BridgeElapsed >= command.at_seconds then
+            command.done = true
+            if type(BridgeDispatchCommand) ~= "function" then
+                ProbeLogWrite("[BRIDGE] dispatcher missing seq=" .. tostring(sequence))
+            else
+                local ok, err = pcall(BridgeDispatchCommand, command.op, command.arg, sequence)
+                if ok then
+                    ProbeLogWrite("[BRIDGE] ok seq=" .. tostring(sequence) .. " op=" .. tostring(command.op))
+                else
+                    ProbeLogWrite("[BRIDGE] error seq=" .. tostring(sequence) .. " op=" .. tostring(command.op) .. " :: " .. tostring(err))
+                end
+            end
+        end
+    end
+end
+function BridgeStart()
+    if BridgePollTimer ~= nil then
+        return
+    end
+    BridgeCarrierBaseline = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
+    local timer = CreateTimer()
+    BridgePollTimer = timer
+    ProbeLogWrite("[BRIDGE] start")
+    TimerStart(timer, BridgeTickInterval, true, BridgeTick)
+end
+function SetupCodexPingChat()
+    local trigger = CreateTrigger()
+    for i = 0, 23 do
+        TriggerRegisterPlayerChatEvent(trigger, Player(i), "-codexping", true)
+    end
+    TriggerAddAction(trigger, function()
+        local player_name = GetPlayerName(GetTriggerPlayer())
+        local chat_text = GetEventPlayerChatString()
+        ProbeLogWrite("[PING] player=" .. tostring(player_name) .. " text=" .. tostring(chat_text))
+        DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 10.00, "Codex ping OK: " .. tostring(chat_text))
+    end)
 end
 -- ============================================================
 -- Safe callback wrapper (debug.traceback disabled in WC3)
@@ -50032,6 +50188,7 @@ function Trig_SecondChance_Actions()
     local t= SecondChance[GetPlayerId(ConvertedPlayer(udg_LocalInteger))]
     udg_LocalText2=SubStringBJ(GetEventPlayerChatString(), 12, 13)
     udg_LocalInteger=S2I(udg_LocalText2)
+    ProbeLogWrite("[CHAT] -raceselect target=" .. tostring(udg_LocalInteger))
     if ( Trig_SecondChance_Func003C() ) then
         udg_LocalPosition2=(StartLoc[GetRandomInt(0, StartLocCount - 1)]) -- INLINED!!
         DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Хост " .. GetPlayerName(GetTriggerPlayer()) .. " дал игроку " .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " второй шанс!")
@@ -50058,6 +50215,29 @@ function InitTrig_SecondChance()
     gg_trg_SecondChance=CreateTrigger()
     TriggerRegisterPlayerChatEvent(gg_trg_SecondChance, Player(0), "-raceselect", false)
     TriggerAddAction(gg_trg_SecondChance, Trig_SecondChance_Actions)
+end
+function BridgeRaceSelect(target_index)
+    local target_player = ConvertedPlayer(target_index)
+    local t = SecondChance[GetPlayerId(target_player)]
+    udg_LocalPosition2=(StartLoc[GetRandomInt(0, StartLocCount - 1)])
+    DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Bridge gave player " .. GetPlayerName(target_player) .. " race selection")
+    DisplayTimedTextToPlayer(target_player, 0, 0, 15.00, "You have 15 minutes to place your capital")
+    CreateNUnitsAtLoc(1, FourCC('h0HJ'), target_player, udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerStateBJ(target_player, PLAYER_STATE_RESOURCE_GOLD, 5000)
+    SetPlayerStateBJ(target_player, PLAYER_STATE_RESOURCE_LUMBER, 5000)
+    udg_LocalInteger = target_index
+    ForGroupBJ(GetUnitsOfPlayerMatching(target_player, Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
+    if udg_GameMode == 1 or udg_GameMode == 2 then
+        if t == nil then
+            t=CreateTimer()
+            SecondChance[GetPlayerId(target_player)]=t
+        end
+        TimerStart(t, 60 * 15, false, SecondChanceTimer)
+        SavePlayerHandle(Hash, GetHandleId(t), 0, target_player)
+    end
+    ProbeLogWrite("[BRIDGE] race_select target=" .. tostring(target_index))
+    target_player = nil
+    t = nil
 end
 --===========================================================================
 -- Trigger: GG
@@ -52297,6 +52477,7 @@ function Trig_CreateAi_Conditions()
 end
 function Trig_CreateAi_Actions()
     gPi=S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) - 1
+    ProbeLogWrite("[CHAT] -ai target=" .. tostring(gPi + 1))
     createAiPlayer(gPi)
 end
 --===========================================================================
@@ -52305,6 +52486,29 @@ function InitTrig_CreateAi()
     TriggerRegisterPlayerChatEvent(gg_trg_CreateAi, Player(0), "-ai", false)
     TriggerAddCondition(gg_trg_CreateAi, Condition(Trig_CreateAi_Conditions))
     TriggerAddAction(gg_trg_CreateAi, Trig_CreateAi_Actions)
+end
+function BridgeDispatchCommand(op, arg, sequence)
+    local target = tonumber(arg)
+    if op == "ping" then
+        ProbeLogWrite("[BRIDGE] ping seq=" .. tostring(sequence) .. " arg=" .. tostring(arg))
+        return
+    end
+    if target == nil then
+        error("bridge command requires numeric arg: " .. tostring(op))
+    end
+    if target < 1 or target > 24 then
+        error("bridge target out of range: " .. tostring(target))
+    end
+    if op == "create_ai" then
+        createAiPlayer(target - 1)
+        ProbeLogWrite("[BRIDGE] create_ai target=" .. tostring(target))
+        return
+    end
+    if op == "race_select" then
+        BridgeRaceSelect(target)
+        return
+    end
+    error("unknown bridge command: " .. tostring(op))
 end
 --===========================================================================
 -- Trigger: OchetStart
@@ -57532,6 +57736,8 @@ function main()
     OnInit.fn(SpellSleepAOE___onInit, "SpellSleepAOE___onInit")
     OnInit.fn(SanctifiedEnchantment___Init, "SanctifiedEnchantment___Init")
     OnInit.fn(initBoolExprs___Init, "initBoolExprs___Init")
+    OnInit.fn(SetupCodexPingChat, "SetupCodexPingChat")
+    OnInit.fn(BridgeStart, "BridgeStart")
     OnInit.fn(DeferredUISetup, "DeferredUISetup")
     OnInit.fn(Face2, "Face2")
     OnInit.fn(SetContinetsBooleprs, "SetContinetsBooleprs")
