@@ -22,6 +22,8 @@ _G.BridgeElapsed = 0.0
 _G.BridgeTickInterval = 0.25
 _G.BridgeDispatchCommand = nil
 _G.BridgePollTimer = nil
+_G.BridgeDebugTicks = 0
+_G.BridgeDebugMaxTicks = 20
 local function probeLogSanitize(message)
     local text = tostring(message)
     text = text:gsub("[\r\n]", " | ")
@@ -124,12 +126,15 @@ function BridgeConsumePayloadFromFile(path)
     if baseline == nil then
         baseline = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
         BridgeCarrierBaseline = baseline
+        ProbeLogWrite("[BRIDGE] baseline='" .. tostring(baseline) .. "'")
     end
-    local current_value
-    pcall(function()
+    local preload_ok, preload_err = pcall(function()
         Preloader(path)
     end)
-    current_value = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
+    if not preload_ok then
+        ProbeLogWrite("[BRIDGE] preloader-error file=" .. tostring(path) .. " err=" .. tostring(preload_err))
+    end
+    local current_value = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
     if current_value == nil or current_value == baseline then
         return false
     end
@@ -159,6 +164,10 @@ function BridgeRequestNextCommand()
 end
 function BridgeTick()
     BridgeElapsed = BridgeElapsed + BridgeTickInterval
+    BridgeDebugTicks = BridgeDebugTicks + 1
+    if BridgeDebugTicks <= BridgeDebugMaxTicks then
+        ProbeLogWrite("[BRIDGE] tick #" .. tostring(BridgeDebugTicks) .. " elapsed=" .. tostring(BridgeElapsed))
+    end
     if BridgeManifestCount == nil then
         BridgeRequestManifest()
     elseif BridgeNextLoadSequence <= BridgeManifestCount then
@@ -181,14 +190,37 @@ function BridgeTick()
     end
 end
 function BridgeStart()
-    if BridgePollTimer ~= nil then
-        return
+    ProbeLogWrite("[BRIDGE] start (chat mode)")
+end
+function SetupBridgeChat()
+    local trigger = CreateTrigger()
+    for i = 0, 23 do
+        TriggerRegisterPlayerChatEvent(trigger, Player(i), "-bridge:", false)
     end
-    BridgeCarrierBaseline = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
-    local timer = CreateTimer()
-    BridgePollTimer = timer
-    ProbeLogWrite("[BRIDGE] start")
-    TimerStart(timer, BridgeTickInterval, true, BridgeTick)
+    TriggerAddAction(trigger, function()
+        local text = GetEventPlayerChatString()
+        local rest = string.sub(text, 9)
+        local sep = string.find(rest, ":", 1, true)
+        if sep == nil then
+            ProbeLogWrite("[BRIDGE] bad chat cmd=" .. tostring(text))
+            return
+        end
+        local op = string.sub(rest, 1, sep - 1)
+        local arg = string.sub(rest, sep + 1)
+        ProbeLogWrite("[BRIDGE] chat op=" .. tostring(op) .. " arg=" .. tostring(arg))
+        if type(BridgeDispatchCommand) == "function" then
+            local ok, err = pcall(BridgeDispatchCommand, op, arg, 0)
+            if ok then
+                ProbeLogWrite("[BRIDGE] ok op=" .. tostring(op))
+                DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cff00ff00[BRIDGE] ok: " .. op .. "|r")
+            else
+                ProbeLogWrite("[BRIDGE] error op=" .. tostring(op) .. " :: " .. tostring(err))
+                DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 10.00, "|cffff0000[BRIDGE] error: " .. tostring(err) .. "|r")
+            end
+        else
+            ProbeLogWrite("[BRIDGE] dispatcher missing")
+        end
+    end)
 end
 function SetupCodexPingChat()
     local trigger = CreateTrigger()
@@ -320,7 +352,7 @@ do
     end
 end
 print("[CORE] Framework loaded")
-ProbeLogWrite("[BOOT] Framework loaded")
+ProbeLogWrite("[BOOT] Framework loaded v2-bridge-fix")
 JASS_MAX_ARRAY_SIZE = 32768 -- vJASS constant, required by SanctifiedEnchantment hash ops
 -- globals from A1:
 LIBRARY_A1 = true	---@type boolean	
@@ -57737,6 +57769,7 @@ function main()
     OnInit.fn(SanctifiedEnchantment___Init, "SanctifiedEnchantment___Init")
     OnInit.fn(initBoolExprs___Init, "initBoolExprs___Init")
     OnInit.fn(SetupCodexPingChat, "SetupCodexPingChat")
+    OnInit.fn(SetupBridgeChat, "SetupBridgeChat")
     OnInit.fn(BridgeStart, "BridgeStart")
     OnInit.fn(DeferredUISetup, "DeferredUISetup")
     OnInit.fn(Face2, "Face2")
