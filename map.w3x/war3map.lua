@@ -57679,14 +57679,62 @@ RegisterAiRace("Goblins", {
             { at = 60, action = "mageTp" },
         },
     },
+    attackerData = {
+        [FourCC('h06K')] = {
+            { order = "flamestrike", chance = 4, type = "point" },
+        },
+        [FourCC('h06Y')] = {
+            { order = "bearform", chance = 4, type = "immediate" },
+        },
+        [FourCC('h06Z')] = {
+            { order = "bearform", chance = 4, type = "immediate" },
+        },
+        [FourCC('h06P')] = {
+            { order = "berserk", chance = 3, type = "immediate" },
+            { order = "dispel", chance = 6, type = "point", range = 280 },
+            { order = "ward", chance = 6, type = "point" },
+        },
+        [FourCC('H0BD')] = {
+            { order = "silence", chance = 5, type = "point" },
+            { order = "clusterrockets", chance = 5, type = "point" },
+            { order = "blizzard", chance = 5, type = "point" },
+        },
+        [FourCC('Galh')] = {
+            { order = "transmute", chance = 5, type = "target" },
+            { order = "acidbomb", chance = 5, type = "target" },
+            { order = "chemicalrage", chance = 5, type = "immediate" },
+            { order = "healingspray", chance = 5, type = "self" },
+        },
+        [FourCC('Gmex')] = {
+            { order = "summonfactory", chance = 5, type = "point" },
+            { order = "clusterrockets", chance = 5, type = "point" },
+            { order = "robogoblin", chance = 5, type = "immediate" },
+        },
+        [FourCC('h06X')] = {
+            { order = "berserk", chance = 4, type = "immediate" },
+            { order = "blackarrowon", chance = 5, type = "target" },
+            { order = "tranquility", chance = 6, type = "immediate", hp = 40 },
+        },
+        [FourCC('h06V')] = {
+            { order = "ravenform", chance = 4, type = "immediate" },
+        },
+        [FourCC('h06W')] = {
+            { order = "ravenform", chance = 4, type = "immediate" },
+        },
+        post = {
+            { order = "berserk", chance = 4, type = "immediate", needAbil = FourCC('A0BL') },
+        },
+    },
+    getLvlData = {
+        [FourCC('H0BD')] = { ult = FourCC('A0D7'), skills = { FourCC('A0D8'), FourCC('AEar'), FourCC('A0D5') } },
+        [FourCC('Galh')] = { ult = FourCC('ANtm'), skills = { FourCC('ANhs'), FourCC('ANab'), FourCC('ANcr') } },
+        [FourCC('Gmex')] = { ult = FourCC('ANrg'), skills = { FourCC('ANsy'), FourCC('ANcs'), FourCC('ANeg') } },
+    },
     chooseBuild = ChooseBuildings_Goblins,
     perebor = PereborBuildings_Goblins,
     join = Join_Goblins,
     strateg = Strateg_Goblins,
     strategEC = Strateg_Goblins_EC,
-    attacker = Attacker_Goblins,
-    attacked = AttackedGoblins,
-    getLvl = GetLvlGoblins,
     naval = aiNavalTrain_Goblins,
     wall = FourCC('h0D7'),
 })
