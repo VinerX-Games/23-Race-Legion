@@ -9,14 +9,17 @@ function UnitAlive(u)
 end
 ---@param unitid integer
 ---@return integer
-function GetUnitGoldCost(unitid) end	-- (native)
+-- vJASS->Lua emitted empty stubs that shadowed the engine natives -> nil/void
+-- (broke economy math: I2R(GetUnitGoldCost)/GoldDifference). Keep the real native
+-- if the engine provides it; fall back to 0 so unguarded arithmetic never hits nil.
+GetUnitGoldCost = GetUnitGoldCost or function(unitid) return 0 end
 ---@param unitid integer
 ---@return integer
-function GetUnitWoodCost(unitid) end	-- (native)
+GetUnitWoodCost = GetUnitWoodCost or function(unitid) return 0 end
 ---@param p player
 ---@param unitid integer
 ---@return integer
-function GetPlayerUnitTypeCount(p, unitid) end	-- (native)
+GetPlayerUnitTypeCount = GetPlayerUnitTypeCount or function(p, unitid) return 0 end
 -- Generated allocator of StackTemplate
 ---@return integer
 function s__StackTemplate__allocate()
