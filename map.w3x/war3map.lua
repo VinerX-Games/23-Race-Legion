@@ -23,7 +23,7 @@ _G.BridgeTickInterval = 0.25
 _G.BridgeDispatchCommand = nil
 _G.BridgePollTimer = nil
 _G.BridgeDebugTicks = 0
-_G.BridgeDebugMaxTicks = 20
+_G.BridgeDebugMaxTicks = 0
 local function probeLogSanitize(message)
     local text = tostring(message)
     text = text:gsub("[\r\n]", " | ")
@@ -33,9 +33,12 @@ end
 function ProbeLogWrite(message)
     local lines = ProbeLogLines
     lines[#lines + 1] = probeLogSanitize(message)
-    if #lines > 300 then
+    if #lines > 2000 then
         table.remove(lines, 1)
     end
+    pcall(function()
+        BJDebugMsg(tostring(message))
+    end)
     if not ProbeLogFlushEnabled then
         return
     end
@@ -430,7 +433,7 @@ SanctifiedEnchantment_BuffDuration = {}	---@type real
 -- globals from Races:
 LIBRARY_Races = true	---@type boolean	
 tArray = {}	---@type integer	
--- tB	---@type integer	
+tB = 0	---@type integer	
 Grades = {}	---@type integer	
 AiCapitalGuard = {}	---@type group	
 AiCapitalBuildigs = {}	---@type group	
@@ -2954,42 +2957,7 @@ function f_ToHeal()
 	else
 		u = nil
 		return false
-	end
-	
 end
--- Гланый фильтр для войск, кому надо отдать приказ
----@return boolean
-function f_Lazy()
-	gUnit = GetFilterUnit()
-	gInt = GetUnitCurrentOrder(gUnit)
-	
-	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(GetOwningPlayer(gUnit))]) and (gInt == 851972 or gInt == 851976 or gInt == 0) and  not (IsUnitType(gUnit, UNIT_TYPE_PEON) or IsUnitType(gUnit, UNIT_TYPE_STRUCTURE)) then	--  -- and ( gInt ==  851972 or gInt == 851976 or gInt == 0 ) and --
-		LazyCount = LazyCount + 1
-		return true
-	else
-		return false
-	end
-end
--- Тоже самое + проверка игрка так как тут жля радиуса
----@return boolean
-function f_LazyF()
-	gUnit = GetFilterUnit()
-	gInt = GetUnitCurrentOrder(gUnit)
-	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(CheckPlayer)]) and (gInt == 851972 or gInt == 851976 or gInt == 0) and  not (IsUnitType(gUnit, UNIT_TYPE_PEON) or IsUnitType(gUnit, UNIT_TYPE_STRUCTURE))	--   --and ( gInt ==  851972 or gInt == 851976 or gInt == 0 ) 
-	
-end
----@return boolean
-function f_LazyN()
-	gUnit = GetFilterUnit()
-	gInt = GetUnitCurrentOrder(gUnit)
-	
-	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_navy[GetPlayerId(CheckPlayer)]) and (gInt == 851972 or gInt == 851976 or gInt == 0) then
-		LazyCount = LazyCount + 1
-		return true
-	else
-		return false
-	end
-	
 end
 ---@return boolean
 function f_FixZ()
@@ -3004,13 +2972,13 @@ end
 function f_LazyW()
 	gUnit = GetFilterUnit()
 	gInt = GetUnitCurrentOrder(gUnit)
-	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_builders[GetPlayerId(GetOwningPlayer(gUnit))]) and (gInt == 851972 or gInt == 851976 or gInt == 0)
+	return GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and IsUnitInGroup(gUnit, udg_Ai_builders[GetPlayerId(GetOwningPlayer(gUnit))]) and (gInt == 851972 or gInt == 851976 or gInt == 0)
 end
 ---@return boolean
 function f_LazyT()
 	gUnit = GetFilterUnit()
 	gInt = GetUnitCurrentOrder(gUnit)
-	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_buildersT[GetPlayerId(GetOwningPlayer(gUnit))]) and (gInt == 851972 or gInt == 851976 or gInt == 0)
+	return GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and IsUnitInGroup(gUnit, udg_Ai_buildersT[GetPlayerId(GetOwningPlayer(gUnit))]) and (gInt == 851972 or gInt == 851976 or gInt == 0)
 end
 ---@return boolean
 function f_PortB()
@@ -3019,12 +2987,12 @@ end
 ---@return boolean
 function f_Worker()
 	gUnit = GetFilterUnit()
-	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_buildersT[GetPlayerId(GetOwningPlayer(gUnit))])
+	return GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and IsUnitInGroup(gUnit, udg_Ai_buildersT[GetPlayerId(GetOwningPlayer(gUnit))])
 end
 ---@return boolean
 function f_Harwest()
 	gUnit = GetFilterUnit()
-	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_harvest[GetPlayerId(GetOwningPlayer(gUnit))]) then
+	if GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and IsUnitInGroup(gUnit, udg_Ai_harvest[GetPlayerId(GetOwningPlayer(gUnit))]) then
 		return true
 	else
 		return false
@@ -3033,19 +3001,19 @@ end
 ---@return boolean
 function f_InAiArmy()
 	gUnit = GetFilterUnit()
-	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(GetOwningPlayer(gUnit))])
+	return GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(GetOwningPlayer(gUnit))])
 end
 ---@return boolean
 function f_InAiNavy()
 	gUnit = GetFilterUnit()
-	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_navy[GetPlayerId(GetOwningPlayer(gUnit))])
+	return GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and IsUnitInGroup(gUnit, udg_Ai_navy[GetPlayerId(GetOwningPlayer(gUnit))])
 end
 --  Здания в которых надо делать найм - без работы, в группе, определенного типа
 ---@return boolean
 function f_OnlyNeaded()
 	gUnit = GetFilterUnit()
 	
-	if  not UnitAlive(gUnit) then
+	if GetUnitState(gUnit, UNIT_STATE_LIFE) <= 0.405 then
 		return false
 	end
 	
@@ -3086,6 +3054,12 @@ function f_OnlyNeaded()
 			Counter = Counter + 1
 			return true
 		end
+		--  Jungle Trolls
+	elseif AiRace[gPi] == "JungleTrolls" then
+		if gInt == FourCC('h0N5') or gInt == FourCC('h0N2') or gInt == FourCC('h0MY') or gInt == FourCC('h0N3') or gInt == FourCC('h0N0') or gInt == FourCC('h0MX') or gInt == FourCC('h0MW') or gInt == FourCC('h0D3') or gInt == FourCC('h0N1') or gInt == FourCC('h0N6') then
+			Counter = Counter + 1
+			return true
+		end
 	end
 	return false
 end
@@ -3094,7 +3068,7 @@ function f_NavalBases()
 	gUnit = GetFilterUnit()
 	gId = GetUnitTypeId(gUnit)
 	
-	if UnitAlive(gUnit) and (gId == FourCC('h011') or gId == FourCC('h0D7') or gId == FourCC('n04L') or gId == FourCC('h0HO')) then
+	if GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and (gId == FourCC('h011') or gId == FourCC('h0D7') or gId == FourCC('n04L') or gId == FourCC('h0HO')) then
 		Counter = Counter + 1
 		return true
 	else
@@ -3167,7 +3141,7 @@ function AiLimitsSet()
 	
 	AiMass = IMaxBJ(8 - gInt, 4)
 	AiRepeat = 2 + IMinBJ(R2I(gInt / 2), 8)
-	
+	ProbeLogWrite("[AI] AiLimitsSet Bots=" .. tostring(gInt) .. " AiLimit=" .. tostring(AiLimit) .. " AiMass=" .. tostring(AiMass) .. " AiRepeat=" .. tostring(AiRepeat))
 end
 ---@return nothing
 function SetBools()
@@ -4376,7 +4350,7 @@ function AddBuilding(buildingId, count)
 	tB = 1	--  Базовый шанс
 	while true do
 		tArray[0] = tArray[0] + 1
-		tArray[tArray0] = buildingId
+		tArray[tArray[0]] = buildingId
 		tB = tB + 1
 		if tB > count then break end
 	end
@@ -4402,7 +4376,7 @@ function AddUnit(unitId, power)
 	tB = 1
 	while true do
 		tArray[0] = tArray[0] + 1
-		tArray[tArray0] = unitId
+		tArray[tArray[0]] = unitId
 		tB = tB + 1
 		if tB > power then break end
 	end
@@ -4579,14 +4553,15 @@ function startBloodElves(pi)
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
 	CreateNUnitsAtLoc(1, FourCC('h04C'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_units[pi])
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_buildings[pi])
+	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
 	SaveInteger(AiData, pi, FourCC('h04K'), 8)
 	SaveInteger(AiData, pi, FourCC('h04C'), 1)
 	SetPlayerName(Player(pi), "Эльфы Крови (" .. I2S(pi + 1) .. ")")
 	SaveStr(AiData, pi, StringHash("Race"), "BE")
 	TriggerExecute(gg_trg_BloodElvesOn)
 	AiRace[pi] = "BloodElves"
+	ProbeLogWrite("[AI] startBloodElves pi=" .. tostring(pi) .. " workers=8h04K building=1h04C")
 end
 -- ***************************************************************************
 -- *  JoinBloodElves
@@ -5237,15 +5212,16 @@ function startScarlet(pi)
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
 	CreateNUnitsAtLoc(1, FourCC('h05U'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_units[pi])
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_buildings[pi])
-	
+	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+
 	SaveInteger(AiData, pi, FourCC('h014'), 8)
 	SaveInteger(AiData, pi, FourCC('h05U'), 1)
 	SetPlayerName(Player(pi), "Алый Орден (" .. I2S(pi + 1) .. ")")
 	SaveStr(AiData, pi, StringHash("Race"), "AO")
 	
 	AiRace[pi] = "Scarlet"
+	ProbeLogWrite("[AI] startScarlet pi=" .. tostring(pi) .. " workers=8h014 building=1h05U")
 end
 -- ***************************************************************************
 -- *  JoinScarlet
@@ -5880,9 +5856,9 @@ function startGoblins(pi)
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
 	CreateNUnitsAtLoc(1, FourCC('h070'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_units[pi])
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_buildings[pi])
-	
+	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+
 	SaveInteger(AiData, pi, FourCC('n00V'), 8)
 	SaveInteger(AiData, pi, FourCC('h070'), 1)
 	SetPlayerName(Player(pi), "Картель (" .. I2S(pi + 1) .. ")")
@@ -5891,6 +5867,7 @@ function startGoblins(pi)
 	TriggerExecute(gg_trg_StartG)
 	
 	AiRace[pi] = "Goblins"
+	ProbeLogWrite("[AI] startGoblins pi=" .. tostring(pi) .. " workers=8n00V building=1h070")
 end
 -- ***************************************************************************
 -- *  JoinGoblins
@@ -6279,9 +6256,9 @@ function startHorde(pi)
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
 	CreateNUnitsAtLoc(1, FourCC('ogre'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_units[pi])
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_buildings[pi])
-	
+	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+
 	SaveInteger(AiData, pi, FourCC('opeo'), 8)
 	SaveInteger(AiData, pi, FourCC('ogre'), 1)
 	SetPlayerName(Player(pi), "Орда (" .. I2S(pi + 1) .. ")")
@@ -6290,6 +6267,7 @@ function startHorde(pi)
 	TriggerExecute(gg_trg_HordeOn)
 	
 	AiRace[pi] = "Horde"
+	ProbeLogWrite("[AI] startHorde pi=" .. tostring(pi) .. " workers=8opeo building=1ogre")
 end
 -- ***************************************************************************
 -- *  JoinHorde
@@ -6756,9 +6734,9 @@ function startNaga(pi)
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
 	CreateNUnitsAtLoc(1, FourCC('nntt'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_units[pi])
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_buildings[pi])
-	
+	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+
 	SaveInteger(AiData, pi, FourCC('nmpe'), 8)
 	SaveInteger(AiData, pi, FourCC('nntt'), 1)
 	SetPlayerName(Player(pi), "Стая (" .. I2S(pi + 1) .. ")")
@@ -6766,6 +6744,7 @@ function startNaga(pi)
 	TriggerExecute(gg_trg_NagaStart)
 	
 	AiRace[pi] = "Naga"
+	ProbeLogWrite("[AI] startNaga pi=" .. tostring(pi) .. " workers=8nmpe building=1nntt")
 end
 -- ***************************************************************************
 -- *  JoinNaga
@@ -7193,8 +7172,8 @@ function startJungleTrolls(pi)
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
 	CreateNUnitsAtLoc(1, FourCC('h0N5'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_units[pi])
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_buildings[pi])
+	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
 	SaveInteger(AiData, pi, FourCC('o04Q'), 5)
 	SaveInteger(AiData, pi, FourCC('h0N5'), 1)
 	SaveStr(AiData, pi, StringHash("Race"), "JT")
@@ -7203,6 +7182,7 @@ function startJungleTrolls(pi)
 	StartJungleTrolls()
 	AiChooseJungleTrollsBranch(pi)
 	AiRace[pi] = "JungleTrolls"
+	ProbeLogWrite("[AI] startJungleTrolls pi=" .. tostring(pi) .. " workers=5o04Q building=1h0N5")
 end
 ---@param u unit
 ---@param pi integer
@@ -7357,7 +7337,9 @@ function PereborBuildings2_JungleTrolls(id, pi, u)
 			a[0] = a[0] + 1
 			a[a[0]] = FourCC('o05E')
 		end
-		IssueImmediateOrderById(u, a[GetRandomInt(1, a[0])])
+		local trainId = a[GetRandomInt(1, a[0])]
+		ProbeLogWrite("[AIBUILD] PereborJT h0MY(barracks) pi=" .. tostring(pi) .. " train=" .. tostring(trainId))
+		IssueImmediateOrderById(u, trainId)
 	elseif id == FourCC('h0MX') then
 		a[0] = 0
 		for _ = 1, 3 do
@@ -7595,22 +7577,31 @@ end
 ---@return boolean
 function StartAiRaceByToken(pi, token)
 	if token == nil or token == "" then
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " token=nil -> random will be used")
 		return false
 	end
 	token = string.lower(token)
+	ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " token=" .. tostring(token))
 	if token == "scarlet" or token == "so" then
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Scarlet")
 		startScarlet(pi)
 	elseif token == "be" or token == "bloodelves" or token == "ek" then
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => BloodElves")
 		startBloodElves(pi)
 	elseif token == "goblins" or token == "gob" then
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Goblins")
 		startGoblins(pi)
 	elseif token == "naga" then
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Naga")
 		startNaga(pi)
 	elseif token == "horde" then
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Horde")
 		startHorde(pi)
 	elseif token == "jt" or token == "jungletrolls" or token == "trolls" then
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => JungleTrolls")
 		startJungleTrolls(pi)
 	else
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " token=" .. tostring(token) .. " unknown -> random will be used")
 		return false
 	end
 	return true
@@ -7619,21 +7610,25 @@ end
 ---@param raceToken string|nil   optional race override; nil/unknown = random
 ---@return nothing
 function createAiPlayer(pi, raceToken)
+	ProbeLogWrite("[AI] createAiPlayer ENTER pi=" .. tostring(pi) .. " raceToken=" .. tostring(raceToken or "nil"))
 	gPlayer = Player(pi)
 	TriggerExecute(gg_trg_TurnAi)
-
+	ProbeLogWrite("[AI] createAiPlayer TurnAi executed")
 
 	udg_AiControl[pi] = true
 	ForceAddPlayerSimple(gPlayer, udg_Bots)
+	ProbeLogWrite("[AI] createAiPlayer bot added to Bots force, count=" .. tostring(CountPlayersInForceBJ(udg_Bots)))
 	--  Обычное появление и ресы
 
 	-- Задаю место
 
 	udg_LocalPoint = (StartLoc[GetRandomInt(0, StartLocCount - 1)])	--  INLINED!!
+	ProbeLogWrite("[AI] createAiPlayer start location set")
 
 	--  Раса аи (опциональный форс через raceToken, иначе случайно)
 	if not StartAiRaceByToken(pi, raceToken) then
 		gInt = GetRandomInt(1, 6)
+		ProbeLogWrite("[AI] createAiPlayer random race roll=" .. tostring(gInt))
 
 		-- Алый орден
 		if gInt == 1 then
@@ -7650,6 +7645,7 @@ function createAiPlayer(pi, raceToken)
 			startJungleTrolls(pi)
 		end
 	end
+	ProbeLogWrite("[AI] createAiPlayer race=" .. tostring(AiRace[pi]) .. " set")
 	
 	udg_LocalText2 = GetPlayerName(gPlayer)
 	udg_LocalText2 = ((I2S(pi + 1) .. ". ") .. udg_LocalText2)
@@ -7664,12 +7660,14 @@ function createAiPlayer(pi, raceToken)
 	BonusUnit[pi] = CreateUnitAtLoc(gPlayer, FourCC('aiu0'), udg_LocalPoint, bj_UNIT_FACING)
 	UnitAddAbility(BonusUnit[pi], FourCC('aib0'))
 	UnitAddAbility(BonusUnit[pi], FourCC('aib1'))
+	ProbeLogWrite("[AI] createAiPlayer bonus unit created")
 	
 	CreateArmyBonusUnit(gPlayer)
 	
 	-- Лимиты
 	SetLimits(gPlayer)
 	AiLimitsSet()
+	ProbeLogWrite("[AI] createAiPlayer limits set AiRepeat=" .. tostring(AiRepeat) .. " AiMass=" .. tostring(AiMass) .. " AiLimit=" .. tostring(AiLimit))
 	
 	
 	SetPlayerStateBJ(gPlayer, PLAYER_STATE_RESOURCE_GOLD, 5000)
@@ -7681,12 +7679,18 @@ function createAiPlayer(pi, raceToken)
 	--  Таймеры ИИ
 	
 	StartTimerBJ(udg_TimerSmall, false, 1.11 * AiRepeat / 5)
+	ProbeLogWrite("[AI] createAiPlayer TimerSmall started period=" .. tostring(1.11 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerSmall2, false, 2.12 * AiRepeat / 5)
+	ProbeLogWrite("[AI] createAiPlayer TimerSmall2 started period=" .. tostring(2.12 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerSmall3, false, 3.13 * AiRepeat / 5)
+	ProbeLogWrite("[AI] createAiPlayer TimerSmall3 started period=" .. tostring(3.13 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerSmall4, false, 4.14 * AiRepeat / 5)
+	ProbeLogWrite("[AI] createAiPlayer TimerSmall4 started period=" .. tostring(4.14 * AiRepeat / 5))
 	StartTimerBJ(udg_AiTimerStrateg, true, 15.15 * AiRepeat / 5)
+	ProbeLogWrite("[AI] createAiPlayer AiTimerStrateg started period=" .. tostring(15.15 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerToChangeAi, false, 600.00)
 	TimerStart(aiFixer, 1800.00, true, nil)
+	ProbeLogWrite("[AI] createAiPlayer DONE pi=" .. tostring(pi) .. " race=" .. tostring(AiRace[pi]) .. " AiRepeat=" .. tostring(AiRepeat))
 end
 -- library AI2 ends
 -- ===========================================================================
@@ -8134,6 +8138,7 @@ function InitGlobals()
 		udg_Ai_buildings[i] = CreateGroup()
 		i = i + 1
 	end
+	ProbeLogWrite("[AI] Ai_buildings groups created for 0..25")
 	
 	udg_TimerSmall = CreateTimer()
 	udg_TimerSmall2 = CreateTimer()
@@ -10830,7 +10835,7 @@ end
 ---@return nothing
 function aiKilledCity(u)
 	udg_LocalUnit2 = u
-	ExecuteFunc("TryAttack")
+	TryAttack()
 end
 -- ***************************************************************************
 -- *  GoToWater
@@ -10903,6 +10908,7 @@ function TryBuild()
 	gPi = GetPlayerId(GetOwningPlayer(gUnit))
 	gX = GetUnitX(gUnit)
 	gY = GetUnitY(gUnit)
+	ProbeLogWrite("[AIBUILD] TryBuild ENTER pi=" .. tostring(gPi) .. " race=" .. tostring(AiRace[gPi]) .. " unitId=" .. tostring(GetUnitTypeId(gUnit)))
 	
 	
 	-- call DisplayTimedTextFromPlayer( Player( 0x00 ), 0, 0, 4, "Вхожу в билд" )
@@ -10917,6 +10923,7 @@ function TryBuild()
 		
 		
 		if Random(1, 2) then
+			ProbeLogWrite("[AIBUILD] TryBuild trying port building pi=" .. tostring(gPi))
 			
 			gInt2 = 0
 			
@@ -10931,14 +10938,19 @@ function TryBuild()
 					
 					
 					if AiRace[gPi] == "Scarlet" or AiRace[gPi] == "BloodElves" then
+						ProbeLogWrite("[AIBUILD] TryBuild port order h011 pi=" .. tostring(gPi))
 						IssueBuildOrderById(gUnit, FourCC('h011'), gX2, gY2)
 					elseif AiRace[gPi] == "Goblins" then
+						ProbeLogWrite("[AIBUILD] TryBuild port order h0D7 pi=" .. tostring(gPi))
 						IssueBuildOrderById(gUnit, FourCC('h0D7'), gX2, gY2)
 					elseif AiRace[gPi] == "Naga" then
+						ProbeLogWrite("[AIBUILD] TryBuild port order n04L pi=" .. tostring(gPi))
 						IssueBuildOrderById(gUnit, FourCC('n04L'), gX2, gY2)
 					elseif AiRace[gPi] == "Horde" then
+						ProbeLogWrite("[AIBUILD] TryBuild port order h0HO pi=" .. tostring(gPi))
 						IssueBuildOrderById(gUnit, FourCC('h0HO'), gX2, gY2)
 					elseif AiRace[gPi] == "JungleTrolls" then
+						ProbeLogWrite("[AIBUILD] TryBuild port order h0N2 pi=" .. tostring(gPi))
 						IssueBuildOrderById(gUnit, FourCC('h0N2'), gX2, gY2)
 					end
 					
@@ -10952,11 +10964,13 @@ function TryBuild()
 		
 		-- Идти к точке где много воды
 	elseif AiRace[gPi] ~= "Naga" and GoToWaterPoint(gPi, gUnit, gX, gY) then
+		ProbeLogWrite("[AIBUILD] TryBuild GoToWaterPoint pi=" .. tostring(gPi))
 		return 
 	end
 	
 	-- Шанс перейти на новую локу
 	if Random(1, 25) then
+		ProbeLogWrite("[AIBUILD] TryBuild random move pi=" .. tostring(gPi))
 		gX = gX + AiBuildingRadius * 7 * Cos(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
 		gY = gY + AiBuildingRadius * 7 * Sin(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
 		IssuePointOrder(gUnit, "move", gX, gY)
@@ -10984,6 +10998,7 @@ function TryBuild()
 		gInt = ChooseBuildings_JungleTrolls(gPi)
 	end
 	
+	ProbeLogWrite("[AIBUILD] TryBuild IssueBuildOrderById pi=" .. tostring(gPi) .. " buildingId=" .. tostring(gInt) .. " x=" .. tostring(gX) .. " y=" .. tostring(gY))
 	IssueBuildOrderById(gUnit, gInt, gX, gY)
 	
 end
@@ -52791,7 +52806,9 @@ end
 -- Trigger: TurnAi
 --===========================================================================
 function Trig_TurnAi_Actions()
+    ProbeLogWrite("[AI] TurnAi: checking if triggers already enabled")
     if not IsTriggerEnabled(gg_trg_OchetStart) then
+        ProbeLogWrite("[AI] TurnAi: enabling all AI triggers (first bot)")
         EnableTrigger(gg_trg_OchetStart)
         EnableTrigger(gg_trg_OchetEnd)
         EnableTrigger(gg_trg_PereborPlayersForBuilders)
@@ -53224,6 +53241,10 @@ function AddPlayers2()
 end
 function Trig_PereborPlayersForBuilders_Actions()
     PauseTimer(udg_TimerSmall)
+    if not LoadBoolean(AiData, -1, StringHash("TickLog_TimerSmall")) then
+        SaveBoolean(AiData, -1, StringHash("TickLog_TimerSmall"), true)
+        ProbeLogWrite("[AI] PereborPlayersForBuilders FIRST TICK")
+    end
     if udg_Octhet then
         DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
     end
@@ -53254,6 +53275,10 @@ function PlayerBuilders()
     else
         gPlayer=ForcePickRandomPlayer(udg_BotsActiveB)
         pi=GetPlayerId(gPlayer)
+        if not LoadBoolean(AiData, pi, StringHash("Log_PlayerBuilders")) then
+            SaveBoolean(AiData, pi, StringHash("Log_PlayerBuilders"), true)
+            ProbeLogWrite("[AI] PlayerBuilders processing pi=" .. tostring(pi) .. " race=" .. tostring(AiRace[pi]))
+        end
         ForceRemovePlayer(udg_BotsActiveB, gPlayer)
             
     
@@ -53261,6 +53286,11 @@ function PlayerBuilders()
         -- Перебор юнитов !!!
         --Нераспределенные рабочие
         GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_LazyW)
+        if not LoadBoolean(AiData, pi, StringHash("Log_LazyWcount")) then
+            SaveBoolean(AiData, pi, StringHash("Log_LazyWcount"), true)
+            local hasWorkers = FirstOfGroup(gGroup) ~= nil
+            ProbeLogWrite("[AIBUILD] PlayerBuilders pi=" .. tostring(pi) .. " LazyW workers found=" .. tostring(hasWorkers))
+        end
         if FirstOfGroup(gGroup) ~= nil then
             bj_forLoopAIndex=1
             while true do
@@ -53280,7 +53310,8 @@ function PlayerBuilders()
                     GroupAddUnit(udg_Ai_buildersT[pi], gUnit)
                     GroupRemoveUnit(udg_Ai_builders[pi], gUnit)
                     TryBuild_u=gUnit
-                    ExecuteFunc("TryBuild")
+                    ProbeLogWrite("[AIBUILD] PlayerBuilders calling TryBuild pi=" .. tostring(pi) .. " unitId=" .. tostring(GetUnitTypeId(gUnit)))
+                    TryBuild()
                 end
                 bj_forLoopAIndex=bj_forLoopAIndex + 1
             end
@@ -53289,6 +53320,11 @@ function PlayerBuilders()
         
         -- Рабочие-строители
         GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_LazyT)
+        if not LoadBoolean(AiData, pi, StringHash("Log_LazyTcount")) then
+            SaveBoolean(AiData, pi, StringHash("Log_LazyTcount"), true)
+            local hasBuilders = FirstOfGroup(gGroup) ~= nil
+            ProbeLogWrite("[AIBUILD] PlayerBuilders pi=" .. tostring(pi) .. " LazyT builders found=" .. tostring(hasBuilders))
+        end
         if FirstOfGroup(gGroup) ~= nil then
             bj_forLoopAIndex=1
             bj_forLoopAIndexEnd=3
@@ -53297,7 +53333,7 @@ function PlayerBuilders()
                 gUnit=FirstOfGroup(gGroup)
                 GroupRemoveUnit(gGroup, gUnit)
                 TryBuild_u=gUnit
-                ExecuteFunc("TryBuild")
+                TryBuild()
                 
                 bj_forLoopAIndex=bj_forLoopAIndex + 1
             end
@@ -53322,7 +53358,7 @@ function PlayerBuilders()
                 NumberAdd(pi , StringHash("T"))
                 NumberRem(pi , StringHash("HV"))
                 TryBuild_u=gUnit
-                ExecuteFunc("TryBuild")
+                TryBuild()
             end
             
         end
@@ -53347,6 +53383,10 @@ end
 --Главное тело триггера стопаю таймер, делаю дела, запускаю
 function Trig_PereborPlayerForArmy_Actions()
     PauseTimer(udg_TimerSmall2)
+    if not LoadBoolean(AiData, -1, StringHash("TickLog_TimerSmall2")) then
+        SaveBoolean(AiData, -1, StringHash("TickLog_TimerSmall2"), true)
+        ProbeLogWrite("[AI] PereborPlayerForArmy FIRST TICK")
+    end
     if udg_Octhet then
         DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
     end
@@ -53378,6 +53418,11 @@ function PlayerArmy()
     else
             --Каждый отдельный игро
         gPlayer=ForcePickRandomPlayer(udg_BotsActive)
+        local pi_army = GetPlayerId(gPlayer)
+        if not LoadBoolean(AiData, pi_army, StringHash("Log_PlayerArmy")) then
+            SaveBoolean(AiData, pi_army, StringHash("Log_PlayerArmy"), true)
+            ProbeLogWrite("[AI] PlayerArmy processing pi=" .. tostring(pi_army) .. " race=" .. tostring(AiRace[pi_army]))
+        end
         ForceRemovePlayer(udg_BotsActive, gPlayer)
         LazyCount=0
         if gAllyGroup == nil then
@@ -53401,10 +53446,10 @@ function PlayerArmy()
                     if Random(1 , 2) then
                         IssueImmediateOrder(udg_LocalUnit2, "autoharvestlumber")
                     else
-                        ExecuteFunc("TryAttack")
+                        TryAttack()
                     end
                 else
-                    ExecuteFunc("TryAttack")
+                    TryAttack()
                 end
                 
                 udg_LocalInteger=udg_LocalInteger + 1
@@ -53430,6 +53475,10 @@ end
 --Главное тело триггера стопаю таймер, делаю дела, запускаю
 function Trig_PereborPlayerForNavy_Actions()
     PauseTimer(udg_TimerSmall4)
+    if not LoadBoolean(AiData, -1, StringHash("TickLog_TimerSmall4")) then
+        SaveBoolean(AiData, -1, StringHash("TickLog_TimerSmall4"), true)
+        ProbeLogWrite("[AI] PereborPlayerForNavy FIRST TICK")
+    end
     if udg_Octhet then
     DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
     end
@@ -53473,6 +53522,11 @@ function PlayerNavy()
     else
         
         p=ForcePickRandomPlayer(udg_BotsActiveB)
+        local pi_navy = GetPlayerId(p)
+        if not LoadBoolean(AiData, pi_navy, StringHash("Log_PlayerNavy")) then
+            SaveBoolean(AiData, pi_navy, StringHash("Log_PlayerNavy"), true)
+            ProbeLogWrite("[AI] PlayerNavy processing pi=" .. tostring(pi_navy) .. " race=" .. tostring(AiRace[pi_navy]))
+        end
         --call BJDebugMsg(""+GetPlayerName(p))
         ForceRemovePlayer(udg_BotsActiveB, p)
         
@@ -53495,7 +53549,7 @@ function PlayerNavy()
                 i=i + 1
                 --if id=='h00Y' or id=='h00Z' or id == 'h06W'  or id == 'h0DM'  or id == 'h06V' or id == 'h06X' or id == 'n079' then
                     udg_LocalUnit3=u
-                    ExecuteFunc("TryAttackN")
+                    TryAttackN()
                 --endif
             end
         end
@@ -53520,8 +53574,33 @@ function Trig_PereborBuildings_Code_Func002A()
     gPi=GetPlayerId(gPlayer)
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_OnlyNeaded)
+    local numberCount = LoadInteger(AiData, gPi, StringHash("Number"))
     -- Пропуск если 0 или лимит юнитов
     if FirstOfGroup(gGroup) == nil then
+        if not LoadBoolean(AiData, gPi, StringHash("Log_PereborNoBld")) then
+            SaveBoolean(AiData, gPi, StringHash("Log_PereborNoBld"), true)
+            ProbeLogWrite("[AIBUILD] PereborBuildings pi=" .. tostring(gPi) .. " NO buildings in B_OnlyNeaded group, Number=" .. tostring(numberCount) .. " AiLimit=" .. tostring(AiLimit) .. " AiRace=" .. tostring(AiRace[gPi]))
+            -- Manual scan of Ai_buildings group
+            local bldGrp = udg_Ai_buildings[gPi]
+            local bldOk, bldErr = pcall(function()
+                local manualCount = 0
+                local manualU = FirstOfGroup(bldGrp)
+                while manualU ~= nil do
+                    manualCount = manualCount + 1
+                    local uid = GetUnitTypeId(manualU)
+                    local alive = UnitAlive(manualU)
+                    ProbeLogWrite("[AIBUILD] Ai_buildings[" .. tostring(gPi) .. "] unit #" .. tostring(manualCount) .. " id=" .. tostring(uid) .. " alive=" .. tostring(alive))
+                    GroupRemoveUnit(bldGrp, manualU)
+                    manualU = FirstOfGroup(bldGrp)
+                end
+                if manualCount == 0 then
+                    ProbeLogWrite("[AIBUILD] Ai_buildings[" .. tostring(gPi) .. "] EMPTY (zero units)")
+                end
+            end)
+            if not bldOk then
+                ProbeLogWrite("[AIBUILD] Ai_buildings[" .. tostring(gPi) .. "] ERROR: " .. tostring(bldErr))
+            end
+        end
         if udg_Octhet then
             DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) + " - ")
         end
@@ -53530,22 +53609,36 @@ function Trig_PereborBuildings_Code_Func002A()
             DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) + " - ")
         end
         return
-    elseif LoadInteger(AiData, gPi, StringHash("Number")) > AiLimit then
+    elseif numberCount > AiLimit then
+        if not LoadBoolean(AiData, gPi, StringHash("Log_PereborOverLimit")) then
+            SaveBoolean(AiData, gPi, StringHash("Log_PereborOverLimit"), true)
+            ProbeLogWrite("[AIBUILD] PereborBuildings pi=" .. tostring(gPi) .. " OVER LIMIT Number=" .. tostring(numberCount) .. " > AiLimit=" .. tostring(AiLimit))
+        end
         if udg_Octhet then
             DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) + " - ")
         end
         return
     end
     
+    if not LoadBoolean(AiData, gPi, StringHash("Log_PereborWorking")) then
+        SaveBoolean(AiData, gPi, StringHash("Log_PereborWorking"), true)
+        ProbeLogWrite("[AIBUILD] PereborBuildings pi=" .. tostring(gPi) .. " HAS " .. tostring(Counter) .. " buildings to process, Number=" .. tostring(numberCount) .. "/" .. tostring(AiLimit))
+    end
     --Собственно группа зданий, которые надо чекать 
        
     bj_forLoopAIndex=1
     bj_forLoopAIndexEnd=8
+    local trainLogCount = 0
     while true do
         if bj_forLoopAIndex > bj_forLoopAIndexEnd or FirstOfGroup(gGroup) == null then break end
         gUnit=BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter))
         GroupRemoveUnit(gGroup, gUnit)
         gId=GetUnitTypeId(gUnit)
+        
+        if trainLogCount < 3 then
+            trainLogCount = trainLogCount + 1
+            ProbeLogWrite("[AIBUILD] PereborBuildings pi=" .. tostring(gPi) .. " buildingId=" .. tostring(gId) .. " race=" .. tostring(AiRace[gPi]))
+        end
         
         if AiRace[gPi] == "Scarlet" then
             PereborBuildings_ScarletOrden(gId , gPi , gUnit)
@@ -53566,6 +53659,10 @@ function Trig_PereborBuildings_Code_Func002A()
 end
 function Trig_PereborBuildings_Actions()
     PauseTimer(udg_TimerSmall3)
+    if not LoadBoolean(AiData, -1, StringHash("TickLog_TimerSmall3")) then
+        SaveBoolean(AiData, -1, StringHash("TickLog_TimerSmall3"), true)
+        ProbeLogWrite("[AI] PereborBuildings FIRST TICK")
+    end
     if udg_Octhet then
         DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
     end
@@ -53704,6 +53801,10 @@ function Strateg()
     local r= 0
     local p= GetEnumPlayer()
     local pi= GetPlayerId(p)
+    if not LoadBoolean(AiData, pi, StringHash("Log_Strateg")) then
+        SaveBoolean(AiData, pi, StringHash("Log_Strateg"), true)
+        ProbeLogWrite("[AI] Strateg processing pi=" .. tostring(pi) .. " race=" .. tostring(AiRace[pi]))
+    end
     
     
     -- Считаю фермы и точки
@@ -53753,7 +53854,7 @@ function Strateg()
         if r > i / 55 then break end
         if FirstOfGroup(AiUnitsToPort[pi]) ~= nil then
             TryPort_pi=pi
-            ExecuteFunc("TryPort")
+            TryPort()
             
         end
         r=r + 1
@@ -53761,6 +53862,10 @@ function Strateg()
 end
 function Trig_Strateg_Actions()
     
+    if not LoadBoolean(AiData, -1, StringHash("TickLog_Strateg")) then
+        SaveBoolean(AiData, -1, StringHash("TickLog_Strateg"), true)
+        ProbeLogWrite("[AI] Strateg FIRST TICK")
+    end
     if udg_Octhet then
         DisplayTimedTextFromPlayer(GetEnumPlayer(), 0, 0, 4, "")
     end
@@ -54065,7 +54170,7 @@ function Trig_EndBuilding_Actions()
     gUnit=FirstOfGroup(gGroup)
     
     TryBuild_u=gUnit
-    ExecuteFunc("TryBuild")
+    TryBuild()
 end
 --===========================================================================
 function InitTrig_EndBuilding()

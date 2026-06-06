@@ -23,7 +23,7 @@ _G.BridgeTickInterval = 0.25
 _G.BridgeDispatchCommand = nil
 _G.BridgePollTimer = nil
 _G.BridgeDebugTicks = 0
-_G.BridgeDebugMaxTicks = 20
+_G.BridgeDebugMaxTicks = 0
 local function probeLogSanitize(message)
     local text = tostring(message)
     text = text:gsub("[\r\n]", " | ")
@@ -33,9 +33,12 @@ end
 function ProbeLogWrite(message)
     local lines = ProbeLogLines
     lines[#lines + 1] = probeLogSanitize(message)
-    if #lines > 300 then
+    if #lines > 2000 then
         table.remove(lines, 1)
     end
+    pcall(function()
+        BJDebugMsg(tostring(message))
+    end)
     if not ProbeLogFlushEnabled then
         return
     end

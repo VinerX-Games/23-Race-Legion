@@ -9,7 +9,7 @@ function AddBuilding(buildingId, count)
 	tB = 1	--  Базовый шанс
 	while true do
 		tArray[0] = tArray[0] + 1
-		tArray[tArray0] = buildingId
+		tArray[tArray[0]] = buildingId
 		tB = tB + 1
 		if tB > count then break end
 	end
@@ -35,7 +35,7 @@ function AddUnit(unitId, power)
 	tB = 1
 	while true do
 		tArray[0] = tArray[0] + 1
-		tArray[tArray0] = unitId
+		tArray[tArray[0]] = unitId
 		tB = tB + 1
 		if tB > power then break end
 	end
@@ -212,14 +212,15 @@ function startBloodElves(pi)
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
 	CreateNUnitsAtLoc(1, FourCC('h04C'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_units[pi])
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_buildings[pi])
+	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
 	SaveInteger(AiData, pi, FourCC('h04K'), 8)
 	SaveInteger(AiData, pi, FourCC('h04C'), 1)
 	SetPlayerName(Player(pi), "Эльфы Крови (" .. I2S(pi + 1) .. ")")
 	SaveStr(AiData, pi, StringHash("Race"), "BE")
 	TriggerExecute(gg_trg_BloodElvesOn)
 	AiRace[pi] = "BloodElves"
+	ProbeLogWrite("[AI] startBloodElves pi=" .. tostring(pi) .. " workers=8h04K building=1h04C")
 end
 -- ***************************************************************************
 -- *  JoinBloodElves
@@ -870,15 +871,16 @@ function startScarlet(pi)
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
 	CreateNUnitsAtLoc(1, FourCC('h05U'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_units[pi])
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_buildings[pi])
-	
+	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+
 	SaveInteger(AiData, pi, FourCC('h014'), 8)
 	SaveInteger(AiData, pi, FourCC('h05U'), 1)
 	SetPlayerName(Player(pi), "Алый Орден (" .. I2S(pi + 1) .. ")")
 	SaveStr(AiData, pi, StringHash("Race"), "AO")
 	
 	AiRace[pi] = "Scarlet"
+	ProbeLogWrite("[AI] startScarlet pi=" .. tostring(pi) .. " workers=8h014 building=1h05U")
 end
 -- ***************************************************************************
 -- *  JoinScarlet
@@ -1513,9 +1515,9 @@ function startGoblins(pi)
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
 	CreateNUnitsAtLoc(1, FourCC('h070'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_units[pi])
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_buildings[pi])
-	
+	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+
 	SaveInteger(AiData, pi, FourCC('n00V'), 8)
 	SaveInteger(AiData, pi, FourCC('h070'), 1)
 	SetPlayerName(Player(pi), "Картель (" .. I2S(pi + 1) .. ")")
@@ -1524,6 +1526,7 @@ function startGoblins(pi)
 	TriggerExecute(gg_trg_StartG)
 	
 	AiRace[pi] = "Goblins"
+	ProbeLogWrite("[AI] startGoblins pi=" .. tostring(pi) .. " workers=8n00V building=1h070")
 end
 -- ***************************************************************************
 -- *  JoinGoblins
@@ -1912,9 +1915,9 @@ function startHorde(pi)
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
 	CreateNUnitsAtLoc(1, FourCC('ogre'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_units[pi])
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_buildings[pi])
-	
+	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+
 	SaveInteger(AiData, pi, FourCC('opeo'), 8)
 	SaveInteger(AiData, pi, FourCC('ogre'), 1)
 	SetPlayerName(Player(pi), "Орда (" .. I2S(pi + 1) .. ")")
@@ -1923,6 +1926,7 @@ function startHorde(pi)
 	TriggerExecute(gg_trg_HordeOn)
 	
 	AiRace[pi] = "Horde"
+	ProbeLogWrite("[AI] startHorde pi=" .. tostring(pi) .. " workers=8opeo building=1ogre")
 end
 -- ***************************************************************************
 -- *  JoinHorde
@@ -2389,9 +2393,9 @@ function startNaga(pi)
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
 	CreateNUnitsAtLoc(1, FourCC('nntt'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_units[pi])
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_buildings[pi])
-	
+	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+
 	SaveInteger(AiData, pi, FourCC('nmpe'), 8)
 	SaveInteger(AiData, pi, FourCC('nntt'), 1)
 	SetPlayerName(Player(pi), "Стая (" .. I2S(pi + 1) .. ")")
@@ -2399,6 +2403,7 @@ function startNaga(pi)
 	TriggerExecute(gg_trg_NagaStart)
 	
 	AiRace[pi] = "Naga"
+	ProbeLogWrite("[AI] startNaga pi=" .. tostring(pi) .. " workers=8nmpe building=1nntt")
 end
 -- ***************************************************************************
 -- *  JoinNaga
@@ -2826,8 +2831,8 @@ function startJungleTrolls(pi)
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
 	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
 	CreateNUnitsAtLoc(1, FourCC('h0N5'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_units[pi])
-	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_buildings[pi])
+	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
 	SaveInteger(AiData, pi, FourCC('o04Q'), 5)
 	SaveInteger(AiData, pi, FourCC('h0N5'), 1)
 	SaveStr(AiData, pi, StringHash("Race"), "JT")
@@ -2836,6 +2841,7 @@ function startJungleTrolls(pi)
 	StartJungleTrolls()
 	AiChooseJungleTrollsBranch(pi)
 	AiRace[pi] = "JungleTrolls"
+	ProbeLogWrite("[AI] startJungleTrolls pi=" .. tostring(pi) .. " workers=5o04Q building=1h0N5")
 end
 ---@param u unit
 ---@param pi integer
@@ -2990,7 +2996,9 @@ function PereborBuildings2_JungleTrolls(id, pi, u)
 			a[0] = a[0] + 1
 			a[a[0]] = FourCC('o05E')
 		end
-		IssueImmediateOrderById(u, a[GetRandomInt(1, a[0])])
+		local trainId = a[GetRandomInt(1, a[0])]
+		ProbeLogWrite("[AIBUILD] PereborJT h0MY(barracks) pi=" .. tostring(pi) .. " train=" .. tostring(trainId))
+		IssueImmediateOrderById(u, trainId)
 	elseif id == FourCC('h0MX') then
 		a[0] = 0
 		for _ = 1, 3 do

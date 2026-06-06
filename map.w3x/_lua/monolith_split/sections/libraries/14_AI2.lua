@@ -103,22 +103,31 @@ end
 ---@return boolean
 function StartAiRaceByToken(pi, token)
 	if token == nil or token == "" then
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " token=nil -> random will be used")
 		return false
 	end
 	token = string.lower(token)
+	ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " token=" .. tostring(token))
 	if token == "scarlet" or token == "so" then
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Scarlet")
 		startScarlet(pi)
 	elseif token == "be" or token == "bloodelves" or token == "ek" then
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => BloodElves")
 		startBloodElves(pi)
 	elseif token == "goblins" or token == "gob" then
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Goblins")
 		startGoblins(pi)
 	elseif token == "naga" then
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Naga")
 		startNaga(pi)
 	elseif token == "horde" then
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Horde")
 		startHorde(pi)
 	elseif token == "jt" or token == "jungletrolls" or token == "trolls" then
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => JungleTrolls")
 		startJungleTrolls(pi)
 	else
+		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " token=" .. tostring(token) .. " unknown -> random will be used")
 		return false
 	end
 	return true
@@ -127,21 +136,25 @@ end
 ---@param raceToken string|nil   optional race override; nil/unknown = random
 ---@return nothing
 function createAiPlayer(pi, raceToken)
+	ProbeLogWrite("[AI] createAiPlayer ENTER pi=" .. tostring(pi) .. " raceToken=" .. tostring(raceToken or "nil"))
 	gPlayer = Player(pi)
 	TriggerExecute(gg_trg_TurnAi)
-
+	ProbeLogWrite("[AI] createAiPlayer TurnAi executed")
 
 	udg_AiControl[pi] = true
 	ForceAddPlayerSimple(gPlayer, udg_Bots)
+	ProbeLogWrite("[AI] createAiPlayer bot added to Bots force, count=" .. tostring(CountPlayersInForceBJ(udg_Bots)))
 	--  Обычное появление и ресы
 
 	-- Задаю место
 
 	udg_LocalPoint = (StartLoc[GetRandomInt(0, StartLocCount - 1)])	--  INLINED!!
+	ProbeLogWrite("[AI] createAiPlayer start location set")
 
 	--  Раса аи (опциональный форс через raceToken, иначе случайно)
 	if not StartAiRaceByToken(pi, raceToken) then
 		gInt = GetRandomInt(1, 6)
+		ProbeLogWrite("[AI] createAiPlayer random race roll=" .. tostring(gInt))
 
 		-- Алый орден
 		if gInt == 1 then
@@ -158,6 +171,7 @@ function createAiPlayer(pi, raceToken)
 			startJungleTrolls(pi)
 		end
 	end
+	ProbeLogWrite("[AI] createAiPlayer race=" .. tostring(AiRace[pi]) .. " set")
 	
 	udg_LocalText2 = GetPlayerName(gPlayer)
 	udg_LocalText2 = ((I2S(pi + 1) .. ". ") .. udg_LocalText2)
@@ -172,12 +186,14 @@ function createAiPlayer(pi, raceToken)
 	BonusUnit[pi] = CreateUnitAtLoc(gPlayer, FourCC('aiu0'), udg_LocalPoint, bj_UNIT_FACING)
 	UnitAddAbility(BonusUnit[pi], FourCC('aib0'))
 	UnitAddAbility(BonusUnit[pi], FourCC('aib1'))
+	ProbeLogWrite("[AI] createAiPlayer bonus unit created")
 	
 	CreateArmyBonusUnit(gPlayer)
 	
 	-- Лимиты
 	SetLimits(gPlayer)
 	AiLimitsSet()
+	ProbeLogWrite("[AI] createAiPlayer limits set AiRepeat=" .. tostring(AiRepeat) .. " AiMass=" .. tostring(AiMass) .. " AiLimit=" .. tostring(AiLimit))
 	
 	
 	SetPlayerStateBJ(gPlayer, PLAYER_STATE_RESOURCE_GOLD, 5000)
@@ -189,11 +205,17 @@ function createAiPlayer(pi, raceToken)
 	--  Таймеры ИИ
 	
 	StartTimerBJ(udg_TimerSmall, false, 1.11 * AiRepeat / 5)
+	ProbeLogWrite("[AI] createAiPlayer TimerSmall started period=" .. tostring(1.11 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerSmall2, false, 2.12 * AiRepeat / 5)
+	ProbeLogWrite("[AI] createAiPlayer TimerSmall2 started period=" .. tostring(2.12 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerSmall3, false, 3.13 * AiRepeat / 5)
+	ProbeLogWrite("[AI] createAiPlayer TimerSmall3 started period=" .. tostring(3.13 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerSmall4, false, 4.14 * AiRepeat / 5)
+	ProbeLogWrite("[AI] createAiPlayer TimerSmall4 started period=" .. tostring(4.14 * AiRepeat / 5))
 	StartTimerBJ(udg_AiTimerStrateg, true, 15.15 * AiRepeat / 5)
+	ProbeLogWrite("[AI] createAiPlayer AiTimerStrateg started period=" .. tostring(15.15 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerToChangeAi, false, 600.00)
 	TimerStart(aiFixer, 1800.00, true, nil)
+	ProbeLogWrite("[AI] createAiPlayer DONE pi=" .. tostring(pi) .. " race=" .. tostring(AiRace[pi]) .. " AiRepeat=" .. tostring(AiRepeat))
 end
 -- library AI2 ends

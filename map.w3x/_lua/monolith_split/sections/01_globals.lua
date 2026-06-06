@@ -67,7 +67,7 @@ SanctifiedEnchantment_BuffDuration = {}	---@type real
 -- globals from Races:
 LIBRARY_Races = true	---@type boolean	
 tArray = {}	---@type integer	
--- tB	---@type integer	
+tB = 0	---@type integer	
 Grades = {}	---@type integer	
 AiCapitalGuard = {}	---@type group	
 AiCapitalBuildigs = {}	---@type group	

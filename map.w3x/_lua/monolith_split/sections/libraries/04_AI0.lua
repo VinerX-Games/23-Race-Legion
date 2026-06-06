@@ -69,42 +69,7 @@ function f_ToHeal()
 	else
 		u = nil
 		return false
-	end
-	
 end
--- Гланый фильтр для войск, кому надо отдать приказ
----@return boolean
-function f_Lazy()
-	gUnit = GetFilterUnit()
-	gInt = GetUnitCurrentOrder(gUnit)
-	
-	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(GetOwningPlayer(gUnit))]) and (gInt == 851972 or gInt == 851976 or gInt == 0) and  not (IsUnitType(gUnit, UNIT_TYPE_PEON) or IsUnitType(gUnit, UNIT_TYPE_STRUCTURE)) then	--  -- and ( gInt ==  851972 or gInt == 851976 or gInt == 0 ) and --
-		LazyCount = LazyCount + 1
-		return true
-	else
-		return false
-	end
-end
--- Тоже самое + проверка игрка так как тут жля радиуса
----@return boolean
-function f_LazyF()
-	gUnit = GetFilterUnit()
-	gInt = GetUnitCurrentOrder(gUnit)
-	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(CheckPlayer)]) and (gInt == 851972 or gInt == 851976 or gInt == 0) and  not (IsUnitType(gUnit, UNIT_TYPE_PEON) or IsUnitType(gUnit, UNIT_TYPE_STRUCTURE))	--   --and ( gInt ==  851972 or gInt == 851976 or gInt == 0 ) 
-	
-end
----@return boolean
-function f_LazyN()
-	gUnit = GetFilterUnit()
-	gInt = GetUnitCurrentOrder(gUnit)
-	
-	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_navy[GetPlayerId(CheckPlayer)]) and (gInt == 851972 or gInt == 851976 or gInt == 0) then
-		LazyCount = LazyCount + 1
-		return true
-	else
-		return false
-	end
-	
 end
 ---@return boolean
 function f_FixZ()
@@ -119,13 +84,13 @@ end
 function f_LazyW()
 	gUnit = GetFilterUnit()
 	gInt = GetUnitCurrentOrder(gUnit)
-	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_builders[GetPlayerId(GetOwningPlayer(gUnit))]) and (gInt == 851972 or gInt == 851976 or gInt == 0)
+	return GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and IsUnitInGroup(gUnit, udg_Ai_builders[GetPlayerId(GetOwningPlayer(gUnit))]) and (gInt == 851972 or gInt == 851976 or gInt == 0)
 end
 ---@return boolean
 function f_LazyT()
 	gUnit = GetFilterUnit()
 	gInt = GetUnitCurrentOrder(gUnit)
-	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_buildersT[GetPlayerId(GetOwningPlayer(gUnit))]) and (gInt == 851972 or gInt == 851976 or gInt == 0)
+	return GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and IsUnitInGroup(gUnit, udg_Ai_buildersT[GetPlayerId(GetOwningPlayer(gUnit))]) and (gInt == 851972 or gInt == 851976 or gInt == 0)
 end
 ---@return boolean
 function f_PortB()
@@ -134,12 +99,12 @@ end
 ---@return boolean
 function f_Worker()
 	gUnit = GetFilterUnit()
-	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_buildersT[GetPlayerId(GetOwningPlayer(gUnit))])
+	return GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and IsUnitInGroup(gUnit, udg_Ai_buildersT[GetPlayerId(GetOwningPlayer(gUnit))])
 end
 ---@return boolean
 function f_Harwest()
 	gUnit = GetFilterUnit()
-	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_harvest[GetPlayerId(GetOwningPlayer(gUnit))]) then
+	if GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and IsUnitInGroup(gUnit, udg_Ai_harvest[GetPlayerId(GetOwningPlayer(gUnit))]) then
 		return true
 	else
 		return false
@@ -148,19 +113,19 @@ end
 ---@return boolean
 function f_InAiArmy()
 	gUnit = GetFilterUnit()
-	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(GetOwningPlayer(gUnit))])
+	return GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(GetOwningPlayer(gUnit))])
 end
 ---@return boolean
 function f_InAiNavy()
 	gUnit = GetFilterUnit()
-	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_navy[GetPlayerId(GetOwningPlayer(gUnit))])
+	return GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and IsUnitInGroup(gUnit, udg_Ai_navy[GetPlayerId(GetOwningPlayer(gUnit))])
 end
 --  Здания в которых надо делать найм - без работы, в группе, определенного типа
 ---@return boolean
 function f_OnlyNeaded()
 	gUnit = GetFilterUnit()
 	
-	if  not UnitAlive(gUnit) then
+	if GetUnitState(gUnit, UNIT_STATE_LIFE) <= 0.405 then
 		return false
 	end
 	
@@ -201,6 +166,12 @@ function f_OnlyNeaded()
 			Counter = Counter + 1
 			return true
 		end
+		--  Jungle Trolls
+	elseif AiRace[gPi] == "JungleTrolls" then
+		if gInt == FourCC('h0N5') or gInt == FourCC('h0N2') or gInt == FourCC('h0MY') or gInt == FourCC('h0N3') or gInt == FourCC('h0N0') or gInt == FourCC('h0MX') or gInt == FourCC('h0MW') or gInt == FourCC('h0D3') or gInt == FourCC('h0N1') or gInt == FourCC('h0N6') then
+			Counter = Counter + 1
+			return true
+		end
 	end
 	return false
 end
@@ -209,7 +180,7 @@ function f_NavalBases()
 	gUnit = GetFilterUnit()
 	gId = GetUnitTypeId(gUnit)
 	
-	if UnitAlive(gUnit) and (gId == FourCC('h011') or gId == FourCC('h0D7') or gId == FourCC('n04L') or gId == FourCC('h0HO')) then
+	if GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and (gId == FourCC('h011') or gId == FourCC('h0D7') or gId == FourCC('n04L') or gId == FourCC('h0HO')) then
 		Counter = Counter + 1
 		return true
 	else
@@ -282,7 +253,7 @@ function AiLimitsSet()
 	
 	AiMass = IMaxBJ(8 - gInt, 4)
 	AiRepeat = 2 + IMinBJ(R2I(gInt / 2), 8)
-	
+	ProbeLogWrite("[AI] AiLimitsSet Bots=" .. tostring(gInt) .. " AiLimit=" .. tostring(AiLimit) .. " AiMass=" .. tostring(AiMass) .. " AiRepeat=" .. tostring(AiRepeat))
 end
 ---@return nothing
 function SetBools()
