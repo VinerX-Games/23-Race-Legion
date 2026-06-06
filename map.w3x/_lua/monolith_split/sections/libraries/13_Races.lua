@@ -3139,8 +3139,29 @@ end
 -- *  LibRacesEnd
 
 -- ====================================================================
--- ForestTrolls AI (Phase 3: data-driven)
+-- HordeW2 AI (Phase 3: data-driven)
 -- ====================================================================
+---@param pi integer
+---@return nothing
+function startHordeW2(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('w200'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('w20q'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    SaveInteger(AiData, pi, FourCC('w200'), 5)
+    SaveInteger(AiData, pi, FourCC('w20q'), 1)
+    SaveStr(AiData, pi, StringHash("Race"), "H2")
+    SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, p)
+    SetPlayerName(p, "Horde W2 (" .. I2S(pi + 1) .. ")")
+    HordeW2On()
+    AiRace[pi] = "HordeW2"
+    ProbeLogWrite("[AI] startHordeW2 pi=" .. tostring(pi) .. " workers=5w200 building=1w20q")
+end
 ---@param pi integer
 ---@return nothing
 function startForestTrolls(pi)

@@ -7085,6 +7085,7 @@ function Trig_DeadSituastion_Actions()
 	u2 = CreateUnit(p, GetUnitTypeId(u), GetUnitX(u), GetUnitY(u), GetUnitFacing(u))
 	GroupAddUnit(udg_ZahvatBuildings, u2)
 	BlzSetUnitArmor(u2, 3)
+	SetUnitState(u2, UNIT_STATE_LIFE, 5000)
 	GroupAddUnit(udg_BuildedSctructure[1], u2)
 	
 	-- Условие что город мелкий

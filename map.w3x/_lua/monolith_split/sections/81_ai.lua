@@ -1055,3 +1055,77 @@ RegisterAiRace("ForestTrolls", {
     naval = aiNavalTrain_JungleTrolls,
     wall = FourCC('h0N4'),
 })
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_HordeW2(id, pi, u)
+    if id == FourCC('w200') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif id == FourCC('w201') or id == FourCC('w220') then
+        GroupAddUnit(udg_Ai_navy[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("HordeW2", {
+    tokens = {"hw2", "hordew2", "orda2"},
+    weight = 1,
+    start = startHordeW2,
+    buildings = {
+        seed = FourCC('w20y'),
+        { FourCC('w20q'), 4, 4 }, { FourCC('w20y'), 18, 4 },
+        { FourCC('w20r'), 10, 4 }, { FourCC('w214'), 5, 2 },
+        { FourCC('w20a'), 3, 6 },
+        { FourCC('w20i'), 8, 6, gate = "tier2" },
+        { FourCC('w20t'), 8, 6, gate = "tier2" },
+        { FourCC('w210'), 4, 4, gate = "tier2" },
+        { FourCC('w212'), 4, 4, gate = "tier2" },
+        { FourCC('w20u'), 25, 1 },
+    },
+    gates = {
+        tier2 = function(pi)
+            return getAiCount(pi, FourCC('w20w')) + getAiCount(pi, FourCC('w20e')) >= 1
+        end,
+    },
+    production = {
+        [FourCC('w20q')] = { {FourCC('w200'),3,limit=20} },
+        [FourCC('w20w')] = { {FourCC('w200'),3,limit=20} },
+        [FourCC('w20e')] = { {FourCC('w200'),3,limit=20} },
+        [FourCC('w20r')] = {
+            {FourCC('w203'), 4}, {FourCC('w204'), 4}, {FourCC('w208'), 3,gate="tier2"},
+        },
+        [FourCC('w20i')] = {
+            {FourCC('w201'), 2}, {FourCC('w206'), 3}, {FourCC('w207'), 2,gate="tier2"},
+        },
+        [FourCC('w20t')] = {
+            {FourCC('w205'), 3}, {FourCC('w209'), 2,gate="tier2"}, {FourCC('w211'), 3},
+        },
+        [FourCC('w20a')] = {
+            {FourCC('W200')}, {FourCC('W201')}, {FourCC('W202')},
+        },
+        [FourCC('w210')] = { {FourCC('w202'), 3} },
+        [FourCC('w212')] = { {FourCC('w213'), 3} },
+    },
+    ecoWeights = {
+        [FourCC('w20y')] = 1, [FourCC('w20q')] = 2,
+        [FourCC('w20w')] = 5, [FourCC('w20e')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('w214'),FourCC('w2r0'),6},{FourCC('w214'),FourCC('w2r1'),6},{FourCC('w214'),FourCC('w2r2'),6},{FourCC('w214'),FourCC('w2rb'),6} },
+                { {FourCC('w20r'),FourCC('w2r7'),6},{FourCC('w20r'),FourCC('w2r8'),6},{FourCC('w20r'),FourCC('w2r9'),6} },
+                { {FourCC('w20t'),FourCC('w2r4'),6},{FourCC('w20t'),FourCC('w2r5'),6},{FourCC('w20t'),FourCC('w2r6'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('w20q'), to = FourCC('w20w'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('w20w'), to = FourCC('w20e'), cap = 3 },
+        },
+    },
+    join = Join_HordeW2,
+    wall = FourCC('w20u'),
+})
