@@ -60,3 +60,21 @@
 - Extended `HiveWE_cli probe-map` with timed chat injection: `--chat-after/--chat-text` for one command and `--chat-script "20:-ai2|35:-raceselect1"` for scripted runs.
 - Verified the new CLI path on the canonical `map.w3x`: load-screen click, post-load `Enter`, both chat commands, and graceful close all executed in one automated run.
 - The automated run confirmed the UI texture blocker is still present and also exposed a second non-Lua asset issue in `War3Log`: repeated `model creation failed - .mdl.mdl`, which should be debugged separately from the Lua migration itself.
+- Fixed the UI texture blocker in the canonical map by patching the six custom transparent DDS placeholders (`HumanUITile04/05/06.dds`, `ResourceGold/Lumber/Supply.dds`) from invalid 1x1 compressed textures to valid 4x4 textures while preserving their role as custom UI-hiding overrides.
+- Verified with `probe-map` that the `ITexCreate fail` errors for those six UI textures are gone. The visual UI issue moved past the previous hard asset failure; the remaining noisy import issue is still the separate `model creation failed - .mdl.mdl` stream.
+- Added a simple in-map manual ping command `-codexping` for future manual validation of chat handling and map liveness.
+- Tried two bridge strategies to replace fragile chat automation:
+  - chat injection via `SendInput` instead of `PostMessage`
+  - file-driven command bridge via `CustomMapData` + `Preloader(...)`
+- Chat automation still reaches the game window and can open the chat box, but command text is not yet reliably processed by the map; this is no longer the preferred path.
+- The `CustomMapData` bridge is partially working:
+  - CLI writes manifest and command `.pld` files successfully
+  - the map writes probe logs successfully
+  - the map reaches `BridgeStart` and `"[BRIDGE] request manifest"` during runtime
+- The current hard blocker is narrower than before: the map does not yet recover payload back from the preload file into readable runtime state. Both tested carriers (`SetPlayerName`, then `BlzSetAbilityTooltip('ANav', ...)`) failed to surface payload back into Lua under the current `-loadfile` probe environment.
+- Current handoff state:
+  - canonical map path: `map.w3x`
+  - canonical Lua source path: `map.w3x/_lua/monolith_split`
+  - UI DDS blocker: fixed
+  - chat bridge: unreliable, de-prioritized
+  - file bridge: structurally in place, payload recovery still failing

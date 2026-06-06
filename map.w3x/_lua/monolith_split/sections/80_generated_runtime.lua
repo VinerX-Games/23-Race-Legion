@@ -3247,6 +3247,8 @@ function TryBuild()
 						IssueBuildOrderById(gUnit, FourCC('n04L'), gX2, gY2)
 					elseif AiRace[gPi] == "Horde" then
 						IssueBuildOrderById(gUnit, FourCC('h0HO'), gX2, gY2)
+					elseif AiRace[gPi] == "JungleTrolls" then
+						IssueBuildOrderById(gUnit, FourCC('h0N2'), gX2, gY2)
 					end
 					
 					
@@ -3287,6 +3289,8 @@ function TryBuild()
 		gInt = ChooseBuildings_Naga(gPi)
 	elseif AiRace[gPi] == "Horde" then
 		gInt = ChooseBuildings_Horde(gPi)
+	elseif AiRace[gPi] == "JungleTrolls" then
+		gInt = ChooseBuildings_JungleTrolls(gPi)
 	end
 	
 	IssueBuildOrderById(gUnit, gInt, gX, gY)
@@ -3314,6 +3318,8 @@ function aiUnitJoins(u, pi)
 		Join_Naga(id, pi, u)
 	elseif AiRace[pi] == "Horde" then
 		Join_Horde(id, pi, u)
+	elseif AiRace[pi] == "JungleTrolls" then
+		Join_JungleTrolls(id, pi, u)
 	end
 	
 end
@@ -45189,9 +45195,13 @@ function Trig_CreateAi_Conditions()
     return S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) >= 1 and S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) <= 24
 end
 function Trig_CreateAi_Actions()
-    gPi=S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) - 1
-    ProbeLogWrite("[CHAT] -ai target=" .. tostring(gPi + 1))
-    createAiPlayer(gPi)
+    -- Формат: "-aiN" или "-aiN <раса>" (раса опциональна, латиницей: jt, be, scarlet, goblins, naga, horde)
+    local s = GetEventPlayerChatString()
+    local numStr, raceStr = string.match(s, "^%-ai%s*(%d+)%s*(%S*)")
+    gPi = (tonumber(numStr) or 1) - 1
+    if raceStr == "" then raceStr = nil end
+    ProbeLogWrite("[CHAT] -ai target=" .. tostring(gPi + 1) .. " race=" .. tostring(raceStr or "random"))
+    createAiPlayer(gPi, raceStr)
 end
 --===========================================================================
 function InitTrig_CreateAi()
@@ -45201,11 +45211,13 @@ function InitTrig_CreateAi()
     TriggerAddAction(gg_trg_CreateAi, Trig_CreateAi_Actions)
 end
 function BridgeDispatchCommand(op, arg, sequence)
-    local target = tonumber(arg)
     if op == "ping" then
         ProbeLogWrite("[BRIDGE] ping seq=" .. tostring(sequence) .. " arg=" .. tostring(arg))
         return
     end
+    -- arg может быть "N" или "N:race" (раса опциональна, латиницей)
+    local targetStr, raceTok = string.match(tostring(arg), "^(%d+):?(%S*)")
+    local target = tonumber(targetStr)
     if target == nil then
         error("bridge command requires numeric arg: " .. tostring(op))
     end
@@ -45213,8 +45225,9 @@ function BridgeDispatchCommand(op, arg, sequence)
         error("bridge target out of range: " .. tostring(target))
     end
     if op == "create_ai" then
-        createAiPlayer(target - 1)
-        ProbeLogWrite("[BRIDGE] create_ai target=" .. tostring(target))
+        if raceTok == "" then raceTok = nil end
+        createAiPlayer(target - 1, raceTok)
+        ProbeLogWrite("[BRIDGE] create_ai target=" .. tostring(target) .. " race=" .. tostring(raceTok or "random"))
         return
     end
     if op == "race_select" then
@@ -45853,6 +45866,8 @@ function Trig_PereborBuildings_Code_Func002A()
             PereborBuildings_Naga(gId , gPi , gUnit)
         elseif AiRace[gPi] == "Horde" then
             PereborBuildings_Horde(gId , gPi , gUnit)
+        elseif AiRace[gPi] == "JungleTrolls" then
+            PereborBuildings2_JungleTrolls(gId , gPi , gUnit)
         end
         bj_forLoopAIndex=bj_forLoopAIndex + 1
     end
@@ -45930,6 +45945,8 @@ function PereborNavalb()
             aiNavalTrain_Naga(u , pi)
         elseif AiRace[pi] == "Horde" then
             aiNavalTrain_Horde(u , pi)
+        elseif AiRace[pi] == "JungleTrolls" then
+            aiNavalTrain_JungleTrolls(u , pi)
         end
         
         bj_forLoopAIndex=bj_forLoopAIndex + 1
@@ -45986,6 +46003,8 @@ function ZahType()
             Strateg_Naga_EC(id)
         elseif AiRace[pi] == "Horde" then
             Strateg_Horde_EC(id)
+        elseif AiRace[pi] == "JungleTrolls" then
+            Strateg_JungleTrolls_EC(id)
         end
     end
 end
@@ -46030,6 +46049,8 @@ function Strateg()
         Strateg_Naga(i , pi , p)
     elseif AiRace[pi] == "Horde" then
         Strateg_Horde(i , pi , p)
+    elseif AiRace[pi] == "JungleTrolls" then
+        Strateg_JungleTrolls(i , pi , p)
     end
    
     
@@ -46109,6 +46130,8 @@ function Trig_AttackerAi_Actions()
         Attacker_Goblins(id , gAttacker , gTarget , gPlayer)
     elseif AiRace[gPi] == "Horde" then
         Attacker_Goblins(id , gAttacker , gTarget , gPlayer)
+    elseif AiRace[gPi] == "JungleTrolls" then
+        Attacker_JungleTrolls(id , gAttacker , gTarget , gPlayer)
     end
 end
 --===========================================================================
@@ -46160,6 +46183,8 @@ function Trig_AttackedAI_Actions()
             AttackedNaga(gAttacked)
         elseif AiRace[gPi] == "Horde" then
             AttackedNaga(gAttacked)
+        elseif AiRace[gPi] == "JungleTrolls" then
+            AttackedJungleTrolls(gAttacked)
         end
     end
 end
@@ -46194,6 +46219,8 @@ function Trig_GetLvl_Actions()
        GetLvlNaga(u)
     elseif AiRace[pi] == "Horde" then
        GetLvlHorde(u)
+    elseif AiRace[pi] == "JungleTrolls" then
+       GetLvlJungleTrolls(u)
     end
     u=null
 end
@@ -46319,6 +46346,8 @@ function Trig_UpgradeBuildings_Actions()
         UpgradeNaga(gPi , gId)
     elseif AiRace[gPi] == "Horde" then
         UpgradeHorde(gPi , gId)
+    elseif AiRace[gPi] == "JungleTrolls" then
+        UpgradeJungleTrolls(gPi , gId)
     end
     
 end

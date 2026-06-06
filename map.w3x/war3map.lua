@@ -7156,6 +7156,338 @@ function GetLvlNaga(u)
 	end
 end
 -- ***************************************************************************
+-- *  JungleTrolls AI
+-- Per-race AI for the Jungle Trolls (editor suffix "Тролли джунглей").
+-- Two sub-branches selected per AI player: BlackSpear / Gurubashy.
+-- ***************************************************************************
+---@param pi integer
+---@return nothing
+function AiChooseJungleTrollsBranch(pi)
+	local p = Player(pi)
+	local blackSpear = ModuloInteger(pi, 2) == 0
+	if blackSpear then
+		SetPlayerTechMaxAllowedSwap(FourCC('o04P'), -1, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('O05L'), 1, p)
+		SetPlayerAbilityAvailableBJ(false, FourCC('A1EP'), p)
+		SetPlayerAbilityAvailableBJ(false, FourCC('A1EQ'), p)
+		SetPlayerTechResearchedSwap(FourCC('R0IR'), 1, p)
+		SaveStr(AiData, pi, StringHash("JTBranch"), "BlackSpear")
+	else
+		SetPlayerTechMaxAllowedSwap(FourCC('o04N'), -1, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('O055'), 1, p)
+		SetPlayerAbilityAvailableBJ(false, FourCC('A1EP'), p)
+		SetPlayerAbilityAvailableBJ(false, FourCC('A1EQ'), p)
+		SaveStr(AiData, pi, StringHash("JTBranch"), "Gurubashy")
+	end
+	p = nil
+end
+---@param pi integer
+---@return boolean
+function JungleTrollsBranchIsBlack(pi)
+	return LoadStr(AiData, pi, StringHash("JTBranch")) == "BlackSpear"
+end
+---@param pi integer
+---@return nothing
+function startJungleTrolls(pi)
+	CreateNUnitsAtLoc(5, FourCC('o04Q'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
+	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+	GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+	CreateNUnitsAtLoc(1, FourCC('h0N5'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
+	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_units[pi])
+	GroupAddUnitSimple(GetLastCreatedUnit(), udg_Ai_buildings[pi])
+	SaveInteger(AiData, pi, FourCC('o04Q'), 5)
+	SaveInteger(AiData, pi, FourCC('h0N5'), 1)
+	SaveStr(AiData, pi, StringHash("Race"), "JT")
+	SetPlayerTechResearchedSwap(FourCC('R0IH'), 1, Player(pi))
+	SetPlayerName(Player(pi), "Jungle Trolls (" .. I2S(pi + 1) .. ")")
+	StartJungleTrolls()
+	AiChooseJungleTrollsBranch(pi)
+	AiRace[pi] = "JungleTrolls"
+end
+---@param u unit
+---@param pi integer
+---@return nothing
+function aiNavalTrain_JungleTrolls(u, pi)
+	if Random(1, 2) and LoadInteger(AiData, pi, FourCC('h0D6')) < 50 then
+		IssueImmediateOrderById(u, FourCC('h0D6'))
+	elseif LoadInteger(AiData, pi, FourCC('h0D5')) < 75 then
+		IssueImmediateOrderById(u, FourCC('h0D5'))
+	end
+end
+---@param id integer
+---@param pi integer
+---@param u unit
+---@return nothing
+function Join_JungleTrolls(id, pi, u)
+	if id == FourCC('o04Q') then
+		GroupAddUnit(udg_Ai_builders[pi], u)
+	elseif id == FourCC('h0D3') then
+		-- Верфь: производит флот в naval-цикле
+		GroupAddUnit(udg_Ai_navy[pi], u)
+		NumberAdd(pi, StringHash("NumberN"))
+	elseif aiUnitJoinsCapitalGuard(u, pi) then
+	else
+		aiUnitJoinsArmy(u, pi)
+	end
+	if id == FourCC('O054') or id == FourCC('O055') or id == FourCC('O05A') or id == FourCC('O05D') or id == FourCC('O05L') then
+		GetLvlJungleTrolls(u)
+	end
+end
+---@param u unit
+---@return nothing
+function AttackedJungleTrolls(u)
+end
+---@param id integer
+---@param u unit
+---@param target unit
+---@param p player
+---@return nothing
+function Attacker_JungleTrolls(id, u, target, p)
+	if id == FourCC('o04U') then
+		if GetRandomInt(1, 3) == 1 then
+			IssueImmediateOrder(u, "berserk")
+		end
+	elseif id == FourCC('O054') then
+		if GetRandomInt(1, 3) == 1 and not IsUnitType(target, UNIT_TYPE_STRUCTURE) then
+			IssueTargetOrder(u, "hex", target)
+		end
+	elseif id == FourCC('O05A') then
+		if GetRandomInt(1, 4) == 1 then
+			IssueImmediateOrder(u, "whirlwind")
+		end
+	end
+end
+---@param id integer
+---@return nothing
+function Strateg_JungleTrolls_EC(id)
+	if id == FourCC('h0N2') then
+		udg_LocalInteger3 = udg_LocalInteger3 + 1
+	elseif id == FourCC('h0N5') then
+		udg_LocalInteger3 = udg_LocalInteger3 + 2
+	elseif id == FourCC('h0N1') then
+		udg_LocalInteger3 = udg_LocalInteger3 + 5
+	elseif id == FourCC('h0N6') then
+		udg_LocalInteger3 = udg_LocalInteger3 + 8
+	end
+end
+---@param i integer
+---@param pi integer
+---@param p player
+---@return nothing
+function Strateg_JungleTrolls(i, pi, p)
+	local r = 0
+	if Grades[pi] < 100 then
+		if i > 17 then
+			r = GetRandomInt(1, 4)
+			if r == 1 then
+				MakeGradeCheckCap(p, FourCC('h0N3'), FourCC('R0I8'), 6)
+				MakeGradeCheckCap(p, FourCC('h0N3'), FourCC('R0I9'), 6)
+				MakeGradeCheckCap(p, FourCC('h0N3'), FourCC('R0IA'), 6)
+				MakeGradeCheckCap(p, FourCC('h0N3'), FourCC('R0II'), 2)
+			elseif r == 2 then
+				MakeGradeCheckCap(p, FourCC('h0MY'), FourCC('R0IK'), 6)
+				MakeGradeCheckCap(p, FourCC('h0MY'), FourCC('R0IM'), 6)
+				MakeGradeCheckCap(p, FourCC('h0N2'), FourCC('R0IJ'), 6)
+			elseif r == 3 then
+				MakeGradeCheckCap(p, FourCC('h0MX'), FourCC('R0IB'), 6)
+				MakeGradeCheckCap(p, FourCC('h0MX'), FourCC('R0IC'), 6)
+				MakeGradeCheckCap(p, FourCC('h0MX'), FourCC('R0ID'), 6)
+			else
+				MakeGradeCheckCap(p, FourCC('h0MW'), FourCC('R0IL'), 6)
+				MakeGradeCheckCap(p, FourCC('h0MW'), FourCC('R0IN'), 6)
+				MakeGradeCheckCap(p, FourCC('h0MW'), FourCC('R0IJ'), 6)
+			end
+		end
+		if i > 45 then
+			MakeGradeCheckCap(p, FourCC('h0D3'), FourCC('R005'), 6)
+			MakeGradeCheckCap(p, FourCC('h0D3'), FourCC('R006'), 6)
+			MakeGradeCheckCap(p, FourCC('h0D3'), FourCC('R007'), 6)
+			MakeGradeCheckCap(p, FourCC('h0D3'), FourCC('R002'), 6)
+			MakeGradeCheckCap(p, FourCC('h0D3'), FourCC('R003'), 6)
+		end
+	else
+		warRace(Grades[pi], p)
+	end
+	if i > 20 and GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) > 2000 then
+		TryBuy(p, i)
+	end
+	if i > 25 and getAiCount(pi, FourCC('h0N1')) < 3 then
+		BuildT(p, FourCC('h0N5'), FourCC('h0N1'))
+	end
+	if i > 55 and getAiCount(pi, FourCC('h0N6')) < 3 then
+		BuildT(p, FourCC('h0N1'), FourCC('h0N6'))
+	end
+end
+---@param pi integer
+---@return integer
+function ChooseBuildings_JungleTrolls(pi)
+	local i
+	tArray[0] = 1
+	tArray[1] = FourCC('h0N2')
+	CheckAndAddBuilding(pi, FourCC('h0N5'), 4, 4)
+	CheckAndAddBuilding(pi, FourCC('h0N2'), 18, 4)
+	CheckAndAddBuilding(pi, FourCC('h0MY'), 10, 4)
+	CheckAndAddBuilding(pi, FourCC('h0N3'), 5, 2)
+	CheckAndAddBuilding(pi, FourCC('h0N0'), 3, 6)
+	if getAiCount(pi, FourCC('h0N1')) + getAiCount(pi, FourCC('h0N6')) >= 1 then
+		CheckAndAddBuilding(pi, FourCC('h0MX'), 8, 6)
+		CheckAndAddBuilding(pi, FourCC('h0MW'), 8, 6)
+		CheckAndAddBuilding(pi, FourCC('h0D3'), 2, 1)
+	end
+	i = GetRandomInt(1, tArray[0])
+	return tArray[i]
+end
+---@param id integer
+---@param pi integer
+---@param u unit
+---@return nothing
+function PereborBuildings2_JungleTrolls(id, pi, u)
+	local a = {}
+	if id == FourCC('h0MY') then
+		a[0] = 0
+		for _ = 1, 5 do
+			a[0] = a[0] + 1
+			a[a[0]] = FourCC('o04M')
+		end
+		for _ = 1, 4 do
+			a[0] = a[0] + 1
+			a[a[0]] = FourCC('o04L')
+		end
+		if getAiCount(pi, FourCC('h0N1')) + getAiCount(pi, FourCC('h0N6')) >= 1 then
+			a[0] = a[0] + 1
+			a[a[0]] = FourCC('o05E')
+		end
+		IssueImmediateOrderById(u, a[GetRandomInt(1, a[0])])
+	elseif id == FourCC('h0MX') then
+		a[0] = 0
+		for _ = 1, 3 do
+			a[0] = a[0] + 1
+			a[a[0]] = FourCC('o04O')
+		end
+		for _ = 1, 3 do
+			a[0] = a[0] + 1
+			a[a[0]] = FourCC('o04R')
+		end
+		if JungleTrollsBranchIsBlack(pi) then
+			for _ = 1, 4 do
+				a[0] = a[0] + 1
+				a[a[0]] = FourCC('o04N')
+			end
+		else
+			for _ = 1, 4 do
+				a[0] = a[0] + 1
+				a[a[0]] = FourCC('o04P')
+			end
+		end
+		IssueImmediateOrderById(u, a[GetRandomInt(1, a[0])])
+	elseif id == FourCC('h0MW') then
+		a[0] = 0
+		for _ = 1, 3 do
+			a[0] = a[0] + 1
+			a[a[0]] = FourCC('o04S')
+		end
+		for _ = 1, 4 do
+			a[0] = a[0] + 1
+			a[a[0]] = FourCC('o04U')
+		end
+		if getAiCount(pi, FourCC('h0N1')) + getAiCount(pi, FourCC('h0N6')) >= 1 then
+			for _ = 1, 2 do
+				a[0] = a[0] + 1
+				a[a[0]] = FourCC('o05J')
+			end
+		end
+		if getAiCount(pi, FourCC('h0N6')) >= 1 then
+			for _ = 1, 2 do
+				a[0] = a[0] + 1
+				a[a[0]] = FourCC('o05G')
+			end
+		end
+		IssueImmediateOrderById(u, a[GetRandomInt(1, a[0])])
+	elseif id == FourCC('h0N0') then
+		a[0] = 4
+		a[1] = FourCC('O054')
+		a[2] = FourCC('O05A')
+		a[3] = FourCC('O05D')
+		a[4] = JungleTrollsBranchIsBlack(pi) and FourCC('O05L') or FourCC('O055')
+		IssueImmediateOrderById(u, a[GetRandomInt(1, a[0])])
+	elseif id == FourCC('h0N5') or id == FourCC('h0N1') or id == FourCC('h0N6') then
+		if getAiCount(pi, FourCC('o04Q')) < 18 then
+			IssueImmediateOrderById(u, FourCC('o04Q'))
+		end
+	end
+end
+---@param pi integer
+---@param id integer
+---@return nothing
+function UpgradeJungleTrolls(pi, id)
+	if id == FourCC('h0N1') then
+		NumberRem(pi, FourCC('h0N5'))
+	elseif id == FourCC('h0N6') then
+		NumberRem(pi, FourCC('h0N1'))
+	end
+end
+---@param u unit
+---@return nothing
+function GetLvlJungleTrolls(u)
+	local id = GetUnitTypeId(u)
+	if id == FourCC('O054') then
+		gInt = GetRandomInt(1, 3)
+		if GetHeroLevel(u) == 6 or GetHeroLevel(u) == 10 then
+			SelectHeroSkill(u, FourCC('AOsw'))
+		elseif gInt == 1 then
+			SelectHeroSkill(u, FourCC('AOhw'))
+		elseif gInt == 2 then
+			SelectHeroSkill(u, FourCC('A1E0'))
+		else
+			SelectHeroSkill(u, FourCC('A1D0'))
+		end
+	elseif id == FourCC('O05A') then
+		gInt = GetRandomInt(1, 3)
+		if GetHeroLevel(u) == 6 or GetHeroLevel(u) == 10 then
+			SelectHeroSkill(u, FourCC('A1E4'))
+		elseif gInt == 1 then
+			SelectHeroSkill(u, FourCC('A1E2'))
+		elseif gInt == 2 then
+			SelectHeroSkill(u, FourCC('A1E3'))
+		else
+			SelectHeroSkill(u, FourCC('A1D0'))
+		end
+	elseif id == FourCC('O05D') then
+		gInt = GetRandomInt(1, 3)
+		if GetHeroLevel(u) == 6 or GetHeroLevel(u) == 10 then
+			SelectHeroSkill(u, FourCC('A1E8'))
+		elseif gInt == 1 then
+			SelectHeroSkill(u, FourCC('A1E6'))
+		elseif gInt == 2 then
+			SelectHeroSkill(u, FourCC('A1E9'))
+		else
+			SelectHeroSkill(u, FourCC('A1EA'))
+		end
+	elseif id == FourCC('O055') then
+		gInt = GetRandomInt(1, 3)
+		if GetHeroLevel(u) == 6 or GetHeroLevel(u) == 10 then
+			SelectHeroSkill(u, FourCC('A1DM'))
+		elseif gInt == 1 then
+			SelectHeroSkill(u, FourCC('A1DB'))
+		elseif gInt == 2 then
+			SelectHeroSkill(u, FourCC('A1DC'))
+		else
+			SelectHeroSkill(u, FourCC('A1EL'))
+		end
+	elseif id == FourCC('O05L') then
+		gInt = GetRandomInt(1, 3)
+		if GetHeroLevel(u) == 6 or GetHeroLevel(u) == 10 then
+			SelectHeroSkill(u, FourCC('A1ET'))
+		elseif gInt == 1 then
+			SelectHeroSkill(u, FourCC('A1ES'))
+		elseif gInt == 2 then
+			SelectHeroSkill(u, FourCC('A1EV'))
+		else
+			SelectHeroSkill(u, FourCC('A1EY'))
+		end
+	end
+end
+-- ***************************************************************************
 -- *  LibRacesEnd
 -- library Races ends
 -- library AI2:
@@ -7255,35 +7587,68 @@ function SetLimits(p)
 	SetPlayerTechMaxAllowedSwap(FourCC('H045'), 1, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('Hjnd'), 1, p)
 end
+-- Принудительный выбор расы AI по текстовому токену (для команды "-aiN <раса>"
+-- и CLI-агента). Возвращает true, если токен распознан и раса запущена.
+-- Токены латиницей, регистр не важен.
 ---@param pi integer
+---@param token string|nil
+---@return boolean
+function StartAiRaceByToken(pi, token)
+	if token == nil or token == "" then
+		return false
+	end
+	token = string.lower(token)
+	if token == "scarlet" or token == "so" then
+		startScarlet(pi)
+	elseif token == "be" or token == "bloodelves" or token == "ek" then
+		startBloodElves(pi)
+	elseif token == "goblins" or token == "gob" then
+		startGoblins(pi)
+	elseif token == "naga" then
+		startNaga(pi)
+	elseif token == "horde" then
+		startHorde(pi)
+	elseif token == "jt" or token == "jungletrolls" or token == "trolls" then
+		startJungleTrolls(pi)
+	else
+		return false
+	end
+	return true
+end
+---@param pi integer
+---@param raceToken string|nil   optional race override; nil/unknown = random
 ---@return nothing
-function createAiPlayer(pi)
+function createAiPlayer(pi, raceToken)
 	gPlayer = Player(pi)
 	TriggerExecute(gg_trg_TurnAi)
-	
-	
+
+
 	udg_AiControl[pi] = true
 	ForceAddPlayerSimple(gPlayer, udg_Bots)
 	--  Обычное появление и ресы
-	
+
 	-- Задаю место
-	
+
 	udg_LocalPoint = (StartLoc[GetRandomInt(0, StartLocCount - 1)])	--  INLINED!!
-	
-	--  Раса аи
-	gInt = GetRandomInt(1, 5)
-	
-	-- Алый орден
-	if gInt == 1 then
-		startScarlet(pi)
-	elseif gInt == 2 then
-		startBloodElves(pi)
-	elseif gInt == 3 then
-		startGoblins(pi)
-	elseif gInt == 4 then
-		startNaga(pi)
-	else
-		startHorde(pi)
+
+	--  Раса аи (опциональный форс через raceToken, иначе случайно)
+	if not StartAiRaceByToken(pi, raceToken) then
+		gInt = GetRandomInt(1, 6)
+
+		-- Алый орден
+		if gInt == 1 then
+			startScarlet(pi)
+		elseif gInt == 2 then
+			startBloodElves(pi)
+		elseif gInt == 3 then
+			startGoblins(pi)
+		elseif gInt == 4 then
+			startNaga(pi)
+		elseif gInt == 5 then
+			startHorde(pi)
+		else
+			startJungleTrolls(pi)
+		end
 	end
 	
 	udg_LocalText2 = GetPlayerName(gPlayer)
@@ -10573,6 +10938,8 @@ function TryBuild()
 						IssueBuildOrderById(gUnit, FourCC('n04L'), gX2, gY2)
 					elseif AiRace[gPi] == "Horde" then
 						IssueBuildOrderById(gUnit, FourCC('h0HO'), gX2, gY2)
+					elseif AiRace[gPi] == "JungleTrolls" then
+						IssueBuildOrderById(gUnit, FourCC('h0N2'), gX2, gY2)
 					end
 					
 					
@@ -10613,6 +10980,8 @@ function TryBuild()
 		gInt = ChooseBuildings_Naga(gPi)
 	elseif AiRace[gPi] == "Horde" then
 		gInt = ChooseBuildings_Horde(gPi)
+	elseif AiRace[gPi] == "JungleTrolls" then
+		gInt = ChooseBuildings_JungleTrolls(gPi)
 	end
 	
 	IssueBuildOrderById(gUnit, gInt, gX, gY)
@@ -10640,6 +11009,8 @@ function aiUnitJoins(u, pi)
 		Join_Naga(id, pi, u)
 	elseif AiRace[pi] == "Horde" then
 		Join_Horde(id, pi, u)
+	elseif AiRace[pi] == "JungleTrolls" then
+		Join_JungleTrolls(id, pi, u)
 	end
 	
 end
@@ -52515,9 +52886,13 @@ function Trig_CreateAi_Conditions()
     return S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) >= 1 and S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) <= 24
 end
 function Trig_CreateAi_Actions()
-    gPi=S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) - 1
-    ProbeLogWrite("[CHAT] -ai target=" .. tostring(gPi + 1))
-    createAiPlayer(gPi)
+    -- Формат: "-aiN" или "-aiN <раса>" (раса опциональна, латиницей: jt, be, scarlet, goblins, naga, horde)
+    local s = GetEventPlayerChatString()
+    local numStr, raceStr = string.match(s, "^%-ai%s*(%d+)%s*(%S*)")
+    gPi = (tonumber(numStr) or 1) - 1
+    if raceStr == "" then raceStr = nil end
+    ProbeLogWrite("[CHAT] -ai target=" .. tostring(gPi + 1) .. " race=" .. tostring(raceStr or "random"))
+    createAiPlayer(gPi, raceStr)
 end
 --===========================================================================
 function InitTrig_CreateAi()
@@ -52527,11 +52902,13 @@ function InitTrig_CreateAi()
     TriggerAddAction(gg_trg_CreateAi, Trig_CreateAi_Actions)
 end
 function BridgeDispatchCommand(op, arg, sequence)
-    local target = tonumber(arg)
     if op == "ping" then
         ProbeLogWrite("[BRIDGE] ping seq=" .. tostring(sequence) .. " arg=" .. tostring(arg))
         return
     end
+    -- arg может быть "N" или "N:race" (раса опциональна, латиницей)
+    local targetStr, raceTok = string.match(tostring(arg), "^(%d+):?(%S*)")
+    local target = tonumber(targetStr)
     if target == nil then
         error("bridge command requires numeric arg: " .. tostring(op))
     end
@@ -52539,8 +52916,9 @@ function BridgeDispatchCommand(op, arg, sequence)
         error("bridge target out of range: " .. tostring(target))
     end
     if op == "create_ai" then
-        createAiPlayer(target - 1)
-        ProbeLogWrite("[BRIDGE] create_ai target=" .. tostring(target))
+        if raceTok == "" then raceTok = nil end
+        createAiPlayer(target - 1, raceTok)
+        ProbeLogWrite("[BRIDGE] create_ai target=" .. tostring(target) .. " race=" .. tostring(raceTok or "random"))
         return
     end
     if op == "race_select" then
@@ -53179,6 +53557,8 @@ function Trig_PereborBuildings_Code_Func002A()
             PereborBuildings_Naga(gId , gPi , gUnit)
         elseif AiRace[gPi] == "Horde" then
             PereborBuildings_Horde(gId , gPi , gUnit)
+        elseif AiRace[gPi] == "JungleTrolls" then
+            PereborBuildings2_JungleTrolls(gId , gPi , gUnit)
         end
         bj_forLoopAIndex=bj_forLoopAIndex + 1
     end
@@ -53256,6 +53636,8 @@ function PereborNavalb()
             aiNavalTrain_Naga(u , pi)
         elseif AiRace[pi] == "Horde" then
             aiNavalTrain_Horde(u , pi)
+        elseif AiRace[pi] == "JungleTrolls" then
+            aiNavalTrain_JungleTrolls(u , pi)
         end
         
         bj_forLoopAIndex=bj_forLoopAIndex + 1
@@ -53312,6 +53694,8 @@ function ZahType()
             Strateg_Naga_EC(id)
         elseif AiRace[pi] == "Horde" then
             Strateg_Horde_EC(id)
+        elseif AiRace[pi] == "JungleTrolls" then
+            Strateg_JungleTrolls_EC(id)
         end
     end
 end
@@ -53356,6 +53740,8 @@ function Strateg()
         Strateg_Naga(i , pi , p)
     elseif AiRace[pi] == "Horde" then
         Strateg_Horde(i , pi , p)
+    elseif AiRace[pi] == "JungleTrolls" then
+        Strateg_JungleTrolls(i , pi , p)
     end
    
     
@@ -53435,6 +53821,8 @@ function Trig_AttackerAi_Actions()
         Attacker_Goblins(id , gAttacker , gTarget , gPlayer)
     elseif AiRace[gPi] == "Horde" then
         Attacker_Goblins(id , gAttacker , gTarget , gPlayer)
+    elseif AiRace[gPi] == "JungleTrolls" then
+        Attacker_JungleTrolls(id , gAttacker , gTarget , gPlayer)
     end
 end
 --===========================================================================
@@ -53486,6 +53874,8 @@ function Trig_AttackedAI_Actions()
             AttackedNaga(gAttacked)
         elseif AiRace[gPi] == "Horde" then
             AttackedNaga(gAttacked)
+        elseif AiRace[gPi] == "JungleTrolls" then
+            AttackedJungleTrolls(gAttacked)
         end
     end
 end
@@ -53520,6 +53910,8 @@ function Trig_GetLvl_Actions()
        GetLvlNaga(u)
     elseif AiRace[pi] == "Horde" then
        GetLvlHorde(u)
+    elseif AiRace[pi] == "JungleTrolls" then
+       GetLvlJungleTrolls(u)
     end
     u=null
 end
@@ -53645,6 +54037,8 @@ function Trig_UpgradeBuildings_Actions()
         UpgradeNaga(gPi , gId)
     elseif AiRace[gPi] == "Horde" then
         UpgradeHorde(gPi , gId)
+    elseif AiRace[gPi] == "JungleTrolls" then
+        UpgradeJungleTrolls(gPi , gId)
     end
     
 end

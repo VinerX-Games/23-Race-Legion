@@ -95,35 +95,68 @@ function SetLimits(p)
 	SetPlayerTechMaxAllowedSwap(FourCC('H045'), 1, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('Hjnd'), 1, p)
 end
+-- Принудительный выбор расы AI по текстовому токену (для команды "-aiN <раса>"
+-- и CLI-агента). Возвращает true, если токен распознан и раса запущена.
+-- Токены латиницей, регистр не важен.
 ---@param pi integer
+---@param token string|nil
+---@return boolean
+function StartAiRaceByToken(pi, token)
+	if token == nil or token == "" then
+		return false
+	end
+	token = string.lower(token)
+	if token == "scarlet" or token == "so" then
+		startScarlet(pi)
+	elseif token == "be" or token == "bloodelves" or token == "ek" then
+		startBloodElves(pi)
+	elseif token == "goblins" or token == "gob" then
+		startGoblins(pi)
+	elseif token == "naga" then
+		startNaga(pi)
+	elseif token == "horde" then
+		startHorde(pi)
+	elseif token == "jt" or token == "jungletrolls" or token == "trolls" then
+		startJungleTrolls(pi)
+	else
+		return false
+	end
+	return true
+end
+---@param pi integer
+---@param raceToken string|nil   optional race override; nil/unknown = random
 ---@return nothing
-function createAiPlayer(pi)
+function createAiPlayer(pi, raceToken)
 	gPlayer = Player(pi)
 	TriggerExecute(gg_trg_TurnAi)
-	
-	
+
+
 	udg_AiControl[pi] = true
 	ForceAddPlayerSimple(gPlayer, udg_Bots)
 	--  Обычное появление и ресы
-	
+
 	-- Задаю место
-	
+
 	udg_LocalPoint = (StartLoc[GetRandomInt(0, StartLocCount - 1)])	--  INLINED!!
-	
-	--  Раса аи
-	gInt = GetRandomInt(1, 5)
-	
-	-- Алый орден
-	if gInt == 1 then
-		startScarlet(pi)
-	elseif gInt == 2 then
-		startBloodElves(pi)
-	elseif gInt == 3 then
-		startGoblins(pi)
-	elseif gInt == 4 then
-		startNaga(pi)
-	else
-		startHorde(pi)
+
+	--  Раса аи (опциональный форс через raceToken, иначе случайно)
+	if not StartAiRaceByToken(pi, raceToken) then
+		gInt = GetRandomInt(1, 6)
+
+		-- Алый орден
+		if gInt == 1 then
+			startScarlet(pi)
+		elseif gInt == 2 then
+			startBloodElves(pi)
+		elseif gInt == 3 then
+			startGoblins(pi)
+		elseif gInt == 4 then
+			startNaga(pi)
+		elseif gInt == 5 then
+			startHorde(pi)
+		else
+			startJungleTrolls(pi)
+		end
 	end
 	
 	udg_LocalText2 = GetPlayerName(gPlayer)

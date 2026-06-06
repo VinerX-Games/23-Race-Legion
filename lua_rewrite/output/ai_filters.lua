@@ -178,6 +178,11 @@ function f_OnlyNeaded()
             return true
         end
     -- Гоблины
+    elseif G.AiRace[G.gPi] == "JungleTrolls" then
+        if G.gInt == FourCC('h0N5') or G.gInt == FourCC('h0N1') or G.gInt == FourCC('h0N6') or G.gInt == FourCC('h0MY') or G.gInt == FourCC('h0MX') or G.gInt == FourCC('h0MW') or G.gInt == FourCC('h0N0') then
+            G.Counter = G.Counter + 1
+            return true
+        end
     elseif G.AiRace[G.gPi] == "Goblins" then
         if G.gInt == FourCC('h0D7') or G.gInt == FourCC('o016') or G.gInt == FourCC('h070') or G.gInt == FourCC('h079') or G.gInt == FourCC('h074') or G.gInt == FourCC('h073') or G.gInt == FourCC('h076') or G.gInt == FourCC('h075') then
             G.Counter = G.Counter + 1
