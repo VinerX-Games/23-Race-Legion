@@ -98,7 +98,6 @@ function AiDispatchWallBuild(pi, worker, x, y)
     if race == nil or race.wall == nil then
         return false
     end
-    ProbeLogWrite("[AIBUILD] TryBuild port order " .. tostring(race.wall) .. " pi=" .. tostring(pi))
     IssueBuildOrderById(worker, race.wall, x, y)
     return true
 end

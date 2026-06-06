@@ -1,4 +1,12 @@
-function UnitAlive(u) end	-- (native)
+-- NOTE: vJASS->Lua emitted an EMPTY stub here (`function UnitAlive(u) end`) which
+-- shadowed the engine native and returned nil for every call -> broke ALL AI combat
+-- (IsAiCombatRetaskable / enemy filters / navy filter never matched). Real life-based
+-- body (the map's own convention, same as f_LazyW) fixes every UnitAlive() call at once.
+---@param u unit
+---@return boolean
+function UnitAlive(u)
+	return u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+end
 ---@param unitid integer
 ---@return integer
 function GetUnitGoldCost(unitid) end	-- (native)

@@ -80,11 +80,34 @@ function f_FixUnvul()
 	return BlzIsUnitInvulnerable(GetFilterUnit())
 	-- return GetUnitAbilityLevel(GetFilterUnit(),'Bvul')>0
 end
+---@param u unit
+---@return boolean
+function IsAiCombatRetaskable(u)
+	if not UnitAlive(u) then
+		return false
+	end
+	if IsUnitType(u, UNIT_TYPE_STRUCTURE) or IsUnitType(u, UNIT_TYPE_PEON) then
+		return false
+	end
+	-- "Lazy" = not committed to an order. Only retask idle-ish units (orders
+	-- 851972 / 851976 / 0). Units already attacking/moving are left alone so the
+	-- army doesn't get re-targeted every tick (was the re-tasking churn bug).
+	local o = GetUnitCurrentOrder(u)
+	return o == 851972 or o == 851976 or o == 0
+end
+---@param pi integer
+---@param key string
+---@param limit integer
+---@param message string
+---@return nothing
+function AiProbeLogLimited(pi, key, limit, message)
+	-- Army/diagnostic AI logging silenced (debug complete). Restore the body below
+	-- (StringHash/LoadInteger gate + ProbeLogWrite) to re-enable for future debugging.
+end
 ---@return boolean
 function f_Lazy()
 	gUnit = GetFilterUnit()
-	gInt = GetUnitCurrentOrder(gUnit)
-	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(GetOwningPlayer(gUnit))]) and (gInt == 851972 or gInt == 851976 or gInt == 0) and not (IsUnitType(gUnit, UNIT_TYPE_PEON) or IsUnitType(gUnit, UNIT_TYPE_STRUCTURE)) then
+	if IsAiCombatRetaskable(gUnit) and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(GetOwningPlayer(gUnit))]) then
 		LazyCount = LazyCount + 1
 		return true
 	else
@@ -94,14 +117,13 @@ end
 ---@return boolean
 function f_LazyF()
 	gUnit = GetFilterUnit()
-	gInt = GetUnitCurrentOrder(gUnit)
-	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(CheckPlayer)]) and (gInt == 851972 or gInt == 851976 or gInt == 0) and not (IsUnitType(gUnit, UNIT_TYPE_PEON) or IsUnitType(gUnit, UNIT_TYPE_STRUCTURE))
+	return IsAiCombatRetaskable(gUnit) and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(CheckPlayer)])
 end
 ---@return boolean
 function f_LazyN()
 	gUnit = GetFilterUnit()
-	gInt = GetUnitCurrentOrder(gUnit)
-	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_navy[GetPlayerId(CheckPlayer)]) and (gInt == 851972 or gInt == 851976 or gInt == 0) then
+	local o = GetUnitCurrentOrder(gUnit)
+	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_navy[GetPlayerId(CheckPlayer)]) and (o == 851972 or o == 851976 or o == 0) then
 		LazyCount = LazyCount + 1
 		return true
 	else

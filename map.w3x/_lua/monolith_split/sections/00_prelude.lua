@@ -165,7 +165,103 @@ function BridgeRequestNextCommand()
         ProbeLogWrite("[BRIDGE] waiting file=" .. filename)
     end
 end
+-- ============================================================
+-- Live Lua eval channel (agent debug): run arbitrary Lua in the
+-- running game and return the value. Crash-safe via hex payloads.
+--   IN : sequential 23race_eval_NNNN.pld  -> eval|<seq>|<hex-lua>
+--   OUT: fixed 23race_eval_out.pld         -> <seq>|<ok 0/1>|<hex-result>
+-- Driven from agent_bridge.py. See memory live-lua-eval-bridge.
+-- ============================================================
+_G.EvalNextSeq = 1
+_G.EvalOutFile = "23race_eval_out.pld"
+_G.EvalInPrefix = "23race_eval_"
+function EvalHexDec(s)
+    local out = {}
+    for i = 1, #s - 1, 2 do
+        out[#out + 1] = string.char(tonumber(string.sub(s, i, i + 1), 16) or 0)
+    end
+    return table.concat(out)
+end
+function EvalHexEnc(s)
+    local out = {}
+    for i = 1, #s do
+        out[#out + 1] = string.format("%02x", string.byte(s, i))
+    end
+    return table.concat(out)
+end
+function EvalSerialize(v, depth)
+    local t = type(v)
+    if v == nil then return "nil" end
+    if t == "number" or t == "boolean" then return tostring(v) end
+    if t == "string" then return v end
+    if t == "table" then
+        if depth <= 0 then return "{...}" end
+        local parts, n = {}, 0
+        for k, val in pairs(v) do
+            n = n + 1
+            if n > 40 then parts[#parts + 1] = "..."; break end
+            parts[#parts + 1] = tostring(k) .. "=" .. EvalSerialize(val, depth - 1)
+        end
+        return "{" .. table.concat(parts, ", ") .. "}"
+    end
+    return t .. ": " .. tostring(v)
+end
+function EvalWriteResult(seq, ok, value)
+    -- WC3 truncates each Preload() string (~259 chars), so chunk the hex result
+    -- across multiple lines: <seq>|<ok>|<idx>|<total>|<hexchunk>. Agent reassembles.
+    local hex = EvalHexEnc(EvalSerialize(value, 5))
+    local chunk = 200
+    local total = #hex
+    if total < 1 then total = 1 end
+    total = math.ceil(total / chunk)
+    if total < 1 then total = 1 end
+    local okf = ok and "1" or "0"
+    pcall(function()
+        PreloadGenClear()
+        PreloadGenStart()
+        for i = 1, total do
+            local part = string.sub(hex, (i - 1) * chunk + 1, i * chunk)
+            Preload(tostring(seq) .. "|" .. okf .. "|" .. i .. "|" .. total .. "|" .. part)
+        end
+        PreloadGenEnd(EvalOutFile)
+    end)
+    ProbeLogWrite("[EVAL] result seq=" .. tostring(seq) .. " ok=" .. tostring(ok) .. " chunks=" .. total)
+end
+function EvalRun(seq, code)
+    local chunk, cerr = load("return " .. code)
+    if not chunk then chunk, cerr = load(code) end
+    if not chunk then
+        EvalWriteResult(seq, false, "compile error: " .. tostring(cerr))
+        return
+    end
+    local ok, res = pcall(chunk)
+    EvalWriteResult(seq, ok, res)
+end
+function BridgeConsumeEval()
+    local baseline = BridgeCarrierBaseline
+    if baseline == nil then
+        baseline = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
+        BridgeCarrierBaseline = baseline
+    end
+    local path = string.format("%s%04d.pld", EvalInPrefix, EvalNextSeq)
+    local ok = pcall(function() Preloader(path) end)
+    if not ok then return end
+    local current = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
+    if current == nil or current == baseline then return end
+    BlzSetAbilityTooltip(BridgeCarrierAbilityId, baseline, BridgeCarrierTooltipLevel)
+    local parts = bridgeSplit(current, "|")
+    if parts[1] ~= "eval" then
+        EvalNextSeq = EvalNextSeq + 1
+        return
+    end
+    local seq = tonumber(parts[2]) or EvalNextSeq
+    EvalNextSeq = EvalNextSeq + 1
+    local code = EvalHexDec(parts[3] or "")
+    ProbeLogWrite("[EVAL] run seq=" .. tostring(seq) .. " bytes=" .. tostring(#code))
+    EvalRun(seq, code)
+end
 function BridgeTick()
+    pcall(BridgeConsumeEval)
     BridgeElapsed = BridgeElapsed + BridgeTickInterval
     BridgeDebugTicks = BridgeDebugTicks + 1
     if BridgeDebugTicks <= BridgeDebugMaxTicks then
@@ -362,5 +458,5 @@ do
     end
 end
 print("[CORE] Framework loaded")
-ProbeLogWrite("[BOOT] Framework loaded v2-bridge-fix")
+ProbeLogWrite("[BOOT] Framework loaded v3-aifix")
 JASS_MAX_ARRAY_SIZE = 32768 -- vJASS constant, required by SanctifiedEnchantment hash ops

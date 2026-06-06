@@ -694,7 +694,6 @@ function PereborBuildings2_BloodElves(id, pi, u)
 			end
 		end
 		i = GetRandomInt(1, a[0])
-		ProbeLogWrite("[AIBUILD] PereborBE h04D(barracks) pi=" .. tostring(pi) .. " train=" .. tostring(a[i]))
 		IssueImmediateOrderById(u, a[i])
 		
 		
@@ -769,7 +768,6 @@ function PereborBuildings2_BloodElves(id, pi, u)
 			end
 		end
 		i = GetRandomInt(1, a[0])
-		ProbeLogWrite("[AIBUILD] PereborBE h04G(workshop) pi=" .. tostring(pi) .. " train=" .. tostring(a[i]))
 		IssueImmediateOrderById(u, a[i])
 		
 		
@@ -777,16 +775,12 @@ function PereborBuildings2_BloodElves(id, pi, u)
 	elseif id == FourCC('h04E') then
 		udg_LocalInteger3 = GetRandomInt(1, 4)
 		if udg_LocalInteger3 == 1 then
-			ProbeLogWrite("[AIBUILD] PereborBE h04E(temple) pi=" .. tostring(pi) .. " train=" .. tostring(FourCC('h03W')))
 			IssueImmediateOrderById(u, FourCC('h03W'))
 		elseif udg_LocalInteger3 == 2 then
-			ProbeLogWrite("[AIBUILD] PereborBE h04E(temple) pi=" .. tostring(pi) .. " train=" .. tostring(FourCC('h040')))
 			IssueImmediateOrderById(u, FourCC('h040'))
 		elseif udg_LocalInteger3 == 3 then
-			ProbeLogWrite("[AIBUILD] PereborBE h04E(temple) pi=" .. tostring(pi) .. " train=" .. tostring(FourCC('h041')))
 			IssueImmediateOrderById(u, FourCC('h041'))
 		else
-			ProbeLogWrite("[AIBUILD] PereborBE h04E(temple) pi=" .. tostring(pi) .. " train=" .. tostring(FourCC('h042')))
 			IssueImmediateOrderById(u, FourCC('h042'))
 		end
 		
@@ -3008,7 +3002,6 @@ function PereborBuildings2_JungleTrolls(id, pi, u)
 			a[a[0]] = FourCC('o05E')
 		end
 		local trainId = a[GetRandomInt(1, a[0])]
-		ProbeLogWrite("[AIBUILD] PereborJT h0MY(barracks) pi=" .. tostring(pi) .. " train=" .. tostring(trainId))
 		IssueImmediateOrderById(u, trainId)
 	elseif id == FourCC('h0MX') then
 		a[0] = 0
@@ -3032,7 +3025,6 @@ function PereborBuildings2_JungleTrolls(id, pi, u)
 			end
 		end
 		local trainId = a[GetRandomInt(1, a[0])]
-		ProbeLogWrite("[AIBUILD] PereborJT h0MX(ranged) pi=" .. tostring(pi) .. " train=" .. tostring(trainId))
 		IssueImmediateOrderById(u, trainId)
 	elseif id == FourCC('h0MW') then
 		a[0] = 0
@@ -3057,7 +3049,6 @@ function PereborBuildings2_JungleTrolls(id, pi, u)
 			end
 		end
 		local trainId = a[GetRandomInt(1, a[0])]
-		ProbeLogWrite("[AIBUILD] PereborJT h0MW(caster) pi=" .. tostring(pi) .. " train=" .. tostring(trainId))
 		IssueImmediateOrderById(u, trainId)
 	elseif id == FourCC('h0N0') then
 		a[0] = 4
@@ -3066,11 +3057,9 @@ function PereborBuildings2_JungleTrolls(id, pi, u)
 		a[3] = FourCC('O05D')
 		a[4] = JungleTrollsBranchIsBlack(pi) and FourCC('O05L') or FourCC('O055')
 		local trainId = a[GetRandomInt(1, a[0])]
-		ProbeLogWrite("[AIBUILD] PereborJT h0N0(altar) pi=" .. tostring(pi) .. " train=" .. tostring(trainId))
 		IssueImmediateOrderById(u, trainId)
 	elseif id == FourCC('h0N5') or id == FourCC('h0N1') or id == FourCC('h0N6') then
 		if getAiCount(pi, FourCC('o04Q')) < 18 then
-			ProbeLogWrite("[AIBUILD] PereborJT townhall pi=" .. tostring(pi) .. " train=" .. tostring(FourCC('o04Q')))
 			IssueImmediateOrderById(u, FourCC('o04Q'))
 		end
 	end

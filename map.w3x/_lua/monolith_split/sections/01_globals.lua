@@ -2284,6 +2284,7 @@ AiLimit = 150	---@type integer
 AiBuildingRadius = 1000	---@type real	
 udg_BotsActive = CreateForce()	---@type force	
 udg_BotsActiveB = CreateForce()	---@type force	
+udg_BotsActiveN = CreateForce()	---@type force	
 --  Таймеры ИИ
 udg_TimerSmall4 = CreateTimer()	---@type timer	
 udg_PlayerGet2 = CreateTimer()	---@type timer	
