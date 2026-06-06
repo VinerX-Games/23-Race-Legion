@@ -1118,14 +1118,57 @@ RegisterAiRace("JungleTrolls", {
             { at = 55, action = "techUp", from = FourCC('h0N1'), to = FourCC('h0N6'), cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('o04U')] = {
+            { order = "berserk", chance = 3, type = "immediate" },
+        },
+        [FourCC('o04O')] = {
+            { order = "bloodlust", chance = 4, type = "target" },
+            { order = "dispel", chance = 4, type = "point" },
+            { order = "slow", chance = 4, type = "target" },
+        },
+        [FourCC('o04R')] = {
+            { order = "stasistrap", chance = 4, type = "point" },
+            { order = "evileye", chance = 4, type = "point" },
+            { order = "healingward", chance = 4, type = "self" },
+        },
+        [FourCC('o04N')] = {
+            { order = "flamingarrows", chance = 4, type = "target" },
+            { order = "Vengeance", chance = 5, type = "target" },
+            { order = "hex", chance = 4, type = "target", notStructure = true },
+        },
+        [FourCC('o04P')] = {
+            { order = "frostarmor", chance = 4, type = "target" },
+            { order = "blizzard", chance = 4, type = "point" },
+        },
+        [FourCC('o04S')] = {
+            { order = "ravenform", chance = 4, type = "immediate" },
+        },
+        [FourCC('o05J')] = {
+            { order = "ravenform", chance = 4, type = "immediate" },
+        },
+        [FourCC('o04M')] = {
+            { order = "chemicalrage", chance = 4, type = "immediate" },
+        },
+        [FourCC('O054')] = {
+            { order = "hex", chance = 3, type = "target", notStructure = true },
+        },
+        [FourCC('O05A')] = {
+            { order = "whirlwind", chance = 4, type = "immediate" },
+        },
+    },
+    getLvlData = {
+        [FourCC('O054')] = { ult = FourCC('AOsw'), skills = { FourCC('AOhw'), FourCC('A1E0'), FourCC('A1D0') } },
+        [FourCC('O05A')] = { ult = FourCC('A1E4'), skills = { FourCC('A1E2'), FourCC('A1E3'), FourCC('A1D0') } },
+        [FourCC('O05D')] = { ult = FourCC('A1E8'), skills = { FourCC('A1E6'), FourCC('A1E9'), FourCC('A1EA') } },
+        [FourCC('O055')] = { ult = FourCC('A1DM'), skills = { FourCC('A1DB'), FourCC('A1DC'), FourCC('A1EL') } },
+        [FourCC('O05L')] = { ult = FourCC('A1ET'), skills = { FourCC('A1ES'), FourCC('A1EV'), FourCC('A1EY') } },
+    },
     chooseBuild = ChooseBuildings_JungleTrolls,
     perebor = PereborBuildings2_JungleTrolls,
     join = Join_JungleTrolls,
     strateg = Strateg_JungleTrolls,
     strategEC = Strateg_JungleTrolls_EC,
-    attacker = Attacker_JungleTrolls,
-    attacked = AttackedJungleTrolls,
-    getLvl = GetLvlJungleTrolls,
     upgrade = UpgradeJungleTrolls,
     naval = aiNavalTrain_JungleTrolls,
     wall = FourCC('h0N2'),
