@@ -1000,27 +1000,39 @@ RegisterAiRace("ForestTrolls", {
         end,
     },
     production = {
+        [FourCC('h0MT')] = {
+            { FourCC('o04V'), 3, limit = 20 },
+            { FourCC('o04X'), 1 },
+        },
+        [FourCC('h0N8')] = {
+            { FourCC('o04V'), 3, limit = 20 },
+            { FourCC('o04X'), 1 },
+        },
+        [FourCC('h0N9')] = {
+            { FourCC('o04V'), 3, limit = 20 },
+            { FourCC('o04X'), 1 },
+        },
         [FourCC('h0MS')] = {
             { FourCC('o04W'), 5 },
-            { FourCC('o053'), 4 },
-            { FourCC('o04Z'), 3, gate = "tier2" },
+            { FourCC('o04X'), 3 },
             { FourCC('o04Y'), 3, gate = "tier2" },
+            { FourCC('o05F'), 2, gate = "tier2" },
         },
         [FourCC('h0MZ')] = {
             { FourCC('o051'), 3 },
             { FourCC('o052'), 3 },
-            { FourCC('o064'), 2 },
         },
         [FourCC('h0MR')] = {
+            { FourCC('o04Z'), 3 },
             { FourCC('o050'), 4 },
-            { FourCC('o05F'), 2, gate = "tier2" },
+            { FourCC('o053'), 4 },
         },
         [FourCC('h0MU')] = {
-            { FourCC('O059') }, { FourCC('O056') },
-            { FourCC('O058') }, { FourCC('O057') },
+            { FourCC('O059') }, { FourCC('O058') }, { FourCC('O057') },
+            { FourCC('o05M'), 1, limit = 1, gate = "tier2" },
+            { FourCC('o05N'), 1, limit = 1, gate = "tier2" },
+            { FourCC('o05O'), 1, limit = 1, gate = "tier2" },
         },
-        worker = { id = FourCC('o04V'), cap = 20,
-                   from = { FourCC('h0MT'), FourCC('h0N8'), FourCC('h0N9') } },
     },
     ecoWeights = {
         [FourCC('h0MV')] = 1, [FourCC('h0MT')] = 2,
