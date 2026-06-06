@@ -989,12 +989,52 @@ RegisterAiRace("Naga", {
             { at = 60, action = "mageTp" },
         },
     },
+    attackerData = {
+        pre = {
+            { order = "blight", chance = 1, type = "immediate", terrain = "water", notAbil = FourCC('S00E'), ret = true },
+        },
+        [FourCC('H0JV')] = {
+            { order = "berserk", chance = 3, type = "immediate" },
+            { order = "clusterrockets", chance = 5, type = "point" },
+            { order = "blink", chance = 5, type = "point" },
+        },
+        [FourCC('N07A')] = {
+            { order = "banish", chance = 5, type = "target" },
+            { order = "rainoffire", chance = 5, type = "point" },
+            { order = "tranquility", chance = 5, type = "immediate" },
+        },
+        [FourCC('H0JU')] = {
+            { order = "doom", chance = 6, type = "target" },
+            { order = "frostnova", chance = 6, type = "target" },
+            { order = "stomp", chance = 6, type = "immediate" },
+        },
+        [FourCC('H0OZ')] = {
+            { order = "doom", chance = 6, type = "target" },
+            { order = "frostnova", chance = 6, type = "target" },
+            { order = "stomp", chance = 6, type = "immediate" },
+        },
+        [FourCC('n051')] = {
+            { order = "healon", chance = 4, type = "immediate" },
+            { order = "dispel", chance = 4, type = "point" },
+        },
+        [FourCC('nnsw')] = {
+            { order = "cyclone", chance = 6, type = "target" },
+            { order = "frostarmoron", chance = 6, type = "immediate" },
+            { order = "parasiteon", chance = 6, type = "immediate" },
+        },
+        [FourCC('nnrg')] = {
+            { order = "thunderbolt", chance = 6, type = "target" },
+            { order = "carrionswarm", chance = 6, type = "point" },
+        },
+    },
+    getLvlData = {
+        [FourCC('H0JV')] = { ult = FourCC('A13C'), skills = { FourCC('A13A'), FourCC('AEbl') } },
+        [FourCC('H0JU')] = { skills = { FourCC('A14I'), FourCC('A14G') } },
+        [FourCC('N07A')] = { ult = FourCC('ANrg'), skills = { FourCC('ANsy'), FourCC('ANcs'), FourCC('ANeg') } },
+    },
     join = Join_Naga,
     strateg = Strateg_Naga,
     strategEC = Strateg_Naga_EC,
-    attacker = Attacker_Naga,
-    attacked = AttackedNaga,
-    getLvl = GetLvlNaga,
     upgrade = UpgradeNaga,
     naval = aiNavalTrain_Naga,
     wall = FourCC('n04L'),
