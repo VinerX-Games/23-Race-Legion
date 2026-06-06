@@ -58123,6 +58123,34 @@ RegisterAiRace("HordeW2", {
             { at = 55, action = "techUp", from = FourCC('w20w'), to = FourCC('w20e'), cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('w208')] = {
+            { order = "frenzy", chance = 4, type = "immediate" },
+        },
+        [FourCC('w201')] = {
+            { order = "windwalk", chance = 4, type = "immediate" },
+        },
+        [FourCC('w206')] = {
+            { order = "selfdestruct", chance = 6, type = "immediate", hp = 30 },
+        },
+        [FourCC('w205')] = {
+            { order = "bloodlust", chance = 4, type = "target" },
+            { order = "spiritwolf", chance = 5, type = "immediate" },
+        },
+        [FourCC('w209')] = {
+            { order = "frostarmor", chance = 4, type = "target" },
+            { order = "raisedead", chance = 5, type = "point" },
+        },
+        [FourCC('w211')] = {
+            { order = "heal", chance = 4, type = "heal", allyRange = 550 },
+            { order = "dispel", chance = 4, type = "point" },
+            { order = "slow", chance = 4, type = "target" },
+        },
+        [FourCC('w202')] = {
+            { order = "flamestrike", chance = 4, type = "point" },
+            { order = "breathoffire", chance = 4, type = "point" },
+        },
+    },
     join = Join_HordeW2,
     wall = FourCC('w20u'),
 })
