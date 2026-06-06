@@ -2969,6 +2969,34 @@ function f_FixUnvul()
 	-- return GetUnitAbilityLevel(GetFilterUnit(),'Bvul')>0
 end
 ---@return boolean
+function f_Lazy()
+	gUnit = GetFilterUnit()
+	gInt = GetUnitCurrentOrder(gUnit)
+	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(GetOwningPlayer(gUnit))]) and (gInt == 851972 or gInt == 851976 or gInt == 0) and not (IsUnitType(gUnit, UNIT_TYPE_PEON) or IsUnitType(gUnit, UNIT_TYPE_STRUCTURE)) then
+		LazyCount = LazyCount + 1
+		return true
+	else
+		return false
+	end
+end
+---@return boolean
+function f_LazyF()
+	gUnit = GetFilterUnit()
+	gInt = GetUnitCurrentOrder(gUnit)
+	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(CheckPlayer)]) and (gInt == 851972 or gInt == 851976 or gInt == 0) and not (IsUnitType(gUnit, UNIT_TYPE_PEON) or IsUnitType(gUnit, UNIT_TYPE_STRUCTURE))
+end
+---@return boolean
+function f_LazyN()
+	gUnit = GetFilterUnit()
+	gInt = GetUnitCurrentOrder(gUnit)
+	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_navy[GetPlayerId(CheckPlayer)]) and (gInt == 851972 or gInt == 851976 or gInt == 0) then
+		LazyCount = LazyCount + 1
+		return true
+	else
+		return false
+	end
+end
+---@return boolean
 function f_LazyW()
 	gUnit = GetFilterUnit()
 	gInt = GetUnitCurrentOrder(gUnit)
@@ -7600,29 +7628,13 @@ function StartAiRaceByToken(pi, token)
 	end
 	token = string.lower(token)
 	ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " token=" .. tostring(token))
-	if token == "scarlet" or token == "so" then
-		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Scarlet")
-		startScarlet(pi)
-	elseif token == "be" or token == "bloodelves" or token == "ek" then
-		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => BloodElves")
-		startBloodElves(pi)
-	elseif token == "goblins" or token == "gob" then
-		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Goblins")
-		startGoblins(pi)
-	elseif token == "naga" then
-		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Naga")
-		startNaga(pi)
-	elseif token == "horde" then
-		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Horde")
-		startHorde(pi)
-	elseif token == "jt" or token == "jungletrolls" or token == "trolls" then
-		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => JungleTrolls")
-		startJungleTrolls(pi)
-	else
+	local race = AiRaceByToken(token)
+	if race == nil then
 		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " token=" .. tostring(token) .. " unknown -> random will be used")
 		return false
 	end
-	return true
+	ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => " .. tostring(race.key))
+	return AiStartRace(pi, race)
 end
 ---@param pi integer
 ---@param raceToken string|nil   optional race override; nil/unknown = random
@@ -7645,22 +7657,10 @@ function createAiPlayer(pi, raceToken)
 
 	--  Раса аи (опциональный форс через raceToken, иначе случайно)
 	if not StartAiRaceByToken(pi, raceToken) then
-		gInt = GetRandomInt(1, 6)
-		ProbeLogWrite("[AI] createAiPlayer random race roll=" .. tostring(gInt))
-
-		-- Алый орден
-		if gInt == 1 then
-			startScarlet(pi)
-		elseif gInt == 2 then
-			startBloodElves(pi)
-		elseif gInt == 3 then
-			startGoblins(pi)
-		elseif gInt == 4 then
-			startNaga(pi)
-		elseif gInt == 5 then
-			startHorde(pi)
-		else
-			startJungleTrolls(pi)
+		local race = AiRacePickRandom()
+		ProbeLogWrite("[AI] createAiPlayer random race pick=" .. tostring(race and race.key or "nil"))
+		if not AiStartRace(pi, race) then
+			ProbeLogWrite("[AI] createAiPlayer random race pick failed")
 		end
 	end
 	ProbeLogWrite("[AI] createAiPlayer race=" .. tostring(AiRace[pi]) .. " set")
@@ -10967,25 +10967,9 @@ function TryBuild()
 				if  not (IsTerrainPathable(gX2, gY2, PATHING_TYPE_WALKABILITY) or IsTerrainPathable(gX2, gY2, PATHING_TYPE_FLOATABILITY) or RectContainsCoords(gg_rct_Outland, gX2, gY2)) then
 					
 					
-					if AiRace[gPi] == "Scarlet" or AiRace[gPi] == "BloodElves" then
-						ProbeLogWrite("[AIBUILD] TryBuild port order h011 pi=" .. tostring(gPi))
-						IssueBuildOrderById(gUnit, FourCC('h011'), gX2, gY2)
-					elseif AiRace[gPi] == "Goblins" then
-						ProbeLogWrite("[AIBUILD] TryBuild port order h0D7 pi=" .. tostring(gPi))
-						IssueBuildOrderById(gUnit, FourCC('h0D7'), gX2, gY2)
-					elseif AiRace[gPi] == "Naga" then
-						ProbeLogWrite("[AIBUILD] TryBuild port order n04L pi=" .. tostring(gPi))
-						IssueBuildOrderById(gUnit, FourCC('n04L'), gX2, gY2)
-					elseif AiRace[gPi] == "Horde" then
-						ProbeLogWrite("[AIBUILD] TryBuild port order h0HO pi=" .. tostring(gPi))
-						IssueBuildOrderById(gUnit, FourCC('h0HO'), gX2, gY2)
-					elseif AiRace[gPi] == "JungleTrolls" then
-						ProbeLogWrite("[AIBUILD] TryBuild port order h0N2 pi=" .. tostring(gPi))
-						IssueBuildOrderById(gUnit, FourCC('h0N2'), gX2, gY2)
+					if AiDispatchWallBuild(gPi, gUnit, gX2, gY2) then
+						return 
 					end
-					
-					
-					return 
 				end
 				
 			end
@@ -10993,7 +10977,7 @@ function TryBuild()
 		
 		
 		-- Идти к точке где много воды
-	elseif AiRace[gPi] ~= "Naga" and GoToWaterPoint(gPi, gUnit, gX, gY) then
+	elseif AiRaceUsesWaterPoint(gPi) and GoToWaterPoint(gPi, gUnit, gX, gY) then
 		ProbeLogWrite("[AIBUILD] TryBuild GoToWaterPoint pi=" .. tostring(gPi))
 		return 
 	end
@@ -11014,19 +10998,7 @@ function TryBuild()
 	
 	
 	
-	if AiRace[gPi] == "Scarlet" then
-		gInt = ChooseBuildings_ScarletOrden(gPi)
-	elseif AiRace[gPi] == "BloodElves" then
-		gInt = ChooseBuildings_BloodElves(gPi)
-	elseif AiRace[gPi] == "Goblins" then
-		gInt = ChooseBuildings_Goblins(gPi)
-	elseif AiRace[gPi] == "Naga" then
-		gInt = ChooseBuildings_Naga(gPi)
-	elseif AiRace[gPi] == "Horde" then
-		gInt = ChooseBuildings_Horde(gPi)
-	elseif AiRace[gPi] == "JungleTrolls" then
-		gInt = ChooseBuildings_JungleTrolls(gPi)
-	end
+	gInt = AiDispatchChooseBuild(gPi)
 	
 	ProbeLogWrite("[AIBUILD] TryBuild IssueBuildOrderById pi=" .. tostring(gPi) .. " buildingId=" .. tostring(gInt) .. " x=" .. tostring(gX) .. " y=" .. tostring(gY))
 	IssueBuildOrderById(gUnit, gInt, gX, gY)
@@ -11044,19 +11016,7 @@ function aiUnitJoins(u, pi)
 	-- call UnitApplyTimedLife( u,'BTLF',1200.00)
 	NumberAdd(pi, id)
 	
-	if AiRace[pi] == "Scarlet" then
-		Join_Skarlet(id, pi, u)
-	elseif AiRace[pi] == "BloodElves" then
-		Join_BloodElves(id, pi, u)
-	elseif AiRace[pi] == "Goblins" then
-		Join_Goblins(id, pi, u)
-	elseif AiRace[pi] == "Naga" then
-		Join_Naga(id, pi, u)
-	elseif AiRace[pi] == "Horde" then
-		Join_Horde(id, pi, u)
-	elseif AiRace[pi] == "JungleTrolls" then
-		Join_JungleTrolls(id, pi, u)
-	end
+	AiDispatchJoin(id, pi, u)
 	
 end
 -- ***************************************************************************
@@ -53671,19 +53631,7 @@ function Trig_PereborBuildings_Code_Func002A()
             ProbeLogWrite("[AIBUILD] PereborBuildings pi=" .. tostring(gPi) .. " buildingId=" .. tostring(gId) .. " race=" .. tostring(AiRace[gPi]))
         end
         
-        if AiRace[gPi] == "Scarlet" then
-            PereborBuildings_ScarletOrden(gId , gPi , gUnit)
-        elseif AiRace[gPi] == "BloodElves" then
-            PereborBuildings2_BloodElves(gId , gPi , gUnit)
-        elseif AiRace[gPi] == "Goblins" then
-            PereborBuildings_Goblins(gId , gPi , gUnit)
-        elseif AiRace[gPi] == "Naga" then
-            PereborBuildings_Naga(gId , gPi , gUnit)
-        elseif AiRace[gPi] == "Horde" then
-            PereborBuildings_Horde(gId , gPi , gUnit)
-        elseif AiRace[gPi] == "JungleTrolls" then
-            PereborBuildings2_JungleTrolls(gId , gPi , gUnit)
-        end
+        AiDispatchPerebor(gId, gPi, gUnit)
         bj_forLoopAIndex=bj_forLoopAIndex + 1
     end
     
@@ -53756,17 +53704,7 @@ function PereborNavalb()
         id=GetUnitTypeId(u)
           
         -- Верфь
-        if AiRace[pi] == "Scarlet" or AiRace[pi] == "BloodElves" then
-            aiNavalTrain_Common(u , pi)
-        elseif AiRace[pi] == "Goblins" then
-            aiNavalTrain_Goblins(u , pi)
-        elseif AiRace[pi] == "Naga" then
-            aiNavalTrain_Naga(u , pi)
-        elseif AiRace[pi] == "Horde" then
-            aiNavalTrain_Horde(u , pi)
-        elseif AiRace[pi] == "JungleTrolls" then
-            aiNavalTrain_JungleTrolls(u , pi)
-        end
+        AiDispatchNaval(u, pi)
         
         bj_forLoopAIndex=bj_forLoopAIndex + 1
     end
@@ -53812,19 +53750,7 @@ function ZahType()
     if IsUnitInGroup(u, udg_ZahvatBuildings) then
         udg_LocalInteger3=udg_LocalInteger3 + 8
     else
-        if AiRace[pi] == "Scarlet" then
-            Strateg_Scarlet_EC(id)
-        elseif AiRace[pi] == "BloodElves" then
-            Strateg_BloodElves_EC(id)
-        elseif AiRace[pi] == "Goblins" then
-            Strateg_Goblins_EC(id)
-        elseif AiRace[pi] == "Naga" then
-            Strateg_Naga_EC(id)
-        elseif AiRace[pi] == "Horde" then
-            Strateg_Horde_EC(id)
-        elseif AiRace[pi] == "JungleTrolls" then
-            Strateg_JungleTrolls_EC(id)
-        end
+    AiDispatchStrategEC(id, pi)
     end
 end
 function Strateg()
@@ -53862,19 +53788,7 @@ function Strateg()
     
     
     
-    if AiRace[pi] == "Scarlet" then
-        Strateg_Scarlet(i , pi , p)
-    elseif AiRace[pi] == "BloodElves" then
-        Strateg_BloodElves(i , pi , p)
-    elseif AiRace[pi] == "Goblins" then
-        Strateg_Goblins(i , pi , p)
-    elseif AiRace[pi] == "Naga" then
-        Strateg_Naga(i , pi , p)
-    elseif AiRace[pi] == "Horde" then
-        Strateg_Horde(i , pi , p)
-    elseif AiRace[pi] == "JungleTrolls" then
-        Strateg_JungleTrolls(i , pi , p)
-    end
+    AiDispatchStrateg(i, pi, p)
    
     
     
@@ -53947,19 +53861,7 @@ function Trig_AttackerAi_Actions()
     local id= GetUnitTypeId(gAttacker)
     
     gTarget=GetTriggerUnit()
-    if AiRace[gPi] == "Scarlet" then
-        Attacker_Skarlet(id , gAttacker , gTarget , gPlayer)
-    elseif AiRace[gPi] == "BloodElves" then
-        Attacker_BloodElves(id , gAttacker , gTarget , gPlayer)
-    elseif AiRace[gPi] == "Naga" then
-        Attacker_Naga(id , gAttacker , gTarget , gPlayer)
-    elseif AiRace[gPi] == "Goblins" then
-        Attacker_Goblins(id , gAttacker , gTarget , gPlayer)
-    elseif AiRace[gPi] == "Horde" then
-        Attacker_Goblins(id , gAttacker , gTarget , gPlayer)
-    elseif AiRace[gPi] == "JungleTrolls" then
-        Attacker_JungleTrolls(id , gAttacker , gTarget , gPlayer)
-    end
+    AiDispatchAttacker(id, gAttacker, gTarget, gPlayer)
 end
 --===========================================================================
 function InitTrig_AttackerAi()
@@ -54000,19 +53902,7 @@ function Trig_AttackedAI_Actions()
         end
     else
         -- --------------- Алый орден
-        if AiRace[gPi] == "Scarlet" then
-            AttackedScarlet(gAttacked)
-        elseif AiRace[gPi] == "BloodElves" then
-            AttackedBloodElves(gAttacked)
-        elseif AiRace[gPi] == "Goblins" then
-            AttackedGoblins(gAttacked)
-        elseif AiRace[gPi] == "Naga" then
-            AttackedNaga(gAttacked)
-        elseif AiRace[gPi] == "Horde" then
-            AttackedNaga(gAttacked)
-        elseif AiRace[gPi] == "JungleTrolls" then
-            AttackedJungleTrolls(gAttacked)
-        end
+    AiDispatchAttacked(gAttacked, gPi)
     end
 end
 --===========================================================================
@@ -54036,19 +53926,7 @@ function Trig_GetLvl_Actions()
     
     
     
-    if AiRace[pi] == "Scarlet" then
-       GetLvlScarlet(u)
-    elseif AiRace[pi] == "BloodElves" then
-       GetLvlBloodElves(u)
-    elseif AiRace[pi] == "Goblins" then
-       GetLvlGoblins(u)
-    elseif AiRace[pi] == "Naga" then
-       GetLvlNaga(u)
-    elseif AiRace[pi] == "Horde" then
-       GetLvlHorde(u)
-    elseif AiRace[pi] == "JungleTrolls" then
-       GetLvlJungleTrolls(u)
-    end
+    AiDispatchGetLvl(u, pi)
     u=null
 end
 --===========================================================================
@@ -54168,17 +54046,7 @@ end
 function Trig_UpgradeBuildings_Actions()
     gId=GetUnitTypeId(gUnit)
     NumberAdd(gPi , gId)
-    if AiRace[gPi] == "Scarlet" then
-        UpgradeScarlet(gPi , gId)
-    elseif AiRace[gPi] == "BloodElves" then
-        UpgradeBloodElves(gPi , gId)
-    elseif AiRace[gPi] == "Naga" then
-        UpgradeNaga(gPi , gId)
-    elseif AiRace[gPi] == "Horde" then
-        UpgradeHorde(gPi , gId)
-    elseif AiRace[gPi] == "JungleTrolls" then
-        UpgradeJungleTrolls(gPi , gId)
-    end
+    AiDispatchUpgrade(gPi, gId)
     
 end
 --===========================================================================
@@ -56653,6 +56521,316 @@ function InitTrig_DalIn_Copy()
     TriggerAddAction(gg_trg_DalIn_Copy, Trig_DalIn_Copy_Actions)
 end
 --===========================================================================
+AiRaces = AiRaces or {}
+AiRaceTokens = AiRaceTokens or {}
+AiRaceOrder = AiRaceOrder or {}
+
+local function AiNormalizeToken(token)
+    if token == nil then
+        return nil
+    end
+    return string.lower(token)
+end
+
+---@param key string
+---@param def table
+function RegisterAiRace(key, def)
+    if key == nil or key == "" or def == nil then
+        return
+    end
+    def.key = key
+    if AiRaces[key] == nil then
+        AiRaceOrder[#AiRaceOrder + 1] = key
+    end
+    AiRaces[key] = def
+    if def.tokens ~= nil then
+        for _, token in ipairs(def.tokens) do
+            local normalized = AiNormalizeToken(token)
+            if normalized ~= nil and normalized ~= "" then
+                AiRaceTokens[normalized] = key
+            end
+        end
+    end
+end
+
+---@param pi integer
+---@return table|nil
+function AiRaceOf(pi)
+    return AiRaces[AiRace[pi]]
+end
+
+---@param token string|nil
+---@return table|nil
+function AiRaceByToken(token)
+    local normalized = AiNormalizeToken(token)
+    if normalized == nil or normalized == "" then
+        return nil
+    end
+    local key = AiRaceTokens[normalized]
+    if key == nil then
+        return nil
+    end
+    return AiRaces[key]
+end
+
+---@return table|nil
+function AiRacePickRandom()
+    local total = 0
+    for _, key in ipairs(AiRaceOrder) do
+        local race = AiRaces[key]
+        local weight = race and race.weight or 0
+        if weight > 0 then
+            total = total + weight
+        end
+    end
+    if total <= 0 then
+        return nil
+    end
+    local roll = GetRandomInt(1, total)
+    for _, key in ipairs(AiRaceOrder) do
+        local race = AiRaces[key]
+        local weight = race and race.weight or 0
+        if weight > 0 then
+            roll = roll - weight
+            if roll <= 0 then
+                return race
+            end
+        end
+    end
+    return nil
+end
+
+---@param pi integer
+---@param race table|nil
+---@return boolean
+function AiStartRace(pi, race)
+    if race == nil or race.start == nil then
+        return false
+    end
+    race.start(pi)
+    return true
+end
+
+---@param pi integer
+---@param worker unit
+---@param x real
+---@param y real
+---@return boolean
+function AiDispatchWallBuild(pi, worker, x, y)
+    local race = AiRaceOf(pi)
+    if race == nil or race.wall == nil then
+        return false
+    end
+    ProbeLogWrite("[AIBUILD] TryBuild port order " .. tostring(race.wall) .. " pi=" .. tostring(pi))
+    IssueBuildOrderById(worker, race.wall, x, y)
+    return true
+end
+
+---@param pi integer
+---@return boolean
+function AiRaceUsesWaterPoint(pi)
+    local race = AiRaceOf(pi)
+    return race == nil or race.usesWaterPoint ~= false
+end
+
+---@param pi integer
+---@return integer
+function AiDispatchChooseBuild(pi)
+    local race = AiRaceOf(pi)
+    if race ~= nil and race.chooseBuild ~= nil then
+        return race.chooseBuild(pi)
+    end
+    return 0
+end
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function AiDispatchJoin(id, pi, u)
+    local race = AiRaceOf(pi)
+    if race ~= nil and race.join ~= nil then
+        race.join(id, pi, u)
+    end
+end
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function AiDispatchPerebor(id, pi, u)
+    local race = AiRaceOf(pi)
+    if race ~= nil and race.perebor ~= nil then
+        race.perebor(id, pi, u)
+    end
+end
+
+---@param u unit
+---@param pi integer
+function AiDispatchNaval(u, pi)
+    local race = AiRaceOf(pi)
+    if race ~= nil and race.naval ~= nil then
+        race.naval(u, pi)
+    end
+end
+
+---@param id integer
+---@param pi integer
+function AiDispatchStrategEC(id, pi)
+    local race = AiRaceOf(pi)
+    if race ~= nil and race.strategEC ~= nil then
+        race.strategEC(id)
+    end
+end
+
+---@param i integer
+---@param pi integer
+---@param p player
+function AiDispatchStrateg(i, pi, p)
+    local race = AiRaceOf(pi)
+    if race ~= nil and race.strateg ~= nil then
+        race.strateg(i, pi, p)
+    end
+end
+
+---@param id integer
+---@param attacker unit
+---@param target unit
+---@param p player
+function AiDispatchAttacker(id, attacker, target, p)
+    local pi = GetPlayerId(p)
+    local race = AiRaceOf(pi)
+    if race ~= nil and race.attacker ~= nil then
+        race.attacker(id, attacker, target, p)
+    end
+end
+
+---@param u unit
+---@param pi integer
+function AiDispatchAttacked(u, pi)
+    local race = AiRaceOf(pi)
+    if race ~= nil and race.attacked ~= nil then
+        race.attacked(u)
+    end
+end
+
+---@param u unit
+---@param pi integer
+function AiDispatchGetLvl(u, pi)
+    local race = AiRaceOf(pi)
+    if race ~= nil and race.getLvl ~= nil then
+        race.getLvl(u)
+    end
+end
+
+---@param pi integer
+---@param id integer
+function AiDispatchUpgrade(pi, id)
+    local race = AiRaceOf(pi)
+    if race ~= nil and race.upgrade ~= nil then
+        race.upgrade(pi, id)
+    end
+end
+
+RegisterAiRace("Scarlet", {
+    tokens = {"scarlet", "so"},
+    weight = 1,
+    start = startScarlet,
+    chooseBuild = ChooseBuildings_ScarletOrden,
+    perebor = PereborBuildings_ScarletOrden,
+    join = Join_Skarlet,
+    strateg = Strateg_Scarlet,
+    strategEC = Strateg_Scarlet_EC,
+    attacker = Attacker_Skarlet,
+    attacked = AttackedScarlet,
+    getLvl = GetLvlScarlet,
+    upgrade = UpgradeScarlet,
+    naval = aiNavalTrain_Common,
+    wall = FourCC('h011'),
+})
+
+RegisterAiRace("BloodElves", {
+    tokens = {"be", "bloodelves", "ek"},
+    weight = 1,
+    start = startBloodElves,
+    chooseBuild = ChooseBuildings_BloodElves,
+    perebor = PereborBuildings2_BloodElves,
+    join = Join_BloodElves,
+    strateg = Strateg_BloodElves,
+    strategEC = Strateg_BloodElves_EC,
+    attacker = Attacker_BloodElves,
+    attacked = AttackedBloodElves,
+    getLvl = GetLvlBloodElves,
+    upgrade = UpgradeBloodElves,
+    naval = aiNavalTrain_Common,
+    wall = FourCC('h011'),
+})
+
+RegisterAiRace("Goblins", {
+    tokens = {"goblins", "gob"},
+    weight = 1,
+    start = startGoblins,
+    chooseBuild = ChooseBuildings_Goblins,
+    perebor = PereborBuildings_Goblins,
+    join = Join_Goblins,
+    strateg = Strateg_Goblins,
+    strategEC = Strateg_Goblins_EC,
+    attacker = Attacker_Goblins,
+    attacked = AttackedGoblins,
+    getLvl = GetLvlGoblins,
+    naval = aiNavalTrain_Goblins,
+    wall = FourCC('h0D7'),
+})
+
+RegisterAiRace("Naga", {
+    tokens = {"naga"},
+    weight = 1,
+    start = startNaga,
+    chooseBuild = ChooseBuildings_Naga,
+    perebor = PereborBuildings_Naga,
+    join = Join_Naga,
+    strateg = Strateg_Naga,
+    strategEC = Strateg_Naga_EC,
+    attacker = Attacker_Naga,
+    attacked = AttackedNaga,
+    getLvl = GetLvlNaga,
+    upgrade = UpgradeNaga,
+    naval = aiNavalTrain_Naga,
+    wall = FourCC('n04L'),
+    usesWaterPoint = false,
+})
+
+RegisterAiRace("Horde", {
+    tokens = {"horde"},
+    weight = 1,
+    start = startHorde,
+    chooseBuild = ChooseBuildings_Horde,
+    perebor = PereborBuildings_Horde,
+    join = Join_Horde,
+    strateg = Strateg_Horde,
+    strategEC = Strateg_Horde_EC,
+    attacker = Attacker_Goblins,
+    attacked = AttackedNaga,
+    getLvl = GetLvlHorde,
+    upgrade = UpgradeHorde,
+    naval = aiNavalTrain_Horde,
+    wall = FourCC('h0HO'),
+})
+
+RegisterAiRace("JungleTrolls", {
+    tokens = {"jt", "jungletrolls", "trolls"},
+    weight = 1,
+    start = startJungleTrolls,
+    chooseBuild = ChooseBuildings_JungleTrolls,
+    perebor = PereborBuildings2_JungleTrolls,
+    join = Join_JungleTrolls,
+    strateg = Strateg_JungleTrolls,
+    strategEC = Strateg_JungleTrolls_EC,
+    attacker = Attacker_JungleTrolls,
+    attacked = AttackedJungleTrolls,
+    getLvl = GetLvlJungleTrolls,
+    upgrade = UpgradeJungleTrolls,
+    naval = aiNavalTrain_JungleTrolls,
+    wall = FourCC('h0N2'),
+})
 function InitCustomTriggers()
     InitTrig_sek5()
     InitTrig_RRR()

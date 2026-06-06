@@ -3254,25 +3254,9 @@ function TryBuild()
 				if  not (IsTerrainPathable(gX2, gY2, PATHING_TYPE_WALKABILITY) or IsTerrainPathable(gX2, gY2, PATHING_TYPE_FLOATABILITY) or RectContainsCoords(gg_rct_Outland, gX2, gY2)) then
 					
 					
-					if AiRace[gPi] == "Scarlet" or AiRace[gPi] == "BloodElves" then
-						ProbeLogWrite("[AIBUILD] TryBuild port order h011 pi=" .. tostring(gPi))
-						IssueBuildOrderById(gUnit, FourCC('h011'), gX2, gY2)
-					elseif AiRace[gPi] == "Goblins" then
-						ProbeLogWrite("[AIBUILD] TryBuild port order h0D7 pi=" .. tostring(gPi))
-						IssueBuildOrderById(gUnit, FourCC('h0D7'), gX2, gY2)
-					elseif AiRace[gPi] == "Naga" then
-						ProbeLogWrite("[AIBUILD] TryBuild port order n04L pi=" .. tostring(gPi))
-						IssueBuildOrderById(gUnit, FourCC('n04L'), gX2, gY2)
-					elseif AiRace[gPi] == "Horde" then
-						ProbeLogWrite("[AIBUILD] TryBuild port order h0HO pi=" .. tostring(gPi))
-						IssueBuildOrderById(gUnit, FourCC('h0HO'), gX2, gY2)
-					elseif AiRace[gPi] == "JungleTrolls" then
-						ProbeLogWrite("[AIBUILD] TryBuild port order h0N2 pi=" .. tostring(gPi))
-						IssueBuildOrderById(gUnit, FourCC('h0N2'), gX2, gY2)
+					if AiDispatchWallBuild(gPi, gUnit, gX2, gY2) then
+						return 
 					end
-					
-					
-					return 
 				end
 				
 			end
@@ -3280,7 +3264,7 @@ function TryBuild()
 		
 		
 		-- Идти к точке где много воды
-	elseif AiRace[gPi] ~= "Naga" and GoToWaterPoint(gPi, gUnit, gX, gY) then
+	elseif AiRaceUsesWaterPoint(gPi) and GoToWaterPoint(gPi, gUnit, gX, gY) then
 		ProbeLogWrite("[AIBUILD] TryBuild GoToWaterPoint pi=" .. tostring(gPi))
 		return 
 	end
@@ -3301,19 +3285,7 @@ function TryBuild()
 	
 	
 	
-	if AiRace[gPi] == "Scarlet" then
-		gInt = ChooseBuildings_ScarletOrden(gPi)
-	elseif AiRace[gPi] == "BloodElves" then
-		gInt = ChooseBuildings_BloodElves(gPi)
-	elseif AiRace[gPi] == "Goblins" then
-		gInt = ChooseBuildings_Goblins(gPi)
-	elseif AiRace[gPi] == "Naga" then
-		gInt = ChooseBuildings_Naga(gPi)
-	elseif AiRace[gPi] == "Horde" then
-		gInt = ChooseBuildings_Horde(gPi)
-	elseif AiRace[gPi] == "JungleTrolls" then
-		gInt = ChooseBuildings_JungleTrolls(gPi)
-	end
+	gInt = AiDispatchChooseBuild(gPi)
 	
 	ProbeLogWrite("[AIBUILD] TryBuild IssueBuildOrderById pi=" .. tostring(gPi) .. " buildingId=" .. tostring(gInt) .. " x=" .. tostring(gX) .. " y=" .. tostring(gY))
 	IssueBuildOrderById(gUnit, gInt, gX, gY)
@@ -3331,19 +3303,7 @@ function aiUnitJoins(u, pi)
 	-- call UnitApplyTimedLife( u,'BTLF',1200.00)
 	NumberAdd(pi, id)
 	
-	if AiRace[pi] == "Scarlet" then
-		Join_Skarlet(id, pi, u)
-	elseif AiRace[pi] == "BloodElves" then
-		Join_BloodElves(id, pi, u)
-	elseif AiRace[pi] == "Goblins" then
-		Join_Goblins(id, pi, u)
-	elseif AiRace[pi] == "Naga" then
-		Join_Naga(id, pi, u)
-	elseif AiRace[pi] == "Horde" then
-		Join_Horde(id, pi, u)
-	elseif AiRace[pi] == "JungleTrolls" then
-		Join_JungleTrolls(id, pi, u)
-	end
+	AiDispatchJoin(id, pi, u)
 	
 end
 -- ***************************************************************************
@@ -45958,19 +45918,7 @@ function Trig_PereborBuildings_Code_Func002A()
             ProbeLogWrite("[AIBUILD] PereborBuildings pi=" .. tostring(gPi) .. " buildingId=" .. tostring(gId) .. " race=" .. tostring(AiRace[gPi]))
         end
         
-        if AiRace[gPi] == "Scarlet" then
-            PereborBuildings_ScarletOrden(gId , gPi , gUnit)
-        elseif AiRace[gPi] == "BloodElves" then
-            PereborBuildings2_BloodElves(gId , gPi , gUnit)
-        elseif AiRace[gPi] == "Goblins" then
-            PereborBuildings_Goblins(gId , gPi , gUnit)
-        elseif AiRace[gPi] == "Naga" then
-            PereborBuildings_Naga(gId , gPi , gUnit)
-        elseif AiRace[gPi] == "Horde" then
-            PereborBuildings_Horde(gId , gPi , gUnit)
-        elseif AiRace[gPi] == "JungleTrolls" then
-            PereborBuildings2_JungleTrolls(gId , gPi , gUnit)
-        end
+        AiDispatchPerebor(gId, gPi, gUnit)
         bj_forLoopAIndex=bj_forLoopAIndex + 1
     end
     
@@ -46043,17 +45991,7 @@ function PereborNavalb()
         id=GetUnitTypeId(u)
           
         -- Верфь
-        if AiRace[pi] == "Scarlet" or AiRace[pi] == "BloodElves" then
-            aiNavalTrain_Common(u , pi)
-        elseif AiRace[pi] == "Goblins" then
-            aiNavalTrain_Goblins(u , pi)
-        elseif AiRace[pi] == "Naga" then
-            aiNavalTrain_Naga(u , pi)
-        elseif AiRace[pi] == "Horde" then
-            aiNavalTrain_Horde(u , pi)
-        elseif AiRace[pi] == "JungleTrolls" then
-            aiNavalTrain_JungleTrolls(u , pi)
-        end
+        AiDispatchNaval(u, pi)
         
         bj_forLoopAIndex=bj_forLoopAIndex + 1
     end
@@ -46099,19 +46037,7 @@ function ZahType()
     if IsUnitInGroup(u, udg_ZahvatBuildings) then
         udg_LocalInteger3=udg_LocalInteger3 + 8
     else
-        if AiRace[pi] == "Scarlet" then
-            Strateg_Scarlet_EC(id)
-        elseif AiRace[pi] == "BloodElves" then
-            Strateg_BloodElves_EC(id)
-        elseif AiRace[pi] == "Goblins" then
-            Strateg_Goblins_EC(id)
-        elseif AiRace[pi] == "Naga" then
-            Strateg_Naga_EC(id)
-        elseif AiRace[pi] == "Horde" then
-            Strateg_Horde_EC(id)
-        elseif AiRace[pi] == "JungleTrolls" then
-            Strateg_JungleTrolls_EC(id)
-        end
+    AiDispatchStrategEC(id, pi)
     end
 end
 function Strateg()
@@ -46149,19 +46075,7 @@ function Strateg()
     
     
     
-    if AiRace[pi] == "Scarlet" then
-        Strateg_Scarlet(i , pi , p)
-    elseif AiRace[pi] == "BloodElves" then
-        Strateg_BloodElves(i , pi , p)
-    elseif AiRace[pi] == "Goblins" then
-        Strateg_Goblins(i , pi , p)
-    elseif AiRace[pi] == "Naga" then
-        Strateg_Naga(i , pi , p)
-    elseif AiRace[pi] == "Horde" then
-        Strateg_Horde(i , pi , p)
-    elseif AiRace[pi] == "JungleTrolls" then
-        Strateg_JungleTrolls(i , pi , p)
-    end
+    AiDispatchStrateg(i, pi, p)
    
     
     
@@ -46234,19 +46148,7 @@ function Trig_AttackerAi_Actions()
     local id= GetUnitTypeId(gAttacker)
     
     gTarget=GetTriggerUnit()
-    if AiRace[gPi] == "Scarlet" then
-        Attacker_Skarlet(id , gAttacker , gTarget , gPlayer)
-    elseif AiRace[gPi] == "BloodElves" then
-        Attacker_BloodElves(id , gAttacker , gTarget , gPlayer)
-    elseif AiRace[gPi] == "Naga" then
-        Attacker_Naga(id , gAttacker , gTarget , gPlayer)
-    elseif AiRace[gPi] == "Goblins" then
-        Attacker_Goblins(id , gAttacker , gTarget , gPlayer)
-    elseif AiRace[gPi] == "Horde" then
-        Attacker_Goblins(id , gAttacker , gTarget , gPlayer)
-    elseif AiRace[gPi] == "JungleTrolls" then
-        Attacker_JungleTrolls(id , gAttacker , gTarget , gPlayer)
-    end
+    AiDispatchAttacker(id, gAttacker, gTarget, gPlayer)
 end
 --===========================================================================
 function InitTrig_AttackerAi()
@@ -46287,19 +46189,7 @@ function Trig_AttackedAI_Actions()
         end
     else
         -- --------------- Алый орден
-        if AiRace[gPi] == "Scarlet" then
-            AttackedScarlet(gAttacked)
-        elseif AiRace[gPi] == "BloodElves" then
-            AttackedBloodElves(gAttacked)
-        elseif AiRace[gPi] == "Goblins" then
-            AttackedGoblins(gAttacked)
-        elseif AiRace[gPi] == "Naga" then
-            AttackedNaga(gAttacked)
-        elseif AiRace[gPi] == "Horde" then
-            AttackedNaga(gAttacked)
-        elseif AiRace[gPi] == "JungleTrolls" then
-            AttackedJungleTrolls(gAttacked)
-        end
+    AiDispatchAttacked(gAttacked, gPi)
     end
 end
 --===========================================================================
@@ -46323,19 +46213,7 @@ function Trig_GetLvl_Actions()
     
     
     
-    if AiRace[pi] == "Scarlet" then
-       GetLvlScarlet(u)
-    elseif AiRace[pi] == "BloodElves" then
-       GetLvlBloodElves(u)
-    elseif AiRace[pi] == "Goblins" then
-       GetLvlGoblins(u)
-    elseif AiRace[pi] == "Naga" then
-       GetLvlNaga(u)
-    elseif AiRace[pi] == "Horde" then
-       GetLvlHorde(u)
-    elseif AiRace[pi] == "JungleTrolls" then
-       GetLvlJungleTrolls(u)
-    end
+    AiDispatchGetLvl(u, pi)
     u=null
 end
 --===========================================================================
@@ -46455,17 +46333,7 @@ end
 function Trig_UpgradeBuildings_Actions()
     gId=GetUnitTypeId(gUnit)
     NumberAdd(gPi , gId)
-    if AiRace[gPi] == "Scarlet" then
-        UpgradeScarlet(gPi , gId)
-    elseif AiRace[gPi] == "BloodElves" then
-        UpgradeBloodElves(gPi , gId)
-    elseif AiRace[gPi] == "Naga" then
-        UpgradeNaga(gPi , gId)
-    elseif AiRace[gPi] == "Horde" then
-        UpgradeHorde(gPi , gId)
-    elseif AiRace[gPi] == "JungleTrolls" then
-        UpgradeJungleTrolls(gPi , gId)
-    end
+    AiDispatchUpgrade(gPi, gId)
     
 end
 --===========================================================================

@@ -81,6 +81,34 @@ function f_FixUnvul()
 	-- return GetUnitAbilityLevel(GetFilterUnit(),'Bvul')>0
 end
 ---@return boolean
+function f_Lazy()
+	gUnit = GetFilterUnit()
+	gInt = GetUnitCurrentOrder(gUnit)
+	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(GetOwningPlayer(gUnit))]) and (gInt == 851972 or gInt == 851976 or gInt == 0) and not (IsUnitType(gUnit, UNIT_TYPE_PEON) or IsUnitType(gUnit, UNIT_TYPE_STRUCTURE)) then
+		LazyCount = LazyCount + 1
+		return true
+	else
+		return false
+	end
+end
+---@return boolean
+function f_LazyF()
+	gUnit = GetFilterUnit()
+	gInt = GetUnitCurrentOrder(gUnit)
+	return UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_army[GetPlayerId(CheckPlayer)]) and (gInt == 851972 or gInt == 851976 or gInt == 0) and not (IsUnitType(gUnit, UNIT_TYPE_PEON) or IsUnitType(gUnit, UNIT_TYPE_STRUCTURE))
+end
+---@return boolean
+function f_LazyN()
+	gUnit = GetFilterUnit()
+	gInt = GetUnitCurrentOrder(gUnit)
+	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_navy[GetPlayerId(CheckPlayer)]) and (gInt == 851972 or gInt == 851976 or gInt == 0) then
+		LazyCount = LazyCount + 1
+		return true
+	else
+		return false
+	end
+end
+---@return boolean
 function f_LazyW()
 	gUnit = GetFilterUnit()
 	gInt = GetUnitCurrentOrder(gUnit)

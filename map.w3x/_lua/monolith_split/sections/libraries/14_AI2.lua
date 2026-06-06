@@ -108,29 +108,13 @@ function StartAiRaceByToken(pi, token)
 	end
 	token = string.lower(token)
 	ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " token=" .. tostring(token))
-	if token == "scarlet" or token == "so" then
-		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Scarlet")
-		startScarlet(pi)
-	elseif token == "be" or token == "bloodelves" or token == "ek" then
-		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => BloodElves")
-		startBloodElves(pi)
-	elseif token == "goblins" or token == "gob" then
-		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Goblins")
-		startGoblins(pi)
-	elseif token == "naga" then
-		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Naga")
-		startNaga(pi)
-	elseif token == "horde" then
-		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => Horde")
-		startHorde(pi)
-	elseif token == "jt" or token == "jungletrolls" or token == "trolls" then
-		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => JungleTrolls")
-		startJungleTrolls(pi)
-	else
+	local race = AiRaceByToken(token)
+	if race == nil then
 		ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " token=" .. tostring(token) .. " unknown -> random will be used")
 		return false
 	end
-	return true
+	ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " => " .. tostring(race.key))
+	return AiStartRace(pi, race)
 end
 ---@param pi integer
 ---@param raceToken string|nil   optional race override; nil/unknown = random
@@ -153,22 +137,10 @@ function createAiPlayer(pi, raceToken)
 
 	--  Раса аи (опциональный форс через raceToken, иначе случайно)
 	if not StartAiRaceByToken(pi, raceToken) then
-		gInt = GetRandomInt(1, 6)
-		ProbeLogWrite("[AI] createAiPlayer random race roll=" .. tostring(gInt))
-
-		-- Алый орден
-		if gInt == 1 then
-			startScarlet(pi)
-		elseif gInt == 2 then
-			startBloodElves(pi)
-		elseif gInt == 3 then
-			startGoblins(pi)
-		elseif gInt == 4 then
-			startNaga(pi)
-		elseif gInt == 5 then
-			startHorde(pi)
-		else
-			startJungleTrolls(pi)
+		local race = AiRacePickRandom()
+		ProbeLogWrite("[AI] createAiPlayer random race pick=" .. tostring(race and race.key or "nil"))
+		if not AiStartRace(pi, race) then
+			ProbeLogWrite("[AI] createAiPlayer random race pick failed")
 		end
 	end
 	ProbeLogWrite("[AI] createAiPlayer race=" .. tostring(AiRace[pi]) .. " set")
