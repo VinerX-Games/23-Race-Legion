@@ -168,10 +168,10 @@ function BridgeTick()
     if BridgeDebugTicks <= BridgeDebugMaxTicks then
         ProbeLogWrite("[BRIDGE] tick #" .. tostring(BridgeDebugTicks) .. " elapsed=" .. tostring(BridgeElapsed))
     end
-    if BridgeManifestCount == nil then
-        BridgeRequestManifest()
-    elseif BridgeNextLoadSequence <= BridgeManifestCount then
-        BridgeRequestNextCommand()
+    local filename = bridgeCommandFilename(BridgeNextLoadSequence)
+    if BridgeConsumePayloadFromFile(filename) then
+        ProbeLogWrite("[BRIDGE] loaded file=" .. filename)
+        BridgeNextLoadSequence = BridgeNextLoadSequence + 1
     end
     for sequence, command in pairs(BridgeCommands) do
         if not command.done and BridgeElapsed >= command.at_seconds then
@@ -190,7 +190,14 @@ function BridgeTick()
     end
 end
 function BridgeStart()
-    ProbeLogWrite("[BRIDGE] start (chat mode)")
+    if BridgePollTimer ~= nil then
+        return
+    end
+    BridgeCarrierBaseline = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
+    local timer = CreateTimer()
+    BridgePollTimer = timer
+    ProbeLogWrite("[BRIDGE] start (preloader+chat)")
+    TimerStart(timer, BridgeTickInterval, true, BridgeTick)
 end
 function SetupBridgeChat()
     local trigger = CreateTrigger()
