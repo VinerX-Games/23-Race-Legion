@@ -3848,7 +3848,7 @@ function ChoseRandomSpot(dest, pi, x, y)
 	Counter = 0
 	CheckPlayer = Player(pi)
 	GroupEnumUnitsInRange(gGroup, x, y, 3200, b_OwnBuldingsInRange)
-	return BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter))
+	return BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
 end
 --  Создает мага тп и делат теп по позиции выбранного юнита
 ---@param dest unit
@@ -3885,7 +3885,7 @@ function PortTo(u)
 	
 	LazyCount = 0
 	GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_Lazy)
-	gUnit2 = BlzGroupUnitAt(gGroup, GetRandomInt(0, LazyCount))
+	gUnit2 = BlzGroupUnitAt(gGroup, GetRandomInt(0, LazyCount - 1))
 	
 	--  Точка
 	if IsUnitInGroup(u, udg_ZahvatBuildings) then
@@ -3915,7 +3915,7 @@ function PortToFast(u)
 	
 	LazyCount = 0
 	GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_InAiArmy)
-	gUnit2 = BlzGroupUnitAt(gGroup, GetRandomInt(0, LazyCount))
+	gUnit2 = BlzGroupUnitAt(gGroup, GetRandomInt(0, LazyCount - 1))
 	
 	--  Точка
 	if IsUnitInGroup(gAttacked, udg_ZahvatBuildings) then
@@ -4422,7 +4422,7 @@ function MakeGrade(gamer, GradeUnit, Grade)
 	Counter = 0
 	b = Condition(ThisType)
 	GroupEnumUnitsOfPlayer(gGroup, gamer, b)
-	gUnit = BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter))
+	gUnit = BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
 	if gUnit ~= nil then
 		IssueImmediateOrderById(gUnit, Grade)
 	end
@@ -4452,6 +4452,11 @@ function aiUnitJoinsArmy(u, pi)
 	-- if not aiUnitJoinsCapitalGuard(u,gUnit,pi) then
 	GroupAddUnit(udg_Ai_army[pi], u)
 	NumberAdd(pi, StringHash("Number"))
+	local joinLogCount = LoadInteger(AiData, pi, StringHash("Log_AiArmyJoinCount"))
+	if joinLogCount < 12 then
+		SaveInteger(AiData, pi, StringHash("Log_AiArmyJoinCount"), joinLogCount + 1)
+		ProbeLogWrite("[AIARMY] join pi=" .. tostring(pi) .. " unitId=" .. tostring(GetUnitTypeId(u)) .. " count=" .. tostring(joinLogCount + 1))
+	end
 	-- endif
 end
 -- ***************************************************************************
@@ -4997,7 +5002,7 @@ function PereborBuildings2_BloodElves(id, pi, u)
 			
 			while true do
 				a[0] = a[0] + 1
-				a[a0] = FourCC('n00I')
+				a[a[0]] = FourCC('n00I')
 				
 				b = b + 1
 				if b >= i then break end
@@ -5011,7 +5016,7 @@ function PereborBuildings2_BloodElves(id, pi, u)
 			
 			while true do
 				a[0] = a[0] + 1
-				a[a0] = FourCC('h03X')
+				a[a[0]] = FourCC('h03X')
 				b = b + 1
 				if b >= i then break end
 			end
@@ -5024,12 +5029,13 @@ function PereborBuildings2_BloodElves(id, pi, u)
 			
 			while true do
 				a[0] = a[0] + 1
-				a[a0] = FourCC('h03Y')
+				a[a[0]] = FourCC('h03Y')
 				b = b + 1
 				if b >= i then break end
 			end
 		end
 		i = GetRandomInt(1, a[0])
+		ProbeLogWrite("[AIBUILD] PereborBE h04D(barracks) pi=" .. tostring(pi) .. " train=" .. tostring(a[i]))
 		IssueImmediateOrderById(u, a[i])
 		
 		
@@ -5055,7 +5061,7 @@ function PereborBuildings2_BloodElves(id, pi, u)
 			
 			while true do
 				a[0] = a[0] + 1
-				a[a0] = FourCC('e001')
+				a[a[0]] = FourCC('e001')
 				
 				b = b + 1
 				if b >= i then break end
@@ -5071,7 +5077,7 @@ function PereborBuildings2_BloodElves(id, pi, u)
 			
 			while true do
 				a[0] = a[0] + 1
-				a[a0] = FourCC('h046')
+				a[a[0]] = FourCC('h046')
 				
 				b = b + 1
 				if b >= i then break end
@@ -5085,7 +5091,7 @@ function PereborBuildings2_BloodElves(id, pi, u)
 			
 			while true do
 				a[0] = a[0] + 1
-				a[a0] = FourCC('e030')
+				a[a[0]] = FourCC('e030')
 				b = b + 1
 				if b >= i then break end
 			end
@@ -5098,12 +5104,13 @@ function PereborBuildings2_BloodElves(id, pi, u)
 			
 			while true do
 				a[0] = a[0] + 1
-				a[a0] = FourCC('h03Z')
+				a[a[0]] = FourCC('h03Z')
 				b = b + 1
 				if b >= i then break end
 			end
 		end
 		i = GetRandomInt(1, a[0])
+		ProbeLogWrite("[AIBUILD] PereborBE h04G(workshop) pi=" .. tostring(pi) .. " train=" .. tostring(a[i]))
 		IssueImmediateOrderById(u, a[i])
 		
 		
@@ -5111,12 +5118,16 @@ function PereborBuildings2_BloodElves(id, pi, u)
 	elseif id == FourCC('h04E') then
 		udg_LocalInteger3 = GetRandomInt(1, 4)
 		if udg_LocalInteger3 == 1 then
+			ProbeLogWrite("[AIBUILD] PereborBE h04E(temple) pi=" .. tostring(pi) .. " train=" .. tostring(FourCC('h03W')))
 			IssueImmediateOrderById(u, FourCC('h03W'))
 		elseif udg_LocalInteger3 == 2 then
+			ProbeLogWrite("[AIBUILD] PereborBE h04E(temple) pi=" .. tostring(pi) .. " train=" .. tostring(FourCC('h040')))
 			IssueImmediateOrderById(u, FourCC('h040'))
-		elseif udg_LocalInteger3 == 2 then
+		elseif udg_LocalInteger3 == 3 then
+			ProbeLogWrite("[AIBUILD] PereborBE h04E(temple) pi=" .. tostring(pi) .. " train=" .. tostring(FourCC('h041')))
 			IssueImmediateOrderById(u, FourCC('h041'))
 		else
+			ProbeLogWrite("[AIBUILD] PereborBE h04E(temple) pi=" .. tostring(pi) .. " train=" .. tostring(FourCC('h042')))
 			IssueImmediateOrderById(u, FourCC('h042'))
 		end
 		
@@ -5316,7 +5327,7 @@ function Attacker_Skarlet(id, u, target, p)
 			IssueTargetOrder(u, "firebolt", target)
 		elseif i == 2 then
 			IssuePointOrder(u, "flamestrike", x, y)
-		elseif i == 2 then
+		elseif i == 3 then
 			IssueImmediateOrder(u, "waterelemental")
 		end
 		
@@ -5342,7 +5353,7 @@ function Attacker_Skarlet(id, u, target, p)
 			IssueTargetOrder(u, "firebolt", gUnit2)
 		elseif i == 2 then
 			IssueImmediateOrder(u, "roar")
-		elseif i == 2 then
+		elseif i == 3 then
 			IssueImmediateOrder(u, "ressurection")
 		end
 		
@@ -5637,7 +5648,7 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 			
 			while true do
 				a[0] = a[0] + 1
-				a[a0] = FourCC('n007')
+				a[a[0]] = FourCC('n007')
 				
 				b = b + 1
 				if b >= i then break end
@@ -5651,7 +5662,7 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 			
 			while true do
 				a[0] = a[0] + 1
-				a[a0] = FourCC('h039')
+				a[a[0]] = FourCC('h039')
 				b = b + 1
 				if b >= i then break end
 			end
@@ -5664,7 +5675,7 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 			
 			while true do
 				a[0] = a[0] + 1
-				a[a0] = FourCC('h066')
+				a[a[0]] = FourCC('h066')
 				b = b + 1
 				if b >= i then break end
 			end
@@ -5729,7 +5740,7 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 			
 			while true do
 				a[0] = a[0] + 1
-				a[a0] = FourCC('h03F')
+				a[a[0]] = FourCC('h03F')
 				
 				b = b + 1
 				if b >= i then break end
@@ -5743,7 +5754,7 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 			
 			while true do
 				a[0] = a[0] + 1
-				a[a0] = FourCC('h03D')
+				a[a[0]] = FourCC('h03D')
 				b = b + 1
 				if b >= i then break end
 			end
@@ -5756,7 +5767,7 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 			
 			while true do
 				a[0] = a[0] + 1
-				a[a0] = FourCC('h03I')
+				a[a[0]] = FourCC('h03I')
 				
 				b = b + 1
 				if b >= i then break end
@@ -5770,7 +5781,7 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 			
 			while true do
 				a[0] = a[0] + 1
-				a[a0] = FourCC('h03G')
+				a[a[0]] = FourCC('h03G')
 				b = b + 1
 				if b >= i then break end
 			end
@@ -5963,7 +5974,7 @@ function Attacker_Goblins(id, u, target, p)
 			IssuePointOrder(u, "silence", x, y)
 		elseif i == 2 then
 			IssuePointOrder(u, "clusterrockets", x, y)
-		elseif i == 2 then
+		elseif i == 3 then
 			IssuePointOrder(u, "blizzard", x, y)
 		end
 		
@@ -6692,7 +6703,7 @@ function GetLvlHorde(u)
 			SelectHeroSkill(u, FourCC('A12F'))
 		elseif gInt == 2 then
 			SelectHeroSkill(u, FourCC('A12F'))
-		elseif gInt == 2 then
+		elseif gInt == 3 then
 			SelectHeroSkill(u, FourCC('AOcr'))
 		else
 			-- call SelectHeroSkill( u, 'A0D5' )
@@ -7361,7 +7372,9 @@ function PereborBuildings2_JungleTrolls(id, pi, u)
 				a[a[0]] = FourCC('o04P')
 			end
 		end
-		IssueImmediateOrderById(u, a[GetRandomInt(1, a[0])])
+		local trainId = a[GetRandomInt(1, a[0])]
+		ProbeLogWrite("[AIBUILD] PereborJT h0MX(ranged) pi=" .. tostring(pi) .. " train=" .. tostring(trainId))
+		IssueImmediateOrderById(u, trainId)
 	elseif id == FourCC('h0MW') then
 		a[0] = 0
 		for _ = 1, 3 do
@@ -7384,16 +7397,21 @@ function PereborBuildings2_JungleTrolls(id, pi, u)
 				a[a[0]] = FourCC('o05G')
 			end
 		end
-		IssueImmediateOrderById(u, a[GetRandomInt(1, a[0])])
+		local trainId = a[GetRandomInt(1, a[0])]
+		ProbeLogWrite("[AIBUILD] PereborJT h0MW(caster) pi=" .. tostring(pi) .. " train=" .. tostring(trainId))
+		IssueImmediateOrderById(u, trainId)
 	elseif id == FourCC('h0N0') then
 		a[0] = 4
 		a[1] = FourCC('O054')
 		a[2] = FourCC('O05A')
 		a[3] = FourCC('O05D')
 		a[4] = JungleTrollsBranchIsBlack(pi) and FourCC('O05L') or FourCC('O055')
-		IssueImmediateOrderById(u, a[GetRandomInt(1, a[0])])
+		local trainId = a[GetRandomInt(1, a[0])]
+		ProbeLogWrite("[AIBUILD] PereborJT h0N0(altar) pi=" .. tostring(pi) .. " train=" .. tostring(trainId))
+		IssueImmediateOrderById(u, trainId)
 	elseif id == FourCC('h0N5') or id == FourCC('h0N1') or id == FourCC('h0N6') then
 		if getAiCount(pi, FourCC('o04Q')) < 18 then
+			ProbeLogWrite("[AIBUILD] PereborJT townhall pi=" .. tostring(pi) .. " train=" .. tostring(FourCC('o04Q')))
 			IssueImmediateOrderById(u, FourCC('o04Q'))
 		end
 	end
@@ -9974,7 +9992,7 @@ function RandomAiPlace()
 	end
 	--  Получил массив локаций б
 	
-	i = GetRandomInt(0, c)
+	i = GetRandomInt(0, c - 1)
 	udg_LocalPoint = b[i]
 	i = 0
 	while true do
@@ -10543,7 +10561,7 @@ function TryAttack()
 		if EnemyCapital ~= nil and Random(1, 2) then
 			gEnemy = EnemyCapital
 		else
-			gEnemy = BlzGroupUnitAt(gEnemyGroup, GetRandomInt(0, Counter))
+			gEnemy = BlzGroupUnitAt(gEnemyGroup, GetRandomInt(0, Counter - 1))
 		end
 		
 		-- Враг не найден - запрашиваем тп!
@@ -10580,6 +10598,12 @@ function TryAttack()
 					
 					-- До портала идти еще
 				else
+					local pi_attack = GetPlayerId(gPlayer)
+					local attackLogCount = LoadInteger(AiData, pi_attack, StringHash("Log_TryAttackOrderCount"))
+					if attackLogCount < 10 then
+						SaveInteger(AiData, pi_attack, StringHash("Log_TryAttackOrderCount"), attackLogCount + 1)
+						ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
+					end
 					GroupPointOrder(gAllyGroup, "smart", gX2, gY2)
 					
 				end
@@ -10597,6 +10621,12 @@ function TryAttack()
 					gUnit2 = FirstOfGroup(gAllyGroup)
 					
 					if gUnit2 == nil then
+						local pi_attack = GetPlayerId(gPlayer)
+						local attackLogCount = LoadInteger(AiData, pi_attack, StringHash("Log_TryAttackOrderCount"))
+						if attackLogCount < 10 then
+							SaveInteger(AiData, pi_attack, StringHash("Log_TryAttackOrderCount"), attackLogCount + 1)
+							ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=group targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
+						end
 						GroupPointOrder(gSubGroup, "attack", gX2, gY2)
 						GroupClear(gSubGroup)
 						gSubGroupCounter = 0
@@ -10653,7 +10683,7 @@ function TryAttack()
 			if EnemyCapital ~= nil and Random(1, 4) then
 				gEnemy = EnemyCapital
 			else
-				gEnemy = BlzGroupUnitAt(gEnemyGroup, GetRandomInt(0, Counter))
+			gEnemy = BlzGroupUnitAt(gEnemyGroup, GetRandomInt(0, Counter - 1))
 			end
 			
 			-- Враг не найден - запрашиваем тп!
@@ -10778,7 +10808,7 @@ function TryAttackN()
 		
 		-- call BJDebugMsg("Кол-во доступных врагов"+I2S(Counter))
 		-- Блок отдачи приказа
-		u2 = BlzGroupUnitAt(gEnemyGroup, GetRandomInt(0, Counter))
+		u2 = BlzGroupUnitAt(gEnemyGroup, GetRandomInt(0, Counter - 1))
 		if u2 ~= nil then
 			
 			-- call BJDebugMsg("Выбранный Враг "+GetUnitName(u2))
@@ -53349,7 +53379,7 @@ function PlayerBuilders()
                 if LoadInteger(AiData, pi, StringHash("T")) > 9 or LoadInteger(AiData, pi, StringHash("HV")) < 1 then break end
             
                 
-                gUnit=BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter))
+                gUnit=BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
                 
                 GroupAddUnit(udg_Ai_buildersT[pi], gUnit)
                 GroupRemoveUnit(udg_Ai_harvest[pi], gUnit)
@@ -53437,7 +53467,7 @@ function PlayerArmy()
                 if udg_LocalInteger > AiMass or FirstOfGroup(gAllyGroup) == null then break end
                 --set udg_LocalUnit2 = GroupPickRandomUnit(gAllyGroup)
                 
-                udg_LocalUnit2=BlzGroupUnitAt(gAllyGroup, GetRandomInt(0, LazyCount))
+				udg_LocalUnit2=BlzGroupUnitAt(gAllyGroup, GetRandomInt(0, LazyCount - 1))
                                
                 GroupRemoveUnit(gAllyGroup, udg_LocalUnit2)
                 LazyCount=LazyCount - 1
@@ -53540,7 +53570,7 @@ function PlayerNavy()
             
             i=1
             while true do
-                u=BlzGroupUnitAt(l__gGroup, GetRandomInt(0, LazyCount))
+        u=BlzGroupUnitAt(l__gGroup, GetRandomInt(0, LazyCount - 1))
                 if i > AiMass or u == null then break end
                 
                 id=GetUnitTypeId(u)
@@ -53631,8 +53661,9 @@ function Trig_PereborBuildings_Code_Func002A()
     local trainLogCount = 0
     while true do
         if bj_forLoopAIndex > bj_forLoopAIndexEnd or FirstOfGroup(gGroup) == null then break end
-        gUnit=BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter))
+        gUnit=BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
         GroupRemoveUnit(gGroup, gUnit)
+        Counter=Counter - 1
         gId=GetUnitTypeId(gUnit)
         
         if trainLogCount < 3 then
@@ -53718,7 +53749,7 @@ function PereborNavalb()
     while true do
         
         if bj_forLoopAIndex > bj_forLoopAIndexEnd or FirstOfGroup(gGroup) == null or GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) < 2000 then break end
-        u=BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter))
+        u=BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
         Counter=Counter - 1
        -- call DisplayTimedTextFromPlayer(p,0,0,4, GetUnitName(u))
         GroupRemoveUnit(gGroup, u)
@@ -54101,13 +54132,16 @@ function Trig_JoinBuildings_Conditions()
     gPi=GetPlayerId(gPlayer)
     return udg_AiControl[gPi]
 end
-function aiUnitBuildingJoins()
+---@param structure unit
+---@param pi integer
+function aiUnitBuildingJoins(structure, pi)
     local id= GetUnitTypeId(structure)
     GroupAddUnit(udg_Ai_buildings[pi], structure)
     GroupAddUnit(udg_Ai_units[pi], structure)
     NumberAdd(pi , id)
-    
-    if playerCapital[pi] ~= nil or DistanceBetweenUnits(playerCapital[pi] , structure) <= 3000 then
+    ProbeLogWrite("[AIBUILD] aiUnitBuildingJoins pi=" .. tostring(pi) .. " buildingId=" .. tostring(id))
+
+    if playerCapital[pi] ~= nil and DistanceBetweenUnits(playerCapital[pi] , structure) <= 3000 then
         GroupAddUnit(AiCapitalBuildigs[pi], structure)
     end
 end
@@ -54775,10 +54809,13 @@ function TeleportUnitsEach()
     RemoveLocation(gLoc)
     EnterGreen(GetEnumUnit())
 end
-function TeleportUnits()
-    gLoc=GetUnitLoc(Portal)
-    gRect=Rect2
-    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radious, Condition(PortalConditions), 150)
+---@param portal unit
+---@param rect rect
+---@param radius real
+function TeleportUnits(portal, rect, radius)
+    gLoc=GetUnitLoc(portal)
+    gRect=rect
+    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, Condition(PortalConditions), 150)
     ForGroup(gGroup, TeleportUnitsEach)
     GroupClear(gGroup)
     RemoveLocation(gLoc)
@@ -54787,10 +54824,13 @@ end
 function PortalConditionsED()
     return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Sch5')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A001')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1M3')) == 0 and GetUnitTypeId(GetFilterUnit()) ~= FourCC('n01W') and GetUnitTypeId(GetFilterUnit()) ~= FourCC('n01X') and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Awrp')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1LR')) >= 1
 end
-function TeleportUnitsED()
-    gLoc=GetUnitLoc(Portal)
-    gRect=Rect2
-    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radious, Condition(PortalConditionsED), 150)
+---@param portal unit
+---@param rect rect
+---@param radius real
+function TeleportUnitsED(portal, rect, radius)
+    gLoc=GetUnitLoc(portal)
+    gRect=rect
+    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, Condition(PortalConditionsED), 150)
     ForGroup(gGroup, TeleportUnitsEach)
     GroupClear(gGroup)
     RemoveLocation(gLoc)

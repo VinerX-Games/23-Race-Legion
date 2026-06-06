@@ -68,7 +68,7 @@ function ChoseRandomSpot(dest, pi, x, y)
 	Counter = 0
 	CheckPlayer = Player(pi)
 	GroupEnumUnitsInRange(gGroup, x, y, 3200, b_OwnBuldingsInRange)
-	return BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter))
+	return BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
 end
 --  Создает мага тп и делат теп по позиции выбранного юнита
 ---@param dest unit
@@ -105,7 +105,7 @@ function PortTo(u)
 	
 	LazyCount = 0
 	GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_Lazy)
-	gUnit2 = BlzGroupUnitAt(gGroup, GetRandomInt(0, LazyCount))
+	gUnit2 = BlzGroupUnitAt(gGroup, GetRandomInt(0, LazyCount - 1))
 	
 	--  Точка
 	if IsUnitInGroup(u, udg_ZahvatBuildings) then
@@ -135,7 +135,7 @@ function PortToFast(u)
 	
 	LazyCount = 0
 	GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_InAiArmy)
-	gUnit2 = BlzGroupUnitAt(gGroup, GetRandomInt(0, LazyCount))
+	gUnit2 = BlzGroupUnitAt(gGroup, GetRandomInt(0, LazyCount - 1))
 	
 	--  Точка
 	if IsUnitInGroup(gAttacked, udg_ZahvatBuildings) then
