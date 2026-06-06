@@ -128,7 +128,10 @@ function createAiPlayer(pi)
 	
 	udg_LocalText2 = GetPlayerName(gPlayer)
 	udg_LocalText2 = ((I2S(pi + 1) .. ". ") .. udg_LocalText2)
-	MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndexpi] * 2 + 0, udg_LocalText2)
+	local ownerIndex = EnsureMultiboardPlayerRow(pi)
+	if ownerIndex ~= nil then
+		MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 0], udg_LocalText2)
+	end
 	
 	
 	

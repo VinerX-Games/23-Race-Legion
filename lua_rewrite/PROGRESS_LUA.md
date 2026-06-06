@@ -38,3 +38,16 @@
 - Added a systemic rawcode normalization rule to `lua_rewrite/normalize_converted_lua.py`: single-quoted 4-character JASS ids are rewritten into `FourCC(...)` unless they are already normalized.
 - Rebuilt `map_lua.w3m/war3map.lua` from the split source after the rawcode pass and verified with `probe-map` that the map now survives a 120-second automated runtime without Lua root errors, init failures, or early callback errors.
 - Remaining non-normalized 4-character literals are now confined to comments in the generated runtime section, not active code.
+- Delayed `UISetup` out of the immediate deferred-init queue and into a short timer callback, so frame repositioning runs after the Warcraft UI is ready instead of racing the map bootstrap.
+- Fixed several high-frequency Lua conversion defects that had moved from startup into runtime:
+  - broken string concatenation in player-name table setup
+  - missing player parameter in `GetPlayerNameCut`
+  - malformed multiboard index expressions like `MultiboardItemOwnerIndexpi`
+  - sparse Lua array writes passed into `SaveInteger(...)`
+  - unsafe `GetUnitGoldCost(...)` arithmetic when the native returns `nil`
+- Restored the intended chat command prefixes for at least the user-reported commands `-ai` and `-raceselect`, using `war3map.j` as the source of truth rather than trusting the converted Lua literals.
+- Added lazy multiboard row creation for players that appear after the initial table build, which removes the repeated runtime callback failures from AI/player updates instead of merely suppressing them.
+- Rebuilt the map from split sources and verified with a second 120-second `probe-map` run that startup still completes cleanly and the previous repeating callback errors are gone.
+- Added a second delayed `UISetup` pass plus frame-presence probe logging. Both `ConsoleUIBackdrop` and `UpperButtonBarFrame` are present on both passes and `UISetup` completes cleanly, so the remaining “visual UI not applied” issue is no longer explained by missing frames or too-early execution.
+- Current UI hypothesis: the remaining mismatch is more likely in the console-skin/import/rendering layer or in the difference between unpacked `-loadfile` runs and packed-map startup, not in the core Lua frame-move sequence itself.
+- Next architecture step: teach the CLI to inject timed in-game chat commands, so command fixes like `-ai2` can be verified automatically instead of only by manual playthroughs.

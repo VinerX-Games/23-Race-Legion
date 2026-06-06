@@ -1,3 +1,17 @@
+local function ScheduleUISetupPass(delay, label)
+    local timer = CreateTimer()
+    TimerStart(timer, delay, false, function()
+        DestroyTimer(timer)
+        timer = nil
+        ProbeStep("UISetup:" .. label, UISetup)
+    end)
+end
+
+local function DeferredUISetup()
+    ScheduleUISetupPass(0.10, "pass1")
+    ScheduleUISetupPass(1.00, "pass2")
+end
+
 function main()
     ProbeLogWrite("[MAIN] entered")
     SetCameraBounds(
@@ -29,7 +43,7 @@ function main()
     OnInit.fn(SpellSleepAOE___onInit, "SpellSleepAOE___onInit")
     OnInit.fn(SanctifiedEnchantment___Init, "SanctifiedEnchantment___Init")
     OnInit.fn(initBoolExprs___Init, "initBoolExprs___Init")
-    OnInit.fn(UISetup, "UISetup")
+    OnInit.fn(DeferredUISetup, "DeferredUISetup")
     OnInit.fn(Face2, "Face2")
     OnInit.fn(SetContinetsBooleprs, "SetContinetsBooleprs")
     OnInit.fn(InitGlobals, "InitGlobals")

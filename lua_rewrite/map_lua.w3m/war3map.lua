@@ -7093,7 +7093,10 @@ function createAiPlayer(pi)
 	
 	udg_LocalText2 = GetPlayerName(gPlayer)
 	udg_LocalText2 = ((I2S(pi + 1) .. ". ") .. udg_LocalText2)
-	MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndexpi] * 2 + 0, udg_LocalText2)
+	local ownerIndex = EnsureMultiboardPlayerRow(pi)
+	if ownerIndex ~= nil then
+		MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 0], udg_LocalText2)
+	end
 	
 	
 	
@@ -7854,6 +7857,16 @@ function InitGlobals()
 	udg_MellLord = CreateGroup()
 	udg_TimerToCont = CreateTimer()
 end
+---@param hash hashtable
+---@param parent integer
+---@param child integer
+---@param value integer|nil
+---@return nothing
+function SaveIntegerIfPresent(hash, parent, child, value)
+    if value ~= nil then
+        SaveInteger(hash, parent, child, value)
+    end
+end
 -- ***************************************************************************
 -- 
 -- *  Custom Script Code
@@ -8204,6 +8217,9 @@ end
 ---@param pi integer
 ---@return nothing
 function ArmyExpSetBonus(pi)
+	if ArmyExpBonus[pi] == nil then
+		return
+	end
 	SetUnitAbilityLevel(ArmyExpBonus[pi], FourCC('arb1'), IMinBJ(R2I((ArmyExp[pi] / 500) + 1), 11))
 	SetUnitAbilityLevel(ArmyExpBonus[pi], FourCC('arb0'), IMinBJ(R2I((ArmyExp[pi] / 500) + 1), 11))
 end
@@ -8245,17 +8261,24 @@ end
 ---@param pi integer
 ---@return nothing
 function PercentGraph(pi)
+	if ThirdColumn[pi] == nil and EnsureMultiboardPlayerRow(pi) == nil then
+		return
+	end
 	MultiboardSetItemValue(ThirdColumn[pi], (R2SW_Polyfill(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount)) .. "%"))
 end
 ---@param pi integer
 ---@return nothing
 function ArmyExpGraph(pi)
+	if ArmyPowerColumn[pi] == nil and EnsureMultiboardPlayerRow(pi) == nil then
+		return
+	end
 	MultiboardSetItemValue(ArmyPowerColumn[pi], R2SW_Polyfill(ArmyExp[pi]))
 end
 ---@param pi integer
 ---@return nothing
 function UpdateGraf(pi)
 	local p = Player(pi)
+	local ownerIndex = EnsureMultiboardPlayerRow(pi)
 	local r = R2I(udg_UnitsCount[pi] / 25.00)
 	logistic[pi] = ((500 + 100 * (r - 1)) / 2 * r)	--  прогрессия
 	
@@ -8272,7 +8295,10 @@ function UpdateGraf(pi)
 	end
 	
 	--  Табличка
-	MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndexpi] * 2 + 1, I2S(udg_UnitsCount[pi]))
+	if ownerIndex == nil then
+		return
+	end
+	MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi]))
 	PercentGraph(pi)
 	ArmyExpGraph(pi)
 	
@@ -8285,10 +8311,14 @@ function Enter(u)
 	local id = GetUnitTypeId(u)
 	local p = GetOwningPlayer(u)
 	local pi = GetPlayerId(p)
+	local ownerIndex = EnsureMultiboardPlayerRow(pi)
 	
 	
 	
-	MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndexpi] * 2 + 1, I2S(udg_UnitsCount[pi]))
+	if ownerIndex == nil then
+		return
+	end
+	MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi]))
 	
 	
 end
@@ -8369,7 +8399,7 @@ function AddCountDis(u, pi)
 				end
 				
 			else
-				udg_Price = GetUnitGoldCost(GetUnitTypeId(u))
+				udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
 				disincome[pi] = (disincome[pi] + (udg_Price * Tax))
 				--  ---------------------------Особые условия-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 				--  ---------------------------Топливо гоблинов-----------------------------
@@ -8396,7 +8426,7 @@ function AddCountDis(u, pi)
 			-- Случай призывных у культа.
 		elseif GetUnitAbilityLevel(u, FourCC('A1HL')) > 0 then
 			udg_UnitsCount[pi] = udg_UnitsCount[pi] + 1
-			udg_Price = GetUnitGoldCost(GetUnitTypeId(u))
+			udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
 			disincome[pi] = (disincome[pi] + (udg_Price * Tax / 2))
 		end
 		
@@ -8472,7 +8502,7 @@ function DelCountDis(u, pi)
 			
 			
 			--  call DisplayTextToPlayer(p,0,0,("Увидел смерть до юнита "+GetUnitName(u)))
-			udg_Price = GetUnitGoldCost(GetUnitTypeId(u))
+			udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
 			disincome[pi] = (disincome[pi] - (udg_Price * Tax))
 			
 			
@@ -8502,7 +8532,7 @@ function DelCountDis(u, pi)
 		-- Случай призывных у культа.
 	elseif GetUnitAbilityLevel(u, FourCC('A1HL')) > 0 then
 		udg_UnitsCount[pi] = udg_UnitsCount[pi] - 1
-		udg_Price = GetUnitGoldCost(GetUnitTypeId(u))
+		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
 		disincome[pi] = (disincome[pi] - (udg_Price * Tax / 2))
 		
 	end
@@ -8716,16 +8746,23 @@ end
 ---@return nothing
 function UISetup()
 	-- Local Variables
+	local consoleBackdrop = BlzGetFrameByName("ConsoleUIBackdrop", 0)
+	local upperButtonBar = BlzGetFrameByName("UpperButtonBarFrame", 0)
+	ProbeLogWrite("[UI] ConsoleUIBackdrop=" .. tostring(consoleBackdrop ~= nil) .. " UpperButtonBarFrame=" .. tostring(upperButtonBar ~= nil))
+	if consoleBackdrop == nil or upperButtonBar == nil then
+		ProbeLogWrite("[UI] skipped: required frames missing")
+		return
+	end
 	framehandlefh = nil
 	framehandlechatButton = nil
 	framehandlequestButton = nil
 	framehandleallyButton = nil
 	framehandleMiniMap = nil
 	framehandlegridButtons = nil
-	framehandleimageTest = BlzCreateFrameByType("BACKDROP", "image", BlzGetFrameByName("ConsoleUIBackdrop", 0), "ButtonBackdropTemplate", 0)
+	framehandleimageTest = BlzCreateFrameByType("BACKDROP", "image", consoleBackdrop, "ButtonBackdropTemplate", 0)
 	
 	-- Top UI & System Buttons
-	fh = BlzGetFrameByName("UpperButtonBarFrame", 0)
+	fh = upperButtonBar
 	BlzFrameSetVisible(fh, true)
 	allyButton = BlzGetFrameByName("UpperButtonBarAlliesButton", 0)
 	fh = BlzGetFrameByName("UpperButtonBarMenuButton", 0)
@@ -13944,7 +13981,7 @@ function Trig_Gob_Potreblenie_Actions()
 		u = FirstOfGroup(g)
 		if u == nil then break end
 		
-		udg_Price = GetUnitGoldCost(GetUnitTypeId(u))
+		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
 		if GetUnitAbilityLevel(u, FourCC('A0A5')) ~= 0 then
 			disincome[pi] = disincome[pi] - (udg_Price * Tax) * (1.60 - (0.10 * (r - 1)))
 			disincome[pi] = disincome[pi] + (udg_Price * Tax) * (1.60 - (0.10 * r))
@@ -13997,7 +14034,7 @@ function Trig_Silitid_Potreblenie_Actions()
 		u = FirstOfGroup(g)
 		if u == nil then break end
 		
-		udg_Price = GetUnitGoldCost(GetUnitTypeId(u))
+		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
 		disincome[pi] = disincome[pi] - (udg_Price * Tax / 2)
 		disincome[pi] = disincome[pi] + (udg_Price * Tax / 3)
 		
@@ -17833,7 +17870,7 @@ end
 function ActivePlayers()
     return GetPlayerSlotState(GetFilterPlayer()) == PLAYER_SLOT_STATE_PLAYING and not IsPlayerInForce(GetFilterPlayer(), udg_Bots)
 end
-function GetPlayerNameCut()
+function GetPlayerNameCut(p)
     local s= GetPlayerName(p)
     local s2
     local s3= ""
@@ -17843,10 +17880,48 @@ function GetPlayerNameCut()
         if s2 == "" or i > 18 or s2 == null then break end
         
         
-        s3=s3 + s2
+        s3=s3 .. s2
         i=i + 1
     end
     return s3
+end
+---@param pi integer
+---@return integer|nil
+function EnsureMultiboardPlayerRow(pi)
+    local ownerIndex=MultiboardItemOwnerIndex[pi]
+    if ownerIndex ~= nil then
+        return ownerIndex
+    end
+    if Multiboard == nil then
+        return nil
+    end
+
+    max=max + 1
+    udg_PlayersCount=udg_PlayersCount + 1
+    ownerIndex=max
+    MultiboardItemOwnerIndex[pi]=ownerIndex
+
+    MultiboardSetRowCount(Multiboard, udg_PlayersCount + 1)
+    MultiboardItem[ownerIndex * 2]=MultiboardGetItem(Multiboard, ownerIndex, 0)
+    MultiboardItem[ownerIndex * 2 + 1]=MultiboardGetItem(Multiboard, ownerIndex, 1)
+    udg_LocalText2=I2S(GetConvertedPlayerId(Player(pi))) .. "." .. GetPlayerNameCut(Player(pi))
+    MultiboardSetItemValue(MultiboardItem[ownerIndex * 2], udg_LocalText2)
+    MultiboardSetItemWidth(MultiboardItem[ownerIndex * 2], 0.14)
+    MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi] or 0))
+    MultiboardSetItemWidth(MultiboardItem[ownerIndex * 2 + 1], 0.06)
+
+    if ThirdColumn[24] ~= nil then
+        ThirdColumn[pi]=MultiboardGetItem(Multiboard, ownerIndex, 2)
+        MultiboardSetItemValue(ThirdColumn[pi], "0.000%")
+        MultiboardSetItemWidth(ThirdColumn[pi], 0.06)
+    end
+    if ArmyPowerColumn[24] ~= nil then
+        ArmyPowerColumn[pi]=MultiboardGetItem(Multiboard, ownerIndex, 3)
+        MultiboardSetItemValue(ArmyPowerColumn[pi], R2SW_Polyfill(ArmyExp[pi] or 0.001))
+        MultiboardSetItemWidth(ArmyPowerColumn[pi], 0.06)
+    end
+
+    return ownerIndex
 end
 function Trig_StartTableCode_Actions()
     local i= 0
@@ -17871,7 +17946,7 @@ function Trig_StartTableCode_Actions()
             MultiboardItemOwnerIndex[i]=max
             MultiboardItem[max * 2]=MultiboardGetItem(Multiboard, max, 0)
             MultiboardItem[max * 2 + 1]=MultiboardGetItem(Multiboard, max, 1)
-            udg_LocalText2=( ( I2S(GetConvertedPlayerId(Player(i))) + "." ) + GetPlayerNameCut(Player(i)) )
+            udg_LocalText2=I2S(GetConvertedPlayerId(Player(i))) .. "." .. GetPlayerNameCut(Player(i))
                         
             --set udg_LocalText2 = SubString(udg_LocalText2, 0, StringLength(udg_LocalText2)-4 )
             MultiboardSetItemValue(MultiboardItem[max * 2], udg_LocalText2)
@@ -28535,7 +28610,7 @@ function AT1Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("AT1") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("AT1") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -28631,7 +28706,7 @@ function AT2Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("AT2") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("AT2") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -28829,7 +28904,7 @@ function AT3Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("AT3") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("AT3") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -28990,7 +29065,7 @@ function ACavCount()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("ACav") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("ACav") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -29136,7 +29211,7 @@ function AK1Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("AK1") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("AK1") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -29289,7 +29364,7 @@ function AK2Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("AK2") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("AK2") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -29461,7 +29536,7 @@ function AK3Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("AK3") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("AK3") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -29639,7 +29714,7 @@ function AM1Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("AM1") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("AM1") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -29806,7 +29881,7 @@ function AM2Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("AM2") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("AM2") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -29926,7 +30001,7 @@ function AM3Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("AM3") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("AM3") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -30064,7 +30139,7 @@ function AE1Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("AE1") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("AE1") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -30232,7 +30307,7 @@ function AE2Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("AEE2") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("AEE2") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -30381,7 +30456,7 @@ function AN1Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("AN1") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("AN1") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -30511,7 +30586,7 @@ function AN2Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("AN2") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("AN2") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -35979,7 +36054,7 @@ function T1Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("T1") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("T1") + i, a[i])
         i=i + 1
         
         if i > a[0] then break end
@@ -36083,7 +36158,7 @@ function T2Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("T2") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("T2") + i, a[i])
         i=i + 1
         if i > a[0] then break end
     end
@@ -36171,7 +36246,7 @@ function T2bCount()
     while true do
        
         
-        SaveInteger(CommonHash, pi, StringHash("T2b") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("T2b") + i, a[i])
         i=i + 1
         if i > a[0] then break end
     end
@@ -36292,7 +36367,7 @@ function TCavCount()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("TCav") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("TCav") + i, a[i])
         i=i + 1
         if i > a[0] then break end
     end
@@ -36424,7 +36499,7 @@ function T3Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("T3") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("T3") + i, a[i])
         i=i + 1
         if i > a[0] then break end
     end
@@ -36540,7 +36615,7 @@ function K1Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("K1") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("K1") + i, a[i])
         i=i + 1
         if i > a[0] then break end
     end
@@ -36651,7 +36726,7 @@ function K2Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("K2") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("K2") + i, a[i])
         i=i + 1
         if i > a[0] then break end
     end
@@ -36759,7 +36834,7 @@ function K2bCount()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("K2b") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("K2b") + i, a[i])
         i=i + 1
         if i > a[0] then break end
     end
@@ -36858,7 +36933,7 @@ function K3Count()
     while true do
         
         
-        SaveInteger(CommonHash, pi, StringHash("K3") + i, a[i])
+        SaveIntegerIfPresent(CommonHash, pi, StringHash("K3") + i, a[i])
         i=i + 1
         if i > a[0] then break end
     end
@@ -49818,11 +49893,15 @@ function Trig_Name_command_O_Conditions()
 end
 function Trig_Name_command_O_Actions()
     local i= GetPlayerId(GetTriggerPlayer())
+    local ownerIndex
     udg_LocalText2=GetEventPlayerChatString()
     udg_LocalText2=SubStringBJ(udg_LocalText2, 7, 50)
     SetPlayerName(GetTriggerPlayer(), udg_LocalText2)
-    udg_LocalText2=( ( I2S(GetConvertedPlayerId(GetTriggerPlayer())) + "." ) + udg_LocalText2 )
-    MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 0], udg_LocalText2)
+    ownerIndex=EnsureMultiboardPlayerRow(i)
+    udg_LocalText2=I2S(GetConvertedPlayerId(GetTriggerPlayer())) .. "." .. udg_LocalText2
+    if ownerIndex ~= nil then
+        MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 0], udg_LocalText2)
+    end
     i=0
 end
 --===========================================================================
@@ -49955,8 +50034,8 @@ function Trig_SecondChance_Actions()
     udg_LocalInteger=S2I(udg_LocalText2)
     if ( Trig_SecondChance_Func003C() ) then
         udg_LocalPosition2=(StartLoc[GetRandomInt(0, StartLocCount - 1)]) -- INLINED!!
-        DisplayTimedTextToForce(GetPlayersAll(), 5.00, ( ( "" + GetPlayerName(GetTriggerPlayer()) ) + ( "" + ( GetPlayerName(ConvertedPlayer(udg_LocalInteger)) + " not " ) ) ))
-        DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, "15 not ")
+        DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Хост " .. GetPlayerName(GetTriggerPlayer()) .. " дал игроку " .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " второй шанс!")
+        DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, "У вас есть 15 минут на то, чтобы поставить столицу!")
         CreateNUnitsAtLoc(1, FourCC('h0HJ'), ConvertedPlayer(udg_LocalInteger), udg_LocalPosition2, bj_UNIT_FACING)
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_GOLD, 5000)
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_LUMBER, 5000)
@@ -49977,7 +50056,7 @@ end
 --===========================================================================
 function InitTrig_SecondChance()
     gg_trg_SecondChance=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_SecondChance, Player(0), " - raceselect", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_SecondChance, Player(0), "-raceselect", false)
     TriggerAddAction(gg_trg_SecondChance, Trig_SecondChance_Actions)
 end
 --===========================================================================
@@ -52223,7 +52302,7 @@ end
 --===========================================================================
 function InitTrig_CreateAi()
     gg_trg_CreateAi=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_CreateAi, Player(0), " - ai", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_CreateAi, Player(0), "-ai", false)
     TriggerAddCondition(gg_trg_CreateAi, Condition(Trig_CreateAi_Conditions))
     TriggerAddAction(gg_trg_CreateAi, Trig_CreateAi_Actions)
 end
@@ -57408,6 +57487,20 @@ end
 --*  Main Initialization
 --*
 --***************************************************************************
+local function ScheduleUISetupPass(delay, label)
+    local timer = CreateTimer()
+    TimerStart(timer, delay, false, function()
+        DestroyTimer(timer)
+        timer = nil
+        ProbeStep("UISetup:" .. label, UISetup)
+    end)
+end
+
+local function DeferredUISetup()
+    ScheduleUISetupPass(0.10, "pass1")
+    ScheduleUISetupPass(1.00, "pass2")
+end
+
 function main()
     ProbeLogWrite("[MAIN] entered")
     SetCameraBounds(
@@ -57439,7 +57532,7 @@ function main()
     OnInit.fn(SpellSleepAOE___onInit, "SpellSleepAOE___onInit")
     OnInit.fn(SanctifiedEnchantment___Init, "SanctifiedEnchantment___Init")
     OnInit.fn(initBoolExprs___Init, "initBoolExprs___Init")
-    OnInit.fn(UISetup, "UISetup")
+    OnInit.fn(DeferredUISetup, "DeferredUISetup")
     OnInit.fn(Face2, "Face2")
     OnInit.fn(SetContinetsBooleprs, "SetContinetsBooleprs")
     OnInit.fn(InitGlobals, "InitGlobals")
