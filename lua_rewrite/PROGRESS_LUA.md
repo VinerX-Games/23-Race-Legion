@@ -54,3 +54,9 @@
 - Verified the canonical `map.w3x` through `probe-map`; it starts as a Lua map cleanly, but the visual UI issue now has a concrete engine-side signal in `War3Log`: `ITexCreate fail` on `UI\\Console\\Human\\HumanUITile04/05/06.dds` and `UI\\Feedback\\Resources\\Resource{Gold,Lumber,Supply}.dds`.
 - This makes the next UI debugging step much narrower: inspect texture format/compatibility for the custom UI assets rather than the frame code path.
 - Next architecture step: teach the CLI to inject timed in-game chat commands, so command fixes like `-ai2` can be verified automatically instead of only by manual playthroughs.
+- Moved the split Lua source tree into `map.w3x/_lua/monolith_split`, so the canonical map folder now contains both the built `war3map.lua` and the source tree used to regenerate it.
+- Added a canonical rebuild entrypoint at repository root: `python build_map_lua.py`. The old `lua_rewrite/build_lua_map.py` is now only a compatibility wrapper to avoid two competing build paths.
+- Added `LUA_WORK_PLAN.md` to pin the current migration order: canonical in-map sources, CLI-driven tests, UI texture fix, then semantic module extraction.
+- Extended `HiveWE_cli probe-map` with timed chat injection: `--chat-after/--chat-text` for one command and `--chat-script "20:-ai2|35:-raceselect1"` for scripted runs.
+- Verified the new CLI path on the canonical `map.w3x`: load-screen click, post-load `Enter`, both chat commands, and graceful close all executed in one automated run.
+- The automated run confirmed the UI texture blocker is still present and also exposed a second non-Lua asset issue in `War3Log`: repeated `model creation failed - .mdl.mdl`, which should be debugged separately from the Lua migration itself.

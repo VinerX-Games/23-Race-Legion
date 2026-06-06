@@ -240,11 +240,12 @@ def build_only(output_dir: Path, rebuild_output: Path) -> int:
 
 def main() -> int:
     root = Path(__file__).resolve().parent
-    default_source = root / "war3map.lua"
-    default_output_dir = root / "monolith_split"
-    default_rebuild_output = root / "war3map.split.generated.lua"
+    repo_root = root.parent
+    default_source = repo_root / "map.w3x" / "war3map.lua"
+    default_output_dir = repo_root / "map.w3x" / "_lua" / "monolith_split"
+    default_rebuild_output = repo_root / "map.w3x" / "war3map.lua"
 
-    parser = argparse.ArgumentParser(description="Split the large converted war3map.lua into stable source sections.")
+    parser = argparse.ArgumentParser(description="Split the canonical map.w3x/war3map.lua into stable source sections.")
     parser.add_argument("--source", type=Path, default=default_source)
     parser.add_argument("--output-dir", type=Path, default=default_output_dir)
     parser.add_argument("--rebuild-output", type=Path, default=default_rebuild_output)
