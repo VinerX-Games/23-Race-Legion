@@ -56763,12 +56763,51 @@ function AiRaceUsesWaterPoint(pi)
     return race == nil or race.usesWaterPoint ~= false
 end
 
+-- ====================================================================
+-- Phase 3: data-driven AI engine (declarative race tables + generic runner).
+-- A race may provide `buildings` data; if present the engine is used, else we
+-- fall back to the procedural `chooseBuild`. Migrate races one at a time, with
+-- the procedural fn kept as a safety net until parity is confirmed.
+--
+-- def.buildings = {
+--   seed = FourCC('h0N2'),                 -- always-present first candidate
+--   { FourCC('h0N5'), 4, 4 },              -- { id, limit, power }
+--   { FourCC('h0MX'), 8, 6, gate="tier2" },-- optional named gate predicate
+-- }
+-- def.gates = { tier2 = function(pi) return ... end }   -- race-specific
+-- Mirrors ChooseBuildings_* exactly: seed tArray, CheckAndAddBuilding per row
+-- (add `power` copies if getAiCount < limit and gate passes), random pick.
+-- ====================================================================
+---@param pi integer
+---@param def table
+---@return integer
+function AiRunChooseBuildings(pi, def)
+    local list = def.buildings
+    tArray[0] = 1
+    tArray[1] = list.seed
+    for _, row in ipairs(list) do
+        local gateOk = true
+        if row.gate ~= nil then
+            local g = def.gates and def.gates[row.gate]
+            gateOk = (g == nil) or g(pi)
+        end
+        if gateOk and getAiCount(pi, row[1]) < row[2] then
+            AddBuilding(row[1], row[3])
+        end
+    end
+    return tArray[GetRandomInt(1, tArray[0])]
+end
+
 ---@param pi integer
 ---@return integer
 function AiDispatchChooseBuild(pi)
     local race = AiRaceOf(pi)
-    if race ~= nil and race.chooseBuild ~= nil then
-        return race.chooseBuild(pi)
+    if race ~= nil then
+        if race.buildings ~= nil then
+            return AiRunChooseBuildings(pi, race)
+        elseif race.chooseBuild ~= nil then
+            return race.chooseBuild(pi)
+        end
     end
     return 0
 end
@@ -56949,6 +56988,24 @@ RegisterAiRace("JungleTrolls", {
     tokens = {"jt", "jungletrolls", "trolls"},
     weight = 1,
     start = startJungleTrolls,
+    -- Phase 3 declarative build order (engine: AiRunChooseBuildings). Mirrors
+    -- ChooseBuildings_JungleTrolls exactly. chooseBuild kept as fallback.
+    buildings = {
+        seed = FourCC('h0N2'),
+        { FourCC('h0N5'), 4, 4 },
+        { FourCC('h0N2'), 18, 4 },
+        { FourCC('h0MY'), 10, 4 },
+        { FourCC('h0N3'), 5, 2 },
+        { FourCC('h0N0'), 3, 6 },
+        { FourCC('h0MX'), 8, 6, gate = "tier2" },
+        { FourCC('h0MW'), 8, 6, gate = "tier2" },
+        { FourCC('h0D3'), 2, 1, gate = "tier2" },
+    },
+    gates = {
+        tier2 = function(pi)
+            return getAiCount(pi, FourCC('h0N1')) + getAiCount(pi, FourCC('h0N6')) >= 1
+        end,
+    },
     chooseBuild = ChooseBuildings_JungleTrolls,
     perebor = PereborBuildings2_JungleTrolls,
     join = Join_JungleTrolls,
