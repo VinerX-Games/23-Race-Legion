@@ -1070,13 +1070,13 @@ function addArmyExp(u, pi)
 		if IsUnitInGroup(gAttacked, udg_ZahvatBuildings) then
 			gReal = 1
 		else
-			gReal = (I2R(GetUnitGoldCost(gId)) * 0.01)
+			gReal = (I2R(GetUnitGoldCost(gId) or 0) * 0.01)
 		end
 	else
 		if IsUnitType(u, UNIT_TYPE_HERO) then
 			gReal = (GetHeroLevel(u) * 1)
 		else
-			gReal = (I2R(GetUnitGoldCost(gId)) * 0.02)
+			gReal = (I2R(GetUnitGoldCost(gId) or 0) * 0.02)
 		end
 	end
 	ArmyExp[pi] = ArmyExp[pi] + gReal
@@ -7073,8 +7073,8 @@ function Trig_DeadSituastion_Actions()
 	
 	-- Для режима доминации
 	
-	CityPlayerCount[pi0] = CityPlayerCount[pi0] - 1
-	CityPlayerCount[pi] = CityPlayerCount[pi] + 1
+	CityPlayerCount[pi0] = (CityPlayerCount[pi0] or 0) - 1
+	CityPlayerCount[pi] = (CityPlayerCount[pi] or 0) + 1
 	PercentGraph(pi0)
 	PercentGraph(pi)
 	if udg_GameMode == 3 or udg_GameMode == 5 then

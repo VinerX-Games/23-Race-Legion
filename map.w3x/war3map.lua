@@ -7738,6 +7738,24 @@ function startHordeW2(pi)
 end
 ---@param pi integer
 ---@return nothing
+function startNerubs(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(3, FourCC('h0BE'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('u019'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    SaveInteger(AiData, pi, FourCC('h0BE'), 3)
+    SaveInteger(AiData, pi, FourCC('u019'), 1)
+    SaveStr(AiData, pi, StringHash("Race"), "NE")
+    SetPlayerTechResearchedSwap(FourCC('R07N'), 1, p)
+    SetPlayerName(p, "Nerubs (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Nerubs"
+    ProbeLogWrite("[AI] startNerubs pi=" .. tostring(pi) .. " workers=3h0BE building=1u019")
+end
+---@param pi integer
+---@return nothing
 function startForestTrolls(pi)
     CreateNUnitsAtLoc(5, FourCC('o04V'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
@@ -9030,13 +9048,13 @@ function addArmyExp(u, pi)
 		if IsUnitInGroup(gAttacked, udg_ZahvatBuildings) then
 			gReal = 1
 		else
-			gReal = (I2R(GetUnitGoldCost(gId)) * 0.01)
+			gReal = (I2R(GetUnitGoldCost(gId) or 0) * 0.01)
 		end
 	else
 		if IsUnitType(u, UNIT_TYPE_HERO) then
 			gReal = (GetHeroLevel(u) * 1)
 		else
-			gReal = (I2R(GetUnitGoldCost(gId)) * 0.02)
+			gReal = (I2R(GetUnitGoldCost(gId) or 0) * 0.02)
 		end
 	end
 	ArmyExp[pi] = ArmyExp[pi] + gReal
@@ -15033,8 +15051,8 @@ function Trig_DeadSituastion_Actions()
 	
 	-- Для режима доминации
 	
-	CityPlayerCount[pi0] = CityPlayerCount[pi0] - 1
-	CityPlayerCount[pi] = CityPlayerCount[pi] + 1
+	CityPlayerCount[pi0] = (CityPlayerCount[pi0] or 0) - 1
+	CityPlayerCount[pi] = (CityPlayerCount[pi] or 0) + 1
 	PercentGraph(pi0)
 	PercentGraph(pi)
 	if udg_GameMode == 3 or udg_GameMode == 5 then
@@ -57941,6 +57959,74 @@ RegisterAiRace("HordeW2", {
     },
     join = Join_HordeW2,
     wall = FourCC('w20u'),
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Nerubs(id, pi, u)
+    if id == FourCC('h0BE') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Nerubs", {
+    tokens = {"nerub", "nerubs"},
+    weight = 1,
+    start = startNerubs,
+    buildings = {
+        seed = FourCC('h0GH'),
+        { FourCC('h0CO'), 4, 4 }, { FourCC('h0GH'), 18, 4 },
+        { FourCC('h0CR'), 10, 4 }, { FourCC('h0CS'), 5, 2 },
+        { FourCC('h0CU'), 3, 6 }, { FourCC('u01A'), 25, 1 },
+        { FourCC('h0CT'), 8, 6, gate = "tier2" },
+        { FourCC('h0CV'), 8, 6, gate = "tier2" },
+    },
+    gates = {
+        tier2 = function(pi)
+            return getAiCount(pi, FourCC('h0CP')) + getAiCount(pi, FourCC('h0CQ')) >= 1
+        end,
+    },
+    production = {
+        [FourCC('h0CO')] = { {FourCC('h0BE'),3,limit=20} },
+        [FourCC('h0CP')] = { {FourCC('h0BE'),3,limit=20} },
+        [FourCC('h0CQ')] = { {FourCC('h0BE'),3,limit=20} },
+        [FourCC('h0CR')] = {
+            {FourCC('u01J'), 4}, {FourCC('u01G'), 4}, {FourCC('u01F'), 3},
+        },
+        [FourCC('h0CT')] = {
+            {FourCC('u01C'), 3}, {FourCC('u01K'), 2, gate="tier2"},
+            {FourCC('u01B'), 2, gate="tier2"}, {FourCC('u01I'), 3},
+        },
+        [FourCC('h0CV')] = {
+            {FourCC('u01H'), 3}, {FourCC('u01D'), 3},
+        },
+        [FourCC('h0CU')] = {
+            {FourCC('U01U')}, {FourCC('U01V')}, {FourCC('U01W')},
+        },
+    },
+    ecoWeights = {
+        [FourCC('h0GH')] = 1, [FourCC('h0CO')] = 2,
+        [FourCC('h0CP')] = 5, [FourCC('h0CQ')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h0CS'),FourCC('Abds'),6},{FourCC('h0CS'),FourCC('Arlm'),6} },
+                { {FourCC('h0CR'),FourCC('Abds'),6} },
+                { {FourCC('h0CT'),FourCC('Abds'),6},{FourCC('h0CV'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h0CO'), to = FourCC('h0CP'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h0CP'), to = FourCC('h0CQ'), cap = 3 },
+        },
+    },
+    join = Join_Nerubs,
+    wall = FourCC('u01A'),
 })
 function InitCustomTriggers()
     InitTrig_sek5()

@@ -1129,3 +1129,71 @@ RegisterAiRace("HordeW2", {
     join = Join_HordeW2,
     wall = FourCC('w20u'),
 })
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Nerubs(id, pi, u)
+    if id == FourCC('h0BE') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Nerubs", {
+    tokens = {"nerub", "nerubs"},
+    weight = 1,
+    start = startNerubs,
+    buildings = {
+        seed = FourCC('h0GH'),
+        { FourCC('h0CO'), 4, 4 }, { FourCC('h0GH'), 18, 4 },
+        { FourCC('h0CR'), 10, 4 }, { FourCC('h0CS'), 5, 2 },
+        { FourCC('h0CU'), 3, 6 }, { FourCC('u01A'), 25, 1 },
+        { FourCC('h0CT'), 8, 6, gate = "tier2" },
+        { FourCC('h0CV'), 8, 6, gate = "tier2" },
+    },
+    gates = {
+        tier2 = function(pi)
+            return getAiCount(pi, FourCC('h0CP')) + getAiCount(pi, FourCC('h0CQ')) >= 1
+        end,
+    },
+    production = {
+        [FourCC('h0CO')] = { {FourCC('h0BE'),3,limit=20} },
+        [FourCC('h0CP')] = { {FourCC('h0BE'),3,limit=20} },
+        [FourCC('h0CQ')] = { {FourCC('h0BE'),3,limit=20} },
+        [FourCC('h0CR')] = {
+            {FourCC('u01J'), 4}, {FourCC('u01G'), 4}, {FourCC('u01F'), 3},
+        },
+        [FourCC('h0CT')] = {
+            {FourCC('u01C'), 3}, {FourCC('u01K'), 2, gate="tier2"},
+            {FourCC('u01B'), 2, gate="tier2"}, {FourCC('u01I'), 3},
+        },
+        [FourCC('h0CV')] = {
+            {FourCC('u01H'), 3}, {FourCC('u01D'), 3},
+        },
+        [FourCC('h0CU')] = {
+            {FourCC('U01U')}, {FourCC('U01V')}, {FourCC('U01W')},
+        },
+    },
+    ecoWeights = {
+        [FourCC('h0GH')] = 1, [FourCC('h0CO')] = 2,
+        [FourCC('h0CP')] = 5, [FourCC('h0CQ')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h0CS'),FourCC('Abds'),6},{FourCC('h0CS'),FourCC('Arlm'),6} },
+                { {FourCC('h0CR'),FourCC('Abds'),6} },
+                { {FourCC('h0CT'),FourCC('Abds'),6},{FourCC('h0CV'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h0CO'), to = FourCC('h0CP'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h0CP'), to = FourCC('h0CQ'), cap = 3 },
+        },
+    },
+    join = Join_Nerubs,
+    wall = FourCC('u01A'),
+})
