@@ -50,4 +50,7 @@
 - Rebuilt the map from split sources and verified with a second 120-second `probe-map` run that startup still completes cleanly and the previous repeating callback errors are gone.
 - Added a second delayed `UISetup` pass plus frame-presence probe logging. Both `ConsoleUIBackdrop` and `UpperButtonBarFrame` are present on both passes and `UISetup` completes cleanly, so the remaining “visual UI not applied” issue is no longer explained by missing frames or too-early execution.
 - Current UI hypothesis: the remaining mismatch is more likely in the console-skin/import/rendering layer or in the difference between unpacked `-loadfile` runs and packed-map startup, not in the core Lua frame-move sequence itself.
+- Promoted the working Lua map into the canonical repository path `map.w3x` and moved sidecar map copies out of the repository tree, so future work targets the real map path instead of parallel Lua folders.
+- Verified the canonical `map.w3x` through `probe-map`; it starts as a Lua map cleanly, but the visual UI issue now has a concrete engine-side signal in `War3Log`: `ITexCreate fail` on `UI\\Console\\Human\\HumanUITile04/05/06.dds` and `UI\\Feedback\\Resources\\Resource{Gold,Lumber,Supply}.dds`.
+- This makes the next UI debugging step much narrower: inspect texture format/compatibility for the custom UI assets rather than the frame code path.
 - Next architecture step: teach the CLI to inject timed in-game chat commands, so command fixes like `-ai2` can be verified automatically instead of only by manual playthroughs.

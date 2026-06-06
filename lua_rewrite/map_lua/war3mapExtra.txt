@@ -1,7 +1,0 @@
-[MapExtraInfo]
-EnableJassHelper=true
-EnableJassHelperDebug=true
-EnableJassHelperOptimizer=true
-SkyModel=3
-TimeOfDay=2
-
