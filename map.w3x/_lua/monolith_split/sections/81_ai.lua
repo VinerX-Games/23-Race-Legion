@@ -964,3 +964,67 @@ RegisterAiRace("JungleTrolls", {
     naval = aiNavalTrain_JungleTrolls,
     wall = FourCC('h0N2'),
 })
+
+-- ====================================================================
+-- ForestTrolls (Phase 3 data-driven)
+-- TODO: verify building/unit mappings and research assignments
+-- ====================================================================
+RegisterAiRace("ForestTrolls", {
+    tokens = {"ft", "foresttrolls"},
+    weight = 1,
+    start = startForestTrolls,
+    buildings = {
+        seed = FourCC('h0MV'),
+        { FourCC('h0MT'), 4, 4 }, { FourCC('h0MV'), 18, 4 },
+        { FourCC('h0MS'), 10, 4 }, { FourCC('h0N7'), 5, 2 },
+        { FourCC('h0MU'), 3, 6 }, { FourCC('h0N4'), 25, 1 },
+        { FourCC('h0MZ'), 8, 6, gate = "tier2" },
+        { FourCC('h0MR'), 8, 6, gate = "tier2" },
+    },
+    gates = {
+        tier2 = function(pi)
+            return getAiCount(pi, FourCC('h0N8')) + getAiCount(pi, FourCC('h0N9')) >= 1
+        end,
+    },
+    production = {
+        [FourCC('h0MS')] = {
+            { FourCC('o04W'), 5 },
+            { FourCC('o053'), 4 },
+            { FourCC('o04Z'), 3, gate = "tier2" },
+            { FourCC('o04Y'), 3, gate = "tier2" },
+        },
+        [FourCC('h0MZ')] = {
+            { FourCC('o051'), 3 },
+            { FourCC('o052'), 3 },
+        },
+        [FourCC('h0MR')] = {
+            { FourCC('o050'), 4 },
+            { FourCC('o05F'), 2, gate = "tier2" },
+        },
+        [FourCC('h0MU')] = {
+            { FourCC('H0BN'), 1, limit = 1 },
+        },
+        worker = { id = FourCC('o04V'), cap = 20,
+                   from = { FourCC('h0MT'), FourCC('h0N8'), FourCC('h0N9') } },
+    },
+    ecoWeights = {
+        [FourCC('h0MV')] = 1, [FourCC('h0MT')] = 2,
+        [FourCC('h0N8')] = 5, [FourCC('h0N9')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h0N7'), FourCC('R0D2'), 6}, {FourCC('h0N7'), FourCC('R0D3'), 6} },
+                { {FourCC('h0MS'), FourCC('R0DY'), 6}, {FourCC('h0MS'), FourCC('R0EE'), 6} },
+                { {FourCC('h0MZ'), FourCC('R0EH'), 6}, {FourCC('h0MZ'), FourCC('R0EI'), 6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h0MT'), to = FourCC('h0N8'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h0N8'), to = FourCC('h0N9'), cap = 3 },
+        },
+    },
+    join = Join_JungleTrolls,
+    naval = aiNavalTrain_JungleTrolls,
+    wall = FourCC('h0N4'),
+})

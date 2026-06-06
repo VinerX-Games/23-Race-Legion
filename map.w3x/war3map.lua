@@ -7636,6 +7636,28 @@ function GetLvlJungleTrolls(u)
 end
 -- ***************************************************************************
 -- *  LibRacesEnd
+
+-- ====================================================================
+-- ForestTrolls AI (Phase 3: data-driven)
+-- ====================================================================
+---@param pi integer
+---@return nothing
+function startForestTrolls(pi)
+    CreateNUnitsAtLoc(5, FourCC('o04V'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h0MT'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    SaveInteger(AiData, pi, FourCC('o04V'), 5)
+    SaveInteger(AiData, pi, FourCC('h0MT'), 1)
+    SaveStr(AiData, pi, StringHash("Race"), "FT")
+    SetPlayerTechResearchedSwap(FourCC('R0J1'), 1, Player(pi))
+    SetPlayerName(Player(pi), "Forest Trolls (" .. I2S(pi + 1) .. ")")
+    StartForestTrolls()
+    AiRace[pi] = "ForestTrolls"
+    ProbeLogWrite("[AI] startForestTrolls pi=" .. tostring(pi) .. " workers=5o04V building=1h0MT")
+end
 -- library Races ends
 -- library AI2:
 ---@param p player
@@ -29266,7 +29288,7 @@ end
 function Trig_AK1T1_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hfoo')
 end
-function AT1Count()
+function AT1Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -29387,7 +29409,7 @@ end
 function Trig_AK1T2_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0K4')
 end
-function AT2Count()
+function AT2Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -29483,7 +29505,7 @@ end
 function Trig_AK1T3_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0K7')
 end
-function AT3Count()
+function AT3Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -29681,7 +29703,7 @@ end
 function Trig_AK1Cav_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hkni')
 end
-function ACavCount()
+function ACavCount(p)
     local a = {}
     local i= 0
     local b= 0
@@ -29842,7 +29864,7 @@ end
 function Trig_AK2T1_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hrif')
 end
-function AK1Count()
+function AK1Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -29988,7 +30010,7 @@ end
 function Trig_AK2T2_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0K5')
 end
-function AK2Count()
+function AK2Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -30141,7 +30163,7 @@ end
 function Trig_AK2T3_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0K6')
 end
-function AK3Count()
+function AK3Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -30313,7 +30335,7 @@ end
 function Trig_AM1_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hmpr')
 end
-function AM1Count()
+function AM1Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -30491,7 +30513,7 @@ end
 function Trig_AM2_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hsor')
 end
-function AM2Count()
+function AM2Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -30658,7 +30680,7 @@ end
 function Trig_AM3_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hspt')
 end
-function AM3Count()
+function AM3Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -30778,7 +30800,7 @@ end
 function Trig_AE1_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hmtm')
 end
-function AE1Count()
+function AE1Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -30916,7 +30938,7 @@ end
 function Trig_AE2_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hmtt')
 end
-function AE2Count()
+function AE2Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -31084,7 +31106,7 @@ end
 function Trig_AN1_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0L0')
 end
-function AN1Count()
+function AN1Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -31233,7 +31255,7 @@ end
 function Trig_AN2_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0L1')
 end
-function AN2Count()
+function AN2Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -31360,7 +31382,7 @@ end
 --===========================================================================
 -- Trigger: ACounters
 --===========================================================================
-function AcountAll()
+function AcountAll(p)
     AT1Count(p)
     AT2Count(p)
     ACavCount(p)
@@ -36694,7 +36716,7 @@ end
 --===========================================================================
 -- Trigger: AiFixTrain
 --===========================================================================
-function aiFixTrainBefore()
+function aiFixTrainBefore(oldUnit, pi)
     
     if udg_AiControl[pi] then
         --call GroupRemoveUnit( udg_Ai_army[pi],oldUnit )
@@ -36706,7 +36728,7 @@ function aiFixTrainBefore()
     
     return false
 end
-function aiFixTrainAfter()
+function aiFixTrainAfter(NewUnit, pi)
     if udg_AiControl[pi] then
         aiUnitJoins(NewUnit , pi)
     end
@@ -36718,7 +36740,7 @@ end
 function Trig_K1T1_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('ogru')
 end
-function T1Count()
+function T1Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -36838,7 +36860,7 @@ end
 function Trig_K1T2_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('o01N')
 end
-function T2Count()
+function T2Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -36938,7 +36960,7 @@ end
 function Trig_K1T2b_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('o029')
 end
-function T2bCount()
+function T2bCount(p)
     local a = {}
     local i= 0
     local b= 0
@@ -37026,7 +37048,7 @@ end
 function Trig_K1TCav_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('orai')
 end
-function TCavCount()
+function TCavCount(p)
     local a = {}
     local i= 0
     local b= 0
@@ -37148,7 +37170,7 @@ end
 function Trig_K1T4_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('otau')
 end
-function T3Count()
+function T3Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -37287,7 +37309,7 @@ end
 function Trig_K2T1_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('ohun')
 end
-function K1Count()
+function K1Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -37395,7 +37417,7 @@ end
 function Trig_K2T2_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('o01P')
 end
-function K2Count()
+function K2Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -37504,7 +37526,7 @@ end
 function Trig_K2T2b_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('o02B')
 end
-function K2bCount()
+function K2bCount(p)
     local a = {}
     local i= 0
     local b= 0
@@ -37610,7 +37632,7 @@ end
 function Trig_K2T3_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('okod')
 end
-function K3Count()
+function K3Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -37982,10 +38004,10 @@ function Trig_KM3_Actions()
     
     i=GetRandomInt(1, a[0])
     b=a[i]
-   
+    
    aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
-    aiFixTrainBefore(u , pi)
+    aiFixTrainAfter(u , pi)
 --    
 --    call UnitAddAbility(u,'A0UY')
 --    call SetUnitAbilityLevel(u,'OR00',35+udg_HordeMagicPrice[pi])
@@ -38069,7 +38091,7 @@ function Trig_TechT1_Actions()
     
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
-    aiFixTrainBefore(u , pi)
+    aiFixTrainAfter(u , pi)
 --
 --    call UnitAddAbility(u,'A0UZ')
 --    call SetUnitAbilityLevel(u,'A0UZ',35+udg_HordeTechPrice[pi])
@@ -38458,7 +38480,7 @@ end
 --===========================================================================
 -- Trigger: Counters
 --===========================================================================
-function countAll()
+function countAll(p)
     T1Count(p)
     T2Count(p)
     T2bCount(p)
@@ -57616,6 +57638,70 @@ RegisterAiRace("JungleTrolls", {
     upgrade = UpgradeJungleTrolls,
     naval = aiNavalTrain_JungleTrolls,
     wall = FourCC('h0N2'),
+})
+
+-- ====================================================================
+-- ForestTrolls (Phase 3 data-driven)
+-- TODO: verify building/unit mappings and research assignments
+-- ====================================================================
+RegisterAiRace("ForestTrolls", {
+    tokens = {"ft", "foresttrolls"},
+    weight = 1,
+    start = startForestTrolls,
+    buildings = {
+        seed = FourCC('h0MV'),
+        { FourCC('h0MT'), 4, 4 }, { FourCC('h0MV'), 18, 4 },
+        { FourCC('h0MS'), 10, 4 }, { FourCC('h0N7'), 5, 2 },
+        { FourCC('h0MU'), 3, 6 }, { FourCC('h0N4'), 25, 1 },
+        { FourCC('h0MZ'), 8, 6, gate = "tier2" },
+        { FourCC('h0MR'), 8, 6, gate = "tier2" },
+    },
+    gates = {
+        tier2 = function(pi)
+            return getAiCount(pi, FourCC('h0N8')) + getAiCount(pi, FourCC('h0N9')) >= 1
+        end,
+    },
+    production = {
+        [FourCC('h0MS')] = {
+            { FourCC('o04W'), 5 },
+            { FourCC('o053'), 4 },
+            { FourCC('o04Z'), 3, gate = "tier2" },
+            { FourCC('o04Y'), 3, gate = "tier2" },
+        },
+        [FourCC('h0MZ')] = {
+            { FourCC('o051'), 3 },
+            { FourCC('o052'), 3 },
+        },
+        [FourCC('h0MR')] = {
+            { FourCC('o050'), 4 },
+            { FourCC('o05F'), 2, gate = "tier2" },
+        },
+        [FourCC('h0MU')] = {
+            { FourCC('H0BN'), 1, limit = 1 },
+        },
+        worker = { id = FourCC('o04V'), cap = 20,
+                   from = { FourCC('h0MT'), FourCC('h0N8'), FourCC('h0N9') } },
+    },
+    ecoWeights = {
+        [FourCC('h0MV')] = 1, [FourCC('h0MT')] = 2,
+        [FourCC('h0N8')] = 5, [FourCC('h0N9')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h0N7'), FourCC('R0D2'), 6}, {FourCC('h0N7'), FourCC('R0D3'), 6} },
+                { {FourCC('h0MS'), FourCC('R0DY'), 6}, {FourCC('h0MS'), FourCC('R0EE'), 6} },
+                { {FourCC('h0MZ'), FourCC('R0EH'), 6}, {FourCC('h0MZ'), FourCC('R0EI'), 6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h0MT'), to = FourCC('h0N8'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h0N8'), to = FourCC('h0N9'), cap = 3 },
+        },
+    },
+    join = Join_JungleTrolls,
+    naval = aiNavalTrain_JungleTrolls,
+    wall = FourCC('h0N4'),
 })
 function InitCustomTriggers()
     InitTrig_sek5()

@@ -3137,4 +3137,26 @@ function GetLvlJungleTrolls(u)
 end
 -- ***************************************************************************
 -- *  LibRacesEnd
+
+-- ====================================================================
+-- ForestTrolls AI (Phase 3: data-driven)
+-- ====================================================================
+---@param pi integer
+---@return nothing
+function startForestTrolls(pi)
+    CreateNUnitsAtLoc(5, FourCC('o04V'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h0MT'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    SaveInteger(AiData, pi, FourCC('o04V'), 5)
+    SaveInteger(AiData, pi, FourCC('h0MT'), 1)
+    SaveStr(AiData, pi, StringHash("Race"), "FT")
+    SetPlayerTechResearchedSwap(FourCC('R0J1'), 1, Player(pi))
+    SetPlayerName(Player(pi), "Forest Trolls (" .. I2S(pi + 1) .. ")")
+    StartForestTrolls()
+    AiRace[pi] = "ForestTrolls"
+    ProbeLogWrite("[AI] startForestTrolls pi=" .. tostring(pi) .. " workers=5o04V building=1h0MT")
+end
 -- library Races ends
