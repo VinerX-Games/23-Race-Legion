@@ -10,6 +10,7 @@ MOJIBAKE_BOM_RE = re.compile(r"^\ufeff?$|^п»ї$")
 LOCAL_ARRAY_RE = re.compile(r"^(\s*)local\s+array\s+([A-Za-z_][A-Za-z0-9_]*)\s*$")
 LOOP_RE = re.compile(r"^(\s*)loop(\s*.*)$")
 PLAYER_ABILITY_RAWCODE_RE = re.compile(r"(SetPlayerAbilityAvailable(?:BJ)?\s*\([^,\n]+,\s*)'([A-Za-z0-9]{4})'")
+RAWCODE_LITERAL_RE = re.compile(r"(?<!FourCC\()'([A-Za-z0-9]{4})'")
 
 
 def normalize_text(text: str) -> tuple[str, int]:
@@ -39,6 +40,10 @@ def normalize_text(text: str) -> tuple[str, int]:
                 changes += 1
 
             updated, count = PLAYER_ABILITY_RAWCODE_RE.subn(r"\1FourCC('\2')", line)
+            line = updated
+            changes += count
+
+            updated, count = RAWCODE_LITERAL_RE.subn(r"FourCC('\1')", line)
             line = updated
             changes += count
 

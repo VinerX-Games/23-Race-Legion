@@ -2221,7 +2221,7 @@ function ChooseBuildings_Horde(pi)
 	CheckAndAddBuilding(pi, FourCC('owtw'), 30, 1)	--  Tower
 	CheckAndAddBuilding(pi, FourCC('ofor'), 5, 3)	--  Лесопилка
 	CheckAndAddBuilding(pi, FourCC('oalt'), 3, 6)	--  Алтарь
-	if LoadInteger(AiData, pi, FourCC('ostr')) + LoadInteger(AiData, pi, FourCC('ofrt')) > 0 then	--  (pi,'ostr') or aiHasUnit(pi,'ofrt') then
+	if LoadInteger(AiData, pi, FourCC('ostr')) + LoadInteger(AiData, pi, FourCC('ofrt')) > 0 then	--  (pi,FourCC('ostr')) or aiHasUnit(pi,FourCC('ofrt')) then
 		CheckAndAddBuilding(pi, FourCC('osld'), 15, 10)	--  Обитель духов
 		CheckAndAddBuilding(pi, FourCC('otto'), 15, 10)	--  Мастерская
 	end

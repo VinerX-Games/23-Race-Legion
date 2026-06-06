@@ -30,7 +30,11 @@
 - Fixed the first allocator/deallocator conversion defect manually (`...V[this] = -1` / `~= -1`) using the original `war3map.j` as reference.
 - Added runtime probe logging through `PreloadGenEnd` into `CustomMapData` and taught `HiveWE_cli probe-map` to read that log back.
 - Added optional auto-click support to `HiveWE_cli probe-map` for maps that stop on the post-load click gate.
+- Extended `HiveWE_cli probe-map` automation to send `Enter` after the load-screen click and again during graceful close, so the CLI can pass the disconnect/confirmation prompts without manual input.
 - Current runtime state:
   - root Lua compile errors are cleared for the current tested build
   - deferred init now completes through `InitCustomTriggers` and `RunInitializationTriggers`
   - current blockers moved into runtime callback errors caused by rawcode strings passed where WC3 Lua expects numeric ids, e.g. `SetPlayerTechMaxAllowed` / `GetPlayerTechCount`
+- Added a systemic rawcode normalization rule to `lua_rewrite/normalize_converted_lua.py`: single-quoted 4-character JASS ids are rewritten into `FourCC(...)` unless they are already normalized.
+- Rebuilt `map_lua.w3m/war3map.lua` from the split source after the rawcode pass and verified with `probe-map` that the map now survives a 120-second automated runtime without Lua root errors, init failures, or early callback errors.
+- Remaining non-normalized 4-character literals are now confined to comments in the generated runtime section, not active code.

@@ -1503,7 +1503,7 @@ function TimedUpdateCheck()
 			income[pi] = income[pi] + 100
 			IncUnitAbilityLevel(u, FourCC('A0AY'))
 			
-		else	-- if GetUnitAbilityLevel(u, 'A0AY') >= levels then
+		else	-- if GetUnitAbilityLevel(u, FourCC('A0AY')) >= levels then
 			income[pi] = income[pi] + 100
 			UnitRemoveAbility(u, FourCC('A0AZ'))
 			
@@ -1517,7 +1517,7 @@ function TimedUpdateCheck()
 		elseif GetUnitAbilityLevel(u, FourCC('A0B5')) < levels then
 			IncUnitAbilityLevel(u, FourCC('A0B5'))
 			incomeW[pi] = incomeW[pi] + 50.00
-		else	-- if GetUnitAbilityLevel( u,'A0B5' ) >= levels then
+		else	-- if GetUnitAbilityLevel( u,FourCC('A0B5') ) >= levels then
 			UnitRemoveAbility(u, FourCC('A0B1'))
 			
 		end
@@ -6655,7 +6655,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_UnitRevive_Conditions()
-	return UnitAlive(GetTriggerUnit()) and  not IsUnitType(GetTriggerUnit(), UNIT_TYPE_SUMMONED)	--  GetUnitAbilityLevel(GetTriggerUnit(), 'BUan') <= 0 and
+	return UnitAlive(GetTriggerUnit()) and  not IsUnitType(GetTriggerUnit(), UNIT_TYPE_SUMMONED)	--  GetUnitAbilityLevel(GetTriggerUnit(), FourCC('BUan')) <= 0 and
 end
 ---@return nothing
 function Trig_UnitRevive_Actions()
@@ -9231,7 +9231,7 @@ function Trig_Continents_Off_Conditions()
     return true
 end
 function Trig_Continents_Off_Func005001002()
-    return ( GetUnitAbilityLevelSwapped('Awrp', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
 end
 function Trig_Continents_Off_Func005A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -9297,9 +9297,9 @@ function KillIf()
     
     
     if time > 0 then
-        if GetUnitAbilityLevel(u, 'A0U6') == 0 or AllowedPosition(u) then
-            UnitRemoveAbility(u, 'A0U6')
-            UnitRemoveAbility(u, 'B05M')
+        if GetUnitAbilityLevel(u, FourCC('A0U6')) == 0 or AllowedPosition(u) then
+            UnitRemoveAbility(u, FourCC('A0U6'))
+            UnitRemoveAbility(u, FourCC('B05M'))
             DestroyEffect(e)
             DestroyTimer(t)
             FlushChildHashtable(Hash, id)
@@ -9333,9 +9333,9 @@ function Continents()
     --local integer uid = StringHash( I2S(GetHandleId(u))+"k")
     local e
     if AllowedPosition(u) then
-        if GetUnitAbilityLevel(u, 'A0U6') > 0 then
-            UnitRemoveAbility(u, 'A0U6')
-            UnitRemoveAbility(u, 'B05M')
+        if GetUnitAbilityLevel(u, FourCC('A0U6')) > 0 then
+            UnitRemoveAbility(u, FourCC('A0U6'))
+            UnitRemoveAbility(u, FourCC('B05M'))
         end
         
         
@@ -9343,11 +9343,11 @@ function Continents()
         if IsUnitType(u, UNIT_TYPE_STRUCTURE) then
             ExplodeUnitBJ(u)
             
-        elseif GetUnitTypeId(u) == 'H049' then
+        elseif GetUnitTypeId(u) == FourCC('H049') then
             
             
         else
-            if GetUnitAbilityLevel(u, 'A0U6') > 0 then
+            if GetUnitAbilityLevel(u, FourCC('A0U6')) > 0 then
                 SetUnitPosition(u, 0, 0)
                 DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "")
                 
@@ -9355,7 +9355,7 @@ function Continents()
                 --call SaveInteger(Hash,id,1,30)
                 
             else
-                UnitAddAbility(u, 'A0U6')
+                UnitAddAbility(u, FourCC('A0U6'))
                 e=AddSpecialEffectTarget("AbilitiesSpellsOtherTalkToMeTalkToMe", u, "overhead")
                 --call TriggerExecute( gg_trg_GoHome_No_fine )
                 
@@ -9408,7 +9408,7 @@ end
 -- Trigger: UseMassProssvet
 --===========================================================================
 function Trig_UseMassProssvet_Func008C()
-    if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I00C' ) ) then
+    if ( not ( GetItemTypeId(GetManipulatedItem()) == FourCC('I00C') ) ) then
         return false
     end
     if ( not ( udg_Continents[0] == 1 ) ) then
@@ -9556,19 +9556,19 @@ function Trig_EasternOn_1_Conditions()
     return true
 end
 function Trig_EasternOn_1_Func003001002()
-    return ( GetUnitAbilityLevelSwapped('Awrp', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
 end
 function Trig_EasternOn_1_Func003A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_EasternOn_1_Func004001002()
-    return ( GetUnitAbilityLevelSwapped('Awrp', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
 end
 function Trig_EasternOn_1_Func004A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_EasternOn_1_Func005001002()
-    return ( GetUnitAbilityLevelSwapped('Awrp', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
 end
 function Trig_EasternOn_1_Func005A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -9589,7 +9589,7 @@ end
 -- Trigger: EasternOn Spell
 --===========================================================================
 function Trig_EasternOn_Spell_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UB' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UB') ) ) then
         return false
     end
     return true
@@ -9598,8 +9598,8 @@ function Trig_EasternOn_Spell_Actions()
     udg_Continents[1]=1
     udg_Continents[0]=1
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
-    UnitAddAbilityBJ('A0UM', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A0UB', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0UM'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0UB'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_EasternOn_Spell()
@@ -9612,7 +9612,7 @@ end
 -- Trigger: EasternOn Spell Off
 --===========================================================================
 function Trig_EasternOn_Spell_Off_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UM' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UM') ) ) then
         return false
     end
     return true
@@ -9620,8 +9620,8 @@ end
 function Trig_EasternOn_Spell_Off_Actions()
     udg_Continents[1]=0
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
-    UnitAddAbilityBJ('A0UB', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A0UM', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0UB'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0UM'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_EasternOn_Spell_Off()
@@ -9653,13 +9653,13 @@ function Trig_KalimOn_2_Conditions()
     return true
 end
 function Trig_KalimOn_2_Func002001002()
-    return ( GetUnitAbilityLevelSwapped('Awrp', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
 end
 function Trig_KalimOn_2_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_KalimOn_2_Func003001002()
-    return ( GetUnitAbilityLevelSwapped('Awrp', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
 end
 function Trig_KalimOn_2_Func003A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -9679,7 +9679,7 @@ end
 -- Trigger: KalimOn 2 Spell
 --===========================================================================
 function Trig_KalimOn_2_Spell_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UC' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UC') ) ) then
         return false
     end
     return true
@@ -9688,8 +9688,8 @@ function Trig_KalimOn_2_Spell_Actions()
     udg_Continents[2]=1
     udg_Continents[0]=1
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
-    UnitAddAbilityBJ('A0UN', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A0UC', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0UN'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0UC'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_KalimOn_2_Spell()
@@ -9702,7 +9702,7 @@ end
 -- Trigger: KalimOn 2 Spell off
 --===========================================================================
 function Trig_KalimOn_2_Spell_off_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UN' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UN') ) ) then
         return false
     end
     return true
@@ -9710,8 +9710,8 @@ end
 function Trig_KalimOn_2_Spell_off_Actions()
     udg_Continents[2]=0
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
-    UnitAddAbilityBJ('A0UC', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A0UN', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0UC'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0UN'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_KalimOn_2_Spell_off()
@@ -9744,7 +9744,7 @@ function Trig_Outland_3_Conditions()
     return true
 end
 function Trig_Outland_3_Func002001002()
-    return ( GetUnitAbilityLevelSwapped('Awrp', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
 end
 function Trig_Outland_3_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -9763,7 +9763,7 @@ end
 -- Trigger: Outland 3 spell
 --===========================================================================
 function Trig_Outland_3_spell_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UD' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UD') ) ) then
         return false
     end
     return true
@@ -9772,8 +9772,8 @@ function Trig_Outland_3_spell_Actions()
     udg_Continents[3]=1
     udg_Continents[0]=1
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
-    UnitAddAbilityBJ('A0UO', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A0UD', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0UO'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0UD'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_Outland_3_spell()
@@ -9786,7 +9786,7 @@ end
 -- Trigger: Outland 3 spell off
 --===========================================================================
 function Trig_Outland_3_spell_off_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UO' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UO') ) ) then
         return false
     end
     return true
@@ -9794,8 +9794,8 @@ end
 function Trig_Outland_3_spell_off_Actions()
     udg_Continents[3]=0
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
-    UnitRemoveAbilityBJ('A0UO', GetTriggerUnit())
-    UnitAddAbilityBJ('A0UD', GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0UO'), GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0UD'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_Outland_3_spell_off()
@@ -9828,13 +9828,13 @@ function Trig_NordOn_4_Conditions()
     return true
 end
 function Trig_NordOn_4_Func002001002()
-    return ( GetUnitAbilityLevelSwapped('Awrp', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
 end
 function Trig_NordOn_4_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_NordOn_4_Func003001002()
-    return ( GetUnitAbilityLevelSwapped('Awrp', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
 end
 function Trig_NordOn_4_Func003A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -9854,7 +9854,7 @@ end
 -- Trigger: NordOn 4 spell
 --===========================================================================
 function Trig_NordOn_4_spell_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UE' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UE') ) ) then
         return false
     end
     return true
@@ -9863,8 +9863,8 @@ function Trig_NordOn_4_spell_Actions()
     udg_Continents[4]=1
     udg_Continents[0]=1
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
-    UnitRemoveAbilityBJ('A0UE', GetTriggerUnit())
-    UnitAddAbilityBJ('A0UP', GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0UE'), GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0UP'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_NordOn_4_spell()
@@ -9877,7 +9877,7 @@ end
 -- Trigger: NordOn 4 spell off
 --===========================================================================
 function Trig_NordOn_4_spell_off_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UP' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UP') ) ) then
         return false
     end
     return true
@@ -9885,8 +9885,8 @@ end
 function Trig_NordOn_4_spell_off_Actions()
     udg_Continents[4]=0
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
-    UnitAddAbilityBJ('A0UE', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A0UP', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0UE'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0UP'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_NordOn_4_spell_off()
@@ -9919,7 +9919,7 @@ function Trig_Pandaria_5_Conditions()
     return true
 end
 function Trig_Pandaria_5_Func002001002()
-    return ( GetUnitAbilityLevelSwapped('Awrp', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
 end
 function Trig_Pandaria_5_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -9938,7 +9938,7 @@ end
 -- Trigger: Pandaria 5 spell
 --===========================================================================
 function Trig_Pandaria_5_spell_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UF' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UF') ) ) then
         return false
     end
     return true
@@ -9947,8 +9947,8 @@ function Trig_Pandaria_5_spell_Actions()
     udg_Continents[5]=1
     udg_Continents[0]=1
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
-    UnitAddAbilityBJ('A0UQ', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A0UF', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0UQ'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0UF'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_Pandaria_5_spell()
@@ -9961,7 +9961,7 @@ end
 -- Trigger: Pandaria 5 spell off
 --===========================================================================
 function Trig_Pandaria_5_spell_off_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UQ' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UQ') ) ) then
         return false
     end
     return true
@@ -9969,8 +9969,8 @@ end
 function Trig_Pandaria_5_spell_off_Actions()
     udg_Continents[5]=0
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
-    UnitAddAbilityBJ('A0UF', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A0UQ', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0UF'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0UQ'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_Pandaria_5_spell_off()
@@ -10002,7 +10002,7 @@ function Trig_Argus_6_Conditions()
     return true
 end
 function Trig_Argus_6_Func002001002()
-    return ( GetUnitAbilityLevelSwapped('Awrp', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
 end
 function Trig_Argus_6_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -10021,7 +10021,7 @@ end
 -- Trigger: Argus 6 spell
 --===========================================================================
 function Trig_Argus_6_spell_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UH' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UH') ) ) then
         return false
     end
     return true
@@ -10030,8 +10030,8 @@ function Trig_Argus_6_spell_Actions()
     udg_Continents[6]=1
     udg_Continents[0]=1
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
-    UnitAddAbilityBJ('A0UR', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A0UH', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0UR'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0UH'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_Argus_6_spell()
@@ -10044,7 +10044,7 @@ end
 -- Trigger: Argus 6 spell off
 --===========================================================================
 function Trig_Argus_6_spell_off_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UR' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UR') ) ) then
         return false
     end
     return true
@@ -10052,8 +10052,8 @@ end
 function Trig_Argus_6_spell_off_Actions()
     udg_Continents[6]=0
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
-    UnitAddAbilityBJ('A0UH', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A0UR', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0UH'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0UR'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_Argus_6_spell_off()
@@ -10085,7 +10085,7 @@ function Trig_BrokenIsled_7_Conditions()
     return true
 end
 function Trig_BrokenIsled_7_Func002001002()
-    return ( GetUnitAbilityLevelSwapped('Awrp', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
 end
 function Trig_BrokenIsled_7_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -10104,7 +10104,7 @@ end
 -- Trigger: BrokenIsled 7 spell
 --===========================================================================
 function Trig_BrokenIsled_7_spell_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UG' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UG') ) ) then
         return false
     end
     return true
@@ -10113,8 +10113,8 @@ function Trig_BrokenIsled_7_spell_Actions()
     udg_Continents[7]=1
     udg_Continents[0]=1
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
-    UnitAddAbilityBJ('A0US', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A0UG', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0US'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0UG'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_BrokenIsled_7_spell()
@@ -10127,7 +10127,7 @@ end
 -- Trigger: BrokenIsled 7 spell off
 --===========================================================================
 function Trig_BrokenIsled_7_spell_off_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0US' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0US') ) ) then
         return false
     end
     return true
@@ -10135,8 +10135,8 @@ end
 function Trig_BrokenIsled_7_spell_off_Actions()
     udg_Continents[7]=0
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
-    UnitAddAbilityBJ('A0UG', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A0US', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0UG'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0US'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_BrokenIsled_7_spell_off()
@@ -10162,7 +10162,7 @@ end
 -- Trigger: Standart
 --===========================================================================
 function Trig_Standart_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UT' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UT') ) ) then
         return false
     end
     return true
@@ -10182,7 +10182,7 @@ end
 -- Trigger: DarkMode Spell
 --===========================================================================
 function Trig_DarkMode_Spell_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0UL' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0UL') ) ) then
         return false
     end
     return true
@@ -10202,7 +10202,7 @@ end
 -- Trigger: OpenModeSpell
 --===========================================================================
 function Trig_OpenModeSpell_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A131' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A131') ) ) then
         return false
     end
     return true
@@ -10352,7 +10352,7 @@ end
 -- Trigger: NoDipFFA
 --===========================================================================
 function Trig_NoDipFFA_Conditions()
-    return GetSpellAbilityId() == 'A1KR'
+    return GetSpellAbilityId() == FourCC('A1KR')
 end
 function Trig_NoDipFFA_Actions()
     DipMode=1
@@ -10370,7 +10370,7 @@ end
 -- Trigger: Dip2
 --===========================================================================
 function Trig_Dip2_Conditions()
-    return GetSpellAbilityId() == 'A1KS'
+    return GetSpellAbilityId() == FourCC('A1KS')
 end
 function Trig_Dip2_Actions()
     DipMode=2
@@ -10387,7 +10387,7 @@ end
 -- Trigger: Dip3
 --===========================================================================
 function Trig_Dip3_Conditions()
-    return GetSpellAbilityId() == 'A1KT'
+    return GetSpellAbilityId() == FourCC('A1KT')
 end
 function Trig_Dip3_Actions()
     DipMode=3
@@ -10404,7 +10404,7 @@ end
 -- Trigger: FreeDip
 --===========================================================================
 function Trig_FreeDip_Conditions()
-    return GetSpellAbilityId() == 'A1KQ'
+    return GetSpellAbilityId() == FourCC('A1KQ')
 end
 function Trig_FreeDip_Actions()
     DipMode=0
@@ -10455,7 +10455,7 @@ end
 -- Trigger: Income075
 --===========================================================================
 function Trig_Income075_Conditions()
-    return GetSpellAbilityId() == 'A1N6'
+    return GetSpellAbilityId() == FourCC('A1N6')
 end
 function Trig_Income075_Actions()
     IncomeMod=0.75
@@ -10472,7 +10472,7 @@ end
 -- Trigger: Income100
 --===========================================================================
 function Trig_Income100_Conditions()
-    return GetSpellAbilityId() == 'A1N7'
+    return GetSpellAbilityId() == FourCC('A1N7')
 end
 function Trig_Income100_Actions()
     IncomeMod=1
@@ -10491,7 +10491,7 @@ end
 -- Мод на автопроизводство погибших юнитов
 --===========================================================================
 function Trig_StartTotalProductionCommon_Conditions()
-    return GetSpellAbilityId() == 'A1KC'
+    return GetSpellAbilityId() == FourCC('A1KC')
 end
 function Trig_StartTotalProductionCommon_Actions()
     local i= 0
@@ -10518,7 +10518,7 @@ end
 -- Мод на автопроизводство погибших юнитов
 --===========================================================================
 function Trig_StartTotalProductionPlayer_Conditions()
-    return GetSpellAbilityId() == 'A1KH'
+    return GetSpellAbilityId() == FourCC('A1KH')
 end
 function Trig_StartTotalProductionPlayer_Actions()
     TotalProductionP[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=true
@@ -10549,7 +10549,7 @@ end
 -- Мод на автопроизводство погибших юнитов
 --===========================================================================
 function Trig_EndTotalProductionPlayer_Conditions()
-    return GetSpellAbilityId() == 'A1KI'
+    return GetSpellAbilityId() == FourCC('A1KI')
 end
 function Trig_EndTotalProductionPlayer_Actions()
     TotalProductionP[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=false
@@ -10782,28 +10782,28 @@ end
 -- Trigger: UnitsToBuildingSituation2
 --===========================================================================
 function Trig_UnitsToBuildingSituation2_Func002C()
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'e021' ) ) then
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e021') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'e020' ) ) then
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e020') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'e01H' ) ) then
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01H') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'e01J' ) ) then
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01J') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'e01L' ) ) then
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01L') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'e01M' ) ) then
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01M') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'e01X' ) ) then
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01X') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == 'e01K' ) ) then
+    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01K') ) ) then
         return true
     end
     return false
@@ -10834,28 +10834,28 @@ end
 -- Trigger: CanselSituation2
 --===========================================================================
 function Trig_CanselSituation2_Func001C()
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == 'e021' ) ) then
+    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e021') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == 'e020' ) ) then
+    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e020') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == 'e01H' ) ) then
+    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01H') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == 'e01J' ) ) then
+    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01J') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == 'e01L' ) ) then
+    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01L') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == 'e01M' ) ) then
+    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01M') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == 'e01X' ) ) then
+    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01X') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == 'e01K' ) ) then
+    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01K') ) ) then
         return true
     end
     return false
@@ -10893,7 +10893,7 @@ function Trig_CircleMove_Code_Actions()
     
     
         if not ( RectContainsLoc(gg_rct_KillDalaran, udg_LocCircle) and not UnitAlive(gg_unit_e00C_0590) or RectContainsLoc(gg_rct_TurtleIsland, udg_LocCircle) and not UnitAlive(gg_unit_e00E_0085) or RectContainsLoc(gg_rct_Naxramas, udg_LocCircle) and not UnitAlive(gg_unit_e00D_0080) ) then
-            bj_groupEnumTypeId='h0HJ'
+            bj_groupEnumTypeId=FourCC('h0HJ')
             GroupEnumUnitsOfPlayer(g, GetTriggerPlayer(), filterGetUnitsOfPlayerAndTypeId)
             while true do
                 u=FirstOfGroup(g)
@@ -10944,16 +10944,16 @@ end
 -- Trigger: Race Bezlikie O
 --===========================================================================
 function Trig_Race_Bezlikie_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0HW' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0HW') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Bezlikie_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(3, 'u02D', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(3, FourCC('u02D'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
-    SetPlayerTechResearchedSwap('R0F9', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0F9'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -10967,16 +10967,16 @@ end
 -- Trigger: Race IceTrols
 --===========================================================================
 function Trig_Race_IceTrols_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1EG' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1EG') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_IceTrols_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'o045', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(5, FourCC('o045'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
-    SetPlayerTechResearchedSwap('R0L1', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0L1'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -10990,17 +10990,17 @@ end
 -- Trigger: Race Stromgard O
 --===========================================================================
 function Trig_Race_Stromgard_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0Y0' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0Y0') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Stromgard_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'h0G9', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(5, FourCC('h0G9'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
-    SetPlayerTechResearchedSwap('R0H3', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0HY', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0H3'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, GetOwningPlayer(GetTriggerUnit()))
     TriggerExecute(gg_trg_StromgardOn)
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11015,15 +11015,15 @@ end
 -- Trigger: Race Dragon O
 --===========================================================================
 function Trig_Race_Dragon_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0RQ' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0RQ') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Dragon_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(1, 'dra1', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R0BY', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(1, FourCC('dra1'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
     DragonsOn()
@@ -11039,14 +11039,14 @@ end
 -- Trigger: Race Dragon2
 --===========================================================================
 function Trig_Race_Dragon2_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1MZ' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1MZ') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Dragon2_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'o01D', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(5, FourCC('o01D'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     --call SetPlayerTechResearchedSwap( 'R0BY', 1, GetOwningPlayer(GetTriggerUnit()) )
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
@@ -11062,16 +11062,16 @@ end
 -- Trigger: Race Argvinol O
 --===========================================================================
 function Trig_Race_Argvinol_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0QQ' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0QQ') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Argvinol_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'e02T', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(5, FourCC('e02T'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
-    SetPlayerTechResearchedSwap('R0BZ', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0BZ'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -11085,16 +11085,16 @@ end
 -- Trigger: Race Elements O
 --===========================================================================
 function Trig_Race_Elements_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0QN' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0QN') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Elements_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'e00F', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(5, FourCC('e00F'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
-    SetPlayerTechResearchedSwap('R0A2', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0A2'), 1, GetOwningPlayer(GetTriggerUnit()))
     ElemOn()
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11109,16 +11109,16 @@ end
 -- Trigger: Race Goblins O
 --===========================================================================
 function Trig_Race_Goblins_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0AC' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0AC') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Goblins_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'n00V', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R07E', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0J3', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('n00V'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07E'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0J3'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     TriggerExecute(gg_trg_GoblinsOn)
     RemoveLocation(udg_LocalPosition2)
@@ -11134,15 +11134,15 @@ end
 -- Trigger: Race Demon O
 --===========================================================================
 function Trig_Race_Demon_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0MY' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0MY') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Demon_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(8, 'e02Y', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R0AO', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(8, FourCC('e02Y'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0AO'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11157,17 +11157,17 @@ end
 -- Trigger: Race Illidari O
 --===========================================================================
 function Trig_Race_Illidari_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0OK' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0OK') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Illidari_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'h0EI', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R07H', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0KZ', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0L0', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('h0EI'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07H'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0KZ'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0L0'), 1, GetOwningPlayer(GetTriggerUnit()))
     ConditionalTriggerExecute(gg_trg_IllidaryOn)
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
@@ -11183,15 +11183,15 @@ end
 -- Trigger: Race Bandits O
 --===========================================================================
 function Trig_Race_Bandits_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0HR' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0HR') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Bandits_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'h002', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R00G', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('h002'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R00G'), 1, GetOwningPlayer(GetTriggerUnit()))
     TriggerExecute(gg_trg_BanditsOn)
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
@@ -11207,15 +11207,15 @@ end
 -- Trigger: Race Red Orden O
 --===========================================================================
 function Trig_Race_Red_Orden_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0HM' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0HM') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Red_Orden_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'h014', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R07B', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('h014'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07B'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11230,16 +11230,16 @@ end
 -- Trigger: Race Undead O
 --===========================================================================
 function Trig_Race_Undead_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0HV' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0HV') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Undead_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(3, 'u00P', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R07I', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0J5', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(3, FourCC('u00P'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07I'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     ConditionalTriggerExecute(gg_trg_UndeadOn)
     RemoveLocation(udg_LocalPosition2)
@@ -11255,17 +11255,17 @@ end
 -- Trigger: Race Horde
 --===========================================================================
 function Trig_Race_Horde_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0YV' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0YV') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Horde_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'opeo', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R0DV', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0IR', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0J3', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('opeo'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0DV'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0IR'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0J3'), 1, GetOwningPlayer(GetTriggerUnit()))
     ConditionalTriggerExecute(gg_trg_HordeOn)
     ConditionalTriggerExecute(gg_trg_StartHorde)
     RemoveUnit(GetSpellAbilityUnit())
@@ -11282,16 +11282,16 @@ end
 -- Trigger: Race Blood Elves O
 --===========================================================================
 function Trig_Race_Blood_Elves_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0HQ' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0HQ') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Blood_Elves_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'h04K', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R07C', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0L0', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('h04K'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07C'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0L0'), 1, GetOwningPlayer(GetTriggerUnit()))
     ConditionalTriggerExecute(gg_trg_BloodElvesOn)
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
@@ -11307,16 +11307,16 @@ end
 -- Trigger: Race Dalaran O
 --===========================================================================
 function Trig_Race_Dalaran_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0HN' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0HN') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Dalaran_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(3, 'u001', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R0BW', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0KK', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(3, FourCC('u001'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0BW'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11331,16 +11331,16 @@ end
 -- Trigger: Race KulTiras O
 --===========================================================================
 function Trig_Race_KulTiras_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0HO' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0HO') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_KulTiras_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'h013', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R07D', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0HX', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('h013'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07D'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0HX'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11355,16 +11355,16 @@ end
 -- Trigger: Race Nocnorogdennue O
 --===========================================================================
 function Trig_Race_Nocnorogdennue_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0HU' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0HU') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Nocnorogdennue_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'h0CJ', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(5, FourCC('h0CJ'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
-    SetPlayerTechResearchedSwap('R07J', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R07J'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -11378,15 +11378,15 @@ end
 -- Trigger: Race Draeneis O
 --===========================================================================
 function Trig_Race_Draeneis_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0HS' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0HS') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Draeneis_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'h012', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R07G', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('h012'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07G'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11401,15 +11401,15 @@ end
 -- Trigger: Race Vryculs O
 --===========================================================================
 function Trig_Race_Vryculs_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0HP' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0HP') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Vryculs_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'h0C9', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R07F', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('h0C9'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07F'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11424,16 +11424,16 @@ end
 -- Trigger: Race Kult Sum Molota O
 --===========================================================================
 function Trig_Race_Kult_Sum_Molota_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0HX' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0HX') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Kult_Sum_Molota_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'o00J', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R07K', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0KD', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('o00J'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07K'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11448,15 +11448,15 @@ end
 -- Trigger: Race Nerubs O
 --===========================================================================
 function Trig_Race_Nerubs_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0HT' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0HT') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Nerubs_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(3, 'h0BE', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R07N', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(3, FourCC('h0BE'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07N'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11471,15 +11471,15 @@ end
 -- Trigger: Race Silitids O
 --===========================================================================
 function Trig_Race_Silitids_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0J7' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0J7') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Silitids_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(8, 'e01G', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R0BV', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(8, FourCC('e01G'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0BV'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(true, FourCC('A1B7'), GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     ConditionalTriggerExecute(gg_trg_SilitidsOn)
@@ -11496,17 +11496,17 @@ end
 -- Trigger: Race Gnomes
 --===========================================================================
 function Trig_Race_Gnomes_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0SD' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0SD') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Gnomes_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'h0FA', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    CreateNUnitsAtLoc(1, 'h0FX', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R0BX', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0HW', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('h0FA'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('h0FX'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0BX'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     ConditionalTriggerExecute(gg_trg_GnomesOn)
     RemoveLocation(udg_LocalPosition2)
@@ -11522,15 +11522,15 @@ end
 -- Trigger: Race Gilneas
 --===========================================================================
 function Trig_Race_Gilneas_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A121' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A121') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Gilneas_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'h0IT', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R0FX', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('h0IT'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0FX'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11545,15 +11545,15 @@ end
 -- Trigger: Race Nagi
 --===========================================================================
 function Trig_Race_Nagi_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A14O' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A14O') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Nagi_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'nmpe', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R0FS', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('nmpe'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0FS'), 1, GetOwningPlayer(GetTriggerUnit()))
     
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
@@ -11569,15 +11569,15 @@ end
 -- Trigger: Race nightelf
 --===========================================================================
 function Trig_Race_nightelf_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0HL' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0HL') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_nightelf_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(6, 'ewsp', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R07L', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(6, FourCC('ewsp'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R07L'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11592,15 +11592,15 @@ end
 -- Trigger: Race Forsaken
 --===========================================================================
 function Trig_Race_Forsaken_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A155' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A155') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Forsaken_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'h0J5', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R0G3', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('h0J5'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0G3'), 1, GetOwningPlayer(GetTriggerUnit()))
     ForsakenOn()
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
@@ -11616,15 +11616,15 @@ end
 -- Trigger: Race Ogres
 --===========================================================================
 function Trig_Race_Ogres_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A17N' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A17N') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Ogres_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'o03W', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    SetPlayerTechResearchedSwap('R0HT', 1, GetOwningPlayer(GetTriggerUnit()))
+    CreateNUnitsAtLoc(5, FourCC('o03W'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    SetPlayerTechResearchedSwap(FourCC('R0HT'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveUnit(GetSpellAbilityUnit())
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11639,21 +11639,21 @@ end
 -- Trigger: Race Alliance
 --===========================================================================
 function Trig_Race_Alliance_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A02A' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A02A') ) ) then
         return false
     end
     return true
 end
 function Trig_Race_Alliance_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'hpea', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(5, FourCC('hpea'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
     ConditionalTriggerExecute(gg_trg_AllyOn)
-    SetPlayerTechResearchedSwap('R0GZ', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0HX', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0HW', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0HY', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0KK', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0GZ'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0HX'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, GetOwningPlayer(GetTriggerUnit()))
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -11667,14 +11667,14 @@ end
 -- Trigger: Race JungleTrolls
 --===========================================================================
 function Trig_Race_JungleTrolls_Conditions()
-    return GetSpellAbilityId() == 'A1DZ'
+    return GetSpellAbilityId() == FourCC('A1DZ')
 end
 function Trig_Race_JungleTrolls_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'o04Q', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(5, FourCC('o04Q'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
     --call ConditionalTriggerExecute( gg_trg_AllyOn )
-    SetPlayerTechResearchedSwap('R0IH', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0IH'), 1, GetOwningPlayer(GetTriggerUnit()))
     StartJungleTrolls()
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11689,14 +11689,14 @@ end
 -- Trigger: Race FelOrk
 --===========================================================================
 function Trig_Race_FelOrk_Conditions()
-    return GetSpellAbilityId() == 'A1JL'
+    return GetSpellAbilityId() == FourCC('A1JL')
 end
 function Trig_Race_FelOrk_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'n06B', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(5, FourCC('n06B'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
-    SetPlayerTechResearchedSwap('R0KA', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0KC', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0KA'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, GetOwningPlayer(GetTriggerUnit()))
     
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11711,14 +11711,14 @@ end
 -- Trigger: Race ForestTrolls
 --===========================================================================
 function Trig_Race_ForestTrolls_Conditions()
-    return GetSpellAbilityId() == 'A1FN'
+    return GetSpellAbilityId() == FourCC('A1FN')
 end
 function Trig_Race_ForestTrolls_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'o04V', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(5, FourCC('o04V'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
     --call ConditionalTriggerExecute( gg_trg_AllyOn )
-    SetPlayerTechResearchedSwap('R0J1', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0J1'), 1, GetOwningPlayer(GetTriggerUnit()))
     StartForestTrolls()
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11733,15 +11733,15 @@ end
 -- Trigger: Race CultOfDamned
 --===========================================================================
 function Trig_Race_CultOfDamned_Conditions()
-    return GetSpellAbilityId() == 'A1HA'
+    return GetSpellAbilityId() == FourCC('A1HA')
 end
 function Trig_Race_CultOfDamned_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(3, 'cD02', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(3, FourCC('cD02'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
     
-    SetPlayerTechResearchedSwap('R0J4', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0J5', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0J4'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, GetOwningPlayer(GetTriggerUnit()))
     CultOn()
     RemoveLocation(udg_LocalPosition2)
 end
@@ -11756,14 +11756,14 @@ end
 -- Trigger: Race Pandarens
 --===========================================================================
 function Trig_Race_Pandarens_Conditions()
-    return GetSpellAbilityId() == 'A1I6'
+    return GetSpellAbilityId() == FourCC('A1I6')
 end
 function Trig_Race_Pandarens_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'pa01', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(5, FourCC('pa01'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
     --call ConditionalTriggerExecute( gg_trg_AllyOn )
-    SetPlayerTechResearchedSwap('R0L3', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0L3'), 1, GetOwningPlayer(GetTriggerUnit()))
     --call SetPlayerTechResearchedSwap( 'R0J5', 1, GetOwningPlayer(GetTriggerUnit()) )
     Pstart(GetOwningPlayer(GetTriggerUnit()))
     RemoveLocation(udg_LocalPosition2)
@@ -11779,16 +11779,16 @@ end
 -- Trigger: Race HordeW2
 --===========================================================================
 function Trig_Race_HordeW2_Conditions()
-    return GetSpellAbilityId() == 'A1JN'
+    return GetSpellAbilityId() == FourCC('A1JN')
 end
 function Trig_Race_HordeW2_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateNUnitsAtLoc(5, 'w200', GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(5, FourCC('w200'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
     --call ConditionalTriggerExecute( gg_trg_AllyOn )
-    SetPlayerTechResearchedSwap('R0KB', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0KC', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0KD', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, GetOwningPlayer(GetTriggerUnit()))
     
     --call SetPlayerTechResearchedSwap( 'R0J5', 1, GetOwningPlayer(GetTriggerUnit()) )
     --call Pstart(GetOwningPlayer(GetTriggerUnit()))
@@ -11806,7 +11806,7 @@ end
 -- Trigger: Race Random
 --===========================================================================
 function Trig_Race_Random_Conditions()
-    return GetSpellAbilityId() == 'A12Q'
+    return GetSpellAbilityId() == FourCC('A12Q')
 end
 function incN()
     icrisingN=icrisingN + 1
@@ -11821,222 +11821,222 @@ function Trig_Race_Random_Actions()
     racechance=GetRandomInt(1, racecount)
     icrisingN=0
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'h0G9', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0H3', 1, p)
-        SetPlayerTechResearchedSwap('R0HY', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('h0G9'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0H3'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, p)
         TriggerExecute(gg_trg_StromgardOn)
     end
     
     --Драконы
     if racechance == incN() then
         
-        CreateNUnitsAtLoc(1, 'dra1', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0BY', 1, p)
+        CreateNUnitsAtLoc(1, FourCC('dra1'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, p)
         DragonsOn()
     end
     --Элементали
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'e00F', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0A2', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('e00F'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0A2'), 1, p)
         ElemOn()
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'n00V', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R07E', 1, p)
-        SetPlayerTechResearchedSwap('R0J3', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('n00V'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R07E'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0J3'), 1, p)
         TriggerExecute(gg_trg_GoblinsOn)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(8, 'e02Y', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0AO', 1, p)
+        CreateNUnitsAtLoc(8, FourCC('e02Y'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0AO'), 1, p)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'h0EI', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R07H', 1, p)
-        SetPlayerTechResearchedSwap('R0KZ', 1, p) --Illidary or Nagi
-        SetPlayerTechResearchedSwap('R0L0', 1, p) --Illidary or Blood elves
+        CreateNUnitsAtLoc(5, FourCC('h0EI'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R07H'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0KZ'), 1, p) --Illidary or Nagi
+        SetPlayerTechResearchedSwap(FourCC('R0L0'), 1, p) --Illidary or Blood elves
         ConditionalTriggerExecute(gg_trg_IllidaryOn)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'h002', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R00G', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('h002'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R00G'), 1, p)
         TriggerExecute(gg_trg_BanditsOn)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'h014', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R07B', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('h014'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R07B'), 1, p)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(3, 'u00P', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R07I', 1, p)
+        CreateNUnitsAtLoc(3, FourCC('u00P'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R07I'), 1, p)
         ConditionalTriggerExecute(gg_trg_UndeadOn)
     end
     -- Blood elves
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'h04K', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R07C', 1, p)
-        SetPlayerTechResearchedSwap('R0L0', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('h04K'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R07C'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0L0'), 1, p)
         ConditionalTriggerExecute(gg_trg_BloodElvesOn)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'opeo', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0DV', 1, p)
-        SetPlayerTechResearchedSwap('R0J3', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('opeo'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0DV'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0J3'), 1, p)
         ConditionalTriggerExecute(gg_trg_HordeOn)
     end
     --Dalaran
     if racechance == incN() then
-        CreateNUnitsAtLoc(3, 'u001', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0BW', 1, p)
-        SetPlayerTechResearchedSwap('R0KK', 1, GetOwningPlayer(GetTriggerUnit()))
+        CreateNUnitsAtLoc(3, FourCC('u001'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0BW'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, GetOwningPlayer(GetTriggerUnit()))
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'h013', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R07D', 1, p)
-        SetPlayerTechResearchedSwap('R0HX', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('h013'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R07D'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0HX'), 1, p)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'h0CJ', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R07J', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('h0CJ'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R07J'), 1, p)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'h012', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R07G', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('h012'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R07G'), 1, p)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'h0C9', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R07F', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('h0C9'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R07F'), 1, p)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'o00J', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R07K', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('o00J'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R07K'), 1, p)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(3, 'h0BE', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R07N', 1, p)
+        CreateNUnitsAtLoc(3, FourCC('h0BE'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R07N'), 1, p)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(3, 'h0BE', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R07N', 1, p)
+        CreateNUnitsAtLoc(3, FourCC('h0BE'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R07N'), 1, p)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(8, 'e01G', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0BV', 1, p)
+        CreateNUnitsAtLoc(8, FourCC('e01G'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0BV'), 1, p)
         SetPlayerAbilityAvailableBJ(true, FourCC('A1B7'), p)
         ConditionalTriggerExecute(gg_trg_SilitidsOn)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'h0FA', p, l, bj_UNIT_FACING)
-        CreateNUnitsAtLoc(1, 'h0FX', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0BX', 1, p)
-        SetPlayerTechResearchedSwap('R0HW', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('h0FA'), p, l, bj_UNIT_FACING)
+        CreateNUnitsAtLoc(1, FourCC('h0FX'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0BX'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, p)
         ConditionalTriggerExecute(gg_trg_GnomesOn)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'h0FA', p, l, bj_UNIT_FACING)
-        CreateNUnitsAtLoc(1, 'h0FX', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0BX', 1, p)
-        SetPlayerTechResearchedSwap('R0HW', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('h0FA'), p, l, bj_UNIT_FACING)
+        CreateNUnitsAtLoc(1, FourCC('h0FX'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0BX'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, p)
         ConditionalTriggerExecute(gg_trg_GnomesOn)
     end
     
     if racechance == incN() then
-        SetPlayerTechResearchedSwap('R0FX', 1, p)
-        CreateNUnitsAtLoc(5, 'h0IT', p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0FX'), 1, p)
+        CreateNUnitsAtLoc(5, FourCC('h0IT'), p, l, bj_UNIT_FACING)
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'nmpe', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0FS', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('nmpe'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0FS'), 1, p)
         --call SetPlayerTechResearchedSwap( 'R0KZ', 1, p )
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(6, 'ewsp', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0G4', 1, p)
+        CreateNUnitsAtLoc(6, FourCC('ewsp'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0G4'), 1, p)
     end
     
     --Forsaken отрекшиеся
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'h0J5', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0G3', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('h0J5'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0G3'), 1, p)
         ForsakenOn()
     end
     
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'o03W', p, l, bj_UNIT_FACING)
+        CreateNUnitsAtLoc(5, FourCC('o03W'), p, l, bj_UNIT_FACING)
     end
     --Alliance
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'hpea', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0GZ', 1, p)
-        SetPlayerTechResearchedSwap('R0HX', 1, p)
-        SetPlayerTechResearchedSwap('R0HW', 1, p)
-        SetPlayerTechResearchedSwap('R0HY', 1, p)
-        SetPlayerTechResearchedSwap('R0KK', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('hpea'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0GZ'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0HX'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, p)
     end
     
     
     
     -- Horde W2
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'w200', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0KB', 1, p)
-        SetPlayerTechResearchedSwap('R0KC', 1, p)
-        SetPlayerTechResearchedSwap('R0KD', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('w200'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, p)
         HordeW2On()
     end
     --Pandarens
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'pa01', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0L3', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('pa01'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0L3'), 1, p)
     end
     -- Cult of Damned
     if racechance == incN() then
-        CreateNUnitsAtLoc(3, 'cD02', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0J4', 1, p)
-        SetPlayerTechResearchedSwap('R0J5', 1, p)
+        CreateNUnitsAtLoc(3, FourCC('cD02'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0J4'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, p)
         CultOn()
     end
     --Forest Trolls
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'o04V', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0J1', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('o04V'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0J1'), 1, p)
         StartForestTrolls()
     end
     --FellOrc
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'n06B', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0KA', 1, p)
-        SetPlayerTechResearchedSwap('R0KC', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('n06B'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0KA'), 1, p)
+        SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
     end
     --Jungle Trolls
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'o04Q', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0IH', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('o04Q'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0IH'), 1, p)
         StartJungleTrolls()
     end
     --Ice Trolls
     if racechance == incN() then
-        CreateNUnitsAtLoc(5, 'o045', p, l, bj_UNIT_FACING)
-        SetPlayerTechResearchedSwap('R0L1', 1, p)
+        CreateNUnitsAtLoc(5, FourCC('o045'), p, l, bj_UNIT_FACING)
+        SetPlayerTechResearchedSwap(FourCC('R0L1'), 1, p)
         --call StartJungleTrolls()
     end
     RemoveLocation(l)
@@ -12052,42 +12052,42 @@ end
 -- Trigger: Page1
 --===========================================================================
 function Trig_Page1_Conditions()
-    return GetSpellAbilityId() == 'A0I1'
+    return GetSpellAbilityId() == FourCC('A0I1')
 end
 function Trig_Page1_Actions()
-    UnitAddAbilityBJ('A0HZ', GetTriggerUnit()) -- 2 c
-    UnitRemoveAbilityBJ('A0I1', GetTriggerUnit()) -- 1 c
+    UnitAddAbilityBJ(FourCC('A0HZ'), GetTriggerUnit()) -- 2 c
+    UnitRemoveAbilityBJ(FourCC('A0I1'), GetTriggerUnit()) -- 1 c
     
     
     
     
     
-    UnitAddAbilityBJ('A02A', GetTriggerUnit()) -- Альянс
-    UnitAddAbilityBJ('A0YV', GetTriggerUnit()) -- Horde
-    UnitAddAbilityBJ('A0HV', GetTriggerUnit()) -- Plet
-    UnitAddAbilityBJ('A0HL', GetTriggerUnit()) -- Night Elves
+    UnitAddAbilityBJ(FourCC('A02A'), GetTriggerUnit()) -- Альянс
+    UnitAddAbilityBJ(FourCC('A0YV'), GetTriggerUnit()) -- Horde
+    UnitAddAbilityBJ(FourCC('A0HV'), GetTriggerUnit()) -- Plet
+    UnitAddAbilityBJ(FourCC('A0HL'), GetTriggerUnit()) -- Night Elves
     
-    UnitAddAbilityBJ('A0HQ', GetTriggerUnit()) -- Blood Elves
-    UnitAddAbilityBJ('A14O', GetTriggerUnit()) -- Nags
-    UnitAddAbilityBJ('A0OK', GetTriggerUnit()) -- Illidary
-    UnitAddAbilityBJ('A0MY', GetTriggerUnit()) -- Legion
-    UnitAddAbilityBJ('A0HS', GetTriggerUnit()) -- Draeneys
-    
-    
+    UnitAddAbilityBJ(FourCC('A0HQ'), GetTriggerUnit()) -- Blood Elves
+    UnitAddAbilityBJ(FourCC('A14O'), GetTriggerUnit()) -- Nags
+    UnitAddAbilityBJ(FourCC('A0OK'), GetTriggerUnit()) -- Illidary
+    UnitAddAbilityBJ(FourCC('A0MY'), GetTriggerUnit()) -- Legion
+    UnitAddAbilityBJ(FourCC('A0HS'), GetTriggerUnit()) -- Draeneys
     
     
     
-    UnitRemoveAbilityBJ('A0QN', GetTriggerUnit()) -- Elems
-    UnitRemoveAbilityBJ('A0HT', GetTriggerUnit()) -- Nerubs
-    UnitRemoveAbilityBJ('A0QQ', GetTriggerUnit()) -- Argwinol (Ent)
-    
-    UnitRemoveAbilityBJ('A0RQ', GetTriggerUnit()) -- Dragons
-    UnitRemoveAbilityBJ('A0J7', GetTriggerUnit()) -- Ogres
-    UnitRemoveAbilityBJ('A1HA', GetTriggerUnit()) -- Cult of Damned
     
     
-    UnitRemoveAbilityBJ('A1JN', GetTriggerUnit()) -- HordeW2
-    UnitRemoveAbilityBJ('A0HW', GetTriggerUnit()) -- Faceless
+    UnitRemoveAbilityBJ(FourCC('A0QN'), GetTriggerUnit()) -- Elems
+    UnitRemoveAbilityBJ(FourCC('A0HT'), GetTriggerUnit()) -- Nerubs
+    UnitRemoveAbilityBJ(FourCC('A0QQ'), GetTriggerUnit()) -- Argwinol (Ent)
+    
+    UnitRemoveAbilityBJ(FourCC('A0RQ'), GetTriggerUnit()) -- Dragons
+    UnitRemoveAbilityBJ(FourCC('A0J7'), GetTriggerUnit()) -- Ogres
+    UnitRemoveAbilityBJ(FourCC('A1HA'), GetTriggerUnit()) -- Cult of Damned
+    
+    
+    UnitRemoveAbilityBJ(FourCC('A1JN'), GetTriggerUnit()) -- HordeW2
+    UnitRemoveAbilityBJ(FourCC('A0HW'), GetTriggerUnit()) -- Faceless
 end
 --===========================================================================
 function InitTrig_Page1()
@@ -12100,43 +12100,43 @@ end
 -- Trigger: Page2
 --===========================================================================
 function Trig_Page2_Conditions()
-    return GetSpellAbilityId() == 'A0HZ'
+    return GetSpellAbilityId() == FourCC('A0HZ')
 end
 function Trig_Page2_Actions()
     
     UnitRemoveAbilityBJ(GetSpellAbilityId(), GetTriggerUnit())
-    UnitAddAbilityBJ('A1GW', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A1GW'), GetTriggerUnit())
     
     
     
     
-    UnitAddAbilityBJ('A0HM', GetTriggerUnit()) -- Алый орден
-    UnitAddAbilityBJ('A0Y0', GetTriggerUnit()) -- Стром
-    UnitAddAbilityBJ('A1EG', GetTriggerUnit()) -- Ледяные тролли
+    UnitAddAbilityBJ(FourCC('A0HM'), GetTriggerUnit()) -- Алый орден
+    UnitAddAbilityBJ(FourCC('A0Y0'), GetTriggerUnit()) -- Стром
+    UnitAddAbilityBJ(FourCC('A1EG'), GetTriggerUnit()) -- Ледяные тролли
     
-    UnitAddAbilityBJ('A121', GetTriggerUnit()) -- Worgens
-    UnitAddAbilityBJ('A0HN', GetTriggerUnit()) -- Dalaran
-    UnitAddAbilityBJ('A1FN', GetTriggerUnit()) -- Лесные тролли
-    
-    
-    UnitAddAbilityBJ('A0HR', GetTriggerUnit()) -- Thieves
-    UnitAddAbilityBJ('A0HO', GetTriggerUnit()) -- Kultiras
-    UnitAddAbilityBJ('A1DZ', GetTriggerUnit()) -- Trolls Jungle
+    UnitAddAbilityBJ(FourCC('A121'), GetTriggerUnit()) -- Worgens
+    UnitAddAbilityBJ(FourCC('A0HN'), GetTriggerUnit()) -- Dalaran
+    UnitAddAbilityBJ(FourCC('A1FN'), GetTriggerUnit()) -- Лесные тролли
     
     
+    UnitAddAbilityBJ(FourCC('A0HR'), GetTriggerUnit()) -- Thieves
+    UnitAddAbilityBJ(FourCC('A0HO'), GetTriggerUnit()) -- Kultiras
+    UnitAddAbilityBJ(FourCC('A1DZ'), GetTriggerUnit()) -- Trolls Jungle
     
     
     
-    UnitRemoveAbilityBJ('A02A', GetTriggerUnit()) -- Альянс
-    UnitRemoveAbilityBJ('A0YV', GetTriggerUnit()) -- Horde
-    UnitRemoveAbilityBJ('A0HV', GetTriggerUnit()) -- Plet
-    UnitRemoveAbilityBJ('A0HL', GetTriggerUnit()) -- Night Elves
     
-    UnitRemoveAbilityBJ('A0HQ', GetTriggerUnit()) -- Blood Elves
-    UnitRemoveAbilityBJ('A14O', GetTriggerUnit()) -- Nags
-    UnitRemoveAbilityBJ('A0OK', GetTriggerUnit()) -- Illidary
-    UnitRemoveAbilityBJ('A0MY', GetTriggerUnit()) -- Legion
-    UnitRemoveAbilityBJ('A0HS', GetTriggerUnit()) -- Draeneys
+    
+    UnitRemoveAbilityBJ(FourCC('A02A'), GetTriggerUnit()) -- Альянс
+    UnitRemoveAbilityBJ(FourCC('A0YV'), GetTriggerUnit()) -- Horde
+    UnitRemoveAbilityBJ(FourCC('A0HV'), GetTriggerUnit()) -- Plet
+    UnitRemoveAbilityBJ(FourCC('A0HL'), GetTriggerUnit()) -- Night Elves
+    
+    UnitRemoveAbilityBJ(FourCC('A0HQ'), GetTriggerUnit()) -- Blood Elves
+    UnitRemoveAbilityBJ(FourCC('A14O'), GetTriggerUnit()) -- Nags
+    UnitRemoveAbilityBJ(FourCC('A0OK'), GetTriggerUnit()) -- Illidary
+    UnitRemoveAbilityBJ(FourCC('A0MY'), GetTriggerUnit()) -- Legion
+    UnitRemoveAbilityBJ(FourCC('A0HS'), GetTriggerUnit()) -- Draeneys
     
 end
 --===========================================================================
@@ -12150,7 +12150,7 @@ end
 -- Trigger: Page3
 --===========================================================================
 function Trig_Page3_Conditions()
-    return GetSpellAbilityId() == 'A1GW'
+    return GetSpellAbilityId() == FourCC('A1GW')
 end
 function Trig_Page3_Actions()
     
@@ -12164,18 +12164,18 @@ function Trig_Page3_Actions()
     
         
     
-    UnitAddAbilityBJ('A0SD', GetTriggerUnit()) -- Gnomes
-    UnitAddAbilityBJ('A0AC', GetTriggerUnit()) -- Goblins
-    UnitAddAbilityBJ('A0HU', GetTriggerUnit()) -- Nighborn
+    UnitAddAbilityBJ(FourCC('A0SD'), GetTriggerUnit()) -- Gnomes
+    UnitAddAbilityBJ(FourCC('A0AC'), GetTriggerUnit()) -- Goblins
+    UnitAddAbilityBJ(FourCC('A0HU'), GetTriggerUnit()) -- Nighborn
     
-    UnitAddAbilityBJ('A0HP', GetTriggerUnit()) -- Vryculs
-    UnitAddAbilityBJ('A17N', GetTriggerUnit()) -- Ogres
-    UnitAddAbilityBJ('A155', GetTriggerUnit()) -- Forsacen
+    UnitAddAbilityBJ(FourCC('A0HP'), GetTriggerUnit()) -- Vryculs
+    UnitAddAbilityBJ(FourCC('A17N'), GetTriggerUnit()) -- Ogres
+    UnitAddAbilityBJ(FourCC('A155'), GetTriggerUnit()) -- Forsacen
     
     
-    UnitAddAbilityBJ('A1I6', GetTriggerUnit()) -- Pandarens
-    UnitAddAbilityBJ('A0HX', GetTriggerUnit()) -- Twilig cult
-    UnitAddAbilityBJ('A1JL', GetTriggerUnit()) -- Horde of Fel
+    UnitAddAbilityBJ(FourCC('A1I6'), GetTriggerUnit()) -- Pandarens
+    UnitAddAbilityBJ(FourCC('A0HX'), GetTriggerUnit()) -- Twilig cult
+    UnitAddAbilityBJ(FourCC('A1JL'), GetTriggerUnit()) -- Horde of Fel
     
     
         
@@ -12193,22 +12193,22 @@ function Trig_Page3_Actions()
     
     
     
-    UnitRemoveAbilityBJ('A0HM', GetTriggerUnit()) -- Алый орден
-    UnitRemoveAbilityBJ('A0Y0', GetTriggerUnit()) -- Стром
-    UnitRemoveAbilityBJ('A1EG', GetTriggerUnit()) -- Ледяные тролли
+    UnitRemoveAbilityBJ(FourCC('A0HM'), GetTriggerUnit()) -- Алый орден
+    UnitRemoveAbilityBJ(FourCC('A0Y0'), GetTriggerUnit()) -- Стром
+    UnitRemoveAbilityBJ(FourCC('A1EG'), GetTriggerUnit()) -- Ледяные тролли
     
-    UnitRemoveAbilityBJ('A121', GetTriggerUnit()) -- Worgens
-    UnitRemoveAbilityBJ('A0HN', GetTriggerUnit()) -- Dalaran
-    UnitRemoveAbilityBJ('A1FN', GetTriggerUnit()) -- Лесные тролли
-    
-    
-    UnitRemoveAbilityBJ('A0HR', GetTriggerUnit()) -- Thieves
-    UnitRemoveAbilityBJ('A0HO', GetTriggerUnit()) -- Kultiras
-    UnitRemoveAbilityBJ('A1DZ', GetTriggerUnit()) -- Trolls Jungle
+    UnitRemoveAbilityBJ(FourCC('A121'), GetTriggerUnit()) -- Worgens
+    UnitRemoveAbilityBJ(FourCC('A0HN'), GetTriggerUnit()) -- Dalaran
+    UnitRemoveAbilityBJ(FourCC('A1FN'), GetTriggerUnit()) -- Лесные тролли
     
     
+    UnitRemoveAbilityBJ(FourCC('A0HR'), GetTriggerUnit()) -- Thieves
+    UnitRemoveAbilityBJ(FourCC('A0HO'), GetTriggerUnit()) -- Kultiras
+    UnitRemoveAbilityBJ(FourCC('A1DZ'), GetTriggerUnit()) -- Trolls Jungle
     
-    UnitAddAbilityBJ('A0QR', GetTriggerUnit())
+    
+    
+    UnitAddAbilityBJ(FourCC('A0QR'), GetTriggerUnit())
     UnitRemoveAbilityBJ(GetSpellAbilityId(), GetTriggerUnit())
 end
 --===========================================================================
@@ -12222,47 +12222,47 @@ end
 -- Trigger: Page4
 --===========================================================================
 function Trig_Page4_Conditions()
-    return GetSpellAbilityId() == 'A0QR'
+    return GetSpellAbilityId() == FourCC('A0QR')
 end
 function Trig_Page4_Actions()
     
     
         
     
-    UnitAddAbilityBJ('A0QN', GetTriggerUnit()) -- Elems
-    UnitAddAbilityBJ('A0HT', GetTriggerUnit()) -- Nerubs
-    UnitAddAbilityBJ('A0QQ', GetTriggerUnit()) -- Argwinol (Ent)
+    UnitAddAbilityBJ(FourCC('A0QN'), GetTriggerUnit()) -- Elems
+    UnitAddAbilityBJ(FourCC('A0HT'), GetTriggerUnit()) -- Nerubs
+    UnitAddAbilityBJ(FourCC('A0QQ'), GetTriggerUnit()) -- Argwinol (Ent)
     
-    UnitAddAbilityBJ('A0RQ', GetTriggerUnit()) -- Dragons
-    UnitAddAbilityBJ('A0J7', GetTriggerUnit()) -- Ogres
-    UnitAddAbilityBJ('A1HA', GetTriggerUnit()) -- Cult of Damned
-    
-    
-    UnitAddAbilityBJ('A1JN', GetTriggerUnit()) -- HordeW2
-    UnitAddAbilityBJ('A0HW', GetTriggerUnit()) -- Faceless
+    UnitAddAbilityBJ(FourCC('A0RQ'), GetTriggerUnit()) -- Dragons
+    UnitAddAbilityBJ(FourCC('A0J7'), GetTriggerUnit()) -- Ogres
+    UnitAddAbilityBJ(FourCC('A1HA'), GetTriggerUnit()) -- Cult of Damned
     
     
-        
-    
-    
-    UnitRemoveAbilityBJ('A0SD', GetTriggerUnit()) -- Gnomes
-    UnitRemoveAbilityBJ('A0AC', GetTriggerUnit()) -- Goblins
-    UnitRemoveAbilityBJ('A0HU', GetTriggerUnit()) -- Nighborn
-    
-    UnitRemoveAbilityBJ('A0HP', GetTriggerUnit()) -- Vryculs
-    UnitRemoveAbilityBJ('A17N', GetTriggerUnit()) -- Ogres
-    UnitRemoveAbilityBJ('A155', GetTriggerUnit()) -- Forsacen
-    
-    
-    UnitRemoveAbilityBJ('A1I6', GetTriggerUnit()) -- Pandarens
-    UnitRemoveAbilityBJ('A0HX', GetTriggerUnit()) -- Twilig cult
-    UnitRemoveAbilityBJ('A1JL', GetTriggerUnit()) -- Horde of Fel
+    UnitAddAbilityBJ(FourCC('A1JN'), GetTriggerUnit()) -- HordeW2
+    UnitAddAbilityBJ(FourCC('A0HW'), GetTriggerUnit()) -- Faceless
     
     
         
     
     
-    UnitAddAbility(GetTriggerUnit(), 'A0I1')
+    UnitRemoveAbilityBJ(FourCC('A0SD'), GetTriggerUnit()) -- Gnomes
+    UnitRemoveAbilityBJ(FourCC('A0AC'), GetTriggerUnit()) -- Goblins
+    UnitRemoveAbilityBJ(FourCC('A0HU'), GetTriggerUnit()) -- Nighborn
+    
+    UnitRemoveAbilityBJ(FourCC('A0HP'), GetTriggerUnit()) -- Vryculs
+    UnitRemoveAbilityBJ(FourCC('A17N'), GetTriggerUnit()) -- Ogres
+    UnitRemoveAbilityBJ(FourCC('A155'), GetTriggerUnit()) -- Forsacen
+    
+    
+    UnitRemoveAbilityBJ(FourCC('A1I6'), GetTriggerUnit()) -- Pandarens
+    UnitRemoveAbilityBJ(FourCC('A0HX'), GetTriggerUnit()) -- Twilig cult
+    UnitRemoveAbilityBJ(FourCC('A1JL'), GetTriggerUnit()) -- Horde of Fel
+    
+    
+        
+    
+    
+    UnitAddAbility(GetTriggerUnit(), FourCC('A0I1'))
     UnitRemoveAbility(GetTriggerUnit(), GetSpellAbilityId())
 end
 --===========================================================================
@@ -12324,7 +12324,7 @@ end
 -- Trigger: Spell Copy 2
 --===========================================================================
 function Trig_Spell_Copy_2_Conditions()
-    if ( not ( GetLearnedSkillBJ() == 'A1BR' ) ) then
+    if ( not ( GetLearnedSkillBJ() == FourCC('A1BR') ) ) then
         return false
     end
     return true
@@ -12358,18 +12358,18 @@ end
 -- Trigger: Cast
 --===========================================================================
 function Trig_Cast_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1BR' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1BR') ) ) then
         return false
     end
     return true
 end
 function Trig_Cast_Actions()
     EnableTrigger(gg_trg_Lech)
-    CreateNUnitsAtLoc(1, 'h0ML', GetOwningPlayer(udg_u), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
-    UnitAddAbilityBJ('A1BS', GetLastCreatedUnit())
+    CreateNUnitsAtLoc(1, FourCC('h0ML'), GetOwningPlayer(udg_u), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
+    UnitAddAbilityBJ(FourCC('A1BS'), GetLastCreatedUnit())
     IssueTargetOrderBJ(GetLastCreatedUnit(), "purge", GetSpellAbilityUnit())
-    UnitApplyTimedLifeBJ(1.00, 'BTLF', GetLastCreatedUnit())
-    TriggerSleepAction(( 3.00 + ( 1.00 * I2R(GetUnitAbilityLevelSwapped('A0EK', GetSpellAbilityUnit())) ) ))
+    UnitApplyTimedLifeBJ(1.00, FourCC('BTLF'), GetLastCreatedUnit())
+    TriggerSleepAction(( 3.00 + ( 1.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A0EK'), GetSpellAbilityUnit())) ) ))
     DisableTrigger(gg_trg_Lech)
 end
 --===========================================================================
@@ -12401,7 +12401,7 @@ end
 -- Trigger: DammyDeath
 --===========================================================================
 function Trig_DammyDeath_Conditions()
-    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h0ML' ) ) then
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == FourCC('h0ML') ) ) then
         return false
     end
     return true
@@ -12453,13 +12453,13 @@ end
 -- Trigger: RainbowMageDamage
 --===========================================================================
 function Trig_RainbowMageDamage_Conditions()
-    return GetInventoryIndexOfItemTypeBJ(GetEventDamageSource(), 'I01U') > 0 and GetUnitAbilityLevel(GetTriggerUnit(), 'A1LA') == 0 and BlzGetEventAttackType() == ATTACK_TYPE_NORMAL
+    return GetInventoryIndexOfItemTypeBJ(GetEventDamageSource(), FourCC('I01U')) > 0 and GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1LA')) == 0 and BlzGetEventAttackType() == ATTACK_TYPE_NORMAL
 end
 function Trig_RainbowMageDamage_Actions()
-        UnitAddAbility(GetTriggerUnit(), 'A1LA')
+        UnitAddAbility(GetTriggerUnit(), FourCC('A1LA'))
         
         UnitDamageTargetBJ(GetEventDamageSource(), GetTriggerUnit(), GetEventDamage() * 0.25, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
-        RemoveAbilityTimed(GetTriggerUnit() , 'A1LA' , 0.25)
+        RemoveAbilityTimed(GetTriggerUnit() , FourCC('A1LA') , 0.25)
 end
 --===========================================================================
 function InitTrig_RainbowMageDamage()
@@ -12472,11 +12472,11 @@ end
 -- Trigger: SomeThing
 --===========================================================================
 function Trig_SomeThing_Conditions()
-    return GetSpellAbilityId() == 'A0RZ'
+    return GetSpellAbilityId() == FourCC('A0RZ')
 end
 function Trig_SomeThing_Actions()
-    UnitAddAbilityBJ('A0S0', GetTriggerUnit())
-    RemoveAbilityTimed(GetTriggerUnit() , 'A0S0' , 25)
+    UnitAddAbilityBJ(FourCC('A0S0'), GetTriggerUnit())
+    RemoveAbilityTimed(GetTriggerUnit() , FourCC('A0S0') , 25)
 end
 --===========================================================================
 function InitTrig_SomeThing()
@@ -12489,11 +12489,11 @@ end
 -- Trigger: SomeThing2
 --===========================================================================
 function Trig_SomeThing2_Conditions()
-    return GetSpellAbilityId() == 'A0KA'
+    return GetSpellAbilityId() == FourCC('A0KA')
 end
 function Trig_SomeThing2_Actions()
-    UnitAddAbilityBJ('A0NT', GetTriggerUnit())
-    RemoveAbilityTimed(GetTriggerUnit() , 'A0NT' , 20)
+    UnitAddAbilityBJ(FourCC('A0NT'), GetTriggerUnit())
+    RemoveAbilityTimed(GetTriggerUnit() , FourCC('A0NT') , 20)
 end
 --===========================================================================
 function InitTrig_SomeThing2()
@@ -12506,16 +12506,16 @@ end
 -- Trigger: Pole astrala Elems
 --===========================================================================
 function Trig_Pole_astrala_Elems_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0OT' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0OT') ) ) then
         return false
     end
     return true
 end
 function Trig_Pole_astrala_Elems_Func003A()
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
-    UnitAddAbilityBJ('AHbn', GetLastCreatedUnit())
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
+    UnitAddAbilityBJ(FourCC('AHbn'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped('AHbn', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A0OT', GetTriggerUnit()))
+    SetUnitAbilityLevelSwapped(FourCC('AHbn'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A0OT'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
     udg_LocalUnit2=GetLastCreatedUnit()
     TriggerExecute(gg_trg_ToKill2)
@@ -12537,14 +12537,14 @@ end
 -- Trigger: ItemPoleAstrala
 --===========================================================================
 function Trig_ItemPoleAstrala_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0N9' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0N9') ) ) then
         return false
     end
     return true
 end
 function Trig_ItemPoleAstrala_Func003A()
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
-    UnitAddAbilityBJ('AHbn', GetLastCreatedUnit())
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
+    UnitAddAbilityBJ(FourCC('AHbn'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
     IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
     udg_LocalUnit2=GetLastCreatedUnit()
@@ -12567,16 +12567,16 @@ end
 -- Trigger: AntiMagic Item
 --===========================================================================
 function Trig_AntiMagic_Item_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0TB' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0TB') ) ) then
         return false
     end
     return true
 end
 function Trig_AntiMagic_Item_Func003A()
-    CreateNUnitsAtLoc(1, 'H0GB', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
-    UnitAddAbilityBJ('A0TI', GetLastCreatedUnit())
+    CreateNUnitsAtLoc(1, FourCC('H0GB'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
+    UnitAddAbilityBJ(FourCC('A0TI'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped('A0TI', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A0TB', GetTriggerUnit()))
+    SetUnitAbilityLevelSwapped(FourCC('A0TI'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A0TB'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetLastCreatedUnit(), "antimagicshell", GetEnumUnit())
     udg_LocalUnit2=GetLastCreatedUnit()
     TriggerExecute(gg_trg_ToKill2)
@@ -12605,7 +12605,7 @@ end
 -- Не ставить перезарядку скила на 0 так как будут баги
 --===========================================================================
 function Trig_Spell_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1BN' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1BN') ) ) then
         return false
     end
     return true
@@ -12617,12 +12617,12 @@ function Trig_Spell_Copy_Actions()
     udg_HisloA[0]=4
     SetPlayerAbilityAvailableBJ(false, FourCC('A1BN'), GetOwningPlayer(udg_Caster))
     SetPlayerAbilityAvailableBJ(true, FourCC('A1BM'), GetOwningPlayer(udg_Caster))
-    UnitAddAbilityBJ('A1BM', udg_Caster)
-    CreateNUnitsAtLoc(1, 'h0MJ', GetOwningPlayer(udg_Caster), PolarProjectionBJ(udg_To4kaCaster, 100.00, 0.00), bj_UNIT_FACING)
+    UnitAddAbilityBJ(FourCC('A1BM'), udg_Caster)
+    CreateNUnitsAtLoc(1, FourCC('h0MJ'), GetOwningPlayer(udg_Caster), PolarProjectionBJ(udg_To4kaCaster, 100.00, 0.00), bj_UNIT_FACING)
     udg_Dummy[0]=GetLastCreatedUnit()
-    CreateNUnitsAtLoc(1, 'h0MJ', GetOwningPlayer(udg_Caster), PolarProjectionBJ(udg_To4kaCaster, 100.00, 120.00), bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('h0MJ'), GetOwningPlayer(udg_Caster), PolarProjectionBJ(udg_To4kaCaster, 100.00, 120.00), bj_UNIT_FACING)
     udg_Dummy[1]=GetLastCreatedUnit()
-    CreateNUnitsAtLoc(1, 'h0MJ', GetOwningPlayer(udg_Caster), PolarProjectionBJ(udg_To4kaCaster, 100.00, 240.00), bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('h0MJ'), GetOwningPlayer(udg_Caster), PolarProjectionBJ(udg_To4kaCaster, 100.00, 240.00), bj_UNIT_FACING)
     udg_Dummy[2]=GetLastCreatedUnit()
     StartTimerBJ(udg_Timer, true, 0.03)
 end
@@ -12644,7 +12644,7 @@ end
 -- Не ставить перезарядку скила на 0 так как будут баги
 --===========================================================================
 function Trig_Spell_Cast_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1BM' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1BM') ) ) then
         return false
     end
     return true
@@ -12758,12 +12758,12 @@ end
 function Trig_Spell_Dvij_Func004Func007Func002Func005Func002A()
     if ( Trig_Spell_Dvij_Func004Func007Func002Func005Func002Func001C() ) then
         GroupAddUnitSimple(GetEnumUnit(), udg_Group)
-        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 100.00 * I2R(GetUnitAbilityLevelSwapped('A1BN', udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 100.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         udg_To4kaAOE=GetUnitLoc(GetEnumUnit())
-        CreateNUnitsAtLoc(1, 'h0MK', GetOwningPlayer(udg_Caster), udg_To4kaAOE, bj_UNIT_FACING)
+        CreateNUnitsAtLoc(1, FourCC('h0MK'), GetOwningPlayer(udg_Caster), udg_To4kaAOE, bj_UNIT_FACING)
         udg_Dummy[4]=GetLastCreatedUnit()
         IssueTargetOrderBJ(udg_Dummy[4], "slow", GetEnumUnit())
-        UnitApplyTimedLifeBJ(1.50, 'BTLF', udg_Dummy[4])
+        UnitApplyTimedLifeBJ(1.50, FourCC('BTLF'), udg_Dummy[4])
         udg_Dummy[4]=null
         RemoveLocation(udg_To4kaAOE)
     else
@@ -12799,12 +12799,12 @@ end
 function Trig_Spell_Dvij_Func004Func007Func004Func006Func002A()
     if ( Trig_Spell_Dvij_Func004Func007Func004Func006Func002Func001C() ) then
         GroupAddUnitSimple(GetEnumUnit(), udg_Group)
-        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped('A1BN', udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         udg_To4kaAOE=GetUnitLoc(GetEnumUnit())
-        CreateNUnitsAtLoc(1, 'h0MK', GetOwningPlayer(udg_Caster), udg_To4kaAOE, bj_UNIT_FACING)
+        CreateNUnitsAtLoc(1, FourCC('h0MK'), GetOwningPlayer(udg_Caster), udg_To4kaAOE, bj_UNIT_FACING)
         udg_Dummy[4]=GetLastCreatedUnit()
         IssueTargetOrderBJ(udg_Dummy[4], "polymorph", GetEnumUnit())
-        UnitApplyTimedLifeBJ(1.50, 'BTLF', udg_Dummy[4])
+        UnitApplyTimedLifeBJ(1.50, FourCC('BTLF'), udg_Dummy[4])
         udg_Dummy[4]=null
         RemoveLocation(udg_To4kaAOE)
     else
@@ -12840,12 +12840,12 @@ end
 function Trig_Spell_Dvij_Func004Func007Func006Func005Func002A()
     if ( Trig_Spell_Dvij_Func004Func007Func006Func005Func002Func001C() ) then
         GroupAddUnitSimple(GetEnumUnit(), udg_Group)
-        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped('A1BN', udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         udg_To4kaAOE=GetUnitLoc(GetEnumUnit())
-        CreateNUnitsAtLoc(1, 'h0MK', GetOwningPlayer(udg_Caster), udg_To4kaAOE, bj_UNIT_FACING)
+        CreateNUnitsAtLoc(1, FourCC('h0MK'), GetOwningPlayer(udg_Caster), udg_To4kaAOE, bj_UNIT_FACING)
         udg_Dummy[4]=GetLastCreatedUnit()
         IssueTargetOrderBJ(udg_Dummy[4], "curse", GetEnumUnit())
-        UnitApplyTimedLifeBJ(1.50, 'BTLF', udg_Dummy[4])
+        UnitApplyTimedLifeBJ(1.50, FourCC('BTLF'), udg_Dummy[4])
         udg_Dummy[4]=null
         RemoveLocation(udg_To4kaAOE)
     else
@@ -12995,7 +12995,7 @@ function Trig_DieDummy_Func001Func002A()
     RemoveUnit(GetEnumUnit())
 end
 function Trig_DieDummy_Func001C()
-    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h0MK' ) ) then
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == FourCC('h0MK') ) ) then
         return false
     end
     return true
@@ -13004,18 +13004,18 @@ function Trig_DieDummy_Func002Func002A()
     RemoveUnit(GetEnumUnit())
 end
 function Trig_DieDummy_Func002C()
-    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h0MJ' ) ) then
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == FourCC('h0MJ') ) ) then
         return false
     end
     return true
 end
 function Trig_DieDummy_Actions()
     if ( Trig_DieDummy_Func001C() ) then
-        ForGroupBJ(GetUnitsOfTypeIdAll('h0MK'), Trig_DieDummy_Func001Func002A)
+        ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('h0MK')), Trig_DieDummy_Func001Func002A)
     else
     end
     if ( Trig_DieDummy_Func002C() ) then
-        ForGroupBJ(GetUnitsOfTypeIdAll('h0MJ'), Trig_DieDummy_Func002Func002A)
+        ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('h0MJ')), Trig_DieDummy_Func002Func002A)
     else
     end
 end
@@ -13029,7 +13029,7 @@ end
 -- Trigger: Dammi Dead
 --===========================================================================
 function Trig_Dammi_Dead_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'H0BN' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('H0BN') ) ) then
         return false
     end
     return true
@@ -13062,7 +13062,7 @@ end
 -- Trigger: Fireball
 --===========================================================================
 function Trig_Fireball_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A043' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A043') ) ) then
         return false
     end
     return true
@@ -13086,7 +13086,7 @@ end
 -- Trigger: Fire Arrow
 --===========================================================================
 function Trig_Fire_Arrow_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A044' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A044') ) ) then
         return false
     end
     return true
@@ -13110,14 +13110,14 @@ end
 -- Trigger: Research Ot
 --===========================================================================
 function Trig_Research_Ot_Conditions()
-    if ( not ( GetResearched() == 'R00P' ) ) then
+    if ( not ( GetResearched() == FourCC('R00P') ) ) then
         return false
     end
     return true
 end
 function Trig_Research_Ot_Actions()
     udg_LocalPosition2=GetRandomLocInRect(RectFromCenterSizeBJ(GetUnitLoc(GetTriggerUnit()), 15.00, 15.00))
-    CreateNUnitsAtLoc(1, 'o00F', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('o00F'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
 end
 --===========================================================================
@@ -13134,7 +13134,7 @@ function Trig_NO_ENOTS_Func001A()
     RemoveUnit(GetEnumUnit())
 end
 function Trig_NO_ENOTS_Actions()
-    ForGroupBJ(GetUnitsOfTypeIdAll('ft02'), Trig_NO_ENOTS_Func001A)
+    ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('ft02')), Trig_NO_ENOTS_Func001A)
 end
 --===========================================================================
 function InitTrig_NO_ENOTS()
@@ -13146,19 +13146,19 @@ end
 -- Trigger: Sdelat Flagman Ot Copy
 --===========================================================================
 function Trig_Sdelat_Flagman_Ot_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A009' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A009') ) ) then
         return false
     end
     return true
 end
 function Trig_Sdelat_Flagman_Ot_Copy_Func002002()
-    return ( GetUnitAbilityLevelSwapped('A009', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('A009'), GetFilterUnit()) >= 1 )
 end
 function Trig_Sdelat_Flagman_Ot_Copy_Func005A()
-    UnitRemoveAbilityBJ('A009', GetEnumUnit())
+    UnitRemoveAbilityBJ(FourCC('A009'), GetEnumUnit())
 end
 function Trig_Sdelat_Flagman_Ot_Copy_Func019C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h06W' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h06W') ) ) then
         return false
     end
     return true
@@ -13178,10 +13178,10 @@ function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     BlzSetUnitArmor(GetTriggerUnit(), ( BlzGetUnitArmor(GetTriggerUnit()) + 5.00 ))
     BlzSetUnitMaxHP(GetTriggerUnit(), ( BlzGetUnitMaxHP(GetTriggerUnit()) * 3 ))
     BlzSetUnitRealFieldBJ(GetTriggerUnit(), UNIT_RF_HP, I2R(BlzGetUnitMaxHP(GetTriggerUnit())))
-    UnitAddAbilityBJ('A008', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A008'), GetTriggerUnit())
     GroupAddUnitSimple(GetTriggerUnit(), udg_Flagmans)
     if ( Trig_Sdelat_Flagman_Ot_Copy_Func019C() ) then
-        UnitRemoveAbilityBJ('A0LG', GetTriggerUnit())
+        UnitRemoveAbilityBJ(FourCC('A0LG'), GetTriggerUnit())
     else
     end
 end
@@ -13201,10 +13201,10 @@ function Trig_Flagman_die_Ot_Conditions()
     return IsUnitInGroup(GetTriggerUnit(), udg_Flagmans) == true
 end
 function Trig_Flagman_die_Ot_Func003002()
-    return ( GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('A001'), GetFilterUnit()) >= 1 )
 end
 function Trig_Flagman_die_Ot_Func006A()
-    UnitAddAbilityBJ('A009', GetEnumUnit())
+    UnitAddAbilityBJ(FourCC('A009'), GetEnumUnit())
 end
 function Trig_Flagman_die_Ot_Actions()
     local u= GetTriggerUnit()
@@ -13235,7 +13235,7 @@ function Trig_Ne_dam_flagman_Ot_Func002C()
     if ( not ( udg_FlagmanEst[GetConvertedPlayerId(GetOwningPlayer(GetTrainedUnit()))] == true ) ) then
         return false
     end
-    if ( not ( GetUnitAbilityLevelSwapped('A009', GetTrainedUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A009'), GetTrainedUnit()) == 1 ) ) then
         return false
     end
     return true
@@ -13247,7 +13247,7 @@ function Trig_Ne_dam_flagman_Ot_Conditions()
     return true
 end
 function Trig_Ne_dam_flagman_Ot_Actions()
-    UnitRemoveAbilityBJ('A009', GetTrainedUnit())
+    UnitRemoveAbilityBJ(FourCC('A009'), GetTrainedUnit())
 end
 --===========================================================================
 function InitTrig_Ne_dam_flagman_Ot()
@@ -13260,7 +13260,7 @@ end
 -- Trigger: Aura Flagmana Vinoslivost O
 --===========================================================================
 function Trig_Aura_Flagmana_Vinoslivost_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A00F' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A00F') ) ) then
         return false
     end
     if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
@@ -13269,8 +13269,8 @@ function Trig_Aura_Flagmana_Vinoslivost_O_Conditions()
     return true
 end
 function Trig_Aura_Flagmana_Vinoslivost_O_Actions()
-    UnitAddAbilityBJ('A007', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A008', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A007'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A008'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_Aura_Flagmana_Vinoslivost_O()
@@ -13283,7 +13283,7 @@ end
 -- Trigger: Aura Flagmana Metkost O
 --===========================================================================
 function Trig_Aura_Flagmana_Metkost_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A00E' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A00E') ) ) then
         return false
     end
     if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
@@ -13292,8 +13292,8 @@ function Trig_Aura_Flagmana_Metkost_O_Conditions()
     return true
 end
 function Trig_Aura_Flagmana_Metkost_O_Actions()
-    UnitAddAbilityBJ('A006', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A008', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A006'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A008'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_Aura_Flagmana_Metkost_O()
@@ -13306,7 +13306,7 @@ end
 -- Trigger: Aura Flagmana Stoikost O
 --===========================================================================
 function Trig_Aura_Flagmana_Stoikost_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A00C' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A00C') ) ) then
         return false
     end
     if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
@@ -13315,8 +13315,8 @@ function Trig_Aura_Flagmana_Stoikost_O_Conditions()
     return true
 end
 function Trig_Aura_Flagmana_Stoikost_O_Actions()
-    UnitAddAbilityBJ('A005', GetTriggerUnit())
-    UnitRemoveAbilityBJ('A008', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A005'), GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A008'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_Aura_Flagmana_Stoikost_O()
@@ -13479,7 +13479,7 @@ end
 -- Trigger: MassPosadka2
 --===========================================================================
 function Trig_MassPosadka2_Conditions()
-    return GetSpellAbilityId() == 'A00I'
+    return GetSpellAbilityId() == FourCC('A00I')
 end
 function Trig_MassPosadka_Copy_Func006002()
     return IsUnitSelected(GetFilterUnit(), GetOwningPlayer(GetTriggerUnit()))
@@ -13492,7 +13492,7 @@ function Trig_MassPosadka_Copy_Func008A()
     end
 end
 function Trig_MassPosadka_Copy_Func010002()
-    return GetOwningPlayer(GetFilterUnit()) == GetOwningPlayer(GetTriggerUnit()) and GetUnitAbilityLevel(GetFilterUnit(), 'A001') == 0 and IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) ~= true and GetUnitAbilityLevel(GetFilterUnit(), 'Slo3') == 0
+    return GetOwningPlayer(GetFilterUnit()) == GetOwningPlayer(GetTriggerUnit()) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A001')) == 0 and IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) ~= true and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Slo3')) == 0
 end
 function Trig_MassPosadka_Copy_Func014Func006A()
     udg_LocalUnit[15]=GetEnumUnit()
@@ -13551,7 +13551,7 @@ end
 -- Trigger: Linkor reaserch Obstel O
 --===========================================================================
 function Trig_Linkor_reaserch_Obstel_O_Conditions()
-    if ( not ( GetResearched() == 'R005' ) ) then
+    if ( not ( GetResearched() == FourCC('R005') ) ) then
         return false
     end
     return true
@@ -13560,10 +13560,10 @@ function Trig_Linkor_reaserch_Obstel_O_Func001Func002002()
     return ( 0 == 0 )
 end
 function Trig_Linkor_reaserch_Obstel_O_Func001Func004A()
-    SetUnitAbilityLevelSwapped('A00G', GetEnumUnit(), 2)
+    SetUnitAbilityLevelSwapped(FourCC('A00G'), GetEnumUnit(), 2)
 end
 function Trig_Linkor_reaserch_Obstel_O_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R005', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R005'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
@@ -13572,10 +13572,10 @@ function Trig_Linkor_reaserch_Obstel_O_Func002Func002002()
     return ( 0 == 0 )
 end
 function Trig_Linkor_reaserch_Obstel_O_Func002Func004A()
-    SetUnitAbilityLevelSwapped('A00G', GetEnumUnit(), 3)
+    SetUnitAbilityLevelSwapped(FourCC('A00G'), GetEnumUnit(), 3)
 end
 function Trig_Linkor_reaserch_Obstel_O_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R005', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R005'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
@@ -13607,7 +13607,7 @@ end
 -- Trigger: Naim Obstrel O
 --===========================================================================
 function Trig_Naim_Obstrel_O_Func001C()
-    if ( ( GetUnitAbilityLevelSwapped('A00G', GetTrainedUnit()) == 1 ) ) then
+    if ( ( GetUnitAbilityLevelSwapped(FourCC('A00G'), GetTrainedUnit()) == 1 ) ) then
         return true
     end
     return false
@@ -13619,24 +13619,24 @@ function Trig_Naim_Obstrel_O_Conditions()
     return true
 end
 function Trig_Naim_Obstrel_O_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R005', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R005'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
 end
 function Trig_Naim_Obstrel_O_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R005', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R005'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
 end
 function Trig_Naim_Obstrel_O_Actions()
     if ( Trig_Naim_Obstrel_O_Func002C() ) then
-        SetUnitAbilityLevelSwapped('A00G', GetTrainedUnit(), 2)
+        SetUnitAbilityLevelSwapped(FourCC('A00G'), GetTrainedUnit(), 2)
     else
     end
     if ( Trig_Naim_Obstrel_O_Func003C() ) then
-        SetUnitAbilityLevelSwapped('A00G', GetTrainedUnit(), 3)
+        SetUnitAbilityLevelSwapped(FourCC('A00G'), GetTrainedUnit(), 3)
     else
     end
 end
@@ -13651,7 +13651,7 @@ end
 -- Trigger: Linkor reaserch Parusa O
 --===========================================================================
 function Trig_Linkor_reaserch_Parusa_O_Conditions()
-    if ( not ( GetResearched() == 'R006' ) ) then
+    if ( not ( GetResearched() == FourCC('R006') ) ) then
         return false
     end
     return true
@@ -13660,10 +13660,10 @@ function Trig_Linkor_reaserch_Parusa_O_Func001Func002002()
     return ( 0 == 0 )
 end
 function Trig_Linkor_reaserch_Parusa_O_Func001Func004A()
-    SetUnitAbilityLevelSwapped('A00B', GetEnumUnit(), 2)
+    SetUnitAbilityLevelSwapped(FourCC('A00B'), GetEnumUnit(), 2)
 end
 function Trig_Linkor_reaserch_Parusa_O_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R006', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R006'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
@@ -13672,10 +13672,10 @@ function Trig_Linkor_reaserch_Parusa_O_Func002Func002002()
     return ( 0 == 0 )
 end
 function Trig_Linkor_reaserch_Parusa_O_Func002Func004A()
-    SetUnitAbilityLevelSwapped('A00B', GetEnumUnit(), 3)
+    SetUnitAbilityLevelSwapped(FourCC('A00B'), GetEnumUnit(), 3)
 end
 function Trig_Linkor_reaserch_Parusa_O_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R006', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R006'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
@@ -13707,7 +13707,7 @@ end
 -- Trigger: Naim Parusa O
 --===========================================================================
 function Trig_Naim_Parusa_O_Func001C()
-    if ( ( GetUnitAbilityLevelSwapped('A00B', GetTrainedUnit()) == 1 ) ) then
+    if ( ( GetUnitAbilityLevelSwapped(FourCC('A00B'), GetTrainedUnit()) == 1 ) ) then
         return true
     end
     return false
@@ -13719,24 +13719,24 @@ function Trig_Naim_Parusa_O_Conditions()
     return true
 end
 function Trig_Naim_Parusa_O_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R006', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R006'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
 end
 function Trig_Naim_Parusa_O_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R006', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R006'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
 end
 function Trig_Naim_Parusa_O_Actions()
     if ( Trig_Naim_Parusa_O_Func002C() ) then
-        SetUnitAbilityLevelSwapped('A00B', GetTrainedUnit(), 2)
+        SetUnitAbilityLevelSwapped(FourCC('A00B'), GetTrainedUnit(), 2)
     else
     end
     if ( Trig_Naim_Parusa_O_Func003C() ) then
-        SetUnitAbilityLevelSwapped('A00B', GetTrainedUnit(), 3)
+        SetUnitAbilityLevelSwapped(FourCC('A00B'), GetTrainedUnit(), 3)
     else
     end
 end
@@ -13751,7 +13751,7 @@ end
 -- Trigger: Linkor Repair O
 --===========================================================================
 function Trig_Linkor_Repair_O_Conditions()
-    if ( not ( GetResearched() == 'R007' ) ) then
+    if ( not ( GetResearched() == FourCC('R007') ) ) then
         return false
     end
     return true
@@ -13760,10 +13760,10 @@ function Trig_Linkor_Repair_O_Func001Func002002()
     return ( 0 == 0 )
 end
 function Trig_Linkor_Repair_O_Func001Func004A()
-    SetUnitAbilityLevelSwapped('A00A', GetEnumUnit(), 2)
+    SetUnitAbilityLevelSwapped(FourCC('A00A'), GetEnumUnit(), 2)
 end
 function Trig_Linkor_Repair_O_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R007', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R007'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
@@ -13772,10 +13772,10 @@ function Trig_Linkor_Repair_O_Func002Func002002()
     return ( 0 == 0 )
 end
 function Trig_Linkor_Repair_O_Func002Func004A()
-    SetUnitAbilityLevelSwapped('A00A', GetEnumUnit(), 3)
+    SetUnitAbilityLevelSwapped(FourCC('A00A'), GetEnumUnit(), 3)
 end
 function Trig_Linkor_Repair_O_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R007', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R007'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
@@ -13807,7 +13807,7 @@ end
 -- Trigger: Naim Rapair O
 --===========================================================================
 function Trig_Naim_Rapair_O_Func001C()
-    if ( ( GetUnitAbilityLevelSwapped('A00A', GetTrainedUnit()) == 1 ) ) then
+    if ( ( GetUnitAbilityLevelSwapped(FourCC('A00A'), GetTrainedUnit()) == 1 ) ) then
         return true
     end
     return false
@@ -13819,24 +13819,24 @@ function Trig_Naim_Rapair_O_Conditions()
     return true
 end
 function Trig_Naim_Rapair_O_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R007', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R007'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
 end
 function Trig_Naim_Rapair_O_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R007', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R007'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
 end
 function Trig_Naim_Rapair_O_Actions()
     if ( Trig_Naim_Rapair_O_Func002C() ) then
-        SetUnitAbilityLevelSwapped('A00A', GetTrainedUnit(), 2)
+        SetUnitAbilityLevelSwapped(FourCC('A00A'), GetTrainedUnit(), 2)
     else
     end
     if ( Trig_Naim_Rapair_O_Func003C() ) then
-        SetUnitAbilityLevelSwapped('A00A', GetTrainedUnit(), 3)
+        SetUnitAbilityLevelSwapped(FourCC('A00A'), GetTrainedUnit(), 3)
     else
     end
 end
@@ -13851,7 +13851,7 @@ end
 -- Trigger: Abordach D or Ot
 --===========================================================================
 function Trig_Abordach_D_or_Ot_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A001' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A001') ) ) then
         return false
     end
     return true
@@ -13899,14 +13899,14 @@ function Trig_Abordach_D_or_Ot_Func018Func017Func011Func004002()
     return ( 0 == 0 )
 end
 function Trig_Abordach_D_or_Ot_Func018Func017Func011Func010Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A001', GetEnumUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A001'), GetEnumUnit()) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_Abordach_D_or_Ot_Func018Func017Func011Func010A()
     if ( Trig_Abordach_D_or_Ot_Func018Func017Func011Func010Func001C() ) then
-        UnitAddAbilityBJ('A009', GetEnumUnit())
+        UnitAddAbilityBJ(FourCC('A009'), GetEnumUnit())
     else
     end
 end
@@ -13917,10 +13917,10 @@ function Trig_Abordach_D_or_Ot_Func018Func017C()
     return true
 end
 function Trig_Abordach_D_or_Ot_Func018Func021Func007Func008002()
-    return ( GetUnitAbilityLevelSwapped('A001', GetFilterUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('A001'), GetFilterUnit()) >= 1 )
 end
 function Trig_Abordach_D_or_Ot_Func018Func021Func007Func012A()
-    UnitAddAbilityBJ('A009', GetEnumUnit())
+    UnitAddAbilityBJ(FourCC('A009'), GetEnumUnit())
 end
 function Trig_Abordach_D_or_Ot_Func018Func021Func007C()
     return true
@@ -14112,12 +14112,12 @@ end
 --===========================================================================
 function Trig_MageTp_Conditions()
     local id= GetSpellAbilityId()
-    return id == 'A0IO' or id == 'A0VT' or id == 'A0Y4' or id == 'A0YK' or id == 'A0I0'
+    return id == FourCC('A0IO') or id == FourCC('A0VT') or id == FourCC('A0Y4') or id == FourCC('A0YK') or id == FourCC('A0I0')
 end
 function Trig_MageTp_Actions()
     local u= GetTriggerUnit()
-    UnitAddAbility(u, 'Avul')
-    RemoveAbilityTimed(u , 'Avul' , 1.5)
+    UnitAddAbility(u, FourCC('Avul'))
+    RemoveAbilityTimed(u , FourCC('Avul') , 1.5)
     u=null
 end
 --===========================================================================
@@ -14131,13 +14131,13 @@ end
 -- Trigger: TPrepeat
 --===========================================================================
 function Trig_TPrepeat_Conditions()
-    return GetSpellAbilityId() == 'A1IG'
+    return GetSpellAbilityId() == FourCC('A1IG')
 end
 function CommandTp()
     local t= GetExpiredTimer()
     local id= GetHandleId(t)
     local u= LoadUnitHandle(Hash, id, 0)
-    if u ~= nil and UnitAlive(u) and GetUnitAbilityLevel(u, 'A1IH') > 0 then
+    if u ~= nil and UnitAlive(u) and GetUnitAbilityLevel(u, FourCC('A1IH')) > 0 then
         IssuePointOrder(u, "darksummoning", LoadReal(Hash, id, 1), LoadReal(Hash, id, 2))
     
     
@@ -14158,11 +14158,11 @@ function Trig_TPrepeat_Actions()
     SaveReal(Hash, id, 1, GetSpellTargetX())
     SaveReal(Hash, id, 2, GetSpellTargetY())
     
-    BlzUnitHideAbility(u, 'A1IG', true)
-    RemoveAbilityTimed(u , 'A1IG' , 1)
-    UnitAddAbility(u, 'A1IH')
+    BlzUnitHideAbility(u, FourCC('A1IG'), true)
+    RemoveAbilityTimed(u , FourCC('A1IG') , 1)
+    UnitAddAbility(u, FourCC('A1IH'))
     
-    TimerStart(t, RMaxBJ(BlzGetUnitAbilityCooldownRemaining(u, 'A0IO'), 15), true, CommandTp)
+    TimerStart(t, RMaxBJ(BlzGetUnitAbilityCooldownRemaining(u, FourCC('A0IO')), 15), true, CommandTp)
     t=null
     u=null
 end
@@ -14177,13 +14177,13 @@ end
 -- Trigger: TPrepatStop
 --===========================================================================
 function Trig_TPrepatStop_Conditions()
-    return GetSpellAbilityId() == 'A1IH'
+    return GetSpellAbilityId() == FourCC('A1IH')
 end
 function Trig_TPrepatStop_Actions()
     local u= GetTriggerUnit()
-    BlzUnitHideAbility(u, 'A1IH', true)
-    RemoveAbilityTimed(u , 'A1IH' , 1)
-    UnitAddAbility(u, 'A1IG')
+    BlzUnitHideAbility(u, FourCC('A1IH'), true)
+    RemoveAbilityTimed(u , FourCC('A1IH') , 1)
+    UnitAddAbility(u, FourCC('A1IG'))
     u=null
 end
 --===========================================================================
@@ -14197,7 +14197,7 @@ end
 -- Trigger: NoTpNearCapital
 --===========================================================================
 function Trig_NoTpNearCapital_Conditions()
-    return GetSpellAbilityId() == 'A0IO'
+    return GetSpellAbilityId() == FourCC('A0IO')
 end
 function CapitalOfEnemy()
     return IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups) and IsPlayerEnemy(GetOwningPlayer(GetFilterUnit()), udg_LocalPlayer)
@@ -14259,7 +14259,7 @@ function ManabombaNuke()
     damageRadious(caster , 8 , 375.00 , destination , 5 , 160 , 0.25 , ATTACK_TYPE_CHAOS , DAMAGE_TYPE_MAGIC)
     
     
-    UnitRemoveAbility(caster, 'A0TS')
+    UnitRemoveAbility(caster, FourCC('A0TS'))
     
     
     PauseTimer(t)
@@ -14280,13 +14280,13 @@ function ManabombaMissle()
    --call BJDebugMsg("")
      
     -- Удаляю спел манабомбы
-    UnitRemoveAbility(caster, 'A0TT')
+    UnitRemoveAbility(caster, FourCC('A0TT'))
     -- Юнит кастер
-    u1=CreateUnitAtLoc(p, 'h05P', l, bj_UNIT_FACING)
+    u1=CreateUnitAtLoc(p, FourCC('h05P'), l, bj_UNIT_FACING)
     BlzSetUnitRealFieldBJ(u1, UNIT_RF_FLY_HEIGHT, GetUnitDefaultFlyHeight(caster))
-    UnitAddAbilityBJ('A0TU', u1)
+    UnitAddAbilityBJ(FourCC('A0TU'), u1)
     -- Юнит жертва
-    u2=CreateUnitAtLoc(Player(PLAYER_NEUTRAL_AGGRESSIVE), 'h0GI', destination, bj_UNIT_FACING)
+    u2=CreateUnitAtLoc(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC('h0GI'), destination, bj_UNIT_FACING)
     BlzSetUnitRealFieldBJ(u2, UNIT_RF_FLY_HEIGHT, GetUnitDefaultFlyHeight(caster))
     
     
@@ -14311,17 +14311,17 @@ end
 -- Trigger: ManabobmaStart
 --===========================================================================
 function Trig_ManabobmaStart_Conditions()
-    if ( not ( GetItemTypeId(GetManipulatedItem()) == 'I01U' ) ) then
+    if ( not ( GetItemTypeId(GetManipulatedItem()) == FourCC('I01U') ) ) then
         return false
     end
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'nzep' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('nzep') ) ) then
         return false
     end
     return true
 end
 function Trig_ManabobmaStart_Actions()
-    UnitAddAbilityBJ('A0TS', GetTriggerUnit())
-    UnitAddAbilityBJ('A0TT', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0TS'), GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0TT'), GetTriggerUnit())
     BlzSetUnitMaxHP(GetTriggerUnit(), 3000)
     SetUnitLifePercentBJ(GetTriggerUnit(), 100)
     RemoveItem(GetManipulatedItem())
@@ -14355,7 +14355,7 @@ end
 -- У условии спел каста манабомбы
 --===========================================================================
 function Trig_Manabomba2_Conditions()
-    return GetSpellAbilityId() == 'A0TS'
+    return GetSpellAbilityId() == FourCC('A0TS')
 end
 function Trig_Manabomba2_Actions()
     --call BJDebugMsg("")
@@ -14408,7 +14408,7 @@ function Trig_Portal_Connect_Func008C()
 end
 function Trig_Portal_Connect_Actions()
     if udg_Portal_SeverAbility == nil then
-    udg_Portal_SeverAbility='A0TR'
+    udg_Portal_SeverAbility=FourCC('A0TR')
     end
     -- NB
     -- Portal_portal[Portal_INDEX_CASTER] is the sister portal
@@ -14689,7 +14689,7 @@ function Trig_Portal_Periodic_Func002A()
                 ShowUnitShow(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER])
                 udg_Portal_loc3=PolarProjectionBJ(udg_Portal_loc1, GetRandomReal(0.00, udg_Portal_range[GetUnitUserData(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER])]), GetRandomDirectionDeg())
                 SetUnitPositionLoc(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], udg_Portal_loc3)
-                UnitApplyTimedLifeBJ(0.01, 'BTLF', udg_Portal_traveller)
+                UnitApplyTimedLifeBJ(0.01, FourCC('BTLF'), udg_Portal_traveller)
                 GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_teleMissiles)
                 GroupRemoveUnitSimple(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], udg_Portal_group)
                 AddSpecialEffectLocBJ(udg_Portal_loc3, udg_Portal_arrivalFX[GetUnitUserData(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER])])
@@ -14708,14 +14708,14 @@ function Trig_Portal_Periodic_Func002A()
                     SetUnitPositionLocFacingLocBJ(udg_Portal_traveller, udg_Portal_loc3, udg_Portal_loc2)
                     RemoveLocation(udg_Portal_loc3)
                 else
-                    UnitApplyTimedLifeBJ(0.01, 'BTLF', udg_Portal_traveller)
+                    UnitApplyTimedLifeBJ(0.01, FourCC('BTLF'), udg_Portal_traveller)
                 end
             end
         else
             if ( Trig_Portal_Periodic_Func002Func007Func003Func001C() ) then
                 ShowUnitShow(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER])
                 SetUnitPositionLoc(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], udg_Portal_loc1)
-                UnitApplyTimedLifeBJ(0.01, 'BTLF', udg_Portal_traveller)
+                UnitApplyTimedLifeBJ(0.01, FourCC('BTLF'), udg_Portal_traveller)
                 GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_teleMissiles)
                 GroupRemoveUnitSimple(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], udg_Portal_group)
                 AddSpecialEffectLocBJ(udg_Portal_loc1, udg_Portal_arrivalFX[udg_Portal_INDEX_TARGET])
@@ -14730,7 +14730,7 @@ function Trig_Portal_Periodic_Func002A()
             else
                 if ( Trig_Portal_Periodic_Func002Func007Func003Func001Func001C() ) then
                 else
-                    UnitApplyTimedLifeBJ(0.01, 'BTLF', udg_Portal_traveller)
+                    UnitApplyTimedLifeBJ(0.01, FourCC('BTLF'), udg_Portal_traveller)
                 end
             end
         end
@@ -15049,7 +15049,7 @@ end
 -- No Missile, No Delays
 --===========================================================================
 function Trig_Connect_Portal_2_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0TQ' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0TQ') ) ) then
         return false
     end
     return true
@@ -15131,7 +15131,7 @@ end
 -- Trigger: F2
 --===========================================================================
 function Trig_F2_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0IX' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0IX') ) ) then
         return false
     end
     return true
@@ -15155,7 +15155,7 @@ end
 -- Trigger: F2 2
 --===========================================================================
 function Trig_F2_2_Conditions()
-    return GetSpellAbilityId() == 'A167'
+    return GetSpellAbilityId() == FourCC('A167')
 end
 function Trig_F2_2_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -15208,13 +15208,13 @@ end
 -- Для того чтобы атаковали ближайшие точки
 --===========================================================================
 function Trig_F2_Attack_Point_Conditions()
-    return GetSpellAbilityId() == 'A1L0'
+    return GetSpellAbilityId() == FourCC('A1L0')
 end
 function OwnUnit()
     return GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer
 end
 function IsCityEnemy()
-    return GetUnitAbilityLevel(GetFilterUnit(), 'AHad') >= 0 and GetOwningPlayer(GetFilterUnit()) ~= udg_LocalPlayer
+    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('AHad')) >= 0 and GetOwningPlayer(GetFilterUnit()) ~= udg_LocalPlayer
 end
 function Trig_F2_Attack_Point_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -15272,7 +15272,7 @@ end
 -- Trigger: F2 Start
 --===========================================================================
 function Trig_F2_Start_Conditions()
-    if ( not ( CountLivingPlayerUnitsOfTypeId('h0GR', GetTriggerPlayer()) == 0 ) ) then
+    if ( not ( CountLivingPlayerUnitsOfTypeId(FourCC('h0GR'), GetTriggerPlayer()) == 0 ) ) then
         return false
     end
     return true
@@ -15280,7 +15280,7 @@ end
 function Trig_F2_Start_Actions()
     udg_LocalPosition2=GetRectCenter(gg_rct_HostRegion)
     ClearSelectionForPlayer(GetTriggerPlayer())
-    CreateNUnitsAtLoc(1, 'h0GR', GetTriggerPlayer(), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('h0GR'), GetTriggerPlayer(), udg_LocalPosition2, bj_UNIT_FACING)
     SelectUnitAddForPlayer(GetLastCreatedUnit(), GetTriggerPlayer())
 end
 --===========================================================================
@@ -15317,7 +15317,7 @@ end
 -- Trigger: F2 Map 2
 --===========================================================================
 function Trig_F2_Map_2_Conditions()
-    return GetSpellAbilityId() == 'A0V2'
+    return GetSpellAbilityId() == FourCC('A0V2')
 end
 --
 --function Trig_F2_Map_2_Func001002001 takes nothing returns boolean
@@ -15441,7 +15441,7 @@ end
 --endfunction
 --
 function F2_targets()
-    return GetUnitCurrentOrder(GetFilterUnit()) ~= OrderId("harvest") and not IsUnitType(GetFilterUnit(), UNIT_TYPE_PEON) and GetUnitTypeId(GetFilterUnit()) ~= 'h07A' and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer
+    return GetUnitCurrentOrder(GetFilterUnit()) ~= OrderId("harvest") and not IsUnitType(GetFilterUnit(), UNIT_TYPE_PEON) and GetUnitTypeId(GetFilterUnit()) ~= FourCC('h07A') and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer
 end
 function Trig_F2_Map_2_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
@@ -15478,7 +15478,7 @@ end
 -- Trigger: F2 AreaMidBig
 --===========================================================================
 function Trig_F2_AreaMidBig_Conditions()
-    return GetSpellAbilityId() == 'A0VK'
+    return GetSpellAbilityId() == FourCC('A0VK')
 end
 --
 --function Trig_F2_AreaMidBig_Func002002001 takes nothing returns boolean
@@ -15627,7 +15627,7 @@ end
 -- Trigger: F2 AreaMid
 --===========================================================================
 function Trig_F2_AreaMid_Conditions()
-    return GetSpellAbilityId() == 'A0V4'
+    return GetSpellAbilityId() == FourCC('A0V4')
 end
 --
 --function Trig_F2_AreaMid_Func002002001 takes nothing returns boolean
@@ -15775,7 +15775,7 @@ end
 -- Trigger: F2 AreaSmall
 --===========================================================================
 function Trig_F2_AreaSmall_Conditions()
-    return GetSpellAbilityId() == 'A0VL'
+    return GetSpellAbilityId() == FourCC('A0VL')
 end
 --
 --function Trig_F2_AreaSmall_Func002002001 takes nothing returns boolean
@@ -15953,7 +15953,7 @@ end
 -- Trigger: RemoveDammySpecial
 --===========================================================================
 function Trig_RemoveDammySpecial_Conditions()
-    return GetUnitTypeId(GetSummonedUnit()) == 'h02F'
+    return GetUnitTypeId(GetSummonedUnit()) == FourCC('h02F')
 end
 function Trig_RemoveDammySpecial_Actions()
     RemoveUnit(GetSummonedUnit())
@@ -15969,7 +15969,7 @@ end
 -- Trigger: MageTpSell
 --===========================================================================
 function Trig_MageTpSell_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h07A' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h07A') ) ) then
         return false
     end
     return true
@@ -16029,10 +16029,10 @@ end
 -- Trigger: Deathwing
 --===========================================================================
 function Trig_Deathwing_Conditions()
-    return GetUnitAbilityLevel(GetTrainedUnit(), 'A0YW') > 0
+    return GetUnitAbilityLevel(GetTrainedUnit(), FourCC('A0YW')) > 0
 end
 function Trig_Deathwing_Actions()
-    BlzStartUnitAbilityCooldown(GetTrainedUnit(), 'A0YW', 150)
+    BlzStartUnitAbilityCooldown(GetTrainedUnit(), FourCC('A0YW'), 150)
 end
 --===========================================================================
 function InitTrig_Deathwing()
@@ -16048,8 +16048,8 @@ function Trig_TrainHeroGiveItem_Conditions()
     return IsUnitType(GetTrainedUnit(), UNIT_TYPE_HERO) and not udg_HeroFirstYes[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]
 end
 function Trig_TrainHeroGiveItem_Actions()
-    UnitAddItemByIdSwapped('stwp', GetTrainedUnit())
-    UnitAddItemByIdSwapped('I015', GetTrainedUnit())
+    UnitAddItemByIdSwapped(FourCC('stwp'), GetTrainedUnit())
+    UnitAddItemByIdSwapped(FourCC('I015'), GetTrainedUnit())
     udg_HeroFirstYes[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=true
 end
 --===========================================================================
@@ -16079,13 +16079,13 @@ end
 -- Trigger: fire
 --===========================================================================
 function Trig_fire_Conditions()
-    if ( not ( GetResearched() == 'pa16' ) ) then
+    if ( not ( GetResearched() == FourCC('pa16') ) ) then
         return false
     end
     return true
 end
 function Trig_fire_Actions()
-    SetPlayerTechMaxAllowedSwap('pa47', 0, Player(0))
+    SetPlayerTechMaxAllowedSwap(FourCC('pa47'), 0, Player(0))
 end
 --===========================================================================
 function InitTrig_fire()
@@ -16098,13 +16098,13 @@ end
 -- Trigger: fire1
 --===========================================================================
 function Trig_fire1_Conditions()
-    if ( not ( GetResearched() == 'pa16' ) ) then
+    if ( not ( GetResearched() == FourCC('pa16') ) ) then
         return false
     end
     return true
 end
 function Trig_fire1_Actions()
-    SetPlayerTechMaxAllowedSwap('pa47', 1, Player(0))
+    SetPlayerTechMaxAllowedSwap(FourCC('pa47'), 1, Player(0))
 end
 --===========================================================================
 function InitTrig_fire1()
@@ -16117,13 +16117,13 @@ end
 -- Trigger: earth
 --===========================================================================
 function Trig_earth_Conditions()
-    if ( not ( GetResearched() == 'pa47' ) ) then
+    if ( not ( GetResearched() == FourCC('pa47') ) ) then
         return false
     end
     return true
 end
 function Trig_earth_Actions()
-    SetPlayerTechMaxAllowedSwap('pa16', 0, Player(0))
+    SetPlayerTechMaxAllowedSwap(FourCC('pa16'), 0, Player(0))
 end
 --===========================================================================
 function InitTrig_earth()
@@ -16136,13 +16136,13 @@ end
 -- Trigger: earth1
 --===========================================================================
 function Trig_earth1_Conditions()
-    if ( not ( GetResearched() == 'pa47' ) ) then
+    if ( not ( GetResearched() == FourCC('pa47') ) ) then
         return false
     end
     return true
 end
 function Trig_earth1_Actions()
-    SetPlayerTechMaxAllowedSwap('pa16', 1, Player(0))
+    SetPlayerTechMaxAllowedSwap(FourCC('pa16'), 1, Player(0))
 end
 --===========================================================================
 function InitTrig_earth1()
@@ -16155,13 +16155,13 @@ end
 -- Trigger: Beer
 --===========================================================================
 function Trig_Beer_Conditions()
-    if ( not ( GetResearched() == 'PA82' ) ) then
+    if ( not ( GetResearched() == FourCC('PA82') ) ) then
         return false
     end
     return true
 end
 function Trig_Beer_Actions()
-    SetPlayerTechMaxAllowedSwap('PA83', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('PA83'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Beer()
@@ -16174,13 +16174,13 @@ end
 -- Trigger: BeerFin
 --===========================================================================
 function Trig_BeerFin_Conditions()
-    if ( not ( GetResearched() == 'PA82' ) ) then
+    if ( not ( GetResearched() == FourCC('PA82') ) ) then
         return false
     end
     return true
 end
 function Trig_BeerFin_Actions()
-    SetPlayerTechMaxAllowedSwap('pa22', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('pa22'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_BeerFin()
@@ -16193,13 +16193,13 @@ end
 -- Trigger: flot2 Copy O Copy
 --===========================================================================
 function Trig_flot2_Copy_O_Copy_Conditions()
-    if ( not ( GetResearched() == 'PA82' ) ) then
+    if ( not ( GetResearched() == FourCC('PA82') ) ) then
         return false
     end
     return true
 end
 function Trig_flot2_Copy_O_Copy_Actions()
-    SetPlayerTechMaxAllowedSwap('PA83', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('PA83'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_flot2_Copy_O_Copy()
@@ -16212,13 +16212,13 @@ end
 -- Trigger: Geo
 --===========================================================================
 function Trig_Geo_Conditions()
-    if ( not ( GetResearched() == 'PA83' ) ) then
+    if ( not ( GetResearched() == FourCC('PA83') ) ) then
         return false
     end
     return true
 end
 function Trig_Geo_Actions()
-    SetPlayerTechMaxAllowedSwap('PA82', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('PA82'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Geo()
@@ -16231,13 +16231,13 @@ end
 -- Trigger: GeoFin
 --===========================================================================
 function Trig_GeoFin_Conditions()
-    if ( not ( GetResearched() == 'PA83' ) ) then
+    if ( not ( GetResearched() == FourCC('PA83') ) ) then
         return false
     end
     return true
 end
 function Trig_GeoFin_Actions()
-    SetPlayerTechMaxAllowedSwap('pa06', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('pa06'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_GeoFin()
@@ -16250,13 +16250,13 @@ end
 -- Trigger: arm2 Copy O Copy
 --===========================================================================
 function Trig_arm2_Copy_O_Copy_Conditions()
-    if ( not ( GetResearched() == 'PA83' ) ) then
+    if ( not ( GetResearched() == FourCC('PA83') ) ) then
         return false
     end
     return true
 end
 function Trig_arm2_Copy_O_Copy_Actions()
-    SetPlayerTechMaxAllowedSwap('PA82', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('PA82'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_arm2_Copy_O_Copy()
@@ -16269,7 +16269,7 @@ end
 -- Trigger: FarmBuild
 --===========================================================================
 function Trig_FarmBuild_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == 'pa26' or GetUnitTypeId(GetTriggerUnit()) == 'h0NZ'
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('pa26') or GetUnitTypeId(GetTriggerUnit()) == FourCC('h0NZ')
 end
 function Trig_FarmBuild_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -16289,7 +16289,7 @@ end
 -- Trigger: FarmLose
 --===========================================================================
 function Trig_FarmLose_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == 'pa26' or GetUnitTypeId(GetTriggerUnit()) == 'h0NZ'
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('pa26') or GetUnitTypeId(GetTriggerUnit()) == FourCC('h0NZ')
 end
 function Trig_FarmLose_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -16310,11 +16310,11 @@ end
 -- Trigger: Provocation
 --===========================================================================
 function Trig_Provocation_Conditions()
-    return GetSpellAbilityId() == 'PA78'
+    return GetSpellAbilityId() == FourCC('PA78')
 end
 function Trig_Provocation_Actions()
-    UnitAddAbility(GetTriggerUnit(), 'A1OH')
-    RemoveAbilityTimed(GetTriggerUnit() , 'A1OH' , 7)
+    UnitAddAbility(GetTriggerUnit(), FourCC('A1OH'))
+    RemoveAbilityTimed(GetTriggerUnit() , FourCC('A1OH') , 7)
 end
 --===========================================================================
 function InitTrig_Provocation()
@@ -16327,7 +16327,7 @@ end
 -- Trigger: PUnitTrained
 --===========================================================================
 function Trig_PUnitTrained_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'A1I7') > 0
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1I7')) > 0
 end
 function Trig_PUnitTrained_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -16337,7 +16337,7 @@ function Trig_PUnitTrained_Actions()
     if Random(count , 200) then
         BlzSetUnitMaxHP(u, R2I(BlzGetUnitMaxHP(u) * 1.2))
         SetUnitLifePercentBJ(u, 100)
-        UnitAddAbility(u, 'A1I8')
+        UnitAddAbility(u, FourCC('A1I8'))
     end
     u=null
 end
@@ -16352,13 +16352,13 @@ end
 -- Trigger: Anub Vozvratka
 --===========================================================================
 function Trig_Anub_Vozvratka_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A1LJ', BlzGetEventDamageTarget()) > 0 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A1LJ'), BlzGetEventDamageTarget()) > 0 ) ) then
         return false
     end
     if ( not ( GetEventDamage() >= 2.00 ) ) then
         return false
     end
-    if ( not ( GetUnitAbilityLevelSwapped('A1LJ', GetEventDamageSource()) == 0 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A1LJ'), GetEventDamageSource()) == 0 ) ) then
         return false
     end
     return true
@@ -16480,8 +16480,8 @@ function Trig_Undermining_move_hero()
             if un == null then break end
             if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) and not IsUnitInGroup(un, g) then
                 --call BJDebugMsg("")
-                UnitAddAbility(un, 'Amrf')
-                UnitRemoveAbility(un, 'Amrf')
+                UnitAddAbility(un, FourCC('Amrf'))
+                UnitRemoveAbility(un, FourCC('Amrf'))
                 t1=CreateTimer()
                 h1=GetHandleId(t1)
                 SaveUnitHandle(Hash, h1, 1, GT)
@@ -16557,10 +16557,10 @@ end
 -- Trigger: PassiveAdal
 --===========================================================================
 function Trig_PassiveAdal_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'B084') > 0 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetEventDamage() >= GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) --Её бафф
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B084')) > 0 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetEventDamage() >= GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) --Её бафф
 end
 function Adal()
-    return GetUnitAbilityLevel(GetFilterUnit(), 'A1L6') > 0 --Абилка
+    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1L6')) > 0 --Абилка
 end
 function Trig_PassiveAdal_Actions()
     local g= CreateGroup()
@@ -16568,7 +16568,7 @@ function Trig_PassiveAdal_Actions()
     local u2
     GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 500, Condition(Adal), 1)
     u2=FirstOfGroup(g)
-    if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, 'A1L6') > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --Абилка
+    if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1L6')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --Абилка
         SetUnitManaBJ(u2, GetUnitState(u2, UNIT_STATE_MANA) - 50)
         SetUnitLifePercentBJ(u, 50)
         RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanResurrectResurrectTarget.mdl", GetUnitX(u), GetUnitY(u)) , 3)
@@ -16592,7 +16592,7 @@ end
 -- Default melee game initialization for all players
 --===========================================================================
 function Trig_ADall_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1L1' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1L1') ) ) then
         return false
     end
     return true
@@ -16611,23 +16611,23 @@ end
 -- Trigger: Rexan
 --===========================================================================
 function Trig_Rexan_Conditions()
-    if ( not ( GetLearnedSkillBJ() == 'A1NW' ) ) then
+    if ( not ( GetLearnedSkillBJ() == FourCC('A1NW') ) ) then
         return false
     end
     return true
 end
 function Trig_Rexan_Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A1NW', GetTriggerUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A1NW'), GetTriggerUnit()) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_Rexan_Actions()
     if ( Trig_Rexan_Func001C() ) then
-        UnitAddAbilityBJ('A1NY', GetTriggerUnit())
-        SetUnitAbilityLevelSwapped('A1NY', GetTriggerUnit(), GetUnitAbilityLevelSwapped('A1NW', GetTriggerUnit()))
+        UnitAddAbilityBJ(FourCC('A1NY'), GetTriggerUnit())
+        SetUnitAbilityLevelSwapped(FourCC('A1NY'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('A1NW'), GetTriggerUnit()))
     else
-        SetUnitAbilityLevelSwapped('A1NY', GetTriggerUnit(), GetUnitAbilityLevelSwapped('A1NW', GetTriggerUnit()))
+        SetUnitAbilityLevelSwapped(FourCC('A1NY'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('A1NW'), GetTriggerUnit()))
     end
 end
 --===========================================================================
@@ -16641,7 +16641,7 @@ end
 -- Trigger: OgresHpSpell2
 --===========================================================================
 function Trig_OgresHpSpell2_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A173', GetTriggerUnit()) == 2 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A173'), GetTriggerUnit()) == 2 ) ) then
         return false
     end
     return true
@@ -16666,32 +16666,32 @@ function Trig_OgresHpSpell2_Func001C()
 end
 function Trig_OgresHpSpell2_Actions()
     if ( Trig_OgresHpSpell2_Func001C() ) then
-        UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-        UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-        UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-        SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 3)
-        SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 3)
-        SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 3)
+        UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
+        UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+        UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+        SetUnitAbilityLevelSwapped(FourCC('A0WY'), GetTriggerUnit(), 3)
+        SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 3)
+        SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 3)
     else
         if ( Trig_OgresHpSpell2_Func001Func001C() ) then
-            UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-            UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-            UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-            SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 2)
-            SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 2)
-            SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 2)
+            UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
+            UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+            UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+            SetUnitAbilityLevelSwapped(FourCC('A0WY'), GetTriggerUnit(), 2)
+            SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 2)
+            SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 2)
         else
             if ( Trig_OgresHpSpell2_Func001Func001Func007C() ) then
-                UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-                UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-                UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-                SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 1)
-                SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 1)
-                SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 1)
+                UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
+                UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+                UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+                SetUnitAbilityLevelSwapped(FourCC('A0WY'), GetTriggerUnit(), 1)
+                SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 1)
+                SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 1)
             else
-                UnitRemoveAbilityBJ('A0WW', GetTriggerUnit())
-                UnitRemoveAbilityBJ('A0WX', GetTriggerUnit())
-                UnitRemoveAbilityBJ('A0WY', GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
             end
         end
     end
@@ -16707,7 +16707,7 @@ end
 -- Trigger: OrgesHpSpell
 --===========================================================================
 function Trig_OrgesHpSpell_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A173', GetTriggerUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A173'), GetTriggerUnit()) == 1 ) ) then
         return false
     end
     return true
@@ -16732,32 +16732,32 @@ function Trig_OrgesHpSpell_Func001C()
 end
 function Trig_OrgesHpSpell_Actions()
     if ( Trig_OrgesHpSpell_Func001C() ) then
-        UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-        UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-        UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-        SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 3)
-        SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 3)
-        SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 3)
+        UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
+        UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+        UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+        SetUnitAbilityLevelSwapped(FourCC('A0WY'), GetTriggerUnit(), 3)
+        SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 3)
+        SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 3)
     else
         if ( Trig_OrgesHpSpell_Func001Func001C() ) then
-            UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-            UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-            UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-            SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 2)
-            SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 2)
-            SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 2)
+            UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
+            UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+            UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+            SetUnitAbilityLevelSwapped(FourCC('A0WY'), GetTriggerUnit(), 2)
+            SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 2)
+            SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 2)
         else
             if ( Trig_OrgesHpSpell_Func001Func001Func007C() ) then
-                UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-                UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-                UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-                SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 1)
-                SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 1)
-                SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 1)
+                UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
+                UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+                UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+                SetUnitAbilityLevelSwapped(FourCC('A0WY'), GetTriggerUnit(), 1)
+                SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 1)
+                SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 1)
             else
-                UnitRemoveAbilityBJ('A0WW', GetTriggerUnit())
-                UnitRemoveAbilityBJ('A0WX', GetTriggerUnit())
-                UnitRemoveAbilityBJ('A0WY', GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
             end
         end
     end
@@ -16773,17 +16773,17 @@ end
 -- Trigger: Gruul
 --===========================================================================
 function Trig_Gruul_Conditions()
-    if ( not ( GetLearnedSkillBJ() == 'A18S' ) ) then
+    if ( not ( GetLearnedSkillBJ() == FourCC('A18S') ) ) then
         return false
     end
-    if ( not ( GetUnitAbilityLevelSwapped('A18S', GetTriggerUnit()) >= 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A18S'), GetTriggerUnit()) >= 1 ) ) then
         return false
     end
     return true
 end
 function Trig_Gruul_Actions()
-    UnitAddAbilityBJ('A18T', GetTriggerUnit())
-    SetUnitAbilityLevelSwapped('A18T', GetTriggerUnit(), GetUnitAbilityLevelSwapped('A18S', GetTriggerUnit()))
+    UnitAddAbilityBJ(FourCC('A18T'), GetTriggerUnit())
+    SetUnitAbilityLevelSwapped(FourCC('A18T'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('A18S'), GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Gruul()
@@ -16796,7 +16796,7 @@ end
 -- Trigger: GruulSpell
 --===========================================================================
 function Trig_GruulSpell_Conditions()
-    return GetSpellAbilityId() == 'A18Q'
+    return GetSpellAbilityId() == FourCC('A18Q')
 end
 function Trig_GruulSpell_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -16804,7 +16804,7 @@ function Trig_GruulSpell_Actions()
     EnableTrigger(gg_trg_RRR)
     
     -- Ждать время отлёта юнитов 1.10+ 0.15 каждый лвл
-    TriggerSleepAction(( 1.10 + ( 0.15 * I2R(GetUnitAbilityLevel(Gruul[pi], 'A18Q')) ) ))
+    TriggerSleepAction(( 1.10 + ( 0.15 * I2R(GetUnitAbilityLevel(Gruul[pi], FourCC('A18Q'))) ) ))
     
     
     DisableTrigger(gg_trg_RRR)
@@ -16822,30 +16822,30 @@ end
 -- Trigger: BegYel
 --===========================================================================
 function Trig_BegYel_Conditions()
-    if ( not ( GetResearched() == 'R0GH' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GH') ) ) then
         return false
     end
     return true
 end
 function Trig_BegYel_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0GF', GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0GF'), GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
         return false
     end
     return true
 end
 function Trig_BegYel_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R0GG', GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0GG'), GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
         return false
     end
     return true
 end
 function Trig_BegYel_Actions()
     if ( Trig_BegYel_Func001C() ) then
-        SetPlayerTechMaxAllowedSwap('R0GG', 0, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0GG'), 0, GetOwningPlayer(GetTriggerUnit()))
     else
     end
     if ( Trig_BegYel_Func002C() ) then
-        SetPlayerTechMaxAllowedSwap('R0GF', 0, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0GF'), 0, GetOwningPlayer(GetTriggerUnit()))
     else
     end
 end
@@ -16860,30 +16860,30 @@ end
 -- Trigger: CanYel
 --===========================================================================
 function Trig_CanYel_Conditions()
-    if ( not ( GetResearched() == 'R0GH' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GH') ) ) then
         return false
     end
     return true
 end
 function Trig_CanYel_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0GF', GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0GF'), GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
         return false
     end
     return true
 end
 function Trig_CanYel_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R0GG', GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0GG'), GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
         return false
     end
     return true
 end
 function Trig_CanYel_Actions()
     if ( Trig_CanYel_Func001C() ) then
-        SetPlayerTechMaxAllowedSwap('R0GG', 1, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0GG'), 1, GetOwningPlayer(GetTriggerUnit()))
     else
     end
     if ( Trig_CanYel_Func002C() ) then
-        SetPlayerTechMaxAllowedSwap('R0GF', 1, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0GF'), 1, GetOwningPlayer(GetTriggerUnit()))
     else
     end
 end
@@ -16898,13 +16898,13 @@ end
 -- Trigger: FinYel
 --===========================================================================
 function Trig_FinYel_Conditions()
-    if ( not ( GetResearched() == 'R0GH' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GH') ) ) then
         return false
     end
     return true
 end
 function Trig_FinYel_Actions()
-    SetPlayerTechMaxAllowedSwap('o03Q', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('o03Q'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_FinYel()
@@ -16917,30 +16917,30 @@ end
 -- Trigger: BegRed
 --===========================================================================
 function Trig_BegRed_Conditions()
-    if ( not ( GetResearched() == 'R0GG' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GG') ) ) then
         return false
     end
     return true
 end
 function Trig_BegRed_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0GF', GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0GF'), GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
         return false
     end
     return true
 end
 function Trig_BegRed_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R0GH', GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0GH'), GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
         return false
     end
     return true
 end
 function Trig_BegRed_Actions()
     if ( Trig_BegRed_Func001C() ) then
-        SetPlayerTechMaxAllowedSwap('R0GH', 0, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0GH'), 0, GetOwningPlayer(GetTriggerUnit()))
     else
     end
     if ( Trig_BegRed_Func002C() ) then
-        SetPlayerTechMaxAllowedSwap('R0GF', 0, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0GF'), 0, GetOwningPlayer(GetTriggerUnit()))
     else
     end
 end
@@ -16955,30 +16955,30 @@ end
 -- Trigger: CanRed
 --===========================================================================
 function Trig_CanRed_Conditions()
-    if ( not ( GetResearched() == 'R0GG' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GG') ) ) then
         return false
     end
     return true
 end
 function Trig_CanRed_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0GF', GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0GF'), GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
         return false
     end
     return true
 end
 function Trig_CanRed_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R0GH', GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0GH'), GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
         return false
     end
     return true
 end
 function Trig_CanRed_Actions()
     if ( Trig_CanRed_Func001C() ) then
-        SetPlayerTechMaxAllowedSwap('R0GH', 1, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0GH'), 1, GetOwningPlayer(GetTriggerUnit()))
     else
     end
     if ( Trig_CanRed_Func002C() ) then
-        SetPlayerTechMaxAllowedSwap('R0GF', 1, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0GF'), 1, GetOwningPlayer(GetTriggerUnit()))
     else
     end
 end
@@ -16993,13 +16993,13 @@ end
 -- Trigger: FinRed
 --===========================================================================
 function Trig_FinRed_Conditions()
-    if ( not ( GetResearched() == 'R0GG' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GG') ) ) then
         return false
     end
     return true
 end
 function Trig_FinRed_Actions()
-    SetPlayerTechMaxAllowedSwap('o03S', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('o03S'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_FinRed()
@@ -17012,30 +17012,30 @@ end
 -- Trigger: BegBlue
 --===========================================================================
 function Trig_BegBlue_Conditions()
-    if ( not ( GetResearched() == 'R0GF' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GF') ) ) then
         return false
     end
     return true
 end
 function Trig_BegBlue_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0GG', GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0GG'), GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
         return false
     end
     return true
 end
 function Trig_BegBlue_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R0GH', GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0GH'), GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
         return false
     end
     return true
 end
 function Trig_BegBlue_Actions()
     if ( Trig_BegBlue_Func001C() ) then
-        SetPlayerTechMaxAllowedSwap('R0GH', 0, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0GH'), 0, GetOwningPlayer(GetTriggerUnit()))
     else
     end
     if ( Trig_BegBlue_Func002C() ) then
-        SetPlayerTechMaxAllowedSwap('R0GG', 0, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0GG'), 0, GetOwningPlayer(GetTriggerUnit()))
     else
     end
 end
@@ -17050,30 +17050,30 @@ end
 -- Trigger: CanBlue
 --===========================================================================
 function Trig_CanBlue_Conditions()
-    if ( not ( GetResearched() == 'R0GF' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GF') ) ) then
         return false
     end
     return true
 end
 function Trig_CanBlue_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0GG', GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0GG'), GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
         return false
     end
     return true
 end
 function Trig_CanBlue_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R0GH', GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0GH'), GetOwningPlayer(GetTriggerUnit())) ~= 0 ) ) then
         return false
     end
     return true
 end
 function Trig_CanBlue_Actions()
     if ( Trig_CanBlue_Func001C() ) then
-        SetPlayerTechMaxAllowedSwap('R0GH', 1, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0GH'), 1, GetOwningPlayer(GetTriggerUnit()))
     else
     end
     if ( Trig_CanBlue_Func002C() ) then
-        SetPlayerTechMaxAllowedSwap('R0GG', 1, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0GG'), 1, GetOwningPlayer(GetTriggerUnit()))
     else
     end
 end
@@ -17088,13 +17088,13 @@ end
 -- Trigger: FinBlue
 --===========================================================================
 function Trig_FinBlue_Conditions()
-    if ( not ( GetResearched() == 'R0GF' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GF') ) ) then
         return false
     end
     return true
 end
 function Trig_FinBlue_Actions()
-    SetPlayerTechMaxAllowedSwap('o03R', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('o03R'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_FinBlue()
@@ -17107,14 +17107,14 @@ end
 -- Trigger: Begred
 --===========================================================================
 function Trig_Begred_Conditions()
-    if ( not ( GetResearched() == 'R0GI' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GI') ) ) then
         return false
     end
     return true
 end
 function Trig_Begred_Actions()
-    SetPlayerTechMaxAllowedSwap('R0GK', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0GJ', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GK'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GJ'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Begred()
@@ -17127,14 +17127,14 @@ end
 -- Trigger: Canred
 --===========================================================================
 function Trig_Canred_Conditions()
-    if ( not ( GetResearched() == 'R0GI' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GI') ) ) then
         return false
     end
     return true
 end
 function Trig_Canred_Actions()
-    SetPlayerTechMaxAllowedSwap('R0GJ', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0GK', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GJ'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GK'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Canred()
@@ -17147,13 +17147,13 @@ end
 -- Trigger: Finred
 --===========================================================================
 function Trig_Finred_Conditions()
-    if ( not ( GetResearched() == 'R0GI' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GI') ) ) then
         return false
     end
     return true
 end
 function Trig_Finred_Actions()
-    SetPlayerTechMaxAllowedSwap('o03V', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('o03V'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Finred()
@@ -17166,14 +17166,14 @@ end
 -- Trigger: BegWhite
 --===========================================================================
 function Trig_BegWhite_Conditions()
-    if ( not ( GetResearched() == 'R0GK' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GK') ) ) then
         return false
     end
     return true
 end
 function Trig_BegWhite_Actions()
-    SetPlayerTechMaxAllowedSwap('R0GJ', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0GI', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GJ'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GI'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_BegWhite()
@@ -17186,14 +17186,14 @@ end
 -- Trigger: CanWhite
 --===========================================================================
 function Trig_CanWhite_Conditions()
-    if ( not ( GetResearched() == 'R0GK' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GK') ) ) then
         return false
     end
     return true
 end
 function Trig_CanWhite_Actions()
-    SetPlayerTechMaxAllowedSwap('R0GI', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0GJ', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GI'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GJ'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_CanWhite()
@@ -17206,13 +17206,13 @@ end
 -- Trigger: FinWhite
 --===========================================================================
 function Trig_FinWhite_Conditions()
-    if ( not ( GetResearched() == 'R0GK' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GK') ) ) then
         return false
     end
     return true
 end
 function Trig_FinWhite_Actions()
-    SetPlayerTechMaxAllowedSwap('o03U', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('o03U'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_FinWhite()
@@ -17225,14 +17225,14 @@ end
 -- Trigger: BegBlack
 --===========================================================================
 function Trig_BegBlack_Conditions()
-    if ( not ( GetResearched() == 'R0GJ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GJ') ) ) then
         return false
     end
     return true
 end
 function Trig_BegBlack_Actions()
-    SetPlayerTechMaxAllowedSwap('R0GK', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0GI', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GK'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GI'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_BegBlack()
@@ -17245,14 +17245,14 @@ end
 -- Trigger: CanBlack
 --===========================================================================
 function Trig_CanBlack_Conditions()
-    if ( not ( GetResearched() == 'R0GJ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GJ') ) ) then
         return false
     end
     return true
 end
 function Trig_CanBlack_Actions()
-    SetPlayerTechMaxAllowedSwap('R0GI', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0GK', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GI'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GK'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_CanBlack()
@@ -17265,13 +17265,13 @@ end
 -- Trigger: FinBlack
 --===========================================================================
 function Trig_FinBlack_Conditions()
-    if ( not ( GetResearched() == 'R0GJ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GJ') ) ) then
         return false
     end
     return true
 end
 function Trig_FinBlack_Actions()
-    SetPlayerTechMaxAllowedSwap('o03T', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('o03T'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_FinBlack()
@@ -17296,12 +17296,12 @@ end
 -- by Dragonear for xgm.guru
 --===========================================================================
 function Trig_UltDanath_Conditions()
-    return GetSpellAbilityId() == 'A17S'
+    return GetSpellAbilityId() == FourCC('A17S')
 end
 function Trig_UltDanath_Actions()
     local u= GetTriggerUnit()
-    UnitAddAbility(u, 'A17T')
-    RemoveAbilityTimed(u , 'A17T' , 60)
+    UnitAddAbility(u, FourCC('A17T'))
+    RemoveAbilityTimed(u , FourCC('A17T') , 60)
     u=null
 end
 --===========================================================================
@@ -17315,23 +17315,23 @@ end
 -- Trigger: GeneralRegen
 --===========================================================================
 function Trig_GeneralRegen_Conditions()
-    if ( not ( GetLearnedSkillBJ() == 'A0Y8' ) ) then
+    if ( not ( GetLearnedSkillBJ() == FourCC('A0Y8') ) ) then
         return false
     end
     return true
 end
 function Trig_GeneralRegen_Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A0Y8', GetTriggerUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0Y8'), GetTriggerUnit()) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_GeneralRegen_Actions()
     if ( Trig_GeneralRegen_Func001C() ) then
-        UnitAddAbilityBJ('A104', GetTriggerUnit())
-        SetUnitAbilityLevelSwapped('A104', GetTriggerUnit(), GetUnitAbilityLevelSwapped('A0Y8', GetTriggerUnit()))
+        UnitAddAbilityBJ(FourCC('A104'), GetTriggerUnit())
+        SetUnitAbilityLevelSwapped(FourCC('A104'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('A0Y8'), GetTriggerUnit()))
     else
-        SetUnitAbilityLevelSwapped('A104', GetTriggerUnit(), GetUnitAbilityLevelSwapped('A0Y8', GetTriggerUnit()))
+        SetUnitAbilityLevelSwapped(FourCC('A104'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('A0Y8'), GetTriggerUnit()))
     end
 end
 --===========================================================================
@@ -17345,13 +17345,13 @@ end
 -- Trigger: Pribavka k zoloty
 --===========================================================================
 function Trig_Pribavka_k_zoloty_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0ZN' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0ZN') ) ) then
         return false
     end
     return true
 end
 function Trig_Pribavka_k_zoloty_Actions()
-    AdjustPlayerStateBJ(( 2000 * GetUnitAbilityLevelSwapped('A0ZN', GetTriggerUnit()) ), GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD)
+    AdjustPlayerStateBJ(( 2000 * GetUnitAbilityLevelSwapped(FourCC('A0ZN'), GetTriggerUnit()) ), GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD)
 end
 --===========================================================================
 function InitTrig_Pribavka_k_zoloty()
@@ -17397,13 +17397,13 @@ end
 -- Trigger: Priziv2
 --===========================================================================
 function Trig_Priziv2_Conditions()
-    if ( not ( GetResearched() == 'R0D6' ) ) then
+    if ( not ( GetResearched() == FourCC('R0D6') ) ) then
         return false
     end
     return true
 end
 function Trig_Priziv2_Actions()
-    SetPlayerTechMaxAllowedSwap('R0D5', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D5'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Priziv2()
@@ -17417,13 +17417,13 @@ end
 -- Trigger: Priziv
 --===========================================================================
 function Trig_Priziv_Conditions()
-    if ( not ( GetResearched() == 'R0D6' ) ) then
+    if ( not ( GetResearched() == FourCC('R0D6') ) ) then
         return false
     end
     return true
 end
 function Trig_Priziv_Actions()
-    SetPlayerTechMaxAllowedSwap('R0D5', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D5'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Priziv()
@@ -17438,13 +17438,13 @@ end
 -- Trigger: Professian2
 --===========================================================================
 function Trig_Professian2_Conditions()
-    if ( not ( GetResearched() == 'R0D5' ) ) then
+    if ( not ( GetResearched() == FourCC('R0D5') ) ) then
         return false
     end
     return true
 end
 function Trig_Professian2_Actions()
-    SetPlayerTechMaxAllowedSwap('R0D6', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D6'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Professian2()
@@ -17458,13 +17458,13 @@ end
 -- Trigger: Proffesian
 --===========================================================================
 function Trig_Proffesian_Conditions()
-    if ( not ( GetResearched() == 'R0D5' ) ) then
+    if ( not ( GetResearched() == FourCC('R0D5') ) ) then
         return false
     end
     return true
 end
 function Trig_Proffesian_Actions()
-    SetPlayerTechMaxAllowedSwap('R0D6', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D6'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Proffesian()
@@ -17480,7 +17480,7 @@ end
 --===========================================================================
 function Trig_MassArmy_Conditions()
     local id=GetUnitTypeId(GetTrainedUnit())
-    return GetPlayerTechCountSimple('R0D6', GetOwningPlayer(GetTriggerUnit())) == 1 and ( id == 'h0GS' or id == 'h0GV' or id == 'h0GU' or id == 'h0GW' or id == 'h0GX' or id == 'h0L3' )
+    return GetPlayerTechCountSimple(FourCC('R0D6'), GetOwningPlayer(GetTriggerUnit())) == 1 and ( id == FourCC('h0GS') or id == FourCC('h0GV') or id == FourCC('h0GU') or id == FourCC('h0GW') or id == FourCC('h0GX') or id == FourCC('h0L3') )
 end
 function Trig_MassArmy_Actions()
     local l= GetUnitLoc(GetTriggerUnit())
@@ -17505,13 +17505,13 @@ end
 -- Trigger: UpSystem
 --===========================================================================
 function Trig_UpSystem_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A0VI', GetKillingUnitBJ()) >= 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0VI'), GetKillingUnitBJ()) >= 1 ) ) then
         return false
     end
     return true
 end
 function Trig_UpSystem_Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A0VI', GetKillingUnitBJ()) >= 2 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0VI'), GetKillingUnitBJ()) >= 2 ) ) then
         return false
     end
     return true
@@ -17519,9 +17519,9 @@ end
 function Trig_UpSystem_Actions()
     if ( Trig_UpSystem_Func001C() ) then
         udg_LocalUnit2=GetKillingUnitBJ()
-        ReplaceUnit(udg_LocalUnit2 , 'h0HE' , bj_UNIT_STATE_METHOD_RELATIVE)
+        ReplaceUnit(udg_LocalUnit2 , FourCC('h0HE') , bj_UNIT_STATE_METHOD_RELATIVE)
     else
-        IncUnitAbilityLevelSwapped('A0VI', GetKillingUnitBJ())
+        IncUnitAbilityLevelSwapped(FourCC('A0VI'), GetKillingUnitBJ())
     end
 end
 --===========================================================================
@@ -17536,22 +17536,22 @@ end
 -- Trigger: ShieldUp
 --===========================================================================
 function Trig_ShieldUp_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0WG' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0WG') ) ) then
         return false
     end
     return true
 end
 function Trig_ShieldUp_Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A0WI', GetTriggerUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0WI'), GetTriggerUnit()) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_ShieldUp_Actions()
     if ( Trig_ShieldUp_Func001C() ) then
-        UnitRemoveAbilityBJ('A0WI', GetTriggerUnit())
+        UnitRemoveAbilityBJ(FourCC('A0WI'), GetTriggerUnit())
     else
-        UnitAddAbilityBJ('A0WI', GetTriggerUnit())
+        UnitAddAbilityBJ(FourCC('A0WI'), GetTriggerUnit())
     end
 end
 --===========================================================================
@@ -17566,11 +17566,11 @@ end
 -- Trigger: EnterKazna
 --===========================================================================
 function Trig_EnterKazna_Conditions()
-    return GetLearnedSkill() == 'A0XV'
+    return GetLearnedSkill() == FourCC('A0XV')
 end
 function Trig_EnterKazna_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
-    income[pi]=income[pi] + ( 100 + GetUnitAbilityLevel(GetTriggerUnit(), 'A0XV') * 100 )
+    income[pi]=income[pi] + ( 100 + GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A0XV')) * 100 )
     -- Прописывать также в главном триге экономики
 end
 --===========================================================================
@@ -17584,11 +17584,11 @@ end
 -- Trigger: ChillBonus
 --===========================================================================
 function Trig_ChillBonus_Conditions()
-    return GetUnitAbilityLevel(GetKillingUnit(), 'A1R3') > 0 and GetUnitAbilityLevel(GetKillingUnit(), 'A1R5') == 0
+    return GetUnitAbilityLevel(GetKillingUnit(), FourCC('A1R3')) > 0 and GetUnitAbilityLevel(GetKillingUnit(), FourCC('A1R5')) == 0
 end
 function Trig_ChillBonus_Actions()
-        UnitAddAbility(GetKillingUnit(), 'A1R5')
-        RemoveAbilityTimed(GetKillingUnit() , 'A1R5' , 9)
+        UnitAddAbility(GetKillingUnit(), FourCC('A1R5'))
+        RemoveAbilityTimed(GetKillingUnit() , FourCC('A1R5') , 9)
 end
 --===========================================================================
 function InitTrig_ChillBonus()
@@ -17602,16 +17602,16 @@ end
 -- Trigger: Passive
 --===========================================================================
 function Trig_Passive_Conditions()
-    if ( not ( GetLearnedSkillBJ() == 'A1CJ' ) ) then
+    if ( not ( GetLearnedSkillBJ() == FourCC('A1CJ') ) ) then
         return false
     end
     return true
 end
 function Trig_Passive_Actions()
-    UnitAddAbilityBJ('A1CI', GetTriggerUnit())
-    SetUnitAbilityLevelSwapped('A1CI', GetTriggerUnit(), GetUnitAbilityLevelSwapped('A1CJ', GetTriggerUnit()))
-    UnitAddAbilityBJ('A1CH', GetTriggerUnit())
-    SetUnitAbilityLevelSwapped('A1CH', GetTriggerUnit(), GetUnitAbilityLevelSwapped('A1CJ', GetTriggerUnit()))
+    UnitAddAbilityBJ(FourCC('A1CI'), GetTriggerUnit())
+    SetUnitAbilityLevelSwapped(FourCC('A1CI'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('A1CJ'), GetTriggerUnit()))
+    UnitAddAbilityBJ(FourCC('A1CH'), GetTriggerUnit())
+    SetUnitAbilityLevelSwapped(FourCC('A1CH'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('A1CJ'), GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Passive()
@@ -17624,7 +17624,7 @@ end
 -- Trigger: Sluga qqgsarona
 --===========================================================================
 function Trig_Sluga_qqgsarona_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A12G' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A12G') ) ) then
         return false
     end
     return true
@@ -17671,13 +17671,13 @@ end
 -- Trigger: Sila2
 --===========================================================================
 function Trig_Sila2_Conditions()
-    if ( not ( GetResearched() == 'R0F7' ) ) then
+    if ( not ( GetResearched() == FourCC('R0F7') ) ) then
         return false
     end
     return true
 end
 function Trig_Sila2_Actions()
-    SetPlayerTechMaxAllowedSwap('R0F8', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0F8'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Sila2()
@@ -17690,13 +17690,13 @@ end
 -- Trigger: Sila1
 --===========================================================================
 function Trig_Sila1_Conditions()
-    if ( not ( GetResearched() == 'R0F7' ) ) then
+    if ( not ( GetResearched() == FourCC('R0F7') ) ) then
         return false
     end
     return true
 end
 function Trig_Sila1_Actions()
-    SetPlayerTechMaxAllowedSwap('R0F8', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0F8'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Sila1()
@@ -17710,13 +17710,13 @@ end
 -- Trigger: Skorost2
 --===========================================================================
 function Trig_Skorost2_Conditions()
-    if ( not ( GetResearched() == 'R0F8' ) ) then
+    if ( not ( GetResearched() == FourCC('R0F8') ) ) then
         return false
     end
     return true
 end
 function Trig_Skorost2_Actions()
-    SetPlayerTechMaxAllowedSwap('R0F7', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0F7'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Skorost2()
@@ -17729,13 +17729,13 @@ end
 -- Trigger: Skorost1
 --===========================================================================
 function Trig_Skorost1_Conditions()
-    if ( not ( GetResearched() == 'R0F8' ) ) then
+    if ( not ( GetResearched() == FourCC('R0F8') ) ) then
         return false
     end
     return true
 end
 function Trig_Skorost1_Actions()
-    SetPlayerTechMaxAllowedSwap('R0F7', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0F7'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Skorost1()
@@ -17749,14 +17749,14 @@ end
 -- Trigger: ZdaniyaBezlik
 --===========================================================================
 function Trig_ZdaniyaBezlik_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0LK' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0LK') ) ) then
         return false
     end
     return true
 end
 function Trig_ZdaniyaBezlik_Actions()
     udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
-    CreateNUnitsAtLoc(1, 'n01T', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n01T'), GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
 end
 --===========================================================================
 function InitTrig_ZdaniyaBezlik()
@@ -17770,14 +17770,14 @@ end
 -- Trigger: ZdaniyaBezlik Copy
 --===========================================================================
 function Trig_ZdaniyaBezlik_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0LN' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0LN') ) ) then
         return false
     end
     return true
 end
 function Trig_ZdaniyaBezlik_Copy_Actions()
     udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
-    CreateNUnitsAtLoc(1, 'n01Q', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n01Q'), GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
 end
 --===========================================================================
 function InitTrig_ZdaniyaBezlik_Copy()
@@ -17791,14 +17791,14 @@ end
 -- Trigger: ZdaniyaBezlik Copy Copy
 --===========================================================================
 function Trig_ZdaniyaBezlik_Copy_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0LM' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0LM') ) ) then
         return false
     end
     return true
 end
 function Trig_ZdaniyaBezlik_Copy_Copy_Actions()
     udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
-    CreateNUnitsAtLoc(1, 'n01S', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n01S'), GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
 end
 --===========================================================================
 function InitTrig_ZdaniyaBezlik_Copy_Copy()
@@ -17812,14 +17812,14 @@ end
 -- Trigger: ZdaniyaBezlik Copy Copy 2
 --===========================================================================
 function Trig_ZdaniyaBezlik_Copy_Copy_2_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0LO' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0LO') ) ) then
         return false
     end
     return true
 end
 function Trig_ZdaniyaBezlik_Copy_Copy_2_Actions()
     udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
-    CreateNUnitsAtLoc(1, 'n01R', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n01R'), GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
 end
 --===========================================================================
 function InitTrig_ZdaniyaBezlik_Copy_Copy_2()
@@ -17833,14 +17833,14 @@ end
 -- Trigger: ZdaniyaBezlik Copy Copy 2 Copy
 --===========================================================================
 function Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0LP' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0LP') ) ) then
         return false
     end
     return true
 end
 function Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Actions()
     udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
-    CreateNUnitsAtLoc(1, 'n01U', GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n01U'), GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
 end
 --===========================================================================
 function InitTrig_ZdaniyaBezlik_Copy_Copy_2_Copy()
@@ -17854,7 +17854,7 @@ end
 -- Trigger: CreateFFarm
 --===========================================================================
 function Trig_CreateFFarm_Conditions()
-    return GetSpellAbilityId() == 'A11G'
+    return GetSpellAbilityId() == FourCC('A11G')
 end
 function Trig_CreateFFarm_Actions()
     FaselessFarmLimit(GetOwningPlayer(GetTriggerUnit()))
@@ -17870,7 +17870,7 @@ end
 -- Trigger: DeadFFarm
 --===========================================================================
 function Trig_DeadFFarm_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == 'u02E'
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('u02E')
 end
 function Trig_DeadFFarm_Actions()
     FaselessFarmLimit(GetOwningPlayer(GetTriggerUnit()))
@@ -17886,7 +17886,7 @@ end
 -- Trigger: FinishFaceBuild
 --===========================================================================
 function Trig_FinishFaceBuild_Conditions()
-    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'h0HZ' ) ) then
+    if ( not ( GetUnitTypeId(GetConstructedStructure()) == FourCC('h0HZ') ) ) then
         return false
     end
     return true
@@ -17905,7 +17905,7 @@ end
 -- Trigger: DeadFaceBuild
 --===========================================================================
 function Trig_DeadFaceBuild_Conditions()
-    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h0HZ' ) ) then
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == FourCC('h0HZ') ) ) then
         return false
     end
     return true
@@ -18022,7 +18022,7 @@ end
 -- Trigger: Spell2
 --===========================================================================
 function Trig_Spell2_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A122') == 1 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE)
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A122')) == 1 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE)
 end
 function Trig_Spell2_Actions()
     UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.014 ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
@@ -18038,13 +18038,13 @@ end
 -- Trigger: SpellRes
 --===========================================================================
 function Trig_SpellRes_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A123', GetKillingUnitBJ()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A123'), GetKillingUnitBJ()) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_SpellRes_Actions()
-    BlzEndUnitAbilityCooldown(GetKillingUnitBJ(), 'A123')
+    BlzEndUnitAbilityCooldown(GetKillingUnitBJ(), FourCC('A123'))
 end
 --===========================================================================
 function InitTrig_SpellRes()
@@ -18057,12 +18057,12 @@ end
 -- Trigger: Muscules
 --===========================================================================
 function Trig_Muscules_Conditions()
-    return GetSpellAbilityId() == 'A0QS'
+    return GetSpellAbilityId() == FourCC('A0QS')
 end
 function Trig_Muscules_Actions()
-    UnitAddAbility(GetTriggerUnit(), 'A0PQ')
+    UnitAddAbility(GetTriggerUnit(), FourCC('A0PQ'))
     TriggerSleepAction(20.00)
-    RemoveAbilityTimed(GetTriggerUnit() , 'A0PQ' , 20)
+    RemoveAbilityTimed(GetTriggerUnit() , FourCC('A0PQ') , 20)
 end
 --===========================================================================
 function InitTrig_Muscules()
@@ -18075,7 +18075,7 @@ end
 -- Trigger: BuidingThatSellRecruts
 --===========================================================================
 function Trig_BuidingThatSellRecruts_Conditions()
-    return GetUnitTypeId(GetConstructedStructure()) == 'h0NX' -- Продающее здание, равкод
+    return GetUnitTypeId(GetConstructedStructure()) == FourCC('h0NX') -- Продающее здание, равкод
 end
 function NewMember()
     
@@ -18101,9 +18101,9 @@ function Trig_BuidingThatSellRecruts_Actions()
     local id= GetHandleId(t)
     local uid= GetHandleId(u)
     local startCount= 1
-    UnitAddAbility(u, 'Asud')
-    AddUnitToStock(u, 'h0NC', startCount, 3) --Юнит который продается
-    AddUnitToStock(u, 'h0NL', startCount, 3) --Юнит который продается
+    UnitAddAbility(u, FourCC('Asud'))
+    AddUnitToStock(u, FourCC('h0NC'), startCount, 3) --Юнит который продается
+    AddUnitToStock(u, FourCC('h0NL'), startCount, 3) --Юнит который продается
     
     TimerStart(t, 30, true, NewMember)
     SaveUnitHandle(Hash, id, 1, u)
@@ -18125,18 +18125,18 @@ end
 -- Trigger: BuidingSell
 --===========================================================================
 function Trig_BuidingSell_Conditions()
-    return GetUnitTypeId(GetSellingUnit()) == 'h0NX' -- Продающее здание, равкод
+    return GetUnitTypeId(GetSellingUnit()) == FourCC('h0NX') -- Продающее здание, равкод
 end
 function Trig_BuidingSell_Actions()
     local u= GetSellingUnit()
     local uid= GetHandleId(u)
     local currentCount= LoadInteger(Hash, uid, 1)
     SaveInteger(Hash, uid, 1, currentCount - 1)
-    RemoveUnitFromStock(u, 'h0NC') --Юнит который продается
-    RemoveUnitFromStock(u, 'h0NL') --Юнит который продается
+    RemoveUnitFromStock(u, FourCC('h0NC')) --Юнит который продается
+    RemoveUnitFromStock(u, FourCC('h0NL')) --Юнит который продается
     
-    AddUnitToStock(u, 'h0NC', currentCount - 1, 3) --Юнит который продается
-    AddUnitToStock(u, 'h0NL', currentCount - 1, 3) --Юнит который продается
+    AddUnitToStock(u, FourCC('h0NC'), currentCount - 1, 3) --Юнит который продается
+    AddUnitToStock(u, FourCC('h0NL'), currentCount - 1, 3) --Юнит который продается
     
     
 end
@@ -18178,7 +18178,7 @@ end
 -- Этам 1 - проверка скила - винер тут все прыжки)))
 --================
 function Trig_JumpSTR_Conditions()
-    return GetSpellAbilityId() == 'A1E2' or GetSpellAbilityId() == 'A1FJ'
+    return GetSpellAbilityId() == FourCC('A1E2') or GetSpellAbilityId() == FourCC('A1FJ')
 end
 --================================================================================================================================================================================
 -- Этам 3 - двигаем врагов
@@ -18309,8 +18309,8 @@ function Trig_JumpSTR_Actions()
     local l= JSTRRastMT(x , x1 , y , y1)
     
     JSTRSkill=GetSpellAbilityId()
-    UnitAddAbility(GT, 'Amrf')
-    UnitRemoveAbility(GT, 'Amrf')
+    UnitAddAbility(GT, FourCC('Amrf'))
+    UnitRemoveAbility(GT, FourCC('Amrf'))
     ---------
     SaveUnitHandle(Hash, h, 1, GT)
     if l ~= 0 then
@@ -18338,7 +18338,7 @@ end
 -- Trigger: TrainW2
 --===========================================================================
 function Trig_TrainW2_Conditions()
-    return GetUnitAbilityLevel(GetTrainedUnit(), 'w2a0') > 0
+    return GetUnitAbilityLevel(GetTrainedUnit(), FourCC('w2a0')) > 0
 end
 function Trig_TrainW2_Actions()
     local u= GetTrainedUnit()
@@ -18348,7 +18348,7 @@ function Trig_TrainW2_Actions()
     SaveInteger(Hash, uh, 0, 0) --StringHash("lvl"),0)
     SaveReal(Hash, uh, 1, 0) --StringHash("xp"),0)
     
-    r=GetPlayerTechCount(p, 'w2r3', true)
+    r=GetPlayerTechCount(p, FourCC('w2r3'), true)
     if r > 0 then
         AddXp(u , 100 * r + 25 * r)
     end
@@ -18366,7 +18366,7 @@ end
 -- Trigger: DamagerW2
 --===========================================================================
 function Trig_DamagerW2_Conditions()
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'w2a0') > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('w2a0')) > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
 end
 function Trig_DamagerW2_Actions()
     local u= GetEventDamageSource()
@@ -18386,7 +18386,7 @@ end
 -- Trigger: DamageBeforeW2
 --===========================================================================
 function Trig_DamageBeforeW2_Conditions()
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'w2a0') > 0 and BlzGetEventAttackType() == ATTACK_TYPE_NORMAL
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('w2a0')) > 0 and BlzGetEventAttackType() == ATTACK_TYPE_NORMAL
 end
 function Trig_DamageBeforeW2_Actions()
     local u= GetEventDamageSource()
@@ -18418,7 +18418,7 @@ end
 -- Trigger: DamagedW2
 --===========================================================================
 function Trig_DamagedW2_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'w2a0') > 0 and IsPlayerEnemy(GetOwningPlayer(GetEventDamageSource()), GetOwningPlayer(GetTriggerUnit()))
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('w2a0')) > 0 and IsPlayerEnemy(GetOwningPlayer(GetEventDamageSource()), GetOwningPlayer(GetTriggerUnit()))
 end
 function Trig_DamagedW2_Actions()
     local u= GetTriggerUnit()
@@ -18443,10 +18443,10 @@ end
 -- Trigger: AlmostDiyW2
 --===========================================================================
 function Trig_AlmostDiyW2_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'w2a0') > 0
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('w2a0')) > 0
 end
 function FZepp()
-    return GetUnitAbilityLevel(GetFilterUnit(), 'w2a1') > 0 and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and UnitAlive(GetFilterUnit()) --and GetUnitUserData(GetFilterUnit())<6
+    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('w2a1')) > 0 and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and UnitAlive(GetFilterUnit()) --and GetUnitUserData(GetFilterUnit())<6
 end
 function Trig_AlmostDiyW2_Actions()
     local u= GetTriggerUnit()
@@ -18459,7 +18459,7 @@ function Trig_AlmostDiyW2_Actions()
     
     
     
-    if hp - Damage < 1 and Random(5 + GetPlayerTechCount(GetOwningPlayer(u), 'w2rq', true) , 10) then
+    if hp - Damage < 1 and Random(5 + GetPlayerTechCount(GetOwningPlayer(u), FourCC('w2rq'), true) , 10) then
         
         udg_LocalPlayer=GetOwningPlayer(u)
         Zepp=Condition(FZepp)
@@ -18498,7 +18498,7 @@ end
 -- Trigger: SpellW2
 --===========================================================================
 function Trig_SpellW2_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'w2a0') > 0
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('w2a0')) > 0
 end
 function Trig_SpellW2_Actions()
     AddXp(GetTriggerUnit() , 4)
@@ -18515,7 +18515,7 @@ end
 --===========================================================================
 function Trig_DiyGoblinW2_Conditions()
     --return GetUnitAbilityLevel(GetTriggerUnit(),'w2a0' ) > 0 
-    return GetUnitTypeId(GetTriggerUnit()) == 'w206'
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('w206')
 end
 function Trig_DiyGoblinW2_Actions()
     local u= GetTriggerUnit()
@@ -18542,7 +18542,7 @@ function Trig_DiyGoblinW2_Actions()
         if u2 ~= nil and UnitAlive(u2) then
                    
             RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanFlakCannonsFlakTarget.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
-            CreateUnit(p, 'w206', GetUnitX(u2), GetUnitY(u2), 0.0)
+            CreateUnit(p, FourCC('w206'), GetUnitX(u2), GetUnitY(u2), 0.0)
             AddXp(u2 , 100 * lvl + 25 * lvl)
         end
     end
@@ -18566,7 +18566,7 @@ end
 -- Для очистки мультборда
 --===========================================================================
 function Trig_DiyW2_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'w2a0') > 0
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('w2a0')) > 0
     
 end
 function deadEdly()
@@ -18607,7 +18607,7 @@ end
 -- Trigger: KillW2
 --===========================================================================
 function Trig_KillW2_Conditions()
-    return GetUnitAbilityLevel(GetKillingUnit(), 'w2a0') > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
+    return GetUnitAbilityLevel(GetKillingUnit(), FourCC('w2a0')) > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
 end
 function Trig_KillW2_Actions()
     local u= GetKillingUnit()
@@ -18628,13 +18628,13 @@ end
 -- Trigger: SummonRune
 --===========================================================================
 function Trig_SummonRune_Conditions()
-    if ( not ( GetUnitTypeId(GetSummonedUnit()) == 'w216' ) ) then
+    if ( not ( GetUnitTypeId(GetSummonedUnit()) == FourCC('w216') ) ) then
         return false
     end
     return true
 end
 function Trig_SummonRune_Actions()
-    UnitApplyTimedLifeBJ(2.00, 'BTLF', GetSummonedUnit())
+    UnitApplyTimedLifeBJ(2.00, FourCC('BTLF'), GetSummonedUnit())
 end
 --===========================================================================
 function InitTrig_SummonRune()
@@ -18648,7 +18648,7 @@ end
 -- Trigger: RuneExplode
 --===========================================================================
 function Trig_RuneExplode_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == 'w216'
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('w216')
 end
 function Trig_RuneExplode_Actions()
     local u= GetTriggerUnit()
@@ -18666,7 +18666,7 @@ end
 -- Trigger: SpellArmorDamage
 --===========================================================================
 function Trig_SpellArmorDamage_Conditions()
-    return GetSpellAbilityId() == 'w2a8'
+    return GetSpellAbilityId() == FourCC('w2a8')
 end
 function Trig_SpellArmorDamage_Actions()
     UnitDamageTargetBJ(GetTriggerUnit(), GetSpellTargetUnit(), RMinBJ(GetUnitState(GetSpellTargetUnit(), UNIT_STATE_LIFE) * 0.33, 500), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_DEATH)
@@ -18682,14 +18682,14 @@ end
 -- Trigger: SpellMassAxes
 --===========================================================================
 function Trig_SpellMassAxes_Conditions()
-    return GetSpellAbilityId() == 'w2af'
+    return GetSpellAbilityId() == FourCC('w2af')
 end
 function Trig_SpellMassAxes_Actions()
     local l= GetSpellTargetLoc()
     local caster= GetTriggerUnit()
     local p= GetOwningPlayer(caster)
     local bex
-    local dammyAbility= 'w2aa'
+    local dammyAbility= FourCC('w2aa')
     local level= GetUnitAbilityLevel(caster, GetSpellAbilityId())
     local g= CreateGroup()
     local u
@@ -18743,7 +18743,7 @@ end
 -- Trigger: SpellArrow
 --===========================================================================
 function Trig_SpellArrow_Conditions()
-    return GetSpellAbilityId() == 'w2aW' and IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)
+    return GetSpellAbilityId() == FourCC('w2aW') and IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)
 end
 function FireDark()
     
@@ -18756,8 +18756,8 @@ function FireDark()
     local loc= LoadLocationHandle(Hash, id, 4)
     local u2= CreateUnit(GetOwningPlayer(u), Dummy, GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
     SetUnitFlyHeight(u2, 100.00, 10)
-    UnitAddAbility(u2, 'w2aE')
-    SetUnitAbilityLevel(u2, 'w2aE', level)
+    UnitAddAbility(u2, FourCC('w2aE'))
+    SetUnitAbilityLevel(u2, FourCC('w2aE'), level)
     IssuePointOrderLoc(u2, "carrionswarm", loc)
     RemoveUnitTimed(u2 , 2)
     
@@ -18788,7 +18788,7 @@ function Trig_SpellArrow_Actions()
     SaveUnitHandle(Hash, id, 0, u)
     --call SaveInteger(Hash,id,1, 'w2aW')
     SaveInteger(Hash, id, 2, 0)
-    SaveInteger(Hash, id, 3, GetUnitAbilityLevel(u, 'w2aW'))
+    SaveInteger(Hash, id, 3, GetUnitAbilityLevel(u, FourCC('w2aW')))
     SaveLocationHandle(Hash, id, 4, GetSpellTargetLoc())
     t=null
     u=null
@@ -18805,10 +18805,10 @@ end
 -- Trigger: DragonHP
 --===========================================================================
 function Trig_DragonHP_Conditions()
-    return GetSpellAbilityId() == 'w294'
+    return GetSpellAbilityId() == FourCC('w294')
 end
 function Trig_DragonHP_Actions()
-    SetPlayerTechResearchedSwap('w292', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('w292'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(true, FourCC('w290'), GetOwningPlayer(GetTriggerUnit()))
     
     SetPlayerAbilityAvailableBJ(false, FourCC('w294'), GetOwningPlayer(GetTriggerUnit()))
@@ -18826,10 +18826,10 @@ end
 -- Trigger: DragonDamage
 --===========================================================================
 function Trig_DragonDamage_Conditions()
-    return GetSpellAbilityId() == 'w297'
+    return GetSpellAbilityId() == FourCC('w297')
 end
 function Trig_DragonDamage_Actions()
-    SetPlayerTechResearchedSwap('w293', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('w293'), 1, GetOwningPlayer(GetTriggerUnit()))
     --call SetPlayerAbilityAvailableBJ( true, 'w290', GetOwningPlayer(GetTriggerUnit()) )
         SetPlayerAbilityAvailableBJ(false, FourCC('w294'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('w297'), GetOwningPlayer(GetTriggerUnit()))
@@ -18846,10 +18846,10 @@ end
 -- Trigger: DragonMage
 --===========================================================================
 function Trig_DragonMage_Conditions()
-    return GetSpellAbilityId() == 'w295'
+    return GetSpellAbilityId() == FourCC('w295')
 end
 function Trig_DragonMage_Actions()
-    SetPlayerTechResearchedSwap('w291', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('w291'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(true, FourCC('w289'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(true, FourCC('w288'), GetOwningPlayer(GetTriggerUnit()))
     --call SetPlayerAbilityAvailableBJ( true, 'w290', GetOwningPlayer(GetTriggerUnit()) )
@@ -18871,7 +18871,7 @@ end
 -- Этам 1 - проверка скила - винер тут все прыжки)))
 --================
 function Trig_OgrimmCharge_Conditions()
-    return GetSpellAbilityId() == 'w2o6'
+    return GetSpellAbilityId() == FourCC('w2o6')
 end
 --================================================================================================================================================================================
 -- Этам 3 - двигаем врагов
@@ -18998,8 +18998,8 @@ function Trig_OgrimmCharge_Actions()
     local l= JSTRRastMT(x , x1 , y , y1)
     
     JSTRSkill=GetSpellAbilityId()
-    UnitAddAbility(GT, 'Amrf')
-    UnitRemoveAbility(GT, 'Amrf')
+    UnitAddAbility(GT, FourCC('Amrf'))
+    UnitRemoveAbility(GT, FourCC('Amrf'))
     ---------
     SaveUnitHandle(Hash, h, 1, GT)
     if l ~= 0 then
@@ -19027,7 +19027,7 @@ end
 -- Trigger: Duel
 --===========================================================================
 function Trig_Duel_Conditions()
-    return GetSpellAbilityId() == 'w2ou' and IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO)
+    return GetSpellAbilityId() == FourCC('w2ou') and IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO)
 end
 function Duel()
     local t= GetExpiredTimer()
@@ -19036,8 +19036,8 @@ function Duel()
     local u2= LoadUnitHandle(Hash, id, 1)
     local l1=GetUnitLoc(u)
     local l2=GetUnitLoc(u2)
-    UnitRemoveAbility(u, 'Avul')
-    UnitRemoveAbility(u2, 'Avul')
+    UnitRemoveAbility(u, FourCC('Avul'))
+    UnitRemoveAbility(u2, FourCC('Avul'))
     PauseUnit(u, true)
     PauseUnit(u2, true)
     SetUnitAnimation(u, "attack")
@@ -19051,17 +19051,17 @@ function Duel()
          UnitDamageTargetBJ(u2, u, BlzGetUnitBaseDamage(u, 1), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
     end
    
-    UnitAddAbility(u, 'Avul')
-    UnitAddAbility(u2, 'Avul')
+    UnitAddAbility(u, FourCC('Avul'))
+    UnitAddAbility(u2, FourCC('Avul'))
     if not UnitAlive(u) then
         PauseUnit(u, false)
         PauseUnit(u2, false)
         SetUnitAnimation(u, "death")
         SetUnitAnimation(u2, "stand")
-        UnitAddAbility(u2, 'w2oz')
+        UnitAddAbility(u2, FourCC('w2oz'))
         IssueImmediateOrder(u2, "howlofterror")
-            UnitRemoveAbility(u, 'Avul')
-        UnitRemoveAbility(u2, 'Avul')
+            UnitRemoveAbility(u, FourCC('Avul'))
+        UnitRemoveAbility(u2, FourCC('Avul'))
         FlushChildHashtable(Hash, id)
         PauseTimer(t)
         DestroyTimer(t)
@@ -19074,10 +19074,10 @@ function Duel()
         PauseUnit(u2, false)
         SetUnitAnimation(u, "stand")
         SetUnitAnimation(u2, "death")
-        UnitAddAbility(u, 'w2oz')
+        UnitAddAbility(u, FourCC('w2oz'))
         IssueImmediateOrder(u, "howlofterror")
-        UnitRemoveAbility(u, 'Avul')
-        UnitRemoveAbility(u2, 'Avul')
+        UnitRemoveAbility(u, FourCC('Avul'))
+        UnitRemoveAbility(u2, FourCC('Avul'))
         FlushChildHashtable(Hash, id)
         PauseTimer(t)
         DestroyTimer(t)
@@ -19092,8 +19092,8 @@ function Duel()
         SetUnitAnimation(u2, "stand")
         ResetUnitLookAt(u)
         ResetUnitLookAt(u2)
-        UnitRemoveAbility(u, 'Avul')
-        UnitRemoveAbility(u2, 'Avul')
+        UnitRemoveAbility(u, FourCC('Avul'))
+        UnitRemoveAbility(u2, FourCC('Avul'))
         FlushChildHashtable(Hash, id)
         PauseTimer(t)
         DestroyTimer(t)
@@ -19119,8 +19119,8 @@ function Trig_Duel_Actions()
     SaveUnitHandle(Hash, id, 0, u)
     SaveUnitHandle(Hash, id, 1, u2)
     
-    UnitAddAbility(u, 'Avul')
-    UnitAddAbility(u2, 'Avul')
+    UnitAddAbility(u, FourCC('Avul'))
+    UnitAddAbility(u2, FourCC('Avul'))
     
     
     --call SaveInteger(Hash,id,1, 'w2aW')
@@ -19143,7 +19143,7 @@ end
 -- Trigger: RiseDeadWorkers
 --===========================================================================
 function Trig_RiseDeadWorkers_Conditions()
-    return GetUnitTypeId(GetSummonedUnit()) == 'cD32'
+    return GetUnitTypeId(GetSummonedUnit()) == FourCC('cD32')
 end
 function Trig_RiseDeadWorkers_Actions()
     IssueImmediateOrderBJ(GetSummonedUnit(), "autoharvestlumber")
@@ -19159,12 +19159,12 @@ end
 -- Trigger: SummonCase
 --===========================================================================
 function Trig_SummonCase_Conditions()
-    return GetUnitAbilityLevel(GetSummonedUnit(), 'cDa6') ~= 0 or GetUnitAbilityLevel(GetSummonedUnit(), 'cDat') ~= 0 and GetUnitTypeId(GetSummonedUnit()) ~= 'cD32'
+    return GetUnitAbilityLevel(GetSummonedUnit(), FourCC('cDa6')) ~= 0 or GetUnitAbilityLevel(GetSummonedUnit(), FourCC('cDat')) ~= 0 and GetUnitTypeId(GetSummonedUnit()) ~= FourCC('cD32')
 end
 function Trig_SummonCase_Actions()
     local u= GetSummonedUnit()
     --call UnitRemoveTypeBJ( UNIT_TYPE_SUMMONED, GetSummonedUnit() )
-    UnitAddAbility(u, 'A1HL') --Абилка на обеспечение
+    UnitAddAbility(u, FourCC('A1HL')) --Абилка на обеспечение
     --call AddCountDis(u, GetPlayerId(GetOwningPlayer(u)))
     
     
@@ -19188,18 +19188,18 @@ end
 -- Trigger: UpgradeSkelets
 --===========================================================================
 function Trig_UpgradeSkelets_Conditions()
-    return GetResearched() == 'R0K4'
+    return GetResearched() == FourCC('R0K4')
 end
 function Trig_UpgradeSkelets_Actions()
     local p= GetOwningPlayer(GetTriggerUnit())
-    local lvl= GetPlayerTechCount(p, 'R0K4', true)
+    local lvl= GetPlayerTechCount(p, FourCC('R0K4'), true)
     
     if lvl == 1 then
-        SetPlayerTechMaxAllowed(p, 'cD19', 0)
-        SetPlayerTechMaxAllowed(p, 'cD34', - 1)
+        SetPlayerTechMaxAllowed(p, FourCC('cD19'), 0)
+        SetPlayerTechMaxAllowed(p, FourCC('cD34'), - 1)
     elseif lvl == 2 then
-        SetPlayerTechMaxAllowed(p, 'cD34', 0)
-        SetPlayerTechMaxAllowed(p, 'cD35', - 1)
+        SetPlayerTechMaxAllowed(p, FourCC('cD34'), 0)
+        SetPlayerTechMaxAllowed(p, FourCC('cD35'), - 1)
     end
     
 end
@@ -19214,10 +19214,10 @@ end
 -- Trigger: MeatDeal
 --===========================================================================
 function Trig_MeatDeal_Conditions()
-    return GetSpellAbilityId() == 'cDa5'
+    return GetSpellAbilityId() == FourCC('cDa5')
 end
 function Trig_Untitled_Trigger_003_Func001001003()
-    return GetUnitAbilityLevel(GetFilterUnit(), 'cDa6') > 0 and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and UnitAlive(GetFilterUnit())
+    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('cDa6')) > 0 and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and UnitAlive(GetFilterUnit())
 end
 function Trig_MeatDeal_Actions()
     local Boolexpr
@@ -19229,7 +19229,7 @@ function Trig_MeatDeal_Actions()
     local healthCurrent
     local id
     local p= GetOwningPlayer(caster)
-    local Efficiency= 0.5 + GetPlayerTechCount(p, 'cDR5', true) * 0.05
+    local Efficiency= 0.5 + GetPlayerTechCount(p, FourCC('cDR5'), true) * 0.05
     local count= 0
     udg_LocalPlayer=p
     Boolexpr=Condition(Trig_Untitled_Trigger_003_Func001001003)
@@ -19274,26 +19274,26 @@ function Trig_MeatDeal_Actions()
         
         
         if healthMax > 5000 then --Титан из плоти
-            if id ~= 'cD00' then
-                target=ReplaceUnit2(target , 'cD00' , bj_UNIT_STATE_METHOD_RELATIVE)
+            if id ~= FourCC('cD00') then
+                target=ReplaceUnit2(target , FourCC('cD00') , bj_UNIT_STATE_METHOD_RELATIVE)
             end
             
         
-        elseif healthMax > 2500 and id ~= 'cD09' then --Мясной голем
+        elseif healthMax > 2500 and id ~= FourCC('cD09') then --Мясной голем
             
-            if id ~= 'cD09' or id ~= 'cD14' then
+            if id ~= FourCC('cD09') or id ~= FourCC('cD14') then
                 if Random(1 , 2) then
-                    target=ReplaceUnit2(target , 'cD14' , bj_UNIT_STATE_METHOD_RELATIVE)
+                    target=ReplaceUnit2(target , FourCC('cD14') , bj_UNIT_STATE_METHOD_RELATIVE)
                 else
-                    target=ReplaceUnit2(target , 'cD09' , bj_UNIT_STATE_METHOD_RELATIVE)
+                    target=ReplaceUnit2(target , FourCC('cD09') , bj_UNIT_STATE_METHOD_RELATIVE)
                 end
                 
             end
             
-        elseif healthMax > 1000 and id ~= 'cD09' then --Поганище
+        elseif healthMax > 1000 and id ~= FourCC('cD09') then --Поганище
             
-            if id ~= 'cD10' then
-                target=ReplaceUnit2(target , 'cD10' , bj_UNIT_STATE_METHOD_RELATIVE)
+            if id ~= FourCC('cD10') then
+                target=ReplaceUnit2(target , FourCC('cD10') , bj_UNIT_STATE_METHOD_RELATIVE)
             end
         else
             
@@ -19330,10 +19330,10 @@ end
 -- Trigger: BoneDeal
 --===========================================================================
 function Trig_BoneDeal_Conditions()
-    return GetSpellAbilityId() == 'cDar'
+    return GetSpellAbilityId() == FourCC('cDar')
 end
 function BoneCheck()
-    return GetUnitAbilityLevel(GetFilterUnit(), 'cDat') > 0 and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and UnitAlive(GetFilterUnit())
+    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('cDat')) > 0 and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and UnitAlive(GetFilterUnit())
 end
 function Trig_BoneDeal_Actions()
     local Boolexpr
@@ -19345,7 +19345,7 @@ function Trig_BoneDeal_Actions()
     local healthCurrent
     local id
     local p= GetOwningPlayer(caster)
-    local Efficiency= 0.5 + GetPlayerTechCount(p, 'R0JH', true) * 0.05
+    local Efficiency= 0.5 + GetPlayerTechCount(p, FourCC('R0JH'), true) * 0.05
     local count= 0
     
     udg_LocalPlayer=p
@@ -19391,19 +19391,19 @@ function Trig_BoneDeal_Actions()
         
         
         if healthMax > 2500 then --Титан из костей
-            if id ~= 'cD23' then
-                target=ReplaceUnit2(target , 'cD23' , bj_UNIT_STATE_METHOD_RELATIVE)
+            if id ~= FourCC('cD23') then
+                target=ReplaceUnit2(target , FourCC('cD23') , bj_UNIT_STATE_METHOD_RELATIVE)
                 IssueImmediateOrder(target, "Locustswarm")
             end
             
             
-        elseif healthMax > 1250 and id ~= 'cD09' then --Страж или привратник
+        elseif healthMax > 1250 and id ~= FourCC('cD09') then --Страж или привратник
             
-            if id ~= 'cD33' or id ~= 'cD18' then
+            if id ~= FourCC('cD33') or id ~= FourCC('cD18') then
                 if Random(1 , 2) then
-                    target=ReplaceUnit2(target , 'cD18' , bj_UNIT_STATE_METHOD_RELATIVE)
+                    target=ReplaceUnit2(target , FourCC('cD18') , bj_UNIT_STATE_METHOD_RELATIVE)
                 else
-                    target=ReplaceUnit2(target , 'cD33' , bj_UNIT_STATE_METHOD_RELATIVE)
+                    target=ReplaceUnit2(target , FourCC('cD33') , bj_UNIT_STATE_METHOD_RELATIVE)
                 end
                 
             end
@@ -19440,7 +19440,7 @@ end
 -- Trigger: HealWhenRise
 --===========================================================================
 function Trig_HealWhenRise_Conditions()
-    return GetSpellAbilityId() == 'cDa2' or GetSpellAbilityId() == 'A1IK'
+    return GetSpellAbilityId() == FourCC('cDa2') or GetSpellAbilityId() == FourCC('A1IK')
 end
 function Trig_HealWhenRise_Actions()
     SetUnitLifeBJ(GetTriggerUnit(), GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) + 15)
@@ -19457,11 +19457,11 @@ end
 -- Trigger: ZombyTrain
 --===========================================================================
 function Trig_ZombyTrain_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'cD11' or GetUnitTypeId(GetTrainedUnit()) == 'cD11'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('cD11') or GetUnitTypeId(GetTrainedUnit()) == FourCC('cD11')
 end
 function Trig_ZombyTrain_Actions()
     local u= GetTrainedUnit()
-    IssueTargetOrder(CreateUnit(GetOwningPlayer(u), 'cD11', GetUnitX(u), GetUnitY(u), 0.00), "smart", u)
+    IssueTargetOrder(CreateUnit(GetOwningPlayer(u), FourCC('cD11'), GetUnitX(u), GetUnitY(u), 0.00), "smart", u)
     u=null
 end
 --===========================================================================
@@ -19475,7 +19475,7 @@ end
 -- Trigger: BuildFleCitadel
 --===========================================================================
 function Trig_BuildFleCitadel_Conditions()
-    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'cD12' ) ) then
+    if ( not ( GetUnitTypeId(GetConstructedStructure()) == FourCC('cD12') ) ) then
         return false
     end
     return true
@@ -19483,7 +19483,7 @@ end
 function Trig_BuildFleCitadel_Actions()
     IssueImmediateOrderBJ(GetConstructedStructure(), "windwalk")
     IssueImmediateOrderBJ(GetConstructedStructure(), "replenishlifeon")
-    BlzStartUnitAbilityCooldown(GetConstructedStructure(), 'A1HC', 45.00)
+    BlzStartUnitAbilityCooldown(GetConstructedStructure(), FourCC('A1HC'), 45.00)
 end
 --===========================================================================
 function InitTrig_BuildFleCitadel()
@@ -19497,12 +19497,12 @@ end
 -- Trigger: PoisonGolemDesease
 --===========================================================================
 function Trig_PoisonGolemDesease_Conditions()
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'cDay') > 0 and BlzGetEventAttackType() == ATTACK_TYPE_CHAOS --and GetUnitAbilityLevel(GetEventDamageSource(), 'cDay' )
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('cDay')) > 0 and BlzGetEventAttackType() == ATTACK_TYPE_CHAOS --and GetUnitAbilityLevel(GetEventDamageSource(), FourCC('cDay') )
 end
 function Trig_PoisonGolemDesease_Actions()
-        local u2= CreateUnit(GetOwningPlayer(GetEventDamageSource()), 'h05P', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), bj_UNIT_FACING)
+        local u2= CreateUnit(GetOwningPlayer(GetEventDamageSource()), FourCC('h05P'), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), bj_UNIT_FACING)
         
-        UnitAddAbility(u2, 'cDau')
+        UnitAddAbility(u2, FourCC('cDau'))
         IssueTargetOrder(u2, "parasite", GetTriggerUnit())
         RemoveUnitTimed(u2 , 2)
         u2=null
@@ -19518,14 +19518,14 @@ end
 -- Trigger: ZombyDesease
 --===========================================================================
 function Trig_ZombyDesease_Conditions()
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A1HO') > 0 and BlzGetEventAttackType() == ATTACK_TYPE_MELEE --and GetUnitAbilityLevel(GetEventDamageSource(), 'cDay' )
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A1HO')) > 0 and BlzGetEventAttackType() == ATTACK_TYPE_MELEE --and GetUnitAbilityLevel(GetEventDamageSource(), FourCC('cDay') )
 end
 function Trig_ZombyDesease_Actions()
         local u2
         
         if Random(1 , 3) then
-            u2=CreateUnit(GetOwningPlayer(GetEventDamageSource()), 'h05P', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), bj_UNIT_FACING)
-            UnitAddAbility(u2, 'cDau')
+            u2=CreateUnit(GetOwningPlayer(GetEventDamageSource()), FourCC('h05P'), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), bj_UNIT_FACING)
+            UnitAddAbility(u2, FourCC('cDau'))
             IssueTargetOrder(u2, "parasite", GetTriggerUnit())
             RemoveUnitTimed(u2 , 2)
         
@@ -19544,11 +19544,11 @@ end
 -- Trigger: Overcharge
 --===========================================================================
 function Trig_Overcharge_Conditions()
-    return GetSpellAbilityId() == 'A1HC'
+    return GetSpellAbilityId() == FourCC('A1HC')
 end
 function Trig_Overcharge_Actions()
-    UnitAddAbility(GetTriggerUnit(), 'A1HB')
-    RemoveAbilityTimed(GetTriggerUnit() , 'A1HB' , 22)
+    UnitAddAbility(GetTriggerUnit(), FourCC('A1HB'))
+    RemoveAbilityTimed(GetTriggerUnit() , FourCC('A1HB') , 22)
 end
 --===========================================================================
 function InitTrig_Overcharge()
@@ -19561,14 +19561,14 @@ end
 -- Trigger: NoAutoSkeletsButton
 --===========================================================================
 function Trig_NoAutoSkeletsButton_Conditions()
-    return GetSpellAbilityId() == 'cDAZ'
+    return GetSpellAbilityId() == FourCC('cDAZ')
 end
 function Trig_NoAutoSkeletsButton_Actions()
-    local lvl= GetUnitAbilityLevel(GetTriggerUnit(), 'cDAZ')
+    local lvl= GetUnitAbilityLevel(GetTriggerUnit(), FourCC('cDAZ'))
     if lvl == 1 then
-        SetUnitAbilityLevel(GetTriggerUnit(), 'cDAZ', 2)
+        SetUnitAbilityLevel(GetTriggerUnit(), FourCC('cDAZ'), 2)
     else
-        SetUnitAbilityLevel(GetTriggerUnit(), 'cDAZ', 1)
+        SetUnitAbilityLevel(GetTriggerUnit(), FourCC('cDAZ'), 1)
     end
 end
 --===========================================================================
@@ -19582,21 +19582,21 @@ end
 -- Trigger: ChangeAutoWorkers
 --===========================================================================
 function Trig_ChangeAutoWorkers_Conditions()
-    return GetSpellAbilityId() == 'A1L9'
+    return GetSpellAbilityId() == FourCC('A1L9')
 end
 function Trig_ChangeAutoWorkers_Actions()
     local u= GetTriggerUnit()
-    local lvl= GetUnitAbilityLevel(u, 'A1L9')
+    local lvl= GetUnitAbilityLevel(u, FourCC('A1L9'))
     if lvl == 1 then
-        SetUnitAbilityLevel(u, 'A1L9', 2)
-        UnitAddAbility(u, 'cDA9')
-        UnitRemoveAbility(u, 'cDa4')
-        BlzStartUnitAbilityCooldown(u, 'cDA9', 30)
+        SetUnitAbilityLevel(u, FourCC('A1L9'), 2)
+        UnitAddAbility(u, FourCC('cDA9'))
+        UnitRemoveAbility(u, FourCC('cDa4'))
+        BlzStartUnitAbilityCooldown(u, FourCC('cDA9'), 30)
     else
-        SetUnitAbilityLevel(u, 'A1L9', 1)
-        UnitAddAbility(u, 'cDa4')
-        UnitRemoveAbility(u, 'cDA9')
-        BlzStartUnitAbilityCooldown(u, 'cDa4', 30)
+        SetUnitAbilityLevel(u, FourCC('A1L9'), 1)
+        UnitAddAbility(u, FourCC('cDa4'))
+        UnitRemoveAbility(u, FourCC('cDA9'))
+        BlzStartUnitAbilityCooldown(u, FourCC('cDa4'), 30)
     end
     IssueImmediateOrder(u, "raisedeadon")
     u=null
@@ -19612,7 +19612,7 @@ end
 -- Trigger: UnitTrainedNoSkelets
 --===========================================================================
 function Trig_UnitTrainedNoSkelets_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'cDAZ') == 2
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('cDAZ')) == 2
 end
 function Trig_UnitTrainedNoSkelets_Actions()
     IssueImmediateOrder(GetTrainedUnit(), "raisedeadoff")
@@ -19628,13 +19628,13 @@ end
 -- Trigger: MassIceArrow
 --===========================================================================
 function Trig_MassIceArrow_Conditions()
-    return GetSpellAbilityId() == 'A1HE'
+    return GetSpellAbilityId() == FourCC('A1HE')
 end
 function Trig_MassIceArrow_Actions()
     local l= GetSpellTargetLoc()
     local p= GetOwningPlayer(GetTriggerUnit())
     local bex
-    local dammyAbility= 'A1HF'
+    local dammyAbility= FourCC('A1HF')
     local level= GetUnitAbilityLevel(GetTriggerUnit(), GetSpellAbilityId())
     local g= CreateGroup()
     local u
@@ -19646,7 +19646,7 @@ function Trig_MassIceArrow_Actions()
     
     if FirstOfGroup(g) == nil then
         --Нету врагов
-        BlzStartUnitAbilityCooldown(GetTriggerUnit(), 'A1HE', 14)
+        BlzStartUnitAbilityCooldown(GetTriggerUnit(), FourCC('A1HE'), 14)
         SetUnitState(GetTriggerUnit(), UNIT_STATE_MANA, GetUnitState(GetTriggerUnit(), UNIT_STATE_MANA) + 100 + 35 * level)
         
     
@@ -19657,7 +19657,7 @@ function Trig_MassIceArrow_Actions()
             u=FirstOfGroup(g)
             if u == null then break end
             
-            u2=CreateUnitAtLoc(p, 'h05P', l, bj_UNIT_FACING)
+            u2=CreateUnitAtLoc(p, FourCC('h05P'), l, bj_UNIT_FACING)
             
             UnitAddAbility(u2, dammyAbility)
             SetUnitAbilityLevel(u2, dammyAbility, level)
@@ -19688,11 +19688,11 @@ end
 -- Trigger: UsePorcha
 --===========================================================================
 function Trig_UsePorcha_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'cDa0') > 0 and BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'cDa0') <= 0
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('cDa0')) > 0 and BlzGetUnitAbilityCooldownRemaining(GetAttacker(), FourCC('cDa0')) <= 0
 end
 function Trig_UsePorcha_Actions()
-    DummyCastTarget('cDa0' , "shadowstrike" , GetAttacker() , GetTriggerUnit())
-    BlzStartUnitAbilityCooldown(GetAttacker(), 'cDa0', 15)
+    DummyCastTarget(FourCC('cDa0') , "shadowstrike" , GetAttacker() , GetTriggerUnit())
+    BlzStartUnitAbilityCooldown(GetAttacker(), FourCC('cDa0'), 15)
     --call IssueTargetOrderBJ( GetAttacker(), "shadowstrike", GetAttackedUnitBJ() )
 end
 --===========================================================================
@@ -19707,7 +19707,7 @@ end
 -- Trigger: PlagueOnBuilding
 --===========================================================================
 function Trig_PlagueOnBuilding_Conditions()
-    return GetSpellAbilityId() == 'A1HR'
+    return GetSpellAbilityId() == FourCC('A1HR')
 end
 function Plague()
     local t= GetExpiredTimer()
@@ -19717,7 +19717,7 @@ function Plague()
     local u= LoadUnitHandle(Hash, id, 0)
     --Начало
     if time == 0 and UnitAlive(u) and u ~= nil then
-        UnitAddAbility(u, 'A1HS')
+        UnitAddAbility(u, FourCC('A1HS'))
         e=AddSpecialEffectTargetUnitBJ("overhead", u, "CultOfDamnedPlagueCloudTargetLight.mdx")
         SaveEffectHandle(Hash, id, 2, e)
         
@@ -19731,7 +19731,7 @@ function Plague()
             income[LoadInteger(Hash, GetHandleId(u), 0)]=income[LoadInteger(Hash, GetHandleId(u), 0)] - 5
             income[GetPlayerId(GetOwningPlayer(u))]=income[GetPlayerId(GetOwningPlayer(u))] + 5
         end
-        UnitRemoveAbility(u, 'A1HS')
+        UnitRemoveAbility(u, FourCC('A1HS'))
         DestroyEffect(LoadEffectHandle(Hash, id, 2))
         PauseTimer(t)
         DestroyTimer(t)
@@ -19747,7 +19747,7 @@ function Trig_PlagueOnBuilding_Actions()
     local id= GetHandleId(t)
     local u= GetSpellTargetUnit()
     if u ~= nil then
-        if GetUnitAbilityLevel(u, 'A1HS') < 1 and IsPlayerEnemy(GetOwningPlayer(u), GetOwningPlayer(GetTriggerUnit())) then
+        if GetUnitAbilityLevel(u, FourCC('A1HS')) < 1 and IsPlayerEnemy(GetOwningPlayer(u), GetOwningPlayer(GetTriggerUnit())) then
             --Начать
             
             if GetUnitFoodMade(u) > 0 then
@@ -19779,14 +19779,14 @@ end
 -- Trigger: UnitTrained
 --===========================================================================
 function Trig_UnitTrained_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'A1HS') > 0
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1HS')) > 0
 end
 function Trig_UnitTrained_Actions()
     local u2
     local id=  LoadInteger(Hash, GetHandleId(GetTriggerUnit()), 0)
     
-    u2=CreateUnit(Player(id), 'h05P', GetUnitX(GetTrainedUnit()), GetUnitY(GetTrainedUnit()), bj_UNIT_FACING)
-    UnitAddAbility(u2, 'cDau')
+    u2=CreateUnit(Player(id), FourCC('h05P'), GetUnitX(GetTrainedUnit()), GetUnitY(GetTrainedUnit()), bj_UNIT_FACING)
+    UnitAddAbility(u2, FourCC('cDau'))
     IssueTargetOrder(u2, "parasite", GetTrainedUnit())
     RemoveUnitTimed(u2 , 2)
     
@@ -19805,13 +19805,13 @@ end
 -- Trigger: InfestBuilding
 --===========================================================================
 function Trig_InfestBuilding_Conditions()
-    return GetSpellAbilityId() == 'A1JC' and not IsUnitInGroup(GetSpellTargetUnit(), udg_StolicaGroups)
+    return GetSpellAbilityId() == FourCC('A1JC') and not IsUnitInGroup(GetSpellTargetUnit(), udg_StolicaGroups)
 end
 function Trig_InfestBuilding_Actions()
     local u= GetSpellTargetUnit()
     if GetUnitLifePercent(u) <= 10 and u ~= nil and IsPlayerEnemy(GetOwningPlayer(u), GetOwningPlayer(GetTriggerUnit())) then
         KillUnit(u)
-        CreateUnit(GetOwningPlayer(GetTriggerUnit()), 'u02Z', GetUnitX(u), GetUnitY(u), 0.0)
+        CreateUnit(GetOwningPlayer(GetTriggerUnit()), FourCC('u02Z'), GetUnitX(u), GetUnitY(u), 0.0)
     else
         
     
@@ -19838,16 +19838,16 @@ end
 function ForestStart()
     
     
-    SetPlayerTechMaxAllowedSwap('o05N', 3, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('o05M', 3, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('o05O', 3, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('o05N'), 3, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('o05M'), 3, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('o05O'), 3, GetEnumPlayer())
     
-    SetPlayerTechMaxAllowedSwap('O056', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('O057', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('O058', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('O059', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('O056'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('O057'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('O058'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('O059'), 1, GetEnumPlayer())
     
-    SetPlayerTechMaxAllowedSwap('o04Y', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('o04Y'), 0, GetEnumPlayer())
     
 end
 function Trig_StartForestTrolls_Actions()
@@ -19863,7 +19863,7 @@ end
 -- Trigger: Charge
 --===========================================================================
 function Trig_Charge_Conditions()
-    return GetSpellAbilityId() == 'A1H3'
+    return GetSpellAbilityId() == FourCC('A1H3')
 end
 --//================================================================================================================================================================================
 --// Этам 3 - двигаем врагов
@@ -19994,8 +19994,8 @@ function Trig_Charge_Actions()
     local l= JSTRRastMT(x , x1 , y , y1)
     
     JSTRSkill=GetSpellAbilityId()
-    UnitAddAbility(GT, 'Amrf')
-    UnitRemoveAbility(GT, 'Amrf')
+    UnitAddAbility(GT, FourCC('Amrf'))
+    UnitRemoveAbility(GT, FourCC('Amrf'))
     ---------
     SaveUnitHandle(Hash, h, 1, GT)
     if l ~= 0 then
@@ -20023,7 +20023,7 @@ end
 -- Trigger: SetLifeNormal
 --===========================================================================
 function Trig_SetLifeNormal_Conditions()
-    return GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) - GetEventDamage() < 5 and GetUnitAbilityLevel(GetTriggerUnit(), 'A1G6') ~= 0
+    return GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) - GetEventDamage() < 5 and GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1G6')) ~= 0
 end
 function Trig_SetLifeNormal_Actions()
    
@@ -20041,13 +20041,13 @@ end
 -- Trigger: ZacliatieOfLive
 --===========================================================================
 function Trig_ZacliatieOfLive_Conditions()
-    return GetSpellAbilityId() == 'A1G5'
+    return GetSpellAbilityId() == FourCC('A1G5')
 end
 function zlifeend()
     local t= GetExpiredTimer()
     local id= GetHandleId(t)
     local u2= LoadUnitHandle(Hash, id, 1)
-    UnitRemoveAbility(u2, 'A1G6')
+    UnitRemoveAbility(u2, FourCC('A1G6'))
     FlushChildHashtable(Hash, id)
     DestroyTimer(t)
     t=null
@@ -20058,9 +20058,9 @@ function Trig_ZacliatieOfLive_Actions()
     local t= CreateTimer()
     local id= GetHandleId(t)
     
-    UnitAddAbility(u, 'A1G6')
+    UnitAddAbility(u, FourCC('A1G6'))
     TriggerRegisterUnitEvent(gg_trg_SetLifeNormal, u, EVENT_UNIT_DAMAGING)
-    TimerStart(t, 15 * GetUnitAbilityLevel(u, 'A1G5'), false, zlifeend)
+    TimerStart(t, 15 * GetUnitAbilityLevel(u, FourCC('A1G5')), false, zlifeend)
     SaveUnitHandle(Hash, id, 1, u)
     
     u=null
@@ -20077,7 +20077,7 @@ end
 -- Trigger: ReturnDamage
 --===========================================================================
 function Trig_ReturnDamage_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'A1GQ') > 0
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1GQ')) > 0
 end
 function Trig_ReturnDamage_Actions()
     local u= GetTriggerUnit()
@@ -20123,13 +20123,13 @@ end
 -- Trigger: ZacliatieOfDamage
 --===========================================================================
 function Trig_ZacliatieOfDamage_Conditions()
-    return GetSpellAbilityId() == 'A1GP'
+    return GetSpellAbilityId() == FourCC('A1GP')
 end
 function Trig_ZacliatieOfDamage_Actions()
     local u= GetTriggerUnit()
     
-    UnitAddAbility(u, 'A1GQ')
-    RemoveAbilityTimed(u , 'A1GQ' , GetUnitAbilityLevel(u, 'A1GP') * 20)
+    UnitAddAbility(u, FourCC('A1GQ'))
+    RemoveAbilityTimed(u , FourCC('A1GQ') , GetUnitAbilityLevel(u, FourCC('A1GP')) * 20)
     u=null
 end
 --===========================================================================
@@ -20143,19 +20143,19 @@ end
 -- Trigger: YarostBeg
 --===========================================================================
 function Trig_YarostBeg_Conditions()
-    return GetSpellAbilityId() == 'A1F9'
+    return GetSpellAbilityId() == FourCC('A1F9')
 end
 function Trig_YarostBeg_Actions()
     local u= GetTriggerUnit()
     
     SetUnitLifePercentBJ(u, GetUnitLifePercent(u) * 0.75)
     
-    UnitAddAbility(u, 'A1GS') -- Абилка на урон
-    RemoveAbilityTimed(u , 'A1GS' , 24.5)
+    UnitAddAbility(u, FourCC('A1GS')) -- Абилка на урон
+    RemoveAbilityTimed(u , FourCC('A1GS') , 24.5)
     --call UnitAddAbility(u,'A1G2')
     --call BlzStartUnitAbilityCooldown(u,'A1G2',1)
     --call BlzUnitHideAbility(u,'A1F9',true)
-    RemoveAbilityTimed(u , 'A1GS' , 25)
+    RemoveAbilityTimed(u , FourCC('A1GS') , 25)
     
     u=null
 end
@@ -20170,7 +20170,7 @@ end
 -- Trigger: RitualPoglocenia
 --===========================================================================
 function Trig_RitualPoglocenia_Conditions()
-    return GetSpellAbilityId() == 'A1GA' and GetUnitAbilityLevel(GetSpellTargetUnit(), 'A1F9') > 0 and not IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO)
+    return GetSpellAbilityId() == FourCC('A1GA') and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1F9')) > 0 and not IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO)
 end
 function Trig_RitualPoglocenia_Actions()
    --local unit u = GetTriggerUnit()
@@ -20179,20 +20179,20 @@ function Trig_RitualPoglocenia_Actions()
     
     
     --Маги
-    if id == 'o052' or id == 'o051' then
-        u2=ReplaceUnit2(u2 , 'o05O' , bj_UNIT_STATE_METHOD_RELATIVE)
+    if id == FourCC('o052') or id == FourCC('o051') then
+        u2=ReplaceUnit2(u2 , FourCC('o05O') , bj_UNIT_STATE_METHOD_RELATIVE)
         
     --танки
-    elseif id == 'o04Z' or id == 'o04X' or id == 'o04V' or id == 'o050' then
-        u2=ReplaceUnit2(u2 , 'o05M' , bj_UNIT_STATE_METHOD_RELATIVE)
+    elseif id == FourCC('o04Z') or id == FourCC('o04X') or id == FourCC('o04V') or id == FourCC('o050') then
+        u2=ReplaceUnit2(u2 , FourCC('o05M') , bj_UNIT_STATE_METHOD_RELATIVE)
     --дд
-    elseif id == 'o04W' or id == 'o04Y' or id == 'o053' then
-        u2=ReplaceUnit2(u2 , 'o05N' , bj_UNIT_STATE_METHOD_RELATIVE)
+    elseif id == FourCC('o04W') or id == FourCC('o04Y') or id == FourCC('o053') then
+        u2=ReplaceUnit2(u2 , FourCC('o05N') , bj_UNIT_STATE_METHOD_RELATIVE)
     else
         KillUnit(u2)
     end
     
-    UnitAddAbility(u2, 'A0Z5')
+    UnitAddAbility(u2, FourCC('A0Z5'))
     
     u2=null
 end
@@ -20208,13 +20208,13 @@ end
 --===========================================================================
 function Trig_WantAxe_Conditions()
     --call DisplayTextToPlayer(Player(0),0,0,"2")
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A1G3') > 0 and GetUnitAbilityLevel(GetTriggerUnit(), 'A1G4') == 0 and IsPlayerEnemy(GetOwningPlayer(GetEventDamageSource()), GetOwningPlayer(GetTriggerUnit()))
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A1G3')) > 0 and GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1G4')) == 0 and IsPlayerEnemy(GetOwningPlayer(GetEventDamageSource()), GetOwningPlayer(GetTriggerUnit()))
 end
 function toporend()
     local t= GetExpiredTimer()
     local id= GetHandleId(t)
     local u2= LoadUnitHandle(Hash, id, 1)
-    UnitRemoveAbility(u2, 'A1G4')
+    UnitRemoveAbility(u2, FourCC('A1G4'))
     FlushChildHashtable(Hash, id)
     DestroyTimer(t)
     t=null
@@ -20227,7 +20227,7 @@ function Trig_WantAxe_Actions()
     local id= GetHandleId(t)
     --call DisplayTextToPlayer(Player(0),0,0,"2"+GetUnitName(u2))
      
-    UnitAddAbility(u2, 'A1G4')
+    UnitAddAbility(u2, FourCC('A1G4'))
     
     TimerStart(t, 7, false, toporend)
     SaveUnitHandle(Hash, id, 1, u2)
@@ -20248,14 +20248,14 @@ end
 --===========================================================================
 function Trig_BeFaster_Conditions()
     
-    return GetUnitAbilityLevel(BlzGetEventDamageTarget(), 'A1F9') > 0 or GetUnitAbilityLevel(BlzGetEventDamageTarget(), 'A1G2') > 0 -- Тут абилка иконка
+    return GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1F9')) > 0 or GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1G2')) > 0 -- Тут абилка иконка
     
     
 end
 function Trig_BeFaster_Actions()
     local u= BlzGetEventDamageTarget()
-    local spellid= 'A1F8'
-    local timerspellid= 'A1CX'
+    local spellid= FourCC('A1F8')
+    local timerspellid= FourCC('A1CX')
     local lifep= GetUnitLifePercent(u)
     local time= 10
     
@@ -20309,13 +20309,13 @@ end
 -- Trigger: MassSetca
 --===========================================================================
 function Trig_MassSetca_Conditions()
-    return GetSpellAbilityId() == 'A1FC'
+    return GetSpellAbilityId() == FourCC('A1FC')
 end
 function Trig_MassSetca_Actions()
     local l= GetSpellTargetLoc()
     local p= GetOwningPlayer(GetTriggerUnit())
     local bex
-    local dammyAbility= 'A1FD'
+    local dammyAbility= FourCC('A1FD')
     local level= GetUnitAbilityLevel(GetTriggerUnit(), GetSpellAbilityId())
     local g= CreateGroup()
     local u
@@ -20331,7 +20331,7 @@ function Trig_MassSetca_Actions()
         u=FirstOfGroup(g)
         if u == null then break end
         
-        u2=CreateUnitAtLoc(p, 'H0BN', l, bj_UNIT_FACING)
+        u2=CreateUnitAtLoc(p, FourCC('H0BN'), l, bj_UNIT_FACING)
         udg_LocalUnit2=u2
         TriggerExecute(gg_trg_ToKill2)
         UnitAddAbility(u2, dammyAbility)
@@ -20364,10 +20364,10 @@ end
 -- Trigger: MassFrenzy
 --===========================================================================
 function Trig_MassFrenzy_Conditions()
-    return GetSpellAbilityId() == 'A1ID'
+    return GetSpellAbilityId() == FourCC('A1ID')
 end
 function FFrenzy()
-    return GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and GetUnitAbilityLevel(GetFilterUnit(), 'BUhf') == 0 and not IsUnitType(GetFilterUnit(), UNIT_TYPE_MECHANICAL) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE)
+    return GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and GetUnitAbilityLevel(GetFilterUnit(), FourCC('BUhf')) == 0 and not IsUnitType(GetFilterUnit(), UNIT_TYPE_MECHANICAL) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE)
     
 end
 function Trig_MassFrenzy_Actions()
@@ -20390,10 +20390,10 @@ function Trig_MassFrenzy_Actions()
         u=FirstOfGroup(g)
         if i > 4 or u == null then break end
         
-        u2=CreateUnitAtLoc(p, 'h05P', l, bj_UNIT_FACING)
+        u2=CreateUnitAtLoc(p, FourCC('h05P'), l, bj_UNIT_FACING)
         
         
-        UnitAddAbility(u2, 'A1FA')
+        UnitAddAbility(u2, FourCC('A1FA'))
         SetUnitManaBJ(u2, 1111111.00)
         
         IssueTargetOrder(u2, "unholyfrenzy", u)
@@ -20424,25 +20424,25 @@ end
 -- Trigger: StartJungleTrools
 --===========================================================================
 function Trig_StartJungleTrools_Func001A()
-    SetPlayerTechMaxAllowedSwap('O05B', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('O05B'), 1, GetEnumPlayer())
     
-    SetPlayerTechMaxAllowedSwap('O05A', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('O05D', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('O055', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('O054', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('O05A'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('O05D'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('O055'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('O054'), 1, GetEnumPlayer())
     
     --Black spear
-    SetPlayerTechMaxAllowedSwap('o04P', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('O05L', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('o04P'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('O05L'), 0, GetEnumPlayer())
     
     --Gurubashy
-    SetPlayerTechMaxAllowedSwap('o04N', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('O055', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('o04N'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('O055'), 0, GetEnumPlayer())
     
     --call SetPlayerTechMaxAllowedSwap( 'A1DN', 0, GetEnumPlayer() )
     
-    SetPlayerTechMaxAllowedSwap('A1EP', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('A1EQ', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('A1EP'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('A1EQ'), 1, GetEnumPlayer())
     
 end
 function Trig_StartJungleTrools_Actions()
@@ -20458,19 +20458,19 @@ end
 -- Trigger: BlackSpear
 --===========================================================================
 function BlackSpear_Conditions()
-    return GetSpellAbilityId() == 'A1EP'
+    return GetSpellAbilityId() == FourCC('A1EP')
 end
 function BlackSpear_Actions()
     
     --Black spear
-    SetPlayerTechMaxAllowedSwap('o04P', - 1, GetOwningPlayer(GetTriggerUnit())) -- маги
-    SetPlayerTechMaxAllowedSwap('O05L', 1, GetOwningPlayer(GetTriggerUnit())) --Бвон
+    SetPlayerTechMaxAllowedSwap(FourCC('o04P'), - 1, GetOwningPlayer(GetTriggerUnit())) -- маги
+    SetPlayerTechMaxAllowedSwap(FourCC('O05L'), 1, GetOwningPlayer(GetTriggerUnit())) --Бвон
     
     SetPlayerAbilityAvailableBJ(false, FourCC('A1EP'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1EQ'), GetOwningPlayer(GetTriggerUnit()))
     --call SetPlayerTechMaxAllowedSwap( 'A1DN', 0, GetEnumPlayer() )
     
-    SetPlayerTechResearchedSwap('R0IR', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0IR'), 1, GetOwningPlayer(GetTriggerUnit()))
     
 end
 --===========================================================================
@@ -20484,13 +20484,13 @@ end
 -- Trigger: Gurubashy
 --===========================================================================
 function Gurubashy_Conditions()
-    return GetSpellAbilityId() == 'A1EQ'
+    return GetSpellAbilityId() == FourCC('A1EQ')
 end
 function Gurubashy_Actions()
     
     --Gurubashy
-    SetPlayerTechMaxAllowedSwap('o04N', - 1, GetOwningPlayer(GetTriggerUnit())) --Колдун
-    SetPlayerTechMaxAllowedSwap('O055', 1, GetOwningPlayer(GetTriggerUnit())) --Хаккар
+    SetPlayerTechMaxAllowedSwap(FourCC('o04N'), - 1, GetOwningPlayer(GetTriggerUnit())) --Колдун
+    SetPlayerTechMaxAllowedSwap(FourCC('O055'), 1, GetOwningPlayer(GetTriggerUnit())) --Хаккар
     
     SetPlayerAbilityAvailableBJ(false, FourCC('A1EP'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1EQ'), GetOwningPlayer(GetTriggerUnit()))
@@ -20507,7 +20507,7 @@ end
 -- Trigger: SpelltakesHealthCommon
 --===========================================================================
 function Trig_SpelltakesHealthCommon_Conditions()
-    return GetSpellAbilityId() == 'A1DX'
+    return GetSpellAbilityId() == FourCC('A1DX')
 end
 function Trig_SpelltakesHealthCommon_Actions()
     local u= GetTriggerUnit()
@@ -20526,7 +20526,7 @@ end
 -- Trigger: SpelltakesHealthCommon2
 --===========================================================================
 function Trig_SpelltakesHealthCommon2_Conditions()
-    return GetSpellAbilityId() == 'A1EJ'
+    return GetSpellAbilityId() == FourCC('A1EJ')
 end
 function Trig_SpelltakesHealthCommon2_Actions()
     local u= GetTriggerUnit()
@@ -20546,13 +20546,13 @@ end
 -- Trigger: MassSglaz
 --===========================================================================
 function Trig_MassSglaz_Conditions()
-    return GetSpellAbilityId() == 'A1E0'
+    return GetSpellAbilityId() == FourCC('A1E0')
 end
 function Trig_MassSglaz_Actions()
     local l= GetSpellTargetLoc()
     local p= GetOwningPlayer(GetTriggerUnit())
     local bex
-    local level= GetUnitAbilityLevel(GetTriggerUnit(), 'A1E0')
+    local level= GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1E0'))
     local g= CreateGroup()
     local u
     local u2
@@ -20567,9 +20567,9 @@ function Trig_MassSglaz_Actions()
         u=FirstOfGroup(g)
         if u == null then break end
         
-        u2=CreateUnitAtLoc(p, 'H0BN', l, bj_UNIT_FACING)
+        u2=CreateUnitAtLoc(p, FourCC('H0BN'), l, bj_UNIT_FACING)
         RemoveUnitTimed(u2 , 2)
-        UnitAddAbility(u2, 'A1E1')
+        UnitAddAbility(u2, FourCC('A1E1'))
         SetUnitManaBJ(u2, 1111111.00)
         --call SetUnitAbilityLevel( u2,'A17Z', level )
         IssueTargetOrder(u2, "hex", u)
@@ -20599,7 +20599,7 @@ end
 -- Trigger: BladeStorm
 --===========================================================================
 function Trig_BladeStorm_Conditions()
-    return GetSpellAbilityId() == 'A1E4'
+    return GetSpellAbilityId() == FourCC('A1E4')
 end
 function Trig_BladeStorm_Actions()
     local u= GetTriggerUnit()
@@ -20620,7 +20620,7 @@ end
 -- Trigger: BladeStormEnd
 --===========================================================================
 function Trig_BladeStormEnd_Conditions()
-    return GetSpellAbilityId() == 'A1E4'
+    return GetSpellAbilityId() == FourCC('A1E4')
 end
 function Trig_BladeStormEnd_Actions()
     local u= GetTriggerUnit()
@@ -20641,7 +20641,7 @@ end
 -- Trigger: SpellDamageReturn
 --===========================================================================
 function Trig_SpellDamageReturn_Conditions()
-    return GetSpellAbilityId() == 'A1E3'
+    return GetSpellAbilityId() == FourCC('A1E3')
 end
 function Trig_SpellDamageReturn_Actions()
     local u= GetTriggerUnit()
@@ -20675,14 +20675,14 @@ end
 --===========================================================================
 function Trig_DamageConvert_Conditions()
     
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A1E5') > 0 and IsPlayerEnemy(GetOwningPlayer(GetEventDamageSource()), GetOwningPlayer(GetTriggerUnit()))
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A1E5')) > 0 and IsPlayerEnemy(GetOwningPlayer(GetEventDamageSource()), GetOwningPlayer(GetTriggerUnit()))
     
     
     
 end
 function Trig_DamageConvert_Actions()
     local u= GetEventDamageSource()
-    local level= GetUnitAbilityLevel(u, 'A1E5')
+    local level= GetUnitAbilityLevel(u, FourCC('A1E5'))
     local damage= GetEventDamage()
     local e= AddSpecialEffectTargetUnitBJ("Chest", u, "AbilitiesSpellsItemsVampiricPotionVampPotionCaster.mdl")
     SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) + damage * ( 0.04 * level ))
@@ -20703,12 +20703,12 @@ end
 -- Trigger: AreaOfDeath
 --===========================================================================
 function Trig_AreaOfDeath_Conditions()
-    return GetSpellAbilityId() == 'A1E8'
+    return GetSpellAbilityId() == FourCC('A1E8')
 end
 function Trig_AreaOfDeath_Actions()
     local l= GetSpellTargetLoc()
     local p= GetOwningPlayer(GetTriggerUnit())
-    local level= GetUnitAbilityLevel(GetTriggerUnit(), 'A1E0')
+    local level= GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1E0'))
     
     local u
     local u2
@@ -20716,7 +20716,7 @@ function Trig_AreaOfDeath_Actions()
    
     
     u2=CreateUnitAtLoc(p, Dummy, l, bj_UNIT_FACING)
-    UnitAddAbility(u2, 'A1E7')
+    UnitAddAbility(u2, FourCC('A1E7'))
     SetUnitManaBJ(u2, 1111111.00)
     --call SetUnitAbilityLevel( u2,'A17Z', level )
     IssuePointOrderLoc(u2, "deathanddecay", l)
@@ -20740,10 +20740,10 @@ end
 -- Trigger: Plenenie
 --===========================================================================
 function Trig_Plenenie_Conditions()
-    return GetSpellAbilityId() == 'A1E9' or not IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO)
+    return GetSpellAbilityId() == FourCC('A1E9') or not IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO)
 end
 function Trig_Plenenie_Actions()
-    BlzEndUnitAbilityCooldown(GetTriggerUnit(), 'A1E9')
+    BlzEndUnitAbilityCooldown(GetTriggerUnit(), FourCC('A1E9'))
 end
 --===========================================================================
 function InitTrig_Plenenie()
@@ -20757,14 +20757,14 @@ end
 --===========================================================================
 function Trig_DamageMore_Conditions()
     
-    return GetUnitAbilityLevel(BlzGetEventDamageTarget(), 'A1D0') > 0 -- Тут абилка иконка
+    return GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1D0')) > 0 -- Тут абилка иконка
     
     
 end
 function Trig_DamageMore_Actions()
     local u= BlzGetEventDamageTarget()
-    local spellid= 'A1D1'
-    local timerspellid= 'A1CX'
+    local spellid= FourCC('A1D1')
+    local timerspellid= FourCC('A1CX')
     local lifep= GetUnitLifePercent(u)
     local time= 10
     
@@ -20813,7 +20813,7 @@ end
 -- Trigger: TrainBwonsamdy
 --===========================================================================
 function Trig_TrainBwonsamdy_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'O05L'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('O05L')
 end
 function Trig_TrainBwonsamdy_Actions()
     Bwonsamdy[GetPlayerId(GetOwningPlayer(GetTrainedUnit()))]=GetTrainedUnit()
@@ -20830,21 +20830,21 @@ end
 -- Trigger: SpellGiveQSpell
 --===========================================================================
 function Trig_SpellGiveQSpell_Conditions()
-    return GetSpellAbilityId() == 'A1ES'
+    return GetSpellAbilityId() == FourCC('A1ES')
 end
 function Trig_SpellGiveQSpell_Actions()
     local u= GetTriggerUnit()
     --call DisplayTextToPlayer(Player(0),0,0,"2")
     TriggerSleepAction(0.5)
-    if GetUnitAbilityLevel(u, 'A1EZ') > 0 then
+    if GetUnitAbilityLevel(u, FourCC('A1EZ')) > 0 then
         --Дух
-        UnitRemoveAbility(u, 'A1EW')
-        BlzUnitHideAbility(u, 'A1EV', false)
+        UnitRemoveAbility(u, FourCC('A1EW'))
+        BlzUnitHideAbility(u, FourCC('A1EV'), false)
     else
         --Материальныей мир
-        UnitAddAbility(u, 'A1EW')
-        SetUnitAbilityLevel(u, 'A1EW', GetUnitAbilityLevel(u, 'A1EV'))
-        BlzUnitHideAbility(u, 'A1EV', true)
+        UnitAddAbility(u, FourCC('A1EW'))
+        SetUnitAbilityLevel(u, FourCC('A1EW'), GetUnitAbilityLevel(u, FourCC('A1EV')))
+        BlzUnitHideAbility(u, FourCC('A1EV'), true)
     end
     u=null
 end
@@ -20887,7 +20887,7 @@ end
 --===========================================================================
 function Trig_DamagePercent_Conditions()
     --call DisplayTextToPlayer(Player(0),0,0,"2")
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A1ET') > 0 and GetUnitAbilityLevel(GetTriggerUnit(), 'A1EU') == 0
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A1ET')) > 0 and GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1EU')) == 0
 end
 function Trig_DamagePercent_Actions()
     local seconds= 7
@@ -20897,7 +20897,7 @@ function Trig_DamagePercent_Actions()
     local i= 0
     --call DisplayTextToPlayer(Player(0),0,0,"2"+GetUnitName(u2))
      
-    UnitAddAbility(u2, 'A1EU')
+    UnitAddAbility(u2, FourCC('A1EU'))
     --call BlzSetAbilityTooltip( 'ANav', I2S(GetPlayerId(GetOwningPlayer(u))), 0 )
     while true do
         if not UnitAlive(u2) or i * 0.25 > seconds then break end
@@ -20905,7 +20905,7 @@ function Trig_DamagePercent_Actions()
         TriggerSleepAction(0.25)
         i=i + 1
     end
-    UnitRemoveAbility(u2, 'A1EU')
+    UnitRemoveAbility(u2, FourCC('A1EU'))
     DestroyEffect(e)
     u=null
     u2=null
@@ -20935,7 +20935,7 @@ end
 -- Trigger: SpellChangeWorld
 --===========================================================================
 function Trig_SpellChangeWorld_Conditions()
-    return GetSpellAbilityId() == 'A1ER'
+    return GetSpellAbilityId() == FourCC('A1ER')
 end
 function Trig_SpellChangeWorld_Actions()
     local g= CreateGroup()
@@ -20973,7 +20973,7 @@ end
 -- Default melee game initialization for all players
 --===========================================================================
 function Trig_GetMoreStats_Conditions()
-    return GetUnitAbilityLevel(GetKillingUnit(), 'A1DD') > 0
+    return GetUnitAbilityLevel(GetKillingUnit(), FourCC('A1DD')) > 0
 end
 function Trig_GetMoreStats_Actions()
     local u= GetKillingUnit()
@@ -20996,11 +20996,11 @@ end
 -- Trigger: Help
 --===========================================================================
 function Trig_Help_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'A1DD') > 0 and GetUnitLifePercent(GetTriggerUnit()) <= 75
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1DD')) > 0 and GetUnitLifePercent(GetTriggerUnit()) <= 75
 end
 function AllyToKill()
     local u= GetFilterUnit()
-    if UnitAlive(u) and GetOwningPlayer(u) == udg_LocalPlayer and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_HERO) and not IsUnitType(u, UNIT_TYPE_SUMMONED) and not IsUnitType(u, UNIT_TYPE_MECHANICAL) and GetUnitTypeId(u) ~= 'h07A' then
+    if UnitAlive(u) and GetOwningPlayer(u) == udg_LocalPlayer and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_HERO) and not IsUnitType(u, UNIT_TYPE_SUMMONED) and not IsUnitType(u, UNIT_TYPE_MECHANICAL) and GetUnitTypeId(u) ~= FourCC('h07A') then
         u=null
         udg_LocalInteger2=udg_LocalInteger2 + 1
         return true
@@ -21054,7 +21054,7 @@ end
 -- Trigger: SpelltakesHealth
 --===========================================================================
 function Trig_SpelltakesHealth_Conditions()
-    return GetSpellAbilityId() == 'A1DC' or GetSpellAbilityId() == 'A1EL'
+    return GetSpellAbilityId() == FourCC('A1DC') or GetSpellAbilityId() == FourCC('A1EL')
 end
 function Trig_SpelltakesHealth_Actions()
     local u= GetTriggerUnit()
@@ -21063,9 +21063,9 @@ function Trig_SpelltakesHealth_Actions()
     
     
     SetUnitLifeBJ(u, ( GetUnitStateSwap(UNIT_STATE_LIFE, u) - 75 * GetUnitAbilityLevel(u, GetSpellAbilityId()) ))
-    if GetSpellAbilityId() == 'A1EL' and GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSpellTargetUnit()) then
+    if GetSpellAbilityId() == FourCC('A1EL') and GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSpellTargetUnit()) then
         
-        BlzEndUnitAbilityCooldown(GetTriggerUnit(), 'A1EL')
+        BlzEndUnitAbilityCooldown(GetTriggerUnit(), FourCC('A1EL'))
     end
     
     u=null
@@ -21081,12 +21081,12 @@ end
 -- Trigger: HakkarAuraDeb
 --===========================================================================
 function Trig_HakkarAuraDeb_Conditions()
-    return GetLearnedSkill() == 'A2DM'
+    return GetLearnedSkill() == FourCC('A2DM')
 end
 function Trig_HakkarAuraDeb_Actions()
     local u= GetTriggerUnit()
-    UnitAddAbility(u, 'A1EK')
-    SetUnitAbilityLevel(u, 'A1EK', GetUnitAbilityLevel(u, 'A2DM'))
+    UnitAddAbility(u, FourCC('A1EK'))
+    SetUnitAbilityLevel(u, FourCC('A1EK'), GetUnitAbilityLevel(u, FourCC('A2DM')))
     u=null
 end
 --===========================================================================
@@ -21100,7 +21100,7 @@ end
 -- Trigger: HelpButton
 --===========================================================================
 function Trig_HelpButton_Conditions()
-    return GetSpellAbilityId() == 'A1EM'
+    return GetSpellAbilityId() == FourCC('A1EM')
 end
 function Trig_HelpButton_Actions()
     local u= GetTriggerUnit()
@@ -21154,11 +21154,11 @@ end
 --===========================================================================
 function Trig_BrokenBlood_Conditions()
     --call DisplayTextToPlayer(Player(0),0,0," - ")
-    return GetSpellAbilityId() == 'A1DB'
+    return GetSpellAbilityId() == FourCC('A1DB')
 end
 function EnemyToBlood()
     local u= GetFilterUnit()
-    if UnitAlive(u) and IsPlayerEnemy(GetOwningPlayer(u), udg_LocalPlayer) and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_MECHANICAL) and GetUnitAbilityLevel(u, 'A1DE') == 0 then
+    if UnitAlive(u) and IsPlayerEnemy(GetOwningPlayer(u), udg_LocalPlayer) and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_MECHANICAL) and GetUnitAbilityLevel(u, FourCC('A1DE')) == 0 then
         u=null
         return true
     
@@ -21177,7 +21177,7 @@ function BrokenBlood()
     local i= 0
     --call DisplayTextToPlayer(Player(0),0,0,"2"+GetUnitName(u2))
      
-    UnitAddAbility(u2, 'A1DE')
+    UnitAddAbility(u2, FourCC('A1DE'))
     --call BlzSetAbilityTooltip( 'ANav', I2S(GetPlayerId(GetOwningPlayer(u))), 0 )
     while true do
         if not UnitAlive(u2) or i * 0.25 > seconds then break end
@@ -21213,7 +21213,7 @@ function BrokenBlood()
     
     end
     
-    UnitRemoveAbility(u2, 'A1DE')
+    UnitRemoveAbility(u2, FourCC('A1DE'))
     DestroyGroup(g)
     DestroyBoolExpr(b)
     g=null
@@ -21242,7 +21242,7 @@ end
 -- Trigger: TrainHakkar
 --===========================================================================
 function Trig_TrainHakkar_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'O055'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('O055')
 end
 function Trig_TrainHakkar_Actions()
     bj_forLoopAIndex=1
@@ -21336,7 +21336,7 @@ end
 -- Trigger: AK1T1
 --===========================================================================
 function Trig_AK1T1_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'hfoo'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('hfoo')
 end
 function AT1Count()
     local a = {}
@@ -21346,12 +21346,12 @@ function AT1Count()
     a[0]=0
     -- Штормград простой
     
-    if GetPlayerTechCount(p, 'R0H6', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0H6'), true) < 1 then
         i=4
         --Stormwind common
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='h0KD'
+                a[a[0]]=FourCC('h0KD')
                 b=b + 1
                 if b >= i then break end
         end
@@ -21360,7 +21360,7 @@ function AT1Count()
         i=4
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='h0LW'
+                a[a[0]]=FourCC('h0LW')
                 b=b + 1
                 if b >= i then break end
         end
@@ -21368,25 +21368,25 @@ function AT1Count()
     end
     
     --Лордеронец
-    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         i=1
         b=1
         
         -- интеграция лордеронцев
-        if GetPlayerTechCount(p, 'R0HV', true) > 1 then
+        if GetPlayerTechCount(p, FourCC('R0HV'), true) > 1 then
             i=i + 2
         end
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KR'
+            a[a[0]]=FourCC('h0KR')
             
             b=b + 1
             if b >= i then break end
         end
     end
     --Stromgarge
-    if GetPlayerTechCount(p, 'R0HJ', true) > 0 then
+    if GetPlayerTechCount(p, FourCC('R0HJ'), true) > 0 then
         i=3
         b=1
         
@@ -21394,7 +21394,7 @@ function AT1Count()
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0M9'
+            a[a[0]]=FourCC('h0M9')
             
             b=b + 1
             if b >= i then break end
@@ -21439,7 +21439,7 @@ function Trig_AK1T1_Actions()
     
     
      
-    UnitAddAbility(u, 'A17P')
+    UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -21457,7 +21457,7 @@ end
 -- Trigger: AK1T2
 --===========================================================================
 function Trig_AK1T2_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'h0K4'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0K4')
 end
 function AT2Count()
     local a = {}
@@ -21470,25 +21470,25 @@ function AT2Count()
     i=4
     while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KC'
+            a[a[0]]=FourCC('h0KC')
             b=b + 1
             if b >= i then break end
     end
     
     
-    if GetPlayerTechCount(p, 'R0HB', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0HB'), true) == 1 and GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --Pandaren
         i=1
         b=1
         --
-        if GetPlayerTechCount(p, 'R0HE', true) + GetPlayerTechCount(p, 'R0HF', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HE'), true) + GetPlayerTechCount(p, FourCC('R0HF'), true) > 0 then
             i=i + 2
         
         end
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o042'
+            a[a[0]]=FourCC('o042')
             
             b=b + 1
             if b >= i then break end
@@ -21535,7 +21535,7 @@ function Trig_AK1T2_Actions()
     
     
      
-    UnitAddAbility(u, 'A17P')
+    UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -21553,7 +21553,7 @@ end
 -- Trigger: AK1T3
 --===========================================================================
 function Trig_AK1T3_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'h0K7'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0K7')
 end
 function AT3Count()
     local a = {}
@@ -21566,7 +21566,7 @@ function AT3Count()
     i=4
     while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KG'
+            a[a[0]]=FourCC('h0KG')
             b=b + 1
             if b >= i then break end
     end
@@ -21574,13 +21574,13 @@ function AT3Count()
     
     
     -- Паладин церкви
-    if GetPlayerTechCount(p, 'R0H7', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0H7'), true) == 1 then
         i=2
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KF'
+            a[a[0]]=FourCC('h0KF')
             
             b=b + 1
             if b >= i then break end
@@ -21588,45 +21588,45 @@ function AT3Count()
     end
     
         -- Ветеран 2 войны
-    if GetPlayerTechCount(p, 'R0HN', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0HN'), true) == 1 then
         i=1
         b=2
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0OW'
+            a[a[0]]=FourCC('h0OW')
             
             b=b + 1
             if b >= i then break end
         end
     end
     
-    if GetPlayerTechCount(p, 'R0HB', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0HB'), true) == 1 and GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --Pandaren
         i=1
         b=1
-        if GetPlayerTechCount(p, 'R0HE', true) + GetPlayerTechCount(p, 'R0HF', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HE'), true) + GetPlayerTechCount(p, FourCC('R0HF'), true) > 0 then
             i=i + 1
         end
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o043'
+            a[a[0]]=FourCC('o043')
             
             b=b + 1
             if b >= i then break end
         end
     end
     
-    if GetPlayerTechCount(p, 'R0H8', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0H8'), true) == 1 and GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --Dranay
         i=1
         b=1
-        if GetPlayerTechCount(p, 'R0HE', true) + GetPlayerTechCount(p, 'R0HF', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HE'), true) + GetPlayerTechCount(p, FourCC('R0HF'), true) > 0 then
             i=i + 1
         end
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KX'
+            a[a[0]]=FourCC('h0KX')
             
             b=b + 1
             if b >= i then break end
@@ -21635,18 +21635,18 @@ function AT3Count()
     
     
     
-    if GetPlayerTechCount(p, 'R0H9', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0H9'), true) == 1 and GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --Worgen
         i=1
         b=1
         --Араторская
-        if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 1
         end
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0M2'
+            a[a[0]]=FourCC('h0M2')
             
             b=b + 1
             if b >= i then break end
@@ -21733,7 +21733,7 @@ function Trig_AK1T3_Actions()
     
     
      
-    UnitAddAbility(u, 'A17P')
+    UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -21751,7 +21751,7 @@ end
 -- Trigger: AK1Cav
 --===========================================================================
 function Trig_AK1Cav_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'hkni'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('hkni')
 end
 function ACavCount()
     local a = {}
@@ -21764,35 +21764,35 @@ function ACavCount()
     i=4
     while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KH'
+            a[a[0]]=FourCC('h0KH')
             b=b + 1
             if b >= i then break end
     end
     
-    if GetPlayerTechCount(p, 'R0H6', true) > 0 then
+    if GetPlayerTechCount(p, FourCC('R0H6'), true) > 0 then
         -- Штормград грифон
         b=1
         i=3
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='h0KE'
+                a[a[0]]=FourCC('h0KE')
                 b=b + 1
                 if b >= i then break end
         end
     end
     
-    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --Лордеронец
         i=1
         b=1
         
-        if GetPlayerTechCount(p, 'R0HV', true) > 1 then
+        if GetPlayerTechCount(p, FourCC('R0HV'), true) > 1 then
             i=i + 2
         end
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KW'
+            a[a[0]]=FourCC('h0KW')
             
             b=b + 1
             if b >= i then break end
@@ -21800,13 +21800,13 @@ function ACavCount()
     end
     
     
-    if GetPlayerTechCount(p, 'R0HJ', true) > 0 then
+    if GetPlayerTechCount(p, FourCC('R0HJ'), true) > 0 then
         -- Штормград грифон
         b=1
         i=3
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='h0MA'
+                a[a[0]]=FourCC('h0MA')
                 b=b + 1
                 if b >= i then break end
         end
@@ -21894,7 +21894,7 @@ function Trig_AK1Cav_Actions()
     
     
      
-    UnitAddAbility(u, 'A17P')
+    UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -21912,7 +21912,7 @@ end
 -- Trigger: AK2T1
 --===========================================================================
 function Trig_AK2T1_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'hrif'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('hrif')
 end
 function AK1Count()
     local a = {}
@@ -21925,35 +21925,35 @@ function AK1Count()
     i=4
     while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KA'
+            a[a[0]]=FourCC('h0KA')
             b=b + 1
             if b >= i then break end
     end
     
-    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --High elf
         i=1
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0L2'
+            a[a[0]]=FourCC('h0L2')
             
             b=b + 1
             if b >= i then break end
         end
     end
     
-    if GetPlayerTechCount(p, 'R0H5', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0H5'), true) == 1 and GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --Night elf
         i=1
         b=1
-        if GetPlayerTechCount(p, 'R0HE', true) + GetPlayerTechCount(p, 'R0HF', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HE'), true) + GetPlayerTechCount(p, FourCC('R0HF'), true) > 0 then
             i=i + 2
         end
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KN'
+            a[a[0]]=FourCC('h0KN')
             
             b=b + 1
             if b >= i then break end
@@ -22040,7 +22040,7 @@ function Trig_AK2T1_Actions()
     
     
      
-    UnitAddAbility(u, 'A17P')
+    UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -22058,7 +22058,7 @@ end
 -- Trigger: AK2T2
 --===========================================================================
 function Trig_AK2T2_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'h0K5'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0K5')
 end
 function AK2Count()
     local a = {}
@@ -22066,16 +22066,16 @@ function AK2Count()
     local b= 0
     local pi= GetPlayerId(p)
     a[0]=0
-    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         -- Dwarf
         
         i=4
-        if GetPlayerTechCount(p, 'R0HE', true) + GetPlayerTechCount(p, 'R0HF', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HE'), true) + GetPlayerTechCount(p, FourCC('R0HF'), true) > 0 then
             i=i + 2
         end
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='h0KO'
+                a[a[0]]=FourCC('h0KO')
                 b=b + 1
                 if b >= i then break end
         end
@@ -22085,25 +22085,25 @@ function AK2Count()
     i=1
     b=1
     --Араторская прибавка
-        if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 2
         end
     while true do
         a[0]=a[0] + 1
-        a[a[0]]='h0KB'
+        a[a[0]]=FourCC('h0KB')
         
         b=b + 1
         if b >= i then break end
     end
     
     --Ворген
-    if GetPlayerTechCount(p, 'R0H9', true) == 1 and GetPlayerTechCount(p, 'R0EH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0H9'), true) == 1 and GetPlayerTechCount(p, FourCC('R0EH'), true) < 1 then
         i=3
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0M3'
+            a[a[0]]=FourCC('h0M3')
             
             b=b + 1
             if b >= i then break end
@@ -22193,7 +22193,7 @@ function Trig_AK2T2_Actions()
     
     
      
-    UnitAddAbility(u, 'A17P')
+    UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -22211,7 +22211,7 @@ end
 -- Trigger: AK2T3
 --===========================================================================
 function Trig_AK2T3_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'h0K6'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0K6')
 end
 function AK3Count()
     local a = {}
@@ -22224,24 +22224,24 @@ function AK3Count()
     i=4
     while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0K9'
+            a[a[0]]=FourCC('h0K9')
             b=b + 1
             if b >= i then break end
     end
     
-    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --Лордеронец
         i=1
         b=1
         
         -- интеграция лордеронцев
-        if GetPlayerTechCount(p, 'R0HV', true) > 1 then
+        if GetPlayerTechCount(p, FourCC('R0HV'), true) > 1 then
             i=i + 2
         end
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KK'
+            a[a[0]]=FourCC('h0KK')
             
             b=b + 1
             if b >= i then break end
@@ -22249,16 +22249,16 @@ function AK3Count()
     end
     
     
-    if GetPlayerTechCount(p, 'R0H5', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0H5'), true) == 1 and GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --Night elf
         i=1
         b=1
-        if GetPlayerTechCount(p, 'R0HE', true) + GetPlayerTechCount(p, 'R0HF', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HE'), true) + GetPlayerTechCount(p, FourCC('R0HF'), true) > 0 then
             i=i + 3
         end
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0LZ'
+            a[a[0]]=FourCC('h0LZ')
             
             b=b + 1
             if b >= i then break end
@@ -22266,17 +22266,17 @@ function AK3Count()
     end
     
     
-    if GetPlayerTechCount(p, 'R0H9', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0H9'), true) == 1 and GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --Kultiras 
         i=1
         b=1
         --Араторская прибавка
-        if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 1
         end
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0M7'
+            a[a[0]]=FourCC('h0M7')
             
             b=b + 1
             if b >= i then break end
@@ -22365,7 +22365,7 @@ function Trig_AK2T3_Actions()
     
     
      
-    UnitAddAbility(u, 'A17P')
+    UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -22383,7 +22383,7 @@ end
 -- Trigger: AM1
 --===========================================================================
 function Trig_AM1_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'hmpr'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('hmpr')
 end
 function AM1Count()
     local a = {}
@@ -22392,39 +22392,39 @@ function AM1Count()
     local pi= GetPlayerId(p)
     a[0]=0
     
-    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         -- High elf
         
         i=2
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='h0KU'
+                a[a[0]]=FourCC('h0KU')
                 b=b + 1
                 if b >= i then break end
         end
     end
     
-    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --High eldf sorc
         b=0
         i=2
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KV'
+            a[a[0]]=FourCC('h0KV')
             
             b=b + 1
             if b >= i then break end
         end
     end
     
-    if GetPlayerTechCount(p, 'R0HE', true) + GetPlayerTechCount(p, 'R0HF', true) > 0 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0HE'), true) + GetPlayerTechCount(p, FourCC('R0HF'), true) > 0 and GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --High eldf sorc
         b=0
         i=2
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KY'
+            a[a[0]]=FourCC('h0KY')
             
             b=b + 1
             if b >= i then break end
@@ -22436,26 +22436,26 @@ function AM1Count()
     i=1
     b=1
     --Араторская прибавка
-    if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+    if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
         i=i + 1
     end
     
     while true do
         a[0]=a[0] + 1
-        a[a[0]]='h0KL'
+        a[a[0]]=FourCC('h0KL')
         
         b=b + 1
         if b >= i then break end
     end
     
     -- Light
-    if GetPlayerTechCount(p, 'R0HK', true) > 0 then
+    if GetPlayerTechCount(p, FourCC('R0HK'), true) > 0 then
         
         b=0
         i=3
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0MB'
+            a[a[0]]=FourCC('h0MB')
             
             b=b + 1
             if b >= i then break end
@@ -22543,7 +22543,7 @@ function Trig_AM1_Actions()
     
     
      
-    UnitAddAbility(u, 'A17P')
+    UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -22561,7 +22561,7 @@ end
 -- Trigger: AM2
 --===========================================================================
 function Trig_AM2_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'hsor'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('hsor')
 end
 function AM2Count()
     local a = {}
@@ -22574,22 +22574,22 @@ function AM2Count()
     i=4
     while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KM'
+            a[a[0]]=FourCC('h0KM')
             b=b + 1
             if b >= i then break end
     end
     
     
-    if GetPlayerTechCount(p, 'R0H5', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0H5'), true) == 1 and GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --Night elf
         i=1
         b=1
-        if GetPlayerTechCount(p, 'R0HE', true) + GetPlayerTechCount(p, 'R0HF', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HE'), true) + GetPlayerTechCount(p, FourCC('R0HF'), true) > 0 then
             i=i + 1
         end
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KT'
+            a[a[0]]=FourCC('h0KT')
             
             b=b + 1
             if b >= i then break end
@@ -22597,18 +22597,18 @@ function AM2Count()
     end
     
     
-    if GetPlayerTechCount(p, 'R0HD', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0HD'), true) == 1 and GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --Kultiras
         i=1
         b=1
         --Arathor
-        if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 1
         end
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0M5'
+            a[a[0]]=FourCC('h0M5')
             
             b=b + 1
             if b >= i then break end
@@ -22617,13 +22617,13 @@ function AM2Count()
     
     
     -- Void
-    if GetPlayerTechCount(p, 'R0HL', true) > 0 then
+    if GetPlayerTechCount(p, FourCC('R0HL'), true) > 0 then
         
         b=0
         i=3
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0MC'
+            a[a[0]]=FourCC('h0MC')
             
             b=b + 1
             if b >= i then break end
@@ -22710,7 +22710,7 @@ function Trig_AM2_Actions()
     
     
      
-    UnitAddAbility(u, 'A17P')
+    UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -22728,7 +22728,7 @@ end
 -- Trigger: AM3
 --===========================================================================
 function Trig_AM3_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'hspt'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('hspt')
 end
 function AM3Count()
     local a = {}
@@ -22738,36 +22738,36 @@ function AM3Count()
     a[0]=0
     
     -- ШРУ
-    if GetPlayerTechCount(p, 'R0HA', true) >= 1 then
+    if GetPlayerTechCount(p, FourCC('R0HA'), true) >= 1 then
         
         i=4
         b=0
         
         
         --Араторская прибавка
-        if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 1
         end
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='h0LU'
+                a[a[0]]=FourCC('h0LU')
                 b=b + 1
                 if b >= i then break end
         end
         
     end
     
-    if GetPlayerTechCount(p, 'R0H8', true) == 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0H8'), true) == 1 and GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         --Dranay
         i=1
         b=1
         -- Левые ветки
-        if GetPlayerTechCount(p, 'R0HE', true) + GetPlayerTechCount(p, 'R0HF', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HE'), true) + GetPlayerTechCount(p, FourCC('R0HF'), true) > 0 then
             i=i + 2
         end
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0KQ'
+            a[a[0]]=FourCC('h0KQ')
             
             b=b + 1
             if b >= i then break end
@@ -22775,17 +22775,17 @@ function AM3Count()
     end
     
     
-    if GetPlayerTechCount(p, 'R0HI', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0HI'), true) == 1 then
         --Dalaran
         i=3
         b=0
         --Араторская прибавка
-        if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 2
         end
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0M8'
+            a[a[0]]=FourCC('h0M8')
             
             b=b + 1
             if b >= i then break end
@@ -22830,7 +22830,7 @@ function Trig_AM3_Actions()
     
     
      
-    UnitAddAbility(u, 'A17P')
+    UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -22848,7 +22848,7 @@ end
 -- Trigger: AE1
 --===========================================================================
 function Trig_AE1_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'hmtm'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('hmtm')
 end
 function AE1Count()
     local a = {}
@@ -22856,17 +22856,17 @@ function AE1Count()
     local b= 0
     local pi= GetPlayerId(p)
     
-    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         -- Dwarf
         a[0]=0
         i=4
-        if GetPlayerTechCount(p, 'R0HE', true) + GetPlayerTechCount(p, 'R0HF', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HE'), true) + GetPlayerTechCount(p, FourCC('R0HF'), true) > 0 then
             i=i + 1
         
         end
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='h0KZ'
+                a[a[0]]=FourCC('h0KZ')
                 b=b + 1
                 if b >= i then break end
         end
@@ -22875,12 +22875,12 @@ function AE1Count()
     i=1
     b=1
     --Араторская прибавка
-    if GetPlayerTechCount(p, 'R0HG', true) > 0 then
+    if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
         i=i + 3
     end
     while true do
         a[0]=a[0] + 1
-        a[a[0]]='h0KP'
+        a[a[0]]=FourCC('h0KP')
         
         b=b + 1
         if b >= i then break end
@@ -22968,7 +22968,7 @@ function Trig_AE1_Actions()
     
     
      
-    UnitAddAbility(u, 'A17P')
+    UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -22986,7 +22986,7 @@ end
 -- Trigger: AE2
 --===========================================================================
 function Trig_AE2_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'hmtt'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('hmtt')
 end
 function AE2Count()
     local a = {}
@@ -22994,14 +22994,14 @@ function AE2Count()
     local b= 0
     local pi= GetPlayerId(p)
     a[0]=0
-    if GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         
-        if GetPlayerTechCount(p, 'R0HE', true) > 0 then
+        if GetPlayerTechCount(p, FourCC('R0HE'), true) > 0 then
             --New tank
             i=2
             while true do
                     a[0]=a[0] + 1
-                    a[a[0]]='h0KJ'
+                    a[a[0]]=FourCC('h0KJ')
                     b=b + 1
                     if b >= i then break end
             end
@@ -23011,7 +23011,7 @@ function AE2Count()
         i=4
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='h0KS'
+                a[a[0]]=FourCC('h0KS')
                 b=b + 1
                 if b >= i then break end
         end
@@ -23021,7 +23021,7 @@ function AE2Count()
         i=4
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='h0LY'
+                a[a[0]]=FourCC('h0LY')
                 b=b + 1
                 if b >= i then break end
         end
@@ -23030,13 +23030,13 @@ function AE2Count()
     
     
     -- Black Iron
-    if GetPlayerTechCount(p, 'R0HM', true) > 0 then
+    if GetPlayerTechCount(p, FourCC('R0HM'), true) > 0 then
         
         b=0
         i=3
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o044'
+            a[a[0]]=FourCC('o044')
             
             b=b + 1
             if b >= i then break end
@@ -23154,7 +23154,7 @@ end
 -- Trigger: AN1
 --===========================================================================
 function Trig_AN1_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'h0L0'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0L0')
 end
 function AN1Count()
     local a = {}
@@ -23167,20 +23167,20 @@ function AN1Count()
     i=4
     while true do
             a[0]=a[0] + 1
-            a[a[0]]='h00Y'
+            a[a[0]]=FourCC('h00Y')
             b=b + 1
             if b >= i then break end
     end
     
     
     -- Галеоны култираса
-    if GetPlayerTechCount(p, 'R0HD', true) >= 1 and GetPlayerTechCount(p, 'R0HH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0HD'), true) >= 1 and GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         i=3
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0M6'
+            a[a[0]]=FourCC('h0M6')
             
             b=b + 1
             if b >= i then break end
@@ -23303,7 +23303,7 @@ end
 -- Trigger: AN2
 --===========================================================================
 function Trig_AN2_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'h0L1'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0L1')
 end
 function AN2Count()
     local a = {}
@@ -23316,7 +23316,7 @@ function AN2Count()
     i=4
     while true do
             a[0]=a[0] + 1
-            a[a[0]]='h00Z'
+            a[a[0]]=FourCC('h00Z')
             b=b + 1
             if b >= i then break end
     end
@@ -23456,7 +23456,7 @@ end
 -- Trigger: OldAllianceForever
 --===========================================================================
 function Trig_OldAllianceForever_Conditions()
-    return GetResearched() == 'R0DW'
+    return GetResearched() == FourCC('R0DW')
 end
 function Trig_OldAllianceForever_Actions()
     local u= GetTriggerUnit()
@@ -23465,9 +23465,9 @@ function Trig_OldAllianceForever_Actions()
     udg_MainPrice[pi]=udg_MainPrice[pi] - 15
     
     --Запретил ветки
-    SetPlayerTechMaxAllowed(p, 'R0HS', 0)
-    SetPlayerTechMaxAllowed(p, 'R0HR', 0)
-    SetPlayerTechMaxAllowed(p, 'R0HQ', 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HS'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HR'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HQ'), 0)
 end
 --===========================================================================
 function InitTrig_OldAllianceForever()
@@ -23480,13 +23480,13 @@ end
 -- Trigger: BegEvery
 --===========================================================================
 function Trig_BegEvery_Func001C()
-    if ( ( GetResearched() == 'R0HS' ) ) then
+    if ( ( GetResearched() == FourCC('R0HS') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0HR' ) ) then
+    if ( ( GetResearched() == FourCC('R0HR') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0HQ' ) ) then
+    if ( ( GetResearched() == FourCC('R0HQ') ) ) then
         return true
     end
     return false
@@ -23498,7 +23498,7 @@ function Trig_BegEvery_Conditions()
     return true
 end
 function Trig_BegEvery_Actions()
-    SetPlayerTechMaxAllowedSwap('R0GX', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GX'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_BegEvery()
@@ -23511,37 +23511,37 @@ end
 -- Trigger: CanEvery
 --===========================================================================
 function Trig_CanEvery_Func001Func001C()
-    if ( not ( GetResearched() == 'R0HS' ) ) then
+    if ( not ( GetResearched() == FourCC('R0HS') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R0HR', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0HR'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R0HQ', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0HQ'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
         return false
     end
     return true
 end
 function Trig_CanEvery_Func001Func002C()
-    if ( not ( GetResearched() == 'R0HR' ) ) then
+    if ( not ( GetResearched() == FourCC('R0HR') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R0HS', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0HS'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R0HQ', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0HQ'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
         return false
     end
     return true
 end
 function Trig_CanEvery_Func001Func003C()
-    if ( not ( GetResearched() == 'R0HQ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0HQ') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R0HS', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0HS'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R0HR', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0HR'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
         return false
     end
     return true
@@ -23565,7 +23565,7 @@ function Trig_CanEvery_Conditions()
     return true
 end
 function Trig_CanEvery_Actions()
-    SetPlayerTechMaxAllowedSwap('R0GX', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GX'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_CanEvery()
@@ -23578,15 +23578,15 @@ end
 -- Trigger: BegForever
 --===========================================================================
 function Trig_BegForever_Conditions()
-    if ( not ( GetResearched() == 'R0GX' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GX') ) ) then
         return false
     end
     return true
 end
 function Trig_BegForever_Actions()
-    SetPlayerTechMaxAllowedSwap('R0HR', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0HS', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0HQ', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HR'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HS'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HQ'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_BegForever()
@@ -23599,15 +23599,15 @@ end
 -- Trigger: CanForver
 --===========================================================================
 function Trig_CanForver_Conditions()
-    if ( not ( GetResearched() == 'R0GX' ) ) then
+    if ( not ( GetResearched() == FourCC('R0GX') ) ) then
         return false
     end
     return true
 end
 function Trig_CanForver_Actions()
-    SetPlayerTechMaxAllowedSwap('R0HR', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0HS', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0HQ', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HR'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HS'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HQ'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_CanForver()
@@ -23623,29 +23623,29 @@ end
 --===========================================================================
 function EndBranch()
     --New Allies
-    SetPlayerTechMaxAllowed(p, 'R0HS', 0)
-    SetPlayerTechMaxAllowed(p, 'R0H5', 0)
-    SetPlayerTechMaxAllowed(p, 'R0H8', 0)
-    SetPlayerTechMaxAllowed(p, 'R0HB', 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HS'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0H5'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0H8'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HB'), 0)
     
     --Old allies
-    SetPlayerTechMaxAllowed(p, 'R0HQ', 0)
-    SetPlayerTechMaxAllowed(p, 'R0HV', 0)
-    SetPlayerTechMaxAllowed(p, 'R0H9', 0)
-    SetPlayerTechMaxAllowed(p, 'R0HD', 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HQ'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HV'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0H9'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HD'), 0)
     
     --Human
-    SetPlayerTechMaxAllowed(p, 'R0HR', 0)
-    SetPlayerTechMaxAllowed(p, 'R0H6', 0)
-    SetPlayerTechMaxAllowed(p, 'R0HA', 0)
-    SetPlayerTechMaxAllowed(p, 'R0H7', 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HR'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0H6'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HA'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0H7'), 0)
   
 end
 --===========================================================================
 -- Trigger: NewAllies
 --===========================================================================
 function Trig_NewAllies_Conditions()
-    return GetResearched() == 'R0HS'
+    return GetResearched() == FourCC('R0HS')
 end
 function Trig_NewAllies_Actions()
     local u= GetTriggerUnit()
@@ -23653,8 +23653,8 @@ function Trig_NewAllies_Actions()
     local pi= GetPlayerId(p)
     AcountAll(p)
     
-    SetPlayerTechMaxAllowed(p, 'R0H5', 1)
-    SetPlayerTechMaxAllowed(p, 'R0GX', 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0H5'), 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0GX'), 0)
     
     
 end
@@ -23669,7 +23669,7 @@ end
 -- Trigger: NightElf
 --===========================================================================
 function Trig_NightElf_Conditions()
-    return GetResearched() == 'R0H5'
+    return GetResearched() == FourCC('R0H5')
 end
 function Trig_NightElf_Actions()
     local u= GetTriggerUnit()
@@ -23677,7 +23677,7 @@ function Trig_NightElf_Actions()
     local pi= GetPlayerId(p)
     AcountAll(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] - 4
-    SetPlayerTechMaxAllowed(p, 'R0H8', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0H8'), 1)
     
     
     
@@ -23693,7 +23693,7 @@ end
 -- Trigger: Drayenay
 --===========================================================================
 function Trig_Drayenay_Conditions()
-    return GetResearched() == 'R0H8'
+    return GetResearched() == FourCC('R0H8')
 end
 function Trig_Drayenay_Actions()
     local u= GetTriggerUnit()
@@ -23701,8 +23701,8 @@ function Trig_Drayenay_Actions()
     local pi= GetPlayerId(p)
     AcountAll(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] - 2
-    SetPlayerTechMaxAllowed(p, 'R0HB', 1)
-    SetPlayerTechResearched(p, 'R0H0', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HB'), 1)
+    SetPlayerTechResearched(p, FourCC('R0H0'), 1)
     
     
     
@@ -23718,7 +23718,7 @@ end
 -- Trigger: APandarens
 --===========================================================================
 function Trig_APandarens_Conditions()
-    return GetResearched() == 'R0HB'
+    return GetResearched() == FourCC('R0HB')
 end
 function Trig_APandarens_Actions()
     local u= GetTriggerUnit()
@@ -23728,12 +23728,12 @@ function Trig_APandarens_Actions()
     udg_MainPrice[pi]=udg_MainPrice[pi] - 2
     
     
-    if GetPlayerTechCount(p, 'R001', true) < 1 then
-        SetPlayerTechMaxAllowed(p, 'R0HE', 1)
+    if GetPlayerTechCount(p, FourCC('R001'), true) < 1 then
+        SetPlayerTechMaxAllowed(p, FourCC('R0HE'), 1)
         
         --Союз равных
-        if GetPlayerTechCount(p, 'R0HD', true) > 0 then
-            SetPlayerTechMaxAllowed(p, 'R0HF', 1)
+        if GetPlayerTechCount(p, FourCC('R0HD'), true) > 0 then
+            SetPlayerTechMaxAllowed(p, FourCC('R0HF'), 1)
         end
         
     end
@@ -23752,15 +23752,15 @@ end
 -- Trigger: BegDec
 --===========================================================================
 function Trig_BegDec_Conditions()
-    if ( not ( GetResearched() == 'R0HE' ) ) then
+    if ( not ( GetResearched() == FourCC('R0HE') ) ) then
         return false
     end
     return true
 end
 function Trig_BegDec_Actions()
-    SetPlayerTechMaxAllowedSwap('R0HG', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0HH', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0HF', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HG'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HH'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HF'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_BegDec()
@@ -23773,7 +23773,7 @@ end
 -- Trigger: Decentralization
 --===========================================================================
 function Trig_Decentralization_Conditions()
-    return GetResearched() == 'R0HE'
+    return GetResearched() == FourCC('R0HE')
 end
 function Trig_Decentralization_Actions()
     local u= GetTriggerUnit()
@@ -23782,8 +23782,8 @@ function Trig_Decentralization_Actions()
     AcountAll(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] - 6
     --call SetPlayerTechMaxAllowed(p, 'R0HE', 1)
-    SetPlayerTechMaxAllowed(p, 'R0HC', 1)
-    SetPlayerTechResearched(p, 'R001', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HC'), 1)
+    SetPlayerTechResearched(p, FourCC('R001'), 1)
     EndBranch(p)
     
 end
@@ -23798,15 +23798,15 @@ end
 -- Trigger: BegUnion
 --===========================================================================
 function Trig_BegUnion_Conditions()
-    if ( not ( GetResearched() == 'R0HF' ) ) then
+    if ( not ( GetResearched() == FourCC('R0HF') ) ) then
         return false
     end
     return true
 end
 function Trig_BegUnion_Actions()
-    SetPlayerTechMaxAllowedSwap('R0HG', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0HH', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0HE', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HG'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HH'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HE'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_BegUnion()
@@ -23819,7 +23819,7 @@ end
 -- Trigger: Union
 --===========================================================================
 function Trig_Union_Conditions()
-    return GetResearched() == 'R0HF'
+    return GetResearched() == FourCC('R0HF')
 end
 function Trig_Union_Actions()
     local u= GetTriggerUnit()
@@ -23827,11 +23827,11 @@ function Trig_Union_Actions()
     local pi= GetPlayerId(p)
     AcountAll(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] - 10
-    SetPlayerTechMaxAllowed(p, 'R0HK', 1)
-    SetPlayerTechMaxAllowed(p, 'R0HL', 1)
-    SetPlayerTechMaxAllowed(p, 'R0HM', 1)
-    SetPlayerTechMaxAllowed(p, 'R0HC', 1)
-    SetPlayerTechResearched(p, 'R001', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HK'), 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HL'), 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HM'), 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HC'), 1)
+    SetPlayerTechResearched(p, FourCC('R001'), 1)
     EndBranch(p)
     
     
@@ -23848,7 +23848,7 @@ end
 -- Trigger: VoidElfes
 --===========================================================================
 function Trig_VoidElfes_Conditions()
-    return GetResearched() == 'R0HL'
+    return GetResearched() == FourCC('R0HL')
 end
 function Trig_VoidElfes_Actions()
     local u= GetTriggerUnit()
@@ -23872,7 +23872,7 @@ end
 -- Trigger: LightArmy
 --===========================================================================
 function Trig_LightArmy_Conditions()
-    return GetResearched() == 'R0HK'
+    return GetResearched() == FourCC('R0HK')
 end
 function Trig_LightArmy_Actions()
     local u= GetTriggerUnit()
@@ -23896,7 +23896,7 @@ end
 -- Trigger: BlackIron
 --===========================================================================
 function Trig_BlackIron_Conditions()
-    return GetResearched() == 'R0HM'
+    return GetResearched() == FourCC('R0HM')
 end
 function Trig_BlackIron_Actions()
     local u= GetTriggerUnit()
@@ -23920,7 +23920,7 @@ end
 -- Trigger: OldAllies
 --===========================================================================
 function Trig_OldAllies_Conditions()
-    return GetResearched() == 'R0HQ'
+    return GetResearched() == FourCC('R0HQ')
 end
 function Trig_OldAllies_Actions()
     local u= GetTriggerUnit()
@@ -23928,8 +23928,8 @@ function Trig_OldAllies_Actions()
     local pi= GetPlayerId(p)
     AcountAll(p)
     
-    SetPlayerTechMaxAllowed(p, 'R0HV', 1)
-    SetPlayerTechMaxAllowed(p, 'R0GX', 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HV'), 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0GX'), 0)
     
     
 end
@@ -23944,7 +23944,7 @@ end
 -- Trigger: LordaeronAndTeramor
 --===========================================================================
 function Trig_LordaeronAndTeramor_Conditions()
-    return GetResearched() == 'R0HV'
+    return GetResearched() == FourCC('R0HV')
 end
 function Trig_LordaeronAndTeramor_Actions()
     local u= GetTriggerUnit()
@@ -23952,7 +23952,7 @@ function Trig_LordaeronAndTeramor_Actions()
     local pi= GetPlayerId(p)
     AcountAll(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] + 3
-    SetPlayerTechMaxAllowed(p, 'R0H9', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0H9'), 1)
     
     
     
@@ -23968,7 +23968,7 @@ end
 -- Trigger: Gilneas
 --===========================================================================
 function Trig_Gilneas_Conditions()
-    return GetResearched() == 'R0H9'
+    return GetResearched() == FourCC('R0H9')
 end
 function Trig_Gilneas_Actions()
     local u= GetTriggerUnit()
@@ -23976,7 +23976,7 @@ function Trig_Gilneas_Actions()
     local pi= GetPlayerId(p)
     AcountAll(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] + 2
-    SetPlayerTechMaxAllowed(p, 'R0HD', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HD'), 1)
     
     
     
@@ -23992,7 +23992,7 @@ end
 -- Trigger: Kultiras
 --===========================================================================
 function Trig_Kultiras_Conditions()
-    return GetResearched() == 'R0HD'
+    return GetResearched() == FourCC('R0HD')
 end
 function Trig_Kultiras_Actions()
     local u= GetTriggerUnit()
@@ -24001,15 +24001,15 @@ function Trig_Kultiras_Actions()
     AcountAll(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] + 3
     
-    if GetPlayerTechCount(p, 'R001', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R001'), true) < 1 then
         --Союз равных
-        if GetPlayerTechCount(p, 'R0HB', true) > 0 then
-            SetPlayerTechMaxAllowed(p, 'R0HF', 1)
+        if GetPlayerTechCount(p, FourCC('R0HB'), true) > 0 then
+            SetPlayerTechMaxAllowed(p, FourCC('R0HF'), 1)
         end
         
         --Союз аратора
-        if GetPlayerTechCount(p, 'R0H7', true) > 0 then
-            SetPlayerTechMaxAllowed(p, 'R0HG', 1)
+        if GetPlayerTechCount(p, FourCC('R0H7'), true) > 0 then
+            SetPlayerTechMaxAllowed(p, FourCC('R0HG'), 1)
         end
     end
     
@@ -24027,15 +24027,15 @@ end
 -- Trigger: BegArat
 --===========================================================================
 function Trig_BegArat_Conditions()
-    if ( not ( GetResearched() == 'R0HG' ) ) then
+    if ( not ( GetResearched() == FourCC('R0HG') ) ) then
         return false
     end
     return true
 end
 function Trig_BegArat_Actions()
-    SetPlayerTechMaxAllowedSwap('R0HE', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0HH', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0HF', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HE'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HH'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HF'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_BegArat()
@@ -24048,7 +24048,7 @@ end
 -- Trigger: Arathor
 --===========================================================================
 function Trig_Arathor_Conditions()
-    return GetResearched() == 'R0HG'
+    return GetResearched() == FourCC('R0HG')
 end
 function Trig_Arathor_Actions()
     local u= GetTriggerUnit()
@@ -24056,10 +24056,10 @@ function Trig_Arathor_Actions()
     local pi= GetPlayerId(p)
     AcountAll(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] - 10
-    SetPlayerTechMaxAllowed(p, 'R0HJ', 1)
-    SetPlayerTechMaxAllowed(p, 'R0HI', 1)
-    SetPlayerTechMaxAllowed(p, 'R0HC', 1)
-    SetPlayerTechResearched(p, 'R001', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HJ'), 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HI'), 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HC'), 1)
+    SetPlayerTechResearched(p, FourCC('R001'), 1)
     EndBranch(p)
     
     
@@ -24076,7 +24076,7 @@ end
 -- Trigger: Stromgarge
 --===========================================================================
 function Trig_Stromgarge_Conditions()
-    return GetResearched() == 'R0HJ'
+    return GetResearched() == FourCC('R0HJ')
 end
 function Trig_Stromgarge_Actions()
     local u= GetTriggerUnit()
@@ -24100,7 +24100,7 @@ end
 -- Trigger: Dalaran
 --===========================================================================
 function Trig_Dalaran_Conditions()
-    return GetResearched() == 'R0HI'
+    return GetResearched() == FourCC('R0HI')
 end
 function Trig_Dalaran_Actions()
     local u= GetTriggerUnit()
@@ -24109,7 +24109,7 @@ function Trig_Dalaran_Actions()
     AcountAll(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] - 3
     
-    SetPlayerTechResearched(p, 'R0H0', 1)
+    SetPlayerTechResearched(p, FourCC('R0H0'), 1)
     
     
     
@@ -24125,7 +24125,7 @@ end
 -- Trigger: FinStormwind
 --===========================================================================
 function Trig_FinStormwind_Conditions()
-    return GetResearched() == 'R0HR'
+    return GetResearched() == FourCC('R0HR')
 end
 function Trig_FinStormwind_Actions()
     local u= GetTriggerUnit()
@@ -24133,8 +24133,8 @@ function Trig_FinStormwind_Actions()
     local pi= GetPlayerId(p)
     AcountAll(p)
     
-    SetPlayerTechMaxAllowed(p, 'R0H6', 1)
-    SetPlayerTechMaxAllowed(p, 'R0GX', 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0H6'), 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0GX'), 0)
     
     
 end
@@ -24150,7 +24150,7 @@ end
 --===========================================================================
 function Trig_Fin7Legion_Conditions()
     
-    return GetResearched() == 'R0H6'
+    return GetResearched() == FourCC('R0H6')
 end
 function Trig_Fin7Legion_Actions()
     local u= GetTriggerUnit()
@@ -24159,7 +24159,7 @@ function Trig_Fin7Legion_Actions()
     AcountAll(p)
     
     udg_MainPrice[pi]=udg_MainPrice[pi] + 4
-    SetPlayerTechMaxAllowed(p, 'R0HA', 2)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HA'), 2)
 end
 --===========================================================================
 function InitTrig_Fin7Legion()
@@ -24172,7 +24172,7 @@ end
 -- Trigger: FinSRU
 --===========================================================================
 function Trig_FinSRU_Conditions()
-    return GetResearched() == 'R0HA'
+    return GetResearched() == FourCC('R0HA')
 end
 function Trig_FinSRU_Actions()
     local u= GetTriggerUnit()
@@ -24180,8 +24180,8 @@ function Trig_FinSRU_Actions()
     local pi= GetPlayerId(p)
     AcountAll(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] + 3
-    SetPlayerTechMaxAllowed(p, 'R0H7', 1)
-    SetPlayerTechResearched(p, 'R0H0', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0H7'), 1)
+    SetPlayerTechResearched(p, FourCC('R0H0'), 1)
 end
 --===========================================================================
 function InitTrig_FinSRU()
@@ -24194,7 +24194,7 @@ end
 -- Trigger: FinHoly
 --===========================================================================
 function Trig_FinHoly_Conditions()
-    return GetResearched() == 'R0H7'
+    return GetResearched() == FourCC('R0H7')
 end
 function Trig_FinHoly_Actions()
     local u= GetTriggerUnit()
@@ -24203,12 +24203,12 @@ function Trig_FinHoly_Actions()
     AcountAll(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] + 3
     
-    if GetPlayerTechCount(p, 'R001', true) < 1 then
-        SetPlayerTechMaxAllowed(p, 'R0HH', 1)
+    if GetPlayerTechCount(p, FourCC('R001'), true) < 1 then
+        SetPlayerTechMaxAllowed(p, FourCC('R0HH'), 1)
     
         --Союз аратора
-        if GetPlayerTechCount(p, 'R0HD', true) > 0 then
-            SetPlayerTechMaxAllowed(p, 'R0HG', 1)
+        if GetPlayerTechCount(p, FourCC('R0HD'), true) > 0 then
+            SetPlayerTechMaxAllowed(p, FourCC('R0HG'), 1)
         end
     end
  
@@ -24224,15 +24224,15 @@ end
 -- Trigger: BegStorm
 --===========================================================================
 function Trig_BegStorm_Conditions()
-    if ( not ( GetResearched() == 'R0HH' ) ) then
+    if ( not ( GetResearched() == FourCC('R0HH') ) ) then
         return false
     end
     return true
 end
 function Trig_BegStorm_Actions()
-    SetPlayerTechMaxAllowedSwap('R0HE', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0HG', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0HF', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HE'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HG'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HF'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_BegStorm()
@@ -24245,7 +24245,7 @@ end
 -- Trigger: StormwindFirst
 --===========================================================================
 function Trig_StormwindFirst_Conditions()
-    return GetResearched() == 'R0HH'
+    return GetResearched() == FourCC('R0HH')
 end
 function Trig_StormwindFirst_Actions()
     local u= GetTriggerUnit()
@@ -24256,31 +24256,31 @@ function Trig_StormwindFirst_Actions()
     
     
     -- Бонусы левая 
-    if GetPlayerTechCount(p, 'R0HS', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0HS'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
     end
-    if GetPlayerTechCount(p, 'R0H8', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0H8'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
     end
-    if GetPlayerTechCount(p, 'R0HB', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0HB'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
     end
     
     --Центр
-    if GetPlayerTechCount(p, 'R0H9', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0H9'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
     end
-    if GetPlayerTechCount(p, 'R0H9', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0H9'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
     end
-    if GetPlayerTechCount(p, 'R0HD', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0HD'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
     end
     
     AcountAll(p)
-    SetPlayerTechMaxAllowed(p, 'R0HN', 1)
-    SetPlayerTechMaxAllowed(p, 'R0HC', 1)
-    SetPlayerTechResearched(p, 'R001', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HN'), 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0HC'), 1)
+    SetPlayerTechResearched(p, FourCC('R001'), 1)
     EndBranch(p)
 end
 --===========================================================================
@@ -24294,7 +24294,7 @@ end
 -- Trigger: RememberLothar
 --===========================================================================
 function Trig_RememberLothar_Conditions()
-    return GetResearched() == 'R0HN'
+    return GetResearched() == FourCC('R0HN')
 end
 function Trig_RememberLothar_Actions()
     local u= GetTriggerUnit()
@@ -24315,7 +24315,7 @@ end
 -- Trigger: TankFire
 --===========================================================================
 function Trig_TankFire_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A19N') > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker())) and Random(7 , 100)
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A19N')) > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker())) and Random(7 , 100)
 end
 function Trig_TankFire_Actions()
     IssueTargetOrder(GetAttacker(), "breathoffire", GetTriggerUnit())
@@ -24332,12 +24332,12 @@ end
 -- Trigger: Kristall2
 --===========================================================================
 function Trig_Kristall2_Conditions()
-    return GetSpellAbilityId() == 'A19S'
+    return GetSpellAbilityId() == FourCC('A19S')
 end
 function Trig_Kristall2_Actions()
-    local u=  CreateUnit(GetOwningPlayer(GetTriggerUnit()), 'o040', GetSpellTargetX(), GetSpellTargetY(), bj_UNIT_FACING)
+    local u=  CreateUnit(GetOwningPlayer(GetTriggerUnit()), FourCC('o040'), GetSpellTargetX(), GetSpellTargetY(), bj_UNIT_FACING)
     IssueImmediateOrder(u, "manaflareon")
-    UnitApplyTimedLife(u, 'BTLF', 30.00)
+    UnitApplyTimedLife(u, FourCC('BTLF'), 30.00)
     u=null
 end
 --===========================================================================
@@ -24351,7 +24351,7 @@ end
 -- Trigger: HolyHelp
 --===========================================================================
 function Trig_HolyHelp_Conditions()
-    return ( GetUnitAbilityLevel(GetEventDamageSource(), 'A18X') > 0 or GetUnitAbilityLevel(GetEventDamageSource(), 'A19F') > 0 ) and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
+    return ( GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A18X')) > 0 or GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A19F')) > 0 ) and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
 end
 function Trig_HolyHelp_Actions()
     local u= GetEventDamageSource()
@@ -24374,7 +24374,7 @@ end
 -- Trigger: WorgenSpell
 --===========================================================================
 function Trig_WorgenSpell_Conditions()
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A19X') > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A19X')) > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
 end
 function Trig_WorgenSpell_Actions()
     local u= GetEventDamageSource()
@@ -24397,12 +24397,12 @@ end
 -- Trigger: MagicUsk
 --===========================================================================
 function Trig_MagicUsk_Conditions()
-    return GetSpellAbilityId() == 'A180'
+    return GetSpellAbilityId() == FourCC('A180')
 end
 function Trig_MagicUsk_Actions()
     local u= GetSpellTargetUnit()
-    UnitAddAbility(u, 'A182')
-    RemoveAbilityTimed(u , 'A182' , 15)
+    UnitAddAbility(u, FourCC('A182'))
+    RemoveAbilityTimed(u , FourCC('A182') , 15)
     u=null
 end
 --===========================================================================
@@ -24416,15 +24416,15 @@ end
 -- Trigger: Illusions
 --===========================================================================
 function Trig_Illusions_Conditions()
-    return GetSpellAbilityId() == 'A1A5'
+    return GetSpellAbilityId() == FourCC('A1A5')
 end
 function Trig_Illusions_Actions()
     local u= GetSpellTargetUnit()
     
     if not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_HERO) then
-        UnitAddAbility(u, 'AInv')
-        UnitAddItemByIdSwapped('I020', u)
-        RemoveAbilityTimed(u , 'AInv' , 1)
+        UnitAddAbility(u, FourCC('AInv'))
+        UnitAddItemByIdSwapped(FourCC('I020'), u)
+        RemoveAbilityTimed(u , FourCC('AInv') , 1)
         
     end
     
@@ -24443,14 +24443,14 @@ end
 -- Trigger: MassMolot
 --===========================================================================
 function Trig_MassMolot_Conditions()
-    return GetSpellAbilityId() == 'AHtb'
+    return GetSpellAbilityId() == FourCC('AHtb')
 end
 function Trig_MassMolot_Actions()
     local l= GetUnitLoc(GetTriggerUnit())
     local p= GetOwningPlayer(GetTriggerUnit())
     
     local bex= Condition(EnemEl)
-    local level= GetUnitAbilityLevelSwapped('AHtb', GetTriggerUnit())
+    local level= GetUnitAbilityLevelSwapped(FourCC('AHtb'), GetTriggerUnit())
     local g= CreateGroup()
     local u
     local u2
@@ -24464,11 +24464,11 @@ function Trig_MassMolot_Actions()
         u=FirstOfGroup(g)
         if i >= ( 4 * level ) or u == null then break end
         
-        u2=CreateUnitAtLoc(p, 'H0BN', l, bj_UNIT_FACING)
+        u2=CreateUnitAtLoc(p, FourCC('H0BN'), l, bj_UNIT_FACING)
         RemoveUnitTimed(u2 , 2)
-        UnitAddAbility(u2, 'A17Z')
+        UnitAddAbility(u2, FourCC('A17Z'))
         SetUnitManaBJ(u2, 1111111.00)
-        SetUnitAbilityLevel(u2, 'A17Z', level)
+        SetUnitAbilityLevel(u2, FourCC('A17Z'), level)
         IssueTargetOrder(u2, "thunderbolt", u)
         
         i=i + 1
@@ -24496,7 +24496,7 @@ end
 -- Trigger: VarianCharge
 --===========================================================================
 function Trig_VarianCharge_Conditions()
-    return GetSpellAbilityId() == 'A1AG'
+    return GetSpellAbilityId() == FourCC('A1AG')
 end
 --================================================================================================================================================================================
 -- Этам 2 - двигаем героя
@@ -24601,8 +24601,8 @@ function Trig_VarianCharge_Actions()
     local l= JSTRRastMT(x , x1 , y , y1)
     
     JSTRSkill=GetSpellAbilityId()
-    UnitAddAbility(GT, 'Amrf')
-    UnitRemoveAbility(GT, 'Amrf')
+    UnitAddAbility(GT, FourCC('Amrf'))
+    UnitRemoveAbility(GT, FourCC('Amrf'))
     ---------
     SaveUnitHandle(Hash, h, 1, GT)
     if l ~= 0 then
@@ -24630,24 +24630,24 @@ end
 -- Trigger: VariarTaunt
 --===========================================================================
 function Trig_VariarTaunt_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1AM' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1AM') ) ) then
         return false
     end
     return true
 end
 function Trig_VariarTaunt_Func004C()
-    if ( not ( GetUnitAbilityLevelSwapped('A1AL', GetTriggerUnit()) > 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A1AL'), GetTriggerUnit()) > 1 ) ) then
         return false
     end
     return true
 end
 function Trig_VariarTaunt_Actions()
-    BlzUnitHideAbility(GetTriggerUnit(), 'A1AL', true)
-    UnitAddAbilityBJ('A1AK', GetTriggerUnit())
-    UnitAddAbilityBJ('A1AJ', GetTriggerUnit())
+    BlzUnitHideAbility(GetTriggerUnit(), FourCC('A1AL'), true)
+    UnitAddAbilityBJ(FourCC('A1AK'), GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A1AJ'), GetTriggerUnit())
     if ( Trig_VariarTaunt_Func004C() ) then
-        SetUnitAbilityLevelSwapped('A1AJ', GetTriggerUnit(), 2)
-        SetUnitAbilityLevelSwapped('A1AK', GetTriggerUnit(), 2)
+        SetUnitAbilityLevelSwapped(FourCC('A1AJ'), GetTriggerUnit(), 2)
+        SetUnitAbilityLevelSwapped(FourCC('A1AK'), GetTriggerUnit(), 2)
     else
     end
 end
@@ -24663,16 +24663,16 @@ end
 -- Trigger: VariarTitan
 --===========================================================================
 function Trig_VariarTitan_Conditions()
-    return GetSpellAbilityId() == 'A1AO'
+    return GetSpellAbilityId() == FourCC('A1AO')
 end
 function Trig_VariarTitan_Actions()
-    BlzUnitHideAbility(GetTriggerUnit(), 'A1AL', true)
-    UnitAddAbilityBJ('A1AP', GetTriggerUnit())
-    UnitAddAbilityBJ('A1AQ', GetTriggerUnit())
-    UnitAddAbilityBJ('A1AR', GetTriggerUnit())
-    if GetUnitAbilityLevelSwapped('A1AL', GetTriggerUnit()) > 1 then
-        SetUnitAbilityLevelSwapped('A1AQ', GetTriggerUnit(), 2)
-        SetUnitAbilityLevelSwapped('A1AR', GetTriggerUnit(), 2)
+    BlzUnitHideAbility(GetTriggerUnit(), FourCC('A1AL'), true)
+    UnitAddAbilityBJ(FourCC('A1AP'), GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A1AQ'), GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A1AR'), GetTriggerUnit())
+    if GetUnitAbilityLevelSwapped(FourCC('A1AL'), GetTriggerUnit()) > 1 then
+        SetUnitAbilityLevelSwapped(FourCC('A1AQ'), GetTriggerUnit(), 2)
+        SetUnitAbilityLevelSwapped(FourCC('A1AR'), GetTriggerUnit(), 2)
     end
     
     
@@ -24688,16 +24688,16 @@ end
 -- Trigger: VariarDamager
 --===========================================================================
 function Trig_VariarDamager_Conditions()
-    return GetSpellAbilityId() == 'A1AS'
+    return GetSpellAbilityId() == FourCC('A1AS')
 end
 function Trig_VariarDamager_Actions()
-    BlzUnitHideAbility(GetTriggerUnit(), 'A1AL', true)
-    UnitAddAbilityBJ('A1AU', GetTriggerUnit())
-    UnitAddAbilityBJ('A1AT', GetTriggerUnit())
+    BlzUnitHideAbility(GetTriggerUnit(), FourCC('A1AL'), true)
+    UnitAddAbilityBJ(FourCC('A1AU'), GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A1AT'), GetTriggerUnit())
     
-    if GetUnitAbilityLevelSwapped('A1AL', GetTriggerUnit()) > 1 then
-        SetUnitAbilityLevelSwapped('A1AU', GetTriggerUnit(), 2)
-        SetUnitAbilityLevelSwapped('A1AT', GetTriggerUnit(), 2)
+    if GetUnitAbilityLevelSwapped(FourCC('A1AL'), GetTriggerUnit()) > 1 then
+        SetUnitAbilityLevelSwapped(FourCC('A1AU'), GetTriggerUnit(), 2)
+        SetUnitAbilityLevelSwapped(FourCC('A1AT'), GetTriggerUnit(), 2)
     end
     
     
@@ -24713,23 +24713,23 @@ end
 -- Trigger: Level2
 --===========================================================================
 function Trig_Level2_Conditions()
-    return GetLearnedSkillBJ() == 'A1AL' and GetLearnedSkillLevel() == 2
+    return GetLearnedSkillBJ() == FourCC('A1AL') and GetLearnedSkillLevel() == 2
 end
 function Trig_Level2_Actions()
     --Tank
-    if GetUnitAbilityLevelSwapped('A1AJ', GetTriggerUnit()) ~= 0 then
-        SetUnitAbilityLevelSwapped('A1AK', GetTriggerUnit(), 2)
-        SetUnitAbilityLevelSwapped('A1AJ', GetTriggerUnit(), 2)
+    if GetUnitAbilityLevelSwapped(FourCC('A1AJ'), GetTriggerUnit()) ~= 0 then
+        SetUnitAbilityLevelSwapped(FourCC('A1AK'), GetTriggerUnit(), 2)
+        SetUnitAbilityLevelSwapped(FourCC('A1AJ'), GetTriggerUnit(), 2)
     end
     --Titan
-    if GetUnitAbilityLevelSwapped('A1AR', GetTriggerUnit()) ~= 0 then
-        SetUnitAbilityLevelSwapped('A1AR', GetTriggerUnit(), 2)
-        SetUnitAbilityLevelSwapped('A1AQ', GetTriggerUnit(), 2)
+    if GetUnitAbilityLevelSwapped(FourCC('A1AR'), GetTriggerUnit()) ~= 0 then
+        SetUnitAbilityLevelSwapped(FourCC('A1AR'), GetTriggerUnit(), 2)
+        SetUnitAbilityLevelSwapped(FourCC('A1AQ'), GetTriggerUnit(), 2)
     end
     --Damager
-    if GetUnitAbilityLevelSwapped('A1AU', GetTriggerUnit()) ~= 0 then
-        SetUnitAbilityLevelSwapped('A1AU', GetTriggerUnit(), 2)
-        SetUnitAbilityLevelSwapped('A1AT', GetTriggerUnit(), 2)
+    if GetUnitAbilityLevelSwapped(FourCC('A1AU'), GetTriggerUnit()) ~= 0 then
+        SetUnitAbilityLevelSwapped(FourCC('A1AU'), GetTriggerUnit(), 2)
+        SetUnitAbilityLevelSwapped(FourCC('A1AT'), GetTriggerUnit(), 2)
     end
     
     
@@ -24745,7 +24745,7 @@ end
 -- Trigger: PaladinHpSpell
 --===========================================================================
 function Trig_PaladinHpSpell_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A0WZ', GetTriggerUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0WZ'), GetTriggerUnit()) == 1 ) ) then
         return false
     end
     return true
@@ -24770,32 +24770,32 @@ function Trig_PaladinHpSpell_Func001C()
 end
 function Trig_PaladinHpSpell_Actions()
     if ( Trig_PaladinHpSpell_Func001C() ) then
-        UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-        UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-        UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-        SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 3)
-        SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 3)
-        SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 3)
+        UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
+        UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+        UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+        SetUnitAbilityLevelSwapped(FourCC('A0WY'), GetTriggerUnit(), 3)
+        SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 3)
+        SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 3)
     else
         if ( Trig_PaladinHpSpell_Func001Func001C() ) then
-            UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-            UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-            UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-            SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 2)
-            SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 2)
-            SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 2)
+            UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
+            UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+            UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+            SetUnitAbilityLevelSwapped(FourCC('A0WY'), GetTriggerUnit(), 2)
+            SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 2)
+            SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 2)
         else
             if ( Trig_PaladinHpSpell_Func001Func001Func007C() ) then
-                UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-                UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-                UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-                SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 1)
-                SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 1)
-                SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 1)
+                UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
+                UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+                UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+                SetUnitAbilityLevelSwapped(FourCC('A0WY'), GetTriggerUnit(), 1)
+                SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 1)
+                SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 1)
             else
-                UnitRemoveAbilityBJ('A0WW', GetTriggerUnit())
-                UnitRemoveAbilityBJ('A0WX', GetTriggerUnit())
-                UnitRemoveAbilityBJ('A0WY', GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
             end
         end
     end
@@ -24812,7 +24812,7 @@ end
 -- Trigger: PaladinHpSpell2
 --===========================================================================
 function Trig_PaladinHpSpell2_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A0WZ', GetTriggerUnit()) == 2 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0WZ'), GetTriggerUnit()) == 2 ) ) then
         return false
     end
     return true
@@ -24837,32 +24837,32 @@ function Trig_PaladinHpSpell2_Func001C()
 end
 function Trig_PaladinHpSpell2_Actions()
     if ( Trig_PaladinHpSpell2_Func001C() ) then
-        UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-        UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-        UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-        SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 3)
-        SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 3)
-        SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 3)
+        UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
+        UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+        UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+        SetUnitAbilityLevelSwapped(FourCC('A0WY'), GetTriggerUnit(), 3)
+        SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 3)
+        SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 3)
     else
         if ( Trig_PaladinHpSpell2_Func001Func001C() ) then
-            UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-            UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-            UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-            SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 2)
-            SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 2)
-            SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 2)
+            UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
+            UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+            UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+            SetUnitAbilityLevelSwapped(FourCC('A0WY'), GetTriggerUnit(), 2)
+            SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 2)
+            SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 2)
         else
             if ( Trig_PaladinHpSpell2_Func001Func001Func007C() ) then
-                UnitAddAbilityBJ('A0WY', GetTriggerUnit())
-                UnitAddAbilityBJ('A0WX', GetTriggerUnit())
-                UnitAddAbilityBJ('A0WW', GetTriggerUnit())
-                SetUnitAbilityLevelSwapped('A0WY', GetTriggerUnit(), 1)
-                SetUnitAbilityLevelSwapped('A0WX', GetTriggerUnit(), 1)
-                SetUnitAbilityLevelSwapped('A0WW', GetTriggerUnit(), 1)
+                UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
+                UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+                UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+                SetUnitAbilityLevelSwapped(FourCC('A0WY'), GetTriggerUnit(), 1)
+                SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 1)
+                SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 1)
             else
-                UnitRemoveAbilityBJ('A0WW', GetTriggerUnit())
-                UnitRemoveAbilityBJ('A0WX', GetTriggerUnit())
-                UnitRemoveAbilityBJ('A0WY', GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
             end
         end
     end
@@ -24879,14 +24879,14 @@ end
 -- Trigger: Vozd
 --===========================================================================
 function Trig_Vozd_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0XI' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0XI') ) ) then
         return false
     end
     return true
 end
 function Trig_Vozd_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC('A0XI'), GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('H0H7', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('H0H7'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0XH'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0XJ'), GetOwningPlayer(GetTriggerUnit()))
 end
@@ -24902,13 +24902,13 @@ end
 -- Trigger: Defend
 --===========================================================================
 function Trig_Defend_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0XH' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0XH') ) ) then
         return false
     end
     return true
 end
 function Trig_Defend_Actions()
-    SetPlayerTechMaxAllowedSwap('H0H9', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('H0H9'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0XH'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0XI'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0XJ'), GetOwningPlayer(GetTriggerUnit()))
@@ -24925,13 +24925,13 @@ end
 -- Trigger: Heal
 --===========================================================================
 function Trig_Heal_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0XJ' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0XJ') ) ) then
         return false
     end
     return true
 end
 function Trig_Heal_Actions()
-    SetPlayerTechMaxAllowedSwap('H0H8', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('H0H8'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0XH'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0XI'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0XJ'), GetOwningPlayer(GetTriggerUnit()))
@@ -24950,35 +24950,35 @@ end
 function Trig_StartAlliance_Func001A()
     AcountAll(GetEnumPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC('A19A'), GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h02Z', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0HX', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0I3', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('Hamg', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H0ME', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('Hmkg', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H0MF', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H0MD', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HM', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HL', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HK', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HJ', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HI', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HH', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HG', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HF', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HE', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HD', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HB', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HA', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0H9', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0H8', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0H7', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0H6', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0H5', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HN', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HC', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0HV', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('Hlgr', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h02Z'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0HX'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0I3'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('Hamg'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H0ME'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('Hmkg'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H0MF'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H0MD'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HM'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HL'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HK'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HJ'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HI'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HH'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HG'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HF'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HE'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HD'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HB'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HA'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0H9'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0H8'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0H7'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0H6'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0H5'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HN'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HC'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0HV'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('Hlgr'), 1, GetEnumPlayer())
     -- ---
 end
 function Trig_StartAlliance_Actions()
@@ -24994,10 +24994,10 @@ end
 -- Trigger: ForsacenStarrt
 --===========================================================================
 function Trig_ForsacenStarrt_Func001A()
-    SetPlayerTechMaxAllowedSwap('N058', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('O031', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('O030', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('N059', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('N058'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('O031'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('O030'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('N059'), 1, GetEnumPlayer())
 end
 function Trig_ForsacenStarrt_Actions()
     ForForce(udg_AllPlayers, Trig_ForsacenStarrt_Func001A)
@@ -25012,20 +25012,20 @@ end
 -- Trigger: Ult
 --===========================================================================
 function Trig_Ult_Conditions()
-    return GetSpellAbilityId() == 'A15B'
+    return GetSpellAbilityId() == FourCC('A15B')
 end
 function Trig_Ult_Actions()
     local loc= GetSpellTargetLoc()
     local i= GetRandomInt(1, 4)
     
     if i == 1 then
-        CreateItem('I01X', GetLocationX(loc), GetLocationY(loc))
+        CreateItem(FourCC('I01X'), GetLocationX(loc), GetLocationY(loc))
     elseif i == 2 then
-        CreateItem('I01V', GetLocationX(loc), GetLocationY(loc))
+        CreateItem(FourCC('I01V'), GetLocationX(loc), GetLocationY(loc))
     elseif i == 3 then
-        CreateItem('I01Y', GetLocationX(loc), GetLocationY(loc))
+        CreateItem(FourCC('I01Y'), GetLocationX(loc), GetLocationY(loc))
     else
-        CreateItem('I01W', GetLocationX(loc), GetLocationY(loc))
+        CreateItem(FourCC('I01W'), GetLocationX(loc), GetLocationY(loc))
     end
     
     RemoveLocation(loc)
@@ -25042,7 +25042,7 @@ end
 -- Trigger: Banshe
 --===========================================================================
 function Trig_Banshe_Conditions()
-    return GetSpellAbilityId() == 'A15S'
+    return GetSpellAbilityId() == FourCC('A15S')
 end
 function Trig_Banshe_Actions()
     local g= CreateGroup()
@@ -25052,7 +25052,7 @@ function Trig_Banshe_Actions()
     SetUnitPositionLoc(GetTriggerUnit(), l)
     IssueImmediateOrder(GetTriggerUnit(), "metamorphosis")
     GroupEnumUnitsInRangeOfLoc(g, l, 250, null)
-    BlzStartUnitAbilityCooldown(GetTriggerUnit(), 'A15S', 30)
+    BlzStartUnitAbilityCooldown(GetTriggerUnit(), FourCC('A15S'), 30)
     while true do
         u=FirstOfGroup(g)
         if u == null then break end
@@ -25079,10 +25079,10 @@ end
 -- Trigger: BansheCop
 --===========================================================================
 function Trig_BansheCop_Conditions()
-    return GetSpellAbilityId() == 'A15T'
+    return GetSpellAbilityId() == FourCC('A15T')
 end
 function Trig_BansheCop_Actions()
-    BlzStartUnitAbilityCooldown(GetTriggerUnit(), 'A15S', 30)
+    BlzStartUnitAbilityCooldown(GetTriggerUnit(), FourCC('A15S'), 30)
 end
 --===========================================================================
 function InitTrig_BansheCop()
@@ -25095,16 +25095,16 @@ end
 -- Trigger: MassInvis
 --===========================================================================
 function Trig_MassInvis_Conditions()
-    return GetSpellAbilityId() == 'A158'
+    return GetSpellAbilityId() == FourCC('A158')
 end
 function MI2()
     return ( GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer )
 end
 function Trig_MassInvis_Actions2()
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     
     RemoveUnitTimed(GetLastCreatedUnit() , 2)
-    UnitAddAbilityBJ('A159', GetLastCreatedUnit())
+    UnitAddAbilityBJ(FourCC('A159'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
     --call SetUnitAbilityLevelSwapped( 'A159', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A158', GetTriggerUnit()) )
     IssueTargetOrderBJ(GetLastCreatedUnit(), "invisibility", GetEnumUnit())
@@ -25131,7 +25131,7 @@ end
 -- Trigger: BansheeAuto
 --===========================================================================
 function Trig_BansheeAuto_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A14P' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A14P') ) ) then
         return false
     end
     return true
@@ -25151,13 +25151,13 @@ end
 -- Trigger: ResGmilDamage
 --===========================================================================
 function Trig_ResGmilDamage_Conditions()
-    if ( not ( GetResearched() == 'R0FB' ) ) then
+    if ( not ( GetResearched() == FourCC('R0FB') ) ) then
         return false
     end
     return true
 end
 function Trig_ResGmilDamage_Actions()
-    SetPlayerTechResearchedSwap('R0FW', GetPlayerTechCountSimple('R0FB', GetOwningPlayer(GetTriggerUnit())), GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0FW'), GetPlayerTechCountSimple(FourCC('R0FB'), GetOwningPlayer(GetTriggerUnit())), GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_ResGmilDamage()
@@ -25171,10 +25171,10 @@ end
 -- Trigger: Killing
 --===========================================================================
 function IsAndPlag()
-    return GetUnitTypeId(GetFilterUnit()) == 'o02Y'
+    return GetUnitTypeId(GetFilterUnit()) == FourCC('o02Y')
 end
 function Trig_Killing_Conditions()
-    return GetSpellAbilityId() == 'A14C'
+    return GetSpellAbilityId() == FourCC('A14C')
 end
 function Trig_Killing_Actions()
     local u= GetTriggerUnit()
@@ -25186,11 +25186,11 @@ function Trig_Killing_Actions()
         u=FirstOfGroup(g)
         if u == null then break end
         
-        UnitRemoveAbility(u, 'A13O')
-        UnitRemoveAbility(u, 'A13N')
-        UnitAddAbility(u, 'A13M')
-        BlzStartUnitAbilityCooldown(u, 'A13M', 12)
-        BlzStartUnitAbilityCooldown(u, 'A13K', 45)
+        UnitRemoveAbility(u, FourCC('A13O'))
+        UnitRemoveAbility(u, FourCC('A13N'))
+        UnitAddAbility(u, FourCC('A13M'))
+        BlzStartUnitAbilityCooldown(u, FourCC('A13M'), 12)
+        BlzStartUnitAbilityCooldown(u, FourCC('A13K'), 45)
         GroupRemoveUnit(g, u)
         u=null
     end
@@ -25212,12 +25212,12 @@ end
 -- Trigger: StartAttackKilling
 --===========================================================================
 function Trig_StartAttackKilling_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A13M') ~= 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13M') <= 0.00 )
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A13M')) ~= 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), FourCC('A13M')) <= 0.00 )
 end
 function Trig_StartAttackKilling_Actions()
     local u= GetAttacker()
-    UnitAddAbility(u, 'A13T')
-    BlzStartUnitAbilityCooldown(u, 'A13M', 10.00)
+    UnitAddAbility(u, FourCC('A13T'))
+    BlzStartUnitAbilityCooldown(u, FourCC('A13M'), 10.00)
 end
 --===========================================================================
 function InitTrig_StartAttackKilling()
@@ -25230,10 +25230,10 @@ end
 -- Trigger: EndAttackKilling
 --===========================================================================
 function Trig_EndAttackKilling_Conditions()
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13T') > 0
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A13T')) > 0
 end
 function Trig_EndAttackKilling_Actions()
-    UnitRemoveAbility(GetEventDamageSource(), 'A13T')
+    UnitRemoveAbility(GetEventDamageSource(), FourCC('A13T'))
 end
 --===========================================================================
 function InitTrig_EndAttackKilling()
@@ -25246,7 +25246,7 @@ end
 -- Trigger: Infect
 --===========================================================================
 function Trig_Infect_Conditions()
-    return GetSpellAbilityId() == 'A14E'
+    return GetSpellAbilityId() == FourCC('A14E')
 end
 function Trig_Infect_Actions()
     local u= GetTriggerUnit()
@@ -25257,11 +25257,11 @@ function Trig_Infect_Actions()
     while true do
         u=FirstOfGroup(g)
         if u == null then break end
-        UnitRemoveAbility(u, 'A13O')
-        UnitRemoveAbility(u, 'A13M')
-        UnitAddAbility(u, 'A13N')
-        BlzStartUnitAbilityCooldown(u, 'A13N', 12)
-        BlzStartUnitAbilityCooldown(u, 'A13K', 45)
+        UnitRemoveAbility(u, FourCC('A13O'))
+        UnitRemoveAbility(u, FourCC('A13M'))
+        UnitAddAbility(u, FourCC('A13N'))
+        BlzStartUnitAbilityCooldown(u, FourCC('A13N'), 12)
+        BlzStartUnitAbilityCooldown(u, FourCC('A13K'), 45)
         GroupRemoveUnit(g, u)
         u=null
     end
@@ -25282,12 +25282,12 @@ end
 -- Trigger: StartAttackInfect
 --===========================================================================
 function Trig_StartAttackInfect_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A13N') ~= 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13N') <= 0.00 )
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A13N')) ~= 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), FourCC('A13N')) <= 0.00 )
 end
 function Trig_StartAttackInfect_Actions()
     local u= GetAttacker()
-    UnitAddAbility(u, 'A13S')
-    BlzStartUnitAbilityCooldown(u, 'A13N', 10.00)
+    UnitAddAbility(u, FourCC('A13S'))
+    BlzStartUnitAbilityCooldown(u, FourCC('A13N'), 10.00)
 end
 --===========================================================================
 function InitTrig_StartAttackInfect()
@@ -25300,10 +25300,10 @@ end
 -- Trigger: EndAttackInfect
 --===========================================================================
 function Trig_EndAttackInfect_Conditions()
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13S') > 0
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A13S')) > 0
 end
 function Trig_EndAttackInfect_Actions()
-    UnitRemoveAbility(GetEventDamageSource(), 'A13S')
+    UnitRemoveAbility(GetEventDamageSource(), FourCC('A13S'))
 end
 --===========================================================================
 function InitTrig_EndAttackInfect()
@@ -25316,7 +25316,7 @@ end
 -- Trigger: Zagraz
 --===========================================================================
 function Trig_Zagraz_Conditions()
-    return GetSpellAbilityId() == 'A14D'
+    return GetSpellAbilityId() == FourCC('A14D')
 end
 function Trig_Zagraz_Actions()
     local u= GetTriggerUnit()
@@ -25327,11 +25327,11 @@ function Trig_Zagraz_Actions()
     while true do
         u=FirstOfGroup(g)
         if u == null then break end
-        UnitRemoveAbility(u, 'A13N')
-        UnitRemoveAbility(u, 'A13M')
-        UnitAddAbility(u, 'A13O')
-        BlzStartUnitAbilityCooldown(u, 'A13O', 12)
-        BlzStartUnitAbilityCooldown(u, 'A13K', 45)
+        UnitRemoveAbility(u, FourCC('A13N'))
+        UnitRemoveAbility(u, FourCC('A13M'))
+        UnitAddAbility(u, FourCC('A13O'))
+        BlzStartUnitAbilityCooldown(u, FourCC('A13O'), 12)
+        BlzStartUnitAbilityCooldown(u, FourCC('A13K'), 45)
         GroupRemoveUnit(g, u)
         u=null
     end
@@ -25352,12 +25352,12 @@ end
 -- Trigger: StartAttackZagraz
 --===========================================================================
 function Trig_StartAttackZagraz_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A13O') ~= 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13O') <= 0.00 )
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A13O')) ~= 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), FourCC('A13O')) <= 0.00 )
 end
 function Trig_StartAttackZagraz_Actions()
     local u= GetAttacker()
-    UnitAddAbility(u, 'A13V')
-    BlzStartUnitAbilityCooldown(u, 'A13V', 10.00)
+    UnitAddAbility(u, FourCC('A13V'))
+    BlzStartUnitAbilityCooldown(u, FourCC('A13V'), 10.00)
 end
 --===========================================================================
 function InitTrig_StartAttackZagraz()
@@ -25370,10 +25370,10 @@ end
 -- Trigger: EndAttackZagraz
 --===========================================================================
 function Trig_EndAttackZagraz_Conditions()
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13V') > 0
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A13V')) > 0
 end
 function Trig_EndAttackZagraz_Actions()
-    UnitRemoveAbility(GetEventDamageSource(), 'A13V')
+    UnitRemoveAbility(GetEventDamageSource(), FourCC('A13V'))
 end
 --===========================================================================
 function InitTrig_EndAttackZagraz()
@@ -25386,11 +25386,11 @@ end
 -- Trigger: StartAttackCorroz2
 --===========================================================================
 function Trig_StartAttackCorroz2_Conditions()
-    return GetUnitTypeId(GetAttacker()) == 'o02X'
+    return GetUnitTypeId(GetAttacker()) == FourCC('o02X')
 end
 function Trig_StartAttackCorroz2_Actions()
     local u= GetAttacker()
-    if BlzGetUnitAbilityCooldownRemaining(u, 'A13L') == 0 or BlzGetUnitAbilityCooldownRemaining(u, 'A13Q') == 0 or BlzGetUnitAbilityCooldownRemaining(u, 'A13F') == 0 then
+    if BlzGetUnitAbilityCooldownRemaining(u, FourCC('A13L')) == 0 or BlzGetUnitAbilityCooldownRemaining(u, FourCC('A13Q')) == 0 or BlzGetUnitAbilityCooldownRemaining(u, FourCC('A13F')) == 0 then
     
     else
         BlzUnitInterruptAttack(u)
@@ -25407,10 +25407,10 @@ end
 -- Trigger: Usual
 --===========================================================================
 function IsPlag()
-    return GetUnitTypeId(GetFilterUnit()) == 'o02X'
+    return GetUnitTypeId(GetFilterUnit()) == FourCC('o02X')
 end
 function Trig_Usual_Conditions()
-    return GetSpellAbilityId() == 'A142'
+    return GetSpellAbilityId() == FourCC('A142')
 end
 function Trig_Usual_Actions()
     local u= GetTriggerUnit()
@@ -25421,11 +25421,11 @@ function Trig_Usual_Actions()
     while true do
         u=FirstOfGroup(g)
         if u == null then break end
-        UnitRemoveAbility(u, 'A13P')
-        UnitRemoveAbility(u, 'A13Q')
-        UnitAddAbility(u, 'A13L')
-        BlzStartUnitAbilityCooldown(u, 'A13L', 19.5)
-        BlzStartUnitAbilityCooldown(u, 'A13J', 45)
+        UnitRemoveAbility(u, FourCC('A13P'))
+        UnitRemoveAbility(u, FourCC('A13Q'))
+        UnitAddAbility(u, FourCC('A13L'))
+        BlzStartUnitAbilityCooldown(u, FourCC('A13L'), 19.5)
+        BlzStartUnitAbilityCooldown(u, FourCC('A13J'), 45)
         u=null
     end
     
@@ -25446,12 +25446,12 @@ end
 -- Trigger: StartAttackUsual
 --===========================================================================
 function Trig_StartAttackUsual_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A13L') ~= 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13L') <= 0.00 )
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A13L')) ~= 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), FourCC('A13L')) <= 0.00 )
 end
 function Trig_StartAttackUsual_Actions()
     local u= GetAttacker()
-    UnitAddAbility(u, 'A132')
-    BlzStartUnitAbilityCooldown(u, 'A13L', 10.00)
+    UnitAddAbility(u, FourCC('A132'))
+    BlzStartUnitAbilityCooldown(u, FourCC('A13L'), 10.00)
 end
 --===========================================================================
 function InitTrig_StartAttackUsual()
@@ -25464,10 +25464,10 @@ end
 -- Trigger: EndAttackUsual
 --===========================================================================
 function Trig_EndAttackUsual_Conditions()
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A132') > 0
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A132')) > 0
 end
 function Trig_EndAttackUsual_Actions()
-    UnitRemoveAbility(GetEventDamageSource(), 'A132')
+    UnitRemoveAbility(GetEventDamageSource(), FourCC('A132'))
 end
 --===========================================================================
 function InitTrig_EndAttackUsual()
@@ -25480,7 +25480,7 @@ end
 -- Trigger: Korroz
 --===========================================================================
 function Trig_Korroz_Conditions()
-    return GetSpellAbilityId() == 'A143'
+    return GetSpellAbilityId() == FourCC('A143')
 end
 function Trig_Korroz_Actions()
     local u= GetTriggerUnit()
@@ -25491,11 +25491,11 @@ function Trig_Korroz_Actions()
     while true do
         u=FirstOfGroup(g)
         if u == null then break end
-        UnitRemoveAbility(u, 'A13L')
-        UnitRemoveAbility(u, 'A13P')
-        UnitAddAbility(u, 'A13Q')
-        BlzStartUnitAbilityCooldown(u, 'A13Q', 19.5)
-        BlzStartUnitAbilityCooldown(u, 'A13J', 45)
+        UnitRemoveAbility(u, FourCC('A13L'))
+        UnitRemoveAbility(u, FourCC('A13P'))
+        UnitAddAbility(u, FourCC('A13Q'))
+        BlzStartUnitAbilityCooldown(u, FourCC('A13Q'), 19.5)
+        BlzStartUnitAbilityCooldown(u, FourCC('A13J'), 45)
         u=null
     end
     
@@ -25515,13 +25515,13 @@ end
 -- Trigger: StartAttackCorroz
 --===========================================================================
 function Trig_StartAttackCorroz_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A13Q') ~= 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13Q') <= 0.00 )
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A13Q')) ~= 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), FourCC('A13Q')) <= 0.00 )
 end
 function Trig_StartAttackCorroz_Actions()
     local u= GetAttacker()
-    UnitAddAbility(u, 'A13U')
-    UnitAddAbility(u, 'A15H')
-    BlzStartUnitAbilityCooldown(u, 'A13N', 10.00)
+    UnitAddAbility(u, FourCC('A13U'))
+    UnitAddAbility(u, FourCC('A15H'))
+    BlzStartUnitAbilityCooldown(u, FourCC('A13N'), 10.00)
 end
 --===========================================================================
 function InitTrig_StartAttackCorroz()
@@ -25534,11 +25534,11 @@ end
 -- Trigger: EndAttackCorroz
 --===========================================================================
 function Trig_EndAttackCorroz_Conditions()
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13U') > 0
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A13U')) > 0
 end
 function Trig_EndAttackCorroz_Actions()
-    UnitRemoveAbility(GetEventDamageSource(), 'A13U')
-    UnitRemoveAbility(GetEventDamageSource(), 'A15H')
+    UnitRemoveAbility(GetEventDamageSource(), FourCC('A13U'))
+    UnitRemoveAbility(GetEventDamageSource(), FourCC('A15H'))
     
 end
 --===========================================================================
@@ -25552,7 +25552,7 @@ end
 -- Trigger: Safety
 --===========================================================================
 function Trig_Safety_Conditions()
-    return GetSpellAbilityId() == 'A144'
+    return GetSpellAbilityId() == FourCC('A144')
 end
 function Trig_Safety_Actions()
     local u= GetTriggerUnit()
@@ -25563,11 +25563,11 @@ function Trig_Safety_Actions()
     while true do
         u=FirstOfGroup(g)
         if u == null then break end
-        UnitRemoveAbility(u, 'A13L')
-        UnitRemoveAbility(u, 'A13Q')
-        UnitAddAbility(u, 'A13P')
-        BlzStartUnitAbilityCooldown(u, 'A13P', 19.5)
-        BlzStartUnitAbilityCooldown(u, 'A13J', 45)
+        UnitRemoveAbility(u, FourCC('A13L'))
+        UnitRemoveAbility(u, FourCC('A13Q'))
+        UnitAddAbility(u, FourCC('A13P'))
+        BlzStartUnitAbilityCooldown(u, FourCC('A13P'), 19.5)
+        BlzStartUnitAbilityCooldown(u, FourCC('A13J'), 45)
         u=null
     end
     
@@ -25587,12 +25587,12 @@ end
 -- Trigger: StartAttackSafety
 --===========================================================================
 function Trig_StartAttackSafety_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A13P') ~= 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A13P') <= 0.00 )
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A13P')) ~= 0 and ( BlzGetUnitAbilityCooldownRemaining(GetAttacker(), FourCC('A13P')) <= 0.00 )
 end
 function Trig_StartAttackSafety_Actions()
     local u= GetAttacker()
-    UnitAddAbility(u, 'A13R')
-    BlzStartUnitAbilityCooldown(u, 'A13P', 10.00)
+    UnitAddAbility(u, FourCC('A13R'))
+    BlzStartUnitAbilityCooldown(u, FourCC('A13P'), 10.00)
 end
 --===========================================================================
 function InitTrig_StartAttackSafety()
@@ -25605,10 +25605,10 @@ end
 -- Trigger: EndAttackSafety
 --===========================================================================
 function Trig_EndAttackSafety_Conditions()
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A13R') > 0
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A13R')) > 0
 end
 function Trig_EndAttackSafety_Actions()
-    UnitRemoveAbility(GetEventDamageSource(), 'A13R')
+    UnitRemoveAbility(GetEventDamageSource(), FourCC('A13R'))
 end
 --===========================================================================
 function InitTrig_EndAttackSafety()
@@ -25621,7 +25621,7 @@ end
 -- Trigger: MassMindControl2
 --===========================================================================
 function Trig_MassMindControl2_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A15P' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A15P') ) ) then
         return false
     end
     return true
@@ -25630,12 +25630,12 @@ function Trig_MassMindControl2_Func002002()
     return ( 0 == 0 )
 end
 function Trig_MassMindControl2_Func007A()
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_27438")
     udg_LocalUnit2=GetLastCreatedUnit()
     TriggerExecute(gg_trg_ToKill2)
-    UnitAddAbilityBJ('A15V', GetLastCreatedUnit())
-    UnitAddAbilityBJ('ACch', GetLastCreatedUnit())
+    UnitAddAbilityBJ(FourCC('A15V'), GetLastCreatedUnit())
+    UnitAddAbilityBJ(FourCC('ACch'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
     IssueTargetOrderBJ(GetLastCreatedUnit(), "charm", GetEnumUnit())
 end
@@ -25693,86 +25693,86 @@ end
 -- Trigger: GnomesStart
 --===========================================================================
 function Trig_GnomesStart_Func002A()
-    SetPlayerTechMaxAllowedSwap('R0BB', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0B5', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BC', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BD', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BE', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BF', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BG', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BH', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BI', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0C0', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BA', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0B9', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0B7', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0C4', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0C1', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0B8', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BJ', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BK', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BL', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BM', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BN', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BO', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BP', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BQ', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BR', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CS', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CR', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CQ', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CP', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CO', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CN', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CM', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CL', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CK', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CJ', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CI', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CH', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CG', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CF', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CE', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CD', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CC', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CB', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0CA', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0C9', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0C8', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0C6', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0C5', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0C4', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0C1', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0C2', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0C0', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BT', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BR', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BQ', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BP', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BP', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0BO', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0G4', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0G5', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0G1', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0G2', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0FQ', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0FT', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0FW', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0FV', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0FN', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0FP', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0FJ', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0FG', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0FF', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0FH', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0FO', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H0GE', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H0GC', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H0GG', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BB'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B5'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BC'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BD'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BE'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BF'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BG'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BH'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BI'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C0'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BA'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B9'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B7'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C4'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C1'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B8'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BJ'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BK'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BL'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BM'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BN'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BO'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BP'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BQ'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BR'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CS'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CR'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CQ'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CP'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CO'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CN'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CM'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CL'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CK'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CJ'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CI'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CH'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CG'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CF'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CE'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CD'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CC'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CB'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CA'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C9'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C8'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C6'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C5'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C4'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C1'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C2'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C0'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BT'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BR'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BQ'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BP'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BP'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BO'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0G4'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0G5'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0G1'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0G2'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FQ'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FT'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FW'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FV'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FN'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FP'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FJ'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FG'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FF'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FH'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FO'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H0GE'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H0GC'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H0GG'), 1, GetEnumPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC('A0SH'), GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0C4', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0C3', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0C7', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C4'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C3'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C7'), 0, GetEnumPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC('A0TL'), GetEnumPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC('A16A'), GetEnumPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC('A0SO'), GetEnumPlayer())
@@ -25794,7 +25794,7 @@ end
 -- Trigger: GelbinSpellAttacked
 --===========================================================================
 function Trig_GelbinSpellAttacked_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A0XC', GetTriggerUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0XC'), GetTriggerUnit()) == 1 ) ) then
         return false
     end
     return true
@@ -25825,18 +25825,18 @@ function Trig_GelbinSpellAttacked_Func001C()
 end
 function Trig_GelbinSpellAttacked_Actions()
     if ( Trig_GelbinSpellAttacked_Func001C() ) then
-        SetUnitAbilityLevelSwapped('A0XD', GetTriggerUnit(), 5)
+        SetUnitAbilityLevelSwapped(FourCC('A0XD'), GetTriggerUnit(), 5)
     else
         if ( Trig_GelbinSpellAttacked_Func001Func001C() ) then
-            SetUnitAbilityLevelSwapped('A0XD', GetTriggerUnit(), 4)
+            SetUnitAbilityLevelSwapped(FourCC('A0XD'), GetTriggerUnit(), 4)
         else
             if ( Trig_GelbinSpellAttacked_Func001Func001Func002C() ) then
-                SetUnitAbilityLevelSwapped('A0XD', GetTriggerUnit(), 3)
+                SetUnitAbilityLevelSwapped(FourCC('A0XD'), GetTriggerUnit(), 3)
             else
                 if ( Trig_GelbinSpellAttacked_Func001Func001Func002Func002C() ) then
-                    SetUnitAbilityLevelSwapped('A0XD', GetTriggerUnit(), 2)
+                    SetUnitAbilityLevelSwapped(FourCC('A0XD'), GetTriggerUnit(), 2)
                 else
-                    SetUnitAbilityLevelSwapped('A0XD', GetTriggerUnit(), 1)
+                    SetUnitAbilityLevelSwapped(FourCC('A0XD'), GetTriggerUnit(), 1)
                 end
             end
         end
@@ -25854,7 +25854,7 @@ end
 -- Trigger: GelbinSpellClick
 --===========================================================================
 function Trig_GelbinSpellClick_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0XC' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0XC') ) ) then
         return false
     end
     return true
@@ -25886,18 +25886,18 @@ end
 function Trig_GelbinSpellClick_Actions()
     SetUnitLifePercentBJ(GetTriggerUnit(), ( GetUnitLifePercent(GetTriggerUnit()) + 10.00 ))
     if ( Trig_GelbinSpellClick_Func002C() ) then
-        SetUnitAbilityLevelSwapped('A0XD', GetTriggerUnit(), 5)
+        SetUnitAbilityLevelSwapped(FourCC('A0XD'), GetTriggerUnit(), 5)
     else
         if ( Trig_GelbinSpellClick_Func002Func001C() ) then
-            SetUnitAbilityLevelSwapped('A0XD', GetTriggerUnit(), 4)
+            SetUnitAbilityLevelSwapped(FourCC('A0XD'), GetTriggerUnit(), 4)
         else
             if ( Trig_GelbinSpellClick_Func002Func001Func002C() ) then
-                SetUnitAbilityLevelSwapped('A0XD', GetTriggerUnit(), 3)
+                SetUnitAbilityLevelSwapped(FourCC('A0XD'), GetTriggerUnit(), 3)
             else
                 if ( Trig_GelbinSpellClick_Func002Func001Func002Func002C() ) then
-                    SetUnitAbilityLevelSwapped('A0XD', GetTriggerUnit(), 2)
+                    SetUnitAbilityLevelSwapped(FourCC('A0XD'), GetTriggerUnit(), 2)
                 else
-                    SetUnitAbilityLevelSwapped('A0XD', GetTriggerUnit(), 1)
+                    SetUnitAbilityLevelSwapped(FourCC('A0XD'), GetTriggerUnit(), 1)
                 end
             end
         end
@@ -25915,14 +25915,14 @@ end
 -- Trigger: HeroSell
 --===========================================================================
 function Trig_HeroSell_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0TF' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0TF') ) ) then
         return false
     end
     return true
 end
 function Trig_HeroSell_Actions()
     udg_LocalReal2=GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit())
-    udg_LocalReal2=( udg_LocalReal2 * I2R(GetUnitAbilityLevelSwapped('A0TF', GetTriggerUnit())) )
+    udg_LocalReal2=( udg_LocalReal2 * I2R(GetUnitAbilityLevelSwapped(FourCC('A0TF'), GetTriggerUnit())) )
     udg_LocalReal2=( udg_LocalReal2 * 0.25 )
     SetUnitLifeBJ(GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) + udg_LocalReal2 ))
     KillUnit(GetSpellTargetUnit())
@@ -25939,7 +25939,7 @@ end
 -- Trigger: TankChangeAttack
 --===========================================================================
 function Trig_TankChangeAttack_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0S6' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0S6') ) ) then
         return false
     end
     return true
@@ -25971,22 +25971,22 @@ end
 -- Trigger: TankVenecAttack
 --===========================================================================
 function Trig_TankVenecAttack_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A0S2', GetAttacker()) > 0 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0S2'), GetAttacker()) > 0 ) ) then
         return false
     end
     return true
 end
 function Trig_TankVenecAttack_Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A0S3', GetAttacker()) == 0 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0S3'), GetAttacker()) == 0 ) ) then
         return false
     end
     return true
 end
 function Trig_TankVenecAttack_Actions()
     if ( Trig_TankVenecAttack_Func001C() ) then
-        UnitAddAbilityBJ('A0S3', GetAttacker())
+        UnitAddAbilityBJ(FourCC('A0S3'), GetAttacker())
     else
-        UnitRemoveAbilityBJ('A0S3', GetAttacker())
+        UnitRemoveAbilityBJ(FourCC('A0S3'), GetAttacker())
     end
 end
 --===========================================================================
@@ -26001,40 +26001,40 @@ end
 -- Trigger: All Gnomes Cansel
 --===========================================================================
 function Trig_All_Gnomes_Cansel_Func001C()
-    if ( ( GetResearched() == 'R0B9' ) ) then
+    if ( ( GetResearched() == FourCC('R0B9') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BA' ) ) then
+    if ( ( GetResearched() == FourCC('R0BA') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BB' ) ) then
+    if ( ( GetResearched() == FourCC('R0BB') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0B5' ) ) then
+    if ( ( GetResearched() == FourCC('R0B5') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BC' ) ) then
+    if ( ( GetResearched() == FourCC('R0BC') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BD' ) ) then
+    if ( ( GetResearched() == FourCC('R0BD') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BE' ) ) then
+    if ( ( GetResearched() == FourCC('R0BE') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BF' ) ) then
+    if ( ( GetResearched() == FourCC('R0BF') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BG' ) ) then
+    if ( ( GetResearched() == FourCC('R0BG') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BH' ) ) then
+    if ( ( GetResearched() == FourCC('R0BH') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0CR' ) ) then
+    if ( ( GetResearched() == FourCC('R0CR') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BI' ) ) then
+    if ( ( GetResearched() == FourCC('R0BI') ) ) then
         return true
     end
     return false
@@ -26046,43 +26046,43 @@ function Trig_All_Gnomes_Cansel_Conditions()
     return true
 end
 function Trig_All_Gnomes_Cansel_Func004Func002C()
-    if ( not ( GetPlayerTechCountSimple('R0BC', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BC'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Cansel_Func004C()
-    if ( not ( GetPlayerTechCountSimple('R0BA', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BA'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Cansel_Func005C()
-    if ( not ( GetPlayerTechCountSimple('R0B5', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0B5'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Cansel_Func006Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0BD', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BD'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Cansel_Func006C()
-    if ( not ( GetPlayerTechCountSimple('R0BI', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BI'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Cansel_Func007Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0BF', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BF'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Cansel_Func007C()
-    if ( not ( GetPlayerTechCountSimple('R0BB', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BB'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
@@ -26091,38 +26091,38 @@ function Trig_All_Gnomes_Cansel_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     if ( Trig_All_Gnomes_Cansel_Func004C() ) then
         if ( Trig_All_Gnomes_Cansel_Func004Func002C() ) then
-            SetPlayerTechMaxAllowedSwap('R0BH', 1, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BH'), 1, udg_LocalPlayer)
         else
-            SetPlayerTechMaxAllowedSwap('R0BC', 1, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BC'), 1, udg_LocalPlayer)
         end
     else
-        SetPlayerTechMaxAllowedSwap('R0BA', 1, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BA'), 1, udg_LocalPlayer)
     end
     if ( Trig_All_Gnomes_Cansel_Func005C() ) then
-        SetPlayerTechMaxAllowedSwap('R0BE', 1, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BE'), 1, udg_LocalPlayer)
     else
-        SetPlayerTechMaxAllowedSwap('R0B5', 1, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0B5'), 1, udg_LocalPlayer)
     end
     if ( Trig_All_Gnomes_Cansel_Func006C() ) then
         if ( Trig_All_Gnomes_Cansel_Func006Func001C() ) then
-            SetPlayerTechMaxAllowedSwap('R0C0', 1, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0C0'), 1, udg_LocalPlayer)
         else
-            SetPlayerTechMaxAllowedSwap('R0BD', 1, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BD'), 1, udg_LocalPlayer)
         end
     else
-        SetPlayerTechMaxAllowedSwap('R0BI', 1, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BI'), 1, udg_LocalPlayer)
     end
     if ( Trig_All_Gnomes_Cansel_Func007C() ) then
         if ( Trig_All_Gnomes_Cansel_Func007Func001C() ) then
-            SetPlayerTechMaxAllowedSwap('R0BG', 1, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BG'), 1, udg_LocalPlayer)
         else
-            SetPlayerTechMaxAllowedSwap('R0BF', 1, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BF'), 1, udg_LocalPlayer)
         end
     else
-        SetPlayerTechMaxAllowedSwap('R0BB', 1, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BB'), 1, udg_LocalPlayer)
     end
-    SetPlayerTechMaxAllowedSwap('R0B9', 1, udg_LocalPlayer)
-    SetPlayerTechMaxAllowedSwap('R0C1', 1, udg_LocalPlayer)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B9'), 1, udg_LocalPlayer)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C1'), 1, udg_LocalPlayer)
 end
 --===========================================================================
 function InitTrig_All_Gnomes_Cansel()
@@ -26135,43 +26135,43 @@ end
 -- Trigger: All Gnomes Begin
 --===========================================================================
 function Trig_All_Gnomes_Begin_Func002C()
-    if ( ( GetResearched() == 'R0B9' ) ) then
+    if ( ( GetResearched() == FourCC('R0B9') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BA' ) ) then
+    if ( ( GetResearched() == FourCC('R0BA') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BB' ) ) then
+    if ( ( GetResearched() == FourCC('R0BB') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0B5' ) ) then
+    if ( ( GetResearched() == FourCC('R0B5') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BC' ) ) then
+    if ( ( GetResearched() == FourCC('R0BC') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BD' ) ) then
+    if ( ( GetResearched() == FourCC('R0BD') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BE' ) ) then
+    if ( ( GetResearched() == FourCC('R0BE') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BF' ) ) then
+    if ( ( GetResearched() == FourCC('R0BF') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BG' ) ) then
+    if ( ( GetResearched() == FourCC('R0BG') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BH' ) ) then
+    if ( ( GetResearched() == FourCC('R0BH') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0CR' ) ) then
+    if ( ( GetResearched() == FourCC('R0CR') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0BI' ) ) then
+    if ( ( GetResearched() == FourCC('R0BI') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R0C0' ) ) then
+    if ( ( GetResearched() == FourCC('R0C0') ) ) then
         return true
     end
     return false
@@ -26183,43 +26183,43 @@ function Trig_All_Gnomes_Begin_Conditions()
     return true
 end
 function Trig_All_Gnomes_Begin_Func004Func002C()
-    if ( not ( GetPlayerTechCountSimple('R0BC', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BC'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Begin_Func004C()
-    if ( not ( GetPlayerTechCountSimple('R0BA', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BA'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Begin_Func005C()
-    if ( not ( GetPlayerTechCountSimple('R0B5', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0B5'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Begin_Func006Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0BD', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BD'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Begin_Func006C()
-    if ( not ( GetPlayerTechCountSimple('R0BI', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BI'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Begin_Func007Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0BF', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BF'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Begin_Func007C()
-    if ( not ( GetPlayerTechCountSimple('R0BB', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BB'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
@@ -26228,38 +26228,38 @@ function Trig_All_Gnomes_Begin_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     if ( Trig_All_Gnomes_Begin_Func004C() ) then
         if ( Trig_All_Gnomes_Begin_Func004Func002C() ) then
-            SetPlayerTechMaxAllowedSwap('R0BH', 0, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BH'), 0, udg_LocalPlayer)
         else
-            SetPlayerTechMaxAllowedSwap('R0BC', 0, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BC'), 0, udg_LocalPlayer)
         end
     else
-        SetPlayerTechMaxAllowedSwap('R0BA', 0, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BA'), 0, udg_LocalPlayer)
     end
     if ( Trig_All_Gnomes_Begin_Func005C() ) then
-        SetPlayerTechMaxAllowedSwap('R0BE', 0, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BE'), 0, udg_LocalPlayer)
     else
-        SetPlayerTechMaxAllowedSwap('R0B5', 0, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0B5'), 0, udg_LocalPlayer)
     end
     if ( Trig_All_Gnomes_Begin_Func006C() ) then
         if ( Trig_All_Gnomes_Begin_Func006Func001C() ) then
-            SetPlayerTechMaxAllowedSwap('R0C0', 0, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0C0'), 0, udg_LocalPlayer)
         else
-            SetPlayerTechMaxAllowedSwap('R0BD', 0, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BD'), 0, udg_LocalPlayer)
         end
     else
-        SetPlayerTechMaxAllowedSwap('R0BI', 0, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BI'), 0, udg_LocalPlayer)
     end
     if ( Trig_All_Gnomes_Begin_Func007C() ) then
         if ( Trig_All_Gnomes_Begin_Func007Func001C() ) then
-            SetPlayerTechMaxAllowedSwap('R0BG', 0, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BG'), 0, udg_LocalPlayer)
         else
-            SetPlayerTechMaxAllowedSwap('R0BF', 0, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BF'), 0, udg_LocalPlayer)
         end
     else
-        SetPlayerTechMaxAllowedSwap('R0BB', 0, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BB'), 0, udg_LocalPlayer)
     end
-    SetPlayerTechMaxAllowedSwap('R0B9', 0, udg_LocalPlayer)
-    SetPlayerTechMaxAllowedSwap('R0C1', 0, udg_LocalPlayer)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B9'), 0, udg_LocalPlayer)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C1'), 0, udg_LocalPlayer)
 end
 --===========================================================================
 function InitTrig_All_Gnomes_Begin()
@@ -26272,43 +26272,43 @@ end
 -- Trigger: All Gnomes
 --===========================================================================
 function Trig_All_Gnomes_Func001Func002C()
-    if ( not ( GetPlayerTechCountSimple('R0BC', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BC'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0BA', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BA'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R0B5', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0B5'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Func003Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0BD', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BD'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R0BI', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BI'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Func004Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0BF', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BF'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Func004C()
-    if ( not ( GetPlayerTechCountSimple('R0BB', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BB'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
@@ -26316,38 +26316,38 @@ end
 function Trig_All_Gnomes_Actions()
     if ( Trig_All_Gnomes_Func001C() ) then
         if ( Trig_All_Gnomes_Func001Func002C() ) then
-            SetPlayerTechMaxAllowedSwap('R0BH', 1, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BH'), 1, udg_LocalPlayer)
         else
-            SetPlayerTechMaxAllowedSwap('R0BC', 1, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BC'), 1, udg_LocalPlayer)
         end
     else
-        SetPlayerTechMaxAllowedSwap('R0BA', 1, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BA'), 1, udg_LocalPlayer)
     end
     if ( Trig_All_Gnomes_Func002C() ) then
-        SetPlayerTechMaxAllowedSwap('R0BE', 1, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BE'), 1, udg_LocalPlayer)
     else
-        SetPlayerTechMaxAllowedSwap('R0B5', 1, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0B5'), 1, udg_LocalPlayer)
     end
     if ( Trig_All_Gnomes_Func003C() ) then
         if ( Trig_All_Gnomes_Func003Func001C() ) then
-            SetPlayerTechMaxAllowedSwap('R0C0', 1, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0C0'), 1, udg_LocalPlayer)
         else
-            SetPlayerTechMaxAllowedSwap('R0BD', 1, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BD'), 1, udg_LocalPlayer)
         end
     else
-        SetPlayerTechMaxAllowedSwap('R0BI', 1, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BI'), 1, udg_LocalPlayer)
     end
     if ( Trig_All_Gnomes_Func004C() ) then
         if ( Trig_All_Gnomes_Func004Func001C() ) then
-            SetPlayerTechMaxAllowedSwap('R0BG', 1, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BG'), 1, udg_LocalPlayer)
         else
-            SetPlayerTechMaxAllowedSwap('R0BF', 1, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BF'), 1, udg_LocalPlayer)
         end
     else
-        SetPlayerTechMaxAllowedSwap('R0BB', 1, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BB'), 1, udg_LocalPlayer)
     end
-    SetPlayerTechMaxAllowedSwap('R0B9', 1, udg_LocalPlayer)
-    SetPlayerTechMaxAllowedSwap('R0C1', 1, udg_LocalPlayer)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B9'), 1, udg_LocalPlayer)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C1'), 1, udg_LocalPlayer)
 end
 --===========================================================================
 function InitTrig_All_Gnomes()
@@ -26358,43 +26358,43 @@ end
 -- Trigger: All Gnomes Off
 --===========================================================================
 function Trig_All_Gnomes_Off_Func001Func002C()
-    if ( not ( GetPlayerTechCountSimple('R0BC', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BC'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Off_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0BA', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BA'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Off_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R0B5', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0B5'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Off_Func003Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0BD', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BD'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Off_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R0BI', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BI'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Off_Func004Func001C()
-    if ( not ( GetPlayerTechCountSimple('R0BF', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BF'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_All_Gnomes_Off_Func004C()
-    if ( not ( GetPlayerTechCountSimple('R0BB', udg_LocalPlayer) == 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0BB'), udg_LocalPlayer) == 1 ) ) then
         return false
     end
     return true
@@ -26402,38 +26402,38 @@ end
 function Trig_All_Gnomes_Off_Actions()
     if ( Trig_All_Gnomes_Off_Func001C() ) then
         if ( Trig_All_Gnomes_Off_Func001Func002C() ) then
-            SetPlayerTechMaxAllowedSwap('R0BH', 0, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BH'), 0, udg_LocalPlayer)
         else
-            SetPlayerTechMaxAllowedSwap('R0BC', 0, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BC'), 0, udg_LocalPlayer)
         end
     else
-        SetPlayerTechMaxAllowedSwap('R0BA', 0, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BA'), 0, udg_LocalPlayer)
     end
     if ( Trig_All_Gnomes_Off_Func002C() ) then
-        SetPlayerTechMaxAllowedSwap('R0BE', 0, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BE'), 0, udg_LocalPlayer)
     else
-        SetPlayerTechMaxAllowedSwap('R0B5', 0, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0B5'), 0, udg_LocalPlayer)
     end
     if ( Trig_All_Gnomes_Off_Func003C() ) then
         if ( Trig_All_Gnomes_Off_Func003Func001C() ) then
-            SetPlayerTechMaxAllowedSwap('R0C0', 0, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0C0'), 0, udg_LocalPlayer)
         else
-            SetPlayerTechMaxAllowedSwap('R0BD', 0, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BD'), 0, udg_LocalPlayer)
         end
     else
-        SetPlayerTechMaxAllowedSwap('R0BI', 0, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BI'), 0, udg_LocalPlayer)
     end
     if ( Trig_All_Gnomes_Off_Func004C() ) then
         if ( Trig_All_Gnomes_Off_Func004Func001C() ) then
-            SetPlayerTechMaxAllowedSwap('R0BG', 0, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BG'), 0, udg_LocalPlayer)
         else
-            SetPlayerTechMaxAllowedSwap('R0BF', 0, udg_LocalPlayer)
+            SetPlayerTechMaxAllowedSwap(FourCC('R0BF'), 0, udg_LocalPlayer)
         end
     else
-        SetPlayerTechMaxAllowedSwap('R0BB', 0, udg_LocalPlayer)
+        SetPlayerTechMaxAllowedSwap(FourCC('R0BB'), 0, udg_LocalPlayer)
     end
-    SetPlayerTechMaxAllowedSwap('R0B9', 0, udg_LocalPlayer)
-    SetPlayerTechMaxAllowedSwap('R0C1', 0, udg_LocalPlayer)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B9'), 0, udg_LocalPlayer)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C1'), 0, udg_LocalPlayer)
 end
 --===========================================================================
 function InitTrig_All_Gnomes_Off()
@@ -26444,13 +26444,13 @@ end
 -- Trigger: RegeNogi
 --===========================================================================
 function Trig_RegeNogi_Conditions()
-    if ( not ( GetResearched() == 'R0B9' ) ) then
+    if ( not ( GetResearched() == FourCC('R0B9') ) ) then
         return false
     end
     return true
 end
 function Trig_RegeNogi_Actions()
-    SetPlayerTechMaxAllowedSwap('h0FP', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FP'), - 1, GetOwningPlayer(GetTriggerUnit()))
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes)
 end
@@ -26465,7 +26465,7 @@ end
 -- Trigger: MehaWar start
 --===========================================================================
 function Trig_MehaWar_start_Conditions()
-    if ( not ( GetResearched() == 'R0BA' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BA') ) ) then
         return false
     end
     return true
@@ -26473,9 +26473,9 @@ end
 function Trig_MehaWar_start_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes_Off)
-    SetPlayerTechMaxAllowedSwap('R0BQ', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0BR', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h0G1', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BQ'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BR'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0G1'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MehaWar_start()
@@ -26488,13 +26488,13 @@ end
 -- Trigger: MehaWar Def
 --===========================================================================
 function Trig_MehaWar_Def_Conditions()
-    if ( not ( GetResearched() == 'R0BQ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BQ') ) ) then
         return false
     end
     return true
 end
 function Trig_MehaWar_Def_Actions()
-    SetPlayerTechMaxAllowedSwap('R0BR', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BR'), 0, GetOwningPlayer(GetTriggerUnit()))
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes)
 end
@@ -26509,13 +26509,13 @@ end
 -- Trigger: MehaWar Def Beg
 --===========================================================================
 function Trig_MehaWar_Def_Beg_Conditions()
-    if ( not ( GetResearched() == 'R0BQ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BQ') ) ) then
         return false
     end
     return true
 end
 function Trig_MehaWar_Def_Beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0BR', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BR'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MehaWar_Def_Beg()
@@ -26528,13 +26528,13 @@ end
 -- Trigger: MehaWar Def Can
 --===========================================================================
 function Trig_MehaWar_Def_Can_Conditions()
-    if ( not ( GetResearched() == 'R0BQ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BQ') ) ) then
         return false
     end
     return true
 end
 function Trig_MehaWar_Def_Can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0BR', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BR'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MehaWar_Def_Can()
@@ -26547,13 +26547,13 @@ end
 -- Trigger: MehaWar Stan
 --===========================================================================
 function Trig_MehaWar_Stan_Conditions()
-    if ( not ( GetResearched() == 'R0BR' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BR') ) ) then
         return false
     end
     return true
 end
 function Trig_MehaWar_Stan_Actions()
-    SetPlayerTechMaxAllowedSwap('R0BQ', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BQ'), 0, GetOwningPlayer(GetTriggerUnit()))
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes)
 end
@@ -26568,13 +26568,13 @@ end
 -- Trigger: MehaWar Stan Beg
 --===========================================================================
 function Trig_MehaWar_Stan_Beg_Conditions()
-    if ( not ( GetResearched() == 'R0BR' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BR') ) ) then
         return false
     end
     return true
 end
 function Trig_MehaWar_Stan_Beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0BQ', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BQ'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MehaWar_Stan_Beg()
@@ -26587,13 +26587,13 @@ end
 -- Trigger: MehaWar Stan Can
 --===========================================================================
 function Trig_MehaWar_Stan_Can_Conditions()
-    if ( not ( GetResearched() == 'R0BR' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BR') ) ) then
         return false
     end
     return true
 end
 function Trig_MehaWar_Stan_Can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0BQ', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BQ'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MehaWar_Stan_Can()
@@ -26606,7 +26606,7 @@ end
 -- Trigger: NanoGnom start
 --===========================================================================
 function Trig_NanoGnom_start_Conditions()
-    if ( not ( GetResearched() == 'R0BC' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BC') ) ) then
         return false
     end
     return true
@@ -26614,9 +26614,9 @@ end
 function Trig_NanoGnom_start_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes_Off)
-    SetPlayerTechMaxAllowedSwap('R0C2', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0C8', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h0G2', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C2'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C8'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0G2'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_NanoGnom_start()
@@ -26629,7 +26629,7 @@ end
 -- Trigger: NanoGnome1
 --===========================================================================
 function Trig_NanoGnome1_Conditions()
-    if ( not ( GetResearched() == 'R0C2' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C2') ) ) then
         return false
     end
     return true
@@ -26650,13 +26650,13 @@ end
 -- Trigger: NanoGnome1 Beg
 --===========================================================================
 function Trig_NanoGnome1_Beg_Conditions()
-    if ( not ( GetResearched() == 'R0C2' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C2') ) ) then
         return false
     end
     return true
 end
 function Trig_NanoGnome1_Beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C8', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C8'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_NanoGnome1_Beg()
@@ -26669,13 +26669,13 @@ end
 -- Trigger: NanoGnome1 Can
 --===========================================================================
 function Trig_NanoGnome1_Can_Conditions()
-    if ( not ( GetResearched() == 'R0C2' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C2') ) ) then
         return false
     end
     return true
 end
 function Trig_NanoGnome1_Can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C8', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C8'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_NanoGnome1_Can()
@@ -26688,7 +26688,7 @@ end
 -- Trigger: NanoGnome 2
 --===========================================================================
 function Trig_NanoGnome_2_Conditions()
-    if ( not ( GetResearched() == 'R0C8' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C8') ) ) then
         return false
     end
     return true
@@ -26708,13 +26708,13 @@ end
 -- Trigger: NanoGnome 2 can
 --===========================================================================
 function Trig_NanoGnome_2_can_Conditions()
-    if ( not ( GetResearched() == 'R0C8' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C8') ) ) then
         return false
     end
     return true
 end
 function Trig_NanoGnome_2_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C2', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C2'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_NanoGnome_2_can()
@@ -26727,13 +26727,13 @@ end
 -- Trigger: NanoGnome 2 beg
 --===========================================================================
 function Trig_NanoGnome_2_beg_Conditions()
-    if ( not ( GetResearched() == 'R0C8' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C8') ) ) then
         return false
     end
     return true
 end
 function Trig_NanoGnome_2_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C2', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C2'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_NanoGnome_2_beg()
@@ -26746,7 +26746,7 @@ end
 -- Trigger: MehaGigant
 --===========================================================================
 function Trig_MehaGigant_Conditions()
-    if ( not ( GetResearched() == 'R0BH' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BH') ) ) then
         return false
     end
     return true
@@ -26754,9 +26754,9 @@ end
 function Trig_MehaGigant_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes_Off)
-    SetPlayerTechMaxAllowedSwap('R0CP', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CQ', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h0FW', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CP'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CQ'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FW'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MehaGigant()
@@ -26769,7 +26769,7 @@ end
 -- Trigger: MehaGigant 1
 --===========================================================================
 function Trig_MehaGigant_1_Conditions()
-    if ( not ( GetResearched() == 'R0CP' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CP') ) ) then
         return false
     end
     return true
@@ -26789,13 +26789,13 @@ end
 -- Trigger: MehaGigant 1 Can
 --===========================================================================
 function Trig_MehaGigant_1_Can_Conditions()
-    if ( not ( GetResearched() == 'R0CP' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CP') ) ) then
         return false
     end
     return true
 end
 function Trig_MehaGigant_1_Can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CQ', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CQ'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MehaGigant_1_Can()
@@ -26808,13 +26808,13 @@ end
 -- Trigger: MehaGigant 1 Beg
 --===========================================================================
 function Trig_MehaGigant_1_Beg_Conditions()
-    if ( not ( GetResearched() == 'R0CP' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CP') ) ) then
         return false
     end
     return true
 end
 function Trig_MehaGigant_1_Beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CQ', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CQ'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MehaGigant_1_Beg()
@@ -26827,13 +26827,13 @@ end
 -- Trigger: MehaGigant 2
 --===========================================================================
 function Trig_MehaGigant_2_Conditions()
-    if ( not ( GetResearched() == 'R0CQ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CQ') ) ) then
         return false
     end
     return true
 end
 function Trig_MehaGigant_2_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CP', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CP'), 0, GetOwningPlayer(GetTriggerUnit()))
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     SetPlayerAbilityAvailableBJ(true, FourCC('A0U8'), GetOwningPlayer(GetTriggerUnit()))
     TriggerExecute(gg_trg_All_Gnomes)
@@ -26849,13 +26849,13 @@ end
 -- Trigger: MehaGigant 2 Can
 --===========================================================================
 function Trig_MehaGigant_2_Can_Conditions()
-    if ( not ( GetResearched() == 'R0CQ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CQ') ) ) then
         return false
     end
     return true
 end
 function Trig_MehaGigant_2_Can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CP', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CP'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MehaGigant_2_Can()
@@ -26868,13 +26868,13 @@ end
 -- Trigger: MehaGigant 2 Beg
 --===========================================================================
 function Trig_MehaGigant_2_Beg_Conditions()
-    if ( not ( GetResearched() == 'R0CQ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CQ') ) ) then
         return false
     end
     return true
 end
 function Trig_MehaGigant_2_Beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CP', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CP'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MehaGigant_2_Beg()
@@ -26887,7 +26887,7 @@ end
 -- Trigger: Spider start
 --===========================================================================
 function Trig_Spider_start_Conditions()
-    if ( not ( GetResearched() == 'R0B5' ) ) then
+    if ( not ( GetResearched() == FourCC('R0B5') ) ) then
         return false
     end
     return true
@@ -26895,9 +26895,9 @@ end
 function Trig_Spider_start_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes_Off)
-    SetPlayerTechMaxAllowedSwap('R0CR', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CS', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h0FV', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CR'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CS'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FV'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Spider_start()
@@ -26910,13 +26910,13 @@ end
 -- Trigger: Spider 1
 --===========================================================================
 function Trig_Spider_1_Conditions()
-    if ( not ( GetResearched() == 'R0CR' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CR') ) ) then
         return false
     end
     return true
 end
 function Trig_Spider_1_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CS', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CS'), 0, GetOwningPlayer(GetTriggerUnit()))
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes)
 end
@@ -26931,13 +26931,13 @@ end
 -- Trigger: Spider 1 Beg
 --===========================================================================
 function Trig_Spider_1_Beg_Conditions()
-    if ( not ( GetResearched() == 'R0CR' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CR') ) ) then
         return false
     end
     return true
 end
 function Trig_Spider_1_Beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CS', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CS'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Spider_1_Beg()
@@ -26950,13 +26950,13 @@ end
 -- Trigger: Spider 1 Can
 --===========================================================================
 function Trig_Spider_1_Can_Conditions()
-    if ( not ( GetResearched() == 'R0CR' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CR') ) ) then
         return false
     end
     return true
 end
 function Trig_Spider_1_Can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CS', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CS'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Spider_1_Can()
@@ -26969,13 +26969,13 @@ end
 -- Trigger: Spider 2
 --===========================================================================
 function Trig_Spider_2_Conditions()
-    if ( not ( GetResearched() == 'R0CS' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CS') ) ) then
         return false
     end
     return true
 end
 function Trig_Spider_2_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CR', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CR'), 0, GetOwningPlayer(GetTriggerUnit()))
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes)
 end
@@ -26990,13 +26990,13 @@ end
 -- Trigger: Spider 2 Beg
 --===========================================================================
 function Trig_Spider_2_Beg_Conditions()
-    if ( not ( GetResearched() == 'R0CS' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CS') ) ) then
         return false
     end
     return true
 end
 function Trig_Spider_2_Beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CR', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CR'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Spider_2_Beg()
@@ -27009,13 +27009,13 @@ end
 -- Trigger: Spider 2 Can
 --===========================================================================
 function Trig_Spider_2_Can_Conditions()
-    if ( not ( GetResearched() == 'R0CS' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CS') ) ) then
         return false
     end
     return true
 end
 function Trig_Spider_2_Can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CR', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CR'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Spider_2_Can()
@@ -27028,7 +27028,7 @@ end
 -- Trigger: Chahohod Start
 --===========================================================================
 function Trig_Chahohod_Start_Conditions()
-    if ( not ( GetResearched() == 'R0BE' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BE') ) ) then
         return false
     end
     return true
@@ -27036,10 +27036,10 @@ end
 function Trig_Chahohod_Start_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes_Off)
-    SetPlayerTechMaxAllowedSwap('h0FH', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CF', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CG', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0C7', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FH'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CF'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CG'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C7'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Chahohod_Start()
@@ -27052,7 +27052,7 @@ end
 -- Trigger: Chahohod 1
 --===========================================================================
 function Trig_Chahohod_1_Conditions()
-    if ( not ( GetResearched() == 'R0CF' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CF') ) ) then
         return false
     end
     return true
@@ -27073,14 +27073,14 @@ end
 -- Trigger: Chahohod 1 beg
 --===========================================================================
 function Trig_Chahohod_1_beg_Conditions()
-    if ( not ( GetResearched() == 'R0CF' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CF') ) ) then
         return false
     end
     return true
 end
 function Trig_Chahohod_1_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C7', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CG', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C7'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CG'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Chahohod_1_beg()
@@ -27093,14 +27093,14 @@ end
 -- Trigger: Chahohod 1 can
 --===========================================================================
 function Trig_Chahohod_1_can_Conditions()
-    if ( not ( GetResearched() == 'R0CF' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CF') ) ) then
         return false
     end
     return true
 end
 function Trig_Chahohod_1_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C7', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CG', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C7'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CG'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Chahohod_1_can()
@@ -27113,7 +27113,7 @@ end
 -- Trigger: Chahohod 2
 --===========================================================================
 function Trig_Chahohod_2_Conditions()
-    if ( not ( GetResearched() == 'R0CG' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CG') ) ) then
         return false
     end
     return true
@@ -27134,14 +27134,14 @@ end
 -- Trigger: Chahohod 2 beg
 --===========================================================================
 function Trig_Chahohod_2_beg_Conditions()
-    if ( not ( GetResearched() == 'R0CG' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CG') ) ) then
         return false
     end
     return true
 end
 function Trig_Chahohod_2_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C7', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CF', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C7'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CF'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Chahohod_2_beg()
@@ -27154,14 +27154,14 @@ end
 -- Trigger: Chahohod 2 can
 --===========================================================================
 function Trig_Chahohod_2_can_Conditions()
-    if ( not ( GetResearched() == 'R0CG' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CG') ) ) then
         return false
     end
     return true
 end
 function Trig_Chahohod_2_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C7', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CF', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C7'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CF'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Chahohod_2_can()
@@ -27174,7 +27174,7 @@ end
 -- Trigger: Chahohod 3
 --===========================================================================
 function Trig_Chahohod_3_Conditions()
-    if ( not ( GetResearched() == 'R0C7' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C7') ) ) then
         return false
     end
     return true
@@ -27194,14 +27194,14 @@ end
 -- Trigger: Chahohod 3 beg
 --===========================================================================
 function Trig_Chahohod_3_beg_Conditions()
-    if ( not ( GetResearched() == 'R0C7' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C7') ) ) then
         return false
     end
     return true
 end
 function Trig_Chahohod_3_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CF', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CG', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CF'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CG'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Chahohod_3_beg()
@@ -27214,14 +27214,14 @@ end
 -- Trigger: Chahohod 3 beg Copy
 --===========================================================================
 function Trig_Chahohod_3_beg_Copy_Conditions()
-    if ( not ( GetResearched() == 'R0C7' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C7') ) ) then
         return false
     end
     return true
 end
 function Trig_Chahohod_3_beg_Copy_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CF', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CG', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CF'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CG'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Chahohod_3_beg_Copy()
@@ -27234,7 +27234,7 @@ end
 -- Trigger: Minitank Start
 --===========================================================================
 function Trig_Minitank_Start_Conditions()
-    if ( not ( GetResearched() == 'R0BB' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BB') ) ) then
         return false
     end
     return true
@@ -27242,10 +27242,10 @@ end
 function Trig_Minitank_Start_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes_Off)
-    SetPlayerTechMaxAllowedSwap('R0C5', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0C6', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0BT', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h0FN', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C5'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C6'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BT'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FN'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Minitank_Start()
@@ -27258,7 +27258,7 @@ end
 -- Trigger: Minitank 1
 --===========================================================================
 function Trig_Minitank_1_Conditions()
-    if ( not ( GetResearched() == 'R0C5' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C5') ) ) then
         return false
     end
     return true
@@ -27278,14 +27278,14 @@ end
 -- Trigger: Minitank 1 can
 --===========================================================================
 function Trig_Minitank_1_can_Conditions()
-    if ( not ( GetResearched() == 'R0C5' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C5') ) ) then
         return false
     end
     return true
 end
 function Trig_Minitank_1_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C6', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0BT', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C6'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BT'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Minitank_1_can()
@@ -27298,14 +27298,14 @@ end
 -- Trigger: Minitank 1 beg
 --===========================================================================
 function Trig_Minitank_1_beg_Conditions()
-    if ( not ( GetResearched() == 'R0C5' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C5') ) ) then
         return false
     end
     return true
 end
 function Trig_Minitank_1_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C6', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0BT', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C6'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BT'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Minitank_1_beg()
@@ -27318,7 +27318,7 @@ end
 -- Trigger: Minitank 2
 --===========================================================================
 function Trig_Minitank_2_Conditions()
-    if ( not ( GetResearched() == 'R0C6' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C6') ) ) then
         return false
     end
     return true
@@ -27338,14 +27338,14 @@ end
 -- Trigger: Minitank 2 can
 --===========================================================================
 function Trig_Minitank_2_can_Conditions()
-    if ( not ( GetResearched() == 'R0C6' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C6') ) ) then
         return false
     end
     return true
 end
 function Trig_Minitank_2_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C5', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0BT', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C5'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BT'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Minitank_2_can()
@@ -27358,14 +27358,14 @@ end
 -- Trigger: Minitank 2 beg
 --===========================================================================
 function Trig_Minitank_2_beg_Conditions()
-    if ( not ( GetResearched() == 'R0C6' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C6') ) ) then
         return false
     end
     return true
 end
 function Trig_Minitank_2_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C5', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0BT', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C5'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BT'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Minitank_2_beg()
@@ -27378,7 +27378,7 @@ end
 -- Trigger: Minitank 3
 --===========================================================================
 function Trig_Minitank_3_Conditions()
-    if ( not ( GetResearched() == 'R0BT' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BT') ) ) then
         return false
     end
     return true
@@ -27398,14 +27398,14 @@ end
 -- Trigger: Minitank 3 can
 --===========================================================================
 function Trig_Minitank_3_can_Conditions()
-    if ( not ( GetResearched() == 'R0BT' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BT') ) ) then
         return false
     end
     return true
 end
 function Trig_Minitank_3_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C5', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0C6', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C5'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C6'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Minitank_3_can()
@@ -27418,14 +27418,14 @@ end
 -- Trigger: Minitank 3 beg
 --===========================================================================
 function Trig_Minitank_3_beg_Conditions()
-    if ( not ( GetResearched() == 'R0BT' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BT') ) ) then
         return false
     end
     return true
 end
 function Trig_Minitank_3_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C5', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0C6', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C5'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C6'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Minitank_3_beg()
@@ -27438,7 +27438,7 @@ end
 -- Trigger: UniTank start
 --===========================================================================
 function Trig_UniTank_start_Conditions()
-    if ( not ( GetResearched() == 'R0BF' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BF') ) ) then
         return false
     end
     return true
@@ -27446,10 +27446,10 @@ end
 function Trig_UniTank_start_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes_Off)
-    SetPlayerTechMaxAllowedSwap('R0CC', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CD', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CE', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h0FF', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CC'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CD'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CE'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FF'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_UniTank_start()
@@ -27462,14 +27462,14 @@ end
 -- Trigger: UniTank 1
 --===========================================================================
 function Trig_UniTank_1_Conditions()
-    if ( not ( GetResearched() == 'R0CC' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CC') ) ) then
         return false
     end
     return true
 end
 function Trig_UniTank_1_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CD', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CE', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CD'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CE'), 0, GetOwningPlayer(GetTriggerUnit()))
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes)
 end
@@ -27484,14 +27484,14 @@ end
 -- Trigger: UniTank 1 can
 --===========================================================================
 function Trig_UniTank_1_can_Conditions()
-    if ( not ( GetResearched() == 'R0CC' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CC') ) ) then
         return false
     end
     return true
 end
 function Trig_UniTank_1_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CD', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CE', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CD'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CE'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_UniTank_1_can()
@@ -27504,14 +27504,14 @@ end
 -- Trigger: UniTank 1 beg
 --===========================================================================
 function Trig_UniTank_1_beg_Conditions()
-    if ( not ( GetResearched() == 'R0CC' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CC') ) ) then
         return false
     end
     return true
 end
 function Trig_UniTank_1_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CD', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CE', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CD'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CE'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_UniTank_1_beg()
@@ -27524,14 +27524,14 @@ end
 -- Trigger: UniTank 2
 --===========================================================================
 function Trig_UniTank_2_Conditions()
-    if ( not ( GetResearched() == 'R0CD' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CD') ) ) then
         return false
     end
     return true
 end
 function Trig_UniTank_2_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CE', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CC', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CE'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CC'), 0, GetOwningPlayer(GetTriggerUnit()))
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes)
 end
@@ -27546,14 +27546,14 @@ end
 -- Trigger: UniTank 2 can
 --===========================================================================
 function Trig_UniTank_2_can_Conditions()
-    if ( not ( GetResearched() == 'R0CD' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CD') ) ) then
         return false
     end
     return true
 end
 function Trig_UniTank_2_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CE', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CC', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CE'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CC'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_UniTank_2_can()
@@ -27566,14 +27566,14 @@ end
 -- Trigger: UniTank 2 beg
 --===========================================================================
 function Trig_UniTank_2_beg_Conditions()
-    if ( not ( GetResearched() == 'R0CD' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CD') ) ) then
         return false
     end
     return true
 end
 function Trig_UniTank_2_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CE', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CC', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CE'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CC'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_UniTank_2_beg()
@@ -27586,14 +27586,14 @@ end
 -- Trigger: UniTank 3
 --===========================================================================
 function Trig_UniTank_3_Conditions()
-    if ( not ( GetResearched() == 'R0CE' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CE') ) ) then
         return false
     end
     return true
 end
 function Trig_UniTank_3_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CD', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CC', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CD'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CC'), 0, GetOwningPlayer(GetTriggerUnit()))
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes)
 end
@@ -27608,14 +27608,14 @@ end
 -- Trigger: UniTank 3 can
 --===========================================================================
 function Trig_UniTank_3_can_Conditions()
-    if ( not ( GetResearched() == 'R0CE' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CE') ) ) then
         return false
     end
     return true
 end
 function Trig_UniTank_3_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CD', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CC', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CD'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CC'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_UniTank_3_can()
@@ -27628,14 +27628,14 @@ end
 -- Trigger: UniTank 3 beg
 --===========================================================================
 function Trig_UniTank_3_beg_Conditions()
-    if ( not ( GetResearched() == 'R0CE' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CE') ) ) then
         return false
     end
     return true
 end
 function Trig_UniTank_3_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CD', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CC', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CD'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CC'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_UniTank_3_beg()
@@ -27648,7 +27648,7 @@ end
 -- Trigger: Venec Tank start
 --===========================================================================
 function Trig_Venec_Tank_start_Conditions()
-    if ( not ( GetResearched() == 'R0BG' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BG') ) ) then
         return false
     end
     return true
@@ -27656,10 +27656,10 @@ end
 function Trig_Venec_Tank_start_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes_Off)
-    SetPlayerTechMaxAllowedSwap('R0C9', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CA', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CB', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h0FG', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C9'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CA'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CB'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FG'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Venec_Tank_start()
@@ -27672,7 +27672,7 @@ end
 -- Trigger: Venec Tank 1
 --===========================================================================
 function Trig_Venec_Tank_1_Conditions()
-    if ( not ( GetResearched() == 'R0C9' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C9') ) ) then
         return false
     end
     return true
@@ -27692,14 +27692,14 @@ end
 -- Trigger: Venec Tank 1 can
 --===========================================================================
 function Trig_Venec_Tank_1_can_Conditions()
-    if ( not ( GetResearched() == 'R0C9' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C9') ) ) then
         return false
     end
     return true
 end
 function Trig_Venec_Tank_1_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CA', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CB', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CA'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CB'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Venec_Tank_1_can()
@@ -27712,14 +27712,14 @@ end
 -- Trigger: Venec Tank 1 beg
 --===========================================================================
 function Trig_Venec_Tank_1_beg_Conditions()
-    if ( not ( GetResearched() == 'R0C9' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C9') ) ) then
         return false
     end
     return true
 end
 function Trig_Venec_Tank_1_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CA', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CB', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CA'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CB'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Venec_Tank_1_beg()
@@ -27732,7 +27732,7 @@ end
 -- Trigger: Venec Tank 2
 --===========================================================================
 function Trig_Venec_Tank_2_Conditions()
-    if ( not ( GetResearched() == 'R0CA' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CA') ) ) then
         return false
     end
     return true
@@ -27752,14 +27752,14 @@ end
 -- Trigger: Venec Tank 2 can
 --===========================================================================
 function Trig_Venec_Tank_2_can_Conditions()
-    if ( not ( GetResearched() == 'R0CA' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CA') ) ) then
         return false
     end
     return true
 end
 function Trig_Venec_Tank_2_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C9', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CB', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C9'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CB'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Venec_Tank_2_can()
@@ -27772,14 +27772,14 @@ end
 -- Trigger: Venec Tank 2 beg
 --===========================================================================
 function Trig_Venec_Tank_2_beg_Conditions()
-    if ( not ( GetResearched() == 'R0CA' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CA') ) ) then
         return false
     end
     return true
 end
 function Trig_Venec_Tank_2_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C9', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CB', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C9'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CB'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Venec_Tank_2_beg()
@@ -27792,7 +27792,7 @@ end
 -- Trigger: Venec Tank 3
 --===========================================================================
 function Trig_Venec_Tank_3_Conditions()
-    if ( not ( GetResearched() == 'R0CB' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CB') ) ) then
         return false
     end
     return true
@@ -27812,14 +27812,14 @@ end
 -- Trigger: Venec Tank 3 can
 --===========================================================================
 function Trig_Venec_Tank_3_can_Conditions()
-    if ( not ( GetResearched() == 'R0CB' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CB') ) ) then
         return false
     end
     return true
 end
 function Trig_Venec_Tank_3_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CA', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0C9', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CA'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C9'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Venec_Tank_3_can()
@@ -27832,14 +27832,14 @@ end
 -- Trigger: Venec Tank 3 beg
 --===========================================================================
 function Trig_Venec_Tank_3_beg_Conditions()
-    if ( not ( GetResearched() == 'R0CB' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CB') ) ) then
         return false
     end
     return true
 end
 function Trig_Venec_Tank_3_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CA', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0C9', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CA'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C9'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Venec_Tank_3_beg()
@@ -27852,7 +27852,7 @@ end
 -- Trigger: Car start
 --===========================================================================
 function Trig_Car_start_Conditions()
-    if ( not ( GetResearched() == 'R0BI' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BI') ) ) then
         return false
     end
     return true
@@ -27860,10 +27860,10 @@ end
 function Trig_Car_start_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes_Off)
-    SetPlayerTechMaxAllowedSwap('R0CJ', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CK', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CL', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h0FQ', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CJ'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CK'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CL'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FQ'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Car_start()
@@ -27876,7 +27876,7 @@ end
 -- Trigger: Car 1
 --===========================================================================
 function Trig_Car_1_Conditions()
-    if ( not ( GetResearched() == 'R0CJ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CJ') ) ) then
         return false
     end
     return true
@@ -27896,14 +27896,14 @@ end
 -- Trigger: Car 1 can
 --===========================================================================
 function Trig_Car_1_can_Conditions()
-    if ( not ( GetResearched() == 'R0CJ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CJ') ) ) then
         return false
     end
     return true
 end
 function Trig_Car_1_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CK', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CL', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CK'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CL'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Car_1_can()
@@ -27916,14 +27916,14 @@ end
 -- Trigger: Car 1 beg
 --===========================================================================
 function Trig_Car_1_beg_Conditions()
-    if ( not ( GetResearched() == 'R0CJ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CJ') ) ) then
         return false
     end
     return true
 end
 function Trig_Car_1_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CK', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CL', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CK'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CL'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Car_1_beg()
@@ -27936,7 +27936,7 @@ end
 -- Trigger: Car 2
 --===========================================================================
 function Trig_Car_2_Conditions()
-    if ( not ( GetResearched() == 'R0CK' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CK') ) ) then
         return false
     end
     return true
@@ -27957,14 +27957,14 @@ end
 -- Trigger: Car 2 can
 --===========================================================================
 function Trig_Car_2_can_Conditions()
-    if ( not ( GetResearched() == 'R0CK' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CK') ) ) then
         return false
     end
     return true
 end
 function Trig_Car_2_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CJ', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CL', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CJ'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CL'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Car_2_can()
@@ -27977,14 +27977,14 @@ end
 -- Trigger: Car 2 beg
 --===========================================================================
 function Trig_Car_2_beg_Conditions()
-    if ( not ( GetResearched() == 'R0CK' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CK') ) ) then
         return false
     end
     return true
 end
 function Trig_Car_2_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CJ', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CL', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CJ'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CL'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Car_2_beg()
@@ -27997,7 +27997,7 @@ end
 -- Trigger: Car 3
 --===========================================================================
 function Trig_Car_3_Conditions()
-    if ( not ( GetResearched() == 'R0CL' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CL') ) ) then
         return false
     end
     return true
@@ -28017,14 +28017,14 @@ end
 -- Trigger: Car 3 can
 --===========================================================================
 function Trig_Car_3_can_Conditions()
-    if ( not ( GetResearched() == 'R0CL' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CL') ) ) then
         return false
     end
     return true
 end
 function Trig_Car_3_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CJ', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CK', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CJ'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CK'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Car_3_can()
@@ -28037,14 +28037,14 @@ end
 -- Trigger: Car 3 beg
 --===========================================================================
 function Trig_Car_3_beg_Conditions()
-    if ( not ( GetResearched() == 'R0CL' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CL') ) ) then
         return false
     end
     return true
 end
 function Trig_Car_3_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CJ', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CK', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CJ'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CK'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Car_3_beg()
@@ -28057,7 +28057,7 @@ end
 -- Trigger: SGT Start
 --===========================================================================
 function Trig_SGT_Start_Conditions()
-    if ( not ( GetResearched() == 'R0BD' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BD') ) ) then
         return false
     end
     return true
@@ -28065,10 +28065,10 @@ end
 function Trig_SGT_Start_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes_Off)
-    SetPlayerTechMaxAllowedSwap('h0FO', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CI', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CH', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CM', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FO'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CI'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CH'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CM'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SGT_Start()
@@ -28081,14 +28081,14 @@ end
 -- Trigger: SGT 1
 --===========================================================================
 function Trig_SGT_1_Conditions()
-    if ( not ( GetResearched() == 'R0CH' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CH') ) ) then
         return false
     end
     return true
 end
 function Trig_SGT_1_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CI', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CM', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CI'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CM'), 0, GetOwningPlayer(GetTriggerUnit()))
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes)
 end
@@ -28103,14 +28103,14 @@ end
 -- Trigger: SGT 1 can
 --===========================================================================
 function Trig_SGT_1_can_Conditions()
-    if ( not ( GetResearched() == 'R0CH' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CH') ) ) then
         return false
     end
     return true
 end
 function Trig_SGT_1_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CI', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CM', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CI'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CM'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SGT_1_can()
@@ -28123,14 +28123,14 @@ end
 -- Trigger: SGT 1 beg
 --===========================================================================
 function Trig_SGT_1_beg_Conditions()
-    if ( not ( GetResearched() == 'R0CH' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CH') ) ) then
         return false
     end
     return true
 end
 function Trig_SGT_1_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CI', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CM', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CI'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CM'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SGT_1_beg()
@@ -28143,7 +28143,7 @@ end
 -- Trigger: SGT 2
 --===========================================================================
 function Trig_SGT_2_Conditions()
-    if ( not ( GetResearched() == 'R0CI' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CI') ) ) then
         return false
     end
     return true
@@ -28164,14 +28164,14 @@ end
 -- Trigger: SGT 2can
 --===========================================================================
 function Trig_SGT_2can_Conditions()
-    if ( not ( GetResearched() == 'R0CI' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CI') ) ) then
         return false
     end
     return true
 end
 function Trig_SGT_2can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CH', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CM', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CH'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CM'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SGT_2can()
@@ -28184,14 +28184,14 @@ end
 -- Trigger: SGT 2 beg
 --===========================================================================
 function Trig_SGT_2_beg_Conditions()
-    if ( not ( GetResearched() == 'R0CI' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CI') ) ) then
         return false
     end
     return true
 end
 function Trig_SGT_2_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CH', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CM', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CH'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CM'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SGT_2_beg()
@@ -28204,7 +28204,7 @@ end
 -- Trigger: SGT 3
 --===========================================================================
 function Trig_SGT_3_Conditions()
-    if ( not ( GetResearched() == 'R0CM' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CM') ) ) then
         return false
     end
     return true
@@ -28225,14 +28225,14 @@ end
 -- Trigger: SGT 3 can
 --===========================================================================
 function Trig_SGT_3_can_Conditions()
-    if ( not ( GetResearched() == 'R0CM' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CM') ) ) then
         return false
     end
     return true
 end
 function Trig_SGT_3_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CI', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CH', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CI'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CH'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SGT_3_can()
@@ -28245,14 +28245,14 @@ end
 -- Trigger: SGT 3 beg
 --===========================================================================
 function Trig_SGT_3_beg_Conditions()
-    if ( not ( GetResearched() == 'R0CM' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CM') ) ) then
         return false
     end
     return true
 end
 function Trig_SGT_3_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CI', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CH', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CI'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CH'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SGT_3_beg()
@@ -28265,7 +28265,7 @@ end
 -- Trigger: SAU Start
 --===========================================================================
 function Trig_SAU_Start_Conditions()
-    if ( not ( GetResearched() == 'R0C0' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C0') ) ) then
         return false
     end
     return true
@@ -28273,10 +28273,10 @@ end
 function Trig_SAU_Start_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes_Off)
-    SetPlayerTechMaxAllowedSwap('R0CN', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CO', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0C3', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h0FJ', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CN'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CO'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C3'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FJ'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SAU_Start()
@@ -28289,7 +28289,7 @@ end
 -- Trigger: SAU 1
 --===========================================================================
 function Trig_SAU_1_Conditions()
-    if ( not ( GetResearched() == 'R0CN' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CN') ) ) then
         return false
     end
     return true
@@ -28309,14 +28309,14 @@ end
 -- Trigger: SAU 1 can
 --===========================================================================
 function Trig_SAU_1_can_Conditions()
-    if ( not ( GetResearched() == 'R0CN' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CN') ) ) then
         return false
     end
     return true
 end
 function Trig_SAU_1_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C3', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CO', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C3'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CO'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SAU_1_can()
@@ -28329,14 +28329,14 @@ end
 -- Trigger: SAU 1  beg
 --===========================================================================
 function Trig_SAU_1__beg_Conditions()
-    if ( not ( GetResearched() == 'R0CN' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CN') ) ) then
         return false
     end
     return true
 end
 function Trig_SAU_1__beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0C3', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CO', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C3'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CO'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SAU_1__beg()
@@ -28349,7 +28349,7 @@ end
 -- Trigger: SAU 2
 --===========================================================================
 function Trig_SAU_2_Conditions()
-    if ( not ( GetResearched() == 'R0CO' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CO') ) ) then
         return false
     end
     return true
@@ -28369,14 +28369,14 @@ end
 -- Trigger: SAU 2 can
 --===========================================================================
 function Trig_SAU_2_can_Conditions()
-    if ( not ( GetResearched() == 'R0CO' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CO') ) ) then
         return false
     end
     return true
 end
 function Trig_SAU_2_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CN', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0C3', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CN'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C3'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SAU_2_can()
@@ -28389,14 +28389,14 @@ end
 -- Trigger: SAU 2 beg
 --===========================================================================
 function Trig_SAU_2_beg_Conditions()
-    if ( not ( GetResearched() == 'R0CO' ) ) then
+    if ( not ( GetResearched() == FourCC('R0CO') ) ) then
         return false
     end
     return true
 end
 function Trig_SAU_2_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CN', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0C3', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CN'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C3'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SAU_2_beg()
@@ -28409,7 +28409,7 @@ end
 -- Trigger: SAU 3
 --===========================================================================
 function Trig_SAU_3_Conditions()
-    if ( not ( GetResearched() == 'R0C3' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C3') ) ) then
         return false
     end
     return true
@@ -28429,14 +28429,14 @@ end
 -- Trigger: SAU 3 beg
 --===========================================================================
 function Trig_SAU_3_beg_Conditions()
-    if ( not ( GetResearched() == 'R0C3' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C3') ) ) then
         return false
     end
     return true
 end
 function Trig_SAU_3_beg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CN', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CO', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CN'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CO'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SAU_3_beg()
@@ -28449,14 +28449,14 @@ end
 -- Trigger: SAU 3 can
 --===========================================================================
 function Trig_SAU_3_can_Conditions()
-    if ( not ( GetResearched() == 'R0C3' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C3') ) ) then
         return false
     end
     return true
 end
 function Trig_SAU_3_can_Actions()
-    SetPlayerTechMaxAllowedSwap('R0CN', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0CO', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CN'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0CO'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SAU_3_can()
@@ -28469,14 +28469,14 @@ end
 -- Trigger: MEGA SAU
 --===========================================================================
 function Trig_MEGA_SAU_Conditions()
-    if ( not ( GetResearched() == 'R0C1' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C1') ) ) then
         return false
     end
     return true
 end
 function Trig_MEGA_SAU_Actions()
-    SetPlayerTechMaxAllowedSwap('h0FT', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0C4', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FT'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0C4'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MEGA_SAU()
@@ -28489,7 +28489,7 @@ end
 -- Trigger: URAN
 --===========================================================================
 function Trig_URAN_Conditions()
-    if ( not ( GetResearched() == 'R0C4' ) ) then
+    if ( not ( GetResearched() == FourCC('R0C4') ) ) then
         return false
     end
     return true
@@ -28508,14 +28508,14 @@ end
 -- Trigger: Klap Klap End
 --===========================================================================
 function Trig_Klap_Klap_End_Conditions()
-    if ( not ( GetResearched() == 'R0B7' ) ) then
+    if ( not ( GetResearched() == FourCC('R0B7') ) ) then
         return false
     end
     return true
 end
 function Trig_Klap_Klap_End_Actions()
-    SetPlayerTechMaxAllowedSwap('R0B8', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0BJ', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B8'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BJ'), 0, GetOwningPlayer(GetTriggerUnit()))
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes)
 end
@@ -28530,14 +28530,14 @@ end
 -- Trigger: Klap Klap start
 --===========================================================================
 function Trig_Klap_Klap_start_Conditions()
-    if ( not ( GetResearched() == 'R0BJ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BJ') ) ) then
         return false
     end
     return true
 end
 function Trig_Klap_Klap_start_Actions()
-    SetPlayerTechMaxAllowedSwap('R0BM', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0B8', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BM'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B8'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Klap_Klap_start()
@@ -28550,13 +28550,13 @@ end
 -- Trigger: Klap Klap LUM
 --===========================================================================
 function Trig_Klap_Klap_LUM_Conditions()
-    if ( not ( GetResearched() == 'R0BM' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BM') ) ) then
         return false
     end
     return true
 end
 function Trig_Klap_Klap_LUM_Actions()
-    SetPlayerTechMaxAllowedSwap('R0BP', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BP'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Klap_Klap_LUM()
@@ -28569,13 +28569,13 @@ end
 -- Trigger: Klap Klap LUM 2
 --===========================================================================
 function Trig_Klap_Klap_LUM_2_Conditions()
-    if ( not ( GetResearched() == 'R0BP' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BP') ) ) then
         return false
     end
     return true
 end
 function Trig_Klap_Klap_LUM_2_Actions()
-    SetPlayerTechMaxAllowedSwap('R0B7', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B7'), 0, GetOwningPlayer(GetTriggerUnit()))
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes)
 end
@@ -28590,15 +28590,15 @@ end
 -- Trigger: Klap Klap War
 --===========================================================================
 function Trig_Klap_Klap_War_Conditions()
-    if ( not ( GetResearched() == 'R0B8' ) ) then
+    if ( not ( GetResearched() == FourCC('R0B8') ) ) then
         return false
     end
     return true
 end
 function Trig_Klap_Klap_War_Actions()
-    SetPlayerTechMaxAllowedSwap('R0BJ', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0BK', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0BL', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BJ'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BK'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BL'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Klap_Klap_War()
@@ -28611,15 +28611,15 @@ end
 -- Trigger: Klap Klap War Bomb
 --===========================================================================
 function Trig_Klap_Klap_War_Bomb_Conditions()
-    if ( not ( GetResearched() == 'R0BK' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BK') ) ) then
         return false
     end
     return true
 end
 function Trig_Klap_Klap_War_Bomb_Actions()
-    SetPlayerTechMaxAllowedSwap('R0BL', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0BN', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0BO', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BL'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BN'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BO'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Klap_Klap_War_Bomb()
@@ -28632,15 +28632,15 @@ end
 -- Trigger: Klap Klap War Shield
 --===========================================================================
 function Trig_Klap_Klap_War_Shield_Conditions()
-    if ( not ( GetResearched() == 'R0BL' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BL') ) ) then
         return false
     end
     return true
 end
 function Trig_Klap_Klap_War_Shield_Actions()
-    SetPlayerTechMaxAllowedSwap('R0BK', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0BN', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0BO', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BK'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BN'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BO'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Klap_Klap_War_Shield()
@@ -28653,16 +28653,16 @@ end
 -- Trigger: Klap Klap War small
 --===========================================================================
 function Trig_Klap_Klap_War_small_Conditions()
-    if ( not ( GetResearched() == 'R0BN' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BN') ) ) then
         return false
     end
     return true
 end
 function Trig_Klap_Klap_War_small_Actions()
-    SetPlayerTechMaxAllowedSwap('R0BO', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0B7', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h0FX', 0, Player(0))
-    SetPlayerTechMaxAllowedSwap('h0G4', - 1, Player(0))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BO'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B7'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FX'), 0, Player(0))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0G4'), - 1, Player(0))
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes)
 end
@@ -28677,16 +28677,16 @@ end
 -- Trigger: Klap Klap War big
 --===========================================================================
 function Trig_Klap_Klap_War_big_Conditions()
-    if ( not ( GetResearched() == 'R0BO' ) ) then
+    if ( not ( GetResearched() == FourCC('R0BO') ) ) then
         return false
     end
     return true
 end
 function Trig_Klap_Klap_War_big_Actions()
-    SetPlayerTechMaxAllowedSwap('R0BN', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0B7', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h0FX', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h0G5', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0BN'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0B7'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0FX'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0G5'), - 1, GetOwningPlayer(GetTriggerUnit()))
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerExecute(gg_trg_All_Gnomes)
 end
@@ -28788,7 +28788,7 @@ end
 -- Trigger: K1T1
 --===========================================================================
 function Trig_K1T1_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'ogru'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('ogru')
 end
 function T1Count()
     local a = {}
@@ -28801,44 +28801,44 @@ function T1Count()
     i=4
     while true do
             a[0]=a[0] + 1
-            a[a[0]]='o01I'
+            a[a[0]]=FourCC('o01I')
             b=b + 1
             if b >= i then break end
     end
     --2 юнит Черной гора
-    if GetPlayerTechCount(p, 'R0D1', true) == 1 and GetPlayerTechCount(p, 'R0EH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0D1'), true) == 1 and GetPlayerTechCount(p, FourCC('R0EH'), true) < 1 then
         i=1
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o01E'
+            a[a[0]]=FourCC('o01E')
             
             b=b + 1
             if b >= i then break end
         end
     end
     --3 юнит - эльфы
-    if GetPlayerTechCount(p, 'R0D2', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) ~= 1 then
+    if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=1
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o01F'
+            a[a[0]]=FourCC('o01F')
             
             b=b + 1
             if b >= i then break end
         end
     end
     --4 юнит андеды
-    if GetPlayerTechCount(p, 'R0D3', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) ~= 1 then
+    if GetPlayerTechCount(p, FourCC('R0D3'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o01H'
+            a[a[0]]=FourCC('o01H')
             
             b=b + 1
             if b >= i then break end
@@ -28889,7 +28889,7 @@ function Trig_K1T1_Actions()
 --        call BlzSetAbilityExtendedTooltip( 'A1J0', ""+I2S((udg_HordeLandPrice[pi])+".", 0 )
 --    endif
     
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
     
     -- Ai moment    
     IssuePointOrderLoc(u, "attack", l)
@@ -28908,7 +28908,7 @@ end
 -- Trigger: K1T2
 --===========================================================================
 function Trig_K1T2_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'o01N'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('o01N')
 end
 function T2Count()
     local a = {}
@@ -28923,7 +28923,7 @@ function T2Count()
     i=2
     while true do --Орк
             a[0]=a[0] + 1
-            a[a[0]]='o01Q'
+            a[a[0]]=FourCC('o01Q')
             b=b + 1
             if b >= i then break end
     end
@@ -28932,18 +28932,18 @@ function T2Count()
     i=1
     while true do --Огр
             a[0]=a[0] + 1
-            a[a[0]]='o01O'
+            a[a[0]]=FourCC('o01O')
             b=b + 1
             if b >= i then break end
     end
     
     
-    if GetPlayerTechCount(p, 'R0EE', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) ~= 1 then
+    if GetPlayerTechCount(p, FourCC('R0EE'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         b=0
         i=1
         while true do --Pandaren
                 a[0]=a[0] + 1
-                a[a[0]]='o02S'
+                a[a[0]]=FourCC('o02S')
                 b=b + 1
                 if b >= i then break end
         end
@@ -28990,7 +28990,7 @@ function Trig_K1T2_Actions()
 --    
     
      
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
     
     RemoveLocation(l)
     p=null
@@ -29008,7 +29008,7 @@ end
 -- Trigger: K1T2b
 --===========================================================================
 function Trig_K1T2b_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'o029'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('o029')
 end
 function T2bCount()
     local a = {}
@@ -29023,7 +29023,7 @@ function T2bCount()
     i=5
     while true do --Орк
             a[0]=a[0] + 1
-            a[a[0]]='o02A'
+            a[a[0]]=FourCC('o02A')
             b=b + 1
             if b >= i then break end
     end
@@ -29032,7 +29032,7 @@ function T2bCount()
     i=2
     while true do --Огр
             a[0]=a[0] + 1
-            a[a[0]]='o00A'
+            a[a[0]]=FourCC('o00A')
             b=b + 1
             if b >= i then break end
     end
@@ -29078,7 +29078,7 @@ function Trig_K1T2b_Actions()
 --    
     
      
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -29096,7 +29096,7 @@ end
 -- Trigger: K1TCav
 --===========================================================================
 function Trig_K1TCav_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'orai'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('orai')
 end
 function TCavCount()
     local a = {}
@@ -29111,19 +29111,19 @@ function TCavCount()
     i=3
     while true do --Орк
             a[0]=a[0] + 1
-            a[a[0]]='o027'
+            a[a[0]]=FourCC('o027')
             b=b + 1
             if b >= i then break end
     end
     
     --3 юнит - эльфы
-    if GetPlayerTechCount(p, 'R0D2', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) ~= 1 then
+    if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=1
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o02H'
+            a[a[0]]=FourCC('o02H')
             
             b=b + 1
             if b >= i then break end
@@ -29131,26 +29131,26 @@ function TCavCount()
     end
     
     --Драконья пасть
-    if GetPlayerTechCount(p, 'R0E1', true) == 1 and GetPlayerTechCount(p, 'R0EH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0E1'), true) == 1 and GetPlayerTechCount(p, FourCC('R0EH'), true) < 1 then
         i=1
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o01Z'
+            a[a[0]]=FourCC('o01Z')
             
             b=b + 1
             if b >= i then break end
         end
     end
     --Магнатавр
-    if GetPlayerTechCount(p, 'R0E5', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0E5'), true) == 1 then
         i=2
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o02E'
+            a[a[0]]=FourCC('o02E')
             
             b=b + 1
             if b >= i then break end
@@ -29200,7 +29200,7 @@ function Trig_K1TCav_Actions()
 --    
     
      
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -29218,7 +29218,7 @@ end
 -- Trigger: K1T4
 --===========================================================================
 function Trig_K1T4_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'otau'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('otau')
 end
 function T3Count()
     local a = {}
@@ -29229,12 +29229,12 @@ function T3Count()
     --1 юнит
     a[0]=0
     
-    if GetPlayerTechCount(p, 'R0E9', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         b=0
         i=5
         while true do -- Таурен
                 a[0]=a[0] + 1
-                a[a[0]]='o01L'
+                a[a[0]]=FourCC('o01L')
                 
                 
                 b=b + 1
@@ -29245,19 +29245,19 @@ function T3Count()
     i=2
     while true do -- Огр-воитель
             a[0]=a[0] + 1
-            a[a[0]]='o01M'
+            a[a[0]]=FourCC('o01M')
             b=b + 1
             if b >= i then break end
     end
     
     --Cor Cron
-    if GetPlayerTechCount(p, 'R0E0', false) == 1 and GetPlayerTechCount(p, 'R0EH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0E0'), false) == 1 and GetPlayerTechCount(p, FourCC('R0EH'), true) < 1 then
         i=4
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o01U'
+            a[a[0]]=FourCC('o01U')
             
             b=b + 1
             if b >= i then break end
@@ -29265,25 +29265,25 @@ function T3Count()
     end
     
     --Death knight
-    if GetPlayerTechCount(p, 'R0E3', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0E3'), true) == 1 then
         i=2
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o021'
+            a[a[0]]=FourCC('o021')
             
             b=b + 1
             if b >= i then break end
         end
     end
     
-    if GetPlayerTechCount(p, 'R0EE', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) ~= 1 then
+    if GetPlayerTechCount(p, FourCC('R0EE'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         b=0
         i=2
         while true do --Pandaren
                 a[0]=a[0] + 1
-                a[a[0]]='o02W'
+                a[a[0]]=FourCC('o02W')
                 b=b + 1
                 if b >= i then break end
         end
@@ -29325,8 +29325,8 @@ function Trig_K1T4_Actions()
     --
     
     --Тен Тотем
-    if b == 'o01L' and Random(1 , 25) then
-        b='o032'
+    if b == FourCC('o01L') and Random(1 , 25) then
+        b=FourCC('o032')
     end
     
     aiFixTrainBefore(GetTrainedUnit() , pi)
@@ -29339,7 +29339,7 @@ function Trig_K1T4_Actions()
 --    call SetUnitAbilityLevel(u,'OR00',35+udg_HordeElitePrice[pi])
 --    
      
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -29357,7 +29357,7 @@ end
 -- Trigger: K2T1
 --===========================================================================
 function Trig_K2T1_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'ohun'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('ohun')
 end
 function K1Count()
     local a = {}
@@ -29369,11 +29369,11 @@ function K1Count()
     a[0]=0
     
     -- Troll
-    if GetPlayerTechCount(p, 'R0E9', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         i=5
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='o01G'
+                a[a[0]]=FourCC('o01G')
                 b=b + 1
                 if b >= i then break end
         end
@@ -29384,7 +29384,7 @@ function K1Count()
     i=2
     while true do
             a[0]=a[0] + 1
-            a[a[0]]='o01X'
+            a[a[0]]=FourCC('o01X')
             b=b + 1
             if b >= i then break end
     end
@@ -29447,7 +29447,7 @@ function Trig_K2T1_Actions()
 --    
     
      
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -29465,7 +29465,7 @@ end
 -- Trigger: K2T2
 --===========================================================================
 function Trig_K2T2_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'o01P'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('o01P')
 end
 function K2Count()
     local a = {}
@@ -29477,12 +29477,12 @@ function K2Count()
     
     
     
-    if GetPlayerTechCount(p, 'R0E9', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         i=4
         -- Troll
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='otbk'
+                a[a[0]]=FourCC('otbk')
                 b=b + 1
                 if b >= i then break end
         end
@@ -29490,13 +29490,13 @@ function K2Count()
     end
     
     -- black mountain orc
-    if GetPlayerTechCount(p, 'R0D1', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0D1'), true) == 1 then
         i=2
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o01Y'
+            a[a[0]]=FourCC('o01Y')
             
             b=b + 1
             if b >= i then break end
@@ -29504,13 +29504,13 @@ function K2Count()
     end
     
     --Goblin sniper
-    if GetPlayerTechCount(p, 'R0E4', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0E4'), true) == 1 then
         i=2
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o02F'
+            a[a[0]]=FourCC('o02F')
             
             b=b + 1
             if b >= i then break end
@@ -29556,7 +29556,7 @@ function Trig_K2T2_Actions()
 --    call SetUnitAbilityLevel(u,'OR00',35+udg_HordeLandPrice[pi])
 --    
      
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -29574,7 +29574,7 @@ end
 -- Trigger: K2T2b
 --===========================================================================
 function Trig_K2T2b_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'o02B'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('o02B')
 end
 function K2bCount()
     local a = {}
@@ -29593,7 +29593,7 @@ function K2bCount()
     
     while true do
         a[0]=a[0] + 1
-        a[a[0]]='o02D'
+        a[a[0]]=FourCC('o02D')
         
         b=b + 1
         if b >= i then break end
@@ -29606,19 +29606,19 @@ function K2bCount()
     
     while true do
         a[0]=a[0] + 1
-        a[a[0]]='o02C'
+        a[a[0]]=FourCC('o02C')
         
         b=b + 1
         if b >= i then break end
     end
     --снайпер 2
-    if GetPlayerTechCount(p, 'R0E4', true) >= 1 then
+    if GetPlayerTechCount(p, FourCC('R0E4'), true) >= 1 then
         i=1
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o02J'
+            a[a[0]]=FourCC('o02J')
             
             b=b + 1
             if b >= i then break end
@@ -29662,7 +29662,7 @@ function Trig_K2T2b_Actions()
 --    call SetUnitAbilityLevel(u,'A0UX',35+udg_HordeElitePrice[pi])
 --    
      
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -29680,7 +29680,7 @@ end
 -- Trigger: K2T3
 --===========================================================================
 function Trig_K2T3_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'okod'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('okod')
 end
 function K3Count()
     local a = {}
@@ -29695,29 +29695,29 @@ function K3Count()
     i=2
     while true do
             a[0]=a[0] + 1
-            a[a[0]]='o01R'
+            a[a[0]]=FourCC('o01R')
             b=b + 1
             if b >= i then break end
     end
     
     --Dragon    
-    if GetPlayerTechCount(p, 'R0E1', true) >= 1 and GetPlayerTechCount(p, 'R0EH', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0E1'), true) >= 1 and GetPlayerTechCount(p, FourCC('R0EH'), true) < 1 then
         b=0
         i=2
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='o01S'
+                a[a[0]]=FourCC('o01S')
                 b=b + 1
                 if b >= i then break end
         end
     end
     --Dark ranger    
-    if GetPlayerTechCount(p, 'R0D3', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) ~= 1 then
+    if GetPlayerTechCount(p, FourCC('R0D3'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         b=0
         i=2
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='o02M'
+                a[a[0]]=FourCC('o02M')
                 b=b + 1
                 if b >= i then break end
         end
@@ -29763,7 +29763,7 @@ function Trig_K2T3_Actions()
 --    call SetUnitAbilityLevel(u,'OR00',35+udg_HordeElitePrice[pi])
 --
      
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -29781,7 +29781,7 @@ end
 -- Trigger: KM1
 --===========================================================================
 function Trig_KM1_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'oshm'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('oshm')
 end
 function Trig_KM1_Actions()
     local a = {}
@@ -29794,12 +29794,12 @@ function Trig_KM1_Actions()
     
     a[0]=0
     --1 юнит
-    if GetPlayerTechCount(p, 'R0E9', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         
         i=5
         while true do --Шаман
                 a[0]=a[0] + 1
-                a[a[0]]='o01J'
+                a[a[0]]=FourCC('o01J')
                 b=b + 1
                 if b >= i then break end
         end
@@ -29808,7 +29808,7 @@ function Trig_KM1_Actions()
         i=4
         while true do --Колдун
                 a[0]=a[0] + 1
-                a[a[0]]='o02G'
+                a[a[0]]=FourCC('o02G')
                 b=b + 1
                 if b >= i then break end
         end
@@ -29816,12 +29816,12 @@ function Trig_KM1_Actions()
     end
     
     -- Духостранник
-    if GetPlayerTechCount(p, 'R0E9', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         b=1
         i=3
         while true do
                 a[0]=a[0] + 1
-                a[a[0]]='ospw'
+                a[a[0]]=FourCC('ospw')
                 b=b + 1
                 if b >= i then break end
         end
@@ -29832,7 +29832,7 @@ function Trig_KM1_Actions()
     i=2
     while true do --Огр-маг
             a[0]=a[0] + 1
-            a[a[0]]='o01K'
+            a[a[0]]=FourCC('o01K')
             b=b + 1
             if b >= i then break end
     end
@@ -29854,13 +29854,13 @@ function Trig_KM1_Actions()
 --    endif
     
     -- Зачарователь
-    if GetPlayerTechCount(p, 'R0F4', true) >= 1 then
+    if GetPlayerTechCount(p, FourCC('R0F4'), true) >= 1 then
         i=2
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o02U'
+            a[a[0]]=FourCC('o02U')
             
             b=b + 1
             if b >= i then break end
@@ -29879,7 +29879,7 @@ function Trig_KM1_Actions()
     
      
     
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -29897,7 +29897,7 @@ end
 -- Trigger: KM2
 --===========================================================================
 function Trig_KM2_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'o01W'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('o01W')
 end
 function Trig_KM2_Actions()
     local a = {}
@@ -29914,26 +29914,26 @@ function Trig_KM2_Actions()
   
   
     -- Магистр
-    if GetPlayerTechCount(p, 'R0D2', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) ~= 1 then
+    if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o023'
+            a[a[0]]=FourCC('o023')
             
             b=b + 1
             if b >= i then break end
         end
     end
     -- Темный шаман
-    if GetPlayerTechCount(p, 'R0E9', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0E9'), true) == 1 then
         i=2
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o01V'
+            a[a[0]]=FourCC('o01V')
             
             b=b + 1
             if b >= i then break end
@@ -29955,7 +29955,7 @@ function Trig_KM2_Actions()
     
      
     
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -29973,7 +29973,7 @@ end
 -- Trigger: KM3
 --===========================================================================
 function Trig_KM3_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'odoc'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('odoc')
 end
 function Trig_KM3_Actions()
     local a = {}
@@ -29986,12 +29986,12 @@ function Trig_KM3_Actions()
     a[0]=0
     
     --1 юнит
-    if GetPlayerTechCount(p, 'R0E9', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         
         i=4
         while true do --Знахарь
                 a[0]=a[0] + 1
-                a[a[0]]='o024'
+                a[a[0]]=FourCC('o024')
                 b=b + 1
                 if b >= i then break end
         end
@@ -30000,7 +30000,7 @@ function Trig_KM3_Actions()
         i=3
         while true do --Темный маг
                 a[0]=a[0] + 1
-                a[a[0]]='o02L'
+                a[a[0]]=FourCC('o02L')
                 b=b + 1
                 if b >= i then break end
         end
@@ -30011,13 +30011,13 @@ function Trig_KM3_Actions()
     end
     
     -- Ведьмак
-    if GetPlayerTechCount(p, 'R0D2', true) >= 1 and GetPlayerTechCount(p, 'R0E9', true) ~= 1 then
+    if GetPlayerTechCount(p, FourCC('R0D2'), true) >= 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=1
         b=2
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o025'
+            a[a[0]]=FourCC('o025')
             
             b=b + 1
             if b >= i then break end
@@ -30025,13 +30025,13 @@ function Trig_KM3_Actions()
     end
     
     -- Медик
-    if GetPlayerTechCount(p, 'R0E4', true) >= 1 then
+    if GetPlayerTechCount(p, FourCC('R0E4'), true) >= 1 then
         i=1
         b=2
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o02I'
+            a[a[0]]=FourCC('o02I')
             
             b=b + 1
             if b >= i then break end
@@ -30039,13 +30039,13 @@ function Trig_KM3_Actions()
     end
     
     -- Killer
-    if GetPlayerTechCount(p, 'R0D3', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) ~= 1 then
+    if GetPlayerTechCount(p, FourCC('R0D3'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=1
         b=2
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0IH'
+            a[a[0]]=FourCC('h0IH')
             
             b=b + 1
             if b >= i then break end
@@ -30065,7 +30065,7 @@ function Trig_KM3_Actions()
     
      
     
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
     p=null
@@ -30083,7 +30083,7 @@ end
 -- Trigger: TechT1
 --===========================================================================
 function Trig_TechT1_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'ocat'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('ocat')
 end
 function Trig_TechT1_Actions()
     local a = {}
@@ -30096,13 +30096,13 @@ function Trig_TechT1_Actions()
     a[0]=0
     
     --1 юнит
-    if GetPlayerTechCount(p, 'R0EA', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0EA'), true) < 1 then
         
         b=0
         i=2
         while true do -- Destroyer
                 a[0]=a[0] + 1
-                a[a[0]]='o01T'
+                a[a[0]]=FourCC('o01T')
                 b=b + 1
                 if b >= i then break end
         end
@@ -30113,20 +30113,20 @@ function Trig_TechT1_Actions()
         i=2
         while true do -- Better Destroyer
                 a[0]=a[0] + 1
-                a[a[0]]='o020'
+                a[a[0]]=FourCC('o020')
                 b=b + 1
                 if b >= i then break end
         end
     
     end
     --3 юнит - эльфы ballista
-    if GetPlayerTechCount(p, 'R0D2', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) ~= 1 then
+    if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=1
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o02K'
+            a[a[0]]=FourCC('o02K')
             
             b=b + 1
             if b >= i then break end
@@ -30147,7 +30147,7 @@ function Trig_TechT1_Actions()
 --    call SetUnitAbilityLevel(u,'A0UZ',35+udg_HordeTechPrice[pi])
 --
      
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
 end
@@ -30163,7 +30163,7 @@ end
 -- Trigger: TechT2
 --===========================================================================
 function Trig_TechT2_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'o022'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('o022')
 end
 function Trig_TechT2_Actions()
     local a = {}
@@ -30179,26 +30179,26 @@ function Trig_TechT2_Actions()
     a[0]=0
     
     --blood elves arcane guard
-    if GetPlayerTechCount(p, 'R0D2', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) ~= 1 then
+    if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=1
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o026'
+            a[a[0]]=FourCC('o026')
             
             b=b + 1
             if b >= i then break end
         end
     end
     --Goblins golem
-    if GetPlayerTechCount(p, 'R0E4', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0E4'), true) == 1 then
         i=1
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='o028'
+            a[a[0]]=FourCC('o028')
             
             b=b + 1
             if b >= i then break end
@@ -30217,7 +30217,7 @@ function Trig_TechT2_Actions()
 --    call SetUnitAbilityLevel(u,'A0UZ',35+udg_HordeTechPrice[pi])
 --
      
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
 end
@@ -30233,7 +30233,7 @@ end
 -- Trigger: NavyHeavy
 --===========================================================================
 function Trig_NavyHeavy_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'h0HK'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0HK')
 end
 function Trig_NavyHeavy_Actions()
     local a = {}
@@ -30246,13 +30246,13 @@ function Trig_NavyHeavy_Actions()
     a[0]=0
     
     --1 юнит
-    if GetPlayerTechCount(p, 'R0E9', true) < 1 then
+    if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         
         b=0
         i=2
         while true do -- Drednout
                 a[0]=a[0] + 1
-                a[a[0]]='h0D5'
+                a[a[0]]=FourCC('h0D5')
                 b=b + 1
                 if b >= i then break end
         end
@@ -30263,20 +30263,20 @@ function Trig_NavyHeavy_Actions()
         i=2
         while true do -- ArmoredShip
                 a[0]=a[0] + 1
-                a[a[0]]='h0HM'
+                a[a[0]]=FourCC('h0HM')
                 b=b + 1
                 if b >= i then break end
         end
     
     end
     --Отреки
-    if GetPlayerTechCount(p, 'R0D3', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) ~= 1 then
+    if GetPlayerTechCount(p, FourCC('R0D3'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0I5'
+            a[a[0]]=FourCC('h0I5')
             
             b=b + 1
             if b >= i then break end
@@ -30297,7 +30297,7 @@ function Trig_NavyHeavy_Actions()
 --    call SetUnitAbilityLevel(u,'A0V0',35+udg_HordeNavyPrice[pi])
 --
      
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
     
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
@@ -30313,7 +30313,7 @@ end
 -- Trigger: NavyLight
 --===========================================================================
 function Trig_NavyLight_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'h0HN'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0HN')
 end
 function Trig_NavyLight_Actions()
     local a = {}
@@ -30330,18 +30330,18 @@ function Trig_NavyLight_Actions()
     i=4
     while true do -- Fregat
             a[0]=a[0] + 1
-            a[a[0]]='h0D6'
+            a[a[0]]=FourCC('h0D6')
             b=b + 1
             if b >= i then break end
     end
     --4 юнит андеды
-    if GetPlayerTechCount(p, 'R0D3', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) ~= 1 then
+    if GetPlayerTechCount(p, FourCC('R0D3'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0J3'
+            a[a[0]]=FourCC('h0J3')
             
             b=b + 1
             if b >= i then break end
@@ -30349,13 +30349,13 @@ function Trig_NavyLight_Actions()
     end
     
     --4 юнит андеды
-    if GetPlayerTechCount(p, 'R0D2', true) == 1 and GetPlayerTechCount(p, 'R0E9', true) ~= 1 then
+    if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0HT'
+            a[a[0]]=FourCC('h0HT')
             
             b=b + 1
             if b >= i then break end
@@ -30364,13 +30364,13 @@ function Trig_NavyLight_Actions()
     
     
     --Зандалары
-    if GetPlayerTechCount(p, 'R0F3', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0F3'), true) == 1 then
         i=2
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0J4'
+            a[a[0]]=FourCC('h0J4')
             
             b=b + 1
             if b >= i then break end
@@ -30378,13 +30378,13 @@ function Trig_NavyLight_Actions()
     end
     
     --Зандалары
-    if GetPlayerTechCount(p, 'R0E4', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0E4'), true) == 1 then
         i=2
         b=1
         
         while true do
             a[0]=a[0] + 1
-            a[a[0]]='h0JB'
+            a[a[0]]=FourCC('h0JB')
             
             b=b + 1
             if b >= i then break end
@@ -30401,7 +30401,7 @@ function Trig_NavyLight_Actions()
 --    call SetUnitAbilityLevel(u,'A0V0',35+udg_HordeNavyPrice[pi])
 --
      
-    UnitAddAbility(u, 'A0YU')
+    UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
 end
@@ -30416,7 +30416,7 @@ end
 -- Trigger: TrallHordeForever
 --===========================================================================
 function Trig_TrallHordeForever_Conditions()
-    return GetResearched() == 'R0DW'
+    return GetResearched() == FourCC('R0DW')
 end
 function Trig_TrallHordeForever_Actions()
     local u= GetTriggerUnit()
@@ -30426,9 +30426,9 @@ function Trig_TrallHordeForever_Actions()
     udg_MainPrice[pi]=udg_MainPrice[pi] - 15
     
     --Запретил ветки
-    SetPlayerTechMaxAllowed(p, 'R0DY', 0)
-    SetPlayerTechMaxAllowed(p, 'R0DX', 0)
-    SetPlayerTechMaxAllowed(p, 'R0DZ', 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0DY'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0DX'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0DZ'), 0)
 end
 --===========================================================================
 function InitTrig_TrallHordeForever()
@@ -30441,13 +30441,13 @@ end
 -- Trigger: NoLeft
 --===========================================================================
 function Trig_NoLeft_Actions()
-    SetPlayerTechMaxAllowedSwap('R0DY', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0EI', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0DY'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EI'), 0, GetOwningPlayer(GetTriggerUnit()))
     -- -
-    SetPlayerTechMaxAllowedSwap('R0D3', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0D2', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0EE', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0EH', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D2'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EE'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EH'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_NoLeft()
@@ -30458,7 +30458,7 @@ end
 -- Trigger: YesLeft
 --===========================================================================
 function Trig_YesLeft_Func001C()
-    if ( not ( GetPlayerTechMaxAllowedSwap('R0D3', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+    if ( not ( GetPlayerTechMaxAllowedSwap(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
         return false
     end
     return true
@@ -30467,40 +30467,40 @@ function Trig_YesLeft_Func002C()
     return true
 end
 function Trig_YesLeft_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R0D3', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
         return false
     end
     return true
 end
 function Trig_YesLeft_Func004C()
-    if ( not ( GetPlayerTechMaxAllowedSwap('R0D2', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+    if ( not ( GetPlayerTechMaxAllowedSwap(FourCC('R0D2'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
         return false
     end
     return true
 end
 function Trig_YesLeft_Actions()
     if ( Trig_YesLeft_Func001C() ) then
-        SetPlayerTechMaxAllowedSwap('R0DY', 1, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0DY'), 1, GetOwningPlayer(GetTriggerUnit()))
     else
     end
     if ( (true) ) then -- INLINED!!
-        SetPlayerTechMaxAllowedSwap('R0D3', 1, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
     else
     end
     if ( Trig_YesLeft_Func003C() ) then
-        SetPlayerTechMaxAllowedSwap('R0D3', 1, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
     else
     end
     if ( Trig_YesLeft_Func004C() ) then
-        SetPlayerTechMaxAllowedSwap('R0D3', 1, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
     else
     end
-    SetPlayerTechMaxAllowedSwap('R0EI', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EI'), 0, GetOwningPlayer(GetTriggerUnit()))
     -- -
-    SetPlayerTechMaxAllowedSwap('R0D3', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0D2', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0EE', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0EH', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D2'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EE'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EH'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_YesLeft()
@@ -30546,15 +30546,15 @@ end
 -- Trigger: StartCommonHome
 --===========================================================================
 function Trig_StartCommonHome_Conditions()
-    if ( not ( GetResearched() == 'R0DY' ) ) then
+    if ( not ( GetResearched() == FourCC('R0DY') ) ) then
         return false
     end
     return true
 end
 function Trig_StartCommonHome_Actions()
-    SetPlayerTechMaxAllowedSwap('R0D3', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
     -- -
-    SetPlayerTechMaxAllowedSwap('R0DW', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0DW'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_StartCommonHome()
@@ -30567,7 +30567,7 @@ end
 -- Trigger: Forsaken
 --===========================================================================
 function Trig_Forsaken_Conditions()
-    return GetResearched() == 'R0D3'
+    return GetResearched() == FourCC('R0D3')
 end
 function Trig_Forsaken_Actions()
     local u= GetTriggerUnit()
@@ -30588,7 +30588,7 @@ function Trig_Forsaken_Actions()
 --    
     
     
-    SetPlayerTechMaxAllowed(p, 'R0D2', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0D2'), 1)
     p=null
     u=null
     
@@ -30604,7 +30604,7 @@ end
 -- Trigger: BloodElf
 --===========================================================================
 function Trig_BloodElf_Conditions()
-    return GetResearched() == 'R0D2'
+    return GetResearched() == FourCC('R0D2')
 end
 function Trig_BloodElf_Actions()
     local u= GetTriggerUnit()
@@ -30627,9 +30627,9 @@ function Trig_BloodElf_Actions()
     
     
     
-    SetPlayerTechResearched(p, 'R0E8', 1) -- Разрешает особую технику
-    SetPlayerTechResearched(p, 'R0E7', 1) --Разрешает дд
-    SetPlayerTechMaxAllowed(p, 'R0EE', 1)
+    SetPlayerTechResearched(p, FourCC('R0E8'), 1) -- Разрешает особую технику
+    SetPlayerTechResearched(p, FourCC('R0E7'), 1) --Разрешает дд
+    SetPlayerTechMaxAllowed(p, FourCC('R0EE'), 1)
     
     p=null
     u=null
@@ -30645,7 +30645,7 @@ end
 -- Trigger: Pandarens
 --===========================================================================
 function Trig_Pandarens_Conditions()
-    return GetResearched() == 'R0EE'
+    return GetResearched() == FourCC('R0EE')
 end
 function Trig_Pandarens_Actions()
     local u= GetTriggerUnit()
@@ -30658,10 +30658,10 @@ function Trig_Pandarens_Actions()
 --    call ChangeLandUnitsNow(p,pi)
 --    call ChangeEliteUnitsNow(p,pi)
     
-    SetPlayerTechMaxAllowed(p, 'R0EH', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0EH'), 1)
     --Compromise
-    if GetPlayerTechCount(p, 'R0EE', true) == 1 then
-        SetPlayerTechMaxAllowed(p, 'R0EI', 1)
+    if GetPlayerTechCount(p, FourCC('R0EE'), true) == 1 then
+        SetPlayerTechMaxAllowed(p, FourCC('R0EI'), 1)
     end
     p=null
     u=null
@@ -30677,13 +30677,13 @@ end
 -- Trigger: BeginCommonHome
 --===========================================================================
 function Trig_BeginCommonHome_Conditions()
-    if ( not ( GetResearched() == 'R0EH' ) ) then
+    if ( not ( GetResearched() == FourCC('R0EH') ) ) then
         return false
     end
     return true
 end
 function Trig_BeginCommonHome_Actions()
-    SetPlayerTechMaxAllowedSwap('R0DX', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0DX'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_BeginCommonHome()
@@ -30696,20 +30696,20 @@ end
 -- Trigger: CanselCommonHome
 --===========================================================================
 function Trig_CanselCommonHome_Conditions()
-    if ( not ( GetResearched() == 'R0E9' ) ) then
+    if ( not ( GetResearched() == FourCC('R0E9') ) ) then
         return false
     end
     return true
 end
 function Trig_CanselCommonHome_Func001C()
-    if ( not ( GetPlayerTechMaxAllowedSwap('R0D1', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+    if ( not ( GetPlayerTechMaxAllowedSwap(FourCC('R0D1'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
         return false
     end
     return true
 end
 function Trig_CanselCommonHome_Actions()
     if ( Trig_CanselCommonHome_Func001C() ) then
-        SetPlayerTechMaxAllowedSwap('R0DX', 1, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0DX'), 1, GetOwningPlayer(GetTriggerUnit()))
     else
     end
 end
@@ -30724,11 +30724,11 @@ end
 -- Trigger: CommonHome
 --===========================================================================
 function Trig_CommonHome_Conditions()
-    return GetResearched() == 'R0EH'
+    return GetResearched() == FourCC('R0EH')
 end
 function NoneRadicals()
     local id= GetUnitTypeId(GetFilterUnit())
-    return ( id == 'o01U' or id == 'o01Z' or id == 'o02G' or id == 'o01Y' or id == 'o01S' or id == 'o01E' or id == 'o02L' )
+    return ( id == FourCC('o01U') or id == FourCC('o01Z') or id == FourCC('o02G') or id == FourCC('o01Y') or id == FourCC('o01S') or id == FourCC('o01E') or id == FourCC('o02L') )
 end
 function Trig_CommonHome_Actions()
     local u= GetTriggerUnit()
@@ -30757,30 +30757,30 @@ function Trig_CommonHome_Actions()
     
     
     -- Бонусы ЧГ -
-    if GetPlayerTechCount(p, 'R0D1', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0D1'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 3
         --set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 5
         
     end
-    SetPlayerTechResearched(p, 'R0D1', 2)
+    SetPlayerTechResearched(p, FourCC('R0D1'), 2)
      
     
     -- Бонусы Драконьей пасти  -
-    if GetPlayerTechCount(p, 'R0E1', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0E1'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 3
         --set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 5
         --set udg_HordeElitePrice[pi] = udg_HordeElitePrice[pi] + 3
         
     end
-    SetPlayerTechResearched(p, 'R0E1', 2)
+    SetPlayerTechResearched(p, FourCC('R0E1'), 2)
      
     -- Бонусы Кор Крон  -
-    if GetPlayerTechCount(p, 'R0E0', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0E0'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
         --set udg_HordeElitePrice[pi] = udg_HordeElitePrice[pi] + 5
         
     end
-    SetPlayerTechResearched(p, 'R0E0', 2)
+    SetPlayerTechResearched(p, FourCC('R0E0'), 2)
     
     
     
@@ -30798,12 +30798,12 @@ function Trig_CommonHome_Actions()
     --call ChangeTechUnitsNow(p,pi)
     --call ChangeEliteUnitsNow(p,pi)
     
-    SetPlayerTechMaxAllowed(p, 'R0F3', 1)
-    SetPlayerTechMaxAllowed(p, 'R0F4', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0F3'), 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0F4'), 1)
     
     
-    SetPlayerTechMaxAllowed(p, 'R0EI', 0)
-    SetPlayerTechMaxAllowed(p, 'R0E9', 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0EI'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0E9'), 0)
     p=null
     u=null
     
@@ -30819,7 +30819,7 @@ end
 -- Trigger: Zandalars
 --===========================================================================
 function Trig_Zandalars_Conditions()
-    return GetResearched() == 'R0F3'
+    return GetResearched() == FourCC('R0F3')
 end
 function Trig_Zandalars_Actions()
     local u= GetTriggerUnit()
@@ -30847,7 +30847,7 @@ end
 -- Trigger: NightBorn
 --===========================================================================
 function Trig_NightBorn_Conditions()
-    return GetResearched() == 'R0F3'
+    return GetResearched() == FourCC('R0F3')
 end
 function Trig_NightBorn_Actions()
     local u= GetTriggerUnit()
@@ -30875,15 +30875,15 @@ end
 -- Trigger: StartUnitedOrcs
 --===========================================================================
 function Trig_StartUnitedOrcs_Conditions()
-    if ( not ( GetResearched() == 'R0DX' ) ) then
+    if ( not ( GetResearched() == FourCC('R0DX') ) ) then
         return false
     end
     return true
 end
 function Trig_StartUnitedOrcs_Actions()
-    SetPlayerTechMaxAllowedSwap('R0D1', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D1'), 1, GetOwningPlayer(GetTriggerUnit()))
     -- -
-    SetPlayerTechMaxAllowedSwap('R0DW', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0DW'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_StartUnitedOrcs()
@@ -30896,7 +30896,7 @@ end
 -- Trigger: BlackMountainHorde
 --===========================================================================
 function Trig_BlackMountainHorde_Conditions()
-    return GetResearched() == 'R0D1'
+    return GetResearched() == FourCC('R0D1')
 end
 function Trig_BlackMountainHorde_Actions()
     local u= GetTriggerUnit()
@@ -30909,7 +30909,7 @@ function Trig_BlackMountainHorde_Actions()
     
     
     
-    SetPlayerTechMaxAllowed(p, 'R0E1', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0E1'), 1)
     
     p=null
     u=null
@@ -30926,7 +30926,7 @@ end
 -- Trigger: DragonHorde
 --===========================================================================
 function Trig_DragonHorde_Conditions()
-    return GetResearched() == 'R0E1'
+    return GetResearched() == FourCC('R0E1')
 end
 function Trig_DragonHorde_Actions()
     local u= GetTriggerUnit()
@@ -30941,7 +30941,7 @@ function Trig_DragonHorde_Actions()
     
     
     
-    SetPlayerTechMaxAllowed(p, 'R0E0', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0E0'), 1)
     
     p=null
     u=null
@@ -30958,7 +30958,7 @@ end
 -- Trigger: CorCron
 --===========================================================================
 function Trig_CorCron_Conditions()
-    return GetResearched() == 'R0E0'
+    return GetResearched() == FourCC('R0E0')
 end
 function Trig_CorCron_Actions()
     local u= GetTriggerUnit()
@@ -30971,11 +30971,11 @@ function Trig_CorCron_Actions()
     
     
     
-    SetPlayerTechMaxAllowed(p, 'R0E9', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('R0E9'), 1)
     
     --Compromise
-    if GetPlayerTechCount(p, 'R0E0', true) == 1 then
-        SetPlayerTechMaxAllowed(p, 'R0EI', 1)
+    if GetPlayerTechCount(p, FourCC('R0E0'), true) == 1 then
+        SetPlayerTechMaxAllowed(p, FourCC('R0EI'), 1)
     end
     p=null
     u=null
@@ -30993,15 +30993,15 @@ end
 -- Trigger: StartTrueHorde
 --===========================================================================
 function Trig_StartTrueHorde_Conditions()
-    if ( not ( GetResearched() == 'R0E9' ) ) then
+    if ( not ( GetResearched() == FourCC('R0E9') ) ) then
         return false
     end
     return true
 end
 function Trig_StartTrueHorde_Actions()
-    SetPlayerTechMaxAllowedSwap('R0DY', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0EI', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0EH', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0DY'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EI'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EH'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_StartTrueHorde()
@@ -31014,20 +31014,20 @@ end
 -- Trigger: CanselTrueHorde
 --===========================================================================
 function Trig_CanselTrueHorde_Conditions()
-    if ( not ( GetResearched() == 'R0E9' ) ) then
+    if ( not ( GetResearched() == FourCC('R0E9') ) ) then
         return false
     end
     return true
 end
 function Trig_CanselTrueHorde_Func001C()
-    if ( not ( GetPlayerTechMaxAllowedSwap('R0D3', GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
+    if ( not ( GetPlayerTechMaxAllowedSwap(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
         return false
     end
     return true
 end
 function Trig_CanselTrueHorde_Actions()
     if ( Trig_CanselTrueHorde_Func001C() ) then
-        SetPlayerTechMaxAllowedSwap('R0DY', 1, GetOwningPlayer(GetTriggerUnit()))
+        SetPlayerTechMaxAllowedSwap(FourCC('R0DY'), 1, GetOwningPlayer(GetTriggerUnit()))
     else
     end
 end
@@ -31042,20 +31042,20 @@ end
 -- Trigger: Reptaur
 --===========================================================================
 function Trig_Replace_Func001A()
-    ReplaceUnit2(GetEnumUnit() , 'O02Z' , bj_UNIT_STATE_METHOD_RELATIVE)
+    ReplaceUnit2(GetEnumUnit() , FourCC('O02Z') , bj_UNIT_STATE_METHOD_RELATIVE)
 end
 function Reptaur()
-    ForGroupBJ(GetUnitsOfPlayerAndTypeId(udg_LocalPlayer, 'Otch'), Trig_Replace_Func001A)
+    ForGroupBJ(GetUnitsOfPlayerAndTypeId(udg_LocalPlayer, FourCC('Otch')), Trig_Replace_Func001A)
 end
 --===========================================================================
 -- Trigger: TrueHorde
 --===========================================================================
 function Trig_TrueHorde_Conditions()
-    return GetResearched() == 'R0E9'
+    return GetResearched() == FourCC('R0E9')
 end
 function NoNeORc()
     local id= GetUnitTypeId(GetFilterUnit())
-    return ( id == 'ospw' or id == 'o026' or id == 'o025' or id == 'o024' or id == 'o023' or id == 'o01G' or id == 'o01L' or id == 'o01F' or id == 'o01H' or id == 'otbk' or id == 'o02M' or id == 'o02S' or id == 'o02W' )
+    return ( id == FourCC('ospw') or id == FourCC('o026') or id == FourCC('o025') or id == FourCC('o024') or id == FourCC('o023') or id == FourCC('o01G') or id == FourCC('o01L') or id == FourCC('o01F') or id == FourCC('o01H') or id == FourCC('otbk') or id == FourCC('o02M') or id == FourCC('o02S') or id == FourCC('o02W') )
 end
 function Trig_TrueHorde_Actions()
     local u= GetTriggerUnit()
@@ -31084,17 +31084,17 @@ function Trig_TrueHorde_Actions()
     
     
     -- Бонусы отреков  -
-    if GetPlayerTechCount(p, 'R0D2', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 4
 --    set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 4
 --    set udg_HordeElitePrice[pi] = udg_HordeElitePrice[pi] + 2
 --    set udg_HordeNavyPrice[pi] = udg_HordeNavyPrice[pi] + 2
         
     end
-    SetPlayerTechResearched(p, 'R0D3', 2)
+    SetPlayerTechResearched(p, FourCC('R0D3'), 2)
     
     -- Бонусы бладов -
-    if GetPlayerTechCount(p, 'R0D2', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 4
 --        set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 3
 --        set udg_HordeMagicPrice[pi] = udg_HordeMagicPrice[pi] + 6
@@ -31102,33 +31102,33 @@ function Trig_TrueHorde_Actions()
 --        set udg_HordeTechPrice[pi] = udg_HordeTechPrice[pi] + 2
         
     end
-    SetPlayerTechResearched(p, 'R0D2', 2)
+    SetPlayerTechResearched(p, FourCC('R0D2'), 2)
     
     -- Бонусы пандаренов  -
-    if GetPlayerTechCount(p, 'R0E0', true) == 1 then
+    if GetPlayerTechCount(p, FourCC('R0E0'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 2
 --        set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 3
 --        set udg_HordeElitePrice[pi] = udg_HordeElitePrice[pi] + 2
         
     end
-    SetPlayerTechResearched(p, 'R0E0', 2)
+    SetPlayerTechResearched(p, FourCC('R0E0'), 2)
      
     
-    SetPlayerTechMaxAllowed(p, 'R0EA', 1)
-    SetPlayerTechResearched(p, 'R0E7', 1) --Разрешает дд
+    SetPlayerTechMaxAllowed(p, FourCC('R0EA'), 1)
+    SetPlayerTechResearched(p, FourCC('R0E7'), 1) --Разрешает дд
     DestroyGroup(g)
     
-    SetPlayerTechMaxAllowed(p, 'Otch', 0)
-    SetPlayerTechMaxAllowed(p, 'O02Z', 1)
+    SetPlayerTechMaxAllowed(p, FourCC('Otch'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('O02Z'), 1)
     
-    SetPlayerTechMaxAllowed(p, 'R0KO', 1) -- Sha
+    SetPlayerTechMaxAllowed(p, FourCC('R0KO'), 1) -- Sha
    -- call ChangeLandUnitsNow(p,pi)
     --call ChangeMagicUnitsNow(p,pi)
     --call ChangeTechUnitsNow(p,pi)
     --call ChangeEliteUnitsNow(p,pi)
     
     udg_LocalPlayer=p
-    ForGroupBJ(GetUnitsOfPlayerAndTypeId(udg_LocalPlayer, 'Otch'), Trig_Replace_Func001A) -- INLINED!!
+    ForGroupBJ(GetUnitsOfPlayerAndTypeId(udg_LocalPlayer, FourCC('Otch')), Trig_Replace_Func001A) -- INLINED!!
     
     p=null
     u=null
@@ -31145,7 +31145,7 @@ end
 -- Trigger: IronHorde
 --===========================================================================
 function Trig_IronHorde_Conditions()
-    return GetResearched() == 'R0EA'
+    return GetResearched() == FourCC('R0EA')
 end
 function Trig_IronHorde_Actions()
     local u= GetTriggerUnit()
@@ -31159,14 +31159,14 @@ function Trig_IronHorde_Actions()
    -- call ChangeNavyUnitsNow(p,pi)
     
     --Old units
-    SetPlayerTechMaxAllowed(p, 'ogru', 0)
-    SetPlayerTechMaxAllowed(p, 'ohun', 0)
-    SetPlayerTechMaxAllowed(p, 'o01N', 0)
-    SetPlayerTechMaxAllowed(p, 'o01P', 0)
+    SetPlayerTechMaxAllowed(p, FourCC('ogru'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('ohun'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('o01N'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('o01P'), 0)
     --New units
-    SetPlayerTechMaxAllowed(p, 'o029', - 1)
-    SetPlayerTechMaxAllowed(p, 'o02B', - 1)
-    SetPlayerTechMaxAllowed(p, 'h0CY', - 1)
+    SetPlayerTechMaxAllowed(p, FourCC('o029'), - 1)
+    SetPlayerTechMaxAllowed(p, FourCC('o02B'), - 1)
+    SetPlayerTechMaxAllowed(p, FourCC('h0CY'), - 1)
     
     
    
@@ -31194,10 +31194,10 @@ end
 -- Trigger: IronHordeBegin
 --===========================================================================
 function Trig_IronHordeBegin_Conditions()
-    return GetResearched() == 'R0EA'
+    return GetResearched() == FourCC('R0EA')
 end
 function Trig_IronHordeBegin_Actions()
-    SetPlayerTechMaxAllowedSwap('R0KO', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0KO'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_IronHordeBegin()
@@ -31210,7 +31210,7 @@ end
 -- Trigger: ShaHorde
 --===========================================================================
 function Trig_ShaHorde_Conditions()
-    return GetResearched() == 'R0KO'
+    return GetResearched() == FourCC('R0KO')
 end
 function Trig_ShaHorde_Actions()
     local p= GetOwningPlayer(GetTriggerUnit())
@@ -31233,11 +31233,11 @@ end
 -- Trigger: ShaSpell
 --===========================================================================
 function Trig_ShaSpell_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A1OJ') > 0 and GetPlayerTechCount(GetOwningPlayer(GetAttacker()), 'R0KO', true) > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker()))
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A1OJ')) > 0 and GetPlayerTechCount(GetOwningPlayer(GetAttacker()), FourCC('R0KO'), true) > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker()))
 end
 function Trig_ShaSpell_Actions()
     if Random(1 , 100) then
-        CreateUnit(GetOwningPlayer(GetAttacker()), 'n04J', GetUnitX(GetAttacker()), GetUnitY(GetAttacker()), 0.0)
+        CreateUnit(GetOwningPlayer(GetAttacker()), FourCC('n04J'), GetUnitX(GetAttacker()), GetUnitY(GetAttacker()), 0.0)
     end
     
 end
@@ -31252,10 +31252,10 @@ end
 -- Trigger: ShaHordeBegin
 --===========================================================================
 function Trig_ShaHordeBegin_Conditions()
-    return GetResearched() == 'R0KO'
+    return GetResearched() == FourCC('R0KO')
 end
 function Trig_ShaHordeBegin_Actions()
-    SetPlayerTechMaxAllowedSwap('R0EA', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EA'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_ShaHordeBegin()
@@ -31268,17 +31268,17 @@ end
 -- Trigger: StartNeutrals
 --===========================================================================
 function Trig_StartNeutrals_Conditions()
-    if ( not ( GetResearched() == 'R0DZ' ) ) then
+    if ( not ( GetResearched() == FourCC('R0DZ') ) ) then
         return false
     end
     return true
 end
 function Trig_StartNeutrals_Actions()
-    SetPlayerTechMaxAllowedSwap('R0E4', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0E5', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0E3', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E4'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E5'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E3'), 1, GetOwningPlayer(GetTriggerUnit()))
     -- -
-    SetPlayerTechMaxAllowedSwap('R0DW', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0DW'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_StartNeutrals()
@@ -31291,7 +31291,7 @@ end
 -- Trigger: BuyGoblins
 --===========================================================================
 function Trig_BuyGoblins_Conditions()
-    return GetResearched() == 'R0E4'
+    return GetResearched() == FourCC('R0E4')
 end
 function Trig_BuyGoblins_Actions()
     local u= GetTriggerUnit()
@@ -31305,7 +31305,7 @@ function Trig_BuyGoblins_Actions()
     --call ChangeTechUnitsNow(p,pi)
     --call ChangeNavyUnitsNow(p,pi)
     
-    SetPlayerTechResearched(p, 'R0E8', 1) -- Разрешает особую технику
+    SetPlayerTechResearched(p, FourCC('R0E8'), 1) -- Разрешает особую технику
    
 end
 --===========================================================================
@@ -31319,7 +31319,7 @@ end
 -- Trigger: Magnatavrs
 --===========================================================================
 function Trig_Magnatavrs_Conditions()
-    return GetResearched() == 'R0E4'
+    return GetResearched() == FourCC('R0E4')
 end
 function Trig_Magnatavrs_Actions()
     local u= GetTriggerUnit()
@@ -31342,7 +31342,7 @@ end
 -- Trigger: DeathKnights
 --===========================================================================
 function Trig_DeathKnights_Conditions()
-    return GetResearched() == 'R0E3'
+    return GetResearched() == FourCC('R0E3')
 end
 function Trig_DeathKnights_Actions()
     local u= GetTriggerUnit()
@@ -31366,7 +31366,7 @@ end
 -- Trigger: Compromise
 --===========================================================================
 function Trig_Compromise_Conditions()
-    return GetResearched() == 'R0EI'
+    return GetResearched() == FourCC('R0EI')
 end
 function Trig_Compromise_Actions()
     local u= GetTriggerUnit()
@@ -31377,8 +31377,8 @@ function Trig_Compromise_Actions()
     
     
     --Запретил другие ветки
-    SetPlayerTechMaxAllowed(p, 'R0EH', 0)
-    SetPlayerTechMaxAllowed(p, 'R0E9', 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0EH'), 0)
+    SetPlayerTechMaxAllowed(p, FourCC('R0E9'), 0)
     
 end
 --===========================================================================
@@ -31392,10 +31392,10 @@ end
 -- Trigger: BerserkOrc
 --===========================================================================
 function Trig_BerserkOrc_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A0ZA') >= 1 and Random(1 , 25)
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A0ZA')) >= 1 and Random(1 , 25)
 end
 function Trig_BerserkOrc_Actions()
-    DummyCastTarget('A1MG' , "bloodlust" , GetAttacker() , GetAttacker())
+    DummyCastTarget(FourCC('A1MG') , "bloodlust" , GetAttacker() , GetAttacker())
 end
 --===========================================================================
 function InitTrig_BerserkOrc()
@@ -31408,23 +31408,23 @@ end
 -- Trigger: BerserkTrol
 --===========================================================================
 function Trig_BerserkTrol_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A0ZC') == 1 and Random(1 , 10)
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A0ZC')) == 1 and Random(1 , 10)
 end
 function Trig_BerserkTrol_Actions()
     local u
     local s
     u=GetAttacker()
     s=gg_snd_BerserkerCaster
-    UnitAddAbility(u, 'A13H')
-    UnitAddAbility(u, 'A13I')
-    UnitAddAbility(u, 'Bbsk')
+    UnitAddAbility(u, FourCC('A13H'))
+    UnitAddAbility(u, FourCC('A13I'))
+    UnitAddAbility(u, FourCC('Bbsk'))
     
     AttachSoundToUnit(s, u)
     SetSoundVolume(s, 127)
     StartSound(s)
-    RemoveAbilityTimed(u , 'A13H' , 9)
-    RemoveAbilityTimed(u , 'A13I' , 9)
-    RemoveAbilityTimed(u , 'Bbsk' , 9)
+    RemoveAbilityTimed(u , FourCC('A13H') , 9)
+    RemoveAbilityTimed(u , FourCC('A13I') , 9)
+    RemoveAbilityTimed(u , FourCC('Bbsk') , 9)
         
     u=null
     s=null
@@ -31441,7 +31441,7 @@ end
 -- Trigger: AutoSetkaH
 --===========================================================================
 function Trig_AutoSetkaH_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0ZB' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0ZB') ) ) then
         return false
     end
     return true
@@ -31461,13 +31461,13 @@ end
 -- Trigger: IronStar
 --===========================================================================
 function Trig_IronStar_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A103' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A103') ) ) then
         return false
     end
     return true
 end
 function Trig_IronStar_Actions()
-    UnitApplyTimedLifeBJ(10.00, 'BTLF', GetTriggerUnit())
+    UnitApplyTimedLifeBJ(10.00, FourCC('BTLF'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_IronStar()
@@ -31481,7 +31481,7 @@ end
 -- Trigger: AutoShield2
 --===========================================================================
 function Trig_AutoShield2_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A124' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A124') ) ) then
         return false
     end
     return true
@@ -31501,22 +31501,22 @@ end
 -- Trigger: PandaSecondAttack
 --===========================================================================
 function Trig_PandaSecondAttack_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A129', GetAttacker()) > 0 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A129'), GetAttacker()) > 0 ) ) then
         return false
     end
     return true
 end
 function Trig_PandaSecondAttack_Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A12A', GetAttacker()) == 0 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A12A'), GetAttacker()) == 0 ) ) then
         return false
     end
     return true
 end
 function Trig_PandaSecondAttack_Actions()
     if ( Trig_PandaSecondAttack_Func001C() ) then
-        UnitAddAbilityBJ('A12A', GetAttacker())
+        UnitAddAbilityBJ(FourCC('A12A'), GetAttacker())
     else
-        UnitRemoveAbilityBJ('A12A', GetAttacker())
+        UnitRemoveAbilityBJ(FourCC('A12A'), GetAttacker())
     end
 end
 --===========================================================================
@@ -31531,7 +31531,7 @@ end
 -- Trigger: DragonFire
 --===========================================================================
 function Trig_DragonFire_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A0ZX') > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker())) and Random(8 , 100)
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A0ZX')) > 0 and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker())) and Random(8 , 100)
 end
 function Trig_DragonFire_Actions()
     IssueTargetOrder(GetAttacker(), "breathoffire", GetTriggerUnit())
@@ -31547,15 +31547,15 @@ end
 -- Trigger: ThrallMolnya
 --===========================================================================
 function Trig_ThrallMolnya_Conditions()
-    return GetSpellAbilityId() == 'A12X'
+    return GetSpellAbilityId() == FourCC('A12X')
 end
 function Thrallenum()
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     udg_LocalUnit2=GetLastCreatedUnit()
     TriggerExecute(gg_trg_ToKill2)
-    UnitAddAbilityBJ('A14V', GetLastCreatedUnit())
+    UnitAddAbilityBJ(FourCC('A14V'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped('A14V', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A12X', GetTriggerUnit()))
+    SetUnitAbilityLevelSwapped(FourCC('A14V'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A12X'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetLastCreatedUnit(), "chainlightning", GetEnumUnit())
 end
 function Trig_ThrallMolnya_Actions()
@@ -31580,7 +31580,7 @@ end
 -- Trigger: Okovi
 --===========================================================================
 function Trig_Okovi_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A12Z' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A12Z') ) ) then
         return false
     end
     return true
@@ -31589,12 +31589,12 @@ function Trig_Okovi_Func002002()
     return ( 0 == 0 )
 end
 function Trig_Okovi_Func007A()
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     udg_LocalUnit2=GetLastCreatedUnit()
     TriggerExecute(gg_trg_ToKill2)
-    UnitAddAbilityBJ('A12Y', GetLastCreatedUnit())
+    UnitAddAbilityBJ(FourCC('A12Y'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped('A12Y', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A12Z', GetTriggerUnit()))
+    SetUnitAbilityLevelSwapped(FourCC('A12Y'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A12Z'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetLastCreatedUnit(), "firebolt", GetEnumUnit())
 end
 function Trig_Okovi_Actions()
@@ -31619,18 +31619,18 @@ end
 -- Trigger: GarraoshMassBloodlast
 --===========================================================================
 function Trig_GarraoshMassBloodlast_Conditions()
-    return GetSpellAbilityId() == 'A12M'
+    return GetSpellAbilityId() == FourCC('A12M')
 end
 function Trig_GarraoshMassBloodlast_Func002002()
     return ( GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer )
 end
 function Trig_GarraoshMassBloodlast_Func007A()
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     udg_LocalUnit2=GetLastCreatedUnit()
     TriggerExecute(gg_trg_ToKill2)
-    UnitAddAbilityBJ('A12L', GetLastCreatedUnit())
+    UnitAddAbilityBJ(FourCC('A12L'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped('A12L', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A12M', GetTriggerUnit()))
+    SetUnitAbilityLevelSwapped(FourCC('A12L'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A12M'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetLastCreatedUnit(), "bloodlust", GetEnumUnit())
 end
 function Trig_GarraoshMassBloodlast_Actions()
@@ -31655,33 +31655,33 @@ end
 -- Trigger: StartHorde
 --===========================================================================
 function HordeStartLimits()
-    SetPlayerTechMaxAllowedSwap('Oshd', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('Otch', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('Ofar', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('Obla', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('O02P', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('Othr', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('o029', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('o02B', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0CY', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0D1', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0D2', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0D3', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0E0', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0E1', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0E3', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0E4', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0E5', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0E9', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0EA', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0EE', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0EI', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0EH', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0F4', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0F3', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('Oshd'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('Otch'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('Ofar'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('Obla'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('O02P'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('Othr'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('o029'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('o02B'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0CY'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D1'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D2'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E0'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E1'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E3'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E4'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E5'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0E9'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EA'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EE'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EI'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0EH'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0F4'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0F3'), 0, GetEnumPlayer())
     
-    SetPlayerTechMaxAllowedSwap('R0F3', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R0KO', 0, GetEnumPlayer()) -- Sha
+    SetPlayerTechMaxAllowedSwap(FourCC('R0F3'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0KO'), 0, GetEnumPlayer()) -- Sha
     SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1LO'), false)
     
     SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1OJ'), false) -- Ша абилка
@@ -31776,15 +31776,15 @@ function Trig_StartSilitids_Func001A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A1KF'), GetEnumPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC('A0KL'), GetEnumPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC('A1KD'), GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('U024', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('U025', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('U023', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('U02R', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h0MG', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('U024'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('U025'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('U023'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('U02R'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0MG'), 1, GetEnumPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC('A1B7'), GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('R088', 5, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R088'), 5, GetEnumPlayer())
     
-    SetPlayerTechMaxAllowedSwap('e01P', 0, GetEnumPlayer()) --Tank
+    SetPlayerTechMaxAllowedSwap(FourCC('e01P'), 0, GetEnumPlayer()) --Tank
 end
 function Trig_StartSilitids_Actions()
     ForForce(udg_AllPlayers, Trig_StartSilitids_Func001A)
@@ -31799,7 +31799,7 @@ end
 -- Trigger: QTunServe
 --===========================================================================
 function Trig_QTunServe_Conditions()
-    if ( not ( GetUnitTypeId(GetTrainedUnit()) == 'h0MG' ) ) then
+    if ( not ( GetUnitTypeId(GetTrainedUnit()) == FourCC('h0MG') ) ) then
         return false
     end
     return true
@@ -31808,7 +31808,7 @@ function Trig_QTunServe_Func003A()
     SetUnitOwner(GetEnumUnit(), GetOwningPlayer(GetTriggerUnit()), true)
 end
 function Trig_QTunServe_Func004A()
-    SetPlayerTechMaxAllowedSwap('h0MG', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0MG'), 0, GetEnumPlayer())
 end
 function Trig_QTunServe_Func005001002()
     return ( IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups) == true )
@@ -31830,7 +31830,7 @@ function Trig_QTunServe_Actions()
     BlzSetUnitStringFieldBJ(gg_unit_n03D_0666, UNIT_SF_NAME, ( "cffd45e19r" + GetUnitName(gg_unit_n03D_0666) ))
     TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, gg_unit_n03D_0666, EVENT_UNIT_ATTACKED)
     ForForce(GetPlayersAll(), Trig_QTunServe_Func009A)
-    SetUnitAbilityLevelSwapped('A0W0', gg_unit_n03D_0666, 2)
+    SetUnitAbilityLevelSwapped(FourCC('A0W0'), gg_unit_n03D_0666, 2)
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================
@@ -31845,11 +31845,11 @@ end
 -- Trigger: QTunAye
 --===========================================================================
 function Trig_QTunAye_Conditions()
-    return GetSpellAbilityId() == 'A1B8'
+    return GetSpellAbilityId() == FourCC('A1B8')
 end
 function Trig_QTunAye_Actions()
-    local u= CreateUnit(GetOwningPlayer(GetTriggerUnit()), 'oeye', GetSpellTargetX(), GetSpellTargetY(), 0)
-    UnitApplyTimedLife(u, 'BTLF', 1200)
+    local u= CreateUnit(GetOwningPlayer(GetTriggerUnit()), FourCC('oeye'), GetSpellTargetX(), GetSpellTargetY(), 0)
+    UnitApplyTimedLife(u, FourCC('BTLF'), 1200)
     u=null
 end
 --===========================================================================
@@ -31863,13 +31863,13 @@ end
 -- Trigger: ChoseLich
 --===========================================================================
 function Trig_ChoseLich_Conditions()
-    return GetSpellAbilityId() == 'A0SW' or GetSpellAbilityId() == 'A0T1'
+    return GetSpellAbilityId() == FourCC('A0SW') or GetSpellAbilityId() == FourCC('A0T1')
 end
 function HaveSpell()
-    return GetUnitAbilityLevel(GetFilterUnit(), 'A0SW') + GetUnitAbilityLevel(GetFilterUnit(), 'A0T1') ~= 0
+    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A0SW')) + GetUnitAbilityLevel(GetFilterUnit(), FourCC('A0T1')) ~= 0
 end
 function Trig_ChoseLich_Func003002()
-    return GetUnitTypeId(GetFilterUnit()) == 'e01I' and GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetFilterUnit())
+    return GetUnitTypeId(GetFilterUnit()) == FourCC('e01I') and GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetFilterUnit())
 end
 function Trig_ChoseLich_Actions()
     local u1
@@ -31928,10 +31928,10 @@ end
 -- Trigger: ChoseUnits2
 --===========================================================================
 function Trig_ChoseUnits2_Conditions()
-    return GetSpellAbilityId() == 'A0SX'
+    return GetSpellAbilityId() == FourCC('A0SX')
 end
 function OnlyOrganic()
-    return GetUnitTypeId(GetFilterUnit()) == 'e02W' and not IsUnitType(GetFilterUnit(), UNIT_TYPE_PEON)
+    return GetUnitTypeId(GetFilterUnit()) == FourCC('e02W') and not IsUnitType(GetFilterUnit(), UNIT_TYPE_PEON)
 end
 function Trig_ChoseUnits2_Actions()
     local g= CreateGroup()
@@ -31956,7 +31956,7 @@ end
 -- Trigger: MainSpawn2
 --===========================================================================
 function Trig_MainSpawn2_Conditions()
-    return GetUnitTypeId(GetConstructedStructure()) == 'e01H'
+    return GetUnitTypeId(GetConstructedStructure()) == FourCC('e01H')
 end
 function spawnlich()
     local t= GetExpiredTimer()
@@ -31971,23 +31971,23 @@ function spawnlich()
     local p= GetOwningPlayer(u)
     --call DisplayTextToPlayer(Player(0),0,0,""+I2S(currentCount))
     if currentCount < 3 and UnitAlive(u) then
-        u2=CreateUnit(p, 'e01I', x, y, bj_UNIT_FACING)
+        u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
         SetUnitTimeScale(u2, 0.25)
         SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
         SaveBoolean(Hash, GetHandleId(u2), 2, true)
         currentCount=currentCount + 1
-        if typeid == 'e021' then
-            u2=CreateUnit(p, 'e01I', x, y, bj_UNIT_FACING)
+        if typeid == FourCC('e021') then
+            u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
             SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
             SaveBoolean(Hash, GetHandleId(u2), 2, true)
             currentCount=currentCount + 1
-        elseif typeid == 'e020' then
-            u2=CreateUnit(p, 'e01I', x, y, bj_UNIT_FACING)
+        elseif typeid == FourCC('e020') then
+            u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
             SaveBoolean(Hash, GetHandleId(u2), 2, true)
             SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
-            u2=CreateUnit(p, 'e01I', x, y, bj_UNIT_FACING)
+            u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
             SaveBoolean(Hash, GetHandleId(u2), 2, true)
             SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
@@ -32032,7 +32032,7 @@ end
 -- Trigger: LichDead
 --===========================================================================
 function Trig_LichDead_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == 'e01I' and LoadBoolean(Hash, GetHandleId(GetTriggerUnit()), 2)
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('e01I') and LoadBoolean(Hash, GetHandleId(GetTriggerUnit()), 2)
 end
 function Trig_LichDead_Actions()
     local oldid= GetHandleId(GetTriggerUnit())
@@ -32067,7 +32067,7 @@ end
 -- Trigger: YleyDead
 --===========================================================================
 function Trig_YleyDead_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == 'e01H'
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('e01H')
 end
 function Trig_YleyDead_Actions()
     FlushChildHashtable(Hash, GetHandleId(GetTriggerUnit()))
@@ -32084,14 +32084,14 @@ end
 -- Trigger: TweenBrothers
 --===========================================================================
 function Trig_TweenBrothers_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'U02R'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('U02R')
 end
 function SetCommonHP()
     
 end
 function Trig_TweenBrothers_Actions()
     --local unit u = 
-    CreateUnit(GetOwningPlayer(GetTrainedUnit()), 'U02S', GetUnitX(GetTrainedUnit()), GetUnitY(GetTrainedUnit()), bj_UNIT_FACING)
+    CreateUnit(GetOwningPlayer(GetTrainedUnit()), FourCC('U02S'), GetUnitX(GetTrainedUnit()), GetUnitY(GetTrainedUnit()), bj_UNIT_FACING)
     --call UnitAddAbility(u,'A187')
     --call IssueTargetOrder( u, "spiritlink", GetTrainedUnit( ) )
     --set u = null
@@ -32107,11 +32107,11 @@ end
 -- Trigger: TweenChange
 --===========================================================================
 function Trig_TweenChange_Conditions()
-    return GetSpellAbilityId() == 'A188'
+    return GetSpellAbilityId() == FourCC('A188')
 end
 function Brothers()
     local id= GetUnitTypeId(GetFilterUnit())
-    return id == 'U02R' or id == 'U02S'
+    return id == FourCC('U02R') or id == FourCC('U02S')
 end
 function Trig_TweenChange_Actions()
     local u=  GetTriggerUnit()
@@ -32122,7 +32122,7 @@ function Trig_TweenChange_Actions()
     local u2
     local x= GetUnitX(u)
     local y= GetUnitY(u)
-    local lvl= GetUnitAbilityLevel(u, 'A188')
+    local lvl= GetUnitAbilityLevel(u, FourCC('A188'))
     GroupEnumUnitsOfPlayer(g, p, bex)
     GroupRemoveUnit(g, GetTriggerUnit())
     u2=FirstOfGroup(g)
@@ -32132,7 +32132,7 @@ function Trig_TweenChange_Actions()
         SetUnitLifePercentBJ(u, ( GetUnitLifePercent(u) + 12 * lvl ))
         SetUnitLifePercentBJ(u2, ( GetUnitLifePercent(u2) + 12 * lvl ))
     end
-    BlzStartUnitAbilityCooldown(u, 'A188', 30)
+    BlzStartUnitAbilityCooldown(u, FourCC('A188'), 30)
     
     
     DestroyGroup(g)
@@ -32154,7 +32154,7 @@ end
 -- Trigger: TweenBrothersRev
 --===========================================================================
 function Trig_TweenBrothersRev_Conditions()
-    return GetUnitTypeId(GetRevivingUnit()) == 'U02R' or GetUnitTypeId(GetRevivingUnit()) == 'U02S'
+    return GetUnitTypeId(GetRevivingUnit()) == FourCC('U02R') or GetUnitTypeId(GetRevivingUnit()) == FourCC('U02S')
 end
 function Trig_TweenBrothersRev_Actions()
     local u=  GetTriggerUnit()
@@ -32170,9 +32170,9 @@ function Trig_TweenBrothersRev_Actions()
     
     if u2 ~= nil then
         ReviveHero(u2, GetUnitX(u), GetUnitY(u), false)
-        UnitAddAbility(u, 'A187')
+        UnitAddAbility(u, FourCC('A187'))
         IssueTargetOrder(u, "spiritlink", u2)
-        UnitAddAbility(u2, 'A187')
+        UnitAddAbility(u2, FourCC('A187'))
         IssueTargetOrder(u2, "spiritlink", u)
     end
     DestroyGroup(g)
@@ -32196,7 +32196,7 @@ end
 -- Trigger: TweenBrothersDead
 --===========================================================================
 function Trig_TweenBrothersDead_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == 'U02R' or GetUnitTypeId(GetTriggerUnit()) == 'U02S'
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('U02R') or GetUnitTypeId(GetTriggerUnit()) == FourCC('U02S')
 end
 function Trig_TweenBrothersDead_Actions()
     local u=  GetTriggerUnit()
@@ -32235,11 +32235,11 @@ end
 --===========================================================================
 function Trig_StartBuildingSil_Conditions()
     local id= GetUnitTypeId(GetConstructingStructure())
-    return id == 'e01J' or id == 'e01J' or id == 'e01L' or id == 'eo1M' or id == 'e01H' or id == 'eo1K'
+    return id == FourCC('e01J') or id == FourCC('e01J') or id == FourCC('e01L') or id == FourCC('eo1M') or id == FourCC('e01H') or id == FourCC('eo1K')
 end
 function Trig_StartBuildingSil_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
-    disincome[pi]=disincome[pi] - GetUnitGoldCost('e01G') * 0.15 * 0.5
+    disincome[pi]=disincome[pi] - GetUnitGoldCost(FourCC('e01G')) * 0.15 * 0.5
     
     UpdateGraf(pi)
     
@@ -32257,7 +32257,7 @@ end
 function Trig_SlowAnimation_Conditions()
     gTarget=GetConstructedStructure()
     gInt=GetUnitTypeId(gTarget)
-    return gInt == 'e01J' or gInt == 'e01J' or gInt == 'e01L' or gInt == 'eo1M' or gInt == 'e01H' or gInt == 'eo1K'
+    return gInt == FourCC('e01J') or gInt == FourCC('e01J') or gInt == FourCC('e01L') or gInt == FourCC('eo1M') or gInt == FourCC('e01H') or gInt == FourCC('eo1K')
 end
 function Trig_SlowAnimation_Actions()
     SetUnitTimeScale(gTarget, 0.15)
@@ -32278,13 +32278,13 @@ end
 function Trig_CanselBuildingSil_Conditions()
     local id= GetUnitTypeId(GetTriggerUnit())
     
-    return id == 'e01J' or id == 'e01J' or id == 'e01L' or id == 'eo1M' or id == 'e01H' or id == 'eo1K' --'e01G'
+    return id == FourCC('e01J') or id == FourCC('e01J') or id == FourCC('e01L') or id == FourCC('eo1M') or id == FourCC('e01H') or id == FourCC('eo1K') --FourCC('e01G')
 end
 function Trig_CanselBuildingSil_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     
     --set disincome[pi]=disincome[pi]+6.25
-    disincome[pi]=disincome[pi] + GetUnitGoldCost('e01G') * 0.15 * 0.5
+    disincome[pi]=disincome[pi] + GetUnitGoldCost(FourCC('e01G')) * 0.15 * 0.5
     UpdateGraf(pi)
     
 end
@@ -32299,7 +32299,7 @@ end
 -- Trigger: LichStartUpgrade
 --===========================================================================
 function Trig_LichStartUpgrade_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'A1JE') > 0
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1JE')) > 0
 end
 function Trig_LichStartUpgrade_Actions()
     --local integer i = GetPlayerId( GetOwningPlayer( GetTriggerUnit( ) ) )
@@ -32335,12 +32335,12 @@ end
 function Trig_LichinkaFinish_Conditions()
     gTriggerUnit=GetTriggerUnit()
     gPlayer=GetOwningPlayer(gTriggerUnit)
-    return GetUnitAbilityLevel(gTriggerUnit, 'A1JE') > 0
+    return GetUnitAbilityLevel(gTriggerUnit, FourCC('A1JE')) > 0
 end
 function OrderAfterUleyFinish()
     local l= GetUnitRallyPoint(GetEnumUnit())
     udg_LocalPosition[17]=l
-    if GetUnitTypeId(gTriggerUnit) == 'e01G' then
+    if GetUnitTypeId(gTriggerUnit) == FourCC('e01G') then
         IssueTargetOrder(gTriggerUnit, "harvest", GetUnitRallyDestructable(GetEnumUnit()))
     else
         IssuePointOrderLoc(gTriggerUnit, "attack", l)
@@ -32349,7 +32349,7 @@ function OrderAfterUleyFinish()
 end
 function ItIsHive()
     local id= GetUnitTypeId(GetFilterUnit())
-    return id == 'e01H' or id == 'e020' or id == 'e021'
+    return id == FourCC('e01H') or id == FourCC('e020') or id == FourCC('e021')
 end
 function Trig_LichinkaFinish_Actions()
     local i= GetPlayerId(gPlayer)
@@ -32414,9 +32414,9 @@ function Trig_LichinkaFinish_Actions()
     
     -- Трутень
     -- ----
-    if id == 'e01G' then
+    if id == FourCC('e01G') then
         
-        CreateNUnitsAtLoc(1, 'e01G', gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
+        CreateNUnitsAtLoc(1, FourCC('e01G'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
         udg_LocalPosition[18]=GetUnitLoc(GetLastCreatedUnit())
         udg_Boolexpr=Condition(ItIsHive)
         GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[18], 300, udg_Boolexpr)
@@ -32436,12 +32436,12 @@ function Trig_LichinkaFinish_Actions()
     
     -- Слизень
     -- ----
-    elseif id == 'e01Z' then
-        UnitAddAbilityBJ('A0VH', gTriggerUnit)
+    elseif id == FourCC('e01Z') then
+        UnitAddAbilityBJ(FourCC('A0VH'), gTriggerUnit)
         
         
-        CreateNUnitsAtLoc(1, 'e01Z', gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
-        UnitAddAbilityBJ('A0VH', GetLastCreatedUnit())
+        CreateNUnitsAtLoc(1, FourCC('e01Z'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
+        UnitAddAbilityBJ(FourCC('A0VH'), GetLastCreatedUnit())
         
         IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
         if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
@@ -32454,8 +32454,8 @@ function Trig_LichinkaFinish_Actions()
     
     -- Солдат т1
     -- ----
-    elseif id == 'e02W' then
-        CreateNUnitsAtLoc(1, 'e02W', gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
+    elseif id == FourCC('e02W') then
+        CreateNUnitsAtLoc(1, FourCC('e02W'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
         IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
         
         
@@ -32468,12 +32468,12 @@ function Trig_LichinkaFinish_Actions()
         
         
         -- Плодовитость
-        if GetPlayerTechCountSimple('R089', GetOwningPlayer(gTriggerUnit)) == 1 then
-            SetUnitAbilityLevelSwapped('A0VH', GetLastCreatedUnit(), 2)
-            SetUnitAbilityLevelSwapped('A0VH', gTriggerUnit, 2)
+        if GetPlayerTechCountSimple(FourCC('R089'), GetOwningPlayer(gTriggerUnit)) == 1 then
+            SetUnitAbilityLevelSwapped(FourCC('A0VH'), GetLastCreatedUnit(), 2)
+            SetUnitAbilityLevelSwapped(FourCC('A0VH'), gTriggerUnit, 2)
             
-            CreateNUnitsAtLoc(1, 'e02W', gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
-            SetUnitAbilityLevelSwapped('A0VH', GetLastCreatedUnit(), 2)
+            CreateNUnitsAtLoc(1, FourCC('e02W'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
+            SetUnitAbilityLevelSwapped(FourCC('A0VH'), GetLastCreatedUnit(), 2)
             IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
             if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
                 SelectUnitAddForPlayer(GetLastCreatedUnit(), gPlayer)
@@ -32489,10 +32489,10 @@ function Trig_LichinkaFinish_Actions()
     
     -- ----
     -- Оса
-    elseif id == 'e01Q' and GetPlayerTechCountSimple('R08B', GetOwningPlayer(gTriggerUnit)) == 1 then
-        CreateNUnitsAtLoc(1, 'e01Q', gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
-        UnitAddAbilityBJ('A0VH', gTriggerUnit)
-        UnitAddAbilityBJ('A0VH', GetLastCreatedUnit())
+    elseif id == FourCC('e01Q') and GetPlayerTechCountSimple(FourCC('R08B'), GetOwningPlayer(gTriggerUnit)) == 1 then
+        CreateNUnitsAtLoc(1, FourCC('e01Q'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
+        UnitAddAbilityBJ(FourCC('A0VH'), gTriggerUnit)
+        UnitAddAbilityBJ(FourCC('A0VH'), GetLastCreatedUnit())
         
         IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
         if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
@@ -32502,14 +32502,14 @@ function Trig_LichinkaFinish_Actions()
     
     
     --Паук страж и его паразит 
-    elseif id == 'e01U' then
+    elseif id == FourCC('e01U') then
         
         IssueImmediateOrder(gTriggerUnit, "parasiteon")
     --Мана пророку
-    elseif id == 'e01T' then
+    elseif id == FourCC('e01T') then
         
         SetUnitManaBJ(gTriggerUnit, 125)
-        BlzStartUnitAbilityCooldown(gTriggerUnit, 'A1KG', 50)
+        BlzStartUnitAbilityCooldown(gTriggerUnit, FourCC('A1KG'), 50)
     
     end
     
@@ -32535,7 +32535,7 @@ end
 -- Trigger: KokonDead2
 --===========================================================================
 function Trig_KokonDead2_Conditions()
-     return GetUnitAbilityLevel(GetTriggerUnit(), 'A1JE') > 0
+     return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1JE')) > 0
 end
 --
 --function Trig_KokonDead2_Func002Func002C takes nothing returns boolean
@@ -32575,7 +32575,7 @@ end
 -- Trigger: SpellBook
 --===========================================================================
 function Trig_SpellBook_Conditions()
-    return GetSpellAbilityId() == 'A1AV'
+    return GetSpellAbilityId() == FourCC('A1AV')
 end
 function Trig_SpellBook_Actions()
     local u1
@@ -32609,44 +32609,44 @@ end
 -- Trigger: SpawnLich
 --===========================================================================
 function Trig_SpawnLich_Conditions()
-    return GetSpellAbilityId() == 'A0ZU'
+    return GetSpellAbilityId() == FourCC('A0ZU')
 end
 function Trig_SpawnLich_Actions()
     local u= GetTriggerUnit()
     local p= GetOwningPlayer(u)
     local i
-    local u2= CreateUnit(p, 'e01I', GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
+    local u2= CreateUnit(p, FourCC('e01I'), GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
    --call UnitAddAbility(u2,'A1JF') //Антиреген
     BlzSetUnitRealFieldBJ(u2, UNIT_RF_HIT_POINTS_REGENERATION_RATE, - 4.00)
     SetUnitTimeScale(u2, 0.25)
-    u2=CreateUnit(p, 'e01I', GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
+    u2=CreateUnit(p, FourCC('e01I'), GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
     BlzSetUnitRealFieldBJ(u2, UNIT_RF_HIT_POINTS_REGENERATION_RATE, - 4.00)
    -- call UnitAddAbility(u2,'A1JF') //Антиреген
     SetUnitTimeScale(u2, 0.25)
-    i=GetUnitAbilityLevel(u, 'A1AV')
+    i=GetUnitAbilityLevel(u, FourCC('A1AV'))
     
     if i >= 1 then
         --call DisplayTextToPlayer(Player(0),0,0,I2S(i))
         if i == 1 then
-            IssueImmediateOrderById(u2, 'e02W')
+            IssueImmediateOrderById(u2, FourCC('e02W'))
         elseif i == 2 then
-            IssueImmediateOrderById(u2, 'e01Q')
+            IssueImmediateOrderById(u2, FourCC('e01Q'))
         elseif i == 3 then
-            IssueImmediateOrderById(u2, 'e01U')
+            IssueImmediateOrderById(u2, FourCC('e01U'))
         elseif i == 4 then
-            IssueImmediateOrderById(u2, 'e01V')
+            IssueImmediateOrderById(u2, FourCC('e01V'))
         elseif i == 5 then
-            IssueImmediateOrderById(u2, 'e01T')
+            IssueImmediateOrderById(u2, FourCC('e01T'))
         elseif i == 6 then
-            IssueImmediateOrderById(u2, 'e01O')
+            IssueImmediateOrderById(u2, FourCC('e01O'))
         elseif i == 7 then
-            IssueImmediateOrderById(u2, 'e01S')
+            IssueImmediateOrderById(u2, FourCC('e01S'))
         elseif i == 8 then
-            IssueImmediateOrderById(u2, 'e01Z')
+            IssueImmediateOrderById(u2, FourCC('e01Z'))
         elseif i == 9 then
           
         elseif i == 10 then
-            IssueImmediateOrderById(u2, 'e01G')
+            IssueImmediateOrderById(u2, FourCC('e01G'))
         end
     
     end
@@ -32670,14 +32670,14 @@ end
 function Trig_SpawnTimer_Func001A()
     local id= GetUnitTypeId(GetEnumUnit())
     udg_LocalPosition[16]=GetUnitLoc(GetEnumUnit())
-    CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), 'e01I', udg_LocalPosition[16], bj_UNIT_FACING)
-    if id == 'e021' then
-        CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), 'e01I', udg_LocalPosition[16], bj_UNIT_FACING)
-        CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), 'e01I', udg_LocalPosition[16], bj_UNIT_FACING)
-    elseif id == 'e020' then
-        CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), 'e01I', udg_LocalPosition[16], bj_UNIT_FACING)
-        CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), 'e01I', udg_LocalPosition[16], bj_UNIT_FACING)
-        CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), 'e01I', udg_LocalPosition[16], bj_UNIT_FACING)
+    CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), FourCC('e01I'), udg_LocalPosition[16], bj_UNIT_FACING)
+    if id == FourCC('e021') then
+        CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), FourCC('e01I'), udg_LocalPosition[16], bj_UNIT_FACING)
+        CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), FourCC('e01I'), udg_LocalPosition[16], bj_UNIT_FACING)
+    elseif id == FourCC('e020') then
+        CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), FourCC('e01I'), udg_LocalPosition[16], bj_UNIT_FACING)
+        CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), FourCC('e01I'), udg_LocalPosition[16], bj_UNIT_FACING)
+        CreateUnitAtLoc(GetOwningPlayer(GetEnumUnit()), FourCC('e01I'), udg_LocalPosition[16], bj_UNIT_FACING)
         
     end
     RemoveLocation(udg_LocalPosition[16])
@@ -32699,10 +32699,10 @@ end
 --===========================================================================
 function Trig_Antennu_Conditions()
     gTriggerUnit=GetConstructedStructure()
-    return GetUnitTypeId(gTriggerUnit) == 'e01X'
+    return GetUnitTypeId(gTriggerUnit) == FourCC('e01X')
 end
 function Trig_Antennu_Actions()
-    UnitAddAbility(gTriggerUnit, 'A0J0')
+    UnitAddAbility(gTriggerUnit, FourCC('A0J0'))
     SetUnitTimeScale(gTriggerUnit, 0.1)
 end
 --===========================================================================
@@ -32717,7 +32717,7 @@ end
 -- Trigger: AutoPolet
 --===========================================================================
 function Trig_AutoPolet_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0KL' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0KL') ) ) then
         return false
     end
     return true
@@ -32737,15 +32737,15 @@ end
 -- Trigger: FastKokon
 --===========================================================================
 function Trig_FastKokon_Conditions()
-    return GetSpellAbilityId() == 'A0ML'
+    return GetSpellAbilityId() == FourCC('A0ML')
 end
 function Trig_FastKokon_Actions()
     gUnit=GetTriggerUnit()
     SetUnitTimeScale(gUnit, 1)
     KillUnit(gUnit)
-    CreateUnit(GetOwningPlayer(gUnit), 'e02W', GetUnitX(gUnit), GetUnitY(gUnit), 0.0)
-    CreateUnit(GetOwningPlayer(gUnit), 'e02W', GetUnitX(gUnit), GetUnitY(gUnit), 0.0)
-    CreateUnit(GetOwningPlayer(gUnit), 'e02W', GetUnitX(gUnit), GetUnitY(gUnit), 0.0)
+    CreateUnit(GetOwningPlayer(gUnit), FourCC('e02W'), GetUnitX(gUnit), GetUnitY(gUnit), 0.0)
+    CreateUnit(GetOwningPlayer(gUnit), FourCC('e02W'), GetUnitX(gUnit), GetUnitY(gUnit), 0.0)
+    CreateUnit(GetOwningPlayer(gUnit), FourCC('e02W'), GetUnitX(gUnit), GetUnitY(gUnit), 0.0)
 end
 --===========================================================================
 function InitTrig_FastKokon()
@@ -32759,7 +32759,7 @@ end
 -- Trigger: FireAutoCast
 --===========================================================================
 function Trig_FireAutoCast_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'e01T' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01T') ) ) then
         return false
     end
     return true
@@ -32779,7 +32779,7 @@ end
 -- Trigger: AcidMissleF
 --===========================================================================
 function Trig_AcidMissleF_Conditions()
-    return GetResearched() == 'R08E'
+    return GetResearched() == FourCC('R08E')
 end
 function Trig_AcidMissleF_Actions()
     SetPlayerAbilityAvailableBJ(true, FourCC('A1KF'), GetOwningPlayer(GetTriggerUnit()))
@@ -32796,13 +32796,13 @@ end
 -- Trigger: AcidMissleB
 --===========================================================================
 function Trig_AcidMissleB_Conditions()
-    if ( not ( GetResearched() == 'R08E' ) ) then
+    if ( not ( GetResearched() == FourCC('R08E') ) ) then
         return false
     end
     return true
 end
 function Trig_AcidMissleB_Actions()
-    SetPlayerTechMaxAllowedSwap('R08F', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R08F'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_AcidMissleB()
@@ -32816,13 +32816,13 @@ end
 -- Trigger: AcidMissleC
 --===========================================================================
 function Trig_AcidMissleC_Conditions()
-    if ( not ( GetResearched() == 'R08E' ) ) then
+    if ( not ( GetResearched() == FourCC('R08E') ) ) then
         return false
     end
     return true
 end
 function Trig_AcidMissleC_Actions()
-    SetPlayerTechMaxAllowedSwap('R08F', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R08F'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_AcidMissleC()
@@ -32836,7 +32836,7 @@ end
 -- Trigger: ParazitF
 --===========================================================================
 function Trig_ParazitF_Conditions()
-    if ( not ( GetResearched() == 'R08F' ) ) then
+    if ( not ( GetResearched() == FourCC('R08F') ) ) then
         return false
     end
     return true
@@ -32856,13 +32856,13 @@ end
 -- Trigger: ParazitB
 --===========================================================================
 function Trig_ParazitB_Conditions()
-    if ( not ( GetResearched() == 'R08F' ) ) then
+    if ( not ( GetResearched() == FourCC('R08F') ) ) then
         return false
     end
     return true
 end
 function Trig_ParazitB_Actions()
-    SetPlayerTechMaxAllowedSwap('R08E', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R08E'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_ParazitB()
@@ -32876,13 +32876,13 @@ end
 -- Trigger: ParazitC
 --===========================================================================
 function Trig_ParazitC_Conditions()
-    if ( not ( GetResearched() == 'R08F' ) ) then
+    if ( not ( GetResearched() == FourCC('R08F') ) ) then
         return false
     end
     return true
 end
 function Trig_ParazitC_Actions()
-    SetPlayerTechMaxAllowedSwap('R08E', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R08E'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_ParazitC()
@@ -32896,13 +32896,13 @@ end
 -- Trigger: PlodovitostOsaB
 --===========================================================================
 function Trig_PlodovitostOsaB_Conditions()
-    if ( not ( GetResearched() == 'R08B' ) ) then
+    if ( not ( GetResearched() == FourCC('R08B') ) ) then
         return false
     end
     return true
 end
 function Trig_PlodovitostOsaB_Actions()
-    SetPlayerTechMaxAllowedSwap('R08A', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R08A'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_PlodovitostOsaB()
@@ -32916,13 +32916,13 @@ end
 -- Trigger: PlodovitostOsaC
 --===========================================================================
 function Trig_PlodovitostOsaC_Conditions()
-    if ( not ( GetResearched() == 'R08B' ) ) then
+    if ( not ( GetResearched() == FourCC('R08B') ) ) then
         return false
     end
     return true
 end
 function Trig_PlodovitostOsaC_Actions()
-    SetPlayerTechMaxAllowedSwap('R08A', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R08A'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_PlodovitostOsaC()
@@ -32936,13 +32936,13 @@ end
 -- Trigger: PlodovitostVoinaB
 --===========================================================================
 function Trig_PlodovitostVoinaB_Conditions()
-    if ( not ( GetResearched() == 'R089' ) ) then
+    if ( not ( GetResearched() == FourCC('R089') ) ) then
         return false
     end
     return true
 end
 function Trig_PlodovitostVoinaB_Actions()
-    SetPlayerTechMaxAllowedSwap('R085', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R085'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_PlodovitostVoinaB()
@@ -32956,13 +32956,13 @@ end
 -- Trigger: PlodovitostVoinaC
 --===========================================================================
 function Trig_PlodovitostVoinaC_Conditions()
-    if ( not ( GetResearched() == 'R089' ) ) then
+    if ( not ( GetResearched() == FourCC('R089') ) ) then
         return false
     end
     return true
 end
 function Trig_PlodovitostVoinaC_Actions()
-    SetPlayerTechMaxAllowedSwap('R085', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R085'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_PlodovitostVoinaC()
@@ -32976,7 +32976,7 @@ end
 -- Trigger: KriliaF
 --===========================================================================
 function Trig_KriliaF_Conditions()
-    if ( not ( GetResearched() == 'R08A' ) ) then
+    if ( not ( GetResearched() == FourCC('R08A') ) ) then
         return false
     end
     return true
@@ -32996,13 +32996,13 @@ end
 -- Trigger: KriliaB
 --===========================================================================
 function Trig_KriliaB_Conditions()
-    if ( not ( GetResearched() == 'R08A' ) ) then
+    if ( not ( GetResearched() == FourCC('R08A') ) ) then
         return false
     end
     return true
 end
 function Trig_KriliaB_Actions()
-    SetPlayerTechMaxAllowedSwap('R08B', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R08B'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_KriliaB()
@@ -33016,13 +33016,13 @@ end
 -- Trigger: KriliaC
 --===========================================================================
 function Trig_KriliaC_Conditions()
-    if ( not ( GetResearched() == 'R08A' ) ) then
+    if ( not ( GetResearched() == FourCC('R08A') ) ) then
         return false
     end
     return true
 end
 function Trig_KriliaC_Actions()
-    SetPlayerTechMaxAllowedSwap('R08B', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R08B'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_KriliaC()
@@ -33036,7 +33036,7 @@ end
 -- Trigger: DelimostF
 --===========================================================================
 function Trig_DelimostF_Conditions()
-    if ( not ( GetResearched() == 'R08C' ) ) then
+    if ( not ( GetResearched() == FourCC('R08C') ) ) then
         return false
     end
     return true
@@ -33056,13 +33056,13 @@ end
 -- Trigger: DelimostB
 --===========================================================================
 function Trig_DelimostB_Conditions()
-    if ( not ( GetResearched() == 'R08C' ) ) then
+    if ( not ( GetResearched() == FourCC('R08C') ) ) then
         return false
     end
     return true
 end
 function Trig_DelimostB_Actions()
-    SetPlayerTechMaxAllowedSwap('R08D', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R08D'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_DelimostB()
@@ -33076,13 +33076,13 @@ end
 -- Trigger: DelimostC
 --===========================================================================
 function Trig_DelimostC_Conditions()
-    if ( not ( GetResearched() == 'R08C' ) ) then
+    if ( not ( GetResearched() == FourCC('R08C') ) ) then
         return false
     end
     return true
 end
 function Trig_DelimostC_Actions()
-    SetPlayerTechMaxAllowedSwap('R08D', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R08D'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_DelimostC()
@@ -33096,7 +33096,7 @@ end
 -- Trigger: SlizeF
 --===========================================================================
 function Trig_SlizeF_Conditions()
-    if ( not ( GetResearched() == 'R08D' ) ) then
+    if ( not ( GetResearched() == FourCC('R08D') ) ) then
         return false
     end
     return true
@@ -33116,13 +33116,13 @@ end
 -- Trigger: SlizeB
 --===========================================================================
 function Trig_SlizeB_Conditions()
-    if ( not ( GetResearched() == 'R08D' ) ) then
+    if ( not ( GetResearched() == FourCC('R08D') ) ) then
         return false
     end
     return true
 end
 function Trig_SlizeB_Actions()
-    SetPlayerTechMaxAllowedSwap('R08C', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R08C'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SlizeB()
@@ -33136,13 +33136,13 @@ end
 -- Trigger: SlizeC
 --===========================================================================
 function Trig_SlizeC_Conditions()
-    if ( not ( GetResearched() == 'R08D' ) ) then
+    if ( not ( GetResearched() == FourCC('R08D') ) ) then
         return false
     end
     return true
 end
 function Trig_SlizeC_Actions()
-    SetPlayerTechMaxAllowedSwap('R08C', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R08C'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_SlizeC()
@@ -33156,13 +33156,13 @@ end
 -- Trigger: TankB
 --===========================================================================
 function Trig_TankB_Conditions()
-    if ( not ( GetResearched() == 'R085' ) ) then
+    if ( not ( GetResearched() == FourCC('R085') ) ) then
         return false
     end
     return true
 end
 function Trig_TankB_Actions()
-    SetPlayerTechMaxAllowedSwap('R089', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R089'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_TankB()
@@ -33176,13 +33176,13 @@ end
 -- Trigger: TankC
 --===========================================================================
 function Trig_TankC_Conditions()
-    if ( not ( GetResearched() == 'R085' ) ) then
+    if ( not ( GetResearched() == FourCC('R085') ) ) then
         return false
     end
     return true
 end
 function Trig_TankC_Actions()
-    SetPlayerTechMaxAllowedSwap('R089', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R089'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_TankC()
@@ -33196,11 +33196,11 @@ end
 -- Trigger: TankF
 --===========================================================================
 function Trig_TankF_Conditions()
-    return GetResearched() == 'R085'
+    return GetResearched() == FourCC('R085')
 end
 function Trig_TankF_Actions()
-    SetPlayerTechMaxAllowedSwap('e01P', - 1, GetOwningPlayer(GetTriggerUnit())) --Tank
-    SetPlayerTechMaxAllowedSwap('e02W', 0, GetOwningPlayer(GetTriggerUnit())) --Silit
+    SetPlayerTechMaxAllowedSwap(FourCC('e01P'), - 1, GetOwningPlayer(GetTriggerUnit())) --Tank
+    SetPlayerTechMaxAllowedSwap(FourCC('e02W'), 0, GetOwningPlayer(GetTriggerUnit())) --Silit
 end
 --===========================================================================
 function InitTrig_TankF()
@@ -33271,36 +33271,36 @@ end
 -- Trigger: StartG
 --===========================================================================
 function goblinsStartLimits_act()
-    SetPlayerTechResearchedSwap('R04O', 1, GetEnumPlayer())
+    SetPlayerTechResearchedSwap(FourCC('R04O'), 1, GetEnumPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AT'), GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H0BD', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('N018', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('N01A', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('N019', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('Nalc', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('Ntin', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H0BD'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('N018'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('N01A'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('N019'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('Nalc'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('Ntin'), 1, GetEnumPlayer())
     
-    SetPlayerTechMaxAllowedSwap('Gmex', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('Galh', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('Gmex'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('Galh'), 1, GetEnumPlayer())
     
     
-    SetPlayerTechMaxAllowedSwap('h06L', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h06N', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h06Q', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h06O', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h078', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h06M', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h06P', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h06U', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h06Y', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h06S', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h06T', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('o00W', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('o00Y', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('o00X', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h06R', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h06V', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h06W', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h06L'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h06N'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h06Q'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h06O'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h078'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h06M'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h06P'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h06U'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h06Y'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h06S'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h06T'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('o00W'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('o00Y'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('o00X'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h06R'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h06V'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h06W'), 0, GetEnumPlayer())
 end
 function goblinsStartLimits()
     ForForce(bj_FORCE_ALL_PLAYERS, goblinsStartLimits_act)
@@ -33319,7 +33319,7 @@ end
 -- Trigger: GoblinSold
 --===========================================================================
 function Trig_GoblinSold_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h073' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h073') ) ) then
         return false
     end
     return true
@@ -33379,10 +33379,10 @@ end
 -- Trigger: IconAutoRocket
 --===========================================================================
 function Trig_IconAutoRocket_Conditions()
-    return GetLearnedSkillBJ() == 'A1N1'
+    return GetLearnedSkillBJ() == FourCC('A1N1')
 end
 function Trig_IconAutoRocket_Actions()
-    UnitAddAbility(GetLearningUnit(), 'A1N2')
+    UnitAddAbility(GetLearningUnit(), FourCC('A1N2'))
 end
 --===========================================================================
 function InitTrig_IconAutoRocket()
@@ -33395,13 +33395,13 @@ end
 -- Trigger: SpellRecharge
 --===========================================================================
 function Trig_SpellRecharge_Conditions()
-    return GetSpellAbilityId() == 'A1N4'
+    return GetSpellAbilityId() == FourCC('A1N4')
 end
 function Trig_SpellRecharge_Actions()
-    BlzEndUnitAbilityCooldown(GetTriggerUnit(), 'A0DU')
-    BlzEndUnitAbilityCooldown(GetTriggerUnit(), 'A1N0')
-    BlzEndUnitAbilityCooldown(GetTriggerUnit(), 'A1N3')
-    BlzEndUnitAbilityCooldown(GetTriggerUnit(), 'A1N1')
+    BlzEndUnitAbilityCooldown(GetTriggerUnit(), FourCC('A0DU'))
+    BlzEndUnitAbilityCooldown(GetTriggerUnit(), FourCC('A1N0'))
+    BlzEndUnitAbilityCooldown(GetTriggerUnit(), FourCC('A1N3'))
+    BlzEndUnitAbilityCooldown(GetTriggerUnit(), FourCC('A1N1'))
     
 end
 --===========================================================================
@@ -33415,14 +33415,14 @@ end
 -- Trigger: CorrupTrain
 --===========================================================================
 function Trig_CorrupTrain_Conditions()
-    if ( not ( GetPlayerTechCountSimple('R04O', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
     return true
 end
 function Trig_CorrupTrain_Actions()
-    SetUnitAbilityLevelSwapped('A0AV', GetTrainedUnit(), GetPlayerTechCountSimple('R04O', GetOwningPlayer(GetTriggerUnit())))
-    SetUnitAbilityLevelSwapped('A0AW', GetTrainedUnit(), GetPlayerTechCountSimple('R04O', GetOwningPlayer(GetTriggerUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0AV'), GetTrainedUnit(), GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetTriggerUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0AW'), GetTrainedUnit(), GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetTriggerUnit())))
 end
 --===========================================================================
 function InitTrig_CorrupTrain()
@@ -33436,17 +33436,17 @@ end
 -- Trigger: CorrupPlus
 --===========================================================================
 function Trig_CorrupPlus_Conditions()
-    return GetSpellAbilityId() == 'A0AS'
+    return GetSpellAbilityId() == FourCC('A0AS')
 end
 function Trig_CorrupPlus_Func008A()
-    SetUnitAbilityLevelSwapped('A0AW', GetEnumUnit(), GetPlayerTechCountSimple('R04O', GetOwningPlayer(GetEnumUnit())))
-    SetUnitAbilityLevelSwapped('A0AV', GetEnumUnit(), GetPlayerTechCountSimple('R04O', GetOwningPlayer(GetEnumUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0AW'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetEnumUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0AV'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetEnumUnit())))
 end
 function CorriptionTimerPlus()
     local t= GetExpiredTimer()
     local tid= GetHandleId(t)
     local p= Player(LoadInteger(Hash, tid, 0))
-    if GetPlayerTechCountSimple('R04O', p) == 6 then
+    if GetPlayerTechCountSimple(FourCC('R04O'), p) == 6 then
         SetPlayerAbilityAvailableBJ(true, FourCC('A0AT'), p)
     else
         SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p)
@@ -33462,7 +33462,7 @@ function Trig_CorrupPlus_Actions()
     local p= GetOwningPlayer(GetTriggerUnit())
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AS'), p)
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AT'), p)
-    SetPlayerTechResearchedSwap('R04O', ( GetPlayerTechCountSimple('R04O', p) + 1 ), p)
+    SetPlayerTechResearchedSwap(FourCC('R04O'), ( GetPlayerTechCountSimple(FourCC('R04O'), p) + 1 ), p)
     
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, p, null)
     ForGroupBJ(udg_LocalOtrad2, Trig_CorrupPlus_Func008A)
@@ -33486,17 +33486,17 @@ end
 -- Trigger: CorrupMinus
 --===========================================================================
 function Trig_CorrupMinus_Conditions()
-    return GetSpellAbilityId() == 'A0AT'
+    return GetSpellAbilityId() == FourCC('A0AT')
 end
 function Trig_CorrupMinus_Func008A()
-    SetUnitAbilityLevelSwapped('A0AW', GetEnumUnit(), GetPlayerTechCountSimple('R04O', GetOwningPlayer(GetEnumUnit())))
-    SetUnitAbilityLevelSwapped('A0AV', GetEnumUnit(), GetPlayerTechCountSimple('R04O', GetOwningPlayer(GetEnumUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0AW'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetEnumUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0AV'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetEnumUnit())))
 end
 function CorriptionTimerMinus()
     local t= GetExpiredTimer()
     local tid= GetHandleId(t)
     local p= Player(LoadInteger(Hash, tid, 0))
-    if GetPlayerTechCountSimple('R04O', p) == 1 then
+    if GetPlayerTechCountSimple(FourCC('R04O'), p) == 1 then
         SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p)
     else
         SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p)
@@ -33512,7 +33512,7 @@ function Trig_CorrupMinus_Actions()
     local p= GetOwningPlayer(GetTriggerUnit())
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AS'), p)
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AT'), p)
-    SetPlayerTechResearchedSwap('R04O', ( GetPlayerTechCountSimple('R04O', p) - 1 ), p)
+    SetPlayerTechResearchedSwap(FourCC('R04O'), ( GetPlayerTechCountSimple(FourCC('R04O'), p) - 1 ), p)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, p, null)
     ForGroupBJ(udg_LocalOtrad2, Trig_CorrupMinus_Func008A)
     GroupClear(udg_LocalOtrad2)
@@ -33537,22 +33537,22 @@ end
 -- Trigger: Potreblenie
 --===========================================================================
 function Trig_Potreblenie_Conditions()
-    if ( not ( GetResearched() == 'R04N' ) ) then
+    if ( not ( GetResearched() == FourCC('R04N') ) ) then
         return false
     end
     return true
 end
 function Trig_Potreblenie_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R04N', GetOwningPlayer(GetTriggerUnit())) == 6 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) == 6 ) ) then
         return false
     end
     return true
 end
 function Trig_Potreblenie_Func002002()
-    return ( GetUnitAbilityLevelSwapped('A0A5', GetFilterUnit()) ~= 0 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('A0A5'), GetFilterUnit()) ~= 0 )
 end
 function Trig_Potreblenie_Func005A()
-    SetUnitAbilityLevelSwapped('A0A5', GetEnumUnit(), ( GetPlayerTechCountSimple('R04N', GetOwningPlayer(GetTriggerUnit())) + 1 ))
+    SetUnitAbilityLevelSwapped(FourCC('A0A5'), GetEnumUnit(), ( GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) + 1 ))
 end
 function Trig_Potreblenie_Actions()
     if ( Trig_Potreblenie_Func001C() ) then
@@ -33577,13 +33577,13 @@ end
 -- Trigger: PotreblenieTrain
 --===========================================================================
 function Trig_PotreblenieTrain_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A0A5', GetTriggerUnit()) >= 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0A5'), GetTriggerUnit()) >= 1 ) ) then
         return false
     end
     return true
 end
 function Trig_PotreblenieTrain_Actions()
-    SetUnitAbilityLevelSwapped('A0A5', GetEnumUnit(), ( GetPlayerTechCountSimple('R04N', GetOwningPlayer(GetTriggerUnit())) + 1 ))
+    SetUnitAbilityLevelSwapped(FourCC('A0A5'), GetEnumUnit(), ( GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) + 1 ))
 end
 --===========================================================================
 function InitTrig_PotreblenieTrain()
@@ -33597,22 +33597,22 @@ end
 -- Trigger: BracResearch
 --===========================================================================
 function Trig_BracResearch_Conditions()
-    if ( not ( GetResearched() == 'R05W' ) ) then
+    if ( not ( GetResearched() == FourCC('R05W') ) ) then
         return false
     end
     return true
 end
 function Trig_BracResearch_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R05W', GetOwningPlayer(GetTriggerUnit())) == 6 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R05W'), GetOwningPlayer(GetTriggerUnit())) == 6 ) ) then
         return false
     end
     return true
 end
 function Trig_BracResearch_Func002002()
-    return ( GetUnitAbilityLevelSwapped('A0A6', GetFilterUnit()) ~= 0 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('A0A6'), GetFilterUnit()) ~= 0 )
 end
 function Trig_BracResearch_Func005A()
-    SetUnitAbilityLevelSwapped('A0A6', GetEnumUnit(), GetPlayerTechCountSimple('R05W', GetOwningPlayer(GetTriggerUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0A6'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R05W'), GetOwningPlayer(GetTriggerUnit())))
 end
 function Trig_BracResearch_Actions()
     if ( Trig_BracResearch_Func001C() ) then
@@ -33637,13 +33637,13 @@ end
 -- Trigger: BracTrain
 --===========================================================================
 function Trig_BracTrain_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A0A6', GetTriggerUnit()) >= 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0A6'), GetTriggerUnit()) >= 1 ) ) then
         return false
     end
     return true
 end
 function Trig_BracTrain_Actions()
-    SetUnitAbilityLevelSwapped('A0A6', GetEnumUnit(), GetPlayerTechCountSimple('R05W', GetOwningPlayer(GetTriggerUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0A6'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R05W'), GetOwningPlayer(GetTriggerUnit())))
 end
 --===========================================================================
 function InitTrig_BracTrain()
@@ -33657,22 +33657,22 @@ end
 -- Trigger: PodjogResearch
 --===========================================================================
 function Trig_PodjogResearch_Conditions()
-    if ( not ( GetResearched() == 'R04R' ) ) then
+    if ( not ( GetResearched() == FourCC('R04R') ) ) then
         return false
     end
     return true
 end
 function Trig_PodjogResearch_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R04R', GetOwningPlayer(GetTriggerUnit())) == 6 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04R'), GetOwningPlayer(GetTriggerUnit())) == 6 ) ) then
         return false
     end
     return true
 end
 function Trig_PodjogResearch_Func002002()
-    return ( GetUnitAbilityLevelSwapped('A0AR', GetFilterUnit()) ~= 0 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('A0AR'), GetFilterUnit()) ~= 0 )
 end
 function Trig_PodjogResearch_Func005A()
-    SetUnitAbilityLevelSwapped('A0AR', GetEnumUnit(), GetPlayerTechCountSimple('R04R', GetOwningPlayer(GetTriggerUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0AR'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04R'), GetOwningPlayer(GetTriggerUnit())))
 end
 function Trig_PodjogResearch_Actions()
     if ( Trig_PodjogResearch_Func001C() ) then
@@ -33697,13 +33697,13 @@ end
 -- Trigger: PodjogTrain
 --===========================================================================
 function Trig_PodjogTrain_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A0AR', GetTrainedUnit()) >= 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0AR'), GetTrainedUnit()) >= 1 ) ) then
         return false
     end
     return true
 end
 function Trig_PodjogTrain_Actions()
-    SetUnitAbilityLevelSwapped('A0AR', GetTrainedUnit(), GetPlayerTechCountSimple('R04R', GetOwningPlayer(GetTriggerUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0AR'), GetTrainedUnit(), GetPlayerTechCountSimple(FourCC('R04R'), GetOwningPlayer(GetTriggerUnit())))
 end
 --===========================================================================
 function InitTrig_PodjogTrain()
@@ -33717,22 +33717,22 @@ end
 -- Trigger: PodruvResearc
 --===========================================================================
 function Trig_PodruvResearc_Conditions()
-    if ( not ( GetResearched() == 'R04Q' ) ) then
+    if ( not ( GetResearched() == FourCC('R04Q') ) ) then
         return false
     end
     return true
 end
 function Trig_PodruvResearc_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R04Q', GetOwningPlayer(GetTriggerUnit())) == 6 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04Q'), GetOwningPlayer(GetTriggerUnit())) == 6 ) ) then
         return false
     end
     return true
 end
 function Trig_PodruvResearc_Func002002()
-    return ( GetUnitAbilityLevelSwapped('A0A9', GetFilterUnit()) ~= 0 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('A0A9'), GetFilterUnit()) ~= 0 )
 end
 function Trig_PodruvResearc_Func005A()
-    SetUnitAbilityLevelSwapped('A0A9', GetEnumUnit(), ( GetPlayerTechCountSimple('R04Q', GetOwningPlayer(GetTriggerUnit())) + 1 ))
+    SetUnitAbilityLevelSwapped(FourCC('A0A9'), GetEnumUnit(), ( GetPlayerTechCountSimple(FourCC('R04Q'), GetOwningPlayer(GetTriggerUnit())) + 1 ))
 end
 function Trig_PodruvResearc_Actions()
     if ( Trig_PodruvResearc_Func001C() ) then
@@ -33757,13 +33757,13 @@ end
 -- Trigger: PodruvTrain
 --===========================================================================
 function Trig_PodruvTrain_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A0A9', GetTrainedUnit()) >= 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0A9'), GetTrainedUnit()) >= 1 ) ) then
         return false
     end
     return true
 end
 function Trig_PodruvTrain_Actions()
-    SetUnitAbilityLevelSwapped('A0A9', GetTrainedUnit(), GetPlayerTechCountSimple('R04Q', GetOwningPlayer(GetTriggerUnit())))
+    SetUnitAbilityLevelSwapped(FourCC('A0A9'), GetTrainedUnit(), GetPlayerTechCountSimple(FourCC('R04Q'), GetOwningPlayer(GetTriggerUnit())))
 end
 --===========================================================================
 function InitTrig_PodruvTrain()
@@ -33777,7 +33777,7 @@ end
 -- Trigger: Brac
 --===========================================================================
 function Trig_Brac_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'B028') > 0 and GetUnitAbilityLevel(GetEventDamageSource(), 'A0A6') > 0
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B028')) > 0 and GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A0A6')) > 0
 end
 function Trig_Brac_Actions()
     local t
@@ -33802,11 +33802,11 @@ end
 -- Trigger: Samopodruv
 --===========================================================================
 function Trig_Samopodruv_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A0A9') > 0
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A0A9')) > 0
 end
 function Trig_Samopodruv_Actions()
     local t
-    if GetRandomInt(1, 100) < 35 + ( - 5 * GetUnitAbilityLevel(GetAttacker(), 'A0A9') ) then
+    if GetRandomInt(1, 100) < 35 + ( - 5 * GetUnitAbilityLevel(GetAttacker(), FourCC('A0A9')) ) then
         SetUnitLifeBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetAttacker()) - 15.00 ))
         CreateTextTagUnitBJ("TRIGSTR_433", GetAttacker(), - 20.00, 5.00, 100, 100, 100, 0.00)
         t=GetLastCreatedTextTag()
@@ -33830,11 +33830,11 @@ end
 -- Trigger: Samopodjog
 --===========================================================================
 function Trig_Samopodjog_Conditions()
-     return GetUnitAbilityLevel(GetAttacker(), 'A0AR') > 0
+     return GetUnitAbilityLevel(GetAttacker(), FourCC('A0AR')) > 0
 end
 function Trig_Samopodjog_Actions()
     local t
-    if GetRandomInt(1, 100) < 35 + ( - 5 * GetUnitAbilityLevel(GetAttacker(), 'A0AR') ) then
+    if GetRandomInt(1, 100) < 35 + ( - 5 * GetUnitAbilityLevel(GetAttacker(), FourCC('A0AR')) ) then
         SetUnitLifeBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetAttacker()) - 15.00 ))
         CreateTextTagUnitBJ("TRIGSTR_433", GetAttacker(), - 20.00, 5.00, 100, 100, 100, 0.00)
         t=GetLastCreatedTextTag()
@@ -33858,7 +33858,7 @@ end
 -- Trigger: Adrenalin
 --===========================================================================
 function Trig_Adrenalin_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0D2' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0D2') ) ) then
         return false
     end
     return true
@@ -33879,14 +33879,14 @@ end
 --===========================================================================
 function Trig_GazloySpellheals_Conditions()
     
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A1KK') > 0 and IsPlayerEnemy(GetOwningPlayer(GetEventDamageSource()), GetOwningPlayer(GetTriggerUnit()))
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A1KK')) > 0 and IsPlayerEnemy(GetOwningPlayer(GetEventDamageSource()), GetOwningPlayer(GetTriggerUnit()))
     
     
     
 end
 function Trig_GazloySpellheals_Actions()
     local u= GetEventDamageSource()
-    local level= GetUnitAbilityLevel(u, 'A1KK')
+    local level= GetUnitAbilityLevel(u, FourCC('A1KK'))
     local damage= GetEventDamage()
     local e= AddSpecialEffectTargetUnitBJ("Chest", u, "AbilitiesSpellsItemsVampiricPotionVampPotionCaster.mdl")
     SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) + damage * ( 0.01 * level ))
@@ -33917,10 +33917,10 @@ function Gtiers()
         KillUnit(u)
     elseif count < 12 then
         KillUnit(u)
-        u=CreateUnit(Player(pi), 'h001', 0, 0, 0.0)
+        u=CreateUnit(Player(pi), FourCC('h001'), 0, 0, 0.0)
     else
         KillUnit(u)
-        u=CreateUnit(Player(pi), 'h0P6', 0, 0, 0.0)
+        u=CreateUnit(Player(pi), FourCC('h0P6'), 0, 0, 0.0)
     end
     SaveUnitHandle(Hash, pi, puhash, u)
     u=null
@@ -33929,7 +33929,7 @@ function Trig_FarmBuildG_Conditions()
     gUnit=GetTriggerUnit()
     gInt=GetUnitTypeId(gUnit)
     gPi=GetPlayerId(GetOwningPlayer(gUnit))
-    return gInt == 'h076' -- Lab
+    return gInt == FourCC('h076') -- Lab
 end
 function Trig_FarmBuildG_Actions()
     ChangeObjectsCount(gPi , Gfarm , 1)
@@ -33949,7 +33949,7 @@ function Trig_FarmLoseG_Conditions()
     gUnit=GetTriggerUnit()
     gInt=GetUnitTypeId(gUnit)
     gPi=GetPlayerId(GetOwningPlayer(gUnit))
-    return gInt == 'h076' -- Lab
+    return gInt == FourCC('h076') -- Lab
 end
 function Trig_FarmLoseG_Actions()
     ChangeObjectsCount(gPi , Gfarm , - 1)
@@ -33966,19 +33966,19 @@ end
 -- Trigger: Pulimetchik
 --===========================================================================
 function Trig_Pulimetchik_Func002C()
-    if ( ( GetResearched() == 'R04E' ) ) then
+    if ( ( GetResearched() == FourCC('R04E') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04K' ) ) then
+    if ( ( GetResearched() == FourCC('R04K') ) ) then
         return true
     end
     return false
 end
 function Trig_Pulimetchik_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04E', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04E'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04K', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04K'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
     return true
@@ -33993,7 +33993,7 @@ function Trig_Pulimetchik_Conditions()
     return true
 end
 function Trig_Pulimetchik_Actions()
-    SetPlayerTechMaxAllowedSwap('h06L', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h06L'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Pulimetchik()
@@ -34007,19 +34007,19 @@ end
 -- Trigger: Ognemetchik
 --===========================================================================
 function Trig_Ognemetchik_Func002C()
-    if ( ( GetResearched() == 'R04G' ) ) then
+    if ( ( GetResearched() == FourCC('R04G') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04K' ) ) then
+    if ( ( GetResearched() == FourCC('R04K') ) ) then
         return true
     end
     return false
 end
 function Trig_Ognemetchik_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04G', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04G'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04K', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04K'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
     return true
@@ -34034,7 +34034,7 @@ function Trig_Ognemetchik_Conditions()
     return true
 end
 function Trig_Ognemetchik_Actions()
-    SetPlayerTechMaxAllowedSwap('h06Q', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h06Q'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Ognemetchik()
@@ -34048,19 +34048,19 @@ end
 -- Trigger: Raketchik
 --===========================================================================
 function Trig_Raketchik_Func002C()
-    if ( ( GetResearched() == 'R04F' ) ) then
+    if ( ( GetResearched() == FourCC('R04F') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04K' ) ) then
+    if ( ( GetResearched() == FourCC('R04K') ) ) then
         return true
     end
     return false
 end
 function Trig_Raketchik_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04F', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04F'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04K', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04K'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
     return true
@@ -34075,7 +34075,7 @@ function Trig_Raketchik_Conditions()
     return true
 end
 function Trig_Raketchik_Actions()
-    SetPlayerTechMaxAllowedSwap('h06N', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h06N'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Raketchik()
@@ -34089,19 +34089,19 @@ end
 -- Trigger: Medic
 --===========================================================================
 function Trig_Medic_Func002C()
-    if ( ( GetResearched() == 'R04P' ) ) then
+    if ( ( GetResearched() == FourCC('R04P') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04K' ) ) then
+    if ( ( GetResearched() == FourCC('R04K') ) ) then
         return true
     end
     return false
 end
 function Trig_Medic_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04P', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04P'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04K', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04K'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
     return true
@@ -34116,7 +34116,7 @@ function Trig_Medic_Conditions()
     return true
 end
 function Trig_Medic_Actions()
-    SetPlayerTechMaxAllowedSwap('h06O', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h06O'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Medic()
@@ -34130,25 +34130,25 @@ end
 -- Trigger: Sniper
 --===========================================================================
 function Trig_Sniper_Func002C()
-    if ( ( GetResearched() == 'R04M' ) ) then
+    if ( ( GetResearched() == FourCC('R04M') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04E' ) ) then
+    if ( ( GetResearched() == FourCC('R04E') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04K' ) ) then
+    if ( ( GetResearched() == FourCC('R04K') ) ) then
         return true
     end
     return false
 end
 function Trig_Sniper_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04E', GetOwningPlayer(GetTriggerUnit())) >= 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04E'), GetOwningPlayer(GetTriggerUnit())) >= 3 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04M', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04M'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04K', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04K'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
     return true
@@ -34163,7 +34163,7 @@ function Trig_Sniper_Conditions()
     return true
 end
 function Trig_Sniper_Actions()
-    SetPlayerTechMaxAllowedSwap('h06M', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h06M'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Sniper()
@@ -34177,19 +34177,19 @@ end
 -- Trigger: Saper
 --===========================================================================
 function Trig_Saper_Func002C()
-    if ( ( GetResearched() == 'R04F' ) ) then
+    if ( ( GetResearched() == FourCC('R04F') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04K' ) ) then
+    if ( ( GetResearched() == FourCC('R04K') ) ) then
         return true
     end
     return false
 end
 function Trig_Saper_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04F', GetOwningPlayer(GetTriggerUnit())) >= 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04F'), GetOwningPlayer(GetTriggerUnit())) >= 3 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04K', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04K'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
     return true
@@ -34204,7 +34204,7 @@ function Trig_Saper_Conditions()
     return true
 end
 function Trig_Saper_Actions()
-    SetPlayerTechMaxAllowedSwap('h078', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h078'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Saper()
@@ -34218,25 +34218,25 @@ end
 -- Trigger: Car
 --===========================================================================
 function Trig_Car_Func002C()
-    if ( ( GetResearched() == 'R04F' ) ) then
+    if ( ( GetResearched() == FourCC('R04F') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04L' ) ) then
+    if ( ( GetResearched() == FourCC('R04L') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04I' ) ) then
+    if ( ( GetResearched() == FourCC('R04I') ) ) then
         return true
     end
     return false
 end
 function Trig_Car_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04F', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04F'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04L', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04I', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04I'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
     return true
@@ -34251,7 +34251,7 @@ function Trig_Car_Conditions()
     return true
 end
 function Trig_Car_Actions()
-    SetPlayerTechMaxAllowedSwap('h06R', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h06R'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Car()
@@ -34265,25 +34265,25 @@ end
 -- Trigger: Vezdehod
 --===========================================================================
 function Trig_Vezdehod_Func002C()
-    if ( ( GetResearched() == 'R04E' ) ) then
+    if ( ( GetResearched() == FourCC('R04E') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04L' ) ) then
+    if ( ( GetResearched() == FourCC('R04L') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04I' ) ) then
+    if ( ( GetResearched() == FourCC('R04I') ) ) then
         return true
     end
     return false
 end
 function Trig_Vezdehod_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04E', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04E'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04L', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04I', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04I'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
     return true
@@ -34298,7 +34298,7 @@ function Trig_Vezdehod_Conditions()
     return true
 end
 function Trig_Vezdehod_Actions()
-    SetPlayerTechMaxAllowedSwap('h06U', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h06U'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Vezdehod()
@@ -34312,25 +34312,25 @@ end
 -- Trigger: Tank
 --===========================================================================
 function Trig_Tank_Func002C()
-    if ( ( GetResearched() == 'R04F' ) ) then
+    if ( ( GetResearched() == FourCC('R04F') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04L' ) ) then
+    if ( ( GetResearched() == FourCC('R04L') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04I' ) ) then
+    if ( ( GetResearched() == FourCC('R04I') ) ) then
         return true
     end
     return false
 end
 function Trig_Tank_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04F', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04F'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04L', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04I', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04I'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
     return true
@@ -34345,7 +34345,7 @@ function Trig_Tank_Conditions()
     return true
 end
 function Trig_Tank_Actions()
-    SetPlayerTechMaxAllowedSwap('h06T', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h06T'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Tank()
@@ -34359,22 +34359,22 @@ end
 -- Trigger: FireTank
 --===========================================================================
 function Trig_FireTank_Func002C()
-    if ( ( GetResearched() == 'R04G' ) ) then
+    if ( ( GetResearched() == FourCC('R04G') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04L' ) ) then
+    if ( ( GetResearched() == FourCC('R04L') ) ) then
         return true
     end
     return false
 end
 function Trig_FireTank_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04G', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04G'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04L', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04I', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04I'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
     return true
@@ -34389,7 +34389,7 @@ function Trig_FireTank_Conditions()
     return true
 end
 function Trig_FireTank_Actions()
-    SetPlayerTechMaxAllowedSwap('h06S', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h06S'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_FireTank()
@@ -34403,28 +34403,28 @@ end
 -- Trigger: Arta
 --===========================================================================
 function Trig_Arta_Func002C()
-    if ( ( GetResearched() == 'R04F' ) ) then
+    if ( ( GetResearched() == FourCC('R04F') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04M' ) ) then
+    if ( ( GetResearched() == FourCC('R04M') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04L' ) ) then
+    if ( ( GetResearched() == FourCC('R04L') ) ) then
         return true
     end
     return false
 end
 function Trig_Arta_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04F', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04F'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04L', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04M', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04M'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04I', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04I'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
     return true
@@ -34439,7 +34439,7 @@ function Trig_Arta_Conditions()
     return true
 end
 function Trig_Arta_Actions()
-    SetPlayerTechMaxAllowedSwap('h06Y', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h06Y'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Arta()
@@ -34453,25 +34453,25 @@ end
 -- Trigger: Meha
 --===========================================================================
 function Trig_Meha_Func002C()
-    if ( ( GetResearched() == 'R04H' ) ) then
+    if ( ( GetResearched() == FourCC('R04H') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04L' ) ) then
+    if ( ( GetResearched() == FourCC('R04L') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04J' ) ) then
+    if ( ( GetResearched() == FourCC('R04J') ) ) then
         return true
     end
     return false
 end
 function Trig_Meha_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04H', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04H'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04L', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04J', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04J'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
     return true
@@ -34486,7 +34486,7 @@ function Trig_Meha_Conditions()
     return true
 end
 function Trig_Meha_Actions()
-    SetPlayerTechMaxAllowedSwap('o00W', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('o00W'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Meha()
@@ -34500,25 +34500,25 @@ end
 -- Trigger: OgneMeha
 --===========================================================================
 function Trig_OgneMeha_Func002C()
-    if ( ( GetResearched() == 'R04G' ) ) then
+    if ( ( GetResearched() == FourCC('R04G') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04L' ) ) then
+    if ( ( GetResearched() == FourCC('R04L') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04J' ) ) then
+    if ( ( GetResearched() == FourCC('R04J') ) ) then
         return true
     end
     return false
 end
 function Trig_OgneMeha_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04G', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04G'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04L', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04J', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04J'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
     return true
@@ -34533,7 +34533,7 @@ function Trig_OgneMeha_Conditions()
     return true
 end
 function Trig_OgneMeha_Actions()
-    SetPlayerTechMaxAllowedSwap('o00X', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('o00X'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_OgneMeha()
@@ -34547,25 +34547,25 @@ end
 -- Trigger: Eczo
 --===========================================================================
 function Trig_Eczo_Func002C()
-    if ( ( GetResearched() == 'R04H' ) ) then
+    if ( ( GetResearched() == FourCC('R04H') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04L' ) ) then
+    if ( ( GetResearched() == FourCC('R04L') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04J' ) ) then
+    if ( ( GetResearched() == FourCC('R04J') ) ) then
         return true
     end
     return false
 end
 function Trig_Eczo_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04H', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04H'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04L', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04J', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04J'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
     return true
@@ -34580,7 +34580,7 @@ function Trig_Eczo_Conditions()
     return true
 end
 function Trig_Eczo_Actions()
-    SetPlayerTechMaxAllowedSwap('o00Y', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('o00Y'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Eczo()
@@ -34594,31 +34594,31 @@ end
 -- Trigger: Super
 --===========================================================================
 function Trig_Super_Func002C()
-    if ( ( GetResearched() == 'R04E' ) ) then
+    if ( ( GetResearched() == FourCC('R04E') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04L' ) ) then
+    if ( ( GetResearched() == FourCC('R04L') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04J' ) ) then
+    if ( ( GetResearched() == FourCC('R04J') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04P' ) ) then
+    if ( ( GetResearched() == FourCC('R04P') ) ) then
         return true
     end
     return false
 end
 function Trig_Super_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04P', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04P'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04L', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04J', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04J'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04E', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04E'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
     return true
@@ -34633,7 +34633,7 @@ function Trig_Super_Conditions()
     return true
 end
 function Trig_Super_Actions()
-    SetPlayerTechMaxAllowedSwap('h06P', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h06P'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Super()
@@ -34647,25 +34647,25 @@ end
 -- Trigger: Submarina
 --===========================================================================
 function Trig_Submarina_Func002C()
-    if ( ( GetResearched() == 'R04F' ) ) then
+    if ( ( GetResearched() == FourCC('R04F') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04L' ) ) then
+    if ( ( GetResearched() == FourCC('R04L') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04I' ) ) then
+    if ( ( GetResearched() == FourCC('R04I') ) ) then
         return true
     end
     return false
 end
 function Trig_Submarina_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04F', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04F'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04L', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04I', GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04I'), GetOwningPlayer(GetTriggerUnit())) >= 1 ) ) then
         return false
     end
     return true
@@ -34680,7 +34680,7 @@ function Trig_Submarina_Conditions()
     return true
 end
 function Trig_Submarina_Actions()
-    SetPlayerTechMaxAllowedSwap('h06V', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h06V'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Submarina()
@@ -34694,25 +34694,25 @@ end
 -- Trigger: Podlodka1
 --===========================================================================
 function Trig_Podlodka1_Func002C()
-    if ( ( GetResearched() == 'R04F' ) ) then
+    if ( ( GetResearched() == FourCC('R04F') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04L' ) ) then
+    if ( ( GetResearched() == FourCC('R04L') ) ) then
         return true
     end
-    if ( ( GetResearched() == 'R04I' ) ) then
+    if ( ( GetResearched() == FourCC('R04I') ) ) then
         return true
     end
     return false
 end
 function Trig_Podlodka1_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R04L', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04I', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04I'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R04F', GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R04F'), GetOwningPlayer(GetTriggerUnit())) >= 2 ) ) then
         return false
     end
     return true
@@ -34727,7 +34727,7 @@ function Trig_Podlodka1_Conditions()
     return true
 end
 function Trig_Podlodka1_Actions()
-    SetPlayerTechMaxAllowedSwap('h06W', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h06W'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Podlodka1()
@@ -34829,15 +34829,15 @@ function Trig_Start_Elves_O_Func001A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A07P'), GetEnumPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC('A07Q'), GetEnumPlayer())
     -- -----------------------
-    SetPlayerTechMaxAllowedSwap('H043', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H044', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H05H', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H05I', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H045', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('Hjnd', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('Hkal', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H043'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H044'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H05H'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H05I'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H045'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('Hjnd'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('Hkal'), 1, GetEnumPlayer())
     --Заступник скверны
-    SetPlayerTechMaxAllowedSwap('h0O6', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0O6'), 0, GetEnumPlayer())
 end
 function Trig_Start_Elves_O_Actions()
     ForForce(udg_AllPlayers, Trig_Start_Elves_O_Func001A)
@@ -34852,13 +34852,13 @@ end
 -- Trigger: KaelMassAstral
 --===========================================================================
 function Trig_KaelMassAstral_Conditions()
-    return GetSpellAbilityId() == 'A08R'
+    return GetSpellAbilityId() == FourCC('A08R')
 end
 function Trig_KaelMassAstral_Func007A()
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    UnitAddAbilityBJ('AHbn', GetLastCreatedUnit())
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    UnitAddAbilityBJ(FourCC('AHbn'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped('AHbn', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A08R', GetTriggerUnit()))
+    SetUnitAbilityLevelSwapped(FourCC('AHbn'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A08R'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
     RemoveUnitTimed(GetLastCreatedUnit() , 3)
 end
@@ -34884,15 +34884,15 @@ end
 -- Trigger: LortemarArmorActive
 --===========================================================================
 function Trig_LortemarArmorActive_Conditions()
-    return GetSpellAbilityId() == 'A16M'
+    return GetSpellAbilityId() == FourCC('A16M')
 end
 function Trig_LortemarArmorActive_Actions()
     local u= GetTriggerUnit()
-    UnitAddAbility(u, 'A0DD')
-    UnitAddAbility(u, 'ACmi')
+    UnitAddAbility(u, FourCC('A0DD'))
+    UnitAddAbility(u, FourCC('ACmi'))
     
-    RemoveAbilityTimed(u , 'A0DD' , 20)
-    RemoveAbilityTimed(u , 'ACmi' , 20)
+    RemoveAbilityTimed(u , FourCC('A0DD') , 20)
+    RemoveAbilityTimed(u , FourCC('ACmi') , 20)
     u=null
 end
 --===========================================================================
@@ -34907,12 +34907,12 @@ end
 -- Trigger: LiadrinUlta
 --===========================================================================
 function Trig_LiadrinUlta_Conditions()
-    return GetSpellAbilityId() == 'A1KU'
+    return GetSpellAbilityId() == FourCC('A1KU')
 end
 function Trig_LiadrinUlta_Actions()
     local u= GetTriggerUnit()
-    UnitAddAbility(u, 'A1KV')
-    RemoveAbilityTimed(u , 'A1KV' , 15)
+    UnitAddAbility(u, FourCC('A1KV'))
+    RemoveAbilityTimed(u , FourCC('A1KV') , 15)
     u=null
 end
 --===========================================================================
@@ -34927,14 +34927,14 @@ end
 -- Trigger: SpellMassSunAttack
 --===========================================================================
 function Trig_SpellMassSunAttack_Conditions()
-    return GetSpellAbilityId() == 'A1KX'
+    return GetSpellAbilityId() == FourCC('A1KX')
 end
 function Trig_SpellMassSunAttack_Actions()
     local l= GetSpellTargetLoc()
     local caster= GetTriggerUnit()
     local p= GetOwningPlayer(caster)
     --local boolexpr bex
-    local dammyAbility= 'A1KY'
+    local dammyAbility= FourCC('A1KY')
     local level= GetUnitAbilityLevel(caster, GetSpellAbilityId())
     local g= CreateGroup()
     local u
@@ -34960,9 +34960,9 @@ function Trig_SpellMassSunAttack_Actions()
             u2=CreateUnitAtLoc(p, Dummy, l, bj_UNIT_FACING)
             
             if IsPlayerEnemy(GetOwningPlayer(u), p) then
-                dammyAbility='A1KZ'
+                dammyAbility=FourCC('A1KZ')
             else
-                dammyAbility='A1KY'
+                dammyAbility=FourCC('A1KY')
             end
             
             UnitAddAbility(u2, dammyAbility)
@@ -35002,7 +35002,7 @@ end
 function Trig_Manasbor_Conditions()
     gCaster=GetEventDamageSource()
     gTarget=GetEventTargetUnit()
-    return GetUnitAbilityLevel(gCaster, 'A1GR') > 0
+    return GetUnitAbilityLevel(gCaster, FourCC('A1GR')) > 0
 end
 function Trig_Manasbor_Actions()
     local enemyMana= GetUnitState(GetTriggerUnit(), UNIT_STATE_MANA)
@@ -35035,10 +35035,10 @@ end
 -- Trigger: ManaAura
 --===========================================================================
 function Trig_ManaAura_Conditions()
-    return GetUnitTypeId(GetConstructedStructure()) == 'h04F'
+    return GetUnitTypeId(GetConstructedStructure()) == FourCC('h04F')
 end
 function Trig_ManaAura_Actions()
-    UnitAddAbility(GetConstructedStructure(), 'A1GT')
+    UnitAddAbility(GetConstructedStructure(), FourCC('A1GT'))
 end
 --===========================================================================
 function InitTrig_ManaAura()
@@ -35052,10 +35052,10 @@ end
 -- Trigger: Arcana
 --===========================================================================
 function Trig_Arcana_Func009C()
-    if ( not ( GetResearched() == 'R01D' ) ) then
+    if ( not ( GetResearched() == FourCC('R01D') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01D', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01D'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
@@ -35070,14 +35070,14 @@ function Trig_Arcana_Func002A()
     BlzSetUnitName(GetEnumUnit(), "cff8080ffr")
 end
 function Trig_Arcana_Actions()
-    udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), 'h04F')
+    udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
     ForGroupBJ(udg_LocalOtrad, Trig_Arcana_Func002A)
     DestroyGroup(udg_LocalOtrad)
-    SetPlayerTechResearchedSwap('R01E', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R01F', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01G', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01H', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01I', 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R01E'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R01F'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01G'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01H'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01I'), 2, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Arcana()
@@ -35091,10 +35091,10 @@ end
 -- Trigger: ArcanaBegin
 --===========================================================================
 function Trig_ArcanaBegin_Func004C()
-    if ( not ( GetResearched() == 'R01D' ) ) then
+    if ( not ( GetResearched() == FourCC('R01D') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01D', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01D'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
@@ -35106,9 +35106,9 @@ function Trig_ArcanaBegin_Conditions()
     return true
 end
 function Trig_ArcanaBegin_Actions()
-    SetPlayerTechMaxAllowedSwap('R01G', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01H', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01I', 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01G'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01H'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01I'), 2, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_ArcanaBegin()
@@ -35122,10 +35122,10 @@ end
 -- Trigger: ArcanaCansel
 --===========================================================================
 function Trig_ArcanaCansel_Func004C()
-    if ( not ( GetResearched() == 'R01D' ) ) then
+    if ( not ( GetResearched() == FourCC('R01D') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01D', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01D'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
@@ -35137,9 +35137,9 @@ function Trig_ArcanaCansel_Conditions()
     return true
 end
 function Trig_ArcanaCansel_Actions()
-    SetPlayerTechMaxAllowedSwap('R01G', 3, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01H', 3, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01I', 3, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01G'), 3, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01H'), 3, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01I'), 3, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_ArcanaCansel()
@@ -35153,10 +35153,10 @@ end
 -- Trigger: Fel
 --===========================================================================
 function Trig_Fel_Func007C()
-    if ( not ( GetResearched() == 'R01G' ) ) then
+    if ( not ( GetResearched() == FourCC('R01G') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01G', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01G'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
@@ -35171,14 +35171,14 @@ function Trig_Fel_Func002A()
     BlzSetUnitName(GetEnumUnit(), "cff80ff80r")
 end
 function Trig_Fel_Actions()
-    udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), 'h04F')
+    udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
     ForGroupBJ(udg_LocalOtrad, Trig_Fel_Func002A)
     DestroyGroup(udg_LocalOtrad)
-    SetPlayerTechMaxAllowedSwap('R01D', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01H', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01I', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h0O6', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h03Z', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01D'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01H'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01I'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0O6'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h03Z'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Fel()
@@ -35192,10 +35192,10 @@ end
 -- Trigger: FelBegin
 --===========================================================================
 function Trig_FelBegin_Func004C()
-    if ( not ( GetResearched() == 'R01G' ) ) then
+    if ( not ( GetResearched() == FourCC('R01G') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01G', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01G'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
@@ -35207,9 +35207,9 @@ function Trig_FelBegin_Conditions()
     return true
 end
 function Trig_FelBegin_Actions()
-    SetPlayerTechMaxAllowedSwap('R01D', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01H', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01I', 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01D'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01H'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01I'), 2, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_FelBegin()
@@ -35223,10 +35223,10 @@ end
 -- Trigger: FelCansel
 --===========================================================================
 function Trig_FelCansel_Func004C()
-    if ( not ( GetResearched() == 'R01G' ) ) then
+    if ( not ( GetResearched() == FourCC('R01G') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01G', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01G'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
@@ -35238,9 +35238,9 @@ function Trig_FelCansel_Conditions()
     return true
 end
 function Trig_FelCansel_Actions()
-    SetPlayerTechMaxAllowedSwap('R01D', 3, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01H', 3, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01I', 3, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01D'), 3, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01H'), 3, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01I'), 3, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_FelCansel()
@@ -35254,7 +35254,7 @@ end
 -- Trigger: FelGolemStrike
 --===========================================================================
 function Trig_FelGolemStrike_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A1LW') == 1 and Random(1 , 20)
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A1LW')) == 1 and Random(1 , 20)
 end
 function Trig_FelGolemStrike_Actions()
     IssueTargetOrder(GetAttacker(), "forkedlightning", GetTriggerUnit())
@@ -35271,10 +35271,10 @@ end
 -- Trigger: Void
 --===========================================================================
 function Trig_Void_Func008C()
-    if ( not ( GetResearched() == 'R01H' ) ) then
+    if ( not ( GetResearched() == FourCC('R01H') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01H', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01H'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
@@ -35289,13 +35289,13 @@ function Trig_Void_Func002A()
     BlzSetUnitName(GetEnumUnit(), "cffff00ffr")
 end
 function Trig_Void_Actions()
-    udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), 'h04F')
+    udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
     ForGroupBJ(udg_LocalOtrad, Trig_Void_Func002A)
     DestroyGroup(udg_LocalOtrad)
-    SetPlayerTechMaxAllowedSwap('R01D', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01G', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01I', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R020', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01D'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01G'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01I'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R020'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Void()
@@ -35309,10 +35309,10 @@ end
 -- Trigger: VoidBegin
 --===========================================================================
 function Trig_VoidBegin_Func004C()
-    if ( not ( GetResearched() == 'R01H' ) ) then
+    if ( not ( GetResearched() == FourCC('R01H') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01H', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01H'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
@@ -35324,9 +35324,9 @@ function Trig_VoidBegin_Conditions()
     return true
 end
 function Trig_VoidBegin_Actions()
-    SetPlayerTechMaxAllowedSwap('R01D', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01G', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01I', 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01D'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01G'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01I'), 2, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_VoidBegin()
@@ -35340,10 +35340,10 @@ end
 -- Trigger: VoidCansel
 --===========================================================================
 function Trig_VoidCansel_Func004C()
-    if ( not ( GetResearched() == 'R01H' ) ) then
+    if ( not ( GetResearched() == FourCC('R01H') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01H', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01H'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
@@ -35355,9 +35355,9 @@ function Trig_VoidCansel_Conditions()
     return true
 end
 function Trig_VoidCansel_Actions()
-    SetPlayerTechMaxAllowedSwap('R01D', 3, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01G', 3, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01I', 3, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01D'), 3, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01G'), 3, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01I'), 3, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_VoidCansel()
@@ -35371,10 +35371,10 @@ end
 -- Trigger: LightBegin
 --===========================================================================
 function Trig_LightBegin_Func004C()
-    if ( not ( GetResearched() == 'R01I' ) ) then
+    if ( not ( GetResearched() == FourCC('R01I') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01I', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01I'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
@@ -35386,9 +35386,9 @@ function Trig_LightBegin_Conditions()
     return true
 end
 function Trig_LightBegin_Actions()
-    SetPlayerTechMaxAllowedSwap('R01D', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01G', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01H', 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01D'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01G'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01H'), 2, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_LightBegin()
@@ -35402,10 +35402,10 @@ end
 -- Trigger: LightCansel
 --===========================================================================
 function Trig_LightCansel_Func004C()
-    if ( not ( GetResearched() == 'R01I' ) ) then
+    if ( not ( GetResearched() == FourCC('R01I') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01I', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01I'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
@@ -35417,9 +35417,9 @@ function Trig_LightCansel_Conditions()
     return true
 end
 function Trig_LightCansel_Actions()
-    SetPlayerTechMaxAllowedSwap('R01D', 3, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01G', 3, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01H', 3, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01D'), 3, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01G'), 3, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01H'), 3, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_LightCansel()
@@ -35433,10 +35433,10 @@ end
 -- Trigger: Light
 --===========================================================================
 function Trig_Light_Func008C()
-    if ( not ( GetResearched() == 'R01I' ) ) then
+    if ( not ( GetResearched() == FourCC('R01I') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01I', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01I'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
@@ -35451,12 +35451,12 @@ function Trig_Light_Func003A()
     BlzSetUnitName(GetEnumUnit(), "cffffff00r")
 end
 function Trig_Light_Actions()
-    udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), 'h04F')
+    udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
     ForGroupBJ(udg_LocalOtrad, Trig_Light_Func003A)
     DestroyGroup(udg_LocalOtrad)
-    SetPlayerTechMaxAllowedSwap('R01D', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01G', 2, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R01H', 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01D'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01G'), 2, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R01H'), 2, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Light()
@@ -35470,10 +35470,10 @@ end
 -- Trigger: ArcanaBuild
 --===========================================================================
 function Trig_ArcanaBuild_Func001C()
-    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'h04F' ) ) then
+    if ( not ( GetUnitTypeId(GetConstructedStructure()) == FourCC('h04F') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01D', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01D'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
@@ -35499,10 +35499,10 @@ end
 -- Trigger: FelBuild
 --===========================================================================
 function Trig_FelBuild_Func001C()
-    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'h04F' ) ) then
+    if ( not ( GetUnitTypeId(GetConstructedStructure()) == FourCC('h04F') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01G', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01G'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
@@ -35528,10 +35528,10 @@ end
 -- Trigger: VoidBuild
 --===========================================================================
 function Trig_VoidBuild_Func001C()
-    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'h04F' ) ) then
+    if ( not ( GetUnitTypeId(GetConstructedStructure()) == FourCC('h04F') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01H', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01H'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
@@ -35557,10 +35557,10 @@ end
 -- Trigger: LigthBuild
 --===========================================================================
 function Trig_LigthBuild_Func001C()
-    if ( not ( GetUnitTypeId(GetConstructedStructure()) == 'h04F' ) ) then
+    if ( not ( GetUnitTypeId(GetConstructedStructure()) == FourCC('h04F') ) ) then
         return false
     end
-    if ( not ( GetPlayerTechCountSimple('R01I', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R01I'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
@@ -35586,11 +35586,11 @@ end
 -- Trigger: felspell
 --===========================================================================
 function Trig_felspell_Conditions()
-    return GetSpellAbilityId() == 'A02D' and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), 'R01G', true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), 'A1QZ') < 1 -- and GetUnitAbilityLevel(GetSpellTargetUnit(), 'B00U')<1
+    return GetSpellAbilityId() == FourCC('A02D') and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R01G'), true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1QZ')) < 1 -- and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('B00U'))<1
 end
 function Trig_felspell_Actions()
     if UnitAlive(GetSpellTargetUnit()) then
-        UnitAddAbility(GetSpellTargetUnit(), 'A1QZ')
+        UnitAddAbility(GetSpellTargetUnit(), FourCC('A1QZ'))
     end
 end
 --===========================================================================
@@ -35604,11 +35604,11 @@ end
 -- Trigger: voidspell
 --===========================================================================
 function Trig_voidspell_Conditions()
-    return GetSpellAbilityId() == 'A02D' and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), 'R01H', true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), 'A1R0') < 1 -- and GetUnitAbilityLevel(GetSpellTargetUnit(), 'B00U')<1
+    return GetSpellAbilityId() == FourCC('A02D') and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R01H'), true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1R0')) < 1 -- and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('B00U'))<1
 end
 function Trig_voidspell_Actions()
     if UnitAlive(GetSpellTargetUnit()) then
-        UnitAddAbility(GetSpellTargetUnit(), 'A1R0')
+        UnitAddAbility(GetSpellTargetUnit(), FourCC('A1R0'))
     end
 end
 --===========================================================================
@@ -35622,11 +35622,11 @@ end
 -- Trigger: lightspel
 --===========================================================================
 function Trig_lightspel_Conditions()
-    return GetSpellAbilityId() == 'A02D' and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), 'R01I', true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), 'A1R1') < 1
+    return GetSpellAbilityId() == FourCC('A02D') and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R01I'), true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1R1')) < 1
 end
 function Trig_lightspel_Actions()
     if UnitAlive(GetSpellTargetUnit()) then
-        UnitAddAbility(GetSpellTargetUnit(), 'A1R1')
+        UnitAddAbility(GetSpellTargetUnit(), FourCC('A1R1'))
     end
 end
 --===========================================================================
@@ -35640,12 +35640,12 @@ end
 -- Trigger: Porcha
 --===========================================================================
 function Trig_Porcha_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A02X') > 0
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A02X')) > 0
 end
 function Trig_Porcha_Actions()
     if Random(1 , 10) then
-        UnitAddAbility(GetAttacker(), 'A08I')
-        RemoveAbilityTimed(GetAttacker() , 'A08I' , 9)
+        UnitAddAbility(GetAttacker(), FourCC('A08I'))
+        RemoveAbilityTimed(GetAttacker() , FourCC('A08I') , 9)
     end
 end
 --===========================================================================
@@ -35660,12 +35660,12 @@ end
 -- Trigger: FirePodgogStrela
 --===========================================================================
 function Trig_FirePodgogStrela_Conditions()
-    return GetSpellAbilityId() == 'A030' or GetSpellAbilityId() == 'A07N'
+    return GetSpellAbilityId() == FourCC('A030') or GetSpellAbilityId() == FourCC('A07N')
 end
 function Trig_FirePodgogStrela_Actions()
    
-    UnitAddAbility(GetSpellTargetUnit(), 'A08I')
-    RemoveAbilityTimed(GetSpellTargetUnit() , 'A08I' , 9)
+    UnitAddAbility(GetSpellTargetUnit(), FourCC('A08I'))
+    RemoveAbilityTimed(GetSpellTargetUnit() , FourCC('A08I') , 9)
 end
 --===========================================================================
 function InitTrig_FirePodgogStrela()
@@ -35679,12 +35679,12 @@ end
 -- Trigger: Souz
 --===========================================================================
 function Trig_Souz_Conditions()
-    return GetSpellAbilityId() == 'A02Y' and GetUnitAbilityLevel(GetSpellTargetUnit(), 'A16H') ~= 1
+    return GetSpellAbilityId() == FourCC('A02Y') and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A16H')) ~= 1
 end
 function Trig_Souz_Actions()
     local u= GetSpellTargetUnit()
-    UnitAddAbility(u, 'A16H')
-    RemoveAbilityTimed(u , 'A16H' , 60)
+    UnitAddAbility(u, FourCC('A16H'))
+    RemoveAbilityTimed(u , FourCC('A16H') , 60)
     u=null
 end
 --===========================================================================
@@ -35699,12 +35699,12 @@ end
 -- Trigger: ArcanaIscachenie
 --===========================================================================
 function Trig_ArcanaIscachenie_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A02S') > 0
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A02S')) > 0
 end
 function Trig_ArcanaIscachenie_Actions()
     if Random(1 , 10) then
-        UnitAddAbility(GetTriggerUnit(), 'A02T')
-        RemoveAbilityTimed(GetTriggerUnit() , 'A02T' , 9)
+        UnitAddAbility(GetTriggerUnit(), FourCC('A02T'))
+        RemoveAbilityTimed(GetTriggerUnit() , FourCC('A02T') , 9)
     end
     
 end
@@ -35720,11 +35720,11 @@ end
 -- Trigger: ArcanaStrela
 --===========================================================================
 function Trig_ArcanaStrela_Conditions()
-    return GetSpellAbilityId() == 'A02R' and GetSpellAbilityId() == 'A02G'
+    return GetSpellAbilityId() == FourCC('A02R') and GetSpellAbilityId() == FourCC('A02G')
 end
 function Trig_ArcanaStrela_Actions()
-    UnitAddAbility(GetSpellTargetUnit(), 'A02T')
-    RemoveAbilityTimed(GetSpellTargetUnit() , 'A02T' , 9)
+    UnitAddAbility(GetSpellTargetUnit(), FourCC('A02T'))
+    RemoveAbilityTimed(GetSpellTargetUnit() , FourCC('A02T') , 9)
 end
 --===========================================================================
 function InitTrig_ArcanaStrela()
@@ -35738,14 +35738,14 @@ end
 -- Trigger: FirePodgog
 --===========================================================================
 function Trig_FirePodgog_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A02N') > 1
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A02N')) > 1
 end
 function Trig_FirePodgog_Actions()
     if Random(1 , 10) then
-        UnitAddAbility(GetTriggerUnit(), 'A02O')
-        RemoveAbilityTimed(GetTriggerUnit() , 'A02O' , 10)
-        UnitAddAbility(GetAttacker(), 'A02Q')
-        RemoveAbilityTimed(GetAttacker() , 'A02Q' , 10)
+        UnitAddAbility(GetTriggerUnit(), FourCC('A02O'))
+        RemoveAbilityTimed(GetTriggerUnit() , FourCC('A02O') , 10)
+        UnitAddAbility(GetAttacker(), FourCC('A02Q'))
+        RemoveAbilityTimed(GetAttacker() , FourCC('A02Q') , 10)
     end
 end
 --===========================================================================
@@ -35760,14 +35760,14 @@ end
 -- Trigger: FirePodgogStrela2
 --===========================================================================
 function Trig_FirePodgogStrela2_Conditions()
-    return GetSpellAbilityId() == 'A07P' or GetSpellAbilityId() == 'A02J'
+    return GetSpellAbilityId() == FourCC('A07P') or GetSpellAbilityId() == FourCC('A02J')
 end
 function Trig_FirePodgogStrela2_Actions()
     local u= GetSpellTargetUnit()
-    UnitAddAbility(GetSpellTargetUnit(), 'A02O')
-    UnitAddAbility(GetSpellTargetUnit(), 'A02Q')
-    RemoveAbilityTimed(GetSpellTargetUnit() , 'A02O' , 2)
-    RemoveAbilityTimed(GetSpellTargetUnit() , 'A02Q' , 2)
+    UnitAddAbility(GetSpellTargetUnit(), FourCC('A02O'))
+    UnitAddAbility(GetSpellTargetUnit(), FourCC('A02Q'))
+    RemoveAbilityTimed(GetSpellTargetUnit() , FourCC('A02O') , 2)
+    RemoveAbilityTimed(GetSpellTargetUnit() , FourCC('A02Q') , 2)
     u=null
 end
 --===========================================================================
@@ -35782,7 +35782,7 @@ end
 -- Trigger: AutoMana
 --===========================================================================
 function Trig_AutoMana_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A02E' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A02E') ) ) then
         return false
     end
     return true
@@ -35802,10 +35802,10 @@ end
 -- Trigger: AutoStrelaFire
 --===========================================================================
 function Trig_AutoStrelaFire_Func001C()
-    if ( ( GetSpellAbilityId() == 'A00W' ) ) then
+    if ( ( GetSpellAbilityId() == FourCC('A00W') ) ) then
         return true
     end
-    if ( ( GetSpellAbilityId() == 'A07Q' ) ) then
+    if ( ( GetSpellAbilityId() == FourCC('A07Q') ) ) then
         return true
     end
     return false
@@ -35831,10 +35831,10 @@ end
 -- Trigger: AutoStrelaArcana
 --===========================================================================
 function Trig_AutoStrelaArcana_Func001C()
-    if ( ( GetSpellAbilityId() == 'A07D' ) ) then
+    if ( ( GetSpellAbilityId() == FourCC('A07D') ) ) then
         return true
     end
-    if ( ( GetSpellAbilityId() == 'A02U' ) ) then
+    if ( ( GetSpellAbilityId() == FourCC('A02U') ) ) then
         return true
     end
     return false
@@ -35860,10 +35860,10 @@ end
 -- Trigger: AutoStrelaFel
 --===========================================================================
 function Trig_AutoStrelaFel_Func001C()
-    if ( ( GetSpellAbilityId() == 'A02Z' ) ) then
+    if ( ( GetSpellAbilityId() == FourCC('A02Z') ) ) then
         return true
     end
-    if ( ( GetSpellAbilityId() == 'A07O' ) ) then
+    if ( ( GetSpellAbilityId() == FourCC('A07O') ) ) then
         return true
     end
     return false
@@ -35889,7 +35889,7 @@ end
 -- Trigger: AutoSummonGonch
 --===========================================================================
 function Trig_AutoSummonGonch_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A032' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A032') ) ) then
         return false
     end
     return true
@@ -35909,15 +35909,15 @@ end
 -- Trigger: VedmakF
 --===========================================================================
 function Trig_VedmakF_Conditions()
-    if ( not ( GetResearched() == 'R025' ) ) then
+    if ( not ( GetResearched() == FourCC('R025') ) ) then
         return false
     end
     return true
 end
 function Trig_VedmakF_Actions()
-    SetPlayerTechResearchedSwap('R026', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R03C', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R03D', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R026'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R03C'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R03D'), 0, GetOwningPlayer(GetTriggerUnit()))
     --                           
     SetPlayerAbilityAvailableBJ(true, FourCC('A05J'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(true, FourCC('A05K'), GetOwningPlayer(GetTriggerUnit()))
@@ -35947,9 +35947,9 @@ function Trig_VedmakF_Actions()
     SetPlayerAbilityAvailableBJ(true, FourCC('A02R'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(true, FourCC('A02G'), GetOwningPlayer(GetTriggerUnit()))
     --                           
-    SetPlayerTechMaxAllowedSwap('R026', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03C', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03D', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R026'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03C'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03D'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_VedmakF()
@@ -35963,15 +35963,15 @@ end
 -- Trigger: VedmakB
 --===========================================================================
 function Trig_VedmakB_Conditions()
-    if ( not ( GetResearched() == 'R025' ) ) then
+    if ( not ( GetResearched() == FourCC('R025') ) ) then
         return false
     end
     return true
 end
 function Trig_VedmakB_Actions()
-    SetPlayerTechMaxAllowedSwap('R026', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03C', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03D', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R026'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03C'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03D'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_VedmakB()
@@ -35985,15 +35985,15 @@ end
 -- Trigger: VedmakC
 --===========================================================================
 function Trig_VedmakC_Conditions()
-    if ( not ( GetResearched() == 'R025' ) ) then
+    if ( not ( GetResearched() == FourCC('R025') ) ) then
         return false
     end
     return true
 end
 function Trig_VedmakC_Actions()
-    SetPlayerTechMaxAllowedSwap('R026', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03C', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03D', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R026'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03C'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03D'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_VedmakC()
@@ -36007,15 +36007,15 @@ end
 -- Trigger: MagsF
 --===========================================================================
 function Trig_MagsF_Conditions()
-    if ( not ( GetResearched() == 'R03D' ) ) then
+    if ( not ( GetResearched() == FourCC('R03D') ) ) then
         return false
     end
     return true
 end
 function Trig_MagsF_Actions()
-    SetPlayerTechResearchedSwap('R026', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R03C', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R025', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R026'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R03C'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R025'), 0, GetOwningPlayer(GetTriggerUnit()))
     --                           
     SetPlayerAbilityAvailableBJ(false, FourCC('A05J'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A05K'), GetOwningPlayer(GetTriggerUnit()))
@@ -36045,9 +36045,9 @@ function Trig_MagsF_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC('A02R'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A02U'), GetOwningPlayer(GetTriggerUnit()))
     --                           
-    SetPlayerTechMaxAllowedSwap('R026', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03C', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R025', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R026'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03C'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R025'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MagsF()
@@ -36061,15 +36061,15 @@ end
 -- Trigger: MagsB
 --===========================================================================
 function Trig_MagsB_Conditions()
-    if ( not ( GetResearched() == 'R03D' ) ) then
+    if ( not ( GetResearched() == FourCC('R03D') ) ) then
         return false
     end
     return true
 end
 function Trig_MagsB_Actions()
-    SetPlayerTechMaxAllowedSwap('R026', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03C', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R025', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R026'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03C'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R025'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MagsB()
@@ -36083,15 +36083,15 @@ end
 -- Trigger: MagsC
 --===========================================================================
 function Trig_MagsC_Conditions()
-    if ( not ( GetResearched() == 'R03D' ) ) then
+    if ( not ( GetResearched() == FourCC('R03D') ) ) then
         return false
     end
     return true
 end
 function Trig_MagsC_Actions()
-    SetPlayerTechMaxAllowedSwap('R026', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03C', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R025', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R026'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03C'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R025'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MagsC()
@@ -36105,15 +36105,15 @@ end
 -- Trigger: StrannikF
 --===========================================================================
 function Trig_StrannikF_Conditions()
-    if ( not ( GetResearched() == 'R03C' ) ) then
+    if ( not ( GetResearched() == FourCC('R03C') ) ) then
         return false
     end
     return true
 end
 function Trig_StrannikF_Actions()
-    SetPlayerTechResearchedSwap('R026', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R03D', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R025', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R026'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R03D'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R025'), 0, GetOwningPlayer(GetTriggerUnit()))
     --                           
     SetPlayerAbilityAvailableBJ(false, FourCC('A05J'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A05K'), GetOwningPlayer(GetTriggerUnit()))
@@ -36143,9 +36143,9 @@ function Trig_StrannikF_Actions()
     SetPlayerAbilityAvailableBJ(true, FourCC('A02R'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(true, FourCC('A02U'), GetOwningPlayer(GetTriggerUnit()))
     --                           
-    SetPlayerTechMaxAllowedSwap('R026', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03D', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R025', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R026'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03D'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R025'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_StrannikF()
@@ -36159,15 +36159,15 @@ end
 -- Trigger: StrannikB
 --===========================================================================
 function Trig_StrannikB_Conditions()
-    if ( not ( GetResearched() == 'R03C' ) ) then
+    if ( not ( GetResearched() == FourCC('R03C') ) ) then
         return false
     end
     return true
 end
 function Trig_StrannikB_Actions()
-    SetPlayerTechMaxAllowedSwap('R026', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03D', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R025', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R026'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03D'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R025'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_StrannikB()
@@ -36181,15 +36181,15 @@ end
 -- Trigger: StrannikC
 --===========================================================================
 function Trig_StrannikC_Conditions()
-    if ( not ( GetResearched() == 'R03C' ) ) then
+    if ( not ( GetResearched() == FourCC('R03C') ) ) then
         return false
     end
     return true
 end
 function Trig_StrannikC_Actions()
-    SetPlayerTechMaxAllowedSwap('R026', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03D', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R025', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R026'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03D'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R025'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_StrannikC()
@@ -36203,15 +36203,15 @@ end
 -- Trigger: PaladinF
 --===========================================================================
 function Trig_PaladinF_Conditions()
-    if ( not ( GetResearched() == 'R026' ) ) then
+    if ( not ( GetResearched() == FourCC('R026') ) ) then
         return false
     end
     return true
 end
 function Trig_PaladinF_Actions()
-    SetPlayerTechResearchedSwap('R03D', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R03C', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R025', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R03D'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R03C'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R025'), 0, GetOwningPlayer(GetTriggerUnit()))
     --                           
     SetPlayerAbilityAvailableBJ(false, FourCC('A05J'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A05K'), GetOwningPlayer(GetTriggerUnit()))
@@ -36241,9 +36241,9 @@ function Trig_PaladinF_Actions()
     SetPlayerAbilityAvailableBJ(true, FourCC('A02R'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(true, FourCC('A02G'), GetOwningPlayer(GetTriggerUnit()))
     --                           
-    SetPlayerTechMaxAllowedSwap('R03D', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03C', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R025', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03D'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03C'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R025'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_PaladinF()
@@ -36257,15 +36257,15 @@ end
 -- Trigger: PaladinB
 --===========================================================================
 function Trig_PaladinB_Conditions()
-    if ( not ( GetResearched() == 'R026' ) ) then
+    if ( not ( GetResearched() == FourCC('R026') ) ) then
         return false
     end
     return true
 end
 function Trig_PaladinB_Actions()
-    SetPlayerTechMaxAllowedSwap('R03D', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03C', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R025', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03D'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03C'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R025'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_PaladinB()
@@ -36279,15 +36279,15 @@ end
 -- Trigger: PaladinC
 --===========================================================================
 function Trig_PaladinC_Conditions()
-    if ( not ( GetResearched() == 'R026' ) ) then
+    if ( not ( GetResearched() == FourCC('R026') ) ) then
         return false
     end
     return true
 end
 function Trig_PaladinC_Actions()
-    SetPlayerTechMaxAllowedSwap('R03D', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R03C', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R025', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03D'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03C'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R025'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_PaladinC()
@@ -36307,7 +36307,7 @@ function Trig_FireShielDamageUniversal_Conditions()
     gTarget=BlzGetEventDamageTarget()
     dx=GetUnitX(gCaster) - GetUnitX(gTarget)
     dy=GetUnitY(gCaster) - GetUnitY(gTarget)
-    return GetUnitAbilityLevel(gCaster, 'B00F') > 0 and SquareRoot(dx * dx + dy * dy) < 200 and gCaster ~= nil and UnitAlive(gCaster) and gTarget ~= nil and UnitAlive(gTarget)
+    return GetUnitAbilityLevel(gCaster, FourCC('B00F')) > 0 and SquareRoot(dx * dx + dy * dy) < 200 and gCaster ~= nil and UnitAlive(gCaster) and gTarget ~= nil and UnitAlive(gTarget)
 end
 function Trig_FireShielDamageUniversal_Actions()
     UnitDamageTargetBJ(GetTriggerUnit(), gCaster, 45, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_FIRE)
@@ -36370,17 +36370,17 @@ end
 -- Trigger: StartBandits
 --===========================================================================
 function Trig_StartBandits_Func001A()
-    SetPlayerTechMaxAllowedSwap('h03L', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h03K', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h02R', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h02T', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h02Q', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h02U', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('h02S', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H048', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H03S', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H047', 1, GetEnumPlayer())
-    SetPlayerTechResearchedSwap('R00H', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h03L'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h03K'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h02R'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h02T'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h02Q'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h02U'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h02S'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H048'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H03S'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H047'), 1, GetEnumPlayer())
+    SetPlayerTechResearchedSwap(FourCC('R00H'), 1, GetEnumPlayer())
 end
 function Trig_StartBandits_Actions()
     ForForce(udg_AllPlayers, Trig_StartBandits_Func001A)
@@ -36395,7 +36395,7 @@ end
 -- Trigger: BlinkToUnit attack
 --===========================================================================
 function Trig_BlinkToUnit_attack_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A0MZ') >= 1 and BlzGetUnitAbilityCooldownRemaining(GetAttacker(), 'A0MZ') == 0
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A0MZ')) >= 1 and BlzGetUnitAbilityCooldownRemaining(GetAttacker(), FourCC('A0MZ')) == 0
 end
 function MoveTimedEnd()
     local t= GetExpiredTimer()
@@ -36453,9 +36453,9 @@ function Trig_BlinkToUnit_attack_Actions()
 --    call UnitRemoveAbility( 'A0MZ', gUnit )
 --    
     MoveWithOrderTimed(gUnit , GetTriggerUnit() , GetUnitLoc(GetTriggerUnit()) , "attack" , 0.1)
-    DummyCastTargetLevel('A1MY' , "shadowstrike" , gUnit , GetTriggerUnit() , GetUnitAbilityLevel(gUnit, 'A0MZ'))
+    DummyCastTargetLevel(FourCC('A1MY') , "shadowstrike" , gUnit , GetTriggerUnit() , GetUnitAbilityLevel(gUnit, FourCC('A0MZ')))
     
-    BlzStartUnitAbilityCooldown(gUnit, 'A0MZ', 3)
+    BlzStartUnitAbilityCooldown(gUnit, FourCC('A0MZ'), 3)
 --    call UnitAddAbilityBJ( 'A0MZ', gUnit )
 --    call SetUnitAbilityLevelSwapped( 'A0MZ', gUnit, GetUnitAbilityLevelSwapped('A0N0', gUnit) )
 --    call UnitRemoveAbilityBJ( 'A0N0', gUnit )
@@ -36473,7 +36473,7 @@ end
 -- Trigger: BlinkToUnit Spell
 --===========================================================================
 function Trig_BlinkToUnit_Spell_Conditions()
-    return GetSpellAbilityId() == 'A0N3'
+    return GetSpellAbilityId() == FourCC('A0N3')
 end
 function Trig_BlinkToUnit_Spell_Actions()
     local l1= GetUnitLoc(GetSpellTargetUnit())
@@ -36498,7 +36498,7 @@ end
 -- Резня в тени
 --===========================================================================
 function Trig_Edvin_Ult_Conditions()
-    return GetSpellAbilityId() == 'A0N4'
+    return GetSpellAbilityId() == FourCC('A0N4')
 end
 function Trig_Edvin_Ult_Actions()
     local u= GetTriggerUnit()
@@ -36517,7 +36517,7 @@ function Trig_Edvin_Ult_Actions()
             SetUnitX(u, GetUnitX(u2))
             SetUnitY(u, GetUnitY(u2))
             RemoveEffectTimed(AddSpecialEffect("ObjectsSpawnmodelsHumanHumanBloodHumanBloodLarge1.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
-            UnitDamageTargetBJ(u, u2, ( 300 * GetUnitAbilityLevel(u, 'A0N4') + 2 * GetHeroAgi(u, true) ), ATTACK_TYPE_HERO, DAMAGE_TYPE_FORCE)
+            UnitDamageTargetBJ(u, u2, ( 300 * GetUnitAbilityLevel(u, FourCC('A0N4')) + 2 * GetHeroAgi(u, true) ), ATTACK_TYPE_HERO, DAMAGE_TYPE_FORCE)
                  
             
             
@@ -36529,11 +36529,11 @@ function Trig_Edvin_Ult_Actions()
     
     
     
-    UnitAddAbility(u, 'A0N5')
-    BlzUnitDisableAbility(u, 'A0N1', true, true)
+    UnitAddAbility(u, FourCC('A0N5'))
+    BlzUnitDisableAbility(u, FourCC('A0N1'), true, true)
     IssueImmediateOrder(u, "windwalk")
-    BlzUnitDisableAbility(u, 'A0N1', false, false)
-    BlzStartUnitAbilityCooldown(u, 'A0N4', 35)
+    BlzUnitDisableAbility(u, FourCC('A0N1'), false, false)
+    BlzStartUnitAbilityCooldown(u, FourCC('A0N4'), 35)
     
     DestroyGroup(g)
     g=null
@@ -36570,7 +36570,7 @@ end
 -- Trigger: AutoChance
 --===========================================================================
 function Trig_AutoChance_Func003C()
-    if ( not ( GetUnitAbilityLevelSwapped('A000', GetEventDamageSource()) >= 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A000'), GetEventDamageSource()) >= 1 ) ) then
         return false
     end
     if ( not ( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource())) == true ) ) then
@@ -36585,7 +36585,7 @@ function Trig_AutoChance_Conditions()
     return true
 end
 function Trig_AutoChance_Func002C()
-    if ( not ( udg_LocalInteger <= ( GetUnitAbilityLevelSwapped('A00M', GetEventDamageSource()) * 1 ) ) ) then
+    if ( not ( udg_LocalInteger <= ( GetUnitAbilityLevelSwapped(FourCC('A00M'), GetEventDamageSource()) * 1 ) ) ) then
         return false
     end
     return true
@@ -36611,7 +36611,7 @@ end
 -- Trigger: AutoChance 2
 --===========================================================================
 function Trig_AutoChance_2_Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A01A', GetEventDamageSource()) >= 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A01A'), GetEventDamageSource()) >= 1 ) ) then
         return false
     end
     if ( not ( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource())) == true ) ) then
@@ -36626,7 +36626,7 @@ function Trig_AutoChance_2_Conditions()
     return true
 end
 function Trig_AutoChance_2_Func003C()
-    if ( not ( udg_LocalInteger <= ( GetUnitAbilityLevelSwapped('A00M', GetEventDamageSource()) * 1 ) ) ) then
+    if ( not ( udg_LocalInteger <= ( GetUnitAbilityLevelSwapped(FourCC('A00M'), GetEventDamageSource()) * 1 ) ) ) then
         return false
     end
     return true
@@ -36652,7 +36652,7 @@ end
 -- Trigger: AutoChance 3
 --===========================================================================
 function Trig_AutoChance_3_Func003C()
-    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetEventDamageSource()) >= 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A01B'), GetEventDamageSource()) >= 1 ) ) then
         return false
     end
     if ( not ( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource())) == true ) ) then
@@ -36667,25 +36667,25 @@ function Trig_AutoChance_3_Conditions()
     return true
 end
 function Trig_AutoChance_3_Func002Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetEventDamageSource()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A01B'), GetEventDamageSource()) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_AutoChance_3_Func002Func002C()
-    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetEventDamageSource()) == 2 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A01B'), GetEventDamageSource()) == 2 ) ) then
         return false
     end
     return true
 end
 function Trig_AutoChance_3_Func002Func003C()
-    if ( not ( GetUnitAbilityLevelSwapped('A01B', GetEventDamageSource()) == 3 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A01B'), GetEventDamageSource()) == 3 ) ) then
         return false
     end
     return true
 end
 function Trig_AutoChance_3_Func002C()
-    if ( not ( udg_LocalInteger <= ( GetUnitAbilityLevelSwapped('A00M', GetEventDamageSource()) * 1 ) ) ) then
+    if ( not ( udg_LocalInteger <= ( GetUnitAbilityLevelSwapped(FourCC('A00M'), GetEventDamageSource()) * 1 ) ) ) then
         return false
     end
     return true
@@ -36724,35 +36724,35 @@ end
 -- Trigger: Dovorougenie Code O
 --===========================================================================
 function Trig_Dovorougenie_Code_O_Conditions()
-    return GetSpellAbilityId() == 'A000' and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
+    return GetSpellAbilityId() == FourCC('A000') and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 function Trig_Dovorougenie_Code_Func001C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h003' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h003') ) ) then
         return false
     end
     return true
 end
 function Trig_Dovorougenie_Code_Func002C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h00P' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h00P') ) ) then
         return false
     end
     return true
 end
 function Trig_Dovorougenie_Code_Func003C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h029' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h029') ) ) then
         return false
     end
     return true
 end
 function Trig_Dovorougenie_Code_Func004C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'n000' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('n000') ) ) then
         return false
     end
     return true
 end
 function Trig_Dovorougenie_Code_O_Actions()
     if ( Trig_Dovorougenie_Code_Func001C() ) then
-        ReplaceUnit2(GetTriggerUnit() , 'h005' , bj_UNIT_STATE_METHOD_RELATIVE)
+        ReplaceUnit2(GetTriggerUnit() , FourCC('h005') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
         else
@@ -36760,7 +36760,7 @@ function Trig_Dovorougenie_Code_O_Actions()
     else
     end
     if ( Trig_Dovorougenie_Code_Func002C() ) then
-        ReplaceUnit2(GetTriggerUnit() , 'h00S' , bj_UNIT_STATE_METHOD_RELATIVE)
+        ReplaceUnit2(GetTriggerUnit() , FourCC('h00S') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
         else
@@ -36768,7 +36768,7 @@ function Trig_Dovorougenie_Code_O_Actions()
     else
     end
     if ( Trig_Dovorougenie_Code_Func003C() ) then
-        ReplaceUnit2(GetTriggerUnit() , 'h02A' , bj_UNIT_STATE_METHOD_RELATIVE)
+        ReplaceUnit2(GetTriggerUnit() , FourCC('h02A') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
         else
@@ -36776,7 +36776,7 @@ function Trig_Dovorougenie_Code_O_Actions()
     else
     end
     if ( Trig_Dovorougenie_Code_Func004C() ) then
-        ReplaceUnit2(GetTriggerUnit() , 'n002' , bj_UNIT_STATE_METHOD_RELATIVE)
+        ReplaceUnit2(GetTriggerUnit() , FourCC('n002') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
         else
@@ -36797,35 +36797,35 @@ end
 -- Trigger: Dovorougenie 2t Code O
 --===========================================================================
 function Trig_Dovorougenie_2t_Code_O_Conditions()
-    return GetSpellAbilityId() == 'A01A' and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
+    return GetSpellAbilityId() == FourCC('A01A') and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 function Trig_Dovorougenie_2t_Code_Func001C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h005' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h005') ) ) then
         return false
     end
     return true
 end
 function Trig_Dovorougenie_2t_Code_Func002C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h00S' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h00S') ) ) then
         return false
     end
     return true
 end
 function Trig_Dovorougenie_2t_Code_Func003C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h02A' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h02A') ) ) then
         return false
     end
     return true
 end
 function Trig_Dovorougenie_2t_Code_Func004C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'n002' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('n002') ) ) then
         return false
     end
     return true
 end
 function Trig_Dovorougenie_2t_Code_O_Actions()
     if ( Trig_Dovorougenie_2t_Code_Func001C() ) then
-        ReplaceUnit2(GetTriggerUnit() , 'h006' , bj_UNIT_STATE_METHOD_RELATIVE)
+        ReplaceUnit2(GetTriggerUnit() , FourCC('h006') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
         else
@@ -36833,7 +36833,7 @@ function Trig_Dovorougenie_2t_Code_O_Actions()
     else
     end
     if ( Trig_Dovorougenie_2t_Code_Func002C() ) then
-        ReplaceUnit2(GetTriggerUnit() , 'h00U' , bj_UNIT_STATE_METHOD_RELATIVE)
+        ReplaceUnit2(GetTriggerUnit() , FourCC('h00U') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
         else
@@ -36841,7 +36841,7 @@ function Trig_Dovorougenie_2t_Code_O_Actions()
     else
     end
     if ( Trig_Dovorougenie_2t_Code_Func003C() ) then
-        ReplaceUnit2(GetTriggerUnit() , 'h02B' , bj_UNIT_STATE_METHOD_RELATIVE)
+        ReplaceUnit2(GetTriggerUnit() , FourCC('h02B') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
         else
@@ -36849,7 +36849,7 @@ function Trig_Dovorougenie_2t_Code_O_Actions()
     else
     end
     if ( Trig_Dovorougenie_2t_Code_Func004C() ) then
-        ReplaceUnit2(GetTriggerUnit() , 'n004' , bj_UNIT_STATE_METHOD_RELATIVE)
+        ReplaceUnit2(GetTriggerUnit() , FourCC('n004') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
         else
@@ -36869,7 +36869,7 @@ end
 -- Trigger: Dovorougenie 3t O
 --===========================================================================
 function Trig_Dovorougenie_3t_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A01B' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A01B') ) ) then
         return false
     end
     if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
@@ -36884,7 +36884,7 @@ function Trig_Dovorougenie_3t_O_Func002Func002C()
     return true
 end
 function Trig_Dovorougenie_3t_O_Func002C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h006' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h006') ) ) then
         return false
     end
     return true
@@ -36892,7 +36892,7 @@ end
 function Trig_Dovorougenie_3t_O_Actions()
     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     if ( Trig_Dovorougenie_3t_O_Func002C() ) then
-        ReplaceUnit2(GetTriggerUnit() , 'h00Q' , bj_UNIT_STATE_METHOD_RELATIVE)
+        ReplaceUnit2(GetTriggerUnit() , FourCC('h00Q') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Func002Func002C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
         else
@@ -36915,15 +36915,15 @@ end
 -- Trigger: Voron
 --===========================================================================
 function Trig_Voron_Conditions()
-    if ( not ( GetResearched() == 'R00A' ) ) then
+    if ( not ( GetResearched() == FourCC('R00A') ) ) then
         return false
     end
     return true
 end
 function Trig_Voron_Actions()
-    SetPlayerTechMaxAllowedSwap('h02S', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h02U', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R00B', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h02S'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h02U'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R00B'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Voron()
@@ -36937,15 +36937,15 @@ end
 -- Trigger: Sindicat
 --===========================================================================
 function Trig_Sindicat_Conditions()
-    if ( not ( GetResearched() == 'R00B' ) ) then
+    if ( not ( GetResearched() == FourCC('R00B') ) ) then
         return false
     end
     return true
 end
 function Trig_Sindicat_Actions()
-    SetPlayerTechMaxAllowedSwap('h02U', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h02S', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R00A', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h02U'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h02S'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R00A'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Sindicat()
@@ -36959,13 +36959,13 @@ end
 -- Trigger: Bratstwo
 --===========================================================================
 function Trig_Bratstwo_Conditions()
-    if ( not ( GetResearched() == 'R00F' ) ) then
+    if ( not ( GetResearched() == FourCC('R00F') ) ) then
         return false
     end
     return true
 end
 function Trig_Bratstwo_Actions()
-    SetPlayerTechMaxAllowedSwap('h02Q', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h02Q'), - 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Bratstwo()
@@ -36979,28 +36979,28 @@ end
 -- Trigger: Pirats
 --===========================================================================
 function Trig_Pirats_Conditions()
-    if ( not ( GetResearched() == 'R00E' ) ) then
+    if ( not ( GetResearched() == FourCC('R00E') ) ) then
         return false
     end
     return true
 end
 function Trig_Pirats_O_Copy_Func005002()
-    return ( GetUnitTypeId(GetFilterUnit()) == 'h00Y' )
+    return ( GetUnitTypeId(GetFilterUnit()) == FourCC('h00Y') )
 end
 function Trig_Pirats_O_Copy_Func008A()
-    ReplaceUnit(GetEnumUnit() , 'h03L' , bj_UNIT_STATE_METHOD_RELATIVE)
+    ReplaceUnit(GetEnumUnit() , FourCC('h03L') , bj_UNIT_STATE_METHOD_RELATIVE)
 end
 function Trig_Pirats_O_Copy_Func010002()
-    return ( GetUnitTypeId(GetFilterUnit()) == 'h00Z' )
+    return ( GetUnitTypeId(GetFilterUnit()) == FourCC('h00Z') )
 end
 function Trig_Pirats_O_Copy_Func013A()
-    ReplaceUnit(GetEnumUnit() , 'h03K' , bj_UNIT_STATE_METHOD_RELATIVE)
+    ReplaceUnit(GetEnumUnit() , FourCC('h03K') , bj_UNIT_STATE_METHOD_RELATIVE)
 end
 function Trig_Pirats_Actions()
-    SetPlayerTechMaxAllowedSwap('h03L', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h03K', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h00Y', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h00Z', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h03L'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h03K'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h00Y'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h00Z'), 0, GetOwningPlayer(GetTriggerUnit()))
     udg_Boolexpr=Condition(Trig_Pirats_O_Copy_Func005002)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
@@ -37024,15 +37024,15 @@ end
 -- Trigger: Shesterenka
 --===========================================================================
 function Trig_Shesterenka_Conditions()
-    if ( not ( GetResearched() == 'R00D' ) ) then
+    if ( not ( GetResearched() == FourCC('R00D') ) ) then
         return false
     end
     return true
 end
 function Trig_Shesterenka_Actions()
-    SetPlayerTechMaxAllowedSwap('h02R', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h02T', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R00C', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h02R'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h02T'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R00C'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Shesterenka()
@@ -37046,15 +37046,15 @@ end
 -- Trigger: Trumnue vodu
 --===========================================================================
 function Trig_Trumnue_vodu_Conditions()
-    if ( not ( GetResearched() == 'R00C' ) ) then
+    if ( not ( GetResearched() == FourCC('R00C') ) ) then
         return false
     end
     return true
 end
 function Trig_Trumnue_vodu_Actions()
-    SetPlayerTechMaxAllowedSwap('h02T', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h02R', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R00D', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h02T'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h02R'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R00D'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Trumnue_vodu()
@@ -37068,7 +37068,7 @@ end
 -- Trigger: AutoSetka
 --===========================================================================
 function Trig_AutoSetka_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A011' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A011') ) ) then
         return false
     end
     return true
@@ -37088,13 +37088,13 @@ end
 -- Trigger: AutoSetkaHero
 --===========================================================================
 function Trig_AutoSetkaHero_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A01I' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A01I') ) ) then
         return false
     end
     return true
 end
 function Trig_AutoSetkaHero_Actions()
-    UnitAddAbilityBJ('A011', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A011'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_AutoSetkaHero()
@@ -37108,7 +37108,7 @@ end
 -- Trigger: AutoSvita
 --===========================================================================
 function Trig_AutoSvita_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A012' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A012') ) ) then
         return false
     end
     return true
@@ -37128,7 +37128,7 @@ end
 -- Trigger: AutoStaya
 --===========================================================================
 function Trig_AutoStaya_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A00W' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A00W') ) ) then
         return false
     end
     return true
@@ -37148,7 +37148,7 @@ end
 -- Trigger: AutoManaSteal
 --===========================================================================
 function Trig_AutoManaSteal_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A015' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A015') ) ) then
         return false
     end
     return true
@@ -37168,7 +37168,7 @@ end
 -- Trigger: AutoShield
 --===========================================================================
 function Trig_AutoShield_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A016' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A016') ) ) then
         return false
     end
     return true
@@ -37188,43 +37188,43 @@ end
 -- Trigger: ResearhRobbery
 --===========================================================================
 function Trig_ResearhRobbery_Conditions()
-    if ( not ( GetResearched() == 'R00I' ) ) then
+    if ( not ( GetResearched() == FourCC('R00I') ) ) then
         return false
     end
     return true
 end
 function Trig_ResearhRobbery_Func001Func001002()
-    return ( GetUnitAbilityLevelSwapped('A00M', GetTriggerUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('A00M'), GetTriggerUnit()) >= 1 )
 end
 function Trig_ResearhRobbery_Func001Func004A()
-    SetUnitAbilityLevelSwapped('A00M', GetEnumUnit(), 2)
+    SetUnitAbilityLevelSwapped(FourCC('A00M'), GetEnumUnit(), 2)
 end
 function Trig_ResearhRobbery_Func001C()
-    if ( not ( GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R00I'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
 end
 function Trig_ResearhRobbery_Func002Func001002()
-    return ( GetUnitAbilityLevelSwapped('A00M', GetTriggerUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('A00M'), GetTriggerUnit()) >= 1 )
 end
 function Trig_ResearhRobbery_Func002Func004A()
-    SetUnitAbilityLevelSwapped('A00M', GetEnumUnit(), 3)
+    SetUnitAbilityLevelSwapped(FourCC('A00M'), GetEnumUnit(), 3)
 end
 function Trig_ResearhRobbery_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R00I'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
 end
 function Trig_ResearhRobbery_Func003Func001002()
-    return ( GetUnitAbilityLevelSwapped('A00M', GetTriggerUnit()) >= 1 )
+    return ( GetUnitAbilityLevelSwapped(FourCC('A00M'), GetTriggerUnit()) >= 1 )
 end
 function Trig_ResearhRobbery_Func003Func004A()
-    SetUnitAbilityLevelSwapped('A00M', GetEnumUnit(), 4)
+    SetUnitAbilityLevelSwapped(FourCC('A00M'), GetEnumUnit(), 4)
 end
 function Trig_ResearhRobbery_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetTriggerUnit())) == 4 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R00I'), GetOwningPlayer(GetTriggerUnit())) == 4 ) ) then
         return false
     end
     return true
@@ -37264,40 +37264,40 @@ end
 -- Trigger: RobberyTrain
 --===========================================================================
 function Trig_RobberyTrain_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A00M', GetTriggerUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A00M'), GetTriggerUnit()) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_RobberyTrain_Func002C()
-    if ( not ( GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R00I'), GetOwningPlayer(GetTriggerUnit())) == 2 ) ) then
         return false
     end
     return true
 end
 function Trig_RobberyTrain_Func003C()
-    if ( not ( GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R00I'), GetOwningPlayer(GetTriggerUnit())) == 3 ) ) then
         return false
     end
     return true
 end
 function Trig_RobberyTrain_Func004C()
-    if ( not ( GetPlayerTechCountSimple('R00I', GetOwningPlayer(GetTriggerUnit())) == 4 ) ) then
+    if ( not ( GetPlayerTechCountSimple(FourCC('R00I'), GetOwningPlayer(GetTriggerUnit())) == 4 ) ) then
         return false
     end
     return true
 end
 function Trig_RobberyTrain_Actions()
     if ( Trig_RobberyTrain_Func002C() ) then
-        SetUnitAbilityLevelSwapped('A00M', GetTrainedUnit(), 2)
+        SetUnitAbilityLevelSwapped(FourCC('A00M'), GetTrainedUnit(), 2)
     else
     end
     if ( Trig_RobberyTrain_Func003C() ) then
-        SetUnitAbilityLevelSwapped('A00M', GetTrainedUnit(), 3)
+        SetUnitAbilityLevelSwapped(FourCC('A00M'), GetTrainedUnit(), 3)
     else
     end
     if ( Trig_RobberyTrain_Func004C() ) then
-        SetUnitAbilityLevelSwapped('A00M', GetTrainedUnit(), 4)
+        SetUnitAbilityLevelSwapped(FourCC('A00M'), GetTrainedUnit(), 4)
     else
     end
 end
@@ -37313,11 +37313,11 @@ end
 -- Trigger: RobberyOfPlayer
 --===========================================================================
 function Trig_RobberyOfPlayer_Conditions()
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A00M') >= 1
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A00M')) >= 1
 end
 function Trig_RobberyOfPlayer_Actions()
     local i= GetUnitGoldCost(GetUnitTypeId(GetTriggerUnit()))
-    local lvl= GetUnitAbilityLevel(GetEventDamageSource(), 'A00M')
+    local lvl= GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A00M'))
     
     i=R2I(i * 0.25 * lvl)
     AdjustPlayerStateBJ(- i, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_GOLD)
@@ -37334,12 +37334,12 @@ end
 -- Trigger: AreaOfDeath2
 --===========================================================================
 function Trig_AreaOfDeath2_Conditions()
-    return GetSpellAbilityId() == 'A1K1'
+    return GetSpellAbilityId() == FourCC('A1K1')
 end
 function Trig_AreaOfDeath2_Actions()
     local l= GetSpellTargetLoc()
     local p= GetOwningPlayer(GetTriggerUnit())
-    local level= GetUnitAbilityLevel(GetTriggerUnit(), 'A1K1')
+    local level= GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1K1'))
     
     local u
     local u2
@@ -37347,9 +37347,9 @@ function Trig_AreaOfDeath2_Actions()
    
     
     u2=CreateUnitAtLoc(p, Dummy, l, bj_UNIT_FACING)
-    UnitAddAbility(u2, 'ANrf')
+    UnitAddAbility(u2, FourCC('ANrf'))
     SetUnitManaBJ(u2, 1111111.00)
-    SetUnitAbilityLevel(u2, 'ANrf', level)
+    SetUnitAbilityLevel(u2, FourCC('ANrf'), level)
     IssuePointOrderLoc(u2, "rainoffire", l)
     RemoveLocation(l)
     
@@ -37377,7 +37377,7 @@ end
 -- Trigger: Kop
 --===========================================================================
 function Trig_Kop_Func001A()
-    SetPlayerTechMaxAllowedSwap('n06J', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n06J'), 0, GetEnumPlayer())
 end
 function Trig_Kop_Actions()
     ForForce(udg_AllPlayers, Trig_Kop_Func001A)
@@ -37392,7 +37392,7 @@ end
 -- Trigger: Kop3
 --===========================================================================
 function Trig_Kop3_Func001A()
-    SetPlayerTechMaxAllowedSwap('n06W', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n06W'), 0, GetEnumPlayer())
 end
 function Trig_Kop3_Actions()
     ForForce(udg_AllPlayers, Trig_Kop3_Func001A)
@@ -37407,7 +37407,7 @@ end
 -- Trigger: Strel
 --===========================================================================
 function Trig_Strel_Func001A()
-    SetPlayerTechMaxAllowedSwap('n06M', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n06M'), 0, GetEnumPlayer())
 end
 function Trig_Strel_Actions()
     ForForce(udg_AllPlayers, Trig_Strel_Func001A)
@@ -37422,7 +37422,7 @@ end
 -- Trigger: Strel3
 --===========================================================================
 function Trig_Strel3_Func001A()
-    SetPlayerTechMaxAllowedSwap('n06Q', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n06Q'), 0, GetEnumPlayer())
 end
 function Trig_Strel3_Actions()
     ForForce(udg_AllPlayers, Trig_Strel3_Func001A)
@@ -37437,7 +37437,7 @@ end
 -- Trigger: Rub
 --===========================================================================
 function Trig_Rub_Func001A()
-    SetPlayerTechMaxAllowedSwap('n06L', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n06L'), 0, GetEnumPlayer())
 end
 function Trig_Rub_Actions()
     ForForce(udg_AllPlayers, Trig_Rub_Func001A)
@@ -37452,7 +37452,7 @@ end
 -- Trigger: Rub3
 --===========================================================================
 function Trig_Rub3_Func001A()
-    SetPlayerTechMaxAllowedSwap('n06T', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n06T'), 0, GetEnumPlayer())
 end
 function Trig_Rub3_Actions()
     ForForce(udg_AllPlayers, Trig_Rub3_Func001A)
@@ -37467,7 +37467,7 @@ end
 -- Trigger: Sham
 --===========================================================================
 function Trig_Sham_Func001A()
-    SetPlayerTechMaxAllowedSwap('n06S', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n06S'), 0, GetEnumPlayer())
 end
 function Trig_Sham_Actions()
     ForForce(udg_AllPlayers, Trig_Sham_Func001A)
@@ -37482,7 +37482,7 @@ end
 -- Trigger: Sham3
 --===========================================================================
 function Trig_Sham3_Func001A()
-    SetPlayerTechMaxAllowedSwap('n06O', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n06O'), 0, GetEnumPlayer())
 end
 function Trig_Sham3_Actions()
     ForForce(udg_AllPlayers, Trig_Sham3_Func001A)
@@ -37497,7 +37497,7 @@ end
 -- Trigger: Chern
 --===========================================================================
 function Trig_Chern_Func001A()
-    SetPlayerTechMaxAllowedSwap('n06R', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n06R'), 0, GetEnumPlayer())
 end
 function Trig_Chern_Actions()
     ForForce(udg_AllPlayers, Trig_Chern_Func001A)
@@ -37512,7 +37512,7 @@ end
 -- Trigger: Chern3
 --===========================================================================
 function Trig_Chern3_Func001A()
-    SetPlayerTechMaxAllowedSwap('n06N', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n06N'), 0, GetEnumPlayer())
 end
 function Trig_Chern3_Actions()
     ForForce(udg_AllPlayers, Trig_Chern3_Func001A)
@@ -37527,7 +37527,7 @@ end
 -- Trigger: Kodo
 --===========================================================================
 function Trig_Kodo_Func001A()
-    SetPlayerTechMaxAllowedSwap('n06I', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n06I'), 0, GetEnumPlayer())
 end
 function Trig_Kodo_Actions()
     ForForce(udg_AllPlayers, Trig_Kodo_Func001A)
@@ -37542,7 +37542,7 @@ end
 -- Trigger: Kodo3
 --===========================================================================
 function Trig_Kodo3_Func001A()
-    SetPlayerTechMaxAllowedSwap('n06V', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n06V'), 0, GetEnumPlayer())
 end
 function Trig_Kodo3_Actions()
     ForForce(udg_AllPlayers, Trig_Kodo3_Func001A)
@@ -37557,7 +37557,7 @@ end
 -- Trigger: Tel
 --===========================================================================
 function Trig_Tel_Func001A()
-    SetPlayerTechMaxAllowedSwap('o065', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('o065'), 0, GetEnumPlayer())
 end
 function Trig_Tel_Actions()
     ForForce(udg_AllPlayers, Trig_Tel_Func001A)
@@ -37572,7 +37572,7 @@ end
 -- Trigger: Tel3
 --===========================================================================
 function Trig_Tel3_Func001A()
-    SetPlayerTechMaxAllowedSwap('o063', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('o063'), 0, GetEnumPlayer())
 end
 function Trig_Tel3_Actions()
     ForForce(udg_AllPlayers, Trig_Tel3_Func001A)
@@ -37587,7 +37587,7 @@ end
 -- Trigger: Nale
 --===========================================================================
 function Trig_Nale_Func001A()
-    SetPlayerTechMaxAllowedSwap('n06U', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n06U'), 0, GetEnumPlayer())
 end
 function Trig_Nale_Actions()
     ForForce(udg_AllPlayers, Trig_Nale_Func001A)
@@ -37602,7 +37602,7 @@ end
 -- Trigger: Nale3
 --===========================================================================
 function Trig_Nale3_Func001A()
-    SetPlayerTechMaxAllowedSwap('n06K', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n06K'), 0, GetEnumPlayer())
 end
 function Trig_Nale3_Actions()
     ForForce(udg_AllPlayers, Trig_Nale3_Func001A)
@@ -37617,13 +37617,13 @@ end
 -- Trigger: KodoT3
 --===========================================================================
 function Trig_KodoT3_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1IM' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1IM') ) ) then
         return false
     end
     return true
 end
 function Trig_KodoT3_Actions()
-    SetPlayerTechResearchedSwap('R0JJ', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JJ'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IM'), GetOwningPlayer(GetTriggerUnit()))
     DisableTrigger(gg_trg_Kodo3)
 end
@@ -37638,13 +37638,13 @@ end
 -- Trigger: NaleT3
 --===========================================================================
 function Trig_NaleT3_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1IO' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1IO') ) ) then
         return false
     end
     return true
 end
 function Trig_NaleT3_Actions()
-    SetPlayerTechResearchedSwap('R0JL', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JL'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IO'), GetOwningPlayer(GetTriggerUnit()))
     DisableTrigger(gg_trg_Nale3)
 end
@@ -37659,13 +37659,13 @@ end
 -- Trigger: ShamT3
 --===========================================================================
 function Trig_ShamT3_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1IT' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1IT') ) ) then
         return false
     end
     return true
 end
 function Trig_ShamT3_Actions()
-    SetPlayerTechResearchedSwap('R0JT', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JT'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IT'), GetOwningPlayer(GetTriggerUnit()))
     DisableTrigger(gg_trg_Sham3)
 end
@@ -37680,13 +37680,13 @@ end
 -- Trigger: CherT3
 --===========================================================================
 function Trig_CherT3_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1IS' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1IS') ) ) then
         return false
     end
     return true
 end
 function Trig_CherT3_Actions()
-    SetPlayerTechResearchedSwap('R0JP', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JP'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IS'), GetOwningPlayer(GetTriggerUnit()))
     DisableTrigger(gg_trg_Chern3)
 end
@@ -37701,13 +37701,13 @@ end
 -- Trigger: KopT3
 --===========================================================================
 function Trig_KopT3_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1IN' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1IN') ) ) then
         return false
     end
     return true
 end
 function Trig_KopT3_Actions()
-    SetPlayerTechResearchedSwap('R0JK', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JK'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IN'), GetOwningPlayer(GetTriggerUnit()))
     DisableTrigger(gg_trg_Kop3)
 end
@@ -37722,13 +37722,13 @@ end
 -- Trigger: StrelT3
 --===========================================================================
 function Trig_StrelT3_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1IQ' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1IQ') ) ) then
         return false
     end
     return true
 end
 function Trig_StrelT3_Actions()
-    SetPlayerTechResearchedSwap('R0JN', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JN'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IQ'), GetOwningPlayer(GetTriggerUnit()))
     DisableTrigger(gg_trg_Strel3)
 end
@@ -37743,13 +37743,13 @@ end
 -- Trigger: RubT3
 --===========================================================================
 function Trig_RubT3_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1IP' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1IP') ) ) then
         return false
     end
     return true
 end
 function Trig_RubT3_Actions()
-    SetPlayerTechResearchedSwap('R0JM', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JM'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IP'), GetOwningPlayer(GetTriggerUnit()))
     DisableTrigger(gg_trg_Rub3)
 end
@@ -37764,13 +37764,13 @@ end
 -- Trigger: TelT3
 --===========================================================================
 function Trig_TelT3_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1IR' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1IR') ) ) then
         return false
     end
     return true
 end
 function Trig_TelT3_Actions()
-    SetPlayerTechResearchedSwap('R0JO', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JO'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IR'), GetOwningPlayer(GetTriggerUnit()))
     DisableTrigger(gg_trg_Tel3)
 end
@@ -37785,13 +37785,13 @@ end
 -- Trigger: KodoNale
 --===========================================================================
 function Trig_KodoNale_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1HW' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1HW') ) ) then
         return false
     end
     return true
 end
 function Trig_KodoNale_Actions()
-    SetPlayerTechResearchedSwap('R0JF', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JF'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1HW'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IO'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1HY'), GetOwningPlayer(GetTriggerUnit()))
@@ -37808,13 +37808,13 @@ end
 -- Trigger: NaleKodo
 --===========================================================================
 function Trig_NaleKodo_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1HY' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1HY') ) ) then
         return false
     end
     return true
 end
 function Trig_NaleKodo_Actions()
-    SetPlayerTechResearchedSwap('R0JE', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JE'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1HW'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IM'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1HY'), GetOwningPlayer(GetTriggerUnit()))
@@ -37831,13 +37831,13 @@ end
 -- Trigger: Ritual
 --===========================================================================
 function Trig_Ritual_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1JI' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1JI') ) ) then
         return false
     end
     return true
 end
 function Trig_Ritual_Actions()
-    SetPlayerTechResearchedSwap('R0K9', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0K9'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1JI'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1JH'), GetOwningPlayer(GetTriggerUnit()))
 end
@@ -37852,13 +37852,13 @@ end
 -- Trigger: Ritual Copy
 --===========================================================================
 function Trig_Ritual_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1JH' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1JH') ) ) then
         return false
     end
     return true
 end
 function Trig_Ritual_Copy_Actions()
-    SetPlayerTechResearchedSwap('R0K8', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0K8'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1JI'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1JH'), GetOwningPlayer(GetTriggerUnit()))
 end
@@ -37873,13 +37873,13 @@ end
 -- Trigger: ShamCher
 --===========================================================================
 function Trig_ShamCher_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1I3' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1I3') ) ) then
         return false
     end
     return true
 end
 function Trig_ShamCher_Actions()
-    SetPlayerTechResearchedSwap('R0JD', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JD'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1I2'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IS'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1I3'), GetOwningPlayer(GetTriggerUnit()))
@@ -37896,13 +37896,13 @@ end
 -- Trigger: CherSham
 --===========================================================================
 function Trig_CherSham_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1I2' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1I2') ) ) then
         return false
     end
     return true
 end
 function Trig_CherSham_Actions()
-    SetPlayerTechResearchedSwap('R0JC', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JC'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1I2'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IT'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1I3'), GetOwningPlayer(GetTriggerUnit()))
@@ -37919,13 +37919,13 @@ end
 -- Trigger: KopStrel
 --===========================================================================
 function Trig_KopStrel_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1HX' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1HX') ) ) then
         return false
     end
     return true
 end
 function Trig_KopStrel_Actions()
-    SetPlayerTechResearchedSwap('R0JA', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JA'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1HX'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IQ'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1I0'), GetOwningPlayer(GetTriggerUnit()))
@@ -37942,13 +37942,13 @@ end
 -- Trigger: StrelKop
 --===========================================================================
 function Trig_StrelKop_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1I0' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1I0') ) ) then
         return false
     end
     return true
 end
 function Trig_StrelKop_Actions()
-    SetPlayerTechResearchedSwap('R0JB', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JB'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1HX'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IN'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1I0'), GetOwningPlayer(GetTriggerUnit()))
@@ -37965,13 +37965,13 @@ end
 -- Trigger: RubTel
 --===========================================================================
 function Trig_RubTel_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1HZ' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1HZ') ) ) then
         return false
     end
     return true
 end
 function Trig_RubTel_Actions()
-    SetPlayerTechResearchedSwap('R0J9', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0J9'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1HZ'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IR'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1I1'), GetOwningPlayer(GetTriggerUnit()))
@@ -37988,13 +37988,13 @@ end
 -- Trigger: TelRub
 --===========================================================================
 function Trig_TelRub_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1I1' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1I1') ) ) then
         return false
     end
     return true
 end
 function Trig_TelRub_Actions()
-    SetPlayerTechResearchedSwap('R0JG', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0JG'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1HZ'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IP'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1I1'), GetOwningPlayer(GetTriggerUnit()))
@@ -38013,14 +38013,14 @@ end
 -- Не надо кучу ифов, тут в одном на все лвл - винер
 --===========================================================================
 function Trig_NerZulPas_Conditions()
-    if ( not ( GetLearnedSkillBJ() == 'A1IB' ) ) then
+    if ( not ( GetLearnedSkillBJ() == FourCC('A1IB') ) ) then
         return false
     end
     return true
 end
 function Trig_NerZulPas_Actions()
-    UnitAddAbilityBJ('A1IC', GetTriggerUnit())
-    SetUnitAbilityLevelSwapped('A1IC', GetTriggerUnit(), GetUnitAbilityLevelSwapped('A1IB', GetTriggerUnit()))
+    UnitAddAbilityBJ(FourCC('A1IC'), GetTriggerUnit())
+    SetUnitAbilityLevelSwapped(FourCC('A1IC'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('A1IB'), GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_NerZulPas()
@@ -38035,14 +38035,14 @@ end
 -- Не надо кучу ифов, тут в одном на все лвл - винер
 --===========================================================================
 function Trig_NerZulPas_Copy_Conditions()
-    if ( not ( GetLearnedSkillBJ() == 'A1I5' ) ) then
+    if ( not ( GetLearnedSkillBJ() == FourCC('A1I5') ) ) then
         return false
     end
     return true
 end
 function Trig_NerZulPas_Copy_Actions()
-    UnitAddAbilityBJ('A1IE', GetTriggerUnit())
-    SetUnitAbilityLevelSwapped('A1IE', GetTriggerUnit(), GetUnitAbilityLevelSwapped('A1I5', GetTriggerUnit()))
+    UnitAddAbilityBJ(FourCC('A1IE'), GetTriggerUnit())
+    SetUnitAbilityLevelSwapped(FourCC('A1IE'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('A1I5'), GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_NerZulPas_Copy()
@@ -38057,14 +38057,14 @@ end
 -- Не надо кучу ифов, тут в одном на все лвл - винер
 --===========================================================================
 function Trig_NerZulPas_Copy_Copy_Conditions()
-    if ( not ( GetLearnedSkillBJ() == 'A1H9' ) ) then
+    if ( not ( GetLearnedSkillBJ() == FourCC('A1H9') ) ) then
         return false
     end
     return true
 end
 function Trig_NerZulPas_Copy_Copy_Actions()
-    UnitAddAbilityBJ('A1IF', GetTriggerUnit())
-    SetUnitAbilityLevelSwapped('A1IF', GetTriggerUnit(), GetUnitAbilityLevelSwapped('A1H9', GetTriggerUnit()))
+    UnitAddAbilityBJ(FourCC('A1IF'), GetTriggerUnit())
+    SetUnitAbilityLevelSwapped(FourCC('A1IF'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('A1H9'), GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_NerZulPas_Copy_Copy()
@@ -38077,15 +38077,15 @@ end
 -- Trigger: StartNight
 --===========================================================================
 function Trig_StartNight_Func001A()
-    SetPlayerTechMaxAllowedSwap('e00J', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('n064', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('edot', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('edoc', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('n05D', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('n05H', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('E00V', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('E011', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('E00W', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('e00J'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n064'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('edot'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('edoc'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n05D'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n05H'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('E00V'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('E011'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('E00W'), 1, GetEnumPlayer())
 end
 function Trig_StartNight_Actions()
     ForForce(udg_AllPlayers, Trig_StartNight_Func001A)
@@ -38100,19 +38100,19 @@ end
 -- Trigger: KrugBeg
 --===========================================================================
 function Trig_KrugBeg_Conditions()
-    if ( not ( GetResearched() == 'R0G1' ) ) then
+    if ( not ( GetResearched() == FourCC('R0G1') ) ) then
         return false
     end
     return true
 end
 function Trig_KrugBeg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0G2', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('Remk', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('Remg', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('Reib', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0G6', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0G7', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0GB', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0G2'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('Remk'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('Remg'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('Reib'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0G6'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0G7'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0GB'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_KrugBeg()
@@ -38125,16 +38125,16 @@ end
 -- Trigger: KrugCan
 --===========================================================================
 function Trig_KrugCan_Conditions()
-    if ( not ( GetResearched() == 'R0G1' ) ) then
+    if ( not ( GetResearched() == FourCC('R0G1') ) ) then
         return false
     end
     return true
 end
 function Trig_KrugCan_Actions()
-    SetPlayerTechMaxAllowedSwap('R0G2', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('Remk', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('Remg', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('Reib', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0G2'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('Remk'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('Remg'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('Reib'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_KrugCan()
@@ -38147,22 +38147,22 @@ end
 -- Trigger: KrugFin
 --===========================================================================
 function Trig_KrugFin_Conditions()
-    if ( not ( GetResearched() == 'R0G1' ) ) then
+    if ( not ( GetResearched() == FourCC('R0G1') ) ) then
         return false
     end
     return true
 end
 function Trig_KrugFin_Actions()
-    SetPlayerTechMaxAllowedSwap('e00J', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n064', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('edot', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('edoc', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n05D', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n05H', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('earc', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('esen', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('e00I', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('e00H', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('e00J'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n064'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('edot'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('edoc'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n05D'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n05H'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('earc'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('esen'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('e00I'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('e00H'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_KrugFin()
@@ -38175,22 +38175,22 @@ end
 -- Trigger: ElfBegFin
 --===========================================================================
 function Trig_ElfBegFin_Conditions()
-    if ( not ( GetResearched() == 'R0G2' ) ) then
+    if ( not ( GetResearched() == FourCC('R0G2') ) ) then
         return false
     end
     return true
 end
 function Trig_ElfBegFin_Actions()
-    SetPlayerTechMaxAllowedSwap('R0GB', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0G1', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('Redc', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('Reeb', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('Reec', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('Redt', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0G9', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0GA', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R0G8', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechResearchedSwap('R0GB', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GB'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0G1'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('Redc'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('Reeb'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('Reec'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('Redt'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0G9'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0GA'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0G8'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechResearchedSwap(FourCC('R0GB'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_ElfBegFin()
@@ -38204,13 +38204,13 @@ end
 -- Trigger: ElfCan
 --===========================================================================
 function Trig_ElfCan_Conditions()
-    if ( not ( GetResearched() == 'R0G2' ) ) then
+    if ( not ( GetResearched() == FourCC('R0G2') ) ) then
         return false
     end
     return true
 end
 function Trig_ElfCan_Actions()
-    SetPlayerTechMaxAllowedSwap('R0G1', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0G1'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_ElfCan()
@@ -38225,14 +38225,14 @@ end
 -- Не надо кучу ифов, тут в одном на все лвл - винер
 --===========================================================================
 function Trig_malfurionPas_Conditions()
-    if ( not ( GetLearnedSkillBJ() == 'A160' ) ) then
+    if ( not ( GetLearnedSkillBJ() == FourCC('A160') ) ) then
         return false
     end
     return true
 end
 function Trig_malfurionPas_Actions()
-    UnitAddAbilityBJ('A161', GetTriggerUnit())
-    SetUnitAbilityLevelSwapped('A161', GetTriggerUnit(), GetUnitAbilityLevelSwapped('A160', GetTriggerUnit()))
+    UnitAddAbilityBJ(FourCC('A161'), GetTriggerUnit())
+    SetUnitAbilityLevelSwapped(FourCC('A161'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('A160'), GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_malfurionPas()
@@ -38248,7 +38248,7 @@ end
 --===========================================================================
 function Trig_StartBuildingTree_Conditions()
     local id= GetUnitTypeId(GetConstructingStructure())
-    return id == 'etoa' or id == 'etol' or id == 'etoe' or id == 'eaoe' or id == 'eaom' or id == 'eaow' or id == 'etrp'
+    return id == FourCC('etoa') or id == FourCC('etol') or id == FourCC('etoe') or id == FourCC('eaoe') or id == FourCC('eaom') or id == FourCC('eaow') or id == FourCC('etrp')
 end
 function Trig_StartBuildingTree_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -38271,7 +38271,7 @@ end
 --===========================================================================
 function Trig_CanselBuildingTree_Conditions()
     local id= GetUnitTypeId(GetTriggerUnit())
-    return id == 'etoa' or id == 'etol' or id == 'etoe' or id == 'eaoe' or id == 'eaom' or id == 'eaow' or id == 'etrp'
+    return id == FourCC('etoa') or id == FourCC('etol') or id == FourCC('etoe') or id == FourCC('eaoe') or id == FourCC('eaom') or id == FourCC('eaow') or id == FourCC('etrp')
 end
 function Trig_CanselBuildingTree_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -38291,11 +38291,11 @@ end
 -- Trigger: GuadrianSpell
 --===========================================================================
 function Trig_GuadrianSpell_Conditions()
-    return GetSpellAbilityId() == 'ken0'
+    return GetSpellAbilityId() == FourCC('ken0')
 end
 function Trig_GuadrianSpell_Actions()
    -- call BJDebugMsg("")
-    MassSpell(GetTriggerUnit() , GetSpellAbilityId() , 'A1MW' , "firebolt" , null , 400 + 200 * GetUnitAbilityLevel(GetTriggerUnit(), GetSpellAbilityId()) , 1 , false)
+    MassSpell(GetTriggerUnit() , GetSpellAbilityId() , FourCC('A1MW') , "firebolt" , null , 400 + 200 * GetUnitAbilityLevel(GetTriggerUnit(), GetSpellAbilityId()) , 1 , false)
 end
 --===========================================================================
 function InitTrig_GuadrianSpell()
@@ -38308,25 +38308,25 @@ end
 -- Trigger: NagaStart
 --===========================================================================
 function NagaStartLimits_act()
-    SetPlayerTechMaxAllowedSwap('n054', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('n053', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('n052', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('n050', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n054'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n053'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n052'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n050'), 0, GetEnumPlayer())
     
-    SetPlayerTechMaxAllowedSwap('n051', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('n057', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('nnsw', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('nmyr', 0, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('nnrg', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n051'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n057'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('nnsw'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('nmyr'), 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('nnrg'), 0, GetEnumPlayer())
     
-     SetPlayerTechMaxAllowedSwap('N07A', 1, GetEnumPlayer())
+     SetPlayerTechMaxAllowedSwap(FourCC('N07A'), 1, GetEnumPlayer())
      
-     SetPlayerTechMaxAllowedSwap('H0OZ', 0, GetEnumPlayer())
-     SetPlayerTechMaxAllowedSwap('H0JU', 0, GetEnumPlayer()) --HERO
-    SetPlayerTechMaxAllowedSwap('H0JV', 1, GetEnumPlayer())
+     SetPlayerTechMaxAllowedSwap(FourCC('H0OZ'), 0, GetEnumPlayer())
+     SetPlayerTechMaxAllowedSwap(FourCC('H0JU'), 0, GetEnumPlayer()) --HERO
+    SetPlayerTechMaxAllowedSwap(FourCC('H0JV'), 1, GetEnumPlayer())
  
     --Murloc Grades
-    SetPlayerTechMaxAllowedSwap('R0FQ', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('R0FQ'), 0, GetEnumPlayer())
     
 end
 function NagaStartLimits()
@@ -38347,12 +38347,12 @@ end
 --===========================================================================
 function Trig_Coatl_Conditions()
     gUnit=GetTrainedUnit()
-    return GetUnitTypeId(gUnit) == 'nwgs'
+    return GetUnitTypeId(gUnit) == FourCC('nwgs')
 end
 function Trig_Coatl_Actions()
-    UnitAddAbility(gUnit, 'Aave')
+    UnitAddAbility(gUnit, FourCC('Aave'))
     SetUnitFlyHeightBJ(gUnit, 240.00, 1)
-    UnitRemoveAbility(gUnit, 'Aave')
+    UnitRemoveAbility(gUnit, FourCC('Aave'))
     
 end
 --===========================================================================
@@ -38366,13 +38366,13 @@ end
 -- Trigger: MurlokCan
 --===========================================================================
 function Trig_MurlokCan_Conditions()
-    if ( not ( GetResearched() == 'R0FF' ) ) then
+    if ( not ( GetResearched() == FourCC('R0FF') ) ) then
         return false
     end
     return true
 end
 function Trig_MurlokCan_Actions()
-    SetPlayerTechMaxAllowedSwap('R0FE', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0FE'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MurlokCan()
@@ -38385,13 +38385,13 @@ end
 -- Trigger: MurlokBeg
 --===========================================================================
 function Trig_MurlokBeg_Conditions()
-    if ( not ( GetResearched() == 'R0FF' ) ) then
+    if ( not ( GetResearched() == FourCC('R0FF') ) ) then
         return false
     end
     return true
 end
 function Trig_MurlokBeg_Actions()
-    SetPlayerTechMaxAllowedSwap('R0FE', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0FE'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MurlokBeg()
@@ -38404,18 +38404,18 @@ end
 -- Trigger: MurlocFin
 --===========================================================================
 function Trig_MurlocFin_Conditions()
-    return GetResearched() == 'R0FF'
+    return GetResearched() == FourCC('R0FF')
 end
 function Trig_MurlocFin_Actions()
-    SetPlayerTechMaxAllowedSwap('n053', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n052', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n050', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n054', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n053'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n052'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n050'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n054'), - 1, GetOwningPlayer(GetTriggerUnit()))
     
     
-    SetPlayerTechMaxAllowedSwap('H0OZ', 1, GetOwningPlayer(GetTriggerUnit())) --HERO TANK
+    SetPlayerTechMaxAllowedSwap(FourCC('H0OZ'), 1, GetOwningPlayer(GetTriggerUnit())) --HERO TANK
     
-    SetPlayerTechMaxAllowedSwap('R0FQ', 3, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0FQ'), 3, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_MurlocFin()
@@ -38428,13 +38428,13 @@ end
 -- Trigger: Nagi
 --===========================================================================
 function Trig_Nagi_Conditions()
-    if ( not ( GetResearched() == 'R0FE' ) ) then
+    if ( not ( GetResearched() == FourCC('R0FE') ) ) then
         return false
     end
     return true
 end
 function Trig_Nagi_Actions()
-    SetPlayerTechMaxAllowedSwap('R0FF', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0FF'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Nagi()
@@ -38447,13 +38447,13 @@ end
 -- Trigger: Nagi2
 --===========================================================================
 function Trig_Nagi2_Conditions()
-    if ( not ( GetResearched() == 'R0FE' ) ) then
+    if ( not ( GetResearched() == FourCC('R0FE') ) ) then
         return false
     end
     return true
 end
 function Trig_Nagi2_Actions()
-    SetPlayerTechMaxAllowedSwap('R0FF', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0FF'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Nagi2()
@@ -38466,17 +38466,17 @@ end
 -- Trigger: NagaFinishCode
 --===========================================================================
 function Trig_NagaFinishCode_Conditions()
-    return GetResearched() == 'R0FE'
+    return GetResearched() == FourCC('R0FE')
 end
 function Trig_NagaFinishCode_Actions()
-    SetPlayerTechMaxAllowedSwap('n051', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n057', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('nnsw', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('nmyr', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('nnrg', - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n051'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n057'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('nnsw'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('nmyr'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('nnrg'), - 1, GetOwningPlayer(GetTriggerUnit()))
     
-    SetPlayerTechResearchedSwap('R0KZ', 1, GetOwningPlayer(GetTriggerUnit())) --Illidary or Nagi
-    SetPlayerTechMaxAllowedSwap('H0JU', 1, GetOwningPlayer(GetTriggerUnit())) --HERO
+    SetPlayerTechResearchedSwap(FourCC('R0KZ'), 1, GetOwningPlayer(GetTriggerUnit())) --Illidary or Nagi
+    SetPlayerTechMaxAllowedSwap(FourCC('H0JU'), 1, GetOwningPlayer(GetTriggerUnit())) --HERO
 end
 --===========================================================================
 function InitTrig_NagaFinishCode()
@@ -38489,12 +38489,12 @@ end
 -- Trigger: VaishBuria
 --===========================================================================
 function Trig_VaishBuria_Conditions()
-    return GetSpellAbilityId() == 'A16E'
+    return GetSpellAbilityId() == FourCC('A16E')
 end
 function Trig_VaishBuria_Actions()
     local loc= GetSpellTargetLoc()
-    local u2= CreateUnitAtLoc(GetOwningPlayer(GetTriggerUnit()), 'ntor', loc, bj_UNIT_FACING)
-    UnitApplyTimedLife(u2, 'BTLF', 30.00)
+    local u2= CreateUnitAtLoc(GetOwningPlayer(GetTriggerUnit()), FourCC('ntor'), loc, bj_UNIT_FACING)
+    UnitApplyTimedLife(u2, FourCC('BTLF'), 30.00)
     u2=null
     RemoveLocation(loc)
     loc=null
@@ -38514,11 +38514,11 @@ function Trig_VaishArrow_Conditions()
     gCaster=GetEventDamageSource()
     --call BJDebugMsg("Test1"+GetUnitName(gTarget)+GetUnitName(gCaster)+I2S(GetUnitAbilityLevel(gTarget, 'B06P'))+I2S(GetUnitAbilityLevel(gTarget, 'B06Q')) )
     --return GetUnitAbilityLevel(gTarget, 'B06P')>0 and GetUnitAbilityLevel(gTarget, 'B06Q')==0 
-    return GetUnitAbilityLevel(gCaster, 'A16C') > 0 and BlzGetEventAttackType() == ATTACK_TYPE_NORMAL and Random(1 , 10)
+    return GetUnitAbilityLevel(gCaster, FourCC('A16C')) > 0 and BlzGetEventAttackType() == ATTACK_TYPE_NORMAL and Random(1 , 10)
 end
 function Trig_VaishArrow_Actions()
     --call BJDebugMsg("Test2"+GetUnitName(gTarget)+GetUnitName(gCaster))
-    DummyCastTargetLevel('A16D' , "frostnova" , gCaster , gTarget , GetUnitAbilityLevel(gCaster, 'A16C'))
+    DummyCastTargetLevel(FourCC('A16D') , "frostnova" , gCaster , gTarget , GetUnitAbilityLevel(gCaster, FourCC('A16C')))
 end
 --===========================================================================
 function InitTrig_VaishArrow()
@@ -38531,50 +38531,50 @@ end
 -- Trigger: NagaPas
 --===========================================================================
 function Trig_NagaPas_Conditions()
-    if ( not ( GetLearnedSkillBJ() == 'A13A' ) ) then
+    if ( not ( GetLearnedSkillBJ() == FourCC('A13A') ) ) then
         return false
     end
     return true
 end
 function Trig_NagaPas_Func002Func001Func002Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A13A', GetTriggerUnit()) == 4 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A13A'), GetTriggerUnit()) == 4 ) ) then
         return false
     end
     return true
 end
 function Trig_NagaPas_Func002Func001Func002C()
-    if ( not ( GetUnitAbilityLevelSwapped('A13A', GetTriggerUnit()) == 3 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A13A'), GetTriggerUnit()) == 3 ) ) then
         return false
     end
     return true
 end
 function Trig_NagaPas_Func002Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A13A', GetTriggerUnit()) == 2 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A13A'), GetTriggerUnit()) == 2 ) ) then
         return false
     end
     return true
 end
 function Trig_NagaPas_Func002C()
-    if ( not ( GetUnitAbilityLevelSwapped('A13A', GetTriggerUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A13A'), GetTriggerUnit()) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_NagaPas_Actions()
     if ( Trig_NagaPas_Func002C() ) then
-        UnitAddAbilityBJ('A136', GetTriggerUnit())
+        UnitAddAbilityBJ(FourCC('A136'), GetTriggerUnit())
     else
         if ( Trig_NagaPas_Func002Func001C() ) then
-            UnitAddAbilityBJ('A137', GetTriggerUnit())
-            UnitRemoveAbilityBJ('A136', GetTriggerUnit())
+            UnitAddAbilityBJ(FourCC('A137'), GetTriggerUnit())
+            UnitRemoveAbilityBJ(FourCC('A136'), GetTriggerUnit())
         else
             if ( Trig_NagaPas_Func002Func001Func002C() ) then
-                UnitAddAbilityBJ('A138', GetTriggerUnit())
-                UnitRemoveAbilityBJ('A137', GetTriggerUnit())
+                UnitAddAbilityBJ(FourCC('A138'), GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A137'), GetTriggerUnit())
             else
                 if ( Trig_NagaPas_Func002Func001Func002Func001C() ) then
-                    UnitAddAbilityBJ('A139', GetTriggerUnit())
-                    UnitRemoveAbilityBJ('A138', GetTriggerUnit())
+                    UnitAddAbilityBJ(FourCC('A139'), GetTriggerUnit())
+                    UnitRemoveAbilityBJ(FourCC('A138'), GetTriggerUnit())
                 else
                 end
             end
@@ -38592,11 +38592,11 @@ end
 -- Trigger: NagaCommonSpell
 --===========================================================================
 function Trig_NagaCommonSpell_Conditions()
-    return GetSpellAbilityId() == 'A1LT' and not IsTerrainPathable(GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), PATHING_TYPE_FLOATABILITY)
+    return GetSpellAbilityId() == FourCC('A1LT') and not IsTerrainPathable(GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), PATHING_TYPE_FLOATABILITY)
 end
 function Trig_NagaCommonSpell_Actions()
-    UnitAddAbility(GetTriggerUnit(), 'S00E')
-    RemoveAbilityTimed(GetTriggerUnit() , 'S00E' , 180)
+    UnitAddAbility(GetTriggerUnit(), FourCC('S00E'))
+    RemoveAbilityTimed(GetTriggerUnit() , FourCC('S00E') , 180)
 end
 --===========================================================================
 function InitTrig_NagaCommonSpell()
@@ -38609,10 +38609,10 @@ end
 -- Trigger: StartWorgens
 --===========================================================================
 function Trig_StartWorgens_Func001A()
-    SetPlayerTechMaxAllowedSwap('H0J2', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H0J6', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H0J7', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('H0J8', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H0J2'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H0J6'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H0J7'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('H0J8'), 1, GetEnumPlayer())
 end
 function Trig_StartWorgens_Actions()
     ForForce(udg_AllPlayers, Trig_StartWorgens_Func001A)
@@ -38627,27 +38627,27 @@ end
 -- Trigger: LegGer
 --===========================================================================
 function Trig_LegGer_Conditions()
-    return GetSpellAbilityId() == 'A11U'
+    return GetSpellAbilityId() == FourCC('A11U')
 end
 function Trig_LegGer_Actions()
     local u= GetTriggerUnit()
     
     
-    if GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 1 then
-        UnitAddAbilityBJ('A11V', u)
-        RemoveAbilityTimed(u , 'A11V' , 15)
+    if GetUnitAbilityLevelSwapped(FourCC('A11U'), GetTriggerUnit()) == 1 then
+        UnitAddAbilityBJ(FourCC('A11V'), u)
+        RemoveAbilityTimed(u , FourCC('A11V') , 15)
     
-    elseif GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 2 then
-        UnitAddAbilityBJ('A11W', u)
-        RemoveAbilityTimed(u , 'A11W' , 15)
+    elseif GetUnitAbilityLevelSwapped(FourCC('A11U'), GetTriggerUnit()) == 2 then
+        UnitAddAbilityBJ(FourCC('A11W'), u)
+        RemoveAbilityTimed(u , FourCC('A11W') , 15)
     
-    elseif GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 3 then
-        UnitAddAbilityBJ('A11X', u)
-        RemoveAbilityTimed(u , 'A11X' , 15)
+    elseif GetUnitAbilityLevelSwapped(FourCC('A11U'), GetTriggerUnit()) == 3 then
+        UnitAddAbilityBJ(FourCC('A11X'), u)
+        RemoveAbilityTimed(u , FourCC('A11X') , 15)
     
-    elseif GetUnitAbilityLevelSwapped('A11U', GetTriggerUnit()) == 4 then
-        UnitAddAbilityBJ('A11Y', u)
-        RemoveAbilityTimed(u , 'A11Y' , 15)
+    elseif GetUnitAbilityLevelSwapped(FourCC('A11U'), GetTriggerUnit()) == 4 then
+        UnitAddAbilityBJ(FourCC('A11Y'), u)
+        RemoveAbilityTimed(u , FourCC('A11Y') , 15)
       
     end
     u=null
@@ -38663,11 +38663,11 @@ end
 -- Trigger: SpellOpletenie
 --===========================================================================
 function Trig_SpellOpletenie_Conditions()
-    return GetSpellAbilityId() == 'A1M9'
+    return GetSpellAbilityId() == FourCC('A1M9')
 end
 function Trig_SpellOpletenie_Actions()
    -- call BJDebugMsg("")
-    MassSpell(GetTriggerUnit() , GetSpellAbilityId() , 'A1MA' , "firebolt" , null , 600 , 1 , false)
+    MassSpell(GetTriggerUnit() , GetSpellAbilityId() , FourCC('A1MA') , "firebolt" , null , 600 , 1 , false)
 end
 --===========================================================================
 function InitTrig_SpellOpletenie()
@@ -38680,13 +38680,13 @@ end
 -- Trigger: flot1 Copy O
 --===========================================================================
 function Trig_flot1_Copy_O_Conditions()
-    if ( not ( GetResearched() == 'R073' ) ) then
+    if ( not ( GetResearched() == FourCC('R073') ) ) then
         return false
     end
     return true
 end
 function Trig_flot1_Copy_O_Actions()
-    SetPlayerTechMaxAllowedSwap('R072', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R072'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_flot1_Copy_O()
@@ -38700,13 +38700,13 @@ end
 -- Trigger: flot2 Copy O
 --===========================================================================
 function Trig_flot2_Copy_O_Conditions()
-    if ( not ( GetResearched() == 'R073' ) ) then
+    if ( not ( GetResearched() == FourCC('R073') ) ) then
         return false
     end
     return true
 end
 function Trig_flot2_Copy_O_Actions()
-    SetPlayerTechMaxAllowedSwap('R072', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R072'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_flot2_Copy_O()
@@ -38719,13 +38719,13 @@ end
 -- Trigger: arm1 Copy O
 --===========================================================================
 function Trig_arm1_Copy_O_Conditions()
-    if ( not ( GetResearched() == 'R072' ) ) then
+    if ( not ( GetResearched() == FourCC('R072') ) ) then
         return false
     end
     return true
 end
 function Trig_arm1_Copy_O_Actions()
-    SetPlayerTechMaxAllowedSwap('R073', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R073'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_arm1_Copy_O()
@@ -38739,13 +38739,13 @@ end
 -- Trigger: arm2 Copy O
 --===========================================================================
 function Trig_arm2_Copy_O_Conditions()
-    if ( not ( GetResearched() == 'R072' ) ) then
+    if ( not ( GetResearched() == FourCC('R072') ) ) then
         return false
     end
     return true
 end
 function Trig_arm2_Copy_O_Actions()
-    SetPlayerTechMaxAllowedSwap('R073', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R073'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_arm2_Copy_O()
@@ -38758,14 +38758,14 @@ end
 -- Trigger: BuidAltar
 --===========================================================================
 function Trig_BuidAltar_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h0CV' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h0CV') ) ) then
         return false
     end
     return true
 end
 function Trig_BuidAltar_Actions()
-    UnitAddAbilityBJ('Asud', GetTriggerUnit())
-    AddUnitToStockBJ('h07A', GetTriggerUnit(), 1, 1)
+    UnitAddAbilityBJ(FourCC('Asud'), GetTriggerUnit())
+    AddUnitToStockBJ(FourCC('h07A'), GetTriggerUnit(), 1, 1)
 end
 --===========================================================================
 function InitTrig_BuidAltar()
@@ -38778,7 +38778,7 @@ end
 -- Trigger: Auto set Copy O
 --===========================================================================
 function Trig_Auto_set_Copy_O_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A09U' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A09U') ) ) then
         return false
     end
     return true
@@ -38797,10 +38797,10 @@ end
 -- Trigger: AutocastSlowOn
 --===========================================================================
 function Trig_AutocastSlowOn_Conditions()
-    return GetResearched() == 'R04S' and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), 'R04S', true) == 2
+    return GetResearched() == FourCC('R04S') and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R04S'), true) == 2
 end
 function Trig_AutocastSlowOn_Actions()
-    GlobalIssue('A09S' , GetOwningPlayer(GetTriggerUnit()) , "slowon")
+    GlobalIssue(FourCC('A09S') , GetOwningPlayer(GetTriggerUnit()) , "slowon")
 end
 --===========================================================================
 function InitTrig_AutocastSlowOn()
@@ -38813,13 +38813,13 @@ end
 -- Trigger: Red Orden
 --===========================================================================
 function Trig_Red_Orden_Conditions()
-    if ( not ( GetResearched() == 'R040' ) ) then
+    if ( not ( GetResearched() == FourCC('R040') ) ) then
         return false
     end
     return true
 end
 function Trig_Red_Orden_Actions()
-    SetPlayerTechMaxAllowedSwap('R03Z', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03Z'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Red_Orden()
@@ -38833,13 +38833,13 @@ end
 -- Trigger: Red Orden cansel
 --===========================================================================
 function Trig_Red_Orden_cansel_Conditions()
-    if ( not ( GetResearched() == 'R040' ) ) then
+    if ( not ( GetResearched() == FourCC('R040') ) ) then
         return false
     end
     return true
 end
 function Trig_Red_Orden_cansel_Actions()
-    SetPlayerTechMaxAllowedSwap('R03Z', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03Z'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Red_Orden_cansel()
@@ -38852,13 +38852,13 @@ end
 -- Trigger: Red Onslaught
 --===========================================================================
 function Trig_Red_Onslaught_Conditions()
-    if ( not ( GetResearched() == 'R03Z' ) ) then
+    if ( not ( GetResearched() == FourCC('R03Z') ) ) then
         return false
     end
     return true
 end
 function Trig_Red_Onslaught_Actions()
-    SetPlayerTechMaxAllowedSwap('R040', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R040'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Red_Onslaught()
@@ -38872,13 +38872,13 @@ end
 -- Trigger: Red Onslaught start
 --===========================================================================
 function Trig_Red_Onslaught_start_Conditions()
-    if ( not ( GetResearched() == 'R03Z' ) ) then
+    if ( not ( GetResearched() == FourCC('R03Z') ) ) then
         return false
     end
     return true
 end
 function Trig_Red_Onslaught_start_Actions()
-    SetPlayerTechMaxAllowedSwap('R040', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R040'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Red_Onslaught_start()
@@ -38891,13 +38891,13 @@ end
 -- Trigger: Short crossbow
 --===========================================================================
 function Trig_Short_crossbow_Conditions()
-    if ( not ( GetResearched() == 'R03T' ) ) then
+    if ( not ( GetResearched() == FourCC('R03T') ) ) then
         return false
     end
     return true
 end
 function Trig_Short_crossbow_Actions()
-    SetPlayerTechMaxAllowedSwap('R03S', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03S'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Short_crossbow()
@@ -38910,11 +38910,11 @@ end
 -- Trigger: AutocastFireArrows
 --===========================================================================
 function Trig_AutocastFireArrows_Conditions()
-    return GetResearched() == 'R03X' and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), 'R03X', true) == 2
+    return GetResearched() == FourCC('R03X') and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R03X'), true) == 2
 end
 function Trig_AutocastFireArrows_Actions()
-    GlobalIssue('h067' , GetOwningPlayer(GetTriggerUnit()) , "flamingarrows")
-    GlobalIssue('n008' , GetOwningPlayer(GetTriggerUnit()) , "flamingarrows")
+    GlobalIssue(FourCC('h067') , GetOwningPlayer(GetTriggerUnit()) , "flamingarrows")
+    GlobalIssue(FourCC('n008') , GetOwningPlayer(GetTriggerUnit()) , "flamingarrows")
 end
 --===========================================================================
 function InitTrig_AutocastFireArrows()
@@ -38927,10 +38927,10 @@ end
 -- Trigger: AutocastInnerFire
 --===========================================================================
 function Trig_AutocastInnerFire_Conditions()
-    return GetResearched() == 'R03Y' and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), 'R03Y', true) == 2
+    return GetResearched() == FourCC('R03Y') and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R03Y'), true) == 2
 end
 function Trig_AutocastInnerFire_Actions()
-    GlobalIssue('h067' , GetOwningPlayer(GetTriggerUnit()) , "innerfireon")
+    GlobalIssue(FourCC('h067') , GetOwningPlayer(GetTriggerUnit()) , "innerfireon")
     --call GlobalIssue('n008', GetOwningPlayer(GetTriggerUnit()), "flamingarrows")
 end
 --===========================================================================
@@ -38944,13 +38944,13 @@ end
 -- Trigger: Long crossbow
 --===========================================================================
 function Trig_Long_crossbow_Conditions()
-    if ( not ( GetResearched() == 'R03S' ) ) then
+    if ( not ( GetResearched() == FourCC('R03S') ) ) then
         return false
     end
     return true
 end
 function Trig_Long_crossbow_Actions()
-    SetPlayerTechMaxAllowedSwap('R03T', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03T'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Long_crossbow()
@@ -38963,7 +38963,7 @@ end
 -- Trigger: Auto hil Copy 2
 --===========================================================================
 function Trig_Auto_hil_Copy_2_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A08X' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A08X') ) ) then
         return false
     end
     return true
@@ -38982,13 +38982,13 @@ end
 -- Trigger: Red korotkiy2
 --===========================================================================
 function Trig_Red_korotkiy2_Conditions()
-    if ( not ( GetResearched() == 'R03T' ) ) then
+    if ( not ( GetResearched() == FourCC('R03T') ) ) then
         return false
     end
     return true
 end
 function Trig_Red_korotkiy2_Actions()
-    SetPlayerTechMaxAllowedSwap('R03S', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03S'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Red_korotkiy2()
@@ -39001,13 +39001,13 @@ end
 -- Trigger: Red dlinarbalet
 --===========================================================================
 function Trig_Red_dlinarbalet_Conditions()
-    if ( not ( GetResearched() == 'R03S' ) ) then
+    if ( not ( GetResearched() == FourCC('R03S') ) ) then
         return false
     end
     return true
 end
 function Trig_Red_dlinarbalet_Actions()
-    SetPlayerTechMaxAllowedSwap('R03T', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03T'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Red_dlinarbalet()
@@ -39021,13 +39021,13 @@ end
 -- Trigger: Red dlinarbalet start
 --===========================================================================
 function Trig_Red_dlinarbalet_start_Conditions()
-    if ( not ( GetResearched() == 'R03S' ) ) then
+    if ( not ( GetResearched() == FourCC('R03S') ) ) then
         return false
     end
     return true
 end
 function Trig_Red_dlinarbalet_start_Actions()
-    SetPlayerTechMaxAllowedSwap('R03T', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03T'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Red_dlinarbalet_start()
@@ -39040,13 +39040,13 @@ end
 -- Trigger: Red korotkiy
 --===========================================================================
 function Trig_Red_korotkiy_Conditions()
-    if ( not ( GetResearched() == 'R03T' ) ) then
+    if ( not ( GetResearched() == FourCC('R03T') ) ) then
         return false
     end
     return true
 end
 function Trig_Red_korotkiy_Actions()
-    SetPlayerTechMaxAllowedSwap('R03S', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R03S'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Red_korotkiy()
@@ -39060,12 +39060,12 @@ end
 -- Trigger: SpellMassSleep
 --===========================================================================
 function Trig_SpellMassSleep_Conditions()
-    return GetSpellAbilityId() == 'A06P'
+    return GetSpellAbilityId() == FourCC('A06P')
 end
 function Trig_SpellMassSleep_Actions()
    -- call BJDebugMsg("")
     local l= GetSpellTargetLoc()
-    MassSpell(GetTriggerUnit() , GetSpellAbilityId() , 'A06O' , "sleep" , l , 175 , 1 , false)
+    MassSpell(GetTriggerUnit() , GetSpellAbilityId() , FourCC('A06O') , "sleep" , l , 175 , 1 , false)
     RemoveLocation(l)
 end
 --===========================================================================
@@ -39079,13 +39079,13 @@ end
 -- Trigger: Ozaren
 --===========================================================================
 function Trig_Ozaren_Conditions()
-    if ( not ( GetResearched() == 'R02R' ) ) then
+    if ( not ( GetResearched() == FourCC('R02R') ) ) then
         return false
     end
     return true
 end
 function Trig_Ozaren_Actions()
-    SetPlayerTechMaxAllowedSwap('R02Q', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R02Q'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Ozaren()
@@ -39099,13 +39099,13 @@ end
 -- Trigger: Ozaren2
 --===========================================================================
 function Trig_Ozaren2_Conditions()
-    if ( not ( GetResearched() == 'R02R' ) ) then
+    if ( not ( GetResearched() == FourCC('R02R') ) ) then
         return false
     end
     return true
 end
 function Trig_Ozaren2_Actions()
-    SetPlayerTechMaxAllowedSwap('R02Q', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R02Q'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Ozaren2()
@@ -39118,13 +39118,13 @@ end
 -- Trigger: Slomlen
 --===========================================================================
 function Trig_Slomlen_Conditions()
-    if ( not ( GetResearched() == 'R02Q' ) ) then
+    if ( not ( GetResearched() == FourCC('R02Q') ) ) then
         return false
     end
     return true
 end
 function Trig_Slomlen_Actions()
-    SetPlayerTechMaxAllowedSwap('R02R', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R02R'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Slomlen()
@@ -39138,13 +39138,13 @@ end
 -- Trigger: Slomlen2
 --===========================================================================
 function Trig_Slomlen2_Conditions()
-    if ( not ( GetResearched() == 'R02Q' ) ) then
+    if ( not ( GetResearched() == FourCC('R02Q') ) ) then
         return false
     end
     return true
 end
 function Trig_Slomlen2_Actions()
-    SetPlayerTechMaxAllowedSwap('R02R', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R02R'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Slomlen2()
@@ -39157,7 +39157,7 @@ end
 -- Trigger: TP
 --===========================================================================
 function Trig_TP_Conditions()
-    return GetSpellAbilityId() == 'A1C4'
+    return GetSpellAbilityId() == FourCC('A1C4')
 end
 function Trig_TP_Actions()
     IssuePointOrder(GetTriggerUnit(), "blink", GetSpellTargetX(), GetSpellTargetY())
@@ -39173,10 +39173,10 @@ end
 -- Trigger: NoDeath
 --===========================================================================
 function Trig_NoDeath_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'A1C6') ~= 0
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1C6')) ~= 0
 end
 function BrokenBuilding()
-    return GetUnitTypeId(GetFilterUnit()) == 'h05A'
+    return GetUnitTypeId(GetFilterUnit()) == FourCC('h05A')
 end
 function Trig_NoDeath_Actions()
     local g= CreateGroup()
@@ -39214,13 +39214,13 @@ end
 -- Trigger: Masterstvo11
 --===========================================================================
 function Trig_Masterstvo11_Conditions()
-    if ( not ( GetResearched() == 'R02J' ) ) then
+    if ( not ( GetResearched() == FourCC('R02J') ) ) then
         return false
     end
     return true
 end
 function Trig_Masterstvo11_Actions()
-    SetPlayerTechMaxAllowedSwap('R02K', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R02K'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Masterstvo11()
@@ -39234,13 +39234,13 @@ end
 -- Trigger: Masterstvo12
 --===========================================================================
 function Trig_Masterstvo12_Conditions()
-    if ( not ( GetResearched() == 'R02J' ) ) then
+    if ( not ( GetResearched() == FourCC('R02J') ) ) then
         return false
     end
     return true
 end
 function Trig_Masterstvo12_Actions()
-    SetPlayerTechMaxAllowedSwap('R02K', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R02K'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Masterstvo12()
@@ -39253,13 +39253,13 @@ end
 -- Trigger: Slomlen Copy
 --===========================================================================
 function Trig_Slomlen_Copy_Conditions()
-    if ( not ( GetResearched() == 'R02K' ) ) then
+    if ( not ( GetResearched() == FourCC('R02K') ) ) then
         return false
     end
     return true
 end
 function Trig_Slomlen_Copy_Actions()
-    SetPlayerTechMaxAllowedSwap('R02J', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R02J'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Slomlen_Copy()
@@ -39273,13 +39273,13 @@ end
 -- Trigger: Slomlen2 Copy
 --===========================================================================
 function Trig_Slomlen2_Copy_Conditions()
-    if ( not ( GetResearched() == 'R02K' ) ) then
+    if ( not ( GetResearched() == FourCC('R02K') ) ) then
         return false
     end
     return true
 end
 function Trig_Slomlen2_Copy_Actions()
-    SetPlayerTechMaxAllowedSwap('R02J', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R02J'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Slomlen2_Copy()
@@ -39292,7 +39292,7 @@ end
 -- Trigger: Auto hil
 --===========================================================================
 function Trig_Auto_hil_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A04Y' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A04Y') ) ) then
         return false
     end
     return true
@@ -39311,7 +39311,7 @@ end
 -- Trigger: Auto hil Copy
 --===========================================================================
 function Trig_Auto_hil_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A050' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A050') ) ) then
         return false
     end
     return true
@@ -39330,17 +39330,17 @@ end
 -- Trigger: Draenei Build Abill
 --===========================================================================
 function Trig_Draenei_Build_Abill_Conditions()
-    return GetUnitAbilityLevel(GetConstructingStructure(), 'A0Z3') > 0
+    return GetUnitAbilityLevel(GetConstructingStructure(), FourCC('A0Z3')) > 0
 end
 function Trig_Draenei_Build_Abill_Actions()
     local u= GetConstructingStructure()
     --call BJDebugMsg("2")
-    if Random(1 , 2) and GetPlayerTechCount(GetOwningPlayer(u), 'R0EB', true) > 0 then
+    if Random(1 , 2) and GetPlayerTechCount(GetOwningPlayer(u), FourCC('R0EB'), true) > 0 then
         TriggerSleepAction(0)
         SetBuildingProgressTimed(u , 20 , 0)
         --call BJDebugMsg("3")
     end
-    UnitRemoveAbility(u, 'A0Z3')
+    UnitRemoveAbility(u, FourCC('A0Z3'))
     u=null
 end
 --===========================================================================
@@ -39354,13 +39354,13 @@ end
 -- Trigger: flot1
 --===========================================================================
 function Trig_flot1_Conditions()
-    if ( not ( GetResearched() == 'R027' ) ) then
+    if ( not ( GetResearched() == FourCC('R027') ) ) then
         return false
     end
     return true
 end
 function Trig_flot1_Actions()
-    SetPlayerTechMaxAllowedSwap('R02S', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R02S'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_flot1()
@@ -39374,13 +39374,13 @@ end
 -- Trigger: flot2
 --===========================================================================
 function Trig_flot2_Conditions()
-    if ( not ( GetResearched() == 'R027' ) ) then
+    if ( not ( GetResearched() == FourCC('R027') ) ) then
         return false
     end
     return true
 end
 function Trig_flot2_Actions()
-    SetPlayerTechMaxAllowedSwap('R02S', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R02S'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_flot2()
@@ -39393,13 +39393,13 @@ end
 -- Trigger: arm1
 --===========================================================================
 function Trig_arm1_Conditions()
-    if ( not ( GetResearched() == 'R02S' ) ) then
+    if ( not ( GetResearched() == FourCC('R02S') ) ) then
         return false
     end
     return true
 end
 function Trig_arm1_Actions()
-    SetPlayerTechMaxAllowedSwap('R027', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R027'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_arm1()
@@ -39413,13 +39413,13 @@ end
 -- Trigger: arm2
 --===========================================================================
 function Trig_arm2_Conditions()
-    if ( not ( GetResearched() == 'R02S' ) ) then
+    if ( not ( GetResearched() == FourCC('R02S') ) ) then
         return false
     end
     return true
 end
 function Trig_arm2_Actions()
-    SetPlayerTechMaxAllowedSwap('R027', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R027'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_arm2()
@@ -39432,7 +39432,7 @@ end
 -- Trigger: Auto pohichenie Copy
 --===========================================================================
 function Trig_Auto_pohichenie_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A031' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A031') ) ) then
         return false
     end
     return true
@@ -39470,14 +39470,14 @@ end
 -- Trigger: flot1 Copy 2
 --===========================================================================
 function Trig_flot1_Copy_2_Conditions()
-    if ( not ( GetResearched() == 'R099' ) ) then
+    if ( not ( GetResearched() == FourCC('R099') ) ) then
         return false
     end
     return true
 end
 function Trig_flot1_Copy_2_Actions()
-    SetPlayerTechMaxAllowedSwap('R09A', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R09B', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R09A'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R09B'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_flot1_Copy_2()
@@ -39491,14 +39491,14 @@ end
 -- Trigger: flot2 Copy 2
 --===========================================================================
 function Trig_flot2_Copy_2_Conditions()
-    if ( not ( GetResearched() == 'R099' ) ) then
+    if ( not ( GetResearched() == FourCC('R099') ) ) then
         return false
     end
     return true
 end
 function Trig_flot2_Copy_2_Actions()
-    SetPlayerTechMaxAllowedSwap('R09A', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R09B', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R09A'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R09B'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_flot2_Copy_2()
@@ -39511,14 +39511,14 @@ end
 -- Trigger: arm1 Copy 2
 --===========================================================================
 function Trig_arm1_Copy_2_Conditions()
-    if ( not ( GetResearched() == 'R09A' ) ) then
+    if ( not ( GetResearched() == FourCC('R09A') ) ) then
         return false
     end
     return true
 end
 function Trig_arm1_Copy_2_Actions()
-    SetPlayerTechMaxAllowedSwap('R099', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R09B', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R099'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R09B'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_arm1_Copy_2()
@@ -39532,14 +39532,14 @@ end
 -- Trigger: arm2 Copy 2
 --===========================================================================
 function Trig_arm2_Copy_2_Conditions()
-    if ( not ( GetResearched() == 'R09A' ) ) then
+    if ( not ( GetResearched() == FourCC('R09A') ) ) then
         return false
     end
     return true
 end
 function Trig_arm2_Copy_2_Actions()
-    SetPlayerTechMaxAllowedSwap('R099', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R09B', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R099'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R09B'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_arm2_Copy_2()
@@ -39552,14 +39552,14 @@ end
 -- Trigger: arm1 Copy 2 Copy
 --===========================================================================
 function Trig_arm1_Copy_2_Copy_Conditions()
-    if ( not ( GetResearched() == 'R09B' ) ) then
+    if ( not ( GetResearched() == FourCC('R09B') ) ) then
         return false
     end
     return true
 end
 function Trig_arm1_Copy_2_Copy_Actions()
-    SetPlayerTechMaxAllowedSwap('R099', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R09A', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R099'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R09A'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_arm1_Copy_2_Copy()
@@ -39573,14 +39573,14 @@ end
 -- Trigger: arm2 Copy 2 Copy
 --===========================================================================
 function Trig_arm2_Copy_2_Copy_Conditions()
-    if ( not ( GetResearched() == 'R09B' ) ) then
+    if ( not ( GetResearched() == FourCC('R09B') ) ) then
         return false
     end
     return true
 end
 function Trig_arm2_Copy_2_Copy_Actions()
-    SetPlayerTechMaxAllowedSwap('R099', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('R09A', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R099'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R09A'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_arm2_Copy_2_Copy()
@@ -39593,7 +39593,7 @@ end
 -- Trigger: EnemyPower
 --===========================================================================
 function Trig_EnemyPower_Conditions()
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A0O5') > 0 and GetPlayerTechCount(GetOwningPlayer(GetEventDamageSource()), 'R096', true) > 0
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A0O5')) > 0 and GetPlayerTechCount(GetOwningPlayer(GetEventDamageSource()), FourCC('R096'), true) > 0
 end
 function Trig_EnemyPower_Actions()
     --call SetUnitState(GetEventDamageSource(),UNIT_STATE_LIFE,
@@ -39616,7 +39616,7 @@ end
 -- Trigger: AutoStrelaFireIlly
 --===========================================================================
 function Trig_AutoStrelaFireIlly_Conditions()
-    return GetSpellAbilityId() == 'A1KL'
+    return GetSpellAbilityId() == FourCC('A1KL')
 end
 function Trig_AutoStrelaFireIlly_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "firebolt", GetSpellTargetUnit())
@@ -39633,7 +39633,7 @@ end
 -- Trigger: AutoStrelaFelllly
 --===========================================================================
 function Trig_AutoStrelaFelllly_Conditions()
-    return GetSpellAbilityId() == 'A1KO'
+    return GetSpellAbilityId() == FourCC('A1KO')
 end
 function Trig_AutoStrelaFelllly_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "acidbomb", GetSpellTargetUnit())
@@ -39650,63 +39650,63 @@ end
 -- Trigger: IllyFire
 --===========================================================================
 function Trig_IllyFire_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0NJ' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0NJ') ) ) then
         return false
     end
     return true
 end
 function Trig_IllyFire_Func001Func001Func002Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A0NJ', GetTriggerUnit()) == 4 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0NJ'), GetTriggerUnit()) == 4 ) ) then
         return false
     end
     return true
 end
 function Trig_IllyFire_Func001Func001Func002C()
-    if ( not ( GetUnitAbilityLevelSwapped('A0NJ', GetTriggerUnit()) == 3 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0NJ'), GetTriggerUnit()) == 3 ) ) then
         return false
     end
     return true
 end
 function Trig_IllyFire_Func001Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A0NJ', GetTriggerUnit()) == 2 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0NJ'), GetTriggerUnit()) == 2 ) ) then
         return false
     end
     return true
 end
 function Trig_IllyFire_Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A0NJ', GetTriggerUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0NJ'), GetTriggerUnit()) == 1 ) ) then
         return false
     end
     return true
 end
 function Trig_IllyFire_Actions()
     if ( Trig_IllyFire_Func001C() ) then
-        UnitAddAbilityBJ('A0NO', GetTriggerUnit())
-        UnitAddAbilityBJ('A0NM', GetTriggerUnit())
+        UnitAddAbilityBJ(FourCC('A0NO'), GetTriggerUnit())
+        UnitAddAbilityBJ(FourCC('A0NM'), GetTriggerUnit())
         TriggerSleepAction(15.00)
-        UnitRemoveAbilityBJ('A0NO', GetTriggerUnit())
-        UnitRemoveAbilityBJ('A0NM', GetTriggerUnit())
+        UnitRemoveAbilityBJ(FourCC('A0NO'), GetTriggerUnit())
+        UnitRemoveAbilityBJ(FourCC('A0NM'), GetTriggerUnit())
     else
         if ( Trig_IllyFire_Func001Func001C() ) then
-            UnitAddAbilityBJ('A0NP', GetTriggerUnit())
-            UnitAddAbilityBJ('A0NK', GetTriggerUnit())
+            UnitAddAbilityBJ(FourCC('A0NP'), GetTriggerUnit())
+            UnitAddAbilityBJ(FourCC('A0NK'), GetTriggerUnit())
             TriggerSleepAction(15.00)
-            UnitRemoveAbilityBJ('A0NP', GetTriggerUnit())
-            UnitRemoveAbilityBJ('A0NK', GetTriggerUnit())
+            UnitRemoveAbilityBJ(FourCC('A0NP'), GetTriggerUnit())
+            UnitRemoveAbilityBJ(FourCC('A0NK'), GetTriggerUnit())
         else
             if ( Trig_IllyFire_Func001Func001Func002C() ) then
-                UnitAddAbilityBJ('A0NR', GetTriggerUnit())
-                UnitAddAbilityBJ('A0NL', GetTriggerUnit())
+                UnitAddAbilityBJ(FourCC('A0NR'), GetTriggerUnit())
+                UnitAddAbilityBJ(FourCC('A0NL'), GetTriggerUnit())
                 TriggerSleepAction(15.00)
-                UnitRemoveAbilityBJ('A0NR', GetTriggerUnit())
-                UnitRemoveAbilityBJ('A0NL', GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A0NR'), GetTriggerUnit())
+                UnitRemoveAbilityBJ(FourCC('A0NL'), GetTriggerUnit())
             else
                 if ( Trig_IllyFire_Func001Func001Func002Func001C() ) then
-                    UnitAddAbilityBJ('A0NQ', GetTriggerUnit())
-                    UnitAddAbilityBJ('A0NN', GetTriggerUnit())
+                    UnitAddAbilityBJ(FourCC('A0NQ'), GetTriggerUnit())
+                    UnitAddAbilityBJ(FourCC('A0NN'), GetTriggerUnit())
                     TriggerSleepAction(15.00)
-                    UnitRemoveAbilityBJ('A0NQ', GetTriggerUnit())
-                    UnitRemoveAbilityBJ('A0NN', GetTriggerUnit())
+                    UnitRemoveAbilityBJ(FourCC('A0NQ'), GetTriggerUnit())
+                    UnitRemoveAbilityBJ(FourCC('A0NN'), GetTriggerUnit())
                 else
                 end
             end
@@ -39725,13 +39725,13 @@ end
 -- Trigger: IllyAgile
 --===========================================================================
 function Trig_IllyAgile_Conditions()
-    return GetSpellAbilityId() == 'A0NH'
+    return GetSpellAbilityId() == FourCC('A0NH')
 end
 function Trig_IllyAgile_Actions()
     
     local u= GetTriggerUnit()
-    UnitAddAbility(u, 'A0NI')
-    RemoveAbilityTimed(u , 'A0NI' , 20)
+    UnitAddAbility(u, FourCC('A0NI'))
+    RemoveAbilityTimed(u , FourCC('A0NI') , 20)
     u=null
     
     
@@ -39748,12 +39748,12 @@ end
 -- Trigger: IllyPain
 --===========================================================================
 function Trig_IllyPain_Conditions()
-    return GetSpellAbilityId() == 'A0NU'
+    return GetSpellAbilityId() == FourCC('A0NU')
 end
 function Trig_IllyPain_Actions()
     local u= GetTriggerUnit()
-    UnitAddAbility(u, 'A0NT')
-    RemoveAbilityTimed(u , 'A0NT' , 20)
+    UnitAddAbility(u, FourCC('A0NT'))
+    RemoveAbilityTimed(u , FourCC('A0NT') , 20)
     u=null
 end
 --===========================================================================
@@ -39768,12 +39768,12 @@ end
 -- Trigger: IlliKnives
 --===========================================================================
 function Trig_IlliKnives_Conditions()
-    return GetSpellAbilityId() == 'A0NV'
+    return GetSpellAbilityId() == FourCC('A0NV')
 end
 function Trig_IlliKnives_Actions()
     local u= GetTriggerUnit()
-    UnitAddAbility(u, 'A0NY')
-    RemoveAbilityTimed(u , 'A0NY' , 20)
+    UnitAddAbility(u, FourCC('A0NY'))
+    RemoveAbilityTimed(u , FourCC('A0NY') , 20)
     u=null
 end
 --===========================================================================
@@ -39788,7 +39788,7 @@ end
 -- Trigger: RuvokAutoIlly
 --===========================================================================
 function Trig_RuvokAutoIlly_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A048' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A048') ) ) then
         return false
     end
     return true
@@ -39808,7 +39808,7 @@ end
 -- Trigger: SandStrike
 --===========================================================================
 function Trig_SandStrike_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0NF' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0NF') ) ) then
         return false
     end
     return true
@@ -39830,10 +39830,10 @@ function Trig_SandStrike_Actions()
     SetUnitPathing(udg_SScaster[udg_SSinteger[1]], false)
     udg_SSfacing[udg_SSinteger[1]]=GetUnitFacing(udg_SScaster[udg_SSinteger[1]])
     udg_SSpointcaster[udg_SSinteger[1]]=GetUnitLoc(udg_SScaster[udg_SSinteger[1]])
-    udg_SSdamage[udg_SSinteger[1]]=( 5.00 + I2R(GetUnitAbilityLevelSwapped('A0NF', udg_SScaster[udg_SSinteger[1]])) )
+    udg_SSdamage[udg_SSinteger[1]]=( 5.00 + I2R(GetUnitAbilityLevelSwapped(FourCC('A0NF'), udg_SScaster[udg_SSinteger[1]])) )
     udg_SStargetpoint[udg_SSinteger[1]]=GetSpellTargetLoc()
     udg_SSeffect[udg_SSinteger[1]]="AbilitiesWeaponsAncientProtectorMissileAncientProtectorMissile.mdl"
-    udg_SS[udg_SSinteger[1]]=( GetUnitAbilityLevelSwapped('A0NF', udg_SScaster[udg_SSinteger[1]]) + 30 )
+    udg_SS[udg_SSinteger[1]]=( GetUnitAbilityLevelSwapped(FourCC('A0NF'), udg_SScaster[udg_SSinteger[1]]) + 30 )
     PauseUnitBJ(true, GetTriggerUnit())
     RemoveLocation(udg_SSpointcaster[udg_SSinteger[1]])
     RemoveLocation(udg_SStargetpoint[udg_SSinteger[1]])
@@ -39946,7 +39946,7 @@ end
 -- Trigger: InitLimitsVryculls
 --===========================================================================
 function Trig_InitLimitsVryculls_Func001A()
-    SetPlayerTechMaxAllowed(GetEnumPlayer(), 'wk01', 0)
+    SetPlayerTechMaxAllowed(GetEnumPlayer(), FourCC('wk01'), 0)
 end
 function Trig_InitLimitsVryculls_Actions()
     ForForce(udg_AllPlayers, Trig_InitLimitsVryculls_Func001A)
@@ -39965,13 +39965,13 @@ end
     --return i<= Chance
 --endfunction
 function Trig_Raiders_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == 'h0AE' and Random(1 , 5)
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('h0AE') and Random(1 , 5)
 end
 function Trig_Raiders_Actions()
     if Random(1 , 2) then
-        CreateUnit(GetOwningPlayer(GetTriggerUnit()), 'wk00', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 0.0)
+        CreateUnit(GetOwningPlayer(GetTriggerUnit()), FourCC('wk00'), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 0.0)
     else
-        CreateUnit(GetOwningPlayer(GetTriggerUnit()), 'wk02', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 0.0)
+        CreateUnit(GetOwningPlayer(GetTriggerUnit()), FourCC('wk02'), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 0.0)
     end
 end
 --===========================================================================
@@ -39985,13 +39985,13 @@ end
 -- Trigger: km
 --===========================================================================
 function Trig_km_Conditions()
-    if ( not ( GetResearched() == 'R067' ) ) then
+    if ( not ( GetResearched() == FourCC('R067') ) ) then
         return false
     end
     return true
 end
 function Trig_km_Actions()
-    SetPlayerTechMaxAllowedSwap('R068', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R068'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_km()
@@ -40005,13 +40005,13 @@ end
 -- Trigger: km2
 --===========================================================================
 function Trig_km2_Conditions()
-    if ( not ( GetResearched() == 'R067' ) ) then
+    if ( not ( GetResearched() == FourCC('R067') ) ) then
         return false
     end
     return true
 end
 function Trig_km2_Actions()
-    SetPlayerTechMaxAllowedSwap('R068', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R068'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_km2()
@@ -40024,13 +40024,13 @@ end
 -- Trigger: Titan
 --===========================================================================
 function Trig_Titan_Conditions()
-    if ( not ( GetResearched() == 'R068' ) ) then
+    if ( not ( GetResearched() == FourCC('R068') ) ) then
         return false
     end
     return true
 end
 function Trig_Titan_Actions()
-    SetPlayerTechMaxAllowedSwap('R067', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R067'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Titan()
@@ -40044,13 +40044,13 @@ end
 -- Trigger: Titan2
 --===========================================================================
 function Trig_Titan2_Conditions()
-    if ( not ( GetResearched() == 'R068' ) ) then
+    if ( not ( GetResearched() == FourCC('R068') ) ) then
         return false
     end
     return true
 end
 function Trig_Titan2_Actions()
-    SetPlayerTechMaxAllowedSwap('R067', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R067'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Titan2()
@@ -40063,11 +40063,11 @@ end
 -- Trigger: IzeraSpell
 --===========================================================================
 function Trig_IzeraSpell_Conditions()
-    return GetSpellAbilityId() == 'A1MX'
+    return GetSpellAbilityId() == FourCC('A1MX')
 end
 function Trig_IzeraSpell_Actions()
    -- call BJDebugMsg("")
-    MassSpell(GetTriggerUnit() , GetSpellAbilityId() , 'A1MW' , "firebolt" , null , 1000 , 1 , false)
+    MassSpell(GetTriggerUnit() , GetSpellAbilityId() , FourCC('A1MW') , "firebolt" , null , 1000 , 1 , false)
 end
 --===========================================================================
 function InitTrig_IzeraSpell()
@@ -40080,15 +40080,15 @@ end
 -- Trigger: Navodnenie
 --===========================================================================
 function Trig_Navodnenie_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0R8' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0R8') ) ) then
         return false
     end
     return true
 end
 function Trig_Navodnenie_Actions()
-    UnitAddAbilityBJ('A0R9', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0R9'), GetTriggerUnit())
     TriggerSleepAction(25.00)
-    UnitRemoveAbilityBJ('A0R9', GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0R9'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_Navodnenie()
@@ -40102,7 +40102,7 @@ end
 -- Trigger: PoleAstralaDragons
 --===========================================================================
 function Trig_PoleAstralaDragons_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0QV' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0QV') ) ) then
         return false
     end
     return true
@@ -40112,13 +40112,13 @@ function Trig_PoleAstralaDragons_Func003002()
 end
 function Trig_PoleAstralaDragons_Func005A()
     local u
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
-    UnitAddAbilityBJ('AHbn', GetLastCreatedUnit())
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
+    UnitAddAbilityBJ(FourCC('AHbn'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped('AHbn', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A08R', GetTriggerUnit()))
+    SetUnitAbilityLevelSwapped(FourCC('AHbn'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A08R'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
     u=udg_LocalUnit[1]
-    UnitApplyTimedLife(u, 'BTLF', 2)
+    UnitApplyTimedLife(u, FourCC('BTLF'), 2)
     u=null
 end
 function Trig_PoleAstralaDragons_Actions()
@@ -40141,7 +40141,7 @@ end
 -- Trigger: Dark Dragon
 --===========================================================================
 function Trig_Dark_Dragon_Func001A()
-    SetPlayerTechMaxAllowedSwap('n03O', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n03O'), 0, GetEnumPlayer())
 end
 function Trig_Dark_Dragon_Actions()
     ForForce(udg_AllPlayers, Trig_Dark_Dragon_Func001A)
@@ -40156,7 +40156,7 @@ end
 -- Trigger: Old Dark Dragon
 --===========================================================================
 function Trig_Old_Dark_Dragon_Func001A()
-    SetPlayerTechMaxAllowedSwap('n03P', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('n03P'), 0, GetEnumPlayer())
 end
 function Trig_Old_Dark_Dragon_Actions()
     ForForce(udg_AllPlayers, Trig_Old_Dark_Dragon_Func001A)
@@ -40171,7 +40171,7 @@ end
 -- Trigger: FlyDragon
 --===========================================================================
 function Trig_FlyDragon_Conditions()
-    return GetSpellAbilityId() == 'drA2'
+    return GetSpellAbilityId() == FourCC('drA2')
 end
 --================
 function Trig_Charge_move_heroD()
@@ -40214,7 +40214,7 @@ function Trig_Charge_move_heroD()
         SetUnitFlyHeight(GT, fl + w, 0)
         
     else
-        UnitRemoveAbility(GT, 'A16S') -- Дебафф брони
+        UnitRemoveAbility(GT, FourCC('A16S')) -- Дебафф брони
         DestroyEffect(LoadEffectHandle(Hash, h, 6))
         DestroyTimer(t)
         FlushChildHashtable(Hash, h)
@@ -40254,10 +40254,10 @@ function Trig_FlyDragon_Actions()
     local l= JSTRRastMT(x , x1 , y , y1)
     
     JSTRSkill=GetSpellAbilityId()
-    UnitAddAbility(GT, 'Amrf')
-    UnitAddAbility(GT, 'A16S') -- Дебафф брони
+    UnitAddAbility(GT, FourCC('Amrf'))
+    UnitAddAbility(GT, FourCC('A16S')) -- Дебафф брони
     
-    UnitRemoveAbility(GT, 'Amrf')
+    UnitRemoveAbility(GT, FourCC('Amrf'))
     ---------
     SaveUnitHandle(Hash, h, 1, GT)
     if l ~= 0 then
@@ -40286,13 +40286,13 @@ end
 -- Trigger: DragonUnionStart
 --===========================================================================
 function Trig_DragonUnionStart_Conditions()
-    return GetSpellAbilityId() == 'A1MZ'
+    return GetSpellAbilityId() == FourCC('A1MZ')
 end
 function Trig_DragonUnionStart_Actions()
     gPlayer=GetOwningPlayer(GetTriggerUnit())
-    SetPlayerTechMaxAllowed(gPlayer, 'n044', 0)
-    SetPlayerTechMaxAllowed(gPlayer, 'R0A7', 0)
-    SetPlayerTechMaxAllowed(gPlayer, 'R0AZ', 0)
+    SetPlayerTechMaxAllowed(gPlayer, FourCC('n044'), 0)
+    SetPlayerTechMaxAllowed(gPlayer, FourCC('R0A7'), 0)
+    SetPlayerTechMaxAllowed(gPlayer, FourCC('R0AZ'), 0)
 end
 --===========================================================================
 function InitTrig_DragonUnionStart()
@@ -40305,7 +40305,7 @@ end
 -- Trigger: GreenAutoAstral
 --===========================================================================
 function Trig_GreenAutoAstral_Conditions()
-    return GetSpellAbilityId() == 'drAe'
+    return GetSpellAbilityId() == FourCC('drAe')
 end
 function Trig_GreenAutoAstral_Actions()
     IssueTargetOrder(GetTriggerUnit(), "banish", GetSpellTargetUnit())
@@ -40321,7 +40321,7 @@ end
 -- Trigger: TrainGreenPhase
 --===========================================================================
 function Trig_TrainGreenPhase_Conditions()
-    return GetUnitAbilityLevel(GetTrainedUnit(), 'drAw') > 0
+    return GetUnitAbilityLevel(GetTrainedUnit(), FourCC('drAw')) > 0
 end
 function Trig_TrainGreenPhase_Actions()
     IssueImmediateOrder(GetTrainedUnit(), "phaseshifton")
@@ -40337,7 +40337,7 @@ end
 -- Trigger: TrainGreenSpellSteal
 --===========================================================================
 function Trig_TrainGreenSpellSteal_Conditions()
-    return GetUnitAbilityLevel(GetTrainedUnit(), 'A0RM') > 0
+    return GetUnitAbilityLevel(GetTrainedUnit(), FourCC('A0RM')) > 0
 end
 function Trig_TrainGreenSpellSteal_Actions()
     IssueImmediateOrder(GetTrainedUnit(), "spellstealon")
@@ -40353,14 +40353,14 @@ end
 -- Trigger: Blood1 Copy 3
 --===========================================================================
 function Trig_Blood1_Copy_3_Conditions()
-    if ( not ( GetResearched() == 'R08H' ) ) then
+    if ( not ( GetResearched() == FourCC('R08H') ) ) then
         return false
     end
     return true
 end
 function Trig_Blood1_Copy_3_Actions()
-    SetPlayerTechMaxAllowedSwap('n026', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), 'n02D', - 1)
+    SetPlayerTechMaxAllowedSwap(FourCC('n026'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), FourCC('n02D'), - 1)
 end
 --===========================================================================
 function InitTrig_Blood1_Copy_3()
@@ -40373,14 +40373,14 @@ end
 -- Trigger: Blood Copy
 --===========================================================================
 function Trig_Blood_Copy_Conditions()
-    if ( not ( GetResearched() == 'R004' ) ) then
+    if ( not ( GetResearched() == FourCC('R004') ) ) then
         return false
     end
     return true
 end
 function Trig_Blood_Copy_Actions()
-    SetPlayerTechMaxAllowedSwap('n025', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), 'n026', - 1) --кровавый палач
+    SetPlayerTechMaxAllowedSwap(FourCC('n025'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), FourCC('n026'), - 1) --кровавый палач
 end
 --===========================================================================
 function InitTrig_Blood_Copy()
@@ -40393,14 +40393,14 @@ end
 -- Trigger: Blood2 Copy
 --===========================================================================
 function Trig_Blood2_Copy_Conditions()
-    if ( not ( GetResearched() == 'R08I' ) ) then
+    if ( not ( GetResearched() == FourCC('R08I') ) ) then
         return false
     end
     return true
 end
 function Trig_Blood2_Copy_Actions()
-    SetPlayerTechMaxAllowedSwap('n02D', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), 'n02E', - 1)
+    SetPlayerTechMaxAllowedSwap(FourCC('n02D'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), FourCC('n02E'), - 1)
 end
 --===========================================================================
 function InitTrig_Blood2_Copy()
@@ -40413,17 +40413,17 @@ end
 -- Trigger: Безымянный триггер 001 Copy 5
 --===========================================================================
 function Trig_____________________________________001_Copy_5_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0N6' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0N6') ) ) then
         return false
     end
     return true
 end
 function Trig_____________________________________001_Copy_5_Actions()
-    UnitRemoveAbilityBJ('A0N7', GetTriggerUnit())
-    UnitAddAbilityBJ('A0N8', GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0N7'), GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0N8'), GetTriggerUnit())
     TriggerSleepAction(20.00)
-    UnitRemoveAbilityBJ('A0N8', GetTriggerUnit())
-    UnitAddAbilityBJ('A0N7', GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0N8'), GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0N7'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_____________________________________001_Copy_5()
@@ -40436,15 +40436,15 @@ end
 -- Trigger: Безымянный триггер 001 Copy 2 Copy 3
 --===========================================================================
 function Trig_____________________________________001_Copy_2_Copy_3_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0NB' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0NB') ) ) then
         return false
     end
     return true
 end
 function Trig_____________________________________001_Copy_2_Copy_3_Actions()
-    UnitAddAbilityBJ('A0NC', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0NC'), GetTriggerUnit())
     TriggerSleepAction(25.00)
-    UnitRemoveAbilityBJ('A0NC', GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0NC'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_____________________________________001_Copy_2_Copy_3()
@@ -40457,10 +40457,10 @@ end
 -- Trigger: ArhiTep
 --===========================================================================
 function Trig_ArhiTep_Func001C()
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'N02G' ) ) then
+    if ( ( GetUnitTypeId(GetTrainedUnit()) == FourCC('N02G') ) ) then
         return true
     end
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == 'N02B' ) ) then
+    if ( ( GetUnitTypeId(GetTrainedUnit()) == FourCC('N02B') ) ) then
         return true
     end
     return false
@@ -40487,7 +40487,7 @@ end
 -- Trigger: Summon dummy del
 --===========================================================================
 function Trig_Summon_dummy_del_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'u018' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('u018') ) ) then
         return false
     end
     return true
@@ -40506,13 +40506,13 @@ end
 -- Trigger: Buildings
 --===========================================================================
 function Trig_Buildings_Conditions()
-    if ( not ( GetSpellAbilityId() == 'AUin' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('AUin') ) ) then
         return false
     end
     return true
 end
 function Trig_Buildings_Func010C()
-    if ( not ( GetSpellAbilityId() == 'AUin' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('AUin') ) ) then
         return false
     end
     return true
@@ -40529,7 +40529,7 @@ function Trig_Buildings_Actions()
     TriggerSleepAction(1.00)
     if ( Trig_Buildings_Func010C() ) then
         DestroyEffectBJ(udg_effect)
-        CreateNUnitsAtLoc(1, 'ndmg', GetOwningPlayer(GetTriggerUnit()), udg_Spell, bj_UNIT_FACING)
+        CreateNUnitsAtLoc(1, FourCC('ndmg'), GetOwningPlayer(GetTriggerUnit()), udg_Spell, bj_UNIT_FACING)
         TriggerSleepAction(0.20)
         AddSpecialEffectLocBJ(udg_Spell, "AbilitiesSpellsHumanFlameStrikeFlameStrikeTarget.mdl")
         udg_effect=GetLastCreatedEffectBJ()
@@ -40550,7 +40550,7 @@ end
 --===========================================================================
 function Trig_StartBuildingDEmon_Conditions()
     local id= GetUnitTypeId(GetConstructingStructure())
-    return id == 'h0DU' or id == 'h0DX' or id == 'h02C' or id == 'h0DZ' or id == 'h0DY' or id == 'h0DS' or id == 'h0DS' or id == 'h0DW' or id == 'h0E1' or id == 'h0E0' or id == 'h0DV' or id == 'h0DT'
+    return id == FourCC('h0DU') or id == FourCC('h0DX') or id == FourCC('h02C') or id == FourCC('h0DZ') or id == FourCC('h0DY') or id == FourCC('h0DS') or id == FourCC('h0DS') or id == FourCC('h0DW') or id == FourCC('h0E1') or id == FourCC('h0E0') or id == FourCC('h0DV') or id == FourCC('h0DT')
 end
 function Trig_StartBuildingDEmon_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -40571,7 +40571,7 @@ end
 --===========================================================================
 function Trig_CanselBuilding_Copy_Conditions()
     local id= GetUnitTypeId(GetTriggerUnit())
-    return id == 'h0DU' or id == 'h0DX' or id == 'h02C' or id == 'h0DZ' or id == 'h0DY' or id == 'h0DS' or id == 'h0DS' or id == 'h0DW' or id == 'h0E1' or id == 'h0E0' or id == 'h0DV' or id == 'h0DT'
+    return id == FourCC('h0DU') or id == FourCC('h0DX') or id == FourCC('h02C') or id == FourCC('h0DZ') or id == FourCC('h0DY') or id == FourCC('h0DS') or id == FourCC('h0DS') or id == FourCC('h0DW') or id == FourCC('h0E1') or id == FourCC('h0E0') or id == FourCC('h0DV') or id == FourCC('h0DT')
 end
 function Trig_CanselBuilding_Copy_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -40591,31 +40591,31 @@ end
 -- Trigger: Безымянный триггер 001 Copy
 --===========================================================================
 function Trig_____________________________________001_Copy_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A0MQ', GetAttackedUnitBJ()) >= 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0MQ'), GetAttackedUnitBJ()) >= 1 ) ) then
         return false
     end
     return true
 end
 function Trig_____________________________________001_Copy_Func004Func001Func001Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A0NC', GetAttackedUnitBJ()) == 4 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0NC'), GetAttackedUnitBJ()) == 4 ) ) then
         return false
     end
     return true
 end
 function Trig_____________________________________001_Copy_Func004Func001Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A0NC', GetAttackedUnitBJ()) == 3 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0NC'), GetAttackedUnitBJ()) == 3 ) ) then
         return false
     end
     return true
 end
 function Trig_____________________________________001_Copy_Func004Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('A0NC', GetAttackedUnitBJ()) == 2 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0NC'), GetAttackedUnitBJ()) == 2 ) ) then
         return false
     end
     return true
 end
 function Trig_____________________________________001_Copy_Func004C()
-    if ( not ( GetUnitAbilityLevelSwapped('A0NC', GetAttackedUnitBJ()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0NC'), GetAttackedUnitBJ()) == 1 ) ) then
         return false
     end
     return true
@@ -40651,13 +40651,13 @@ end
 -- Trigger: AuraStart
 --===========================================================================
 function Trig_AuraStart_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'h0DT' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h0DT') ) ) then
         return false
     end
     return true
 end
 function Trig_AuraStart_Actions()
-    UnitAddAbilityBJ('A0LU', GetTriggerUnit())
+    UnitAddAbilityBJ(FourCC('A0LU'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_AuraStart()
@@ -40670,20 +40670,20 @@ end
 -- Trigger: Pole Astrala Demons
 --===========================================================================
 function Trig_Pole_Astrala_Demons_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0N9' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0N9') ) ) then
         return false
     end
     return true
 end
 function Trig_Pole_Astrala_Demons_Func003A()
     local u
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
-    UnitAddAbilityBJ('AHbn', GetLastCreatedUnit())
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
+    UnitAddAbilityBJ(FourCC('AHbn'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped('AHbn', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A08R', GetTriggerUnit()))
+    SetUnitAbilityLevelSwapped(FourCC('AHbn'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A08R'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
     u=udg_LocalUnit[1]
-    UnitApplyTimedLife(u, 'BTLF', 2)
+    UnitApplyTimedLife(u, FourCC('BTLF'), 2)
     u=null
 end
 function Trig_Pole_Astrala_Demons_Actions()
@@ -40703,20 +40703,20 @@ end
 -- Trigger: Pole Astrala Demons Copy
 --===========================================================================
 function Trig_Pole_Astrala_Demons_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1BY' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1BY') ) ) then
         return false
     end
     return true
 end
 function Trig_Pole_Astrala_Demons_Copy_Func003A()
     local u
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
-    UnitAddAbilityBJ('AHbn', GetLastCreatedUnit())
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
+    UnitAddAbilityBJ(FourCC('AHbn'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped('AHbn', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A1BY', GetTriggerUnit()))
+    SetUnitAbilityLevelSwapped(FourCC('AHbn'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A1BY'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
     u=udg_LocalUnit[1]
-    UnitApplyTimedLife(u, 'BTLF', 2)
+    UnitApplyTimedLife(u, FourCC('BTLF'), 2)
     u=null
 end
 function Trig_Pole_Astrala_Demons_Copy_Actions()
@@ -40736,20 +40736,20 @@ end
 -- Trigger: Pole Astrala Demons Copy Copy
 --===========================================================================
 function Trig_Pole_Astrala_Demons_Copy_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1BZ' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1BZ') ) ) then
         return false
     end
     return true
 end
 function Trig_Pole_Astrala_Demons_Copy_Copy_Func003A()
     local u
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
-    UnitAddAbilityBJ('AHbn', GetLastCreatedUnit())
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
+    UnitAddAbilityBJ(FourCC('AHbn'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped('AHbn', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A08R', GetTriggerUnit()))
+    SetUnitAbilityLevelSwapped(FourCC('AHbn'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A08R'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
     u=udg_LocalUnit[1]
-    UnitApplyTimedLife(u, 'BTLF', 2)
+    UnitApplyTimedLife(u, FourCC('BTLF'), 2)
     u=null
 end
 function Trig_Pole_Astrala_Demons_Copy_Copy_Actions()
@@ -40769,20 +40769,20 @@ end
 -- Trigger: Pole Astrala Demons Copy Copy 2
 --===========================================================================
 function Trig_Pole_Astrala_Demons_Copy_Copy_2_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1C0' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1C0') ) ) then
         return false
     end
     return true
 end
 function Trig_Pole_Astrala_Demons_Copy_Copy_2_Func003A()
     local u
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
-    UnitAddAbilityBJ('AHbn', GetLastCreatedUnit())
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
+    UnitAddAbilityBJ(FourCC('AHbn'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped('AHbn', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A08R', GetTriggerUnit()))
+    SetUnitAbilityLevelSwapped(FourCC('AHbn'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A08R'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
     u=udg_LocalUnit[1]
-    UnitApplyTimedLife(u, 'BTLF', 2)
+    UnitApplyTimedLife(u, FourCC('BTLF'), 2)
     u=null
 end
 function Trig_Pole_Astrala_Demons_Copy_Copy_2_Actions()
@@ -40802,11 +40802,11 @@ end
 -- Trigger: SargerasReturnDamage
 --===========================================================================
 function Trig_SargerasReturnDamage_Conditions()
-    return GetUnitAbilityLevel(GetEventDamageSource(), 'A0MQ') > 0
+    return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A0MQ')) > 0
 end
 function Trig_SargerasReturnDamage_Actions()
     local hp_factor= 1 - GetUnitLifePercent(GetTriggerUnit())
-    local damage= GetEventDamage() * GetUnitAbilityLevel(GetEventDamageSource(), 'A0MQ') * 0.03 * ( 1 + hp_factor )
+    local damage= GetEventDamage() * GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A0MQ')) * 0.03 * ( 1 + hp_factor )
     UnitDamageTarget(GetEventDamageSource(), GetTriggerUnit(), damage, true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_DEATH, WEAPON_TYPE_WHOKNOWS)
     
 end
@@ -40821,14 +40821,14 @@ end
 -- Trigger: Blood1
 --===========================================================================
 function Trig_Blood1_Conditions()
-    if ( not ( GetResearched() == 'R08H' ) ) then
+    if ( not ( GetResearched() == FourCC('R08H') ) ) then
         return false
     end
     return true
 end
 function Trig_Blood1_Actions()
-    SetPlayerTechMaxAllowedSwap('n026', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), 'n02D', - 1)
+    SetPlayerTechMaxAllowedSwap(FourCC('n026'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), FourCC('n02D'), - 1)
 end
 --===========================================================================
 function InitTrig_Blood1()
@@ -40841,14 +40841,14 @@ end
 -- Trigger: Blood
 --===========================================================================
 function Trig_Blood_Conditions()
-    if ( not ( GetResearched() == 'R004' ) ) then
+    if ( not ( GetResearched() == FourCC('R004') ) ) then
         return false
     end
     return true
 end
 function Trig_Blood_Actions()
-    SetPlayerTechMaxAllowedSwap('n025', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), 'n026', - 1) --кровавый палач
+    SetPlayerTechMaxAllowedSwap(FourCC('n025'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), FourCC('n026'), - 1) --кровавый палач
 end
 --===========================================================================
 function InitTrig_Blood()
@@ -40861,14 +40861,14 @@ end
 -- Trigger: Blood2
 --===========================================================================
 function Trig_Blood2_Conditions()
-    if ( not ( GetResearched() == 'R08I' ) ) then
+    if ( not ( GetResearched() == FourCC('R08I') ) ) then
         return false
     end
     return true
 end
 function Trig_Blood2_Actions()
-    SetPlayerTechMaxAllowedSwap('n02D', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), 'n02E', - 1)
+    SetPlayerTechMaxAllowedSwap(FourCC('n02D'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), FourCC('n02E'), - 1)
 end
 --===========================================================================
 function InitTrig_Blood2()
@@ -40881,14 +40881,14 @@ end
 -- Trigger: Безымянный триггер 001
 --===========================================================================
 function Trig_____________________________________001_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0N6' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0N6') ) ) then
         return false
     end
     return true
 end
 function Trig_____________________________________001_Actions()
-    UnitAddAbilityBJ('A0Y9', GetTriggerUnit())
-    RemoveAbilityTimed(GetTriggerUnit() , 'A0Y9' , 20.00)
+    UnitAddAbilityBJ(FourCC('A0Y9'), GetTriggerUnit())
+    RemoveAbilityTimed(GetTriggerUnit() , FourCC('A0Y9') , 20.00)
 end
 --===========================================================================
 function InitTrig_____________________________________001()
@@ -40901,11 +40901,11 @@ end
 -- Trigger: SomeDemonSpell
 --===========================================================================
 function Trig_SomeDemonSpell_Conditions()
-    return GetSpellAbilityId() == 'A0NB'
+    return GetSpellAbilityId() == FourCC('A0NB')
 end
 function Trig_SomeDemonSpell_Actions()
-    UnitAddAbilityBJ('A0NC', GetTriggerUnit())
-    RemoveAbilityTimed(GetTriggerUnit() , 'A0NC' , 20.00)
+    UnitAddAbilityBJ(FourCC('A0NC'), GetTriggerUnit())
+    RemoveAbilityTimed(GetTriggerUnit() , FourCC('A0NC') , 20.00)
 end
 --===========================================================================
 function InitTrig_SomeDemonSpell()
@@ -40918,31 +40918,31 @@ end
 -- Trigger: Units
 --===========================================================================
 function Trig_Units_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0QN' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0QN') ) ) then
         return false
     end
     return true
 end
 function Trig_Units_Actions()
-    SetPlayerTechMaxAllowedSwap('h0F1', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07O', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n034', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07N', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07Y', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n032', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07T', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n035', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n031', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07X', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n02Z', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n033', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n02Y', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07S', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07W', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07R', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n02P', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07Q', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07Z', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0F1'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07O'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n034'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07N'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07Y'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n032'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07T'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n035'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n031'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07X'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n02Z'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n033'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n02Y'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07S'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07W'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07R'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n02P'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07Q'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07Z'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Units()
@@ -40955,28 +40955,28 @@ end
 -- Trigger: Fire
 --===========================================================================
 function Trig_Fire_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0W9' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0W9') ) ) then
         return false
     end
     return true
 end
 function Trig_Fire_Actions()
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0W9', true, true)
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0W7', true, true)
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0W8', true, true)
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0WA', true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W9'), true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W7'), true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W8'), true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0WA'), true, true)
     SetPlayerAbilityAvailableBJ(false, FourCC('A0W9'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0W7'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0W8'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0WA'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0WA'), GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('h0F1', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07O', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n034', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07N', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07Y', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n02R', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n02X', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('h0F1'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07O'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n034'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07N'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07Y'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n02R'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n02X'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Fire()
@@ -40989,27 +40989,27 @@ end
 -- Trigger: Water
 --===========================================================================
 function Trig_Water_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0W7' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0W7') ) ) then
         return false
     end
     return true
 end
 function Trig_Water_Actions()
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0W9', true, true)
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0W7', true, true)
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0W8', true, true)
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0WA', true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W9'), true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W7'), true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W8'), true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0WA'), true, true)
     SetPlayerAbilityAvailableBJ(false, FourCC('A0W9'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0W7'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0W8'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0WA'), GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n032', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07T', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n035', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n031', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07X', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n02X', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n02U', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n032'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07T'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n035'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n031'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07X'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n02X'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n02U'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Water()
@@ -41022,27 +41022,27 @@ end
 -- Trigger: Earth
 --===========================================================================
 function Trig_Earth_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0W8' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0W8') ) ) then
         return false
     end
     return true
 end
 function Trig_Earth_Actions()
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0W9', true, true)
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0W7', true, true)
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0W8', true, true)
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0WA', true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W9'), true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W7'), true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W8'), true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0WA'), true, true)
     SetPlayerAbilityAvailableBJ(false, FourCC('A0W9'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0W7'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0W8'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0WA'), GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n02Z', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n033', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n02Y', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07S', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07W', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n02X', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n02W', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n02Z'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n033'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n02Y'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07S'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07W'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n02X'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n02W'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Earth()
@@ -41055,26 +41055,26 @@ end
 -- Trigger: Wind
 --===========================================================================
 function Trig_Wind_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0WA' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0WA') ) ) then
         return false
     end
     return true
 end
 function Trig_Wind_Actions()
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0W9', true, true)
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0W7', true, true)
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0W8', true, true)
-    BlzUnitDisableAbility(GetTriggerUnit(), 'A0WA', true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W9'), true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W7'), true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W8'), true, true)
+    BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0WA'), true, true)
     SetPlayerAbilityAvailableBJ(false, FourCC('A0W9'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0W7'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0W8'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0WA'), GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07R', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n02P', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07Q', - 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n07Z', 1, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n02X', 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowedSwap('n02Q', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07R'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n02P'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07Q'), - 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n07Z'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n02X'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('n02Q'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Wind()
@@ -41087,12 +41087,12 @@ end
 -- Trigger: FireRageElem
 --===========================================================================
 function Trig_FireRageElem_Conditions()
-    return GetSpellAbilityId() == 'A0QJ'
+    return GetSpellAbilityId() == FourCC('A0QJ')
 end
 function Trig_FireRageElem_Actions()
     local u= GetTriggerUnit()
-    UnitAddAbility(u, 'A0OM')
-    RemoveAbilityTimed(u , 'A0OM' , 10)
+    UnitAddAbility(u, FourCC('A0OM'))
+    RemoveAbilityTimed(u , FourCC('A0OM') , 10)
     u=null
 end
 --===========================================================================
@@ -41106,11 +41106,11 @@ end
 -- Trigger: FireCircleElem
 --===========================================================================
 function Trig_FireCircleElem_Conditions()
-    return GetSpellAbilityId() == 'A0P7'
+    return GetSpellAbilityId() == FourCC('A0P7')
 end
 function Trig_FireCircleElem_Actions()
-    UnitAddAbility(GetTriggerUnit(), 'A0P6')
-    RemoveAbilityTimed(GetTriggerUnit() , 'A0P6' , 30)
+    UnitAddAbility(GetTriggerUnit(), FourCC('A0P6'))
+    RemoveAbilityTimed(GetTriggerUnit() , FourCC('A0P6') , 30)
 end
 --===========================================================================
 function InitTrig_FireCircleElem()
@@ -41123,11 +41123,11 @@ end
 -- Trigger: ColossalAttackElem
 --===========================================================================
 function Trig_ColossalAttackElem_Conditions()
-    return GetSpellAbilityId() == 'A0OP'
+    return GetSpellAbilityId() == FourCC('A0OP')
 end
 function Trig_ColossalAttackElem_Actions()
-    UnitAddAbility(GetTriggerUnit(), 'A0OO')
-    RemoveAbilityTimed(GetTriggerUnit() , 'A0OO' , 25)
+    UnitAddAbility(GetTriggerUnit(), FourCC('A0OO'))
+    RemoveAbilityTimed(GetTriggerUnit() , FourCC('A0OO') , 25)
 end
 --===========================================================================
 function InitTrig_ColossalAttackElem()
@@ -41142,12 +41142,12 @@ end
 -- Спелл Наводнение Нептулона
 --===========================================================================
 function Trig_MultuAttackWater_Conditions()
-    return GetSpellAbilityId() == 'A0OR'
+    return GetSpellAbilityId() == FourCC('A0OR')
 end
 function Trig_MultuAttackWater_Actions()
     local u= GetTriggerUnit()
-    UnitAddAbility(u, 'A0OS')
-    RemoveAbilityTimed(u , 'A0OS' , 10)
+    UnitAddAbility(u, FourCC('A0OS'))
+    RemoveAbilityTimed(u , FourCC('A0OS') , 10)
     u=null
 end
 --===========================================================================
@@ -41161,13 +41161,13 @@ end
 -- Trigger: gnev1
 --===========================================================================
 function Trig_gnev1_Conditions()
-    if ( not ( GetResearched() == 'R05B' ) ) then
+    if ( not ( GetResearched() == FourCC('R05B') ) ) then
         return false
     end
     return true
 end
 function Trig_gnev1_Actions()
-    SetPlayerTechMaxAllowedSwap('R05K', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R05K'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_gnev1()
@@ -41182,13 +41182,13 @@ end
 -- Trigger: necropol
 --===========================================================================
 function Trig_necropol_Conditions()
-    if ( not ( GetResearched() == 'R05K' ) ) then
+    if ( not ( GetResearched() == FourCC('R05K') ) ) then
         return false
     end
     return true
 end
 function Trig_necropol_Actions()
-    SetPlayerTechMaxAllowedSwap('R05B', 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R05B'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_necropol()
@@ -41203,13 +41203,13 @@ end
 -- Trigger: gnev2
 --===========================================================================
 function Trig_gnev2_Conditions()
-    if ( not ( GetResearched() == 'R05B' ) ) then
+    if ( not ( GetResearched() == FourCC('R05B') ) ) then
         return false
     end
     return true
 end
 function Trig_gnev2_Actions()
-    SetPlayerTechMaxAllowedSwap('R05K', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R05K'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_gnev2()
@@ -41223,13 +41223,13 @@ end
 -- Trigger: necropol2
 --===========================================================================
 function Trig_necropol2_Conditions()
-    if ( not ( GetResearched() == 'R05K' ) ) then
+    if ( not ( GetResearched() == FourCC('R05K') ) ) then
         return false
     end
     return true
 end
 function Trig_necropol2_Actions()
-    SetPlayerTechMaxAllowedSwap('R05B', 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R05B'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_necropol2()
@@ -41267,9 +41267,9 @@ end
 -- Trigger: UndeadStart
 --===========================================================================
 function Trig_UndeadStart_Func001A()
-    SetPlayerTechMaxAllowedSwap('U030', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('FL00', 1, GetEnumPlayer())
-    SetPlayerTechMaxAllowedSwap('CM00', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('U030'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('FL00'), 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('CM00'), 1, GetEnumPlayer())
 end
 function Trig_UndeadStart_Actions()
     ForForce(udg_AllPlayers, Trig_UndeadStart_Func001A)
@@ -41284,7 +41284,7 @@ end
 -- Trigger: SummonSkeleltClad
 --===========================================================================
 function Trig_SummonSkeleltClad_Conditions()
-    return GetUnitTypeId(GetSummoningUnit()) == 'u00L'
+    return GetUnitTypeId(GetSummoningUnit()) == FourCC('u00L')
 end
 function Trig_SummonSkeleltClad_Actions()
     gLoc=GetUnitRallyPoint(GetSummoningUnit())
@@ -41302,10 +41302,10 @@ end
 -- Trigger: SpellShieldDK
 --===========================================================================
 function Trig_SpellShieldDK_Conditions()
-    return GetSpellAbilityId() == 'A1ND'
+    return GetSpellAbilityId() == FourCC('A1ND')
 end
 function Trig_SpellShieldDK_Actions()
-    DummyCastTarget('A0CG' , "antimagicshell" , GetTriggerUnit() , GetTriggerUnit())
+    DummyCastTarget(FourCC('A0CG') , "antimagicshell" , GetTriggerUnit() , GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_SpellShieldDK()
@@ -41318,7 +41318,7 @@ end
 -- Trigger: TowersEcFix
 --===========================================================================
 function Trig_TowersEcFix_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == 'u00J' or GetUnitTypeId(GetTriggerUnit()) == 'u00I'
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('u00J') or GetUnitTypeId(GetTriggerUnit()) == FourCC('u00I')
 end
 function Trig_TowersEcFix_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -41337,7 +41337,7 @@ end
 -- Trigger: DK Blood Auto Attack
 --===========================================================================
 function Trig_DK_Blood_Auto_Attack_Conditions()
-    return ( GetUnitAbilityLevel(GetAttacker(), 'A0CA') > 0 or GetUnitAbilityLevel(GetAttacker(), 'A0CC') > 0 ) and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker())) and Random(1 , 20)
+    return ( GetUnitAbilityLevel(GetAttacker(), FourCC('A0CA')) > 0 or GetUnitAbilityLevel(GetAttacker(), FourCC('A0CC')) > 0 ) and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker())) and Random(1 , 20)
 end
 function Trig_DK_Blood_Auto_Attack_Actions()
     IssueTargetOrder(GetAttacker(), "thunderbolt", GetTriggerUnit())
@@ -41354,7 +41354,7 @@ end
 -- Trigger: TryToBurrow
 --===========================================================================
 function Trig_TryToBurrow_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'A1N8') > 0 and GetUnitLifePercent(GetTriggerUnit()) <= 18
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1N8')) > 0 and GetUnitLifePercent(GetTriggerUnit()) <= 18
 end
 function Trig_TryToBurrow_Actions()
    
@@ -41372,12 +41372,12 @@ end
 -- Trigger: ArthasResurrection
 --===========================================================================
 function Trig_ArthasResurrection_Conditions()
-    return GetUnitAbilityLevel(GetKillingUnit(), 'A0WB') >= 1
+    return GetUnitAbilityLevel(GetKillingUnit(), FourCC('A0WB')) >= 1
 end
 function Trig_ArthasResurrection_Actions()
    -- call DummyCastImmedate('A0WC',"animatedead",GetTriggerUnit())
    
-    DummyCastImmedateOnTarget('A0WC' , "animatedead" , GetKillingUnit() , GetTriggerUnit())
+    DummyCastImmedateOnTarget(FourCC('A0WC') , "animatedead" , GetKillingUnit() , GetTriggerUnit())
 --    local unit u
 --    
 --    
@@ -41405,7 +41405,7 @@ end
 -- Trigger: ArthasCoils
 --===========================================================================
 function Trig_ArthasCoils_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0WD' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0WD') ) ) then
         return false
     end
     return true
@@ -41414,12 +41414,12 @@ function Trig_ArthasCoils_Func002002()
     return ( 0 == 0 )
 end
 function Trig_ArthasCoils_Func007A()
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     udg_LocalUnit2=GetLastCreatedUnit()
     TriggerExecute(gg_trg_ToKill2)
-    UnitAddAbilityBJ('AUdc', GetLastCreatedUnit())
+    UnitAddAbilityBJ(FourCC('AUdc'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped('AUdc', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A0WD', GetTriggerUnit()))
+    SetUnitAbilityLevelSwapped(FourCC('AUdc'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A0WD'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetLastCreatedUnit(), "deathcoil", GetEnumUnit())
 end
 function Trig_ArthasCoils_Actions()
@@ -41444,7 +41444,7 @@ end
 -- Trigger: ArthasNova
 --===========================================================================
 function Trig_ArthasNova_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A0WE' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0WE') ) ) then
         return false
     end
     return true
@@ -41453,12 +41453,12 @@ function Trig_ArthasNova_Func002002()
     return ( 0 == 0 )
 end
 function Trig_ArthasNova_Func007A()
-    CreateNUnitsAtLoc(1, 'H0BN', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     udg_LocalUnit2=GetLastCreatedUnit()
     TriggerExecute(gg_trg_ToKill2)
-    UnitAddAbilityBJ('A0WF', GetLastCreatedUnit())
+    UnitAddAbilityBJ(FourCC('A0WF'), GetLastCreatedUnit())
     SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped('A0WF', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('A0WE', GetTriggerUnit()))
+    SetUnitAbilityLevelSwapped(FourCC('A0WF'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A0WE'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetLastCreatedUnit(), "frostnova", GetEnumUnit())
 end
 function Trig_ArthasNova_Actions()
@@ -41483,7 +41483,7 @@ end
 -- Trigger: KillSpaned
 --===========================================================================
 function Trig_KillSpaned_Conditions()
-    return GetUnitTypeId(GetSummonedUnit()) == 'n017'
+    return GetUnitTypeId(GetSummonedUnit()) == FourCC('n017')
 end
 function Trig_KillSpaned_Actions()
     KillUnit(GetSummonedUnit())
@@ -41500,10 +41500,10 @@ end
 -- Trigger: AreaOfDeath Copy
 --===========================================================================
 function Trig_AreaOfDeath_Copy_Conditions()
-    return GetSpellAbilityId() == 'kel0'
+    return GetSpellAbilityId() == FourCC('kel0')
 end
 function Trig_AreaOfDeath_Copy_Actions()
-    SpellChannelLevel(GetTriggerUnit() , 'kel0' , 'A1E7' , "deathanddecay" , GetSpellTargetX() , GetSpellTargetY() , 17)
+    SpellChannelLevel(GetTriggerUnit() , FourCC('kel0') , FourCC('A1E7') , "deathanddecay" , GetSpellTargetX() , GetSpellTargetY() , 17)
 end
 --===========================================================================
 function InitTrig_AreaOfDeath_Copy()
@@ -41516,10 +41516,10 @@ end
 -- Trigger: AutocastShieldOnResearch
 --===========================================================================
 function Trig_AutocastShieldOnResearch_Conditions()
-    return GetResearched() == 'R06Y' and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), 'R06Y', true) == 2
+    return GetResearched() == FourCC('R06Y') and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R06Y'), true) == 2
 end
 function Trig_AutocastShieldOnResearch_Actions()
-    GlobalIssue('e01A' , GetOwningPlayer(GetTriggerUnit()) , "manashield")
+    GlobalIssue(FourCC('e01A') , GetOwningPlayer(GetTriggerUnit()) , "manashield")
 end
 --===========================================================================
 function InitTrig_AutocastShieldOnResearch()
@@ -41532,7 +41532,7 @@ end
 -- Trigger: TrainAutcastZam
 --===========================================================================
 function Trig_TrainAutcastZam_Conditions()
-    return GetUnitAbilityLevel(GetTrainedUnit(), 'A0GI') > 0
+    return GetUnitAbilityLevel(GetTrainedUnit(), FourCC('A0GI')) > 0
 end
 function Trig_TrainAutcastZam_Actions()
     IssueImmediateOrder(GetTrainedUnit(), "slowon")
@@ -41548,10 +41548,10 @@ end
 -- Trigger: PassiveTalisra
 --===========================================================================
 function Trig_PassiveTalisra_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'B08J') + GetUnitAbilityLevel(GetTriggerUnit(), 'B08K') > 0 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetEventDamage() >= GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) --Её бафф
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B08J')) + GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B08K')) > 0 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetEventDamage() >= GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) --Её бафф
 end
 function Talisra()
-    return GetUnitAbilityLevel(GetFilterUnit(), 'A1OS') > 0 --Абилка
+    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1OS')) > 0 --Абилка
 end
 function Trig_PassiveTalisra_Actions()
     local g= CreateGroup()
@@ -41561,7 +41561,7 @@ function Trig_PassiveTalisra_Actions()
     local pi= GetPlayerId(p)
     GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 650, Condition(Talisra), 1)
     u2=FirstOfGroup(g)
-    if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, 'A1OS') > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --Абилка
+    if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1OS')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --Абилка
         SetUnitManaBJ(u2, GetUnitState(u2, UNIT_STATE_MANA) - 50)
         if playerCapital[pi] == nil then
             MakeFakeCapital(p)
@@ -41594,33 +41594,33 @@ end
 function IceTrollsStartEach()
     local p= GetEnumPlayer()
     
-    SetPlayerTechMaxAllowedSwap('n07B', 0, p) -- Взыватель душ
-    SetPlayerTechMaxAllowedSwap('R09L', 0, p) -- Его грейд
-    SetPlayerTechMaxAllowedSwap('o04T', 0, p) -- Голем
-    SetPlayerTechMaxAllowedSwap('R09P', 0, p) -- Golem grade
+    SetPlayerTechMaxAllowedSwap(FourCC('n07B'), 0, p) -- Взыватель душ
+    SetPlayerTechMaxAllowedSwap(FourCC('R09L'), 0, p) -- Его грейд
+    SetPlayerTechMaxAllowedSwap(FourCC('o04T'), 0, p) -- Голем
+    SetPlayerTechMaxAllowedSwap(FourCC('R09P'), 0, p) -- Golem grade
     
     
-    SetPlayerTechMaxAllowedSwap('n05W', 0, p) -- Mamont
-    SetPlayerTechMaxAllowedSwap('n05X', 0, p) -- Magnatavr
-    SetPlayerTechMaxAllowedSwap('R0I5', 0, p) -- Grade
+    SetPlayerTechMaxAllowedSwap(FourCC('n05W'), 0, p) -- Mamont
+    SetPlayerTechMaxAllowedSwap(FourCC('n05X'), 0, p) -- Magnatavr
+    SetPlayerTechMaxAllowedSwap(FourCC('R0I5'), 0, p) -- Grade
     
     --Loa
-    SetPlayerTechMaxAllowedSwap('n061', 0, p)
-    SetPlayerTechMaxAllowedSwap('n062', 0, p)
-    SetPlayerTechMaxAllowedSwap('o05B', 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('n061'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('n062'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('o05B'), 0, p)
     
     --Loa poglosenie
-    SetPlayerTechMaxAllowedSwap('R0AI', 0, p)
-    SetPlayerTechMaxAllowedSwap('R0AJ', 0, p)
-    SetPlayerTechMaxAllowedSwap('R0AD', 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0AI'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0AJ'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0AD'), 0, p)
     
      
     --Loa altars
-    SetPlayerTechMaxAllowedSwap('o06J', 0, p)
-    SetPlayerTechMaxAllowedSwap('o06K', 0, p)
-    SetPlayerTechMaxAllowedSwap('o06I', 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('o06J'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('o06K'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('o06I'), 0, p)
     
-    SetPlayerTechMaxAllowedSwap('O06L', 1, p) -- Malakk
+    SetPlayerTechMaxAllowedSwap(FourCC('O06L'), 1, p) -- Malakk
 end
 function Trig_IceTrollsStart_Actions()
     ForForce(udg_AllPlayers, IceTrollsStartEach)
@@ -41635,24 +41635,24 @@ end
 -- Trigger: KillLoa
 --===========================================================================
 function Trig_KillLoa_Conditions()
-    return GetSpellAbilityId() == 'A1FS'
+    return GetSpellAbilityId() == FourCC('A1FS')
 end
 function Trig_KillLoa_Actions()
     local p= GetOwningPlayer(GetTriggerUnit())
-    SetPlayerTechResearchedSwap('R0IX', 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0IX'), 1, p)
     SetPlayerAbilityAvailableBJ(false, FourCC('A1FS'), p)
     SetPlayerAbilityAvailableBJ(false, FourCC('A1FR'), p)
     
     
-    SetPlayerTechMaxAllowedSwap('n07B', - 1, p) -- Взыватель душ
-    SetPlayerTechMaxAllowedSwap('R09L', 2, p) -- Его грейд
-    SetPlayerTechMaxAllowedSwap('o04T', - 1, p) -- Golem
-    SetPlayerTechMaxAllowedSwap('R09P', 2, p) -- Golem grade
+    SetPlayerTechMaxAllowedSwap(FourCC('n07B'), - 1, p) -- Взыватель душ
+    SetPlayerTechMaxAllowedSwap(FourCC('R09L'), 2, p) -- Его грейд
+    SetPlayerTechMaxAllowedSwap(FourCC('o04T'), - 1, p) -- Golem
+    SetPlayerTechMaxAllowedSwap(FourCC('R09P'), 2, p) -- Golem grade
     
     --Loa grades poglosenie
-    SetPlayerTechMaxAllowedSwap('R0AI', 3, p)
-    SetPlayerTechMaxAllowedSwap('R0AJ', 3, p)
-    SetPlayerTechMaxAllowedSwap('R0AD', 3, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0AI'), 3, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0AJ'), 3, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('R0AD'), 3, p)
     
     
 end
@@ -41667,29 +41667,29 @@ end
 -- Trigger: ServeLoa
 --===========================================================================
 function Trig_ServeLoa_Conditions()
-    return GetSpellAbilityId() == 'A1FR'
+    return GetSpellAbilityId() == FourCC('A1FR')
 end
 function Trig_ServeLoa_Actions()
     local p= GetOwningPlayer(GetTriggerUnit())
-    SetPlayerTechResearchedSwap('R0IY', 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0IY'), 1, p)
     SetPlayerAbilityAvailableBJ(false, FourCC('A1FS'), p)
     SetPlayerAbilityAvailableBJ(false, FourCC('A1FR'), p)
     
-    SetPlayerTechMaxAllowedSwap('n05W', - 1, p) -- Mamont
-    SetPlayerTechMaxAllowedSwap('n05X', - 1, p) -- Magnatavr
-    SetPlayerTechMaxAllowedSwap('R0I5', 2, p) -- Grade
+    SetPlayerTechMaxAllowedSwap(FourCC('n05W'), - 1, p) -- Mamont
+    SetPlayerTechMaxAllowedSwap(FourCC('n05X'), - 1, p) -- Magnatavr
+    SetPlayerTechMaxAllowedSwap(FourCC('R0I5'), 2, p) -- Grade
     
     --Loa
-    SetPlayerTechMaxAllowedSwap('n061', 1, p)
-    SetPlayerTechMaxAllowedSwap('n062', 1, p)
-    SetPlayerTechMaxAllowedSwap('o05B', 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('n061'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('n062'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('o05B'), 1, p)
     
   
        
     --Loa altars
-    SetPlayerTechMaxAllowedSwap('o06J', 1, p)
-    SetPlayerTechMaxAllowedSwap('o06K', 1, p)
-    SetPlayerTechMaxAllowedSwap('o06I', 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('o06J'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('o06K'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('o06I'), 1, p)
     
 end
 --===========================================================================
@@ -41703,7 +41703,7 @@ end
 -- Trigger: Spell E Copy
 --===========================================================================
 function Trig_Spell_E_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1DA' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1DA') ) ) then
         return false
     end
     return true
@@ -41750,7 +41750,7 @@ function Trig_Spell_E_Dvij_Func001Func001Func007Func001C()
 end
 function Trig_Spell_E_Dvij_Func001Func001Func007A()
     if ( Trig_Spell_E_Dvij_Func001Func001Func007Func001C() ) then
-        UnitDamageTargetBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped('A1DA', udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1DA'), udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         GroupAddUnitSimple(GetEnumUnit(), udg_Group_E_Glaz[udg_Cikl_E_Glaz])
     else
     end
@@ -41826,11 +41826,11 @@ end
 -- Инициализация стандартного режима сражения для всех игроков
 --===========================================================================
 function Trig_Ini2_Conditions()
-    return GetSpellAbilityId() == 'A1DQ'
+    return GetSpellAbilityId() == FourCC('A1DQ')
 end
 function Trig_Ini2_Actions()
     --call DisplayTextToPlayer(Player(0),0,0,"")
-    UnitAddAbility(GetSpellTargetUnit(), 'A0H1')
+    UnitAddAbility(GetSpellTargetUnit(), FourCC('A0H1'))
 end
 --===========================================================================
 function InitTrig_Ini2()
@@ -41844,13 +41844,13 @@ end
 --===========================================================================
 function Trig_Spell_E2_Conditions()
  
-    return GetUnitTypeId(GetEventDamageSource()) == 'O04H' and GetUnitAbilityLevel(GetTriggerUnit(), 'A0H1') > 0
+    return GetUnitTypeId(GetEventDamageSource()) == FourCC('O04H') and GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A0H1')) > 0
     -- Тип применяющего и спел применяющего
 end
 function Trig_Spell_E2_Actions()
     local u= GetTriggerUnit()
     DisableTrigger(GetTriggeringTrigger())
-    UnitRemoveAbility(u, 'A0H1')
+    UnitRemoveAbility(u, FourCC('A0H1'))
     --call DisplayTextToPlayer(Player(0),0,0,"")
     udg_To4kaTarget=GetUnitLoc(u)
     UnitDamageTargetBJ(GetEventDamageSource(), u, I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
@@ -41877,14 +41877,14 @@ end
 --===========================================================================
 function Trig_HpRegen2_Conditions()
     
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'A1CA') > 0 -- Тут абилка иконка
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1CA')) > 0 -- Тут абилка иконка
     
     
 end
 function Trig_HpRegen2_Actions()
     local u= GetTriggerUnit()
-    local spellid= 'A1CY'
-    local timerspellid= 'A1CX'
+    local spellid= FourCC('A1CY')
+    local timerspellid= FourCC('A1CX')
     local lifep= GetUnitLifePercent(u)
     local time= 10
     
@@ -41926,7 +41926,7 @@ end
 -- Trigger: Spell Copy 2 Copy
 --===========================================================================
 function Trig_Spell_Copy_2_Copy_Conditions()
-    if ( not ( GetLearnedSkillBJ() == 'A1CB' ) ) then
+    if ( not ( GetLearnedSkillBJ() == FourCC('A1CB') ) ) then
         return false
     end
     return true
@@ -41960,18 +41960,18 @@ end
 -- Trigger: Cast Copy
 --===========================================================================
 function Trig_Cast_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == 'A1CB' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A1CB') ) ) then
         return false
     end
     return true
 end
 function Trig_Cast_Copy_Actions()
     EnableTrigger(gg_trg_Lech)
-    CreateNUnitsAtLoc(1, 'h0ML', GetOwningPlayer(udg_u), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
-    UnitAddAbilityBJ('A1BS', GetLastCreatedUnit())
+    CreateNUnitsAtLoc(1, FourCC('h0ML'), GetOwningPlayer(udg_u), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
+    UnitAddAbilityBJ(FourCC('A1BS'), GetLastCreatedUnit())
     IssueTargetOrderBJ(GetLastCreatedUnit(), "purge", GetSpellAbilityUnit())
-    UnitApplyTimedLifeBJ(1.00, 'BTLF', GetLastCreatedUnit())
-    TriggerSleepAction(( 5.00 + ( 1.00 * I2R(GetUnitAbilityLevelSwapped('A1CB', GetSpellAbilityUnit())) ) ))
+    UnitApplyTimedLifeBJ(1.00, FourCC('BTLF'), GetLastCreatedUnit())
+    TriggerSleepAction(( 5.00 + ( 1.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1CB'), GetSpellAbilityUnit())) ) ))
     DisableTrigger(gg_trg_Lech)
 end
 --===========================================================================
@@ -42003,7 +42003,7 @@ end
 -- Trigger: DammyDeath Copy
 --===========================================================================
 function Trig_DammyDeath_Copy_Func001C()
-    if ( not ( GetUnitTypeId(GetDyingUnit()) == 'h0ML' ) ) then
+    if ( not ( GetUnitTypeId(GetDyingUnit()) == FourCC('h0ML') ) ) then
         return false
     end
     return true
@@ -42024,7 +42024,7 @@ end
 -- Trigger: TakenDamage
 --===========================================================================
 function Trig_TakenDamage_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped('A1CA', GetTriggerUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A1CA'), GetTriggerUnit()) == 1 ) ) then
         return false
     end
     return true
@@ -42043,14 +42043,14 @@ function Trig_TakenDamage_Func001C()
 end
 function Trig_TakenDamage_Actions()
     if ( Trig_TakenDamage_Func001C() ) then
-        UnitAddAbilityBJ('A1C9', GetTriggerUnit())
-        SetUnitAbilityLevelSwapped('A1C9', GetTriggerUnit(), 2)
+        UnitAddAbilityBJ(FourCC('A1C9'), GetTriggerUnit())
+        SetUnitAbilityLevelSwapped(FourCC('A1C9'), GetTriggerUnit(), 2)
     else
         if ( Trig_TakenDamage_Func001Func001C() ) then
-            UnitAddAbilityBJ('A1C9', GetTriggerUnit())
-            SetUnitAbilityLevelSwapped('A1C9', GetTriggerUnit(), 1)
+            UnitAddAbilityBJ(FourCC('A1C9'), GetTriggerUnit())
+            SetUnitAbilityLevelSwapped(FourCC('A1C9'), GetTriggerUnit(), 1)
         else
-            UnitRemoveAbilityBJ('A1C9', GetTriggerUnit())
+            UnitRemoveAbilityBJ(FourCC('A1C9'), GetTriggerUnit())
         end
     end
 end
@@ -42065,7 +42065,7 @@ end
 -- Trigger: LordWave
 --===========================================================================
 function Trig_LordWave_Func010C()
-    if ( not ( GetSpellAbilityId() == 'NQ02' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('NQ02') ) ) then
         return false
     end
     return true
@@ -42077,20 +42077,20 @@ function Trig_LordWave_Conditions()
     return true
 end
 function Trig_LordWave_Func001002003()
-    return ( GetUnitTypeId(GetFilterUnit()) == 'lord' )
+    return ( GetUnitTypeId(GetFilterUnit()) == FourCC('lord') )
 end
 function Trig_LordWave_Func002002003()
-    return ( GetUnitTypeId(GetFilterUnit()) == 'nq01' )
+    return ( GetUnitTypeId(GetFilterUnit()) == FourCC('nq01') )
 end
 function Trig_LordWave_Func004A()
-    UnitAddAbilityBJ('NQ14', GetEnumUnit())
-    SetUnitAbilityLevelSwapped('NQ14', GetEnumUnit(), GetUnitAbilityLevelSwapped('NQ14', GetTriggerUnit()))
+    UnitAddAbilityBJ(FourCC('NQ14'), GetEnumUnit())
+    SetUnitAbilityLevelSwapped(FourCC('NQ14'), GetEnumUnit(), GetUnitAbilityLevelSwapped(FourCC('NQ14'), GetTriggerUnit()))
     IssuePointOrderLocBJ(GetEnumUnit(), "carrionswarm", GetSpellTargetLoc())
-    BlzUnitHideAbility(GetEnumUnit(), 'NQ14', true)
+    BlzUnitHideAbility(GetEnumUnit(), FourCC('NQ14'), true)
     DestroyGroup(udg_AllLords)
 end
 function Trig_LordWave_Func009A()
-    UnitRemoveAbilityBJ('NQ14', GetEnumUnit())
+    UnitRemoveAbilityBJ(FourCC('NQ14'), GetEnumUnit())
     DestroyGroup(udg_AllLords)
 end
 function Trig_LordWave_Actions()
@@ -42099,8 +42099,8 @@ function Trig_LordWave_Actions()
     GroupAddGroup(udg_MellLord, udg_AllLords)
     ForGroupBJ(udg_AllLords, Trig_LordWave_Func004A)
     TriggerSleepAction(6.00)
-    udg_AllLords=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), 'lord')
-    udg_MellLord=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), 'nq01')
+    udg_AllLords=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('lord'))
+    udg_MellLord=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('nq01'))
     GroupAddGroup(udg_MellLord, udg_AllLords)
     ForGroupBJ(udg_AllLords, Trig_LordWave_Func009A)
 end
@@ -42115,7 +42115,7 @@ end
 -- Trigger: MassBaff
 --===========================================================================
 function Trig_MassBaff_Func010C()
-    if ( not ( GetSpellAbilityId() == 'NQ07' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('NQ07') ) ) then
         return false
     end
     return true
@@ -42127,24 +42127,24 @@ function Trig_MassBaff_Conditions()
     return true
 end
 function Trig_MassBaff_Func004A()
-    UnitAddAbilityBJ('NQ08', GetEnumUnit())
-    SetUnitAbilityLevelSwapped('NQ08', GetEnumUnit(), GetUnitAbilityLevelSwapped('NQ07', GetTriggerUnit()))
+    UnitAddAbilityBJ(FourCC('NQ08'), GetEnumUnit())
+    SetUnitAbilityLevelSwapped(FourCC('NQ08'), GetEnumUnit(), GetUnitAbilityLevelSwapped(FourCC('NQ07'), GetTriggerUnit()))
     IssueImmediateOrderBJ(GetEnumUnit(), "roar")
-    BlzUnitHideAbility(GetEnumUnit(), 'NQ08', true)
+    BlzUnitHideAbility(GetEnumUnit(), FourCC('NQ08'), true)
     DestroyGroup(udg_AllLords)
 end
 function Trig_MassBaff_Func009A()
-    UnitRemoveAbilityBJ('NQ08', GetEnumUnit())
+    UnitRemoveAbilityBJ(FourCC('NQ08'), GetEnumUnit())
     DestroyGroup(udg_AllLords)
 end
 function Trig_MassBaff_Actions()
-    udg_AllLords=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), 'lord')
-    udg_MellLord=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), 'nq01')
+    udg_AllLords=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('lord'))
+    udg_MellLord=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('nq01'))
     GroupAddGroup(udg_MellLord, udg_AllLords)
     ForGroupBJ(udg_AllLords, Trig_MassBaff_Func004A)
     TriggerSleepAction(3.00)
-    udg_AllLords=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), 'lord')
-    udg_MellLord=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), 'nq01')
+    udg_AllLords=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('lord'))
+    udg_MellLord=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('nq01'))
     GroupAddGroup(udg_MellLord, udg_AllLords)
     ForGroupBJ(udg_AllLords, Trig_MassBaff_Func009A)
 end
@@ -42159,7 +42159,7 @@ end
 -- Trigger: LordsAssist
 --===========================================================================
 function Trig_LordsAssist_Func010C()
-    if ( not ( GetSpellAbilityId() == 'NQ03' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('NQ03') ) ) then
         return false
     end
     return true
@@ -42171,26 +42171,26 @@ function Trig_LordsAssist_Conditions()
     return true
 end
 function Trig_LordsAssist_Func001002003()
-    return ( GetUnitTypeId(GetFilterUnit()) == 'lord' )
+    return ( GetUnitTypeId(GetFilterUnit()) == FourCC('lord') )
 end
 function Trig_LordsAssist_Func002002003()
-    return ( GetUnitTypeId(GetFilterUnit()) == 'nq01' )
+    return ( GetUnitTypeId(GetFilterUnit()) == FourCC('nq01') )
 end
 function Trig_LordsAssist_Func004A()
-    UnitAddAbilityBJ('NQ09', GetEnumUnit())
-    SetUnitAbilityLevelSwapped('NQ09', GetEnumUnit(), GetUnitAbilityLevelSwapped('NQ03', GetTriggerUnit()))
+    UnitAddAbilityBJ(FourCC('NQ09'), GetEnumUnit())
+    SetUnitAbilityLevelSwapped(FourCC('NQ09'), GetEnumUnit(), GetUnitAbilityLevelSwapped(FourCC('NQ03'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetEnumUnit(), "manaburn", GetSpellTargetUnit())
-    BlzUnitHideAbility(GetEnumUnit(), 'NQ09', true)
+    BlzUnitHideAbility(GetEnumUnit(), FourCC('NQ09'), true)
     DestroyGroup(udg_AllLords)
 end
 function Trig_LordsAssist_Func006002003()
-    return ( GetUnitTypeId(GetFilterUnit()) == 'lord' )
+    return ( GetUnitTypeId(GetFilterUnit()) == FourCC('lord') )
 end
 function Trig_LordsAssist_Func007002003()
-    return ( GetUnitTypeId(GetFilterUnit()) == 'nq01' )
+    return ( GetUnitTypeId(GetFilterUnit()) == FourCC('nq01') )
 end
 function Trig_LordsAssist_Func009A()
-    UnitRemoveAbilityBJ('NQ09', GetEnumUnit())
+    UnitRemoveAbilityBJ(FourCC('NQ09'), GetEnumUnit())
     DestroyGroup(udg_AllLords)
 end
 function Trig_LordsAssist_Actions()
@@ -42215,19 +42215,19 @@ end
 -- Trigger: Lord
 --===========================================================================
 function Trig_Lord_Conditions()
-    if ( not ( GetSpellAbilityId() == 'NQ06' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('NQ06') ) ) then
         return false
     end
     return true
 end
 function Trig_Lord_Func001Func001Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('NQ06', GetTriggerUnit()) == 2 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('NQ06'), GetTriggerUnit()) == 2 ) ) then
         return false
     end
-    if ( not ( CountLivingPlayerUnitsOfTypeId('lord', GetTriggerPlayer()) < 3 ) ) then
+    if ( not ( CountLivingPlayerUnitsOfTypeId(FourCC('lord'), GetTriggerPlayer()) < 3 ) ) then
         return false
     end
-    if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u019' ) ) then
+    if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == FourCC('u019') ) ) then
         return false
     end
     return true
@@ -42239,13 +42239,13 @@ function Trig_Lord_Func001Func001C()
     return true
 end
 function Trig_Lord_Func001Func002C()
-    if ( not ( GetUnitAbilityLevelSwapped('NQ06', GetTriggerUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('NQ06'), GetTriggerUnit()) == 1 ) ) then
         return false
     end
-    if ( not ( CountLivingPlayerUnitsOfTypeId('lord', GetTriggerPlayer()) == 0 ) ) then
+    if ( not ( CountLivingPlayerUnitsOfTypeId(FourCC('lord'), GetTriggerPlayer()) == 0 ) ) then
         return false
     end
-    if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == 'u019' ) ) then
+    if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == FourCC('u019') ) ) then
         return false
     end
     return true
@@ -42258,12 +42258,12 @@ function Trig_Lord_Func001C()
 end
 function Trig_Lord_Actions()
     if ( Trig_Lord_Func001C() ) then
-        ReplaceUnitBJ(GetSpellTargetUnit(), 'lorE', bj_UNIT_STATE_METHOD_DEFAULTS)
-        UnitApplyTimedLifeBJ(60.00, 'BTLF', GetLastReplacedUnitBJ())
+        ReplaceUnitBJ(GetSpellTargetUnit(), FourCC('lorE'), bj_UNIT_STATE_METHOD_DEFAULTS)
+        UnitApplyTimedLifeBJ(60.00, FourCC('BTLF'), GetLastReplacedUnitBJ())
     else
         if ( Trig_Lord_Func001Func001C() ) then
-            ReplaceUnitBJ(GetSpellTargetUnit(), 'lorE', bj_UNIT_STATE_METHOD_DEFAULTS)
-            UnitApplyTimedLifeBJ(60.00, 'BTLF', GetLastReplacedUnitBJ())
+            ReplaceUnitBJ(GetSpellTargetUnit(), FourCC('lorE'), bj_UNIT_STATE_METHOD_DEFAULTS)
+            UnitApplyTimedLifeBJ(60.00, FourCC('BTLF'), GetLastReplacedUnitBJ())
         else
             DoNothing()
         end
@@ -42280,13 +42280,13 @@ end
 -- Trigger: LordBirth
 --===========================================================================
 function Trig_LordBirth_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'lorE' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('lorE') ) ) then
         return false
     end
     return true
 end
 function Trig_LordBirth_Actions()
-    CreateNUnitsAtLoc(1, 'lord', GetTriggerPlayer(), GetUnitLoc(GetTriggerUnit()), bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('lord'), GetTriggerPlayer(), GetUnitLoc(GetTriggerUnit()), bj_UNIT_FACING)
 end
 --===========================================================================
 function InitTrig_LordBirth()
@@ -42299,7 +42299,7 @@ end
 -- Trigger: NaxramasKills
 --===========================================================================
 function Trig_NaxramasKills_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'e00D' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e00D') ) ) then
         return false
     end
     return true
@@ -42323,7 +42323,7 @@ end
 -- Trigger: DalaranKills
 --===========================================================================
 function Trig_DalaranKills_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'e00C' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e00C') ) ) then
         return false
     end
     return true
@@ -42347,10 +42347,10 @@ end
 -- Trigger: StartUlt
 --===========================================================================
 function Trig_StartUlt_Func002C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'MIMH' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('MIMH') ) ) then
         return false
     end
-    if ( not ( GetSpellAbilityId() == 'MIM6' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('MIM6') ) ) then
         return false
     end
     return true
@@ -42368,10 +42368,10 @@ function Trig_StartUlt_Func001Func001C()
     if ( not ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) >= 8000 ) ) then
         return false
     end
-    if ( not ( CountLivingPlayerUnitsOfTypeId('mim1', GetTriggerPlayer()) < 2 ) ) then
+    if ( not ( CountLivingPlayerUnitsOfTypeId(FourCC('mim1'), GetTriggerPlayer()) < 2 ) ) then
         return false
     end
-    if ( not ( GetUnitAbilityLevelSwapped('MIM6', GetTriggerUnit()) == 2 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('MIM6'), GetTriggerUnit()) == 2 ) ) then
         return false
     end
     return true
@@ -42383,10 +42383,10 @@ function Trig_StartUlt_Func001C()
     if ( not ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) >= 8000 ) ) then
         return false
     end
-    if ( not ( CountLivingPlayerUnitsOfTypeId('mim1', GetTriggerPlayer()) < 1 ) ) then
+    if ( not ( CountLivingPlayerUnitsOfTypeId(FourCC('mim1'), GetTriggerPlayer()) < 1 ) ) then
         return false
     end
-    if ( not ( GetUnitAbilityLevelSwapped('MIM6', GetTriggerUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('MIM6'), GetTriggerUnit()) == 1 ) ) then
         return false
     end
     return true
@@ -42395,9 +42395,9 @@ function Trig_StartUlt_Actions()
     if ( Trig_StartUlt_Func001C() ) then
         SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD) - 8000 ))
         SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER, ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) - 8000 ))
-        UnitAddAbilityBJ('MIM4', GetTriggerUnit())
-        SetUnitAbilityLevelSwapped('MIM4', GetTriggerUnit(), GetUnitAbilityLevelSwapped('MIM6', GetTriggerUnit()))
-        BlzUnitHideAbility(GetTriggerUnit(), 'MIM4', false)
+        UnitAddAbilityBJ(FourCC('MIM4'), GetTriggerUnit())
+        SetUnitAbilityLevelSwapped(FourCC('MIM4'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('MIM6'), GetTriggerUnit()))
+        BlzUnitHideAbility(GetTriggerUnit(), FourCC('MIM4'), false)
         SetUnitAnimationWithRarity(GetTriggerUnit(), "Attackspell", RARITY_FREQUENT)
         PauseUnitBJ(true, GetTriggerUnit())
         TriggerSleepAction(50.00)
@@ -42407,9 +42407,9 @@ function Trig_StartUlt_Actions()
         if ( Trig_StartUlt_Func001Func001C() ) then
             SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD) - 8000 ))
             SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER, ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) - 8000 ))
-            UnitAddAbilityBJ('MIM4', GetTriggerUnit())
-            SetUnitAbilityLevelSwapped('MIM4', GetTriggerUnit(), GetUnitAbilityLevelSwapped('MIM6', GetTriggerUnit()))
-            BlzUnitHideAbility(GetTriggerUnit(), 'MIM4', false)
+            UnitAddAbilityBJ(FourCC('MIM4'), GetTriggerUnit())
+            SetUnitAbilityLevelSwapped(FourCC('MIM4'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('MIM6'), GetTriggerUnit()))
+            BlzUnitHideAbility(GetTriggerUnit(), FourCC('MIM4'), false)
             PauseUnitBJ(true, GetTriggerUnit())
             TriggerSleepAction(50.00)
             PauseUnitBJ(false, GetTriggerUnit())
@@ -42430,10 +42430,10 @@ end
 -- Trigger: UltSummon
 --===========================================================================
 function Trig_UltSummon_Func003C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'MIMH' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('MIMH') ) ) then
         return false
     end
-    if ( not ( GetSpellAbilityId() == 'MIM4' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('MIM4') ) ) then
         return false
     end
     return true
@@ -42445,33 +42445,33 @@ function Trig_UltSummon_Conditions()
     return true
 end
 function Trig_UltSummon_Func002Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped('MIM4', GetTriggerUnit()) == 2 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('MIM4'), GetTriggerUnit()) == 2 ) ) then
         return false
     end
-    if ( not ( CountLivingPlayerUnitsOfTypeId('mim1', GetTriggerPlayer()) < 2 ) ) then
+    if ( not ( CountLivingPlayerUnitsOfTypeId(FourCC('mim1'), GetTriggerPlayer()) < 2 ) ) then
         return false
     end
     return true
 end
 function Trig_UltSummon_Func002C()
-    if ( not ( GetUnitAbilityLevelSwapped('MIM4', GetTriggerUnit()) == 1 ) ) then
+    if ( not ( GetUnitAbilityLevelSwapped(FourCC('MIM4'), GetTriggerUnit()) == 1 ) ) then
         return false
     end
-    if ( not ( CountLivingPlayerUnitsOfTypeId('mim1', GetTriggerPlayer()) == 0 ) ) then
+    if ( not ( CountLivingPlayerUnitsOfTypeId(FourCC('mim1'), GetTriggerPlayer()) == 0 ) ) then
         return false
     end
     return true
 end
 function Trig_UltSummon_Actions()
     if ( Trig_UltSummon_Func002C() ) then
-        CreateNUnitsAtLoc(1, 'mim1', GetOwningPlayer(GetTriggerUnit()), GetUnitLoc(GetTriggerUnit()), bj_UNIT_FACING)
+        CreateNUnitsAtLoc(1, FourCC('mim1'), GetOwningPlayer(GetTriggerUnit()), GetUnitLoc(GetTriggerUnit()), bj_UNIT_FACING)
         SetUnitAnimation(GetLastCreatedUnit(), "birth")
-        UnitRemoveAbilityBJ('MIM4', GetTriggerUnit())
+        UnitRemoveAbilityBJ(FourCC('MIM4'), GetTriggerUnit())
     else
         if ( Trig_UltSummon_Func002Func001C() ) then
-            CreateNUnitsAtLoc(1, 'mim1', GetOwningPlayer(GetTriggerUnit()), GetUnitLoc(GetTriggerUnit()), bj_UNIT_FACING)
+            CreateNUnitsAtLoc(1, FourCC('mim1'), GetOwningPlayer(GetTriggerUnit()), GetUnitLoc(GetTriggerUnit()), bj_UNIT_FACING)
             SetUnitAnimation(GetLastCreatedUnit(), "birth")
-            UnitRemoveAbilityBJ('MIM4', GetTriggerUnit())
+            UnitRemoveAbilityBJ(FourCC('MIM4'), GetTriggerUnit())
         else
             DoNothing()
         end
@@ -42488,15 +42488,15 @@ end
 -- Trigger: MassHEX
 --===========================================================================
 function Trig_MassHEX_Conditions()
-    if ( not ( GetSpellAbilityId() == 'VLJ1' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('VLJ1') ) ) then
         return false
     end
     return true
 end
 function Trig_MassHEX_Func001A()
-    CreateNUnitsAtLoc(1, 'repD', GetTriggerPlayer(), GetUnitLoc(GetEnumUnit()), bj_UNIT_FACING)
-    UnitAddAbilityBJ('VLJ5', GetLastCreatedUnit())
-    SetUnitAbilityLevelSwapped('VLJ5', GetLastCreatedUnit(), GetUnitAbilityLevelSwapped('VLJ1', GetTriggerUnit()))
+    CreateNUnitsAtLoc(1, FourCC('repD'), GetTriggerPlayer(), GetUnitLoc(GetEnumUnit()), bj_UNIT_FACING)
+    UnitAddAbilityBJ(FourCC('VLJ5'), GetLastCreatedUnit())
+    SetUnitAbilityLevelSwapped(FourCC('VLJ5'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('VLJ1'), GetTriggerUnit()))
     IssueTargetOrderBJ(GetLastCreatedUnit(), "hex", GetEnumUnit())
 end
 function Trig_MassHEX_Actions()
@@ -42513,12 +42513,12 @@ end
 -- Trigger: SomeVoljinSpell
 --===========================================================================
 function Trig_SomeVoljinSpell_Conditions()
-    return GetSpellAbilityId() == 'VLJ4'
+    return GetSpellAbilityId() == FourCC('VLJ4')
 end
 function Trig_SomeVoljinSpell_Actions()
-    UnitAddAbilityBJ('A0OR', GetTriggerUnit())
-    BlzUnitHideAbility(GetTriggerUnit(), 'A0OR', true)
-    RemoveAbilityTimed(GetTriggerUnit() , 'A0OR' , 15)
+    UnitAddAbilityBJ(FourCC('A0OR'), GetTriggerUnit())
+    BlzUnitHideAbility(GetTriggerUnit(), FourCC('A0OR'), true)
+    RemoveAbilityTimed(GetTriggerUnit() , FourCC('A0OR') , 15)
 end
 --===========================================================================
 function InitTrig_SomeVoljinSpell()
@@ -42532,7 +42532,7 @@ end
 --===========================================================================
 function Trig_Kill_Func002A()
     local id= GetUnitTypeId(GetEnumUnit())
-    if not IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) and GetOwningPlayer(GetEnumUnit()) == GetTriggerPlayer() and not IsUnitInGroup(GetEnumUnit(), udg_StolicaGroups) and id ~= 'e00C' and id ~= 'e00D' then
+    if not IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) and GetOwningPlayer(GetEnumUnit()) == GetTriggerPlayer() and not IsUnitInGroup(GetEnumUnit(), udg_StolicaGroups) and id ~= FourCC('e00C') and id ~= FourCC('e00D') then
         KillUnit(GetEnumUnit())
     else
         if IsUnitInGroup(GetEnumUnit(), udg_StolicaGroups) and GetOwningPlayer(GetEnumUnit()) == GetTriggerPlayer() then
@@ -42829,7 +42829,7 @@ function Trig_SecondChance_Actions()
         udg_LocalPosition2=(StartLoc[GetRandomInt(0, StartLocCount - 1)]) -- INLINED!!
         DisplayTimedTextToForce(GetPlayersAll(), 5.00, ( ( "" + GetPlayerName(GetTriggerPlayer()) ) + ( "" + ( GetPlayerName(ConvertedPlayer(udg_LocalInteger)) + " not " ) ) ))
         DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, "15 not ")
-        CreateNUnitsAtLoc(1, 'h0HJ', ConvertedPlayer(udg_LocalInteger), udg_LocalPosition2, bj_UNIT_FACING)
+        CreateNUnitsAtLoc(1, FourCC('h0HJ'), ConvertedPlayer(udg_LocalInteger), udg_LocalPosition2, bj_UNIT_FACING)
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_GOLD, 5000)
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_LUMBER, 5000)
         
@@ -42994,7 +42994,7 @@ function Trig_Hunter_Conditions()
     return CountUnitsInGroup(GetUnitsInRectOfPlayer(gg_rct_Region_112, GetTriggerPlayer())) ~= 0
 end
 function Trig_Hunter_Actions()
-    CreateNUnitsAtLoc(1, 'h0NY', Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Region_112), bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('h0NY'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Region_112), bj_UNIT_FACING)
     DisplayTextToForce(GetForceOfPlayer(GetTriggerPlayer()), "TRIGSTR_5829")
     DisableTrigger(gg_trg_Hunter)
 end
@@ -43090,7 +43090,7 @@ end
 -- Trigger: ForSoldUnitsSelect
 --===========================================================================
 function Trig_ForSoldUnitsSelect_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'Asud') > 0 and GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL)
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('Asud')) > 0 and GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL)
 end
 function Trig_ForSoldUnitsSelect_Actions()
     local mainplayer= GetOwningPlayer(GetTriggerUnit())
@@ -43132,7 +43132,7 @@ end
 -- Trigger: ForSoldUnitsDesel
 --===========================================================================
 function Trig_ForSoldUnitsDesel_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'Asud') > 0 and GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL)
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('Asud')) > 0 and GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetTriggerPlayer(), ALLIANCE_SHARED_ADVANCED_CONTROL)
 end
 function Trig_ForSoldUnitsDesel_Actions()
     local mainplayer= GetOwningPlayer(GetTriggerUnit())
@@ -44094,7 +44094,7 @@ end
 -- Trigger: A1
 --===========================================================================
 function Trig_A1_Func001A()
-    UnitAddAbilityBJ('A0IQ', GetEnumUnit())
+    UnitAddAbilityBJ(FourCC('A0IQ'), GetEnumUnit())
 end
 function Trig_A1_Actions()
     ForGroupBJ(GetUnitsSelectedAll(Player(0)), Trig_A1_Func001A)
@@ -44109,7 +44109,7 @@ end
 -- Trigger: Second O
 --===========================================================================
 function Trig_Second_O_Func001A()
-    CreateNUnitsAtLoc(1, 'h0HJ', GetEnumPlayer(), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('h0HJ'), GetEnumPlayer(), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
 end
 function Trig_Second_O_Actions()
     ForForce(udg_AllPlayers, Trig_Second_O_Func001A)
@@ -44362,7 +44362,7 @@ end
 -- Trigger: StartLimit
 --===========================================================================
 function Trig_StartWorgens_Copy_Func001A()
-    SetPlayerTechMaxAllowedSwap('h0P7', 1, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0P7'), 1, GetEnumPlayer())
 end
 function Trig_StartLimit_Actions()
     ForForce(udg_AllPlayers, Trig_StartWorgens_Copy_Func001A)
@@ -44377,27 +44377,27 @@ end
 -- Trigger: DestroyTrain
 --===========================================================================
 function Trig_DestroyTrain_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'h0P7'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0P7')
 end
 function Trig_DestroyTrain_Func002A()
     KillUnit(GetEnumUnit())
 end
 function LimitTrainDestroy()
-    SetPlayerTechMaxAllowedSwap('h0P7', 0, GetEnumPlayer())
+    SetPlayerTechMaxAllowedSwap(FourCC('h0P7'), 0, GetEnumPlayer())
 end
 function Trig_DestroyTrain_Actions()
     RemoveUnit(GetTrainedUnit())
     ForGroupBJ(GetUnitsInRectAll(gg_rct_TrainArea), Trig_DestroyTrain_Func002A)
-    CreateDestructableLoc('B01R', GetRectCenter(gg_rct_Region_143), 0.0, 3, 0)
-    CreateDestructableLoc('B01S', GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 0, 200.00)), GetRandomDirectionDeg(), 1, 0)
-    CreateDestructableLoc('B01S', GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 0, - 200.00)), GetRandomDirectionDeg(), 1, 0)
-    CreateDestructableLoc('B01S', GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 650.00, 200.00)), GetRandomDirectionDeg(), 1, 0)
-    CreateDestructableLoc('B01S', GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 650.00, - 200.00)), GetRandomDirectionDeg(), 1, 0)
+    CreateDestructableLoc(FourCC('B01R'), GetRectCenter(gg_rct_Region_143), 0.0, 3, 0)
+    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 0, 200.00)), GetRandomDirectionDeg(), 1, 0)
+    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 0, - 200.00)), GetRandomDirectionDeg(), 1, 0)
+    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 650.00, 200.00)), GetRandomDirectionDeg(), 1, 0)
+    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 650.00, - 200.00)), GetRandomDirectionDeg(), 1, 0)
     
-    CreateDestructableLoc('B01S', GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 1300.00, 200.00)), GetRandomDirectionDeg(), 1, 0)
-    CreateDestructableLoc('B01S', GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 1300.00, - 200.00)), GetRandomDirectionDeg(), 1, 0)
+    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 1300.00, 200.00)), GetRandomDirectionDeg(), 1, 0)
+    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 1300.00, - 200.00)), GetRandomDirectionDeg(), 1, 0)
     
-    CreateDestructableLoc('B01R', GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 1300.00, 0.00)), GetRandomDirectionDeg(), 3, 0)
+    CreateDestructableLoc(FourCC('B01R'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 1300.00, 0.00)), GetRandomDirectionDeg(), 3, 0)
     RemoveUnit(gg_unit_n003_0149)
     RemoveUnit(gg_unit_n003_0028)
     ForForce(udg_AllPlayers, LimitTrainDestroy)
@@ -44413,7 +44413,7 @@ end
 -- Trigger: BeginDestroingTrain
 --===========================================================================
 function Trig_BeginDestroingTrain_Conditions()
-    return GetUnitTypeId(GetTrainedUnit()) == 'h0P7'
+    return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0P7')
 end
 function Trig_BeginDestroingTrain_Actions()
       DisplayTextToForce(udg_AllPlayers, " - ...")
@@ -44438,14 +44438,14 @@ end
 -- Trigger: KalecStart
 --===========================================================================
 function Trig_KalecStart_Conditions()
-    return GetSpellAbilityId() == 'A12R' and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
+    return GetSpellAbilityId() == FourCC('A12R') and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 function Trig_KalecStart_Actions()
     local u
     local l= GetUnitLoc(GetTriggerUnit())
-    u=CreateUnitAtLoc(Player(24), 'n04W', l, bj_UNIT_FACING)
+    u=CreateUnitAtLoc(Player(24), FourCC('n04W'), l, bj_UNIT_FACING)
     TriggerRegisterUnitEvent(gg_trg_KalecDead, u, EVENT_UNIT_DEATH)
-    UnitRemoveAbility(GetTriggerUnit(), 'A12R')
+    UnitRemoveAbility(GetTriggerUnit(), FourCC('A12R'))
     ForForce(udg_AllPlayers, DisableKalec)
     TriggerSleepAction(245)
     if UnitAlive(u) then
@@ -44453,7 +44453,7 @@ function Trig_KalecStart_Actions()
         RemoveUnit(u)
         DisplayTextToPlayer(GetOwningPlayer(GetTriggerUnit()), 0, 0, "4")
         ForForce(udg_AllPlayers, EnableKalec)
-        UnitAddAbility(GetTriggerUnit(), 'A12R')
+        UnitAddAbility(GetTriggerUnit(), FourCC('A12R'))
     end
     
     RemoveLocation(l)
@@ -44475,7 +44475,7 @@ function Trig_KalecDead_Func004A()
 end
 function Trig_KalecDead_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateItemLoc('I01U', udg_LocalPosition2)
+    CreateItemLoc(FourCC('I01U'), udg_LocalPosition2)
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_25200")
     ForForce(udg_AllPlayers, Trig_KalecDead_Func004A)
     DisableTrigger(gg_trg_KalecStart)
@@ -44489,16 +44489,16 @@ end
 -- Trigger: ShaStart
 --===========================================================================
 function Trig_ShaStart_Conditions()
-    return GetSpellAbilityId() == 'A1ML' and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
+    return GetSpellAbilityId() == FourCC('A1ML') and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 function DisableSha()
     SetPlayerAbilityAvailableBJ(false, FourCC('A1ML'), GetEnumPlayer())
 end
 function Trig_ShaStart_Actions()
     local u
-    u=CreateUnit(Player(24), 'n076', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), bj_UNIT_FACING)
+    u=CreateUnit(Player(24), FourCC('n076'), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), bj_UNIT_FACING)
     TriggerRegisterUnitEvent(gg_trg_ShaDead, u, EVENT_UNIT_DEATH)
-    UnitRemoveAbility(GetTriggerUnit(), 'A1ML')
+    UnitRemoveAbility(GetTriggerUnit(), FourCC('A1ML'))
     ForForce(udg_AllPlayers, DisableSha)
     u=null
 end
@@ -44513,7 +44513,7 @@ end
 -- Trigger: ShaDead
 --===========================================================================
 function Trig_ShaDead_Actions()
-    CreateItem('I021', GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()))
+    CreateItem(FourCC('I021'), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()))
     DisplayTextToForce(udg_AllPlayers2, ".")
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnit()), PLAYER_STATE_RESOURCE_GOLD)
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnit()), PLAYER_STATE_RESOURCE_LUMBER)
@@ -44529,7 +44529,7 @@ end
 -- Trigger: AncientGods add MindControl Copy
 --===========================================================================
 function Trig_AncientGods_add_MindControl_Copy_Actions()
-    UnitAddAbilityBJ('A0W4', gg_unit_n03D_0666)
+    UnitAddAbilityBJ(FourCC('A0W4'), gg_unit_n03D_0666)
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================
@@ -44542,7 +44542,7 @@ end
 -- Trigger: AncienGods Add MassAttak Copy
 --===========================================================================
 function Trig_AncienGods_Add_MassAttak_Copy_Actions()
-    UnitAddAbilityBJ('A0T3', gg_unit_n03D_0666)
+    UnitAddAbilityBJ(FourCC('A0T3'), gg_unit_n03D_0666)
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================
@@ -44556,16 +44556,16 @@ end
 --===========================================================================
 function Trig_Qtun_17k_o_Actions()
     udg_LocalPosition2=GetRectCenter(gg_rct_Qt1)
-    CreateNUnitsAtLoc(1, 'n03J', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n03J'), Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetRectCenter(gg_rct_Qt2)
-    CreateNUnitsAtLoc(1, 'n03J', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n03J'), Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetRectCenter(gg_rct_Qt3)
-    CreateNUnitsAtLoc(1, 'n03J', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n03J'), Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetRectCenter(gg_rct_Qt4)
-    CreateNUnitsAtLoc(1, 'n03J', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n03J'), Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     DisableTrigger(GetTriggeringTrigger())
 end
@@ -44580,16 +44580,16 @@ end
 --===========================================================================
 function Trig_Qtun_HP_24k_O_Actions()
     udg_LocalPosition2=GetRectCenter(gg_rct_Qt1)
-    CreateNUnitsAtLoc(1, 'n03J', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n03J'), Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetRectCenter(gg_rct_Qt2)
-    CreateNUnitsAtLoc(1, 'n03J', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n03J'), Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetRectCenter(gg_rct_Qt3)
-    CreateNUnitsAtLoc(1, 'n03J', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n03J'), Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetRectCenter(gg_rct_Qt4)
-    CreateNUnitsAtLoc(1, 'n03J', Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n03J'), Player(PLAYER_NEUTRAL_AGGRESSIVE), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     DisableTrigger(GetTriggeringTrigger())
 end
@@ -44616,7 +44616,7 @@ function Trig_Qtun_Die_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_2385")
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_GOLD)
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_LUMBER)
-    CreateItemLoc('I01R', udg_LocalPosition2)
+    CreateItemLoc(FourCC('I01R'), udg_LocalPosition2)
     RemoveLocation(udg_LocalPosition2)
     DisableTrigger(GetTriggeringTrigger())
 end
@@ -44634,7 +44634,7 @@ function Trig_SpawnQtun_Func006C()
     if ( not ( GetTriggerUnit() == gg_unit_n03D_0666 ) ) then
         return false
     end
-    if ( not ( GetSpellAbilityId() == 'A0W0' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0W0') ) ) then
         return false
     end
     if ( not ( GetPlayerController(GetOwningPlayer(GetTriggerUnit())) ~= MAP_CONTROL_USER ) ) then
@@ -44655,7 +44655,7 @@ function Trig_SpawnQtun_Func002Func002C()
     return true
 end
 function Trig_SpawnQtun_Func002Func008A()
-    UnitApplyTimedLifeBJ(30.00, 'BTLF', GetEnumUnit())
+    UnitApplyTimedLifeBJ(30.00, FourCC('BTLF'), GetEnumUnit())
     IssuePointOrderLocBJ(GetEnumUnit(), "attack", udg_LocalPosition3)
 end
 function Trig_SpawnQtun_Func002C()
@@ -44671,7 +44671,7 @@ function Trig_SpawnQtun_Func003Func002C()
     return true
 end
 function Trig_SpawnQtun_Func003Func008A()
-    UnitApplyTimedLifeBJ(30.00, 'BTLF', GetEnumUnit())
+    UnitApplyTimedLifeBJ(30.00, FourCC('BTLF'), GetEnumUnit())
     IssuePointOrderLocBJ(GetEnumUnit(), "attack", udg_LocalPosition3)
 end
 function Trig_SpawnQtun_Func003C()
@@ -44690,7 +44690,7 @@ function Trig_SpawnQtun_Func004Func002C()
     return true
 end
 function Trig_SpawnQtun_Func004Func008A()
-    UnitApplyTimedLifeBJ(30.00, 'BTLF', GetEnumUnit())
+    UnitApplyTimedLifeBJ(30.00, FourCC('BTLF'), GetEnumUnit())
     IssuePointOrderLocBJ(GetEnumUnit(), "attack", udg_LocalPosition3)
 end
 function Trig_SpawnQtun_Func004C()
@@ -44709,7 +44709,7 @@ function Trig_SpawnQtun_Func005Func002C()
     return true
 end
 function Trig_SpawnQtun_Func005Func008A()
-    UnitApplyTimedLifeBJ(30.00, 'BTLF', GetEnumUnit())
+    UnitApplyTimedLifeBJ(30.00, FourCC('BTLF'), GetEnumUnit())
     IssuePointOrderLocBJ(GetEnumUnit(), "attack", udg_LocalPosition3)
 end
 function Trig_SpawnQtun_Func005C()
@@ -44762,7 +44762,7 @@ function Trig_SpawnQtun_Actions()
         end
         udg_LocalInteger=R2I(( ( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00 ))
         udg_LocalInteger2=( udg_LocalInteger * 1 )
-        CreateNUnitsAtLoc(udg_LocalInteger2, 'e01Q', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        CreateNUnitsAtLoc(udg_LocalInteger2, FourCC('e01Q'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
         udg_LocalOtrad=GetLastCreatedGroup()
         udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
         ForGroupBJ(udg_LocalOtrad, Trig_SpawnQtun_Func004Func008A)
@@ -44780,7 +44780,7 @@ function Trig_SpawnQtun_Actions()
         end
         udg_LocalInteger=R2I(( ( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00 ))
         udg_LocalInteger2=( udg_LocalInteger * 1 )
-        CreateNUnitsAtLoc(udg_LocalInteger2, 'e01P', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
+        CreateNUnitsAtLoc(udg_LocalInteger2, FourCC('e01P'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
         udg_LocalOtrad=GetLastCreatedGroup()
         udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
         ForGroupBJ(udg_LocalOtrad, Trig_SpawnQtun_Func005Func008A)
@@ -44802,16 +44802,16 @@ end
 --===========================================================================
 function Trig_Qogg_HP_24k_O_Actions()
     udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_1)
-    CreateNUnitsAtLoc(1, 'n04C', Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_2)
-    CreateNUnitsAtLoc(1, 'n04C', Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_3)
-    CreateNUnitsAtLoc(1, 'n04C', Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_4)
-    CreateNUnitsAtLoc(1, 'n04C', Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     DisableTrigger(GetTriggeringTrigger())
 end
@@ -44826,16 +44826,16 @@ end
 --===========================================================================
 function Trig_Qogg_HP_17k_O_Actions()
     udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_5)
-    CreateNUnitsAtLoc(1, 'n04C', Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_6)
-    CreateNUnitsAtLoc(1, 'n04C', Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_6), bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_6), bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_7)
-    CreateNUnitsAtLoc(1, 'n04C', Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_7), bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_7), bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_8)
-    CreateNUnitsAtLoc(1, 'n04C', Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_8), bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_8), bj_UNIT_FACING)
     RemoveLocation(udg_LocalPosition2)
     DisableTrigger(GetTriggeringTrigger())
 end
@@ -44849,7 +44849,7 @@ end
 -- Trigger: AncienGods Add MassAttak
 --===========================================================================
 function Trig_AncienGods_Add_MassAttak_Actions()
-    UnitAddAbilityBJ('A0T3', gg_unit_n03A_0657)
+    UnitAddAbilityBJ(FourCC('A0T3'), gg_unit_n03A_0657)
 end
 --===========================================================================
 function InitTrig_AncienGods_Add_MassAttak()
@@ -44861,7 +44861,7 @@ end
 -- Trigger: AncientGods add MindControl
 --===========================================================================
 function Trig_AncientGods_add_MindControl_Actions()
-    UnitAddAbilityBJ('A0W4', gg_unit_n03A_0657)
+    UnitAddAbilityBJ(FourCC('A0W4'), gg_unit_n03A_0657)
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================
@@ -44883,7 +44883,7 @@ function Trig_Qogg_Die_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_20558")
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_GOLD)
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_LUMBER)
-    CreateItemLoc('I01Q', GetUnitLoc(GetTriggerUnit()))
+    CreateItemLoc(FourCC('I01Q'), GetUnitLoc(GetTriggerUnit()))
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================
@@ -44900,7 +44900,7 @@ function Trig_Spell1_Copy_2_Func008C()
     if ( not ( GetTriggerUnit() == gg_unit_n03A_0657 ) ) then
         return false
     end
-    if ( not ( GetSpellAbilityId() == 'A0T7' ) ) then
+    if ( not ( GetSpellAbilityId() == FourCC('A0T7') ) ) then
         return false
     end
     if ( not ( GetPlayerController(GetOwningPlayer(GetTriggerUnit())) ~= MAP_CONTROL_USER ) ) then
@@ -44950,32 +44950,32 @@ function Trig_QoggSpawn_Actions()
     udg_LocalPosition2=GetRandomLocInRect(gg_rct_Region_083)
     udg_LocalInteger=GetRandomInt(1, 5)
     if ( Trig_Spell1_Copy_2_Func003C() ) then
-        CreateNUnitsAtLoc(1, 'n04C', p, udg_LocalPosition2, bj_UNIT_FACING)
-        UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
+        CreateNUnitsAtLoc(1, FourCC('n04C'), p, udg_LocalPosition2, bj_UNIT_FACING)
+        UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
     else
     end
     if ( Trig_Spell1_Copy_2_Func004C() ) then
-        CreateNUnitsAtLoc(1, 'n03C', p, udg_LocalPosition2, bj_UNIT_FACING)
-        UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
+        CreateNUnitsAtLoc(1, FourCC('n03C'), p, udg_LocalPosition2, bj_UNIT_FACING)
+        UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
     else
     end
     if ( Trig_Spell1_Copy_2_Func005C() ) then
-        CreateNUnitsAtLoc(1, 'n04K', p, udg_LocalPosition2, bj_UNIT_FACING)
-        UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
+        CreateNUnitsAtLoc(1, FourCC('n04K'), p, udg_LocalPosition2, bj_UNIT_FACING)
+        UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
     else
     end
     if ( Trig_Spell1_Copy_2_Func006C() ) then
-        CreateNUnitsAtLoc(1, 'n04L', p, udg_LocalPosition2, bj_UNIT_FACING)
-        UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
+        CreateNUnitsAtLoc(1, FourCC('n04L'), p, udg_LocalPosition2, bj_UNIT_FACING)
+        UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
     else
     end
     if ( Trig_Spell1_Copy_2_Func007C() ) then
-        CreateNUnitsAtLoc(1, 'n04J', p, udg_LocalPosition2, bj_UNIT_FACING)
-        UnitApplyTimedLifeBJ(60, 'BTLF', GetLastCreatedUnit())
+        CreateNUnitsAtLoc(1, FourCC('n04J'), p, udg_LocalPosition2, bj_UNIT_FACING)
+        UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
     else
     end
@@ -45569,7 +45569,7 @@ function PlayerArmy()
                 GroupRemoveUnit(gAllyGroup, udg_LocalUnit2)
                 LazyCount=LazyCount - 1
                 -- Дровосеки
-                if GetUnitTypeId(udg_LocalUnit2) == 'h03C' then
+                if GetUnitTypeId(udg_LocalUnit2) == FourCC('h03C') then
                     if Random(1 , 2) then
                         IssueImmediateOrder(udg_LocalUnit2, "autoharvestlumber")
                     else
@@ -45890,8 +45890,8 @@ function Strateg()
     --call DisplayTimedTextFromPlayer(Player(0),0,0,4,I2S(i))
     
     -- Увеличивает уровень спопособности юнита с аурами
-    SetUnitAbilityLevel(BonusUnit[pi], 'aib0', IMinBJ(R2I(i / 50 + 1), 10))
-    SetUnitAbilityLevel(BonusUnit[pi], 'aib1', IMinBJ(R2I(i / 50 + 1), 10))
+    SetUnitAbilityLevel(BonusUnit[pi], FourCC('aib0'), IMinBJ(R2I(i / 50 + 1), 10))
+    SetUnitAbilityLevel(BonusUnit[pi], FourCC('aib1'), IMinBJ(R2I(i / 50 + 1), 10))
     --call BJDebugMsg(""+GetUnitName(BonusUnit[pi])+""+I2S(i)+""+I2S(IMinBJ( R2I(i/10),4)))
     
     
@@ -46422,7 +46422,7 @@ end
 -- Trigger: MainFloatUnits
 --===========================================================================
 function isShip()
-    return id == 'h00X' or id == 'h00Y' or id == 'h00Z' or id == 'h0CZ' or id == 'h0D2' or id == 'h0D0' or id == 'h0D5' or id == 'h0D4' or id == 'h0D6' or id == 'h0DB' or id == 'h0D9' or id == 'h0DA' or id == 'h0E6' or id == 'h0E5' or id == 'h0E8' or id == 'h03L' or id == 'h03K' or id == 'h06W' or id == 'h0DM' or id == 'h06V' or id == 'h06X' --Гоблины
+    return id == FourCC('h00X') or id == FourCC('h00Y') or id == FourCC('h00Z') or id == FourCC('h0CZ') or id == FourCC('h0D2') or id == FourCC('h0D0') or id == FourCC('h0D5') or id == FourCC('h0D4') or id == FourCC('h0D6') or id == FourCC('h0DB') or id == FourCC('h0D9') or id == FourCC('h0DA') or id == FourCC('h0E6') or id == FourCC('h0E5') or id == FourCC('h0E8') or id == FourCC('h03L') or id == FourCC('h03K') or id == FourCC('h06W') or id == FourCC('h0DM') or id == FourCC('h06V') or id == FourCC('h06X') --Гоблины
     
 end
 function aiShipJoins()
@@ -46465,7 +46465,7 @@ end
 -- Trigger: PortUnits
 --===========================================================================
 function isNavalBase()
-    return id == 'h0D1' or id == 'h0D8' or id == 'h03R' or id == 'h0D3' or id == 'h0E7' or id == 'h011' or id == 'h0D7' or gId == 'n04L' or gId == 'h0HO' -- Прописать все типы верфей
+    return id == FourCC('h0D1') or id == FourCC('h0D8') or id == FourCC('h03R') or id == FourCC('h0D3') or id == FourCC('h0E7') or id == FourCC('h011') or id == FourCC('h0D7') or gId == FourCC('n04L') or gId == FourCC('h0HO') -- Прописать все типы верфей
 end
 function Trig_PortUnits_Conditions()
     gUnit=GetConstructingStructure()
@@ -46541,7 +46541,7 @@ function aiRep()
         if GetUnitAbilityLevel(gUnit, gDummySpell) == 0 and not IsUnitType(gUnit, UNIT_TYPE_SUMMONED) then
             
             -- Сломался с неуязом
-            if BlzIsUnitInvulnerable(gUnit) then -- GetUnitAbilityLevel(gUnit, 'Bvul') > 0 then
+            if BlzIsUnitInvulnerable(gUnit) then -- GetUnitAbilityLevel(gUnit, FourCC('Bvul')) > 0 then
                 BJDebugMsg("")
                 gUnit=ReplaceUnit2(gUnit , GetUnitTypeId(gUnit) , bj_UNIT_STATE_METHOD_RELATIVE)
                 
@@ -46568,7 +46568,7 @@ function aiRep()
                 end
                 
                 aiUnitJoins(gUnit , pi)
-                if gId == 'h07A' then -- Маг-тп
+                if gId == FourCC('h07A') then -- Маг-тп
                    GroupAddUnit(AiUnitsToPort[pi], gUnit)
                 end
             end
@@ -46767,7 +46767,7 @@ end
 -- Trigger: PortalSell
 --===========================================================================
 function Trig_PortalSell_Conditions()
-    return GetUnitTypeId(GetSoldUnit()) == 'h0P0'
+    return GetUnitTypeId(GetSoldUnit()) == FourCC('h0P0')
 end
 function Trig_PortalSell_Actions()
     IssueImmediateOrderBJ(GetTriggerUnit(), "web")
@@ -46819,7 +46819,7 @@ end
 -- Trigger: PortalCommonFunction
 --===========================================================================
 function PortalConditions()
-    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(GetFilterUnit(), 'Sch5') == 0 and GetUnitAbilityLevel(GetFilterUnit(), 'A001') == 0 and GetUnitAbilityLevel(GetFilterUnit(), 'A1M3') == 0 and GetUnitAbilityLevel(GetFilterUnit(), 'Awrp') == 0 and GetUnitAbilityLevel(GetFilterUnit(), 'A00A') == 0
+    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Sch5')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A001')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1M3')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Awrp')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A00A')) == 0
 end
 function TeleportUnitsEach()
     SetUnitPosition(GetEnumUnit(), GetRandomReal(GetRectMinX(gRect), GetRectMaxX(gRect)), GetRandomReal(GetRectMinY(gRect), GetRectMaxY(gRect)))
@@ -46836,7 +46836,7 @@ function TeleportUnits()
 end
 -- хз что тут менр
 function PortalConditionsED()
-    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(GetFilterUnit(), 'Sch5') == 0 and GetUnitAbilityLevel(GetFilterUnit(), 'A001') == 0 and GetUnitAbilityLevel(GetFilterUnit(), 'A1M3') == 0 and GetUnitTypeId(GetFilterUnit()) ~= 'n01W' and GetUnitTypeId(GetFilterUnit()) ~= 'n01X' and GetUnitAbilityLevel(GetFilterUnit(), 'Awrp') == 0 and GetUnitAbilityLevel(GetFilterUnit(), 'A1LR') >= 1
+    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Sch5')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A001')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1M3')) == 0 and GetUnitTypeId(GetFilterUnit()) ~= FourCC('n01W') and GetUnitTypeId(GetFilterUnit()) ~= FourCC('n01X') and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Awrp')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1LR')) >= 1
 end
 function TeleportUnitsED()
     gLoc=GetUnitLoc(Portal)
@@ -47086,7 +47086,7 @@ end
 -- Trigger: Emerald Dream TP O Copy
 --===========================================================================
 function Trig_Emerald_Dream_TP_O_Copy_Func001C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == 'H049' ) ) then
+    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('H049') ) ) then
         return false
     end
     return true
@@ -47100,10 +47100,10 @@ function Trig_Emerald_Dream_TP_O_Copy_Actions()
         DisplayTextToPlayer(GetEnumPlayer(), 0, 0, udg_LocalText2)
         RemoveLocation(udg_LocalPosition[21])
     else
-        if IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) then --and GetUnitAbilityLevel(GetTriggerUnit(),'A1LR')==0 then
+        if IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) then --and GetUnitAbilityLevel(GetTriggerUnit(),FourCC('A1LR'))==0 then
             KillUnit(GetTriggerUnit())
         else
-            UnitAddAbilityBJ('A0LT', GetTriggerUnit())
+            UnitAddAbilityBJ(FourCC('A0LT'), GetTriggerUnit())
         end
     end
 end
@@ -47117,7 +47117,7 @@ end
 -- Trigger: Emerald Dream TP OFF O
 --===========================================================================
 function Trig_Emerald_Dream_TP_OFF_O_Actions()
-    UnitRemoveAbilityBJ('A0LT', GetTriggerUnit())
+    UnitRemoveAbilityBJ(FourCC('A0LT'), GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_Emerald_Dream_TP_OFF_O()
@@ -47129,7 +47129,7 @@ end
 -- Trigger: NoAttackGreen
 --===========================================================================
 function Trig_NoAttackGreen_Conditions()
-    return GetUnitAbilityLevel(GetAttacker(), 'A0LR') > 0 and GetUnitAbilityLevel(GetTriggerUnit(), 'A1LR') > 0 -- or GetUnitAbilityLevel( GetTriggerUnit(),'A0LR')>0 and GetUnitAbilityLevel( GetAttacker(),'A1LR')>0
+    return GetUnitAbilityLevel(GetAttacker(), FourCC('A0LR')) > 0 and GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1LR')) > 0 -- or GetUnitAbilityLevel( GetTriggerUnit(),FourCC('A0LR'))>0 and GetUnitAbilityLevel( GetAttacker(),FourCC('A1LR'))>0
 end
 function Trig_NoAttackGreen_Actions()
     IssueImmediateOrder(GetAttacker(), "stop")
@@ -47147,7 +47147,7 @@ end
 -- Trigger: NoAttackGreen2
 --===========================================================================
 function Trig_NoAttackGreen2_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), 'A0LR') > 0 and GetUnitAbilityLevel(GetAttacker(), 'A1LR') > 0 -- or GetUnitAbilityLevel( GetTriggerUnit(),'A0LR')>0 and GetUnitAbilityLevel( GetAttacker(),'A1LR')>0
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A0LR')) > 0 and GetUnitAbilityLevel(GetAttacker(), FourCC('A1LR')) > 0 -- or GetUnitAbilityLevel( GetTriggerUnit(),FourCC('A0LR'))>0 and GetUnitAbilityLevel( GetAttacker(),FourCC('A1LR'))>0
 end
 function Trig_NoAttackGreen2_Actions()
     IssueImmediateOrder(GetAttacker(), "stop")
@@ -47968,7 +47968,7 @@ end
 -- Trigger: NaxIn
 --===========================================================================
 function Trig_NaxIn_Conditions()
-     return GetSpellAbilityId() == 'A0HY' and GetUnitTypeId(GetTriggerUnit()) == 'n066'
+     return GetSpellAbilityId() == FourCC('A0HY') and GetUnitTypeId(GetTriggerUnit()) == FourCC('n066')
 end
 function Trig_NaxIn_Actions()
     TeleportUnits(GetTriggerUnit() , gg_rct_NaxPortalIn , 1200)
@@ -48000,7 +48000,7 @@ end
 -- Trigger: DalIn
 --===========================================================================
 function Trig_DalIn_Conditions()
-    return GetSpellAbilityId() == 'A0HY' and GetUnitTypeId(GetTriggerUnit()) == 'n063'
+    return GetSpellAbilityId() == FourCC('A0HY') and GetUnitTypeId(GetTriggerUnit()) == FourCC('n063')
 end
 function Trig_DalIn_Actions()
     TeleportUnits(GetTriggerUnit() , gg_rct_DalaranIn , 1200)
@@ -48076,11 +48076,11 @@ end
 -- Trigger: PrepareToBurnCity
 --===========================================================================
 function Trig_PrepareToBurnCity_Conditions()
-    return GetSpellAbilityId() == 'A1LD'
+    return GetSpellAbilityId() == FourCC('A1LD')
 end
 function Trig_PrepareToBurnCity_Actions()
-    UnitRemoveAbility(GetTriggerUnit(), 'A1LD')
-    UnitAddAbility(GetTriggerUnit(), 'A1LC')
+    UnitRemoveAbility(GetTriggerUnit(), FourCC('A1LD'))
+    UnitAddAbility(GetTriggerUnit(), FourCC('A1LC'))
 end
 --===========================================================================
 function InitTrig_PrepareToBurnCity()
@@ -48093,7 +48093,7 @@ end
 -- Trigger: BurnCity
 --===========================================================================
 function Trig_BurnCity_Conditions()
-    return GetSpellAbilityId() == 'A1LC'
+    return GetSpellAbilityId() == FourCC('A1LC')
 end
 function Trig_BurnCity_Actions()
    -- call UnitDamageTarget(GetTriggerUnit(),GetTriggerUnit(),99999,true,false,ATTACK_TYPE_NORMAL,DAMAGE_TYPE_UNIVERSAL,WEAPON_TYPE_WHOKNOWS)
@@ -48180,7 +48180,7 @@ function Trig_PosadkaDal_Conditions()
 end
 function Trig_PosadkaDal_Actions()
     local u= GetTriggerUnit()
-    local u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), 'n063', GetUnitX(u), GetUnitY(u) - 65, 0.00)
+    local u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), FourCC('n063'), GetUnitX(u), GetUnitY(u) - 65, 0.00)
     SetUnitMoveSpeed(u, 0.0)
     SaveUnitHandle(Hash, StringHash("Dalaran"), 1, u2)
     
@@ -48189,8 +48189,8 @@ function Trig_PosadkaDal_Actions()
     --call DisplayTextToPlayer(Player(0),0,0," - "+R2S(GetUnitMoveSpeed(u)))
     BlzSetUnitRealFieldBJ(u, UNIT_RF_FLY_HEIGHT, - 200.00)
     SetUnitFlyHeightBJ(u, - 200, 55.00)
-    UnitAddAbility(u, 'A1M6')
-    UnitAddAbility(u, 'A1GE')
+    UnitAddAbility(u, FourCC('A1M6'))
+    UnitAddAbility(u, FourCC('A1GE'))
     BlzSetUnitRealFieldBJ(u, UNIT_RF_TURN_RATE, 0.00)
    
     UnitAddAbility(u, AbilityAp)
@@ -48240,8 +48240,8 @@ function Trig_VzletDal_Actions()
     SetUnitFlyHeightBJ(u, 400.00, 55.00)
     
     ShowUnit(gg_unit_n003_0588, false)
-    UnitRemoveAbility(u, 'A1M6')
-    UnitRemoveAbility(u, 'A1GE')
+    UnitRemoveAbility(u, FourCC('A1M6'))
+    UnitRemoveAbility(u, FourCC('A1GE'))
     UnitAddAbility(u, AbilityDown)
     BlzSetUnitRealFieldBJ(u, UNIT_RF_TURN_RATE, 0.15)
     BlzStartUnitAbilityCooldown(u, AbilityDown, 15)
@@ -48281,7 +48281,7 @@ end
 -- Trigger: DalDiy
 --===========================================================================
 function Trig_DalDiy_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == 'e00C'
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('e00C')
 end
 function Trig_DalDiy_Func002A()
     KillUnit(GetEnumUnit())
@@ -48291,7 +48291,7 @@ function Trig_DalDiy_Func003A()
 end
 function Trig_DalDiy_Actions()
     ForGroupBJ(GetUnitsInRectAll(gg_rct_RenameDeath), Trig_DalDiy_Func002A)
-    ForGroupBJ(GetUnitsOfTypeIdAll('n063'), Trig_DalDiy_Func003A)
+    ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('n063')), Trig_DalDiy_Func003A)
     TriggerExecute(gg_trg_DallKill)
     DisableTrigger(GetTriggeringTrigger())
     
@@ -48318,7 +48318,7 @@ end
 -- Trigger: OwnerNax
 --===========================================================================
 function Trig_OwnerNax_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == 'h0F3'
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('h0F3')
 end
 function Trig_OwnerNax_Actions()
     SetUnitOwner(gg_unit_e00D_0080, GetOwningPlayer(GetKillingUnit()), true)
@@ -48363,7 +48363,7 @@ function Trig_PosadkaNax_Conditions()
 end
 function Trig_PosadkaNax_Actions()
     local u= GetTriggerUnit()
-    local u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), 'n066', GetUnitX(u), GetUnitY(u) - 65, 0.00)
+    local u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), FourCC('n066'), GetUnitX(u), GetUnitY(u) - 65, 0.00)
     SetUnitMoveSpeed(u, 0.0)
     SaveUnitHandle(Hash, StringHash("Nax"), 1, u2)
     
@@ -48372,8 +48372,8 @@ function Trig_PosadkaNax_Actions()
     --call DisplayTextToPlayer(Player(0),0,0," - "+R2S(GetUnitMoveSpeed(u)))
     BlzSetUnitRealFieldBJ(u, UNIT_RF_FLY_HEIGHT, - 200.00)
     SetUnitFlyHeightBJ(u, - 200, 55.00)
-    UnitAddAbility(u, 'A1M6')
-    UnitAddAbility(u, 'A1GE')
+    UnitAddAbility(u, FourCC('A1M6'))
+    UnitAddAbility(u, FourCC('A1GE'))
     BlzSetUnitRealFieldBJ(u, UNIT_RF_TURN_RATE, 0.00)
    
     UnitAddAbility(u, NaxAbilityAp)
@@ -48423,8 +48423,8 @@ function Trig_NaxFly_Actions()
     SetUnitFlyHeightBJ(u, 400.00, 55.00)
     
     ShowUnit(gg_unit_n003_0126, false)
-    UnitRemoveAbility(u, 'A1M6')
-    UnitRemoveAbility(u, 'A1GE')
+    UnitRemoveAbility(u, FourCC('A1M6'))
+    UnitRemoveAbility(u, FourCC('A1GE'))
     UnitAddAbility(u, NaxAbilityDown)
     BlzSetUnitRealFieldBJ(u, UNIT_RF_TURN_RATE, 0.15)
     BlzStartUnitAbilityCooldown(u, NaxAbilityDown, 15)
@@ -48464,7 +48464,7 @@ end
 -- Trigger: NaxDiy
 --===========================================================================
 function Trig_NaxDiy_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == 'e00D'
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('e00D')
 end
 function Trig_NaxDiy_Func002A()
     KillUnit(GetEnumUnit())
@@ -48474,7 +48474,7 @@ function Trig_NaxDiy_Func003A()
 end
 function Trig_NaxDiy_Actions()
     ForGroupBJ(GetUnitsInRectAll(gg_rct_Naxramas), Trig_NaxDiy_Func002A)
-    ForGroupBJ(GetUnitsOfTypeIdAll('n066'), Trig_NaxDiy_Func003A)
+    ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('n066')), Trig_NaxDiy_Func003A)
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================
@@ -48488,7 +48488,7 @@ end
 -- Trigger: OwnerTurtle
 --===========================================================================
 function Trig_OwnerTurtle_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == 'h0O5'
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('h0O5')
 end
 function Trig_OwnerTurtle_Actions()
     SetUnitOwner(gg_unit_e00E_0085, GetOwningPlayer(GetKillingUnit()), true)
@@ -48533,14 +48533,14 @@ function Trig_PosadkaTurtle_Conditions()
 end
 function Trig_PosadkaTurtle_Actions()
     local u= GetTriggerUnit()
-    local u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), 'n075', GetUnitX(u), GetUnitY(u) + 65, 0.00)
+    local u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), FourCC('n075'), GetUnitX(u), GetUnitY(u) + 65, 0.00)
     SetUnitMoveSpeed(u, 0.0)
     SaveUnitHandle(Hash, StringHash("Turtle"), 1, u2)
     
     --call DisplayTextToPlayer(Player(0),0,0," - ")
     AddUnitAnimationProperties(u, "Swim", false)
-    UnitAddAbility(u, 'A1M6')
-    UnitAddAbility(u, 'A1GE')
+    UnitAddAbility(u, FourCC('A1M6'))
+    UnitAddAbility(u, FourCC('A1GE'))
     BlzSetUnitRealFieldBJ(u, UNIT_RF_TURN_RATE, 0.00)
    
     UnitAddAbility(u, TurtleAbilityAp)
@@ -48588,8 +48588,8 @@ function Trig_TurtleSwim_Actions()
     
     AddUnitAnimationProperties(u, "Swim", true)
     ShowUnit(gg_unit_n003_0090, false)
-    UnitRemoveAbility(u, 'A1M6')
-    UnitRemoveAbility(u, 'A1GE')
+    UnitRemoveAbility(u, FourCC('A1M6'))
+    UnitRemoveAbility(u, FourCC('A1GE'))
     UnitAddAbility(u, TurtleAbilityDown)
     BlzSetUnitRealFieldBJ(u, UNIT_RF_TURN_RATE, 0.15)
     BlzStartUnitAbilityCooldown(u, TurtleAbilityDown, 15)
@@ -48617,11 +48617,11 @@ end
 -- Trigger: TurtleDiy
 --===========================================================================
 function Trig_TurtleDiy_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == 'e00E'
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('e00E')
 end
 function Trig_TurtleDiy_Actions()
     ForGroupBJ(GetUnitsInRectAll(gg_rct_TurtleIsland), Trig_NaxDiy_Func002A)
-    ForGroupBJ(GetUnitsOfTypeIdAll('n075'), Trig_NaxDiy_Func003A)
+    ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('n075')), Trig_NaxDiy_Func003A)
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================
@@ -48651,7 +48651,7 @@ end
 -- Trigger: DalIn Copy
 --===========================================================================
 function Trig_DalIn_Copy_Conditions()
-    return GetSpellAbilityId() == 'A0HY' and GetUnitTypeId(GetTriggerUnit()) == 'n075'
+    return GetSpellAbilityId() == FourCC('A0HY') and GetUnitTypeId(GetTriggerUnit()) == FourCC('n075')
 end
 function Trig_DalIn_Copy_Actions()
     TeleportUnits(GetTriggerUnit() , gg_rct_TurtleIn , 800)
