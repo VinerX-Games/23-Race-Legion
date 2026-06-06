@@ -49,6 +49,62 @@ python agent_bridge.py exec --file snippet.lua
 Печатает `OK <значение>` / `ERR <сообщение>` / `TIMEOUT`. Первый exec сразу после
 загрузки может словить таймаут (гонка со стартом) — повторить.
 
+## Управление выводом логов (LogFilter)
+По умолчанию все разделы `[TAG]` выводятся в чат/экран (`LogFilterAll = true`).
+Можно глушить конкретные разделы, чтобы не забивать экран — буфер и `.pld`-файл
+пишутся **всегда**, независимо от фильтра. Теги: `BOOT`, `LOG`, `INIT`, `BRIDGE`,
+`EVAL`, `STEP`, `CALLBACK-ERR`, `PING`, `MAIN`, `AI`, `AIARMY`, `CHAT`, `UI`.
+
+### Через bridge-канал (из агента или Preloader-скрипта)
+
+```
+HiveWE_cli probe-map ... --bridge-script "0:log:alloff"        # выключить всё на экране
+HiveWE_cli probe-map ... --bridge-script "0:log:on:AI"         # включить [AI]
+HiveWE_cli probe-map ... --bridge-script "0:log:off:AIARMY"    # заглушить [AIARMY]
+HiveWE_cli probe-map ... --bridge-script "0:log:toggle:BRIDGE" # переключить [BRIDGE]
+HiveWE_cli probe-map ... --bridge-script "0:log:list"          # дамп статуса в probe-log
+```
+
+### Через live eval (agent_bridge.py)
+
+```
+python agent_bridge.py exec "LogFilterAll = false"         # всё на буфер
+python agent_bridge.py exec "LogEnable('AI')"              # включить [AI]
+python agent_bridge.py exec "LogDisable('BRIDGE')"         # заглушить [BRIDGE]
+python agent_bridge.py exec "LogToggle('AIARMY')"          # переключить
+python agent_bridge.py exec "return LogList()"             # дамп фильтров
+python agent_bridge.py exec "return LogFilterAll"          # узнать глобальный статус
+```
+
+### Через чат в игре
+
+```
+-log alloff          # выключить всё
+-log on BRIDGE       # включить [BRIDGE]
+-log off AIARMY      # заглушить [AIARMY]
+-log toggle AI       # переключить [AI]
+-log list            # показать статус всех тегов
+-log allon           # вернуть всё обратно
+```
+
+### Типичный сценарий отладки ИИ
+
+```
+# 1) Карта запущена, начинаем сессию
+python agent_bridge.py reset
+python agent_bridge.py exec "LogFilterAll = false"
+python agent_bridge.py exec "LogEnable('AI')"
+
+# 2) Работаем — видим только [AI] сообщения на экране,
+#    но ВСЁ пишется в 23Race_probe_log.pld для полного анализа
+
+# 3) Нужна детализация армии:
+python agent_bridge.py exec "LogEnable('AIARMY')"
+
+# 4) Закончили — вернуть всё:
+python agent_bridge.py exec "LogFilterAll = true"
+```
+
 ## Подводные камни (важно)
 - **Preloader кэширует по имени файла** → inbox строго последовательный, новое имя каждый раз.
 - **Preload режет строку ~259 символов** → большой результат разбивать на чанки (сделано).

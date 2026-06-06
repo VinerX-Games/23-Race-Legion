@@ -969,6 +969,19 @@ RegisterAiRace("JungleTrolls", {
 -- ForestTrolls (Phase 3 data-driven)
 -- TODO: verify building/unit mappings and research assignments
 -- ====================================================================
+---@param id integer
+---@param pi integer
+---@param u unit
+---@return nothing
+function Join_ForestTrolls(id, pi, u)
+    if id == FourCC('o04V') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
 RegisterAiRace("ForestTrolls", {
     tokens = {"ft", "foresttrolls"},
     weight = 1,
@@ -996,13 +1009,15 @@ RegisterAiRace("ForestTrolls", {
         [FourCC('h0MZ')] = {
             { FourCC('o051'), 3 },
             { FourCC('o052'), 3 },
+            { FourCC('o064'), 2 },
         },
         [FourCC('h0MR')] = {
             { FourCC('o050'), 4 },
             { FourCC('o05F'), 2, gate = "tier2" },
         },
         [FourCC('h0MU')] = {
-            { FourCC('H0BN'), 1, limit = 1 },
+            { FourCC('O059') }, { FourCC('O056') },
+            { FourCC('O058') }, { FourCC('O057') },
         },
         worker = { id = FourCC('o04V'), cap = 20,
                    from = { FourCC('h0MT'), FourCC('h0N8'), FourCC('h0N9') } },
@@ -1024,7 +1039,7 @@ RegisterAiRace("ForestTrolls", {
             { at = 55, action = "techUp", from = FourCC('h0N8'), to = FourCC('h0N9'), cap = 3 },
         },
     },
-    join = Join_JungleTrolls,
+    join = Join_ForestTrolls,
     naval = aiNavalTrain_JungleTrolls,
     wall = FourCC('h0N4'),
 })

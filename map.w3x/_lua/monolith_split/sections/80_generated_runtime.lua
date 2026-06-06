@@ -21434,7 +21434,7 @@ end
 function Trig_AK1T1_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hfoo')
 end
-function AT1Count()
+function AT1Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -21555,7 +21555,7 @@ end
 function Trig_AK1T2_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0K4')
 end
-function AT2Count()
+function AT2Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -21651,7 +21651,7 @@ end
 function Trig_AK1T3_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0K7')
 end
-function AT3Count()
+function AT3Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -21849,7 +21849,7 @@ end
 function Trig_AK1Cav_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hkni')
 end
-function ACavCount()
+function ACavCount(p)
     local a = {}
     local i= 0
     local b= 0
@@ -22010,7 +22010,7 @@ end
 function Trig_AK2T1_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hrif')
 end
-function AK1Count()
+function AK1Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -22156,7 +22156,7 @@ end
 function Trig_AK2T2_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0K5')
 end
-function AK2Count()
+function AK2Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -22309,7 +22309,7 @@ end
 function Trig_AK2T3_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0K6')
 end
-function AK3Count()
+function AK3Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -22481,7 +22481,7 @@ end
 function Trig_AM1_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hmpr')
 end
-function AM1Count()
+function AM1Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -22659,7 +22659,7 @@ end
 function Trig_AM2_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hsor')
 end
-function AM2Count()
+function AM2Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -22826,7 +22826,7 @@ end
 function Trig_AM3_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hspt')
 end
-function AM3Count()
+function AM3Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -22946,7 +22946,7 @@ end
 function Trig_AE1_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hmtm')
 end
-function AE1Count()
+function AE1Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -23084,7 +23084,7 @@ end
 function Trig_AE2_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('hmtt')
 end
-function AE2Count()
+function AE2Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -23252,7 +23252,7 @@ end
 function Trig_AN1_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0L0')
 end
-function AN1Count()
+function AN1Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -23401,7 +23401,7 @@ end
 function Trig_AN2_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('h0L1')
 end
-function AN2Count()
+function AN2Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -23528,7 +23528,7 @@ end
 --===========================================================================
 -- Trigger: ACounters
 --===========================================================================
-function AcountAll()
+function AcountAll(p)
     AT1Count(p)
     AT2Count(p)
     ACavCount(p)
@@ -28862,7 +28862,7 @@ end
 --===========================================================================
 -- Trigger: AiFixTrain
 --===========================================================================
-function aiFixTrainBefore()
+function aiFixTrainBefore(oldUnit, pi)
     
     if udg_AiControl[pi] then
         --call GroupRemoveUnit( udg_Ai_army[pi],oldUnit )
@@ -28874,7 +28874,7 @@ function aiFixTrainBefore()
     
     return false
 end
-function aiFixTrainAfter()
+function aiFixTrainAfter(NewUnit, pi)
     if udg_AiControl[pi] then
         aiUnitJoins(NewUnit , pi)
     end
@@ -28886,7 +28886,7 @@ end
 function Trig_K1T1_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('ogru')
 end
-function T1Count()
+function T1Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -29006,7 +29006,7 @@ end
 function Trig_K1T2_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('o01N')
 end
-function T2Count()
+function T2Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -29106,7 +29106,7 @@ end
 function Trig_K1T2b_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('o029')
 end
-function T2bCount()
+function T2bCount(p)
     local a = {}
     local i= 0
     local b= 0
@@ -29194,7 +29194,7 @@ end
 function Trig_K1TCav_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('orai')
 end
-function TCavCount()
+function TCavCount(p)
     local a = {}
     local i= 0
     local b= 0
@@ -29316,7 +29316,7 @@ end
 function Trig_K1T4_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('otau')
 end
-function T3Count()
+function T3Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -29455,7 +29455,7 @@ end
 function Trig_K2T1_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('ohun')
 end
-function K1Count()
+function K1Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -29563,7 +29563,7 @@ end
 function Trig_K2T2_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('o01P')
 end
-function K2Count()
+function K2Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -29672,7 +29672,7 @@ end
 function Trig_K2T2b_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('o02B')
 end
-function K2bCount()
+function K2bCount(p)
     local a = {}
     local i= 0
     local b= 0
@@ -29778,7 +29778,7 @@ end
 function Trig_K2T3_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('okod')
 end
-function K3Count()
+function K3Count(p)
     local a = {}
     local i= 0
     local b= 0
@@ -30150,10 +30150,10 @@ function Trig_KM3_Actions()
     
     i=GetRandomInt(1, a[0])
     b=a[i]
-   
+    
    aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
-    aiFixTrainBefore(u , pi)
+    aiFixTrainAfter(u , pi)
 --    
 --    call UnitAddAbility(u,'A0UY')
 --    call SetUnitAbilityLevel(u,'OR00',35+udg_HordeMagicPrice[pi])
@@ -30237,7 +30237,7 @@ function Trig_TechT1_Actions()
     
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
-    aiFixTrainBefore(u , pi)
+    aiFixTrainAfter(u , pi)
 --
 --    call UnitAddAbility(u,'A0UZ')
 --    call SetUnitAbilityLevel(u,'A0UZ',35+udg_HordeTechPrice[pi])
@@ -30626,7 +30626,7 @@ end
 --===========================================================================
 -- Trigger: Counters
 --===========================================================================
-function countAll()
+function countAll(p)
     T1Count(p)
     T2Count(p)
     T2bCount(p)
@@ -45252,6 +45252,37 @@ function BridgeDispatchCommand(op, arg, sequence)
     end
     if op == "race_select" then
         BridgeRaceSelect(target)
+        return
+    end
+    if op == "log" then
+        local logOp, logTag = string.match(tostring(arg), "^(on|off|toggle|allon|alloff|list):?(.*)")
+        if logOp == "allon" then
+            LogFilterAll = true
+            ProbeLogWrite("[LOG] filter all_on")
+            return
+        end
+        if logOp == "alloff" then
+            LogFilterAll = false
+            ProbeLogWrite("[LOG] filter all_off")
+            return
+        end
+        if logOp == "list" then
+            LogList()
+            return
+        end
+        if logTag == "" or logTag == nil then
+            error("log requires tag, e.g. log:on:AI")
+        end
+        if logOp == "on" then
+            LogEnable(logTag)
+        elseif logOp == "off" then
+            LogDisable(logTag)
+        elseif logOp == "toggle" then
+            LogToggle(logTag)
+        else
+            error("unknown log sub-command: " .. tostring(logOp))
+        end
+        ProbeLogWrite("[LOG] filter " .. logOp .. " tag=" .. logTag)
         return
     end
     error("unknown bridge command: " .. tostring(op))

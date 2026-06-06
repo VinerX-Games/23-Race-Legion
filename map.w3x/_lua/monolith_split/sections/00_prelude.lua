@@ -8,6 +8,8 @@ _G.InitFatal = nil
 _G.ProbeLogFile = "23Race_probe_log.pld"
 _G.ProbeLogLines = {}
 _G.ProbeLogFlushEnabled = false
+_G.LogFilter = {}
+_G.LogFilterAll = true
 _G.BridgeSyncPrefix = "23RaceCmd"
 _G.BridgeManifestFile = "23race_cmd_manifest.pld"
 _G.BridgeCommandFilePrefix = "23race_cmd_"
@@ -36,9 +38,16 @@ function ProbeLogWrite(message)
     if #lines > 2000 then
         table.remove(lines, 1)
     end
-    pcall(function()
-        BJDebugMsg(tostring(message))
-    end)
+    local allow = LogFilterAll
+    if not allow then
+        local tag = logExtractTag(message)
+        allow = (tag == nil) or (LogFilter[tag] ~= false)
+    end
+    if allow then
+        pcall(function()
+            BJDebugMsg(tostring(message))
+        end)
+    end
     if not ProbeLogFlushEnabled then
         return
     end
@@ -54,6 +63,28 @@ end
 function ProbeLogEnableFlush()
     ProbeLogFlushEnabled = true
     ProbeLogWrite("[LOG] flush-enabled")
+end
+local function logExtractTag(message)
+    local tag = string.match(tostring(message), "^%[([A-Z][A-Z0-9%-]*)%]")
+    return tag
+end
+function LogEnable(tag)
+    LogFilter[tag] = true
+end
+function LogDisable(tag)
+    LogFilter[tag] = false
+end
+function LogToggle(tag)
+    LogFilter[tag] = not LogFilter[tag]
+end
+function LogList()
+    local parts = {}
+    for tag, enabled in pairs(LogFilter) do
+        parts[#parts + 1] = tag .. "=" .. tostring(enabled)
+    end
+    local msg = table.concat(parts, " ")
+    ProbeLogWrite("[LOG] all=" .. tostring(LogFilterAll) .. " " .. msg)
+    return msg
 end
 function ProbeStep(label, fn)
     ProbeLogWrite("[STEP] " .. label .. " :: begin")
@@ -338,6 +369,50 @@ function SetupCodexPingChat()
         local chat_text = GetEventPlayerChatString()
         ProbeLogWrite("[PING] player=" .. tostring(player_name) .. " text=" .. tostring(chat_text))
         DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 10.00, "Codex ping OK: " .. tostring(chat_text))
+    end)
+end
+function SetupLogChat()
+    local trigger = CreateTrigger()
+    for i = 0, 23 do
+        TriggerRegisterPlayerChatEvent(trigger, Player(i), "-log", false)
+    end
+    TriggerAddAction(trigger, function()
+        local text = GetEventPlayerChatString()
+        local args = string.sub(text, 5)
+        local logOp, logTag = string.match(args, "^%s*(on|off|toggle|allon|alloff|list)%s*(.*)")
+        if logOp == nil then
+            local msg = "Usage: -log <on|off|toggle|allon|alloff|list> [TAG]"
+            DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 10.00, "|cffffcc00" .. msg .. "|r")
+            return
+        end
+        logTag = string.match(logTag or "", "^(%S+)")
+        if logOp == "allon" then
+            LogFilterAll = true
+            DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cff00ff00[LOG] all on|r")
+        elseif logOp == "alloff" then
+            LogFilterAll = false
+            DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffffff00[LOG] all off|r")
+        elseif logOp == "list" then
+            local parts = {}
+            for tag, enabled in pairs(LogFilter) do
+                parts[#parts + 1] = tag .. "=" .. tostring(enabled)
+            end
+            local msg = "all=" .. tostring(LogFilterAll) .. " " .. table.concat(parts, " ")
+            ProbeLogWrite("[LOG] " .. msg)
+            DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 10.00, "|cff00ff00[LOG] " .. msg .. "|r")
+        elseif logTag == "" or logTag == nil then
+            DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 10.00, "|cffff0000[LOG] tag required|r")
+        elseif logOp == "on" then
+            LogEnable(logTag)
+            DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cff00ff00[LOG] on " .. logTag .. "|r")
+        elseif logOp == "off" then
+            LogDisable(logTag)
+            DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffff0000[LOG] off " .. logTag .. "|r")
+        elseif logOp == "toggle" then
+            LogToggle(logTag)
+            local state = LogFilter[logTag] and "on" or "off"
+            DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffffcc00[LOG] " .. logTag .. "=" .. state .. "|r")
+        end
     end)
 end
 -- ============================================================
