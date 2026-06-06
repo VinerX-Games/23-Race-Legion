@@ -58048,6 +58048,44 @@ RegisterAiRace("ForestTrolls", {
             { at = 55, action = "techUp", from = FourCC('h0N8'), to = FourCC('h0N9'), cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('o04W')] = {
+            { order = "berserk", chance = 4, type = "immediate" },
+        },
+        [FourCC('o04Y')] = {
+            { order = "berserk", chance = 4, type = "immediate" },
+        },
+        [FourCC('o04Z')] = {
+            { order = "berserk", chance = 3, type = "immediate" },
+        },
+        [FourCC('o053')] = {
+            { order = "thunderbolt", chance = 4, type = "target" },
+            { order = "berserk", chance = 4, type = "immediate" },
+        },
+        [FourCC('o050')] = {
+            { order = "Thornyshield", chance = 4, type = "target" },
+        },
+        [FourCC('o051')] = {
+            { order = "clusterrockets", chance = 4, type = "point" },
+            { order = "ward", chance = 4, type = "point" },
+        },
+        [FourCC('o052')] = {
+            { order = "heal", chance = 4, type = "heal", allyRange = 550 },
+            { order = "dispel", chance = 4, type = "point" },
+            { order = "innerfire", chance = 4, type = "target" },
+        },
+        [FourCC('o05M')] = {
+            { order = "roar", chance = 4, type = "immediate" },
+        },
+        [FourCC('o05N')] = {
+            { order = "howlofterror", chance = 4, type = "immediate" },
+            { order = "berserk", chance = 4, type = "immediate" },
+        },
+        [FourCC('o05O')] = {
+            { order = "chainlightning", chance = 4, type = "target" },
+            { order = "monsoon", chance = 4, type = "point" },
+        },
+    },
     join = Join_ForestTrolls,
     naval = aiNavalTrain_JungleTrolls,
     wall = FourCC('h0N4'),
