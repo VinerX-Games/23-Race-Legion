@@ -11382,14 +11382,14 @@ function SleepGreenEach()
 end
 ---@return nothing
 function WakeGreenUp()
-	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, Condition(greencreature))
+	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, greencreature)
 	ForGroup(gGroup, WakeGreenUpEach)
 	GroupClear(gGroup)
 end
 ---@return nothing
 function SleepGreen()
 	-- call BJDebugMsg("Паузит")
-	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, Condition(greencreature))
+	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, greencreature)
 	ForGroup(gGroup, SleepGreenEach)
 	GroupClear(gGroup)
 end
@@ -11397,7 +11397,7 @@ end
 function checkGreenArea()
 	local u
 	GroupClear(gGroup)
-	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, Condition(alienToDream))
+	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, alienToDream)
 	while true do
 		u = FirstOfGroup(gGroup)
 		
@@ -13104,7 +13104,7 @@ end
 ---@return nothing
 function GlobalIssue(unitid, p, order)
 	gInt = unitid
-	GroupEnumUnitsOfPlayer(gGroup, p, Condition(typeBool))
+	GroupEnumUnitsOfPlayer(gGroup, p, typeBool)
 	GroupImmediateOrder(gGroup, order)
 end
 -- ===========================================================================
@@ -15875,7 +15875,7 @@ end
 ---@return nothing
 function MakeFakeCapital(p)
 	local u
-	GroupEnumUnitsOfPlayer(gGroup, p, Condition(HaveCapitalAbility))
+	GroupEnumUnitsOfPlayer(gGroup, p, HaveCapitalAbility)
 	u = BlzGroupUnitAt(gGroup, GetRandomInt(0, BlzGroupGetSize(gGroup) - 1))
 	playerCapital[GetPlayerId(p)] = u
 	aiCapitalEnter(u)
@@ -15964,12 +15964,12 @@ end
 function CheckAndCreateCapital(p)
 	local u
 	local g = CreateGroup()
-	GroupEnumUnitsOfPlayer(g, p, Condition(Capitals))
+	GroupEnumUnitsOfPlayer(g, p, Capitals)
 	if BlzGroupGetSize(g) == 0 then	-- Столицы нет
 		
 		GroupClear(g)
 		Counter = 0
-		GroupEnumUnitsOfPlayer(g, p, Condition(HaveCapitalAbility))
+		GroupEnumUnitsOfPlayer(g, p, HaveCapitalAbility)
 		
 		if BlzGroupGetSize(g) > 0 then
 			u = BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
@@ -21894,7 +21894,7 @@ function Trig_NoTpNearCapital_Actions()
     local u= GetTriggerUnit()
    
     udg_LocalPlayer=GetOwningPlayer(u)
-    GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 1350.00, Condition(CapitalOfEnemy))
+    GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 1350.00, CapitalOfEnemy)
     if FirstOfGroup(g) ~= nil then
         IssueImmediateOrder(u, "stop")
         DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, " - ")
@@ -22913,8 +22913,8 @@ function Trig_F2_Attack_Point_Actions()
         x=GetUnitX(u)
         y=GetUnitY(u)
         
-        GroupEnumUnitsInRange(g0, x, y, 500, Condition(OwnUnit))
-        GroupEnumUnitsInRange(points, x, y, 7500, Condition(IsCityEnemy))
+        GroupEnumUnitsInRange(g0, x, y, 500, OwnUnit)
+        GroupEnumUnitsInRange(points, x, y, 7500, IsCityEnemy)
         if FirstOfGroup(points) ~= nil then
             u2=BlzGroupUnitAt(points, GetRandomInt(0, BlzGroupGetSize(points) - 1))
             GroupPointOrder(g0, "attack", GetUnitX(u2), GetUnitY(u2))
@@ -23121,7 +23121,7 @@ end
 function Trig_F2_Map_2_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     --set udg_Boolexpr = Condition(function Trig_F2_Map_2_Func001002)
-    GroupEnumUnitsInRect(udg_LocalOtrad2, GetPlayableMapRect(), Condition(F2_targets))
+    GroupEnumUnitsInRect(udg_LocalOtrad2, GetPlayableMapRect(), F2_targets)
    
    
 --   
@@ -23273,7 +23273,7 @@ end
 function Trig_F2_AreaMidBig_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     --set udg_Boolexpr = Condition(function Trig_F2_AreaMidBig_Func002002)
-    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 2500, Condition(F2_targets))
+    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 2500, F2_targets)
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func004001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func005001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func006001002)), udg_LocalOtrad2 )
@@ -23420,7 +23420,7 @@ end
 --endfunction
 function Trig_F2_AreaMid_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 1000, Condition(F2_targets))
+    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 1000, F2_targets)
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func004001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func005001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func006001002)), udg_LocalOtrad2 )
@@ -23568,7 +23568,7 @@ end
 --
 function Trig_F2_AreaSmall_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 500, Condition(F2_targets))
+    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 500, F2_targets)
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func004001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func005001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func006001002)), udg_LocalOtrad2 )
@@ -24239,7 +24239,7 @@ function Trig_PassiveAdal_Actions()
     local g= CreateGroup()
     local u= GetTriggerUnit()
     local u2
-    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 500, Condition(Adal), 1)
+    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 500, Adal, 1)
     u2=FirstOfGroup(g)
     if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1L6')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --Абилка
         SetUnitManaBJ(u2, GetUnitState(u2, UNIT_STATE_MANA) - 50)
@@ -48858,7 +48858,7 @@ function Trig_PassiveTalisra_Actions()
     local u2
     local p= GetOwningPlayer(u)
     local pi= GetPlayerId(p)
-    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 650, Condition(Talisra), 1)
+    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 650, Talisra, 1)
     u2=FirstOfGroup(g)
     if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1OS')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --Абилка
         SetUnitManaBJ(u2, GetUnitState(u2, UNIT_STATE_MANA) - 50)
@@ -54175,7 +54175,7 @@ function CheckNearCapitals()
     local u= GetTriggerUnit()
     
     udg_LocalPlayer=GetOwningPlayer(city)
-    GroupEnumUnitsInRange(g, GetUnitX(city), GetUnitY(city), 3050, Condition(CapitalOfEnemy))
+    GroupEnumUnitsInRange(g, GetUnitX(city), GetUnitY(city), 3050, CapitalOfEnemy)
     if FirstOfGroup(g) ~= nil then
         DisplayTextToPlayer(udg_LocalPlayer, 0, 0, "(3)")
         g=nil
@@ -54206,7 +54206,7 @@ end
 function TeleportUnits(portal, rect, radius)
     gLoc=GetUnitLoc(portal)
     gRect=rect
-    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, Condition(PortalConditions), 150)
+    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditions, 150)
     ForGroup(gGroup, TeleportUnitsEach)
     GroupClear(gGroup)
     RemoveLocation(gLoc)
@@ -54221,7 +54221,7 @@ end
 function TeleportUnitsED(portal, rect, radius)
     gLoc=GetUnitLoc(portal)
     gRect=rect
-    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, Condition(PortalConditionsED), 150)
+    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditionsED, 150)
     ForGroup(gGroup, TeleportUnitsEach)
     GroupClear(gGroup)
     RemoveLocation(gLoc)
