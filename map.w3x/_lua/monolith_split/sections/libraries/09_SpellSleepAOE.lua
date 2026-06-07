@@ -1,4 +1,4 @@
--- library SpellSleepAOE:
+﻿-- library SpellSleepAOE:
 ---@param level integer
 ---@return integer
 function SpellSleepAOE___getRange(level)
@@ -19,10 +19,6 @@ function SpellSleepAOE___DummyCastBuff(caster, target)
 		SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
 		IssueTargetOrder(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellOrder, target)
 	end
-end
----@return boolean
-function SpellSleepAOE___anon__0()
-	return SpellSleepAOE___SpellHero == GetSpellAbilityId()
 end
 ---@return boolean
 function SpellSleepAOE___anon__2()
@@ -61,8 +57,10 @@ function SpellSleepAOE___onInit()
 		TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, nil)
 		i = i + 1
 	end
-	TriggerAddCondition(t, Condition(SpellSleepAOE___anon__0))
-	TriggerAddAction(t, SpellSleepAOE___anon__1)
+	TriggerAddAction(t, function()
+        if SpellSleepAOE___SpellHero ~= GetSpellAbilityId() then return end
+        SpellSleepAOE___anon__1()
+    end)
 	t = nil
 end
 -- library SpellSleepAOE ends

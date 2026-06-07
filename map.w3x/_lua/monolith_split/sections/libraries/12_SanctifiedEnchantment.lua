@@ -1,4 +1,4 @@
--- library SanctifiedEnchantment:
+﻿-- library SanctifiedEnchantment:
 --  ===============================================================
 -- Implemented from module BindTemplate:
 ---@param h handle
@@ -196,10 +196,6 @@ function SanctifiedEnchantment___SkillAction_EFFECT()
 		s__SanctifiedEnchantment_create(GetTriggerUnit(), GetSpellTargetUnit())
 	end
 end
----@return boolean
-function SanctifiedEnchantment___SkillCondition_EFFECT()
-	return GetSpellAbilityId() == SanctifiedEnchantment_SkillId
-end
 ---@return nothing
 function SanctifiedEnchantment___InitPreload()
 	local index = 0
@@ -213,8 +209,10 @@ end
 function SanctifiedEnchantment___Init()
 	local trg = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(trg, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(trg, Condition(SanctifiedEnchantment___SkillCondition_EFFECT))
-	TriggerAddAction(trg, SanctifiedEnchantment___SkillAction_EFFECT)
+	TriggerAddAction(trg, function()
+        if GetSpellAbilityId() ~= SanctifiedEnchantment_SkillId then return end
+        SanctifiedEnchantment___SkillAction_EFFECT()
+    end)
 	trg = nil
 	SanctifiedEnchantment___InitPreload()
 	--  ====================
