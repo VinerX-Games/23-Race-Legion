@@ -1711,3 +1711,202 @@ RegisterAiRace("Stromgard", {
     join = Join_Stromgard,
     wall = FourCC('h0HG'),
 })
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Illidari(id, pi, u)
+    if id == FourCC('h0EI') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Illidari", {
+    tokens = {"illidari", "illidan"},
+    weight = 1,
+    altar = FourCC('h0ED'),
+    start = startIllidari,
+    buildings = {
+        seed = FourCC('h0EC'),
+        { FourCC('h0E9'), 4, 4 }, { FourCC('h0EC'), 18, 4 },
+        { FourCC('h0ED'), 3, 6 }, { FourCC('h0EE'), 10, 4 },
+        { FourCC('h0EF'), 8, 6, gate = "tier2" }, { FourCC('h0EG'), 8, 6, gate = "tier2" },
+        { FourCC('o01C'), 8, 4 }, { FourCC('h0EH'), 5, 2 },
+        { FourCC('h0EM'), 5, 2 }, { FourCC('h0EN'), 4, 2 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('h0EA')) + getAiCount(pi, FourCC('h0EB')) >= 1 end,
+    },
+    production = {
+        [FourCC('h0E9')] = { {FourCC('h0EI'),3,limit=18} },
+        [FourCC('h0EA')] = { {FourCC('h0EI'),3,limit=18} },
+        [FourCC('h0EB')] = { {FourCC('h0EI'),3,limit=18} },
+        [FourCC('h0EE')] = {
+            {FourCC('h0EJ'), 3}, {FourCC('o01A'), 3}, {FourCC('o01B'), 2}, {FourCC('o019'), 2},
+        },
+        [FourCC('h0EF')] = {
+            {FourCC('h0EK'), 3}, {FourCC('h0EL'), 3},
+        },
+        [FourCC('h0EG')] = {
+            {FourCC('n02O'), 4}, {FourCC('n02M'), 3}, {FourCC('n02N'), 2},
+        },
+        [FourCC('o01C')] = {
+            {FourCC('h04Y'), 3}, {FourCC('h04Z'), 3}, {FourCC('h050'), 2},
+        },
+        [FourCC('h0ED')] = {
+            {FourCC('H043'), 1, limit = 1}, {FourCC('E01W'), 1, limit = 1}, {FourCC('E025'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('h0EC')] = 1, [FourCC('h0E9')] = 2,
+        [FourCC('h0EA')] = 5, [FourCC('h0EB')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h0EM'),FourCC('Abds'),6},{FourCC('h0EH'),FourCC('Arlm'),6} },
+                { {FourCC('h0EE'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h0E9'), to = FourCC('h0EA'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h0EA'), to = FourCC('h0EB'), cap = 3 },
+        },
+    },
+    join = Join_Illidari,
+    wall = FourCC('h0EN'),
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Worgen(id, pi, u)
+    if id == FourCC('h0IT') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Worgen", {
+    tokens = {"worgen", "gilneas"},
+    weight = 1,
+    altar = FourCC('h0IN'),
+    start = startWorgen,
+    buildings = {
+        seed = FourCC('h0IM'),
+        { FourCC('h0IK'), 4, 4 }, { FourCC('h0IM'), 18, 4 },
+        { FourCC('h0IN'), 3, 6 }, { FourCC('h0IO'), 10, 4 },
+        { FourCC('h0IR'), 8, 6, gate = "tier2" }, { FourCC('h0IS'), 8, 6, gate = "tier2" },
+        { FourCC('h0IQ'), 5, 2 }, { FourCC('h0JT'), 4, 2 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('h0IL')) >= 1 end,
+    },
+    production = {
+        [FourCC('h0IK')] = { {FourCC('h0IT'),3,limit=18} },
+        [FourCC('h0IL')] = { {FourCC('h0IT'),3,limit=18} },
+        [FourCC('h0IO')] = {
+            {FourCC('h0IU'), 3}, {FourCC('h0IV'), 3}, {FourCC('o02T'), 2},
+        },
+        [FourCC('h0IR')] = {
+            {FourCC('h0NA'), 2}, {FourCC('h0IW'), 3}, {FourCC('h0J0'), 2},
+        },
+        [FourCC('h0IS')] = {
+            {FourCC('h0J1'), 3}, {FourCC('h0IX'), 2},
+        },
+        [FourCC('h0IN')] = {
+            {FourCC('H0J2'), 1, limit = 1}, {FourCC('H0J6'), 1, limit = 1}, {FourCC('H0J7'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('h0IM')] = 1, [FourCC('h0IK')] = 2,
+        [FourCC('h0IL')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h0IQ'),FourCC('Abds'),6} },
+                { {FourCC('h0IO'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h0IK'), to = FourCC('h0IL'), cap = 3 },
+        },
+    },
+    join = Join_Worgen,
+    wall = FourCC('h0JT'),
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Ogres(id, pi, u)
+    if id == FourCC('o03W') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Ogres", {
+    tokens = {"ogre", "ogres"},
+    weight = 1,
+    altar = FourCC('o037'),
+    start = startOgres,
+    buildings = {
+        seed = FourCC('o036'),
+        { FourCC('o035'), 4, 4 }, { FourCC('o036'), 18, 4 },
+        { FourCC('o037'), 3, 6 }, { FourCC('o03A'), 10, 4 },
+        { FourCC('o039'), 8, 4 }, { FourCC('o03J'), 8, 6, gate = "tier2" },
+        { FourCC('o03C'), 8, 6, gate = "tier2" }, { FourCC('o03B'), 5, 2 },
+        { FourCC('o038'), 4, 2 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('o03D')) + getAiCount(pi, FourCC('o03E')) >= 1 end,
+    },
+    production = {
+        [FourCC('o035')] = { {FourCC('o03W'),3,limit=18} },
+        [FourCC('o03D')] = { {FourCC('o03W'),3,limit=18} },
+        [FourCC('o03E')] = { {FourCC('o03W'),3,limit=18} },
+        [FourCC('o03A')] = {
+            {FourCC('o03I'), 3}, {FourCC('o03H'), 3}, {FourCC('o03G'), 2}, {FourCC('o03F'), 2},
+        },
+        [FourCC('o039')] = {
+            {FourCC('o03L'), 3}, {FourCC('o03M'), 2}, {FourCC('o03K'), 2},
+        },
+        [FourCC('o03J')] = {
+            {FourCC('o03P'), 3}, {FourCC('o03N'), 2}, {FourCC('o03O'), 2},
+        },
+        [FourCC('o03C')] = {
+            {FourCC('o03U'), 3}, {FourCC('o03T'), 3}, {FourCC('o03V'), 2},
+            {FourCC('o03Q'), 2}, {FourCC('o03R'), 2}, {FourCC('o03S'), 2},
+        },
+        [FourCC('o037')] = {
+            {FourCC('N05L'), 1, limit = 1}, {FourCC('N05K'), 1, limit = 1}, {FourCC('N05J'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('o036')] = 1, [FourCC('o035')] = 2,
+        [FourCC('o03D')] = 5, [FourCC('o03E')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('o03B'),FourCC('Abds'),6},{FourCC('o03B'),FourCC('Arlm'),6} },
+                { {FourCC('o03A'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('o035'), to = FourCC('o03D'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('o03D'), to = FourCC('o03E'), cap = 3 },
+        },
+    },
+    join = Join_Ogres,
+    wall = FourCC('o038'),
+})

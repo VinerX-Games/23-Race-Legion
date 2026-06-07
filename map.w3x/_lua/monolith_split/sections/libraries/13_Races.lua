@@ -3342,4 +3342,61 @@ function startStromgard(pi)
     AiRace[pi] = "Stromgard"
     ProbeLogWrite("[AI] startStromgard pi=" .. tostring(pi) .. " workers=5h0G9 building=1h0GZ")
 end
+---@param pi integer
+---@return nothing
+function startIllidari(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('h0EI'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h0E9'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('h0EI')] = 5
+    AiData[pi][FourCC('h0E9')] = 1
+    AiData[pi][StringHash("Race")] = "IL"
+    SetPlayerTechResearchedSwap(FourCC('R07H'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0KZ'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0L0'), 1, p)
+    ConditionalTriggerExecute(gg_trg_IllidaryOn)
+    SetPlayerName(p, "Illidari (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Illidari"
+    ProbeLogWrite("[AI] startIllidari pi=" .. tostring(pi) .. " workers=5h0EI building=1h0E9")
+end
+---@param pi integer
+---@return nothing
+function startWorgen(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('h0IT'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h0IK'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('h0IT')] = 5
+    AiData[pi][FourCC('h0IK')] = 1
+    AiData[pi][StringHash("Race")] = "WG"
+    SetPlayerTechResearchedSwap(FourCC('R0FX'), 1, p)
+    SetPlayerName(p, "Worgen (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Worgen"
+    ProbeLogWrite("[AI] startWorgen pi=" .. tostring(pi) .. " workers=5h0IT building=1h0IK")
+end
+---@param pi integer
+---@return nothing
+function startOgres(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('o03W'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('o035'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('o03W')] = 5
+    AiData[pi][FourCC('o035')] = 1
+    AiData[pi][StringHash("Race")] = "OG"
+    SetPlayerTechResearchedSwap(FourCC('R0HT'), 1, p)
+    SetPlayerName(p, "Ogres (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Ogres"
+    ProbeLogWrite("[AI] startOgres pi=" .. tostring(pi) .. " workers=5o03W building=1o035")
+end
 -- library Races ends
