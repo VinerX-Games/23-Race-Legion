@@ -7,9 +7,11 @@ Warcraft III: Reforged — кастомная карта Altered Melee с 30+ ф
 | **Версия** | `23_race_1_6_504` |
 | **Репозиторий** | https://github.com/VinerX-Games/23-Race-Legion |
 | **Язык** | Русский (скрипты, комментарии, строки) |
-| **Скрипт** | vJASS (`war3map.j`, ~62 500 строк) |
+| **Скрипт** | Lua (сконвертирован из vJASS), ~65 000 строк |
 | **Файлов** | ~5 000+ |
-| **Статус** | Заброшен |
+| **Статус** | Lua-конвертация, активно дорабатывается |
+| **Сборка** | `python build_map_lua.py` — собирает `war3map.lua` из `_lua/monolith_split/` |
+| **Тестирование** | `HiveWE_cli run-map --map map.w3x --warcraft "F:/Games/Warcraft III"` |
 
 ---
 
@@ -61,7 +63,9 @@ Warcraft III: Reforged — кастомная карта Altered Melee с 30+ ф
 
 | Файл | Назначение |
 |---|---|
-| `war3map.j` | **Основной скрипт** — все триггеры, логика, AI, способности, инициализация рас (~62 500 строк) |
+| `war3map.lua` | **Основной скрипт** (Lua) — продукт сборки, ~65 000 строк. Собирается из `_lua/monolith_split/` |
+| `_lua/monolith_split/` | **Исходники Lua** — разбиты на модули (см. раздел 3) |
+| `war3map.j` | Оригинальный vJASS (устарел, заменён Lua) |
 | `war3map.wts` | **Таблица строк** — локализация, имена юнитов, тултипы (~262 000 строк) |
 | `war3map.wtg` | Триггеры GUI (бинарный формат) |
 
@@ -84,51 +88,78 @@ Warcraft III: Reforged — кастомная карта Altered Melee с 30+ ф
 
 ---
 
-## 3. Архитектура JASS-скрипта (`war3map.j`)
+## 3. Архитектура Lua-скрипта (`_lua/monolith_split/`)
 
-Скрипт написан на **vJASS** (JASS с препроцессорными расширениями), организован в библиотеки (`library`) и модули (`scope`).
+Скрипт сконвертирован из vJASS в Lua. Исходники хранятся в `_lua/monolith_split/` и собираются через `manifest.json` → `build_map_lua.py` → `war3map.lua`.
 
-### 3.1 Библиотеки ядра
+### 3.1 Структура секций (`sections/`)
 
-| Библиотека | Назначение |
-|---|---|
-| `LIBRARY_A1` | Базовые утилиты |
-| `LIBRARY_Global` | Центральный хеш-таблица, таймеры, временные группы |
-| `LIBRARY_LibNewFunctions` | Кастомные функции-утилиты |
-| `LIBRARY_common` | Общие утилиты |
-| `LIBRARY_RandomLocs` | Генерация случайных локаций |
+| Файл | Назначение | Строк |
+|---|---|---|
+| `00_prelude.lua` | Фреймворк: `ProbeLogWrite`, `OnInit`, `Bridge`, eval-канал | 559 |
+| `01_globals.lua` | Ручные глобалы (не сгенерированные) | ~2400 |
+| `02_pre_library_functions.lua` | Функции до библиотек | ~80 |
+| `libraries/01_A1.lua` | | 6 |
+| `libraries/02_AA.lua` | | 2 |
+| `libraries/03_AI.lua` | AI-система | 16 |
+| `libraries/04_AI0.lua` | AI-система | 341 |
+| `libraries/05_ArmyBonus.lua` | Бонусы армии | 14 |
+| `libraries/06_Global.lua` | Центральный хеш, таймеры, группы | 309 |
+| `libraries/07_LibNewFunctions.lua` | Кастомные утилиты | 246 |
+| `libraries/08_RandomLocs.lua` | Случайные локации | 39 |
+| `libraries/09_SpellSleepAOE.lua` | AoE-сон | 75 |
+| `libraries/10_common.lua` | Общие утилиты | 8 |
+| `libraries/11_LibDifferentAiStuff.lua` | Данные AI, портирование юнитов | 356 |
+| `libraries/12_SanctifiedEnchantment.lua` | Система апгрейдов | 268 |
+| `libraries/13_Races.lua` | Выбор расы, `AiRace` конфигурация | 2867 |
+| `libraries/14_AI2.lua` | AI-система (часть 2) | 166 |
+| `80_runtime/` | **Сгенерированный код** — 73 файла (см. 3.2) | 47K |
+| `81_ai.lua` | AI-регистр рас | 276 |
+| `82_ai_races.lua` | AI-стратегии рас | 1298 |
+| `90_InitCustomTriggers.lua` | `InitCustomTriggers()` — регистрация всех триггеров | 1302 |
+| `91_RunInitializationTriggers.lua` | | 25 |
+| `92_map_setup.lua` | `main()`, `config()` | 325 |
+| `93_main.lua` | | 43 |
+| `94_config.lua` | | 37 |
 
-### 3.2 Система рас
+### 3.2 Сгенерированный runtime (`80_runtime/`)
 
-| Библиотека/Триггер | Назначение |
-|---|---|
-| `LIBRARY_Races` | Выбор расы (`tArray`, `Grades`, `AiCapitalGuard`) |
-| `InitTrig_Race_<Race>` | Инициализация конкретной расы (по событию `EVENT_PLAYER_UNIT_SPELL_FINISH`) |
-| `LIBRARY_ArmyBonus` | Бонусы силы армии |
+73 файла в 10 подпапках. Все — продукт автоконвертации vJASS→Lua.
 
-### 3.3 AI
+| Папка | Содержание | Файлов |
+|---|---|---|
+| `_infra/` | `InitGlobals()`, HandleCounter, ReplaceUnit, boolexprs | 5 |
+| `_lib/` | Экономика: `addArmyExp`, `AddCountDis`, `TimedUpdate`, графы | 10 |
+| `_player/` | Управление игроками: `ClearPlayer`, вассалы, города | 7 |
+| `_ui/` | `UISetup()`, IncomeTooltip | 2 |
+| `_races/` | Enabler-функции: `HordeW2On`, `CultOn`, `DragonsOn`, etc. | 12 |
+| `_ai/` | AI-ядро: `TryAttack`, `TryBuild`, порталы, вода | 12 |
+| `_continental/` | Континенты: boolexprs, dungeons, `ProcessContinentalStuff` | 4 |
+| `_features/` | Emerald Dream, Item Drops, Sounds | 3 |
+| `_data/` | Статика: Unit Creation (943 строки), Regions (166), Cameras (107) | 3 |
+| `triggers/` | **15 файлов** — вся игровая логика (42K строк) | 15 |
 
-| Библиотека | Назначение |
-|---|---|
-| `LIBRARY_AI`, `LIBRARY_AI0`, `LIBRARY_AI2` | Системы искусственного интеллекта |
-| `LIBRARY_AA` | Атакующие AI (Counter, EnemyCapital tracking) |
-| `LIBRARY_LibDifferentAiStuff` | Данные AI и портирование юнитов |
+### 3.3 Триггеры (`80_runtime/triggers/`)
 
-### 3.4 Игровые системы
+| Файл | Описание | ~Строк |
+|---|---|---|
+| `01_core_economy.lua` | Индексатор юнитов, AI-счёт, экономика, ивенты юнитов | 2637 |
+| `02_game_modes.lua` | Лобби, столицы, феоды, доминация, fast test | 1530 |
+| `03_continents_diplomacy.lua` | 7 континентов, дипломатия, income, туман войны | 1598 |
+| `04_race_selection.lua` | Выбор расы (37 рас), 4 страницы UI | 1529 |
+| `05_common_spells.lua` | Spell-система, предметы, флагманы, Fireball | 1009 |
+| `06_transport_portals.lua` | Транспорт, корабли, порталы, F2, телепорты | 2671 |
+| `07_hero_bezlikie_horde.lua` | Deathwing, элементали, Безликие, Horde W2 (дуэли, руны) | 3066 |
+| `08_undead_trolls.lua` | Нежить (скелеты, чума), Forest/Jungle тролли | 2079 |
+| `09_alliance.lua` | Альянс: Stormwind, Gilneas, Kultiras, Stromgarde, Dalaran | 3706 |
+| `10_forsaken_gnomes.lua` | Forsaken (Banshee, MassMindControl), Gnomes (танки) | 3670 |
+| `11_horde.lua` | Орда: TrueHorde, IronHorde, Sha, нейтралы, герои | 2984 |
+| `12_silitid_goblin_bloodelf_bandit.lua` | Силитиды, Гоблины, Blood Elves, Бандиты | 5617 |
+| `13_subraces_nightelf_naga_illidari_dragon.lua` | Night Elf, Naga, Worgens, Red Orden, Draenei, Illidari, Vryculs, Dragons | 2856 |
+| `14_demon_elemental_undead_boss.lua` | Демоны, Элементали, Undead, Ice Trolls, Lords, камера/команды, Old Gods | 3787 |
+| `15_ai_portals_cities.lua` | AI-триггеры, порталы городов, Dalaran/Naxx/Turtle, Emerald Dream | 3742 |
 
-| Система | Описание |
-|---|---|
-| **Экономика** | Таймеры дохода, апгрейды золота/дерева, лимиты ресурсов, торговля |
-| **Территории** | Система столиц (`Stolica`), вассалитет (`Feoda`), режим доминации |
-| **Континенты** | Eastern Kingdoms, Kalimdor, Outland, Northrend, Pandaria, Argus, Oceania |
-| **Прогрессия** | Тир-апгрейды (T2, T3), лимиты технологий, режимы быстрого теста |
-| **Юниты** | Индексация юнитов, отслеживание постройки/апгрейда, обработка смерти/возрождения |
-| **Лобби** | Кастомный таймер лобби, выбор режима игры, режимы тумана войны |
-| **Предметы** | Система экипировки (шлемы, броня, оружие, кольца, обувь) |
-| **Способности** | `LIBRARY_SpellSleepAOE` (AoE-сон), `LIBRARY_SanctifiedEnchantment` (система апгрейдов) |
-| **UI** | `LIBRARY_UI`, `LIBRARY_Face` |
-
-### 3.5 Список рас (37 триггеров `InitTrig_Race_*`)
+### 3.5 Список рас (37 `InitTrig_Race_*` в `80_runtime/triggers/04_race_selection.lua`)
 
 1. Bezlikie (Безликие / Faceless Ones)
 2. IceTrols (Ледяные тролли / Drakkari)
@@ -168,12 +199,18 @@ Warcraft III: Reforged — кастомная карта Altered Melee с 30+ ф
 36. HordeW2 (Орда WC2)
 37. Random (Случайная раса)
 
-### 3.6 Main-функция (строка ~62410)
+### 3.6 Инструменты сборки и дебага
 
-- Устанавливает границы камеры (`-30720` до `+30720` — огромная карта)
-- Настраивает модели дня/ночи, туман, цвет воды
-- Инициализирует звуки, регионы, камеры, юнитов
-- Запускает игровую логику через `ExecuteFunc`
+| Команда | Назначение |
+|---|---|
+| `python build_map_lua.py` | Собрать `war3map.lua` из split-файлов |
+| `python build_map_lua.py --check-only` | Проверить соответствие SHA256 |
+| `python -c "from luaparser import ast; ast.parse(...)"` | Проверка синтаксиса Lua |
+| `HiveWE_cli run-map --map map.w3x --warcraft "..."` | Запуск карты |
+| `HiveWE_cli probe-map ...` | Автотест с логами |
+| `python agent_bridge.py exec "..."` | Bridge-команды в живой игре |
+
+Подробные инструкции дебага: [DEBUG_WC3_MAP.md](DEBUG_WC3_MAP.md).
 
 ---
 
