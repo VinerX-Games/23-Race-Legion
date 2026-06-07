@@ -35012,7 +35012,7 @@ function InitTrig_felspell()
     TriggerRegisterAnyUnitEventBJ(gg_trg_felspell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_felspell, function()
         if GetSpellAbilityId() ~= FourCC('A02D') then return end
-        if not (GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R01G'), true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1QZ')) < 1 -- and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('B00U'))<1) then return end
+        if not (GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R01G'), true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1QZ')) < 1) then return end
         Trig_felspell_Actions()
     end)
 end
@@ -35030,7 +35030,7 @@ function InitTrig_voidspell()
     TriggerRegisterAnyUnitEventBJ(gg_trg_voidspell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_voidspell, function()
         if GetSpellAbilityId() ~= FourCC('A02D') then return end
-        if not (GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R01H'), true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1R0')) < 1 -- and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('B00U'))<1) then return end
+        if not (GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R01H'), true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1R0')) < 1) then return end
         Trig_voidspell_Actions()
     end)
 end
