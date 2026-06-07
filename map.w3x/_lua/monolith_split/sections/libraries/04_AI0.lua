@@ -222,6 +222,30 @@ function f_OnlyNeaded()
 			Counter = Counter + 1
 			return true
 		end
+	--  ForestTrolls
+	elseif AiRace[gPi] == "ForestTrolls" then
+		if gInt == FourCC('h0MT') or gInt == FourCC('h0N8') or gInt == FourCC('h0N9') or gInt == FourCC('h0MV') or gInt == FourCC('h0MS') or gInt == FourCC('h0N7') or gInt == FourCC('h0MU') or gInt == FourCC('h0MZ') or gInt == FourCC('h0MR') or gInt == FourCC('h0N4') then
+			Counter = Counter + 1
+			return true
+		end
+	--  HordeW2
+	elseif AiRace[gPi] == "HordeW2" then
+		if gInt == FourCC('w20q') or gInt == FourCC('w20w') or gInt == FourCC('w20e') or gInt == FourCC('w20y') or gInt == FourCC('w20r') or gInt == FourCC('w214') or gInt == FourCC('w20a') or gInt == FourCC('w20i') or gInt == FourCC('w20t') or gInt == FourCC('w210') or gInt == FourCC('w212') or gInt == FourCC('w20u') then
+			Counter = Counter + 1
+			return true
+		end
+	--  Nerubs
+	elseif AiRace[gPi] == "Nerubs" then
+		if gInt == FourCC('h0CO') or gInt == FourCC('h0CP') or gInt == FourCC('h0CQ') or gInt == FourCC('h0GH') or gInt == FourCC('h0CR') or gInt == FourCC('h0CS') or gInt == FourCC('h0CU') or gInt == FourCC('h0CT') or gInt == FourCC('h0CV') or gInt == FourCC('u01A') or gInt == FourCC('u019') then
+			Counter = Counter + 1
+			return true
+		end
+	--  Forsaken
+	elseif AiRace[gPi] == "Forsaken" then
+		if gInt == FourCC('h0JP') or gInt == FourCC('h0JQ') or gInt == FourCC('h0JL') or gInt == FourCC('h0JD') or gInt == FourCC('h0JJ') or gInt == FourCC('h0JO') or gInt == FourCC('h0JR') or gInt == FourCC('h0JM') or gInt == FourCC('h0JI') or gInt == FourCC('h0JK') then
+			Counter = Counter + 1
+			return true
+		end
 	end
 	return false
 end
