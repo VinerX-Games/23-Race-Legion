@@ -6,7 +6,8 @@
 ---@return boolean
 function GoToWaterPoint(pi, u, x, y)
 	
-	if Random(1, 10) and (AiData[pi][StringHash("NumberPorts")] or 0) < 8 then
+	local numPorts = (AiData[pi][StringHash("NumberPorts")] or 0)
+	if numPorts < 8 and Random(9 - numPorts, 10) then
 		if RectContainsCoords(gg_rct_EastenKingdoms, x, y) then
 			gInt = GetRandomInt(1, 4)
 			if gInt == 1 then
