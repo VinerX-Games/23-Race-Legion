@@ -8018,13 +8018,22 @@ function startSilitids(pi)
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
     CreateNUnitsAtLoc(1, FourCC('e01H'), p, udg_LocalPoint, bj_UNIT_FACING)
-    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
-    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    local hive = GetLastCreatedUnit()
+    GroupAddUnit(udg_Ai_units[pi], hive)
+    GroupAddUnit(udg_Ai_buildings[pi], hive)
     NumberSet(pi, FourCC('e01G'), 8)
     NumberSet(pi, FourCC('e01H'), 1)
     AiData[pi][StringHash("Race")] = "SL"
     SetPlayerTechResearchedSwap(FourCC('R0BV'), 1, p)
     ConditionalTriggerExecute(gg_trg_SilitidsOn)
+    local t = CreateTimer()
+    local tid = GetHandleId(t)
+    local hid = GetHandleId(hive)
+    TimerStart(t, 25, true, spawnlich)
+    SaveUnitHandle(Hash, tid, 1, hive)
+    SaveInteger(Hash, hid, 1, 0)
+    SaveBoolean(Hash, hid, 2, true)
+    t = nil
     SetPlayerName(p, "Silitids (" .. I2S(pi + 1) .. ")")
     AiRace[pi] = "Silitids"
     ProbeLogWrite("[AI] startSilitids pi=" .. tostring(pi) .. " workers=8e01G building=1e01H")
@@ -8177,8 +8186,7 @@ function startEnts(pi)
     AiRace[pi] = "Ents"
     ProbeLogWrite("[AI] startEnts pi=" .. tostring(pi) .. " workers=5e02T building=1e02B")
 end
--- library Races ends
--- library AI2:
+-- library Races ends-- library AI2:
 ---@param p player
 ---@return nothing
 function SetLimits(p)
@@ -59290,7 +59298,7 @@ RegisterAiRace("Undead", {
     buildings = {
         seed = FourCC('u00H'),
         { FourCC('n014'), 4, 4 }, { FourCC('u00H'), 18, 4 },
-        { FourCC('u00K'), 3, 6 }, { FourCC('u00M'), 10, 4 },
+        { FourCC('u00K'), 3, 6 }, { FourCC('u00M'), 10, 4, gate = "tier2" },
         { FourCC('u00N'), 8, 6, gate = "tier2" }, { FourCC('u00L'), 5, 2 },
         { FourCC('n012'), 8, 4 },
     },

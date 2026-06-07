@@ -1,4 +1,4 @@
-﻿-- Automatically split from 81_ai.lua: race definitions + join functions
+-- Automatically split from 81_ai.lua: race definitions + join functions
 -- Load order: after 81_ai.lua (engines must exist before races register)
 
 
@@ -1466,7 +1466,7 @@ RegisterAiRace("Undead", {
     buildings = {
         seed = FourCC('u00H'),
         { FourCC('n014'), 4, 4 }, { FourCC('u00H'), 18, 4 },
-        { FourCC('u00K'), 3, 6 }, { FourCC('u00M'), 10, 4 },
+        { FourCC('u00K'), 3, 6 }, { FourCC('u00M'), 10, 4, gate = "tier2" },
         { FourCC('u00N'), 8, 6, gate = "tier2" }, { FourCC('u00L'), 5, 2 },
         { FourCC('n012'), 8, 4 },
     },
