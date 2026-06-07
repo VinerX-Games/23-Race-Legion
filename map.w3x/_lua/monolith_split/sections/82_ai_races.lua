@@ -1109,6 +1109,13 @@ RegisterAiRace("HordeW2", {
 function Join_Nerubs(id, pi, u)
     if id == FourCC('h0BE') then
         GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif id == FourCC('u019') then
+        -- Cocoon built - upgrade to intended building
+        local target = AiData[pi]["upgradeCocoon"]
+        if target ~= nil and target ~= 0 then
+            IssueImmediateOrderById(u, target)
+            AiData[pi]["upgradeCocoon"] = nil
+        end
     elseif aiUnitJoinsCapitalGuard(u, pi) then
     else
         aiUnitJoinsArmy(u, pi)
@@ -1120,6 +1127,15 @@ RegisterAiRace("Nerubs", {
     weight = 1,
     altar = FourCC('h0CU'),
     start = startNerubs,
+    chooseBuild = function(pi)
+        -- Nerubs workers can only build cocoons (u019), which then upgrade
+        local realBuilding = AiRunChooseBuildings(pi, AiRaces["Nerubs"])
+        if realBuilding ~= 0 then
+            AiData[pi]["upgradeCocoon"] = realBuilding
+            return FourCC('u019')
+        end
+        return 0
+    end,
     buildings = {
         seed = FourCC('h0GH'),
         { FourCC('h0CO'), 4, 4 }, { FourCC('h0GH'), 18, 4 },

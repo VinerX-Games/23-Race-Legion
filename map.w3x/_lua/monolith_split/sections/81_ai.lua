@@ -149,10 +149,10 @@ end
 function AiDispatchChooseBuild(pi)
     local race = AiRaceOf(pi)
     if race ~= nil then
-        if race.buildings ~= nil then
-            return AiRunChooseBuildings(pi, race)
-        elseif race.chooseBuild ~= nil then
+        if race.chooseBuild ~= nil then
             return race.chooseBuild(pi)
+        elseif race.buildings ~= nil then
+            return AiRunChooseBuildings(pi, race)
         end
     end
     return 0

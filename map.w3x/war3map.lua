@@ -7744,16 +7744,18 @@ function startNerubs(pi)
     CreateNUnitsAtLoc(3, FourCC('h0BE'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
-    CreateNUnitsAtLoc(1, FourCC('h0CO'), p, udg_LocalPoint, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('u019'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    local cocoon = GetLastCreatedUnit()
+    IssueImmediateOrderById(cocoon, FourCC('h0CO'))
     AiData[pi][FourCC('h0BE')] = 3
     AiData[pi][FourCC('h0CO')] = 1
     AiData[pi][StringHash("Race")] = "NE"
     SetPlayerTechResearchedSwap(FourCC('R07N'), 1, p)
     SetPlayerName(p, "Nerubs (" .. I2S(pi + 1) .. ")")
     AiRace[pi] = "Nerubs"
-    ProbeLogWrite("[AI] startNerubs pi=" .. tostring(pi) .. " workers=3h0BE building=1h0CO")
+    ProbeLogWrite("[AI] startNerubs pi=" .. tostring(pi) .. " workers=3h0BE cocoon=1u019")
 end
 ---@param pi integer
 ---@return nothing
@@ -57007,10 +57009,10 @@ end
 function AiDispatchChooseBuild(pi)
     local race = AiRaceOf(pi)
     if race ~= nil then
-        if race.buildings ~= nil then
-            return AiRunChooseBuildings(pi, race)
-        elseif race.chooseBuild ~= nil then
+        if race.chooseBuild ~= nil then
             return race.chooseBuild(pi)
+        elseif race.buildings ~= nil then
+            return AiRunChooseBuildings(pi, race)
         end
     end
     return 0
@@ -58546,6 +58548,13 @@ RegisterAiRace("HordeW2", {
 function Join_Nerubs(id, pi, u)
     if id == FourCC('h0BE') then
         GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif id == FourCC('u019') then
+        -- Cocoon built - upgrade to intended building
+        local target = AiData[pi]["upgradeCocoon"]
+        if target ~= nil and target ~= 0 then
+            IssueImmediateOrderById(u, target)
+            AiData[pi]["upgradeCocoon"] = nil
+        end
     elseif aiUnitJoinsCapitalGuard(u, pi) then
     else
         aiUnitJoinsArmy(u, pi)
@@ -58557,6 +58566,15 @@ RegisterAiRace("Nerubs", {
     weight = 1,
     altar = FourCC('h0CU'),
     start = startNerubs,
+    chooseBuild = function(pi)
+        -- Nerubs workers can only build cocoons (u019), which then upgrade
+        local realBuilding = AiRunChooseBuildings(pi, AiRaces["Nerubs"])
+        if realBuilding ~= 0 then
+            AiData[pi]["upgradeCocoon"] = realBuilding
+            return FourCC('u019')
+        end
+        return 0
+    end,
     buildings = {
         seed = FourCC('h0GH'),
         { FourCC('h0CO'), 4, 4 }, { FourCC('h0GH'), 18, 4 },
