@@ -29,6 +29,9 @@ def main():
         suffix = var_name.replace('bj_forLoop', '').replace('Index', '')
         end_var = f'bj_forLoop{suffix}IndexEnd'
         
+        end_val = None
+        end_line_idx = None
+        
         # Search forward up to 3 lines for the End assignment
         for j in range(i + 1, min(i + 4, len(lines))):
             stripped = lines[j].strip()

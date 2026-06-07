@@ -8356,13 +8356,9 @@ function Trig_FeodalDead_Actions()
 		--  --------------------------------------------------------------------   Васссал кого-то захватил
 		for bj_forLoopAIndex = 1, 24 do
 			if (Trig_FeodalDead_Func004Func002Func001C()) then
-				bj_forLoopBIndex = 1
-				bj_forLoopBIndexEnd = 24
-				while true do
-					if bj_forLoopBIndex > bj_forLoopBIndexEnd then break end
+				for bj_forLoopBIndex = 1, 24 do
 					SetPlayerAllianceStateBJ(GetTriggerPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 					SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetTriggerPlayer(), bj_ALLIANCE_UNALLIED)
-					bj_forLoopBIndex = bj_forLoopBIndex + 1
 				end
 				--  Есть сеньор
 				--  Вассализация хозяина столицы
