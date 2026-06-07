@@ -94,6 +94,12 @@ function SetLimits(p)
 	SetPlayerTechMaxAllowedSwap(FourCC('H05I'), 1, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('H045'), 1, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('Hjnd'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('W200'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('W201'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('W202'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('N058'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('O031'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('O030'), 1, p)
 end
 -- Принудительный выбор расы AI по текстовому токену (для команды "-aiN <раса>"
 -- и CLI-агента). Возвращает true, если токен распознан и раса запущена.

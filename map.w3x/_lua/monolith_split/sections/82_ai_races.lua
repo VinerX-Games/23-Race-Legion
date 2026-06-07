@@ -1049,7 +1049,7 @@ RegisterAiRace("HordeW2", {
             {FourCC('w205'), 3}, {FourCC('w209'), 2,gate="tier2"}, {FourCC('w211'), 3},
         },
         [FourCC('w20a')] = {
-            {FourCC('W200')}, {FourCC('W201')}, {FourCC('W202')},
+            {FourCC('W200'), 1, limit = 1}, {FourCC('W201'), 1, limit = 1}, {FourCC('W202'), 1, limit = 1},
         },
         [FourCC('w210')] = { {FourCC('w202'), 3} },
         [FourCC('w212')] = { {FourCC('w213'), 3} },
@@ -1148,7 +1148,7 @@ RegisterAiRace("Nerubs", {
             {FourCC('u01H'), 3}, {FourCC('u01D'), 3},
         },
         [FourCC('h0CU')] = {
-            {FourCC('U01U')}, {FourCC('U01V')}, {FourCC('U01W')},
+            {FourCC('U01U'), 1, limit = 1}, {FourCC('U01V'), 1, limit = 1}, {FourCC('U01W'), 1, limit = 1},
         },
     },
     ecoWeights = {
@@ -1237,7 +1237,7 @@ RegisterAiRace("Forsaken", {
             {FourCC('o02X'), 3}, {FourCC('u02C'), 2, gate = "tier2"}, {FourCC('o02Y'), 2, gate = "tier2"},
         },
         [FourCC('h0JR')] = {
-            {FourCC('N058')}, {FourCC('O031')}, {FourCC('O030')},
+            {FourCC('N058'), 1, limit = 1}, {FourCC('O031'), 1, limit = 1}, {FourCC('O030'), 1, limit = 1},
         },
     },
     ecoWeights = {

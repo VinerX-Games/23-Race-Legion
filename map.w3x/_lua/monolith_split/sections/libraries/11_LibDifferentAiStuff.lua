@@ -5,40 +5,58 @@
 ---@param pi integer
 ---@param id integer
 ---@return integer
+g_AiCountCache = {}
+
 function getAiCount(pi, id)
-	return LoadInteger(AiData, pi, id) or 0
+	local t = g_AiCountCache[pi]
+	if t ~= nil then
+		local v = t[id]
+		if v ~= nil then return v end
+	end
+	return 0
 end
 --  Для работы надо номер игрока, ид юнита
 ---@param pi integer
 ---@param id integer
 ---@return boolean
 function aiHasUnit(pi, id)
-	return LoadInteger(AiData, pi, id) > 0
+	local t = g_AiCountCache[pi]
+	if t ~= nil then return (t[id] or 0) > 0 end
+	return false
 end
 --  Для работы надо номер игрока, ид юнита
 ---@param pi integer
 ---@param id integer
 ---@return nothing
 function NumberAdd(pi, id)
-	local Cunit = LoadInteger(AiData, pi, id) + 1
-	SaveInteger(AiData, pi, id, Cunit)
+	local t = g_AiCountCache[pi]
+	if t == nil then t = {}; g_AiCountCache[pi] = t end
+	local c = (t[id] or 0) + 1
+	t[id] = c
+	SaveInteger(AiData, pi, id, c)
 end
 ---@param pi integer
 ---@param id integer
 ---@return nothing
 function NumberRem(pi, id)
-	local Cunit = LoadInteger(AiData, pi, id) - 1
-	SaveInteger(AiData, pi, id, Cunit)
+	local t = g_AiCountCache[pi]
+	if t == nil then t = {}; g_AiCountCache[pi] = t end
+	local c = (t[id] or 0) - 1
+	t[id] = c
+	SaveInteger(AiData, pi, id, c)
 end
 ---@param pi integer
 ---@param id integer
 ---@return nothing
 function NumberReset(pi, id)
+	local t = g_AiCountCache[pi]
+	if t ~= nil then t[id] = nil end
 	SaveInteger(AiData, pi, id, 0)
 end
 ---@param pi integer
 ---@return nothing
 function NumberResetAll(pi)
+	g_AiCountCache[pi] = nil
 	FlushChildHashtable(AiData, pi)
 end
 -- ***************************************************************************

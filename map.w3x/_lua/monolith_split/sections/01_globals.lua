@@ -2266,7 +2266,7 @@ tooltip = nil	---@type framehandle
 tooltipTitle = nil	---@type framehandle	
 tooltipBody = nil	---@type framehandle	
 IncomeTextFr = nil	---@type framehandle	
-CommonHash = InitHashtable()	---@type hashtable	
+CommonHash = setmetatable({}, {__index = function(t, k) local v = {}; t[k] = v; return v end})	---@type hashtable	
 StartLoc = {}	---@type location	
 StartLocCount = 0	---@type integer	
 -- location array ChoicedLocs

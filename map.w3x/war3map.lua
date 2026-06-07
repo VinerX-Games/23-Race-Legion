@@ -2810,7 +2810,7 @@ tooltip = nil	---@type framehandle
 tooltipTitle = nil	---@type framehandle	
 tooltipBody = nil	---@type framehandle	
 IncomeTextFr = nil	---@type framehandle	
-CommonHash = InitHashtable()	---@type hashtable	
+CommonHash = setmetatable({}, {__index = function(t, k) local v = {}; t[k] = v; return v end})	---@type hashtable	
 StartLoc = {}	---@type location	
 StartLocCount = 0	---@type integer	
 -- location array ChoicedLocs
@@ -3994,40 +3994,58 @@ end
 ---@param pi integer
 ---@param id integer
 ---@return integer
+g_AiCountCache = {}
+
 function getAiCount(pi, id)
-	return LoadInteger(AiData, pi, id) or 0
+	local t = g_AiCountCache[pi]
+	if t ~= nil then
+		local v = t[id]
+		if v ~= nil then return v end
+	end
+	return 0
 end
 --  Для работы надо номер игрока, ид юнита
 ---@param pi integer
 ---@param id integer
 ---@return boolean
 function aiHasUnit(pi, id)
-	return LoadInteger(AiData, pi, id) > 0
+	local t = g_AiCountCache[pi]
+	if t ~= nil then return (t[id] or 0) > 0 end
+	return false
 end
 --  Для работы надо номер игрока, ид юнита
 ---@param pi integer
 ---@param id integer
 ---@return nothing
 function NumberAdd(pi, id)
-	local Cunit = LoadInteger(AiData, pi, id) + 1
-	SaveInteger(AiData, pi, id, Cunit)
+	local t = g_AiCountCache[pi]
+	if t == nil then t = {}; g_AiCountCache[pi] = t end
+	local c = (t[id] or 0) + 1
+	t[id] = c
+	SaveInteger(AiData, pi, id, c)
 end
 ---@param pi integer
 ---@param id integer
 ---@return nothing
 function NumberRem(pi, id)
-	local Cunit = LoadInteger(AiData, pi, id) - 1
-	SaveInteger(AiData, pi, id, Cunit)
+	local t = g_AiCountCache[pi]
+	if t == nil then t = {}; g_AiCountCache[pi] = t end
+	local c = (t[id] or 0) - 1
+	t[id] = c
+	SaveInteger(AiData, pi, id, c)
 end
 ---@param pi integer
 ---@param id integer
 ---@return nothing
 function NumberReset(pi, id)
+	local t = g_AiCountCache[pi]
+	if t ~= nil then t[id] = nil end
 	SaveInteger(AiData, pi, id, 0)
 end
 ---@param pi integer
 ---@return nothing
 function NumberResetAll(pi)
+	g_AiCountCache[pi] = nil
 	FlushChildHashtable(AiData, pi)
 end
 -- ***************************************************************************
@@ -7880,6 +7898,12 @@ function SetLimits(p)
 	SetPlayerTechMaxAllowedSwap(FourCC('H05I'), 1, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('H045'), 1, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('Hjnd'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('W200'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('W201'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('W202'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('N058'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('O031'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('O030'), 1, p)
 end
 -- Принудительный выбор расы AI по текстовому токену (для команды "-aiN <раса>"
 -- и CLI-агента). Возвращает true, если токен распознан и раса запущена.
@@ -29480,12 +29504,12 @@ function AT1Count(p)
     end
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("AT1_0"), a[0])
+    CommonHash[pi]["AT1_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("AT1") + i, a[i])
+        CommonHash[pi]["AT1" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -29505,9 +29529,9 @@ function Trig_AK1T1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("AT1_0"))
+    i=(CommonHash[pi]["AT1_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("AT1") + i ))
+    b=(CommonHash[pi]["AT1" .. i] or 0)
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -29576,12 +29600,12 @@ function AT2Count(p)
     end
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("AT2_0"), a[0])
+    CommonHash[pi]["AT2_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("AT2") + i, a[i])
+        CommonHash[pi]["AT2" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -29601,9 +29625,9 @@ function Trig_AK1T2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("AT2_0"))
+    i=(CommonHash[pi]["AT2_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("AT2") + i ))
+    b=(CommonHash[pi]["AT2" .. i] or 0)
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -29774,12 +29798,12 @@ function AT3Count(p)
 --    endif
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("AT3_0"), a[0])
+    CommonHash[pi]["AT3_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("AT3") + i, a[i])
+        CommonHash[pi]["AT3" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -29799,9 +29823,9 @@ function Trig_AK1T3_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("AT3_0"))
+    i=(CommonHash[pi]["AT3_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("AT3") + i ))
+    b=(CommonHash[pi]["AT3" .. i] or 0)
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -29935,12 +29959,12 @@ function ACavCount(p)
 --    endif
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("ACav_0"), a[0])
+    CommonHash[pi]["ACav_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("ACav") + i, a[i])
+        CommonHash[pi]["ACav" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -29960,9 +29984,9 @@ function Trig_AK1Cav_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("ACav_0"))
+    i=(CommonHash[pi]["ACav_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("ACav") + i ))
+    b=(CommonHash[pi]["ACav" .. i] or 0)
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -30081,12 +30105,12 @@ function AK1Count(p)
 --    endif
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("AK1_0"), a[0])
+    CommonHash[pi]["AK1_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("AK1") + i, a[i])
+        CommonHash[pi]["AK1" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -30106,9 +30130,9 @@ function Trig_AK2T1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("AK1_0"))
+    i=(CommonHash[pi]["AK1_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("AK1") + i ))
+    b=(CommonHash[pi]["AK1" .. i] or 0)
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -30234,12 +30258,12 @@ function AK2Count(p)
 --    endif
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("AK2_0"), a[0])
+    CommonHash[pi]["AK2_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("AK2") + i, a[i])
+        CommonHash[pi]["AK2" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -30259,9 +30283,9 @@ function Trig_AK2T2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("AK2_0"))
+    i=(CommonHash[pi]["AK2_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("AK2") + i ))
+    b=(CommonHash[pi]["AK2" .. i] or 0)
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -30406,12 +30430,12 @@ function AK3Count(p)
 --    endif
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("AK3_0"), a[0])
+    CommonHash[pi]["AK3_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("AK3") + i, a[i])
+        CommonHash[pi]["AK3" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -30431,9 +30455,9 @@ function Trig_AK2T3_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("AK3_0"))
+    i=(CommonHash[pi]["AK3_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("AK3") + i ))
+    b=(CommonHash[pi]["AK3" .. i] or 0)
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -30584,12 +30608,12 @@ function AM1Count(p)
 --    endif
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("AM1_0"), a[0])
+    CommonHash[pi]["AM1_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("AM1") + i, a[i])
+        CommonHash[pi]["AM1" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -30609,9 +30633,9 @@ function Trig_AM1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("AM1_0"))
+    i=(CommonHash[pi]["AM1_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("AM1") + i ))
+    b=(CommonHash[pi]["AM1" .. i] or 0)
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -30751,12 +30775,12 @@ function AM2Count(p)
 --    endif
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("AM2_0"), a[0])
+    CommonHash[pi]["AM2_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("AM2") + i, a[i])
+        CommonHash[pi]["AM2" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -30776,9 +30800,9 @@ function Trig_AM2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("AM2_0"))
+    i=(CommonHash[pi]["AM2_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("AM2") + i ))
+    b=(CommonHash[pi]["AM2" .. i] or 0)
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -30871,12 +30895,12 @@ function AM3Count(p)
     end
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("AM3_0"), a[0])
+    CommonHash[pi]["AM3_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("AM3") + i, a[i])
+        CommonHash[pi]["AM3" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -30896,9 +30920,9 @@ function Trig_AM3_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("AM3_0"))
+    i=(CommonHash[pi]["AM3_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("AM3") + i ))
+    b=(CommonHash[pi]["AM3" .. i] or 0)
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -31009,12 +31033,12 @@ function AE1Count(p)
 --    endif
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("AE1_0"), a[0])
+    CommonHash[pi]["AE1_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("AE1") + i, a[i])
+        CommonHash[pi]["AE1" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -31034,9 +31058,9 @@ function Trig_AE1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("AE1_0"))
+    i=(CommonHash[pi]["AE1_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("AE1") + i ))
+    b=(CommonHash[pi]["AE1" .. i] or 0)
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -31177,12 +31201,12 @@ function AE2Count(p)
 --    endif
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("AEE2_0"), a[0])
+    CommonHash[pi]["AEE2_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("AEE2") + i, a[i])
+        CommonHash[pi]["AEE2" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -31202,9 +31226,9 @@ function Trig_AE2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("AEE2_0"))
+    i=(CommonHash[pi]["AEE2_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("AEE2") + i ))
+    b=(CommonHash[pi]["AEE2" .. i] or 0)
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -31326,12 +31350,12 @@ function AN1Count(p)
 --    endif
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("AN1_0"), a[0])
+    CommonHash[pi]["AN1_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("AN1") + i, a[i])
+        CommonHash[pi]["AN1" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -31351,9 +31375,9 @@ function Trig_AN1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("AN1_0"))
+    i=(CommonHash[pi]["AN1_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("AN1") + i ))
+    b=(CommonHash[pi]["AN1" .. i] or 0)
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -31456,12 +31480,12 @@ function AN2Count(p)
 --    endif
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("AN2_0"), a[0])
+    CommonHash[pi]["AN2_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("AN2") + i, a[i])
+        CommonHash[pi]["AN2" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -31481,9 +31505,9 @@ function Trig_AN2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("AN2_0"))
+    i=(CommonHash[pi]["AN2_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("AN2") + i ))
+    b=(CommonHash[pi]["AN2" .. i] or 0)
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -36924,12 +36948,12 @@ function T1Count(p)
     end
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("T1_0"), a[0])
+    CommonHash[pi]["T1_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("T1") + i, a[i])
+        CommonHash[pi]["T1" .. i] = a[i]
         i=i + 1
         
         if i > a[0] then break end
@@ -36949,9 +36973,9 @@ function Trig_K1T1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=LoadInteger(CommonHash, pi, StringHash("T1_0"))
+    i=(CommonHash[pi]["T1_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, ( StringHash("T1") + i ))
+    b=(CommonHash[pi]["T1" .. i] or 0)
     
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -37028,12 +37052,12 @@ function T2Count(p)
     end
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("T2_0"), a[0])
+    CommonHash[pi]["T2_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("T2") + i, a[i])
+        CommonHash[pi]["T2" .. i] = a[i]
         i=i + 1
         if i > a[0] then break end
     end
@@ -37052,9 +37076,9 @@ function Trig_K1T2_Actions()
     local pi= GetPlayerId(p)
     
     -- 
-    i=LoadInteger(CommonHash, pi, StringHash("T2_0"))
+    i=(CommonHash[pi]["T2_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, StringHash("T2") + i)
+    b=(CommonHash[pi]["T2" .. i] or 0)
     --
     
     
@@ -37116,12 +37140,12 @@ function T2bCount(p)
     end
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("T2b_0"), a[0])
+    CommonHash[pi]["T2b_0"] = a[0]
     i=1
     while true do
        
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("T2b") + i, a[i])
+        CommonHash[pi]["T2b" .. i] = a[i]
         i=i + 1
         if i > a[0] then break end
     end
@@ -37143,9 +37167,9 @@ function Trig_K1T2b_Actions()
     
     
     -- 
-    i=LoadInteger(CommonHash, pi, StringHash("T2b_0"))
+    i=(CommonHash[pi]["T2b_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, StringHash("T2b") + i)
+    b=(CommonHash[pi]["T2b" .. i] or 0)
     --
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -37237,12 +37261,12 @@ function TCavCount(p)
     
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("TCav_0"), a[0])
+    CommonHash[pi]["TCav_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("TCav") + i, a[i])
+        CommonHash[pi]["TCav" .. i] = a[i]
         i=i + 1
         if i > a[0] then break end
     end
@@ -37263,9 +37287,9 @@ function Trig_K1TCav_Actions()
     
     
     -- 
-    i=LoadInteger(CommonHash, pi, StringHash("TCav_0"))
+    i=(CommonHash[pi]["TCav_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, StringHash("TCav") + i)
+    b=(CommonHash[pi]["TCav" .. i] or 0)
     --
     
     
@@ -37369,12 +37393,12 @@ function T3Count(p)
     
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("T3_0"), a[0])
+    CommonHash[pi]["T3_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("T3") + i, a[i])
+        CommonHash[pi]["T3" .. i] = a[i]
         i=i + 1
         if i > a[0] then break end
     end
@@ -37397,9 +37421,9 @@ function Trig_K1T4_Actions()
     
     
     -- 
-    i=LoadInteger(CommonHash, pi, StringHash("T3_0"))
+    i=(CommonHash[pi]["T3_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, StringHash("T3") + i)
+    b=(CommonHash[pi]["T3" .. i] or 0)
     --
     
     --Тен Тотем
@@ -37485,12 +37509,12 @@ function K1Count(p)
     
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("K1_0"), a[0])
+    CommonHash[pi]["K1_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("K1") + i, a[i])
+        CommonHash[pi]["K1" .. i] = a[i]
         i=i + 1
         if i > a[0] then break end
     end
@@ -37511,9 +37535,9 @@ function Trig_K2T1_Actions()
     
     
     -- 
-    i=LoadInteger(CommonHash, pi, StringHash("K1_0"))
+    i=(CommonHash[pi]["K1_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, StringHash("K1") + i)
+    b=(CommonHash[pi]["K1" .. i] or 0)
     --
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -37596,12 +37620,12 @@ function K2Count(p)
     end
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("K2_0"), a[0])
+    CommonHash[pi]["K2_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("K2") + i, a[i])
+        CommonHash[pi]["K2" .. i] = a[i]
         i=i + 1
         if i > a[0] then break end
     end
@@ -37621,9 +37645,9 @@ function Trig_K2T2_Actions()
     
     
     -- 
-    i=LoadInteger(CommonHash, pi, StringHash("K2_0"))
+    i=(CommonHash[pi]["K2_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, StringHash("K2") + i)
+    b=(CommonHash[pi]["K2" .. i] or 0)
     --
     
     aiFixTrainBefore(GetTrainedUnit() , pi)
@@ -37704,12 +37728,12 @@ function K2bCount(p)
     end
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("K2b_0"), a[0])
+    CommonHash[pi]["K2b_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("K2b") + i, a[i])
+        CommonHash[pi]["K2b" .. i] = a[i]
         i=i + 1
         if i > a[0] then break end
     end
@@ -37728,9 +37752,9 @@ function Trig_K2T2b_Actions()
     local pi= GetPlayerId(p)
     
     -- 
-    i=LoadInteger(CommonHash, pi, StringHash("K2b_0"))
+    i=(CommonHash[pi]["K2b_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, StringHash("K2b") + i)
+    b=(CommonHash[pi]["K2b" .. i] or 0)
     --
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -37803,12 +37827,12 @@ function K3Count(p)
     
     
     --Long Containment
-    SaveInteger(CommonHash, pi, StringHash("K3_0"), a[0])
+    CommonHash[pi]["K3_0"] = a[0]
     i=1
     while true do
         
         
-        SaveIntegerIfPresent(CommonHash, pi, StringHash("K3") + i, a[i])
+        CommonHash[pi]["K3" .. i] = a[i]
         i=i + 1
         if i > a[0] then break end
     end
@@ -37829,9 +37853,9 @@ function Trig_K2T3_Actions()
     
     
     -- 
-    i=LoadInteger(CommonHash, pi, StringHash("K3_0"))
+    i=(CommonHash[pi]["K3_0"] or 0)
     i=GetRandomInt(1, i)
-    b=LoadInteger(CommonHash, pi, StringHash("K3") + i)
+    b=(CommonHash[pi]["K3" .. i] or 0)
     --
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -54676,7 +54700,7 @@ function aiRep()
     
     
     -- Очистка
-    FlushChildHashtable(AiData, (pi)) -- INLINED!!
+    g_AiCountCache[pi] = nil; FlushChildHashtable(AiData, (pi)) -- INLINED!!
     
     GroupClear(udg_Ai_units[pi])
     GroupClear(udg_Ai_navy[pi])
@@ -54705,7 +54729,7 @@ function aiRep()
             -- Сломался с неуязом
             if BlzIsUnitInvulnerable(gUnit) then -- GetUnitAbilityLevel(gUnit, FourCC('Bvul')) > 0 then
                 BJDebugMsg("")
-                gUnit=ReplaceUnit2(gUnit , GetUnitTypeId(gUnit) , bj_UNIT_STATE_METHOD_RELATIVE)
+                gUnit=ReplaceUnit2(gUnit , GetUnitTypeId(gUnit) , bj_UNIT_STATE_METHOD_MAXIMUM)
                 
             end
            
@@ -58462,7 +58486,7 @@ RegisterAiRace("HordeW2", {
             {FourCC('w205'), 3}, {FourCC('w209'), 2,gate="tier2"}, {FourCC('w211'), 3},
         },
         [FourCC('w20a')] = {
-            {FourCC('W200')}, {FourCC('W201')}, {FourCC('W202')},
+            {FourCC('W200'), 1, limit = 1}, {FourCC('W201'), 1, limit = 1}, {FourCC('W202'), 1, limit = 1},
         },
         [FourCC('w210')] = { {FourCC('w202'), 3} },
         [FourCC('w212')] = { {FourCC('w213'), 3} },
@@ -58561,7 +58585,7 @@ RegisterAiRace("Nerubs", {
             {FourCC('u01H'), 3}, {FourCC('u01D'), 3},
         },
         [FourCC('h0CU')] = {
-            {FourCC('U01U')}, {FourCC('U01V')}, {FourCC('U01W')},
+            {FourCC('U01U'), 1, limit = 1}, {FourCC('U01V'), 1, limit = 1}, {FourCC('U01W'), 1, limit = 1},
         },
     },
     ecoWeights = {
@@ -58650,7 +58674,7 @@ RegisterAiRace("Forsaken", {
             {FourCC('o02X'), 3}, {FourCC('u02C'), 2, gate = "tier2"}, {FourCC('o02Y'), 2, gate = "tier2"},
         },
         [FourCC('h0JR')] = {
-            {FourCC('N058')}, {FourCC('O031')}, {FourCC('O030')},
+            {FourCC('N058'), 1, limit = 1}, {FourCC('O031'), 1, limit = 1}, {FourCC('O030'), 1, limit = 1},
         },
     },
     ecoWeights = {
