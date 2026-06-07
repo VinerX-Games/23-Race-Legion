@@ -3988,7 +3988,7 @@ end
 ---@param id integer
 ---@return integer
 function getAiCount(pi, id)
-	return LoadInteger(AiData, pi, id)
+	return LoadInteger(AiData, pi, id) or 0
 end
 --  Для работы надо номер игрока, ид юнита
 ---@param pi integer
@@ -4307,10 +4307,12 @@ end
 ---@param pi integer
 ---@return nothing
 function MakeMageTp(pi)
+	local race = AiRaces[AiRace[pi]]
+	local mageUnit = (race and race.mageTpUnit) or FourCC('h07A')
 	GroupEnumUnitsOfPlayer(gGroup, Player(pi), Altars)
 	if FirstOfGroup(gGroup) ~= nil then
 		gUnit2 = GroupPickRandomUnit2(gGroup)
-		gUnit = CreateUnit(Player(pi), FourCC('h07A'), GetUnitX(gUnit2), GetUnitY(gUnit2), 0)
+		gUnit = CreateUnit(Player(pi), mageUnit, GetUnitX(gUnit2), GetUnitY(gUnit2), 0)
 		GroupAddUnit(udg_Ai_army[pi], gUnit)
 		GroupAddUnit(AiUnitsToPort[pi], gUnit)
 		NumberAdd(pi, FourCC('h07A'))
@@ -10807,7 +10809,8 @@ function TryAttack()
 		TryPortalMovement(gUnit, gEnemyGroup, gX, gY, 0)
 		
 		-- /Континентальные штуки
-		if AiRace[GetPlayerId(gPlayer)] == "Naga" then
+		local cRace = AiRaceOf(GetPlayerId(gPlayer))
+		if cRace ~= nil and cRace.continentalNaga then
 			ProcessContinentalStuffNaga(gX, gY, gEnemyGroup)
 		else
 			ProcessContinentalStuff(gX, gY, gEnemyGroup)
@@ -10942,7 +10945,8 @@ function TryAttack()
 			TryPortalMovement(gUnit, gEnemyGroup, gX, gY, i)
 			
 			-- /Континентальные штуки
-			if AiRace[GetPlayerId(gPlayer)] == "Naga" then
+			local cRace = AiRaceOf(GetPlayerId(gPlayer))
+			if cRace ~= nil and cRace.continentalNaga then
 				ProcessContinentalStuffNaga(gX, gY, gEnemyGroup)
 			else
 				ProcessContinentalStuff(gX, gY, gEnemyGroup)

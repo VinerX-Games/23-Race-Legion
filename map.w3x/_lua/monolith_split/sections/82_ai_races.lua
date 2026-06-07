@@ -580,6 +580,7 @@ RegisterAiRace("Naga", {
     naval = aiNavalTrain_Naga,
     wall = FourCC('n04L'),
     usesWaterPoint = false,
+    continentalNaga = true,
 })
 
 RegisterAiRace("Horde", {
@@ -782,8 +783,8 @@ RegisterAiRace("JungleTrolls", {
             { FourCC('o05G'), 2, gate = "tier3" },
         },
         [FourCC('h0N0')] = {
-            { FourCC('O054') }, { FourCC('O05A') }, { FourCC('O05D') },
-            { branch = "jt", black = FourCC('O05L'), other = FourCC('O055') },
+            { FourCC('O054'), 1, limit = 1 }, { FourCC('O05A'), 1, limit = 1 }, { FourCC('O05D'), 1, limit = 1 },
+            { branch = "jt", black = FourCC('O05L'), other = FourCC('O055'), limit = 1 },
         },
         worker = { id = FourCC('o04Q'), cap = 18,
                    from = { FourCC('h0N5'), FourCC('h0N1'), FourCC('h0N6') } },

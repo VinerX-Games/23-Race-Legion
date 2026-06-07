@@ -2837,7 +2837,8 @@ function TryAttack()
 		TryPortalMovement(gUnit, gEnemyGroup, gX, gY, 0)
 		
 		-- /Континентальные штуки
-		if AiRace[GetPlayerId(gPlayer)] == "Naga" then
+		local cRace = AiRaceOf(GetPlayerId(gPlayer))
+		if cRace ~= nil and cRace.continentalNaga then
 			ProcessContinentalStuffNaga(gX, gY, gEnemyGroup)
 		else
 			ProcessContinentalStuff(gX, gY, gEnemyGroup)
@@ -2972,7 +2973,8 @@ function TryAttack()
 			TryPortalMovement(gUnit, gEnemyGroup, gX, gY, i)
 			
 			-- /Континентальные штуки
-			if AiRace[GetPlayerId(gPlayer)] == "Naga" then
+			local cRace = AiRaceOf(GetPlayerId(gPlayer))
+			if cRace ~= nil and cRace.continentalNaga then
 				ProcessContinentalStuffNaga(gX, gY, gEnemyGroup)
 			else
 				ProcessContinentalStuff(gX, gY, gEnemyGroup)
