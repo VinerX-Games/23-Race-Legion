@@ -17,8 +17,15 @@ function TryBuild()
 	GroupRemoveUnit(udg_Ai_harvest[gPi], gUnit)
 	
 	
-	-- ???? ? ???? ??? ????? - ?? ????? ????? c ??????? ??????)
-	if (AiData[gPi][StringHash("NumberPorts")] or 0) < 12 and ( not IsTerrainPathable(gX, gY, PATHING_TYPE_WALKABILITY) and RectContainsCoords(gg_rct_Outland, gX, gY) ~= true and RectContainsCoords(gg_rct_Azgel, gX, gY) ~= true) then
+	-- Стены и порты: поход к водной точке (шанс тем выше, чем меньше верфей)
+	gInt = (AiData[gPi][StringHash("NumberPorts")] or 0)
+	if gInt < 12 and AiRaceUsesWaterPoint(gPi) and GoToWaterPoint(gPi, gUnit, gX, gY) then
+		return 
+	end
+	
+	
+	-- Стены и порты: стройка на месте (если рядом берег)
+	if gInt < 12 and ( not IsTerrainPathable(gX, gY, PATHING_TYPE_WALKABILITY) and RectContainsCoords(gg_rct_Outland, gX, gY) ~= true and RectContainsCoords(gg_rct_Azgel, gX, gY) ~= true) then
 		
 		
 		if Random(1, 2) then
@@ -44,9 +51,6 @@ function TryBuild()
 		end
 		
 		
-		-- ???? ? ????? ??? ????? ????
-	elseif AiRaceUsesWaterPoint(gPi) and GoToWaterPoint(gPi, gUnit, gX, gY) then
-		return 
 	end
 	
 	-- ???? ??????? ?? ????? ????
