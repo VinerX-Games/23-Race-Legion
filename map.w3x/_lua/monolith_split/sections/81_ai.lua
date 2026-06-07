@@ -1,6 +1,7 @@
 ﻿AiRaces = AiRaces or {}
 AiRaceTokens = AiRaceTokens or {}
 AiRaceOrder = AiRaceOrder or {}
+g_AiOrdered = {}
 
 local function AiNormalizeToken(token)
     if token == nil then
@@ -219,20 +220,30 @@ function AiRunProduction(id, pi, u, def)
             local f = def.branches and def.branches[row.branch]
             local pick = (f and f(pi)) and row.black or row.other
             if pick ~= nil and pick ~= 0 then
-                if row.limit and getAiCount(pi, pick) >= row.limit then goto continue end
+                if row.limit then
+                    if getAiCount(pi, pick) >= row.limit then goto continue end
+                    local key = pi * 1000000 + pick
+                    if g_AiOrdered[key] then goto continue end
+                end
                 AddUnit(pick, row.weight or 1)
             end
         else
             local uid = row[1]
             if uid ~= nil and uid ~= 0 then
-                if row.limit and getAiCount(pi, uid) >= row.limit then goto continue end
+                if row.limit then
+                    if getAiCount(pi, uid) >= row.limit then goto continue end
+                    local key = pi * 1000000 + uid
+                    if g_AiOrdered[key] then goto continue end
+                end
                 AddUnit(uid, row[2] or 1)
             end
         end
         ::continue::
     end
     if tArray[0] > 0 then
-        IssueImmediateOrderById(u, tArray[GetRandomInt(1, tArray[0])])
+        local picked = tArray[GetRandomInt(1, tArray[0])]
+        IssueImmediateOrderById(u, picked)
+        g_AiOrdered[pi * 1000000 + picked] = true
     end
     return true
 end

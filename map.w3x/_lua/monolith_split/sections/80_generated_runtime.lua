@@ -1456,6 +1456,7 @@ function KillAll()
 	local p = GetOwningPlayer(u)
 	if IsUnitInGroup(u, udg_ZahvatBuildings) or GetUnitAbilityLevel(u, FourCC('A1HJ')) > 0 then
 		SetUnitOwner(u, Player(25), true)
+		SetUnitLifePercentBJ(u, 100)
 	elseif IsUnitInGroup(u, udg_StolicaGroups) then
 		RemoveUnit(u)
 	else
@@ -45970,6 +45971,7 @@ function Trig_PereborBuildings_Code_Func002A()
     
 end
 function Trig_PereborBuildings_Actions()
+    g_AiOrdered = {}
     PauseTimer(udg_TimerSmall3)
     if not (AiData[-1][StringHash("TickLog_TimerSmall3")] or false) then
         AiData[-1][StringHash("TickLog_TimerSmall3")] = true
@@ -46659,7 +46661,7 @@ end
 -- Trigger: PortUnits
 --===========================================================================
 function isNavalBase()
-    return id == FourCC('h0D1') or id == FourCC('h0D8') or id == FourCC('h03R') or id == FourCC('h0D3') or id == FourCC('h0E7') or id == FourCC('h011') or id == FourCC('h0D7') or gId == FourCC('n04L') or gId == FourCC('h0HO') -- Прописать все типы верфей
+    return id == FourCC('h0D1') or id == FourCC('h0D8') or id == FourCC('h03R') or id == FourCC('h0D3') or id == FourCC('h0E7') or id == FourCC('h011') or id == FourCC('h0D7') or id == FourCC('u01A') or gId == FourCC('n04L') or gId == FourCC('h0HO') -- Прописать все типы верфей
 end
 function Trig_PortUnits_Conditions()
     gUnit=GetConstructingStructure()

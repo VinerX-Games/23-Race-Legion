@@ -102,7 +102,6 @@ RegisterAiRace("Scarlet", {
             { at = 35, gate = "tier2", action = "research", rows = {
                 {FourCC('h064'), FourCC('R047'), 6}, {FourCC('h064'), FourCC('R046'), 6}, {FourCC('h064'), FourCC('R045'), 6}, {FourCC('h064'), FourCC('R03U'), 6},
             }},
-            { at = 45, action = "fleet", wall = FourCC('h011') },
             { at = 25, action = "techUp", from = FourCC('h05U'), to = FourCC('h05V'), cap = 3 },
             { at = 55, action = "techUp", from = FourCC('h05V'), to = FourCC('h05W'), cap = 3 },
             { at = 60, action = "mageTp" },
@@ -170,8 +169,6 @@ RegisterAiRace("Scarlet", {
     strateg = Strateg_Scarlet,
     strategEC = Strateg_Scarlet_EC,
     upgrade = UpgradeScarlet,
-    naval = aiNavalTrain_Common,
-    wall = FourCC('h011'),
 })
 
 RegisterAiRace("BloodElves", {
@@ -1180,6 +1177,7 @@ RegisterAiRace("Nerubs", {
                 { {FourCC('h0CT'),FourCC('Abds'),6},{FourCC('h0CV'),FourCC('Abds'),6} },
             }},
             { at = 20, action = "tryBuy" },
+            { at = 45, action = "fleet", wall = FourCC('u01A') },
             { at = 25, action = "techUp", from = FourCC('h0CO'), to = FourCC('h0CP'), cap = 3 },
             { at = 55, action = "techUp", from = FourCC('h0CP'), to = FourCC('h0CQ'), cap = 3 },
         },
@@ -1205,6 +1203,7 @@ RegisterAiRace("Nerubs", {
     },
     join = Join_Nerubs,
     wall = FourCC('u01A'),
+    naval = aiNavalTrain_Common,
 })
 
 ---@param id integer
@@ -2231,10 +2230,13 @@ RegisterAiRace("Vrykul", {
                 { {FourCC('h0BV'),FourCC('Abds'),6} },
             }},
             { at = 20, action = "tryBuy" },
+            { at = 45, action = "fleet", wall = FourCC('h0D1') },
             { at = 25, action = "techUp", from = FourCC('h0BQ'), to = FourCC('h0BR'), cap = 3 },
             { at = 55, action = "techUp", from = FourCC('h0BR'), to = FourCC('h0BS'), cap = 3 },
         },
     },
+    wall = FourCC('h0D1'),
+    naval = aiNavalTrain_Common,
     join = Join_Vrykul,
 })
 
@@ -2295,12 +2297,14 @@ RegisterAiRace("KulTiras", {
                 { {FourCC('h022'),FourCC('Abds'),6} },
             }},
             { at = 20, action = "tryBuy" },
+            { at = 45, action = "fleet", wall = FourCC('h0E7') },
             { at = 25, action = "techUp", from = FourCC('h01X'), to = FourCC('h01Y'), cap = 3 },
             { at = 55, action = "techUp", from = FourCC('h01Y'), to = FourCC('h01Z'), cap = 3 },
         },
     },
+    naval = aiNavalTrain_Common,
     join = Join_KulTiras,
-    wall = FourCC('h025'),
+    wall = FourCC('h0E7'),
 })
 
 ---@param id integer
@@ -2353,8 +2357,11 @@ RegisterAiRace("Dalaran", {
                 { {FourCC('h02W'),FourCC('Abds'),6} },
             }},
             { at = 20, action = "tryBuy" },
+            { at = 45, action = "fleet", wall = FourCC('h011') },
         },
     },
+    wall = FourCC('h011'),
+    naval = aiNavalTrain_Common,
     join = Join_Dalaran,
 })
 
@@ -2417,10 +2424,13 @@ RegisterAiRace("IceTrolls", {
                 { {FourCC('o04A'),FourCC('Abds'),6} },
             }},
             { at = 20, action = "tryBuy" },
+            { at = 45, action = "fleet", wall = FourCC('h0HO') },
             { at = 25, action = "techUp", from = FourCC('o046'), to = FourCC('o047'), cap = 3 },
             { at = 55, action = "techUp", from = FourCC('o047'), to = FourCC('o048'), cap = 3 },
         },
     },
+    wall = FourCC('h0HO'),
+    naval = aiNavalTrain_Horde,
     join = Join_IceTrolls,
 })
 
@@ -2484,10 +2494,13 @@ RegisterAiRace("FelOrc", {
                 { {FourCC('o05Z'),FourCC('Abds'),6} },
             }},
             { at = 20, action = "tryBuy" },
+            { at = 45, action = "fleet", wall = FourCC('h0D3') },
             { at = 25, action = "techUp", from = FourCC('o05V'), to = FourCC('o05W'), cap = 3 },
             { at = 55, action = "techUp", from = FourCC('o05W'), to = FourCC('o05X'), cap = 3 },
         },
     },
+    wall = FourCC('h0D3'),
+    naval = aiNavalTrain_JungleTrolls,
     join = Join_FelOrc,
 })
 
