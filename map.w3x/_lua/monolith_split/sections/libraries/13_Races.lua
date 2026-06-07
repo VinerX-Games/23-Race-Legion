@@ -3568,4 +3568,22 @@ function startFelOrc(pi)
     AiRace[pi] = "FelOrc"
     ProbeLogWrite("[AI] startFelOrc pi=" .. tostring(pi) .. " workers=5n06B building=1o05V")
 end
+---@param pi integer
+---@return nothing
+function startEnts(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('e02T'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('e02B'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('e02T')] = 5
+    AiData[pi][FourCC('e02B')] = 1
+    AiData[pi][StringHash("Race")] = "EN"
+    SetPlayerTechResearchedSwap(FourCC('R0BZ'), 1, p)
+    SetPlayerName(p, "Ents (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Ents"
+    ProbeLogWrite("[AI] startEnts pi=" .. tostring(pi) .. " workers=5e02T building=1e02B")
+end
 -- library Races ends

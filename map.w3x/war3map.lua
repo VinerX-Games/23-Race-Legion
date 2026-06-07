@@ -8143,6 +8143,24 @@ function startFelOrc(pi)
     AiRace[pi] = "FelOrc"
     ProbeLogWrite("[AI] startFelOrc pi=" .. tostring(pi) .. " workers=5n06B building=1o05V")
 end
+---@param pi integer
+---@return nothing
+function startEnts(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('e02T'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('e02B'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('e02T')] = 5
+    AiData[pi][FourCC('e02B')] = 1
+    AiData[pi][StringHash("Race")] = "EN"
+    SetPlayerTechResearchedSwap(FourCC('R0BZ'), 1, p)
+    SetPlayerName(p, "Ents (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Ents"
+    ProbeLogWrite("[AI] startEnts pi=" .. tostring(pi) .. " workers=5e02T building=1e02B")
+end
 -- library Races ends
 -- library AI2:
 ---@param p player
@@ -60279,6 +60297,72 @@ RegisterAiRace("FelOrc", {
         },
     },
     join = Join_FelOrc,
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Ents(id, pi, u)
+    if id == FourCC('e02T') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Ents", {
+    tokens = {"ent", "ents", "treant"},
+    weight = 1,
+    altar = FourCC('e02G'),
+    start = startEnts,
+    chooseBuild = function(pi)
+        -- Ents workers build trees that uproot; same as standard
+        local realBuilding = AiRunChooseBuildings(pi, AiRaces["Ents"])
+        return realBuilding
+    end,
+    buildings = {
+        seed = FourCC('e00N'),
+        { FourCC('e02B'), 4, 4 }, { FourCC('e00N'), 18, 4 },
+        { FourCC('e02G'), 3, 6 }, { FourCC('e02F'), 10, 4 },
+        { FourCC('e02H'), 8, 6, gate = "tier2" }, { FourCC('e02I'), 4, 2 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('e02C')) + getAiCount(pi, FourCC('e02D')) >= 1 end,
+    },
+    production = {
+        [FourCC('e02B')] = { {FourCC('e02T'),3,limit=18} },
+        [FourCC('e02C')] = { {FourCC('e02T'),3,limit=18} },
+        [FourCC('e02D')] = { {FourCC('e02T'),3,limit=18} },
+        [FourCC('e02F')] = {
+            {FourCC('e02J'), 3}, {FourCC('e02K'), 3}, {FourCC('e02L'), 2},
+            {FourCC('e02O'), 2}, {FourCC('e03G'), 2},
+        },
+        [FourCC('e02H')] = {
+            {FourCC('e02V'), 3}, {FourCC('e03A'), 2}, {FourCC('e02M'), 2}, {FourCC('e02N'), 2},
+        },
+        [FourCC('e02G')] = {
+            {FourCC('E02S'), 1, limit = 1}, {FourCC('E02Q'), 1, limit = 1}, {FourCC('E02R'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('e00N')] = 1, [FourCC('e02B')] = 2,
+        [FourCC('e02C')] = 5, [FourCC('e02D')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('e02F'),FourCC('Abds'),6} },
+                { {FourCC('e02H'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('e02B'), to = FourCC('e02C'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('e02C'), to = FourCC('e02D'), cap = 3 },
+        },
+    },
+    join = Join_Ents,
+    wall = FourCC('e02I'),
 })
 function InitCustomTriggers()
     InitTrig_sek5()
