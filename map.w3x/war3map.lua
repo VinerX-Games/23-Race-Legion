@@ -331,9 +331,12 @@ function BridgeStart()
     local flushed = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
     BlzSetAbilityTooltip(BridgeCarrierAbilityId, flushed, BridgeCarrierTooltipLevel)
     BridgeCarrierBaseline = flushed
+    -- Disable pre-loaded command files; only live chat commands work
+    BridgeManifestCount = 0
+    BridgeNextLoadSequence = 999999
     local timer = CreateTimer()
     BridgePollTimer = timer
-    ProbeLogWrite("[BRIDGE] start (preloader+chat) baseline-len=" .. tostring(#flushed))
+    ProbeLogWrite("[BRIDGE] start (live-only) baseline-len=" .. tostring(#flushed))
     TimerStart(timer, BridgeTickInterval, true, BridgeTick)
 end
 function SetupBridgeChat()
