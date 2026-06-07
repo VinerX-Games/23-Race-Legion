@@ -147,9 +147,22 @@ python -c "from luaparser import ast; ast.parse(open('map.w3x/war3map.lua','rb')
 
 # 3. Закрыть старый WC3 если открыт
 
-# 4. Probe
-HiveWE_cli probe-map --map map.w3x --warcraft "F:/Games/Warcraft III" --click-after 60 --wait 220 --bridge-script "140:create_ai:2" --probe-log 23Race_probe_log.pld
+# 4. Probe (важно: detached-запуск чтобы WC3 не закрылся при Ctrl+C)
+# Обычный запуск — WC3 умрёт если прервать процесс. Используй Start-Process:
+$cli = "C:\Games\HiveWE_VinerX_Edition\build\Release\Release\HiveWE_cli.exe"
+Start-Process -FilePath $cli -ArgumentList "probe-map --map `"C:\Games\23 Race\23-Race-Legion\map.w3x`" --warcraft `"F:\Games\Warcraft III`" --args `"-window -nowfpause`" --click-after 60 --wait 300 --bridge-script 140:create_ai:2 --probe-log 23Race_probe_log.pld --keep-open" -NoNewWindow
 
-# 5. Читать
+# -window -nowfpause = окно не паузится при потере фокуса, можно работать в фоне
+
+# 5. Bridge-сессия (после загрузки карты)
+python agent_bridge.py reset
+
+# Спавн всех AI-рас (pi=2..23):
+python agent_bridge.py exec "for pi=2,23 do createAiPlayer(pi) end; return 'done'" --timeout 30
+
+# Проверить расы:
+python agent_bridge.py exec "local r={}; for pi=2,23 do r[#r+1]=AiRace[pi] or 'nil' end; return table.concat(r,', ')" --timeout 20
+
+# 6. Читать логи
 notepad "%USERPROFILE%\Documents\Warcraft III\CustomMapData\23Race_probe_log.pld"
 ```
