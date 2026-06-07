@@ -8087,6 +8087,43 @@ function startKulTiras(pi)
     AiRace[pi] = "KulTiras"
     ProbeLogWrite("[AI] startKulTiras pi=" .. tostring(pi) .. " workers=5h013 building=1h01X")
 end
+---@param pi integer
+---@return nothing
+function startDalaran(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(3, FourCC('u001'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h030'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('u001')] = 3
+    AiData[pi][FourCC('h030')] = 1
+    AiData[pi][StringHash("Race")] = "DL"
+    SetPlayerTechResearchedSwap(FourCC('R0BW'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, p)
+    SetPlayerName(p, "Dalaran (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Dalaran"
+    ProbeLogWrite("[AI] startDalaran pi=" .. tostring(pi) .. " workers=3u001 building=1h030")
+end
+---@param pi integer
+---@return nothing
+function startIceTrolls(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('o045'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('o046'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('o045')] = 5
+    AiData[pi][FourCC('o046')] = 1
+    AiData[pi][StringHash("Race")] = "IT"
+    SetPlayerTechResearchedSwap(FourCC('R0L1'), 1, p)
+    SetPlayerName(p, "IceTrolls (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "IceTrolls"
+    ProbeLogWrite("[AI] startIceTrolls pi=" .. tostring(pi) .. " workers=5o045 building=1o046")
+end
 -- library Races ends
 -- library AI2:
 ---@param p player
@@ -60035,6 +60072,127 @@ RegisterAiRace("KulTiras", {
     },
     join = Join_KulTiras,
     wall = FourCC('h025'),
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Dalaran(id, pi, u)
+    if id == FourCC('u001') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Dalaran", {
+    tokens = {"dalaran"},
+    weight = 1,
+    altar = FourCC('h02V'),
+    start = startDalaran,
+    buildings = {
+        seed = FourCC('h031'),
+        { FourCC('h030'), 4, 4 }, { FourCC('h031'), 18, 4 },
+        { FourCC('h02V'), 3, 6 }, { FourCC('h02W'), 10, 4 },
+        { FourCC('h02X'), 8, 4 }, { FourCC('h037'), 8, 4 },
+        { FourCC('h034'), 6, 4 }, { FourCC('h02Y'), 5, 2 },
+    },
+    production = {
+        [FourCC('h030')] = { {FourCC('u001'),3,limit=18} },
+        [FourCC('h02W')] = {
+            {FourCC('h02J'), 3}, {FourCC('h02K'), 3}, {FourCC('h02M'), 2}, {FourCC('h02P'), 2},
+        },
+        [FourCC('h02X')] = {
+            {FourCC('n00B'), 3}, {FourCC('h02L'), 3}, {FourCC('h02I'), 2}, {FourCC('h02O'), 2},
+        },
+        [FourCC('h037')] = {
+            {FourCC('n00C'), 3}, {FourCC('n00D'), 2},
+        },
+        [FourCC('h02V')] = {
+            {FourCC('H04S'), 1, limit = 1}, {FourCC('H04W'), 1, limit = 1}, {FourCC('H04X'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('h031')] = 1, [FourCC('h030')] = 2,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h02Y'),FourCC('Abds'),6},{FourCC('h02Y'),FourCC('Arlm'),6} },
+                { {FourCC('h02W'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+        },
+    },
+    join = Join_Dalaran,
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_IceTrolls(id, pi, u)
+    if id == FourCC('o045') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("IceTrolls", {
+    tokens = {"icetroll", "icetrolls", "drakkari"},
+    weight = 1,
+    altar = FourCC('o049'),
+    start = startIceTrolls,
+    buildings = {
+        seed = FourCC('o04C'),
+        { FourCC('o046'), 4, 4 }, { FourCC('o04C'), 18, 4 },
+        { FourCC('o049'), 3, 6 }, { FourCC('o04A'), 10, 4 },
+        { FourCC('o04E'), 8, 6, gate = "tier2" }, { FourCC('o04D'), 8, 4 },
+        { FourCC('o04J'), 8, 4 }, { FourCC('o04B'), 5, 2 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('o047')) + getAiCount(pi, FourCC('o048')) >= 1 end,
+    },
+    production = {
+        [FourCC('o046')] = { {FourCC('o045'),3,limit=18} },
+        [FourCC('o047')] = { {FourCC('o045'),3,limit=18} },
+        [FourCC('o048')] = { {FourCC('o045'),3,limit=18} },
+        [FourCC('o04A')] = {
+            {FourCC('n05S'), 3}, {FourCC('n05T'), 3}, {FourCC('o04F'), 2},
+        },
+        [FourCC('o04E')] = {
+            {FourCC('n05Z'), 3}, {FourCC('n05U'), 2}, {FourCC('n07B'), 2},
+        },
+        [FourCC('o04D')] = {
+            {FourCC('n05Y'), 3}, {FourCC('o04T'), 2},
+        },
+        [FourCC('o04J')] = {
+            {FourCC('n05V'), 3}, {FourCC('n05W'), 2}, {FourCC('n05X'), 2},
+        },
+        [FourCC('o049')] = {
+            {FourCC('O04H'), 1, limit = 1}, {FourCC('O04G'), 1, limit = 1}, {FourCC('O04I'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('o04C')] = 1, [FourCC('o046')] = 2,
+        [FourCC('o047')] = 5, [FourCC('o048')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('o04B'),FourCC('Abds'),6},{FourCC('o04B'),FourCC('Arlm'),6} },
+                { {FourCC('o04A'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('o046'), to = FourCC('o047'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('o047'), to = FourCC('o048'), cap = 3 },
+        },
+    },
+    join = Join_IceTrolls,
 })
 function InitCustomTriggers()
     InitTrig_sek5()

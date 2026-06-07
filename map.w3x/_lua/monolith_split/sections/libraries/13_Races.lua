@@ -3512,4 +3512,41 @@ function startKulTiras(pi)
     AiRace[pi] = "KulTiras"
     ProbeLogWrite("[AI] startKulTiras pi=" .. tostring(pi) .. " workers=5h013 building=1h01X")
 end
+---@param pi integer
+---@return nothing
+function startDalaran(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(3, FourCC('u001'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h030'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('u001')] = 3
+    AiData[pi][FourCC('h030')] = 1
+    AiData[pi][StringHash("Race")] = "DL"
+    SetPlayerTechResearchedSwap(FourCC('R0BW'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, p)
+    SetPlayerName(p, "Dalaran (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Dalaran"
+    ProbeLogWrite("[AI] startDalaran pi=" .. tostring(pi) .. " workers=3u001 building=1h030")
+end
+---@param pi integer
+---@return nothing
+function startIceTrolls(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('o045'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('o046'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('o045')] = 5
+    AiData[pi][FourCC('o046')] = 1
+    AiData[pi][StringHash("Race")] = "IT"
+    SetPlayerTechResearchedSwap(FourCC('R0L1'), 1, p)
+    SetPlayerName(p, "IceTrolls (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "IceTrolls"
+    ProbeLogWrite("[AI] startIceTrolls pi=" .. tostring(pi) .. " workers=5o045 building=1o046")
+end
 -- library Races ends
