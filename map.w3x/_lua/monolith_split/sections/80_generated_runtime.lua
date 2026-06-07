@@ -8297,17 +8297,13 @@ function Trig_FeodalDead_Func004Func002Func001Func010Func001Func003C()
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func002Func001Func010A()
-	bj_forLoopBIndex = 1
-	bj_forLoopBIndexEnd = 24
-	while true do
-		if bj_forLoopBIndex > bj_forLoopBIndexEnd then break end
+	for bj_forLoopBIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 		SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetEnumPlayer(), bj_ALLIANCE_UNALLIED)
 		if (Trig_FeodalDead_Func004Func002Func001Func010Func001Func003C()) then
 			ForceRemovePlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetForLoopIndexB()])
 		else
 		end
-		bj_forLoopBIndex = bj_forLoopBIndex + 1
 	end
 	ForceAddPlayerSimple(GetEnumPlayer(), udg_Vassals[GetConvertedPlayerId(ConvertedPlayer(GetForLoopIndexA()))])
 	SetPlayerAllianceStateBJ(GetEnumPlayer(), GetOwningPlayer(GetAttacker()), bj_ALLIANCE_ALLIED_VISION)
@@ -8328,13 +8324,9 @@ end
 function Trig_FeodalDead_Func004Func011A()
 	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" - стал вассалом игрока " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
 	ForceAddPlayerSimple(GetEnumPlayer(), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))])
-	bj_forLoopBIndex = 1
-	bj_forLoopBIndexEnd = 24
-	while true do
-		if bj_forLoopBIndex > bj_forLoopBIndexEnd then break end
+	for bj_forLoopBIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 		SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetEnumPlayer(), bj_ALLIANCE_UNALLIED)
-		bj_forLoopBIndex = bj_forLoopBIndex + 1
 	end
 end
 ---@return boolean
@@ -8356,14 +8348,10 @@ end
 ---@return nothing
 function Trig_FeodalDead_Func004Func020A()
 	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" освободился от игрока " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())))))
-	bj_forLoopAIndex = 1
-	bj_forLoopAIndexEnd = 24
-	while true do
-		if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+	for bj_forLoopAIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
 		SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_UNALLIED)
-		bj_forLoopAIndex = bj_forLoopAIndex + 1
 	end
 end
 ---@return boolean
@@ -8388,10 +8376,7 @@ function Trig_FeodalDead_Actions()
 		ForceClear(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
 	else
 		--  --------------------------------------------------------------------   Васссал кого-то захватил
-		bj_forLoopAIndex = 1
-		bj_forLoopAIndexEnd = 24
-		while true do
-			if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+		for bj_forLoopAIndex = 1, 24 do
 			if (Trig_FeodalDead_Func004Func002Func001C()) then
 				bj_forLoopBIndex = 1
 				bj_forLoopBIndexEnd = 24
@@ -8416,17 +8401,12 @@ function Trig_FeodalDead_Actions()
 				return 
 			else
 			end
-			bj_forLoopAIndex = bj_forLoopAIndex + 1
 		end
 		--  --------------------------------------------------------------------   Сеньор кого-то захватил
 		--  Вассализация хозяина столицы
-		bj_forLoopBIndex = 1
-		bj_forLoopBIndexEnd = 24
-		while true do
-			if bj_forLoopBIndex > bj_forLoopBIndexEnd then break end
+		for bj_forLoopBIndex = 1, 24 do
 			SetPlayerAllianceStateBJ(GetTriggerPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 			SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetTriggerPlayer(), bj_ALLIANCE_UNALLIED)
-			bj_forLoopBIndex = bj_forLoopBIndex + 1
 		end
 		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) + (" - стал вассалом игрока " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
 		ForceAddPlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))])
@@ -8653,14 +8633,10 @@ end
 -- ===========================================================================
 ---@return nothing
 function Trig_AllPlayers_and_vassals_Actions()
-	bj_forLoopAIndex = 1
-	bj_forLoopAIndexEnd = 24
-	while true do
-		if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+	for bj_forLoopAIndex = 1, 24 do
 		DisplayTextToForce(GetPlayersAll(), GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))
 		DisplayTextToForce(GetPlayersAll(), "TRIGSTR_19436")
 		DisplayTextToForce(GetPlayersAll(), I2S(CountPlayersInForceBJ(udg_Vassals[GetConvertedPlayerId(ConvertedPlayer(GetForLoopIndexA()))])))
-		bj_forLoopAIndex = bj_forLoopAIndex + 1
 	end
 end
 -- ===========================================================================
@@ -8983,12 +8959,8 @@ end
 function Trig_Continents_Spell_Actions()
 	DisplayTextToForce(GetPlayersAll(), "TRIGSTR_12041")
 	udg_Continents[0] = 0
-	bj_forLoopAIndex = 1
-	bj_forLoopAIndexEnd = 15
-	while true do
-		if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+	for bj_forLoopAIndex = 1, 15 do
 		udg_Continents[GetForLoopIndexA()] = 0
-		bj_forLoopAIndex = bj_forLoopAIndex + 1
 	end
 	UnitAddAbilityBJ(FourCC('A0UB'), GetTriggerUnit())
 	UnitRemoveAbilityBJ(FourCC('A0UM'), GetTriggerUnit())
@@ -12155,15 +12127,10 @@ function Trig_No2SameItems_Actions()
     local l= GetUnitLoc(GetTriggerUnit())
     local i=0
     local Item= GetManipulatedItem()
-    bj_forLoopAIndex=1
-    bj_forLoopAIndexEnd=6
-    
-    while true do
-        if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+    for bj_forLoopAIndex = 1, 6 do
         if GetItemTypeId(Item) == GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) then
             i=i + 1
         end
-        bj_forLoopAIndex=bj_forLoopAIndex + 1
     end
     
     if i >= 2 then
@@ -13658,10 +13625,7 @@ function Trig_Abordach_D_or_Ot_Actions()
     u[2]=udg_LocalUnit[2]
     p[1]=udg_LocalPosition[1]
     p[2]=udg_LocalPosition[2]
-    bj_forLoopAIndex=1
-    bj_forLoopAIndexEnd=9
-    while true do
-        if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+    for bj_forLoopAIndex = 1, 9 do
         udg_LocalUnit[1]=u[1]
         udg_LocalUnit[2]=u[2]
         if ( (true) ) then -- INLINED!!
@@ -13750,7 +13714,6 @@ function Trig_Abordach_D_or_Ot_Actions()
         TriggerSleepAction(1.00)
         ef[1]=nil
         ef[2]=nil
-        bj_forLoopAIndex=bj_forLoopAIndex + 1
     end
     udg_LocalUnit[1]=u[1]
     udg_LocalUnit[2]=u[2]
@@ -14770,10 +14733,7 @@ function Trig_Connect_Portal_2_Actions()
             else
                 udg_Portal_ConfigIndex[1]=udg_Portal_INDEX_CASTER
                 udg_Portal_ConfigIndex[2]=udg_Portal_INDEX_TARGET
-                bj_forLoopAIndex=1
-                bj_forLoopAIndexEnd=2
-                while true do
-                    if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+                for bj_forLoopAIndex = 1, 2 do
                     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
                     -- CONFIGURE HERE
                     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
@@ -14791,7 +14751,6 @@ function Trig_Connect_Portal_2_Actions()
                     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
                     -- //END CONFIGURATION
                     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
-                    bj_forLoopAIndex=bj_forLoopAIndex + 1
                 end
                 udg_Portal_INDEX_CASTER=udg_Portal_ConfigIndex[1]
                 udg_Portal_INDEX_TARGET=udg_Portal_ConfigIndex[2]
@@ -20860,12 +20819,8 @@ function Trig_TrainHakkar_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('O055')
 end
 function Trig_TrainHakkar_Actions()
-    bj_forLoopAIndex=1
-    bj_forLoopAIndexEnd=50
-    while true do
-        if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+    for bj_forLoopAIndex = 1, 50 do
         TriggerRegisterUnitLifeEvent(gg_trg_Help, GetTrainedUnit(), LESS_THAN, ( 14 * I2R(GetForLoopIndexA()) ))
-        bj_forLoopAIndex=bj_forLoopAIndex + 1
     end
     TriggerRegisterUnitLifeEvent(gg_trg_Help, GetTrainedUnit(), LESS_THAN, 2.00)
 end
