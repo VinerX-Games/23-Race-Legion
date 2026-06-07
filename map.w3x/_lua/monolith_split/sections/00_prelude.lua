@@ -45,7 +45,9 @@ function ProbeLogWrite(message)
     local allow = LogFilterAll
     if not allow then
         local tag = logExtractTag(message)
-        allow = (tag == nil) or (LogFilter[tag] ~= false)
+        if tag ~= nil then
+            allow = (LogFilter[tag] ~= false)
+        end
     end
     if allow then
         pcall(function()
