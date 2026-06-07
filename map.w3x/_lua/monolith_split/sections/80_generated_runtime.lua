@@ -1411,25 +1411,12 @@ function DelCountDis(u, pi)
 	u = nil
 end
 ---@return nothing
-function TimedCountAct()
-	local t = GetExpiredTimer()
-	local tid = GetHandleId(t)
-	local u = LoadUnitHandle(Hash, tid, 1)
-	DelCountDis(u, GetPlayerId(GetOwningPlayer(u)))
-	
-	FlushChildHashtable(Hash, tid)
-	DestroyTimer(t)
-	t = nil
-	u = nil
-end
----@param u unit
----@return nothing
 function TimedCount(u)
 	local t = CreateTimer()
-	SaveUnitHandle(Hash, GetHandleId(t), 1, u)
-	TimerStart(t, 0.3, false, TimedCountAct)
-	
-	t = nil
+	TimerStart(t, 0.3, false, function()
+		DelCountDis(u, GetPlayerId(GetOwningPlayer(u)))
+		DestroyTimer(t)
+	end)
 end
 -- ***************************************************************************
 -- *  ClearEc
@@ -19620,19 +19607,6 @@ function InitTrig_SetLifeNormal()
     TriggerAddCondition(gg_trg_SetLifeNormal, Condition(Trig_SetLifeNormal_Conditions))
     TriggerAddAction(gg_trg_SetLifeNormal, Trig_SetLifeNormal_Actions)
 end
---===========================================================================
--- Trigger: ZacliatieOfLive
---===========================================================================
-function zlifeend()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u2= LoadUnitHandle(Hash, id, 1)
-    UnitRemoveAbility(u2, FourCC('A1G6'))
-    FlushChildHashtable(Hash, id)
-    DestroyTimer(t)
-    t=nil
-    u2=nil
-end
 function Trig_ZacliatieOfLive_Actions()
     local u= GetTriggerUnit()
     local t= CreateTimer()
@@ -19640,8 +19614,11 @@ function Trig_ZacliatieOfLive_Actions()
     
     UnitAddAbility(u, FourCC('A1G6'))
     TriggerRegisterUnitEvent(gg_trg_SetLifeNormal, u, EVENT_UNIT_DAMAGING)
-    TimerStart(t, 15 * GetUnitAbilityLevel(u, FourCC('A1G5')), false, zlifeend)
-    SaveUnitHandle(Hash, id, 1, u)
+	local t = CreateTimer()
+	TimerStart(t, 15 * GetUnitAbilityLevel(u, FourCC('A1G6')), false, function()
+		UnitRemoveAbility(u, FourCC('A1G6'))
+		DestroyTimer(t)
+	end)
     
     u=nil
     t=nil
@@ -19790,16 +19767,6 @@ function Trig_WantAxe_Conditions()
     --call DisplayTextToPlayer(Player(0),0,0,"2")
     return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A1G3')) > 0 and GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1G4')) == 0 and IsPlayerEnemy(GetOwningPlayer(GetEventDamageSource()), GetOwningPlayer(GetTriggerUnit()))
 end
-function toporend()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u2= LoadUnitHandle(Hash, id, 1)
-    UnitRemoveAbility(u2, FourCC('A1G4'))
-    FlushChildHashtable(Hash, id)
-    DestroyTimer(t)
-    t=nil
-    u2=nil
-end
 function Trig_WantAxe_Actions()
     local u= GetEventDamageSource()
     local u2= GetTriggerUnit()
@@ -19809,8 +19776,11 @@ function Trig_WantAxe_Actions()
      
     UnitAddAbility(u2, FourCC('A1G4'))
     
-    TimerStart(t, 7, false, toporend)
-    SaveUnitHandle(Hash, id, 1, u2)
+	local t = CreateTimer()
+	TimerStart(t, 7, false, function()
+		UnitRemoveAbility(u2, FourCC('A1G4'))
+		DestroyTimer(t)
+	end)
     
     u=nil
     u2=nil
@@ -32929,20 +32899,6 @@ function Trig_CorrupPlus_Func008A()
     SetUnitAbilityLevelSwapped(FourCC('A0AW'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetEnumUnit())))
     SetUnitAbilityLevelSwapped(FourCC('A0AV'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetEnumUnit())))
 end
-function CorriptionTimerPlus()
-    local t= GetExpiredTimer()
-    local tid= GetHandleId(t)
-    local p= Player(LoadInteger(Hash, tid, 0))
-    if GetPlayerTechCountSimple(FourCC('R04O'), p) == 6 then
-        SetPlayerAbilityAvailableBJ(true, FourCC('A0AT'), p)
-    else
-        SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p)
-        SetPlayerAbilityAvailableBJ(true, FourCC('A0AT'), p)
-    end
-    FlushChildHashtable(Hash, tid)
-    DestroyTimer(t)
-    t=nil
-end
 function Trig_CorrupPlus_Actions()
     local t= CreateTimer()
     local tid= GetHandleId(t)
@@ -32955,8 +32911,16 @@ function Trig_CorrupPlus_Actions()
     ForGroupBJ(udg_LocalOtrad2, Trig_CorrupPlus_Func008A)
     GroupClear(udg_LocalOtrad2)
     
-    SaveInteger(Hash, tid, 0, GetPlayerId(p))
-    TimerStart(t, 60, false, CorriptionTimerPlus)
+	local p2 = p
+	TimerStart(t, 60, false, function()
+		if GetPlayerTechCountSimple(FourCC('R04O'), p2) == 6 then
+			SetPlayerAbilityAvailableBJ(true, FourCC('A0AT'), p2)
+		else
+			SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p2)
+			SetPlayerAbilityAvailableBJ(true, FourCC('A0AT'), p2)
+		end
+		DestroyTimer(t)
+	end)
     
     
     t=nil
@@ -32978,20 +32942,6 @@ function Trig_CorrupMinus_Func008A()
     SetUnitAbilityLevelSwapped(FourCC('A0AW'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetEnumUnit())))
     SetUnitAbilityLevelSwapped(FourCC('A0AV'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetEnumUnit())))
 end
-function CorriptionTimerMinus()
-    local t= GetExpiredTimer()
-    local tid= GetHandleId(t)
-    local p= Player(LoadInteger(Hash, tid, 0))
-    if GetPlayerTechCountSimple(FourCC('R04O'), p) == 1 then
-        SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p)
-    else
-        SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p)
-        SetPlayerAbilityAvailableBJ(true, FourCC('A0AT'), p)
-    end
-    FlushChildHashtable(Hash, tid)
-    DestroyTimer(t)
-    t=nil
-end
 function Trig_CorrupMinus_Actions()
     local t= CreateTimer()
     local tid= GetHandleId(t)
@@ -33004,8 +32954,16 @@ function Trig_CorrupMinus_Actions()
     GroupClear(udg_LocalOtrad2)
     
     
-    SaveInteger(Hash, tid, 0, GetPlayerId(p))
-    TimerStart(t, 60, false, CorriptionTimerMinus)
+	local p2 = p
+	TimerStart(t, 60, false, function()
+		if GetPlayerTechCountSimple(FourCC('R04O'), p2) == 1 then
+			SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p2)
+		else
+			SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p2)
+			SetPlayerAbilityAvailableBJ(true, FourCC('A0AT'), p2)
+		end
+		DestroyTimer(t)
+	end)
     
    
     
