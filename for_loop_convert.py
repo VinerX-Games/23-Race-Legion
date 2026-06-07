@@ -8,7 +8,7 @@ FOR_LOOP_START = re.compile(r'(\s*)(bj_forLoop[A-Z]Index)\s*=\s*(-?\d+)')
 
 
 def main():
-    with open(FILEPATH, 'r', encoding='utf-8-sig') as f:
+    with open(FILEPATH, 'r', encoding='utf-8') as f:
         content = f.read()
 
     lines = content.split('\n')
@@ -119,7 +119,7 @@ def main():
     
     print(f'Converted {count} bj_forLoop blocks')
 
-    with open(FILEPATH, 'w', encoding='utf-8-sig') as f:
+    with open(FILEPATH, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
 
 

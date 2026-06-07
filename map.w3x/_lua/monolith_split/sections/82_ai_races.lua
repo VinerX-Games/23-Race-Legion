@@ -1,4 +1,4 @@
-﻿-- Automatically split from 81_ai.lua: race definitions + join functions
+-- Automatically split from 81_ai.lua: race definitions + join functions
 -- Load order: after 81_ai.lua (engines must exist before races register)
 
 

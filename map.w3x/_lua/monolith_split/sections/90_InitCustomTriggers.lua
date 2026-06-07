@@ -1,4 +1,4 @@
-﻿function InitCustomTriggers()
+function InitCustomTriggers()
     InitTrig_sek5()
     InitTrig_RRR()
     --Function not found: call InitTrig_RemoveUnitTimed()

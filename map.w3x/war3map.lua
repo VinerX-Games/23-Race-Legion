@@ -8743,7 +8743,7 @@ end
 -- ***************************************************************************
 -- ***************************************************************************
 -- *  Map
---  Счетчик утечек
+--  ??????? ??????
 ---@return nothing
 function HandleCounter_Update()
 	local i = 0
@@ -8781,7 +8781,7 @@ end
 function InitTrig_HandleCounter()
 	TimerStart(CreateTimer(), 0, false, HandleCounter_Actions)
 end
---  Конец счетчика утечек
+--  ????? ???????? ??????
 ---@return nothing
 function ReturnFPS()
 	framehandlefps = BlzGetFrameByName("ResourceBarFrame", 0)
@@ -8791,8 +8791,8 @@ function ReturnFPS()
 end
 -- ***************************************************************************
 -- *  Replace
---  Штука собственного производства, для того чтобы "починить земену юнитов"
--- Без убийства
+--  ????? ???????????? ????????????, ??? ???? ????? "???????? ?????? ??????"
+-- ??? ????????
 ---@param whichUnit unit
 ---@param newUnitId integer
 ---@param unitStateMethod integer
@@ -8887,7 +8887,7 @@ function ReplaceUnit(whichUnit, newUnitId, unitStateMethod)
 	return bj_lastReplacedUnit
 	
 end
--- С убийством
+-- ? ?????????
 ---@param whichUnit unit
 ---@param newUnitId integer
 ---@param unitStateMethod integer
@@ -9082,7 +9082,7 @@ function addArmyExp(u, pi)
 	ArmyExp[gPi] = RMaxBJ(0, ArmyExp[gPi] - gReal * 0.9)
 	--  call BJDebugMsg( GetUnitName(u)+" "+R2S(ArmyExp[pi]))
 end
--- Устанавливает бонус за опыт
+-- ????????????? ????? ?? ????
 ---@param pi integer
 ---@return nothing
 function ArmyExpSetBonus(pi)
@@ -9092,7 +9092,7 @@ function ArmyExpSetBonus(pi)
 	SetUnitAbilityLevel(ArmyExpBonus[pi], FourCC('arb1'), IMinBJ(R2I((ArmyExp[pi] / 500) + 1), 11))
 	SetUnitAbilityLevel(ArmyExpBonus[pi], FourCC('arb0'), IMinBJ(R2I((ArmyExp[pi] / 500) + 1), 11))
 end
---  Добавляет столбец опыта
+--  ????????? ??????? ?????
 ---@return nothing
 function ExpandTableArmyExpr()
 	local i = 0
@@ -9101,7 +9101,7 @@ function ExpandTableArmyExpr()
 	
 	
 	ArmyPowerColumn[24] = MultiboardGetItem(Multiboard, 0, 3)
-	MultiboardSetItemValue(ArmyPowerColumn[24], "Опыт")
+	MultiboardSetItemValue(ArmyPowerColumn[24], "????")
 	MultiboardSetItemWidth(ArmyPowerColumn[24], 0.06)
 	MultiboardReleaseItem(ArmyPowerColumn[24])
 	
@@ -9149,9 +9149,9 @@ function UpdateGraf(pi)
 	local p = Player(pi)
 	local ownerIndex = EnsureMultiboardPlayerRow(pi)
 	local r = R2I(udg_UnitsCount[pi] / 25.00)
-	logistic[pi] = ((500 + 100 * (r - 1)) / 2 * r)	--  прогрессия
+	logistic[pi] = ((500 + 100 * (r - 1)) / 2 * r)	--  ??????????
 	
-	-- Общий модификатор расходов
+	-- ????? ??????????? ????????
 	if GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) >= 1 then
 		additional[pi] = disincome[pi] * (udg_MainPrice[pi] / (-100.0))
 	end
@@ -9163,7 +9163,7 @@ function UpdateGraf(pi)
 		balance[pi] = income[pi]
 	end
 	
-	--  Табличка
+	--  ????????
 	if ownerIndex == nil then
 		return
 	end
@@ -9219,18 +9219,18 @@ end
 ---@return nothing
 function AddCountDis(u, pi)
 	local i
-	-- Добавляет потребление с юнита    
+	-- ????????? ??????????? ? ?????    
 	
 	if u == nil then
 		return 
 	end
 	
-	--  Кейс здания или его симуляция
+	--  ???? ?????? ??? ??? ?????????
 	if (IsUnitType(u, UNIT_TYPE_STRUCTURE) or GetUnitAbilityLevel(u, FourCC('A1IJ')) > 0) then
 		if IsUnitInGroup(u, udg_BuildedSctructure[1]) then
 			income[pi] = income[pi] + I2R(GetUnitFoodMade(u))
 			
-			-- Различные дополнения 
+			-- ????????? ?????????? 
 			if GetUnitAbilityLevel(u, FourCC('A0AY')) >= 1 then
 				income[pi] = (income[pi] + (100.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0AY')))))
 			elseif GetUnitAbilityLevel(u, FourCC('A0SM')) >= 1 then
@@ -9252,9 +9252,9 @@ function AddCountDis(u, pi)
 			end
 		end
 		
-		--  Кейс юнита
+		--  ???? ?????
 	else
-		-- Это не оживление мертвых, не суммон
+		-- ??? ?? ????????? ???????, ?? ??????
 		if  not IsUnitType(u, UNIT_TYPE_SUMMONED) then
 			
 			udg_UnitsCount[pi] = udg_UnitsCount[pi] + 1
@@ -9263,19 +9263,19 @@ function AddCountDis(u, pi)
 			
 			if IsUnitType(u, UNIT_TYPE_HERO) then
 				disincome[pi] = (disincome[pi] + 100.00)
-				if GetUnitAbilityLevel(u, FourCC('A0XV')) ~= 0 then	--  Казначейская аблика
+				if GetUnitAbilityLevel(u, FourCC('A0XV')) ~= 0 then	--  ???????????? ??????
 					income[pi] = income[pi] + (100 + GetUnitAbilityLevel(u, FourCC('A0XV')) * 100)
 				end
 				
 			else
 				udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
 				disincome[pi] = (disincome[pi] + (udg_Price * Tax))
-				--  ---------------------------Особые условия-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-				--  ---------------------------Топливо гоблинов-----------------------------
+				--  ---------------------------?????? ???????-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+				--  ---------------------------??????? ????????-----------------------------
 				if GetUnitAbilityLevel(u, FourCC('A0A5')) ~= 0 then
 					disincome[pi] = disincome[pi] + ((udg_Price * Tax) * (1.60 - (0.10 * I2R(GetUnitAbilityLevel(u, FourCC('A0A5'))))))
 					
-					--  ---------------------------Поколения Силитидов-------------------------
+					--  ---------------------------????????? ?????????-------------------------
 				elseif GetUnitAbilityLevel(u, FourCC('A0VH')) == 1 then
 					disincome[pi] = disincome[pi] - (udg_Price * Tax / 2)
 				elseif GetUnitAbilityLevel(u, FourCC('A0VH')) == 2 then
@@ -9292,7 +9292,7 @@ function AddCountDis(u, pi)
 			end
 			
 			
-			-- Случай призывных у культа.
+			-- ?????? ????????? ? ??????.
 		elseif GetUnitAbilityLevel(u, FourCC('A1HL')) > 0 then
 			udg_UnitsCount[pi] = udg_UnitsCount[pi] + 1
 			udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
@@ -9312,21 +9312,21 @@ end
 ---@return nothing
 function DelCountDis(u, pi)
 	local i
-	-- Убирает потребление с юнита
+	-- ??????? ??????????? ? ?????
 	
 	if u == nil then
 		return 
 	end
 	
 	
-	-- юнит
-	-- Здание
+	-- ????
+	-- ??????
 	if (IsUnitType(u, UNIT_TYPE_STRUCTURE) or GetUnitAbilityLevel(u, FourCC('A1IJ')) > 0) then
 		
 		if IsUnitInGroup(u, udg_BuildedSctructure[1]) then
 			income[pi] = income[pi] - I2R(GetUnitFoodMade(u))
 			
-			-- Различные дополнения
+			-- ????????? ??????????
 			if GetUnitAbilityLevel(u, FourCC('A0AY')) >= 1 then
 				income[pi] = (income[pi] - (100.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0AY')))))
 			elseif GetUnitAbilityLevel(u, FourCC('A0SM')) >= 1 then
@@ -9352,35 +9352,35 @@ function DelCountDis(u, pi)
 			end
 		end
 		
-		-- Не здание
-		-- Это не оживление мертвых, не суммон
+		-- ?? ??????
+		-- ??? ?? ????????? ???????, ?? ??????
 	elseif  not IsUnitType(u, UNIT_TYPE_SUMMONED) then
 		udg_UnitsCount[pi] = udg_UnitsCount[pi] - 1
-		-- Гер
+		-- ???
 		if IsUnitType(u, UNIT_TYPE_HERO) then
 			disincome[pi] = (disincome[pi] - 100.00)
 			
 			
-			-- Различные дополнения
+			-- ????????? ??????????
 			if GetUnitAbilityLevel(u, FourCC('A0XV')) ~= 0 then
 				income[pi] = income[pi] - (100 + GetUnitAbilityLevel(u, FourCC('A0XV')) * 100)
 			end
 			
-			-- юнит
+			-- ????
 		else
 			
 			
-			--  call DisplayTextToPlayer(p,0,0,("Увидел смерть до юнита "+GetUnitName(u)))
+			--  call DisplayTextToPlayer(p,0,0,("?????? ?????? ?? ????? "+GetUnitName(u)))
 			udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
 			disincome[pi] = (disincome[pi] - (udg_Price * Tax))
 			
 			
-			-- Различные дополнения
-			--  ---------------------------Топливо гоблинов-----------------------------
+			-- ????????? ??????????
+			--  ---------------------------??????? ????????-----------------------------
 			if GetUnitAbilityLevel(u, FourCC('A0A5')) ~= 0 then
 				disincome[pi] = disincome[pi] - ((udg_Price * Tax) * (1.60 - (0.10 * I2R(GetUnitAbilityLevel(u, FourCC('A0A5'))))))
 				
-				--  ---------------------------Поколения Силитидов------------------------- ??
+				--  ---------------------------????????? ?????????------------------------- ??
 			elseif GetUnitAbilityLevel(u, FourCC('A0VH')) == 1 then
 				disincome[pi] = disincome[pi] + (udg_Price * Tax / 2)
 			elseif GetUnitAbilityLevel(u, FourCC('A0VH')) == 2 then
@@ -9398,7 +9398,7 @@ function DelCountDis(u, pi)
 		
 		
 		
-		-- Случай призывных у культа.
+		-- ?????? ????????? ? ??????.
 	elseif GetUnitAbilityLevel(u, FourCC('A1HL')) > 0 then
 		udg_UnitsCount[pi] = udg_UnitsCount[pi] - 1
 		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
@@ -9445,7 +9445,7 @@ function KillAll()
 	elseif IsUnitInGroup(u, udg_StolicaGroups) then
 		RemoveUnit(u)
 	else
-		-- Случай пилота танка
+		-- ?????? ?????? ?????
 		if id == FourCC('h0KS') then
 			UnitRemoveAbility(u, FourCC('A18O'))
 		end
@@ -9537,7 +9537,7 @@ function TimedUpdateCheck()
 		end
 		
 		if GetUnitAbilityLevel(u, FourCC('A0AY')) + GetUnitAbilityLevel(u, FourCC('A0B5')) >= levels * 2 then
-			-- Развитие
+			-- ????????
 			BlzUnitHideAbility(u, FourCC('A10G'), true)
 			BlzUnitDisableAbility(u, FourCC('A10G'), true, true)
 			
@@ -9743,7 +9743,7 @@ function UISetup()
 	BlzFrameSetPoint(BlzGetFrameByName("QuestDisplayBackdrop", 0), FRAMEPOINT_BOTTOM, BlzGetFrameByName("QuestBackdrop", 0), FRAMEPOINT_BOTTOM, 0., 0.017)
 	BlzFrameClearAllPoints(BlzGetFrameByName("QuestAcceptButton", 0))
 	BlzFrameSetPoint(BlzGetFrameByName("QuestAcceptButton", 0), FRAMEPOINT_TOPRIGHT, BlzGetFrameByName("QuestBackdrop", 0), FRAMEPOINT_TOPRIGHT, -0.016, -0.016)
-	BlzFrameSetText(BlzGetFrameByName("QuestAcceptButton", 0), "×")
+	BlzFrameSetText(BlzGetFrameByName("QuestAcceptButton", 0), "?")
 	BlzFrameSetSize(BlzGetFrameByName("QuestAcceptButton", 0), 0.03, 0.03)
 	
 	--  Add back ally resource icons
@@ -9785,8 +9785,8 @@ function Face2()
 	BlzFrameSetPoint(tooltip, FRAMEPOINT_BOTTOM, face, FRAMEPOINT_TOP, 0.0, -0.1)
 	BlzFrameSetSize(tooltip, 0.03, 0.03)
 	
-	BlzFrameSetText(tooltipBody, "Инком = Доходы-Расходы")
-	BlzFrameSetText(tooltipTitle, "Инком")
+	BlzFrameSetText(tooltipBody, "????? = ??????-???????")
+	BlzFrameSetText(tooltipTitle, "?????")
 	
 	BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 	
@@ -9833,7 +9833,7 @@ end
 -- *  CommonHash
 -- 
 -- 
--- // Для работа надо номер игрока, ид юнита
+-- // ??? ?????? ???? ????? ??????, ?? ?????
 -- function NumberAdd takes integer Playerid, integer Unitid returns nothing
 --     local integer Cunit = LoadInteger(CommonHash,Playerid, Unitid) + 1
 --     call SaveInteger(CommonHash,Playerid,Unitid,Cunit)
@@ -9892,16 +9892,16 @@ function CheckCity(p)
 	
 	
 	
-	-- Победа
+	-- ??????
 	if CityPlayerCount[winid] >= WinLimit then
 		
 		while true do
 			if i >= 23 then break end
 			if i ~= winid then
 				ClearPlayer(Player(i))
-				DisplayTextToPlayer(Player(i), 0, 0, "Вы проиграли, игрок " .. GetPlayerName(p) .. " - достиг " .. R2S(I2R(WinLimit) / I2R(CityCount)) .. "% кол-ва точек и победил")
+				DisplayTextToPlayer(Player(i), 0, 0, "?? ?????????, ????? " .. GetPlayerName(p) .. " - ?????? " .. R2S(I2R(WinLimit) / I2R(CityCount)) .. "% ???-?? ????? ? ???????")
 			else
-				DisplayTextToPlayer(Player(i), 0, 0, "Вы победили!")
+				DisplayTextToPlayer(Player(i), 0, 0, "?? ????????!")
 			end
 			
 			i = i + 1
@@ -9910,9 +9910,9 @@ function CheckCity(p)
 		while true do
 			if i >= 23 then break end
 			if i ~= winid then
-				DisplayTextToPlayer(Player(i), 0, 0, "Острожно, игрок " .. GetPlayerName(p) .. " - достиг " .. R2S(I2R(DangerLimit) / I2R(CityCount)) .. "% кол-ва точек (" .. I2S(DangerLimit) .. ")")
+				DisplayTextToPlayer(Player(i), 0, 0, "????????, ????? " .. GetPlayerName(p) .. " - ?????? " .. R2S(I2R(DangerLimit) / I2R(CityCount)) .. "% ???-?? ????? (" .. I2S(DangerLimit) .. ")")
 			else
-				DisplayTextToPlayer(Player(i), 0, 0, "Вы достигли " .. R2S(I2R(DangerLimit) / I2R(CityCount)) .. "%!")
+				DisplayTextToPlayer(Player(i), 0, 0, "?? ???????? " .. R2S(I2R(DangerLimit) / I2R(CityCount)) .. "%!")
 			end
 			
 			i = i + 1
@@ -10263,7 +10263,7 @@ function RandomAiPlace()
 		end
 		i = i + 1
 	end
-	--  Получил массив локаций б
+	--  ??????? ?????? ??????? ?
 	
 	i = GetRandomInt(0, c - 1)
 	udg_LocalPoint = b[i]
@@ -10281,7 +10281,7 @@ end
 -- *  TurnOffAi
 -- ***************************************************************************
 -- *  Globals And Start setttings
---  --------------    --------------   Фильтры старт --------------   --------------
+--  --------------    --------------   ??????? ????? --------------   --------------
 -- ***************************************************************************
 -- *  LibDifferentAiStuff
 -- ***************************************************************************
@@ -10289,8 +10289,8 @@ end
 -- ***************************************************************************
 -- *  ContinentalBoolexrs
 --  scope initContinentalBoolExprs begins
--- Подраздел континентов
---  кого надо выкинуть, если он на этом континенте
+-- ????????? ???????????
+--  ???? ???? ????????, ???? ?? ?? ???? ??????????
 ---@return boolean
 function InKalim()
 	return RectContainsUnit(gg_rct_Kalim, GetFilterUnit()) ~= true or RectContainsUnit(gg_rct_NordNotKalim, GetFilterUnit())
@@ -10319,7 +10319,7 @@ end
 function InPandaria()
 	return RectContainsUnit(gg_rct_Pandaria, GetFilterUnit()) ~= true
 end
---  Подземки
+--  ????????
 ---@return boolean
 function InAnkirag()
 	return RectContainsUnit(gg_rct_Ankirag, GetFilterUnit()) ~= true
@@ -10356,7 +10356,7 @@ end
 function InUndercity()
 	return RectContainsUnit(gg_rct_Undercity, GetFilterUnit()) ~= true
 end
---  Летающие города
+--  ???????? ??????
 ---@return boolean
 function InDalaran()
 	return RectContainsUnit(gg_rct_KillDalaran, GetFilterUnit()) ~= true
@@ -10376,7 +10376,7 @@ function SetContinetsBooleprs()
 	udg_B_InArgus = Condition(InArgus)
 	udg_B_InPandaria = Condition(InPandaria)
 	
-	--  Подземки
+	--  ????????
 	udg_B_Ankirag = Condition(InAnkirag)
 	udg_B_Azgel = Condition(InAzgel)
 	udg_B_BlackRock = Condition(InBlackRock)
@@ -10387,12 +10387,12 @@ function SetContinetsBooleprs()
 	udg_B_Maradon = Condition(InMaradon)
 	udg_B_Undercity = Condition(InUndercity)
 	
-	-- Летающие города
+	-- ???????? ??????
 	udg_B_Dalaran = Condition(InDalaran)
 	udg_B_Naxramas = Condition(InNaxramas)
 	
 end
---  Инициализирует все это дело
+--  ?????????????? ??? ??? ????
 ---@return nothing
 function initContinentalBoolExprs___Init()
 	SetContinetsBooleprs()
@@ -10751,7 +10751,7 @@ function ProcessContinentalStuff(x, y, g)
 	RemWaterPortals(g)
 	RemEmeraldPortals(g)
 end
---  НАГИ особое расположение
+--  ???? ?????? ????????????
 ---@param x real
 ---@param y real
 ---@param g group
@@ -10785,14 +10785,14 @@ function TryPortalMovement(u, l__gEnemyGroup, l__gX, l__gY, i)
 	
 	Counter = 0
 	EnemyCapital = nil
-	-- Еще осталось 1 попатка тепнуться
+	-- ??? ???????? 1 ??????? ?????????
 	if abilityLevel == 1 then
 		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnitP)
-		-- Порталы запрещены
+		-- ??????? ?????????
 	elseif abilityLevel >= 2 then
 		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnit)
 		UnitRemoveAbility(u, FourCC('A1GZ'))
-		-- Обычный поиск
+		-- ??????? ?????
 	else
 		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnitP)
 	end
@@ -10806,7 +10806,7 @@ function TryAttack()
 	local pi_attack = GetPlayerId(gPlayer)
 	gX = GetUnitX(gUnit)
 	gY = GetUnitY(gUnit)
-	--    ------------------- В атаку -------------------
+	--    ------------------- ? ????? -------------------
 	
 	if gAllyGroup == nil then
 		gAllyGroup = CreateGroup()
@@ -10816,13 +10816,13 @@ function TryAttack()
 	end
 	
 	CheckPlayer = gPlayer
-	-- // Дальнее исследование
+	-- // ??????? ????????????
 	if Random(1, 8) then
 		
-		-- Обработка портала и вообще выбор врагов
+		-- ????????? ??????? ? ?????? ????? ??????
 		TryPortalMovement(gUnit, gEnemyGroup, gX, gY, 0)
 		
-		-- /Континентальные штуки
+		-- /??????????????? ?????
 		local cRace = AiRaceOf(GetPlayerId(gPlayer))
 		if cRace ~= nil and cRace.continentalNaga then
 			ProcessContinentalStuffNaga(gX, gY, gEnemyGroup)
@@ -10832,7 +10832,7 @@ function TryAttack()
 		
 		
 		
-		--  Шанс напасать именно на столицу
+		--  ???? ???????? ?????? ?? ???????
 		if EnemyCapital ~= nil and Random(1, 2) then
 			gEnemy = EnemyCapital
 		else
@@ -10844,7 +10844,7 @@ function TryAttack()
 			end
 		end
 		
-		-- Враг не найден - запрашиваем тп!
+		-- ???? ?? ?????? - ??????????? ??!
 		if gEnemy == nil then
 			AiProbeLogLimited(pi_attack, "Log_TryAttack_RequestPortFast", 8, "[AIARMY] request-port pi=" .. tostring(pi_attack) .. " mode=fast seekerId=" .. tostring(GetUnitTypeId(gUnit)))
 			RequestPort(gUnit)
@@ -10853,7 +10853,7 @@ function TryAttack()
 			gX2 = GetUnitX(gEnemy)
 			gY2 = GetUnitY(gEnemy)
 			
-			--  Если это портал
+			--  ???? ??? ??????
 			if WaygateIsActive(gEnemy) == true then
 				
 				gDx = gX - gX2
@@ -10863,7 +10863,7 @@ function TryAttack()
 				local allyCount = CountUnitsInGroup(gAllyGroup)
 				
 				
-				-- В любом случае спелы проверки портала получат
+				-- ? ????? ?????? ????? ???????? ??????? ???????
 				
 				while true do
 					gUnit2 = FirstOfGroup(gAllyGroup)
@@ -10872,13 +10872,13 @@ function TryAttack()
 					GroupRemoveUnit(gAllyGroup, gUnit2)
 					gUnit2 = nil
 				end
-				-- До портала всего нечего
+				-- ?? ??????? ????? ??????
 				if gDx <= 2500 then
 					
 					IssueImmediateOrder(gEnemy, "web")
 					BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
 					
-					-- До портала идти еще
+					-- ?? ??????? ???? ???
 				else
 					local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
 					if allyCount == 0 then
@@ -10895,7 +10895,7 @@ function TryAttack()
 				
 				
 				
-				--  Основной случай
+				--  ???????? ??????
 			else
 				-- set CheckPlayer = gPlayer
 				GroupEnumUnitsInRange(gAllyGroup, gX, gY, 1500 * AiRadius / 5, B_LazyF)
@@ -10930,7 +10930,7 @@ function TryAttack()
 						gSubGroupCounter = 0
 					end
 					
-					--  Сломался с неуязом
+					--  ???????? ? ???????
 					if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
 						ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
 					end
@@ -10941,7 +10941,7 @@ function TryAttack()
 		end
 		
 		
-		-- // Ближайшее исследование, пытается перебрадть радиус пока не найдет хотя бы одного юнита
+		-- // ????????? ????????????, ???????? ?????????? ?????? ???? ?? ?????? ???? ?? ?????? ?????
 	else
 		
 		
@@ -10958,7 +10958,7 @@ function TryAttack()
 			
 			TryPortalMovement(gUnit, gEnemyGroup, gX, gY, i)
 			
-			-- /Континентальные штуки
+			-- /??????????????? ?????
 			local cRace = AiRaceOf(GetPlayerId(gPlayer))
 			if cRace ~= nil and cRace.continentalNaga then
 				ProcessContinentalStuffNaga(gX, gY, gEnemyGroup)
@@ -10967,7 +10967,7 @@ function TryAttack()
 			end
 			
 			
-			--  Шанс напасать именно на столицу
+			--  ???? ???????? ?????? ?? ???????
 			if EnemyCapital ~= nil and Random(1, 4) then
 				gEnemy = EnemyCapital
 			else
@@ -10979,13 +10979,13 @@ function TryAttack()
 				end
 			end
 			
-			-- Враг не найден - запрашиваем тп!
+			-- ???? ?? ?????? - ??????????? ??!
 			if gEnemy == nil then
 				if i == 100 then
 					AiProbeLogLimited(pi_attack, "Log_TryAttack_RequestPortWide", 8, "[AIARMY] request-port pi=" .. tostring(pi_attack) .. " mode=wide seekerId=" .. tostring(GetUnitTypeId(gUnit)))
 					RequestPort(gUnit)
 				end
-				-- Враг найден
+				-- ???? ??????
 			else
 				i = 15
 				gX2 = GetUnitX(gEnemy)
@@ -11000,7 +11000,7 @@ function TryAttack()
 					local allyCount = CountUnitsInGroup(gAllyGroup)
 					
 					
-					-- В любом случае спелы проверки портала получат
+					-- ? ????? ?????? ????? ???????? ??????? ???????
 					
 					while true do
 						gUnit2 = FirstOfGroup(gAllyGroup)
@@ -11009,14 +11009,14 @@ function TryAttack()
 						GroupRemoveUnit(gAllyGroup, gUnit2)
 						gUnit2 = nil
 					end
-					-- До портала всего ничего
+					-- ?? ??????? ????? ??????
 					if gDx <= 2500 then
 						AiProbeLogLimited(pi_attack, "Log_TryAttack_PortalNearby", 8, "[AIARMY] portal-near pi=" .. tostring(pi_attack) .. " targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount))
 						
 						IssueImmediateOrder(gEnemy, "web")
 						BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
 						
-					-- До портала идти еще
+					-- ?? ??????? ???? ???
 					else
 						if allyCount == 0 then
 							AiProbeLogLimited(pi_attack, "Log_TryAttack_NoPortalAlliesWide", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)))
@@ -11030,10 +11030,10 @@ function TryAttack()
 						
 					end
 					
-					-- Обычная цель
+					-- ??????? ????
 				else
 					
-					-- Отдаю приказ юниту и рядом стоящим
+					-- ????? ?????? ????? ? ????? ???????
 					
 					-- set CheckPlayer = gPlayer
 					GroupEnumUnitsInRange(gAllyGroup, gX, gY, 1500 * AiRadius / 5, B_LazyF)
@@ -11068,7 +11068,7 @@ function TryAttack()
 							gSubGroupCounter = 0
 						end
 						
-						--  Сломался с неуязом
+						--  ???????? ? ???????
 						if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
 							ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
 						end
@@ -11102,7 +11102,7 @@ function TryAttackN()
 	local y2
 	
 	
-	--  Шанс на дальнее исследование
+	--  ???? ?? ??????? ????????????
 	if Random(1, 10) then
 		gInt = 10
 	else
@@ -11112,19 +11112,19 @@ function TryAttackN()
 	
 	while true do
 		
-		-- call BJDebugMsg("Цикл атаки флота юнита: "+GetUnitName(ChosenUnit)+" Игрока:"+GetPlayerName(CheckPlayer))
-		-- Блок выбора врагов
+		-- call BJDebugMsg("???? ????? ????? ?????: "+GetUnitName(ChosenUnit)+" ??????:"+GetPlayerName(CheckPlayer))
+		-- ???? ?????? ??????
 		
 		Counter = 0
 		CheckPlayer = GetOwningPlayer(ChosenUnit)
 		GroupEnumUnitsInRange(gEnemyGroup, x, y, 5500.00 * (Pow(1.5, I2R(gInt))), udg_B_EnemyUnitN)
 		
-		-- call BJDebugMsg("Кол-во доступных врагов"+I2S(Counter))
-		-- Блок отдачи приказа
+		-- call BJDebugMsg("???-?? ????????? ??????"+I2S(Counter))
+		-- ???? ?????? ???????
 		u2 = BlzGroupUnitAt(gEnemyGroup, GetRandomInt(0, Counter - 1))
 		if u2 ~= nil then
 			
-			-- call BJDebugMsg("Выбранный Враг "+GetUnitName(u2))
+			-- call BJDebugMsg("????????? ???? "+GetUnitName(u2))
 			x2 = GetUnitX(u2)
 			y2 = GetUnitY(u2)
 			u2 = nil
@@ -11256,14 +11256,14 @@ function TryBuild()
 	gY = GetUnitY(gUnit)
 	
 	
-	-- call DisplayTimedTextFromPlayer( Player( 0x00 ), 0, 0, 4, "Вхожу в билд" )
+	-- call DisplayTimedTextFromPlayer( Player( 0x00 ), 0, 0, 4, "????? ? ????" )
 	
 	GroupAddUnit(udg_Ai_buildersT[gPi], gUnit)
 	GroupRemoveUnit(udg_Ai_builders[gPi], gUnit)
 	GroupRemoveUnit(udg_Ai_harvest[gPi], gUnit)
 	
 	
-	-- Если в воде для верфи - то строй верфь c высоким шансом)
+	-- ???? ? ???? ??? ????? - ?? ????? ????? c ??????? ??????)
 	if (AiData[gPi][StringHash("NumberPorts")] or 0) < 12 and ( not IsTerrainPathable(gX, gY, PATHING_TYPE_WALKABILITY) and RectContainsCoords(gg_rct_Outland, gX, gY) ~= true and RectContainsCoords(gg_rct_Azgel, gX, gY) ~= true) then
 		
 		
@@ -11290,12 +11290,12 @@ function TryBuild()
 		end
 		
 		
-		-- Идти к точке где много воды
+		-- ???? ? ????? ??? ????? ????
 	elseif AiRaceUsesWaterPoint(gPi) and GoToWaterPoint(gPi, gUnit, gX, gY) then
 		return 
 	end
 	
-	-- Шанс перейти на новую локу
+	-- ???? ??????? ?? ????? ????
 	if Random(1, 25) then
 		gX = gX + AiBuildingRadius * 7 * Cos(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
 		gY = gY + AiBuildingRadius * 7 * Sin(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
@@ -11304,7 +11304,7 @@ function TryBuild()
 	end
 	
 	
-	--  Определение точки постройки 
+	--  ??????????? ????? ????????? 
 	gX = gX + AiBuildingRadius * Cos(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
 	gY = gY + AiBuildingRadius * Sin(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
 	
@@ -11336,7 +11336,7 @@ end
 function aiCapitalEnterAct()
 	GroupAddUnit(AiCapitalBuildigs[gPi], GetEnumUnit())
 end
---  Добавляет все здания рядом в группу
+--  ????????? ??? ?????? ????? ? ??????
 ---@param u unit
 ---@return nothing
 function aiCapitalEnter(u)
@@ -11375,7 +11375,7 @@ function WakeGreenUp()
 end
 ---@return nothing
 function SleepGreen()
-	-- call BJDebugMsg("Паузит")
+	-- call BJDebugMsg("??????")
 	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, greencreature)
 	ForGroup(gGroup, SleepGreenEach)
 	GroupClear(gGroup)
@@ -11390,7 +11390,7 @@ function checkGreenArea()
 		
 		
 		if u ~= nil and GetUnitAbilityLevel(u, FourCC('A1LR')) == 0 then
-			-- call BJDebugMsg("обнаружило"+GetUnitName(u))
+			-- call BJDebugMsg("??????????"+GetUnitName(u))
 			u = nil
 			
 			WakeGreenUp()
@@ -11404,7 +11404,7 @@ function checkGreenArea()
 		
 	end
 	GroupClear(gGroup)
-	-- call BJDebugMsg("Дошло норм")
+	-- call BJDebugMsg("????? ????")
 	SleepGreen()
 	u = nil
 end
@@ -12707,7 +12707,7 @@ end
 -- ===========================================================================
 --  Trigger: sek5
 -- 
---  Тут стоят ограничения 
+--  ??? ????? ??????????? 
 -- ===========================================================================
 ---@return nothing
 function Trig_sek5_Func001A()
@@ -12715,209 +12715,209 @@ function Trig_sek5_Func001A()
 	local pe = GetEnumPlayer()
 	
 	local i = 0
-	-- Герои Специализации
-	SetPlayerTechMaxAllowed(pe, FourCC('n026'), i)	-- кровавый палач
-	SetPlayerTechMaxAllowed(pe, FourCC('H0H8'), i)	-- паладин лечение альянс
-	SetPlayerTechMaxAllowed(pe, FourCC('H0H9'), i)	-- паладин защита альянс
-	SetPlayerTechMaxAllowed(pe, FourCC('H0H7'), i)	-- паладин воздаяние альнс
+	-- ????? ?????????????
+	SetPlayerTechMaxAllowed(pe, FourCC('n026'), i)	-- ???????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0H8'), i)	-- ??????? ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0H9'), i)	-- ??????? ?????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0H7'), i)	-- ??????? ????????? ?????
 	
-	-- Герои
+	-- ?????
 	
-	SetPlayerTechMaxAllowed(pe, FourCC('o03Q'), i)	-- Огрон Огры
-	SetPlayerTechMaxAllowed(pe, FourCC('o03V'), i)	-- Грон Красный Огры
-	SetPlayerTechMaxAllowed(pe, FourCC('o03T'), i)	-- Грон Чёрный Огры
-	SetPlayerTechMaxAllowed(pe, FourCC('o03S'), i)	-- Огрон Красный Огры
-	SetPlayerTechMaxAllowed(pe, FourCC('o03R'), i)	-- Огрно Синий Огры
-	SetPlayerTechMaxAllowed(pe, FourCC('o03T'), i)	-- Грон Чёрный Огры
-	SetPlayerTechMaxAllowed(pe, FourCC('o03U'), i)	-- Грон Белый
+	SetPlayerTechMaxAllowed(pe, FourCC('o03Q'), i)	-- ????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('o03V'), i)	-- ???? ??????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('o03T'), i)	-- ???? ?????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('o03S'), i)	-- ????? ??????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('o03R'), i)	-- ????? ????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('o03T'), i)	-- ???? ?????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('o03U'), i)	-- ???? ?????
 	
 	i = 1
 	
-	SetPlayerTechMaxAllowed(pe, FourCC('E029'), i)	-- Нептулон
-	SetPlayerTechMaxAllowed(pe, FourCC('U02X'), i)	-- Ордин Хладомор 2 КП
-	SetPlayerTechMaxAllowed(pe, FourCC('H048'), i)	-- Воевода бандиты
-	SetPlayerTechMaxAllowed(pe, FourCC('N072'), i)	-- Дантур
-	SetPlayerTechMaxAllowed(pe, FourCC('N06P'), i)	-- Ман-Шуру
-	SetPlayerTechMaxAllowed(pe, FourCC('U02W'), i)	-- Нер-зул
-	SetPlayerTechMaxAllowed(pe, FourCC('O05U'), i)	-- Громмаш
-	SetPlayerTechMaxAllowed(pe, FourCC('U02U'), i)	-- Гул-Дан
-	SetPlayerTechMaxAllowed(pe, FourCC('O04K'), i)	-- Дзюмбей Ледяные Тролли
-	SetPlayerTechMaxAllowed(pe, FourCC('O04H'), i)	-- Тодзара Ледяные Тролли
-	SetPlayerTechMaxAllowed(pe, FourCC('O04G'), i)	-- Зул'Кис Ледяные Тролли
-	SetPlayerTechMaxAllowed(pe, FourCC('O04I'), i)	-- Мезал-кри Ледяные Тролли
-	SetPlayerTechMaxAllowed(pe, FourCC('H0JU'), i)	-- Йорн Искупитель Наги
-	SetPlayerTechMaxAllowed(pe, FourCC('N054'), i)	-- МрглМргл Наги Сломан
-	SetPlayerTechMaxAllowed(pe, FourCC('H0JV'), i)	-- Охотница Наги
-	SetPlayerTechMaxAllowed(pe, FourCC('H03S'), i)	-- Боевой Пасерь Бандиты
-	SetPlayerTechMaxAllowed(pe, FourCC('H028'), i)	-- Бриджит Аббендис
-	SetPlayerTechMaxAllowed(pe, FourCC('H03H'), i)	-- Паладин Аллого Ордена
-	SetPlayerTechMaxAllowed(pe, FourCC('H018'), i)	-- Сайдан Датрохан
-	SetPlayerTechMaxAllowed(pe, FourCC('H05K'), i)	-- Дреней Паладин
-	SetPlayerTechMaxAllowed(pe, FourCC('H04S'), i)	-- Верховный Маг даларан
-	SetPlayerTechMaxAllowed(pe, FourCC('H053'), i)	-- Хранитель даларан
-	SetPlayerTechMaxAllowed(pe, FourCC('H04W'), i)	-- Огненный мастер даларан
-	SetPlayerTechMaxAllowed(pe, FourCC('H052'), i)	-- Глава Кирин-Тора даларан
-	SetPlayerTechMaxAllowed(pe, FourCC('H04X'), i)	-- Мастер Тайной магии даларан
-	SetPlayerTechMaxAllowed(pe, FourCC('H05M'), i)	-- Пророк Сломленных
-	SetPlayerTechMaxAllowed(pe, FourCC('H06B'), i)	-- Капитан Ордена
-	SetPlayerTechMaxAllowed(pe, FourCC('H05L'), i)	-- Капитан Гвардии
-	SetPlayerTechMaxAllowed(pe, FourCC('H054'), i)	-- Медив
-	SetPlayerTechMaxAllowed(pe, FourCC('H03J'), i)	-- Глава Алого Ордена
-	SetPlayerTechMaxAllowed(pe, FourCC('H06C'), i)	-- Епископ Ордена
-	SetPlayerTechMaxAllowed(pe, FourCC('H01K'), i)	-- Адмирал
-	SetPlayerTechMaxAllowed(pe, FourCC('H01N'), i)	-- Верхованая Жрица Морей
-	SetPlayerTechMaxAllowed(pe, FourCC('H01J'), i)	-- Даэлин Праудмур
-	SetPlayerTechMaxAllowed(pe, FourCC('H01M'), i)	-- Джайга Праудмур
-	SetPlayerTechMaxAllowed(pe, FourCC('H01L'), i)	-- Капитан
-	SetPlayerTechMaxAllowed(pe, FourCC('O011'), i)	-- Верховный Жрец бездны
-	SetPlayerTechMaxAllowed(pe, FourCC('N010'), i)	-- Военачальник Культа Сумеречный Молот
-	SetPlayerTechMaxAllowed(pe, FourCC('N00Z'), i)	-- Тёмный волшебник
-	SetPlayerTechMaxAllowed(pe, FourCC('U007'), i)	-- Чо-Гал
-	SetPlayerTechMaxAllowed(pe, FourCC('H0C4'), i)	-- Король Имирон Врайкулы
-	SetPlayerTechMaxAllowed(pe, FourCC('H0C7'), i)	-- Верховный жрец Врайкулы
-	SetPlayerTechMaxAllowed(pe, FourCC('H0C5'), i)	-- Берсерк Врайкулы
-	SetPlayerTechMaxAllowed(pe, FourCC('H0C6'), i)	-- Тан Врайкулы
-	SetPlayerTechMaxAllowed(pe, FourCC('U00O'), i)	-- Рыцарь Смерти
-	SetPlayerTechMaxAllowed(pe, FourCC('U015'), i)	-- Верховынй Лич
-	SetPlayerTechMaxAllowed(pe, FourCC('U01W'), i)	-- Высший Страж
-	SetPlayerTechMaxAllowed(pe, FourCC('U01V'), i)	-- Паучий Лорд
-	SetPlayerTechMaxAllowed(pe, FourCC('U01U'), i)	-- Пророк
-	SetPlayerTechMaxAllowed(pe, FourCC('U00V'), i)	-- Владыка Склепа
-	SetPlayerTechMaxAllowed(pe, FourCC('U00U'), i)	-- Некромант
-	SetPlayerTechMaxAllowed(pe, FourCC('U014'), i)	-- Король-Лич Нежить
-	SetPlayerTechMaxAllowed(pe, FourCC('E01W'), i)	-- Охотник на демонов Илладирии
-	SetPlayerTechMaxAllowed(pe, FourCC('E01F'), i)	-- Авнель
-	SetPlayerTechMaxAllowed(pe, FourCC('E01D'), i)	-- Калеастра
-	SetPlayerTechMaxAllowed(pe, FourCC('E01E'), i)	-- Квенель
-	SetPlayerTechMaxAllowed(pe, FourCC('E01C'), i)	-- Талистра
-	SetPlayerTechMaxAllowed(pe, FourCC('E025'), i)	-- Охотник Истребление Иллидарии
-	SetPlayerTechMaxAllowed(pe, FourCC('E024'), i)	-- Охотник Месть Иллидарии
-	SetPlayerTechMaxAllowed(pe, FourCC('E026'), i)	-- Иллидан
-	SetPlayerTechMaxAllowed(pe, FourCC('N02F'), i)	-- Повелитель Ужаса
-	SetPlayerTechMaxAllowed(pe, FourCC('N02H'), i)	-- Казак
-	SetPlayerTechMaxAllowed(pe, FourCC('N02G'), i)	-- Архимонд
-	SetPlayerTechMaxAllowed(pe, FourCC('N02B'), i)	-- Кил'джеден
-	SetPlayerTechMaxAllowed(pe, FourCC('N02A'), i)	-- Чернокнижник
-	SetPlayerTechMaxAllowed(pe, FourCC('U027'), i)	-- Аватара Саргераса
-	SetPlayerTechMaxAllowed(pe, FourCC('U028'), i)	-- Джизильда
-	SetPlayerTechMaxAllowed(pe, FourCC('N046'), i)	-- Алекстараза
-	SetPlayerTechMaxAllowed(pe, FourCC('N047'), i)	-- Изера
-	SetPlayerTechMaxAllowed(pe, FourCC('N045'), i)	-- Малигос
-	SetPlayerTechMaxAllowed(pe, FourCC('N040'), i)	-- Ноздорму
-	SetPlayerTechMaxAllowed(pe, FourCC('H0EZ'), i)	-- Кристальный владыка
-	SetPlayerTechMaxAllowed(pe, FourCC('H0F0'), i)	-- Мастер Ветра
-	SetPlayerTechMaxAllowed(pe, FourCC('N037'), i)	-- Повелитель огня
-	SetPlayerTechMaxAllowed(pe, FourCC('H0HP'), i)	-- Эдвин ван Клиф
-	SetPlayerTechMaxAllowed(pe, FourCC('H0HQ'), i)	-- Гелбин Меггакрут
-	SetPlayerTechMaxAllowed(pe, FourCC('U02H'), i)	-- Верховный Душегуб Безликие
-	SetPlayerTechMaxAllowed(pe, FourCC('U02G'), i)	-- Генерал К'Траксис
-	SetPlayerTechMaxAllowed(pe, FourCC('U02I'), i)	-- Маг Запредельной Тьмы
-	SetPlayerTechMaxAllowed(pe, FourCC('H0HL'), i)	-- Казначей Стромград
-	SetPlayerTechMaxAllowed(pe, FourCC('H0HB'), i)	-- Генерал Стромград
-	SetPlayerTechMaxAllowed(pe, FourCC('H0HA'), i)	-- Верховный маг Стромград
-	SetPlayerTechMaxAllowed(pe, FourCC('H0L4'), i)	-- Данат Троллебой Стромград
-	SetPlayerTechMaxAllowed(pe, FourCC('U035'), i)	-- Ануб'Рекан
-	SetPlayerTechMaxAllowed(pe, FourCC('U030'), i)	-- Ануб'Арак
-	SetPlayerTechMaxAllowed(pe, FourCC('U02F'), i)	-- Верховный генерал Безликие
-	SetPlayerTechMaxAllowed(pe, FourCC('NE02'), i)	-- Дочь Лесов НЭ
-	SetPlayerTechMaxAllowed(pe, FourCC('E02Q'), i)	-- Дух Леса
-	SetPlayerTechMaxAllowed(pe, FourCC('E02R'), i)	-- Егерь диколесья
-	SetPlayerTechMaxAllowed(pe, FourCC('E02S'), i)	-- Лесной Смотритель Энты
-	SetPlayerTechMaxAllowed(pe, FourCC('PA37'), i)	-- Мастер Железной Лапы ПА
-	SetPlayerTechMaxAllowed(pe, FourCC('PA38'), i)	-- Высший Монах ПА
-	SetPlayerTechMaxAllowed(pe, FourCC('PA36'), i)	-- Лидер Шадо-Пан
-	SetPlayerTechMaxAllowed(pe, FourCC('PA40'), i)	-- Танцующий с Ветром ПА
-	SetPlayerTechMaxAllowed(pe, FourCC('E02R'), i)	-- Егерь Диколесья
-	SetPlayerTechMaxAllowed(pe, FourCC('E011'), i)	-- Лунная Охотница
-	SetPlayerTechMaxAllowed(pe, FourCC('E02Q'), i)	-- Дух Леса
-	SetPlayerTechMaxAllowed(pe, FourCC('N073'), i)	-- Мастер Клинка Орда скверны
-	SetPlayerTechMaxAllowed(pe, FourCC('E02S'), i)	-- Лесной Смотритель Энты
-	SetPlayerTechMaxAllowed(pe, FourCC('W2Og'), i)	-- Вождь Орды
-	SetPlayerTechMaxAllowed(pe, FourCC('W202'), i)	-- Предводитель Троллей
-	SetPlayerTechMaxAllowed(pe, FourCC('W201'), i)	-- Сумеречный Маг
-	SetPlayerTechMaxAllowed(pe, FourCC('N05J'), i)	-- Военачальник Огров
-	SetPlayerTechMaxAllowed(pe, FourCC('N05K'), i)	-- Вождь Огров
-	SetPlayerTechMaxAllowed(pe, FourCC('N05L'), i)	-- Знахарь Огров
+	SetPlayerTechMaxAllowed(pe, FourCC('E029'), i)	-- ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U02X'), i)	-- ????? ???????? 2 ??
+	SetPlayerTechMaxAllowed(pe, FourCC('H048'), i)	-- ??????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('N072'), i)	-- ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('N06P'), i)	-- ???-????
+	SetPlayerTechMaxAllowed(pe, FourCC('U02W'), i)	-- ???-???
+	SetPlayerTechMaxAllowed(pe, FourCC('O05U'), i)	-- ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('U02U'), i)	-- ???-???
+	SetPlayerTechMaxAllowed(pe, FourCC('O04K'), i)	-- ??????? ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('O04H'), i)	-- ??????? ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('O04G'), i)	-- ???'??? ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('O04I'), i)	-- ?????-??? ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0JU'), i)	-- ???? ?????????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('N054'), i)	-- ???????? ???? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0JV'), i)	-- ???????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('H03S'), i)	-- ?????? ?????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H028'), i)	-- ??????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H03H'), i)	-- ??????? ?????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H018'), i)	-- ?????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H05K'), i)	-- ?????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H04S'), i)	-- ????????? ??? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H053'), i)	-- ????????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H04W'), i)	-- ???????? ?????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H052'), i)	-- ????? ?????-???? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H04X'), i)	-- ?????? ?????? ????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H05M'), i)	-- ?????? ??????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H06B'), i)	-- ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H05L'), i)	-- ??????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H054'), i)	-- ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('H03J'), i)	-- ????? ????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H06C'), i)	-- ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H01K'), i)	-- ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H01N'), i)	-- ?????????? ????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('H01J'), i)	-- ?????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H01M'), i)	-- ?????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H01L'), i)	-- ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('O011'), i)	-- ????????? ???? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('N010'), i)	-- ???????????? ?????? ?????????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('N00Z'), i)	-- ?????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U007'), i)	-- ??-???
+	SetPlayerTechMaxAllowed(pe, FourCC('H0C4'), i)	-- ?????? ?????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0C7'), i)	-- ????????? ???? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0C5'), i)	-- ??????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0C6'), i)	-- ??? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U00O'), i)	-- ?????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('U015'), i)	-- ????????? ???
+	SetPlayerTechMaxAllowed(pe, FourCC('U01W'), i)	-- ?????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('U01V'), i)	-- ?????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('U01U'), i)	-- ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('U00V'), i)	-- ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('U00U'), i)	-- ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U014'), i)	-- ??????-??? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('E01W'), i)	-- ??????? ?? ??????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E01F'), i)	-- ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('E01D'), i)	-- ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E01E'), i)	-- ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('E01C'), i)	-- ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E025'), i)	-- ??????? ??????????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E024'), i)	-- ??????? ????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E026'), i)	-- ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('N02F'), i)	-- ?????????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('N02H'), i)	-- ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('N02G'), i)	-- ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('N02B'), i)	-- ???'??????
+	SetPlayerTechMaxAllowed(pe, FourCC('N02A'), i)	-- ????????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U027'), i)	-- ??????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U028'), i)	-- ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('N046'), i)	-- ???????????
+	SetPlayerTechMaxAllowed(pe, FourCC('N047'), i)	-- ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('N045'), i)	-- ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('N040'), i)	-- ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0EZ'), i)	-- ??????????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0F0'), i)	-- ?????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('N037'), i)	-- ?????????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0HP'), i)	-- ????? ??? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0HQ'), i)	-- ?????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U02H'), i)	-- ????????? ??????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U02G'), i)	-- ??????? ?'???????
+	SetPlayerTechMaxAllowed(pe, FourCC('U02I'), i)	-- ??? ???????????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0HL'), i)	-- ???????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0HB'), i)	-- ??????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0HA'), i)	-- ????????? ??? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0L4'), i)	-- ????? ????????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U035'), i)	-- ????'?????
+	SetPlayerTechMaxAllowed(pe, FourCC('U030'), i)	-- ????'????
+	SetPlayerTechMaxAllowed(pe, FourCC('U02F'), i)	-- ????????? ??????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('NE02'), i)	-- ???? ????? ??
+	SetPlayerTechMaxAllowed(pe, FourCC('E02Q'), i)	-- ??? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('E02R'), i)	-- ????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E02S'), i)	-- ?????? ?????????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('PA37'), i)	-- ?????? ???????? ???? ??
+	SetPlayerTechMaxAllowed(pe, FourCC('PA38'), i)	-- ?????? ????? ??
+	SetPlayerTechMaxAllowed(pe, FourCC('PA36'), i)	-- ????? ????-???
+	SetPlayerTechMaxAllowed(pe, FourCC('PA40'), i)	-- ????????? ? ?????? ??
+	SetPlayerTechMaxAllowed(pe, FourCC('E02R'), i)	-- ????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E011'), i)	-- ?????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E02Q'), i)	-- ??? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('N073'), i)	-- ?????? ?????? ???? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('E02S'), i)	-- ?????? ?????????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('W2Og'), i)	-- ????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('W202'), i)	-- ???????????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('W201'), i)	-- ?????????? ???
+	SetPlayerTechMaxAllowed(pe, FourCC('N05J'), i)	-- ???????????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('N05K'), i)	-- ????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('N05L'), i)	-- ??????? ?????
 	
-	-- Юниты
-	SetPlayerTechMaxAllowed(pe, FourCC('W200'), i)	-- Батрак орда второй войны
-	SetPlayerTechMaxAllowed(pe, FourCC('CD01'), i)	-- Ожившая субстанция
-	SetPlayerTechMaxAllowed(pe, FourCC('CD02'), i)	-- Послушник КП
-	SetPlayerTechMaxAllowed(pe, FourCC('CD03'), i)	-- Некромант КП
+	-- ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('W200'), i)	-- ?????? ???? ?????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('CD01'), i)	-- ??????? ??????????
+	SetPlayerTechMaxAllowed(pe, FourCC('CD02'), i)	-- ????????? ??
+	SetPlayerTechMaxAllowed(pe, FourCC('CD03'), i)	-- ????????? ??
 	
 	i = 0
 	
-	SetPlayerTechMaxAllowed(pe, FourCC('cD34'), i)	-- Скелет воин 2 КП
-	SetPlayerTechMaxAllowed(pe, FourCC('cD35'), i)	-- Скелет воин 3 КП
-	SetPlayerTechMaxAllowed(pe, FourCC('n02D'), i)	-- Кровавое отродье Демоны
-	SetPlayerTechMaxAllowed(pe, FourCC('n02E'), i)	-- Кровопускатель
+	SetPlayerTechMaxAllowed(pe, FourCC('cD34'), i)	-- ?????? ???? 2 ??
+	SetPlayerTechMaxAllowed(pe, FourCC('cD35'), i)	-- ?????? ???? 3 ??
+	SetPlayerTechMaxAllowed(pe, FourCC('n02D'), i)	-- ???????? ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('n02E'), i)	-- ??????????????
 	
-	-- фермы 
+	-- ????? 
 	i = 5
 	
-	SetPlayerTechMaxAllowed(pe, FourCC('cD12'), i)	-- Распылитель чумы
-	SetPlayerTechMaxAllowed(pe, FourCC('h0OE'), i)	-- Нефть платформа
-	SetPlayerTechMaxAllowed(pe, FourCC('w219'), i)	-- Нефтянная платтформа ор 2
+	SetPlayerTechMaxAllowed(pe, FourCC('cD12'), i)	-- ??????????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0OE'), i)	-- ????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('w219'), i)	-- ????????? ?????????? ?? 2
 	
 	i = 10
 	
-	SetPlayerTechMaxAllowed(pe, FourCC('h0DT'), i)	-- Генератор Скверны
+	SetPlayerTechMaxAllowed(pe, FourCC('h0DT'), i)	-- ????????? ???????
 	
 	i = 15
 	
-	SetPlayerTechMaxAllowed(pe, FourCC('h0H2'), i)	-- Ферма стромград
-	SetPlayerTechMaxAllowed(pe, FourCC('hhou'), i)	-- Ферма люди
-	SetPlayerTechMaxAllowed(pe, FourCC('nnfm'), i)	-- кораловый миф
-	SetPlayerTechMaxAllowed(pe, FourCC('w20y'), i)	-- свиноферма
-	SetPlayerTechMaxAllowed(pe, FourCC('h0N2'), i)	-- жилище тролли джунглей
-	SetPlayerTechMaxAllowed(pe, FourCC('o04C'), i)	-- берлога ледяные тролли
-	SetPlayerTechMaxAllowed(pe, FourCC('h05Y'), i)	-- ферма алый орден
-	SetPlayerTechMaxAllowed(pe, FourCC('h05C'), i)	-- лазарет дренеи
-	SetPlayerTechMaxAllowed(pe, FourCC('h024'), i)	-- ферма кул тирас
-	SetPlayerTechMaxAllowed(pe, FourCC('h0IM'), i)	-- ферма воргены
-	SetPlayerTechMaxAllowed(pe, FourCC('h031'), i)	-- кондексатор маны даларан
-	SetPlayerTechMaxAllowed(pe, FourCC('h04M'), i)	-- сторожка
-	SetPlayerTechMaxAllowed(pe, FourCC('h00A'), i)	-- избушка бандиты
-	SetPlayerTechMaxAllowed(pe, FourCC('h0FL'), i)	-- энергобашня гномы
-	SetPlayerTechMaxAllowed(pe, FourCC('h0NW'), i)	-- рыбацкая лодка кул тирас
-	SetPlayerTechMaxAllowed(pe, FourCC('o003'), i)	-- обелиск
-	SetPlayerTechMaxAllowed(pe, FourCC('o00T'), i)	-- землянка сумеречный молот
-	SetPlayerTechMaxAllowed(pe, FourCC('emow'), i)	-- колодец воспоминаний
-	SetPlayerTechMaxAllowed(pe, FourCC('h0BT'), i)	-- дом врайкулы
-	SetPlayerTechMaxAllowed(pe, FourCC('u00H'), i)	-- зиккураты нежить
-	SetPlayerTechMaxAllowed(pe, FourCC('e00N'), i)	-- лунный колодец энты
-	SetPlayerTechMaxAllowed(pe, FourCC('e02E'), i)	-- колодец воспоминаний
-	SetPlayerTechMaxAllowed(pe, FourCC('h0CE'), i)	-- кристалы маны ночнорожденные
-	SetPlayerTechMaxAllowed(pe, FourCC('h0DS'), i)	-- накопитель скверны
-	SetPlayerTechMaxAllowed(pe, FourCC('h0MV'), i)	-- лачуга лесные
-	SetPlayerTechMaxAllowed(pe, FourCC('h0EC'), i)	-- накопитель энергии иллидарии
-	SetPlayerTechMaxAllowed(pe, FourCC('h0EX'), i)	-- стихийный кристалл
-	SetPlayerTechMaxAllowed(pe, FourCC('h0F9'), i)	-- гнездо драконов
-	SetPlayerTechMaxAllowed(pe, FourCC('otrb'), i)	-- землянка
-	SetPlayerTechMaxAllowed(pe, FourCC('u02E'), i)	-- малое порождение безликие
-	SetPlayerTechMaxAllowed(pe, FourCC('h0JD'), i)	-- дом броженных отрекшиеся
-	SetPlayerTechMaxAllowed(pe, FourCC('o036'), i)	-- свиноферма
-	SetPlayerTechMaxAllowed(pe, FourCC('o060'), i)	-- свиноферма орда скверны
-	SetPlayerTechMaxAllowed(pe, FourCC('h0NZ'), i)	-- рыбацкий дом пандарены
+	SetPlayerTechMaxAllowed(pe, FourCC('h0H2'), i)	-- ????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('hhou'), i)	-- ????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('nnfm'), i)	-- ????????? ???
+	SetPlayerTechMaxAllowed(pe, FourCC('w20y'), i)	-- ??????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0N2'), i)	-- ?????? ?????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('o04C'), i)	-- ??????? ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('h05Y'), i)	-- ????? ???? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('h05C'), i)	-- ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('h024'), i)	-- ????? ??? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0IM'), i)	-- ????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('h031'), i)	-- ??????????? ???? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('h04M'), i)	-- ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h00A'), i)	-- ??????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0FL'), i)	-- ??????????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0NW'), i)	-- ???????? ????? ??? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('o003'), i)	-- ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('o00T'), i)	-- ???????? ?????????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('emow'), i)	-- ??????? ????????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0BT'), i)	-- ??? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('u00H'), i)	-- ????????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('e00N'), i)	-- ?????? ??????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('e02E'), i)	-- ??????? ????????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0CE'), i)	-- ???????? ???? ??????????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0DS'), i)	-- ?????????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0MV'), i)	-- ?????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0EC'), i)	-- ?????????? ??????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0EX'), i)	-- ????????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0F9'), i)	-- ?????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('otrb'), i)	-- ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('u02E'), i)	-- ????? ?????????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0JD'), i)	-- ??? ????????? ??????????
+	SetPlayerTechMaxAllowed(pe, FourCC('o036'), i)	-- ??????????
+	SetPlayerTechMaxAllowed(pe, FourCC('o060'), i)	-- ?????????? ???? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0NZ'), i)	-- ???????? ??? ?????????
 	
 	i = 20
 	
-	SetPlayerTechMaxAllowed(pe, FourCC('h077'), i)	-- банк гоблины
-	SetPlayerTechMaxAllowed(pe, FourCC('u019'), i)	-- кокон нерубы
+	SetPlayerTechMaxAllowed(pe, FourCC('h077'), i)	-- ???? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('u019'), i)	-- ????? ??????
 	
 	i = 25
-	SetPlayerTechMaxAllowed(pe, FourCC('h0NZ'), i)	-- сторожевая башня кул тирас
+	SetPlayerTechMaxAllowed(pe, FourCC('h0NZ'), i)	-- ?????????? ????? ??? ?????
 	
 	i = 30
-	SetPlayerTechMaxAllowed(pe, FourCC('e01J'), i)	-- кокон силитиды
+	SetPlayerTechMaxAllowed(pe, FourCC('e01J'), i)	-- ????? ????????
 	
 	i = 100
-	SetPlayerTechMaxAllowed(pe, FourCC('pa26'), i)	-- ферма пандаренов
+	SetPlayerTechMaxAllowed(pe, FourCC('pa26'), i)	-- ????? ??????????
 	
-	-- Спелы
-	SetPlayerAbilityAvailable(pe, FourCC('w290'), false)	-- Прочная чешуя орда 2 войны
-	SetPlayerAbilityAvailable(pe, FourCC('w289'), false)	-- Огненный столб орда 2 войны
-	SetPlayerAbilityAvailable(pe, FourCC('w288'), false)	-- Пламенное дыхаение орда 2 войны
+	-- ?????
+	SetPlayerAbilityAvailable(pe, FourCC('w290'), false)	-- ??????? ????? ???? 2 ?????
+	SetPlayerAbilityAvailable(pe, FourCC('w289'), false)	-- ???????? ????? ???? 2 ?????
+	SetPlayerAbilityAvailable(pe, FourCC('w288'), false)	-- ????????? ???????? ???? 2 ?????
 	
 	pe = nil
 	
@@ -12946,14 +12946,14 @@ end
 function Trig_RRR_Func001A()
 	
 	local l = PolarProjectionBJ(GetUnitLoc(GetEnumUnit()), (7.00 + (4.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2)))), (GetUnitFacing(GetEnumUnit()) + 180.00))
-	--  Эта переменная отвечает за скорость отлёта 7+ 3 каждый лвл
+	--  ??? ?????????? ???????? ?? ???????? ?????? 7+ 3 ?????? ???
 	
-	--  Это действие по которому юниты двигаються по переменной
+	--  ??? ???????? ?? ???????? ????? ?????????? ?? ??????????
 	SetUnitPositionLoc(GetEnumUnit(), l)
-	--  Урон каждые 0.04 сек 1+ 2 каждый лвл 
+	--  ???? ?????? 0.04 ??? 1+ 2 ?????? ??? 
 	UnitDamageTargetBJ(udg_LocalUnit2, GetEnumUnit(), (1.00 + (2.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2)))), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
 	
-	--  Удаление переменной
+	--  ???????? ??????????
 	l = nil
 	RemoveLocation(l)
 	
@@ -13063,7 +13063,7 @@ end
 -- ===========================================================================
 --  Trigger: IsEnemyAllyOwner
 -- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
+--  ????? ???? ????? ??? ???????, ??????? ?? ????? ?????? LocalUni2
 -- ===========================================================================
 -- 
 -- function isEnemy takes nothing returns boolean
@@ -13179,11 +13179,14 @@ function MassSpell(caster, unitability, dammyAbility, order, targetloc, radious,
 	local target
 	local dummyCaster
 	local i = 0
-	--  call BJDebugMsg("Сработало")
+	--  call BJDebugMsg("?????????")
 	udg_LocalPlayer = p
 	if targetOwning == 1 then
+		bex = isEnemy
 	elseif targetOwning == 2 then
+		bex = isAlly
 	else
+		bex = isOwner
 	end
 	
 	if targetloc == nil then
@@ -13198,7 +13201,7 @@ function MassSpell(caster, unitability, dammyAbility, order, targetloc, radious,
 	
 	
 	if FirstOfGroup(g) == nil then
-		-- Нету врагов
+		-- ???? ??????
 		BlzStartUnitAbilityCooldown(caster, unitability, BlzGetUnitAbilityCooldown(caster, unitability, level))
 		-- call SetUnitState( caster,UNIT_STATE_MANA, GetUnitState( caster,UNIT_STATE_MANA)+100+35*level )
 	else
@@ -13209,7 +13212,7 @@ function MassSpell(caster, unitability, dammyAbility, order, targetloc, radious,
 			if target == nil then break end
 			
 			dummyCaster = CreateUnitAtLoc(p, gDummy, targetloc, bj_UNIT_FACING)
-			--  call BJDebugMsg("Луп")
+			--  call BJDebugMsg("???")
 			UnitAddAbility(dummyCaster, dammyAbility)
 			SetUnitAbilityLevel(dummyCaster, dammyAbility, level)
 			IssueTargetOrder(dummyCaster, order, target)
@@ -13223,7 +13226,6 @@ function MassSpell(caster, unitability, dammyAbility, order, targetloc, radious,
 	g = nil
 	RemoveLocation(targetloc)
 	p = nil
-	DestroyBoolExpr(bex)
 	dummyCaster = nil
 	bex = nil
 	
@@ -13607,7 +13609,7 @@ function Trig_FarmTier2_Actions()
 	
 	udg_LocalInteger = 20
 	SetPlayerTechMaxAllowedSwap(FourCC('h0DT'), udg_LocalInteger, udg_LocalPlayer)
-	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  Нефть платформа
+	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  ????? ?????????
 	udg_LocalInteger = 30
 	SetPlayerTechMaxAllowedSwap(FourCC('h0NW'), udg_LocalInteger, udg_LocalPlayer)
 	SetPlayerTechMaxAllowedSwap(FourCC('h0N2'), udg_LocalInteger, udg_LocalPlayer)
@@ -13734,7 +13736,7 @@ function Trig_FarmTier2_Res_Actions()
 	SetPlayerTechMaxAllowedSwap(FourCC('h0HU'), udg_LocalInteger, udg_LocalPlayer)
 	udg_LocalInteger = 20
 	SetPlayerTechMaxAllowedSwap(FourCC('h0DT'), udg_LocalInteger, udg_LocalPlayer)
-	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  Нефть платформа
+	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  ????? ?????????
 	udg_LocalInteger = 30
 	SetPlayerTechMaxAllowedSwap(FourCC('h0N2'), udg_LocalInteger, udg_LocalPlayer)
 	SetPlayerTechMaxAllowedSwap(FourCC('h0H2'), udg_LocalInteger, udg_LocalPlayer)
@@ -13914,7 +13916,7 @@ function Trig_FarmTier3_Actions()
 	SetPlayerTechResearchedSwap(FourCC('R0HP'), 2, udg_LocalPlayer)
 	udg_LocalInteger = 30
 	SetPlayerTechMaxAllowedSwap(FourCC('h0DT'), udg_LocalInteger, udg_LocalPlayer)
-	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  Нефть платформа
+	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  ????? ?????????
 	udg_LocalInteger = 45
 	SetPlayerTechMaxAllowedSwap(FourCC('h0NW'), udg_LocalInteger, udg_LocalPlayer)
 	SetPlayerTechMaxAllowedSwap(FourCC('h0N2'), udg_LocalInteger, udg_LocalPlayer)
@@ -14040,7 +14042,7 @@ function Trig_FarmTier3_Res_Actions()
 	SetPlayerTechMaxAllowedSwap(FourCC('h0HU'), udg_LocalInteger, udg_LocalPlayer)
 	udg_LocalInteger = 30
 	SetPlayerTechMaxAllowedSwap(FourCC('h0DT'), udg_LocalInteger, udg_LocalPlayer)
-	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  Нефть платформа
+	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  ????? ?????????
 	udg_LocalInteger = 45
 	SetPlayerTechMaxAllowedSwap(FourCC('h0N2'), udg_LocalInteger, udg_LocalPlayer)
 	SetPlayerTechMaxAllowedSwap(FourCC('h0H2'), udg_LocalInteger, udg_LocalPlayer)
@@ -14113,7 +14115,7 @@ end
 -- ===========================================================================
 --  Trigger: GnomeNotToMuch
 -- 
---  Попробуешь вспомнить мозг взовется(
+--  ?????????? ????????? ???? ????????(
 -- ===========================================================================
 ---@return boolean
 ---@return boolean
@@ -14132,12 +14134,13 @@ function Trig_GnomeNotToMuch_Actions()
 	local p = GetOwningPlayer(GetTriggerUnit())
 	local pi = GetPlayerId(p)
 	local Tl = udg_TierLevel[GetConvertedPlayerId(p)]
+	udg_Boolexpr = Type_1
 	
-	if GetUnitTypeId(GetTriggerUnit()) ~= FourCC('h0FL') then	--  наоборот для теста
+	if GetUnitTypeId(GetTriggerUnit()) ~= FourCC('h0FL') then	--  ???????? ??? ?????
 		income[pi] = (income[pi] + 40)
 		
 		
-		udg_LocalText2 = "Превышен лимит. Некоторые башни сменили режим."
+		udg_LocalText2 = "???????? ?????. ????????? ????? ??????? ?????."
 		GroupEnumUnitsOfPlayer(udg_LocalOtrad, p, udg_Boolexpr)
 		udg_LocalInteger = CountUnitsInGroup(udg_LocalOtrad)
 		if Tl == 1 and udg_LocalInteger >= 15 then
@@ -14262,33 +14265,33 @@ function Trig_TimerIncome_Actions()
 		if DisOn then
 			
 			
-			--  ---------------------------Система сверхпотребления-----------------------------
+			--  ---------------------------??????? ????????????????-----------------------------
 			-- set logistic[i] = 500*R2I( udg_UnitsCount[i]/ 50.00 )
 			-- set logistic[i] = 250*R2I( udg_UnitsCount[i]/ 25.00 )
-			-- Старые версии
+			-- ?????? ??????
 			
 			
 			r = R2I(udg_UnitsCount[i] / 25.00)
-			logistic[i] = ((500 + 100 * (r - 1)) / 2 * r)	--  прогрессия
+			logistic[i] = ((500 + 100 * (r - 1)) / 2 * r)	--  ??????????
 			
 			
-			--  ---------------------------Система коррупции-----------------------------
+			--  ---------------------------??????? ?????????-----------------------------
 			t = GetPlayerTechCount(p, FourCC('R04O'), true)
 			if t > 1 then
 				corruption[i] = (disincome[i] * ((t - 1) * 0.15))
 				if EcLog then
-					udg_LocalText2 = ("Коррупция" .. I2S(R2I(corruption[i])))
+					udg_LocalText2 = ("?????????" .. I2S(R2I(corruption[i])))
 					DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 				end
 				
 			end
 			
-			-- Общий модификатор расходов
+			-- ????? ??????????? ????????
 			t = GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true)
 			if t >= 1 then
 				additional[i] = disincome[i] * (udg_MainPrice[i] / (-100.0))
 				if EcLog then
-					udg_LocalText2 = ("Дополнительно: " .. I2S(R2I(additional[i])))
+					udg_LocalText2 = ("?????????????: " .. I2S(R2I(additional[i])))
 					DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 				end
 				
@@ -14303,17 +14306,17 @@ function Trig_TimerIncome_Actions()
 		
 		
 		if EcLog then
-			udg_LocalText2 = ("Доход: " .. R2S(income[i] * IncomeMod))
+			udg_LocalText2 = ("?????: " .. R2S(income[i] * IncomeMod))
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("Расход: " .. R2S(disincome[i]))
+			udg_LocalText2 = ("??????: " .. R2S(disincome[i]))
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("Логистика: " .. R2S(logistic[i]))
+			udg_LocalText2 = ("?????????: " .. R2S(logistic[i]))
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("Юнитов: " .. I2S(udg_UnitsCount[i]))
+			udg_LocalText2 = ("??????: " .. I2S(udg_UnitsCount[i]))
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("Итого: " .. R2S(balance[i]))
+			udg_LocalText2 = ("?????: " .. R2S(balance[i]))
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("Древесины: " .. R2S(incomeW[i]))
+			udg_LocalText2 = ("?????????: " .. R2S(incomeW[i]))
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 		end
 		
@@ -14365,12 +14368,12 @@ end
 -- ===========================================================================
 --  Trigger: UnitEnterMap
 -- 
---  Для захватываемых
+--  ??? ?????????????
 -- ===========================================================================
 ---@return boolean
 function Trig_UnitEnterMap_Conditions()
 	gTriggerUnit = GetEnteringUnit()
-	return GetUnitAbilityLevel(gTriggerUnit, FourCC('A0Z5')) == 0	-- Проверка на даммика или юнита вне экономики
+	return GetUnitAbilityLevel(gTriggerUnit, FourCC('A0Z5')) == 0	-- ???????? ?? ??????? ??? ????? ??? ?????????
 end
 ---@return nothing
 function Trig_UnitEnterMap_Actions()
@@ -14437,7 +14440,7 @@ function Trig_UnitUpgraded_Actions()
 	local pi = GetPlayerId(p)
 	local i = GetUnitFoodMade(u)
 	
-	-- Добавляю инком
+	-- ???????? ?????
 	
 	
 	if GetUnitAbilityLevel(u, FourCC('A0LJ')) >= 1 then
@@ -14484,7 +14487,7 @@ function Trig_UnitDead_Actions()
 	if GetUnitAbilityLevel(u, FourCC('BUan')) == 0 then
 		DelCountDis(u, pi)
 	else
-		TimedCount(u)	-- Проверить владельца через 0.3
+		TimedCount(u)	-- ????????? ????????? ????? 0.3
 	end
 	
 	
@@ -14498,9 +14501,9 @@ function Trig_UnitDead_Actions()
 	u = nil
 	
 	
-		--     //Убираю его инком
-	--    // call DisplayTextToPlayer(p,0,0,("Увидел смерть "+GetUnitName(u)))
-	--     //Здание
+		--     //?????? ??? ?????
+	--    // call DisplayTextToPlayer(p,0,0,("?????? ?????? "+GetUnitName(u)))
+	--     //??????
 	--     if IsUnitType(u, UNIT_TYPE_STRUCTURE) then
 	--         if IsUnitInGroup(u, udg_BuildedSctructure[1]) then
 	--             set income[pi] = income[pi] - I2R(GetUnitFoodMade(u)) 
@@ -14519,26 +14522,26 @@ function Trig_UnitDead_Actions()
 	--                 set incomeW[pi] =  incomeW[pi] - ( 50.00 * i ) 
 	--             endif
 	--         endif
-	--     //Гер
+	--     //???
 	--     elseif IsUnitType(u, UNIT_TYPE_HERO) then
 	--             set disincome[pi] = ( disincome[pi] - 100.00 )
 	--             set udg_UnitsCount[pi] = udg_UnitsCount[pi] - 1
 	--             if  GetUnitAbilityLevel(u,'A0ZT')!=0 then        
 	--                     set income[pi] = income[pi] - (100+GetUnitAbilityLevel(u,'A0ZT')*100)
 	--             endif
-	--     //юнит
+	--     //????
 	--     elseif GetTriggerUnit()!=nil then
 	--             
 	--             if not IsUnitType(u, UNIT_TYPE_SUMMONED) then
-	--                // call DisplayTextToPlayer(p,0,0,("Увидел смерть до юнита "+GetUnitName(u)))
+	--                // call DisplayTextToPlayer(p,0,0,("?????? ?????? ?? ????? "+GetUnitName(u)))
 	--                 set udg_Price = GetUnitGoldCost(GetUnitTypeId(u))
 	--                 set disincome[pi] = ( disincome[pi] - ( udg_Price * Tax ) )
 	--                 set udg_UnitsCount[pi] = udg_UnitsCount[pi] - 1
 	--                 
-	--                 // ---------------------------Особые условия-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	--                 // ---------------------------Топливо гоблинов-----------------------------
+	--                 // ---------------------------?????? ???????-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	--                 // ---------------------------??????? ????????-----------------------------
 	--                 if GetUnitAbilityLevel(u,'A0A5') != 0 then
-	--                     set disincome[pi] = disincome[pi] - ( ( udg_Price * Tax ) * ( 1.60 - ( 0.10 * I2R(GetUnitAbilityLevel(u,'A0A5')) ) ) )	--                 // ---------------------------Поколения Силитидов------------------------- ??
+	--                     set disincome[pi] = disincome[pi] - ( ( udg_Price * Tax ) * ( 1.60 - ( 0.10 * I2R(GetUnitAbilityLevel(u,'A0A5')) ) ) )	--                 // ---------------------------????????? ?????????------------------------- ??
 	--                 elseif GetUnitAbilityLevel(u,'A0VH') == 1 then
 	--                     set disincome[pi] = disincome[pi] + ( udg_Price * Tax / 2  )
 	--                 elseif GetUnitAbilityLevel(u,'A0VH') == 2 then
@@ -14603,10 +14606,10 @@ function Trig_UnitRevive_Actions()
 	--         set udg_Price = GetUnitGoldCost(GetUnitTypeId(u))
 	--         set disincome[pi] = ( disincome[pi] + ( udg_Price * Tax ) )
 	--         
-	--         // ---------------------------Особые условия-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	--         // ---------------------------Топливо гоблинов-----------------------------
+	--         // ---------------------------?????? ???????-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	--         // ---------------------------??????? ????????-----------------------------
 	--         if GetUnitAbilityLevel(u,'A0A5') != 0 then
-	--             set disincome[pi] = disincome[pi] + ( ( udg_Price * Tax ) * ( 1.60 - ( 0.10 * I2R(GetUnitAbilityLevel(u,'A0A5')) ) ) )	--         // ---------------------------Поколения Силитидов-------------------------
+	--             set disincome[pi] = disincome[pi] + ( ( udg_Price * Tax ) * ( 1.60 - ( 0.10 * I2R(GetUnitAbilityLevel(u,'A0A5')) ) ) )	--         // ---------------------------????????? ?????????-------------------------
 	--         elseif GetUnitAbilityLevel(u,'A0VH') == 1 then
 	--             set disincome[pi] = disincome[pi] + ( udg_Price * Tax / 2  )
 	--         elseif GetUnitAbilityLevel(u,'A0VH') == 2 then
@@ -14680,7 +14683,7 @@ function FixEcAll()
 		if i >= 23 then break end
 		
 		FixEc(i)
-		DisplayTextToPlayer(Player(i), 0, 0, "Экономика всех игроков пересчитана чтобы избежать непредвиденных багов, это экпериментальная функция")
+		DisplayTextToPlayer(Player(i), 0, 0, "????????? ???? ??????? ??????????? ????? ???????? ?????????????? ?????, ??? ???????????????? ???????")
 		i = i + 1
 	end
 	
@@ -14714,7 +14717,7 @@ end
 -- ===========================================================================
 --  Trigger: Gob Potreblenie
 -- 
---  Цена за нефть)
+--  ???? ?? ?????)
 -- ===========================================================================
 ---@return boolean
 function Trig_Gob_Potreblenie_Conditions()
@@ -14731,6 +14734,7 @@ function Trig_Gob_Potreblenie_Actions()
 	local pi = GetPlayerId(p)
 	local u
 	local r = GetPlayerTechCount(p, FourCC('R04N'), true)
+	udg_Boolexpr = Trig_Gob_Potreblenie_Func001002
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
 	while true do
 		u = FirstOfGroup(g)
@@ -14765,7 +14769,7 @@ end
 -- ===========================================================================
 --  Trigger: Silitid Potreblenie
 -- 
---  Цена за нефть)
+--  ???? ?? ?????)
 -- ===========================================================================
 ---@return boolean
 function Trig_Silitid_Potreblenie_Conditions()
@@ -14783,6 +14787,7 @@ function Trig_Silitid_Potreblenie_Actions()
 	local pi = GetPlayerId(p)
 	local u
 	local r = GetPlayerTechCount(p, FourCC('R04N'), true)
+	udg_Boolexpr = HaveSilitidSpell
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
 	while true do
 		u = FirstOfGroup(g)
@@ -14866,7 +14871,7 @@ end
 -- ===========================================================================
 --  Trigger: Cities Start 2
 -- 
---  Заношу в группы нейтральные здания
+--  ?????? ? ?????? ??????????? ??????
 -- ===========================================================================
 ---@return boolean
 function ItIsCity()
@@ -14888,6 +14893,7 @@ function Trig_Cities_Start_2_Func003A()
 end
 ---@return nothing
 function Trig_Cities_Start_2_Actions()
+	udg_Boolexpr = ItIsCity
 	GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
 	ForGroup(udg_LocalOtrad2, Trig_Cities_Start_2_Func003A)
 	GroupClear(udg_LocalOtrad2)
@@ -14930,7 +14936,7 @@ function Trig_DeadSituastion_Actions()
 	local i
 	
 	
-	-- Для режима доминации
+	-- ??? ?????? ?????????
 	
 	CityPlayerCount[pi0] = (CityPlayerCount[pi0] or 0) - 1
 	CityPlayerCount[pi] = (CityPlayerCount[pi] or 0) + 1
@@ -14940,14 +14946,14 @@ function Trig_DeadSituastion_Actions()
 		CheckCity(p)
 	end
 	
-	-- Потом выбирать рандомного юнита рядом.
+	-- ????? ???????? ?????????? ????? ?????.
 	u2 = CreateUnit(p, GetUnitTypeId(u), GetUnitX(u), GetUnitY(u), GetUnitFacing(u))
 	GroupAddUnit(udg_ZahvatBuildings, u2)
 	BlzSetUnitArmor(u2, 3)
 	SetUnitState(u2, UNIT_STATE_LIFE, 5000)
 	GroupAddUnit(udg_BuildedSctructure[1], u2)
 	
-	-- Условие что город мелкий
+	-- ??????? ??? ????? ??????
 	if GetUnitAbilityLevel(u, FourCC('A1MS')) == 0 then
 		UnitAddAbility(u2, FourCC('A0VJ'))
 	end
@@ -14964,13 +14970,13 @@ function Trig_DeadSituastion_Actions()
 	
 	
 	
-	-- Проверка на Прибрежный город
+	-- ???????? ?? ?????????? ?????
 	if IsUnitInGroup(u, udg_CityNearWater) then
 		GroupRemoveUnit(udg_CityNearWater, u)
 		GroupAddUnit(udg_CityNearWater, u2)
 	end
 	
-	-- Проверка на ии
+	-- ???????? ?? ??
 	if IsUnitInGroup(u, PortalBuildingAi) then
 		GroupAddUnit(PortalBuildingAi, u2)
 		
@@ -14989,7 +14995,7 @@ function Trig_DeadSituastion_Actions()
 	u = nil
 	u3 = nil
 	
-	-- Автогрейды
+	-- ??????????
 	if GetUnitAbilityLevel(u2, FourCC('A1MS')) == 0 then
 		TimedUpdate(u2, p)
 	end
@@ -15015,7 +15021,7 @@ function Trig_Upgrade_Gold_C_Actions()
 	local levels = 4
 	local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
 	
-	-- Если малый город, -2 к максу
+	-- ???? ????? ?????, -2 ? ?????
 	if GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1N9')) > 0 then
 		levels = levels - 2
 	end
@@ -15288,7 +15294,7 @@ function Trig_Upgrade_Income_Actions()
 	UnitAddAbility(GetTriggerUnit(), FourCC('A0VS'))
 	
 	
-	-- Добавляю инком
+	-- ???????? ?????
 	income[pi] = income[pi] + 100
 	UpdateGraf(pi)
 	
@@ -15362,36 +15368,36 @@ function Trig_ResoursesInterface_Copy_Actions()
 	
 	if balance[pi] > 0 then
 		BlzFrameSetText(IncomeTextFr, "|cffbeffa0" .. I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "|cffbeffa0Профицит")
+		BlzFrameSetText(tooltipTitle, "|cffbeffa0????????")
 	elseif balance[pi] == 0 then
 		BlzFrameSetText(IncomeTextFr, I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "Нулевой баланс")
+		BlzFrameSetText(tooltipTitle, "??????? ??????")
 	else
 		BlzFrameSetText(IncomeTextFr, "|cffffb4a0" .. I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "|cffffb4a0Дефицит")
+		BlzFrameSetText(tooltipTitle, "|cffffb4a0???????")
 	end
 	-- set balance[pi]=income[pi]-disincome[pi]+corruption[pi]-logistic[pi]+additional[pi]
 	
 	
-	-- Цифры
+	-- ?????
 	text = "|cffbeffa0" .. I2S(R2I(income[pi])) .. "*(" .. R2S(IncomeMod) .. "-" .. R2S(AllyTax[pi]) .. ")|r-(|cffffb4a0" .. I2S(R2I(disincome[pi])) .. "|r+|cffffb4a0" .. I2S(R2I(logistic[pi])) .. "|r)"
 	if GetPlayerTechCount(p, FourCC('R07E'), true) > 0 then
 		text = text .. " + " .. I2S(R2I(corruption[pi]))
 	end
 	if GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) > 0 then
-		text = text .. " и " .. I2S(R2I(additional[pi]))
+		text = text .. " ? " .. I2S(R2I(additional[pi]))
 	end
 	
-	-- Пояснение
-	text2 = "|n|cffbeffa0Доходы * Мод. Базы и Союза|r - (|cffffb4a0Расходы|r+|cffffb4a0Логистика|r)"
+	-- ?????????
+	text2 = "|n|cffbeffa0?????? * ???. ???? ? ?????|r - (|cffffb4a0???????|r+|cffffb4a0?????????|r)"
 	if GetPlayerTechCount(p, FourCC('R07E'), true) > 0 then
-		text2 = text2 .. "+коррупция"
+		text2 = text2 .. "+?????????"
 	end
 	
 	if GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) > 0 then
-		text2 = text2 .. " и дополнительно"
+		text2 = text2 .. " ? ?????????????"
 	end
-	-- set text = "Доход("+R2S(income[pi])+")-Расход("+R2S()+")|n-Логистика("+R2S(logistic[pi])+")"+"|n прочие элементы в разработке"
+	-- set text = "?????("+R2S(income[pi])+")-??????("+R2S()+")|n-?????????("+R2S(logistic[pi])+")"+"|n ?????? ???????? ? ??????????"
 	BlzFrameSetText(tooltipBody, text .. text2)
 	
 	
@@ -15410,11 +15416,11 @@ end
 -- ===========================================================================
 ---@return nothing
 function Trig_MainInfo_Actions()
-	--  Главное
+	--  ???????
 	CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_20894", "TRIGSTR_20895", "ReplaceableTextures\\CommandButtons\\BTNPhilosophersStone.blp")
-	--  Команды
+	--  ???????
 	CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_20896", "TRIGSTR_20914", "ReplaceableTextures\\CommandButtons\\BTNPhilosophersStone.blp")
-	--  Благодарности
+	--  ?????????????
 	CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_20922", "TRIGSTR_20987", "ReplaceableTextures\\CommandButtons\\BTNTransmute.blp")
 end
 -- ===========================================================================
@@ -15426,7 +15432,7 @@ end
 -- ===========================================================================
 --  Trigger: Initial things
 -- 
---  Все штуки которые должны быть включены при инициализации
+--  ??? ????? ??????? ?????? ???? ???????? ??? ?????????????
 -- ===========================================================================
 ---@return nothing
 function Trig_Initial_things_Func003A()
@@ -15725,11 +15731,11 @@ function Trig_NextMenu_Actions()
 		ModeBuilding = CreateUnitAtLoc(Player(0), FourCC('n04F'), l, 0)
 	elseif ModeBuildingI == 3 then
 		ModeBuilding = CreateUnitAtLoc(Player(0), FourCC('n04H'), l, 0)
-	elseif ModeBuildingI == 4 then	--  Экономика
+	elseif ModeBuildingI == 4 then	--  ?????????
 		ModeBuilding = CreateUnitAtLoc(Player(0), FourCC('n04I'), l, 0)
-	elseif ModeBuildingI == 5 then	--  Прочие
+	elseif ModeBuildingI == 5 then	--  ??????
 		ModeBuilding = CreateUnitAtLoc(Player(0), FourCC('n06Y'), l, 0)
-	elseif ModeBuildingI == 6 then	--  Дипломатия
+	elseif ModeBuildingI == 6 then	--  ??????????
 		ModeBuilding = CreateUnitAtLoc(Player(0), FourCC('n074'), l, 0)
 	end
 	ClearSelectionForPlayer(Player(0))
@@ -15781,7 +15787,7 @@ function Trig_UpgradeStolica_Actions()
 	BlzSetUnitArmor(GetTriggerUnit(), 30.00)
 	BlzSetUnitMaxHP(GetTriggerUnit(), 10000)
 	UnitAddAbilityBJ(FourCC('A0I6'), GetTriggerUnit())
-	BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, ("|cffd45e19Столица:|r " .. GetUnitName(GetTriggerUnit())))
+	BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, ("|cffd45e19???????:|r " .. GetUnitName(GetTriggerUnit())))
 	UnitAddAbilityBJ(FourCC('A145'), GetTriggerUnit())
 end
 -- ===========================================================================
@@ -15842,7 +15848,7 @@ function MakeCapital(capital)
 	BlzSetUnitArmor(capital, 30.00)
 	UnitAddAbility(capital, FourCC('A0I6'))
 	UnitAddAbility(capital, FourCC('A145'))
-	BlzSetUnitStringFieldBJ(capital, UNIT_SF_NAME, ("|cffd45e19Столица:|r " .. GetUnitName(capital)))
+	BlzSetUnitStringFieldBJ(capital, UNIT_SF_NAME, ("|cffd45e19???????:|r " .. GetUnitName(capital)))
 	GroupAddUnit(udg_StolicaGroups, capital)
 	TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, capital, EVENT_UNIT_ATTACKED)
 	unitShareVisionAll(capital, true)
@@ -15943,7 +15949,7 @@ function CheckAndCreateCapital(p)
 	local u
 	local g = CreateGroup()
 	GroupEnumUnitsOfPlayer(g, p, Capitals)
-	if BlzGroupGetSize(g) == 0 then	-- Столицы нет
+	if BlzGroupGetSize(g) == 0 then	-- ??????? ???
 		
 		GroupClear(g)
 		Counter = 0
@@ -15953,19 +15959,19 @@ function CheckAndCreateCapital(p)
 			u = BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
 			SetPlayerAbilityAvailable(p, FourCC('A0IQ'), false)
 			MakeCapital(u)
-			DisplayTimedTextToForce(udg_AllPlayers, 5, (GetPlayerName(p) .. " - |cffffff00почти проиграл|r|r, его |cffd45e19столица|r не не была построена ко времени, а потому была установлена автоматически."))
+			DisplayTimedTextToForce(udg_AllPlayers, 5, (GetPlayerName(p) .. " - |cffffff00????? ????????|r|r, ??? |cffd45e19???????|r ?? ?? ???? ????????? ?? ???????, ? ?????? ???? ??????????? ?????????????."))
 		else
 			if GetPlayerSlotState(p) == PLAYER_SLOT_STATE_PLAYING then
-				DisplayTimedTextToForce(udg_AllPlayers, 5, (GetPlayerName(p) .. " - |cffff0000проиграл|r, его |cffd45e19столица |r не построена ко времени. :("))
+				DisplayTimedTextToForce(udg_AllPlayers, 5, (GetPlayerName(p) .. " - |cffff0000????????|r, ??? |cffd45e19??????? |r ?? ????????? ?? ???????. :("))
 			end
 			
 			ClearPlayer(p)
 			
 		end
-		-- call DisplayTextToPlayer(Player(0),0,0,"Тестирование: Игрок "+GetPlayerName(p)+"  не имеет столицу")
+		-- call DisplayTextToPlayer(Player(0),0,0,"????????????: ????? "+GetPlayerName(p)+"  ?? ????? ???????")
 	else
 		
-		-- call DisplayTextToPlayer(Player(0),0,0,"Тестирование: Игрок "+GetPlayerName(p)+"  имеет столицу")
+		-- call DisplayTextToPlayer(Player(0),0,0,"????????????: ????? "+GetPlayerName(p)+"  ????? ???????")
 	end
 	
 	
@@ -15983,7 +15989,7 @@ end
 function Trig_StolicaTime_Actions()
 	ForForce(udg_AllPlayers, AllPlayersCapital)
 	ForForce(udg_Bots, AllPlayersCapital)
-	-- call DisplayTextToPlayer(Player(0),0,0,"Тестирование: поток не отрубился")
+	-- call DisplayTextToPlayer(Player(0),0,0,"????????????: ????? ?? ?????????")
 end
 -- ===========================================================================
 ---@return nothing
@@ -16056,7 +16062,7 @@ end
 function Trig_StolicaDead_Actions()
 	local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
 	SetPlayerAbilityAvailableBJ(true, FourCC('A0IQ'), GetOwningPlayer(GetTriggerUnit()))
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. " - |cffff0000проиграл|r, его |cffd45e19столица |rуничтожена."))
+	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. " - |cffff0000????????|r, ??? |cffd45e19??????? |r??????????."))
 	ClearPlayer(Player(pi))
 	AiLimitsSet()
 end
@@ -16288,7 +16294,7 @@ function Trig_FeodalDead_Func004Func002Func001Func010A()
 	SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
 	SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
 	SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" - стал вассалом игрока " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
+	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
 end
 ---@return boolean
 function Trig_FeodalDead_Func004Func002Func001C()
@@ -16299,7 +16305,7 @@ function Trig_FeodalDead_Func004Func002Func001C()
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func011A()
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" - стал вассалом игрока " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
+	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
 	ForceAddPlayerSimple(GetEnumPlayer(), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))])
 	for bj_forLoopBIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
@@ -16324,7 +16330,7 @@ function Trig_FeodalDead_Func004Func017A()
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func020A()
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" освободился от игрока " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())))))
+	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" ??????????? ?? ?????? " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())))))
 	for bj_forLoopAIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
@@ -16344,29 +16350,29 @@ function Trig_FeodalDead_Actions()
 	SetUnitInvulnerable(GetTriggerUnit(), true)
 	SetUnitInvulnerable(GetTriggerUnit(), false)
 	if (Trig_FeodalDead_Func004C()) then
-		--  Триггер для самоубийцы
-		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. "|cffff0000 - самоубился! |rЗачем?)"))
+		--  ??????? ??? ??????????
+		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. "|cffff0000 - ??????????! |r??????)"))
 		ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetTriggerUnit())), Trig_FeodalDead_Func004Func017A)
 		SetPlayerAbilityAvailableBJ(true, FourCC('A0IQ'), GetOwningPlayer(GetTriggerUnit()))
-		--  Обнуляю вассалов самоубийцы. Вы свободны!
+		--  ??????? ???????? ??????????. ?? ????????!
 		ForForce(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], Trig_FeodalDead_Func004Func020A)
 		ForceClear(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
 	else
-		--  --------------------------------------------------------------------   Васссал кого-то захватил
+		--  --------------------------------------------------------------------   ??????? ????-?? ????????
 		for bj_forLoopAIndex = 1, 24 do
 			if (Trig_FeodalDead_Func004Func002Func001C()) then
 				for bj_forLoopBIndex = 1, 24 do
 					SetPlayerAllianceStateBJ(GetTriggerPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 					SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetTriggerPlayer(), bj_ALLIANCE_UNALLIED)
 				end
-				--  Есть сеньор
-				--  Вассализация хозяина столицы
-				DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) + (" - стал вассалом игрока " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
+				--  ???? ??????
+				--  ???????????? ??????? ???????
+				DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) + (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
 				ForceAddPlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetConvertedPlayerId(ConvertedPlayer(GetForLoopIndexA()))])
 				SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_ALLIED_UNITS)
 				SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)
 				SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)
-				--  Вассализация вассалов хозяина столицы
+				--  ???????????? ???????? ??????? ???????
 				ForForce(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttackedUnitBJ()))], Trig_FeodalDead_Func004Func002Func001Func010A)
 				ForceClear(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
 				SetForceAllianceStateBJ(udg_Vassals[GetForLoopIndexA()], udg_Vassals[GetForLoopIndexA()], bj_ALLIANCE_ALLIED_VISION)
@@ -16375,17 +16381,17 @@ function Trig_FeodalDead_Actions()
 			else
 			end
 		end
-		--  --------------------------------------------------------------------   Сеньор кого-то захватил
-		--  Вассализация хозяина столицы
+		--  --------------------------------------------------------------------   ?????? ????-?? ????????
+		--  ???????????? ??????? ???????
 		for bj_forLoopBIndex = 1, 24 do
 			SetPlayerAllianceStateBJ(GetTriggerPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 			SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetTriggerPlayer(), bj_ALLIANCE_UNALLIED)
 		end
-		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) + (" - стал вассалом игрока " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
+		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) + (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
 		ForceAddPlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))])
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker()), bj_ALLIANCE_ALLIED_UNITS)
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)
-		--  Вассализация вассалов хозяина столицы
+		--  ???????????? ???????? ??????? ???????
 		ForForce(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttackedUnitBJ()))], Trig_FeodalDead_Func004Func011A)
 		SetForceAllianceStateBJ(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))], udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))], bj_ALLIANCE_ALLIED_VISION)
 		SetForceAllianceStateBJ(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))], GetForceOfPlayer(GetOwningPlayer(GetAttacker())), bj_ALLIANCE_ALLIED_UNITS)
@@ -16404,7 +16410,7 @@ end
 -- ===========================================================================
 --  Trigger: FeodalDead2
 -- ===========================================================================
--- 3 сек неуяза
+-- 3 ??? ??????
 ---@return nothing
 function CapTime()
 	local u = udg_LocalUnit3
@@ -16436,7 +16442,7 @@ end
 ---@return nothing
 function Freedom()
 	local p = GetEnumPlayer()
-	DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - стал свободен")
+	DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ???? ????????")
 	ClearOldAllies(p)
 	p = nil
 end
@@ -16445,7 +16451,7 @@ function ChangeAlly()
 	local p = udg_LocalPlayer
 	local p0 = GetEnumPlayer()
 	
-	DisplayTextToForce(udg_AllPlayers, GetPlayerName(p0) .. " - игроком захвачен игроком " .. GetPlayerName(p))
+	DisplayTextToForce(udg_AllPlayers, GetPlayerName(p0) .. " - ??????? ???????? ??????? " .. GetPlayerName(p))
 	ClearOldAllies(p0)
 	Senior[GetPlayerId(p0)] = p
 	ForceAddPlayer(Vassals[GetPlayerId(p)], p0)
@@ -16471,11 +16477,11 @@ function Trig_FeodalDead2_Actions()
 	
 	
 	
-	-- Случай самоубийцы
+	-- ?????? ??????????
 	if p == p2 then
 		
 		ClearPlayer(p)
-		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - решил уничтожить свою столицу - зачем?")
+		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ????? ?????????? ???? ??????? - ??????")
 		ForForce(Vassals[pi], Freedom)
 		
 		p = nil
@@ -16492,10 +16498,10 @@ function Trig_FeodalDead2_Actions()
 	
 	
 	
-	-- Захватил свободный
+	-- ???????? ?????????
 	if Senior[pi2] == nil then
-		-- свободного
-		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - игроком захвачен игроком " .. GetPlayerName(p2))
+		-- ??????????
+		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ??????? ???????? ??????? " .. GetPlayerName(p2))
 		if Senior[pi] == nil then
 			
 			Senior[pi] = p2
@@ -16507,7 +16513,7 @@ function Trig_FeodalDead2_Actions()
 				ForForce(Vassals[pi], ChangeAlly)
 			end
 			
-			-- Чужого вассала
+			-- ?????? ???????
 		else
 			ClearOldAllies(p)
 			Senior[pi] = p2
@@ -16515,12 +16521,12 @@ function Trig_FeodalDead2_Actions()
 			NewAlly(p)
 			
 		end
-		-- Захватил чей-то вассал
+		-- ???????? ???-?? ??????
 	else
 		p3 = Senior[pi2]
 		pi3 = GetPlayerId(p3)
-		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - игроком захвачен игроком " .. GetPlayerName(p3))
-		-- свободного
+		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ??????? ???????? ??????? " .. GetPlayerName(p3))
+		-- ??????????
 		if Senior[pi] == nil then
 			
 			Senior[pi] = p3
@@ -16533,7 +16539,7 @@ function Trig_FeodalDead2_Actions()
 			end
 			
 			
-			-- Чужого вассала
+			-- ?????? ???????
 		else
 			ClearOldAllies(p)
 			Senior[pi] = p3
@@ -16626,7 +16632,7 @@ end
 ---@return nothing
 function Trig_DominationButton_Actions()
 	udg_GameMode = 3
-	DisplayTextToForce(GetPlayersAll(), "Режим выбран: Доминация")
+	DisplayTextToForce(GetPlayersAll(), "????? ??????: ?????????")
 end
 -- ===========================================================================
 ---@return nothing
@@ -16660,7 +16666,7 @@ function ExpandTable()
 	
 	
 	ThirdColumn[24] = MultiboardGetItem(Multiboard, 0, 2)
-	MultiboardSetItemValue(ThirdColumn[24], "Точек,%")
+	MultiboardSetItemValue(ThirdColumn[24], "?????,%")
 	MultiboardSetItemWidth(ThirdColumn[24], 0.06)
 	MultiboardReleaseItem(ThirdColumn[24])
 	
@@ -16684,13 +16690,13 @@ function ExpandTable()
 	
 	
 end
--- Отправлено в UpdateGraph
+-- ?????????? ? UpdateGraph
 -- function PercentGraph takes integer pi returns nothing
 --     call MultiboardSetItemValue( ThirdColumn[pi], R2SW( I2R(CityPlayerCount[pi])*100.0/I2R(CityCount),3,3)+"%")
 -- endfunction
 ---@return nothing
 function Trig_Domination_start_Actions()
-	DisplayTextToForce(udg_AllPlayers, "Включен режим доминация. Захватите " .. I2S(PercentWin) .. "% городов, чтобы победить!")
+	DisplayTextToForce(udg_AllPlayers, "??????? ????? ?????????. ????????? " .. I2S(PercentWin) .. "% ???????, ????? ????????!")
 end
 -- ===========================================================================
 ---@return nothing
@@ -16706,8 +16712,8 @@ end
 ---@return nothing
 function Trig_DomCheckCommand_Actions()
 	local pi = GetPlayerId(GetTriggerPlayer())
-	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "Вы контролируете " .. I2S(CityPlayerCount[pi]) .. " Точек из " .. I2S(CityCount) .. " на карте и из " .. I2S(MathRound(CityCount * 0.01 * PercentWin)) .. " необходимых для победы")
-	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "Таким образом ваш процент " .. R2SW(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount), 3, 3) .. "% из необходимых " .. I2S(PercentWin) .. "%")
+	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "?? ????????????? " .. I2S(CityPlayerCount[pi]) .. " ????? ?? " .. I2S(CityCount) .. " ?? ????? ? ?? " .. I2S(MathRound(CityCount * 0.01 * PercentWin)) .. " ??????????? ??? ??????")
+	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "????? ??????? ??? ??????? " .. R2SW(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount), 3, 3) .. "% ?? ??????????? " .. I2S(PercentWin) .. "%")
 end
 -- ===========================================================================
 ---@return nothing
@@ -16731,7 +16737,7 @@ end
 ---@return nothing
 function Trig_FastTestSpell_Actions()
 	udg_GameMode = 4
-	DisplayTextToForce(GetPlayersAll(), "Режим выбран: Тест. Пишите -fast и -fastoff ")
+	DisplayTextToForce(GetPlayersAll(), "????? ??????: ????. ?????? -fast ? -fastoff ")
 end
 -- ===========================================================================
 ---@return nothing
@@ -16752,7 +16758,7 @@ function Trig_FastTest_Actions()
 		fastTest[GetPlayerId(GetTriggerPlayer())] = true
 		income[GetPlayerId(GetTriggerPlayer())] = income[GetPlayerId(GetTriggerPlayer())] + 25000
 		incomeW[GetPlayerId(GetTriggerPlayer())] = incomeW[GetPlayerId(GetTriggerPlayer())] + 25000
-		DisplayTimedTextToForce(udg_AllPlayers, 6, GetPlayerName(GetTriggerPlayer()) .. " - включит тестовый режим!!!")
+		DisplayTimedTextToForce(udg_AllPlayers, 6, GetPlayerName(GetTriggerPlayer()) .. " - ??????? ???????? ?????!!!")
 		SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_FOOD_CAP, 100)
 	end
 	
@@ -16782,7 +16788,7 @@ function Trig_FastTestOff_Actions()
 		fastTest[GetPlayerId(GetTriggerPlayer())] = false
 		income[GetPlayerId(GetTriggerPlayer())] = income[GetPlayerId(GetTriggerPlayer())] - 25000
 		incomeW[GetPlayerId(GetTriggerPlayer())] = incomeW[GetPlayerId(GetTriggerPlayer())] - 25000
-		DisplayTimedTextToForce(udg_AllPlayers, 6, GetPlayerName(GetTriggerPlayer()) .. " - выключил тестовый режим!")
+		DisplayTimedTextToForce(udg_AllPlayers, 6, GetPlayerName(GetTriggerPlayer()) .. " - ???????? ???????? ?????!")
 	end
 end
 -- ===========================================================================
@@ -17029,11 +17035,11 @@ function Trig_Continents_set_On_Func013A()
 end
 ---@return nothing
 function Trig_Continents_set_On_Actions()
-	udg_LocalText2 = ("Режим континентов:|cffffff00 включен|r")
+	udg_LocalText2 = ("????? ???????????:|cffffff00 ???????|r")
 	DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
-	udg_LocalText2 = "|cff00ff00Итого доступны для игры: |r"
+	udg_LocalText2 = "|cff00ff00????? ???????? ??? ????: |r"
 	if (Trig_Continents_set_On_Func004C()) then
-		udg_LocalText2 = (udg_LocalText2 .. "Восточные королевства\\" )
+		udg_LocalText2 = (udg_LocalText2 .. "????????? ???????????\\" )
     else
     end
     if ( Trig_Continents_set_On_Func005C() ) then
@@ -18101,7 +18107,7 @@ function Trig_StartAlly_Actions()
     ForceEnumAllies(gForce, p, nil)
     AllyCount=CountPlayersInForceBJ(gForce)
     if DipMode == 0 then
-        --Оповещение о превышении
+        --?????????? ? ??????????
         if AllyCount > 1 then
             DisplayTextToForce(udg_AllPlayers, "" + GetPlayerName(p) + " not ")
             ForForce(gForce, WritePlayerName)
@@ -18265,7 +18271,7 @@ end
 --===========================================================================
 -- Trigger: StartTotalProductionCommon
 --
--- Мод на автопроизводство погибших юнитов
+-- ??? ?? ???????????????? ???????? ??????
 --===========================================================================
 function Trig_StartTotalProductionCommon_Actions()
     local i= 0
@@ -18291,7 +18297,7 @@ end
 --===========================================================================
 -- Trigger: StartTotalProductionPlayer
 --
--- Мод на автопроизводство погибших юнитов
+-- ??? ?? ???????????????? ???????? ??????
 --===========================================================================
 function Trig_StartTotalProductionPlayer_Actions()
     TotalProductionP[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=true
@@ -18321,7 +18327,7 @@ end
 --===========================================================================
 -- Trigger: EndTotalProductionPlayer
 --
--- Мод на автопроизводство погибших юнитов
+-- ??? ?? ???????????????? ???????? ??????
 --===========================================================================
 function Trig_EndTotalProductionPlayer_Actions()
     TotalProductionP[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=false
@@ -18402,7 +18408,7 @@ end
 --===========================================================================
 -- Trigger: Timer
 --
--- Запуск таймера инкома и таймера отсчета до потребления
+-- ?????? ??????? ?????? ? ??????? ??????? ?? ???????????
 --===========================================================================
 function Trig_Timer_Func009Func001A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A0IQ'), GetEnumPlayer())
@@ -18449,7 +18455,7 @@ end
 --===========================================================================
 -- Trigger: DisIncomeStart
 --
--- Триггер включающий таймер по которому работает система потребления, убирается табло отсчета до него.
+-- ??????? ?????????? ?????? ?? ???????? ???????? ??????? ???????????, ????????? ????? ??????? ?? ????.
 --===========================================================================
 function Trig_DisIncomeStart_Func002A()
     TimerDialogDisplayForPlayerBJ(false, udg_TimerToDis, GetEnumPlayer())
@@ -19554,14 +19560,14 @@ function Trig_Race_Random_Actions()
         TriggerExecute(gg_trg_StromgardOn)
     end
     
-    --Драконы
+    --???????
     if racechance == incN() then
         
         CreateNUnitsAtLoc(1, FourCC('dra1'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, p)
         DragonsOn()
     end
-    --Элементали
+    --??????????
     if racechance == incN() then
         CreateNUnitsAtLoc(5, FourCC('e00F'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0A2'), 1, p)
@@ -19700,7 +19706,7 @@ function Trig_Race_Random_Actions()
         SetPlayerTechResearchedSwap(FourCC('R0G4'), 1, p)
     end
     
-    --Forsaken отрекшиеся
+    --Forsaken ??????????
     if racechance == incN() then
         CreateNUnitsAtLoc(5, FourCC('h0J5'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0G3'), 1, p)
@@ -19788,7 +19794,7 @@ function Trig_Page1_Actions()
     
     
     
-    UnitAddAbilityBJ(FourCC('A02A'), GetTriggerUnit()) -- Альянс
+    UnitAddAbilityBJ(FourCC('A02A'), GetTriggerUnit()) -- ??????
     UnitAddAbilityBJ(FourCC('A0YV'), GetTriggerUnit()) -- Horde
     UnitAddAbilityBJ(FourCC('A0HV'), GetTriggerUnit()) -- Plet
     UnitAddAbilityBJ(FourCC('A0HL'), GetTriggerUnit()) -- Night Elves
@@ -19835,13 +19841,13 @@ function Trig_Page2_Actions()
     
     
     
-    UnitAddAbilityBJ(FourCC('A0HM'), GetTriggerUnit()) -- Алый орден
-    UnitAddAbilityBJ(FourCC('A0Y0'), GetTriggerUnit()) -- Стром
-    UnitAddAbilityBJ(FourCC('A1EG'), GetTriggerUnit()) -- Ледяные тролли
+    UnitAddAbilityBJ(FourCC('A0HM'), GetTriggerUnit()) -- ???? ?????
+    UnitAddAbilityBJ(FourCC('A0Y0'), GetTriggerUnit()) -- ?????
+    UnitAddAbilityBJ(FourCC('A1EG'), GetTriggerUnit()) -- ??????? ??????
     
     UnitAddAbilityBJ(FourCC('A121'), GetTriggerUnit()) -- Worgens
     UnitAddAbilityBJ(FourCC('A0HN'), GetTriggerUnit()) -- Dalaran
-    UnitAddAbilityBJ(FourCC('A1FN'), GetTriggerUnit()) -- Лесные тролли
+    UnitAddAbilityBJ(FourCC('A1FN'), GetTriggerUnit()) -- ?????? ??????
     
     
     UnitAddAbilityBJ(FourCC('A0HR'), GetTriggerUnit()) -- Thieves
@@ -19852,7 +19858,7 @@ function Trig_Page2_Actions()
     
     
     
-    UnitRemoveAbilityBJ(FourCC('A02A'), GetTriggerUnit()) -- Альянс
+    UnitRemoveAbilityBJ(FourCC('A02A'), GetTriggerUnit()) -- ??????
     UnitRemoveAbilityBJ(FourCC('A0YV'), GetTriggerUnit()) -- Horde
     UnitRemoveAbilityBJ(FourCC('A0HV'), GetTriggerUnit()) -- Plet
     UnitRemoveAbilityBJ(FourCC('A0HL'), GetTriggerUnit()) -- Night Elves
@@ -19917,13 +19923,13 @@ function Trig_Page3_Actions()
     
     
     
-    UnitRemoveAbilityBJ(FourCC('A0HM'), GetTriggerUnit()) -- Алый орден
-    UnitRemoveAbilityBJ(FourCC('A0Y0'), GetTriggerUnit()) -- Стром
-    UnitRemoveAbilityBJ(FourCC('A1EG'), GetTriggerUnit()) -- Ледяные тролли
+    UnitRemoveAbilityBJ(FourCC('A0HM'), GetTriggerUnit()) -- ???? ?????
+    UnitRemoveAbilityBJ(FourCC('A0Y0'), GetTriggerUnit()) -- ?????
+    UnitRemoveAbilityBJ(FourCC('A1EG'), GetTriggerUnit()) -- ??????? ??????
     
     UnitRemoveAbilityBJ(FourCC('A121'), GetTriggerUnit()) -- Worgens
     UnitRemoveAbilityBJ(FourCC('A0HN'), GetTriggerUnit()) -- Dalaran
-    UnitRemoveAbilityBJ(FourCC('A1FN'), GetTriggerUnit()) -- Лесные тролли
+    UnitRemoveAbilityBJ(FourCC('A1FN'), GetTriggerUnit()) -- ?????? ??????
     
     
     UnitRemoveAbilityBJ(FourCC('A0HR'), GetTriggerUnit()) -- Thieves
@@ -20299,12 +20305,12 @@ end
 --===========================================================================
 -- Trigger: Spell Copy
 --
--- Создает 3 шара которые кружат вокруг героя бесконечно пока он их не потратит или умрет
--- запуская их во врагов герой наносит им урон в 200 АОЕ и вешает противные бафы
--- Первый выпущенный шар вешает на врагов замедление
--- Второй выпущенный шар вешает на врагов хекс
--- Третий выпущенный шар вешает на врагов промахи
--- Не ставить перезарядку скила на 0 так как будут баги
+-- ??????? 3 ???? ??????? ?????? ?????? ????? ?????????? ???? ?? ?? ?? ???????? ??? ?????
+-- ???????? ?? ?? ?????? ????? ??????? ?? ???? ? 200 ??? ? ?????? ????????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ??????????
+-- ?????? ?????????? ??? ?????? ?? ?????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ???????
+-- ?? ??????? ??????????? ????? ?? 0 ??? ??? ????? ????
 --===========================================================================
 function Trig_Spell_Copy_Actions()
     udg_Caster=GetSpellAbilityUnit()
@@ -20334,12 +20340,12 @@ end
 --===========================================================================
 -- Trigger: Spell Cast
 --
--- Создает 3 шара которые кружат вокруг героя бесконечно пока он их не потратит или умрет
--- запуская их во врагов герой наносит им урон в 200 АОЕ и вешает противные бафы
--- Первый выпущенный шар вешает на врагов замедление
--- Второй выпущенный шар вешает на врагов хекс
--- Третий выпущенный шар вешает на врагов промахи
--- Не ставить перезарядку скила на 0 так как будут баги
+-- ??????? 3 ???? ??????? ?????? ?????? ????? ?????????? ???? ?? ?? ?? ???????? ??? ?????
+-- ???????? ?? ?? ?????? ????? ??????? ?? ???? ? 200 ??? ? ?????? ????????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ??????????
+-- ?????? ?????????? ??? ?????? ?? ?????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ???????
+-- ?? ??????? ??????????? ????? ?? 0 ??? ??? ????? ????
 --===========================================================================
 function Trig_Spell_Cast_Actions()
     udg_Target=GetSpellTargetUnit()
@@ -20358,12 +20364,12 @@ end
 --===========================================================================
 -- Trigger: Spell Dvij
 --
--- Создает 3 шара которые кружат вокруг героя бесконечно пока он их не потратит или умрет
--- запуская их во врагов герой наносит им урон в 200 АОЕ и вешает противные бафы
--- Первый выпущенный шар вешает на врагов замедление
--- Второй выпущенный шар вешает на врагов хекс
--- Третий выпущенный шар вешает на врагов промахи
--- Не ставить перезарядку скила на 0 так как будут баги
+-- ??????? 3 ???? ??????? ?????? ?????? ????? ?????????? ???? ?? ?? ?? ???????? ??? ?????
+-- ???????? ?? ?? ?????? ????? ??????? ?? ???? ? 200 ??? ? ?????? ????????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ??????????
+-- ?????? ?????????? ??? ?????? ?? ?????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ???????
+-- ?? ??????? ??????????? ????? ?? 0 ??? ??? ????? ????
 --===========================================================================
 function Trig_Spell_Dvij_Conditions()
     if ( not ( udg_Logika == true ) ) then
@@ -20567,7 +20573,7 @@ function Trig_Spell_Dvij_Func004C()
     return true
 end
 function Trig_Spell_Dvij_Actions()
-    -- обнуление
+    -- ?????????
     if ( Trig_Spell_Dvij_Func002C() ) then
         RemoveUnit(udg_Dummy[0])
         RemoveUnit(udg_Dummy[1])
@@ -20587,7 +20593,7 @@ function Trig_Spell_Dvij_Actions()
     end
     if ( (true) ) then -- INLINED!!
         udg_To4kaCaster=GetUnitLoc(udg_Caster)
-        -- скорость поворота если заменить + на -  шары будут крутится в другую сторону
+        -- ???????? ???????? ???? ???????? + ?? -  ???? ????? ???????? ? ?????? ???????
         udg_Ygol[1]=( udg_Ygol[1] + 5 )
         if ( Trig_Spell_Dvij_Func004Func004C() ) then
             SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 0.00 + I2R(udg_Ygol[1]) )))
@@ -20602,14 +20608,14 @@ function Trig_Spell_Dvij_Actions()
         else
         end
         if ( Trig_Spell_Dvij_Func004Func007C() ) then
-            -- Первый летящий шар
+            -- ?????? ??????? ???
             if ( Trig_Spell_Dvij_Func004Func007Func002C() ) then
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[2])
-                -- Скорость полета шара во врага
+                -- ???????? ?????? ???? ?? ?????
                 SetUnitPositionLoc(udg_Dummy[2], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
                 if ( Trig_Spell_Dvij_Func004Func007Func002Func005C() ) then
-                    -- АОЕ урона и бафов
+                    -- ??? ????? ? ?????
                     ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func002Func005Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsDemonDarkPortalDarkPortalTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
@@ -20622,14 +20628,14 @@ function Trig_Spell_Dvij_Actions()
                 RemoveLocation(udg_To4kaTarget)
             else
             end
-            -- Второй летящий шар
+            -- ?????? ??????? ???
             if ( Trig_Spell_Dvij_Func004Func007Func004C() ) then
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[1])
-                -- Скорость полета шара во врага
+                -- ???????? ?????? ???? ?? ?????
                 SetUnitPositionLoc(udg_Dummy[1], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
                 if ( Trig_Spell_Dvij_Func004Func007Func004Func006C() ) then
-                    -- АОЕ урона и бафов
+                    -- ??? ????? ? ?????
                     ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func004Func006Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsUndeadDarkRitualDarkRitualTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
@@ -20642,14 +20648,14 @@ function Trig_Spell_Dvij_Actions()
                 RemoveLocation(udg_To4kaTarget)
             else
             end
-            -- Третий летящий шар
+            -- ?????? ??????? ???
             if ( Trig_Spell_Dvij_Func004Func007Func006C() ) then
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[0])
-                -- Скорость полета шара во врага
+                -- ???????? ?????? ???? ?? ?????
                 SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
                 if ( Trig_Spell_Dvij_Func004Func007Func006Func005C() ) then
-                    -- АОЕ урона и бафов
+                    -- ??? ????? ? ?????
                     ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func006Func005Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsUndeadDeathPactDeathPactTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
@@ -20678,12 +20684,12 @@ end
 --===========================================================================
 -- Trigger: DieDummy
 --
--- Создает 3 шара которые кружат вокруг героя бесконечно пока он их не потратит или умрет
--- запуская их во врагов герой наносит им урон в 200 АОЕ и вешает противные бафы
--- Первый выпущенный шар вешает на врагов замедление
--- Второй выпущенный шар вешает на врагов хекс
--- Третий выпущенный шар вешает на врагов промахи
--- Не ставить перезарядку скила на 0 так как будут баги
+-- ??????? 3 ???? ??????? ?????? ?????? ????? ?????????? ???? ?? ?? ?? ???????? ??? ?????
+-- ???????? ?? ?? ?????? ????? ??????? ?? ???? ? 200 ??? ? ?????? ????????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ??????????
+-- ?????? ?????????? ??? ?????? ?? ?????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ???????
+-- ?? ??????? ??????????? ????? ?? 0 ??? ??? ????? ????
 --===========================================================================
 function Trig_DieDummy_Func001Func002A()
     RemoveUnit(GetEnumUnit())
@@ -20845,6 +20851,7 @@ function Trig_Sdelat_Flagman_Ot_Copy_Func019C()
 end
 function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     udg_FlagmanEst[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=true
+    udg_Boolexpr = Trig_Sdelat_Flagman_Ot_Copy_Func002002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Sdelat_Flagman_Ot_Copy_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -20892,6 +20899,7 @@ function Trig_Flagman_die_Ot_Actions()
     local p= GetOwningPlayer(u)
     udg_FlagmanEst[GetConvertedPlayerId(p)]=false
     udg_LocalOtrad=GetUnitsOfPlayerAll(p)
+    udg_Boolexpr = Trig_Flagman_die_Ot_Func003002
     udg_LocalPlayer=GetOwningPlayer(u)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Flagman_die_Ot_Func006A)
@@ -21184,7 +21192,7 @@ function Trig_MassPosadka_Copy_Func014A()
     udg_LocalPosition2=GetUnitLoc(GetEnumUnit())
     udg_LocalUnit2=GetEnumUnit()
     udg_LocalInteger=( 10 - CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(GetEnumUnit())]) )
-    -- Выбираю рандомно юнитов, в колве необходимом для корабля.
+    -- ??????? ???????? ??????, ? ????? ??????????? ??? ???????.
     udg_LocalOtrad3=GetRandomSubGroup2(udg_LocalInteger , udg_LocalOtrad2)
     ForGroup(udg_LocalOtrad3, Trig_MassPosadka_Copy_Func014Func006A)
     GroupClear(udg_LocalOtrad3)
@@ -21197,19 +21205,21 @@ function Trig_MassPosadka2_Actions()
     
     
     
-    -- Добавляю корабли (в селекте игрока) в группу, считаю свободные места
+    -- ???????? ??????? (? ??????? ??????) ? ??????, ?????? ????????? ?????
     udg_LocalInteger=0
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
+    udg_Boolexpr = Trig_MassPosadka_Copy_Func006002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroup(udg_LocalOtrad2, Trig_MassPosadka_Copy_Func008A)
     
     
     
-    -- Делаю группу из юнитов не кораблей и не зданий.
+    -- ????? ?????? ?? ?????? ?? ???????? ? ?? ??????.
+    udg_Boolexpr = Trig_MassPosadka_Copy_Func010002
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 250, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     
-    -- Перебираю корабли
+    -- ????????? ???????
     ForGroup(udg_LocalOtrad, Trig_MassPosadka_Copy_Func014A)
     GroupClear(udg_LocalOtrad)
     GroupClear(udg_LocalOtrad2)
@@ -21259,12 +21269,14 @@ function Trig_Linkor_reaserch_Obstel_O_Func002C()
 end
 function Trig_Linkor_reaserch_Obstel_O_Actions()
     if ( Trig_Linkor_reaserch_Obstel_O_Func001C() ) then
+        udg_Boolexpr = Trig_Linkor_reaserch_Obstel_O_Func001Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Obstel_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_Linkor_reaserch_Obstel_O_Func002C() ) then
+        udg_Boolexpr = Trig_Linkor_reaserch_Obstel_O_Func002Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Obstel_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -21357,12 +21369,14 @@ function Trig_Linkor_reaserch_Parusa_O_Func002C()
 end
 function Trig_Linkor_reaserch_Parusa_O_Actions()
     if ( Trig_Linkor_reaserch_Parusa_O_Func001C() ) then
+        udg_Boolexpr = Trig_Linkor_reaserch_Parusa_O_Func001Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Parusa_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_Linkor_reaserch_Parusa_O_Func002C() ) then
+        udg_Boolexpr = Trig_Linkor_reaserch_Parusa_O_Func002Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Parusa_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -21455,12 +21469,14 @@ function Trig_Linkor_Repair_O_Func002C()
 end
 function Trig_Linkor_Repair_O_Actions()
     if ( Trig_Linkor_Repair_O_Func001C() ) then
+        udg_Boolexpr = Trig_Linkor_Repair_O_Func001Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_Repair_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_Linkor_Repair_O_Func002C() ) then
+        udg_Boolexpr = Trig_Linkor_Repair_O_Func002Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_Repair_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -21649,15 +21665,17 @@ function Trig_Abordach_D_or_Ot_Actions()
         RemoveLocation(udg_LocalPosition[2])
         -- --------
         -- --------
-        -- Победил Корабль 1
+        -- ??????? ??????? 1
         if ( (true) ) then -- INLINED!!
             udg_LocalUnit[1]=u[1]
             udg_LocalUnit[2]=u[2]
             TriggerExecute(gg_trg_AbordachSystemDefence2_O)
+            udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func017Func005002
             GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
             ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func017Func009A)
             GroupClear(udg_LocalOtrad2)
             if ( (true) ) then -- INLINED!!
+                udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func017Func011Func004002
                 GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
                 udg_LocalText2="cffff0000.r"
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[2]), 0, 0, udg_LocalText2)
@@ -21672,7 +21690,7 @@ function Trig_Abordach_D_or_Ot_Actions()
         end
         -- --------
         -- --------
-        -- Победил Корабль 2
+        -- ??????? ??????? 2
         if ( (true) ) then -- INLINED!!
             udg_LocalUnit[1]=u[1]
             udg_LocalUnit[2]=u[2]
@@ -21682,11 +21700,13 @@ function Trig_Abordach_D_or_Ot_Actions()
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[1]), 0, 0, udg_LocalText2)
                 udg_LocalText2="cff00ff00r not "
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[2]), 0, 0, udg_LocalText2)
+                udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func021Func007Func008002
                 GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
                 ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func021Func007Func012A)
                 GroupClear(udg_LocalOtrad2)
             else
             end
+            udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func021Func011002
             GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
             ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func021Func015A)
             return
@@ -21694,7 +21714,7 @@ function Trig_Abordach_D_or_Ot_Actions()
         end
         -- --------
         -- --------
-        -- Поблажка пиратам)))
+        -- ???????? ???????)))
         if ( (true) ) then -- INLINED!!
         else
         end
@@ -21707,7 +21727,7 @@ function Trig_Abordach_D_or_Ot_Actions()
         if ( (true) ) then -- INLINED!!
         else
         end
-        -- Конец поблажки ====
+        -- ????? ???????? ====
         udg_LocalspecialEffect[1]=ef[1]
         udg_LocalspecialEffect[1]=ef[2]
         DestroyEffectBJ(udg_LocalspecialEffect[1])
@@ -21884,7 +21904,7 @@ end
 --===========================================================================
 -- Trigger: ManabombaNewSystem
 --
--- У условии спел каста манабомбы
+-- ? ??????? ???? ????? ?????????
 --===========================================================================
 function damageRadious()
     local i= 0
@@ -21935,13 +21955,13 @@ function ManabombaMissle()
     local u2
    --call BJDebugMsg("")
      
-    -- Удаляю спел манабомбы
+    -- ?????? ???? ?????????
     UnitRemoveAbility(caster, FourCC('A0TT'))
-    -- Юнит кастер
+    -- ???? ??????
     u1=CreateUnitAtLoc(p, FourCC('h05P'), l, bj_UNIT_FACING)
     BlzSetUnitRealFieldBJ(u1, UNIT_RF_FLY_HEIGHT, GetUnitDefaultFlyHeight(caster))
     UnitAddAbilityBJ(FourCC('A0TU'), u1)
-    -- Юнит жертва
+    -- ???? ??????
     u2=CreateUnitAtLoc(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC('h0GI'), destination, bj_UNIT_FACING)
     BlzSetUnitRealFieldBJ(u2, UNIT_RF_FLY_HEIGHT, GetUnitDefaultFlyHeight(caster))
     
@@ -21994,7 +22014,7 @@ end
 --===========================================================================
 -- Trigger: ManabombaDead
 --
--- У условии спел каста манабомбы
+-- ? ??????? ???? ????? ?????????
 --===========================================================================
 function Trig_ManabombaDead_Actions()
     --call BJDebugMsg("")
@@ -22008,7 +22028,7 @@ end
 --===========================================================================
 -- Trigger: Manabomba2
 --
--- У условии спел каста манабомбы
+-- ? ??????? ???? ????? ?????????
 --===========================================================================
 function Trig_Manabomba2_Actions()
     --call BJDebugMsg("")
@@ -22847,7 +22867,7 @@ end
 --===========================================================================
 -- Trigger: F2 Attack Point
 --
--- Для того чтобы атаковали ближайшие точки
+-- ??? ???? ????? ????????? ????????? ?????
 --===========================================================================
 function OwnUnit()
     return GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer
@@ -23576,7 +23596,7 @@ end
 --===========================================================================
 -- Trigger: ToKill2
 --
--- Любой триг может это вызвать, главное до этого задать LocalUni2
+-- ????? ???? ????? ??? ???????, ??????? ?? ????? ?????? LocalUni2
 --===========================================================================
 function Trig_ToKill2_Actions()
     RemoveUnitTimed(udg_LocalUnit2 , 2)
@@ -24014,12 +24034,12 @@ end
 --
 -- Abilities\Spells\Undead\Impale\ImpaleMissTarget.mdl
 --===========================================================================
--- ПЕРЕМЕННЫЕ ГЛОБАЛЬНЫЕ МЕНЯТЬ ТОЛЬКО ТУТ
+-- ?????????? ?????????? ?????? ?????? ???
 --===================================================================================================================================
--- основаня функция, тут ничего менять не нужно
+-- ???????? ???????, ??? ?????? ?????? ?? ?????
 --===================================================================================================================================
 --================================================================================================================================================================================
--- Этам 0 - доп функции
+-- ???? 0 - ??? ???????
 --================
 function UnUgolMT()
     return bj_RADTODEG * Atan2(y2 - y1, x2 - x1)
@@ -24032,17 +24052,17 @@ end
 --function UnParabolaZ takes real h, real d, real x returns real
  -- return (4 * h / d) * (d - x) * (x / d)
 --endfunction
---h - максимальная высота в прыжке на середине расстояния (x = d / 2),
---d - общее расстояние до цели
---x - расстояние от исходной цели до точки, где следует взять высоту по параболе.
+--h - ???????????? ?????? ? ?????? ?? ???????? ?????????? (x = d / 2),
+--d - ????? ?????????? ?? ????
+--x - ?????????? ?? ???????? ???? ?? ?????, ??? ??????? ????? ?????? ?? ????????.
 --================================================================================================================================================================================
--- Этам 1 - проверка скила
+-- ???? 1 - ???????? ?????
 --================
 function Trig_Undermining_Conditions()
     return GetSpellAbilityId() == UnSkill
 end
 --================================================================================================================================================================================
--- Этам 3 - подбрасываем врагов
+-- ???? 3 - ???????????? ??????
 --================
 function Trig_Undermining_move_units()
     local t= GetExpiredTimer()
@@ -24078,7 +24098,7 @@ function Trig_Undermining_move_units()
     un=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - двигаем героя
+-- ???? 2 - ??????? ?????
 --================
 function Trig_Undermining_move_hero()
     local t= GetExpiredTimer()
@@ -24098,18 +24118,18 @@ function Trig_Undermining_move_hero()
     local t1
     local h1
     ---------
-    x=dx + 70 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=dy + 70 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
-    --set w = UnParabolaZ(500, l, UnRastMT(x, x1, y, y1)) //вычисляем высоту
-    -- ищем конец пути
+    x=dx + 70 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=dy + 70 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
+    --set w = UnParabolaZ(500, l, UnRastMT(x, x1, y, y1)) //????????? ??????
+    -- ???? ????? ????
     if UnRastMT(x1 , dx , y1 , dy) > 70 and not IsTerrainPathable(x, y, PATHING_TYPE_FLYABILITY) then
-        -- двигаем юнита
+        -- ??????? ?????
         SetUnitX(GT, x)
         SetUnitY(GT, y)
         SetUnitFacing(GT, ugol)
         DestroyEffect(AddSpecialEffect("AbilitiesSpellsUndeadImpaleImpaleMissTarget.mdl", x, y))
         --------------------------------------
-        -- записываем юнитов в группу и подбрасываем их
+        -- ?????????? ?????? ? ?????? ? ???????????? ??
         GroupEnumUnitsInRange(gg, x, y, 150, nil)
         while true do
             un=FirstOfGroup(gg)
@@ -24151,7 +24171,7 @@ function Trig_Undermining_move_hero()
     t1=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - основная функция
+-- ???? 2 - ???????? ???????
 --================
 function Trig_Undermining_Actions()
     local GT= GetTriggerUnit()
@@ -24166,7 +24186,7 @@ function Trig_Undermining_Actions()
     --call BJDebugMsg("")
     SaveUnitHandle(Hash, h, 1, GT)
     SaveReal(Hash, h, 2, l)
-    -- проигрываем звук
+    -- ??????????? ????
     SetSoundPosition(gg_snd_ImpaleHit, x, y, 0)
     SetSoundVolume(gg_snd_ImpaleHit, PercentToInt(100, 127))
     PlaySoundBJ(gg_snd_ImpaleHit)
@@ -24177,7 +24197,7 @@ function Trig_Undermining_Actions()
     PauseUnit(GT, true)
     ShowUnit(GT, false)
     DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.055, true, Trig_Undermining_move_hero) --стартуем движение героя
+    TimerStart(t, 0.055, true, Trig_Undermining_move_hero) --???????? ???????? ?????
     ---------
     GT=nil
     t=nil
@@ -24193,10 +24213,10 @@ end
 -- Trigger: PassiveAdal
 --===========================================================================
 function Trig_PassiveAdal_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B084')) > 0 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetEventDamage() >= GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) --Её бафф
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B084')) > 0 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetEventDamage() >= GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) --?? ????
 end
 function Adal()
-    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1L6')) > 0 --Абилка
+    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1L6')) > 0 --??????
 end
 function Trig_PassiveAdal_Actions()
     local g= CreateGroup()
@@ -24204,7 +24224,7 @@ function Trig_PassiveAdal_Actions()
     local u2
     GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 500, Adal, 1)
     u2=FirstOfGroup(g)
-    if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1L6')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --Абилка
+    if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1L6')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --??????
         SetUnitManaBJ(u2, GetUnitState(u2, UNIT_STATE_MANA) - 50)
         SetUnitLifePercentBJ(u, 50)
         RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanResurrectResurrectTarget.mdl", GetUnitX(u), GetUnitY(u)) , 3)
@@ -24432,12 +24452,12 @@ function Trig_GruulSpell_Actions()
     Gruul[pi]=GetSpellAbilityUnit()
     EnableTrigger(gg_trg_RRR)
     
-    -- Ждать время отлёта юнитов 1.10+ 0.15 каждый лвл
+    -- ????? ????? ?????? ?????? 1.10+ 0.15 ?????? ???
     TriggerSleepAction(( 1.10 + ( 0.15 * I2R(GetUnitAbilityLevel(Gruul[pi], FourCC('A18Q'))) ) ))
     
     
     DisableTrigger(gg_trg_RRR)
-    -- Удалить переменную
+    -- ??????? ??????????
     Gruul[pi]=nil
 end
 --===========================================================================
@@ -24914,16 +24934,16 @@ end
 --===========================================================================
 -- Trigger: UltDanath
 --
--- Вот рабочий триггер. Никаких глобальных переменных.
--- В условиях: (Ability beng cast) равно ""
--- Описываю действия:
--- 1. Создаем локальную переменную юнита
--- 2. Даем юниту на которого применяется способность "", способность ""
--- 3. В локальную переменную юнита вписываем юнита на которого применена способность
--- 4. Сколько времени у юнита будет дополнительная способность
--- 5. По истечении времени забираем у юнита дополнительную способность
--- В 5 строке 'AEev' - это код способности 'Змеиная ловкость'
--- Если что-то не понятно - обращайся.
+-- ??? ??????? ???????. ??????? ?????????? ??????????.
+-- ? ????????: (Ability beng cast) ????? ""
+-- ???????? ????????:
+-- 1. ??????? ????????? ?????????? ?????
+-- 2. ???? ????? ?? ???????? ??????????? ??????????? "", ??????????? ""
+-- 3. ? ????????? ?????????? ????? ????????? ????? ?? ???????? ????????? ???????????
+-- 4. ??????? ??????? ? ????? ????? ?????????????? ???????????
+-- 5. ?? ????????? ??????? ???????? ? ????? ?????????????? ???????????
+-- ? 5 ?????? 'AEev' - ??? ??? ??????????? '??????? ????????'
+-- ???? ???-?? ?? ??????? - ?????????.
 -- by Dragonear for xgm.guru
 --===========================================================================
 function Trig_UltDanath_Actions()
@@ -25193,7 +25213,7 @@ end
 function Trig_EnterKazna_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     income[pi]=income[pi] + ( 100 + GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A0XV')) * 100 )
-    -- Прописывать также в главном триге экономики
+    -- ??????????? ????? ? ??????? ????? ?????????
 end
 --===========================================================================
 function InitTrig_EnterKazna()
@@ -25671,7 +25691,7 @@ end
 -- Trigger: BuidingThatSellRecruts
 --===========================================================================
 function Trig_BuidingThatSellRecruts_Conditions()
-    return GetUnitTypeId(GetConstructedStructure()) == FourCC('h0NX') -- Продающее здание, равкод
+    return GetUnitTypeId(GetConstructedStructure()) == FourCC('h0NX') -- ????????? ??????, ??????
 end
 function NewMember()
     
@@ -25698,8 +25718,8 @@ function Trig_BuidingThatSellRecruts_Actions()
     local uid= GetHandleId(u)
     local startCount= 1
     UnitAddAbility(u, FourCC('Asud'))
-    AddUnitToStock(u, FourCC('h0NC'), startCount, 3) --Юнит который продается
-    AddUnitToStock(u, FourCC('h0NL'), startCount, 3) --Юнит который продается
+    AddUnitToStock(u, FourCC('h0NC'), startCount, 3) --???? ??????? ?????????
+    AddUnitToStock(u, FourCC('h0NL'), startCount, 3) --???? ??????? ?????????
     
     TimerStart(t, 30, true, NewMember)
     SaveUnitHandle(Hash, id, 1, u)
@@ -25721,18 +25741,18 @@ end
 -- Trigger: BuidingSell
 --===========================================================================
 function Trig_BuidingSell_Conditions()
-    return GetUnitTypeId(GetSellingUnit()) == FourCC('h0NX') -- Продающее здание, равкод
+    return GetUnitTypeId(GetSellingUnit()) == FourCC('h0NX') -- ????????? ??????, ??????
 end
 function Trig_BuidingSell_Actions()
     local u= GetSellingUnit()
     local uid= GetHandleId(u)
     local currentCount= LoadInteger(Hash, uid, 1)
     SaveInteger(Hash, uid, 1, currentCount - 1)
-    RemoveUnitFromStock(u, FourCC('h0NC')) --Юнит который продается
-    RemoveUnitFromStock(u, FourCC('h0NL')) --Юнит который продается
+    RemoveUnitFromStock(u, FourCC('h0NC')) --???? ??????? ?????????
+    RemoveUnitFromStock(u, FourCC('h0NL')) --???? ??????? ?????????
     
-    AddUnitToStock(u, FourCC('h0NC'), currentCount - 1, 3) --Юнит который продается
-    AddUnitToStock(u, FourCC('h0NL'), currentCount - 1, 3) --Юнит который продается
+    AddUnitToStock(u, FourCC('h0NC'), currentCount - 1, 3) --???? ??????? ?????????
+    AddUnitToStock(u, FourCC('h0NL'), currentCount - 1, 3) --???? ??????? ?????????
     
     
 end
@@ -25749,12 +25769,12 @@ end
 --===========================================================================
 -- Trigger: JumpSTR
 --===========================================================================
--- ПЕРЕМЕННЫЕ ГЛОБАЛЬНЫЕ МЕНЯТЬ ТОЛЬКО ТУТ
+-- ?????????? ?????????? ?????? ?????? ???
 --===================================================================================================================================
--- основаня функция, тут ничего менять не нужно
+-- ???????? ???????, ??? ?????? ?????? ?? ?????
 --===================================================================================================================================
 --================================================================================================================================================================================
--- Этам 0 - доп функции
+-- ???? 0 - ??? ???????
 --================
 function JSTRUgolMT()
     return bj_RADTODEG * Atan2(y2 - y1, x2 - x1)
@@ -25767,16 +25787,16 @@ end
 function JSTRParabolaZ()
   return ( 4 * h / d ) * ( d - x ) * ( x / d )
 end
---h - максимальная высота в прыжке на середине расстояния (x = d / 2),
---d - общее расстояние до цели
---x - расстояние от исходной цели до точки, где следует взять высоту по параболе.
+--h - ???????????? ?????? ? ?????? ?? ???????? ?????????? (x = d / 2),
+--d - ????? ?????????? ?? ????
+--x - ?????????? ?? ???????? ???? ?? ?????, ??? ??????? ????? ?????? ?? ????????.
 --================================================================================================================================================================================
--- Этам 1 - проверка скила - винер тут все прыжки)))
+-- ???? 1 - ???????? ????? - ????? ??? ??? ??????)))
 --================
 function Trig_JumpSTR_Conditions()
 end
 --================================================================================================================================================================================
--- Этам 3 - двигаем врагов
+-- ???? 3 - ??????? ??????
 --================
 function Trig_JumpSTR_move_units()
     local t= GetExpiredTimer()
@@ -25787,8 +25807,8 @@ function Trig_JumpSTR_move_units()
     local x= GetUnitX(un)
     local y= GetUnitY(un)
     -- ---------
-    x=x + 10 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=y + 10 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
+    x=x + 10 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=y + 10 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
     if kol >= 0 and not IsTerrainPathable(x, y, PATHING_TYPE_FLYABILITY) then
         SetUnitX(un, x)
         SetUnitY(un, y)
@@ -25802,7 +25822,7 @@ function Trig_JumpSTR_move_units()
     t=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - двигаем героя
+-- ???? 2 - ??????? ?????
 --================
 function Trig_JumpSTR_move_hero()
     local t= GetExpiredTimer()
@@ -25830,13 +25850,13 @@ function Trig_JumpSTR_move_hero()
         MaxW=500
     end
     ---------
-    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
-    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --вычисляем высоту
+    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
+    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --????????? ??????
     
-    -- ищем конец пути
+    -- ???? ????? ????
     if JSTRRastMT(x1 , dx , y1 , dy) > 25 then --and not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
-        -- двигаем юнита
+        -- ??????? ?????
         SetUnitX(GT, x)
         SetUnitY(GT, y)
         SetUnitFacing(GT, ugol)
@@ -25855,7 +25875,7 @@ function Trig_JumpSTR_move_hero()
             if un == nil then break end
             lvl=GetUnitAbilityLevel(GT, JSTRSkill)
             
-            -- винер - проверка на героя
+            -- ????? - ???????? ?? ?????
             if IsUnitType(GT, UNIT_TYPE_HERO) then
                 uron=JSTRKofDmg1 * lvl * GetHeroStr(GT, true) + lvl * JSTRKofDmg2
             else
@@ -25866,7 +25886,7 @@ function Trig_JumpSTR_move_hero()
                 UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
                 DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
                 ----------
-                -- двигаем юнита в другую сторону от кастера
+                -- ??????? ????? ? ?????? ??????? ?? ???????
                 if JSTRBoolMove then
                     ugol=JSTRUgolMT(dx , GetUnitX(un) , dy , GetUnitY(un))
                     t1=CreateTimer()
@@ -25890,7 +25910,7 @@ function Trig_JumpSTR_move_hero()
     t1=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - основная функция
+-- ???? 2 - ???????? ???????
 --================
 function Trig_JumpSTR_Actions()
     local GT= GetTriggerUnit()
@@ -25916,7 +25936,7 @@ function Trig_JumpSTR_Actions()
     SaveReal(Hash, h, 4, x1)
     SaveReal(Hash, h, 5, y1)
     DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.025, true, Trig_JumpSTR_move_hero) --стартуем движение героя
+    TimerStart(t, 0.025, true, Trig_JumpSTR_move_hero) --???????? ???????? ?????
     ---------
     GT=nil
     --set g = null
@@ -26161,7 +26181,7 @@ end
 --===========================================================================
 -- Trigger: DiyW2
 --
--- Для очистки мультборда
+-- ??? ??????? ??????????
 --===========================================================================
 function Trig_DiyW2_Conditions()
     return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('w2a0')) > 0
@@ -26290,10 +26310,11 @@ function Trig_SpellMassAxes_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
+    bex = EnemEl
     GroupEnumUnitsInRangeOfLoc(g, l, 150, bex)
     
     if FirstOfGroup(g) == nil then
-        --Нету врагов
+        --???? ??????
         BlzStartUnitAbilityCooldown(caster, dammyAbility, 15)
         SetUnitState(caster, UNIT_STATE_MANA, GetUnitState(caster, UNIT_STATE_MANA) + 100 + 35 * level)
         
@@ -26321,7 +26342,6 @@ function Trig_SpellMassAxes_Actions()
     g=nil
     RemoveLocation(l)
     p=nil
-    DestroyBoolExpr(bex)
     u2=nil
     bex=nil
 end
@@ -26460,10 +26480,10 @@ end
 --===========================================================================
 -- Trigger: OgrimmCharge
 --===========================================================================
--- Этам 1 - проверка скила - винер тут все прыжки)))
+-- ???? 1 - ???????? ????? - ????? ??? ??? ??????)))
 --================
 --================================================================================================================================================================================
--- Этам 3 - двигаем врагов
+-- ???? 3 - ??????? ??????
 --================
 function Ogrimm2()
     local t= GetExpiredTimer()
@@ -26474,8 +26494,8 @@ function Ogrimm2()
     local x= GetUnitX(un)
     local y= GetUnitY(un)
     -- ---------
-    x=x + 10 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=y + 10 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
+    x=x + 10 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=y + 10 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
     if kol >= 0 and not IsTerrainPathable(x, y, PATHING_TYPE_FLYABILITY) then
         SetUnitX(un, x)
         SetUnitY(un, y)
@@ -26489,7 +26509,7 @@ function Ogrimm2()
     t=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - двигаем героя
+-- ???? 2 - ??????? ?????
 --================
 function Ogrimm1()
     local t= GetExpiredTimer()
@@ -26517,13 +26537,13 @@ function Ogrimm1()
         MaxW=500
     end
     ---------
-    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
-    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --вычисляем высоту
+    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
+    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --????????? ??????
     
-    -- ищем конец пути
+    -- ???? ????? ????
     if JSTRRastMT(x1 , dx , y1 , dy) > 25 then --and not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
-        -- двигаем юнита
+        -- ??????? ?????
         SetUnitX(GT, x)
         SetUnitY(GT, y)
         SetUnitFacing(GT, ugol)
@@ -26542,14 +26562,14 @@ function Ogrimm1()
             if un == nil then break end
             lvl=GetUnitAbilityLevel(GT, GetSpellAbilityId())
             
-            -- винер - проверка на героя
+            -- ????? - ???????? ?? ?????
             uron=1.3 * lvl * GetHeroStr(GT, true) + lvl * 50
             
             if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) then
                 UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
                 DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
                 ----------
-                -- двигаем юнита в другую сторону от кастера
+                -- ??????? ????? ? ?????? ??????? ?? ???????
                 
                 ugol=JSTRUgolMT(dx , GetUnitX(un) , dy , GetUnitY(un))
                 t1=CreateTimer()
@@ -26573,7 +26593,7 @@ function Ogrimm1()
     t1=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - основная функция
+-- ???? 2 - ???????? ???????
 --================
 function Trig_OgrimmCharge_Actions()
     local GT= GetTriggerUnit()
@@ -26599,7 +26619,7 @@ function Trig_OgrimmCharge_Actions()
     SaveReal(Hash, h, 4, x1)
     SaveReal(Hash, h, 5, y1)
     DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.025, true, Ogrimm1) --стартуем движение героя
+    TimerStart(t, 0.025, true, Ogrimm1) --???????? ???????? ?????
     ---------
     GT=nil
     --set g = null
@@ -26755,11 +26775,11 @@ end
 function Trig_SummonCase_Actions()
     local u= GetSummonedUnit()
     --call UnitRemoveTypeBJ( UNIT_TYPE_SUMMONED, GetSummonedUnit() )
-    UnitAddAbility(u, FourCC('A1HL')) --Абилка на обеспечение
+    UnitAddAbility(u, FourCC('A1HL')) --?????? ?? ???????????
     --call AddCountDis(u, GetPlayerId(GetOwningPlayer(u)))
     
     
-    -- Скелет идет к кастеру
+    -- ?????? ???? ? ???????
     if GetSummoningUnit() ~= nil then
         IssuePointOrder(u, "smart", GetUnitX(GetSummoningUnit()), GetUnitY(GetSummoningUnit()))
     end
@@ -26860,13 +26880,13 @@ function Trig_MeatDeal_Actions()
         
         
         
-        if healthMax > 5000 then --Титан из плоти
+        if healthMax > 5000 then --????? ?? ?????
             if id ~= FourCC('cD00') then
                 target=ReplaceUnit2(target , FourCC('cD00') , bj_UNIT_STATE_METHOD_RELATIVE)
             end
             
         
-        elseif healthMax > 2500 and id ~= FourCC('cD09') then --Мясной голем
+        elseif healthMax > 2500 and id ~= FourCC('cD09') then --?????? ?????
             
             if id ~= FourCC('cD09') or id ~= FourCC('cD14') then
                 if Random(1 , 2) then
@@ -26877,7 +26897,7 @@ function Trig_MeatDeal_Actions()
                 
             end
             
-        elseif healthMax > 1000 and id ~= FourCC('cD09') then --Поганище
+        elseif healthMax > 1000 and id ~= FourCC('cD09') then --????????
             
             if id ~= FourCC('cD10') then
                 target=ReplaceUnit2(target , FourCC('cD10') , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -26975,14 +26995,14 @@ function Trig_BoneDeal_Actions()
         
         
         
-        if healthMax > 2500 then --Титан из костей
+        if healthMax > 2500 then --????? ?? ??????
             if id ~= FourCC('cD23') then
                 target=ReplaceUnit2(target , FourCC('cD23') , bj_UNIT_STATE_METHOD_RELATIVE)
                 IssueImmediateOrder(target, "Locustswarm")
             end
             
             
-        elseif healthMax > 1250 and id ~= FourCC('cD09') then --Страж или привратник
+        elseif healthMax > 1250 and id ~= FourCC('cD09') then --????? ??? ??????????
             
             if id ~= FourCC('cD33') or id ~= FourCC('cD18') then
                 if Random(1 , 2) then
@@ -27224,10 +27244,11 @@ function Trig_MassIceArrow_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
+    bex = EnemEl
     GroupEnumUnitsInRangeOfLoc(g, l, 150, bex)
     
     if FirstOfGroup(g) == nil then
-        --Нету врагов
+        --???? ??????
         BlzStartUnitAbilityCooldown(GetTriggerUnit(), FourCC('A1HE'), 14)
         SetUnitState(GetTriggerUnit(), UNIT_STATE_MANA, GetUnitState(GetTriggerUnit(), UNIT_STATE_MANA) + 100 + 35 * level)
         
@@ -27255,7 +27276,6 @@ function Trig_MassIceArrow_Actions()
     g=nil
     RemoveLocation(l)
     p=nil
-    DestroyBoolExpr(bex)
     u2=nil
     bex=nil
 end
@@ -27296,17 +27316,17 @@ function Plague()
     local time= LoadInteger(Hash, id, 1)
     local e
     local u= LoadUnitHandle(Hash, id, 0)
-    --Начало
+    --??????
     if time == 0 and UnitAlive(u) and u ~= nil then
         UnitAddAbility(u, FourCC('A1HS'))
         e=AddSpecialEffectTargetUnitBJ("overhead", u, "CultOfDamnedPlagueCloudTargetLight.mdx")
         SaveEffectHandle(Hash, id, 2, e)
         
-    --Тикает
+    --??????
     elseif time < 30 and UnitAlive(u) and u ~= nil then
         SaveInteger(Hash, id, 1, time + 1)
         
-    --Конец
+    --?????
     else
         if UnitAlive(u) then
             income[LoadInteger(Hash, GetHandleId(u), 0)]=income[LoadInteger(Hash, GetHandleId(u), 0)] - 5
@@ -27329,7 +27349,7 @@ function Trig_PlagueOnBuilding_Actions()
     local u= GetSpellTargetUnit()
     if u ~= nil then
         if GetUnitAbilityLevel(u, FourCC('A1HS')) < 1 and IsPlayerEnemy(GetOwningPlayer(u), GetOwningPlayer(GetTriggerUnit())) then
-            --Начать
+            --??????
             
             if GetUnitFoodMade(u) > 0 then
                 income[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=income[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 5
@@ -27341,7 +27361,7 @@ function Trig_PlagueOnBuilding_Actions()
             SaveInteger(Hash, id, 1, 0)
             TimerStart(t, 1.00, true, Plague)
         else
-            --Продлить
+            --????????
             SaveInteger(Hash, id, 1, 1)
         
         end
@@ -27446,7 +27466,7 @@ end
 -- Trigger: Charge
 --===========================================================================
 --//================================================================================================================================================================================
---// Этам 3 - двигаем врагов
+--// ???? 3 - ??????? ??????
 --//================
 --function Trig_JumpSTR_move_units takes nothing returns nothing
 --    local timer t = GetExpiredTimer()
@@ -27457,8 +27477,8 @@ end
 --    local real x = GetUnitX(un)
 --    local real y = GetUnitY(un)
 --    // ---------
---    set x = x + 10 * Cos(ugol * bj_DEGTORAD) //вычисляем следующий х
---    set y = y + 10 * Sin(ugol * bj_DEGTORAD) //вычисляем следующий у
+--    set x = x + 10 * Cos(ugol * bj_DEGTORAD) //????????? ????????? ?
+--    set y = y + 10 * Sin(ugol * bj_DEGTORAD) //????????? ????????? ?
 --    if kol >= 0 and not IsTerrainPathable(x, y, PATHING_TYPE_FLYABILITY) then
 --        call SetUnitX(un,x)
 --        call SetUnitY(un,y)
@@ -27472,7 +27492,7 @@ end
 --    set t = null
 --endfunction
 --================================================================================================================================================================================
--- Этам 2 - двигаем героя
+-- ???? 2 - ??????? ?????
 --================
 function Trig_Charge_move_hero()
     local t= GetExpiredTimer()
@@ -27500,13 +27520,13 @@ function Trig_Charge_move_hero()
         MaxW=500
     end
     ---------
-    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
-    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --вычисляем высоту
+    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
+    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --????????? ??????
     
-    -- ищем конец пути
+    -- ???? ????? ????
     if JSTRRastMT(x1 , dx , y1 , dy) > 25 then --and not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
-        -- двигаем юнита
+        -- ??????? ?????
         SetUnitX(GT, x)
         SetUnitY(GT, y)
         SetUnitFacing(GT, ugol)
@@ -27525,7 +27545,7 @@ function Trig_Charge_move_hero()
             if un == nil then break end
             lvl=GetUnitAbilityLevel(GT, JSTRSkill)
             
-            -- винер - проверка на героя
+            -- ????? - ???????? ?? ?????
             if IsUnitType(GT, UNIT_TYPE_HERO) then
                 uron=JSTRKofDmg1 * lvl * GetHeroStr(GT, true) + lvl * JSTRKofDmg2
             else
@@ -27536,7 +27556,7 @@ function Trig_Charge_move_hero()
                 UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
                 DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
                 ----------
-                -- двигаем юнита в другую сторону от кастера
+                -- ??????? ????? ? ?????? ??????? ?? ???????
                 if JSTRBoolMove then
                     ugol=JSTRUgolMT(dx , GetUnitX(un) , dy , GetUnitY(un))
                     t1=CreateTimer()
@@ -27560,7 +27580,7 @@ function Trig_Charge_move_hero()
     t1=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - основная функция
+-- ???? 2 - ???????? ???????
 --================
 function Trig_Charge_Actions()
     local GT= GetTriggerUnit()
@@ -27586,7 +27606,7 @@ function Trig_Charge_Actions()
     SaveReal(Hash, h, 4, x1)
     SaveReal(Hash, h, 5, y1)
     --call DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.025, true, Trig_Charge_move_hero) --стартуем движение героя
+    TimerStart(t, 0.025, true, Trig_Charge_move_hero) --???????? ???????? ?????
     ---------
     GT=nil
     --set g = null
@@ -27716,7 +27736,7 @@ function Trig_YarostBeg_Actions()
     
     SetUnitLifePercentBJ(u, GetUnitLifePercent(u) * 0.75)
     
-    UnitAddAbility(u, FourCC('A1GS')) -- Абилка на урон
+    UnitAddAbility(u, FourCC('A1GS')) -- ?????? ?? ????
     RemoveAbilityTimed(u , FourCC('A1GS') , 24.5)
     --call UnitAddAbility(u,'A1G2')
     --call BlzStartUnitAbilityCooldown(u,'A1G2',1)
@@ -27743,14 +27763,14 @@ function Trig_RitualPoglocenia_Actions()
     local id= GetUnitTypeId(u2)
     
     
-    --Маги
+    --????
     if id == FourCC('o052') or id == FourCC('o051') then
         u2=ReplaceUnit2(u2 , FourCC('o05O') , bj_UNIT_STATE_METHOD_RELATIVE)
         
-    --танки
+    --?????
     elseif id == FourCC('o04Z') or id == FourCC('o04X') or id == FourCC('o04V') or id == FourCC('o050') then
         u2=ReplaceUnit2(u2 , FourCC('o05M') , bj_UNIT_STATE_METHOD_RELATIVE)
-    --дд
+    --??
     elseif id == FourCC('o04W') or id == FourCC('o04Y') or id == FourCC('o053') then
         u2=ReplaceUnit2(u2 , FourCC('o05N') , bj_UNIT_STATE_METHOD_RELATIVE)
     else
@@ -27809,7 +27829,7 @@ end
 --===========================================================================
 function Trig_BeFaster_Conditions()
     
-    return GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1F9')) > 0 or GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1G2')) > 0 -- Тут абилка иконка
+    return GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1F9')) > 0 or GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1G2')) > 0 -- ??? ?????? ??????
     
     
 end
@@ -27880,6 +27900,7 @@ function Trig_MassSetca_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
+    bex = EnemEl
     GroupEnumUnitsInRangeOfLoc(g, l, 100 + 45 * level, bex)
     
     RemoveLocation(l)
@@ -27906,7 +27927,6 @@ function Trig_MassSetca_Actions()
     g=nil
     RemoveLocation(l)
     p=nil
-    DestroyBoolExpr(bex)
     u2=nil
     bex=nil
 end
@@ -27937,6 +27957,7 @@ function Trig_MassFrenzy_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
+    bex = FFrenzy
     GroupEnumUnitsInRangeOfLocCounted(g, l, 400, bex, 4)
     
     RemoveLocation(l)
@@ -27964,7 +27985,6 @@ function Trig_MassFrenzy_Actions()
     g=nil
     RemoveLocation(l)
     p=nil
-    DestroyBoolExpr(bex)
     u2=nil
     bex=nil
 end
@@ -28020,8 +28040,8 @@ end
 function BlackSpear_Actions()
     
     --Black spear
-    SetPlayerTechMaxAllowedSwap(FourCC('o04P'), - 1, GetOwningPlayer(GetTriggerUnit())) -- маги
-    SetPlayerTechMaxAllowedSwap(FourCC('O05L'), 1, GetOwningPlayer(GetTriggerUnit())) --Бвон
+    SetPlayerTechMaxAllowedSwap(FourCC('o04P'), - 1, GetOwningPlayer(GetTriggerUnit())) -- ????
+    SetPlayerTechMaxAllowedSwap(FourCC('O05L'), 1, GetOwningPlayer(GetTriggerUnit())) --????
     
     SetPlayerAbilityAvailableBJ(false, FourCC('A1EP'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1EQ'), GetOwningPlayer(GetTriggerUnit()))
@@ -28046,8 +28066,8 @@ end
 function Gurubashy_Actions()
     
     --Gurubashy
-    SetPlayerTechMaxAllowedSwap(FourCC('o04N'), - 1, GetOwningPlayer(GetTriggerUnit())) --Колдун
-    SetPlayerTechMaxAllowedSwap(FourCC('O055'), 1, GetOwningPlayer(GetTriggerUnit())) --Хаккар
+    SetPlayerTechMaxAllowedSwap(FourCC('o04N'), - 1, GetOwningPlayer(GetTriggerUnit())) --??????
+    SetPlayerTechMaxAllowedSwap(FourCC('O055'), 1, GetOwningPlayer(GetTriggerUnit())) --??????
     
     SetPlayerAbilityAvailableBJ(false, FourCC('A1EP'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1EQ'), GetOwningPlayer(GetTriggerUnit()))
@@ -28110,6 +28130,7 @@ function Trig_MassSglaz_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
+    bex = EnemEl
     GroupEnumUnitsInRangeOfLoc(g, l, 110 + 50 * level, bex)
     
     RemoveLocation(l)
@@ -28135,7 +28156,6 @@ function Trig_MassSglaz_Actions()
     g=nil
     RemoveLocation(l)
     p=nil
-    DestroyBoolExpr(bex)
     u2=nil
     bex=nil
 end
@@ -28308,7 +28328,7 @@ end
 --===========================================================================
 function Trig_DamageMore_Conditions()
     
-    return GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1D0')) > 0 -- Тут абилка иконка
+    return GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1D0')) > 0 -- ??? ?????? ??????
     
     
 end
@@ -28385,11 +28405,11 @@ function Trig_SpellGiveQSpell_Actions()
     --call DisplayTextToPlayer(Player(0),0,0,"2")
     TriggerSleepAction(0.5)
     if GetUnitAbilityLevel(u, FourCC('A1EZ')) > 0 then
-        --Дух
+        --???
         UnitRemoveAbility(u, FourCC('A1EW'))
         BlzUnitHideAbility(u, FourCC('A1EV'), false)
     else
-        --Материальныей мир
+        --????????????? ???
         UnitAddAbility(u, FourCC('A1EW'))
         SetUnitAbilityLevel(u, FourCC('A1EW'), GetUnitAbilityLevel(u, FourCC('A1EV')))
         BlzUnitHideAbility(u, FourCC('A1EV'), true)
@@ -28746,7 +28766,7 @@ function BrokenBlood()
         udg_LocalReal2=RMaxBJ(2.5, damage + 0.25)
         ExecuteFunc("BrokenBlood")
     end
-    --С шансом 50% распрастранится еще
+    --? ?????? 50% ??????????????? ???
     if Random(1 , 2) then
         u2=FirstOfGroup(g)
         if u2 ~= nil and UnitAlive(u2) then
@@ -28889,7 +28909,7 @@ function AT1Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     a[0]=0
-    -- Штормград простой
+    -- ????????? ???????
     
     if GetPlayerTechCount(p, FourCC('R0H6'), true) < 1 then
         i=4
@@ -28912,12 +28932,12 @@ function AT1Count(p)
     
     end
     
-    --Лордеронец
+    --??????????
     if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         i=1
         b=1
         
-        -- интеграция лордеронцев
+        -- ?????????? ???????????
         if GetPlayerTechCount(p, FourCC('R0HV'), true) > 1 then
             i=i + 2
         end
@@ -29010,7 +29030,7 @@ function AT2Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    -- Штормград простой
+    -- ????????? ???????
     a[0]=0
     i=4
     while true do
@@ -29106,7 +29126,7 @@ function AT3Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    -- Штормград простой
+    -- ????????? ???????
     a[0]=0
     i=4
     while true do
@@ -29118,7 +29138,7 @@ function AT3Count(p)
 --    
     
     
-    -- Паладин церкви
+    -- ??????? ??????
     if GetPlayerTechCount(p, FourCC('R0H7'), true) == 1 then
         i=2
         b=1
@@ -29132,7 +29152,7 @@ function AT3Count(p)
         end
     end
     
-        -- Ветеран 2 войны
+        -- ??????? 2 ?????
     if GetPlayerTechCount(p, FourCC('R0HN'), true) == 1 then
         i=1
         b=2
@@ -29184,7 +29204,7 @@ function AT3Count(p)
         --Worgen
         i=1
         b=1
-        --Араторская
+        --??????????
         if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 1
         end
@@ -29198,7 +29218,7 @@ function AT3Count(p)
         end
     end
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -29212,7 +29232,7 @@ function AT3Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -29226,7 +29246,7 @@ function AT3Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -29304,7 +29324,7 @@ function ACavCount(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    -- Штормград простой
+    -- ????????? ???????
     a[0]=0
     i=4
     while true do
@@ -29315,7 +29335,7 @@ function ACavCount(p)
     end
     
     if GetPlayerTechCount(p, FourCC('R0H6'), true) > 0 then
-        -- Штормград грифон
+        -- ????????? ??????
         b=1
         i=3
         while true do
@@ -29327,7 +29347,7 @@ function ACavCount(p)
     end
     
     if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
-        --Лордеронец
+        --??????????
         i=1
         b=1
         
@@ -29346,7 +29366,7 @@ function ACavCount(p)
     
     
     if GetPlayerTechCount(p, FourCC('R0HJ'), true) > 0 then
-        -- Штормград грифон
+        -- ????????? ??????
         b=1
         i=3
         while true do
@@ -29359,7 +29379,7 @@ function ACavCount(p)
     
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -29373,7 +29393,7 @@ function ACavCount(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -29387,7 +29407,7 @@ function ACavCount(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -29505,7 +29525,7 @@ function AK1Count(p)
         end
     end
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -29519,7 +29539,7 @@ function AK1Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -29533,7 +29553,7 @@ function AK1Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -29629,7 +29649,7 @@ function AK2Count(p)
     -- Human
     i=1
     b=1
-    --Араторская прибавка
+    --?????????? ????????
         if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 2
         end
@@ -29641,7 +29661,7 @@ function AK2Count(p)
         if b >= i then break end
     end
     
-    --Ворген
+    --??????
     if GetPlayerTechCount(p, FourCC('R0H9'), true) == 1 and GetPlayerTechCount(p, FourCC('R0EH'), true) < 1 then
         i=3
         b=1
@@ -29658,7 +29678,7 @@ function AK2Count(p)
     
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -29672,7 +29692,7 @@ function AK2Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -29686,7 +29706,7 @@ function AK2Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -29764,7 +29784,7 @@ function AK3Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    -- Штормград простой
+    -- ????????? ???????
     a[0]=0
     i=4
     while true do
@@ -29775,11 +29795,11 @@ function AK3Count(p)
     end
     
     if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
-        --Лордеронец
+        --??????????
         i=1
         b=1
         
-        -- интеграция лордеронцев
+        -- ?????????? ???????????
         if GetPlayerTechCount(p, FourCC('R0HV'), true) > 1 then
             i=i + 2
         end
@@ -29815,7 +29835,7 @@ function AK3Count(p)
         --Kultiras 
         i=1
         b=1
-        --Араторская прибавка
+        --?????????? ????????
         if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 1
         end
@@ -29830,7 +29850,7 @@ function AK3Count(p)
     
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -29844,7 +29864,7 @@ function AK3Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -29858,7 +29878,7 @@ function AK3Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -29980,7 +30000,7 @@ function AM1Count(p)
     --Human
     i=1
     b=1
-    --Араторская прибавка
+    --?????????? ????????
     if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
         i=i + 1
     end
@@ -30008,7 +30028,7 @@ function AM1Count(p)
     end
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -30022,7 +30042,7 @@ function AM1Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -30036,7 +30056,7 @@ function AM1Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -30175,7 +30195,7 @@ function AM2Count(p)
         end
     end
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -30189,7 +30209,7 @@ function AM2Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -30203,7 +30223,7 @@ function AM2Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -30282,14 +30302,14 @@ function AM3Count(p)
     local pi= GetPlayerId(p)
     a[0]=0
     
-    -- ШРУ
+    -- ???
     if GetPlayerTechCount(p, FourCC('R0HA'), true) >= 1 then
         
         i=4
         b=0
         
         
-        --Араторская прибавка
+        --?????????? ????????
         if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 1
         end
@@ -30306,7 +30326,7 @@ function AM3Count(p)
         --Dranay
         i=1
         b=1
-        -- Левые ветки
+        -- ????? ?????
         if GetPlayerTechCount(p, FourCC('R0HE'), true) + GetPlayerTechCount(p, FourCC('R0HF'), true) > 0 then
             i=i + 2
         end
@@ -30324,7 +30344,7 @@ function AM3Count(p)
         --Dalaran
         i=3
         b=0
-        --Араторская прибавка
+        --?????????? ????????
         if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 2
         end
@@ -30419,7 +30439,7 @@ function AE1Count(p)
     --Cannon
     i=1
     b=1
-    --Араторская прибавка
+    --?????????? ????????
     if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
         i=i + 3
     end
@@ -30433,7 +30453,7 @@ function AE1Count(p)
     
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -30447,7 +30467,7 @@ function AE1Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -30461,7 +30481,7 @@ function AE1Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -30587,7 +30607,7 @@ function AE2Count(p)
             if b >= i then break end
         end
     end
---    //Лордеронец
+--    //??????????
 --    set i = 1 
 --    set b = 1
 --    
@@ -30601,7 +30621,7 @@ function AE2Count(p)
     
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -30615,7 +30635,7 @@ function AE2Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -30629,7 +30649,7 @@ function AE2Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -30707,7 +30727,7 @@ function AN1Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    -- Шаблон флота
+    -- ?????? ?????
     a[0]=0
     i=4
     while true do
@@ -30718,7 +30738,7 @@ function AN1Count(p)
     end
     
     
-    -- Галеоны култираса
+    -- ??????? ?????????
     if GetPlayerTechCount(p, FourCC('R0HD'), true) >= 1 and GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         i=3
         b=1
@@ -30736,7 +30756,7 @@ function AN1Count(p)
     
     
 --    
---    //Лордеронец
+--    //??????????
 --    set i = 1 
 --    set b = 1
 --    
@@ -30750,7 +30770,7 @@ function AN1Count(p)
     
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -30764,7 +30784,7 @@ function AN1Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -30778,7 +30798,7 @@ function AN1Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -30856,7 +30876,7 @@ function AN2Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    -- Шаблон линкора
+    -- ?????? ???????
     a[0]=0
     i=4
     while true do
@@ -30866,7 +30886,7 @@ function AN2Count(p)
             if b >= i then break end
     end
     
---    //Лордеронец
+--    //??????????
 --    set i = 1 
 --    set b = 1
 --    
@@ -30880,7 +30900,7 @@ function AN2Count(p)
     
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -30894,7 +30914,7 @@ function AN2Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -30908,7 +30928,7 @@ function AN2Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -31009,7 +31029,7 @@ function Trig_OldAllianceForever_Actions()
     local pi= GetPlayerId(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] - 15
     
-    --Запретил ветки
+    --???????? ?????
     SetPlayerTechMaxAllowed(p, FourCC('R0HS'), 0)
     SetPlayerTechMaxAllowed(p, FourCC('R0HR'), 0)
     SetPlayerTechMaxAllowed(p, FourCC('R0HQ'), 0)
@@ -31164,7 +31184,7 @@ end
 --===========================================================================
 -- Trigger: EndBranch
 --
--- Закрывает дальнейшее общее обучение
+-- ????????? ?????????? ????? ????????
 --===========================================================================
 function EndBranch()
     --New Allies
@@ -31276,7 +31296,7 @@ function Trig_APandarens_Actions()
     if GetPlayerTechCount(p, FourCC('R001'), true) < 1 then
         SetPlayerTechMaxAllowed(p, FourCC('R0HE'), 1)
         
-        --Союз равных
+        --???? ??????
         if GetPlayerTechCount(p, FourCC('R0HD'), true) > 0 then
             SetPlayerTechMaxAllowed(p, FourCC('R0HF'), 1)
         end
@@ -31547,12 +31567,12 @@ function Trig_Kultiras_Actions()
     udg_MainPrice[pi]=udg_MainPrice[pi] + 3
     
     if GetPlayerTechCount(p, FourCC('R001'), true) < 1 then
-        --Союз равных
+        --???? ??????
         if GetPlayerTechCount(p, FourCC('R0HB'), true) > 0 then
             SetPlayerTechMaxAllowed(p, FourCC('R0HF'), 1)
         end
         
-        --Союз аратора
+        --???? ???????
         if GetPlayerTechCount(p, FourCC('R0H7'), true) > 0 then
             SetPlayerTechMaxAllowed(p, FourCC('R0HG'), 1)
         end
@@ -31751,7 +31771,7 @@ function Trig_FinHoly_Actions()
     if GetPlayerTechCount(p, FourCC('R001'), true) < 1 then
         SetPlayerTechMaxAllowed(p, FourCC('R0HH'), 1)
     
-        --Союз аратора
+        --???? ???????
         if GetPlayerTechCount(p, FourCC('R0HD'), true) > 0 then
             SetPlayerTechMaxAllowed(p, FourCC('R0HG'), 1)
         end
@@ -31800,7 +31820,7 @@ function Trig_StormwindFirst_Actions()
     
     
     
-    -- Бонусы левая 
+    -- ?????? ????? 
     if GetPlayerTechCount(p, FourCC('R0HS'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
     end
@@ -31811,7 +31831,7 @@ function Trig_StormwindFirst_Actions()
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
     end
     
-    --Центр
+    --?????
     if GetPlayerTechCount(p, FourCC('R0H9'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
     end
@@ -31988,6 +32008,7 @@ function Trig_MassMolot_Actions()
     local l= GetUnitLoc(GetTriggerUnit())
     local p= GetOwningPlayer(GetTriggerUnit())
     
+    local bex = EnemEl
     local level= GetUnitAbilityLevelSwapped(FourCC('AHtb'), GetTriggerUnit())
     local g= CreateGroup()
     local u
@@ -32019,7 +32040,6 @@ function Trig_MassMolot_Actions()
     g=nil
     RemoveLocation(l)
     p=nil
-    DestroyBoolExpr(bex)
     u2=nil
     bex=nil
 end
@@ -32036,7 +32056,7 @@ end
 -- Trigger: VarianCharge
 --===========================================================================
 --================================================================================================================================================================================
--- Этам 2 - двигаем героя
+-- ???? 2 - ??????? ?????
 --================
 function Trig_Charge_move_heroV()
     local t= GetExpiredTimer()
@@ -32064,13 +32084,13 @@ function Trig_Charge_move_heroV()
         MaxW=500
     end
     ---------
-    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
-    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --вычисляем высоту
+    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
+    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --????????? ??????
     
-    -- ищем конец пути
+    -- ???? ????? ????
     if JSTRRastMT(x1 , dx , y1 , dy) > 25 then --and not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
-        -- двигаем юнита
+        -- ??????? ?????
         SetUnitX(GT, x)
         SetUnitY(GT, y)
         SetUnitFacing(GT, ugol)
@@ -32089,7 +32109,7 @@ function Trig_Charge_move_heroV()
             if un == nil then break end
             lvl=GetUnitAbilityLevel(GT, JSTRSkill)
             
-            -- винер - проверка на героя
+            -- ????? - ???????? ?? ?????
             if IsUnitType(GT, UNIT_TYPE_HERO) then
                 uron=JSTRKofDmg1 * lvl * 0.75 * GetHeroStr(GT, true) + lvl * JSTRKofDmg2
             else
@@ -32100,7 +32120,7 @@ function Trig_Charge_move_heroV()
                 UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
                 DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
                 ----------
-                -- двигаем юнита в другую сторону от кастера
+                -- ??????? ????? ? ?????? ??????? ?? ???????
                 if JSTRBoolMove then
                     ugol=JSTRUgolMT(dx , GetUnitX(un) , dy , GetUnitY(un))
                     t1=CreateTimer()
@@ -32124,7 +32144,7 @@ function Trig_Charge_move_heroV()
     t1=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - основная функция
+-- ???? 2 - ???????? ???????
 --================
 function Trig_VarianCharge_Actions()
     local GT= GetTriggerUnit()
@@ -32150,7 +32170,7 @@ function Trig_VarianCharge_Actions()
     SaveReal(Hash, h, 4, x1)
     SaveReal(Hash, h, 5, y1)
     --call DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.025, true, Trig_Charge_move_heroV) --стартуем движение героя
+    TimerStart(t, 0.025, true, Trig_Charge_move_heroV) --???????? ???????? ?????
     ---------
     GT=nil
     --set g = null
@@ -32627,6 +32647,7 @@ end
 function Trig_MassInvis_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
+    udg_Boolexpr = MI2
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 650, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -33135,6 +33156,7 @@ function Trig_MassMindControl2_Func007A()
 end
 function Trig_MassMindControl2_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
+    udg_Boolexpr = Trig_MassMindControl2_Func002002
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 225, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -36279,7 +36301,7 @@ function T1Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    --1 юнит
+    --1 ????
     a[0]=0
     i=4
     while true do
@@ -36288,7 +36310,7 @@ function T1Count(p)
             b=b + 1
             if b >= i then break end
     end
-    --2 юнит Черной гора
+    --2 ???? ?????? ????
     if GetPlayerTechCount(p, FourCC('R0D1'), true) == 1 and GetPlayerTechCount(p, FourCC('R0EH'), true) < 1 then
         i=1
         b=1
@@ -36301,7 +36323,7 @@ function T1Count(p)
             if b >= i then break end
         end
     end
-    --3 юнит - эльфы
+    --3 ???? - ?????
     if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=1
         b=1
@@ -36314,7 +36336,7 @@ function T1Count(p)
             if b >= i then break end
         end
     end
-    --4 юнит андеды
+    --4 ???? ??????
     if GetPlayerTechCount(p, FourCC('R0D3'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
@@ -36399,12 +36421,12 @@ function T2Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    --1 юнит
+    --1 ????
     a[0]=0
     
     b=0
     i=2
-    while true do --Орк
+    while true do --???
             a[0]=a[0] + 1
             a[a[0]]=FourCC('o01Q')
             b=b + 1
@@ -36413,7 +36435,7 @@ function T2Count(p)
     
     b=0
     i=1
-    while true do --Огр
+    while true do --???
             a[0]=a[0] + 1
             a[a[0]]=FourCC('o01O')
             b=b + 1
@@ -36499,12 +36521,12 @@ function T2bCount(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    --1 юнит
+    --1 ????
     a[0]=0
     
     b=0
     i=5
-    while true do --Орк
+    while true do --???
             a[0]=a[0] + 1
             a[a[0]]=FourCC('o02A')
             b=b + 1
@@ -36513,7 +36535,7 @@ function T2bCount(p)
     
     b=0
     i=2
-    while true do --Огр
+    while true do --???
             a[0]=a[0] + 1
             a[a[0]]=FourCC('o00A')
             b=b + 1
@@ -36587,19 +36609,19 @@ function TCavCount(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    --1 юнит
+    --1 ????
     a[0]=0
     
     b=0
     i=3
-    while true do --Орк
+    while true do --???
             a[0]=a[0] + 1
             a[a[0]]=FourCC('o027')
             b=b + 1
             if b >= i then break end
     end
     
-    --3 юнит - эльфы
+    --3 ???? - ?????
     if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=1
         b=1
@@ -36613,7 +36635,7 @@ function TCavCount(p)
         end
     end
     
-    --Драконья пасть
+    --???????? ?????
     if GetPlayerTechCount(p, FourCC('R0E1'), true) == 1 and GetPlayerTechCount(p, FourCC('R0EH'), true) < 1 then
         i=1
         b=1
@@ -36626,7 +36648,7 @@ function TCavCount(p)
             if b >= i then break end
         end
     end
-    --Магнатавр
+    --?????????
     if GetPlayerTechCount(p, FourCC('R0E5'), true) == 1 then
         i=2
         b=1
@@ -36709,13 +36731,13 @@ function T3Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    --1 юнит
+    --1 ????
     a[0]=0
     
     if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         b=0
         i=5
-        while true do -- Таурен
+        while true do -- ??????
                 a[0]=a[0] + 1
                 a[a[0]]=FourCC('o01L')
                 
@@ -36726,7 +36748,7 @@ function T3Count(p)
     end
     b=0
     i=2
-    while true do -- Огр-воитель
+    while true do -- ???-???????
             a[0]=a[0] + 1
             a[a[0]]=FourCC('o01M')
             b=b + 1
@@ -36807,7 +36829,7 @@ function Trig_K1T4_Actions()
     b=(CommonHash[pi]["T3" .. i] or 0)
     --
     
-    --Тен Тотем
+    --??? ?????
     if b == FourCC('o01L') and Random(1 , 25) then
         b=FourCC('o032')
     end
@@ -36848,7 +36870,7 @@ function K1Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    --1 юнит
+    --1 ????
     a[0]=0
     
     -- Troll
@@ -36862,7 +36884,7 @@ function K1Count(p)
         end
     end
     
-    --Орк
+    --???
     b=0
     i=2
     while true do
@@ -37094,7 +37116,7 @@ function K2bCount(p)
         b=b + 1
         if b >= i then break end
     end
-    --снайпер 2
+    --??????? 2
     if GetPlayerTechCount(p, FourCC('R0E4'), true) >= 1 then
         i=1
         b=1
@@ -37276,11 +37298,11 @@ function Trig_KM1_Actions()
     local pi= GetPlayerId(p)
     
     a[0]=0
-    --1 юнит
+    --1 ????
     if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         
         i=5
-        while true do --Шаман
+        while true do --?????
                 a[0]=a[0] + 1
                 a[a[0]]=FourCC('o01J')
                 b=b + 1
@@ -37289,7 +37311,7 @@ function Trig_KM1_Actions()
     else
         
         i=4
-        while true do --Колдун
+        while true do --??????
                 a[0]=a[0] + 1
                 a[a[0]]=FourCC('o02G')
                 b=b + 1
@@ -37298,7 +37320,7 @@ function Trig_KM1_Actions()
     
     end
     
-    -- Духостранник
+    -- ????????????
     if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         b=1
         i=3
@@ -37313,7 +37335,7 @@ function Trig_KM1_Actions()
     
     b=1
     i=2
-    while true do --Огр-маг
+    while true do --???-???
             a[0]=a[0] + 1
             a[a[0]]=FourCC('o01K')
             b=b + 1
@@ -37321,7 +37343,7 @@ function Trig_KM1_Actions()
     end
     
     
---    //Драконья пасть - колдун
+--    //???????? ????? - ??????
 --    if GetPlayerTechCount(p,'R0E1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -37336,7 +37358,7 @@ function Trig_KM1_Actions()
 --
 --    endif
     
-    -- Зачарователь
+    -- ????????????
     if GetPlayerTechCount(p, FourCC('R0F4'), true) >= 1 then
         i=2
         b=1
@@ -37392,11 +37414,11 @@ function Trig_KM2_Actions()
     local pi= GetPlayerId(p)
     
     
-    --1 юнит
+    --1 ????
     a[0]=0
   
   
-    -- Магистр
+    -- ???????
     if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
@@ -37409,7 +37431,7 @@ function Trig_KM2_Actions()
             if b >= i then break end
         end
     end
-    -- Темный шаман
+    -- ?????? ?????
     if GetPlayerTechCount(p, FourCC('R0E9'), true) == 1 then
         i=2
         b=1
@@ -37468,11 +37490,11 @@ function Trig_KM3_Actions()
     local pi= GetPlayerId(p)
     a[0]=0
     
-    --1 юнит
+    --1 ????
     if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         
         i=4
-        while true do --Знахарь
+        while true do --???????
                 a[0]=a[0] + 1
                 a[a[0]]=FourCC('o024')
                 b=b + 1
@@ -37481,7 +37503,7 @@ function Trig_KM3_Actions()
     else
         
         i=3
-        while true do --Темный маг
+        while true do --?????? ???
                 a[0]=a[0] + 1
                 a[a[0]]=FourCC('o02L')
                 b=b + 1
@@ -37493,7 +37515,7 @@ function Trig_KM3_Actions()
     
     end
     
-    -- Ведьмак
+    -- ???????
     if GetPlayerTechCount(p, FourCC('R0D2'), true) >= 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=1
         b=2
@@ -37507,7 +37529,7 @@ function Trig_KM3_Actions()
         end
     end
     
-    -- Медик
+    -- ?????
     if GetPlayerTechCount(p, FourCC('R0E4'), true) >= 1 then
         i=1
         b=2
@@ -37578,7 +37600,7 @@ function Trig_TechT1_Actions()
     local pi= GetPlayerId(p)
     a[0]=0
     
-    --1 юнит
+    --1 ????
     if GetPlayerTechCount(p, FourCC('R0EA'), true) < 1 then
         
         b=0
@@ -37602,7 +37624,7 @@ function Trig_TechT1_Actions()
         end
     
     end
-    --3 юнит - эльфы ballista
+    --3 ???? - ????? ballista
     if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=1
         b=1
@@ -37658,7 +37680,7 @@ function Trig_TechT2_Actions()
     local pi= GetPlayerId(p)
     
     
-    --1 юнит
+    --1 ????
     a[0]=0
     
     --blood elves arcane guard
@@ -37728,7 +37750,7 @@ function Trig_NavyHeavy_Actions()
     local pi= GetPlayerId(p)
     a[0]=0
     
-    --1 юнит
+    --1 ????
     if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         
         b=0
@@ -37752,7 +37774,7 @@ function Trig_NavyHeavy_Actions()
         end
     
     end
-    --Отреки
+    --??????
     if GetPlayerTechCount(p, FourCC('R0D3'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
@@ -37808,7 +37830,7 @@ function Trig_NavyLight_Actions()
     local pi= GetPlayerId(p)
     a[0]=0
     
-    --1 юнит
+    --1 ????
     b=0
     i=4
     while true do -- Fregat
@@ -37817,7 +37839,7 @@ function Trig_NavyLight_Actions()
             b=b + 1
             if b >= i then break end
     end
-    --4 юнит андеды
+    --4 ???? ??????
     if GetPlayerTechCount(p, FourCC('R0D3'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
@@ -37831,7 +37853,7 @@ function Trig_NavyLight_Actions()
         end
     end
     
-    --4 юнит андеды
+    --4 ???? ??????
     if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
@@ -37846,7 +37868,7 @@ function Trig_NavyLight_Actions()
     end
     
     
-    --Зандалары
+    --?????????
     if GetPlayerTechCount(p, FourCC('R0F3'), true) == 1 then
         i=2
         b=1
@@ -37860,7 +37882,7 @@ function Trig_NavyLight_Actions()
         end
     end
     
-    --Зандалары
+    --?????????
     if GetPlayerTechCount(p, FourCC('R0E4'), true) == 1 then
         i=2
         b=1
@@ -37908,7 +37930,7 @@ function Trig_TrallHordeForever_Actions()
     local g= CreateGroup()
     udg_MainPrice[pi]=udg_MainPrice[pi] - 15
     
-    --Запретил ветки
+    --???????? ?????
     SetPlayerTechMaxAllowed(p, FourCC('R0DY'), 0)
     SetPlayerTechMaxAllowed(p, FourCC('R0DX'), 0)
     SetPlayerTechMaxAllowed(p, FourCC('R0DZ'), 0)
@@ -38110,8 +38132,8 @@ function Trig_BloodElf_Actions()
     
     
     
-    SetPlayerTechResearched(p, FourCC('R0E8'), 1) -- Разрешает особую технику
-    SetPlayerTechResearched(p, FourCC('R0E7'), 1) --Разрешает дд
+    SetPlayerTechResearched(p, FourCC('R0E8'), 1) -- ????????? ?????? ???????
+    SetPlayerTechResearched(p, FourCC('R0E7'), 1) --????????? ??
     SetPlayerTechMaxAllowed(p, FourCC('R0EE'), 1)
     
     p=nil
@@ -38225,6 +38247,7 @@ function Trig_CommonHome_Actions()
     
     --End other races
     g=CreateGroup()
+    udg_Boolexpr = NoneRadicals
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
     while true do
         u=FirstOfGroup(g)
@@ -38238,7 +38261,7 @@ function Trig_CommonHome_Actions()
     
     
     
-    -- Бонусы ЧГ -
+    -- ?????? ?? -
     if GetPlayerTechCount(p, FourCC('R0D1'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 3
         --set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 5
@@ -38247,7 +38270,7 @@ function Trig_CommonHome_Actions()
     SetPlayerTechResearched(p, FourCC('R0D1'), 2)
      
     
-    -- Бонусы Драконьей пасти  -
+    -- ?????? ????????? ?????  -
     if GetPlayerTechCount(p, FourCC('R0E1'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 3
         --set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 5
@@ -38256,7 +38279,7 @@ function Trig_CommonHome_Actions()
     end
     SetPlayerTechResearched(p, FourCC('R0E1'), 2)
      
-    -- Бонусы Кор Крон  -
+    -- ?????? ??? ????  -
     if GetPlayerTechCount(p, FourCC('R0E0'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
         --set udg_HordeElitePrice[pi] = udg_HordeElitePrice[pi] + 5
@@ -38270,7 +38293,7 @@ function Trig_CommonHome_Actions()
     
     
     --call SetPlayerTechMaxAllowed(p,'R0EA',1)
-    --call SetPlayerTechResearched(p,'R0E7',1) //Разрешает дд
+    --call SetPlayerTechResearched(p,'R0E7',1) //????????? ??
     DestroyGroup(g)
     
     
@@ -38552,6 +38575,7 @@ function Trig_TrueHorde_Actions()
     
     --End other races
     g=CreateGroup()
+    udg_Boolexpr = NoNeORc
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
     while true do
         u=FirstOfGroup(g)
@@ -38564,7 +38588,7 @@ function Trig_TrueHorde_Actions()
     end
     
     
-    -- Бонусы отреков  -
+    -- ?????? ???????  -
     if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 4
 --    set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 4
@@ -38574,7 +38598,7 @@ function Trig_TrueHorde_Actions()
     end
     SetPlayerTechResearched(p, FourCC('R0D3'), 2)
     
-    -- Бонусы бладов -
+    -- ?????? ?????? -
     if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 4
 --        set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 3
@@ -38585,7 +38609,7 @@ function Trig_TrueHorde_Actions()
     end
     SetPlayerTechResearched(p, FourCC('R0D2'), 2)
     
-    -- Бонусы пандаренов  -
+    -- ?????? ??????????  -
     if GetPlayerTechCount(p, FourCC('R0E0'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 2
 --        set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 3
@@ -38596,7 +38620,7 @@ function Trig_TrueHorde_Actions()
      
     
     SetPlayerTechMaxAllowed(p, FourCC('R0EA'), 1)
-    SetPlayerTechResearched(p, FourCC('R0E7'), 1) --Разрешает дд
+    SetPlayerTechResearched(p, FourCC('R0E7'), 1) --????????? ??
     DestroyGroup(g)
     
     SetPlayerTechMaxAllowed(p, FourCC('Otch'), 0)
@@ -38698,8 +38722,8 @@ function Trig_ShaHorde_Actions()
     local pi= GetPlayerId(p)
     countAll(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] - 3
-    SetPlayerAbilityAvailable(p, FourCC('A1OJ'), true) -- Ша абилка
-    SetPlayerAbilityAvailable(p, FourCC('A1OK'), true) -- Ша абилка
+    SetPlayerAbilityAvailable(p, FourCC('A1OJ'), true) -- ?? ??????
+    SetPlayerAbilityAvailable(p, FourCC('A1OK'), true) -- ?? ??????
     
     
 end
@@ -38786,7 +38810,7 @@ function Trig_BuyGoblins_Actions()
     --call ChangeTechUnitsNow(p,pi)
     --call ChangeNavyUnitsNow(p,pi)
     
-    SetPlayerTechResearched(p, FourCC('R0E8'), 1) -- Разрешает особую технику
+    SetPlayerTechResearched(p, FourCC('R0E8'), 1) -- ????????? ?????? ???????
    
 end
 --===========================================================================
@@ -38857,7 +38881,7 @@ function Trig_Compromise_Actions()
     udg_MainPrice[pi]=udg_MainPrice[pi] - 9
     
     
-    --Запретил другие ветки
+    --???????? ?????? ?????
     SetPlayerTechMaxAllowed(p, FourCC('R0EH'), 0)
     SetPlayerTechMaxAllowed(p, FourCC('R0E9'), 0)
     
@@ -39027,6 +39051,7 @@ end
 function Trig_ThrallMolnya_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
+    udg_Boolexpr = EnemEl
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 400, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -39060,6 +39085,7 @@ function Trig_Okovi_Func007A()
 end
 function Trig_Okovi_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
+    udg_Boolexpr = Trig_Okovi_Func002002
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 225, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -39095,6 +39121,7 @@ end
 function Trig_GarraoshMassBloodlast_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
+    udg_Boolexpr = Trig_GarraoshMassBloodlast_Func002002
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 500, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -39144,8 +39171,8 @@ function HordeStartLimits()
     SetPlayerTechMaxAllowedSwap(FourCC('R0KO'), 0, GetEnumPlayer()) -- Sha
     SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1LO'), false)
     
-    SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1OJ'), false) -- Ша абилка
-    SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1OK'), false) -- Ша абилка магу
+    SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1OJ'), false) -- ?? ??????
+    SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1OK'), false) -- ?? ?????? ????
     countAll(GetEnumPlayer())
 end
 function Trig_StartHorde_Actions()
@@ -39337,7 +39364,9 @@ function Trig_ChoseLich_Actions()
     local i= 0
     local p= GetOwningPlayer(GetTriggerUnit())
     ClearSelectionForPlayer(p)
+    udg_Boolexpr = HaveSpell
     GroupEnumUnitsSelected(g, p, udg_Boolexpr)
+    udg_Boolexpr = Trig_ChoseLich_Func003002
     
     while true do
         u1=FirstOfGroup(g)
@@ -39393,6 +39422,7 @@ function Trig_ChoseUnits2_Actions()
     local g= CreateGroup()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPosition3=GetSpellTargetLoc()
+    udg_Boolexpr = OnlyOrganic
     GroupEnumUnitsInRange(g, GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 400, udg_Boolexpr)
     GroupPointOrder(g, "attack", GetSpellTargetX(), GetSpellTargetY())
     
@@ -39572,6 +39602,7 @@ function Trig_TweenChange_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
+    local bex = Brothers
     local u2
     local x= GetUnitX(u)
     local y= GetUnitY(u)
@@ -39590,7 +39621,6 @@ function Trig_TweenChange_Actions()
     
     DestroyGroup(g)
     g=nil
-    DestroyBoolExpr(bex)
     p=nil
     bex=nil
     u=nil
@@ -39616,6 +39646,7 @@ function Trig_TweenBrothersRev_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
+    local bex = Brothers
     local u2
     
     GroupEnumUnitsOfPlayer(g, p, bex)
@@ -39631,7 +39662,6 @@ function Trig_TweenBrothersRev_Actions()
     end
     DestroyGroup(g)
     g=nil
-    DestroyBoolExpr(bex)
     p=nil
     bex=nil
     u=nil
@@ -39657,6 +39687,7 @@ function Trig_TweenBrothersDead_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
+    local bex = Brothers
     local u2
     
     GroupEnumUnitsOfPlayer(g, p, bex)
@@ -39668,7 +39699,6 @@ function Trig_TweenBrothersDead_Actions()
     end
     DestroyGroup(g)
     g=nil
-    DestroyBoolExpr(bex)
     p=nil
     bex=nil
     u=nil
@@ -39783,7 +39813,7 @@ end
 --===========================================================================
 -- Trigger: LichinkaFinish
 --
--- Триггер срабатывает, когда личинка заканчивает свое превращение в юнита. Переведен в код, слегка обработан, но трубут доработки
+-- ??????? ???????????, ????? ??????? ??????????? ???? ??????????? ? ?????. ????????? ? ???, ?????? ?????????, ?? ?????? ?????????
 --===========================================================================
 function Trig_LichinkaFinish_Conditions()
     gTriggerUnit=GetTriggerUnit()
@@ -39811,7 +39841,7 @@ function Trig_LichinkaFinish_Actions()
     local e
     
     
-    --Блок врубай таймер
+    --???? ?????? ??????
     local oldid= GetHandleId(gTriggerUnit)
     local u2= LoadUnitHandle(Hash, oldid, 1)
     local id2= GetHandleId(u2)
@@ -39835,21 +39865,22 @@ function Trig_LichinkaFinish_Actions()
     
     --local real x = GetUnitX(gPlayer)
     --local real y = GetUnitY(u)
-    -- хз откуда 2, уже все забыл))) и баг пофиксил без понимания.
+    -- ?? ?????? 2, ??? ??? ?????))) ? ??? ???????? ??? ?????????.
     
     
-    --Кейс если кансел
+    --???? ???? ??????
 --    if GetUnitTypeId(u) == 'e01I' then
 --
 --    endif
     
-    --Тк была личинка, она улучшилась, а не вошла на карту, значит надо вот это уже посчитать
+    --?? ???? ???????, ??? ??????????, ? ?? ????? ?? ?????, ?????? ???? ??? ??? ??? ?????????
     AddCountDis(gTriggerUnit , i)
     
     udg_LocalPosition[16]=GetUnitLoc(gTriggerUnit)
+    udg_Boolexpr = ItIsHive
     udg_LocalOtrad2=CreateGroup()
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[16], 300, udg_Boolexpr)
-    -- Куда идти если рядом есть улей
+    -- ???? ???? ???? ????? ???? ????
     ForGroup(udg_LocalOtrad2, OrderAfterUleyFinish)
     GroupClear(udg_LocalOtrad2)
     SetUnitLifePercentBJ(gTriggerUnit, 100)
@@ -39864,16 +39895,18 @@ function Trig_LichinkaFinish_Actions()
     
     
     
-    -- Трутень
+    -- ???????
     -- ----
     if id == FourCC('e01G') then
         
         CreateNUnitsAtLoc(1, FourCC('e01G'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
         udg_LocalPosition[18]=GetUnitLoc(GetLastCreatedUnit())
+        udg_Boolexpr = ItIsHive
         GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[18], 300, udg_Boolexpr)
         
         IssueTargetDestructableOrder(GetLastCreatedUnit(), "harvest", GetUnitRallyDestructable(FirstOfGroup(udg_LocalOtrad2)))
         udg_LocalPosition[17]=GetUnitLoc(GetLastCreatedUnit())
+        udg_Boolexpr = ItIsHive
         GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[17], 300, udg_Boolexpr)
         if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
             SelectUnitAddForPlayer(GetLastCreatedUnit(), gPlayer)
@@ -39884,7 +39917,7 @@ function Trig_LichinkaFinish_Actions()
     
     
     
-    -- Слизень
+    -- ???????
     -- ----
     elseif id == FourCC('e01Z') then
         UnitAddAbilityBJ(FourCC('A0VH'), gTriggerUnit)
@@ -39902,7 +39935,7 @@ function Trig_LichinkaFinish_Actions()
     
     
     
-    -- Солдат т1
+    -- ?????? ?1
     -- ----
     elseif id == FourCC('e02W') then
         CreateNUnitsAtLoc(1, FourCC('e02W'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
@@ -39910,14 +39943,14 @@ function Trig_LichinkaFinish_Actions()
         
         
         
-        -- Выбор
+        -- ?????
         if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
             SelectUnitAddForPlayer(GetLastCreatedUnit(), gPlayer)
         end
         
         
         
-        -- Плодовитость
+        -- ????????????
         if GetPlayerTechCountSimple(FourCC('R089'), GetOwningPlayer(gTriggerUnit)) == 1 then
             SetUnitAbilityLevelSwapped(FourCC('A0VH'), GetLastCreatedUnit(), 2)
             SetUnitAbilityLevelSwapped(FourCC('A0VH'), gTriggerUnit, 2)
@@ -39938,7 +39971,7 @@ function Trig_LichinkaFinish_Actions()
     
     
     -- ----
-    -- Оса
+    -- ???
     elseif id == FourCC('e01Q') and GetPlayerTechCountSimple(FourCC('R08B'), GetOwningPlayer(gTriggerUnit)) == 1 then
         CreateNUnitsAtLoc(1, FourCC('e01Q'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
         UnitAddAbilityBJ(FourCC('A0VH'), gTriggerUnit)
@@ -39951,11 +39984,11 @@ function Trig_LichinkaFinish_Actions()
         end
     
     
-    --Паук страж и его паразит 
+    --???? ????? ? ??? ??????? 
     elseif id == FourCC('e01U') then
         
         IssueImmediateOrder(gTriggerUnit, "parasiteon")
-    --Мана пророку
+    --???? ???????
     elseif id == FourCC('e01T') then
         
         SetUnitManaBJ(gTriggerUnit, 125)
@@ -40029,6 +40062,7 @@ function Trig_SpellBook_Actions()
     local g= CreateGroup()
     local i= 0
     
+    udg_Boolexpr = HaveSpell
     GroupEnumUnitsSelected(g, GetOwningPlayer(GetTriggerUnit()), udg_Boolexpr)
     while true do
             u1=FirstOfGroup(g)
@@ -40061,12 +40095,12 @@ function Trig_SpawnLich_Actions()
     local p= GetOwningPlayer(u)
     local i
     local u2= CreateUnit(p, FourCC('e01I'), GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
-   --call UnitAddAbility(u2,'A1JF') //Антиреген
+   --call UnitAddAbility(u2,'A1JF') //?????????
     BlzSetUnitRealFieldBJ(u2, UNIT_RF_HIT_POINTS_REGENERATION_RATE, - 4.00)
     SetUnitTimeScale(u2, 0.25)
     u2=CreateUnit(p, FourCC('e01I'), GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
     BlzSetUnitRealFieldBJ(u2, UNIT_RF_HIT_POINTS_REGENERATION_RATE, - 4.00)
-   -- call UnitAddAbility(u2,'A1JF') //Антиреген
+   -- call UnitAddAbility(u2,'A1JF') //?????????
     SetUnitTimeScale(u2, 0.25)
     i=GetUnitAbilityLevel(u, FourCC('A1AV'))
     
@@ -40142,7 +40176,7 @@ end
 --===========================================================================
 -- Trigger: Antennu
 --
--- Антенны
+-- ???????
 --===========================================================================
 function Trig_Antennu_Conditions()
     gTriggerUnit=GetConstructedStructure()
@@ -40987,6 +41021,7 @@ function Trig_Potreblenie_Actions()
         return
     else
     end
+    udg_Boolexpr = Trig_Potreblenie_Func002002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Potreblenie_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -41046,6 +41081,7 @@ function Trig_BracResearch_Actions()
         return
     else
     end
+    udg_Boolexpr = Trig_BracResearch_Func002002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_BracResearch_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -41105,6 +41141,7 @@ function Trig_PodjogResearch_Actions()
         return
     else
     end
+    udg_Boolexpr = Trig_PodjogResearch_Func002002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PodjogResearch_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -41164,6 +41201,7 @@ function Trig_PodruvResearc_Actions()
         return
     else
     end
+    udg_Boolexpr = Trig_PodruvResearc_Func002002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PodruvResearc_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -42255,7 +42293,7 @@ function Trig_Start_Elves_O_Func001A()
     SetPlayerTechMaxAllowedSwap(FourCC('H045'), 1, GetEnumPlayer())
     SetPlayerTechMaxAllowedSwap(FourCC('Hjnd'), 1, GetEnumPlayer())
     SetPlayerTechMaxAllowedSwap(FourCC('Hkal'), 1, GetEnumPlayer())
-    --Заступник скверны
+    --????????? ???????
     SetPlayerTechMaxAllowedSwap(FourCC('h0O6'), 0, GetEnumPlayer())
 end
 function Trig_Start_Elves_O_Actions()
@@ -42358,7 +42396,7 @@ function Trig_SpellMassSunAttack_Actions()
     GroupEnumUnitsInRangeOfLoc(g, l, 150, nil)
     
     if FirstOfGroup(g) == nil then
-        --Нету врагов
+        --???? ??????
         BlzStartUnitAbilityCooldown(caster, dammyAbility, 15)
         SetUnitState(caster, UNIT_STATE_MANA, GetUnitState(caster, UNIT_STATE_MANA) + 100 + 35 * level)
         
@@ -42398,7 +42436,7 @@ function Trig_SpellMassSunAttack_Actions()
     g=nil
     RemoveLocation(l)
     p=nil
-    --call DestroyBoolExpr(bex)
+    --call
     u2=nil
     --set bex = null
 end
@@ -43714,7 +43752,7 @@ end
 function Trig_FireShielDamageUniversal_Conditions()
     local dx
     local dy
-    gCaster=GetEventDamageSource() --На ком щит
+    gCaster=GetEventDamageSource() --?? ??? ???
     gTarget=BlzGetEventDamageTarget()
     dx=GetUnitX(gCaster) - GetUnitX(gTarget)
     dy=GetUnitY(gCaster) - GetUnitY(gTarget)
@@ -43905,7 +43943,7 @@ end
 --===========================================================================
 -- Trigger: Edvin Ult
 --
--- Резня в тени
+-- ????? ? ????
 --===========================================================================
 function Trig_Edvin_Ult_Actions()
     local u= GetTriggerUnit()
@@ -44410,10 +44448,12 @@ function Trig_Pirats_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('h03K'), - 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('h00Y'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('h00Z'), 0, GetOwningPlayer(GetTriggerUnit()))
+    udg_Boolexpr = Trig_Pirats_O_Copy_Func005002
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Pirats_O_Copy_Func008A)
     GroupClear(udg_LocalOtrad2)
+    udg_Boolexpr = Trig_Pirats_O_Copy_Func010002
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Pirats_O_Copy_Func013A)
@@ -44614,18 +44654,21 @@ function Trig_ResearhRobbery_Func003C()
 end
 function Trig_ResearhRobbery_Actions()
     if ( Trig_ResearhRobbery_Func001C() ) then
+        udg_Boolexpr = Trig_ResearhRobbery_Func001Func001002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_ResearhRobbery_Func002C() ) then
+        udg_Boolexpr = Trig_ResearhRobbery_Func002Func001002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_ResearhRobbery_Func003C() ) then
+        udg_Boolexpr = Trig_ResearhRobbery_Func003Func001002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func003Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -45317,7 +45360,7 @@ end
 --===========================================================================
 -- Trigger: NerZulPas
 --
--- Не надо кучу ифов, тут в одном на все лвл - винер
+-- ?? ???? ???? ????, ??? ? ????? ?? ??? ??? - ?????
 --===========================================================================
 function Trig_NerZulPas_Conditions()
     if ( not ( GetLearnedSkillBJ() == FourCC('A1IB') ) ) then
@@ -45339,7 +45382,7 @@ end
 --===========================================================================
 -- Trigger: NerZulPas Copy
 --
--- Не надо кучу ифов, тут в одном на все лвл - винер
+-- ?? ???? ???? ????, ??? ? ????? ?? ??? ??? - ?????
 --===========================================================================
 function Trig_NerZulPas_Copy_Conditions()
     if ( not ( GetLearnedSkillBJ() == FourCC('A1I5') ) ) then
@@ -45361,7 +45404,7 @@ end
 --===========================================================================
 -- Trigger: NerZulPas Copy Copy
 --
--- Не надо кучу ифов, тут в одном на все лвл - винер
+-- ?? ???? ???? ????, ??? ? ????? ?? ??? ??? - ?????
 --===========================================================================
 function Trig_NerZulPas_Copy_Copy_Conditions()
     if ( not ( GetLearnedSkillBJ() == FourCC('A1H9') ) ) then
@@ -45529,7 +45572,7 @@ end
 --===========================================================================
 -- Trigger: malfurionPas
 --
--- Не надо кучу ифов, тут в одном на все лвл - винер
+-- ?? ???? ???? ????, ??? ? ????? ?? ??? ??? - ?????
 --===========================================================================
 function Trig_malfurionPas_Conditions()
     if ( not ( GetLearnedSkillBJ() == FourCC('A160') ) ) then
@@ -45551,7 +45594,7 @@ end
 --===========================================================================
 -- Trigger: StartBuildingTree
 --
--- Тут расписать все айди юнитов, в которых превращаются светлячки и его цену
+-- ??? ????????? ??? ???? ??????, ? ??????? ???????????? ????????? ? ??? ????
 --===========================================================================
 function Trig_StartBuildingTree_Conditions()
     local id= GetUnitTypeId(GetConstructingStructure())
@@ -45574,7 +45617,7 @@ end
 --===========================================================================
 -- Trigger: CanselBuildingTree
 --
--- Тут расписать все айди юнитов, в которых превращаются светлячки и его цену
+-- ??? ????????? ??? ???? ??????, ? ??????? ???????????? ????????? ? ??? ????
 --===========================================================================
 function Trig_CanselBuildingTree_Conditions()
     local id= GetUnitTypeId(GetTriggerUnit())
@@ -47376,6 +47419,7 @@ end
 function Trig_PoleAstralaDragons_Actions()
     udg_LocalPosition[14]=GetUnitLoc(GetTriggerUnit())
     udg_LocalPosition2=GetSpellTargetLoc()
+    udg_Boolexpr = Trig_PoleAstralaDragons_Func003002
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 200, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PoleAstralaDragons_Func005A)
     RemoveLocation(udg_LocalPosition[14])
@@ -47451,20 +47495,20 @@ function Trig_Charge_move_heroD()
         MaxW=500
     end
     ---------
-    x=dx + 6 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=dy + 6 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
-    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --вычисляем высоту
+    x=dx + 6 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=dy + 6 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
+    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --????????? ??????
     
-    -- ищем конец пути
+    -- ???? ????? ????
     if JSTRRastMT(x1 , dx , y1 , dy) > 25 then --and not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
-        -- двигаем юнита
+        -- ??????? ?????
         SetUnitX(GT, x)
         SetUnitY(GT, y)
         SetUnitFacing(GT, ugol)
         SetUnitFlyHeight(GT, fl + w, 0)
         
     else
-        UnitRemoveAbility(GT, FourCC('A16S')) -- Дебафф брони
+        UnitRemoveAbility(GT, FourCC('A16S')) -- ?????? ?????
         DestroyEffect(LoadEffectHandle(Hash, h, 6))
         DestroyTimer(t)
         FlushChildHashtable(Hash, h)
@@ -47490,7 +47534,7 @@ function Trig_Charge_move_heroD()
     t1=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - основная функция
+-- ???? 2 - ???????? ???????
 --================
 function Trig_FlyDragon_Actions()
     local GT= GetTriggerUnit()
@@ -47505,7 +47549,7 @@ function Trig_FlyDragon_Actions()
     
     JSTRSkill=GetSpellAbilityId()
     UnitAddAbility(GT, FourCC('Amrf'))
-    UnitAddAbility(GT, FourCC('A16S')) -- Дебафф брони
+    UnitAddAbility(GT, FourCC('A16S')) -- ?????? ?????
     
     UnitRemoveAbility(GT, FourCC('Amrf'))
     ---------
@@ -47519,7 +47563,7 @@ function Trig_FlyDragon_Actions()
     SaveReal(Hash, h, 5, y1)
     SaveReal(Hash, h, 6, GetUnitFlyHeight(GT))
     --call DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.05, true, Trig_Charge_move_heroD) --стартуем движение героя
+    TimerStart(t, 0.05, true, Trig_Charge_move_heroD) --???????? ???????? ?????
     ---------
     GT=nil
     --set g = null
@@ -47630,7 +47674,7 @@ function Trig_Blood_Copy_Conditions()
 end
 function Trig_Blood_Copy_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('n025'), 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), FourCC('n026'), - 1) --кровавый палач
+    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), FourCC('n026'), - 1) --???????? ?????
 end
 --===========================================================================
 function InitTrig_Blood_Copy()
@@ -47660,7 +47704,7 @@ function InitTrig_Blood2_Copy()
     TriggerAddAction(gg_trg_Blood2_Copy, Trig_Blood2_Copy_Actions)
 end
 --===========================================================================
--- Trigger: Безымянный триггер 001 Copy 5
+-- Trigger: ?????????? ??????? 001 Copy 5
 --===========================================================================
 function Trig_____________________________________001_Copy_5_Actions()
     UnitRemoveAbilityBJ(FourCC('A0N7'), GetTriggerUnit())
@@ -47679,7 +47723,7 @@ function InitTrig_____________________________________001_Copy_5()
     end)
 end
 --===========================================================================
--- Trigger: Безымянный триггер 001 Copy 2 Copy 3
+-- Trigger: ?????????? ??????? 001 Copy 2 Copy 3
 --===========================================================================
 function Trig_____________________________________001_Copy_2_Copy_3_Actions()
     UnitAddAbilityBJ(FourCC('A0NC'), GetTriggerUnit())
@@ -47826,7 +47870,7 @@ function InitTrig_CanselBuilding_Copy()
     TriggerAddAction(gg_trg_CanselBuilding_Copy, Trig_CanselBuilding_Copy_Actions)
 end
 --===========================================================================
--- Trigger: Безымянный триггер 001 Copy
+-- Trigger: ?????????? ??????? 001 Copy
 --===========================================================================
 function Trig_____________________________________001_Copy_Conditions()
     if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0MQ'), GetAttackedUnitBJ()) >= 1 ) ) then
@@ -48070,7 +48114,7 @@ function Trig_Blood_Conditions()
 end
 function Trig_Blood_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('n025'), 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), FourCC('n026'), - 1) --кровавый палач
+    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), FourCC('n026'), - 1) --???????? ?????
 end
 --===========================================================================
 function InitTrig_Blood()
@@ -48100,7 +48144,7 @@ function InitTrig_Blood2()
     TriggerAddAction(gg_trg_Blood2, Trig_Blood2_Actions)
 end
 --===========================================================================
--- Trigger: Безымянный триггер 001
+-- Trigger: ?????????? ??????? 001
 --===========================================================================
 function Trig_____________________________________001_Actions()
     UnitAddAbilityBJ(FourCC('A0Y9'), GetTriggerUnit())
@@ -48333,7 +48377,7 @@ end
 --===========================================================================
 -- Trigger: MultuAttackWater
 --
--- Спелл Наводнение Нептулона
+-- ????? ?????????? ?????????
 --===========================================================================
 function Trig_MultuAttackWater_Actions()
     local u= GetTriggerUnit()
@@ -48610,6 +48654,7 @@ function Trig_ArthasCoils_Func007A()
 end
 function Trig_ArthasCoils_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
+    udg_Boolexpr = Trig_ArthasCoils_Func002002
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 125, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -48644,6 +48689,7 @@ function Trig_ArthasNova_Func007A()
 end
 function Trig_ArthasNova_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    udg_Boolexpr = Trig_ArthasNova_Func002002
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 240, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -48729,10 +48775,10 @@ end
 -- Trigger: PassiveTalisra
 --===========================================================================
 function Trig_PassiveTalisra_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B08J')) + GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B08K')) > 0 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetEventDamage() >= GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) --Её бафф
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B08J')) + GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B08K')) > 0 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetEventDamage() >= GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) --?? ????
 end
 function Talisra()
-    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1OS')) > 0 --Абилка
+    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1OS')) > 0 --??????
 end
 function Trig_PassiveTalisra_Actions()
     local g= CreateGroup()
@@ -48742,7 +48788,7 @@ function Trig_PassiveTalisra_Actions()
     local pi= GetPlayerId(p)
     GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 650, Talisra, 1)
     u2=FirstOfGroup(g)
-    if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1OS')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --Абилка
+    if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1OS')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --??????
         SetUnitManaBJ(u2, GetUnitState(u2, UNIT_STATE_MANA) - 50)
         if playerCapital[pi] == nil then
             MakeFakeCapital(p)
@@ -48775,9 +48821,9 @@ end
 function IceTrollsStartEach()
     local p= GetEnumPlayer()
     
-    SetPlayerTechMaxAllowedSwap(FourCC('n07B'), 0, p) -- Взыватель душ
-    SetPlayerTechMaxAllowedSwap(FourCC('R09L'), 0, p) -- Его грейд
-    SetPlayerTechMaxAllowedSwap(FourCC('o04T'), 0, p) -- Голем
+    SetPlayerTechMaxAllowedSwap(FourCC('n07B'), 0, p) -- ????????? ???
+    SetPlayerTechMaxAllowedSwap(FourCC('R09L'), 0, p) -- ??? ?????
+    SetPlayerTechMaxAllowedSwap(FourCC('o04T'), 0, p) -- ?????
     SetPlayerTechMaxAllowedSwap(FourCC('R09P'), 0, p) -- Golem grade
     
     
@@ -48822,8 +48868,8 @@ function Trig_KillLoa_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC('A1FR'), p)
     
     
-    SetPlayerTechMaxAllowedSwap(FourCC('n07B'), - 1, p) -- Взыватель душ
-    SetPlayerTechMaxAllowedSwap(FourCC('R09L'), 2, p) -- Его грейд
+    SetPlayerTechMaxAllowedSwap(FourCC('n07B'), - 1, p) -- ????????? ???
+    SetPlayerTechMaxAllowedSwap(FourCC('R09L'), 2, p) -- ??? ?????
     SetPlayerTechMaxAllowedSwap(FourCC('o04T'), - 1, p) -- Golem
     SetPlayerTechMaxAllowedSwap(FourCC('R09P'), 2, p) -- Golem grade
     
@@ -48998,7 +49044,7 @@ end
 --===========================================================================
 -- Trigger: Ini2
 --
--- Инициализация стандартного режима сражения для всех игроков
+-- ????????????? ???????????? ?????? ???????? ??? ???? ???????
 --===========================================================================
 function Trig_Ini2_Actions()
     --call DisplayTextToPlayer(Player(0),0,0,"")
@@ -49019,7 +49065,7 @@ end
 function Trig_Spell_E2_Conditions()
  
     return GetUnitTypeId(GetEventDamageSource()) == FourCC('O04H') and GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A0H1')) > 0
-    -- Тип применяющего и спел применяющего
+    -- ??? ???????????? ? ???? ????????????
 end
 function Trig_Spell_E2_Actions()
     local u= GetTriggerUnit()
@@ -49051,7 +49097,7 @@ end
 --===========================================================================
 function Trig_HpRegen2_Conditions()
     
-    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1CA')) > 0 -- Тут абилка иконка
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1CA')) > 0 -- ??? ?????? ??????
     
     
 end
@@ -49797,7 +49843,7 @@ end
 -- Trigger: StolicaKill
 --===========================================================================
 function Trig_StolicaKill_Actions()
-    -- Обнуляю вассалов самоубийцы. Вы свободны!
+    -- ??????? ???????? ??????????. ?? ????????!
 end
 --===========================================================================
 function InitTrig_StolicaKill()
@@ -49993,8 +50039,8 @@ function Trig_SecondChance_Actions()
     ProbeLogWrite("[CHAT] -raceselect target=" .. tostring(udg_LocalInteger))
     if ( Trig_SecondChance_Func003C() ) then
         udg_LocalPosition2=(StartLoc[GetRandomInt(0, StartLocCount - 1)]) -- INLINED!!
-        DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Хост " .. GetPlayerName(GetTriggerPlayer()) .. " дал игроку " .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " второй шанс!")
-        DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, "У вас есть 15 минут на то, чтобы поставить столицу!")
+        DisplayTimedTextToForce(GetPlayersAll(), 5.00, "???? " .. GetPlayerName(GetTriggerPlayer()) .. " ??? ?????? " .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " ?????? ????!")
+        DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, "? ??? ???? 15 ????? ?? ??, ????? ????????? ???????!")
         CreateNUnitsAtLoc(1, FourCC('h0HJ'), ConvertedPlayer(udg_LocalInteger), udg_LocalPosition2, bj_UNIT_FACING)
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_GOLD, 5000)
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_LUMBER, 5000)
@@ -50333,7 +50379,7 @@ function Trig_ForSoldUnitsDesel_Actions()
         SetPlayerStateBJ(general, PLAYER_STATE_RESOURCE_LUMBER, OwnLumber[pi])
         
         
-        --Что там
+        --??? ???
         
         SetPlayerStateBJ(mainplayer, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(mainplayer, PLAYER_STATE_RESOURCE_GOLD) + GoldDifference[pi])
         SetPlayerStateBJ(mainplayer, PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(mainplayer, PLAYER_STATE_RESOURCE_LUMBER) + LumberDifference[pi])
@@ -50455,6 +50501,7 @@ function Trig_KillTestUnits_O_Copy_Func003A()
     p=nil
 end
 function Trig_KillTestUnits___OFF_ME_Actions()
+    udg_Boolexpr = Trig_KillTestUnits_O_Copy_Func001002
     GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
     ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_O_Copy_Func003A)
     GroupClear(udg_LocalOtrad2)
@@ -50534,6 +50581,7 @@ function Trig_KillTestUnits_Command_Func003A()
     
 end
 function Trig_KillTestUnits_Command_Actions()
+    udg_Boolexpr = Trig_KillTestUnits_Command_Func001002
     GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
     ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_Command_Func003A)
     GroupClear(udg_LocalOtrad2)
@@ -51485,7 +51533,7 @@ function Trig_CreateAi_Conditions()
     return S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) >= 1 and S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) <= 24
 end
 function Trig_CreateAi_Actions()
-    -- Формат: "-aiN" или "-aiN <раса>" (раса опциональна, латиницей: jt, be, scarlet, goblins, naga, horde)
+    -- ??????: "-aiN" ??? "-aiN <????>" (???? ???????????, ?????????: jt, be, scarlet, goblins, naga, horde)
     local s = GetEventPlayerChatString()
     local numStr, raceStr = string.match(s, "^%-ai%s*(%d+)%s*(%S*)")
     gPi = (tonumber(numStr) or 1) - 1
@@ -51505,7 +51553,7 @@ function BridgeDispatchCommand(op, arg, sequence)
         ProbeLogWrite("[BRIDGE] ping seq=" .. tostring(sequence) .. " arg=" .. tostring(arg))
         return
     end
-    -- arg может быть "N" или "N:race" (раса опциональна, латиницей)
+    -- arg ????? ???? "N" ??? "N:race" (???? ???????????, ?????????)
     local targetStr, raceTok = string.match(tostring(arg), "^(%d+):?(%S*)")
     local target = tonumber(targetStr)
     if target == nil then
@@ -51736,19 +51784,19 @@ end
 --===========================================================================
 -- Trigger: CityNearWater2
 --
--- Тут города, которые можно захватить с моря
+-- ??? ??????, ??????? ????? ????????? ? ????
 --===========================================================================
 function Trig_CityNearWater2_Actions()
-    -- Калим
+    -- ?????
     GroupAddUnitSimple(gg_unit_h08O_0444, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0E2_0011, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h08G_0419, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h00E_0106, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h00F_0105, udg_CityNearWater)
-    -- Океания
+    -- ???????
     GroupAddUnitSimple(gg_unit_h0BM_0604, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0BL_0603, udg_CityNearWater)
-    -- Пандария
+    -- ????????
     GroupAddUnitSimple(gg_unit_h0AH_0427, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0AG_0010, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0AF_0383, udg_CityNearWater)
@@ -51760,7 +51808,7 @@ function Trig_CityNearWater2_Actions()
     GroupAddUnitSimple(gg_unit_h09V_0137, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h09W_0236, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0A3_0241, udg_CityNearWater)
-    -- Океания 2
+    -- ??????? 2
     GroupAddUnitSimple(gg_unit_h0BH_0601, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0F8_0045, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0BG_0600, udg_CityNearWater)
@@ -51768,7 +51816,7 @@ function Trig_CityNearWater2_Actions()
     GroupAddUnitSimple(gg_unit_h0OT_0545, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0OJ_0336, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0OH_0333, udg_CityNearWater)
-    -- Восточки
+    -- ????????
     GroupAddUnitSimple(gg_unit_h00M_0113, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h04L_0458, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h07O_0251, udg_CityNearWater)
@@ -51778,14 +51826,14 @@ function Trig_CityNearWater2_Actions()
     GroupAddUnitSimple(gg_unit_h089_0405, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h08A_0406, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0II_0455, udg_CityNearWater)
-    -- Расколотые
+    -- ??????????
     GroupAddUnitSimple(gg_unit_h0AW_0341, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0B9_0026, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0BC_0342, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0BB_0343, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0AU_0344, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0AP_0552, udg_CityNearWater)
-    -- Норд
+    -- ????
     GroupAddUnitSimple(gg_unit_h09O_0541, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h09M_0539, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h097_0502, udg_CityNearWater)
@@ -51800,29 +51848,29 @@ end
 -- Trigger: Remove
 --===========================================================================
 function Trig_Remove_Actions()
-    -- Калим
+    -- ?????
     GroupRemoveUnitSimple(gg_unit_h0E2_0011, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h08O_0444, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h09B_0508, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h09C_0509, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h097_0502, udg_TempGroup)
-    -- Восточки
+    -- ????????
     GroupRemoveUnitSimple(gg_unit_h0BJ_0602, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h0BG_0600, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h0BF_0012, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h09P_0009, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h09K_0537, udg_TempGroup)
-    -- Норд
+    -- ????
     GroupRemoveUnitSimple(gg_unit_h09A_0506, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h09N_0346, udg_TempGroup)
-    -- Острова
+    -- ???????
     GroupRemoveUnitSimple(gg_unit_h0BL_0603, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h0BM_0604, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h0OK_0337, udg_TempGroup)
-    -- Пандария
+    -- ????????
     GroupRemoveUnitSimple(gg_unit_h0BH_0601, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h09V_0137, udg_TempGroup)
-    -- Пандария
+    -- ????????
     GroupRemoveUnitSimple(gg_unit_n01D_0903, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_n01D_0904, udg_TempGroup)
 end
@@ -51896,8 +51944,8 @@ function PlayerBuilders()
             
     
         
-        -- Перебор юнитов !!!
-        --Нераспределенные рабочие
+        -- ??????? ?????? !!!
+        --???????????????? ???????
         GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_LazyW)
         if FirstOfGroup(gGroup) ~= nil then
             bj_forLoopAIndex=1
@@ -51907,13 +51955,13 @@ function PlayerBuilders()
                 
                 GroupRemoveUnit(gGroup, gUnit)
                 
-                -- Лесоруб
+                -- ???????
                 if (AiData[pi][StringHash("T")] or 0) >= 12 then
                     NumberAdd(pi , StringHash("HV"))
                     GroupAddUnit(udg_Ai_harvest[pi], gUnit)
                     GroupRemoveUnit(udg_Ai_builders[pi], gUnit)
                     IssueImmediateOrder(gUnit, "autoharvestlumber")
-                else -- Строитель
+                else -- ?????????
                     NumberAdd(pi , StringHash("T"))
                     GroupAddUnit(udg_Ai_buildersT[pi], gUnit)
                     GroupRemoveUnit(udg_Ai_builders[pi], gUnit)
@@ -51925,7 +51973,7 @@ function PlayerBuilders()
             GroupClear(gGroup)
         end
         
-        -- Рабочие-строители
+        -- ???????-?????????
         GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_LazyT)
         if FirstOfGroup(gGroup) ~= nil then
             bj_forLoopAIndex=1
@@ -51942,7 +51990,7 @@ function PlayerBuilders()
             GroupClear(gGroup)
         end
         
-        -- Лесорубы - из них приходят лишь строить
+        -- ???????? - ?? ??? ???????? ???? ???????
         if (AiData[pi][StringHash("T")] or 0) < 12 then
             Counter=0
             GroupEnumUnitsOfPlayer(gGroup, gPlayer, Harwest)
@@ -51982,7 +52030,7 @@ end
 function AddPlayers()
     ForceAddPlayer(udg_BotsActive, GetEnumPlayer())
 end
---Главное тело триггера стопаю таймер, делаю дела, запускаю
+--??????? ???? ???????? ?????? ??????, ????? ????, ????????
 function Trig_PereborPlayerForArmy_Actions()
     PauseTimer(udg_TimerSmall2)
     if not (AiData[-1][StringHash("TickLog_TimerSmall2")] or false) then
@@ -51996,7 +52044,7 @@ function Trig_PereborPlayerForArmy_Actions()
     ForForce(udg_Bots, AddPlayers)
     TimerStart(udg_PlayerGet1, 1.25 * AiRepeat / 5, true, nil)
 end
---Запуск
+--??????
 --===========================================================================
 function InitTrig_PereborPlayerForArmy()
     gg_trg_PereborPlayerForArmy=CreateTrigger()
@@ -52007,7 +52055,7 @@ end
 --===========================================================================
 -- Trigger: PerebobArmy Uni
 --===========================================================================
--- Перебор игроков
+-- ??????? ???????
 function PlayerArmy()
     gInt=CountPlayersInForceBJ(udg_BotsActive)
     if gInt == 0 then
@@ -52018,7 +52066,7 @@ function PlayerArmy()
             DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
         end
     else
-            --Каждый отдельный игро
+            --?????? ????????? ????
         gPlayer=ForcePickRandomPlayer(udg_BotsActive)
         local pi_army = GetPlayerId(gPlayer)
         if not (AiData[pi_army][StringHash("Log_PlayerArmy")] or false) then
@@ -52043,7 +52091,7 @@ function PlayerArmy()
                                
                 GroupRemoveUnit(gAllyGroup, udg_LocalUnit2)
                 LazyCount=LazyCount - 1
-                -- Дровосеки
+                -- ?????????
                 if GetUnitTypeId(udg_LocalUnit2) == FourCC('h03C') then
                     if Random(1 , 2) then
                         IssueImmediateOrder(udg_LocalUnit2, "autoharvestlumber")
@@ -52074,7 +52122,7 @@ end
 function AddPlayers3()
     ForceAddPlayer(udg_BotsActiveN, GetEnumPlayer())
 end
---Главное тело триггера стопаю таймер, делаю дела, запускаю
+--??????? ???? ???????? ?????? ??????, ????? ????, ????????
 function Trig_PereborPlayerForNavy_Actions()
     PauseTimer(udg_TimerSmall4)
     if not (AiData[-1][StringHash("TickLog_TimerSmall4")] or false) then
@@ -52091,7 +52139,7 @@ function Trig_PereborPlayerForNavy_Actions()
     ForForce(udg_Bots, AddPlayers3)
     TimerStart(udg_PlayerGet4, 3.5 * AiRepeat / 5, true, nil)
 end
---Запуск
+--??????
 --===========================================================================
 function InitTrig_PereborPlayerForNavy()
     gg_trg_PereborPlayerForNavy=CreateTrigger()
@@ -52109,10 +52157,10 @@ function PlayerNavy()
     local id
     local i
     local i2
-    --Локалки
+    --???????
     
-    --Каждый отдельный игрок
-    --Узнаю номер игрока
+    --?????? ????????? ?????
+    --????? ????? ??????
     
     if CountPlayersInForceBJ(udg_BotsActiveN) == 0 then
         PauseTimer(udg_PlayerGet4)
@@ -52177,7 +52225,7 @@ function Trig_PereborBuildings_Code_Func002A()
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_OnlyNeaded)
     local numberCount = (AiData[gPi][StringHash("Number")] or 0)
-    -- Пропуск если 0 или лимит юнитов
+    -- ??????? ???? 0 ??? ????? ??????
     if FirstOfGroup(gGroup) == nil then
         if not (AiData[gPi][StringHash("Log_PereborNoBld")] or false) then
             AiData[gPi][StringHash("Log_PereborNoBld")] = true
@@ -52220,7 +52268,7 @@ function Trig_PereborBuildings_Code_Func002A()
     if not (AiData[gPi][StringHash("Log_PereborWorking")] or false) then
         AiData[gPi][StringHash("Log_PereborWorking")] = true
     end
-    --Собственно группа зданий, которые надо чекать 
+    --?????????? ?????? ??????, ??????? ???? ?????? 
        
     bj_forLoopAIndex=1
     bj_forLoopAIndexEnd=8
@@ -52274,7 +52322,7 @@ function PereborNavalb()
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, p, B_NavalBases)
     i=(AiData[pi][StringHash("NumberN")] or 0)
-    -- Пропуск если 0 или больше трети армии
+    -- ??????? ???? 0 ??? ?????? ????? ?????
     if FirstOfGroup(gGroup) == nil then
         if udg_Octhet then
             DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) + "0")
@@ -52303,7 +52351,7 @@ function PereborNavalb()
         GroupRemoveUnit(gGroup, u)
         id=GetUnitTypeId(u)
           
-        -- Верфь
+        -- ?????
         AiDispatchNaval(u, pi)
         
         bj_forLoopAIndex=bj_forLoopAIndex + 1
@@ -52346,7 +52394,7 @@ function ZahType()
     local u= GetEnumUnit()
     local pi= GetPlayerId(GetOwningPlayer(u))
     local id= GetUnitTypeId(u)
-    --Это точка
+    --??? ?????
     if IsUnitInGroup(u, udg_ZahvatBuildings) then
         udg_LocalInteger3=udg_LocalInteger3 + 8
     else
@@ -52364,16 +52412,16 @@ function Strateg()
     end
     
     
-    -- Считаю фермы и точки
+    -- ?????? ????? ? ?????
     udg_LocalInteger3=0
     GroupEnumUnitsOfPlayer(gGroup, p, nil)
     ForGroup(gGroup, ZahType)
     GroupClear(gGroup)
     i=udg_LocalInteger3
-    --Посчитал
+    --????????
     
     
-    --Ресы на развитие
+    --???? ?? ????????
     
     AdjustPlayerStateSimpleBJ(p, PLAYER_STATE_RESOURCE_GOLD, 500 + i * 9 * AiMoney) -- -(AiData[pi][StringHash("Number")] or 0)*10 )
     AdjustPlayerStateSimpleBJ(p, PLAYER_STATE_RESOURCE_LUMBER, 250 + i * 5 * AiMoney)
@@ -52381,7 +52429,7 @@ function Strateg()
     --call DisplayTimedTextFromPlayer(Player(0),0,0,4,(GetPlayerName(p)+""+I2S(GetPlayerId(p))))
     --call DisplayTimedTextFromPlayer(Player(0),0,0,4,I2S(i))
     
-    -- Увеличивает уровень спопособности юнита с аурами
+    -- ??????????? ??????? ????????????? ????? ? ??????
     SetUnitAbilityLevel(BonusUnit[pi], FourCC('aib0'), IMinBJ(R2I(i / 50 + 1), 10))
     SetUnitAbilityLevel(BonusUnit[pi], FourCC('aib1'), IMinBJ(R2I(i / 50 + 1), 10))
     --call BJDebugMsg(""+GetUnitName(BonusUnit[pi])+""+I2S(i)+""+I2S(IMinBJ( R2I(i/10),4)))
@@ -52393,7 +52441,7 @@ function Strateg()
     
     
     
-    --Рандомный теп - чем больше доходов, тем больше попыток
+    --????????? ??? - ??? ?????? ???????, ??? ?????? ???????
     r=0
     while true do
         if r > i / 55 then break end
@@ -52501,7 +52549,7 @@ function Trig_AttackedAI_Actions()
             PortTo(gAttacked)
         end
     else
-        -- --------------- Алый орден
+        -- --------------- ???? ?????
     AiDispatchAttacked(gAttacked, gPi)
     end
 end
@@ -52883,7 +52931,7 @@ end
 -- Trigger: MainFloatUnits
 --===========================================================================
 function isShip()
-    return id == FourCC('h00X') or id == FourCC('h00Y') or id == FourCC('h00Z') or id == FourCC('h0CZ') or id == FourCC('h0D2') or id == FourCC('h0D0') or id == FourCC('h0D5') or id == FourCC('h0D4') or id == FourCC('h0D6') or id == FourCC('h0DB') or id == FourCC('h0D9') or id == FourCC('h0DA') or id == FourCC('h0E6') or id == FourCC('h0E5') or id == FourCC('h0E8') or id == FourCC('h03L') or id == FourCC('h03K') or id == FourCC('h06W') or id == FourCC('h0DM') or id == FourCC('h06V') or id == FourCC('h06X') --Гоблины
+    return id == FourCC('h00X') or id == FourCC('h00Y') or id == FourCC('h00Z') or id == FourCC('h0CZ') or id == FourCC('h0D2') or id == FourCC('h0D0') or id == FourCC('h0D5') or id == FourCC('h0D4') or id == FourCC('h0D6') or id == FourCC('h0DB') or id == FourCC('h0D9') or id == FourCC('h0DA') or id == FourCC('h0E6') or id == FourCC('h0E5') or id == FourCC('h0E8') or id == FourCC('h03L') or id == FourCC('h03K') or id == FourCC('h06W') or id == FourCC('h0DM') or id == FourCC('h06V') or id == FourCC('h06X') --???????
     
 end
 function aiShipJoins()
@@ -52926,7 +52974,7 @@ end
 -- Trigger: PortUnits
 --===========================================================================
 function isNavalBase()
-    return id == FourCC('h0D1') or id == FourCC('h0D8') or id == FourCC('h03R') or id == FourCC('h0D3') or id == FourCC('h0E7') or id == FourCC('h011') or id == FourCC('h0D7') or gId == FourCC('n04L') or gId == FourCC('h0HO') -- Прописать все типы верфей
+    return id == FourCC('h0D1') or id == FourCC('h0D8') or id == FourCC('h03R') or id == FourCC('h0D3') or id == FourCC('h0E7') or id == FourCC('h011') or id == FourCC('h0D7') or gId == FourCC('n04L') or gId == FourCC('h0HO') -- ????????? ??? ???? ??????
 end
 function Trig_PortUnits_Conditions()
     gUnit=GetConstructingStructure()
@@ -52974,7 +53022,7 @@ function aiRep()
     end
     
     
-    -- Очистка
+    -- ???????
     g_AiCountCache[pi] = nil; AiData[(pi)] = nil -- INLINED!!
     
     GroupClear(udg_Ai_units[pi])
@@ -52985,7 +53033,7 @@ function aiRep()
     GroupClear(udg_Ai_harvest[pi])
     GroupClear(AiUnitsToPort[pi])
     
-    -- Очистка
+    -- ???????
     if gGroup == nil then
         gGroup=CreateGroup()
     end
@@ -53001,7 +53049,7 @@ function aiRep()
         BJDebugMsg("" + GetUnitName(gUnit))
         if GetUnitAbilityLevel(gUnit, gDummySpell) == 0 and not IsUnitType(gUnit, UNIT_TYPE_SUMMONED) then
             
-            -- Сломался с неуязом
+            -- ???????? ? ???????
             if BlzIsUnitInvulnerable(gUnit) then -- GetUnitAbilityLevel(gUnit, FourCC('Bvul')) > 0 then
                 BJDebugMsg("")
                 gUnit=ReplaceUnit2(gUnit , GetUnitTypeId(gUnit) , bj_UNIT_STATE_METHOD_MAXIMUM)
@@ -53029,7 +53077,7 @@ function aiRep()
                 end
                 
                 aiUnitJoins(gUnit , pi)
-                if gId == FourCC('h07A') then -- Маг-тп
+                if gId == FourCC('h07A') then -- ???-??
                    GroupAddUnit(AiUnitsToPort[pi], gUnit)
                 end
             end
@@ -53049,7 +53097,7 @@ function aiRepUnvul_act()
     end
     
 end
--- Починка неуза
+-- ??????? ?????
 function aiRepUnvul()
     if not udg_AiControl[pi] then
         return
@@ -53298,7 +53346,7 @@ function TeleportUnits(portal, rect, radius)
     GroupClear(gGroup)
     RemoveLocation(gLoc)
 end
--- хз что тут менр
+-- ?? ??? ??? ????
 function PortalConditionsED()
     return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Sch5')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A001')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1M3')) == 0 and GetUnitTypeId(GetFilterUnit()) ~= FourCC('n01W') and GetUnitTypeId(GetFilterUnit()) ~= FourCC('n01X') and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Awrp')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1LR')) >= 1
 end
@@ -54650,7 +54698,7 @@ function Trig_PosadkaDal_Actions()
     SaveUnitHandle(Hash, StringHash("Dalaran"), 1, u2)
     
     
-    --Пора упасть
+    --???? ??????
     --call DisplayTextToPlayer(Player(0),0,0," - "+R2S(GetUnitMoveSpeed(u)))
     BlzSetUnitRealFieldBJ(u, UNIT_RF_FLY_HEIGHT, - 200.00)
     SetUnitFlyHeightBJ(u, - 200, 55.00)
@@ -54700,7 +54748,7 @@ function Trig_VzletDal_Actions()
     RemoveUnit(LoadUnitHandle(Hash, StringHash("Dalaran"), 1))
     FlushChildHashtable(Hash, StringHash("Dalaran"))
     SetUnitMoveSpeed(u, GetUnitDefaultMoveSpeed(u))
-    --Пора взлететь
+    --???? ????????
     BlzSetUnitRealFieldBJ(u, UNIT_RF_FLY_HEIGHT, 400.00)
     SetUnitFlyHeightBJ(u, 400.00, 55.00)
     
@@ -54833,7 +54881,7 @@ function Trig_PosadkaNax_Actions()
     SaveUnitHandle(Hash, StringHash("Nax"), 1, u2)
     
     
-    --Пора упасть
+    --???? ??????
     --call DisplayTextToPlayer(Player(0),0,0," - "+R2S(GetUnitMoveSpeed(u)))
     BlzSetUnitRealFieldBJ(u, UNIT_RF_FLY_HEIGHT, - 200.00)
     SetUnitFlyHeightBJ(u, - 200, 55.00)
@@ -54883,7 +54931,7 @@ function Trig_NaxFly_Actions()
     RemoveUnit(LoadUnitHandle(Hash, StringHash("Nax"), 1))
     FlushChildHashtable(Hash, StringHash("Nax"))
     SetUnitMoveSpeed(u, GetUnitDefaultMoveSpeed(u))
-    --Пора взлететь
+    --???? ????????
     BlzSetUnitRealFieldBJ(u, UNIT_RF_FLY_HEIGHT, 400.00)
     SetUnitFlyHeightBJ(u, 400.00, 55.00)
     

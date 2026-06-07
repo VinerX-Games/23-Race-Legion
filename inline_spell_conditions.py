@@ -214,7 +214,7 @@ def process_file(filepath):
     """Process a single Lua file."""
     print(f"Processing: {filepath}")
     
-    with open(filepath, 'r', encoding='utf-8-sig') as f:
+    with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
     
     lines = content.split('\n')
@@ -332,7 +332,7 @@ def process_file(filepath):
     
     # Write back
     new_content = '\n'.join(result_lines)
-    with open(filepath, 'w', encoding='utf-8-sig') as f:
+    with open(filepath, 'w', encoding='utf-8') as f:
         f.write(new_content)
     
     total_removed = len(conds_to_delete) + len(conds_to_strip)
@@ -343,7 +343,7 @@ def fix_orphan_condition_vars(filepath):
     """Remove orphaned Condition variables that were only used in now-deleted TriggerAddCondition calls.
     E.g. Remove lines like: local cond = Condition(Func)  when Func has been inlined.
     """
-    with open(filepath, 'r', encoding='utf-8-sig') as f:
+    with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
     
     # Find orphaned Condition assignments (Condition(func) assignments that are never used)
@@ -370,7 +370,7 @@ def process_libraries():
     # SpellSleepAOE
     spell_file = SECTION_DIR / "libraries" / "09_SpellSleepAOE.lua"
     if spell_file.exists():
-        with open(spell_file, 'r', encoding='utf-8-sig') as f:
+        with open(spell_file, 'r', encoding='utf-8') as f:
             content = f.read()
         
         # Pattern: TriggerAddCondition(t, Condition(SpellSleepAOE___anon__0))
@@ -398,14 +398,14 @@ def process_libraries():
             new_content
         )
         
-        with open(spell_file, 'w', encoding='utf-8-sig') as f:
+        with open(spell_file, 'w', encoding='utf-8') as f:
             f.write(new_content)
         print(f"Processed libraries/09_SpellSleepAOE.lua")
     
     # SanctifiedEnchantment
     enchant_file = SECTION_DIR / "libraries" / "12_SanctifiedEnchantment.lua"
     if enchant_file.exists():
-        with open(enchant_file, 'r', encoding='utf-8-sig') as f:
+        with open(enchant_file, 'r', encoding='utf-8') as f:
             content = f.read()
         
         # Pattern: TriggerAddCondition(trg, Condition(SanctifiedEnchantment___SkillCondition_EFFECT))
@@ -427,7 +427,7 @@ def process_libraries():
             new_content
         )
         
-        with open(enchant_file, 'w', encoding='utf-8-sig') as f:
+        with open(enchant_file, 'w', encoding='utf-8') as f:
             f.write(new_content)
         print(f"Processed libraries/12_SanctifiedEnchantment.lua")
 
@@ -451,7 +451,7 @@ def main():
     for lua_file in SECTION_DIR.glob("*.lua"):
         if lua_file.name == "80_generated_runtime.lua":
             continue
-        with open(lua_file, 'r', encoding='utf-8-sig') as f:
+        with open(lua_file, 'r', encoding='utf-8') as f:
             content = f.read()
         if 'TriggerAddCondition' in content and 'GetSpellAbilityId' in content:
             print(f"Found additional file with spell conditions: {lua_file.name}")

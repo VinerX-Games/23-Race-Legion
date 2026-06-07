@@ -160,7 +160,7 @@ TRANSFORMS = [
 
 
 def main():
-    with open(FILEPATH, 'r', encoding='utf-8-sig') as f:
+    with open(FILEPATH, 'r', encoding='utf-8') as f:
         content = f.read()
 
     lines = content.split('\n')
@@ -229,7 +229,7 @@ def main():
     # Remove triple+ blank lines (clean up)
     result = re.sub(r'\n{4,}', '\n\n\n', result)
 
-    with open(FILEPATH, 'w', encoding='utf-8-sig') as f:
+    with open(FILEPATH, 'w', encoding='utf-8') as f:
         f.write(result)
 
     print(f"\nDone! {len(TRANSFORMS)} functions converted, {sum(len(t['delete_callbacks']) for t in TRANSFORMS)} callbacks deleted.")

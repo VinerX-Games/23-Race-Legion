@@ -1,4 +1,4 @@
-﻿AiRaces = AiRaces or {}
+AiRaces = AiRaces or {}
 AiRaceTokens = AiRaceTokens or {}
 AiRaceOrder = AiRaceOrder or {}
 

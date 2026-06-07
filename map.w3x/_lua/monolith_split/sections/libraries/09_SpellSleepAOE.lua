@@ -1,4 +1,4 @@
-﻿-- library SpellSleepAOE:
+-- library SpellSleepAOE:
 ---@param level integer
 ---@return integer
 function SpellSleepAOE___getRange(level)

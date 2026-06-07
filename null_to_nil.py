@@ -16,7 +16,7 @@ def replace_null_in_line(line):
 
 
 def process_file(filepath):
-    with open(filepath, 'r', encoding='utf-8-sig') as f:
+    with open(filepath, 'r', encoding='utf-8') as f:
         content = f.read()
     
     count = content.count('null')
@@ -27,7 +27,7 @@ def process_file(filepath):
     new_lines = [replace_null_in_line(line) for line in lines]
     
     new_content = '\n'.join(new_lines)
-    with open(filepath, 'w', encoding='utf-8-sig') as f:
+    with open(filepath, 'w', encoding='utf-8') as f:
         f.write(new_content)
     
     return count

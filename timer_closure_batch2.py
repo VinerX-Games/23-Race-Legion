@@ -48,7 +48,7 @@ def do_replace(lines, ops):
 
 
 def main():
-    with open(FILEPATH, 'r', encoding='utf-8-sig') as f:
+    with open(FILEPATH, 'r', encoding='utf-8') as f:
         content = f.read()
     lines = content.split('\n')
 
@@ -209,7 +209,7 @@ def main():
     output = '\n'.join(result)
     output = re.sub(r'\n{4,}', '\n\n\n', output)
 
-    with open(FILEPATH, 'w', encoding='utf-8-sig') as f:
+    with open(FILEPATH, 'w', encoding='utf-8') as f:
         f.write(output)
 
     print(f'\nDone! {len([o for o in ops if o[2] is None])} callbacks deleted.')

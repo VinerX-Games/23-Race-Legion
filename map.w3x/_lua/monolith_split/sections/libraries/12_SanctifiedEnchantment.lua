@@ -1,4 +1,4 @@
-﻿-- library SanctifiedEnchantment:
+-- library SanctifiedEnchantment:
 --  ===============================================================
 -- Implemented from module BindTemplate:
 ---@param h handle

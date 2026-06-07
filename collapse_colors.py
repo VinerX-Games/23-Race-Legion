@@ -60,7 +60,7 @@ def main():
     init_triggers_path = SECTIONS / '90_InitCustomTriggers.lua'
 
     # === Process 80_generated_runtime.lua ===
-    with open(runtime_path, 'r', encoding='utf-8-sig') as f:
+    with open(runtime_path, 'r', encoding='utf-8') as f:
         content = f.read()
     lines = content.split('\n')
 
@@ -158,14 +158,14 @@ def main():
     output = '\n'.join(result)
     output = re.sub(r'\n{4,}', '\n\n\n', output)
 
-    with open(runtime_path, 'w', encoding='utf-8-sig') as f:
+    with open(runtime_path, 'w', encoding='utf-8') as f:
         f.write(output)
 
     print(f"80_generated_runtime.lua: Color triggers consolidated")
     print(f"  Deleted: 24 InitTrig + 24 Actions + 24 comment blocks = ~740 lines")
 
     # === Process 90_InitCustomTriggers.lua ===
-    with open(init_triggers_path, 'r', encoding='utf-8-sig') as f:
+    with open(init_triggers_path, 'r', encoding='utf-8') as f:
         lines90 = f.read().split('\n')
 
     new_lines90 = []
@@ -182,7 +182,7 @@ def main():
         if 'InitTrig_InitGlobals()' in line:
             result90.append('\tInitColorCommands()')
 
-    with open(init_triggers_path, 'w', encoding='utf-8-sig') as f:
+    with open(init_triggers_path, 'w', encoding='utf-8') as f:
         f.write('\n'.join(result90))
 
     print(f"90_InitCustomTriggers.lua: 24 calls -> 1 call")

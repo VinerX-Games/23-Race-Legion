@@ -6,7 +6,7 @@ from pathlib import Path
 
 FILEPATH = Path(r"C:\Games\23 Race\23-Race_Legion_Worktree3\map.w3x\_lua\monolith_split\sections\80_generated_runtime.lua")
 
-TARGET_VARS = ['b', 'bex', 'Boolexpr', 'udg_Boolexpr']
+TARGET_VARS = ['b', 'Boolexpr']
 
 
 def depth(line):
@@ -26,7 +26,7 @@ def find_end(lines, start):
 
 
 def main():
-    with open(FILEPATH, 'r', encoding='utf-8-sig') as f:
+    with open(FILEPATH, 'r', encoding='utf-8') as f:
         content = f.read()
     lines = content.split('\n')
 
@@ -105,7 +105,7 @@ def main():
         i = func_start + len(new_func_lines)
 
     # Write back
-    with open(FILEPATH, 'w', encoding='utf-8-sig') as f:
+    with open(FILEPATH, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lines))
 
     print(f"Removed {total_removed} Condition() variable assignments")

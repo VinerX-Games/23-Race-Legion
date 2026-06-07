@@ -8,7 +8,7 @@ FILEPATH = Path(r"C:\Games\23 Race\23-Race_Legion_Worktree3\map.w3x\_lua\monolit
 
 
 def main():
-    with open(FILEPATH, 'r', encoding='utf-8-sig') as f:
+    with open(FILEPATH, 'r', encoding='utf-8') as f:
         content = f.read()
 
     count = 0
@@ -32,7 +32,7 @@ def main():
     
     print(f'\nTotal: {count} replacements')
     
-    with open(FILEPATH, 'w', encoding='utf-8-sig') as f:
+    with open(FILEPATH, 'w', encoding='utf-8') as f:
         f.write('\n'.join(new_lines))
 
 
