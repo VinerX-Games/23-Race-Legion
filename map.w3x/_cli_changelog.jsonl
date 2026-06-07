@@ -1,0 +1,2 @@
+{"ts":"2026-06-07T09:40:02.741Z","command":"copy-object","type":"unit","source":"h000","new_id":"hX99","name":"Test Unit"}
+{"ts":"2026-06-07T09:40:22.015Z","command":"set-field","type":"unit","id":"hX99","field":"isbldg","old":"1","new":"0"}

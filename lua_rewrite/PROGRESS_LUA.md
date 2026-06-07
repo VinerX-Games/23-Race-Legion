@@ -1,0 +1,80 @@
+# Lua Rewrite Progress
+
+## 2026-06-06
+
+- Added `probe-map` and `read-war3-log` commands to `HiveWE_cli` for automated `run -> wait -> collect War3Log` loops.
+- Verified that Lua root errors are written to `War3Log.txt` with `war3map.lua` line numbers.
+- Verified that the generated map folder `lua_rewrite/map_lua.w3m` loads without an immediate root error.
+- Determined that `23_race_1_6_505 Lua.w3m` is currently a lightweight placeholder map, while `lua_rewrite/map_lua.w3m` contains the full script conversion attempt.
+- Added `lua_rewrite/build_lua_map.py` to build a separate probe artifact from module files with injected Debug Utils.
+- Added `map_lua.w3m/debug_probe.lua` and instrumented `main.lua` with labeled init checkpoints.
+- Important: the module-based probe build is currently much smaller than the large conversion monolith, so it is kept as a separate artifact: `lua_rewrite/war3map.probe.generated.lua`.
+- Restored `map_lua.w3m/war3map.lua` from the larger conversion artifact after verifying the probe build path.
+- Tried FileIO-based disk logging to `CustomMapData`, but no output file appeared under the current `-loadfile` probe environment. This remains an unresolved environment/runtime issue.
+- Next: decide whether to instrument the large conversion monolith directly or extend the module coverage until the probe build becomes functionally representative.
+
+## 2026-06-07
+
+- Split the large converted `lua_rewrite/war3map.lua` into an exact rebuildable source tree under `lua_rewrite/monolith_split/`.
+- Added `lua_rewrite/split_war3map.py` so the split source can be rebuilt back into `war3map.lua` deterministically.
+- Verified the initial split by rebuilding an exact text match against the original monolith before any fixes.
+- Discovered the real execution blocker: `lua_rewrite/map_lua.w3m/war3map.w3i` still had the Lua flag disabled, so Warcraft was not executing `war3map.lua` at all.
+- Added `lua_rewrite/set_w3i_lua_flag.py` and switched `map_lua.w3m/war3map.w3i` into Lua mode.
+- Added `lua_rewrite/normalize_converted_lua.py` to mechanically fix repeated JASS->Lua artifacts in the split source.
+- Normalized several systemic conversion defects:
+  - named callback references like `Condition(function Foo)` -> `Condition(Foo)`
+  - inline JASS comments `//`
+  - `!=` -> `~=`
+  - `local array name` -> `local name = {}`
+  - `loop` -> `while true do`
+- Fixed the first allocator/deallocator conversion defect manually (`...V[this] = -1` / `~= -1`) using the original `war3map.j` as reference.
+- Added runtime probe logging through `PreloadGenEnd` into `CustomMapData` and taught `HiveWE_cli probe-map` to read that log back.
+- Added optional auto-click support to `HiveWE_cli probe-map` for maps that stop on the post-load click gate.
+- Extended `HiveWE_cli probe-map` automation to send `Enter` after the load-screen click and again during graceful close, so the CLI can pass the disconnect/confirmation prompts without manual input.
+- Current runtime state:
+  - root Lua compile errors are cleared for the current tested build
+  - deferred init now completes through `InitCustomTriggers` and `RunInitializationTriggers`
+  - current blockers moved into runtime callback errors caused by rawcode strings passed where WC3 Lua expects numeric ids, e.g. `SetPlayerTechMaxAllowed` / `GetPlayerTechCount`
+- Added a systemic rawcode normalization rule to `lua_rewrite/normalize_converted_lua.py`: single-quoted 4-character JASS ids are rewritten into `FourCC(...)` unless they are already normalized.
+- Rebuilt `map_lua.w3m/war3map.lua` from the split source after the rawcode pass and verified with `probe-map` that the map now survives a 120-second automated runtime without Lua root errors, init failures, or early callback errors.
+- Remaining non-normalized 4-character literals are now confined to comments in the generated runtime section, not active code.
+- Delayed `UISetup` out of the immediate deferred-init queue and into a short timer callback, so frame repositioning runs after the Warcraft UI is ready instead of racing the map bootstrap.
+- Fixed several high-frequency Lua conversion defects that had moved from startup into runtime:
+  - broken string concatenation in player-name table setup
+  - missing player parameter in `GetPlayerNameCut`
+  - malformed multiboard index expressions like `MultiboardItemOwnerIndexpi`
+  - sparse Lua array writes passed into `SaveInteger(...)`
+  - unsafe `GetUnitGoldCost(...)` arithmetic when the native returns `nil`
+- Restored the intended chat command prefixes for at least the user-reported commands `-ai` and `-raceselect`, using `war3map.j` as the source of truth rather than trusting the converted Lua literals.
+- Added lazy multiboard row creation for players that appear after the initial table build, which removes the repeated runtime callback failures from AI/player updates instead of merely suppressing them.
+- Rebuilt the map from split sources and verified with a second 120-second `probe-map` run that startup still completes cleanly and the previous repeating callback errors are gone.
+- Added a second delayed `UISetup` pass plus frame-presence probe logging. Both `ConsoleUIBackdrop` and `UpperButtonBarFrame` are present on both passes and `UISetup` completes cleanly, so the remaining “visual UI not applied” issue is no longer explained by missing frames or too-early execution.
+- Current UI hypothesis: the remaining mismatch is more likely in the console-skin/import/rendering layer or in the difference between unpacked `-loadfile` runs and packed-map startup, not in the core Lua frame-move sequence itself.
+- Promoted the working Lua map into the canonical repository path `map.w3x` and moved sidecar map copies out of the repository tree, so future work targets the real map path instead of parallel Lua folders.
+- Verified the canonical `map.w3x` through `probe-map`; it starts as a Lua map cleanly, but the visual UI issue now has a concrete engine-side signal in `War3Log`: `ITexCreate fail` on `UI\\Console\\Human\\HumanUITile04/05/06.dds` and `UI\\Feedback\\Resources\\Resource{Gold,Lumber,Supply}.dds`.
+- This makes the next UI debugging step much narrower: inspect texture format/compatibility for the custom UI assets rather than the frame code path.
+- Next architecture step: teach the CLI to inject timed in-game chat commands, so command fixes like `-ai2` can be verified automatically instead of only by manual playthroughs.
+- Moved the split Lua source tree into `map.w3x/_lua/monolith_split`, so the canonical map folder now contains both the built `war3map.lua` and the source tree used to regenerate it.
+- Added a canonical rebuild entrypoint at repository root: `python build_map_lua.py`. The old `lua_rewrite/build_lua_map.py` is now only a compatibility wrapper to avoid two competing build paths.
+- Added `LUA_WORK_PLAN.md` to pin the current migration order: canonical in-map sources, CLI-driven tests, UI texture fix, then semantic module extraction.
+- Extended `HiveWE_cli probe-map` with timed chat injection: `--chat-after/--chat-text` for one command and `--chat-script "20:-ai2|35:-raceselect1"` for scripted runs.
+- Verified the new CLI path on the canonical `map.w3x`: load-screen click, post-load `Enter`, both chat commands, and graceful close all executed in one automated run.
+- The automated run confirmed the UI texture blocker is still present and also exposed a second non-Lua asset issue in `War3Log`: repeated `model creation failed - .mdl.mdl`, which should be debugged separately from the Lua migration itself.
+- Fixed the UI texture blocker in the canonical map by patching the six custom transparent DDS placeholders (`HumanUITile04/05/06.dds`, `ResourceGold/Lumber/Supply.dds`) from invalid 1x1 compressed textures to valid 4x4 textures while preserving their role as custom UI-hiding overrides.
+- Verified with `probe-map` that the `ITexCreate fail` errors for those six UI textures are gone. The visual UI issue moved past the previous hard asset failure; the remaining noisy import issue is still the separate `model creation failed - .mdl.mdl` stream.
+- Added a simple in-map manual ping command `-codexping` for future manual validation of chat handling and map liveness.
+- Tried two bridge strategies to replace fragile chat automation:
+  - chat injection via `SendInput` instead of `PostMessage`
+  - file-driven command bridge via `CustomMapData` + `Preloader(...)`
+- Chat automation still reaches the game window and can open the chat box, but command text is not yet reliably processed by the map; this is no longer the preferred path.
+- The `CustomMapData` bridge is partially working:
+  - CLI writes manifest and command `.pld` files successfully
+  - the map writes probe logs successfully
+  - the map reaches `BridgeStart` and `"[BRIDGE] request manifest"` during runtime
+- The current hard blocker is narrower than before: the map does not yet recover payload back from the preload file into readable runtime state. Both tested carriers (`SetPlayerName`, then `BlzSetAbilityTooltip('ANav', ...)`) failed to surface payload back into Lua under the current `-loadfile` probe environment.
+- Current handoff state:
+  - canonical map path: `map.w3x`
+  - canonical Lua source path: `map.w3x/_lua/monolith_split`
+  - UI DDS blocker: fixed
+  - chat bridge: unreliable, de-prioritized
+  - file bridge: structurally in place, payload recovery still failing
