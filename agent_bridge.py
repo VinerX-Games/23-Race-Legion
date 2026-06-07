@@ -5,9 +5,11 @@ No map restart needed. Pairs with the in-map eval channel (BridgeConsumeEval).
 
 Channel:
   IN  : sequential .pld files  <CustomMapData>/23race_eval_NNNN.pld
-        payload  eval|<seq>|<base64-lua>     (read in-game via Preloader; cache-safe)
+         payload sent via BlzSendSyncData inside the .pld, chunked if needed:
+           eval|<seq>|<chunk_i>|<total>|<hex>
+         + BlzSetAbilityTooltip flag so the game detects the file was loaded.
   OUT : fixed file              <CustomMapData>/23race_eval_out.pld
-        payload  <seq>|<ok 0/1>|<base64-serialized-result>   (PreloadGenEnd)
+         payload  <seq>|<ok 0/1>|<base64-serialized-result>   (PreloadGenEnd)
 
 Usage:
   python agent_bridge.py reset                 # call once after each map launch
@@ -15,7 +17,7 @@ Usage:
   python agent_bridge.py exec --file snippet.lua
   python agent_bridge.py exec "..." --timeout 12
 """
-import sys, os, re, time, glob, base64, argparse
+import sys, os, re, time, glob, argparse
 
 # Russian Windows consoles default to cp1251 and crash on UTF-8 output; force UTF-8.
 for _s in (sys.stdout, sys.stderr):
@@ -29,23 +31,35 @@ EVAL_OUT = os.path.join(CMD_DIR, "23race_eval_out.pld")
 IN_GLOB = os.path.join(CMD_DIR, "23race_eval_[0-9]*.pld")
 IN_RE = re.compile(r"23race_eval_(\d+)\.pld$", re.I)
 
-# Exact .pld format expected by WC3 Preloader (must match the CLI byte-for-byte).
+# BlzSendSyncData payload limit ~255 chars. We keep hex chunks at 200 to stay safe.
+HEX_CHUNK = 200
+
+# .pld template: BlzSendSyncData calls for chunked payload + BlzSetAbilityTooltip flag.
+# The tooltip flag lets the game detect the file was loaded and advance EvalNextSeq.
 PLD_TEMPLATE = (
     "function PreloadFiles takes nothing returns nothing\n"
     "\r\n"
     "\tcall PreloadStart()\r\n"
     '\tcall Preload( "")\n'
-    "call BlzSetAbilityTooltip('AHbz',\"{payload}\",0)\n"
-    'call Preload("" )\r\n'
+    "{chunk_calls}"
+    '\tcall Preload("" )\r\n'
     "\tcall PreloadEnd( 0.0 )\r\n"
     "\n"
     "endfunction\n\n\r\n"
 )
 
 
-def write_pld(path, payload):
+def write_pld(path, seq, hex_code):
+    total = max(1, (len(hex_code) + HEX_CHUNK - 1) // HEX_CHUNK)
+    calls = []
+    for i in range(total):
+        chunk = hex_code[i * HEX_CHUNK : (i + 1) * HEX_CHUNK]
+        calls.append(
+            'call BlzSendSyncData("23RaceEval","eval|%d|%d|%d|%s")\n' % (seq, i + 1, total, chunk)
+        )
+    calls.append("call BlzSetAbilityTooltip('AHbz',\"loaded\",0)\n")
     with open(path, "wb") as f:
-        f.write(PLD_TEMPLATE.format(payload=payload).encode("utf-8"))
+        f.write(PLD_TEMPLATE.format(chunk_calls="".join(calls)).encode("utf-8"))
 
 
 def next_seq():
@@ -114,7 +128,7 @@ def cmd_exec(code, timeout):
     except OSError:
         pass
     hx = code.encode("utf-8").hex()
-    write_pld(os.path.join(CMD_DIR, "23race_eval_%04d.pld" % seq), "eval|%d|%s" % (seq, hx))
+    write_pld(os.path.join(CMD_DIR, "23race_eval_%04d.pld" % seq), seq, hx)
     deadline = time.time() + timeout
     while time.time() < deadline:
         r = parse_out(seq)

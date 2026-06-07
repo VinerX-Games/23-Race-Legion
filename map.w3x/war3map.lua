@@ -30,6 +30,7 @@ _G.BridgeEvalEnabled = true
 _G.BridgeEvalSyncPrefix = "23RaceEval"
 _G.BridgeEvalSyncTrigger = nil
 _G.BridgeEvalLoopPaused = false
+_G.BridgeEvalChunks = {}
 local function probeLogSanitize(message)
     local text = tostring(message)
     text = text:gsub("[\r\n]", " | ")
@@ -222,20 +223,46 @@ function BridgeEvalSetupSync()
     TriggerAddAction(trigger, function()
         local data = BlzGetTriggerSyncData()
         local parts = bridgeSplit(data, "|")
-        if #parts < 3 or parts[1] ~= "eval" then
+        if #parts < 5 or parts[1] ~= "eval" then
             ProbeLogWrite("[BRIDGE-SYNC] bad header parts=" .. tostring(#parts))
             return
         end
         local seq = tonumber(parts[2])
-        local code = EvalHexDec(parts[3] or "")
-        if seq == nil or code == "" then
-            ProbeLogWrite("[BRIDGE-SYNC] empty payload")
+        local ci = tonumber(parts[3])
+        local total = tonumber(parts[4])
+        local hexchunk = parts[5] or ""
+        if seq == nil or ci == nil or total == nil then
+            ProbeLogWrite("[BRIDGE-SYNC] bad numbers")
             return
         end
-        ProbeLogWrite("[EVAL] sync-run seq=" .. tostring(seq) .. " bytes=" .. tostring(#code))
-        EvalRun(seq, code)
+        if total == 1 then
+            ProbeLogWrite("[EVAL] sync-run seq=" .. tostring(seq) .. " bytes=" .. tostring(#hexchunk // 2))
+            EvalRun(seq, EvalHexDec(hexchunk))
+            return
+        end
+        local buf = BridgeEvalChunks[seq]
+        if buf == nil then
+            buf = { total = total, chunks = {}, received = 0, ts = BridgeElapsed }
+            BridgeEvalChunks[seq] = buf
+        end
+        if buf.chunks[ci] ~= nil then
+            return
+        end
+        buf.chunks[ci] = hexchunk
+        buf.received = buf.received + 1
+        ProbeLogWrite("[EVAL] chunk seq=" .. tostring(seq) .. " " .. tostring(ci) .. "/" .. tostring(total))
+        if buf.received >= buf.total then
+            local full = {}
+            for j = 1, buf.total do
+                full[#full + 1] = buf.chunks[j] or ""
+            end
+            local hex = table.concat(full)
+            BridgeEvalChunks[seq] = nil
+            ProbeLogWrite("[EVAL] sync-run assembled seq=" .. tostring(seq) .. " bytes=" .. tostring(#hex // 2))
+            EvalRun(seq, EvalHexDec(hex))
+        end
     end)
-    ProbeLogWrite("[BRIDGE] eval-sync registered prefix=" .. tostring(BridgeEvalSyncPrefix))
+    ProbeLogWrite("[BRIDGE] eval-sync registered prefix=" .. tostring(BridgeEvalSyncPrefix) .. " chunked")
 end
 _G.EvalNextSeq = 1
 _G.EvalOutFile = "23race_eval_out.pld"
@@ -315,20 +342,12 @@ function BridgeConsumeEval()
         BridgeCarrierBaseline = baseline
     end
     local path = string.format("%s%04d.pld", EvalInPrefix, EvalNextSeq)
-    local ok = pcall(function() Preloader(path) end)
-    if not ok then return end
+    pcall(function() Preloader(path) end)
     local current = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
     if current == nil or current == baseline then return end
     BlzSetAbilityTooltip(BridgeCarrierAbilityId, baseline, BridgeCarrierTooltipLevel)
-    local parts = bridgeSplit(current, "|")
-    if parts[1] ~= "eval" then
-        EvalNextSeq = EvalNextSeq + 1
-        return
-    end
-    local seq = tonumber(parts[2]) or EvalNextSeq
     EvalNextSeq = EvalNextSeq + 1
-    ProbeLogWrite("[EVAL] sync-send seq=" .. tostring(seq) .. " bytes=" .. tostring(#(parts[3] or "")))
-    BlzSendSyncData(BridgeEvalSyncPrefix, "eval|" .. tostring(seq) .. "|" .. (parts[3] or ""))
+    ProbeLogWrite("[EVAL] loaded seq=" .. tostring(EvalNextSeq - 1) .. " file=" .. path)
 end
 function BridgeTick()
     if BridgeEvalEnabled and not BridgeEvalLoopPaused then
@@ -357,6 +376,12 @@ function BridgeTick()
                     ProbeLogWrite("[BRIDGE] error seq=" .. tostring(sequence) .. " op=" .. tostring(command.op) .. " :: " .. tostring(err))
                 end
             end
+        end
+    end
+    for seq, buf in pairs(BridgeEvalChunks) do
+        if BridgeElapsed - buf.ts > 30 then
+            BridgeEvalChunks[seq] = nil
+            ProbeLogWrite("[EVAL] stale chunk buffer dropped seq=" .. tostring(seq))
         end
     end
 end
@@ -58696,33 +58721,31 @@ RegisterAiRace("Silitids", {
     },
     production = {
         pre = function(id, pi, u)
-            if id == FourCC('e01I') then
-                local pool = { FourCC('e01G'), FourCC('e01G'), FourCC('e01G'), FourCC('e01G'),
-                              FourCC('e01Z'), FourCC('e01Z'), FourCC('e01Z'),
-                              FourCC('e01V'), FourCC('e01V'),
-                              FourCC('e01T'), FourCC('e01T'),
-                              FourCC('e01U'), FourCC('e01U'),
-                              FourCC('e01Q'), FourCC('e01Q') }
-                local picked = pool[GetRandomInt(1, #pool)]
-                local p = Player(pi)
-                local x = GetUnitX(u)
-                local y = GetUnitY(u)
-                local nu = CreateUnit(p, picked, x, y, bj_UNIT_FACING)
-                GroupAddUnit(udg_Ai_units[pi], nu)
-                NumberAdd(pi, picked)
-                if picked == FourCC('e01G') then
-                    GroupAddUnit(udg_Ai_builders[pi], nu)
-                else
-                    GroupAddUnit(udg_Ai_army[pi], nu)
-                    NumberAdd(pi, StringHash("Number"))
+            if id ~= FourCC('e01I') then return false end
+            local isT2 = getAiCount(pi, FourCC('e021')) + getAiCount(pi, FourCC('e020')) >= 1
+            local pool = { FourCC('e01G'), FourCC('e01G'), FourCC('e01G'), FourCC('e01Z'), FourCC('e01Z'), FourCC('e01Z') }
+            if isT2 then
+                for _, ut in ipairs({ FourCC('e01V'), FourCC('e01V'), FourCC('e01T'), FourCC('e01T'), FourCC('e01U'), FourCC('e01U'), FourCC('e01Q'), FourCC('e01Q') }) do
+                    pool[#pool + 1] = ut
                 end
-                AddCountDis(nu, pi)
-                GroupRemoveUnit(udg_Ai_buildings[pi], u)
-                NumberRem(pi, FourCC('e01I'))
-                RemoveUnit(u)
-                return true
             end
-            return false
+            local picked = pool[GetRandomInt(1, #pool)]
+            local p = Player(pi)
+            local x = GetUnitX(u)
+            local y = GetUnitY(u)
+            local nu = CreateUnit(p, picked, x, y, bj_UNIT_FACING)
+            GroupAddUnit(udg_Ai_units[pi], nu)
+            NumberAdd(pi, picked)
+            if picked == FourCC('e01G') then
+                GroupAddUnit(udg_Ai_builders[pi], nu)
+            else
+                GroupAddUnit(udg_Ai_army[pi], nu)
+                NumberAdd(pi, StringHash("Number"))
+            end
+            AddCountDis(nu, pi)
+            GroupRemoveUnit(udg_Ai_buildings[pi], u)
+            NumberRem(pi, FourCC('e01I'))
+            return true
         end,
         [FourCC('e01H')] = { {FourCC('e01R'),3,limit=18} },
         [FourCC('e021')] = { {FourCC('e01R'),3,limit=18} },
