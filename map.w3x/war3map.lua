@@ -9,7 +9,7 @@ _G.ProbeLogFile = "23Race_probe_log.pld"
 _G.ProbeLogLines = {}
 _G.ProbeLogFlushEnabled = false
 _G.LogFilter = {}
-_G.LogFilterAll = true
+_G.LogFilterAll = false
 _G.BridgeSyncPrefix = "23RaceCmd"
 _G.BridgeManifestFile = "23race_cmd_manifest.pld"
 _G.BridgeCommandFilePrefix = "23race_cmd_"
@@ -3347,7 +3347,7 @@ function AiLimitsSet()
 	AiLimit = IMaxBJ(70, 200 - gInt * 5)
 	
 	AiMass = IMaxBJ(8 - gInt, 4)
-	AiRepeat = 2 + IMinBJ(R2I(gInt / 2), 8)
+	AiRepeat = 1 -- always max speed
 	ProbeLogWrite("[AI] AiLimitsSet Bots=" .. tostring(gInt) .. " AiLimit=" .. tostring(AiLimit) .. " AiMass=" .. tostring(AiMass) .. " AiRepeat=" .. tostring(AiRepeat))
 end
 ---@return nothing
@@ -60361,7 +60361,7 @@ function main()
     ProbeStep("CreateRegions", CreateRegions)
     ProbeStep("CreateCameras", CreateCameras)
     ProbeStep("CreateAllUnits", CreateAllUnits)
-    ProbeLogEnableFlush()
+    -- ProbeLogEnableFlush()  -- disabled: no log spam by default
     -- Everything below is DEFERRED to game start (safe in Lua mode)
     ProbeLogWrite("[MAIN] registering deferred init queue")
     OnInit.fn(Global___Init, "Global___Init")

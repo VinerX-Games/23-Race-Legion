@@ -271,7 +271,7 @@ function AiLimitsSet()
 	AiLimit = IMaxBJ(70, 200 - gInt * 5)
 	
 	AiMass = IMaxBJ(8 - gInt, 4)
-	AiRepeat = 2 + IMinBJ(R2I(gInt / 2), 8)
+	AiRepeat = 1 -- always max speed
 	ProbeLogWrite("[AI] AiLimitsSet Bots=" .. tostring(gInt) .. " AiLimit=" .. tostring(AiLimit) .. " AiMass=" .. tostring(AiMass) .. " AiRepeat=" .. tostring(AiRepeat))
 end
 ---@return nothing

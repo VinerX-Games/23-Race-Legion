@@ -36,7 +36,7 @@ function main()
     ProbeStep("CreateRegions", CreateRegions)
     ProbeStep("CreateCameras", CreateCameras)
     ProbeStep("CreateAllUnits", CreateAllUnits)
-    ProbeLogEnableFlush()
+    -- ProbeLogEnableFlush()  -- disabled: no log spam by default
     -- Everything below is DEFERRED to game start (safe in Lua mode)
     ProbeLogWrite("[MAIN] registering deferred init queue")
     OnInit.fn(Global___Init, "Global___Init")
