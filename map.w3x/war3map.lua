@@ -54400,13 +54400,24 @@ function Trig_EndBuilding_Conditions()
     return udg_AiControl[GetPlayerId(gPlayer)]
 end
 function Trig_EndBuilding_Actions()
+    local finishedBuilding = gUnit
     
     --set checkPlayer = gPlayer
-    GroupEnumUnitsInRange(gGroup, GetUnitX(gUnit), GetUnitY(gUnit), 300.00, B_Worker)
+    GroupEnumUnitsInRange(gGroup, GetUnitX(finishedBuilding), GetUnitY(finishedBuilding), 300.00, B_Worker)
     gUnit=FirstOfGroup(gGroup)
     if gUnit ~= nil then
         TryBuild_u=gUnit
         TryBuild()
+    end
+    
+    -- Nerubs cocoon: upgrade to real building
+    if GetUnitTypeId(finishedBuilding) == FourCC('u019') then
+        local pi = GetPlayerId(gPlayer)
+        local target = AiData[pi]["upgradeCocoon"]
+        if target ~= nil and target ~= 0 then
+            IssueImmediateOrderById(finishedBuilding, target)
+            AiData[pi]["upgradeCocoon"] = nil
+        end
     end
 end
 --===========================================================================
