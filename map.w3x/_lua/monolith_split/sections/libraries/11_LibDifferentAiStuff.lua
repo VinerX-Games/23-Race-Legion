@@ -235,7 +235,12 @@ function BuildT(p, before, after)
 	
 	gGroup = udg_LocalOtrad
 	u = GroupPickRandomUnit2(gGroup)
-	IssueImmediateOrderById(u, after)
+	if u ~= nil then
+		IssueImmediateOrderById(u, after)
+		local pi = GetPlayerId(p)
+		NumberRem(pi, before)
+		NumberAdd(pi, after)
+	end
 	
 	-- Зачистка
 	udg_LocalOtrad = CreateGroup()
