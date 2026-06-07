@@ -17,27 +17,20 @@ function TryBuild()
 	GroupRemoveUnit(udg_Ai_harvest[gPi], gUnit)
 	
 	
-	-- Стены и порты: поход к водной точке (шанс тем выше, чем меньше верфей)
-	gInt = (AiData[gPi][StringHash("NumberPorts")] or 0)
-	if gInt < 12 and AiRaceUsesWaterPoint(gPi) and GoToWaterPoint(gPi, gUnit, gX, gY) then
-		return 
-	end
-	
-	
 	-- Стены и порты: стройка на месте (если рядом берег)
+	gInt = (AiData[gPi][StringHash("NumberPorts")] or 0)
 	if gInt < 12 and ( not IsTerrainPathable(gX, gY, PATHING_TYPE_WALKABILITY) and RectContainsCoords(gg_rct_Outland, gX, gY) ~= true and RectContainsCoords(gg_rct_Azgel, gX, gY) ~= true) then
-		
 		
 		if Random(1, 2) then
 			
 			gInt2 = 0
 			
 			while true do
-				if gInt2 >= 5 then break end
+				if gInt2 >= 12 then break end
 				gInt2 = gInt2 + 1
 				
-				gX2 = gX + 200.00 * Cos(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
-				gY2 = gY + 200.00 * Sin(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
+				gX2 = gX + GetRandomReal(200.00, 1000.00) * Cos(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
+				gY2 = gY + GetRandomReal(200.00, 1000.00) * Sin(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
 				
 				if  not (IsTerrainPathable(gX2, gY2, PATHING_TYPE_WALKABILITY) or IsTerrainPathable(gX2, gY2, PATHING_TYPE_FLOATABILITY) or RectContainsCoords(gg_rct_Outland, gX2, gY2)) then
 					
@@ -51,6 +44,11 @@ function TryBuild()
 		end
 		
 		
+	end
+	
+	-- Стены и порты: поход к водной точке (шанс тем выше, чем меньше верфей)
+	if gInt < 8 and AiRaceUsesWaterPoint(gPi) and GoToWaterPoint(gPi, gUnit, gX, gY) then
+		return 
 	end
 	
 	-- ???? ??????? ?? ????? ????
