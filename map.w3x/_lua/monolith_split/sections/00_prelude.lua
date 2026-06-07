@@ -26,6 +26,10 @@ _G.BridgeDispatchCommand = nil
 _G.BridgePollTimer = nil
 _G.BridgeDebugTicks = 0
 _G.BridgeDebugMaxTicks = 0
+_G.BridgeEvalEnabled = true
+_G.BridgeEvalSyncPrefix = "23RaceEval"
+_G.BridgeEvalSyncTrigger = nil
+_G.BridgeEvalLoopPaused = false
 local function probeLogSanitize(message)
     local text = tostring(message)
     text = text:gsub("[\r\n]", " | ")
@@ -203,8 +207,36 @@ end
 -- running game and return the value. Crash-safe via hex payloads.
 --   IN : sequential 23race_eval_NNNN.pld  -> eval|<seq>|<hex-lua>
 --   OUT: fixed 23race_eval_out.pld         -> <seq>|<ok 0/1>|<hex-result>
+--   SYNC: Player(0) reads .pld -> BlzSendSyncData -> all players execute
 -- Driven from agent_bridge.py. See memory live-lua-eval-bridge.
 -- ============================================================
+function BridgeEvalSetupSync()
+    if BridgeEvalSyncTrigger ~= nil then
+        return
+    end
+    local trigger = CreateTrigger()
+    BridgeEvalSyncTrigger = trigger
+    for i = 0, 23 do
+        BlzTriggerRegisterPlayerSyncEvent(trigger, Player(i), BridgeEvalSyncPrefix, false)
+    end
+    TriggerAddAction(trigger, function()
+        local data = BlzGetTriggerSyncData()
+        local parts = bridgeSplit(data, "|")
+        if #parts < 3 or parts[1] ~= "eval" then
+            ProbeLogWrite("[BRIDGE-SYNC] bad header parts=" .. tostring(#parts))
+            return
+        end
+        local seq = tonumber(parts[2])
+        local code = EvalHexDec(parts[3] or "")
+        if seq == nil or code == "" then
+            ProbeLogWrite("[BRIDGE-SYNC] empty payload")
+            return
+        end
+        ProbeLogWrite("[EVAL] sync-run seq=" .. tostring(seq) .. " bytes=" .. tostring(#code))
+        EvalRun(seq, code)
+    end)
+    ProbeLogWrite("[BRIDGE] eval-sync registered prefix=" .. tostring(BridgeEvalSyncPrefix))
+end
 _G.EvalNextSeq = 1
 _G.EvalOutFile = "23race_eval_out.pld"
 _G.EvalInPrefix = "23race_eval_"
@@ -240,6 +272,9 @@ function EvalSerialize(v, depth)
     return t .. ": " .. tostring(v)
 end
 function EvalWriteResult(seq, ok, value)
+    if GetPlayerId(GetLocalPlayer()) ~= 0 then
+        return
+    end
     -- WC3 truncates each Preload() string (~259 chars), so chunk the hex result
     -- across multiple lines: <seq>|<ok>|<idx>|<total>|<hexchunk>. Agent reassembles.
     local hex = EvalHexEnc(EvalSerialize(value, 5))
@@ -271,6 +306,9 @@ function EvalRun(seq, code)
     EvalWriteResult(seq, ok, res)
 end
 function BridgeConsumeEval()
+    if GetPlayerId(GetLocalPlayer()) ~= 0 or not BridgeEvalEnabled then
+        return
+    end
     local baseline = BridgeCarrierBaseline
     if baseline == nil then
         baseline = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
@@ -289,12 +327,13 @@ function BridgeConsumeEval()
     end
     local seq = tonumber(parts[2]) or EvalNextSeq
     EvalNextSeq = EvalNextSeq + 1
-    local code = EvalHexDec(parts[3] or "")
-    ProbeLogWrite("[EVAL] run seq=" .. tostring(seq) .. " bytes=" .. tostring(#code))
-    EvalRun(seq, code)
+    ProbeLogWrite("[EVAL] sync-send seq=" .. tostring(seq) .. " bytes=" .. tostring(#(parts[3] or "")))
+    BlzSendSyncData(BridgeEvalSyncPrefix, "eval|" .. tostring(seq) .. "|" .. (parts[3] or ""))
 end
 function BridgeTick()
-    pcall(BridgeConsumeEval)
+    if BridgeEvalEnabled and not BridgeEvalLoopPaused then
+        pcall(BridgeConsumeEval)
+    end
     BridgeElapsed = BridgeElapsed + BridgeTickInterval
     BridgeDebugTicks = BridgeDebugTicks + 1
     if BridgeDebugTicks <= BridgeDebugMaxTicks then
@@ -337,6 +376,7 @@ function BridgeStart()
     local timer = CreateTimer()
     BridgePollTimer = timer
     ProbeLogWrite("[BRIDGE] start (live-only) baseline-len=" .. tostring(#flushed))
+    BridgeEvalSetupSync()
     TimerStart(timer, BridgeTickInterval, true, BridgeTick)
 end
 function SetupBridgeChat()
@@ -355,6 +395,46 @@ function SetupBridgeChat()
         local op = string.sub(rest, 1, sep - 1)
         local arg = string.sub(rest, sep + 1)
         ProbeLogWrite("[BRIDGE] chat op=" .. tostring(op) .. " arg=" .. tostring(arg))
+        -- Eval toggle commands
+        if op == "eval" then
+            if arg == "on" then
+                BridgeEvalEnabled = true
+                ProbeLogWrite("[BRIDGE] eval enabled")
+                DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cff00ff00[BRIDGE] eval ON|r")
+            elseif arg == "off" then
+                BridgeEvalEnabled = false
+                ProbeLogWrite("[BRIDGE] eval disabled")
+                DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffff0000[BRIDGE] eval OFF|r")
+            elseif arg == "toggle" then
+                BridgeEvalEnabled = not BridgeEvalEnabled
+                ProbeLogWrite("[BRIDGE] eval toggled to " .. tostring(BridgeEvalEnabled))
+                DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffffcc00[BRIDGE] eval " .. (BridgeEvalEnabled and "ON" or "OFF") .. "|r")
+            elseif arg == "status" then
+                local msg = "eval=" .. tostring(BridgeEvalEnabled) .. " loop=" .. tostring(not BridgeEvalLoopPaused)
+                ProbeLogWrite("[BRIDGE] status " .. msg)
+                DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 8.00, "|cff00ff00[BRIDGE] " .. msg .. "|r")
+            end
+            return
+        end
+        -- Loop pause/resume
+        if op == "loop" then
+            if arg == "off" then
+                BridgeEvalLoopPaused = true
+                ProbeLogWrite("[BRIDGE] eval loop paused")
+                DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffff0000[BRIDGE] eval loop PAUSED|r")
+            elseif arg == "on" then
+                BridgeEvalLoopPaused = false
+                EvalNextSeq = 1
+                ProbeLogWrite("[BRIDGE] eval loop resumed")
+                DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cff00ff00[BRIDGE] eval loop ACTIVE|r")
+            elseif arg == "toggle" then
+                BridgeEvalLoopPaused = not BridgeEvalLoopPaused
+                if not BridgeEvalLoopPaused then EvalNextSeq = 1 end
+                ProbeLogWrite("[BRIDGE] eval loop toggled paused=" .. tostring(BridgeEvalLoopPaused))
+                DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffffcc00[BRIDGE] eval loop " .. (BridgeEvalLoopPaused and "PAUSED" or "ACTIVE") .. "|r")
+            end
+            return
+        end
         if op == "restart" then
             if BridgePollTimer ~= nil then
                 DestroyTimer(BridgePollTimer)
