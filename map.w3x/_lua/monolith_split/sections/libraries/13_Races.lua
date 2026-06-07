@@ -3457,4 +3457,59 @@ function startPandarens(pi)
     AiRace[pi] = "Pandarens"
     ProbeLogWrite("[AI] startPandarens pi=" .. tostring(pi) .. " workers=5pa01 building=1pa23")
 end
+---@param pi integer
+---@return nothing
+function startBezlikie(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(3, FourCC('u02D'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h0HZ'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('u02D')] = 3
+    AiData[pi][FourCC('h0HZ')] = 1
+    AiData[pi][StringHash("Race")] = "BL"
+    SetPlayerTechResearchedSwap(FourCC('R0F9'), 1, p)
+    SetPlayerName(p, "Bezlikie (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Bezlikie"
+    ProbeLogWrite("[AI] startBezlikie pi=" .. tostring(pi) .. " workers=3u02D building=1h0HZ")
+end
+---@param pi integer
+---@return nothing
+function startVrykul(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('h0C9'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h0BQ'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('h0C9')] = 5
+    AiData[pi][FourCC('h0BQ')] = 1
+    AiData[pi][StringHash("Race")] = "VR"
+    SetPlayerTechResearchedSwap(FourCC('R07F'), 1, p)
+    SetPlayerName(p, "Vrykul (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Vrykul"
+    ProbeLogWrite("[AI] startVrykul pi=" .. tostring(pi) .. " workers=5h0C9 building=1h0BQ")
+end
+---@param pi integer
+---@return nothing
+function startKulTiras(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('h013'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h01X'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('h013')] = 5
+    AiData[pi][FourCC('h01X')] = 1
+    AiData[pi][StringHash("Race")] = "KT"
+    SetPlayerTechResearchedSwap(FourCC('R07D'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0HX'), 1, p)
+    SetPlayerName(p, "KulTiras (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "KulTiras"
+    ProbeLogWrite("[AI] startKulTiras pi=" .. tostring(pi) .. " workers=5h013 building=1h01X")
+end
 -- library Races ends

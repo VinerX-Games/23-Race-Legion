@@ -2109,3 +2109,196 @@ RegisterAiRace("Pandarens", {
     join = Join_Pandarens,
     wall = FourCC('h0P5'),
 })
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Bezlikie(id, pi, u)
+    if id == FourCC('u02D') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Bezlikie", {
+    tokens = {"bezlikie", "faceless"},
+    weight = 1,
+    altar = FourCC('h0HY'),
+    start = startBezlikie,
+    buildings = {
+        seed = FourCC('u02E'),
+        { FourCC('h0HZ'), 4, 4 }, { FourCC('u02E'), 18, 4 },
+        { FourCC('h0HY'), 3, 6 }, { FourCC('h0I1'), 10, 4 },
+        { FourCC('h0I2'), 8, 6, gate = "tier2" }, { FourCC('h0I4'), 8, 6, gate = "tier2" },
+        { FourCC('h0I6'), 5, 2 }, { FourCC('h0K3'), 4, 2 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('h0I7')) + getAiCount(pi, FourCC('h0I8')) >= 1 end,
+    },
+    production = {
+        [FourCC('h0HZ')] = { {FourCC('u02D'),3,limit=18} },
+        [FourCC('h0I7')] = { {FourCC('u02D'),3,limit=18} },
+        [FourCC('h0I8')] = { {FourCC('u02D'),3,limit=18} },
+        [FourCC('h0I1')] = {
+            {FourCC('h0MO'), 3}, {FourCC('h0MN'), 3}, {FourCC('h0I9'), 2},
+            {FourCC('h0IA'), 2}, {FourCC('h0IB'), 2},
+        },
+        [FourCC('h0I2')] = {
+            {FourCC('h0IE'), 3}, {FourCC('h0ID'), 2}, {FourCC('h0K2'), 2},
+        },
+        [FourCC('h0I4')] = {
+            {FourCC('n05I'), 3}, {FourCC('h0IF'), 2}, {FourCC('h0IG'), 2}, {FourCC('h0IC'), 2},
+        },
+        [FourCC('h0HY')] = {
+            {FourCC('U02H'), 1, limit = 1}, {FourCC('U02G'), 1, limit = 1}, {FourCC('U02I'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('u02E')] = 1, [FourCC('h0HZ')] = 2,
+        [FourCC('h0I7')] = 5, [FourCC('h0I8')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h0I6'),FourCC('Abds'),6} },
+                { {FourCC('h0I1'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h0HZ'), to = FourCC('h0I7'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h0I7'), to = FourCC('h0I8'), cap = 3 },
+        },
+    },
+    join = Join_Bezlikie,
+    wall = FourCC('h0K3'),
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Vrykul(id, pi, u)
+    if id == FourCC('h0C9') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Vrykul", {
+    tokens = {"vrykul", "vryculs"},
+    weight = 1,
+    altar = FourCC('h0BU'),
+    start = startVrykul,
+    buildings = {
+        seed = FourCC('h0BT'),
+        { FourCC('h0BQ'), 4, 4 }, { FourCC('h0BT'), 18, 4 },
+        { FourCC('h0BU'), 3, 6 }, { FourCC('h0BV'), 10, 4 },
+        { FourCC('h0BX'), 8, 6, gate = "tier2" }, { FourCC('wk01'), 8, 4 },
+        { FourCC('h0BW'), 5, 2 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('h0BR')) + getAiCount(pi, FourCC('h0BS')) >= 1 end,
+    },
+    production = {
+        [FourCC('h0BQ')] = { {FourCC('h0C9'),3,limit=18} },
+        [FourCC('h0BR')] = { {FourCC('h0C9'),3,limit=18} },
+        [FourCC('h0BS')] = { {FourCC('h0C9'),3,limit=18} },
+        [FourCC('h0BV')] = {
+            {FourCC('h0AA'), 3}, {FourCC('h0AD'), 3}, {FourCC('h0A5'), 2}, {FourCC('h0A6'), 2},
+        },
+        [FourCC('h0BX')] = {
+            {FourCC('h0BP'), 3}, {FourCC('h0A9'), 2}, {FourCC('h0AC'), 2}, {FourCC('h0AE'), 2},
+        },
+        [FourCC('wk01')] = {
+            {FourCC('wk08'), 3}, {FourCC('wk02'), 2}, {FourCC('wk00'), 2},
+        },
+        [FourCC('h0BU')] = {
+            {FourCC('H0C6'), 1, limit = 1}, {FourCC('H0C5'), 1, limit = 1}, {FourCC('H0C7'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('h0BT')] = 1, [FourCC('h0BQ')] = 2,
+        [FourCC('h0BR')] = 5, [FourCC('h0BS')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h0BW'),FourCC('Abds'),6},{FourCC('h0BW'),FourCC('Arlm'),6} },
+                { {FourCC('h0BV'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h0BQ'), to = FourCC('h0BR'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h0BR'), to = FourCC('h0BS'), cap = 3 },
+        },
+    },
+    join = Join_Vrykul,
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_KulTiras(id, pi, u)
+    if id == FourCC('h013') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("KulTiras", {
+    tokens = {"kultiras", "kul-tiras"},
+    weight = 1,
+    altar = FourCC('h021'),
+    start = startKulTiras,
+    buildings = {
+        seed = FourCC('h024'),
+        { FourCC('h01X'), 4, 4 }, { FourCC('h024'), 18, 4 },
+        { FourCC('h021'), 3, 6 }, { FourCC('h022'), 10, 4 },
+        { FourCC('h026'), 8, 6, gate = "tier2" }, { FourCC('h027'), 8, 6, gate = "tier2" },
+        { FourCC('h023'), 5, 2 }, { FourCC('h020'), 5, 2 },
+        { FourCC('h025'), 4, 2 }, { FourCC('kt02'), 6, 4 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('h01Y')) + getAiCount(pi, FourCC('h01Z')) >= 1 end,
+    },
+    production = {
+        [FourCC('h01X')] = { {FourCC('h013'),3,limit=18} },
+        [FourCC('h01Y')] = { {FourCC('h013'),3,limit=18} },
+        [FourCC('h01Z')] = { {FourCC('h013'),3,limit=18} },
+        [FourCC('h022')] = {
+            {FourCC('h019'), 3}, {FourCC('h01E'), 3}, {FourCC('h01D'), 2}, {FourCC('h01C'), 2},
+        },
+        [FourCC('h026')] = {
+            {FourCC('h01F'), 3}, {FourCC('h01G'), 2},
+        },
+        [FourCC('h027')] = {
+            {FourCC('h01H'), 3}, {FourCC('h01A'), 2}, {FourCC('h01I'), 2},
+        },
+        [FourCC('h021')] = {
+            {FourCC('H01L'), 1, limit = 1}, {FourCC('H01N'), 1, limit = 1}, {FourCC('H01K'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('h024')] = 1, [FourCC('h01X')] = 2,
+        [FourCC('h01Y')] = 5, [FourCC('h01Z')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h023'),FourCC('Abds'),6},{FourCC('h023'),FourCC('Arlm'),6} },
+                { {FourCC('h022'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h01X'), to = FourCC('h01Y'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h01Y'), to = FourCC('h01Z'), cap = 3 },
+        },
+    },
+    join = Join_KulTiras,
+    wall = FourCC('h025'),
+})
