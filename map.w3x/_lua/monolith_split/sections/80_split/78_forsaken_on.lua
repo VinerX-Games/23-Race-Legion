@@ -1,0 +1,32 @@
+-- *  ForsacenOn
+---@return nothing
+function ForsakenOn()
+	EnableTrigger(gg_trg_ChangeOwner)
+	EnableTrigger(gg_trg_MassMindControl2)
+	EnableTrigger(gg_trg_EndAttackSafety)
+	EnableTrigger(gg_trg_StartAttackSafety)
+	EnableTrigger(gg_trg_Safety)
+	EnableTrigger(gg_trg_EndAttackCorroz)
+	EnableTrigger(gg_trg_StartAttackCorroz)
+	EnableTrigger(gg_trg_Korroz)
+	EnableTrigger(gg_trg_EndAttackUsual)
+	EnableTrigger(gg_trg_StartAttackUsual)
+	EnableTrigger(gg_trg_Usual)
+	EnableTrigger(gg_trg_StartAttackCorroz2)
+	EnableTrigger(gg_trg_EndAttackZagraz)
+	EnableTrigger(gg_trg_StartAttackZagraz)
+	EnableTrigger(gg_trg_Zagraz)
+	EnableTrigger(gg_trg_EndAttackInfect)
+	EnableTrigger(gg_trg_StartAttackInfect)
+	EnableTrigger(gg_trg_Infect)
+	EnableTrigger(gg_trg_EndAttackKilling)
+	EnableTrigger(gg_trg_StartAttackKilling)
+	EnableTrigger(gg_trg_Killing)
+	EnableTrigger(gg_trg_ResGmilDamage)
+	EnableTrigger(gg_trg_BansheeAuto)
+	EnableTrigger(gg_trg_BansheCop)
+	EnableTrigger(gg_trg_Banshe)
+	EnableTrigger(gg_trg_Ult)
+	
+end
+-- ***************************************************************************
