@@ -1325,7 +1325,7 @@ function ExpandTable()
 	
 	
 	ThirdColumn[24] = MultiboardGetItem(Multiboard, 0, 2)
-	MultiboardSetItemValue(ThirdColumn[24], "?????,%")
+	MultiboardSetItemValue(ThirdColumn[24], "Точек,%")
 	MultiboardSetItemWidth(ThirdColumn[24], 0.06)
 	MultiboardReleaseItem(ThirdColumn[24])
 	

@@ -7,7 +7,7 @@ function R2SW_Polyfill(value)
 	local output = ""
 	local two_off = ModuloInteger(R2I(value / 0.01), 10)
 	local on_off = ModuloInteger(R2I(value / 0.1), 10)
-	return I2S(R2I(value)) .. "." .. I2S(on_off) + I2S(two_off)
+	return I2S(R2I(value)) .. "." .. I2S(on_off) .. I2S(two_off)
 end
 -- ***************************************************************************
 -- *  GroupPickRandomUnit2

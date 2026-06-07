@@ -625,8 +625,12 @@ function Trig_LichStartUpgrade_Actions()
     SaveEffectHandle(Hash, uid, StringHash("Cocon"), e)
     e=nil
     
-    
-    
+    local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    if udg_AiControl[pi] then
+        NumberRem(pi, FourCC('e01I'))
+    end
+     
+     
 --    set udg_LocalPosition[15] = GetUnitLoc(GetTriggerUnit())
 --    call CreateNUnitsAtLoc( 1, 'h0DE', GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[15], bj_UNIT_FACING )
 --    call UnitApplyTimedLifeBJ( 75.00, 'BTLF', GetLastCreatedUnit() )
@@ -733,6 +737,9 @@ function Trig_LichinkaFinish_Actions()
     if id == FourCC('e01G') then
         
         CreateNUnitsAtLoc(1, FourCC('e01G'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
+        if udg_AiControl[i] then
+            aiUnitJoins(GetLastCreatedUnit(), i)
+        end
         udg_LocalPosition[18]=GetUnitLoc(GetLastCreatedUnit())
         udg_Boolexpr = ItIsHive
         GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[18], 300, udg_Boolexpr)
@@ -758,6 +765,9 @@ function Trig_LichinkaFinish_Actions()
         
         CreateNUnitsAtLoc(1, FourCC('e01Z'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
         UnitAddAbilityBJ(FourCC('A0VH'), GetLastCreatedUnit())
+        if udg_AiControl[i] then
+            aiUnitJoins(GetLastCreatedUnit(), i)
+        end
         
         IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
         if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
@@ -772,13 +782,36 @@ function Trig_LichinkaFinish_Actions()
     -- ----
     elseif id == FourCC('e02W') then
         CreateNUnitsAtLoc(1, FourCC('e02W'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
+        if udg_AiControl[i] then
+            aiUnitJoins(GetLastCreatedUnit(), i)
+        end
         IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
-        
         
         
         -- ?????
         if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
             SelectUnitAddForPlayer(GetLastCreatedUnit(), gPlayer)
+        end
+        
+        
+        
+        -- ????????????
+        if GetPlayerTechCountSimple(FourCC('R089'), GetOwningPlayer(gTriggerUnit)) == 1 then
+            SetUnitAbilityLevelSwapped(FourCC('A0VH'), GetLastCreatedUnit(), 2)
+            SetUnitAbilityLevelSwapped(FourCC('A0VH'), gTriggerUnit, 2)
+            
+            CreateNUnitsAtLoc(1, FourCC('e02W'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
+            if udg_AiControl[i] then
+                aiUnitJoins(GetLastCreatedUnit(), i)
+            end
+            SetUnitAbilityLevelSwapped(FourCC('A0VH'), GetLastCreatedUnit(), 2)
+            IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
+            if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
+                SelectUnitAddForPlayer(GetLastCreatedUnit(), gPlayer)
+            
+            end
+        
+            
         end
         
         
@@ -807,6 +840,9 @@ function Trig_LichinkaFinish_Actions()
     -- ???
     elseif id == FourCC('e01Q') and GetPlayerTechCountSimple(FourCC('R08B'), GetOwningPlayer(gTriggerUnit)) == 1 then
         CreateNUnitsAtLoc(1, FourCC('e01Q'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
+        if udg_AiControl[i] then
+            aiUnitJoins(GetLastCreatedUnit(), i)
+        end
         UnitAddAbilityBJ(FourCC('A0VH'), gTriggerUnit)
         UnitAddAbilityBJ(FourCC('A0VH'), GetLastCreatedUnit())
         
@@ -829,6 +865,10 @@ function Trig_LichinkaFinish_Actions()
     
     end
     
+    
+    if udg_AiControl[i] then
+        aiUnitJoins(gTriggerUnit, i)
+    end
     
     -- ----
     -- ----
@@ -4833,7 +4873,6 @@ end
 --===========================================================================
 function Trig_Del1FromTable_C_Actions()
     local i= GetPlayerId(udg_LocalPlayer)
-    udg_UnitsCount[GetConvertedPlayerId(udg_LocalPlayer)]=( udg_UnitsCount[GetConvertedPlayerId(udg_LocalPlayer)] - 1 )
     MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i + 1]))
     i=0
 end
@@ -5169,14 +5208,13 @@ end
 function Trig_Dovorougenie_3t_O_Actions()
     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     if ( Trig_Dovorougenie_3t_O_Func002C() ) then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('h00Q') , bj_UNIT_STATE_METHOD_RELATIVE)
-        if ( Trig_Dovorougenie_3t_O_Func002Func002C() ) then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
-        else
-        end
+    ReplaceUnit2(GetTriggerUnit() , FourCC('h00Q') , bj_UNIT_STATE_METHOD_RELATIVE)
+    if ( Trig_Dovorougenie_3t_O_Func002Func002C() ) then
+        SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
     else
     end
-    udg_UnitsCount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=( udg_UnitsCount[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] - 1 )
+else
+end
     MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
     i=0
 end

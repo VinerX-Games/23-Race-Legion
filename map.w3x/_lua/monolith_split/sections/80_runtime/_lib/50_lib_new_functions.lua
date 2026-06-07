@@ -49,7 +49,7 @@ function ExpandTableArmyExpr()
 	
 	
 	ArmyPowerColumn[24] = MultiboardGetItem(Multiboard, 0, 3)
-	MultiboardSetItemValue(ArmyPowerColumn[24], "????")
+	MultiboardSetItemValue(ArmyPowerColumn[24], "Опыт")
 	MultiboardSetItemWidth(ArmyPowerColumn[24], 0.06)
 	MultiboardReleaseItem(ArmyPowerColumn[24])
 	
