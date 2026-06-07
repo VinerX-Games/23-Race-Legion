@@ -1,7 +1,7 @@
 {
   "source_path": "C:\\Games\\23 Race\\23-Race-Legion\\map.w3x\\war3map.lua",
   "source_sha256": "7eadc67e321df55d2121d5f848d21791533a8453df49e68556ab72d5c954bbf4",
-  "section_count": 24,
+  "section_count": 25,
   "sections": [
     {
       "name": "prelude",
@@ -156,43 +156,51 @@
       "library_name": null
     },
     {
+      "name": "ai_races",
+      "file": "82_ai_races.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
       "name": "init_custom_triggers",
       "file": "90_InitCustomTriggers.lua",
       "category": "entrypoint",
-      "start_line": 61961,
-      "end_line": 63286,
+      "start_line": 63259,
+      "end_line": 64584,
       "library_name": null
     },
     {
       "name": "run_initialization_triggers",
       "file": "91_RunInitializationTriggers.lua",
       "category": "entrypoint",
-      "start_line": 63287,
-      "end_line": 63311,
+      "start_line": 64585,
+      "end_line": 64609,
       "library_name": null
     },
     {
       "name": "map_setup",
       "file": "92_map_setup.lua",
       "category": "entrypoint",
-      "start_line": 63312,
-      "end_line": 63636,
+      "start_line": 64610,
+      "end_line": 64934,
       "library_name": null
     },
     {
       "name": "main",
       "file": "93_main.lua",
       "category": "entrypoint",
-      "start_line": 63637,
-      "end_line": 63679,
+      "start_line": 64935,
+      "end_line": 64977,
       "library_name": null
     },
     {
       "name": "config",
       "file": "94_config.lua",
       "category": "entrypoint",
-      "start_line": 63680,
-      "end_line": 63716,
+      "start_line": 64978,
+      "end_line": 65014,
       "library_name": null
     }
   ]
