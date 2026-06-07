@@ -3208,4 +3208,22 @@ function startForestTrolls(pi)
     AiRace[pi] = "ForestTrolls"
     ProbeLogWrite("[AI] startForestTrolls pi=" .. tostring(pi) .. " workers=5o04V building=1h0MT")
 end
+---@param pi integer
+---@return nothing
+function startForsaken(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('h0J5'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h0JP'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    SaveInteger(AiData, pi, FourCC('h0J5'), 5)
+    SaveInteger(AiData, pi, FourCC('h0JP'), 1)
+    SaveStr(AiData, pi, StringHash("Race"), "UD")
+    SetPlayerTechResearchedSwap(FourCC('R0G3'), 1, p)
+    SetPlayerName(p, "Forsaken (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Forsaken"
+    ProbeLogWrite("[AI] startForsaken pi=" .. tostring(pi) .. " workers=5h0J5 building=1h0JP")
+end
 -- library Races ends

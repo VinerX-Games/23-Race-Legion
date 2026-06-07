@@ -1756,3 +1756,108 @@ RegisterAiRace("Nerubs", {
     join = Join_Nerubs,
     wall = FourCC('u01A'),
 })
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Forsaken(id, pi, u)
+    if id == FourCC('h0J5') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Forsaken", {
+    tokens = {"forsaken", "fors", "ud"},
+    weight = 1,
+    start = startForsaken,
+    buildings = {
+        seed = FourCC('h0JD'),
+        { FourCC('h0JP'), 4, 4 }, { FourCC('h0JD'), 18, 4 },
+        { FourCC('h0JJ'), 10, 4 }, { FourCC('h0JO'), 5, 2 },
+        { FourCC('h0JR'), 3, 6 }, { FourCC('h0JM'), 25, 1 },
+        { FourCC('h0JI'), 4, 2, gate = "tier2" },
+        { FourCC('h0JK'), 8, 6, gate = "tier2" },
+    },
+    gates = {
+        tier2 = function(pi)
+            return getAiCount(pi, FourCC('h0JQ')) + getAiCount(pi, FourCC('h0JL')) >= 1
+        end,
+    },
+    production = {
+        [FourCC('h0JP')] = { {FourCC('h0J5'), 3, limit = 22} },
+        [FourCC('h0JQ')] = { {FourCC('h0J5'), 3, limit = 22} },
+        [FourCC('h0JL')] = { {FourCC('h0J5'), 3, limit = 22} },
+        [FourCC('h0JJ')] = {
+            {FourCC('n04T'), 4}, {FourCC('h0JC'), 4},
+            {FourCC('h0JN'), 3, gate = "tier2"}, {FourCC('n04U'), 2, gate = "tier2"},
+        },
+        [FourCC('h0JK')] = {
+            {FourCC('n04Y'), 3}, {FourCC('n04X'), 3},
+            {FourCC('n04V'), 2, gate = "tier2"}, {FourCC('h0JA'), 1, gate = "tier2"},
+        },
+        [FourCC('h0JI')] = {
+            {FourCC('o02X'), 3}, {FourCC('u02C'), 2, gate = "tier2"}, {FourCC('o02Y'), 2, gate = "tier2"},
+        },
+        [FourCC('h0JR')] = {
+            {FourCC('N058')}, {FourCC('O031')}, {FourCC('O030')},
+        },
+    },
+    ecoWeights = {
+        [FourCC('h0JD')] = 1, [FourCC('h0JP')] = 2,
+        [FourCC('h0JQ')] = 5, [FourCC('h0JL')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h0JO'), FourCC('Arlm'), 6} },
+                { {FourCC('h0JK'), FourCC('Abds'), 6} },
+                { {FourCC('h0JJ'), FourCC('Abds'), 6},{FourCC('h0JI'), FourCC('Abds'), 6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h0JP'), to = FourCC('h0JQ'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h0JQ'), to = FourCC('h0JL'), cap = 3 },
+        },
+    },
+    attackerData = {
+        [FourCC('n04T')] = {
+            { order = "cannibalize", chance = 4, type = "immediate", hp = 60 },
+        },
+        [FourCC('h0JN')] = {
+            { order = "shadowstrike", chance = 4, type = "target", notStructure = true },
+        },
+        [FourCC('n04U')] = {
+            { order = "cannibalize", chance = 4, type = "immediate", hp = 60 },
+            { order = "defend", chance = 3, type = "immediate" },
+        },
+        [FourCC('n04Y')] = {
+            { order = "curse", chance = 5, type = "target" },
+            { order = "faeriefire", chance = 6, type = "target" },
+        },
+        [FourCC('n04X')] = {
+            { order = "carrionswarm", chance = 4, type = "point" },
+            { order = "rainoffire", chance = 4, type = "point" },
+            { order = "cannibalize", chance = 5, type = "immediate", hp = 50 },
+        },
+        [FourCC('n04V')] = {
+            { order = "windwalk", chance = 4, type = "immediate" },
+            { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+        },
+        [FourCC('h0JA')] = {
+            { order = "animatedead", chance = 4, type = "point" },
+            { order = "raisedead", chance = 4, type = "point" },
+            { order = "resurrection", chance = 5, type = "immediate" },
+        },
+        [FourCC('o02X')] = {
+            { order = "channel", chance = 4, type = "self" },
+        },
+        [FourCC('u02C')] = {
+            { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+        },
+    },
+    join = Join_Forsaken,
+    wall = FourCC('h0JM'),
+})
