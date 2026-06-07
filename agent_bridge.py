@@ -36,13 +36,15 @@ HEX_CHUNK = 200
 
 # .pld template: BlzSendSyncData calls for chunked payload + BlzSetAbilityTooltip flag.
 # The tooltip flag lets the game detect the file was loaded and advance EvalNextSeq.
+# All calls must be on ONE line INSIDE the Preload("")...Preload("") bookends,
+# separated by literal \n (newline) inside the string — the Preloader abuse mechanism.
 PLD_TEMPLATE = (
     "function PreloadFiles takes nothing returns nothing\n"
     "\r\n"
     "\tcall PreloadStart()\r\n"
     '\tcall Preload( "")\n'
     "{chunk_calls}"
-    '\tcall Preload("" )\r\n'
+    'call Preload("" )\r\n'
     "\tcall PreloadEnd( 0.0 )\r\n"
     "\n"
     "endfunction\n\n\r\n"

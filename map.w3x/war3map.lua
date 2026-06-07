@@ -663,2435 +663,4865 @@ print("[CORE] Framework loaded")
 ProbeLogWrite("[BOOT] Framework loaded v3-aifix")
 JASS_MAX_ARRAY_SIZE = 32768 -- vJASS constant, required by SanctifiedEnchantment hash ops
 -- globals from A1:
+
 LIBRARY_A1 = true	---@type boolean	
+
 -- endglobals from A1
+
 -- globals from AA:
+
 LIBRARY_AA = true	---@type boolean	
+
 -- Counter	---@type integer	
+
 -- EnemyCapital	---@type unit	
+
 -- endglobals from AA
+
 -- globals from AI:
+
 LIBRARY_AI = true	---@type boolean	
+
 -- endglobals from AI
+
 -- globals from AI0:
+
 LIBRARY_AI0 = true	---@type boolean	
+
 -- endglobals from AI0
+
 -- globals from ArmyBonus:
+
 LIBRARY_ArmyBonus = true	---@type boolean	
+
 -- endglobals from ArmyBonus
+
 -- globals from Global:
+
 LIBRARY_Global = true	---@type boolean	
+
 Global_Hash = InitHashtable()	---@type hashtable	
+
 Global_Timer = CreateTimer()	---@type timer	
+
 -- ==========================================
+
 Global_TempGroup = CreateGroup()	---@type group	
+
 Global_TempRect = Rect(0, 0, 0, 0)	---@type rect	
+
 Global_TempLoc = Location(0, 0)	---@type location	
+
 -- ==========================================
+
 Global___TempUnitArray = {}	---@type unit	
+
 Global___TempIntArray = {}	---@type integer	
+
 Global___TempRealArray = {}	---@type real	
+
 -- endglobals from Global
+
 -- globals from LibNewFunctions:
+
 LIBRARY_LibNewFunctions = true	---@type boolean	
+
 -- endglobals from LibNewFunctions
+
 -- globals from RandomLocs:
+
 LIBRARY_RandomLocs = true	---@type boolean	
+
 -- endglobals from RandomLocs
+
 -- globals from SpellSleepAOE:
+
 LIBRARY_SpellSleepAOE = true	---@type boolean	
+
 SpellSleepAOE___SpellHero = FourCC('A06P')	---@type integer	
+
 SpellSleepAOE___SpellCast = FourCC('A06O')	---@type integer	
+
 SpellSleepAOE___SpellOrder = "sleep"	---@type string	
+
 SpellSleepAOE___DummyID = FourCC('u000')	---@type integer	
+
 SpellSleepAOE___DummyOwner = Player(PLAYER_NEUTRAL_PASSIVE)	---@type player	
+
 -- SpellSleepAOE___DummyUnit	---@type unit	
+
 -- endglobals from SpellSleepAOE
+
 -- globals from common:
+
 LIBRARY_common = true	---@type boolean	
+
 -- endglobals from common
+
 -- globals from LibDifferentAiStuff:
+
 LIBRARY_LibDifferentAiStuff = true	---@type boolean	
+
 AiData = setmetatable({}, {__index = function(t, k) local v = {}; t[k] = v; return v end})	---@type hashtable	
+
 AiUnitsToPort = {}	---@type group	
+
 -- TryPort_pi	---@type integer	
+
 -- endglobals from LibDifferentAiStuff
+
 -- globals from SanctifiedEnchantment:
+
 LIBRARY_SanctifiedEnchantment = true	---@type boolean	
+
 --  Общие настройки
+
 SanctifiedEnchantment_SkillId = FourCC('A1K0')	---@type integer	
+
 SanctifiedEnchantment_SkillBookId = FourCC('A1JU')	---@type integer	
+
 SanctifiedEnchantment_SkillAbilityStatusId = FourCC('A1JW')	---@type integer	
+
 SanctifiedEnchantment_SkillBuffStatusId = FourCC('B07Z')	---@type integer	
+
 SanctifiedEnchantment_AbilitySplashId = FourCC('A1JX')	---@type integer	
+
 --  Уровневые настройки
+
 SanctifiedEnchantment_MAXLVL = 4	---@type integer	
+
 SanctifiedEnchantment_BuffDuration = {}	---@type real	
+
 -- endglobals from SanctifiedEnchantment
+
 -- globals from Races:
+
 LIBRARY_Races = true	---@type boolean	
+
 tArray = {}	---@type integer	
+
 tB = 0	---@type integer	
+
 Grades = {}	---@type integer	
+
 AiCapitalGuard = {}	---@type group	
+
 AiCapitalBuildigs = {}	---@type group	
+
 -- endglobals from Races
+
 -- globals from AI2:
+
 LIBRARY_AI2 = true	---@type boolean	
+
 -- endglobals from AI2
+
 --  User-defined
+
 udg_Income = {}	---@type integer	
+
 udg_TEST = nil	---@type effect	
+
 udg_IncomeTimerFirst = nil	---@type timer	
+
 udg_IncomeTimerSecond = nil	---@type timer	
+
 udg_LocalOtrad = nil	---@type group	
+
 udg_Korably = nil	---@type leaderboard	
+
 udg_LocalReal = {}	---@type real	
+
 udg_LocalspecialEffect = {}	---@type effect	
+
 udg_LocalPosition = {}	---@type location	
+
 udg_LocalUnit = {}	---@type unit	
+
 udg_Flagmans = nil	---@type group	
+
 udg_FlagmanEst = {}	---@type boolean	
+
 udg_BuildEffectGroup = nil	---@type group	
+
 udg_T2 = {}	---@type group	
+
 udg_T3 = {}	---@type group	
+
 udg_NaimEffectGroup = nil	---@type group	
+
 udg_NalogUnit = nil	---@type unit	
+
 udg_Nalog = 0	---@type real	
+
 udg_Stoimost = 0	---@type real	
+
 udg_LocalInteger = 0	---@type integer	
+
 udg_Price = 0	---@type real	
+
 udg_GoldCost = 0	---@type real	
+
 udg_unit = nil	---@type unit	
+
 udg_GlobalGroups = {}	---@type group	
+
 udg_TimerSecond = nil	---@type timerdialog	
+
 udg_LocalText = nil	---@type texttag	
+
 udg_LocalPlayer = nil	---@type player	
+
 udg_ZahvatBuildings = nil	---@type group	
+
 udg_effect = nil	---@type effect	
+
 udg_Spell = nil	---@type location	
+
 udg_SilitidsLichinki = nil	---@type group	
+
 udg_Table = nil	---@type multiboard	
+
 udg_PlayerScoreArmy = {}	---@type integer	
+
 udg_BuildedSctructure = {}	---@type group	
+
 udg_TimerToDis = nil	---@type timerdialog	
+
 udg_wawt = 0	---@type real	
+
 udg_Kokon = nil	---@type group	
+
 udg_SpawnLichinok = {}	---@type group	
+
 udg_Kol_voUnitod = 0	---@type integer	
+
 udg_StolicaGroups = nil	---@type group	
+
 udg_Vassals = {}	---@type force	
+
 udg_TunnelGroup = {}	---@type group	
+
 udg_playersingame = 0	---@type integer	
+
 udg_numberofforces = {}	---@type integer	
+
 udg_forces = {}	---@type force	
+
 udg_Timer = nil	---@type timer	
+
 udg_peasants = {}	---@type integer	
+
 udg_dammis = nil	---@type location	
+
 udg_Untitled_Variable_001 = {}	---@type location	
+
 udg_AllPlayers = nil	---@type force	
+
 -- udg_Skin	---@type string	
+
 udg_Dm = {}	---@type real	
+
 udg_UU1 = {}	---@type unit	
+
 udg_Drain_Interval = {}	---@type integer	
+
 udg_z = 0	---@type real	
+
 udg_Drain_Life_Max = 0	---@type integer	
+
 udg_zLoc = nil	---@type location	
+
 udg_i2 = 0	---@type integer	
+
 udg_loc = nil	---@type location	
+
 udg_Drain_Value = {}	---@type real	
+
 udg_Drain_Range = {}	---@type real	
+
 udg_y2 = 0	---@type real	
+
 udg_x2 = 0	---@type real	
+
 udg_y = 0	---@type real	
+
 udg_x = 0	---@type real	
+
 udg_i = 0	---@type integer	
+
 udg_Drain_Life_Lightning = {}	---@type lightning	
+
 udg_Drain_Targets = {}	---@type group	
+
 udg_Drain_Caster = {}	---@type unit	
+
 udg_Drain_Max = 0	---@type integer	
+
 udg_SSspecialeffect = {}	---@type effect	
+
 udg_SSfacing = {}	---@type real	
+
 udg_SS = {}	---@type integer	
+
 udg_SSdamage = {}	---@type real	
+
 udg_SSpointpicked = {}	---@type location	
+
 udg_SSeffect = {}	---@type string	
+
 udg_SSpointmovepicked = {}	---@type location	
+
 udg_SSpointmovecaster = {}	---@type location	
+
 udg_SStargetpoint = {}	---@type location	
+
 udg_SSpointcaster = {}	---@type location	
+
 udg_SSgroup = {}	---@type group	
+
 udg_SSpicked = {}	---@type unit	
+
 udg_SScaster = {}	---@type unit	
+
 udg_SSinteger = {}	---@type integer	
+
 udg_HandleBoard = nil	---@type leaderboard	
+
 udg_TempGroup = nil	---@type group	
+
 udg_Boolexpr = nil	---@type boolexpr	
+
 udg_LocalOtrad2 = nil	---@type group	
+
 udg_AllPlayers2 = nil	---@type force	
+
 udg_LocalForce = nil	---@type force	
+
 -- udg_LocalText2	---@type string	
+
 udg_SilitidTimer = nil	---@type timer	
+
 udg_LocalReal2 = 0	---@type real	
+
 udg_LocalPosition2 = nil	---@type location	
+
 udg_ChargeTimer = nil	---@type timer	
+
 udg_LocalUnit2 = nil	---@type unit	
+
 udg_LCode = nil	---@type hashtable	
+
 udg_Inc = 0	---@type real	
+
 udg_l = 0	---@type real	
+
 udg_PlayerTableNumber = {}	---@type integer	
+
 udg_LocalOtrad3 = nil	---@type group	
+
 udg_LocalPosition3 = nil	---@type location	
+
 udg_Visibl = {}	---@type fogmodifier	
+
 udg_PlayersCount = 0	---@type integer	
+
 udg_UnitsCount = {}	---@type integer	
+
 udg_Portal_INDEX_CASTER = 0	---@type integer	
+
 udg_Portal_INDEX_TARGET = 0	---@type integer	
+
 udg_Portal_INDEX_TRAVELLER = 0	---@type integer	
+
 udg_Portal_ConfigIndex = {}	---@type integer	
+
 udg_Portal_dummy = nil	---@type unit	
+
 udg_Portal_range = {}	---@type real	
+
 udg_Portal_delay = {}	---@type real	
+
 udg_Portal_delayFXAbil = {}	---@type integer	
+
 udg_Portal_missileSpeed = {}	---@type real	
+
 udg_Portal_missileHeight = {}	---@type real	
+
 udg_Portal_active = {}	---@type boolean	
+
 udg_Portal_FX = {}	---@type effect	
+
 udg_Portal_activeFX = {}	---@type string	
+
 udg_Portal_departureFX = {}	---@type string	
+
 udg_Portal_arrivalFX = {}	---@type string	
+
 udg_Portal_loc1 = nil	---@type location	
+
 udg_Portal_loc2 = nil	---@type location	
+
 udg_Portal_loc3 = nil	---@type location	
+
 udg_Portal_loc4 = nil	---@type location	
+
 udg_Portal_portal = {}	---@type unit	
+
 udg_Portal_targeted = {}	---@type unit	
+
 udg_Portal_traveller = nil	---@type unit	
+
 udg_Portal_group = nil	---@type group	
+
 udg_Portal_teleMissiles = nil	---@type group	
+
 udg_Portal_missileDummy = {}	---@type integer	
+
 udg_Portal_preventAllies = {}	---@type boolean	
+
 udg_Portal_missileFXAbil = {}	---@type integer	
+
 udg_Portal_SeverAbility = 0	---@type integer	
+
 udg_UDex = 0	---@type integer	
+
 udg_UDexRecycle = 0	---@type integer	
+
 udg_UDexNext = {}	---@type integer	
+
 udg_UDexGen = 0	---@type integer	
+
 udg_UDexUnits = {}	---@type unit	
+
 udg_UDexPrev = {}	---@type integer	
+
 udg_UnitIndexEvent = 0	---@type real	
+
 udg_UnitIndexerEnabled = false	---@type boolean	
+
 udg_UDexWasted = 0	---@type integer	
+
 udg_Portal_isTeleporting = {}	---@type boolean	
+
 udg_Portal_missileTargetable = {}	---@type boolean	
+
 udg_Portal_missileUseOwnMovement = {}	---@type boolean	
+
 udg_Unit = {}	---@type unit	
+
 udg_LocalEffect = nil	---@type effect	
+
 udg_Continents = {}	---@type integer	
+
 udg_LocalUnit3 = nil	---@type unit	
+
 udg_LobbyTime = nil	---@type timer	
+
 udg_LobbyTimerWindows = nil	---@type timerdialog	
+
 udg_GameMode = 0	---@type integer	
+
 udg_Total_hero = 0	---@type integer	
+
 udg_Random_system = {}	---@type integer	
+
 udg_Random_Hero = 0	---@type integer	
+
 udg_Players_hero = nil	---@type force	
+
 udg_SET_TimerTime = 0	---@type integer	
+
 udg_SET_VISIBLE_MODE = 0	---@type integer	
+
 udg_F_Group = {}	---@type group	
+
 udg_LocalInteger2 = 0	---@type integer	
+
 udg_LocalInteger3 = 0	---@type integer	
+
 udg_Tier = {}	---@type integer	
+
 udg_LocalPlayer2 = nil	---@type player	
+
 udg_ElemCount = {}	---@type integer	
+
 udg_TierLevel = {}	---@type integer	
+
 udg_NewChargeTimer = nil	---@type timer	
+
 udg_TechResearched = {}	---@type integer	
+
 udg_MAX_TECH_RESEARCHES = 0	---@type integer	
+
 udg_TechId = 0	---@type integer	
+
 udg_UnitGelbin = {}	---@type unit	
+
 udg_LocCircle = nil	---@type location	
+
 udg_AiControl = {}	---@type boolean	
+
 udg_Bots = nil	---@type force	
+
 udg_LocalPoint = nil	---@type location	
+
 udg_Ai_units = {}	---@type group	
+
 udg_Ai_builders = {}	---@type group	
+
 udg_Ai_buildings = {}	---@type group	
+
 udg_TimerSmall = nil	---@type timer	
+
 udg_TimerSmall2 = nil	---@type timer	
+
 udg_TimerSmall3 = nil	---@type timer	
+
 udg_AiTimerStrateg = nil	---@type timer	
+
 udg_Octhet = false	---@type boolean	
+
 udg_CityNearWater = nil	---@type group	
+
 udg_LocalInteger4 = 0	---@type integer	
+
 udg_LocalInteger5 = 0	---@type integer	
+
 udg_Ai_buildersT = {}	---@type group	
+
 udg_Ai_army = {}	---@type group	
+
 udg_Ai_harvest = {}	---@type group	
+
 udg_Ai_navy = {}	---@type group	
+
 udg_TimerToChangeAi = nil	---@type timer	
+
 udg_HeroFirstYes = {}	---@type boolean	
+
 udg_HordeLandPrice = {}	---@type integer	
+
 udg_MainPrice = {}	---@type integer	
+
 udg_HordeElitePrice = {}	---@type integer	
+
 udg_HordeNavyPrice = {}	---@type integer	
+
 udg_HordeMagicPrice = {}	---@type integer	
+
 udg_HordeTechPrice = {}	---@type integer	
+
 udg_TombOfSargeras = nil	---@type unit	
+
 udg_FacelessLumberBuildings = nil	---@type group	
+
 udg_LoadedGroup = nil	---@type group	
+
 udg_TransportingGroup = nil	---@type group	
+
 udg_StopOrder = 0	---@type integer	
+
 udg_TransportingIncrement = 0	---@type integer	
+
 udg_TransportingMin = 0	---@type integer	
+
 udg_TransportingUnitArray = {}	---@type unit	
+
 udg_LoadedGroupArray = {}	---@type group	
+
 udg_TempUnit02 = nil	---@type unit	
+
 udg_TempUnit01 = nil	---@type unit	
+
 udg_TestUnit = nil	---@type unit	
+
 udg_Caster = nil	---@type unit	
+
 udg_Dummy = {}	---@type unit	
+
 udg_Target = nil	---@type unit	
+
 udg_To4kaCaster = nil	---@type location	
+
 udg_To4kaDummy = nil	---@type location	
+
 udg_Logika = false	---@type boolean	
+
 udg_HisloA = {}	---@type integer	
+
 udg_Ygol = {}	---@type integer	
+
 udg_Timer_Copy = nil	---@type timer	
+
 udg_LogikaCast = false	---@type boolean	
+
 udg_To4kaTarget = nil	---@type location	
+
 udg_Group = nil	---@type group	
+
 udg_To4kaAOE = nil	---@type location	
+
 udg_u = nil	---@type unit	
+
 udg_u_Copy = nil	---@type unit	
+
 udg_To4kaTarget_Copy = nil	---@type location	
+
 udg_Dalnost_R_Glaz = {}	---@type integer	
+
 udg_Group_R_Glaz = {}	---@type group	
+
 udg_Dummy_R_Glaz = {}	---@type unit	
+
 udg_Caster_R_Glaz = {}	---@type unit	
+
 udg_Timer_R_Glaz = nil	---@type timer	
+
 udg_To4kaDummy_R_Glaz = {}	---@type location	
+
 udg_To4kaCaster_R_Glaz = {}	---@type location	
+
 udg_S4et_R_Glaz = {}	---@type real	
+
 udg_Cikl_R_Glaz = 0	---@type integer	
+
 udg_Antibag_R_Glaz = {}	---@type integer	
+
 udg_MUI_R_Glaz = 0	---@type integer	
+
 udg_Logika_R_Glaz = {}	---@type boolean	
+
 udg_Dalnost_E_Glaz = {}	---@type real	
+
 udg_Timer_E_Glaz = nil	---@type timer	
+
 udg_Group_E_Glaz = {}	---@type group	
+
 udg_To4kaCaster_E_Glaz = {}	---@type location	
+
 udg_Caster_E_Glaz = {}	---@type unit	
+
 udg_Cikl_E_Glaz = 0	---@type integer	
+
 udg_Antibag_E_Glaz = {}	---@type integer	
+
 udg_MUI_E_Glaz = 0	---@type integer	
+
 udg_Logika_E_Glaz = {}	---@type boolean	
+
 udg_S4et_W2_Glaz = {}	---@type integer	
+
 udg_Logika_W2_Glaz = {}	---@type boolean	
+
 udg_To4kaTarget_W_Glaz = {}	---@type location	
+
 udg_To4kaCaster_W_Glaz = {}	---@type location	
+
 udg_Group_W_Glaz = {}	---@type group	
+
 udg_Caster_W_Glaz = {}	---@type unit	
+
 udg_Timer_W_Glaz = nil	---@type timer	
+
 udg_S4et_W_Glaz = {}	---@type real	
+
 udg_Cikl_W_Glaz = 0	---@type integer	
+
 udg_Antibag_W_Glaz = {}	---@type integer	
+
 udg_MUI_W_Glaz = 0	---@type integer	
+
 udg_Logika_W_Glaz = {}	---@type boolean	
+
 udg_DummySe_Q_Glaz = {}	---@type unit	
+
 udg_Wait_Q_Glaz = {}	---@type real	
+
 udg_Range_Q_Glaz = {}	---@type integer	
+
 udg_S4et_Timer_Q_Glaz = {}	---@type real	
+
 udg_To4kaTarget_Q_Glaz = {}	---@type location	
+
 udg_To4kaCaster_Q_Glaz = {}	---@type location	
+
 udg_Group_Q_Glaz = {}	---@type group	
+
 udg_Dummy_Q_Glaz = {}	---@type unit	
+
 udg_Caster_Q_Glaz = {}	---@type unit	
+
 udg_Timer_Q_Glaz = nil	---@type timer	
+
 udg_Antibag_Q_Glaz = {}	---@type integer	
+
 udg_Cikl_Q_Glaz = 0	---@type integer	
+
 udg_MUI_Q_Glaz = 0	---@type integer	
+
 udg_Logika_Q_Glaz = {}	---@type boolean	
+
 udg_FastTest = false	---@type boolean	
+
 udg_DalaranKills = nil	---@type group	
+
 udg_NaxramasKills = nil	---@type group	
+
 udg_AllLords = nil	---@type group	
+
 udg_MellLord = nil	---@type group	
+
 udg_TimerToCont = nil	---@type timer	
+
 --  Generated
+
 gg_rct_Region_000 = nil	---@type rect	
+
 gg_rct_Region_001 = nil	---@type rect	
+
 gg_rct_Teldrassil = nil	---@type rect	
+
 gg_rct_Region_005 = nil	---@type rect	
+
 gg_rct_TestRegion = nil	---@type rect	
+
 gg_rct_DarkPortal1 = nil	---@type rect	
+
 gg_rct_DarkPortal2 = nil	---@type rect	
+
 gg_rct_Region_009 = nil	---@type rect	
+
 gg_rct_Region_010 = nil	---@type rect	
+
 gg_rct_EKportalAlterac = nil	---@type rect	
+
 gg_rct_OutlandNagrand = nil	---@type rect	
+
 gg_rct_Region_013 = nil	---@type rect	
+
 gg_rct_Region_014 = nil	---@type rect	
+
 gg_rct_ArgusShip = nil	---@type rect	
+
 gg_rct_Broken_Island = nil	---@type rect	
+
 gg_rct_Region_017 = nil	---@type rect	
+
 gg_rct_Region_018 = nil	---@type rect	
+
 gg_rct_Region_022 = nil	---@type rect	
+
 gg_rct_Region_023 = nil	---@type rect	
+
 gg_rct_Region_024 = nil	---@type rect	
+
 gg_rct_EmeraldDream = nil	---@type rect	
+
 gg_rct_ED_1 = nil	---@type rect	
+
 gg_rct_ED_1_B = nil	---@type rect	
+
 gg_rct_ED_2 = nil	---@type rect	
+
 gg_rct_ED_2_b = nil	---@type rect	
+
 gg_rct_ED_3 = nil	---@type rect	
+
 gg_rct_ED_3_b = nil	---@type rect	
+
 gg_rct_ED_4_b = nil	---@type rect	
+
 gg_rct_ED_4 = nil	---@type rect	
+
 gg_rct_ED_5 = nil	---@type rect	
+
 gg_rct_ED_5_B = nil	---@type rect	
+
 gg_rct_DarkM_1 = nil	---@type rect	
+
 gg_rct_DarkM_2 = nil	---@type rect	
+
 gg_rct_DarkM_3 = nil	---@type rect	
+
 gg_rct_DarkM_4 = nil	---@type rect	
+
 gg_rct_AzNer_2 = nil	---@type rect	
+
 gg_rct_AzNer_5 = nil	---@type rect	
+
 gg_rct_Nord_1 = nil	---@type rect	
+
 gg_rct_Nord_2 = nil	---@type rect	
+
 gg_rct_Nord_5 = nil	---@type rect	
+
 gg_rct_AzNer1 = nil	---@type rect	
+
 gg_rct_Nord4 = nil	---@type rect	
+
 gg_rct_Yog1_1 = nil	---@type rect	
+
 gg_rct_Yog1_2 = nil	---@type rect	
+
 gg_rct_Yog1_3 = nil	---@type rect	
+
 gg_rct_Yog1_4 = nil	---@type rect	
+
 gg_rct_Yog1_5 = nil	---@type rect	
+
 gg_rct_Yog1_6 = nil	---@type rect	
+
 gg_rct_Yog1_7 = nil	---@type rect	
+
 gg_rct_Yog1_8 = nil	---@type rect	
+
 gg_rct_Shops = nil	---@type rect	
+
 gg_rct_HostRegion = nil	---@type rect	
+
 gg_rct_Kalim = nil	---@type rect	
+
 gg_rct_Nord = nil	---@type rect	
+
 gg_rct_Pandaria = nil	---@type rect	
+
 gg_rct_EastenKingdoms = nil	---@type rect	
+
 gg_rct_Outland = nil	---@type rect	
+
 gg_rct_Argus = nil	---@type rect	
+
 gg_rct_BrokenIsles = nil	---@type rect	
+
 gg_rct_BlackMountain = nil	---@type rect	
+
 gg_rct_Azgel = nil	---@type rect	
+
 gg_rct_Ankirag = nil	---@type rect	
+
 gg_rct_GnomreganIn = nil	---@type rect	
+
 gg_rct_TrainIn = nil	---@type rect	
+
 gg_rct_UldamanIn = nil	---@type rect	
+
 gg_rct_GrimBatolIn = nil	---@type rect	
+
 gg_rct_Stalgorn = nil	---@type rect	
+
 gg_rct_TrainOut = nil	---@type rect	
+
 gg_rct_GnomreganOut = nil	---@type rect	
+
 gg_rct_StalgornOut = nil	---@type rect	
+
 gg_rct_GrimBatolOut = nil	---@type rect	
+
 gg_rct_UldamanOut = nil	---@type rect	
+
 gg_rct_NoItems = nil	---@type rect	
+
 gg_rct_ArhiTep = nil	---@type rect	
+
 gg_rct_EasternDungeons = nil	---@type rect	
+
 gg_rct_Region_083 = nil	---@type rect	
+
 gg_rct_QtunIn = nil	---@type rect	
+
 gg_rct_QtunOut = nil	---@type rect	
+
 gg_rct_SpawnKalimN = nil	---@type rect	
+
 gg_rct_SpawnKalimS = nil	---@type rect	
+
 gg_rct_SpawnKingdomsS = nil	---@type rect	
+
 gg_rct_SpawnKingdomsN = nil	---@type rect	
+
 gg_rct_SpawnNord = nil	---@type rect	
+
 gg_rct_SpawnOutland = nil	---@type rect	
+
 gg_rct_SpawnPandaria = nil	---@type rect	
+
 gg_rct_QtunIn2 = nil	---@type rect	
+
 gg_rct_QtunOu2 = nil	---@type rect	
+
 gg_rct_Qt1 = nil	---@type rect	
+
 gg_rct_Qt2 = nil	---@type rect	
+
 gg_rct_Qt3 = nil	---@type rect	
+
 gg_rct_Qt4 = nil	---@type rect	
+
 gg_rct_QtunSp1 = nil	---@type rect	
+
 gg_rct_QtunSp2 = nil	---@type rect	
+
 gg_rct_NordNotKalim = nil	---@type rect	
+
 gg_rct_VknotOut = nil	---@type rect	
+
 gg_rct_OutNoVk = nil	---@type rect	
+
 gg_rct_NoWater1 = nil	---@type rect	
+
 gg_rct_NoWater2 = nil	---@type rect	
+
 gg_rct_NoWater3 = nil	---@type rect	
+
 gg_rct_OkeaniaNoVk = nil	---@type rect	
+
 gg_rct_QuelIsland = nil	---@type rect	
+
 gg_rct_Silvermoon = nil	---@type rect	
+
 gg_rct_Teldrasil = nil	---@type rect	
+
 gg_rct_Darnas = nil	---@type rect	
+
 gg_rct_CLK = nil	---@type rect	
+
 gg_rct_DalaranOut = nil	---@type rect	
+
 gg_rct_DalaranIn = nil	---@type rect	
+
 gg_rct_RenameDeath = nil	---@type rect	
+
 gg_rct_Region_112 = nil	---@type rect	
+
 gg_rct_Naxramas = nil	---@type rect	
+
 gg_rct_NaxOut = nil	---@type rect	
+
 gg_rct_NaxPortalIn = nil	---@type rect	
+
 gg_rct_WaterZulUp = nil	---@type rect	
+
 gg_rct_WaterZulDown = nil	---@type rect	
+
 gg_rct_KillDalaran = nil	---@type rect	
+
 gg_rct_DeathDalaran = nil	---@type rect	
+
 gg_rct_DeathNaxramas = nil	---@type rect	
+
 gg_rct_OrgrimmarTopIn = nil	---@type rect	
+
 gg_rct_OrgrimmarBotIn = nil	---@type rect	
+
 gg_rct_OrgrimmarBotOut = nil	---@type rect	
+
 gg_rct_OrgrimmarTopOut = nil	---@type rect	
+
 gg_rct_DeadminersOutW = nil	---@type rect	
+
 gg_rct_DeadminersOut = nil	---@type rect	
+
 gg_rct_DeadminerIn = nil	---@type rect	
+
 gg_rct_DeadminerInW = nil	---@type rect	
+
 gg_rct_UndercityInR = nil	---@type rect	
+
 gg_rct_UndercityInTop = nil	---@type rect	
+
 gg_rct_UndecityOutTop = nil	---@type rect	
+
 gg_rct_UndecityOutBot = nil	---@type rect	
+
 gg_rct_TurtleIn = nil	---@type rect	
+
 gg_rct_TurtleOut = nil	---@type rect	
+
 gg_rct_TurtleIsland = nil	---@type rect	
+
 gg_rct_DarkM_3_Test2 = nil	---@type rect	
+
 gg_rct_HostReg2 = nil	---@type rect	
+
 gg_rct_Undercity = nil	---@type rect	
+
 gg_rct_MarodonIn = nil	---@type rect	
+
 gg_rct_MarodonOut = nil	---@type rect	
+
 gg_rct_MarodonIn2 = nil	---@type rect	
+
 gg_rct_MarodonOut2 = nil	---@type rect	
+
 gg_rct_Snow = nil	---@type rect	
+
 gg_rct_Maradon = nil	---@type rect	
+
 gg_rct_Orgrimmar = nil	---@type rect	
+
 gg_rct_Region_143 = nil	---@type rect	
+
 gg_rct_TrainArea = nil	---@type rect	
+
 gg_rct_Okeania = nil	---@type rect	
+
 gg_rct_AzNerRocks = nil	---@type rect	
+
 gg_rct_KalimSouth = nil	---@type rect	
+
 gg_rct_KalimCentral = nil	---@type rect	
+
 gg_rct_EKsouth = nil	---@type rect	
+
 gg_rct_EKWest = nil	---@type rect	
+
 gg_rct_Uldum = nil	---@type rect	
+
 gg_rct_Stalgorn2 = nil	---@type rect	
+
 gg_rct_UldumNotStalgorn = nil	---@type rect	
+
 gg_rct_DeadMines = nil	---@type rect	
+
 gg_cam_Camera_001 = nil	---@type camerasetup	
+
 gg_cam_HostRegion = nil	---@type camerasetup	
+
 gg_cam_GW2 = nil	---@type camerasetup	
+
 gg_cam_GW3 = nil	---@type camerasetup	
+
 gg_cam_GW4 = nil	---@type camerasetup	
+
 gg_cam_GW5 = nil	---@type camerasetup	
+
 gg_cam_GW1 = nil	---@type camerasetup	
+
 gg_snd_oep_82_nzothfish_whispers_offset_periodic_ambient_09__2_u = nil	---@type sound	
+
 gg_snd_QuestLog = nil	---@type sound	
+
 gg_snd_BerserkerCaster = nil	---@type sound	
+
 gg_snd_ImpaleHit = nil	---@type sound	
+
 gg_trg_sek5 = nil	---@type trigger	
+
 gg_trg_Sek3eneb = nil	---@type trigger	
+
 gg_trg_NoMoveIcons = nil	---@type trigger	
+
 gg_trg_RRR = nil	---@type trigger	
+
 gg_trg_RRR_Copy = nil	---@type trigger	
+
 gg_trg_RemoveUnitTimed = nil	---@type trigger	
+
 gg_trg_ReviveHeroTimed = nil	---@type trigger	
+
 gg_trg_RemoveLigtingTimed = nil	---@type trigger	
+
 gg_trg_RemoveFloatTextTimed = nil	---@type trigger	
+
 gg_trg_CollisionTimed = nil	---@type trigger	
+
 gg_trg_SetBuildingProgressTimed = nil	---@type trigger	
+
 gg_trg_IssuerImmediateOrderTimed = nil	---@type trigger	
+
 gg_trg_IsEnemyAllyOwner = nil	---@type trigger	
+
 gg_trg_CommandIssueAllUnitsOfType = nil	---@type trigger	
+
 gg_trg_DummyCastSpelll = nil	---@type trigger	
+
 gg_trg_SpellMassSomeThing = nil	---@type trigger	
+
 gg_trg_SpellChannel = nil	---@type trigger	
+
 gg_trg_DummyCastInRangeOf = nil	---@type trigger	
+
 gg_trg_AutoCastTemplate = nil	---@type trigger	
+
 gg_trg_RegBuilding = nil	---@type trigger	
+
 gg_trg_BuidingSell_Copy = nil	---@type trigger	
+
 gg_trg_runSeachHandle = nil	---@type trigger	
+
 gg_trg_Unit_Indexer = nil	---@type trigger	
+
 gg_trg_KillUnit = nil	---@type trigger	
+
 gg_trg_AiScore0 = nil	---@type trigger	
+
 gg_trg_FarmTier2 = nil	---@type trigger	
+
 gg_trg_FarmTier2_Res = nil	---@type trigger	
+
 gg_trg_FarmTier3 = nil	---@type trigger	
+
 gg_trg_FarmTier3_Res = nil	---@type trigger	
+
 gg_trg_TLimit = nil	---@type trigger	
+
 gg_trg_GnomeNotToMuch = nil	---@type trigger	
+
 gg_trg_Soobit = nil	---@type trigger	
+
 gg_trg_TreeDead = nil	---@type trigger	
+
 gg_trg_SaveAfterUP = nil	---@type trigger	
+
 gg_trg_SaveAfterUP_Copy_2 = nil	---@type trigger	
+
 gg_trg_SaveAfterUP_Copy = nil	---@type trigger	
+
 gg_trg_Moneta = nil	---@type trigger	
+
 gg_trg_Moneta_C = nil	---@type trigger	
+
 gg_trg_InitForEconomics = nil	---@type trigger	
+
 gg_trg_AllIEconomics_Start = nil	---@type trigger	
+
 gg_trg_AllIEconomics_Dis = nil	---@type trigger	
+
 gg_trg_TimerIncome = nil	---@type trigger	
+
 gg_trg_EclogOn = nil	---@type trigger	
+
 gg_trg_EclogOff = nil	---@type trigger	
+
 gg_trg_UnitIncomeEnter = nil	---@type trigger	
+
 gg_trg_UnitEnterMap = nil	---@type trigger	
+
 gg_trg_UnitBuilded = nil	---@type trigger	
+
 gg_trg_UnitUpgraded = nil	---@type trigger	
+
 gg_trg_UnitDead = nil	---@type trigger	
+
 gg_trg_UnitRevive = nil	---@type trigger	
+
 gg_trg_RepEc = nil	---@type trigger	
+
 gg_trg_ChoseUnitForTest = nil	---@type trigger	
+
 gg_trg_HPTest = nil	---@type trigger	
+
 gg_trg_UnitIncomeEnterAlredyDead = nil	---@type trigger	
+
 gg_trg_Gob_Potreblenie = nil	---@type trigger	
+
 gg_trg_Silitid_Potreblenie = nil	---@type trigger	
+
 gg_trg_LimitEnd = nil	---@type trigger	
+
 gg_trg_LimitGolda = nil	---@type trigger	
+
 gg_trg_LimitDereva = nil	---@type trigger	
+
 gg_trg_Cities_Start_O = nil	---@type trigger	
+
 gg_trg_Cities_Start_2 = nil	---@type trigger	
+
 gg_trg_DeadSituastion = nil	---@type trigger	
+
 gg_trg_Exampe = nil	---@type trigger	
+
 gg_trg_Upgrade_Gold = nil	---@type trigger	
+
 gg_trg_Upgrade_Gold_C = nil	---@type trigger	
+
 gg_trg_Upgrade_Lumber = nil	---@type trigger	
+
 gg_trg_Upgrade_1_O = nil	---@type trigger	
+
 gg_trg_Upgrade_2_O = nil	---@type trigger	
+
 gg_trg_Upgrade_Kontrol = nil	---@type trigger	
+
 gg_trg_Upgrade_Razved = nil	---@type trigger	
+
 gg_trg_Razved = nil	---@type trigger	
+
 gg_trg_Upgrade_Oborona = nil	---@type trigger	
+
 gg_trg_Upgrade_Mobile = nil	---@type trigger	
+
 gg_trg_RazvedEnd = nil	---@type trigger	
+
 gg_trg_Upgrade_Income = nil	---@type trigger	
+
 gg_trg_Demontag = nil	---@type trigger	
+
 gg_trg_ResoursesInterface_Copy = nil	---@type trigger	
+
 gg_trg_Hide_Default_UI_And_Reshow_some = nil	---@type trigger	
+
 gg_trg_ResoursesInterface = nil	---@type trigger	
+
 gg_trg_Interface = nil	---@type trigger	
+
 gg_trg_MainInfo = nil	---@type trigger	
+
 gg_trg_Initial_things = nil	---@type trigger	
+
 gg_trg_StartLobby = nil	---@type trigger	
+
 gg_trg_EndLobby_and_Start_game = nil	---@type trigger	
+
 gg_trg_AddMinute = nil	---@type trigger	
+
 gg_trg_StartGameFast = nil	---@type trigger	
+
 gg_trg_LeaveStart = nil	---@type trigger	
+
 gg_trg_NextMenu = nil	---@type trigger	
+
 gg_trg_SaveSelection = nil	---@type trigger	
+
 gg_trg_UpgradeStolica = nil	---@type trigger	
+
 gg_trg_MakeStolica = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_010 = nil	---@type trigger	
+
 gg_trg_MakeStolicaAbs = nil	---@type trigger	
+
 gg_trg_Mod_classic = nil	---@type trigger	
+
 gg_trg_Mod_classic_spell = nil	---@type trigger	
+
 gg_trg_RebebmerToBuild = nil	---@type trigger	
+
 gg_trg_StolicaTime = nil	---@type trigger	
+
 gg_trg_MOD_Combo = nil	---@type trigger	
+
 gg_trg_MOD_stolica_Start_Copy = nil	---@type trigger	
+
 gg_trg_StolicaDead = nil	---@type trigger	
+
 gg_trg_StolicaAttacked = nil	---@type trigger	
+
 gg_trg_MOD_feoda_O_set_spell = nil	---@type trigger	
+
 gg_trg_MOD_stolica_Set = nil	---@type trigger	
+
 gg_trg_MOD_stolica_Start = nil	---@type trigger	
+
 gg_trg_MOD_feoda_O_Set = nil	---@type trigger	
+
 gg_trg_MOD_feoda_O_Set_Spell = nil	---@type trigger	
+
 gg_trg_MOD_feoda_O_Start = nil	---@type trigger	
+
 gg_trg_FeodalDead = nil	---@type trigger	
+
 gg_trg_FeodalDead2 = nil	---@type trigger	
+
 gg_trg_DoNotAttackSenior = nil	---@type trigger	
+
 gg_trg_DoNotAttackSenior2 = nil	---@type trigger	
+
 gg_trg_AllPlayers_and_vassals = nil	---@type trigger	
+
 gg_trg_RepairToMuch_O = nil	---@type trigger	
+
 gg_trg_DominationButton = nil	---@type trigger	
+
 gg_trg_Domination_start = nil	---@type trigger	
+
 gg_trg_DomCheckCommand = nil	---@type trigger	
+
 gg_trg_FastTestSpell = nil	---@type trigger	
+
 gg_trg_FastTest = nil	---@type trigger	
+
 gg_trg_FastTestOff = nil	---@type trigger	
+
 gg_trg_FastTrain = nil	---@type trigger	
+
 gg_trg_FastBuild = nil	---@type trigger	
+
 gg_trg_FastResearch = nil	---@type trigger	
+
 gg_trg_InitRegions = nil	---@type trigger	
+
 gg_trg_Only_Eastern = nil	---@type trigger	
+
 gg_trg_Leave_Easten = nil	---@type trigger	
+
 gg_trg_Back_Easten = nil	---@type trigger	
+
 gg_trg_Continents_Spell = nil	---@type trigger	
+
 gg_trg_Continents_set_On = nil	---@type trigger	
+
 gg_trg_Continents_Off = nil	---@type trigger	
+
 gg_trg_ItsFineOrNot = nil	---@type trigger	
+
 gg_trg_LeaveNeadedRegions = nil	---@type trigger	
+
 gg_trg_UseMassProssvet = nil	---@type trigger	
+
 gg_trg_SeeOnlyNeedeed = nil	---@type trigger	
+
 gg_trg_GoHome_No_fine = nil	---@type trigger	
+
 gg_trg_NoBuild = nil	---@type trigger	
+
 gg_trg_EasternOn_1 = nil	---@type trigger	
+
 gg_trg_EasternOn_Spell = nil	---@type trigger	
+
 gg_trg_EasternOn_Spell_Off = nil	---@type trigger	
+
 gg_trg_EasternOn_Set = nil	---@type trigger	
+
 gg_trg_KalimOn_2 = nil	---@type trigger	
+
 gg_trg_KalimOn_2_Spell = nil	---@type trigger	
+
 gg_trg_KalimOn_2_Spell_off = nil	---@type trigger	
+
 gg_trg_KalimOn_2_set = nil	---@type trigger	
+
 gg_trg_Outland_3 = nil	---@type trigger	
+
 gg_trg_Outland_3_spell = nil	---@type trigger	
+
 gg_trg_Outland_3_spell_off = nil	---@type trigger	
+
 gg_trg_Outland_3_set = nil	---@type trigger	
+
 gg_trg_NordOn_4 = nil	---@type trigger	
+
 gg_trg_NordOn_4_spell = nil	---@type trigger	
+
 gg_trg_NordOn_4_spell_off = nil	---@type trigger	
+
 gg_trg_NordOn_4_set = nil	---@type trigger	
+
 gg_trg_Pandaria_5 = nil	---@type trigger	
+
 gg_trg_Pandaria_5_spell = nil	---@type trigger	
+
 gg_trg_Pandaria_5_spell_off = nil	---@type trigger	
+
 gg_trg_Pandaria_5_set = nil	---@type trigger	
+
 gg_trg_Argus_6 = nil	---@type trigger	
+
 gg_trg_Argus_6_spell = nil	---@type trigger	
+
 gg_trg_Argus_6_spell_off = nil	---@type trigger	
+
 gg_trg_Argus_6_set = nil	---@type trigger	
+
 gg_trg_BrokenIsled_7 = nil	---@type trigger	
+
 gg_trg_BrokenIsled_7_spell = nil	---@type trigger	
+
 gg_trg_BrokenIsled_7_spell_off = nil	---@type trigger	
+
 gg_trg_BrokenIsled_7_set = nil	---@type trigger	
+
 gg_trg_Standart = nil	---@type trigger	
+
 gg_trg_DarkMode_Spell = nil	---@type trigger	
+
 gg_trg_OpenModeSpell = nil	---@type trigger	
+
 gg_trg_StartDarkMode = nil	---@type trigger	
+
 gg_trg_StartOpenMode = nil	---@type trigger	
+
 gg_trg_StartDarkMode_Command = nil	---@type trigger	
+
 gg_trg_OfDarkModeCommand = nil	---@type trigger	
+
 gg_trg_StartAlly = nil	---@type trigger	
+
 gg_trg_NoDipFFA = nil	---@type trigger	
+
 gg_trg_Dip2 = nil	---@type trigger	
+
 gg_trg_Dip3 = nil	---@type trigger	
+
 gg_trg_FreeDip = nil	---@type trigger	
+
 gg_trg_DipStart = nil	---@type trigger	
+
 gg_trg_DipInfo = nil	---@type trigger	
+
 gg_trg_Income075 = nil	---@type trigger	
+
 gg_trg_Income100 = nil	---@type trigger	
+
 gg_trg_StartTotalProductionCommon = nil	---@type trigger	
+
 gg_trg_StartTotalProductionPlayer = nil	---@type trigger	
+
 gg_trg_EndTotalProductionPlayer = nil	---@type trigger	
+
 gg_trg_TotalProductionTrain = nil	---@type trigger	
+
 gg_trg_TotalProductionDeath = nil	---@type trigger	
+
 gg_trg_MagesTP = nil	---@type trigger	
+
 gg_trg_Timer = nil	---@type trigger	
+
 gg_trg_ChangeTimerHost = nil	---@type trigger	
+
 gg_trg_DisIncomeStart = nil	---@type trigger	
+
 gg_trg_Globals = nil	---@type trigger	
+
 gg_trg_StartTable = nil	---@type trigger	
+
 gg_trg_StartTableCode = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_015 = nil	---@type trigger	
+
 gg_trg_EnterT = nil	---@type trigger	
+
 gg_trg_DieT = nil	---@type trigger	
+
 gg_trg_UnitDie = nil	---@type trigger	
+
 gg_trg_UnitsToBuildingSituation = nil	---@type trigger	
+
 gg_trg_UnitsToBuildingSituation2 = nil	---@type trigger	
+
 gg_trg_CanselSituation = nil	---@type trigger	
+
 gg_trg_CanselSituation2 = nil	---@type trigger	
+
 gg_trg_UpgradeTo = nil	---@type trigger	
+
 gg_trg_Enter_O = nil	---@type trigger	
+
 gg_trg_Diy_O = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_004 = nil	---@type trigger	
+
 gg_trg_CircleMove01 = nil	---@type trigger	
+
 gg_trg_CircleMove01_Copy = nil	---@type trigger	
+
 gg_trg_CircleMove_Code = nil	---@type trigger	
+
 gg_trg_Race_Night_Elves_O = nil	---@type trigger	
+
 gg_trg_Race_Bezlikie_O = nil	---@type trigger	
+
 gg_trg_Race_IceTrols = nil	---@type trigger	
+
 gg_trg_Race_Stromgard_O = nil	---@type trigger	
+
 gg_trg_Race_Dragon_O = nil	---@type trigger	
+
 gg_trg_Race_Dragon2 = nil	---@type trigger	
+
 gg_trg_Race_Argvinol_O = nil	---@type trigger	
+
 gg_trg_Race_Elements_O = nil	---@type trigger	
+
 gg_trg_Race_Goblins_O = nil	---@type trigger	
+
 gg_trg_Race_Demon_O = nil	---@type trigger	
+
 gg_trg_Race_Illidari_O = nil	---@type trigger	
+
 gg_trg_Race_Bandits_O = nil	---@type trigger	
+
 gg_trg_Race_Red_Orden_O = nil	---@type trigger	
+
 gg_trg_Race_Undead_O = nil	---@type trigger	
+
 gg_trg_Race_Horde = nil	---@type trigger	
+
 gg_trg_Race_Blood_Elves_O = nil	---@type trigger	
+
 gg_trg_Race_Dalaran_O = nil	---@type trigger	
+
 gg_trg_Race_KulTiras_O = nil	---@type trigger	
+
 gg_trg_Race_Nocnorogdennue_O = nil	---@type trigger	
+
 gg_trg_Race_Draeneis_O = nil	---@type trigger	
+
 gg_trg_Race_Vryculs_O = nil	---@type trigger	
+
 gg_trg_Race_Kult_Sum_Molota_O = nil	---@type trigger	
+
 gg_trg_Race_Nerubs_O = nil	---@type trigger	
+
 gg_trg_Race_Silitids_O = nil	---@type trigger	
+
 gg_trg_Race_Gnomes = nil	---@type trigger	
+
 gg_trg_Race_Gilneas = nil	---@type trigger	
+
 gg_trg_Race_Nagi = nil	---@type trigger	
+
 gg_trg_Race_nightelf = nil	---@type trigger	
+
 gg_trg_Race_Forsaken = nil	---@type trigger	
+
 gg_trg_Race_Ogres = nil	---@type trigger	
+
 gg_trg_Race_Alliance = nil	---@type trigger	
+
 gg_trg_Race_JungleTrolls = nil	---@type trigger	
+
 gg_trg_Race_FelOrk = nil	---@type trigger	
+
 gg_trg_Race_ForestTrolls = nil	---@type trigger	
+
 gg_trg_Race_CultOfDamned = nil	---@type trigger	
+
 gg_trg_Race_Pandarens = nil	---@type trigger	
+
 gg_trg_Race_HordeW2 = nil	---@type trigger	
+
 gg_trg_Race_Random = nil	---@type trigger	
+
 gg_trg_Race_Random_Copy = nil	---@type trigger	
+
 gg_trg_Page1 = nil	---@type trigger	
+
 gg_trg_Page2 = nil	---@type trigger	
+
 gg_trg_Page3 = nil	---@type trigger	
+
 gg_trg_Page4 = nil	---@type trigger	
+
 gg_trg_Page1_O = nil	---@type trigger	
+
 gg_trg_Page2_O = nil	---@type trigger	
+
 gg_trg_Page3_O = nil	---@type trigger	
+
 gg_trg_Page4_O = nil	---@type trigger	
+
 gg_trg_Leave_Ot = nil	---@type trigger	
+
 gg_trg_Spell_Copy_2 = nil	---@type trigger	
+
 gg_trg_Lech = nil	---@type trigger	
+
 gg_trg_Cast = nil	---@type trigger	
+
 gg_trg_AvtoCast = nil	---@type trigger	
+
 gg_trg_DammyDeath = nil	---@type trigger	
+
 gg_trg_No2SameItems = nil	---@type trigger	
+
 gg_trg_RainbowMageDamage = nil	---@type trigger	
+
 gg_trg_SomeThing = nil	---@type trigger	
+
 gg_trg_SomeThing2 = nil	---@type trigger	
+
 gg_trg_Pole_astrala_Elems = nil	---@type trigger	
+
 gg_trg_ItemPoleAstrala = nil	---@type trigger	
+
 gg_trg_AntiMagic_Item = nil	---@type trigger	
+
 gg_trg_Spell_Copy = nil	---@type trigger	
+
 gg_trg_Spell_Cast = nil	---@type trigger	
+
 gg_trg_Spell_Dvij = nil	---@type trigger	
+
 gg_trg_DieDummy = nil	---@type trigger	
+
 gg_trg_Dammi_Dead = nil	---@type trigger	
+
 gg_trg_Bolvanka = nil	---@type trigger	
+
 gg_trg_Vidimost = nil	---@type trigger	
+
 gg_trg_MoveToRaceCircle_O = nil	---@type trigger	
+
 gg_trg_MoveToRaceCircle_O_Copy_2 = nil	---@type trigger	
+
 gg_trg_MoveToRaceCircle_O_Copy = nil	---@type trigger	
+
 gg_trg_SpellSleepAOE = nil	---@type trigger	
+
 gg_trg_Fireball = nil	---@type trigger	
+
 gg_trg_Fire_Arrow = nil	---@type trigger	
+
 gg_trg_Research_Ot = nil	---@type trigger	
+
 gg_trg_Naim_povtor = nil	---@type trigger	
+
 gg_trg_Stop_Building = nil	---@type trigger	
+
 gg_trg_Start_Building = nil	---@type trigger	
+
 gg_trg_Naim_finish = nil	---@type trigger	
+
 gg_trg_Naim_cansel = nil	---@type trigger	
+
 gg_trg_Dead = nil	---@type trigger	
+
 gg_trg_Naim_start = nil	---@type trigger	
+
 gg_trg_Finish_Building = nil	---@type trigger	
+
 gg_trg_NO_ENOTS = nil	---@type trigger	
+
 gg_trg_Sdelat_Flagman_Ot = nil	---@type trigger	
+
 gg_trg_Sdelat_Flagman_Ot_Copy = nil	---@type trigger	
+
 gg_trg_Flagman_die_Ot = nil	---@type trigger	
+
 gg_trg_Ne_dam_flagman_Ot = nil	---@type trigger	
+
 gg_trg_Aura_Flagmana_Vinoslivost_O = nil	---@type trigger	
+
 gg_trg_Aura_Flagmana_Metkost_O = nil	---@type trigger	
+
 gg_trg_Aura_Flagmana_Stoikost_O = nil	---@type trigger	
+
 gg_trg_Init = nil	---@type trigger	
+
 gg_trg_Unit_Loaded = nil	---@type trigger	
+
 gg_trg_Unit_Death = nil	---@type trigger	
+
 gg_trg_Unit_Issued_Order = nil	---@type trigger	
+
 gg_trg_Remove_Unit_From_LoadedGroup = nil	---@type trigger	
+
 gg_trg_All_Message = nil	---@type trigger	
+
 gg_trg_TransportingUnitArray_Message = nil	---@type trigger	
+
 gg_trg_Select_Unit = nil	---@type trigger	
+
 gg_trg_Magic_Pogruzka_Ot_Copy = nil	---@type trigger	
+
 gg_trg_MassPosadkaOld = nil	---@type trigger	
+
 gg_trg_MassPosadka2 = nil	---@type trigger	
+
 gg_trg_NoToMuch = nil	---@type trigger	
+
 gg_trg_Count_minus_passengers_Copy = nil	---@type trigger	
+
 gg_trg_Count_plus_passengers_Copy = nil	---@type trigger	
+
 gg_trg_Colision_1_s = nil	---@type trigger	
+
 gg_trg_Linkor_reaserch_BoakOr_O = nil	---@type trigger	
+
 gg_trg_Naim_Bok_pushky_O = nil	---@type trigger	
+
 gg_trg_Linkor_reaserch_Obstel_O = nil	---@type trigger	
+
 gg_trg_Naim_Obstrel_O = nil	---@type trigger	
+
 gg_trg_Linkor_reaserch_Parusa_O = nil	---@type trigger	
+
 gg_trg_Naim_Parusa_O = nil	---@type trigger	
+
 gg_trg_Linkor_Repair_O = nil	---@type trigger	
+
 gg_trg_Naim_Rapair_O = nil	---@type trigger	
+
 gg_trg_Abordach_D_or_Ot = nil	---@type trigger	
+
 gg_trg_AbordachSystemDefence1_O = nil	---@type trigger	
+
 gg_trg_AbordachSystemDefence2_O = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_007 = nil	---@type trigger	
+
 gg_trg_MageTp = nil	---@type trigger	
+
 gg_trg_TPrepeat = nil	---@type trigger	
+
 gg_trg_TPrepatStop = nil	---@type trigger	
+
 gg_trg_TPrepatStop_Copy = nil	---@type trigger	
+
 gg_trg_NoTpNearCapital = nil	---@type trigger	
+
 gg_trg_NotGrade = nil	---@type trigger	
+
 gg_trg_ManabombaNewSystem = nil	---@type trigger	
+
 gg_trg_ManabobmaStart = nil	---@type trigger	
+
 gg_trg_ManabombaDead = nil	---@type trigger	
+
 gg_trg_Manabomba2 = nil	---@type trigger	
+
 gg_trg_Manabomba2_Copy = nil	---@type trigger	
+
 gg_trg_ManabombaDead_Copy = nil	---@type trigger	
+
 gg_trg_Portal_Connect = nil	---@type trigger	
+
 gg_trg_Portal_Periodic = nil	---@type trigger	
+
 gg_trg_Portal_Target = nil	---@type trigger	
+
 gg_trg_Portal_Disengage = nil	---@type trigger	
+
 gg_trg_Portal_Death = nil	---@type trigger	
+
 gg_trg_Portal_Missile_Order = nil	---@type trigger	
+
 gg_trg_Portal_Disconnect = nil	---@type trigger	
+
 gg_trg_Connect_Portal_1 = nil	---@type trigger	
+
 gg_trg_Connect_Portal_2 = nil	---@type trigger	
+
 gg_trg_Connect_Portal_3 = nil	---@type trigger	
+
 gg_trg_Connect_Portal_4 = nil	---@type trigger	
+
 gg_trg_F2 = nil	---@type trigger	
+
 gg_trg_F2_2 = nil	---@type trigger	
+
 gg_trg_F2_Attack_Point = nil	---@type trigger	
+
 gg_trg_F2_Start = nil	---@type trigger	
+
 gg_trg_F2_Map_2 = nil	---@type trigger	
+
 gg_trg_F2_AreaMidBig = nil	---@type trigger	
+
 gg_trg_F2_AreaMid = nil	---@type trigger	
+
 gg_trg_F2_AreaSmall = nil	---@type trigger	
+
 gg_trg_InFGroup = nil	---@type trigger	
+
 gg_trg_F2_Map = nil	---@type trigger	
+
 gg_trg_ToKill2 = nil	---@type trigger	
+
 gg_trg_RemoveDammySpecial = nil	---@type trigger	
+
 gg_trg_MageTpSell = nil	---@type trigger	
+
 gg_trg_Deathwing = nil	---@type trigger	
+
 gg_trg_TrainHeroGiveItem = nil	---@type trigger	
+
 gg_trg_LimitHero_Exep = nil	---@type trigger	
+
 gg_trg_fire = nil	---@type trigger	
+
 gg_trg_fire1 = nil	---@type trigger	
+
 gg_trg_earth = nil	---@type trigger	
+
 gg_trg_earth1 = nil	---@type trigger	
+
 gg_trg_Beer = nil	---@type trigger	
+
 gg_trg_BeerFin = nil	---@type trigger	
+
 gg_trg_flot2_Copy_O_Copy = nil	---@type trigger	
+
 gg_trg_Geo = nil	---@type trigger	
+
 gg_trg_GeoFin = nil	---@type trigger	
+
 gg_trg_arm2_Copy_O_Copy = nil	---@type trigger	
+
 gg_trg_FarmBuild = nil	---@type trigger	
+
 gg_trg_FarmLose = nil	---@type trigger	
+
 gg_trg_Provocation = nil	---@type trigger	
+
 gg_trg_PUnitTrain = nil	---@type trigger	
+
 gg_trg_PUnitTrained = nil	---@type trigger	
+
 gg_trg_Anub_Vozvratka = nil	---@type trigger	
+
 gg_trg_Undermining = nil	---@type trigger	
+
 gg_trg_PassiveAdal = nil	---@type trigger	
+
 gg_trg_ADall = nil	---@type trigger	
+
 gg_trg_Rexan = nil	---@type trigger	
+
 gg_trg_OgresHpSpell2 = nil	---@type trigger	
+
 gg_trg_OrgesHpSpell = nil	---@type trigger	
+
 gg_trg_Gruul = nil	---@type trigger	
+
 gg_trg_GruulSpell = nil	---@type trigger	
+
 gg_trg_BegYel = nil	---@type trigger	
+
 gg_trg_CanYel = nil	---@type trigger	
+
 gg_trg_FinYel = nil	---@type trigger	
+
 gg_trg_BegRed = nil	---@type trigger	
+
 gg_trg_CanRed = nil	---@type trigger	
+
 gg_trg_FinRed = nil	---@type trigger	
+
 gg_trg_BegBlue = nil	---@type trigger	
+
 gg_trg_CanBlue = nil	---@type trigger	
+
 gg_trg_FinBlue = nil	---@type trigger	
+
 gg_trg_Begred = nil	---@type trigger	
+
 gg_trg_Canred = nil	---@type trigger	
+
 gg_trg_Finred = nil	---@type trigger	
+
 gg_trg_BegWhite = nil	---@type trigger	
+
 gg_trg_CanWhite = nil	---@type trigger	
+
 gg_trg_FinWhite = nil	---@type trigger	
+
 gg_trg_BegBlack = nil	---@type trigger	
+
 gg_trg_CanBlack = nil	---@type trigger	
+
 gg_trg_FinBlack = nil	---@type trigger	
+
 gg_trg_UltDanath = nil	---@type trigger	
+
 gg_trg_GeneralRegen = nil	---@type trigger	
+
 gg_trg_Pribavka_k_zoloty = nil	---@type trigger	
+
 gg_trg_StromgardOn = nil	---@type trigger	
+
 gg_trg_PaladinTank = nil	---@type trigger	
+
 gg_trg_PaladinVozdoyn = nil	---@type trigger	
+
 gg_trg_PaladinHeal = nil	---@type trigger	
+
 gg_trg_Tank1 = nil	---@type trigger	
+
 gg_trg_Heal1 = nil	---@type trigger	
+
 gg_trg_Vozdoyanie1 = nil	---@type trigger	
+
 gg_trg_Tank2 = nil	---@type trigger	
+
 gg_trg_Heal2 = nil	---@type trigger	
+
 gg_trg_Vozdoyanie2 = nil	---@type trigger	
+
 gg_trg_Priziv2 = nil	---@type trigger	
+
 gg_trg_Priziv = nil	---@type trigger	
+
 gg_trg_Professian2 = nil	---@type trigger	
+
 gg_trg_Proffesian = nil	---@type trigger	
+
 gg_trg_MassArmy = nil	---@type trigger	
+
 gg_trg_UpSystem = nil	---@type trigger	
+
 gg_trg_ShieldUp = nil	---@type trigger	
+
 gg_trg_EnterKazna = nil	---@type trigger	
+
 gg_trg_Nightmare = nil	---@type trigger	
+
 gg_trg_ChillBonus = nil	---@type trigger	
+
 gg_trg_Passive = nil	---@type trigger	
+
 gg_trg_Sluga_qqgsarona = nil	---@type trigger	
+
 gg_trg_Sila2 = nil	---@type trigger	
+
 gg_trg_Sila1 = nil	---@type trigger	
+
 gg_trg_Skorost2 = nil	---@type trigger	
+
 gg_trg_Skorost1 = nil	---@type trigger	
+
 gg_trg_ZdaniyaBezlik = nil	---@type trigger	
+
 gg_trg_ZdaniyaBezlik_Copy = nil	---@type trigger	
+
 gg_trg_ZdaniyaBezlik_Copy_Copy = nil	---@type trigger	
+
 gg_trg_ZdaniyaBezlik_Copy_Copy_2 = nil	---@type trigger	
+
 gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy = nil	---@type trigger	
+
 gg_trg_CreateFFarm = nil	---@type trigger	
+
 gg_trg_DeadFFarm = nil	---@type trigger	
+
 gg_trg_FinishFaceBuild = nil	---@type trigger	
+
 gg_trg_DeadFaceBuild = nil	---@type trigger	
+
 gg_trg_LumberTest = nil	---@type trigger	
+
 gg_trg_Spell2 = nil	---@type trigger	
+
 gg_trg_SpellRes = nil	---@type trigger	
+
 gg_trg_Spell = nil	---@type trigger	
+
 gg_trg_SpandFarm = nil	---@type trigger	
+
 gg_trg_EntSell = nil	---@type trigger	
+
 gg_trg_StartBuildingArg = nil	---@type trigger	
+
 gg_trg_CanselBuildingArg = nil	---@type trigger	
+
 gg_trg_Muscules = nil	---@type trigger	
+
 gg_trg_BuidingThatSellRecruts = nil	---@type trigger	
+
 gg_trg_BuidingSell = nil	---@type trigger	
+
 gg_trg_JumpSTR = nil	---@type trigger	
+
 gg_trg_TrainW2 = nil	---@type trigger	
+
 gg_trg_DamagerW2 = nil	---@type trigger	
+
 gg_trg_DamageBeforeW2 = nil	---@type trigger	
+
 gg_trg_DamagedW2 = nil	---@type trigger	
+
 gg_trg_AlmostDiyW2 = nil	---@type trigger	
+
 gg_trg_SpellW2 = nil	---@type trigger	
+
 gg_trg_DiyGoblinW2 = nil	---@type trigger	
+
 gg_trg_DiyW2 = nil	---@type trigger	
+
 gg_trg_KillW2 = nil	---@type trigger	
+
 gg_trg_SummonRune = nil	---@type trigger	
+
 gg_trg_RuneExplode = nil	---@type trigger	
+
 gg_trg_SpellArmorDamage = nil	---@type trigger	
+
 gg_trg_SpellMassAxes = nil	---@type trigger	
+
 gg_trg_SpellArrow = nil	---@type trigger	
+
 gg_trg_DragonHP = nil	---@type trigger	
+
 gg_trg_DragonDamage = nil	---@type trigger	
+
 gg_trg_DragonMage = nil	---@type trigger	
+
 gg_trg_OgrimmCharge = nil	---@type trigger	
+
 gg_trg_Duel = nil	---@type trigger	
+
 gg_trg_RiseDeadWorkers = nil	---@type trigger	
+
 gg_trg_SummonCase = nil	---@type trigger	
+
 gg_trg_UpgradeSkelets = nil	---@type trigger	
+
 gg_trg_MeatDeal = nil	---@type trigger	
+
 gg_trg_BoneDeal = nil	---@type trigger	
+
 gg_trg_HealWhenRise = nil	---@type trigger	
+
 gg_trg_ZombyTrain = nil	---@type trigger	
+
 gg_trg_BuildFleCitadel = nil	---@type trigger	
+
 gg_trg_PoisonGolemDesease = nil	---@type trigger	
+
 gg_trg_ZombyDesease = nil	---@type trigger	
+
 gg_trg_Overcharge = nil	---@type trigger	
+
 gg_trg_NoAutoSkeletsButton = nil	---@type trigger	
+
 gg_trg_ChangeAutoWorkers = nil	---@type trigger	
+
 gg_trg_UnitTrainedNoSkelets = nil	---@type trigger	
+
 gg_trg_MassIceArrow = nil	---@type trigger	
+
 gg_trg_UsePorcha = nil	---@type trigger	
+
 gg_trg_PlagueOnBuilding = nil	---@type trigger	
+
 gg_trg_UnitTrained = nil	---@type trigger	
+
 gg_trg_InfestBuilding = nil	---@type trigger	
+
 gg_trg_StartForestTrolls = nil	---@type trigger	
+
 gg_trg_Charge = nil	---@type trigger	
+
 gg_trg_SetLifeNormal = nil	---@type trigger	
+
 gg_trg_ZacliatieOfLive = nil	---@type trigger	
+
 gg_trg_ReturnDamage = nil	---@type trigger	
+
 gg_trg_ZacliatieOfDamage = nil	---@type trigger	
+
 gg_trg_YarostBeg = nil	---@type trigger	
+
 gg_trg_RitualPoglocenia = nil	---@type trigger	
+
 gg_trg_WantAxe = nil	---@type trigger	
+
 gg_trg_BeFaster = nil	---@type trigger	
+
 gg_trg_MassSetca = nil	---@type trigger	
+
 gg_trg_MassFrenzy = nil	---@type trigger	
+
 gg_trg_ChutioVolka = nil	---@type trigger	
+
 gg_trg_StatMoreDamage = nil	---@type trigger	
+
 gg_trg_YarostEnd = nil	---@type trigger	
+
 gg_trg_Yarost = nil	---@type trigger	
+
 gg_trg_ZacliatieOfDamageEnd = nil	---@type trigger	
+
 gg_trg_StartJungleTrools = nil	---@type trigger	
+
 gg_trg_BlackSpear = nil	---@type trigger	
+
 gg_trg_Gurubashy = nil	---@type trigger	
+
 gg_trg_SpelltakesHealthCommon = nil	---@type trigger	
+
 gg_trg_SpelltakesHealthCommon2 = nil	---@type trigger	
+
 gg_trg_MassSglaz = nil	---@type trigger	
+
 gg_trg_BladeStorm = nil	---@type trigger	
+
 gg_trg_BladeStormEnd = nil	---@type trigger	
+
 gg_trg_SpellDamageReturn = nil	---@type trigger	
+
 gg_trg_DamageConvert = nil	---@type trigger	
+
 gg_trg_AreaOfDeath = nil	---@type trigger	
+
 gg_trg_Plenenie = nil	---@type trigger	
+
 gg_trg_DamageMore = nil	---@type trigger	
+
 gg_trg_TrainBwonsamdy = nil	---@type trigger	
+
 gg_trg_SpellGiveQSpell = nil	---@type trigger	
+
 gg_trg_SpellTakeQSpell = nil	---@type trigger	
+
 gg_trg_Start = nil	---@type trigger	
+
 gg_trg_GetMoreStatsBwon = nil	---@type trigger	
+
 gg_trg_DamagePercent = nil	---@type trigger	
+
 gg_trg_ReturnToAstral = nil	---@type trigger	
+
 gg_trg_SpellChangeWorld = nil	---@type trigger	
+
 gg_trg_GetMoreStats = nil	---@type trigger	
+
 gg_trg_Help = nil	---@type trigger	
+
 gg_trg_SpelltakesHealth = nil	---@type trigger	
+
 gg_trg_HakkarAuraDeb = nil	---@type trigger	
+
 gg_trg_HelpButton = nil	---@type trigger	
+
 gg_trg_BrokenBlood = nil	---@type trigger	
+
 gg_trg_TrainHakkar = nil	---@type trigger	
+
 gg_trg_AllyOn = nil	---@type trigger	
+
 gg_trg_AK1T1 = nil	---@type trigger	
+
 gg_trg_AK1T2 = nil	---@type trigger	
+
 gg_trg_AK1T3 = nil	---@type trigger	
+
 gg_trg_AK1Cav = nil	---@type trigger	
+
 gg_trg_AK2T1 = nil	---@type trigger	
+
 gg_trg_AK2T2 = nil	---@type trigger	
+
 gg_trg_AK2T3 = nil	---@type trigger	
+
 gg_trg_AM1 = nil	---@type trigger	
+
 gg_trg_AM2 = nil	---@type trigger	
+
 gg_trg_AM3 = nil	---@type trigger	
+
 gg_trg_AE1 = nil	---@type trigger	
+
 gg_trg_AE2 = nil	---@type trigger	
+
 gg_trg_AN1 = nil	---@type trigger	
+
 gg_trg_AN2 = nil	---@type trigger	
+
 gg_trg_ACounters = nil	---@type trigger	
+
 gg_trg_OldAllianceForever = nil	---@type trigger	
+
 gg_trg_BegEvery = nil	---@type trigger	
+
 gg_trg_CanEvery = nil	---@type trigger	
+
 gg_trg_BegForever = nil	---@type trigger	
+
 gg_trg_CanForver = nil	---@type trigger	
+
 gg_trg_EndBranch = nil	---@type trigger	
+
 gg_trg_NewAllies = nil	---@type trigger	
+
 gg_trg_NightElf = nil	---@type trigger	
+
 gg_trg_Drayenay = nil	---@type trigger	
+
 gg_trg_APandarens = nil	---@type trigger	
+
 gg_trg_BegDec = nil	---@type trigger	
+
 gg_trg_Decentralization = nil	---@type trigger	
+
 gg_trg_BegUnion = nil	---@type trigger	
+
 gg_trg_Union = nil	---@type trigger	
+
 gg_trg_VoidElfes = nil	---@type trigger	
+
 gg_trg_LightArmy = nil	---@type trigger	
+
 gg_trg_BlackIron = nil	---@type trigger	
+
 gg_trg_OldAllies = nil	---@type trigger	
+
 gg_trg_LordaeronAndTeramor = nil	---@type trigger	
+
 gg_trg_Gilneas = nil	---@type trigger	
+
 gg_trg_Kultiras = nil	---@type trigger	
+
 gg_trg_BegArat = nil	---@type trigger	
+
 gg_trg_Arathor = nil	---@type trigger	
+
 gg_trg_Stromgarge = nil	---@type trigger	
+
 gg_trg_Dalaran = nil	---@type trigger	
+
 gg_trg_FinStormwind = nil	---@type trigger	
+
 gg_trg_Fin7Legion = nil	---@type trigger	
+
 gg_trg_FinSRU = nil	---@type trigger	
+
 gg_trg_FinHoly = nil	---@type trigger	
+
 gg_trg_BegStorm = nil	---@type trigger	
+
 gg_trg_StormwindFirst = nil	---@type trigger	
+
 gg_trg_RememberLothar = nil	---@type trigger	
+
 gg_trg_TankFire = nil	---@type trigger	
+
 gg_trg_Kristall = nil	---@type trigger	
+
 gg_trg_Kristall2 = nil	---@type trigger	
+
 gg_trg_HolyHelp = nil	---@type trigger	
+
 gg_trg_WorgenSpell = nil	---@type trigger	
+
 gg_trg_MagicUsk = nil	---@type trigger	
+
 gg_trg_Illusions = nil	---@type trigger	
+
 gg_trg_MassMolot = nil	---@type trigger	
+
 gg_trg_VarianCharge = nil	---@type trigger	
+
 gg_trg_VariarTaunt = nil	---@type trigger	
+
 gg_trg_VariarTitan = nil	---@type trigger	
+
 gg_trg_VariarDamager = nil	---@type trigger	
+
 gg_trg_Level2 = nil	---@type trigger	
+
 gg_trg_SandStrikeAlliance = nil	---@type trigger	
+
 gg_trg_PaladinHpSpell = nil	---@type trigger	
+
 gg_trg_PaladinHpSpell2 = nil	---@type trigger	
+
 gg_trg_Vozd = nil	---@type trigger	
+
 gg_trg_Defend = nil	---@type trigger	
+
 gg_trg_Heal = nil	---@type trigger	
+
 gg_trg_StartAlliance = nil	---@type trigger	
+
 gg_trg_ForsacenStarrt = nil	---@type trigger	
+
 gg_trg_Ult = nil	---@type trigger	
+
 gg_trg_Banshe = nil	---@type trigger	
+
 gg_trg_BansheCop = nil	---@type trigger	
+
 gg_trg_MassInvis = nil	---@type trigger	
+
 gg_trg_BansheeAuto = nil	---@type trigger	
+
 gg_trg_ResGmilDamage = nil	---@type trigger	
+
 gg_trg_Killing = nil	---@type trigger	
+
 gg_trg_StartAttackKilling = nil	---@type trigger	
+
 gg_trg_EndAttackKilling = nil	---@type trigger	
+
 gg_trg_Infect = nil	---@type trigger	
+
 gg_trg_StartAttackInfect = nil	---@type trigger	
+
 gg_trg_EndAttackInfect = nil	---@type trigger	
+
 gg_trg_Zagraz = nil	---@type trigger	
+
 gg_trg_StartAttackZagraz = nil	---@type trigger	
+
 gg_trg_EndAttackZagraz = nil	---@type trigger	
+
 gg_trg_StartAttackCorroz2 = nil	---@type trigger	
+
 gg_trg_Usual = nil	---@type trigger	
+
 gg_trg_StartAttackUsual = nil	---@type trigger	
+
 gg_trg_EndAttackUsual = nil	---@type trigger	
+
 gg_trg_Korroz = nil	---@type trigger	
+
 gg_trg_StartAttackCorroz = nil	---@type trigger	
+
 gg_trg_EndAttackCorroz = nil	---@type trigger	
+
 gg_trg_Safety = nil	---@type trigger	
+
 gg_trg_StartAttackSafety = nil	---@type trigger	
+
 gg_trg_EndAttackSafety = nil	---@type trigger	
+
 gg_trg_RotStart = nil	---@type trigger	
+
 gg_trg_Attacked = nil	---@type trigger	
+
 gg_trg_MassMindControl = nil	---@type trigger	
+
 gg_trg_MassMindControl2 = nil	---@type trigger	
+
 gg_trg_MindControlBanc = nil	---@type trigger	
+
 gg_trg_MindControlDarkR = nil	---@type trigger	
+
 gg_trg_ChangeOwner = nil	---@type trigger	
+
 gg_trg_GnomesOn = nil	---@type trigger	
+
 gg_trg_GnomesStart = nil	---@type trigger	
+
 gg_trg_GelbinSpellAttacked = nil	---@type trigger	
+
 gg_trg_GelbinSpellClick = nil	---@type trigger	
+
 gg_trg_HeroSell = nil	---@type trigger	
+
 gg_trg_TankChangeAttack = nil	---@type trigger	
+
 gg_trg_TankVenecAttack = nil	---@type trigger	
+
 gg_trg_All_Gnomes_Cansel = nil	---@type trigger	
+
 gg_trg_All_Gnomes_Begin = nil	---@type trigger	
+
 gg_trg_All_Gnomes = nil	---@type trigger	
+
 gg_trg_All_Gnomes_Off = nil	---@type trigger	
+
 gg_trg_RegeNogi = nil	---@type trigger	
+
 gg_trg_MehaWar_start = nil	---@type trigger	
+
 gg_trg_MehaWar_Def = nil	---@type trigger	
+
 gg_trg_MehaWar_Def_Beg = nil	---@type trigger	
+
 gg_trg_MehaWar_Def_Can = nil	---@type trigger	
+
 gg_trg_MehaWar_Stan = nil	---@type trigger	
+
 gg_trg_MehaWar_Stan_Beg = nil	---@type trigger	
+
 gg_trg_MehaWar_Stan_Can = nil	---@type trigger	
+
 gg_trg_NanoGnom_start = nil	---@type trigger	
+
 gg_trg_NanoGnome1 = nil	---@type trigger	
+
 gg_trg_NanoGnome1_Beg = nil	---@type trigger	
+
 gg_trg_NanoGnome1_Can = nil	---@type trigger	
+
 gg_trg_NanoGnome_2 = nil	---@type trigger	
+
 gg_trg_NanoGnome_2_can = nil	---@type trigger	
+
 gg_trg_NanoGnome_2_beg = nil	---@type trigger	
+
 gg_trg_MehaGigant = nil	---@type trigger	
+
 gg_trg_MehaGigant_1 = nil	---@type trigger	
+
 gg_trg_MehaGigant_1_Can = nil	---@type trigger	
+
 gg_trg_MehaGigant_1_Beg = nil	---@type trigger	
+
 gg_trg_MehaGigant_2 = nil	---@type trigger	
+
 gg_trg_MehaGigant_2_Can = nil	---@type trigger	
+
 gg_trg_MehaGigant_2_Beg = nil	---@type trigger	
+
 gg_trg_Spider_start = nil	---@type trigger	
+
 gg_trg_Spider_1 = nil	---@type trigger	
+
 gg_trg_Spider_1_Beg = nil	---@type trigger	
+
 gg_trg_Spider_1_Can = nil	---@type trigger	
+
 gg_trg_Spider_2 = nil	---@type trigger	
+
 gg_trg_Spider_2_Beg = nil	---@type trigger	
+
 gg_trg_Spider_2_Can = nil	---@type trigger	
+
 gg_trg_Chahohod_Start = nil	---@type trigger	
+
 gg_trg_Chahohod_1 = nil	---@type trigger	
+
 gg_trg_Chahohod_1_beg = nil	---@type trigger	
+
 gg_trg_Chahohod_1_can = nil	---@type trigger	
+
 gg_trg_Chahohod_2 = nil	---@type trigger	
+
 gg_trg_Chahohod_2_beg = nil	---@type trigger	
+
 gg_trg_Chahohod_2_can = nil	---@type trigger	
+
 gg_trg_Chahohod_3 = nil	---@type trigger	
+
 gg_trg_Chahohod_3_beg = nil	---@type trigger	
+
 gg_trg_Chahohod_3_beg_Copy = nil	---@type trigger	
+
 gg_trg_Minitank_Start = nil	---@type trigger	
+
 gg_trg_Minitank_1 = nil	---@type trigger	
+
 gg_trg_Minitank_1_can = nil	---@type trigger	
+
 gg_trg_Minitank_1_beg = nil	---@type trigger	
+
 gg_trg_Minitank_2 = nil	---@type trigger	
+
 gg_trg_Minitank_2_can = nil	---@type trigger	
+
 gg_trg_Minitank_2_beg = nil	---@type trigger	
+
 gg_trg_Minitank_3 = nil	---@type trigger	
+
 gg_trg_Minitank_3_can = nil	---@type trigger	
+
 gg_trg_Minitank_3_beg = nil	---@type trigger	
+
 gg_trg_UniTank_start = nil	---@type trigger	
+
 gg_trg_UniTank_1 = nil	---@type trigger	
+
 gg_trg_UniTank_1_can = nil	---@type trigger	
+
 gg_trg_UniTank_1_beg = nil	---@type trigger	
+
 gg_trg_UniTank_2 = nil	---@type trigger	
+
 gg_trg_UniTank_2_can = nil	---@type trigger	
+
 gg_trg_UniTank_2_beg = nil	---@type trigger	
+
 gg_trg_UniTank_3 = nil	---@type trigger	
+
 gg_trg_UniTank_3_can = nil	---@type trigger	
+
 gg_trg_UniTank_3_beg = nil	---@type trigger	
+
 gg_trg_Venec_Tank_start = nil	---@type trigger	
+
 gg_trg_Venec_Tank_1 = nil	---@type trigger	
+
 gg_trg_Venec_Tank_1_can = nil	---@type trigger	
+
 gg_trg_Venec_Tank_1_beg = nil	---@type trigger	
+
 gg_trg_Venec_Tank_2 = nil	---@type trigger	
+
 gg_trg_Venec_Tank_2_can = nil	---@type trigger	
+
 gg_trg_Venec_Tank_2_beg = nil	---@type trigger	
+
 gg_trg_Venec_Tank_3 = nil	---@type trigger	
+
 gg_trg_Venec_Tank_3_can = nil	---@type trigger	
+
 gg_trg_Venec_Tank_3_beg = nil	---@type trigger	
+
 gg_trg_Car_start = nil	---@type trigger	
+
 gg_trg_Car_1 = nil	---@type trigger	
+
 gg_trg_Car_1_can = nil	---@type trigger	
+
 gg_trg_Car_1_beg = nil	---@type trigger	
+
 gg_trg_Car_2 = nil	---@type trigger	
+
 gg_trg_Car_2_can = nil	---@type trigger	
+
 gg_trg_Car_2_beg = nil	---@type trigger	
+
 gg_trg_Car_3 = nil	---@type trigger	
+
 gg_trg_Car_3_can = nil	---@type trigger	
+
 gg_trg_Car_3_beg = nil	---@type trigger	
+
 gg_trg_SGT_Start = nil	---@type trigger	
+
 gg_trg_SGT_1 = nil	---@type trigger	
+
 gg_trg_SGT_1_can = nil	---@type trigger	
+
 gg_trg_SGT_1_beg = nil	---@type trigger	
+
 gg_trg_SGT_2 = nil	---@type trigger	
+
 gg_trg_SGT_2can = nil	---@type trigger	
+
 gg_trg_SGT_2_beg = nil	---@type trigger	
+
 gg_trg_SGT_3 = nil	---@type trigger	
+
 gg_trg_SGT_3_can = nil	---@type trigger	
+
 gg_trg_SGT_3_beg = nil	---@type trigger	
+
 gg_trg_SAU_Start = nil	---@type trigger	
+
 gg_trg_SAU_1 = nil	---@type trigger	
+
 gg_trg_SAU_1_can = nil	---@type trigger	
+
 gg_trg_SAU_1__beg = nil	---@type trigger	
+
 gg_trg_SAU_2 = nil	---@type trigger	
+
 gg_trg_SAU_2_can = nil	---@type trigger	
+
 gg_trg_SAU_2_beg = nil	---@type trigger	
+
 gg_trg_SAU_3 = nil	---@type trigger	
+
 gg_trg_SAU_3_beg = nil	---@type trigger	
+
 gg_trg_SAU_3_can = nil	---@type trigger	
+
 gg_trg_MEGA_SAU = nil	---@type trigger	
+
 gg_trg_URAN = nil	---@type trigger	
+
 gg_trg_Klap_Klap_End = nil	---@type trigger	
+
 gg_trg_Klap_Klap_start = nil	---@type trigger	
+
 gg_trg_Klap_Klap_LUM = nil	---@type trigger	
+
 gg_trg_Klap_Klap_LUM_2 = nil	---@type trigger	
+
 gg_trg_Klap_Klap_War = nil	---@type trigger	
+
 gg_trg_Klap_Klap_War_Bomb = nil	---@type trigger	
+
 gg_trg_Klap_Klap_War_Shield = nil	---@type trigger	
+
 gg_trg_Klap_Klap_War_small = nil	---@type trigger	
+
 gg_trg_Klap_Klap_War_big = nil	---@type trigger	
+
 gg_trg_HordeOn = nil	---@type trigger	
+
 gg_trg_AiFixTrain = nil	---@type trigger	
+
 gg_trg_K1T1 = nil	---@type trigger	
+
 gg_trg_K1T2 = nil	---@type trigger	
+
 gg_trg_K1T2b = nil	---@type trigger	
+
 gg_trg_K1TCav = nil	---@type trigger	
+
 gg_trg_K1T4 = nil	---@type trigger	
+
 gg_trg_K2T1 = nil	---@type trigger	
+
 gg_trg_K2T2 = nil	---@type trigger	
+
 gg_trg_K2T2b = nil	---@type trigger	
+
 gg_trg_K2T3 = nil	---@type trigger	
+
 gg_trg_KM1 = nil	---@type trigger	
+
 gg_trg_KM2 = nil	---@type trigger	
+
 gg_trg_KM3 = nil	---@type trigger	
+
 gg_trg_TechT1 = nil	---@type trigger	
+
 gg_trg_TechT2 = nil	---@type trigger	
+
 gg_trg_NavyHeavy = nil	---@type trigger	
+
 gg_trg_NavyLight = nil	---@type trigger	
+
 gg_trg_TrallHordeForever = nil	---@type trigger	
+
 gg_trg_NoLeft = nil	---@type trigger	
+
 gg_trg_YesLeft = nil	---@type trigger	
+
 gg_trg_NoRight = nil	---@type trigger	
+
 gg_trg_YesRight = nil	---@type trigger	
+
 gg_trg_Counters = nil	---@type trigger	
+
 gg_trg_StartCommonHome = nil	---@type trigger	
+
 gg_trg_Forsaken = nil	---@type trigger	
+
 gg_trg_BloodElf = nil	---@type trigger	
+
 gg_trg_Pandarens = nil	---@type trigger	
+
 gg_trg_BeginCommonHome = nil	---@type trigger	
+
 gg_trg_CanselCommonHome = nil	---@type trigger	
+
 gg_trg_CommonHome = nil	---@type trigger	
+
 gg_trg_Zandalars = nil	---@type trigger	
+
 gg_trg_NightBorn = nil	---@type trigger	
+
 gg_trg_StartUnitedOrcs = nil	---@type trigger	
+
 gg_trg_BlackMountainHorde = nil	---@type trigger	
+
 gg_trg_DragonHorde = nil	---@type trigger	
+
 gg_trg_CorCron = nil	---@type trigger	
+
 gg_trg_StartTrueHorde = nil	---@type trigger	
+
 gg_trg_CanselTrueHorde = nil	---@type trigger	
+
 gg_trg_Reptaur = nil	---@type trigger	
+
 gg_trg_TrueHorde = nil	---@type trigger	
+
 gg_trg_IronHorde = nil	---@type trigger	
+
 gg_trg_IronHordeBegin = nil	---@type trigger	
+
 gg_trg_ShaHorde = nil	---@type trigger	
+
 gg_trg_ShaSpell = nil	---@type trigger	
+
 gg_trg_ShaHordeBegin = nil	---@type trigger	
+
 gg_trg_StartNeutrals = nil	---@type trigger	
+
 gg_trg_BuyGoblins = nil	---@type trigger	
+
 gg_trg_Magnatavrs = nil	---@type trigger	
+
 gg_trg_DeathKnights = nil	---@type trigger	
+
 gg_trg_Compromise = nil	---@type trigger	
+
 gg_trg_BerserkOrc = nil	---@type trigger	
+
 gg_trg_BerserkTrol = nil	---@type trigger	
+
 gg_trg_AutoSetkaH = nil	---@type trigger	
+
 gg_trg_IronStar = nil	---@type trigger	
+
 gg_trg_SiegeEffect = nil	---@type trigger	
+
 gg_trg_AutoShield2 = nil	---@type trigger	
+
 gg_trg_PandaSecondAttack = nil	---@type trigger	
+
 gg_trg_DragonFire = nil	---@type trigger	
+
 gg_trg_ThrallMolnya = nil	---@type trigger	
+
 gg_trg_Okovi = nil	---@type trigger	
+
 gg_trg_GarraoshMassBloodlast = nil	---@type trigger	
+
 gg_trg_StartHorde = nil	---@type trigger	
+
 gg_trg_SilitidsOn = nil	---@type trigger	
+
 gg_trg_StartSilitids = nil	---@type trigger	
+
 gg_trg_QTunServe = nil	---@type trigger	
+
 gg_trg_QTunAye = nil	---@type trigger	
+
 gg_trg_ChoseLich = nil	---@type trigger	
+
 gg_trg_ChoseLich_Copy = nil	---@type trigger	
+
 gg_trg_ChoseUnitsOld = nil	---@type trigger	
+
 gg_trg_ChoseUnits2 = nil	---@type trigger	
+
 gg_trg_ChoseUnits = nil	---@type trigger	
+
 gg_trg_ChoseUnits_Cod = nil	---@type trigger	
+
 gg_trg_MainSpawn2 = nil	---@type trigger	
+
 gg_trg_LichDead = nil	---@type trigger	
+
 gg_trg_YleyDead = nil	---@type trigger	
+
 gg_trg_TweenBrothers = nil	---@type trigger	
+
 gg_trg_TweenChange = nil	---@type trigger	
+
 gg_trg_TweenBrothersRev = nil	---@type trigger	
+
 gg_trg_TweenBrothersDead = nil	---@type trigger	
+
 gg_trg_StartBuildingSil = nil	---@type trigger	
+
 gg_trg_SlowAnimation = nil	---@type trigger	
+
 gg_trg_CanselBuildingSil = nil	---@type trigger	
+
 gg_trg_TrutenStartUpgrade = nil	---@type trigger	
+
 gg_trg_LichStartUpgrade = nil	---@type trigger	
+
 gg_trg_LichinkaFinish = nil	---@type trigger	
+
 gg_trg_LichinkaFinish_Copy = nil	---@type trigger	
+
 gg_trg_KokonDead = nil	---@type trigger	
+
 gg_trg_KokonDead2 = nil	---@type trigger	
+
 gg_trg_SpellBook = nil	---@type trigger	
+
 gg_trg_SpawnLich = nil	---@type trigger	
+
 gg_trg_TypeOfSpawn1_war = nil	---@type trigger	
+
 gg_trg_TypeOfSpawn2_bee = nil	---@type trigger	
+
 gg_trg_TypeOfSpawn3_spider = nil	---@type trigger	
+
 gg_trg_TypeOfSpawn4_comm = nil	---@type trigger	
+
 gg_trg_TypeOfSpawn5_phoc = nil	---@type trigger	
+
 gg_trg_TypeOfSpawn6_sold = nil	---@type trigger	
+
 gg_trg_TypeOfSpawn7_skar = nil	---@type trigger	
+
 gg_trg_TypeOfSpawn8_sliz = nil	---@type trigger	
+
 gg_trg_TypeOfSpawn9_no1 = nil	---@type trigger	
+
 gg_trg_TypeOfSpawn10_builders = nil	---@type trigger	
+
 gg_trg_MainSpawn = nil	---@type trigger	
+
 gg_trg_MainSpawnDiy = nil	---@type trigger	
+
 gg_trg_StartTimer = nil	---@type trigger	
+
 gg_trg_SpawnTimer = nil	---@type trigger	
+
 gg_trg_Antennu = nil	---@type trigger	
+
 gg_trg_AutoPolet = nil	---@type trigger	
+
 gg_trg_FastKokon = nil	---@type trigger	
+
 gg_trg_FireAutoCast = nil	---@type trigger	
+
 gg_trg_AcidMissleF = nil	---@type trigger	
+
 gg_trg_AcidMissleB = nil	---@type trigger	
+
 gg_trg_AcidMissleC = nil	---@type trigger	
+
 gg_trg_ParazitF = nil	---@type trigger	
+
 gg_trg_ParazitB = nil	---@type trigger	
+
 gg_trg_ParazitC = nil	---@type trigger	
+
 gg_trg_PlodovitostOsaB = nil	---@type trigger	
+
 gg_trg_PlodovitostOsaC = nil	---@type trigger	
+
 gg_trg_PlodovitostVoinaB = nil	---@type trigger	
+
 gg_trg_PlodovitostVoinaC = nil	---@type trigger	
+
 gg_trg_KriliaF = nil	---@type trigger	
+
 gg_trg_KriliaB = nil	---@type trigger	
+
 gg_trg_KriliaC = nil	---@type trigger	
+
 gg_trg_DelimostF = nil	---@type trigger	
+
 gg_trg_DelimostB = nil	---@type trigger	
+
 gg_trg_DelimostC = nil	---@type trigger	
+
 gg_trg_SlizeF = nil	---@type trigger	
+
 gg_trg_SlizeB = nil	---@type trigger	
+
 gg_trg_SlizeC = nil	---@type trigger	
+
 gg_trg_TankB = nil	---@type trigger	
+
 gg_trg_TankC = nil	---@type trigger	
+
 gg_trg_TankF = nil	---@type trigger	
+
 gg_trg_GoblinsOn = nil	---@type trigger	
+
 gg_trg_StartG = nil	---@type trigger	
+
 gg_trg_GoblinSold = nil	---@type trigger	
+
 gg_trg_IconAutoRocket = nil	---@type trigger	
+
 gg_trg_FactoryAnim = nil	---@type trigger	
+
 gg_trg_SpellRecharge = nil	---@type trigger	
+
 gg_trg_CorrupTrain = nil	---@type trigger	
+
 gg_trg_CorrupPlus = nil	---@type trigger	
+
 gg_trg_CorrupMinus = nil	---@type trigger	
+
 gg_trg_Potreblenie = nil	---@type trigger	
+
 gg_trg_PotreblenieTrain = nil	---@type trigger	
+
 gg_trg_BracResearch = nil	---@type trigger	
+
 gg_trg_BracTrain = nil	---@type trigger	
+
 gg_trg_PodjogResearch = nil	---@type trigger	
+
 gg_trg_PodjogTrain = nil	---@type trigger	
+
 gg_trg_PodruvResearc = nil	---@type trigger	
+
 gg_trg_PodruvTrain = nil	---@type trigger	
+
 gg_trg_Brac = nil	---@type trigger	
+
 gg_trg_Samopodruv = nil	---@type trigger	
+
 gg_trg_Samopodjog = nil	---@type trigger	
+
 gg_trg_Adrenalin = nil	---@type trigger	
+
 gg_trg_GazloySpellheals = nil	---@type trigger	
+
 gg_trg_FarmBuildG = nil	---@type trigger	
+
 gg_trg_FarmLoseG = nil	---@type trigger	
+
 gg_trg_Pulimetchik = nil	---@type trigger	
+
 gg_trg_Ognemetchik = nil	---@type trigger	
+
 gg_trg_Raketchik = nil	---@type trigger	
+
 gg_trg_Medic = nil	---@type trigger	
+
 gg_trg_Sniper = nil	---@type trigger	
+
 gg_trg_Saper = nil	---@type trigger	
+
 gg_trg_Car = nil	---@type trigger	
+
 gg_trg_Vezdehod = nil	---@type trigger	
+
 gg_trg_Tank = nil	---@type trigger	
+
 gg_trg_FireTank = nil	---@type trigger	
+
 gg_trg_Arta = nil	---@type trigger	
+
 gg_trg_Meha = nil	---@type trigger	
+
 gg_trg_OgneMeha = nil	---@type trigger	
+
 gg_trg_Eczo = nil	---@type trigger	
+
 gg_trg_Super = nil	---@type trigger	
+
 gg_trg_Submarina = nil	---@type trigger	
+
 gg_trg_Podlodka1 = nil	---@type trigger	
+
 gg_trg_BloodElvesOn = nil	---@type trigger	
+
 gg_trg_Start_Elves_O = nil	---@type trigger	
+
 gg_trg_KaelMassAstral = nil	---@type trigger	
+
 gg_trg_LortemarAddArmor = nil	---@type trigger	
+
 gg_trg_LortemarArmorActive = nil	---@type trigger	
+
 gg_trg_Power_Kael_Size = nil	---@type trigger	
+
 gg_trg_LiadrinUlta = nil	---@type trigger	
+
 gg_trg_SpellMassSunAttack = nil	---@type trigger	
+
 gg_trg_Power_Kael = nil	---@type trigger	
+
 gg_trg_Manasbor = nil	---@type trigger	
+
 gg_trg_ManaAura = nil	---@type trigger	
+
 gg_trg_Arcana = nil	---@type trigger	
+
 gg_trg_ArcanaBegin = nil	---@type trigger	
+
 gg_trg_ArcanaCansel = nil	---@type trigger	
+
 gg_trg_Fel = nil	---@type trigger	
+
 gg_trg_FelBegin = nil	---@type trigger	
+
 gg_trg_FelCansel = nil	---@type trigger	
+
 gg_trg_FelGolemStrike = nil	---@type trigger	
+
 gg_trg_Void = nil	---@type trigger	
+
 gg_trg_VoidBegin = nil	---@type trigger	
+
 gg_trg_VoidCansel = nil	---@type trigger	
+
 gg_trg_LightBegin = nil	---@type trigger	
+
 gg_trg_LightCansel = nil	---@type trigger	
+
 gg_trg_Light = nil	---@type trigger	
+
 gg_trg_voidspell111 = nil	---@type trigger	
+
 gg_trg_voidspell_Copy = nil	---@type trigger	
+
 gg_trg_ArcanaBuild = nil	---@type trigger	
+
 gg_trg_FelBuild = nil	---@type trigger	
+
 gg_trg_VoidBuild = nil	---@type trigger	
+
 gg_trg_LigthBuild = nil	---@type trigger	
+
 gg_trg_felspell2 = nil	---@type trigger	
+
 gg_trg_voidspell2 = nil	---@type trigger	
+
 gg_trg_felspell = nil	---@type trigger	
+
 gg_trg_voidspell = nil	---@type trigger	
+
 gg_trg_lightspel = nil	---@type trigger	
+
 gg_trg_Porcha = nil	---@type trigger	
+
 gg_trg_FirePodgogStrela = nil	---@type trigger	
+
 gg_trg_Souz = nil	---@type trigger	
+
 gg_trg_ArcanaIscachenie = nil	---@type trigger	
+
 gg_trg_ArcanaStrela = nil	---@type trigger	
+
 gg_trg_FirePodgog = nil	---@type trigger	
+
 gg_trg_FirePodgogStrela2 = nil	---@type trigger	
+
 gg_trg_Ruvok_Auto_BE_O = nil	---@type trigger	
+
 gg_trg_AutoMana = nil	---@type trigger	
+
 gg_trg_AutoStrelaFire = nil	---@type trigger	
+
 gg_trg_AutoStrelaArcana = nil	---@type trigger	
+
 gg_trg_AutoStrelaFel = nil	---@type trigger	
+
 gg_trg_AutoSummonGonch = nil	---@type trigger	
+
 gg_trg_VedmakF = nil	---@type trigger	
+
 gg_trg_VedmakB = nil	---@type trigger	
+
 gg_trg_VedmakC = nil	---@type trigger	
+
 gg_trg_MagsF = nil	---@type trigger	
+
 gg_trg_MagsB = nil	---@type trigger	
+
 gg_trg_MagsC = nil	---@type trigger	
+
 gg_trg_StrannikF = nil	---@type trigger	
+
 gg_trg_StrannikB = nil	---@type trigger	
+
 gg_trg_StrannikC = nil	---@type trigger	
+
 gg_trg_PaladinF = nil	---@type trigger	
+
 gg_trg_PaladinB = nil	---@type trigger	
+
 gg_trg_PaladinC = nil	---@type trigger	
+
 gg_trg_FireShielDamageUniversal = nil	---@type trigger	
+
 gg_trg_BanditsOn = nil	---@type trigger	
+
 gg_trg_StartBandits = nil	---@type trigger	
+
 gg_trg_VoevodaSpell = nil	---@type trigger	
+
 gg_trg_BlinkToUnit_attack = nil	---@type trigger	
+
 gg_trg_BlinkAttack = nil	---@type trigger	
+
 gg_trg_DelAttackSpel = nil	---@type trigger	
+
 gg_trg_BlinkToUnit_Spell = nil	---@type trigger	
+
 gg_trg_Edvin_Ult = nil	---@type trigger	
+
 gg_trg_Del1FromTable_C = nil	---@type trigger	
+
 gg_trg_OnlySelected = nil	---@type trigger	
+
 gg_trg_AutoChance = nil	---@type trigger	
+
 gg_trg_AutoChance_2 = nil	---@type trigger	
+
 gg_trg_AutoChance_3 = nil	---@type trigger	
+
 gg_trg_Dovorougenie_Code_O = nil	---@type trigger	
+
 gg_trg_Dovorougenie_2t_Code_O = nil	---@type trigger	
+
 gg_trg_Dovorougenie_3t_O = nil	---@type trigger	
+
 gg_trg_Dovorougenie = nil	---@type trigger	
+
 gg_trg_Dovorougenie_2t = nil	---@type trigger	
+
 gg_trg_Dovorougenie_3t_O_Copy = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_003 = nil	---@type trigger	
+
 gg_trg_Dovorougenie_3t_Copy = nil	---@type trigger	
+
 gg_trg_Del1FromTable = nil	---@type trigger	
+
 gg_trg_Voron = nil	---@type trigger	
+
 gg_trg_Sindicat = nil	---@type trigger	
+
 gg_trg_Bratstwo = nil	---@type trigger	
+
 gg_trg_Pirats_O = nil	---@type trigger	
+
 gg_trg_Pirats = nil	---@type trigger	
+
 gg_trg_Shesterenka = nil	---@type trigger	
+
 gg_trg_Trumnue_vodu = nil	---@type trigger	
+
 gg_trg_AutoSetka = nil	---@type trigger	
+
 gg_trg_AutoSetkaHero = nil	---@type trigger	
+
 gg_trg_Ruvok_Auto_O = nil	---@type trigger	
+
 gg_trg_AutoSvita = nil	---@type trigger	
+
 gg_trg_AutoStaya = nil	---@type trigger	
+
 gg_trg_AutoManaSteal = nil	---@type trigger	
+
 gg_trg_AutoShield = nil	---@type trigger	
+
 gg_trg_ResearhRobbery = nil	---@type trigger	
+
 gg_trg_RobberyTrain = nil	---@type trigger	
+
 gg_trg_Upgrade = nil	---@type trigger	
+
 gg_trg_RobberyOfPlayer = nil	---@type trigger	
+
 gg_trg_AreaOfDeath2 = nil	---@type trigger	
+
 gg_trg_Global = nil	---@type trigger	
+
 gg_trg_DamageEvent = nil	---@type trigger	
+
 gg_trg_Purification = nil	---@type trigger	
+
 gg_trg_Sanctified_Enchantment = nil	---@type trigger	
+
 gg_trg_Divine_Clarity_Copy = nil	---@type trigger	
+
 gg_trg_Righteous_Blessing = nil	---@type trigger	
+
 gg_trg_Kop = nil	---@type trigger	
+
 gg_trg_Kop3 = nil	---@type trigger	
+
 gg_trg_Strel = nil	---@type trigger	
+
 gg_trg_Strel3 = nil	---@type trigger	
+
 gg_trg_Rub = nil	---@type trigger	
+
 gg_trg_Rub3 = nil	---@type trigger	
+
 gg_trg_Sham = nil	---@type trigger	
+
 gg_trg_Sham3 = nil	---@type trigger	
+
 gg_trg_Chern = nil	---@type trigger	
+
 gg_trg_Chern3 = nil	---@type trigger	
+
 gg_trg_Kodo = nil	---@type trigger	
+
 gg_trg_Kodo3 = nil	---@type trigger	
+
 gg_trg_Tel = nil	---@type trigger	
+
 gg_trg_Tel3 = nil	---@type trigger	
+
 gg_trg_Nale = nil	---@type trigger	
+
 gg_trg_Nale3 = nil	---@type trigger	
+
 gg_trg_KodoT3 = nil	---@type trigger	
+
 gg_trg_NaleT3 = nil	---@type trigger	
+
 gg_trg_ShamT3 = nil	---@type trigger	
+
 gg_trg_CherT3 = nil	---@type trigger	
+
 gg_trg_KopT3 = nil	---@type trigger	
+
 gg_trg_StrelT3 = nil	---@type trigger	
+
 gg_trg_RubT3 = nil	---@type trigger	
+
 gg_trg_TelT3 = nil	---@type trigger	
+
 gg_trg_KodoNale = nil	---@type trigger	
+
 gg_trg_NaleKodo = nil	---@type trigger	
+
 gg_trg_Ritual = nil	---@type trigger	
+
 gg_trg_Ritual_Copy = nil	---@type trigger	
+
 gg_trg_ShamCher = nil	---@type trigger	
+
 gg_trg_CherSham = nil	---@type trigger	
+
 gg_trg_KopStrel = nil	---@type trigger	
+
 gg_trg_StrelKop = nil	---@type trigger	
+
 gg_trg_RubTel = nil	---@type trigger	
+
 gg_trg_TelRub = nil	---@type trigger	
+
 gg_trg_NerZulPas = nil	---@type trigger	
+
 gg_trg_NerZulPas_Copy = nil	---@type trigger	
+
 gg_trg_NerZulPas_Copy_Copy = nil	---@type trigger	
+
 gg_trg_StartNight = nil	---@type trigger	
+
 gg_trg_KrugBeg = nil	---@type trigger	
+
 gg_trg_KrugCan = nil	---@type trigger	
+
 gg_trg_KrugFin = nil	---@type trigger	
+
 gg_trg_ElfBegFin = nil	---@type trigger	
+
 gg_trg_ElfCan = nil	---@type trigger	
+
 gg_trg_malfurionPas = nil	---@type trigger	
+
 gg_trg_StartBuildingTree = nil	---@type trigger	
+
 gg_trg_CanselBuildingTree = nil	---@type trigger	
+
 gg_trg_GuadrianSpell = nil	---@type trigger	
+
 gg_trg_WaterEnter = nil	---@type trigger	
+
 gg_trg_WaterLeave = nil	---@type trigger	
+
 gg_trg_NagaStart = nil	---@type trigger	
+
 gg_trg_Coatl = nil	---@type trigger	
+
 gg_trg_MurlokCan = nil	---@type trigger	
+
 gg_trg_MurlokBeg = nil	---@type trigger	
+
 gg_trg_MurlocFin = nil	---@type trigger	
+
 gg_trg_Nagi = nil	---@type trigger	
+
 gg_trg_Nagi2 = nil	---@type trigger	
+
 gg_trg_NagaFinish = nil	---@type trigger	
+
 gg_trg_NagaFinishCode = nil	---@type trigger	
+
 gg_trg_VaishBuria = nil	---@type trigger	
+
 gg_trg_VaishArrow = nil	---@type trigger	
+
 gg_trg_NagaPas = nil	---@type trigger	
+
 gg_trg_NagaCommonSpell = nil	---@type trigger	
+
 gg_trg_StartWorgens = nil	---@type trigger	
+
 gg_trg_LegGer = nil	---@type trigger	
+
 gg_trg_SpellOpletenie = nil	---@type trigger	
+
 gg_trg_malfurionPas_Copy = nil	---@type trigger	
+
 gg_trg_flot1_Copy_O = nil	---@type trigger	
+
 gg_trg_flot2_Copy_O = nil	---@type trigger	
+
 gg_trg_arm1_Copy_O = nil	---@type trigger	
+
 gg_trg_arm2_Copy_O = nil	---@type trigger	
+
 gg_trg_BuidT1 = nil	---@type trigger	
+
 gg_trg_BuidAltar = nil	---@type trigger	
+
 gg_trg_BuidAny = nil	---@type trigger	
+
 gg_trg_Auto_set_Copy_O = nil	---@type trigger	
+
 gg_trg_AutocastSlowOn = nil	---@type trigger	
+
 gg_trg_Red_Orden = nil	---@type trigger	
+
 gg_trg_Red_Orden_cansel = nil	---@type trigger	
+
 gg_trg_Red_Onslaught = nil	---@type trigger	
+
 gg_trg_Red_Onslaught_start = nil	---@type trigger	
+
 gg_trg_Short_crossbow = nil	---@type trigger	
+
 gg_trg_AutocastFireArrows = nil	---@type trigger	
+
 gg_trg_AutocastInnerFire = nil	---@type trigger	
+
 gg_trg_Long_crossbow = nil	---@type trigger	
+
 gg_trg_Auto_hil_Copy_2 = nil	---@type trigger	
+
 gg_trg_Red_korotkiy2 = nil	---@type trigger	
+
 gg_trg_Red_dlinarbalet = nil	---@type trigger	
+
 gg_trg_Red_dlinarbalet_start = nil	---@type trigger	
+
 gg_trg_Red_korotkiy = nil	---@type trigger	
+
 gg_trg_SpellMassSleep = nil	---@type trigger	
+
 gg_trg_Divine_Clarity = nil	---@type trigger	
+
 gg_trg_Ozaren = nil	---@type trigger	
+
 gg_trg_Ozaren2 = nil	---@type trigger	
+
 gg_trg_Slomlen = nil	---@type trigger	
+
 gg_trg_Slomlen2 = nil	---@type trigger	
+
 gg_trg_TP = nil	---@type trigger	
+
 gg_trg_NoDeath = nil	---@type trigger	
+
 gg_trg_Masterstvo11 = nil	---@type trigger	
+
 gg_trg_Masterstvo12 = nil	---@type trigger	
+
 gg_trg_Slomlen_Copy = nil	---@type trigger	
+
 gg_trg_Slomlen2_Copy = nil	---@type trigger	
+
 gg_trg_Auto_hil = nil	---@type trigger	
+
 gg_trg_Auto_hil_Copy = nil	---@type trigger	
+
 gg_trg_Draenei_Build_Abill = nil	---@type trigger	
+
 gg_trg_flot1 = nil	---@type trigger	
+
 gg_trg_flot2 = nil	---@type trigger	
+
 gg_trg_arm1 = nil	---@type trigger	
+
 gg_trg_arm2 = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_006 = nil	---@type trigger	
+
 gg_trg_Auto_pohichenie_Copy = nil	---@type trigger	
+
 gg_trg_IllidaryOn = nil	---@type trigger	
+
 gg_trg_flot1_Copy_2 = nil	---@type trigger	
+
 gg_trg_flot2_Copy_2 = nil	---@type trigger	
+
 gg_trg_arm1_Copy_2 = nil	---@type trigger	
+
 gg_trg_arm2_Copy_2 = nil	---@type trigger	
+
 gg_trg_arm1_Copy_2_Copy = nil	---@type trigger	
+
 gg_trg_arm2_Copy_2_Copy = nil	---@type trigger	
+
 gg_trg_EnemyPower = nil	---@type trigger	
+
 gg_trg_AutoStrelaFireIlly = nil	---@type trigger	
+
 gg_trg_AutoStrelaFelllly = nil	---@type trigger	
+
 gg_trg_SecondFireArrow = nil	---@type trigger	
+
 gg_trg_IllyFire = nil	---@type trigger	
+
 gg_trg_IllyAgile = nil	---@type trigger	
+
 gg_trg_IllyPain = nil	---@type trigger	
+
 gg_trg_IlliKnives = nil	---@type trigger	
+
 gg_trg_IllyAttack = nil	---@type trigger	
+
 gg_trg_RuvokAutoIlly = nil	---@type trigger	
+
 gg_trg_SandStrike = nil	---@type trigger	
+
 gg_trg_SandStrikeReserv = nil	---@type trigger	
+
 gg_trg_Sand_Strike_Loop = nil	---@type trigger	
+
 gg_trg_InitLimitsVryculls = nil	---@type trigger	
+
 gg_trg_Raiders = nil	---@type trigger	
+
 gg_trg_km = nil	---@type trigger	
+
 gg_trg_km2 = nil	---@type trigger	
+
 gg_trg_Titan = nil	---@type trigger	
+
 gg_trg_Titan2 = nil	---@type trigger	
+
 gg_trg_IzeraSpell = nil	---@type trigger	
+
 gg_trg_Navodnenie = nil	---@type trigger	
+
 gg_trg_PoleAstralaDragons = nil	---@type trigger	
+
 gg_trg_Red_Dragon = nil	---@type trigger	
+
 gg_trg_Old_Red_Dragon = nil	---@type trigger	
+
 gg_trg_Dark_Dragon = nil	---@type trigger	
+
 gg_trg_Old_Dark_Dragon = nil	---@type trigger	
+
 gg_trg_Orange_Dragon = nil	---@type trigger	
+
 gg_trg_Old_Orange_Dragon = nil	---@type trigger	
+
 gg_trg_Gren_Dragon = nil	---@type trigger	
+
 gg_trg_Old_Gren_Dragon = nil	---@type trigger	
+
 gg_trg_Blue_Dragon = nil	---@type trigger	
+
 gg_trg_Blue_Dragon_Copy = nil	---@type trigger	
+
 gg_trg_FlyDragon = nil	---@type trigger	
+
 gg_trg_DragonUnionStart = nil	---@type trigger	
+
 gg_trg_GreenAutoAstral = nil	---@type trigger	
+
 gg_trg_TrainGreenPhase = nil	---@type trigger	
+
 gg_trg_TrainGreenSpellSteal = nil	---@type trigger	
+
 gg_trg_Blood1_Copy_3 = nil	---@type trigger	
+
 gg_trg_Blood_Copy = nil	---@type trigger	
+
 gg_trg_Blood2_Copy = nil	---@type trigger	
+
 gg_trg_____________________________________001_Copy_5 = nil	---@type trigger	
+
 gg_trg_____________________________________001_Copy_2_Copy_3 = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_012 = nil	---@type trigger	
+
 gg_trg_IllyFire_Copy = nil	---@type trigger	
+
 gg_trg_ArhiTep = nil	---@type trigger	
+
 gg_trg_Summon_dummy_del = nil	---@type trigger	
+
 gg_trg_Buildings = nil	---@type trigger	
+
 gg_trg_StartBuildingDEmon = nil	---@type trigger	
+
 gg_trg_CanselBuilding_Copy = nil	---@type trigger	
+
 gg_trg_____________________________________001_Copy = nil	---@type trigger	
+
 gg_trg_AuraStart = nil	---@type trigger	
+
 gg_trg_Pole_Astrala_Demons = nil	---@type trigger	
+
 gg_trg_Pole_Astrala_Demons_Copy = nil	---@type trigger	
+
 gg_trg_Pole_Astrala_Demons_Copy_Copy = nil	---@type trigger	
+
 gg_trg_Pole_Astrala_Demons_Copy_Copy_2 = nil	---@type trigger	
+
 gg_trg_SargerasReturnDamage = nil	---@type trigger	
+
 gg_trg_Sand_Strike_Copy = nil	---@type trigger	
+
 gg_trg_Sand_Strike_Loop_Copy = nil	---@type trigger	
+
 gg_trg_Blood1 = nil	---@type trigger	
+
 gg_trg_Blood = nil	---@type trigger	
+
 gg_trg_Blood2 = nil	---@type trigger	
+
 gg_trg_____________________________________001 = nil	---@type trigger	
+
 gg_trg_____________________________________001_Copy_3 = nil	---@type trigger	
+
 gg_trg_SomeDemonSpell = nil	---@type trigger	
+
 gg_trg_Units = nil	---@type trigger	
+
 gg_trg_Fire = nil	---@type trigger	
+
 gg_trg_Water = nil	---@type trigger	
+
 gg_trg_Earth = nil	---@type trigger	
+
 gg_trg_Wind = nil	---@type trigger	
+
 gg_trg_FireRageElem = nil	---@type trigger	
+
 gg_trg_FireCircleElem = nil	---@type trigger	
+
 gg_trg_ColossalAttackElem = nil	---@type trigger	
+
 gg_trg_MultuAttackWater = nil	---@type trigger	
+
 gg_trg_gnev1 = nil	---@type trigger	
+
 gg_trg_necropol = nil	---@type trigger	
+
 gg_trg_gnev2 = nil	---@type trigger	
+
 gg_trg_necropol2 = nil	---@type trigger	
+
 gg_trg_UndeadOn = nil	---@type trigger	
+
 gg_trg_UndeadStart = nil	---@type trigger	
+
 gg_trg_UndeadSell = nil	---@type trigger	
+
 gg_trg_SummonSkeleltClad = nil	---@type trigger	
+
 gg_trg_SpellShieldDK = nil	---@type trigger	
+
 gg_trg_TowersEcFix = nil	---@type trigger	
+
 gg_trg_DK_Blood_Auto_Attack = nil	---@type trigger	
+
 gg_trg_TryToBurrow = nil	---@type trigger	
+
 gg_trg_SclepSell = nil	---@type trigger	
+
 gg_trg_BuidingSell_Undead = nil	---@type trigger	
+
 gg_trg_ArthasResurrection = nil	---@type trigger	
+
 gg_trg_ArthasCoils = nil	---@type trigger	
+
 gg_trg_ArthasNova = nil	---@type trigger	
+
 gg_trg_KillSpaned = nil	---@type trigger	
+
 gg_trg_AreaOfDeath_Copy = nil	---@type trigger	
+
 gg_trg_AutocastShieldOnResearch = nil	---@type trigger	
+
 gg_trg_TrainAutcastZam = nil	---@type trigger	
+
 gg_trg_PassiveTalisra = nil	---@type trigger	
+
 gg_trg_IceTrollsStart = nil	---@type trigger	
+
 gg_trg_KillLoa = nil	---@type trigger	
+
 gg_trg_ServeLoa = nil	---@type trigger	
+
 gg_trg_Spell_E_Copy = nil	---@type trigger	
+
 gg_trg_Spell_E_Dvij = nil	---@type trigger	
+
 gg_trg_Ini = nil	---@type trigger	
+
 gg_trg_Ini2 = nil	---@type trigger	
+
 gg_trg_Spell_E = nil	---@type trigger	
+
 gg_trg_Spell_E2 = nil	---@type trigger	
+
 gg_trg_HpRegen2 = nil	---@type trigger	
+
 gg_trg_Spell_Copy_2_Copy = nil	---@type trigger	
+
 gg_trg_Lech_Copy = nil	---@type trigger	
+
 gg_trg_Cast_Copy = nil	---@type trigger	
+
 gg_trg_AvtoCast_Copy = nil	---@type trigger	
+
 gg_trg_DammyDeath_Copy = nil	---@type trigger	
+
 gg_trg_TakenDamage = nil	---@type trigger	
+
 gg_trg_TakenDamageCode = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_005 = nil	---@type trigger	
+
 gg_trg_LordWave = nil	---@type trigger	
+
 gg_trg_MassBaff = nil	---@type trigger	
+
 gg_trg_LordsAssist = nil	---@type trigger	
+
 gg_trg_Lord = nil	---@type trigger	
+
 gg_trg_LordBirth = nil	---@type trigger	
+
 gg_trg_NaxramasKills = nil	---@type trigger	
+
 gg_trg_DalaranKills = nil	---@type trigger	
+
 gg_trg_Death = nil	---@type trigger	
+
 gg_trg_Taunt = nil	---@type trigger	
+
 gg_trg_PasiveChange = nil	---@type trigger	
+
 gg_trg_StartUlt = nil	---@type trigger	
+
 gg_trg_UltSummon = nil	---@type trigger	
+
 gg_trg_MassHEX = nil	---@type trigger	
+
 gg_trg_SomeVoljinSpell = nil	---@type trigger	
+
 gg_trg_Summon_____________________u = nil	---@type trigger	
+
 gg_trg_Kill = nil	---@type trigger	
+
 gg_trg_Rep = nil	---@type trigger	
+
 gg_trg_StolicaKill = nil	---@type trigger	
+
 gg_trg_Del = nil	---@type trigger	
+
 gg_trg_Camera_command_O = nil	---@type trigger	
+
 gg_trg_Name_command_O = nil	---@type trigger	
+
 gg_trg_UName_command = nil	---@type trigger	
+
 gg_trg_SecondChance = nil	---@type trigger	
+
 gg_trg_GG = nil	---@type trigger	
+
 gg_trg_Observer = nil	---@type trigger	
+
 gg_trg_NoChangeAlly = nil	---@type trigger	
+
 gg_trg_ObserverOff = nil	---@type trigger	
+
 gg_trg_Hunter = nil	---@type trigger	
+
 gg_trg_ArchontMode = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_001 = nil	---@type trigger	
+
 gg_trg_ArchontModeOff = nil	---@type trigger	
+
 gg_trg_ForSoldUnitsSelect = nil	---@type trigger	
+
 gg_trg_ForSoldUnitsDesel = nil	---@type trigger	
+
 gg_trg_InitGlobals = nil	---@type trigger	
+
 gg_trg_ForSoldUnitsDeselect = nil	---@type trigger	
+
 gg_trg_Subsidies = nil	---@type trigger	
+
 gg_trg_Red_color = nil	---@type trigger	
+
 gg_trg_Blue_color = nil	---@type trigger	
+
 gg_trg_Teal_color = nil	---@type trigger	
+
 gg_trg_Lightblue_color = nil	---@type trigger	
+
 gg_trg_Yelow_color = nil	---@type trigger	
+
 gg_trg_Orange_color = nil	---@type trigger	
+
 gg_trg_Green_color = nil	---@type trigger	
+
 gg_trg_Pink_color = nil	---@type trigger	
+
 gg_trg_Gray_color = nil	---@type trigger	
+
 gg_trg_LightBlue_color = nil	---@type trigger	
+
 gg_trg_Dark_green_color = nil	---@type trigger	
+
 gg_trg_Brown_color = nil	---@type trigger	
+
 gg_trg_Maroon_color = nil	---@type trigger	
+
 gg_trg_Navy_color = nil	---@type trigger	
+
 gg_trg_Turquoise_color = nil	---@type trigger	
+
 gg_trg_Violet_color = nil	---@type trigger	
+
 gg_trg_Wheat_color = nil	---@type trigger	
+
 gg_trg_Peach_color = nil	---@type trigger	
+
 gg_trg_Mint_color = nil	---@type trigger	
+
 gg_trg_Lavender_color = nil	---@type trigger	
+
 gg_trg_Coal_color = nil	---@type trigger	
+
 gg_trg_Snow_color = nil	---@type trigger	
+
 gg_trg_Emerald_color = nil	---@type trigger	
+
 gg_trg_Peanut_color = nil	---@type trigger	
+
 gg_trg_RemoveItIsForMusia = nil	---@type trigger	
+
 gg_trg_KillSomeUnitsAndItems = nil	---@type trigger	
+
 gg_trg_FastReseach = nil	---@type trigger	
+
 gg_trg_KillTestUnits_O = nil	---@type trigger	
+
 gg_trg_KillTestUnits___OFF_ME = nil	---@type trigger	
+
 gg_trg_KillMagaz = nil	---@type trigger	
+
 gg_trg_Setlvl = nil	---@type trigger	
+
 gg_trg_A1 = nil	---@type trigger	
+
 gg_trg_Second_O = nil	---@type trigger	
+
 gg_trg_KillTestUnits_Command = nil	---@type trigger	
+
 gg_trg_Player2VassalTo1_Back_Copy = nil	---@type trigger	
+
 gg_trg_Player2VassalTo1_Copy = nil	---@type trigger	
+
 gg_trg_Visible_Copy = nil	---@type trigger	
+
 gg_trg_Player2VassalTo1 = nil	---@type trigger	
+
 gg_trg_Player2VassalTo1_Back = nil	---@type trigger	
+
 gg_trg_Player3VassalTo1 = nil	---@type trigger	
+
 gg_trg_Player3VassalTo1_Back = nil	---@type trigger	
+
 gg_trg_AnyPlayerVassalToFirst = nil	---@type trigger	
+
 gg_trg_AnyPlayerVassalToFirstOff = nil	---@type trigger	
+
 gg_trg_P1_Vs_P2_P3_P4 = nil	---@type trigger	
+
 gg_trg_ResO = nil	---@type trigger	
+
 gg_trg_ResO_Copy = nil	---@type trigger	
+
 gg_trg_OpemVis = nil	---@type trigger	
+
 gg_trg_StartLimit = nil	---@type trigger	
+
 gg_trg_DestroyTrain = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_002 = nil	---@type trigger	
+
 gg_trg_BeginDestroingTrain = nil	---@type trigger	
+
 gg_trg_KakecCommon = nil	---@type trigger	
+
 gg_trg_KalecStart = nil	---@type trigger	
+
 gg_trg_KalecDead = nil	---@type trigger	
+
 gg_trg_ShaStart = nil	---@type trigger	
+
 gg_trg_ShaDead = nil	---@type trigger	
+
 gg_trg_AncientGods_add_MindControl_Copy = nil	---@type trigger	
+
 gg_trg_AncienGods_Add_MassAttak_Copy = nil	---@type trigger	
+
 gg_trg_Qtun_17k_o = nil	---@type trigger	
+
 gg_trg_Qtun_HP_24k_O = nil	---@type trigger	
+
 gg_trg_Qtun_Die = nil	---@type trigger	
+
 gg_trg_SpawnQtun = nil	---@type trigger	
+
 gg_trg_Qogg_HP_24k_O = nil	---@type trigger	
+
 gg_trg_Qogg_HP_17k_O = nil	---@type trigger	
+
 gg_trg_AncienGods_Add_MassAttak = nil	---@type trigger	
+
 gg_trg_AncientGods_add_MindControl = nil	---@type trigger	
+
 gg_trg_Qogg_Die = nil	---@type trigger	
+
 gg_trg_Spell1 = nil	---@type trigger	
+
 gg_trg_QoggSpawn = nil	---@type trigger	
+
 gg_trg_PrepareToDestroy = nil	---@type trigger	
+
 gg_trg_TurnAi = nil	---@type trigger	
+
 gg_trg_StartCreateAll = nil	---@type trigger	
+
 gg_trg_StartTimerToHard = nil	---@type trigger	
+
 gg_trg_EveryAiEnemy = nil	---@type trigger	
+
 gg_trg_CreateAi = nil	---@type trigger	
+
 gg_trg_OchetStart = nil	---@type trigger	
+
 gg_trg_OchetEnd = nil	---@type trigger	
+
 gg_trg_CheckType = nil	---@type trigger	
+
 gg_trg_CheckOrderType = nil	---@type trigger	
+
 gg_trg_CheckGroup = nil	---@type trigger	
+
 gg_trg_AiMoney = nil	---@type trigger	
+
 gg_trg_AiRepeat = nil	---@type trigger	
+
 gg_trg_AiRadius = nil	---@type trigger	
+
 gg_trg_AiMass = nil	---@type trigger	
+
 gg_trg_Ailimit = nil	---@type trigger	
+
 gg_trg_CityNearWater2 = nil	---@type trigger	
+
 gg_trg_CityNearWater2_Copy = nil	---@type trigger	
+
 gg_trg_Remove = nil	---@type trigger	
+
 gg_trg_Remove_Copy = nil	---@type trigger	
+
 gg_trg_RemPortalsFromAnotherSide = nil	---@type trigger	
+
 gg_trg_Remove_Copy_2 = nil	---@type trigger	
+
 gg_trg_PereborPlayersForBuilders = nil	---@type trigger	
+
 gg_trg_PereborBuilders_Uni = nil	---@type trigger	
+
 gg_trg_PereborPlayerForArmy = nil	---@type trigger	
+
 gg_trg_PerebobArmy_Uni = nil	---@type trigger	
+
 gg_trg_PereborPlayerForNavy = nil	---@type trigger	
+
 gg_trg_PerebobNavy = nil	---@type trigger	
+
 gg_trg_PereborBuildings = nil	---@type trigger	
+
 gg_trg_PereborNavalBases = nil	---@type trigger	
+
 gg_trg_AndResearch = nil	---@type trigger	
+
 gg_trg_Strateg = nil	---@type trigger	
+
 gg_trg_SargerasTemple = nil	---@type trigger	
+
 gg_trg_AttackerAi = nil	---@type trigger	
+
 gg_trg_AttackedAI = nil	---@type trigger	
+
 gg_trg_GetLvl = nil	---@type trigger	
+
 gg_trg_Revive = nil	---@type trigger	
+
 gg_trg_JoinAll = nil	---@type trigger	
+
 gg_trg_SellAl = nil	---@type trigger	
+
 gg_trg_JoinAllold = nil	---@type trigger	
+
 gg_trg_JoinBuildings = nil	---@type trigger	
+
 gg_trg_UpgradeBuildings = nil	---@type trigger	
+
 gg_trg_EndBuilding = nil	---@type trigger	
+
 gg_trg_Leave_Army_U = nil	---@type trigger	
+
 gg_trg_Leave_Guard = nil	---@type trigger	
+
 gg_trg_Leave_Navy_U = nil	---@type trigger	
+
 gg_trg_Leave_Harvest_U = nil	---@type trigger	
+
 gg_trg_Leave_Builders_U = nil	---@type trigger	
+
 gg_trg_Leave_BuildersT_U = nil	---@type trigger	
+
 gg_trg_Leave_Buildings_U = nil	---@type trigger	
+
 gg_trg_UnitReviveAi = nil	---@type trigger	
+
 gg_trg_MainFloatUnits = nil	---@type trigger	
+
 gg_trg_MainFloatUnitsLeave = nil	---@type trigger	
+
 gg_trg_PortUnits = nil	---@type trigger	
+
 gg_trg_PortUnitLeave = nil	---@type trigger	
+
 gg_trg_AiRep = nil	---@type trigger	
+
 gg_trg_TestgGroup = nil	---@type trigger	
+
 gg_trg_AiRepTrigger = nil	---@type trigger	
+
 gg_trg_AiRepCommand = nil	---@type trigger	
+
 gg_trg_AiLogAll = nil	---@type trigger	
+
 gg_trg_Spawn12Ai = nil	---@type trigger	
+
 gg_trg_PortalSell = nil	---@type trigger	
+
 gg_trg_PortalFix = nil	---@type trigger	
+
 gg_trg_CheckNearCapitals = nil	---@type trigger	
+
 gg_trg_PortalCommonFunction = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_013 = nil	---@type trigger	
+
 gg_trg_DM_1_O_Copy = nil	---@type trigger	
+
 gg_trg_UndercityFromRin = nil	---@type trigger	
+
 gg_trg_UndercityFromTopin = nil	---@type trigger	
+
 gg_trg_UndercityFromTopOut = nil	---@type trigger	
+
 gg_trg_UndercityFromBotOut = nil	---@type trigger	
+
 gg_trg_OrgrimmarFromTopOut = nil	---@type trigger	
+
 gg_trg_OrgrimmarFromBotOut = nil	---@type trigger	
+
 gg_trg_OrgrimmarFromTopIn = nil	---@type trigger	
+
 gg_trg_OrgrimmarFromBotIn = nil	---@type trigger	
+
 gg_trg_DeadmonesFromWin = nil	---@type trigger	
+
 gg_trg_DeadmonesFromWOut = nil	---@type trigger	
+
 gg_trg_DeadmonesFromin = nil	---@type trigger	
+
 gg_trg_DeadmonesFromout = nil	---@type trigger	
+
 gg_trg_DM_1_O = nil	---@type trigger	
+
 gg_trg_DM_2 = nil	---@type trigger	
+
 gg_trg_DM_3 = nil	---@type trigger	
+
 gg_trg_DM_4 = nil	---@type trigger	
+
 gg_trg_Emerald_Dream_TP_O = nil	---@type trigger	
+
 gg_trg_Emerald_Dream_TP_O_Copy = nil	---@type trigger	
+
 gg_trg_Emerald_Dream_TP_OFF_O = nil	---@type trigger	
+
 gg_trg_NoAttackGreen = nil	---@type trigger	
+
 gg_trg_NoAttackGreen2 = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_008 = nil	---@type trigger	
+
 gg_trg_EnterGreen = nil	---@type trigger	
+
 gg_trg_ED_1 = nil	---@type trigger	
+
 gg_trg_ED_1_b = nil	---@type trigger	
+
 gg_trg_ED_2 = nil	---@type trigger	
+
 gg_trg_ED_2_b = nil	---@type trigger	
+
 gg_trg_ED_3 = nil	---@type trigger	
+
 gg_trg_ED_3_b = nil	---@type trigger	
+
 gg_trg_ED_4 = nil	---@type trigger	
+
 gg_trg_ED_4_b = nil	---@type trigger	
+
 gg_trg_ED_5 = nil	---@type trigger	
+
 gg_trg_ED_5_B = nil	---@type trigger	
+
 gg_trg_Portal1 = nil	---@type trigger	
+
 gg_trg_Portal2 = nil	---@type trigger	
+
 gg_trg_Portal3 = nil	---@type trigger	
+
 gg_trg_Portal4 = nil	---@type trigger	
+
 gg_trg_Portal5 = nil	---@type trigger	
+
 gg_trg_Portal6 = nil	---@type trigger	
+
 gg_trg_Portal7 = nil	---@type trigger	
+
 gg_trg_Portal8 = nil	---@type trigger	
+
 gg_trg_Portal9Tomb = nil	---@type trigger	
+
 gg_trg_Portal10 = nil	---@type trigger	
+
 gg_trg_Portal11 = nil	---@type trigger	
+
 gg_trg_Portal12 = nil	---@type trigger	
+
 gg_trg_Azner_2 = nil	---@type trigger	
+
 gg_trg_Azner_5 = nil	---@type trigger	
+
 gg_trg_Nord_2 = nil	---@type trigger	
+
 gg_trg_Nord_4 = nil	---@type trigger	
+
 gg_trg_Nord_5 = nil	---@type trigger	
+
 gg_trg_HrenPoimiHareUdaliatPortalu = nil	---@type trigger	
+
 gg_trg_FromDarnas = nil	---@type trigger	
+
 gg_trg_FromTeldrasil = nil	---@type trigger	
+
 gg_trg_QtunOut = nil	---@type trigger	
+
 gg_trg_QtunOut2 = nil	---@type trigger	
+
 gg_trg_QtunIn = nil	---@type trigger	
+
 gg_trg_QtunIn2 = nil	---@type trigger	
+
 gg_trg_MaradonIn = nil	---@type trigger	
+
 gg_trg_MaradonIn2 = nil	---@type trigger	
+
 gg_trg_MaradonOut = nil	---@type trigger	
+
 gg_trg_MaradonOut2 = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_009 = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_011 = nil	---@type trigger	
+
 gg_trg_GnomeOut = nil	---@type trigger	
+
 gg_trg_GnomeIn = nil	---@type trigger	
+
 gg_trg_StalgornOut = nil	---@type trigger	
+
 gg_trg_StalgornIn = nil	---@type trigger	
+
 gg_trg_TrainOut = nil	---@type trigger	
+
 gg_trg_TrainIn = nil	---@type trigger	
+
 gg_trg_GrimBatonIn = nil	---@type trigger	
+
 gg_trg_GrimBatolOut = nil	---@type trigger	
+
 gg_trg_UldamanOut = nil	---@type trigger	
+
 gg_trg_UldamanIn = nil	---@type trigger	
+
 gg_trg_NaxOut = nil	---@type trigger	
+
 gg_trg_NaxIn = nil	---@type trigger	
+
 gg_trg_DalOut = nil	---@type trigger	
+
 gg_trg_DalIn = nil	---@type trigger	
+
 gg_trg_FromIsland = nil	---@type trigger	
+
 gg_trg_Untitled_Trigger_014 = nil	---@type trigger	
+
 gg_trg_FromCity = nil	---@type trigger	
+
 gg_trg_Test = nil	---@type trigger	
+
 gg_trg_PrepareToBurnCity = nil	---@type trigger	
+
 gg_trg_BurnCity = nil	---@type trigger	
+
 gg_trg_NoTpNearCapitalDalNax = nil	---@type trigger	
+
 gg_trg_Owner = nil	---@type trigger	
+
 gg_trg_StartDal = nil	---@type trigger	
+
 gg_trg_PosadkaDal2 = nil	---@type trigger	
+
 gg_trg_VzletDal = nil	---@type trigger	
+
 gg_trg_DalDiy = nil	---@type trigger	
+
 gg_trg_DallKill = nil	---@type trigger	
+
 gg_trg_OwnerNax = nil	---@type trigger	
+
 gg_trg_NaxStart = nil	---@type trigger	
+
 gg_trg_NaxPosadka = nil	---@type trigger	
+
 gg_trg_NaxFly = nil	---@type trigger	
+
 gg_trg_NaxDiy = nil	---@type trigger	
+
 gg_trg_OwnerTurtle = nil	---@type trigger	
+
 gg_trg_TurtleStart = nil	---@type trigger	
+
 gg_trg_TurtlePosadka = nil	---@type trigger	
+
 gg_trg_TurtleSwim = nil	---@type trigger	
+
 gg_trg_TurtleDiy = nil	---@type trigger	
+
 gg_trg_TurtleOut = nil	---@type trigger	
+
 gg_trg_DalIn_Copy = nil	---@type trigger	
+
 gg_unit_h0BF_0012 = nil	---@type unit	
+
 gg_unit_h0B9_0026 = nil	---@type unit	
+
 gg_unit_n01B_0849 = nil	---@type unit	
+
 gg_unit_h09O_0541 = nil	---@type unit	
+
 gg_unit_n003_1002 = nil	---@type unit	
+
 gg_unit_h07U_0386 = nil	---@type unit	
+
 gg_unit_h07T_0385 = nil	---@type unit	
+
 gg_unit_h0AL_0496 = nil	---@type unit	
+
 gg_unit_h0AH_0427 = nil	---@type unit	
+
 gg_unit_h0AF_0383 = nil	---@type unit	
+
 gg_unit_h0A0_0120 = nil	---@type unit	
+
 gg_unit_n003_0028 = nil	---@type unit	
+
 gg_unit_n003_0098 = nil	---@type unit	
+
 gg_unit_n01D_0903 = nil	---@type unit	
+
 gg_unit_h0AW_0341 = nil	---@type unit	
+
 gg_unit_h07N_0238 = nil	---@type unit	
+
 gg_unit_h0BM_0604 = nil	---@type unit	
+
 gg_unit_h09N_0346 = nil	---@type unit	
+
 gg_unit_h0BL_0603 = nil	---@type unit	
+
 gg_unit_n003_0097 = nil	---@type unit	
+
 gg_unit_n03D_0666 = nil	---@type unit	
+
 gg_unit_n006_0438 = nil	---@type unit	
+
 gg_unit_n003_0090 = nil	---@type unit	
+
 gg_unit_n03B_0665 = nil	---@type unit	
+
 gg_unit_h0BI_0340 = nil	---@type unit	
+
 gg_unit_h00E_0106 = nil	---@type unit	
+
 gg_unit_h00F_0105 = nil	---@type unit	
+
 gg_unit_n003_0521 = nil	---@type unit	
+
 gg_unit_h00M_0113 = nil	---@type unit	
+
 gg_unit_n060_0287 = nil	---@type unit	
+
 gg_unit_n03B_0664 = nil	---@type unit	
+
 gg_unit_n003_0027 = nil	---@type unit	
+
 gg_unit_n03C_0663 = nil	---@type unit	
+
 gg_unit_n03C_0662 = nil	---@type unit	
+
 gg_unit_n003_0420 = nil	---@type unit	
+
 gg_unit_n060_0350 = nil	---@type unit	
+
 gg_unit_n003_0518 = nil	---@type unit	
+
 gg_unit_n003_0517 = nil	---@type unit	
+
 gg_unit_h08H_0109 = nil	---@type unit	
+
 gg_unit_h09M_0539 = nil	---@type unit	
+
 gg_unit_n003_0025 = nil	---@type unit	
+
 gg_unit_n003_0024 = nil	---@type unit	
+
 gg_unit_h09Z_0492 = nil	---@type unit	
+
 gg_unit_n00W_0446 = nil	---@type unit	
+
 gg_unit_n03C_0661 = nil	---@type unit	
+
 gg_unit_n003_0516 = nil	---@type unit	
+
 gg_unit_n04O_0136 = nil	---@type unit	
+
 gg_unit_n003_0514 = nil	---@type unit	
+
 gg_unit_n00W_0442 = nil	---@type unit	
+
 gg_unit_n003_0022 = nil	---@type unit	
+
 gg_unit_n003_0021 = nil	---@type unit	
+
 gg_unit_n003_0123 = nil	---@type unit	
+
 gg_unit_n003_0118 = nil	---@type unit	
+
 gg_unit_n003_0020 = nil	---@type unit	
+
 gg_unit_n003_0019 = nil	---@type unit	
+
 gg_unit_n01Y_0889 = nil	---@type unit	
+
 gg_unit_n003_0018 = nil	---@type unit	
+
 gg_unit_n01Y_0896 = nil	---@type unit	
+
 gg_unit_n01Y_0897 = nil	---@type unit	
+
 gg_unit_n01Y_0934 = nil	---@type unit	
+
 gg_unit_n01Y_1013 = nil	---@type unit	
+
 gg_unit_n01Z_1017 = nil	---@type unit	
+
 gg_unit_h0AK_0488 = nil	---@type unit	
+
 gg_unit_h09V_0137 = nil	---@type unit	
+
 gg_unit_n01Z_1016 = nil	---@type unit	
+
 gg_unit_n01Y_1015 = nil	---@type unit	
+
 gg_unit_n003_0149 = nil	---@type unit	
+
 gg_unit_n01Y_0578 = nil	---@type unit	
+
 gg_unit_e00E_0085 = nil	---@type unit	
+
 gg_unit_n01Y_0580 = nil	---@type unit	
+
 gg_unit_h0AM_0550 = nil	---@type unit	
+
 gg_unit_h09K_0537 = nil	---@type unit	
+
 gg_unit_h08O_0444 = nil	---@type unit	
+
 gg_unit_n001_0845 = nil	---@type unit	
+
 gg_unit_n00W_0589 = nil	---@type unit	
+
 gg_unit_h07Y_0262 = nil	---@type unit	
+
 gg_unit_h081_0257 = nil	---@type unit	
+
 gg_unit_h0A3_0241 = nil	---@type unit	
+
 gg_unit_n01Y_1014 = nil	---@type unit	
+
 gg_unit_n01Y_1012 = nil	---@type unit	
+
 gg_unit_n003_0124 = nil	---@type unit	
+
 gg_unit_n01D_0523 = nil	---@type unit	
+
 gg_unit_h0BG_0600 = nil	---@type unit	
+
 gg_unit_n003_0588 = nil	---@type unit	
+
 gg_unit_e00C_0590 = nil	---@type unit	
+
 gg_unit_h09C_0509 = nil	---@type unit	
+
 gg_unit_h09B_0508 = nil	---@type unit	
+
 gg_unit_n003_0940 = nil	---@type unit	
+
 gg_unit_n00W_0848 = nil	---@type unit	
+
 gg_unit_h09A_0506 = nil	---@type unit	
+
 gg_unit_h097_0502 = nil	---@type unit	
+
 gg_unit_n003_0941 = nil	---@type unit	
+
 gg_unit_n003_0942 = nil	---@type unit	
+
 gg_unit_n003_0943 = nil	---@type unit	
+
 gg_unit_n003_0995 = nil	---@type unit	
+
 gg_unit_h0E2_0011 = nil	---@type unit	
+
 gg_unit_n006_0023 = nil	---@type unit	
+
 gg_unit_h08G_0419 = nil	---@type unit	
+
 gg_unit_h0BJ_0602 = nil	---@type unit	
+
 gg_unit_n003_0051 = nil	---@type unit	
+
 gg_unit_n03C_0660 = nil	---@type unit	
+
 gg_unit_n003_0050 = nil	---@type unit	
+
 gg_unit_h07O_0251 = nil	---@type unit	
+
 gg_unit_n003_0046 = nil	---@type unit	
+
 gg_unit_n003_0044 = nil	---@type unit	
+
 gg_unit_n001_0847 = nil	---@type unit	
+
 gg_unit_e00D_0080 = nil	---@type unit	
+
 gg_unit_h08F_0862 = nil	---@type unit	
+
 gg_unit_n003_1004 = nil	---@type unit	
+
 gg_unit_n003_0126 = nil	---@type unit	
+
 gg_unit_h04L_0458 = nil	---@type unit	
+
 gg_unit_h087_0403 = nil	---@type unit	
+
 gg_unit_h089_0405 = nil	---@type unit	
+
 gg_unit_h08A_0406 = nil	---@type unit	
+
 gg_unit_h0F8_0045 = nil	---@type unit	
+
 gg_unit_n01B_0850 = nil	---@type unit	
+
 gg_unit_h0AP_0552 = nil	---@type unit	
+
 gg_unit_h09P_0009 = nil	---@type unit	
+
 gg_unit_h0OK_0337 = nil	---@type unit	
+
 gg_unit_n03A_0657 = nil	---@type unit	
+
 gg_unit_h0BH_0601 = nil	---@type unit	
+
 gg_unit_n03B_0659 = nil	---@type unit	
+
 gg_unit_n03B_0658 = nil	---@type unit	
+
 gg_unit_n003_0060 = nil	---@type unit	
+
 gg_unit_h0AG_0010 = nil	---@type unit	
+
 gg_unit_h0BA_0361 = nil	---@type unit	
+
 gg_unit_h0OJ_0336 = nil	---@type unit	
+
 gg_unit_n01D_0904 = nil	---@type unit	
+
 gg_unit_h0BC_0342 = nil	---@type unit	
+
 gg_unit_h0BB_0343 = nil	---@type unit	
+
 gg_unit_h0AU_0344 = nil	---@type unit	
+
 gg_unit_n04E_0048 = nil	---@type unit	
+
 gg_unit_h09W_0236 = nil	---@type unit	
+
 gg_unit_n003_0117 = nil	---@type unit	
+
 gg_unit_n065_0125 = nil	---@type unit	
+
 gg_unit_h0II_0455 = nil	---@type unit	
+
 gg_unit_h093_0091 = nil	---@type unit	
+
 gg_unit_h0OH_0333 = nil	---@type unit	
+
 gg_unit_n003_0314 = nil	---@type unit	
+
 gg_unit_n003_0311 = nil	---@type unit	
+
 gg_unit_n003_0308 = nil	---@type unit	
+
 gg_unit_n003_0305 = nil	---@type unit	
+
 gg_unit_h0OT_0545 = nil	---@type unit	
+
 Dummy = FourCC('h05P')	---@type integer	
+
 Hash = InitHashtable()	---@type hashtable	
+
 gForce = CreateForce()	---@type force	
+
 gGroup = CreateGroup()	---@type group	
+
 gEnemyGroup = CreateGroup()	---@type group	
+
 gAllyGroup = CreateGroup()	---@type group	
+
 gSubGroup = CreateGroup()	---@type group	
+
 gSubGroupCounter = 0	---@type integer	
+
 -- gLoc	---@type location	
+
 -- gRect	---@type rect	
+
 -- gInt	---@type integer	
+
 -- gInt2	---@type integer	
+
 -- gReal	---@type real	
+
 -- gX	---@type real	
+
 -- gX2	---@type real	
+
 -- gY	---@type real	
+
 -- gY2	---@type real	
+
 -- gDx	---@type real	
+
 -- gDy	---@type real	
+
 -- gUnit	---@type unit	
+
 -- gUnit2	---@type unit	
+
 -- gUnit3	---@type unit	
+
 -- gId	---@type integer	
+
 -- gPi	---@type integer	
+
 gDummy = FourCC('h05P')	---@type integer	
+
 gMageTP = FourCC('h07A')	---@type integer	
+
 gDummySpell = FourCC('A0Z5')	---@type integer	
+
 -- gPlayer	---@type player	
+
 -- gDestructable	---@type destructable	
+
 -- gTriggerUnit	---@type unit	
+
 -- gConstructingStructure	---@type unit	
+
 -- gCaster	---@type unit	
+
 -- gTarget	---@type unit	
+
 -- gEnemy	---@type unit	
+
 -- gAttacker	---@type unit	
+
 -- gAttacked	---@type unit	
+
 -- gString	---@type string	
+
 -- UnitsWithReviveHeroSpell	---@type boolexpr	
+
 -- b_OwnBuldingsInRange	---@type boolexpr	
+
 -- b_OwnCapitalInRange	---@type boolexpr	
+
 -- b_OwnHeroes	---@type boolexpr	
+
 ArmyExp = {}	---@type real	
+
 ArmyExpBonus = {}	---@type unit	
+
 ArmyPowerColumn = {}	---@type multiboarditem	
+
 income = {}	---@type real	
+
 incomeW = {}	---@type real	
+
 disincome = {}	---@type real	
+
 logistic = {}	---@type real	
+
 corruption = {}	---@type real	
+
 balance = {}	---@type real	
+
 additional = {}	---@type real	
+
 IncomeMod = 1	---@type real	
+
 Tax = 0.15	---@type real	
+
 Allmap = CreateRegion()	---@type region	
+
 AllyTax = {}	---@type real	
+
 face = nil	---@type framehandle	
+
 faceHover = nil	---@type framehandle	
+
 tooltip = nil	---@type framehandle	
+
 tooltipTitle = nil	---@type framehandle	
+
 tooltipBody = nil	---@type framehandle	
+
 IncomeTextFr = nil	---@type framehandle	
+
 CommonHash = setmetatable({}, {__index = function(t, k) local v = {}; t[k] = v; return v end})	---@type hashtable	
+
 StartLoc = {}	---@type location	
+
 StartLocCount = 0	---@type integer	
+
 -- location array ChoicedLocs
+
 -- integer ChoicedLocsCount = 0
+
 SubGroup2 = CreateGroup()	---@type group	
+
 Gfarm = StringHash("Gfarm")	---@type integer	
+
 Gtier = StringHash("Gtier")	---@type integer	
+
 PointForAi = {}	---@type location	
+
 -- / Easy Settings
+
 AiMoney = 7	---@type integer	
+
 AiMass = 5	---@type integer	
+
 AiRepeat = 5	---@type integer	
+
 AiRadius = 6	---@type integer	
+
 AiLimit = 150	---@type integer	
+
 AiBuildingRadius = 1000	---@type real	
+
 udg_BotsActive = CreateForce()	---@type force	
+
 udg_BotsActiveB = CreateForce()	---@type force	
+
 udg_BotsActiveN = CreateForce()	---@type force	
+
 --  Таймеры ИИ
+
 udg_TimerSmall4 = CreateTimer()	---@type timer	
+
 udg_PlayerGet2 = CreateTimer()	---@type timer	
+
 udg_PlayerGet1 = CreateTimer()	---@type timer	
+
 udg_PlayerGet4 = CreateTimer()	---@type timer	
+
 aiFixer = CreateTimer()	---@type timer	
+
 udg_B_EnemyUnitP = nil	---@type boolexpr	
+
 udg_B_EnemyUnit = nil	---@type boolexpr	
+
 udg_B_EnemyUnitN = nil	---@type boolexpr	
+
 B_Lazy = nil	---@type boolexpr	
+
 -- LazyCount	---@type integer	
+
 B_LazyF = nil	---@type boolexpr	
+
 B_LazyW = nil	---@type boolexpr	
+
 B_LazyN = nil	---@type boolexpr	
+
 B_Worker = nil	---@type boolexpr	
+
 B_LazyT = nil	---@type boolexpr	
+
 Harwest = nil	---@type boolexpr	
+
 B_OnlyNeaded = nil	---@type boolexpr	
+
 B_NavalBases = nil	---@type boolexpr	
+
 PortB = nil	---@type boolexpr	
+
 FixZ = nil	---@type boolexpr	
+
 B_FixUnvul = nil	---@type boolexpr	
+
 B_Hero = nil	---@type boolexpr	
+
 -- LiveHero	---@type boolexpr	
+
 B_SeaUnit = nil	---@type boolexpr	
+
 B_HeroD = nil	---@type boolexpr	
+
 -- CheckId	---@type integer	
+
 B_InAiArmy = nil	---@type boolexpr	
+
 B_InAiNavy = nil	---@type boolexpr	
+
 Altars = nil	---@type boolexpr	
+
 ToHeal = nil	---@type boolexpr	
+
 AiActLimit = 9	---@type integer	
+
 CheckPlayer = nil	---@type player	
+
 LastDestantion = nil	---@type location	
+
 LastDestantionN = nil	---@type location	
+
 Ochet = false	---@type boolean	
+
 TryPortal = CreateGroup()	---@type group	
+
 AfterPortal = CreateGroup()	---@type group	
+
 AiRace = {}	---@type string	
+
 BonusUnit = {}	---@type unit	
+
 udg_B_InKalim = nil	---@type boolexpr	
+
 udg_B_InOutland = nil	---@type boolexpr	
+
 udg_B_InNord = nil	---@type boolexpr	
+
 udg_B_InVK = nil	---@type boolexpr	
+
 udg_B_InArgus = nil	---@type boolexpr	
+
 udg_B_InBIsles = nil	---@type boolexpr	
+
 udg_B_InPandaria = nil	---@type boolexpr	
+
 udg_B_Ankirag = nil	---@type boolexpr	
+
 udg_B_Azgel = nil	---@type boolexpr	
+
 udg_B_BlackRock = nil	---@type boolexpr	
+
 udg_B_Orgrimmar = nil	---@type boolexpr	
+
 udg_B_DeadMines = nil	---@type boolexpr	
+
 udg_B_Stalgorn = nil	---@type boolexpr	
+
 udg_B_Uldum = nil	---@type boolexpr	
+
 udg_B_Maradon = nil	---@type boolexpr	
+
 udg_B_Undercity = nil	---@type boolexpr	
+
 udg_B_Dalaran = nil	---@type boolexpr	
+
 udg_B_Naxramas = nil	---@type boolexpr	
+
 -- IncomeBuildings	---@type boolexpr	
+
 -- IncomeLumber	---@type boolexpr	
+
 -- DisFilter	---@type boolexpr	
+
 LastIncome = {}	---@type integer	
+
 LastDisincome = {}	---@type integer	
+
 LastBalance = {}	---@type integer	
+
 DisOn = false	---@type boolean	
+
 EcLog = false	---@type boolean	
+
 DeadGroup = CreateGroup()	---@type group	
+
 PortalBuildingAi = CreateGroup()	---@type group	
+
 ModeBuildingI = 0	---@type integer	
+
 ModeBuilding = nil	---@type unit	
+
 playerCapital = {}	---@type unit	
+
 cap_time = {}	---@type boolean	
+
 Vassals = {}	---@type force	
+
 Senior = {}	---@type player	
+
 Capital = {}	---@type unit	
+
 ThirdColumn = {}	---@type multiboarditem	
+
 CityCount = 0	---@type integer	
+
 CityPlayerCount = {}	---@type integer	
+
 PercentWin = 65	---@type integer	
+
 fastTest = {}	---@type boolean	
+
 DipMode = 2	---@type integer	
+
 TotalProduction = false	---@type boolean	
+
 TotalProductionP = {}	---@type boolean	
+
 -- Multiboard	---@type multiboard	
+
 max = 0	---@type integer	
+
 MultiboardItem = {}	---@type multiboarditem	
+
 MultiboardItemOwnerIndex = {}	---@type integer	
+
 icrisingN = 0	---@type integer	
+
 UnSkill = FourCC('A1LI')	---@type integer	
+
 UnKofDmg1 = 1	---@type real	
+
 UnKofDmg2 = 30	---@type real	
+
 Gruul = {}	---@type unit	
+
 -- TT	---@type texttag	
+
 -- hashtable Hash = InitHashtable()  // хэш новый, можно зименить на свой, если есть, но тогда менять придется во всём триггере или убрать эту строчку если используется он же
+
 JSTRSkill = FourCC('A1E2')	---@type integer	
+
 JSTRKofDmg1 = 1.2	---@type real	
+
 JSTRKofDmg2 = 50	---@type real	
+
 JSTRBoolMove = false	---@type boolean	
+
 Bwonsamdy = {}	---@type unit	
+
 SecondChance = {}	---@type timer	
+
 Observers = CreateForce()	---@type force	
+
 OwnGold = {}	---@type integer	
+
 OwnLumber = {}	---@type integer	
+
 GoldDifference = {}	---@type integer	
+
 LumberDifference = {}	---@type integer	
+
 NotOwnRes = {}	---@type boolean	
+
 -- TryBuild_u	---@type unit	
+
 DeadGroupAi = CreateGroup()	---@type group	
+
 Navy = CreateGroup()	---@type group	
+
 Port = CreateGroup()	---@type group	
+
 DalaranOutType = FourCC('h0NB')	---@type integer	
+
 DalaranOut = gg_unit_e00C_0590	---@type unit	
+
 AbilityAp = FourCC('A1FZ')	---@type integer	
+
 AbilityDown = FourCC('A1G0')	---@type integer	
+
 -- integer NaxOutType =  
+
 -- unit NaxOut = gg_unit_e00C_0590 
+
 NaxAbilityAp = FourCC('A1H1')	---@type integer	
+
 NaxAbilityDown = FourCC('A1GV')	---@type integer	
+
 -- integer NaxOutType =  
+
 -- unit NaxOut = gg_unit_e00C_0590 
+
 TurtleAbilityAp = FourCC('A1M2')	---@type integer	
+
 TurtleAbilityDown = FourCC('A1M1')	---@type integer	
+
 -- l__library_init	---@type trigger	
+
 -- JASSHelper struct globals:
+
 si__StackTemplate = 1	---@type integer	
+
 si__StackTemplate_F = 0	---@type integer	
+
 si__StackTemplate_I = 0	---@type integer	
+
 si__StackTemplate_V = {}	---@type integer	
+
 s__StackTemplate_STACK = {}	---@type integer	
+
 s__StackTemplate_COUNT = 0	---@type integer	
+
 s__StackTemplate_NOW = {}	---@type integer	
+
 si__SanctifiedEnchantment = 2	---@type integer	
+
 si__SanctifiedEnchantment_F = 0	---@type integer	
+
 si__SanctifiedEnchantment_I = 0	---@type integer	
+
 si__SanctifiedEnchantment_V = {}	---@type integer	
+
 s__SanctifiedEnchantment_Key = 8	---@type integer	
+
 s__SanctifiedEnchantment_Date = 0.05	---@type real	
+
 s__SanctifiedEnchantment_Level = {}	---@type integer	
+
 s__SanctifiedEnchantment_Target = {}	---@type unit	
+
 s__SanctifiedEnchantment_Time = {}	---@type real	
+
 s__SanctifiedEnchantment_Trigger = {}	---@type trigger	
+
 ---@param u unit
+
 ---@return boolean
+
 -- NOTE: vJASS->Lua emitted an EMPTY stub here (`function UnitAlive(u) end`) which
 -- shadowed the engine native and returned nil for every call -> broke ALL AI combat
 -- (IsAiCombatRetaskable / enemy filters / navy filter never matched). Real life-based
@@ -3214,7 +5644,7 @@ end
 function f_EnemyUnitP()
 	local u = GetFilterUnit()
 	local p = GetOwningPlayer(u)
-	if UnitAlive(u) and IsPlayerEnemy(p, CheckPlayer) or WaygateIsActive(u) and  not (IsUnitInGroup(u, Navy) or GetUnitAbilityLevel(u, FourCC('A1MS')) > 0) then	--  A1MS Стр точка
+	if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 and IsPlayerEnemy(p, CheckPlayer) or WaygateIsActive(u) and  not (IsUnitInGroup(u, Navy) or GetUnitAbilityLevel(u, FourCC('A1MS')) > 0) then	--  A1MS Стр точка
 		Counter = Counter + 1
 		if IsUnitInGroup(u, udg_StolicaGroups) then
 			EnemyCapital = u
@@ -3229,7 +5659,7 @@ end
 ---@return boolean
 function f_EnemyUnit()
 	local u = GetFilterUnit()
-	if UnitAlive(u) and IsPlayerEnemy(GetOwningPlayer(u), CheckPlayer) and  not (WaygateIsActive(u) or IsUnitInGroup(u, Navy) or GetUnitAbilityLevel(u, FourCC('A1MS')) > 0) then
+	if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 and IsPlayerEnemy(GetOwningPlayer(u), CheckPlayer) and  not (WaygateIsActive(u) or IsUnitInGroup(u, Navy) or GetUnitAbilityLevel(u, FourCC('A1MS')) > 0) then
 		Counter = Counter + 1
 		if IsUnitInGroup(u, udg_StolicaGroups) then
 			EnemyCapital = u
@@ -3247,7 +5677,7 @@ function f_EnemyUnitN()
 	local x = GetUnitX(u)
 	local y = GetUnitY(u)
 	
-	if UnitAlive(u) and IsPlayerEnemy(p, CheckPlayer) and isUnitWaterRelated(u) and  not (isUnitInNoWaterArea(x, y) or WaygateIsActive(u)) then
+	if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 and IsPlayerEnemy(p, CheckPlayer) and isUnitWaterRelated(u) and  not (isUnitInNoWaterArea(x, y) or WaygateIsActive(u)) then
 		u = nil
 		Counter = Counter + 1
 		return true
@@ -3281,7 +5711,7 @@ end
 ---@param u unit
 ---@return boolean
 function IsAiCombatRetaskable(u)
-	if not UnitAlive(u) then
+	if u == nil or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then
 		return false
 	end
 	if IsUnitType(u, UNIT_TYPE_STRUCTURE) or IsUnitType(u, UNIT_TYPE_PEON) then
@@ -3321,7 +5751,7 @@ end
 function f_LazyN()
 	gUnit = GetFilterUnit()
 	local o = GetUnitCurrentOrder(gUnit)
-	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_navy[GetPlayerId(CheckPlayer)]) and (o == 851972 or o == 851976 or o == 0) then
+	if gUnit ~= nil and GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and IsUnitInGroup(gUnit, udg_Ai_navy[GetPlayerId(CheckPlayer)]) and (o == 851972 or o == 851976 or o == 0) then
 		LazyCount = LazyCount + 1
 		return true
 	else
@@ -11178,8 +13608,17 @@ end
 ---@return boolean
 function HandleOutland(x, y, g)
 	if (RectContainsCoords(gg_rct_Outland, x, y) or RectContainsCoords(gg_rct_OutNoVk, x, y)) and  not RectContainsCoords(gg_rct_VknotOut, x, y) then
+		local dp1_before = IsUnitInGroup(gg_unit_n006_0023, g)
+		local dp2_before = IsUnitInGroup(gg_unit_n006_0438, g)
 		GroupEnumUnitsInRect(gSubGroup, bj_mapInitialPlayableArea, udg_B_InOutland)
 		GroupRemoveGroup2(gSubGroup, g)
+		local dp1_after = IsUnitInGroup(gg_unit_n006_0023, g)
+		local dp2_after = IsUnitInGroup(gg_unit_n006_0438, g)
+		local logKey = StringHash("Log_Outland_n006")
+		if not (AiData[-1][logKey] or false) then
+			AiData[-1][logKey] = true
+			ProbeLogWrite("[CONT] HandleOutland x=" .. tostring(x) .. " y=" .. tostring(y) .. " n006_0023 before=" .. tostring(dp1_before) .. " after=" .. tostring(dp1_after) .. " n006_0438 before=" .. tostring(dp2_before) .. " after=" .. tostring(dp2_after))
+		end
 		return true
 	end
 	return false
@@ -11275,18 +13714,28 @@ function TryPortalMovement(u, l__gEnemyGroup, l__gX, l__gY, i)
 	
 	Counter = 0
 	EnemyCapital = nil
-	-- ??? ???????? 1 ??????? ?????????
 	if abilityLevel == 1 then
 		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnitP)
-		-- ??????? ?????????
 	elseif abilityLevel >= 2 then
 		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnit)
 		UnitRemoveAbility(u, FourCC('A1GZ'))
-		-- ??????? ?????
 	else
 		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnitP)
 	end
 	
+	-- trace: check if dark portal waygates (n006) are alive/active
+	local pi = GetPlayerId(GetOwningPlayer(u))
+	local logKey = StringHash("Log_TPM_n006")
+	if not (AiData[pi][logKey] or false) then
+		AiData[pi][logKey] = true
+		local dp1_active = WaygateIsActive(gg_unit_n006_0023)
+		local dp1_hp = GetUnitState(gg_unit_n006_0023, UNIT_STATE_LIFE)
+		local dp2_active = WaygateIsActive(gg_unit_n006_0438)
+		local dp2_hp = GetUnitState(gg_unit_n006_0438, UNIT_STATE_LIFE)
+		local dp1_in_group = IsUnitInGroup(gg_unit_n006_0023, l__gEnemyGroup)
+		local dp2_in_group = IsUnitInGroup(gg_unit_n006_0438, l__gEnemyGroup)
+		ProbeLogWrite("[TPM] pi=" .. tostring(pi) .. " Counter=" .. tostring(Counter) .. " i=" .. tostring(i) .. " n006_0023 active=" .. tostring(dp1_active) .. " hp=" .. tostring(dp1_hp) .. " inGroup=" .. tostring(dp1_in_group) .. " n006_0438 active=" .. tostring(dp2_active) .. " hp=" .. tostring(dp2_hp) .. " inGroup=" .. tostring(dp2_in_group) .. " x=" .. tostring(l__gX) .. " y=" .. tostring(l__gY))
+	end
 end
 ---@return nothing
 function TryAttack()
@@ -11355,32 +13804,37 @@ function TryAttack()
 				
 				-- ? ????? ?????? ????? ???????? ??????? ???????
 				
-				while true do
-					gUnit2 = FirstOfGroup(gAllyGroup)
-					if gUnit2 == nil then break end
-					UnitAddAbility(gUnit2, FourCC('A1GZ'))
-					GroupRemoveUnit(gAllyGroup, gUnit2)
-					gUnit2 = nil
+			GroupClear(gSubGroup)
+			gSubGroupCounter = 0
+			while true do
+				gUnit2 = FirstOfGroup(gAllyGroup)
+				if gUnit2 == nil then break end
+				UnitAddAbility(gUnit2, FourCC('A1GZ'))
+				GroupRemoveUnit(gAllyGroup, gUnit2)
+				GroupAddUnit(gSubGroup, gUnit2)
+				gSubGroupCounter = gSubGroupCounter + 1
+				gUnit2 = nil
+			end
+			-- ?? ??????? ????? ??????
+			if gDx <= 2500 then
+				
+				IssueImmediateOrder(gEnemy, "web")
+				BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
+				
+				-- ?? ??????? ???? ???
+			else
+				local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
+				if allyCount == 0 then
+					AiProbeLogLimited(pi_attack, "Log_TryAttack_NoPortalAlliesFast", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=portal-fast targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 				end
-				-- ?? ??????? ????? ??????
-				if gDx <= 2500 then
-					
-					IssueImmediateOrder(gEnemy, "web")
-					BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
-					
-					-- ?? ??????? ???? ???
-				else
-					local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
-					if allyCount == 0 then
-						AiProbeLogLimited(pi_attack, "Log_TryAttack_NoPortalAlliesFast", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=portal-fast targetId=" .. tostring(GetUnitTypeId(gEnemy)))
-					end
-					if attackLogCount < 10 then
-						AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
-						ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
-					end
-					GroupPointOrder(gAllyGroup, "smart", gX2, gY2)
-					
+				if attackLogCount < 10 then
+					AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
+					ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
 				end
+				GroupPointOrder(gSubGroup, "smart", gX2, gY2)
+				GroupClear(gSubGroup)
+				gSubGroupCounter = 0
+			end
 				
 				
 				
@@ -11492,33 +13946,38 @@ function TryAttack()
 					
 					-- ? ????? ?????? ????? ???????? ??????? ???????
 					
-					while true do
-						gUnit2 = FirstOfGroup(gAllyGroup)
-						if gUnit2 == nil then break end
-						UnitAddAbility(gUnit2, FourCC('A1GZ'))
-						GroupRemoveUnit(gAllyGroup, gUnit2)
-						gUnit2 = nil
+				GroupClear(gSubGroup)
+				gSubGroupCounter = 0
+				while true do
+					gUnit2 = FirstOfGroup(gAllyGroup)
+					if gUnit2 == nil then break end
+					UnitAddAbility(gUnit2, FourCC('A1GZ'))
+					GroupRemoveUnit(gAllyGroup, gUnit2)
+					GroupAddUnit(gSubGroup, gUnit2)
+					gSubGroupCounter = gSubGroupCounter + 1
+					gUnit2 = nil
+				end
+				-- ?? ??????? ????? ??????
+				if gDx <= 2500 then
+					AiProbeLogLimited(pi_attack, "Log_TryAttack_PortalNearby", 8, "[AIARMY] portal-near pi=" .. tostring(pi_attack) .. " targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount))
+					
+					IssueImmediateOrder(gEnemy, "web")
+					BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
+					
+				-- ?? ??????? ???? ???
+				else
+					if allyCount == 0 then
+						AiProbeLogLimited(pi_attack, "Log_TryAttack_NoPortalAlliesWide", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 					end
-					-- ?? ??????? ????? ??????
-					if gDx <= 2500 then
-						AiProbeLogLimited(pi_attack, "Log_TryAttack_PortalNearby", 8, "[AIARMY] portal-near pi=" .. tostring(pi_attack) .. " targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount))
-						
-						IssueImmediateOrder(gEnemy, "web")
-						BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
-						
-					-- ?? ??????? ???? ???
-					else
-						if allyCount == 0 then
-							AiProbeLogLimited(pi_attack, "Log_TryAttack_NoPortalAlliesWide", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)))
-						end
-						local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
-						if attackLogCount < 10 then
-							AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
-							ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
-						end
-						GroupPointOrder(gAllyGroup, "smart", gX2, gY2)
-						
+					local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
+					if attackLogCount < 10 then
+						AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
+						ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
 					end
+					GroupPointOrder(gSubGroup, "smart", gX2, gY2)
+					GroupClear(gSubGroup)
+					gSubGroupCounter = 0
+				end
 					
 					-- ??????? ????
 				else
@@ -40394,7 +42853,7 @@ function Trig_LichinkaFinish_Actions()
     AddCountDis(gTriggerUnit , i)
     
     udg_LocalPosition[16]=GetUnitLoc(gTriggerUnit)
-    udg_Boolexpr = ItIsHive
+    udg_Boolexpr = Condition(ItIsHive)
     udg_LocalOtrad2=CreateGroup()
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[16], 300, udg_Boolexpr)
     -- ???? ???? ???? ????? ???? ????
@@ -40421,12 +42880,12 @@ function Trig_LichinkaFinish_Actions()
             aiUnitJoins(GetLastCreatedUnit(), i)
         end
         udg_LocalPosition[18]=GetUnitLoc(GetLastCreatedUnit())
-        udg_Boolexpr = ItIsHive
+        udg_Boolexpr = Condition(ItIsHive)
         GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[18], 300, udg_Boolexpr)
         
         IssueTargetDestructableOrder(GetLastCreatedUnit(), "harvest", GetUnitRallyDestructable(FirstOfGroup(udg_LocalOtrad2)))
         udg_LocalPosition[17]=GetUnitLoc(GetLastCreatedUnit())
-        udg_Boolexpr = ItIsHive
+        udg_Boolexpr = Condition(ItIsHive)
         GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[17], 300, udg_Boolexpr)
         if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
             SelectUnitAddForPlayer(GetLastCreatedUnit(), gPlayer)
@@ -56309,3293 +58768,6531 @@ function AiDispatchUpgrade(pi, id)
     end
 end
 -- Automatically split from 81_ai.lua: race definitions + join functions
+
 -- Load order: after 81_ai.lua (engines must exist before races register)
 
 
+
+
+
 RegisterAiRace("Scarlet", {
+
     tokens = {"scarlet", "so"},
+
     weight = 1,
+
     altar = FourCC('h05X'),
+
     start = startScarlet,
+
     buildings = {
+
         seed = FourCC('h05Y'),
+
         { FourCC('h05U'), 4, 4 }, { FourCC('h05Y'), 15, 4 }, { FourCC('h05Z'), 15, 4 },
+
         { FourCC('h063'), 25, 1 }, { FourCC('h062'), 5, 2 }, { FourCC('h060'), 6, 2 },
+
         { FourCC('h05X'), 3, 5 },
+
         { FourCC('h064'), 7, 8, gate = "tier2" }, { FourCC('h061'), 15, 8, gate = "tier2" },
+
         { FourCC('h068'), 15, 10, gate = "church" },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('h05V')) + getAiCount(pi, FourCC('h05W')) >= 1 end,
+
         tier3 = function(pi) return getAiCount(pi, FourCC('h05W')) >= 1 end,
+
         church = function(pi) return getAiCount(pi, FourCC('h05W')) >= 1 end,
+
         has_h060 = function(pi) return getAiCount(pi, FourCC('h060')) >= 1 end,
+
         R040_church = function(pi) return (AiData[pi][FourCC('R040')] or false) and getAiCount(pi, FourCC('h05W')) >= 1 end,
+
         R03Z_church = function(pi) return (AiData[pi][FourCC('R03Z')] or false) and getAiCount(pi, FourCC('h05W')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('h05Z')] = {
+
             { FourCC('h03B'), 1 },
+
             { FourCC('n007'), 1, gate = "has_h060" },
+
             { FourCC('h039'), 4, gate = "tier2" },
+
             { FourCC('h066'), 6, gate = "tier3" },
+
         },
+
         [FourCC('h064')] = {
+
             { FourCC('o00I'), 1 },
+
         },
+
         [FourCC('h061')] = {
+
             { FourCC('h067') }, { FourCC('n008') },
+
         },
+
         [FourCC('h05X')] = {
+
             { FourCC('H06C') }, { FourCC('H03H') }, { FourCC('H06B') },
+
         },
+
         [FourCC('h068')] = {
+
             { 0, 1 },
+
             { FourCC('h03F'), 1, gate = "R040_church" },
+
             { FourCC('h03D'), 1, gate = "R040_church" },
+
             { FourCC('h03I'), 1, gate = "R03Z_church" },
+
             { FourCC('h03G'), 1, gate = "R03Z_church" },
+
         },
+
         pre = function(id, pi, u)
+
             if id == FourCC('h05U') then
+
                 local r = GetRandomInt(1, 3)
+
                 if r == 1 and getAiCount(pi, FourCC('h014')) < 20 then
+
                     IssueImmediateOrderById(u, FourCC('h014'))
+
                 elseif r == 2 and getAiCount(pi, FourCC('h03C')) < 15 then
+
                     IssueImmediateOrderById(u, FourCC('h03C'))
+
                 elseif r == 3 and getAiCount(pi, FourCC('h03A')) < 15 then
+
                     IssueImmediateOrderById(u, FourCC('h03A'))
+
                 end
+
                 return true
+
             end
+
             return false
+
         end,
+
     },
+
     ecoWeights = {
+
         [FourCC('h05Y')] = 1, [FourCC('h05U')] = 2,
+
         [FourCC('h05V')] = 5, [FourCC('h05W')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         pre = function(i, pi, p)
+
             if i > 65 and getAiCount(pi, FourCC('h05V')) >= 1 then
+
                 local r = GetRandomInt(1, 2)
+
                 if r == 1 then
+
                     MakeGradeCheckCap(p, FourCC('h05W'), FourCC('R040'), 1)
+
                     AiData[pi][FourCC('R040')] = true
+
                 else
+
                     MakeGradeCheckCap(p, FourCC('h05W'), FourCC('R03Z'), 1)
+
                     AiData[pi][FourCC('R03Z')] = true
+
                 end
+
                 MakeGradeCheckCap(p, FourCC('h068'), FourCC('R044'), 3)
+
                 MakeGradeCheckCap(p, FourCC('h068'), FourCC('R043'), 3)
+
                 MakeGradeCheckCap(p, FourCC('h068'), FourCC('R042'), 3)
+
                 MakeGradeCheckCap(p, FourCC('h068'), FourCC('R041'), 3)
+
             end
+
         end,
+
         steps = {
+
             { at = 17, action = "research", rows = {
+
                 {FourCC('h060'), FourCC('R04B'), 6}, {FourCC('h060'), FourCC('R04A'), 6}, {FourCC('h060'), FourCC('R049'), 6}, {FourCC('h060'), FourCC('R048'), 6}, {FourCC('h060'), FourCC('R04C'), 6},
+
                 {FourCC('h062'), FourCC('RHac'), 6}, {FourCC('h062'), FourCC('Rhlh'), 6},
+
                 {FourCC('h05Z'), FourCC('R03K'), 3},
+
             }},
+
             { at = 17, action = "tryBuy" },
+
             { at = 35, gate = "tier2", action = "research", rows = {
+
                 {FourCC('h05Z'), FourCC('R03W'), 2}, {FourCC('h05Z'), FourCC('R03V'), 2},
+
                 {FourCC('h05Z'), FourCC('R03L'), 2}, {FourCC('h05Z'), FourCC('R03M'), 2},
+
                 {FourCC('h061'), FourCC('R03Y'), 3}, {FourCC('h061'), FourCC('R03X'), 3},
+
             }},
+
             { at = 35, gate = "tier2", action = "random", branches = {
+
                 { {FourCC('h064'), FourCC('R03T'), 6} },
+
                 { {FourCC('h064'), FourCC('R03S'), 6} },
+
             }},
+
             { at = 35, gate = "tier2", action = "research", rows = {
+
                 {FourCC('h064'), FourCC('R047'), 6}, {FourCC('h064'), FourCC('R046'), 6}, {FourCC('h064'), FourCC('R045'), 6}, {FourCC('h064'), FourCC('R03U'), 6},
+
             }},
+
             { at = 25, action = "techUp", from = FourCC('h05U'), to = FourCC('h05V'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h05V'), to = FourCC('h05W'), cap = 3 },
+
             { at = 60, action = "mageTp" },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('H06C')] = {
+
             { order = "firebolt", chance = 5, type = "target" },
+
             { order = "flamestrike", chance = 5, type = "point" },
+
             { order = "waterelemental", chance = 5, type = "immediate" },
+
         },
+
         [FourCC('H06B')] = {
+
             { order = "berserk", chance = 5, type = "immediate" },
+
             { order = "thunderclap", chance = 5, type = "immediate" },
+
             { order = "roar", chance = 5, type = "immediate" },
+
         },
+
         [FourCC('H03H')] = {
+
             { order = "firebolt", chance = 5, type = "heal", allyRange = 450 },
+
             { order = "roar", chance = 5, type = "immediate" },
+
             { order = "resurrection", chance = 5, type = "immediate" },
+
         },
+
         [FourCC('h067')] = {
+
             { order = "flamingarrows", chance = 4, type = "target" },
+
             { order = "devourmagic", chance = 4, type = "target", range = 525 },
+
         },
+
         [FourCC('n008')] = {
+
             { order = "flamingarrows", chance = 4, type = "target" },
+
             { order = "dispel", chance = 4, type = "point", range = 490 },
+
         },
+
         [FourCC('h03G')] = {
+
             { order = "berserk", chance = 3, type = "target" },
+
             { order = "roar", chance = 3, type = "point" },
+
         },
+
         [FourCC('h00Z')] = {
+
             { order = "ancestralspirit", chance = 6, type = "target", range = 125 },
+
             { order = "clusterrockets", chance = 6, type = "point", range = 300 },
+
             { order = "tranquility", chance = 6, type = "immediate", hp = 45 },
+
         },
+
         [FourCC('h00Y')] = {
+
             { order = "ancestralspirit", chance = 6, type = "target", range = 125 },
+
             { order = "clusterrockets", chance = 6, type = "point", range = 300 },
+
             { order = "tranquility", chance = 6, type = "immediate", hp = 45 },
+
         },
+
     },
+
     attackedData = {
+
         [FourCC('h039')] = {
+
             { order = "defend", chance = 5, type = "immediate" },
+
             { order = "magicdefense", chance = 5, type = "immediate" },
+
             { order = "undefend", chance = 5, type = "immediate" },
+
             { order = "magicundefense", chance = 5, type = "immediate" },
+
         },
+
         [FourCC('h03B')] = {
+
             { order = "defend", chance = 3, type = "immediate" },
+
             { order = "undefend", chance = 3, type = "immediate" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('H06C')] = { ult = FourCC('A09M'), skills = { FourCC('A09K'), FourCC('A09L'), FourCC('A09N') } },
+
         [FourCC('H06B')] = { ult = FourCC('A09J'), skills = { FourCC('A09F'), FourCC('A09G'), FourCC('A09I') } },
+
         [FourCC('H03H')] = { ult = FourCC('A09E'), skills = { FourCC('A097'), FourCC('A09C'), FourCC('A09D') } },
+
     },
+
     chooseBuild = ChooseBuildings_ScarletOrden,
+
     perebor = PereborBuildings_ScarletOrden,
+
     join = Join_Skarlet,
+
     strateg = Strateg_Scarlet,
+
     strategEC = Strateg_Scarlet_EC,
+
     upgrade = UpgradeScarlet,
+
 })
+
+
 
 RegisterAiRace("BloodElves", {
+
     tokens = {"be", "bloodelves", "ek"},
+
     weight = 1,
+
     altar = FourCC('h05J'),
+
     start = startBloodElves,
+
     buildings = {
+
         seed = FourCC('h04M'),
+
         { FourCC('h04C'), 4, 4 }, { FourCC('h04M'), 15, 4 }, { FourCC('h04D'), 15, 4 },
+
         { FourCC('h04N'), 25, 1 }, { FourCC('h04Q'), 5, 2 }, { FourCC('h04R'), 6, 2 },
+
         { FourCC('h05J'), 3, 8 },
+
         { FourCC('h04G'), 15, 8, gate = "tier2" }, { FourCC('h04E'), 15, 8, gate = "tier2" },
+
         { FourCC('h04F'), 12, 2 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('h04B')) + getAiCount(pi, FourCC('h04A')) >= 1 end,
+
         tier3 = function(pi) return getAiCount(pi, FourCC('h04A')) >= 1 end,
+
         has_h04R = function(pi) return getAiCount(pi, FourCC('h04R')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('h04D')] = {
+
             { FourCC('h03V'), 1 },
+
             { FourCC('n00I'), 1, gate = "has_h04R" },
+
             { FourCC('h03X'), 4, gate = "tier2" },
+
             { FourCC('h03Y'), 6, gate = "tier3" },
+
         },
+
         [FourCC('h04G')] = {
+
             { FourCC('e001'), 1, gate = "tier2" },
+
             { FourCC('h046'), 2, gate = "tier2" },
+
             { FourCC('e030'), 1, gate = "tier2" },
+
             { FourCC('h03Z'), 6, gate = "tier3" },
+
         },
+
         [FourCC('h04E')] = {
+
             { FourCC('h03W') }, { FourCC('h040') }, { FourCC('h041') }, { FourCC('h042') },
+
         },
+
         [FourCC('h05J')] = {
+
             { FourCC('Hjnd') }, { FourCC('H043') }, { FourCC('H045') },
+
         },
+
         worker = { id = FourCC('h04K'), cap = 20,
+
                    from = { FourCC('h04C') } },
+
     },
+
     ecoWeights = {
+
         [FourCC('h04M')] = 1, [FourCC('h04C')] = 2,
+
         [FourCC('h04B')] = 5, [FourCC('h04A')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h04R'), FourCC('R01L'), 6}, {FourCC('h04R'), FourCC('R01J'), 6}, {FourCC('h04R'), FourCC('R01K'), 6}, {FourCC('h04R'), FourCC('R01M'), 6} },
+
                 { {FourCC('h04R'), FourCC('R01R'), 6}, {FourCC('h04Q'), FourCC('R03I'), 6}, {FourCC('h04Q'), FourCC('R03J'), 6}, {FourCC('h04Q'), FourCC('R01N'), 6} },
+
                 { {FourCC('h04Q'), FourCC('R01T'), 6}, {FourCC('h04Q'), FourCC('R03E'), 6}, {FourCC('h04Q'), FourCC('R03F'), 6}, {FourCC('h04D'), FourCC('R03K'), 1} },
+
             }},
+
             { at = 35, gate = "tier2", action = "random", branches = {
+
                 { {FourCC('h04D'), FourCC('R01Y'), 1}, {FourCC('h04D'), FourCC('R01X'), 1}, {FourCC('h04D'), FourCC('R01W'), 2}, {FourCC('h04E'), FourCC('R0BU'), 1}, {FourCC('h04E'), FourCC('R01O'), 6} },
+
                 { {FourCC('h04E'), FourCC('R01P'), 6}, {FourCC('h04E'), FourCC('R01Q'), 6}, {FourCC('h04E'), FourCC('R01S'), 1}, {FourCC('h04G'), FourCC('R03N'), 6}, {FourCC('h04G'), FourCC('R021'), 6} },
+
                 { {FourCC('h04G'), FourCC('R021'), 6}, {FourCC('h04G'), FourCC('R03Q'), 6}, {FourCC('h04G'), FourCC('R021'), 6}, {FourCC('h04G'), FourCC('Rhcd'), 6} },
+
             }},
+
             { at = 35, gate = "tier2", action = "random", branches = {
+
                 { {FourCC('h04F'), FourCC('R03R'), 3} },
+
                 { {FourCC('h04F'), FourCC('R01H'), 3} },
+
                 { {FourCC('h04F'), FourCC('R01I'), 3} },
+
                 { {FourCC('h04F'), FourCC('R01G'), 3} },
+
                 { {FourCC('h04F'), FourCC('R01D'), 3} },
+
             }},
+
             { at = 45, gate = "tier2", action = "fleet", wall = FourCC('h011') },
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('h04C'), to = FourCC('h04B'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h04B'), to = FourCC('h04A'), cap = 3 },
+
             { at = 60, action = "mageTp", cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('H043')] = {
+
             { order = "banish", chance = 6, type = "target" },
+
             { order = "steal", chance = 6, type = "target" },
+
             { order = "flamestrike", chance = 6, type = "point" },
+
             { order = "summonphoenix", chance = 6, type = "immediate" },
+
         },
+
         [FourCC('Hjnd')] = {
+
             { order = "shadowstrike", chance = 3, type = "target", notStructure = true },
+
             { order = "faeriefire", chance = 3, type = "target" },
+
         },
+
         [FourCC('H045')] = {
+
             { order = "roar", chance = 5, type = "immediate" },
+
             { order = "fanofknives", chance = 5, type = "immediate" },
+
             { order = "resurrection", chance = 5, type = "immediate" },
+
         },
+
         [FourCC('H03H')] = {
+
             { order = "berserk", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('n040')] = {
+
             { order = "frostarmoron", chance = 5, type = "immediate" },
+
             { order = "curseon", chance = 5, type = "immediate" },
+
             { order = "carrionswarm", chance = 5, type = "point", range = 490 },
+
         },
+
         [FourCC('h041')] = {
+
             { order = "polymorph", chance = 3, type = "target", notStructure = true },
+
             { order = "devourmagic", chance = 3, type = "target", range = 490 },
+
         },
+
         [FourCC('h042')] = {
+
             { order = "faeriefireon", chance = 6, type = "immediate" },
+
             { order = "curseon", chance = 6, type = "immediate" },
+
             { order = "bloodluston", chance = 6, type = "immediate" },
+
         },
+
         [FourCC('H03Y')] = {
+
             { order = "healingwave", chance = 3, type = "heal", allyRange = 550 },
+
         },
+
         [FourCC('h00Z')] = {
+
             { order = "ancestralspirit", chance = 6, type = "target", range = 125 },
+
             { order = "clusterrockets", chance = 6, type = "point", range = 300 },
+
             { order = "tranquility", chance = 6, type = "immediate", hp = 45 },
+
         },
+
         [FourCC('h00Y')] = {
+
             { order = "ancestralspirit", chance = 6, type = "target", range = 125 },
+
             { order = "clusterrockets", chance = 6, type = "point", range = 300 },
+
             { order = "tranquility", chance = 6, type = "immediate", hp = 45 },
+
         },
+
     },
+
     attackedData = {
+
         [FourCC('h03V')] = {
+
             { order = "defend", chance = 5, type = "immediate" },
+
             { order = "manashieldon", chance = 5, type = "immediate" },
+
             { order = "undefend", chance = 5, type = "immediate" },
+
         },
+
         [FourCC('h03B')] = {
+
             { order = "defend", chance = 3, type = "immediate" },
+
             { order = "undefend", chance = 3, type = "immediate" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('H043')] = { ult = FourCC('AHpx'), skills = { FourCC('AHfs'), FourCC('AHdr'), FourCC('AHpx') } },
+
         [FourCC('Hjnd')] = { ult = FourCC('A07V'), skills = { FourCC('A07U'), FourCC('A0LQ'), FourCC('AEar') } },
+
         [FourCC('H045')] = { ult = FourCC('AHre'), skills = { FourCC('A08H'), FourCC('A07W'), FourCC('AHbh') } },
+
     },
+
     chooseBuild = ChooseBuildings_BloodElves,
+
     perebor = PereborBuildings2_BloodElves,
+
     join = Join_BloodElves,
+
     strateg = Strateg_BloodElves,
+
     strategEC = Strateg_BloodElves_EC,
+
     upgrade = UpgradeBloodElves,
+
     naval = aiNavalTrain_Common,
+
     wall = FourCC('h011'),
+
 })
+
+
 
 RegisterAiRace("Goblins", {
+
     tokens = {"goblins", "gob"},
+
     weight = 1,
+
     altar = FourCC('o016'),
+
     start = startGoblins,
+
     buildings = {
+
         seed = FourCC('h077'),
+
         { FourCC('h070'), 4, 5 }, { FourCC('h077'), 20, 3 }, { FourCC('h073'), 18, 7 },
+
         { FourCC('h07S'), 30, 1 }, { FourCC('h079'), 5, 3 }, { FourCC('h076'), 18, 4 },
+
         { FourCC('o016'), 3, 8 },
+
         { FourCC('h074'), 15, 2, gate = "grades8" }, { FourCC('h075'), 15, 2, gate = "grades8" },
+
     },
+
     gates = {
+
         grades8 = function(pi) return Grades[pi] > 8 end,
+
     },
+
     production = {
+
         [FourCC('h070')] = {
+
             { FourCC('n00V'), 2, limit = 25 },
+
         },
+
         [FourCC('h074')] = {
+
             { FourCC('h06S'), 2 }, { FourCC('h06U'), 2 },
+
             { FourCC('h06Y'), 4 }, { FourCC('h06R'), 3 }, { FourCC('h06T'), 3 },
+
         },
+
         [FourCC('h075')] = {
+
             { FourCC('o00W'), 2 }, { FourCC('o00Y'), 2 },
+
             { FourCC('o00X'), 3 }, { FourCC('h06P'), 3 },
+
         },
+
         [FourCC('o016')] = {
+
             { FourCC('H0BD'), 1, limit = 1 },
+
             { FourCC('Galh'), 1, limit = 1 },
+
             { FourCC('Gmex'), 1, limit = 1 },
+
         },
+
         pre = function(id, pi, u)
+
             if id == FourCC('h073') then
+
                 if Random(1, 6) then
+
                     IssueNeutralImmediateOrderById(Player(pi), u, FourCC('h07R'))
+
                 else
+
                     return false
+
                 end
+
                 return true
+
             end
+
             return false
+
         end,
+
         [FourCC('h073')] = {
+
             { FourCC('h06K'), 2 },
+
             { FourCC('h060'), 1, gate = "grades8" },
+
             { FourCC('h06Q'), 3, gate = "grades8" },
+
             { FourCC('h06L'), 3, gate = "grades8" },
+
             { FourCC('h06N'), 3, gate = "grades8" },
+
             { FourCC('h078'), 3, gate = "grades8" },
+
             { FourCC('h06M'), 3, gate = "grades8" },
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('h077')] = 1, [FourCC('h070')] = 4,
+
     },
+
     strategData = {
+
         gradeCap = 150,
+
         steps = {
+
             { at = 17, action = "research", rows = {
+
                 {FourCC('h076'), FourCC('R04P'), 6}, {FourCC('h076'), FourCC('R04E'), 6}, {FourCC('h076'), FourCC('R04F'), 6}, {FourCC('h076'), FourCC('R04G'), 6}, {FourCC('h076'), FourCC('R04H'), 6},
+
                 {FourCC('h076'), FourCC('R04I'), 6}, {FourCC('h076'), FourCC('R04J'), 6}, {FourCC('h076'), FourCC('R04K'), 6}, {FourCC('h076'), FourCC('R04L'), 6}, {FourCC('h076'), FourCC('R04M'), 6},
+
                 {FourCC('h079'), FourCC('R056'), 6}, {FourCC('h079'), FourCC('R07A'), 6}, {FourCC('h079'), FourCC('R05X'), 6}, {FourCC('h079'), FourCC('R05Y'), 6}, {FourCC('h079'), FourCC('R04N'), 6},
+
                 {FourCC('h079'), FourCC('R04Q'), 6}, {FourCC('h079'), FourCC('R04R'), 6}, {FourCC('h079'), FourCC('R053'), 6}, {FourCC('h079'), FourCC('R05W'), 6},
+
                 {FourCC('h070'), FourCC('R0D4'), 6},
+
             }},
+
             { at = 17, action = "tryBuy" },
+
             { at = 60, action = "mageTp" },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('h06K')] = {
+
             { order = "flamestrike", chance = 4, type = "point" },
+
         },
+
         [FourCC('h06Y')] = {
+
             { order = "bearform", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('h06Z')] = {
+
             { order = "bearform", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('h06P')] = {
+
             { order = "berserk", chance = 3, type = "immediate" },
+
             { order = "dispel", chance = 6, type = "point", range = 280 },
+
             { order = "ward", chance = 6, type = "point" },
+
         },
+
         [FourCC('H0BD')] = {
+
             { order = "silence", chance = 5, type = "point" },
+
             { order = "clusterrockets", chance = 5, type = "point" },
+
             { order = "blizzard", chance = 5, type = "point" },
+
         },
+
         [FourCC('Galh')] = {
+
             { order = "transmute", chance = 5, type = "target" },
+
             { order = "acidbomb", chance = 5, type = "target" },
+
             { order = "chemicalrage", chance = 5, type = "immediate" },
+
             { order = "healingspray", chance = 5, type = "self" },
+
         },
+
         [FourCC('Gmex')] = {
+
             { order = "summonfactory", chance = 5, type = "point" },
+
             { order = "clusterrockets", chance = 5, type = "point" },
+
             { order = "robogoblin", chance = 5, type = "immediate" },
+
         },
+
         [FourCC('h06X')] = {
+
             { order = "berserk", chance = 4, type = "immediate" },
+
             { order = "blackarrowon", chance = 5, type = "target" },
+
             { order = "tranquility", chance = 6, type = "immediate", hp = 40 },
+
         },
+
         [FourCC('h06V')] = {
+
             { order = "ravenform", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('h06W')] = {
+
             { order = "ravenform", chance = 4, type = "immediate" },
+
         },
+
         post = {
+
             { order = "berserk", chance = 4, type = "immediate", needAbil = FourCC('A0BL') },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('H0BD')] = { ult = FourCC('A0D7'), skills = { FourCC('A0D8'), FourCC('AEar'), FourCC('A0D5') } },
+
         [FourCC('Galh')] = { ult = FourCC('ANtm'), skills = { FourCC('ANhs'), FourCC('ANab'), FourCC('ANcr') } },
+
         [FourCC('Gmex')] = { ult = FourCC('ANrg'), skills = { FourCC('ANsy'), FourCC('ANcs'), FourCC('ANeg') } },
+
     },
+
     chooseBuild = ChooseBuildings_Goblins,
+
     perebor = PereborBuildings_Goblins,
+
     join = Join_Goblins,
+
     strateg = Strateg_Goblins,
+
     strategEC = Strateg_Goblins_EC,
+
     naval = aiNavalTrain_Goblins,
+
     wall = FourCC('h0D7'),
+
 })
+
+
 
 RegisterAiRace("Naga", {
+
     tokens = {"naga"},
+
     weight = 1,
+
     altar = FourCC('nnad'),
+
     start = startNaga,
+
     buildings = {
+
         seed = FourCC('nnfm'),
+
         { FourCC('nntt'), 3, 5 }, { FourCC('nnfm'), 20, 4 }, { FourCC('nnsg'), 18, 6 },
+
         { FourCC('nntg'), 30, 1 }, { FourCC('h0JW'), 5, 2 }, { FourCC('nnad'), 3, 6 },
+
         { FourCC('nnsa'), 15, 2 }, { FourCC('n055'), 15, 3 },
+
     },
+
     chooseBuild = ChooseBuildings_Naga,
+
     perebor = PereborBuildings_Naga,
+
     production = {
+
         [FourCC('nnsg')] = {
+
             { FourCC('n04Z'), 2 },
+
             { FourCC('nsnp'), 2, gate = "has_h0JW" },
+
             { FourCC('nhyc'), 1, gate = "has_h0JX" },
+
             { branch = "murloc", black = FourCC('n052'), other = FourCC('nmyr'), weight = 3, gate = "has_h0JX" },
+
         },
+
         [FourCC('nnsa')] = {
+
             { FourCC('n053'), 6, gate = "murloc_h0JX" },
+
             { FourCC('n054'), 6, gate = "murloc_h0JX" },
+
             { FourCC('n051'), 1, gate = "naga_h0JX" },
+
             { FourCC('nnsw'), 4, gate = "naga_h0JX" },
+
         },
+
         [FourCC('n055')] = {
+
             { branch = "murloc", black = FourCC('n050'), other = FourCC('nnrg'), weight = 2, gate = "has_h0JY" },
+
             { FourCC('n056'), 1, gate = "has_h0JY" },
+
             { FourCC('nwgs'), 1 },
+
         },
+
         [FourCC('nnad')] = {
+
             { FourCC('N07A'), 1, limit = 1 },
+
             { FourCC('H0JV'), 1, limit = 1 },
+
             { branch = "murloc", black = FourCC('H0OZ'), other = FourCC('H0JU'), weight = 1, limit = 1 },
+
         },
+
         worker = { id = FourCC('nmpe'), cap = 25,
+
                    from = { FourCC('nntt'), FourCC('h0JX'), FourCC('h0JY') } },
+
         pre = function(id, pi, u)
+
             if id == FourCC('nntt') or id == FourCC('h0JX') or id == FourCC('h0JY') then
+
                 if getAiCount(pi, FourCC('nmpe')) >= 25 and GetRandomInt(1, 2) == 1 then
+
                     IssueImmediateOrderById(u, FourCC('nnmg'))
+
                     return true
+
                 end
+
                 return false
+
             end
+
             return false
+
         end,
+
     },
+
     gates = {
+
         has_h0JW = function(pi) return getAiCount(pi, FourCC('h0JW')) > 0 end,
+
         has_h0JX = function(pi) return getAiCount(pi, FourCC('h0JX')) > 0 end,
+
         has_h0JY = function(pi) return getAiCount(pi, FourCC('h0JY')) > 0 end,
+
         murloc = function(pi) return GetPlayerTechResearched(Player(pi), FourCC('R0FF'), true) end,
+
         naga = function(pi) return not GetPlayerTechResearched(Player(pi), FourCC('R0FF'), true) end,
+
         murloc_h0JX = function(pi) return GetPlayerTechResearched(Player(pi), FourCC('R0FF'), true) and getAiCount(pi, FourCC('h0JX')) > 0 end,
+
         naga_h0JX = function(pi) return not GetPlayerTechResearched(Player(pi), FourCC('R0FF'), true) and getAiCount(pi, FourCC('h0JX')) > 0 end,
+
     },
+
     branches = {
+
         murloc = function(pi) return GetPlayerTechResearched(Player(pi), FourCC('R0FF'), true) end,
+
     },
+
     ecoWeights = {
+
         [FourCC('nnfm')] = 1, [FourCC('nntt')] = 4,
+
         [FourCC('h0JX')] = 6, [FourCC('h0JY')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 150,
+
         steps = {
+
             { before = 50, action = "research", rows = {
+
                 {FourCC('nntt'), FourCC('R0FE'), 1}, {FourCC('nntt'), FourCC('R0FF'), 1},
+
             }},
+
             { at = 17, action = "research", rows = {
+
                 {FourCC('h0JW'), FourCC('R0FD'), 6}, {FourCC('h0JW'), FourCC('R0FH'), 6}, {FourCC('h0JW'), FourCC('Rnat'), 6}, {FourCC('h0JW'), FourCC('Rnam'), 6}, {FourCC('h0JW'), FourCC('Rnsb'), 6},
+
                 {FourCC('nnsa'), FourCC('Rnsw'), 6}, {FourCC('nnsa'), FourCC('Rnsi'), 6},
+
                 {FourCC('nnsg'), FourCC('R0FR'), 6}, {FourCC('nnsg'), FourCC('Rnen'), 6},
+
             }},
+
             { at = 17, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('nntt'), to = FourCC('h0JX'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h0JX'), to = FourCC('h0JY'), cap = 3 },
+
             { at = 60, action = "mageTp" },
+
         },
+
     },
+
     attackerData = {
+
         pre = {
+
             { order = "blight", chance = 1, type = "immediate", terrain = "water", notAbil = FourCC('S00E'), ret = true },
+
         },
+
         [FourCC('H0JV')] = {
+
             { order = "berserk", chance = 3, type = "immediate" },
+
             { order = "clusterrockets", chance = 5, type = "point" },
+
             { order = "blink", chance = 5, type = "point" },
+
         },
+
         [FourCC('N07A')] = {
+
             { order = "banish", chance = 5, type = "target" },
+
             { order = "rainoffire", chance = 5, type = "point" },
+
             { order = "tranquility", chance = 5, type = "immediate" },
+
         },
+
         [FourCC('H0JU')] = {
+
             { order = "doom", chance = 6, type = "target" },
+
             { order = "frostnova", chance = 6, type = "target" },
+
             { order = "stomp", chance = 6, type = "immediate" },
+
         },
+
         [FourCC('H0OZ')] = {
+
             { order = "doom", chance = 6, type = "target" },
+
             { order = "frostnova", chance = 6, type = "target" },
+
             { order = "stomp", chance = 6, type = "immediate" },
+
         },
+
         [FourCC('n051')] = {
+
             { order = "healon", chance = 4, type = "immediate" },
+
             { order = "dispel", chance = 4, type = "point" },
+
         },
+
         [FourCC('nnsw')] = {
+
             { order = "cyclone", chance = 6, type = "target", notStructure = true },
+
             { order = "frostarmoron", chance = 6, type = "immediate" },
+
             { order = "parasiteon", chance = 6, type = "immediate" },
+
         },
+
         [FourCC('nnrg')] = {
+
             { order = "thunderbolt", chance = 6, type = "target" },
+
             { order = "carrionswarm", chance = 6, type = "point" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('H0JV')] = { ult = FourCC('A13C'), skills = { FourCC('A13A'), FourCC('AEbl') } },
+
         [FourCC('H0JU')] = { skills = { FourCC('A14I'), FourCC('A14G') } },
+
         [FourCC('N07A')] = { ult = FourCC('ANrg'), skills = { FourCC('ANsy'), FourCC('ANcs'), FourCC('ANeg') } },
+
     },
+
     join = Join_Naga,
+
     strateg = Strateg_Naga,
+
     strategEC = Strateg_Naga_EC,
+
     upgrade = UpgradeNaga,
+
     naval = aiNavalTrain_Naga,
+
     wall = FourCC('n04L'),
+
     usesWaterPoint = false,
+
     continentalNaga = true,
+
 })
+
+
 
 RegisterAiRace("Horde", {
+
     tokens = {"horde"},
+
     weight = 1,
+
     altar = FourCC('oalt'),
+
     start = startHorde,
+
     buildings = {
+
         seed = FourCC('otrb'),
+
         { FourCC('ogre'), 3, 5 }, { FourCC('otrb'), 20, 3 }, { FourCC('obar'), 3, 7 },
+
         { FourCC('obar'), 18, 3 }, { FourCC('obea'), 18, 2 }, { FourCC('owtw'), 30, 1 },
+
         { FourCC('ofor'), 5, 3 }, { FourCC('oalt'), 3, 6 },
+
         { FourCC('osld'), 15, 10, gate = "spirit" }, { FourCC('otto'), 15, 10, gate = "spirit" },
+
         { FourCC('osld'), 15, 1 }, { FourCC('otto'), 15, 1 }, { FourCC('ovln'), 1, 6 },
+
     },
+
     gates = {
+
         spirit = function(pi) return getAiCount(pi, FourCC('ostr')) + getAiCount(pi, FourCC('ofrt')) > 0 end,
+
         ironHorde = function(pi) return GetPlayerTechResearched(Player(pi), FourCC('R0EA'), true) end,
+
         notIronHorde = function(pi) return not GetPlayerTechResearched(Player(pi), FourCC('R0EA'), true) end,
+
         spirit_notIron = function(pi) return not GetPlayerTechResearched(Player(pi), FourCC('R0EA'), true) and getAiCount(pi, FourCC('ostr')) + getAiCount(pi, FourCC('ofrt')) > 0 end,
+
         fortress = function(pi) return getAiCount(pi, FourCC('ofrt')) > 0 end,
+
     },
+
     production = {
+
         [FourCC('obar')] = {
+
             { FourCC('o01N'), 2, gate = "ironHorde" },
+
             { FourCC('ogru'), 2, gate = "notIronHorde" },
+
             { FourCC('o029'), 3, gate = "spirit_notIron" },
+
             { FourCC('orai'), 5, gate = "fortress" },
+
             { FourCC('otau'), 5, gate = "fortress" },
+
         },
+
         [FourCC('obea')] = {
+
             { FourCC('o02B'), 2, gate = "ironHorde" },
+
             { FourCC('ohun'), 2, gate = "notIronHorde" },
+
             { FourCC('o01P'), 3, gate = "spirit_notIron" },
+
             { FourCC('okod'), 5, gate = "fortress" },
+
         },
+
         [FourCC('osld')] = {
+
             { FourCC('oshm'), 8 },
+
             { FourCC('o01W'), 2 },
+
         },
+
         [FourCC('otto')] = {
+
             { FourCC('ocat'), 2 },
+
             { FourCC('o022'), 1 },
+
             { FourCC('h0CY'), 2, gate = "ironHorde" },
+
         },
+
         [FourCC('oalt')] = {
+
             { FourCC('Ofar'), 1, limit = 1 },
+
             { FourCC('Obla'), 1, limit = 1 },
+
             { FourCC('Otch'), 1, limit = 1 },
+
         },
+
         worker = { id = FourCC('opeo'), cap = 25,
+
                    from = { FourCC('ogre'), FourCC('ostr'), FourCC('ofrt') } },
+
     },
+
     ecoWeights = {
+
         [FourCC('otrb')] = 1, [FourCC('ogre')] = 4,
+
         [FourCC('ostr')] = 6, [FourCC('ofrt')] = 8,
+
         [FourCC('obar')] = 3, [FourCC('obea')] = 2,
+
         [FourCC('ofor')] = 2, [FourCC('oalt')] = 3,
+
     },
+
     strategData = {
+
         gradeCap = 150,
+
         steps = {
+
             { before = 50, action = "research", rows = {
+
                 {FourCC('ovln'), FourCC('Abds'), 1}, {FourCC('ovln'), FourCC('Arlm'), 1},
+
             }},
+
             { at = 17, action = "research", rows = {
+
                 {FourCC('ogre'), FourCC('Ropg'), 1},
+
                 {FourCC('ofor'), FourCC('R0G5'), 6}, {FourCC('ofor'), FourCC('R0E6'), 6}, {FourCC('ofor'), FourCC('Rome'), 6}, {FourCC('ofor'), FourCC('Roar'), 6}, {FourCC('ofor'), FourCC('Rora'), 6}, {FourCC('ofor'), FourCC('Rosp'), 3}, {FourCC('ofor'), FourCC('Rorb'), 3},
+
                 {FourCC('obar'), FourCC('R0EC'), 3}, {FourCC('obea'), FourCC('R0ED'), 3}, {FourCC('otto'), FourCC('R0EF'), 3},
+
                 {FourCC('osld'), FourCC('Rost'), 3}, {FourCC('osld'), FourCC('Rowt'), 3}, {FourCC('osld'), FourCC('Rowd'), 3},
+
             }},
+
             { at = 17, action = "tryBuy" },
+
             { at = 17, action = "fleet", wall = FourCC('h0HO') },
+
             { action = "random", branches = {
+
                 { {FourCC('ovln'), FourCC('R0F3'), 1}, {FourCC('ovln'), FourCC('R0F4'), 1}, {FourCC('ovln'), FourCC('R0EH'), 1}, {FourCC('ovln'), FourCC('R0EI'), 1} },
+
                 { {FourCC('ovln'), FourCC('R0EE'), 1}, {FourCC('ovln'), FourCC('R0EA'), 1}, {FourCC('ovln'), FourCC('R0E9'), 1}, {FourCC('ovln'), FourCC('R0E5'), 1} },
+
                 { {FourCC('ovln'), FourCC('R0E4'), 1}, {FourCC('ovln'), FourCC('R0E3'), 1}, {FourCC('ovln'), FourCC('R0E1'), 1}, {FourCC('ovln'), FourCC('R0E0'), 1} },
+
                 { {FourCC('ovln'), FourCC('R0DZ'), 1}, {FourCC('ovln'), FourCC('R0DY'), 1}, {FourCC('ovln'), FourCC('R0DX'), 1}, {FourCC('ovln'), FourCC('R0DW'), 1} },
+
                 { {FourCC('ovln'), FourCC('R0EB'), 1}, {FourCC('ovln'), FourCC('R0EH'), 1}, {FourCC('ovln'), FourCC('R0DZ'), 1}, {FourCC('ovln'), FourCC('R0E5'), 1} },
+
             }},
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('o01W')] = {
+
             { order = "bloodlust", chance = 4, type = "target" },
+
             { order = "lightningshield", chance = 4, type = "target" },
+
             { order = "purge", chance = 4, type = "target" },
+
         },
+
         [FourCC('h0CY')] = {
+
             { order = "berserk", chance = 3, type = "immediate" },
+
             { order = "selfdestruct", chance = 6, type = "immediate", hp = 20 },
+
         },
+
         [FourCC('o01J')] = {
+
             { order = "bloodlust", chance = 4, type = "target" },
+
             { order = "lightningshield", chance = 4, type = "target" },
+
             { order = "purge", chance = 4, type = "target" },
+
             { order = "dispel", chance = 4, type = "point" },
+
         },
+
         [FourCC('o01V')] = {
+
             { order = "soulburn", chance = 4, type = "target" },
+
             { order = "waterelemental", chance = 4, type = "immediate" },
+
             { order = "monsoon", chance = 4, type = "point" },
+
             { order = "dispel", chance = 4, type = "point" },
+
         },
+
         [FourCC('o023')] = {
+
             { order = "flamestrike", chance = 4, type = "point" },
+
             { order = "stampede", chance = 5, type = "point" },
+
         },
+
         [FourCC('o024')] = {
+
             { order = "evileye", chance = 4, type = "point" },
+
             { order = "stasistrap", chance = 4, type = "point" },
+
             { order = "healingward", chance = 4, type = "self" },
+
         },
+
         [FourCC('o02L')] = {
+
             { order = "evileye", chance = 4, type = "point" },
+
             { order = "stasistrap", chance = 4, type = "point" },
+
             { order = "healingward", chance = 4, type = "self" },
+
             { order = "acidbomb", chance = 5, type = "target" },
+
         },
+
         [FourCC('Obla')] = {
+
             { order = "windwalk", chance = 3, type = "immediate" },
+
             { order = "roar", chance = 5, type = "immediate" },
+
             { order = "whirlwind", chance = 5, type = "immediate" },
+
         },
+
         [FourCC('Ofar')] = {
+
             { order = "chainlightning", chance = 4, type = "target" },
+
             { order = "spiritwolf", chance = 6, type = "immediate" },
+
             { order = "monsoon", chance = 6, type = "point" },
+
         },
+
         [FourCC('Otch')] = {
+
             { order = "stomp", chance = 4, type = "immediate" },
+
             { order = "carrionswarm", chance = 6, type = "point" },
+
         },
+
         [FourCC('O02Z')] = {
+
             { order = "stomp", chance = 4, type = "immediate" },
+
             { order = "carrionswarm", chance = 6, type = "point" },
+
         },
+
         [FourCC('h0D0')] = {
+
             { order = "clusterrockets", chance = 4, type = "point" },
+
             { order = "blackarrowon", chance = 5, type = "target" },
+
             { order = "tranquility", chance = 6, type = "immediate", hp = 40 },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('Obla')] = { ult = FourCC('AOww'), skills = { FourCC('A12F'), FourCC('AOcr') } },
+
         [FourCC('Ofar')] = { skills = { FourCC('A12E'), FourCC('AOcl'), FourCC('AOsf'), FourCC('AOfs') } },
+
         [FourCC('Otch')] = { ult = FourCC('AOre'), skills = { FourCC('AOre'), FourCC('AOr2'), FourCC('A026') } },
+
         [FourCC('O02Z')] = { ult = FourCC('AOre'), skills = { FourCC('AOre'), FourCC('AOr2'), FourCC('A026') } },
+
     },
+
     chooseBuild = ChooseBuildings_Horde,
+
     perebor = PereborBuildings_Horde,
+
     join = Join_Horde,
+
     strateg = Strateg_Horde,
+
     strategEC = Strateg_Horde_EC,
+
     upgrade = UpgradeHorde,
+
     naval = aiNavalTrain_Horde,
+
     wall = FourCC('h0HO'),
+
 })
+
+
 
 RegisterAiRace("JungleTrolls", {
+
     tokens = {"jt", "jungletrolls", "trolls"},
+
     weight = 1,
+
     altar = FourCC('h0N0'),
+
     start = startJungleTrolls,
+
     -- Phase 3 declarative build order (engine: AiRunChooseBuildings). Mirrors
+
     -- ChooseBuildings_JungleTrolls exactly. chooseBuild kept as fallback.
+
     buildings = {
+
         seed = FourCC('h0N2'),
+
         { FourCC('h0N5'), 4, 4 },
+
         { FourCC('h0N2'), 18, 4 },
+
         { FourCC('h0MY'), 10, 4 },
+
         { FourCC('h0N3'), 5, 2 },
+
         { FourCC('h0N0'), 3, 6 },
+
         { FourCC('h0MX'), 8, 6, gate = "tier2" },
+
         { FourCC('h0MW'), 8, 6, gate = "tier2" },
+
         { FourCC('h0D3'), 2, 1, gate = "tier2" },
+
     },
+
     gates = {
+
         tier2 = function(pi)
+
             return getAiCount(pi, FourCC('h0N1')) + getAiCount(pi, FourCC('h0N6')) >= 1
+
         end,
+
         tier3 = function(pi)
+
             return getAiCount(pi, FourCC('h0N6')) >= 1
+
         end,
+
     },
+
     -- Phase 3 declarative production (engine: AiRunProduction).
+
     production = {
+
         [FourCC('h0MY')] = {
+
             { FourCC('o04M'), 5 },
+
             { FourCC('o04L'), 4 },
+
             { FourCC('o05E'), 1, gate = "tier2" },
+
         },
+
         [FourCC('h0MX')] = {
+
             { FourCC('o04O'), 3 },
+
             { FourCC('o04R'), 3 },
+
             { branch = "jt", black = FourCC('o04N'), other = FourCC('o04P'), weight = 4 },
+
         },
+
         [FourCC('h0MW')] = {
+
             { FourCC('o04S'), 3 },
+
             { FourCC('o04U'), 4 },
+
             { FourCC('o05J'), 2, gate = "tier2" },
+
             { FourCC('o05G'), 2, gate = "tier3" },
+
         },
+
         [FourCC('h0N0')] = {
+
             { FourCC('O054'), 1, limit = 1 }, { FourCC('O05A'), 1, limit = 1 }, { FourCC('O05D'), 1, limit = 1 },
+
             { branch = "jt", black = FourCC('O05L'), other = FourCC('O055'), limit = 1 },
+
         },
+
         worker = { id = FourCC('o04Q'), cap = 18,
+
                    from = { FourCC('h0N5'), FourCC('h0N1'), FourCC('h0N6') } },
+
     },
+
     branches = {
+
         jt = function(pi) return JungleTrollsBranchIsBlack(pi) end,
+
     },
+
     -- Phase 3 declarative strategy (engine: AiRunStrateg).
+
     ecoWeights = {
+
         [FourCC('h0N2')] = 1,
+
         [FourCC('h0N5')] = 2,
+
         [FourCC('h0N1')] = 5,
+
         [FourCC('h0N6')] = 8,
+
         [FourCC('h0MY')] = 2, [FourCC('h0N3')] = 2,
+
         [FourCC('h0N0')] = 3,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h0N3'), FourCC('R0I8'), 6}, {FourCC('h0N3'), FourCC('R0I9'), 6}, {FourCC('h0N3'), FourCC('R0IA'), 6}, {FourCC('h0N3'), FourCC('R0II'), 2} },
+
                 { {FourCC('h0MY'), FourCC('R0IK'), 6}, {FourCC('h0MY'), FourCC('R0IM'), 6}, {FourCC('h0N2'), FourCC('R0IJ'), 6} },
+
                 { {FourCC('h0MX'), FourCC('R0IB'), 6}, {FourCC('h0MX'), FourCC('R0IC'), 6}, {FourCC('h0MX'), FourCC('R0ID'), 6} },
+
                 { {FourCC('h0MW'), FourCC('R0IL'), 6}, {FourCC('h0MW'), FourCC('R0IN'), 6}, {FourCC('h0MW'), FourCC('R0IJ'), 6} },
+
             }},
+
             { at = 45, action = "fleet", wall = FourCC('h0D3') },
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('h0N5'), to = FourCC('h0N1'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h0N1'), to = FourCC('h0N6'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('o04U')] = {
+
             { order = "berserk", chance = 3, type = "immediate" },
+
         },
+
         [FourCC('o04O')] = {
+
             { order = "bloodlust", chance = 4, type = "target" },
+
             { order = "dispel", chance = 4, type = "point" },
+
             { order = "slow", chance = 4, type = "target" },
+
         },
+
         [FourCC('o04R')] = {
+
             { order = "stasistrap", chance = 4, type = "point" },
+
             { order = "evileye", chance = 4, type = "point" },
+
             { order = "healingward", chance = 4, type = "self" },
+
         },
+
         [FourCC('o04N')] = {
+
             { order = "flamingarrows", chance = 4, type = "target" },
+
             { order = "Vengeance", chance = 5, type = "target" },
+
             { order = "hex", chance = 4, type = "target", notStructure = true },
+
         },
+
         [FourCC('o04P')] = {
+
             { order = "frostarmor", chance = 4, type = "target" },
+
             { order = "blizzard", chance = 4, type = "point" },
+
         },
+
         [FourCC('o04S')] = {
+
             { order = "ravenform", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('o05J')] = {
+
             { order = "ravenform", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('o04M')] = {
+
             { order = "chemicalrage", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('O054')] = {
+
             { order = "hex", chance = 3, type = "target", notStructure = true },
+
         },
+
         [FourCC('O05A')] = {
+
             { order = "whirlwind", chance = 4, type = "immediate" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('O054')] = { ult = FourCC('AOsw'), skills = { FourCC('AOhw'), FourCC('A1E0'), FourCC('A1D0') } },
+
         [FourCC('O05A')] = { ult = FourCC('A1E4'), skills = { FourCC('A1E2'), FourCC('A1E3'), FourCC('A1D0') } },
+
         [FourCC('O05D')] = { ult = FourCC('A1E8'), skills = { FourCC('A1E6'), FourCC('A1E9'), FourCC('A1EA') } },
+
         [FourCC('O055')] = { ult = FourCC('A1DM'), skills = { FourCC('A1DB'), FourCC('A1DC'), FourCC('A1EL') } },
+
         [FourCC('O05L')] = { ult = FourCC('A1ET'), skills = { FourCC('A1ES'), FourCC('A1EV'), FourCC('A1EY') } },
+
     },
+
     chooseBuild = ChooseBuildings_JungleTrolls,
+
     perebor = PereborBuildings2_JungleTrolls,
+
     join = Join_JungleTrolls,
+
     strateg = Strateg_JungleTrolls,
+
     strategEC = Strateg_JungleTrolls_EC,
+
     upgrade = UpgradeJungleTrolls,
+
     naval = aiNavalTrain_JungleTrolls,
+
     wall = FourCC('h0N2'),
+
 })
 
+
+
 -- ====================================================================
+
 -- ForestTrolls (Phase 3 data-driven)
+
 -- TODO: verify building/unit mappings and research assignments
+
 -- ====================================================================
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 ---@return nothing
+
 function Join_ForestTrolls(id, pi, u)
+
     if id == FourCC('o04V') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("ForestTrolls", {
+
     tokens = {"ft", "foresttrolls"},
+
     weight = 1,
+
     altar = FourCC('h0MU'),
+
     start = startForestTrolls,
+
     buildings = {
+
         seed = FourCC('h0MV'),
+
         { FourCC('h0MT'), 4, 4 }, { FourCC('h0MV'), 18, 4 },
+
         { FourCC('h0MS'), 10, 4 }, { FourCC('h0N7'), 5, 2 },
+
         { FourCC('h0MU'), 3, 6 }, { FourCC('h0N4'), 25, 1 },
+
         { FourCC('h0MZ'), 8, 6, gate = "tier2" },
+
         { FourCC('h0MR'), 8, 6, gate = "tier2" },
+
     },
+
     gates = {
+
         tier2 = function(pi)
+
             return getAiCount(pi, FourCC('h0N8')) + getAiCount(pi, FourCC('h0N9')) >= 1
+
         end,
+
     },
+
     production = {
+
         [FourCC('h0MT')] = {
+
             { FourCC('o04V'), 3, limit = 20 },
+
             { FourCC('o04X'), 1 },
+
         },
+
         [FourCC('h0N8')] = {
+
             { FourCC('o04V'), 3, limit = 20 },
+
             { FourCC('o04X'), 1 },
+
         },
+
         [FourCC('h0N9')] = {
+
             { FourCC('o04V'), 3, limit = 20 },
+
             { FourCC('o04X'), 1 },
+
         },
+
         [FourCC('h0MS')] = {
+
             { FourCC('o04W'), 5 },
+
             { FourCC('o04X'), 3 },
+
             { FourCC('o04Y'), 3, gate = "tier2" },
+
             { FourCC('o05F'), 2, gate = "tier2" },
+
         },
+
         [FourCC('h0MZ')] = {
+
             { FourCC('o051'), 3 },
+
             { FourCC('o052'), 3 },
+
         },
+
         [FourCC('h0MR')] = {
+
             { FourCC('o04Z'), 3 },
+
             { FourCC('o050'), 4 },
+
             { FourCC('o053'), 4 },
+
         },
+
         [FourCC('h0MU')] = {
+
             { FourCC('O059') }, { FourCC('O058') }, { FourCC('O057') },
+
             { FourCC('o05M'), 1, limit = 1, gate = "tier2" },
+
             { FourCC('o05N'), 1, limit = 1, gate = "tier2" },
+
             { FourCC('o05O'), 1, limit = 1, gate = "tier2" },
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('h0MV')] = 1, [FourCC('h0MT')] = 2,
+
         [FourCC('h0N8')] = 5, [FourCC('h0N9')] = 8,
+
         [FourCC('h0MS')] = 2, [FourCC('h0N7')] = 2,
+
         [FourCC('h0MU')] = 3,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h0N7'), FourCC('R0D2'), 6}, {FourCC('h0N7'), FourCC('R0D3'), 6} },
+
                 { {FourCC('h0MS'), FourCC('R0DY'), 6}, {FourCC('h0MS'), FourCC('R0EE'), 6} },
+
                 { {FourCC('h0MZ'), FourCC('R0EH'), 6}, {FourCC('h0MZ'), FourCC('R0EI'), 6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('h0MT'), to = FourCC('h0N8'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h0N8'), to = FourCC('h0N9'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('o04W')] = {
+
             { order = "berserk", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('o04Y')] = {
+
             { order = "berserk", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('o04Z')] = {
+
             { order = "berserk", chance = 3, type = "immediate" },
+
         },
+
         [FourCC('o053')] = {
+
             { order = "thunderbolt", chance = 4, type = "target" },
+
             { order = "berserk", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('o050')] = {
+
             { order = "Thornyshield", chance = 4, type = "target" },
+
         },
+
         [FourCC('o051')] = {
+
             { order = "clusterrockets", chance = 4, type = "point" },
+
             { order = "ward", chance = 4, type = "point" },
+
         },
+
         [FourCC('o052')] = {
+
             { order = "heal", chance = 4, type = "heal", allyRange = 550 },
+
             { order = "dispel", chance = 4, type = "point" },
+
             { order = "innerfire", chance = 4, type = "target" },
+
         },
+
         [FourCC('o05M')] = {
+
             { order = "roar", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('o05N')] = {
+
             { order = "howlofterror", chance = 4, type = "immediate" },
+
             { order = "berserk", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('o05O')] = {
+
             { order = "chainlightning", chance = 4, type = "target" },
+
             { order = "monsoon", chance = 4, type = "point" },
+
         },
+
     },
+
     join = Join_ForestTrolls,
+
     naval = aiNavalTrain_JungleTrolls,
+
     wall = FourCC('h0N4'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_HordeW2(id, pi, u)
+
     if id == FourCC('w200') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif id == FourCC('w201') or id == FourCC('w220') then
+
         GroupAddUnit(udg_Ai_navy[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("HordeW2", {
+
     tokens = {"hw2", "hordew2", "orda2"},
+
     weight = 1,
+
     altar = FourCC('w20a'),
+
     start = startHordeW2,
+
     buildings = {
+
         seed = FourCC('w20y'),
+
         { FourCC('w20q'), 4, 4 }, { FourCC('w20y'), 18, 4 },
+
         { FourCC('w20r'), 10, 4 }, { FourCC('w214'), 5, 2 },
+
         { FourCC('w20a'), 3, 6 },
+
         { FourCC('w20i'), 8, 6, gate = "tier2" },
+
         { FourCC('w20t'), 8, 6, gate = "tier2" },
+
         { FourCC('w210'), 4, 4, gate = "tier2" },
+
         { FourCC('w212'), 4, 4, gate = "tier2" },
+
         { FourCC('w20u'), 25, 1 },
+
     },
+
     gates = {
+
         tier2 = function(pi)
+
             return getAiCount(pi, FourCC('w20w')) + getAiCount(pi, FourCC('w20e')) >= 1
+
         end,
+
     },
+
     production = {
+
         [FourCC('w20q')] = { {FourCC('w200'),3,limit=20} },
+
         [FourCC('w20w')] = { {FourCC('w200'),3,limit=20} },
+
         [FourCC('w20e')] = { {FourCC('w200'),3,limit=20} },
+
         [FourCC('w20r')] = {
+
             {FourCC('w203'), 4}, {FourCC('w204'), 4}, {FourCC('w208'), 3,gate="tier2"},
+
         },
+
         [FourCC('w20i')] = {
+
             {FourCC('w201'), 2}, {FourCC('w206'), 3}, {FourCC('w207'), 2,gate="tier2"},
+
         },
+
         [FourCC('w20t')] = {
+
             {FourCC('w205'), 3}, {FourCC('w209'), 2,gate="tier2"}, {FourCC('w211'), 3},
+
         },
+
         [FourCC('w20a')] = {
+
             {FourCC('W200'), 1, limit = 1}, {FourCC('W201'), 1, limit = 1}, {FourCC('W202'), 1, limit = 1},
+
         },
+
         [FourCC('w210')] = { {FourCC('w202'), 3} },
+
         [FourCC('w212')] = { {FourCC('w213'), 3} },
+
     },
+
     ecoWeights = {
+
         [FourCC('w20y')] = 1, [FourCC('w20q')] = 2,
+
         [FourCC('w20w')] = 5, [FourCC('w20e')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('w214'),FourCC('w2r0'),6},{FourCC('w214'),FourCC('w2r1'),6},{FourCC('w214'),FourCC('w2r2'),6},{FourCC('w214'),FourCC('w2rb'),6} },
+
                 { {FourCC('w20r'),FourCC('w2r7'),6},{FourCC('w20r'),FourCC('w2r8'),6},{FourCC('w20r'),FourCC('w2r9'),6} },
+
                 { {FourCC('w20t'),FourCC('w2r4'),6},{FourCC('w20t'),FourCC('w2r5'),6},{FourCC('w20t'),FourCC('w2r6'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('w20q'), to = FourCC('w20w'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('w20w'), to = FourCC('w20e'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('w208')] = {
+
             { order = "frenzy", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('w201')] = {
+
             { order = "windwalk", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('w206')] = {
+
             { order = "selfdestruct", chance = 6, type = "immediate", hp = 30 },
+
         },
+
         [FourCC('w205')] = {
+
             { order = "bloodlust", chance = 4, type = "target" },
+
             { order = "spiritwolf", chance = 5, type = "immediate" },
+
         },
+
         [FourCC('w209')] = {
+
             { order = "frostarmor", chance = 4, type = "target" },
+
             { order = "raisedead", chance = 5, type = "point" },
+
         },
+
         [FourCC('w211')] = {
+
             { order = "heal", chance = 4, type = "heal", allyRange = 550 },
+
             { order = "dispel", chance = 4, type = "point" },
+
             { order = "slow", chance = 4, type = "target" },
+
         },
+
         [FourCC('w202')] = {
+
             { order = "flamestrike", chance = 4, type = "point" },
+
             { order = "breathoffire", chance = 4, type = "point" },
+
         },
+
     },
+
     join = Join_HordeW2,
+
     wall = FourCC('w20u'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Nerubs(id, pi, u)
+
     if id == FourCC('h0BE') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif id == FourCC('u019') then
+
         -- Cocoon built - upgrade to intended building
+
         local target = AiData[pi]["upgradeCocoon"]
+
         if target ~= nil and target ~= 0 then
+
             IssueImmediateOrderById(u, target)
+
             AiData[pi]["upgradeCocoon"] = nil
+
         end
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Nerubs", {
+
     tokens = {"nerub", "nerubs"},
+
     weight = 1,
+
     altar = FourCC('h0CU'),
+
     start = startNerubs,
+
     chooseBuild = function(pi)
+
         -- Nerubs workers can only build cocoons (u019), which then upgrade
+
         local realBuilding = AiRunChooseBuildings(pi, AiRaces["Nerubs"])
+
         if realBuilding ~= 0 then
+
             AiData[pi]["upgradeCocoon"] = realBuilding
+
             return FourCC('u019')
+
         end
+
         return 0
+
     end,
+
     buildings = {
+
         seed = FourCC('h0GH'),
+
         { FourCC('h0CO'), 4, 4 }, { FourCC('h0GH'), 18, 4 },
+
         { FourCC('h0CR'), 10, 4 }, { FourCC('h0CS'), 5, 2 },
+
         { FourCC('h0CU'), 3, 6 }, { FourCC('u01A'), 25, 1 },
+
         { FourCC('h0CT'), 8, 6, gate = "tier2" },
+
         { FourCC('h0CV'), 8, 6, gate = "tier2" },
+
     },
+
     gates = {
+
         tier2 = function(pi)
+
             return getAiCount(pi, FourCC('h0CP')) + getAiCount(pi, FourCC('h0CQ')) >= 1
+
         end,
+
     },
+
     production = {
+
         [FourCC('h0CO')] = { {FourCC('h0BE'),3,limit=20} },
+
         [FourCC('h0CP')] = { {FourCC('h0BE'),3,limit=20} },
+
         [FourCC('h0CQ')] = { {FourCC('h0BE'),3,limit=20} },
+
         [FourCC('h0CR')] = {
+
             {FourCC('u01J'), 4}, {FourCC('u01G'), 4}, {FourCC('u01F'), 3},
+
         },
+
         [FourCC('h0CT')] = {
+
             {FourCC('u01C'), 3}, {FourCC('u01K'), 2, gate="tier2"},
+
             {FourCC('u01B'), 2, gate="tier2"}, {FourCC('u01I'), 3},
+
         },
+
         [FourCC('h0CV')] = {
+
             {FourCC('u01H'), 3}, {FourCC('u01D'), 3},
+
         },
+
         [FourCC('h0CU')] = {
+
             {FourCC('U01U'), 1, limit = 1}, {FourCC('U01V'), 1, limit = 1}, {FourCC('U01W'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('h0GH')] = 1, [FourCC('h0CO')] = 2,
+
         [FourCC('h0CP')] = 5, [FourCC('h0CQ')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h0CS'),FourCC('Abds'),6},{FourCC('h0CS'),FourCC('Arlm'),6} },
+
                 { {FourCC('h0CR'),FourCC('Abds'),6} },
+
                 { {FourCC('h0CT'),FourCC('Abds'),6},{FourCC('h0CV'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 45, action = "fleet", wall = FourCC('u01A') },
+
             { at = 25, action = "techUp", from = FourCC('h0CO'), to = FourCC('h0CP'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h0CP'), to = FourCC('h0CQ'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('u01C')] = {
+
             { order = "parasite", chance = 4, type = "target" },
+
         },
+
         [FourCC('u01H')] = {
+
             { order = "heal", chance = 3, type = "heal", allyRange = 550 },
+
             { order = "dispel", chance = 3, type = "point" },
+
             { order = "lightningshield", chance = 3, type = "target" },
+
         },
+
         [FourCC('u01D')] = {
+
             { order = "thunderbolt", chance = 4, type = "target" },
+
             { order = "ward", chance = 4, type = "point" },
+
             { order = "entanglingroots", chance = 4, type = "target" },
+
         },
+
         [FourCC('u01E')] = {
+
             { order = "web", chance = 4, type = "target" },
+
             { order = "raisedead", chance = 5, type = "point" },
+
         },
+
     },
+
     join = Join_Nerubs,
+
     wall = FourCC('u01A'),
+
     naval = aiNavalTrain_Common,
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Forsaken(id, pi, u)
+
     if id == FourCC('h0J5') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Forsaken", {
+
     tokens = {"forsaken", "fors", "ud"},
+
     weight = 1,
+
     altar = FourCC('h0JR'),
+
     start = startForsaken,
+
     buildings = {
+
         seed = FourCC('h0JD'),
+
         { FourCC('h0JP'), 4, 4 }, { FourCC('h0JD'), 18, 4 },
+
         { FourCC('h0JJ'), 10, 4 }, { FourCC('h0JO'), 5, 2 },
+
         { FourCC('h0JR'), 3, 6 }, { FourCC('h0JM'), 25, 1 },
+
         { FourCC('h0JI'), 4, 2, gate = "tier2" },
+
         { FourCC('h0JK'), 8, 6, gate = "tier2" },
+
     },
+
     gates = {
+
         tier2 = function(pi)
+
             return getAiCount(pi, FourCC('h0JQ')) + getAiCount(pi, FourCC('h0JL')) >= 1
+
         end,
+
     },
+
     production = {
+
         [FourCC('h0JP')] = { {FourCC('h0J5'), 3, limit = 22} },
+
         [FourCC('h0JQ')] = { {FourCC('h0J5'), 3, limit = 22} },
+
         [FourCC('h0JL')] = { {FourCC('h0J5'), 3, limit = 22} },
+
         [FourCC('h0JJ')] = {
+
             {FourCC('n04T'), 4}, {FourCC('h0JC'), 4},
+
             {FourCC('h0JN'), 3, gate = "tier2"}, {FourCC('n04U'), 2, gate = "tier2"},
+
         },
+
         [FourCC('h0JK')] = {
+
             {FourCC('n04Y'), 3}, {FourCC('n04X'), 3},
+
             {FourCC('n04V'), 2, gate = "tier2"}, {FourCC('h0JA'), 1, gate = "tier2"},
+
         },
+
         [FourCC('h0JI')] = {
+
             {FourCC('o02X'), 3}, {FourCC('u02C'), 2, gate = "tier2"}, {FourCC('o02Y'), 2, gate = "tier2"},
+
         },
+
         [FourCC('h0JR')] = {
+
             {FourCC('N058'), 1, limit = 1}, {FourCC('O031'), 1, limit = 1}, {FourCC('O030'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('h0JD')] = 1, [FourCC('h0JP')] = 2,
+
         [FourCC('h0JQ')] = 5, [FourCC('h0JL')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h0JO'), FourCC('Arlm'), 6} },
+
                 { {FourCC('h0JK'), FourCC('Abds'), 6} },
+
                 { {FourCC('h0JJ'), FourCC('Abds'), 6},{FourCC('h0JI'), FourCC('Abds'), 6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('h0JP'), to = FourCC('h0JQ'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h0JQ'), to = FourCC('h0JL'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('n04T')] = {
+
             { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+
         },
+
         [FourCC('h0JN')] = {
+
             { order = "shadowstrike", chance = 4, type = "target", notStructure = true },
+
         },
+
         [FourCC('n04U')] = {
+
             { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+
             { order = "defend", chance = 3, type = "immediate" },
+
         },
+
         [FourCC('n04Y')] = {
+
             { order = "curse", chance = 5, type = "target" },
+
             { order = "faeriefire", chance = 6, type = "target" },
+
         },
+
         [FourCC('n04X')] = {
+
             { order = "carrionswarm", chance = 4, type = "point" },
+
             { order = "rainoffire", chance = 4, type = "point" },
+
             { order = "cannibalize", chance = 5, type = "immediate", hp = 50 },
+
         },
+
         [FourCC('n04V')] = {
+
             { order = "windwalk", chance = 4, type = "immediate" },
+
             { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+
         },
+
         [FourCC('h0JA')] = {
+
             { order = "animatedead", chance = 4, type = "point" },
+
             { order = "raisedead", chance = 4, type = "point" },
+
             { order = "resurrection", chance = 5, type = "immediate" },
+
         },
+
         [FourCC('o02X')] = {
+
             { order = "channel", chance = 4, type = "self" },
+
         },
+
         [FourCC('u02C')] = {
+
             { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+
         },
+
     },
+
     join = Join_Forsaken,
+
     wall = FourCC('h0JM'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Alliance(id, pi, u)
+
     if id == FourCC('hpea') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Alliance", {
+
     tokens = {"alliance", "ally"},
+
     weight = 1,
+
     altar = FourCC('halt'),
+
     start = startAlliance,
+
     buildings = {
+
         seed = FourCC('hhou'),
+
         { FourCC('htow'), 4, 4 }, { FourCC('hhou'), 18, 4 },
+
         { FourCC('hbar'), 10, 4 }, { FourCC('halt'), 3, 6 },
+
         { FourCC('harm'), 5, 2 }, { FourCC('hbla'), 8, 6, gate = "tier2" },
+
         { FourCC('hars'), 8, 6, gate = "tier2" },
+
         { FourCC('hwtw'), 4, 2 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('hkee')) + getAiCount(pi, FourCC('hcas')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('htow')] = { {FourCC('hpea'),3,limit=18} },
+
         [FourCC('hkee')] = { {FourCC('hpea'),3,limit=18} },
+
         [FourCC('hcas')] = { {FourCC('hpea'),3,limit=18} },
+
         [FourCC('hbar')] = {
+
             {FourCC('hfoo'), 4}, {FourCC('hkni'), 3},
+
         },
+
         [FourCC('hbla')] = {
+
             {FourCC('hrif'), 3}, {FourCC('hmtm'), 2},
+
         },
+
         [FourCC('hars')] = {
+
             {FourCC('hsor'), 3}, {FourCC('hmpr'), 3},
+
         },
+
         [FourCC('halt')] = {
+
             {FourCC('Hpal'), 1, limit = 1}, {FourCC('Hamg'), 1, limit = 1}, {FourCC('Hmkg'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('hhou')] = 1, [FourCC('htow')] = 2,
+
         [FourCC('hkee')] = 5, [FourCC('hcas')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('harm'),FourCC('Abds'),6},{FourCC('harm'),FourCC('Arlm'),6} },
+
                 { {FourCC('hbar'),FourCC('Abds'),6} },
+
                 { {FourCC('hbla'),FourCC('Abds'),6},{FourCC('hars'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('htow'), to = FourCC('hkee'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('hkee'), to = FourCC('hcas'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('Hpal')] = {
+
             { order = "holybolt",     chance = 5, type = "target" },
+
             { order = "divineshield", chance = 5, type = "immediate" },
+
             { order = "resurrection", chance = 5, type = "immediate" },
+
         },
+
         [FourCC('Hamg')] = {
+
             { order = "blizzard",        chance = 5, type = "point" },
+
             { order = "waterelemental",  chance = 5, type = "immediate" },
+
             { order = "massteleport",    chance = 5, type = "immediate" },
+
         },
+
         [FourCC('Hmkg')] = {
+
             { order = "stormbolt",    chance = 5, type = "target" },
+
             { order = "thunderclap",  chance = 5, type = "immediate" },
+
             { order = "avatar",       chance = 5, type = "immediate" },
+
         },
+
         [FourCC('hsor')] = {
+
             { order = "slow",         chance = 4, type = "target" },
+
             { order = "polymorph",    chance = 4, type = "target", notStructure = true },
+
             { order = "invisibility", chance = 4, type = "target" },
+
         },
+
         [FourCC('hmpr')] = {
+
             { order = "heal",       chance = 4, type = "heal", allyRange = 550 },
+
             { order = "dispel",     chance = 4, type = "point", range = 490 },
+
             { order = "innerfire",  chance = 4, type = "target" },
+
         },
+
     },
+
     attackedData = {
+
         [FourCC('hfoo')] = {
+
             { order = "defend",   chance = 3, type = "immediate" },
+
             { order = "undefend", chance = 3, type = "immediate" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('Hpal')] = { ult = FourCC('AHre'), skills = { FourCC('AHhb'), FourCC('AHds'), FourCC('AHad') } },
+
         [FourCC('Hamg')] = { ult = FourCC('AHmt'), skills = { FourCC('AHbz'), FourCC('AHwe'), FourCC('AHab') } },
+
         [FourCC('Hmkg')] = { ult = FourCC('AHav'), skills = { FourCC('AHtc'), FourCC('AHtb'), FourCC('AHbh') } },
+
     },
+
     join = Join_Alliance,
+
     wall = FourCC('hgtw'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Bandits(id, pi, u)
+
     if id == FourCC('h002') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Bandits", {
+
     tokens = {"bandit", "bandits"},
+
     weight = 1,
+
     altar = FourCC('h051'),
+
     start = startBandits,
+
     buildings = {
+
         seed = FourCC('h00A'),
+
         { FourCC('h007'), 4, 4 }, { FourCC('h00A'), 18, 4 },
+
         { FourCC('h051'), 3, 6 }, { FourCC('h00B'), 10, 4 },
+
         { FourCC('h01W'), 8, 4 }, { FourCC('h00O'), 8, 6, gate = "tier2" },
+
         { FourCC('h03O'), 5, 2 }, { FourCC('h03P'), 5, 2 },
+
         { FourCC('h03Q'), 4, 2 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('h008')) + getAiCount(pi, FourCC('h009')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('h007')] = { {FourCC('h002'),3,limit=18} },
+
         [FourCC('h008')] = { {FourCC('h002'),3,limit=18} },
+
         [FourCC('h009')] = { {FourCC('h002'),3,limit=18} },
+
         [FourCC('h00B')] = {
+
             {FourCC('h003'), 4}, {FourCC('h005'), 3}, {FourCC('h006'), 2},
+
             {FourCC('n000'), 4}, {FourCC('n002'), 3}, {FourCC('n004'), 2},
+
         },
+
         [FourCC('h01W')] = {
+
             {FourCC('h02Q'), 3}, {FourCC('h02R'), 2}, {FourCC('h02S'), 2},
+
         },
+
         [FourCC('h00O')] = {
+
             {FourCC('h00P'), 3}, {FourCC('h00S'), 2}, {FourCC('h00U'), 1},
+
             {FourCC('h029'), 3}, {FourCC('h02A'), 2}, {FourCC('h02B'), 1},
+
         },
+
         [FourCC('h051')] = {
+
             {FourCC('H03S'), 1, limit = 1}, {FourCC('H047'), 1, limit = 1}, {FourCC('H048'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('h00A')] = 1, [FourCC('h007')] = 2,
+
         [FourCC('h008')] = 5, [FourCC('h009')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h03O'),FourCC('Abds'),6},{FourCC('h03P'),FourCC('Arlm'),6} },
+
                 { {FourCC('h00B'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('h007'), to = FourCC('h008'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h008'), to = FourCC('h009'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('h003')] = {
+
             { order = "berserk",  chance = 4, type = "immediate" },
+
         },
+
         [FourCC('h005')] = {
+
             { order = "flamingarrows", chance = 4, type = "target" },
+
         },
+
         [FourCC('h00P')] = {
+
             { order = "thunderbolt", chance = 4, type = "target" },
+
             { order = "parasite",    chance = 4, type = "target" },
+
         },
+
         [FourCC('h00S')] = {
+
             { order = "curse",         chance = 4, type = "target" },
+
             { order = "faeriefire",    chance = 4, type = "target" },
+
         },
+
         [FourCC('h029')] = {
+
             { order = "carrionswarm",  chance = 4, type = "point" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('H03S')] = { skills = { FourCC('A01J'), FourCC('A01D'), FourCC('A01H'), FourCC('A01I') } },
+
         [FourCC('H047')] = { skills = { FourCC('A023'), FourCC('ANrf'), FourCC('AHab'), FourCC('ANlm') } },
+
         [FourCC('H048')] = { skills = { FourCC('A0WV'), FourCC('A026'), FourCC('A028'), FourCC('A029') } },
+
     },
+
     join = Join_Bandits,
+
     wall = FourCC('h03Q'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Undead(id, pi, u)
+
     if id == FourCC('u00P') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Undead", {
+
     tokens = {"undead", "scourge"},
+
     weight = 1,
+
     altar = FourCC('u00K'),
+
     start = startUndead,
+
     buildings = {
+
         seed = FourCC('u00H'),
+
         { FourCC('n014'), 4, 4 }, { FourCC('u00H'), 18, 4 },
+
         { FourCC('u00K'), 3, 6 }, { FourCC('u00M'), 10, 4 },
+
         { FourCC('u00N'), 8, 6, gate = "tier2" }, { FourCC('u00L'), 5, 2 },
+
         { FourCC('n012'), 8, 4 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('u00F')) + getAiCount(pi, FourCC('u00G')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('n014')] = { {FourCC('u00P'),3,limit=18} },
+
         [FourCC('u00F')] = { {FourCC('u00P'),3,limit=18} },
+
         [FourCC('u00G')] = { {FourCC('u00P'),3,limit=18} },
+
         [FourCC('n012')] = {
+
             {FourCC('n011'), 3}, {FourCC('n013'), 2}, {FourCC('u03E'), 2},
+
         },
+
         [FourCC('u00M')] = {
+
             {FourCC('u00A'), 4}, {FourCC('u00B'), 3}, {FourCC('u00D'), 2},
+
         },
+
         [FourCC('u00N')] = {
+
             {FourCC('u00C'), 3}, {FourCC('u008'), 3}, {FourCC('u00E'), 2},
+
         },
+
         [FourCC('u00K')] = {
+
             {FourCC('U00O'), 1, limit = 1}, {FourCC('U00V'), 1, limit = 1}, {FourCC('U00U'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('u00H')] = 1, [FourCC('n014')] = 2,
+
         [FourCC('u00F')] = 5, [FourCC('u00G')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('u00L'),FourCC('Abds'),6},{FourCC('u00L'),FourCC('Arlm'),6} },
+
                 { {FourCC('u00M'),FourCC('Abds'),6} },
+
                 { {FourCC('u00N'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('n014'), to = FourCC('u00F'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('u00F'), to = FourCC('u00G'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('u00A')] = {
+
             { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+
         },
+
         [FourCC('u00B')] = {
+
             { order = "web",    chance = 4, type = "target" },
+
             { order = "burrow", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('u00C')] = {
+
             { order = "raisedead",     chance = 4, type = "point" },
+
             { order = "cripple",       chance = 4, type = "target" },
+
             { order = "unholyfrenzy",  chance = 4, type = "target" },
+
         },
+
         [FourCC('u008')] = {
+
             { order = "curse",             chance = 4, type = "target" },
+
             { order = "antimagicshell",    chance = 4, type = "target" },
+
             { order = "possession",        chance = 4, type = "target" },
+
         },
+
         [FourCC('u00D')] = {
+
             { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+
         },
+
         [FourCC('u00E')] = {
+
             { order = "exhumecorpses", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('u03E')] = {
+
             { order = "devourmagic", chance = 4, type = "target", range = 525 },
+
         },
+
         [FourCC('U00O')] = {
+
             { order = "deathcoil",    chance = 5, type = "target" },
+
             { order = "deathpact",    chance = 5, type = "target" },
+
             { order = "animatedead",  chance = 5, type = "immediate" },
+
         },
+
         [FourCC('U00V')] = {
+
             { order = "frostnova",    chance = 5, type = "target" },
+
             { order = "frostarmor",   chance = 5, type = "target" },
+
             { order = "darkritual",   chance = 5, type = "target" },
+
         },
+
         [FourCC('U00U')] = {
+
             { order = "impales",      chance = 5, type = "point" },
+
             { order = "carrionswarm", chance = 5, type = "point" },
+
             { order = "locustswarm",  chance = 5, type = "immediate" },
+
         },
+
     },
+
     attackedData = {
+
         [FourCC('u00A')] = {
+
             { order = "cannibalize", chance = 3, type = "immediate", hp = 50 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('u00A')] = {
+
             { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+
         },
+
         [FourCC('u00B')] = {
+
             { order = "web",    chance = 4, type = "target" },
+
             { order = "burrow", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('u00C')] = {
+
             { order = "raisedead",     chance = 4, type = "point" },
+
             { order = "cripple",       chance = 4, type = "target" },
+
             { order = "unholyfrenzy",  chance = 4, type = "target" },
+
         },
+
         [FourCC('u008')] = {
+
             { order = "curse",             chance = 4, type = "target" },
+
             { order = "antimagicshell",    chance = 4, type = "target" },
+
             { order = "possession",        chance = 4, type = "target" },
+
         },
+
         [FourCC('u00D')] = {
+
             { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+
         },
+
         [FourCC('u00E')] = {
+
             { order = "exhumecorpses", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('u03E')] = {
+
             { order = "devourmagic", chance = 4, type = "target", range = 525 },
+
         },
+
         [FourCC('U00O')] = {
+
             { order = "deathcoil",    chance = 5, type = "target" },
+
             { order = "deathpact",    chance = 5, type = "target" },
+
             { order = "animatedead",  chance = 5, type = "immediate" },
+
         },
+
         [FourCC('U00V')] = {
+
             { order = "frostnova",    chance = 5, type = "target" },
+
             { order = "frostarmor",   chance = 5, type = "target" },
+
             { order = "darkritual",   chance = 5, type = "target" },
+
         },
+
         [FourCC('U00U')] = {
+
             { order = "impales",      chance = 5, type = "point" },
+
             { order = "carrionswarm", chance = 5, type = "point" },
+
             { order = "locustswarm",  chance = 5, type = "immediate" },
+
         },
+
     },
+
     attackedData = {
+
         [FourCC('u00A')] = {
+
             { order = "cannibalize", chance = 3, type = "immediate", hp = 50 },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('U00O')] = { skills = { FourCC('A0CO'), FourCC('A0CP'), FourCC('A0CR'), FourCC('A0CN') } },
+
         [FourCC('U00V')] = { skills = { FourCC('AQ95'), FourCC('UN99'), FourCC('A0CS'), FourCC('AQ11') } },
+
         [FourCC('U00U')] = { skills = { FourCC('A0CK'), FourCC('A0CM'), FourCC('A0BW'), FourCC('A1Q7') } },
+
     },
+
     join = Join_Undead,
+
     wall = FourCC('u00I'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Demons(id, pi, u)
+
     if id == FourCC('e02Y') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Demons", {
+
     tokens = {"demon", "demons", "legion"},
+
     weight = 1,
+
     altar = FourCC('h0DX'),
+
     start = startDemons,
+
     buildings = {
+
         seed = FourCC('h0DS'),
+
         { FourCC('h0DU'), 4, 4 }, { FourCC('h0DS'), 18, 4 },
+
         { FourCC('h0DT'), 8, 4 }, { FourCC('h0DX'), 3, 6 },
+
         { FourCC('h0DY'), 10, 4 }, { FourCC('h0E1'), 8, 6, gate = "tier2" },
+
         { FourCC('h0E0'), 8, 6, gate = "tier2" },
+
         { FourCC('h0DZ'), 5, 2 }, { FourCC('n02C'), 4, 2 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('h0DV')) + getAiCount(pi, FourCC('h0DW')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('h0DU')] = { {FourCC('e02Y'),3,limit=20} },
+
         [FourCC('h0DV')] = { {FourCC('e02Y'),3,limit=20} },
+
         [FourCC('h0DW')] = { {FourCC('e02Y'),3,limit=20} },
+
         [FourCC('h0DY')] = {
+
             {FourCC('n025'), 4}, {FourCC('n023'), 4}, {FourCC('n026'), 3},
+
             {FourCC('n027'), 3}, {FourCC('n02D'), 2}, {FourCC('n02E'), 2},
+
         },
+
         [FourCC('h0E1')] = {
+
             {FourCC('n024'), 3}, {FourCC('n022'), 2}, {FourCC('n021'), 2},
+
         },
+
         [FourCC('h0E0')] = {
+
             {FourCC('n020'), 3}, {FourCC('n028'), 2},
+
         },
+
         [FourCC('h0DX')] = {
+
             {FourCC('N02F'), 1, limit = 1}, {FourCC('N02A'), 1, limit = 1}, {FourCC('U028'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('h0DS')] = 1, [FourCC('h0DU')] = 2,
+
         [FourCC('h0DV')] = 5, [FourCC('h0DW')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h0DZ'),FourCC('Abds'),6},{FourCC('h0DZ'),FourCC('Arlm'),6} },
+
                 { {FourCC('h0DY'),FourCC('Abds'),6} },
+
                 { {FourCC('h0E0'),FourCC('Abds'),6},{FourCC('h0E1'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('h0DU'), to = FourCC('h0DV'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h0DV'), to = FourCC('h0DW'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('n025')] = {
+
             { order = "carrionswarm", chance = 5, type = "point" },
+
         },
+
         [FourCC('n023')] = {
+
             { order = "firebolt",   chance = 5, type = "target" },
+
             { order = "thunderbolt", chance = 5, type = "target" },
+
         },
+
         [FourCC('n026')] = {
+
             { order = "frostnova", chance = 5, type = "target" },
+
         },
+
         [FourCC('n024')] = {
+
             { order = "banish",    chance = 4, type = "target" },
+
             { order = "sleep",     chance = 4, type = "target" },
+
         },
+
         [FourCC('n022')] = {
+
             { order = "flamestrike", chance = 4, type = "point" },
+
             { order = "rainoffire", chance = 4, type = "point" },
+
         },
+
         [FourCC('n020')] = {
+
             { order = "doom",       chance = 5, type = "target" },
+
             { order = "chainlightning", chance = 5, type = "target" },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('n025')] = {
+
             { order = "carrionswarm", chance = 5, type = "point" },
+
         },
+
         [FourCC('n023')] = {
+
             { order = "firebolt",   chance = 5, type = "target" },
+
             { order = "thunderbolt", chance = 5, type = "target" },
+
         },
+
         [FourCC('n026')] = {
+
             { order = "frostnova", chance = 5, type = "target" },
+
         },
+
         [FourCC('n024')] = {
+
             { order = "banish",    chance = 4, type = "target" },
+
             { order = "sleep",     chance = 4, type = "target" },
+
         },
+
         [FourCC('n022')] = {
+
             { order = "flamestrike", chance = 4, type = "point" },
+
             { order = "rainoffire", chance = 4, type = "point" },
+
         },
+
         [FourCC('n020')] = {
+
             { order = "doom",       chance = 5, type = "target" },
+
             { order = "chainlightning", chance = 5, type = "target" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('N02F')] = { skills = { FourCC('A0M8'), FourCC('A0MB'), FourCC('A0MC'), FourCC('A0M9') } },
+
         [FourCC('N02A')] = { skills = { FourCC('A0MF'), FourCC('A0MA'), FourCC('A0ME'), FourCC('A0MD') } },
+
         [FourCC('U028')] = { skills = { FourCC('A0MG'), FourCC('A0MO'), FourCC('A0MN'), FourCC('A0MP') } },
+
     },
+
     join = Join_Demons,
+
     wall = FourCC('n02C'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Draenei(id, pi, u)
+
     if id == FourCC('h012') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Draenei", {
+
     tokens = {"draenei", "draeneis"},
+
     weight = 1,
+
     altar = FourCC('h057'),
+
     start = startDraenei,
+
     buildings = {
+
         seed = FourCC('h05C'),
+
         { FourCC('h015'), 4, 4 }, { FourCC('h05C'), 18, 4 },
+
         { FourCC('h057'), 3, 6 }, { FourCC('h033'), 10, 4 },
+
         { FourCC('h058'), 8, 6, gate = "tier2" }, { FourCC('h056'), 8, 6, gate = "tier2" },
+
         { FourCC('h055'), 5, 2 }, { FourCC('h05A'), 8, 4 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('h016')) + getAiCount(pi, FourCC('h017')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('h015')] = { {FourCC('h012'),3,limit=18} },
+
         [FourCC('h016')] = { {FourCC('h012'),3,limit=18} },
+
         [FourCC('h017')] = { {FourCC('h012'),3,limit=18} },
+
         [FourCC('h033')] = {
+
             {FourCC('h01S'), 3}, {FourCC('h01P'), 3}, {FourCC('e000'), 4},
+
         },
+
         [FourCC('h058')] = {
+
             {FourCC('h01O'), 2}, {FourCC('h01R'), 3}, {FourCC('h059'), 3}, {FourCC('h01T'), 2},
+
         },
+
         [FourCC('h056')] = {
+
             {FourCC('h01U'), 3}, {FourCC('h01Q'), 3},
+
         },
+
         [FourCC('h05A')] = {
+
             {FourCC('n005'), 4}, {FourCC('h05E'), 2}, {FourCC('h05D'), 2},
+
         },
+
         [FourCC('h057')] = {
+
             {FourCC('H05K'), 1, limit = 1}, {FourCC('H05L'), 1, limit = 1}, {FourCC('H05M'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('h05C')] = 1, [FourCC('h015')] = 2,
+
         [FourCC('h016')] = 5, [FourCC('h017')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h055'),FourCC('Abds'),6},{FourCC('h055'),FourCC('Arlm'),6} },
+
                 { {FourCC('h033'),FourCC('Abds'),6} },
+
                 { {FourCC('h056'),FourCC('Abds'),6},{FourCC('h058'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('h015'), to = FourCC('h016'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h016'), to = FourCC('h017'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('h01S')] = {
+
             { order = "defend",   chance = 5, type = "immediate" },
+
             { order = "berserk",   chance = 5, type = "immediate" },
+
         },
+
         [FourCC('H05K')] = {
+
             { order = "healingwave",  chance = 5, type = "heal", allyRange = 550 },
+
         },
+
     },
+
     attackedData = {
+
         [FourCC('h01S')] = {
+
             { order = "defend",   chance = 3, type = "immediate" },
+
             { order = "undefend", chance = 3, type = "immediate" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('H05K')] = { skills = { FourCC('AOhw'), FourCC('A06C'), FourCC('A068'), FourCC('A069') } },
+
     },
+
     join = Join_Draenei,
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Stromgard(id, pi, u)
+
     if id == FourCC('h0G9') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Stromgard", {
+
     tokens = {"stromgard", "stromgarde"},
+
     weight = 1,
+
     altar = FourCC('h0H3'),
+
     start = startStromgard,
+
     buildings = {
+
         seed = FourCC('h0H2'),
+
         { FourCC('h0GZ'), 4, 4 }, { FourCC('h0H2'), 18, 4 },
+
         { FourCC('h0H3'), 3, 6 }, { FourCC('h0H4'), 10, 4 },
+
         { FourCC('h0HI'), 8, 6, gate = "tier2" }, { FourCC('h0HF'), 8, 6, gate = "tier2" },
+
         { FourCC('h0H5'), 5, 2 }, { FourCC('h0H6'), 5, 2 },
+
         { FourCC('h0HG'), 4, 2 }, { FourCC('h0HU'), 6, 4 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('h0H0')) + getAiCount(pi, FourCC('h0H1')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('h0GZ')] = { {FourCC('h0G9'),3,limit=18} },
+
         [FourCC('h0H0')] = { {FourCC('h0G9'),3,limit=18} },
+
         [FourCC('h0H1')] = { {FourCC('h0G9'),3,limit=18} },
+
         [FourCC('h0H4')] = {
+
             {FourCC('h0F4'), 3}, {FourCC('h0GT'), 3}, {FourCC('h0GU'), 2},
+
             {FourCC('h0GS'), 2}, {FourCC('h0GV'), 2},
+
         },
+
         [FourCC('h0HI')] = {
+
             {FourCC('h0GX'), 3}, {FourCC('h0GW'), 3},
+
         },
+
         [FourCC('h0HF')] = {
+
             {FourCC('h0L3'), 3}, {FourCC('h0GY'), 2},
+
         },
+
         [FourCC('h0HU')] = {
+
             {FourCC('h0HD'), 2},
+
         },
+
         [FourCC('h0H3')] = {
+
             {FourCC('H0HB'), 1, limit = 1}, {FourCC('H0HL'), 1, limit = 1}, {FourCC('H0HA'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('h0H2')] = 1, [FourCC('h0GZ')] = 2,
+
         [FourCC('h0H0')] = 5, [FourCC('h0H1')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h0H6'),FourCC('Abds'),6},{FourCC('h0H5'),FourCC('Arlm'),6} },
+
                 { {FourCC('h0H4'),FourCC('Abds'),6} },
+
                 { {FourCC('h0HF'),FourCC('Abds'),6},{FourCC('h0HI'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('h0GZ'), to = FourCC('h0H0'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h0H0'), to = FourCC('h0H1'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('h0F4')] = {
+
             { order = "defend",   chance = 4, type = "immediate" },
+
             { order = "berserk",  chance = 4, type = "immediate" },
+
         },
+
         [FourCC('h0GT')] = {
+
             { order = "thunderclap", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('h0GX')] = {
+
             { order = "flamestrike", chance = 4, type = "point" },
+
             { order = "rainoffire",  chance = 4, type = "point" },
+
         },
+
         [FourCC('h0L3')] = {
+
             { order = "bloodlust", chance = 4, type = "target" },
+
             { order = "dispel",    chance = 4, type = "point" },
+
         },
+
         [FourCC('h0HD')] = {
+
             { order = "clusterrockets", chance = 4, type = "point" },
+
         },
+
     },
+
     attackedData = {
+
         [FourCC('h0F4')] = {
+
             { order = "defend",    chance = 3, type = "immediate" },
+
             { order = "undefend",  chance = 3, type = "immediate" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('H0HB')] = { skills = { FourCC('A0XM'), FourCC('A0XW'), FourCC('A0Y8'), FourCC('A0XZ') } },
+
         [FourCC('H0HL')] = { skills = { FourCC('A0XV'), FourCC('A0ZP'), FourCC('A0ZO'), FourCC('A0ZN') } },
+
         [FourCC('H0HA')] = { skills = { FourCC('A0ZQ'), FourCC('A0XK'), FourCC('A0Y6'), FourCC('A0Y7') } },
+
     },
+
     join = Join_Stromgard,
+
     wall = FourCC('h0HG'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Illidari(id, pi, u)
+
     if id == FourCC('h0EI') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Illidari", {
+
     tokens = {"illidari", "illidan"},
+
     weight = 1,
+
     altar = FourCC('h0ED'),
+
     start = startIllidari,
+
     buildings = {
+
         seed = FourCC('h0EC'),
+
         { FourCC('h0E9'), 4, 4 }, { FourCC('h0EC'), 18, 4 },
+
         { FourCC('h0ED'), 3, 6 }, { FourCC('h0EE'), 10, 4 },
+
         { FourCC('h0EF'), 8, 6, gate = "tier2" }, { FourCC('h0EG'), 8, 6, gate = "tier2" },
+
         { FourCC('o01C'), 8, 4 }, { FourCC('h0EH'), 5, 2 },
+
         { FourCC('h0EM'), 5, 2 }, { FourCC('h0EN'), 4, 2 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('h0EA')) + getAiCount(pi, FourCC('h0EB')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('h0E9')] = { {FourCC('h0EI'),3,limit=18} },
+
         [FourCC('h0EA')] = { {FourCC('h0EI'),3,limit=18} },
+
         [FourCC('h0EB')] = { {FourCC('h0EI'),3,limit=18} },
+
         [FourCC('h0EE')] = {
+
             {FourCC('h0EJ'), 3}, {FourCC('o01A'), 3}, {FourCC('o01B'), 2}, {FourCC('o019'), 2},
+
         },
+
         [FourCC('h0EF')] = {
+
             {FourCC('h0EK'), 3}, {FourCC('h0EL'), 3},
+
         },
+
         [FourCC('h0EG')] = {
+
             {FourCC('n02O'), 4}, {FourCC('n02M'), 3}, {FourCC('n02N'), 2},
+
         },
+
         [FourCC('o01C')] = {
+
             {FourCC('h04Y'), 3}, {FourCC('h04Z'), 3}, {FourCC('h050'), 2},
+
         },
+
         [FourCC('h0ED')] = {
+
             {FourCC('H043'), 1, limit = 1}, {FourCC('E01W'), 1, limit = 1}, {FourCC('E025'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('h0EC')] = 1, [FourCC('h0E9')] = 2,
+
         [FourCC('h0EA')] = 5, [FourCC('h0EB')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h0EM'),FourCC('Abds'),6},{FourCC('h0EH'),FourCC('Arlm'),6} },
+
                 { {FourCC('h0EE'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('h0E9'), to = FourCC('h0EA'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h0EA'), to = FourCC('h0EB'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('h0EK')] = {
+
             { order = "firebolt",    chance = 5, type = "target" },
+
             { order = "flamestrike", chance = 5, type = "point" },
+
         },
+
         [FourCC('h0EL')] = {
+
             { order = "thunderbolt", chance = 5, type = "target" },
+
             { order = "monsoon",     chance = 5, type = "point" },
+
         },
+
         [FourCC('n02O')] = {
+
             { order = "frostnova",   chance = 4, type = "target" },
+
             { order = "blizzard",    chance = 4, type = "point" },
+
         },
+
         [FourCC('n02M')] = {
+
             { order = "sleep",       chance = 4, type = "target" },
+
         },
+
         [FourCC('n02N')] = {
+
             { order = "carrionswarm", chance = 4, type = "point" },
+
             { order = "curse",        chance = 4, type = "target" },
+
         },
+
         [FourCC('h04Y')] = {
+
             { order = "blink",        chance = 4, type = "point" },
+
             { order = "shadowstrike", chance = 4, type = "target", notStructure = true },
+
         },
+
         [FourCC('h04Z')] = {
+
             { order = "faeriefire",   chance = 4, type = "target" },
+
             { order = "entanglingroots", chance = 4, type = "target" },
+
         },
+
     },
+
     join = Join_Illidari,
+
     wall = FourCC('h0EN'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Worgen(id, pi, u)
+
     if id == FourCC('h0IT') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Worgen", {
+
     tokens = {"worgen", "gilneas"},
+
     weight = 1,
+
     altar = FourCC('h0IN'),
+
     start = startWorgen,
+
     buildings = {
+
         seed = FourCC('h0IM'),
+
         { FourCC('h0IK'), 4, 4 }, { FourCC('h0IM'), 18, 4 },
+
         { FourCC('h0IN'), 3, 6 }, { FourCC('h0IO'), 10, 4 },
+
         { FourCC('h0IR'), 8, 6, gate = "tier2" }, { FourCC('h0IS'), 8, 6, gate = "tier2" },
+
         { FourCC('h0IQ'), 5, 2 }, { FourCC('h0JT'), 4, 2 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('h0IL')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('h0IK')] = { {FourCC('h0IT'),3,limit=18} },
+
         [FourCC('h0IL')] = { {FourCC('h0IT'),3,limit=18} },
+
         [FourCC('h0IO')] = {
+
             {FourCC('h0IU'), 3}, {FourCC('h0IV'), 3}, {FourCC('o02T'), 2},
+
         },
+
         [FourCC('h0IR')] = {
+
             {FourCC('h0NA'), 2}, {FourCC('h0IW'), 3}, {FourCC('h0J0'), 2},
+
         },
+
         [FourCC('h0IS')] = {
+
             {FourCC('h0J1'), 3}, {FourCC('h0IX'), 2},
+
         },
+
         [FourCC('h0IN')] = {
+
             {FourCC('H0J2'), 1, limit = 1}, {FourCC('H0J6'), 1, limit = 1}, {FourCC('H0J7'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('h0IM')] = 1, [FourCC('h0IK')] = 2,
+
         [FourCC('h0IL')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h0IQ'),FourCC('Abds'),6} },
+
                 { {FourCC('h0IO'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('h0IK'), to = FourCC('h0IL'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('h0IU')] = {
+
             { order = "frenzyon",    chance = 4, type = "immediate" },
+
             { order = "berserk",     chance = 4, type = "immediate" },
+
         },
+
         [FourCC('h0IV')] = {
+
             { order = "windwalk",     chance = 4, type = "immediate" },
+
             { order = "shadowstrike", chance = 4, type = "target", notStructure = true },
+
         },
+
         [FourCC('o02T')] = {
+
             { order = "howlofterror", chance = 4, type = "immediate" },
+
             { order = "roar",         chance = 4, type = "immediate" },
+
         },
+
         [FourCC('h0NA')] = {
+
             { order = "carrionswarm", chance = 4, type = "point" },
+
         },
+
         [FourCC('h0IW')] = {
+
             { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+
         },
+
         [FourCC('h0J1')] = {
+
             { order = "faeriefire", chance = 4, type = "target" },
+
             { order = "curse",      chance = 4, type = "target" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('H0J2')] = { skills = { FourCC('A11I'), FourCC('A11H'), FourCC('A11J'), FourCC('A11K') } },
+
         [FourCC('H0J6')] = { skills = { FourCC('A11L'), FourCC('A11N'), FourCC('A11M'), FourCC('A11O') } },
+
         [FourCC('H0J7')] = { skills = { FourCC('A11Q'), FourCC('A11P'), FourCC('A11R'), FourCC('A11S') } },
+
     },
+
     join = Join_Worgen,
+
     wall = FourCC('h0JT'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Ogres(id, pi, u)
+
     if id == FourCC('o03W') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Ogres", {
+
     tokens = {"ogre", "ogres"},
+
     weight = 1,
+
     altar = FourCC('o037'),
+
     start = startOgres,
+
     buildings = {
+
         seed = FourCC('o036'),
+
         { FourCC('o035'), 4, 4 }, { FourCC('o036'), 18, 4 },
+
         { FourCC('o037'), 3, 6 }, { FourCC('o03A'), 10, 4 },
+
         { FourCC('o039'), 8, 4 }, { FourCC('o03J'), 8, 6, gate = "tier2" },
+
         { FourCC('o03C'), 8, 6, gate = "tier2" }, { FourCC('o03B'), 5, 2 },
+
         { FourCC('o038'), 4, 2 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('o03D')) + getAiCount(pi, FourCC('o03E')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('o035')] = { {FourCC('o03W'),3,limit=18} },
+
         [FourCC('o03D')] = { {FourCC('o03W'),3,limit=18} },
+
         [FourCC('o03E')] = { {FourCC('o03W'),3,limit=18} },
+
         [FourCC('o03A')] = {
+
             {FourCC('o03I'), 3}, {FourCC('o03H'), 3}, {FourCC('o03G'), 2}, {FourCC('o03F'), 2},
+
         },
+
         [FourCC('o039')] = {
+
             {FourCC('o03L'), 3}, {FourCC('o03M'), 2}, {FourCC('o03K'), 2},
+
         },
+
         [FourCC('o03J')] = {
+
             {FourCC('o03P'), 3}, {FourCC('o03N'), 2}, {FourCC('o03O'), 2},
+
         },
+
         [FourCC('o03C')] = {
+
             {FourCC('o03U'), 3}, {FourCC('o03T'), 3}, {FourCC('o03V'), 2},
+
             {FourCC('o03Q'), 2}, {FourCC('o03R'), 2}, {FourCC('o03S'), 2},
+
         },
+
         [FourCC('o037')] = {
+
             {FourCC('N05L'), 1, limit = 1}, {FourCC('N05K'), 1, limit = 1}, {FourCC('N05J'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('o036')] = 1, [FourCC('o035')] = 2,
+
         [FourCC('o03D')] = 5, [FourCC('o03E')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('o03B'),FourCC('Abds'),6},{FourCC('o03B'),FourCC('Arlm'),6} },
+
                 { {FourCC('o03A'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('o035'), to = FourCC('o03D'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('o03D'), to = FourCC('o03E'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('o03I')] = {
+
             { order = "stomp",    chance = 4, type = "immediate" },
+
             { order = "berserk",  chance = 4, type = "immediate" },
+
         },
+
         [FourCC('o03H')] = {
+
             { order = "bloodlust", chance = 4, type = "target" },
+
         },
+
         [FourCC('o03G')] = {
+
             { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+
         },
+
         [FourCC('o03P')] = {
+
             { order = "flamestrike",   chance = 4, type = "point" },
+
             { order = "rainoffire",    chance = 4, type = "point" },
+
         },
+
         [FourCC('o03N')] = {
+
             { order = "windwalk",     chance = 4, type = "immediate" },
+
         },
+
         [FourCC('o03U')] = {
+
             { order = "heal",         chance = 4, type = "heal", allyRange = 550 },
+
             { order = "chainlightning", chance = 4, type = "target" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('N05L')] = { skills = { FourCC('A16V'), FourCC('A16U'), FourCC('A16X'), FourCC('A16W') } },
+
         [FourCC('N05K')] = { skills = { FourCC('A173'), FourCC('A175'), FourCC('A172'), FourCC('A174') } },
+
         [FourCC('N05J')] = { skills = { FourCC('A16Y'), FourCC('A170'), FourCC('A175'), FourCC('A171') } },
+
     },
+
     join = Join_Ogres,
+
     wall = FourCC('o038'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Gnomes(id, pi, u)
+
     if id == FourCC('h0FA') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Gnomes", {
+
     tokens = {"gnome", "gnomes"},
+
     weight = 1,
+
     altar = FourCC('h0G7'),
+
     start = startGnomes,
+
     buildings = {
+
         seed = FourCC('h0FI'),
+
         { FourCC('h0FK'), 4, 4 }, { FourCC('h0FI'), 18, 4 },
+
         { FourCC('h0FL'), 8, 4 }, { FourCC('h0G7'), 3, 6 },
+
         { FourCC('h0G3'), 10, 4 }, { FourCC('h0FY'), 8, 4 },
+
         { FourCC('h0G0'), 8, 6, gate = "tier2" }, { FourCC('h0FZ'), 4, 2 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('h0FR')) + getAiCount(pi, FourCC('h0FS')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('h0FK')] = { {FourCC('h0FA'),3,limit=18} },
+
         [FourCC('h0FR')] = { {FourCC('h0FA'),3,limit=18} },
+
         [FourCC('h0FS')] = { {FourCC('h0FA'),3,limit=18} },
+
         [FourCC('h0G3')] = {
+
             {FourCC('h0FC'), 3}, {FourCC('h0FB'), 2}, {FourCC('h0FD'), 2},
+
             {FourCC('h0FE'), 2}, {FourCC('h0FU'), 2}, {FourCC('h0FM'), 2},
+
         },
+
         [FourCC('h0FY')] = {
+
             {FourCC('h0FP'), 3}, {FourCC('h0G1'), 3}, {FourCC('h0FX'), 2},
+
             {FourCC('h0G4'), 2}, {FourCC('h0G5'), 2}, {FourCC('h0FH'), 2},
+
             {FourCC('h0G2'), 2}, {FourCC('h0FW'), 2}, {FourCC('h0FV'), 2},
+
         },
+
         [FourCC('h0G0')] = {
+
             {FourCC('h0FQ'), 3}, {FourCC('h0FN'), 2}, {FourCC('h0FO'), 2},
+
             {FourCC('h0FJ'), 2}, {FourCC('h0FF'), 2}, {FourCC('h0FG'), 2}, {FourCC('h0FT'), 2},
+
         },
+
         [FourCC('h0G7')] = {
+
             {FourCC('H0GG'), 1, limit = 1}, {FourCC('H0GE'), 1, limit = 1}, {FourCC('H0GC'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('h0FI')] = 1, [FourCC('h0FK')] = 2,
+
         [FourCC('h0FR')] = 5, [FourCC('h0FS')] = 8,
+
         [FourCC('h0FL')] = 1, [FourCC('h0G7')] = 3,
+
         [FourCC('h0G3')] = 2, [FourCC('h0FY')] = 2,
+
         [FourCC('h0G0')] = 4, [FourCC('h0FZ')] = 4,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h0FY'), FourCC('R0B7'), 1} },
+
                 { {FourCC('h0FY'), FourCC('R0B8'), 1} },
+
                 { {FourCC('h0FY'), FourCC('R0BJ'), 1} },
+
             }},
+
             { at = 35, action = "random", branches = {
+
                 { {FourCC('h0G0'), FourCC('R0BA'), 1} },
+
                 { {FourCC('h0G0'), FourCC('R0B5'), 1} },
+
                 { {FourCC('h0G0'), FourCC('R0BI'), 1} },
+
                 { {FourCC('h0G0'), FourCC('R0BB'), 1} },
+
             }},
+
             { at = 55, action = "random", branches = {
+
                 { {FourCC('h0G0'), FourCC('R0BC'), 1}, {FourCC('h0G0'), FourCC('R0BH'), 1} },
+
                 { {FourCC('h0G0'), FourCC('R0BE'), 1} },
+
                 { {FourCC('h0G0'), FourCC('R0BD'), 1}, {FourCC('h0G0'), FourCC('R0C0'), 1} },
+
                 { {FourCC('h0G0'), FourCC('R0BF'), 1}, {FourCC('h0G0'), FourCC('R0BG'), 1} },
+
             }},
+
             { at = 70, action = "random", branches = {
+
                 { {FourCC('h0G0'), FourCC('R0C1'), 1}, {FourCC('h0G0'), FourCC('R0CR'), 1} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('h0FK'), to = FourCC('h0FR'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h0FR'), to = FourCC('h0FS'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('h0FC')] = {
+
             { order = "clusterrockets", chance = 4, type = "point" },
+
         },
+
         [FourCC('h0FB')] = {
+
             { order = "thunderclap", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('h0FP')] = {
+
             { order = "silence",     chance = 4, type = "point" },
+
             { order = "flamestrike", chance = 4, type = "point" },
+
         },
+
         [FourCC('h0FQ')] = {
+
             { order = "thunderbolt",  chance = 4, type = "target" },
+
             { order = "chainlightning", chance = 4, type = "target" },
+
         },
+
         [FourCC('h0FN')] = {
+
             { order = "healingspray", chance = 4, type = "self" },
+
             { order = "acidbomb",     chance = 4, type = "target" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('H0GG')] = { skills = { FourCC('A0TK'), FourCC('A0TJ'), FourCC('A0D5'), FourCC('A0GW') } },
+
         [FourCC('H0GE')] = { skills = { FourCC('A0TH'), FourCC('A0TG'), FourCC('A0TF'), FourCC('A0TE') } },
+
         [FourCC('H0GC')] = { skills = { FourCC('A0TD'), FourCC('ANab'), FourCC('A0TC'), FourCC('AHfs') } },
+
     },
+
     join = Join_Gnomes,
+
     wall = FourCC('h0FZ'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Silitids(id, pi, u)
+
     if id == FourCC('e01G') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Silitids", {
+
     tokens = {"silitid", "silitids", "qiraji"},
+
     weight = 1,
+
     altar = FourCC('h00C'),
+
     start = startSilitids,
+
     buildings = {
+
         seed = FourCC('e01J'),
+
         { FourCC('e01H'), 4, 4 }, { FourCC('e01J'), 18, 4 },
+
         { FourCC('h00C'), 3, 6 }, { FourCC('o015'), 10, 4 },
+
         { FourCC('e01I'), 8, 4 }, { FourCC('e01L'), 5, 2 },
+
         { FourCC('e00B'), 4, 2 }, { FourCC('o017'), 4, 2 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('e021')) + getAiCount(pi, FourCC('e020')) >= 1 end,
+
     },
+
     production = {
-        pre = function(id, pi, u)
-            if id ~= FourCC('e01I') then return false end
-            local isT2 = getAiCount(pi, FourCC('e021')) + getAiCount(pi, FourCC('e020')) >= 1
-            local pool = { FourCC('e01G'), FourCC('e01G'), FourCC('e01G'), FourCC('e01Z'), FourCC('e01Z'), FourCC('e01Z') }
-            if isT2 then
-                for _, ut in ipairs({ FourCC('e01V'), FourCC('e01V'), FourCC('e01T'), FourCC('e01T'), FourCC('e01U'), FourCC('e01U'), FourCC('e01Q'), FourCC('e01Q') }) do
-                    pool[#pool + 1] = ut
-                end
-            end
-            local picked = pool[GetRandomInt(1, #pool)]
-            local p = Player(pi)
-            local x = GetUnitX(u)
-            local y = GetUnitY(u)
-            local nu = CreateUnit(p, picked, x, y, bj_UNIT_FACING)
-            GroupAddUnit(udg_Ai_units[pi], nu)
-            NumberAdd(pi, picked)
-            if picked == FourCC('e01G') then
-                GroupAddUnit(udg_Ai_builders[pi], nu)
-            else
-                GroupAddUnit(udg_Ai_army[pi], nu)
-                NumberAdd(pi, StringHash("Number"))
-            end
-            AddCountDis(nu, pi)
-            GroupRemoveUnit(udg_Ai_buildings[pi], u)
-            NumberRem(pi, FourCC('e01I'))
-            return true
-        end,
+
         [FourCC('e01H')] = { {FourCC('e01R'),3,limit=18} },
+
         [FourCC('e021')] = { {FourCC('e01R'),3,limit=18} },
+
         [FourCC('e020')] = { {FourCC('e01R'),3,limit=18} },
+
         [FourCC('o015')] = {
+
             {FourCC('u020'), 3}, {FourCC('u022'), 3}, {FourCC('e01N'), 2},
+
         },
+
         [FourCC('e01I')] = {
-            {FourCC('e01G'), 4}, {FourCC('e01Z'), 3}, {FourCC('e01V'), 2},
-            {FourCC('e01T'), 2}, {FourCC('e01U'), 2}, {FourCC('e01Q'), 2},
+
+            {FourCC('e01G'), 4}, {FourCC('e01Z'), 3}, {FourCC('e02W'), 3},
+
+            {FourCC('e01V'), 2}, {FourCC('e01T'), 2}, {FourCC('e01U'), 2},
+
+            {FourCC('e01Q'), 2}, {FourCC('e01S'), 2}, {FourCC('e01O'), 2},
+
+            {FourCC('e01P'), 2},
+
         },
+
         [FourCC('h00C')] = {
+
             {FourCC('U025'), 1, limit = 1}, {FourCC('U024'), 1, limit = 1}, {FourCC('U023'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('e01J')] = 1, [FourCC('e01H')] = 2,
+
         [FourCC('e021')] = 5, [FourCC('e020')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('e01L'),FourCC('Abds'),6},{FourCC('e01L'),FourCC('Arlm'),6} },
+
                 { {FourCC('o015'),FourCC('Abds'),6} },
+
                 { {FourCC('e01I'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('e01H'), to = FourCC('e021'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('e021'), to = FourCC('e020'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('e01T')] = {
+
             { order = "forkedlightning", chance = 4, type = "point" },
+
             { order = "parasiteon",      chance = 4, type = "immediate" },
+
             { order = "carrionswarm",    chance = 4, type = "point" },
+
         },
+
         [FourCC('e01U')] = {
+
             { order = "web", chance = 4, type = "target" },
+
         },
+
         [FourCC('u020')] = {
+
             { order = "replenishmana", chance = 4, type = "immediate" },
+
             { order = "replenishlife", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('u022')] = {
+
             { order = "devourmagic", chance = 4, type = "target", range = 525 },
+
         },
+
         [FourCC('U025')] = {
+
             { order = "earthquake",  chance = 5, type = "immediate" },
+
             { order = "hex",         chance = 5, type = "target", notStructure = true },
+
         },
+
         [FourCC('U024')] = {
+
             { order = "locustswarm", chance = 5, type = "immediate" },
+
             { order = "impales",    chance = 5, type = "point" },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('e01T')] = {
+
             { order = "forkedlightning", chance = 4, type = "point" },
+
             { order = "parasiteon",      chance = 4, type = "immediate" },
+
             { order = "carrionswarm",    chance = 4, type = "point" },
+
         },
+
         [FourCC('e01U')] = {
+
             { order = "web", chance = 4, type = "target" },
+
         },
+
         [FourCC('u020')] = {
+
             { order = "replenishmana", chance = 4, type = "immediate" },
+
             { order = "replenishlife", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('u022')] = {
+
             { order = "devourmagic", chance = 4, type = "target", range = 525 },
+
         },
+
         [FourCC('U025')] = {
+
             { order = "earthquake",  chance = 5, type = "immediate" },
+
             { order = "hex",         chance = 5, type = "target", notStructure = true },
+
         },
+
         [FourCC('U024')] = {
+
             { order = "locustswarm", chance = 5, type = "immediate" },
+
             { order = "impales",     chance = 5, type = "point" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('U025')] = { skills = { FourCC('AEtq'), FourCC('AUau'), FourCC('AOhx'), FourCC('A0ST') } },
+
         [FourCC('U024')] = { skills = { FourCC('AUls'), FourCC('AEah'), FourCC('AUts'), FourCC('A0SQ') } },
+
         [FourCC('U023')] = { skills = { FourCC('A0J2'), FourCC('A0SU'), FourCC('A0SV'), FourCC('A0J1') } },
+
     },
+
     join = Join_Silitids,
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Pandarens(id, pi, u)
+
     if id == FourCC('pa01') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Pandarens", {
+
     tokens = {"pandaren", "pandarens", "panda"},
+
     weight = 1,
+
     altar = FourCC('pa27'),
+
     start = startPandarens,
+
     buildings = {
+
         seed = FourCC('pa26'),
+
         { FourCC('pa23'), 4, 4 }, { FourCC('pa26'), 18, 4 },
+
         { FourCC('pa27'), 3, 6 }, { FourCC('pa28'), 10, 4 },
+
         { FourCC('pa31'), 8, 4 }, { FourCC('pa32'), 8, 6, gate = "tier2" },
+
         { FourCC('pa33'), 8, 6, gate = "tier2" }, { FourCC('pa30'), 5, 2 },
+
         { FourCC('h0NZ'), 6, 4 }, { FourCC('h0P5'), 4, 2 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('pa24')) + getAiCount(pi, FourCC('pa25')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('pa23')] = { {FourCC('pa01'),3,limit=20} },
+
         [FourCC('pa24')] = { {FourCC('pa01'),3,limit=20} },
+
         [FourCC('pa25')] = { {FourCC('pa01'),3,limit=20} },
+
         [FourCC('pa28')] = {
+
             {FourCC('pa06'), 3}, {FourCC('pa05'), 3}, {FourCC('pa12'), 2},
+
             {FourCC('pa11'), 2}, {FourCC('pa22'), 2},
+
         },
+
         [FourCC('pa31')] = {
+
             {FourCC('pa04'), 3}, {FourCC('pa10'), 2}, {FourCC('pa14'), 2},
+
         },
+
         [FourCC('pa32')] = {
+
             {FourCC('pa08'), 3}, {FourCC('pa13'), 2}, {FourCC('pa07'), 2},
+
         },
+
         [FourCC('pa33')] = {
+
             {FourCC('pa29'), 3}, {FourCC('pa35'), 2}, {FourCC('pa38'), 2}, {FourCC('pa09'), 2},
+
         },
+
         [FourCC('pa27')] = {
+
             {FourCC('PA36'), 1, limit = 1}, {FourCC('PA37'), 1, limit = 1}, {FourCC('PA38'), 1, limit = 1}, {FourCC('PA40'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('pa26')] = 1, [FourCC('pa23')] = 2,
+
         [FourCC('pa24')] = 5, [FourCC('pa25')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('pa30'),FourCC('Abds'),6},{FourCC('pa30'),FourCC('Arlm'),6} },
+
                 { {FourCC('pa28'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('pa23'), to = FourCC('pa24'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('pa24'), to = FourCC('pa25'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('pa06')] = {
+
             { order = "drunkenhaze", chance = 4, type = "target" },
+
             { order = "breathoffire", chance = 4, type = "point" },
+
         },
+
         [FourCC('pa05')] = {
+
             { order = "berserk",    chance = 4, type = "immediate" },
+
         },
+
         [FourCC('pa08')] = {
+
             { order = "stomp",       chance = 4, type = "immediate" },
+
         },
+
         [FourCC('pa29')] = {
+
             { order = "heal",        chance = 4, type = "heal", allyRange = 550 },
+
             { order = "dispel",      chance = 4, type = "point", range = 490 },
+
         },
+
         [FourCC('pa35')] = {
+
             { order = "cyclone",     chance = 4, type = "target", notStructure = true },
+
             { order = "monsoon",     chance = 4, type = "point" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('PA36')] = { skills = { FourCC('pa44'), FourCC('PA77'), FourCC('PA76'), FourCC('PA15') } },
+
         [FourCC('PA37')] = { skills = { FourCC('PA02'), FourCC('PA51'), FourCC('PA50'), FourCC('PA78') } },
+
         [FourCC('PA38')] = { skills = { FourCC('PA75'), FourCC('pa37'), FourCC('PA60') } },
+
         [FourCC('PA40')] = { skills = { FourCC('PA77'), FourCC('PA57'), FourCC('PA03'), FourCC('PA59'), FourCC('PA55') } },
+
     },
+
     join = Join_Pandarens,
+
     wall = FourCC('h0P5'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Bezlikie(id, pi, u)
+
     if id == FourCC('u02D') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Bezlikie", {
+
     tokens = {"bezlikie", "faceless"},
+
     weight = 1,
+
     altar = FourCC('h0HY'),
+
     start = startBezlikie,
+
     buildings = {
+
         seed = FourCC('u02E'),
+
         { FourCC('h0HZ'), 4, 4 }, { FourCC('u02E'), 18, 4 },
+
         { FourCC('h0HY'), 3, 6 }, { FourCC('h0I1'), 10, 4 },
+
         { FourCC('h0I2'), 8, 6, gate = "tier2" }, { FourCC('h0I4'), 8, 6, gate = "tier2" },
+
         { FourCC('h0I6'), 5, 2 }, { FourCC('h0K3'), 4, 2 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('h0I7')) + getAiCount(pi, FourCC('h0I8')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('h0HZ')] = { {FourCC('u02D'),3,limit=18} },
+
         [FourCC('h0I7')] = { {FourCC('u02D'),3,limit=18} },
+
         [FourCC('h0I8')] = { {FourCC('u02D'),3,limit=18} },
+
         [FourCC('h0I1')] = {
+
             {FourCC('h0MO'), 3}, {FourCC('h0MN'), 3}, {FourCC('h0I9'), 2},
+
             {FourCC('h0IA'), 2}, {FourCC('h0IB'), 2},
+
         },
+
         [FourCC('h0I2')] = {
+
             {FourCC('h0IE'), 3}, {FourCC('h0ID'), 2}, {FourCC('h0K2'), 2},
+
         },
+
         [FourCC('h0I4')] = {
+
             {FourCC('n05I'), 3}, {FourCC('h0IF'), 2}, {FourCC('h0IG'), 2}, {FourCC('h0IC'), 2},
+
         },
+
         [FourCC('h0HY')] = {
+
             {FourCC('U02H'), 1, limit = 1}, {FourCC('U02G'), 1, limit = 1}, {FourCC('U02I'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('u02E')] = 1, [FourCC('h0HZ')] = 2,
+
         [FourCC('h0I7')] = 5, [FourCC('h0I8')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h0I6'),FourCC('Abds'),6} },
+
                 { {FourCC('h0I1'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('h0HZ'), to = FourCC('h0I7'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h0I7'), to = FourCC('h0I8'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('h0MO')] = {
+
             { order = "carrionswarm", chance = 4, type = "point" },
+
             { order = "sleep",        chance = 4, type = "target" },
+
         },
+
         [FourCC('h0MN')] = {
+
             { order = "frostnova",   chance = 4, type = "target" },
+
         },
+
         [FourCC('h0IE')] = {
+
             { order = "thunderbolt",  chance = 4, type = "target" },
+
             { order = "parasite",     chance = 4, type = "target" },
+
         },
+
         [FourCC('n05I')] = {
+
             { order = "doom",         chance = 4, type = "target" },
+
             { order = "curse",        chance = 4, type = "target" },
+
         },
+
         [FourCC('h0IF')] = {
+
             { order = "flamestrike",  chance = 4, type = "point" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('U02H')] = { skills = { FourCC('A1CJ'), FourCC('A10N'), FourCC('A10L'), FourCC('A1CG') } },
+
         [FourCC('U02G')] = { skills = { FourCC('A10I'), FourCC('A10J'), FourCC('A10K'), FourCC('A10H') } },
+
         [FourCC('U02I')] = { skills = { FourCC('A10Q'), FourCC('A0WQ'), FourCC('A10R'), FourCC('A10S') } },
+
     },
+
     join = Join_Bezlikie,
+
     wall = FourCC('h0K3'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Vrykul(id, pi, u)
+
     if id == FourCC('h0C9') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Vrykul", {
+
     tokens = {"vrykul", "vryculs"},
+
     weight = 1,
+
     altar = FourCC('h0BU'),
+
     start = startVrykul,
+
     buildings = {
+
         seed = FourCC('h0BT'),
+
         { FourCC('h0BQ'), 4, 4 }, { FourCC('h0BT'), 18, 4 },
+
         { FourCC('h0BU'), 3, 6 }, { FourCC('h0BV'), 10, 4 },
+
         { FourCC('h0BX'), 8, 6, gate = "tier2" }, { FourCC('wk01'), 8, 4 },
+
         { FourCC('h0BW'), 5, 2 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('h0BR')) + getAiCount(pi, FourCC('h0BS')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('h0BQ')] = { {FourCC('h0C9'),3,limit=18} },
+
         [FourCC('h0BR')] = { {FourCC('h0C9'),3,limit=18} },
+
         [FourCC('h0BS')] = { {FourCC('h0C9'),3,limit=18} },
+
         [FourCC('h0BV')] = {
+
             {FourCC('h0AA'), 3}, {FourCC('h0AD'), 3}, {FourCC('h0A5'), 2}, {FourCC('h0A6'), 2},
+
         },
+
         [FourCC('h0BX')] = {
+
             {FourCC('h0BP'), 3}, {FourCC('h0A9'), 2}, {FourCC('h0AC'), 2}, {FourCC('h0AE'), 2},
+
         },
+
         [FourCC('wk01')] = {
+
             {FourCC('wk08'), 3}, {FourCC('wk02'), 2}, {FourCC('wk00'), 2},
+
         },
+
         [FourCC('h0BU')] = {
+
             {FourCC('H0C6'), 1, limit = 1}, {FourCC('H0C5'), 1, limit = 1}, {FourCC('H0C7'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('h0BT')] = 1, [FourCC('h0BQ')] = 2,
+
         [FourCC('h0BR')] = 5, [FourCC('h0BS')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h0BW'),FourCC('Abds'),6},{FourCC('h0BW'),FourCC('Arlm'),6} },
+
                 { {FourCC('h0BV'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 45, action = "fleet", wall = FourCC('h0D1') },
+
             { at = 25, action = "techUp", from = FourCC('h0BQ'), to = FourCC('h0BR'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h0BR'), to = FourCC('h0BS'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('h0AA')] = {
+
             { order = "berserk",    chance = 4, type = "immediate" },
+
             { order = "roar",       chance = 4, type = "immediate" },
+
         },
+
         [FourCC('h0AD')] = {
+
             { order = "thunderclap", chance = 4, type = "immediate" },
+
         },
+
         [FourCC('h0BP')] = {
+
             { order = "flamestrike",      chance = 4, type = "point" },
+
             { order = "breathoffire",     chance = 4, type = "point" },
+
         },
+
         [FourCC('h0A9')] = {
+
             { order = "stomp",       chance = 4, type = "immediate" },
+
         },
+
         [FourCC('wk08')] = {
+
             { order = "bloodlust",   chance = 4, type = "target" },
+
             { order = "lightningshield", chance = 4, type = "target" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('H0C6')] = { skills = { FourCC('A0ET'), FourCC('A0ES'), FourCC('A0EQ'), FourCC('A0ER') } },
+
         [FourCC('H0C5')] = { skills = { FourCC('A0EN'), FourCC('A0EO'), FourCC('A0EM'), FourCC('A0EP') } },
+
         [FourCC('H0C7')] = { skills = { FourCC('A0EU'), FourCC('A0EV'), FourCC('A0EW'), FourCC('A0EX') } },
+
     },
+
     wall = FourCC('h0D1'),
+
     naval = aiNavalTrain_Common,
+
     join = Join_Vrykul,
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_KulTiras(id, pi, u)
+
     if id == FourCC('h013') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("KulTiras", {
+
     tokens = {"kultiras", "kul-tiras"},
+
     weight = 1,
+
     altar = FourCC('h021'),
+
     start = startKulTiras,
+
     buildings = {
+
         seed = FourCC('h024'),
+
         { FourCC('h01X'), 4, 4 }, { FourCC('h024'), 18, 4 },
+
         { FourCC('h021'), 3, 6 }, { FourCC('h022'), 10, 4 },
+
         { FourCC('h026'), 8, 6, gate = "tier2" }, { FourCC('h027'), 8, 6, gate = "tier2" },
+
         { FourCC('h023'), 5, 2 }, { FourCC('h020'), 5, 2 },
+
         { FourCC('h025'), 4, 2 }, { FourCC('kt02'), 6, 4 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('h01Y')) + getAiCount(pi, FourCC('h01Z')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('h01X')] = { {FourCC('h013'),3,limit=18} },
+
         [FourCC('h01Y')] = { {FourCC('h013'),3,limit=18} },
+
         [FourCC('h01Z')] = { {FourCC('h013'),3,limit=18} },
+
         [FourCC('h022')] = {
+
             {FourCC('h019'), 3}, {FourCC('h01E'), 3}, {FourCC('h01D'), 2}, {FourCC('h01C'), 2},
+
         },
+
         [FourCC('h026')] = {
+
             {FourCC('h01F'), 3}, {FourCC('h01G'), 2},
+
         },
+
         [FourCC('h027')] = {
+
             {FourCC('h01H'), 3}, {FourCC('h01A'), 2}, {FourCC('h01I'), 2},
+
         },
+
         [FourCC('h021')] = {
+
             {FourCC('H01L'), 1, limit = 1}, {FourCC('H01N'), 1, limit = 1}, {FourCC('H01K'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('h024')] = 1, [FourCC('h01X')] = 2,
+
         [FourCC('h01Y')] = 5, [FourCC('h01Z')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h023'),FourCC('Abds'),6},{FourCC('h023'),FourCC('Arlm'),6} },
+
                 { {FourCC('h022'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 45, action = "fleet", wall = FourCC('h0E7') },
+
             { at = 25, action = "techUp", from = FourCC('h01X'), to = FourCC('h01Y'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('h01Y'), to = FourCC('h01Z'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('h019')] = {
+
             { order = "defend",   chance = 4, type = "immediate" },
+
             { order = "berserk",  chance = 4, type = "immediate" },
+
         },
+
         [FourCC('h01E')] = {
+
             { order = "roar",       chance = 4, type = "immediate" },
+
         },
+
         [FourCC('h01F')] = {
+
             { order = "monsoon",     chance = 4, type = "point" },
+
             { order = "chainlightning", chance = 4, type = "target" },
+
         },
+
         [FourCC('h01H')] = {
+
             { order = "heal",        chance = 4, type = "heal", allyRange = 550 },
+
             { order = "dispel",      chance = 4, type = "point", range = 490 },
+
             { order = "innerfire",   chance = 4, type = "target" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('H01L')] = { skills = { FourCC('A0TM'), FourCC('A1MF'), FourCC('A07F'), FourCC('A07C') } },
+
         [FourCC('H01N')] = { skills = { FourCC('A075'), FourCC('A076'), FourCC('A078'), FourCC('A077') } },
+
         [FourCC('H01K')] = { skills = { FourCC('A07B'), FourCC('A07A'), FourCC('A079'), FourCC('A05I') } },
+
     },
+
     naval = aiNavalTrain_Common,
+
     join = Join_KulTiras,
+
     wall = FourCC('h0E7'),
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Dalaran(id, pi, u)
+
     if id == FourCC('u001') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("Dalaran", {
+
     tokens = {"dalaran"},
+
     weight = 1,
+
     altar = FourCC('h02V'),
+
     start = startDalaran,
+
     buildings = {
+
         seed = FourCC('h031'),
+
         { FourCC('h030'), 4, 4 }, { FourCC('h031'), 18, 4 },
+
         { FourCC('h02V'), 3, 6 }, { FourCC('h02W'), 10, 4 },
+
         { FourCC('h02X'), 8, 4 }, { FourCC('h037'), 8, 4 },
+
         { FourCC('h034'), 6, 4 }, { FourCC('h02Y'), 5, 2 },
+
     },
+
     production = {
+
         [FourCC('h030')] = { {FourCC('u001'),3,limit=18} },
+
         [FourCC('h02W')] = {
+
             {FourCC('h02J'), 3}, {FourCC('h02K'), 3}, {FourCC('h02M'), 2}, {FourCC('h02P'), 2},
+
         },
+
         [FourCC('h02X')] = {
+
             {FourCC('n00B'), 3}, {FourCC('h02L'), 3}, {FourCC('h02I'), 2}, {FourCC('h02O'), 2},
+
         },
+
         [FourCC('h037')] = {
+
             {FourCC('n00C'), 3}, {FourCC('n00D'), 2},
+
         },
+
         [FourCC('h02V')] = {
+
             {FourCC('H04S'), 1, limit = 1}, {FourCC('H04W'), 1, limit = 1}, {FourCC('H04X'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('h031')] = 1, [FourCC('h030')] = 2,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('h02Y'),FourCC('Abds'),6},{FourCC('h02Y'),FourCC('Arlm'),6} },
+
                 { {FourCC('h02W'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 45, action = "fleet", wall = FourCC('h011') },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('H04S')] = {
+
             { order = "waterelemental", chance = 5, type = "immediate" },
+
             { order = "frostnova",      chance = 5, type = "target" },
+
             { order = "blizzard",       chance = 5, type = "point" },
+
         },
+
         [FourCC('H04W')] = {
+
             { order = "flamestrike",   chance = 5, type = "point" },
+
             { order = "rainoffire",    chance = 5, type = "point" },
+
             { order = "summonphoenix", chance = 5, type = "immediate" },
+
         },
+
         [FourCC('H04X')] = {
+
             { order = "massteleport", chance = 5, type = "immediate" },
+
             { order = "dispel",       chance = 5, type = "point" },
+
         },
+
         [FourCC('n00C')] = {
+
             { order = "parasite",   chance = 4, type = "target" },
+
         },
+
         [FourCC('n00D')] = {
+
             { order = "carrionswarm", chance = 4, type = "point" },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('H04S')] = {
+
             { order = "waterelemental", chance = 5, type = "immediate" },
+
             { order = "frostnova",      chance = 5, type = "target" },
+
             { order = "blizzard",       chance = 5, type = "point" },
+
         },
+
         [FourCC('H04W')] = {
+
             { order = "flamestrike",   chance = 5, type = "point" },
+
             { order = "rainoffire",    chance = 5, type = "point" },
+
             { order = "summonphoenix", chance = 5, type = "immediate" },
+
         },
+
         [FourCC('H04X')] = {
+
             { order = "massteleport", chance = 5, type = "immediate" },
+
             { order = "dispel",       chance = 5, type = "point" },
+
         },
+
         [FourCC('n00C')] = {
+
             { order = "parasite",   chance = 4, type = "target" },
+
         },
+
         [FourCC('n00D')] = {
+
             { order = "carrionswarm", chance = 4, type = "point" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('H04S')] = { skills = { FourCC('A03K'), FourCC('A03J'), FourCC('A03I'), FourCC('A03D') } },
+
         [FourCC('H04W')] = { skills = { FourCC('A03Q'), FourCC('A03O'), FourCC('A03M'), FourCC('A03L') } },
+
         [FourCC('H04X')] = { skills = { FourCC('A044'), FourCC('A03V'), FourCC('A03U'), FourCC('A1FQ') } },
+
     },
+
     wall = FourCC('h011'),
+
     naval = aiNavalTrain_Common,
+
     join = Join_Dalaran,
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_IceTrolls(id, pi, u)
+
     if id == FourCC('o045') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("IceTrolls", {
+
     tokens = {"icetroll", "icetrolls", "drakkari"},
+
     weight = 1,
+
     altar = FourCC('o049'),
+
     start = startIceTrolls,
+
     buildings = {
+
         seed = FourCC('o04C'),
+
         { FourCC('o046'), 4, 4 }, { FourCC('o04C'), 18, 4 },
+
         { FourCC('o049'), 3, 6 }, { FourCC('o04A'), 10, 4 },
+
         { FourCC('o04E'), 8, 6, gate = "tier2" }, { FourCC('o04D'), 8, 4 },
+
         { FourCC('o04J'), 8, 4 }, { FourCC('o04B'), 5, 2 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('o047')) + getAiCount(pi, FourCC('o048')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('o046')] = { {FourCC('o045'),3,limit=18} },
+
         [FourCC('o047')] = { {FourCC('o045'),3,limit=18} },
+
         [FourCC('o048')] = { {FourCC('o045'),3,limit=18} },
+
         [FourCC('o04A')] = {
+
             {FourCC('n05S'), 3}, {FourCC('n05T'), 3}, {FourCC('o04F'), 2},
+
         },
+
         [FourCC('o04E')] = {
+
             {FourCC('n05Z'), 3}, {FourCC('n05U'), 2}, {FourCC('n07B'), 2},
+
         },
+
         [FourCC('o04D')] = {
+
             {FourCC('n05Y'), 3}, {FourCC('o04T'), 2},
+
         },
+
         [FourCC('o04J')] = {
+
             {FourCC('n05V'), 3}, {FourCC('n05W'), 2}, {FourCC('n05X'), 2},
+
         },
+
         [FourCC('o049')] = {
+
             {FourCC('O04H'), 1, limit = 1}, {FourCC('O04G'), 1, limit = 1}, {FourCC('O04I'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('o04C')] = 1, [FourCC('o046')] = 2,
+
         [FourCC('o047')] = 5, [FourCC('o048')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('o04B'),FourCC('Abds'),6},{FourCC('o04B'),FourCC('Arlm'),6} },
+
                 { {FourCC('o04A'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 45, action = "fleet", wall = FourCC('h0HO') },
+
             { at = 25, action = "techUp", from = FourCC('o046'), to = FourCC('o047'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('o047'), to = FourCC('o048'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('n05S')] = {
+
             { order = "berserk",   chance = 4, type = "immediate" },
+
         },
+
         [FourCC('n05T')] = {
+
             { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+
         },
+
         [FourCC('n05Z')] = {
+
             { order = "frostnova",   chance = 4, type = "target" },
+
             { order = "frostarmor",  chance = 4, type = "target" },
+
         },
+
         [FourCC('n05U')] = {
+
             { order = "blizzard",    chance = 4, type = "point" },
+
         },
+
         [FourCC('n05Y')] = {
+
             { order = "healingwave", chance = 4, type = "heal", allyRange = 550 },
+
             { order = "bloodlust",   chance = 4, type = "target" },
+
         },
+
         [FourCC('n05V')] = {
+
             { order = "parasite",    chance = 4, type = "target" },
+
             { order = "curse",       chance = 4, type = "target" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('O04H')] = { skills = { FourCC('A1DR'), FourCC('A1DA'), FourCC('A1DS'), FourCC('A1EB') } },
+
         [FourCC('O04G')] = { skills = { FourCC('AOhw'), FourCC('A1DL'), FourCC('AOsw'), FourCC('AOvd') } },
+
         [FourCC('O04I')] = { skills = { FourCC('A1EE'), FourCC('A1ED'), FourCC('A1EC'), FourCC('A1EF') } },
+
     },
+
     wall = FourCC('h0HO'),
+
     naval = aiNavalTrain_Horde,
+
     join = Join_IceTrolls,
+
 })
 
+
+
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_FelOrc(id, pi, u)
+
     if id == FourCC('n06B') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
+
+
 
 RegisterAiRace("FelOrc", {
+
     tokens = {"felorc", "felorcs", "felork"},
+
     weight = 1,
+
     altar = FourCC('o05Y'),
+
     start = startFelOrc,
+
     buildings = {
+
         seed = FourCC('o060'),
+
         { FourCC('o05V'), 4, 4 }, { FourCC('o060'), 18, 4 },
+
         { FourCC('o05Y'), 3, 6 }, { FourCC('o05Z'), 10, 4 },
+
         { FourCC('o061'), 8, 6, gate = "tier2" }, { FourCC('o062'), 8, 6, gate = "tier2" },
+
         { FourCC('o05T'), 5, 2 }, { FourCC('o067'), 8, 4 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('o05W')) + getAiCount(pi, FourCC('o05X')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('o05V')] = { {FourCC('n06B'),3,limit=18} },
+
         [FourCC('o05W')] = { {FourCC('n06B'),3,limit=18} },
+
         [FourCC('o05X')] = { {FourCC('n06B'),3,limit=18} },
+
         [FourCC('o05Z')] = {
+
             {FourCC('n06T'), 3}, {FourCC('n06Q'), 3}, {FourCC('n06W'), 2},
+
             {FourCC('n06L'), 2}, {FourCC('n06M'), 2}, {FourCC('n06J'), 2},
+
             {FourCC('n068'), 2}, {FourCC('n06G'), 2}, {FourCC('n06D'), 2},
+
         },
+
         [FourCC('o061')] = {
+
             {FourCC('n06R'), 3}, {FourCC('n06S'), 2}, {FourCC('n06N'), 2},
+
             {FourCC('n06O'), 2}, {FourCC('n067'), 2}, {FourCC('n06C'), 2},
+
         },
+
         [FourCC('o062')] = {
+
             {FourCC('n06V'), 3}, {FourCC('n06K'), 2}, {FourCC('n06U'), 2},
+
             {FourCC('n069'), 2}, {FourCC('n06A'), 2},
+
         },
+
         [FourCC('o05Y')] = {
+
             {FourCC('N072'), 1, limit = 1}, {FourCC('N073'), 1, limit = 1}, {FourCC('N06P'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('o060')] = 1, [FourCC('o05V')] = 2,
+
         [FourCC('o05W')] = 5, [FourCC('o05X')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('o05T'),FourCC('Abds'),6},{FourCC('o05T'),FourCC('Arlm'),6} },
+
                 { {FourCC('o05Z'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 45, action = "fleet", wall = FourCC('h0D3') },
+
             { at = 25, action = "techUp", from = FourCC('o05V'), to = FourCC('o05W'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('o05W'), to = FourCC('o05X'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('n06T')] = {
+
             { order = "bloodlust",  chance = 4, type = "target" },
+
             { order = "berserk",    chance = 4, type = "immediate" },
+
         },
+
         [FourCC('n06Q')] = {
+
             { order = "lightningshield", chance = 4, type = "target" },
+
             { order = "purge",           chance = 4, type = "target" },
+
         },
+
         [FourCC('n06W')] = {
+
             { order = "carrionswarm", chance = 4, type = "point" },
+
             { order = "firebolt",     chance = 4, type = "target" },
+
         },
+
         [FourCC('n06R')] = {
+
             { order = "flamestrike",      chance = 4, type = "point" },
+
             { order = "rainoffire",       chance = 4, type = "point" },
+
         },
+
         [FourCC('n06S')] = {
+
             { order = "windwalk",    chance = 4, type = "immediate" },
+
         },
+
         [FourCC('n06V')] = {
+
             { order = "healingspray", chance = 4, type = "self" },
+
             { order = "dispel",       chance = 4, type = "point" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('N072')] = { skills = { FourCC('A1J8'), FourCC('A0EN'), FourCC('A1MD'), FourCC('A1J9') } },
+
         [FourCC('N073')] = { skills = { FourCC('AOwk'), FourCC('AOcr'), FourCC('A1JK'), FourCC('AOww') } },
+
         [FourCC('N06P')] = { skills = { FourCC('A0N7'), FourCC('A0BE'), FourCC('A1II'), FourCC('A0B7') } },
+
     },
+
     wall = FourCC('h0D3'),
+
     naval = aiNavalTrain_JungleTrolls,
+
     join = Join_FelOrc,
+
 })
+
+
 
 ---@param id integer
+
 ---@param pi integer
+
 ---@param u unit
+
 function Join_Ents(id, pi, u)
+
     if id == FourCC('e02T') then
+
         GroupAddUnit(udg_Ai_builders[pi], u)
+
     elseif aiUnitJoinsCapitalGuard(u, pi) then
+
     else
+
         aiUnitJoinsArmy(u, pi)
+
     end
+
 end
 
+
+
 RegisterAiRace("Ents", {
+
     tokens = {"ent", "ents", "treant"},
+
     weight = 1,
+
     altar = FourCC('e02G'),
+
     start = startEnts,
+
     chooseBuild = function(pi)
+
         -- Ents workers build trees that uproot; same as standard
+
         local realBuilding = AiRunChooseBuildings(pi, AiRaces["Ents"])
+
         return realBuilding
+
     end,
+
     buildings = {
+
         seed = FourCC('e00N'),
+
         { FourCC('e02B'), 4, 4 }, { FourCC('e00N'), 18, 4 },
+
         { FourCC('e02G'), 3, 6 }, { FourCC('e02F'), 10, 4 },
+
         { FourCC('e02H'), 8, 6, gate = "tier2" }, { FourCC('e02I'), 4, 2 },
+
     },
+
     gates = {
+
         tier2 = function(pi) return getAiCount(pi, FourCC('e02C')) + getAiCount(pi, FourCC('e02D')) >= 1 end,
+
     },
+
     production = {
+
         [FourCC('e02B')] = { {FourCC('e02T'),3,limit=18} },
+
         [FourCC('e02C')] = { {FourCC('e02T'),3,limit=18} },
+
         [FourCC('e02D')] = { {FourCC('e02T'),3,limit=18} },
+
         [FourCC('e02F')] = {
+
             {FourCC('e02J'), 3}, {FourCC('e02K'), 3}, {FourCC('e02L'), 2},
+
             {FourCC('e02O'), 2}, {FourCC('e03G'), 2},
+
         },
+
         [FourCC('e02H')] = {
+
             {FourCC('e02V'), 3}, {FourCC('e03A'), 2}, {FourCC('e02M'), 2}, {FourCC('e02N'), 2},
+
         },
+
         [FourCC('e02G')] = {
+
             {FourCC('E02S'), 1, limit = 1}, {FourCC('E02Q'), 1, limit = 1}, {FourCC('E02R'), 1, limit = 1},
+
         },
+
     },
+
     ecoWeights = {
+
         [FourCC('e00N')] = 1, [FourCC('e02B')] = 2,
+
         [FourCC('e02C')] = 5, [FourCC('e02D')] = 8,
+
     },
+
     strategData = {
+
         gradeCap = 100,
+
         steps = {
+
             { at = 17, action = "random", branches = {
+
                 { {FourCC('e02F'),FourCC('Abds'),6} },
+
                 { {FourCC('e02H'),FourCC('Abds'),6} },
+
             }},
+
             { at = 20, action = "tryBuy" },
+
             { at = 25, action = "techUp", from = FourCC('e02B'), to = FourCC('e02C'), cap = 3 },
+
             { at = 55, action = "techUp", from = FourCC('e02C'), to = FourCC('e02D'), cap = 3 },
+
         },
+
     },
+
     attackerData = {
+
         [FourCC('e02J')] = {
+
             { order = "entanglingroots", chance = 4, type = "target" },
+
             { order = "forceofnature",   chance = 4, type = "target" },
+
         },
+
         [FourCC('e02K')] = {
+
             { order = "thornsaura",   chance = 4, type = "immediate" },
+
         },
+
         [FourCC('e02V')] = {
+
             { order = "tranquility",  chance = 5, type = "immediate", hp = 45 },
+
             { order = "cyclone",      chance = 5, type = "target", notStructure = true },
+
         },
+
         [FourCC('e03A')] = {
+
             { order = "roar",         chance = 4, type = "immediate" },
+
         },
+
         [FourCC('e02M')] = {
+
             { order = "faeriefire",   chance = 4, type = "target" },
+
             { order = "innerfire",    chance = 4, type = "target" },
+
         },
+
     },
+
     getLvlData = {
+
         [FourCC('E02S')] = { skills = { FourCC('A0PT'), FourCC('A0FW'), FourCC('A0PS'), FourCC('A0C9') } },
+
         [FourCC('E02Q')] = { skills = { FourCC('A0PI'), FourCC('A0PK'), FourCC('A0PJ'), FourCC('A0PL') } },
+
         [FourCC('E02R')] = { skills = { FourCC('A0PM'), FourCC('A0PN'), FourCC('A0V3'), FourCC('A0PP') } },
+
     },
+
     join = Join_Ents,
+
     wall = FourCC('e02I'),
+
 })
+
 function InitCustomTriggers()
     InitTrig_sek5()
     InitTrig_RRR()
@@ -60899,28 +66596,74 @@ function InitCustomTriggers()
 end
 --===========================================================================
 function RunInitializationTriggers()
+
+
     ConditionalTriggerExecute(gg_trg_Unit_Indexer)
+
+
     ConditionalTriggerExecute(gg_trg_InitForEconomics)
+
+
     ConditionalTriggerExecute(gg_trg_UnitUpgraded)
+
+
     ConditionalTriggerExecute(gg_trg_MainInfo)
+
+
     ConditionalTriggerExecute(gg_trg_Initial_things)
+
+
     ConditionalTriggerExecute(gg_trg_Init)
+
+
     ConditionalTriggerExecute(gg_trg_LumberTest)
+
+
     ConditionalTriggerExecute(gg_trg_FelGolemStrike)
+
+
     ConditionalTriggerExecute(gg_trg_InitGlobals)
+
+
     ConditionalTriggerExecute(gg_trg_KillTestUnits___OFF_ME)
+
+
     ConditionalTriggerExecute(gg_trg_PereborPlayerForArmy)
+
+
     ConditionalTriggerExecute(gg_trg_PereborPlayerForNavy)
+
+
     ConditionalTriggerExecute(gg_trg_PortalFix)
+
+
     ConditionalTriggerExecute(gg_trg_Owner)
+
+
     ConditionalTriggerExecute(gg_trg_OwnerNax)
+
+
     ConditionalTriggerExecute(gg_trg_OwnerTurtle)
+
+
 end
+
+
 --***************************************************************************
+
+
 --*
+
+
 --*  Players
+
+
 --*
+
+
 --***************************************************************************
+
+
 function InitCustomPlayerSlots()
     -- Player 0
     SetPlayerStartLocation(Player(0), 0)
