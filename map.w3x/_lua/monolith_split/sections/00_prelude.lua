@@ -32,6 +32,10 @@ local function probeLogSanitize(message)
     text = text:gsub('"', "'")
     return text
 end
+local function logExtractTag(message)
+    local tag = string.match(tostring(message), "^%[([A-Z][A-Z0-9%-]*)%]")
+    return tag
+end
 function ProbeLogWrite(message)
     local lines = ProbeLogLines
     lines[#lines + 1] = probeLogSanitize(message)
@@ -63,10 +67,6 @@ end
 function ProbeLogEnableFlush()
     ProbeLogFlushEnabled = true
     ProbeLogWrite("[LOG] flush-enabled")
-end
-local function logExtractTag(message)
-    local tag = string.match(tostring(message), "^%[([A-Z][A-Z0-9%-]*)%]")
-    return tag
 end
 function LogEnable(tag)
     LogFilter[tag] = true
