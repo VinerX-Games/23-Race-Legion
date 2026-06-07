@@ -8026,6 +8026,14 @@ function startSilitids(pi)
     AiData[pi][StringHash("Race")] = "SL"
     SetPlayerTechResearchedSwap(FourCC('R0BV'), 1, p)
     ConditionalTriggerExecute(gg_trg_SilitidsOn)
+    local t = CreateTimer()
+    local tid = GetHandleId(t)
+    local hid = GetHandleId(hive)
+    TimerStart(t, 25, true, spawnlich)
+    SaveUnitHandle(Hash, tid, 1, hive)
+    SaveInteger(Hash, hid, 1, 0)
+    SaveBoolean(Hash, hid, 2, true)
+    t = nil
     SetPlayerName(p, "Silitids (" .. I2S(pi + 1) .. ")")
     AiRace[pi] = "Silitids"
     ProbeLogWrite("[AI] startSilitids pi=" .. tostring(pi) .. " workers=8e01G building=1e01H")
@@ -40436,21 +40444,37 @@ function spawnlich()
         SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
         SaveBoolean(Hash, GetHandleId(u2), 2, true)
         currentCount=currentCount + 1
+        if udg_AiControl[GetPlayerId(p)] then
+            GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
+            NumberAdd(GetPlayerId(p), FourCC('e01I'))
+        end
         if typeid == FourCC('e021') then
             u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
             SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
             SaveBoolean(Hash, GetHandleId(u2), 2, true)
             currentCount=currentCount + 1
+            if udg_AiControl[GetPlayerId(p)] then
+                GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
+                NumberAdd(GetPlayerId(p), FourCC('e01I'))
+            end
         elseif typeid == FourCC('e020') then
             u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
             SaveBoolean(Hash, GetHandleId(u2), 2, true)
             SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
+            if udg_AiControl[GetPlayerId(p)] then
+                GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
+                NumberAdd(GetPlayerId(p), FourCC('e01I'))
+            end
             u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
             SaveBoolean(Hash, GetHandleId(u2), 2, true)
             SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
+            if udg_AiControl[GetPlayerId(p)] then
+                GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
+                NumberAdd(GetPlayerId(p), FourCC('e01I'))
+            end
             currentCount=currentCount + 2
         end
         

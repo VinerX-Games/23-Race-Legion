@@ -3435,6 +3435,14 @@ function startSilitids(pi)
     AiData[pi][StringHash("Race")] = "SL"
     SetPlayerTechResearchedSwap(FourCC('R0BV'), 1, p)
     ConditionalTriggerExecute(gg_trg_SilitidsOn)
+    local t = CreateTimer()
+    local tid = GetHandleId(t)
+    local hid = GetHandleId(hive)
+    TimerStart(t, 25, true, spawnlich)
+    SaveUnitHandle(Hash, tid, 1, hive)
+    SaveInteger(Hash, hid, 1, 0)
+    SaveBoolean(Hash, hid, 2, true)
+    t = nil
     SetPlayerName(p, "Silitids (" .. I2S(pi + 1) .. ")")
     AiRace[pi] = "Silitids"
     ProbeLogWrite("[AI] startSilitids pi=" .. tostring(pi) .. " workers=8e01G building=1e01H")

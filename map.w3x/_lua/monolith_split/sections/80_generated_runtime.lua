@@ -32057,21 +32057,37 @@ function spawnlich()
         SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
         SaveBoolean(Hash, GetHandleId(u2), 2, true)
         currentCount=currentCount + 1
+        if udg_AiControl[GetPlayerId(p)] then
+            GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
+            NumberAdd(GetPlayerId(p), FourCC('e01I'))
+        end
         if typeid == FourCC('e021') then
             u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
             SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
             SaveBoolean(Hash, GetHandleId(u2), 2, true)
             currentCount=currentCount + 1
+            if udg_AiControl[GetPlayerId(p)] then
+                GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
+                NumberAdd(GetPlayerId(p), FourCC('e01I'))
+            end
         elseif typeid == FourCC('e020') then
             u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
             SaveBoolean(Hash, GetHandleId(u2), 2, true)
             SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
+            if udg_AiControl[GetPlayerId(p)] then
+                GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
+                NumberAdd(GetPlayerId(p), FourCC('e01I'))
+            end
             u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
             SaveBoolean(Hash, GetHandleId(u2), 2, true)
             SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
+            if udg_AiControl[GetPlayerId(p)] then
+                GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
+                NumberAdd(GetPlayerId(p), FourCC('e01I'))
+            end
             currentCount=currentCount + 2
         end
         
