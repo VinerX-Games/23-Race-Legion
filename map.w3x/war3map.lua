@@ -7801,6 +7801,65 @@ function startForsaken(pi)
     AiRace[pi] = "Forsaken"
     ProbeLogWrite("[AI] startForsaken pi=" .. tostring(pi) .. " workers=5h0J5 building=1h0JP")
 end
+---@param pi integer
+---@return nothing
+function startAlliance(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('hpea'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('htow'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('hpea')] = 5
+    AiData[pi][FourCC('htow')] = 1
+    AiData[pi][StringHash("Race")] = "AL"
+    SetPlayerTechResearchedSwap(FourCC('R0GZ'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0HX'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, p)
+    SetPlayerName(p, "Alliance (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Alliance"
+    ProbeLogWrite("[AI] startAlliance pi=" .. tostring(pi) .. " workers=5hpea building=1htow")
+end
+---@param pi integer
+---@return nothing
+function startBandits(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('h002'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h007'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('h002')] = 5
+    AiData[pi][FourCC('h007')] = 1
+    AiData[pi][StringHash("Race")] = "BD"
+    SetPlayerTechResearchedSwap(FourCC('R00G'), 1, p)
+    SetPlayerName(p, "Bandits (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Bandits"
+    ProbeLogWrite("[AI] startBandits pi=" .. tostring(pi) .. " workers=5h002 building=1h007")
+end
+---@param pi integer
+---@return nothing
+function startUndead(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(3, FourCC('u00P'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('n014'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('u00P')] = 3
+    AiData[pi][FourCC('n014')] = 1
+    AiData[pi][StringHash("Race")] = "UD"
+    SetPlayerTechResearchedSwap(FourCC('R07I'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, p)
+    SetPlayerName(p, "Undead (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Undead"
+    ProbeLogWrite("[AI] startUndead pi=" .. tostring(pi) .. " workers=3u00P building=1n014")
+end
 -- library Races ends
 -- library AI2:
 ---@param p player
@@ -58759,6 +58818,201 @@ RegisterAiRace("Forsaken", {
     },
     join = Join_Forsaken,
     wall = FourCC('h0JM'),
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Alliance(id, pi, u)
+    if id == FourCC('hpea') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Alliance", {
+    tokens = {"alliance", "ally"},
+    weight = 1,
+    altar = FourCC('halt'),
+    start = startAlliance,
+    buildings = {
+        seed = FourCC('hhou'),
+        { FourCC('htow'), 4, 4 }, { FourCC('hhou'), 18, 4 },
+        { FourCC('hbar'), 10, 4 }, { FourCC('halt'), 3, 6 },
+        { FourCC('harm'), 5, 2 }, { FourCC('hbla'), 8, 6, gate = "tier2" },
+        { FourCC('hars'), 8, 6, gate = "tier2" },
+        { FourCC('hwtw'), 4, 2 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('hkee')) + getAiCount(pi, FourCC('hcas')) >= 1 end,
+    },
+    production = {
+        [FourCC('htow')] = { {FourCC('hpea'),3,limit=18} },
+        [FourCC('hkee')] = { {FourCC('hpea'),3,limit=18} },
+        [FourCC('hcas')] = { {FourCC('hpea'),3,limit=18} },
+        [FourCC('hbar')] = {
+            {FourCC('hfoo'), 4}, {FourCC('hkni'), 3},
+        },
+        [FourCC('hbla')] = {
+            {FourCC('hrif'), 3}, {FourCC('hmtm'), 2},
+        },
+        [FourCC('hars')] = {
+            {FourCC('hsor'), 3}, {FourCC('hmpr'), 3},
+        },
+        [FourCC('halt')] = {
+            {FourCC('Hpal'), 1, limit = 1}, {FourCC('Hamg'), 1, limit = 1}, {FourCC('Hmkg'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('hhou')] = 1, [FourCC('htow')] = 2,
+        [FourCC('hkee')] = 5, [FourCC('hcas')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('harm'),FourCC('Abds'),6},{FourCC('harm'),FourCC('Arlm'),6} },
+                { {FourCC('hbar'),FourCC('Abds'),6} },
+                { {FourCC('hbla'),FourCC('Abds'),6},{FourCC('hars'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('htow'), to = FourCC('hkee'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('hkee'), to = FourCC('hcas'), cap = 3 },
+        },
+    },
+    join = Join_Alliance,
+    wall = FourCC('hgtw'),
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Bandits(id, pi, u)
+    if id == FourCC('h002') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Bandits", {
+    tokens = {"bandit", "bandits"},
+    weight = 1,
+    altar = FourCC('h051'),
+    start = startBandits,
+    buildings = {
+        seed = FourCC('h00A'),
+        { FourCC('h007'), 4, 4 }, { FourCC('h00A'), 18, 4 },
+        { FourCC('h051'), 3, 6 }, { FourCC('h00B'), 10, 4 },
+        { FourCC('h01W'), 8, 4 }, { FourCC('h00O'), 8, 6, gate = "tier2" },
+        { FourCC('h03O'), 5, 2 }, { FourCC('h03P'), 5, 2 },
+        { FourCC('h03Q'), 4, 2 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('h008')) + getAiCount(pi, FourCC('h009')) >= 1 end,
+    },
+    production = {
+        [FourCC('h007')] = { {FourCC('h002'),3,limit=18} },
+        [FourCC('h008')] = { {FourCC('h002'),3,limit=18} },
+        [FourCC('h009')] = { {FourCC('h002'),3,limit=18} },
+        [FourCC('h00B')] = {
+            {FourCC('h003'), 4}, {FourCC('h005'), 3}, {FourCC('h006'), 2},
+            {FourCC('n000'), 4}, {FourCC('n002'), 3}, {FourCC('n004'), 2},
+        },
+        [FourCC('h01W')] = {
+            {FourCC('h02Q'), 3}, {FourCC('h02R'), 2}, {FourCC('h02S'), 2},
+        },
+        [FourCC('h00O')] = {
+            {FourCC('h00P'), 3}, {FourCC('h00S'), 2}, {FourCC('h00U'), 1},
+            {FourCC('h029'), 3}, {FourCC('h02A'), 2}, {FourCC('h02B'), 1},
+        },
+        [FourCC('h051')] = {
+            {FourCC('H03S'), 1, limit = 1}, {FourCC('H047'), 1, limit = 1}, {FourCC('H048'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('h00A')] = 1, [FourCC('h007')] = 2,
+        [FourCC('h008')] = 5, [FourCC('h009')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h03O'),FourCC('Abds'),6},{FourCC('h03P'),FourCC('Arlm'),6} },
+                { {FourCC('h00B'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h007'), to = FourCC('h008'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h008'), to = FourCC('h009'), cap = 3 },
+        },
+    },
+    join = Join_Bandits,
+    wall = FourCC('h03Q'),
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Undead(id, pi, u)
+    if id == FourCC('u00P') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Undead", {
+    tokens = {"undead", "scourge"},
+    weight = 1,
+    altar = FourCC('u00K'),
+    start = startUndead,
+    buildings = {
+        seed = FourCC('u00H'),
+        { FourCC('n014'), 4, 4 }, { FourCC('u00H'), 18, 4 },
+        { FourCC('u00K'), 3, 6 }, { FourCC('u00M'), 10, 4 },
+        { FourCC('u00N'), 8, 6, gate = "tier2" }, { FourCC('u00L'), 5, 2 },
+        { FourCC('n012'), 8, 4 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('u00F')) + getAiCount(pi, FourCC('u00G')) >= 1 end,
+    },
+    production = {
+        [FourCC('n014')] = { {FourCC('u00P'),3,limit=18} },
+        [FourCC('u00F')] = { {FourCC('u00P'),3,limit=18} },
+        [FourCC('u00G')] = { {FourCC('u00P'),3,limit=18} },
+        [FourCC('u00M')] = {
+            {FourCC('u00A'), 4}, {FourCC('u00B'), 3}, {FourCC('u00D'), 2},
+        },
+        [FourCC('u00N')] = {
+            {FourCC('u00C'), 3}, {FourCC('u008'), 3}, {FourCC('u00E'), 2},
+        },
+        [FourCC('u00K')] = {
+            {FourCC('U00O'), 1, limit = 1}, {FourCC('U00V'), 1, limit = 1}, {FourCC('U00U'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('u00H')] = 1, [FourCC('n014')] = 2,
+        [FourCC('u00F')] = 5, [FourCC('u00G')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('u00L'),FourCC('Abds'),6},{FourCC('u00L'),FourCC('Arlm'),6} },
+                { {FourCC('u00M'),FourCC('Abds'),6} },
+                { {FourCC('u00N'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('n014'), to = FourCC('u00F'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('u00F'), to = FourCC('u00G'), cap = 3 },
+        },
+    },
+    join = Join_Undead,
+    wall = FourCC('u00I'),
 })
 function InitCustomTriggers()
     InitTrig_sek5()

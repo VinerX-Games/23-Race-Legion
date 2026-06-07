@@ -3226,4 +3226,63 @@ function startForsaken(pi)
     AiRace[pi] = "Forsaken"
     ProbeLogWrite("[AI] startForsaken pi=" .. tostring(pi) .. " workers=5h0J5 building=1h0JP")
 end
+---@param pi integer
+---@return nothing
+function startAlliance(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('hpea'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('htow'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('hpea')] = 5
+    AiData[pi][FourCC('htow')] = 1
+    AiData[pi][StringHash("Race")] = "AL"
+    SetPlayerTechResearchedSwap(FourCC('R0GZ'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0HX'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, p)
+    SetPlayerName(p, "Alliance (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Alliance"
+    ProbeLogWrite("[AI] startAlliance pi=" .. tostring(pi) .. " workers=5hpea building=1htow")
+end
+---@param pi integer
+---@return nothing
+function startBandits(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('h002'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h007'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('h002')] = 5
+    AiData[pi][FourCC('h007')] = 1
+    AiData[pi][StringHash("Race")] = "BD"
+    SetPlayerTechResearchedSwap(FourCC('R00G'), 1, p)
+    SetPlayerName(p, "Bandits (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Bandits"
+    ProbeLogWrite("[AI] startBandits pi=" .. tostring(pi) .. " workers=5h002 building=1h007")
+end
+---@param pi integer
+---@return nothing
+function startUndead(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(3, FourCC('u00P'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('n014'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('u00P')] = 3
+    AiData[pi][FourCC('n014')] = 1
+    AiData[pi][StringHash("Race")] = "UD"
+    SetPlayerTechResearchedSwap(FourCC('R07I'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, p)
+    SetPlayerName(p, "Undead (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Undead"
+    ProbeLogWrite("[AI] startUndead pi=" .. tostring(pi) .. " workers=3u00P building=1n014")
+end
 -- library Races ends
