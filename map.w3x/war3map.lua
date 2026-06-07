@@ -57234,7 +57234,7 @@ end
 ---@param def table
 ---@return boolean
 function AiRunAttacker(id, u, target, p, def)
-    local tbl = def.attacker
+    local tbl = def.attackerData
     if tbl == nil then
         return false
     end
