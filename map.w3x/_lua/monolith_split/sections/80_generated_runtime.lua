@@ -744,7 +744,7 @@ end
 -- ***************************************************************************
 -- ***************************************************************************
 -- *  Map
---  Счетчик утечек
+--  ??????? ??????
 ---@return nothing
 function HandleCounter_Update()
 	local i = 0
@@ -782,7 +782,7 @@ end
 function InitTrig_HandleCounter()
 	TimerStart(CreateTimer(), 0, false, HandleCounter_Actions)
 end
---  Конец счетчика утечек
+--  ????? ???????? ??????
 ---@return nothing
 function ReturnFPS()
 	framehandlefps = BlzGetFrameByName("ResourceBarFrame", 0)
@@ -792,8 +792,8 @@ function ReturnFPS()
 end
 -- ***************************************************************************
 -- *  Replace
---  Штука собственного производства, для того чтобы "починить земену юнитов"
--- Без убийства
+--  ????? ???????????? ????????????, ??? ???? ????? "???????? ?????? ??????"
+-- ??? ????????
 ---@param whichUnit unit
 ---@param newUnitId integer
 ---@param unitStateMethod integer
@@ -888,7 +888,7 @@ function ReplaceUnit(whichUnit, newUnitId, unitStateMethod)
 	return bj_lastReplacedUnit
 	
 end
--- С убийством
+-- ? ?????????
 ---@param whichUnit unit
 ---@param newUnitId integer
 ---@param unitStateMethod integer
@@ -1083,7 +1083,7 @@ function addArmyExp(u, pi)
 	ArmyExp[gPi] = RMaxBJ(0, ArmyExp[gPi] - gReal * 0.9)
 	--  call BJDebugMsg( GetUnitName(u)+" "+R2S(ArmyExp[pi]))
 end
--- Устанавливает бонус за опыт
+-- ????????????? ????? ?? ????
 ---@param pi integer
 ---@return nothing
 function ArmyExpSetBonus(pi)
@@ -1093,7 +1093,7 @@ function ArmyExpSetBonus(pi)
 	SetUnitAbilityLevel(ArmyExpBonus[pi], FourCC('arb1'), IMinBJ(R2I((ArmyExp[pi] / 500) + 1), 11))
 	SetUnitAbilityLevel(ArmyExpBonus[pi], FourCC('arb0'), IMinBJ(R2I((ArmyExp[pi] / 500) + 1), 11))
 end
---  Добавляет столбец опыта
+--  ????????? ??????? ?????
 ---@return nothing
 function ExpandTableArmyExpr()
 	local i = 0
@@ -1102,7 +1102,7 @@ function ExpandTableArmyExpr()
 	
 	
 	ArmyPowerColumn[24] = MultiboardGetItem(Multiboard, 0, 3)
-	MultiboardSetItemValue(ArmyPowerColumn[24], "Опыт")
+	MultiboardSetItemValue(ArmyPowerColumn[24], "????")
 	MultiboardSetItemWidth(ArmyPowerColumn[24], 0.06)
 	MultiboardReleaseItem(ArmyPowerColumn[24])
 	
@@ -1150,9 +1150,9 @@ function UpdateGraf(pi)
 	local p = Player(pi)
 	local ownerIndex = EnsureMultiboardPlayerRow(pi)
 	local r = R2I(udg_UnitsCount[pi] / 25.00)
-	logistic[pi] = ((500 + 100 * (r - 1)) / 2 * r)	--  прогрессия
+	logistic[pi] = ((500 + 100 * (r - 1)) / 2 * r)	--  ??????????
 	
-	-- Общий модификатор расходов
+	-- ????? ??????????? ????????
 	if GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) >= 1 then
 		additional[pi] = disincome[pi] * (udg_MainPrice[pi] / (-100.0))
 	end
@@ -1164,7 +1164,7 @@ function UpdateGraf(pi)
 		balance[pi] = income[pi]
 	end
 	
-	--  Табличка
+	--  ????????
 	if ownerIndex == nil then
 		return
 	end
@@ -1220,18 +1220,18 @@ end
 ---@return nothing
 function AddCountDis(u, pi)
 	local i
-	-- Добавляет потребление с юнита    
+	-- ????????? ??????????? ? ?????    
 	
 	if u == nil then
 		return 
 	end
 	
-	--  Кейс здания или его симуляция
+	--  ???? ?????? ??? ??? ?????????
 	if (IsUnitType(u, UNIT_TYPE_STRUCTURE) or GetUnitAbilityLevel(u, FourCC('A1IJ')) > 0) then
 		if IsUnitInGroup(u, udg_BuildedSctructure[1]) then
 			income[pi] = income[pi] + I2R(GetUnitFoodMade(u))
 			
-			-- Различные дополнения 
+			-- ????????? ?????????? 
 			if GetUnitAbilityLevel(u, FourCC('A0AY')) >= 1 then
 				income[pi] = (income[pi] + (100.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0AY')))))
 			elseif GetUnitAbilityLevel(u, FourCC('A0SM')) >= 1 then
@@ -1253,9 +1253,9 @@ function AddCountDis(u, pi)
 			end
 		end
 		
-		--  Кейс юнита
+		--  ???? ?????
 	else
-		-- Это не оживление мертвых, не суммон
+		-- ??? ?? ????????? ???????, ?? ??????
 		if  not IsUnitType(u, UNIT_TYPE_SUMMONED) then
 			
 			udg_UnitsCount[pi] = udg_UnitsCount[pi] + 1
@@ -1264,19 +1264,19 @@ function AddCountDis(u, pi)
 			
 			if IsUnitType(u, UNIT_TYPE_HERO) then
 				disincome[pi] = (disincome[pi] + 100.00)
-				if GetUnitAbilityLevel(u, FourCC('A0XV')) ~= 0 then	--  Казначейская аблика
+				if GetUnitAbilityLevel(u, FourCC('A0XV')) ~= 0 then	--  ???????????? ??????
 					income[pi] = income[pi] + (100 + GetUnitAbilityLevel(u, FourCC('A0XV')) * 100)
 				end
 				
 			else
 				udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
 				disincome[pi] = (disincome[pi] + (udg_Price * Tax))
-				--  ---------------------------Особые условия-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-				--  ---------------------------Топливо гоблинов-----------------------------
+				--  ---------------------------?????? ???????-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+				--  ---------------------------??????? ????????-----------------------------
 				if GetUnitAbilityLevel(u, FourCC('A0A5')) ~= 0 then
 					disincome[pi] = disincome[pi] + ((udg_Price * Tax) * (1.60 - (0.10 * I2R(GetUnitAbilityLevel(u, FourCC('A0A5'))))))
 					
-					--  ---------------------------Поколения Силитидов-------------------------
+					--  ---------------------------????????? ?????????-------------------------
 				elseif GetUnitAbilityLevel(u, FourCC('A0VH')) == 1 then
 					disincome[pi] = disincome[pi] - (udg_Price * Tax / 2)
 				elseif GetUnitAbilityLevel(u, FourCC('A0VH')) == 2 then
@@ -1293,7 +1293,7 @@ function AddCountDis(u, pi)
 			end
 			
 			
-			-- Случай призывных у культа.
+			-- ?????? ????????? ? ??????.
 		elseif GetUnitAbilityLevel(u, FourCC('A1HL')) > 0 then
 			udg_UnitsCount[pi] = udg_UnitsCount[pi] + 1
 			udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
@@ -1313,21 +1313,21 @@ end
 ---@return nothing
 function DelCountDis(u, pi)
 	local i
-	-- Убирает потребление с юнита
+	-- ??????? ??????????? ? ?????
 	
 	if u == nil then
 		return 
 	end
 	
 	
-	-- юнит
-	-- Здание
+	-- ????
+	-- ??????
 	if (IsUnitType(u, UNIT_TYPE_STRUCTURE) or GetUnitAbilityLevel(u, FourCC('A1IJ')) > 0) then
 		
 		if IsUnitInGroup(u, udg_BuildedSctructure[1]) then
 			income[pi] = income[pi] - I2R(GetUnitFoodMade(u))
 			
-			-- Различные дополнения
+			-- ????????? ??????????
 			if GetUnitAbilityLevel(u, FourCC('A0AY')) >= 1 then
 				income[pi] = (income[pi] - (100.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0AY')))))
 			elseif GetUnitAbilityLevel(u, FourCC('A0SM')) >= 1 then
@@ -1353,35 +1353,35 @@ function DelCountDis(u, pi)
 			end
 		end
 		
-		-- Не здание
-		-- Это не оживление мертвых, не суммон
+		-- ?? ??????
+		-- ??? ?? ????????? ???????, ?? ??????
 	elseif  not IsUnitType(u, UNIT_TYPE_SUMMONED) then
 		udg_UnitsCount[pi] = udg_UnitsCount[pi] - 1
-		-- Гер
+		-- ???
 		if IsUnitType(u, UNIT_TYPE_HERO) then
 			disincome[pi] = (disincome[pi] - 100.00)
 			
 			
-			-- Различные дополнения
+			-- ????????? ??????????
 			if GetUnitAbilityLevel(u, FourCC('A0XV')) ~= 0 then
 				income[pi] = income[pi] - (100 + GetUnitAbilityLevel(u, FourCC('A0XV')) * 100)
 			end
 			
-			-- юнит
+			-- ????
 		else
 			
 			
-			--  call DisplayTextToPlayer(p,0,0,("Увидел смерть до юнита "+GetUnitName(u)))
+			--  call DisplayTextToPlayer(p,0,0,("?????? ?????? ?? ????? "+GetUnitName(u)))
 			udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
 			disincome[pi] = (disincome[pi] - (udg_Price * Tax))
 			
 			
-			-- Различные дополнения
-			--  ---------------------------Топливо гоблинов-----------------------------
+			-- ????????? ??????????
+			--  ---------------------------??????? ????????-----------------------------
 			if GetUnitAbilityLevel(u, FourCC('A0A5')) ~= 0 then
 				disincome[pi] = disincome[pi] - ((udg_Price * Tax) * (1.60 - (0.10 * I2R(GetUnitAbilityLevel(u, FourCC('A0A5'))))))
 				
-				--  ---------------------------Поколения Силитидов------------------------- ??
+				--  ---------------------------????????? ?????????------------------------- ??
 			elseif GetUnitAbilityLevel(u, FourCC('A0VH')) == 1 then
 				disincome[pi] = disincome[pi] + (udg_Price * Tax / 2)
 			elseif GetUnitAbilityLevel(u, FourCC('A0VH')) == 2 then
@@ -1399,7 +1399,7 @@ function DelCountDis(u, pi)
 		
 		
 		
-		-- Случай призывных у культа.
+		-- ?????? ????????? ? ??????.
 	elseif GetUnitAbilityLevel(u, FourCC('A1HL')) > 0 then
 		udg_UnitsCount[pi] = udg_UnitsCount[pi] - 1
 		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
@@ -1411,25 +1411,12 @@ function DelCountDis(u, pi)
 	u = nil
 end
 ---@return nothing
-function TimedCountAct()
-	local t = GetExpiredTimer()
-	local tid = GetHandleId(t)
-	local u = LoadUnitHandle(Hash, tid, 1)
-	DelCountDis(u, GetPlayerId(GetOwningPlayer(u)))
-	
-	FlushChildHashtable(Hash, tid)
-	DestroyTimer(t)
-	t = nil
-	u = nil
-end
----@param u unit
----@return nothing
 function TimedCount(u)
 	local t = CreateTimer()
-	SaveUnitHandle(Hash, GetHandleId(t), 1, u)
-	TimerStart(t, 0.3, false, TimedCountAct)
-	
-	t = nil
+	TimerStart(t, 0.3, false, function()
+		DelCountDis(u, GetPlayerId(GetOwningPlayer(u)))
+		DestroyTimer(t)
+	end)
 end
 -- ***************************************************************************
 -- *  ClearEc
@@ -1460,7 +1447,7 @@ function KillAll()
 	elseif IsUnitInGroup(u, udg_StolicaGroups) then
 		RemoveUnit(u)
 	else
-		-- Случай пилота танка
+		-- ?????? ?????? ?????
 		if id == FourCC('h0KS') then
 			UnitRemoveAbility(u, FourCC('A18O'))
 		end
@@ -1552,7 +1539,7 @@ function TimedUpdateCheck()
 		end
 		
 		if GetUnitAbilityLevel(u, FourCC('A0AY')) + GetUnitAbilityLevel(u, FourCC('A0B5')) >= levels * 2 then
-			-- Развитие
+			-- ????????
 			BlzUnitHideAbility(u, FourCC('A10G'), true)
 			BlzUnitDisableAbility(u, FourCC('A10G'), true, true)
 			
@@ -1758,7 +1745,7 @@ function UISetup()
 	BlzFrameSetPoint(BlzGetFrameByName("QuestDisplayBackdrop", 0), FRAMEPOINT_BOTTOM, BlzGetFrameByName("QuestBackdrop", 0), FRAMEPOINT_BOTTOM, 0., 0.017)
 	BlzFrameClearAllPoints(BlzGetFrameByName("QuestAcceptButton", 0))
 	BlzFrameSetPoint(BlzGetFrameByName("QuestAcceptButton", 0), FRAMEPOINT_TOPRIGHT, BlzGetFrameByName("QuestBackdrop", 0), FRAMEPOINT_TOPRIGHT, -0.016, -0.016)
-	BlzFrameSetText(BlzGetFrameByName("QuestAcceptButton", 0), "×")
+	BlzFrameSetText(BlzGetFrameByName("QuestAcceptButton", 0), "?")
 	BlzFrameSetSize(BlzGetFrameByName("QuestAcceptButton", 0), 0.03, 0.03)
 	
 	--  Add back ally resource icons
@@ -1800,8 +1787,8 @@ function Face2()
 	BlzFrameSetPoint(tooltip, FRAMEPOINT_BOTTOM, face, FRAMEPOINT_TOP, 0.0, -0.1)
 	BlzFrameSetSize(tooltip, 0.03, 0.03)
 	
-	BlzFrameSetText(tooltipBody, "Инком = Доходы-Расходы")
-	BlzFrameSetText(tooltipTitle, "Инком")
+	BlzFrameSetText(tooltipBody, "????? = ??????-???????")
+	BlzFrameSetText(tooltipTitle, "?????")
 	
 	BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 	
@@ -1848,7 +1835,7 @@ end
 -- *  CommonHash
 -- 
 -- 
--- // Для работа надо номер игрока, ид юнита
+-- // ??? ?????? ???? ????? ??????, ?? ?????
 -- function NumberAdd takes integer Playerid, integer Unitid returns nothing
 --     local integer Cunit = LoadInteger(CommonHash,Playerid, Unitid) + 1
 --     call SaveInteger(CommonHash,Playerid,Unitid,Cunit)
@@ -1907,16 +1894,16 @@ function CheckCity(p)
 	
 	
 	
-	-- Победа
+	-- ??????
 	if CityPlayerCount[winid] >= WinLimit then
 		
 		while true do
 			if i >= 23 then break end
 			if i ~= winid then
 				ClearPlayer(Player(i))
-				DisplayTextToPlayer(Player(i), 0, 0, "Вы проиграли, игрок " .. GetPlayerName(p) .. " - достиг " .. R2S(I2R(WinLimit) / I2R(CityCount)) .. "% кол-ва точек и победил")
+				DisplayTextToPlayer(Player(i), 0, 0, "?? ?????????, ????? " .. GetPlayerName(p) .. " - ?????? " .. R2S(I2R(WinLimit) / I2R(CityCount)) .. "% ???-?? ????? ? ???????")
 			else
-				DisplayTextToPlayer(Player(i), 0, 0, "Вы победили!")
+				DisplayTextToPlayer(Player(i), 0, 0, "?? ????????!")
 			end
 			
 			i = i + 1
@@ -1925,9 +1912,9 @@ function CheckCity(p)
 		while true do
 			if i >= 23 then break end
 			if i ~= winid then
-				DisplayTextToPlayer(Player(i), 0, 0, "Острожно, игрок " .. GetPlayerName(p) .. " - достиг " .. R2S(I2R(DangerLimit) / I2R(CityCount)) .. "% кол-ва точек (" .. I2S(DangerLimit) .. ")")
+				DisplayTextToPlayer(Player(i), 0, 0, "????????, ????? " .. GetPlayerName(p) .. " - ?????? " .. R2S(I2R(DangerLimit) / I2R(CityCount)) .. "% ???-?? ????? (" .. I2S(DangerLimit) .. ")")
 			else
-				DisplayTextToPlayer(Player(i), 0, 0, "Вы достигли " .. R2S(I2R(DangerLimit) / I2R(CityCount)) .. "%!")
+				DisplayTextToPlayer(Player(i), 0, 0, "?? ???????? " .. R2S(I2R(DangerLimit) / I2R(CityCount)) .. "%!")
 			end
 			
 			i = i + 1
@@ -2278,7 +2265,7 @@ function RandomAiPlace()
 		end
 		i = i + 1
 	end
-	--  Получил массив локаций б
+	--  ??????? ?????? ??????? ?
 	
 	i = GetRandomInt(0, c - 1)
 	udg_LocalPoint = b[i]
@@ -2296,7 +2283,7 @@ end
 -- *  TurnOffAi
 -- ***************************************************************************
 -- *  Globals And Start setttings
---  --------------    --------------   Фильтры старт --------------   --------------
+--  --------------    --------------   ??????? ????? --------------   --------------
 -- ***************************************************************************
 -- *  LibDifferentAiStuff
 -- ***************************************************************************
@@ -2304,8 +2291,8 @@ end
 -- ***************************************************************************
 -- *  ContinentalBoolexrs
 --  scope initContinentalBoolExprs begins
--- Подраздел континентов
---  кого надо выкинуть, если он на этом континенте
+-- ????????? ???????????
+--  ???? ???? ????????, ???? ?? ?? ???? ??????????
 ---@return boolean
 function InKalim()
 	return RectContainsUnit(gg_rct_Kalim, GetFilterUnit()) ~= true or RectContainsUnit(gg_rct_NordNotKalim, GetFilterUnit())
@@ -2334,7 +2321,7 @@ end
 function InPandaria()
 	return RectContainsUnit(gg_rct_Pandaria, GetFilterUnit()) ~= true
 end
---  Подземки
+--  ????????
 ---@return boolean
 function InAnkirag()
 	return RectContainsUnit(gg_rct_Ankirag, GetFilterUnit()) ~= true
@@ -2371,7 +2358,7 @@ end
 function InUndercity()
 	return RectContainsUnit(gg_rct_Undercity, GetFilterUnit()) ~= true
 end
---  Летающие города
+--  ???????? ??????
 ---@return boolean
 function InDalaran()
 	return RectContainsUnit(gg_rct_KillDalaran, GetFilterUnit()) ~= true
@@ -2391,7 +2378,7 @@ function SetContinetsBooleprs()
 	udg_B_InArgus = Condition(InArgus)
 	udg_B_InPandaria = Condition(InPandaria)
 	
-	--  Подземки
+	--  ????????
 	udg_B_Ankirag = Condition(InAnkirag)
 	udg_B_Azgel = Condition(InAzgel)
 	udg_B_BlackRock = Condition(InBlackRock)
@@ -2402,12 +2389,12 @@ function SetContinetsBooleprs()
 	udg_B_Maradon = Condition(InMaradon)
 	udg_B_Undercity = Condition(InUndercity)
 	
-	-- Летающие города
+	-- ???????? ??????
 	udg_B_Dalaran = Condition(InDalaran)
 	udg_B_Naxramas = Condition(InNaxramas)
 	
 end
---  Инициализирует все это дело
+--  ?????????????? ??? ??? ????
 ---@return nothing
 function initContinentalBoolExprs___Init()
 	SetContinetsBooleprs()
@@ -2766,7 +2753,7 @@ function ProcessContinentalStuff(x, y, g)
 	RemWaterPortals(g)
 	RemEmeraldPortals(g)
 end
---  НАГИ особое расположение
+--  ???? ?????? ????????????
 ---@param x real
 ---@param y real
 ---@param g group
@@ -2800,14 +2787,14 @@ function TryPortalMovement(u, l__gEnemyGroup, l__gX, l__gY, i)
 	
 	Counter = 0
 	EnemyCapital = nil
-	-- Еще осталось 1 попатка тепнуться
+	-- ??? ???????? 1 ??????? ?????????
 	if abilityLevel == 1 then
 		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnitP)
-		-- Порталы запрещены
+		-- ??????? ?????????
 	elseif abilityLevel >= 2 then
 		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnit)
 		UnitRemoveAbility(u, FourCC('A1GZ'))
-		-- Обычный поиск
+		-- ??????? ?????
 	else
 		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnitP)
 	end
@@ -2821,7 +2808,7 @@ function TryAttack()
 	local pi_attack = GetPlayerId(gPlayer)
 	gX = GetUnitX(gUnit)
 	gY = GetUnitY(gUnit)
-	--    ------------------- В атаку -------------------
+	--    ------------------- ? ????? -------------------
 	
 	if gAllyGroup == nil then
 		gAllyGroup = CreateGroup()
@@ -2831,13 +2818,13 @@ function TryAttack()
 	end
 	
 	CheckPlayer = gPlayer
-	-- // Дальнее исследование
+	-- // ??????? ????????????
 	if Random(1, 8) then
 		
-		-- Обработка портала и вообще выбор врагов
+		-- ????????? ??????? ? ?????? ????? ??????
 		TryPortalMovement(gUnit, gEnemyGroup, gX, gY, 0)
 		
-		-- /Континентальные штуки
+		-- /??????????????? ?????
 		local cRace = AiRaceOf(GetPlayerId(gPlayer))
 		if cRace ~= nil and cRace.continentalNaga then
 			ProcessContinentalStuffNaga(gX, gY, gEnemyGroup)
@@ -2847,7 +2834,7 @@ function TryAttack()
 		
 		
 		
-		--  Шанс напасать именно на столицу
+		--  ???? ???????? ?????? ?? ???????
 		if EnemyCapital ~= nil and Random(1, 2) then
 			gEnemy = EnemyCapital
 		else
@@ -2859,7 +2846,7 @@ function TryAttack()
 			end
 		end
 		
-		-- Враг не найден - запрашиваем тп!
+		-- ???? ?? ?????? - ??????????? ??!
 		if gEnemy == nil then
 			AiProbeLogLimited(pi_attack, "Log_TryAttack_RequestPortFast", 8, "[AIARMY] request-port pi=" .. tostring(pi_attack) .. " mode=fast seekerId=" .. tostring(GetUnitTypeId(gUnit)))
 			RequestPort(gUnit)
@@ -2868,7 +2855,7 @@ function TryAttack()
 			gX2 = GetUnitX(gEnemy)
 			gY2 = GetUnitY(gEnemy)
 			
-			--  Если это портал
+			--  ???? ??? ??????
 			if WaygateIsActive(gEnemy) == true then
 				
 				gDx = gX - gX2
@@ -2878,7 +2865,7 @@ function TryAttack()
 				local allyCount = CountUnitsInGroup(gAllyGroup)
 				
 				
-				-- В любом случае спелы проверки портала получат
+				-- ? ????? ?????? ????? ???????? ??????? ???????
 				
 				while true do
 					gUnit2 = FirstOfGroup(gAllyGroup)
@@ -2887,13 +2874,13 @@ function TryAttack()
 					GroupRemoveUnit(gAllyGroup, gUnit2)
 					gUnit2 = nil
 				end
-				-- До портала всего нечего
+				-- ?? ??????? ????? ??????
 				if gDx <= 2500 then
 					
 					IssueImmediateOrder(gEnemy, "web")
 					BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
 					
-					-- До портала идти еще
+					-- ?? ??????? ???? ???
 				else
 					local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
 					if allyCount == 0 then
@@ -2910,7 +2897,7 @@ function TryAttack()
 				
 				
 				
-				--  Основной случай
+				--  ???????? ??????
 			else
 				-- set CheckPlayer = gPlayer
 				GroupEnumUnitsInRange(gAllyGroup, gX, gY, 1500 * AiRadius / 5, B_LazyF)
@@ -2945,7 +2932,7 @@ function TryAttack()
 						gSubGroupCounter = 0
 					end
 					
-					--  Сломался с неуязом
+					--  ???????? ? ???????
 					if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
 						ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
 					end
@@ -2956,7 +2943,7 @@ function TryAttack()
 		end
 		
 		
-		-- // Ближайшее исследование, пытается перебрадть радиус пока не найдет хотя бы одного юнита
+		-- // ????????? ????????????, ???????? ?????????? ?????? ???? ?? ?????? ???? ?? ?????? ?????
 	else
 		
 		
@@ -2973,7 +2960,7 @@ function TryAttack()
 			
 			TryPortalMovement(gUnit, gEnemyGroup, gX, gY, i)
 			
-			-- /Континентальные штуки
+			-- /??????????????? ?????
 			local cRace = AiRaceOf(GetPlayerId(gPlayer))
 			if cRace ~= nil and cRace.continentalNaga then
 				ProcessContinentalStuffNaga(gX, gY, gEnemyGroup)
@@ -2982,7 +2969,7 @@ function TryAttack()
 			end
 			
 			
-			--  Шанс напасать именно на столицу
+			--  ???? ???????? ?????? ?? ???????
 			if EnemyCapital ~= nil and Random(1, 4) then
 				gEnemy = EnemyCapital
 			else
@@ -2994,13 +2981,13 @@ function TryAttack()
 				end
 			end
 			
-			-- Враг не найден - запрашиваем тп!
+			-- ???? ?? ?????? - ??????????? ??!
 			if gEnemy == nil then
 				if i == 100 then
 					AiProbeLogLimited(pi_attack, "Log_TryAttack_RequestPortWide", 8, "[AIARMY] request-port pi=" .. tostring(pi_attack) .. " mode=wide seekerId=" .. tostring(GetUnitTypeId(gUnit)))
 					RequestPort(gUnit)
 				end
-				-- Враг найден
+				-- ???? ??????
 			else
 				i = 15
 				gX2 = GetUnitX(gEnemy)
@@ -3015,7 +3002,7 @@ function TryAttack()
 					local allyCount = CountUnitsInGroup(gAllyGroup)
 					
 					
-					-- В любом случае спелы проверки портала получат
+					-- ? ????? ?????? ????? ???????? ??????? ???????
 					
 					while true do
 						gUnit2 = FirstOfGroup(gAllyGroup)
@@ -3024,14 +3011,14 @@ function TryAttack()
 						GroupRemoveUnit(gAllyGroup, gUnit2)
 						gUnit2 = nil
 					end
-					-- До портала всего ничего
+					-- ?? ??????? ????? ??????
 					if gDx <= 2500 then
 						AiProbeLogLimited(pi_attack, "Log_TryAttack_PortalNearby", 8, "[AIARMY] portal-near pi=" .. tostring(pi_attack) .. " targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount))
 						
 						IssueImmediateOrder(gEnemy, "web")
 						BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
 						
-					-- До портала идти еще
+					-- ?? ??????? ???? ???
 					else
 						if allyCount == 0 then
 							AiProbeLogLimited(pi_attack, "Log_TryAttack_NoPortalAlliesWide", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)))
@@ -3045,10 +3032,10 @@ function TryAttack()
 						
 					end
 					
-					-- Обычная цель
+					-- ??????? ????
 				else
 					
-					-- Отдаю приказ юниту и рядом стоящим
+					-- ????? ?????? ????? ? ????? ???????
 					
 					-- set CheckPlayer = gPlayer
 					GroupEnumUnitsInRange(gAllyGroup, gX, gY, 1500 * AiRadius / 5, B_LazyF)
@@ -3083,7 +3070,7 @@ function TryAttack()
 							gSubGroupCounter = 0
 						end
 						
-						--  Сломался с неуязом
+						--  ???????? ? ???????
 						if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
 							ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
 						end
@@ -3117,7 +3104,7 @@ function TryAttackN()
 	local y2
 	
 	
-	--  Шанс на дальнее исследование
+	--  ???? ?? ??????? ????????????
 	if Random(1, 10) then
 		gInt = 10
 	else
@@ -3127,19 +3114,19 @@ function TryAttackN()
 	
 	while true do
 		
-		-- call BJDebugMsg("Цикл атаки флота юнита: "+GetUnitName(ChosenUnit)+" Игрока:"+GetPlayerName(CheckPlayer))
-		-- Блок выбора врагов
+		-- call BJDebugMsg("???? ????? ????? ?????: "+GetUnitName(ChosenUnit)+" ??????:"+GetPlayerName(CheckPlayer))
+		-- ???? ?????? ??????
 		
 		Counter = 0
 		CheckPlayer = GetOwningPlayer(ChosenUnit)
 		GroupEnumUnitsInRange(gEnemyGroup, x, y, 5500.00 * (Pow(1.5, I2R(gInt))), udg_B_EnemyUnitN)
 		
-		-- call BJDebugMsg("Кол-во доступных врагов"+I2S(Counter))
-		-- Блок отдачи приказа
+		-- call BJDebugMsg("???-?? ????????? ??????"+I2S(Counter))
+		-- ???? ?????? ???????
 		u2 = BlzGroupUnitAt(gEnemyGroup, GetRandomInt(0, Counter - 1))
 		if u2 ~= nil then
 			
-			-- call BJDebugMsg("Выбранный Враг "+GetUnitName(u2))
+			-- call BJDebugMsg("????????? ???? "+GetUnitName(u2))
 			x2 = GetUnitX(u2)
 			y2 = GetUnitY(u2)
 			u2 = nil
@@ -3204,7 +3191,7 @@ end
 ---@return boolean
 function GoToWaterPoint(pi, u, x, y)
 	
-	if Random(1, 10) and getAiCount(pi, StringHash("NumberPorts")) < 8 then
+	if Random(1, 10) and (AiData[pi][StringHash("NumberPorts")] or 0) < 8 then
 		if RectContainsCoords(gg_rct_EastenKingdoms, x, y) then
 			gInt = GetRandomInt(1, 4)
 			if gInt == 1 then
@@ -3271,15 +3258,15 @@ function TryBuild()
 	gY = GetUnitY(gUnit)
 	
 	
-	-- call DisplayTimedTextFromPlayer( Player( 0x00 ), 0, 0, 4, "Вхожу в билд" )
+	-- call DisplayTimedTextFromPlayer( Player( 0x00 ), 0, 0, 4, "????? ? ????" )
 	
 	GroupAddUnit(udg_Ai_buildersT[gPi], gUnit)
 	GroupRemoveUnit(udg_Ai_builders[gPi], gUnit)
 	GroupRemoveUnit(udg_Ai_harvest[gPi], gUnit)
 	
 	
-	-- Если в воде для верфи - то строй верфь c высоким шансом)
-	if getAiCount(gPi, StringHash("NumberPorts")) < 12 and ( not IsTerrainPathable(gX, gY, PATHING_TYPE_WALKABILITY) and RectContainsCoords(gg_rct_Outland, gX, gY) ~= true and RectContainsCoords(gg_rct_Azgel, gX, gY) ~= true) then
+	-- ???? ? ???? ??? ????? - ?? ????? ????? c ??????? ??????)
+	if (AiData[gPi][StringHash("NumberPorts")] or 0) < 12 and ( not IsTerrainPathable(gX, gY, PATHING_TYPE_WALKABILITY) and RectContainsCoords(gg_rct_Outland, gX, gY) ~= true and RectContainsCoords(gg_rct_Azgel, gX, gY) ~= true) then
 		
 		
 		if Random(1, 2) then
@@ -3305,12 +3292,12 @@ function TryBuild()
 		end
 		
 		
-		-- Идти к точке где много воды
+		-- ???? ? ????? ??? ????? ????
 	elseif AiRaceUsesWaterPoint(gPi) and GoToWaterPoint(gPi, gUnit, gX, gY) then
 		return 
 	end
 	
-	-- Шанс перейти на новую локу
+	-- ???? ??????? ?? ????? ????
 	if Random(1, 25) then
 		gX = gX + AiBuildingRadius * 7 * Cos(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
 		gY = gY + AiBuildingRadius * 7 * Sin(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
@@ -3319,7 +3306,7 @@ function TryBuild()
 	end
 	
 	
-	--  Определение точки постройки 
+	--  ??????????? ????? ????????? 
 	gX = gX + AiBuildingRadius * Cos(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
 	gY = gY + AiBuildingRadius * Sin(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
 	
@@ -3351,7 +3338,7 @@ end
 function aiCapitalEnterAct()
 	GroupAddUnit(AiCapitalBuildigs[gPi], GetEnumUnit())
 end
---  Добавляет все здания рядом в группу
+--  ????????? ??? ?????? ????? ? ??????
 ---@param u unit
 ---@return nothing
 function aiCapitalEnter(u)
@@ -3384,14 +3371,14 @@ function SleepGreenEach()
 end
 ---@return nothing
 function WakeGreenUp()
-	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, Condition(greencreature))
+	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, greencreature)
 	ForGroup(gGroup, WakeGreenUpEach)
 	GroupClear(gGroup)
 end
 ---@return nothing
 function SleepGreen()
-	-- call BJDebugMsg("Паузит")
-	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, Condition(greencreature))
+	-- call BJDebugMsg("??????")
+	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, greencreature)
 	ForGroup(gGroup, SleepGreenEach)
 	GroupClear(gGroup)
 end
@@ -3399,13 +3386,13 @@ end
 function checkGreenArea()
 	local u
 	GroupClear(gGroup)
-	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, Condition(alienToDream))
+	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, alienToDream)
 	while true do
 		u = FirstOfGroup(gGroup)
 		
 		
 		if u ~= nil and GetUnitAbilityLevel(u, FourCC('A1LR')) == 0 then
-			-- call BJDebugMsg("обнаружило"+GetUnitName(u))
+			-- call BJDebugMsg("??????????"+GetUnitName(u))
 			u = nil
 			
 			WakeGreenUp()
@@ -3419,7 +3406,7 @@ function checkGreenArea()
 		
 	end
 	GroupClear(gGroup)
-	-- call BJDebugMsg("Дошло норм")
+	-- call BJDebugMsg("????? ????")
 	SleepGreen()
 	u = nil
 end
@@ -4722,7 +4709,7 @@ end
 -- ===========================================================================
 --  Trigger: sek5
 -- 
---  Тут стоят ограничения 
+--  ??? ????? ??????????? 
 -- ===========================================================================
 ---@return nothing
 function Trig_sek5_Func001A()
@@ -4730,209 +4717,209 @@ function Trig_sek5_Func001A()
 	local pe = GetEnumPlayer()
 	
 	local i = 0
-	-- Герои Специализации
-	SetPlayerTechMaxAllowed(pe, FourCC('n026'), i)	-- кровавый палач
-	SetPlayerTechMaxAllowed(pe, FourCC('H0H8'), i)	-- паладин лечение альянс
-	SetPlayerTechMaxAllowed(pe, FourCC('H0H9'), i)	-- паладин защита альянс
-	SetPlayerTechMaxAllowed(pe, FourCC('H0H7'), i)	-- паладин воздаяние альнс
+	-- ????? ?????????????
+	SetPlayerTechMaxAllowed(pe, FourCC('n026'), i)	-- ???????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0H8'), i)	-- ??????? ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0H9'), i)	-- ??????? ?????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0H7'), i)	-- ??????? ????????? ?????
 	
-	-- Герои
+	-- ?????
 	
-	SetPlayerTechMaxAllowed(pe, FourCC('o03Q'), i)	-- Огрон Огры
-	SetPlayerTechMaxAllowed(pe, FourCC('o03V'), i)	-- Грон Красный Огры
-	SetPlayerTechMaxAllowed(pe, FourCC('o03T'), i)	-- Грон Чёрный Огры
-	SetPlayerTechMaxAllowed(pe, FourCC('o03S'), i)	-- Огрон Красный Огры
-	SetPlayerTechMaxAllowed(pe, FourCC('o03R'), i)	-- Огрно Синий Огры
-	SetPlayerTechMaxAllowed(pe, FourCC('o03T'), i)	-- Грон Чёрный Огры
-	SetPlayerTechMaxAllowed(pe, FourCC('o03U'), i)	-- Грон Белый
+	SetPlayerTechMaxAllowed(pe, FourCC('o03Q'), i)	-- ????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('o03V'), i)	-- ???? ??????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('o03T'), i)	-- ???? ?????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('o03S'), i)	-- ????? ??????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('o03R'), i)	-- ????? ????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('o03T'), i)	-- ???? ?????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('o03U'), i)	-- ???? ?????
 	
 	i = 1
 	
-	SetPlayerTechMaxAllowed(pe, FourCC('E029'), i)	-- Нептулон
-	SetPlayerTechMaxAllowed(pe, FourCC('U02X'), i)	-- Ордин Хладомор 2 КП
-	SetPlayerTechMaxAllowed(pe, FourCC('H048'), i)	-- Воевода бандиты
-	SetPlayerTechMaxAllowed(pe, FourCC('N072'), i)	-- Дантур
-	SetPlayerTechMaxAllowed(pe, FourCC('N06P'), i)	-- Ман-Шуру
-	SetPlayerTechMaxAllowed(pe, FourCC('U02W'), i)	-- Нер-зул
-	SetPlayerTechMaxAllowed(pe, FourCC('O05U'), i)	-- Громмаш
-	SetPlayerTechMaxAllowed(pe, FourCC('U02U'), i)	-- Гул-Дан
-	SetPlayerTechMaxAllowed(pe, FourCC('O04K'), i)	-- Дзюмбей Ледяные Тролли
-	SetPlayerTechMaxAllowed(pe, FourCC('O04H'), i)	-- Тодзара Ледяные Тролли
-	SetPlayerTechMaxAllowed(pe, FourCC('O04G'), i)	-- Зул'Кис Ледяные Тролли
-	SetPlayerTechMaxAllowed(pe, FourCC('O04I'), i)	-- Мезал-кри Ледяные Тролли
-	SetPlayerTechMaxAllowed(pe, FourCC('H0JU'), i)	-- Йорн Искупитель Наги
-	SetPlayerTechMaxAllowed(pe, FourCC('N054'), i)	-- МрглМргл Наги Сломан
-	SetPlayerTechMaxAllowed(pe, FourCC('H0JV'), i)	-- Охотница Наги
-	SetPlayerTechMaxAllowed(pe, FourCC('H03S'), i)	-- Боевой Пасерь Бандиты
-	SetPlayerTechMaxAllowed(pe, FourCC('H028'), i)	-- Бриджит Аббендис
-	SetPlayerTechMaxAllowed(pe, FourCC('H03H'), i)	-- Паладин Аллого Ордена
-	SetPlayerTechMaxAllowed(pe, FourCC('H018'), i)	-- Сайдан Датрохан
-	SetPlayerTechMaxAllowed(pe, FourCC('H05K'), i)	-- Дреней Паладин
-	SetPlayerTechMaxAllowed(pe, FourCC('H04S'), i)	-- Верховный Маг даларан
-	SetPlayerTechMaxAllowed(pe, FourCC('H053'), i)	-- Хранитель даларан
-	SetPlayerTechMaxAllowed(pe, FourCC('H04W'), i)	-- Огненный мастер даларан
-	SetPlayerTechMaxAllowed(pe, FourCC('H052'), i)	-- Глава Кирин-Тора даларан
-	SetPlayerTechMaxAllowed(pe, FourCC('H04X'), i)	-- Мастер Тайной магии даларан
-	SetPlayerTechMaxAllowed(pe, FourCC('H05M'), i)	-- Пророк Сломленных
-	SetPlayerTechMaxAllowed(pe, FourCC('H06B'), i)	-- Капитан Ордена
-	SetPlayerTechMaxAllowed(pe, FourCC('H05L'), i)	-- Капитан Гвардии
-	SetPlayerTechMaxAllowed(pe, FourCC('H054'), i)	-- Медив
-	SetPlayerTechMaxAllowed(pe, FourCC('H03J'), i)	-- Глава Алого Ордена
-	SetPlayerTechMaxAllowed(pe, FourCC('H06C'), i)	-- Епископ Ордена
-	SetPlayerTechMaxAllowed(pe, FourCC('H01K'), i)	-- Адмирал
-	SetPlayerTechMaxAllowed(pe, FourCC('H01N'), i)	-- Верхованая Жрица Морей
-	SetPlayerTechMaxAllowed(pe, FourCC('H01J'), i)	-- Даэлин Праудмур
-	SetPlayerTechMaxAllowed(pe, FourCC('H01M'), i)	-- Джайга Праудмур
-	SetPlayerTechMaxAllowed(pe, FourCC('H01L'), i)	-- Капитан
-	SetPlayerTechMaxAllowed(pe, FourCC('O011'), i)	-- Верховный Жрец бездны
-	SetPlayerTechMaxAllowed(pe, FourCC('N010'), i)	-- Военачальник Культа Сумеречный Молот
-	SetPlayerTechMaxAllowed(pe, FourCC('N00Z'), i)	-- Тёмный волшебник
-	SetPlayerTechMaxAllowed(pe, FourCC('U007'), i)	-- Чо-Гал
-	SetPlayerTechMaxAllowed(pe, FourCC('H0C4'), i)	-- Король Имирон Врайкулы
-	SetPlayerTechMaxAllowed(pe, FourCC('H0C7'), i)	-- Верховный жрец Врайкулы
-	SetPlayerTechMaxAllowed(pe, FourCC('H0C5'), i)	-- Берсерк Врайкулы
-	SetPlayerTechMaxAllowed(pe, FourCC('H0C6'), i)	-- Тан Врайкулы
-	SetPlayerTechMaxAllowed(pe, FourCC('U00O'), i)	-- Рыцарь Смерти
-	SetPlayerTechMaxAllowed(pe, FourCC('U015'), i)	-- Верховынй Лич
-	SetPlayerTechMaxAllowed(pe, FourCC('U01W'), i)	-- Высший Страж
-	SetPlayerTechMaxAllowed(pe, FourCC('U01V'), i)	-- Паучий Лорд
-	SetPlayerTechMaxAllowed(pe, FourCC('U01U'), i)	-- Пророк
-	SetPlayerTechMaxAllowed(pe, FourCC('U00V'), i)	-- Владыка Склепа
-	SetPlayerTechMaxAllowed(pe, FourCC('U00U'), i)	-- Некромант
-	SetPlayerTechMaxAllowed(pe, FourCC('U014'), i)	-- Король-Лич Нежить
-	SetPlayerTechMaxAllowed(pe, FourCC('E01W'), i)	-- Охотник на демонов Илладирии
-	SetPlayerTechMaxAllowed(pe, FourCC('E01F'), i)	-- Авнель
-	SetPlayerTechMaxAllowed(pe, FourCC('E01D'), i)	-- Калеастра
-	SetPlayerTechMaxAllowed(pe, FourCC('E01E'), i)	-- Квенель
-	SetPlayerTechMaxAllowed(pe, FourCC('E01C'), i)	-- Талистра
-	SetPlayerTechMaxAllowed(pe, FourCC('E025'), i)	-- Охотник Истребление Иллидарии
-	SetPlayerTechMaxAllowed(pe, FourCC('E024'), i)	-- Охотник Месть Иллидарии
-	SetPlayerTechMaxAllowed(pe, FourCC('E026'), i)	-- Иллидан
-	SetPlayerTechMaxAllowed(pe, FourCC('N02F'), i)	-- Повелитель Ужаса
-	SetPlayerTechMaxAllowed(pe, FourCC('N02H'), i)	-- Казак
-	SetPlayerTechMaxAllowed(pe, FourCC('N02G'), i)	-- Архимонд
-	SetPlayerTechMaxAllowed(pe, FourCC('N02B'), i)	-- Кил'джеден
-	SetPlayerTechMaxAllowed(pe, FourCC('N02A'), i)	-- Чернокнижник
-	SetPlayerTechMaxAllowed(pe, FourCC('U027'), i)	-- Аватара Саргераса
-	SetPlayerTechMaxAllowed(pe, FourCC('U028'), i)	-- Джизильда
-	SetPlayerTechMaxAllowed(pe, FourCC('N046'), i)	-- Алекстараза
-	SetPlayerTechMaxAllowed(pe, FourCC('N047'), i)	-- Изера
-	SetPlayerTechMaxAllowed(pe, FourCC('N045'), i)	-- Малигос
-	SetPlayerTechMaxAllowed(pe, FourCC('N040'), i)	-- Ноздорму
-	SetPlayerTechMaxAllowed(pe, FourCC('H0EZ'), i)	-- Кристальный владыка
-	SetPlayerTechMaxAllowed(pe, FourCC('H0F0'), i)	-- Мастер Ветра
-	SetPlayerTechMaxAllowed(pe, FourCC('N037'), i)	-- Повелитель огня
-	SetPlayerTechMaxAllowed(pe, FourCC('H0HP'), i)	-- Эдвин ван Клиф
-	SetPlayerTechMaxAllowed(pe, FourCC('H0HQ'), i)	-- Гелбин Меггакрут
-	SetPlayerTechMaxAllowed(pe, FourCC('U02H'), i)	-- Верховный Душегуб Безликие
-	SetPlayerTechMaxAllowed(pe, FourCC('U02G'), i)	-- Генерал К'Траксис
-	SetPlayerTechMaxAllowed(pe, FourCC('U02I'), i)	-- Маг Запредельной Тьмы
-	SetPlayerTechMaxAllowed(pe, FourCC('H0HL'), i)	-- Казначей Стромград
-	SetPlayerTechMaxAllowed(pe, FourCC('H0HB'), i)	-- Генерал Стромград
-	SetPlayerTechMaxAllowed(pe, FourCC('H0HA'), i)	-- Верховный маг Стромград
-	SetPlayerTechMaxAllowed(pe, FourCC('H0L4'), i)	-- Данат Троллебой Стромград
-	SetPlayerTechMaxAllowed(pe, FourCC('U035'), i)	-- Ануб'Рекан
-	SetPlayerTechMaxAllowed(pe, FourCC('U030'), i)	-- Ануб'Арак
-	SetPlayerTechMaxAllowed(pe, FourCC('U02F'), i)	-- Верховный генерал Безликие
-	SetPlayerTechMaxAllowed(pe, FourCC('NE02'), i)	-- Дочь Лесов НЭ
-	SetPlayerTechMaxAllowed(pe, FourCC('E02Q'), i)	-- Дух Леса
-	SetPlayerTechMaxAllowed(pe, FourCC('E02R'), i)	-- Егерь диколесья
-	SetPlayerTechMaxAllowed(pe, FourCC('E02S'), i)	-- Лесной Смотритель Энты
-	SetPlayerTechMaxAllowed(pe, FourCC('PA37'), i)	-- Мастер Железной Лапы ПА
-	SetPlayerTechMaxAllowed(pe, FourCC('PA38'), i)	-- Высший Монах ПА
-	SetPlayerTechMaxAllowed(pe, FourCC('PA36'), i)	-- Лидер Шадо-Пан
-	SetPlayerTechMaxAllowed(pe, FourCC('PA40'), i)	-- Танцующий с Ветром ПА
-	SetPlayerTechMaxAllowed(pe, FourCC('E02R'), i)	-- Егерь Диколесья
-	SetPlayerTechMaxAllowed(pe, FourCC('E011'), i)	-- Лунная Охотница
-	SetPlayerTechMaxAllowed(pe, FourCC('E02Q'), i)	-- Дух Леса
-	SetPlayerTechMaxAllowed(pe, FourCC('N073'), i)	-- Мастер Клинка Орда скверны
-	SetPlayerTechMaxAllowed(pe, FourCC('E02S'), i)	-- Лесной Смотритель Энты
-	SetPlayerTechMaxAllowed(pe, FourCC('W2Og'), i)	-- Вождь Орды
-	SetPlayerTechMaxAllowed(pe, FourCC('W202'), i)	-- Предводитель Троллей
-	SetPlayerTechMaxAllowed(pe, FourCC('W201'), i)	-- Сумеречный Маг
-	SetPlayerTechMaxAllowed(pe, FourCC('N05J'), i)	-- Военачальник Огров
-	SetPlayerTechMaxAllowed(pe, FourCC('N05K'), i)	-- Вождь Огров
-	SetPlayerTechMaxAllowed(pe, FourCC('N05L'), i)	-- Знахарь Огров
+	SetPlayerTechMaxAllowed(pe, FourCC('E029'), i)	-- ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U02X'), i)	-- ????? ???????? 2 ??
+	SetPlayerTechMaxAllowed(pe, FourCC('H048'), i)	-- ??????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('N072'), i)	-- ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('N06P'), i)	-- ???-????
+	SetPlayerTechMaxAllowed(pe, FourCC('U02W'), i)	-- ???-???
+	SetPlayerTechMaxAllowed(pe, FourCC('O05U'), i)	-- ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('U02U'), i)	-- ???-???
+	SetPlayerTechMaxAllowed(pe, FourCC('O04K'), i)	-- ??????? ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('O04H'), i)	-- ??????? ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('O04G'), i)	-- ???'??? ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('O04I'), i)	-- ?????-??? ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0JU'), i)	-- ???? ?????????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('N054'), i)	-- ???????? ???? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0JV'), i)	-- ???????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('H03S'), i)	-- ?????? ?????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H028'), i)	-- ??????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H03H'), i)	-- ??????? ?????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H018'), i)	-- ?????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H05K'), i)	-- ?????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H04S'), i)	-- ????????? ??? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H053'), i)	-- ????????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H04W'), i)	-- ???????? ?????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H052'), i)	-- ????? ?????-???? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H04X'), i)	-- ?????? ?????? ????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H05M'), i)	-- ?????? ??????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H06B'), i)	-- ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H05L'), i)	-- ??????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H054'), i)	-- ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('H03J'), i)	-- ????? ????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H06C'), i)	-- ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('H01K'), i)	-- ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H01N'), i)	-- ?????????? ????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('H01J'), i)	-- ?????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H01M'), i)	-- ?????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H01L'), i)	-- ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('O011'), i)	-- ????????? ???? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('N010'), i)	-- ???????????? ?????? ?????????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('N00Z'), i)	-- ?????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U007'), i)	-- ??-???
+	SetPlayerTechMaxAllowed(pe, FourCC('H0C4'), i)	-- ?????? ?????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0C7'), i)	-- ????????? ???? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0C5'), i)	-- ??????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0C6'), i)	-- ??? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U00O'), i)	-- ?????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('U015'), i)	-- ????????? ???
+	SetPlayerTechMaxAllowed(pe, FourCC('U01W'), i)	-- ?????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('U01V'), i)	-- ?????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('U01U'), i)	-- ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('U00V'), i)	-- ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('U00U'), i)	-- ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U014'), i)	-- ??????-??? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('E01W'), i)	-- ??????? ?? ??????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E01F'), i)	-- ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('E01D'), i)	-- ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E01E'), i)	-- ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('E01C'), i)	-- ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E025'), i)	-- ??????? ??????????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E024'), i)	-- ??????? ????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E026'), i)	-- ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('N02F'), i)	-- ?????????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('N02H'), i)	-- ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('N02G'), i)	-- ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('N02B'), i)	-- ???'??????
+	SetPlayerTechMaxAllowed(pe, FourCC('N02A'), i)	-- ????????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U027'), i)	-- ??????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U028'), i)	-- ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('N046'), i)	-- ???????????
+	SetPlayerTechMaxAllowed(pe, FourCC('N047'), i)	-- ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('N045'), i)	-- ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('N040'), i)	-- ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0EZ'), i)	-- ??????????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0F0'), i)	-- ?????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('N037'), i)	-- ?????????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0HP'), i)	-- ????? ??? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0HQ'), i)	-- ?????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U02H'), i)	-- ????????? ??????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U02G'), i)	-- ??????? ?'???????
+	SetPlayerTechMaxAllowed(pe, FourCC('U02I'), i)	-- ??? ???????????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0HL'), i)	-- ???????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0HB'), i)	-- ??????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0HA'), i)	-- ????????? ??? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('H0L4'), i)	-- ????? ????????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('U035'), i)	-- ????'?????
+	SetPlayerTechMaxAllowed(pe, FourCC('U030'), i)	-- ????'????
+	SetPlayerTechMaxAllowed(pe, FourCC('U02F'), i)	-- ????????? ??????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('NE02'), i)	-- ???? ????? ??
+	SetPlayerTechMaxAllowed(pe, FourCC('E02Q'), i)	-- ??? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('E02R'), i)	-- ????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E02S'), i)	-- ?????? ?????????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('PA37'), i)	-- ?????? ???????? ???? ??
+	SetPlayerTechMaxAllowed(pe, FourCC('PA38'), i)	-- ?????? ????? ??
+	SetPlayerTechMaxAllowed(pe, FourCC('PA36'), i)	-- ????? ????-???
+	SetPlayerTechMaxAllowed(pe, FourCC('PA40'), i)	-- ????????? ? ?????? ??
+	SetPlayerTechMaxAllowed(pe, FourCC('E02R'), i)	-- ????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E011'), i)	-- ?????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('E02Q'), i)	-- ??? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('N073'), i)	-- ?????? ?????? ???? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('E02S'), i)	-- ?????? ?????????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('W2Og'), i)	-- ????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('W202'), i)	-- ???????????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('W201'), i)	-- ?????????? ???
+	SetPlayerTechMaxAllowed(pe, FourCC('N05J'), i)	-- ???????????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('N05K'), i)	-- ????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('N05L'), i)	-- ??????? ?????
 	
-	-- Юниты
-	SetPlayerTechMaxAllowed(pe, FourCC('W200'), i)	-- Батрак орда второй войны
-	SetPlayerTechMaxAllowed(pe, FourCC('CD01'), i)	-- Ожившая субстанция
-	SetPlayerTechMaxAllowed(pe, FourCC('CD02'), i)	-- Послушник КП
-	SetPlayerTechMaxAllowed(pe, FourCC('CD03'), i)	-- Некромант КП
+	-- ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('W200'), i)	-- ?????? ???? ?????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('CD01'), i)	-- ??????? ??????????
+	SetPlayerTechMaxAllowed(pe, FourCC('CD02'), i)	-- ????????? ??
+	SetPlayerTechMaxAllowed(pe, FourCC('CD03'), i)	-- ????????? ??
 	
 	i = 0
 	
-	SetPlayerTechMaxAllowed(pe, FourCC('cD34'), i)	-- Скелет воин 2 КП
-	SetPlayerTechMaxAllowed(pe, FourCC('cD35'), i)	-- Скелет воин 3 КП
-	SetPlayerTechMaxAllowed(pe, FourCC('n02D'), i)	-- Кровавое отродье Демоны
-	SetPlayerTechMaxAllowed(pe, FourCC('n02E'), i)	-- Кровопускатель
+	SetPlayerTechMaxAllowed(pe, FourCC('cD34'), i)	-- ?????? ???? 2 ??
+	SetPlayerTechMaxAllowed(pe, FourCC('cD35'), i)	-- ?????? ???? 3 ??
+	SetPlayerTechMaxAllowed(pe, FourCC('n02D'), i)	-- ???????? ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('n02E'), i)	-- ??????????????
 	
-	-- фермы 
+	-- ????? 
 	i = 5
 	
-	SetPlayerTechMaxAllowed(pe, FourCC('cD12'), i)	-- Распылитель чумы
-	SetPlayerTechMaxAllowed(pe, FourCC('h0OE'), i)	-- Нефть платформа
-	SetPlayerTechMaxAllowed(pe, FourCC('w219'), i)	-- Нефтянная платтформа ор 2
+	SetPlayerTechMaxAllowed(pe, FourCC('cD12'), i)	-- ??????????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0OE'), i)	-- ????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('w219'), i)	-- ????????? ?????????? ?? 2
 	
 	i = 10
 	
-	SetPlayerTechMaxAllowed(pe, FourCC('h0DT'), i)	-- Генератор Скверны
+	SetPlayerTechMaxAllowed(pe, FourCC('h0DT'), i)	-- ????????? ???????
 	
 	i = 15
 	
-	SetPlayerTechMaxAllowed(pe, FourCC('h0H2'), i)	-- Ферма стромград
-	SetPlayerTechMaxAllowed(pe, FourCC('hhou'), i)	-- Ферма люди
-	SetPlayerTechMaxAllowed(pe, FourCC('nnfm'), i)	-- кораловый миф
-	SetPlayerTechMaxAllowed(pe, FourCC('w20y'), i)	-- свиноферма
-	SetPlayerTechMaxAllowed(pe, FourCC('h0N2'), i)	-- жилище тролли джунглей
-	SetPlayerTechMaxAllowed(pe, FourCC('o04C'), i)	-- берлога ледяные тролли
-	SetPlayerTechMaxAllowed(pe, FourCC('h05Y'), i)	-- ферма алый орден
-	SetPlayerTechMaxAllowed(pe, FourCC('h05C'), i)	-- лазарет дренеи
-	SetPlayerTechMaxAllowed(pe, FourCC('h024'), i)	-- ферма кул тирас
-	SetPlayerTechMaxAllowed(pe, FourCC('h0IM'), i)	-- ферма воргены
-	SetPlayerTechMaxAllowed(pe, FourCC('h031'), i)	-- кондексатор маны даларан
-	SetPlayerTechMaxAllowed(pe, FourCC('h04M'), i)	-- сторожка
-	SetPlayerTechMaxAllowed(pe, FourCC('h00A'), i)	-- избушка бандиты
-	SetPlayerTechMaxAllowed(pe, FourCC('h0FL'), i)	-- энергобашня гномы
-	SetPlayerTechMaxAllowed(pe, FourCC('h0NW'), i)	-- рыбацкая лодка кул тирас
-	SetPlayerTechMaxAllowed(pe, FourCC('o003'), i)	-- обелиск
-	SetPlayerTechMaxAllowed(pe, FourCC('o00T'), i)	-- землянка сумеречный молот
-	SetPlayerTechMaxAllowed(pe, FourCC('emow'), i)	-- колодец воспоминаний
-	SetPlayerTechMaxAllowed(pe, FourCC('h0BT'), i)	-- дом врайкулы
-	SetPlayerTechMaxAllowed(pe, FourCC('u00H'), i)	-- зиккураты нежить
-	SetPlayerTechMaxAllowed(pe, FourCC('e00N'), i)	-- лунный колодец энты
-	SetPlayerTechMaxAllowed(pe, FourCC('e02E'), i)	-- колодец воспоминаний
-	SetPlayerTechMaxAllowed(pe, FourCC('h0CE'), i)	-- кристалы маны ночнорожденные
-	SetPlayerTechMaxAllowed(pe, FourCC('h0DS'), i)	-- накопитель скверны
-	SetPlayerTechMaxAllowed(pe, FourCC('h0MV'), i)	-- лачуга лесные
-	SetPlayerTechMaxAllowed(pe, FourCC('h0EC'), i)	-- накопитель энергии иллидарии
-	SetPlayerTechMaxAllowed(pe, FourCC('h0EX'), i)	-- стихийный кристалл
-	SetPlayerTechMaxAllowed(pe, FourCC('h0F9'), i)	-- гнездо драконов
-	SetPlayerTechMaxAllowed(pe, FourCC('otrb'), i)	-- землянка
-	SetPlayerTechMaxAllowed(pe, FourCC('u02E'), i)	-- малое порождение безликие
-	SetPlayerTechMaxAllowed(pe, FourCC('h0JD'), i)	-- дом броженных отрекшиеся
-	SetPlayerTechMaxAllowed(pe, FourCC('o036'), i)	-- свиноферма
-	SetPlayerTechMaxAllowed(pe, FourCC('o060'), i)	-- свиноферма орда скверны
-	SetPlayerTechMaxAllowed(pe, FourCC('h0NZ'), i)	-- рыбацкий дом пандарены
+	SetPlayerTechMaxAllowed(pe, FourCC('h0H2'), i)	-- ????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('hhou'), i)	-- ????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('nnfm'), i)	-- ????????? ???
+	SetPlayerTechMaxAllowed(pe, FourCC('w20y'), i)	-- ??????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0N2'), i)	-- ?????? ?????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('o04C'), i)	-- ??????? ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('h05Y'), i)	-- ????? ???? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('h05C'), i)	-- ??????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('h024'), i)	-- ????? ??? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0IM'), i)	-- ????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('h031'), i)	-- ??????????? ???? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('h04M'), i)	-- ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h00A'), i)	-- ??????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0FL'), i)	-- ??????????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0NW'), i)	-- ???????? ????? ??? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('o003'), i)	-- ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('o00T'), i)	-- ???????? ?????????? ?????
+	SetPlayerTechMaxAllowed(pe, FourCC('emow'), i)	-- ??????? ????????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0BT'), i)	-- ??? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('u00H'), i)	-- ????????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('e00N'), i)	-- ?????? ??????? ????
+	SetPlayerTechMaxAllowed(pe, FourCC('e02E'), i)	-- ??????? ????????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0CE'), i)	-- ???????? ???? ??????????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0DS'), i)	-- ?????????? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0MV'), i)	-- ?????? ??????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0EC'), i)	-- ?????????? ??????? ?????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0EX'), i)	-- ????????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0F9'), i)	-- ?????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('otrb'), i)	-- ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('u02E'), i)	-- ????? ?????????? ????????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0JD'), i)	-- ??? ????????? ??????????
+	SetPlayerTechMaxAllowed(pe, FourCC('o036'), i)	-- ??????????
+	SetPlayerTechMaxAllowed(pe, FourCC('o060'), i)	-- ?????????? ???? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('h0NZ'), i)	-- ???????? ??? ?????????
 	
 	i = 20
 	
-	SetPlayerTechMaxAllowed(pe, FourCC('h077'), i)	-- банк гоблины
-	SetPlayerTechMaxAllowed(pe, FourCC('u019'), i)	-- кокон нерубы
+	SetPlayerTechMaxAllowed(pe, FourCC('h077'), i)	-- ???? ???????
+	SetPlayerTechMaxAllowed(pe, FourCC('u019'), i)	-- ????? ??????
 	
 	i = 25
-	SetPlayerTechMaxAllowed(pe, FourCC('h0NZ'), i)	-- сторожевая башня кул тирас
+	SetPlayerTechMaxAllowed(pe, FourCC('h0NZ'), i)	-- ?????????? ????? ??? ?????
 	
 	i = 30
-	SetPlayerTechMaxAllowed(pe, FourCC('e01J'), i)	-- кокон силитиды
+	SetPlayerTechMaxAllowed(pe, FourCC('e01J'), i)	-- ????? ????????
 	
 	i = 100
-	SetPlayerTechMaxAllowed(pe, FourCC('pa26'), i)	-- ферма пандаренов
+	SetPlayerTechMaxAllowed(pe, FourCC('pa26'), i)	-- ????? ??????????
 	
-	-- Спелы
-	SetPlayerAbilityAvailable(pe, FourCC('w290'), false)	-- Прочная чешуя орда 2 войны
-	SetPlayerAbilityAvailable(pe, FourCC('w289'), false)	-- Огненный столб орда 2 войны
-	SetPlayerAbilityAvailable(pe, FourCC('w288'), false)	-- Пламенное дыхаение орда 2 войны
+	-- ?????
+	SetPlayerAbilityAvailable(pe, FourCC('w290'), false)	-- ??????? ????? ???? 2 ?????
+	SetPlayerAbilityAvailable(pe, FourCC('w289'), false)	-- ???????? ????? ???? 2 ?????
+	SetPlayerAbilityAvailable(pe, FourCC('w288'), false)	-- ????????? ???????? ???? 2 ?????
 	
 	pe = nil
 	
@@ -4961,14 +4948,14 @@ end
 function Trig_RRR_Func001A()
 	
 	local l = PolarProjectionBJ(GetUnitLoc(GetEnumUnit()), (7.00 + (4.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2)))), (GetUnitFacing(GetEnumUnit()) + 180.00))
-	--  Эта переменная отвечает за скорость отлёта 7+ 3 каждый лвл
+	--  ??? ?????????? ???????? ?? ???????? ?????? 7+ 3 ?????? ???
 	
-	--  Это действие по которому юниты двигаються по переменной
+	--  ??? ???????? ?? ???????? ????? ?????????? ?? ??????????
 	SetUnitPositionLoc(GetEnumUnit(), l)
-	--  Урон каждые 0.04 сек 1+ 2 каждый лвл 
+	--  ???? ?????? 0.04 ??? 1+ 2 ?????? ??? 
 	UnitDamageTargetBJ(udg_LocalUnit2, GetEnumUnit(), (1.00 + (2.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2)))), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
 	
-	--  Удаление переменной
+	--  ???????? ??????????
 	l = nil
 	RemoveLocation(l)
 	
@@ -4996,134 +4983,51 @@ function InitTrig_RRR()
 	TriggerRegisterTimerEventPeriodic(gg_trg_RRR, 0.04)
 	TriggerAddAction(gg_trg_RRR, Trig_RRR_Actions)
 end
--- ===========================================================================
---  Trigger: RemoveUnitTimed
--- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
--- ===========================================================================
----@return nothing
-function ToKillAct()
-	
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	RemoveUnit(LoadUnitHandle(Hash, id, 1))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
-end
 ---@param u unit
 ---@param time real
 ---@return nothing
 function RemoveUnitTimed(u, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, ToKillAct)
-	SaveUnitHandle(Hash, id, 1, u)
-	u = nil
-	t = nil
-end
--- ===========================================================================
---  Trigger: ReviveHeroTimed
--- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
--- ===========================================================================
----@return nothing
-function ReviveHeroTimedAct()
-	
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	gUnit = LoadUnitHandle(Hash, id, 1)
-	
-	Counter = 0
-	GroupEnumUnitsOfPlayer(gGroup, GetOwningPlayer(gUnit), UnitsWithReviveHeroSpell)
-	if FirstOfGroup(gGroup) ~= nil then
-		gUnit2 = GroupPickRandomUnit2(gGroup)
-		ReviveHero(gUnit, GetUnitX(gUnit2), GetUnitY(gUnit2), true)
-	end
-	
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
+	TimerStart(t, time, false, function()
+		RemoveUnit(u)
+		DestroyTimer(t)
+	end)
 end
 ---@param u unit
 ---@param time real
 ---@return nothing
 function ReviveHeroTimed(u, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, ReviveHeroTimedAct)
-	SaveUnitHandle(Hash, id, 1, u)
-	t = nil
-end
--- ===========================================================================
---  Trigger: RemoveLigtingTimed
--- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
--- ===========================================================================
----@return nothing
-function RemoveLigtingTimedAct()
-	
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	DestroyLightning(LoadLightningHandle(Hash, id, 1))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
+	TimerStart(t, time, false, function()
+		gUnit = u
+		Counter = 0
+		GroupEnumUnitsOfPlayer(gGroup, GetOwningPlayer(gUnit), UnitsWithReviveHeroSpell)
+		if FirstOfGroup(gGroup) ~= nil then
+			gUnit2 = GroupPickRandomUnit2(gGroup)
+			ReviveHero(gUnit, GetUnitX(gUnit2), GetUnitY(gUnit2), true)
+		end
+		DestroyTimer(t)
+	end)
 end
 ---@param l lightning
 ---@param time real
 ---@return nothing
 function RemoveLigtingTimed(l, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, RemoveLigtingTimedAct)
-	SaveLightningHandle(Hash, id, 1, l)
-	l = nil
-	t = nil
-end
--- ===========================================================================
---  Trigger: RemoveFloatTextTimed
--- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
--- ===========================================================================
----@return nothing
-function RemoveTextTagTimedAct()
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	DestroyTextTag(LoadTextTagHandle(Hash, id, 1))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
+	TimerStart(t, time, false, function()
+		DestroyLightning(l)
+		DestroyTimer(t)
+	end)
 end
 ---@param ft texttag
 ---@param time real
 ---@return nothing
 function RemoveTextTagTimed(ft, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, RemoveTextTagTimedAct)
-	SaveTextTagHandle(Hash, id, 1, ft)
-	ft = nil
-	t = nil
-end
--- ===========================================================================
---  Trigger: CollisionTimed
--- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
--- ===========================================================================
----@return nothing
-function CollisionTimedAct()
-	
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	SetUnitPathing(LoadUnitHandle(Hash, id, 1), LoadBoolean(Hash, id, 2))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
+	TimerStart(t, time, false, function()
+		DestroyTextTag(ft)
+		DestroyTimer(t)
+	end)
 end
 ---@param u unit
 ---@param CollisionOn boolean
@@ -5131,28 +5035,10 @@ end
 ---@return nothing
 function CollisionTimed(u, CollisionOn, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, AddTimedAbilityAct)
-	SaveUnitHandle(Hash, id, 1, u)
-	SaveBoolean(Hash, id, 2, CollisionOn)
-	u = nil
-	t = nil
-end
--- ===========================================================================
---  Trigger: SetBuildingProgressTimed
--- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
--- ===========================================================================
----@return nothing
-function SetBuildingProgressTimedAct()
-	
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	UnitSetConstructionProgress(LoadUnitHandle(Hash, id, 1), LoadInteger(Hash, id, 2))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
+	TimerStart(t, time, false, function()
+		SetUnitPathing(u, CollisionOn)
+		DestroyTimer(t)
+	end)
 end
 ---@param u unit
 ---@param BuildingProgress integer
@@ -5160,27 +5046,10 @@ end
 ---@return nothing
 function SetBuildingProgressTimed(u, BuildingProgress, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, SetBuildingProgressTimedAct)
-	SaveUnitHandle(Hash, id, 1, u)
-	SaveInteger(Hash, id, 2, BuildingProgress)
-	u = nil
-	t = nil
-end
--- ===========================================================================
---  Trigger: IssuerImmediateOrderTimed
--- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
--- ===========================================================================
----@return nothing
-function IssuerImmedeateOrderTimedAct()
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	IssueImmediateOrder(LoadUnitHandle(Hash, id, 2), LoadStr(Hash, id, 1))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
+	TimerStart(t, time, false, function()
+		UnitSetConstructionProgress(u, BuildingProgress)
+		DestroyTimer(t)
+	end)
 end
 ---@param order string
 ---@param u unit
@@ -5188,17 +5057,15 @@ end
 ---@return nothing
 function IssuerImmediateOrderTimed(order, u, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, IssuerImmedeateOrderTimedAct)
-	SaveStr(Hash, id, 1, order)
-	SaveUnitHandle(Hash, id, 2, u)
-	order = nil
-	t = nil
+	TimerStart(t, time, false, function()
+		IssueImmediateOrder(u, order)
+		DestroyTimer(t)
+	end)
 end
 -- ===========================================================================
 --  Trigger: IsEnemyAllyOwner
 -- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
+--  ????? ???? ????? ??? ???????, ??????? ?? ????? ?????? LocalUni2
 -- ===========================================================================
 -- 
 -- function isEnemy takes nothing returns boolean
@@ -5226,7 +5093,7 @@ end
 ---@return nothing
 function GlobalIssue(unitid, p, order)
 	gInt = unitid
-	GroupEnumUnitsOfPlayer(gGroup, p, Condition(typeBool))
+	GroupEnumUnitsOfPlayer(gGroup, p, typeBool)
 	GroupImmediateOrder(gGroup, order)
 end
 -- ===========================================================================
@@ -5314,14 +5181,14 @@ function MassSpell(caster, unitability, dammyAbility, order, targetloc, radious,
 	local target
 	local dummyCaster
 	local i = 0
-	--  call BJDebugMsg("Сработало")
+	--  call BJDebugMsg("?????????")
 	udg_LocalPlayer = p
 	if targetOwning == 1 then
-		bex = Condition(isEnemy)
+		bex = isEnemy
 	elseif targetOwning == 2 then
-		bex = Condition(isAlly)
+		bex = isAlly
 	else
-		bex = Condition(isOwner)
+		bex = isOwner
 	end
 	
 	if targetloc == nil then
@@ -5336,7 +5203,7 @@ function MassSpell(caster, unitability, dammyAbility, order, targetloc, radious,
 	
 	
 	if FirstOfGroup(g) == nil then
-		-- Нету врагов
+		-- ???? ??????
 		BlzStartUnitAbilityCooldown(caster, unitability, BlzGetUnitAbilityCooldown(caster, unitability, level))
 		-- call SetUnitState( caster,UNIT_STATE_MANA, GetUnitState( caster,UNIT_STATE_MANA)+100+35*level )
 	else
@@ -5347,7 +5214,7 @@ function MassSpell(caster, unitability, dammyAbility, order, targetloc, radious,
 			if target == nil then break end
 			
 			dummyCaster = CreateUnitAtLoc(p, gDummy, targetloc, bj_UNIT_FACING)
-			--  call BJDebugMsg("Луп")
+			--  call BJDebugMsg("???")
 			UnitAddAbility(dummyCaster, dammyAbility)
 			SetUnitAbilityLevel(dummyCaster, dammyAbility, level)
 			IssueTargetOrder(dummyCaster, order, target)
@@ -5361,7 +5228,6 @@ function MassSpell(caster, unitability, dammyAbility, order, targetloc, radious,
 	g = nil
 	RemoveLocation(targetloc)
 	p = nil
-	DestroyBoolExpr(bex)
 	dummyCaster = nil
 	bex = nil
 	
@@ -5745,7 +5611,7 @@ function Trig_FarmTier2_Actions()
 	
 	udg_LocalInteger = 20
 	SetPlayerTechMaxAllowedSwap(FourCC('h0DT'), udg_LocalInteger, udg_LocalPlayer)
-	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  Нефть платформа
+	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  ????? ?????????
 	udg_LocalInteger = 30
 	SetPlayerTechMaxAllowedSwap(FourCC('h0NW'), udg_LocalInteger, udg_LocalPlayer)
 	SetPlayerTechMaxAllowedSwap(FourCC('h0N2'), udg_LocalInteger, udg_LocalPlayer)
@@ -5872,7 +5738,7 @@ function Trig_FarmTier2_Res_Actions()
 	SetPlayerTechMaxAllowedSwap(FourCC('h0HU'), udg_LocalInteger, udg_LocalPlayer)
 	udg_LocalInteger = 20
 	SetPlayerTechMaxAllowedSwap(FourCC('h0DT'), udg_LocalInteger, udg_LocalPlayer)
-	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  Нефть платформа
+	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  ????? ?????????
 	udg_LocalInteger = 30
 	SetPlayerTechMaxAllowedSwap(FourCC('h0N2'), udg_LocalInteger, udg_LocalPlayer)
 	SetPlayerTechMaxAllowedSwap(FourCC('h0H2'), udg_LocalInteger, udg_LocalPlayer)
@@ -6052,7 +5918,7 @@ function Trig_FarmTier3_Actions()
 	SetPlayerTechResearchedSwap(FourCC('R0HP'), 2, udg_LocalPlayer)
 	udg_LocalInteger = 30
 	SetPlayerTechMaxAllowedSwap(FourCC('h0DT'), udg_LocalInteger, udg_LocalPlayer)
-	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  Нефть платформа
+	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  ????? ?????????
 	udg_LocalInteger = 45
 	SetPlayerTechMaxAllowedSwap(FourCC('h0NW'), udg_LocalInteger, udg_LocalPlayer)
 	SetPlayerTechMaxAllowedSwap(FourCC('h0N2'), udg_LocalInteger, udg_LocalPlayer)
@@ -6178,7 +6044,7 @@ function Trig_FarmTier3_Res_Actions()
 	SetPlayerTechMaxAllowedSwap(FourCC('h0HU'), udg_LocalInteger, udg_LocalPlayer)
 	udg_LocalInteger = 30
 	SetPlayerTechMaxAllowedSwap(FourCC('h0DT'), udg_LocalInteger, udg_LocalPlayer)
-	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  Нефть платформа
+	SetPlayerTechMaxAllowedSwap(FourCC('h0OE'), udg_LocalInteger, udg_LocalPlayer)	--  ????? ?????????
 	udg_LocalInteger = 45
 	SetPlayerTechMaxAllowedSwap(FourCC('h0N2'), udg_LocalInteger, udg_LocalPlayer)
 	SetPlayerTechMaxAllowedSwap(FourCC('h0H2'), udg_LocalInteger, udg_LocalPlayer)
@@ -6251,12 +6117,9 @@ end
 -- ===========================================================================
 --  Trigger: GnomeNotToMuch
 -- 
---  Попробуешь вспомнить мозг взовется(
+--  ?????????? ????????? ???? ????????(
 -- ===========================================================================
 ---@return boolean
-function Trig_GnomeNotToMuch_Conditions()
-	return GetSpellAbilityId() == FourCC('A0SG')
-end
 ---@return boolean
 function Type_1()
 	return GetUnitTypeId(GetFilterUnit()) == FourCC('h0FL')
@@ -6273,13 +6136,13 @@ function Trig_GnomeNotToMuch_Actions()
 	local p = GetOwningPlayer(GetTriggerUnit())
 	local pi = GetPlayerId(p)
 	local Tl = udg_TierLevel[GetConvertedPlayerId(p)]
-	udg_Boolexpr = Condition(Type_1)
+	udg_Boolexpr = Type_1
 	
-	if GetUnitTypeId(GetTriggerUnit()) ~= FourCC('h0FL') then	--  наоборот для теста
+	if GetUnitTypeId(GetTriggerUnit()) ~= FourCC('h0FL') then	--  ???????? ??? ?????
 		income[pi] = (income[pi] + 40)
 		
 		
-		udg_LocalText2 = "Превышен лимит. Некоторые башни сменили режим."
+		udg_LocalText2 = "???????? ?????. ????????? ????? ??????? ?????."
 		GroupEnumUnitsOfPlayer(udg_LocalOtrad, p, udg_Boolexpr)
 		udg_LocalInteger = CountUnitsInGroup(udg_LocalOtrad)
 		if Tl == 1 and udg_LocalInteger >= 15 then
@@ -6322,8 +6185,10 @@ end
 function InitTrig_GnomeNotToMuch()
 	gg_trg_GnomeNotToMuch = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_GnomeNotToMuch, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_GnomeNotToMuch, Condition(Trig_GnomeNotToMuch_Conditions))
-	TriggerAddAction(gg_trg_GnomeNotToMuch, Trig_GnomeNotToMuch_Actions)
+    TriggerAddAction(gg_trg_GnomeNotToMuch, function()
+        if GetSpellAbilityId() ~= FourCC('A0SG') then return end
+        Trig_GnomeNotToMuch_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: Moneta C
@@ -6402,33 +6267,33 @@ function Trig_TimerIncome_Actions()
 		if DisOn then
 			
 			
-			--  ---------------------------Система сверхпотребления-----------------------------
+			--  ---------------------------??????? ????????????????-----------------------------
 			-- set logistic[i] = 500*R2I( udg_UnitsCount[i]/ 50.00 )
 			-- set logistic[i] = 250*R2I( udg_UnitsCount[i]/ 25.00 )
-			-- Старые версии
+			-- ?????? ??????
 			
 			
 			r = R2I(udg_UnitsCount[i] / 25.00)
-			logistic[i] = ((500 + 100 * (r - 1)) / 2 * r)	--  прогрессия
+			logistic[i] = ((500 + 100 * (r - 1)) / 2 * r)	--  ??????????
 			
 			
-			--  ---------------------------Система коррупции-----------------------------
+			--  ---------------------------??????? ?????????-----------------------------
 			t = GetPlayerTechCount(p, FourCC('R04O'), true)
 			if t > 1 then
 				corruption[i] = (disincome[i] * ((t - 1) * 0.15))
 				if EcLog then
-					udg_LocalText2 = ("Коррупция" .. I2S(R2I(corruption[i])))
+					udg_LocalText2 = ("?????????" .. I2S(R2I(corruption[i])))
 					DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 				end
 				
 			end
 			
-			-- Общий модификатор расходов
+			-- ????? ??????????? ????????
 			t = GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true)
 			if t >= 1 then
 				additional[i] = disincome[i] * (udg_MainPrice[i] / (-100.0))
 				if EcLog then
-					udg_LocalText2 = ("Дополнительно: " .. I2S(R2I(additional[i])))
+					udg_LocalText2 = ("?????????????: " .. I2S(R2I(additional[i])))
 					DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 				end
 				
@@ -6443,17 +6308,17 @@ function Trig_TimerIncome_Actions()
 		
 		
 		if EcLog then
-			udg_LocalText2 = ("Доход: " .. R2S(income[i] * IncomeMod))
+			udg_LocalText2 = ("?????: " .. R2S(income[i] * IncomeMod))
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("Расход: " .. R2S(disincome[i]))
+			udg_LocalText2 = ("??????: " .. R2S(disincome[i]))
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("Логистика: " .. R2S(logistic[i]))
+			udg_LocalText2 = ("?????????: " .. R2S(logistic[i]))
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("Юнитов: " .. I2S(udg_UnitsCount[i]))
+			udg_LocalText2 = ("??????: " .. I2S(udg_UnitsCount[i]))
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("Итого: " .. R2S(balance[i]))
+			udg_LocalText2 = ("?????: " .. R2S(balance[i]))
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("Древесины: " .. R2S(incomeW[i]))
+			udg_LocalText2 = ("?????????: " .. R2S(incomeW[i]))
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 		end
 		
@@ -6505,12 +6370,12 @@ end
 -- ===========================================================================
 --  Trigger: UnitEnterMap
 -- 
---  Для захватываемых
+--  ??? ?????????????
 -- ===========================================================================
 ---@return boolean
 function Trig_UnitEnterMap_Conditions()
 	gTriggerUnit = GetEnteringUnit()
-	return GetUnitAbilityLevel(gTriggerUnit, FourCC('A0Z5')) == 0	-- Проверка на даммика или юнита вне экономики
+	return GetUnitAbilityLevel(gTriggerUnit, FourCC('A0Z5')) == 0	-- ???????? ?? ??????? ??? ????? ??? ?????????
 end
 ---@return nothing
 function Trig_UnitEnterMap_Actions()
@@ -6577,7 +6442,7 @@ function Trig_UnitUpgraded_Actions()
 	local pi = GetPlayerId(p)
 	local i = GetUnitFoodMade(u)
 	
-	-- Добавляю инком
+	-- ???????? ?????
 	
 	
 	if GetUnitAbilityLevel(u, FourCC('A0LJ')) >= 1 then
@@ -6624,7 +6489,7 @@ function Trig_UnitDead_Actions()
 	if GetUnitAbilityLevel(u, FourCC('BUan')) == 0 then
 		DelCountDis(u, pi)
 	else
-		TimedCount(u)	-- Проверить владельца через 0.3
+		TimedCount(u)	-- ????????? ????????? ????? 0.3
 	end
 	
 	
@@ -6638,9 +6503,9 @@ function Trig_UnitDead_Actions()
 	u = nil
 	
 	
-		--     //Убираю его инком
-	--    // call DisplayTextToPlayer(p,0,0,("Увидел смерть "+GetUnitName(u)))
-	--     //Здание
+		--     //?????? ??? ?????
+	--    // call DisplayTextToPlayer(p,0,0,("?????? ?????? "+GetUnitName(u)))
+	--     //??????
 	--     if IsUnitType(u, UNIT_TYPE_STRUCTURE) then
 	--         if IsUnitInGroup(u, udg_BuildedSctructure[1]) then
 	--             set income[pi] = income[pi] - I2R(GetUnitFoodMade(u)) 
@@ -6659,26 +6524,26 @@ function Trig_UnitDead_Actions()
 	--                 set incomeW[pi] =  incomeW[pi] - ( 50.00 * i ) 
 	--             endif
 	--         endif
-	--     //Гер
+	--     //???
 	--     elseif IsUnitType(u, UNIT_TYPE_HERO) then
 	--             set disincome[pi] = ( disincome[pi] - 100.00 )
 	--             set udg_UnitsCount[pi] = udg_UnitsCount[pi] - 1
 	--             if  GetUnitAbilityLevel(u,'A0ZT')!=0 then        
 	--                     set income[pi] = income[pi] - (100+GetUnitAbilityLevel(u,'A0ZT')*100)
 	--             endif
-	--     //юнит
+	--     //????
 	--     elseif GetTriggerUnit()!=nil then
 	--             
 	--             if not IsUnitType(u, UNIT_TYPE_SUMMONED) then
-	--                // call DisplayTextToPlayer(p,0,0,("Увидел смерть до юнита "+GetUnitName(u)))
+	--                // call DisplayTextToPlayer(p,0,0,("?????? ?????? ?? ????? "+GetUnitName(u)))
 	--                 set udg_Price = GetUnitGoldCost(GetUnitTypeId(u))
 	--                 set disincome[pi] = ( disincome[pi] - ( udg_Price * Tax ) )
 	--                 set udg_UnitsCount[pi] = udg_UnitsCount[pi] - 1
 	--                 
-	--                 // ---------------------------Особые условия-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	--                 // ---------------------------Топливо гоблинов-----------------------------
+	--                 // ---------------------------?????? ???????-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	--                 // ---------------------------??????? ????????-----------------------------
 	--                 if GetUnitAbilityLevel(u,'A0A5') != 0 then
-	--                     set disincome[pi] = disincome[pi] - ( ( udg_Price * Tax ) * ( 1.60 - ( 0.10 * I2R(GetUnitAbilityLevel(u,'A0A5')) ) ) )	--                 // ---------------------------Поколения Силитидов------------------------- ??
+	--                     set disincome[pi] = disincome[pi] - ( ( udg_Price * Tax ) * ( 1.60 - ( 0.10 * I2R(GetUnitAbilityLevel(u,'A0A5')) ) ) )	--                 // ---------------------------????????? ?????????------------------------- ??
 	--                 elseif GetUnitAbilityLevel(u,'A0VH') == 1 then
 	--                     set disincome[pi] = disincome[pi] + ( udg_Price * Tax / 2  )
 	--                 elseif GetUnitAbilityLevel(u,'A0VH') == 2 then
@@ -6743,10 +6608,10 @@ function Trig_UnitRevive_Actions()
 	--         set udg_Price = GetUnitGoldCost(GetUnitTypeId(u))
 	--         set disincome[pi] = ( disincome[pi] + ( udg_Price * Tax ) )
 	--         
-	--         // ---------------------------Особые условия-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-	--         // ---------------------------Топливо гоблинов-----------------------------
+	--         // ---------------------------?????? ???????-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+	--         // ---------------------------??????? ????????-----------------------------
 	--         if GetUnitAbilityLevel(u,'A0A5') != 0 then
-	--             set disincome[pi] = disincome[pi] + ( ( udg_Price * Tax ) * ( 1.60 - ( 0.10 * I2R(GetUnitAbilityLevel(u,'A0A5')) ) ) )	--         // ---------------------------Поколения Силитидов-------------------------
+	--             set disincome[pi] = disincome[pi] + ( ( udg_Price * Tax ) * ( 1.60 - ( 0.10 * I2R(GetUnitAbilityLevel(u,'A0A5')) ) ) )	--         // ---------------------------????????? ?????????-------------------------
 	--         elseif GetUnitAbilityLevel(u,'A0VH') == 1 then
 	--             set disincome[pi] = disincome[pi] + ( udg_Price * Tax / 2  )
 	--         elseif GetUnitAbilityLevel(u,'A0VH') == 2 then
@@ -6794,7 +6659,6 @@ end
 function FixEc(pi)
 	local r
 	local g = CreateGroup()
-	local b = Condition(UnitAliveBool)
 	ClearEc(pi)
 	
 	
@@ -6821,7 +6685,7 @@ function FixEcAll()
 		if i >= 23 then break end
 		
 		FixEc(i)
-		DisplayTextToPlayer(Player(i), 0, 0, "Экономика всех игроков пересчитана чтобы избежать непредвиденных багов, это экпериментальная функция")
+		DisplayTextToPlayer(Player(i), 0, 0, "????????? ???? ??????? ??????????? ????? ???????? ?????????????? ?????, ??? ???????????????? ???????")
 		i = i + 1
 	end
 	
@@ -6855,7 +6719,7 @@ end
 -- ===========================================================================
 --  Trigger: Gob Potreblenie
 -- 
---  Цена за нефть)
+--  ???? ?? ?????)
 -- ===========================================================================
 ---@return boolean
 function Trig_Gob_Potreblenie_Conditions()
@@ -6872,7 +6736,7 @@ function Trig_Gob_Potreblenie_Actions()
 	local pi = GetPlayerId(p)
 	local u
 	local r = GetPlayerTechCount(p, FourCC('R04N'), true)
-	udg_Boolexpr = Condition(Trig_Gob_Potreblenie_Func001002)
+	udg_Boolexpr = Trig_Gob_Potreblenie_Func001002
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
 	while true do
 		u = FirstOfGroup(g)
@@ -6907,7 +6771,7 @@ end
 -- ===========================================================================
 --  Trigger: Silitid Potreblenie
 -- 
---  Цена за нефть)
+--  ???? ?? ?????)
 -- ===========================================================================
 ---@return boolean
 function Trig_Silitid_Potreblenie_Conditions()
@@ -6925,7 +6789,7 @@ function Trig_Silitid_Potreblenie_Actions()
 	local pi = GetPlayerId(p)
 	local u
 	local r = GetPlayerTechCount(p, FourCC('R04N'), true)
-	udg_Boolexpr = Condition(HaveSilitidSpell)
+	udg_Boolexpr = HaveSilitidSpell
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
 	while true do
 		u = FirstOfGroup(g)
@@ -7009,7 +6873,7 @@ end
 -- ===========================================================================
 --  Trigger: Cities Start 2
 -- 
---  Заношу в группы нейтральные здания
+--  ?????? ? ?????? ??????????? ??????
 -- ===========================================================================
 ---@return boolean
 function ItIsCity()
@@ -7031,7 +6895,7 @@ function Trig_Cities_Start_2_Func003A()
 end
 ---@return nothing
 function Trig_Cities_Start_2_Actions()
-	udg_Boolexpr = Condition(ItIsCity)
+	udg_Boolexpr = ItIsCity
 	GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
 	ForGroup(udg_LocalOtrad2, Trig_Cities_Start_2_Func003A)
 	GroupClear(udg_LocalOtrad2)
@@ -7074,7 +6938,7 @@ function Trig_DeadSituastion_Actions()
 	local i
 	
 	
-	-- Для режима доминации
+	-- ??? ?????? ?????????
 	
 	CityPlayerCount[pi0] = (CityPlayerCount[pi0] or 0) - 1
 	CityPlayerCount[pi] = (CityPlayerCount[pi] or 0) + 1
@@ -7084,14 +6948,14 @@ function Trig_DeadSituastion_Actions()
 		CheckCity(p)
 	end
 	
-	-- Потом выбирать рандомного юнита рядом.
+	-- ????? ???????? ?????????? ????? ?????.
 	u2 = CreateUnit(p, GetUnitTypeId(u), GetUnitX(u), GetUnitY(u), GetUnitFacing(u))
 	GroupAddUnit(udg_ZahvatBuildings, u2)
 	BlzSetUnitArmor(u2, 3)
 	SetUnitState(u2, UNIT_STATE_LIFE, 5000)
 	GroupAddUnit(udg_BuildedSctructure[1], u2)
 	
-	-- Условие что город мелкий
+	-- ??????? ??? ????? ??????
 	if GetUnitAbilityLevel(u, FourCC('A1MS')) == 0 then
 		UnitAddAbility(u2, FourCC('A0VJ'))
 	end
@@ -7108,13 +6972,13 @@ function Trig_DeadSituastion_Actions()
 	
 	
 	
-	-- Проверка на Прибрежный город
+	-- ???????? ?? ?????????? ?????
 	if IsUnitInGroup(u, udg_CityNearWater) then
 		GroupRemoveUnit(udg_CityNearWater, u)
 		GroupAddUnit(udg_CityNearWater, u2)
 	end
 	
-	-- Проверка на ии
+	-- ???????? ?? ??
 	if IsUnitInGroup(u, PortalBuildingAi) then
 		GroupAddUnit(PortalBuildingAi, u2)
 		
@@ -7133,7 +6997,7 @@ function Trig_DeadSituastion_Actions()
 	u = nil
 	u3 = nil
 	
-	-- Автогрейды
+	-- ??????????
 	if GetUnitAbilityLevel(u2, FourCC('A1MS')) == 0 then
 		TimedUpdate(u2, p)
 	end
@@ -7154,15 +7018,12 @@ end
 --  Trigger: Upgrade Gold C
 -- ===========================================================================
 ---@return boolean
-function Trig_Upgrade_Gold_C_Conditions()
-	return GetSpellAbilityId() == FourCC('A0AZ') and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 ---@return nothing
 function Trig_Upgrade_Gold_C_Actions()
 	local levels = 4
 	local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
 	
-	-- Если малый город, -2 к максу
+	-- ???? ????? ?????, -2 ? ?????
 	if GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1N9')) > 0 then
 		levels = levels - 2
 	end
@@ -7190,16 +7051,16 @@ end
 function InitTrig_Upgrade_Gold_C()
 	gg_trg_Upgrade_Gold_C = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Gold_C, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_Upgrade_Gold_C, Condition(Trig_Upgrade_Gold_C_Conditions))
-	TriggerAddAction(gg_trg_Upgrade_Gold_C, Trig_Upgrade_Gold_C_Actions)
+    TriggerAddAction(gg_trg_Upgrade_Gold_C, function()
+        if GetSpellAbilityId() ~= FourCC('A0AZ') then return end
+        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
+        Trig_Upgrade_Gold_C_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: Upgrade Lumber
 -- ===========================================================================
 ---@return boolean
-function Trig_Upgrade_Lumber_Conditions()
-	return GetSpellAbilityId() == FourCC('A0B1') and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 ---@return nothing
 function Trig_Upgrade_Lumber_Actions()
 	local levels = 4
@@ -7230,17 +7091,17 @@ end
 function InitTrig_Upgrade_Lumber()
 	gg_trg_Upgrade_Lumber = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Lumber, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_Upgrade_Lumber, Condition(Trig_Upgrade_Lumber_Conditions))
-	TriggerAddAction(gg_trg_Upgrade_Lumber, Trig_Upgrade_Lumber_Actions)
+    TriggerAddAction(gg_trg_Upgrade_Lumber, function()
+        if GetSpellAbilityId() ~= FourCC('A0B1') then return end
+        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
+        Trig_Upgrade_Lumber_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: Upgrade Kontrol
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Kontrol_Conditions()
-	if ( not (GetSpellAbilityId() == FourCC('A0VQ'))) then
-		return false
-	end
 	if ( not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)) then
 		return false
 	end
@@ -7266,17 +7127,17 @@ end
 function InitTrig_Upgrade_Kontrol()
 	gg_trg_Upgrade_Kontrol = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Kontrol, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_Upgrade_Kontrol, Condition(Trig_Upgrade_Kontrol_Conditions))
-	TriggerAddAction(gg_trg_Upgrade_Kontrol, Trig_Upgrade_Kontrol_Actions)
+    TriggerAddAction(gg_trg_Upgrade_Kontrol, function()
+        if GetSpellAbilityId() ~= FourCC('A0VQ') then return end
+        if not Trig_Upgrade_Kontrol_Conditions() then return end
+        Trig_Upgrade_Kontrol_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: Upgrade Razved
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Razved_Conditions()
-	if ( not (GetSpellAbilityId() == FourCC('A0VP'))) then
-		return false
-	end
 	if ( not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)) then
 		return false
 	end
@@ -7297,16 +7158,16 @@ end
 function InitTrig_Upgrade_Razved()
 	gg_trg_Upgrade_Razved = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Razved, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_Upgrade_Razved, Condition(Trig_Upgrade_Razved_Conditions))
-	TriggerAddAction(gg_trg_Upgrade_Razved, Trig_Upgrade_Razved_Actions)
+    TriggerAddAction(gg_trg_Upgrade_Razved, function()
+        if GetSpellAbilityId() ~= FourCC('A0VP') then return end
+        if not Trig_Upgrade_Razved_Conditions() then return end
+        Trig_Upgrade_Razved_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: Razved
 -- ===========================================================================
 ---@return boolean
-function Trig_Razved_Conditions()
-	return GetSpellAbilityId() == FourCC('A1C2')
-end
 ---@return nothing
 function Trig_Razved_Actions()
 	udg_LocalPosition2 = GetSpellTargetLoc()
@@ -7323,17 +7184,16 @@ end
 function InitTrig_Razved()
 	gg_trg_Razved = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Razved, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
-	TriggerAddCondition(gg_trg_Razved, Condition(Trig_Razved_Conditions))
-	TriggerAddAction(gg_trg_Razved, Trig_Razved_Actions)
+    TriggerAddAction(gg_trg_Razved, function()
+        if GetSpellAbilityId() ~= FourCC('A1C2') then return end
+        Trig_Razved_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: Upgrade Oborona
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Oborona_Conditions()
-	if ( not (GetSpellAbilityId() == FourCC('A0VN'))) then
-		return false
-	end
 	if ( not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)) then
 		return false
 	end
@@ -7354,17 +7214,17 @@ end
 function InitTrig_Upgrade_Oborona()
 	gg_trg_Upgrade_Oborona = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Oborona, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_Upgrade_Oborona, Condition(Trig_Upgrade_Oborona_Conditions))
-	TriggerAddAction(gg_trg_Upgrade_Oborona, Trig_Upgrade_Oborona_Actions)
+    TriggerAddAction(gg_trg_Upgrade_Oborona, function()
+        if GetSpellAbilityId() ~= FourCC('A0VN') then return end
+        if not Trig_Upgrade_Oborona_Conditions() then return end
+        Trig_Upgrade_Oborona_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: Upgrade Mobile
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Mobile_Conditions()
-	if ( not (GetSpellAbilityId() == FourCC('A0VO'))) then
-		return false
-	end
 	if ( not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)) then
 		return false
 	end
@@ -7386,16 +7246,16 @@ end
 function InitTrig_Upgrade_Mobile()
 	gg_trg_Upgrade_Mobile = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Mobile, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_Upgrade_Mobile, Condition(Trig_Upgrade_Mobile_Conditions))
-	TriggerAddAction(gg_trg_Upgrade_Mobile, Trig_Upgrade_Mobile_Actions)
+    TriggerAddAction(gg_trg_Upgrade_Mobile, function()
+        if GetSpellAbilityId() ~= FourCC('A0VO') then return end
+        if not Trig_Upgrade_Mobile_Conditions() then return end
+        Trig_Upgrade_Mobile_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: RazvedEnd
 -- ===========================================================================
 ---@return boolean
-function Trig_RazvedEnd_Conditions()
-	return GetSpellAbilityId() == FourCC('A1C2')
-end
 ---@return boolean
 function Trig_RazvedEnd_Func002001003()
 	return (GetUnitTypeId(GetFilterUnit()) == FourCC('h0MM'))
@@ -7407,7 +7267,6 @@ end
 ---@return nothing
 function Trig_RazvedEnd_Actions()
 	local g = CreateGroup()
-	local Boolexpr = Condition(Trig_RazvedEnd_Func002001003)
 	GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 1500, Boolexpr)
 	
 	RemoveUnit(FirstOfGroup(g))
@@ -7422,23 +7281,22 @@ end
 function InitTrig_RazvedEnd()
 	gg_trg_RazvedEnd = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_RazvedEnd, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
-	TriggerAddCondition(gg_trg_RazvedEnd, Condition(Trig_RazvedEnd_Conditions))
-	TriggerAddAction(gg_trg_RazvedEnd, Trig_RazvedEnd_Actions)
+    TriggerAddAction(gg_trg_RazvedEnd, function()
+        if GetSpellAbilityId() ~= FourCC('A1C2') then return end
+        Trig_RazvedEnd_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: Upgrade Income
 -- ===========================================================================
 ---@return boolean
-function Trig_Upgrade_Income_Conditions()
-	return GetSpellAbilityId() == FourCC('A0VM') and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 ---@return nothing
 function Trig_Upgrade_Income_Actions()
 	local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
 	UnitAddAbility(GetTriggerUnit(), FourCC('A0VS'))
 	
 	
-	-- Добавляю инком
+	-- ???????? ?????
 	income[pi] = income[pi] + 100
 	UpdateGraf(pi)
 	
@@ -7455,16 +7313,16 @@ end
 function InitTrig_Upgrade_Income()
 	gg_trg_Upgrade_Income = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Upgrade_Income, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_Upgrade_Income, Condition(Trig_Upgrade_Income_Conditions))
-	TriggerAddAction(gg_trg_Upgrade_Income, Trig_Upgrade_Income_Actions)
+    TriggerAddAction(gg_trg_Upgrade_Income, function()
+        if GetSpellAbilityId() ~= FourCC('A0VM') then return end
+        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
+        Trig_Upgrade_Income_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: Demontag
 -- ===========================================================================
 ---@return boolean
-function Trig_Demontag_Conditions()
-	return GetSpellAbilityId() == FourCC('A146') and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 ---@return nothing
 function Trig_Demontag_Actions()
 	local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -7485,8 +7343,11 @@ end
 function InitTrig_Demontag()
 	gg_trg_Demontag = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Demontag, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_Demontag, Condition(Trig_Demontag_Conditions))
-	TriggerAddAction(gg_trg_Demontag, Trig_Demontag_Actions)
+    TriggerAddAction(gg_trg_Demontag, function()
+        if GetSpellAbilityId() ~= FourCC('A146') then return end
+        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
+        Trig_Demontag_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: ResoursesInterface Copy
@@ -7509,36 +7370,36 @@ function Trig_ResoursesInterface_Copy_Actions()
 	
 	if balance[pi] > 0 then
 		BlzFrameSetText(IncomeTextFr, "|cffbeffa0" .. I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "|cffbeffa0Профицит")
+		BlzFrameSetText(tooltipTitle, "|cffbeffa0????????")
 	elseif balance[pi] == 0 then
 		BlzFrameSetText(IncomeTextFr, I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "Нулевой баланс")
+		BlzFrameSetText(tooltipTitle, "??????? ??????")
 	else
 		BlzFrameSetText(IncomeTextFr, "|cffffb4a0" .. I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "|cffffb4a0Дефицит")
+		BlzFrameSetText(tooltipTitle, "|cffffb4a0???????")
 	end
 	-- set balance[pi]=income[pi]-disincome[pi]+corruption[pi]-logistic[pi]+additional[pi]
 	
 	
-	-- Цифры
+	-- ?????
 	text = "|cffbeffa0" .. I2S(R2I(income[pi])) .. "*(" .. R2S(IncomeMod) .. "-" .. R2S(AllyTax[pi]) .. ")|r-(|cffffb4a0" .. I2S(R2I(disincome[pi])) .. "|r+|cffffb4a0" .. I2S(R2I(logistic[pi])) .. "|r)"
 	if GetPlayerTechCount(p, FourCC('R07E'), true) > 0 then
 		text = text .. " + " .. I2S(R2I(corruption[pi]))
 	end
 	if GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) > 0 then
-		text = text .. " и " .. I2S(R2I(additional[pi]))
+		text = text .. " ? " .. I2S(R2I(additional[pi]))
 	end
 	
-	-- Пояснение
-	text2 = "|n|cffbeffa0Доходы * Мод. Базы и Союза|r - (|cffffb4a0Расходы|r+|cffffb4a0Логистика|r)"
+	-- ?????????
+	text2 = "|n|cffbeffa0?????? * ???. ???? ? ?????|r - (|cffffb4a0???????|r+|cffffb4a0?????????|r)"
 	if GetPlayerTechCount(p, FourCC('R07E'), true) > 0 then
-		text2 = text2 .. "+коррупция"
+		text2 = text2 .. "+?????????"
 	end
 	
 	if GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) > 0 then
-		text2 = text2 .. " и дополнительно"
+		text2 = text2 .. " ? ?????????????"
 	end
-	-- set text = "Доход("+R2S(income[pi])+")-Расход("+R2S()+")|n-Логистика("+R2S(logistic[pi])+")"+"|n прочие элементы в разработке"
+	-- set text = "?????("+R2S(income[pi])+")-??????("+R2S()+")|n-?????????("+R2S(logistic[pi])+")"+"|n ?????? ???????? ? ??????????"
 	BlzFrameSetText(tooltipBody, text .. text2)
 	
 	
@@ -7557,11 +7418,11 @@ end
 -- ===========================================================================
 ---@return nothing
 function Trig_MainInfo_Actions()
-	--  Главное
+	--  ???????
 	CreateQuestBJ(bj_QUESTTYPE_REQ_DISCOVERED, "TRIGSTR_20894", "TRIGSTR_20895", "ReplaceableTextures\\CommandButtons\\BTNPhilosophersStone.blp")
-	--  Команды
+	--  ???????
 	CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_20896", "TRIGSTR_20914", "ReplaceableTextures\\CommandButtons\\BTNPhilosophersStone.blp")
-	--  Благодарности
+	--  ?????????????
 	CreateQuestBJ(bj_QUESTTYPE_OPT_DISCOVERED, "TRIGSTR_20922", "TRIGSTR_20987", "ReplaceableTextures\\CommandButtons\\BTNTransmute.blp")
 end
 -- ===========================================================================
@@ -7573,7 +7434,7 @@ end
 -- ===========================================================================
 --  Trigger: Initial things
 -- 
---  Все штуки которые должны быть включены при инициализации
+--  ??? ????? ??????? ?????? ???? ???????? ??? ?????????????
 -- ===========================================================================
 ---@return nothing
 function Trig_Initial_things_Func003A()
@@ -7790,12 +7651,6 @@ end
 --  Trigger: AddMinute
 -- ===========================================================================
 ---@return boolean
-function Trig_AddMinute_Conditions()
-	if ( not (GetSpellAbilityId() == FourCC('A0UJ'))) then
-		return false
-	end
-	return true
-end
 ---@return nothing
 function Trig_AddMinute_Actions()
 	StartTimerBJ(udg_LobbyTime, false, (TimerGetRemaining(udg_LobbyTime) + 60.00))
@@ -7806,19 +7661,15 @@ end
 function InitTrig_AddMinute()
 	gg_trg_AddMinute = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_AddMinute, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_AddMinute, Condition(Trig_AddMinute_Conditions))
-	TriggerAddAction(gg_trg_AddMinute, Trig_AddMinute_Actions)
+    TriggerAddAction(gg_trg_AddMinute, function()
+        if GetSpellAbilityId() ~= FourCC('A0UJ') then return end
+        Trig_AddMinute_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: StartGameFast
 -- ===========================================================================
 ---@return boolean
-function Trig_StartGameFast_Conditions()
-	if ( not (GetSpellAbilityId() == FourCC('A0UK'))) then
-		return false
-	end
-	return true
-end
 ---@return nothing
 function Trig_StartGameFast_Actions()
 	StartTimerBJ(udg_LobbyTime, false, 5.00)
@@ -7828,8 +7679,10 @@ end
 function InitTrig_StartGameFast()
 	gg_trg_StartGameFast = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_StartGameFast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_StartGameFast, Condition(Trig_StartGameFast_Conditions))
-	TriggerAddAction(gg_trg_StartGameFast, Trig_StartGameFast_Actions)
+    TriggerAddAction(gg_trg_StartGameFast, function()
+        if GetSpellAbilityId() ~= FourCC('A0UK') then return end
+        Trig_StartGameFast_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: LeaveStart
@@ -7857,9 +7710,6 @@ end
 --  Trigger: NextMenu
 -- ===========================================================================
 ---@return boolean
-function Trig_NextMenu_Conditions()
-	return GetSpellAbilityId() == FourCC('A0Y5')
-end
 ---@return nothing
 function Trig_NextMenu_Actions()
 	local l = Location(0, 0)
@@ -7883,11 +7733,11 @@ function Trig_NextMenu_Actions()
 		ModeBuilding = CreateUnitAtLoc(Player(0), FourCC('n04F'), l, 0)
 	elseif ModeBuildingI == 3 then
 		ModeBuilding = CreateUnitAtLoc(Player(0), FourCC('n04H'), l, 0)
-	elseif ModeBuildingI == 4 then	--  Экономика
+	elseif ModeBuildingI == 4 then	--  ?????????
 		ModeBuilding = CreateUnitAtLoc(Player(0), FourCC('n04I'), l, 0)
-	elseif ModeBuildingI == 5 then	--  Прочие
+	elseif ModeBuildingI == 5 then	--  ??????
 		ModeBuilding = CreateUnitAtLoc(Player(0), FourCC('n06Y'), l, 0)
-	elseif ModeBuildingI == 6 then	--  Дипломатия
+	elseif ModeBuildingI == 6 then	--  ??????????
 		ModeBuilding = CreateUnitAtLoc(Player(0), FourCC('n074'), l, 0)
 	end
 	ClearSelectionForPlayer(Player(0))
@@ -7901,8 +7751,10 @@ end
 function InitTrig_NextMenu()
 	gg_trg_NextMenu = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_NextMenu, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_NextMenu, Condition(Trig_NextMenu_Conditions))
-	TriggerAddAction(gg_trg_NextMenu, Trig_NextMenu_Actions)
+    TriggerAddAction(gg_trg_NextMenu, function()
+        if GetSpellAbilityId() ~= FourCC('A0Y5') then return end
+        Trig_NextMenu_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: SaveSelection
@@ -7937,7 +7789,7 @@ function Trig_UpgradeStolica_Actions()
 	BlzSetUnitArmor(GetTriggerUnit(), 30.00)
 	BlzSetUnitMaxHP(GetTriggerUnit(), 10000)
 	UnitAddAbilityBJ(FourCC('A0I6'), GetTriggerUnit())
-	BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, ("|cffd45e19Столица:|r " .. GetUnitName(GetTriggerUnit())))
+	BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, ("|cffd45e19???????:|r " .. GetUnitName(GetTriggerUnit())))
 	UnitAddAbilityBJ(FourCC('A145'), GetTriggerUnit())
 end
 -- ===========================================================================
@@ -7961,9 +7813,6 @@ function Capitals()
 	return IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups)
 end
 ---@return boolean
-function Trig_MakeStolica_Conditions()
-	return GetSpellAbilityId() == FourCC('A0IQ')
-end
 ---@param u unit
 ---@param flag boolean
 ---@return nothing
@@ -8001,7 +7850,7 @@ function MakeCapital(capital)
 	BlzSetUnitArmor(capital, 30.00)
 	UnitAddAbility(capital, FourCC('A0I6'))
 	UnitAddAbility(capital, FourCC('A145'))
-	BlzSetUnitStringFieldBJ(capital, UNIT_SF_NAME, ("|cffd45e19Столица:|r " .. GetUnitName(capital)))
+	BlzSetUnitStringFieldBJ(capital, UNIT_SF_NAME, ("|cffd45e19???????:|r " .. GetUnitName(capital)))
 	GroupAddUnit(udg_StolicaGroups, capital)
 	TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, capital, EVENT_UNIT_ATTACKED)
 	unitShareVisionAll(capital, true)
@@ -8012,7 +7861,7 @@ end
 ---@return nothing
 function MakeFakeCapital(p)
 	local u
-	GroupEnumUnitsOfPlayer(gGroup, p, Condition(HaveCapitalAbility))
+	GroupEnumUnitsOfPlayer(gGroup, p, HaveCapitalAbility)
 	u = BlzGroupUnitAt(gGroup, GetRandomInt(0, BlzGroupGetSize(gGroup) - 1))
 	playerCapital[GetPlayerId(p)] = u
 	aiCapitalEnter(u)
@@ -8031,8 +7880,10 @@ function InitTrig_MakeStolica()
 	gg_trg_MakeStolica = CreateTrigger()
 	DisableTrigger(gg_trg_MakeStolica)
 	TriggerRegisterAnyUnitEventBJ(gg_trg_MakeStolica, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_MakeStolica, Condition(Trig_MakeStolica_Conditions))
-	TriggerAddAction(gg_trg_MakeStolica, Trig_MakeStolica_Actions)
+    TriggerAddAction(gg_trg_MakeStolica, function()
+        if GetSpellAbilityId() ~= FourCC('A0IQ') then return end
+        Trig_MakeStolica_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: Mod classic
@@ -8053,12 +7904,6 @@ end
 --  Trigger: Mod classic spell
 -- ===========================================================================
 ---@return boolean
-function Trig_Mod_classic_spell_Conditions()
-	if ( not (GetSpellAbilityId() == FourCC('A0T4'))) then
-		return false
-	end
-	return true
-end
 ---@return nothing
 function Trig_Mod_classic_spell_Actions()
 	udg_GameMode = 0
@@ -8069,8 +7914,10 @@ end
 function InitTrig_Mod_classic_spell()
 	gg_trg_Mod_classic_spell = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Mod_classic_spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_Mod_classic_spell, Condition(Trig_Mod_classic_spell_Conditions))
-	TriggerAddAction(gg_trg_Mod_classic_spell, Trig_Mod_classic_spell_Actions)
+    TriggerAddAction(gg_trg_Mod_classic_spell, function()
+        if GetSpellAbilityId() ~= FourCC('A0T4') then return end
+        Trig_Mod_classic_spell_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: RebebmerToBuild
@@ -8103,30 +7950,30 @@ end
 function CheckAndCreateCapital(p)
 	local u
 	local g = CreateGroup()
-	GroupEnumUnitsOfPlayer(g, p, Condition(Capitals))
-	if BlzGroupGetSize(g) == 0 then	-- Столицы нет
+	GroupEnumUnitsOfPlayer(g, p, Capitals)
+	if BlzGroupGetSize(g) == 0 then	-- ??????? ???
 		
 		GroupClear(g)
 		Counter = 0
-		GroupEnumUnitsOfPlayer(g, p, Condition(HaveCapitalAbility))
+		GroupEnumUnitsOfPlayer(g, p, HaveCapitalAbility)
 		
 		if BlzGroupGetSize(g) > 0 then
 			u = BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
 			SetPlayerAbilityAvailable(p, FourCC('A0IQ'), false)
 			MakeCapital(u)
-			DisplayTimedTextToForce(udg_AllPlayers, 5, (GetPlayerName(p) .. " - |cffffff00почти проиграл|r|r, его |cffd45e19столица|r не не была построена ко времени, а потому была установлена автоматически."))
+			DisplayTimedTextToForce(udg_AllPlayers, 5, (GetPlayerName(p) .. " - |cffffff00????? ????????|r|r, ??? |cffd45e19???????|r ?? ?? ???? ????????? ?? ???????, ? ?????? ???? ??????????? ?????????????."))
 		else
 			if GetPlayerSlotState(p) == PLAYER_SLOT_STATE_PLAYING then
-				DisplayTimedTextToForce(udg_AllPlayers, 5, (GetPlayerName(p) .. " - |cffff0000проиграл|r, его |cffd45e19столица |r не построена ко времени. :("))
+				DisplayTimedTextToForce(udg_AllPlayers, 5, (GetPlayerName(p) .. " - |cffff0000????????|r, ??? |cffd45e19??????? |r ?? ????????? ?? ???????. :("))
 			end
 			
 			ClearPlayer(p)
 			
 		end
-		-- call DisplayTextToPlayer(Player(0),0,0,"Тестирование: Игрок "+GetPlayerName(p)+"  не имеет столицу")
+		-- call DisplayTextToPlayer(Player(0),0,0,"????????????: ????? "+GetPlayerName(p)+"  ?? ????? ???????")
 	else
 		
-		-- call DisplayTextToPlayer(Player(0),0,0,"Тестирование: Игрок "+GetPlayerName(p)+"  имеет столицу")
+		-- call DisplayTextToPlayer(Player(0),0,0,"????????????: ????? "+GetPlayerName(p)+"  ????? ???????")
 	end
 	
 	
@@ -8144,7 +7991,7 @@ end
 function Trig_StolicaTime_Actions()
 	ForForce(udg_AllPlayers, AllPlayersCapital)
 	ForForce(udg_Bots, AllPlayersCapital)
-	-- call DisplayTextToPlayer(Player(0),0,0,"Тестирование: поток не отрубился")
+	-- call DisplayTextToPlayer(Player(0),0,0,"????????????: ????? ?? ?????????")
 end
 -- ===========================================================================
 ---@return nothing
@@ -8158,12 +8005,6 @@ end
 --  Trigger: MOD Combo
 -- ===========================================================================
 ---@return boolean
-function Trig_MOD_Combo_Conditions()
-	if ( not (GetSpellAbilityId() == FourCC('A1M4'))) then
-		return false
-	end
-	return true
-end
 ---@return nothing
 function Trig_MOD_Combo_Actions()
 	udg_GameMode = 5
@@ -8174,8 +8015,10 @@ end
 function InitTrig_MOD_Combo()
 	gg_trg_MOD_Combo = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_MOD_Combo, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_MOD_Combo, Condition(Trig_MOD_Combo_Conditions))
-	TriggerAddAction(gg_trg_MOD_Combo, Trig_MOD_Combo_Actions)
+    TriggerAddAction(gg_trg_MOD_Combo, function()
+        if GetSpellAbilityId() ~= FourCC('A1M4') then return end
+        Trig_MOD_Combo_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: MOD stolica Start Copy
@@ -8221,7 +8064,7 @@ end
 function Trig_StolicaDead_Actions()
 	local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
 	SetPlayerAbilityAvailableBJ(true, FourCC('A0IQ'), GetOwningPlayer(GetTriggerUnit()))
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. " - |cffff0000проиграл|r, его |cffd45e19столица |rуничтожена."))
+	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. " - |cffff0000????????|r, ??? |cffd45e19??????? |r??????????."))
 	ClearPlayer(Player(pi))
 	AiLimitsSet()
 end
@@ -8284,12 +8127,6 @@ end
 --  Trigger: MOD feoda O set spell
 -- ===========================================================================
 ---@return boolean
-function Trig_MOD_feoda_O_set_spell_Conditions()
-	if ( not (GetSpellAbilityId() == FourCC('A0T5'))) then
-		return false
-	end
-	return true
-end
 ---@return nothing
 function Trig_MOD_feoda_O_set_spell_Actions()
 	udg_GameMode = 1
@@ -8300,8 +8137,10 @@ end
 function InitTrig_MOD_feoda_O_set_spell()
 	gg_trg_MOD_feoda_O_set_spell = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_MOD_feoda_O_set_spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_MOD_feoda_O_set_spell, Condition(Trig_MOD_feoda_O_set_spell_Conditions))
-	TriggerAddAction(gg_trg_MOD_feoda_O_set_spell, Trig_MOD_feoda_O_set_spell_Actions)
+    TriggerAddAction(gg_trg_MOD_feoda_O_set_spell, function()
+        if GetSpellAbilityId() ~= FourCC('A0T5') then return end
+        Trig_MOD_feoda_O_set_spell_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: MOD stolica Set
@@ -8370,12 +8209,6 @@ end
 --  Trigger: MOD feoda O Set Spell
 -- ===========================================================================
 ---@return boolean
-function Trig_MOD_feoda_O_Set_Spell_Conditions()
-	if ( not (GetSpellAbilityId() == FourCC('A0T6'))) then
-		return false
-	end
-	return true
-end
 ---@return nothing
 function Trig_MOD_feoda_O_Set_Spell_Actions()
 	udg_GameMode = 2
@@ -8386,8 +8219,10 @@ end
 function InitTrig_MOD_feoda_O_Set_Spell()
 	gg_trg_MOD_feoda_O_Set_Spell = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_MOD_feoda_O_Set_Spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_MOD_feoda_O_Set_Spell, Condition(Trig_MOD_feoda_O_Set_Spell_Conditions))
-	TriggerAddAction(gg_trg_MOD_feoda_O_Set_Spell, Trig_MOD_feoda_O_Set_Spell_Actions)
+    TriggerAddAction(gg_trg_MOD_feoda_O_Set_Spell, function()
+        if GetSpellAbilityId() ~= FourCC('A0T6') then return end
+        Trig_MOD_feoda_O_Set_Spell_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: MOD feoda O Start
@@ -8447,17 +8282,13 @@ function Trig_FeodalDead_Func004Func002Func001Func010Func001Func003C()
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func002Func001Func010A()
-	bj_forLoopBIndex = 1
-	bj_forLoopBIndexEnd = 24
-	while true do
-		if bj_forLoopBIndex > bj_forLoopBIndexEnd then break end
+	for bj_forLoopBIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 		SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetEnumPlayer(), bj_ALLIANCE_UNALLIED)
 		if (Trig_FeodalDead_Func004Func002Func001Func010Func001Func003C()) then
 			ForceRemovePlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetForLoopIndexB()])
 		else
 		end
-		bj_forLoopBIndex = bj_forLoopBIndex + 1
 	end
 	ForceAddPlayerSimple(GetEnumPlayer(), udg_Vassals[GetConvertedPlayerId(ConvertedPlayer(GetForLoopIndexA()))])
 	SetPlayerAllianceStateBJ(GetEnumPlayer(), GetOwningPlayer(GetAttacker()), bj_ALLIANCE_ALLIED_VISION)
@@ -8465,7 +8296,7 @@ function Trig_FeodalDead_Func004Func002Func001Func010A()
 	SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
 	SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
 	SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" - стал вассалом игрока " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
+	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
 end
 ---@return boolean
 function Trig_FeodalDead_Func004Func002Func001C()
@@ -8476,15 +8307,11 @@ function Trig_FeodalDead_Func004Func002Func001C()
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func011A()
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" - стал вассалом игрока " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
+	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
 	ForceAddPlayerSimple(GetEnumPlayer(), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))])
-	bj_forLoopBIndex = 1
-	bj_forLoopBIndexEnd = 24
-	while true do
-		if bj_forLoopBIndex > bj_forLoopBIndexEnd then break end
+	for bj_forLoopBIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 		SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetEnumPlayer(), bj_ALLIANCE_UNALLIED)
-		bj_forLoopBIndex = bj_forLoopBIndex + 1
 	end
 end
 ---@return boolean
@@ -8505,15 +8332,11 @@ function Trig_FeodalDead_Func004Func017A()
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func020A()
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" освободился от игрока " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())))))
-	bj_forLoopAIndex = 1
-	bj_forLoopAIndexEnd = 24
-	while true do
-		if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" ??????????? ?? ?????? " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())))))
+	for bj_forLoopAIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
 		SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_UNALLIED)
-		bj_forLoopAIndex = bj_forLoopAIndex + 1
 	end
 end
 ---@return boolean
@@ -8529,36 +8352,29 @@ function Trig_FeodalDead_Actions()
 	SetUnitInvulnerable(GetTriggerUnit(), true)
 	SetUnitInvulnerable(GetTriggerUnit(), false)
 	if (Trig_FeodalDead_Func004C()) then
-		--  Триггер для самоубийцы
-		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. "|cffff0000 - самоубился! |rЗачем?)"))
+		--  ??????? ??? ??????????
+		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. "|cffff0000 - ??????????! |r??????)"))
 		ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetTriggerUnit())), Trig_FeodalDead_Func004Func017A)
 		SetPlayerAbilityAvailableBJ(true, FourCC('A0IQ'), GetOwningPlayer(GetTriggerUnit()))
-		--  Обнуляю вассалов самоубийцы. Вы свободны!
+		--  ??????? ???????? ??????????. ?? ????????!
 		ForForce(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], Trig_FeodalDead_Func004Func020A)
 		ForceClear(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
 	else
-		--  --------------------------------------------------------------------   Васссал кого-то захватил
-		bj_forLoopAIndex = 1
-		bj_forLoopAIndexEnd = 24
-		while true do
-			if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+		--  --------------------------------------------------------------------   ??????? ????-?? ????????
+		for bj_forLoopAIndex = 1, 24 do
 			if (Trig_FeodalDead_Func004Func002Func001C()) then
-				bj_forLoopBIndex = 1
-				bj_forLoopBIndexEnd = 24
-				while true do
-					if bj_forLoopBIndex > bj_forLoopBIndexEnd then break end
+				for bj_forLoopBIndex = 1, 24 do
 					SetPlayerAllianceStateBJ(GetTriggerPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 					SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetTriggerPlayer(), bj_ALLIANCE_UNALLIED)
-					bj_forLoopBIndex = bj_forLoopBIndex + 1
 				end
-				--  Есть сеньор
-				--  Вассализация хозяина столицы
-				DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) + (" - стал вассалом игрока " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
+				--  ???? ??????
+				--  ???????????? ??????? ???????
+				DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) + (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
 				ForceAddPlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetConvertedPlayerId(ConvertedPlayer(GetForLoopIndexA()))])
 				SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_ALLIED_UNITS)
 				SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)
 				SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)
-				--  Вассализация вассалов хозяина столицы
+				--  ???????????? ???????? ??????? ???????
 				ForForce(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttackedUnitBJ()))], Trig_FeodalDead_Func004Func002Func001Func010A)
 				ForceClear(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
 				SetForceAllianceStateBJ(udg_Vassals[GetForLoopIndexA()], udg_Vassals[GetForLoopIndexA()], bj_ALLIANCE_ALLIED_VISION)
@@ -8566,23 +8382,18 @@ function Trig_FeodalDead_Actions()
 				return 
 			else
 			end
-			bj_forLoopAIndex = bj_forLoopAIndex + 1
 		end
-		--  --------------------------------------------------------------------   Сеньор кого-то захватил
-		--  Вассализация хозяина столицы
-		bj_forLoopBIndex = 1
-		bj_forLoopBIndexEnd = 24
-		while true do
-			if bj_forLoopBIndex > bj_forLoopBIndexEnd then break end
+		--  --------------------------------------------------------------------   ?????? ????-?? ????????
+		--  ???????????? ??????? ???????
+		for bj_forLoopBIndex = 1, 24 do
 			SetPlayerAllianceStateBJ(GetTriggerPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 			SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetTriggerPlayer(), bj_ALLIANCE_UNALLIED)
-			bj_forLoopBIndex = bj_forLoopBIndex + 1
 		end
-		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) + (" - стал вассалом игрока " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
+		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) + (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
 		ForceAddPlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))])
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker()), bj_ALLIANCE_ALLIED_UNITS)
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)
-		--  Вассализация вассалов хозяина столицы
+		--  ???????????? ???????? ??????? ???????
 		ForForce(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttackedUnitBJ()))], Trig_FeodalDead_Func004Func011A)
 		SetForceAllianceStateBJ(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))], udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))], bj_ALLIANCE_ALLIED_VISION)
 		SetForceAllianceStateBJ(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))], GetForceOfPlayer(GetOwningPlayer(GetAttacker())), bj_ALLIANCE_ALLIED_UNITS)
@@ -8601,7 +8412,7 @@ end
 -- ===========================================================================
 --  Trigger: FeodalDead2
 -- ===========================================================================
--- 3 сек неуяза
+-- 3 ??? ??????
 ---@return nothing
 function CapTime()
 	local u = udg_LocalUnit3
@@ -8633,7 +8444,7 @@ end
 ---@return nothing
 function Freedom()
 	local p = GetEnumPlayer()
-	DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - стал свободен")
+	DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ???? ????????")
 	ClearOldAllies(p)
 	p = nil
 end
@@ -8642,7 +8453,7 @@ function ChangeAlly()
 	local p = udg_LocalPlayer
 	local p0 = GetEnumPlayer()
 	
-	DisplayTextToForce(udg_AllPlayers, GetPlayerName(p0) .. " - игроком захвачен игроком " .. GetPlayerName(p))
+	DisplayTextToForce(udg_AllPlayers, GetPlayerName(p0) .. " - ??????? ???????? ??????? " .. GetPlayerName(p))
 	ClearOldAllies(p0)
 	Senior[GetPlayerId(p0)] = p
 	ForceAddPlayer(Vassals[GetPlayerId(p)], p0)
@@ -8668,11 +8479,11 @@ function Trig_FeodalDead2_Actions()
 	
 	
 	
-	-- Случай самоубийцы
+	-- ?????? ??????????
 	if p == p2 then
 		
 		ClearPlayer(p)
-		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - решил уничтожить свою столицу - зачем?")
+		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ????? ?????????? ???? ??????? - ??????")
 		ForForce(Vassals[pi], Freedom)
 		
 		p = nil
@@ -8689,10 +8500,10 @@ function Trig_FeodalDead2_Actions()
 	
 	
 	
-	-- Захватил свободный
+	-- ???????? ?????????
 	if Senior[pi2] == nil then
-		-- свободного
-		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - игроком захвачен игроком " .. GetPlayerName(p2))
+		-- ??????????
+		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ??????? ???????? ??????? " .. GetPlayerName(p2))
 		if Senior[pi] == nil then
 			
 			Senior[pi] = p2
@@ -8704,7 +8515,7 @@ function Trig_FeodalDead2_Actions()
 				ForForce(Vassals[pi], ChangeAlly)
 			end
 			
-			-- Чужого вассала
+			-- ?????? ???????
 		else
 			ClearOldAllies(p)
 			Senior[pi] = p2
@@ -8712,12 +8523,12 @@ function Trig_FeodalDead2_Actions()
 			NewAlly(p)
 			
 		end
-		-- Захватил чей-то вассал
+		-- ???????? ???-?? ??????
 	else
 		p3 = Senior[pi2]
 		pi3 = GetPlayerId(p3)
-		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - игроком захвачен игроком " .. GetPlayerName(p3))
-		-- свободного
+		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ??????? ???????? ??????? " .. GetPlayerName(p3))
+		-- ??????????
 		if Senior[pi] == nil then
 			
 			Senior[pi] = p3
@@ -8730,7 +8541,7 @@ function Trig_FeodalDead2_Actions()
 			end
 			
 			
-			-- Чужого вассала
+			-- ?????? ???????
 		else
 			ClearOldAllies(p)
 			Senior[pi] = p3
@@ -8803,14 +8614,10 @@ end
 -- ===========================================================================
 ---@return nothing
 function Trig_AllPlayers_and_vassals_Actions()
-	bj_forLoopAIndex = 1
-	bj_forLoopAIndexEnd = 24
-	while true do
-		if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+	for bj_forLoopAIndex = 1, 24 do
 		DisplayTextToForce(GetPlayersAll(), GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))
 		DisplayTextToForce(GetPlayersAll(), "TRIGSTR_19436")
 		DisplayTextToForce(GetPlayersAll(), I2S(CountPlayersInForceBJ(udg_Vassals[GetConvertedPlayerId(ConvertedPlayer(GetForLoopIndexA()))])))
-		bj_forLoopAIndex = bj_forLoopAIndex + 1
 	end
 end
 -- ===========================================================================
@@ -8824,21 +8631,20 @@ end
 --  Trigger: DominationButton
 -- ===========================================================================
 ---@return boolean
-function Trig_DominationButton_Conditions()
-	return GetSpellAbilityId() == FourCC('A1KJ')
-end
 ---@return nothing
 function Trig_DominationButton_Actions()
 	udg_GameMode = 3
-	DisplayTextToForce(GetPlayersAll(), "Режим выбран: Доминация")
+	DisplayTextToForce(GetPlayersAll(), "????? ??????: ?????????")
 end
 -- ===========================================================================
 ---@return nothing
 function InitTrig_DominationButton()
 	gg_trg_DominationButton = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_DominationButton, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_DominationButton, Condition(Trig_DominationButton_Conditions))
-	TriggerAddAction(gg_trg_DominationButton, Trig_DominationButton_Actions)
+    TriggerAddAction(gg_trg_DominationButton, function()
+        if GetSpellAbilityId() ~= FourCC('A1KJ') then return end
+        Trig_DominationButton_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: Domination start
@@ -8862,7 +8668,7 @@ function ExpandTable()
 	
 	
 	ThirdColumn[24] = MultiboardGetItem(Multiboard, 0, 2)
-	MultiboardSetItemValue(ThirdColumn[24], "Точек,%")
+	MultiboardSetItemValue(ThirdColumn[24], "?????,%")
 	MultiboardSetItemWidth(ThirdColumn[24], 0.06)
 	MultiboardReleaseItem(ThirdColumn[24])
 	
@@ -8886,13 +8692,13 @@ function ExpandTable()
 	
 	
 end
--- Отправлено в UpdateGraph
+-- ?????????? ? UpdateGraph
 -- function PercentGraph takes integer pi returns nothing
 --     call MultiboardSetItemValue( ThirdColumn[pi], R2SW( I2R(CityPlayerCount[pi])*100.0/I2R(CityCount),3,3)+"%")
 -- endfunction
 ---@return nothing
 function Trig_Domination_start_Actions()
-	DisplayTextToForce(udg_AllPlayers, "Включен режим доминация. Захватите " .. I2S(PercentWin) .. "% городов, чтобы победить!")
+	DisplayTextToForce(udg_AllPlayers, "??????? ????? ?????????. ????????? " .. I2S(PercentWin) .. "% ???????, ????? ????????!")
 end
 -- ===========================================================================
 ---@return nothing
@@ -8908,8 +8714,8 @@ end
 ---@return nothing
 function Trig_DomCheckCommand_Actions()
 	local pi = GetPlayerId(GetTriggerPlayer())
-	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "Вы контролируете " .. I2S(CityPlayerCount[pi]) .. " Точек из " .. I2S(CityCount) .. " на карте и из " .. I2S(MathRound(CityCount * 0.01 * PercentWin)) .. " необходимых для победы")
-	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "Таким образом ваш процент " .. R2SW(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount), 3, 3) .. "% из необходимых " .. I2S(PercentWin) .. "%")
+	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "?? ????????????? " .. I2S(CityPlayerCount[pi]) .. " ????? ?? " .. I2S(CityCount) .. " ?? ????? ? ?? " .. I2S(MathRound(CityCount * 0.01 * PercentWin)) .. " ??????????? ??? ??????")
+	DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "????? ??????? ??? ??????? " .. R2SW(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount), 3, 3) .. "% ?? ??????????? " .. I2S(PercentWin) .. "%")
 end
 -- ===========================================================================
 ---@return nothing
@@ -8930,21 +8736,20 @@ end
 --  Trigger: FastTestSpell
 -- ===========================================================================
 ---@return boolean
-function Trig_FastTestSpell_Conditions()
-	return GetSpellAbilityId() == FourCC('A1MB')
-end
 ---@return nothing
 function Trig_FastTestSpell_Actions()
 	udg_GameMode = 4
-	DisplayTextToForce(GetPlayersAll(), "Режим выбран: Тест. Пишите -fast и -fastoff ")
+	DisplayTextToForce(GetPlayersAll(), "????? ??????: ????. ?????? -fast ? -fastoff ")
 end
 -- ===========================================================================
 ---@return nothing
 function InitTrig_FastTestSpell()
 	gg_trg_FastTestSpell = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_FastTestSpell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_FastTestSpell, Condition(Trig_FastTestSpell_Conditions))
-	TriggerAddAction(gg_trg_FastTestSpell, Trig_FastTestSpell_Actions)
+    TriggerAddAction(gg_trg_FastTestSpell, function()
+        if GetSpellAbilityId() ~= FourCC('A1MB') then return end
+        Trig_FastTestSpell_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: FastTest
@@ -8955,7 +8760,7 @@ function Trig_FastTest_Actions()
 		fastTest[GetPlayerId(GetTriggerPlayer())] = true
 		income[GetPlayerId(GetTriggerPlayer())] = income[GetPlayerId(GetTriggerPlayer())] + 25000
 		incomeW[GetPlayerId(GetTriggerPlayer())] = incomeW[GetPlayerId(GetTriggerPlayer())] + 25000
-		DisplayTimedTextToForce(udg_AllPlayers, 6, GetPlayerName(GetTriggerPlayer()) .. " - включит тестовый режим!!!")
+		DisplayTimedTextToForce(udg_AllPlayers, 6, GetPlayerName(GetTriggerPlayer()) .. " - ??????? ???????? ?????!!!")
 		SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_FOOD_CAP, 100)
 	end
 	
@@ -8985,7 +8790,7 @@ function Trig_FastTestOff_Actions()
 		fastTest[GetPlayerId(GetTriggerPlayer())] = false
 		income[GetPlayerId(GetTriggerPlayer())] = income[GetPlayerId(GetTriggerPlayer())] - 25000
 		incomeW[GetPlayerId(GetTriggerPlayer())] = incomeW[GetPlayerId(GetTriggerPlayer())] - 25000
-		DisplayTimedTextToForce(udg_AllPlayers, 6, GetPlayerName(GetTriggerPlayer()) .. " - выключил тестовый режим!")
+		DisplayTimedTextToForce(udg_AllPlayers, 6, GetPlayerName(GetTriggerPlayer()) .. " - ???????? ???????? ?????!")
 	end
 end
 -- ===========================================================================
@@ -9131,22 +8936,12 @@ end
 --  Trigger: Continents Spell
 -- ===========================================================================
 ---@return boolean
-function Trig_Continents_Spell_Conditions()
-	if ( not (GetSpellAbilityId() == FourCC('A0UI'))) then
-		return false
-	end
-	return true
-end
 ---@return nothing
 function Trig_Continents_Spell_Actions()
 	DisplayTextToForce(GetPlayersAll(), "TRIGSTR_12041")
 	udg_Continents[0] = 0
-	bj_forLoopAIndex = 1
-	bj_forLoopAIndexEnd = 15
-	while true do
-		if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+	for bj_forLoopAIndex = 1, 15 do
 		udg_Continents[GetForLoopIndexA()] = 0
-		bj_forLoopAIndex = bj_forLoopAIndex + 1
 	end
 	UnitAddAbilityBJ(FourCC('A0UB'), GetTriggerUnit())
 	UnitRemoveAbilityBJ(FourCC('A0UM'), GetTriggerUnit())
@@ -9168,8 +8963,10 @@ end
 function InitTrig_Continents_Spell()
 	gg_trg_Continents_Spell = CreateTrigger()
 	TriggerRegisterAnyUnitEventBJ(gg_trg_Continents_Spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-	TriggerAddCondition(gg_trg_Continents_Spell, Condition(Trig_Continents_Spell_Conditions))
-	TriggerAddAction(gg_trg_Continents_Spell, Trig_Continents_Spell_Actions)
+    TriggerAddAction(gg_trg_Continents_Spell, function()
+        if GetSpellAbilityId() ~= FourCC('A0UI') then return end
+        Trig_Continents_Spell_Actions()
+    end)
 end
 -- ===========================================================================
 --  Trigger: Continents set On
@@ -9240,11 +9037,11 @@ function Trig_Continents_set_On_Func013A()
 end
 ---@return nothing
 function Trig_Continents_set_On_Actions()
-	udg_LocalText2 = ("Режим континентов:|cffffff00 включен|r")
+	udg_LocalText2 = ("????? ???????????:|cffffff00 ???????|r")
 	DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
-	udg_LocalText2 = "|cff00ff00Итого доступны для игры: |r"
+	udg_LocalText2 = "|cff00ff00????? ???????? ??? ????: |r"
 	if (Trig_Continents_set_On_Func004C()) then
-		udg_LocalText2 = (udg_LocalText2 .. "Восточные королевства\\" )
+		udg_LocalText2 = (udg_LocalText2 .. "????????? ???????????\\" )
     else
     end
     if ( Trig_Continents_set_On_Func005C() ) then
@@ -9384,9 +9181,9 @@ function KillIf()
         
     end
     
-    t=null
-    u=null
-    e=null
+    t=nil
+    u=nil
+    e=nil
 end
 function Continents()
     local t= CreateTimer()
@@ -9432,9 +9229,9 @@ function Continents()
         end
     end
     
-    t=null
-    u=null
-    e=null
+    t=nil
+    u=nil
+    e=nil
 end
 --===========================================================================
 -- Trigger: LeaveNeadedRegions
@@ -9650,12 +9447,6 @@ end
 --===========================================================================
 -- Trigger: EasternOn Spell
 --===========================================================================
-function Trig_EasternOn_Spell_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UB') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_EasternOn_Spell_Actions()
     udg_Continents[1]=1
     udg_Continents[0]=1
@@ -9667,18 +9458,14 @@ end
 function InitTrig_EasternOn_Spell()
     gg_trg_EasternOn_Spell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_EasternOn_Spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_EasternOn_Spell, Condition(Trig_EasternOn_Spell_Conditions))
-    TriggerAddAction(gg_trg_EasternOn_Spell, Trig_EasternOn_Spell_Actions)
+    TriggerAddAction(gg_trg_EasternOn_Spell, function()
+        if GetSpellAbilityId() ~= FourCC('A0UB') then return end
+        Trig_EasternOn_Spell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: EasternOn Spell Off
 --===========================================================================
-function Trig_EasternOn_Spell_Off_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UM') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_EasternOn_Spell_Off_Actions()
     udg_Continents[1]=0
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
@@ -9689,8 +9476,10 @@ end
 function InitTrig_EasternOn_Spell_Off()
     gg_trg_EasternOn_Spell_Off=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_EasternOn_Spell_Off, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_EasternOn_Spell_Off, Condition(Trig_EasternOn_Spell_Off_Conditions))
-    TriggerAddAction(gg_trg_EasternOn_Spell_Off, Trig_EasternOn_Spell_Off_Actions)
+    TriggerAddAction(gg_trg_EasternOn_Spell_Off, function()
+        if GetSpellAbilityId() ~= FourCC('A0UM') then return end
+        Trig_EasternOn_Spell_Off_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: EasternOn Set
@@ -9740,12 +9529,6 @@ end
 --===========================================================================
 -- Trigger: KalimOn 2 Spell
 --===========================================================================
-function Trig_KalimOn_2_Spell_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UC') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_KalimOn_2_Spell_Actions()
     udg_Continents[2]=1
     udg_Continents[0]=1
@@ -9757,18 +9540,14 @@ end
 function InitTrig_KalimOn_2_Spell()
     gg_trg_KalimOn_2_Spell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_KalimOn_2_Spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_KalimOn_2_Spell, Condition(Trig_KalimOn_2_Spell_Conditions))
-    TriggerAddAction(gg_trg_KalimOn_2_Spell, Trig_KalimOn_2_Spell_Actions)
+    TriggerAddAction(gg_trg_KalimOn_2_Spell, function()
+        if GetSpellAbilityId() ~= FourCC('A0UC') then return end
+        Trig_KalimOn_2_Spell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: KalimOn 2 Spell off
 --===========================================================================
-function Trig_KalimOn_2_Spell_off_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UN') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_KalimOn_2_Spell_off_Actions()
     udg_Continents[2]=0
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
@@ -9779,8 +9558,10 @@ end
 function InitTrig_KalimOn_2_Spell_off()
     gg_trg_KalimOn_2_Spell_off=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_KalimOn_2_Spell_off, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_KalimOn_2_Spell_off, Condition(Trig_KalimOn_2_Spell_off_Conditions))
-    TriggerAddAction(gg_trg_KalimOn_2_Spell_off, Trig_KalimOn_2_Spell_off_Actions)
+    TriggerAddAction(gg_trg_KalimOn_2_Spell_off, function()
+        if GetSpellAbilityId() ~= FourCC('A0UN') then return end
+        Trig_KalimOn_2_Spell_off_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: KalimOn 2 set
@@ -9824,12 +9605,6 @@ end
 --===========================================================================
 -- Trigger: Outland 3 spell
 --===========================================================================
-function Trig_Outland_3_spell_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UD') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Outland_3_spell_Actions()
     udg_Continents[3]=1
     udg_Continents[0]=1
@@ -9841,18 +9616,14 @@ end
 function InitTrig_Outland_3_spell()
     gg_trg_Outland_3_spell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Outland_3_spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Outland_3_spell, Condition(Trig_Outland_3_spell_Conditions))
-    TriggerAddAction(gg_trg_Outland_3_spell, Trig_Outland_3_spell_Actions)
+    TriggerAddAction(gg_trg_Outland_3_spell, function()
+        if GetSpellAbilityId() ~= FourCC('A0UD') then return end
+        Trig_Outland_3_spell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Outland 3 spell off
 --===========================================================================
-function Trig_Outland_3_spell_off_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UO') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Outland_3_spell_off_Actions()
     udg_Continents[3]=0
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
@@ -9863,8 +9634,10 @@ end
 function InitTrig_Outland_3_spell_off()
     gg_trg_Outland_3_spell_off=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Outland_3_spell_off, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Outland_3_spell_off, Condition(Trig_Outland_3_spell_off_Conditions))
-    TriggerAddAction(gg_trg_Outland_3_spell_off, Trig_Outland_3_spell_off_Actions)
+    TriggerAddAction(gg_trg_Outland_3_spell_off, function()
+        if GetSpellAbilityId() ~= FourCC('A0UO') then return end
+        Trig_Outland_3_spell_off_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Outland 3 set
@@ -9915,12 +9688,6 @@ end
 --===========================================================================
 -- Trigger: NordOn 4 spell
 --===========================================================================
-function Trig_NordOn_4_spell_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UE') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_NordOn_4_spell_Actions()
     udg_Continents[4]=1
     udg_Continents[0]=1
@@ -9932,18 +9699,14 @@ end
 function InitTrig_NordOn_4_spell()
     gg_trg_NordOn_4_spell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_NordOn_4_spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_NordOn_4_spell, Condition(Trig_NordOn_4_spell_Conditions))
-    TriggerAddAction(gg_trg_NordOn_4_spell, Trig_NordOn_4_spell_Actions)
+    TriggerAddAction(gg_trg_NordOn_4_spell, function()
+        if GetSpellAbilityId() ~= FourCC('A0UE') then return end
+        Trig_NordOn_4_spell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: NordOn 4 spell off
 --===========================================================================
-function Trig_NordOn_4_spell_off_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UP') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_NordOn_4_spell_off_Actions()
     udg_Continents[4]=0
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
@@ -9954,8 +9717,10 @@ end
 function InitTrig_NordOn_4_spell_off()
     gg_trg_NordOn_4_spell_off=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_NordOn_4_spell_off, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_NordOn_4_spell_off, Condition(Trig_NordOn_4_spell_off_Conditions))
-    TriggerAddAction(gg_trg_NordOn_4_spell_off, Trig_NordOn_4_spell_off_Actions)
+    TriggerAddAction(gg_trg_NordOn_4_spell_off, function()
+        if GetSpellAbilityId() ~= FourCC('A0UP') then return end
+        Trig_NordOn_4_spell_off_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: NordOn 4 set
@@ -9999,12 +9764,6 @@ end
 --===========================================================================
 -- Trigger: Pandaria 5 spell
 --===========================================================================
-function Trig_Pandaria_5_spell_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UF') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Pandaria_5_spell_Actions()
     udg_Continents[5]=1
     udg_Continents[0]=1
@@ -10016,18 +9775,14 @@ end
 function InitTrig_Pandaria_5_spell()
     gg_trg_Pandaria_5_spell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Pandaria_5_spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Pandaria_5_spell, Condition(Trig_Pandaria_5_spell_Conditions))
-    TriggerAddAction(gg_trg_Pandaria_5_spell, Trig_Pandaria_5_spell_Actions)
+    TriggerAddAction(gg_trg_Pandaria_5_spell, function()
+        if GetSpellAbilityId() ~= FourCC('A0UF') then return end
+        Trig_Pandaria_5_spell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Pandaria 5 spell off
 --===========================================================================
-function Trig_Pandaria_5_spell_off_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UQ') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Pandaria_5_spell_off_Actions()
     udg_Continents[5]=0
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
@@ -10038,8 +9793,10 @@ end
 function InitTrig_Pandaria_5_spell_off()
     gg_trg_Pandaria_5_spell_off=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Pandaria_5_spell_off, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Pandaria_5_spell_off, Condition(Trig_Pandaria_5_spell_off_Conditions))
-    TriggerAddAction(gg_trg_Pandaria_5_spell_off, Trig_Pandaria_5_spell_off_Actions)
+    TriggerAddAction(gg_trg_Pandaria_5_spell_off, function()
+        if GetSpellAbilityId() ~= FourCC('A0UQ') then return end
+        Trig_Pandaria_5_spell_off_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Pandaria 5 set
@@ -10082,12 +9839,6 @@ end
 --===========================================================================
 -- Trigger: Argus 6 spell
 --===========================================================================
-function Trig_Argus_6_spell_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UH') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Argus_6_spell_Actions()
     udg_Continents[6]=1
     udg_Continents[0]=1
@@ -10099,18 +9850,14 @@ end
 function InitTrig_Argus_6_spell()
     gg_trg_Argus_6_spell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Argus_6_spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Argus_6_spell, Condition(Trig_Argus_6_spell_Conditions))
-    TriggerAddAction(gg_trg_Argus_6_spell, Trig_Argus_6_spell_Actions)
+    TriggerAddAction(gg_trg_Argus_6_spell, function()
+        if GetSpellAbilityId() ~= FourCC('A0UH') then return end
+        Trig_Argus_6_spell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Argus 6 spell off
 --===========================================================================
-function Trig_Argus_6_spell_off_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UR') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Argus_6_spell_off_Actions()
     udg_Continents[6]=0
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
@@ -10121,8 +9868,10 @@ end
 function InitTrig_Argus_6_spell_off()
     gg_trg_Argus_6_spell_off=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Argus_6_spell_off, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Argus_6_spell_off, Condition(Trig_Argus_6_spell_off_Conditions))
-    TriggerAddAction(gg_trg_Argus_6_spell_off, Trig_Argus_6_spell_off_Actions)
+    TriggerAddAction(gg_trg_Argus_6_spell_off, function()
+        if GetSpellAbilityId() ~= FourCC('A0UR') then return end
+        Trig_Argus_6_spell_off_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Argus 6 set
@@ -10165,12 +9914,6 @@ end
 --===========================================================================
 -- Trigger: BrokenIsled 7 spell
 --===========================================================================
-function Trig_BrokenIsled_7_spell_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UG') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_BrokenIsled_7_spell_Actions()
     udg_Continents[7]=1
     udg_Continents[0]=1
@@ -10182,18 +9925,14 @@ end
 function InitTrig_BrokenIsled_7_spell()
     gg_trg_BrokenIsled_7_spell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_BrokenIsled_7_spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_BrokenIsled_7_spell, Condition(Trig_BrokenIsled_7_spell_Conditions))
-    TriggerAddAction(gg_trg_BrokenIsled_7_spell, Trig_BrokenIsled_7_spell_Actions)
+    TriggerAddAction(gg_trg_BrokenIsled_7_spell, function()
+        if GetSpellAbilityId() ~= FourCC('A0UG') then return end
+        Trig_BrokenIsled_7_spell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: BrokenIsled 7 spell off
 --===========================================================================
-function Trig_BrokenIsled_7_spell_off_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0US') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_BrokenIsled_7_spell_off_Actions()
     udg_Continents[7]=0
     DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
@@ -10204,8 +9943,10 @@ end
 function InitTrig_BrokenIsled_7_spell_off()
     gg_trg_BrokenIsled_7_spell_off=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_BrokenIsled_7_spell_off, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_BrokenIsled_7_spell_off, Condition(Trig_BrokenIsled_7_spell_off_Conditions))
-    TriggerAddAction(gg_trg_BrokenIsled_7_spell_off, Trig_BrokenIsled_7_spell_off_Actions)
+    TriggerAddAction(gg_trg_BrokenIsled_7_spell_off, function()
+        if GetSpellAbilityId() ~= FourCC('A0US') then return end
+        Trig_BrokenIsled_7_spell_off_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: BrokenIsled 7 set
@@ -10223,12 +9964,6 @@ end
 --===========================================================================
 -- Trigger: Standart
 --===========================================================================
-function Trig_Standart_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UT') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Standart_Actions()
     udg_SET_VISIBLE_MODE=0
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_19654")
@@ -10237,18 +9972,14 @@ end
 function InitTrig_Standart()
     gg_trg_Standart=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Standart, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Standart, Condition(Trig_Standart_Conditions))
-    TriggerAddAction(gg_trg_Standart, Trig_Standart_Actions)
+    TriggerAddAction(gg_trg_Standart, function()
+        if GetSpellAbilityId() ~= FourCC('A0UT') then return end
+        Trig_Standart_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: DarkMode Spell
 --===========================================================================
-function Trig_DarkMode_Spell_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0UL') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_DarkMode_Spell_Actions()
     udg_SET_VISIBLE_MODE=1
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_19693")
@@ -10257,18 +9988,14 @@ end
 function InitTrig_DarkMode_Spell()
     gg_trg_DarkMode_Spell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_DarkMode_Spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_DarkMode_Spell, Condition(Trig_DarkMode_Spell_Conditions))
-    TriggerAddAction(gg_trg_DarkMode_Spell, Trig_DarkMode_Spell_Actions)
+    TriggerAddAction(gg_trg_DarkMode_Spell, function()
+        if GetSpellAbilityId() ~= FourCC('A0UL') then return end
+        Trig_DarkMode_Spell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: OpenModeSpell
 --===========================================================================
-function Trig_OpenModeSpell_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A131') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_OpenModeSpell_Actions()
     udg_SET_VISIBLE_MODE=2
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_25625")
@@ -10277,8 +10004,10 @@ end
 function InitTrig_OpenModeSpell()
     gg_trg_OpenModeSpell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_OpenModeSpell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_OpenModeSpell, Condition(Trig_OpenModeSpell_Conditions))
-    TriggerAddAction(gg_trg_OpenModeSpell, Trig_OpenModeSpell_Actions)
+    TriggerAddAction(gg_trg_OpenModeSpell, function()
+        if GetSpellAbilityId() ~= FourCC('A131') then return end
+        Trig_OpenModeSpell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StartDarkMode
@@ -10377,10 +10106,10 @@ end
 function Trig_StartAlly_Actions()
     local p= GetTriggerPlayer()
     local AllyCount= 0
-    ForceEnumAllies(gForce, p, null)
+    ForceEnumAllies(gForce, p, nil)
     AllyCount=CountPlayersInForceBJ(gForce)
     if DipMode == 0 then
-        --Оповещение о превышении
+        --?????????? ? ??????????
         if AllyCount > 1 then
             DisplayTextToForce(udg_AllPlayers, "" + GetPlayerName(p) + " not ")
             ForForce(gForce, WritePlayerName)
@@ -10413,9 +10142,6 @@ end
 --===========================================================================
 -- Trigger: NoDipFFA
 --===========================================================================
-function Trig_NoDipFFA_Conditions()
-    return GetSpellAbilityId() == FourCC('A1KR')
-end
 function Trig_NoDipFFA_Actions()
     DipMode=1
     DisplayTextToForce(GetPlayersAll(), "..")
@@ -10425,15 +10151,14 @@ end
 function InitTrig_NoDipFFA()
     gg_trg_NoDipFFA=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_NoDipFFA, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_NoDipFFA, Condition(Trig_NoDipFFA_Conditions))
-    TriggerAddAction(gg_trg_NoDipFFA, Trig_NoDipFFA_Actions)
+    TriggerAddAction(gg_trg_NoDipFFA, function()
+        if GetSpellAbilityId() ~= FourCC('A1KR') then return end
+        Trig_NoDipFFA_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Dip2
 --===========================================================================
-function Trig_Dip2_Conditions()
-    return GetSpellAbilityId() == FourCC('A1KS')
-end
 function Trig_Dip2_Actions()
     DipMode=2
     DisplayTextToForce(GetPlayersAll(), "2")
@@ -10442,15 +10167,14 @@ end
 function InitTrig_Dip2()
     gg_trg_Dip2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Dip2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Dip2, Condition(Trig_Dip2_Conditions))
-    TriggerAddAction(gg_trg_Dip2, Trig_Dip2_Actions)
+    TriggerAddAction(gg_trg_Dip2, function()
+        if GetSpellAbilityId() ~= FourCC('A1KS') then return end
+        Trig_Dip2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Dip3
 --===========================================================================
-function Trig_Dip3_Conditions()
-    return GetSpellAbilityId() == FourCC('A1KT')
-end
 function Trig_Dip3_Actions()
     DipMode=3
     DisplayTextToForce(GetPlayersAll(), "3")
@@ -10459,15 +10183,14 @@ end
 function InitTrig_Dip3()
     gg_trg_Dip3=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Dip3, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Dip3, Condition(Trig_Dip3_Conditions))
-    TriggerAddAction(gg_trg_Dip3, Trig_Dip3_Actions)
+    TriggerAddAction(gg_trg_Dip3, function()
+        if GetSpellAbilityId() ~= FourCC('A1KT') then return end
+        Trig_Dip3_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: FreeDip
 --===========================================================================
-function Trig_FreeDip_Conditions()
-    return GetSpellAbilityId() == FourCC('A1KQ')
-end
 function Trig_FreeDip_Actions()
     DipMode=0
     DisplayTextToForce(GetPlayersAll(), "")
@@ -10476,8 +10199,10 @@ end
 function InitTrig_FreeDip()
     gg_trg_FreeDip=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_FreeDip, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_FreeDip, Condition(Trig_FreeDip_Conditions))
-    TriggerAddAction(gg_trg_FreeDip, Trig_FreeDip_Actions)
+    TriggerAddAction(gg_trg_FreeDip, function()
+        if GetSpellAbilityId() ~= FourCC('A1KQ') then return end
+        Trig_FreeDip_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: DipStart
@@ -10516,9 +10241,6 @@ end
 --===========================================================================
 -- Trigger: Income075
 --===========================================================================
-function Trig_Income075_Conditions()
-    return GetSpellAbilityId() == FourCC('A1N6')
-end
 function Trig_Income075_Actions()
     IncomeMod=0.75
     DisplayTextToForce(GetPlayersAll(), "75")
@@ -10527,15 +10249,14 @@ end
 function InitTrig_Income075()
     gg_trg_Income075=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Income075, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Income075, Condition(Trig_Income075_Conditions))
-    TriggerAddAction(gg_trg_Income075, Trig_Income075_Actions)
+    TriggerAddAction(gg_trg_Income075, function()
+        if GetSpellAbilityId() ~= FourCC('A1N6') then return end
+        Trig_Income075_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Income100
 --===========================================================================
-function Trig_Income100_Conditions()
-    return GetSpellAbilityId() == FourCC('A1N7')
-end
 function Trig_Income100_Actions()
     IncomeMod=1
     DisplayTextToForce(GetPlayersAll(), "")
@@ -10544,17 +10265,16 @@ end
 function InitTrig_Income100()
     gg_trg_Income100=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Income100, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Income100, Condition(Trig_Income100_Conditions))
-    TriggerAddAction(gg_trg_Income100, Trig_Income100_Actions)
+    TriggerAddAction(gg_trg_Income100, function()
+        if GetSpellAbilityId() ~= FourCC('A1N7') then return end
+        Trig_Income100_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StartTotalProductionCommon
 --
--- Мод на автопроизводство погибших юнитов
+-- ??? ?? ???????????????? ???????? ??????
 --===========================================================================
-function Trig_StartTotalProductionCommon_Conditions()
-    return GetSpellAbilityId() == FourCC('A1KC')
-end
 function Trig_StartTotalProductionCommon_Actions()
     local i= 0
     TotalProduction=true
@@ -10569,19 +10289,18 @@ end
 function InitTrig_StartTotalProductionCommon()
     gg_trg_StartTotalProductionCommon=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_StartTotalProductionCommon, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_StartTotalProductionCommon, Condition(Trig_StartTotalProductionCommon_Conditions))
-    TriggerAddAction(gg_trg_StartTotalProductionCommon, Trig_StartTotalProductionCommon_Actions)
+    TriggerAddAction(gg_trg_StartTotalProductionCommon, function()
+        if GetSpellAbilityId() ~= FourCC('A1KC') then return end
+        Trig_StartTotalProductionCommon_Actions()
+    end)
     
     
 end
 --===========================================================================
 -- Trigger: StartTotalProductionPlayer
 --
--- Мод на автопроизводство погибших юнитов
+-- ??? ?? ???????????????? ???????? ??????
 --===========================================================================
-function Trig_StartTotalProductionPlayer_Conditions()
-    return GetSpellAbilityId() == FourCC('A1KH')
-end
 function Trig_StartTotalProductionPlayer_Actions()
     TotalProductionP[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=true
     SetPlayerAbilityAvailable(GetOwningPlayer(GetTriggerUnit()), FourCC('A1KI'), true)
@@ -10592,8 +10311,10 @@ function InitTrig_StartTotalProductionPlayer()
     local i= 0
     gg_trg_StartTotalProductionPlayer=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_StartTotalProductionPlayer, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_StartTotalProductionPlayer, Condition(Trig_StartTotalProductionPlayer_Conditions))
-    TriggerAddAction(gg_trg_StartTotalProductionPlayer, Trig_StartTotalProductionPlayer_Actions)
+    TriggerAddAction(gg_trg_StartTotalProductionPlayer, function()
+        if GetSpellAbilityId() ~= FourCC('A1KH') then return end
+        Trig_StartTotalProductionPlayer_Actions()
+    end)
     
     while true do
         if i == 23 then break end
@@ -10608,11 +10329,8 @@ end
 --===========================================================================
 -- Trigger: EndTotalProductionPlayer
 --
--- Мод на автопроизводство погибших юнитов
+-- ??? ?? ???????????????? ???????? ??????
 --===========================================================================
-function Trig_EndTotalProductionPlayer_Conditions()
-    return GetSpellAbilityId() == FourCC('A1KI')
-end
 function Trig_EndTotalProductionPlayer_Actions()
     TotalProductionP[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=false
     SetPlayerAbilityAvailable(GetOwningPlayer(GetTriggerUnit()), FourCC('A1KH'), true)
@@ -10623,8 +10341,10 @@ function InitTrig_EndTotalProductionPlayer()
     
     gg_trg_EndTotalProductionPlayer=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_EndTotalProductionPlayer, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_EndTotalProductionPlayer, Condition(Trig_EndTotalProductionPlayer_Conditions))
-    TriggerAddAction(gg_trg_EndTotalProductionPlayer, Trig_EndTotalProductionPlayer_Actions)
+    TriggerAddAction(gg_trg_EndTotalProductionPlayer, function()
+        if GetSpellAbilityId() ~= FourCC('A1KI') then return end
+        Trig_EndTotalProductionPlayer_Actions()
+    end)
     
 end
 --===========================================================================
@@ -10638,7 +10358,7 @@ function Trig_TotalProductionTrain_Actions()
     local uh= GetHandleId(u)
     SaveInteger(Hash, S2I(I2S(uh) + "a"), 0, GetUnitTypeId(GetTriggerUnit())) --StringHash("lvl"),0)
     
-    u=null
+    u=nil
     --call IssueTrainOrderByIdBJ( GetTriggerUnit(), GetUnitTypeId(GetTrainedUnit()) )
 end
 --===========================================================================
@@ -10664,7 +10384,6 @@ function Trig_TotalProductionDeath_Actions()
     local p= GetOwningPlayer(u)
     local u2
     local g= CreateGroup()
-    local b= Condition(ThisId)
     udg_LocalInteger5=id
     
     FlushChildHashtable(Hash, S2I(I2S(uh) + "a"))
@@ -10674,12 +10393,12 @@ function Trig_TotalProductionDeath_Actions()
         IssueImmediateOrderById(u2, GetUnitTypeId(u))
     end
     
-    u=null
-    u2=null
+    u=nil
+    u2=nil
     DestroyGroup(g)
     DestroyBoolExpr(b)
-    b=null
-    g=null
+    b=nil
+    g=nil
 end
 --===========================================================================
 function InitTrig_TotalProductionDeath()
@@ -10691,7 +10410,7 @@ end
 --===========================================================================
 -- Trigger: Timer
 --
--- Запуск таймера инкома и таймера отсчета до потребления
+-- ?????? ??????? ?????? ? ??????? ??????? ?? ???????????
 --===========================================================================
 function Trig_Timer_Func009Func001A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A0IQ'), GetEnumPlayer())
@@ -10738,7 +10457,7 @@ end
 --===========================================================================
 -- Trigger: DisIncomeStart
 --
--- Триггер включающий таймер по которому работает система потребления, убирается табло отсчета до него.
+-- ??????? ?????????? ?????? ?? ???????? ???????? ??????? ???????????, ????????? ????? ??????? ?? ????.
 --===========================================================================
 function Trig_DisIncomeStart_Func002A()
     TimerDialogDisplayForPlayerBJ(false, udg_TimerToDis, GetEnumPlayer())
@@ -10762,6 +10481,51 @@ function InitTrig_Globals()
     --set gg_trg_Globals = CreateTrigger(  )
 end
 --===========================================================================
+-- ===========================================================================
+--  Color Commands (consolidated from 24 individual triggers)
+-- ===========================================================================
+---@return nothing
+function InitColorCommands()
+	local COLOR_MAP = {
+		[" - colorred"] = PLAYER_COLOR_RED,
+		[" - colorblue"] = PLAYER_COLOR_BLUE,
+		[" - colorpurple"] = PLAYER_COLOR_PURPLE,
+		[" - colorteal"] = PLAYER_COLOR_CYAN,
+		[" - coloryellow"] = PLAYER_COLOR_YELLOW,
+		[" - colororange"] = PLAYER_COLOR_ORANGE,
+		[" - colorgreen"] = PLAYER_COLOR_GREEN,
+		[" - colorpink"] = PLAYER_COLOR_PINK,
+		[" - colorgray"] = PLAYER_COLOR_LIGHT_GRAY,
+		[" - colorlight - blue"] = PLAYER_COLOR_LIGHT_BLUE,
+		[" - colordark - green"] = PLAYER_COLOR_AQUA,
+		[" - colorbrown"] = PLAYER_COLOR_BROWN,
+		[" - colormaroon"] = PLAYER_COLOR_MAROON,
+		[" - colornavy"] = PLAYER_COLOR_NAVY,
+		[" - colorturquoise"] = PLAYER_COLOR_TURQUOISE,
+		[" - colorviolet"] = PLAYER_COLOR_VIOLET,
+		[" - colorwheat"] = PLAYER_COLOR_WHEAT,
+		[" - colorpeach"] = PLAYER_COLOR_PEACH,
+		[" - colormint"] = PLAYER_COLOR_MINT,
+		[" - colorlavender"] = PLAYER_COLOR_LAVENDER,
+		[" - colorcoal"] = PLAYER_COLOR_COAL,
+		[" - colorsnow"] = PLAYER_COLOR_SNOW,
+		[" - coloremerald"] = PLAYER_COLOR_EMERALD,
+		[" - colorpeanut"] = PLAYER_COLOR_PEANUT,
+	}
+
+	local t = CreateTrigger()
+	for i = 0, 23 do
+		for cmd, _ in pairs(COLOR_MAP) do
+			TriggerRegisterPlayerChatEvent(t, Player(i), cmd, true)
+		end
+	end
+	TriggerAddAction(t, function()
+		local color = COLOR_MAP[GetEventPlayerChatString()]
+		if color then
+			SetPlayerColorBJ(GetTriggerPlayer(), color, true)
+		end
+	end)
+end
 -- Trigger: StartTableCode
 --===========================================================================
 function ActivePlayers()
@@ -10774,7 +10538,7 @@ function GetPlayerNameCut(p)
     local i= 0
     while true do
         s2=SubString(s, i, i + 1)
-        if s2 == "" or i > 18 or s2 == null then break end
+        if s2 == "" or i > 18 or s2 == nil then break end
         
         
         s3=s3 .. s2
@@ -10997,7 +10761,7 @@ function Trig_CircleMove_Code_Actions()
             GroupEnumUnitsOfPlayer(g, GetTriggerPlayer(), filterGetUnitsOfPlayerAndTypeId)
             while true do
                 u=FirstOfGroup(g)
-                if u == null then break end
+                if u == nil then break end
                 SetUnitPositionLoc(u, udg_LocCircle)
                 GroupRemoveUnit(g, u)
             end
@@ -11007,8 +10771,8 @@ function Trig_CircleMove_Code_Actions()
     RemoveLocation(udg_LocCircle)
     GroupClear(g)
     DestroyGroup(g)
-    u=null
-    g=null
+    u=nil
+    g=nil
 end
 --===========================================================================
 function InitTrig_CircleMove_Code()
@@ -11043,12 +10807,6 @@ end
 --===========================================================================
 -- Trigger: Race Bezlikie O
 --===========================================================================
-function Trig_Race_Bezlikie_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0HW') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Bezlikie_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(3, FourCC('u02D'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11060,18 +10818,14 @@ end
 function InitTrig_Race_Bezlikie_O()
     gg_trg_Race_Bezlikie_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Bezlikie_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Bezlikie_O, Condition(Trig_Race_Bezlikie_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Bezlikie_O, Trig_Race_Bezlikie_O_Actions)
+    TriggerAddAction(gg_trg_Race_Bezlikie_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0HW') then return end
+        Trig_Race_Bezlikie_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race IceTrols
 --===========================================================================
-function Trig_Race_IceTrols_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1EG') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_IceTrols_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('o045'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11083,18 +10837,14 @@ end
 function InitTrig_Race_IceTrols()
     gg_trg_Race_IceTrols=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_IceTrols, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_IceTrols, Condition(Trig_Race_IceTrols_Conditions))
-    TriggerAddAction(gg_trg_Race_IceTrols, Trig_Race_IceTrols_Actions)
+    TriggerAddAction(gg_trg_Race_IceTrols, function()
+        if GetSpellAbilityId() ~= FourCC('A1EG') then return end
+        Trig_Race_IceTrols_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Stromgard O
 --===========================================================================
-function Trig_Race_Stromgard_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0Y0') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Stromgard_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('h0G9'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11108,18 +10858,14 @@ end
 function InitTrig_Race_Stromgard_O()
     gg_trg_Race_Stromgard_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Stromgard_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Stromgard_O, Condition(Trig_Race_Stromgard_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Stromgard_O, Trig_Race_Stromgard_O_Actions)
+    TriggerAddAction(gg_trg_Race_Stromgard_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0Y0') then return end
+        Trig_Race_Stromgard_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Dragon O
 --===========================================================================
-function Trig_Race_Dragon_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0RQ') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Dragon_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(1, FourCC('dra1'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11132,18 +10878,14 @@ end
 function InitTrig_Race_Dragon_O()
     gg_trg_Race_Dragon_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Dragon_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Dragon_O, Condition(Trig_Race_Dragon_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Dragon_O, Trig_Race_Dragon_O_Actions)
+    TriggerAddAction(gg_trg_Race_Dragon_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0RQ') then return end
+        Trig_Race_Dragon_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Dragon2
 --===========================================================================
-function Trig_Race_Dragon2_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1MZ') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Dragon2_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('o01D'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11155,18 +10897,14 @@ end
 function InitTrig_Race_Dragon2()
     gg_trg_Race_Dragon2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Dragon2, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Dragon2, Condition(Trig_Race_Dragon2_Conditions))
-    TriggerAddAction(gg_trg_Race_Dragon2, Trig_Race_Dragon2_Actions)
+    TriggerAddAction(gg_trg_Race_Dragon2, function()
+        if GetSpellAbilityId() ~= FourCC('A1MZ') then return end
+        Trig_Race_Dragon2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Argvinol O
 --===========================================================================
-function Trig_Race_Argvinol_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0QQ') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Argvinol_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('e02T'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11178,18 +10916,14 @@ end
 function InitTrig_Race_Argvinol_O()
     gg_trg_Race_Argvinol_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Argvinol_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Argvinol_O, Condition(Trig_Race_Argvinol_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Argvinol_O, Trig_Race_Argvinol_O_Actions)
+    TriggerAddAction(gg_trg_Race_Argvinol_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0QQ') then return end
+        Trig_Race_Argvinol_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Elements O
 --===========================================================================
-function Trig_Race_Elements_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0QN') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Elements_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('e00F'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11202,18 +10936,14 @@ end
 function InitTrig_Race_Elements_O()
     gg_trg_Race_Elements_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Elements_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Elements_O, Condition(Trig_Race_Elements_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Elements_O, Trig_Race_Elements_O_Actions)
+    TriggerAddAction(gg_trg_Race_Elements_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0QN') then return end
+        Trig_Race_Elements_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Goblins O
 --===========================================================================
-function Trig_Race_Goblins_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0AC') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Goblins_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('n00V'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11227,18 +10957,14 @@ end
 function InitTrig_Race_Goblins_O()
     gg_trg_Race_Goblins_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Goblins_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Goblins_O, Condition(Trig_Race_Goblins_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Goblins_O, Trig_Race_Goblins_O_Actions)
+    TriggerAddAction(gg_trg_Race_Goblins_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0AC') then return end
+        Trig_Race_Goblins_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Demon O
 --===========================================================================
-function Trig_Race_Demon_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0MY') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Demon_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(8, FourCC('e02Y'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11250,18 +10976,14 @@ end
 function InitTrig_Race_Demon_O()
     gg_trg_Race_Demon_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Demon_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Demon_O, Condition(Trig_Race_Demon_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Demon_O, Trig_Race_Demon_O_Actions)
+    TriggerAddAction(gg_trg_Race_Demon_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0MY') then return end
+        Trig_Race_Demon_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Illidari O
 --===========================================================================
-function Trig_Race_Illidari_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0OK') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Illidari_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('h0EI'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11276,18 +10998,14 @@ end
 function InitTrig_Race_Illidari_O()
     gg_trg_Race_Illidari_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Illidari_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Illidari_O, Condition(Trig_Race_Illidari_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Illidari_O, Trig_Race_Illidari_O_Actions)
+    TriggerAddAction(gg_trg_Race_Illidari_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0OK') then return end
+        Trig_Race_Illidari_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Bandits O
 --===========================================================================
-function Trig_Race_Bandits_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0HR') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Bandits_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('h002'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11300,18 +11018,14 @@ end
 function InitTrig_Race_Bandits_O()
     gg_trg_Race_Bandits_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Bandits_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Bandits_O, Condition(Trig_Race_Bandits_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Bandits_O, Trig_Race_Bandits_O_Actions)
+    TriggerAddAction(gg_trg_Race_Bandits_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0HR') then return end
+        Trig_Race_Bandits_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Red Orden O
 --===========================================================================
-function Trig_Race_Red_Orden_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0HM') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Red_Orden_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('h014'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11323,18 +11037,14 @@ end
 function InitTrig_Race_Red_Orden_O()
     gg_trg_Race_Red_Orden_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Red_Orden_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Red_Orden_O, Condition(Trig_Race_Red_Orden_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Red_Orden_O, Trig_Race_Red_Orden_O_Actions)
+    TriggerAddAction(gg_trg_Race_Red_Orden_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0HM') then return end
+        Trig_Race_Red_Orden_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Undead O
 --===========================================================================
-function Trig_Race_Undead_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0HV') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Undead_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(3, FourCC('u00P'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11348,18 +11058,14 @@ end
 function InitTrig_Race_Undead_O()
     gg_trg_Race_Undead_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Undead_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Undead_O, Condition(Trig_Race_Undead_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Undead_O, Trig_Race_Undead_O_Actions)
+    TriggerAddAction(gg_trg_Race_Undead_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0HV') then return end
+        Trig_Race_Undead_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Horde
 --===========================================================================
-function Trig_Race_Horde_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0YV') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Horde_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('opeo'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11375,18 +11081,14 @@ end
 function InitTrig_Race_Horde()
     gg_trg_Race_Horde=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Horde, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Horde, Condition(Trig_Race_Horde_Conditions))
-    TriggerAddAction(gg_trg_Race_Horde, Trig_Race_Horde_Actions)
+    TriggerAddAction(gg_trg_Race_Horde, function()
+        if GetSpellAbilityId() ~= FourCC('A0YV') then return end
+        Trig_Race_Horde_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Blood Elves O
 --===========================================================================
-function Trig_Race_Blood_Elves_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0HQ') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Blood_Elves_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('h04K'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11400,18 +11102,14 @@ end
 function InitTrig_Race_Blood_Elves_O()
     gg_trg_Race_Blood_Elves_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Blood_Elves_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Blood_Elves_O, Condition(Trig_Race_Blood_Elves_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Blood_Elves_O, Trig_Race_Blood_Elves_O_Actions)
+    TriggerAddAction(gg_trg_Race_Blood_Elves_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0HQ') then return end
+        Trig_Race_Blood_Elves_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Dalaran O
 --===========================================================================
-function Trig_Race_Dalaran_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0HN') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Dalaran_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(3, FourCC('u001'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11424,18 +11122,14 @@ end
 function InitTrig_Race_Dalaran_O()
     gg_trg_Race_Dalaran_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Dalaran_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Dalaran_O, Condition(Trig_Race_Dalaran_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Dalaran_O, Trig_Race_Dalaran_O_Actions)
+    TriggerAddAction(gg_trg_Race_Dalaran_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0HN') then return end
+        Trig_Race_Dalaran_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race KulTiras O
 --===========================================================================
-function Trig_Race_KulTiras_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0HO') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_KulTiras_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('h013'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11448,18 +11142,14 @@ end
 function InitTrig_Race_KulTiras_O()
     gg_trg_Race_KulTiras_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_KulTiras_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_KulTiras_O, Condition(Trig_Race_KulTiras_O_Conditions))
-    TriggerAddAction(gg_trg_Race_KulTiras_O, Trig_Race_KulTiras_O_Actions)
+    TriggerAddAction(gg_trg_Race_KulTiras_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0HO') then return end
+        Trig_Race_KulTiras_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Nocnorogdennue O
 --===========================================================================
-function Trig_Race_Nocnorogdennue_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0HU') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Nocnorogdennue_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('h0CJ'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11471,18 +11161,14 @@ end
 function InitTrig_Race_Nocnorogdennue_O()
     gg_trg_Race_Nocnorogdennue_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Nocnorogdennue_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Nocnorogdennue_O, Condition(Trig_Race_Nocnorogdennue_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Nocnorogdennue_O, Trig_Race_Nocnorogdennue_O_Actions)
+    TriggerAddAction(gg_trg_Race_Nocnorogdennue_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0HU') then return end
+        Trig_Race_Nocnorogdennue_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Draeneis O
 --===========================================================================
-function Trig_Race_Draeneis_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0HS') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Draeneis_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('h012'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11494,18 +11180,14 @@ end
 function InitTrig_Race_Draeneis_O()
     gg_trg_Race_Draeneis_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Draeneis_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Draeneis_O, Condition(Trig_Race_Draeneis_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Draeneis_O, Trig_Race_Draeneis_O_Actions)
+    TriggerAddAction(gg_trg_Race_Draeneis_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0HS') then return end
+        Trig_Race_Draeneis_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Vryculs O
 --===========================================================================
-function Trig_Race_Vryculs_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0HP') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Vryculs_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('h0C9'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11517,18 +11199,14 @@ end
 function InitTrig_Race_Vryculs_O()
     gg_trg_Race_Vryculs_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Vryculs_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Vryculs_O, Condition(Trig_Race_Vryculs_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Vryculs_O, Trig_Race_Vryculs_O_Actions)
+    TriggerAddAction(gg_trg_Race_Vryculs_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0HP') then return end
+        Trig_Race_Vryculs_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Kult Sum Molota O
 --===========================================================================
-function Trig_Race_Kult_Sum_Molota_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0HX') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Kult_Sum_Molota_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('o00J'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11541,18 +11219,14 @@ end
 function InitTrig_Race_Kult_Sum_Molota_O()
     gg_trg_Race_Kult_Sum_Molota_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Kult_Sum_Molota_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Kult_Sum_Molota_O, Condition(Trig_Race_Kult_Sum_Molota_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Kult_Sum_Molota_O, Trig_Race_Kult_Sum_Molota_O_Actions)
+    TriggerAddAction(gg_trg_Race_Kult_Sum_Molota_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0HX') then return end
+        Trig_Race_Kult_Sum_Molota_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Nerubs O
 --===========================================================================
-function Trig_Race_Nerubs_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0HT') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Nerubs_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(3, FourCC('h0BE'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11564,18 +11238,14 @@ end
 function InitTrig_Race_Nerubs_O()
     gg_trg_Race_Nerubs_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Nerubs_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Nerubs_O, Condition(Trig_Race_Nerubs_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Nerubs_O, Trig_Race_Nerubs_O_Actions)
+    TriggerAddAction(gg_trg_Race_Nerubs_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0HT') then return end
+        Trig_Race_Nerubs_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Silitids O
 --===========================================================================
-function Trig_Race_Silitids_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0J7') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Silitids_O_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(8, FourCC('e01G'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11589,18 +11259,14 @@ end
 function InitTrig_Race_Silitids_O()
     gg_trg_Race_Silitids_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Silitids_O, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Silitids_O, Condition(Trig_Race_Silitids_O_Conditions))
-    TriggerAddAction(gg_trg_Race_Silitids_O, Trig_Race_Silitids_O_Actions)
+    TriggerAddAction(gg_trg_Race_Silitids_O, function()
+        if GetSpellAbilityId() ~= FourCC('A0J7') then return end
+        Trig_Race_Silitids_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Gnomes
 --===========================================================================
-function Trig_Race_Gnomes_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0SD') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Gnomes_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('h0FA'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11615,18 +11281,14 @@ end
 function InitTrig_Race_Gnomes()
     gg_trg_Race_Gnomes=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Gnomes, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Gnomes, Condition(Trig_Race_Gnomes_Conditions))
-    TriggerAddAction(gg_trg_Race_Gnomes, Trig_Race_Gnomes_Actions)
+    TriggerAddAction(gg_trg_Race_Gnomes, function()
+        if GetSpellAbilityId() ~= FourCC('A0SD') then return end
+        Trig_Race_Gnomes_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Gilneas
 --===========================================================================
-function Trig_Race_Gilneas_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A121') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Gilneas_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('h0IT'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11638,18 +11300,14 @@ end
 function InitTrig_Race_Gilneas()
     gg_trg_Race_Gilneas=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Gilneas, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Gilneas, Condition(Trig_Race_Gilneas_Conditions))
-    TriggerAddAction(gg_trg_Race_Gilneas, Trig_Race_Gilneas_Actions)
+    TriggerAddAction(gg_trg_Race_Gilneas, function()
+        if GetSpellAbilityId() ~= FourCC('A121') then return end
+        Trig_Race_Gilneas_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Nagi
 --===========================================================================
-function Trig_Race_Nagi_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A14O') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Nagi_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('nmpe'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11662,18 +11320,14 @@ end
 function InitTrig_Race_Nagi()
     gg_trg_Race_Nagi=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Nagi, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Nagi, Condition(Trig_Race_Nagi_Conditions))
-    TriggerAddAction(gg_trg_Race_Nagi, Trig_Race_Nagi_Actions)
+    TriggerAddAction(gg_trg_Race_Nagi, function()
+        if GetSpellAbilityId() ~= FourCC('A14O') then return end
+        Trig_Race_Nagi_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race nightelf
 --===========================================================================
-function Trig_Race_nightelf_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0HL') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_nightelf_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(6, FourCC('ewsp'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11685,18 +11339,14 @@ end
 function InitTrig_Race_nightelf()
     gg_trg_Race_nightelf=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_nightelf, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_nightelf, Condition(Trig_Race_nightelf_Conditions))
-    TriggerAddAction(gg_trg_Race_nightelf, Trig_Race_nightelf_Actions)
+    TriggerAddAction(gg_trg_Race_nightelf, function()
+        if GetSpellAbilityId() ~= FourCC('A0HL') then return end
+        Trig_Race_nightelf_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Forsaken
 --===========================================================================
-function Trig_Race_Forsaken_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A155') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Forsaken_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('h0J5'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11709,18 +11359,14 @@ end
 function InitTrig_Race_Forsaken()
     gg_trg_Race_Forsaken=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Forsaken, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Forsaken, Condition(Trig_Race_Forsaken_Conditions))
-    TriggerAddAction(gg_trg_Race_Forsaken, Trig_Race_Forsaken_Actions)
+    TriggerAddAction(gg_trg_Race_Forsaken, function()
+        if GetSpellAbilityId() ~= FourCC('A155') then return end
+        Trig_Race_Forsaken_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Ogres
 --===========================================================================
-function Trig_Race_Ogres_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A17N') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Ogres_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('o03W'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11732,18 +11378,14 @@ end
 function InitTrig_Race_Ogres()
     gg_trg_Race_Ogres=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Ogres, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Ogres, Condition(Trig_Race_Ogres_Conditions))
-    TriggerAddAction(gg_trg_Race_Ogres, Trig_Race_Ogres_Actions)
+    TriggerAddAction(gg_trg_Race_Ogres, function()
+        if GetSpellAbilityId() ~= FourCC('A17N') then return end
+        Trig_Race_Ogres_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Alliance
 --===========================================================================
-function Trig_Race_Alliance_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A02A') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Race_Alliance_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('hpea'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11760,15 +11402,14 @@ end
 function InitTrig_Race_Alliance()
     gg_trg_Race_Alliance=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Alliance, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Alliance, Condition(Trig_Race_Alliance_Conditions))
-    TriggerAddAction(gg_trg_Race_Alliance, Trig_Race_Alliance_Actions)
+    TriggerAddAction(gg_trg_Race_Alliance, function()
+        if GetSpellAbilityId() ~= FourCC('A02A') then return end
+        Trig_Race_Alliance_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race JungleTrolls
 --===========================================================================
-function Trig_Race_JungleTrolls_Conditions()
-    return GetSpellAbilityId() == FourCC('A1DZ')
-end
 function Trig_Race_JungleTrolls_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('o04Q'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11782,15 +11423,14 @@ end
 function InitTrig_Race_JungleTrolls()
     gg_trg_Race_JungleTrolls=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_JungleTrolls, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_JungleTrolls, Condition(Trig_Race_JungleTrolls_Conditions))
-    TriggerAddAction(gg_trg_Race_JungleTrolls, Trig_Race_JungleTrolls_Actions)
+    TriggerAddAction(gg_trg_Race_JungleTrolls, function()
+        if GetSpellAbilityId() ~= FourCC('A1DZ') then return end
+        Trig_Race_JungleTrolls_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race FelOrk
 --===========================================================================
-function Trig_Race_FelOrk_Conditions()
-    return GetSpellAbilityId() == FourCC('A1JL')
-end
 function Trig_Race_FelOrk_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('n06B'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11804,15 +11444,14 @@ end
 function InitTrig_Race_FelOrk()
     gg_trg_Race_FelOrk=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_FelOrk, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_FelOrk, Condition(Trig_Race_FelOrk_Conditions))
-    TriggerAddAction(gg_trg_Race_FelOrk, Trig_Race_FelOrk_Actions)
+    TriggerAddAction(gg_trg_Race_FelOrk, function()
+        if GetSpellAbilityId() ~= FourCC('A1JL') then return end
+        Trig_Race_FelOrk_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race ForestTrolls
 --===========================================================================
-function Trig_Race_ForestTrolls_Conditions()
-    return GetSpellAbilityId() == FourCC('A1FN')
-end
 function Trig_Race_ForestTrolls_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('o04V'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11826,15 +11465,14 @@ end
 function InitTrig_Race_ForestTrolls()
     gg_trg_Race_ForestTrolls=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_ForestTrolls, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_ForestTrolls, Condition(Trig_Race_ForestTrolls_Conditions))
-    TriggerAddAction(gg_trg_Race_ForestTrolls, Trig_Race_ForestTrolls_Actions)
+    TriggerAddAction(gg_trg_Race_ForestTrolls, function()
+        if GetSpellAbilityId() ~= FourCC('A1FN') then return end
+        Trig_Race_ForestTrolls_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race CultOfDamned
 --===========================================================================
-function Trig_Race_CultOfDamned_Conditions()
-    return GetSpellAbilityId() == FourCC('A1HA')
-end
 function Trig_Race_CultOfDamned_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(3, FourCC('cD02'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11849,15 +11487,14 @@ end
 function InitTrig_Race_CultOfDamned()
     gg_trg_Race_CultOfDamned=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_CultOfDamned, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_CultOfDamned, Condition(Trig_Race_CultOfDamned_Conditions))
-    TriggerAddAction(gg_trg_Race_CultOfDamned, Trig_Race_CultOfDamned_Actions)
+    TriggerAddAction(gg_trg_Race_CultOfDamned, function()
+        if GetSpellAbilityId() ~= FourCC('A1HA') then return end
+        Trig_Race_CultOfDamned_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Pandarens
 --===========================================================================
-function Trig_Race_Pandarens_Conditions()
-    return GetSpellAbilityId() == FourCC('A1I6')
-end
 function Trig_Race_Pandarens_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('pa01'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11872,15 +11509,14 @@ end
 function InitTrig_Race_Pandarens()
     gg_trg_Race_Pandarens=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Pandarens, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Pandarens, Condition(Trig_Race_Pandarens_Conditions))
-    TriggerAddAction(gg_trg_Race_Pandarens, Trig_Race_Pandarens_Actions)
+    TriggerAddAction(gg_trg_Race_Pandarens, function()
+        if GetSpellAbilityId() ~= FourCC('A1I6') then return end
+        Trig_Race_Pandarens_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race HordeW2
 --===========================================================================
-function Trig_Race_HordeW2_Conditions()
-    return GetSpellAbilityId() == FourCC('A1JN')
-end
 function Trig_Race_HordeW2_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     CreateNUnitsAtLoc(5, FourCC('w200'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -11899,15 +11535,14 @@ end
 function InitTrig_Race_HordeW2()
     gg_trg_Race_HordeW2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_HordeW2, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_HordeW2, Condition(Trig_Race_HordeW2_Conditions))
-    TriggerAddAction(gg_trg_Race_HordeW2, Trig_Race_HordeW2_Actions)
+    TriggerAddAction(gg_trg_Race_HordeW2, function()
+        if GetSpellAbilityId() ~= FourCC('A1JN') then return end
+        Trig_Race_HordeW2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Race Random
 --===========================================================================
-function Trig_Race_Random_Conditions()
-    return GetSpellAbilityId() == FourCC('A12Q')
-end
 function incN()
     icrisingN=icrisingN + 1
     return icrisingN
@@ -11927,14 +11562,14 @@ function Trig_Race_Random_Actions()
         TriggerExecute(gg_trg_StromgardOn)
     end
     
-    --Драконы
+    --???????
     if racechance == incN() then
         
         CreateNUnitsAtLoc(1, FourCC('dra1'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, p)
         DragonsOn()
     end
-    --Элементали
+    --??????????
     if racechance == incN() then
         CreateNUnitsAtLoc(5, FourCC('e00F'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0A2'), 1, p)
@@ -12073,7 +11708,7 @@ function Trig_Race_Random_Actions()
         SetPlayerTechResearchedSwap(FourCC('R0G4'), 1, p)
     end
     
-    --Forsaken отрекшиеся
+    --Forsaken ??????????
     if racechance == incN() then
         CreateNUnitsAtLoc(5, FourCC('h0J5'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0G3'), 1, p)
@@ -12145,15 +11780,14 @@ end
 function InitTrig_Race_Random()
     gg_trg_Race_Random=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Race_Random, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Race_Random, Condition(Trig_Race_Random_Conditions))
-    TriggerAddAction(gg_trg_Race_Random, Trig_Race_Random_Actions)
+    TriggerAddAction(gg_trg_Race_Random, function()
+        if GetSpellAbilityId() ~= FourCC('A12Q') then return end
+        Trig_Race_Random_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Page1
 --===========================================================================
-function Trig_Page1_Conditions()
-    return GetSpellAbilityId() == FourCC('A0I1')
-end
 function Trig_Page1_Actions()
     UnitAddAbilityBJ(FourCC('A0HZ'), GetTriggerUnit()) -- 2 c
     UnitRemoveAbilityBJ(FourCC('A0I1'), GetTriggerUnit()) -- 1 c
@@ -12162,7 +11796,7 @@ function Trig_Page1_Actions()
     
     
     
-    UnitAddAbilityBJ(FourCC('A02A'), GetTriggerUnit()) -- Альянс
+    UnitAddAbilityBJ(FourCC('A02A'), GetTriggerUnit()) -- ??????
     UnitAddAbilityBJ(FourCC('A0YV'), GetTriggerUnit()) -- Horde
     UnitAddAbilityBJ(FourCC('A0HV'), GetTriggerUnit()) -- Plet
     UnitAddAbilityBJ(FourCC('A0HL'), GetTriggerUnit()) -- Night Elves
@@ -12193,15 +11827,14 @@ end
 function InitTrig_Page1()
     gg_trg_Page1=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Page1, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
-    TriggerAddCondition(gg_trg_Page1, Condition(Trig_Page1_Conditions))
-    TriggerAddAction(gg_trg_Page1, Trig_Page1_Actions)
+    TriggerAddAction(gg_trg_Page1, function()
+        if GetSpellAbilityId() ~= FourCC('A0I1') then return end
+        Trig_Page1_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Page2
 --===========================================================================
-function Trig_Page2_Conditions()
-    return GetSpellAbilityId() == FourCC('A0HZ')
-end
 function Trig_Page2_Actions()
     
     UnitRemoveAbilityBJ(GetSpellAbilityId(), GetTriggerUnit())
@@ -12210,13 +11843,13 @@ function Trig_Page2_Actions()
     
     
     
-    UnitAddAbilityBJ(FourCC('A0HM'), GetTriggerUnit()) -- Алый орден
-    UnitAddAbilityBJ(FourCC('A0Y0'), GetTriggerUnit()) -- Стром
-    UnitAddAbilityBJ(FourCC('A1EG'), GetTriggerUnit()) -- Ледяные тролли
+    UnitAddAbilityBJ(FourCC('A0HM'), GetTriggerUnit()) -- ???? ?????
+    UnitAddAbilityBJ(FourCC('A0Y0'), GetTriggerUnit()) -- ?????
+    UnitAddAbilityBJ(FourCC('A1EG'), GetTriggerUnit()) -- ??????? ??????
     
     UnitAddAbilityBJ(FourCC('A121'), GetTriggerUnit()) -- Worgens
     UnitAddAbilityBJ(FourCC('A0HN'), GetTriggerUnit()) -- Dalaran
-    UnitAddAbilityBJ(FourCC('A1FN'), GetTriggerUnit()) -- Лесные тролли
+    UnitAddAbilityBJ(FourCC('A1FN'), GetTriggerUnit()) -- ?????? ??????
     
     
     UnitAddAbilityBJ(FourCC('A0HR'), GetTriggerUnit()) -- Thieves
@@ -12227,7 +11860,7 @@ function Trig_Page2_Actions()
     
     
     
-    UnitRemoveAbilityBJ(FourCC('A02A'), GetTriggerUnit()) -- Альянс
+    UnitRemoveAbilityBJ(FourCC('A02A'), GetTriggerUnit()) -- ??????
     UnitRemoveAbilityBJ(FourCC('A0YV'), GetTriggerUnit()) -- Horde
     UnitRemoveAbilityBJ(FourCC('A0HV'), GetTriggerUnit()) -- Plet
     UnitRemoveAbilityBJ(FourCC('A0HL'), GetTriggerUnit()) -- Night Elves
@@ -12243,15 +11876,14 @@ end
 function InitTrig_Page2()
     gg_trg_Page2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Page2, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
-    TriggerAddCondition(gg_trg_Page2, Condition(Trig_Page2_Conditions))
-    TriggerAddAction(gg_trg_Page2, Trig_Page2_Actions)
+    TriggerAddAction(gg_trg_Page2, function()
+        if GetSpellAbilityId() ~= FourCC('A0HZ') then return end
+        Trig_Page2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Page3
 --===========================================================================
-function Trig_Page3_Conditions()
-    return GetSpellAbilityId() == FourCC('A1GW')
-end
 function Trig_Page3_Actions()
     
     
@@ -12293,13 +11925,13 @@ function Trig_Page3_Actions()
     
     
     
-    UnitRemoveAbilityBJ(FourCC('A0HM'), GetTriggerUnit()) -- Алый орден
-    UnitRemoveAbilityBJ(FourCC('A0Y0'), GetTriggerUnit()) -- Стром
-    UnitRemoveAbilityBJ(FourCC('A1EG'), GetTriggerUnit()) -- Ледяные тролли
+    UnitRemoveAbilityBJ(FourCC('A0HM'), GetTriggerUnit()) -- ???? ?????
+    UnitRemoveAbilityBJ(FourCC('A0Y0'), GetTriggerUnit()) -- ?????
+    UnitRemoveAbilityBJ(FourCC('A1EG'), GetTriggerUnit()) -- ??????? ??????
     
     UnitRemoveAbilityBJ(FourCC('A121'), GetTriggerUnit()) -- Worgens
     UnitRemoveAbilityBJ(FourCC('A0HN'), GetTriggerUnit()) -- Dalaran
-    UnitRemoveAbilityBJ(FourCC('A1FN'), GetTriggerUnit()) -- Лесные тролли
+    UnitRemoveAbilityBJ(FourCC('A1FN'), GetTriggerUnit()) -- ?????? ??????
     
     
     UnitRemoveAbilityBJ(FourCC('A0HR'), GetTriggerUnit()) -- Thieves
@@ -12315,15 +11947,14 @@ end
 function InitTrig_Page3()
     gg_trg_Page3=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Page3, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
-    TriggerAddCondition(gg_trg_Page3, Condition(Trig_Page3_Conditions))
-    TriggerAddAction(gg_trg_Page3, Trig_Page3_Actions)
+    TriggerAddAction(gg_trg_Page3, function()
+        if GetSpellAbilityId() ~= FourCC('A1GW') then return end
+        Trig_Page3_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Page4
 --===========================================================================
-function Trig_Page4_Conditions()
-    return GetSpellAbilityId() == FourCC('A0QR')
-end
 function Trig_Page4_Actions()
     
     
@@ -12369,8 +12000,10 @@ end
 function InitTrig_Page4()
     gg_trg_Page4=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Page4, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
-    TriggerAddCondition(gg_trg_Page4, Condition(Trig_Page4_Conditions))
-    TriggerAddAction(gg_trg_Page4, Trig_Page4_Actions)
+    TriggerAddAction(gg_trg_Page4, function()
+        if GetSpellAbilityId() ~= FourCC('A0QR') then return end
+        Trig_Page4_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Leave Ot
@@ -12457,12 +12090,6 @@ end
 --===========================================================================
 -- Trigger: Cast
 --===========================================================================
-function Trig_Cast_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1BR') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Cast_Actions()
     EnableTrigger(gg_trg_Lech)
     CreateNUnitsAtLoc(1, FourCC('h0ML'), GetOwningPlayer(udg_u), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
@@ -12476,8 +12103,10 @@ end
 function InitTrig_Cast()
     gg_trg_Cast=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Cast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Cast, Condition(Trig_Cast_Conditions))
-    TriggerAddAction(gg_trg_Cast, Trig_Cast_Actions)
+    TriggerAddAction(gg_trg_Cast, function()
+        if GetSpellAbilityId() ~= FourCC('A1BR') then return end
+        Trig_Cast_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AvtoCast
@@ -12523,15 +12152,10 @@ function Trig_No2SameItems_Actions()
     local l= GetUnitLoc(GetTriggerUnit())
     local i=0
     local Item= GetManipulatedItem()
-    bj_forLoopAIndex=1
-    bj_forLoopAIndexEnd=6
-    
-    while true do
-        if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+    for bj_forLoopAIndex = 1, 6 do
         if GetItemTypeId(Item) == GetItemTypeId(UnitItemInSlotBJ(GetTriggerUnit(), GetForLoopIndexA())) then
             i=i + 1
         end
-        bj_forLoopAIndex=bj_forLoopAIndex + 1
     end
     
     if i >= 2 then
@@ -12540,8 +12164,8 @@ function Trig_No2SameItems_Actions()
     
     end
     RemoveLocation(l)
-    l=null
-    Item=null
+    l=nil
+    Item=nil
 end
 --===========================================================================
 function InitTrig_No2SameItems()
@@ -12571,9 +12195,6 @@ end
 --===========================================================================
 -- Trigger: SomeThing
 --===========================================================================
-function Trig_SomeThing_Conditions()
-    return GetSpellAbilityId() == FourCC('A0RZ')
-end
 function Trig_SomeThing_Actions()
     UnitAddAbilityBJ(FourCC('A0S0'), GetTriggerUnit())
     RemoveAbilityTimed(GetTriggerUnit() , FourCC('A0S0') , 25)
@@ -12582,15 +12203,14 @@ end
 function InitTrig_SomeThing()
     gg_trg_SomeThing=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SomeThing, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SomeThing, Condition(Trig_SomeThing_Conditions))
-    TriggerAddAction(gg_trg_SomeThing, Trig_SomeThing_Actions)
+    TriggerAddAction(gg_trg_SomeThing, function()
+        if GetSpellAbilityId() ~= FourCC('A0RZ') then return end
+        Trig_SomeThing_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: SomeThing2
 --===========================================================================
-function Trig_SomeThing2_Conditions()
-    return GetSpellAbilityId() == FourCC('A0KA')
-end
 function Trig_SomeThing2_Actions()
     UnitAddAbilityBJ(FourCC('A0NT'), GetTriggerUnit())
     RemoveAbilityTimed(GetTriggerUnit() , FourCC('A0NT') , 20)
@@ -12599,18 +12219,14 @@ end
 function InitTrig_SomeThing2()
     gg_trg_SomeThing2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SomeThing2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SomeThing2, Condition(Trig_SomeThing2_Conditions))
-    TriggerAddAction(gg_trg_SomeThing2, Trig_SomeThing2_Actions)
+    TriggerAddAction(gg_trg_SomeThing2, function()
+        if GetSpellAbilityId() ~= FourCC('A0KA') then return end
+        Trig_SomeThing2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Pole astrala Elems
 --===========================================================================
-function Trig_Pole_astrala_Elems_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0OT') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Pole_astrala_Elems_Func003A()
     CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
     UnitAddAbilityBJ(FourCC('AHbn'), GetLastCreatedUnit())
@@ -12630,18 +12246,14 @@ end
 function InitTrig_Pole_astrala_Elems()
     gg_trg_Pole_astrala_Elems=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Pole_astrala_Elems, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Pole_astrala_Elems, Condition(Trig_Pole_astrala_Elems_Conditions))
-    TriggerAddAction(gg_trg_Pole_astrala_Elems, Trig_Pole_astrala_Elems_Actions)
+    TriggerAddAction(gg_trg_Pole_astrala_Elems, function()
+        if GetSpellAbilityId() ~= FourCC('A0OT') then return end
+        Trig_Pole_astrala_Elems_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ItemPoleAstrala
 --===========================================================================
-function Trig_ItemPoleAstrala_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0N9') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_ItemPoleAstrala_Func003A()
     CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
     UnitAddAbilityBJ(FourCC('AHbn'), GetLastCreatedUnit())
@@ -12660,18 +12272,14 @@ end
 function InitTrig_ItemPoleAstrala()
     gg_trg_ItemPoleAstrala=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_ItemPoleAstrala, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ItemPoleAstrala, Condition(Trig_ItemPoleAstrala_Conditions))
-    TriggerAddAction(gg_trg_ItemPoleAstrala, Trig_ItemPoleAstrala_Actions)
+    TriggerAddAction(gg_trg_ItemPoleAstrala, function()
+        if GetSpellAbilityId() ~= FourCC('A0N9') then return end
+        Trig_ItemPoleAstrala_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AntiMagic Item
 --===========================================================================
-function Trig_AntiMagic_Item_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0TB') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_AntiMagic_Item_Func003A()
     CreateNUnitsAtLoc(1, FourCC('H0GB'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
     UnitAddAbilityBJ(FourCC('A0TI'), GetLastCreatedUnit())
@@ -12691,25 +12299,21 @@ end
 function InitTrig_AntiMagic_Item()
     gg_trg_AntiMagic_Item=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_AntiMagic_Item, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AntiMagic_Item, Condition(Trig_AntiMagic_Item_Conditions))
-    TriggerAddAction(gg_trg_AntiMagic_Item, Trig_AntiMagic_Item_Actions)
+    TriggerAddAction(gg_trg_AntiMagic_Item, function()
+        if GetSpellAbilityId() ~= FourCC('A0TB') then return end
+        Trig_AntiMagic_Item_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Spell Copy
 --
--- Создает 3 шара которые кружат вокруг героя бесконечно пока он их не потратит или умрет
--- запуская их во врагов герой наносит им урон в 200 АОЕ и вешает противные бафы
--- Первый выпущенный шар вешает на врагов замедление
--- Второй выпущенный шар вешает на врагов хекс
--- Третий выпущенный шар вешает на врагов промахи
--- Не ставить перезарядку скила на 0 так как будут баги
+-- ??????? 3 ???? ??????? ?????? ?????? ????? ?????????? ???? ?? ?? ?? ???????? ??? ?????
+-- ???????? ?? ?? ?????? ????? ??????? ?? ???? ? 200 ??? ? ?????? ????????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ??????????
+-- ?????? ?????????? ??? ?????? ?? ?????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ???????
+-- ?? ??????? ??????????? ????? ?? 0 ??? ??? ????? ????
 --===========================================================================
-function Trig_Spell_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1BN') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Spell_Copy_Actions()
     udg_Caster=GetSpellAbilityUnit()
     udg_To4kaCaster=GetUnitLoc(udg_Caster)
@@ -12730,25 +12334,21 @@ end
 function InitTrig_Spell_Copy()
     gg_trg_Spell_Copy=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Spell_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Spell_Copy, Condition(Trig_Spell_Copy_Conditions))
-    TriggerAddAction(gg_trg_Spell_Copy, Trig_Spell_Copy_Actions)
+    TriggerAddAction(gg_trg_Spell_Copy, function()
+        if GetSpellAbilityId() ~= FourCC('A1BN') then return end
+        Trig_Spell_Copy_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Spell Cast
 --
--- Создает 3 шара которые кружат вокруг героя бесконечно пока он их не потратит или умрет
--- запуская их во врагов герой наносит им урон в 200 АОЕ и вешает противные бафы
--- Первый выпущенный шар вешает на врагов замедление
--- Второй выпущенный шар вешает на врагов хекс
--- Третий выпущенный шар вешает на врагов промахи
--- Не ставить перезарядку скила на 0 так как будут баги
+-- ??????? 3 ???? ??????? ?????? ?????? ????? ?????????? ???? ?? ?? ?? ???????? ??? ?????
+-- ???????? ?? ?? ?????? ????? ??????? ?? ???? ? 200 ??? ? ?????? ????????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ??????????
+-- ?????? ?????????? ??? ?????? ?? ?????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ???????
+-- ?? ??????? ??????????? ????? ?? 0 ??? ??? ????? ????
 --===========================================================================
-function Trig_Spell_Cast_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1BM') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Spell_Cast_Actions()
     udg_Target=GetSpellTargetUnit()
     udg_LogikaCast=true
@@ -12758,18 +12358,20 @@ end
 function InitTrig_Spell_Cast()
     gg_trg_Spell_Cast=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Spell_Cast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Spell_Cast, Condition(Trig_Spell_Cast_Conditions))
-    TriggerAddAction(gg_trg_Spell_Cast, Trig_Spell_Cast_Actions)
+    TriggerAddAction(gg_trg_Spell_Cast, function()
+        if GetSpellAbilityId() ~= FourCC('A1BM') then return end
+        Trig_Spell_Cast_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Spell Dvij
 --
--- Создает 3 шара которые кружат вокруг героя бесконечно пока он их не потратит или умрет
--- запуская их во врагов герой наносит им урон в 200 АОЕ и вешает противные бафы
--- Первый выпущенный шар вешает на врагов замедление
--- Второй выпущенный шар вешает на врагов хекс
--- Третий выпущенный шар вешает на врагов промахи
--- Не ставить перезарядку скила на 0 так как будут баги
+-- ??????? 3 ???? ??????? ?????? ?????? ????? ?????????? ???? ?? ?? ?? ???????? ??? ?????
+-- ???????? ?? ?? ?????? ????? ??????? ?? ???? ? 200 ??? ? ?????? ????????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ??????????
+-- ?????? ?????????? ??? ?????? ?? ?????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ???????
+-- ?? ??????? ??????????? ????? ?? 0 ??? ??? ????? ????
 --===========================================================================
 function Trig_Spell_Dvij_Conditions()
     if ( not ( udg_Logika == true ) ) then
@@ -12864,7 +12466,7 @@ function Trig_Spell_Dvij_Func004Func007Func002Func005Func002A()
         udg_Dummy[4]=GetLastCreatedUnit()
         IssueTargetOrderBJ(udg_Dummy[4], "slow", GetEnumUnit())
         UnitApplyTimedLifeBJ(1.50, FourCC('BTLF'), udg_Dummy[4])
-        udg_Dummy[4]=null
+        udg_Dummy[4]=nil
         RemoveLocation(udg_To4kaAOE)
     else
     end
@@ -12905,7 +12507,7 @@ function Trig_Spell_Dvij_Func004Func007Func004Func006Func002A()
         udg_Dummy[4]=GetLastCreatedUnit()
         IssueTargetOrderBJ(udg_Dummy[4], "polymorph", GetEnumUnit())
         UnitApplyTimedLifeBJ(1.50, FourCC('BTLF'), udg_Dummy[4])
-        udg_Dummy[4]=null
+        udg_Dummy[4]=nil
         RemoveLocation(udg_To4kaAOE)
     else
     end
@@ -12946,7 +12548,7 @@ function Trig_Spell_Dvij_Func004Func007Func006Func005Func002A()
         udg_Dummy[4]=GetLastCreatedUnit()
         IssueTargetOrderBJ(udg_Dummy[4], "curse", GetEnumUnit())
         UnitApplyTimedLifeBJ(1.50, FourCC('BTLF'), udg_Dummy[4])
-        udg_Dummy[4]=null
+        udg_Dummy[4]=nil
         RemoveLocation(udg_To4kaAOE)
     else
     end
@@ -12973,7 +12575,7 @@ function Trig_Spell_Dvij_Func004C()
     return true
 end
 function Trig_Spell_Dvij_Actions()
-    -- обнуление
+    -- ?????????
     if ( Trig_Spell_Dvij_Func002C() ) then
         RemoveUnit(udg_Dummy[0])
         RemoveUnit(udg_Dummy[1])
@@ -12982,10 +12584,10 @@ function Trig_Spell_Dvij_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC('A1BM'), GetOwningPlayer(udg_Caster))
         SetPlayerAbilityAvailableBJ(true, FourCC('A1BN'), GetOwningPlayer(udg_Caster))
         RemoveLocation(udg_To4kaCaster)
-        udg_Dummy[0]=null
-        udg_Dummy[1]=null
-        udg_Dummy[2]=null
-        udg_Caster=null
+        udg_Dummy[0]=nil
+        udg_Dummy[1]=nil
+        udg_Dummy[2]=nil
+        udg_Caster=nil
         udg_Logika=false
         udg_LogikaCast=false
         PauseTimerBJ(true, udg_Timer)
@@ -12993,7 +12595,7 @@ function Trig_Spell_Dvij_Actions()
     end
     if ( (true) ) then -- INLINED!!
         udg_To4kaCaster=GetUnitLoc(udg_Caster)
-        -- скорость поворота если заменить + на -  шары будут крутится в другую сторону
+        -- ???????? ???????? ???? ???????? + ?? -  ???? ????? ???????? ? ?????? ???????
         udg_Ygol[1]=( udg_Ygol[1] + 5 )
         if ( Trig_Spell_Dvij_Func004Func004C() ) then
             SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 0.00 + I2R(udg_Ygol[1]) )))
@@ -13008,19 +12610,19 @@ function Trig_Spell_Dvij_Actions()
         else
         end
         if ( Trig_Spell_Dvij_Func004Func007C() ) then
-            -- Первый летящий шар
+            -- ?????? ??????? ???
             if ( Trig_Spell_Dvij_Func004Func007Func002C() ) then
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[2])
-                -- Скорость полета шара во врага
+                -- ???????? ?????? ???? ?? ?????
                 SetUnitPositionLoc(udg_Dummy[2], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
                 if ( Trig_Spell_Dvij_Func004Func007Func002Func005C() ) then
-                    -- АОЕ урона и бафов
+                    -- ??? ????? ? ?????
                     ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func002Func005Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsDemonDarkPortalDarkPortalTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                     RemoveUnit(udg_Dummy[2])
-                    udg_Target=null
+                    udg_Target=nil
                     udg_LogikaCast=false
                 else
                 end
@@ -13028,19 +12630,19 @@ function Trig_Spell_Dvij_Actions()
                 RemoveLocation(udg_To4kaTarget)
             else
             end
-            -- Второй летящий шар
+            -- ?????? ??????? ???
             if ( Trig_Spell_Dvij_Func004Func007Func004C() ) then
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[1])
-                -- Скорость полета шара во врага
+                -- ???????? ?????? ???? ?? ?????
                 SetUnitPositionLoc(udg_Dummy[1], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
                 if ( Trig_Spell_Dvij_Func004Func007Func004Func006C() ) then
-                    -- АОЕ урона и бафов
+                    -- ??? ????? ? ?????
                     ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func004Func006Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsUndeadDarkRitualDarkRitualTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                     RemoveUnit(udg_Dummy[1])
-                    udg_Target=null
+                    udg_Target=nil
                     udg_LogikaCast=false
                 else
                 end
@@ -13048,19 +12650,19 @@ function Trig_Spell_Dvij_Actions()
                 RemoveLocation(udg_To4kaTarget)
             else
             end
-            -- Третий летящий шар
+            -- ?????? ??????? ???
             if ( Trig_Spell_Dvij_Func004Func007Func006C() ) then
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[0])
-                -- Скорость полета шара во врага
+                -- ???????? ?????? ???? ?? ?????
                 SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
                 if ( Trig_Spell_Dvij_Func004Func007Func006Func005C() ) then
-                    -- АОЕ урона и бафов
+                    -- ??? ????? ? ?????
                     ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func006Func005Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsUndeadDeathPactDeathPactTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                     RemoveUnit(udg_Dummy[0])
-                    udg_Target=null
+                    udg_Target=nil
                     udg_LogikaCast=false
                     udg_HisloA[0]=0
                 else
@@ -13084,12 +12686,12 @@ end
 --===========================================================================
 -- Trigger: DieDummy
 --
--- Создает 3 шара которые кружат вокруг героя бесконечно пока он их не потратит или умрет
--- запуская их во врагов герой наносит им урон в 200 АОЕ и вешает противные бафы
--- Первый выпущенный шар вешает на врагов замедление
--- Второй выпущенный шар вешает на врагов хекс
--- Третий выпущенный шар вешает на врагов промахи
--- Не ставить перезарядку скила на 0 так как будут баги
+-- ??????? 3 ???? ??????? ?????? ?????? ????? ?????????? ???? ?? ?? ?? ???????? ??? ?????
+-- ???????? ?? ?? ?????? ????? ??????? ?? ???? ? 200 ??? ? ?????? ????????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ??????????
+-- ?????? ?????????? ??? ?????? ?? ?????? ????
+-- ?????? ?????????? ??? ?????? ?? ?????? ???????
+-- ?? ??????? ??????????? ????? ?? 0 ??? ??? ????? ????
 --===========================================================================
 function Trig_DieDummy_Func001Func002A()
     RemoveUnit(GetEnumUnit())
@@ -13161,50 +12763,42 @@ end
 --===========================================================================
 -- Trigger: Fireball
 --===========================================================================
-function Trig_Fireball_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A043') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Fireball_Actions()
     local fireballtarget
     fireballtarget=GetSpellTargetUnit()
     PolledWait(( DistanceBetweenPoints(GetUnitLoc(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit())) / 1000.00 ))
     udg_unit=fireballtarget
     UnitDamageTargetBJ(GetSpellAbilityUnit(), udg_unit, I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSpellAbilityUnit(), false)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
-    fireballtarget=null
+    fireballtarget=nil
 end
 --===========================================================================
 function InitTrig_Fireball()
     gg_trg_Fireball=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Fireball, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Fireball, Condition(Trig_Fireball_Conditions))
-    TriggerAddAction(gg_trg_Fireball, Trig_Fireball_Actions)
+    TriggerAddAction(gg_trg_Fireball, function()
+        if GetSpellAbilityId() ~= FourCC('A043') then return end
+        Trig_Fireball_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Fire Arrow
 --===========================================================================
-function Trig_Fire_Arrow_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A044') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Fire_Arrow_Actions()
     local firearrowtarget
     firearrowtarget=GetSpellTargetUnit()
     PolledWait(( DistanceBetweenPoints(GetUnitLoc(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit())) / 1500.00 ))
     udg_unit=firearrowtarget
     UnitDamageTargetBJ(GetSpellAbilityUnit(), udg_unit, I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSpellAbilityUnit(), false)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
-    firearrowtarget=null
+    firearrowtarget=nil
 end
 --===========================================================================
 function InitTrig_Fire_Arrow()
     gg_trg_Fire_Arrow=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Fire_Arrow, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_Fire_Arrow, Condition(Trig_Fire_Arrow_Conditions))
-    TriggerAddAction(gg_trg_Fire_Arrow, Trig_Fire_Arrow_Actions)
+    TriggerAddAction(gg_trg_Fire_Arrow, function()
+        if GetSpellAbilityId() ~= FourCC('A044') then return end
+        Trig_Fire_Arrow_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Research Ot
@@ -13245,12 +12839,6 @@ end
 --===========================================================================
 -- Trigger: Sdelat Flagman Ot Copy
 --===========================================================================
-function Trig_Sdelat_Flagman_Ot_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A009') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Sdelat_Flagman_Ot_Copy_Func002002()
     return ( GetUnitAbilityLevelSwapped(FourCC('A009'), GetFilterUnit()) >= 1 )
 end
@@ -13265,7 +12853,7 @@ function Trig_Sdelat_Flagman_Ot_Copy_Func019C()
 end
 function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     udg_FlagmanEst[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=true
-    udg_Boolexpr=Condition(Trig_Sdelat_Flagman_Ot_Copy_Func002002)
+    udg_Boolexpr = Trig_Sdelat_Flagman_Ot_Copy_Func002002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Sdelat_Flagman_Ot_Copy_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -13291,8 +12879,10 @@ function InitTrig_Sdelat_Flagman_Ot_Copy()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Sdelat_Flagman_Ot_Copy, EVENT_PLAYER_UNIT_SPELL_CAST)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Sdelat_Flagman_Ot_Copy, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Sdelat_Flagman_Ot_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Sdelat_Flagman_Ot_Copy, Condition(Trig_Sdelat_Flagman_Ot_Copy_Conditions))
-    TriggerAddAction(gg_trg_Sdelat_Flagman_Ot_Copy, Trig_Sdelat_Flagman_Ot_Copy_Actions)
+    TriggerAddAction(gg_trg_Sdelat_Flagman_Ot_Copy, function()
+        if GetSpellAbilityId() ~= FourCC('A009') then return end
+        Trig_Sdelat_Flagman_Ot_Copy_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Flagman die Ot
@@ -13311,7 +12901,7 @@ function Trig_Flagman_die_Ot_Actions()
     local p= GetOwningPlayer(u)
     udg_FlagmanEst[GetConvertedPlayerId(p)]=false
     udg_LocalOtrad=GetUnitsOfPlayerAll(p)
-    udg_Boolexpr=Condition(Trig_Flagman_die_Ot_Func003002)
+    udg_Boolexpr = Trig_Flagman_die_Ot_Func003002
     udg_LocalPlayer=GetOwningPlayer(u)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Flagman_die_Ot_Func006A)
@@ -13319,7 +12909,7 @@ function Trig_Flagman_die_Ot_Actions()
     GroupClear(udg_LocalOtrad2)
     DisplayTextToPlayer(( GetOwningPlayer(u) ), 0, 0, ( "cffff0000.r" ))
     SetPlayerAbilityAvailableBJ(true, FourCC('A009'), GetOwningPlayer(u))
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_Flagman_die_Ot()
@@ -13360,9 +12950,6 @@ end
 -- Trigger: Aura Flagmana Vinoslivost O
 --===========================================================================
 function Trig_Aura_Flagmana_Vinoslivost_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A00F') ) ) then
-        return false
-    end
     if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
         return false
     end
@@ -13376,16 +12963,16 @@ end
 function InitTrig_Aura_Flagmana_Vinoslivost_O()
     gg_trg_Aura_Flagmana_Vinoslivost_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Vinoslivost_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Aura_Flagmana_Vinoslivost_O, Condition(Trig_Aura_Flagmana_Vinoslivost_O_Conditions))
-    TriggerAddAction(gg_trg_Aura_Flagmana_Vinoslivost_O, Trig_Aura_Flagmana_Vinoslivost_O_Actions)
+    TriggerAddAction(gg_trg_Aura_Flagmana_Vinoslivost_O, function()
+        if GetSpellAbilityId() ~= FourCC('A00F') then return end
+        if not Trig_Aura_Flagmana_Vinoslivost_O_Conditions() then return end
+        Trig_Aura_Flagmana_Vinoslivost_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Aura Flagmana Metkost O
 --===========================================================================
 function Trig_Aura_Flagmana_Metkost_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A00E') ) ) then
-        return false
-    end
     if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
         return false
     end
@@ -13399,16 +12986,16 @@ end
 function InitTrig_Aura_Flagmana_Metkost_O()
     gg_trg_Aura_Flagmana_Metkost_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Metkost_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Aura_Flagmana_Metkost_O, Condition(Trig_Aura_Flagmana_Metkost_O_Conditions))
-    TriggerAddAction(gg_trg_Aura_Flagmana_Metkost_O, Trig_Aura_Flagmana_Metkost_O_Actions)
+    TriggerAddAction(gg_trg_Aura_Flagmana_Metkost_O, function()
+        if GetSpellAbilityId() ~= FourCC('A00E') then return end
+        if not Trig_Aura_Flagmana_Metkost_O_Conditions() then return end
+        Trig_Aura_Flagmana_Metkost_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Aura Flagmana Stoikost O
 --===========================================================================
 function Trig_Aura_Flagmana_Stoikost_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A00C') ) ) then
-        return false
-    end
     if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
         return false
     end
@@ -13422,8 +13009,11 @@ end
 function InitTrig_Aura_Flagmana_Stoikost_O()
     gg_trg_Aura_Flagmana_Stoikost_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Stoikost_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Aura_Flagmana_Stoikost_O, Condition(Trig_Aura_Flagmana_Stoikost_O_Conditions))
-    TriggerAddAction(gg_trg_Aura_Flagmana_Stoikost_O, Trig_Aura_Flagmana_Stoikost_O_Actions)
+    TriggerAddAction(gg_trg_Aura_Flagmana_Stoikost_O, function()
+        if GetSpellAbilityId() ~= FourCC('A00C') then return end
+        if not Trig_Aura_Flagmana_Stoikost_O_Conditions() then return end
+        Trig_Aura_Flagmana_Stoikost_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Init
@@ -13578,9 +13168,6 @@ end
 --===========================================================================
 -- Trigger: MassPosadka2
 --===========================================================================
-function Trig_MassPosadka2_Conditions()
-    return GetSpellAbilityId() == FourCC('A00I')
-end
 function Trig_MassPosadka_Copy_Func006002()
     return IsUnitSelected(GetFilterUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
@@ -13607,7 +13194,7 @@ function Trig_MassPosadka_Copy_Func014A()
     udg_LocalPosition2=GetUnitLoc(GetEnumUnit())
     udg_LocalUnit2=GetEnumUnit()
     udg_LocalInteger=( 10 - CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(GetEnumUnit())]) )
-    -- Выбираю рандомно юнитов, в колве необходимом для корабля.
+    -- ??????? ???????? ??????, ? ????? ??????????? ??? ???????.
     udg_LocalOtrad3=GetRandomSubGroup2(udg_LocalInteger , udg_LocalOtrad2)
     ForGroup(udg_LocalOtrad3, Trig_MassPosadka_Copy_Func014Func006A)
     GroupClear(udg_LocalOtrad3)
@@ -13620,21 +13207,21 @@ function Trig_MassPosadka2_Actions()
     
     
     
-    -- Добавляю корабли (в селекте игрока) в группу, считаю свободные места
+    -- ???????? ??????? (? ??????? ??????) ? ??????, ?????? ????????? ?????
     udg_LocalInteger=0
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr=Condition(Trig_MassPosadka_Copy_Func006002)
+    udg_Boolexpr = Trig_MassPosadka_Copy_Func006002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroup(udg_LocalOtrad2, Trig_MassPosadka_Copy_Func008A)
     
     
     
-    -- Делаю группу из юнитов не кораблей и не зданий.
-    udg_Boolexpr=Condition(Trig_MassPosadka_Copy_Func010002)
+    -- ????? ?????? ?? ?????? ?? ???????? ? ?? ??????.
+    udg_Boolexpr = Trig_MassPosadka_Copy_Func010002
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 250, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     
-    -- Перебираю корабли
+    -- ????????? ???????
     ForGroup(udg_LocalOtrad, Trig_MassPosadka_Copy_Func014A)
     GroupClear(udg_LocalOtrad)
     GroupClear(udg_LocalOtrad2)
@@ -13644,8 +13231,10 @@ end
 function InitTrig_MassPosadka2()
     gg_trg_MassPosadka2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_MassPosadka2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_MassPosadka2, Condition(Trig_MassPosadka2_Conditions))
-    TriggerAddAction(gg_trg_MassPosadka2, Trig_MassPosadka2_Actions)
+    TriggerAddAction(gg_trg_MassPosadka2, function()
+        if GetSpellAbilityId() ~= FourCC('A00I') then return end
+        Trig_MassPosadka2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Linkor reaserch Obstel O
@@ -13682,14 +13271,14 @@ function Trig_Linkor_reaserch_Obstel_O_Func002C()
 end
 function Trig_Linkor_reaserch_Obstel_O_Actions()
     if ( Trig_Linkor_reaserch_Obstel_O_Func001C() ) then
-        udg_Boolexpr=Condition(Trig_Linkor_reaserch_Obstel_O_Func001Func002002)
+        udg_Boolexpr = Trig_Linkor_reaserch_Obstel_O_Func001Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Obstel_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_Linkor_reaserch_Obstel_O_Func002C() ) then
-        udg_Boolexpr=Condition(Trig_Linkor_reaserch_Obstel_O_Func002Func002002)
+        udg_Boolexpr = Trig_Linkor_reaserch_Obstel_O_Func002Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Obstel_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -13782,14 +13371,14 @@ function Trig_Linkor_reaserch_Parusa_O_Func002C()
 end
 function Trig_Linkor_reaserch_Parusa_O_Actions()
     if ( Trig_Linkor_reaserch_Parusa_O_Func001C() ) then
-        udg_Boolexpr=Condition(Trig_Linkor_reaserch_Parusa_O_Func001Func002002)
+        udg_Boolexpr = Trig_Linkor_reaserch_Parusa_O_Func001Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Parusa_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_Linkor_reaserch_Parusa_O_Func002C() ) then
-        udg_Boolexpr=Condition(Trig_Linkor_reaserch_Parusa_O_Func002Func002002)
+        udg_Boolexpr = Trig_Linkor_reaserch_Parusa_O_Func002Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Parusa_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -13882,14 +13471,14 @@ function Trig_Linkor_Repair_O_Func002C()
 end
 function Trig_Linkor_Repair_O_Actions()
     if ( Trig_Linkor_Repair_O_Func001C() ) then
-        udg_Boolexpr=Condition(Trig_Linkor_Repair_O_Func001Func002002)
+        udg_Boolexpr = Trig_Linkor_Repair_O_Func001Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_Repair_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_Linkor_Repair_O_Func002C() ) then
-        udg_Boolexpr=Condition(Trig_Linkor_Repair_O_Func002Func002002)
+        udg_Boolexpr = Trig_Linkor_Repair_O_Func002Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_Repair_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -13950,12 +13539,6 @@ end
 --===========================================================================
 -- Trigger: Abordach D or Ot
 --===========================================================================
-function Trig_Abordach_D_or_Ot_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A001') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Abordach_D_or_Ot_Func005Func001C()
     if ( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSpellTargetUnit()) ) ) then
         return true
@@ -14067,10 +13650,7 @@ function Trig_Abordach_D_or_Ot_Actions()
     u[2]=udg_LocalUnit[2]
     p[1]=udg_LocalPosition[1]
     p[2]=udg_LocalPosition[2]
-    bj_forLoopAIndex=1
-    bj_forLoopAIndexEnd=9
-    while true do
-        if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+    for bj_forLoopAIndex = 1, 9 do
         udg_LocalUnit[1]=u[1]
         udg_LocalUnit[2]=u[2]
         if ( (true) ) then -- INLINED!!
@@ -14087,17 +13667,17 @@ function Trig_Abordach_D_or_Ot_Actions()
         RemoveLocation(udg_LocalPosition[2])
         -- --------
         -- --------
-        -- Победил Корабль 1
+        -- ??????? ??????? 1
         if ( (true) ) then -- INLINED!!
             udg_LocalUnit[1]=u[1]
             udg_LocalUnit[2]=u[2]
             TriggerExecute(gg_trg_AbordachSystemDefence2_O)
-            udg_Boolexpr=Condition(Trig_Abordach_D_or_Ot_Func018Func017Func005002)
+            udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func017Func005002
             GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
             ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func017Func009A)
             GroupClear(udg_LocalOtrad2)
             if ( (true) ) then -- INLINED!!
-                udg_Boolexpr=Condition(Trig_Abordach_D_or_Ot_Func018Func017Func011Func004002)
+                udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func017Func011Func004002
                 GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
                 udg_LocalText2="cffff0000.r"
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[2]), 0, 0, udg_LocalText2)
@@ -14112,7 +13692,7 @@ function Trig_Abordach_D_or_Ot_Actions()
         end
         -- --------
         -- --------
-        -- Победил Корабль 2
+        -- ??????? ??????? 2
         if ( (true) ) then -- INLINED!!
             udg_LocalUnit[1]=u[1]
             udg_LocalUnit[2]=u[2]
@@ -14122,13 +13702,13 @@ function Trig_Abordach_D_or_Ot_Actions()
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[1]), 0, 0, udg_LocalText2)
                 udg_LocalText2="cff00ff00r not "
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[2]), 0, 0, udg_LocalText2)
-                udg_Boolexpr=Condition(Trig_Abordach_D_or_Ot_Func018Func021Func007Func008002)
+                udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func021Func007Func008002
                 GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
                 ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func021Func007Func012A)
                 GroupClear(udg_LocalOtrad2)
             else
             end
-            udg_Boolexpr=Condition(Trig_Abordach_D_or_Ot_Func018Func021Func011002)
+            udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func021Func011002
             GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
             ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func021Func015A)
             return
@@ -14136,7 +13716,7 @@ function Trig_Abordach_D_or_Ot_Actions()
         end
         -- --------
         -- --------
-        -- Поблажка пиратам)))
+        -- ???????? ???????)))
         if ( (true) ) then -- INLINED!!
         else
         end
@@ -14149,7 +13729,7 @@ function Trig_Abordach_D_or_Ot_Actions()
         if ( (true) ) then -- INLINED!!
         else
         end
-        -- Конец поблажки ====
+        -- ????? ???????? ====
         udg_LocalspecialEffect[1]=ef[1]
         udg_LocalspecialEffect[1]=ef[2]
         DestroyEffectBJ(udg_LocalspecialEffect[1])
@@ -14157,25 +13737,26 @@ function Trig_Abordach_D_or_Ot_Actions()
         RemoveLocation(udg_LocalPosition[1])
         RemoveLocation(udg_LocalPosition[2])
         TriggerSleepAction(1.00)
-        ef[1]=null
-        ef[2]=null
-        bj_forLoopAIndex=bj_forLoopAIndex + 1
+        ef[1]=nil
+        ef[2]=nil
     end
     udg_LocalUnit[1]=u[1]
     udg_LocalUnit[2]=u[2]
     RemoveLocation(udg_LocalPosition[1])
     RemoveLocation(udg_LocalPosition[2])
-    u[1]=null
-    u[2]=null
-    p[1]=null
-    p[2]=null
+    u[1]=nil
+    u[2]=nil
+    p[1]=nil
+    p[2]=nil
 end
 --===========================================================================
 function InitTrig_Abordach_D_or_Ot()
     gg_trg_Abordach_D_or_Ot=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Abordach_D_or_Ot, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_Abordach_D_or_Ot, Condition(Trig_Abordach_D_or_Ot_Conditions))
-    TriggerAddAction(gg_trg_Abordach_D_or_Ot, Trig_Abordach_D_or_Ot_Actions)
+    TriggerAddAction(gg_trg_Abordach_D_or_Ot, function()
+        if GetSpellAbilityId() ~= FourCC('A001') then return end
+        Trig_Abordach_D_or_Ot_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AbordachSystemDefence1 O
@@ -14185,7 +13766,7 @@ function Trig_AbordachSystemDefence1_O_Actions()
     u[1]=udg_LocalUnit[1]
     TriggerSleepAction(3.00)
     udg_LocalUnit[1]=u[1]
-    u[1]=null
+    u[1]=nil
 end
 --===========================================================================
 function InitTrig_AbordachSystemDefence1_O()
@@ -14200,7 +13781,7 @@ function Trig_AbordachSystemDefence2_O_Actions()
     u[2]=udg_LocalUnit[2]
     TriggerSleepAction(3.00)
     udg_LocalUnit[2]=u[2]
-    u[2]=null
+    u[2]=nil
 end
 --===========================================================================
 function InitTrig_AbordachSystemDefence2_O()
@@ -14218,7 +13799,7 @@ function Trig_MageTp_Actions()
     local u= GetTriggerUnit()
     UnitAddAbility(u, FourCC('Avul'))
     RemoveAbilityTimed(u , FourCC('Avul') , 1.5)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_MageTp()
@@ -14230,9 +13811,6 @@ end
 --===========================================================================
 -- Trigger: TPrepeat
 --===========================================================================
-function Trig_TPrepeat_Conditions()
-    return GetSpellAbilityId() == FourCC('A1IG')
-end
 function CommandTp()
     local t= GetExpiredTimer()
     local id= GetHandleId(t)
@@ -14246,8 +13824,8 @@ function CommandTp()
         FlushChildHashtable(Hash, id)
     
     end
-    u=null
-    t=null
+    u=nil
+    t=nil
 end
 function Trig_TPrepeat_Actions()
     local t= CreateTimer()
@@ -14263,42 +13841,40 @@ function Trig_TPrepeat_Actions()
     UnitAddAbility(u, FourCC('A1IH'))
     
     TimerStart(t, RMaxBJ(BlzGetUnitAbilityCooldownRemaining(u, FourCC('A0IO')), 15), true, CommandTp)
-    t=null
-    u=null
+    t=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_TPrepeat()
     gg_trg_TPrepeat=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_TPrepeat, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_TPrepeat, Condition(Trig_TPrepeat_Conditions))
-    TriggerAddAction(gg_trg_TPrepeat, Trig_TPrepeat_Actions)
+    TriggerAddAction(gg_trg_TPrepeat, function()
+        if GetSpellAbilityId() ~= FourCC('A1IG') then return end
+        Trig_TPrepeat_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: TPrepatStop
 --===========================================================================
-function Trig_TPrepatStop_Conditions()
-    return GetSpellAbilityId() == FourCC('A1IH')
-end
 function Trig_TPrepatStop_Actions()
     local u= GetTriggerUnit()
     BlzUnitHideAbility(u, FourCC('A1IH'), true)
     RemoveAbilityTimed(u , FourCC('A1IH') , 1)
     UnitAddAbility(u, FourCC('A1IG'))
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_TPrepatStop()
     gg_trg_TPrepatStop=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_TPrepatStop, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_TPrepatStop, Condition(Trig_TPrepatStop_Conditions))
-    TriggerAddAction(gg_trg_TPrepatStop, Trig_TPrepatStop_Actions)
+    TriggerAddAction(gg_trg_TPrepatStop, function()
+        if GetSpellAbilityId() ~= FourCC('A1IH') then return end
+        Trig_TPrepatStop_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: NoTpNearCapital
 --===========================================================================
-function Trig_NoTpNearCapital_Conditions()
-    return GetSpellAbilityId() == FourCC('A0IO')
-end
 function CapitalOfEnemy()
     return IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups) and IsPlayerEnemy(GetOwningPlayer(GetFilterUnit()), udg_LocalPlayer)
 end
@@ -14307,28 +13883,30 @@ function Trig_NoTpNearCapital_Actions()
     local u= GetTriggerUnit()
    
     udg_LocalPlayer=GetOwningPlayer(u)
-    GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 1350.00, Condition(CapitalOfEnemy))
+    GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 1350.00, CapitalOfEnemy)
     if FirstOfGroup(g) ~= nil then
         IssueImmediateOrder(u, "stop")
         DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, " - ")
     end
     
     DestroyGroup(g)
-    g=null
-    u=null
+    g=nil
+    u=nil
     
 end
 --===========================================================================
 function InitTrig_NoTpNearCapital()
     gg_trg_NoTpNearCapital=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_NoTpNearCapital, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_NoTpNearCapital, Condition(Trig_NoTpNearCapital_Conditions))
-    TriggerAddAction(gg_trg_NoTpNearCapital, Trig_NoTpNearCapital_Actions)
+    TriggerAddAction(gg_trg_NoTpNearCapital, function()
+        if GetSpellAbilityId() ~= FourCC('A0IO') then return end
+        Trig_NoTpNearCapital_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ManabombaNewSystem
 --
--- У условии спел каста манабомбы
+-- ? ??????? ???? ????? ?????????
 --===========================================================================
 function damageRadious()
     local i= 0
@@ -14364,11 +13942,11 @@ function ManabombaNuke()
     
     PauseTimer(t)
     DestroyTimer(t)
-    t=null
+    t=nil
     FlushChildHashtable(Hash, tid)
-    caster=null
+    caster=nil
     RemoveLocation(destination)
-    destination=null
+    destination=nil
 end
 function ManabombaMissle()
     local t= CreateTimer()
@@ -14379,13 +13957,13 @@ function ManabombaMissle()
     local u2
    --call BJDebugMsg("")
      
-    -- Удаляю спел манабомбы
+    -- ?????? ???? ?????????
     UnitRemoveAbility(caster, FourCC('A0TT'))
-    -- Юнит кастер
+    -- ???? ??????
     u1=CreateUnitAtLoc(p, FourCC('h05P'), l, bj_UNIT_FACING)
     BlzSetUnitRealFieldBJ(u1, UNIT_RF_FLY_HEIGHT, GetUnitDefaultFlyHeight(caster))
     UnitAddAbilityBJ(FourCC('A0TU'), u1)
-    -- Юнит жертва
+    -- ???? ??????
     u2=CreateUnitAtLoc(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC('h0GI'), destination, bj_UNIT_FACING)
     BlzSetUnitRealFieldBJ(u2, UNIT_RF_FLY_HEIGHT, GetUnitDefaultFlyHeight(caster))
     
@@ -14402,9 +13980,9 @@ function ManabombaMissle()
     SaveUnitHandle(Hash, tid, 3, caster)
     
     RemoveLocation(l)
-    l=null
-    u1=null
-    u2=null
+    l=nil
+    u1=nil
+    u2=nil
 end
   
 --===========================================================================
@@ -14438,7 +14016,7 @@ end
 --===========================================================================
 -- Trigger: ManabombaDead
 --
--- У условии спел каста манабомбы
+-- ? ??????? ???? ????? ?????????
 --===========================================================================
 function Trig_ManabombaDead_Actions()
     --call BJDebugMsg("")
@@ -14452,11 +14030,8 @@ end
 --===========================================================================
 -- Trigger: Manabomba2
 --
--- У условии спел каста манабомбы
+-- ? ??????? ???? ????? ?????????
 --===========================================================================
-function Trig_Manabomba2_Conditions()
-    return GetSpellAbilityId() == FourCC('A0TS')
-end
 function Trig_Manabomba2_Actions()
     --call BJDebugMsg("")
     ManabombaMissle(GetTriggerUnit() , GetSpellTargetLoc())
@@ -14464,8 +14039,10 @@ end
 --===========================================================================
 function InitTrig_Manabomba2()
     gg_trg_Manabomba2=CreateTrigger()
-    TriggerAddCondition(gg_trg_Manabomba2, Condition(Trig_Manabomba2_Conditions))
-    TriggerAddAction(gg_trg_Manabomba2, Trig_Manabomba2_Actions)
+    TriggerAddAction(gg_trg_Manabomba2, function()
+        if GetSpellAbilityId() ~= FourCC('A0TS') then return end
+        Trig_Manabomba2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Portal Connect
@@ -14523,7 +14100,7 @@ function Trig_Portal_Connect_Actions()
         UnitRemoveAbilityBJ(udg_Portal_SeverAbility, udg_Portal_portal[udg_Portal_INDEX_CASTER])
         UnitRemoveAbilityBJ(udg_Portal_SeverAbility, udg_Portal_portal[udg_Portal_INDEX_TRAVELLER])
         udg_Portal_active[udg_Portal_INDEX_TRAVELLER]=false
-        udg_Portal_portal[udg_Portal_INDEX_TRAVELLER]=null
+        udg_Portal_portal[udg_Portal_INDEX_TRAVELLER]=nil
         -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
         -- Portal_portal[Portal_INDEX_CASTER] is set to the new sister portal
         udg_Portal_portal[udg_Portal_INDEX_CASTER]=GetSpellTargetUnit()
@@ -14705,7 +14282,7 @@ function Trig_Portal_Periodic_Func001A()
                 end
             end
             RemoveLocation(udg_Portal_loc2)
-            udg_Portal_targeted[udg_Portal_INDEX_CASTER]=null
+            udg_Portal_targeted[udg_Portal_INDEX_CASTER]=nil
             GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_group)
         end
     else
@@ -14970,7 +14547,7 @@ function Trig_Portal_Disengage_Actions()
     udg_Portal_INDEX_TARGET=GetUnitUserData(udg_Portal_targeted[udg_Portal_INDEX_CASTER])
     udg_Portal_delay[udg_Portal_INDEX_CASTER]=0.00
     udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER]=false
-    udg_Portal_targeted[udg_Portal_INDEX_CASTER]=null
+    udg_Portal_targeted[udg_Portal_INDEX_CASTER]=nil
     GroupRemoveUnitSimple(GetTriggerUnit(), udg_Portal_group)
     UnitRemoveAbilityBJ(udg_Portal_delayFXAbil[udg_Portal_INDEX_TARGET], GetTriggerUnit())
 end
@@ -15010,14 +14587,14 @@ function Trig_Portal_Death_Func004A()
     udg_Portal_INDEX_TRAVELLER=GetUnitUserData(udg_Portal_traveller)
     UnitRemoveAbilityBJ(udg_Portal_delayFXAbil[udg_Portal_INDEX_CASTER], udg_Portal_traveller)
     if ( Trig_Portal_Death_Func004Func004C() ) then
-        udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=null
+        udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=nil
         udg_Portal_delay[udg_Portal_INDEX_TRAVELLER]=0.00
         udg_Portal_isTeleporting[udg_Portal_INDEX_TRAVELLER]=false
         GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_group)
     else
     end
     if ( Trig_Portal_Death_Func004Func005C() ) then
-        udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=null
+        udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=nil
         udg_Portal_delay[udg_Portal_INDEX_TRAVELLER]=0.00
         udg_Portal_isTeleporting[udg_Portal_INDEX_TRAVELLER]=false
         GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_group)
@@ -15032,8 +14609,8 @@ function Trig_Portal_Death_Actions()
     udg_Portal_active[udg_Portal_INDEX_TARGET]=false
     DestroyEffectBJ(udg_Portal_FX[udg_Portal_INDEX_CASTER])
     DestroyEffectBJ(udg_Portal_FX[udg_Portal_INDEX_TARGET])
-    udg_Portal_portal[udg_Portal_INDEX_CASTER]=null
-    udg_Portal_portal[udg_Portal_INDEX_TARGET]=null
+    udg_Portal_portal[udg_Portal_INDEX_CASTER]=nil
+    udg_Portal_portal[udg_Portal_INDEX_TARGET]=nil
 end
 --===========================================================================
 function InitTrig_Portal_Death()
@@ -15100,14 +14677,14 @@ function Trig_Portal_Disconnect_Func001Func005A()
     udg_Portal_INDEX_TRAVELLER=GetUnitUserData(udg_Portal_traveller)
     UnitRemoveAbilityBJ(udg_Portal_delayFXAbil[udg_Portal_INDEX_CASTER], udg_Portal_traveller)
     if ( Trig_Portal_Disconnect_Func001Func005Func004C() ) then
-        udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=null
+        udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=nil
         udg_Portal_delay[udg_Portal_INDEX_TRAVELLER]=0.00
         udg_Portal_isTeleporting[udg_Portal_INDEX_TRAVELLER]=false
         GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_group)
     else
     end
     if ( Trig_Portal_Disconnect_Func001Func005Func005C() ) then
-        udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=null
+        udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=nil
         udg_Portal_delay[udg_Portal_INDEX_TRAVELLER]=0.00
         udg_Portal_isTeleporting[udg_Portal_INDEX_TRAVELLER]=false
         GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_group)
@@ -15131,8 +14708,8 @@ function Trig_Portal_Disconnect_Actions()
         udg_Portal_active[udg_Portal_INDEX_TARGET]=false
         DestroyEffectBJ(udg_Portal_FX[udg_Portal_INDEX_CASTER])
         DestroyEffectBJ(udg_Portal_FX[udg_Portal_INDEX_TARGET])
-        udg_Portal_portal[udg_Portal_INDEX_CASTER]=null
-        udg_Portal_portal[udg_Portal_INDEX_TARGET]=null
+        udg_Portal_portal[udg_Portal_INDEX_CASTER]=nil
+        udg_Portal_portal[udg_Portal_INDEX_TARGET]=nil
     else
     end
 end
@@ -15148,12 +14725,6 @@ end
 --
 -- No Missile, No Delays
 --===========================================================================
-function Trig_Connect_Portal_2_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0TQ') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Connect_Portal_2_Func001Func003Func002C()
     if ( not ( GetTriggerUnit() == udg_Portal_portal[udg_Portal_INDEX_TARGET] ) ) then
         return false
@@ -15187,10 +14758,7 @@ function Trig_Connect_Portal_2_Actions()
             else
                 udg_Portal_ConfigIndex[1]=udg_Portal_INDEX_CASTER
                 udg_Portal_ConfigIndex[2]=udg_Portal_INDEX_TARGET
-                bj_forLoopAIndex=1
-                bj_forLoopAIndexEnd=2
-                while true do
-                    if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+                for bj_forLoopAIndex = 1, 2 do
                     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
                     -- CONFIGURE HERE
                     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
@@ -15208,7 +14776,6 @@ function Trig_Connect_Portal_2_Actions()
                     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
                     -- //END CONFIGURATION
                     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
-                    bj_forLoopAIndex=bj_forLoopAIndex + 1
                 end
                 udg_Portal_INDEX_CASTER=udg_Portal_ConfigIndex[1]
                 udg_Portal_INDEX_TARGET=udg_Portal_ConfigIndex[2]
@@ -15224,18 +14791,14 @@ end
 function InitTrig_Connect_Portal_2()
     gg_trg_Connect_Portal_2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Connect_Portal_2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Connect_Portal_2, Condition(Trig_Connect_Portal_2_Conditions))
-    TriggerAddAction(gg_trg_Connect_Portal_2, Trig_Connect_Portal_2_Actions)
+    TriggerAddAction(gg_trg_Connect_Portal_2, function()
+        if GetSpellAbilityId() ~= FourCC('A0TQ') then return end
+        Trig_Connect_Portal_2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: F2
 --===========================================================================
-function Trig_F2_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0IX') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_F2_Func002A()
     IssuePointOrderLocBJ(GetEnumUnit(), "attack", udg_LocalPosition3)
 end
@@ -15248,15 +14811,14 @@ end
 function InitTrig_F2()
     gg_trg_F2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_F2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_F2, Condition(Trig_F2_Conditions))
-    TriggerAddAction(gg_trg_F2, Trig_F2_Actions)
+    TriggerAddAction(gg_trg_F2, function()
+        if GetSpellAbilityId() ~= FourCC('A0IX') then return end
+        Trig_F2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: F2 2
 --===========================================================================
-function Trig_F2_2_Conditions()
-    return GetSpellAbilityId() == FourCC('A167')
-end
 function Trig_F2_2_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     local g= CreateGroup()
@@ -15286,30 +14848,29 @@ function Trig_F2_2_Actions()
         i=i + 1
         GroupAddUnit(g0, u)
         GroupRemoveUnit(g, u)
-        u=null
+        u=nil
     end
     DestroyGroup(g)
     DestroyGroup(g0)
-    g=null
-    g0=null
+    g=nil
+    g0=nil
     RemoveLocation(loc)
-    loc=null
+    loc=nil
 end
 --===========================================================================
 function InitTrig_F2_2()
     gg_trg_F2_2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_F2_2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_F2_2, Condition(Trig_F2_2_Conditions))
-    TriggerAddAction(gg_trg_F2_2, Trig_F2_2_Actions)
+    TriggerAddAction(gg_trg_F2_2, function()
+        if GetSpellAbilityId() ~= FourCC('A167') then return end
+        Trig_F2_2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: F2 Attack Point
 --
--- Для того чтобы атаковали ближайшие точки
+-- ??? ???? ????? ????????? ????????? ?????
 --===========================================================================
-function Trig_F2_Attack_Point_Conditions()
-    return GetSpellAbilityId() == FourCC('A1L0')
-end
 function OwnUnit()
     return GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer
 end
@@ -15332,13 +14893,13 @@ function Trig_F2_Attack_Point_Actions()
     while true do
     
         u=FirstOfGroup(g)
-        if u == null or i >= 25 then break end
+        if u == nil or i >= 25 then break end
         
         x=GetUnitX(u)
         y=GetUnitY(u)
         
-        GroupEnumUnitsInRange(g0, x, y, 500, Condition(OwnUnit))
-        GroupEnumUnitsInRange(points, x, y, 7500, Condition(IsCityEnemy))
+        GroupEnumUnitsInRange(g0, x, y, 500, OwnUnit)
+        GroupEnumUnitsInRange(points, x, y, 7500, IsCityEnemy)
         if FirstOfGroup(points) ~= nil then
             u2=BlzGroupUnitAt(points, GetRandomInt(0, BlzGroupGetSize(points) - 1))
             GroupPointOrder(g0, "attack", GetUnitX(u2), GetUnitY(u2))
@@ -15347,26 +14908,28 @@ function Trig_F2_Attack_Point_Actions()
         GroupRemoveGroup(g, g0)
         GroupClear(g0)
         GroupRemoveUnit(g, u)
-        u=null
+        u=nil
         i=i + 1
     end
     
     DestroyGroup(g)
     DestroyGroup(g0)
     DestroyGroup(points)
-    g=null
-    g0=null
-    points=null
+    g=nil
+    g0=nil
+    points=nil
     
-    u=null
-    u2=null
+    u=nil
+    u2=nil
 end
 --===========================================================================
 function InitTrig_F2_Attack_Point()
     gg_trg_F2_Attack_Point=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_F2_Attack_Point, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_F2_Attack_Point, Condition(Trig_F2_Attack_Point_Conditions))
-    TriggerAddAction(gg_trg_F2_Attack_Point, Trig_F2_Attack_Point_Actions)
+    TriggerAddAction(gg_trg_F2_Attack_Point, function()
+        if GetSpellAbilityId() ~= FourCC('A1L0') then return end
+        Trig_F2_Attack_Point_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: F2 Start
@@ -15386,20 +14949,36 @@ end
 --===========================================================================
 function InitTrig_F2_Start()
     gg_trg_F2_Start=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(i), " - f2", true)
-        i = i + 1
-    end
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(0), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(1), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(2), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(3), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(4), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(5), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(6), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(7), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(8), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(9), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(10), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(11), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(12), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(13), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(14), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(15), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(16), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(17), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(18), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(19), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(20), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(21), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(22), " - f2", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(23), " - f2", true)
     TriggerAddCondition(gg_trg_F2_Start, Condition(Trig_F2_Start_Conditions))
     TriggerAddAction(gg_trg_F2_Start, Trig_F2_Start_Actions)
 end
 --===========================================================================
 -- Trigger: F2 Map 2
 --===========================================================================
-function Trig_F2_Map_2_Conditions()
-    return GetSpellAbilityId() == FourCC('A0V2')
-end
 --
 --function Trig_F2_Map_2_Func001002001 takes nothing returns boolean
 --    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true )
@@ -15527,7 +15106,7 @@ end
 function Trig_F2_Map_2_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     --set udg_Boolexpr = Condition(function Trig_F2_Map_2_Func001002)
-    GroupEnumUnitsInRect(udg_LocalOtrad2, GetPlayableMapRect(), Condition(F2_targets))
+    GroupEnumUnitsInRect(udg_LocalOtrad2, GetPlayableMapRect(), F2_targets)
    
    
 --   
@@ -15552,15 +15131,14 @@ end
 function InitTrig_F2_Map_2()
     gg_trg_F2_Map_2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_F2_Map_2, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_F2_Map_2, Condition(Trig_F2_Map_2_Conditions))
-    TriggerAddAction(gg_trg_F2_Map_2, Trig_F2_Map_2_Actions)
+    TriggerAddAction(gg_trg_F2_Map_2, function()
+        if GetSpellAbilityId() ~= FourCC('A0V2') then return end
+        Trig_F2_Map_2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: F2 AreaMidBig
 --===========================================================================
-function Trig_F2_AreaMidBig_Conditions()
-    return GetSpellAbilityId() == FourCC('A0VK')
-end
 --
 --function Trig_F2_AreaMidBig_Func002002001 takes nothing returns boolean
 --    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true )
@@ -15680,7 +15258,7 @@ end
 function Trig_F2_AreaMidBig_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     --set udg_Boolexpr = Condition(function Trig_F2_AreaMidBig_Func002002)
-    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 2500, Condition(F2_targets))
+    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 2500, F2_targets)
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func004001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func005001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func006001002)), udg_LocalOtrad2 )
@@ -15701,15 +15279,14 @@ end
 function InitTrig_F2_AreaMidBig()
     gg_trg_F2_AreaMidBig=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_F2_AreaMidBig, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_F2_AreaMidBig, Condition(Trig_F2_AreaMidBig_Conditions))
-    TriggerAddAction(gg_trg_F2_AreaMidBig, Trig_F2_AreaMidBig_Actions)
+    TriggerAddAction(gg_trg_F2_AreaMidBig, function()
+        if GetSpellAbilityId() ~= FourCC('A0VK') then return end
+        Trig_F2_AreaMidBig_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: F2 AreaMid
 --===========================================================================
-function Trig_F2_AreaMid_Conditions()
-    return GetSpellAbilityId() == FourCC('A0V4')
-end
 --
 --function Trig_F2_AreaMid_Func002002001 takes nothing returns boolean
 --    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true )
@@ -15828,7 +15405,7 @@ end
 --endfunction
 function Trig_F2_AreaMid_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 1000, Condition(F2_targets))
+    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 1000, F2_targets)
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func004001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func005001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func006001002)), udg_LocalOtrad2 )
@@ -15849,15 +15426,14 @@ end
 function InitTrig_F2_AreaMid()
     gg_trg_F2_AreaMid=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_F2_AreaMid, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_F2_AreaMid, Condition(Trig_F2_AreaMid_Conditions))
-    TriggerAddAction(gg_trg_F2_AreaMid, Trig_F2_AreaMid_Actions)
+    TriggerAddAction(gg_trg_F2_AreaMid, function()
+        if GetSpellAbilityId() ~= FourCC('A0V4') then return end
+        Trig_F2_AreaMid_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: F2 AreaSmall
 --===========================================================================
-function Trig_F2_AreaSmall_Conditions()
-    return GetSpellAbilityId() == FourCC('A0VL')
-end
 --
 --function Trig_F2_AreaSmall_Func002002001 takes nothing returns boolean
 --    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) != true )
@@ -15977,7 +15553,7 @@ end
 --
 function Trig_F2_AreaSmall_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 500, Condition(F2_targets))
+    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 500, F2_targets)
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func004001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func005001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func006001002)), udg_LocalOtrad2 )
@@ -15999,8 +15575,10 @@ end
 function InitTrig_F2_AreaSmall()
     gg_trg_F2_AreaSmall=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_F2_AreaSmall, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_F2_AreaSmall, Condition(Trig_F2_AreaSmall_Conditions))
-    TriggerAddAction(gg_trg_F2_AreaSmall, Trig_F2_AreaSmall_Actions)
+    TriggerAddAction(gg_trg_F2_AreaSmall, function()
+        if GetSpellAbilityId() ~= FourCC('A0VL') then return end
+        Trig_F2_AreaSmall_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: InFGroup
@@ -16020,7 +15598,7 @@ end
 --===========================================================================
 -- Trigger: ToKill2
 --
--- Любой триг может это вызвать, главное до этого задать LocalUni2
+-- ????? ???? ????? ??? ???????, ??????? ?? ????? ?????? LocalUni2
 --===========================================================================
 function Trig_ToKill2_Actions()
     RemoveUnitTimed(udg_LocalUnit2 , 2)
@@ -16390,9 +15968,6 @@ end
 --===========================================================================
 -- Trigger: Provocation
 --===========================================================================
-function Trig_Provocation_Conditions()
-    return GetSpellAbilityId() == FourCC('PA78')
-end
 function Trig_Provocation_Actions()
     UnitAddAbility(GetTriggerUnit(), FourCC('A1OH'))
     RemoveAbilityTimed(GetTriggerUnit() , FourCC('A1OH') , 7)
@@ -16401,8 +15976,10 @@ end
 function InitTrig_Provocation()
     gg_trg_Provocation=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Provocation, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Provocation, Condition(Trig_Provocation_Conditions))
-    TriggerAddAction(gg_trg_Provocation, Trig_Provocation_Actions)
+    TriggerAddAction(gg_trg_Provocation, function()
+        if GetSpellAbilityId() ~= FourCC('PA78') then return end
+        Trig_Provocation_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: PUnitTrained
@@ -16420,7 +15997,7 @@ function Trig_PUnitTrained_Actions()
         SetUnitLifePercentBJ(u, 100)
         UnitAddAbility(u, FourCC('A1I8'))
     end
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_PUnitTrained()
@@ -16459,12 +16036,12 @@ end
 --
 -- Abilities\Spells\Undead\Impale\ImpaleMissTarget.mdl
 --===========================================================================
--- ПЕРЕМЕННЫЕ ГЛОБАЛЬНЫЕ МЕНЯТЬ ТОЛЬКО ТУТ
+-- ?????????? ?????????? ?????? ?????? ???
 --===================================================================================================================================
--- основаня функция, тут ничего менять не нужно
+-- ???????? ???????, ??? ?????? ?????? ?? ?????
 --===================================================================================================================================
 --================================================================================================================================================================================
--- Этам 0 - доп функции
+-- ???? 0 - ??? ???????
 --================
 function UnUgolMT()
     return bj_RADTODEG * Atan2(y2 - y1, x2 - x1)
@@ -16477,17 +16054,17 @@ end
 --function UnParabolaZ takes real h, real d, real x returns real
  -- return (4 * h / d) * (d - x) * (x / d)
 --endfunction
---h - максимальная высота в прыжке на середине расстояния (x = d / 2),
---d - общее расстояние до цели
---x - расстояние от исходной цели до точки, где следует взять высоту по параболе.
+--h - ???????????? ?????? ? ?????? ?? ???????? ?????????? (x = d / 2),
+--d - ????? ?????????? ?? ????
+--x - ?????????? ?? ???????? ???? ?? ?????, ??? ??????? ????? ?????? ?? ????????.
 --================================================================================================================================================================================
--- Этам 1 - проверка скила
+-- ???? 1 - ???????? ?????
 --================
 function Trig_Undermining_Conditions()
     return GetSpellAbilityId() == UnSkill
 end
 --================================================================================================================================================================================
--- Этам 3 - подбрасываем врагов
+-- ???? 3 - ???????????? ??????
 --================
 function Trig_Undermining_move_units()
     local t= GetExpiredTimer()
@@ -16519,11 +16096,11 @@ function Trig_Undermining_move_units()
         end
     end
     ---------
-    GT=null
-    un=null
+    GT=nil
+    un=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - двигаем героя
+-- ???? 2 - ??????? ?????
 --================
 function Trig_Undermining_move_hero()
     local t= GetExpiredTimer()
@@ -16543,22 +16120,22 @@ function Trig_Undermining_move_hero()
     local t1
     local h1
     ---------
-    x=dx + 70 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=dy + 70 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
-    --set w = UnParabolaZ(500, l, UnRastMT(x, x1, y, y1)) //вычисляем высоту
-    -- ищем конец пути
+    x=dx + 70 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=dy + 70 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
+    --set w = UnParabolaZ(500, l, UnRastMT(x, x1, y, y1)) //????????? ??????
+    -- ???? ????? ????
     if UnRastMT(x1 , dx , y1 , dy) > 70 and not IsTerrainPathable(x, y, PATHING_TYPE_FLYABILITY) then
-        -- двигаем юнита
+        -- ??????? ?????
         SetUnitX(GT, x)
         SetUnitY(GT, y)
         SetUnitFacing(GT, ugol)
         DestroyEffect(AddSpecialEffect("AbilitiesSpellsUndeadImpaleImpaleMissTarget.mdl", x, y))
         --------------------------------------
-        -- записываем юнитов в группу и подбрасываем их
-        GroupEnumUnitsInRange(gg, x, y, 150, null)
+        -- ?????????? ?????? ? ?????? ? ???????????? ??
+        GroupEnumUnitsInRange(gg, x, y, 150, nil)
         while true do
             un=FirstOfGroup(gg)
-            if un == null then break end
+            if un == nil then break end
             if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) and not IsUnitInGroup(un, g) then
                 --call BJDebugMsg("")
                 UnitAddAbility(un, FourCC('Amrf'))
@@ -16587,16 +16164,16 @@ function Trig_Undermining_move_hero()
         SelectUnitAddForPlayer(GT, GetOwningPlayer(GT))
     end
     ---------
-    GT=null
-    un=null
-    g=null
-    t=null
+    GT=nil
+    un=nil
+    g=nil
+    t=nil
     DestroyGroup(gg)
-    gg=null
-    t1=null
+    gg=nil
+    t1=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - основная функция
+-- ???? 2 - ???????? ???????
 --================
 function Trig_Undermining_Actions()
     local GT= GetTriggerUnit()
@@ -16611,7 +16188,7 @@ function Trig_Undermining_Actions()
     --call BJDebugMsg("")
     SaveUnitHandle(Hash, h, 1, GT)
     SaveReal(Hash, h, 2, l)
-    -- проигрываем звук
+    -- ??????????? ????
     SetSoundPosition(gg_snd_ImpaleHit, x, y, 0)
     SetSoundVolume(gg_snd_ImpaleHit, PercentToInt(100, 127))
     PlaySoundBJ(gg_snd_ImpaleHit)
@@ -16622,10 +16199,10 @@ function Trig_Undermining_Actions()
     PauseUnit(GT, true)
     ShowUnit(GT, false)
     DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.055, true, Trig_Undermining_move_hero) --стартуем движение героя
+    TimerStart(t, 0.055, true, Trig_Undermining_move_hero) --???????? ???????? ?????
     ---------
-    GT=null
-    t=null
+    GT=nil
+    t=nil
 end
 --===========================================================================
 function InitTrig_Undermining()
@@ -16638,27 +16215,27 @@ end
 -- Trigger: PassiveAdal
 --===========================================================================
 function Trig_PassiveAdal_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B084')) > 0 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetEventDamage() >= GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) --Её бафф
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B084')) > 0 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetEventDamage() >= GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) --?? ????
 end
 function Adal()
-    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1L6')) > 0 --Абилка
+    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1L6')) > 0 --??????
 end
 function Trig_PassiveAdal_Actions()
     local g= CreateGroup()
     local u= GetTriggerUnit()
     local u2
-    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 500, Condition(Adal), 1)
+    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 500, Adal, 1)
     u2=FirstOfGroup(g)
-    if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1L6')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --Абилка
+    if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1L6')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --??????
         SetUnitManaBJ(u2, GetUnitState(u2, UNIT_STATE_MANA) - 50)
         SetUnitLifePercentBJ(u, 50)
         RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanResurrectResurrectTarget.mdl", GetUnitX(u), GetUnitY(u)) , 3)
     end
     
     DestroyGroup(g)
-    g=null
-    u=null
-    u2=null
+    g=nil
+    u=nil
+    u2=nil
 end
 --===========================================================================
 function InitTrig_PassiveAdal()
@@ -16672,12 +16249,6 @@ end
 --
 -- Default melee game initialization for all players
 --===========================================================================
-function Trig_ADall_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1L1') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_ADall_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "healingwave", GetSpellTargetUnit())
 end
@@ -16685,8 +16256,10 @@ end
 function InitTrig_ADall()
     gg_trg_ADall=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_ADall, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_ADall, Condition(Trig_ADall_Conditions))
-    TriggerAddAction(gg_trg_ADall, Trig_ADall_Actions)
+    TriggerAddAction(gg_trg_ADall, function()
+        if GetSpellAbilityId() ~= FourCC('A1L1') then return end
+        Trig_ADall_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Rexan
@@ -16876,28 +16449,27 @@ end
 --===========================================================================
 -- Trigger: GruulSpell
 --===========================================================================
-function Trig_GruulSpell_Conditions()
-    return GetSpellAbilityId() == FourCC('A18Q')
-end
 function Trig_GruulSpell_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     Gruul[pi]=GetSpellAbilityUnit()
     EnableTrigger(gg_trg_RRR)
     
-    -- Ждать время отлёта юнитов 1.10+ 0.15 каждый лвл
+    -- ????? ????? ?????? ?????? 1.10+ 0.15 ?????? ???
     TriggerSleepAction(( 1.10 + ( 0.15 * I2R(GetUnitAbilityLevel(Gruul[pi], FourCC('A18Q'))) ) ))
     
     
     DisableTrigger(gg_trg_RRR)
-    -- Удалить переменную
-    Gruul[pi]=null
+    -- ??????? ??????????
+    Gruul[pi]=nil
 end
 --===========================================================================
 function InitTrig_GruulSpell()
     gg_trg_GruulSpell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_GruulSpell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_GruulSpell, Condition(Trig_GruulSpell_Conditions))
-    TriggerAddAction(gg_trg_GruulSpell, Trig_GruulSpell_Actions)
+    TriggerAddAction(gg_trg_GruulSpell, function()
+        if GetSpellAbilityId() ~= FourCC('A18Q') then return end
+        Trig_GruulSpell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: BegYel
@@ -17364,33 +16936,32 @@ end
 --===========================================================================
 -- Trigger: UltDanath
 --
--- Вот рабочий триггер. Никаких глобальных переменных.
--- В условиях: (Ability beng cast) равно ""
--- Описываю действия:
--- 1. Создаем локальную переменную юнита
--- 2. Даем юниту на которого применяется способность "", способность ""
--- 3. В локальную переменную юнита вписываем юнита на которого применена способность
--- 4. Сколько времени у юнита будет дополнительная способность
--- 5. По истечении времени забираем у юнита дополнительную способность
--- В 5 строке 'AEev' - это код способности 'Змеиная ловкость'
--- Если что-то не понятно - обращайся.
+-- ??? ??????? ???????. ??????? ?????????? ??????????.
+-- ? ????????: (Ability beng cast) ????? ""
+-- ???????? ????????:
+-- 1. ??????? ????????? ?????????? ?????
+-- 2. ???? ????? ?? ???????? ??????????? ??????????? "", ??????????? ""
+-- 3. ? ????????? ?????????? ????? ????????? ????? ?? ???????? ????????? ???????????
+-- 4. ??????? ??????? ? ????? ????? ?????????????? ???????????
+-- 5. ?? ????????? ??????? ???????? ? ????? ?????????????? ???????????
+-- ? 5 ?????? 'AEev' - ??? ??? ??????????? '??????? ????????'
+-- ???? ???-?? ?? ??????? - ?????????.
 -- by Dragonear for xgm.guru
 --===========================================================================
-function Trig_UltDanath_Conditions()
-    return GetSpellAbilityId() == FourCC('A17S')
-end
 function Trig_UltDanath_Actions()
     local u= GetTriggerUnit()
     UnitAddAbility(u, FourCC('A17T'))
     RemoveAbilityTimed(u , FourCC('A17T') , 60)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_UltDanath()
     gg_trg_UltDanath=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_UltDanath, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
-    TriggerAddCondition(gg_trg_UltDanath, Condition(Trig_UltDanath_Conditions))
-    TriggerAddAction(gg_trg_UltDanath, Trig_UltDanath_Actions)
+    TriggerAddAction(gg_trg_UltDanath, function()
+        if GetSpellAbilityId() ~= FourCC('A17S') then return end
+        Trig_UltDanath_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: GeneralRegen
@@ -17425,12 +16996,6 @@ end
 --===========================================================================
 -- Trigger: Pribavka k zoloty
 --===========================================================================
-function Trig_Pribavka_k_zoloty_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0ZN') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Pribavka_k_zoloty_Actions()
     AdjustPlayerStateBJ(( 2000 * GetUnitAbilityLevelSwapped(FourCC('A0ZN'), GetTriggerUnit()) ), GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD)
 end
@@ -17438,8 +17003,10 @@ end
 function InitTrig_Pribavka_k_zoloty()
     gg_trg_Pribavka_k_zoloty=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Pribavka_k_zoloty, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Pribavka_k_zoloty, Condition(Trig_Pribavka_k_zoloty_Conditions))
-    TriggerAddAction(gg_trg_Pribavka_k_zoloty, Trig_Pribavka_k_zoloty_Actions)
+    TriggerAddAction(gg_trg_Pribavka_k_zoloty, function()
+        if GetSpellAbilityId() ~= FourCC('A0ZN') then return end
+        Trig_Pribavka_k_zoloty_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StromgardOn
@@ -17571,8 +17138,8 @@ function Trig_MassArmy_Actions()
     IssuePointOrderLoc(GetTrainedUnit(), "move", l)
     IssuePointOrderLoc(u, "move", l)
     RemoveLocation(l)
-    l=null
-    u=null
+    l=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_MassArmy()
@@ -17616,12 +17183,6 @@ end
 --===========================================================================
 -- Trigger: ShieldUp
 --===========================================================================
-function Trig_ShieldUp_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0WG') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_ShieldUp_Func001C()
     if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0WI'), GetTriggerUnit()) == 1 ) ) then
         return false
@@ -17640,8 +17201,10 @@ function InitTrig_ShieldUp()
     gg_trg_ShieldUp=CreateTrigger()
     DisableTrigger(gg_trg_ShieldUp)
     TriggerRegisterAnyUnitEventBJ(gg_trg_ShieldUp, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ShieldUp, Condition(Trig_ShieldUp_Conditions))
-    TriggerAddAction(gg_trg_ShieldUp, Trig_ShieldUp_Actions)
+    TriggerAddAction(gg_trg_ShieldUp, function()
+        if GetSpellAbilityId() ~= FourCC('A0WG') then return end
+        Trig_ShieldUp_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: EnterKazna
@@ -17652,7 +17215,7 @@ end
 function Trig_EnterKazna_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     income[pi]=income[pi] + ( 100 + GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A0XV')) * 100 )
-    -- Прописывать также в главном триге экономики
+    -- ??????????? ????? ? ??????? ????? ?????????
 end
 --===========================================================================
 function InitTrig_EnterKazna()
@@ -17704,12 +17267,6 @@ end
 --===========================================================================
 -- Trigger: Sluga qqgsarona
 --===========================================================================
-function Trig_Sluga_qqgsarona_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A12G') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Sluga_qqgsarona_Func010A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A12G'), GetEnumPlayer())
 end
@@ -17745,8 +17302,10 @@ end
 function InitTrig_Sluga_qqgsarona()
     gg_trg_Sluga_qqgsarona=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Sluga_qqgsarona, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Sluga_qqgsarona, Condition(Trig_Sluga_qqgsarona_Conditions))
-    TriggerAddAction(gg_trg_Sluga_qqgsarona, Trig_Sluga_qqgsarona_Actions)
+    TriggerAddAction(gg_trg_Sluga_qqgsarona, function()
+        if GetSpellAbilityId() ~= FourCC('A12G') then return end
+        Trig_Sluga_qqgsarona_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Sila2
@@ -17829,12 +17388,6 @@ end
 --===========================================================================
 -- Trigger: ZdaniyaBezlik
 --===========================================================================
-function Trig_ZdaniyaBezlik_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0LK') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_ZdaniyaBezlik_Actions()
     udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
     CreateNUnitsAtLoc(1, FourCC('n01T'), GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
@@ -17844,18 +17397,14 @@ function InitTrig_ZdaniyaBezlik()
     gg_trg_ZdaniyaBezlik=CreateTrigger()
     DisableTrigger(gg_trg_ZdaniyaBezlik)
     TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ZdaniyaBezlik, Condition(Trig_ZdaniyaBezlik_Conditions))
-    TriggerAddAction(gg_trg_ZdaniyaBezlik, Trig_ZdaniyaBezlik_Actions)
+    TriggerAddAction(gg_trg_ZdaniyaBezlik, function()
+        if GetSpellAbilityId() ~= FourCC('A0LK') then return end
+        Trig_ZdaniyaBezlik_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ZdaniyaBezlik Copy
 --===========================================================================
-function Trig_ZdaniyaBezlik_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0LN') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_ZdaniyaBezlik_Copy_Actions()
     udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
     CreateNUnitsAtLoc(1, FourCC('n01Q'), GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
@@ -17865,18 +17414,14 @@ function InitTrig_ZdaniyaBezlik_Copy()
     gg_trg_ZdaniyaBezlik_Copy=CreateTrigger()
     DisableTrigger(gg_trg_ZdaniyaBezlik_Copy)
     TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ZdaniyaBezlik_Copy, Condition(Trig_ZdaniyaBezlik_Copy_Conditions))
-    TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy, Trig_ZdaniyaBezlik_Copy_Actions)
+    TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy, function()
+        if GetSpellAbilityId() ~= FourCC('A0LN') then return end
+        Trig_ZdaniyaBezlik_Copy_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ZdaniyaBezlik Copy Copy
 --===========================================================================
-function Trig_ZdaniyaBezlik_Copy_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0LM') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_ZdaniyaBezlik_Copy_Copy_Actions()
     udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
     CreateNUnitsAtLoc(1, FourCC('n01S'), GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
@@ -17886,18 +17431,14 @@ function InitTrig_ZdaniyaBezlik_Copy_Copy()
     gg_trg_ZdaniyaBezlik_Copy_Copy=CreateTrigger()
     DisableTrigger(gg_trg_ZdaniyaBezlik_Copy_Copy)
     TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik_Copy_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ZdaniyaBezlik_Copy_Copy, Condition(Trig_ZdaniyaBezlik_Copy_Copy_Conditions))
-    TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy_Copy, Trig_ZdaniyaBezlik_Copy_Copy_Actions)
+    TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy_Copy, function()
+        if GetSpellAbilityId() ~= FourCC('A0LM') then return end
+        Trig_ZdaniyaBezlik_Copy_Copy_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ZdaniyaBezlik Copy Copy 2
 --===========================================================================
-function Trig_ZdaniyaBezlik_Copy_Copy_2_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0LO') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_ZdaniyaBezlik_Copy_Copy_2_Actions()
     udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
     CreateNUnitsAtLoc(1, FourCC('n01R'), GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
@@ -17907,18 +17448,14 @@ function InitTrig_ZdaniyaBezlik_Copy_Copy_2()
     gg_trg_ZdaniyaBezlik_Copy_Copy_2=CreateTrigger()
     DisableTrigger(gg_trg_ZdaniyaBezlik_Copy_Copy_2)
     TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik_Copy_Copy_2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ZdaniyaBezlik_Copy_Copy_2, Condition(Trig_ZdaniyaBezlik_Copy_Copy_2_Conditions))
-    TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy_Copy_2, Trig_ZdaniyaBezlik_Copy_Copy_2_Actions)
+    TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy_Copy_2, function()
+        if GetSpellAbilityId() ~= FourCC('A0LO') then return end
+        Trig_ZdaniyaBezlik_Copy_Copy_2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ZdaniyaBezlik Copy Copy 2 Copy
 --===========================================================================
-function Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0LP') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Actions()
     udg_Untitled_Variable_001[GetConvertedPlayerId(GetOwningPlayer(GetSpellAbilityUnit()))]=GetSpellTargetLoc()
     CreateNUnitsAtLoc(1, FourCC('n01U'), GetOwningPlayer(GetTriggerUnit()), udg_Untitled_Variable_001[1], bj_UNIT_FACING)
@@ -17928,15 +17465,14 @@ function InitTrig_ZdaniyaBezlik_Copy_Copy_2_Copy()
     gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy=CreateTrigger()
     DisableTrigger(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy)
     TriggerRegisterAnyUnitEventBJ(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy, Condition(Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Conditions))
-    TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy, Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Actions)
+    TriggerAddAction(gg_trg_ZdaniyaBezlik_Copy_Copy_2_Copy, function()
+        if GetSpellAbilityId() ~= FourCC('A0LP') then return end
+        Trig_ZdaniyaBezlik_Copy_Copy_2_Copy_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: CreateFFarm
 --===========================================================================
-function Trig_CreateFFarm_Conditions()
-    return GetSpellAbilityId() == FourCC('A11G')
-end
 function Trig_CreateFFarm_Actions()
     FaselessFarmLimit(GetOwningPlayer(GetTriggerUnit()))
 end
@@ -17944,8 +17480,10 @@ end
 function InitTrig_CreateFFarm()
     gg_trg_CreateFFarm=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_CreateFFarm, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_CreateFFarm, Condition(Trig_CreateFFarm_Conditions))
-    TriggerAddAction(gg_trg_CreateFFarm, Trig_CreateFFarm_Actions)
+    TriggerAddAction(gg_trg_CreateFFarm, function()
+        if GetSpellAbilityId() ~= FourCC('A11G') then return end
+        Trig_CreateFFarm_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: DeadFFarm
@@ -18008,7 +17546,7 @@ function KillTextTag()
     local t= TT
     TriggerSleepAction(3)
     DestroyTextTag(t)
-    t=null
+    t=nil
 end
 function TT2()
     local t= CreateTextTag()
@@ -18027,19 +17565,19 @@ function TT2()
     SetTextTagVelocity(t, 50.00, 90)
     SetTextTagFadepoint(t, 1.00)
     RemoveLocation(l)
-    l=null
-    f=null
+    l=nil
+    f=nil
     TT=t
-    t=null
-    p=null
-    s=null
+    t=nil
+    p=nil
+    s=nil
     ExecuteFunc("KillTextTag")
 end
     
 function Trig_LumberTest_Actions()
     local g= CreateGroup()
     local d
-    local u= null
+    local u= nil
     local l
     local r
     
@@ -18051,7 +17589,7 @@ function Trig_LumberTest_Actions()
     --call DisplayTextToPlayer(Player(0),0,0, I2S(CountUnitsInGroup(g)))
     while true do
         u=FirstOfGroup(g)
-        if u == null then break end
+        if u == nil then break end
         
         DisplayTextToPlayer(Player(0), 0, 0, "")
         udg_LocalPlayer=GetOwningPlayer(u)
@@ -18080,17 +17618,17 @@ function Trig_LumberTest_Actions()
         
         RemoveLocation(l)
         GroupRemoveUnit(g, u)
-        r=null
-        l=null
+        r=nil
+        l=nil
         TriggerSleepAction(0.01)
     end
     RemoveRect(r)
-    r=null
+    r=nil
     RemoveLocation(l)
-    l=null
+    l=nil
     DestroyGroup(g)
-    u=null
-    g=null
+    u=nil
+    g=nil
 end
 --===========================================================================
 function InitTrig_LumberTest()
@@ -18137,9 +17675,6 @@ end
 --===========================================================================
 -- Trigger: Muscules
 --===========================================================================
-function Trig_Muscules_Conditions()
-    return GetSpellAbilityId() == FourCC('A0QS')
-end
 function Trig_Muscules_Actions()
     UnitAddAbility(GetTriggerUnit(), FourCC('A0PQ'))
     TriggerSleepAction(20.00)
@@ -18149,14 +17684,16 @@ end
 function InitTrig_Muscules()
     gg_trg_Muscules=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Muscules, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Muscules, Condition(Trig_Muscules_Conditions))
-    TriggerAddAction(gg_trg_Muscules, Trig_Muscules_Actions)
+    TriggerAddAction(gg_trg_Muscules, function()
+        if GetSpellAbilityId() ~= FourCC('A0QS') then return end
+        Trig_Muscules_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: BuidingThatSellRecruts
 --===========================================================================
 function Trig_BuidingThatSellRecruts_Conditions()
-    return GetUnitTypeId(GetConstructedStructure()) == FourCC('h0NX') -- Продающее здание, равкод
+    return GetUnitTypeId(GetConstructedStructure()) == FourCC('h0NX') -- ????????? ??????, ??????
 end
 function NewMember()
     
@@ -18173,8 +17710,8 @@ function NewMember()
         FlushChildHashtable(Hash, id)
         FlushChildHashtable(Hash, uid)
     end
-    t=null
-    u=null
+    t=nil
+    u=nil
 end
 function Trig_BuidingThatSellRecruts_Actions()
     local u= GetConstructedStructure()
@@ -18183,14 +17720,14 @@ function Trig_BuidingThatSellRecruts_Actions()
     local uid= GetHandleId(u)
     local startCount= 1
     UnitAddAbility(u, FourCC('Asud'))
-    AddUnitToStock(u, FourCC('h0NC'), startCount, 3) --Юнит который продается
-    AddUnitToStock(u, FourCC('h0NL'), startCount, 3) --Юнит который продается
+    AddUnitToStock(u, FourCC('h0NC'), startCount, 3) --???? ??????? ?????????
+    AddUnitToStock(u, FourCC('h0NL'), startCount, 3) --???? ??????? ?????????
     
     TimerStart(t, 30, true, NewMember)
     SaveUnitHandle(Hash, id, 1, u)
     SaveInteger(Hash, uid, 1, startCount)
-    u=null
-    t=null
+    u=nil
+    t=nil
 end
 --===========================================================================
 function InitTrig_BuidingThatSellRecruts()
@@ -18206,18 +17743,18 @@ end
 -- Trigger: BuidingSell
 --===========================================================================
 function Trig_BuidingSell_Conditions()
-    return GetUnitTypeId(GetSellingUnit()) == FourCC('h0NX') -- Продающее здание, равкод
+    return GetUnitTypeId(GetSellingUnit()) == FourCC('h0NX') -- ????????? ??????, ??????
 end
 function Trig_BuidingSell_Actions()
     local u= GetSellingUnit()
     local uid= GetHandleId(u)
     local currentCount= LoadInteger(Hash, uid, 1)
     SaveInteger(Hash, uid, 1, currentCount - 1)
-    RemoveUnitFromStock(u, FourCC('h0NC')) --Юнит который продается
-    RemoveUnitFromStock(u, FourCC('h0NL')) --Юнит который продается
+    RemoveUnitFromStock(u, FourCC('h0NC')) --???? ??????? ?????????
+    RemoveUnitFromStock(u, FourCC('h0NL')) --???? ??????? ?????????
     
-    AddUnitToStock(u, FourCC('h0NC'), currentCount - 1, 3) --Юнит который продается
-    AddUnitToStock(u, FourCC('h0NL'), currentCount - 1, 3) --Юнит который продается
+    AddUnitToStock(u, FourCC('h0NC'), currentCount - 1, 3) --???? ??????? ?????????
+    AddUnitToStock(u, FourCC('h0NL'), currentCount - 1, 3) --???? ??????? ?????????
     
     
 end
@@ -18234,12 +17771,12 @@ end
 --===========================================================================
 -- Trigger: JumpSTR
 --===========================================================================
--- ПЕРЕМЕННЫЕ ГЛОБАЛЬНЫЕ МЕНЯТЬ ТОЛЬКО ТУТ
+-- ?????????? ?????????? ?????? ?????? ???
 --===================================================================================================================================
--- основаня функция, тут ничего менять не нужно
+-- ???????? ???????, ??? ?????? ?????? ?? ?????
 --===================================================================================================================================
 --================================================================================================================================================================================
--- Этам 0 - доп функции
+-- ???? 0 - ??? ???????
 --================
 function JSTRUgolMT()
     return bj_RADTODEG * Atan2(y2 - y1, x2 - x1)
@@ -18252,17 +17789,16 @@ end
 function JSTRParabolaZ()
   return ( 4 * h / d ) * ( d - x ) * ( x / d )
 end
---h - максимальная высота в прыжке на середине расстояния (x = d / 2),
---d - общее расстояние до цели
---x - расстояние от исходной цели до точки, где следует взять высоту по параболе.
+--h - ???????????? ?????? ? ?????? ?? ???????? ?????????? (x = d / 2),
+--d - ????? ?????????? ?? ????
+--x - ?????????? ?? ???????? ???? ?? ?????, ??? ??????? ????? ?????? ?? ????????.
 --================================================================================================================================================================================
--- Этам 1 - проверка скила - винер тут все прыжки)))
+-- ???? 1 - ???????? ????? - ????? ??? ??? ??????)))
 --================
 function Trig_JumpSTR_Conditions()
-    return GetSpellAbilityId() == FourCC('A1E2') or GetSpellAbilityId() == FourCC('A1FJ')
 end
 --================================================================================================================================================================================
--- Этам 3 - двигаем врагов
+-- ???? 3 - ??????? ??????
 --================
 function Trig_JumpSTR_move_units()
     local t= GetExpiredTimer()
@@ -18273,8 +17809,8 @@ function Trig_JumpSTR_move_units()
     local x= GetUnitX(un)
     local y= GetUnitY(un)
     -- ---------
-    x=x + 10 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=y + 10 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
+    x=x + 10 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=y + 10 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
     if kol >= 0 and not IsTerrainPathable(x, y, PATHING_TYPE_FLYABILITY) then
         SetUnitX(un, x)
         SetUnitY(un, y)
@@ -18284,11 +17820,11 @@ function Trig_JumpSTR_move_units()
         FlushChildHashtable(Hash, h)
     end
     -- ----------
-    un=null
-    t=null
+    un=nil
+    t=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - двигаем героя
+-- ???? 2 - ??????? ?????
 --================
 function Trig_JumpSTR_move_hero()
     local t= GetExpiredTimer()
@@ -18316,13 +17852,13 @@ function Trig_JumpSTR_move_hero()
         MaxW=500
     end
     ---------
-    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
-    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --вычисляем высоту
+    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
+    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --????????? ??????
     
-    -- ищем конец пути
+    -- ???? ????? ????
     if JSTRRastMT(x1 , dx , y1 , dy) > 25 then --and not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
-        -- двигаем юнита
+        -- ??????? ?????
         SetUnitX(GT, x)
         SetUnitY(GT, y)
         SetUnitFacing(GT, ugol)
@@ -18335,13 +17871,13 @@ function Trig_JumpSTR_move_hero()
         SetUnitFlyHeight(GT, 0, 0)
         DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
         g=CreateGroup()
-        GroupEnumUnitsInRange(g, dx, dy, 260, null)
+        GroupEnumUnitsInRange(g, dx, dy, 260, nil)
         while true do
             un=FirstOfGroup(g)
-            if un == null then break end
+            if un == nil then break end
             lvl=GetUnitAbilityLevel(GT, JSTRSkill)
             
-            -- винер - проверка на героя
+            -- ????? - ???????? ?? ?????
             if IsUnitType(GT, UNIT_TYPE_HERO) then
                 uron=JSTRKofDmg1 * lvl * GetHeroStr(GT, true) + lvl * JSTRKofDmg2
             else
@@ -18352,7 +17888,7 @@ function Trig_JumpSTR_move_hero()
                 UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
                 DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
                 ----------
-                -- двигаем юнита в другую сторону от кастера
+                -- ??????? ????? ? ?????? ??????? ?? ???????
                 if JSTRBoolMove then
                     ugol=JSTRUgolMT(dx , GetUnitX(un) , dy , GetUnitY(un))
                     t1=CreateTimer()
@@ -18369,14 +17905,14 @@ function Trig_JumpSTR_move_hero()
         DestroyGroup(g)
     end
     ---------
-    GT=null
-    un=null
-    g=null
-    t=null
-    t1=null
+    GT=nil
+    un=nil
+    g=nil
+    t=nil
+    t1=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - основная функция
+-- ???? 2 - ???????? ???????
 --================
 function Trig_JumpSTR_Actions()
     local GT= GetTriggerUnit()
@@ -18402,18 +17938,21 @@ function Trig_JumpSTR_Actions()
     SaveReal(Hash, h, 4, x1)
     SaveReal(Hash, h, 5, y1)
     DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.025, true, Trig_JumpSTR_move_hero) --стартуем движение героя
+    TimerStart(t, 0.025, true, Trig_JumpSTR_move_hero) --???????? ???????? ?????
     ---------
-    GT=null
+    GT=nil
     --set g = null
-    t=null
+    t=nil
 end
 --===========================================================================
 function InitTrig_JumpSTR()
     gg_trg_JumpSTR=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_JumpSTR, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_JumpSTR, Condition(Trig_JumpSTR_Conditions))
-    TriggerAddAction(gg_trg_JumpSTR, Trig_JumpSTR_Actions)
+    TriggerAddAction(gg_trg_JumpSTR, function()
+        if GetSpellAbilityId() ~= FourCC('A1E2') then return end
+        if not Trig_JumpSTR_Conditions() then return end
+        Trig_JumpSTR_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: TrainW2
@@ -18434,7 +17973,7 @@ function Trig_TrainW2_Actions()
         AddXp(u , 100 * r + 25 * r)
     end
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_TrainW2()
@@ -18454,7 +17993,7 @@ function Trig_DamagerW2_Actions()
     local damage= GetEventDamage()
     AddXp(u , damage * 0.25)
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_DamagerW2()
@@ -18486,7 +18025,7 @@ function Trig_DamageBeforeW2_Actions()
     EnableTrigger(gg_trg_DamagerW2)
         
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_DamageBeforeW2()
@@ -18511,7 +18050,7 @@ function Trig_DamagedW2_Actions()
     
     
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_DamagedW2()
@@ -18558,14 +18097,14 @@ function Trig_AlmostDiyW2_Actions()
         end
         
         DestroyGroup(g)
-        g=null
-        u2=null
+        g=nil
+        u2=nil
     end
     
     
     
     
-    u=null
+    u=nil
     
 end
 --===========================================================================
@@ -18630,9 +18169,9 @@ function Trig_DiyGoblinW2_Actions()
     
     
     DestroyGroup(g)
-    g=null
-    u=null
-    u2=null
+    g=nil
+    u=nil
+    u2=nil
 end
 --===========================================================================
 function InitTrig_DiyGoblinW2()
@@ -18644,7 +18183,7 @@ end
 --===========================================================================
 -- Trigger: DiyW2
 --
--- Для очистки мультборда
+-- ??? ??????? ??????????
 --===========================================================================
 function Trig_DiyW2_Conditions()
     return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('w2a0')) > 0
@@ -18661,8 +18200,8 @@ function deadEdly()
         FlushChildHashtable(Hash, uh)
     
     end
-    t=null
-    u=null
+    t=nil
+    u=nil
 end
 function Trig_DiyW2_Actions()
     local u= GetTriggerUnit()
@@ -18674,8 +18213,8 @@ function Trig_DiyW2_Actions()
     TimerStart(t, 45, false, deadEdly)
     SaveUnitHandle(Hash, id, 0, u)
     SaveInteger(Hash, id, 1, uh)
-    t=null
-    u=null
+    t=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_DiyW2()
@@ -18696,7 +18235,7 @@ function Trig_KillW2_Actions()
     
     
     AddXp(u , 55)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_KillW2()
@@ -18734,7 +18273,7 @@ end
 function Trig_RuneExplode_Actions()
     local u= GetTriggerUnit()
     RemoveEffectTimed(AddSpecialEffect("AbilitiesWeaponsBoltBoltImpact.mdl", GetUnitX(u), GetUnitY(u)) , 2)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_RuneExplode()
@@ -18746,9 +18285,6 @@ end
 --===========================================================================
 -- Trigger: SpellArmorDamage
 --===========================================================================
-function Trig_SpellArmorDamage_Conditions()
-    return GetSpellAbilityId() == FourCC('w2a8')
-end
 function Trig_SpellArmorDamage_Actions()
     UnitDamageTargetBJ(GetTriggerUnit(), GetSpellTargetUnit(), RMinBJ(GetUnitState(GetSpellTargetUnit(), UNIT_STATE_LIFE) * 0.33, 500), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_DEATH)
 end
@@ -18756,15 +18292,14 @@ end
 function InitTrig_SpellArmorDamage()
     gg_trg_SpellArmorDamage=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpellArmorDamage, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SpellArmorDamage, Condition(Trig_SpellArmorDamage_Conditions))
-    TriggerAddAction(gg_trg_SpellArmorDamage, Trig_SpellArmorDamage_Actions)
+    TriggerAddAction(gg_trg_SpellArmorDamage, function()
+        if GetSpellAbilityId() ~= FourCC('w2a8') then return end
+        Trig_SpellArmorDamage_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: SpellMassAxes
 --===========================================================================
-function Trig_SpellMassAxes_Conditions()
-    return GetSpellAbilityId() == FourCC('w2af')
-end
 function Trig_SpellMassAxes_Actions()
     local l= GetSpellTargetLoc()
     local caster= GetTriggerUnit()
@@ -18777,11 +18312,11 @@ function Trig_SpellMassAxes_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex=Condition(EnemEl)
+    bex = EnemEl
     GroupEnumUnitsInRangeOfLoc(g, l, 150, bex)
     
     if FirstOfGroup(g) == nil then
-        --Нету врагов
+        --???? ??????
         BlzStartUnitAbilityCooldown(caster, dammyAbility, 15)
         SetUnitState(caster, UNIT_STATE_MANA, GetUnitState(caster, UNIT_STATE_MANA) + 100 + 35 * level)
         
@@ -18791,7 +18326,7 @@ function Trig_SpellMassAxes_Actions()
         l=GetUnitLoc(caster)
         while true do
             u=FirstOfGroup(g)
-            if u == null then break end
+            if u == nil then break end
             
             u2=CreateUnitAtLoc(p, Dummy, l, bj_UNIT_FACING)
             
@@ -18804,28 +18339,26 @@ function Trig_SpellMassAxes_Actions()
         end
     end
     
-    u=null
+    u=nil
     DestroyGroup(g)
-    g=null
+    g=nil
     RemoveLocation(l)
-    p=null
-    DestroyBoolExpr(bex)
-    u2=null
-    bex=null
+    p=nil
+    u2=nil
+    bex=nil
 end
 --===========================================================================
 function InitTrig_SpellMassAxes()
     gg_trg_SpellMassAxes=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpellMassAxes, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SpellMassAxes, Condition(Trig_SpellMassAxes_Conditions))
-    TriggerAddAction(gg_trg_SpellMassAxes, Trig_SpellMassAxes_Actions)
+    TriggerAddAction(gg_trg_SpellMassAxes, function()
+        if GetSpellAbilityId() ~= FourCC('w2af') then return end
+        Trig_SpellMassAxes_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: SpellArrow
 --===========================================================================
-function Trig_SpellArrow_Conditions()
-    return GetSpellAbilityId() == FourCC('w2aW') and IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)
-end
 function FireDark()
     
     local t= GetExpiredTimer()
@@ -18853,11 +18386,11 @@ function FireDark()
     end
     
     
-    u=null
-    u2=null
-    t=null
+    u=nil
+    u2=nil
+    t=nil
     
-    loc=null
+    loc=nil
 end
 function Trig_SpellArrow_Actions()
     local u= GetTriggerUnit()
@@ -18871,23 +18404,23 @@ function Trig_SpellArrow_Actions()
     SaveInteger(Hash, id, 2, 0)
     SaveInteger(Hash, id, 3, GetUnitAbilityLevel(u, FourCC('w2aW')))
     SaveLocationHandle(Hash, id, 4, GetSpellTargetLoc())
-    t=null
-    u=null
+    t=nil
+    u=nil
     
 end
 --===========================================================================
 function InitTrig_SpellArrow()
     gg_trg_SpellArrow=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpellArrow, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SpellArrow, Condition(Trig_SpellArrow_Conditions))
-    TriggerAddAction(gg_trg_SpellArrow, Trig_SpellArrow_Actions)
+    TriggerAddAction(gg_trg_SpellArrow, function()
+        if GetSpellAbilityId() ~= FourCC('w2aW') then return end
+        if not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO)) then return end
+        Trig_SpellArrow_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: DragonHP
 --===========================================================================
-function Trig_DragonHP_Conditions()
-    return GetSpellAbilityId() == FourCC('w294')
-end
 function Trig_DragonHP_Actions()
     SetPlayerTechResearchedSwap(FourCC('w292'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(true, FourCC('w290'), GetOwningPlayer(GetTriggerUnit()))
@@ -18900,15 +18433,14 @@ end
 function InitTrig_DragonHP()
     gg_trg_DragonHP=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_DragonHP, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_DragonHP, Condition(Trig_DragonHP_Conditions))
-    TriggerAddAction(gg_trg_DragonHP, Trig_DragonHP_Actions)
+    TriggerAddAction(gg_trg_DragonHP, function()
+        if GetSpellAbilityId() ~= FourCC('w294') then return end
+        Trig_DragonHP_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: DragonDamage
 --===========================================================================
-function Trig_DragonDamage_Conditions()
-    return GetSpellAbilityId() == FourCC('w297')
-end
 function Trig_DragonDamage_Actions()
     SetPlayerTechResearchedSwap(FourCC('w293'), 1, GetOwningPlayer(GetTriggerUnit()))
     --call SetPlayerAbilityAvailableBJ( true, 'w290', GetOwningPlayer(GetTriggerUnit()) )
@@ -18920,15 +18452,14 @@ end
 function InitTrig_DragonDamage()
     gg_trg_DragonDamage=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_DragonDamage, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_DragonDamage, Condition(Trig_DragonDamage_Conditions))
-    TriggerAddAction(gg_trg_DragonDamage, Trig_DragonDamage_Actions)
+    TriggerAddAction(gg_trg_DragonDamage, function()
+        if GetSpellAbilityId() ~= FourCC('w297') then return end
+        Trig_DragonDamage_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: DragonMage
 --===========================================================================
-function Trig_DragonMage_Conditions()
-    return GetSpellAbilityId() == FourCC('w295')
-end
 function Trig_DragonMage_Actions()
     SetPlayerTechResearchedSwap(FourCC('w291'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(true, FourCC('w289'), GetOwningPlayer(GetTriggerUnit()))
@@ -18943,19 +18474,18 @@ end
 function InitTrig_DragonMage()
     gg_trg_DragonMage=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_DragonMage, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_DragonMage, Condition(Trig_DragonMage_Conditions))
-    TriggerAddAction(gg_trg_DragonMage, Trig_DragonMage_Actions)
+    TriggerAddAction(gg_trg_DragonMage, function()
+        if GetSpellAbilityId() ~= FourCC('w295') then return end
+        Trig_DragonMage_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: OgrimmCharge
 --===========================================================================
--- Этам 1 - проверка скила - винер тут все прыжки)))
+-- ???? 1 - ???????? ????? - ????? ??? ??? ??????)))
 --================
-function Trig_OgrimmCharge_Conditions()
-    return GetSpellAbilityId() == FourCC('w2o6')
-end
 --================================================================================================================================================================================
--- Этам 3 - двигаем врагов
+-- ???? 3 - ??????? ??????
 --================
 function Ogrimm2()
     local t= GetExpiredTimer()
@@ -18966,8 +18496,8 @@ function Ogrimm2()
     local x= GetUnitX(un)
     local y= GetUnitY(un)
     -- ---------
-    x=x + 10 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=y + 10 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
+    x=x + 10 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=y + 10 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
     if kol >= 0 and not IsTerrainPathable(x, y, PATHING_TYPE_FLYABILITY) then
         SetUnitX(un, x)
         SetUnitY(un, y)
@@ -18977,11 +18507,11 @@ function Ogrimm2()
         FlushChildHashtable(Hash, h)
     end
     -- ----------
-    un=null
-    t=null
+    un=nil
+    t=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - двигаем героя
+-- ???? 2 - ??????? ?????
 --================
 function Ogrimm1()
     local t= GetExpiredTimer()
@@ -19009,13 +18539,13 @@ function Ogrimm1()
         MaxW=500
     end
     ---------
-    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
-    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --вычисляем высоту
+    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
+    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --????????? ??????
     
-    -- ищем конец пути
+    -- ???? ????? ????
     if JSTRRastMT(x1 , dx , y1 , dy) > 25 then --and not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
-        -- двигаем юнита
+        -- ??????? ?????
         SetUnitX(GT, x)
         SetUnitY(GT, y)
         SetUnitFacing(GT, ugol)
@@ -19028,20 +18558,20 @@ function Ogrimm1()
         SetUnitFlyHeight(GT, 0, 0)
         DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
         g=CreateGroup()
-        GroupEnumUnitsInRange(g, dx, dy, 260, null)
+        GroupEnumUnitsInRange(g, dx, dy, 260, nil)
         while true do
             un=FirstOfGroup(g)
-            if un == null then break end
+            if un == nil then break end
             lvl=GetUnitAbilityLevel(GT, GetSpellAbilityId())
             
-            -- винер - проверка на героя
+            -- ????? - ???????? ?? ?????
             uron=1.3 * lvl * GetHeroStr(GT, true) + lvl * 50
             
             if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) then
                 UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
                 DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
                 ----------
-                -- двигаем юнита в другую сторону от кастера
+                -- ??????? ????? ? ?????? ??????? ?? ???????
                 
                 ugol=JSTRUgolMT(dx , GetUnitX(un) , dy , GetUnitY(un))
                 t1=CreateTimer()
@@ -19058,14 +18588,14 @@ function Ogrimm1()
         DestroyGroup(g)
     end
     ---------
-    GT=null
-    un=null
-    g=null
-    t=null
-    t1=null
+    GT=nil
+    un=nil
+    g=nil
+    t=nil
+    t1=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - основная функция
+-- ???? 2 - ???????? ???????
 --================
 function Trig_OgrimmCharge_Actions()
     local GT= GetTriggerUnit()
@@ -19091,25 +18621,24 @@ function Trig_OgrimmCharge_Actions()
     SaveReal(Hash, h, 4, x1)
     SaveReal(Hash, h, 5, y1)
     DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.025, true, Ogrimm1) --стартуем движение героя
+    TimerStart(t, 0.025, true, Ogrimm1) --???????? ???????? ?????
     ---------
-    GT=null
+    GT=nil
     --set g = null
-    t=null
+    t=nil
 end
 --===========================================================================
 function InitTrig_OgrimmCharge()
     gg_trg_OgrimmCharge=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_OgrimmCharge, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_OgrimmCharge, Condition(Trig_OgrimmCharge_Conditions))
-    TriggerAddAction(gg_trg_OgrimmCharge, Trig_OgrimmCharge_Actions)
+    TriggerAddAction(gg_trg_OgrimmCharge, function()
+        if GetSpellAbilityId() ~= FourCC('w2o6') then return end
+        Trig_OgrimmCharge_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Duel
 --===========================================================================
-function Trig_Duel_Conditions()
-    return GetSpellAbilityId() == FourCC('w2ou') and IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO)
-end
 function Duel()
     local t= GetExpiredTimer()
     local id= GetHandleId(t)
@@ -19181,14 +18710,14 @@ function Duel()
         
     
     end
-    t=null
-    u=null
-    u2=null
+    t=nil
+    u=nil
+    u2=nil
     
     RemoveLocation(l1)
     RemoveLocation(l2)
-    l1=null
-    l2=null
+    l1=nil
+    l2=nil
 end
 function Trig_Duel_Actions()
     local u= GetTriggerUnit()
@@ -19208,17 +18737,20 @@ function Trig_Duel_Actions()
     --call SaveInteger(Hash,id,2, 0)
     --call SaveInteger(Hash,id,3, GetUnitAbilityLevel(u,'w2aW'))
     --call SaveLocationHandle(Hash,id,4, GetSpellTargetLoc())
-    t=null
-    u=null
-    u2=null
+    t=nil
+    u=nil
+    u2=nil
     
 end
 --===========================================================================
 function InitTrig_Duel()
     gg_trg_Duel=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Duel, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Duel, Condition(Trig_Duel_Conditions))
-    TriggerAddAction(gg_trg_Duel, Trig_Duel_Actions)
+    TriggerAddAction(gg_trg_Duel, function()
+        if GetSpellAbilityId() ~= FourCC('w2ou') then return end
+        if not (IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO)) then return end
+        Trig_Duel_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: RiseDeadWorkers
@@ -19245,16 +18777,16 @@ end
 function Trig_SummonCase_Actions()
     local u= GetSummonedUnit()
     --call UnitRemoveTypeBJ( UNIT_TYPE_SUMMONED, GetSummonedUnit() )
-    UnitAddAbility(u, FourCC('A1HL')) --Абилка на обеспечение
+    UnitAddAbility(u, FourCC('A1HL')) --?????? ?? ???????????
     --call AddCountDis(u, GetPlayerId(GetOwningPlayer(u)))
     
     
-    -- Скелет идет к кастеру
+    -- ?????? ???? ? ???????
     if GetSummoningUnit() ~= nil then
         IssuePointOrder(u, "smart", GetUnitX(GetSummoningUnit()), GetUnitY(GetSummoningUnit()))
     end
     
-    u=null
+    u=nil
     
     
 end
@@ -19294,9 +18826,6 @@ end
 --===========================================================================
 -- Trigger: MeatDeal
 --===========================================================================
-function Trig_MeatDeal_Conditions()
-    return GetSpellAbilityId() == FourCC('cDa5')
-end
 function Trig_Untitled_Trigger_003_Func001001003()
     return GetUnitAbilityLevel(GetFilterUnit(), FourCC('cDa6')) > 0 and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and UnitAlive(GetFilterUnit())
 end
@@ -19313,7 +18842,6 @@ function Trig_MeatDeal_Actions()
     local Efficiency= 0.5 + GetPlayerTechCount(p, FourCC('cDR5'), true) * 0.05
     local count= 0
     udg_LocalPlayer=p
-    Boolexpr=Condition(Trig_Untitled_Trigger_003_Func001001003)
     GroupEnumUnitsInRangeCounted(g, GetSpellTargetX(), GetSpellTargetY(), 275, Boolexpr, 12)
     
     --if target == null then
@@ -19325,11 +18853,11 @@ function Trig_MeatDeal_Actions()
         
         DestroyGroup(g)
         DestroyBoolExpr(Boolexpr)
-        Boolexpr=null
-        g=null
-        caster=null
-        target=null
-        eachUnit=null
+        Boolexpr=nil
+        g=nil
+        caster=nil
+        target=nil
+        eachUnit=nil
         return
     else
         healthMax=GetUnitState(target, UNIT_STATE_MAX_LIFE) * Efficiency
@@ -19338,7 +18866,7 @@ function Trig_MeatDeal_Actions()
         
         while true do
             eachUnit=FirstOfGroup(g)
-            if eachUnit == null or healthMax >= 5000 then break end
+            if eachUnit == nil or healthMax >= 5000 then break end
             GroupRemoveUnit(g, eachUnit)
             healthMax=healthMax + GetUnitState(eachUnit, UNIT_STATE_MAX_LIFE) * Efficiency
             healthCurrent=healthCurrent + GetUnitState(eachUnit, UNIT_STATE_LIFE) * Efficiency
@@ -19354,13 +18882,13 @@ function Trig_MeatDeal_Actions()
         
         
         
-        if healthMax > 5000 then --Титан из плоти
+        if healthMax > 5000 then --????? ?? ?????
             if id ~= FourCC('cD00') then
                 target=ReplaceUnit2(target , FourCC('cD00') , bj_UNIT_STATE_METHOD_RELATIVE)
             end
             
         
-        elseif healthMax > 2500 and id ~= FourCC('cD09') then --Мясной голем
+        elseif healthMax > 2500 and id ~= FourCC('cD09') then --?????? ?????
             
             if id ~= FourCC('cD09') or id ~= FourCC('cD14') then
                 if Random(1 , 2) then
@@ -19371,7 +18899,7 @@ function Trig_MeatDeal_Actions()
                 
             end
             
-        elseif healthMax > 1000 and id ~= FourCC('cD09') then --Поганище
+        elseif healthMax > 1000 and id ~= FourCC('cD09') then --????????
             
             if id ~= FourCC('cD10') then
                 target=ReplaceUnit2(target , FourCC('cD10') , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -19393,26 +18921,25 @@ function Trig_MeatDeal_Actions()
     end
     
     DestroyBoolExpr(Boolexpr)
-    Boolexpr=null
+    Boolexpr=nil
     DestroyGroup(g)
-    g=null
-    caster=null
-    target=null
-    eachUnit=null
+    g=nil
+    caster=nil
+    target=nil
+    eachUnit=nil
 end
 --===========================================================================
 function InitTrig_MeatDeal()
     gg_trg_MeatDeal=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_MeatDeal, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_MeatDeal, Condition(Trig_MeatDeal_Conditions))
-    TriggerAddAction(gg_trg_MeatDeal, Trig_MeatDeal_Actions)
+    TriggerAddAction(gg_trg_MeatDeal, function()
+        if GetSpellAbilityId() ~= FourCC('cDa5') then return end
+        Trig_MeatDeal_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: BoneDeal
 --===========================================================================
-function Trig_BoneDeal_Conditions()
-    return GetSpellAbilityId() == FourCC('cDar')
-end
 function BoneCheck()
     return GetUnitAbilityLevel(GetFilterUnit(), FourCC('cDat')) > 0 and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and UnitAlive(GetFilterUnit())
 end
@@ -19430,7 +18957,6 @@ function Trig_BoneDeal_Actions()
     local count= 0
     
     udg_LocalPlayer=p
-    Boolexpr=Condition(BoneCheck)
     GroupEnumUnitsInRangeCounted(g, GetSpellTargetX(), GetSpellTargetY(), 275, Boolexpr, 12)
     
     --if target == null then
@@ -19442,11 +18968,11 @@ function Trig_BoneDeal_Actions()
         
         DestroyGroup(g)
         DestroyBoolExpr(Boolexpr)
-        Boolexpr=null
-        g=null
-        caster=null
-        target=null
-        eachUnit=null
+        Boolexpr=nil
+        g=nil
+        caster=nil
+        target=nil
+        eachUnit=nil
         return
     else
         healthMax=GetUnitState(target, UNIT_STATE_MAX_LIFE) * Efficiency
@@ -19455,7 +18981,7 @@ function Trig_BoneDeal_Actions()
         
         while true do
             eachUnit=FirstOfGroup(g)
-            if eachUnit == null or healthMax >= 3500 then break end
+            if eachUnit == nil or healthMax >= 3500 then break end
             GroupRemoveUnit(g, eachUnit)
             healthMax=healthMax + GetUnitState(eachUnit, UNIT_STATE_MAX_LIFE) * Efficiency
             healthCurrent=healthCurrent + GetUnitState(eachUnit, UNIT_STATE_LIFE) * Efficiency
@@ -19471,14 +18997,14 @@ function Trig_BoneDeal_Actions()
         
         
         
-        if healthMax > 2500 then --Титан из костей
+        if healthMax > 2500 then --????? ?? ??????
             if id ~= FourCC('cD23') then
                 target=ReplaceUnit2(target , FourCC('cD23') , bj_UNIT_STATE_METHOD_RELATIVE)
                 IssueImmediateOrder(target, "Locustswarm")
             end
             
             
-        elseif healthMax > 1250 and id ~= FourCC('cD09') then --Страж или привратник
+        elseif healthMax > 1250 and id ~= FourCC('cD09') then --????? ??? ??????????
             
             if id ~= FourCC('cD33') or id ~= FourCC('cD18') then
                 if Random(1 , 2) then
@@ -19503,25 +19029,26 @@ function Trig_BoneDeal_Actions()
     end
     
     DestroyBoolExpr(Boolexpr)
-    Boolexpr=null
+    Boolexpr=nil
     DestroyGroup(g)
-    g=null
-    caster=null
-    target=null
-    eachUnit=null
+    g=nil
+    caster=nil
+    target=nil
+    eachUnit=nil
 end
 --===========================================================================
 function InitTrig_BoneDeal()
     gg_trg_BoneDeal=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_BoneDeal, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_BoneDeal, Condition(Trig_BoneDeal_Conditions))
-    TriggerAddAction(gg_trg_BoneDeal, Trig_BoneDeal_Actions)
+    TriggerAddAction(gg_trg_BoneDeal, function()
+        if GetSpellAbilityId() ~= FourCC('cDar') then return end
+        Trig_BoneDeal_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: HealWhenRise
 --===========================================================================
 function Trig_HealWhenRise_Conditions()
-    return GetSpellAbilityId() == FourCC('cDa2') or GetSpellAbilityId() == FourCC('A1IK')
 end
 function Trig_HealWhenRise_Actions()
     SetUnitLifeBJ(GetTriggerUnit(), GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) + 15)
@@ -19531,8 +19058,11 @@ end
 function InitTrig_HealWhenRise()
     gg_trg_HealWhenRise=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_HealWhenRise, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_HealWhenRise, Condition(Trig_HealWhenRise_Conditions))
-    TriggerAddAction(gg_trg_HealWhenRise, Trig_HealWhenRise_Actions)
+    TriggerAddAction(gg_trg_HealWhenRise, function()
+        if GetSpellAbilityId() ~= FourCC('cDa2') then return end
+        if not Trig_HealWhenRise_Conditions() then return end
+        Trig_HealWhenRise_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ZombyTrain
@@ -19543,7 +19073,7 @@ end
 function Trig_ZombyTrain_Actions()
     local u= GetTrainedUnit()
     IssueTargetOrder(CreateUnit(GetOwningPlayer(u), FourCC('cD11'), GetUnitX(u), GetUnitY(u), 0.00), "smart", u)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_ZombyTrain()
@@ -19586,7 +19116,7 @@ function Trig_PoisonGolemDesease_Actions()
         UnitAddAbility(u2, FourCC('cDau'))
         IssueTargetOrder(u2, "parasite", GetTriggerUnit())
         RemoveUnitTimed(u2 , 2)
-        u2=null
+        u2=nil
 end
 --===========================================================================
 function InitTrig_PoisonGolemDesease()
@@ -19612,7 +19142,7 @@ function Trig_ZombyDesease_Actions()
         
         end
         
-        u2=null
+        u2=nil
 end
 --===========================================================================
 function InitTrig_ZombyDesease()
@@ -19624,9 +19154,6 @@ end
 --===========================================================================
 -- Trigger: Overcharge
 --===========================================================================
-function Trig_Overcharge_Conditions()
-    return GetSpellAbilityId() == FourCC('A1HC')
-end
 function Trig_Overcharge_Actions()
     UnitAddAbility(GetTriggerUnit(), FourCC('A1HB'))
     RemoveAbilityTimed(GetTriggerUnit() , FourCC('A1HB') , 22)
@@ -19635,15 +19162,14 @@ end
 function InitTrig_Overcharge()
     gg_trg_Overcharge=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Overcharge, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Overcharge, Condition(Trig_Overcharge_Conditions))
-    TriggerAddAction(gg_trg_Overcharge, Trig_Overcharge_Actions)
+    TriggerAddAction(gg_trg_Overcharge, function()
+        if GetSpellAbilityId() ~= FourCC('A1HC') then return end
+        Trig_Overcharge_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: NoAutoSkeletsButton
 --===========================================================================
-function Trig_NoAutoSkeletsButton_Conditions()
-    return GetSpellAbilityId() == FourCC('cDAZ')
-end
 function Trig_NoAutoSkeletsButton_Actions()
     local lvl= GetUnitAbilityLevel(GetTriggerUnit(), FourCC('cDAZ'))
     if lvl == 1 then
@@ -19656,15 +19182,14 @@ end
 function InitTrig_NoAutoSkeletsButton()
     gg_trg_NoAutoSkeletsButton=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_NoAutoSkeletsButton, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_NoAutoSkeletsButton, Condition(Trig_NoAutoSkeletsButton_Conditions))
-    TriggerAddAction(gg_trg_NoAutoSkeletsButton, Trig_NoAutoSkeletsButton_Actions)
+    TriggerAddAction(gg_trg_NoAutoSkeletsButton, function()
+        if GetSpellAbilityId() ~= FourCC('cDAZ') then return end
+        Trig_NoAutoSkeletsButton_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ChangeAutoWorkers
 --===========================================================================
-function Trig_ChangeAutoWorkers_Conditions()
-    return GetSpellAbilityId() == FourCC('A1L9')
-end
 function Trig_ChangeAutoWorkers_Actions()
     local u= GetTriggerUnit()
     local lvl= GetUnitAbilityLevel(u, FourCC('A1L9'))
@@ -19680,14 +19205,16 @@ function Trig_ChangeAutoWorkers_Actions()
         BlzStartUnitAbilityCooldown(u, FourCC('cDa4'), 30)
     end
     IssueImmediateOrder(u, "raisedeadon")
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_ChangeAutoWorkers()
     gg_trg_ChangeAutoWorkers=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_ChangeAutoWorkers, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ChangeAutoWorkers, Condition(Trig_ChangeAutoWorkers_Conditions))
-    TriggerAddAction(gg_trg_ChangeAutoWorkers, Trig_ChangeAutoWorkers_Actions)
+    TriggerAddAction(gg_trg_ChangeAutoWorkers, function()
+        if GetSpellAbilityId() ~= FourCC('A1L9') then return end
+        Trig_ChangeAutoWorkers_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: UnitTrainedNoSkelets
@@ -19708,9 +19235,6 @@ end
 --===========================================================================
 -- Trigger: MassIceArrow
 --===========================================================================
-function Trig_MassIceArrow_Conditions()
-    return GetSpellAbilityId() == FourCC('A1HE')
-end
 function Trig_MassIceArrow_Actions()
     local l= GetSpellTargetLoc()
     local p= GetOwningPlayer(GetTriggerUnit())
@@ -19722,11 +19246,11 @@ function Trig_MassIceArrow_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex=Condition(EnemEl)
+    bex = EnemEl
     GroupEnumUnitsInRangeOfLoc(g, l, 150, bex)
     
     if FirstOfGroup(g) == nil then
-        --Нету врагов
+        --???? ??????
         BlzStartUnitAbilityCooldown(GetTriggerUnit(), FourCC('A1HE'), 14)
         SetUnitState(GetTriggerUnit(), UNIT_STATE_MANA, GetUnitState(GetTriggerUnit(), UNIT_STATE_MANA) + 100 + 35 * level)
         
@@ -19736,7 +19260,7 @@ function Trig_MassIceArrow_Actions()
         l=GetUnitLoc(GetTriggerUnit())
         while true do
             u=FirstOfGroup(g)
-            if u == null then break end
+            if u == nil then break end
             
             u2=CreateUnitAtLoc(p, FourCC('h05P'), l, bj_UNIT_FACING)
             
@@ -19749,21 +19273,22 @@ function Trig_MassIceArrow_Actions()
         end
     end
     
-    u=null
+    u=nil
     DestroyGroup(g)
-    g=null
+    g=nil
     RemoveLocation(l)
-    p=null
-    DestroyBoolExpr(bex)
-    u2=null
-    bex=null
+    p=nil
+    u2=nil
+    bex=nil
 end
 --===========================================================================
 function InitTrig_MassIceArrow()
     gg_trg_MassIceArrow=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_MassIceArrow, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_MassIceArrow, Condition(Trig_MassIceArrow_Conditions))
-    TriggerAddAction(gg_trg_MassIceArrow, Trig_MassIceArrow_Actions)
+    TriggerAddAction(gg_trg_MassIceArrow, function()
+        if GetSpellAbilityId() ~= FourCC('A1HE') then return end
+        Trig_MassIceArrow_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: UsePorcha
@@ -19787,26 +19312,23 @@ end
 --===========================================================================
 -- Trigger: PlagueOnBuilding
 --===========================================================================
-function Trig_PlagueOnBuilding_Conditions()
-    return GetSpellAbilityId() == FourCC('A1HR')
-end
 function Plague()
     local t= GetExpiredTimer()
     local id= GetHandleId(t)
     local time= LoadInteger(Hash, id, 1)
     local e
     local u= LoadUnitHandle(Hash, id, 0)
-    --Начало
+    --??????
     if time == 0 and UnitAlive(u) and u ~= nil then
         UnitAddAbility(u, FourCC('A1HS'))
         e=AddSpecialEffectTargetUnitBJ("overhead", u, "CultOfDamnedPlagueCloudTargetLight.mdx")
         SaveEffectHandle(Hash, id, 2, e)
         
-    --Тикает
+    --??????
     elseif time < 30 and UnitAlive(u) and u ~= nil then
         SaveInteger(Hash, id, 1, time + 1)
         
-    --Конец
+    --?????
     else
         if UnitAlive(u) then
             income[LoadInteger(Hash, GetHandleId(u), 0)]=income[LoadInteger(Hash, GetHandleId(u), 0)] - 5
@@ -19819,9 +19341,9 @@ function Plague()
         FlushChildHashtable(Hash, id)
     
     end
-    e=null
-    t=null
-    u=null
+    e=nil
+    t=nil
+    u=nil
 end
 function Trig_PlagueOnBuilding_Actions()
     local t= CreateTimer()
@@ -19829,7 +19351,7 @@ function Trig_PlagueOnBuilding_Actions()
     local u= GetSpellTargetUnit()
     if u ~= nil then
         if GetUnitAbilityLevel(u, FourCC('A1HS')) < 1 and IsPlayerEnemy(GetOwningPlayer(u), GetOwningPlayer(GetTriggerUnit())) then
-            --Начать
+            --??????
             
             if GetUnitFoodMade(u) > 0 then
                 income[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=income[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 5
@@ -19841,20 +19363,22 @@ function Trig_PlagueOnBuilding_Actions()
             SaveInteger(Hash, id, 1, 0)
             TimerStart(t, 1.00, true, Plague)
         else
-            --Продлить
+            --????????
             SaveInteger(Hash, id, 1, 1)
         
         end
     end
-    t=null
+    t=nil
     
 end
 --===========================================================================
 function InitTrig_PlagueOnBuilding()
     gg_trg_PlagueOnBuilding=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_PlagueOnBuilding, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_PlagueOnBuilding, Condition(Trig_PlagueOnBuilding_Conditions))
-    TriggerAddAction(gg_trg_PlagueOnBuilding, Trig_PlagueOnBuilding_Actions)
+    TriggerAddAction(gg_trg_PlagueOnBuilding, function()
+        if GetSpellAbilityId() ~= FourCC('A1HR') then return end
+        Trig_PlagueOnBuilding_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: UnitTrained
@@ -19873,7 +19397,7 @@ function Trig_UnitTrained_Actions()
     
         
     
-    u2=null
+    u2=nil
 end
 --===========================================================================
 function InitTrig_UnitTrained()
@@ -19885,9 +19409,6 @@ end
 --===========================================================================
 -- Trigger: InfestBuilding
 --===========================================================================
-function Trig_InfestBuilding_Conditions()
-    return GetSpellAbilityId() == FourCC('A1JC') and not IsUnitInGroup(GetSpellTargetUnit(), udg_StolicaGroups)
-end
 function Trig_InfestBuilding_Actions()
     local u= GetSpellTargetUnit()
     if GetUnitLifePercent(u) <= 10 and u ~= nil and IsPlayerEnemy(GetOwningPlayer(u), GetOwningPlayer(GetTriggerUnit())) then
@@ -19900,7 +19421,7 @@ function Trig_InfestBuilding_Actions()
   
     
     
-    u=null
+    u=nil
     
     
     
@@ -19910,8 +19431,11 @@ end
 function InitTrig_InfestBuilding()
     gg_trg_InfestBuilding=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_InfestBuilding, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_InfestBuilding, Condition(Trig_InfestBuilding_Conditions))
-    TriggerAddAction(gg_trg_InfestBuilding, Trig_InfestBuilding_Actions)
+    TriggerAddAction(gg_trg_InfestBuilding, function()
+        if GetSpellAbilityId() ~= FourCC('A1JC') then return end
+        if not (not IsUnitInGroup(GetSpellTargetUnit(), udg_StolicaGroups)) then return end
+        Trig_InfestBuilding_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StartForestTrolls
@@ -19943,11 +19467,8 @@ end
 --===========================================================================
 -- Trigger: Charge
 --===========================================================================
-function Trig_Charge_Conditions()
-    return GetSpellAbilityId() == FourCC('A1H3')
-end
 --//================================================================================================================================================================================
---// Этам 3 - двигаем врагов
+--// ???? 3 - ??????? ??????
 --//================
 --function Trig_JumpSTR_move_units takes nothing returns nothing
 --    local timer t = GetExpiredTimer()
@@ -19958,8 +19479,8 @@ end
 --    local real x = GetUnitX(un)
 --    local real y = GetUnitY(un)
 --    // ---------
---    set x = x + 10 * Cos(ugol * bj_DEGTORAD) //вычисляем следующий х
---    set y = y + 10 * Sin(ugol * bj_DEGTORAD) //вычисляем следующий у
+--    set x = x + 10 * Cos(ugol * bj_DEGTORAD) //????????? ????????? ?
+--    set y = y + 10 * Sin(ugol * bj_DEGTORAD) //????????? ????????? ?
 --    if kol >= 0 and not IsTerrainPathable(x, y, PATHING_TYPE_FLYABILITY) then
 --        call SetUnitX(un,x)
 --        call SetUnitY(un,y)
@@ -19973,7 +19494,7 @@ end
 --    set t = null
 --endfunction
 --================================================================================================================================================================================
--- Этам 2 - двигаем героя
+-- ???? 2 - ??????? ?????
 --================
 function Trig_Charge_move_hero()
     local t= GetExpiredTimer()
@@ -20001,13 +19522,13 @@ function Trig_Charge_move_hero()
         MaxW=500
     end
     ---------
-    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
-    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --вычисляем высоту
+    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
+    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --????????? ??????
     
-    -- ищем конец пути
+    -- ???? ????? ????
     if JSTRRastMT(x1 , dx , y1 , dy) > 25 then --and not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
-        -- двигаем юнита
+        -- ??????? ?????
         SetUnitX(GT, x)
         SetUnitY(GT, y)
         SetUnitFacing(GT, ugol)
@@ -20020,13 +19541,13 @@ function Trig_Charge_move_hero()
         --call SetUnitFlyHeight(GT, 0, 0)
         DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
         g=CreateGroup()
-        GroupEnumUnitsInRange(g, dx, dy, 260, null)
+        GroupEnumUnitsInRange(g, dx, dy, 260, nil)
         while true do
             un=FirstOfGroup(g)
-            if un == null then break end
+            if un == nil then break end
             lvl=GetUnitAbilityLevel(GT, JSTRSkill)
             
-            -- винер - проверка на героя
+            -- ????? - ???????? ?? ?????
             if IsUnitType(GT, UNIT_TYPE_HERO) then
                 uron=JSTRKofDmg1 * lvl * GetHeroStr(GT, true) + lvl * JSTRKofDmg2
             else
@@ -20037,7 +19558,7 @@ function Trig_Charge_move_hero()
                 UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
                 DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
                 ----------
-                -- двигаем юнита в другую сторону от кастера
+                -- ??????? ????? ? ?????? ??????? ?? ???????
                 if JSTRBoolMove then
                     ugol=JSTRUgolMT(dx , GetUnitX(un) , dy , GetUnitY(un))
                     t1=CreateTimer()
@@ -20054,14 +19575,14 @@ function Trig_Charge_move_hero()
         DestroyGroup(g)
     end
     ---------
-    GT=null
-    un=null
-    g=null
-    t=null
-    t1=null
+    GT=nil
+    un=nil
+    g=nil
+    t=nil
+    t1=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - основная функция
+-- ???? 2 - ???????? ???????
 --================
 function Trig_Charge_Actions()
     local GT= GetTriggerUnit()
@@ -20087,18 +19608,20 @@ function Trig_Charge_Actions()
     SaveReal(Hash, h, 4, x1)
     SaveReal(Hash, h, 5, y1)
     --call DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.025, true, Trig_Charge_move_hero) --стартуем движение героя
+    TimerStart(t, 0.025, true, Trig_Charge_move_hero) --???????? ???????? ?????
     ---------
-    GT=null
+    GT=nil
     --set g = null
-    t=null
+    t=nil
 end
 --===========================================================================
 function InitTrig_Charge()
     gg_trg_Charge=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Charge, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Charge, Condition(Trig_Charge_Conditions))
-    TriggerAddAction(gg_trg_Charge, Trig_Charge_Actions)
+    TriggerAddAction(gg_trg_Charge, function()
+        if GetSpellAbilityId() ~= FourCC('A1H3') then return end
+        Trig_Charge_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: SetLifeNormal
@@ -20118,22 +19641,6 @@ function InitTrig_SetLifeNormal()
     TriggerAddCondition(gg_trg_SetLifeNormal, Condition(Trig_SetLifeNormal_Conditions))
     TriggerAddAction(gg_trg_SetLifeNormal, Trig_SetLifeNormal_Actions)
 end
---===========================================================================
--- Trigger: ZacliatieOfLive
---===========================================================================
-function Trig_ZacliatieOfLive_Conditions()
-    return GetSpellAbilityId() == FourCC('A1G5')
-end
-function zlifeend()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u2= LoadUnitHandle(Hash, id, 1)
-    UnitRemoveAbility(u2, FourCC('A1G6'))
-    FlushChildHashtable(Hash, id)
-    DestroyTimer(t)
-    t=null
-    u2=null
-end
 function Trig_ZacliatieOfLive_Actions()
     local u= GetTriggerUnit()
     local t= CreateTimer()
@@ -20141,18 +19648,23 @@ function Trig_ZacliatieOfLive_Actions()
     
     UnitAddAbility(u, FourCC('A1G6'))
     TriggerRegisterUnitEvent(gg_trg_SetLifeNormal, u, EVENT_UNIT_DAMAGING)
-    TimerStart(t, 15 * GetUnitAbilityLevel(u, FourCC('A1G5')), false, zlifeend)
-    SaveUnitHandle(Hash, id, 1, u)
+	local t = CreateTimer()
+	TimerStart(t, 15 * GetUnitAbilityLevel(u, FourCC('A1G6')), false, function()
+		UnitRemoveAbility(u, FourCC('A1G6'))
+		DestroyTimer(t)
+	end)
     
-    u=null
-    t=null
+    u=nil
+    t=nil
 end
 --===========================================================================
 function InitTrig_ZacliatieOfLive()
     gg_trg_ZacliatieOfLive=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_ZacliatieOfLive, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ZacliatieOfLive, Condition(Trig_ZacliatieOfLive_Conditions))
-    TriggerAddAction(gg_trg_ZacliatieOfLive, Trig_ZacliatieOfLive_Actions)
+    TriggerAddAction(gg_trg_ZacliatieOfLive, function()
+        if GetSpellAbilityId() ~= FourCC('A1G5') then return end
+        Trig_ZacliatieOfLive_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ReturnDamage
@@ -20162,7 +19674,7 @@ function Trig_ReturnDamage_Conditions()
 end
 function Trig_ReturnDamage_Actions()
     local u= GetTriggerUnit()
-    local u2= null
+    local u2= nil
     local g= CreateGroup()
     local b
     local l
@@ -20170,7 +19682,6 @@ function Trig_ReturnDamage_Actions()
     DisableTrigger(GetTriggeringTrigger())
     udg_LocalPlayer=GetOwningPlayer(u)
     udg_LocalInteger2=0
-    b=Condition(isEnemy)
     GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 550, b)
    -- set u2 = FirstOfGroup(g) 
     if udg_LocalInteger2 > 0 then
@@ -20185,11 +19696,11 @@ function Trig_ReturnDamage_Actions()
     end
     DestroyGroup(g)
     DestroyBoolExpr(b)
-    g=null
-    b=null
-    l=null
-    u=null
-    u2=null
+    g=nil
+    b=nil
+    l=nil
+    u=nil
+    u2=nil
     
     EnableTrigger(GetTriggeringTrigger())
 end
@@ -20203,70 +19714,65 @@ end
 --===========================================================================
 -- Trigger: ZacliatieOfDamage
 --===========================================================================
-function Trig_ZacliatieOfDamage_Conditions()
-    return GetSpellAbilityId() == FourCC('A1GP')
-end
 function Trig_ZacliatieOfDamage_Actions()
     local u= GetTriggerUnit()
     
     UnitAddAbility(u, FourCC('A1GQ'))
     RemoveAbilityTimed(u , FourCC('A1GQ') , GetUnitAbilityLevel(u, FourCC('A1GP')) * 20)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_ZacliatieOfDamage()
     gg_trg_ZacliatieOfDamage=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_ZacliatieOfDamage, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_ZacliatieOfDamage, Condition(Trig_ZacliatieOfDamage_Conditions))
-    TriggerAddAction(gg_trg_ZacliatieOfDamage, Trig_ZacliatieOfDamage_Actions)
+    TriggerAddAction(gg_trg_ZacliatieOfDamage, function()
+        if GetSpellAbilityId() ~= FourCC('A1GP') then return end
+        Trig_ZacliatieOfDamage_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: YarostBeg
 --===========================================================================
-function Trig_YarostBeg_Conditions()
-    return GetSpellAbilityId() == FourCC('A1F9')
-end
 function Trig_YarostBeg_Actions()
     local u= GetTriggerUnit()
     
     SetUnitLifePercentBJ(u, GetUnitLifePercent(u) * 0.75)
     
-    UnitAddAbility(u, FourCC('A1GS')) -- Абилка на урон
+    UnitAddAbility(u, FourCC('A1GS')) -- ?????? ?? ????
     RemoveAbilityTimed(u , FourCC('A1GS') , 24.5)
     --call UnitAddAbility(u,'A1G2')
     --call BlzStartUnitAbilityCooldown(u,'A1G2',1)
     --call BlzUnitHideAbility(u,'A1F9',true)
     RemoveAbilityTimed(u , FourCC('A1GS') , 25)
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_YarostBeg()
     gg_trg_YarostBeg=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_YarostBeg, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_YarostBeg, Condition(Trig_YarostBeg_Conditions))
-    TriggerAddAction(gg_trg_YarostBeg, Trig_YarostBeg_Actions)
+    TriggerAddAction(gg_trg_YarostBeg, function()
+        if GetSpellAbilityId() ~= FourCC('A1F9') then return end
+        Trig_YarostBeg_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: RitualPoglocenia
 --===========================================================================
-function Trig_RitualPoglocenia_Conditions()
-    return GetSpellAbilityId() == FourCC('A1GA') and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1F9')) > 0 and not IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO)
-end
 function Trig_RitualPoglocenia_Actions()
    --local unit u = GetTriggerUnit()
     local u2= GetSpellTargetUnit()
     local id= GetUnitTypeId(u2)
     
     
-    --Маги
+    --????
     if id == FourCC('o052') or id == FourCC('o051') then
         u2=ReplaceUnit2(u2 , FourCC('o05O') , bj_UNIT_STATE_METHOD_RELATIVE)
         
-    --танки
+    --?????
     elseif id == FourCC('o04Z') or id == FourCC('o04X') or id == FourCC('o04V') or id == FourCC('o050') then
         u2=ReplaceUnit2(u2 , FourCC('o05M') , bj_UNIT_STATE_METHOD_RELATIVE)
-    --дд
+    --??
     elseif id == FourCC('o04W') or id == FourCC('o04Y') or id == FourCC('o053') then
         u2=ReplaceUnit2(u2 , FourCC('o05N') , bj_UNIT_STATE_METHOD_RELATIVE)
     else
@@ -20275,14 +19781,17 @@ function Trig_RitualPoglocenia_Actions()
     
     UnitAddAbility(u2, FourCC('A0Z5'))
     
-    u2=null
+    u2=nil
 end
 --===========================================================================
 function InitTrig_RitualPoglocenia()
     gg_trg_RitualPoglocenia=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_RitualPoglocenia, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_RitualPoglocenia, Condition(Trig_RitualPoglocenia_Conditions))
-    TriggerAddAction(gg_trg_RitualPoglocenia, Trig_RitualPoglocenia_Actions)
+    TriggerAddAction(gg_trg_RitualPoglocenia, function()
+        if GetSpellAbilityId() ~= FourCC('A1GA') then return end
+        if not (GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1F9')) > 0 and not IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO)) then return end
+        Trig_RitualPoglocenia_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: WantAxe
@@ -20290,16 +19799,6 @@ end
 function Trig_WantAxe_Conditions()
     --call DisplayTextToPlayer(Player(0),0,0,"2")
     return GetUnitAbilityLevel(GetEventDamageSource(), FourCC('A1G3')) > 0 and GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1G4')) == 0 and IsPlayerEnemy(GetOwningPlayer(GetEventDamageSource()), GetOwningPlayer(GetTriggerUnit()))
-end
-function toporend()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u2= LoadUnitHandle(Hash, id, 1)
-    UnitRemoveAbility(u2, FourCC('A1G4'))
-    FlushChildHashtable(Hash, id)
-    DestroyTimer(t)
-    t=null
-    u2=null
 end
 function Trig_WantAxe_Actions()
     local u= GetEventDamageSource()
@@ -20310,12 +19809,15 @@ function Trig_WantAxe_Actions()
      
     UnitAddAbility(u2, FourCC('A1G4'))
     
-    TimerStart(t, 7, false, toporend)
-    SaveUnitHandle(Hash, id, 1, u2)
+	local t = CreateTimer()
+	TimerStart(t, 7, false, function()
+		UnitRemoveAbility(u2, FourCC('A1G4'))
+		DestroyTimer(t)
+	end)
     
-    u=null
-    u2=null
-    t=null
+    u=nil
+    u2=nil
+    t=nil
 end
 --===========================================================================
 function InitTrig_WantAxe()
@@ -20329,7 +19831,7 @@ end
 --===========================================================================
 function Trig_BeFaster_Conditions()
     
-    return GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1F9')) > 0 or GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1G2')) > 0 -- Тут абилка иконка
+    return GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1F9')) > 0 or GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1G2')) > 0 -- ??? ?????? ??????
     
     
 end
@@ -20377,7 +19879,7 @@ function Trig_BeFaster_Actions()
     
     
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_BeFaster()
@@ -20389,9 +19891,6 @@ end
 --===========================================================================
 -- Trigger: MassSetca
 --===========================================================================
-function Trig_MassSetca_Conditions()
-    return GetSpellAbilityId() == FourCC('A1FC')
-end
 function Trig_MassSetca_Actions()
     local l= GetSpellTargetLoc()
     local p= GetOwningPlayer(GetTriggerUnit())
@@ -20403,14 +19902,14 @@ function Trig_MassSetca_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex=Condition(EnemEl)
+    bex = EnemEl
     GroupEnumUnitsInRangeOfLoc(g, l, 100 + 45 * level, bex)
     
     RemoveLocation(l)
     l=GetUnitLoc(GetTriggerUnit())
     while true do
         u=FirstOfGroup(g)
-        if u == null then break end
+        if u == nil then break end
         
         u2=CreateUnitAtLoc(p, FourCC('H0BN'), l, bj_UNIT_FACING)
         udg_LocalUnit2=u2
@@ -20425,28 +19924,26 @@ function Trig_MassSetca_Actions()
     end
     
     
-    u=null
+    u=nil
     DestroyGroup(g)
-    g=null
+    g=nil
     RemoveLocation(l)
-    p=null
-    DestroyBoolExpr(bex)
-    u2=null
-    bex=null
+    p=nil
+    u2=nil
+    bex=nil
 end
 --===========================================================================
 function InitTrig_MassSetca()
     gg_trg_MassSetca=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_MassSetca, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_MassSetca, Condition(Trig_MassSetca_Conditions))
-    TriggerAddAction(gg_trg_MassSetca, Trig_MassSetca_Actions)
+    TriggerAddAction(gg_trg_MassSetca, function()
+        if GetSpellAbilityId() ~= FourCC('A1FC') then return end
+        Trig_MassSetca_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: MassFrenzy
 --===========================================================================
-function Trig_MassFrenzy_Conditions()
-    return GetSpellAbilityId() == FourCC('A1ID')
-end
 function FFrenzy()
     return GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and GetUnitAbilityLevel(GetFilterUnit(), FourCC('BUhf')) == 0 and not IsUnitType(GetFilterUnit(), UNIT_TYPE_MECHANICAL) and not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE)
     
@@ -20462,14 +19959,14 @@ function Trig_MassFrenzy_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex=Condition(FFrenzy)
+    bex = FFrenzy
     GroupEnumUnitsInRangeOfLocCounted(g, l, 400, bex, 4)
     
     RemoveLocation(l)
     l=GetUnitLoc(GetTriggerUnit())
     while true do
         u=FirstOfGroup(g)
-        if i > 4 or u == null then break end
+        if i > 4 or u == nil then break end
         
         u2=CreateUnitAtLoc(p, FourCC('h05P'), l, bj_UNIT_FACING)
         
@@ -20485,21 +19982,22 @@ function Trig_MassFrenzy_Actions()
     end
     
     
-    u=null
+    u=nil
     DestroyGroup(g)
-    g=null
+    g=nil
     RemoveLocation(l)
-    p=null
-    DestroyBoolExpr(bex)
-    u2=null
-    bex=null
+    p=nil
+    u2=nil
+    bex=nil
 end
 --===========================================================================
 function InitTrig_MassFrenzy()
     gg_trg_MassFrenzy=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_MassFrenzy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_MassFrenzy, Condition(Trig_MassFrenzy_Conditions))
-    TriggerAddAction(gg_trg_MassFrenzy, Trig_MassFrenzy_Actions)
+    TriggerAddAction(gg_trg_MassFrenzy, function()
+        if GetSpellAbilityId() ~= FourCC('A1ID') then return end
+        Trig_MassFrenzy_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StartJungleTrools
@@ -20544,8 +20042,8 @@ end
 function BlackSpear_Actions()
     
     --Black spear
-    SetPlayerTechMaxAllowedSwap(FourCC('o04P'), - 1, GetOwningPlayer(GetTriggerUnit())) -- маги
-    SetPlayerTechMaxAllowedSwap(FourCC('O05L'), 1, GetOwningPlayer(GetTriggerUnit())) --Бвон
+    SetPlayerTechMaxAllowedSwap(FourCC('o04P'), - 1, GetOwningPlayer(GetTriggerUnit())) -- ????
+    SetPlayerTechMaxAllowedSwap(FourCC('O05L'), 1, GetOwningPlayer(GetTriggerUnit())) --????
     
     SetPlayerAbilityAvailableBJ(false, FourCC('A1EP'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1EQ'), GetOwningPlayer(GetTriggerUnit()))
@@ -20570,8 +20068,8 @@ end
 function Gurubashy_Actions()
     
     --Gurubashy
-    SetPlayerTechMaxAllowedSwap(FourCC('o04N'), - 1, GetOwningPlayer(GetTriggerUnit())) --Колдун
-    SetPlayerTechMaxAllowedSwap(FourCC('O055'), 1, GetOwningPlayer(GetTriggerUnit())) --Хаккар
+    SetPlayerTechMaxAllowedSwap(FourCC('o04N'), - 1, GetOwningPlayer(GetTriggerUnit())) --??????
+    SetPlayerTechMaxAllowedSwap(FourCC('O055'), 1, GetOwningPlayer(GetTriggerUnit())) --??????
     
     SetPlayerAbilityAvailableBJ(false, FourCC('A1EP'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1EQ'), GetOwningPlayer(GetTriggerUnit()))
@@ -20587,48 +20085,43 @@ end
 --===========================================================================
 -- Trigger: SpelltakesHealthCommon
 --===========================================================================
-function Trig_SpelltakesHealthCommon_Conditions()
-    return GetSpellAbilityId() == FourCC('A1DX')
-end
 function Trig_SpelltakesHealthCommon_Actions()
     local u= GetTriggerUnit()
     UnitDamageTargetBJ(u, u, 100, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_DEATH)
     SetUnitState(u, UNIT_STATE_MANA, GetUnitState(u, UNIT_STATE_MANA) + 100)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_SpelltakesHealthCommon()
     gg_trg_SpelltakesHealthCommon=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpelltakesHealthCommon, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SpelltakesHealthCommon, Condition(Trig_SpelltakesHealthCommon_Conditions))
-    TriggerAddAction(gg_trg_SpelltakesHealthCommon, Trig_SpelltakesHealthCommon_Actions)
+    TriggerAddAction(gg_trg_SpelltakesHealthCommon, function()
+        if GetSpellAbilityId() ~= FourCC('A1DX') then return end
+        Trig_SpelltakesHealthCommon_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: SpelltakesHealthCommon2
 --===========================================================================
-function Trig_SpelltakesHealthCommon2_Conditions()
-    return GetSpellAbilityId() == FourCC('A1EJ')
-end
 function Trig_SpelltakesHealthCommon2_Actions()
     local u= GetTriggerUnit()
     
     SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) - 75)
     UnitDamageTargetBJ(u, u, 1, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_DEATH)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_SpelltakesHealthCommon2()
     gg_trg_SpelltakesHealthCommon2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpelltakesHealthCommon2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SpelltakesHealthCommon2, Condition(Trig_SpelltakesHealthCommon2_Conditions))
-    TriggerAddAction(gg_trg_SpelltakesHealthCommon2, Trig_SpelltakesHealthCommon2_Actions)
+    TriggerAddAction(gg_trg_SpelltakesHealthCommon2, function()
+        if GetSpellAbilityId() ~= FourCC('A1EJ') then return end
+        Trig_SpelltakesHealthCommon2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: MassSglaz
 --===========================================================================
-function Trig_MassSglaz_Conditions()
-    return GetSpellAbilityId() == FourCC('A1E0')
-end
 function Trig_MassSglaz_Actions()
     local l= GetSpellTargetLoc()
     local p= GetOwningPlayer(GetTriggerUnit())
@@ -20639,14 +20132,14 @@ function Trig_MassSglaz_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex=Condition(EnemEl)
+    bex = EnemEl
     GroupEnumUnitsInRangeOfLoc(g, l, 110 + 50 * level, bex)
     
     RemoveLocation(l)
     l=GetUnitLoc(GetTriggerUnit())
     while true do
         u=FirstOfGroup(g)
-        if u == null then break end
+        if u == nil then break end
         
         u2=CreateUnitAtLoc(p, FourCC('H0BN'), l, bj_UNIT_FACING)
         RemoveUnitTimed(u2 , 2)
@@ -20660,70 +20153,66 @@ function Trig_MassSglaz_Actions()
     end
     
     
-    u=null
+    u=nil
     DestroyGroup(g)
-    g=null
+    g=nil
     RemoveLocation(l)
-    p=null
-    DestroyBoolExpr(bex)
-    u2=null
-    bex=null
+    p=nil
+    u2=nil
+    bex=nil
 end
 --===========================================================================
 function InitTrig_MassSglaz()
     gg_trg_MassSglaz=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_MassSglaz, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_MassSglaz, Condition(Trig_MassSglaz_Conditions))
-    TriggerAddAction(gg_trg_MassSglaz, Trig_MassSglaz_Actions)
+    TriggerAddAction(gg_trg_MassSglaz, function()
+        if GetSpellAbilityId() ~= FourCC('A1E0') then return end
+        Trig_MassSglaz_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: BladeStorm
 --===========================================================================
-function Trig_BladeStorm_Conditions()
-    return GetSpellAbilityId() == FourCC('A1E4')
-end
 function Trig_BladeStorm_Actions()
     local u= GetTriggerUnit()
     SetUnitFlyHeightBJ(u, 45.00, 3)
     SetUnitPathing(u, false)
     UnitAddTypeBJ(UNIT_TYPE_FLYING, u)
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_BladeStorm()
     gg_trg_BladeStorm=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_BladeStorm, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_BladeStorm, Condition(Trig_BladeStorm_Conditions))
-    TriggerAddAction(gg_trg_BladeStorm, Trig_BladeStorm_Actions)
+    TriggerAddAction(gg_trg_BladeStorm, function()
+        if GetSpellAbilityId() ~= FourCC('A1E4') then return end
+        Trig_BladeStorm_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: BladeStormEnd
 --===========================================================================
-function Trig_BladeStormEnd_Conditions()
-    return GetSpellAbilityId() == FourCC('A1E4')
-end
 function Trig_BladeStormEnd_Actions()
     local u= GetTriggerUnit()
     SetUnitFlyHeightBJ(u, 0, 3)
     SetUnitPathing(u, true)
     UnitRemoveTypeBJ(UNIT_TYPE_FLYING, u)
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_BladeStormEnd()
     gg_trg_BladeStormEnd=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_BladeStormEnd, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
-    TriggerAddCondition(gg_trg_BladeStormEnd, Condition(Trig_BladeStormEnd_Conditions))
-    TriggerAddAction(gg_trg_BladeStormEnd, Trig_BladeStormEnd_Actions)
+    TriggerAddAction(gg_trg_BladeStormEnd, function()
+        if GetSpellAbilityId() ~= FourCC('A1E4') then return end
+        Trig_BladeStormEnd_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: SpellDamageReturn
 --===========================================================================
-function Trig_SpellDamageReturn_Conditions()
-    return GetSpellAbilityId() == FourCC('A1E3')
-end
 function Trig_SpellDamageReturn_Actions()
     local u= GetTriggerUnit()
     local hp= GetUnitState(u, UNIT_STATE_LIFE) * 0.6
@@ -20733,7 +20222,7 @@ function Trig_SpellDamageReturn_Actions()
     UnitDamageTargetBJ(u, u, hp, ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
     
     while true do
-        if not UnitAlive(u) or u == null or i * 0.5 > seconds then break end
+        if not UnitAlive(u) or u == nil or i * 0.5 > seconds then break end
         SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) + hp * 0.07)
         UnitDamageTargetBJ(u, u, 0, ATTACK_TYPE_HERO, DAMAGE_TYPE_DEATH)
         TriggerSleepAction(0.25)
@@ -20741,15 +20230,17 @@ function Trig_SpellDamageReturn_Actions()
         i=i + 1
     end
     DestroyEffect(e)
-    e=null
-    u=null
+    e=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_SpellDamageReturn()
     gg_trg_SpellDamageReturn=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpellDamageReturn, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SpellDamageReturn, Condition(Trig_SpellDamageReturn_Conditions))
-    TriggerAddAction(gg_trg_SpellDamageReturn, Trig_SpellDamageReturn_Actions)
+    TriggerAddAction(gg_trg_SpellDamageReturn, function()
+        if GetSpellAbilityId() ~= FourCC('A1E3') then return end
+        Trig_SpellDamageReturn_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: DamageConvert
@@ -20769,9 +20260,9 @@ function Trig_DamageConvert_Actions()
     SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) + damage * ( 0.04 * level ))
   
     
-    u=null
+    u=nil
     DestroyEffect(e)
-    e=null
+    e=nil
 end
 --===========================================================================
 function InitTrig_DamageConvert()
@@ -20783,9 +20274,6 @@ end
 --===========================================================================
 -- Trigger: AreaOfDeath
 --===========================================================================
-function Trig_AreaOfDeath_Conditions()
-    return GetSpellAbilityId() == FourCC('A1E8')
-end
 function Trig_AreaOfDeath_Actions()
     local l= GetSpellTargetLoc()
     local p= GetOwningPlayer(GetTriggerUnit())
@@ -20806,22 +20294,23 @@ function Trig_AreaOfDeath_Actions()
     RemoveUnitTimed(u2 , 20)
     
     
-    u=null
-    p=null
-    u2=null
+    u=nil
+    p=nil
+    u2=nil
 end
 --===========================================================================
 function InitTrig_AreaOfDeath()
     gg_trg_AreaOfDeath=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_AreaOfDeath, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AreaOfDeath, Condition(Trig_AreaOfDeath_Conditions))
-    TriggerAddAction(gg_trg_AreaOfDeath, Trig_AreaOfDeath_Actions)
+    TriggerAddAction(gg_trg_AreaOfDeath, function()
+        if GetSpellAbilityId() ~= FourCC('A1E8') then return end
+        Trig_AreaOfDeath_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Plenenie
 --===========================================================================
 function Trig_Plenenie_Conditions()
-    return GetSpellAbilityId() == FourCC('A1E9') or not IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO)
 end
 function Trig_Plenenie_Actions()
     BlzEndUnitAbilityCooldown(GetTriggerUnit(), FourCC('A1E9'))
@@ -20830,15 +20319,18 @@ end
 function InitTrig_Plenenie()
     gg_trg_Plenenie=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Plenenie, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Plenenie, Condition(Trig_Plenenie_Conditions))
-    TriggerAddAction(gg_trg_Plenenie, Trig_Plenenie_Actions)
+    TriggerAddAction(gg_trg_Plenenie, function()
+        if GetSpellAbilityId() ~= FourCC('A1E9') then return end
+        if not Trig_Plenenie_Conditions() then return end
+        Trig_Plenenie_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: DamageMore
 --===========================================================================
 function Trig_DamageMore_Conditions()
     
-    return GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1D0')) > 0 -- Тут абилка иконка
+    return GetUnitAbilityLevel(BlzGetEventDamageTarget(), FourCC('A1D0')) > 0 -- ??? ?????? ??????
     
     
 end
@@ -20881,7 +20373,7 @@ function Trig_DamageMore_Actions()
     
     
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_DamageMore()
@@ -20910,31 +20402,30 @@ end
 --===========================================================================
 -- Trigger: SpellGiveQSpell
 --===========================================================================
-function Trig_SpellGiveQSpell_Conditions()
-    return GetSpellAbilityId() == FourCC('A1ES')
-end
 function Trig_SpellGiveQSpell_Actions()
     local u= GetTriggerUnit()
     --call DisplayTextToPlayer(Player(0),0,0,"2")
     TriggerSleepAction(0.5)
     if GetUnitAbilityLevel(u, FourCC('A1EZ')) > 0 then
-        --Дух
+        --???
         UnitRemoveAbility(u, FourCC('A1EW'))
         BlzUnitHideAbility(u, FourCC('A1EV'), false)
     else
-        --Материальныей мир
+        --????????????? ???
         UnitAddAbility(u, FourCC('A1EW'))
         SetUnitAbilityLevel(u, FourCC('A1EW'), GetUnitAbilityLevel(u, FourCC('A1EV')))
         BlzUnitHideAbility(u, FourCC('A1EV'), true)
     end
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_SpellGiveQSpell()
     gg_trg_SpellGiveQSpell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpellGiveQSpell, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_SpellGiveQSpell, Condition(Trig_SpellGiveQSpell_Conditions))
-    TriggerAddAction(gg_trg_SpellGiveQSpell, Trig_SpellGiveQSpell_Actions)
+    TriggerAddAction(gg_trg_SpellGiveQSpell, function()
+        if GetSpellAbilityId() ~= FourCC('A1ES') then return end
+        Trig_SpellGiveQSpell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: GetMoreStatsBwon
@@ -20954,7 +20445,7 @@ function Trig_GetMoreStatsBwon_Actions()
         BlzSetUnitRealFieldBJ(u, UNIT_RF_MANA_REGENERATION, ( BlzGetUnitRealField(u, UNIT_RF_MANA_REGENERATION) + 0.05 ))
         
     end
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_GetMoreStatsBwon()
@@ -20988,9 +20479,9 @@ function Trig_DamagePercent_Actions()
     end
     UnitRemoveAbility(u2, FourCC('A1EU'))
     DestroyEffect(e)
-    u=null
-    u2=null
-    e=null
+    u=nil
+    u2=nil
+    e=nil
 end
 --===========================================================================
 function InitTrig_DamagePercent()
@@ -21015,9 +20506,6 @@ end
 --===========================================================================
 -- Trigger: SpellChangeWorld
 --===========================================================================
-function Trig_SpellChangeWorld_Conditions()
-    return GetSpellAbilityId() == FourCC('A1ER')
-end
 function Trig_SpellChangeWorld_Actions()
     local g= CreateGroup()
     local u
@@ -21025,28 +20513,30 @@ function Trig_SpellChangeWorld_Actions()
     local l= GetSpellTargetLoc()
     SetUnitPositionLoc(GetTriggerUnit(), l)
     IssueImmediateOrder(GetTriggerUnit(), "metamorphosis")
-    GroupEnumUnitsInRangeOfLoc(g, l, 250, null)
+    GroupEnumUnitsInRangeOfLoc(g, l, 250, nil)
     while true do
         u=FirstOfGroup(g)
-        if u == null then break end
+        if u == nil then break end
         if GetOwningPlayer(u) ~= GetOwningPlayer(GetTriggerUnit()) then
             UnitDamageTargetBJ(GetTriggerUnit(), u, 225, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_DEATH)
         end
         GroupRemoveUnit(g, u)
-        u=null
+        u=nil
     end
     DestroyGroup(g)
     RemoveLocation(l)
-    l=null
-    g=null
-    u=null
+    l=nil
+    g=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_SpellChangeWorld()
     gg_trg_SpellChangeWorld=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpellChangeWorld, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SpellChangeWorld, Condition(Trig_SpellChangeWorld_Conditions))
-    TriggerAddAction(gg_trg_SpellChangeWorld, Trig_SpellChangeWorld_Actions)
+    TriggerAddAction(gg_trg_SpellChangeWorld, function()
+        if GetSpellAbilityId() ~= FourCC('A1ER') then return end
+        Trig_SpellChangeWorld_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: GetMoreStats
@@ -21064,7 +20554,7 @@ function Trig_GetMoreStats_Actions()
     
     SetUnitManaBJ(u, ( GetUnitStateSwap(UNIT_STATE_MANA, u) + 5.00 ))
    
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_GetMoreStats()
@@ -21082,16 +20572,16 @@ end
 function AllyToKill()
     local u= GetFilterUnit()
     if UnitAlive(u) and GetOwningPlayer(u) == udg_LocalPlayer and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_HERO) and not IsUnitType(u, UNIT_TYPE_SUMMONED) and not IsUnitType(u, UNIT_TYPE_MECHANICAL) and GetUnitTypeId(u) ~= FourCC('h07A') then
-        u=null
+        u=nil
         udg_LocalInteger2=udg_LocalInteger2 + 1
         return true
     end
-    u=null
+    u=nil
     return false
 end
 function Trig_Help_Actions()
     local u= GetTriggerUnit()
-    local u2= null
+    local u2= nil
     local g= CreateGroup()
     local b
     local l
@@ -21099,7 +20589,6 @@ function Trig_Help_Actions()
     DisableTrigger(GetTriggeringTrigger())
     udg_LocalPlayer=GetOwningPlayer(u)
     udg_LocalInteger2=0
-    b=Condition(AllyToKill)
     GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 750, b)
    -- set u2 = FirstOfGroup(g) 
     if udg_LocalInteger2 > 0 then
@@ -21116,11 +20605,11 @@ function Trig_Help_Actions()
     end
     DestroyGroup(g)
     DestroyBoolExpr(b)
-    g=null
-    b=null
-    l=null
-    u=null
-    u2=null
+    g=nil
+    b=nil
+    l=nil
+    u=nil
+    u2=nil
     
     EnableTrigger(GetTriggeringTrigger())
 end
@@ -21135,7 +20624,6 @@ end
 -- Trigger: SpelltakesHealth
 --===========================================================================
 function Trig_SpelltakesHealth_Conditions()
-    return GetSpellAbilityId() == FourCC('A1DC') or GetSpellAbilityId() == FourCC('A1EL')
 end
 function Trig_SpelltakesHealth_Actions()
     local u= GetTriggerUnit()
@@ -21149,14 +20637,17 @@ function Trig_SpelltakesHealth_Actions()
         BlzEndUnitAbilityCooldown(GetTriggerUnit(), FourCC('A1EL'))
     end
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_SpelltakesHealth()
     gg_trg_SpelltakesHealth=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpelltakesHealth, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SpelltakesHealth, Condition(Trig_SpelltakesHealth_Conditions))
-    TriggerAddAction(gg_trg_SpelltakesHealth, Trig_SpelltakesHealth_Actions)
+    TriggerAddAction(gg_trg_SpelltakesHealth, function()
+        if GetSpellAbilityId() ~= FourCC('A1DC') then return end
+        if not Trig_SpelltakesHealth_Conditions() then return end
+        Trig_SpelltakesHealth_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: HakkarAuraDeb
@@ -21168,7 +20659,7 @@ function Trig_HakkarAuraDeb_Actions()
     local u= GetTriggerUnit()
     UnitAddAbility(u, FourCC('A1EK'))
     SetUnitAbilityLevel(u, FourCC('A1EK'), GetUnitAbilityLevel(u, FourCC('A2DM')))
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_HakkarAuraDeb()
@@ -21180,12 +20671,9 @@ end
 --===========================================================================
 -- Trigger: HelpButton
 --===========================================================================
-function Trig_HelpButton_Conditions()
-    return GetSpellAbilityId() == FourCC('A1EM')
-end
 function Trig_HelpButton_Actions()
     local u= GetTriggerUnit()
-    local u2= null
+    local u2= nil
     local g= CreateGroup()
     local b
     local l
@@ -21193,7 +20681,6 @@ function Trig_HelpButton_Actions()
     DisableTrigger(GetTriggeringTrigger())
     udg_LocalPlayer=GetOwningPlayer(u)
     udg_LocalInteger2=0
-    b=Condition(AllyToKill)
     GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 750, b)
     
     
@@ -21215,11 +20702,11 @@ function Trig_HelpButton_Actions()
     end
     DestroyGroup(g)
     DestroyBoolExpr(b)
-    g=null
-    b=null
-    l=null
-    u=null
-    u2=null
+    g=nil
+    b=nil
+    l=nil
+    u=nil
+    u2=nil
     
     EnableTrigger(GetTriggeringTrigger())
 end
@@ -21227,24 +20714,25 @@ end
 function InitTrig_HelpButton()
     gg_trg_HelpButton=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_HelpButton, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_HelpButton, Condition(Trig_HelpButton_Conditions))
-    TriggerAddAction(gg_trg_HelpButton, Trig_HelpButton_Actions)
+    TriggerAddAction(gg_trg_HelpButton, function()
+        if GetSpellAbilityId() ~= FourCC('A1EM') then return end
+        Trig_HelpButton_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: BrokenBlood
 --===========================================================================
 function Trig_BrokenBlood_Conditions()
     --call DisplayTextToPlayer(Player(0),0,0," - ")
-    return GetSpellAbilityId() == FourCC('A1DB')
 end
 function EnemyToBlood()
     local u= GetFilterUnit()
     if UnitAlive(u) and IsPlayerEnemy(GetOwningPlayer(u), udg_LocalPlayer) and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_MECHANICAL) and GetUnitAbilityLevel(u, FourCC('A1DE')) == 0 then
-        u=null
+        u=nil
         return true
     
     end
-    u=null
+    u=nil
     return false
 end
 function BrokenBlood()
@@ -21270,7 +20758,6 @@ function BrokenBlood()
 --    
     DestroyEffect(e)
     udg_LocalPlayer=GetOwningPlayer(u)
-    b=Condition(EnemyToBlood)
     GroupEnumUnitsInRange(g, GetUnitX(u2), GetUnitY(u2), 425, b)
    
     u2=FirstOfGroup(g)
@@ -21281,7 +20768,7 @@ function BrokenBlood()
         udg_LocalReal2=RMaxBJ(2.5, damage + 0.25)
         ExecuteFunc("BrokenBlood")
     end
-    --С шансом 50% распрастранится еще
+    --? ?????? 50% ??????????????? ???
     if Random(1 , 2) then
         u2=FirstOfGroup(g)
         if u2 ~= nil and UnitAlive(u2) then
@@ -21297,9 +20784,9 @@ function BrokenBlood()
     UnitRemoveAbility(u2, FourCC('A1DE'))
     DestroyGroup(g)
     DestroyBoolExpr(b)
-    g=null
-    b=null
-    e=null
+    g=nil
+    b=nil
+    e=nil
     
 end
 function Trig_BrokenBlood_Actions()
@@ -21316,8 +20803,11 @@ end
 function InitTrig_BrokenBlood()
     gg_trg_BrokenBlood=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_BrokenBlood, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_BrokenBlood, Condition(Trig_BrokenBlood_Conditions))
-    TriggerAddAction(gg_trg_BrokenBlood, Trig_BrokenBlood_Actions)
+    TriggerAddAction(gg_trg_BrokenBlood, function()
+        if GetSpellAbilityId() ~= FourCC('A1DB') then return end
+        if not Trig_BrokenBlood_Conditions() then return end
+        Trig_BrokenBlood_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: TrainHakkar
@@ -21326,12 +20816,8 @@ function Trig_TrainHakkar_Conditions()
     return GetUnitTypeId(GetTrainedUnit()) == FourCC('O055')
 end
 function Trig_TrainHakkar_Actions()
-    bj_forLoopAIndex=1
-    bj_forLoopAIndexEnd=50
-    while true do
-        if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
+    for bj_forLoopAIndex = 1, 50 do
         TriggerRegisterUnitLifeEvent(gg_trg_Help, GetTrainedUnit(), LESS_THAN, ( 14 * I2R(GetForLoopIndexA()) ))
-        bj_forLoopAIndex=bj_forLoopAIndex + 1
     end
     TriggerRegisterUnitLifeEvent(gg_trg_Help, GetTrainedUnit(), LESS_THAN, 2.00)
 end
@@ -21425,7 +20911,7 @@ function AT1Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     a[0]=0
-    -- Штормград простой
+    -- ????????? ???????
     
     if GetPlayerTechCount(p, FourCC('R0H6'), true) < 1 then
         i=4
@@ -21448,12 +20934,12 @@ function AT1Count(p)
     
     end
     
-    --Лордеронец
+    --??????????
     if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         i=1
         b=1
         
-        -- интеграция лордеронцев
+        -- ?????????? ???????????
         if GetPlayerTechCount(p, FourCC('R0HV'), true) > 1 then
             i=i + 2
         end
@@ -21523,8 +21009,8 @@ function Trig_AK1T1_Actions()
     UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_AK1T1()
@@ -21546,7 +21032,7 @@ function AT2Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    -- Штормград простой
+    -- ????????? ???????
     a[0]=0
     i=4
     while true do
@@ -21619,8 +21105,8 @@ function Trig_AK1T2_Actions()
     UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_AK1T2()
@@ -21642,7 +21128,7 @@ function AT3Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    -- Штормград простой
+    -- ????????? ???????
     a[0]=0
     i=4
     while true do
@@ -21654,7 +21140,7 @@ function AT3Count(p)
 --    
     
     
-    -- Паладин церкви
+    -- ??????? ??????
     if GetPlayerTechCount(p, FourCC('R0H7'), true) == 1 then
         i=2
         b=1
@@ -21668,7 +21154,7 @@ function AT3Count(p)
         end
     end
     
-        -- Ветеран 2 войны
+        -- ??????? 2 ?????
     if GetPlayerTechCount(p, FourCC('R0HN'), true) == 1 then
         i=1
         b=2
@@ -21720,7 +21206,7 @@ function AT3Count(p)
         --Worgen
         i=1
         b=1
-        --Араторская
+        --??????????
         if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 1
         end
@@ -21734,7 +21220,7 @@ function AT3Count(p)
         end
     end
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -21748,7 +21234,7 @@ function AT3Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -21762,7 +21248,7 @@ function AT3Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -21817,8 +21303,8 @@ function Trig_AK1T3_Actions()
     UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_AK1T3()
@@ -21840,7 +21326,7 @@ function ACavCount(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    -- Штормград простой
+    -- ????????? ???????
     a[0]=0
     i=4
     while true do
@@ -21851,7 +21337,7 @@ function ACavCount(p)
     end
     
     if GetPlayerTechCount(p, FourCC('R0H6'), true) > 0 then
-        -- Штормград грифон
+        -- ????????? ??????
         b=1
         i=3
         while true do
@@ -21863,7 +21349,7 @@ function ACavCount(p)
     end
     
     if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
-        --Лордеронец
+        --??????????
         i=1
         b=1
         
@@ -21882,7 +21368,7 @@ function ACavCount(p)
     
     
     if GetPlayerTechCount(p, FourCC('R0HJ'), true) > 0 then
-        -- Штормград грифон
+        -- ????????? ??????
         b=1
         i=3
         while true do
@@ -21895,7 +21381,7 @@ function ACavCount(p)
     
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -21909,7 +21395,7 @@ function ACavCount(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -21923,7 +21409,7 @@ function ACavCount(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -21978,8 +21464,8 @@ function Trig_AK1Cav_Actions()
     UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_AK1Cav()
@@ -22041,7 +21527,7 @@ function AK1Count(p)
         end
     end
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -22055,7 +21541,7 @@ function AK1Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -22069,7 +21555,7 @@ function AK1Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -22124,8 +21610,8 @@ function Trig_AK2T1_Actions()
     UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_AK2T1()
@@ -22165,7 +21651,7 @@ function AK2Count(p)
     -- Human
     i=1
     b=1
-    --Араторская прибавка
+    --?????????? ????????
         if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 2
         end
@@ -22177,7 +21663,7 @@ function AK2Count(p)
         if b >= i then break end
     end
     
-    --Ворген
+    --??????
     if GetPlayerTechCount(p, FourCC('R0H9'), true) == 1 and GetPlayerTechCount(p, FourCC('R0EH'), true) < 1 then
         i=3
         b=1
@@ -22194,7 +21680,7 @@ function AK2Count(p)
     
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -22208,7 +21694,7 @@ function AK2Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -22222,7 +21708,7 @@ function AK2Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -22277,8 +21763,8 @@ function Trig_AK2T2_Actions()
     UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_AK2T2()
@@ -22300,7 +21786,7 @@ function AK3Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    -- Штормград простой
+    -- ????????? ???????
     a[0]=0
     i=4
     while true do
@@ -22311,11 +21797,11 @@ function AK3Count(p)
     end
     
     if GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
-        --Лордеронец
+        --??????????
         i=1
         b=1
         
-        -- интеграция лордеронцев
+        -- ?????????? ???????????
         if GetPlayerTechCount(p, FourCC('R0HV'), true) > 1 then
             i=i + 2
         end
@@ -22351,7 +21837,7 @@ function AK3Count(p)
         --Kultiras 
         i=1
         b=1
-        --Араторская прибавка
+        --?????????? ????????
         if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 1
         end
@@ -22366,7 +21852,7 @@ function AK3Count(p)
     
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -22380,7 +21866,7 @@ function AK3Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -22394,7 +21880,7 @@ function AK3Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -22449,8 +21935,8 @@ function Trig_AK2T3_Actions()
     UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_AK2T3()
@@ -22516,7 +22002,7 @@ function AM1Count(p)
     --Human
     i=1
     b=1
-    --Араторская прибавка
+    --?????????? ????????
     if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
         i=i + 1
     end
@@ -22544,7 +22030,7 @@ function AM1Count(p)
     end
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -22558,7 +22044,7 @@ function AM1Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -22572,7 +22058,7 @@ function AM1Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -22627,8 +22113,8 @@ function Trig_AM1_Actions()
     UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_AM1()
@@ -22711,7 +22197,7 @@ function AM2Count(p)
         end
     end
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -22725,7 +22211,7 @@ function AM2Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -22739,7 +22225,7 @@ function AM2Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -22794,8 +22280,8 @@ function Trig_AM2_Actions()
     UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_AM2()
@@ -22818,14 +22304,14 @@ function AM3Count(p)
     local pi= GetPlayerId(p)
     a[0]=0
     
-    -- ШРУ
+    -- ???
     if GetPlayerTechCount(p, FourCC('R0HA'), true) >= 1 then
         
         i=4
         b=0
         
         
-        --Араторская прибавка
+        --?????????? ????????
         if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 1
         end
@@ -22842,7 +22328,7 @@ function AM3Count(p)
         --Dranay
         i=1
         b=1
-        -- Левые ветки
+        -- ????? ?????
         if GetPlayerTechCount(p, FourCC('R0HE'), true) + GetPlayerTechCount(p, FourCC('R0HF'), true) > 0 then
             i=i + 2
         end
@@ -22860,7 +22346,7 @@ function AM3Count(p)
         --Dalaran
         i=3
         b=0
-        --Араторская прибавка
+        --?????????? ????????
         if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
             i=i + 2
         end
@@ -22914,8 +22400,8 @@ function Trig_AM3_Actions()
     UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_AM3()
@@ -22955,7 +22441,7 @@ function AE1Count(p)
     --Cannon
     i=1
     b=1
-    --Араторская прибавка
+    --?????????? ????????
     if GetPlayerTechCount(p, FourCC('R0HG'), true) > 0 then
         i=i + 3
     end
@@ -22969,7 +22455,7 @@ function AE1Count(p)
     
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -22983,7 +22469,7 @@ function AE1Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -22997,7 +22483,7 @@ function AE1Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -23052,8 +22538,8 @@ function Trig_AE1_Actions()
     UnitAddAbility(u, FourCC('A17P'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_AE1()
@@ -23123,7 +22609,7 @@ function AE2Count(p)
             if b >= i then break end
         end
     end
---    //Лордеронец
+--    //??????????
 --    set i = 1 
 --    set b = 1
 --    
@@ -23137,7 +22623,7 @@ function AE2Count(p)
     
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -23151,7 +22637,7 @@ function AE2Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -23165,7 +22651,7 @@ function AE2Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -23220,8 +22706,8 @@ function Trig_AE2_Actions()
     --call UnitAddAbility(u,'A17P')
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_AE2()
@@ -23243,7 +22729,7 @@ function AN1Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    -- Шаблон флота
+    -- ?????? ?????
     a[0]=0
     i=4
     while true do
@@ -23254,7 +22740,7 @@ function AN1Count(p)
     end
     
     
-    -- Галеоны култираса
+    -- ??????? ?????????
     if GetPlayerTechCount(p, FourCC('R0HD'), true) >= 1 and GetPlayerTechCount(p, FourCC('R0HH'), true) < 1 then
         i=3
         b=1
@@ -23272,7 +22758,7 @@ function AN1Count(p)
     
     
 --    
---    //Лордеронец
+--    //??????????
 --    set i = 1 
 --    set b = 1
 --    
@@ -23286,7 +22772,7 @@ function AN1Count(p)
     
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -23300,7 +22786,7 @@ function AN1Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -23314,7 +22800,7 @@ function AN1Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -23369,8 +22855,8 @@ function Trig_AN1_Actions()
     
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_AN1()
@@ -23392,7 +22878,7 @@ function AN2Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    -- Шаблон линкора
+    -- ?????? ???????
     a[0]=0
     i=4
     while true do
@@ -23402,7 +22888,7 @@ function AN2Count(p)
             if b >= i then break end
     end
     
---    //Лордеронец
+--    //??????????
 --    set i = 1 
 --    set b = 1
 --    
@@ -23416,7 +22902,7 @@ function AN2Count(p)
     
     
 --    
---    //2 юнит Черной гора
+--    //2 ???? ?????? ????
 --    if GetPlayerTechCount(p,'R0D1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -23430,7 +22916,7 @@ function AN2Count(p)
 --        endloop
 --
 --    endif
---    //3 юнит - эльфы
+--    //3 ???? - ?????
 --    if GetPlayerTechCount(p,'R0D2',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 1 
 --        set b = 1
@@ -23444,7 +22930,7 @@ function AN2Count(p)
 --        endloop
 --
 --    endif
---    //4 юнит андеды
+--    //4 ???? ??????
 --    if GetPlayerTechCount(p,'R0D3',true) == 1 and GetPlayerTechCount(p,'R0E9',true) != 1 then
 --        set i = 2 
 --        set b = 1
@@ -23499,8 +22985,8 @@ function Trig_AN2_Actions()
     
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_AN2()
@@ -23545,7 +23031,7 @@ function Trig_OldAllianceForever_Actions()
     local pi= GetPlayerId(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] - 15
     
-    --Запретил ветки
+    --???????? ?????
     SetPlayerTechMaxAllowed(p, FourCC('R0HS'), 0)
     SetPlayerTechMaxAllowed(p, FourCC('R0HR'), 0)
     SetPlayerTechMaxAllowed(p, FourCC('R0HQ'), 0)
@@ -23700,7 +23186,7 @@ end
 --===========================================================================
 -- Trigger: EndBranch
 --
--- Закрывает дальнейшее общее обучение
+-- ????????? ?????????? ????? ????????
 --===========================================================================
 function EndBranch()
     --New Allies
@@ -23812,7 +23298,7 @@ function Trig_APandarens_Actions()
     if GetPlayerTechCount(p, FourCC('R001'), true) < 1 then
         SetPlayerTechMaxAllowed(p, FourCC('R0HE'), 1)
         
-        --Союз равных
+        --???? ??????
         if GetPlayerTechCount(p, FourCC('R0HD'), true) > 0 then
             SetPlayerTechMaxAllowed(p, FourCC('R0HF'), 1)
         end
@@ -24083,12 +23569,12 @@ function Trig_Kultiras_Actions()
     udg_MainPrice[pi]=udg_MainPrice[pi] + 3
     
     if GetPlayerTechCount(p, FourCC('R001'), true) < 1 then
-        --Союз равных
+        --???? ??????
         if GetPlayerTechCount(p, FourCC('R0HB'), true) > 0 then
             SetPlayerTechMaxAllowed(p, FourCC('R0HF'), 1)
         end
         
-        --Союз аратора
+        --???? ???????
         if GetPlayerTechCount(p, FourCC('R0H7'), true) > 0 then
             SetPlayerTechMaxAllowed(p, FourCC('R0HG'), 1)
         end
@@ -24287,7 +23773,7 @@ function Trig_FinHoly_Actions()
     if GetPlayerTechCount(p, FourCC('R001'), true) < 1 then
         SetPlayerTechMaxAllowed(p, FourCC('R0HH'), 1)
     
-        --Союз аратора
+        --???? ???????
         if GetPlayerTechCount(p, FourCC('R0HD'), true) > 0 then
             SetPlayerTechMaxAllowed(p, FourCC('R0HG'), 1)
         end
@@ -24336,7 +23822,7 @@ function Trig_StormwindFirst_Actions()
     
     
     
-    -- Бонусы левая 
+    -- ?????? ????? 
     if GetPlayerTechCount(p, FourCC('R0HS'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
     end
@@ -24347,7 +23833,7 @@ function Trig_StormwindFirst_Actions()
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
     end
     
-    --Центр
+    --?????
     if GetPlayerTechCount(p, FourCC('R0H9'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
     end
@@ -24412,21 +23898,20 @@ end
 --===========================================================================
 -- Trigger: Kristall2
 --===========================================================================
-function Trig_Kristall2_Conditions()
-    return GetSpellAbilityId() == FourCC('A19S')
-end
 function Trig_Kristall2_Actions()
     local u=  CreateUnit(GetOwningPlayer(GetTriggerUnit()), FourCC('o040'), GetSpellTargetX(), GetSpellTargetY(), bj_UNIT_FACING)
     IssueImmediateOrder(u, "manaflareon")
     UnitApplyTimedLife(u, FourCC('BTLF'), 30.00)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_Kristall2()
     gg_trg_Kristall2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Kristall2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Kristall2, Condition(Trig_Kristall2_Conditions))
-    TriggerAddAction(gg_trg_Kristall2, Trig_Kristall2_Actions)
+    TriggerAddAction(gg_trg_Kristall2, function()
+        if GetSpellAbilityId() ~= FourCC('A19S') then return end
+        Trig_Kristall2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: HolyHelp
@@ -24442,7 +23927,7 @@ function Trig_HolyHelp_Actions()
         IssueImmediateOrder(u, "roar")
     end
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_HolyHelp()
@@ -24465,7 +23950,7 @@ function Trig_WorgenSpell_Actions()
         IssueImmediateOrder(u, "frenzyon")
     end
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_WorgenSpell()
@@ -24477,28 +23962,24 @@ end
 --===========================================================================
 -- Trigger: MagicUsk
 --===========================================================================
-function Trig_MagicUsk_Conditions()
-    return GetSpellAbilityId() == FourCC('A180')
-end
 function Trig_MagicUsk_Actions()
     local u= GetSpellTargetUnit()
     UnitAddAbility(u, FourCC('A182'))
     RemoveAbilityTimed(u , FourCC('A182') , 15)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_MagicUsk()
     gg_trg_MagicUsk=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_MagicUsk, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_MagicUsk, Condition(Trig_MagicUsk_Conditions))
-    TriggerAddAction(gg_trg_MagicUsk, Trig_MagicUsk_Actions)
+    TriggerAddAction(gg_trg_MagicUsk, function()
+        if GetSpellAbilityId() ~= FourCC('A180') then return end
+        Trig_MagicUsk_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Illusions
 --===========================================================================
-function Trig_Illusions_Conditions()
-    return GetSpellAbilityId() == FourCC('A1A5')
-end
 function Trig_Illusions_Actions()
     local u= GetSpellTargetUnit()
     
@@ -24510,27 +23991,26 @@ function Trig_Illusions_Actions()
     end
     
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_Illusions()
     gg_trg_Illusions=CreateTrigger()
     --call DisableTrigger( gg_trg_Illusions )
     TriggerRegisterAnyUnitEventBJ(gg_trg_Illusions, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Illusions, Condition(Trig_Illusions_Conditions))
-    TriggerAddAction(gg_trg_Illusions, Trig_Illusions_Actions)
+    TriggerAddAction(gg_trg_Illusions, function()
+        if GetSpellAbilityId() ~= FourCC('A1A5') then return end
+        Trig_Illusions_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: MassMolot
 --===========================================================================
-function Trig_MassMolot_Conditions()
-    return GetSpellAbilityId() == FourCC('AHtb')
-end
 function Trig_MassMolot_Actions()
     local l= GetUnitLoc(GetTriggerUnit())
     local p= GetOwningPlayer(GetTriggerUnit())
     
-    local bex= Condition(EnemEl)
+    local bex = EnemEl
     local level= GetUnitAbilityLevelSwapped(FourCC('AHtb'), GetTriggerUnit())
     local g= CreateGroup()
     local u
@@ -24543,7 +24023,7 @@ function Trig_MassMolot_Actions()
     l=GetUnitLoc(GetTriggerUnit())
     while true do
         u=FirstOfGroup(g)
-        if i >= ( 4 * level ) or u == null then break end
+        if i >= ( 4 * level ) or u == nil then break end
         
         u2=CreateUnitAtLoc(p, FourCC('H0BN'), l, bj_UNIT_FACING)
         RemoveUnitTimed(u2 , 2)
@@ -24557,30 +24037,28 @@ function Trig_MassMolot_Actions()
     end
     
     
-    u=null
+    u=nil
     DestroyGroup(g)
-    g=null
+    g=nil
     RemoveLocation(l)
-    p=null
-    DestroyBoolExpr(bex)
-    u2=null
-    bex=null
+    p=nil
+    u2=nil
+    bex=nil
 end
 --===========================================================================
 function InitTrig_MassMolot()
     gg_trg_MassMolot=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_MassMolot, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_MassMolot, Condition(Trig_MassMolot_Conditions))
-    TriggerAddAction(gg_trg_MassMolot, Trig_MassMolot_Actions)
+    TriggerAddAction(gg_trg_MassMolot, function()
+        if GetSpellAbilityId() ~= FourCC('AHtb') then return end
+        Trig_MassMolot_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: VarianCharge
 --===========================================================================
-function Trig_VarianCharge_Conditions()
-    return GetSpellAbilityId() == FourCC('A1AG')
-end
 --================================================================================================================================================================================
--- Этам 2 - двигаем героя
+-- ???? 2 - ??????? ?????
 --================
 function Trig_Charge_move_heroV()
     local t= GetExpiredTimer()
@@ -24608,13 +24086,13 @@ function Trig_Charge_move_heroV()
         MaxW=500
     end
     ---------
-    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
-    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --вычисляем высоту
+    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
+    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --????????? ??????
     
-    -- ищем конец пути
+    -- ???? ????? ????
     if JSTRRastMT(x1 , dx , y1 , dy) > 25 then --and not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
-        -- двигаем юнита
+        -- ??????? ?????
         SetUnitX(GT, x)
         SetUnitY(GT, y)
         SetUnitFacing(GT, ugol)
@@ -24627,13 +24105,13 @@ function Trig_Charge_move_heroV()
         --call SetUnitFlyHeight(GT, 0, 0)
         DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
         g=CreateGroup()
-        GroupEnumUnitsInRange(g, dx, dy, 260, null)
+        GroupEnumUnitsInRange(g, dx, dy, 260, nil)
         while true do
             un=FirstOfGroup(g)
-            if un == null then break end
+            if un == nil then break end
             lvl=GetUnitAbilityLevel(GT, JSTRSkill)
             
-            -- винер - проверка на героя
+            -- ????? - ???????? ?? ?????
             if IsUnitType(GT, UNIT_TYPE_HERO) then
                 uron=JSTRKofDmg1 * lvl * 0.75 * GetHeroStr(GT, true) + lvl * JSTRKofDmg2
             else
@@ -24644,7 +24122,7 @@ function Trig_Charge_move_heroV()
                 UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
                 DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
                 ----------
-                -- двигаем юнита в другую сторону от кастера
+                -- ??????? ????? ? ?????? ??????? ?? ???????
                 if JSTRBoolMove then
                     ugol=JSTRUgolMT(dx , GetUnitX(un) , dy , GetUnitY(un))
                     t1=CreateTimer()
@@ -24661,14 +24139,14 @@ function Trig_Charge_move_heroV()
         DestroyGroup(g)
     end
     ---------
-    GT=null
-    un=null
-    g=null
-    t=null
-    t1=null
+    GT=nil
+    un=nil
+    g=nil
+    t=nil
+    t1=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - основная функция
+-- ???? 2 - ???????? ???????
 --================
 function Trig_VarianCharge_Actions()
     local GT= GetTriggerUnit()
@@ -24694,28 +24172,24 @@ function Trig_VarianCharge_Actions()
     SaveReal(Hash, h, 4, x1)
     SaveReal(Hash, h, 5, y1)
     --call DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.025, true, Trig_Charge_move_heroV) --стартуем движение героя
+    TimerStart(t, 0.025, true, Trig_Charge_move_heroV) --???????? ???????? ?????
     ---------
-    GT=null
+    GT=nil
     --set g = null
-    t=null
+    t=nil
 end
 --===========================================================================
 function InitTrig_VarianCharge()
     gg_trg_VarianCharge=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_VarianCharge, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_VarianCharge, Condition(Trig_VarianCharge_Conditions))
-    TriggerAddAction(gg_trg_VarianCharge, Trig_VarianCharge_Actions)
+    TriggerAddAction(gg_trg_VarianCharge, function()
+        if GetSpellAbilityId() ~= FourCC('A1AG') then return end
+        Trig_VarianCharge_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: VariarTaunt
 --===========================================================================
-function Trig_VariarTaunt_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1AM') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_VariarTaunt_Func004C()
     if ( not ( GetUnitAbilityLevelSwapped(FourCC('A1AL'), GetTriggerUnit()) > 1 ) ) then
         return false
@@ -24737,15 +24211,14 @@ function InitTrig_VariarTaunt()
     gg_trg_VariarTaunt=CreateTrigger()
     DisableTrigger(gg_trg_VariarTaunt)
     TriggerRegisterAnyUnitEventBJ(gg_trg_VariarTaunt, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_VariarTaunt, Condition(Trig_VariarTaunt_Conditions))
-    TriggerAddAction(gg_trg_VariarTaunt, Trig_VariarTaunt_Actions)
+    TriggerAddAction(gg_trg_VariarTaunt, function()
+        if GetSpellAbilityId() ~= FourCC('A1AM') then return end
+        Trig_VariarTaunt_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: VariarTitan
 --===========================================================================
-function Trig_VariarTitan_Conditions()
-    return GetSpellAbilityId() == FourCC('A1AO')
-end
 function Trig_VariarTitan_Actions()
     BlzUnitHideAbility(GetTriggerUnit(), FourCC('A1AL'), true)
     UnitAddAbilityBJ(FourCC('A1AP'), GetTriggerUnit())
@@ -24762,15 +24235,14 @@ end
 function InitTrig_VariarTitan()
     gg_trg_VariarTitan=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_VariarTitan, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_VariarTitan, Condition(Trig_VariarTitan_Conditions))
-    TriggerAddAction(gg_trg_VariarTitan, Trig_VariarTitan_Actions)
+    TriggerAddAction(gg_trg_VariarTitan, function()
+        if GetSpellAbilityId() ~= FourCC('A1AO') then return end
+        Trig_VariarTitan_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: VariarDamager
 --===========================================================================
-function Trig_VariarDamager_Conditions()
-    return GetSpellAbilityId() == FourCC('A1AS')
-end
 function Trig_VariarDamager_Actions()
     BlzUnitHideAbility(GetTriggerUnit(), FourCC('A1AL'), true)
     UnitAddAbilityBJ(FourCC('A1AU'), GetTriggerUnit())
@@ -24787,8 +24259,10 @@ end
 function InitTrig_VariarDamager()
     gg_trg_VariarDamager=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_VariarDamager, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_VariarDamager, Condition(Trig_VariarDamager_Conditions))
-    TriggerAddAction(gg_trg_VariarDamager, Trig_VariarDamager_Actions)
+    TriggerAddAction(gg_trg_VariarDamager, function()
+        if GetSpellAbilityId() ~= FourCC('A1AS') then return end
+        Trig_VariarDamager_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Level2
@@ -24959,12 +24433,6 @@ end
 --===========================================================================
 -- Trigger: Vozd
 --===========================================================================
-function Trig_Vozd_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0XI') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Vozd_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC('A0XI'), GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('H0H7'), 1, GetOwningPlayer(GetTriggerUnit()))
@@ -24976,18 +24444,14 @@ function InitTrig_Vozd()
     gg_trg_Vozd=CreateTrigger()
     DisableTrigger(gg_trg_Vozd)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Vozd, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Vozd, Condition(Trig_Vozd_Conditions))
-    TriggerAddAction(gg_trg_Vozd, Trig_Vozd_Actions)
+    TriggerAddAction(gg_trg_Vozd, function()
+        if GetSpellAbilityId() ~= FourCC('A0XI') then return end
+        Trig_Vozd_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Defend
 --===========================================================================
-function Trig_Defend_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0XH') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Defend_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('H0H9'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0XH'), GetOwningPlayer(GetTriggerUnit()))
@@ -24999,18 +24463,14 @@ function InitTrig_Defend()
     gg_trg_Defend=CreateTrigger()
     DisableTrigger(gg_trg_Defend)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Defend, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Defend, Condition(Trig_Defend_Conditions))
-    TriggerAddAction(gg_trg_Defend, Trig_Defend_Actions)
+    TriggerAddAction(gg_trg_Defend, function()
+        if GetSpellAbilityId() ~= FourCC('A0XH') then return end
+        Trig_Defend_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Heal
 --===========================================================================
-function Trig_Heal_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0XJ') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Heal_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('H0H8'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A0XH'), GetOwningPlayer(GetTriggerUnit()))
@@ -25022,8 +24482,10 @@ function InitTrig_Heal()
     gg_trg_Heal=CreateTrigger()
     DisableTrigger(gg_trg_Heal)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Heal, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Heal, Condition(Trig_Heal_Conditions))
-    TriggerAddAction(gg_trg_Heal, Trig_Heal_Actions)
+    TriggerAddAction(gg_trg_Heal, function()
+        if GetSpellAbilityId() ~= FourCC('A0XJ') then return end
+        Trig_Heal_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StartAlliance
@@ -25092,9 +24554,6 @@ end
 --===========================================================================
 -- Trigger: Ult
 --===========================================================================
-function Trig_Ult_Conditions()
-    return GetSpellAbilityId() == FourCC('A15B')
-end
 function Trig_Ult_Actions()
     local loc= GetSpellTargetLoc()
     local i= GetRandomInt(1, 4)
@@ -25110,21 +24569,20 @@ function Trig_Ult_Actions()
     end
     
     RemoveLocation(loc)
-    loc=null
+    loc=nil
 end
 --===========================================================================
 function InitTrig_Ult()
     gg_trg_Ult=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Ult, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Ult, Condition(Trig_Ult_Conditions))
-    TriggerAddAction(gg_trg_Ult, Trig_Ult_Actions)
+    TriggerAddAction(gg_trg_Ult, function()
+        if GetSpellAbilityId() ~= FourCC('A15B') then return end
+        Trig_Ult_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Banshe
 --===========================================================================
-function Trig_Banshe_Conditions()
-    return GetSpellAbilityId() == FourCC('A15S')
-end
 function Trig_Banshe_Actions()
     local g= CreateGroup()
     local u
@@ -25132,36 +24590,35 @@ function Trig_Banshe_Actions()
     local l= GetSpellTargetLoc()
     SetUnitPositionLoc(GetTriggerUnit(), l)
     IssueImmediateOrder(GetTriggerUnit(), "metamorphosis")
-    GroupEnumUnitsInRangeOfLoc(g, l, 250, null)
+    GroupEnumUnitsInRangeOfLoc(g, l, 250, nil)
     BlzStartUnitAbilityCooldown(GetTriggerUnit(), FourCC('A15S'), 30)
     while true do
         u=FirstOfGroup(g)
-        if u == null then break end
+        if u == nil then break end
         if GetOwningPlayer(u) ~= GetOwningPlayer(GetTriggerUnit()) then
             UnitDamageTargetBJ(GetTriggerUnit(), u, 225, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_DEATH)
         end
         GroupRemoveUnit(g, u)
-        u=null
+        u=nil
     end
     DestroyGroup(g)
     RemoveLocation(l)
-    l=null
-    g=null
-    u=null
+    l=nil
+    g=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_Banshe()
     gg_trg_Banshe=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Banshe, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Banshe, Condition(Trig_Banshe_Conditions))
-    TriggerAddAction(gg_trg_Banshe, Trig_Banshe_Actions)
+    TriggerAddAction(gg_trg_Banshe, function()
+        if GetSpellAbilityId() ~= FourCC('A15S') then return end
+        Trig_Banshe_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: BansheCop
 --===========================================================================
-function Trig_BansheCop_Conditions()
-    return GetSpellAbilityId() == FourCC('A15T')
-end
 function Trig_BansheCop_Actions()
     BlzStartUnitAbilityCooldown(GetTriggerUnit(), FourCC('A15S'), 30)
 end
@@ -25169,15 +24626,14 @@ end
 function InitTrig_BansheCop()
     gg_trg_BansheCop=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_BansheCop, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_BansheCop, Condition(Trig_BansheCop_Conditions))
-    TriggerAddAction(gg_trg_BansheCop, Trig_BansheCop_Actions)
+    TriggerAddAction(gg_trg_BansheCop, function()
+        if GetSpellAbilityId() ~= FourCC('A15T') then return end
+        Trig_BansheCop_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: MassInvis
 --===========================================================================
-function Trig_MassInvis_Conditions()
-    return GetSpellAbilityId() == FourCC('A158')
-end
 function MI2()
     return ( GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer )
 end
@@ -25193,7 +24649,7 @@ end
 function Trig_MassInvis_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr=Condition(MI2)
+    udg_Boolexpr = MI2
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 650, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -25205,18 +24661,14 @@ end
 function InitTrig_MassInvis()
     gg_trg_MassInvis=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_MassInvis, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_MassInvis, Condition(Trig_MassInvis_Conditions))
-    TriggerAddAction(gg_trg_MassInvis, Trig_MassInvis_Actions)
+    TriggerAddAction(gg_trg_MassInvis, function()
+        if GetSpellAbilityId() ~= FourCC('A158') then return end
+        Trig_MassInvis_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: BansheeAuto
 --===========================================================================
-function Trig_BansheeAuto_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A14P') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_BansheeAuto_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "possession", GetSpellTargetUnit())
 end
@@ -25225,8 +24677,10 @@ function InitTrig_BansheeAuto()
     gg_trg_BansheeAuto=CreateTrigger()
     DisableTrigger(gg_trg_BansheeAuto)
     TriggerRegisterAnyUnitEventBJ(gg_trg_BansheeAuto, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_BansheeAuto, Condition(Trig_BansheeAuto_Conditions))
-    TriggerAddAction(gg_trg_BansheeAuto, Trig_BansheeAuto_Actions)
+    TriggerAddAction(gg_trg_BansheeAuto, function()
+        if GetSpellAbilityId() ~= FourCC('A14P') then return end
+        Trig_BansheeAuto_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ResGmilDamage
@@ -25254,18 +24708,14 @@ end
 function IsAndPlag()
     return GetUnitTypeId(GetFilterUnit()) == FourCC('o02Y')
 end
-function Trig_Killing_Conditions()
-    return GetSpellAbilityId() == FourCC('A14C')
-end
 function Trig_Killing_Actions()
     local u= GetTriggerUnit()
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local b= Condition(IsAndPlag)
     GroupEnumUnitsSelected(g, p, b)
     while true do
         u=FirstOfGroup(g)
-        if u == null then break end
+        if u == nil then break end
         
         UnitRemoveAbility(u, FourCC('A13O'))
         UnitRemoveAbility(u, FourCC('A13N'))
@@ -25273,21 +24723,23 @@ function Trig_Killing_Actions()
         BlzStartUnitAbilityCooldown(u, FourCC('A13M'), 12)
         BlzStartUnitAbilityCooldown(u, FourCC('A13K'), 45)
         GroupRemoveUnit(g, u)
-        u=null
+        u=nil
     end
     
     
     DestroyGroup(g)
-    g=null
-    p=null
-    u=null
+    g=nil
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_Killing()
     gg_trg_Killing=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Killing, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Killing, Condition(Trig_Killing_Conditions))
-    TriggerAddAction(gg_trg_Killing, Trig_Killing_Actions)
+    TriggerAddAction(gg_trg_Killing, function()
+        if GetSpellAbilityId() ~= FourCC('A14C') then return end
+        Trig_Killing_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StartAttackKilling
@@ -25326,38 +24778,36 @@ end
 --===========================================================================
 -- Trigger: Infect
 --===========================================================================
-function Trig_Infect_Conditions()
-    return GetSpellAbilityId() == FourCC('A14E')
-end
 function Trig_Infect_Actions()
     local u= GetTriggerUnit()
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local b=  Condition(IsAndPlag)
     GroupEnumUnitsSelected(g, p, b)
     while true do
         u=FirstOfGroup(g)
-        if u == null then break end
+        if u == nil then break end
         UnitRemoveAbility(u, FourCC('A13O'))
         UnitRemoveAbility(u, FourCC('A13M'))
         UnitAddAbility(u, FourCC('A13N'))
         BlzStartUnitAbilityCooldown(u, FourCC('A13N'), 12)
         BlzStartUnitAbilityCooldown(u, FourCC('A13K'), 45)
         GroupRemoveUnit(g, u)
-        u=null
+        u=nil
     end
     
     DestroyGroup(g)
-    g=null
-    p=null
-    u=null
+    g=nil
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_Infect()
     gg_trg_Infect=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Infect, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Infect, Condition(Trig_Infect_Conditions))
-    TriggerAddAction(gg_trg_Infect, Trig_Infect_Actions)
+    TriggerAddAction(gg_trg_Infect, function()
+        if GetSpellAbilityId() ~= FourCC('A14E') then return end
+        Trig_Infect_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StartAttackInfect
@@ -25396,38 +24846,36 @@ end
 --===========================================================================
 -- Trigger: Zagraz
 --===========================================================================
-function Trig_Zagraz_Conditions()
-    return GetSpellAbilityId() == FourCC('A14D')
-end
 function Trig_Zagraz_Actions()
     local u= GetTriggerUnit()
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local b=  Condition(IsAndPlag)
     GroupEnumUnitsSelected(g, p, b)
     while true do
         u=FirstOfGroup(g)
-        if u == null then break end
+        if u == nil then break end
         UnitRemoveAbility(u, FourCC('A13N'))
         UnitRemoveAbility(u, FourCC('A13M'))
         UnitAddAbility(u, FourCC('A13O'))
         BlzStartUnitAbilityCooldown(u, FourCC('A13O'), 12)
         BlzStartUnitAbilityCooldown(u, FourCC('A13K'), 45)
         GroupRemoveUnit(g, u)
-        u=null
+        u=nil
     end
     
     DestroyGroup(g)
-    g=null
-    p=null
-    u=null
+    g=nil
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_Zagraz()
     gg_trg_Zagraz=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Zagraz, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Zagraz, Condition(Trig_Zagraz_Conditions))
-    TriggerAddAction(gg_trg_Zagraz, Trig_Zagraz_Actions)
+    TriggerAddAction(gg_trg_Zagraz, function()
+        if GetSpellAbilityId() ~= FourCC('A14D') then return end
+        Trig_Zagraz_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StartAttackZagraz
@@ -25490,38 +24938,36 @@ end
 function IsPlag()
     return GetUnitTypeId(GetFilterUnit()) == FourCC('o02X')
 end
-function Trig_Usual_Conditions()
-    return GetSpellAbilityId() == FourCC('A142')
-end
 function Trig_Usual_Actions()
     local u= GetTriggerUnit()
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local b=  Condition(IsPlag)
     GroupEnumUnitsSelected(g, p, b)
     while true do
         u=FirstOfGroup(g)
-        if u == null then break end
+        if u == nil then break end
         UnitRemoveAbility(u, FourCC('A13P'))
         UnitRemoveAbility(u, FourCC('A13Q'))
         UnitAddAbility(u, FourCC('A13L'))
         BlzStartUnitAbilityCooldown(u, FourCC('A13L'), 19.5)
         BlzStartUnitAbilityCooldown(u, FourCC('A13J'), 45)
-        u=null
+        u=nil
     end
     
     DestroyGroup(g)
-    g=null
-    p=null
-    u=null
+    g=nil
+    p=nil
+    u=nil
         
 end
 --===========================================================================
 function InitTrig_Usual()
     gg_trg_Usual=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Usual, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Usual, Condition(Trig_Usual_Conditions))
-    TriggerAddAction(gg_trg_Usual, Trig_Usual_Actions)
+    TriggerAddAction(gg_trg_Usual, function()
+        if GetSpellAbilityId() ~= FourCC('A142') then return end
+        Trig_Usual_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StartAttackUsual
@@ -25560,37 +25006,35 @@ end
 --===========================================================================
 -- Trigger: Korroz
 --===========================================================================
-function Trig_Korroz_Conditions()
-    return GetSpellAbilityId() == FourCC('A143')
-end
 function Trig_Korroz_Actions()
     local u= GetTriggerUnit()
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local b=  Condition(IsPlag)
     GroupEnumUnitsSelected(g, p, b)
     while true do
         u=FirstOfGroup(g)
-        if u == null then break end
+        if u == nil then break end
         UnitRemoveAbility(u, FourCC('A13L'))
         UnitRemoveAbility(u, FourCC('A13P'))
         UnitAddAbility(u, FourCC('A13Q'))
         BlzStartUnitAbilityCooldown(u, FourCC('A13Q'), 19.5)
         BlzStartUnitAbilityCooldown(u, FourCC('A13J'), 45)
-        u=null
+        u=nil
     end
     
     DestroyGroup(g)
-    g=null
-    p=null
-    u=null
+    g=nil
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_Korroz()
     gg_trg_Korroz=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Korroz, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Korroz, Condition(Trig_Korroz_Conditions))
-    TriggerAddAction(gg_trg_Korroz, Trig_Korroz_Actions)
+    TriggerAddAction(gg_trg_Korroz, function()
+        if GetSpellAbilityId() ~= FourCC('A143') then return end
+        Trig_Korroz_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StartAttackCorroz
@@ -25632,37 +25076,35 @@ end
 --===========================================================================
 -- Trigger: Safety
 --===========================================================================
-function Trig_Safety_Conditions()
-    return GetSpellAbilityId() == FourCC('A144')
-end
 function Trig_Safety_Actions()
     local u= GetTriggerUnit()
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local b=  Condition(IsPlag)
     GroupEnumUnitsSelected(g, p, b)
     while true do
         u=FirstOfGroup(g)
-        if u == null then break end
+        if u == nil then break end
         UnitRemoveAbility(u, FourCC('A13L'))
         UnitRemoveAbility(u, FourCC('A13Q'))
         UnitAddAbility(u, FourCC('A13P'))
         BlzStartUnitAbilityCooldown(u, FourCC('A13P'), 19.5)
         BlzStartUnitAbilityCooldown(u, FourCC('A13J'), 45)
-        u=null
+        u=nil
     end
     
     DestroyGroup(g)
-    g=null
-    p=null
-    u=null
+    g=nil
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_Safety()
     gg_trg_Safety=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Safety, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Safety, Condition(Trig_Safety_Conditions))
-    TriggerAddAction(gg_trg_Safety, Trig_Safety_Actions)
+    TriggerAddAction(gg_trg_Safety, function()
+        if GetSpellAbilityId() ~= FourCC('A144') then return end
+        Trig_Safety_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StartAttackSafety
@@ -25701,12 +25143,6 @@ end
 --===========================================================================
 -- Trigger: MassMindControl2
 --===========================================================================
-function Trig_MassMindControl2_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A15P') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_MassMindControl2_Func002002()
     return ( 0 == 0 )
 end
@@ -25722,7 +25158,7 @@ function Trig_MassMindControl2_Func007A()
 end
 function Trig_MassMindControl2_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr=Condition(Trig_MassMindControl2_Func002002)
+    udg_Boolexpr = Trig_MassMindControl2_Func002002
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 225, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -25735,8 +25171,10 @@ function InitTrig_MassMindControl2()
     gg_trg_MassMindControl2=CreateTrigger()
     DisableTrigger(gg_trg_MassMindControl2)
     TriggerRegisterAnyUnitEventBJ(gg_trg_MassMindControl2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_MassMindControl2, Condition(Trig_MassMindControl2_Conditions))
-    TriggerAddAction(gg_trg_MassMindControl2, Trig_MassMindControl2_Actions)
+    TriggerAddAction(gg_trg_MassMindControl2, function()
+        if GetSpellAbilityId() ~= FourCC('A15P') then return end
+        Trig_MassMindControl2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ChangeOwner
@@ -25934,12 +25372,6 @@ end
 --===========================================================================
 -- Trigger: GelbinSpellClick
 --===========================================================================
-function Trig_GelbinSpellClick_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0XC') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_GelbinSpellClick_Func002Func001Func002Func002C()
     if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 80.00 ) ) then
         return false
@@ -25989,18 +25421,14 @@ function InitTrig_GelbinSpellClick()
     gg_trg_GelbinSpellClick=CreateTrigger()
     DisableTrigger(gg_trg_GelbinSpellClick)
     TriggerRegisterAnyUnitEventBJ(gg_trg_GelbinSpellClick, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_GelbinSpellClick, Condition(Trig_GelbinSpellClick_Conditions))
-    TriggerAddAction(gg_trg_GelbinSpellClick, Trig_GelbinSpellClick_Actions)
+    TriggerAddAction(gg_trg_GelbinSpellClick, function()
+        if GetSpellAbilityId() ~= FourCC('A0XC') then return end
+        Trig_GelbinSpellClick_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: HeroSell
 --===========================================================================
-function Trig_HeroSell_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0TF') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_HeroSell_Actions()
     udg_LocalReal2=GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit())
     udg_LocalReal2=( udg_LocalReal2 * I2R(GetUnitAbilityLevelSwapped(FourCC('A0TF'), GetTriggerUnit())) )
@@ -26013,18 +25441,14 @@ function InitTrig_HeroSell()
     gg_trg_HeroSell=CreateTrigger()
     DisableTrigger(gg_trg_HeroSell)
     TriggerRegisterAnyUnitEventBJ(gg_trg_HeroSell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_HeroSell, Condition(Trig_HeroSell_Conditions))
-    TriggerAddAction(gg_trg_HeroSell, Trig_HeroSell_Actions)
+    TriggerAddAction(gg_trg_HeroSell, function()
+        if GetSpellAbilityId() ~= FourCC('A0TF') then return end
+        Trig_HeroSell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: TankChangeAttack
 --===========================================================================
-function Trig_TankChangeAttack_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0S6') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_TankChangeAttack_Func001C()
     if ( not ( BlzGetUnitWeaponBooleanField(GetTriggerUnit(), UNIT_WEAPON_BF_ATTACKS_ENABLED, 0) == true ) ) then
         return false
@@ -26045,8 +25469,10 @@ function InitTrig_TankChangeAttack()
     gg_trg_TankChangeAttack=CreateTrigger()
     DisableTrigger(gg_trg_TankChangeAttack)
     TriggerRegisterAnyUnitEventBJ(gg_trg_TankChangeAttack, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_TankChangeAttack, Condition(Trig_TankChangeAttack_Conditions))
-    TriggerAddAction(gg_trg_TankChangeAttack, Trig_TankChangeAttack_Actions)
+    TriggerAddAction(gg_trg_TankChangeAttack, function()
+        if GetSpellAbilityId() ~= FourCC('A0S6') then return end
+        Trig_TankChangeAttack_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: TankVenecAttack
@@ -28877,7 +28303,7 @@ function T1Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    --1 юнит
+    --1 ????
     a[0]=0
     i=4
     while true do
@@ -28886,7 +28312,7 @@ function T1Count(p)
             b=b + 1
             if b >= i then break end
     end
-    --2 юнит Черной гора
+    --2 ???? ?????? ????
     if GetPlayerTechCount(p, FourCC('R0D1'), true) == 1 and GetPlayerTechCount(p, FourCC('R0EH'), true) < 1 then
         i=1
         b=1
@@ -28899,7 +28325,7 @@ function T1Count(p)
             if b >= i then break end
         end
     end
-    --3 юнит - эльфы
+    --3 ???? - ?????
     if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=1
         b=1
@@ -28912,7 +28338,7 @@ function T1Count(p)
             if b >= i then break end
         end
     end
-    --4 юнит андеды
+    --4 ???? ??????
     if GetPlayerTechCount(p, FourCC('R0D3'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
@@ -28975,7 +28401,7 @@ function Trig_K1T1_Actions()
     -- Ai moment    
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_K1T1()
@@ -28997,12 +28423,12 @@ function T2Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    --1 юнит
+    --1 ????
     a[0]=0
     
     b=0
     i=2
-    while true do --Орк
+    while true do --???
             a[0]=a[0] + 1
             a[a[0]]=FourCC('o01Q')
             b=b + 1
@@ -29011,7 +28437,7 @@ function T2Count(p)
     
     b=0
     i=1
-    while true do --Огр
+    while true do --???
             a[0]=a[0] + 1
             a[a[0]]=FourCC('o01O')
             b=b + 1
@@ -29074,8 +28500,8 @@ function Trig_K1T2_Actions()
     UnitAddAbility(u, FourCC('A0YU'))
     
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_K1T2()
@@ -29097,12 +28523,12 @@ function T2bCount(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    --1 юнит
+    --1 ????
     a[0]=0
     
     b=0
     i=5
-    while true do --Орк
+    while true do --???
             a[0]=a[0] + 1
             a[a[0]]=FourCC('o02A')
             b=b + 1
@@ -29111,7 +28537,7 @@ function T2bCount(p)
     
     b=0
     i=2
-    while true do --Огр
+    while true do --???
             a[0]=a[0] + 1
             a[a[0]]=FourCC('o00A')
             b=b + 1
@@ -29162,8 +28588,8 @@ function Trig_K1T2b_Actions()
     UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_K1T2b()
@@ -29185,19 +28611,19 @@ function TCavCount(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    --1 юнит
+    --1 ????
     a[0]=0
     
     b=0
     i=3
-    while true do --Орк
+    while true do --???
             a[0]=a[0] + 1
             a[a[0]]=FourCC('o027')
             b=b + 1
             if b >= i then break end
     end
     
-    --3 юнит - эльфы
+    --3 ???? - ?????
     if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=1
         b=1
@@ -29211,7 +28637,7 @@ function TCavCount(p)
         end
     end
     
-    --Драконья пасть
+    --???????? ?????
     if GetPlayerTechCount(p, FourCC('R0E1'), true) == 1 and GetPlayerTechCount(p, FourCC('R0EH'), true) < 1 then
         i=1
         b=1
@@ -29224,7 +28650,7 @@ function TCavCount(p)
             if b >= i then break end
         end
     end
-    --Магнатавр
+    --?????????
     if GetPlayerTechCount(p, FourCC('R0E5'), true) == 1 then
         i=2
         b=1
@@ -29284,8 +28710,8 @@ function Trig_K1TCav_Actions()
     UnitAddAbility(u, FourCC('A0YU'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_K1TCav()
@@ -29307,13 +28733,13 @@ function T3Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    --1 юнит
+    --1 ????
     a[0]=0
     
     if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         b=0
         i=5
-        while true do -- Таурен
+        while true do -- ??????
                 a[0]=a[0] + 1
                 a[a[0]]=FourCC('o01L')
                 
@@ -29324,7 +28750,7 @@ function T3Count(p)
     end
     b=0
     i=2
-    while true do -- Огр-воитель
+    while true do -- ???-???????
             a[0]=a[0] + 1
             a[a[0]]=FourCC('o01M')
             b=b + 1
@@ -29405,7 +28831,7 @@ function Trig_K1T4_Actions()
     b=(CommonHash[pi]["T3" .. i] or 0)
     --
     
-    --Тен Тотем
+    --??? ?????
     if b == FourCC('o01L') and Random(1 , 25) then
         b=FourCC('o032')
     end
@@ -29423,8 +28849,8 @@ function Trig_K1T4_Actions()
     UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_K1T4()
@@ -29446,7 +28872,7 @@ function K1Count(p)
     local b= 0
     local pi= GetPlayerId(p)
     
-    --1 юнит
+    --1 ????
     a[0]=0
     
     -- Troll
@@ -29460,7 +28886,7 @@ function K1Count(p)
         end
     end
     
-    --Орк
+    --???
     b=0
     i=2
     while true do
@@ -29531,8 +28957,8 @@ function Trig_K2T1_Actions()
     UnitAddAbility(u, FourCC('A0YU'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_K2T1()
@@ -29640,8 +29066,8 @@ function Trig_K2T2_Actions()
     UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_K2T2()
@@ -29692,7 +29118,7 @@ function K2bCount(p)
         b=b + 1
         if b >= i then break end
     end
-    --снайпер 2
+    --??????? 2
     if GetPlayerTechCount(p, FourCC('R0E4'), true) >= 1 then
         i=1
         b=1
@@ -29746,8 +29172,8 @@ function Trig_K2T2b_Actions()
     UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_K2T2b()
@@ -29847,8 +29273,8 @@ function Trig_K2T3_Actions()
     UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_K2T3()
@@ -29874,11 +29300,11 @@ function Trig_KM1_Actions()
     local pi= GetPlayerId(p)
     
     a[0]=0
-    --1 юнит
+    --1 ????
     if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         
         i=5
-        while true do --Шаман
+        while true do --?????
                 a[0]=a[0] + 1
                 a[a[0]]=FourCC('o01J')
                 b=b + 1
@@ -29887,7 +29313,7 @@ function Trig_KM1_Actions()
     else
         
         i=4
-        while true do --Колдун
+        while true do --??????
                 a[0]=a[0] + 1
                 a[a[0]]=FourCC('o02G')
                 b=b + 1
@@ -29896,7 +29322,7 @@ function Trig_KM1_Actions()
     
     end
     
-    -- Духостранник
+    -- ????????????
     if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         b=1
         i=3
@@ -29911,7 +29337,7 @@ function Trig_KM1_Actions()
     
     b=1
     i=2
-    while true do --Огр-маг
+    while true do --???-???
             a[0]=a[0] + 1
             a[a[0]]=FourCC('o01K')
             b=b + 1
@@ -29919,7 +29345,7 @@ function Trig_KM1_Actions()
     end
     
     
---    //Драконья пасть - колдун
+--    //???????? ????? - ??????
 --    if GetPlayerTechCount(p,'R0E1',true) == 1  and GetPlayerTechCount(p,'R0EH',true)<1  then
 --        set i = 1 
 --        set b = 1
@@ -29934,7 +29360,7 @@ function Trig_KM1_Actions()
 --
 --    endif
     
-    -- Зачарователь
+    -- ????????????
     if GetPlayerTechCount(p, FourCC('R0F4'), true) >= 1 then
         i=2
         b=1
@@ -29963,8 +29389,8 @@ function Trig_KM1_Actions()
     UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_KM1()
@@ -29990,11 +29416,11 @@ function Trig_KM2_Actions()
     local pi= GetPlayerId(p)
     
     
-    --1 юнит
+    --1 ????
     a[0]=0
   
   
-    -- Магистр
+    -- ???????
     if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
@@ -30007,7 +29433,7 @@ function Trig_KM2_Actions()
             if b >= i then break end
         end
     end
-    -- Темный шаман
+    -- ?????? ?????
     if GetPlayerTechCount(p, FourCC('R0E9'), true) == 1 then
         i=2
         b=1
@@ -30039,8 +29465,8 @@ function Trig_KM2_Actions()
     UnitAddAbility(u, FourCC('A0YU'))
     IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_KM2()
@@ -30066,11 +29492,11 @@ function Trig_KM3_Actions()
     local pi= GetPlayerId(p)
     a[0]=0
     
-    --1 юнит
+    --1 ????
     if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         
         i=4
-        while true do --Знахарь
+        while true do --???????
                 a[0]=a[0] + 1
                 a[a[0]]=FourCC('o024')
                 b=b + 1
@@ -30079,7 +29505,7 @@ function Trig_KM3_Actions()
     else
         
         i=3
-        while true do --Темный маг
+        while true do --?????? ???
                 a[0]=a[0] + 1
                 a[a[0]]=FourCC('o02L')
                 b=b + 1
@@ -30091,7 +29517,7 @@ function Trig_KM3_Actions()
     
     end
     
-    -- Ведьмак
+    -- ???????
     if GetPlayerTechCount(p, FourCC('R0D2'), true) >= 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=1
         b=2
@@ -30105,7 +29531,7 @@ function Trig_KM3_Actions()
         end
     end
     
-    -- Медик
+    -- ?????
     if GetPlayerTechCount(p, FourCC('R0E4'), true) >= 1 then
         i=1
         b=2
@@ -30149,8 +29575,8 @@ function Trig_KM3_Actions()
     UnitAddAbility(u, FourCC('A0YU'))
         IssuePointOrderLoc(u, "attack", l)
     RemoveLocation(l)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_KM3()
@@ -30176,7 +29602,7 @@ function Trig_TechT1_Actions()
     local pi= GetPlayerId(p)
     a[0]=0
     
-    --1 юнит
+    --1 ????
     if GetPlayerTechCount(p, FourCC('R0EA'), true) < 1 then
         
         b=0
@@ -30200,7 +29626,7 @@ function Trig_TechT1_Actions()
         end
     
     end
-    --3 юнит - эльфы ballista
+    --3 ???? - ????? ballista
     if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=1
         b=1
@@ -30256,7 +29682,7 @@ function Trig_TechT2_Actions()
     local pi= GetPlayerId(p)
     
     
-    --1 юнит
+    --1 ????
     a[0]=0
     
     --blood elves arcane guard
@@ -30326,7 +29752,7 @@ function Trig_NavyHeavy_Actions()
     local pi= GetPlayerId(p)
     a[0]=0
     
-    --1 юнит
+    --1 ????
     if GetPlayerTechCount(p, FourCC('R0E9'), true) < 1 then
         
         b=0
@@ -30350,7 +29776,7 @@ function Trig_NavyHeavy_Actions()
         end
     
     end
-    --Отреки
+    --??????
     if GetPlayerTechCount(p, FourCC('R0D3'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
@@ -30406,7 +29832,7 @@ function Trig_NavyLight_Actions()
     local pi= GetPlayerId(p)
     a[0]=0
     
-    --1 юнит
+    --1 ????
     b=0
     i=4
     while true do -- Fregat
@@ -30415,7 +29841,7 @@ function Trig_NavyLight_Actions()
             b=b + 1
             if b >= i then break end
     end
-    --4 юнит андеды
+    --4 ???? ??????
     if GetPlayerTechCount(p, FourCC('R0D3'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
@@ -30429,7 +29855,7 @@ function Trig_NavyLight_Actions()
         end
     end
     
-    --4 юнит андеды
+    --4 ???? ??????
     if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 and GetPlayerTechCount(p, FourCC('R0E9'), true) ~= 1 then
         i=2
         b=1
@@ -30444,7 +29870,7 @@ function Trig_NavyLight_Actions()
     end
     
     
-    --Зандалары
+    --?????????
     if GetPlayerTechCount(p, FourCC('R0F3'), true) == 1 then
         i=2
         b=1
@@ -30458,7 +29884,7 @@ function Trig_NavyLight_Actions()
         end
     end
     
-    --Зандалары
+    --?????????
     if GetPlayerTechCount(p, FourCC('R0E4'), true) == 1 then
         i=2
         b=1
@@ -30506,7 +29932,7 @@ function Trig_TrallHordeForever_Actions()
     local g= CreateGroup()
     udg_MainPrice[pi]=udg_MainPrice[pi] - 15
     
-    --Запретил ветки
+    --???????? ?????
     SetPlayerTechMaxAllowed(p, FourCC('R0DY'), 0)
     SetPlayerTechMaxAllowed(p, FourCC('R0DX'), 0)
     SetPlayerTechMaxAllowed(p, FourCC('R0DZ'), 0)
@@ -30670,8 +30096,8 @@ function Trig_Forsaken_Actions()
     
     
     SetPlayerTechMaxAllowed(p, FourCC('R0D2'), 1)
-    p=null
-    u=null
+    p=nil
+    u=nil
     
 end
 --===========================================================================
@@ -30708,12 +30134,12 @@ function Trig_BloodElf_Actions()
     
     
     
-    SetPlayerTechResearched(p, FourCC('R0E8'), 1) -- Разрешает особую технику
-    SetPlayerTechResearched(p, FourCC('R0E7'), 1) --Разрешает дд
+    SetPlayerTechResearched(p, FourCC('R0E8'), 1) -- ????????? ?????? ???????
+    SetPlayerTechResearched(p, FourCC('R0E7'), 1) --????????? ??
     SetPlayerTechMaxAllowed(p, FourCC('R0EE'), 1)
     
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_BloodElf()
@@ -30744,8 +30170,8 @@ function Trig_Pandarens_Actions()
     if GetPlayerTechCount(p, FourCC('R0EE'), true) == 1 then
         SetPlayerTechMaxAllowed(p, FourCC('R0EI'), 1)
     end
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_Pandarens()
@@ -30823,21 +30249,21 @@ function Trig_CommonHome_Actions()
     
     --End other races
     g=CreateGroup()
-    udg_Boolexpr=Condition(NoneRadicals)
+    udg_Boolexpr = NoneRadicals
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
     while true do
         u=FirstOfGroup(g)
-        if u == null then break end
+        if u == nil then break end
         
         SetUnitOwner(u, Player(24), true)
         
         GroupRemoveUnit(g, u)
-        u=null
+        u=nil
     end
     
     
     
-    -- Бонусы ЧГ -
+    -- ?????? ?? -
     if GetPlayerTechCount(p, FourCC('R0D1'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 3
         --set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 5
@@ -30846,7 +30272,7 @@ function Trig_CommonHome_Actions()
     SetPlayerTechResearched(p, FourCC('R0D1'), 2)
      
     
-    -- Бонусы Драконьей пасти  -
+    -- ?????? ????????? ?????  -
     if GetPlayerTechCount(p, FourCC('R0E1'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 3
         --set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 5
@@ -30855,7 +30281,7 @@ function Trig_CommonHome_Actions()
     end
     SetPlayerTechResearched(p, FourCC('R0E1'), 2)
      
-    -- Бонусы Кор Крон  -
+    -- ?????? ??? ????  -
     if GetPlayerTechCount(p, FourCC('R0E0'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] - 5
         --set udg_HordeElitePrice[pi] = udg_HordeElitePrice[pi] + 5
@@ -30869,7 +30295,7 @@ function Trig_CommonHome_Actions()
     
     
     --call SetPlayerTechMaxAllowed(p,'R0EA',1)
-    --call SetPlayerTechResearched(p,'R0E7',1) //Разрешает дд
+    --call SetPlayerTechResearched(p,'R0E7',1) //????????? ??
     DestroyGroup(g)
     
     
@@ -30885,8 +30311,8 @@ function Trig_CommonHome_Actions()
     
     SetPlayerTechMaxAllowed(p, FourCC('R0EI'), 0)
     SetPlayerTechMaxAllowed(p, FourCC('R0E9'), 0)
-    p=null
-    u=null
+    p=nil
+    u=nil
     
 end
 --===========================================================================
@@ -30914,8 +30340,8 @@ function Trig_Zandalars_Actions()
     
     
  
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_Zandalars()
@@ -30942,8 +30368,8 @@ function Trig_NightBorn_Actions()
     
     
  
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_NightBorn()
@@ -30992,8 +30418,8 @@ function Trig_BlackMountainHorde_Actions()
     
     SetPlayerTechMaxAllowed(p, FourCC('R0E1'), 1)
     
-    p=null
-    u=null
+    p=nil
+    u=nil
     
 end
 --===========================================================================
@@ -31024,8 +30450,8 @@ function Trig_DragonHorde_Actions()
     
     SetPlayerTechMaxAllowed(p, FourCC('R0E0'), 1)
     
-    p=null
-    u=null
+    p=nil
+    u=nil
     
 end
 --===========================================================================
@@ -31058,8 +30484,8 @@ function Trig_CorCron_Actions()
     if GetPlayerTechCount(p, FourCC('R0E0'), true) == 1 then
         SetPlayerTechMaxAllowed(p, FourCC('R0EI'), 1)
     end
-    p=null
-    u=null
+    p=nil
+    u=nil
     
     
 end
@@ -31151,20 +30577,20 @@ function Trig_TrueHorde_Actions()
     
     --End other races
     g=CreateGroup()
-    udg_Boolexpr=Condition(NoNeORc)
+    udg_Boolexpr = NoNeORc
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
     while true do
         u=FirstOfGroup(g)
-        if u == null then break end
+        if u == nil then break end
         
         KillUnit(u)
         
         GroupRemoveUnit(g, u)
-        u=null
+        u=nil
     end
     
     
-    -- Бонусы отреков  -
+    -- ?????? ???????  -
     if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 4
 --    set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 4
@@ -31174,7 +30600,7 @@ function Trig_TrueHorde_Actions()
     end
     SetPlayerTechResearched(p, FourCC('R0D3'), 2)
     
-    -- Бонусы бладов -
+    -- ?????? ?????? -
     if GetPlayerTechCount(p, FourCC('R0D2'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 4
 --        set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 3
@@ -31185,7 +30611,7 @@ function Trig_TrueHorde_Actions()
     end
     SetPlayerTechResearched(p, FourCC('R0D2'), 2)
     
-    -- Бонусы пандаренов  -
+    -- ?????? ??????????  -
     if GetPlayerTechCount(p, FourCC('R0E0'), true) == 1 then
         udg_MainPrice[pi]=udg_MainPrice[pi] + 2
 --        set udg_HordeLandPrice[pi] = udg_HordeLandPrice[pi] + 3
@@ -31196,7 +30622,7 @@ function Trig_TrueHorde_Actions()
      
     
     SetPlayerTechMaxAllowed(p, FourCC('R0EA'), 1)
-    SetPlayerTechResearched(p, FourCC('R0E7'), 1) --Разрешает дд
+    SetPlayerTechResearched(p, FourCC('R0E7'), 1) --????????? ??
     DestroyGroup(g)
     
     SetPlayerTechMaxAllowed(p, FourCC('Otch'), 0)
@@ -31211,8 +30637,8 @@ function Trig_TrueHorde_Actions()
     udg_LocalPlayer=p
     ForGroupBJ(GetUnitsOfPlayerAndTypeId(udg_LocalPlayer, FourCC('Otch')), Trig_Replace_Func001A) -- INLINED!!
     
-    p=null
-    u=null
+    p=nil
+    u=nil
     
 end
 --===========================================================================
@@ -31260,8 +30686,8 @@ function Trig_IronHorde_Actions()
     
     
     
-    p=null
-    u=null
+    p=nil
+    u=nil
     
 end
 --===========================================================================
@@ -31298,8 +30724,8 @@ function Trig_ShaHorde_Actions()
     local pi= GetPlayerId(p)
     countAll(p)
     udg_MainPrice[pi]=udg_MainPrice[pi] - 3
-    SetPlayerAbilityAvailable(p, FourCC('A1OJ'), true) -- Ша абилка
-    SetPlayerAbilityAvailable(p, FourCC('A1OK'), true) -- Ша абилка
+    SetPlayerAbilityAvailable(p, FourCC('A1OJ'), true) -- ?? ??????
+    SetPlayerAbilityAvailable(p, FourCC('A1OK'), true) -- ?? ??????
     
     
 end
@@ -31386,7 +30812,7 @@ function Trig_BuyGoblins_Actions()
     --call ChangeTechUnitsNow(p,pi)
     --call ChangeNavyUnitsNow(p,pi)
     
-    SetPlayerTechResearched(p, FourCC('R0E8'), 1) -- Разрешает особую технику
+    SetPlayerTechResearched(p, FourCC('R0E8'), 1) -- ????????? ?????? ???????
    
 end
 --===========================================================================
@@ -31410,7 +30836,7 @@ function Trig_Magnatavrs_Actions()
     udg_HordeLandPrice[pi]=udg_HordeLandPrice[pi] + 1
     --call ChangeLandUnitsNow(p,pi)
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_Magnatavrs()
@@ -31434,7 +30860,7 @@ function Trig_DeathKnights_Actions()
     --set udg_HordeElitePrice[pi] = udg_HordeElitePrice[pi] - 4
     --call ChangeEliteUnitsNow(p,pi)
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_DeathKnights()
@@ -31457,7 +30883,7 @@ function Trig_Compromise_Actions()
     udg_MainPrice[pi]=udg_MainPrice[pi] - 9
     
     
-    --Запретил другие ветки
+    --???????? ?????? ?????
     SetPlayerTechMaxAllowed(p, FourCC('R0EH'), 0)
     SetPlayerTechMaxAllowed(p, FourCC('R0E9'), 0)
     
@@ -31507,8 +30933,8 @@ function Trig_BerserkTrol_Actions()
     RemoveAbilityTimed(u , FourCC('A13I') , 9)
     RemoveAbilityTimed(u , FourCC('Bbsk') , 9)
         
-    u=null
-    s=null
+    u=nil
+    s=nil
 end
 --===========================================================================
 function InitTrig_BerserkTrol()
@@ -31521,12 +30947,6 @@ end
 --===========================================================================
 -- Trigger: AutoSetkaH
 --===========================================================================
-function Trig_AutoSetkaH_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0ZB') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_AutoSetkaH_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "ensnare", GetSpellTargetUnit())
 end
@@ -31535,18 +30955,14 @@ function InitTrig_AutoSetkaH()
     gg_trg_AutoSetkaH=CreateTrigger()
     DisableTrigger(gg_trg_AutoSetkaH)
     TriggerRegisterAnyUnitEventBJ(gg_trg_AutoSetkaH, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AutoSetkaH, Condition(Trig_AutoSetkaH_Conditions))
-    TriggerAddAction(gg_trg_AutoSetkaH, Trig_AutoSetkaH_Actions)
+    TriggerAddAction(gg_trg_AutoSetkaH, function()
+        if GetSpellAbilityId() ~= FourCC('A0ZB') then return end
+        Trig_AutoSetkaH_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: IronStar
 --===========================================================================
-function Trig_IronStar_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A103') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_IronStar_Actions()
     UnitApplyTimedLifeBJ(10.00, FourCC('BTLF'), GetTriggerUnit())
 end
@@ -31555,18 +30971,14 @@ function InitTrig_IronStar()
     gg_trg_IronStar=CreateTrigger()
     DisableTrigger(gg_trg_IronStar)
     TriggerRegisterAnyUnitEventBJ(gg_trg_IronStar, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_IronStar, Condition(Trig_IronStar_Conditions))
-    TriggerAddAction(gg_trg_IronStar, Trig_IronStar_Actions)
+    TriggerAddAction(gg_trg_IronStar, function()
+        if GetSpellAbilityId() ~= FourCC('A103') then return end
+        Trig_IronStar_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AutoShield2
 --===========================================================================
-function Trig_AutoShield2_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A124') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_AutoShield2_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "antimagicshell", GetSpellTargetUnit())
 end
@@ -31575,8 +30987,10 @@ function InitTrig_AutoShield2()
     gg_trg_AutoShield2=CreateTrigger()
     DisableTrigger(gg_trg_AutoShield2)
     TriggerRegisterAnyUnitEventBJ(gg_trg_AutoShield2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AutoShield2, Condition(Trig_AutoShield2_Conditions))
-    TriggerAddAction(gg_trg_AutoShield2, Trig_AutoShield2_Actions)
+    TriggerAddAction(gg_trg_AutoShield2, function()
+        if GetSpellAbilityId() ~= FourCC('A124') then return end
+        Trig_AutoShield2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: PandaSecondAttack
@@ -31627,9 +31041,6 @@ end
 --===========================================================================
 -- Trigger: ThrallMolnya
 --===========================================================================
-function Trig_ThrallMolnya_Conditions()
-    return GetSpellAbilityId() == FourCC('A12X')
-end
 function Thrallenum()
     CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     udg_LocalUnit2=GetLastCreatedUnit()
@@ -31642,7 +31053,7 @@ end
 function Trig_ThrallMolnya_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr=Condition(EnemEl)
+    udg_Boolexpr = EnemEl
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 400, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -31654,18 +31065,14 @@ end
 function InitTrig_ThrallMolnya()
     gg_trg_ThrallMolnya=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_ThrallMolnya, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ThrallMolnya, Condition(Trig_ThrallMolnya_Conditions))
-    TriggerAddAction(gg_trg_ThrallMolnya, Trig_ThrallMolnya_Actions)
+    TriggerAddAction(gg_trg_ThrallMolnya, function()
+        if GetSpellAbilityId() ~= FourCC('A12X') then return end
+        Trig_ThrallMolnya_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Okovi
 --===========================================================================
-function Trig_Okovi_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A12Z') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Okovi_Func002002()
     return ( 0 == 0 )
 end
@@ -31680,7 +31087,7 @@ function Trig_Okovi_Func007A()
 end
 function Trig_Okovi_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr=Condition(Trig_Okovi_Func002002)
+    udg_Boolexpr = Trig_Okovi_Func002002
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 225, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -31693,15 +31100,14 @@ function InitTrig_Okovi()
     gg_trg_Okovi=CreateTrigger()
     DisableTrigger(gg_trg_Okovi)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Okovi, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Okovi, Condition(Trig_Okovi_Conditions))
-    TriggerAddAction(gg_trg_Okovi, Trig_Okovi_Actions)
+    TriggerAddAction(gg_trg_Okovi, function()
+        if GetSpellAbilityId() ~= FourCC('A12Z') then return end
+        Trig_Okovi_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: GarraoshMassBloodlast
 --===========================================================================
-function Trig_GarraoshMassBloodlast_Conditions()
-    return GetSpellAbilityId() == FourCC('A12M')
-end
 function Trig_GarraoshMassBloodlast_Func002002()
     return ( GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer )
 end
@@ -31717,7 +31123,7 @@ end
 function Trig_GarraoshMassBloodlast_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr=Condition(Trig_GarraoshMassBloodlast_Func002002)
+    udg_Boolexpr = Trig_GarraoshMassBloodlast_Func002002
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 500, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -31729,8 +31135,10 @@ end
 function InitTrig_GarraoshMassBloodlast()
     gg_trg_GarraoshMassBloodlast=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_GarraoshMassBloodlast, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_GarraoshMassBloodlast, Condition(Trig_GarraoshMassBloodlast_Conditions))
-    TriggerAddAction(gg_trg_GarraoshMassBloodlast, Trig_GarraoshMassBloodlast_Actions)
+    TriggerAddAction(gg_trg_GarraoshMassBloodlast, function()
+        if GetSpellAbilityId() ~= FourCC('A12M') then return end
+        Trig_GarraoshMassBloodlast_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StartHorde
@@ -31765,8 +31173,8 @@ function HordeStartLimits()
     SetPlayerTechMaxAllowedSwap(FourCC('R0KO'), 0, GetEnumPlayer()) -- Sha
     SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1LO'), false)
     
-    SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1OJ'), false) -- Ша абилка
-    SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1OK'), false) -- Ша абилка магу
+    SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1OJ'), false) -- ?? ??????
+    SetPlayerAbilityAvailable(GetEnumPlayer(), FourCC('A1OK'), false) -- ?? ?????? ????
     countAll(GetEnumPlayer())
 end
 function Trig_StartHorde_Actions()
@@ -31925,26 +31333,24 @@ end
 --===========================================================================
 -- Trigger: QTunAye
 --===========================================================================
-function Trig_QTunAye_Conditions()
-    return GetSpellAbilityId() == FourCC('A1B8')
-end
 function Trig_QTunAye_Actions()
     local u= CreateUnit(GetOwningPlayer(GetTriggerUnit()), FourCC('oeye'), GetSpellTargetX(), GetSpellTargetY(), 0)
     UnitApplyTimedLife(u, FourCC('BTLF'), 1200)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_QTunAye()
     gg_trg_QTunAye=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_QTunAye, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_QTunAye, Condition(Trig_QTunAye_Conditions))
-    TriggerAddAction(gg_trg_QTunAye, Trig_QTunAye_Actions)
+    TriggerAddAction(gg_trg_QTunAye, function()
+        if GetSpellAbilityId() ~= FourCC('A1B8') then return end
+        Trig_QTunAye_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ChoseLich
 --===========================================================================
 function Trig_ChoseLich_Conditions()
-    return GetSpellAbilityId() == FourCC('A0SW') or GetSpellAbilityId() == FourCC('A0T1')
 end
 function HaveSpell()
     return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A0SW')) + GetUnitAbilityLevel(GetFilterUnit(), FourCC('A0T1')) ~= 0
@@ -31960,18 +31366,18 @@ function Trig_ChoseLich_Actions()
     local i= 0
     local p= GetOwningPlayer(GetTriggerUnit())
     ClearSelectionForPlayer(p)
-    udg_Boolexpr=Condition(HaveSpell)
+    udg_Boolexpr = HaveSpell
     GroupEnumUnitsSelected(g, p, udg_Boolexpr)
-    udg_Boolexpr=Condition(Trig_ChoseLich_Func003002)
+    udg_Boolexpr = Trig_ChoseLich_Func003002
     
     while true do
         u1=FirstOfGroup(g)
-        if u1 == null or i >= 12 then break end
+        if u1 == nil or i >= 12 then break end
         
         GroupEnumUnitsInRangeCounted(g2, GetUnitX(u1), GetUnitY(u1), 1200, udg_Boolexpr, IMaxBJ(12 - i, 1))
         while true do
             u2=FirstOfGroup(g2)
-            if u2 == null or i >= 12 then break end
+            if u2 == nil or i >= 12 then break end
         
             SelectUnitAddForPlayer(u2, p)
     
@@ -31991,10 +31397,10 @@ function Trig_ChoseLich_Actions()
    
     DestroyGroup(g)
     DestroyGroup(g2)
-    g=null
-    g2=null
-    u1=null
-    u2=null
+    g=nil
+    g2=nil
+    u1=nil
+    u2=nil
     
 end
 --===========================================================================
@@ -32002,15 +31408,15 @@ function InitTrig_ChoseLich()
     gg_trg_ChoseLich=CreateTrigger()
     DisableTrigger(gg_trg_ChoseLich)
     TriggerRegisterAnyUnitEventBJ(gg_trg_ChoseLich, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ChoseLich, Condition(Trig_ChoseLich_Conditions))
-    TriggerAddAction(gg_trg_ChoseLich, Trig_ChoseLich_Actions)
+    TriggerAddAction(gg_trg_ChoseLich, function()
+        if GetSpellAbilityId() ~= FourCC('A0SW') then return end
+        if not Trig_ChoseLich_Conditions() then return end
+        Trig_ChoseLich_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ChoseUnits2
 --===========================================================================
-function Trig_ChoseUnits2_Conditions()
-    return GetSpellAbilityId() == FourCC('A0SX')
-end
 function OnlyOrganic()
     return GetUnitTypeId(GetFilterUnit()) == FourCC('e02W') and not IsUnitType(GetFilterUnit(), UNIT_TYPE_PEON)
 end
@@ -32018,20 +31424,22 @@ function Trig_ChoseUnits2_Actions()
     local g= CreateGroup()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPosition3=GetSpellTargetLoc()
-    udg_Boolexpr=Condition(OnlyOrganic)
+    udg_Boolexpr = OnlyOrganic
     GroupEnumUnitsInRange(g, GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 400, udg_Boolexpr)
     GroupPointOrder(g, "attack", GetSpellTargetX(), GetSpellTargetY())
     
     DestroyGroup(g)
-    g=null
+    g=nil
 end
 --===========================================================================
 function InitTrig_ChoseUnits2()
     gg_trg_ChoseUnits2=CreateTrigger()
     DisableTrigger(gg_trg_ChoseUnits2)
     TriggerRegisterAnyUnitEventBJ(gg_trg_ChoseUnits2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ChoseUnits2, Condition(Trig_ChoseUnits2_Conditions))
-    TriggerAddAction(gg_trg_ChoseUnits2, Trig_ChoseUnits2_Actions)
+    TriggerAddAction(gg_trg_ChoseUnits2, function()
+        if GetSpellAbilityId() ~= FourCC('A0SX') then return end
+        Trig_ChoseUnits2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: MainSpawn2
@@ -32094,16 +31502,16 @@ function spawnlich()
     else
         PauseTimer(t)
         DestroyTimer(t)
-        t=null
+        t=nil
         SaveBoolean(Hash, uid, 1, false)
         FlushChildHashtable(Hash, id)
-        p=null
+        p=nil
     end
     SaveInteger(Hash, uid, 1, currentCount)
-    t=null
-    u=null
-    u2=null
-    p=null
+    t=nil
+    u=nil
+    u2=nil
+    p=nil
 end
 function Trig_MainSpawn2_Actions()
     local t= CreateTimer()
@@ -32114,7 +31522,7 @@ function Trig_MainSpawn2_Actions()
     SaveInteger(Hash, uid, 1, 0)
     SaveBoolean(Hash, uid, 2, true)
     
-    t=null
+    t=nil
     
 end
 --===========================================================================
@@ -32149,8 +31557,8 @@ function Trig_LichDead_Actions()
     end
     
     
-    t=null
-    u2=null
+    t=nil
+    u2=nil
 end
 --===========================================================================
 function InitTrig_LichDead()
@@ -32203,9 +31611,6 @@ end
 --===========================================================================
 -- Trigger: TweenChange
 --===========================================================================
-function Trig_TweenChange_Conditions()
-    return GetSpellAbilityId() == FourCC('A188')
-end
 function Brothers()
     local id= GetUnitTypeId(GetFilterUnit())
     return id == FourCC('U02R') or id == FourCC('U02S')
@@ -32215,7 +31620,7 @@ function Trig_TweenChange_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local bex= Condition(Brothers)
+    local bex = Brothers
     local u2
     local x= GetUnitX(u)
     local y= GetUnitY(u)
@@ -32233,19 +31638,20 @@ function Trig_TweenChange_Actions()
     
     
     DestroyGroup(g)
-    g=null
-    DestroyBoolExpr(bex)
-    p=null
-    bex=null
-    u=null
-    u2=null
+    g=nil
+    p=nil
+    bex=nil
+    u=nil
+    u2=nil
 end
 --===========================================================================
 function InitTrig_TweenChange()
     gg_trg_TweenChange=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_TweenChange, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_TweenChange, Condition(Trig_TweenChange_Conditions))
-    TriggerAddAction(gg_trg_TweenChange, Trig_TweenChange_Actions)
+    TriggerAddAction(gg_trg_TweenChange, function()
+        if GetSpellAbilityId() ~= FourCC('A188') then return end
+        Trig_TweenChange_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: TweenBrothersRev
@@ -32258,7 +31664,7 @@ function Trig_TweenBrothersRev_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local bex= Condition(Brothers)
+    local bex = Brothers
     local u2
     
     GroupEnumUnitsOfPlayer(g, p, bex)
@@ -32273,12 +31679,11 @@ function Trig_TweenBrothersRev_Actions()
         IssueTargetOrder(u2, "spiritlink", u)
     end
     DestroyGroup(g)
-    g=null
-    DestroyBoolExpr(bex)
-    p=null
-    bex=null
-    u=null
-    u2=null
+    g=nil
+    p=nil
+    bex=nil
+    u=nil
+    u2=nil
     
     
 end
@@ -32300,7 +31705,7 @@ function Trig_TweenBrothersDead_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local bex= Condition(Brothers)
+    local bex = Brothers
     local u2
     
     GroupEnumUnitsOfPlayer(g, p, bex)
@@ -32311,12 +31716,11 @@ function Trig_TweenBrothersDead_Actions()
         KillUnit(u2)
     end
     DestroyGroup(g)
-    g=null
-    DestroyBoolExpr(bex)
-    p=null
-    bex=null
-    u=null
-    u2=null
+    g=nil
+    p=nil
+    bex=nil
+    u=nil
+    u2=nil
     
     
 end
@@ -32404,7 +31808,7 @@ function Trig_LichStartUpgrade_Actions()
     local e= AddSpecialEffectTarget("DoodadsDungeonTerrainEggSackEggSack1.mdl", GetTriggerUnit(), "origin")
     BlzSetSpecialEffectColor(e, 255, 102, 0)
     SaveEffectHandle(Hash, uid, StringHash("Cocon"), e)
-    e=null
+    e=nil
     
     
     
@@ -32427,7 +31831,7 @@ end
 --===========================================================================
 -- Trigger: LichinkaFinish
 --
--- Триггер срабатывает, когда личинка заканчивает свое превращение в юнита. Переведен в код, слегка обработан, но трубут доработки
+-- ??????? ???????????, ????? ??????? ??????????? ???? ??????????? ? ?????. ????????? ? ???, ?????? ?????????, ?? ?????? ?????????
 --===========================================================================
 function Trig_LichinkaFinish_Conditions()
     gTriggerUnit=GetTriggerUnit()
@@ -32442,7 +31846,7 @@ function OrderAfterUleyFinish()
     else
         IssuePointOrderLoc(gTriggerUnit, "attack", l)
     end
-    l=null
+    l=nil
 end
 function ItIsHive()
     local id= GetUnitTypeId(GetFilterUnit())
@@ -32455,7 +31859,7 @@ function Trig_LichinkaFinish_Actions()
     local e
     
     
-    --Блок врубай таймер
+    --???? ?????? ??????
     local oldid= GetHandleId(gTriggerUnit)
     local u2= LoadUnitHandle(Hash, oldid, 1)
     local id2= GetHandleId(u2)
@@ -32472,29 +31876,29 @@ function Trig_LichinkaFinish_Actions()
         SaveUnitHandle(Hash, GetHandleId(t), 1, u2)
         SaveBoolean(Hash, id2, 1, true)
     end
-    t=null
-    u2=null
+    t=nil
+    u2=nil
     
     
     
     --local real x = GetUnitX(gPlayer)
     --local real y = GetUnitY(u)
-    -- хз откуда 2, уже все забыл))) и баг пофиксил без понимания.
+    -- ?? ?????? 2, ??? ??? ?????))) ? ??? ???????? ??? ?????????.
     
     
-    --Кейс если кансел
+    --???? ???? ??????
 --    if GetUnitTypeId(u) == 'e01I' then
 --
 --    endif
     
-    --Тк была личинка, она улучшилась, а не вошла на карту, значит надо вот это уже посчитать
+    --?? ???? ???????, ??? ??????????, ? ?? ????? ?? ?????, ?????? ???? ??? ??? ??? ?????????
     AddCountDis(gTriggerUnit , i)
     
     udg_LocalPosition[16]=GetUnitLoc(gTriggerUnit)
-    udg_Boolexpr=Condition(ItIsHive)
+    udg_Boolexpr = ItIsHive
     udg_LocalOtrad2=CreateGroup()
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[16], 300, udg_Boolexpr)
-    -- Куда идти если рядом есть улей
+    -- ???? ???? ???? ????? ???? ????
     ForGroup(udg_LocalOtrad2, OrderAfterUleyFinish)
     GroupClear(udg_LocalOtrad2)
     SetUnitLifePercentBJ(gTriggerUnit, 100)
@@ -32509,18 +31913,18 @@ function Trig_LichinkaFinish_Actions()
     
     
     
-    -- Трутень
+    -- ???????
     -- ----
     if id == FourCC('e01G') then
         
         CreateNUnitsAtLoc(1, FourCC('e01G'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
         udg_LocalPosition[18]=GetUnitLoc(GetLastCreatedUnit())
-        udg_Boolexpr=Condition(ItIsHive)
+        udg_Boolexpr = ItIsHive
         GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[18], 300, udg_Boolexpr)
         
         IssueTargetDestructableOrder(GetLastCreatedUnit(), "harvest", GetUnitRallyDestructable(FirstOfGroup(udg_LocalOtrad2)))
         udg_LocalPosition[17]=GetUnitLoc(GetLastCreatedUnit())
-        udg_Boolexpr=Condition(ItIsHive)
+        udg_Boolexpr = ItIsHive
         GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[17], 300, udg_Boolexpr)
         if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
             SelectUnitAddForPlayer(GetLastCreatedUnit(), gPlayer)
@@ -32531,7 +31935,7 @@ function Trig_LichinkaFinish_Actions()
     
     
     
-    -- Слизень
+    -- ???????
     -- ----
     elseif id == FourCC('e01Z') then
         UnitAddAbilityBJ(FourCC('A0VH'), gTriggerUnit)
@@ -32549,7 +31953,7 @@ function Trig_LichinkaFinish_Actions()
     
     
     
-    -- Солдат т1
+    -- ?????? ?1
     -- ----
     elseif id == FourCC('e02W') then
         CreateNUnitsAtLoc(1, FourCC('e02W'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
@@ -32557,14 +31961,14 @@ function Trig_LichinkaFinish_Actions()
         
         
         
-        -- Выбор
+        -- ?????
         if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
             SelectUnitAddForPlayer(GetLastCreatedUnit(), gPlayer)
         end
         
         
         
-        -- Плодовитость
+        -- ????????????
         if GetPlayerTechCountSimple(FourCC('R089'), GetOwningPlayer(gTriggerUnit)) == 1 then
             SetUnitAbilityLevelSwapped(FourCC('A0VH'), GetLastCreatedUnit(), 2)
             SetUnitAbilityLevelSwapped(FourCC('A0VH'), gTriggerUnit, 2)
@@ -32585,7 +31989,7 @@ function Trig_LichinkaFinish_Actions()
     
     
     -- ----
-    -- Оса
+    -- ???
     elseif id == FourCC('e01Q') and GetPlayerTechCountSimple(FourCC('R08B'), GetOwningPlayer(gTriggerUnit)) == 1 then
         CreateNUnitsAtLoc(1, FourCC('e01Q'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
         UnitAddAbilityBJ(FourCC('A0VH'), gTriggerUnit)
@@ -32598,11 +32002,11 @@ function Trig_LichinkaFinish_Actions()
         end
     
     
-    --Паук страж и его паразит 
+    --???? ????? ? ??? ??????? 
     elseif id == FourCC('e01U') then
         
         IssueImmediateOrder(gTriggerUnit, "parasiteon")
-    --Мана пророку
+    --???? ???????
     elseif id == FourCC('e01T') then
         
         SetUnitManaBJ(gTriggerUnit, 125)
@@ -32617,7 +32021,7 @@ function Trig_LichinkaFinish_Actions()
     RemoveLocation(udg_LocalPosition[16])
     RemoveLocation(udg_LocalPosition[17])
     RemoveLocation(udg_LocalPosition[18])
-    e=null
+    e=nil
 end
 --===========================================================================
 function InitTrig_LichinkaFinish()
@@ -32655,7 +32059,7 @@ function Trig_KokonDead2_Actions()
     local u= GetTriggerUnit()
     DestroyEffect(LoadEffectHandle(Hash, GetHandleId(u) * 10, StringHash("Cocon")))
     FlushChildHashtable(Hash, GetHandleId(u) * 10)
-    u=null
+    u=nil
 --    set udg_LocalPosition[16] = GetUnitLoc(GetTriggerUnit())
 --    call ForGroupBJ( udg_Kokon, function Trig_KokonDead2_Func002A )
 --    call RemoveLocation(udg_LocalPosition[16])
@@ -32671,19 +32075,16 @@ end
 --===========================================================================
 -- Trigger: SpellBook
 --===========================================================================
-function Trig_SpellBook_Conditions()
-    return GetSpellAbilityId() == FourCC('A1AV')
-end
 function Trig_SpellBook_Actions()
     local u1
     local g= CreateGroup()
     local i= 0
     
-    udg_Boolexpr=Condition(HaveSpell)
+    udg_Boolexpr = HaveSpell
     GroupEnumUnitsSelected(g, GetOwningPlayer(GetTriggerUnit()), udg_Boolexpr)
     while true do
             u1=FirstOfGroup(g)
-            if u1 == null then break end
+            if u1 == nil then break end
             IssueImmediateOrder(u1, "spellbook")
             GroupRemoveUnit(g, u1)
     end
@@ -32692,33 +32093,32 @@ function Trig_SpellBook_Actions()
     
     
     DestroyGroup(g)
-    u1=null
-    g=null
+    u1=nil
+    g=nil
 end
 --===========================================================================
 function InitTrig_SpellBook()
     gg_trg_SpellBook=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpellBook, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_SpellBook, Condition(Trig_SpellBook_Conditions))
-    TriggerAddAction(gg_trg_SpellBook, Trig_SpellBook_Actions)
+    TriggerAddAction(gg_trg_SpellBook, function()
+        if GetSpellAbilityId() ~= FourCC('A1AV') then return end
+        Trig_SpellBook_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: SpawnLich
 --===========================================================================
-function Trig_SpawnLich_Conditions()
-    return GetSpellAbilityId() == FourCC('A0ZU')
-end
 function Trig_SpawnLich_Actions()
     local u= GetTriggerUnit()
     local p= GetOwningPlayer(u)
     local i
     local u2= CreateUnit(p, FourCC('e01I'), GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
-   --call UnitAddAbility(u2,'A1JF') //Антиреген
+   --call UnitAddAbility(u2,'A1JF') //?????????
     BlzSetUnitRealFieldBJ(u2, UNIT_RF_HIT_POINTS_REGENERATION_RATE, - 4.00)
     SetUnitTimeScale(u2, 0.25)
     u2=CreateUnit(p, FourCC('e01I'), GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
     BlzSetUnitRealFieldBJ(u2, UNIT_RF_HIT_POINTS_REGENERATION_RATE, - 4.00)
-   -- call UnitAddAbility(u2,'A1JF') //Антиреген
+   -- call UnitAddAbility(u2,'A1JF') //?????????
     SetUnitTimeScale(u2, 0.25)
     i=GetUnitAbilityLevel(u, FourCC('A1AV'))
     
@@ -32750,16 +32150,18 @@ function Trig_SpawnLich_Actions()
     
     
     
-    p=null
-    u=null
-    u2=null
+    p=nil
+    u=nil
+    u2=nil
 end
 --===========================================================================
 function InitTrig_SpawnLich()
     gg_trg_SpawnLich=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpawnLich, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_SpawnLich, Condition(Trig_SpawnLich_Conditions))
-    TriggerAddAction(gg_trg_SpawnLich, Trig_SpawnLich_Actions)
+    TriggerAddAction(gg_trg_SpawnLich, function()
+        if GetSpellAbilityId() ~= FourCC('A0ZU') then return end
+        Trig_SpawnLich_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: SpawnTimer
@@ -32792,7 +32194,7 @@ end
 --===========================================================================
 -- Trigger: Antennu
 --
--- Антенны
+-- ???????
 --===========================================================================
 function Trig_Antennu_Conditions()
     gTriggerUnit=GetConstructedStructure()
@@ -32813,12 +32215,6 @@ end
 --===========================================================================
 -- Trigger: AutoPolet
 --===========================================================================
-function Trig_AutoPolet_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0KL') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_AutoPolet_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "deathcoil", GetSpellTargetUnit())
 end
@@ -32827,15 +32223,14 @@ function InitTrig_AutoPolet()
     gg_trg_AutoPolet=CreateTrigger()
     DisableTrigger(gg_trg_AutoPolet)
     TriggerRegisterAnyUnitEventBJ(gg_trg_AutoPolet, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AutoPolet, Condition(Trig_AutoPolet_Conditions))
-    TriggerAddAction(gg_trg_AutoPolet, Trig_AutoPolet_Actions)
+    TriggerAddAction(gg_trg_AutoPolet, function()
+        if GetSpellAbilityId() ~= FourCC('A0KL') then return end
+        Trig_AutoPolet_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: FastKokon
 --===========================================================================
-function Trig_FastKokon_Conditions()
-    return GetSpellAbilityId() == FourCC('A0ML')
-end
 function Trig_FastKokon_Actions()
     gUnit=GetTriggerUnit()
     SetUnitTimeScale(gUnit, 1)
@@ -32849,8 +32244,10 @@ function InitTrig_FastKokon()
     gg_trg_FastKokon=CreateTrigger()
     DisableTrigger(gg_trg_FastKokon)
     TriggerRegisterAnyUnitEventBJ(gg_trg_FastKokon, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_FastKokon, Condition(Trig_FastKokon_Conditions))
-    TriggerAddAction(gg_trg_FastKokon, Trig_FastKokon_Actions)
+    TriggerAddAction(gg_trg_FastKokon, function()
+        if GetSpellAbilityId() ~= FourCC('A0ML') then return end
+        Trig_FastKokon_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: FireAutoCast
@@ -33491,9 +32888,6 @@ end
 --===========================================================================
 -- Trigger: SpellRecharge
 --===========================================================================
-function Trig_SpellRecharge_Conditions()
-    return GetSpellAbilityId() == FourCC('A1N4')
-end
 function Trig_SpellRecharge_Actions()
     BlzEndUnitAbilityCooldown(GetTriggerUnit(), FourCC('A0DU'))
     BlzEndUnitAbilityCooldown(GetTriggerUnit(), FourCC('A1N0'))
@@ -33505,8 +32899,10 @@ end
 function InitTrig_SpellRecharge()
     gg_trg_SpellRecharge=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpellRecharge, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_SpellRecharge, Condition(Trig_SpellRecharge_Conditions))
-    TriggerAddAction(gg_trg_SpellRecharge, Trig_SpellRecharge_Actions)
+    TriggerAddAction(gg_trg_SpellRecharge, function()
+        if GetSpellAbilityId() ~= FourCC('A1N4') then return end
+        Trig_SpellRecharge_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: CorrupTrain
@@ -33532,26 +32928,9 @@ end
 --===========================================================================
 -- Trigger: CorrupPlus
 --===========================================================================
-function Trig_CorrupPlus_Conditions()
-    return GetSpellAbilityId() == FourCC('A0AS')
-end
 function Trig_CorrupPlus_Func008A()
     SetUnitAbilityLevelSwapped(FourCC('A0AW'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetEnumUnit())))
     SetUnitAbilityLevelSwapped(FourCC('A0AV'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetEnumUnit())))
-end
-function CorriptionTimerPlus()
-    local t= GetExpiredTimer()
-    local tid= GetHandleId(t)
-    local p= Player(LoadInteger(Hash, tid, 0))
-    if GetPlayerTechCountSimple(FourCC('R04O'), p) == 6 then
-        SetPlayerAbilityAvailableBJ(true, FourCC('A0AT'), p)
-    else
-        SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p)
-        SetPlayerAbilityAvailableBJ(true, FourCC('A0AT'), p)
-    end
-    FlushChildHashtable(Hash, tid)
-    DestroyTimer(t)
-    t=null
 end
 function Trig_CorrupPlus_Actions()
     local t= CreateTimer()
@@ -33561,47 +32940,40 @@ function Trig_CorrupPlus_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AT'), p)
     SetPlayerTechResearchedSwap(FourCC('R04O'), ( GetPlayerTechCountSimple(FourCC('R04O'), p) + 1 ), p)
     
-    GroupEnumUnitsOfPlayer(udg_LocalOtrad2, p, null)
+    GroupEnumUnitsOfPlayer(udg_LocalOtrad2, p, nil)
     ForGroupBJ(udg_LocalOtrad2, Trig_CorrupPlus_Func008A)
     GroupClear(udg_LocalOtrad2)
     
-    SaveInteger(Hash, tid, 0, GetPlayerId(p))
-    TimerStart(t, 60, false, CorriptionTimerPlus)
+	local p2 = p
+	TimerStart(t, 60, false, function()
+		if GetPlayerTechCountSimple(FourCC('R04O'), p2) == 6 then
+			SetPlayerAbilityAvailableBJ(true, FourCC('A0AT'), p2)
+		else
+			SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p2)
+			SetPlayerAbilityAvailableBJ(true, FourCC('A0AT'), p2)
+		end
+		DestroyTimer(t)
+	end)
     
     
-    t=null
+    t=nil
 end
 --===========================================================================
 function InitTrig_CorrupPlus()
     gg_trg_CorrupPlus=CreateTrigger()
     DisableTrigger(gg_trg_CorrupPlus)
     TriggerRegisterAnyUnitEventBJ(gg_trg_CorrupPlus, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_CorrupPlus, Condition(Trig_CorrupPlus_Conditions))
-    TriggerAddAction(gg_trg_CorrupPlus, Trig_CorrupPlus_Actions)
+    TriggerAddAction(gg_trg_CorrupPlus, function()
+        if GetSpellAbilityId() ~= FourCC('A0AS') then return end
+        Trig_CorrupPlus_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: CorrupMinus
 --===========================================================================
-function Trig_CorrupMinus_Conditions()
-    return GetSpellAbilityId() == FourCC('A0AT')
-end
 function Trig_CorrupMinus_Func008A()
     SetUnitAbilityLevelSwapped(FourCC('A0AW'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetEnumUnit())))
     SetUnitAbilityLevelSwapped(FourCC('A0AV'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04O'), GetOwningPlayer(GetEnumUnit())))
-end
-function CorriptionTimerMinus()
-    local t= GetExpiredTimer()
-    local tid= GetHandleId(t)
-    local p= Player(LoadInteger(Hash, tid, 0))
-    if GetPlayerTechCountSimple(FourCC('R04O'), p) == 1 then
-        SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p)
-    else
-        SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p)
-        SetPlayerAbilityAvailableBJ(true, FourCC('A0AT'), p)
-    end
-    FlushChildHashtable(Hash, tid)
-    DestroyTimer(t)
-    t=null
 end
 function Trig_CorrupMinus_Actions()
     local t= CreateTimer()
@@ -33610,25 +32982,35 @@ function Trig_CorrupMinus_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AS'), p)
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AT'), p)
     SetPlayerTechResearchedSwap(FourCC('R04O'), ( GetPlayerTechCountSimple(FourCC('R04O'), p) - 1 ), p)
-    GroupEnumUnitsOfPlayer(udg_LocalOtrad2, p, null)
+    GroupEnumUnitsOfPlayer(udg_LocalOtrad2, p, nil)
     ForGroupBJ(udg_LocalOtrad2, Trig_CorrupMinus_Func008A)
     GroupClear(udg_LocalOtrad2)
     
     
-    SaveInteger(Hash, tid, 0, GetPlayerId(p))
-    TimerStart(t, 60, false, CorriptionTimerMinus)
+	local p2 = p
+	TimerStart(t, 60, false, function()
+		if GetPlayerTechCountSimple(FourCC('R04O'), p2) == 1 then
+			SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p2)
+		else
+			SetPlayerAbilityAvailableBJ(true, FourCC('A0AS'), p2)
+			SetPlayerAbilityAvailableBJ(true, FourCC('A0AT'), p2)
+		end
+		DestroyTimer(t)
+	end)
     
    
     
-    t=null
+    t=nil
 end
 --===========================================================================
 function InitTrig_CorrupMinus()
     gg_trg_CorrupMinus=CreateTrigger()
     DisableTrigger(gg_trg_CorrupMinus)
     TriggerRegisterAnyUnitEventBJ(gg_trg_CorrupMinus, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_CorrupMinus, Condition(Trig_CorrupMinus_Conditions))
-    TriggerAddAction(gg_trg_CorrupMinus, Trig_CorrupMinus_Actions)
+    TriggerAddAction(gg_trg_CorrupMinus, function()
+        if GetSpellAbilityId() ~= FourCC('A0AT') then return end
+        Trig_CorrupMinus_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Potreblenie
@@ -33657,7 +33039,7 @@ function Trig_Potreblenie_Actions()
         return
     else
     end
-    udg_Boolexpr=Condition(Trig_Potreblenie_Func002002)
+    udg_Boolexpr = Trig_Potreblenie_Func002002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Potreblenie_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -33717,7 +33099,7 @@ function Trig_BracResearch_Actions()
         return
     else
     end
-    udg_Boolexpr=Condition(Trig_BracResearch_Func002002)
+    udg_Boolexpr = Trig_BracResearch_Func002002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_BracResearch_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -33777,7 +33159,7 @@ function Trig_PodjogResearch_Actions()
         return
     else
     end
-    udg_Boolexpr=Condition(Trig_PodjogResearch_Func002002)
+    udg_Boolexpr = Trig_PodjogResearch_Func002002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PodjogResearch_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -33837,7 +33219,7 @@ function Trig_PodruvResearc_Actions()
         return
     else
     end
-    udg_Boolexpr=Condition(Trig_PodruvResearc_Func002002)
+    udg_Boolexpr = Trig_PodruvResearc_Func002002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PodruvResearc_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -33885,7 +33267,7 @@ function Trig_Brac_Actions()
     SetTextTagFadepointBJ(t, 2.00)
     SetTextTagVelocityBJ(t, 75.00, 90)
     RemoveTextTagTimed(t , 2.1)
-    t=null
+    t=nil
 end
 --===========================================================================
 function InitTrig_Brac()
@@ -33913,7 +33295,7 @@ function Trig_Samopodruv_Actions()
         SetTextTagVelocityBJ(t, 75.00, 90)
         RemoveTextTagTimed(t , 2.1)
     end
-    t=null
+    t=nil
 end
 --===========================================================================
 function InitTrig_Samopodruv()
@@ -33941,7 +33323,7 @@ function Trig_Samopodjog_Actions()
         SetTextTagVelocityBJ(t, 75.00, 90)
         RemoveTextTagTimed(t , 2.1)
     end
-    t=null
+    t=nil
 end
 --===========================================================================
 function InitTrig_Samopodjog()
@@ -33954,12 +33336,6 @@ end
 --===========================================================================
 -- Trigger: Adrenalin
 --===========================================================================
-function Trig_Adrenalin_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0D2') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Adrenalin_Actions()
     SetUnitLifePercentBJ(GetTriggerUnit(), ( GetUnitLifePercent(GetTriggerUnit()) - 15.00 ))
 end
@@ -33968,8 +33344,10 @@ function InitTrig_Adrenalin()
     gg_trg_Adrenalin=CreateTrigger()
     DisableTrigger(gg_trg_Adrenalin)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Adrenalin, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Adrenalin, Condition(Trig_Adrenalin_Conditions))
-    TriggerAddAction(gg_trg_Adrenalin, Trig_Adrenalin_Actions)
+    TriggerAddAction(gg_trg_Adrenalin, function()
+        if GetSpellAbilityId() ~= FourCC('A0D2') then return end
+        Trig_Adrenalin_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: GazloySpellheals
@@ -33989,9 +33367,9 @@ function Trig_GazloySpellheals_Actions()
     SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) + damage * ( 0.01 * level ))
   
     
-    u=null
+    u=nil
     DestroyEffect(e)
-    e=null
+    e=nil
 end
 --===========================================================================
 function InitTrig_GazloySpellheals()
@@ -34020,7 +33398,7 @@ function Gtiers()
         u=CreateUnit(Player(pi), FourCC('h0P6'), 0, 0, 0.0)
     end
     SaveUnitHandle(Hash, pi, puhash, u)
-    u=null
+    u=nil
 end
 function Trig_FarmBuildG_Conditions()
     gUnit=GetTriggerUnit()
@@ -34933,7 +34311,7 @@ function Trig_Start_Elves_O_Func001A()
     SetPlayerTechMaxAllowedSwap(FourCC('H045'), 1, GetEnumPlayer())
     SetPlayerTechMaxAllowedSwap(FourCC('Hjnd'), 1, GetEnumPlayer())
     SetPlayerTechMaxAllowedSwap(FourCC('Hkal'), 1, GetEnumPlayer())
-    --Заступник скверны
+    --????????? ???????
     SetPlayerTechMaxAllowedSwap(FourCC('h0O6'), 0, GetEnumPlayer())
 end
 function Trig_Start_Elves_O_Actions()
@@ -34948,9 +34326,6 @@ end
 --===========================================================================
 -- Trigger: KaelMassAstral
 --===========================================================================
-function Trig_KaelMassAstral_Conditions()
-    return GetSpellAbilityId() == FourCC('A08R')
-end
 function Trig_KaelMassAstral_Func007A()
     CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     UnitAddAbilityBJ(FourCC('AHbn'), GetLastCreatedUnit())
@@ -34962,7 +34337,7 @@ end
 function Trig_KaelMassAstral_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 150, null)
+    GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 150, nil)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     ForGroupBJ(udg_LocalOtrad2, Trig_KaelMassAstral_Func007A)
@@ -34974,15 +34349,14 @@ function InitTrig_KaelMassAstral()
     gg_trg_KaelMassAstral=CreateTrigger()
     DisableTrigger(gg_trg_KaelMassAstral)
     TriggerRegisterAnyUnitEventBJ(gg_trg_KaelMassAstral, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_KaelMassAstral, Condition(Trig_KaelMassAstral_Conditions))
-    TriggerAddAction(gg_trg_KaelMassAstral, Trig_KaelMassAstral_Actions)
+    TriggerAddAction(gg_trg_KaelMassAstral, function()
+        if GetSpellAbilityId() ~= FourCC('A08R') then return end
+        Trig_KaelMassAstral_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: LortemarArmorActive
 --===========================================================================
-function Trig_LortemarArmorActive_Conditions()
-    return GetSpellAbilityId() == FourCC('A16M')
-end
 function Trig_LortemarArmorActive_Actions()
     local u= GetTriggerUnit()
     UnitAddAbility(u, FourCC('A0DD'))
@@ -34990,42 +34364,40 @@ function Trig_LortemarArmorActive_Actions()
     
     RemoveAbilityTimed(u , FourCC('A0DD') , 20)
     RemoveAbilityTimed(u , FourCC('ACmi') , 20)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_LortemarArmorActive()
     gg_trg_LortemarArmorActive=CreateTrigger()
     DisableTrigger(gg_trg_LortemarArmorActive)
     TriggerRegisterAnyUnitEventBJ(gg_trg_LortemarArmorActive, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_LortemarArmorActive, Condition(Trig_LortemarArmorActive_Conditions))
-    TriggerAddAction(gg_trg_LortemarArmorActive, Trig_LortemarArmorActive_Actions)
+    TriggerAddAction(gg_trg_LortemarArmorActive, function()
+        if GetSpellAbilityId() ~= FourCC('A16M') then return end
+        Trig_LortemarArmorActive_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: LiadrinUlta
 --===========================================================================
-function Trig_LiadrinUlta_Conditions()
-    return GetSpellAbilityId() == FourCC('A1KU')
-end
 function Trig_LiadrinUlta_Actions()
     local u= GetTriggerUnit()
     UnitAddAbility(u, FourCC('A1KV'))
     RemoveAbilityTimed(u , FourCC('A1KV') , 15)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_LiadrinUlta()
     gg_trg_LiadrinUlta=CreateTrigger()
     
     TriggerRegisterAnyUnitEventBJ(gg_trg_LiadrinUlta, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_LiadrinUlta, Condition(Trig_LiadrinUlta_Conditions))
-    TriggerAddAction(gg_trg_LiadrinUlta, Trig_LiadrinUlta_Actions)
+    TriggerAddAction(gg_trg_LiadrinUlta, function()
+        if GetSpellAbilityId() ~= FourCC('A1KU') then return end
+        Trig_LiadrinUlta_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: SpellMassSunAttack
 --===========================================================================
-function Trig_SpellMassSunAttack_Conditions()
-    return GetSpellAbilityId() == FourCC('A1KX')
-end
 function Trig_SpellMassSunAttack_Actions()
     local l= GetSpellTargetLoc()
     local caster= GetTriggerUnit()
@@ -35039,10 +34411,10 @@ function Trig_SpellMassSunAttack_Actions()
     local i= 0
     udg_LocalPlayer=p
     --set bex = Condition(function EnemEl) 
-    GroupEnumUnitsInRangeOfLoc(g, l, 150, null)
+    GroupEnumUnitsInRangeOfLoc(g, l, 150, nil)
     
     if FirstOfGroup(g) == nil then
-        --Нету врагов
+        --???? ??????
         BlzStartUnitAbilityCooldown(caster, dammyAbility, 15)
         SetUnitState(caster, UNIT_STATE_MANA, GetUnitState(caster, UNIT_STATE_MANA) + 100 + 35 * level)
         
@@ -35052,7 +34424,7 @@ function Trig_SpellMassSunAttack_Actions()
         l=GetUnitLoc(caster)
         while true do
             u=FirstOfGroup(g)
-            if u == null then break end
+            if u == nil then break end
             
             u2=CreateUnitAtLoc(p, Dummy, l, bj_UNIT_FACING)
             
@@ -35073,25 +34445,27 @@ function Trig_SpellMassSunAttack_Actions()
             RemoveUnitTimed(u2 , 2)
             i=i + 1
             GroupRemoveUnit(g, u)
-            u=null
+            u=nil
         end
     end
     
-    u=null
+    u=nil
     DestroyGroup(g)
-    g=null
+    g=nil
     RemoveLocation(l)
-    p=null
-    --call DestroyBoolExpr(bex)
-    u2=null
+    p=nil
+    --call
+    u2=nil
     --set bex = null
 end
 --===========================================================================
 function InitTrig_SpellMassSunAttack()
     gg_trg_SpellMassSunAttack=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpellMassSunAttack, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SpellMassSunAttack, Condition(Trig_SpellMassSunAttack_Conditions))
-    TriggerAddAction(gg_trg_SpellMassSunAttack, Trig_SpellMassSunAttack_Actions)
+    TriggerAddAction(gg_trg_SpellMassSunAttack, function()
+        if GetSpellAbilityId() ~= FourCC('A1KX') then return end
+        Trig_SpellMassSunAttack_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Manasbor
@@ -35682,9 +35056,6 @@ end
 --===========================================================================
 -- Trigger: felspell
 --===========================================================================
-function Trig_felspell_Conditions()
-    return GetSpellAbilityId() == FourCC('A02D') and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R01G'), true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1QZ')) < 1 -- and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('B00U'))<1
-end
 function Trig_felspell_Actions()
     if UnitAlive(GetSpellTargetUnit()) then
         UnitAddAbility(GetSpellTargetUnit(), FourCC('A1QZ'))
@@ -35694,15 +35065,15 @@ end
 function InitTrig_felspell()
     gg_trg_felspell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_felspell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_felspell, Condition(Trig_felspell_Conditions))
-    TriggerAddAction(gg_trg_felspell, Trig_felspell_Actions)
+    TriggerAddAction(gg_trg_felspell, function()
+        if GetSpellAbilityId() ~= FourCC('A02D') then return end
+        if not (GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R01G'), true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1QZ')) < 1) then return end
+        Trig_felspell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: voidspell
 --===========================================================================
-function Trig_voidspell_Conditions()
-    return GetSpellAbilityId() == FourCC('A02D') and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R01H'), true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1R0')) < 1 -- and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('B00U'))<1
-end
 function Trig_voidspell_Actions()
     if UnitAlive(GetSpellTargetUnit()) then
         UnitAddAbility(GetSpellTargetUnit(), FourCC('A1R0'))
@@ -35712,15 +35083,15 @@ end
 function InitTrig_voidspell()
     gg_trg_voidspell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_voidspell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_voidspell, Condition(Trig_voidspell_Conditions))
-    TriggerAddAction(gg_trg_voidspell, Trig_voidspell_Actions)
+    TriggerAddAction(gg_trg_voidspell, function()
+        if GetSpellAbilityId() ~= FourCC('A02D') then return end
+        if not (GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R01H'), true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1R0')) < 1) then return end
+        Trig_voidspell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: lightspel
 --===========================================================================
-function Trig_lightspel_Conditions()
-    return GetSpellAbilityId() == FourCC('A02D') and GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R01I'), true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1R1')) < 1
-end
 function Trig_lightspel_Actions()
     if UnitAlive(GetSpellTargetUnit()) then
         UnitAddAbility(GetSpellTargetUnit(), FourCC('A1R1'))
@@ -35730,8 +35101,11 @@ end
 function InitTrig_lightspel()
     gg_trg_lightspel=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_lightspel, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_lightspel, Condition(Trig_lightspel_Conditions))
-    TriggerAddAction(gg_trg_lightspel, Trig_lightspel_Actions)
+    TriggerAddAction(gg_trg_lightspel, function()
+        if GetSpellAbilityId() ~= FourCC('A02D') then return end
+        if not (GetPlayerTechCount(GetOwningPlayer(GetTriggerUnit()), FourCC('R01I'), true) == 3 and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A1R1')) < 1) then return end
+        Trig_lightspel_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Porcha
@@ -35757,7 +35131,6 @@ end
 -- Trigger: FirePodgogStrela
 --===========================================================================
 function Trig_FirePodgogStrela_Conditions()
-    return GetSpellAbilityId() == FourCC('A030') or GetSpellAbilityId() == FourCC('A07N')
 end
 function Trig_FirePodgogStrela_Actions()
    
@@ -35769,28 +35142,31 @@ function InitTrig_FirePodgogStrela()
     gg_trg_FirePodgogStrela=CreateTrigger()
     DisableTrigger(gg_trg_FirePodgogStrela)
     TriggerRegisterAnyUnitEventBJ(gg_trg_FirePodgogStrela, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_FirePodgogStrela, Condition(Trig_FirePodgogStrela_Conditions))
-    TriggerAddAction(gg_trg_FirePodgogStrela, Trig_FirePodgogStrela_Actions)
+    TriggerAddAction(gg_trg_FirePodgogStrela, function()
+        if GetSpellAbilityId() ~= FourCC('A030') then return end
+        if not Trig_FirePodgogStrela_Conditions() then return end
+        Trig_FirePodgogStrela_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Souz
 --===========================================================================
-function Trig_Souz_Conditions()
-    return GetSpellAbilityId() == FourCC('A02Y') and GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A16H')) ~= 1
-end
 function Trig_Souz_Actions()
     local u= GetSpellTargetUnit()
     UnitAddAbility(u, FourCC('A16H'))
     RemoveAbilityTimed(u , FourCC('A16H') , 60)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_Souz()
     gg_trg_Souz=CreateTrigger()
     DisableTrigger(gg_trg_Souz)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Souz, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Souz, Condition(Trig_Souz_Conditions))
-    TriggerAddAction(gg_trg_Souz, Trig_Souz_Actions)
+    TriggerAddAction(gg_trg_Souz, function()
+        if GetSpellAbilityId() ~= FourCC('A02Y') then return end
+        if not (GetUnitAbilityLevel(GetSpellTargetUnit(), FourCC('A16H')) ~= 1) then return end
+        Trig_Souz_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ArcanaIscachenie
@@ -35816,9 +35192,6 @@ end
 --===========================================================================
 -- Trigger: ArcanaStrela
 --===========================================================================
-function Trig_ArcanaStrela_Conditions()
-    return GetSpellAbilityId() == FourCC('A02R') and GetSpellAbilityId() == FourCC('A02G')
-end
 function Trig_ArcanaStrela_Actions()
     UnitAddAbility(GetSpellTargetUnit(), FourCC('A02T'))
     RemoveAbilityTimed(GetSpellTargetUnit() , FourCC('A02T') , 9)
@@ -35828,8 +35201,11 @@ function InitTrig_ArcanaStrela()
     gg_trg_ArcanaStrela=CreateTrigger()
     DisableTrigger(gg_trg_ArcanaStrela)
     TriggerRegisterAnyUnitEventBJ(gg_trg_ArcanaStrela, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ArcanaStrela, Condition(Trig_ArcanaStrela_Conditions))
-    TriggerAddAction(gg_trg_ArcanaStrela, Trig_ArcanaStrela_Actions)
+    TriggerAddAction(gg_trg_ArcanaStrela, function()
+        if GetSpellAbilityId() ~= FourCC('A02R') then return end
+        if not (GetSpellAbilityId() == FourCC('A02G')) then return end
+        Trig_ArcanaStrela_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: FirePodgog
@@ -35857,7 +35233,6 @@ end
 -- Trigger: FirePodgogStrela2
 --===========================================================================
 function Trig_FirePodgogStrela2_Conditions()
-    return GetSpellAbilityId() == FourCC('A07P') or GetSpellAbilityId() == FourCC('A02J')
 end
 function Trig_FirePodgogStrela2_Actions()
     local u= GetSpellTargetUnit()
@@ -35865,25 +35240,22 @@ function Trig_FirePodgogStrela2_Actions()
     UnitAddAbility(GetSpellTargetUnit(), FourCC('A02Q'))
     RemoveAbilityTimed(GetSpellTargetUnit() , FourCC('A02O') , 2)
     RemoveAbilityTimed(GetSpellTargetUnit() , FourCC('A02Q') , 2)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_FirePodgogStrela2()
     gg_trg_FirePodgogStrela2=CreateTrigger()
     DisableTrigger(gg_trg_FirePodgogStrela2)
     TriggerRegisterAnyUnitEventBJ(gg_trg_FirePodgogStrela2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_FirePodgogStrela2, Condition(Trig_FirePodgogStrela2_Conditions))
-    TriggerAddAction(gg_trg_FirePodgogStrela2, Trig_FirePodgogStrela2_Actions)
+    TriggerAddAction(gg_trg_FirePodgogStrela2, function()
+        if GetSpellAbilityId() ~= FourCC('A07P') then return end
+        if not Trig_FirePodgogStrela2_Conditions() then return end
+        Trig_FirePodgogStrela2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AutoMana
 --===========================================================================
-function Trig_AutoMana_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A02E') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_AutoMana_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "drain", GetSpellTargetUnit())
 end
@@ -35892,8 +35264,10 @@ function InitTrig_AutoMana()
     gg_trg_AutoMana=CreateTrigger()
     DisableTrigger(gg_trg_AutoMana)
     TriggerRegisterAnyUnitEventBJ(gg_trg_AutoMana, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AutoMana, Condition(Trig_AutoMana_Conditions))
-    TriggerAddAction(gg_trg_AutoMana, Trig_AutoMana_Actions)
+    TriggerAddAction(gg_trg_AutoMana, function()
+        if GetSpellAbilityId() ~= FourCC('A02E') then return end
+        Trig_AutoMana_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AutoStrelaFire
@@ -35985,12 +35359,6 @@ end
 --===========================================================================
 -- Trigger: AutoSummonGonch
 --===========================================================================
-function Trig_AutoSummonGonch_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A032') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_AutoSummonGonch_Actions()
     IssueImmediateOrderBJ(GetTriggerUnit(), "waterelemental")
 end
@@ -35999,8 +35367,10 @@ function InitTrig_AutoSummonGonch()
     gg_trg_AutoSummonGonch=CreateTrigger()
     DisableTrigger(gg_trg_AutoSummonGonch)
     TriggerRegisterAnyUnitEventBJ(gg_trg_AutoSummonGonch, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AutoSummonGonch, Condition(Trig_AutoSummonGonch_Conditions))
-    TriggerAddAction(gg_trg_AutoSummonGonch, Trig_AutoSummonGonch_Actions)
+    TriggerAddAction(gg_trg_AutoSummonGonch, function()
+        if GetSpellAbilityId() ~= FourCC('A032') then return end
+        Trig_AutoSummonGonch_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: VedmakF
@@ -36400,7 +35770,7 @@ end
 function Trig_FireShielDamageUniversal_Conditions()
     local dx
     local dy
-    gCaster=GetEventDamageSource() --На ком щит
+    gCaster=GetEventDamageSource() --?? ??? ???
     gTarget=BlzGetEventDamageTarget()
     dx=GetUnitX(gCaster) - GetUnitX(gTarget)
     dy=GetUnitY(gCaster) - GetUnitY(gTarget)
@@ -36501,7 +35871,7 @@ function MoveTimedEnd()
        
     RemoveLocation(LoadLocationHandle(Hash, id, 2))
     DestroyTimer(t)
-    t=null
+    t=nil
     
     
 end
@@ -36513,7 +35883,7 @@ function MoveTimed()
     SaveLocationHandle(Hash, id, 2, l)
     TimerStart(t, time, false, MoveTimedEnd)
     
-    t=null
+    t=nil
 end
 function MoveWithOrderTimedEnd()
     local t= GetExpiredTimer()
@@ -36523,7 +35893,7 @@ function MoveWithOrderTimedEnd()
     
     RemoveLocation(LoadLocationHandle(Hash, id, 2))
     DestroyTimer(t)
-    t=null
+    t=nil
     
     
 end
@@ -36537,7 +35907,7 @@ function MoveWithOrderTimed()
     SaveStr(Hash, id, 4, order)
     TimerStart(t, time, false, MoveWithOrderTimedEnd)
  
-    t=null
+    t=nil
 end
 function Trig_BlinkToUnit_attack_Actions()
     gUnit=GetAttacker()
@@ -36569,45 +35939,41 @@ end
 --===========================================================================
 -- Trigger: BlinkToUnit Spell
 --===========================================================================
-function Trig_BlinkToUnit_Spell_Conditions()
-    return GetSpellAbilityId() == FourCC('A0N3')
-end
 function Trig_BlinkToUnit_Spell_Actions()
     local l1= GetUnitLoc(GetSpellTargetUnit())
     local l2= GetUnitLoc(GetTriggerUnit())
     
     MoveWithOrderTimed(GetTriggerUnit() , GetSpellTargetUnit() , l1 , "attack" , DistanceBetweenPoints(l1, l2) / 1200 + 0.4)
     RemoveLocation(l2)
-    l1=null
-    l2=null
+    l1=nil
+    l2=nil
 end
 --===========================================================================
 function InitTrig_BlinkToUnit_Spell()
     gg_trg_BlinkToUnit_Spell=CreateTrigger()
     DisableTrigger(gg_trg_BlinkToUnit_Spell)
     TriggerRegisterAnyUnitEventBJ(gg_trg_BlinkToUnit_Spell, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_BlinkToUnit_Spell, Condition(Trig_BlinkToUnit_Spell_Conditions))
-    TriggerAddAction(gg_trg_BlinkToUnit_Spell, Trig_BlinkToUnit_Spell_Actions)
+    TriggerAddAction(gg_trg_BlinkToUnit_Spell, function()
+        if GetSpellAbilityId() ~= FourCC('A0N3') then return end
+        Trig_BlinkToUnit_Spell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Edvin Ult
 --
--- Резня в тени
+-- ????? ? ????
 --===========================================================================
-function Trig_Edvin_Ult_Conditions()
-    return GetSpellAbilityId() == FourCC('A0N4')
-end
 function Trig_Edvin_Ult_Actions()
     local u= GetTriggerUnit()
     local u2
     local g= CreateGroup()
-    GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 235.00, null)
+    GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 235.00, nil)
     
     
     
     while true do
         u2=FirstOfGroup(g)
-        if u2 == null then break end
+        if u2 == nil then break end
         
         if GetOwningPlayer(u2) ~= GetOwningPlayer(u) then
             
@@ -36633,17 +35999,19 @@ function Trig_Edvin_Ult_Actions()
     BlzStartUnitAbilityCooldown(u, FourCC('A0N4'), 35)
     
     DestroyGroup(g)
-    g=null
-    u=null
-    u2=null
+    g=nil
+    u=nil
+    u2=nil
 end
 --===========================================================================
 function InitTrig_Edvin_Ult()
     gg_trg_Edvin_Ult=CreateTrigger()
     DisableTrigger(gg_trg_Edvin_Ult)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Edvin_Ult, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_Edvin_Ult, Condition(Trig_Edvin_Ult_Conditions))
-    TriggerAddAction(gg_trg_Edvin_Ult, Trig_Edvin_Ult_Actions)
+    TriggerAddAction(gg_trg_Edvin_Ult, function()
+        if GetSpellAbilityId() ~= FourCC('A0N4') then return end
+        Trig_Edvin_Ult_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Del1FromTable C
@@ -36820,9 +36188,6 @@ end
 --===========================================================================
 -- Trigger: Dovorougenie Code O
 --===========================================================================
-function Trig_Dovorougenie_Code_O_Conditions()
-    return GetSpellAbilityId() == FourCC('A000') and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 function Trig_Dovorougenie_Code_Func001C()
     if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h003') ) ) then
         return false
@@ -36885,17 +36250,17 @@ end
 function InitTrig_Dovorougenie_Code_O()
     gg_trg_Dovorougenie_Code_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Dovorougenie_Code_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Dovorougenie_Code_O, Condition(Trig_Dovorougenie_Code_O_Conditions))
-    TriggerAddAction(gg_trg_Dovorougenie_Code_O, Trig_Dovorougenie_Code_O_Actions)
+    TriggerAddAction(gg_trg_Dovorougenie_Code_O, function()
+        if GetSpellAbilityId() ~= FourCC('A000') then return end
+        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
+        Trig_Dovorougenie_Code_O_Actions()
+    end)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     TriggerAddAction(gg_trg_Dovorougenie_Code_O, Trig_Del1FromTable_C_Actions)
 end
 --===========================================================================
 -- Trigger: Dovorougenie 2t Code O
 --===========================================================================
-function Trig_Dovorougenie_2t_Code_O_Conditions()
-    return GetSpellAbilityId() == FourCC('A01A') and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 function Trig_Dovorougenie_2t_Code_Func001C()
     if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h005') ) ) then
         return false
@@ -36958,17 +36323,17 @@ end
 function InitTrig_Dovorougenie_2t_Code_O()
     gg_trg_Dovorougenie_2t_Code_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Dovorougenie_2t_Code_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Dovorougenie_2t_Code_O, Condition(Trig_Dovorougenie_2t_Code_O_Conditions))
-    TriggerAddAction(gg_trg_Dovorougenie_2t_Code_O, Trig_Dovorougenie_2t_Code_O_Actions)
+    TriggerAddAction(gg_trg_Dovorougenie_2t_Code_O, function()
+        if GetSpellAbilityId() ~= FourCC('A01A') then return end
+        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
+        Trig_Dovorougenie_2t_Code_O_Actions()
+    end)
     TriggerAddAction(gg_trg_Dovorougenie_2t_Code_O, Trig_Del1FromTable_C_Actions)
 end
 --===========================================================================
 -- Trigger: Dovorougenie 3t O
 --===========================================================================
 function Trig_Dovorougenie_3t_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A01B') ) ) then
-        return false
-    end
     if ( not ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
         return false
     end
@@ -37005,8 +36370,11 @@ function InitTrig_Dovorougenie_3t_O()
     gg_trg_Dovorougenie_3t_O=CreateTrigger()
     DisableTrigger(gg_trg_Dovorougenie_3t_O)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Dovorougenie_3t_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Dovorougenie_3t_O, Condition(Trig_Dovorougenie_3t_O_Conditions))
-    TriggerAddAction(gg_trg_Dovorougenie_3t_O, Trig_Dovorougenie_3t_O_Actions)
+    TriggerAddAction(gg_trg_Dovorougenie_3t_O, function()
+        if GetSpellAbilityId() ~= FourCC('A01B') then return end
+        if not Trig_Dovorougenie_3t_O_Conditions() then return end
+        Trig_Dovorougenie_3t_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Voron
@@ -37098,12 +36466,12 @@ function Trig_Pirats_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('h03K'), - 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('h00Y'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('h00Z'), 0, GetOwningPlayer(GetTriggerUnit()))
-    udg_Boolexpr=Condition(Trig_Pirats_O_Copy_Func005002)
+    udg_Boolexpr = Trig_Pirats_O_Copy_Func005002
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Pirats_O_Copy_Func008A)
     GroupClear(udg_LocalOtrad2)
-    udg_Boolexpr=Condition(Trig_Pirats_O_Copy_Func010002)
+    udg_Boolexpr = Trig_Pirats_O_Copy_Func010002
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Pirats_O_Copy_Func013A)
@@ -37164,12 +36532,6 @@ end
 --===========================================================================
 -- Trigger: AutoSetka
 --===========================================================================
-function Trig_AutoSetka_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A011') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_AutoSetka_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "ensnare", GetSpellTargetUnit())
 end
@@ -37178,18 +36540,14 @@ function InitTrig_AutoSetka()
     gg_trg_AutoSetka=CreateTrigger()
     DisableTrigger(gg_trg_AutoSetka)
     TriggerRegisterAnyUnitEventBJ(gg_trg_AutoSetka, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AutoSetka, Condition(Trig_AutoSetka_Conditions))
-    TriggerAddAction(gg_trg_AutoSetka, Trig_AutoSetka_Actions)
+    TriggerAddAction(gg_trg_AutoSetka, function()
+        if GetSpellAbilityId() ~= FourCC('A011') then return end
+        Trig_AutoSetka_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AutoSetkaHero
 --===========================================================================
-function Trig_AutoSetkaHero_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A01I') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_AutoSetkaHero_Actions()
     UnitAddAbilityBJ(FourCC('A011'), GetTriggerUnit())
 end
@@ -37198,18 +36556,14 @@ function InitTrig_AutoSetkaHero()
     gg_trg_AutoSetkaHero=CreateTrigger()
     DisableTrigger(gg_trg_AutoSetkaHero)
     TriggerRegisterAnyUnitEventBJ(gg_trg_AutoSetkaHero, EVENT_PLAYER_HERO_SKILL)
-    TriggerAddCondition(gg_trg_AutoSetkaHero, Condition(Trig_AutoSetkaHero_Conditions))
-    TriggerAddAction(gg_trg_AutoSetkaHero, Trig_AutoSetkaHero_Actions)
+    TriggerAddAction(gg_trg_AutoSetkaHero, function()
+        if GetSpellAbilityId() ~= FourCC('A01I') then return end
+        Trig_AutoSetkaHero_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AutoSvita
 --===========================================================================
-function Trig_AutoSvita_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A012') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_AutoSvita_Actions()
     IssueImmediateOrderBJ(GetTriggerUnit(), "waterelemental")
 end
@@ -37218,18 +36572,14 @@ function InitTrig_AutoSvita()
     gg_trg_AutoSvita=CreateTrigger()
     DisableTrigger(gg_trg_AutoSvita)
     TriggerRegisterAnyUnitEventBJ(gg_trg_AutoSvita, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AutoSvita, Condition(Trig_AutoSvita_Conditions))
-    TriggerAddAction(gg_trg_AutoSvita, Trig_AutoSvita_Actions)
+    TriggerAddAction(gg_trg_AutoSvita, function()
+        if GetSpellAbilityId() ~= FourCC('A012') then return end
+        Trig_AutoSvita_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AutoStaya
 --===========================================================================
-function Trig_AutoStaya_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A00W') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_AutoStaya_Actions()
     IssuePointOrderLocBJ(GetTriggerUnit(), "carrionswarm", GetUnitLoc(GetSpellTargetUnit()))
 end
@@ -37238,18 +36588,14 @@ function InitTrig_AutoStaya()
     gg_trg_AutoStaya=CreateTrigger()
     DisableTrigger(gg_trg_AutoStaya)
     TriggerRegisterAnyUnitEventBJ(gg_trg_AutoStaya, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AutoStaya, Condition(Trig_AutoStaya_Conditions))
-    TriggerAddAction(gg_trg_AutoStaya, Trig_AutoStaya_Actions)
+    TriggerAddAction(gg_trg_AutoStaya, function()
+        if GetSpellAbilityId() ~= FourCC('A00W') then return end
+        Trig_AutoStaya_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AutoManaSteal
 --===========================================================================
-function Trig_AutoManaSteal_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A015') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_AutoManaSteal_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "drain", GetSpellTargetUnit())
 end
@@ -37258,18 +36604,14 @@ function InitTrig_AutoManaSteal()
     gg_trg_AutoManaSteal=CreateTrigger()
     DisableTrigger(gg_trg_AutoManaSteal)
     TriggerRegisterAnyUnitEventBJ(gg_trg_AutoManaSteal, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AutoManaSteal, Condition(Trig_AutoManaSteal_Conditions))
-    TriggerAddAction(gg_trg_AutoManaSteal, Trig_AutoManaSteal_Actions)
+    TriggerAddAction(gg_trg_AutoManaSteal, function()
+        if GetSpellAbilityId() ~= FourCC('A015') then return end
+        Trig_AutoManaSteal_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AutoShield
 --===========================================================================
-function Trig_AutoShield_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A016') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_AutoShield_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "antimagicshell", GetSpellTargetUnit())
 end
@@ -37278,8 +36620,10 @@ function InitTrig_AutoShield()
     gg_trg_AutoShield=CreateTrigger()
     DisableTrigger(gg_trg_AutoShield)
     TriggerRegisterAnyUnitEventBJ(gg_trg_AutoShield, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AutoShield, Condition(Trig_AutoShield_Conditions))
-    TriggerAddAction(gg_trg_AutoShield, Trig_AutoShield_Actions)
+    TriggerAddAction(gg_trg_AutoShield, function()
+        if GetSpellAbilityId() ~= FourCC('A016') then return end
+        Trig_AutoShield_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ResearhRobbery
@@ -37328,21 +36672,21 @@ function Trig_ResearhRobbery_Func003C()
 end
 function Trig_ResearhRobbery_Actions()
     if ( Trig_ResearhRobbery_Func001C() ) then
-        udg_Boolexpr=Condition(Trig_ResearhRobbery_Func001Func001002)
+        udg_Boolexpr = Trig_ResearhRobbery_Func001Func001002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_ResearhRobbery_Func002C() ) then
-        udg_Boolexpr=Condition(Trig_ResearhRobbery_Func002Func001002)
+        udg_Boolexpr = Trig_ResearhRobbery_Func002Func001002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_ResearhRobbery_Func003C() ) then
-        udg_Boolexpr=Condition(Trig_ResearhRobbery_Func003Func001002)
+        udg_Boolexpr = Trig_ResearhRobbery_Func003Func001002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func003Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -37430,9 +36774,6 @@ end
 --===========================================================================
 -- Trigger: AreaOfDeath2
 --===========================================================================
-function Trig_AreaOfDeath2_Conditions()
-    return GetSpellAbilityId() == FourCC('A1K1')
-end
 function Trig_AreaOfDeath2_Actions()
     local l= GetSpellTargetLoc()
     local p= GetOwningPlayer(GetTriggerUnit())
@@ -37452,17 +36793,19 @@ function Trig_AreaOfDeath2_Actions()
     
     RemoveUnitTimed(u2 , 25)
     
-    u=null
+    u=nil
     
-    p=null
-    u2=null
+    p=nil
+    u2=nil
 end
 --===========================================================================
 function InitTrig_AreaOfDeath2()
     gg_trg_AreaOfDeath2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_AreaOfDeath2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AreaOfDeath2, Condition(Trig_AreaOfDeath2_Conditions))
-    TriggerAddAction(gg_trg_AreaOfDeath2, Trig_AreaOfDeath2_Actions)
+    TriggerAddAction(gg_trg_AreaOfDeath2, function()
+        if GetSpellAbilityId() ~= FourCC('A1K1') then return end
+        Trig_AreaOfDeath2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Global
@@ -37713,12 +37056,6 @@ end
 --===========================================================================
 -- Trigger: KodoT3
 --===========================================================================
-function Trig_KodoT3_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1IM') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_KodoT3_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JJ'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IM'), GetOwningPlayer(GetTriggerUnit()))
@@ -37728,18 +37065,14 @@ end
 function InitTrig_KodoT3()
     gg_trg_KodoT3=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_KodoT3, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_KodoT3, Condition(Trig_KodoT3_Conditions))
-    TriggerAddAction(gg_trg_KodoT3, Trig_KodoT3_Actions)
+    TriggerAddAction(gg_trg_KodoT3, function()
+        if GetSpellAbilityId() ~= FourCC('A1IM') then return end
+        Trig_KodoT3_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: NaleT3
 --===========================================================================
-function Trig_NaleT3_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1IO') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_NaleT3_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JL'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IO'), GetOwningPlayer(GetTriggerUnit()))
@@ -37749,18 +37082,14 @@ end
 function InitTrig_NaleT3()
     gg_trg_NaleT3=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_NaleT3, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_NaleT3, Condition(Trig_NaleT3_Conditions))
-    TriggerAddAction(gg_trg_NaleT3, Trig_NaleT3_Actions)
+    TriggerAddAction(gg_trg_NaleT3, function()
+        if GetSpellAbilityId() ~= FourCC('A1IO') then return end
+        Trig_NaleT3_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ShamT3
 --===========================================================================
-function Trig_ShamT3_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1IT') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_ShamT3_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JT'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IT'), GetOwningPlayer(GetTriggerUnit()))
@@ -37770,18 +37099,14 @@ end
 function InitTrig_ShamT3()
     gg_trg_ShamT3=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_ShamT3, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_ShamT3, Condition(Trig_ShamT3_Conditions))
-    TriggerAddAction(gg_trg_ShamT3, Trig_ShamT3_Actions)
+    TriggerAddAction(gg_trg_ShamT3, function()
+        if GetSpellAbilityId() ~= FourCC('A1IT') then return end
+        Trig_ShamT3_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: CherT3
 --===========================================================================
-function Trig_CherT3_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1IS') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_CherT3_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JP'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IS'), GetOwningPlayer(GetTriggerUnit()))
@@ -37791,18 +37116,14 @@ end
 function InitTrig_CherT3()
     gg_trg_CherT3=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_CherT3, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_CherT3, Condition(Trig_CherT3_Conditions))
-    TriggerAddAction(gg_trg_CherT3, Trig_CherT3_Actions)
+    TriggerAddAction(gg_trg_CherT3, function()
+        if GetSpellAbilityId() ~= FourCC('A1IS') then return end
+        Trig_CherT3_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: KopT3
 --===========================================================================
-function Trig_KopT3_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1IN') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_KopT3_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JK'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IN'), GetOwningPlayer(GetTriggerUnit()))
@@ -37812,18 +37133,14 @@ end
 function InitTrig_KopT3()
     gg_trg_KopT3=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_KopT3, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_KopT3, Condition(Trig_KopT3_Conditions))
-    TriggerAddAction(gg_trg_KopT3, Trig_KopT3_Actions)
+    TriggerAddAction(gg_trg_KopT3, function()
+        if GetSpellAbilityId() ~= FourCC('A1IN') then return end
+        Trig_KopT3_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StrelT3
 --===========================================================================
-function Trig_StrelT3_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1IQ') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_StrelT3_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JN'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IQ'), GetOwningPlayer(GetTriggerUnit()))
@@ -37833,18 +37150,14 @@ end
 function InitTrig_StrelT3()
     gg_trg_StrelT3=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_StrelT3, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_StrelT3, Condition(Trig_StrelT3_Conditions))
-    TriggerAddAction(gg_trg_StrelT3, Trig_StrelT3_Actions)
+    TriggerAddAction(gg_trg_StrelT3, function()
+        if GetSpellAbilityId() ~= FourCC('A1IQ') then return end
+        Trig_StrelT3_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: RubT3
 --===========================================================================
-function Trig_RubT3_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1IP') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_RubT3_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JM'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IP'), GetOwningPlayer(GetTriggerUnit()))
@@ -37854,18 +37167,14 @@ end
 function InitTrig_RubT3()
     gg_trg_RubT3=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_RubT3, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_RubT3, Condition(Trig_RubT3_Conditions))
-    TriggerAddAction(gg_trg_RubT3, Trig_RubT3_Actions)
+    TriggerAddAction(gg_trg_RubT3, function()
+        if GetSpellAbilityId() ~= FourCC('A1IP') then return end
+        Trig_RubT3_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: TelT3
 --===========================================================================
-function Trig_TelT3_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1IR') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_TelT3_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JO'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1IR'), GetOwningPlayer(GetTriggerUnit()))
@@ -37875,18 +37184,14 @@ end
 function InitTrig_TelT3()
     gg_trg_TelT3=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_TelT3, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_TelT3, Condition(Trig_TelT3_Conditions))
-    TriggerAddAction(gg_trg_TelT3, Trig_TelT3_Actions)
+    TriggerAddAction(gg_trg_TelT3, function()
+        if GetSpellAbilityId() ~= FourCC('A1IR') then return end
+        Trig_TelT3_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: KodoNale
 --===========================================================================
-function Trig_KodoNale_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1HW') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_KodoNale_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JF'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1HW'), GetOwningPlayer(GetTriggerUnit()))
@@ -37898,18 +37203,14 @@ end
 function InitTrig_KodoNale()
     gg_trg_KodoNale=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_KodoNale, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_KodoNale, Condition(Trig_KodoNale_Conditions))
-    TriggerAddAction(gg_trg_KodoNale, Trig_KodoNale_Actions)
+    TriggerAddAction(gg_trg_KodoNale, function()
+        if GetSpellAbilityId() ~= FourCC('A1HW') then return end
+        Trig_KodoNale_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: NaleKodo
 --===========================================================================
-function Trig_NaleKodo_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1HY') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_NaleKodo_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JE'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1HW'), GetOwningPlayer(GetTriggerUnit()))
@@ -37921,18 +37222,14 @@ end
 function InitTrig_NaleKodo()
     gg_trg_NaleKodo=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_NaleKodo, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_NaleKodo, Condition(Trig_NaleKodo_Conditions))
-    TriggerAddAction(gg_trg_NaleKodo, Trig_NaleKodo_Actions)
+    TriggerAddAction(gg_trg_NaleKodo, function()
+        if GetSpellAbilityId() ~= FourCC('A1HY') then return end
+        Trig_NaleKodo_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Ritual
 --===========================================================================
-function Trig_Ritual_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1JI') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Ritual_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0K9'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1JI'), GetOwningPlayer(GetTriggerUnit()))
@@ -37942,18 +37239,14 @@ end
 function InitTrig_Ritual()
     gg_trg_Ritual=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Ritual, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Ritual, Condition(Trig_Ritual_Conditions))
-    TriggerAddAction(gg_trg_Ritual, Trig_Ritual_Actions)
+    TriggerAddAction(gg_trg_Ritual, function()
+        if GetSpellAbilityId() ~= FourCC('A1JI') then return end
+        Trig_Ritual_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Ritual Copy
 --===========================================================================
-function Trig_Ritual_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1JH') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Ritual_Copy_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0K8'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1JI'), GetOwningPlayer(GetTriggerUnit()))
@@ -37963,18 +37256,14 @@ end
 function InitTrig_Ritual_Copy()
     gg_trg_Ritual_Copy=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Ritual_Copy, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_Ritual_Copy, Condition(Trig_Ritual_Copy_Conditions))
-    TriggerAddAction(gg_trg_Ritual_Copy, Trig_Ritual_Copy_Actions)
+    TriggerAddAction(gg_trg_Ritual_Copy, function()
+        if GetSpellAbilityId() ~= FourCC('A1JH') then return end
+        Trig_Ritual_Copy_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ShamCher
 --===========================================================================
-function Trig_ShamCher_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1I3') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_ShamCher_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JD'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1I2'), GetOwningPlayer(GetTriggerUnit()))
@@ -37986,18 +37275,14 @@ end
 function InitTrig_ShamCher()
     gg_trg_ShamCher=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_ShamCher, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_ShamCher, Condition(Trig_ShamCher_Conditions))
-    TriggerAddAction(gg_trg_ShamCher, Trig_ShamCher_Actions)
+    TriggerAddAction(gg_trg_ShamCher, function()
+        if GetSpellAbilityId() ~= FourCC('A1I3') then return end
+        Trig_ShamCher_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: CherSham
 --===========================================================================
-function Trig_CherSham_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1I2') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_CherSham_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JC'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1I2'), GetOwningPlayer(GetTriggerUnit()))
@@ -38009,18 +37294,14 @@ end
 function InitTrig_CherSham()
     gg_trg_CherSham=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_CherSham, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_CherSham, Condition(Trig_CherSham_Conditions))
-    TriggerAddAction(gg_trg_CherSham, Trig_CherSham_Actions)
+    TriggerAddAction(gg_trg_CherSham, function()
+        if GetSpellAbilityId() ~= FourCC('A1I2') then return end
+        Trig_CherSham_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: KopStrel
 --===========================================================================
-function Trig_KopStrel_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1HX') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_KopStrel_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JA'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1HX'), GetOwningPlayer(GetTriggerUnit()))
@@ -38032,18 +37313,14 @@ end
 function InitTrig_KopStrel()
     gg_trg_KopStrel=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_KopStrel, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_KopStrel, Condition(Trig_KopStrel_Conditions))
-    TriggerAddAction(gg_trg_KopStrel, Trig_KopStrel_Actions)
+    TriggerAddAction(gg_trg_KopStrel, function()
+        if GetSpellAbilityId() ~= FourCC('A1HX') then return end
+        Trig_KopStrel_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StrelKop
 --===========================================================================
-function Trig_StrelKop_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1I0') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_StrelKop_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JB'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1HX'), GetOwningPlayer(GetTriggerUnit()))
@@ -38055,18 +37332,14 @@ end
 function InitTrig_StrelKop()
     gg_trg_StrelKop=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_StrelKop, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_StrelKop, Condition(Trig_StrelKop_Conditions))
-    TriggerAddAction(gg_trg_StrelKop, Trig_StrelKop_Actions)
+    TriggerAddAction(gg_trg_StrelKop, function()
+        if GetSpellAbilityId() ~= FourCC('A1I0') then return end
+        Trig_StrelKop_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: RubTel
 --===========================================================================
-function Trig_RubTel_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1HZ') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_RubTel_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0J9'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1HZ'), GetOwningPlayer(GetTriggerUnit()))
@@ -38078,18 +37351,14 @@ end
 function InitTrig_RubTel()
     gg_trg_RubTel=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_RubTel, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_RubTel, Condition(Trig_RubTel_Conditions))
-    TriggerAddAction(gg_trg_RubTel, Trig_RubTel_Actions)
+    TriggerAddAction(gg_trg_RubTel, function()
+        if GetSpellAbilityId() ~= FourCC('A1HZ') then return end
+        Trig_RubTel_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: TelRub
 --===========================================================================
-function Trig_TelRub_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1I1') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_TelRub_Actions()
     SetPlayerTechResearchedSwap(FourCC('R0JG'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerAbilityAvailableBJ(false, FourCC('A1HZ'), GetOwningPlayer(GetTriggerUnit()))
@@ -38101,13 +37370,15 @@ end
 function InitTrig_TelRub()
     gg_trg_TelRub=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_TelRub, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_TelRub, Condition(Trig_TelRub_Conditions))
-    TriggerAddAction(gg_trg_TelRub, Trig_TelRub_Actions)
+    TriggerAddAction(gg_trg_TelRub, function()
+        if GetSpellAbilityId() ~= FourCC('A1I1') then return end
+        Trig_TelRub_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: NerZulPas
 --
--- Не надо кучу ифов, тут в одном на все лвл - винер
+-- ?? ???? ???? ????, ??? ? ????? ?? ??? ??? - ?????
 --===========================================================================
 function Trig_NerZulPas_Conditions()
     if ( not ( GetLearnedSkillBJ() == FourCC('A1IB') ) ) then
@@ -38129,7 +37400,7 @@ end
 --===========================================================================
 -- Trigger: NerZulPas Copy
 --
--- Не надо кучу ифов, тут в одном на все лвл - винер
+-- ?? ???? ???? ????, ??? ? ????? ?? ??? ??? - ?????
 --===========================================================================
 function Trig_NerZulPas_Copy_Conditions()
     if ( not ( GetLearnedSkillBJ() == FourCC('A1I5') ) ) then
@@ -38151,7 +37422,7 @@ end
 --===========================================================================
 -- Trigger: NerZulPas Copy Copy
 --
--- Не надо кучу ифов, тут в одном на все лвл - винер
+-- ?? ???? ???? ????, ??? ? ????? ?? ??? ??? - ?????
 --===========================================================================
 function Trig_NerZulPas_Copy_Copy_Conditions()
     if ( not ( GetLearnedSkillBJ() == FourCC('A1H9') ) ) then
@@ -38319,7 +37590,7 @@ end
 --===========================================================================
 -- Trigger: malfurionPas
 --
--- Не надо кучу ифов, тут в одном на все лвл - винер
+-- ?? ???? ???? ????, ??? ? ????? ?? ??? ??? - ?????
 --===========================================================================
 function Trig_malfurionPas_Conditions()
     if ( not ( GetLearnedSkillBJ() == FourCC('A160') ) ) then
@@ -38341,7 +37612,7 @@ end
 --===========================================================================
 -- Trigger: StartBuildingTree
 --
--- Тут расписать все айди юнитов, в которых превращаются светлячки и его цену
+-- ??? ????????? ??? ???? ??????, ? ??????? ???????????? ????????? ? ??? ????
 --===========================================================================
 function Trig_StartBuildingTree_Conditions()
     local id= GetUnitTypeId(GetConstructingStructure())
@@ -38364,7 +37635,7 @@ end
 --===========================================================================
 -- Trigger: CanselBuildingTree
 --
--- Тут расписать все айди юнитов, в которых превращаются светлячки и его цену
+-- ??? ????????? ??? ???? ??????, ? ??????? ???????????? ????????? ? ??? ????
 --===========================================================================
 function Trig_CanselBuildingTree_Conditions()
     local id= GetUnitTypeId(GetTriggerUnit())
@@ -38387,19 +37658,18 @@ end
 --===========================================================================
 -- Trigger: GuadrianSpell
 --===========================================================================
-function Trig_GuadrianSpell_Conditions()
-    return GetSpellAbilityId() == FourCC('ken0')
-end
 function Trig_GuadrianSpell_Actions()
    -- call BJDebugMsg("")
-    MassSpell(GetTriggerUnit() , GetSpellAbilityId() , FourCC('A1MW') , "firebolt" , null , 400 + 200 * GetUnitAbilityLevel(GetTriggerUnit(), GetSpellAbilityId()) , 1 , false)
+    MassSpell(GetTriggerUnit() , GetSpellAbilityId() , FourCC('A1MW') , "firebolt" , nil , 400 + 200 * GetUnitAbilityLevel(GetTriggerUnit(), GetSpellAbilityId()) , 1 , false)
 end
 --===========================================================================
 function InitTrig_GuadrianSpell()
     gg_trg_GuadrianSpell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_GuadrianSpell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_GuadrianSpell, Condition(Trig_GuadrianSpell_Conditions))
-    TriggerAddAction(gg_trg_GuadrianSpell, Trig_GuadrianSpell_Actions)
+    TriggerAddAction(gg_trg_GuadrianSpell, function()
+        if GetSpellAbilityId() ~= FourCC('ken0') then return end
+        Trig_GuadrianSpell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: NagaStart
@@ -38585,23 +37855,22 @@ end
 --===========================================================================
 -- Trigger: VaishBuria
 --===========================================================================
-function Trig_VaishBuria_Conditions()
-    return GetSpellAbilityId() == FourCC('A16E')
-end
 function Trig_VaishBuria_Actions()
     local loc= GetSpellTargetLoc()
     local u2= CreateUnitAtLoc(GetOwningPlayer(GetTriggerUnit()), FourCC('ntor'), loc, bj_UNIT_FACING)
     UnitApplyTimedLife(u2, FourCC('BTLF'), 30.00)
-    u2=null
+    u2=nil
     RemoveLocation(loc)
-    loc=null
+    loc=nil
 end
 --===========================================================================
 function InitTrig_VaishBuria()
     gg_trg_VaishBuria=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_VaishBuria, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_VaishBuria, Condition(Trig_VaishBuria_Conditions))
-    TriggerAddAction(gg_trg_VaishBuria, Trig_VaishBuria_Actions)
+    TriggerAddAction(gg_trg_VaishBuria, function()
+        if GetSpellAbilityId() ~= FourCC('A16E') then return end
+        Trig_VaishBuria_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: VaishArrow
@@ -38688,9 +37957,6 @@ end
 --===========================================================================
 -- Trigger: NagaCommonSpell
 --===========================================================================
-function Trig_NagaCommonSpell_Conditions()
-    return GetSpellAbilityId() == FourCC('A1LT') and not IsTerrainPathable(GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), PATHING_TYPE_FLOATABILITY)
-end
 function Trig_NagaCommonSpell_Actions()
     UnitAddAbility(GetTriggerUnit(), FourCC('S00E'))
     RemoveAbilityTimed(GetTriggerUnit() , FourCC('S00E') , 180)
@@ -38699,8 +37965,11 @@ end
 function InitTrig_NagaCommonSpell()
     gg_trg_NagaCommonSpell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_NagaCommonSpell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_NagaCommonSpell, Condition(Trig_NagaCommonSpell_Conditions))
-    TriggerAddAction(gg_trg_NagaCommonSpell, Trig_NagaCommonSpell_Actions)
+    TriggerAddAction(gg_trg_NagaCommonSpell, function()
+        if GetSpellAbilityId() ~= FourCC('A1LT') then return end
+        if not (not IsTerrainPathable(GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), PATHING_TYPE_FLOATABILITY)) then return end
+        Trig_NagaCommonSpell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StartWorgens
@@ -38723,9 +37992,6 @@ end
 --===========================================================================
 -- Trigger: LegGer
 --===========================================================================
-function Trig_LegGer_Conditions()
-    return GetSpellAbilityId() == FourCC('A11U')
-end
 function Trig_LegGer_Actions()
     local u= GetTriggerUnit()
     
@@ -38747,31 +38013,32 @@ function Trig_LegGer_Actions()
         RemoveAbilityTimed(u , FourCC('A11Y') , 15)
       
     end
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_LegGer()
     gg_trg_LegGer=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_LegGer, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_LegGer, Condition(Trig_LegGer_Conditions))
-    TriggerAddAction(gg_trg_LegGer, Trig_LegGer_Actions)
+    TriggerAddAction(gg_trg_LegGer, function()
+        if GetSpellAbilityId() ~= FourCC('A11U') then return end
+        Trig_LegGer_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: SpellOpletenie
 --===========================================================================
-function Trig_SpellOpletenie_Conditions()
-    return GetSpellAbilityId() == FourCC('A1M9')
-end
 function Trig_SpellOpletenie_Actions()
    -- call BJDebugMsg("")
-    MassSpell(GetTriggerUnit() , GetSpellAbilityId() , FourCC('A1MA') , "firebolt" , null , 600 , 1 , false)
+    MassSpell(GetTriggerUnit() , GetSpellAbilityId() , FourCC('A1MA') , "firebolt" , nil , 600 , 1 , false)
 end
 --===========================================================================
 function InitTrig_SpellOpletenie()
     gg_trg_SpellOpletenie=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpellOpletenie, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SpellOpletenie, Condition(Trig_SpellOpletenie_Conditions))
-    TriggerAddAction(gg_trg_SpellOpletenie, Trig_SpellOpletenie_Actions)
+    TriggerAddAction(gg_trg_SpellOpletenie, function()
+        if GetSpellAbilityId() ~= FourCC('A1M9') then return end
+        Trig_SpellOpletenie_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: flot1 Copy O
@@ -38874,12 +38141,6 @@ end
 --===========================================================================
 -- Trigger: Auto set Copy O
 --===========================================================================
-function Trig_Auto_set_Copy_O_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A09U') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Auto_set_Copy_O_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "ensnare", GetSpellTargetUnit())
 end
@@ -38887,8 +38148,10 @@ end
 function InitTrig_Auto_set_Copy_O()
     gg_trg_Auto_set_Copy_O=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Auto_set_Copy_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Auto_set_Copy_O, Condition(Trig_Auto_set_Copy_O_Conditions))
-    TriggerAddAction(gg_trg_Auto_set_Copy_O, Trig_Auto_set_Copy_O_Actions)
+    TriggerAddAction(gg_trg_Auto_set_Copy_O, function()
+        if GetSpellAbilityId() ~= FourCC('A09U') then return end
+        Trig_Auto_set_Copy_O_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AutocastSlowOn
@@ -39059,12 +38322,6 @@ end
 --===========================================================================
 -- Trigger: Auto hil Copy 2
 --===========================================================================
-function Trig_Auto_hil_Copy_2_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A08X') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Auto_hil_Copy_2_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "holybolt", GetSpellTargetUnit())
 end
@@ -39072,8 +38329,10 @@ end
 function InitTrig_Auto_hil_Copy_2()
     gg_trg_Auto_hil_Copy_2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Auto_hil_Copy_2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Auto_hil_Copy_2, Condition(Trig_Auto_hil_Copy_2_Conditions))
-    TriggerAddAction(gg_trg_Auto_hil_Copy_2, Trig_Auto_hil_Copy_2_Actions)
+    TriggerAddAction(gg_trg_Auto_hil_Copy_2, function()
+        if GetSpellAbilityId() ~= FourCC('A08X') then return end
+        Trig_Auto_hil_Copy_2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Red korotkiy2
@@ -39156,9 +38415,6 @@ end
 --===========================================================================
 -- Trigger: SpellMassSleep
 --===========================================================================
-function Trig_SpellMassSleep_Conditions()
-    return GetSpellAbilityId() == FourCC('A06P')
-end
 function Trig_SpellMassSleep_Actions()
    -- call BJDebugMsg("")
     local l= GetSpellTargetLoc()
@@ -39169,8 +38425,10 @@ end
 function InitTrig_SpellMassSleep()
     gg_trg_SpellMassSleep=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpellMassSleep, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SpellMassSleep, Condition(Trig_SpellMassSleep_Conditions))
-    TriggerAddAction(gg_trg_SpellMassSleep, Trig_SpellMassSleep_Actions)
+    TriggerAddAction(gg_trg_SpellMassSleep, function()
+        if GetSpellAbilityId() ~= FourCC('A06P') then return end
+        Trig_SpellMassSleep_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Ozaren
@@ -39253,9 +38511,6 @@ end
 --===========================================================================
 -- Trigger: TP
 --===========================================================================
-function Trig_TP_Conditions()
-    return GetSpellAbilityId() == FourCC('A1C4')
-end
 function Trig_TP_Actions()
     IssuePointOrder(GetTriggerUnit(), "blink", GetSpellTargetX(), GetSpellTargetY())
 end
@@ -39263,8 +38518,10 @@ end
 function InitTrig_TP()
     gg_trg_TP=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_TP, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_TP, Condition(Trig_TP_Conditions))
-    TriggerAddAction(gg_trg_TP, Trig_TP_Actions)
+    TriggerAddAction(gg_trg_TP, function()
+        if GetSpellAbilityId() ~= FourCC('A1C4') then return end
+        Trig_TP_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: NoDeath
@@ -39277,7 +38534,6 @@ function BrokenBuilding()
 end
 function Trig_NoDeath_Actions()
     local g= CreateGroup()
-    local Boolexpr= Condition(BrokenBuilding)
     local u
     local u2
     GroupEnumUnitsOfPlayer(g, GetOwningPlayer(GetTriggerUnit()), Boolexpr)
@@ -39297,8 +38553,8 @@ function Trig_NoDeath_Actions()
     
     DestroyBoolExpr(Boolexpr)
     DestroyGroup(g)
-    u=null
-    u2=null
+    u=nil
+    u2=nil
 end
 --===========================================================================
 function InitTrig_NoDeath()
@@ -39388,12 +38644,6 @@ end
 --===========================================================================
 -- Trigger: Auto hil
 --===========================================================================
-function Trig_Auto_hil_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A04Y') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Auto_hil_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "holybolt", GetSpellTargetUnit())
 end
@@ -39401,18 +38651,14 @@ end
 function InitTrig_Auto_hil()
     gg_trg_Auto_hil=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Auto_hil, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Auto_hil, Condition(Trig_Auto_hil_Conditions))
-    TriggerAddAction(gg_trg_Auto_hil, Trig_Auto_hil_Actions)
+    TriggerAddAction(gg_trg_Auto_hil, function()
+        if GetSpellAbilityId() ~= FourCC('A04Y') then return end
+        Trig_Auto_hil_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Auto hil Copy
 --===========================================================================
-function Trig_Auto_hil_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A050') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Auto_hil_Copy_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "hex", GetSpellTargetUnit())
 end
@@ -39420,8 +38666,10 @@ end
 function InitTrig_Auto_hil_Copy()
     gg_trg_Auto_hil_Copy=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Auto_hil_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Auto_hil_Copy, Condition(Trig_Auto_hil_Copy_Conditions))
-    TriggerAddAction(gg_trg_Auto_hil_Copy, Trig_Auto_hil_Copy_Actions)
+    TriggerAddAction(gg_trg_Auto_hil_Copy, function()
+        if GetSpellAbilityId() ~= FourCC('A050') then return end
+        Trig_Auto_hil_Copy_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Draenei Build Abill
@@ -39438,7 +38686,7 @@ function Trig_Draenei_Build_Abill_Actions()
         --call BJDebugMsg("3")
     end
     UnitRemoveAbility(u, FourCC('A0Z3'))
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_Draenei_Build_Abill()
@@ -39528,12 +38776,6 @@ end
 --===========================================================================
 -- Trigger: Auto pohichenie Copy
 --===========================================================================
-function Trig_Auto_pohichenie_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A031') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Auto_pohichenie_Copy_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "banish", GetSpellTargetUnit())
 end
@@ -39541,8 +38783,10 @@ end
 function InitTrig_Auto_pohichenie_Copy()
     gg_trg_Auto_pohichenie_Copy=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Auto_pohichenie_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Auto_pohichenie_Copy, Condition(Trig_Auto_pohichenie_Copy_Conditions))
-    TriggerAddAction(gg_trg_Auto_pohichenie_Copy, Trig_Auto_pohichenie_Copy_Actions)
+    TriggerAddAction(gg_trg_Auto_pohichenie_Copy, function()
+        if GetSpellAbilityId() ~= FourCC('A031') then return end
+        Trig_Auto_pohichenie_Copy_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: IllidaryOn
@@ -39712,9 +38956,6 @@ end
 --===========================================================================
 -- Trigger: AutoStrelaFireIlly
 --===========================================================================
-function Trig_AutoStrelaFireIlly_Conditions()
-    return GetSpellAbilityId() == FourCC('A1KL')
-end
 function Trig_AutoStrelaFireIlly_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "firebolt", GetSpellTargetUnit())
 end
@@ -39723,15 +38964,14 @@ function InitTrig_AutoStrelaFireIlly()
     gg_trg_AutoStrelaFireIlly=CreateTrigger()
     
     TriggerRegisterAnyUnitEventBJ(gg_trg_AutoStrelaFireIlly, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AutoStrelaFireIlly, Condition(Trig_AutoStrelaFireIlly_Conditions))
-    TriggerAddAction(gg_trg_AutoStrelaFireIlly, Trig_AutoStrelaFireIlly_Actions)
+    TriggerAddAction(gg_trg_AutoStrelaFireIlly, function()
+        if GetSpellAbilityId() ~= FourCC('A1KL') then return end
+        Trig_AutoStrelaFireIlly_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AutoStrelaFelllly
 --===========================================================================
-function Trig_AutoStrelaFelllly_Conditions()
-    return GetSpellAbilityId() == FourCC('A1KO')
-end
 function Trig_AutoStrelaFelllly_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "acidbomb", GetSpellTargetUnit())
 end
@@ -39740,18 +38980,14 @@ function InitTrig_AutoStrelaFelllly()
     gg_trg_AutoStrelaFelllly=CreateTrigger()
     
     TriggerRegisterAnyUnitEventBJ(gg_trg_AutoStrelaFelllly, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AutoStrelaFelllly, Condition(Trig_AutoStrelaFelllly_Conditions))
-    TriggerAddAction(gg_trg_AutoStrelaFelllly, Trig_AutoStrelaFelllly_Actions)
+    TriggerAddAction(gg_trg_AutoStrelaFelllly, function()
+        if GetSpellAbilityId() ~= FourCC('A1KO') then return end
+        Trig_AutoStrelaFelllly_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: IllyFire
 --===========================================================================
-function Trig_IllyFire_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0NJ') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_IllyFire_Func001Func001Func002Func001C()
     if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0NJ'), GetTriggerUnit()) == 4 ) ) then
         return false
@@ -39815,21 +39051,20 @@ function InitTrig_IllyFire()
     gg_trg_IllyFire=CreateTrigger()
     DisableTrigger(gg_trg_IllyFire)
     TriggerRegisterAnyUnitEventBJ(gg_trg_IllyFire, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_IllyFire, Condition(Trig_IllyFire_Conditions))
-    TriggerAddAction(gg_trg_IllyFire, Trig_IllyFire_Actions)
+    TriggerAddAction(gg_trg_IllyFire, function()
+        if GetSpellAbilityId() ~= FourCC('A0NJ') then return end
+        Trig_IllyFire_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: IllyAgile
 --===========================================================================
-function Trig_IllyAgile_Conditions()
-    return GetSpellAbilityId() == FourCC('A0NH')
-end
 function Trig_IllyAgile_Actions()
     
     local u= GetTriggerUnit()
     UnitAddAbility(u, FourCC('A0NI'))
     RemoveAbilityTimed(u , FourCC('A0NI') , 20)
-    u=null
+    u=nil
     
     
 end
@@ -39838,58 +39073,52 @@ function InitTrig_IllyAgile()
     gg_trg_IllyAgile=CreateTrigger()
     DisableTrigger(gg_trg_IllyAgile)
     TriggerRegisterAnyUnitEventBJ(gg_trg_IllyAgile, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_IllyAgile, Condition(Trig_IllyAgile_Conditions))
-    TriggerAddAction(gg_trg_IllyAgile, Trig_IllyAgile_Actions)
+    TriggerAddAction(gg_trg_IllyAgile, function()
+        if GetSpellAbilityId() ~= FourCC('A0NH') then return end
+        Trig_IllyAgile_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: IllyPain
 --===========================================================================
-function Trig_IllyPain_Conditions()
-    return GetSpellAbilityId() == FourCC('A0NU')
-end
 function Trig_IllyPain_Actions()
     local u= GetTriggerUnit()
     UnitAddAbility(u, FourCC('A0NT'))
     RemoveAbilityTimed(u , FourCC('A0NT') , 20)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_IllyPain()
     gg_trg_IllyPain=CreateTrigger()
     DisableTrigger(gg_trg_IllyPain)
     TriggerRegisterAnyUnitEventBJ(gg_trg_IllyPain, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_IllyPain, Condition(Trig_IllyPain_Conditions))
-    TriggerAddAction(gg_trg_IllyPain, Trig_IllyPain_Actions)
+    TriggerAddAction(gg_trg_IllyPain, function()
+        if GetSpellAbilityId() ~= FourCC('A0NU') then return end
+        Trig_IllyPain_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: IlliKnives
 --===========================================================================
-function Trig_IlliKnives_Conditions()
-    return GetSpellAbilityId() == FourCC('A0NV')
-end
 function Trig_IlliKnives_Actions()
     local u= GetTriggerUnit()
     UnitAddAbility(u, FourCC('A0NY'))
     RemoveAbilityTimed(u , FourCC('A0NY') , 20)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_IlliKnives()
     gg_trg_IlliKnives=CreateTrigger()
     DisableTrigger(gg_trg_IlliKnives)
     TriggerRegisterAnyUnitEventBJ(gg_trg_IlliKnives, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_IlliKnives, Condition(Trig_IlliKnives_Conditions))
-    TriggerAddAction(gg_trg_IlliKnives, Trig_IlliKnives_Actions)
+    TriggerAddAction(gg_trg_IlliKnives, function()
+        if GetSpellAbilityId() ~= FourCC('A0NV') then return end
+        Trig_IlliKnives_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: RuvokAutoIlly
 --===========================================================================
-function Trig_RuvokAutoIlly_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A048') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_RuvokAutoIlly_Actions()
     IssueTargetOrderBJ(GetTriggerUnit(), "deathcoil", GetSpellTargetUnit())
 end
@@ -39898,18 +39127,14 @@ function InitTrig_RuvokAutoIlly()
     gg_trg_RuvokAutoIlly=CreateTrigger()
     DisableTrigger(gg_trg_RuvokAutoIlly)
     TriggerRegisterAnyUnitEventBJ(gg_trg_RuvokAutoIlly, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_RuvokAutoIlly, Condition(Trig_RuvokAutoIlly_Conditions))
-    TriggerAddAction(gg_trg_RuvokAutoIlly, Trig_RuvokAutoIlly_Actions)
+    TriggerAddAction(gg_trg_RuvokAutoIlly, function()
+        if GetSpellAbilityId() ~= FourCC('A048') then return end
+        Trig_RuvokAutoIlly_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: SandStrike
 --===========================================================================
-function Trig_SandStrike_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0NF') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_SandStrike_Func001C()
     if ( not ( udg_SSinteger[0] == 0 ) ) then
         return false
@@ -39939,8 +39164,10 @@ end
 function InitTrig_SandStrike()
     gg_trg_SandStrike=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SandStrike, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SandStrike, Condition(Trig_SandStrike_Conditions))
-    TriggerAddAction(gg_trg_SandStrike, Trig_SandStrike_Actions)
+    TriggerAddAction(gg_trg_SandStrike, function()
+        if GetSpellAbilityId() ~= FourCC('A0NF') then return end
+        Trig_SandStrike_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Sand Strike Loop
@@ -39975,7 +39202,7 @@ function Trig_Sand_Strike_Loop_Func001Func001Func007A()
     else
     end
     UnitDamageTargetBJ(udg_SScaster[udg_SSinteger[2]], udg_SSpicked[udg_SSinteger[3]], udg_SSdamage[udg_SSinteger[2]], ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
-    udg_SSpicked[udg_SSinteger[2]]=null
+    udg_SSpicked[udg_SSinteger[2]]=nil
     RemoveLocation(udg_SSpointpicked[udg_SSinteger[2]])
     RemoveLocation(udg_SSpointmovepicked[udg_SSinteger[2]])
 end
@@ -40159,29 +39386,22 @@ end
 --===========================================================================
 -- Trigger: IzeraSpell
 --===========================================================================
-function Trig_IzeraSpell_Conditions()
-    return GetSpellAbilityId() == FourCC('A1MX')
-end
 function Trig_IzeraSpell_Actions()
    -- call BJDebugMsg("")
-    MassSpell(GetTriggerUnit() , GetSpellAbilityId() , FourCC('A1MW') , "firebolt" , null , 1000 , 1 , false)
+    MassSpell(GetTriggerUnit() , GetSpellAbilityId() , FourCC('A1MW') , "firebolt" , nil , 1000 , 1 , false)
 end
 --===========================================================================
 function InitTrig_IzeraSpell()
     gg_trg_IzeraSpell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_IzeraSpell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_IzeraSpell, Condition(Trig_IzeraSpell_Conditions))
-    TriggerAddAction(gg_trg_IzeraSpell, Trig_IzeraSpell_Actions)
+    TriggerAddAction(gg_trg_IzeraSpell, function()
+        if GetSpellAbilityId() ~= FourCC('A1MX') then return end
+        Trig_IzeraSpell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Navodnenie
 --===========================================================================
-function Trig_Navodnenie_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0R8') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Navodnenie_Actions()
     UnitAddAbilityBJ(FourCC('A0R9'), GetTriggerUnit())
     TriggerSleepAction(25.00)
@@ -40192,18 +39412,14 @@ function InitTrig_Navodnenie()
     gg_trg_Navodnenie=CreateTrigger()
     DisableTrigger(gg_trg_Navodnenie)
     TriggerRegisterAnyUnitEventBJ(gg_trg_Navodnenie, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Navodnenie, Condition(Trig_Navodnenie_Conditions))
-    TriggerAddAction(gg_trg_Navodnenie, Trig_Navodnenie_Actions)
+    TriggerAddAction(gg_trg_Navodnenie, function()
+        if GetSpellAbilityId() ~= FourCC('A0R8') then return end
+        Trig_Navodnenie_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: PoleAstralaDragons
 --===========================================================================
-function Trig_PoleAstralaDragons_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0QV') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_PoleAstralaDragons_Func003002()
     return ( 0 == 0 )
 end
@@ -40216,12 +39432,12 @@ function Trig_PoleAstralaDragons_Func005A()
     IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
     u=udg_LocalUnit[1]
     UnitApplyTimedLife(u, FourCC('BTLF'), 2)
-    u=null
+    u=nil
 end
 function Trig_PoleAstralaDragons_Actions()
     udg_LocalPosition[14]=GetUnitLoc(GetTriggerUnit())
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr=Condition(Trig_PoleAstralaDragons_Func003002)
+    udg_Boolexpr = Trig_PoleAstralaDragons_Func003002
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 200, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PoleAstralaDragons_Func005A)
     RemoveLocation(udg_LocalPosition[14])
@@ -40231,8 +39447,10 @@ function InitTrig_PoleAstralaDragons()
     gg_trg_PoleAstralaDragons=CreateTrigger()
     DisableTrigger(gg_trg_PoleAstralaDragons)
     TriggerRegisterAnyUnitEventBJ(gg_trg_PoleAstralaDragons, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_PoleAstralaDragons, Condition(Trig_PoleAstralaDragons_Conditions))
-    TriggerAddAction(gg_trg_PoleAstralaDragons, Trig_PoleAstralaDragons_Actions)
+    TriggerAddAction(gg_trg_PoleAstralaDragons, function()
+        if GetSpellAbilityId() ~= FourCC('A0QV') then return end
+        Trig_PoleAstralaDragons_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Dark Dragon
@@ -40267,9 +39485,6 @@ end
 --===========================================================================
 -- Trigger: FlyDragon
 --===========================================================================
-function Trig_FlyDragon_Conditions()
-    return GetSpellAbilityId() == FourCC('drA2')
-end
 --================
 function Trig_Charge_move_heroD()
     local t= GetExpiredTimer()
@@ -40298,20 +39513,20 @@ function Trig_Charge_move_heroD()
         MaxW=500
     end
     ---------
-    x=dx + 6 * Cos(ugol * bj_DEGTORAD) --вычисляем следующий х
-    y=dy + 6 * Sin(ugol * bj_DEGTORAD) --вычисляем следующий у
-    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --вычисляем высоту
+    x=dx + 6 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
+    y=dy + 6 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
+    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --????????? ??????
     
-    -- ищем конец пути
+    -- ???? ????? ????
     if JSTRRastMT(x1 , dx , y1 , dy) > 25 then --and not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
-        -- двигаем юнита
+        -- ??????? ?????
         SetUnitX(GT, x)
         SetUnitY(GT, y)
         SetUnitFacing(GT, ugol)
         SetUnitFlyHeight(GT, fl + w, 0)
         
     else
-        UnitRemoveAbility(GT, FourCC('A16S')) -- Дебафф брони
+        UnitRemoveAbility(GT, FourCC('A16S')) -- ?????? ?????
         DestroyEffect(LoadEffectHandle(Hash, h, 6))
         DestroyTimer(t)
         FlushChildHashtable(Hash, h)
@@ -40319,10 +39534,10 @@ function Trig_Charge_move_heroD()
         SetUnitFlyHeight(GT, fl, 0)
         --call DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
         g=CreateGroup()
-        GroupEnumUnitsInRange(g, dx, dy, 260, null)
+        GroupEnumUnitsInRange(g, dx, dy, 260, nil)
         while true do
             un=FirstOfGroup(g)
-            if un == null then break end
+            if un == nil then break end
             lvl=GetUnitAbilityLevel(GT, JSTRSkill)
                     
             GroupRemoveUnit(g, un)
@@ -40330,14 +39545,14 @@ function Trig_Charge_move_heroD()
         DestroyGroup(g)
     end
     ---------
-    GT=null
-    un=null
-    g=null
-    t=null
-    t1=null
+    GT=nil
+    un=nil
+    g=nil
+    t=nil
+    t1=nil
 end
 --================================================================================================================================================================================
--- Этам 2 - основная функция
+-- ???? 2 - ???????? ???????
 --================
 function Trig_FlyDragon_Actions()
     local GT= GetTriggerUnit()
@@ -40352,7 +39567,7 @@ function Trig_FlyDragon_Actions()
     
     JSTRSkill=GetSpellAbilityId()
     UnitAddAbility(GT, FourCC('Amrf'))
-    UnitAddAbility(GT, FourCC('A16S')) -- Дебафф брони
+    UnitAddAbility(GT, FourCC('A16S')) -- ?????? ?????
     
     UnitRemoveAbility(GT, FourCC('Amrf'))
     ---------
@@ -40366,25 +39581,24 @@ function Trig_FlyDragon_Actions()
     SaveReal(Hash, h, 5, y1)
     SaveReal(Hash, h, 6, GetUnitFlyHeight(GT))
     --call DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.05, true, Trig_Charge_move_heroD) --стартуем движение героя
+    TimerStart(t, 0.05, true, Trig_Charge_move_heroD) --???????? ???????? ?????
     ---------
-    GT=null
+    GT=nil
     --set g = null
-    t=null
+    t=nil
 end
 --===========================================================================
 function InitTrig_FlyDragon()
     gg_trg_FlyDragon=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_FlyDragon, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_FlyDragon, Condition(Trig_FlyDragon_Conditions))
-    TriggerAddAction(gg_trg_FlyDragon, Trig_FlyDragon_Actions)
+    TriggerAddAction(gg_trg_FlyDragon, function()
+        if GetSpellAbilityId() ~= FourCC('drA2') then return end
+        Trig_FlyDragon_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: DragonUnionStart
 --===========================================================================
-function Trig_DragonUnionStart_Conditions()
-    return GetSpellAbilityId() == FourCC('A1MZ')
-end
 function Trig_DragonUnionStart_Actions()
     gPlayer=GetOwningPlayer(GetTriggerUnit())
     SetPlayerTechMaxAllowed(gPlayer, FourCC('n044'), 0)
@@ -40395,15 +39609,14 @@ end
 function InitTrig_DragonUnionStart()
     gg_trg_DragonUnionStart=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_DragonUnionStart, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_DragonUnionStart, Condition(Trig_DragonUnionStart_Conditions))
-    TriggerAddAction(gg_trg_DragonUnionStart, Trig_DragonUnionStart_Actions)
+    TriggerAddAction(gg_trg_DragonUnionStart, function()
+        if GetSpellAbilityId() ~= FourCC('A1MZ') then return end
+        Trig_DragonUnionStart_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: GreenAutoAstral
 --===========================================================================
-function Trig_GreenAutoAstral_Conditions()
-    return GetSpellAbilityId() == FourCC('drAe')
-end
 function Trig_GreenAutoAstral_Actions()
     IssueTargetOrder(GetTriggerUnit(), "banish", GetSpellTargetUnit())
 end
@@ -40411,8 +39624,10 @@ end
 function InitTrig_GreenAutoAstral()
     gg_trg_GreenAutoAstral=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_GreenAutoAstral, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_GreenAutoAstral, Condition(Trig_GreenAutoAstral_Conditions))
-    TriggerAddAction(gg_trg_GreenAutoAstral, Trig_GreenAutoAstral_Actions)
+    TriggerAddAction(gg_trg_GreenAutoAstral, function()
+        if GetSpellAbilityId() ~= FourCC('drAe') then return end
+        Trig_GreenAutoAstral_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: TrainGreenPhase
@@ -40477,7 +39692,7 @@ function Trig_Blood_Copy_Conditions()
 end
 function Trig_Blood_Copy_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('n025'), 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), FourCC('n026'), - 1) --кровавый палач
+    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), FourCC('n026'), - 1) --???????? ?????
 end
 --===========================================================================
 function InitTrig_Blood_Copy()
@@ -40507,14 +39722,8 @@ function InitTrig_Blood2_Copy()
     TriggerAddAction(gg_trg_Blood2_Copy, Trig_Blood2_Copy_Actions)
 end
 --===========================================================================
--- Trigger: Безымянный триггер 001 Copy 5
+-- Trigger: ?????????? ??????? 001 Copy 5
 --===========================================================================
-function Trig_____________________________________001_Copy_5_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0N6') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_____________________________________001_Copy_5_Actions()
     UnitRemoveAbilityBJ(FourCC('A0N7'), GetTriggerUnit())
     UnitAddAbilityBJ(FourCC('A0N8'), GetTriggerUnit())
@@ -40526,18 +39735,14 @@ end
 function InitTrig_____________________________________001_Copy_5()
     gg_trg_____________________________________001_Copy_5=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_____________________________________001_Copy_5, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_____________________________________001_Copy_5, Condition(Trig_____________________________________001_Copy_5_Conditions))
-    TriggerAddAction(gg_trg_____________________________________001_Copy_5, Trig_____________________________________001_Copy_5_Actions)
+    TriggerAddAction(gg_trg_____________________________________001_Copy_5, function()
+        if GetSpellAbilityId() ~= FourCC('A0N6') then return end
+        Trig_____________________________________001_Copy_5_Actions()
+    end)
 end
 --===========================================================================
--- Trigger: Безымянный триггер 001 Copy 2 Copy 3
+-- Trigger: ?????????? ??????? 001 Copy 2 Copy 3
 --===========================================================================
-function Trig_____________________________________001_Copy_2_Copy_3_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0NB') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_____________________________________001_Copy_2_Copy_3_Actions()
     UnitAddAbilityBJ(FourCC('A0NC'), GetTriggerUnit())
     TriggerSleepAction(25.00)
@@ -40547,8 +39752,10 @@ end
 function InitTrig_____________________________________001_Copy_2_Copy_3()
     gg_trg_____________________________________001_Copy_2_Copy_3=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_____________________________________001_Copy_2_Copy_3, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_____________________________________001_Copy_2_Copy_3, Condition(Trig_____________________________________001_Copy_2_Copy_3_Conditions))
-    TriggerAddAction(gg_trg_____________________________________001_Copy_2_Copy_3, Trig_____________________________________001_Copy_2_Copy_3_Actions)
+    TriggerAddAction(gg_trg_____________________________________001_Copy_2_Copy_3, function()
+        if GetSpellAbilityId() ~= FourCC('A0NB') then return end
+        Trig_____________________________________001_Copy_2_Copy_3_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ArhiTep
@@ -40602,12 +39809,6 @@ end
 --===========================================================================
 -- Trigger: Buildings
 --===========================================================================
-function Trig_Buildings_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('AUin') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Buildings_Func010C()
     if ( not ( GetSpellAbilityId() == FourCC('AUin') ) ) then
         return false
@@ -40639,8 +39840,10 @@ end
 function InitTrig_Buildings()
     gg_trg_Buildings=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Buildings, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_Buildings, Condition(Trig_Buildings_Conditions))
-    TriggerAddAction(gg_trg_Buildings, Trig_Buildings_Actions)
+    TriggerAddAction(gg_trg_Buildings, function()
+        if GetSpellAbilityId() ~= FourCC('AUin') then return end
+        Trig_Buildings_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: StartBuildingDEmon
@@ -40685,7 +39888,7 @@ function InitTrig_CanselBuilding_Copy()
     TriggerAddAction(gg_trg_CanselBuilding_Copy, Trig_CanselBuilding_Copy_Actions)
 end
 --===========================================================================
--- Trigger: Безымянный триггер 001 Copy
+-- Trigger: ?????????? ??????? 001 Copy
 --===========================================================================
 function Trig_____________________________________001_Copy_Conditions()
     if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0MQ'), GetAttackedUnitBJ()) >= 1 ) ) then
@@ -40766,12 +39969,6 @@ end
 --===========================================================================
 -- Trigger: Pole Astrala Demons
 --===========================================================================
-function Trig_Pole_Astrala_Demons_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0N9') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Pole_Astrala_Demons_Func003A()
     local u
     CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
@@ -40781,7 +39978,7 @@ function Trig_Pole_Astrala_Demons_Func003A()
     IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
     u=udg_LocalUnit[1]
     UnitApplyTimedLife(u, FourCC('BTLF'), 2)
-    u=null
+    u=nil
 end
 function Trig_Pole_Astrala_Demons_Actions()
     udg_LocalOtrad=GetUnitsInRangeOfLocAll(125.00, GetSpellTargetLoc())
@@ -40793,18 +39990,14 @@ end
 function InitTrig_Pole_Astrala_Demons()
     gg_trg_Pole_Astrala_Demons=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Pole_Astrala_Demons, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Pole_Astrala_Demons, Condition(Trig_Pole_Astrala_Demons_Conditions))
-    TriggerAddAction(gg_trg_Pole_Astrala_Demons, Trig_Pole_Astrala_Demons_Actions)
+    TriggerAddAction(gg_trg_Pole_Astrala_Demons, function()
+        if GetSpellAbilityId() ~= FourCC('A0N9') then return end
+        Trig_Pole_Astrala_Demons_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Pole Astrala Demons Copy
 --===========================================================================
-function Trig_Pole_Astrala_Demons_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1BY') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Pole_Astrala_Demons_Copy_Func003A()
     local u
     CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
@@ -40814,7 +40007,7 @@ function Trig_Pole_Astrala_Demons_Copy_Func003A()
     IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
     u=udg_LocalUnit[1]
     UnitApplyTimedLife(u, FourCC('BTLF'), 2)
-    u=null
+    u=nil
 end
 function Trig_Pole_Astrala_Demons_Copy_Actions()
     udg_LocalOtrad=GetUnitsInRangeOfLocAll(125.00, GetSpellTargetLoc())
@@ -40826,18 +40019,14 @@ end
 function InitTrig_Pole_Astrala_Demons_Copy()
     gg_trg_Pole_Astrala_Demons_Copy=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Pole_Astrala_Demons_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Pole_Astrala_Demons_Copy, Condition(Trig_Pole_Astrala_Demons_Copy_Conditions))
-    TriggerAddAction(gg_trg_Pole_Astrala_Demons_Copy, Trig_Pole_Astrala_Demons_Copy_Actions)
+    TriggerAddAction(gg_trg_Pole_Astrala_Demons_Copy, function()
+        if GetSpellAbilityId() ~= FourCC('A1BY') then return end
+        Trig_Pole_Astrala_Demons_Copy_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Pole Astrala Demons Copy Copy
 --===========================================================================
-function Trig_Pole_Astrala_Demons_Copy_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1BZ') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Pole_Astrala_Demons_Copy_Copy_Func003A()
     local u
     CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
@@ -40847,7 +40036,7 @@ function Trig_Pole_Astrala_Demons_Copy_Copy_Func003A()
     IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
     u=udg_LocalUnit[1]
     UnitApplyTimedLife(u, FourCC('BTLF'), 2)
-    u=null
+    u=nil
 end
 function Trig_Pole_Astrala_Demons_Copy_Copy_Actions()
     udg_LocalOtrad=GetUnitsInRangeOfLocAll(125.00, GetSpellTargetLoc())
@@ -40859,18 +40048,14 @@ end
 function InitTrig_Pole_Astrala_Demons_Copy_Copy()
     gg_trg_Pole_Astrala_Demons_Copy_Copy=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Pole_Astrala_Demons_Copy_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Pole_Astrala_Demons_Copy_Copy, Condition(Trig_Pole_Astrala_Demons_Copy_Copy_Conditions))
-    TriggerAddAction(gg_trg_Pole_Astrala_Demons_Copy_Copy, Trig_Pole_Astrala_Demons_Copy_Copy_Actions)
+    TriggerAddAction(gg_trg_Pole_Astrala_Demons_Copy_Copy, function()
+        if GetSpellAbilityId() ~= FourCC('A1BZ') then return end
+        Trig_Pole_Astrala_Demons_Copy_Copy_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Pole Astrala Demons Copy Copy 2
 --===========================================================================
-function Trig_Pole_Astrala_Demons_Copy_Copy_2_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1C0') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Pole_Astrala_Demons_Copy_Copy_2_Func003A()
     local u
     CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
@@ -40880,7 +40065,7 @@ function Trig_Pole_Astrala_Demons_Copy_Copy_2_Func003A()
     IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
     u=udg_LocalUnit[1]
     UnitApplyTimedLife(u, FourCC('BTLF'), 2)
-    u=null
+    u=nil
 end
 function Trig_Pole_Astrala_Demons_Copy_Copy_2_Actions()
     udg_LocalOtrad=GetUnitsInRangeOfLocAll(125.00, GetSpellTargetLoc())
@@ -40892,8 +40077,10 @@ end
 function InitTrig_Pole_Astrala_Demons_Copy_Copy_2()
     gg_trg_Pole_Astrala_Demons_Copy_Copy_2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Pole_Astrala_Demons_Copy_Copy_2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Pole_Astrala_Demons_Copy_Copy_2, Condition(Trig_Pole_Astrala_Demons_Copy_Copy_2_Conditions))
-    TriggerAddAction(gg_trg_Pole_Astrala_Demons_Copy_Copy_2, Trig_Pole_Astrala_Demons_Copy_Copy_2_Actions)
+    TriggerAddAction(gg_trg_Pole_Astrala_Demons_Copy_Copy_2, function()
+        if GetSpellAbilityId() ~= FourCC('A1C0') then return end
+        Trig_Pole_Astrala_Demons_Copy_Copy_2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: SargerasReturnDamage
@@ -40945,7 +40132,7 @@ function Trig_Blood_Conditions()
 end
 function Trig_Blood_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('n025'), 0, GetOwningPlayer(GetTriggerUnit()))
-    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), FourCC('n026'), - 1) --кровавый палач
+    SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), FourCC('n026'), - 1) --???????? ?????
 end
 --===========================================================================
 function InitTrig_Blood()
@@ -40975,14 +40162,8 @@ function InitTrig_Blood2()
     TriggerAddAction(gg_trg_Blood2, Trig_Blood2_Actions)
 end
 --===========================================================================
--- Trigger: Безымянный триггер 001
+-- Trigger: ?????????? ??????? 001
 --===========================================================================
-function Trig_____________________________________001_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0N6') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_____________________________________001_Actions()
     UnitAddAbilityBJ(FourCC('A0Y9'), GetTriggerUnit())
     RemoveAbilityTimed(GetTriggerUnit() , FourCC('A0Y9') , 20.00)
@@ -40991,15 +40172,14 @@ end
 function InitTrig_____________________________________001()
     gg_trg_____________________________________001=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_____________________________________001, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_____________________________________001, Condition(Trig_____________________________________001_Conditions))
-    TriggerAddAction(gg_trg_____________________________________001, Trig_____________________________________001_Actions)
+    TriggerAddAction(gg_trg_____________________________________001, function()
+        if GetSpellAbilityId() ~= FourCC('A0N6') then return end
+        Trig_____________________________________001_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: SomeDemonSpell
 --===========================================================================
-function Trig_SomeDemonSpell_Conditions()
-    return GetSpellAbilityId() == FourCC('A0NB')
-end
 function Trig_SomeDemonSpell_Actions()
     UnitAddAbilityBJ(FourCC('A0NC'), GetTriggerUnit())
     RemoveAbilityTimed(GetTriggerUnit() , FourCC('A0NC') , 20.00)
@@ -41008,18 +40188,14 @@ end
 function InitTrig_SomeDemonSpell()
     gg_trg_SomeDemonSpell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SomeDemonSpell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SomeDemonSpell, Condition(Trig_SomeDemonSpell_Conditions))
-    TriggerAddAction(gg_trg_SomeDemonSpell, Trig_SomeDemonSpell_Actions)
+    TriggerAddAction(gg_trg_SomeDemonSpell, function()
+        if GetSpellAbilityId() ~= FourCC('A0NB') then return end
+        Trig_SomeDemonSpell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Units
 --===========================================================================
-function Trig_Units_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0QN') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Units_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('h0F1'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('n07O'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -41045,18 +40221,14 @@ end
 function InitTrig_Units()
     gg_trg_Units=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Units, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Units, Condition(Trig_Units_Conditions))
-    TriggerAddAction(gg_trg_Units, Trig_Units_Actions)
+    TriggerAddAction(gg_trg_Units, function()
+        if GetSpellAbilityId() ~= FourCC('A0QN') then return end
+        Trig_Units_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Fire
 --===========================================================================
-function Trig_Fire_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0W9') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Fire_Actions()
     BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W9'), true, true)
     BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W7'), true, true)
@@ -41079,18 +40251,14 @@ end
 function InitTrig_Fire()
     gg_trg_Fire=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Fire, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Fire, Condition(Trig_Fire_Conditions))
-    TriggerAddAction(gg_trg_Fire, Trig_Fire_Actions)
+    TriggerAddAction(gg_trg_Fire, function()
+        if GetSpellAbilityId() ~= FourCC('A0W9') then return end
+        Trig_Fire_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Water
 --===========================================================================
-function Trig_Water_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0W7') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Water_Actions()
     BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W9'), true, true)
     BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W7'), true, true)
@@ -41112,18 +40280,14 @@ end
 function InitTrig_Water()
     gg_trg_Water=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Water, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Water, Condition(Trig_Water_Conditions))
-    TriggerAddAction(gg_trg_Water, Trig_Water_Actions)
+    TriggerAddAction(gg_trg_Water, function()
+        if GetSpellAbilityId() ~= FourCC('A0W7') then return end
+        Trig_Water_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Earth
 --===========================================================================
-function Trig_Earth_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0W8') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Earth_Actions()
     BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W9'), true, true)
     BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W7'), true, true)
@@ -41145,18 +40309,14 @@ end
 function InitTrig_Earth()
     gg_trg_Earth=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Earth, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Earth, Condition(Trig_Earth_Conditions))
-    TriggerAddAction(gg_trg_Earth, Trig_Earth_Actions)
+    TriggerAddAction(gg_trg_Earth, function()
+        if GetSpellAbilityId() ~= FourCC('A0W8') then return end
+        Trig_Earth_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Wind
 --===========================================================================
-function Trig_Wind_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0WA') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Wind_Actions()
     BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W9'), true, true)
     BlzUnitDisableAbility(GetTriggerUnit(), FourCC('A0W7'), true, true)
@@ -41177,34 +40337,32 @@ end
 function InitTrig_Wind()
     gg_trg_Wind=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Wind, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Wind, Condition(Trig_Wind_Conditions))
-    TriggerAddAction(gg_trg_Wind, Trig_Wind_Actions)
+    TriggerAddAction(gg_trg_Wind, function()
+        if GetSpellAbilityId() ~= FourCC('A0WA') then return end
+        Trig_Wind_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: FireRageElem
 --===========================================================================
-function Trig_FireRageElem_Conditions()
-    return GetSpellAbilityId() == FourCC('A0QJ')
-end
 function Trig_FireRageElem_Actions()
     local u= GetTriggerUnit()
     UnitAddAbility(u, FourCC('A0OM'))
     RemoveAbilityTimed(u , FourCC('A0OM') , 10)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_FireRageElem()
     gg_trg_FireRageElem=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_FireRageElem, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_FireRageElem, Condition(Trig_FireRageElem_Conditions))
-    TriggerAddAction(gg_trg_FireRageElem, Trig_FireRageElem_Actions)
+    TriggerAddAction(gg_trg_FireRageElem, function()
+        if GetSpellAbilityId() ~= FourCC('A0QJ') then return end
+        Trig_FireRageElem_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: FireCircleElem
 --===========================================================================
-function Trig_FireCircleElem_Conditions()
-    return GetSpellAbilityId() == FourCC('A0P7')
-end
 function Trig_FireCircleElem_Actions()
     UnitAddAbility(GetTriggerUnit(), FourCC('A0P6'))
     RemoveAbilityTimed(GetTriggerUnit() , FourCC('A0P6') , 30)
@@ -41213,15 +40371,14 @@ end
 function InitTrig_FireCircleElem()
     gg_trg_FireCircleElem=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_FireCircleElem, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_FireCircleElem, Condition(Trig_FireCircleElem_Conditions))
-    TriggerAddAction(gg_trg_FireCircleElem, Trig_FireCircleElem_Actions)
+    TriggerAddAction(gg_trg_FireCircleElem, function()
+        if GetSpellAbilityId() ~= FourCC('A0P7') then return end
+        Trig_FireCircleElem_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ColossalAttackElem
 --===========================================================================
-function Trig_ColossalAttackElem_Conditions()
-    return GetSpellAbilityId() == FourCC('A0OP')
-end
 function Trig_ColossalAttackElem_Actions()
     UnitAddAbility(GetTriggerUnit(), FourCC('A0OO'))
     RemoveAbilityTimed(GetTriggerUnit() , FourCC('A0OO') , 25)
@@ -41230,29 +40387,30 @@ end
 function InitTrig_ColossalAttackElem()
     gg_trg_ColossalAttackElem=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_ColossalAttackElem, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ColossalAttackElem, Condition(Trig_ColossalAttackElem_Conditions))
-    TriggerAddAction(gg_trg_ColossalAttackElem, Trig_ColossalAttackElem_Actions)
+    TriggerAddAction(gg_trg_ColossalAttackElem, function()
+        if GetSpellAbilityId() ~= FourCC('A0OP') then return end
+        Trig_ColossalAttackElem_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: MultuAttackWater
 --
--- Спелл Наводнение Нептулона
+-- ????? ?????????? ?????????
 --===========================================================================
-function Trig_MultuAttackWater_Conditions()
-    return GetSpellAbilityId() == FourCC('A0OR')
-end
 function Trig_MultuAttackWater_Actions()
     local u= GetTriggerUnit()
     UnitAddAbility(u, FourCC('A0OS'))
     RemoveAbilityTimed(u , FourCC('A0OS') , 10)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_MultuAttackWater()
     gg_trg_MultuAttackWater=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_MultuAttackWater, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_MultuAttackWater, Condition(Trig_MultuAttackWater_Conditions))
-    TriggerAddAction(gg_trg_MultuAttackWater, Trig_MultuAttackWater_Actions)
+    TriggerAddAction(gg_trg_MultuAttackWater, function()
+        if GetSpellAbilityId() ~= FourCC('A0OR') then return end
+        Trig_MultuAttackWater_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: gnev1
@@ -41398,9 +40556,6 @@ end
 --===========================================================================
 -- Trigger: SpellShieldDK
 --===========================================================================
-function Trig_SpellShieldDK_Conditions()
-    return GetSpellAbilityId() == FourCC('A1ND')
-end
 function Trig_SpellShieldDK_Actions()
     DummyCastTarget(FourCC('A0CG') , "antimagicshell" , GetTriggerUnit() , GetTriggerUnit())
 end
@@ -41408,8 +40563,10 @@ end
 function InitTrig_SpellShieldDK()
     gg_trg_SpellShieldDK=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SpellShieldDK, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SpellShieldDK, Condition(Trig_SpellShieldDK_Conditions))
-    TriggerAddAction(gg_trg_SpellShieldDK, Trig_SpellShieldDK_Actions)
+    TriggerAddAction(gg_trg_SpellShieldDK, function()
+        if GetSpellAbilityId() ~= FourCC('A1ND') then return end
+        Trig_SpellShieldDK_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: TowersEcFix
@@ -41501,12 +40658,6 @@ end
 --===========================================================================
 -- Trigger: ArthasCoils
 --===========================================================================
-function Trig_ArthasCoils_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0WD') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_ArthasCoils_Func002002()
     return ( 0 == 0 )
 end
@@ -41521,7 +40672,7 @@ function Trig_ArthasCoils_Func007A()
 end
 function Trig_ArthasCoils_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr=Condition(Trig_ArthasCoils_Func002002)
+    udg_Boolexpr = Trig_ArthasCoils_Func002002
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 125, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -41534,18 +40685,14 @@ function InitTrig_ArthasCoils()
     gg_trg_ArthasCoils=CreateTrigger()
     DisableTrigger(gg_trg_ArthasCoils)
     TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasCoils, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ArthasCoils, Condition(Trig_ArthasCoils_Conditions))
-    TriggerAddAction(gg_trg_ArthasCoils, Trig_ArthasCoils_Actions)
+    TriggerAddAction(gg_trg_ArthasCoils, function()
+        if GetSpellAbilityId() ~= FourCC('A0WD') then return end
+        Trig_ArthasCoils_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ArthasNova
 --===========================================================================
-function Trig_ArthasNova_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A0WE') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_ArthasNova_Func002002()
     return ( 0 == 0 )
 end
@@ -41560,7 +40707,7 @@ function Trig_ArthasNova_Func007A()
 end
 function Trig_ArthasNova_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    udg_Boolexpr=Condition(Trig_ArthasNova_Func002002)
+    udg_Boolexpr = Trig_ArthasNova_Func002002
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 240, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -41573,8 +40720,10 @@ function InitTrig_ArthasNova()
     gg_trg_ArthasNova=CreateTrigger()
     DisableTrigger(gg_trg_ArthasNova)
     TriggerRegisterAnyUnitEventBJ(gg_trg_ArthasNova, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ArthasNova, Condition(Trig_ArthasNova_Conditions))
-    TriggerAddAction(gg_trg_ArthasNova, Trig_ArthasNova_Actions)
+    TriggerAddAction(gg_trg_ArthasNova, function()
+        if GetSpellAbilityId() ~= FourCC('A0WE') then return end
+        Trig_ArthasNova_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: KillSpaned
@@ -41596,9 +40745,6 @@ end
 --===========================================================================
 -- Trigger: AreaOfDeath Copy
 --===========================================================================
-function Trig_AreaOfDeath_Copy_Conditions()
-    return GetSpellAbilityId() == FourCC('kel0')
-end
 function Trig_AreaOfDeath_Copy_Actions()
     SpellChannelLevel(GetTriggerUnit() , FourCC('kel0') , FourCC('A1E7') , "deathanddecay" , GetSpellTargetX() , GetSpellTargetY() , 17)
 end
@@ -41606,8 +40752,10 @@ end
 function InitTrig_AreaOfDeath_Copy()
     gg_trg_AreaOfDeath_Copy=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_AreaOfDeath_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_AreaOfDeath_Copy, Condition(Trig_AreaOfDeath_Copy_Conditions))
-    TriggerAddAction(gg_trg_AreaOfDeath_Copy, Trig_AreaOfDeath_Copy_Actions)
+    TriggerAddAction(gg_trg_AreaOfDeath_Copy, function()
+        if GetSpellAbilityId() ~= FourCC('kel0') then return end
+        Trig_AreaOfDeath_Copy_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AutocastShieldOnResearch
@@ -41645,10 +40793,10 @@ end
 -- Trigger: PassiveTalisra
 --===========================================================================
 function Trig_PassiveTalisra_Conditions()
-    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B08J')) + GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B08K')) > 0 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetEventDamage() >= GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) --Её бафф
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B08J')) + GetUnitAbilityLevel(GetTriggerUnit(), FourCC('B08K')) > 0 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_HERO) and GetEventDamage() >= GetUnitState(GetTriggerUnit(), UNIT_STATE_LIFE) --?? ????
 end
 function Talisra()
-    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1OS')) > 0 --Абилка
+    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1OS')) > 0 --??????
 end
 function Trig_PassiveTalisra_Actions()
     local g= CreateGroup()
@@ -41656,9 +40804,9 @@ function Trig_PassiveTalisra_Actions()
     local u2
     local p= GetOwningPlayer(u)
     local pi= GetPlayerId(p)
-    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 650, Condition(Talisra), 1)
+    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 650, Talisra, 1)
     u2=FirstOfGroup(g)
-    if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1OS')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --Абилка
+    if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1OS')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --??????
         SetUnitManaBJ(u2, GetUnitState(u2, UNIT_STATE_MANA) - 50)
         if playerCapital[pi] == nil then
             MakeFakeCapital(p)
@@ -41674,9 +40822,9 @@ function Trig_PassiveTalisra_Actions()
     end
     
     DestroyGroup(g)
-    g=null
-    u=null
-    u2=null
+    g=nil
+    u=nil
+    u2=nil
 end
 --===========================================================================
 function InitTrig_PassiveTalisra()
@@ -41691,9 +40839,9 @@ end
 function IceTrollsStartEach()
     local p= GetEnumPlayer()
     
-    SetPlayerTechMaxAllowedSwap(FourCC('n07B'), 0, p) -- Взыватель душ
-    SetPlayerTechMaxAllowedSwap(FourCC('R09L'), 0, p) -- Его грейд
-    SetPlayerTechMaxAllowedSwap(FourCC('o04T'), 0, p) -- Голем
+    SetPlayerTechMaxAllowedSwap(FourCC('n07B'), 0, p) -- ????????? ???
+    SetPlayerTechMaxAllowedSwap(FourCC('R09L'), 0, p) -- ??? ?????
+    SetPlayerTechMaxAllowedSwap(FourCC('o04T'), 0, p) -- ?????
     SetPlayerTechMaxAllowedSwap(FourCC('R09P'), 0, p) -- Golem grade
     
     
@@ -41731,9 +40879,6 @@ end
 --===========================================================================
 -- Trigger: KillLoa
 --===========================================================================
-function Trig_KillLoa_Conditions()
-    return GetSpellAbilityId() == FourCC('A1FS')
-end
 function Trig_KillLoa_Actions()
     local p= GetOwningPlayer(GetTriggerUnit())
     SetPlayerTechResearchedSwap(FourCC('R0IX'), 1, p)
@@ -41741,8 +40886,8 @@ function Trig_KillLoa_Actions()
     SetPlayerAbilityAvailableBJ(false, FourCC('A1FR'), p)
     
     
-    SetPlayerTechMaxAllowedSwap(FourCC('n07B'), - 1, p) -- Взыватель душ
-    SetPlayerTechMaxAllowedSwap(FourCC('R09L'), 2, p) -- Его грейд
+    SetPlayerTechMaxAllowedSwap(FourCC('n07B'), - 1, p) -- ????????? ???
+    SetPlayerTechMaxAllowedSwap(FourCC('R09L'), 2, p) -- ??? ?????
     SetPlayerTechMaxAllowedSwap(FourCC('o04T'), - 1, p) -- Golem
     SetPlayerTechMaxAllowedSwap(FourCC('R09P'), 2, p) -- Golem grade
     
@@ -41757,15 +40902,14 @@ end
 function InitTrig_KillLoa()
     gg_trg_KillLoa=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_KillLoa, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_KillLoa, Condition(Trig_KillLoa_Conditions))
-    TriggerAddAction(gg_trg_KillLoa, Trig_KillLoa_Actions)
+    TriggerAddAction(gg_trg_KillLoa, function()
+        if GetSpellAbilityId() ~= FourCC('A1FS') then return end
+        Trig_KillLoa_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ServeLoa
 --===========================================================================
-function Trig_ServeLoa_Conditions()
-    return GetSpellAbilityId() == FourCC('A1FR')
-end
 function Trig_ServeLoa_Actions()
     local p= GetOwningPlayer(GetTriggerUnit())
     SetPlayerTechResearchedSwap(FourCC('R0IY'), 1, p)
@@ -41793,18 +40937,14 @@ end
 function InitTrig_ServeLoa()
     gg_trg_ServeLoa=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_ServeLoa, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_ServeLoa, Condition(Trig_ServeLoa_Conditions))
-    TriggerAddAction(gg_trg_ServeLoa, Trig_ServeLoa_Actions)
+    TriggerAddAction(gg_trg_ServeLoa, function()
+        if GetSpellAbilityId() ~= FourCC('A1FR') then return end
+        Trig_ServeLoa_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Spell E Copy
 --===========================================================================
-function Trig_Spell_E_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1DA') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Spell_E_Copy_Actions()
     udg_MUI_E_Glaz=( udg_MUI_E_Glaz + 1 )
     udg_Antibag_E_Glaz[udg_MUI_E_Glaz]=( udg_Antibag_E_Glaz[udg_MUI_E_Glaz] + 1 )
@@ -41821,8 +40961,10 @@ end
 function InitTrig_Spell_E_Copy()
     gg_trg_Spell_E_Copy=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Spell_E_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Spell_E_Copy, Condition(Trig_Spell_E_Copy_Conditions))
-    TriggerAddAction(gg_trg_Spell_E_Copy, Trig_Spell_E_Copy_Actions)
+    TriggerAddAction(gg_trg_Spell_E_Copy, function()
+        if GetSpellAbilityId() ~= FourCC('A1DA') then return end
+        Trig_Spell_E_Copy_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Spell E Dvij
@@ -41920,11 +41062,8 @@ end
 --===========================================================================
 -- Trigger: Ini2
 --
--- Инициализация стандартного режима сражения для всех игроков
+-- ????????????? ???????????? ?????? ???????? ??? ???? ???????
 --===========================================================================
-function Trig_Ini2_Conditions()
-    return GetSpellAbilityId() == FourCC('A1DQ')
-end
 function Trig_Ini2_Actions()
     --call DisplayTextToPlayer(Player(0),0,0,"")
     UnitAddAbility(GetSpellTargetUnit(), FourCC('A0H1'))
@@ -41933,8 +41072,10 @@ end
 function InitTrig_Ini2()
     gg_trg_Ini2=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Ini2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Ini2, Condition(Trig_Ini2_Conditions))
-    TriggerAddAction(gg_trg_Ini2, Trig_Ini2_Actions)
+    TriggerAddAction(gg_trg_Ini2, function()
+        if GetSpellAbilityId() ~= FourCC('A1DQ') then return end
+        Trig_Ini2_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Spell E2
@@ -41942,7 +41083,7 @@ end
 function Trig_Spell_E2_Conditions()
  
     return GetUnitTypeId(GetEventDamageSource()) == FourCC('O04H') and GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A0H1')) > 0
-    -- Тип применяющего и спел применяющего
+    -- ??? ???????????? ? ???? ????????????
 end
 function Trig_Spell_E2_Actions()
     local u= GetTriggerUnit()
@@ -41974,7 +41115,7 @@ end
 --===========================================================================
 function Trig_HpRegen2_Conditions()
     
-    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1CA')) > 0 -- Тут абилка иконка
+    return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1CA')) > 0 -- ??? ?????? ??????
     
     
 end
@@ -42010,7 +41151,7 @@ function Trig_HpRegen2_Actions()
     
     
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_HpRegen2()
@@ -42056,12 +41197,6 @@ end
 --===========================================================================
 -- Trigger: Cast Copy
 --===========================================================================
-function Trig_Cast_Copy_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('A1CB') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Cast_Copy_Actions()
     EnableTrigger(gg_trg_Lech)
     CreateNUnitsAtLoc(1, FourCC('h0ML'), GetOwningPlayer(udg_u), GetUnitLoc(GetSpellAbilityUnit()), bj_UNIT_FACING)
@@ -42075,8 +41210,10 @@ end
 function InitTrig_Cast_Copy()
     gg_trg_Cast_Copy=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Cast_Copy, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Cast_Copy, Condition(Trig_Cast_Copy_Conditions))
-    TriggerAddAction(gg_trg_Cast_Copy, Trig_Cast_Copy_Actions)
+    TriggerAddAction(gg_trg_Cast_Copy, function()
+        if GetSpellAbilityId() ~= FourCC('A1CB') then return end
+        Trig_Cast_Copy_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: AvtoCast Copy
@@ -42311,12 +41448,6 @@ end
 --===========================================================================
 -- Trigger: Lord
 --===========================================================================
-function Trig_Lord_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('NQ06') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_Lord_Func001Func001Func001C()
     if ( not ( GetUnitAbilityLevelSwapped(FourCC('NQ06'), GetTriggerUnit()) == 2 ) ) then
         return false
@@ -42370,8 +41501,10 @@ end
 function InitTrig_Lord()
     gg_trg_Lord=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_Lord, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_Lord, Condition(Trig_Lord_Conditions))
-    TriggerAddAction(gg_trg_Lord, Trig_Lord_Actions)
+    TriggerAddAction(gg_trg_Lord, function()
+        if GetSpellAbilityId() ~= FourCC('NQ06') then return end
+        Trig_Lord_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: LordBirth
@@ -42584,12 +41717,6 @@ end
 --===========================================================================
 -- Trigger: MassHEX
 --===========================================================================
-function Trig_MassHEX_Conditions()
-    if ( not ( GetSpellAbilityId() == FourCC('VLJ1') ) ) then
-        return false
-    end
-    return true
-end
 function Trig_MassHEX_Func001A()
     CreateNUnitsAtLoc(1, FourCC('repD'), GetTriggerPlayer(), GetUnitLoc(GetEnumUnit()), bj_UNIT_FACING)
     UnitAddAbilityBJ(FourCC('VLJ5'), GetLastCreatedUnit())
@@ -42603,15 +41730,14 @@ end
 function InitTrig_MassHEX()
     gg_trg_MassHEX=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_MassHEX, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_MassHEX, Condition(Trig_MassHEX_Conditions))
-    TriggerAddAction(gg_trg_MassHEX, Trig_MassHEX_Actions)
+    TriggerAddAction(gg_trg_MassHEX, function()
+        if GetSpellAbilityId() ~= FourCC('VLJ1') then return end
+        Trig_MassHEX_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: SomeVoljinSpell
 --===========================================================================
-function Trig_SomeVoljinSpell_Conditions()
-    return GetSpellAbilityId() == FourCC('VLJ4')
-end
 function Trig_SomeVoljinSpell_Actions()
     UnitAddAbilityBJ(FourCC('A0OR'), GetTriggerUnit())
     BlzUnitHideAbility(GetTriggerUnit(), FourCC('A0OR'), true)
@@ -42621,8 +41747,10 @@ end
 function InitTrig_SomeVoljinSpell()
     gg_trg_SomeVoljinSpell=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_SomeVoljinSpell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_SomeVoljinSpell, Condition(Trig_SomeVoljinSpell_Conditions))
-    TriggerAddAction(gg_trg_SomeVoljinSpell, Trig_SomeVoljinSpell_Actions)
+    TriggerAddAction(gg_trg_SomeVoljinSpell, function()
+        if GetSpellAbilityId() ~= FourCC('VLJ4') then return end
+        Trig_SomeVoljinSpell_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: Kill
@@ -42647,20 +41775,39 @@ end
 function Trig_Kill_Actions()
     local p= GetTriggerPlayer()
     local g= CreateGroup()
-    GroupEnumUnitsSelected(g, p, null)
+    GroupEnumUnitsSelected(g, p, nil)
     ForGroup(g, Trig_Kill_Func002A)
     DestroyGroup(g)
-    g=null
-    p=null
+    g=nil
+    p=nil
 end
 --===========================================================================
 function InitTrig_Kill()
     gg_trg_Kill=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(i), " - kill", true)
-        i = i + 1
-    end
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(0), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(1), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(2), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(3), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(4), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(5), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(6), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(7), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(8), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(9), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(10), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(11), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(12), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(13), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(14), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(15), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(16), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(17), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(18), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(19), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(20), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(21), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(22), " - kill", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(23), " - kill", true)
     TriggerAddAction(gg_trg_Kill, Trig_Kill_Actions)
 end
 --===========================================================================
@@ -42675,27 +41822,46 @@ end
 function Trig_Rep_Actions()
     local p= GetTriggerPlayer()
     local g= CreateGroup()
-    GroupEnumUnitsSelected(g, p, null)
+    GroupEnumUnitsSelected(g, p, nil)
     ForGroup(g, RepConditions)
     DestroyGroup(g)
-    g=null
-    p=null
+    g=nil
+    p=nil
 end
 --===========================================================================
 function InitTrig_Rep()
     gg_trg_Rep=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(i), " - rep", true)
-        i = i + 1
-    end
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(0), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(1), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(2), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(3), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(4), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(5), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(6), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(7), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(8), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(9), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(10), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(11), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(12), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(13), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(14), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(15), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(16), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(17), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(18), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(19), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(20), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(21), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(22), " - rep", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(23), " - rep", true)
     TriggerAddAction(gg_trg_Rep, Trig_Rep_Actions)
 end
 --===========================================================================
 -- Trigger: StolicaKill
 --===========================================================================
 function Trig_StolicaKill_Actions()
-    -- Обнуляю вассалов самоубийцы. Вы свободны!
+    -- ??????? ???????? ??????????. ?? ????????!
 end
 --===========================================================================
 function InitTrig_StolicaKill()
@@ -42712,11 +41878,30 @@ end
 --===========================================================================
 function InitTrig_Camera_command_O()
     gg_trg_Camera_command_O=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(i), " - cam", false)
-        i = i + 1
-    end
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(0), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(1), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(2), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(3), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(4), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(5), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(6), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(7), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(8), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(9), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(10), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(11), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(12), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(13), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(14), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(15), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(16), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(17), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(18), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(19), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(20), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(21), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(22), " - cam", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(23), " - cam", false)
     TriggerAddAction(gg_trg_Camera_command_O, Trig_Camera_command_O_Actions)
 end
 --===========================================================================
@@ -42744,11 +41929,30 @@ end
 --===========================================================================
 function InitTrig_Name_command_O()
     gg_trg_Name_command_O=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(i), " - name", false)
-        i = i + 1
-    end
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(0), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(1), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(2), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(3), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(4), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(5), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(6), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(7), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(8), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(9), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(10), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(11), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(12), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(13), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(14), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(15), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(16), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(17), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(18), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(20), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(19), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(21), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(22), " - name", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(23), " - name", false)
     TriggerAddCondition(gg_trg_Name_command_O, Condition(Trig_Name_command_O_Conditions))
     TriggerAddAction(gg_trg_Name_command_O, Trig_Name_command_O_Actions)
 end
@@ -42769,10 +41973,10 @@ function Trig_UName_command_Actions()
     udg_LocalText2=SubStringBJ(udg_LocalText2, 7, 50)
     
     SyncSelections()
-    GroupEnumUnitsSelected(g, GetTriggerPlayer(), null)
+    GroupEnumUnitsSelected(g, GetTriggerPlayer(), nil)
     while true do
         u=FirstOfGroup(g)
-        if u == null then break end
+        if u == nil then break end
         BlzSetUnitName(u, udg_LocalText2)
         
         GroupRemoveUnit(g, u)
@@ -42782,8 +41986,8 @@ function Trig_UName_command_Actions()
     
     
     DestroyGroup(g)
-    g=null
-    u=null
+    g=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_UName_command()
@@ -42814,8 +42018,8 @@ function Trig_SecondChance_Func003Func007A()
     local id= GetUnitTypeId(u)
     RemoveUnit(u)
     SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 function Trig_SecondChance_Func003Func008C()
     if ( not ( udg_LocalInteger >= 1 ) ) then
@@ -42844,7 +42048,7 @@ function SecondChanceTimer()
     FlushChildHashtable(Hash, GetHandleId(t))
     
     DestroyTimer(t)
-    t=null
+    t=nil
 end
 function Trig_SecondChance_Actions()
     local t= SecondChance[GetPlayerId(ConvertedPlayer(udg_LocalInteger))]
@@ -42853,8 +42057,8 @@ function Trig_SecondChance_Actions()
     ProbeLogWrite("[CHAT] -raceselect target=" .. tostring(udg_LocalInteger))
     if ( Trig_SecondChance_Func003C() ) then
         udg_LocalPosition2=(StartLoc[GetRandomInt(0, StartLocCount - 1)]) -- INLINED!!
-        DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Хост " .. GetPlayerName(GetTriggerPlayer()) .. " дал игроку " .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " второй шанс!")
-        DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, "У вас есть 15 минут на то, чтобы поставить столицу!")
+        DisplayTimedTextToForce(GetPlayersAll(), 5.00, "???? " .. GetPlayerName(GetTriggerPlayer()) .. " ??? ?????? " .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " ?????? ????!")
+        DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, "? ??? ???? 15 ????? ?? ??, ????? ????????? ???????!")
         CreateNUnitsAtLoc(1, FourCC('h0HJ'), ConvertedPlayer(udg_LocalInteger), udg_LocalPosition2, bj_UNIT_FACING)
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_GOLD, 5000)
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_LUMBER, 5000)
@@ -42870,7 +42074,7 @@ function Trig_SecondChance_Actions()
             SavePlayerHandle(Hash, GetHandleId(t), 0, ConvertedPlayer(udg_LocalInteger))
         end
     end
-    t=null
+    t=nil
 end
 --===========================================================================
 function InitTrig_SecondChance()
@@ -42917,8 +42121,8 @@ function Trig_GG_Func004A()
             SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
         end
     end
-    u=null
-    p=null
+    u=nil
+    p=nil
 end
 function Trig_GG_Actions()
     --local integer pi = GetPlayerId(GetTriggerPlayer())
@@ -42932,11 +42136,33 @@ end
 --===========================================================================
 function InitTrig_GG()
     gg_trg_GG=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(i), " - gg", true)
-        i = i + 1
-    end
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(0), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(1), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(2), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(3), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(4), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(5), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(6), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(7), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(8), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(9), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(10), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(11), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(12), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(13), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(15), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(14), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(16), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(17), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(18), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(19), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(20), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(21), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(22), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(23), " - gg", true)
+    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(24), " - gg", true)
+    
+    
     TriggerAddAction(gg_trg_GG, Trig_GG_Actions)
 end
 --===========================================================================
@@ -43130,8 +42356,8 @@ function Trig_ForSoldUnitsSelect_Actions()
     SetPlayerStateBJ(general, PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(mainplayer, PLAYER_STATE_RESOURCE_LUMBER))
     
     
-    mainplayer=null
-    general=null
+    mainplayer=nil
+    general=nil
 end
 --===========================================================================
 function InitTrig_ForSoldUnitsSelect()
@@ -43171,7 +42397,7 @@ function Trig_ForSoldUnitsDesel_Actions()
         SetPlayerStateBJ(general, PLAYER_STATE_RESOURCE_LUMBER, OwnLumber[pi])
         
         
-        --Что там
+        --??? ???
         
         SetPlayerStateBJ(mainplayer, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(mainplayer, PLAYER_STATE_RESOURCE_GOLD) + GoldDifference[pi])
         SetPlayerStateBJ(mainplayer, PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(mainplayer, PLAYER_STATE_RESOURCE_LUMBER) + LumberDifference[pi])
@@ -43179,8 +42405,8 @@ function Trig_ForSoldUnitsDesel_Actions()
         LumberDifference[pi]=0
     end
     
-    mainplayer=null
-    general=null
+    mainplayer=nil
+    general=nil
 end
 --===========================================================================
 function InitTrig_ForSoldUnitsDesel()
@@ -43222,394 +42448,59 @@ function InitTrig_InitGlobals()
     gg_trg_InitGlobals=CreateTrigger()
     TriggerAddAction(gg_trg_InitGlobals, Trig_InitGlobals_Actions)
 end
---===========================================================================
--- Trigger: Red color
 --
 -- 
 -- From this abyssal portal, deep monsters and nags emerge.
 --===========================================================================
-function Trig_Red_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_RED, true)
-end
 --===========================================================================
-function InitTrig_Red_color()
-    gg_trg_Red_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(i), " - colorred", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Red_color, Trig_Red_color_Actions)
-end
 --===========================================================================
--- Trigger: Blue color
 --===========================================================================
-function Trig_Blue_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_BLUE, true)
-end
 --===========================================================================
-function InitTrig_Blue_color()
-    gg_trg_Blue_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(i), " - colorblue", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Blue_color, Trig_Blue_color_Actions)
-end
 --===========================================================================
--- Trigger: Teal color
 --===========================================================================
-function Trig_Teal_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_PURPLE, true)
-end
 --===========================================================================
-function InitTrig_Teal_color()
-    gg_trg_Teal_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(i), " - colorpurple", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Teal_color, Trig_Teal_color_Actions)
-end
 --===========================================================================
--- Trigger: Lightblue color
 --===========================================================================
-function Trig_Lightblue_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_CYAN, true)
-end
 --===========================================================================
-function InitTrig_Lightblue_color()
-    gg_trg_Lightblue_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(i), " - colorteal", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Lightblue_color, Trig_Lightblue_color_Actions)
-end
 --===========================================================================
--- Trigger: Yelow color
 --===========================================================================
-function Trig_Yelow_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_YELLOW, true)
-end
 --===========================================================================
-function InitTrig_Yelow_color()
-    gg_trg_Yelow_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(i), " - coloryellow", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Yelow_color, Trig_Yelow_color_Actions)
-end
 --===========================================================================
--- Trigger: Orange color
 --===========================================================================
-function Trig_Orange_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_ORANGE, true)
-    BlzShowTerrain(true)
-end
 --===========================================================================
-function InitTrig_Orange_color()
-    gg_trg_Orange_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(i), " - colororange", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Orange_color, Trig_Orange_color_Actions)
-end
 --===========================================================================
--- Trigger: Green color
 --===========================================================================
-function Trig_Green_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_GREEN, true)
-end
 --===========================================================================
-function InitTrig_Green_color()
-    gg_trg_Green_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(i), " - colorgreen", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Green_color, Trig_Green_color_Actions)
-end
---===========================================================================
--- Trigger: Pink color
---===========================================================================
-function Trig_Pink_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_PINK, true)
-end
---===========================================================================
-function InitTrig_Pink_color()
-    gg_trg_Pink_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(i), " - colorpink", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Pink_color, Trig_Pink_color_Actions)
-end
---===========================================================================
--- Trigger: Gray color
---===========================================================================
-function Trig_Gray_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_LIGHT_GRAY, true)
-end
---===========================================================================
-function InitTrig_Gray_color()
-    gg_trg_Gray_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(i), " - colorgray", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Gray_color, Trig_Gray_color_Actions)
-end
---===========================================================================
--- Trigger: LightBlue color
---===========================================================================
-function Trig_LightBlue_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_LIGHT_BLUE, true)
-end
---===========================================================================
-function InitTrig_LightBlue_color()
-    gg_trg_LightBlue_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(i), " - colorlight - blue", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_LightBlue_color, Trig_LightBlue_color_Actions)
-end
 --===========================================================================
 -- Trigger: Dark green color
 --===========================================================================
-function Trig_Dark_green_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_AQUA, true)
-end
 --===========================================================================
-function InitTrig_Dark_green_color()
-    gg_trg_Dark_green_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(i), " - colordark - green", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Dark_green_color, Trig_Dark_green_color_Actions)
-end
 --===========================================================================
--- Trigger: Brown color
 --===========================================================================
-function Trig_Brown_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_BROWN, true)
-end
 --===========================================================================
-function InitTrig_Brown_color()
-    gg_trg_Brown_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(i), " - colorbrown", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Brown_color, Trig_Brown_color_Actions)
-end
 --===========================================================================
--- Trigger: Maroon color
 --===========================================================================
-function Trig_Maroon_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_MAROON, true)
-end
 --===========================================================================
-function InitTrig_Maroon_color()
-    gg_trg_Maroon_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(i), " - colormaroon", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Maroon_color, Trig_Maroon_color_Actions)
-end
 --===========================================================================
--- Trigger: Navy color
 --===========================================================================
-function Trig_Navy_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_NAVY, true)
-end
 --===========================================================================
-function InitTrig_Navy_color()
-    gg_trg_Navy_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(i), " - colornavy", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Navy_color, Trig_Navy_color_Actions)
-end
 --===========================================================================
--- Trigger: Turquoise color
 --===========================================================================
-function Trig_Turquoise_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_TURQUOISE, true)
-end
 --===========================================================================
-function InitTrig_Turquoise_color()
-    gg_trg_Turquoise_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(i), " - colorturquoise", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Turquoise_color, Trig_Turquoise_color_Actions)
-end
 --===========================================================================
--- Trigger: Violet color
 --===========================================================================
-function Trig_Violet_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_VIOLET, true)
-end
 --===========================================================================
-function InitTrig_Violet_color()
-    gg_trg_Violet_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(i), " - colorviolet", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Violet_color, Trig_Violet_color_Actions)
-end
 --===========================================================================
--- Trigger: Wheat color
 --===========================================================================
-function Trig_Wheat_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_WHEAT, true)
-end
 --===========================================================================
-function InitTrig_Wheat_color()
-    gg_trg_Wheat_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(i), " - colorwheat", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Wheat_color, Trig_Wheat_color_Actions)
-end
 --===========================================================================
--- Trigger: Peach color
 --===========================================================================
-function Trig_Peach_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_PEACH, true)
-end
 --===========================================================================
-function InitTrig_Peach_color()
-    gg_trg_Peach_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(i), " - colorpeach", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Peach_color, Trig_Peach_color_Actions)
-end
 --===========================================================================
--- Trigger: Mint color
 --===========================================================================
-function Trig_Mint_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_MINT, true)
-end
 --===========================================================================
-function InitTrig_Mint_color()
-    gg_trg_Mint_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(i), " - colormint", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Mint_color, Trig_Mint_color_Actions)
-end
 --===========================================================================
--- Trigger: Lavender color
 --===========================================================================
-function Trig_Lavender_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_LAVENDER, true)
-end
---===========================================================================
-function InitTrig_Lavender_color()
-    gg_trg_Lavender_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(i), " - colorlavender", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Lavender_color, Trig_Lavender_color_Actions)
-end
---===========================================================================
--- Trigger: Coal color
---===========================================================================
-function Trig_Coal_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_COAL, true)
-end
---===========================================================================
-function InitTrig_Coal_color()
-    gg_trg_Coal_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(i), " - colorcoal", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Coal_color, Trig_Coal_color_Actions)
-end
---===========================================================================
--- Trigger: Snow color
---===========================================================================
-function Trig_Snow_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_SNOW, true)
-end
---===========================================================================
-function InitTrig_Snow_color()
-    gg_trg_Snow_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(i), " - colorsnow", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Snow_color, Trig_Snow_color_Actions)
-end
---===========================================================================
--- Trigger: Emerald color
---===========================================================================
-function Trig_Emerald_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_EMERALD, true)
-end
---===========================================================================
-function InitTrig_Emerald_color()
-    gg_trg_Emerald_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(i), " - coloremerald", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Emerald_color, Trig_Emerald_color_Actions)
-end
---===========================================================================
--- Trigger: Peanut color
---===========================================================================
-function Trig_Peanut_color_Actions()
-    SetPlayerColorBJ(GetTriggerPlayer(), PLAYER_COLOR_PEANUT, true)
-end
---===========================================================================
-function InitTrig_Peanut_color()
-    gg_trg_Peanut_color=CreateTrigger()
-    local i = 0
-    while i <= 23 do
-        TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(i), " - colorpeanut", true)
-        i = i + 1
-    end
-    TriggerAddAction(gg_trg_Peanut_color, Trig_Peanut_color_Actions)
-end
 --===========================================================================
 -- Trigger: KillTestUnits   OFF ME
 --===========================================================================
@@ -43624,11 +42515,11 @@ function Trig_KillTestUnits_O_Copy_Func003A()
         SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
     end
     RemoveUnit(u)
-    u=null
-    p=null
+    u=nil
+    p=nil
 end
 function Trig_KillTestUnits___OFF_ME_Actions()
-    udg_Boolexpr=Condition(Trig_KillTestUnits_O_Copy_Func001002)
+    udg_Boolexpr = Trig_KillTestUnits_O_Copy_Func001002
     GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
     ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_O_Copy_Func003A)
     GroupClear(udg_LocalOtrad2)
@@ -43703,12 +42594,12 @@ function Trig_KillTestUnits_Command_Func003A()
         SetPlayerTechMaxAllowed(p, id, GetPlayerTechMaxAllowed(p, id) + 1)
     end
     RemoveUnit(u)
-    u=null
-    p=null
+    u=nil
+    p=nil
     
 end
 function Trig_KillTestUnits_Command_Actions()
-    udg_Boolexpr=Condition(Trig_KillTestUnits_Command_Func001002)
+    udg_Boolexpr = Trig_KillTestUnits_Command_Func001002
     GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
     ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_Command_Func003A)
     GroupClear(udg_LocalOtrad2)
@@ -44006,9 +42897,6 @@ end
 --===========================================================================
 -- Trigger: KalecStart
 --===========================================================================
-function Trig_KalecStart_Conditions()
-    return GetSpellAbilityId() == FourCC('A12R') and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 function Trig_KalecStart_Actions()
     local u
     local l= GetUnitLoc(GetTriggerUnit())
@@ -44026,15 +42914,18 @@ function Trig_KalecStart_Actions()
     end
     
     RemoveLocation(l)
-    l=null
-    u=null
+    l=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_KalecStart()
     gg_trg_KalecStart=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_KalecStart, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_KalecStart, Condition(Trig_KalecStart_Conditions))
-    TriggerAddAction(gg_trg_KalecStart, Trig_KalecStart_Actions)
+    TriggerAddAction(gg_trg_KalecStart, function()
+        if GetSpellAbilityId() ~= FourCC('A12R') then return end
+        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
+        Trig_KalecStart_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: KalecDead
@@ -44057,9 +42948,6 @@ end
 --===========================================================================
 -- Trigger: ShaStart
 --===========================================================================
-function Trig_ShaStart_Conditions()
-    return GetSpellAbilityId() == FourCC('A1ML') and IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
-end
 function DisableSha()
     SetPlayerAbilityAvailableBJ(false, FourCC('A1ML'), GetEnumPlayer())
 end
@@ -44069,14 +42957,17 @@ function Trig_ShaStart_Actions()
     TriggerRegisterUnitEvent(gg_trg_ShaDead, u, EVENT_UNIT_DEATH)
     UnitRemoveAbility(GetTriggerUnit(), FourCC('A1ML'))
     ForForce(udg_AllPlayers, DisableSha)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_ShaStart()
     gg_trg_ShaStart=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_ShaStart, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_ShaStart, Condition(Trig_ShaStart_Conditions))
-    TriggerAddAction(gg_trg_ShaStart, Trig_ShaStart_Actions)
+    TriggerAddAction(gg_trg_ShaStart, function()
+        if GetSpellAbilityId() ~= FourCC('A1ML') then return end
+        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
+        Trig_ShaStart_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: ShaDead
@@ -44549,8 +43440,8 @@ function Trig_QoggSpawn_Actions()
     else
     end
     
-    p=null
-    u=null
+    p=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_QoggSpawn()
@@ -44645,7 +43536,7 @@ function Trig_EveryAiEnemy_Actions()
     SetForceAllianceStateBJ(f, f, bj_ALLIANCE_ALLIED_VISION)
     DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, ". not ")
     DestroyForce(f)
-    f=null
+    f=nil
 end
 --===========================================================================
 function InitTrig_EveryAiEnemy()
@@ -44660,7 +43551,7 @@ function Trig_CreateAi_Conditions()
     return S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) >= 1 and S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) <= 24
 end
 function Trig_CreateAi_Actions()
-    -- Формат: "-aiN" или "-aiN <раса>" (раса опциональна, латиницей: jt, be, scarlet, goblins, naga, horde)
+    -- ??????: "-aiN" ??? "-aiN <????>" (???? ???????????, ?????????: jt, be, scarlet, goblins, naga, horde)
     local s = GetEventPlayerChatString()
     local numStr, raceStr = string.match(s, "^%-ai%s*(%d+)%s*(%S*)")
     gPi = (tonumber(numStr) or 1) - 1
@@ -44680,7 +43571,7 @@ function BridgeDispatchCommand(op, arg, sequence)
         ProbeLogWrite("[BRIDGE] ping seq=" .. tostring(sequence) .. " arg=" .. tostring(arg))
         return
     end
-    -- arg может быть "N" или "N:race" (раса опциональна, латиницей)
+    -- arg ????? ???? "N" ??? "N:race" (???? ???????????, ?????????)
     local targetStr, raceTok = string.match(tostring(arg), "^(%d+):?(%S*)")
     local target = tonumber(targetStr)
     if target == nil then
@@ -44766,13 +43657,13 @@ function Trig_CheckType_Actions()
     local u
     local i= 0
     local b= 0
-    GroupEnumUnitsSelected(g, Player(0), null)
+    GroupEnumUnitsSelected(g, Player(0), nil)
     u=FirstOfGroup(g)
     --call DisplayTimedTextFromPlayer(Player(0),0,0, 4, ""+I2S(GetPlayerId(GetOwningPlayer(u)))+""+I2S(GetUnitTypeId(u)))
     DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
     while true do
         if i == 23 then break end
-        b=getAiCount(i, GetUnitTypeId(u))
+        b=(AiData[i][GetUnitTypeId(u)] or 0)
         DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, GetPlayerName(Player(i)) + " - " + I2S(b))
         i=i + 1
     end
@@ -44792,7 +43683,7 @@ function Trig_CheckOrderType_Actions()
     local g= CreateGroup()
     local u
     local s
-    GroupEnumUnitsSelected(g, Player(0), null)
+    GroupEnumUnitsSelected(g, Player(0), nil)
     u=FirstOfGroup(g)
     s="" + OrderId2String(GetUnitCurrentOrder(u)) + "" + I2S(GetUnitCurrentOrder(u))
     DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, s)
@@ -44911,19 +43802,19 @@ end
 --===========================================================================
 -- Trigger: CityNearWater2
 --
--- Тут города, которые можно захватить с моря
+-- ??? ??????, ??????? ????? ????????? ? ????
 --===========================================================================
 function Trig_CityNearWater2_Actions()
-    -- Калим
+    -- ?????
     GroupAddUnitSimple(gg_unit_h08O_0444, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0E2_0011, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h08G_0419, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h00E_0106, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h00F_0105, udg_CityNearWater)
-    -- Океания
+    -- ???????
     GroupAddUnitSimple(gg_unit_h0BM_0604, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0BL_0603, udg_CityNearWater)
-    -- Пандария
+    -- ????????
     GroupAddUnitSimple(gg_unit_h0AH_0427, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0AG_0010, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0AF_0383, udg_CityNearWater)
@@ -44935,7 +43826,7 @@ function Trig_CityNearWater2_Actions()
     GroupAddUnitSimple(gg_unit_h09V_0137, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h09W_0236, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0A3_0241, udg_CityNearWater)
-    -- Океания 2
+    -- ??????? 2
     GroupAddUnitSimple(gg_unit_h0BH_0601, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0F8_0045, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0BG_0600, udg_CityNearWater)
@@ -44943,7 +43834,7 @@ function Trig_CityNearWater2_Actions()
     GroupAddUnitSimple(gg_unit_h0OT_0545, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0OJ_0336, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0OH_0333, udg_CityNearWater)
-    -- Восточки
+    -- ????????
     GroupAddUnitSimple(gg_unit_h00M_0113, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h04L_0458, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h07O_0251, udg_CityNearWater)
@@ -44953,14 +43844,14 @@ function Trig_CityNearWater2_Actions()
     GroupAddUnitSimple(gg_unit_h089_0405, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h08A_0406, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0II_0455, udg_CityNearWater)
-    -- Расколотые
+    -- ??????????
     GroupAddUnitSimple(gg_unit_h0AW_0341, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0B9_0026, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0BC_0342, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0BB_0343, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0AU_0344, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h0AP_0552, udg_CityNearWater)
-    -- Норд
+    -- ????
     GroupAddUnitSimple(gg_unit_h09O_0541, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h09M_0539, udg_CityNearWater)
     GroupAddUnitSimple(gg_unit_h097_0502, udg_CityNearWater)
@@ -44975,29 +43866,29 @@ end
 -- Trigger: Remove
 --===========================================================================
 function Trig_Remove_Actions()
-    -- Калим
+    -- ?????
     GroupRemoveUnitSimple(gg_unit_h0E2_0011, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h08O_0444, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h09B_0508, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h09C_0509, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h097_0502, udg_TempGroup)
-    -- Восточки
+    -- ????????
     GroupRemoveUnitSimple(gg_unit_h0BJ_0602, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h0BG_0600, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h0BF_0012, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h09P_0009, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h09K_0537, udg_TempGroup)
-    -- Норд
+    -- ????
     GroupRemoveUnitSimple(gg_unit_h09A_0506, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h09N_0346, udg_TempGroup)
-    -- Острова
+    -- ???????
     GroupRemoveUnitSimple(gg_unit_h0BL_0603, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h0BM_0604, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h0OK_0337, udg_TempGroup)
-    -- Пандария
+    -- ????????
     GroupRemoveUnitSimple(gg_unit_h0BH_0601, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_h09V_0137, udg_TempGroup)
-    -- Пандария
+    -- ????????
     GroupRemoveUnitSimple(gg_unit_n01D_0903, udg_TempGroup)
     GroupRemoveUnitSimple(gg_unit_n01D_0904, udg_TempGroup)
 end
@@ -45037,7 +43928,7 @@ function Trig_PereborPlayersForBuilders_Actions()
         DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
     end
     ForForce(udg_Bots, AddPlayers2)
-    TimerStart(udg_PlayerGet2, 1.2 * AiRepeat / 5, true, null)
+    TimerStart(udg_PlayerGet2, 1.2 * AiRepeat / 5, true, nil)
 end
 --===========================================================================
 function InitTrig_PereborPlayersForBuilders()
@@ -45056,7 +43947,7 @@ function PlayerBuilders()
     if CountPlayersInForceBJ(udg_BotsActiveB) == 0 then
         PauseTimer(udg_PlayerGet2)
         ResumeTimer(udg_TimerSmall)
-        TimerStart(udg_TimerSmall, 4 * AiRepeat / 5, false, null)
+        TimerStart(udg_TimerSmall, 4 * AiRepeat / 5, false, nil)
         if udg_Octhet then
             DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
         end
@@ -45071,24 +43962,24 @@ function PlayerBuilders()
             
     
         
-        -- Перебор юнитов !!!
-        --Нераспределенные рабочие
+        -- ??????? ?????? !!!
+        --???????????????? ???????
         GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_LazyW)
         if FirstOfGroup(gGroup) ~= nil then
             bj_forLoopAIndex=1
             while true do
                 gUnit=FirstOfGroup(gGroup)
-                if bj_forLoopAIndex > AiMass + 4 or FirstOfGroup(gGroup) == null then break end
+                if bj_forLoopAIndex > AiMass + 4 or FirstOfGroup(gGroup) == nil then break end
                 
                 GroupRemoveUnit(gGroup, gUnit)
                 
-                -- Лесоруб
-                if getAiCount(pi, StringHash("T")) >= 12 then
+                -- ???????
+                if (AiData[pi][StringHash("T")] or 0) >= 12 then
                     NumberAdd(pi , StringHash("HV"))
                     GroupAddUnit(udg_Ai_harvest[pi], gUnit)
                     GroupRemoveUnit(udg_Ai_builders[pi], gUnit)
                     IssueImmediateOrder(gUnit, "autoharvestlumber")
-                else -- Строитель
+                else -- ?????????
                     NumberAdd(pi , StringHash("T"))
                     GroupAddUnit(udg_Ai_buildersT[pi], gUnit)
                     GroupRemoveUnit(udg_Ai_builders[pi], gUnit)
@@ -45100,13 +43991,13 @@ function PlayerBuilders()
             GroupClear(gGroup)
         end
         
-        -- Рабочие-строители
+        -- ???????-?????????
         GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_LazyT)
         if FirstOfGroup(gGroup) ~= nil then
             bj_forLoopAIndex=1
             bj_forLoopAIndexEnd=3
             while true do
-                if bj_forLoopAIndex > bj_forLoopAIndexEnd + AiMass or FirstOfGroup(gGroup) == null then break end
+                if bj_forLoopAIndex > bj_forLoopAIndexEnd + AiMass or FirstOfGroup(gGroup) == nil then break end
                 gUnit=FirstOfGroup(gGroup)
                 GroupRemoveUnit(gGroup, gUnit)
                 TryBuild_u=gUnit
@@ -45117,13 +44008,13 @@ function PlayerBuilders()
             GroupClear(gGroup)
         end
         
-        -- Лесорубы - из них приходят лишь строить
-        if getAiCount(pi, StringHash("T")) < 12 then
+        -- ???????? - ?? ??? ???????? ???? ???????
+        if (AiData[pi][StringHash("T")] or 0) < 12 then
             Counter=0
             GroupEnumUnitsOfPlayer(gGroup, gPlayer, Harwest)
             
             while true do
-                if getAiCount(pi, StringHash("T")) > 9 or getAiCount(pi, StringHash("HV")) < 1 then break end
+                if (AiData[pi][StringHash("T")] or 0) > 9 or (AiData[pi][StringHash("HV")] or 0) < 1 then break end
             
                 
                 gUnit=BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
@@ -45142,7 +44033,7 @@ function PlayerBuilders()
         GroupClear(gGroup)
         
     end
-    gUnit=null
+    gUnit=nil
 end
 --===========================================================================
 function InitTrig_PereborBuilders_Uni()
@@ -45157,7 +44048,7 @@ end
 function AddPlayers()
     ForceAddPlayer(udg_BotsActive, GetEnumPlayer())
 end
---Главное тело триггера стопаю таймер, делаю дела, запускаю
+--??????? ???? ???????? ?????? ??????, ????? ????, ????????
 function Trig_PereborPlayerForArmy_Actions()
     PauseTimer(udg_TimerSmall2)
     if not (AiData[-1][StringHash("TickLog_TimerSmall2")] or false) then
@@ -45169,9 +44060,9 @@ function Trig_PereborPlayerForArmy_Actions()
     end
     RemoveLocation(LastDestantion)
     ForForce(udg_Bots, AddPlayers)
-    TimerStart(udg_PlayerGet1, 1.25 * AiRepeat / 5, true, null)
+    TimerStart(udg_PlayerGet1, 1.25 * AiRepeat / 5, true, nil)
 end
---Запуск
+--??????
 --===========================================================================
 function InitTrig_PereborPlayerForArmy()
     gg_trg_PereborPlayerForArmy=CreateTrigger()
@@ -45182,18 +44073,18 @@ end
 --===========================================================================
 -- Trigger: PerebobArmy Uni
 --===========================================================================
--- Перебор игроков
+-- ??????? ???????
 function PlayerArmy()
     gInt=CountPlayersInForceBJ(udg_BotsActive)
     if gInt == 0 then
         PauseTimer(udg_PlayerGet1)
         ResumeTimer(udg_TimerSmall2)
-        TimerStart(udg_TimerSmall2, 3 * AiRepeat / 5, false, null)
+        TimerStart(udg_TimerSmall2, 3 * AiRepeat / 5, false, nil)
         if udg_Octhet then
             DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
         end
     else
-            --Каждый отдельный игро
+            --?????? ????????? ????
         gPlayer=ForcePickRandomPlayer(udg_BotsActive)
         local pi_army = GetPlayerId(gPlayer)
         if not (AiData[pi_army][StringHash("Log_PlayerArmy")] or false) then
@@ -45211,14 +44102,14 @@ function PlayerArmy()
             udg_LocalInteger=1
             
             while true do
-                if udg_LocalInteger > AiMass or FirstOfGroup(gAllyGroup) == null then break end
+                if udg_LocalInteger > AiMass or FirstOfGroup(gAllyGroup) == nil then break end
                 --set udg_LocalUnit2 = GroupPickRandomUnit(gAllyGroup)
                 
 				udg_LocalUnit2=BlzGroupUnitAt(gAllyGroup, GetRandomInt(0, LazyCount - 1))
                                
                 GroupRemoveUnit(gAllyGroup, udg_LocalUnit2)
                 LazyCount=LazyCount - 1
-                -- Дровосеки
+                -- ?????????
                 if GetUnitTypeId(udg_LocalUnit2) == FourCC('h03C') then
                     if Random(1 , 2) then
                         IssueImmediateOrder(udg_LocalUnit2, "autoharvestlumber")
@@ -45249,7 +44140,7 @@ end
 function AddPlayers3()
     ForceAddPlayer(udg_BotsActiveN, GetEnumPlayer())
 end
---Главное тело триггера стопаю таймер, делаю дела, запускаю
+--??????? ???? ???????? ?????? ??????, ????? ????, ????????
 function Trig_PereborPlayerForNavy_Actions()
     PauseTimer(udg_TimerSmall4)
     if not (AiData[-1][StringHash("TickLog_TimerSmall4")] or false) then
@@ -45264,9 +44155,9 @@ function Trig_PereborPlayerForNavy_Actions()
     
     
     ForForce(udg_Bots, AddPlayers3)
-    TimerStart(udg_PlayerGet4, 3.5 * AiRepeat / 5, true, null)
+    TimerStart(udg_PlayerGet4, 3.5 * AiRepeat / 5, true, nil)
 end
---Запуск
+--??????
 --===========================================================================
 function InitTrig_PereborPlayerForNavy()
     gg_trg_PereborPlayerForNavy=CreateTrigger()
@@ -45279,20 +44170,20 @@ end
 --===========================================================================
 function PlayerNavy()
     local l__gGroup= CreateGroup()
-    local p= null
+    local p= nil
     local u
     local id
     local i
     local i2
-    --Локалки
+    --???????
     
-    --Каждый отдельный игрок
-    --Узнаю номер игрока
+    --?????? ????????? ?????
+    --????? ????? ??????
     
     if CountPlayersInForceBJ(udg_BotsActiveN) == 0 then
         PauseTimer(udg_PlayerGet4)
         ResumeTimer(udg_TimerSmall4)
-        TimerStart(udg_TimerSmall4, 7 * AiRepeat / 5, false, null)
+        TimerStart(udg_TimerSmall4, 7 * AiRepeat / 5, false, nil)
         if udg_Octhet then
             DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
         end
@@ -45318,7 +44209,7 @@ function PlayerNavy()
             i=1
             while true do
         u=BlzGroupUnitAt(l__gGroup, GetRandomInt(0, LazyCount - 1))
-                if i > AiMass or u == null then break end
+                if i > AiMass or u == nil then break end
                 
                 id=GetUnitTypeId(u)
                 GroupRemoveUnit(l__gGroup, u)
@@ -45332,7 +44223,7 @@ function PlayerNavy()
         end
         
     end
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_PerebobNavy()
@@ -45351,8 +44242,8 @@ function Trig_PereborBuildings_Code_Func002A()
     gPi=GetPlayerId(gPlayer)
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_OnlyNeaded)
-    local numberCount = getAiCount(gPi, StringHash("Number"))
-    -- Пропуск если 0 или лимит юнитов
+    local numberCount = (AiData[gPi][StringHash("Number")] or 0)
+    -- ??????? ???? 0 ??? ????? ??????
     if FirstOfGroup(gGroup) == nil then
         if not (AiData[gPi][StringHash("Log_PereborNoBld")] or false) then
             AiData[gPi][StringHash("Log_PereborNoBld")] = true
@@ -45395,12 +44286,12 @@ function Trig_PereborBuildings_Code_Func002A()
     if not (AiData[gPi][StringHash("Log_PereborWorking")] or false) then
         AiData[gPi][StringHash("Log_PereborWorking")] = true
     end
-    --Собственно группа зданий, которые надо чекать 
+    --?????????? ?????? ??????, ??????? ???? ?????? 
        
     bj_forLoopAIndex=1
     bj_forLoopAIndexEnd=8
     while true do
-        if bj_forLoopAIndex > bj_forLoopAIndexEnd or FirstOfGroup(gGroup) == null then break end
+        if bj_forLoopAIndex > bj_forLoopAIndexEnd or FirstOfGroup(gGroup) == nil then break end
         gUnit=BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
         GroupRemoveUnit(gGroup, gUnit)
         Counter=Counter - 1
@@ -45425,7 +44316,7 @@ function Trig_PereborBuildings_Actions()
     if udg_Octhet then
         DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
     end
-    TimerStart(udg_TimerSmall3, 8.50 * AiRepeat / 5, false, null)
+    TimerStart(udg_TimerSmall3, 8.50 * AiRepeat / 5, false, nil)
 end
 --===========================================================================
 function InitTrig_PereborBuildings()
@@ -45449,22 +44340,22 @@ function PereborNavalb()
     
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, p, B_NavalBases)
-    i=getAiCount(pi, StringHash("NumberN"))
-    -- Пропуск если 0 или больше трети армии
+    i=(AiData[pi][StringHash("NumberN")] or 0)
+    -- ??????? ???? 0 ??? ?????? ????? ?????
     if FirstOfGroup(gGroup) == nil then
         if udg_Octhet then
             DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) + "0")
         end
         
-        u=null
+        u=nil
         return
         
-    elseif i > getAiCount(pi, StringHash("Number")) / 3 then
+    elseif i > (AiData[pi][StringHash("Number")] or 0) / 3 then
         if udg_Octhet then
             DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) + "")
         end
         
-        u=null
+        u=nil
         return
     end
     
@@ -45472,14 +44363,14 @@ function PereborNavalb()
     bj_forLoopAIndexEnd=6
     while true do
         
-        if bj_forLoopAIndex > bj_forLoopAIndexEnd or FirstOfGroup(gGroup) == null or GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) < 2000 then break end
+        if bj_forLoopAIndex > bj_forLoopAIndexEnd or FirstOfGroup(gGroup) == nil or GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) < 2000 then break end
         u=BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
         Counter=Counter - 1
        -- call DisplayTimedTextFromPlayer(p,0,0,4, GetUnitName(u))
         GroupRemoveUnit(gGroup, u)
         id=GetUnitTypeId(u)
           
-        -- Верфь
+        -- ?????
         AiDispatchNaval(u, pi)
         
         bj_forLoopAIndex=bj_forLoopAIndex + 1
@@ -45522,7 +44413,7 @@ function ZahType()
     local u= GetEnumUnit()
     local pi= GetPlayerId(GetOwningPlayer(u))
     local id= GetUnitTypeId(u)
-    --Это точка
+    --??? ?????
     if IsUnitInGroup(u, udg_ZahvatBuildings) then
         udg_LocalInteger3=udg_LocalInteger3 + 8
     else
@@ -45540,24 +44431,24 @@ function Strateg()
     end
     
     
-    -- Считаю фермы и точки
+    -- ?????? ????? ? ?????
     udg_LocalInteger3=0
-    GroupEnumUnitsOfPlayer(gGroup, p, null)
+    GroupEnumUnitsOfPlayer(gGroup, p, nil)
     ForGroup(gGroup, ZahType)
     GroupClear(gGroup)
     i=udg_LocalInteger3
-    --Посчитал
+    --????????
     
     
-    --Ресы на развитие
+    --???? ?? ????????
     
-    AdjustPlayerStateSimpleBJ(p, PLAYER_STATE_RESOURCE_GOLD, 500 + i * 9 * AiMoney) -- -getAiCount(pi, StringHash("Number"))*10 )
+    AdjustPlayerStateSimpleBJ(p, PLAYER_STATE_RESOURCE_GOLD, 500 + i * 9 * AiMoney) -- -(AiData[pi][StringHash("Number")] or 0)*10 )
     AdjustPlayerStateSimpleBJ(p, PLAYER_STATE_RESOURCE_LUMBER, 250 + i * 5 * AiMoney)
     
     --call DisplayTimedTextFromPlayer(Player(0),0,0,4,(GetPlayerName(p)+""+I2S(GetPlayerId(p))))
     --call DisplayTimedTextFromPlayer(Player(0),0,0,4,I2S(i))
     
-    -- Увеличивает уровень спопособности юнита с аурами
+    -- ??????????? ??????? ????????????? ????? ? ??????
     SetUnitAbilityLevel(BonusUnit[pi], FourCC('aib0'), IMinBJ(R2I(i / 50 + 1), 10))
     SetUnitAbilityLevel(BonusUnit[pi], FourCC('aib1'), IMinBJ(R2I(i / 50 + 1), 10))
     --call BJDebugMsg(""+GetUnitName(BonusUnit[pi])+""+I2S(i)+""+I2S(IMinBJ( R2I(i/10),4)))
@@ -45569,7 +44460,7 @@ function Strateg()
     
     
     
-    --Рандомный теп - чем больше доходов, тем больше попыток
+    --????????? ??? - ??? ?????? ???????, ??? ?????? ???????
     r=0
     while true do
         if r > i / 55 then break end
@@ -45677,7 +44568,7 @@ function Trig_AttackedAI_Actions()
             PortTo(gAttacked)
         end
     else
-        -- --------------- Алый орден
+        -- --------------- ???? ?????
     AiDispatchAttacked(gAttacked, gPi)
     end
 end
@@ -45703,7 +44594,7 @@ function Trig_GetLvl_Actions()
     
     
     AiDispatchGetLvl(u, pi)
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_GetLvl()
@@ -45960,7 +44851,7 @@ function Trig_Leave_Harvest_U_Actions()
     GroupRemoveUnitSimple(GetTriggerUnit(), udg_Ai_units[pi])
     NumberRem(pi , GetUnitTypeId(GetTriggerUnit()))
     NumberRem(pi , StringHash("Number"))
-    NumberRem(pi , StringHash("HV"))
+    AiData[pi][StringHash("HV")] = (AiData[pi][StringHash("HV")] or 0) - 1
 end
 --===========================================================================
 function InitTrig_Leave_Harvest_U()
@@ -45982,7 +44873,7 @@ function Trig_Leave_Builders_U_Actions()
     GroupRemoveUnitSimple(GetTriggerUnit(), udg_Ai_units[pi])
     NumberRem(pi , GetUnitTypeId(GetTriggerUnit()))
     NumberRem(pi , StringHash("Number"))
-    --call AiData[pi][StringHash("HV")] = getAiCount(pi, StringHash("HV"))-1
+    --call AiData[pi][StringHash("HV")] = (AiData[pi][StringHash("HV")] or 0)-1
 end
 --===========================================================================
 function InitTrig_Leave_Builders_U()
@@ -46005,7 +44896,7 @@ function Trig_Leave_BuildersT_U_Actions()
     NumberRem(pi , GetUnitTypeId(GetTriggerUnit()))
     NumberRem(pi , StringHash("Number"))
     
-    NumberRem(pi , StringHash("T"))
+    AiData[pi][StringHash("T")] = (AiData[pi][StringHash("T")] or 0) - 1
 end
 --===========================================================================
 function InitTrig_Leave_BuildersT_U()
@@ -46059,7 +44950,7 @@ end
 -- Trigger: MainFloatUnits
 --===========================================================================
 function isShip()
-    return id == FourCC('h00X') or id == FourCC('h00Y') or id == FourCC('h00Z') or id == FourCC('h0CZ') or id == FourCC('h0D2') or id == FourCC('h0D0') or id == FourCC('h0D5') or id == FourCC('h0D4') or id == FourCC('h0D6') or id == FourCC('h0DB') or id == FourCC('h0D9') or id == FourCC('h0DA') or id == FourCC('h0E6') or id == FourCC('h0E5') or id == FourCC('h0E8') or id == FourCC('h03L') or id == FourCC('h03K') or id == FourCC('h06W') or id == FourCC('h0DM') or id == FourCC('h06V') or id == FourCC('h06X') --Гоблины
+    return id == FourCC('h00X') or id == FourCC('h00Y') or id == FourCC('h00Z') or id == FourCC('h0CZ') or id == FourCC('h0D2') or id == FourCC('h0D0') or id == FourCC('h0D5') or id == FourCC('h0D4') or id == FourCC('h0D6') or id == FourCC('h0DB') or id == FourCC('h0D9') or id == FourCC('h0DA') or id == FourCC('h0E6') or id == FourCC('h0E5') or id == FourCC('h0E8') or id == FourCC('h03L') or id == FourCC('h03K') or id == FourCC('h06W') or id == FourCC('h0DM') or id == FourCC('h06V') or id == FourCC('h06X') --???????
     
 end
 function aiShipJoins()
@@ -46102,7 +44993,7 @@ end
 -- Trigger: PortUnits
 --===========================================================================
 function isNavalBase()
-    return id == FourCC('h0D1') or id == FourCC('h0D8') or id == FourCC('h03R') or id == FourCC('h0D3') or id == FourCC('h0E7') or id == FourCC('h011') or id == FourCC('h0D7') or id == FourCC('u01A') or gId == FourCC('n04L') or gId == FourCC('h0HO') -- Прописать все типы верфей
+    return id == FourCC('h0D1') or id == FourCC('h0D8') or id == FourCC('h03R') or id == FourCC('h0D3') or id == FourCC('h0E7') or id == FourCC('h011') or id == FourCC('h0D7') or id == FourCC('u01A') or gId == FourCC('n04L') or gId == FourCC('h0HO') -- ????????? ??? ???? ??????
 end
 function Trig_PortUnits_Conditions()
     gUnit=GetConstructingStructure()
@@ -46150,7 +45041,7 @@ function aiRep()
     end
     
     
-    -- Очистка
+    -- ???????
     g_AiCounts[pi] = nil; AiData[(pi)] = nil -- INLINED!!
     
     GroupClear(udg_Ai_units[pi])
@@ -46161,14 +45052,14 @@ function aiRep()
     GroupClear(udg_Ai_harvest[pi])
     GroupClear(AiUnitsToPort[pi])
     
-    -- Очистка
+    -- ???????
     if gGroup == nil then
         gGroup=CreateGroup()
     end
     
     gPlayer=Player(pi)
     BJDebugMsg("" + GetPlayerName(gPlayer))
-    GroupEnumUnitsOfPlayer(gGroup, gPlayer, null)
+    GroupEnumUnitsOfPlayer(gGroup, gPlayer, nil)
     while true do
         gUnit=FirstOfGroup(gGroup)
         if gUnit == nil then
@@ -46177,7 +45068,7 @@ function aiRep()
         BJDebugMsg("" + GetUnitName(gUnit))
         if GetUnitAbilityLevel(gUnit, gDummySpell) == 0 and not IsUnitType(gUnit, UNIT_TYPE_SUMMONED) then
             
-            -- Сломался с неуязом
+            -- ???????? ? ???????
             if BlzIsUnitInvulnerable(gUnit) then -- GetUnitAbilityLevel(gUnit, FourCC('Bvul')) > 0 then
                 BJDebugMsg("")
                 gUnit=ReplaceUnit2(gUnit , GetUnitTypeId(gUnit) , bj_UNIT_STATE_METHOD_MAXIMUM)
@@ -46205,7 +45096,7 @@ function aiRep()
                 end
                 
                 aiUnitJoins(gUnit , pi)
-                if gId == FourCC('h07A') then -- Маг-тп
+                if gId == FourCC('h07A') then -- ???-??
                    GroupAddUnit(AiUnitsToPort[pi], gUnit)
                 end
             end
@@ -46225,7 +45116,7 @@ function aiRepUnvul_act()
     end
     
 end
--- Починка неуза
+-- ??????? ?????
 function aiRepUnvul()
     if not udg_AiControl[pi] then
         return
@@ -46317,12 +45208,12 @@ function Trig_AiLogAll_Actions()
     --call ForGroup(gGroup,function )
     BJDebugMsg("" + GetPlayerName(gPlayer))
     BJDebugMsg("")
-    BJDebugMsg("Number" + I2S(getAiCount(gPi, StringHash("Number")))) -- INLINED!!
-    BJDebugMsg("NumberN" + I2S(getAiCount(gPi, StringHash("NumberN")))) -- INLINED!!
-    BJDebugMsg("NumberPorts" + I2S(getAiCount(gPi, StringHash("NumberPorts")))) -- INLINED!!
-    BJDebugMsg("NumberGuard" + I2S(getAiCount(gPi, StringHash("NumberGuard")))) -- INLINED!!
-    BJDebugMsg("T" + I2S(getAiCount(gPi, StringHash("T")))) -- INLINED!!
-    BJDebugMsg("HV" + I2S(getAiCount(gPi, StringHash("HV")))) -- INLINED!!
+    BJDebugMsg("Number" + I2S(((AiData[(gPi )][( StringHash("Number"))] or 0)))) -- INLINED!!
+    BJDebugMsg("NumberN" + I2S(((AiData[(gPi )][( StringHash("NumberN"))] or 0)))) -- INLINED!!
+    BJDebugMsg("NumberPorts" + I2S(((AiData[(gPi )][( StringHash("NumberPorts"))] or 0)))) -- INLINED!!
+    BJDebugMsg("NumberGuard" + I2S(((AiData[(gPi )][( StringHash("NumberGuard"))] or 0)))) -- INLINED!!
+    BJDebugMsg("T" + I2S(((AiData[(gPi )][( StringHash("T"))] or 0)))) -- INLINED!!
+    BJDebugMsg("HV" + I2S(((AiData[(gPi )][( StringHash("HV"))] or 0)))) -- INLINED!!
     BJDebugMsg("")
     
     gString="Groupudg_Ai_army[pi]"
@@ -46438,10 +45329,10 @@ function CheckNearCapitals()
     local u= GetTriggerUnit()
     
     udg_LocalPlayer=GetOwningPlayer(city)
-    GroupEnumUnitsInRange(g, GetUnitX(city), GetUnitY(city), 3050, Condition(CapitalOfEnemy))
+    GroupEnumUnitsInRange(g, GetUnitX(city), GetUnitY(city), 3050, CapitalOfEnemy)
     if FirstOfGroup(g) ~= nil then
         DisplayTextToPlayer(udg_LocalPlayer, 0, 0, "(3)")
-        g=null
+        g=nil
         return false
     end
     
@@ -46449,7 +45340,7 @@ function CheckNearCapitals()
     
     
     DestroyGroup(g)
-    g=null
+    g=nil
     return true
 end
 --===========================================================================
@@ -46469,12 +45360,12 @@ end
 function TeleportUnits(portal, rect, radius)
     gLoc=GetUnitLoc(portal)
     gRect=rect
-    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, Condition(PortalConditions), 150)
+    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditions, 150)
     ForGroup(gGroup, TeleportUnitsEach)
     GroupClear(gGroup)
     RemoveLocation(gLoc)
 end
--- хз что тут менр
+-- ?? ??? ??? ????
 function PortalConditionsED()
     return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Sch5')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A001')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1M3')) == 0 and GetUnitTypeId(GetFilterUnit()) ~= FourCC('n01W') and GetUnitTypeId(GetFilterUnit()) ~= FourCC('n01X') and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Awrp')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1LR')) >= 1
 end
@@ -46484,7 +45375,7 @@ end
 function TeleportUnitsED(portal, rect, radius)
     gLoc=GetUnitLoc(portal)
     gRect=rect
-    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, Condition(PortalConditionsED), 150)
+    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditionsED, 150)
     ForGroup(gGroup, TeleportUnitsEach)
     GroupClear(gGroup)
     RemoveLocation(gLoc)
@@ -47610,9 +46501,6 @@ end
 --===========================================================================
 -- Trigger: NaxIn
 --===========================================================================
-function Trig_NaxIn_Conditions()
-     return GetSpellAbilityId() == FourCC('A0HY') and GetUnitTypeId(GetTriggerUnit()) == FourCC('n066')
-end
 function Trig_NaxIn_Actions()
     TeleportUnits(GetTriggerUnit() , gg_rct_NaxPortalIn , 1200)
 end
@@ -47620,8 +46508,11 @@ end
 function InitTrig_NaxIn()
     gg_trg_NaxIn=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_NaxIn, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_NaxIn, Condition(Trig_NaxIn_Conditions))
-    TriggerAddAction(gg_trg_NaxIn, Trig_NaxIn_Actions)
+    TriggerAddAction(gg_trg_NaxIn, function()
+        if GetSpellAbilityId() ~= FourCC('A0HY') then return end
+        if not (GetUnitTypeId(GetTriggerUnit()) == FourCC('n066')) then return end
+        Trig_NaxIn_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: DalOut
@@ -47642,9 +46533,6 @@ end
 --===========================================================================
 -- Trigger: DalIn
 --===========================================================================
-function Trig_DalIn_Conditions()
-    return GetSpellAbilityId() == FourCC('A0HY') and GetUnitTypeId(GetTriggerUnit()) == FourCC('n063')
-end
 function Trig_DalIn_Actions()
     TeleportUnits(GetTriggerUnit() , gg_rct_DalaranIn , 1200)
 end
@@ -47652,8 +46540,11 @@ end
 function InitTrig_DalIn()
     gg_trg_DalIn=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_DalIn, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_DalIn, Condition(Trig_DalIn_Conditions))
-    TriggerAddAction(gg_trg_DalIn, Trig_DalIn_Actions)
+    TriggerAddAction(gg_trg_DalIn, function()
+        if GetSpellAbilityId() ~= FourCC('A0HY') then return end
+        if not (GetUnitTypeId(GetTriggerUnit()) == FourCC('n063')) then return end
+        Trig_DalIn_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: FromIsland
@@ -47718,9 +46609,6 @@ end
 --===========================================================================
 -- Trigger: PrepareToBurnCity
 --===========================================================================
-function Trig_PrepareToBurnCity_Conditions()
-    return GetSpellAbilityId() == FourCC('A1LD')
-end
 function Trig_PrepareToBurnCity_Actions()
     UnitRemoveAbility(GetTriggerUnit(), FourCC('A1LD'))
     UnitAddAbility(GetTriggerUnit(), FourCC('A1LC'))
@@ -47729,15 +46617,14 @@ end
 function InitTrig_PrepareToBurnCity()
     gg_trg_PrepareToBurnCity=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_PrepareToBurnCity, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_PrepareToBurnCity, Condition(Trig_PrepareToBurnCity_Conditions))
-    TriggerAddAction(gg_trg_PrepareToBurnCity, Trig_PrepareToBurnCity_Actions)
+    TriggerAddAction(gg_trg_PrepareToBurnCity, function()
+        if GetSpellAbilityId() ~= FourCC('A1LD') then return end
+        Trig_PrepareToBurnCity_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: BurnCity
 --===========================================================================
-function Trig_BurnCity_Conditions()
-    return GetSpellAbilityId() == FourCC('A1LC')
-end
 function Trig_BurnCity_Actions()
    -- call UnitDamageTarget(GetTriggerUnit(),GetTriggerUnit(),99999,true,false,ATTACK_TYPE_NORMAL,DAMAGE_TYPE_UNIVERSAL,WEAPON_TYPE_WHOKNOWS)
    -- if not UnitAlive(GetTriggerUnit()) then
@@ -47749,8 +46636,10 @@ end
 function InitTrig_BurnCity()
     gg_trg_BurnCity=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_BurnCity, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddCondition(gg_trg_BurnCity, Condition(Trig_BurnCity_Conditions))
-    TriggerAddAction(gg_trg_BurnCity, Trig_BurnCity_Actions)
+    TriggerAddAction(gg_trg_BurnCity, function()
+        if GetSpellAbilityId() ~= FourCC('A1LC') then return end
+        Trig_BurnCity_Actions()
+    end)
 end
 --===========================================================================
 -- Trigger: NoTpNearCapitalDalNax
@@ -47828,7 +46717,7 @@ function Trig_PosadkaDal_Actions()
     SaveUnitHandle(Hash, StringHash("Dalaran"), 1, u2)
     
     
-    --Пора упасть
+    --???? ??????
     --call DisplayTextToPlayer(Player(0),0,0," - "+R2S(GetUnitMoveSpeed(u)))
     BlzSetUnitRealFieldBJ(u, UNIT_RF_FLY_HEIGHT, - 200.00)
     SetUnitFlyHeightBJ(u, - 200, 55.00)
@@ -47854,8 +46743,8 @@ function Trig_PosadkaDal_Actions()
     WaygateSetDestination(u2, GetRectCenterX(gg_rct_DalaranIn), GetRectCenterY(gg_rct_DalaranIn))
     WaygateActivate(u2, true)
     WaygateActivate(gg_unit_n003_0588, true)
-    u2=null
-    u=null
+    u2=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_PosadkaDal2()
@@ -47878,7 +46767,7 @@ function Trig_VzletDal_Actions()
     RemoveUnit(LoadUnitHandle(Hash, StringHash("Dalaran"), 1))
     FlushChildHashtable(Hash, StringHash("Dalaran"))
     SetUnitMoveSpeed(u, GetUnitDefaultMoveSpeed(u))
-    --Пора взлететь
+    --???? ????????
     BlzSetUnitRealFieldBJ(u, UNIT_RF_FLY_HEIGHT, 400.00)
     SetUnitFlyHeightBJ(u, 400.00, 55.00)
     
@@ -47899,7 +46788,7 @@ function Trig_VzletDal_Actions()
     WaygateActivate(gg_unit_n003_0588, false)
     
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_VzletDal()
@@ -47950,7 +46839,7 @@ end
 -- Trigger: DallKill
 --===========================================================================
 function Trig_DallKill_Actions()
-    UnitDamagePointLoc(null, 0, 3000.00, GetRectCenter(gg_rct_KillDalaran), 999999.00, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
+    UnitDamagePointLoc(nil, 0, 3000.00, GetRectCenter(gg_rct_KillDalaran), 999999.00, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
 end
 --===========================================================================
 function InitTrig_DallKill()
@@ -48011,7 +46900,7 @@ function Trig_PosadkaNax_Actions()
     SaveUnitHandle(Hash, StringHash("Nax"), 1, u2)
     
     
-    --Пора упасть
+    --???? ??????
     --call DisplayTextToPlayer(Player(0),0,0," - "+R2S(GetUnitMoveSpeed(u)))
     BlzSetUnitRealFieldBJ(u, UNIT_RF_FLY_HEIGHT, - 200.00)
     SetUnitFlyHeightBJ(u, - 200, 55.00)
@@ -48037,8 +46926,8 @@ function Trig_PosadkaNax_Actions()
     WaygateSetDestination(u2, GetRectCenterX(gg_rct_NaxPortalIn), GetRectCenterY(gg_rct_NaxPortalIn))
     WaygateActivate(u2, true)
     WaygateActivate(gg_unit_n003_0126, true)
-    u2=null
-    u=null
+    u2=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_NaxPosadka()
@@ -48061,7 +46950,7 @@ function Trig_NaxFly_Actions()
     RemoveUnit(LoadUnitHandle(Hash, StringHash("Nax"), 1))
     FlushChildHashtable(Hash, StringHash("Nax"))
     SetUnitMoveSpeed(u, GetUnitDefaultMoveSpeed(u))
-    --Пора взлететь
+    --???? ????????
     BlzSetUnitRealFieldBJ(u, UNIT_RF_FLY_HEIGHT, 400.00)
     SetUnitFlyHeightBJ(u, 400.00, 55.00)
     
@@ -48082,7 +46971,7 @@ function Trig_NaxFly_Actions()
     WaygateActivate(gg_unit_n003_0126, false)
     
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_NaxFly()
@@ -48204,8 +47093,8 @@ function Trig_PosadkaTurtle_Actions()
     WaygateSetDestination(u2, GetRectCenterX(gg_rct_TurtleIn), GetRectCenterY(gg_rct_TurtleIn))
     WaygateActivate(u2, true)
     WaygateActivate(gg_unit_n003_0090, true)
-    u2=null
-    u=null
+    u2=nil
+    u=nil
 end
 --===========================================================================
 function InitTrig_TurtlePosadka()
@@ -48247,7 +47136,7 @@ function Trig_TurtleSwim_Actions()
     WaygateActivate(gg_unit_n003_0090, false)
     
     
-    u=null
+    u=nil
 end
 --===========================================================================
 function InitTrig_TurtleSwim()
@@ -48293,9 +47182,6 @@ end
 --===========================================================================
 -- Trigger: DalIn Copy
 --===========================================================================
-function Trig_DalIn_Copy_Conditions()
-    return GetSpellAbilityId() == FourCC('A0HY') and GetUnitTypeId(GetTriggerUnit()) == FourCC('n075')
-end
 function Trig_DalIn_Copy_Actions()
     TeleportUnits(GetTriggerUnit() , gg_rct_TurtleIn , 800)
 end
@@ -48303,7 +47189,10 @@ end
 function InitTrig_DalIn_Copy()
     gg_trg_DalIn_Copy=CreateTrigger()
     TriggerRegisterAnyUnitEventBJ(gg_trg_DalIn_Copy, EVENT_PLAYER_UNIT_SPELL_FINISH)
-    TriggerAddCondition(gg_trg_DalIn_Copy, Condition(Trig_DalIn_Copy_Conditions))
-    TriggerAddAction(gg_trg_DalIn_Copy, Trig_DalIn_Copy_Actions)
+    TriggerAddAction(gg_trg_DalIn_Copy, function()
+        if GetSpellAbilityId() ~= FourCC('A0HY') then return end
+        if not (GetUnitTypeId(GetTriggerUnit()) == FourCC('n075')) then return end
+        Trig_DalIn_Copy_Actions()
+    end)
 end
 --===========================================================================

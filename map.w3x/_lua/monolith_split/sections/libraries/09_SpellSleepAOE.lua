@@ -21,10 +21,6 @@ function SpellSleepAOE___DummyCastBuff(caster, target)
 	end
 end
 ---@return boolean
-function SpellSleepAOE___anon__0()
-	return SpellSleepAOE___SpellHero == GetSpellAbilityId()
-end
----@return boolean
 function SpellSleepAOE___anon__2()
 	return GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0.405 and  not (IsPlayerAlly(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetFilterUnit()))) and  not (IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE))
 end
@@ -61,8 +57,10 @@ function SpellSleepAOE___onInit()
 		TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, nil)
 		i = i + 1
 	end
-	TriggerAddCondition(t, Condition(SpellSleepAOE___anon__0))
-	TriggerAddAction(t, SpellSleepAOE___anon__1)
+	TriggerAddAction(t, function()
+        if SpellSleepAOE___SpellHero ~= GetSpellAbilityId() then return end
+        SpellSleepAOE___anon__1()
+    end)
 	t = nil
 end
 -- library SpellSleepAOE ends
