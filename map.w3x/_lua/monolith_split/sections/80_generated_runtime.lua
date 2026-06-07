@@ -3203,7 +3203,7 @@ end
 ---@return boolean
 function GoToWaterPoint(pi, u, x, y)
 	
-	if Random(1, 10) and (AiData[pi][StringHash("NumberPorts")] or 0) < 8 then
+	if Random(1, 10) and getAiCount(pi, StringHash("NumberPorts")) < 8 then
 		if RectContainsCoords(gg_rct_EastenKingdoms, x, y) then
 			gInt = GetRandomInt(1, 4)
 			if gInt == 1 then
@@ -3278,7 +3278,7 @@ function TryBuild()
 	
 	
 	-- Если в воде для верфи - то строй верфь c высоким шансом)
-	if (AiData[gPi][StringHash("NumberPorts")] or 0) < 12 and ( not IsTerrainPathable(gX, gY, PATHING_TYPE_WALKABILITY) and RectContainsCoords(gg_rct_Outland, gX, gY) ~= true and RectContainsCoords(gg_rct_Azgel, gX, gY) ~= true) then
+	if getAiCount(gPi, StringHash("NumberPorts")) < 12 and ( not IsTerrainPathable(gX, gY, PATHING_TYPE_WALKABILITY) and RectContainsCoords(gg_rct_Outland, gX, gY) ~= true and RectContainsCoords(gg_rct_Azgel, gX, gY) ~= true) then
 		
 		
 		if Random(1, 2) then
@@ -45330,7 +45330,7 @@ function Trig_CheckType_Actions()
     DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
     while true do
         if i == 23 then break end
-        b=(AiData[i][GetUnitTypeId(u)] or 0)
+        b=getAiCount(i, GetUnitTypeId(u))
         DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, GetPlayerName(Player(i)) + " - " + I2S(b))
         i=i + 1
     end
@@ -45641,7 +45641,7 @@ function PlayerBuilders()
                 GroupRemoveUnit(gGroup, gUnit)
                 
                 -- Лесоруб
-                if (AiData[pi][StringHash("T")] or 0) >= 12 then
+                if getAiCount(pi, StringHash("T")) >= 12 then
                     NumberAdd(pi , StringHash("HV"))
                     GroupAddUnit(udg_Ai_harvest[pi], gUnit)
                     GroupRemoveUnit(udg_Ai_builders[pi], gUnit)
@@ -45676,12 +45676,12 @@ function PlayerBuilders()
         end
         
         -- Лесорубы - из них приходят лишь строить
-        if (AiData[pi][StringHash("T")] or 0) < 12 then
+        if getAiCount(pi, StringHash("T")) < 12 then
             Counter=0
             GroupEnumUnitsOfPlayer(gGroup, gPlayer, Harwest)
             
             while true do
-                if (AiData[pi][StringHash("T")] or 0) > 9 or (AiData[pi][StringHash("HV")] or 0) < 1 then break end
+                if getAiCount(pi, StringHash("T")) > 9 or getAiCount(pi, StringHash("HV")) < 1 then break end
             
                 
                 gUnit=BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
@@ -45909,7 +45909,7 @@ function Trig_PereborBuildings_Code_Func002A()
     gPi=GetPlayerId(gPlayer)
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_OnlyNeaded)
-    local numberCount = (AiData[gPi][StringHash("Number")] or 0)
+    local numberCount = getAiCount(gPi, StringHash("Number"))
     -- Пропуск если 0 или лимит юнитов
     if FirstOfGroup(gGroup) == nil then
         if not (AiData[gPi][StringHash("Log_PereborNoBld")] or false) then
@@ -46006,7 +46006,7 @@ function PereborNavalb()
     
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, p, B_NavalBases)
-    i=(AiData[pi][StringHash("NumberN")] or 0)
+    i=getAiCount(pi, StringHash("NumberN"))
     -- Пропуск если 0 или больше трети армии
     if FirstOfGroup(gGroup) == nil then
         if udg_Octhet then
@@ -46016,7 +46016,7 @@ function PereborNavalb()
         u=null
         return
         
-    elseif i > (AiData[pi][StringHash("Number")] or 0) / 3 then
+    elseif i > getAiCount(pi, StringHash("Number")) / 3 then
         if udg_Octhet then
             DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) + "")
         end
@@ -46108,7 +46108,7 @@ function Strateg()
     
     --Ресы на развитие
     
-    AdjustPlayerStateSimpleBJ(p, PLAYER_STATE_RESOURCE_GOLD, 500 + i * 9 * AiMoney) -- -(AiData[pi][StringHash("Number")] or 0)*10 )
+    AdjustPlayerStateSimpleBJ(p, PLAYER_STATE_RESOURCE_GOLD, 500 + i * 9 * AiMoney) -- -getAiCount(pi, StringHash("Number"))*10 )
     AdjustPlayerStateSimpleBJ(p, PLAYER_STATE_RESOURCE_LUMBER, 250 + i * 5 * AiMoney)
     
     --call DisplayTimedTextFromPlayer(Player(0),0,0,4,(GetPlayerName(p)+""+I2S(GetPlayerId(p))))
@@ -46517,7 +46517,7 @@ function Trig_Leave_Harvest_U_Actions()
     GroupRemoveUnitSimple(GetTriggerUnit(), udg_Ai_units[pi])
     NumberRem(pi , GetUnitTypeId(GetTriggerUnit()))
     NumberRem(pi , StringHash("Number"))
-    AiData[pi][StringHash("HV")] = (AiData[pi][StringHash("HV")] or 0) - 1
+    NumberRem(pi , StringHash("HV"))
 end
 --===========================================================================
 function InitTrig_Leave_Harvest_U()
@@ -46539,7 +46539,7 @@ function Trig_Leave_Builders_U_Actions()
     GroupRemoveUnitSimple(GetTriggerUnit(), udg_Ai_units[pi])
     NumberRem(pi , GetUnitTypeId(GetTriggerUnit()))
     NumberRem(pi , StringHash("Number"))
-    --call AiData[pi][StringHash("HV")] = (AiData[pi][StringHash("HV")] or 0)-1
+    --call AiData[pi][StringHash("HV")] = getAiCount(pi, StringHash("HV"))-1
 end
 --===========================================================================
 function InitTrig_Leave_Builders_U()
@@ -46562,7 +46562,7 @@ function Trig_Leave_BuildersT_U_Actions()
     NumberRem(pi , GetUnitTypeId(GetTriggerUnit()))
     NumberRem(pi , StringHash("Number"))
     
-    AiData[pi][StringHash("T")] = (AiData[pi][StringHash("T")] or 0) - 1
+    NumberRem(pi , StringHash("T"))
 end
 --===========================================================================
 function InitTrig_Leave_BuildersT_U()
@@ -46708,7 +46708,7 @@ function aiRep()
     
     
     -- Очистка
-    g_AiCountCache[pi] = nil; AiData[(pi)] = nil -- INLINED!!
+    g_AiCounts[pi] = nil; AiData[(pi)] = nil -- INLINED!!
     
     GroupClear(udg_Ai_units[pi])
     GroupClear(udg_Ai_navy[pi])
@@ -46874,12 +46874,12 @@ function Trig_AiLogAll_Actions()
     --call ForGroup(gGroup,function )
     BJDebugMsg("" + GetPlayerName(gPlayer))
     BJDebugMsg("")
-    BJDebugMsg("Number" + I2S(((AiData[(gPi )][( StringHash("Number"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberN" + I2S(((AiData[(gPi )][( StringHash("NumberN"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberPorts" + I2S(((AiData[(gPi )][( StringHash("NumberPorts"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberGuard" + I2S(((AiData[(gPi )][( StringHash("NumberGuard"))] or 0)))) -- INLINED!!
-    BJDebugMsg("T" + I2S(((AiData[(gPi )][( StringHash("T"))] or 0)))) -- INLINED!!
-    BJDebugMsg("HV" + I2S(((AiData[(gPi )][( StringHash("HV"))] or 0)))) -- INLINED!!
+    BJDebugMsg("Number" + I2S((getAiCount(gPi, StringHash("Number")))))) -- INLINED!!
+    BJDebugMsg("NumberN" + I2S((getAiCount(gPi, StringHash("NumberN")))))) -- INLINED!!
+    BJDebugMsg("NumberPorts" + I2S((getAiCount(gPi, StringHash("NumberPorts")))))) -- INLINED!!
+    BJDebugMsg("NumberGuard" + I2S((getAiCount(gPi, StringHash("NumberGuard")))))) -- INLINED!!
+    BJDebugMsg("T" + I2S((getAiCount(gPi, StringHash("T")))))) -- INLINED!!
+    BJDebugMsg("HV" + I2S((getAiCount(gPi, StringHash("HV")))))) -- INLINED!!
     BJDebugMsg("")
     
     gString="Groupudg_Ai_army[pi]"

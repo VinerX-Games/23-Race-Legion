@@ -5,10 +5,10 @@
 ---@param pi integer
 ---@param id integer
 ---@return integer
-g_AiCountCache = {}
+g_AiCounts = {}
 
 function getAiCount(pi, id)
-	local t = g_AiCountCache[pi]
+	local t = g_AiCounts[pi]
 	if t ~= nil then
 		local v = t[id]
 		if v ~= nil then return v end
@@ -20,7 +20,7 @@ end
 ---@param id integer
 ---@return boolean
 function aiHasUnit(pi, id)
-	local t = g_AiCountCache[pi]
+	local t = g_AiCounts[pi]
 	if t ~= nil then return (t[id] or 0) > 0 end
 	return false
 end
@@ -29,41 +29,36 @@ end
 ---@param id integer
 ---@return nothing
 function NumberAdd(pi, id)
-	local t = g_AiCountCache[pi]
-	if t == nil then t = {}; g_AiCountCache[pi] = t end
+	local t = g_AiCounts[pi]
+	if t == nil then t = {}; g_AiCounts[pi] = t end
 	local c = (t[id] or 0) + 1
 	t[id] = c
-	AiData[pi][id] = c
 end
 function NumberSet(pi, id, amount)
-	local t = g_AiCountCache[pi]
-	if t == nil then t = {}; g_AiCountCache[pi] = t end
+	local t = g_AiCounts[pi]
+	if t == nil then t = {}; g_AiCounts[pi] = t end
 	t[id] = amount
-	AiData[pi][id] = amount
 end
 ---@param pi integer
 ---@param id integer
 ---@return nothing
 function NumberRem(pi, id)
-	local t = g_AiCountCache[pi]
-	if t == nil then t = {}; g_AiCountCache[pi] = t end
+	local t = g_AiCounts[pi]
+	if t == nil then t = {}; g_AiCounts[pi] = t end
 	local c = (t[id] or 0) - 1
 	t[id] = c
-	AiData[pi][id] = c
 end
 ---@param pi integer
 ---@param id integer
 ---@return nothing
 function NumberReset(pi, id)
-	local t = g_AiCountCache[pi]
+	local t = g_AiCounts[pi]
 	if t ~= nil then t[id] = nil end
-	AiData[pi][id] = 0
 end
 ---@param pi integer
 ---@return nothing
 function NumberResetAll(pi)
-	g_AiCountCache[pi] = nil
-	AiData[pi] = nil
+	g_AiCounts[pi] = nil
 end
 -- ***************************************************************************
 -- *  HasEnemyNear

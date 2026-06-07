@@ -4006,10 +4006,10 @@ end
 ---@param pi integer
 ---@param id integer
 ---@return integer
-g_AiCountCache = {}
+g_AiCounts = {}
 
 function getAiCount(pi, id)
-	local t = g_AiCountCache[pi]
+	local t = g_AiCounts[pi]
 	if t ~= nil then
 		local v = t[id]
 		if v ~= nil then return v end
@@ -4021,7 +4021,7 @@ end
 ---@param id integer
 ---@return boolean
 function aiHasUnit(pi, id)
-	local t = g_AiCountCache[pi]
+	local t = g_AiCounts[pi]
 	if t ~= nil then return (t[id] or 0) > 0 end
 	return false
 end
@@ -4030,41 +4030,36 @@ end
 ---@param id integer
 ---@return nothing
 function NumberAdd(pi, id)
-	local t = g_AiCountCache[pi]
-	if t == nil then t = {}; g_AiCountCache[pi] = t end
+	local t = g_AiCounts[pi]
+	if t == nil then t = {}; g_AiCounts[pi] = t end
 	local c = (t[id] or 0) + 1
 	t[id] = c
-	AiData[pi][id] = c
 end
 function NumberSet(pi, id, amount)
-	local t = g_AiCountCache[pi]
-	if t == nil then t = {}; g_AiCountCache[pi] = t end
+	local t = g_AiCounts[pi]
+	if t == nil then t = {}; g_AiCounts[pi] = t end
 	t[id] = amount
-	AiData[pi][id] = amount
 end
 ---@param pi integer
 ---@param id integer
 ---@return nothing
 function NumberRem(pi, id)
-	local t = g_AiCountCache[pi]
-	if t == nil then t = {}; g_AiCountCache[pi] = t end
+	local t = g_AiCounts[pi]
+	if t == nil then t = {}; g_AiCounts[pi] = t end
 	local c = (t[id] or 0) - 1
 	t[id] = c
-	AiData[pi][id] = c
 end
 ---@param pi integer
 ---@param id integer
 ---@return nothing
 function NumberReset(pi, id)
-	local t = g_AiCountCache[pi]
+	local t = g_AiCounts[pi]
 	if t ~= nil then t[id] = nil end
-	AiData[pi][id] = 0
 end
 ---@param pi integer
 ---@return nothing
 function NumberResetAll(pi)
-	g_AiCountCache[pi] = nil
-	AiData[pi] = nil
+	g_AiCounts[pi] = nil
 end
 -- ***************************************************************************
 -- *  HasEnemyNear
@@ -4727,7 +4722,7 @@ function aiUnitJoinsCapitalGuard(u, pi)
 			-- call BJDebugMsg("Не прошел в стражу расстояние "+ R2SW_Polyfill(DistanceBetweenUnits(playerCapital[pi],u))) 
 		end
 		return false
-	elseif (AiData[pi][StringHash("NumberGuard")] or 0) + 15 > (AiData[pi][StringHash("Number")] or 0) / 5 then
+	elseif getAiCount(pi, StringHash("NumberGuard")) + 15 > getAiCount(pi, StringHash("Number")) / 5 then
 		-- call BJDebugMsg("Не прошел в стражу стража больше "+I2S((AiData[pi][StringHash("NumberGuard")] or 0))+I2S((AiData[pi][StringHash("Number")] or 0)/5))
 		return false
 	end
@@ -4780,9 +4775,9 @@ end
 ---@param pi integer
 ---@return nothing
 function aiNavalTrain_Common(u, pi)
-	if Random(1, 2) and (AiData[pi][FourCC('h00Y')] or 0) < 50 then
+	if Random(1, 2) and getAiCount(pi, FourCC('h00Y')) < 50 then
 		IssueImmediateOrderById(u, FourCC('h00Y'))
-	elseif (AiData[pi][FourCC('h00Z')] or 0) < 75 then
+	elseif getAiCount(pi, FourCC('h00Z')) < 75 then
 		IssueImmediateOrderById(u, FourCC('h00Z'))
 	end
 end
@@ -5102,7 +5097,7 @@ function Strateg_BloodElves(i, pi, p)
 		
 		
 		
-		if i > 35 and ((AiData[pi][FourCC('h04B')] or 0) + (AiData[pi][FourCC('h04A')] or 0) >= 1) then
+		if i > 35 and (getAiCount(pi, FourCC('h04B')) + getAiCount(pi, FourCC('h04A')) >= 1) then
 			
 			
 			r = GetRandomInt(1, 3)
@@ -5177,17 +5172,17 @@ function Strateg_BloodElves(i, pi, p)
 	end
 	
 	-- Делай т2
-	if i > 25 and (AiData[pi][FourCC('h04B')] or 0) < 3 then
+	if i > 25 and getAiCount(pi, FourCC('h04B')) < 3 then
 		BuildT(p, FourCC('h04C'), FourCC('h04B'))
 	end
 	
 	-- Делай т3
-	if i > 55 and (AiData[pi][FourCC('h04A')] or 0) < 3 then
+	if i > 55 and getAiCount(pi, FourCC('h04A')) < 3 then
 		BuildT(p, FourCC('h04B'), FourCC('h04A'))
 	end
 	
 	-- Спавн мага тп
-	if i > 60 and (AiData[pi][FourCC('h07A')] or 0) < 3 then
+	if i > 60 and getAiCount(pi, FourCC('h07A')) < 3 then
 		MakeMageTp(pi)
 	end
 	
@@ -5217,7 +5212,7 @@ function ChooseBuildings_BloodElves(pi)
 	CheckAndAddBuilding(pi, FourCC('h05J'), 3, 8)	--  Алтарь
 	
 	--  Проверяем условия для Мастерской и Храма
-	if (AiData[pi][FourCC('h04B')] or 0) + (AiData[pi][FourCC('h04A')] or 0) >= 1 then
+	if getAiCount(pi, FourCC('h04B')) + getAiCount(pi, FourCC('h04A')) >= 1 then
 		CheckAndAddBuilding(pi, FourCC('h04G'), 15, 8)	--  Мастерская
 		CheckAndAddBuilding(pi, FourCC('h04E'), 15, 8)	--  Храм
 	end
@@ -5248,7 +5243,7 @@ function PereborBuildings2_BloodElves(id, pi, u)
 		--  Доп. варианты при условиях
 		
 		--  2 Лучница
-		if (AiData[pi][FourCC('h04R')] or 0) >= 1 then
+		if getAiCount(pi, FourCC('h04R')) >= 1 then
 			i = 1	-- мошь выбора
 			b = 1
 			
@@ -5262,7 +5257,7 @@ function PereborBuildings2_BloodElves(id, pi, u)
 		end
 		
 		--  3 Всадник
-		if (AiData[pi][FourCC('h04B')] or 0) + (AiData[pi][FourCC('h04A')] or 0) >= 1 then
+		if getAiCount(pi, FourCC('h04B')) + getAiCount(pi, FourCC('h04A')) >= 1 then
 			i = 4	-- мошь выбора
 			b = 1
 			
@@ -5275,7 +5270,7 @@ function PereborBuildings2_BloodElves(id, pi, u)
 		end
 		
 		--  4 Рыцарь крови
-		if (AiData[pi][FourCC('h04A')] or 0) >= 1 then
+		if getAiCount(pi, FourCC('h04A')) >= 1 then
 			i = 6	-- мошь выбора
 			b = 1
 			
@@ -5295,7 +5290,7 @@ function PereborBuildings2_BloodElves(id, pi, u)
 		
 		
 		-- Строитель
-		if (AiData[pi][FourCC('h04K')] or 0) < 20 then
+		if getAiCount(pi, FourCC('h04K')) < 20 then
 			IssueImmediateOrderById(u, FourCC('h04K'))
 		end
 		
@@ -5306,7 +5301,7 @@ function PereborBuildings2_BloodElves(id, pi, u)
 		
 		--  Доп. варианты при условиях
 		-- Баллиста
-		if (AiData[pi][FourCC('h04B')] or 0) + (AiData[pi][FourCC('h04A')] or 0) >= 1 then
+		if getAiCount(pi, FourCC('h04B')) + getAiCount(pi, FourCC('h04A')) >= 1 then
 			i = 1	-- мошь выбора
 			b = 1
 			
@@ -5322,7 +5317,7 @@ function PereborBuildings2_BloodElves(id, pi, u)
 		
 		
 		--  2 Элем
-		if (AiData[pi][FourCC('h04B')] or 0) + (AiData[pi][FourCC('h04A')] or 0) >= 1 then
+		if getAiCount(pi, FourCC('h04B')) + getAiCount(pi, FourCC('h04A')) >= 1 then
 			i = 2	-- мошь выбора
 			b = 1
 			
@@ -5336,7 +5331,7 @@ function PereborBuildings2_BloodElves(id, pi, u)
 		end
 		
 		--  3 Повозка
-		if (AiData[pi][FourCC('h04B')] or 0) + (AiData[pi][FourCC('h04A')] or 0) >= 1 then
+		if getAiCount(pi, FourCC('h04B')) + getAiCount(pi, FourCC('h04A')) >= 1 then
 			i = 1	-- мошь выбора
 			b = 1
 			
@@ -5349,7 +5344,7 @@ function PereborBuildings2_BloodElves(id, pi, u)
 		end
 		
 		--  4 Голем
-		if (AiData[pi][FourCC('h04A')] or 0) >= 1 then
+		if getAiCount(pi, FourCC('h04A')) >= 1 then
 			i = 6	-- мошь выбора
 			b = 1
 			
@@ -5751,7 +5746,7 @@ function Strateg_Scarlet(i, pi, p)
 		
 		
 		
-		if i > 35 and ((AiData[pi][FourCC('h05V')] or 0) + (AiData[pi][FourCC('h05W')] or 0) >= 1) then
+		if i > 35 and (getAiCount(pi, FourCC('h05V')) + getAiCount(pi, FourCC('h05W')) >= 1) then
 			
 			--  Казармы
 			MakeGradeCheckCap(p, FourCC('h05Z'), FourCC('R03W'), 2)
@@ -5791,22 +5786,22 @@ function Strateg_Scarlet(i, pi, p)
 	end
 	
 	-- Делай т2
-	if i > 25 and (AiData[pi][FourCC('h05V')] or 0) < 3 then
+	if i > 25 and getAiCount(pi, FourCC('h05V')) < 3 then
 		BuildT(p, FourCC('h05U'), FourCC('h05V'))
 	end
 	
 	-- Делай т3
-	if i > 55 and (AiData[pi][FourCC('h05W')] or 0) < 3 then
+	if i > 55 and getAiCount(pi, FourCC('h05W')) < 3 then
 		BuildT(p, FourCC('h05V'), FourCC('h05W'))
 	end
 	
 	-- Спавн мага тп
-	if i > 60 and (AiData[pi][FourCC('h07A')] or 0) < i / 35 then
+	if i > 60 and getAiCount(pi, FourCC('h07A')) < i / 35 then
 		MakeMageTp(pi)
 	end
 	
 	-- Выбор Пути Ордена
-	if i > 65 and (AiData[pi][FourCC('h05V')] or 0) >= 1 then
+	if i > 65 and getAiCount(pi, FourCC('h05V')) >= 1 then
 		r = GetRandomInt(1, 2)
 		if r == 1 then
 			MakeGradeCheckCap(p, FourCC('h05W'), FourCC('R040'), 1)
@@ -5855,13 +5850,13 @@ function ChooseBuildings_ScarletOrden(pi)
 	CheckAndAddBuilding(pi, FourCC('h05X'), 3, 5)	--  Алтарь
 	
 	--  Проверяем условия для Мастерской и Храма
-	if (AiData[pi][FourCC('h05V')] or 0) + (AiData[pi][FourCC('h05W')] or 0) >= 1 then
+	if getAiCount(pi, FourCC('h05V')) + getAiCount(pi, FourCC('h05W')) >= 1 then
 		CheckAndAddBuilding(pi, FourCC('h064'), 7, 8)	--  Мастерская
 		CheckAndAddBuilding(pi, FourCC('h061'), 15, 8)	--  Храм
 	end
 	
 	--  Церковь
-	if (AiData[pi][FourCC('h05W')] or 0) >= 1 and (AiData[pi][FourCC('h068')] or 0) < 15 then
+	if getAiCount(pi, FourCC('h05W')) >= 1 and getAiCount(pi, FourCC('h068')) < 15 then
 		AddBuilding(FourCC('h068'), 10)
 	end
 	
@@ -5888,7 +5883,7 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 		--  Доп. варианты при условиях
 		
 		--  2 Лучник
-		if (AiData[pi][FourCC('h060')] or 0) >= 1 then
+		if getAiCount(pi, FourCC('h060')) >= 1 then
 			i = 1	-- мошь выбора
 			b = 1
 			
@@ -5902,7 +5897,7 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 		end
 		
 		--  3 Тяж Мечник
-		if (AiData[pi][FourCC('h05V')] or 0) + (AiData[pi][FourCC('h05W')] or 0) >= 1 then
+		if getAiCount(pi, FourCC('h05V')) + getAiCount(pi, FourCC('h05W')) >= 1 then
 			i = 4	-- мошь выбора
 			b = 1
 			
@@ -5915,7 +5910,7 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 		end
 		
 		--  4 Всадник
-		if (AiData[pi][FourCC('h05W')] or 0) >= 1 then
+		if getAiCount(pi, FourCC('h05W')) >= 1 then
 			i = 6	-- мошь выбора
 			b = 1
 			
@@ -5935,13 +5930,13 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 		
 		
 		udg_LocalInteger3 = GetRandomInt(1, 3)
-		if udg_LocalInteger3 == 1 and (AiData[pi][FourCC('h014')] or 0) < 20 then
+		if udg_LocalInteger3 == 1 and getAiCount(pi, FourCC('h014')) < 20 then
 			IssueImmediateOrderById(u, FourCC('h014'))
 			
-		elseif udg_LocalInteger3 == 2 and (AiData[pi][FourCC('h03C')] or 0) < 15 then
+		elseif udg_LocalInteger3 == 2 and getAiCount(pi, FourCC('h03C')) < 15 then
 			IssueImmediateOrderById(u, FourCC('h03C'))
 			
-		elseif udg_LocalInteger3 == 3 and (AiData[pi][FourCC('h03A')] or 0) < 15 then
+		elseif udg_LocalInteger3 == 3 and getAiCount(pi, FourCC('h03A')) < 15 then
 			IssueImmediateOrderById(u, FourCC('h03A'))
 		else
 		end
@@ -5980,7 +5975,7 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 		--  Доп. варианты при условиях
 		
 		--  1 Паладин
-		if (AiData[pi][FourCC('R040')] or false) and (AiData[pi][FourCC('h05W')] or 0) >= 1 then
+		if (AiData[pi][FourCC('R040')] or false) and getAiCount(pi, FourCC('h05W')) >= 1 then
 			i = 1	-- мошь выбора
 			b = 1
 			
@@ -5994,7 +5989,7 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 		end
 		
 		--  3 Берсерк
-		if (AiData[pi][FourCC('R040')] or false) and (AiData[pi][FourCC('h05W')] or 0) >= 1 then
+		if (AiData[pi][FourCC('R040')] or false) and getAiCount(pi, FourCC('h05W')) >= 1 then
 			i = 1	-- мошь выбора
 			b = 1
 			
@@ -6007,7 +6002,7 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 		end
 		
 		--  3 Инквизитор
-		if (AiData[pi][FourCC('R03Z')] or false) and (AiData[pi][FourCC('h05W')] or 0) >= 1 then
+		if (AiData[pi][FourCC('R03Z')] or false) and getAiCount(pi, FourCC('h05W')) >= 1 then
 			i = 1	-- мошь выбора
 			b = 1
 			
@@ -6021,7 +6016,7 @@ function PereborBuildings_ScarletOrden(id, pi, u)
 		end
 		
 		--  4 Гладиатор
-		if (AiData[pi][FourCC('R03Z')] or false) and (AiData[pi][FourCC('h05W')] or 0) >= 1 then
+		if (AiData[pi][FourCC('R03Z')] or false) and getAiCount(pi, FourCC('h05W')) >= 1 then
 			i = 1	-- мошь выбора
 			b = 1
 			
@@ -6348,7 +6343,7 @@ function Strateg_Goblins(i, pi, p)
 	end
 	
 	-- Спавн мага тп
-	if i > 60 and (AiData[pi][FourCC('h07A')] or 0) < i / 35 then
+	if i > 60 and getAiCount(pi, FourCC('h07A')) < i / 35 then
 		MakeMageTp(pi)
 	end
 	
@@ -6446,7 +6441,7 @@ function aiNavalTrain_Goblins(u, pi)
 		IssueImmediateOrderById(u, FourCC('h06V'))
 	elseif udg_LocalInteger3 == 4 then
 		IssueImmediateOrderById(u, FourCC('h06W'))
-	elseif udg_LocalInteger3 == 5 and (AiData[pi][FourCC('h0OD')] or 0) < 1 then
+	elseif udg_LocalInteger3 == 5 and getAiCount(pi, FourCC('h0OD')) < 1 then
 		IssueImmediateOrderById(u, FourCC('h0OD'))
 	end
 end
@@ -6789,17 +6784,17 @@ function Strateg_Horde(i, pi, p)
 		warRace(Grades[pi], p)
 	end
 	-- Делай т2
-	if i > 25 and (AiData[pi][FourCC('ostr')] or 0) < 3 then
+	if i > 25 and getAiCount(pi, FourCC('ostr')) < 3 then
 		BuildT(p, FourCC('ogre'), FourCC('ostr'))
 	end
 	
 	-- Делай т3
-	if i > 55 and (AiData[pi][FourCC('ofrt')] or 0) < 3 then
+	if i > 55 and getAiCount(pi, FourCC('ofrt')) < 3 then
 		BuildT(p, FourCC('ostr'), FourCC('ofrt'))
 	end
 	
 	-- Спавн мага тп
-	if i > 60 and (AiData[pi][FourCC('h07A')] or 0) < i / 35 then
+	if i > 60 and getAiCount(pi, FourCC('h07A')) < i / 35 then
 		MakeMageTp(pi)
 	end
 	
@@ -6823,7 +6818,7 @@ function ChooseBuildings_Horde(pi)
 	CheckAndAddBuilding(pi, FourCC('owtw'), 30, 1)	--  Tower
 	CheckAndAddBuilding(pi, FourCC('ofor'), 5, 3)	--  Лесопилка
 	CheckAndAddBuilding(pi, FourCC('oalt'), 3, 6)	--  Алтарь
-	if (AiData[pi][FourCC('ostr')] or 0) + (AiData[pi][FourCC('ofrt')] or 0) > 0 then	--  (pi,FourCC('ostr')) or aiHasUnit(pi,FourCC('ofrt')) then
+	if getAiCount(pi, FourCC('ostr')) + getAiCount(pi, FourCC('ofrt')) > 0 then	--  (pi,FourCC('ostr')) or aiHasUnit(pi,FourCC('ofrt')) then
 		CheckAndAddBuilding(pi, FourCC('osld'), 15, 10)	--  Обитель духов
 		CheckAndAddBuilding(pi, FourCC('otto'), 15, 10)	--  Мастерская
 	end
@@ -6882,7 +6877,7 @@ function PereborBuildings_Horde(id, pi, u)
 		
 		--  Тиры
 	elseif id == FourCC('ogre') or id == FourCC('ostr') or id == FourCC('ofrt') then
-		if (AiData[pi][FourCC('opeo')] or 0) < 25 then
+		if getAiCount(pi, FourCC('opeo')) < 25 then
 			IssueImmediateOrderById(u, FourCC('opeo'))
 		end
 		--  Обитель духов o01W,oshm,odoc
@@ -7218,17 +7213,17 @@ function Strateg_Naga(i, pi, p)
 		
 	end
 	-- Делай т2
-	if i > 25 and (AiData[pi][FourCC('h0JX')] or 0) < 3 then
+	if i > 25 and getAiCount(pi, FourCC('h0JX')) < 3 then
 		BuildT(p, FourCC('nntt'), FourCC('h0JX'))
 	end
 	
 	-- Делай т3
-	if i > 55 and (AiData[pi][FourCC('h0JY')] or 0) < 3 then
+	if i > 55 and getAiCount(pi, FourCC('h0JY')) < 3 then
 		BuildT(p, FourCC('h0JX'), FourCC('h0JY'))
 	end
 	
 	-- Спавн мага тп
-	if i > 60 and (AiData[pi][FourCC('h07A')] or 0) < i / 35 then
+	if i > 60 and getAiCount(pi, FourCC('h07A')) < i / 35 then
 		MakeMageTp(pi)
 	end
 	
@@ -7286,7 +7281,7 @@ function PereborBuildings_Naga(id, pi, u)
 		
 		--  Тиры
 	elseif id == FourCC('nntt') or id == FourCC('h0JX') or id == FourCC('h0JY') then
-		if (AiData[pi][FourCC('nmpe')] or 0) < 25 then
+		if getAiCount(pi, FourCC('nmpe')) < 25 then
 			IssueImmediateOrderById(u, FourCC('nmpe'))
 		elseif Random(1, 2) then
 			IssueImmediateOrderById(u, FourCC('nnmg'))
@@ -7445,9 +7440,9 @@ end
 ---@param pi integer
 ---@return nothing
 function aiNavalTrain_JungleTrolls(u, pi)
-	if Random(1, 2) and (AiData[pi][FourCC('h0D6')] or 0) < 50 then
+	if Random(1, 2) and getAiCount(pi, FourCC('h0D6')) < 50 then
 		IssueImmediateOrderById(u, FourCC('h0D6'))
-	elseif (AiData[pi][FourCC('h0D5')] or 0) < 75 then
+	elseif getAiCount(pi, FourCC('h0D5')) < 75 then
 		IssueImmediateOrderById(u, FourCC('h0D5'))
 	end
 end
@@ -11584,7 +11579,7 @@ end
 ---@return boolean
 function GoToWaterPoint(pi, u, x, y)
 	
-	if Random(1, 10) and (AiData[pi][StringHash("NumberPorts")] or 0) < 8 then
+	if Random(1, 10) and getAiCount(pi, StringHash("NumberPorts")) < 8 then
 		if RectContainsCoords(gg_rct_EastenKingdoms, x, y) then
 			gInt = GetRandomInt(1, 4)
 			if gInt == 1 then
@@ -11659,7 +11654,7 @@ function TryBuild()
 	
 	
 	-- Если в воде для верфи - то строй верфь c высоким шансом)
-	if (AiData[gPi][StringHash("NumberPorts")] or 0) < 12 and ( not IsTerrainPathable(gX, gY, PATHING_TYPE_WALKABILITY) and RectContainsCoords(gg_rct_Outland, gX, gY) ~= true and RectContainsCoords(gg_rct_Azgel, gX, gY) ~= true) then
+	if getAiCount(gPi, StringHash("NumberPorts")) < 12 and ( not IsTerrainPathable(gX, gY, PATHING_TYPE_WALKABILITY) and RectContainsCoords(gg_rct_Outland, gX, gY) ~= true and RectContainsCoords(gg_rct_Azgel, gX, gY) ~= true) then
 		
 		
 		if Random(1, 2) then
@@ -53711,7 +53706,7 @@ function Trig_CheckType_Actions()
     DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
     while true do
         if i == 23 then break end
-        b=(AiData[i][GetUnitTypeId(u)] or 0)
+        b=getAiCount(i, GetUnitTypeId(u))
         DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, GetPlayerName(Player(i)) + " - " + I2S(b))
         i=i + 1
     end
@@ -54022,7 +54017,7 @@ function PlayerBuilders()
                 GroupRemoveUnit(gGroup, gUnit)
                 
                 -- Лесоруб
-                if (AiData[pi][StringHash("T")] or 0) >= 12 then
+                if getAiCount(pi, StringHash("T")) >= 12 then
                     NumberAdd(pi , StringHash("HV"))
                     GroupAddUnit(udg_Ai_harvest[pi], gUnit)
                     GroupRemoveUnit(udg_Ai_builders[pi], gUnit)
@@ -54057,12 +54052,12 @@ function PlayerBuilders()
         end
         
         -- Лесорубы - из них приходят лишь строить
-        if (AiData[pi][StringHash("T")] or 0) < 12 then
+        if getAiCount(pi, StringHash("T")) < 12 then
             Counter=0
             GroupEnumUnitsOfPlayer(gGroup, gPlayer, Harwest)
             
             while true do
-                if (AiData[pi][StringHash("T")] or 0) > 9 or (AiData[pi][StringHash("HV")] or 0) < 1 then break end
+                if getAiCount(pi, StringHash("T")) > 9 or getAiCount(pi, StringHash("HV")) < 1 then break end
             
                 
                 gUnit=BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
@@ -54290,7 +54285,7 @@ function Trig_PereborBuildings_Code_Func002A()
     gPi=GetPlayerId(gPlayer)
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_OnlyNeaded)
-    local numberCount = (AiData[gPi][StringHash("Number")] or 0)
+    local numberCount = getAiCount(gPi, StringHash("Number"))
     -- Пропуск если 0 или лимит юнитов
     if FirstOfGroup(gGroup) == nil then
         if not (AiData[gPi][StringHash("Log_PereborNoBld")] or false) then
@@ -54387,7 +54382,7 @@ function PereborNavalb()
     
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, p, B_NavalBases)
-    i=(AiData[pi][StringHash("NumberN")] or 0)
+    i=getAiCount(pi, StringHash("NumberN"))
     -- Пропуск если 0 или больше трети армии
     if FirstOfGroup(gGroup) == nil then
         if udg_Octhet then
@@ -54397,7 +54392,7 @@ function PereborNavalb()
         u=null
         return
         
-    elseif i > (AiData[pi][StringHash("Number")] or 0) / 3 then
+    elseif i > getAiCount(pi, StringHash("Number")) / 3 then
         if udg_Octhet then
             DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) + "")
         end
@@ -54489,7 +54484,7 @@ function Strateg()
     
     --Ресы на развитие
     
-    AdjustPlayerStateSimpleBJ(p, PLAYER_STATE_RESOURCE_GOLD, 500 + i * 9 * AiMoney) -- -(AiData[pi][StringHash("Number")] or 0)*10 )
+    AdjustPlayerStateSimpleBJ(p, PLAYER_STATE_RESOURCE_GOLD, 500 + i * 9 * AiMoney) -- -getAiCount(pi, StringHash("Number"))*10 )
     AdjustPlayerStateSimpleBJ(p, PLAYER_STATE_RESOURCE_LUMBER, 250 + i * 5 * AiMoney)
     
     --call DisplayTimedTextFromPlayer(Player(0),0,0,4,(GetPlayerName(p)+""+I2S(GetPlayerId(p))))
@@ -54898,7 +54893,7 @@ function Trig_Leave_Harvest_U_Actions()
     GroupRemoveUnitSimple(GetTriggerUnit(), udg_Ai_units[pi])
     NumberRem(pi , GetUnitTypeId(GetTriggerUnit()))
     NumberRem(pi , StringHash("Number"))
-    AiData[pi][StringHash("HV")] = (AiData[pi][StringHash("HV")] or 0) - 1
+    NumberRem(pi , StringHash("HV"))
 end
 --===========================================================================
 function InitTrig_Leave_Harvest_U()
@@ -54920,7 +54915,7 @@ function Trig_Leave_Builders_U_Actions()
     GroupRemoveUnitSimple(GetTriggerUnit(), udg_Ai_units[pi])
     NumberRem(pi , GetUnitTypeId(GetTriggerUnit()))
     NumberRem(pi , StringHash("Number"))
-    --call AiData[pi][StringHash("HV")] = (AiData[pi][StringHash("HV")] or 0)-1
+    --call AiData[pi][StringHash("HV")] = getAiCount(pi, StringHash("HV"))-1
 end
 --===========================================================================
 function InitTrig_Leave_Builders_U()
@@ -54943,7 +54938,7 @@ function Trig_Leave_BuildersT_U_Actions()
     NumberRem(pi , GetUnitTypeId(GetTriggerUnit()))
     NumberRem(pi , StringHash("Number"))
     
-    AiData[pi][StringHash("T")] = (AiData[pi][StringHash("T")] or 0) - 1
+    NumberRem(pi , StringHash("T"))
 end
 --===========================================================================
 function InitTrig_Leave_BuildersT_U()
@@ -55089,7 +55084,7 @@ function aiRep()
     
     
     -- Очистка
-    g_AiCountCache[pi] = nil; AiData[(pi)] = nil -- INLINED!!
+    g_AiCounts[pi] = nil; AiData[(pi)] = nil -- INLINED!!
     
     GroupClear(udg_Ai_units[pi])
     GroupClear(udg_Ai_navy[pi])
@@ -55255,12 +55250,12 @@ function Trig_AiLogAll_Actions()
     --call ForGroup(gGroup,function )
     BJDebugMsg("" + GetPlayerName(gPlayer))
     BJDebugMsg("")
-    BJDebugMsg("Number" + I2S(((AiData[(gPi )][( StringHash("Number"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberN" + I2S(((AiData[(gPi )][( StringHash("NumberN"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberPorts" + I2S(((AiData[(gPi )][( StringHash("NumberPorts"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberGuard" + I2S(((AiData[(gPi )][( StringHash("NumberGuard"))] or 0)))) -- INLINED!!
-    BJDebugMsg("T" + I2S(((AiData[(gPi )][( StringHash("T"))] or 0)))) -- INLINED!!
-    BJDebugMsg("HV" + I2S(((AiData[(gPi )][( StringHash("HV"))] or 0)))) -- INLINED!!
+    BJDebugMsg("Number" + I2S((getAiCount(gPi, StringHash("Number")))))) -- INLINED!!
+    BJDebugMsg("NumberN" + I2S((getAiCount(gPi, StringHash("NumberN")))))) -- INLINED!!
+    BJDebugMsg("NumberPorts" + I2S((getAiCount(gPi, StringHash("NumberPorts")))))) -- INLINED!!
+    BJDebugMsg("NumberGuard" + I2S((getAiCount(gPi, StringHash("NumberGuard")))))) -- INLINED!!
+    BJDebugMsg("T" + I2S((getAiCount(gPi, StringHash("T")))))) -- INLINED!!
+    BJDebugMsg("HV" + I2S((getAiCount(gPi, StringHash("HV")))))) -- INLINED!!
     BJDebugMsg("")
     
     gString="Groupudg_Ai_army[pi]"
