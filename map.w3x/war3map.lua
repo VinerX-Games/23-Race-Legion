@@ -7974,6 +7974,64 @@ function startOgres(pi)
     AiRace[pi] = "Ogres"
     ProbeLogWrite("[AI] startOgres pi=" .. tostring(pi) .. " workers=5o03W building=1o035")
 end
+---@param pi integer
+---@return nothing
+function startGnomes(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('h0FA'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h0FK'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('h0FA')] = 5
+    AiData[pi][FourCC('h0FK')] = 1
+    AiData[pi][StringHash("Race")] = "GN"
+    SetPlayerTechResearchedSwap(FourCC('R0BX'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, p)
+    ConditionalTriggerExecute(gg_trg_GnomesOn)
+    SetPlayerName(p, "Gnomes (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Gnomes"
+    ProbeLogWrite("[AI] startGnomes pi=" .. tostring(pi) .. " workers=5h0FA building=1h0FK")
+end
+---@param pi integer
+---@return nothing
+function startSilitids(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(8, FourCC('e01G'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('e01H'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('e01G')] = 8
+    AiData[pi][FourCC('e01H')] = 1
+    AiData[pi][StringHash("Race")] = "SL"
+    SetPlayerTechResearchedSwap(FourCC('R0BV'), 1, p)
+    ConditionalTriggerExecute(gg_trg_SilitidsOn)
+    SetPlayerName(p, "Silitids (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Silitids"
+    ProbeLogWrite("[AI] startSilitids pi=" .. tostring(pi) .. " workers=8e01G building=1e01H")
+end
+---@param pi integer
+---@return nothing
+function startPandarens(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('pa01'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('pa23'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('pa01')] = 5
+    AiData[pi][FourCC('pa23')] = 1
+    AiData[pi][StringHash("Race")] = "PA"
+    SetPlayerTechResearchedSwap(FourCC('R0L3'), 1, p)
+    Pstart(p)
+    SetPlayerName(p, "Pandarens (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Pandarens"
+    ProbeLogWrite("[AI] startPandarens pi=" .. tostring(pi) .. " workers=5pa01 building=1pa23")
+end
 -- library Races ends
 -- library AI2:
 ---@param p player
@@ -59530,6 +59588,205 @@ RegisterAiRace("Ogres", {
     },
     join = Join_Ogres,
     wall = FourCC('o038'),
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Gnomes(id, pi, u)
+    if id == FourCC('h0FA') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Gnomes", {
+    tokens = {"gnome", "gnomes"},
+    weight = 1,
+    altar = FourCC('h0G7'),
+    start = startGnomes,
+    buildings = {
+        seed = FourCC('h0FI'),
+        { FourCC('h0FK'), 4, 4 }, { FourCC('h0FI'), 18, 4 },
+        { FourCC('h0FL'), 8, 4 }, { FourCC('h0G7'), 3, 6 },
+        { FourCC('h0G3'), 10, 4 }, { FourCC('h0FY'), 8, 4 },
+        { FourCC('h0G0'), 8, 6, gate = "tier2" }, { FourCC('h0FZ'), 4, 2 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('h0FR')) + getAiCount(pi, FourCC('h0FS')) >= 1 end,
+    },
+    production = {
+        [FourCC('h0FK')] = { {FourCC('h0FA'),3,limit=18} },
+        [FourCC('h0FR')] = { {FourCC('h0FA'),3,limit=18} },
+        [FourCC('h0FS')] = { {FourCC('h0FA'),3,limit=18} },
+        [FourCC('h0G3')] = {
+            {FourCC('h0FC'), 3}, {FourCC('h0FB'), 2}, {FourCC('h0FD'), 2},
+            {FourCC('h0FE'), 2}, {FourCC('h0FU'), 2}, {FourCC('h0FM'), 2},
+        },
+        [FourCC('h0FY')] = {
+            {FourCC('h0FP'), 3}, {FourCC('h0G1'), 3}, {FourCC('h0FX'), 2},
+            {FourCC('h0G4'), 2}, {FourCC('h0G5'), 2}, {FourCC('h0FH'), 2},
+            {FourCC('h0G2'), 2}, {FourCC('h0FW'), 2}, {FourCC('h0FV'), 2},
+        },
+        [FourCC('h0G0')] = {
+            {FourCC('h0FQ'), 3}, {FourCC('h0FN'), 2}, {FourCC('h0FO'), 2},
+            {FourCC('h0FJ'), 2}, {FourCC('h0FF'), 2}, {FourCC('h0FG'), 2}, {FourCC('h0FT'), 2},
+        },
+        [FourCC('h0G7')] = {
+            {FourCC('H0GG'), 1, limit = 1}, {FourCC('H0GE'), 1, limit = 1}, {FourCC('H0GC'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('h0FI')] = 1, [FourCC('h0FK')] = 2,
+        [FourCC('h0FR')] = 5, [FourCC('h0FS')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('h0G3'),FourCC('Abds'),6} },
+                { {FourCC('h0FY'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h0FK'), to = FourCC('h0FR'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h0FR'), to = FourCC('h0FS'), cap = 3 },
+        },
+    },
+    join = Join_Gnomes,
+    wall = FourCC('h0FZ'),
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Silitids(id, pi, u)
+    if id == FourCC('e01G') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Silitids", {
+    tokens = {"silitid", "silitids", "qiraji"},
+    weight = 1,
+    altar = FourCC('h00C'),
+    start = startSilitids,
+    buildings = {
+        seed = FourCC('e01J'),
+        { FourCC('e01H'), 4, 4 }, { FourCC('e01J'), 18, 4 },
+        { FourCC('h00C'), 3, 6 }, { FourCC('o015'), 10, 4 },
+        { FourCC('e01I'), 8, 4 }, { FourCC('e01L'), 5, 2 },
+        { FourCC('e00B'), 4, 2 }, { FourCC('o017'), 4, 2 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('e021')) + getAiCount(pi, FourCC('e020')) >= 1 end,
+    },
+    production = {
+        [FourCC('e01H')] = { {FourCC('e01R'),3,limit=18} },
+        [FourCC('e021')] = { {FourCC('e01R'),3,limit=18} },
+        [FourCC('e020')] = { {FourCC('e01R'),3,limit=18} },
+        [FourCC('o015')] = {
+            {FourCC('u020'), 3}, {FourCC('u022'), 3}, {FourCC('e01N'), 2},
+        },
+        [FourCC('e01I')] = {
+            {FourCC('e01G'), 4}, {FourCC('e01Z'), 3}, {FourCC('e01V'), 2},
+            {FourCC('e01T'), 2}, {FourCC('e01U'), 2}, {FourCC('e01Q'), 2},
+        },
+        [FourCC('h00C')] = {
+            {FourCC('U025'), 1, limit = 1}, {FourCC('U024'), 1, limit = 1}, {FourCC('U023'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('e01J')] = 1, [FourCC('e01H')] = 2,
+        [FourCC('e021')] = 5, [FourCC('e020')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('e01L'),FourCC('Abds'),6},{FourCC('e01L'),FourCC('Arlm'),6} },
+                { {FourCC('o015'),FourCC('Abds'),6} },
+                { {FourCC('e01I'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('e01H'), to = FourCC('e021'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('e021'), to = FourCC('e020'), cap = 3 },
+        },
+    },
+    join = Join_Silitids,
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Pandarens(id, pi, u)
+    if id == FourCC('pa01') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Pandarens", {
+    tokens = {"pandaren", "pandarens", "panda"},
+    weight = 1,
+    altar = FourCC('pa27'),
+    start = startPandarens,
+    buildings = {
+        seed = FourCC('pa26'),
+        { FourCC('pa23'), 4, 4 }, { FourCC('pa26'), 18, 4 },
+        { FourCC('pa27'), 3, 6 }, { FourCC('pa28'), 10, 4 },
+        { FourCC('pa31'), 8, 4 }, { FourCC('pa32'), 8, 6, gate = "tier2" },
+        { FourCC('pa33'), 8, 6, gate = "tier2" }, { FourCC('pa30'), 5, 2 },
+        { FourCC('h0NZ'), 6, 4 }, { FourCC('h0P5'), 4, 2 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('pa24')) + getAiCount(pi, FourCC('pa25')) >= 1 end,
+    },
+    production = {
+        [FourCC('pa23')] = { {FourCC('pa01'),3,limit=20} },
+        [FourCC('pa24')] = { {FourCC('pa01'),3,limit=20} },
+        [FourCC('pa25')] = { {FourCC('pa01'),3,limit=20} },
+        [FourCC('pa28')] = {
+            {FourCC('pa06'), 3}, {FourCC('pa05'), 3}, {FourCC('pa12'), 2},
+            {FourCC('pa11'), 2}, {FourCC('pa22'), 2},
+        },
+        [FourCC('pa31')] = {
+            {FourCC('pa04'), 3}, {FourCC('pa10'), 2}, {FourCC('pa14'), 2},
+        },
+        [FourCC('pa32')] = {
+            {FourCC('pa08'), 3}, {FourCC('pa13'), 2}, {FourCC('pa07'), 2},
+        },
+        [FourCC('pa33')] = {
+            {FourCC('pa29'), 3}, {FourCC('pa35'), 2}, {FourCC('pa38'), 2}, {FourCC('pa09'), 2},
+        },
+        [FourCC('pa27')] = {
+            {FourCC('PA36'), 1, limit = 1}, {FourCC('PA37'), 1, limit = 1}, {FourCC('PA38'), 1, limit = 1}, {FourCC('PA40'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('pa26')] = 1, [FourCC('pa23')] = 2,
+        [FourCC('pa24')] = 5, [FourCC('pa25')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('pa30'),FourCC('Abds'),6},{FourCC('pa30'),FourCC('Arlm'),6} },
+                { {FourCC('pa28'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('pa23'), to = FourCC('pa24'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('pa24'), to = FourCC('pa25'), cap = 3 },
+        },
+    },
+    join = Join_Pandarens,
+    wall = FourCC('h0P5'),
 })
 function InitCustomTriggers()
     InitTrig_sek5()

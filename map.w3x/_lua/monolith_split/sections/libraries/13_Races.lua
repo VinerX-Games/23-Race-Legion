@@ -3399,4 +3399,62 @@ function startOgres(pi)
     AiRace[pi] = "Ogres"
     ProbeLogWrite("[AI] startOgres pi=" .. tostring(pi) .. " workers=5o03W building=1o035")
 end
+---@param pi integer
+---@return nothing
+function startGnomes(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('h0FA'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h0FK'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('h0FA')] = 5
+    AiData[pi][FourCC('h0FK')] = 1
+    AiData[pi][StringHash("Race")] = "GN"
+    SetPlayerTechResearchedSwap(FourCC('R0BX'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, p)
+    ConditionalTriggerExecute(gg_trg_GnomesOn)
+    SetPlayerName(p, "Gnomes (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Gnomes"
+    ProbeLogWrite("[AI] startGnomes pi=" .. tostring(pi) .. " workers=5h0FA building=1h0FK")
+end
+---@param pi integer
+---@return nothing
+function startSilitids(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(8, FourCC('e01G'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('e01H'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('e01G')] = 8
+    AiData[pi][FourCC('e01H')] = 1
+    AiData[pi][StringHash("Race")] = "SL"
+    SetPlayerTechResearchedSwap(FourCC('R0BV'), 1, p)
+    ConditionalTriggerExecute(gg_trg_SilitidsOn)
+    SetPlayerName(p, "Silitids (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Silitids"
+    ProbeLogWrite("[AI] startSilitids pi=" .. tostring(pi) .. " workers=8e01G building=1e01H")
+end
+---@param pi integer
+---@return nothing
+function startPandarens(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('pa01'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('pa23'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('pa01')] = 5
+    AiData[pi][FourCC('pa23')] = 1
+    AiData[pi][StringHash("Race")] = "PA"
+    SetPlayerTechResearchedSwap(FourCC('R0L3'), 1, p)
+    Pstart(p)
+    SetPlayerName(p, "Pandarens (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Pandarens"
+    ProbeLogWrite("[AI] startPandarens pi=" .. tostring(pi) .. " workers=5pa01 building=1pa23")
+end
 -- library Races ends
