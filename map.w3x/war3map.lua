@@ -3257,66 +3257,10 @@ function f_OnlyNeaded()
 	end
 	
 	gInt = GetUnitTypeId(gUnit)
-	--  Алый орден
-	if AiRace[gPi] == "Scarlet" then
-		if gInt == FourCC('h05Z') or gInt == FourCC('h05X') or gInt == FourCC('h011') or gInt == FourCC('h064') or gInt == FourCC('h05U') or gInt == FourCC('h068') or gInt == FourCC('h061') or gInt == FourCC('h05W') then
-			Counter = Counter + 1
-			return true
-		end
-		--  Эльфы крови
-	elseif AiRace[gPi] == "BloodElves" then
-		if gInt == FourCC('h04C') or gInt == FourCC('h04B') or gInt == FourCC('h04K') or gInt == FourCC('h04D') or gInt == FourCC('h05J') or gInt == FourCC('h04G') or gInt == FourCC('h04E') or gInt == FourCC('h011') then
-			Counter = Counter + 1
-			return true
-		end
-		--  Гоблины
-	elseif AiRace[gPi] == "Goblins" then
-		if gInt == FourCC('h0D7') or gInt == FourCC('o016') or gInt == FourCC('h070') or gInt == FourCC('h079') or gInt == FourCC('h074') or gInt == FourCC('h073') or gInt == FourCC('h076') or gInt == FourCC('h075') then
-			Counter = Counter + 1
-			return true
-		end
-		--  Наги
-	elseif AiRace[gPi] == "Naga" then
-		if gInt == FourCC('n055') or gInt == FourCC('h0JW') or gInt == FourCC('n04L') or gInt == FourCC('nntt') or gInt == FourCC('nnsg') or gInt == FourCC('nnsa') or gInt == FourCC('nnad') then
-			Counter = Counter + 1
-			return true
-		end
-		--  Орда
-	elseif AiRace[gPi] == "Horde" then
-		if gInt == FourCC('ogre') or gInt == FourCC('orbr') or gInt == FourCC('obar') or gInt == FourCC('oalt') or gInt == FourCC('obea') or gInt == FourCC('osld') or gInt == FourCC('otto') then
-			Counter = Counter + 1
-			return true
-		end
-		--  Jungle Trolls
-	elseif AiRace[gPi] == "JungleTrolls" then
-		if gInt == FourCC('h0N5') or gInt == FourCC('h0N2') or gInt == FourCC('h0MY') or gInt == FourCC('h0N3') or gInt == FourCC('h0N0') or gInt == FourCC('h0MX') or gInt == FourCC('h0MW') or gInt == FourCC('h0D3') or gInt == FourCC('h0N1') or gInt == FourCC('h0N6') then
-			Counter = Counter + 1
-			return true
-		end
-	--  ForestTrolls
-	elseif AiRace[gPi] == "ForestTrolls" then
-		if gInt == FourCC('h0MT') or gInt == FourCC('h0N8') or gInt == FourCC('h0N9') or gInt == FourCC('h0MV') or gInt == FourCC('h0MS') or gInt == FourCC('h0N7') or gInt == FourCC('h0MU') or gInt == FourCC('h0MZ') or gInt == FourCC('h0MR') or gInt == FourCC('h0N4') then
-			Counter = Counter + 1
-			return true
-		end
-	--  HordeW2
-	elseif AiRace[gPi] == "HordeW2" then
-		if gInt == FourCC('w20q') or gInt == FourCC('w20w') or gInt == FourCC('w20e') or gInt == FourCC('w20y') or gInt == FourCC('w20r') or gInt == FourCC('w214') or gInt == FourCC('w20a') or gInt == FourCC('w20i') or gInt == FourCC('w20t') or gInt == FourCC('w210') or gInt == FourCC('w212') or gInt == FourCC('w20u') then
-			Counter = Counter + 1
-			return true
-		end
-	--  Nerubs
-	elseif AiRace[gPi] == "Nerubs" then
-		if gInt == FourCC('h0CO') or gInt == FourCC('h0CP') or gInt == FourCC('h0CQ') or gInt == FourCC('h0GH') or gInt == FourCC('h0CR') or gInt == FourCC('h0CS') or gInt == FourCC('h0CU') or gInt == FourCC('h0CT') or gInt == FourCC('h0CV') or gInt == FourCC('u01A') or gInt == FourCC('u019') then
-			Counter = Counter + 1
-			return true
-		end
-	--  Forsaken
-	elseif AiRace[gPi] == "Forsaken" then
-		if gInt == FourCC('h0JP') or gInt == FourCC('h0JQ') or gInt == FourCC('h0JL') or gInt == FourCC('h0JD') or gInt == FourCC('h0JJ') or gInt == FourCC('h0JO') or gInt == FourCC('h0JR') or gInt == FourCC('h0JM') or gInt == FourCC('h0JI') or gInt == FourCC('h0JK') then
-			Counter = Counter + 1
-			return true
-		end
+	local race = AiRaces[AiRace[gPi]]
+	if race ~= nil and race.production ~= nil and race.production[gInt] ~= nil then
+		Counter = Counter + 1
+		return true
 	end
 	return false
 end
@@ -3324,14 +3268,13 @@ end
 function f_NavalBases()
 	gUnit = GetFilterUnit()
 	gId = GetUnitTypeId(gUnit)
-	
-	if GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and (gId == FourCC('h011') or gId == FourCC('h0D7') or gId == FourCC('n04L') or gId == FourCC('h0HO')) then
+	local pi = GetPlayerId(GetOwningPlayer(gUnit))
+	local race = AiRaces[AiRace[pi]]
+	if GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and race ~= nil and gId == race.wall then
 		Counter = Counter + 1
 		return true
-	else
-		return false
 	end
-	
+	return false
 end
 ---@return boolean
 function f_Hero()
@@ -3351,7 +3294,9 @@ end
 function f_Altars()
 	gUnit = GetFilterUnit()
 	gId = GetUnitTypeId(gUnit)
-	return UnitAlive(gUnit) and gId == FourCC('h05X') or gId == FourCC('h05J') or gId == FourCC('o016') or gId == FourCC('nnad') or gId == FourCC('oalt')
+	local pi = GetPlayerId(GetOwningPlayer(gUnit))
+	local race = AiRaces[AiRace[pi]]
+	return UnitAlive(gUnit) and race ~= nil and gId == race.altar
 end
 ---@return nothing
 function MakeHash()
@@ -57459,6 +57404,7 @@ end
 RegisterAiRace("Scarlet", {
     tokens = {"scarlet", "so"},
     weight = 1,
+    altar = FourCC('h05X'),
     start = startScarlet,
     buildings = {
         seed = FourCC('h05Y'),
@@ -57630,6 +57576,7 @@ RegisterAiRace("Scarlet", {
 RegisterAiRace("BloodElves", {
     tokens = {"be", "bloodelves", "ek"},
     weight = 1,
+    altar = FourCC('h05J'),
     start = startBloodElves,
     buildings = {
         seed = FourCC('h04M'),
@@ -57773,6 +57720,7 @@ RegisterAiRace("BloodElves", {
 RegisterAiRace("Goblins", {
     tokens = {"goblins", "gob"},
     weight = 1,
+    altar = FourCC('o016'),
     start = startGoblins,
     buildings = {
         seed = FourCC('h077'),
@@ -57902,6 +57850,7 @@ RegisterAiRace("Goblins", {
 RegisterAiRace("Naga", {
     tokens = {"naga"},
     weight = 1,
+    altar = FourCC('nnad'),
     start = startNaga,
     buildings = {
         seed = FourCC('nnfm'),
@@ -58035,6 +57984,7 @@ RegisterAiRace("Naga", {
 RegisterAiRace("Horde", {
     tokens = {"horde"},
     weight = 1,
+    altar = FourCC('oalt'),
     start = startHorde,
     buildings = {
         seed = FourCC('otrb'),
@@ -58189,6 +58139,7 @@ RegisterAiRace("Horde", {
 RegisterAiRace("JungleTrolls", {
     tokens = {"jt", "jungletrolls", "trolls"},
     weight = 1,
+    altar = FourCC('h0N0'),
     start = startJungleTrolls,
     -- Phase 3 declarative build order (engine: AiRunChooseBuildings). Mirrors
     -- ChooseBuildings_JungleTrolls exactly. chooseBuild kept as fallback.
@@ -58337,6 +58288,7 @@ end
 RegisterAiRace("ForestTrolls", {
     tokens = {"ft", "foresttrolls"},
     weight = 1,
+    altar = FourCC('h0MU'),
     start = startForestTrolls,
     buildings = {
         seed = FourCC('h0MV'),
@@ -58463,6 +58415,7 @@ end
 RegisterAiRace("HordeW2", {
     tokens = {"hw2", "hordew2", "orda2"},
     weight = 1,
+    altar = FourCC('w20a'),
     start = startHordeW2,
     buildings = {
         seed = FourCC('w20y'),
@@ -58563,6 +58516,7 @@ end
 RegisterAiRace("Nerubs", {
     tokens = {"nerub", "nerubs"},
     weight = 1,
+    altar = FourCC('h0CU'),
     start = startNerubs,
     buildings = {
         seed = FourCC('h0GH'),
@@ -58650,6 +58604,7 @@ end
 RegisterAiRace("Forsaken", {
     tokens = {"forsaken", "fors", "ud"},
     weight = 1,
+    altar = FourCC('h0JR'),
     start = startForsaken,
     buildings = {
         seed = FourCC('h0JD'),

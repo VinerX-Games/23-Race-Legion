@@ -581,6 +581,7 @@ end
 RegisterAiRace("Scarlet", {
     tokens = {"scarlet", "so"},
     weight = 1,
+    altar = FourCC('h05X'),
     start = startScarlet,
     buildings = {
         seed = FourCC('h05Y'),
@@ -752,6 +753,7 @@ RegisterAiRace("Scarlet", {
 RegisterAiRace("BloodElves", {
     tokens = {"be", "bloodelves", "ek"},
     weight = 1,
+    altar = FourCC('h05J'),
     start = startBloodElves,
     buildings = {
         seed = FourCC('h04M'),
@@ -895,6 +897,7 @@ RegisterAiRace("BloodElves", {
 RegisterAiRace("Goblins", {
     tokens = {"goblins", "gob"},
     weight = 1,
+    altar = FourCC('o016'),
     start = startGoblins,
     buildings = {
         seed = FourCC('h077'),
@@ -1024,6 +1027,7 @@ RegisterAiRace("Goblins", {
 RegisterAiRace("Naga", {
     tokens = {"naga"},
     weight = 1,
+    altar = FourCC('nnad'),
     start = startNaga,
     buildings = {
         seed = FourCC('nnfm'),
@@ -1157,6 +1161,7 @@ RegisterAiRace("Naga", {
 RegisterAiRace("Horde", {
     tokens = {"horde"},
     weight = 1,
+    altar = FourCC('oalt'),
     start = startHorde,
     buildings = {
         seed = FourCC('otrb'),
@@ -1311,6 +1316,7 @@ RegisterAiRace("Horde", {
 RegisterAiRace("JungleTrolls", {
     tokens = {"jt", "jungletrolls", "trolls"},
     weight = 1,
+    altar = FourCC('h0N0'),
     start = startJungleTrolls,
     -- Phase 3 declarative build order (engine: AiRunChooseBuildings). Mirrors
     -- ChooseBuildings_JungleTrolls exactly. chooseBuild kept as fallback.
@@ -1459,6 +1465,7 @@ end
 RegisterAiRace("ForestTrolls", {
     tokens = {"ft", "foresttrolls"},
     weight = 1,
+    altar = FourCC('h0MU'),
     start = startForestTrolls,
     buildings = {
         seed = FourCC('h0MV'),
@@ -1585,6 +1592,7 @@ end
 RegisterAiRace("HordeW2", {
     tokens = {"hw2", "hordew2", "orda2"},
     weight = 1,
+    altar = FourCC('w20a'),
     start = startHordeW2,
     buildings = {
         seed = FourCC('w20y'),
@@ -1685,6 +1693,7 @@ end
 RegisterAiRace("Nerubs", {
     tokens = {"nerub", "nerubs"},
     weight = 1,
+    altar = FourCC('h0CU'),
     start = startNerubs,
     buildings = {
         seed = FourCC('h0GH'),
@@ -1772,6 +1781,7 @@ end
 RegisterAiRace("Forsaken", {
     tokens = {"forsaken", "fors", "ud"},
     weight = 1,
+    altar = FourCC('h0JR'),
     start = startForsaken,
     buildings = {
         seed = FourCC('h0JD'),
