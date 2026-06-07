@@ -35,6 +35,12 @@ function NumberAdd(pi, id)
 	t[id] = c
 	AiData[pi][id] = c
 end
+function NumberSet(pi, id, amount)
+	local t = g_AiCountCache[pi]
+	if t == nil then t = {}; g_AiCountCache[pi] = t end
+	t[id] = amount
+	AiData[pi][id] = amount
+end
 ---@param pi integer
 ---@param id integer
 ---@return nothing

@@ -4036,6 +4036,12 @@ function NumberAdd(pi, id)
 	t[id] = c
 	AiData[pi][id] = c
 end
+function NumberSet(pi, id, amount)
+	local t = g_AiCountCache[pi]
+	if t == nil then t = {}; g_AiCountCache[pi] = t end
+	t[id] = amount
+	AiData[pi][id] = amount
+end
 ---@param pi integer
 ---@param id integer
 ---@return nothing
@@ -4806,8 +4812,8 @@ function startBloodElves(pi)
 	CreateNUnitsAtLoc(1, FourCC('h04C'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
 	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
 	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-	AiData[pi][FourCC('h04K')] = 8
-	AiData[pi][FourCC('h04C')] = 1
+	NumberSet(pi, FourCC('h04K'), 8)
+	NumberSet(pi, FourCC('h04C'), 1)
 	SetPlayerName(Player(pi), "Эльфы Крови (" .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "BE"
 	TriggerExecute(gg_trg_BloodElvesOn)
@@ -5466,8 +5472,8 @@ function startScarlet(pi)
 	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
 	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
 
-	AiData[pi][FourCC('h014')] = 8
-	AiData[pi][FourCC('h05U')] = 1
+	NumberSet(pi, FourCC('h014'), 8)
+	NumberSet(pi, FourCC('h05U'), 1)
 	SetPlayerName(Player(pi), "Алый Орден (" .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "AO"
 	
@@ -6110,8 +6116,8 @@ function startGoblins(pi)
 	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
 	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
 
-	AiData[pi][FourCC('n00V')] = 8
-	AiData[pi][FourCC('h070')] = 1
+	NumberSet(pi, FourCC('n00V'), 8)
+	NumberSet(pi, FourCC('h070'), 1)
 	SetPlayerName(Player(pi), "Картель (" .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "GB"
 	TriggerExecute(gg_trg_GoblinsOn)
@@ -6510,8 +6516,8 @@ function startHorde(pi)
 	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
 	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
 
-	AiData[pi][FourCC('opeo')] = 8
-	AiData[pi][FourCC('ogre')] = 1
+	NumberSet(pi, FourCC('opeo'), 8)
+	NumberSet(pi, FourCC('ogre'), 1)
 	SetPlayerName(Player(pi), "Орда (" .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "NG"
 	TriggerExecute(gg_trg_StartHorde)
@@ -6988,8 +6994,8 @@ function startNaga(pi)
 	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
 	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
 
-	AiData[pi][FourCC('nmpe')] = 8
-	AiData[pi][FourCC('nntt')] = 1
+	NumberSet(pi, FourCC('nmpe'), 8)
+	NumberSet(pi, FourCC('nntt'), 1)
 	SetPlayerName(Player(pi), "Стая (" .. I2S(pi + 1) .. ")")
 	AiData[pi][StringHash("Race")] = "NG"
 	TriggerExecute(gg_trg_NagaStart)
@@ -7425,8 +7431,8 @@ function startJungleTrolls(pi)
 	CreateNUnitsAtLoc(1, FourCC('h0N5'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
 	GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
 	GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-	AiData[pi][FourCC('o04Q')] = 5
-	AiData[pi][FourCC('h0N5')] = 1
+	NumberSet(pi, FourCC('o04Q'), 5)
+	NumberSet(pi, FourCC('h0N5'), 1)
 	AiData[pi][StringHash("Race")] = "JT"
 	SetPlayerTechResearchedSwap(FourCC('R0IH'), 1, Player(pi))
 	SetPlayerName(Player(pi), "Jungle Trolls (" .. I2S(pi + 1) .. ")")
@@ -7738,8 +7744,8 @@ function startHordeW2(pi)
     CreateNUnitsAtLoc(1, FourCC('w20q'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('w200')] = 5
-    AiData[pi][FourCC('w20q')] = 1
+    NumberSet(pi, FourCC('w200'), 5)
+    NumberSet(pi, FourCC('w20q'), 1)
     AiData[pi][StringHash("Race")] = "H2"
     SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
@@ -7759,8 +7765,8 @@ function startNerubs(pi)
     CreateNUnitsAtLoc(1, FourCC('h0CO'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('h0BE')] = 3
-    AiData[pi][FourCC('h0CO')] = 1
+    NumberSet(pi, FourCC('h0BE'), 3)
+    NumberSet(pi, FourCC('h0CO'), 1)
     AiData[pi][StringHash("Race")] = "NE"
     SetPlayerTechResearchedSwap(FourCC('R07N'), 1, p)
     SetPlayerName(p, "Nerubs (" .. I2S(pi + 1) .. ")")
@@ -7776,8 +7782,8 @@ function startForestTrolls(pi)
     CreateNUnitsAtLoc(1, FourCC('h0MT'), Player(pi), udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('o04V')] = 5
-    AiData[pi][FourCC('h0MT')] = 1
+    NumberSet(pi, FourCC('o04V'), 5)
+    NumberSet(pi, FourCC('h0MT'), 1)
     AiData[pi][StringHash("Race")] = "FT"
     SetPlayerTechResearchedSwap(FourCC('R0J1'), 1, Player(pi))
     -- ForestTrolls unit limits (mirrors ForestStart in 80_generated_runtime.lua)
@@ -7805,8 +7811,8 @@ function startForsaken(pi)
     CreateNUnitsAtLoc(1, FourCC('h0JP'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('h0J5')] = 5
-    AiData[pi][FourCC('h0JP')] = 1
+    NumberSet(pi, FourCC('h0J5'), 5)
+    NumberSet(pi, FourCC('h0JP'), 1)
     AiData[pi][StringHash("Race")] = "UD"
     SetPlayerTechResearchedSwap(FourCC('R0G3'), 1, p)
     SetPlayerName(p, "Forsaken (" .. I2S(pi + 1) .. ")")
@@ -7823,8 +7829,8 @@ function startAlliance(pi)
     CreateNUnitsAtLoc(1, FourCC('htow'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('hpea')] = 5
-    AiData[pi][FourCC('htow')] = 1
+    NumberSet(pi, FourCC('hpea'), 5)
+    NumberSet(pi, FourCC('htow'), 1)
     AiData[pi][StringHash("Race")] = "AL"
     SetPlayerTechResearchedSwap(FourCC('R0GZ'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0HX'), 1, p)
@@ -7846,8 +7852,8 @@ function startBandits(pi)
     CreateNUnitsAtLoc(1, FourCC('h007'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('h002')] = 5
-    AiData[pi][FourCC('h007')] = 1
+    NumberSet(pi, FourCC('h002'), 5)
+    NumberSet(pi, FourCC('h007'), 1)
     AiData[pi][StringHash("Race")] = "BD"
     SetPlayerTechResearchedSwap(FourCC('R00G'), 1, p)
     SetPlayerName(p, "Bandits (" .. I2S(pi + 1) .. ")")
@@ -7864,8 +7870,8 @@ function startUndead(pi)
     CreateNUnitsAtLoc(1, FourCC('n014'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('u00P')] = 3
-    AiData[pi][FourCC('n014')] = 1
+    NumberSet(pi, FourCC('u00P'), 3)
+    NumberSet(pi, FourCC('n014'), 1)
     AiData[pi][StringHash("Race")] = "UD"
     SetPlayerTechResearchedSwap(FourCC('R07I'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, p)
@@ -7883,8 +7889,8 @@ function startDemons(pi)
     CreateNUnitsAtLoc(1, FourCC('h0DU'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('e02Y')] = 8
-    AiData[pi][FourCC('h0DU')] = 1
+    NumberSet(pi, FourCC('e02Y'), 8)
+    NumberSet(pi, FourCC('h0DU'), 1)
     AiData[pi][StringHash("Race")] = "DE"
     SetPlayerTechResearchedSwap(FourCC('R0AO'), 1, p)
     SetPlayerName(p, "Demons (" .. I2S(pi + 1) .. ")")
@@ -7901,8 +7907,8 @@ function startDraenei(pi)
     CreateNUnitsAtLoc(1, FourCC('h015'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('h012')] = 5
-    AiData[pi][FourCC('h015')] = 1
+    NumberSet(pi, FourCC('h012'), 5)
+    NumberSet(pi, FourCC('h015'), 1)
     AiData[pi][StringHash("Race")] = "DR"
     SetPlayerTechResearchedSwap(FourCC('R07G'), 1, p)
     SetPlayerName(p, "Draenei (" .. I2S(pi + 1) .. ")")
@@ -7919,8 +7925,8 @@ function startStromgard(pi)
     CreateNUnitsAtLoc(1, FourCC('h0GZ'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('h0G9')] = 5
-    AiData[pi][FourCC('h0GZ')] = 1
+    NumberSet(pi, FourCC('h0G9'), 5)
+    NumberSet(pi, FourCC('h0GZ'), 1)
     AiData[pi][StringHash("Race")] = "SG"
     SetPlayerTechResearchedSwap(FourCC('R0H3'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, p)
@@ -7939,8 +7945,8 @@ function startIllidari(pi)
     CreateNUnitsAtLoc(1, FourCC('h0E9'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('h0EI')] = 5
-    AiData[pi][FourCC('h0E9')] = 1
+    NumberSet(pi, FourCC('h0EI'), 5)
+    NumberSet(pi, FourCC('h0E9'), 1)
     AiData[pi][StringHash("Race")] = "IL"
     SetPlayerTechResearchedSwap(FourCC('R07H'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0KZ'), 1, p)
@@ -7960,8 +7966,8 @@ function startWorgen(pi)
     CreateNUnitsAtLoc(1, FourCC('h0IK'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('h0IT')] = 5
-    AiData[pi][FourCC('h0IK')] = 1
+    NumberSet(pi, FourCC('h0IT'), 5)
+    NumberSet(pi, FourCC('h0IK'), 1)
     AiData[pi][StringHash("Race")] = "WG"
     SetPlayerTechResearchedSwap(FourCC('R0FX'), 1, p)
     SetPlayerName(p, "Worgen (" .. I2S(pi + 1) .. ")")
@@ -7978,8 +7984,8 @@ function startOgres(pi)
     CreateNUnitsAtLoc(1, FourCC('o035'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('o03W')] = 5
-    AiData[pi][FourCC('o035')] = 1
+    NumberSet(pi, FourCC('o03W'), 5)
+    NumberSet(pi, FourCC('o035'), 1)
     AiData[pi][StringHash("Race")] = "OG"
     SetPlayerTechResearchedSwap(FourCC('R0HT'), 1, p)
     SetPlayerName(p, "Ogres (" .. I2S(pi + 1) .. ")")
@@ -7996,8 +8002,8 @@ function startGnomes(pi)
     CreateNUnitsAtLoc(1, FourCC('h0FK'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('h0FA')] = 5
-    AiData[pi][FourCC('h0FK')] = 1
+    NumberSet(pi, FourCC('h0FA'), 5)
+    NumberSet(pi, FourCC('h0FK'), 1)
     AiData[pi][StringHash("Race")] = "GN"
     SetPlayerTechResearchedSwap(FourCC('R0BX'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, p)
@@ -8016,8 +8022,8 @@ function startSilitids(pi)
     CreateNUnitsAtLoc(1, FourCC('e01H'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('e01G')] = 8
-    AiData[pi][FourCC('e01H')] = 1
+    NumberSet(pi, FourCC('e01G'), 8)
+    NumberSet(pi, FourCC('e01H'), 1)
     AiData[pi][StringHash("Race")] = "SL"
     SetPlayerTechResearchedSwap(FourCC('R0BV'), 1, p)
     ConditionalTriggerExecute(gg_trg_SilitidsOn)
@@ -8035,8 +8041,8 @@ function startPandarens(pi)
     CreateNUnitsAtLoc(1, FourCC('pa23'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('pa01')] = 5
-    AiData[pi][FourCC('pa23')] = 1
+    NumberSet(pi, FourCC('pa01'), 5)
+    NumberSet(pi, FourCC('pa23'), 1)
     AiData[pi][StringHash("Race")] = "PA"
     SetPlayerTechResearchedSwap(FourCC('R0L3'), 1, p)
     Pstart(p)
@@ -8054,8 +8060,8 @@ function startBezlikie(pi)
     CreateNUnitsAtLoc(1, FourCC('h0HZ'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('u02D')] = 3
-    AiData[pi][FourCC('h0HZ')] = 1
+    NumberSet(pi, FourCC('u02D'), 3)
+    NumberSet(pi, FourCC('h0HZ'), 1)
     AiData[pi][StringHash("Race")] = "BL"
     SetPlayerTechResearchedSwap(FourCC('R0F9'), 1, p)
     SetPlayerName(p, "Bezlikie (" .. I2S(pi + 1) .. ")")
@@ -8072,8 +8078,8 @@ function startVrykul(pi)
     CreateNUnitsAtLoc(1, FourCC('h0BQ'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('h0C9')] = 5
-    AiData[pi][FourCC('h0BQ')] = 1
+    NumberSet(pi, FourCC('h0C9'), 5)
+    NumberSet(pi, FourCC('h0BQ'), 1)
     AiData[pi][StringHash("Race")] = "VR"
     SetPlayerTechResearchedSwap(FourCC('R07F'), 1, p)
     SetPlayerName(p, "Vrykul (" .. I2S(pi + 1) .. ")")
@@ -8090,8 +8096,8 @@ function startKulTiras(pi)
     CreateNUnitsAtLoc(1, FourCC('h01X'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('h013')] = 5
-    AiData[pi][FourCC('h01X')] = 1
+    NumberSet(pi, FourCC('h013'), 5)
+    NumberSet(pi, FourCC('h01X'), 1)
     AiData[pi][StringHash("Race")] = "KT"
     SetPlayerTechResearchedSwap(FourCC('R07D'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0HX'), 1, p)
@@ -8109,8 +8115,8 @@ function startDalaran(pi)
     CreateNUnitsAtLoc(1, FourCC('h030'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('u001')] = 3
-    AiData[pi][FourCC('h030')] = 1
+    NumberSet(pi, FourCC('u001'), 3)
+    NumberSet(pi, FourCC('h030'), 1)
     AiData[pi][StringHash("Race")] = "DL"
     SetPlayerTechResearchedSwap(FourCC('R0BW'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, p)
@@ -8128,8 +8134,8 @@ function startIceTrolls(pi)
     CreateNUnitsAtLoc(1, FourCC('o046'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('o045')] = 5
-    AiData[pi][FourCC('o046')] = 1
+    NumberSet(pi, FourCC('o045'), 5)
+    NumberSet(pi, FourCC('o046'), 1)
     AiData[pi][StringHash("Race")] = "IT"
     SetPlayerTechResearchedSwap(FourCC('R0L1'), 1, p)
     SetPlayerName(p, "IceTrolls (" .. I2S(pi + 1) .. ")")
@@ -8146,8 +8152,8 @@ function startFelOrc(pi)
     CreateNUnitsAtLoc(1, FourCC('o05V'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('n06B')] = 5
-    AiData[pi][FourCC('o05V')] = 1
+    NumberSet(pi, FourCC('n06B'), 5)
+    NumberSet(pi, FourCC('o05V'), 1)
     AiData[pi][StringHash("Race")] = "FO"
     SetPlayerTechResearchedSwap(FourCC('R0KA'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
@@ -8165,8 +8171,8 @@ function startEnts(pi)
     CreateNUnitsAtLoc(1, FourCC('e02B'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    AiData[pi][FourCC('e02T')] = 5
-    AiData[pi][FourCC('e02B')] = 1
+    NumberSet(pi, FourCC('e02T'), 5)
+    NumberSet(pi, FourCC('e02B'), 1)
     AiData[pi][StringHash("Race")] = "EN"
     SetPlayerTechResearchedSwap(FourCC('R0BZ'), 1, p)
     SetPlayerName(p, "Ents (" .. I2S(pi + 1) .. ")")
