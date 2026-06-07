@@ -4995,134 +4995,51 @@ function InitTrig_RRR()
 	TriggerRegisterTimerEventPeriodic(gg_trg_RRR, 0.04)
 	TriggerAddAction(gg_trg_RRR, Trig_RRR_Actions)
 end
--- ===========================================================================
---  Trigger: RemoveUnitTimed
--- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
--- ===========================================================================
----@return nothing
-function ToKillAct()
-	
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	RemoveUnit(LoadUnitHandle(Hash, id, 1))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
-end
 ---@param u unit
 ---@param time real
 ---@return nothing
 function RemoveUnitTimed(u, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, ToKillAct)
-	SaveUnitHandle(Hash, id, 1, u)
-	u = nil
-	t = nil
-end
--- ===========================================================================
---  Trigger: ReviveHeroTimed
--- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
--- ===========================================================================
----@return nothing
-function ReviveHeroTimedAct()
-	
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	gUnit = LoadUnitHandle(Hash, id, 1)
-	
-	Counter = 0
-	GroupEnumUnitsOfPlayer(gGroup, GetOwningPlayer(gUnit), UnitsWithReviveHeroSpell)
-	if FirstOfGroup(gGroup) ~= nil then
-		gUnit2 = GroupPickRandomUnit2(gGroup)
-		ReviveHero(gUnit, GetUnitX(gUnit2), GetUnitY(gUnit2), true)
-	end
-	
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
+	TimerStart(t, time, false, function()
+		RemoveUnit(u)
+		DestroyTimer(t)
+	end)
 end
 ---@param u unit
 ---@param time real
 ---@return nothing
 function ReviveHeroTimed(u, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, ReviveHeroTimedAct)
-	SaveUnitHandle(Hash, id, 1, u)
-	t = nil
-end
--- ===========================================================================
---  Trigger: RemoveLigtingTimed
--- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
--- ===========================================================================
----@return nothing
-function RemoveLigtingTimedAct()
-	
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	DestroyLightning(LoadLightningHandle(Hash, id, 1))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
+	TimerStart(t, time, false, function()
+		gUnit = u
+		Counter = 0
+		GroupEnumUnitsOfPlayer(gGroup, GetOwningPlayer(gUnit), UnitsWithReviveHeroSpell)
+		if FirstOfGroup(gGroup) ~= nil then
+			gUnit2 = GroupPickRandomUnit2(gGroup)
+			ReviveHero(gUnit, GetUnitX(gUnit2), GetUnitY(gUnit2), true)
+		end
+		DestroyTimer(t)
+	end)
 end
 ---@param l lightning
 ---@param time real
 ---@return nothing
 function RemoveLigtingTimed(l, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, RemoveLigtingTimedAct)
-	SaveLightningHandle(Hash, id, 1, l)
-	l = nil
-	t = nil
-end
--- ===========================================================================
---  Trigger: RemoveFloatTextTimed
--- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
--- ===========================================================================
----@return nothing
-function RemoveTextTagTimedAct()
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	DestroyTextTag(LoadTextTagHandle(Hash, id, 1))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
+	TimerStart(t, time, false, function()
+		DestroyLightning(l)
+		DestroyTimer(t)
+	end)
 end
 ---@param ft texttag
 ---@param time real
 ---@return nothing
 function RemoveTextTagTimed(ft, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, RemoveTextTagTimedAct)
-	SaveTextTagHandle(Hash, id, 1, ft)
-	ft = nil
-	t = nil
-end
--- ===========================================================================
---  Trigger: CollisionTimed
--- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
--- ===========================================================================
----@return nothing
-function CollisionTimedAct()
-	
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	SetUnitPathing(LoadUnitHandle(Hash, id, 1), LoadBoolean(Hash, id, 2))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
+	TimerStart(t, time, false, function()
+		DestroyTextTag(ft)
+		DestroyTimer(t)
+	end)
 end
 ---@param u unit
 ---@param CollisionOn boolean
@@ -5130,28 +5047,10 @@ end
 ---@return nothing
 function CollisionTimed(u, CollisionOn, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, AddTimedAbilityAct)
-	SaveUnitHandle(Hash, id, 1, u)
-	SaveBoolean(Hash, id, 2, CollisionOn)
-	u = nil
-	t = nil
-end
--- ===========================================================================
---  Trigger: SetBuildingProgressTimed
--- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
--- ===========================================================================
----@return nothing
-function SetBuildingProgressTimedAct()
-	
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	UnitSetConstructionProgress(LoadUnitHandle(Hash, id, 1), LoadInteger(Hash, id, 2))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
+	TimerStart(t, time, false, function()
+		SetUnitPathing(u, CollisionOn)
+		DestroyTimer(t)
+	end)
 end
 ---@param u unit
 ---@param BuildingProgress integer
@@ -5159,27 +5058,10 @@ end
 ---@return nothing
 function SetBuildingProgressTimed(u, BuildingProgress, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, SetBuildingProgressTimedAct)
-	SaveUnitHandle(Hash, id, 1, u)
-	SaveInteger(Hash, id, 2, BuildingProgress)
-	u = nil
-	t = nil
-end
--- ===========================================================================
---  Trigger: IssuerImmediateOrderTimed
--- 
---  Любой триг может это вызвать, главное до этого задать LocalUni2
--- ===========================================================================
----@return nothing
-function IssuerImmedeateOrderTimedAct()
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	IssueImmediateOrder(LoadUnitHandle(Hash, id, 2), LoadStr(Hash, id, 1))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
+	TimerStart(t, time, false, function()
+		UnitSetConstructionProgress(u, BuildingProgress)
+		DestroyTimer(t)
+	end)
 end
 ---@param order string
 ---@param u unit
@@ -5187,12 +5069,10 @@ end
 ---@return nothing
 function IssuerImmediateOrderTimed(order, u, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, IssuerImmedeateOrderTimedAct)
-	SaveStr(Hash, id, 1, order)
-	SaveUnitHandle(Hash, id, 2, u)
-	order = nil
-	t = nil
+	TimerStart(t, time, false, function()
+		IssueImmediateOrder(u, order)
+		DestroyTimer(t)
+	end)
 end
 -- ===========================================================================
 --  Trigger: IsEnemyAllyOwner
