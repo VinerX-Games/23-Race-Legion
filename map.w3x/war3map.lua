@@ -8026,14 +8026,6 @@ function startSilitids(pi)
     AiData[pi][StringHash("Race")] = "SL"
     SetPlayerTechResearchedSwap(FourCC('R0BV'), 1, p)
     ConditionalTriggerExecute(gg_trg_SilitidsOn)
-    local t = CreateTimer()
-    local tid = GetHandleId(t)
-    local hid = GetHandleId(hive)
-    TimerStart(t, 25, true, spawnlich)
-    SaveUnitHandle(Hash, tid, 1, hive)
-    SaveInteger(Hash, hid, 1, 0)
-    SaveBoolean(Hash, hid, 2, true)
-    t = nil
     SetPlayerName(p, "Silitids (" .. I2S(pi + 1) .. ")")
     AiRace[pi] = "Silitids"
     ProbeLogWrite("[AI] startSilitids pi=" .. tostring(pi) .. " workers=8e01G building=1e01H")
@@ -23773,30 +23765,11 @@ end
 --===========================================================================
 function InitTrig_F2_Start()
     gg_trg_F2_Start=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(0), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(1), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(2), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(3), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(4), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(5), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(6), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(7), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(8), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(9), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(10), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(11), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(12), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(13), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(14), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(15), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(16), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(17), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(18), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(19), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(20), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(21), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(22), " - f2", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(23), " - f2", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_F2_Start, Player(i), " - f2", true)
+        i = i + 1
+    end
     TriggerAddCondition(gg_trg_F2_Start, Condition(Trig_F2_Start_Conditions))
     TriggerAddAction(gg_trg_F2_Start, Trig_F2_Start_Actions)
 end
@@ -51046,30 +51019,11 @@ end
 --===========================================================================
 function InitTrig_Kill()
     gg_trg_Kill=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(0), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(1), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(2), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(3), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(4), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(5), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(6), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(7), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(8), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(9), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(10), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(11), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(12), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(13), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(14), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(15), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(16), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(17), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(18), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(19), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(20), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(21), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(22), " - kill", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(23), " - kill", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Kill, Player(i), " - kill", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Kill, Trig_Kill_Actions)
 end
 --===========================================================================
@@ -51093,30 +51047,11 @@ end
 --===========================================================================
 function InitTrig_Rep()
     gg_trg_Rep=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(0), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(1), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(2), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(3), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(4), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(5), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(6), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(7), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(8), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(9), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(10), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(11), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(12), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(13), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(14), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(15), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(16), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(17), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(18), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(19), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(20), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(21), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(22), " - rep", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(23), " - rep", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Rep, Player(i), " - rep", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Rep, Trig_Rep_Actions)
 end
 --===========================================================================
@@ -51140,30 +51075,11 @@ end
 --===========================================================================
 function InitTrig_Camera_command_O()
     gg_trg_Camera_command_O=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(0), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(1), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(2), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(3), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(4), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(5), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(6), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(7), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(8), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(9), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(10), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(11), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(12), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(13), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(14), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(15), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(16), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(17), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(18), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(19), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(20), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(21), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(22), " - cam", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(23), " - cam", false)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Camera_command_O, Player(i), " - cam", false)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Camera_command_O, Trig_Camera_command_O_Actions)
 end
 --===========================================================================
@@ -51191,30 +51107,11 @@ end
 --===========================================================================
 function InitTrig_Name_command_O()
     gg_trg_Name_command_O=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(0), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(1), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(2), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(3), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(4), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(5), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(6), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(7), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(8), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(9), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(10), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(11), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(12), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(13), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(14), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(15), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(16), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(17), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(18), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(20), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(19), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(21), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(22), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(23), " - name", false)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(i), " - name", false)
+        i = i + 1
+    end
     TriggerAddCondition(gg_trg_Name_command_O, Condition(Trig_Name_command_O_Conditions))
     TriggerAddAction(gg_trg_Name_command_O, Trig_Name_command_O_Actions)
 end
@@ -51398,33 +51295,11 @@ end
 --===========================================================================
 function InitTrig_GG()
     gg_trg_GG=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(0), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(1), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(2), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(3), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(4), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(5), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(6), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(7), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(8), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(9), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(10), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(11), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(12), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(13), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(15), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(14), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(16), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(17), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(18), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(19), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(20), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(21), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(22), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(23), " - gg", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(24), " - gg", true)
-    
-    
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_GG, Player(i), " - gg", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_GG, Trig_GG_Actions)
 end
 --===========================================================================
@@ -51722,30 +51597,11 @@ end
 --===========================================================================
 function InitTrig_Red_color()
     gg_trg_Red_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(0), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(1), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(2), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(3), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(4), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(5), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(6), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(7), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(8), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(9), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(10), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(11), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(12), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(13), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(14), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(15), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(16), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(17), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(18), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(19), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(20), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(21), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(22), " - colorred", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(23), " - colorred", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Red_color, Player(i), " - colorred", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Red_color, Trig_Red_color_Actions)
 end
 --===========================================================================
@@ -51757,31 +51613,11 @@ end
 --===========================================================================
 function InitTrig_Blue_color()
     gg_trg_Blue_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(0), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(1), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(2), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(3), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(4), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(5), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(6), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(7), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(8), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(9), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(10), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(11), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(12), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(13), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(14), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(15), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(16), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(17), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(18), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(19), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(20), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(21), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(22), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(23), " - colorblue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(23), " - colorblue", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Blue_color, Player(i), " - colorblue", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Blue_color, Trig_Blue_color_Actions)
 end
 --===========================================================================
@@ -51793,31 +51629,11 @@ end
 --===========================================================================
 function InitTrig_Teal_color()
     gg_trg_Teal_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(0), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(1), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(2), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(3), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(4), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(5), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(6), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(7), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(8), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(9), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(10), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(11), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(12), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(13), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(14), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(15), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(16), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(17), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(18), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(19), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(20), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(21), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(22), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(23), " - colorpurple", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(23), " - colorpurple", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Teal_color, Player(i), " - colorpurple", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Teal_color, Trig_Teal_color_Actions)
 end
 --===========================================================================
@@ -51829,30 +51645,11 @@ end
 --===========================================================================
 function InitTrig_Lightblue_color()
     gg_trg_Lightblue_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(0), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(1), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(2), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(3), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(4), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(5), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(6), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(7), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(8), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(9), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(10), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(11), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(12), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(13), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(14), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(15), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(16), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(17), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(18), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(19), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(20), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(21), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(22), " - colorteal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(23), " - colorteal", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Lightblue_color, Player(i), " - colorteal", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Lightblue_color, Trig_Lightblue_color_Actions)
 end
 --===========================================================================
@@ -51864,30 +51661,11 @@ end
 --===========================================================================
 function InitTrig_Yelow_color()
     gg_trg_Yelow_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(0), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(1), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(2), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(3), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(4), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(5), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(6), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(7), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(8), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(9), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(10), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(11), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(12), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(13), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(14), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(15), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(16), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(17), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(18), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(19), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(20), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(21), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(22), " - coloryellow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(23), " - coloryellow", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Yelow_color, Player(i), " - coloryellow", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Yelow_color, Trig_Yelow_color_Actions)
 end
 --===========================================================================
@@ -51900,30 +51678,11 @@ end
 --===========================================================================
 function InitTrig_Orange_color()
     gg_trg_Orange_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(0), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(1), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(2), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(3), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(4), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(5), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(6), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(7), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(8), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(9), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(10), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(11), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(12), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(13), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(14), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(15), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(16), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(17), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(18), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(19), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(20), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(21), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(22), " - colororange", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(23), " - colororange", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Orange_color, Player(i), " - colororange", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Orange_color, Trig_Orange_color_Actions)
 end
 --===========================================================================
@@ -51935,30 +51694,11 @@ end
 --===========================================================================
 function InitTrig_Green_color()
     gg_trg_Green_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(0), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(1), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(2), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(3), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(4), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(5), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(6), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(7), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(8), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(9), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(10), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(11), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(12), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(13), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(14), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(15), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(16), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(17), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(18), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(19), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(20), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(21), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(22), " - colorgreen", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(23), " - colorgreen", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Green_color, Player(i), " - colorgreen", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Green_color, Trig_Green_color_Actions)
 end
 --===========================================================================
@@ -51970,30 +51710,11 @@ end
 --===========================================================================
 function InitTrig_Pink_color()
     gg_trg_Pink_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(0), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(1), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(2), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(3), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(4), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(5), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(6), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(7), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(8), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(9), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(10), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(11), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(12), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(13), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(14), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(15), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(16), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(17), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(18), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(19), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(20), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(21), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(22), " - colorpink", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(23), " - colorpink", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Pink_color, Player(i), " - colorpink", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Pink_color, Trig_Pink_color_Actions)
 end
 --===========================================================================
@@ -52005,30 +51726,11 @@ end
 --===========================================================================
 function InitTrig_Gray_color()
     gg_trg_Gray_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(0), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(1), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(2), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(3), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(4), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(5), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(6), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(7), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(8), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(9), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(10), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(11), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(12), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(13), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(14), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(15), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(16), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(17), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(18), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(19), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(20), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(21), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(22), " - colorgray", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(23), " - colorgray", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Gray_color, Player(i), " - colorgray", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Gray_color, Trig_Gray_color_Actions)
 end
 --===========================================================================
@@ -52040,30 +51742,11 @@ end
 --===========================================================================
 function InitTrig_LightBlue_color()
     gg_trg_LightBlue_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(0), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(1), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(2), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(3), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(4), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(5), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(6), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(7), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(8), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(9), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(10), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(11), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(12), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(13), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(14), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(15), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(16), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(17), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(18), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(19), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(20), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(21), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(22), " - colorlight - blue", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(23), " - colorlight - blue", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_LightBlue_color, Player(i), " - colorlight - blue", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_LightBlue_color, Trig_LightBlue_color_Actions)
 end
 --===========================================================================
@@ -52075,30 +51758,11 @@ end
 --===========================================================================
 function InitTrig_Dark_green_color()
     gg_trg_Dark_green_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(0), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(1), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(2), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(3), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(4), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(5), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(6), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(7), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(8), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(9), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(10), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(11), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(12), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(13), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(14), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(15), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(16), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(17), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(18), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(19), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(20), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(21), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(22), " - colordark - green", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(23), " - colordark - green", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Dark_green_color, Player(i), " - colordark - green", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Dark_green_color, Trig_Dark_green_color_Actions)
 end
 --===========================================================================
@@ -52110,30 +51774,11 @@ end
 --===========================================================================
 function InitTrig_Brown_color()
     gg_trg_Brown_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(0), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(1), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(2), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(3), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(4), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(5), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(6), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(7), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(8), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(9), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(10), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(11), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(12), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(13), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(14), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(15), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(16), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(17), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(18), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(19), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(20), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(21), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(22), " - colorbrown", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(23), " - colorbrown", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Brown_color, Player(i), " - colorbrown", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Brown_color, Trig_Brown_color_Actions)
 end
 --===========================================================================
@@ -52145,30 +51790,11 @@ end
 --===========================================================================
 function InitTrig_Maroon_color()
     gg_trg_Maroon_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(0), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(1), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(2), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(3), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(4), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(5), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(6), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(7), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(8), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(9), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(10), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(11), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(12), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(13), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(14), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(15), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(16), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(17), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(18), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(19), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(20), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(21), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(22), " - colormaroon", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(23), " - colormaroon", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Maroon_color, Player(i), " - colormaroon", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Maroon_color, Trig_Maroon_color_Actions)
 end
 --===========================================================================
@@ -52180,30 +51806,11 @@ end
 --===========================================================================
 function InitTrig_Navy_color()
     gg_trg_Navy_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(0), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(1), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(2), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(3), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(4), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(5), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(6), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(7), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(8), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(9), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(10), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(11), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(12), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(13), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(14), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(15), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(16), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(17), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(18), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(19), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(20), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(21), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(22), " - colornavy", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(23), " - colornavy", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Navy_color, Player(i), " - colornavy", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Navy_color, Trig_Navy_color_Actions)
 end
 --===========================================================================
@@ -52215,30 +51822,11 @@ end
 --===========================================================================
 function InitTrig_Turquoise_color()
     gg_trg_Turquoise_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(0), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(1), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(2), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(3), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(4), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(5), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(6), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(7), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(8), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(9), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(10), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(11), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(12), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(13), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(14), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(15), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(16), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(17), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(18), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(19), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(20), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(21), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(22), " - colorturquoise", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(23), " - colorturquoise", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Turquoise_color, Player(i), " - colorturquoise", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Turquoise_color, Trig_Turquoise_color_Actions)
 end
 --===========================================================================
@@ -52250,30 +51838,11 @@ end
 --===========================================================================
 function InitTrig_Violet_color()
     gg_trg_Violet_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(0), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(1), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(2), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(3), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(4), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(5), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(6), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(7), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(8), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(9), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(10), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(11), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(12), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(13), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(14), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(15), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(16), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(17), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(18), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(19), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(20), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(21), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(22), " - colorviolet", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(23), " - colorviolet", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Violet_color, Player(i), " - colorviolet", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Violet_color, Trig_Violet_color_Actions)
 end
 --===========================================================================
@@ -52285,30 +51854,11 @@ end
 --===========================================================================
 function InitTrig_Wheat_color()
     gg_trg_Wheat_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(0), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(1), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(2), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(3), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(4), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(5), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(6), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(7), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(8), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(9), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(10), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(11), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(12), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(13), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(14), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(15), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(16), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(17), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(18), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(19), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(20), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(21), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(22), " - colorwheat", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(23), " - colorwheat", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Wheat_color, Player(i), " - colorwheat", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Wheat_color, Trig_Wheat_color_Actions)
 end
 --===========================================================================
@@ -52320,30 +51870,11 @@ end
 --===========================================================================
 function InitTrig_Peach_color()
     gg_trg_Peach_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(0), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(1), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(2), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(3), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(4), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(5), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(6), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(7), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(8), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(9), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(10), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(11), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(12), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(13), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(14), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(15), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(16), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(17), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(18), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(19), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(20), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(21), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(22), " - colorpeach", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(23), " - colorpeach", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Peach_color, Player(i), " - colorpeach", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Peach_color, Trig_Peach_color_Actions)
 end
 --===========================================================================
@@ -52355,30 +51886,11 @@ end
 --===========================================================================
 function InitTrig_Mint_color()
     gg_trg_Mint_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(0), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(1), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(2), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(3), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(4), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(5), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(6), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(7), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(8), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(9), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(10), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(11), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(12), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(13), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(14), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(15), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(16), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(17), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(18), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(19), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(20), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(21), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(22), " - colormint", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(23), " - colormint", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Mint_color, Player(i), " - colormint", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Mint_color, Trig_Mint_color_Actions)
 end
 --===========================================================================
@@ -52390,30 +51902,11 @@ end
 --===========================================================================
 function InitTrig_Lavender_color()
     gg_trg_Lavender_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(0), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(1), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(2), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(3), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(4), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(5), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(6), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(7), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(8), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(9), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(10), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(11), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(12), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(13), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(14), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(15), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(16), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(17), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(18), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(19), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(20), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(21), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(22), " - colorlavender", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(23), " - colorlavender", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Lavender_color, Player(i), " - colorlavender", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Lavender_color, Trig_Lavender_color_Actions)
 end
 --===========================================================================
@@ -52425,30 +51918,11 @@ end
 --===========================================================================
 function InitTrig_Coal_color()
     gg_trg_Coal_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(0), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(1), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(2), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(3), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(4), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(5), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(6), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(7), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(8), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(9), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(10), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(11), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(12), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(13), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(14), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(15), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(16), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(17), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(18), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(19), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(20), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(21), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(22), " - colorcoal", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(23), " - colorcoal", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Coal_color, Player(i), " - colorcoal", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Coal_color, Trig_Coal_color_Actions)
 end
 --===========================================================================
@@ -52460,30 +51934,11 @@ end
 --===========================================================================
 function InitTrig_Snow_color()
     gg_trg_Snow_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(0), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(1), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(2), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(3), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(4), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(5), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(6), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(7), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(8), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(9), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(10), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(11), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(12), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(13), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(14), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(15), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(16), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(17), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(18), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(19), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(20), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(21), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(22), " - colorsnow", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(23), " - colorsnow", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Snow_color, Player(i), " - colorsnow", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Snow_color, Trig_Snow_color_Actions)
 end
 --===========================================================================
@@ -52495,30 +51950,11 @@ end
 --===========================================================================
 function InitTrig_Emerald_color()
     gg_trg_Emerald_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(0), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(1), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(2), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(3), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(4), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(5), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(6), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(7), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(8), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(9), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(10), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(11), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(12), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(13), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(14), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(15), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(16), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(17), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(18), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(19), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(20), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(21), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(22), " - coloremerald", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(23), " - coloremerald", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Emerald_color, Player(i), " - coloremerald", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Emerald_color, Trig_Emerald_color_Actions)
 end
 --===========================================================================
@@ -52530,30 +51966,11 @@ end
 --===========================================================================
 function InitTrig_Peanut_color()
     gg_trg_Peanut_color=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(0), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(1), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(2), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(3), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(4), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(5), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(6), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(7), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(8), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(9), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(10), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(11), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(12), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(13), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(14), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(15), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(16), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(17), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(18), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(19), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(20), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(21), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(22), " - colorpeanut", true)
-    TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(23), " - colorpeanut", true)
+    local i = 0
+    while i <= 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Peanut_color, Player(i), " - colorpeanut", true)
+        i = i + 1
+    end
     TriggerAddAction(gg_trg_Peanut_color, Trig_Peanut_color_Actions)
 end
 --===========================================================================
@@ -59310,7 +58727,7 @@ RegisterAiRace("Undead", {
     buildings = {
         seed = FourCC('u00H'),
         { FourCC('n014'), 4, 4 }, { FourCC('u00H'), 18, 4 },
-        { FourCC('u00K'), 3, 6 }, { FourCC('u00M'), 10, 4, gate = "tier2" },
+        { FourCC('u00K'), 3, 6 }, { FourCC('u00M'), 10, 4 },
         { FourCC('u00N'), 8, 6, gate = "tier2" }, { FourCC('u00L'), 5, 2 },
         { FourCC('n012'), 8, 4 },
     },
@@ -59321,6 +58738,9 @@ RegisterAiRace("Undead", {
         [FourCC('n014')] = { {FourCC('u00P'),3,limit=18} },
         [FourCC('u00F')] = { {FourCC('u00P'),3,limit=18} },
         [FourCC('u00G')] = { {FourCC('u00P'),3,limit=18} },
+        [FourCC('n012')] = {
+            {FourCC('n011'), 3}, {FourCC('n013'), 2}, {FourCC('u03E'), 2},
+        },
         [FourCC('u00M')] = {
             {FourCC('u00A'), 4}, {FourCC('u00B'), 3}, {FourCC('u00D'), 2},
         },
