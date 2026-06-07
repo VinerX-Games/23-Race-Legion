@@ -352,6 +352,18 @@ function SetupBridgeChat()
         local op = string.sub(rest, 1, sep - 1)
         local arg = string.sub(rest, sep + 1)
         ProbeLogWrite("[BRIDGE] chat op=" .. tostring(op) .. " arg=" .. tostring(arg))
+        if op == "restart" then
+            if BridgePollTimer ~= nil then
+                DestroyTimer(BridgePollTimer)
+                BridgePollTimer = nil
+            end
+            BridgeElapsed = 0
+            EvalNextSeq = 1
+            BridgeStart()
+            ProbeLogWrite("[BRIDGE] restarted via chat")
+            DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cff00ff00[BRIDGE] restarted|r")
+            return
+        end
         if type(BridgeDispatchCommand) == "function" then
             local ok, err = pcall(BridgeDispatchCommand, op, arg, 0)
             if ok then
