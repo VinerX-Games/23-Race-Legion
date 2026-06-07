@@ -5183,11 +5183,8 @@ function MassSpell(caster, unitability, dammyAbility, order, targetloc, radious,
 	--  call BJDebugMsg("Сработало")
 	udg_LocalPlayer = p
 	if targetOwning == 1 then
-		bex = Condition(isEnemy)
 	elseif targetOwning == 2 then
-		bex = Condition(isAlly)
 	else
-		bex = Condition(isOwner)
 	end
 	
 	if targetloc == nil then
@@ -6136,7 +6133,6 @@ function Trig_GnomeNotToMuch_Actions()
 	local p = GetOwningPlayer(GetTriggerUnit())
 	local pi = GetPlayerId(p)
 	local Tl = udg_TierLevel[GetConvertedPlayerId(p)]
-	udg_Boolexpr = Condition(Type_1)
 	
 	if GetUnitTypeId(GetTriggerUnit()) ~= FourCC('h0FL') then	--  наоборот для теста
 		income[pi] = (income[pi] + 40)
@@ -6659,7 +6655,6 @@ end
 function FixEc(pi)
 	local r
 	local g = CreateGroup()
-	local b = Condition(UnitAliveBool)
 	ClearEc(pi)
 	
 	
@@ -6737,7 +6732,6 @@ function Trig_Gob_Potreblenie_Actions()
 	local pi = GetPlayerId(p)
 	local u
 	local r = GetPlayerTechCount(p, FourCC('R04N'), true)
-	udg_Boolexpr = Condition(Trig_Gob_Potreblenie_Func001002)
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
 	while true do
 		u = FirstOfGroup(g)
@@ -6790,7 +6784,6 @@ function Trig_Silitid_Potreblenie_Actions()
 	local pi = GetPlayerId(p)
 	local u
 	local r = GetPlayerTechCount(p, FourCC('R04N'), true)
-	udg_Boolexpr = Condition(HaveSilitidSpell)
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
 	while true do
 		u = FirstOfGroup(g)
@@ -6896,7 +6889,6 @@ function Trig_Cities_Start_2_Func003A()
 end
 ---@return nothing
 function Trig_Cities_Start_2_Actions()
-	udg_Boolexpr = Condition(ItIsCity)
 	GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
 	ForGroup(udg_LocalOtrad2, Trig_Cities_Start_2_Func003A)
 	GroupClear(udg_LocalOtrad2)
@@ -7268,7 +7260,6 @@ end
 ---@return nothing
 function Trig_RazvedEnd_Actions()
 	local g = CreateGroup()
-	local Boolexpr = Condition(Trig_RazvedEnd_Func002001003)
 	GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 1500, Boolexpr)
 	
 	RemoveUnit(FirstOfGroup(g))
@@ -10390,7 +10381,6 @@ function Trig_TotalProductionDeath_Actions()
     local p= GetOwningPlayer(u)
     local u2
     local g= CreateGroup()
-    local b= Condition(ThisId)
     udg_LocalInteger5=id
     
     FlushChildHashtable(Hash, S2I(I2S(uh) + "a"))
@@ -12860,7 +12850,6 @@ function Trig_Sdelat_Flagman_Ot_Copy_Func019C()
 end
 function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     udg_FlagmanEst[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=true
-    udg_Boolexpr=Condition(Trig_Sdelat_Flagman_Ot_Copy_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Sdelat_Flagman_Ot_Copy_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -12908,7 +12897,6 @@ function Trig_Flagman_die_Ot_Actions()
     local p= GetOwningPlayer(u)
     udg_FlagmanEst[GetConvertedPlayerId(p)]=false
     udg_LocalOtrad=GetUnitsOfPlayerAll(p)
-    udg_Boolexpr=Condition(Trig_Flagman_die_Ot_Func003002)
     udg_LocalPlayer=GetOwningPlayer(u)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Flagman_die_Ot_Func006A)
@@ -13217,14 +13205,12 @@ function Trig_MassPosadka2_Actions()
     -- Добавляю корабли (в селекте игрока) в группу, считаю свободные места
     udg_LocalInteger=0
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr=Condition(Trig_MassPosadka_Copy_Func006002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroup(udg_LocalOtrad2, Trig_MassPosadka_Copy_Func008A)
     
     
     
     -- Делаю группу из юнитов не кораблей и не зданий.
-    udg_Boolexpr=Condition(Trig_MassPosadka_Copy_Func010002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 250, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     
@@ -13278,14 +13264,12 @@ function Trig_Linkor_reaserch_Obstel_O_Func002C()
 end
 function Trig_Linkor_reaserch_Obstel_O_Actions()
     if ( Trig_Linkor_reaserch_Obstel_O_Func001C() ) then
-        udg_Boolexpr=Condition(Trig_Linkor_reaserch_Obstel_O_Func001Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Obstel_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_Linkor_reaserch_Obstel_O_Func002C() ) then
-        udg_Boolexpr=Condition(Trig_Linkor_reaserch_Obstel_O_Func002Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Obstel_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -13378,14 +13362,12 @@ function Trig_Linkor_reaserch_Parusa_O_Func002C()
 end
 function Trig_Linkor_reaserch_Parusa_O_Actions()
     if ( Trig_Linkor_reaserch_Parusa_O_Func001C() ) then
-        udg_Boolexpr=Condition(Trig_Linkor_reaserch_Parusa_O_Func001Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Parusa_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_Linkor_reaserch_Parusa_O_Func002C() ) then
-        udg_Boolexpr=Condition(Trig_Linkor_reaserch_Parusa_O_Func002Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Parusa_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -13478,14 +13460,12 @@ function Trig_Linkor_Repair_O_Func002C()
 end
 function Trig_Linkor_Repair_O_Actions()
     if ( Trig_Linkor_Repair_O_Func001C() ) then
-        udg_Boolexpr=Condition(Trig_Linkor_Repair_O_Func001Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_Repair_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_Linkor_Repair_O_Func002C() ) then
-        udg_Boolexpr=Condition(Trig_Linkor_Repair_O_Func002Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_Repair_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -13679,12 +13659,10 @@ function Trig_Abordach_D_or_Ot_Actions()
             udg_LocalUnit[1]=u[1]
             udg_LocalUnit[2]=u[2]
             TriggerExecute(gg_trg_AbordachSystemDefence2_O)
-            udg_Boolexpr=Condition(Trig_Abordach_D_or_Ot_Func018Func017Func005002)
             GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
             ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func017Func009A)
             GroupClear(udg_LocalOtrad2)
             if ( (true) ) then -- INLINED!!
-                udg_Boolexpr=Condition(Trig_Abordach_D_or_Ot_Func018Func017Func011Func004002)
                 GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
                 udg_LocalText2="cffff0000.r"
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[2]), 0, 0, udg_LocalText2)
@@ -13709,13 +13687,11 @@ function Trig_Abordach_D_or_Ot_Actions()
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[1]), 0, 0, udg_LocalText2)
                 udg_LocalText2="cff00ff00r not "
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[2]), 0, 0, udg_LocalText2)
-                udg_Boolexpr=Condition(Trig_Abordach_D_or_Ot_Func018Func021Func007Func008002)
                 GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
                 ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func021Func007Func012A)
                 GroupClear(udg_LocalOtrad2)
             else
             end
-            udg_Boolexpr=Condition(Trig_Abordach_D_or_Ot_Func018Func021Func011002)
             GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
             ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func021Func015A)
             return
@@ -18319,7 +18295,6 @@ function Trig_SpellMassAxes_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex=Condition(EnemEl)
     GroupEnumUnitsInRangeOfLoc(g, l, 150, bex)
     
     if FirstOfGroup(g) == nil then
@@ -18850,7 +18825,6 @@ function Trig_MeatDeal_Actions()
     local Efficiency= 0.5 + GetPlayerTechCount(p, FourCC('cDR5'), true) * 0.05
     local count= 0
     udg_LocalPlayer=p
-    Boolexpr=Condition(Trig_Untitled_Trigger_003_Func001001003)
     GroupEnumUnitsInRangeCounted(g, GetSpellTargetX(), GetSpellTargetY(), 275, Boolexpr, 12)
     
     --if target == null then
@@ -18966,7 +18940,6 @@ function Trig_BoneDeal_Actions()
     local count= 0
     
     udg_LocalPlayer=p
-    Boolexpr=Condition(BoneCheck)
     GroupEnumUnitsInRangeCounted(g, GetSpellTargetX(), GetSpellTargetY(), 275, Boolexpr, 12)
     
     --if target == null then
@@ -19256,7 +19229,6 @@ function Trig_MassIceArrow_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex=Condition(EnemEl)
     GroupEnumUnitsInRangeOfLoc(g, l, 150, bex)
     
     if FirstOfGroup(g) == nil then
@@ -19693,7 +19665,6 @@ function Trig_ReturnDamage_Actions()
     DisableTrigger(GetTriggeringTrigger())
     udg_LocalPlayer=GetOwningPlayer(u)
     udg_LocalInteger2=0
-    b=Condition(isEnemy)
     GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 550, b)
    -- set u2 = FirstOfGroup(g) 
     if udg_LocalInteger2 > 0 then
@@ -19914,7 +19885,6 @@ function Trig_MassSetca_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex=Condition(EnemEl)
     GroupEnumUnitsInRangeOfLoc(g, l, 100 + 45 * level, bex)
     
     RemoveLocation(l)
@@ -19972,7 +19942,6 @@ function Trig_MassFrenzy_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex=Condition(FFrenzy)
     GroupEnumUnitsInRangeOfLocCounted(g, l, 400, bex, 4)
     
     RemoveLocation(l)
@@ -20146,7 +20115,6 @@ function Trig_MassSglaz_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex=Condition(EnemEl)
     GroupEnumUnitsInRangeOfLoc(g, l, 110 + 50 * level, bex)
     
     RemoveLocation(l)
@@ -20604,7 +20572,6 @@ function Trig_Help_Actions()
     DisableTrigger(GetTriggeringTrigger())
     udg_LocalPlayer=GetOwningPlayer(u)
     udg_LocalInteger2=0
-    b=Condition(AllyToKill)
     GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 750, b)
    -- set u2 = FirstOfGroup(g) 
     if udg_LocalInteger2 > 0 then
@@ -20697,7 +20664,6 @@ function Trig_HelpButton_Actions()
     DisableTrigger(GetTriggeringTrigger())
     udg_LocalPlayer=GetOwningPlayer(u)
     udg_LocalInteger2=0
-    b=Condition(AllyToKill)
     GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 750, b)
     
     
@@ -20775,7 +20741,6 @@ function BrokenBlood()
 --    
     DestroyEffect(e)
     udg_LocalPlayer=GetOwningPlayer(u)
-    b=Condition(EnemyToBlood)
     GroupEnumUnitsInRange(g, GetUnitX(u2), GetUnitY(u2), 425, b)
    
     u2=FirstOfGroup(g)
@@ -24028,7 +23993,6 @@ function Trig_MassMolot_Actions()
     local l= GetUnitLoc(GetTriggerUnit())
     local p= GetOwningPlayer(GetTriggerUnit())
     
-    local bex= Condition(EnemEl)
     local level= GetUnitAbilityLevelSwapped(FourCC('AHtb'), GetTriggerUnit())
     local g= CreateGroup()
     local u
@@ -24668,7 +24632,6 @@ end
 function Trig_MassInvis_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr=Condition(MI2)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 650, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -24731,7 +24694,6 @@ function Trig_Killing_Actions()
     local u= GetTriggerUnit()
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local b= Condition(IsAndPlag)
     GroupEnumUnitsSelected(g, p, b)
     while true do
         u=FirstOfGroup(g)
@@ -24802,7 +24764,6 @@ function Trig_Infect_Actions()
     local u= GetTriggerUnit()
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local b=  Condition(IsAndPlag)
     GroupEnumUnitsSelected(g, p, b)
     while true do
         u=FirstOfGroup(g)
@@ -24871,7 +24832,6 @@ function Trig_Zagraz_Actions()
     local u= GetTriggerUnit()
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local b=  Condition(IsAndPlag)
     GroupEnumUnitsSelected(g, p, b)
     while true do
         u=FirstOfGroup(g)
@@ -24964,7 +24924,6 @@ function Trig_Usual_Actions()
     local u= GetTriggerUnit()
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local b=  Condition(IsPlag)
     GroupEnumUnitsSelected(g, p, b)
     while true do
         u=FirstOfGroup(g)
@@ -25033,7 +24992,6 @@ function Trig_Korroz_Actions()
     local u= GetTriggerUnit()
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local b=  Condition(IsPlag)
     GroupEnumUnitsSelected(g, p, b)
     while true do
         u=FirstOfGroup(g)
@@ -25104,7 +25062,6 @@ function Trig_Safety_Actions()
     local u= GetTriggerUnit()
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local b=  Condition(IsPlag)
     GroupEnumUnitsSelected(g, p, b)
     while true do
         u=FirstOfGroup(g)
@@ -25183,7 +25140,6 @@ function Trig_MassMindControl2_Func007A()
 end
 function Trig_MassMindControl2_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr=Condition(Trig_MassMindControl2_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 225, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -30274,7 +30230,6 @@ function Trig_CommonHome_Actions()
     
     --End other races
     g=CreateGroup()
-    udg_Boolexpr=Condition(NoneRadicals)
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
     while true do
         u=FirstOfGroup(g)
@@ -30602,7 +30557,6 @@ function Trig_TrueHorde_Actions()
     
     --End other races
     g=CreateGroup()
-    udg_Boolexpr=Condition(NoNeORc)
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
     while true do
         u=FirstOfGroup(g)
@@ -31078,7 +31032,6 @@ end
 function Trig_ThrallMolnya_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr=Condition(EnemEl)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 400, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -31112,7 +31065,6 @@ function Trig_Okovi_Func007A()
 end
 function Trig_Okovi_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr=Condition(Trig_Okovi_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 225, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -31148,7 +31100,6 @@ end
 function Trig_GarraoshMassBloodlast_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr=Condition(Trig_GarraoshMassBloodlast_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 500, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -31391,9 +31342,7 @@ function Trig_ChoseLich_Actions()
     local i= 0
     local p= GetOwningPlayer(GetTriggerUnit())
     ClearSelectionForPlayer(p)
-    udg_Boolexpr=Condition(HaveSpell)
     GroupEnumUnitsSelected(g, p, udg_Boolexpr)
-    udg_Boolexpr=Condition(Trig_ChoseLich_Func003002)
     
     while true do
         u1=FirstOfGroup(g)
@@ -31449,7 +31398,6 @@ function Trig_ChoseUnits2_Actions()
     local g= CreateGroup()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPosition3=GetSpellTargetLoc()
-    udg_Boolexpr=Condition(OnlyOrganic)
     GroupEnumUnitsInRange(g, GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 400, udg_Boolexpr)
     GroupPointOrder(g, "attack", GetSpellTargetX(), GetSpellTargetY())
     
@@ -31629,7 +31577,6 @@ function Trig_TweenChange_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local bex= Condition(Brothers)
     local u2
     local x= GetUnitX(u)
     local y= GetUnitY(u)
@@ -31674,7 +31621,6 @@ function Trig_TweenBrothersRev_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local bex= Condition(Brothers)
     local u2
     
     GroupEnumUnitsOfPlayer(g, p, bex)
@@ -31716,7 +31662,6 @@ function Trig_TweenBrothersDead_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local bex= Condition(Brothers)
     local u2
     
     GroupEnumUnitsOfPlayer(g, p, bex)
@@ -31907,7 +31852,6 @@ function Trig_LichinkaFinish_Actions()
     AddCountDis(gTriggerUnit , i)
     
     udg_LocalPosition[16]=GetUnitLoc(gTriggerUnit)
-    udg_Boolexpr=Condition(ItIsHive)
     udg_LocalOtrad2=CreateGroup()
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[16], 300, udg_Boolexpr)
     -- Куда идти если рядом есть улей
@@ -31931,12 +31875,10 @@ function Trig_LichinkaFinish_Actions()
         
         CreateNUnitsAtLoc(1, FourCC('e01G'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
         udg_LocalPosition[18]=GetUnitLoc(GetLastCreatedUnit())
-        udg_Boolexpr=Condition(ItIsHive)
         GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[18], 300, udg_Boolexpr)
         
         IssueTargetDestructableOrder(GetLastCreatedUnit(), "harvest", GetUnitRallyDestructable(FirstOfGroup(udg_LocalOtrad2)))
         udg_LocalPosition[17]=GetUnitLoc(GetLastCreatedUnit())
-        udg_Boolexpr=Condition(ItIsHive)
         GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[17], 300, udg_Boolexpr)
         if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
             SelectUnitAddForPlayer(GetLastCreatedUnit(), gPlayer)
@@ -32092,7 +32034,6 @@ function Trig_SpellBook_Actions()
     local g= CreateGroup()
     local i= 0
     
-    udg_Boolexpr=Condition(HaveSpell)
     GroupEnumUnitsSelected(g, GetOwningPlayer(GetTriggerUnit()), udg_Boolexpr)
     while true do
             u1=FirstOfGroup(g)
@@ -33051,7 +32992,6 @@ function Trig_Potreblenie_Actions()
         return
     else
     end
-    udg_Boolexpr=Condition(Trig_Potreblenie_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Potreblenie_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -33111,7 +33051,6 @@ function Trig_BracResearch_Actions()
         return
     else
     end
-    udg_Boolexpr=Condition(Trig_BracResearch_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_BracResearch_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -33171,7 +33110,6 @@ function Trig_PodjogResearch_Actions()
         return
     else
     end
-    udg_Boolexpr=Condition(Trig_PodjogResearch_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PodjogResearch_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -33231,7 +33169,6 @@ function Trig_PodruvResearc_Actions()
         return
     else
     end
-    udg_Boolexpr=Condition(Trig_PodruvResearc_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PodruvResearc_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -36478,12 +36415,10 @@ function Trig_Pirats_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('h03K'), - 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('h00Y'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('h00Z'), 0, GetOwningPlayer(GetTriggerUnit()))
-    udg_Boolexpr=Condition(Trig_Pirats_O_Copy_Func005002)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Pirats_O_Copy_Func008A)
     GroupClear(udg_LocalOtrad2)
-    udg_Boolexpr=Condition(Trig_Pirats_O_Copy_Func010002)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Pirats_O_Copy_Func013A)
@@ -36684,21 +36619,18 @@ function Trig_ResearhRobbery_Func003C()
 end
 function Trig_ResearhRobbery_Actions()
     if ( Trig_ResearhRobbery_Func001C() ) then
-        udg_Boolexpr=Condition(Trig_ResearhRobbery_Func001Func001002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_ResearhRobbery_Func002C() ) then
-        udg_Boolexpr=Condition(Trig_ResearhRobbery_Func002Func001002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
     else
     end
     if ( Trig_ResearhRobbery_Func003C() ) then
-        udg_Boolexpr=Condition(Trig_ResearhRobbery_Func003Func001002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func003Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -38546,7 +38478,6 @@ function BrokenBuilding()
 end
 function Trig_NoDeath_Actions()
     local g= CreateGroup()
-    local Boolexpr= Condition(BrokenBuilding)
     local u
     local u2
     GroupEnumUnitsOfPlayer(g, GetOwningPlayer(GetTriggerUnit()), Boolexpr)
@@ -39450,7 +39381,6 @@ end
 function Trig_PoleAstralaDragons_Actions()
     udg_LocalPosition[14]=GetUnitLoc(GetTriggerUnit())
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr=Condition(Trig_PoleAstralaDragons_Func003002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 200, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PoleAstralaDragons_Func005A)
     RemoveLocation(udg_LocalPosition[14])
@@ -40685,7 +40615,6 @@ function Trig_ArthasCoils_Func007A()
 end
 function Trig_ArthasCoils_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr=Condition(Trig_ArthasCoils_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 125, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -40720,7 +40649,6 @@ function Trig_ArthasNova_Func007A()
 end
 function Trig_ArthasNova_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    udg_Boolexpr=Condition(Trig_ArthasNova_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 240, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -42532,7 +42460,6 @@ function Trig_KillTestUnits_O_Copy_Func003A()
     p=nil
 end
 function Trig_KillTestUnits___OFF_ME_Actions()
-    udg_Boolexpr=Condition(Trig_KillTestUnits_O_Copy_Func001002)
     GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
     ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_O_Copy_Func003A)
     GroupClear(udg_LocalOtrad2)
@@ -42612,7 +42539,6 @@ function Trig_KillTestUnits_Command_Func003A()
     
 end
 function Trig_KillTestUnits_Command_Actions()
-    udg_Boolexpr=Condition(Trig_KillTestUnits_Command_Func001002)
     GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
     ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_Command_Func003A)
     GroupClear(udg_LocalOtrad2)
