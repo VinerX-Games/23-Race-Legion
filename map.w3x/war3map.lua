@@ -323,10 +323,15 @@ function BridgeStart()
     if BridgePollTimer ~= nil then
         return
     end
-    BridgeCarrierBaseline = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
+    -- Skip stale eval files from previous session: force-read current tooltip
+    -- to flush any preloaded payload, then set it as the new baseline.
+    -- After this, only NEW tooltip changes will be treated as fresh evals.
+    local flushed = BlzGetAbilityTooltip(BridgeCarrierAbilityId, BridgeCarrierTooltipLevel)
+    BlzSetAbilityTooltip(BridgeCarrierAbilityId, flushed, BridgeCarrierTooltipLevel)
+    BridgeCarrierBaseline = flushed
     local timer = CreateTimer()
     BridgePollTimer = timer
-    ProbeLogWrite("[BRIDGE] start (preloader+chat)")
+    ProbeLogWrite("[BRIDGE] start (preloader+chat) baseline-len=" .. tostring(#flushed))
     TimerStart(timer, BridgeTickInterval, true, BridgeTick)
 end
 function SetupBridgeChat()
