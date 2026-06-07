@@ -7744,18 +7744,16 @@ function startNerubs(pi)
     CreateNUnitsAtLoc(3, FourCC('h0BE'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
-    CreateNUnitsAtLoc(1, FourCC('u019'), p, udg_LocalPoint, bj_UNIT_FACING)
+    CreateNUnitsAtLoc(1, FourCC('h0CO'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
     GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
-    local cocoon = GetLastCreatedUnit()
-    IssueImmediateOrderById(cocoon, FourCC('h0CO'))
     AiData[pi][FourCC('h0BE')] = 3
     AiData[pi][FourCC('h0CO')] = 1
     AiData[pi][StringHash("Race")] = "NE"
     SetPlayerTechResearchedSwap(FourCC('R07N'), 1, p)
     SetPlayerName(p, "Nerubs (" .. I2S(pi + 1) .. ")")
     AiRace[pi] = "Nerubs"
-    ProbeLogWrite("[AI] startNerubs pi=" .. tostring(pi) .. " workers=3h0BE cocoon=1u019")
+    ProbeLogWrite("[AI] startNerubs pi=" .. tostring(pi) .. " workers=3h0BE building=1h0CO")
 end
 ---@param pi integer
 ---@return nothing
