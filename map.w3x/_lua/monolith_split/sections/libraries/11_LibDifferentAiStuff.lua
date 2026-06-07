@@ -33,7 +33,7 @@ function NumberAdd(pi, id)
 	if t == nil then t = {}; g_AiCountCache[pi] = t end
 	local c = (t[id] or 0) + 1
 	t[id] = c
-	SaveInteger(AiData, pi, id, c)
+	AiData[pi][id] = c
 end
 ---@param pi integer
 ---@param id integer
@@ -43,7 +43,7 @@ function NumberRem(pi, id)
 	if t == nil then t = {}; g_AiCountCache[pi] = t end
 	local c = (t[id] or 0) - 1
 	t[id] = c
-	SaveInteger(AiData, pi, id, c)
+	AiData[pi][id] = c
 end
 ---@param pi integer
 ---@param id integer
@@ -51,13 +51,13 @@ end
 function NumberReset(pi, id)
 	local t = g_AiCountCache[pi]
 	if t ~= nil then t[id] = nil end
-	SaveInteger(AiData, pi, id, 0)
+	AiData[pi][id] = 0
 end
 ---@param pi integer
 ---@return nothing
 function NumberResetAll(pi)
 	g_AiCountCache[pi] = nil
-	FlushChildHashtable(AiData, pi)
+	AiData[pi] = nil
 end
 -- ***************************************************************************
 -- *  HasEnemyNear
@@ -96,7 +96,7 @@ end
 function MakeTPMage(dest, u2, pi)
 	gX = GetUnitX(dest)
 	gY = GetUnitY(dest)
-	if LoadInteger(AiData, pi, gMageTP) < 10 and GetUnitAbilityLevel(dest, FourCC('A1RD')) == 0 then
+	if (AiData[pi][gMageTP] or 0) < 10 and GetUnitAbilityLevel(dest, FourCC('A1RD')) == 0 then
 		gUnit3 = ChoseRandomSpot(dest, pi, gX, gY)
 		if gUnit3 ~= nil then
 			gX = GetUnitX(gUnit3)

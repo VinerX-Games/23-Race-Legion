@@ -20,8 +20,8 @@ RegisterAiRace("Scarlet", {
         tier3 = function(pi) return getAiCount(pi, FourCC('h05W')) >= 1 end,
         church = function(pi) return getAiCount(pi, FourCC('h05W')) >= 1 end,
         has_h060 = function(pi) return getAiCount(pi, FourCC('h060')) >= 1 end,
-        R040_church = function(pi) return LoadBoolean(AiData, pi, FourCC('R040')) and getAiCount(pi, FourCC('h05W')) >= 1 end,
-        R03Z_church = function(pi) return LoadBoolean(AiData, pi, FourCC('R03Z')) and getAiCount(pi, FourCC('h05W')) >= 1 end,
+        R040_church = function(pi) return (AiData[pi][FourCC('R040')] or false) and getAiCount(pi, FourCC('h05W')) >= 1 end,
+        R03Z_church = function(pi) return (AiData[pi][FourCC('R03Z')] or false) and getAiCount(pi, FourCC('h05W')) >= 1 end,
     },
     production = {
         [FourCC('h05Z')] = {
@@ -72,10 +72,10 @@ RegisterAiRace("Scarlet", {
                 local r = GetRandomInt(1, 2)
                 if r == 1 then
                     MakeGradeCheckCap(p, FourCC('h05W'), FourCC('R040'), 1)
-                    SaveBoolean(AiData, pi, FourCC('R040'), true)
+                    AiData[pi][FourCC('R040')] = true
                 else
                     MakeGradeCheckCap(p, FourCC('h05W'), FourCC('R03Z'), 1)
-                    SaveBoolean(AiData, pi, FourCC('R03Z'), true)
+                    AiData[pi][FourCC('R03Z')] = true
                 end
                 MakeGradeCheckCap(p, FourCC('h068'), FourCC('R044'), 3)
                 MakeGradeCheckCap(p, FourCC('h068'), FourCC('R043'), 3)

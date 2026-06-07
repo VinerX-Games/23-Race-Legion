@@ -234,18 +234,18 @@ function MakeHash()
 	-- call DisplayTimedTextFromPlayer(Player(0),0,0,4, "Залил хеш")
 	while true do
 		if i == 24 then break end
-		SaveInteger(AiData, i, FourCC('h05W'), 0)
-		SaveInteger(AiData, i, FourCC('h0ZX'), 0)
-		SaveInteger(AiData, i, FourCC('h064'), 0)
-		SaveInteger(AiData, i, FourCC('h05Z'), 0)
-		SaveInteger(AiData, i, FourCC('h05W'), 0)
-		SaveInteger(AiData, i, FourCC('h05Y'), 0)
-		SaveInteger(AiData, i, FourCC('h05V'), 0)
-		SaveInteger(AiData, i, FourCC('h061'), 0)
-		SaveInteger(AiData, i, FourCC('h068'), 0)
-		SaveInteger(AiData, i, FourCC('h05W'), 0)
-		SaveInteger(AiData, i, FourCC('h062'), 0)
-		SaveInteger(AiData, i, FourCC('h060'), 0)
+		AiData[i][FourCC('h05W')] = 0
+		AiData[i][FourCC('h0ZX')] = 0
+		AiData[i][FourCC('h064')] = 0
+		AiData[i][FourCC('h05Z')] = 0
+		AiData[i][FourCC('h05W')] = 0
+		AiData[i][FourCC('h05Y')] = 0
+		AiData[i][FourCC('h05V')] = 0
+		AiData[i][FourCC('h061')] = 0
+		AiData[i][FourCC('h068')] = 0
+		AiData[i][FourCC('h05W')] = 0
+		AiData[i][FourCC('h062')] = 0
+		AiData[i][FourCC('h060')] = 0
 		i = i + 1
 	end
 	-- call DisplayTimedTextFromPlayer(Player(0),0,0,4, "Залил хеш 2")

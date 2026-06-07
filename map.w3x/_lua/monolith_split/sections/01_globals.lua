@@ -48,7 +48,7 @@ LIBRARY_common = true	---@type boolean
 -- endglobals from common
 -- globals from LibDifferentAiStuff:
 LIBRARY_LibDifferentAiStuff = true	---@type boolean	
-AiData = InitHashtable()	---@type hashtable	
+AiData = setmetatable({}, {__index = function(t, k) local v = {}; t[k] = v; return v end})	---@type hashtable	
 AiUnitsToPort = {}	---@type group	
 -- TryPort_pi	---@type integer	
 -- endglobals from LibDifferentAiStuff
