@@ -819,14 +819,74 @@ RegisterAiRace("BloodElves", {
             { at = 60, action = "mageTp", cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('H043')] = {
+            { order = "banish", chance = 6, type = "target" },
+            { order = "steal", chance = 6, type = "target" },
+            { order = "flamestrike", chance = 6, type = "point" },
+            { order = "summonphoenix", chance = 6, type = "immediate" },
+        },
+        [FourCC('Hjnd')] = {
+            { order = "shadowstrike", chance = 3, type = "target", notStructure = true },
+            { order = "faeriefire", chance = 3, type = "target" },
+        },
+        [FourCC('H045')] = {
+            { order = "roar", chance = 5, type = "immediate" },
+            { order = "fanofknives", chance = 5, type = "immediate" },
+            { order = "resurrection", chance = 5, type = "immediate" },
+        },
+        [FourCC('H03H')] = {
+            { order = "berserk", chance = 4, type = "immediate" },
+        },
+        [FourCC('n040')] = {
+            { order = "frostarmoron", chance = 5, type = "immediate" },
+            { order = "curseon", chance = 5, type = "immediate" },
+            { order = "carrionswarm", chance = 5, type = "point", range = 490 },
+        },
+        [FourCC('h041')] = {
+            { order = "polymorph", chance = 3, type = "target" },
+            { order = "devourmagic", chance = 3, type = "target", range = 490 },
+        },
+        [FourCC('h042')] = {
+            { order = "faeriefireon", chance = 6, type = "immediate" },
+            { order = "curseon", chance = 6, type = "immediate" },
+            { order = "bloodluston", chance = 6, type = "immediate" },
+        },
+        [FourCC('H03Y')] = {
+            { order = "healingwave", chance = 3, type = "heal", allyRange = 550 },
+        },
+        [FourCC('h00Z')] = {
+            { order = "ancestralspirit", chance = 6, type = "target", range = 125 },
+            { order = "clusterrockets", chance = 6, type = "point", range = 300 },
+            { order = "tranquility", chance = 6, type = "immediate", hp = 45 },
+        },
+        [FourCC('h00Y')] = {
+            { order = "ancestralspirit", chance = 6, type = "target", range = 125 },
+            { order = "clusterrockets", chance = 6, type = "point", range = 300 },
+            { order = "tranquility", chance = 6, type = "immediate", hp = 45 },
+        },
+    },
+    attackedData = {
+        [FourCC('h03V')] = {
+            { order = "defend", chance = 5, type = "immediate" },
+            { order = "manashieldon", chance = 5, type = "immediate" },
+            { order = "undefend", chance = 5, type = "immediate" },
+        },
+        [FourCC('h03B')] = {
+            { order = "defend", chance = 3, type = "immediate" },
+            { order = "undefend", chance = 3, type = "immediate" },
+        },
+    },
+    getLvlData = {
+        [FourCC('H043')] = { ult = FourCC('AHpx'), skills = { FourCC('AHfs'), FourCC('AHdr'), FourCC('AHpx') } },
+        [FourCC('Hjnd')] = { ult = FourCC('A07V'), skills = { FourCC('A07U'), FourCC('A0LQ'), FourCC('AEar') } },
+        [FourCC('H045')] = { ult = FourCC('AHre'), skills = { FourCC('A08H'), FourCC('A07W'), FourCC('AHbh') } },
+    },
     chooseBuild = ChooseBuildings_BloodElves,
     perebor = PereborBuildings2_BloodElves,
     join = Join_BloodElves,
     strateg = Strateg_BloodElves,
     strategEC = Strateg_BloodElves_EC,
-    attacker = Attacker_BloodElves,
-    attacked = AttackedBloodElves,
-    getLvl = GetLvlBloodElves,
     upgrade = UpgradeBloodElves,
     naval = aiNavalTrain_Common,
     wall = FourCC('h011'),
