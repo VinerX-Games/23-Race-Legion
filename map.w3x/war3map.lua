@@ -15278,8 +15278,7 @@ function Trig_Cities_Start_2_Func003A()
 end
 ---@return nothing
 function Trig_Cities_Start_2_Actions()
-	udg_Boolexpr = Condition(ItIsCity)
-	GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
+	GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, ItIsCity)
 	ForGroup(udg_LocalOtrad2, Trig_Cities_Start_2_Func003A)
 	GroupClear(udg_LocalOtrad2)
 end
@@ -50902,8 +50901,7 @@ function Trig_KillTestUnits_O_Copy_Func003A()
     p=nil
 end
 function Trig_KillTestUnits___OFF_ME_Actions()
-    udg_Boolexpr = Condition(Trig_KillTestUnits_O_Copy_Func001002)
-    GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
+    GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, Trig_KillTestUnits_O_Copy_Func001002)
     ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_O_Copy_Func003A)
     GroupClear(udg_LocalOtrad2)
 end
@@ -50982,8 +50980,7 @@ function Trig_KillTestUnits_Command_Func003A()
     
 end
 function Trig_KillTestUnits_Command_Actions()
-    udg_Boolexpr = Condition(Trig_KillTestUnits_Command_Func001002)
-    GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, udg_Boolexpr)
+    GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, Trig_KillTestUnits_Command_Func001002)
     ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_Command_Func003A)
     GroupClear(udg_LocalOtrad2)
 end
