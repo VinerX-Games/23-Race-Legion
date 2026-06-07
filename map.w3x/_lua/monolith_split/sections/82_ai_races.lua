@@ -267,7 +267,7 @@ RegisterAiRace("BloodElves", {
             { order = "carrionswarm", chance = 5, type = "point", range = 490 },
         },
         [FourCC('h041')] = {
-            { order = "polymorph", chance = 3, type = "target" },
+            { order = "polymorph", chance = 3, type = "target", notStructure = true },
             { order = "devourmagic", chance = 3, type = "target", range = 490 },
         },
         [FourCC('h042')] = {
@@ -556,7 +556,7 @@ RegisterAiRace("Naga", {
             { order = "dispel", chance = 4, type = "point" },
         },
         [FourCC('nnsw')] = {
-            { order = "cyclone", chance = 6, type = "target" },
+            { order = "cyclone", chance = 6, type = "target", notStructure = true },
             { order = "frostarmoron", chance = 6, type = "immediate" },
             { order = "parasiteon", chance = 6, type = "immediate" },
         },
@@ -632,14 +632,16 @@ RegisterAiRace("Horde", {
                    from = { FourCC('ogre'), FourCC('ostr'), FourCC('ofrt') } },
     },
     ecoWeights = {
-        [FourCC('nnfm')] = 1, [FourCC('ogre')] = 4,
+        [FourCC('otrb')] = 1, [FourCC('ogre')] = 4,
         [FourCC('ostr')] = 6, [FourCC('ofrt')] = 8,
+        [FourCC('obar')] = 3, [FourCC('obea')] = 2,
+        [FourCC('ofor')] = 2, [FourCC('oalt')] = 3,
     },
     strategData = {
         gradeCap = 150,
         steps = {
             { before = 50, action = "research", rows = {
-                {FourCC('nntt'), FourCC('R0FE'), 1}, {FourCC('nntt'), FourCC('R0FF'), 1},
+                {FourCC('ovln'), FourCC('Abds'), 1}, {FourCC('ovln'), FourCC('Arlm'), 1},
             }},
             { at = 17, action = "research", rows = {
                 {FourCC('ogre'), FourCC('Ropg'), 1},
@@ -795,6 +797,8 @@ RegisterAiRace("JungleTrolls", {
         [FourCC('h0N5')] = 2,
         [FourCC('h0N1')] = 5,
         [FourCC('h0N6')] = 8,
+        [FourCC('h0MY')] = 2, [FourCC('h0N3')] = 2,
+        [FourCC('h0N0')] = 3,
     },
     strategData = {
         gradeCap = 100,
@@ -940,6 +944,8 @@ RegisterAiRace("ForestTrolls", {
     ecoWeights = {
         [FourCC('h0MV')] = 1, [FourCC('h0MT')] = 2,
         [FourCC('h0N8')] = 5, [FourCC('h0N9')] = 8,
+        [FourCC('h0MS')] = 2, [FourCC('h0N7')] = 2,
+        [FourCC('h0MU')] = 3,
     },
     strategData = {
         gradeCap = 100,
@@ -1274,13 +1280,13 @@ RegisterAiRace("Forsaken", {
     },
     attackerData = {
         [FourCC('n04T')] = {
-            { order = "cannibalize", chance = 4, type = "immediate", hp = 60 },
+            { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
         },
         [FourCC('h0JN')] = {
             { order = "shadowstrike", chance = 4, type = "target", notStructure = true },
         },
         [FourCC('n04U')] = {
-            { order = "cannibalize", chance = 4, type = "immediate", hp = 60 },
+            { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
             { order = "defend", chance = 3, type = "immediate" },
         },
         [FourCC('n04Y')] = {
@@ -1374,6 +1380,44 @@ RegisterAiRace("Alliance", {
             { at = 55, action = "techUp", from = FourCC('hkee'), to = FourCC('hcas'), cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('Hpal')] = {
+            { order = "holybolt",     chance = 5, type = "target" },
+            { order = "divineshield", chance = 5, type = "immediate" },
+            { order = "resurrection", chance = 5, type = "immediate" },
+        },
+        [FourCC('Hamg')] = {
+            { order = "blizzard",        chance = 5, type = "point" },
+            { order = "waterelemental",  chance = 5, type = "immediate" },
+            { order = "massteleport",    chance = 5, type = "immediate" },
+        },
+        [FourCC('Hmkg')] = {
+            { order = "stormbolt",    chance = 5, type = "target" },
+            { order = "thunderclap",  chance = 5, type = "immediate" },
+            { order = "avatar",       chance = 5, type = "immediate" },
+        },
+        [FourCC('hsor')] = {
+            { order = "slow",         chance = 4, type = "target" },
+            { order = "polymorph",    chance = 4, type = "target", notStructure = true },
+            { order = "invisibility", chance = 4, type = "target" },
+        },
+        [FourCC('hmpr')] = {
+            { order = "heal",       chance = 4, type = "heal", allyRange = 550 },
+            { order = "dispel",     chance = 4, type = "point", range = 490 },
+            { order = "innerfire",  chance = 4, type = "target" },
+        },
+    },
+    attackedData = {
+        [FourCC('hfoo')] = {
+            { order = "defend",   chance = 3, type = "immediate" },
+            { order = "undefend", chance = 3, type = "immediate" },
+        },
+    },
+    getLvlData = {
+        [FourCC('Hpal')] = { ult = FourCC('AHre'), skills = { FourCC('AHhb'), FourCC('AHds'), FourCC('AHad') } },
+        [FourCC('Hamg')] = { ult = FourCC('AHmt'), skills = { FourCC('AHbz'), FourCC('AHwe'), FourCC('AHab') } },
+        [FourCC('Hmkg')] = { ult = FourCC('AHav'), skills = { FourCC('AHtc'), FourCC('AHtb'), FourCC('AHbh') } },
+    },
     join = Join_Alliance,
     wall = FourCC('hgtw'),
 })
@@ -1441,6 +1485,30 @@ RegisterAiRace("Bandits", {
             { at = 55, action = "techUp", from = FourCC('h008'), to = FourCC('h009'), cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('h003')] = {
+            { order = "berserk",  chance = 4, type = "immediate" },
+        },
+        [FourCC('h005')] = {
+            { order = "flamingarrows", chance = 4, type = "target" },
+        },
+        [FourCC('h00P')] = {
+            { order = "thunderbolt", chance = 4, type = "target" },
+            { order = "parasite",    chance = 4, type = "target" },
+        },
+        [FourCC('h00S')] = {
+            { order = "curse",         chance = 4, type = "target" },
+            { order = "faeriefire",    chance = 4, type = "target" },
+        },
+        [FourCC('h029')] = {
+            { order = "carrionswarm",  chance = 4, type = "point" },
+        },
+    },
+    getLvlData = {
+        [FourCC('H03S')] = { skills = { FourCC('A01J'), FourCC('A01D'), FourCC('A01H'), FourCC('A01I') } },
+        [FourCC('H047')] = { skills = { FourCC('A023'), FourCC('ANrf'), FourCC('AHab'), FourCC('ANlm') } },
+        [FourCC('H048')] = { skills = { FourCC('A0WV'), FourCC('A026'), FourCC('A028'), FourCC('A029') } },
+    },
     join = Join_Bandits,
     wall = FourCC('h03Q'),
 })
@@ -1505,6 +1573,107 @@ RegisterAiRace("Undead", {
             { at = 25, action = "techUp", from = FourCC('n014'), to = FourCC('u00F'), cap = 3 },
             { at = 55, action = "techUp", from = FourCC('u00F'), to = FourCC('u00G'), cap = 3 },
         },
+    },
+    attackerData = {
+        [FourCC('u00A')] = {
+            { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+        },
+        [FourCC('u00B')] = {
+            { order = "web",    chance = 4, type = "target" },
+            { order = "burrow", chance = 4, type = "immediate" },
+        },
+        [FourCC('u00C')] = {
+            { order = "raisedead",     chance = 4, type = "point" },
+            { order = "cripple",       chance = 4, type = "target" },
+            { order = "unholyfrenzy",  chance = 4, type = "target" },
+        },
+        [FourCC('u008')] = {
+            { order = "curse",             chance = 4, type = "target" },
+            { order = "antimagicshell",    chance = 4, type = "target" },
+            { order = "possession",        chance = 4, type = "target" },
+        },
+        [FourCC('u00D')] = {
+            { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+        },
+        [FourCC('u00E')] = {
+            { order = "exhumecorpses", chance = 4, type = "immediate" },
+        },
+        [FourCC('u03E')] = {
+            { order = "devourmagic", chance = 4, type = "target", range = 525 },
+        },
+        [FourCC('U00O')] = {
+            { order = "deathcoil",    chance = 5, type = "target" },
+            { order = "deathpact",    chance = 5, type = "target" },
+            { order = "animatedead",  chance = 5, type = "immediate" },
+        },
+        [FourCC('U00V')] = {
+            { order = "frostnova",    chance = 5, type = "target" },
+            { order = "frostarmor",   chance = 5, type = "target" },
+            { order = "darkritual",   chance = 5, type = "target" },
+        },
+        [FourCC('U00U')] = {
+            { order = "impales",      chance = 5, type = "point" },
+            { order = "carrionswarm", chance = 5, type = "point" },
+            { order = "locustswarm",  chance = 5, type = "immediate" },
+        },
+    },
+    attackedData = {
+        [FourCC('u00A')] = {
+            { order = "cannibalize", chance = 3, type = "immediate", hp = 50 },
+        },
+    },
+    attackerData = {
+        [FourCC('u00A')] = {
+            { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+        },
+        [FourCC('u00B')] = {
+            { order = "web",    chance = 4, type = "target" },
+            { order = "burrow", chance = 4, type = "immediate" },
+        },
+        [FourCC('u00C')] = {
+            { order = "raisedead",     chance = 4, type = "point" },
+            { order = "cripple",       chance = 4, type = "target" },
+            { order = "unholyfrenzy",  chance = 4, type = "target" },
+        },
+        [FourCC('u008')] = {
+            { order = "curse",             chance = 4, type = "target" },
+            { order = "antimagicshell",    chance = 4, type = "target" },
+            { order = "possession",        chance = 4, type = "target" },
+        },
+        [FourCC('u00D')] = {
+            { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+        },
+        [FourCC('u00E')] = {
+            { order = "exhumecorpses", chance = 4, type = "immediate" },
+        },
+        [FourCC('u03E')] = {
+            { order = "devourmagic", chance = 4, type = "target", range = 525 },
+        },
+        [FourCC('U00O')] = {
+            { order = "deathcoil",    chance = 5, type = "target" },
+            { order = "deathpact",    chance = 5, type = "target" },
+            { order = "animatedead",  chance = 5, type = "immediate" },
+        },
+        [FourCC('U00V')] = {
+            { order = "frostnova",    chance = 5, type = "target" },
+            { order = "frostarmor",   chance = 5, type = "target" },
+            { order = "darkritual",   chance = 5, type = "target" },
+        },
+        [FourCC('U00U')] = {
+            { order = "impales",      chance = 5, type = "point" },
+            { order = "carrionswarm", chance = 5, type = "point" },
+            { order = "locustswarm",  chance = 5, type = "immediate" },
+        },
+    },
+    attackedData = {
+        [FourCC('u00A')] = {
+            { order = "cannibalize", chance = 3, type = "immediate", hp = 50 },
+        },
+    },
+    getLvlData = {
+        [FourCC('U00O')] = { skills = { FourCC('A0CO'), FourCC('A0CP'), FourCC('A0CR'), FourCC('A0CN') } },
+        [FourCC('U00V')] = { skills = { FourCC('AQ95'), FourCC('UN99'), FourCC('A0CS'), FourCC('AQ11') } },
+        [FourCC('U00U')] = { skills = { FourCC('A0CK'), FourCC('A0CM'), FourCC('A0BW'), FourCC('A1Q7') } },
     },
     join = Join_Undead,
     wall = FourCC('u00I'),
@@ -1573,6 +1742,59 @@ RegisterAiRace("Demons", {
             { at = 55, action = "techUp", from = FourCC('h0DV'), to = FourCC('h0DW'), cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('n025')] = {
+            { order = "carrionswarm", chance = 5, type = "point" },
+        },
+        [FourCC('n023')] = {
+            { order = "firebolt",   chance = 5, type = "target" },
+            { order = "thunderbolt", chance = 5, type = "target" },
+        },
+        [FourCC('n026')] = {
+            { order = "frostnova", chance = 5, type = "target" },
+        },
+        [FourCC('n024')] = {
+            { order = "banish",    chance = 4, type = "target" },
+            { order = "sleep",     chance = 4, type = "target" },
+        },
+        [FourCC('n022')] = {
+            { order = "flamestrike", chance = 4, type = "point" },
+            { order = "rainoffire", chance = 4, type = "point" },
+        },
+        [FourCC('n020')] = {
+            { order = "doom",       chance = 5, type = "target" },
+            { order = "chainlightning", chance = 5, type = "target" },
+        },
+    },
+    attackerData = {
+        [FourCC('n025')] = {
+            { order = "carrionswarm", chance = 5, type = "point" },
+        },
+        [FourCC('n023')] = {
+            { order = "firebolt",   chance = 5, type = "target" },
+            { order = "thunderbolt", chance = 5, type = "target" },
+        },
+        [FourCC('n026')] = {
+            { order = "frostnova", chance = 5, type = "target" },
+        },
+        [FourCC('n024')] = {
+            { order = "banish",    chance = 4, type = "target" },
+            { order = "sleep",     chance = 4, type = "target" },
+        },
+        [FourCC('n022')] = {
+            { order = "flamestrike", chance = 4, type = "point" },
+            { order = "rainoffire", chance = 4, type = "point" },
+        },
+        [FourCC('n020')] = {
+            { order = "doom",       chance = 5, type = "target" },
+            { order = "chainlightning", chance = 5, type = "target" },
+        },
+    },
+    getLvlData = {
+        [FourCC('N02F')] = { skills = { FourCC('A0M8'), FourCC('A0MB'), FourCC('A0MC'), FourCC('A0M9') } },
+        [FourCC('N02A')] = { skills = { FourCC('A0MF'), FourCC('A0MA'), FourCC('A0ME'), FourCC('A0MD') } },
+        [FourCC('U028')] = { skills = { FourCC('A0MG'), FourCC('A0MO'), FourCC('A0MN'), FourCC('A0MP') } },
+    },
     join = Join_Demons,
     wall = FourCC('n02C'),
 })
@@ -1640,6 +1862,24 @@ RegisterAiRace("Draenei", {
             { at = 25, action = "techUp", from = FourCC('h015'), to = FourCC('h016'), cap = 3 },
             { at = 55, action = "techUp", from = FourCC('h016'), to = FourCC('h017'), cap = 3 },
         },
+    },
+    attackerData = {
+        [FourCC('h01S')] = {
+            { order = "defend",   chance = 5, type = "immediate" },
+            { order = "berserk",   chance = 5, type = "immediate" },
+        },
+        [FourCC('H05K')] = {
+            { order = "healingwave",  chance = 5, type = "heal", allyRange = 550 },
+        },
+    },
+    attackedData = {
+        [FourCC('h01S')] = {
+            { order = "defend",   chance = 3, type = "immediate" },
+            { order = "undefend", chance = 3, type = "immediate" },
+        },
+    },
+    getLvlData = {
+        [FourCC('H05K')] = { skills = { FourCC('AOhw'), FourCC('A06C'), FourCC('A068'), FourCC('A069') } },
     },
     join = Join_Draenei,
 })
@@ -1710,6 +1950,37 @@ RegisterAiRace("Stromgard", {
             { at = 55, action = "techUp", from = FourCC('h0H0'), to = FourCC('h0H1'), cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('h0F4')] = {
+            { order = "defend",   chance = 4, type = "immediate" },
+            { order = "berserk",  chance = 4, type = "immediate" },
+        },
+        [FourCC('h0GT')] = {
+            { order = "thunderclap", chance = 4, type = "immediate" },
+        },
+        [FourCC('h0GX')] = {
+            { order = "flamestrike", chance = 4, type = "point" },
+            { order = "rainoffire",  chance = 4, type = "point" },
+        },
+        [FourCC('h0L3')] = {
+            { order = "bloodlust", chance = 4, type = "target" },
+            { order = "dispel",    chance = 4, type = "point" },
+        },
+        [FourCC('h0HD')] = {
+            { order = "clusterrockets", chance = 4, type = "point" },
+        },
+    },
+    attackedData = {
+        [FourCC('h0F4')] = {
+            { order = "defend",    chance = 3, type = "immediate" },
+            { order = "undefend",  chance = 3, type = "immediate" },
+        },
+    },
+    getLvlData = {
+        [FourCC('H0HB')] = { skills = { FourCC('A0XM'), FourCC('A0XW'), FourCC('A0Y8'), FourCC('A0XZ') } },
+        [FourCC('H0HL')] = { skills = { FourCC('A0XV'), FourCC('A0ZP'), FourCC('A0ZO'), FourCC('A0ZN') } },
+        [FourCC('H0HA')] = { skills = { FourCC('A0ZQ'), FourCC('A0XK'), FourCC('A0Y6'), FourCC('A0Y7') } },
+    },
     join = Join_Stromgard,
     wall = FourCC('h0HG'),
 })
@@ -1778,6 +2049,35 @@ RegisterAiRace("Illidari", {
             { at = 55, action = "techUp", from = FourCC('h0EA'), to = FourCC('h0EB'), cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('h0EK')] = {
+            { order = "firebolt",    chance = 5, type = "target" },
+            { order = "flamestrike", chance = 5, type = "point" },
+        },
+        [FourCC('h0EL')] = {
+            { order = "thunderbolt", chance = 5, type = "target" },
+            { order = "monsoon",     chance = 5, type = "point" },
+        },
+        [FourCC('n02O')] = {
+            { order = "frostnova",   chance = 4, type = "target" },
+            { order = "blizzard",    chance = 4, type = "point" },
+        },
+        [FourCC('n02M')] = {
+            { order = "sleep",       chance = 4, type = "target" },
+        },
+        [FourCC('n02N')] = {
+            { order = "carrionswarm", chance = 4, type = "point" },
+            { order = "curse",        chance = 4, type = "target" },
+        },
+        [FourCC('h04Y')] = {
+            { order = "blink",        chance = 4, type = "point" },
+            { order = "shadowstrike", chance = 4, type = "target", notStructure = true },
+        },
+        [FourCC('h04Z')] = {
+            { order = "faeriefire",   chance = 4, type = "target" },
+            { order = "entanglingroots", chance = 4, type = "target" },
+        },
+    },
     join = Join_Illidari,
     wall = FourCC('h0EN'),
 })
@@ -1839,6 +2139,35 @@ RegisterAiRace("Worgen", {
             { at = 20, action = "tryBuy" },
             { at = 25, action = "techUp", from = FourCC('h0IK'), to = FourCC('h0IL'), cap = 3 },
         },
+    },
+    attackerData = {
+        [FourCC('h0IU')] = {
+            { order = "frenzyon",    chance = 4, type = "immediate" },
+            { order = "berserk",     chance = 4, type = "immediate" },
+        },
+        [FourCC('h0IV')] = {
+            { order = "windwalk",     chance = 4, type = "immediate" },
+            { order = "shadowstrike", chance = 4, type = "target", notStructure = true },
+        },
+        [FourCC('o02T')] = {
+            { order = "howlofterror", chance = 4, type = "immediate" },
+            { order = "roar",         chance = 4, type = "immediate" },
+        },
+        [FourCC('h0NA')] = {
+            { order = "carrionswarm", chance = 4, type = "point" },
+        },
+        [FourCC('h0IW')] = {
+            { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+        },
+        [FourCC('h0J1')] = {
+            { order = "faeriefire", chance = 4, type = "target" },
+            { order = "curse",      chance = 4, type = "target" },
+        },
+    },
+    getLvlData = {
+        [FourCC('H0J2')] = { skills = { FourCC('A11I'), FourCC('A11H'), FourCC('A11J'), FourCC('A11K') } },
+        [FourCC('H0J6')] = { skills = { FourCC('A11L'), FourCC('A11N'), FourCC('A11M'), FourCC('A11O') } },
+        [FourCC('H0J7')] = { skills = { FourCC('A11Q'), FourCC('A11P'), FourCC('A11R'), FourCC('A11S') } },
     },
     join = Join_Worgen,
     wall = FourCC('h0JT'),
@@ -1909,6 +2238,34 @@ RegisterAiRace("Ogres", {
             { at = 55, action = "techUp", from = FourCC('o03D'), to = FourCC('o03E'), cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('o03I')] = {
+            { order = "stomp",    chance = 4, type = "immediate" },
+            { order = "berserk",  chance = 4, type = "immediate" },
+        },
+        [FourCC('o03H')] = {
+            { order = "bloodlust", chance = 4, type = "target" },
+        },
+        [FourCC('o03G')] = {
+            { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+        },
+        [FourCC('o03P')] = {
+            { order = "flamestrike",   chance = 4, type = "point" },
+            { order = "rainoffire",    chance = 4, type = "point" },
+        },
+        [FourCC('o03N')] = {
+            { order = "windwalk",     chance = 4, type = "immediate" },
+        },
+        [FourCC('o03U')] = {
+            { order = "heal",         chance = 4, type = "heal", allyRange = 550 },
+            { order = "chainlightning", chance = 4, type = "target" },
+        },
+    },
+    getLvlData = {
+        [FourCC('N05L')] = { skills = { FourCC('A16V'), FourCC('A16U'), FourCC('A16X'), FourCC('A16W') } },
+        [FourCC('N05K')] = { skills = { FourCC('A173'), FourCC('A175'), FourCC('A172'), FourCC('A174') } },
+        [FourCC('N05J')] = { skills = { FourCC('A16Y'), FourCC('A170'), FourCC('A175'), FourCC('A171') } },
+    },
     join = Join_Ogres,
     wall = FourCC('o038'),
 })
@@ -1964,6 +2321,9 @@ RegisterAiRace("Gnomes", {
     ecoWeights = {
         [FourCC('h0FI')] = 1, [FourCC('h0FK')] = 2,
         [FourCC('h0FR')] = 5, [FourCC('h0FS')] = 8,
+        [FourCC('h0FL')] = 1, [FourCC('h0G7')] = 3,
+        [FourCC('h0G3')] = 2, [FourCC('h0FY')] = 2,
+        [FourCC('h0G0')] = 4, [FourCC('h0FZ')] = 4,
     },
     strategData = {
         gradeCap = 100,
@@ -1971,11 +2331,41 @@ RegisterAiRace("Gnomes", {
             { at = 17, action = "random", branches = {
                 { {FourCC('h0G3'),FourCC('Abds'),6} },
                 { {FourCC('h0FY'),FourCC('Abds'),6} },
+                { {FourCC('h0G0'),FourCC('Abds'),6} },
+            }},
+            { at = 35, gate = "tier2", action = "random", branches = {
+                { {FourCC('h0G3'),FourCC('Arlm'),6} },
+                { {FourCC('h0FY'),FourCC('Arlm'),6} },
             }},
             { at = 20, action = "tryBuy" },
             { at = 25, action = "techUp", from = FourCC('h0FK'), to = FourCC('h0FR'), cap = 3 },
             { at = 55, action = "techUp", from = FourCC('h0FR'), to = FourCC('h0FS'), cap = 3 },
         },
+    },
+    attackerData = {
+        [FourCC('h0FC')] = {
+            { order = "clusterrockets", chance = 4, type = "point" },
+        },
+        [FourCC('h0FB')] = {
+            { order = "thunderclap", chance = 4, type = "immediate" },
+        },
+        [FourCC('h0FP')] = {
+            { order = "silence",     chance = 4, type = "point" },
+            { order = "flamestrike", chance = 4, type = "point" },
+        },
+        [FourCC('h0FQ')] = {
+            { order = "thunderbolt",  chance = 4, type = "target" },
+            { order = "chainlightning", chance = 4, type = "target" },
+        },
+        [FourCC('h0FN')] = {
+            { order = "healingspray", chance = 4, type = "self" },
+            { order = "acidbomb",     chance = 4, type = "target" },
+        },
+    },
+    getLvlData = {
+        [FourCC('H0GG')] = { skills = { FourCC('A0TK'), FourCC('A0TJ'), FourCC('A0D5'), FourCC('A0GW') } },
+        [FourCC('H0GE')] = { skills = { FourCC('A0TH'), FourCC('A0TG'), FourCC('A0TF'), FourCC('A0TE') } },
+        [FourCC('H0GC')] = { skills = { FourCC('A0TD'), FourCC('ANab'), FourCC('A0TC'), FourCC('AHfs') } },
     },
     join = Join_Gnomes,
     wall = FourCC('h0FZ'),
@@ -2009,6 +2399,21 @@ RegisterAiRace("Silitids", {
         tier2 = function(pi) return getAiCount(pi, FourCC('e021')) + getAiCount(pi, FourCC('e020')) >= 1 end,
     },
     production = {
+        pre = function(id, pi, u)
+            if id == FourCC('e01I') then
+                SetUnitTimeScale(u, 1.0)
+                local pool = { FourCC('e01G'), FourCC('e01G'), FourCC('e01G'), FourCC('e01G'),
+                              FourCC('e01Z'), FourCC('e01Z'), FourCC('e01Z'),
+                              FourCC('e01V'), FourCC('e01V'),
+                              FourCC('e01T'), FourCC('e01T'),
+                              FourCC('e01U'), FourCC('e01U'),
+                              FourCC('e01Q'), FourCC('e01Q') }
+                local picked = pool[GetRandomInt(1, 15)]
+                IssueImmediateOrderById(u, picked)
+                return true
+            end
+            return false
+        end,
         [FourCC('e01H')] = { {FourCC('e01R'),3,limit=18} },
         [FourCC('e021')] = { {FourCC('e01R'),3,limit=18} },
         [FourCC('e020')] = { {FourCC('e01R'),3,limit=18} },
@@ -2040,6 +2445,78 @@ RegisterAiRace("Silitids", {
             { at = 55, action = "techUp", from = FourCC('e021'), to = FourCC('e020'), cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('e01T')] = {
+            { order = "forkedlightning", chance = 4, type = "point" },
+            { order = "parasiteon",      chance = 4, type = "immediate" },
+            { order = "carrionswarm",    chance = 4, type = "point" },
+        },
+        [FourCC('e01U')] = {
+            { order = "web", chance = 4, type = "target" },
+        },
+        [FourCC('u020')] = {
+            { order = "replenishmana", chance = 4, type = "immediate" },
+            { order = "replenishlife", chance = 4, type = "immediate" },
+        },
+        [FourCC('u022')] = {
+            { order = "devourmagic", chance = 4, type = "target", range = 525 },
+        },
+        [FourCC('U025')] = {
+            { order = "earthquake",  chance = 5, type = "immediate" },
+            { order = "hex",         chance = 5, type = "target", notStructure = true },
+        },
+        [FourCC('U024')] = {
+            { order = "locustswarm", chance = 5, type = "immediate" },
+            { order = "impales",    chance = 5, type = "point" },
+        },
+    },
+    attackerData = {
+        [FourCC('e01T')] = {
+            { order = "forkedlightning", chance = 4, type = "point" },
+            { order = "parasiteon",      chance = 4, type = "immediate" },
+            { order = "carrionswarm",    chance = 4, type = "point" },
+        },
+        [FourCC('e01U')] = {
+            { order = "web", chance = 4, type = "target" },
+        },
+        [FourCC('u020')] = {
+            { order = "replenishmana", chance = 4, type = "immediate" },
+            { order = "replenishlife", chance = 4, type = "immediate" },
+        },
+        [FourCC('u022')] = {
+            { order = "devourmagic", chance = 4, type = "target", range = 525 },
+        },
+        [FourCC('U025')] = {
+            { order = "earthquake",  chance = 5, type = "immediate" },
+            { order = "hex",         chance = 5, type = "target", notStructure = true },
+        },
+        [FourCC('U024')] = {
+            { order = "locustswarm", chance = 5, type = "immediate" },
+            { order = "impales",     chance = 5, type = "point" },
+        },
+    },
+    getLvlData = {
+        [FourCC('U025')] = { skills = { FourCC('AEtq'), FourCC('AUau'), FourCC('AOhx'), FourCC('A0ST') } },
+        [FourCC('U024')] = { skills = { FourCC('AUls'), FourCC('AEah'), FourCC('AUts'), FourCC('A0SQ') } },
+        [FourCC('U023')] = { skills = { FourCC('A0J2'), FourCC('A0SU'), FourCC('A0SV'), FourCC('A0J1') } },
+    },
+    perebor = function(id, pi, u)
+        if id == FourCC('e01I') then
+            SetUnitTimeScale(u, 1.0)
+            local prod = { {FourCC('e01G'), 4}, {FourCC('e01Z'), 3}, {FourCC('e01V'), 2}, {FourCC('e01T'), 2}, {FourCC('e01U'), 2}, {FourCC('e01Q'), 2} }
+            tArray[0] = 0
+            for _, row in ipairs(prod) do
+                for _ = 1, (row[2] or 1) do
+                    tArray[0] = tArray[0] + 1
+                    tArray[tArray[0]] = row[1]
+                end
+            end
+            if tArray[0] > 0 then
+                local picked = tArray[GetRandomInt(1, tArray[0])]
+                IssueImmediateOrderById(u, picked)
+            end
+        end
+    end,
     join = Join_Silitids,
 })
 
@@ -2108,6 +2585,32 @@ RegisterAiRace("Pandarens", {
             { at = 55, action = "techUp", from = FourCC('pa24'), to = FourCC('pa25'), cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('pa06')] = {
+            { order = "drunkenhaze", chance = 4, type = "target" },
+            { order = "breathoffire", chance = 4, type = "point" },
+        },
+        [FourCC('pa05')] = {
+            { order = "berserk",    chance = 4, type = "immediate" },
+        },
+        [FourCC('pa08')] = {
+            { order = "stomp",       chance = 4, type = "immediate" },
+        },
+        [FourCC('pa29')] = {
+            { order = "heal",        chance = 4, type = "heal", allyRange = 550 },
+            { order = "dispel",      chance = 4, type = "point", range = 490 },
+        },
+        [FourCC('pa35')] = {
+            { order = "cyclone",     chance = 4, type = "target", notStructure = true },
+            { order = "monsoon",     chance = 4, type = "point" },
+        },
+    },
+    getLvlData = {
+        [FourCC('PA36')] = { skills = { FourCC('pa44'), FourCC('PA77'), FourCC('PA76'), FourCC('PA15') } },
+        [FourCC('PA37')] = { skills = { FourCC('PA02'), FourCC('PA51'), FourCC('PA50'), FourCC('PA78') } },
+        [FourCC('PA38')] = { skills = { FourCC('PA75'), FourCC('pa37'), FourCC('PA60') } },
+        [FourCC('PA40')] = { skills = { FourCC('PA77'), FourCC('PA57'), FourCC('PA03'), FourCC('PA59'), FourCC('PA55') } },
+    },
     join = Join_Pandarens,
     wall = FourCC('h0P5'),
 })
@@ -2173,6 +2676,31 @@ RegisterAiRace("Bezlikie", {
             { at = 55, action = "techUp", from = FourCC('h0I7'), to = FourCC('h0I8'), cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('h0MO')] = {
+            { order = "carrionswarm", chance = 4, type = "point" },
+            { order = "sleep",        chance = 4, type = "target" },
+        },
+        [FourCC('h0MN')] = {
+            { order = "frostnova",   chance = 4, type = "target" },
+        },
+        [FourCC('h0IE')] = {
+            { order = "thunderbolt",  chance = 4, type = "target" },
+            { order = "parasite",     chance = 4, type = "target" },
+        },
+        [FourCC('n05I')] = {
+            { order = "doom",         chance = 4, type = "target" },
+            { order = "curse",        chance = 4, type = "target" },
+        },
+        [FourCC('h0IF')] = {
+            { order = "flamestrike",  chance = 4, type = "point" },
+        },
+    },
+    getLvlData = {
+        [FourCC('U02H')] = { skills = { FourCC('A1CJ'), FourCC('A10N'), FourCC('A10L'), FourCC('A1CG') } },
+        [FourCC('U02G')] = { skills = { FourCC('A10I'), FourCC('A10J'), FourCC('A10K'), FourCC('A10H') } },
+        [FourCC('U02I')] = { skills = { FourCC('A10Q'), FourCC('A0WQ'), FourCC('A10R'), FourCC('A10S') } },
+    },
     join = Join_Bezlikie,
     wall = FourCC('h0K3'),
 })
@@ -2237,6 +2765,31 @@ RegisterAiRace("Vrykul", {
             { at = 25, action = "techUp", from = FourCC('h0BQ'), to = FourCC('h0BR'), cap = 3 },
             { at = 55, action = "techUp", from = FourCC('h0BR'), to = FourCC('h0BS'), cap = 3 },
         },
+    },
+    attackerData = {
+        [FourCC('h0AA')] = {
+            { order = "berserk",    chance = 4, type = "immediate" },
+            { order = "roar",       chance = 4, type = "immediate" },
+        },
+        [FourCC('h0AD')] = {
+            { order = "thunderclap", chance = 4, type = "immediate" },
+        },
+        [FourCC('h0BP')] = {
+            { order = "flamestrike",      chance = 4, type = "point" },
+            { order = "breathoffire",     chance = 4, type = "point" },
+        },
+        [FourCC('h0A9')] = {
+            { order = "stomp",       chance = 4, type = "immediate" },
+        },
+        [FourCC('wk08')] = {
+            { order = "bloodlust",   chance = 4, type = "target" },
+            { order = "lightningshield", chance = 4, type = "target" },
+        },
+    },
+    getLvlData = {
+        [FourCC('H0C6')] = { skills = { FourCC('A0ET'), FourCC('A0ES'), FourCC('A0EQ'), FourCC('A0ER') } },
+        [FourCC('H0C5')] = { skills = { FourCC('A0EN'), FourCC('A0EO'), FourCC('A0EM'), FourCC('A0EP') } },
+        [FourCC('H0C7')] = { skills = { FourCC('A0EU'), FourCC('A0EV'), FourCC('A0EW'), FourCC('A0EX') } },
     },
     wall = FourCC('h0D1'),
     naval = aiNavalTrain_Common,
@@ -2305,6 +2858,29 @@ RegisterAiRace("KulTiras", {
             { at = 55, action = "techUp", from = FourCC('h01Y'), to = FourCC('h01Z'), cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('h019')] = {
+            { order = "defend",   chance = 4, type = "immediate" },
+            { order = "berserk",  chance = 4, type = "immediate" },
+        },
+        [FourCC('h01E')] = {
+            { order = "roar",       chance = 4, type = "immediate" },
+        },
+        [FourCC('h01F')] = {
+            { order = "monsoon",     chance = 4, type = "point" },
+            { order = "chainlightning", chance = 4, type = "target" },
+        },
+        [FourCC('h01H')] = {
+            { order = "heal",        chance = 4, type = "heal", allyRange = 550 },
+            { order = "dispel",      chance = 4, type = "point", range = 490 },
+            { order = "innerfire",   chance = 4, type = "target" },
+        },
+    },
+    getLvlData = {
+        [FourCC('H01L')] = { skills = { FourCC('A0TM'), FourCC('A1MF'), FourCC('A07F'), FourCC('A07C') } },
+        [FourCC('H01N')] = { skills = { FourCC('A075'), FourCC('A076'), FourCC('A078'), FourCC('A077') } },
+        [FourCC('H01K')] = { skills = { FourCC('A07B'), FourCC('A07A'), FourCC('A079'), FourCC('A05I') } },
+    },
     naval = aiNavalTrain_Common,
     join = Join_KulTiras,
     wall = FourCC('h0E7'),
@@ -2362,6 +2938,55 @@ RegisterAiRace("Dalaran", {
             { at = 20, action = "tryBuy" },
             { at = 45, action = "fleet", wall = FourCC('h011') },
         },
+    },
+    attackerData = {
+        [FourCC('H04S')] = {
+            { order = "waterelemental", chance = 5, type = "immediate" },
+            { order = "frostnova",      chance = 5, type = "target" },
+            { order = "blizzard",       chance = 5, type = "point" },
+        },
+        [FourCC('H04W')] = {
+            { order = "flamestrike",   chance = 5, type = "point" },
+            { order = "rainoffire",    chance = 5, type = "point" },
+            { order = "summonphoenix", chance = 5, type = "immediate" },
+        },
+        [FourCC('H04X')] = {
+            { order = "massteleport", chance = 5, type = "immediate" },
+            { order = "dispel",       chance = 5, type = "point" },
+        },
+        [FourCC('n00C')] = {
+            { order = "parasite",   chance = 4, type = "target" },
+        },
+        [FourCC('n00D')] = {
+            { order = "carrionswarm", chance = 4, type = "point" },
+        },
+    },
+    attackerData = {
+        [FourCC('H04S')] = {
+            { order = "waterelemental", chance = 5, type = "immediate" },
+            { order = "frostnova",      chance = 5, type = "target" },
+            { order = "blizzard",       chance = 5, type = "point" },
+        },
+        [FourCC('H04W')] = {
+            { order = "flamestrike",   chance = 5, type = "point" },
+            { order = "rainoffire",    chance = 5, type = "point" },
+            { order = "summonphoenix", chance = 5, type = "immediate" },
+        },
+        [FourCC('H04X')] = {
+            { order = "massteleport", chance = 5, type = "immediate" },
+            { order = "dispel",       chance = 5, type = "point" },
+        },
+        [FourCC('n00C')] = {
+            { order = "parasite",   chance = 4, type = "target" },
+        },
+        [FourCC('n00D')] = {
+            { order = "carrionswarm", chance = 4, type = "point" },
+        },
+    },
+    getLvlData = {
+        [FourCC('H04S')] = { skills = { FourCC('A03K'), FourCC('A03J'), FourCC('A03I'), FourCC('A03D') } },
+        [FourCC('H04W')] = { skills = { FourCC('A03Q'), FourCC('A03O'), FourCC('A03M'), FourCC('A03L') } },
+        [FourCC('H04X')] = { skills = { FourCC('A044'), FourCC('A03V'), FourCC('A03U'), FourCC('A1FQ') } },
     },
     wall = FourCC('h011'),
     naval = aiNavalTrain_Common,
@@ -2431,6 +3056,34 @@ RegisterAiRace("IceTrolls", {
             { at = 25, action = "techUp", from = FourCC('o046'), to = FourCC('o047'), cap = 3 },
             { at = 55, action = "techUp", from = FourCC('o047'), to = FourCC('o048'), cap = 3 },
         },
+    },
+    attackerData = {
+        [FourCC('n05S')] = {
+            { order = "berserk",   chance = 4, type = "immediate" },
+        },
+        [FourCC('n05T')] = {
+            { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
+        },
+        [FourCC('n05Z')] = {
+            { order = "frostnova",   chance = 4, type = "target" },
+            { order = "frostarmor",  chance = 4, type = "target" },
+        },
+        [FourCC('n05U')] = {
+            { order = "blizzard",    chance = 4, type = "point" },
+        },
+        [FourCC('n05Y')] = {
+            { order = "healingwave", chance = 4, type = "heal", allyRange = 550 },
+            { order = "bloodlust",   chance = 4, type = "target" },
+        },
+        [FourCC('n05V')] = {
+            { order = "parasite",    chance = 4, type = "target" },
+            { order = "curse",       chance = 4, type = "target" },
+        },
+    },
+    getLvlData = {
+        [FourCC('O04H')] = { skills = { FourCC('A1DR'), FourCC('A1DA'), FourCC('A1DS'), FourCC('A1EB') } },
+        [FourCC('O04G')] = { skills = { FourCC('AOhw'), FourCC('A1DL'), FourCC('AOsw'), FourCC('AOvd') } },
+        [FourCC('O04I')] = { skills = { FourCC('A1EE'), FourCC('A1ED'), FourCC('A1EC'), FourCC('A1EF') } },
     },
     wall = FourCC('h0HO'),
     naval = aiNavalTrain_Horde,
@@ -2502,6 +3155,36 @@ RegisterAiRace("FelOrc", {
             { at = 55, action = "techUp", from = FourCC('o05W'), to = FourCC('o05X'), cap = 3 },
         },
     },
+    attackerData = {
+        [FourCC('n06T')] = {
+            { order = "bloodlust",  chance = 4, type = "target" },
+            { order = "berserk",    chance = 4, type = "immediate" },
+        },
+        [FourCC('n06Q')] = {
+            { order = "lightningshield", chance = 4, type = "target" },
+            { order = "purge",           chance = 4, type = "target" },
+        },
+        [FourCC('n06W')] = {
+            { order = "carrionswarm", chance = 4, type = "point" },
+            { order = "firebolt",     chance = 4, type = "target" },
+        },
+        [FourCC('n06R')] = {
+            { order = "flamestrike",      chance = 4, type = "point" },
+            { order = "rainoffire",       chance = 4, type = "point" },
+        },
+        [FourCC('n06S')] = {
+            { order = "windwalk",    chance = 4, type = "immediate" },
+        },
+        [FourCC('n06V')] = {
+            { order = "healingspray", chance = 4, type = "self" },
+            { order = "dispel",       chance = 4, type = "point" },
+        },
+    },
+    getLvlData = {
+        [FourCC('N072')] = { skills = { FourCC('A1J8'), FourCC('A0EN'), FourCC('A1MD'), FourCC('A1J9') } },
+        [FourCC('N073')] = { skills = { FourCC('AOwk'), FourCC('AOcr'), FourCC('A1JK'), FourCC('AOww') } },
+        [FourCC('N06P')] = { skills = { FourCC('A0N7'), FourCC('A0BE'), FourCC('A1II'), FourCC('A0B7') } },
+    },
     wall = FourCC('h0D3'),
     naval = aiNavalTrain_JungleTrolls,
     join = Join_FelOrc,
@@ -2568,6 +3251,31 @@ RegisterAiRace("Ents", {
             { at = 25, action = "techUp", from = FourCC('e02B'), to = FourCC('e02C'), cap = 3 },
             { at = 55, action = "techUp", from = FourCC('e02C'), to = FourCC('e02D'), cap = 3 },
         },
+    },
+    attackerData = {
+        [FourCC('e02J')] = {
+            { order = "entanglingroots", chance = 4, type = "target" },
+            { order = "forceofnature",   chance = 4, type = "target" },
+        },
+        [FourCC('e02K')] = {
+            { order = "thornsaura",   chance = 4, type = "immediate" },
+        },
+        [FourCC('e02V')] = {
+            { order = "tranquility",  chance = 5, type = "immediate", hp = 45 },
+            { order = "cyclone",      chance = 5, type = "target", notStructure = true },
+        },
+        [FourCC('e03A')] = {
+            { order = "roar",         chance = 4, type = "immediate" },
+        },
+        [FourCC('e02M')] = {
+            { order = "faeriefire",   chance = 4, type = "target" },
+            { order = "innerfire",    chance = 4, type = "target" },
+        },
+    },
+    getLvlData = {
+        [FourCC('E02S')] = { skills = { FourCC('A0PT'), FourCC('A0FW'), FourCC('A0PS'), FourCC('A0C9') } },
+        [FourCC('E02Q')] = { skills = { FourCC('A0PI'), FourCC('A0PK'), FourCC('A0PJ'), FourCC('A0PL') } },
+        [FourCC('E02R')] = { skills = { FourCC('A0PM'), FourCC('A0PN'), FourCC('A0V3'), FourCC('A0PP') } },
     },
     join = Join_Ents,
     wall = FourCC('e02I'),
