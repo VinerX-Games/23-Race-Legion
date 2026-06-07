@@ -8124,6 +8124,25 @@ function startIceTrolls(pi)
     AiRace[pi] = "IceTrolls"
     ProbeLogWrite("[AI] startIceTrolls pi=" .. tostring(pi) .. " workers=5o045 building=1o046")
 end
+---@param pi integer
+---@return nothing
+function startFelOrc(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('n06B'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('o05V'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('n06B')] = 5
+    AiData[pi][FourCC('o05V')] = 1
+    AiData[pi][StringHash("Race")] = "FO"
+    SetPlayerTechResearchedSwap(FourCC('R0KA'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
+    SetPlayerName(p, "FelOrc (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "FelOrc"
+    ProbeLogWrite("[AI] startFelOrc pi=" .. tostring(pi) .. " workers=5n06B building=1o05V")
+end
 -- library Races ends
 -- library AI2:
 ---@param p player
@@ -60193,6 +60212,73 @@ RegisterAiRace("IceTrolls", {
         },
     },
     join = Join_IceTrolls,
+})
+
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_FelOrc(id, pi, u)
+    if id == FourCC('n06B') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("FelOrc", {
+    tokens = {"felorc", "felorcs", "felork"},
+    weight = 1,
+    altar = FourCC('o05Y'),
+    start = startFelOrc,
+    buildings = {
+        seed = FourCC('o060'),
+        { FourCC('o05V'), 4, 4 }, { FourCC('o060'), 18, 4 },
+        { FourCC('o05Y'), 3, 6 }, { FourCC('o05Z'), 10, 4 },
+        { FourCC('o061'), 8, 6, gate = "tier2" }, { FourCC('o062'), 8, 6, gate = "tier2" },
+        { FourCC('o05T'), 5, 2 }, { FourCC('o067'), 8, 4 },
+    },
+    gates = {
+        tier2 = function(pi) return getAiCount(pi, FourCC('o05W')) + getAiCount(pi, FourCC('o05X')) >= 1 end,
+    },
+    production = {
+        [FourCC('o05V')] = { {FourCC('n06B'),3,limit=18} },
+        [FourCC('o05W')] = { {FourCC('n06B'),3,limit=18} },
+        [FourCC('o05X')] = { {FourCC('n06B'),3,limit=18} },
+        [FourCC('o05Z')] = {
+            {FourCC('n06T'), 3}, {FourCC('n06Q'), 3}, {FourCC('n06W'), 2},
+            {FourCC('n06L'), 2}, {FourCC('n06M'), 2}, {FourCC('n06J'), 2},
+            {FourCC('n068'), 2}, {FourCC('n06G'), 2}, {FourCC('n06D'), 2},
+        },
+        [FourCC('o061')] = {
+            {FourCC('n06R'), 3}, {FourCC('n06S'), 2}, {FourCC('n06N'), 2},
+            {FourCC('n06O'), 2}, {FourCC('n067'), 2}, {FourCC('n06C'), 2},
+        },
+        [FourCC('o062')] = {
+            {FourCC('n06V'), 3}, {FourCC('n06K'), 2}, {FourCC('n06U'), 2},
+            {FourCC('n069'), 2}, {FourCC('n06A'), 2},
+        },
+        [FourCC('o05Y')] = {
+            {FourCC('N072'), 1, limit = 1}, {FourCC('N073'), 1, limit = 1}, {FourCC('N06P'), 1, limit = 1},
+        },
+    },
+    ecoWeights = {
+        [FourCC('o060')] = 1, [FourCC('o05V')] = 2,
+        [FourCC('o05W')] = 5, [FourCC('o05X')] = 8,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            { at = 17, action = "random", branches = {
+                { {FourCC('o05T'),FourCC('Abds'),6},{FourCC('o05T'),FourCC('Arlm'),6} },
+                { {FourCC('o05Z'),FourCC('Abds'),6} },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('o05V'), to = FourCC('o05W'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('o05W'), to = FourCC('o05X'), cap = 3 },
+        },
+    },
+    join = Join_FelOrc,
 })
 function InitCustomTriggers()
     InitTrig_sek5()

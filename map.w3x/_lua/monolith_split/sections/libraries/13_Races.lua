@@ -3549,4 +3549,23 @@ function startIceTrolls(pi)
     AiRace[pi] = "IceTrolls"
     ProbeLogWrite("[AI] startIceTrolls pi=" .. tostring(pi) .. " workers=5o045 building=1o046")
 end
+---@param pi integer
+---@return nothing
+function startFelOrc(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('n06B'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('o05V'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('n06B')] = 5
+    AiData[pi][FourCC('o05V')] = 1
+    AiData[pi][StringHash("Race")] = "FO"
+    SetPlayerTechResearchedSwap(FourCC('R0KA'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
+    SetPlayerName(p, "FelOrc (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "FelOrc"
+    ProbeLogWrite("[AI] startFelOrc pi=" .. tostring(pi) .. " workers=5n06B building=1o05V")
+end
 -- library Races ends
