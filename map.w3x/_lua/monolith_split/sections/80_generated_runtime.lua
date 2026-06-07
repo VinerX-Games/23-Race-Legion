@@ -46874,12 +46874,12 @@ function Trig_AiLogAll_Actions()
     --call ForGroup(gGroup,function )
     BJDebugMsg("" + GetPlayerName(gPlayer))
     BJDebugMsg("")
-    BJDebugMsg("Number" + I2S((getAiCount(gPi, StringHash("Number")))))) -- INLINED!!
-    BJDebugMsg("NumberN" + I2S((getAiCount(gPi, StringHash("NumberN")))))) -- INLINED!!
-    BJDebugMsg("NumberPorts" + I2S((getAiCount(gPi, StringHash("NumberPorts")))))) -- INLINED!!
-    BJDebugMsg("NumberGuard" + I2S((getAiCount(gPi, StringHash("NumberGuard")))))) -- INLINED!!
-    BJDebugMsg("T" + I2S((getAiCount(gPi, StringHash("T")))))) -- INLINED!!
-    BJDebugMsg("HV" + I2S((getAiCount(gPi, StringHash("HV")))))) -- INLINED!!
+    BJDebugMsg("Number" + I2S(getAiCount(gPi, StringHash("Number")))) -- INLINED!!
+    BJDebugMsg("NumberN" + I2S(getAiCount(gPi, StringHash("NumberN")))) -- INLINED!!
+    BJDebugMsg("NumberPorts" + I2S(getAiCount(gPi, StringHash("NumberPorts")))) -- INLINED!!
+    BJDebugMsg("NumberGuard" + I2S(getAiCount(gPi, StringHash("NumberGuard")))) -- INLINED!!
+    BJDebugMsg("T" + I2S(getAiCount(gPi, StringHash("T")))) -- INLINED!!
+    BJDebugMsg("HV" + I2S(getAiCount(gPi, StringHash("HV")))) -- INLINED!!
     BJDebugMsg("")
     
     gString="Groupudg_Ai_army[pi]"
