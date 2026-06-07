@@ -3244,6 +3244,7 @@ function startAlliance(pi)
     SetPlayerTechResearchedSwap(FourCC('R0HW'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, p)
+    ConditionalTriggerExecute(gg_trg_AllyOn)
     SetPlayerName(p, "Alliance (" .. I2S(pi + 1) .. ")")
     AiRace[pi] = "Alliance"
     ProbeLogWrite("[AI] startAlliance pi=" .. tostring(pi) .. " workers=5hpea building=1htow")
@@ -3284,5 +3285,61 @@ function startUndead(pi)
     SetPlayerName(p, "Undead (" .. I2S(pi + 1) .. ")")
     AiRace[pi] = "Undead"
     ProbeLogWrite("[AI] startUndead pi=" .. tostring(pi) .. " workers=3u00P building=1n014")
+end
+---@param pi integer
+---@return nothing
+function startDemons(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(8, FourCC('e02Y'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h0DU'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('e02Y')] = 8
+    AiData[pi][FourCC('h0DU')] = 1
+    AiData[pi][StringHash("Race")] = "DE"
+    SetPlayerTechResearchedSwap(FourCC('R0AO'), 1, p)
+    SetPlayerName(p, "Demons (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Demons"
+    ProbeLogWrite("[AI] startDemons pi=" .. tostring(pi) .. " workers=8e02Y building=1h0DU")
+end
+---@param pi integer
+---@return nothing
+function startDraenei(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('h012'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h015'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('h012')] = 5
+    AiData[pi][FourCC('h015')] = 1
+    AiData[pi][StringHash("Race")] = "DR"
+    SetPlayerTechResearchedSwap(FourCC('R07G'), 1, p)
+    SetPlayerName(p, "Draenei (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Draenei"
+    ProbeLogWrite("[AI] startDraenei pi=" .. tostring(pi) .. " workers=5h012 building=1h015")
+end
+---@param pi integer
+---@return nothing
+function startStromgard(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('h0G9'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h0GZ'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    AiData[pi][FourCC('h0G9')] = 5
+    AiData[pi][FourCC('h0GZ')] = 1
+    AiData[pi][StringHash("Race")] = "SG"
+    SetPlayerTechResearchedSwap(FourCC('R0H3'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, p)
+    TriggerExecute(gg_trg_StromgardOn)
+    SetPlayerName(p, "Stromgard (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Stromgard"
+    ProbeLogWrite("[AI] startStromgard pi=" .. tostring(pi) .. " workers=5h0G9 building=1h0GZ")
 end
 -- library Races ends
