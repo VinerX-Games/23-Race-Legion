@@ -1,7 +1,7 @@
 {
   "source_path": "C:\\Games\\23 Race\\23-Race-Legion\\map.w3x\\war3map.lua",
   "source_sha256": "792927cbbe157c7a51058b227bb5777439ece613e12beeb740d2e29634d72259",
-  "section_count": 90,
+  "section_count": 93,
   "sections": [
     {
       "name": "prelude",
@@ -636,8 +636,32 @@
       "library_name": null
     },
     {
-      "name": "gen:triggers_12_silitid_goblin_bloodelf_bandit",
-      "file": "80_runtime/triggers/12_silitid_goblin_bloodelf_bandit.lua",
+      "name": "gen:Silitids",
+      "file": "80_runtime/triggers/races/Silitids.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Goblins",
+      "file": "80_runtime/triggers/races/Goblins.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:BloodElves",
+      "file": "80_runtime/triggers/races/BloodElves.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Bandits",
+      "file": "80_runtime/triggers/races/Bandits.lua",
       "category": "generated_runtime",
       "start_line": 0,
       "end_line": 0,
