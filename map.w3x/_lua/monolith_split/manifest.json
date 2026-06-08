@@ -1,7 +1,7 @@
 {
   "source_path": "C:\\Games\\23 Race\\23-Race-Legion\\map.w3x\\war3map.lua",
   "source_sha256": "5181648a70065e3b8632a083c3946e452fc8f9f5b6538dda68f69226ad9566bb",
-  "section_count": 96,
+  "section_count": 109,
   "sections": [
     {
       "name": "prelude",
@@ -692,16 +692,120 @@
       "library_name": null
     },
     {
-      "name": "gen:triggers_13_subraces_nightelf_naga_illidari_dragon",
-      "file": "80_runtime/triggers/13_subraces_nightelf_naga_illidari_dragon.lua",
+      "name": "gen:NightElf",
+      "file": "80_runtime/triggers/races/NightElf.lua",
       "category": "generated_runtime",
       "start_line": 0,
       "end_line": 0,
       "library_name": null
     },
     {
-      "name": "gen:triggers_14_demon_elemental_undead_boss",
-      "file": "80_runtime/triggers/14_demon_elemental_undead_boss.lua",
+      "name": "gen:Naga",
+      "file": "80_runtime/triggers/races/Naga.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Worgens",
+      "file": "80_runtime/triggers/races/Worgens.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:RedOrden",
+      "file": "80_runtime/triggers/races/RedOrden.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Draenei",
+      "file": "80_runtime/triggers/races/Draenei.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Illidari",
+      "file": "80_runtime/triggers/races/Illidari.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Vryculs",
+      "file": "80_runtime/triggers/races/Vryculs.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Dragons",
+      "file": "80_runtime/triggers/races/Dragons.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Demon",
+      "file": "80_runtime/triggers/races/Demon.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Elementals",
+      "file": "80_runtime/triggers/races/Elementals.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Scourge",
+      "file": "80_runtime/triggers/races/Scourge.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:IceTrolls",
+      "file": "80_runtime/triggers/races/IceTrolls.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Lords",
+      "file": "80_runtime/triggers/races/Lords.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:14_misc_system",
+      "file": "80_runtime/triggers/14_misc_system.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:OldGods",
+      "file": "80_runtime/triggers/races/OldGods.lua",
       "category": "generated_runtime",
       "start_line": 0,
       "end_line": 0,

@@ -24,18 +24,29 @@ SE = SP / "sections"
 
 # bundle relpath -> (first_target, [(boundary_trigger_name, target_relpath), ...])
 R = "80_runtime/triggers/races/"
+T = "80_runtime/triggers/"
 PLAN = {
-    "80_runtime/triggers/08_undead_trolls.lua": (
-        R + "Undead.lua",
+    "80_runtime/triggers/13_subraces_nightelf_naga_illidari_dragon.lua": (
+        R + "NightElf.lua",
         [
-            ("StartForestTrolls", R + "ForestTrolls.lua"),
-            ("StartJungleTrools", R + "JungleTrolls.lua"),
+            ("NagaStart", R + "Naga.lua"),
+            ("StartWorgens", R + "Worgens.lua"),
+            ("Red Orden", R + "RedOrden.lua"),
+            ("Draenei Build Abill", R + "Draenei.lua"),
+            ("IllidaryOn", R + "Illidari.lua"),
+            ("InitLimitsVryculls", R + "Vryculs.lua"),
+            ("PoleAstralaDragons", R + "Dragons.lua"),
         ],
     ),
-    "80_runtime/triggers/10_forsaken_gnomes.lua": (
-        R + "Forsaken.lua",
+    "80_runtime/triggers/14_demon_elemental_undead_boss.lua": (
+        R + "Demon.lua",
         [
-            ("GnomesOn", R + "Gnomes.lua"),
+            ("Units", R + "Elementals.lua"),
+            ("UndeadOn", R + "Scourge.lua"),
+            ("IceTrollsStart", R + "IceTrolls.lua"),
+            ("LordWave", R + "Lords.lua"),
+            ("StartUlt", T + "14_misc_system.lua"),
+            ("KakecCommon", R + "OldGods.lua"),
         ],
     ),
 }
