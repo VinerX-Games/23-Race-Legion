@@ -173,9 +173,9 @@ function Trig_K1T1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["T1_0"] or 0)
+    i=CommonHash[pi]["T1_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["T1" .. i] or 0)
+    b=CommonHash[pi]["T1" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -276,9 +276,9 @@ function Trig_K1T2_Actions()
     local pi= GetPlayerId(p)
     
     -- 
-    i=(CommonHash[pi]["T2_0"] or 0)
+    i=CommonHash[pi]["T2_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["T2" .. i] or 0)
+    b=CommonHash[pi]["T2" .. i] or 0
     --
     
     
@@ -367,9 +367,9 @@ function Trig_K1T2b_Actions()
     
     
     -- 
-    i=(CommonHash[pi]["T2b_0"] or 0)
+    i=CommonHash[pi]["T2b_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["T2b" .. i] or 0)
+    b=CommonHash[pi]["T2b" .. i] or 0
     --
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -487,9 +487,9 @@ function Trig_K1TCav_Actions()
     
     
     -- 
-    i=(CommonHash[pi]["TCav_0"] or 0)
+    i=CommonHash[pi]["TCav_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["TCav" .. i] or 0)
+    b=CommonHash[pi]["TCav" .. i] or 0
     --
     
     
@@ -621,9 +621,9 @@ function Trig_K1T4_Actions()
     
     
     -- 
-    i=(CommonHash[pi]["T3_0"] or 0)
+    i=CommonHash[pi]["T3_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["T3" .. i] or 0)
+    b=CommonHash[pi]["T3" .. i] or 0
     --
     
     --??? ?????
@@ -735,9 +735,9 @@ function Trig_K2T1_Actions()
     
     
     -- 
-    i=(CommonHash[pi]["K1_0"] or 0)
+    i=CommonHash[pi]["K1_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["K1" .. i] or 0)
+    b=CommonHash[pi]["K1" .. i] or 0
     --
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -845,9 +845,9 @@ function Trig_K2T2_Actions()
     
     
     -- 
-    i=(CommonHash[pi]["K2_0"] or 0)
+    i=CommonHash[pi]["K2_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["K2" .. i] or 0)
+    b=CommonHash[pi]["K2" .. i] or 0
     --
     
     aiFixTrainBefore(GetTrainedUnit() , pi)
@@ -952,9 +952,9 @@ function Trig_K2T2b_Actions()
     local pi= GetPlayerId(p)
     
     -- 
-    i=(CommonHash[pi]["K2b_0"] or 0)
+    i=CommonHash[pi]["K2b_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["K2b" .. i] or 0)
+    b=CommonHash[pi]["K2b" .. i] or 0
     --
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -1053,9 +1053,9 @@ function Trig_K2T3_Actions()
     
     
     -- 
-    i=(CommonHash[pi]["K3_0"] or 0)
+    i=CommonHash[pi]["K3_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["K3" .. i] or 0)
+    b=CommonHash[pi]["K3" .. i] or 0
     --
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)

@@ -874,7 +874,7 @@ function Trig_SetLifeNormal_Conditions()
 end
 function Trig_SetLifeNormal_Actions()
    
-    SetUnitLifeBJ(GetTriggerUnit(), ( 3.00 + GetEventDamage() ))
+    SetUnitLifeBJ(GetTriggerUnit(), 3.00 + GetEventDamage())
 end
 --===========================================================================
 function InitTrig_SetLifeNormal()
@@ -1681,11 +1681,11 @@ end
 function Trig_GetMoreStatsBwon_Actions()
     local u= Bwonsamdy[GetPlayerId(GetOwningPlayer(GetKillingUnit()))]
     if u ~= nil then
-        BlzSetUnitMaxHP(u, ( BlzGetUnitMaxHP(u) + 1 ))
-        BlzSetUnitMaxMana(u, ( BlzGetUnitMaxMana(u) + 6 ))
-        SetUnitLifeBJ(u, ( GetUnitStateSwap(UNIT_STATE_LIFE, u) + 1 ))
-        SetUnitManaBJ(u, ( GetUnitStateSwap(UNIT_STATE_MANA, u) + 6 ))
-        BlzSetUnitRealFieldBJ(u, UNIT_RF_MANA_REGENERATION, ( BlzGetUnitRealField(u, UNIT_RF_MANA_REGENERATION) + 0.05 ))
+        BlzSetUnitMaxHP(u, BlzGetUnitMaxHP(u) + 1)
+        BlzSetUnitMaxMana(u, BlzGetUnitMaxMana(u) + 6)
+        SetUnitLifeBJ(u, GetUnitStateSwap(UNIT_STATE_LIFE, u) + 1)
+        SetUnitManaBJ(u, GetUnitStateSwap(UNIT_STATE_MANA, u) + 6)
+        BlzSetUnitRealFieldBJ(u, UNIT_RF_MANA_REGENERATION, BlzGetUnitRealField(u, UNIT_RF_MANA_REGENERATION) + 0.05)
         
     end
     u=nil
@@ -1791,11 +1791,11 @@ function Trig_GetMoreStats_Conditions()
 end
 function Trig_GetMoreStats_Actions()
     local u= GetKillingUnit()
-    BlzSetUnitMaxHP(u, ( BlzGetUnitMaxHP(u) + 5 ))
-    BlzSetUnitMaxMana(u, ( BlzGetUnitMaxMana(u) + 5 ))
-    SetUnitLifeBJ(u, ( GetUnitStateSwap(UNIT_STATE_LIFE, u) + 5.00 ))
+    BlzSetUnitMaxHP(u, BlzGetUnitMaxHP(u) + 5)
+    BlzSetUnitMaxMana(u, BlzGetUnitMaxMana(u) + 5)
+    SetUnitLifeBJ(u, GetUnitStateSwap(UNIT_STATE_LIFE, u) + 5.00)
     
-    SetUnitManaBJ(u, ( GetUnitStateSwap(UNIT_STATE_MANA, u) + 5.00 ))
+    SetUnitManaBJ(u, GetUnitStateSwap(UNIT_STATE_MANA, u) + 5.00)
    
     u=nil
 end
@@ -1838,8 +1838,8 @@ function Trig_Help_Actions()
         u2=BlzGroupUnitAt(g, GetRandomInt(0, udg_LocalInteger2 - 1))
         if u2 ~= nil and UnitAlive(u2) and u ~= u2 then
             
-            SetUnitLifeBJ(u, ( GetUnitStateSwap(UNIT_STATE_LIFE, u) + GetUnitStateSwap(UNIT_STATE_LIFE, u2) * 0.4 ))
-            SetUnitManaBJ(u, ( GetUnitStateSwap(UNIT_STATE_MANA, u) + GetUnitStateSwap(UNIT_STATE_MANA, u2) * 0.4 ))
+            SetUnitLifeBJ(u, GetUnitStateSwap(UNIT_STATE_LIFE, u) + GetUnitStateSwap(UNIT_STATE_LIFE, u2) * 0.4)
+            SetUnitManaBJ(u, GetUnitStateSwap(UNIT_STATE_MANA, u) + GetUnitStateSwap(UNIT_STATE_MANA, u2) * 0.4)
             UnitDamageTargetBJ(u, u2, 9999, ATTACK_TYPE_HERO, DAMAGE_TYPE_DEATH)
             l=AddLightning("AFOD", true, GetUnitX(u), GetUnitY(u), GetUnitX(u2), GetUnitY(u2))
             TriggerSleepAction(0.15)
@@ -1874,7 +1874,7 @@ function Trig_SpelltakesHealth_Actions()
     
     
     
-    SetUnitLifeBJ(u, ( GetUnitStateSwap(UNIT_STATE_LIFE, u) - 75 * GetUnitAbilityLevel(u, GetSpellAbilityId()) ))
+    SetUnitLifeBJ(u, GetUnitStateSwap(UNIT_STATE_LIFE, u) - 75 * GetUnitAbilityLevel(u, GetSpellAbilityId()))
     if GetSpellAbilityId() == FourCC('A1EL') and GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSpellTargetUnit()) then
         
         BlzEndUnitAbilityCooldown(GetTriggerUnit(), FourCC('A1EL'))
@@ -1934,8 +1934,8 @@ function Trig_HelpButton_Actions()
             if u2 ~= nil and UnitAlive(u2) and u ~= u2 then
                 GroupRemoveUnit(g, u2)
                 udg_LocalInteger2=udg_LocalInteger2 - 1
-                SetUnitLifeBJ(u, ( GetUnitStateSwap(UNIT_STATE_LIFE, u) + GetUnitStateSwap(UNIT_STATE_LIFE, u2) * 0.4 ))
-                SetUnitManaBJ(u, ( GetUnitStateSwap(UNIT_STATE_MANA, u) + GetUnitStateSwap(UNIT_STATE_MANA, u2) * 0.4 ))
+                SetUnitLifeBJ(u, GetUnitStateSwap(UNIT_STATE_LIFE, u) + GetUnitStateSwap(UNIT_STATE_LIFE, u2) * 0.4)
+                SetUnitManaBJ(u, GetUnitStateSwap(UNIT_STATE_MANA, u) + GetUnitStateSwap(UNIT_STATE_MANA, u2) * 0.4)
                 UnitDamageTargetBJ(u, u2, 9999, ATTACK_TYPE_HERO, DAMAGE_TYPE_DEATH)
                 l=AddLightning("AFOD", true, GetUnitX(u), GetUnitY(u), GetUnitX(u2), GetUnitY(u2))
                 RemoveLigtingTimed(l , 2)
@@ -2060,7 +2060,7 @@ function Trig_TrainHakkar_Conditions()
 end
 function Trig_TrainHakkar_Actions()
     for bj_forLoopAIndex = 1, 50 do
-        TriggerRegisterUnitLifeEvent(gg_trg_Help, GetTrainedUnit(), LESS_THAN, ( 14 * I2R(GetForLoopIndexA()) ))
+        TriggerRegisterUnitLifeEvent(gg_trg_Help, GetTrainedUnit(), LESS_THAN, 14 * I2R(GetForLoopIndexA()))
     end
     TriggerRegisterUnitLifeEvent(gg_trg_Help, GetTrainedUnit(), LESS_THAN, 2.00)
 end

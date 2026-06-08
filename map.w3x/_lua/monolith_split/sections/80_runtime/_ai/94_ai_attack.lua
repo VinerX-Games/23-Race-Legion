@@ -124,7 +124,7 @@ function TryAttack()
 				
 				-- ?? ??????? ???? ???
 			else
-				local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
+				local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
 				if allyCount == 0 then
 					AiProbeLogLimited(pi_attack, "Log_TryAttack_NoPortalAlliesFast", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=portal-fast targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 				end
@@ -154,7 +154,7 @@ function TryAttack()
 					gUnit2 = FirstOfGroup(gAllyGroup)
 					
 					if gUnit2 == nil then
-						local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
+						local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
 						if attackLogCount < 10 then
 							AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
 							ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=group targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
@@ -270,7 +270,7 @@ function TryAttack()
 					if allyCount == 0 then
 						AiProbeLogLimited(pi_attack, "Log_TryAttack_NoPortalAlliesWide", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 					end
-					local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
+					local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
 					if attackLogCount < 10 then
 						AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
 						ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
@@ -297,7 +297,7 @@ function TryAttack()
 						gUnit2 = FirstOfGroup(gAllyGroup)
 						
 						if gUnit2 == nil then
-							local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
+							local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
 							if attackLogCount < 10 then
 								AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
 								ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=group-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))

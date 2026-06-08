@@ -2167,16 +2167,16 @@ function Trig_SandStrike_Actions()
     if Trig_SandStrike_Func001C() then
         EnableTrigger(gg_trg_Sand_Strike_Loop)
     end
-    udg_SSinteger[0]=( udg_SSinteger[0] + 1 )
-    udg_SSinteger[1]=( udg_SSinteger[1] + 1 )
+    udg_SSinteger[0]=udg_SSinteger[0] + 1
+    udg_SSinteger[1]=udg_SSinteger[1] + 1
     udg_SScaster[udg_SSinteger[1]]=GetTriggerUnit()
     SetUnitPathing(udg_SScaster[udg_SSinteger[1]], false)
     udg_SSfacing[udg_SSinteger[1]]=GetUnitFacing(udg_SScaster[udg_SSinteger[1]])
     udg_SSpointcaster[udg_SSinteger[1]]=GetUnitLoc(udg_SScaster[udg_SSinteger[1]])
-    udg_SSdamage[udg_SSinteger[1]]=( 5.00 + I2R(GetUnitAbilityLevelSwapped(FourCC('A0NF'), udg_SScaster[udg_SSinteger[1]])) )
+    udg_SSdamage[udg_SSinteger[1]]=5.00 + I2R(GetUnitAbilityLevelSwapped(FourCC('A0NF'), udg_SScaster[udg_SSinteger[1]]))
     udg_SStargetpoint[udg_SSinteger[1]]=GetSpellTargetLoc()
     udg_SSeffect[udg_SSinteger[1]]="AbilitiesWeaponsAncientProtectorMissileAncientProtectorMissile.mdl"
-    udg_SS[udg_SSinteger[1]]=( GetUnitAbilityLevelSwapped(FourCC('A0NF'), udg_SScaster[udg_SSinteger[1]]) + 30 )
+    udg_SS[udg_SSinteger[1]]=GetUnitAbilityLevelSwapped(FourCC('A0NF'), udg_SScaster[udg_SSinteger[1]]) + 30
     PauseUnitBJ(true, GetTriggerUnit())
     RemoveLocation(udg_SSpointcaster[udg_SSinteger[1]])
     RemoveLocation(udg_SStargetpoint[udg_SSinteger[1]])
@@ -2238,10 +2238,10 @@ function Trig_Sand_Strike_Loop_Actions()
             udg_SSpointmovecaster[udg_SSinteger[2]]=PolarProjectionBJ(udg_SSpointcaster[udg_SSinteger[2]], I2R(udg_SS[udg_SSinteger[2]]), udg_SSfacing[udg_SSinteger[2]])
             if Trig_Sand_Strike_Loop_Func001Func001Func003C() then
                 RemoveLocation(udg_SSpointmovecaster[udg_SSinteger[2]])
-                udg_SSpointmovecaster[udg_SSinteger[2]]=PolarProjectionBJ(udg_SSpointcaster[udg_SSinteger[2]], I2R(udg_SS[udg_SSinteger[2]]), ( udg_SSfacing[udg_SSinteger[2]] - 180.00 ))
+                udg_SSpointmovecaster[udg_SSinteger[2]]=PolarProjectionBJ(udg_SSpointcaster[udg_SSinteger[2]], I2R(udg_SS[udg_SSinteger[2]]), udg_SSfacing[udg_SSinteger[2]] - 180.00)
             end
             udg_SSgroup[udg_SSinteger[2]]=GetUnitsInRangeOfLocMatching(150.00, udg_SSpointcaster[udg_SSinteger[2]], Condition(Trig_Sand_Strike_Loop_Func001Func001Func004002003))
-            udg_SS[udg_SSinteger[2]]=( udg_SS[udg_SSinteger[2]] - 1 )
+            udg_SS[udg_SSinteger[2]]=udg_SS[udg_SSinteger[2]] - 1
             SetUnitPositionLoc(udg_SScaster[udg_SSinteger[2]], udg_SSpointmovecaster[udg_SSinteger[2]])
             ForGroupBJ(udg_SSgroup[udg_SSinteger[2]], Trig_Sand_Strike_Loop_Func001Func001Func007A)
             RemoveLocation(udg_SSpointmovecaster[udg_SSinteger[2]])
@@ -2250,7 +2250,7 @@ function Trig_Sand_Strike_Loop_Actions()
             if Trig_Sand_Strike_Loop_Func001Func001Func011C() then
                 SetUnitPathing(udg_SScaster[udg_SSinteger[2]], true)
                 PauseUnitBJ(false, udg_SScaster[udg_SSinteger[2]])
-                udg_SSinteger[0]=( udg_SSinteger[0] - 1 )
+                udg_SSinteger[0]=udg_SSinteger[0] - 1
                 if Trig_Sand_Strike_Loop_Func001Func001Func011Func004C() then
                     udg_SSinteger[1]=0
                     DisableTrigger(GetTriggeringTrigger())

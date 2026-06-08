@@ -27,7 +27,7 @@ function Trig_Unit_Loaded_Actions()
         udg_TransportingUnitArray[udg_TransportingIncrement]=GetTransportUnitBJ()
         GroupAddUnitSimple(GetTransportUnitBJ(), udg_TransportingGroup)
         udg_LoadedGroupArray[udg_TransportingIncrement]=CreateGroup()
-        udg_TransportingIncrement=( udg_TransportingIncrement + 1 )
+        udg_TransportingIncrement=udg_TransportingIncrement + 1
     end
     GroupAddUnitSimple(GetLoadedUnitBJ(), udg_LoadedGroupArray[GetUnitUserData(GetTransportUnitBJ())])
     GroupAddUnitSimple(GetLoadedUnitBJ(), udg_LoadedGroup)
@@ -82,7 +82,7 @@ end
 function Trig_Remove_Unit_From_LoadedGroup_Actions()
     GroupRemoveUnitSimple(udg_TempUnit01, udg_LoadedGroup)
     bj_forLoopAIndex=udg_TransportingMin
-    bj_forLoopAIndexEnd=( udg_TransportingIncrement - 1 )
+    bj_forLoopAIndexEnd=udg_TransportingIncrement - 1
     while true do
         if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
         if Trig_Remove_Unit_From_LoadedGroup_Func002Func001C() then
@@ -105,9 +105,9 @@ function Trig_TransportingUnitArray_Message_Func001C()
 end
 function Trig_TransportingUnitArray_Message_Actions()
     if Trig_TransportingUnitArray_Message_Func001C() then
-        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "" .. GetUnitName(udg_TempUnit02) ) .. ( "" .. I2S(CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(udg_TempUnit02)])) ) ))
+        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( "" .. GetUnitName(udg_TempUnit02) ) .. ( "" .. I2S(CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(udg_TempUnit02)])) ))
     else
-        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "" .. GetUnitName(udg_TempUnit02) ) .. "." ))
+        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( "" .. GetUnitName(udg_TempUnit02) ) .. ".")
     end
     UnitAddIndicatorBJ(udg_TempUnit02, 100, 100, 100, 0)
 end
@@ -139,8 +139,8 @@ end
 function Trig_MassPosadka_Copy_Func008A()
     if GetUnitTypeId(GetTriggerUnit()) == GetUnitTypeId(GetEnumUnit()) then
         GroupAddUnit(udg_LocalOtrad, GetEnumUnit())
-        udg_LocalInteger=( udg_LocalInteger + 10 )
-        udg_LocalInteger=( udg_LocalInteger - CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(GetEnumUnit())]) )
+        udg_LocalInteger=udg_LocalInteger + 10
+        udg_LocalInteger=udg_LocalInteger - CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(GetEnumUnit())])
     end
 end
 function Trig_MassPosadka_Copy_Func010002()
@@ -158,7 +158,7 @@ end
 function Trig_MassPosadka_Copy_Func014A()
     udg_LocalPosition2=GetUnitLoc(GetEnumUnit())
     udg_LocalUnit2=GetEnumUnit()
-    udg_LocalInteger=( 10 - CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(GetEnumUnit())]) )
+    udg_LocalInteger=10 - CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(GetEnumUnit())])
     -- ??????? ???????? ??????, ? ????? ??????????? ??? ???????.
     udg_LocalOtrad3=GetRandomSubGroup2(udg_LocalInteger , udg_LocalOtrad2)
     ForGroup(udg_LocalOtrad3, Trig_MassPosadka_Copy_Func014Func006A)
@@ -830,7 +830,7 @@ function ManabombaMissle()
     SetUnitPathing(u2, false)
     IssueTargetOrder(u1, "firebolt", u2)
      
-    TimerStart(t, ( DistanceBetweenPoints(l, destination) / 600.00 ), false, ManabombaNuke)
+    TimerStart(t, DistanceBetweenPoints(l, destination) / 600.00, false, ManabombaNuke)
     SaveLocationHandle(Hash, tid, 0, destination)
     SaveUnitHandle(Hash, tid, 1, u1)
     SaveUnitHandle(Hash, tid, 2, u2)
@@ -1015,7 +1015,7 @@ function Trig_Portal_Periodic_Func001A()
                 udg_Portal_delayFXAbil[udg_Portal_INDEX_CASTER]=udg_Portal_delayFXAbil[udg_Portal_INDEX_TARGET]
                 UnitAddAbilityBJ(udg_Portal_delayFXAbil[udg_Portal_INDEX_CASTER], udg_Portal_traveller)
             end
-            udg_Portal_delay[udg_Portal_INDEX_CASTER]=( udg_Portal_delay[udg_Portal_INDEX_CASTER] - ( 1.00 / 32.00 ) )
+            udg_Portal_delay[udg_Portal_INDEX_CASTER]=udg_Portal_delay[udg_Portal_INDEX_CASTER] - ( 1.00 / 32.00 )
         else
             udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER]=false
             udg_Portal_loc2=GetUnitLoc(udg_Portal_traveller)
@@ -1143,7 +1143,7 @@ function Trig_Portal_Periodic_Func002A()
                 end
             else
                 if Trig_Portal_Periodic_Func002Func007Func003Func002Func014C() then
-                    udg_Portal_loc3=PolarProjectionBJ(udg_Portal_loc1, ( udg_Portal_missileSpeed[udg_Portal_INDEX_TRAVELLER] / 33.00 ), AngleBetweenPoints(udg_Portal_loc1, udg_Portal_loc2))
+                    udg_Portal_loc3=PolarProjectionBJ(udg_Portal_loc1, udg_Portal_missileSpeed[udg_Portal_INDEX_TRAVELLER] / 33.00, AngleBetweenPoints(udg_Portal_loc1, udg_Portal_loc2))
                     SetUnitPositionLocFacingLocBJ(udg_Portal_traveller, udg_Portal_loc3, udg_Portal_loc2)
                     RemoveLocation(udg_Portal_loc3)
                 else
@@ -1203,7 +1203,7 @@ end
 function InitTrig_Portal_Periodic()
     gg_trg_Portal_Periodic=CreateTrigger()
     DisableTrigger(gg_trg_Portal_Periodic)
-    TriggerRegisterTimerEventPeriodic(gg_trg_Portal_Periodic, ( 1 / 32.00 ))
+    TriggerRegisterTimerEventPeriodic(gg_trg_Portal_Periodic, 1 / 32.00)
     TriggerAddAction(gg_trg_Portal_Periodic, Trig_Portal_Periodic_Actions)
 end
 --===========================================================================

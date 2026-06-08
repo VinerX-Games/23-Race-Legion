@@ -20,7 +20,7 @@ function TryBuild()
 	
 	
 	-- Стены и порты: стройка на месте (если рядом берег)
-	gInt = (AiData[gPi][StringHash("NumberPorts")] or 0)
+	gInt = AiData[gPi][StringHash("NumberPorts")] or 0
 	if gInt < 12 and ( not IsTerrainPathable(gX, gY, PATHING_TYPE_WALKABILITY) and not (RectContainsCoords(gg_rct_Outland, gX, gY)) and not (RectContainsCoords(gg_rct_Azgel, gX, gY))) then
 		
 		if Random(1, 2) then

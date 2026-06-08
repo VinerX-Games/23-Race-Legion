@@ -212,7 +212,7 @@ function Trig_CheckType_Actions()
     DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
     while true do
         if i == 23 then break end
-        b=(AiData[i][GetUnitTypeId(u)] or 0)
+        b=AiData[i][GetUnitTypeId(u)] or 0
         DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, GetPlayerName(Player(i)) .. " - " .. I2S(b))
         i=i + 1
     end
@@ -791,7 +791,7 @@ function Trig_PereborBuildings_Code_Func002A()
     gPi=GetPlayerId(gPlayer)
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_OnlyNeaded)
-    local numberCount = (AiData[gPi][StringHash("Number")] or 0)
+    local numberCount = AiData[gPi][StringHash("Number")] or 0
     -- ??????? ???? 0 ??? ????? ??????
     if FirstOfGroup(gGroup) == nil then
         if not (AiData[gPi][StringHash("Log_PereborNoBld")] or false) then
@@ -889,7 +889,7 @@ function PereborNavalb()
     
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, p, B_NavalBases)
-    i=(AiData[pi][StringHash("NumberN")] or 0)
+    i=AiData[pi][StringHash("NumberN")] or 0
     -- ??????? ???? 0 ??? ?????? ????? ?????
     if FirstOfGroup(gGroup) == nil then
         if udg_Octhet then
@@ -1757,12 +1757,12 @@ function Trig_AiLogAll_Actions()
     --call ForGroup(gGroup,function )
     BJDebugMsg("" .. GetPlayerName(gPlayer))
     BJDebugMsg("")
-    BJDebugMsg("Number" .. I2S(((AiData[(gPi )][( StringHash("Number"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberN" .. I2S(((AiData[(gPi )][( StringHash("NumberN"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberPorts" .. I2S(((AiData[(gPi )][( StringHash("NumberPorts"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberGuard" .. I2S(((AiData[(gPi )][( StringHash("NumberGuard"))] or 0)))) -- INLINED!!
-    BJDebugMsg("T" .. I2S(((AiData[(gPi )][( StringHash("T"))] or 0)))) -- INLINED!!
-    BJDebugMsg("HV" .. I2S(((AiData[(gPi )][( StringHash("HV"))] or 0)))) -- INLINED!!
+    BJDebugMsg("Number" .. I2S(AiData[(gPi )][( StringHash("Number"))] or 0)) -- INLINED!!
+    BJDebugMsg("NumberN" .. I2S(AiData[(gPi )][( StringHash("NumberN"))] or 0)) -- INLINED!!
+    BJDebugMsg("NumberPorts" .. I2S(AiData[(gPi )][( StringHash("NumberPorts"))] or 0)) -- INLINED!!
+    BJDebugMsg("NumberGuard" .. I2S(AiData[(gPi )][( StringHash("NumberGuard"))] or 0)) -- INLINED!!
+    BJDebugMsg("T" .. I2S(AiData[(gPi )][( StringHash("T"))] or 0)) -- INLINED!!
+    BJDebugMsg("HV" .. I2S(AiData[(gPi )][( StringHash("HV"))] or 0)) -- INLINED!!
     BJDebugMsg("")
     
     gString="Groupudg_Ai_army[pi]"

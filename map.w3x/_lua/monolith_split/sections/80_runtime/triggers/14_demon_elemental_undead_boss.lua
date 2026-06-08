@@ -220,18 +220,18 @@ function Trig_____________________________________001_Copy_Func004C()
 end
 function Trig_____________________________________001_Copy_Actions()
     udg_Dm[2]=GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetAttackedUnitBJ())
-    udg_Dm[1]=( udg_Dm[2] - GetUnitStateSwap(UNIT_STATE_LIFE, GetAttackedUnitBJ()) )
+    udg_Dm[1]=udg_Dm[2] - GetUnitStateSwap(UNIT_STATE_LIFE, GetAttackedUnitBJ())
     if Trig_____________________________________001_Copy_Func004C() then
-        UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), ( udg_Dm[1] * 0.01 ), ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), udg_Dm[1] * 0.01, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
     else
         if Trig_____________________________________001_Copy_Func004Func001C() then
-            UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), ( udg_Dm[1] * 0.02 ), ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
+            UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), udg_Dm[1] * 0.02, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
         else
             if Trig_____________________________________001_Copy_Func004Func001Func001C() then
-                UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), ( udg_Dm[1] * 0.03 ), ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
+                UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), udg_Dm[1] * 0.03, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
             else
                 if Trig_____________________________________001_Copy_Func004Func001Func001Func001C() then
-                    UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), ( udg_Dm[1] * 0.04 ), ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
+                    UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), udg_Dm[1] * 0.04, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
                 end
             end
         end
@@ -1219,8 +1219,8 @@ end
 -- Trigger: Spell E Copy
 --===========================================================================
 function Trig_Spell_E_Copy_Actions()
-    udg_MUI_E_Glaz=( udg_MUI_E_Glaz + 1 )
-    udg_Antibag_E_Glaz[udg_MUI_E_Glaz]=( udg_Antibag_E_Glaz[udg_MUI_E_Glaz] + 1 )
+    udg_MUI_E_Glaz=udg_MUI_E_Glaz + 1
+    udg_Antibag_E_Glaz[udg_MUI_E_Glaz]=udg_Antibag_E_Glaz[udg_MUI_E_Glaz] + 1
     udg_Cikl_E_Glaz=0
     udg_Dalnost_E_Glaz[udg_MUI_E_Glaz]=0.00
     udg_Caster_E_Glaz[udg_MUI_E_Glaz]=GetTriggerUnit()
@@ -1247,7 +1247,7 @@ function Trig_Spell_E_Dvij_Func001Func001Func007Func001C()
 end
 function Trig_Spell_E_Dvij_Func001Func001Func007A()
     if Trig_Spell_E_Dvij_Func001Func001Func007Func001C() then
-        UnitDamageTargetBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1DA'), udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], GetEnumUnit(), 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1DA'), udg_Caster_E_Glaz[udg_Cikl_E_Glaz])), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         GroupAddUnitSimple(GetEnumUnit(), udg_Group_E_Glaz[udg_Cikl_E_Glaz])
     end
 end
@@ -1268,7 +1268,7 @@ function Trig_Spell_E_Dvij_Actions()
     while true do
         if udg_Cikl_E_Glaz > udg_MUI_E_Glaz then break end
         if Trig_Spell_E_Dvij_Func001Func001C() then
-            udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz]=( udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz] + 0.02 )
+            udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz]=udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz] + 0.02
             udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz]=GetUnitLoc(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])
             SetUnitPositionLoc(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], PolarProjectionBJ(udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz], 60.00, GetUnitFacing(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])))
             AddSpecialEffectLocBJ(udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz], "CosmicBall.mdx")
@@ -1281,7 +1281,7 @@ function Trig_Spell_E_Dvij_Actions()
                 PauseUnitBJ(false, udg_Caster_E_Glaz[udg_Cikl_E_Glaz])
                 udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz]=0.00
                 udg_Logika_E_Glaz[udg_Cikl_E_Glaz]=false
-                udg_Antibag_E_Glaz[udg_Cikl_E_Glaz]=( udg_Antibag_E_Glaz[udg_Cikl_E_Glaz] - 1 )
+                udg_Antibag_E_Glaz[udg_Cikl_E_Glaz]=udg_Antibag_E_Glaz[udg_Cikl_E_Glaz] - 1
                 if Trig_Spell_E_Dvij_Func001Func001Func008Func008C() then
                     PauseTimerBJ(true, udg_Timer_E_Glaz)
                     udg_MUI_E_Glaz=0
@@ -1333,7 +1333,7 @@ function Trig_Spell_E2_Actions()
     UnitDamageTargetBJ(GetEventDamageSource(), u, I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsOtherCrushingWaveCrushingWaveDamage.mdl")
     DestroyEffectBJ(GetLastCreatedEffectBJ())
-    CreateTextTagLocBJ(( "cff00ff00 .. " .. I2S(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)) ), udg_To4kaTarget, 140.00, 9.00, 100, 100, 100, 0)
+    CreateTextTagLocBJ("cff00ff00 .. " .. I2S(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)), udg_To4kaTarget, 140.00, 9.00, 100, 100, 100, 0)
     SetTextTagVelocityBJ(GetLastCreatedTextTag(), 150.00, 90)
     SetTextTagSuspendedBJ(GetLastCreatedTextTag(), false)
     SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -1422,7 +1422,7 @@ end
 -- Trigger: Lech Copy
 --===========================================================================
 function Trig_Lech_Copy_Actions()
-    SetUnitLifeBJ(udg_u, ( GetUnitStateSwap(UNIT_STATE_LIFE, udg_u) + GetEventDamage() ))
+    SetUnitLifeBJ(udg_u, GetUnitStateSwap(UNIT_STATE_LIFE, udg_u) + GetEventDamage())
 end
 --===========================================================================
 function InitTrig_Lech_Copy()
@@ -1439,7 +1439,7 @@ function Trig_Cast_Copy_Actions()
     UnitAddAbilityBJ(FourCC('A1BS'), GetLastCreatedUnit())
     IssueTargetOrderBJ(GetLastCreatedUnit(), "purge", GetSpellAbilityUnit())
     UnitApplyTimedLifeBJ(1.00, FourCC('BTLF'), GetLastCreatedUnit())
-    TriggerSleepAction(( 5.00 + ( 1.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1CB'), GetSpellAbilityUnit())) ) ))
+    TriggerSleepAction(5.00 + ( 1.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1CB'), GetSpellAbilityUnit())) ))
     DisableTrigger(gg_trg_Lech)
 end
 --===========================================================================
@@ -1759,8 +1759,8 @@ function Trig_StartUlt_Func001C()
 end
 function Trig_StartUlt_Actions()
     if Trig_StartUlt_Func001C() then
-        SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD) - 8000 ))
-        SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER, ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) - 8000 ))
+        SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD) - 8000)
+        SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) - 8000)
         UnitAddAbilityBJ(FourCC('MIM4'), GetTriggerUnit())
         SetUnitAbilityLevelSwapped(FourCC('MIM4'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('MIM6'), GetTriggerUnit()))
         BlzUnitHideAbility(GetTriggerUnit(), FourCC('MIM4'), false)
@@ -1771,8 +1771,8 @@ function Trig_StartUlt_Actions()
         IssueImmediateOrderBJ(GetTriggerUnit(), "stomp")
     else
         if Trig_StartUlt_Func001Func001C() then
-            SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD) - 8000 ))
-            SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER, ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) - 8000 ))
+            SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD) - 8000)
+            SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) - 8000)
             UnitAddAbilityBJ(FourCC('MIM4'), GetTriggerUnit())
             SetUnitAbilityLevelSwapped(FourCC('MIM4'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('MIM6'), GetTriggerUnit()))
             BlzUnitHideAbility(GetTriggerUnit(), FourCC('MIM4'), false)
@@ -2139,7 +2139,7 @@ function Trig_SecondChance_Func003Func008C()
     end
    
     if IsPlayerInForce(ConvertedPlayer(udg_LocalInteger), Observers) then
-        DisplayTimedTextToForce(GetPlayersAll(), 5.00, ( ( "" .. GetPlayerName(GetTriggerPlayer()) ) .. ( "" .. ( GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " not " ) ) ))
+        DisplayTimedTextToForce(GetPlayersAll(), 5.00, ( "" .. GetPlayerName(GetTriggerPlayer()) ) .. ( "" .. ( GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " not " ) ))
         return false
     end
     return true
@@ -2162,7 +2162,7 @@ function Trig_SecondChance_Actions()
     udg_LocalInteger=S2I(udg_LocalText2)
     ProbeLogWrite("[CHAT] -raceselect target=" .. tostring(udg_LocalInteger))
     if Trig_SecondChance_Func003C() then
-        udg_LocalPosition2=(StartLoc[GetRandomInt(0, StartLocCount - 1)]) -- INLINED!!
+        udg_LocalPosition2=StartLoc[GetRandomInt(0, StartLocCount - 1)] -- INLINED!!
         DisplayTimedTextToForce(GetPlayersAll(), 5.00, "???? " .. GetPlayerName(GetTriggerPlayer()) .. " ??? ?????? " .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " ?????? ????!")
         DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, "? ??? ???? 15 ????? ?? ??, ????? ????????? ???????!")
         CreateNUnitsAtLoc(1, FourCC('h0HJ'), ConvertedPlayer(udg_LocalInteger), udg_LocalPosition2, bj_UNIT_FACING)
@@ -2191,7 +2191,7 @@ end
 function BridgeRaceSelect(target_index)
     local target_player = ConvertedPlayer(target_index)
     local t = SecondChance[GetPlayerId(target_player)]
-    udg_LocalPosition2=(StartLoc[GetRandomInt(0, StartLocCount - 1)])
+    udg_LocalPosition2=StartLoc[GetRandomInt(0, StartLocCount - 1)]
     DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Bridge gave player " .. GetPlayerName(target_player) .. " race selection")
     DisplayTimedTextToPlayer(target_player, 0, 0, 15.00, "You have 15 minutes to place your capital")
     CreateNUnitsAtLoc(1, FourCC('h0HJ'), target_player, udg_LocalPosition2, bj_UNIT_FACING)
@@ -2232,7 +2232,7 @@ function Trig_GG_Func004A()
 end
 function Trig_GG_Actions()
     --local integer pi = GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r" ))
+    DisplayTextToForce(udg_AllPlayers, GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r")
     --call GroupEnumUnitsOfPlayer( udg_LocalOtrad2, GetTriggerPlayer(), null )
     --call ForGroupBJ( udg_LocalOtrad2, function Trig_GG_Func004A )
     --call ForForce(Vassals[pi], function Freedom)
@@ -3230,8 +3230,8 @@ function Trig_SpawnQtun_Actions()
         else
             udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
         end
-        udg_LocalInteger=R2I(( ( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00 ))
-        udg_LocalInteger2=( udg_LocalInteger * 2 )
+        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
+        udg_LocalInteger2=udg_LocalInteger * 2
         udg_LocalOtrad=GetLastCreatedGroup()
         udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
         ForGroupBJ(udg_LocalOtrad, Trig_SpawnQtun_Func002Func008A)
@@ -3246,8 +3246,8 @@ function Trig_SpawnQtun_Actions()
         else
             udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
         end
-        udg_LocalInteger=R2I(( ( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00 ))
-        udg_LocalInteger2=( udg_LocalInteger * 4 )
+        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
+        udg_LocalInteger2=udg_LocalInteger * 4
         udg_LocalOtrad=GetLastCreatedGroup()
         udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
         ForGroupBJ(udg_LocalOtrad, Trig_SpawnQtun_Func003Func008A)
@@ -3262,8 +3262,8 @@ function Trig_SpawnQtun_Actions()
         else
             udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
         end
-        udg_LocalInteger=R2I(( ( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00 ))
-        udg_LocalInteger2=( udg_LocalInteger * 1 )
+        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
+        udg_LocalInteger2=udg_LocalInteger * 1
         CreateNUnitsAtLoc(udg_LocalInteger2, FourCC('e01Q'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
         udg_LocalOtrad=GetLastCreatedGroup()
         udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
@@ -3279,8 +3279,8 @@ function Trig_SpawnQtun_Actions()
         else
             udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
         end
-        udg_LocalInteger=R2I(( ( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00 ))
-        udg_LocalInteger2=( udg_LocalInteger * 1 )
+        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
+        udg_LocalInteger2=udg_LocalInteger * 1
         CreateNUnitsAtLoc(udg_LocalInteger2, FourCC('e01P'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
         udg_LocalOtrad=GetLastCreatedGroup()
         udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)

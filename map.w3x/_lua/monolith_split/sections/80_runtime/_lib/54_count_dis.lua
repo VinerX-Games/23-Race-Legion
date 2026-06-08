@@ -19,17 +19,17 @@ function AddCountDis(u, pi)
 			
 			-- ????????? ?????????? 
 			if GetUnitAbilityLevel(u, FourCC('A0AY')) >= 1 then
-				income[pi] = (income[pi] + (100.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0AY')))))
+				income[pi] = income[pi] + (100.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0AY'))))
 			elseif GetUnitAbilityLevel(u, FourCC('A0SM')) >= 1 then
-				income[pi] = (income[pi] + (75.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0SM')))))
+				income[pi] = income[pi] + (75.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0SM'))))
 			elseif GetUnitAbilityLevel(u, FourCC('A0VS')) == 1 then
-				income[pi] = (income[pi] + 100)
+				income[pi] = income[pi] + 100
 			end
 			
 			if GetUnitAbilityLevel(u, FourCC('A1HS')) > 0 then
-				income[pi] = (income[pi] - 5)
+				income[pi] = income[pi] - 5
 				i = LoadInteger(Hash, GetHandleId(u), 0)
-				income[i] = (income[i] + 5)
+				income[i] = income[i] + 5
 			end
 			
 			
@@ -49,14 +49,14 @@ function AddCountDis(u, pi)
 			
 			
 			if IsUnitType(u, UNIT_TYPE_HERO) then
-				disincome[pi] = (disincome[pi] + 100.00)
+				disincome[pi] = disincome[pi] + 100.00
 				if GetUnitAbilityLevel(u, FourCC('A0XV')) ~= 0 then	--  ???????????? ??????
 					income[pi] = income[pi] + (100 + GetUnitAbilityLevel(u, FourCC('A0XV')) * 100)
 				end
 				
 			else
 				udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
-				disincome[pi] = (disincome[pi] + (udg_Price * Tax))
+				disincome[pi] = disincome[pi] + (udg_Price * Tax)
 				--  ---------------------------?????? ???????-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 				--  ---------------------------??????? ????????-----------------------------
 				if GetUnitAbilityLevel(u, FourCC('A0A5')) ~= 0 then
@@ -83,7 +83,7 @@ function AddCountDis(u, pi)
 		elseif GetUnitAbilityLevel(u, FourCC('A1HL')) > 0 then
 			udg_UnitsCount[pi] = udg_UnitsCount[pi] + 1
 			udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
-			disincome[pi] = (disincome[pi] + (udg_Price * Tax / 2))
+			disincome[pi] = disincome[pi] + (udg_Price * Tax / 2)
 		end
 		
 	end
@@ -115,19 +115,19 @@ function DelCountDis(u, pi)
 			
 			-- ????????? ??????????
 			if GetUnitAbilityLevel(u, FourCC('A0AY')) >= 1 then
-				income[pi] = (income[pi] - (100.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0AY')))))
+				income[pi] = income[pi] - (100.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0AY'))))
 			elseif GetUnitAbilityLevel(u, FourCC('A0SM')) >= 1 then
-				income[pi] = (income[pi] - (75.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0SM')))))
+				income[pi] = income[pi] - (75.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0SM'))))
 			end
 			
 			if GetUnitAbilityLevel(u, FourCC('A0VS')) == 1 then
-				income[pi] = (income[pi] - 100)
+				income[pi] = income[pi] - 100
 			end
 			
 			if GetUnitAbilityLevel(u, FourCC('A1HS')) > 0 then
-				income[pi] = (income[pi] + 5)
+				income[pi] = income[pi] + 5
 				i = LoadInteger(Hash, GetHandleId(u), 0)
-				income[i] = (income[i] - 5)
+				income[i] = income[i] - 5
 				FlushChildHashtable(Hash, GetHandleId(u))
 			end
 			
@@ -145,7 +145,7 @@ function DelCountDis(u, pi)
 		udg_UnitsCount[pi] = udg_UnitsCount[pi] - 1
 		-- ???
 		if IsUnitType(u, UNIT_TYPE_HERO) then
-			disincome[pi] = (disincome[pi] - 100.00)
+			disincome[pi] = disincome[pi] - 100.00
 			
 			
 			-- ????????? ??????????
@@ -159,7 +159,7 @@ function DelCountDis(u, pi)
 			
 			--  call DisplayTextToPlayer(p,0,0,("?????? ?????? ?? ????? "+GetUnitName(u)))
 			udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
-			disincome[pi] = (disincome[pi] - (udg_Price * Tax))
+			disincome[pi] = disincome[pi] - (udg_Price * Tax)
 			
 			
 			-- ????????? ??????????
@@ -189,7 +189,7 @@ function DelCountDis(u, pi)
 	elseif GetUnitAbilityLevel(u, FourCC('A1HL')) > 0 then
 		udg_UnitsCount[pi] = udg_UnitsCount[pi] - 1
 		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
-		disincome[pi] = (disincome[pi] - (udg_Price * Tax / 2))
+		disincome[pi] = disincome[pi] - (udg_Price * Tax / 2)
 		
 	end
 	

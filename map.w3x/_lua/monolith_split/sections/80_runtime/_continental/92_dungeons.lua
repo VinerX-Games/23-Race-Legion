@@ -10,7 +10,7 @@ function HandleAzgel(x, y, g)
 		RemoveOutsiders(g, udg_B_Azgel)
 		AddOutsiders(g, gg_rct_Nord)
 		if RectContainsCoords(gg_rct_AzNerRocks, x, y) then
-			EnumDestructablesInRect((gg_rct_AzNerRocks), nil, DestroyRocksAct)	--  INLINED!!
+			EnumDestructablesInRect(gg_rct_AzNerRocks, nil, DestroyRocksAct)	--  INLINED!!
 		end
 		return true
 	end

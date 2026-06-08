@@ -245,13 +245,13 @@ end
 ---@return nothing
 function Trig_RRR_Func001A()
 	
-	local l = PolarProjectionBJ(GetUnitLoc(GetEnumUnit()), (7.00 + (4.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2)))), (GetUnitFacing(GetEnumUnit()) + 180.00))
+	local l = PolarProjectionBJ(GetUnitLoc(GetEnumUnit()), 7.00 + (4.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2))), GetUnitFacing(GetEnumUnit()) + 180.00)
 	--  ??? ?????????? ???????? ?? ???????? ?????? 7+ 3 ?????? ???
 	
 	--  ??? ???????? ?? ???????? ????? ?????????? ?? ??????????
 	SetUnitPositionLoc(GetEnumUnit(), l)
 	--  ???? ?????? 0.04 ??? 1+ 2 ?????? ??? 
-	UnitDamageTargetBJ(udg_LocalUnit2, GetEnumUnit(), (1.00 + (2.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2)))), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+	UnitDamageTargetBJ(udg_LocalUnit2, GetEnumUnit(), 1.00 + (2.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2))), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
 	
 	--  ???????? ??????????
 	l = nil
@@ -264,7 +264,7 @@ function GruulForce()
 	local pi = GetPlayerId(GetEnumPlayer())
 	if Gruul[pi] ~= nil then
 		udg_LocalUnit2 = Gruul[pi]
-		ForGroup(GetUnitsInRangeOfLocMatching((450.00 + (55.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), Gruul[pi])))), GetUnitLoc(Gruul[pi]), Condition(Trig_RRR_Func001001003)), Trig_RRR_Func001A)
+		ForGroup(GetUnitsInRangeOfLocMatching(450.00 + (55.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), Gruul[pi]))), GetUnitLoc(Gruul[pi]), Condition(Trig_RRR_Func001001003)), Trig_RRR_Func001A)
 		
 	end
 end
@@ -632,7 +632,7 @@ function IndexUnit()
 		--  Generate a unique integer index for this unit
 		--   
 		if Trig_Unit_Indexer_Func017Func004C() then
-			udg_UDex = (udg_UDexGen + 1)
+			udg_UDex = udg_UDexGen + 1
 			udg_UDexGen = udg_UDex
 		else
 			udg_UDex = udg_UDexRecycle
@@ -669,7 +669,7 @@ function IndexNewUnit()
 	--   
 	--  Recycle indices of units no longer in-play every (15) units created
 	--   
-	udg_UDexWasted = (udg_UDexWasted + 1)
+	udg_UDexWasted = udg_UDexWasted + 1
 	if Trig_Unit_Indexer_Func030C() then
 		udg_UDexWasted = 0
 		udg_UDex = udg_UDexNext[0]
@@ -1217,7 +1217,7 @@ function FG()
 	local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
 	BlzEndUnitAbilityCooldown(GetEnumUnit(), FourCC('A0SG'))
 	IssueImmediateOrder(GetEnumUnit(), "ravenform")
-	income[pi] = (income[pi] - 40)
+	income[pi] = income[pi] - 40
 end
 ---@return nothing
 function Trig_GnomeNotToMuch_Actions()
@@ -1227,7 +1227,7 @@ function Trig_GnomeNotToMuch_Actions()
 	udg_Boolexpr = Type_1
 	
 	if GetUnitTypeId(GetTriggerUnit()) ~= FourCC('h0FL') then	--  ???????? ??? ?????
-		income[pi] = (income[pi] + 40)
+		income[pi] = income[pi] + 40
 		
 		
 		udg_LocalText2 = "???????? ?????. ????????? ????? ??????? ?????."
@@ -1237,20 +1237,20 @@ function Trig_GnomeNotToMuch_Actions()
 			
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 			
-			udg_LocalInteger2 = (udg_LocalInteger - 15 + 1)
+			udg_LocalInteger2 = udg_LocalInteger - 15 + 1
 			udg_LocalOtrad2 = GetRandomSubGroup(udg_LocalInteger2, udg_LocalOtrad)
 			ForGroupBJ(udg_LocalOtrad2, FG)
 		elseif Tl == 2 and udg_LocalInteger >= 30 then
 			
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalInteger2 = (udg_LocalInteger - 30 + 1)
+			udg_LocalInteger2 = udg_LocalInteger - 30 + 1
 			udg_LocalOtrad2 = GetRandomSubGroup(udg_LocalInteger2, udg_LocalOtrad)
 			ForGroupBJ(udg_LocalOtrad2, FG)
 		elseif Tl == 3 and udg_LocalInteger >= 45 then
 			
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 			
-			udg_LocalInteger2 = (udg_LocalInteger - 45 + 1)
+			udg_LocalInteger2 = udg_LocalInteger - 45 + 1
 			udg_LocalOtrad2 = GetRandomSubGroup(udg_LocalInteger2, udg_LocalOtrad)
 			ForGroupBJ(udg_LocalOtrad2, FG)
 			
@@ -1362,15 +1362,15 @@ function Trig_TimerIncome_Actions()
 			
 			
 			r = R2I(udg_UnitsCount[i] / 25.00)
-			logistic[i] = ((500 + 100 * (r - 1)) / 2 * r)	--  ??????????
+			logistic[i] = (500 + 100 * (r - 1)) / 2 * r	--  ??????????
 			
 			
 			--  ---------------------------??????? ?????????-----------------------------
 			t = GetPlayerTechCount(p, FourCC('R04O'), true)
 			if t > 1 then
-				corruption[i] = (disincome[i] * ((t - 1) * 0.15))
+				corruption[i] = disincome[i] * ((t - 1) * 0.15)
 				if EcLog then
-					udg_LocalText2 = ("?????????" .. I2S(R2I(corruption[i])))
+					udg_LocalText2 = "?????????" .. I2S(R2I(corruption[i]))
 					DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 				end
 				
@@ -1381,7 +1381,7 @@ function Trig_TimerIncome_Actions()
 			if t >= 1 then
 				additional[i] = disincome[i] * (udg_MainPrice[i] / (-100.0))
 				if EcLog then
-					udg_LocalText2 = ("?????????????: " .. I2S(R2I(additional[i])))
+					udg_LocalText2 = "?????????????: " .. I2S(R2I(additional[i]))
 					DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 				end
 				
@@ -1396,17 +1396,17 @@ function Trig_TimerIncome_Actions()
 		
 		
 		if EcLog then
-			udg_LocalText2 = ("?????: " .. R2S(income[i] * IncomeMod))
+			udg_LocalText2 = "?????: " .. R2S(income[i] * IncomeMod)
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("??????: " .. R2S(disincome[i]))
+			udg_LocalText2 = "??????: " .. R2S(disincome[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("?????????: " .. R2S(logistic[i]))
+			udg_LocalText2 = "?????????: " .. R2S(logistic[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("??????: " .. I2S(udg_UnitsCount[i]))
+			udg_LocalText2 = "??????: " .. I2S(udg_UnitsCount[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("?????: " .. R2S(balance[i]))
+			udg_LocalText2 = "?????: " .. R2S(balance[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("?????????: " .. R2S(incomeW[i]))
+			udg_LocalText2 = "?????????: " .. R2S(incomeW[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 		end
 		

@@ -566,7 +566,7 @@ print = function(...)
         local v = select(i, ...)
         if v == nil then parts[#parts+1] = "nil"
         elseif type(v) == "table" then parts[#parts+1] = "{tbl}"
-        elseif type(v) == "boolean" then parts[#parts+1] = (v and "true" or "false")
+        elseif type(v) == "boolean" then parts[#parts+1] = v and "true" or "false"
         else parts[#parts+1] = tostring(v) end
     end
     local msg = table.concat(parts, " ")

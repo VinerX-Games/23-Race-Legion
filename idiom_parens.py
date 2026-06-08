@@ -57,12 +57,15 @@ def collect(text, node):
     return None
 
 
+MULTIRET = (n.Call, n.Invoke, n.Dots)
+
+
 def transform(text, tree):
     repls = []
     for node in a.walk(tree):
         if isinstance(node, n.Return):
             # parens around a bare call/vararg in return adjust arity -> keep them
-            if len(node.values) == 1 and not isinstance(node.values[0], (n.Call, n.Invoke, n.Dots)):
+            if len(node.values) == 1 and not isinstance(node.values[0], MULTIRET):
                 r = collect(text, node.values[0])
                 if r:
                     repls.append(r)
@@ -74,7 +77,29 @@ def transform(text, tree):
             r = collect(text, node.test)
             if r:
                 repls.append(r)
-    return repls
+        elif isinstance(node, (n.Call, n.Invoke)):
+            args = node.args
+            last = len(args) - 1
+            for i, arg in enumerate(args):
+                # last arg that is a bare call/vararg: parens adjust arity -> keep
+                if i == last and isinstance(arg, MULTIRET):
+                    continue
+                r = collect(text, arg)
+                if r:
+                    repls.append(r)
+        elif isinstance(node, (n.Assign, n.LocalAssign)):
+            if len(node.targets) == 1 and len(node.values) == 1:
+                r = collect(text, node.values[0])
+                if r:
+                    repls.append(r)
+    # drop candidates nested inside another candidate (avoid overlap corruption)
+    repls.sort(key=lambda c: (c[0], -c[1]))
+    kept = []
+    for c in repls:
+        if kept and c[0] >= kept[-1][0] and c[1] <= kept[-1][1]:
+            continue
+        kept.append(c)
+    return kept
 
 
 if __name__ == "__main__":

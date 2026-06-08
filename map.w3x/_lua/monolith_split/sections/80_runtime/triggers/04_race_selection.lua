@@ -179,7 +179,7 @@ function Trig_UnitsToBuildingSituation2_Conditions()
 end
 function Trig_UnitsToBuildingSituation2_Actions()
     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
-    udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=( udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] - 1 )
+    udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] - 1
     MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
     i=0
 end
@@ -201,7 +201,7 @@ function Trig_CanselSituation2_Conditions()
 end
 function Trig_CanselSituation2_Actions()
     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
-    udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=( udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 1 )
+    udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 1
     MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
     i=0
 end

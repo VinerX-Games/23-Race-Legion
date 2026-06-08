@@ -111,7 +111,7 @@ function aiUnitJoinsArmy(u, pi)
 	-- if not aiUnitJoinsCapitalGuard(u,gUnit,pi) then
 	GroupAddUnit(udg_Ai_army[pi], u)
 	NumberAdd(pi, StringHash("Number"))
-	local joinLogCount = (AiData[pi][StringHash("Log_AiArmyJoinCount")] or 0)
+	local joinLogCount = AiData[pi][StringHash("Log_AiArmyJoinCount")] or 0
 	if joinLogCount < 12 then
 		AiData[pi][StringHash("Log_AiArmyJoinCount")] = joinLogCount + 1
 		ProbeLogWrite("[AIARMY] join pi=" .. tostring(pi) .. " unitId=" .. tostring(GetUnitTypeId(u)) .. " count=" .. tostring(joinLogCount + 1))

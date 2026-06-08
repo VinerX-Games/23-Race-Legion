@@ -20,13 +20,13 @@ function addArmyExp(u, pi)
 		if IsUnitInGroup(gAttacked, udg_ZahvatBuildings) then
 			gReal = 1
 		else
-			gReal = (I2R(GetUnitGoldCost(gId) or 0) * 0.01)
+			gReal = I2R(GetUnitGoldCost(gId) or 0) * 0.01
 		end
 	else
 		if IsUnitType(u, UNIT_TYPE_HERO) then
-			gReal = (GetHeroLevel(u) * 1)
+			gReal = GetHeroLevel(u) * 1
 		else
-			gReal = (I2R(GetUnitGoldCost(gId) or 0) * 0.02)
+			gReal = I2R(GetUnitGoldCost(gId) or 0) * 0.02
 		end
 	end
 	ArmyExp[pi] = ArmyExp[pi] + gReal

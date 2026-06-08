@@ -126,7 +126,7 @@ function Trig_QTunServe_Actions()
     ForForce(GetPlayersAll(), Trig_QTunServe_Func004A)
     ForGroupBJ(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(Trig_QTunServe_Func005001002)), Trig_QTunServe_Func005A)
     GroupAddUnitSimple(gg_unit_n03D_0666, udg_StolicaGroups)
-    BlzSetUnitStringFieldBJ(gg_unit_n03D_0666, UNIT_SF_NAME, ( "cffd45e19r" .. GetUnitName(gg_unit_n03D_0666) ))
+    BlzSetUnitStringFieldBJ(gg_unit_n03D_0666, UNIT_SF_NAME, "cffd45e19r" .. GetUnitName(gg_unit_n03D_0666))
     TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, gg_unit_n03D_0666, EVENT_UNIT_ATTACKED)
     ForForce(GetPlayersAll(), Trig_QTunServe_Func009A)
     SetUnitAbilityLevelSwapped(FourCC('A0W0'), gg_unit_n03D_0666, 2)
@@ -441,8 +441,8 @@ function Trig_TweenChange_Actions()
     if u2 ~= nil then
         SetUnitPosition(u, GetUnitX(u2), GetUnitY(u2))
         SetUnitPosition(u2, x, y)
-        SetUnitLifePercentBJ(u, ( GetUnitLifePercent(u) + 12 * lvl ))
-        SetUnitLifePercentBJ(u2, ( GetUnitLifePercent(u2) + 12 * lvl ))
+        SetUnitLifePercentBJ(u, GetUnitLifePercent(u) + 12 * lvl)
+        SetUnitLifePercentBJ(u2, GetUnitLifePercent(u2) + 12 * lvl)
     end
     BlzStartUnitAbilityCooldown(u, FourCC('A188'), 30)
     
@@ -1684,7 +1684,7 @@ function Trig_CorrupPlus_Actions()
     local p= GetOwningPlayer(GetTriggerUnit())
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AS'), p)
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AT'), p)
-    SetPlayerTechResearchedSwap(FourCC('R04O'), ( GetPlayerTechCountSimple(FourCC('R04O'), p) + 1 ), p)
+    SetPlayerTechResearchedSwap(FourCC('R04O'), GetPlayerTechCountSimple(FourCC('R04O'), p) + 1, p)
     
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, p, nil)
     ForGroupBJ(udg_LocalOtrad2, Trig_CorrupPlus_Func008A)
@@ -1727,7 +1727,7 @@ function Trig_CorrupMinus_Actions()
     local p= GetOwningPlayer(GetTriggerUnit())
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AS'), p)
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AT'), p)
-    SetPlayerTechResearchedSwap(FourCC('R04O'), ( GetPlayerTechCountSimple(FourCC('R04O'), p) - 1 ), p)
+    SetPlayerTechResearchedSwap(FourCC('R04O'), GetPlayerTechCountSimple(FourCC('R04O'), p) - 1, p)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, p, nil)
     ForGroupBJ(udg_LocalOtrad2, Trig_CorrupMinus_Func008A)
     GroupClear(udg_LocalOtrad2)
@@ -1771,7 +1771,7 @@ function Trig_Potreblenie_Func002002()
     return GetUnitAbilityLevelSwapped(FourCC('A0A5'), GetFilterUnit()) ~= 0
 end
 function Trig_Potreblenie_Func005A()
-    SetUnitAbilityLevelSwapped(FourCC('A0A5'), GetEnumUnit(), ( GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) + 1 ))
+    SetUnitAbilityLevelSwapped(FourCC('A0A5'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) + 1)
 end
 function Trig_Potreblenie_Actions()
     if Trig_Potreblenie_Func001C() then
@@ -1798,7 +1798,7 @@ function Trig_PotreblenieTrain_Conditions()
     return GetUnitAbilityLevelSwapped(FourCC('A0A5'), GetTriggerUnit()) >= 1
 end
 function Trig_PotreblenieTrain_Actions()
-    SetUnitAbilityLevelSwapped(FourCC('A0A5'), GetEnumUnit(), ( GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) + 1 ))
+    SetUnitAbilityLevelSwapped(FourCC('A0A5'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) + 1)
 end
 --===========================================================================
 function InitTrig_PotreblenieTrain()
@@ -1921,7 +1921,7 @@ function Trig_PodruvResearc_Func002002()
     return GetUnitAbilityLevelSwapped(FourCC('A0A9'), GetFilterUnit()) ~= 0
 end
 function Trig_PodruvResearc_Func005A()
-    SetUnitAbilityLevelSwapped(FourCC('A0A9'), GetEnumUnit(), ( GetPlayerTechCountSimple(FourCC('R04Q'), GetOwningPlayer(GetTriggerUnit())) + 1 ))
+    SetUnitAbilityLevelSwapped(FourCC('A0A9'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04Q'), GetOwningPlayer(GetTriggerUnit())) + 1)
 end
 function Trig_PodruvResearc_Actions()
     if Trig_PodruvResearc_Func001C() then
@@ -1992,7 +1992,7 @@ end
 function Trig_Samopodruv_Actions()
     local t
     if GetRandomInt(1, 100) < 35 + ( - 5 * GetUnitAbilityLevel(GetAttacker(), FourCC('A0A9')) ) then
-        SetUnitLifeBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetAttacker()) - 15.00 ))
+        SetUnitLifeBJ(GetAttacker(), GetUnitStateSwap(UNIT_STATE_LIFE, GetAttacker()) - 15.00)
         CreateTextTagUnitBJ("TRIGSTR_433", GetAttacker(), - 20.00, 5.00, 100, 100, 100, 0.00)
         t=GetLastCreatedTextTag()
         SetTextTagPermanentBJ(t, false)
@@ -2020,7 +2020,7 @@ end
 function Trig_Samopodjog_Actions()
     local t
     if GetRandomInt(1, 100) < 35 + ( - 5 * GetUnitAbilityLevel(GetAttacker(), FourCC('A0AR')) ) then
-        SetUnitLifeBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetAttacker()) - 15.00 ))
+        SetUnitLifeBJ(GetAttacker(), GetUnitStateSwap(UNIT_STATE_LIFE, GetAttacker()) - 15.00)
         CreateTextTagUnitBJ("TRIGSTR_433", GetAttacker(), - 20.00, 5.00, 100, 100, 100, 0.00)
         t=GetLastCreatedTextTag()
         SetTextTagPermanentBJ(t, false)
@@ -2043,7 +2043,7 @@ end
 -- Trigger: Adrenalin
 --===========================================================================
 function Trig_Adrenalin_Actions()
-    SetUnitLifePercentBJ(GetTriggerUnit(), ( GetUnitLifePercent(GetTriggerUnit()) - 15.00 ))
+    SetUnitLifePercentBJ(GetTriggerUnit(), GetUnitLifePercent(GetTriggerUnit()) - 15.00)
 end
 --===========================================================================
 function InitTrig_Adrenalin()
@@ -4095,7 +4095,7 @@ function Trig_Edvin_Ult_Actions()
             SetUnitX(u, GetUnitX(u2))
             SetUnitY(u, GetUnitY(u2))
             RemoveEffectTimed(AddSpecialEffect("ObjectsSpawnmodelsHumanHumanBloodHumanBloodLarge1.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
-            UnitDamageTargetBJ(u, u2, ( 300 * GetUnitAbilityLevel(u, FourCC('A0N4')) + 2 * GetHeroAgi(u, true) ), ATTACK_TYPE_HERO, DAMAGE_TYPE_FORCE)
+            UnitDamageTargetBJ(u, u2, 300 * GetUnitAbilityLevel(u, FourCC('A0N4')) + 2 * GetHeroAgi(u, true), ATTACK_TYPE_HERO, DAMAGE_TYPE_FORCE)
                  
             
             

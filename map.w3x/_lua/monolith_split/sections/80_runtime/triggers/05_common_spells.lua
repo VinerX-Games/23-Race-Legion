@@ -7,7 +7,7 @@ function Trig_Leave_Ot_Func005C()
 end
 function Trig_Leave_Ot_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r" ))
+    DisplayTextToForce(udg_AllPlayers, GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r")
     ClearPlayer(Player(pi))
     FlushChildHashtable(Hash, GetPlayerId(GetTriggerPlayer()))
     if Trig_Leave_Ot_Func005C() then
@@ -66,7 +66,7 @@ end
 -- Trigger: Lech
 --===========================================================================
 function Trig_Lech_Actions()
-    SetUnitLifeBJ(udg_u, ( GetUnitStateSwap(UNIT_STATE_LIFE, udg_u) + GetEventDamage() ))
+    SetUnitLifeBJ(udg_u, GetUnitStateSwap(UNIT_STATE_LIFE, udg_u) + GetEventDamage())
 end
 --===========================================================================
 function InitTrig_Lech()
@@ -83,7 +83,7 @@ function Trig_Cast_Actions()
     UnitAddAbilityBJ(FourCC('A1BS'), GetLastCreatedUnit())
     IssueTargetOrderBJ(GetLastCreatedUnit(), "purge", GetSpellAbilityUnit())
     UnitApplyTimedLifeBJ(1.00, FourCC('BTLF'), GetLastCreatedUnit())
-    TriggerSleepAction(( 3.00 + ( 1.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A0EK'), GetSpellAbilityUnit())) ) ))
+    TriggerSleepAction(3.00 + ( 1.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A0EK'), GetSpellAbilityUnit())) ))
     DisableTrigger(gg_trg_Lech)
 end
 --===========================================================================
@@ -333,7 +333,7 @@ end
 function Trig_Spell_Cast_Actions()
     udg_Target=GetSpellTargetUnit()
     udg_LogikaCast=true
-    udg_HisloA[0]=( udg_HisloA[0] - 1 )
+    udg_HisloA[0]=udg_HisloA[0] - 1
 end
 --===========================================================================
 function InitTrig_Spell_Cast()
@@ -384,7 +384,7 @@ end
 function Trig_Spell_Dvij_Func004Func007Func002Func005Func002A()
     if Trig_Spell_Dvij_Func004Func007Func002Func005Func002Func001C() then
         GroupAddUnitSimple(GetEnumUnit(), udg_Group)
-        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 100.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), 100.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         udg_To4kaAOE=GetUnitLoc(GetEnumUnit())
         CreateNUnitsAtLoc(1, FourCC('h0MK'), GetOwningPlayer(udg_Caster), udg_To4kaAOE, bj_UNIT_FACING)
         udg_Dummy[4]=GetLastCreatedUnit()
@@ -406,7 +406,7 @@ end
 function Trig_Spell_Dvij_Func004Func007Func004Func006Func002A()
     if Trig_Spell_Dvij_Func004Func007Func004Func006Func002Func001C() then
         GroupAddUnitSimple(GetEnumUnit(), udg_Group)
-        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         udg_To4kaAOE=GetUnitLoc(GetEnumUnit())
         CreateNUnitsAtLoc(1, FourCC('h0MK'), GetOwningPlayer(udg_Caster), udg_To4kaAOE, bj_UNIT_FACING)
         udg_Dummy[4]=GetLastCreatedUnit()
@@ -428,7 +428,7 @@ end
 function Trig_Spell_Dvij_Func004Func007Func006Func005Func002A()
     if Trig_Spell_Dvij_Func004Func007Func006Func005Func002Func001C() then
         GroupAddUnitSimple(GetEnumUnit(), udg_Group)
-        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         udg_To4kaAOE=GetUnitLoc(GetEnumUnit())
         CreateNUnitsAtLoc(1, FourCC('h0MK'), GetOwningPlayer(udg_Caster), udg_To4kaAOE, bj_UNIT_FACING)
         udg_Dummy[4]=GetLastCreatedUnit()
@@ -471,15 +471,15 @@ function Trig_Spell_Dvij_Actions()
     if true then -- INLINED!!
         udg_To4kaCaster=GetUnitLoc(udg_Caster)
         -- ???????? ???????? ???? ???????? + ?? -  ???? ????? ???????? ? ?????? ???????
-        udg_Ygol[1]=( udg_Ygol[1] + 5 )
+        udg_Ygol[1]=udg_Ygol[1] + 5
         if Trig_Spell_Dvij_Func004Func004C() then
-            SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 0.00 + I2R(udg_Ygol[1]) )))
+            SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaCaster, 100.00, 0.00 + I2R(udg_Ygol[1])))
         end
         if Trig_Spell_Dvij_Func004Func005C() then
-            SetUnitPositionLoc(udg_Dummy[1], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 120.00 + I2R(udg_Ygol[1]) )))
+            SetUnitPositionLoc(udg_Dummy[1], PolarProjectionBJ(udg_To4kaCaster, 100.00, 120.00 + I2R(udg_Ygol[1])))
         end
         if Trig_Spell_Dvij_Func004Func006C() then
-            SetUnitPositionLoc(udg_Dummy[2], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 240.00 + I2R(udg_Ygol[1]) )))
+            SetUnitPositionLoc(udg_Dummy[2], PolarProjectionBJ(udg_To4kaCaster, 100.00, 240.00 + I2R(udg_Ygol[1])))
         end
         if Trig_Spell_Dvij_Func004Func007C() then
             -- ?????? ??????? ???
@@ -603,7 +603,7 @@ end
 -- Trigger: Bolvanka
 --===========================================================================
 function Trig_Bolvanka_Actions()
-    UnitDamageTargetBJ(GetTriggerUnit(), GetTriggerUnit(), ( 1 * I2R(GetHeroStatBJ(bj_HEROSTAT_STR, GetTriggerUnit(), false)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+    UnitDamageTargetBJ(GetTriggerUnit(), GetTriggerUnit(), 1 * I2R(GetHeroStatBJ(bj_HEROSTAT_STR, GetTriggerUnit(), false)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
 end
 --===========================================================================
 function InitTrig_Bolvanka()
@@ -619,7 +619,7 @@ end
 function Trig_Fireball_Actions()
     local fireballtarget
     fireballtarget=GetSpellTargetUnit()
-    PolledWait(( DistanceBetweenPoints(GetUnitLoc(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit())) / 1000.00 ))
+    PolledWait(DistanceBetweenPoints(GetUnitLoc(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit())) / 1000.00)
     udg_unit=fireballtarget
     UnitDamageTargetBJ(GetSpellAbilityUnit(), udg_unit, I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSpellAbilityUnit(), false)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
     fireballtarget=nil
@@ -639,7 +639,7 @@ end
 function Trig_Fire_Arrow_Actions()
     local firearrowtarget
     firearrowtarget=GetSpellTargetUnit()
-    PolledWait(( DistanceBetweenPoints(GetUnitLoc(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit())) / 1500.00 ))
+    PolledWait(DistanceBetweenPoints(GetUnitLoc(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit())) / 1500.00)
     udg_unit=firearrowtarget
     UnitDamageTargetBJ(GetSpellAbilityUnit(), udg_unit, I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSpellAbilityUnit(), false)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
     firearrowtarget=nil
@@ -704,14 +704,14 @@ function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Sdelat_Flagman_Ot_Copy_Func005A)
     GroupClear(udg_LocalOtrad2)
-    BlzSetUnitWeaponIntegerFieldBJ(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0, ( BlzGetUnitWeaponIntegerField(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0) * 3 ))
-    BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, ( "cffff0000r - " .. GetUnitName(GetTriggerUnit()) ))
+    BlzSetUnitWeaponIntegerFieldBJ(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0, BlzGetUnitWeaponIntegerField(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0) * 3)
+    BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, "cffff0000r - " .. GetUnitName(GetTriggerUnit()))
     BlzSetUnitIntegerFieldBJ(GetTriggerUnit(), UNIT_IF_TINTING_COLOR_GREEN, 175)
     BlzSetUnitIntegerFieldBJ(GetTriggerUnit(), UNIT_IF_TINTING_COLOR_BLUE, 175)
     UnitAddTypeBJ(UNIT_TYPE_HERO, GetTriggerUnit())
-    BlzSetUnitRealFieldBJ(GetTriggerUnit(), UNIT_RF_SCALING_VALUE, ( BlzGetUnitRealField(GetTriggerUnit(), UNIT_RF_SCALING_VALUE) * 1.25 ))
-    BlzSetUnitArmor(GetTriggerUnit(), ( BlzGetUnitArmor(GetTriggerUnit()) + 5.00 ))
-    BlzSetUnitMaxHP(GetTriggerUnit(), ( BlzGetUnitMaxHP(GetTriggerUnit()) * 3 ))
+    BlzSetUnitRealFieldBJ(GetTriggerUnit(), UNIT_RF_SCALING_VALUE, BlzGetUnitRealField(GetTriggerUnit(), UNIT_RF_SCALING_VALUE) * 1.25)
+    BlzSetUnitArmor(GetTriggerUnit(), BlzGetUnitArmor(GetTriggerUnit()) + 5.00)
+    BlzSetUnitMaxHP(GetTriggerUnit(), BlzGetUnitMaxHP(GetTriggerUnit()) * 3)
     BlzSetUnitRealFieldBJ(GetTriggerUnit(), UNIT_RF_HP, I2R(BlzGetUnitMaxHP(GetTriggerUnit())))
     UnitAddAbilityBJ(FourCC('A008'), GetTriggerUnit())
     GroupAddUnitSimple(GetTriggerUnit(), udg_Flagmans)
@@ -753,7 +753,7 @@ function Trig_Flagman_die_Ot_Actions()
     ForGroupBJ(udg_LocalOtrad2, Trig_Flagman_die_Ot_Func006A)
     
     GroupClear(udg_LocalOtrad2)
-    DisplayTextToPlayer(( GetOwningPlayer(u) ), 0, 0, ( "cffff0000.r" ))
+    DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "cffff0000.r")
     SetPlayerAbilityAvailableBJ(true, FourCC('A009'), GetOwningPlayer(u))
     u=nil
 end

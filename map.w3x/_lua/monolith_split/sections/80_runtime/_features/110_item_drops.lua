@@ -19,7 +19,7 @@ function Unit000387_DropItems()
 	if trigUnit ~= nil then
 		canDrop =  not IsUnitHidden(trigUnit)
 		if canDrop and GetChangingUnit() ~= nil then
-			canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+			canDrop = GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE)
 		end
 	end
 	

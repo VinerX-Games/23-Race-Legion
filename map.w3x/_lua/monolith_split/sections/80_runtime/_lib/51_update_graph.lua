@@ -7,7 +7,7 @@ function PercentGraph(pi)
 	if ThirdColumn[pi] == nil and EnsureMultiboardPlayerRow(pi) == nil then
 		return
 	end
-	MultiboardSetItemValue(ThirdColumn[pi], (R2SW_Polyfill(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount)) .. "%"))
+	MultiboardSetItemValue(ThirdColumn[pi], R2SW_Polyfill(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount)) .. "%")
 end
 ---@param pi integer
 ---@return nothing
@@ -23,7 +23,7 @@ function UpdateGraf(pi)
 	local p = Player(pi)
 	local ownerIndex = EnsureMultiboardPlayerRow(pi)
 	local r = R2I(udg_UnitsCount[pi] / 25.00)
-	logistic[pi] = ((500 + 100 * (r - 1)) / 2 * r)	--  ??????????
+	logistic[pi] = (500 + 100 * (r - 1)) / 2 * r	--  ??????????
 	
 	-- ????? ??????????? ????????
 	if GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) >= 1 then

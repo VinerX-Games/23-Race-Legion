@@ -298,7 +298,7 @@ function Trig_Anub_Vozvratka_Conditions()
     return (( GetUnitAbilityLevelSwapped(FourCC('A1LJ'), BlzGetEventDamageTarget()) > 0 )) and (( GetEventDamage() >= 2.00 )) and (( GetUnitAbilityLevelSwapped(FourCC('A1LJ'), GetEventDamageSource()) == 0 ))
 end
 function Trig_Anub_Vozvratka_Actions()
-    UnitDamageTargetBJ(BlzGetEventDamageTarget(), GetEventDamageSource(), ( 0.50 * I2R(GetHeroStatBJ(bj_HEROSTAT_STR, BlzGetEventDamageTarget(), false)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+    UnitDamageTargetBJ(BlzGetEventDamageTarget(), GetEventDamageSource(), 0.50 * I2R(GetHeroStatBJ(bj_HEROSTAT_STR, BlzGetEventDamageTarget(), false)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
 end
 --===========================================================================
 function InitTrig_Anub_Vozvratka()
@@ -695,7 +695,7 @@ function Trig_GruulSpell_Actions()
     EnableTrigger(gg_trg_RRR)
     
     -- ????? ????? ?????? ?????? 1.10+ 0.15 ?????? ???
-    TriggerSleepAction(( 1.10 + ( 0.15 * I2R(GetUnitAbilityLevel(Gruul[pi], FourCC('A18Q'))) ) ))
+    TriggerSleepAction(1.10 + ( 0.15 * I2R(GetUnitAbilityLevel(Gruul[pi], FourCC('A18Q'))) ))
     
     
     DisableTrigger(gg_trg_RRR)
@@ -1129,7 +1129,7 @@ end
 -- Trigger: Pribavka k zoloty
 --===========================================================================
 function Trig_Pribavka_k_zoloty_Actions()
-    AdjustPlayerStateBJ(( 2000 * GetUnitAbilityLevelSwapped(FourCC('A0ZN'), GetTriggerUnit()) ), GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD)
+    AdjustPlayerStateBJ(2000 * GetUnitAbilityLevelSwapped(FourCC('A0ZN'), GetTriggerUnit()), GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD)
 end
 --===========================================================================
 function InitTrig_Pribavka_k_zoloty()
@@ -1402,7 +1402,7 @@ function Trig_Sluga_qqgsarona_Actions()
     -- --
     ForGroupBJ(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(Trig_Sluga_qqgsarona_Func012001002)), Trig_Sluga_qqgsarona_Func012A)
     GroupAddUnitSimple(gg_unit_n03A_0657, udg_StolicaGroups)
-    BlzSetUnitStringFieldBJ(gg_unit_n03A_0657, UNIT_SF_NAME, ( "cffd45e19r" .. GetUnitName(gg_unit_n03A_0657) ))
+    BlzSetUnitStringFieldBJ(gg_unit_n03A_0657, UNIT_SF_NAME, "cffd45e19r" .. GetUnitName(gg_unit_n03A_0657))
     ForForce(GetPlayersAll(), Trig_Sluga_qqgsarona_Func017A)
     DisableTrigger(GetTriggeringTrigger())
 end
@@ -1734,7 +1734,7 @@ function Trig_Spell2_Conditions()
     return GetUnitAbilityLevel(GetAttacker(), FourCC('A122')) == 1 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE)
 end
 function Trig_Spell2_Actions()
-    UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.014 ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
+    UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.014, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
 end
 --===========================================================================
 function InitTrig_Spell2()

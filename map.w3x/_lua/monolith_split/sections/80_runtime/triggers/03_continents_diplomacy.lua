@@ -136,29 +136,29 @@ function Trig_Continents_set_On_Func013A()
 end
 ---@return nothing
 function Trig_Continents_set_On_Actions()
-	udg_LocalText2 = ("????? ???????????:|cffffff00 ???????|r")
+	udg_LocalText2 = "????? ???????????:|cffffff00 ???????|r"
 	DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
 	udg_LocalText2 = "|cff00ff00????? ???????? ??? ????: |r"
 	if Trig_Continents_set_On_Func004C() then
-		udg_LocalText2 = (udg_LocalText2 .. "????????? ???????????\\" )
+		udg_LocalText2 = udg_LocalText2 .. "????????? ???????????\\"
     end
     if Trig_Continents_set_On_Func005C() then
-        udg_LocalText2=( udg_LocalText2 .. "" )
+        udg_LocalText2=udg_LocalText2 .. ""
     end
     if Trig_Continents_set_On_Func006C() then
-        udg_LocalText2=( udg_LocalText2 .. "" )
+        udg_LocalText2=udg_LocalText2 .. ""
     end
     if Trig_Continents_set_On_Func007C() then
-        udg_LocalText2=( udg_LocalText2 .. "" )
+        udg_LocalText2=udg_LocalText2 .. ""
     end
     if Trig_Continents_set_On_Func008C() then
-        udg_LocalText2=( udg_LocalText2 .. "" )
+        udg_LocalText2=udg_LocalText2 .. ""
     end
     if Trig_Continents_set_On_Func009C() then
-        udg_LocalText2=( udg_LocalText2 .. "" )
+        udg_LocalText2=udg_LocalText2 .. ""
     end
     if Trig_Continents_set_On_Func010C() then
-        udg_LocalText2=( udg_LocalText2 .. "" )
+        udg_LocalText2=udg_LocalText2 .. ""
     end
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
     EnableTrigger(gg_trg_LeaveNeadedRegions)
@@ -190,7 +190,7 @@ function Trig_Continents_Off_Func006A()
     DestroyFogModifier(GetLastCreatedFogModifier())
 end
 function Trig_Continents_Off_Actions()
-    udg_LocalText2=( "cffffff00r" )
+    udg_LocalText2="cffffff00r"
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
     ForGroupBJ(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Continents_Off_Func005001002)), Trig_Continents_Off_Func005A)
     ForForce(udg_AllPlayers, Trig_Continents_Off_Func006A)
@@ -499,7 +499,7 @@ end
 function Trig_EasternOn_Spell_Actions()
     udg_Continents[1]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UM'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UB'), GetTriggerUnit())
 end
@@ -517,7 +517,7 @@ end
 --===========================================================================
 function Trig_EasternOn_Spell_Off_Actions()
     udg_Continents[1]=0
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UB'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UM'), GetTriggerUnit())
 end
@@ -535,7 +535,7 @@ end
 --===========================================================================
 function Trig_EasternOn_Set_Actions()
     udg_Continents[1]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
 end
 --===========================================================================
 function InitTrig_EasternOn_Set()
@@ -578,7 +578,7 @@ end
 function Trig_KalimOn_2_Spell_Actions()
     udg_Continents[2]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UN'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UC'), GetTriggerUnit())
 end
@@ -596,7 +596,7 @@ end
 --===========================================================================
 function Trig_KalimOn_2_Spell_off_Actions()
     udg_Continents[2]=0
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UC'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UN'), GetTriggerUnit())
 end
@@ -615,7 +615,7 @@ end
 function Trig_KalimOn_2_set_Actions()
     udg_Continents[2]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
 end
 --===========================================================================
 function InitTrig_KalimOn_2_set()
@@ -651,7 +651,7 @@ end
 function Trig_Outland_3_spell_Actions()
     udg_Continents[3]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UO'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UD'), GetTriggerUnit())
 end
@@ -669,7 +669,7 @@ end
 --===========================================================================
 function Trig_Outland_3_spell_off_Actions()
     udg_Continents[3]=0
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitRemoveAbilityBJ(FourCC('A0UO'), GetTriggerUnit())
     UnitAddAbilityBJ(FourCC('A0UD'), GetTriggerUnit())
 end
@@ -688,7 +688,7 @@ end
 function Trig_Outland_3_set_Actions()
     udg_Continents[3]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
 end
 --===========================================================================
 function InitTrig_Outland_3_set()
@@ -731,7 +731,7 @@ end
 function Trig_NordOn_4_spell_Actions()
     udg_Continents[4]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitRemoveAbilityBJ(FourCC('A0UE'), GetTriggerUnit())
     UnitAddAbilityBJ(FourCC('A0UP'), GetTriggerUnit())
 end
@@ -749,7 +749,7 @@ end
 --===========================================================================
 function Trig_NordOn_4_spell_off_Actions()
     udg_Continents[4]=0
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UE'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UP'), GetTriggerUnit())
 end
@@ -768,7 +768,7 @@ end
 function Trig_NordOn_4_set_Actions()
     udg_Continents[4]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
 end
 --===========================================================================
 function InitTrig_NordOn_4_set()
@@ -804,7 +804,7 @@ end
 function Trig_Pandaria_5_spell_Actions()
     udg_Continents[5]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UQ'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UF'), GetTriggerUnit())
 end
@@ -822,7 +822,7 @@ end
 --===========================================================================
 function Trig_Pandaria_5_spell_off_Actions()
     udg_Continents[5]=0
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UF'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UQ'), GetTriggerUnit())
 end
@@ -840,7 +840,7 @@ end
 --===========================================================================
 function Trig_Pandaria_5_set_Actions()
     udg_Continents[5]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
 end
 --===========================================================================
 function InitTrig_Pandaria_5_set()
@@ -876,7 +876,7 @@ end
 function Trig_Argus_6_spell_Actions()
     udg_Continents[6]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UR'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UH'), GetTriggerUnit())
 end
@@ -894,7 +894,7 @@ end
 --===========================================================================
 function Trig_Argus_6_spell_off_Actions()
     udg_Continents[6]=0
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UH'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UR'), GetTriggerUnit())
 end
@@ -912,7 +912,7 @@ end
 --===========================================================================
 function Trig_Argus_6_set_Actions()
     udg_Continents[6]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
 end
 --===========================================================================
 function InitTrig_Argus_6_set()
@@ -948,7 +948,7 @@ end
 function Trig_BrokenIsled_7_spell_Actions()
     udg_Continents[7]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0US'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UG'), GetTriggerUnit())
 end
@@ -966,7 +966,7 @@ end
 --===========================================================================
 function Trig_BrokenIsled_7_spell_off_Actions()
     udg_Continents[7]=0
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UG'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0US'), GetTriggerUnit())
 end
@@ -984,7 +984,7 @@ end
 --===========================================================================
 function Trig_BrokenIsled_7_set_Actions()
     udg_Continents[7]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
 end
 --===========================================================================
 function InitTrig_BrokenIsled_7_set()

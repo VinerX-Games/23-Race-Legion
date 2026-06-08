@@ -838,7 +838,7 @@ function Trig_GelbinSpellClick_Func002C()
     return GetUnitLifePercent(GetTriggerUnit()) < 20.00
 end
 function Trig_GelbinSpellClick_Actions()
-    SetUnitLifePercentBJ(GetTriggerUnit(), ( GetUnitLifePercent(GetTriggerUnit()) + 10.00 ))
+    SetUnitLifePercentBJ(GetTriggerUnit(), GetUnitLifePercent(GetTriggerUnit()) + 10.00)
     if Trig_GelbinSpellClick_Func002C() then
         SetUnitAbilityLevelSwapped(FourCC('A0XD'), GetTriggerUnit(), 5)
     else
@@ -872,9 +872,9 @@ end
 --===========================================================================
 function Trig_HeroSell_Actions()
     udg_LocalReal2=GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit())
-    udg_LocalReal2=( udg_LocalReal2 * I2R(GetUnitAbilityLevelSwapped(FourCC('A0TF'), GetTriggerUnit())) )
-    udg_LocalReal2=( udg_LocalReal2 * 0.25 )
-    SetUnitLifeBJ(GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) + udg_LocalReal2 ))
+    udg_LocalReal2=udg_LocalReal2 * I2R(GetUnitAbilityLevelSwapped(FourCC('A0TF'), GetTriggerUnit()))
+    udg_LocalReal2=udg_LocalReal2 * 0.25
+    SetUnitLifeBJ(GetTriggerUnit(), GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) + udg_LocalReal2)
     KillUnit(GetSpellTargetUnit())
 end
 --===========================================================================

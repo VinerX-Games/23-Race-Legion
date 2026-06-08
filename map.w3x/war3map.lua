@@ -566,7 +566,7 @@ print = function(...)
         local v = select(i, ...)
         if v == nil then parts[#parts+1] = "nil"
         elseif type(v) == "table" then parts[#parts+1] = "{tbl}"
-        elseif type(v) == "boolean" then parts[#parts+1] = (v and "true" or "false")
+        elseif type(v) == "boolean" then parts[#parts+1] = v and "true" or "false"
         else parts[#parts+1] = tostring(v) end
     end
     local msg = table.concat(parts, " ")
@@ -4481,7 +4481,7 @@ end
 ---@param i integer
 ---@return nothing
 function s__SanctifiedEnchantment_SaveThis(this, h, i)
-	SaveInteger(Global_Hash, GetHandleId((h)), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (i), (this))	--  INLINED!!
+	SaveInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (i), this)	--  INLINED!!
 end
 ---@param h handle
 ---@param i integer
@@ -4493,49 +4493,49 @@ end
 ---@param i integer
 ---@return nothing
 function s__SanctifiedEnchantment_Flush(h, i)
-	SaveInteger(Global_Hash, GetHandleId((h)), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (i), (0))	--  INLINED!!
+	SaveInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (i), 0)	--  INLINED!!
 end
 ---@param h handle
 ---@param s integer
 ---@return nothing
 function s__SanctifiedEnchantment_SaveUnique(h, s)
-	SaveInteger(Global_Hash, GetHandleId((h)), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (-1), (s))	--  INLINED!!
+	SaveInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (-1), s)	--  INLINED!!
 end
 ---@param this integer
 ---@param h handle
 ---@return nothing
 function s__SanctifiedEnchantment_SaveThisUnique(this, h)
-	SaveInteger(Global_Hash, GetHandleId(((h))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (-1), ((this)))	--  INLINED!!
+	SaveInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (-1), this)	--  INLINED!!
 end
 ---@param h handle
 ---@return integer
 function s__SanctifiedEnchantment_LoadUnique(h)
-	return (LoadInteger(Global_Hash, GetHandleId((h)), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (-1)))	--  INLINED!!
+	return (LoadInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (-1)))	--  INLINED!!
 end
 ---@param h handle
 ---@return nothing
 function s__SanctifiedEnchantment_FlushUnique(h)
-	SaveInteger(Global_Hash, GetHandleId(((h))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + ((-1)), (0))	--  INLINED!!
+	SaveInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + ((-1)), 0)	--  INLINED!!
 end
 ---@param h handle
 ---@param c integer
 ---@return nothing
 function s__SanctifiedEnchantment_BindTemplate___SetCount(h, c)
-	SaveInteger(Global_Hash, GetHandleId((h)), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0), (c))	--  INLINED!!
+	SaveInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0), c)	--  INLINED!!
 end
 ---@param h handle
 ---@return integer
 function s__SanctifiedEnchantment_GetCount(h)
-	return (LoadInteger(Global_Hash, GetHandleId((h)), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0)))	--  INLINED!!
+	return (LoadInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0)))	--  INLINED!!
 end
 ---@param h handle
 ---@param s integer
 ---@return nothing
 function s__SanctifiedEnchantment_Add(h, s)
-	local c = (LoadInteger(Global_Hash, GetHandleId(((h))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0))) + 1	--  INLINED!!
+	local c = (LoadInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0))) + 1	--  INLINED!!
 	if c < JASS_MAX_ARRAY_SIZE then
-		SaveInteger(Global_Hash, GetHandleId((h)), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (c), (s))	--  INLINED!!
-		SaveInteger(Global_Hash, GetHandleId(((h))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0), ((c)))	--  INLINED!!
+		SaveInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (c), s)	--  INLINED!!
+		SaveInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0), c)	--  INLINED!!
 	end
 end
 ---@param this integer
@@ -4548,14 +4548,14 @@ end
 ---@param s integer
 ---@return nothing
 function s__SanctifiedEnchantment_Remove(h, s)
-	local c = (LoadInteger(Global_Hash, GetHandleId(((h))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0)))	--  INLINED!!
+	local c = LoadInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0))	--  INLINED!!
 	local i = c
 	while true do
 		if i <= 0 then break end
-		if (LoadInteger(Global_Hash, GetHandleId((h)), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (i))) == s then	--  INLINED!!
-			SaveInteger(Global_Hash, GetHandleId((h)), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (i), ((LoadInteger(Global_Hash, GetHandleId((h)), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (c)))))	--  INLINED!!
-			SaveInteger(Global_Hash, GetHandleId(((h))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + ((c)), (0))	--  INLINED!!
-			SaveInteger(Global_Hash, GetHandleId(((h))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0), ((c - 1)))	--  INLINED!!
+		if (LoadInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (i))) == s then	--  INLINED!!
+			SaveInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (i), ((LoadInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (c)))))	--  INLINED!!
+			SaveInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + ((c)), 0)	--  INLINED!!
+			SaveInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0), c - 1)	--  INLINED!!
 			if true then break end
 		end
 		i = i - 1
@@ -4572,23 +4572,23 @@ end
 ---@return nothing
 function s__SanctifiedEnchantment_RemoveOrdered(h, s)
 	local b = false
-	local c = (LoadInteger(Global_Hash, GetHandleId(((h))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0)))	--  INLINED!!
+	local c = LoadInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0))	--  INLINED!!
 	local i = 1
 	while true do
 		if i > c then break end
 		if  not b then
-			if (LoadInteger(Global_Hash, GetHandleId((h)), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (i))) == s then	--  INLINED!!
+			if (LoadInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (i))) == s then	--  INLINED!!
 				b = true
 			end
 		end
 		if b then
-			SaveInteger(Global_Hash, GetHandleId((h)), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (i), ((LoadInteger(Global_Hash, GetHandleId((h)), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (i + 1)))))	--  INLINED!!
+			SaveInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (i), ((LoadInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (i + 1)))))	--  INLINED!!
 		end
 		i = i + 1
 	end
 	if b then
-		SaveInteger(Global_Hash, GetHandleId(((h))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + ((c)), (0))	--  INLINED!!
-		SaveInteger(Global_Hash, GetHandleId(((h))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0), ((c - 1)))	--  INLINED!!
+		SaveInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + ((c)), 0)	--  INLINED!!
+		SaveInteger(Global_Hash, GetHandleId(h), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (0), c - 1)	--  INLINED!!
 	end
 end
 ---@param this integer
@@ -4610,11 +4610,11 @@ end
 ---@return nothing
 function s__SanctifiedEnchantment_destroy(this)
 	DisableTrigger(s__SanctifiedEnchantment_Trigger[this])
-	SaveInteger(Global_Hash, GetHandleId((((s__SanctifiedEnchantment_Trigger[this])))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + ((-1)), (0))	--  INLINED!!
+	SaveInteger(Global_Hash, GetHandleId(s__SanctifiedEnchantment_Trigger[this]), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + ((-1)), 0)	--  INLINED!!
 	DestroyTrigger(s__SanctifiedEnchantment_Trigger[this])
 	s__SanctifiedEnchantment_Trigger[this] = nil
 	--  ====================
-	SaveInteger(Global_Hash, GetHandleId((((s__SanctifiedEnchantment_Target[this])))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + ((-1)), (0))	--  INLINED!!
+	SaveInteger(Global_Hash, GetHandleId(s__SanctifiedEnchantment_Target[this]), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + ((-1)), 0)	--  INLINED!!
 	UnitRemoveAbility(s__SanctifiedEnchantment_Target[this], SanctifiedEnchantment_SkillBookId)
 	UnitRemoveAbility(s__SanctifiedEnchantment_Target[this], SanctifiedEnchantment_SkillBuffStatusId)
 	s__SanctifiedEnchantment_Target[this] = nil
@@ -4622,7 +4622,7 @@ function s__SanctifiedEnchantment_destroy(this)
 end
 ---@return boolean
 function s__SanctifiedEnchantment_Function()
-	local this = (LoadInteger(Global_Hash, GetHandleId(((GetTriggeringTrigger()))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (-1)))	--  INLINED!!
+	local this = LoadInteger(Global_Hash, GetHandleId(((GetTriggeringTrigger()))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (-1))	--  INLINED!!
 	if GetTriggerEventId() == EVENT_GAME_TIMER_EXPIRED then
 		s__SanctifiedEnchantment_Time[this] = s__SanctifiedEnchantment_Time[this] + s__SanctifiedEnchantment_Date
 		if s__SanctifiedEnchantment_Time[this] >= SanctifiedEnchantment_BuffDuration[s__SanctifiedEnchantment_Levelthis] or GetUnitAbilityLevel(s__SanctifiedEnchantment_Target[this], SanctifiedEnchantment_SkillBuffStatusId) == 0 then
@@ -4657,7 +4657,7 @@ function s__SanctifiedEnchantment_create(c, t)
 end
 ---@return nothing
 function SanctifiedEnchantment___SkillAction_EFFECT()
-	local se = (LoadInteger(Global_Hash, GetHandleId(((GetSpellTargetUnit()))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (-1)))	--  INLINED!!
+	local se = LoadInteger(Global_Hash, GetHandleId(((GetSpellTargetUnit()))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (-1))	--  INLINED!!
 	if se > 0 then
 		s__SanctifiedEnchantment_update(se, GetTriggerUnit())
 	else
@@ -4803,7 +4803,7 @@ function aiUnitJoinsArmy(u, pi)
 	-- if not aiUnitJoinsCapitalGuard(u,gUnit,pi) then
 	GroupAddUnit(udg_Ai_army[pi], u)
 	NumberAdd(pi, StringHash("Number"))
-	local joinLogCount = (AiData[pi][StringHash("Log_AiArmyJoinCount")] or 0)
+	local joinLogCount = AiData[pi][StringHash("Log_AiArmyJoinCount")] or 0
 	if joinLogCount < 12 then
 		AiData[pi][StringHash("Log_AiArmyJoinCount")] = joinLogCount + 1
 		ProbeLogWrite("[AIARMY] join pi=" .. tostring(pi) .. " unitId=" .. tostring(GetUnitTypeId(u)) .. " count=" .. tostring(joinLogCount + 1))
@@ -8427,7 +8427,7 @@ function createAiPlayer(pi, raceToken)
 
 	-- Задаю место
 
-	udg_LocalPoint = (StartLoc[GetRandomInt(0, StartLocCount - 1)])	--  INLINED!!
+	udg_LocalPoint = StartLoc[GetRandomInt(0, StartLocCount - 1)]	--  INLINED!!
 	ProbeLogWrite("[AI] createAiPlayer start location set")
 
 	--  Раса аи (опциональный форс через raceToken, иначе случайно)
@@ -8441,7 +8441,7 @@ function createAiPlayer(pi, raceToken)
 	ProbeLogWrite("[AI] createAiPlayer race=" .. tostring(AiRace[pi]) .. " set")
 	
 	udg_LocalText2 = GetPlayerName(gPlayer)
-	udg_LocalText2 = ((I2S(pi + 1) .. ". ") .. udg_LocalText2)
+	udg_LocalText2 = (I2S(pi + 1) .. ". ") .. udg_LocalText2
 	local ownerIndex = EnsureMultiboardPlayerRow(pi)
 	if ownerIndex ~= nil then
 		MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 0], udg_LocalText2)
@@ -9558,13 +9558,13 @@ function addArmyExp(u, pi)
 		if IsUnitInGroup(gAttacked, udg_ZahvatBuildings) then
 			gReal = 1
 		else
-			gReal = (I2R(GetUnitGoldCost(gId) or 0) * 0.01)
+			gReal = I2R(GetUnitGoldCost(gId) or 0) * 0.01
 		end
 	else
 		if IsUnitType(u, UNIT_TYPE_HERO) then
-			gReal = (GetHeroLevel(u) * 1)
+			gReal = GetHeroLevel(u) * 1
 		else
-			gReal = (I2R(GetUnitGoldCost(gId) or 0) * 0.02)
+			gReal = I2R(GetUnitGoldCost(gId) or 0) * 0.02
 		end
 	end
 	ArmyExp[pi] = ArmyExp[pi] + gReal
@@ -9622,7 +9622,7 @@ function PercentGraph(pi)
 	if ThirdColumn[pi] == nil and EnsureMultiboardPlayerRow(pi) == nil then
 		return
 	end
-	MultiboardSetItemValue(ThirdColumn[pi], (R2SW_Polyfill(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount)) .. "%"))
+	MultiboardSetItemValue(ThirdColumn[pi], R2SW_Polyfill(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount)) .. "%")
 end
 ---@param pi integer
 ---@return nothing
@@ -9638,7 +9638,7 @@ function UpdateGraf(pi)
 	local p = Player(pi)
 	local ownerIndex = EnsureMultiboardPlayerRow(pi)
 	local r = R2I(udg_UnitsCount[pi] / 25.00)
-	logistic[pi] = ((500 + 100 * (r - 1)) / 2 * r)	--  ??????????
+	logistic[pi] = (500 + 100 * (r - 1)) / 2 * r	--  ??????????
 	
 	-- ????? ??????????? ????????
 	if GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) >= 1 then
@@ -9721,17 +9721,17 @@ function AddCountDis(u, pi)
 			
 			-- ????????? ?????????? 
 			if GetUnitAbilityLevel(u, FourCC('A0AY')) >= 1 then
-				income[pi] = (income[pi] + (100.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0AY')))))
+				income[pi] = income[pi] + (100.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0AY'))))
 			elseif GetUnitAbilityLevel(u, FourCC('A0SM')) >= 1 then
-				income[pi] = (income[pi] + (75.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0SM')))))
+				income[pi] = income[pi] + (75.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0SM'))))
 			elseif GetUnitAbilityLevel(u, FourCC('A0VS')) == 1 then
-				income[pi] = (income[pi] + 100)
+				income[pi] = income[pi] + 100
 			end
 			
 			if GetUnitAbilityLevel(u, FourCC('A1HS')) > 0 then
-				income[pi] = (income[pi] - 5)
+				income[pi] = income[pi] - 5
 				i = LoadInteger(Hash, GetHandleId(u), 0)
-				income[i] = (income[i] + 5)
+				income[i] = income[i] + 5
 			end
 			
 			
@@ -9751,14 +9751,14 @@ function AddCountDis(u, pi)
 			
 			
 			if IsUnitType(u, UNIT_TYPE_HERO) then
-				disincome[pi] = (disincome[pi] + 100.00)
+				disincome[pi] = disincome[pi] + 100.00
 				if GetUnitAbilityLevel(u, FourCC('A0XV')) ~= 0 then	--  ???????????? ??????
 					income[pi] = income[pi] + (100 + GetUnitAbilityLevel(u, FourCC('A0XV')) * 100)
 				end
 				
 			else
 				udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
-				disincome[pi] = (disincome[pi] + (udg_Price * Tax))
+				disincome[pi] = disincome[pi] + (udg_Price * Tax)
 				--  ---------------------------?????? ???????-----------------------------          +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 				--  ---------------------------??????? ????????-----------------------------
 				if GetUnitAbilityLevel(u, FourCC('A0A5')) ~= 0 then
@@ -9785,7 +9785,7 @@ function AddCountDis(u, pi)
 		elseif GetUnitAbilityLevel(u, FourCC('A1HL')) > 0 then
 			udg_UnitsCount[pi] = udg_UnitsCount[pi] + 1
 			udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
-			disincome[pi] = (disincome[pi] + (udg_Price * Tax / 2))
+			disincome[pi] = disincome[pi] + (udg_Price * Tax / 2)
 		end
 		
 	end
@@ -9817,19 +9817,19 @@ function DelCountDis(u, pi)
 			
 			-- ????????? ??????????
 			if GetUnitAbilityLevel(u, FourCC('A0AY')) >= 1 then
-				income[pi] = (income[pi] - (100.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0AY')))))
+				income[pi] = income[pi] - (100.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0AY'))))
 			elseif GetUnitAbilityLevel(u, FourCC('A0SM')) >= 1 then
-				income[pi] = (income[pi] - (75.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0SM')))))
+				income[pi] = income[pi] - (75.00 * I2R(GetUnitAbilityLevel(u, FourCC('A0SM'))))
 			end
 			
 			if GetUnitAbilityLevel(u, FourCC('A0VS')) == 1 then
-				income[pi] = (income[pi] - 100)
+				income[pi] = income[pi] - 100
 			end
 			
 			if GetUnitAbilityLevel(u, FourCC('A1HS')) > 0 then
-				income[pi] = (income[pi] + 5)
+				income[pi] = income[pi] + 5
 				i = LoadInteger(Hash, GetHandleId(u), 0)
-				income[i] = (income[i] - 5)
+				income[i] = income[i] - 5
 				FlushChildHashtable(Hash, GetHandleId(u))
 			end
 			
@@ -9847,7 +9847,7 @@ function DelCountDis(u, pi)
 		udg_UnitsCount[pi] = udg_UnitsCount[pi] - 1
 		-- ???
 		if IsUnitType(u, UNIT_TYPE_HERO) then
-			disincome[pi] = (disincome[pi] - 100.00)
+			disincome[pi] = disincome[pi] - 100.00
 			
 			
 			-- ????????? ??????????
@@ -9861,7 +9861,7 @@ function DelCountDis(u, pi)
 			
 			--  call DisplayTextToPlayer(p,0,0,("?????? ?????? ?? ????? "+GetUnitName(u)))
 			udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
-			disincome[pi] = (disincome[pi] - (udg_Price * Tax))
+			disincome[pi] = disincome[pi] - (udg_Price * Tax)
 			
 			
 			-- ????????? ??????????
@@ -9891,7 +9891,7 @@ function DelCountDis(u, pi)
 	elseif GetUnitAbilityLevel(u, FourCC('A1HL')) > 0 then
 		udg_UnitsCount[pi] = udg_UnitsCount[pi] - 1
 		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
-		disincome[pi] = (disincome[pi] - (udg_Price * Tax / 2))
+		disincome[pi] = disincome[pi] - (udg_Price * Tax / 2)
 		
 	end
 	
@@ -10364,7 +10364,7 @@ end
 ---@return nothing
 function CreateRaceCircles(p)
 	
-	local l = (StartLoc[GetRandomInt(0, StartLocCount - 1)])	--  INLINED!!
+	local l = StartLoc[GetRandomInt(0, StartLocCount - 1)]	--  INLINED!!
 	CreateUnitAtLoc(p, FourCC('h0HJ'), l, 0)
 	PanCameraToTimedLocForPlayer(p, l, 0)
 	l = nil
@@ -10928,7 +10928,7 @@ function HandleAzgel(x, y, g)
 		RemoveOutsiders(g, udg_B_Azgel)
 		AddOutsiders(g, gg_rct_Nord)
 		if RectContainsCoords(gg_rct_AzNerRocks, x, y) then
-			EnumDestructablesInRect((gg_rct_AzNerRocks), nil, DestroyRocksAct)	--  INLINED!!
+			EnumDestructablesInRect(gg_rct_AzNerRocks, nil, DestroyRocksAct)	--  INLINED!!
 		end
 		return true
 	end
@@ -11393,7 +11393,7 @@ function TryAttack()
 				
 				-- ?? ??????? ???? ???
 			else
-				local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
+				local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
 				if allyCount == 0 then
 					AiProbeLogLimited(pi_attack, "Log_TryAttack_NoPortalAlliesFast", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=portal-fast targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 				end
@@ -11423,7 +11423,7 @@ function TryAttack()
 					gUnit2 = FirstOfGroup(gAllyGroup)
 					
 					if gUnit2 == nil then
-						local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
+						local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
 						if attackLogCount < 10 then
 							AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
 							ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=group targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
@@ -11539,7 +11539,7 @@ function TryAttack()
 					if allyCount == 0 then
 						AiProbeLogLimited(pi_attack, "Log_TryAttack_NoPortalAlliesWide", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 					end
-					local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
+					local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
 					if attackLogCount < 10 then
 						AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
 						ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
@@ -11566,7 +11566,7 @@ function TryAttack()
 						gUnit2 = FirstOfGroup(gAllyGroup)
 						
 						if gUnit2 == nil then
-							local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
+							local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
 							if attackLogCount < 10 then
 								AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
 								ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=group-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
@@ -11708,7 +11708,7 @@ end
 ---@return boolean
 function GoToWaterPoint(pi, u, x, y)
 	
-	local numPorts = (AiData[pi][StringHash("NumberPorts")] or 0)
+	local numPorts = AiData[pi][StringHash("NumberPorts")] or 0
 	if numPorts < 8 and Random(3 - numPorts, 10) then
 		if RectContainsCoords(gg_rct_EastenKingdoms, x, y) then
 			gInt = GetRandomInt(1, 4)
@@ -11784,7 +11784,7 @@ function TryBuild()
 	
 	
 	-- Стены и порты: стройка на месте (если рядом берег)
-	gInt = (AiData[gPi][StringHash("NumberPorts")] or 0)
+	gInt = AiData[gPi][StringHash("NumberPorts")] or 0
 	if gInt < 12 and ( not IsTerrainPathable(gX, gY, PATHING_TYPE_WALKABILITY) and not (RectContainsCoords(gg_rct_Outland, gX, gY)) and not (RectContainsCoords(gg_rct_Azgel, gX, gY))) then
 		
 		if Random(1, 2) then
@@ -11960,7 +11960,7 @@ function Unit000387_DropItems()
 	if trigUnit ~= nil then
 		canDrop =  not IsUnitHidden(trigUnit)
 		if canDrop and GetChangingUnit() ~= nil then
-			canDrop = (GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE))
+			canDrop = GetChangingUnitPrevOwner() == Player(PLAYER_NEUTRAL_AGGRESSIVE)
 		end
 	end
 	
@@ -13467,13 +13467,13 @@ end
 ---@return nothing
 function Trig_RRR_Func001A()
 	
-	local l = PolarProjectionBJ(GetUnitLoc(GetEnumUnit()), (7.00 + (4.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2)))), (GetUnitFacing(GetEnumUnit()) + 180.00))
+	local l = PolarProjectionBJ(GetUnitLoc(GetEnumUnit()), 7.00 + (4.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2))), GetUnitFacing(GetEnumUnit()) + 180.00)
 	--  ??? ?????????? ???????? ?? ???????? ?????? 7+ 3 ?????? ???
 	
 	--  ??? ???????? ?? ???????? ????? ?????????? ?? ??????????
 	SetUnitPositionLoc(GetEnumUnit(), l)
 	--  ???? ?????? 0.04 ??? 1+ 2 ?????? ??? 
-	UnitDamageTargetBJ(udg_LocalUnit2, GetEnumUnit(), (1.00 + (2.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2)))), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
+	UnitDamageTargetBJ(udg_LocalUnit2, GetEnumUnit(), 1.00 + (2.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2))), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
 	
 	--  ???????? ??????????
 	l = nil
@@ -13486,7 +13486,7 @@ function GruulForce()
 	local pi = GetPlayerId(GetEnumPlayer())
 	if Gruul[pi] ~= nil then
 		udg_LocalUnit2 = Gruul[pi]
-		ForGroup(GetUnitsInRangeOfLocMatching((450.00 + (55.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), Gruul[pi])))), GetUnitLoc(Gruul[pi]), Condition(Trig_RRR_Func001001003)), Trig_RRR_Func001A)
+		ForGroup(GetUnitsInRangeOfLocMatching(450.00 + (55.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), Gruul[pi]))), GetUnitLoc(Gruul[pi]), Condition(Trig_RRR_Func001001003)), Trig_RRR_Func001A)
 		
 	end
 end
@@ -13854,7 +13854,7 @@ function IndexUnit()
 		--  Generate a unique integer index for this unit
 		--   
 		if Trig_Unit_Indexer_Func017Func004C() then
-			udg_UDex = (udg_UDexGen + 1)
+			udg_UDex = udg_UDexGen + 1
 			udg_UDexGen = udg_UDex
 		else
 			udg_UDex = udg_UDexRecycle
@@ -13891,7 +13891,7 @@ function IndexNewUnit()
 	--   
 	--  Recycle indices of units no longer in-play every (15) units created
 	--   
-	udg_UDexWasted = (udg_UDexWasted + 1)
+	udg_UDexWasted = udg_UDexWasted + 1
 	if Trig_Unit_Indexer_Func030C() then
 		udg_UDexWasted = 0
 		udg_UDex = udg_UDexNext[0]
@@ -14439,7 +14439,7 @@ function FG()
 	local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
 	BlzEndUnitAbilityCooldown(GetEnumUnit(), FourCC('A0SG'))
 	IssueImmediateOrder(GetEnumUnit(), "ravenform")
-	income[pi] = (income[pi] - 40)
+	income[pi] = income[pi] - 40
 end
 ---@return nothing
 function Trig_GnomeNotToMuch_Actions()
@@ -14449,7 +14449,7 @@ function Trig_GnomeNotToMuch_Actions()
 	udg_Boolexpr = Type_1
 	
 	if GetUnitTypeId(GetTriggerUnit()) ~= FourCC('h0FL') then	--  ???????? ??? ?????
-		income[pi] = (income[pi] + 40)
+		income[pi] = income[pi] + 40
 		
 		
 		udg_LocalText2 = "???????? ?????. ????????? ????? ??????? ?????."
@@ -14459,20 +14459,20 @@ function Trig_GnomeNotToMuch_Actions()
 			
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 			
-			udg_LocalInteger2 = (udg_LocalInteger - 15 + 1)
+			udg_LocalInteger2 = udg_LocalInteger - 15 + 1
 			udg_LocalOtrad2 = GetRandomSubGroup(udg_LocalInteger2, udg_LocalOtrad)
 			ForGroupBJ(udg_LocalOtrad2, FG)
 		elseif Tl == 2 and udg_LocalInteger >= 30 then
 			
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalInteger2 = (udg_LocalInteger - 30 + 1)
+			udg_LocalInteger2 = udg_LocalInteger - 30 + 1
 			udg_LocalOtrad2 = GetRandomSubGroup(udg_LocalInteger2, udg_LocalOtrad)
 			ForGroupBJ(udg_LocalOtrad2, FG)
 		elseif Tl == 3 and udg_LocalInteger >= 45 then
 			
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 			
-			udg_LocalInteger2 = (udg_LocalInteger - 45 + 1)
+			udg_LocalInteger2 = udg_LocalInteger - 45 + 1
 			udg_LocalOtrad2 = GetRandomSubGroup(udg_LocalInteger2, udg_LocalOtrad)
 			ForGroupBJ(udg_LocalOtrad2, FG)
 			
@@ -14584,15 +14584,15 @@ function Trig_TimerIncome_Actions()
 			
 			
 			r = R2I(udg_UnitsCount[i] / 25.00)
-			logistic[i] = ((500 + 100 * (r - 1)) / 2 * r)	--  ??????????
+			logistic[i] = (500 + 100 * (r - 1)) / 2 * r	--  ??????????
 			
 			
 			--  ---------------------------??????? ?????????-----------------------------
 			t = GetPlayerTechCount(p, FourCC('R04O'), true)
 			if t > 1 then
-				corruption[i] = (disincome[i] * ((t - 1) * 0.15))
+				corruption[i] = disincome[i] * ((t - 1) * 0.15)
 				if EcLog then
-					udg_LocalText2 = ("?????????" .. I2S(R2I(corruption[i])))
+					udg_LocalText2 = "?????????" .. I2S(R2I(corruption[i]))
 					DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 				end
 				
@@ -14603,7 +14603,7 @@ function Trig_TimerIncome_Actions()
 			if t >= 1 then
 				additional[i] = disincome[i] * (udg_MainPrice[i] / (-100.0))
 				if EcLog then
-					udg_LocalText2 = ("?????????????: " .. I2S(R2I(additional[i])))
+					udg_LocalText2 = "?????????????: " .. I2S(R2I(additional[i]))
 					DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 				end
 				
@@ -14618,17 +14618,17 @@ function Trig_TimerIncome_Actions()
 		
 		
 		if EcLog then
-			udg_LocalText2 = ("?????: " .. R2S(income[i] * IncomeMod))
+			udg_LocalText2 = "?????: " .. R2S(income[i] * IncomeMod)
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("??????: " .. R2S(disincome[i]))
+			udg_LocalText2 = "??????: " .. R2S(disincome[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("?????????: " .. R2S(logistic[i]))
+			udg_LocalText2 = "?????????: " .. R2S(logistic[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("??????: " .. I2S(udg_UnitsCount[i]))
+			udg_LocalText2 = "??????: " .. I2S(udg_UnitsCount[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("?????: " .. R2S(balance[i]))
+			udg_LocalText2 = "?????: " .. R2S(balance[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
-			udg_LocalText2 = ("?????????: " .. R2S(incomeW[i]))
+			udg_LocalText2 = "?????????: " .. R2S(incomeW[i])
 			DisplayTimedTextToPlayer(p, 0, 0, 7, udg_LocalText2)
 		end
 		
@@ -15851,7 +15851,7 @@ function Trig_StartLobby_Actions()
 	end
 	udg_LocalInteger = 4
 	DisplayTimedTextToForce(GetPlayersAll(), I2R(udg_LocalInteger), "TRIGSTR_10982")
-	udg_LocalInteger = (udg_LocalInteger - 3)
+	udg_LocalInteger = udg_LocalInteger - 3
 	TriggerSleepAction(I2R(udg_LocalInteger))
 	ForForce(udg_AllPlayers, Trig_StartLobby_Func015A)
 	RemoveLocation(udg_LocalPosition2)
@@ -15923,7 +15923,7 @@ end
 ---@return boolean
 ---@return nothing
 function Trig_AddMinute_Actions()
-	StartTimerBJ(udg_LobbyTime, false, (TimerGetRemaining(udg_LobbyTime) + 60.00))
+	StartTimerBJ(udg_LobbyTime, false, TimerGetRemaining(udg_LobbyTime) + 60.00)
 	DisableTrigger(GetTriggeringTrigger())
 end
 -- ===========================================================================
@@ -16053,7 +16053,7 @@ function Trig_UpgradeStolica_Actions()
 	BlzSetUnitArmor(GetTriggerUnit(), 30.00)
 	BlzSetUnitMaxHP(GetTriggerUnit(), 10000)
 	UnitAddAbilityBJ(FourCC('A0I6'), GetTriggerUnit())
-	BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, ("|cffd45e19???????:|r " .. GetUnitName(GetTriggerUnit())))
+	BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, "|cffd45e19???????:|r " .. GetUnitName(GetTriggerUnit()))
 	UnitAddAbilityBJ(FourCC('A145'), GetTriggerUnit())
 end
 -- ===========================================================================
@@ -16114,7 +16114,7 @@ function MakeCapital(capital)
 	BlzSetUnitArmor(capital, 30.00)
 	UnitAddAbility(capital, FourCC('A0I6'))
 	UnitAddAbility(capital, FourCC('A145'))
-	BlzSetUnitStringFieldBJ(capital, UNIT_SF_NAME, ("|cffd45e19???????:|r " .. GetUnitName(capital)))
+	BlzSetUnitStringFieldBJ(capital, UNIT_SF_NAME, "|cffd45e19???????:|r " .. GetUnitName(capital))
 	GroupAddUnit(udg_StolicaGroups, capital)
 	TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, capital, EVENT_UNIT_ATTACKED)
 	unitShareVisionAll(capital, true)
@@ -16225,10 +16225,10 @@ function CheckAndCreateCapital(p)
 			u = BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
 			SetPlayerAbilityAvailable(p, FourCC('A0IQ'), false)
 			MakeCapital(u)
-			DisplayTimedTextToForce(udg_AllPlayers, 5, (GetPlayerName(p) .. " - |cffffff00????? ????????|r|r, ??? |cffd45e19???????|r ?? ?? ???? ????????? ?? ???????, ? ?????? ???? ??????????? ?????????????."))
+			DisplayTimedTextToForce(udg_AllPlayers, 5, GetPlayerName(p) .. " - |cffffff00????? ????????|r|r, ??? |cffd45e19???????|r ?? ?? ???? ????????? ?? ???????, ? ?????? ???? ??????????? ?????????????.")
 		else
 			if GetPlayerSlotState(p) == PLAYER_SLOT_STATE_PLAYING then
-				DisplayTimedTextToForce(udg_AllPlayers, 5, (GetPlayerName(p) .. " - |cffff0000????????|r, ??? |cffd45e19??????? |r ?? ????????? ?? ???????. :("))
+				DisplayTimedTextToForce(udg_AllPlayers, 5, GetPlayerName(p) .. " - |cffff0000????????|r, ??? |cffd45e19??????? |r ?? ????????? ?? ???????. :(")
 			end
 			
 			ClearPlayer(p)
@@ -16325,7 +16325,7 @@ end
 function Trig_StolicaDead_Actions()
 	local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
 	SetPlayerAbilityAvailableBJ(true, FourCC('A0IQ'), GetOwningPlayer(GetTriggerUnit()))
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. " - |cffff0000????????|r, ??? |cffd45e19??????? |r??????????."))
+	DisplayTextToForce(GetPlayersAll(), GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. " - |cffff0000????????|r, ??? |cffd45e19??????? |r??????????.")
 	ClearPlayer(Player(pi))
 	AiLimitsSet()
 end
@@ -16541,7 +16541,7 @@ function Trig_FeodalDead_Func004Func002Func001Func010A()
 	SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
 	SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
 	SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) .. (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
+	DisplayTextToForce(GetPlayersAll(), GetPlayerName(GetEnumPlayer()) .. (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA()))))
 end
 ---@return boolean
 function Trig_FeodalDead_Func004Func002Func001C()
@@ -16549,7 +16549,7 @@ function Trig_FeodalDead_Func004Func002Func001C()
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func011A()
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) .. (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
+	DisplayTextToForce(GetPlayersAll(), GetPlayerName(GetEnumPlayer()) .. (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker()))))
 	ForceAddPlayerSimple(GetEnumPlayer(), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))])
 	for bj_forLoopBIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
@@ -16571,7 +16571,7 @@ function Trig_FeodalDead_Func004Func017A()
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func020A()
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) .. (" ??????????? ?? ?????? " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())))))
+	DisplayTextToForce(GetPlayersAll(), GetPlayerName(GetEnumPlayer()) .. (" ??????????? ?? ?????? " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit()))))
 	for bj_forLoopAIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
@@ -16589,7 +16589,7 @@ function Trig_FeodalDead_Actions()
 	SetUnitInvulnerable(GetTriggerUnit(), false)
 	if Trig_FeodalDead_Func004C() then
 		--  ??????? ??? ??????????
-		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. "|cffff0000 - ??????????! |r??????)"))
+		DisplayTextToForce(GetPlayersAll(), GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. "|cffff0000 - ??????????! |r??????)")
 		ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetTriggerUnit())), Trig_FeodalDead_Func004Func017A)
 		SetPlayerAbilityAvailableBJ(true, FourCC('A0IQ'), GetOwningPlayer(GetTriggerUnit()))
 		--  ??????? ???????? ??????????. ?? ????????!
@@ -16605,7 +16605,7 @@ function Trig_FeodalDead_Actions()
 				end
 				--  ???? ??????
 				--  ???????????? ??????? ???????
-				DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
+				DisplayTextToForce(GetPlayersAll(), GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA()))))
 				ForceAddPlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetConvertedPlayerId(ConvertedPlayer(GetForLoopIndexA()))])
 				SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_ALLIED_UNITS)
 				SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)
@@ -16624,7 +16624,7 @@ function Trig_FeodalDead_Actions()
 			SetPlayerAllianceStateBJ(GetTriggerPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 			SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetTriggerPlayer(), bj_ALLIANCE_UNALLIED)
 		end
-		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
+		DisplayTextToForce(GetPlayersAll(), GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker()))))
 		ForceAddPlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))])
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker()), bj_ALLIANCE_ALLIED_UNITS)
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)
@@ -17245,29 +17245,29 @@ function Trig_Continents_set_On_Func013A()
 end
 ---@return nothing
 function Trig_Continents_set_On_Actions()
-	udg_LocalText2 = ("????? ???????????:|cffffff00 ???????|r")
+	udg_LocalText2 = "????? ???????????:|cffffff00 ???????|r"
 	DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
 	udg_LocalText2 = "|cff00ff00????? ???????? ??? ????: |r"
 	if Trig_Continents_set_On_Func004C() then
-		udg_LocalText2 = (udg_LocalText2 .. "????????? ???????????\\" )
+		udg_LocalText2 = udg_LocalText2 .. "????????? ???????????\\"
     end
     if Trig_Continents_set_On_Func005C() then
-        udg_LocalText2=( udg_LocalText2 .. "" )
+        udg_LocalText2=udg_LocalText2 .. ""
     end
     if Trig_Continents_set_On_Func006C() then
-        udg_LocalText2=( udg_LocalText2 .. "" )
+        udg_LocalText2=udg_LocalText2 .. ""
     end
     if Trig_Continents_set_On_Func007C() then
-        udg_LocalText2=( udg_LocalText2 .. "" )
+        udg_LocalText2=udg_LocalText2 .. ""
     end
     if Trig_Continents_set_On_Func008C() then
-        udg_LocalText2=( udg_LocalText2 .. "" )
+        udg_LocalText2=udg_LocalText2 .. ""
     end
     if Trig_Continents_set_On_Func009C() then
-        udg_LocalText2=( udg_LocalText2 .. "" )
+        udg_LocalText2=udg_LocalText2 .. ""
     end
     if Trig_Continents_set_On_Func010C() then
-        udg_LocalText2=( udg_LocalText2 .. "" )
+        udg_LocalText2=udg_LocalText2 .. ""
     end
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
     EnableTrigger(gg_trg_LeaveNeadedRegions)
@@ -17299,7 +17299,7 @@ function Trig_Continents_Off_Func006A()
     DestroyFogModifier(GetLastCreatedFogModifier())
 end
 function Trig_Continents_Off_Actions()
-    udg_LocalText2=( "cffffff00r" )
+    udg_LocalText2="cffffff00r"
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
     ForGroupBJ(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Continents_Off_Func005001002)), Trig_Continents_Off_Func005A)
     ForForce(udg_AllPlayers, Trig_Continents_Off_Func006A)
@@ -17608,7 +17608,7 @@ end
 function Trig_EasternOn_Spell_Actions()
     udg_Continents[1]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UM'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UB'), GetTriggerUnit())
 end
@@ -17626,7 +17626,7 @@ end
 --===========================================================================
 function Trig_EasternOn_Spell_Off_Actions()
     udg_Continents[1]=0
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UB'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UM'), GetTriggerUnit())
 end
@@ -17644,7 +17644,7 @@ end
 --===========================================================================
 function Trig_EasternOn_Set_Actions()
     udg_Continents[1]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
 end
 --===========================================================================
 function InitTrig_EasternOn_Set()
@@ -17687,7 +17687,7 @@ end
 function Trig_KalimOn_2_Spell_Actions()
     udg_Continents[2]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UN'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UC'), GetTriggerUnit())
 end
@@ -17705,7 +17705,7 @@ end
 --===========================================================================
 function Trig_KalimOn_2_Spell_off_Actions()
     udg_Continents[2]=0
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UC'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UN'), GetTriggerUnit())
 end
@@ -17724,7 +17724,7 @@ end
 function Trig_KalimOn_2_set_Actions()
     udg_Continents[2]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
 end
 --===========================================================================
 function InitTrig_KalimOn_2_set()
@@ -17760,7 +17760,7 @@ end
 function Trig_Outland_3_spell_Actions()
     udg_Continents[3]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UO'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UD'), GetTriggerUnit())
 end
@@ -17778,7 +17778,7 @@ end
 --===========================================================================
 function Trig_Outland_3_spell_off_Actions()
     udg_Continents[3]=0
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitRemoveAbilityBJ(FourCC('A0UO'), GetTriggerUnit())
     UnitAddAbilityBJ(FourCC('A0UD'), GetTriggerUnit())
 end
@@ -17797,7 +17797,7 @@ end
 function Trig_Outland_3_set_Actions()
     udg_Continents[3]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
 end
 --===========================================================================
 function InitTrig_Outland_3_set()
@@ -17840,7 +17840,7 @@ end
 function Trig_NordOn_4_spell_Actions()
     udg_Continents[4]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitRemoveAbilityBJ(FourCC('A0UE'), GetTriggerUnit())
     UnitAddAbilityBJ(FourCC('A0UP'), GetTriggerUnit())
 end
@@ -17858,7 +17858,7 @@ end
 --===========================================================================
 function Trig_NordOn_4_spell_off_Actions()
     udg_Continents[4]=0
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UE'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UP'), GetTriggerUnit())
 end
@@ -17877,7 +17877,7 @@ end
 function Trig_NordOn_4_set_Actions()
     udg_Continents[4]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
 end
 --===========================================================================
 function InitTrig_NordOn_4_set()
@@ -17913,7 +17913,7 @@ end
 function Trig_Pandaria_5_spell_Actions()
     udg_Continents[5]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UQ'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UF'), GetTriggerUnit())
 end
@@ -17931,7 +17931,7 @@ end
 --===========================================================================
 function Trig_Pandaria_5_spell_off_Actions()
     udg_Continents[5]=0
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UF'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UQ'), GetTriggerUnit())
 end
@@ -17949,7 +17949,7 @@ end
 --===========================================================================
 function Trig_Pandaria_5_set_Actions()
     udg_Continents[5]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
 end
 --===========================================================================
 function InitTrig_Pandaria_5_set()
@@ -17985,7 +17985,7 @@ end
 function Trig_Argus_6_spell_Actions()
     udg_Continents[6]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UR'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UH'), GetTriggerUnit())
 end
@@ -18003,7 +18003,7 @@ end
 --===========================================================================
 function Trig_Argus_6_spell_off_Actions()
     udg_Continents[6]=0
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UH'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UR'), GetTriggerUnit())
 end
@@ -18021,7 +18021,7 @@ end
 --===========================================================================
 function Trig_Argus_6_set_Actions()
     udg_Continents[6]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
 end
 --===========================================================================
 function InitTrig_Argus_6_set()
@@ -18057,7 +18057,7 @@ end
 function Trig_BrokenIsled_7_spell_Actions()
     udg_Continents[7]=1
     udg_Continents[0]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0US'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0UG'), GetTriggerUnit())
 end
@@ -18075,7 +18075,7 @@ end
 --===========================================================================
 function Trig_BrokenIsled_7_spell_off_Actions()
     udg_Continents[7]=0
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
     UnitAddAbilityBJ(FourCC('A0UG'), GetTriggerUnit())
     UnitRemoveAbilityBJ(FourCC('A0US'), GetTriggerUnit())
 end
@@ -18093,7 +18093,7 @@ end
 --===========================================================================
 function Trig_BrokenIsled_7_set_Actions()
     udg_Continents[7]=1
-    DisplayTextToForce(GetPlayersAll(), ( "cffffff00r" ))
+    DisplayTextToForce(GetPlayersAll(), "cffffff00r")
 end
 --===========================================================================
 function InitTrig_BrokenIsled_7_set()
@@ -18783,7 +18783,7 @@ function Trig_UnitsToBuildingSituation2_Conditions()
 end
 function Trig_UnitsToBuildingSituation2_Actions()
     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
-    udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=( udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] - 1 )
+    udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] - 1
     MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
     i=0
 end
@@ -18805,7 +18805,7 @@ function Trig_CanselSituation2_Conditions()
 end
 function Trig_CanselSituation2_Actions()
     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
-    udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=( udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 1 )
+    udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 1
     MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
     i=0
 end
@@ -20086,7 +20086,7 @@ function Trig_Leave_Ot_Func005C()
 end
 function Trig_Leave_Ot_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r" ))
+    DisplayTextToForce(udg_AllPlayers, GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r")
     ClearPlayer(Player(pi))
     FlushChildHashtable(Hash, GetPlayerId(GetTriggerPlayer()))
     if Trig_Leave_Ot_Func005C() then
@@ -20145,7 +20145,7 @@ end
 -- Trigger: Lech
 --===========================================================================
 function Trig_Lech_Actions()
-    SetUnitLifeBJ(udg_u, ( GetUnitStateSwap(UNIT_STATE_LIFE, udg_u) + GetEventDamage() ))
+    SetUnitLifeBJ(udg_u, GetUnitStateSwap(UNIT_STATE_LIFE, udg_u) + GetEventDamage())
 end
 --===========================================================================
 function InitTrig_Lech()
@@ -20162,7 +20162,7 @@ function Trig_Cast_Actions()
     UnitAddAbilityBJ(FourCC('A1BS'), GetLastCreatedUnit())
     IssueTargetOrderBJ(GetLastCreatedUnit(), "purge", GetSpellAbilityUnit())
     UnitApplyTimedLifeBJ(1.00, FourCC('BTLF'), GetLastCreatedUnit())
-    TriggerSleepAction(( 3.00 + ( 1.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A0EK'), GetSpellAbilityUnit())) ) ))
+    TriggerSleepAction(3.00 + ( 1.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A0EK'), GetSpellAbilityUnit())) ))
     DisableTrigger(gg_trg_Lech)
 end
 --===========================================================================
@@ -20412,7 +20412,7 @@ end
 function Trig_Spell_Cast_Actions()
     udg_Target=GetSpellTargetUnit()
     udg_LogikaCast=true
-    udg_HisloA[0]=( udg_HisloA[0] - 1 )
+    udg_HisloA[0]=udg_HisloA[0] - 1
 end
 --===========================================================================
 function InitTrig_Spell_Cast()
@@ -20463,7 +20463,7 @@ end
 function Trig_Spell_Dvij_Func004Func007Func002Func005Func002A()
     if Trig_Spell_Dvij_Func004Func007Func002Func005Func002Func001C() then
         GroupAddUnitSimple(GetEnumUnit(), udg_Group)
-        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 100.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), 100.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         udg_To4kaAOE=GetUnitLoc(GetEnumUnit())
         CreateNUnitsAtLoc(1, FourCC('h0MK'), GetOwningPlayer(udg_Caster), udg_To4kaAOE, bj_UNIT_FACING)
         udg_Dummy[4]=GetLastCreatedUnit()
@@ -20485,7 +20485,7 @@ end
 function Trig_Spell_Dvij_Func004Func007Func004Func006Func002A()
     if Trig_Spell_Dvij_Func004Func007Func004Func006Func002Func001C() then
         GroupAddUnitSimple(GetEnumUnit(), udg_Group)
-        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         udg_To4kaAOE=GetUnitLoc(GetEnumUnit())
         CreateNUnitsAtLoc(1, FourCC('h0MK'), GetOwningPlayer(udg_Caster), udg_To4kaAOE, bj_UNIT_FACING)
         udg_Dummy[4]=GetLastCreatedUnit()
@@ -20507,7 +20507,7 @@ end
 function Trig_Spell_Dvij_Func004Func007Func006Func005Func002A()
     if Trig_Spell_Dvij_Func004Func007Func006Func005Func002Func001C() then
         GroupAddUnitSimple(GetEnumUnit(), udg_Group)
-        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         udg_To4kaAOE=GetUnitLoc(GetEnumUnit())
         CreateNUnitsAtLoc(1, FourCC('h0MK'), GetOwningPlayer(udg_Caster), udg_To4kaAOE, bj_UNIT_FACING)
         udg_Dummy[4]=GetLastCreatedUnit()
@@ -20550,15 +20550,15 @@ function Trig_Spell_Dvij_Actions()
     if true then -- INLINED!!
         udg_To4kaCaster=GetUnitLoc(udg_Caster)
         -- ???????? ???????? ???? ???????? + ?? -  ???? ????? ???????? ? ?????? ???????
-        udg_Ygol[1]=( udg_Ygol[1] + 5 )
+        udg_Ygol[1]=udg_Ygol[1] + 5
         if Trig_Spell_Dvij_Func004Func004C() then
-            SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 0.00 + I2R(udg_Ygol[1]) )))
+            SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaCaster, 100.00, 0.00 + I2R(udg_Ygol[1])))
         end
         if Trig_Spell_Dvij_Func004Func005C() then
-            SetUnitPositionLoc(udg_Dummy[1], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 120.00 + I2R(udg_Ygol[1]) )))
+            SetUnitPositionLoc(udg_Dummy[1], PolarProjectionBJ(udg_To4kaCaster, 100.00, 120.00 + I2R(udg_Ygol[1])))
         end
         if Trig_Spell_Dvij_Func004Func006C() then
-            SetUnitPositionLoc(udg_Dummy[2], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 240.00 + I2R(udg_Ygol[1]) )))
+            SetUnitPositionLoc(udg_Dummy[2], PolarProjectionBJ(udg_To4kaCaster, 100.00, 240.00 + I2R(udg_Ygol[1])))
         end
         if Trig_Spell_Dvij_Func004Func007C() then
             -- ?????? ??????? ???
@@ -20682,7 +20682,7 @@ end
 -- Trigger: Bolvanka
 --===========================================================================
 function Trig_Bolvanka_Actions()
-    UnitDamageTargetBJ(GetTriggerUnit(), GetTriggerUnit(), ( 1 * I2R(GetHeroStatBJ(bj_HEROSTAT_STR, GetTriggerUnit(), false)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+    UnitDamageTargetBJ(GetTriggerUnit(), GetTriggerUnit(), 1 * I2R(GetHeroStatBJ(bj_HEROSTAT_STR, GetTriggerUnit(), false)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
 end
 --===========================================================================
 function InitTrig_Bolvanka()
@@ -20698,7 +20698,7 @@ end
 function Trig_Fireball_Actions()
     local fireballtarget
     fireballtarget=GetSpellTargetUnit()
-    PolledWait(( DistanceBetweenPoints(GetUnitLoc(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit())) / 1000.00 ))
+    PolledWait(DistanceBetweenPoints(GetUnitLoc(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit())) / 1000.00)
     udg_unit=fireballtarget
     UnitDamageTargetBJ(GetSpellAbilityUnit(), udg_unit, I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSpellAbilityUnit(), false)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
     fireballtarget=nil
@@ -20718,7 +20718,7 @@ end
 function Trig_Fire_Arrow_Actions()
     local firearrowtarget
     firearrowtarget=GetSpellTargetUnit()
-    PolledWait(( DistanceBetweenPoints(GetUnitLoc(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit())) / 1500.00 ))
+    PolledWait(DistanceBetweenPoints(GetUnitLoc(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit())) / 1500.00)
     udg_unit=firearrowtarget
     UnitDamageTargetBJ(GetSpellAbilityUnit(), udg_unit, I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSpellAbilityUnit(), false)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
     firearrowtarget=nil
@@ -20783,14 +20783,14 @@ function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Sdelat_Flagman_Ot_Copy_Func005A)
     GroupClear(udg_LocalOtrad2)
-    BlzSetUnitWeaponIntegerFieldBJ(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0, ( BlzGetUnitWeaponIntegerField(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0) * 3 ))
-    BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, ( "cffff0000r - " .. GetUnitName(GetTriggerUnit()) ))
+    BlzSetUnitWeaponIntegerFieldBJ(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0, BlzGetUnitWeaponIntegerField(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0) * 3)
+    BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, "cffff0000r - " .. GetUnitName(GetTriggerUnit()))
     BlzSetUnitIntegerFieldBJ(GetTriggerUnit(), UNIT_IF_TINTING_COLOR_GREEN, 175)
     BlzSetUnitIntegerFieldBJ(GetTriggerUnit(), UNIT_IF_TINTING_COLOR_BLUE, 175)
     UnitAddTypeBJ(UNIT_TYPE_HERO, GetTriggerUnit())
-    BlzSetUnitRealFieldBJ(GetTriggerUnit(), UNIT_RF_SCALING_VALUE, ( BlzGetUnitRealField(GetTriggerUnit(), UNIT_RF_SCALING_VALUE) * 1.25 ))
-    BlzSetUnitArmor(GetTriggerUnit(), ( BlzGetUnitArmor(GetTriggerUnit()) + 5.00 ))
-    BlzSetUnitMaxHP(GetTriggerUnit(), ( BlzGetUnitMaxHP(GetTriggerUnit()) * 3 ))
+    BlzSetUnitRealFieldBJ(GetTriggerUnit(), UNIT_RF_SCALING_VALUE, BlzGetUnitRealField(GetTriggerUnit(), UNIT_RF_SCALING_VALUE) * 1.25)
+    BlzSetUnitArmor(GetTriggerUnit(), BlzGetUnitArmor(GetTriggerUnit()) + 5.00)
+    BlzSetUnitMaxHP(GetTriggerUnit(), BlzGetUnitMaxHP(GetTriggerUnit()) * 3)
     BlzSetUnitRealFieldBJ(GetTriggerUnit(), UNIT_RF_HP, I2R(BlzGetUnitMaxHP(GetTriggerUnit())))
     UnitAddAbilityBJ(FourCC('A008'), GetTriggerUnit())
     GroupAddUnitSimple(GetTriggerUnit(), udg_Flagmans)
@@ -20832,7 +20832,7 @@ function Trig_Flagman_die_Ot_Actions()
     ForGroupBJ(udg_LocalOtrad2, Trig_Flagman_die_Ot_Func006A)
     
     GroupClear(udg_LocalOtrad2)
-    DisplayTextToPlayer(( GetOwningPlayer(u) ), 0, 0, ( "cffff0000.r" ))
+    DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "cffff0000.r")
     SetPlayerAbilityAvailableBJ(true, FourCC('A009'), GetOwningPlayer(u))
     u=nil
 end
@@ -20950,7 +20950,7 @@ function Trig_Unit_Loaded_Actions()
         udg_TransportingUnitArray[udg_TransportingIncrement]=GetTransportUnitBJ()
         GroupAddUnitSimple(GetTransportUnitBJ(), udg_TransportingGroup)
         udg_LoadedGroupArray[udg_TransportingIncrement]=CreateGroup()
-        udg_TransportingIncrement=( udg_TransportingIncrement + 1 )
+        udg_TransportingIncrement=udg_TransportingIncrement + 1
     end
     GroupAddUnitSimple(GetLoadedUnitBJ(), udg_LoadedGroupArray[GetUnitUserData(GetTransportUnitBJ())])
     GroupAddUnitSimple(GetLoadedUnitBJ(), udg_LoadedGroup)
@@ -21005,7 +21005,7 @@ end
 function Trig_Remove_Unit_From_LoadedGroup_Actions()
     GroupRemoveUnitSimple(udg_TempUnit01, udg_LoadedGroup)
     bj_forLoopAIndex=udg_TransportingMin
-    bj_forLoopAIndexEnd=( udg_TransportingIncrement - 1 )
+    bj_forLoopAIndexEnd=udg_TransportingIncrement - 1
     while true do
         if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
         if Trig_Remove_Unit_From_LoadedGroup_Func002Func001C() then
@@ -21028,9 +21028,9 @@ function Trig_TransportingUnitArray_Message_Func001C()
 end
 function Trig_TransportingUnitArray_Message_Actions()
     if Trig_TransportingUnitArray_Message_Func001C() then
-        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "" .. GetUnitName(udg_TempUnit02) ) .. ( "" .. I2S(CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(udg_TempUnit02)])) ) ))
+        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( "" .. GetUnitName(udg_TempUnit02) ) .. ( "" .. I2S(CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(udg_TempUnit02)])) ))
     else
-        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "" .. GetUnitName(udg_TempUnit02) ) .. "." ))
+        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( "" .. GetUnitName(udg_TempUnit02) ) .. ".")
     end
     UnitAddIndicatorBJ(udg_TempUnit02, 100, 100, 100, 0)
 end
@@ -21062,8 +21062,8 @@ end
 function Trig_MassPosadka_Copy_Func008A()
     if GetUnitTypeId(GetTriggerUnit()) == GetUnitTypeId(GetEnumUnit()) then
         GroupAddUnit(udg_LocalOtrad, GetEnumUnit())
-        udg_LocalInteger=( udg_LocalInteger + 10 )
-        udg_LocalInteger=( udg_LocalInteger - CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(GetEnumUnit())]) )
+        udg_LocalInteger=udg_LocalInteger + 10
+        udg_LocalInteger=udg_LocalInteger - CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(GetEnumUnit())])
     end
 end
 function Trig_MassPosadka_Copy_Func010002()
@@ -21081,7 +21081,7 @@ end
 function Trig_MassPosadka_Copy_Func014A()
     udg_LocalPosition2=GetUnitLoc(GetEnumUnit())
     udg_LocalUnit2=GetEnumUnit()
-    udg_LocalInteger=( 10 - CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(GetEnumUnit())]) )
+    udg_LocalInteger=10 - CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(GetEnumUnit())])
     -- ??????? ???????? ??????, ? ????? ??????????? ??? ???????.
     udg_LocalOtrad3=GetRandomSubGroup2(udg_LocalInteger , udg_LocalOtrad2)
     ForGroup(udg_LocalOtrad3, Trig_MassPosadka_Copy_Func014Func006A)
@@ -21753,7 +21753,7 @@ function ManabombaMissle()
     SetUnitPathing(u2, false)
     IssueTargetOrder(u1, "firebolt", u2)
      
-    TimerStart(t, ( DistanceBetweenPoints(l, destination) / 600.00 ), false, ManabombaNuke)
+    TimerStart(t, DistanceBetweenPoints(l, destination) / 600.00, false, ManabombaNuke)
     SaveLocationHandle(Hash, tid, 0, destination)
     SaveUnitHandle(Hash, tid, 1, u1)
     SaveUnitHandle(Hash, tid, 2, u2)
@@ -21938,7 +21938,7 @@ function Trig_Portal_Periodic_Func001A()
                 udg_Portal_delayFXAbil[udg_Portal_INDEX_CASTER]=udg_Portal_delayFXAbil[udg_Portal_INDEX_TARGET]
                 UnitAddAbilityBJ(udg_Portal_delayFXAbil[udg_Portal_INDEX_CASTER], udg_Portal_traveller)
             end
-            udg_Portal_delay[udg_Portal_INDEX_CASTER]=( udg_Portal_delay[udg_Portal_INDEX_CASTER] - ( 1.00 / 32.00 ) )
+            udg_Portal_delay[udg_Portal_INDEX_CASTER]=udg_Portal_delay[udg_Portal_INDEX_CASTER] - ( 1.00 / 32.00 )
         else
             udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER]=false
             udg_Portal_loc2=GetUnitLoc(udg_Portal_traveller)
@@ -22066,7 +22066,7 @@ function Trig_Portal_Periodic_Func002A()
                 end
             else
                 if Trig_Portal_Periodic_Func002Func007Func003Func002Func014C() then
-                    udg_Portal_loc3=PolarProjectionBJ(udg_Portal_loc1, ( udg_Portal_missileSpeed[udg_Portal_INDEX_TRAVELLER] / 33.00 ), AngleBetweenPoints(udg_Portal_loc1, udg_Portal_loc2))
+                    udg_Portal_loc3=PolarProjectionBJ(udg_Portal_loc1, udg_Portal_missileSpeed[udg_Portal_INDEX_TRAVELLER] / 33.00, AngleBetweenPoints(udg_Portal_loc1, udg_Portal_loc2))
                     SetUnitPositionLocFacingLocBJ(udg_Portal_traveller, udg_Portal_loc3, udg_Portal_loc2)
                     RemoveLocation(udg_Portal_loc3)
                 else
@@ -22126,7 +22126,7 @@ end
 function InitTrig_Portal_Periodic()
     gg_trg_Portal_Periodic=CreateTrigger()
     DisableTrigger(gg_trg_Portal_Periodic)
-    TriggerRegisterTimerEventPeriodic(gg_trg_Portal_Periodic, ( 1 / 32.00 ))
+    TriggerRegisterTimerEventPeriodic(gg_trg_Portal_Periodic, 1 / 32.00)
     TriggerAddAction(gg_trg_Portal_Periodic, Trig_Portal_Periodic_Actions)
 end
 --===========================================================================
@@ -23554,7 +23554,7 @@ function Trig_Anub_Vozvratka_Conditions()
     return (( GetUnitAbilityLevelSwapped(FourCC('A1LJ'), BlzGetEventDamageTarget()) > 0 )) and (( GetEventDamage() >= 2.00 )) and (( GetUnitAbilityLevelSwapped(FourCC('A1LJ'), GetEventDamageSource()) == 0 ))
 end
 function Trig_Anub_Vozvratka_Actions()
-    UnitDamageTargetBJ(BlzGetEventDamageTarget(), GetEventDamageSource(), ( 0.50 * I2R(GetHeroStatBJ(bj_HEROSTAT_STR, BlzGetEventDamageTarget(), false)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+    UnitDamageTargetBJ(BlzGetEventDamageTarget(), GetEventDamageSource(), 0.50 * I2R(GetHeroStatBJ(bj_HEROSTAT_STR, BlzGetEventDamageTarget(), false)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
 end
 --===========================================================================
 function InitTrig_Anub_Vozvratka()
@@ -23951,7 +23951,7 @@ function Trig_GruulSpell_Actions()
     EnableTrigger(gg_trg_RRR)
     
     -- ????? ????? ?????? ?????? 1.10+ 0.15 ?????? ???
-    TriggerSleepAction(( 1.10 + ( 0.15 * I2R(GetUnitAbilityLevel(Gruul[pi], FourCC('A18Q'))) ) ))
+    TriggerSleepAction(1.10 + ( 0.15 * I2R(GetUnitAbilityLevel(Gruul[pi], FourCC('A18Q'))) ))
     
     
     DisableTrigger(gg_trg_RRR)
@@ -24385,7 +24385,7 @@ end
 -- Trigger: Pribavka k zoloty
 --===========================================================================
 function Trig_Pribavka_k_zoloty_Actions()
-    AdjustPlayerStateBJ(( 2000 * GetUnitAbilityLevelSwapped(FourCC('A0ZN'), GetTriggerUnit()) ), GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD)
+    AdjustPlayerStateBJ(2000 * GetUnitAbilityLevelSwapped(FourCC('A0ZN'), GetTriggerUnit()), GetOwningPlayer(GetTriggerUnit()), PLAYER_STATE_RESOURCE_GOLD)
 end
 --===========================================================================
 function InitTrig_Pribavka_k_zoloty()
@@ -24658,7 +24658,7 @@ function Trig_Sluga_qqgsarona_Actions()
     -- --
     ForGroupBJ(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(Trig_Sluga_qqgsarona_Func012001002)), Trig_Sluga_qqgsarona_Func012A)
     GroupAddUnitSimple(gg_unit_n03A_0657, udg_StolicaGroups)
-    BlzSetUnitStringFieldBJ(gg_unit_n03A_0657, UNIT_SF_NAME, ( "cffd45e19r" .. GetUnitName(gg_unit_n03A_0657) ))
+    BlzSetUnitStringFieldBJ(gg_unit_n03A_0657, UNIT_SF_NAME, "cffd45e19r" .. GetUnitName(gg_unit_n03A_0657))
     ForForce(GetPlayersAll(), Trig_Sluga_qqgsarona_Func017A)
     DisableTrigger(GetTriggeringTrigger())
 end
@@ -24990,7 +24990,7 @@ function Trig_Spell2_Conditions()
     return GetUnitAbilityLevel(GetAttacker(), FourCC('A122')) == 1 and not IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE)
 end
 function Trig_Spell2_Actions()
-    UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.014 ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
+    UnitDamageTargetBJ(GetAttacker(), GetTriggerUnit(), GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetTriggerUnit()) * 0.014, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
 end
 --===========================================================================
 function InitTrig_Spell2()
@@ -26967,7 +26967,7 @@ function Trig_SetLifeNormal_Conditions()
 end
 function Trig_SetLifeNormal_Actions()
    
-    SetUnitLifeBJ(GetTriggerUnit(), ( 3.00 + GetEventDamage() ))
+    SetUnitLifeBJ(GetTriggerUnit(), 3.00 + GetEventDamage())
 end
 --===========================================================================
 function InitTrig_SetLifeNormal()
@@ -27774,11 +27774,11 @@ end
 function Trig_GetMoreStatsBwon_Actions()
     local u= Bwonsamdy[GetPlayerId(GetOwningPlayer(GetKillingUnit()))]
     if u ~= nil then
-        BlzSetUnitMaxHP(u, ( BlzGetUnitMaxHP(u) + 1 ))
-        BlzSetUnitMaxMana(u, ( BlzGetUnitMaxMana(u) + 6 ))
-        SetUnitLifeBJ(u, ( GetUnitStateSwap(UNIT_STATE_LIFE, u) + 1 ))
-        SetUnitManaBJ(u, ( GetUnitStateSwap(UNIT_STATE_MANA, u) + 6 ))
-        BlzSetUnitRealFieldBJ(u, UNIT_RF_MANA_REGENERATION, ( BlzGetUnitRealField(u, UNIT_RF_MANA_REGENERATION) + 0.05 ))
+        BlzSetUnitMaxHP(u, BlzGetUnitMaxHP(u) + 1)
+        BlzSetUnitMaxMana(u, BlzGetUnitMaxMana(u) + 6)
+        SetUnitLifeBJ(u, GetUnitStateSwap(UNIT_STATE_LIFE, u) + 1)
+        SetUnitManaBJ(u, GetUnitStateSwap(UNIT_STATE_MANA, u) + 6)
+        BlzSetUnitRealFieldBJ(u, UNIT_RF_MANA_REGENERATION, BlzGetUnitRealField(u, UNIT_RF_MANA_REGENERATION) + 0.05)
         
     end
     u=nil
@@ -27884,11 +27884,11 @@ function Trig_GetMoreStats_Conditions()
 end
 function Trig_GetMoreStats_Actions()
     local u= GetKillingUnit()
-    BlzSetUnitMaxHP(u, ( BlzGetUnitMaxHP(u) + 5 ))
-    BlzSetUnitMaxMana(u, ( BlzGetUnitMaxMana(u) + 5 ))
-    SetUnitLifeBJ(u, ( GetUnitStateSwap(UNIT_STATE_LIFE, u) + 5.00 ))
+    BlzSetUnitMaxHP(u, BlzGetUnitMaxHP(u) + 5)
+    BlzSetUnitMaxMana(u, BlzGetUnitMaxMana(u) + 5)
+    SetUnitLifeBJ(u, GetUnitStateSwap(UNIT_STATE_LIFE, u) + 5.00)
     
-    SetUnitManaBJ(u, ( GetUnitStateSwap(UNIT_STATE_MANA, u) + 5.00 ))
+    SetUnitManaBJ(u, GetUnitStateSwap(UNIT_STATE_MANA, u) + 5.00)
    
     u=nil
 end
@@ -27931,8 +27931,8 @@ function Trig_Help_Actions()
         u2=BlzGroupUnitAt(g, GetRandomInt(0, udg_LocalInteger2 - 1))
         if u2 ~= nil and UnitAlive(u2) and u ~= u2 then
             
-            SetUnitLifeBJ(u, ( GetUnitStateSwap(UNIT_STATE_LIFE, u) + GetUnitStateSwap(UNIT_STATE_LIFE, u2) * 0.4 ))
-            SetUnitManaBJ(u, ( GetUnitStateSwap(UNIT_STATE_MANA, u) + GetUnitStateSwap(UNIT_STATE_MANA, u2) * 0.4 ))
+            SetUnitLifeBJ(u, GetUnitStateSwap(UNIT_STATE_LIFE, u) + GetUnitStateSwap(UNIT_STATE_LIFE, u2) * 0.4)
+            SetUnitManaBJ(u, GetUnitStateSwap(UNIT_STATE_MANA, u) + GetUnitStateSwap(UNIT_STATE_MANA, u2) * 0.4)
             UnitDamageTargetBJ(u, u2, 9999, ATTACK_TYPE_HERO, DAMAGE_TYPE_DEATH)
             l=AddLightning("AFOD", true, GetUnitX(u), GetUnitY(u), GetUnitX(u2), GetUnitY(u2))
             TriggerSleepAction(0.15)
@@ -27967,7 +27967,7 @@ function Trig_SpelltakesHealth_Actions()
     
     
     
-    SetUnitLifeBJ(u, ( GetUnitStateSwap(UNIT_STATE_LIFE, u) - 75 * GetUnitAbilityLevel(u, GetSpellAbilityId()) ))
+    SetUnitLifeBJ(u, GetUnitStateSwap(UNIT_STATE_LIFE, u) - 75 * GetUnitAbilityLevel(u, GetSpellAbilityId()))
     if GetSpellAbilityId() == FourCC('A1EL') and GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSpellTargetUnit()) then
         
         BlzEndUnitAbilityCooldown(GetTriggerUnit(), FourCC('A1EL'))
@@ -28027,8 +28027,8 @@ function Trig_HelpButton_Actions()
             if u2 ~= nil and UnitAlive(u2) and u ~= u2 then
                 GroupRemoveUnit(g, u2)
                 udg_LocalInteger2=udg_LocalInteger2 - 1
-                SetUnitLifeBJ(u, ( GetUnitStateSwap(UNIT_STATE_LIFE, u) + GetUnitStateSwap(UNIT_STATE_LIFE, u2) * 0.4 ))
-                SetUnitManaBJ(u, ( GetUnitStateSwap(UNIT_STATE_MANA, u) + GetUnitStateSwap(UNIT_STATE_MANA, u2) * 0.4 ))
+                SetUnitLifeBJ(u, GetUnitStateSwap(UNIT_STATE_LIFE, u) + GetUnitStateSwap(UNIT_STATE_LIFE, u2) * 0.4)
+                SetUnitManaBJ(u, GetUnitStateSwap(UNIT_STATE_MANA, u) + GetUnitStateSwap(UNIT_STATE_MANA, u2) * 0.4)
                 UnitDamageTargetBJ(u, u2, 9999, ATTACK_TYPE_HERO, DAMAGE_TYPE_DEATH)
                 l=AddLightning("AFOD", true, GetUnitX(u), GetUnitY(u), GetUnitX(u2), GetUnitY(u2))
                 RemoveLigtingTimed(l , 2)
@@ -28153,7 +28153,7 @@ function Trig_TrainHakkar_Conditions()
 end
 function Trig_TrainHakkar_Actions()
     for bj_forLoopAIndex = 1, 50 do
-        TriggerRegisterUnitLifeEvent(gg_trg_Help, GetTrainedUnit(), LESS_THAN, ( 14 * I2R(GetForLoopIndexA()) ))
+        TriggerRegisterUnitLifeEvent(gg_trg_Help, GetTrainedUnit(), LESS_THAN, 14 * I2R(GetForLoopIndexA()))
     end
     TriggerRegisterUnitLifeEvent(gg_trg_Help, GetTrainedUnit(), LESS_THAN, 2.00)
 end
@@ -28330,9 +28330,9 @@ function Trig_AK1T1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AT1_0"] or 0)
+    i=CommonHash[pi]["AT1_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AT1" .. i] or 0)
+    b=CommonHash[pi]["AT1" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -28426,9 +28426,9 @@ function Trig_AK1T2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AT2_0"] or 0)
+    i=CommonHash[pi]["AT2_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AT2" .. i] or 0)
+    b=CommonHash[pi]["AT2" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -28624,9 +28624,9 @@ function Trig_AK1T3_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AT3_0"] or 0)
+    i=CommonHash[pi]["AT3_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AT3" .. i] or 0)
+    b=CommonHash[pi]["AT3" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -28785,9 +28785,9 @@ function Trig_AK1Cav_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["ACav_0"] or 0)
+    i=CommonHash[pi]["ACav_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["ACav" .. i] or 0)
+    b=CommonHash[pi]["ACav" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -28931,9 +28931,9 @@ function Trig_AK2T1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AK1_0"] or 0)
+    i=CommonHash[pi]["AK1_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AK1" .. i] or 0)
+    b=CommonHash[pi]["AK1" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -29084,9 +29084,9 @@ function Trig_AK2T2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AK2_0"] or 0)
+    i=CommonHash[pi]["AK2_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AK2" .. i] or 0)
+    b=CommonHash[pi]["AK2" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -29256,9 +29256,9 @@ function Trig_AK2T3_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AK3_0"] or 0)
+    i=CommonHash[pi]["AK3_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AK3" .. i] or 0)
+    b=CommonHash[pi]["AK3" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -29434,9 +29434,9 @@ function Trig_AM1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AM1_0"] or 0)
+    i=CommonHash[pi]["AM1_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AM1" .. i] or 0)
+    b=CommonHash[pi]["AM1" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -29601,9 +29601,9 @@ function Trig_AM2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AM2_0"] or 0)
+    i=CommonHash[pi]["AM2_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AM2" .. i] or 0)
+    b=CommonHash[pi]["AM2" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -29721,9 +29721,9 @@ function Trig_AM3_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AM3_0"] or 0)
+    i=CommonHash[pi]["AM3_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AM3" .. i] or 0)
+    b=CommonHash[pi]["AM3" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -29859,9 +29859,9 @@ function Trig_AE1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AE1_0"] or 0)
+    i=CommonHash[pi]["AE1_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AE1" .. i] or 0)
+    b=CommonHash[pi]["AE1" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -30027,9 +30027,9 @@ function Trig_AE2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AEE2_0"] or 0)
+    i=CommonHash[pi]["AEE2_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AEE2" .. i] or 0)
+    b=CommonHash[pi]["AEE2" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -30176,9 +30176,9 @@ function Trig_AN1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AN1_0"] or 0)
+    i=CommonHash[pi]["AN1_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AN1" .. i] or 0)
+    b=CommonHash[pi]["AN1" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -30306,9 +30306,9 @@ function Trig_AN2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AN2_0"] or 0)
+    i=CommonHash[pi]["AN2_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AN2" .. i] or 0)
+    b=CommonHash[pi]["AN2" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -32611,7 +32611,7 @@ function Trig_GelbinSpellClick_Func002C()
     return GetUnitLifePercent(GetTriggerUnit()) < 20.00
 end
 function Trig_GelbinSpellClick_Actions()
-    SetUnitLifePercentBJ(GetTriggerUnit(), ( GetUnitLifePercent(GetTriggerUnit()) + 10.00 ))
+    SetUnitLifePercentBJ(GetTriggerUnit(), GetUnitLifePercent(GetTriggerUnit()) + 10.00)
     if Trig_GelbinSpellClick_Func002C() then
         SetUnitAbilityLevelSwapped(FourCC('A0XD'), GetTriggerUnit(), 5)
     else
@@ -32645,9 +32645,9 @@ end
 --===========================================================================
 function Trig_HeroSell_Actions()
     udg_LocalReal2=GetUnitStateSwap(UNIT_STATE_LIFE, GetSpellTargetUnit())
-    udg_LocalReal2=( udg_LocalReal2 * I2R(GetUnitAbilityLevelSwapped(FourCC('A0TF'), GetTriggerUnit())) )
-    udg_LocalReal2=( udg_LocalReal2 * 0.25 )
-    SetUnitLifeBJ(GetTriggerUnit(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) + udg_LocalReal2 ))
+    udg_LocalReal2=udg_LocalReal2 * I2R(GetUnitAbilityLevelSwapped(FourCC('A0TF'), GetTriggerUnit()))
+    udg_LocalReal2=udg_LocalReal2 * 0.25
+    SetUnitLifeBJ(GetTriggerUnit(), GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) + udg_LocalReal2)
     KillUnit(GetSpellTargetUnit())
 end
 --===========================================================================
@@ -35088,9 +35088,9 @@ function Trig_K1T1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["T1_0"] or 0)
+    i=CommonHash[pi]["T1_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["T1" .. i] or 0)
+    b=CommonHash[pi]["T1" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -35191,9 +35191,9 @@ function Trig_K1T2_Actions()
     local pi= GetPlayerId(p)
     
     -- 
-    i=(CommonHash[pi]["T2_0"] or 0)
+    i=CommonHash[pi]["T2_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["T2" .. i] or 0)
+    b=CommonHash[pi]["T2" .. i] or 0
     --
     
     
@@ -35282,9 +35282,9 @@ function Trig_K1T2b_Actions()
     
     
     -- 
-    i=(CommonHash[pi]["T2b_0"] or 0)
+    i=CommonHash[pi]["T2b_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["T2b" .. i] or 0)
+    b=CommonHash[pi]["T2b" .. i] or 0
     --
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -35402,9 +35402,9 @@ function Trig_K1TCav_Actions()
     
     
     -- 
-    i=(CommonHash[pi]["TCav_0"] or 0)
+    i=CommonHash[pi]["TCav_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["TCav" .. i] or 0)
+    b=CommonHash[pi]["TCav" .. i] or 0
     --
     
     
@@ -35536,9 +35536,9 @@ function Trig_K1T4_Actions()
     
     
     -- 
-    i=(CommonHash[pi]["T3_0"] or 0)
+    i=CommonHash[pi]["T3_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["T3" .. i] or 0)
+    b=CommonHash[pi]["T3" .. i] or 0
     --
     
     --??? ?????
@@ -35650,9 +35650,9 @@ function Trig_K2T1_Actions()
     
     
     -- 
-    i=(CommonHash[pi]["K1_0"] or 0)
+    i=CommonHash[pi]["K1_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["K1" .. i] or 0)
+    b=CommonHash[pi]["K1" .. i] or 0
     --
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -35760,9 +35760,9 @@ function Trig_K2T2_Actions()
     
     
     -- 
-    i=(CommonHash[pi]["K2_0"] or 0)
+    i=CommonHash[pi]["K2_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["K2" .. i] or 0)
+    b=CommonHash[pi]["K2" .. i] or 0
     --
     
     aiFixTrainBefore(GetTrainedUnit() , pi)
@@ -35867,9 +35867,9 @@ function Trig_K2T2b_Actions()
     local pi= GetPlayerId(p)
     
     -- 
-    i=(CommonHash[pi]["K2b_0"] or 0)
+    i=CommonHash[pi]["K2b_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["K2b" .. i] or 0)
+    b=CommonHash[pi]["K2b" .. i] or 0
     --
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -35968,9 +35968,9 @@ function Trig_K2T3_Actions()
     
     
     -- 
-    i=(CommonHash[pi]["K3_0"] or 0)
+    i=CommonHash[pi]["K3_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["K3" .. i] or 0)
+    b=CommonHash[pi]["K3" .. i] or 0
     --
     aiFixTrainBefore(GetTrainedUnit() , pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
@@ -37975,7 +37975,7 @@ function Trig_QTunServe_Actions()
     ForForce(GetPlayersAll(), Trig_QTunServe_Func004A)
     ForGroupBJ(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(Trig_QTunServe_Func005001002)), Trig_QTunServe_Func005A)
     GroupAddUnitSimple(gg_unit_n03D_0666, udg_StolicaGroups)
-    BlzSetUnitStringFieldBJ(gg_unit_n03D_0666, UNIT_SF_NAME, ( "cffd45e19r" .. GetUnitName(gg_unit_n03D_0666) ))
+    BlzSetUnitStringFieldBJ(gg_unit_n03D_0666, UNIT_SF_NAME, "cffd45e19r" .. GetUnitName(gg_unit_n03D_0666))
     TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, gg_unit_n03D_0666, EVENT_UNIT_ATTACKED)
     ForForce(GetPlayersAll(), Trig_QTunServe_Func009A)
     SetUnitAbilityLevelSwapped(FourCC('A0W0'), gg_unit_n03D_0666, 2)
@@ -38290,8 +38290,8 @@ function Trig_TweenChange_Actions()
     if u2 ~= nil then
         SetUnitPosition(u, GetUnitX(u2), GetUnitY(u2))
         SetUnitPosition(u2, x, y)
-        SetUnitLifePercentBJ(u, ( GetUnitLifePercent(u) + 12 * lvl ))
-        SetUnitLifePercentBJ(u2, ( GetUnitLifePercent(u2) + 12 * lvl ))
+        SetUnitLifePercentBJ(u, GetUnitLifePercent(u) + 12 * lvl)
+        SetUnitLifePercentBJ(u2, GetUnitLifePercent(u2) + 12 * lvl)
     end
     BlzStartUnitAbilityCooldown(u, FourCC('A188'), 30)
     
@@ -39533,7 +39533,7 @@ function Trig_CorrupPlus_Actions()
     local p= GetOwningPlayer(GetTriggerUnit())
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AS'), p)
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AT'), p)
-    SetPlayerTechResearchedSwap(FourCC('R04O'), ( GetPlayerTechCountSimple(FourCC('R04O'), p) + 1 ), p)
+    SetPlayerTechResearchedSwap(FourCC('R04O'), GetPlayerTechCountSimple(FourCC('R04O'), p) + 1, p)
     
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, p, nil)
     ForGroupBJ(udg_LocalOtrad2, Trig_CorrupPlus_Func008A)
@@ -39576,7 +39576,7 @@ function Trig_CorrupMinus_Actions()
     local p= GetOwningPlayer(GetTriggerUnit())
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AS'), p)
     SetPlayerAbilityAvailableBJ(false, FourCC('A0AT'), p)
-    SetPlayerTechResearchedSwap(FourCC('R04O'), ( GetPlayerTechCountSimple(FourCC('R04O'), p) - 1 ), p)
+    SetPlayerTechResearchedSwap(FourCC('R04O'), GetPlayerTechCountSimple(FourCC('R04O'), p) - 1, p)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, p, nil)
     ForGroupBJ(udg_LocalOtrad2, Trig_CorrupMinus_Func008A)
     GroupClear(udg_LocalOtrad2)
@@ -39620,7 +39620,7 @@ function Trig_Potreblenie_Func002002()
     return GetUnitAbilityLevelSwapped(FourCC('A0A5'), GetFilterUnit()) ~= 0
 end
 function Trig_Potreblenie_Func005A()
-    SetUnitAbilityLevelSwapped(FourCC('A0A5'), GetEnumUnit(), ( GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) + 1 ))
+    SetUnitAbilityLevelSwapped(FourCC('A0A5'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) + 1)
 end
 function Trig_Potreblenie_Actions()
     if Trig_Potreblenie_Func001C() then
@@ -39647,7 +39647,7 @@ function Trig_PotreblenieTrain_Conditions()
     return GetUnitAbilityLevelSwapped(FourCC('A0A5'), GetTriggerUnit()) >= 1
 end
 function Trig_PotreblenieTrain_Actions()
-    SetUnitAbilityLevelSwapped(FourCC('A0A5'), GetEnumUnit(), ( GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) + 1 ))
+    SetUnitAbilityLevelSwapped(FourCC('A0A5'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04N'), GetOwningPlayer(GetTriggerUnit())) + 1)
 end
 --===========================================================================
 function InitTrig_PotreblenieTrain()
@@ -39770,7 +39770,7 @@ function Trig_PodruvResearc_Func002002()
     return GetUnitAbilityLevelSwapped(FourCC('A0A9'), GetFilterUnit()) ~= 0
 end
 function Trig_PodruvResearc_Func005A()
-    SetUnitAbilityLevelSwapped(FourCC('A0A9'), GetEnumUnit(), ( GetPlayerTechCountSimple(FourCC('R04Q'), GetOwningPlayer(GetTriggerUnit())) + 1 ))
+    SetUnitAbilityLevelSwapped(FourCC('A0A9'), GetEnumUnit(), GetPlayerTechCountSimple(FourCC('R04Q'), GetOwningPlayer(GetTriggerUnit())) + 1)
 end
 function Trig_PodruvResearc_Actions()
     if Trig_PodruvResearc_Func001C() then
@@ -39841,7 +39841,7 @@ end
 function Trig_Samopodruv_Actions()
     local t
     if GetRandomInt(1, 100) < 35 + ( - 5 * GetUnitAbilityLevel(GetAttacker(), FourCC('A0A9')) ) then
-        SetUnitLifeBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetAttacker()) - 15.00 ))
+        SetUnitLifeBJ(GetAttacker(), GetUnitStateSwap(UNIT_STATE_LIFE, GetAttacker()) - 15.00)
         CreateTextTagUnitBJ("TRIGSTR_433", GetAttacker(), - 20.00, 5.00, 100, 100, 100, 0.00)
         t=GetLastCreatedTextTag()
         SetTextTagPermanentBJ(t, false)
@@ -39869,7 +39869,7 @@ end
 function Trig_Samopodjog_Actions()
     local t
     if GetRandomInt(1, 100) < 35 + ( - 5 * GetUnitAbilityLevel(GetAttacker(), FourCC('A0AR')) ) then
-        SetUnitLifeBJ(GetAttacker(), ( GetUnitStateSwap(UNIT_STATE_LIFE, GetAttacker()) - 15.00 ))
+        SetUnitLifeBJ(GetAttacker(), GetUnitStateSwap(UNIT_STATE_LIFE, GetAttacker()) - 15.00)
         CreateTextTagUnitBJ("TRIGSTR_433", GetAttacker(), - 20.00, 5.00, 100, 100, 100, 0.00)
         t=GetLastCreatedTextTag()
         SetTextTagPermanentBJ(t, false)
@@ -39892,7 +39892,7 @@ end
 -- Trigger: Adrenalin
 --===========================================================================
 function Trig_Adrenalin_Actions()
-    SetUnitLifePercentBJ(GetTriggerUnit(), ( GetUnitLifePercent(GetTriggerUnit()) - 15.00 ))
+    SetUnitLifePercentBJ(GetTriggerUnit(), GetUnitLifePercent(GetTriggerUnit()) - 15.00)
 end
 --===========================================================================
 function InitTrig_Adrenalin()
@@ -41944,7 +41944,7 @@ function Trig_Edvin_Ult_Actions()
             SetUnitX(u, GetUnitX(u2))
             SetUnitY(u, GetUnitY(u2))
             RemoveEffectTimed(AddSpecialEffect("ObjectsSpawnmodelsHumanHumanBloodHumanBloodLarge1.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
-            UnitDamageTargetBJ(u, u2, ( 300 * GetUnitAbilityLevel(u, FourCC('A0N4')) + 2 * GetHeroAgi(u, true) ), ATTACK_TYPE_HERO, DAMAGE_TYPE_FORCE)
+            UnitDamageTargetBJ(u, u2, 300 * GetUnitAbilityLevel(u, FourCC('A0N4')) + 2 * GetHeroAgi(u, true), ATTACK_TYPE_HERO, DAMAGE_TYPE_FORCE)
                  
             
             
@@ -44784,16 +44784,16 @@ function Trig_SandStrike_Actions()
     if Trig_SandStrike_Func001C() then
         EnableTrigger(gg_trg_Sand_Strike_Loop)
     end
-    udg_SSinteger[0]=( udg_SSinteger[0] + 1 )
-    udg_SSinteger[1]=( udg_SSinteger[1] + 1 )
+    udg_SSinteger[0]=udg_SSinteger[0] + 1
+    udg_SSinteger[1]=udg_SSinteger[1] + 1
     udg_SScaster[udg_SSinteger[1]]=GetTriggerUnit()
     SetUnitPathing(udg_SScaster[udg_SSinteger[1]], false)
     udg_SSfacing[udg_SSinteger[1]]=GetUnitFacing(udg_SScaster[udg_SSinteger[1]])
     udg_SSpointcaster[udg_SSinteger[1]]=GetUnitLoc(udg_SScaster[udg_SSinteger[1]])
-    udg_SSdamage[udg_SSinteger[1]]=( 5.00 + I2R(GetUnitAbilityLevelSwapped(FourCC('A0NF'), udg_SScaster[udg_SSinteger[1]])) )
+    udg_SSdamage[udg_SSinteger[1]]=5.00 + I2R(GetUnitAbilityLevelSwapped(FourCC('A0NF'), udg_SScaster[udg_SSinteger[1]]))
     udg_SStargetpoint[udg_SSinteger[1]]=GetSpellTargetLoc()
     udg_SSeffect[udg_SSinteger[1]]="AbilitiesWeaponsAncientProtectorMissileAncientProtectorMissile.mdl"
-    udg_SS[udg_SSinteger[1]]=( GetUnitAbilityLevelSwapped(FourCC('A0NF'), udg_SScaster[udg_SSinteger[1]]) + 30 )
+    udg_SS[udg_SSinteger[1]]=GetUnitAbilityLevelSwapped(FourCC('A0NF'), udg_SScaster[udg_SSinteger[1]]) + 30
     PauseUnitBJ(true, GetTriggerUnit())
     RemoveLocation(udg_SSpointcaster[udg_SSinteger[1]])
     RemoveLocation(udg_SStargetpoint[udg_SSinteger[1]])
@@ -44855,10 +44855,10 @@ function Trig_Sand_Strike_Loop_Actions()
             udg_SSpointmovecaster[udg_SSinteger[2]]=PolarProjectionBJ(udg_SSpointcaster[udg_SSinteger[2]], I2R(udg_SS[udg_SSinteger[2]]), udg_SSfacing[udg_SSinteger[2]])
             if Trig_Sand_Strike_Loop_Func001Func001Func003C() then
                 RemoveLocation(udg_SSpointmovecaster[udg_SSinteger[2]])
-                udg_SSpointmovecaster[udg_SSinteger[2]]=PolarProjectionBJ(udg_SSpointcaster[udg_SSinteger[2]], I2R(udg_SS[udg_SSinteger[2]]), ( udg_SSfacing[udg_SSinteger[2]] - 180.00 ))
+                udg_SSpointmovecaster[udg_SSinteger[2]]=PolarProjectionBJ(udg_SSpointcaster[udg_SSinteger[2]], I2R(udg_SS[udg_SSinteger[2]]), udg_SSfacing[udg_SSinteger[2]] - 180.00)
             end
             udg_SSgroup[udg_SSinteger[2]]=GetUnitsInRangeOfLocMatching(150.00, udg_SSpointcaster[udg_SSinteger[2]], Condition(Trig_Sand_Strike_Loop_Func001Func001Func004002003))
-            udg_SS[udg_SSinteger[2]]=( udg_SS[udg_SSinteger[2]] - 1 )
+            udg_SS[udg_SSinteger[2]]=udg_SS[udg_SSinteger[2]] - 1
             SetUnitPositionLoc(udg_SScaster[udg_SSinteger[2]], udg_SSpointmovecaster[udg_SSinteger[2]])
             ForGroupBJ(udg_SSgroup[udg_SSinteger[2]], Trig_Sand_Strike_Loop_Func001Func001Func007A)
             RemoveLocation(udg_SSpointmovecaster[udg_SSinteger[2]])
@@ -44867,7 +44867,7 @@ function Trig_Sand_Strike_Loop_Actions()
             if Trig_Sand_Strike_Loop_Func001Func001Func011C() then
                 SetUnitPathing(udg_SScaster[udg_SSinteger[2]], true)
                 PauseUnitBJ(false, udg_SScaster[udg_SSinteger[2]])
-                udg_SSinteger[0]=( udg_SSinteger[0] - 1 )
+                udg_SSinteger[0]=udg_SSinteger[0] - 1
                 if Trig_Sand_Strike_Loop_Func001Func001Func011Func004C() then
                     udg_SSinteger[1]=0
                     DisableTrigger(GetTriggeringTrigger())
@@ -45488,18 +45488,18 @@ function Trig_____________________________________001_Copy_Func004C()
 end
 function Trig_____________________________________001_Copy_Actions()
     udg_Dm[2]=GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetAttackedUnitBJ())
-    udg_Dm[1]=( udg_Dm[2] - GetUnitStateSwap(UNIT_STATE_LIFE, GetAttackedUnitBJ()) )
+    udg_Dm[1]=udg_Dm[2] - GetUnitStateSwap(UNIT_STATE_LIFE, GetAttackedUnitBJ())
     if Trig_____________________________________001_Copy_Func004C() then
-        UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), ( udg_Dm[1] * 0.01 ), ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), udg_Dm[1] * 0.01, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
     else
         if Trig_____________________________________001_Copy_Func004Func001C() then
-            UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), ( udg_Dm[1] * 0.02 ), ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
+            UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), udg_Dm[1] * 0.02, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
         else
             if Trig_____________________________________001_Copy_Func004Func001Func001C() then
-                UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), ( udg_Dm[1] * 0.03 ), ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
+                UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), udg_Dm[1] * 0.03, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
             else
                 if Trig_____________________________________001_Copy_Func004Func001Func001Func001C() then
-                    UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), ( udg_Dm[1] * 0.04 ), ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
+                    UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), udg_Dm[1] * 0.04, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
                 end
             end
         end
@@ -46487,8 +46487,8 @@ end
 -- Trigger: Spell E Copy
 --===========================================================================
 function Trig_Spell_E_Copy_Actions()
-    udg_MUI_E_Glaz=( udg_MUI_E_Glaz + 1 )
-    udg_Antibag_E_Glaz[udg_MUI_E_Glaz]=( udg_Antibag_E_Glaz[udg_MUI_E_Glaz] + 1 )
+    udg_MUI_E_Glaz=udg_MUI_E_Glaz + 1
+    udg_Antibag_E_Glaz[udg_MUI_E_Glaz]=udg_Antibag_E_Glaz[udg_MUI_E_Glaz] + 1
     udg_Cikl_E_Glaz=0
     udg_Dalnost_E_Glaz[udg_MUI_E_Glaz]=0.00
     udg_Caster_E_Glaz[udg_MUI_E_Glaz]=GetTriggerUnit()
@@ -46515,7 +46515,7 @@ function Trig_Spell_E_Dvij_Func001Func001Func007Func001C()
 end
 function Trig_Spell_E_Dvij_Func001Func001Func007A()
     if Trig_Spell_E_Dvij_Func001Func001Func007Func001C() then
-        UnitDamageTargetBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1DA'), udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        UnitDamageTargetBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], GetEnumUnit(), 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1DA'), udg_Caster_E_Glaz[udg_Cikl_E_Glaz])), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         GroupAddUnitSimple(GetEnumUnit(), udg_Group_E_Glaz[udg_Cikl_E_Glaz])
     end
 end
@@ -46536,7 +46536,7 @@ function Trig_Spell_E_Dvij_Actions()
     while true do
         if udg_Cikl_E_Glaz > udg_MUI_E_Glaz then break end
         if Trig_Spell_E_Dvij_Func001Func001C() then
-            udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz]=( udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz] + 0.02 )
+            udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz]=udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz] + 0.02
             udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz]=GetUnitLoc(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])
             SetUnitPositionLoc(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], PolarProjectionBJ(udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz], 60.00, GetUnitFacing(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])))
             AddSpecialEffectLocBJ(udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz], "CosmicBall.mdx")
@@ -46549,7 +46549,7 @@ function Trig_Spell_E_Dvij_Actions()
                 PauseUnitBJ(false, udg_Caster_E_Glaz[udg_Cikl_E_Glaz])
                 udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz]=0.00
                 udg_Logika_E_Glaz[udg_Cikl_E_Glaz]=false
-                udg_Antibag_E_Glaz[udg_Cikl_E_Glaz]=( udg_Antibag_E_Glaz[udg_Cikl_E_Glaz] - 1 )
+                udg_Antibag_E_Glaz[udg_Cikl_E_Glaz]=udg_Antibag_E_Glaz[udg_Cikl_E_Glaz] - 1
                 if Trig_Spell_E_Dvij_Func001Func001Func008Func008C() then
                     PauseTimerBJ(true, udg_Timer_E_Glaz)
                     udg_MUI_E_Glaz=0
@@ -46601,7 +46601,7 @@ function Trig_Spell_E2_Actions()
     UnitDamageTargetBJ(GetEventDamageSource(), u, I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsOtherCrushingWaveCrushingWaveDamage.mdl")
     DestroyEffectBJ(GetLastCreatedEffectBJ())
-    CreateTextTagLocBJ(( "cff00ff00 .. " .. I2S(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)) ), udg_To4kaTarget, 140.00, 9.00, 100, 100, 100, 0)
+    CreateTextTagLocBJ("cff00ff00 .. " .. I2S(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)), udg_To4kaTarget, 140.00, 9.00, 100, 100, 100, 0)
     SetTextTagVelocityBJ(GetLastCreatedTextTag(), 150.00, 90)
     SetTextTagSuspendedBJ(GetLastCreatedTextTag(), false)
     SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -46690,7 +46690,7 @@ end
 -- Trigger: Lech Copy
 --===========================================================================
 function Trig_Lech_Copy_Actions()
-    SetUnitLifeBJ(udg_u, ( GetUnitStateSwap(UNIT_STATE_LIFE, udg_u) + GetEventDamage() ))
+    SetUnitLifeBJ(udg_u, GetUnitStateSwap(UNIT_STATE_LIFE, udg_u) + GetEventDamage())
 end
 --===========================================================================
 function InitTrig_Lech_Copy()
@@ -46707,7 +46707,7 @@ function Trig_Cast_Copy_Actions()
     UnitAddAbilityBJ(FourCC('A1BS'), GetLastCreatedUnit())
     IssueTargetOrderBJ(GetLastCreatedUnit(), "purge", GetSpellAbilityUnit())
     UnitApplyTimedLifeBJ(1.00, FourCC('BTLF'), GetLastCreatedUnit())
-    TriggerSleepAction(( 5.00 + ( 1.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1CB'), GetSpellAbilityUnit())) ) ))
+    TriggerSleepAction(5.00 + ( 1.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1CB'), GetSpellAbilityUnit())) ))
     DisableTrigger(gg_trg_Lech)
 end
 --===========================================================================
@@ -47027,8 +47027,8 @@ function Trig_StartUlt_Func001C()
 end
 function Trig_StartUlt_Actions()
     if Trig_StartUlt_Func001C() then
-        SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD) - 8000 ))
-        SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER, ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) - 8000 ))
+        SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD) - 8000)
+        SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) - 8000)
         UnitAddAbilityBJ(FourCC('MIM4'), GetTriggerUnit())
         SetUnitAbilityLevelSwapped(FourCC('MIM4'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('MIM6'), GetTriggerUnit()))
         BlzUnitHideAbility(GetTriggerUnit(), FourCC('MIM4'), false)
@@ -47039,8 +47039,8 @@ function Trig_StartUlt_Actions()
         IssueImmediateOrderBJ(GetTriggerUnit(), "stomp")
     else
         if Trig_StartUlt_Func001Func001C() then
-            SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD) - 8000 ))
-            SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER, ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) - 8000 ))
+            SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD) - 8000)
+            SetPlayerStateBJ(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER, GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) - 8000)
             UnitAddAbilityBJ(FourCC('MIM4'), GetTriggerUnit())
             SetUnitAbilityLevelSwapped(FourCC('MIM4'), GetTriggerUnit(), GetUnitAbilityLevelSwapped(FourCC('MIM6'), GetTriggerUnit()))
             BlzUnitHideAbility(GetTriggerUnit(), FourCC('MIM4'), false)
@@ -47407,7 +47407,7 @@ function Trig_SecondChance_Func003Func008C()
     end
    
     if IsPlayerInForce(ConvertedPlayer(udg_LocalInteger), Observers) then
-        DisplayTimedTextToForce(GetPlayersAll(), 5.00, ( ( "" .. GetPlayerName(GetTriggerPlayer()) ) .. ( "" .. ( GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " not " ) ) ))
+        DisplayTimedTextToForce(GetPlayersAll(), 5.00, ( "" .. GetPlayerName(GetTriggerPlayer()) ) .. ( "" .. ( GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " not " ) ))
         return false
     end
     return true
@@ -47430,7 +47430,7 @@ function Trig_SecondChance_Actions()
     udg_LocalInteger=S2I(udg_LocalText2)
     ProbeLogWrite("[CHAT] -raceselect target=" .. tostring(udg_LocalInteger))
     if Trig_SecondChance_Func003C() then
-        udg_LocalPosition2=(StartLoc[GetRandomInt(0, StartLocCount - 1)]) -- INLINED!!
+        udg_LocalPosition2=StartLoc[GetRandomInt(0, StartLocCount - 1)] -- INLINED!!
         DisplayTimedTextToForce(GetPlayersAll(), 5.00, "???? " .. GetPlayerName(GetTriggerPlayer()) .. " ??? ?????? " .. GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " ?????? ????!")
         DisplayTimedTextToPlayer(ConvertedPlayer(udg_LocalInteger), 0, 0, 15.00, "? ??? ???? 15 ????? ?? ??, ????? ????????? ???????!")
         CreateNUnitsAtLoc(1, FourCC('h0HJ'), ConvertedPlayer(udg_LocalInteger), udg_LocalPosition2, bj_UNIT_FACING)
@@ -47459,7 +47459,7 @@ end
 function BridgeRaceSelect(target_index)
     local target_player = ConvertedPlayer(target_index)
     local t = SecondChance[GetPlayerId(target_player)]
-    udg_LocalPosition2=(StartLoc[GetRandomInt(0, StartLocCount - 1)])
+    udg_LocalPosition2=StartLoc[GetRandomInt(0, StartLocCount - 1)]
     DisplayTimedTextToForce(GetPlayersAll(), 5.00, "Bridge gave player " .. GetPlayerName(target_player) .. " race selection")
     DisplayTimedTextToPlayer(target_player, 0, 0, 15.00, "You have 15 minutes to place your capital")
     CreateNUnitsAtLoc(1, FourCC('h0HJ'), target_player, udg_LocalPosition2, bj_UNIT_FACING)
@@ -47500,7 +47500,7 @@ function Trig_GG_Func004A()
 end
 function Trig_GG_Actions()
     --local integer pi = GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r" ))
+    DisplayTextToForce(udg_AllPlayers, GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r")
     --call GroupEnumUnitsOfPlayer( udg_LocalOtrad2, GetTriggerPlayer(), null )
     --call ForGroupBJ( udg_LocalOtrad2, function Trig_GG_Func004A )
     --call ForForce(Vassals[pi], function Freedom)
@@ -48498,8 +48498,8 @@ function Trig_SpawnQtun_Actions()
         else
             udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
         end
-        udg_LocalInteger=R2I(( ( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00 ))
-        udg_LocalInteger2=( udg_LocalInteger * 2 )
+        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
+        udg_LocalInteger2=udg_LocalInteger * 2
         udg_LocalOtrad=GetLastCreatedGroup()
         udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
         ForGroupBJ(udg_LocalOtrad, Trig_SpawnQtun_Func002Func008A)
@@ -48514,8 +48514,8 @@ function Trig_SpawnQtun_Actions()
         else
             udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
         end
-        udg_LocalInteger=R2I(( ( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00 ))
-        udg_LocalInteger2=( udg_LocalInteger * 4 )
+        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
+        udg_LocalInteger2=udg_LocalInteger * 4
         udg_LocalOtrad=GetLastCreatedGroup()
         udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
         ForGroupBJ(udg_LocalOtrad, Trig_SpawnQtun_Func003Func008A)
@@ -48530,8 +48530,8 @@ function Trig_SpawnQtun_Actions()
         else
             udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
         end
-        udg_LocalInteger=R2I(( ( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00 ))
-        udg_LocalInteger2=( udg_LocalInteger * 1 )
+        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
+        udg_LocalInteger2=udg_LocalInteger * 1
         CreateNUnitsAtLoc(udg_LocalInteger2, FourCC('e01Q'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
         udg_LocalOtrad=GetLastCreatedGroup()
         udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
@@ -48547,8 +48547,8 @@ function Trig_SpawnQtun_Actions()
         else
             udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
         end
-        udg_LocalInteger=R2I(( ( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00 ))
-        udg_LocalInteger2=( udg_LocalInteger * 1 )
+        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
+        udg_LocalInteger2=udg_LocalInteger * 1
         CreateNUnitsAtLoc(udg_LocalInteger2, FourCC('e01P'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
         udg_LocalOtrad=GetLastCreatedGroup()
         udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
@@ -48936,7 +48936,7 @@ function Trig_CheckType_Actions()
     DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
     while true do
         if i == 23 then break end
-        b=(AiData[i][GetUnitTypeId(u)] or 0)
+        b=AiData[i][GetUnitTypeId(u)] or 0
         DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, GetPlayerName(Player(i)) .. " - " .. I2S(b))
         i=i + 1
     end
@@ -49515,7 +49515,7 @@ function Trig_PereborBuildings_Code_Func002A()
     gPi=GetPlayerId(gPlayer)
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_OnlyNeaded)
-    local numberCount = (AiData[gPi][StringHash("Number")] or 0)
+    local numberCount = AiData[gPi][StringHash("Number")] or 0
     -- ??????? ???? 0 ??? ????? ??????
     if FirstOfGroup(gGroup) == nil then
         if not (AiData[gPi][StringHash("Log_PereborNoBld")] or false) then
@@ -49613,7 +49613,7 @@ function PereborNavalb()
     
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, p, B_NavalBases)
-    i=(AiData[pi][StringHash("NumberN")] or 0)
+    i=AiData[pi][StringHash("NumberN")] or 0
     -- ??????? ???? 0 ??? ?????? ????? ?????
     if FirstOfGroup(gGroup) == nil then
         if udg_Octhet then
@@ -50481,12 +50481,12 @@ function Trig_AiLogAll_Actions()
     --call ForGroup(gGroup,function )
     BJDebugMsg("" .. GetPlayerName(gPlayer))
     BJDebugMsg("")
-    BJDebugMsg("Number" .. I2S(((AiData[(gPi )][( StringHash("Number"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberN" .. I2S(((AiData[(gPi )][( StringHash("NumberN"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberPorts" .. I2S(((AiData[(gPi )][( StringHash("NumberPorts"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberGuard" .. I2S(((AiData[(gPi )][( StringHash("NumberGuard"))] or 0)))) -- INLINED!!
-    BJDebugMsg("T" .. I2S(((AiData[(gPi )][( StringHash("T"))] or 0)))) -- INLINED!!
-    BJDebugMsg("HV" .. I2S(((AiData[(gPi )][( StringHash("HV"))] or 0)))) -- INLINED!!
+    BJDebugMsg("Number" .. I2S(AiData[(gPi )][( StringHash("Number"))] or 0)) -- INLINED!!
+    BJDebugMsg("NumberN" .. I2S(AiData[(gPi )][( StringHash("NumberN"))] or 0)) -- INLINED!!
+    BJDebugMsg("NumberPorts" .. I2S(AiData[(gPi )][( StringHash("NumberPorts"))] or 0)) -- INLINED!!
+    BJDebugMsg("NumberGuard" .. I2S(AiData[(gPi )][( StringHash("NumberGuard"))] or 0)) -- INLINED!!
+    BJDebugMsg("T" .. I2S(AiData[(gPi )][( StringHash("T"))] or 0)) -- INLINED!!
+    BJDebugMsg("HV" .. I2S(AiData[(gPi )][( StringHash("HV"))] or 0)) -- INLINED!!
     BJDebugMsg("")
     
     gString="Groupudg_Ai_army[pi]"

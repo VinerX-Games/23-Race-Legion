@@ -138,7 +138,7 @@ function createAiPlayer(pi, raceToken)
 
 	-- Задаю место
 
-	udg_LocalPoint = (StartLoc[GetRandomInt(0, StartLocCount - 1)])	--  INLINED!!
+	udg_LocalPoint = StartLoc[GetRandomInt(0, StartLocCount - 1)]	--  INLINED!!
 	ProbeLogWrite("[AI] createAiPlayer start location set")
 
 	--  Раса аи (опциональный форс через raceToken, иначе случайно)
@@ -152,7 +152,7 @@ function createAiPlayer(pi, raceToken)
 	ProbeLogWrite("[AI] createAiPlayer race=" .. tostring(AiRace[pi]) .. " set")
 	
 	udg_LocalText2 = GetPlayerName(gPlayer)
-	udg_LocalText2 = ((I2S(pi + 1) .. ". ") .. udg_LocalText2)
+	udg_LocalText2 = (I2S(pi + 1) .. ". ") .. udg_LocalText2
 	local ownerIndex = EnsureMultiboardPlayerRow(pi)
 	if ownerIndex ~= nil then
 		MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 0], udg_LocalText2)

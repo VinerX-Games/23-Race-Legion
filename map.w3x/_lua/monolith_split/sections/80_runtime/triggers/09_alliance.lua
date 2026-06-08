@@ -165,9 +165,9 @@ function Trig_AK1T1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AT1_0"] or 0)
+    i=CommonHash[pi]["AT1_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AT1" .. i] or 0)
+    b=CommonHash[pi]["AT1" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -261,9 +261,9 @@ function Trig_AK1T2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AT2_0"] or 0)
+    i=CommonHash[pi]["AT2_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AT2" .. i] or 0)
+    b=CommonHash[pi]["AT2" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -459,9 +459,9 @@ function Trig_AK1T3_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AT3_0"] or 0)
+    i=CommonHash[pi]["AT3_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AT3" .. i] or 0)
+    b=CommonHash[pi]["AT3" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -620,9 +620,9 @@ function Trig_AK1Cav_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["ACav_0"] or 0)
+    i=CommonHash[pi]["ACav_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["ACav" .. i] or 0)
+    b=CommonHash[pi]["ACav" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -766,9 +766,9 @@ function Trig_AK2T1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AK1_0"] or 0)
+    i=CommonHash[pi]["AK1_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AK1" .. i] or 0)
+    b=CommonHash[pi]["AK1" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -919,9 +919,9 @@ function Trig_AK2T2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AK2_0"] or 0)
+    i=CommonHash[pi]["AK2_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AK2" .. i] or 0)
+    b=CommonHash[pi]["AK2" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -1091,9 +1091,9 @@ function Trig_AK2T3_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AK3_0"] or 0)
+    i=CommonHash[pi]["AK3_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AK3" .. i] or 0)
+    b=CommonHash[pi]["AK3" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -1269,9 +1269,9 @@ function Trig_AM1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AM1_0"] or 0)
+    i=CommonHash[pi]["AM1_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AM1" .. i] or 0)
+    b=CommonHash[pi]["AM1" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -1436,9 +1436,9 @@ function Trig_AM2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AM2_0"] or 0)
+    i=CommonHash[pi]["AM2_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AM2" .. i] or 0)
+    b=CommonHash[pi]["AM2" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -1556,9 +1556,9 @@ function Trig_AM3_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AM3_0"] or 0)
+    i=CommonHash[pi]["AM3_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AM3" .. i] or 0)
+    b=CommonHash[pi]["AM3" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -1694,9 +1694,9 @@ function Trig_AE1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AE1_0"] or 0)
+    i=CommonHash[pi]["AE1_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AE1" .. i] or 0)
+    b=CommonHash[pi]["AE1" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -1862,9 +1862,9 @@ function Trig_AE2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AEE2_0"] or 0)
+    i=CommonHash[pi]["AEE2_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AEE2" .. i] or 0)
+    b=CommonHash[pi]["AEE2" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -2011,9 +2011,9 @@ function Trig_AN1_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AN1_0"] or 0)
+    i=CommonHash[pi]["AN1_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AN1" .. i] or 0)
+    b=CommonHash[pi]["AN1" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
@@ -2141,9 +2141,9 @@ function Trig_AN2_Actions()
     local pi= GetPlayerId(p)
     
     
-    i=(CommonHash[pi]["AN2_0"] or 0)
+    i=CommonHash[pi]["AN2_0"] or 0
     i=GetRandomInt(1, i)
-    b=(CommonHash[pi]["AN2" .. i] or 0)
+    b=CommonHash[pi]["AN2" .. i] or 0
     
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
