@@ -591,7 +591,7 @@ function Trig_Unit_Indexer_Func017Func004C()
 end
 ---@return boolean
 function Trig_Unit_Indexer_Func017C()
-	return (udg_UnitIndexerEnabled == true)
+	return udg_UnitIndexerEnabled
 end
 ---@return boolean
 function Trig_Unit_Indexer_Func030Func005C()
@@ -1321,7 +1321,7 @@ function f_IncomeLumber()
 end
 ---@return boolean
 function f_DisFilter()
-	return IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) == false and GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0
+	return not (IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE)) and GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0
 end
 ---@return nothing
 function Trig_InitForEconomics_Actions()
@@ -2186,7 +2186,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Kontrol_Conditions()
-	return (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)
+	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 ---@return nothing
 function Trig_Upgrade_Kontrol_Actions()
@@ -2219,7 +2219,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Razved_Conditions()
-	return (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)
+	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 ---@return nothing
 function Trig_Upgrade_Razved_Actions()
@@ -2272,7 +2272,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Oborona_Conditions()
-	return (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)
+	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 ---@return nothing
 function Trig_Upgrade_Oborona_Actions()
@@ -2300,7 +2300,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Mobile_Conditions()
-	return (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)
+	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 ---@return nothing
 function Trig_Upgrade_Mobile_Actions()

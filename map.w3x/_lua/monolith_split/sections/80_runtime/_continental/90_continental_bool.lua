@@ -4,77 +4,77 @@
 --  ???? ???? ????????, ???? ?? ?? ???? ??????????
 ---@return boolean
 function InKalim()
-	return RectContainsUnit(gg_rct_Kalim, GetFilterUnit()) ~= true or RectContainsUnit(gg_rct_NordNotKalim, GetFilterUnit())
+	return not (RectContainsUnit(gg_rct_Kalim, GetFilterUnit())) or RectContainsUnit(gg_rct_NordNotKalim, GetFilterUnit())
 end
 ---@return boolean
 function InNord()
-	return RectContainsUnit(gg_rct_Nord, GetFilterUnit()) ~= true and RectContainsUnit(gg_rct_Azgel, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Nord, GetFilterUnit())) and not (RectContainsUnit(gg_rct_Azgel, GetFilterUnit()))
 end
 ---@return boolean
 function InVK()
-	return (RectContainsUnit(gg_rct_EastenKingdoms, GetFilterUnit()) ~= true and RectContainsUnit(gg_rct_EasternDungeons, GetFilterUnit()) ~= true and RectContainsUnit(gg_rct_BlackMountain, GetFilterUnit()) ~= true) or RectContainsUnit(gg_rct_OutNoVk, GetFilterUnit())
+	return (not (RectContainsUnit(gg_rct_EastenKingdoms, GetFilterUnit())) and not (RectContainsUnit(gg_rct_EasternDungeons, GetFilterUnit())) and not (RectContainsUnit(gg_rct_BlackMountain, GetFilterUnit()))) or RectContainsUnit(gg_rct_OutNoVk, GetFilterUnit())
 end
 ---@return boolean
 function InBisles()
-	return RectContainsUnit(gg_rct_BrokenIsles, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_BrokenIsles, GetFilterUnit()))
 end
 ---@return boolean
 function InOutland()
-	return RectContainsUnit(gg_rct_Outland, GetFilterUnit()) ~= true or RectContainsUnit(gg_rct_VknotOut, GetFilterUnit())
+	return not (RectContainsUnit(gg_rct_Outland, GetFilterUnit())) or RectContainsUnit(gg_rct_VknotOut, GetFilterUnit())
 end
 ---@return boolean
 function InArgus()
-	return RectContainsUnit(gg_rct_Argus, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Argus, GetFilterUnit()))
 end
 ---@return boolean
 function InPandaria()
-	return RectContainsUnit(gg_rct_Pandaria, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Pandaria, GetFilterUnit()))
 end
 --  ????????
 ---@return boolean
 function InAnkirag()
-	return RectContainsUnit(gg_rct_Ankirag, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Ankirag, GetFilterUnit()))
 end
 ---@return boolean
 function InAzgel()
-	return RectContainsUnit(gg_rct_Azgel, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Azgel, GetFilterUnit()))
 end
 ---@return boolean
 function InBlackRock()
-	return RectContainsUnit(gg_rct_BlackMountain, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_BlackMountain, GetFilterUnit()))
 end
 ---@return boolean
 function InOrgrimmar()
-	return RectContainsUnit(gg_rct_Orgrimmar, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Orgrimmar, GetFilterUnit()))
 end
 ---@return boolean
 function InDeadMines()
-	return RectContainsUnit(gg_rct_DeadMines, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_DeadMines, GetFilterUnit()))
 end
 ---@return boolean
 function InStalgorn()
-	return RectContainsUnit(gg_rct_Stalgorn, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Stalgorn, GetFilterUnit()))
 end
 ---@return boolean
 function InUldum()
-	return RectContainsUnit(gg_rct_Uldum, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Uldum, GetFilterUnit()))
 end
 ---@return boolean
 function InMaradon()
-	return RectContainsUnit(gg_rct_Maradon, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Maradon, GetFilterUnit()))
 end
 ---@return boolean
 function InUndercity()
-	return RectContainsUnit(gg_rct_Undercity, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Undercity, GetFilterUnit()))
 end
 --  ???????? ??????
 ---@return boolean
 function InDalaran()
-	return RectContainsUnit(gg_rct_KillDalaran, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_KillDalaran, GetFilterUnit()))
 end
 ---@return boolean
 function InNaxramas()
-	return RectContainsUnit(gg_rct_Naxramas, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Naxramas, GetFilterUnit()))
 end
 ---@return nothing
 function SetContinetsBooleprs()

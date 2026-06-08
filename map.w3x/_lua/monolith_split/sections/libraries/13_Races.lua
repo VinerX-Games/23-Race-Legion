@@ -155,7 +155,7 @@ end
 ---@return nothing
 function Attacker_HumanFleet(id, u, target, x, y)
 	
-	if id == FourCC('h00Z') or id == FourCC('h00Y') and IsUnitType(target, UNIT_TYPE_STRUCTURE) == false then
+	if id == FourCC('h00Z') or id == FourCC('h00Y') and not (IsUnitType(target, UNIT_TYPE_STRUCTURE)) then
 		gInt = GetRandomInt(1, 6)
 		if gInt == 1 and GetUnitStatePercent(target, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE) < GetUnitStatePercent(u, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE) then
 			gX2 = GetUnitX(u) - GetUnitX(target)
@@ -1049,7 +1049,7 @@ function Attacker_Skarlet(id, u, target, p)
 		end
 		
 		
-	elseif id == FourCC('h00Z') or id == FourCC('h00Y') and IsUnitType(target, UNIT_TYPE_STRUCTURE) == false then
+	elseif id == FourCC('h00Z') or id == FourCC('h00Y') and not (IsUnitType(target, UNIT_TYPE_STRUCTURE)) then
 		i = GetRandomInt(1, 6)
 		if i == 1 and GetUnitStatePercent(target, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE) < GetUnitStatePercent(u, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE) then
 			x2 = GetUnitX(u) - GetUnitX(target)

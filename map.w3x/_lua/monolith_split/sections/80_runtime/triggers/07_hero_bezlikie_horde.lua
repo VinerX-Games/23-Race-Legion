@@ -1384,7 +1384,7 @@ function Trig_Sluga_qqgsarona_Func010A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A12G'), GetEnumPlayer())
 end
 function Trig_Sluga_qqgsarona_Func012001002()
-    return ( IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups) == true )
+    return IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups)
 end
 function Trig_Sluga_qqgsarona_Func012A()
     GroupRemoveUnitSimple(GetEnumUnit(), udg_StolicaGroups)

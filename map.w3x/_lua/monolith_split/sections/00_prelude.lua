@@ -51,7 +51,7 @@ function ProbeLogWrite(message)
     if not allow then
         local tag = logExtractTag(message)
         if tag ~= nil then
-            allow = (LogFilter[tag] == true)
+            allow = LogFilter[tag]
         end
     end
     if allow then

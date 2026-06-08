@@ -112,7 +112,7 @@ function Trig_QTunServe_Func004A()
     SetPlayerTechMaxAllowedSwap(FourCC('h0MG'), 0, GetEnumPlayer())
 end
 function Trig_QTunServe_Func005001002()
-    return ( IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups) == true )
+    return IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups)
 end
 function Trig_QTunServe_Func005A()
     GroupRemoveUnitSimple(GetEnumUnit(), udg_StolicaGroups)
@@ -1586,10 +1586,10 @@ function Trig_GoblinSold_Conditions()
     return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h073') )
 end
 function Trig_GoblinSold_Func002Func001C()
-    return (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetSoldUnit()) )) and (( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ))
+    return (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetSoldUnit()) )) and GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL)
 end
 function Trig_GoblinSold_Func002Func002C()
-    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) )) or (( ( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ) ))
+    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) )) or GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL)
 end
 function Trig_GoblinSold_Func002C()
     return Trig_GoblinSold_Func002Func002C()
@@ -4142,13 +4142,13 @@ end
 -- Trigger: OnlySelected
 --===========================================================================
 function Trig_Dovorougenie_3t_O_Copy_Func001C()
-    return ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true )
+    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 -- Trigger: AutoChance
 --===========================================================================
 function Trig_AutoChance_Func003C()
-    return (( GetUnitAbilityLevelSwapped(FourCC('A000'), GetEventDamageSource()) >= 1 )) and (( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource())) == true ))
+    return (( GetUnitAbilityLevelSwapped(FourCC('A000'), GetEventDamageSource()) >= 1 )) and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
 end
 function Trig_AutoChance_Conditions()
     return Trig_AutoChance_Func003C()
@@ -4176,7 +4176,7 @@ end
 -- Trigger: AutoChance 2
 --===========================================================================
 function Trig_AutoChance_2_Func001C()
-    return (( GetUnitAbilityLevelSwapped(FourCC('A01A'), GetEventDamageSource()) >= 1 )) and (( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource())) == true ))
+    return (( GetUnitAbilityLevelSwapped(FourCC('A01A'), GetEventDamageSource()) >= 1 )) and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
 end
 function Trig_AutoChance_2_Conditions()
     return Trig_AutoChance_2_Func001C()
@@ -4204,7 +4204,7 @@ end
 -- Trigger: AutoChance 3
 --===========================================================================
 function Trig_AutoChance_3_Func003C()
-    return (( GetUnitAbilityLevelSwapped(FourCC('A01B'), GetEventDamageSource()) >= 1 )) and (( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource())) == true ))
+    return (( GetUnitAbilityLevelSwapped(FourCC('A01B'), GetEventDamageSource()) >= 1 )) and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
 end
 function Trig_AutoChance_3_Conditions()
     return Trig_AutoChance_3_Func003C()
@@ -4356,10 +4356,10 @@ end
 -- Trigger: Dovorougenie 3t O
 --===========================================================================
 function Trig_Dovorougenie_3t_O_Conditions()
-    return ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true )
+    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 function Trig_Dovorougenie_3t_O_Func002Func002C()
-    return ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true )
+    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 function Trig_Dovorougenie_3t_O_Func002C()
     return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h006') )

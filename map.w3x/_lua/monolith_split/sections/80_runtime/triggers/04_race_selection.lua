@@ -178,7 +178,7 @@ function Trig_UnitsToBuildingSituation2_Func002C()
     return (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e021') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e020') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01H') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01J') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01L') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01M') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01X') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01K') ) ))
 end
 function Trig_UnitsToBuildingSituation2_Conditions()
-    return (( IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) == true )) and (Trig_UnitsToBuildingSituation2_Func002C())
+    return IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) and (Trig_UnitsToBuildingSituation2_Func002C())
 end
 function Trig_UnitsToBuildingSituation2_Actions()
     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))

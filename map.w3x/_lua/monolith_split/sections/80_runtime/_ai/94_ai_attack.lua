@@ -92,7 +92,7 @@ function TryAttack()
 			gY2 = GetUnitY(gEnemy)
 			
 			--  ???? ??? ??????
-			if WaygateIsActive(gEnemy) == true then
+			if WaygateIsActive(gEnemy) then
 				
 				gDx = gX - gX2
 				gDy = gY - gY2

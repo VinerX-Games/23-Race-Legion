@@ -2200,19 +2200,19 @@ end
 -- Trigger: Sand Strike Loop
 --===========================================================================
 function Trig_Sand_Strike_Loop_Func001Func001Func003C()
-    return ( IsTerrainPathableBJ(udg_SSpointmovecaster[udg_SSinteger[2]], PATHING_TYPE_WALKABILITY) == true )
+    return IsTerrainPathableBJ(udg_SSpointmovecaster[udg_SSinteger[2]], PATHING_TYPE_WALKABILITY)
 end
 function Trig_Sand_Strike_Loop_Func001Func001Func004002003001()
-    return ( IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(udg_SScaster[udg_SSinteger[2]])) == true )
+    return IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(udg_SScaster[udg_SSinteger[2]]))
 end
 function Trig_Sand_Strike_Loop_Func001Func001Func004002003002()
-    return ( IsUnitAliveBJ(GetFilterUnit()) == true )
+    return IsUnitAliveBJ(GetFilterUnit())
 end
 function Trig_Sand_Strike_Loop_Func001Func001Func004002003()
-    return GetBooleanAnd((IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(udg_SScaster[udg_SSinteger[2]])) == true), (IsUnitAliveBJ(GetFilterUnit()) == true)) -- INLINED!!
+    return GetBooleanAnd(IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(udg_SScaster[udg_SSinteger[2]])), IsUnitAliveBJ(GetFilterUnit())) -- INLINED!!
 end
 function Trig_Sand_Strike_Loop_Func001Func001Func007Func004C()
-    return ( IsUnitType(udg_SSpicked[udg_SSinteger[2]], UNIT_TYPE_STRUCTURE) ~= true )
+    return not (IsUnitType(udg_SSpicked[udg_SSinteger[2]], UNIT_TYPE_STRUCTURE))
 end
 function Trig_Sand_Strike_Loop_Func001Func001Func007A()
     udg_SSpicked[udg_SSinteger[2]]=GetEnumUnit()

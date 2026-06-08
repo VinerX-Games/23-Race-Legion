@@ -63,7 +63,7 @@ end
 ---@return boolean
 function f_ToHeal()
 	local u = GetFilterUnit()
-	if IsPlayerAlly(GetOwningPlayer(u), CheckPlayer) and IsUnitIdType(GetUnitTypeId(u), UNIT_TYPE_MECHANICAL) ~= true then
+	if IsPlayerAlly(GetOwningPlayer(u), CheckPlayer) and not (IsUnitIdType(GetUnitTypeId(u), UNIT_TYPE_MECHANICAL)) then
 		u = nil
 		return true
 	else

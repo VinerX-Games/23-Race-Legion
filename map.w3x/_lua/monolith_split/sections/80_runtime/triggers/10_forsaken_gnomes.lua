@@ -894,7 +894,7 @@ end
 -- Trigger: TankChangeAttack
 --===========================================================================
 function Trig_TankChangeAttack_Func001C()
-    return ( BlzGetUnitWeaponBooleanField(GetTriggerUnit(), UNIT_WEAPON_BF_ATTACKS_ENABLED, 0) == true )
+    return BlzGetUnitWeaponBooleanField(GetTriggerUnit(), UNIT_WEAPON_BF_ATTACKS_ENABLED, 0)
 end
 function Trig_TankChangeAttack_Actions()
     if ( Trig_TankChangeAttack_Func001C() ) then

@@ -25,7 +25,7 @@ end
 -- Trigger: Unit Loaded
 --===========================================================================
 function Trig_Unit_Loaded_Func001C()
-    return ( IsUnitInGroup(GetTransportUnitBJ(), udg_TransportingGroup) == true )
+    return IsUnitInGroup(GetTransportUnitBJ(), udg_TransportingGroup)
 end
 function Trig_Unit_Loaded_Actions()
     if ( Trig_Unit_Loaded_Func001C() ) then
@@ -50,7 +50,7 @@ end
 -- Trigger: Unit Death
 --===========================================================================
 function Trig_Unit_Death_Conditions()
-    return ( IsUnitInGroup(GetDyingUnit(), udg_LoadedGroup) == true )
+    return IsUnitInGroup(GetDyingUnit(), udg_LoadedGroup)
 end
 function Trig_Unit_Death_Actions()
     udg_TempUnit01=GetDyingUnit()
@@ -67,7 +67,7 @@ end
 -- Trigger: Unit Issued Order
 --===========================================================================
 function Trig_Unit_Issued_Order_Conditions()
-    return (( IsUnitInGroup(GetOrderedUnit(), udg_LoadedGroup) == true )) and (( GetIssuedOrderIdBJ() == udg_StopOrder ))
+    return IsUnitInGroup(GetOrderedUnit(), udg_LoadedGroup) and (( GetIssuedOrderIdBJ() == udg_StopOrder ))
 end
 function Trig_Unit_Issued_Order_Actions()
     udg_TempUnit01=GetOrderedUnit()
@@ -84,7 +84,7 @@ end
 -- Trigger: Remove Unit From LoadedGroup
 --===========================================================================
 function Trig_Remove_Unit_From_LoadedGroup_Func002Func001C()
-    return ( IsUnitInGroup(udg_TempUnit01, udg_LoadedGroupArray[GetForLoopIndexA()]) == true )
+    return IsUnitInGroup(udg_TempUnit01, udg_LoadedGroupArray[GetForLoopIndexA()])
 end
 function Trig_Remove_Unit_From_LoadedGroup_Actions()
     GroupRemoveUnitSimple(udg_TempUnit01, udg_LoadedGroup)
@@ -108,7 +108,7 @@ end
 -- Trigger: TransportingUnitArray Message
 --===========================================================================
 function Trig_TransportingUnitArray_Message_Func001C()
-    return ( IsUnitInGroup(udg_TempUnit02, udg_TransportingGroup) == true )
+    return IsUnitInGroup(udg_TempUnit02, udg_TransportingGroup)
 end
 function Trig_TransportingUnitArray_Message_Actions()
     if ( Trig_TransportingUnitArray_Message_Func001C() ) then
@@ -151,7 +151,7 @@ function Trig_MassPosadka_Copy_Func008A()
     end
 end
 function Trig_MassPosadka_Copy_Func010002()
-    return GetOwningPlayer(GetFilterUnit()) == GetOwningPlayer(GetTriggerUnit()) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A001')) == 0 and IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) ~= true and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Slo3')) == 0
+    return GetOwningPlayer(GetFilterUnit()) == GetOwningPlayer(GetTriggerUnit()) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A001')) == 0 and not (IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE)) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Slo3')) == 0
 end
 function Trig_MassPosadka_Copy_Func014Func006A()
     udg_LocalUnit[15]=GetEnumUnit()
@@ -437,7 +437,7 @@ end
 -- Trigger: Abordach D or Ot
 --===========================================================================
 function Trig_Abordach_D_or_Ot_Func005Func001C()
-    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSpellTargetUnit()) ) )) or (( ( IsPlayerAlly(GetOwningPlayer(GetSpellTargetUnit()), GetOwningPlayer(GetTriggerUnit())) == true ) )) or (( ( IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_STRUCTURE) == true ) ))
+    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSpellTargetUnit()) ) )) or IsPlayerAlly(GetOwningPlayer(GetSpellTargetUnit()), GetOwningPlayer(GetTriggerUnit())) or IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_STRUCTURE)
 end
 function Trig_Abordach_D_or_Ot_Func005C()
     return Trig_Abordach_D_or_Ot_Func005Func001C()
@@ -446,10 +446,10 @@ function Trig_Abordach_D_or_Ot_Func018Func003C()
     return true
 end
 function Trig_Abordach_D_or_Ot_Func018Func017Func005002()
-    return ( IsUnitInTransportBJ(GetFilterUnit(), udg_LocalUnit2) == true )
+    return IsUnitInTransportBJ(GetFilterUnit(), udg_LocalUnit2)
 end
 function Trig_Abordach_D_or_Ot_Func018Func017Func009Func001C()
-    return (( IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO) == true )) and (( IsUnitLoadedBJ(GetEnumUnit()) == true ))
+    return IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO) and IsUnitLoadedBJ(GetEnumUnit())
 end
 function Trig_Abordach_D_or_Ot_Func018Func017Func009A()
     if ( Trig_Abordach_D_or_Ot_Func018Func017Func009Func001C() ) then
@@ -483,10 +483,10 @@ function Trig_Abordach_D_or_Ot_Func018Func021Func007C()
     return true
 end
 function Trig_Abordach_D_or_Ot_Func018Func021Func011002()
-    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true )
+    return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
 end
 function Trig_Abordach_D_or_Ot_Func018Func021Func015Func001C()
-    return ( IsUnitLoadedBJ(GetEnumUnit()) == true )
+    return IsUnitLoadedBJ(GetEnumUnit())
 end
 function Trig_Abordach_D_or_Ot_Func018Func021Func015A()
     if ( Trig_Abordach_D_or_Ot_Func018Func021Func015Func001C() ) then
@@ -906,16 +906,16 @@ end
 -- Trigger: Portal Connect
 --===========================================================================
 function Trig_Portal_Connect_Func008Func004Func001Func002C()
-    return (( udg_Portal_active[udg_Portal_INDEX_CASTER] == false )) and (( udg_Portal_active[udg_Portal_INDEX_TARGET] == false ))
+    return not (udg_Portal_active[udg_Portal_INDEX_CASTER]) and not (udg_Portal_active[udg_Portal_INDEX_TARGET])
 end
 function Trig_Portal_Connect_Func008Func004Func001C()
     return ( GetTriggerUnit() == udg_Portal_portal[udg_Portal_INDEX_TARGET] )
 end
 function Trig_Portal_Connect_Func008Func004C()
-    return (( udg_Portal_active[udg_Portal_INDEX_TARGET] == true )) and (( GetSpellTargetUnit() ~= udg_Portal_portal[udg_Portal_INDEX_CASTER] ))
+    return udg_Portal_active[udg_Portal_INDEX_TARGET] and (( GetSpellTargetUnit() ~= udg_Portal_portal[udg_Portal_INDEX_CASTER] ))
 end
 function Trig_Portal_Connect_Func008C()
-    return (( udg_Portal_active[udg_Portal_INDEX_CASTER] == true )) and (( GetSpellTargetUnit() ~= udg_Portal_portal[udg_Portal_INDEX_CASTER] )) and (( udg_Portal_active[udg_Portal_INDEX_TARGET] == false ))
+    return udg_Portal_active[udg_Portal_INDEX_CASTER] and (( GetSpellTargetUnit() ~= udg_Portal_portal[udg_Portal_INDEX_CASTER] )) and not (udg_Portal_active[udg_Portal_INDEX_TARGET])
 end
 function Trig_Portal_Connect_Actions()
     if udg_Portal_SeverAbility == nil then
@@ -980,28 +980,28 @@ end
 -- Trigger: Portal Periodic
 --===========================================================================
 function Trig_Portal_Periodic_Func001Func006Func001C()
-    return ( udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER] == true )
+    return udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER]
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func002C()
-    return ( udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER] == false )
+    return not (udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER])
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func011Func003C()
-    return ( IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller)) == true )
+    return IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller))
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func011Func004C()
-    return ( udg_Portal_missileTargetable[udg_Portal_INDEX_TARGET] == true )
+    return udg_Portal_missileTargetable[udg_Portal_INDEX_TARGET]
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func011Func012Func004C()
-    return ( IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller)) == true )
+    return IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller))
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func011Func012Func005C()
-    return ( udg_Portal_missileTargetable[udg_Portal_INDEX_TARGET] == true )
+    return udg_Portal_missileTargetable[udg_Portal_INDEX_TARGET]
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func011Func012C()
     return ( udg_Portal_missileSpeed[udg_Portal_INDEX_TARGET] > 0.00 )
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func011C()
-    return ( udg_Portal_missileUseOwnMovement[udg_Portal_INDEX_TARGET] == true )
+    return udg_Portal_missileUseOwnMovement[udg_Portal_INDEX_TARGET]
 end
 function Trig_Portal_Periodic_Func001Func006Func002C()
     return ( udg_Portal_delay[udg_Portal_INDEX_CASTER] > 0.00 )
@@ -1095,19 +1095,19 @@ function Trig_Portal_Periodic_Func001A()
     RemoveLocation(udg_Portal_loc1)
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func001Func001C()
-    return ( IsUnitAliveBJ(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER]) == true )
+    return IsUnitAliveBJ(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER])
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func001Func012C()
-    return ( IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller)) == true )
+    return IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller))
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func001C()
     return ( DistanceBetweenPoints(udg_Portal_loc1, udg_Portal_loc2) <= udg_Portal_range[udg_Portal_INDEX_TARGET] )
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func002Func013C()
-    return ( IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller)) == true )
+    return IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller))
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func002Func014C()
-    return ( IsUnitAliveBJ(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER]) == true )
+    return IsUnitAliveBJ(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER])
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func002C()
     return ( DistanceBetweenPoints(udg_Portal_loc1, udg_Portal_loc2) <= ( udg_Portal_missileSpeed[udg_Portal_INDEX_TRAVELLER] / 33.00 ) )
@@ -1116,10 +1116,10 @@ function Trig_Portal_Periodic_Func002Func007Func003C()
     return ( udg_Portal_missileSpeed[udg_Portal_INDEX_TRAVELLER] > 0.00 )
 end
 function Trig_Portal_Periodic_Func002Func007Func015C()
-    return ( IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller)) == true )
+    return IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller))
 end
 function Trig_Portal_Periodic_Func002Func007C()
-    return ( IsUnitAliveBJ(udg_Portal_traveller) == true )
+    return IsUnitAliveBJ(udg_Portal_traveller)
 end
 function Trig_Portal_Periodic_Func002A()
     -- In this group, the Portal_traveller is the missile unit, not the actual unit being teleported
@@ -1197,7 +1197,7 @@ function Trig_Portal_Periodic_Func002A()
     end
 end
 function Trig_Portal_Periodic_Func003C()
-    return (( IsUnitGroupEmptyBJ(udg_Portal_group) == true )) and (( IsUnitGroupEmptyBJ(udg_Portal_teleMissiles) == true ))
+    return IsUnitGroupEmptyBJ(udg_Portal_group) and IsUnitGroupEmptyBJ(udg_Portal_teleMissiles)
 end
 function Trig_Portal_Periodic_Actions()
     ForGroupBJ(udg_Portal_group, Trig_Portal_Periodic_Func001A)
@@ -1220,16 +1220,16 @@ function Trig_Portal_Target_Func006C()
     return (( ( GetIssuedOrderIdBJ() == String2OrderIdBJ("smart") ) )) or (( ( GetIssuedOrderIdBJ() == String2OrderIdBJ("move") ) ))
 end
 function Trig_Portal_Target_Conditions()
-    return (( udg_Portal_active[GetUnitUserData(GetOrderTargetUnit())] == true )) and (( IsUnitInGroup(GetTriggerUnit(), udg_Portal_teleMissiles) == false )) and (Trig_Portal_Target_Func006C()) and (( IsUnitAlly(GetTriggerUnit(), GetOwningPlayer(GetOrderTargetUnit())) == true )) and (( IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) == false ))
+    return udg_Portal_active[GetUnitUserData(GetOrderTargetUnit())] and not (IsUnitInGroup(GetTriggerUnit(), udg_Portal_teleMissiles)) and (Trig_Portal_Target_Func006C()) and IsUnitAlly(GetTriggerUnit(), GetOwningPlayer(GetOrderTargetUnit())) and not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE))
 end
 function Trig_Portal_Target_Func003Func001Func005C()
-    return ( IsTriggerEnabled(gg_trg_Portal_Periodic) == false )
+    return not (IsTriggerEnabled(gg_trg_Portal_Periodic))
 end
 function Trig_Portal_Target_Func003Func001C()
-    return (( udg_Portal_preventAllies[udg_Portal_INDEX_TARGET] == true )) and (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetOrderTargetUnit()) ))
+    return udg_Portal_preventAllies[udg_Portal_INDEX_TARGET] and (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetOrderTargetUnit()) ))
 end
 function Trig_Portal_Target_Func003C()
-    return ( udg_Portal_active[udg_Portal_INDEX_CASTER] == true )
+    return udg_Portal_active[udg_Portal_INDEX_CASTER]
 end
 function Trig_Portal_Target_Actions()
     udg_Portal_INDEX_CASTER=GetUnitUserData(GetTriggerUnit())
@@ -1260,7 +1260,7 @@ end
 -- Trigger: Portal Disengage
 --===========================================================================
 function Trig_Portal_Disengage_Conditions()
-    return (( IsUnitInGroup(GetTriggerUnit(), udg_Portal_group) == true )) and (( GetOrderTargetUnit() ~= udg_Portal_targeted[GetUnitUserData(GetTriggerUnit())] ))
+    return IsUnitInGroup(GetTriggerUnit(), udg_Portal_group) and (( GetOrderTargetUnit() ~= udg_Portal_targeted[GetUnitUserData(GetTriggerUnit())] ))
 end
 function Trig_Portal_Disengage_Actions()
     udg_Portal_INDEX_CASTER=GetUnitUserData(GetTriggerUnit())
@@ -1285,7 +1285,7 @@ end
 -- Trigger: Portal Death
 --===========================================================================
 function Trig_Portal_Death_Conditions()
-    return ( udg_Portal_active[GetUnitUserData(GetTriggerUnit())] == true )
+    return udg_Portal_active[GetUnitUserData(GetTriggerUnit())]
 end
 function Trig_Portal_Death_Func004Func004C()
     return ( GetTriggerUnit() == udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER] )
@@ -1335,7 +1335,7 @@ end
 -- Selectable missiles that use thier own movement to go to sister portals should have the Ward classification.
 --===========================================================================
 function Trig_Portal_Missile_Order_Conditions()
-    return ( IsUnitInGroup(GetTriggerUnit(), udg_Portal_teleMissiles) == true )
+    return IsUnitInGroup(GetTriggerUnit(), udg_Portal_teleMissiles)
 end
 function Trig_Portal_Missile_Order_Actions()
     DisableTrigger(GetTriggeringTrigger())
@@ -1361,7 +1361,7 @@ end
 -- Add your various connector spells to the -------- Or - Any (Conditions) are true -------- to give your Portals the Sever Connection spell.
 --===========================================================================
 function Trig_Portal_Disconnect_Conditions()
-    return ( udg_Portal_active[GetUnitUserData(GetTriggerUnit())] == true )
+    return udg_Portal_active[GetUnitUserData(GetTriggerUnit())]
 end
 function Trig_Portal_Disconnect_Func001Func005Func004C()
     return ( GetTriggerUnit() == udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER] )
@@ -1420,7 +1420,7 @@ function Trig_Connect_Portal_2_Func001Func003Func002C()
     return ( GetTriggerUnit() == udg_Portal_portal[udg_Portal_INDEX_TARGET] )
 end
 function Trig_Connect_Portal_2_Func001Func003C()
-    return (( udg_Portal_active[udg_Portal_INDEX_TARGET] == true )) and (( GetSpellTargetUnit() ~= udg_Portal_portal[udg_Portal_INDEX_CASTER] ))
+    return udg_Portal_active[udg_Portal_INDEX_TARGET] and (( GetSpellTargetUnit() ~= udg_Portal_portal[udg_Portal_INDEX_CASTER] ))
 end
 function Trig_Connect_Portal_2_Func001C()
     return ( GetUnitTypeId(GetSpellTargetUnit()) == GetUnitTypeId(GetTriggerUnit()) )
@@ -2305,10 +2305,10 @@ function Trig_MageTpSell_Conditions()
     return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h07A') )
 end
 function Trig_MageTpSell_Func002Func001C()
-    return (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetSoldUnit()) )) and (( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ))
+    return (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetSoldUnit()) )) and GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL)
 end
 function Trig_MageTpSell_Func002Func002C()
-    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) )) or (( ( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ) ))
+    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) )) or GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL)
 end
 function Trig_MageTpSell_Func002C()
     return Trig_MageTpSell_Func002Func002C()

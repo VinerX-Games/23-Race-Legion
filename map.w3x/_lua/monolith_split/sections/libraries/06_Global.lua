@@ -216,7 +216,7 @@ function UnitAddPowerUpItem(u, id)
 		invAdded = true
 		UnitAddAbility(u, FourCC('AInv'))	-- AInv -> Inventory
 	end
-	if UnitAddItem(u, it) == false then
+	if not (UnitAddItem(u, it)) then
 		added = false
 	elseif GetWidgetLife(it) > 0.00 then
 		added = false

@@ -9,7 +9,7 @@ end
 -- Trigger: Leave Ot
 --===========================================================================
 function Trig_Leave_Ot_Func005C()
-    return ( IsTriggerEnabled(gg_trg_FeodalDead2) == true )
+    return IsTriggerEnabled(gg_trg_FeodalDead2)
 end
 function Trig_Leave_Ot_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
@@ -361,10 +361,10 @@ end
 -- ?? ??????? ??????????? ????? ?? 0 ??? ??? ????? ????
 --===========================================================================
 function Trig_Spell_Dvij_Conditions()
-    return ( udg_Logika == true )
+    return udg_Logika
 end
 function Trig_Spell_Dvij_Func002Func004C()
-    return (( ( IsUnitDeadBJ(udg_Caster) == true ) )) or (( ( udg_HisloA[0] == 0 ) ))
+    return IsUnitDeadBJ(udg_Caster) or (( ( udg_HisloA[0] == 0 ) ))
 end
 function Trig_Spell_Dvij_Func002C()
     return Trig_Spell_Dvij_Func002Func004C()
@@ -373,19 +373,19 @@ function Trig_Spell_Dvij_Func004Func004Func002C()
     return (( ( udg_HisloA[0] == 2 ) )) or (( ( udg_HisloA[0] == 3 ) )) or (( ( udg_HisloA[0] == 4 ) ))
 end
 function Trig_Spell_Dvij_Func004Func004C()
-    return (( IsUnitAliveBJ(udg_Dummy[0]) == true )) and (Trig_Spell_Dvij_Func004Func004Func002C())
+    return IsUnitAliveBJ(udg_Dummy[0]) and (Trig_Spell_Dvij_Func004Func004Func002C())
 end
 function Trig_Spell_Dvij_Func004Func005Func003C()
     return (( ( udg_HisloA[0] == 3 ) )) or (( ( udg_HisloA[0] == 4 ) ))
 end
 function Trig_Spell_Dvij_Func004Func005C()
-    return (( IsUnitAliveBJ(udg_Dummy[1]) == true )) and (Trig_Spell_Dvij_Func004Func005Func003C())
+    return IsUnitAliveBJ(udg_Dummy[1]) and (Trig_Spell_Dvij_Func004Func005Func003C())
 end
 function Trig_Spell_Dvij_Func004Func006C()
-    return (( IsUnitAliveBJ(udg_Dummy[2]) == true )) and (( udg_HisloA[0] == 4 ))
+    return IsUnitAliveBJ(udg_Dummy[2]) and (( udg_HisloA[0] == 4 ))
 end
 function Trig_Spell_Dvij_Func004Func007Func002Func005Func002Func001C()
-    return (( IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) == true )) and (( IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster)) == false )) and (( IsUnitDeadBJ(GetEnumUnit()) == false )) and (( IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE) == false ))
+    return IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) and not (IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster))) and not (IsUnitDeadBJ(GetEnumUnit())) and not (IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE))
 end
 function Trig_Spell_Dvij_Func004Func007Func002Func005Func002A()
     if ( Trig_Spell_Dvij_Func004Func007Func002Func005Func002Func001C() ) then
@@ -407,7 +407,7 @@ function Trig_Spell_Dvij_Func004Func007Func002C()
     return ( udg_HisloA[0] >= 3 )
 end
 function Trig_Spell_Dvij_Func004Func007Func004Func006Func002Func001C()
-    return (( IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) == true )) and (( IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster)) == false )) and (( IsUnitDeadBJ(GetEnumUnit()) == false )) and (( IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE) == false ))
+    return IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) and not (IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster))) and not (IsUnitDeadBJ(GetEnumUnit())) and not (IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE))
 end
 function Trig_Spell_Dvij_Func004Func007Func004Func006Func002A()
     if ( Trig_Spell_Dvij_Func004Func007Func004Func006Func002Func001C() ) then
@@ -429,7 +429,7 @@ function Trig_Spell_Dvij_Func004Func007Func004C()
     return ( udg_HisloA[0] == 2 )
 end
 function Trig_Spell_Dvij_Func004Func007Func006Func005Func002Func001C()
-    return (( IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) == true )) and (( IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster)) == false )) and (( IsUnitDeadBJ(GetEnumUnit()) == false )) and (( IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE) == false ))
+    return IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) and not (IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster))) and not (IsUnitDeadBJ(GetEnumUnit())) and not (IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE))
 end
 function Trig_Spell_Dvij_Func004Func007Func006Func005Func002A()
     if ( Trig_Spell_Dvij_Func004Func007Func006Func005Func002Func001C() ) then
@@ -451,7 +451,7 @@ function Trig_Spell_Dvij_Func004Func007Func006C()
     return ( udg_HisloA[0] == 1 )
 end
 function Trig_Spell_Dvij_Func004Func007C()
-    return ( udg_LogikaCast == true )
+    return udg_LogikaCast
 end
 function Trig_Spell_Dvij_Func004C()
     return true
@@ -740,7 +740,7 @@ end
 -- Trigger: Flagman die Ot
 --===========================================================================
 function Trig_Flagman_die_Ot_Conditions()
-    return IsUnitInGroup(GetTriggerUnit(), udg_Flagmans) == true
+    return IsUnitInGroup(GetTriggerUnit(), udg_Flagmans)
 end
 function Trig_Flagman_die_Ot_Func003002()
     return ( GetUnitAbilityLevelSwapped(FourCC('A001'), GetFilterUnit()) >= 1 )
@@ -774,7 +774,7 @@ end
 -- Trigger: Ne dam flagman Ot
 --===========================================================================
 function Trig_Ne_dam_flagman_Ot_Func002C()
-    return (( udg_FlagmanEst[GetConvertedPlayerId(GetOwningPlayer(GetTrainedUnit()))] == true )) and (( GetUnitAbilityLevelSwapped(FourCC('A009'), GetTrainedUnit()) == 1 ))
+    return udg_FlagmanEst[GetConvertedPlayerId(GetOwningPlayer(GetTrainedUnit()))] and (( GetUnitAbilityLevelSwapped(FourCC('A009'), GetTrainedUnit()) == 1 ))
 end
 function Trig_Ne_dam_flagman_Ot_Conditions()
     return Trig_Ne_dam_flagman_Ot_Func002C()
@@ -793,7 +793,7 @@ end
 -- Trigger: Aura Flagmana Vinoslivost O
 --===========================================================================
 function Trig_Aura_Flagmana_Vinoslivost_O_Conditions()
-    return ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true )
+    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 function Trig_Aura_Flagmana_Vinoslivost_O_Actions()
     UnitAddAbilityBJ(FourCC('A007'), GetTriggerUnit())
@@ -813,7 +813,7 @@ end
 -- Trigger: Aura Flagmana Metkost O
 --===========================================================================
 function Trig_Aura_Flagmana_Metkost_O_Conditions()
-    return ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true )
+    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 function Trig_Aura_Flagmana_Metkost_O_Actions()
     UnitAddAbilityBJ(FourCC('A006'), GetTriggerUnit())
@@ -833,7 +833,7 @@ end
 -- Trigger: Aura Flagmana Stoikost O
 --===========================================================================
 function Trig_Aura_Flagmana_Stoikost_O_Conditions()
-    return ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true )
+    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 function Trig_Aura_Flagmana_Stoikost_O_Actions()
     UnitAddAbilityBJ(FourCC('A005'), GetTriggerUnit())

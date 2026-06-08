@@ -51,7 +51,7 @@ function ProbeLogWrite(message)
     if not allow then
         local tag = logExtractTag(message)
         if tag ~= nil then
-            allow = (LogFilter[tag] == true)
+            allow = LogFilter[tag]
         end
     end
     if allow then
@@ -3261,7 +3261,7 @@ end
 ---@return boolean
 function f_ToHeal()
 	local u = GetFilterUnit()
-	if IsPlayerAlly(GetOwningPlayer(u), CheckPlayer) and IsUnitIdType(GetUnitTypeId(u), UNIT_TYPE_MECHANICAL) ~= true then
+	if IsPlayerAlly(GetOwningPlayer(u), CheckPlayer) and not (IsUnitIdType(GetUnitTypeId(u), UNIT_TYPE_MECHANICAL)) then
 		u = nil
 		return true
 	else
@@ -3736,7 +3736,7 @@ function UnitAddPowerUpItem(u, id)
 		invAdded = true
 		UnitAddAbility(u, FourCC('AInv'))	-- AInv -> Inventory
 	end
-	if UnitAddItem(u, it) == false then
+	if not (UnitAddItem(u, it)) then
 		added = false
 	elseif GetWidgetLife(it) > 0.00 then
 		added = false
@@ -4847,7 +4847,7 @@ end
 ---@return nothing
 function Attacker_HumanFleet(id, u, target, x, y)
 	
-	if id == FourCC('h00Z') or id == FourCC('h00Y') and IsUnitType(target, UNIT_TYPE_STRUCTURE) == false then
+	if id == FourCC('h00Z') or id == FourCC('h00Y') and not (IsUnitType(target, UNIT_TYPE_STRUCTURE)) then
 		gInt = GetRandomInt(1, 6)
 		if gInt == 1 and GetUnitStatePercent(target, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE) < GetUnitStatePercent(u, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE) then
 			gX2 = GetUnitX(u) - GetUnitX(target)
@@ -5741,7 +5741,7 @@ function Attacker_Skarlet(id, u, target, p)
 		end
 		
 		
-	elseif id == FourCC('h00Z') or id == FourCC('h00Y') and IsUnitType(target, UNIT_TYPE_STRUCTURE) == false then
+	elseif id == FourCC('h00Z') or id == FourCC('h00Y') and not (IsUnitType(target, UNIT_TYPE_STRUCTURE)) then
 		i = GetRandomInt(1, 6)
 		if i == 1 and GetUnitStatePercent(target, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE) < GetUnitStatePercent(u, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE) then
 			x2 = GetUnitX(u) - GetUnitX(target)
@@ -10783,77 +10783,77 @@ end
 --  ???? ???? ????????, ???? ?? ?? ???? ??????????
 ---@return boolean
 function InKalim()
-	return RectContainsUnit(gg_rct_Kalim, GetFilterUnit()) ~= true or RectContainsUnit(gg_rct_NordNotKalim, GetFilterUnit())
+	return not (RectContainsUnit(gg_rct_Kalim, GetFilterUnit())) or RectContainsUnit(gg_rct_NordNotKalim, GetFilterUnit())
 end
 ---@return boolean
 function InNord()
-	return RectContainsUnit(gg_rct_Nord, GetFilterUnit()) ~= true and RectContainsUnit(gg_rct_Azgel, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Nord, GetFilterUnit())) and not (RectContainsUnit(gg_rct_Azgel, GetFilterUnit()))
 end
 ---@return boolean
 function InVK()
-	return (RectContainsUnit(gg_rct_EastenKingdoms, GetFilterUnit()) ~= true and RectContainsUnit(gg_rct_EasternDungeons, GetFilterUnit()) ~= true and RectContainsUnit(gg_rct_BlackMountain, GetFilterUnit()) ~= true) or RectContainsUnit(gg_rct_OutNoVk, GetFilterUnit())
+	return (not (RectContainsUnit(gg_rct_EastenKingdoms, GetFilterUnit())) and not (RectContainsUnit(gg_rct_EasternDungeons, GetFilterUnit())) and not (RectContainsUnit(gg_rct_BlackMountain, GetFilterUnit()))) or RectContainsUnit(gg_rct_OutNoVk, GetFilterUnit())
 end
 ---@return boolean
 function InBisles()
-	return RectContainsUnit(gg_rct_BrokenIsles, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_BrokenIsles, GetFilterUnit()))
 end
 ---@return boolean
 function InOutland()
-	return RectContainsUnit(gg_rct_Outland, GetFilterUnit()) ~= true or RectContainsUnit(gg_rct_VknotOut, GetFilterUnit())
+	return not (RectContainsUnit(gg_rct_Outland, GetFilterUnit())) or RectContainsUnit(gg_rct_VknotOut, GetFilterUnit())
 end
 ---@return boolean
 function InArgus()
-	return RectContainsUnit(gg_rct_Argus, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Argus, GetFilterUnit()))
 end
 ---@return boolean
 function InPandaria()
-	return RectContainsUnit(gg_rct_Pandaria, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Pandaria, GetFilterUnit()))
 end
 --  ????????
 ---@return boolean
 function InAnkirag()
-	return RectContainsUnit(gg_rct_Ankirag, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Ankirag, GetFilterUnit()))
 end
 ---@return boolean
 function InAzgel()
-	return RectContainsUnit(gg_rct_Azgel, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Azgel, GetFilterUnit()))
 end
 ---@return boolean
 function InBlackRock()
-	return RectContainsUnit(gg_rct_BlackMountain, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_BlackMountain, GetFilterUnit()))
 end
 ---@return boolean
 function InOrgrimmar()
-	return RectContainsUnit(gg_rct_Orgrimmar, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Orgrimmar, GetFilterUnit()))
 end
 ---@return boolean
 function InDeadMines()
-	return RectContainsUnit(gg_rct_DeadMines, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_DeadMines, GetFilterUnit()))
 end
 ---@return boolean
 function InStalgorn()
-	return RectContainsUnit(gg_rct_Stalgorn, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Stalgorn, GetFilterUnit()))
 end
 ---@return boolean
 function InUldum()
-	return RectContainsUnit(gg_rct_Uldum, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Uldum, GetFilterUnit()))
 end
 ---@return boolean
 function InMaradon()
-	return RectContainsUnit(gg_rct_Maradon, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Maradon, GetFilterUnit()))
 end
 ---@return boolean
 function InUndercity()
-	return RectContainsUnit(gg_rct_Undercity, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Undercity, GetFilterUnit()))
 end
 --  ???????? ??????
 ---@return boolean
 function InDalaran()
-	return RectContainsUnit(gg_rct_KillDalaran, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_KillDalaran, GetFilterUnit()))
 end
 ---@return boolean
 function InNaxramas()
-	return RectContainsUnit(gg_rct_Naxramas, GetFilterUnit()) ~= true
+	return not (RectContainsUnit(gg_rct_Naxramas, GetFilterUnit()))
 end
 ---@return nothing
 function SetContinetsBooleprs()
@@ -11363,7 +11363,7 @@ function TryAttack()
 			gY2 = GetUnitY(gEnemy)
 			
 			--  ???? ??? ??????
-			if WaygateIsActive(gEnemy) == true then
+			if WaygateIsActive(gEnemy) then
 				
 				gDx = gX - gX2
 				gDy = gY - gY2
@@ -11785,7 +11785,7 @@ function TryBuild()
 	
 	-- Стены и порты: стройка на месте (если рядом берег)
 	gInt = (AiData[gPi][StringHash("NumberPorts")] or 0)
-	if gInt < 12 and ( not IsTerrainPathable(gX, gY, PATHING_TYPE_WALKABILITY) and RectContainsCoords(gg_rct_Outland, gX, gY) ~= true and RectContainsCoords(gg_rct_Azgel, gX, gY) ~= true) then
+	if gInt < 12 and ( not IsTerrainPathable(gX, gY, PATHING_TYPE_WALKABILITY) and not (RectContainsCoords(gg_rct_Outland, gX, gY)) and not (RectContainsCoords(gg_rct_Azgel, gX, gY))) then
 		
 		if Random(1, 2) then
 			
@@ -13816,7 +13816,7 @@ function Trig_Unit_Indexer_Func017Func004C()
 end
 ---@return boolean
 function Trig_Unit_Indexer_Func017C()
-	return (udg_UnitIndexerEnabled == true)
+	return udg_UnitIndexerEnabled
 end
 ---@return boolean
 function Trig_Unit_Indexer_Func030Func005C()
@@ -14546,7 +14546,7 @@ function f_IncomeLumber()
 end
 ---@return boolean
 function f_DisFilter()
-	return IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) == false and GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0
+	return not (IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE)) and GetUnitState(GetFilterUnit(), UNIT_STATE_LIFE) > 0
 end
 ---@return nothing
 function Trig_InitForEconomics_Actions()
@@ -15411,7 +15411,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Kontrol_Conditions()
-	return (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)
+	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 ---@return nothing
 function Trig_Upgrade_Kontrol_Actions()
@@ -15444,7 +15444,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Razved_Conditions()
-	return (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)
+	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 ---@return nothing
 function Trig_Upgrade_Razved_Actions()
@@ -15497,7 +15497,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Oborona_Conditions()
-	return (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)
+	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 ---@return nothing
 function Trig_Upgrade_Oborona_Actions()
@@ -15525,7 +15525,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Mobile_Conditions()
-	return (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)
+	return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 ---@return nothing
 function Trig_Upgrade_Mobile_Actions()
@@ -16046,7 +16046,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_UpgradeStolica_Conditions()
-	return (IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) == true)
+	return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups)
 end
 ---@return nothing
 function Trig_UpgradeStolica_Actions()
@@ -16520,11 +16520,11 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_FeodalDead_Conditions()
-	return ((IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) == true)) and ((GetUnitLifePercent(GetTriggerUnit()) <= 15.00))
+	return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) and ((GetUnitLifePercent(GetTriggerUnit()) <= 15.00))
 end
 ---@return boolean
 function Trig_FeodalDead_Func004Func002Func001Func010Func001Func003C()
-	return (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetForLoopIndexB()]) == true)
+	return IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetForLoopIndexB()])
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func002Func001Func010A()
@@ -16545,7 +16545,7 @@ function Trig_FeodalDead_Func004Func002Func001Func010A()
 end
 ---@return boolean
 function Trig_FeodalDead_Func004Func002Func001C()
-	return (IsPlayerInForce(GetOwningPlayer(GetAttacker()), udg_Vassals[GetForLoopIndexA()]) == true)
+	return IsPlayerInForce(GetOwningPlayer(GetAttacker()), udg_Vassals[GetForLoopIndexA()])
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func011A()
@@ -16558,7 +16558,7 @@ function Trig_FeodalDead_Func004Func011A()
 end
 ---@return boolean
 function Trig_FeodalDead_Func004Func017Func001C()
-	return (IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) == true)
+	return IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings)
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func017A()
@@ -16806,7 +16806,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_DoNotAttackSenior_Conditions()
-	return (IsPlayerInForce(GetOwningPlayer(GetAttacker()), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttackedUnitBJ()))]) == true)
+	return IsPlayerInForce(GetOwningPlayer(GetAttacker()), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttackedUnitBJ()))])
 end
 ---@return nothing
 function Trig_DoNotAttackSenior_Actions()
@@ -18779,7 +18779,7 @@ function Trig_UnitsToBuildingSituation2_Func002C()
     return (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e021') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e020') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01H') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01J') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01L') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01M') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01X') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01K') ) ))
 end
 function Trig_UnitsToBuildingSituation2_Conditions()
-    return (( IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) == true )) and (Trig_UnitsToBuildingSituation2_Func002C())
+    return IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) and (Trig_UnitsToBuildingSituation2_Func002C())
 end
 function Trig_UnitsToBuildingSituation2_Actions()
     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -20082,7 +20082,7 @@ end
 -- Trigger: Leave Ot
 --===========================================================================
 function Trig_Leave_Ot_Func005C()
-    return ( IsTriggerEnabled(gg_trg_FeodalDead2) == true )
+    return IsTriggerEnabled(gg_trg_FeodalDead2)
 end
 function Trig_Leave_Ot_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
@@ -20434,10 +20434,10 @@ end
 -- ?? ??????? ??????????? ????? ?? 0 ??? ??? ????? ????
 --===========================================================================
 function Trig_Spell_Dvij_Conditions()
-    return ( udg_Logika == true )
+    return udg_Logika
 end
 function Trig_Spell_Dvij_Func002Func004C()
-    return (( ( IsUnitDeadBJ(udg_Caster) == true ) )) or (( ( udg_HisloA[0] == 0 ) ))
+    return IsUnitDeadBJ(udg_Caster) or (( ( udg_HisloA[0] == 0 ) ))
 end
 function Trig_Spell_Dvij_Func002C()
     return Trig_Spell_Dvij_Func002Func004C()
@@ -20446,19 +20446,19 @@ function Trig_Spell_Dvij_Func004Func004Func002C()
     return (( ( udg_HisloA[0] == 2 ) )) or (( ( udg_HisloA[0] == 3 ) )) or (( ( udg_HisloA[0] == 4 ) ))
 end
 function Trig_Spell_Dvij_Func004Func004C()
-    return (( IsUnitAliveBJ(udg_Dummy[0]) == true )) and (Trig_Spell_Dvij_Func004Func004Func002C())
+    return IsUnitAliveBJ(udg_Dummy[0]) and (Trig_Spell_Dvij_Func004Func004Func002C())
 end
 function Trig_Spell_Dvij_Func004Func005Func003C()
     return (( ( udg_HisloA[0] == 3 ) )) or (( ( udg_HisloA[0] == 4 ) ))
 end
 function Trig_Spell_Dvij_Func004Func005C()
-    return (( IsUnitAliveBJ(udg_Dummy[1]) == true )) and (Trig_Spell_Dvij_Func004Func005Func003C())
+    return IsUnitAliveBJ(udg_Dummy[1]) and (Trig_Spell_Dvij_Func004Func005Func003C())
 end
 function Trig_Spell_Dvij_Func004Func006C()
-    return (( IsUnitAliveBJ(udg_Dummy[2]) == true )) and (( udg_HisloA[0] == 4 ))
+    return IsUnitAliveBJ(udg_Dummy[2]) and (( udg_HisloA[0] == 4 ))
 end
 function Trig_Spell_Dvij_Func004Func007Func002Func005Func002Func001C()
-    return (( IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) == true )) and (( IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster)) == false )) and (( IsUnitDeadBJ(GetEnumUnit()) == false )) and (( IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE) == false ))
+    return IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) and not (IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster))) and not (IsUnitDeadBJ(GetEnumUnit())) and not (IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE))
 end
 function Trig_Spell_Dvij_Func004Func007Func002Func005Func002A()
     if ( Trig_Spell_Dvij_Func004Func007Func002Func005Func002Func001C() ) then
@@ -20480,7 +20480,7 @@ function Trig_Spell_Dvij_Func004Func007Func002C()
     return ( udg_HisloA[0] >= 3 )
 end
 function Trig_Spell_Dvij_Func004Func007Func004Func006Func002Func001C()
-    return (( IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) == true )) and (( IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster)) == false )) and (( IsUnitDeadBJ(GetEnumUnit()) == false )) and (( IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE) == false ))
+    return IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) and not (IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster))) and not (IsUnitDeadBJ(GetEnumUnit())) and not (IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE))
 end
 function Trig_Spell_Dvij_Func004Func007Func004Func006Func002A()
     if ( Trig_Spell_Dvij_Func004Func007Func004Func006Func002Func001C() ) then
@@ -20502,7 +20502,7 @@ function Trig_Spell_Dvij_Func004Func007Func004C()
     return ( udg_HisloA[0] == 2 )
 end
 function Trig_Spell_Dvij_Func004Func007Func006Func005Func002Func001C()
-    return (( IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) == true )) and (( IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster)) == false )) and (( IsUnitDeadBJ(GetEnumUnit()) == false )) and (( IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE) == false ))
+    return IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) and not (IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster))) and not (IsUnitDeadBJ(GetEnumUnit())) and not (IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE))
 end
 function Trig_Spell_Dvij_Func004Func007Func006Func005Func002A()
     if ( Trig_Spell_Dvij_Func004Func007Func006Func005Func002Func001C() ) then
@@ -20524,7 +20524,7 @@ function Trig_Spell_Dvij_Func004Func007Func006C()
     return ( udg_HisloA[0] == 1 )
 end
 function Trig_Spell_Dvij_Func004Func007C()
-    return ( udg_LogikaCast == true )
+    return udg_LogikaCast
 end
 function Trig_Spell_Dvij_Func004C()
     return true
@@ -20813,7 +20813,7 @@ end
 -- Trigger: Flagman die Ot
 --===========================================================================
 function Trig_Flagman_die_Ot_Conditions()
-    return IsUnitInGroup(GetTriggerUnit(), udg_Flagmans) == true
+    return IsUnitInGroup(GetTriggerUnit(), udg_Flagmans)
 end
 function Trig_Flagman_die_Ot_Func003002()
     return ( GetUnitAbilityLevelSwapped(FourCC('A001'), GetFilterUnit()) >= 1 )
@@ -20847,7 +20847,7 @@ end
 -- Trigger: Ne dam flagman Ot
 --===========================================================================
 function Trig_Ne_dam_flagman_Ot_Func002C()
-    return (( udg_FlagmanEst[GetConvertedPlayerId(GetOwningPlayer(GetTrainedUnit()))] == true )) and (( GetUnitAbilityLevelSwapped(FourCC('A009'), GetTrainedUnit()) == 1 ))
+    return udg_FlagmanEst[GetConvertedPlayerId(GetOwningPlayer(GetTrainedUnit()))] and (( GetUnitAbilityLevelSwapped(FourCC('A009'), GetTrainedUnit()) == 1 ))
 end
 function Trig_Ne_dam_flagman_Ot_Conditions()
     return Trig_Ne_dam_flagman_Ot_Func002C()
@@ -20866,7 +20866,7 @@ end
 -- Trigger: Aura Flagmana Vinoslivost O
 --===========================================================================
 function Trig_Aura_Flagmana_Vinoslivost_O_Conditions()
-    return ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true )
+    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 function Trig_Aura_Flagmana_Vinoslivost_O_Actions()
     UnitAddAbilityBJ(FourCC('A007'), GetTriggerUnit())
@@ -20886,7 +20886,7 @@ end
 -- Trigger: Aura Flagmana Metkost O
 --===========================================================================
 function Trig_Aura_Flagmana_Metkost_O_Conditions()
-    return ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true )
+    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 function Trig_Aura_Flagmana_Metkost_O_Actions()
     UnitAddAbilityBJ(FourCC('A006'), GetTriggerUnit())
@@ -20906,7 +20906,7 @@ end
 -- Trigger: Aura Flagmana Stoikost O
 --===========================================================================
 function Trig_Aura_Flagmana_Stoikost_O_Conditions()
-    return ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true )
+    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 function Trig_Aura_Flagmana_Stoikost_O_Actions()
     UnitAddAbilityBJ(FourCC('A005'), GetTriggerUnit())
@@ -20941,7 +20941,7 @@ end
 -- Trigger: Unit Loaded
 --===========================================================================
 function Trig_Unit_Loaded_Func001C()
-    return ( IsUnitInGroup(GetTransportUnitBJ(), udg_TransportingGroup) == true )
+    return IsUnitInGroup(GetTransportUnitBJ(), udg_TransportingGroup)
 end
 function Trig_Unit_Loaded_Actions()
     if ( Trig_Unit_Loaded_Func001C() ) then
@@ -20966,7 +20966,7 @@ end
 -- Trigger: Unit Death
 --===========================================================================
 function Trig_Unit_Death_Conditions()
-    return ( IsUnitInGroup(GetDyingUnit(), udg_LoadedGroup) == true )
+    return IsUnitInGroup(GetDyingUnit(), udg_LoadedGroup)
 end
 function Trig_Unit_Death_Actions()
     udg_TempUnit01=GetDyingUnit()
@@ -20983,7 +20983,7 @@ end
 -- Trigger: Unit Issued Order
 --===========================================================================
 function Trig_Unit_Issued_Order_Conditions()
-    return (( IsUnitInGroup(GetOrderedUnit(), udg_LoadedGroup) == true )) and (( GetIssuedOrderIdBJ() == udg_StopOrder ))
+    return IsUnitInGroup(GetOrderedUnit(), udg_LoadedGroup) and (( GetIssuedOrderIdBJ() == udg_StopOrder ))
 end
 function Trig_Unit_Issued_Order_Actions()
     udg_TempUnit01=GetOrderedUnit()
@@ -21000,7 +21000,7 @@ end
 -- Trigger: Remove Unit From LoadedGroup
 --===========================================================================
 function Trig_Remove_Unit_From_LoadedGroup_Func002Func001C()
-    return ( IsUnitInGroup(udg_TempUnit01, udg_LoadedGroupArray[GetForLoopIndexA()]) == true )
+    return IsUnitInGroup(udg_TempUnit01, udg_LoadedGroupArray[GetForLoopIndexA()])
 end
 function Trig_Remove_Unit_From_LoadedGroup_Actions()
     GroupRemoveUnitSimple(udg_TempUnit01, udg_LoadedGroup)
@@ -21024,7 +21024,7 @@ end
 -- Trigger: TransportingUnitArray Message
 --===========================================================================
 function Trig_TransportingUnitArray_Message_Func001C()
-    return ( IsUnitInGroup(udg_TempUnit02, udg_TransportingGroup) == true )
+    return IsUnitInGroup(udg_TempUnit02, udg_TransportingGroup)
 end
 function Trig_TransportingUnitArray_Message_Actions()
     if ( Trig_TransportingUnitArray_Message_Func001C() ) then
@@ -21067,7 +21067,7 @@ function Trig_MassPosadka_Copy_Func008A()
     end
 end
 function Trig_MassPosadka_Copy_Func010002()
-    return GetOwningPlayer(GetFilterUnit()) == GetOwningPlayer(GetTriggerUnit()) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A001')) == 0 and IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) ~= true and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Slo3')) == 0
+    return GetOwningPlayer(GetFilterUnit()) == GetOwningPlayer(GetTriggerUnit()) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A001')) == 0 and not (IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE)) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Slo3')) == 0
 end
 function Trig_MassPosadka_Copy_Func014Func006A()
     udg_LocalUnit[15]=GetEnumUnit()
@@ -21353,7 +21353,7 @@ end
 -- Trigger: Abordach D or Ot
 --===========================================================================
 function Trig_Abordach_D_or_Ot_Func005Func001C()
-    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSpellTargetUnit()) ) )) or (( ( IsPlayerAlly(GetOwningPlayer(GetSpellTargetUnit()), GetOwningPlayer(GetTriggerUnit())) == true ) )) or (( ( IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_STRUCTURE) == true ) ))
+    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSpellTargetUnit()) ) )) or IsPlayerAlly(GetOwningPlayer(GetSpellTargetUnit()), GetOwningPlayer(GetTriggerUnit())) or IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_STRUCTURE)
 end
 function Trig_Abordach_D_or_Ot_Func005C()
     return Trig_Abordach_D_or_Ot_Func005Func001C()
@@ -21362,10 +21362,10 @@ function Trig_Abordach_D_or_Ot_Func018Func003C()
     return true
 end
 function Trig_Abordach_D_or_Ot_Func018Func017Func005002()
-    return ( IsUnitInTransportBJ(GetFilterUnit(), udg_LocalUnit2) == true )
+    return IsUnitInTransportBJ(GetFilterUnit(), udg_LocalUnit2)
 end
 function Trig_Abordach_D_or_Ot_Func018Func017Func009Func001C()
-    return (( IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO) == true )) and (( IsUnitLoadedBJ(GetEnumUnit()) == true ))
+    return IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO) and IsUnitLoadedBJ(GetEnumUnit())
 end
 function Trig_Abordach_D_or_Ot_Func018Func017Func009A()
     if ( Trig_Abordach_D_or_Ot_Func018Func017Func009Func001C() ) then
@@ -21399,10 +21399,10 @@ function Trig_Abordach_D_or_Ot_Func018Func021Func007C()
     return true
 end
 function Trig_Abordach_D_or_Ot_Func018Func021Func011002()
-    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true )
+    return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
 end
 function Trig_Abordach_D_or_Ot_Func018Func021Func015Func001C()
-    return ( IsUnitLoadedBJ(GetEnumUnit()) == true )
+    return IsUnitLoadedBJ(GetEnumUnit())
 end
 function Trig_Abordach_D_or_Ot_Func018Func021Func015A()
     if ( Trig_Abordach_D_or_Ot_Func018Func021Func015Func001C() ) then
@@ -21822,16 +21822,16 @@ end
 -- Trigger: Portal Connect
 --===========================================================================
 function Trig_Portal_Connect_Func008Func004Func001Func002C()
-    return (( udg_Portal_active[udg_Portal_INDEX_CASTER] == false )) and (( udg_Portal_active[udg_Portal_INDEX_TARGET] == false ))
+    return not (udg_Portal_active[udg_Portal_INDEX_CASTER]) and not (udg_Portal_active[udg_Portal_INDEX_TARGET])
 end
 function Trig_Portal_Connect_Func008Func004Func001C()
     return ( GetTriggerUnit() == udg_Portal_portal[udg_Portal_INDEX_TARGET] )
 end
 function Trig_Portal_Connect_Func008Func004C()
-    return (( udg_Portal_active[udg_Portal_INDEX_TARGET] == true )) and (( GetSpellTargetUnit() ~= udg_Portal_portal[udg_Portal_INDEX_CASTER] ))
+    return udg_Portal_active[udg_Portal_INDEX_TARGET] and (( GetSpellTargetUnit() ~= udg_Portal_portal[udg_Portal_INDEX_CASTER] ))
 end
 function Trig_Portal_Connect_Func008C()
-    return (( udg_Portal_active[udg_Portal_INDEX_CASTER] == true )) and (( GetSpellTargetUnit() ~= udg_Portal_portal[udg_Portal_INDEX_CASTER] )) and (( udg_Portal_active[udg_Portal_INDEX_TARGET] == false ))
+    return udg_Portal_active[udg_Portal_INDEX_CASTER] and (( GetSpellTargetUnit() ~= udg_Portal_portal[udg_Portal_INDEX_CASTER] )) and not (udg_Portal_active[udg_Portal_INDEX_TARGET])
 end
 function Trig_Portal_Connect_Actions()
     if udg_Portal_SeverAbility == nil then
@@ -21896,28 +21896,28 @@ end
 -- Trigger: Portal Periodic
 --===========================================================================
 function Trig_Portal_Periodic_Func001Func006Func001C()
-    return ( udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER] == true )
+    return udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER]
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func002C()
-    return ( udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER] == false )
+    return not (udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER])
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func011Func003C()
-    return ( IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller)) == true )
+    return IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller))
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func011Func004C()
-    return ( udg_Portal_missileTargetable[udg_Portal_INDEX_TARGET] == true )
+    return udg_Portal_missileTargetable[udg_Portal_INDEX_TARGET]
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func011Func012Func004C()
-    return ( IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller)) == true )
+    return IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller))
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func011Func012Func005C()
-    return ( udg_Portal_missileTargetable[udg_Portal_INDEX_TARGET] == true )
+    return udg_Portal_missileTargetable[udg_Portal_INDEX_TARGET]
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func011Func012C()
     return ( udg_Portal_missileSpeed[udg_Portal_INDEX_TARGET] > 0.00 )
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func011C()
-    return ( udg_Portal_missileUseOwnMovement[udg_Portal_INDEX_TARGET] == true )
+    return udg_Portal_missileUseOwnMovement[udg_Portal_INDEX_TARGET]
 end
 function Trig_Portal_Periodic_Func001Func006Func002C()
     return ( udg_Portal_delay[udg_Portal_INDEX_CASTER] > 0.00 )
@@ -22011,19 +22011,19 @@ function Trig_Portal_Periodic_Func001A()
     RemoveLocation(udg_Portal_loc1)
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func001Func001C()
-    return ( IsUnitAliveBJ(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER]) == true )
+    return IsUnitAliveBJ(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER])
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func001Func012C()
-    return ( IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller)) == true )
+    return IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller))
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func001C()
     return ( DistanceBetweenPoints(udg_Portal_loc1, udg_Portal_loc2) <= udg_Portal_range[udg_Portal_INDEX_TARGET] )
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func002Func013C()
-    return ( IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller)) == true )
+    return IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller))
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func002Func014C()
-    return ( IsUnitAliveBJ(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER]) == true )
+    return IsUnitAliveBJ(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER])
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func002C()
     return ( DistanceBetweenPoints(udg_Portal_loc1, udg_Portal_loc2) <= ( udg_Portal_missileSpeed[udg_Portal_INDEX_TRAVELLER] / 33.00 ) )
@@ -22032,10 +22032,10 @@ function Trig_Portal_Periodic_Func002Func007Func003C()
     return ( udg_Portal_missileSpeed[udg_Portal_INDEX_TRAVELLER] > 0.00 )
 end
 function Trig_Portal_Periodic_Func002Func007Func015C()
-    return ( IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller)) == true )
+    return IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller))
 end
 function Trig_Portal_Periodic_Func002Func007C()
-    return ( IsUnitAliveBJ(udg_Portal_traveller) == true )
+    return IsUnitAliveBJ(udg_Portal_traveller)
 end
 function Trig_Portal_Periodic_Func002A()
     -- In this group, the Portal_traveller is the missile unit, not the actual unit being teleported
@@ -22113,7 +22113,7 @@ function Trig_Portal_Periodic_Func002A()
     end
 end
 function Trig_Portal_Periodic_Func003C()
-    return (( IsUnitGroupEmptyBJ(udg_Portal_group) == true )) and (( IsUnitGroupEmptyBJ(udg_Portal_teleMissiles) == true ))
+    return IsUnitGroupEmptyBJ(udg_Portal_group) and IsUnitGroupEmptyBJ(udg_Portal_teleMissiles)
 end
 function Trig_Portal_Periodic_Actions()
     ForGroupBJ(udg_Portal_group, Trig_Portal_Periodic_Func001A)
@@ -22136,16 +22136,16 @@ function Trig_Portal_Target_Func006C()
     return (( ( GetIssuedOrderIdBJ() == String2OrderIdBJ("smart") ) )) or (( ( GetIssuedOrderIdBJ() == String2OrderIdBJ("move") ) ))
 end
 function Trig_Portal_Target_Conditions()
-    return (( udg_Portal_active[GetUnitUserData(GetOrderTargetUnit())] == true )) and (( IsUnitInGroup(GetTriggerUnit(), udg_Portal_teleMissiles) == false )) and (Trig_Portal_Target_Func006C()) and (( IsUnitAlly(GetTriggerUnit(), GetOwningPlayer(GetOrderTargetUnit())) == true )) and (( IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) == false ))
+    return udg_Portal_active[GetUnitUserData(GetOrderTargetUnit())] and not (IsUnitInGroup(GetTriggerUnit(), udg_Portal_teleMissiles)) and (Trig_Portal_Target_Func006C()) and IsUnitAlly(GetTriggerUnit(), GetOwningPlayer(GetOrderTargetUnit())) and not (IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE))
 end
 function Trig_Portal_Target_Func003Func001Func005C()
-    return ( IsTriggerEnabled(gg_trg_Portal_Periodic) == false )
+    return not (IsTriggerEnabled(gg_trg_Portal_Periodic))
 end
 function Trig_Portal_Target_Func003Func001C()
-    return (( udg_Portal_preventAllies[udg_Portal_INDEX_TARGET] == true )) and (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetOrderTargetUnit()) ))
+    return udg_Portal_preventAllies[udg_Portal_INDEX_TARGET] and (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetOrderTargetUnit()) ))
 end
 function Trig_Portal_Target_Func003C()
-    return ( udg_Portal_active[udg_Portal_INDEX_CASTER] == true )
+    return udg_Portal_active[udg_Portal_INDEX_CASTER]
 end
 function Trig_Portal_Target_Actions()
     udg_Portal_INDEX_CASTER=GetUnitUserData(GetTriggerUnit())
@@ -22176,7 +22176,7 @@ end
 -- Trigger: Portal Disengage
 --===========================================================================
 function Trig_Portal_Disengage_Conditions()
-    return (( IsUnitInGroup(GetTriggerUnit(), udg_Portal_group) == true )) and (( GetOrderTargetUnit() ~= udg_Portal_targeted[GetUnitUserData(GetTriggerUnit())] ))
+    return IsUnitInGroup(GetTriggerUnit(), udg_Portal_group) and (( GetOrderTargetUnit() ~= udg_Portal_targeted[GetUnitUserData(GetTriggerUnit())] ))
 end
 function Trig_Portal_Disengage_Actions()
     udg_Portal_INDEX_CASTER=GetUnitUserData(GetTriggerUnit())
@@ -22201,7 +22201,7 @@ end
 -- Trigger: Portal Death
 --===========================================================================
 function Trig_Portal_Death_Conditions()
-    return ( udg_Portal_active[GetUnitUserData(GetTriggerUnit())] == true )
+    return udg_Portal_active[GetUnitUserData(GetTriggerUnit())]
 end
 function Trig_Portal_Death_Func004Func004C()
     return ( GetTriggerUnit() == udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER] )
@@ -22251,7 +22251,7 @@ end
 -- Selectable missiles that use thier own movement to go to sister portals should have the Ward classification.
 --===========================================================================
 function Trig_Portal_Missile_Order_Conditions()
-    return ( IsUnitInGroup(GetTriggerUnit(), udg_Portal_teleMissiles) == true )
+    return IsUnitInGroup(GetTriggerUnit(), udg_Portal_teleMissiles)
 end
 function Trig_Portal_Missile_Order_Actions()
     DisableTrigger(GetTriggeringTrigger())
@@ -22277,7 +22277,7 @@ end
 -- Add your various connector spells to the -------- Or - Any (Conditions) are true -------- to give your Portals the Sever Connection spell.
 --===========================================================================
 function Trig_Portal_Disconnect_Conditions()
-    return ( udg_Portal_active[GetUnitUserData(GetTriggerUnit())] == true )
+    return udg_Portal_active[GetUnitUserData(GetTriggerUnit())]
 end
 function Trig_Portal_Disconnect_Func001Func005Func004C()
     return ( GetTriggerUnit() == udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER] )
@@ -22336,7 +22336,7 @@ function Trig_Connect_Portal_2_Func001Func003Func002C()
     return ( GetTriggerUnit() == udg_Portal_portal[udg_Portal_INDEX_TARGET] )
 end
 function Trig_Connect_Portal_2_Func001Func003C()
-    return (( udg_Portal_active[udg_Portal_INDEX_TARGET] == true )) and (( GetSpellTargetUnit() ~= udg_Portal_portal[udg_Portal_INDEX_CASTER] ))
+    return udg_Portal_active[udg_Portal_INDEX_TARGET] and (( GetSpellTargetUnit() ~= udg_Portal_portal[udg_Portal_INDEX_CASTER] ))
 end
 function Trig_Connect_Portal_2_Func001C()
     return ( GetUnitTypeId(GetSpellTargetUnit()) == GetUnitTypeId(GetTriggerUnit()) )
@@ -23221,10 +23221,10 @@ function Trig_MageTpSell_Conditions()
     return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h07A') )
 end
 function Trig_MageTpSell_Func002Func001C()
-    return (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetSoldUnit()) )) and (( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ))
+    return (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetSoldUnit()) )) and GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL)
 end
 function Trig_MageTpSell_Func002Func002C()
-    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) )) or (( ( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ) ))
+    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) )) or GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL)
 end
 function Trig_MageTpSell_Func002C()
     return Trig_MageTpSell_Func002Func002C()
@@ -24635,7 +24635,7 @@ function Trig_Sluga_qqgsarona_Func010A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A12G'), GetEnumPlayer())
 end
 function Trig_Sluga_qqgsarona_Func012001002()
-    return ( IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups) == true )
+    return IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups)
 end
 function Trig_Sluga_qqgsarona_Func012A()
     GroupRemoveUnitSimple(GetEnumUnit(), udg_StolicaGroups)
@@ -32664,7 +32664,7 @@ end
 -- Trigger: TankChangeAttack
 --===========================================================================
 function Trig_TankChangeAttack_Func001C()
-    return ( BlzGetUnitWeaponBooleanField(GetTriggerUnit(), UNIT_WEAPON_BF_ATTACKS_ENABLED, 0) == true )
+    return BlzGetUnitWeaponBooleanField(GetTriggerUnit(), UNIT_WEAPON_BF_ATTACKS_ENABLED, 0)
 end
 function Trig_TankChangeAttack_Actions()
     if ( Trig_TankChangeAttack_Func001C() ) then
@@ -37959,7 +37959,7 @@ function Trig_QTunServe_Func004A()
     SetPlayerTechMaxAllowedSwap(FourCC('h0MG'), 0, GetEnumPlayer())
 end
 function Trig_QTunServe_Func005001002()
-    return ( IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups) == true )
+    return IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups)
 end
 function Trig_QTunServe_Func005A()
     GroupRemoveUnitSimple(GetEnumUnit(), udg_StolicaGroups)
@@ -39433,10 +39433,10 @@ function Trig_GoblinSold_Conditions()
     return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h073') )
 end
 function Trig_GoblinSold_Func002Func001C()
-    return (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetSoldUnit()) )) and (( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ))
+    return (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetSoldUnit()) )) and GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL)
 end
 function Trig_GoblinSold_Func002Func002C()
-    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) )) or (( ( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ) ))
+    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) )) or GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL)
 end
 function Trig_GoblinSold_Func002C()
     return Trig_GoblinSold_Func002Func002C()
@@ -41989,13 +41989,13 @@ end
 -- Trigger: OnlySelected
 --===========================================================================
 function Trig_Dovorougenie_3t_O_Copy_Func001C()
-    return ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true )
+    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 -- Trigger: AutoChance
 --===========================================================================
 function Trig_AutoChance_Func003C()
-    return (( GetUnitAbilityLevelSwapped(FourCC('A000'), GetEventDamageSource()) >= 1 )) and (( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource())) == true ))
+    return (( GetUnitAbilityLevelSwapped(FourCC('A000'), GetEventDamageSource()) >= 1 )) and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
 end
 function Trig_AutoChance_Conditions()
     return Trig_AutoChance_Func003C()
@@ -42023,7 +42023,7 @@ end
 -- Trigger: AutoChance 2
 --===========================================================================
 function Trig_AutoChance_2_Func001C()
-    return (( GetUnitAbilityLevelSwapped(FourCC('A01A'), GetEventDamageSource()) >= 1 )) and (( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource())) == true ))
+    return (( GetUnitAbilityLevelSwapped(FourCC('A01A'), GetEventDamageSource()) >= 1 )) and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
 end
 function Trig_AutoChance_2_Conditions()
     return Trig_AutoChance_2_Func001C()
@@ -42051,7 +42051,7 @@ end
 -- Trigger: AutoChance 3
 --===========================================================================
 function Trig_AutoChance_3_Func003C()
-    return (( GetUnitAbilityLevelSwapped(FourCC('A01B'), GetEventDamageSource()) >= 1 )) and (( IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource())) == true ))
+    return (( GetUnitAbilityLevelSwapped(FourCC('A01B'), GetEventDamageSource()) >= 1 )) and IsPlayerEnemy(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetEventDamageSource()))
 end
 function Trig_AutoChance_3_Conditions()
     return Trig_AutoChance_3_Func003C()
@@ -42203,10 +42203,10 @@ end
 -- Trigger: Dovorougenie 3t O
 --===========================================================================
 function Trig_Dovorougenie_3t_O_Conditions()
-    return ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true )
+    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 function Trig_Dovorougenie_3t_O_Func002Func002C()
-    return ( IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true )
+    return IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))
 end
 function Trig_Dovorougenie_3t_O_Func002C()
     return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h006') )
@@ -44811,19 +44811,19 @@ end
 -- Trigger: Sand Strike Loop
 --===========================================================================
 function Trig_Sand_Strike_Loop_Func001Func001Func003C()
-    return ( IsTerrainPathableBJ(udg_SSpointmovecaster[udg_SSinteger[2]], PATHING_TYPE_WALKABILITY) == true )
+    return IsTerrainPathableBJ(udg_SSpointmovecaster[udg_SSinteger[2]], PATHING_TYPE_WALKABILITY)
 end
 function Trig_Sand_Strike_Loop_Func001Func001Func004002003001()
-    return ( IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(udg_SScaster[udg_SSinteger[2]])) == true )
+    return IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(udg_SScaster[udg_SSinteger[2]]))
 end
 function Trig_Sand_Strike_Loop_Func001Func001Func004002003002()
-    return ( IsUnitAliveBJ(GetFilterUnit()) == true )
+    return IsUnitAliveBJ(GetFilterUnit())
 end
 function Trig_Sand_Strike_Loop_Func001Func001Func004002003()
-    return GetBooleanAnd((IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(udg_SScaster[udg_SSinteger[2]])) == true), (IsUnitAliveBJ(GetFilterUnit()) == true)) -- INLINED!!
+    return GetBooleanAnd(IsUnitEnemy(GetFilterUnit(), GetOwningPlayer(udg_SScaster[udg_SSinteger[2]])), IsUnitAliveBJ(GetFilterUnit())) -- INLINED!!
 end
 function Trig_Sand_Strike_Loop_Func001Func001Func007Func004C()
-    return ( IsUnitType(udg_SSpicked[udg_SSinteger[2]], UNIT_TYPE_STRUCTURE) ~= true )
+    return not (IsUnitType(udg_SSpicked[udg_SSinteger[2]], UNIT_TYPE_STRUCTURE))
 end
 function Trig_Sand_Strike_Loop_Func001Func001Func007A()
     udg_SSpicked[udg_SSinteger[2]]=GetEnumUnit()
@@ -46511,7 +46511,7 @@ end
 -- Trigger: Spell E Dvij
 --===========================================================================
 function Trig_Spell_E_Dvij_Func001Func001Func007Func001C()
-    return (( IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) == true )) and (( IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) == false )) and (( IsUnitInGroup(GetEnumUnit(), udg_Group_E_Glaz[udg_Cikl_E_Glaz]) == false )) and (( IsUnitDeadBJ(GetEnumUnit()) == false )) and (( IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE) == false ))
+    return IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) and not (IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster_E_Glaz[udg_Cikl_E_Glaz]))) and not (IsUnitInGroup(GetEnumUnit(), udg_Group_E_Glaz[udg_Cikl_E_Glaz])) and not (IsUnitDeadBJ(GetEnumUnit())) and not (IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE))
 end
 function Trig_Spell_E_Dvij_Func001Func001Func007A()
     if ( Trig_Spell_E_Dvij_Func001Func001Func007Func001C() ) then
@@ -46520,7 +46520,7 @@ function Trig_Spell_E_Dvij_Func001Func001Func007A()
     end
 end
 function Trig_Spell_E_Dvij_Func001Func001Func008Func001C()
-    return (( ( IsUnitDeadBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz]) == true ) )) or (( ( udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz] == 0.20 ) ))
+    return IsUnitDeadBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz]) or (( ( udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz] == 0.20 ) ))
 end
 function Trig_Spell_E_Dvij_Func001Func001Func008Func008C()
     return ( udg_Antibag_E_Glaz[udg_MUI_E_Glaz] == 0 )
@@ -46529,7 +46529,7 @@ function Trig_Spell_E_Dvij_Func001Func001Func008C()
     return Trig_Spell_E_Dvij_Func001Func001Func008Func001C()
 end
 function Trig_Spell_E_Dvij_Func001Func001C()
-    return ( udg_Logika_E_Glaz[udg_Cikl_E_Glaz] == true )
+    return udg_Logika_E_Glaz[udg_Cikl_E_Glaz]
 end
 function Trig_Spell_E_Dvij_Actions()
     udg_Cikl_E_Glaz=1
@@ -47907,7 +47907,7 @@ end
 -- Trigger: Setlvl
 --===========================================================================
 function Trig_Setlvl_Func001001002()
-    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true )
+    return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
 end
 function Trig_Setlvl_Func001A()
     SetHeroLevelBJ(GetEnumUnit(), S2I(SubStringBJ(GetEventPlayerChatString(), 8, 10)), false)
@@ -47957,7 +47957,7 @@ end
 -- Trigger: KillTestUnits Command
 --===========================================================================
 function Trig_KillTestUnits_Command_Func001002()
-    return ( RectContainsUnit(gg_rct_TestRegion, GetFilterUnit()) == true )
+    return RectContainsUnit(gg_rct_TestRegion, GetFilterUnit())
 end
 function Trig_KillTestUnits_Command_Func003A()
     local u= GetEnumUnit()
@@ -52557,7 +52557,7 @@ end
 ---@return boolean
 function AiRaceUsesWaterPoint(pi)
     local race = AiRaceOf(pi)
-    return race == nil or race.usesWaterPoint ~= false
+    return race == nil or race.usesWaterPoint
 end
 
 -- ====================================================================

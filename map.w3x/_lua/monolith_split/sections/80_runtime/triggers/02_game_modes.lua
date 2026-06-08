@@ -406,7 +406,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_UpgradeStolica_Conditions()
-	return (IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) == true)
+	return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups)
 end
 ---@return nothing
 function Trig_UpgradeStolica_Actions()
@@ -880,11 +880,11 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_FeodalDead_Conditions()
-	return ((IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) == true)) and ((GetUnitLifePercent(GetTriggerUnit()) <= 15.00))
+	return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) and ((GetUnitLifePercent(GetTriggerUnit()) <= 15.00))
 end
 ---@return boolean
 function Trig_FeodalDead_Func004Func002Func001Func010Func001Func003C()
-	return (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetForLoopIndexB()]) == true)
+	return IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetForLoopIndexB()])
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func002Func001Func010A()
@@ -905,7 +905,7 @@ function Trig_FeodalDead_Func004Func002Func001Func010A()
 end
 ---@return boolean
 function Trig_FeodalDead_Func004Func002Func001C()
-	return (IsPlayerInForce(GetOwningPlayer(GetAttacker()), udg_Vassals[GetForLoopIndexA()]) == true)
+	return IsPlayerInForce(GetOwningPlayer(GetAttacker()), udg_Vassals[GetForLoopIndexA()])
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func011A()
@@ -918,7 +918,7 @@ function Trig_FeodalDead_Func004Func011A()
 end
 ---@return boolean
 function Trig_FeodalDead_Func004Func017Func001C()
-	return (IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) == true)
+	return IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings)
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func017A()
@@ -1166,7 +1166,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_DoNotAttackSenior_Conditions()
-	return (IsPlayerInForce(GetOwningPlayer(GetAttacker()), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttackedUnitBJ()))]) == true)
+	return IsPlayerInForce(GetOwningPlayer(GetAttacker()), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttackedUnitBJ()))])
 end
 ---@return nothing
 function Trig_DoNotAttackSenior_Actions()

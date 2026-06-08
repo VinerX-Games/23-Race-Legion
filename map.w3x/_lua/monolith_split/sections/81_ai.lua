@@ -107,7 +107,7 @@ end
 ---@return boolean
 function AiRaceUsesWaterPoint(pi)
     local race = AiRaceOf(pi)
-    return race == nil or race.usesWaterPoint ~= false
+    return race == nil or race.usesWaterPoint
 end
 
 -- ====================================================================

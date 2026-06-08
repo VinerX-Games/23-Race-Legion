@@ -1247,7 +1247,7 @@ end
 -- Trigger: Spell E Dvij
 --===========================================================================
 function Trig_Spell_E_Dvij_Func001Func001Func007Func001C()
-    return (( IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) == true )) and (( IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) == false )) and (( IsUnitInGroup(GetEnumUnit(), udg_Group_E_Glaz[udg_Cikl_E_Glaz]) == false )) and (( IsUnitDeadBJ(GetEnumUnit()) == false )) and (( IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE) == false ))
+    return IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) and not (IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster_E_Glaz[udg_Cikl_E_Glaz]))) and not (IsUnitInGroup(GetEnumUnit(), udg_Group_E_Glaz[udg_Cikl_E_Glaz])) and not (IsUnitDeadBJ(GetEnumUnit())) and not (IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE))
 end
 function Trig_Spell_E_Dvij_Func001Func001Func007A()
     if ( Trig_Spell_E_Dvij_Func001Func001Func007Func001C() ) then
@@ -1256,7 +1256,7 @@ function Trig_Spell_E_Dvij_Func001Func001Func007A()
     end
 end
 function Trig_Spell_E_Dvij_Func001Func001Func008Func001C()
-    return (( ( IsUnitDeadBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz]) == true ) )) or (( ( udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz] == 0.20 ) ))
+    return IsUnitDeadBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz]) or (( ( udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz] == 0.20 ) ))
 end
 function Trig_Spell_E_Dvij_Func001Func001Func008Func008C()
     return ( udg_Antibag_E_Glaz[udg_MUI_E_Glaz] == 0 )
@@ -1265,7 +1265,7 @@ function Trig_Spell_E_Dvij_Func001Func001Func008C()
     return Trig_Spell_E_Dvij_Func001Func001Func008Func001C()
 end
 function Trig_Spell_E_Dvij_Func001Func001C()
-    return ( udg_Logika_E_Glaz[udg_Cikl_E_Glaz] == true )
+    return udg_Logika_E_Glaz[udg_Cikl_E_Glaz]
 end
 function Trig_Spell_E_Dvij_Actions()
     udg_Cikl_E_Glaz=1
@@ -2643,7 +2643,7 @@ end
 -- Trigger: Setlvl
 --===========================================================================
 function Trig_Setlvl_Func001001002()
-    return ( IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO) == true )
+    return IsUnitType(GetFilterUnit(), UNIT_TYPE_HERO)
 end
 function Trig_Setlvl_Func001A()
     SetHeroLevelBJ(GetEnumUnit(), S2I(SubStringBJ(GetEventPlayerChatString(), 8, 10)), false)
@@ -2693,7 +2693,7 @@ end
 -- Trigger: KillTestUnits Command
 --===========================================================================
 function Trig_KillTestUnits_Command_Func001002()
-    return ( RectContainsUnit(gg_rct_TestRegion, GetFilterUnit()) == true )
+    return RectContainsUnit(gg_rct_TestRegion, GetFilterUnit())
 end
 function Trig_KillTestUnits_Command_Func003A()
     local u= GetEnumUnit()
