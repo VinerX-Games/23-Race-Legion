@@ -113,7 +113,7 @@ Warcraft III: Reforged — кастомная карта Altered Melee с 30+ ф
 | `libraries/12_SanctifiedEnchantment.lua` | Система апгрейдов | 268 |
 | `libraries/13_Races.lua` | Выбор расы, `AiRace` конфигурация | 2867 |
 | `libraries/14_AI2.lua` | AI-система (часть 2) | 166 |
-| `80_runtime/` | **Сгенерированный код** — 85 файлов (см. 3.2) | 47K |
+| `80_runtime/` | **Сгенерированный код** — 88 файлов (см. 3.2) | 47K |
 | `81_ai.lua` | AI-регистр рас | 276 |
 | `82_ai_races.lua` | AI-стратегии рас | 1298 |
 | `90_InitCustomTriggers.lua` | `InitCustomTriggers()` — регистрация всех триггеров | 1302 |
@@ -124,7 +124,7 @@ Warcraft III: Reforged — кастомная карта Altered Melee с 30+ ф
 
 ### 3.2 Сгенерированный runtime (`80_runtime/`)
 
-85 файлов в 11 подпапках. Все — продукт автоконвертации vJASS→Lua.
+88 файлов в 11 подпапках. Все — продукт автоконвертации vJASS→Lua.
 Файлы нарезаны по границам функций (`resplit_runtime.py`): каждый файл содержит
 только целые функции и парсится самостоятельно.
 
@@ -139,7 +139,7 @@ Warcraft III: Reforged — кастомная карта Altered Melee с 30+ ф
 | `_continental/` | Континенты: boolexprs, dungeons, `ProcessContinentalStuff` | 4 |
 | `_features/` | Emerald Dream, Item Drops, Sounds | 3 |
 | `_data/` | Статика: Unit Creation (943 строки), Regions (166), Cameras (107) | 3 |
-| `triggers/` | Игровая логика: 11 бандлов + `races/` (23 per-race файла) | 34 |
+| `triggers/` | Игровая логика: 9 доменных бандлов + `races/` (28 per-race файлов) | 37 |
 
 ### 3.3 Триггеры (`80_runtime/triggers/`)
 
@@ -151,15 +151,13 @@ Warcraft III: Reforged — кастомная карта Altered Melee с 30+ ф
 | `04_race_selection.lua` | Выбор расы (37 рас), 4 страницы UI | 1529 |
 | `05_common_spells.lua` | Spell-система, предметы, флагманы, Fireball | 1009 |
 | `06_transport_portals.lua` | Транспорт, корабли, порталы, F2, телепорты | 2671 |
-| `07_hero_bezlikie_horde.lua` | Deathwing, элементали, Безликие, Horde W2 (дуэли, руны) | 3066 |
-| `09_alliance.lua` | Альянс: Stormwind, Gilneas, Kultiras, Stromgarde, Dalaran | 3706 |
-| `11_horde.lua` | Орда: TrueHorde, IronHorde, Sha, нейтралы, герои | 2984 |
-| `14_misc_system.lua` | Остаток бандла 14: boss-ульты, камера/команды, обзёрвер, вассалитет | — |
+| `07_mixed_heroes.lua` | Остаток 07: Deathwing, элементали, огры, аспекты драконов | — |
+| `14_misc_system.lua` | Остаток 14: boss-ульты, камера/команды, обзёрвер, вассалитет | — |
 | `15_ai_portals_cities.lua` | AI-триггеры, порталы городов, Dalaran/Naxx/Turtle, Emerald Dream | 3742 |
 
-Бандлы `08`, `10`, `12`, `13`, `14` разнесены по расам в `triggers/races/`
-(`split_bundle.py`, границы по триггерам-энейблерам `<Race>On`/race-start,
-конкатенация byte-identical). 23 per-race файла:
+Бандлы `07`, `08`, `09`, `10`, `11`, `12`, `13`, `14` разнесены по расам в
+`triggers/races/` (`split_bundle.py`, границы по триггерам-энейблерам
+`<Race>On`/race-start, конкатенация byte-identical). 28 per-race файлов:
 
 | Источник | Расы (`races/*.lua`) |
 |---|---|
@@ -168,8 +166,10 @@ Warcraft III: Reforged — кастомная карта Altered Melee с 30+ ф
 | `10` | Forsaken, Gnomes |
 | `13` | NightElf, Naga, Worgens, RedOrden, Draenei, Illidari, Vryculs, Dragons |
 | `14` | Demon, Elementals, Scourge, IceTrolls, Lords, OldGods |
+| `07` | Stromgard, Bezlikie, HordeW2 |
+| `09` / `11` | Alliance / Horde (зонтичные, перенесены целиком) |
 
-> Границы/имена для `13`/`14` — эвристические (не из `war3map.wtg`), могут
+> Границы/имена для `07`/`13`/`14` — эвристические (не из `war3map.wtg`), могут
 > потребовать ручной выверки. Сборка от этого не зависит (byte-identical).
 
 ### 3.5 Список рас (37 `InitTrig_Race_*` в `80_runtime/triggers/04_race_selection.lua`)
