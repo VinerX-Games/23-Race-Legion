@@ -498,6 +498,17 @@ RegisterAiRace(..., {
 - **П2 done** — `AiPickByComposition` (дефицит доли к `compTarget`), хук в
   `AiRunProduction` под `AiSmartProduce`, рандом-фоллбэк.
 
+### Собранные данные (CLI, `HiveWE_cli` @ C:\Games\HiveWE_VinerX_Edition\build\Release\Release)
+- `list-all-races` работает без `--warcraft` (283 «расы»-суффикса; рабочие из них
+  — наши AI-расы из `82_ai_races.lua`).
+- Кандидаты транспортов (`search-objects --type unit --query "Транспорт"/"танкер"`):
+  generic `hbot`/`obot`/`nbot`/`etrs`/`ubot`; кастомные `h00X h0D2 h0D4 h0D9 h0E5
+  pa40 h0OX`; танкеры `w220` (Ор2), `h0OD` (гоблины). Корабли сопровождения:
+  `h0OY`, `nbsp`, орда `h0HK/h0HN`, альянс `h0L0/h0L1`. → заполнить `def.transport`
+  по расам через `describe-race --suffix <раса>` (какой транспорт раса строит).
+- **#3 инком-ценность — СДЕЛАНО** не через CLI, а из модуля экономики
+  `_lib/54_count_dis.lua` (`AiBldValueUnit`).
+
 ### Заблокировано на данные (нужен CLI / игра)
 - **Десант (М1/М2)** — нужны id транспортов по расам (`def.transport`,
   `transportCap`) и точки высадки; собрать через `HiveWE_cli describe-race` и
