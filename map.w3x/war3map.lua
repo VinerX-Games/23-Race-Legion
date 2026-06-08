@@ -16668,7 +16668,7 @@ function Trig_FeodalDead_Func004Func002Func001Func010A()
 	SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
 	SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
 	SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
+	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) .. (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
 end
 ---@return boolean
 function Trig_FeodalDead_Func004Func002Func001C()
@@ -16676,7 +16676,7 @@ function Trig_FeodalDead_Func004Func002Func001C()
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func011A()
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
+	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) .. (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
 	ForceAddPlayerSimple(GetEnumPlayer(), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))])
 	for bj_forLoopBIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
@@ -16698,7 +16698,7 @@ function Trig_FeodalDead_Func004Func017A()
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func020A()
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" ??????????? ?? ?????? " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())))))
+	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) .. (" ??????????? ?? ?????? " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())))))
 	for bj_forLoopAIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
@@ -16732,7 +16732,7 @@ function Trig_FeodalDead_Actions()
 				end
 				--  ???? ??????
 				--  ???????????? ??????? ???????
-				DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) + (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
+				DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
 				ForceAddPlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetConvertedPlayerId(ConvertedPlayer(GetForLoopIndexA()))])
 				SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_ALLIED_UNITS)
 				SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)
@@ -16752,7 +16752,7 @@ function Trig_FeodalDead_Actions()
 			SetPlayerAllianceStateBJ(GetTriggerPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 			SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetTriggerPlayer(), bj_ALLIANCE_UNALLIED)
 		end
-		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) + (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
+		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
 		ForceAddPlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))])
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker()), bj_ALLIANCE_ALLIED_UNITS)
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)
@@ -17381,27 +17381,27 @@ function Trig_Continents_set_On_Actions()
     else
     end
     if ( Trig_Continents_set_On_Func005C() ) then
-        udg_LocalText2=( udg_LocalText2 + "" )
+        udg_LocalText2=( udg_LocalText2 .. "" )
     else
     end
     if ( Trig_Continents_set_On_Func006C() ) then
-        udg_LocalText2=( udg_LocalText2 + "" )
+        udg_LocalText2=( udg_LocalText2 .. "" )
     else
     end
     if ( Trig_Continents_set_On_Func007C() ) then
-        udg_LocalText2=( udg_LocalText2 + "" )
+        udg_LocalText2=( udg_LocalText2 .. "" )
     else
     end
     if ( Trig_Continents_set_On_Func008C() ) then
-        udg_LocalText2=( udg_LocalText2 + "" )
+        udg_LocalText2=( udg_LocalText2 .. "" )
     else
     end
     if ( Trig_Continents_set_On_Func009C() ) then
-        udg_LocalText2=( udg_LocalText2 + "" )
+        udg_LocalText2=( udg_LocalText2 .. "" )
     else
     end
     if ( Trig_Continents_set_On_Func010C() ) then
-        udg_LocalText2=( udg_LocalText2 + "" )
+        udg_LocalText2=( udg_LocalText2 .. "" )
     else
     end
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
@@ -18377,7 +18377,7 @@ end
 -- Trigger: StartAlly
 --===========================================================================
 function WritePlayerName()
-    DisplayTextToForce(udg_AllPlayers, "" + GetPlayerName(GetEnumPlayer()))
+    DisplayTextToForce(udg_AllPlayers, "" .. GetPlayerName(GetEnumPlayer()))
 end
 function Trig_StartAlly_Actions()
     local p= GetTriggerPlayer()
@@ -18387,14 +18387,14 @@ function Trig_StartAlly_Actions()
     if DipMode == 0 then
         --?????????? ? ??????????
         if AllyCount > 1 then
-            DisplayTextToForce(udg_AllPlayers, "" + GetPlayerName(p) + " not ")
+            DisplayTextToForce(udg_AllPlayers, "" .. GetPlayerName(p) .. " not ")
             ForForce(gForce, WritePlayerName)
             
         end
     else
         if AllyCount > DipMode then
             ClearAllies(p)
-            DisplayTextToForce(udg_AllPlayers, "" + GetPlayerName(p) + "")
+            DisplayTextToForce(udg_AllPlayers, "" .. GetPlayerName(p) .. "")
             
         end
     
@@ -18632,7 +18632,7 @@ end
 function Trig_TotalProductionTrain_Actions()
     local u= GetTrainedUnit()
     local uh= GetHandleId(u)
-    SaveInteger(Hash, S2I(I2S(uh) + "a"), 0, GetUnitTypeId(GetTriggerUnit())) --StringHash("lvl"),0)
+    SaveInteger(Hash, S2I(I2S(uh) .. "a"), 0, GetUnitTypeId(GetTriggerUnit())) --StringHash("lvl"),0)
     
     u=nil
     --call IssueTrainOrderByIdBJ( GetTriggerUnit(), GetUnitTypeId(GetTrainedUnit()) )
@@ -18656,13 +18656,13 @@ end
 function Trig_TotalProductionDeath_Actions()
     local u= GetTriggerUnit()
     local uh= GetHandleId(u)
-    local id= LoadInteger(Hash, S2I(I2S(uh) + "a"), 0)
+    local id= LoadInteger(Hash, S2I(I2S(uh) .. "a"), 0)
     local p= GetOwningPlayer(u)
     local u2
     local g= CreateGroup()
     udg_LocalInteger5=id
     
-    FlushChildHashtable(Hash, S2I(I2S(uh) + "a"))
+    FlushChildHashtable(Hash, S2I(I2S(uh) .. "a"))
     GroupEnumUnitsOfPlayer(g, p, b)
     u2=GroupPickRandomUnit(g)
     if u2 ~= nil then
@@ -20277,7 +20277,7 @@ function Trig_Leave_Ot_Func005C()
 end
 function Trig_Leave_Ot_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) + "cffff0000 - r" ))
+    DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r" ))
     ClearPlayer(Player(pi))
     FlushChildHashtable(Hash, GetPlayerId(GetTriggerPlayer()))
     if ( Trig_Leave_Ot_Func005C() ) then
@@ -21014,7 +21014,7 @@ function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     ForGroupBJ(udg_LocalOtrad2, Trig_Sdelat_Flagman_Ot_Copy_Func005A)
     GroupClear(udg_LocalOtrad2)
     BlzSetUnitWeaponIntegerFieldBJ(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0, ( BlzGetUnitWeaponIntegerField(GetTriggerUnit(), UNIT_WEAPON_IF_ATTACK_DAMAGE_BASE, 0) * 3 ))
-    BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, ( "cffff0000r - " + GetUnitName(GetTriggerUnit()) ))
+    BlzSetUnitStringFieldBJ(GetTriggerUnit(), UNIT_SF_NAME, ( "cffff0000r - " .. GetUnitName(GetTriggerUnit()) ))
     BlzSetUnitIntegerFieldBJ(GetTriggerUnit(), UNIT_IF_TINTING_COLOR_GREEN, 175)
     BlzSetUnitIntegerFieldBJ(GetTriggerUnit(), UNIT_IF_TINTING_COLOR_BLUE, 175)
     UnitAddTypeBJ(UNIT_TYPE_HERO, GetTriggerUnit())
@@ -21260,9 +21260,9 @@ function Trig_TransportingUnitArray_Message_Func001C()
 end
 function Trig_TransportingUnitArray_Message_Actions()
     if ( Trig_TransportingUnitArray_Message_Func001C() ) then
-        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "" + GetUnitName(udg_TempUnit02) ) + ( "" + I2S(CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(udg_TempUnit02)])) ) ))
+        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "" .. GetUnitName(udg_TempUnit02) ) .. ( "" .. I2S(CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(udg_TempUnit02)])) ) ))
     else
-        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "" + GetUnitName(udg_TempUnit02) ) + "." ))
+        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "" .. GetUnitName(udg_TempUnit02) ) .. "." ))
     end
     UnitAddIndicatorBJ(udg_TempUnit02, 100, 100, 100, 0)
 end
@@ -24973,7 +24973,7 @@ function Trig_Sluga_qqgsarona_Actions()
     -- --
     ForGroupBJ(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(Trig_Sluga_qqgsarona_Func012001002)), Trig_Sluga_qqgsarona_Func012A)
     GroupAddUnitSimple(gg_unit_n03A_0657, udg_StolicaGroups)
-    BlzSetUnitStringFieldBJ(gg_unit_n03A_0657, UNIT_SF_NAME, ( "cffd45e19r" + GetUnitName(gg_unit_n03A_0657) ))
+    BlzSetUnitStringFieldBJ(gg_unit_n03A_0657, UNIT_SF_NAME, ( "cffd45e19r" .. GetUnitName(gg_unit_n03A_0657) ))
     ForForce(GetPlayersAll(), Trig_Sluga_qqgsarona_Func017A)
     DisableTrigger(GetTriggeringTrigger())
 end
@@ -38391,7 +38391,7 @@ function Trig_QTunServe_Actions()
     ForForce(GetPlayersAll(), Trig_QTunServe_Func004A)
     ForGroupBJ(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(Trig_QTunServe_Func005001002)), Trig_QTunServe_Func005A)
     GroupAddUnitSimple(gg_unit_n03D_0666, udg_StolicaGroups)
-    BlzSetUnitStringFieldBJ(gg_unit_n03D_0666, UNIT_SF_NAME, ( "cffd45e19r" + GetUnitName(gg_unit_n03D_0666) ))
+    BlzSetUnitStringFieldBJ(gg_unit_n03D_0666, UNIT_SF_NAME, ( "cffd45e19r" .. GetUnitName(gg_unit_n03D_0666) ))
     TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, gg_unit_n03D_0666, EVENT_UNIT_ATTACKED)
     ForForce(GetPlayersAll(), Trig_QTunServe_Func009A)
     SetUnitAbilityLevelSwapped(FourCC('A0W0'), gg_unit_n03D_0666, 2)
@@ -47243,7 +47243,7 @@ function Trig_Spell_E2_Actions()
     UnitDamageTargetBJ(GetEventDamageSource(), u, I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsOtherCrushingWaveCrushingWaveDamage.mdl")
     DestroyEffectBJ(GetLastCreatedEffectBJ())
-    CreateTextTagLocBJ(( "cff00ff00 .. " + I2S(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)) ), udg_To4kaTarget, 140.00, 9.00, 100, 100, 100, 0)
+    CreateTextTagLocBJ(( "cff00ff00 .. " .. I2S(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)) ), udg_To4kaTarget, 140.00, 9.00, 100, 100, 100, 0)
     SetTextTagVelocityBJ(GetLastCreatedTextTag(), 150.00, 90)
     SetTextTagSuspendedBJ(GetLastCreatedTextTag(), false)
     SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -48050,7 +48050,7 @@ function Trig_SecondChance_Func003Func008C()
     end
    
     if IsPlayerInForce(ConvertedPlayer(udg_LocalInteger), Observers) then
-        DisplayTimedTextToForce(GetPlayersAll(), 5.00, ( ( "" + GetPlayerName(GetTriggerPlayer()) ) + ( "" + ( GetPlayerName(ConvertedPlayer(udg_LocalInteger)) + " not " ) ) ))
+        DisplayTimedTextToForce(GetPlayersAll(), 5.00, ( ( "" .. GetPlayerName(GetTriggerPlayer()) ) .. ( "" .. ( GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " not " ) ) ))
         return false
     end
     return true
@@ -48143,7 +48143,7 @@ function Trig_GG_Func004A()
 end
 function Trig_GG_Actions()
     --local integer pi = GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) + "cffff0000 - r" ))
+    DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r" ))
     --call GroupEnumUnitsOfPlayer( udg_LocalOtrad2, GetTriggerPlayer(), null )
     --call ForGroupBJ( udg_LocalOtrad2, function Trig_GG_Func004A )
     --call ForForce(Vassals[pi], function Freedom)
@@ -48293,8 +48293,8 @@ function Trig_ArchontMode_Actions()
     local pi2= S2I(s) - 1
     local pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) then
-        DisplayTextToPlayer(Player(pi1), 0, 0, "" + GetPlayerName(Player(pi2)) + "" + I2S(pi2))
-        DisplayTextToPlayer(Player(pi2), 0, 0, "" + GetPlayerName(Player(pi1)))
+        DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi2)) .. "" .. I2S(pi2))
+        DisplayTextToPlayer(Player(pi2), 0, 0, "" .. GetPlayerName(Player(pi1)))
         SetPlayerAllianceStateBJ(Player(pi1), Player(pi2), bj_ALLIANCE_ALLIED_ADVUNITS)
     end
     MultiboardAllowDisplayBJ(true)
@@ -48336,8 +48336,8 @@ function Trig_ArchontModeOff_Actions()
     local pi2= S2I(s) - 1
     local pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) and DipMode ~= 1 then
-        DisplayTextToPlayer(Player(pi1), 0, 0, "" + GetPlayerName(Player(pi2)) + "" + I2S(pi2))
-        DisplayTextToPlayer(Player(pi1), 0, 0, "" + GetPlayerName(Player(pi1)))
+        DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi2)) .. "" .. I2S(pi2))
+        DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi1)))
         SetPlayerAllianceBJ(Player(pi1), ALLIANCE_SHARED_ADVANCED_CONTROL, false, Player(pi2))
     end
    
@@ -49589,7 +49589,7 @@ function Trig_CheckType_Actions()
     while true do
         if i == 23 then break end
         b=(AiData[i][GetUnitTypeId(u)] or 0)
-        DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, GetPlayerName(Player(i)) + " - " + I2S(b))
+        DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, GetPlayerName(Player(i)) .. " - " .. I2S(b))
         i=i + 1
     end
     
@@ -49610,7 +49610,7 @@ function Trig_CheckOrderType_Actions()
     local s
     GroupEnumUnitsSelected(g, Player(0), nil)
     u=FirstOfGroup(g)
-    s="" + OrderId2String(GetUnitCurrentOrder(u)) + "" + I2S(GetUnitCurrentOrder(u))
+    s="" .. OrderId2String(GetUnitCurrentOrder(u)) .. "" .. I2S(GetUnitCurrentOrder(u))
     DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, s)
 end
 --===========================================================================
@@ -49627,7 +49627,7 @@ function ConditionPlayerNumber()
 end
 function TestGroupForAll()
     local u= GetEnumUnit()
-    BJDebugMsg(I2S(Counter) + "" + GetUnitName(u))
+    BJDebugMsg(I2S(Counter) .. "" .. GetUnitName(u))
     Counter=Counter + 1
 end
 function Trig_CheckGroup_Actions()
@@ -49638,13 +49638,13 @@ function Trig_CheckGroup_Actions()
     CheckPlayer=Player(pi)
     GroupEnumUnitsOfPlayer(g, Player(pi), B_LazyN)
     Counter=0
-    BJDebugMsg("B_LazyN" + GetPlayerName(Player(pi)) + " - " + I2S(LazyCount))
+    BJDebugMsg("B_LazyN" .. GetPlayerName(Player(pi)) .. " - " .. I2S(LazyCount))
     ForGroup(g, TestGroupForAll)
-    BJDebugMsg("" + GetPlayerName(Player(pi)))
+    BJDebugMsg("" .. GetPlayerName(Player(pi)))
     
-    BJDebugMsg("udg_Ai_navy" + GetPlayerName(Player(pi)) + " - " + I2S(LazyCount))
+    BJDebugMsg("udg_Ai_navy" .. GetPlayerName(Player(pi)) .. " - " .. I2S(LazyCount))
     ForGroup(udg_Ai_navy[pi], TestGroupForAll)
-    BJDebugMsg("" + GetPlayerName(Player(pi)))
+    BJDebugMsg("" .. GetPlayerName(Player(pi)))
 end
 --===========================================================================
 function InitTrig_CheckGroup()
@@ -49716,7 +49716,7 @@ end
 function Trig_Ailimit_Actions()
     udg_LocalText2=SubStringBJ(GetEventPlayerChatString(), 9, 12)
     AiLimit=S2I(udg_LocalText2)
-    DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "" + I2S(AiLimit) + "")
+    DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "" .. I2S(AiLimit) .. "")
 end
 --===========================================================================
 function InitTrig_Ailimit()
@@ -50191,11 +50191,11 @@ function Trig_PereborBuildings_Code_Func002A()
             end
         end
         if udg_Octhet then
-            DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) + " - ")
+            DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) .. " - ")
         end
         if gGroup == nil then
             gGroup=CreateGroup()
-            DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) + " - ")
+            DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) .. " - ")
         end
         return
     elseif numberCount > AiLimit then
@@ -50203,7 +50203,7 @@ function Trig_PereborBuildings_Code_Func002A()
             AiData[gPi][StringHash("Log_PereborOverLimit")] = true
         end
         if udg_Octhet then
-            DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) + " - ")
+            DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) .. " - ")
         end
         return
     end
@@ -50269,7 +50269,7 @@ function PereborNavalb()
     -- ??????? ???? 0 ??? ?????? ????? ?????
     if FirstOfGroup(gGroup) == nil then
         if udg_Octhet then
-            DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) + "0")
+            DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) .. "0")
         end
         
         u=nil
@@ -50277,7 +50277,7 @@ function PereborNavalb()
         
     elseif i > (AiData[pi][StringHash("Number")] or 0) / 3 then
         if udg_Octhet then
-            DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) + "")
+            DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) .. "")
         end
         
         u=nil
@@ -50983,14 +50983,14 @@ function aiRep()
     end
     
     gPlayer=Player(pi)
-    BJDebugMsg("" + GetPlayerName(gPlayer))
+    BJDebugMsg("" .. GetPlayerName(gPlayer))
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, nil)
     while true do
         gUnit=FirstOfGroup(gGroup)
         if gUnit == nil then
             if true then break end
         end
-        BJDebugMsg("" + GetUnitName(gUnit))
+        BJDebugMsg("" .. GetUnitName(gUnit))
         if GetUnitAbilityLevel(gUnit, gDummySpell) == 0 and not IsUnitType(gUnit, UNIT_TYPE_SUMMONED) then
             
             -- ???????? ? ???????
@@ -51120,10 +51120,10 @@ function Trig_AiLogAll_Conditions()
     return S2I(SubStringBJ(GetEventPlayerChatString(), 6, 8)) >= 1 and S2I(SubStringBJ(GetEventPlayerChatString(), 6, 8)) <= 24
 end
 function aiNameGroup()
-    gString=gString + "" + I2S(Counter) + "." + GetUnitName(GetEnumUnit())
+    gString=gString .. "" .. I2S(Counter) .. "." .. GetUnitName(GetEnumUnit())
     Counter=Counter + 1
     if ModuloInteger(Counter, 28) == 0 then
-        BJDebugMsg(I2S(Counter) + "" + gString)
+        BJDebugMsg(I2S(Counter) .. "" .. gString)
         gString=""
     end
 end
@@ -51131,50 +51131,50 @@ function Trig_AiLogAll_Actions()
     gPi=S2I(SubStringBJ(GetEventPlayerChatString(), 6, 8)) - 1
     gPlayer=Player(gPi)
     --call ForGroup(gGroup,function )
-    BJDebugMsg("" + GetPlayerName(gPlayer))
+    BJDebugMsg("" .. GetPlayerName(gPlayer))
     BJDebugMsg("")
-    BJDebugMsg("Number" + I2S(((AiData[(gPi )][( StringHash("Number"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberN" + I2S(((AiData[(gPi )][( StringHash("NumberN"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberPorts" + I2S(((AiData[(gPi )][( StringHash("NumberPorts"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberGuard" + I2S(((AiData[(gPi )][( StringHash("NumberGuard"))] or 0)))) -- INLINED!!
-    BJDebugMsg("T" + I2S(((AiData[(gPi )][( StringHash("T"))] or 0)))) -- INLINED!!
-    BJDebugMsg("HV" + I2S(((AiData[(gPi )][( StringHash("HV"))] or 0)))) -- INLINED!!
+    BJDebugMsg("Number" .. I2S(((AiData[(gPi )][( StringHash("Number"))] or 0)))) -- INLINED!!
+    BJDebugMsg("NumberN" .. I2S(((AiData[(gPi )][( StringHash("NumberN"))] or 0)))) -- INLINED!!
+    BJDebugMsg("NumberPorts" .. I2S(((AiData[(gPi )][( StringHash("NumberPorts"))] or 0)))) -- INLINED!!
+    BJDebugMsg("NumberGuard" .. I2S(((AiData[(gPi )][( StringHash("NumberGuard"))] or 0)))) -- INLINED!!
+    BJDebugMsg("T" .. I2S(((AiData[(gPi )][( StringHash("T"))] or 0)))) -- INLINED!!
+    BJDebugMsg("HV" .. I2S(((AiData[(gPi )][( StringHash("HV"))] or 0)))) -- INLINED!!
     BJDebugMsg("")
     
     gString="Groupudg_Ai_army[pi]"
     Counter=0
     ForGroup(udg_Ai_army[gPi], aiNameGroup)
-    BJDebugMsg(I2S(Counter) + "" + gString)
+    BJDebugMsg(I2S(Counter) .. "" .. gString)
     
     gString="Groupudg_Ai_navy[pi]"
     Counter=0
     ForGroup(udg_Ai_navy[gPi], aiNameGroup)
-    BJDebugMsg(I2S(Counter) + "" + gString)
+    BJDebugMsg(I2S(Counter) .. "" .. gString)
     
     gString="GroupAiCapitalGuard[pi]"
     Counter=0
     ForGroup(AiCapitalGuard[gPi], aiNameGroup)
-    BJDebugMsg(I2S(Counter) + "" + gString)
+    BJDebugMsg(I2S(Counter) .. "" .. gString)
     
     gString="Groupudg_Ai_builders[pi]"
         Counter=0
     ForGroup(udg_Ai_builders[gPi], aiNameGroup)
-    BJDebugMsg(I2S(Counter) + "" + gString)
+    BJDebugMsg(I2S(Counter) .. "" .. gString)
     
     gString="Groupudg_Ai_buildersT[pi]"
     Counter=0
     ForGroup(udg_Ai_buildersT[gPi], aiNameGroup)
-    BJDebugMsg(I2S(Counter) + "" + gString)
+    BJDebugMsg(I2S(Counter) .. "" .. gString)
     
     gString="Groupudg_Ai_harvest[pi]"
     Counter=0
     ForGroup(udg_Ai_harvest[gPi], aiNameGroup)
-    BJDebugMsg(I2S(Counter) + "" + gString)
+    BJDebugMsg(I2S(Counter) .. "" .. gString)
     
     gString="Groupudg_Ai_buildings[pi]"
     Counter=0
     ForGroup(udg_Ai_buildings[gPi], aiNameGroup)
-    BJDebugMsg(I2S(Counter) + "" + gString)
+    BJDebugMsg(I2S(Counter) .. "" .. gString)
     if gGroup == nil then
         BJDebugMsg("gGroup")
     end

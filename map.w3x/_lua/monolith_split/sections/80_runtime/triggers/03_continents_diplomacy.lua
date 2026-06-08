@@ -148,27 +148,27 @@ function Trig_Continents_set_On_Actions()
     else
     end
     if ( Trig_Continents_set_On_Func005C() ) then
-        udg_LocalText2=( udg_LocalText2 + "" )
+        udg_LocalText2=( udg_LocalText2 .. "" )
     else
     end
     if ( Trig_Continents_set_On_Func006C() ) then
-        udg_LocalText2=( udg_LocalText2 + "" )
+        udg_LocalText2=( udg_LocalText2 .. "" )
     else
     end
     if ( Trig_Continents_set_On_Func007C() ) then
-        udg_LocalText2=( udg_LocalText2 + "" )
+        udg_LocalText2=( udg_LocalText2 .. "" )
     else
     end
     if ( Trig_Continents_set_On_Func008C() ) then
-        udg_LocalText2=( udg_LocalText2 + "" )
+        udg_LocalText2=( udg_LocalText2 .. "" )
     else
     end
     if ( Trig_Continents_set_On_Func009C() ) then
-        udg_LocalText2=( udg_LocalText2 + "" )
+        udg_LocalText2=( udg_LocalText2 .. "" )
     else
     end
     if ( Trig_Continents_set_On_Func010C() ) then
-        udg_LocalText2=( udg_LocalText2 + "" )
+        udg_LocalText2=( udg_LocalText2 .. "" )
     else
     end
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
@@ -1144,7 +1144,7 @@ end
 -- Trigger: StartAlly
 --===========================================================================
 function WritePlayerName()
-    DisplayTextToForce(udg_AllPlayers, "" + GetPlayerName(GetEnumPlayer()))
+    DisplayTextToForce(udg_AllPlayers, "" .. GetPlayerName(GetEnumPlayer()))
 end
 function Trig_StartAlly_Actions()
     local p= GetTriggerPlayer()
@@ -1154,14 +1154,14 @@ function Trig_StartAlly_Actions()
     if DipMode == 0 then
         --?????????? ? ??????????
         if AllyCount > 1 then
-            DisplayTextToForce(udg_AllPlayers, "" + GetPlayerName(p) + " not ")
+            DisplayTextToForce(udg_AllPlayers, "" .. GetPlayerName(p) .. " not ")
             ForForce(gForce, WritePlayerName)
             
         end
     else
         if AllyCount > DipMode then
             ClearAllies(p)
-            DisplayTextToForce(udg_AllPlayers, "" + GetPlayerName(p) + "")
+            DisplayTextToForce(udg_AllPlayers, "" .. GetPlayerName(p) .. "")
             
         end
     
@@ -1399,7 +1399,7 @@ end
 function Trig_TotalProductionTrain_Actions()
     local u= GetTrainedUnit()
     local uh= GetHandleId(u)
-    SaveInteger(Hash, S2I(I2S(uh) + "a"), 0, GetUnitTypeId(GetTriggerUnit())) --StringHash("lvl"),0)
+    SaveInteger(Hash, S2I(I2S(uh) .. "a"), 0, GetUnitTypeId(GetTriggerUnit())) --StringHash("lvl"),0)
     
     u=nil
     --call IssueTrainOrderByIdBJ( GetTriggerUnit(), GetUnitTypeId(GetTrainedUnit()) )
@@ -1423,13 +1423,13 @@ end
 function Trig_TotalProductionDeath_Actions()
     local u= GetTriggerUnit()
     local uh= GetHandleId(u)
-    local id= LoadInteger(Hash, S2I(I2S(uh) + "a"), 0)
+    local id= LoadInteger(Hash, S2I(I2S(uh) .. "a"), 0)
     local p= GetOwningPlayer(u)
     local u2
     local g= CreateGroup()
     udg_LocalInteger5=id
     
-    FlushChildHashtable(Hash, S2I(I2S(uh) + "a"))
+    FlushChildHashtable(Hash, S2I(I2S(uh) .. "a"))
     GroupEnumUnitsOfPlayer(g, p, b)
     u2=GroupPickRandomUnit(g)
     if u2 ~= nil then

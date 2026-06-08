@@ -217,7 +217,7 @@ function Trig_CheckType_Actions()
     while true do
         if i == 23 then break end
         b=(AiData[i][GetUnitTypeId(u)] or 0)
-        DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, GetPlayerName(Player(i)) + " - " + I2S(b))
+        DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, GetPlayerName(Player(i)) .. " - " .. I2S(b))
         i=i + 1
     end
     
@@ -238,7 +238,7 @@ function Trig_CheckOrderType_Actions()
     local s
     GroupEnumUnitsSelected(g, Player(0), nil)
     u=FirstOfGroup(g)
-    s="" + OrderId2String(GetUnitCurrentOrder(u)) + "" + I2S(GetUnitCurrentOrder(u))
+    s="" .. OrderId2String(GetUnitCurrentOrder(u)) .. "" .. I2S(GetUnitCurrentOrder(u))
     DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, s)
 end
 --===========================================================================
@@ -255,7 +255,7 @@ function ConditionPlayerNumber()
 end
 function TestGroupForAll()
     local u= GetEnumUnit()
-    BJDebugMsg(I2S(Counter) + "" + GetUnitName(u))
+    BJDebugMsg(I2S(Counter) .. "" .. GetUnitName(u))
     Counter=Counter + 1
 end
 function Trig_CheckGroup_Actions()
@@ -266,13 +266,13 @@ function Trig_CheckGroup_Actions()
     CheckPlayer=Player(pi)
     GroupEnumUnitsOfPlayer(g, Player(pi), B_LazyN)
     Counter=0
-    BJDebugMsg("B_LazyN" + GetPlayerName(Player(pi)) + " - " + I2S(LazyCount))
+    BJDebugMsg("B_LazyN" .. GetPlayerName(Player(pi)) .. " - " .. I2S(LazyCount))
     ForGroup(g, TestGroupForAll)
-    BJDebugMsg("" + GetPlayerName(Player(pi)))
+    BJDebugMsg("" .. GetPlayerName(Player(pi)))
     
-    BJDebugMsg("udg_Ai_navy" + GetPlayerName(Player(pi)) + " - " + I2S(LazyCount))
+    BJDebugMsg("udg_Ai_navy" .. GetPlayerName(Player(pi)) .. " - " .. I2S(LazyCount))
     ForGroup(udg_Ai_navy[pi], TestGroupForAll)
-    BJDebugMsg("" + GetPlayerName(Player(pi)))
+    BJDebugMsg("" .. GetPlayerName(Player(pi)))
 end
 --===========================================================================
 function InitTrig_CheckGroup()
@@ -344,7 +344,7 @@ end
 function Trig_Ailimit_Actions()
     udg_LocalText2=SubStringBJ(GetEventPlayerChatString(), 9, 12)
     AiLimit=S2I(udg_LocalText2)
-    DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "" + I2S(AiLimit) + "")
+    DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "" .. I2S(AiLimit) .. "")
 end
 --===========================================================================
 function InitTrig_Ailimit()
@@ -819,11 +819,11 @@ function Trig_PereborBuildings_Code_Func002A()
             end
         end
         if udg_Octhet then
-            DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) + " - ")
+            DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) .. " - ")
         end
         if gGroup == nil then
             gGroup=CreateGroup()
-            DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) + " - ")
+            DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) .. " - ")
         end
         return
     elseif numberCount > AiLimit then
@@ -831,7 +831,7 @@ function Trig_PereborBuildings_Code_Func002A()
             AiData[gPi][StringHash("Log_PereborOverLimit")] = true
         end
         if udg_Octhet then
-            DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) + " - ")
+            DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) .. " - ")
         end
         return
     end
@@ -897,7 +897,7 @@ function PereborNavalb()
     -- ??????? ???? 0 ??? ?????? ????? ?????
     if FirstOfGroup(gGroup) == nil then
         if udg_Octhet then
-            DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) + "0")
+            DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) .. "0")
         end
         
         u=nil
@@ -905,7 +905,7 @@ function PereborNavalb()
         
     elseif i > (AiData[pi][StringHash("Number")] or 0) / 3 then
         if udg_Octhet then
-            DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) + "")
+            DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) .. "")
         end
         
         u=nil
@@ -1611,14 +1611,14 @@ function aiRep()
     end
     
     gPlayer=Player(pi)
-    BJDebugMsg("" + GetPlayerName(gPlayer))
+    BJDebugMsg("" .. GetPlayerName(gPlayer))
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, nil)
     while true do
         gUnit=FirstOfGroup(gGroup)
         if gUnit == nil then
             if true then break end
         end
-        BJDebugMsg("" + GetUnitName(gUnit))
+        BJDebugMsg("" .. GetUnitName(gUnit))
         if GetUnitAbilityLevel(gUnit, gDummySpell) == 0 and not IsUnitType(gUnit, UNIT_TYPE_SUMMONED) then
             
             -- ???????? ? ???????
@@ -1748,10 +1748,10 @@ function Trig_AiLogAll_Conditions()
     return S2I(SubStringBJ(GetEventPlayerChatString(), 6, 8)) >= 1 and S2I(SubStringBJ(GetEventPlayerChatString(), 6, 8)) <= 24
 end
 function aiNameGroup()
-    gString=gString + "" + I2S(Counter) + "." + GetUnitName(GetEnumUnit())
+    gString=gString .. "" .. I2S(Counter) .. "." .. GetUnitName(GetEnumUnit())
     Counter=Counter + 1
     if ModuloInteger(Counter, 28) == 0 then
-        BJDebugMsg(I2S(Counter) + "" + gString)
+        BJDebugMsg(I2S(Counter) .. "" .. gString)
         gString=""
     end
 end
@@ -1759,50 +1759,50 @@ function Trig_AiLogAll_Actions()
     gPi=S2I(SubStringBJ(GetEventPlayerChatString(), 6, 8)) - 1
     gPlayer=Player(gPi)
     --call ForGroup(gGroup,function )
-    BJDebugMsg("" + GetPlayerName(gPlayer))
+    BJDebugMsg("" .. GetPlayerName(gPlayer))
     BJDebugMsg("")
-    BJDebugMsg("Number" + I2S(((AiData[(gPi )][( StringHash("Number"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberN" + I2S(((AiData[(gPi )][( StringHash("NumberN"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberPorts" + I2S(((AiData[(gPi )][( StringHash("NumberPorts"))] or 0)))) -- INLINED!!
-    BJDebugMsg("NumberGuard" + I2S(((AiData[(gPi )][( StringHash("NumberGuard"))] or 0)))) -- INLINED!!
-    BJDebugMsg("T" + I2S(((AiData[(gPi )][( StringHash("T"))] or 0)))) -- INLINED!!
-    BJDebugMsg("HV" + I2S(((AiData[(gPi )][( StringHash("HV"))] or 0)))) -- INLINED!!
+    BJDebugMsg("Number" .. I2S(((AiData[(gPi )][( StringHash("Number"))] or 0)))) -- INLINED!!
+    BJDebugMsg("NumberN" .. I2S(((AiData[(gPi )][( StringHash("NumberN"))] or 0)))) -- INLINED!!
+    BJDebugMsg("NumberPorts" .. I2S(((AiData[(gPi )][( StringHash("NumberPorts"))] or 0)))) -- INLINED!!
+    BJDebugMsg("NumberGuard" .. I2S(((AiData[(gPi )][( StringHash("NumberGuard"))] or 0)))) -- INLINED!!
+    BJDebugMsg("T" .. I2S(((AiData[(gPi )][( StringHash("T"))] or 0)))) -- INLINED!!
+    BJDebugMsg("HV" .. I2S(((AiData[(gPi )][( StringHash("HV"))] or 0)))) -- INLINED!!
     BJDebugMsg("")
     
     gString="Groupudg_Ai_army[pi]"
     Counter=0
     ForGroup(udg_Ai_army[gPi], aiNameGroup)
-    BJDebugMsg(I2S(Counter) + "" + gString)
+    BJDebugMsg(I2S(Counter) .. "" .. gString)
     
     gString="Groupudg_Ai_navy[pi]"
     Counter=0
     ForGroup(udg_Ai_navy[gPi], aiNameGroup)
-    BJDebugMsg(I2S(Counter) + "" + gString)
+    BJDebugMsg(I2S(Counter) .. "" .. gString)
     
     gString="GroupAiCapitalGuard[pi]"
     Counter=0
     ForGroup(AiCapitalGuard[gPi], aiNameGroup)
-    BJDebugMsg(I2S(Counter) + "" + gString)
+    BJDebugMsg(I2S(Counter) .. "" .. gString)
     
     gString="Groupudg_Ai_builders[pi]"
         Counter=0
     ForGroup(udg_Ai_builders[gPi], aiNameGroup)
-    BJDebugMsg(I2S(Counter) + "" + gString)
+    BJDebugMsg(I2S(Counter) .. "" .. gString)
     
     gString="Groupudg_Ai_buildersT[pi]"
     Counter=0
     ForGroup(udg_Ai_buildersT[gPi], aiNameGroup)
-    BJDebugMsg(I2S(Counter) + "" + gString)
+    BJDebugMsg(I2S(Counter) .. "" .. gString)
     
     gString="Groupudg_Ai_harvest[pi]"
     Counter=0
     ForGroup(udg_Ai_harvest[gPi], aiNameGroup)
-    BJDebugMsg(I2S(Counter) + "" + gString)
+    BJDebugMsg(I2S(Counter) .. "" .. gString)
     
     gString="Groupudg_Ai_buildings[pi]"
     Counter=0
     ForGroup(udg_Ai_buildings[gPi], aiNameGroup)
-    BJDebugMsg(I2S(Counter) + "" + gString)
+    BJDebugMsg(I2S(Counter) .. "" .. gString)
     if gGroup == nil then
         BJDebugMsg("gGroup")
     end

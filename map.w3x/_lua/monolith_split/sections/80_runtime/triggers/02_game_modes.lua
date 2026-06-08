@@ -908,7 +908,7 @@ function Trig_FeodalDead_Func004Func002Func001Func010A()
 	SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
 	SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
 	SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
+	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) .. (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
 end
 ---@return boolean
 function Trig_FeodalDead_Func004Func002Func001C()
@@ -916,7 +916,7 @@ function Trig_FeodalDead_Func004Func002Func001C()
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func011A()
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
+	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) .. (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
 	ForceAddPlayerSimple(GetEnumPlayer(), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))])
 	for bj_forLoopBIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
@@ -938,7 +938,7 @@ function Trig_FeodalDead_Func004Func017A()
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func020A()
-	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) + (" ??????????? ?? ?????? " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())))))
+	DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetEnumPlayer()) .. (" ??????????? ?? ?????? " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit())))))
 	for bj_forLoopAIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
@@ -972,7 +972,7 @@ function Trig_FeodalDead_Actions()
 				end
 				--  ???? ??????
 				--  ???????????? ??????? ???????
-				DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) + (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
+				DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))))
 				ForceAddPlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetConvertedPlayerId(ConvertedPlayer(GetForLoopIndexA()))])
 				SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_ALLIED_UNITS)
 				SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)
@@ -992,7 +992,7 @@ function Trig_FeodalDead_Actions()
 			SetPlayerAllianceStateBJ(GetTriggerPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 			SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetTriggerPlayer(), bj_ALLIANCE_UNALLIED)
 		end
-		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) + (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
+		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker())))))
 		ForceAddPlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))])
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker()), bj_ALLIANCE_ALLIED_UNITS)
 		SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)

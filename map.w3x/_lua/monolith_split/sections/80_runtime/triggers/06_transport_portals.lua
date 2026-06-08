@@ -113,9 +113,9 @@ function Trig_TransportingUnitArray_Message_Func001C()
 end
 function Trig_TransportingUnitArray_Message_Actions()
     if ( Trig_TransportingUnitArray_Message_Func001C() ) then
-        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "" + GetUnitName(udg_TempUnit02) ) + ( "" + I2S(CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(udg_TempUnit02)])) ) ))
+        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "" .. GetUnitName(udg_TempUnit02) ) .. ( "" .. I2S(CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(udg_TempUnit02)])) ) ))
     else
-        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "" + GetUnitName(udg_TempUnit02) ) + "." ))
+        DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "" .. GetUnitName(udg_TempUnit02) ) .. "." ))
     end
     UnitAddIndicatorBJ(udg_TempUnit02, 100, 100, 100, 0)
 end

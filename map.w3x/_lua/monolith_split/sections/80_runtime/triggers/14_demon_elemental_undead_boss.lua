@@ -1355,7 +1355,7 @@ function Trig_Spell_E2_Actions()
     UnitDamageTargetBJ(GetEventDamageSource(), u, I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsOtherCrushingWaveCrushingWaveDamage.mdl")
     DestroyEffectBJ(GetLastCreatedEffectBJ())
-    CreateTextTagLocBJ(( "cff00ff00 .. " + I2S(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)) ), udg_To4kaTarget, 140.00, 9.00, 100, 100, 100, 0)
+    CreateTextTagLocBJ(( "cff00ff00 .. " .. I2S(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)) ), udg_To4kaTarget, 140.00, 9.00, 100, 100, 100, 0)
     SetTextTagVelocityBJ(GetLastCreatedTextTag(), 150.00, 90)
     SetTextTagSuspendedBJ(GetLastCreatedTextTag(), false)
     SetTextTagPermanentBJ(GetLastCreatedTextTag(), false)
@@ -2162,7 +2162,7 @@ function Trig_SecondChance_Func003Func008C()
     end
    
     if IsPlayerInForce(ConvertedPlayer(udg_LocalInteger), Observers) then
-        DisplayTimedTextToForce(GetPlayersAll(), 5.00, ( ( "" + GetPlayerName(GetTriggerPlayer()) ) + ( "" + ( GetPlayerName(ConvertedPlayer(udg_LocalInteger)) + " not " ) ) ))
+        DisplayTimedTextToForce(GetPlayersAll(), 5.00, ( ( "" .. GetPlayerName(GetTriggerPlayer()) ) .. ( "" .. ( GetPlayerName(ConvertedPlayer(udg_LocalInteger)) .. " not " ) ) ))
         return false
     end
     return true
@@ -2255,7 +2255,7 @@ function Trig_GG_Func004A()
 end
 function Trig_GG_Actions()
     --local integer pi = GetPlayerId(GetTriggerPlayer())
-    DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) + "cffff0000 - r" ))
+    DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r" ))
     --call GroupEnumUnitsOfPlayer( udg_LocalOtrad2, GetTriggerPlayer(), null )
     --call ForGroupBJ( udg_LocalOtrad2, function Trig_GG_Func004A )
     --call ForForce(Vassals[pi], function Freedom)
@@ -2405,8 +2405,8 @@ function Trig_ArchontMode_Actions()
     local pi2= S2I(s) - 1
     local pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) then
-        DisplayTextToPlayer(Player(pi1), 0, 0, "" + GetPlayerName(Player(pi2)) + "" + I2S(pi2))
-        DisplayTextToPlayer(Player(pi2), 0, 0, "" + GetPlayerName(Player(pi1)))
+        DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi2)) .. "" .. I2S(pi2))
+        DisplayTextToPlayer(Player(pi2), 0, 0, "" .. GetPlayerName(Player(pi1)))
         SetPlayerAllianceStateBJ(Player(pi1), Player(pi2), bj_ALLIANCE_ALLIED_ADVUNITS)
     end
     MultiboardAllowDisplayBJ(true)
@@ -2448,8 +2448,8 @@ function Trig_ArchontModeOff_Actions()
     local pi2= S2I(s) - 1
     local pi1= GetPlayerId(GetTriggerPlayer())
     if CorrectNumber(pi2) and DipMode ~= 1 then
-        DisplayTextToPlayer(Player(pi1), 0, 0, "" + GetPlayerName(Player(pi2)) + "" + I2S(pi2))
-        DisplayTextToPlayer(Player(pi1), 0, 0, "" + GetPlayerName(Player(pi1)))
+        DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi2)) .. "" .. I2S(pi2))
+        DisplayTextToPlayer(Player(pi1), 0, 0, "" .. GetPlayerName(Player(pi1)))
         SetPlayerAllianceBJ(Player(pi1), ALLIANCE_SHARED_ADVANCED_CONTROL, false, Player(pi2))
     end
    
