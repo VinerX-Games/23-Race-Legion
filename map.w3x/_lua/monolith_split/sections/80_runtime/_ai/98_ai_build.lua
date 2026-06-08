@@ -62,14 +62,23 @@ function TryBuild()
 	end
 	
 	
-	--  ??????????? ????? ????????? 
+	gInt = AiDispatchChooseBuild(gPi)
+
+	-- P1: deterministic placement near the base (opt-in AiSmartBuild); random
+	-- ring placement below stays the fallback. See 83_ai_brain.lua / AI_BRAIN_DESIGN.
+	if AiSmartBuild then
+		local bx, by = AiFindBuildSpot(gPi, gUnit)
+		if bx ~= nil then
+			BrainLogEvery(gPi, "build", 6, "smart spot x=" .. tostring(R2I(bx)) .. " y=" .. tostring(R2I(by)) .. " build=" .. tostring(gInt), "BRAINBLD")
+			IssueBuildOrderById(gUnit, gInt, bx, by)
+			return
+		end
+	end
+
+	--  ??????????? ????? ?????????
 	gX = gX + AiBuildingRadius * Cos(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
 	gY = gY + AiBuildingRadius * Sin(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
-	
-	
-	
-	gInt = AiDispatchChooseBuild(gPi)
-	
+
 	IssueBuildOrderById(gUnit, gInt, gX, gY)
-	
+
 end

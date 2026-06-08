@@ -11826,16 +11826,25 @@ function TryBuild()
 	end
 	
 	
-	--  ??????????? ????? ????????? 
+	gInt = AiDispatchChooseBuild(gPi)
+
+	-- P1: deterministic placement near the base (opt-in AiSmartBuild); random
+	-- ring placement below stays the fallback. See 83_ai_brain.lua / AI_BRAIN_DESIGN.
+	if AiSmartBuild then
+		local bx, by = AiFindBuildSpot(gPi, gUnit)
+		if bx ~= nil then
+			BrainLogEvery(gPi, "build", 6, "smart spot x=" .. tostring(R2I(bx)) .. " y=" .. tostring(R2I(by)) .. " build=" .. tostring(gInt), "BRAINBLD")
+			IssueBuildOrderById(gUnit, gInt, bx, by)
+			return
+		end
+	end
+
+	--  ??????????? ????? ?????????
 	gX = gX + AiBuildingRadius * Cos(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
 	gY = gY + AiBuildingRadius * Sin(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
-	
-	
-	
-	gInt = AiDispatchChooseBuild(gPi)
-	
+
 	IssueBuildOrderById(gUnit, gInt, gX, gY)
-	
+
 end
 -- ***************************************************************************
 -- *  AiUnitJoins
@@ -59999,6 +60008,77 @@ function AiBrainArmyTick(pi, p)
     else
         BrainLogEvery(pi, "act", 8, "focus stable ordered=" .. tostring(ordered))
     end
+end
+
+-- ====================================================================
+-- Production track P1: deterministic building placement (vs random ring).
+-- Independent of the army brain; opt-in via global AiSmartBuild (default off,
+-- random ring stays the fallback). Searches expanding rings/sectors around the
+-- capital (or builder) for the nearest placeable, non-crowded spot. Tag BRAINBLD.
+-- ====================================================================
+AiSmartBuild = AiSmartBuild or false
+
+---@return boolean
+function f_AnyStructure()
+    local u = GetFilterUnit()
+    return u ~= nil and IsUnitType(u, UNIT_TYPE_STRUCTURE) and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+end
+
+---@param x real
+---@param y real
+---@param radius real
+---@return boolean
+function AiBuildSpotOccupied(x, y, radius)
+    AiBuildScanGroup = AiBuildScanGroup or CreateGroup()
+    AiStructCond = AiStructCond or Condition(f_AnyStructure)
+    GroupEnumUnitsInRange(AiBuildScanGroup, x, y, radius, AiStructCond)
+    return FirstOfGroup(AiBuildScanGroup) ~= nil
+end
+
+-- IsTerrainPathable is inverted: true == blocked for that pathing type (matches
+-- the `not IsTerrainPathable(..WALKABILITY)` idiom used in 98_ai_build.lua).
+---@param x real
+---@param y real
+---@return boolean
+function AiBuildPlaceable(x, y)
+    if IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then return false end   -- blocked
+    if IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY) then return false end  -- water
+    return true
+end
+
+-- Nearest placeable spot around the player's anchor. Returns x,y or nil,nil.
+---@param pi integer
+---@param builder unit
+---@return real|nil, real|nil
+function AiFindBuildSpot(pi, builder)
+    local rad = AiBuildingRadius
+    if rad == nil or rad <= 0 then rad = 256.0 end
+    local ax, ay
+    local cap = playerCapital[pi]
+    if cap ~= nil and GetUnitState(cap, UNIT_STATE_LIFE) > 0.405 then
+        ax, ay = GetUnitX(cap), GetUnitY(cap)
+    else
+        ax, ay = GetUnitX(builder), GetUnitY(builder)
+    end
+    local minSpacing = rad * 1.4
+    local sectors = 12
+    local phase = pi % sectors            -- vary the start angle per player
+    local ring = 0
+    while ring < 6 do
+        local r = rad * 2.0 + ring * rad * 1.5
+        local s = 0
+        while s < sectors do
+            local ang = (I2R(s + phase) / I2R(sectors)) * 2.0 * bj_PI
+            local x = ax + r * Cos(ang)
+            local y = ay + r * Sin(ang)
+            if AiBuildPlaceable(x, y) and not AiBuildSpotOccupied(x, y, minSpacing) then
+                return x, y
+            end
+            s = s + 1
+        end
+        ring = ring + 1
+    end
+    return nil, nil
 end
 function InitCustomTriggers()
     InitTrig_sek5()
