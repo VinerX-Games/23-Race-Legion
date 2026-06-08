@@ -13,18 +13,28 @@ function TryPortalMovement(u, l__gEnemyGroup, l__gX, l__gY, i)
 	
 	Counter = 0
 	EnemyCapital = nil
-	-- ??? ???????? 1 ??????? ?????????
 	if abilityLevel == 1 then
 		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnitP)
-		-- ??????? ?????????
 	elseif abilityLevel >= 2 then
 		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnit)
 		UnitRemoveAbility(u, FourCC('A1GZ'))
-		-- ??????? ?????
 	else
 		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnitP)
 	end
 	
+	-- trace: check if dark portal waygates (n006) are alive/active
+	local pi = GetPlayerId(GetOwningPlayer(u))
+	local logKey = StringHash("Log_TPM_n006")
+	if not (AiData[pi][logKey] or false) then
+		AiData[pi][logKey] = true
+		local dp1_active = WaygateIsActive(gg_unit_n006_0023)
+		local dp1_hp = GetUnitState(gg_unit_n006_0023, UNIT_STATE_LIFE)
+		local dp2_active = WaygateIsActive(gg_unit_n006_0438)
+		local dp2_hp = GetUnitState(gg_unit_n006_0438, UNIT_STATE_LIFE)
+		local dp1_in_group = IsUnitInGroup(gg_unit_n006_0023, l__gEnemyGroup)
+		local dp2_in_group = IsUnitInGroup(gg_unit_n006_0438, l__gEnemyGroup)
+		ProbeLogWrite("[TPM] pi=" .. tostring(pi) .. " Counter=" .. tostring(Counter) .. " i=" .. tostring(i) .. " n006_0023 active=" .. tostring(dp1_active) .. " hp=" .. tostring(dp1_hp) .. " inGroup=" .. tostring(dp1_in_group) .. " n006_0438 active=" .. tostring(dp2_active) .. " hp=" .. tostring(dp2_hp) .. " inGroup=" .. tostring(dp2_in_group) .. " x=" .. tostring(l__gX) .. " y=" .. tostring(l__gY))
+	end
 end
 ---@return nothing
 function TryAttack()
@@ -93,32 +103,37 @@ function TryAttack()
 				
 				-- ? ????? ?????? ????? ???????? ??????? ???????
 				
-				while true do
-					gUnit2 = FirstOfGroup(gAllyGroup)
-					if gUnit2 == nil then break end
-					UnitAddAbility(gUnit2, FourCC('A1GZ'))
-					GroupRemoveUnit(gAllyGroup, gUnit2)
-					gUnit2 = nil
+			GroupClear(gSubGroup)
+			gSubGroupCounter = 0
+			while true do
+				gUnit2 = FirstOfGroup(gAllyGroup)
+				if gUnit2 == nil then break end
+				UnitAddAbility(gUnit2, FourCC('A1GZ'))
+				GroupRemoveUnit(gAllyGroup, gUnit2)
+				GroupAddUnit(gSubGroup, gUnit2)
+				gSubGroupCounter = gSubGroupCounter + 1
+				gUnit2 = nil
+			end
+			-- ?? ??????? ????? ??????
+			if gDx <= 2500 then
+				
+				IssueImmediateOrder(gEnemy, "web")
+				BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
+				
+				-- ?? ??????? ???? ???
+			else
+				local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
+				if allyCount == 0 then
+					AiProbeLogLimited(pi_attack, "Log_TryAttack_NoPortalAlliesFast", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=portal-fast targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 				end
-				-- ?? ??????? ????? ??????
-				if gDx <= 2500 then
-					
-					IssueImmediateOrder(gEnemy, "web")
-					BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
-					
-					-- ?? ??????? ???? ???
-				else
-					local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
-					if allyCount == 0 then
-						AiProbeLogLimited(pi_attack, "Log_TryAttack_NoPortalAlliesFast", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=portal-fast targetId=" .. tostring(GetUnitTypeId(gEnemy)))
-					end
-					if attackLogCount < 10 then
-						AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
-						ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
-					end
-					GroupPointOrder(gAllyGroup, "smart", gX2, gY2)
-					
+				if attackLogCount < 10 then
+					AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
+					ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
 				end
+				GroupPointOrder(gSubGroup, "smart", gX2, gY2)
+				GroupClear(gSubGroup)
+				gSubGroupCounter = 0
+			end
 				
 				
 				
@@ -230,33 +245,38 @@ function TryAttack()
 					
 					-- ? ????? ?????? ????? ???????? ??????? ???????
 					
-					while true do
-						gUnit2 = FirstOfGroup(gAllyGroup)
-						if gUnit2 == nil then break end
-						UnitAddAbility(gUnit2, FourCC('A1GZ'))
-						GroupRemoveUnit(gAllyGroup, gUnit2)
-						gUnit2 = nil
+				GroupClear(gSubGroup)
+				gSubGroupCounter = 0
+				while true do
+					gUnit2 = FirstOfGroup(gAllyGroup)
+					if gUnit2 == nil then break end
+					UnitAddAbility(gUnit2, FourCC('A1GZ'))
+					GroupRemoveUnit(gAllyGroup, gUnit2)
+					GroupAddUnit(gSubGroup, gUnit2)
+					gSubGroupCounter = gSubGroupCounter + 1
+					gUnit2 = nil
+				end
+				-- ?? ??????? ????? ??????
+				if gDx <= 2500 then
+					AiProbeLogLimited(pi_attack, "Log_TryAttack_PortalNearby", 8, "[AIARMY] portal-near pi=" .. tostring(pi_attack) .. " targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount))
+					
+					IssueImmediateOrder(gEnemy, "web")
+					BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
+					
+				-- ?? ??????? ???? ???
+				else
+					if allyCount == 0 then
+						AiProbeLogLimited(pi_attack, "Log_TryAttack_NoPortalAlliesWide", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 					end
-					-- ?? ??????? ????? ??????
-					if gDx <= 2500 then
-						AiProbeLogLimited(pi_attack, "Log_TryAttack_PortalNearby", 8, "[AIARMY] portal-near pi=" .. tostring(pi_attack) .. " targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount))
-						
-						IssueImmediateOrder(gEnemy, "web")
-						BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
-						
-					-- ?? ??????? ???? ???
-					else
-						if allyCount == 0 then
-							AiProbeLogLimited(pi_attack, "Log_TryAttack_NoPortalAlliesWide", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)))
-						end
-						local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
-						if attackLogCount < 10 then
-							AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
-							ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
-						end
-						GroupPointOrder(gAllyGroup, "smart", gX2, gY2)
-						
+					local attackLogCount = (AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0)
+					if attackLogCount < 10 then
+						AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
+						ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
 					end
+					GroupPointOrder(gSubGroup, "smart", gX2, gY2)
+					GroupClear(gSubGroup)
+					gSubGroupCounter = 0
+				end
 					
 					-- ??????? ????
 				else

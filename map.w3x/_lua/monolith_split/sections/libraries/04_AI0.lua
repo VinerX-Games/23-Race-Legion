@@ -16,7 +16,7 @@ end
 function f_EnemyUnitP()
 	local u = GetFilterUnit()
 	local p = GetOwningPlayer(u)
-	if UnitAlive(u) and IsPlayerEnemy(p, CheckPlayer) or WaygateIsActive(u) and  not (IsUnitInGroup(u, Navy) or GetUnitAbilityLevel(u, FourCC('A1MS')) > 0) then	--  A1MS Стр точка
+	if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 and IsPlayerEnemy(p, CheckPlayer) or WaygateIsActive(u) and  not (IsUnitInGroup(u, Navy) or GetUnitAbilityLevel(u, FourCC('A1MS')) > 0) then	--  A1MS Стр точка
 		Counter = Counter + 1
 		if IsUnitInGroup(u, udg_StolicaGroups) then
 			EnemyCapital = u
@@ -31,7 +31,7 @@ end
 ---@return boolean
 function f_EnemyUnit()
 	local u = GetFilterUnit()
-	if UnitAlive(u) and IsPlayerEnemy(GetOwningPlayer(u), CheckPlayer) and  not (WaygateIsActive(u) or IsUnitInGroup(u, Navy) or GetUnitAbilityLevel(u, FourCC('A1MS')) > 0) then
+	if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 and IsPlayerEnemy(GetOwningPlayer(u), CheckPlayer) and  not (WaygateIsActive(u) or IsUnitInGroup(u, Navy) or GetUnitAbilityLevel(u, FourCC('A1MS')) > 0) then
 		Counter = Counter + 1
 		if IsUnitInGroup(u, udg_StolicaGroups) then
 			EnemyCapital = u
@@ -49,7 +49,7 @@ function f_EnemyUnitN()
 	local x = GetUnitX(u)
 	local y = GetUnitY(u)
 	
-	if UnitAlive(u) and IsPlayerEnemy(p, CheckPlayer) and isUnitWaterRelated(u) and  not (isUnitInNoWaterArea(x, y) or WaygateIsActive(u)) then
+	if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 and IsPlayerEnemy(p, CheckPlayer) and isUnitWaterRelated(u) and  not (isUnitInNoWaterArea(x, y) or WaygateIsActive(u)) then
 		u = nil
 		Counter = Counter + 1
 		return true
@@ -83,7 +83,7 @@ end
 ---@param u unit
 ---@return boolean
 function IsAiCombatRetaskable(u)
-	if not UnitAlive(u) then
+	if u == nil or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then
 		return false
 	end
 	if IsUnitType(u, UNIT_TYPE_STRUCTURE) or IsUnitType(u, UNIT_TYPE_PEON) then
@@ -123,7 +123,7 @@ end
 function f_LazyN()
 	gUnit = GetFilterUnit()
 	local o = GetUnitCurrentOrder(gUnit)
-	if UnitAlive(gUnit) and IsUnitInGroup(gUnit, udg_Ai_navy[GetPlayerId(CheckPlayer)]) and (o == 851972 or o == 851976 or o == 0) then
+	if gUnit ~= nil and GetUnitState(gUnit, UNIT_STATE_LIFE) > 0.405 and IsUnitInGroup(gUnit, udg_Ai_navy[GetPlayerId(CheckPlayer)]) and (o == 851972 or o == 851976 or o == 0) then
 		LazyCount = LazyCount + 1
 		return true
 	else

@@ -114,8 +114,17 @@ end
 ---@return boolean
 function HandleOutland(x, y, g)
 	if (RectContainsCoords(gg_rct_Outland, x, y) or RectContainsCoords(gg_rct_OutNoVk, x, y)) and  not RectContainsCoords(gg_rct_VknotOut, x, y) then
+		local dp1_before = IsUnitInGroup(gg_unit_n006_0023, g)
+		local dp2_before = IsUnitInGroup(gg_unit_n006_0438, g)
 		GroupEnumUnitsInRect(gSubGroup, bj_mapInitialPlayableArea, udg_B_InOutland)
 		GroupRemoveGroup2(gSubGroup, g)
+		local dp1_after = IsUnitInGroup(gg_unit_n006_0023, g)
+		local dp2_after = IsUnitInGroup(gg_unit_n006_0438, g)
+		local logKey = StringHash("Log_Outland_n006")
+		if not (AiData[-1][logKey] or false) then
+			AiData[-1][logKey] = true
+			ProbeLogWrite("[CONT] HandleOutland x=" .. tostring(x) .. " y=" .. tostring(y) .. " n006_0023 before=" .. tostring(dp1_before) .. " after=" .. tostring(dp1_after) .. " n006_0438 before=" .. tostring(dp2_before) .. " after=" .. tostring(dp2_after))
+		end
 		return true
 	end
 	return false
