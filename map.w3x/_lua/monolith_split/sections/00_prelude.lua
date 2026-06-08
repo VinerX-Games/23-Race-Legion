@@ -472,26 +472,29 @@ function SetupBridgeChat()
                 DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffff0000[BRIDGE] eval loop PAUSED|r")
             elseif arg == "on" then
                 BridgeEvalLoopPaused = false
-                EvalNextSeq = 1
+                -- NB: never rewind EvalNextSeq here — reusing a consumed filename
+                -- hits WC3's Preloader name-cache. Heartbeat syncs the agent.
                 ProbeLogWrite("[BRIDGE] eval loop resumed")
                 DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cff00ff00[BRIDGE] eval loop ACTIVE|r")
             elseif arg == "toggle" then
                 BridgeEvalLoopPaused = not BridgeEvalLoopPaused
-                if not BridgeEvalLoopPaused then EvalNextSeq = 1 end
+                -- keep EvalNextSeq monotonic (see note above): pausing/resuming
+                -- the loop must not rewind the seq into cached filenames.
                 ProbeLogWrite("[BRIDGE] eval loop toggled paused=" .. tostring(BridgeEvalLoopPaused))
                 DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffffcc00[BRIDGE] eval loop " .. (BridgeEvalLoopPaused and "PAUSED" or "ACTIVE") .. "|r")
             end
             return
         end
         if op == "restart" then
+            -- Restart the LOOP (timer), not the seq. EvalNextSeq stays monotonic;
+            -- rewinding it would reuse Preloader-cached filenames and wedge the bridge.
             if BridgePollTimer ~= nil then
                 DestroyTimer(BridgePollTimer)
                 BridgePollTimer = nil
             end
             BridgeElapsed = 0
-            EvalNextSeq = 1
             BridgeStart()
-            ProbeLogWrite("[BRIDGE] restarted via chat")
+            ProbeLogWrite("[BRIDGE] restarted via chat (loop only, seq kept)")
             DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cff00ff00[BRIDGE] restarted|r")
             return
         end
