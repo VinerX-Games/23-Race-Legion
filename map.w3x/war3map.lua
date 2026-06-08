@@ -59575,6 +59575,8 @@ AiBrainDefaults = {
     commitMin    = 8,
     guardFrac    = 0.2,
     focusMargin  = 25.0,     -- hysteresis: keep current focus unless beaten by this
+    homeThreat   = 20.0,     -- enemy power near capital that triggers defend/recall
+    tpDist       = 6000.0,   -- focus farther than this -> consider TP logistics
     weights = {
         kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
@@ -59639,18 +59641,20 @@ function BrainLog(pi, msg)
 end
 
 -- Log at most once per `n` calls of (pi,key). Counter lives in the world model.
+-- Optional `tag` (default BRAIN) lets each call site be toggled independently.
 ---@param pi integer
 ---@param key string
 ---@param n integer
 ---@param msg string
-function BrainLogEvery(pi, key, n, msg)
+---@param tag? string
+function BrainLogEvery(pi, key, n, msg, tag)
     local wm = AiData[pi].wm
-    if wm == nil then BrainLog(pi, msg); return end
+    if wm == nil then BrainLogTag(pi, tag or "BRAIN", msg); return end
     local kk = "logn_" .. key
     local c = (wm[kk] or 0) + 1
     wm[kk] = c
     if c % n == 0 then
-        BrainLog(pi, msg)
+        BrainLogTag(pi, tag or "BRAIN", msg)
     end
 end
 
@@ -59725,9 +59729,10 @@ function AiBrainPerceive(pi)
     local cx, cy, n = AiGroupCentroid(udg_Ai_army[pi])
     wm.cx, wm.cy, wm.armyCount = cx, cy, n
 
+    local cfg = AiBrainCfg(pi)
+    local prevCapHP = wm.capHP
     local cap = playerCapital[pi]
     if cap ~= nil and GetUnitState(cap, UNIT_STATE_LIFE) > 0.405 then
-        local cfg = AiBrainCfg(pi)
         wm.capX, wm.capY = GetUnitX(cap), GetUnitY(cap)
         wm.capHP = GetUnitState(cap, UNIT_STATE_LIFE)
         wm.threatHome = AiEnemyPowerAround(Player(pi), wm.capX, wm.capY, cfg.rHome or AiBrainDefaults.rHome)
@@ -59735,6 +59740,10 @@ function AiBrainPerceive(pi)
         wm.capHP = 0
         wm.threatHome = 0
     end
+    -- Active siege = capital HP dropped since last perceive (someone hitting it).
+    wm.capSiege = (prevCapHP ~= nil and wm.capHP > 0 and wm.capHP < prevCapHP - 1.0)
+    local homeThreat = cfg.homeThreat or AiBrainDefaults.homeThreat
+    wm.defendHome = (wm.capHP > 0) and ((wm.threatHome or 0) > homeThreat or wm.capSiege)
     return wm
 end
 
@@ -59845,14 +59854,15 @@ function AiBrainPickFocus(pi, wm)
     return best
 end
 
--- Order all currently-idle army units (B_Lazy) toward the focus point as
--- attack-move, in chunks. Concentration of force: everyone converges on one
--- objective instead of each picking a random local enemy. Returns count ordered.
+-- Order all currently-idle army units (B_Lazy) toward (x,y) as attack-move, in
+-- chunks. Concentration of force: everyone converges on one point instead of
+-- each picking a random local enemy. Used for both focus push and defend recall.
 ---@param pi integer
 ---@param p player
----@param focus table
+---@param x real
+---@param y real
 ---@return integer
-function AiBrainActFocus(pi, p, focus)
+function AiBrainOrderIdleTo(pi, p, x, y)
     if gAllyGroup == nil then gAllyGroup = CreateGroup() end
     if gSubGroup == nil then gSubGroup = CreateGroup() end
     CheckPlayer = p
@@ -59868,16 +59878,45 @@ function AiBrainActFocus(pi, p, focus)
         cnt = cnt + 1
         ordered = ordered + 1
         if cnt >= 12 then
-            GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
+            GroupPointOrder(gSubGroup, "attack", x, y)
             GroupClear(gSubGroup)
             cnt = 0
         end
     end
     if cnt > 0 then
-        GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
+        GroupPointOrder(gSubGroup, "attack", x, y)
         GroupClear(gSubGroup)
     end
     return ordered
+end
+
+-- TP logistics hook. If the focus is far and the bot has port-capable mages
+-- queued (AiUnitsToPort), kick the existing teleport machinery so the army can
+-- redeploy instead of walking the whole map. NOTE: the existing RequestPort
+-- ports allies to a port-mage near *any* enemy, not specifically to the focus —
+-- true focus-targeted TP needs the continent/portal graph (later phase). For now
+-- this nudges the existing system and logs intent. Returns true if it fired.
+---@param pi integer
+---@param p player
+---@param focus table
+---@param wm table
+---@return boolean
+function AiBrainTryLogistics(pi, p, focus, wm)
+    local cfg = AiBrainCfg(pi)
+    local tpDist = cfg.tpDist or AiBrainDefaults.tpDist
+    local dx = (wm.cx or 0.0) - focus.x
+    local dy = (wm.cy or 0.0) - focus.y
+    local dist = SquareRoot(dx * dx + dy * dy)
+    if dist <= tpDist then return false end
+    local mages = AiUnitsToPort[pi]
+    if mages == nil or FirstOfGroup(mages) == nil then return false end
+    BrainLogEvery(pi, "tp", 3, "logistics far focus dist=" .. tostring(R2I(dist))
+        .. " -> RequestPort (focus-targeted TP pending portal graph)", "BRAINTP")
+    -- Nudge the existing teleport system using a capital as the owning anchor.
+    if playerCapital[pi] ~= nil then
+        RequestPort(playerCapital[pi])
+    end
+    return true
 end
 
 -- ---- army tick dispatch --------------------------------------------
@@ -59925,6 +59964,17 @@ function AiBrainArmyTick(pi, p)
         .. " threatHome=" .. tostring(R2I(wm.threatHome or 0))
         .. " capHP=" .. tostring(R2I(wm.capHP or 0)))
 
+    -- Defense takes priority: recall the field army home when the capital is
+    -- threatened or actively under siege. The standing AiCapitalGuard reserve is
+    -- already parked at the capital (aiUnitJoinsCapitalGuard).
+    if wm.defendHome and wm.capX ~= nil then
+        local recalled = AiBrainOrderIdleTo(pi, p, wm.capX, wm.capY)
+        BrainLogEvery(pi, "defend", 3, "DEFEND threatHome=" .. tostring(R2I(wm.threatHome or 0))
+            .. " capHP=" .. tostring(R2I(wm.capHP or 0)) .. " siege=" .. tostring(wm.capSiege)
+            .. " recalled=" .. tostring(recalled), "BRAINDEF")
+        return
+    end
+
     local cfg = AiBrainCfg(pi)
     local every = cfg.clusterEvery or AiBrainDefaults.clusterEvery
     if wm.objectives == nil or (wm.tick % every) == 0 then
@@ -59938,7 +59988,8 @@ function AiBrainArmyTick(pi, p)
         return
     end
 
-    local ordered = AiBrainActFocus(pi, p, focus)
+    AiBrainTryLogistics(pi, p, focus, wm)
+    local ordered = AiBrainOrderIdleTo(pi, p, focus.x, focus.y)
     if wm.focusKey ~= wm.lastLoggedFocus then
         wm.lastLoggedFocus = wm.focusKey
         BrainLogTag(pi, "BRAINFOC", "focus kind=" .. tostring(focus.kind)
