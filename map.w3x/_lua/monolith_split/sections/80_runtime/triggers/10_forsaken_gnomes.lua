@@ -943,43 +943,7 @@ end
 -- Trigger: All Gnomes Cansel
 --===========================================================================
 function Trig_All_Gnomes_Cansel_Func001C()
-    if ( ( GetResearched() == FourCC('R0B9') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BA') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BB') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0B5') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BC') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BD') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BE') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BF') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BG') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BH') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0CR') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BI') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R0B9') ) )) or (( ( GetResearched() == FourCC('R0BA') ) )) or (( ( GetResearched() == FourCC('R0BB') ) )) or (( ( GetResearched() == FourCC('R0B5') ) )) or (( ( GetResearched() == FourCC('R0BC') ) )) or (( ( GetResearched() == FourCC('R0BD') ) )) or (( ( GetResearched() == FourCC('R0BE') ) )) or (( ( GetResearched() == FourCC('R0BF') ) )) or (( ( GetResearched() == FourCC('R0BG') ) )) or (( ( GetResearched() == FourCC('R0BH') ) )) or (( ( GetResearched() == FourCC('R0CR') ) )) or (( ( GetResearched() == FourCC('R0BI') ) ))
 end
 function Trig_All_Gnomes_Cansel_Conditions()
     return Trig_All_Gnomes_Cansel_Func001C()
@@ -1053,46 +1017,7 @@ end
 -- Trigger: All Gnomes Begin
 --===========================================================================
 function Trig_All_Gnomes_Begin_Func002C()
-    if ( ( GetResearched() == FourCC('R0B9') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BA') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BB') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0B5') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BC') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BD') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BE') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BF') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BG') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BH') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0CR') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BI') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0C0') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R0B9') ) )) or (( ( GetResearched() == FourCC('R0BA') ) )) or (( ( GetResearched() == FourCC('R0BB') ) )) or (( ( GetResearched() == FourCC('R0B5') ) )) or (( ( GetResearched() == FourCC('R0BC') ) )) or (( ( GetResearched() == FourCC('R0BD') ) )) or (( ( GetResearched() == FourCC('R0BE') ) )) or (( ( GetResearched() == FourCC('R0BF') ) )) or (( ( GetResearched() == FourCC('R0BG') ) )) or (( ( GetResearched() == FourCC('R0BH') ) )) or (( ( GetResearched() == FourCC('R0CR') ) )) or (( ( GetResearched() == FourCC('R0BI') ) )) or (( ( GetResearched() == FourCC('R0C0') ) ))
 end
 function Trig_All_Gnomes_Begin_Conditions()
     return Trig_All_Gnomes_Begin_Func002C()

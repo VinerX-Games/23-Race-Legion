@@ -1778,19 +1778,15 @@ end
 function Trig_YesLeft_Actions()
     if ( Trig_YesLeft_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0DY'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( (true) ) then -- INLINED!!
         SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_YesLeft_Func003C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_YesLeft_Func004C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     SetPlayerTechMaxAllowedSwap(FourCC('R0EI'), 0, GetOwningPlayer(GetTriggerUnit()))
     -- -
@@ -1995,7 +1991,6 @@ end
 function Trig_CanselCommonHome_Actions()
     if ( Trig_CanselCommonHome_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0DX'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================
@@ -2301,7 +2296,6 @@ end
 function Trig_CanselTrueHorde_Actions()
     if ( Trig_CanselTrueHorde_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0DY'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================

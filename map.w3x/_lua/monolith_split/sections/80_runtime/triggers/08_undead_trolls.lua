@@ -665,7 +665,6 @@ function Trig_InfestBuilding_Actions()
     if GetUnitLifePercent(u) <= 10 and u ~= nil and IsPlayerEnemy(GetOwningPlayer(u), GetOwningPlayer(GetTriggerUnit())) then
         KillUnit(u)
         CreateUnit(GetOwningPlayer(GetTriggerUnit()), FourCC('u02Z'), GetUnitX(u), GetUnitY(u), 0.0)
-    else
         
     
     end

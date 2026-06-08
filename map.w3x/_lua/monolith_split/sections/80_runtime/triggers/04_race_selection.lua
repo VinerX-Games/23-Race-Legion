@@ -175,31 +175,7 @@ end
 -- Trigger: UnitsToBuildingSituation2
 --===========================================================================
 function Trig_UnitsToBuildingSituation2_Func002C()
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e021') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e020') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01H') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01J') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01L') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01M') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01X') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01K') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e021') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e020') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01H') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01J') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01L') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01M') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01X') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01K') ) ))
 end
 function Trig_UnitsToBuildingSituation2_Conditions()
     return (( IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) == true )) and (Trig_UnitsToBuildingSituation2_Func002C())
@@ -221,31 +197,7 @@ end
 -- Trigger: CanselSituation2
 --===========================================================================
 function Trig_CanselSituation2_Func001C()
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e021') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e020') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01H') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01J') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01L') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01M') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01X') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01K') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e021') ) )) or (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e020') ) )) or (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01H') ) )) or (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01J') ) )) or (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01L') ) )) or (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01M') ) )) or (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01X') ) )) or (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01K') ) ))
 end
 function Trig_CanselSituation2_Conditions()
     return Trig_CanselSituation2_Func001C()

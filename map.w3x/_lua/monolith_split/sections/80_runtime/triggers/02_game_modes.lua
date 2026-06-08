@@ -188,7 +188,6 @@ function Trig_StartLobby_Func015A()
 		udg_LocalPosition2 = GetRandomLocInRect(gg_rct_HostRegion)
 		CreateNUnitsAtLoc(1, FourCC('h0GA'), GetEnumPlayer(), udg_LocalPosition2, bj_UNIT_FACING)
 		RemoveLocation(udg_LocalPosition2)
-	else
 	end
 end
 ---@return nothing
@@ -197,23 +196,18 @@ function Trig_StartLobby_Actions()
 	udg_LocalInteger = GetRandomInt(1, 5)
 	if (Trig_StartLobby_Func004C()) then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func004Func001A)
-	else
 	end
 	if (Trig_StartLobby_Func005C()) then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func005Func001A)
-	else
 	end
 	if (Trig_StartLobby_Func006C()) then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func006Func001A)
-	else
 	end
 	if (Trig_StartLobby_Func007C()) then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func007Func001A)
-	else
 	end
 	if (Trig_StartLobby_Func008C()) then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func008Func001A)
-	else
 	end
 	udg_LocalInteger = 4
 	DisplayTimedTextToForce(GetPlayersAll(), I2R(udg_LocalInteger), "TRIGSTR_10982")
@@ -899,7 +893,6 @@ function Trig_FeodalDead_Func004Func002Func001Func010A()
 		SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetEnumPlayer(), bj_ALLIANCE_UNALLIED)
 		if (Trig_FeodalDead_Func004Func002Func001Func010Func001Func003C()) then
 			ForceRemovePlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetForLoopIndexB()])
-		else
 		end
 	end
 	ForceAddPlayerSimple(GetEnumPlayer(), udg_Vassals[GetConvertedPlayerId(ConvertedPlayer(GetForLoopIndexA()))])
@@ -982,8 +975,7 @@ function Trig_FeodalDead_Actions()
 				ForceClear(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
 				SetForceAllianceStateBJ(udg_Vassals[GetForLoopIndexA()], udg_Vassals[GetForLoopIndexA()], bj_ALLIANCE_ALLIED_VISION)
 				SetForceAllianceStateBJ(udg_Vassals[GetForLoopIndexA()], GetForceOfPlayer(GetOwningPlayer(GetAttacker())), bj_ALLIANCE_ALLIED_UNITS)
-				return 
-			else
+				return
 			end
 		end
 		--  --------------------------------------------------------------------   ?????? ????-?? ????????

@@ -18,7 +18,6 @@ function Trig_Leave_Ot_Actions()
     FlushChildHashtable(Hash, GetPlayerId(GetTriggerPlayer()))
     if ( Trig_Leave_Ot_Func005C() ) then
         ForForce(Vassals[pi], Freedom)
-    else
     end
 end
 --===========================================================================
@@ -365,40 +364,19 @@ function Trig_Spell_Dvij_Conditions()
     return ( udg_Logika == true )
 end
 function Trig_Spell_Dvij_Func002Func004C()
-    if ( ( IsUnitDeadBJ(udg_Caster) == true ) ) then
-        return true
-    end
-    if ( ( udg_HisloA[0] == 0 ) ) then
-        return true
-    end
-    return false
+    return (( ( IsUnitDeadBJ(udg_Caster) == true ) )) or (( ( udg_HisloA[0] == 0 ) ))
 end
 function Trig_Spell_Dvij_Func002C()
     return Trig_Spell_Dvij_Func002Func004C()
 end
 function Trig_Spell_Dvij_Func004Func004Func002C()
-    if ( ( udg_HisloA[0] == 2 ) ) then
-        return true
-    end
-    if ( ( udg_HisloA[0] == 3 ) ) then
-        return true
-    end
-    if ( ( udg_HisloA[0] == 4 ) ) then
-        return true
-    end
-    return false
+    return (( ( udg_HisloA[0] == 2 ) )) or (( ( udg_HisloA[0] == 3 ) )) or (( ( udg_HisloA[0] == 4 ) ))
 end
 function Trig_Spell_Dvij_Func004Func004C()
     return (( IsUnitAliveBJ(udg_Dummy[0]) == true )) and (Trig_Spell_Dvij_Func004Func004Func002C())
 end
 function Trig_Spell_Dvij_Func004Func005Func003C()
-    if ( ( udg_HisloA[0] == 3 ) ) then
-        return true
-    end
-    if ( ( udg_HisloA[0] == 4 ) ) then
-        return true
-    end
-    return false
+    return (( ( udg_HisloA[0] == 3 ) )) or (( ( udg_HisloA[0] == 4 ) ))
 end
 function Trig_Spell_Dvij_Func004Func005C()
     return (( IsUnitAliveBJ(udg_Dummy[1]) == true )) and (Trig_Spell_Dvij_Func004Func005Func003C())
@@ -420,7 +398,6 @@ function Trig_Spell_Dvij_Func004Func007Func002Func005Func002A()
         UnitApplyTimedLifeBJ(1.50, FourCC('BTLF'), udg_Dummy[4])
         udg_Dummy[4]=nil
         RemoveLocation(udg_To4kaAOE)
-    else
     end
 end
 function Trig_Spell_Dvij_Func004Func007Func002Func005C()
@@ -443,7 +420,6 @@ function Trig_Spell_Dvij_Func004Func007Func004Func006Func002A()
         UnitApplyTimedLifeBJ(1.50, FourCC('BTLF'), udg_Dummy[4])
         udg_Dummy[4]=nil
         RemoveLocation(udg_To4kaAOE)
-    else
     end
 end
 function Trig_Spell_Dvij_Func004Func007Func004Func006C()
@@ -466,7 +442,6 @@ function Trig_Spell_Dvij_Func004Func007Func006Func005Func002A()
         UnitApplyTimedLifeBJ(1.50, FourCC('BTLF'), udg_Dummy[4])
         udg_Dummy[4]=nil
         RemoveLocation(udg_To4kaAOE)
-    else
     end
 end
 function Trig_Spell_Dvij_Func004Func007Func006Func005C()
@@ -498,7 +473,6 @@ function Trig_Spell_Dvij_Actions()
         udg_Logika=false
         udg_LogikaCast=false
         PauseTimerBJ(true, udg_Timer)
-    else
     end
     if ( (true) ) then -- INLINED!!
         udg_To4kaCaster=GetUnitLoc(udg_Caster)
@@ -506,15 +480,12 @@ function Trig_Spell_Dvij_Actions()
         udg_Ygol[1]=( udg_Ygol[1] + 5 )
         if ( Trig_Spell_Dvij_Func004Func004C() ) then
             SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 0.00 + I2R(udg_Ygol[1]) )))
-        else
         end
         if ( Trig_Spell_Dvij_Func004Func005C() ) then
             SetUnitPositionLoc(udg_Dummy[1], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 120.00 + I2R(udg_Ygol[1]) )))
-        else
         end
         if ( Trig_Spell_Dvij_Func004Func006C() ) then
             SetUnitPositionLoc(udg_Dummy[2], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 240.00 + I2R(udg_Ygol[1]) )))
-        else
         end
         if ( Trig_Spell_Dvij_Func004Func007C() ) then
             -- ?????? ??????? ???
@@ -531,11 +502,9 @@ function Trig_Spell_Dvij_Actions()
                     RemoveUnit(udg_Dummy[2])
                     udg_Target=nil
                     udg_LogikaCast=false
-                else
                 end
                 RemoveLocation(udg_To4kaDummy)
                 RemoveLocation(udg_To4kaTarget)
-            else
             end
             -- ?????? ??????? ???
             if ( Trig_Spell_Dvij_Func004Func007Func004C() ) then
@@ -551,11 +520,9 @@ function Trig_Spell_Dvij_Actions()
                     RemoveUnit(udg_Dummy[1])
                     udg_Target=nil
                     udg_LogikaCast=false
-                else
                 end
                 RemoveLocation(udg_To4kaDummy)
                 RemoveLocation(udg_To4kaTarget)
-            else
             end
             -- ?????? ??????? ???
             if ( Trig_Spell_Dvij_Func004Func007Func006C() ) then
@@ -572,15 +539,11 @@ function Trig_Spell_Dvij_Actions()
                     udg_Target=nil
                     udg_LogikaCast=false
                     udg_HisloA[0]=0
-                else
                 end
                 RemoveLocation(udg_To4kaDummy)
                 RemoveLocation(udg_To4kaTarget)
-            else
             end
-        else
         end
-    else
     end
 end
 --===========================================================================
@@ -615,11 +578,9 @@ end
 function Trig_DieDummy_Actions()
     if ( Trig_DieDummy_Func001C() ) then
         ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('h0MK')), Trig_DieDummy_Func001Func002A)
-    else
     end
     if ( Trig_DieDummy_Func002C() ) then
         ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('h0MJ')), Trig_DieDummy_Func002Func002A)
-    else
     end
 end
 --===========================================================================
@@ -762,7 +723,6 @@ function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     GroupAddUnitSimple(GetTriggerUnit(), udg_Flagmans)
     if ( Trig_Sdelat_Flagman_Ot_Copy_Func019C() ) then
         UnitRemoveAbilityBJ(FourCC('A0LG'), GetTriggerUnit())
-    else
     end
 end
 --===========================================================================

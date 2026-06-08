@@ -145,31 +145,24 @@ function Trig_Continents_set_On_Actions()
 	udg_LocalText2 = "|cff00ff00????? ???????? ??? ????: |r"
 	if (Trig_Continents_set_On_Func004C()) then
 		udg_LocalText2 = (udg_LocalText2 .. "????????? ???????????\\" )
-    else
     end
     if ( Trig_Continents_set_On_Func005C() ) then
         udg_LocalText2=( udg_LocalText2 .. "" )
-    else
     end
     if ( Trig_Continents_set_On_Func006C() ) then
         udg_LocalText2=( udg_LocalText2 .. "" )
-    else
     end
     if ( Trig_Continents_set_On_Func007C() ) then
         udg_LocalText2=( udg_LocalText2 .. "" )
-    else
     end
     if ( Trig_Continents_set_On_Func008C() ) then
         udg_LocalText2=( udg_LocalText2 .. "" )
-    else
     end
     if ( Trig_Continents_set_On_Func009C() ) then
         udg_LocalText2=( udg_LocalText2 .. "" )
-    else
     end
     if ( Trig_Continents_set_On_Func010C() ) then
         udg_LocalText2=( udg_LocalText2 .. "" )
-    else
     end
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
     EnableTrigger(gg_trg_LeaveNeadedRegions)
@@ -417,41 +410,34 @@ function Trig_SeeOnlyNeedeed_Actions()
         DestroyFogModifier(GetLastCreatedFogModifier())
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
-    else
     end
     if ( Trig_SeeOnlyNeedeed_Func002C() ) then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
-    else
     end
     if ( Trig_SeeOnlyNeedeed_Func003C() ) then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
-    else
     end
     if ( Trig_SeeOnlyNeedeed_Func004C() ) then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
-    else
     end
     if ( Trig_SeeOnlyNeedeed_Func005C() ) then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
-    else
     end
     if ( Trig_SeeOnlyNeedeed_Func006C() ) then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
-    else
     end
     if ( Trig_SeeOnlyNeedeed_Func007C() ) then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
-    else
     end
 end
 --===========================================================================
@@ -1471,7 +1457,6 @@ function Trig_Timer_Actions()
     udg_TimerToDis=GetLastCreatedTimerDialogBJ()
     if ( Trig_Timer_Func009C() ) then
         ForForce(udg_AllPlayers, Trig_Timer_Func009Func001A)
-    else
     end
 end
 --===========================================================================

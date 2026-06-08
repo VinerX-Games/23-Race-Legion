@@ -2222,16 +2222,7 @@ end
 -- Trigger: BegEvery
 --===========================================================================
 function Trig_BegEvery_Func001C()
-    if ( ( GetResearched() == FourCC('R0HS') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0HR') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0HQ') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R0HS') ) )) or (( ( GetResearched() == FourCC('R0HR') ) )) or (( ( GetResearched() == FourCC('R0HQ') ) ))
 end
 function Trig_BegEvery_Conditions()
     return Trig_BegEvery_Func001C()
@@ -2259,16 +2250,7 @@ function Trig_CanEvery_Func001Func003C()
     return (( GetResearched() == FourCC('R0HQ') )) and (( GetPlayerTechCountSimple(FourCC('R0HS'), GetOwningPlayer(GetTriggerUnit())) == 0 )) and (( GetPlayerTechCountSimple(FourCC('R0HR'), GetOwningPlayer(GetTriggerUnit())) == 0 ))
 end
 function Trig_CanEvery_Func001C()
-    if ( Trig_CanEvery_Func001Func001C() ) then
-        return true
-    end
-    if ( Trig_CanEvery_Func001Func002C() ) then
-        return true
-    end
-    if ( Trig_CanEvery_Func001Func003C() ) then
-        return true
-    end
-    return false
+    return (( Trig_CanEvery_Func001Func001C() )) or (( Trig_CanEvery_Func001Func002C() )) or (( Trig_CanEvery_Func001Func003C() ))
 end
 function Trig_CanEvery_Conditions()
     return Trig_CanEvery_Func001C()
@@ -3324,7 +3306,6 @@ function Trig_VariarTaunt_Actions()
     if ( Trig_VariarTaunt_Func004C() ) then
         SetUnitAbilityLevelSwapped(FourCC('A1AJ'), GetTriggerUnit(), 2)
         SetUnitAbilityLevelSwapped(FourCC('A1AK'), GetTriggerUnit(), 2)
-    else
     end
 end
 --===========================================================================

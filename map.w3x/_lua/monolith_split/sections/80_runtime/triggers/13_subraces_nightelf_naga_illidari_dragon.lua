@@ -1085,7 +1085,6 @@ function Trig_NagaPas_Actions()
                 if ( Trig_NagaPas_Func002Func001Func002Func001C() ) then
                     UnitAddAbilityBJ(FourCC('A139'), GetTriggerUnit())
                     UnitRemoveAbilityBJ(FourCC('A138'), GetTriggerUnit())
-                else
                 end
             end
         end
@@ -2073,7 +2072,6 @@ function Trig_IllyFire_Actions()
                     TriggerSleepAction(15.00)
                     UnitRemoveAbilityBJ(FourCC('A0NQ'), GetTriggerUnit())
                     UnitRemoveAbilityBJ(FourCC('A0NN'), GetTriggerUnit())
-                else
                 end
             end
         end
@@ -2174,7 +2172,6 @@ end
 function Trig_SandStrike_Actions()
     if ( Trig_SandStrike_Func001C() ) then
         EnableTrigger(gg_trg_Sand_Strike_Loop)
-    else
     end
     udg_SSinteger[0]=( udg_SSinteger[0] + 1 )
     udg_SSinteger[1]=( udg_SSinteger[1] + 1 )
@@ -2223,7 +2220,6 @@ function Trig_Sand_Strike_Loop_Func001Func001Func007A()
     udg_SSpointmovepicked[udg_SSinteger[2]]=PolarProjectionBJ(udg_SSpointpicked[udg_SSinteger[2]], I2R(udg_SS[udg_SSinteger[2]]), GetUnitFacing(udg_SSpicked[udg_SSinteger[2]]))
     if ( Trig_Sand_Strike_Loop_Func001Func001Func007Func004C() ) then
         SetUnitPositionLoc(udg_SSpicked[udg_SSinteger[2]], udg_SSpointmovepicked[udg_SSinteger[2]])
-    else
     end
     UnitDamageTargetBJ(udg_SScaster[udg_SSinteger[2]], udg_SSpicked[udg_SSinteger[3]], udg_SSdamage[udg_SSinteger[2]], ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
     udg_SSpicked[udg_SSinteger[2]]=nil
@@ -2249,7 +2245,6 @@ function Trig_Sand_Strike_Loop_Actions()
             if ( Trig_Sand_Strike_Loop_Func001Func001Func003C() ) then
                 RemoveLocation(udg_SSpointmovecaster[udg_SSinteger[2]])
                 udg_SSpointmovecaster[udg_SSinteger[2]]=PolarProjectionBJ(udg_SSpointcaster[udg_SSinteger[2]], I2R(udg_SS[udg_SSinteger[2]]), ( udg_SSfacing[udg_SSinteger[2]] - 180.00 ))
-            else
             end
             udg_SSgroup[udg_SSinteger[2]]=GetUnitsInRangeOfLocMatching(150.00, udg_SSpointcaster[udg_SSinteger[2]], Condition(Trig_Sand_Strike_Loop_Func001Func001Func004002003))
             udg_SS[udg_SSinteger[2]]=( udg_SS[udg_SSinteger[2]] - 1 )
@@ -2265,11 +2260,8 @@ function Trig_Sand_Strike_Loop_Actions()
                 if ( Trig_Sand_Strike_Loop_Func001Func001Func011Func004C() ) then
                     udg_SSinteger[1]=0
                     DisableTrigger(GetTriggeringTrigger())
-                else
                 end
-            else
             end
-        else
         end
         udg_SSinteger[2]=udg_SSinteger[2] + 1
     end

@@ -731,11 +731,9 @@ end
 function Trig_BegYel_Actions()
     if ( Trig_BegYel_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GG'), 0, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_BegYel_Func002C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GF'), 0, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================
@@ -760,11 +758,9 @@ end
 function Trig_CanYel_Actions()
     if ( Trig_CanYel_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GG'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_CanYel_Func002C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GF'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================
@@ -805,11 +801,9 @@ end
 function Trig_BegRed_Actions()
     if ( Trig_BegRed_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GH'), 0, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_BegRed_Func002C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GF'), 0, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================
@@ -834,11 +828,9 @@ end
 function Trig_CanRed_Actions()
     if ( Trig_CanRed_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GH'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_CanRed_Func002C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GF'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================
@@ -879,11 +871,9 @@ end
 function Trig_BegBlue_Actions()
     if ( Trig_BegBlue_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GH'), 0, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_BegBlue_Func002C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GG'), 0, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================
@@ -908,11 +898,9 @@ end
 function Trig_CanBlue_Actions()
     if ( Trig_CanBlue_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GH'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_CanBlue_Func002C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GG'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================

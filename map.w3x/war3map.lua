@@ -13878,7 +13878,6 @@ function IndexUnit()
 		udg_UnitIndexEvent = 1.00
 		udg_UnitIndexEvent = 0.00
 		udg_UDex = pdex
-	else
 	end
 	return false
 end
@@ -13923,14 +13922,12 @@ function IndexNewUnit()
 			end
 		end
 		udg_UDex = pdex
-	else
 	end
 	--   
 	--  Handle the entering unit (Matching unit)
 	--   
 	if (Trig_Unit_Indexer_Func034C()) then
 		IndexUnit()
-	else
 	end
 	return false
 end
@@ -13984,106 +13981,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_FarmTier2_Func001Func002C()
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0FR'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0H0'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h01Y'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h04B'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h05V'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h016'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0GP'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h008'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h034'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0CP'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0BR'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('e021'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('u00F'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('cD25'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('e020'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('etoa'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('e00L'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('e02C'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0CC'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0EA'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0DV'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0N8'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0ER'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('ostr'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0I7'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0JQ'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('hkee'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('o03D'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('o047'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0N1'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('w20w'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('o05W'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0IK'))) then
-		return true
-	end
-	return false
+	return (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0FR')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0H0')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h01Y')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h04B')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h05V')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h016')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0GP')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h008')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h034')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0CP')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0BR')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('e021')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('u00F')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('cD25')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('e020')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('etoa')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('e00L')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('e02C')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0CC')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0EA')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0DV')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0N8')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0ER')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('ostr')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0I7')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0JQ')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('hkee')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('o03D')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('o047')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0N1')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('w20w')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('o05W')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0IK'))))
 end
 ---@return boolean
 function Trig_FarmTier2_Func001C()
@@ -14176,16 +14074,7 @@ function Trig_FarmTier2_Res_Func001Func002Func003C()
 end
 ---@return boolean
 function Trig_FarmTier2_Res_Func001Func002C()
-	if (Trig_FarmTier2_Res_Func001Func002Func001C()) then
-		return true
-	end
-	if (Trig_FarmTier2_Res_Func001Func002Func002C()) then
-		return true
-	end
-	if (Trig_FarmTier2_Res_Func001Func002Func003C()) then
-		return true
-	end
-	return false
+	return ((Trig_FarmTier2_Res_Func001Func002Func001C())) or ((Trig_FarmTier2_Res_Func001Func002Func002C())) or ((Trig_FarmTier2_Res_Func001Func002Func003C()))
 end
 ---@return boolean
 function Trig_FarmTier2_Res_Func001C()
@@ -14445,16 +14334,7 @@ function Trig_FarmTier3_Res_Func002Func002Func003C()
 end
 ---@return boolean
 function Trig_FarmTier3_Res_Func002Func002C()
-	if (Trig_FarmTier3_Res_Func002Func002Func001C()) then
-		return true
-	end
-	if (Trig_FarmTier3_Res_Func002Func002Func002C()) then
-		return true
-	end
-	if (Trig_FarmTier3_Res_Func002Func002Func003C()) then
-		return true
-	end
-	return false
+	return ((Trig_FarmTier3_Res_Func002Func002Func001C())) or ((Trig_FarmTier3_Res_Func002Func002Func002C())) or ((Trig_FarmTier3_Res_Func002Func002Func003C()))
 end
 ---@return boolean
 function Trig_FarmTier3_Res_Func002C()
@@ -15948,7 +15828,6 @@ function Trig_StartLobby_Func015A()
 		udg_LocalPosition2 = GetRandomLocInRect(gg_rct_HostRegion)
 		CreateNUnitsAtLoc(1, FourCC('h0GA'), GetEnumPlayer(), udg_LocalPosition2, bj_UNIT_FACING)
 		RemoveLocation(udg_LocalPosition2)
-	else
 	end
 end
 ---@return nothing
@@ -15957,23 +15836,18 @@ function Trig_StartLobby_Actions()
 	udg_LocalInteger = GetRandomInt(1, 5)
 	if (Trig_StartLobby_Func004C()) then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func004Func001A)
-	else
 	end
 	if (Trig_StartLobby_Func005C()) then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func005Func001A)
-	else
 	end
 	if (Trig_StartLobby_Func006C()) then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func006Func001A)
-	else
 	end
 	if (Trig_StartLobby_Func007C()) then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func007Func001A)
-	else
 	end
 	if (Trig_StartLobby_Func008C()) then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func008Func001A)
-	else
 	end
 	udg_LocalInteger = 4
 	DisplayTimedTextToForce(GetPlayersAll(), I2R(udg_LocalInteger), "TRIGSTR_10982")
@@ -16659,7 +16533,6 @@ function Trig_FeodalDead_Func004Func002Func001Func010A()
 		SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetEnumPlayer(), bj_ALLIANCE_UNALLIED)
 		if (Trig_FeodalDead_Func004Func002Func001Func010Func001Func003C()) then
 			ForceRemovePlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetForLoopIndexB()])
-		else
 		end
 	end
 	ForceAddPlayerSimple(GetEnumPlayer(), udg_Vassals[GetConvertedPlayerId(ConvertedPlayer(GetForLoopIndexA()))])
@@ -16742,8 +16615,7 @@ function Trig_FeodalDead_Actions()
 				ForceClear(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
 				SetForceAllianceStateBJ(udg_Vassals[GetForLoopIndexA()], udg_Vassals[GetForLoopIndexA()], bj_ALLIANCE_ALLIED_VISION)
 				SetForceAllianceStateBJ(udg_Vassals[GetForLoopIndexA()], GetForceOfPlayer(GetOwningPlayer(GetAttacker())), bj_ALLIANCE_ALLIED_UNITS)
-				return 
-			else
+				return
 			end
 		end
 		--  --------------------------------------------------------------------   ?????? ????-?? ????????
@@ -17378,31 +17250,24 @@ function Trig_Continents_set_On_Actions()
 	udg_LocalText2 = "|cff00ff00????? ???????? ??? ????: |r"
 	if (Trig_Continents_set_On_Func004C()) then
 		udg_LocalText2 = (udg_LocalText2 .. "????????? ???????????\\" )
-    else
     end
     if ( Trig_Continents_set_On_Func005C() ) then
         udg_LocalText2=( udg_LocalText2 .. "" )
-    else
     end
     if ( Trig_Continents_set_On_Func006C() ) then
         udg_LocalText2=( udg_LocalText2 .. "" )
-    else
     end
     if ( Trig_Continents_set_On_Func007C() ) then
         udg_LocalText2=( udg_LocalText2 .. "" )
-    else
     end
     if ( Trig_Continents_set_On_Func008C() ) then
         udg_LocalText2=( udg_LocalText2 .. "" )
-    else
     end
     if ( Trig_Continents_set_On_Func009C() ) then
         udg_LocalText2=( udg_LocalText2 .. "" )
-    else
     end
     if ( Trig_Continents_set_On_Func010C() ) then
         udg_LocalText2=( udg_LocalText2 .. "" )
-    else
     end
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
     EnableTrigger(gg_trg_LeaveNeadedRegions)
@@ -17650,41 +17515,34 @@ function Trig_SeeOnlyNeedeed_Actions()
         DestroyFogModifier(GetLastCreatedFogModifier())
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
-    else
     end
     if ( Trig_SeeOnlyNeedeed_Func002C() ) then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
-    else
     end
     if ( Trig_SeeOnlyNeedeed_Func003C() ) then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
-    else
     end
     if ( Trig_SeeOnlyNeedeed_Func004C() ) then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
-    else
     end
     if ( Trig_SeeOnlyNeedeed_Func005C() ) then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
-    else
     end
     if ( Trig_SeeOnlyNeedeed_Func006C() ) then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
-    else
     end
     if ( Trig_SeeOnlyNeedeed_Func007C() ) then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
-    else
     end
 end
 --===========================================================================
@@ -18704,7 +18562,6 @@ function Trig_Timer_Actions()
     udg_TimerToDis=GetLastCreatedTimerDialogBJ()
     if ( Trig_Timer_Func009C() ) then
         ForForce(udg_AllPlayers, Trig_Timer_Func009Func001A)
-    else
     end
 end
 --===========================================================================
@@ -18919,31 +18776,7 @@ end
 -- Trigger: UnitsToBuildingSituation2
 --===========================================================================
 function Trig_UnitsToBuildingSituation2_Func002C()
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e021') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e020') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01H') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01J') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01L') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01M') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01X') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01K') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e021') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e020') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01H') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01J') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01L') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01M') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01X') ) )) or (( ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e01K') ) ))
 end
 function Trig_UnitsToBuildingSituation2_Conditions()
     return (( IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) == true )) and (Trig_UnitsToBuildingSituation2_Func002C())
@@ -18965,31 +18798,7 @@ end
 -- Trigger: CanselSituation2
 --===========================================================================
 function Trig_CanselSituation2_Func001C()
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e021') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e020') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01H') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01J') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01L') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01M') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01X') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01K') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e021') ) )) or (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e020') ) )) or (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01H') ) )) or (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01J') ) )) or (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01L') ) )) or (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01M') ) )) or (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01X') ) )) or (( ( GetUnitTypeId(GetCancelledStructure()) == FourCC('e01K') ) ))
 end
 function Trig_CanselSituation2_Conditions()
     return Trig_CanselSituation2_Func001C()
@@ -20282,7 +20091,6 @@ function Trig_Leave_Ot_Actions()
     FlushChildHashtable(Hash, GetPlayerId(GetTriggerPlayer()))
     if ( Trig_Leave_Ot_Func005C() ) then
         ForForce(Vassals[pi], Freedom)
-    else
     end
 end
 --===========================================================================
@@ -20629,40 +20437,19 @@ function Trig_Spell_Dvij_Conditions()
     return ( udg_Logika == true )
 end
 function Trig_Spell_Dvij_Func002Func004C()
-    if ( ( IsUnitDeadBJ(udg_Caster) == true ) ) then
-        return true
-    end
-    if ( ( udg_HisloA[0] == 0 ) ) then
-        return true
-    end
-    return false
+    return (( ( IsUnitDeadBJ(udg_Caster) == true ) )) or (( ( udg_HisloA[0] == 0 ) ))
 end
 function Trig_Spell_Dvij_Func002C()
     return Trig_Spell_Dvij_Func002Func004C()
 end
 function Trig_Spell_Dvij_Func004Func004Func002C()
-    if ( ( udg_HisloA[0] == 2 ) ) then
-        return true
-    end
-    if ( ( udg_HisloA[0] == 3 ) ) then
-        return true
-    end
-    if ( ( udg_HisloA[0] == 4 ) ) then
-        return true
-    end
-    return false
+    return (( ( udg_HisloA[0] == 2 ) )) or (( ( udg_HisloA[0] == 3 ) )) or (( ( udg_HisloA[0] == 4 ) ))
 end
 function Trig_Spell_Dvij_Func004Func004C()
     return (( IsUnitAliveBJ(udg_Dummy[0]) == true )) and (Trig_Spell_Dvij_Func004Func004Func002C())
 end
 function Trig_Spell_Dvij_Func004Func005Func003C()
-    if ( ( udg_HisloA[0] == 3 ) ) then
-        return true
-    end
-    if ( ( udg_HisloA[0] == 4 ) ) then
-        return true
-    end
-    return false
+    return (( ( udg_HisloA[0] == 3 ) )) or (( ( udg_HisloA[0] == 4 ) ))
 end
 function Trig_Spell_Dvij_Func004Func005C()
     return (( IsUnitAliveBJ(udg_Dummy[1]) == true )) and (Trig_Spell_Dvij_Func004Func005Func003C())
@@ -20684,7 +20471,6 @@ function Trig_Spell_Dvij_Func004Func007Func002Func005Func002A()
         UnitApplyTimedLifeBJ(1.50, FourCC('BTLF'), udg_Dummy[4])
         udg_Dummy[4]=nil
         RemoveLocation(udg_To4kaAOE)
-    else
     end
 end
 function Trig_Spell_Dvij_Func004Func007Func002Func005C()
@@ -20707,7 +20493,6 @@ function Trig_Spell_Dvij_Func004Func007Func004Func006Func002A()
         UnitApplyTimedLifeBJ(1.50, FourCC('BTLF'), udg_Dummy[4])
         udg_Dummy[4]=nil
         RemoveLocation(udg_To4kaAOE)
-    else
     end
 end
 function Trig_Spell_Dvij_Func004Func007Func004Func006C()
@@ -20730,7 +20515,6 @@ function Trig_Spell_Dvij_Func004Func007Func006Func005Func002A()
         UnitApplyTimedLifeBJ(1.50, FourCC('BTLF'), udg_Dummy[4])
         udg_Dummy[4]=nil
         RemoveLocation(udg_To4kaAOE)
-    else
     end
 end
 function Trig_Spell_Dvij_Func004Func007Func006Func005C()
@@ -20762,7 +20546,6 @@ function Trig_Spell_Dvij_Actions()
         udg_Logika=false
         udg_LogikaCast=false
         PauseTimerBJ(true, udg_Timer)
-    else
     end
     if ( (true) ) then -- INLINED!!
         udg_To4kaCaster=GetUnitLoc(udg_Caster)
@@ -20770,15 +20553,12 @@ function Trig_Spell_Dvij_Actions()
         udg_Ygol[1]=( udg_Ygol[1] + 5 )
         if ( Trig_Spell_Dvij_Func004Func004C() ) then
             SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 0.00 + I2R(udg_Ygol[1]) )))
-        else
         end
         if ( Trig_Spell_Dvij_Func004Func005C() ) then
             SetUnitPositionLoc(udg_Dummy[1], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 120.00 + I2R(udg_Ygol[1]) )))
-        else
         end
         if ( Trig_Spell_Dvij_Func004Func006C() ) then
             SetUnitPositionLoc(udg_Dummy[2], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 240.00 + I2R(udg_Ygol[1]) )))
-        else
         end
         if ( Trig_Spell_Dvij_Func004Func007C() ) then
             -- ?????? ??????? ???
@@ -20795,11 +20575,9 @@ function Trig_Spell_Dvij_Actions()
                     RemoveUnit(udg_Dummy[2])
                     udg_Target=nil
                     udg_LogikaCast=false
-                else
                 end
                 RemoveLocation(udg_To4kaDummy)
                 RemoveLocation(udg_To4kaTarget)
-            else
             end
             -- ?????? ??????? ???
             if ( Trig_Spell_Dvij_Func004Func007Func004C() ) then
@@ -20815,11 +20593,9 @@ function Trig_Spell_Dvij_Actions()
                     RemoveUnit(udg_Dummy[1])
                     udg_Target=nil
                     udg_LogikaCast=false
-                else
                 end
                 RemoveLocation(udg_To4kaDummy)
                 RemoveLocation(udg_To4kaTarget)
-            else
             end
             -- ?????? ??????? ???
             if ( Trig_Spell_Dvij_Func004Func007Func006C() ) then
@@ -20836,15 +20612,11 @@ function Trig_Spell_Dvij_Actions()
                     udg_Target=nil
                     udg_LogikaCast=false
                     udg_HisloA[0]=0
-                else
                 end
                 RemoveLocation(udg_To4kaDummy)
                 RemoveLocation(udg_To4kaTarget)
-            else
             end
-        else
         end
-    else
     end
 end
 --===========================================================================
@@ -20879,11 +20651,9 @@ end
 function Trig_DieDummy_Actions()
     if ( Trig_DieDummy_Func001C() ) then
         ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('h0MK')), Trig_DieDummy_Func001Func002A)
-    else
     end
     if ( Trig_DieDummy_Func002C() ) then
         ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('h0MJ')), Trig_DieDummy_Func002Func002A)
-    else
     end
 end
 --===========================================================================
@@ -21026,7 +20796,6 @@ function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     GroupAddUnitSimple(GetTriggerUnit(), udg_Flagmans)
     if ( Trig_Sdelat_Flagman_Ot_Copy_Func019C() ) then
         UnitRemoveAbilityBJ(FourCC('A0LG'), GetTriggerUnit())
-    else
     end
 end
 --===========================================================================
@@ -21242,7 +21011,6 @@ function Trig_Remove_Unit_From_LoadedGroup_Actions()
         if ( Trig_Remove_Unit_From_LoadedGroup_Func002Func001C() ) then
             GroupRemoveUnitSimple(udg_TempUnit01, udg_LoadedGroupArray[GetForLoopIndexA()])
             udg_TempUnit02=udg_TransportingUnitArray[GetForLoopIndexA()]
-        else
         end
         bj_forLoopAIndex=bj_forLoopAIndex + 1
     end
@@ -21386,14 +21154,12 @@ function Trig_Linkor_reaserch_Obstel_O_Actions()
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Obstel_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
-    else
     end
     if ( Trig_Linkor_reaserch_Obstel_O_Func002C() ) then
         udg_Boolexpr = Trig_Linkor_reaserch_Obstel_O_Func002Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Obstel_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
-    else
     end
 end
 --===========================================================================
@@ -21407,10 +21173,7 @@ end
 -- Trigger: Naim Obstrel O
 --===========================================================================
 function Trig_Naim_Obstrel_O_Func001C()
-    if ( ( GetUnitAbilityLevelSwapped(FourCC('A00G'), GetTrainedUnit()) == 1 ) ) then
-        return true
-    end
-    return false
+    return ( ( GetUnitAbilityLevelSwapped(FourCC('A00G'), GetTrainedUnit()) == 1 ) )
 end
 function Trig_Naim_Obstrel_O_Conditions()
     return Trig_Naim_Obstrel_O_Func001C()
@@ -21424,11 +21187,9 @@ end
 function Trig_Naim_Obstrel_O_Actions()
     if ( Trig_Naim_Obstrel_O_Func002C() ) then
         SetUnitAbilityLevelSwapped(FourCC('A00G'), GetTrainedUnit(), 2)
-    else
     end
     if ( Trig_Naim_Obstrel_O_Func003C() ) then
         SetUnitAbilityLevelSwapped(FourCC('A00G'), GetTrainedUnit(), 3)
-    else
     end
 end
 --===========================================================================
@@ -21468,14 +21229,12 @@ function Trig_Linkor_reaserch_Parusa_O_Actions()
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Parusa_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
-    else
     end
     if ( Trig_Linkor_reaserch_Parusa_O_Func002C() ) then
         udg_Boolexpr = Trig_Linkor_reaserch_Parusa_O_Func002Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Parusa_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
-    else
     end
 end
 --===========================================================================
@@ -21489,10 +21248,7 @@ end
 -- Trigger: Naim Parusa O
 --===========================================================================
 function Trig_Naim_Parusa_O_Func001C()
-    if ( ( GetUnitAbilityLevelSwapped(FourCC('A00B'), GetTrainedUnit()) == 1 ) ) then
-        return true
-    end
-    return false
+    return ( ( GetUnitAbilityLevelSwapped(FourCC('A00B'), GetTrainedUnit()) == 1 ) )
 end
 function Trig_Naim_Parusa_O_Conditions()
     return Trig_Naim_Parusa_O_Func001C()
@@ -21506,11 +21262,9 @@ end
 function Trig_Naim_Parusa_O_Actions()
     if ( Trig_Naim_Parusa_O_Func002C() ) then
         SetUnitAbilityLevelSwapped(FourCC('A00B'), GetTrainedUnit(), 2)
-    else
     end
     if ( Trig_Naim_Parusa_O_Func003C() ) then
         SetUnitAbilityLevelSwapped(FourCC('A00B'), GetTrainedUnit(), 3)
-    else
     end
 end
 --===========================================================================
@@ -21550,14 +21304,12 @@ function Trig_Linkor_Repair_O_Actions()
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_Repair_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
-    else
     end
     if ( Trig_Linkor_Repair_O_Func002C() ) then
         udg_Boolexpr = Trig_Linkor_Repair_O_Func002Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_Repair_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
-    else
     end
 end
 --===========================================================================
@@ -21571,10 +21323,7 @@ end
 -- Trigger: Naim Rapair O
 --===========================================================================
 function Trig_Naim_Rapair_O_Func001C()
-    if ( ( GetUnitAbilityLevelSwapped(FourCC('A00A'), GetTrainedUnit()) == 1 ) ) then
-        return true
-    end
-    return false
+    return ( ( GetUnitAbilityLevelSwapped(FourCC('A00A'), GetTrainedUnit()) == 1 ) )
 end
 function Trig_Naim_Rapair_O_Conditions()
     return Trig_Naim_Rapair_O_Func001C()
@@ -21588,11 +21337,9 @@ end
 function Trig_Naim_Rapair_O_Actions()
     if ( Trig_Naim_Rapair_O_Func002C() ) then
         SetUnitAbilityLevelSwapped(FourCC('A00A'), GetTrainedUnit(), 2)
-    else
     end
     if ( Trig_Naim_Rapair_O_Func003C() ) then
         SetUnitAbilityLevelSwapped(FourCC('A00A'), GetTrainedUnit(), 3)
-    else
     end
 end
 --===========================================================================
@@ -21606,16 +21353,7 @@ end
 -- Trigger: Abordach D or Ot
 --===========================================================================
 function Trig_Abordach_D_or_Ot_Func005Func001C()
-    if ( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSpellTargetUnit()) ) ) then
-        return true
-    end
-    if ( ( IsPlayerAlly(GetOwningPlayer(GetSpellTargetUnit()), GetOwningPlayer(GetTriggerUnit())) == true ) ) then
-        return true
-    end
-    if ( ( IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_STRUCTURE) == true ) ) then
-        return true
-    end
-    return false
+    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSpellTargetUnit()) ) )) or (( ( IsPlayerAlly(GetOwningPlayer(GetSpellTargetUnit()), GetOwningPlayer(GetTriggerUnit())) == true ) )) or (( ( IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_STRUCTURE) == true ) ))
 end
 function Trig_Abordach_D_or_Ot_Func005C()
     return Trig_Abordach_D_or_Ot_Func005Func001C()
@@ -21632,7 +21370,6 @@ end
 function Trig_Abordach_D_or_Ot_Func018Func017Func009A()
     if ( Trig_Abordach_D_or_Ot_Func018Func017Func009Func001C() ) then
         KillUnit(GetEnumUnit())
-    else
     end
 end
 function Trig_Abordach_D_or_Ot_Func018Func017Func011Func004002()
@@ -21644,7 +21381,6 @@ end
 function Trig_Abordach_D_or_Ot_Func018Func017Func011Func010A()
     if ( Trig_Abordach_D_or_Ot_Func018Func017Func011Func010Func001C() ) then
         UnitAddAbilityBJ(FourCC('A009'), GetEnumUnit())
-    else
     end
 end
 function Trig_Abordach_D_or_Ot_Func018Func017Func011C()
@@ -21671,7 +21407,6 @@ end
 function Trig_Abordach_D_or_Ot_Func018Func021Func015A()
     if ( Trig_Abordach_D_or_Ot_Func018Func021Func015Func001C() ) then
         KillUnit(GetEnumUnit())
-    else
     end
 end
 function Trig_Abordach_D_or_Ot_Func018Func021C()
@@ -21695,7 +21430,6 @@ function Trig_Abordach_D_or_Ot_Actions()
     local ef = {}
     if ( Trig_Abordach_D_or_Ot_Func005C() ) then
         return
-    else
     end
     u[1]=udg_LocalUnit[1]
     u[2]=udg_LocalUnit[2]
@@ -21706,7 +21440,6 @@ function Trig_Abordach_D_or_Ot_Actions()
         udg_LocalUnit[2]=u[2]
         if ( (true) ) then -- INLINED!!
             return
-        else
         end
         AddSpecialEffectLocBJ(udg_LocalPosition[1], "ObjectsSpawnmodelsHumanHCancelDeathHCancelDeath.mdl")
         udg_LocalspecialEffect[1]=GetLastCreatedEffectBJ()
@@ -21736,10 +21469,8 @@ function Trig_Abordach_D_or_Ot_Actions()
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[1]), 0, 0, udg_LocalText2)
                 ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func017Func011Func010A)
                 GroupClear(udg_LocalOtrad2)
-            else
             end
             return
-        else
         end
         -- --------
         -- --------
@@ -21757,13 +21488,11 @@ function Trig_Abordach_D_or_Ot_Actions()
                 GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
                 ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func021Func007Func012A)
                 GroupClear(udg_LocalOtrad2)
-            else
             end
             udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func021Func011002
             GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
             ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func021Func015A)
             return
-        else
         end
         -- --------
         -- --------
@@ -22153,7 +21882,6 @@ function Trig_Portal_Connect_Actions()
                     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
                     UnitAddAbilityBJ(udg_Portal_SeverAbility, udg_Portal_portal[udg_Portal_INDEX_TARGET])
                     UnitAddAbilityBJ(udg_Portal_SeverAbility, udg_Portal_portal[udg_Portal_INDEX_CASTER])
-                else
                 end
             end
         end
@@ -22209,7 +21937,6 @@ function Trig_Portal_Periodic_Func001A()
                 udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER]=true
                 udg_Portal_delayFXAbil[udg_Portal_INDEX_CASTER]=udg_Portal_delayFXAbil[udg_Portal_INDEX_TARGET]
                 UnitAddAbilityBJ(udg_Portal_delayFXAbil[udg_Portal_INDEX_CASTER], udg_Portal_traveller)
-            else
             end
             udg_Portal_delay[udg_Portal_INDEX_CASTER]=( udg_Portal_delay[udg_Portal_INDEX_CASTER] - ( 1.00 / 32.00 ) )
         else
@@ -22226,11 +21953,9 @@ function Trig_Portal_Periodic_Func001A()
                 udg_Portal_dummy=GetLastCreatedUnit()
                 if ( Trig_Portal_Periodic_Func001Func006Func002Func011Func003C() ) then
                     SelectUnitAddForPlayer(udg_Portal_dummy, GetOwningPlayer(udg_Portal_traveller))
-                else
                 end
                 if ( Trig_Portal_Periodic_Func001Func006Func002Func011Func004C() ) then
                     SetUnitInvulnerable(udg_Portal_dummy, false)
-                else
                 end
                 IssuePointOrderLocBJ(udg_Portal_dummy, "move", udg_Portal_loc2)
                 udg_Portal_INDEX_TRAVELLER=GetUnitUserData(udg_Portal_dummy)
@@ -22245,11 +21970,9 @@ function Trig_Portal_Periodic_Func001A()
                     udg_Portal_dummy=GetLastCreatedUnit()
                     if ( Trig_Portal_Periodic_Func001Func006Func002Func011Func012Func004C() ) then
                         SelectUnitAddForPlayer(udg_Portal_dummy, GetOwningPlayer(udg_Portal_traveller))
-                    else
                     end
                     if ( Trig_Portal_Periodic_Func001Func006Func002Func011Func012Func005C() ) then
                         SetUnitInvulnerable(udg_Portal_dummy, false)
-                    else
                     end
                     UnitAddAbilityBJ(udg_Portal_missileFXAbil[udg_Portal_INDEX_TARGET], udg_Portal_dummy)
                     SetUnitFlyHeightBJ(udg_Portal_dummy, udg_Portal_missileHeight[udg_Portal_INDEX_TARGET], 0.00)
@@ -22281,7 +22004,6 @@ function Trig_Portal_Periodic_Func001A()
             -- This is here in case of a unit being knockbacked outside the Portal's reach
             udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER]=false
             IssueTargetOrderBJ(udg_Portal_traveller, "smart", udg_Portal_targeted[udg_Portal_INDEX_CASTER])
-        else
         end
     end
     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- 
@@ -22341,7 +22063,6 @@ function Trig_Portal_Periodic_Func002A()
                 RemoveLocation(udg_Portal_loc3)
                 if ( Trig_Portal_Periodic_Func002Func007Func003Func002Func013C() ) then
                     SelectUnitAddForPlayer(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], GetOwningPlayer(udg_Portal_traveller))
-                else
                 end
             else
                 if ( Trig_Portal_Periodic_Func002Func007Func003Func002Func014C() ) then
@@ -22366,7 +22087,6 @@ function Trig_Portal_Periodic_Func002A()
                 RemoveLocation(udg_Portal_loc4)
                 if ( Trig_Portal_Periodic_Func002Func007Func003Func001Func012C() ) then
                     SelectUnitAddForPlayer(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], GetOwningPlayer(udg_Portal_traveller))
-                else
                 end
             else
                 if ( Trig_Portal_Periodic_Func002Func007Func003Func001Func001C() ) then
@@ -22389,7 +22109,6 @@ function Trig_Portal_Periodic_Func002A()
         UnitRemoveAbilityBJ(udg_Portal_delayFXAbil[udg_Portal_INDEX_TRAVELLER], udg_Portal_traveller)
         if ( Trig_Portal_Periodic_Func002Func007Func015C() ) then
             SelectUnitAddForPlayer(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], GetOwningPlayer(udg_Portal_traveller))
-        else
         end
     end
 end
@@ -22401,7 +22120,6 @@ function Trig_Portal_Periodic_Actions()
     ForGroupBJ(udg_Portal_teleMissiles, Trig_Portal_Periodic_Func002A)
     if ( Trig_Portal_Periodic_Func003C() ) then
         DisableTrigger(GetTriggeringTrigger())
-    else
     end
 end
 --===========================================================================
@@ -22415,13 +22133,7 @@ end
 -- Trigger: Portal Target
 --===========================================================================
 function Trig_Portal_Target_Func006C()
-    if ( ( GetIssuedOrderIdBJ() == String2OrderIdBJ("smart") ) ) then
-        return true
-    end
-    if ( ( GetIssuedOrderIdBJ() == String2OrderIdBJ("move") ) ) then
-        return true
-    end
-    return false
+    return (( ( GetIssuedOrderIdBJ() == String2OrderIdBJ("smart") ) )) or (( ( GetIssuedOrderIdBJ() == String2OrderIdBJ("move") ) ))
 end
 function Trig_Portal_Target_Conditions()
     return (( udg_Portal_active[GetUnitUserData(GetOrderTargetUnit())] == true )) and (( IsUnitInGroup(GetTriggerUnit(), udg_Portal_teleMissiles) == false )) and (Trig_Portal_Target_Func006C()) and (( IsUnitAlly(GetTriggerUnit(), GetOwningPlayer(GetOrderTargetUnit())) == true )) and (( IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) == false ))
@@ -22449,7 +22161,6 @@ function Trig_Portal_Target_Actions()
             -- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
             if ( Trig_Portal_Target_Func003Func001Func005C() ) then
                 EnableTrigger(gg_trg_Portal_Periodic)
-            else
             end
         end
     end
@@ -22507,14 +22218,12 @@ function Trig_Portal_Death_Func004A()
         udg_Portal_delay[udg_Portal_INDEX_TRAVELLER]=0.00
         udg_Portal_isTeleporting[udg_Portal_INDEX_TRAVELLER]=false
         GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_group)
-    else
     end
     if ( Trig_Portal_Death_Func004Func005C() ) then
         udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=nil
         udg_Portal_delay[udg_Portal_INDEX_TRAVELLER]=0.00
         udg_Portal_isTeleporting[udg_Portal_INDEX_TRAVELLER]=false
         GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_group)
-    else
     end
 end
 function Trig_Portal_Death_Actions()
@@ -22585,14 +22294,12 @@ function Trig_Portal_Disconnect_Func001Func005A()
         udg_Portal_delay[udg_Portal_INDEX_TRAVELLER]=0.00
         udg_Portal_isTeleporting[udg_Portal_INDEX_TRAVELLER]=false
         GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_group)
-    else
     end
     if ( Trig_Portal_Disconnect_Func001Func005Func005C() ) then
         udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=nil
         udg_Portal_delay[udg_Portal_INDEX_TRAVELLER]=0.00
         udg_Portal_isTeleporting[udg_Portal_INDEX_TRAVELLER]=false
         GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_group)
-    else
     end
 end
 function Trig_Portal_Disconnect_Func001C()
@@ -22611,7 +22318,6 @@ function Trig_Portal_Disconnect_Actions()
         DestroyEffectBJ(udg_Portal_FX[udg_Portal_INDEX_TARGET])
         udg_Portal_portal[udg_Portal_INDEX_CASTER]=nil
         udg_Portal_portal[udg_Portal_INDEX_TARGET]=nil
-    else
     end
 end
 --===========================================================================
@@ -22730,8 +22436,6 @@ function Trig_F2_2_Actions()
             GroupPointOrderLoc(g0, "attack", loc)
             i=0
             GroupClear(g0)
-            
-        else
         
         end
         i=i + 1
@@ -23520,13 +23224,7 @@ function Trig_MageTpSell_Func002Func001C()
     return (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetSoldUnit()) )) and (( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ))
 end
 function Trig_MageTpSell_Func002Func002C()
-    if ( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) ) then
-        return true
-    end
-    if ( ( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ) ) then
-        return true
-    end
-    return false
+    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) )) or (( ( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ) ))
 end
 function Trig_MageTpSell_Func002C()
     return Trig_MageTpSell_Func002Func002C()
@@ -23540,7 +23238,6 @@ function Trig_MageTpSell_Actions()
             DelCountDis(GetSoldUnit() , GetPlayerId(GetOwningPlayer(GetSoldUnit())))
             GoldDifference[pi]=GoldDifference[pi] - GetUnitGoldCost(GetUnitTypeId(GetSoldUnit()))
             LumberDifference[pi]=LumberDifference[pi] - GetUnitWoodCost(GetUnitTypeId(GetSoldUnit()))
-        else
         end
         udg_LocalPosition2=GetUnitRallyPoint(GetTriggerUnit())
         IssuePointOrderLocBJ(GetSoldUnit(), "move", udg_LocalPosition2)
@@ -24285,11 +23982,9 @@ end
 function Trig_BegYel_Actions()
     if ( Trig_BegYel_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GG'), 0, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_BegYel_Func002C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GF'), 0, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================
@@ -24314,11 +24009,9 @@ end
 function Trig_CanYel_Actions()
     if ( Trig_CanYel_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GG'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_CanYel_Func002C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GF'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================
@@ -24359,11 +24052,9 @@ end
 function Trig_BegRed_Actions()
     if ( Trig_BegRed_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GH'), 0, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_BegRed_Func002C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GF'), 0, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================
@@ -24388,11 +24079,9 @@ end
 function Trig_CanRed_Actions()
     if ( Trig_CanRed_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GH'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_CanRed_Func002C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GF'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================
@@ -24433,11 +24122,9 @@ end
 function Trig_BegBlue_Actions()
     if ( Trig_BegBlue_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GH'), 0, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_BegBlue_Func002C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GG'), 0, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================
@@ -24462,11 +24149,9 @@ end
 function Trig_CanBlue_Actions()
     if ( Trig_CanBlue_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GH'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_CanBlue_Func002C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0GG'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================
@@ -27066,7 +26751,6 @@ function Trig_InfestBuilding_Actions()
     if GetUnitLifePercent(u) <= 10 and u ~= nil and IsPlayerEnemy(GetOwningPlayer(u), GetOwningPlayer(GetTriggerUnit())) then
         KillUnit(u)
         CreateUnit(GetOwningPlayer(GetTriggerUnit()), FourCC('u02Z'), GetUnitX(u), GetUnitY(u), 0.0)
-    else
         
     
     end
@@ -30699,16 +30383,7 @@ end
 -- Trigger: BegEvery
 --===========================================================================
 function Trig_BegEvery_Func001C()
-    if ( ( GetResearched() == FourCC('R0HS') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0HR') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0HQ') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R0HS') ) )) or (( ( GetResearched() == FourCC('R0HR') ) )) or (( ( GetResearched() == FourCC('R0HQ') ) ))
 end
 function Trig_BegEvery_Conditions()
     return Trig_BegEvery_Func001C()
@@ -30736,16 +30411,7 @@ function Trig_CanEvery_Func001Func003C()
     return (( GetResearched() == FourCC('R0HQ') )) and (( GetPlayerTechCountSimple(FourCC('R0HS'), GetOwningPlayer(GetTriggerUnit())) == 0 )) and (( GetPlayerTechCountSimple(FourCC('R0HR'), GetOwningPlayer(GetTriggerUnit())) == 0 ))
 end
 function Trig_CanEvery_Func001C()
-    if ( Trig_CanEvery_Func001Func001C() ) then
-        return true
-    end
-    if ( Trig_CanEvery_Func001Func002C() ) then
-        return true
-    end
-    if ( Trig_CanEvery_Func001Func003C() ) then
-        return true
-    end
-    return false
+    return (( Trig_CanEvery_Func001Func001C() )) or (( Trig_CanEvery_Func001Func002C() )) or (( Trig_CanEvery_Func001Func003C() ))
 end
 function Trig_CanEvery_Conditions()
     return Trig_CanEvery_Func001C()
@@ -31801,7 +31467,6 @@ function Trig_VariarTaunt_Actions()
     if ( Trig_VariarTaunt_Func004C() ) then
         SetUnitAbilityLevelSwapped(FourCC('A1AJ'), GetTriggerUnit(), 2)
         SetUnitAbilityLevelSwapped(FourCC('A1AK'), GetTriggerUnit(), 2)
-    else
     end
 end
 --===========================================================================
@@ -33048,43 +32713,7 @@ end
 -- Trigger: All Gnomes Cansel
 --===========================================================================
 function Trig_All_Gnomes_Cansel_Func001C()
-    if ( ( GetResearched() == FourCC('R0B9') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BA') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BB') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0B5') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BC') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BD') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BE') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BF') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BG') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BH') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0CR') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BI') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R0B9') ) )) or (( ( GetResearched() == FourCC('R0BA') ) )) or (( ( GetResearched() == FourCC('R0BB') ) )) or (( ( GetResearched() == FourCC('R0B5') ) )) or (( ( GetResearched() == FourCC('R0BC') ) )) or (( ( GetResearched() == FourCC('R0BD') ) )) or (( ( GetResearched() == FourCC('R0BE') ) )) or (( ( GetResearched() == FourCC('R0BF') ) )) or (( ( GetResearched() == FourCC('R0BG') ) )) or (( ( GetResearched() == FourCC('R0BH') ) )) or (( ( GetResearched() == FourCC('R0CR') ) )) or (( ( GetResearched() == FourCC('R0BI') ) ))
 end
 function Trig_All_Gnomes_Cansel_Conditions()
     return Trig_All_Gnomes_Cansel_Func001C()
@@ -33158,46 +32787,7 @@ end
 -- Trigger: All Gnomes Begin
 --===========================================================================
 function Trig_All_Gnomes_Begin_Func002C()
-    if ( ( GetResearched() == FourCC('R0B9') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BA') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BB') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0B5') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BC') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BD') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BE') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BF') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BG') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BH') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0CR') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0BI') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R0C0') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R0B9') ) )) or (( ( GetResearched() == FourCC('R0BA') ) )) or (( ( GetResearched() == FourCC('R0BB') ) )) or (( ( GetResearched() == FourCC('R0B5') ) )) or (( ( GetResearched() == FourCC('R0BC') ) )) or (( ( GetResearched() == FourCC('R0BD') ) )) or (( ( GetResearched() == FourCC('R0BE') ) )) or (( ( GetResearched() == FourCC('R0BF') ) )) or (( ( GetResearched() == FourCC('R0BG') ) )) or (( ( GetResearched() == FourCC('R0BH') ) )) or (( ( GetResearched() == FourCC('R0CR') ) )) or (( ( GetResearched() == FourCC('R0BI') ) )) or (( ( GetResearched() == FourCC('R0C0') ) ))
 end
 function Trig_All_Gnomes_Begin_Conditions()
     return Trig_All_Gnomes_Begin_Func002C()
@@ -37099,19 +36689,15 @@ end
 function Trig_YesLeft_Actions()
     if ( Trig_YesLeft_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0DY'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( (true) ) then -- INLINED!!
         SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_YesLeft_Func003C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     if ( Trig_YesLeft_Func004C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
     SetPlayerTechMaxAllowedSwap(FourCC('R0EI'), 0, GetOwningPlayer(GetTriggerUnit()))
     -- -
@@ -37316,7 +36902,6 @@ end
 function Trig_CanselCommonHome_Actions()
     if ( Trig_CanselCommonHome_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0DX'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================
@@ -37622,7 +37207,6 @@ end
 function Trig_CanselTrueHorde_Actions()
     if ( Trig_CanselTrueHorde_Func001C() ) then
         SetPlayerTechMaxAllowedSwap(FourCC('R0DY'), 1, GetOwningPlayer(GetTriggerUnit()))
-    else
     end
 end
 --===========================================================================
@@ -39010,7 +38594,6 @@ function Trig_LichinkaFinish_Actions()
         GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[17], 300, udg_Boolexpr)
         if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
             SelectUnitAddForPlayer(GetLastCreatedUnit(), gPlayer)
-        else
         end
     
     
@@ -39032,7 +38615,6 @@ function Trig_LichinkaFinish_Actions()
         IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
         if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
             SelectUnitAddForPlayer(GetLastCreatedUnit(), gPlayer)
-        else
         end
     
     
@@ -39093,7 +38675,6 @@ function Trig_LichinkaFinish_Actions()
         IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
         if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
             SelectUnitAddForPlayer(GetLastCreatedUnit(), gPlayer)
-        else
         end
     
     
@@ -39855,13 +39436,7 @@ function Trig_GoblinSold_Func002Func001C()
     return (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetSoldUnit()) )) and (( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ))
 end
 function Trig_GoblinSold_Func002Func002C()
-    if ( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) ) then
-        return true
-    end
-    if ( ( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ) ) then
-        return true
-    end
-    return false
+    return (( ( GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetSoldUnit()) ) )) or (( ( GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL) == true ) ))
 end
 function Trig_GoblinSold_Func002C()
     return Trig_GoblinSold_Func002Func002C()
@@ -39875,7 +39450,6 @@ function Trig_GoblinSold_Actions()
             DelCountDis(GetSoldUnit() , GetPlayerId(GetOwningPlayer(GetSoldUnit())))
             GoldDifference[pi]=GoldDifference[pi] - GetUnitGoldCost(GetUnitTypeId(GetSoldUnit()))
             LumberDifference[pi]=LumberDifference[pi] - GetUnitWoodCost(GetUnitTypeId(GetSoldUnit()))
-        else
         end
         udg_LocalPosition2=GetUnitRallyPoint(GetTriggerUnit())
         IssuePointOrderLocBJ(GetSoldUnit(), "move", udg_LocalPosition2)
@@ -40052,7 +39626,6 @@ function Trig_Potreblenie_Actions()
     if ( Trig_Potreblenie_Func001C() ) then
         SetPlayerAbilityAvailableBJ(false, FourCC('A0A5'), GetOwningPlayer(GetTriggerUnit()))
         return
-    else
     end
     udg_Boolexpr = Trig_Potreblenie_Func002002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
@@ -40103,7 +39676,6 @@ function Trig_BracResearch_Actions()
     if ( Trig_BracResearch_Func001C() ) then
         SetPlayerAbilityAvailableBJ(false, FourCC('A0A6'), GetOwningPlayer(GetTriggerUnit()))
         return
-    else
     end
     udg_Boolexpr = Trig_BracResearch_Func002002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
@@ -40154,7 +39726,6 @@ function Trig_PodjogResearch_Actions()
     if ( Trig_PodjogResearch_Func001C() ) then
         SetPlayerAbilityAvailableBJ(false, FourCC('A0AR'), GetOwningPlayer(GetTriggerUnit()))
         return
-    else
     end
     udg_Boolexpr = Trig_PodjogResearch_Func002002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
@@ -40205,7 +39776,6 @@ function Trig_PodruvResearc_Actions()
     if ( Trig_PodruvResearc_Func001C() ) then
         SetPlayerAbilityAvailableBJ(false, FourCC('A0A9'), GetOwningPlayer(GetTriggerUnit()))
         return
-    else
     end
     udg_Boolexpr = Trig_PodruvResearc_Func002002
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
@@ -40426,13 +39996,7 @@ end
 -- Trigger: Pulimetchik
 --===========================================================================
 function Trig_Pulimetchik_Func002C()
-    if ( ( GetResearched() == FourCC('R04E') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04K') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04E') ) )) or (( ( GetResearched() == FourCC('R04K') ) ))
 end
 function Trig_Pulimetchik_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04E'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04K'), GetOwningPlayer(GetTriggerUnit())) >= 2 ))
@@ -40455,13 +40019,7 @@ end
 -- Trigger: Ognemetchik
 --===========================================================================
 function Trig_Ognemetchik_Func002C()
-    if ( ( GetResearched() == FourCC('R04G') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04K') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04G') ) )) or (( ( GetResearched() == FourCC('R04K') ) ))
 end
 function Trig_Ognemetchik_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04G'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04K'), GetOwningPlayer(GetTriggerUnit())) >= 2 ))
@@ -40484,13 +40042,7 @@ end
 -- Trigger: Raketchik
 --===========================================================================
 function Trig_Raketchik_Func002C()
-    if ( ( GetResearched() == FourCC('R04F') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04K') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04F') ) )) or (( ( GetResearched() == FourCC('R04K') ) ))
 end
 function Trig_Raketchik_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04F'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04K'), GetOwningPlayer(GetTriggerUnit())) >= 2 ))
@@ -40513,13 +40065,7 @@ end
 -- Trigger: Medic
 --===========================================================================
 function Trig_Medic_Func002C()
-    if ( ( GetResearched() == FourCC('R04P') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04K') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04P') ) )) or (( ( GetResearched() == FourCC('R04K') ) ))
 end
 function Trig_Medic_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04P'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04K'), GetOwningPlayer(GetTriggerUnit())) >= 2 ))
@@ -40542,16 +40088,7 @@ end
 -- Trigger: Sniper
 --===========================================================================
 function Trig_Sniper_Func002C()
-    if ( ( GetResearched() == FourCC('R04M') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04E') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04K') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04M') ) )) or (( ( GetResearched() == FourCC('R04E') ) )) or (( ( GetResearched() == FourCC('R04K') ) ))
 end
 function Trig_Sniper_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04E'), GetOwningPlayer(GetTriggerUnit())) >= 3 )) and (( GetPlayerTechCountSimple(FourCC('R04M'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04K'), GetOwningPlayer(GetTriggerUnit())) >= 2 ))
@@ -40574,13 +40111,7 @@ end
 -- Trigger: Saper
 --===========================================================================
 function Trig_Saper_Func002C()
-    if ( ( GetResearched() == FourCC('R04F') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04K') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04F') ) )) or (( ( GetResearched() == FourCC('R04K') ) ))
 end
 function Trig_Saper_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04F'), GetOwningPlayer(GetTriggerUnit())) >= 3 )) and (( GetPlayerTechCountSimple(FourCC('R04K'), GetOwningPlayer(GetTriggerUnit())) >= 2 ))
@@ -40603,16 +40134,7 @@ end
 -- Trigger: Car
 --===========================================================================
 function Trig_Car_Func002C()
-    if ( ( GetResearched() == FourCC('R04F') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04L') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04I') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04F') ) )) or (( ( GetResearched() == FourCC('R04L') ) )) or (( ( GetResearched() == FourCC('R04I') ) ))
 end
 function Trig_Car_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04F'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 1 )) and (( GetPlayerTechCountSimple(FourCC('R04I'), GetOwningPlayer(GetTriggerUnit())) >= 1 ))
@@ -40635,16 +40157,7 @@ end
 -- Trigger: Vezdehod
 --===========================================================================
 function Trig_Vezdehod_Func002C()
-    if ( ( GetResearched() == FourCC('R04E') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04L') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04I') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04E') ) )) or (( ( GetResearched() == FourCC('R04L') ) )) or (( ( GetResearched() == FourCC('R04I') ) ))
 end
 function Trig_Vezdehod_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04E'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 1 )) and (( GetPlayerTechCountSimple(FourCC('R04I'), GetOwningPlayer(GetTriggerUnit())) >= 1 ))
@@ -40667,16 +40180,7 @@ end
 -- Trigger: Tank
 --===========================================================================
 function Trig_Tank_Func002C()
-    if ( ( GetResearched() == FourCC('R04F') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04L') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04I') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04F') ) )) or (( ( GetResearched() == FourCC('R04L') ) )) or (( ( GetResearched() == FourCC('R04I') ) ))
 end
 function Trig_Tank_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04F'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04I'), GetOwningPlayer(GetTriggerUnit())) >= 2 ))
@@ -40699,13 +40203,7 @@ end
 -- Trigger: FireTank
 --===========================================================================
 function Trig_FireTank_Func002C()
-    if ( ( GetResearched() == FourCC('R04G') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04L') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04G') ) )) or (( ( GetResearched() == FourCC('R04L') ) ))
 end
 function Trig_FireTank_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04G'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04I'), GetOwningPlayer(GetTriggerUnit())) >= 2 ))
@@ -40728,16 +40226,7 @@ end
 -- Trigger: Arta
 --===========================================================================
 function Trig_Arta_Func002C()
-    if ( ( GetResearched() == FourCC('R04F') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04M') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04L') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04F') ) )) or (( ( GetResearched() == FourCC('R04M') ) )) or (( ( GetResearched() == FourCC('R04L') ) ))
 end
 function Trig_Arta_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04F'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 1 )) and (( GetPlayerTechCountSimple(FourCC('R04M'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04I'), GetOwningPlayer(GetTriggerUnit())) >= 1 ))
@@ -40760,16 +40249,7 @@ end
 -- Trigger: Meha
 --===========================================================================
 function Trig_Meha_Func002C()
-    if ( ( GetResearched() == FourCC('R04H') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04L') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04J') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04H') ) )) or (( ( GetResearched() == FourCC('R04L') ) )) or (( ( GetResearched() == FourCC('R04J') ) ))
 end
 function Trig_Meha_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04H'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 1 )) and (( GetPlayerTechCountSimple(FourCC('R04J'), GetOwningPlayer(GetTriggerUnit())) >= 1 ))
@@ -40792,16 +40272,7 @@ end
 -- Trigger: OgneMeha
 --===========================================================================
 function Trig_OgneMeha_Func002C()
-    if ( ( GetResearched() == FourCC('R04G') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04L') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04J') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04G') ) )) or (( ( GetResearched() == FourCC('R04L') ) )) or (( ( GetResearched() == FourCC('R04J') ) ))
 end
 function Trig_OgneMeha_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04G'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04J'), GetOwningPlayer(GetTriggerUnit())) >= 1 ))
@@ -40824,16 +40295,7 @@ end
 -- Trigger: Eczo
 --===========================================================================
 function Trig_Eczo_Func002C()
-    if ( ( GetResearched() == FourCC('R04H') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04L') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04J') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04H') ) )) or (( ( GetResearched() == FourCC('R04L') ) )) or (( ( GetResearched() == FourCC('R04J') ) ))
 end
 function Trig_Eczo_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04H'), GetOwningPlayer(GetTriggerUnit())) >= 1 )) and (( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 1 )) and (( GetPlayerTechCountSimple(FourCC('R04J'), GetOwningPlayer(GetTriggerUnit())) >= 1 ))
@@ -40856,19 +40318,7 @@ end
 -- Trigger: Super
 --===========================================================================
 function Trig_Super_Func002C()
-    if ( ( GetResearched() == FourCC('R04E') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04L') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04J') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04P') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04E') ) )) or (( ( GetResearched() == FourCC('R04L') ) )) or (( ( GetResearched() == FourCC('R04J') ) )) or (( ( GetResearched() == FourCC('R04P') ) ))
 end
 function Trig_Super_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04P'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 1 )) and (( GetPlayerTechCountSimple(FourCC('R04J'), GetOwningPlayer(GetTriggerUnit())) >= 1 )) and (( GetPlayerTechCountSimple(FourCC('R04E'), GetOwningPlayer(GetTriggerUnit())) >= 2 ))
@@ -40891,16 +40341,7 @@ end
 -- Trigger: Submarina
 --===========================================================================
 function Trig_Submarina_Func002C()
-    if ( ( GetResearched() == FourCC('R04F') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04L') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04I') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04F') ) )) or (( ( GetResearched() == FourCC('R04L') ) )) or (( ( GetResearched() == FourCC('R04I') ) ))
 end
 function Trig_Submarina_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04F'), GetOwningPlayer(GetTriggerUnit())) >= 1 )) and (( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 1 )) and (( GetPlayerTechCountSimple(FourCC('R04I'), GetOwningPlayer(GetTriggerUnit())) >= 1 ))
@@ -40923,16 +40364,7 @@ end
 -- Trigger: Podlodka1
 --===========================================================================
 function Trig_Podlodka1_Func002C()
-    if ( ( GetResearched() == FourCC('R04F') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04L') ) ) then
-        return true
-    end
-    if ( ( GetResearched() == FourCC('R04I') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetResearched() == FourCC('R04F') ) )) or (( ( GetResearched() == FourCC('R04L') ) )) or (( ( GetResearched() == FourCC('R04I') ) ))
 end
 function Trig_Podlodka1_Func003C()
     return (( GetPlayerTechCountSimple(FourCC('R04L'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04I'), GetOwningPlayer(GetTriggerUnit())) >= 2 )) and (( GetPlayerTechCountSimple(FourCC('R04F'), GetOwningPlayer(GetTriggerUnit())) >= 2 ))
@@ -41868,13 +41300,7 @@ end
 -- Trigger: AutoStrelaFire
 --===========================================================================
 function Trig_AutoStrelaFire_Func001C()
-    if ( ( GetSpellAbilityId() == FourCC('A00W') ) ) then
-        return true
-    end
-    if ( ( GetSpellAbilityId() == FourCC('A07Q') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetSpellAbilityId() == FourCC('A00W') ) )) or (( ( GetSpellAbilityId() == FourCC('A07Q') ) ))
 end
 function Trig_AutoStrelaFire_Conditions()
     return Trig_AutoStrelaFire_Func001C()
@@ -41894,13 +41320,7 @@ end
 -- Trigger: AutoStrelaArcana
 --===========================================================================
 function Trig_AutoStrelaArcana_Func001C()
-    if ( ( GetSpellAbilityId() == FourCC('A07D') ) ) then
-        return true
-    end
-    if ( ( GetSpellAbilityId() == FourCC('A02U') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetSpellAbilityId() == FourCC('A07D') ) )) or (( ( GetSpellAbilityId() == FourCC('A02U') ) ))
 end
 function Trig_AutoStrelaArcana_Conditions()
     return Trig_AutoStrelaArcana_Func001C()
@@ -41920,13 +41340,7 @@ end
 -- Trigger: AutoStrelaFel
 --===========================================================================
 function Trig_AutoStrelaFel_Func001C()
-    if ( ( GetSpellAbilityId() == FourCC('A02Z') ) ) then
-        return true
-    end
-    if ( ( GetSpellAbilityId() == FourCC('A07O') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetSpellAbilityId() == FourCC('A02Z') ) )) or (( ( GetSpellAbilityId() == FourCC('A07O') ) ))
 end
 function Trig_AutoStrelaFel_Conditions()
     return Trig_AutoStrelaFel_Func001C()
@@ -42595,7 +42009,6 @@ function Trig_AutoChance_Actions()
         AdjustPlayerStateBJ(150, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_GOLD)
         AdjustPlayerStateBJ(50, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_LUMBER)
         IssueImmediateOrderBJ(GetEventDamageSource(), "berserk")
-    else
     end
 end
 --===========================================================================
@@ -42624,7 +42037,6 @@ function Trig_AutoChance_2_Actions()
         AdjustPlayerStateBJ(400, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_GOLD)
         AdjustPlayerStateBJ(75, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_LUMBER)
         IssueImmediateOrderBJ(GetEventDamageSource(), "berserk")
-    else
     end
 end
 --===========================================================================
@@ -42662,20 +42074,16 @@ function Trig_AutoChance_3_Actions()
         if ( Trig_AutoChance_3_Func002Func001C() ) then
             AdjustPlayerStateBJ(2500, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_GOLD)
             AdjustPlayerStateBJ(1000, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_LUMBER)
-        else
         end
         if ( Trig_AutoChance_3_Func002Func002C() ) then
             AdjustPlayerStateBJ(1000, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_GOLD)
             AdjustPlayerStateBJ(500, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_LUMBER)
-        else
         end
         if ( Trig_AutoChance_3_Func002Func003C() ) then
             AdjustPlayerStateBJ(250, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_GOLD)
             AdjustPlayerStateBJ(100, GetOwningPlayer(GetEventDamageSource()), PLAYER_STATE_RESOURCE_LUMBER)
-        else
         end
         IssueImmediateOrderBJ(GetEventDamageSource(), "berserk")
-    else
     end
 end
 --===========================================================================
@@ -42706,33 +42114,25 @@ function Trig_Dovorougenie_Code_O_Actions()
         ReplaceUnit2(GetTriggerUnit() , FourCC('h005') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
-        else
         end
-    else
     end
     if ( Trig_Dovorougenie_Code_Func002C() ) then
         ReplaceUnit2(GetTriggerUnit() , FourCC('h00S') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
-        else
         end
-    else
     end
     if ( Trig_Dovorougenie_Code_Func003C() ) then
         ReplaceUnit2(GetTriggerUnit() , FourCC('h02A') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
-        else
         end
-    else
     end
     if ( Trig_Dovorougenie_Code_Func004C() ) then
         ReplaceUnit2(GetTriggerUnit() , FourCC('n002') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
-        else
         end
-    else
     end
 end
 --===========================================================================
@@ -42767,33 +42167,25 @@ function Trig_Dovorougenie_2t_Code_O_Actions()
         ReplaceUnit2(GetTriggerUnit() , FourCC('h006') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
-        else
         end
-    else
     end
     if ( Trig_Dovorougenie_2t_Code_Func002C() ) then
         ReplaceUnit2(GetTriggerUnit() , FourCC('h00U') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
-        else
         end
-    else
     end
     if ( Trig_Dovorougenie_2t_Code_Func003C() ) then
         ReplaceUnit2(GetTriggerUnit() , FourCC('h02B') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
-        else
         end
-    else
     end
     if ( Trig_Dovorougenie_2t_Code_Func004C() ) then
         ReplaceUnit2(GetTriggerUnit() , FourCC('n004') , bj_UNIT_STATE_METHOD_RELATIVE)
         if ( Trig_Dovorougenie_3t_O_Copy_Func001C() ) then
             SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
-        else
         end
-    else
     end
 end
 --===========================================================================
@@ -42825,9 +42217,7 @@ function Trig_Dovorougenie_3t_O_Actions()
     ReplaceUnit2(GetTriggerUnit() , FourCC('h00Q') , bj_UNIT_STATE_METHOD_RELATIVE)
     if ( Trig_Dovorougenie_3t_O_Func002Func002C() ) then
         SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
-    else
     end
-else
 end
     MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
     i=0
@@ -43113,21 +42503,18 @@ function Trig_ResearhRobbery_Actions()
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
-    else
     end
     if ( Trig_ResearhRobbery_Func002C() ) then
         udg_Boolexpr = Trig_ResearhRobbery_Func002Func001002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
-    else
     end
     if ( Trig_ResearhRobbery_Func003C() ) then
         udg_Boolexpr = Trig_ResearhRobbery_Func003Func001002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func003Func004A)
         GroupClear(udg_LocalOtrad2)
-    else
     end
 end
 --===========================================================================
@@ -43156,15 +42543,12 @@ end
 function Trig_RobberyTrain_Actions()
     if ( Trig_RobberyTrain_Func002C() ) then
         SetUnitAbilityLevelSwapped(FourCC('A00M'), GetTrainedUnit(), 2)
-    else
     end
     if ( Trig_RobberyTrain_Func003C() ) then
         SetUnitAbilityLevelSwapped(FourCC('A00M'), GetTrainedUnit(), 3)
-    else
     end
     if ( Trig_RobberyTrain_Func004C() ) then
         SetUnitAbilityLevelSwapped(FourCC('A00M'), GetTrainedUnit(), 4)
-    else
     end
 end
 --===========================================================================
@@ -44312,7 +43696,6 @@ function Trig_NagaPas_Actions()
                 if ( Trig_NagaPas_Func002Func001Func002Func001C() ) then
                     UnitAddAbilityBJ(FourCC('A139'), GetTriggerUnit())
                     UnitRemoveAbilityBJ(FourCC('A138'), GetTriggerUnit())
-                else
                 end
             end
         end
@@ -45300,7 +44683,6 @@ function Trig_IllyFire_Actions()
                     TriggerSleepAction(15.00)
                     UnitRemoveAbilityBJ(FourCC('A0NQ'), GetTriggerUnit())
                     UnitRemoveAbilityBJ(FourCC('A0NN'), GetTriggerUnit())
-                else
                 end
             end
         end
@@ -45401,7 +44783,6 @@ end
 function Trig_SandStrike_Actions()
     if ( Trig_SandStrike_Func001C() ) then
         EnableTrigger(gg_trg_Sand_Strike_Loop)
-    else
     end
     udg_SSinteger[0]=( udg_SSinteger[0] + 1 )
     udg_SSinteger[1]=( udg_SSinteger[1] + 1 )
@@ -45450,7 +44831,6 @@ function Trig_Sand_Strike_Loop_Func001Func001Func007A()
     udg_SSpointmovepicked[udg_SSinteger[2]]=PolarProjectionBJ(udg_SSpointpicked[udg_SSinteger[2]], I2R(udg_SS[udg_SSinteger[2]]), GetUnitFacing(udg_SSpicked[udg_SSinteger[2]]))
     if ( Trig_Sand_Strike_Loop_Func001Func001Func007Func004C() ) then
         SetUnitPositionLoc(udg_SSpicked[udg_SSinteger[2]], udg_SSpointmovepicked[udg_SSinteger[2]])
-    else
     end
     UnitDamageTargetBJ(udg_SScaster[udg_SSinteger[2]], udg_SSpicked[udg_SSinteger[3]], udg_SSdamage[udg_SSinteger[2]], ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
     udg_SSpicked[udg_SSinteger[2]]=nil
@@ -45476,7 +44856,6 @@ function Trig_Sand_Strike_Loop_Actions()
             if ( Trig_Sand_Strike_Loop_Func001Func001Func003C() ) then
                 RemoveLocation(udg_SSpointmovecaster[udg_SSinteger[2]])
                 udg_SSpointmovecaster[udg_SSinteger[2]]=PolarProjectionBJ(udg_SSpointcaster[udg_SSinteger[2]], I2R(udg_SS[udg_SSinteger[2]]), ( udg_SSfacing[udg_SSinteger[2]] - 180.00 ))
-            else
             end
             udg_SSgroup[udg_SSinteger[2]]=GetUnitsInRangeOfLocMatching(150.00, udg_SSpointcaster[udg_SSinteger[2]], Condition(Trig_Sand_Strike_Loop_Func001Func001Func004002003))
             udg_SS[udg_SSinteger[2]]=( udg_SS[udg_SSinteger[2]] - 1 )
@@ -45492,11 +44871,8 @@ function Trig_Sand_Strike_Loop_Actions()
                 if ( Trig_Sand_Strike_Loop_Func001Func001Func011Func004C() ) then
                     udg_SSinteger[1]=0
                     DisableTrigger(GetTriggeringTrigger())
-                else
                 end
-            else
             end
-        else
         end
         udg_SSinteger[2]=udg_SSinteger[2] + 1
     end
@@ -45982,13 +45358,7 @@ end
 -- Trigger: ArhiTep
 --===========================================================================
 function Trig_ArhiTep_Func001C()
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == FourCC('N02G') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == FourCC('N02B') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetUnitTypeId(GetTrainedUnit()) == FourCC('N02G') ) )) or (( ( GetUnitTypeId(GetTrainedUnit()) == FourCC('N02B') ) ))
 end
 function Trig_ArhiTep_Conditions()
     return Trig_ArhiTep_Func001C()
@@ -46045,7 +45415,6 @@ function Trig_Buildings_Actions()
         udg_effect=GetLastCreatedEffectBJ()
         TriggerSleepAction(0.20)
         DestroyEffectBJ(udg_effect)
-    else
     end
 end
 --===========================================================================
@@ -46131,7 +45500,6 @@ function Trig_____________________________________001_Copy_Actions()
             else
                 if ( Trig_____________________________________001_Copy_Func004Func001Func001Func001C() ) then
                     UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), ( udg_Dm[1] * 0.04 ), ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
-                else
                 end
             end
         end
@@ -47149,17 +46517,10 @@ function Trig_Spell_E_Dvij_Func001Func001Func007A()
     if ( Trig_Spell_E_Dvij_Func001Func001Func007Func001C() ) then
         UnitDamageTargetBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1DA'), udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         GroupAddUnitSimple(GetEnumUnit(), udg_Group_E_Glaz[udg_Cikl_E_Glaz])
-    else
     end
 end
 function Trig_Spell_E_Dvij_Func001Func001Func008Func001C()
-    if ( ( IsUnitDeadBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz]) == true ) ) then
-        return true
-    end
-    if ( ( udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz] == 0.20 ) ) then
-        return true
-    end
-    return false
+    return (( ( IsUnitDeadBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz]) == true ) )) or (( ( udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz] == 0.20 ) ))
 end
 function Trig_Spell_E_Dvij_Func001Func001Func008Func008C()
     return ( udg_Antibag_E_Glaz[udg_MUI_E_Glaz] == 0 )
@@ -47192,12 +46553,9 @@ function Trig_Spell_E_Dvij_Actions()
                 if ( Trig_Spell_E_Dvij_Func001Func001Func008Func008C() ) then
                     PauseTimerBJ(true, udg_Timer_E_Glaz)
                     udg_MUI_E_Glaz=0
-                else
                 end
-            else
             end
             RemoveLocation(udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz])
-        else
         end
         udg_Cikl_E_Glaz=udg_Cikl_E_Glaz + 1
     end
@@ -47385,7 +46743,6 @@ end
 function Trig_DammyDeath_Copy_Actions()
     if ( Trig_DammyDeath_Copy_Func001C() ) then
         RemoveUnit(GetDyingUnit())
-    else
     end
 end
 --===========================================================================
@@ -49149,7 +48506,6 @@ function Trig_SpawnQtun_Actions()
         GroupClear(udg_LocalOtrad)
         RemoveLocation(udg_LocalPosition2)
         RemoveLocation(udg_LocalPosition3)
-    else
     end
     if ( Trig_SpawnQtun_Func003C() ) then
         udg_LocalInteger2=GetRandomInt(1, 2)
@@ -49166,7 +48522,6 @@ function Trig_SpawnQtun_Actions()
         GroupClear(udg_LocalOtrad)
         RemoveLocation(udg_LocalPosition2)
         RemoveLocation(udg_LocalPosition3)
-    else
     end
     if ( Trig_SpawnQtun_Func004C() ) then
         udg_LocalInteger2=GetRandomInt(1, 2)
@@ -49184,7 +48539,6 @@ function Trig_SpawnQtun_Actions()
         GroupClear(udg_LocalOtrad)
         RemoveLocation(udg_LocalPosition2)
         RemoveLocation(udg_LocalPosition3)
-    else
     end
     if ( Trig_SpawnQtun_Func005C() ) then
         udg_LocalInteger2=GetRandomInt(1, 2)
@@ -49202,7 +48556,6 @@ function Trig_SpawnQtun_Actions()
         GroupClear(udg_LocalOtrad)
         RemoveLocation(udg_LocalPosition2)
         RemoveLocation(udg_LocalPosition3)
-    else
     end
 end
 --===========================================================================
@@ -49338,31 +48691,26 @@ function Trig_QoggSpawn_Actions()
         CreateNUnitsAtLoc(1, FourCC('n04C'), p, udg_LocalPosition2, bj_UNIT_FACING)
         UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
-    else
     end
     if ( Trig_Spell1_Copy_2_Func004C() ) then
         CreateNUnitsAtLoc(1, FourCC('n03C'), p, udg_LocalPosition2, bj_UNIT_FACING)
         UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
-    else
     end
     if ( Trig_Spell1_Copy_2_Func005C() ) then
         CreateNUnitsAtLoc(1, FourCC('n04K'), p, udg_LocalPosition2, bj_UNIT_FACING)
         UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
-    else
     end
     if ( Trig_Spell1_Copy_2_Func006C() ) then
         CreateNUnitsAtLoc(1, FourCC('n04L'), p, udg_LocalPosition2, bj_UNIT_FACING)
         UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
-    else
     end
     if ( Trig_Spell1_Copy_2_Func007C() ) then
         CreateNUnitsAtLoc(1, FourCC('n04J'), p, udg_LocalPosition2, bj_UNIT_FACING)
         UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
-    else
     end
     
     p=nil

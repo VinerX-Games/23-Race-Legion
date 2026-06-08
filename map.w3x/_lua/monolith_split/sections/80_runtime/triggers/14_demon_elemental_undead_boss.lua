@@ -94,13 +94,7 @@ end
 -- Trigger: ArhiTep
 --===========================================================================
 function Trig_ArhiTep_Func001C()
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == FourCC('N02G') ) ) then
-        return true
-    end
-    if ( ( GetUnitTypeId(GetTrainedUnit()) == FourCC('N02B') ) ) then
-        return true
-    end
-    return false
+    return (( ( GetUnitTypeId(GetTrainedUnit()) == FourCC('N02G') ) )) or (( ( GetUnitTypeId(GetTrainedUnit()) == FourCC('N02B') ) ))
 end
 function Trig_ArhiTep_Conditions()
     return Trig_ArhiTep_Func001C()
@@ -157,7 +151,6 @@ function Trig_Buildings_Actions()
         udg_effect=GetLastCreatedEffectBJ()
         TriggerSleepAction(0.20)
         DestroyEffectBJ(udg_effect)
-    else
     end
 end
 --===========================================================================
@@ -243,7 +236,6 @@ function Trig_____________________________________001_Copy_Actions()
             else
                 if ( Trig_____________________________________001_Copy_Func004Func001Func001Func001C() ) then
                     UnitDamageTargetBJ(GetAttackedUnitBJ(), GetAttacker(), ( udg_Dm[1] * 0.04 ), ATTACK_TYPE_CHAOS, DAMAGE_TYPE_NORMAL)
-                else
                 end
             end
         end
@@ -1261,17 +1253,10 @@ function Trig_Spell_E_Dvij_Func001Func001Func007A()
     if ( Trig_Spell_E_Dvij_Func001Func001Func007Func001C() ) then
         UnitDamageTargetBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1DA'), udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         GroupAddUnitSimple(GetEnumUnit(), udg_Group_E_Glaz[udg_Cikl_E_Glaz])
-    else
     end
 end
 function Trig_Spell_E_Dvij_Func001Func001Func008Func001C()
-    if ( ( IsUnitDeadBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz]) == true ) ) then
-        return true
-    end
-    if ( ( udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz] == 0.20 ) ) then
-        return true
-    end
-    return false
+    return (( ( IsUnitDeadBJ(udg_Caster_E_Glaz[udg_Cikl_E_Glaz]) == true ) )) or (( ( udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz] == 0.20 ) ))
 end
 function Trig_Spell_E_Dvij_Func001Func001Func008Func008C()
     return ( udg_Antibag_E_Glaz[udg_MUI_E_Glaz] == 0 )
@@ -1304,12 +1289,9 @@ function Trig_Spell_E_Dvij_Actions()
                 if ( Trig_Spell_E_Dvij_Func001Func001Func008Func008C() ) then
                     PauseTimerBJ(true, udg_Timer_E_Glaz)
                     udg_MUI_E_Glaz=0
-                else
                 end
-            else
             end
             RemoveLocation(udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz])
-        else
         end
         udg_Cikl_E_Glaz=udg_Cikl_E_Glaz + 1
     end
@@ -1497,7 +1479,6 @@ end
 function Trig_DammyDeath_Copy_Actions()
     if ( Trig_DammyDeath_Copy_Func001C() ) then
         RemoveUnit(GetDyingUnit())
-    else
     end
 end
 --===========================================================================
@@ -3261,7 +3242,6 @@ function Trig_SpawnQtun_Actions()
         GroupClear(udg_LocalOtrad)
         RemoveLocation(udg_LocalPosition2)
         RemoveLocation(udg_LocalPosition3)
-    else
     end
     if ( Trig_SpawnQtun_Func003C() ) then
         udg_LocalInteger2=GetRandomInt(1, 2)
@@ -3278,7 +3258,6 @@ function Trig_SpawnQtun_Actions()
         GroupClear(udg_LocalOtrad)
         RemoveLocation(udg_LocalPosition2)
         RemoveLocation(udg_LocalPosition3)
-    else
     end
     if ( Trig_SpawnQtun_Func004C() ) then
         udg_LocalInteger2=GetRandomInt(1, 2)
@@ -3296,7 +3275,6 @@ function Trig_SpawnQtun_Actions()
         GroupClear(udg_LocalOtrad)
         RemoveLocation(udg_LocalPosition2)
         RemoveLocation(udg_LocalPosition3)
-    else
     end
     if ( Trig_SpawnQtun_Func005C() ) then
         udg_LocalInteger2=GetRandomInt(1, 2)
@@ -3314,7 +3292,6 @@ function Trig_SpawnQtun_Actions()
         GroupClear(udg_LocalOtrad)
         RemoveLocation(udg_LocalPosition2)
         RemoveLocation(udg_LocalPosition3)
-    else
     end
 end
 --===========================================================================
@@ -3450,31 +3427,26 @@ function Trig_QoggSpawn_Actions()
         CreateNUnitsAtLoc(1, FourCC('n04C'), p, udg_LocalPosition2, bj_UNIT_FACING)
         UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
-    else
     end
     if ( Trig_Spell1_Copy_2_Func004C() ) then
         CreateNUnitsAtLoc(1, FourCC('n03C'), p, udg_LocalPosition2, bj_UNIT_FACING)
         UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
-    else
     end
     if ( Trig_Spell1_Copy_2_Func005C() ) then
         CreateNUnitsAtLoc(1, FourCC('n04K'), p, udg_LocalPosition2, bj_UNIT_FACING)
         UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
-    else
     end
     if ( Trig_Spell1_Copy_2_Func006C() ) then
         CreateNUnitsAtLoc(1, FourCC('n04L'), p, udg_LocalPosition2, bj_UNIT_FACING)
         UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
-    else
     end
     if ( Trig_Spell1_Copy_2_Func007C() ) then
         CreateNUnitsAtLoc(1, FourCC('n04J'), p, udg_LocalPosition2, bj_UNIT_FACING)
         UnitApplyTimedLifeBJ(60, FourCC('BTLF'), GetLastCreatedUnit())
         return
-    else
     end
     
     p=nil

@@ -653,7 +653,6 @@ function IndexUnit()
 		udg_UnitIndexEvent = 1.00
 		udg_UnitIndexEvent = 0.00
 		udg_UDex = pdex
-	else
 	end
 	return false
 end
@@ -698,14 +697,12 @@ function IndexNewUnit()
 			end
 		end
 		udg_UDex = pdex
-	else
 	end
 	--   
 	--  Handle the entering unit (Matching unit)
 	--   
 	if (Trig_Unit_Indexer_Func034C()) then
 		IndexUnit()
-	else
 	end
 	return false
 end
@@ -759,106 +756,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_FarmTier2_Func001Func002C()
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0FR'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0H0'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h01Y'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h04B'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h05V'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h016'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0GP'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h008'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h034'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0CP'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0BR'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('e021'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('u00F'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('cD25'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('e020'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('etoa'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('e00L'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('e02C'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0CC'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0EA'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0DV'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0N8'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0ER'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('ostr'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0I7'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0JQ'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('hkee'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('o03D'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('o047'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0N1'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('w20w'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('o05W'))) then
-		return true
-	end
-	if ((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0IK'))) then
-		return true
-	end
-	return false
+	return (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0FR')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0H0')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h01Y')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h04B')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h05V')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h016')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0GP')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h008')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h034')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0CP')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0BR')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('e021')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('u00F')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('cD25')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('e020')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('etoa')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('e00L')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('e02C')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0CC')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0EA')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0DV')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0N8')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0ER')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('ostr')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0I7')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0JQ')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('hkee')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('o03D')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('o047')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0N1')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('w20w')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('o05W')))) or (((GetUnitTypeId(GetTriggerUnit()) == FourCC('h0IK'))))
 end
 ---@return boolean
 function Trig_FarmTier2_Func001C()
@@ -951,16 +849,7 @@ function Trig_FarmTier2_Res_Func001Func002Func003C()
 end
 ---@return boolean
 function Trig_FarmTier2_Res_Func001Func002C()
-	if (Trig_FarmTier2_Res_Func001Func002Func001C()) then
-		return true
-	end
-	if (Trig_FarmTier2_Res_Func001Func002Func002C()) then
-		return true
-	end
-	if (Trig_FarmTier2_Res_Func001Func002Func003C()) then
-		return true
-	end
-	return false
+	return ((Trig_FarmTier2_Res_Func001Func002Func001C())) or ((Trig_FarmTier2_Res_Func001Func002Func002C())) or ((Trig_FarmTier2_Res_Func001Func002Func003C()))
 end
 ---@return boolean
 function Trig_FarmTier2_Res_Func001C()
@@ -1220,16 +1109,7 @@ function Trig_FarmTier3_Res_Func002Func002Func003C()
 end
 ---@return boolean
 function Trig_FarmTier3_Res_Func002Func002C()
-	if (Trig_FarmTier3_Res_Func002Func002Func001C()) then
-		return true
-	end
-	if (Trig_FarmTier3_Res_Func002Func002Func002C()) then
-		return true
-	end
-	if (Trig_FarmTier3_Res_Func002Func002Func003C()) then
-		return true
-	end
-	return false
+	return ((Trig_FarmTier3_Res_Func002Func002Func001C())) or ((Trig_FarmTier3_Res_Func002Func002Func002C())) or ((Trig_FarmTier3_Res_Func002Func002Func003C()))
 end
 ---@return boolean
 function Trig_FarmTier3_Res_Func002C()
