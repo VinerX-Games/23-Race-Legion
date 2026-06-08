@@ -714,7 +714,7 @@ function Trig_LichinkaFinish_Actions()
     AddCountDis(gTriggerUnit , i)
     
     udg_LocalPosition[16]=GetUnitLoc(gTriggerUnit)
-    udg_Boolexpr = ItIsHive
+    udg_Boolexpr = Condition(ItIsHive)
     udg_LocalOtrad2=CreateGroup()
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[16], 300, udg_Boolexpr)
     -- ???? ???? ???? ????? ???? ????
@@ -741,12 +741,12 @@ function Trig_LichinkaFinish_Actions()
             aiUnitJoins(GetLastCreatedUnit(), i)
         end
         udg_LocalPosition[18]=GetUnitLoc(GetLastCreatedUnit())
-        udg_Boolexpr = ItIsHive
+        udg_Boolexpr = Condition(ItIsHive)
         GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[18], 300, udg_Boolexpr)
         
         IssueTargetDestructableOrder(GetLastCreatedUnit(), "harvest", GetUnitRallyDestructable(FirstOfGroup(udg_LocalOtrad2)))
         udg_LocalPosition[17]=GetUnitLoc(GetLastCreatedUnit())
-        udg_Boolexpr = ItIsHive
+        udg_Boolexpr = Condition(ItIsHive)
         GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition[17], 300, udg_Boolexpr)
         if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
             SelectUnitAddForPlayer(GetLastCreatedUnit(), gPlayer)
@@ -815,27 +815,11 @@ function Trig_LichinkaFinish_Actions()
         end
         
         
-        
-        -- ????????????
-        if GetPlayerTechCountSimple(FourCC('R089'), GetOwningPlayer(gTriggerUnit)) == 1 then
-            SetUnitAbilityLevelSwapped(FourCC('A0VH'), GetLastCreatedUnit(), 2)
-            SetUnitAbilityLevelSwapped(FourCC('A0VH'), gTriggerUnit, 2)
-            
-            CreateNUnitsAtLoc(1, FourCC('e02W'), gPlayer, udg_LocalPosition[16], bj_UNIT_FACING)
-            SetUnitAbilityLevelSwapped(FourCC('A0VH'), GetLastCreatedUnit(), 2)
-            IssuePointOrderLocBJ(GetLastCreatedUnit(), "attack", udg_LocalPosition[17])
-            if IsUnitSelected(gTriggerUnit, GetOwningPlayer(gTriggerUnit)) then
-                SelectUnitAddForPlayer(GetLastCreatedUnit(), gPlayer)
-            
-            end
-        
-            
-        end
-        
        
-   
+        
     
-    
+     
+     
     -- ----
     -- ???
     elseif id == FourCC('e01Q') and GetPlayerTechCountSimple(FourCC('R08B'), GetOwningPlayer(gTriggerUnit)) == 1 then
