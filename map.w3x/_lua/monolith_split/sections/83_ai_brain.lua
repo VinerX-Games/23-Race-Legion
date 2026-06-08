@@ -24,11 +24,24 @@ AiBrainDefaults = {
     squadCap     = 12,
     commitMin    = 8,
     guardFrac    = 0.2,
+    focusMargin  = 25.0,     -- hysteresis: keep current focus unless beaten by this
     weights = {
         kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
     },
 }
+
+-- Per-building-type "usefulness" for cluster scoring (production/income nodes >
+-- filler). Empty = every building worth the base 1.0. Populate from the map's
+-- economy module values later (food + ability levels). [typeId] = value.
+AiBuildingValue = AiBuildingValue or {}
+---@param id integer
+---@return real
+function AiBldValue(id)
+    local v = AiBuildingValue[id]
+    if v == nil then return 1.0 end
+    return v
+end
 
 ---@param pi integer
 ---@return table
@@ -60,10 +73,19 @@ function AiBrainEnabled(pi)
 end
 
 -- ---- logging -------------------------------------------------------
+-- Tags (toggle independently with `-log on:<TAG>`): BRAIN (general/perceive),
+-- BRAINOBJ (objective collection), BRAINFOC (focus pick + ordering). All silent
+-- until enabled. Write generously — we tune the verbosity in bulk later.
+---@param pi integer
+---@param tag string
+---@param msg string
+function BrainLogTag(pi, tag, msg)
+    ProbeLogWrite("[" .. tag .. "] pi=" .. tostring(pi) .. " " .. msg)
+end
 ---@param pi integer
 ---@param msg string
 function BrainLog(pi, msg)
-    ProbeLogWrite("[BRAIN] pi=" .. tostring(pi) .. " " .. msg)
+    BrainLogTag(pi, "BRAIN", msg)
 end
 
 -- Log at most once per `n` calls of (pi,key). Counter lives in the world model.
@@ -175,6 +197,139 @@ function AiSquadsOf(pi)
     return t
 end
 
+-- ---- objectives (cluster collection + scoring) ---------------------
+-- Grid-bucket capturable/enemy buildings into objective clusters. One pass over
+-- the curated groups udg_StolicaGroups (capitals) and udg_ZahvatBuildings (Risk
+-- capture targets) — bounded, no full-map enum. Value sums per cluster; NOT HP.
+---@param pi integer
+---@param wm table
+---@return table
+function AiBrainCollectObjectives(pi, wm)
+    local cfg = AiBrainCfg(pi)
+    local cell = cfg.rCluster or AiBrainDefaults.rCluster
+    local me = Player(pi)
+    local buckets = {}
+
+    local function consider(u, kind)
+        if u == nil or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then return end
+        local owner = GetOwningPlayer(u)
+        if owner == me or IsPlayerAlly(owner, me) then return end
+        if kind == "capital" and not IsPlayerEnemy(owner, me) then return end
+        local x, y = GetUnitX(u), GetUnitY(u)
+        local key = R2I(x / cell) * 100000 + R2I(y / cell)
+        local b = buckets[key]
+        if b == nil then
+            b = { sx = 0.0, sy = 0.0, value = 0.0, count = 0, kind = kind }
+            buckets[key] = b
+        end
+        b.sx = b.sx + x
+        b.sy = b.sy + y
+        b.value = b.value + AiBldValue(GetUnitTypeId(u))
+        b.count = b.count + 1
+        if kind == "capital" then b.kind = "capital" end
+    end
+
+    local function scanGroup(g, kind)
+        if g == nil then return end
+        local n = BlzGroupGetSize(g)
+        local i = 0
+        while i < n do
+            consider(BlzGroupUnitAt(g, i), kind)
+            i = i + 1
+        end
+    end
+
+    scanGroup(udg_StolicaGroups, "capital")
+    scanGroup(udg_ZahvatBuildings, "capture")
+
+    local objs = {}
+    for key, b in pairs(buckets) do
+        objs[#objs + 1] = {
+            key = key, kind = b.kind, count = b.count, value = b.value,
+            x = b.sx / b.count, y = b.sy / b.count, score = 0.0,
+        }
+    end
+    wm.objectives = objs
+    BrainLogTag(pi, "BRAINOBJ", "collected n=" .. tostring(#objs)
+        .. " (capitals+capture, cell=" .. tostring(R2I(cell)) .. ")")
+    return objs
+end
+
+---@param pi integer
+---@param wm table
+---@param o table
+---@return real
+function AiObjScore(pi, wm, o)
+    local cfg = AiBrainCfg(pi)
+    local w = cfg.weights or AiBrainDefaults.weights
+    local kindBase = (w.kind and w.kind[o.kind]) or 0
+    local dx = (wm.cx or 0.0) - o.x
+    local dy = (wm.cy or 0.0) - o.y
+    local dist = SquareRoot(dx * dx + dy * dy)
+    return kindBase + (w.value or 1.0) * o.value - (w.dist or 0.002) * dist
+end
+
+-- Highest-scoring objective with hysteresis: stick to current focus unless a
+-- candidate beats it by focusMargin, so the army doesn't thrash every tick.
+---@param pi integer
+---@param wm table
+---@return table|nil
+function AiBrainPickFocus(pi, wm)
+    local objs = wm.objectives
+    if objs == nil or #objs == 0 then
+        wm.focusKey = nil
+        return nil
+    end
+    local best, bestScore = nil, -1e30
+    local cur, curScore = nil, nil
+    for _, o in ipairs(objs) do
+        o.score = AiObjScore(pi, wm, o)
+        if o.score > bestScore then best = o; bestScore = o.score end
+        if wm.focusKey ~= nil and o.key == wm.focusKey then cur = o; curScore = o.score end
+    end
+    local margin = AiBrainCfg(pi).focusMargin or AiBrainDefaults.focusMargin
+    if cur ~= nil and bestScore <= curScore + margin then
+        return cur
+    end
+    wm.focusKey = best.key
+    return best
+end
+
+-- Order all currently-idle army units (B_Lazy) toward the focus point as
+-- attack-move, in chunks. Concentration of force: everyone converges on one
+-- objective instead of each picking a random local enemy. Returns count ordered.
+---@param pi integer
+---@param p player
+---@param focus table
+---@return integer
+function AiBrainActFocus(pi, p, focus)
+    if gAllyGroup == nil then gAllyGroup = CreateGroup() end
+    if gSubGroup == nil then gSubGroup = CreateGroup() end
+    CheckPlayer = p
+    LazyCount = 0
+    GroupEnumUnitsOfPlayer(gAllyGroup, p, B_Lazy)
+    GroupClear(gSubGroup)
+    local ordered, cnt = 0, 0
+    while true do
+        local u = FirstOfGroup(gAllyGroup)
+        if u == nil then break end
+        GroupRemoveUnit(gAllyGroup, u)
+        GroupAddUnit(gSubGroup, u)
+        cnt = cnt + 1
+        ordered = ordered + 1
+        if cnt >= 12 then
+            GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
+            GroupClear(gSubGroup)
+            cnt = 0
+        end
+    end
+    if cnt > 0 then
+        GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
+        GroupClear(gSubGroup)
+    end
+    return ordered
+end
+
 -- ---- army tick dispatch --------------------------------------------
 -- Legacy swarm body, extracted verbatim from PlayerArmy so both the swarm path
 -- and the (Phase 1 observational) brain path share one implementation.
@@ -207,9 +362,10 @@ function AiArmyLegacyTick(p)
     end
 end
 
--- Entry point when a bot has an active brain. Phase 1: observe (perceive + log)
--- then fall back to swarm so behavior is unchanged. Phase 2 replaces the body
--- with objective planning + squad ticks.
+-- Entry point when a bot has an active brain ("objective"). Perceive → refresh
+-- objectives on schedule → pick a focus (force concentration) → order idle army
+-- there. Falls back to swarm when there are no objectives. Phase 3 adds defense
+-- recall + TP logistics; persistent squad FSM is a later refinement.
 ---@param pi integer
 ---@param p player
 function AiBrainArmyTick(pi, p)
@@ -218,5 +374,28 @@ function AiBrainArmyTick(pi, p)
         "perceive army=" .. tostring(wm.armyCount)
         .. " threatHome=" .. tostring(R2I(wm.threatHome or 0))
         .. " capHP=" .. tostring(R2I(wm.capHP or 0)))
-    AiArmyLegacyTick(p)
+
+    local cfg = AiBrainCfg(pi)
+    local every = cfg.clusterEvery or AiBrainDefaults.clusterEvery
+    if wm.objectives == nil or (wm.tick % every) == 0 then
+        AiBrainCollectObjectives(pi, wm)
+    end
+
+    local focus = AiBrainPickFocus(pi, wm)
+    if focus == nil then
+        BrainLogEvery(pi, "nofocus", 5, "no objectives -> swarm fallback")
+        AiArmyLegacyTick(p)
+        return
+    end
+
+    local ordered = AiBrainActFocus(pi, p, focus)
+    if wm.focusKey ~= wm.lastLoggedFocus then
+        wm.lastLoggedFocus = wm.focusKey
+        BrainLogTag(pi, "BRAINFOC", "focus kind=" .. tostring(focus.kind)
+            .. " x=" .. tostring(R2I(focus.x)) .. " y=" .. tostring(R2I(focus.y))
+            .. " val=" .. tostring(R2I(focus.value)) .. " cnt=" .. tostring(focus.count)
+            .. " score=" .. tostring(R2I(focus.score or 0)) .. " ordered=" .. tostring(ordered))
+    else
+        BrainLogEvery(pi, "act", 8, "focus stable ordered=" .. tostring(ordered))
+    end
 end
