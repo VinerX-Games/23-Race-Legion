@@ -23,13 +23,19 @@ SP = Path(__file__).resolve().parent / "map.w3x" / "_lua" / "monolith_split"
 SE = SP / "sections"
 
 # bundle relpath -> (first_target, [(boundary_trigger_name, target_relpath), ...])
+R = "80_runtime/triggers/races/"
 PLAN = {
-    "80_runtime/triggers/12_silitid_goblin_bloodelf_bandit.lua": (
-        "80_runtime/triggers/races/Silitids.lua",
+    "80_runtime/triggers/08_undead_trolls.lua": (
+        R + "Undead.lua",
         [
-            ("GoblinsOn", "80_runtime/triggers/races/Goblins.lua"),
-            ("BloodElvesOn", "80_runtime/triggers/races/BloodElves.lua"),
-            ("BanditsOn", "80_runtime/triggers/races/Bandits.lua"),
+            ("StartForestTrolls", R + "ForestTrolls.lua"),
+            ("StartJungleTrools", R + "JungleTrolls.lua"),
+        ],
+    ),
+    "80_runtime/triggers/10_forsaken_gnomes.lua": (
+        R + "Forsaken.lua",
+        [
+            ("GnomesOn", R + "Gnomes.lua"),
         ],
     ),
 }

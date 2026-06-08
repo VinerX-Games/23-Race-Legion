@@ -1,7 +1,7 @@
 {
   "source_path": "C:\\Games\\23 Race\\23-Race-Legion\\map.w3x\\war3map.lua",
   "source_sha256": "792927cbbe157c7a51058b227bb5777439ece613e12beeb740d2e29634d72259",
-  "section_count": 93,
+  "section_count": 96,
   "sections": [
     {
       "name": "prelude",
@@ -604,8 +604,24 @@
       "library_name": null
     },
     {
-      "name": "gen:triggers_08_undead_trolls",
-      "file": "80_runtime/triggers/08_undead_trolls.lua",
+      "name": "gen:Undead",
+      "file": "80_runtime/triggers/races/Undead.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:ForestTrolls",
+      "file": "80_runtime/triggers/races/ForestTrolls.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:JungleTrolls",
+      "file": "80_runtime/triggers/races/JungleTrolls.lua",
       "category": "generated_runtime",
       "start_line": 0,
       "end_line": 0,
@@ -620,8 +636,16 @@
       "library_name": null
     },
     {
-      "name": "gen:triggers_10_forsaken_gnomes",
-      "file": "80_runtime/triggers/10_forsaken_gnomes.lua",
+      "name": "gen:Forsaken",
+      "file": "80_runtime/triggers/races/Forsaken.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Gnomes",
+      "file": "80_runtime/triggers/races/Gnomes.lua",
       "category": "generated_runtime",
       "start_line": 0,
       "end_line": 0,
