@@ -201,6 +201,7 @@ function AiBrainPerceive(pi)
 
     local cx, cy, n = AiGroupCentroid(udg_Ai_army[pi])
     wm.cx, wm.cy, wm.armyCount = cx, cy, n
+    wm.armyContinent = n > 0 and AiContinentOf(cx, cy) or nil
 
     local cfg = AiBrainCfg(pi)
     local prevCapHP = wm.capHP
@@ -424,6 +425,42 @@ function AiArmyLegacyTick(p)
     end
 end
 
+-- Order idle army to a portal unit: "smart" toward it (not attack), give A1GZ
+-- portal vision. If army centroid is close enough, activate the portal.
+---@param pi integer
+---@param p player
+---@param portal unit
+---@return integer number of units ordered
+function AiBrainOrderToPortal(pi, p, portal)
+    if gAllyGroup == nil then gAllyGroup = CreateGroup() end
+    if gSubGroup == nil then gSubGroup = CreateGroup() end
+    CheckPlayer = p
+    GroupEnumUnitsOfPlayer(gAllyGroup, p, B_Lazy)
+    local px, py = GetUnitX(portal), GetUnitY(portal)
+    GroupClear(gSubGroup)
+    while true do
+        local u = FirstOfGroup(gAllyGroup)
+        if u == nil then break end
+        UnitAddAbility(u, FourCC('A1GZ'))
+        GroupRemoveUnit(gAllyGroup, u)
+        GroupAddUnit(gSubGroup, u)
+    end
+    local cx, cy, _ = AiGroupCentroid(udg_Ai_army[pi])
+    local dx, dy = cx - px, cy - py
+    local dist = SquareRoot(dx * dx + dy * dy)
+    if dist <= 2500 then
+        IssueImmediateOrder(portal, "web")
+        BlzEndUnitAbilityCooldown(portal, FourCC('A0HY'))
+        BrainLogEvery(pi, "portalact", 8, "portal activate " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)), "BRAINPORTAL")
+    else
+        GroupPointOrder(gSubGroup, "smart", px, py)
+        BrainLogEvery(pi, "portalmove", 8, "portal walk to " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)) .. " dist=" .. tostring(R2I(dist)), "BRAINPORTAL")
+    end
+    GroupClear(gSubGroup)
+    local n = GetLocalizedHotkey("G") -- dummy: count ordered
+    return dist <= 2500 and 0 or 1
+end
+
 -- Entry point when a bot has an active brain ("objective"). Perceive → refresh
 -- objectives on schedule → pick a focus (force concentration) → order idle army
 -- there. Falls back to swarm when there are no objectives. Phase 3 adds defense
@@ -461,6 +498,48 @@ function AiBrainArmyTick(pi, p)
         return
     end
 
+    local focusContinent = AiContinentOf(focus.x, focus.y)
+    local armyContinent = wm.armyContinent
+    BrainLogEvery(pi, "focusinfo", 8, "focus " .. tostring(focusContinent or "?") .. " army " .. tostring(armyContinent or "?"))
+
+    -- Cross-continent focus: try targeted TP first, then portal walk.
+    if focusContinent ~= nil and armyContinent ~= nil and focusContinent ~= armyContinent then
+        -- (A) Targeted TP: teleport army to a mage already on the focus continent.
+        local targetMage = AiFindMageOnContinent(pi, focusContinent)
+        if targetMage ~= nil then
+            BrainLogEvery(pi, "tptarget", 3,
+                "targeted TP " .. tostring(armyContinent) .. "->" .. tostring(focusContinent)
+                .. " mage at " .. tostring(R2I(GetUnitX(targetMage))) .. "," .. tostring(R2I(GetUnitY(targetMage))),
+                "BRAINTP")
+            gPi = pi
+            gPlayer = p
+            PortTo(targetMage)
+            return
+        end
+
+        -- (B) Portal walk: find a chain of portals to the focus continent.
+        local route = AiPortalRoute(armyContinent, focusContinent)
+        if route ~= nil and #route >= 2 then
+            local portal = AiFindPortal(route[1], route[2])
+            if portal ~= nil then
+                BrainLogEvery(pi, "portalroute", 5,
+                    "portal route " .. route[1] .. "->" .. route[2]
+                    .. " (" .. #route .. " hops to " .. focusContinent .. ")",
+                    "BRAINPORTAL")
+                AiBrainOrderToPortal(pi, p, portal)
+                return
+            else
+                BrainLogEvery(pi, "portalnope", 10,
+                    "portal route exists but no portal unit found for " .. route[1] .. "->" .. route[2],
+                    "BRAINPORTAL")
+            end
+        end
+
+        -- (C) TP logistics fallback: old behaviour (port to any enemy).
+        if AiBrainTryLogistics(pi, p, focus, wm) then return end
+    end
+
+    -- Same continent: standard logistics + force concentration.
     AiBrainTryLogistics(pi, p, focus, wm)
     local ordered = AiBrainOrderIdleTo(pi, p, focus.x, focus.y)
     if wm.focusKey ~= wm.lastLoggedFocus then

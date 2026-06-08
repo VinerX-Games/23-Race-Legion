@@ -3325,8 +3325,11 @@ end
 ---@param message string
 ---@return nothing
 function AiProbeLogLimited(pi, key, limit, message)
-	-- Army/diagnostic AI logging silenced (debug complete). Restore the body below
-	-- (StringHash/LoadInteger gate + ProbeLogWrite) to re-enable for future debugging.
+	local count = AiData[pi][StringHash(key)] or 0
+	if count < limit then
+		AiData[pi][StringHash(key)] = count + 1
+		ProbeLogWrite(message)
+	end
 end
 ---@return boolean
 function f_Lazy()
@@ -3411,9 +3414,20 @@ function f_OnlyNeaded()
 	
 	gInt = GetUnitTypeId(gUnit)
 	local race = AiRaces[AiRace[gPi]]
-	if race ~= nil and race.production ~= nil and race.production[gInt] ~= nil then
-		Counter = Counter + 1
-		return true
+	if race ~= nil and race.production ~= nil then
+		if race.production[gInt] ~= nil then
+			Counter = Counter + 1
+			return true
+		end
+		local w = race.production.worker
+		if w and w.from then
+			for _, bid in ipairs(w.from) do
+				if gInt == bid then
+					Counter = Counter + 1
+					return true
+				end
+			end
+		end
 	end
 	return false
 end
@@ -4192,6 +4206,27 @@ end
 ---@return nothing
 function NumberResetAll(pi)
 	g_AiCounts[pi] = nil
+end
+---@param pi integer
+---@return number
+function AiSyncCounts(pi)
+	local tbl = {}
+	ForGroup(udg_Ai_units[pi], function()
+		local id = GetUnitTypeId(GetEnumUnit())
+		tbl[id] = (tbl[id] or 0) + 1
+	end)
+	local drifted = 0
+	local cts = g_AiCounts[pi]
+	if cts == nil then cts = {}; g_AiCounts[pi] = cts end
+	for id, cnt in pairs(tbl) do
+		local old = cts[id] or 0
+		if old ~= cnt then
+			cts[id] = cnt
+			drifted = drifted + 1
+			ProbeLogWrite("[AISYNC] pi=" .. pi .. " id=" .. id .. " old=" .. old .. " new=" .. cnt)
+		end
+	end
+	return drifted
 end
 -- ***************************************************************************
 -- *  HasEnemyNear
@@ -8415,6 +8450,59 @@ function SetLimits(p)
 	SetPlayerTechMaxAllowedSwap(FourCC('N058'), 1, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('O031'), 1, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('O030'), 1, p)
+	-- Bandits
+	SetPlayerTechMaxAllowedSwap(FourCC('H047'), 1, p)
+	-- Goblins
+	SetPlayerTechMaxAllowedSwap(FourCC('H0BD'), 1, p)
+	-- Naga
+	SetPlayerTechMaxAllowedSwap(FourCC('H0JV'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('H0JU'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('N07A'), 1, p)
+	-- Stromgard
+	SetPlayerTechMaxAllowedSwap(FourCC('H0HB'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('H0HL'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('H0HA'), 1, p)
+	-- Ogres
+	SetPlayerTechMaxAllowedSwap(FourCC('N05J'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('N05K'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('N05L'), 1, p)
+	-- Pandarens
+	SetPlayerTechMaxAllowedSwap(FourCC('PA36'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('PA37'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('PA38'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('PA40'), 1, p)
+	-- Bezlikie
+	SetPlayerTechMaxAllowedSwap(FourCC('U02H'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('U02G'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('U02I'), 1, p)
+	-- JungleTrolls
+	SetPlayerTechMaxAllowedSwap(FourCC('O054'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('O05A'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('O05D'), 1, p)
+	-- Worgen
+	SetPlayerTechMaxAllowedSwap(FourCC('H0J2'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('H0J6'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('H0J7'), 1, p)
+	-- IceTrolls
+	SetPlayerTechMaxAllowedSwap(FourCC('O04H'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('O04G'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('O04I'), 1, p)
+	-- FelOrc
+	SetPlayerTechMaxAllowedSwap(FourCC('N072'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('N073'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('N06P'), 1, p)
+	-- Ents
+	SetPlayerTechMaxAllowedSwap(FourCC('E02Q'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('E02R'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('E02S'), 1, p)
+	-- Gnomes
+	SetPlayerTechMaxAllowedSwap(FourCC('H0GC'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('H0GE'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('H0GG'), 1, p)
+	-- Silitids
+	SetPlayerTechMaxAllowedSwap(FourCC('U023'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('U024'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('U025'), 1, p)
 end
 -- Принудительный выбор расы AI по текстовому токену (для команды "-aiN <раса>"
 -- и CLI-агента). Возвращает true, если токен распознан и раса запущена.
@@ -11365,7 +11453,15 @@ function TryAttack()
 			ProcessContinentalStuff(gX, gY, gEnemyGroup)
 		end
 		
-		
+		Counter = BlzGroupGetSize(gEnemyGroup)
+		EnemyCapital = nil
+		for i = 0, Counter - 1 do
+			local u = BlzGroupUnitAt(gEnemyGroup, i)
+			if u ~= nil and IsUnitInGroup(u, udg_StolicaGroups) then
+				EnemyCapital = u
+				break
+			end
+		end
 		
 		--  ???? ???????? ?????? ?? ???????
 		if EnemyCapital ~= nil and Random(1, 2) then
@@ -11506,6 +11602,15 @@ function TryAttack()
 				ProcessContinentalStuff(gX, gY, gEnemyGroup)
 			end
 			
+			Counter = BlzGroupGetSize(gEnemyGroup)
+			EnemyCapital = nil
+			for i = 0, Counter - 1 do
+				local u = BlzGroupUnitAt(gEnemyGroup, i)
+				if u ~= nil and IsUnitInGroup(u, udg_StolicaGroups) then
+					EnemyCapital = u
+					break
+				end
+			end
 			
 			--  ???? ???????? ?????? ?? ???????
 			if EnemyCapital ~= nil and Random(1, 4) then
@@ -32571,13 +32676,8 @@ function Trig_GnomesStart_Func002A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A0U9'), GetEnumPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC('A0UA'), GetEnumPlayer())
 end
-function Trig_GnomesStart_Func002A_BotFilter()
-    if not udg_AiControl[GetPlayerId(GetEnumPlayer())] then
-        Trig_GnomesStart_Func002A()
-    end
-end
 function Trig_GnomesStart_Actions()
-    ForForce(udg_AllPlayers, Trig_GnomesStart_Func002A_BotFilter)
+    ForForce(udg_AllPlayers, Trig_GnomesStart_Func002A)
 end
 --===========================================================================
 function InitTrig_GnomesStart()
@@ -49526,6 +49626,12 @@ function Trig_PereborBuildings_Code_Func002A()
     udg_LocalInteger2=GetPlayerId(gPlayer)
     gPi=GetPlayerId(gPlayer)
     Counter=0
+    -- Reconcile g_AiCounts with actual Ai_units (drift guard for morph races like Ents)
+    local syncTick = AiData[gPi][StringHash("SyncTick")] or 0
+    if Counter == 0 and (syncTick % 3) == 0 then
+        pcall(function() AiSyncCounts(gPi) end)
+    end
+    AiData[gPi][StringHash("SyncTick")] = syncTick + 1
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_OnlyNeaded)
     local numberCount = AiData[gPi][StringHash("Number")] or 0
     -- ??????? ???? 0 ??? ????? ??????
@@ -59793,6 +59899,7 @@ function AiBrainPerceive(pi)
 
     local cx, cy, n = AiGroupCentroid(udg_Ai_army[pi])
     wm.cx, wm.cy, wm.armyCount = cx, cy, n
+    wm.armyContinent = n > 0 and AiContinentOf(cx, cy) or nil
 
     local cfg = AiBrainCfg(pi)
     local prevCapHP = wm.capHP
@@ -60016,6 +60123,42 @@ function AiArmyLegacyTick(p)
     end
 end
 
+-- Order idle army to a portal unit: "smart" toward it (not attack), give A1GZ
+-- portal vision. If army centroid is close enough, activate the portal.
+---@param pi integer
+---@param p player
+---@param portal unit
+---@return integer number of units ordered
+function AiBrainOrderToPortal(pi, p, portal)
+    if gAllyGroup == nil then gAllyGroup = CreateGroup() end
+    if gSubGroup == nil then gSubGroup = CreateGroup() end
+    CheckPlayer = p
+    GroupEnumUnitsOfPlayer(gAllyGroup, p, B_Lazy)
+    local px, py = GetUnitX(portal), GetUnitY(portal)
+    GroupClear(gSubGroup)
+    while true do
+        local u = FirstOfGroup(gAllyGroup)
+        if u == nil then break end
+        UnitAddAbility(u, FourCC('A1GZ'))
+        GroupRemoveUnit(gAllyGroup, u)
+        GroupAddUnit(gSubGroup, u)
+    end
+    local cx, cy, _ = AiGroupCentroid(udg_Ai_army[pi])
+    local dx, dy = cx - px, cy - py
+    local dist = SquareRoot(dx * dx + dy * dy)
+    if dist <= 2500 then
+        IssueImmediateOrder(portal, "web")
+        BlzEndUnitAbilityCooldown(portal, FourCC('A0HY'))
+        BrainLogEvery(pi, "portalact", 8, "portal activate " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)), "BRAINPORTAL")
+    else
+        GroupPointOrder(gSubGroup, "smart", px, py)
+        BrainLogEvery(pi, "portalmove", 8, "portal walk to " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)) .. " dist=" .. tostring(R2I(dist)), "BRAINPORTAL")
+    end
+    GroupClear(gSubGroup)
+    local n = GetLocalizedHotkey("G") -- dummy: count ordered
+    return dist <= 2500 and 0 or 1
+end
+
 -- Entry point when a bot has an active brain ("objective"). Perceive → refresh
 -- objectives on schedule → pick a focus (force concentration) → order idle army
 -- there. Falls back to swarm when there are no objectives. Phase 3 adds defense
@@ -60053,6 +60196,48 @@ function AiBrainArmyTick(pi, p)
         return
     end
 
+    local focusContinent = AiContinentOf(focus.x, focus.y)
+    local armyContinent = wm.armyContinent
+    BrainLogEvery(pi, "focusinfo", 8, "focus " .. tostring(focusContinent or "?") .. " army " .. tostring(armyContinent or "?"))
+
+    -- Cross-continent focus: try targeted TP first, then portal walk.
+    if focusContinent ~= nil and armyContinent ~= nil and focusContinent ~= armyContinent then
+        -- (A) Targeted TP: teleport army to a mage already on the focus continent.
+        local targetMage = AiFindMageOnContinent(pi, focusContinent)
+        if targetMage ~= nil then
+            BrainLogEvery(pi, "tptarget", 3,
+                "targeted TP " .. tostring(armyContinent) .. "->" .. tostring(focusContinent)
+                .. " mage at " .. tostring(R2I(GetUnitX(targetMage))) .. "," .. tostring(R2I(GetUnitY(targetMage))),
+                "BRAINTP")
+            gPi = pi
+            gPlayer = p
+            PortTo(targetMage)
+            return
+        end
+
+        -- (B) Portal walk: find a chain of portals to the focus continent.
+        local route = AiPortalRoute(armyContinent, focusContinent)
+        if route ~= nil and #route >= 2 then
+            local portal = AiFindPortal(route[1], route[2])
+            if portal ~= nil then
+                BrainLogEvery(pi, "portalroute", 5,
+                    "portal route " .. route[1] .. "->" .. route[2]
+                    .. " (" .. #route .. " hops to " .. focusContinent .. ")",
+                    "BRAINPORTAL")
+                AiBrainOrderToPortal(pi, p, portal)
+                return
+            else
+                BrainLogEvery(pi, "portalnope", 10,
+                    "portal route exists but no portal unit found for " .. route[1] .. "->" .. route[2],
+                    "BRAINPORTAL")
+            end
+        end
+
+        -- (C) TP logistics fallback: old behaviour (port to any enemy).
+        if AiBrainTryLogistics(pi, p, focus, wm) then return end
+    end
+
+    -- Same continent: standard logistics + force concentration.
     AiBrainTryLogistics(pi, p, focus, wm)
     local ordered = AiBrainOrderIdleTo(pi, p, focus.x, focus.y)
     if wm.focusKey ~= wm.lastLoggedFocus then
@@ -60172,6 +60357,247 @@ function AiPickByComposition(pi, def)
         i = i + 1
     end
     return bestId
+end
+-- ====================================================================
+-- AiPortalGraph: static continent adjacency for inter-continent routing.
+-- Baked from ai_portal_graph_probe.lua (73 portals, 37 directed edges).
+-- Water portals (n01D) excluded. EmeraldDream nodes have no valid dst.
+-- ====================================================================
+
+AiPortalGraph = {
+    Ankirag          = { Kalimdor = true },
+    Argus            = { BrokenIsles = true, Kalimdor = true },
+    Azgel            = { Kalimdor = true, Northrend = true },
+    BlackMountain    = { EasternKingdoms = true },
+    BrokenIsles      = { Argus = true },
+    DeadMines        = { EasternKingdoms = true },
+    EasternDungeons  = { EasternKingdoms = true },
+    EasternKingdoms  = { BlackMountain = true, BrokenIsles = true, DeadMines = true,
+                          EasternDungeons = true, Kalimdor = true, Outland = true,
+                          Uldum = true, Undercity = true },
+    EmeraldDream     = {},
+    Kalimdor         = { Ankirag = true, Argus = true, Azgel = true,
+                          EasternKingdoms = true, Maradon = true, Orgrimmar = true,
+                          Outland = true },
+    Maradon          = { Kalimdor = true },
+    Naxramas         = { Northrend = true },
+    Northrend        = { Azgel = true },
+    Orgrimmar        = { Kalimdor = true },
+    Outland          = { EasternKingdoms = true, Kalimdor = true },
+    Uldum            = { EasternKingdoms = true },
+    Undercity        = { EasternKingdoms = true },
+}
+
+-- Continent lookup rects — mirrors ProcessContinentalStuff priority order:
+-- 1. Kalimdor (Kalim NOT NordNotKalim)
+-- 2. EasternKingdoms (+dungeons) NOT OkeaniaNoVk/KillDalaran
+-- 3. Northrend (+Azgel+NordNotKalim)
+-- 4. Pandaria
+-- 5. Outland (+OutNoVk) NOT VknotOut
+-- 6. BrokenIsles
+-- 7. Argus
+-- Then sub-zone rects for finer classification (checked after main continents
+-- so dungeons snap to parent-continent groups during routing when they touch).
+AiContinentRects = {
+    { "Kalimdor",       gg_rct_Kalim,           gg_rct_NordNotKalim },
+    { "EasternKingdoms", gg_rct_EastenKingdoms,  gg_rct_OkeaniaNoVk, gg_rct_KillDalaran,
+                         gg_rct_EasternDungeons, gg_rct_BlackMountain, gg_rct_VknotOut },
+    { "Northrend",      gg_rct_Nord,             nil, nil, nil, nil, nil,
+                         gg_rct_Azgel,           gg_rct_NordNotKalim },
+    { "Pandaria",       gg_rct_Pandaria },
+    { "Outland",        gg_rct_Outland,          gg_rct_VknotOut, nil, nil,
+                         gg_rct_OutNoVk },
+    { "BrokenIsles",    gg_rct_BrokenIsles },
+    { "Argus",          gg_rct_Argus },
+    { "Azgel",          gg_rct_Azgel },
+    { "Ankirag",        gg_rct_Ankirag },
+    { "BlackMountain",  gg_rct_BlackMountain },
+    { "Orgrimmar",      gg_rct_Orgrimmar },
+    { "Uldum",          gg_rct_Uldum },
+    { "Undercity",      gg_rct_Undercity },
+    { "Maradon",        gg_rct_Maradon },
+    { "DeadMines",      gg_rct_DeadMines },
+    { "Naxramas",       gg_rct_Naxramas },
+    { "EasternDungeons", gg_rct_EasternDungeons },
+    { "EmeraldDream",   gg_rct_EmeraldDream },
+}
+
+-- return 0: index of the last positive-or-nil rect arg (rect count varies per entry)
+local function AiContinentRectCount(entry)
+    local n = 0
+    while n < 8 do
+        local v = entry[n + 2]
+        if v == nil then break end
+        n = n + 1
+    end
+    return n
+end
+
+---@param x real
+---@param y real
+---@return string|nil continent name
+function AiContinentOf(x, y)
+    -- Main continents with exclusion logic (order = ProcessContinentalStuff)
+    if RectContainsCoords(gg_rct_Kalim, x, y) and not RectContainsCoords(gg_rct_NordNotKalim, x, y) then
+        return "Kalimdor"
+    end
+    if (RectContainsCoords(gg_rct_EastenKingdoms, x, y) or RectContainsCoords(gg_rct_EasternDungeons, x, y) or RectContainsCoords(gg_rct_BlackMountain, x, y) or RectContainsCoords(gg_rct_VknotOut, x, y)) and not (RectContainsCoords(gg_rct_OkeaniaNoVk, x, y) or RectContainsCoords(gg_rct_KillDalaran, x, y)) then
+        return "EasternKingdoms"
+    end
+    if RectContainsCoords(gg_rct_Nord, x, y) or RectContainsCoords(gg_rct_Azgel, x, y) or RectContainsCoords(gg_rct_NordNotKalim, x, y) then
+        return "Northrend"
+    end
+    if RectContainsCoords(gg_rct_Pandaria, x, y) then
+        return "Pandaria"
+    end
+    if (RectContainsCoords(gg_rct_Outland, x, y) or RectContainsCoords(gg_rct_OutNoVk, x, y)) and not RectContainsCoords(gg_rct_VknotOut, x, y) then
+        return "Outland"
+    end
+    if RectContainsCoords(gg_rct_BrokenIsles, x, y) then
+        return "BrokenIsles"
+    end
+    if RectContainsCoords(gg_rct_Argus, x, y) then
+        return "Argus"
+    end
+    -- Sub-zones (in priority order, checked only if not already on a main continent)
+    local subzones = {
+        { "Azgel",          gg_rct_Azgel },
+        { "Ankirag",        gg_rct_Ankirag },
+        { "BlackMountain",  gg_rct_BlackMountain },
+        { "Orgrimmar",      gg_rct_Orgrimmar },
+        { "Uldum",          gg_rct_Uldum },
+        { "Undercity",      gg_rct_Undercity },
+        { "Maradon",        gg_rct_Maradon },
+        { "DeadMines",      gg_rct_DeadMines },
+        { "Naxramas",       gg_rct_Naxramas },
+        { "EasternDungeons", gg_rct_EasternDungeons },
+        { "EmeraldDream",   gg_rct_EmeraldDream },
+    }
+    for _, sz in ipairs(subzones) do
+        if sz[2] ~= nil and RectContainsCoords(sz[2], x, y) then
+            return sz[1]
+        end
+    end
+    return nil
+end
+
+-- BFS shortest path from src continent to dst continent.
+---@param src string
+---@param dst string
+---@return table|nil ordered list of continent names, or nil if unreachable
+function AiPortalRoute(src, dst)
+    if src == nil or dst == nil then return nil end
+    if src == dst then return { src } end
+    local q = { { node = src, path = { src } } }
+    local visited = { [src] = true }
+    local head = 1
+    while head <= #q do
+        local cur = q[head]
+        head = head + 1
+        local neighbors = AiPortalGraph[cur.node]
+        if neighbors ~= nil then
+            for nb, _ in pairs(neighbors) do
+                if nb == dst then
+                    local p = {}
+                    for _, v in ipairs(cur.path) do p[#p + 1] = v end
+                    p[#p + 1] = dst
+                    return p
+                end
+                if not visited[nb] then
+                    visited[nb] = true
+                    local np = {}
+                    for _, v in ipairs(cur.path) do np[#np + 1] = v end
+                    np[#np + 1] = nb
+                    q[#q + 1] = { node = nb, path = np }
+                end
+            end
+        end
+    end
+    return nil
+end
+
+-- Lazy cache: (srcContinent, dstContinent) -> { portalUnit, ... }
+AiPortalUnitCache = AiPortalUnitCache or {}
+AiPortalCacheBuilt = AiPortalCacheBuilt or false
+
+-- Portal unit type ids included in the cache
+AiPortalTypeSet = {
+    [FourCC('n003')] = true,
+    [FourCC('n006')] = true,
+    [FourCC('n01Y')] = true,
+    [FourCC('n01Z')] = true,
+}
+
+function AiBuildPortalCache()
+    if AiPortalCacheBuilt then return end
+    AiPortalCacheBuilt = true
+    AiPortalScanGroup = AiPortalScanGroup or CreateGroup()
+    GroupEnumUnitsInRect(AiPortalScanGroup, bj_mapInitialPlayableArea, nil)
+    local size = BlzGroupGetSize(AiPortalScanGroup)
+    local i = 0
+    while i < size do
+        local u = BlzGroupUnitAt(AiPortalScanGroup, i)
+        if u ~= nil then
+            local id = GetUnitTypeId(u)
+            if AiPortalTypeSet[id] then
+                local sx, sy = GetUnitX(u), GetUnitY(u)
+                local dx = WaygateGetDestinationX(u)
+                local dy = WaygateGetDestinationY(u)
+                local src = AiContinentOf(sx, sy)
+                local dst = AiContinentOf(dx, dy)
+                if src ~= nil and dst ~= nil and src ~= dst then
+                    local key = src .. "\t" .. dst
+                    local list = AiPortalUnitCache[key]
+                    if list == nil then
+                        list = {}
+                        AiPortalUnitCache[key] = list
+                    end
+                    list[#list + 1] = u
+                end
+            end
+        end
+        i = i + 1
+    end
+    DestroyGroup(AiPortalScanGroup)
+    local n = 0
+    for _ in pairs(AiPortalUnitCache) do n = n + 1 end
+    ProbeLogWrite("[PORTGRAPH] cache built: " .. tostring(n) .. " directed portal entries")
+end
+
+-- Find a portal unit on srcContinent whose waygate leads to dstContinent.
+---@param srcContinent string
+---@param dstContinent string
+---@return unit|nil
+function AiFindPortal(srcContinent, dstContinent)
+    AiBuildPortalCache()
+    local list = AiPortalUnitCache[srcContinent .. "\t" .. dstContinent]
+    if list == nil or #list == 0 then return nil end
+    for _, u in ipairs(list) do
+        if WaygateIsActive(u) then return u end
+    end
+    return list[1]
+end
+
+-- Check if player has a TP-capable unit (mage/captured building) on a continent.
+---@param pi integer
+---@param continent string
+---@return unit|nil
+function AiFindMageOnContinent(pi, continent)
+    local group = AiUnitsToPort[pi]
+    if group == nil then return nil end
+    local size = BlzGroupGetSize(group)
+    local i = 0
+    while i < size do
+        local u = BlzGroupUnitAt(group, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            local cont = AiContinentOf(GetUnitX(u), GetUnitY(u))
+            if cont == continent then
+                return u
+            end
+        end
+        i = i + 1
+    end
+    return nil
 end
 function InitCustomTriggers()
     InitTrig_sek5()

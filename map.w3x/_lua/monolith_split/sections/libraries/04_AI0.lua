@@ -101,8 +101,11 @@ end
 ---@param message string
 ---@return nothing
 function AiProbeLogLimited(pi, key, limit, message)
-	-- Army/diagnostic AI logging silenced (debug complete). Restore the body below
-	-- (StringHash/LoadInteger gate + ProbeLogWrite) to re-enable for future debugging.
+	local count = AiData[pi][StringHash(key)] or 0
+	if count < limit then
+		AiData[pi][StringHash(key)] = count + 1
+		ProbeLogWrite(message)
+	end
 end
 ---@return boolean
 function f_Lazy()
@@ -187,9 +190,20 @@ function f_OnlyNeaded()
 	
 	gInt = GetUnitTypeId(gUnit)
 	local race = AiRaces[AiRace[gPi]]
-	if race ~= nil and race.production ~= nil and race.production[gInt] ~= nil then
-		Counter = Counter + 1
-		return true
+	if race ~= nil and race.production ~= nil then
+		if race.production[gInt] ~= nil then
+			Counter = Counter + 1
+			return true
+		end
+		local w = race.production.worker
+		if w and w.from then
+			for _, bid in ipairs(w.from) do
+				if gInt == bid then
+					Counter = Counter + 1
+					return true
+				end
+			end
+		end
 	end
 	return false
 end

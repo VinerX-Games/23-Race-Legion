@@ -1,7 +1,7 @@
 {
   "source_path": "C:\\Games\\23 Race\\23-Race-Legion\\map.w3x\\war3map.lua",
   "source_sha256": "5181648a70065e3b8632a083c3946e452fc8f9f5b6538dda68f69226ad9566bb",
-  "section_count": 113,
+  "section_count": 114,
   "sections": [
     {
       "name": "prelude",
@@ -862,6 +862,14 @@
     {
       "name": "ai_brain",
       "file": "83_ai_brain.lua",
+      "category": "library",
+      "start_line": null,
+      "end_line": null,
+      "library_name": null
+    },
+    {
+      "name": "ai_portal_graph",
+      "file": "85_ai_portal_graph.lua",
       "category": "library",
       "start_line": null,
       "end_line": null,

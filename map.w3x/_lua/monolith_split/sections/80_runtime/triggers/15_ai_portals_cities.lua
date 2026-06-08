@@ -767,6 +767,12 @@ function Trig_PereborBuildings_Code_Func002A()
     udg_LocalInteger2=GetPlayerId(gPlayer)
     gPi=GetPlayerId(gPlayer)
     Counter=0
+    -- Reconcile g_AiCounts with actual Ai_units (drift guard for morph races like Ents)
+    local syncTick = AiData[gPi][StringHash("SyncTick")] or 0
+    if Counter == 0 and (syncTick % 3) == 0 then
+        pcall(function() AiSyncCounts(gPi) end)
+    end
+    AiData[gPi][StringHash("SyncTick")] = syncTick + 1
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_OnlyNeaded)
     local numberCount = AiData[gPi][StringHash("Number")] or 0
     -- ??????? ???? 0 ??? ????? ??????

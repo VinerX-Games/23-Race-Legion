@@ -70,7 +70,15 @@ function TryAttack()
 			ProcessContinentalStuff(gX, gY, gEnemyGroup)
 		end
 		
-		
+		Counter = BlzGroupGetSize(gEnemyGroup)
+		EnemyCapital = nil
+		for i = 0, Counter - 1 do
+			local u = BlzGroupUnitAt(gEnemyGroup, i)
+			if u ~= nil and IsUnitInGroup(u, udg_StolicaGroups) then
+				EnemyCapital = u
+				break
+			end
+		end
 		
 		--  ???? ???????? ?????? ?? ???????
 		if EnemyCapital ~= nil and Random(1, 2) then
@@ -211,6 +219,15 @@ function TryAttack()
 				ProcessContinentalStuff(gX, gY, gEnemyGroup)
 			end
 			
+			Counter = BlzGroupGetSize(gEnemyGroup)
+			EnemyCapital = nil
+			for i = 0, Counter - 1 do
+				local u = BlzGroupUnitAt(gEnemyGroup, i)
+				if u ~= nil and IsUnitInGroup(u, udg_StolicaGroups) then
+					EnemyCapital = u
+					break
+				end
+			end
 			
 			--  ???? ???????? ?????? ?? ???????
 			if EnemyCapital ~= nil and Random(1, 4) then

@@ -100,6 +100,59 @@ function SetLimits(p)
 	SetPlayerTechMaxAllowedSwap(FourCC('N058'), 1, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('O031'), 1, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('O030'), 1, p)
+	-- Bandits
+	SetPlayerTechMaxAllowedSwap(FourCC('H047'), 1, p)
+	-- Goblins
+	SetPlayerTechMaxAllowedSwap(FourCC('H0BD'), 1, p)
+	-- Naga
+	SetPlayerTechMaxAllowedSwap(FourCC('H0JV'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('H0JU'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('N07A'), 1, p)
+	-- Stromgard
+	SetPlayerTechMaxAllowedSwap(FourCC('H0HB'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('H0HL'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('H0HA'), 1, p)
+	-- Ogres
+	SetPlayerTechMaxAllowedSwap(FourCC('N05J'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('N05K'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('N05L'), 1, p)
+	-- Pandarens
+	SetPlayerTechMaxAllowedSwap(FourCC('PA36'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('PA37'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('PA38'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('PA40'), 1, p)
+	-- Bezlikie
+	SetPlayerTechMaxAllowedSwap(FourCC('U02H'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('U02G'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('U02I'), 1, p)
+	-- JungleTrolls
+	SetPlayerTechMaxAllowedSwap(FourCC('O054'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('O05A'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('O05D'), 1, p)
+	-- Worgen
+	SetPlayerTechMaxAllowedSwap(FourCC('H0J2'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('H0J6'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('H0J7'), 1, p)
+	-- IceTrolls
+	SetPlayerTechMaxAllowedSwap(FourCC('O04H'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('O04G'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('O04I'), 1, p)
+	-- FelOrc
+	SetPlayerTechMaxAllowedSwap(FourCC('N072'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('N073'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('N06P'), 1, p)
+	-- Ents
+	SetPlayerTechMaxAllowedSwap(FourCC('E02Q'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('E02R'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('E02S'), 1, p)
+	-- Gnomes
+	SetPlayerTechMaxAllowedSwap(FourCC('H0GC'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('H0GE'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('H0GG'), 1, p)
+	-- Silitids
+	SetPlayerTechMaxAllowedSwap(FourCC('U023'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('U024'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('U025'), 1, p)
 end
 -- Принудительный выбор расы AI по текстовому токену (для команды "-aiN <раса>"
 -- и CLI-агента). Возвращает true, если токен распознан и раса запущена.

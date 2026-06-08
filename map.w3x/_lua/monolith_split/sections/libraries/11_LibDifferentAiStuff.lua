@@ -60,6 +60,27 @@ end
 function NumberResetAll(pi)
 	g_AiCounts[pi] = nil
 end
+---@param pi integer
+---@return number
+function AiSyncCounts(pi)
+	local tbl = {}
+	ForGroup(udg_Ai_units[pi], function()
+		local id = GetUnitTypeId(GetEnumUnit())
+		tbl[id] = (tbl[id] or 0) + 1
+	end)
+	local drifted = 0
+	local cts = g_AiCounts[pi]
+	if cts == nil then cts = {}; g_AiCounts[pi] = cts end
+	for id, cnt in pairs(tbl) do
+		local old = cts[id] or 0
+		if old ~= cnt then
+			cts[id] = cnt
+			drifted = drifted + 1
+			ProbeLogWrite("[AISYNC] pi=" .. pi .. " id=" .. id .. " old=" .. old .. " new=" .. cnt)
+		end
+	end
+	return drifted
+end
 -- ***************************************************************************
 -- *  HasEnemyNear
 ---@param u unit

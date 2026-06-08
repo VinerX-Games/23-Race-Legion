@@ -33,6 +33,8 @@ local CONT = {
     { "Maradon",        gg_rct_Maradon },
     { "DeadMines",      gg_rct_DeadMines },
     { "Naxramas",       gg_rct_Naxramas },
+    { "EasternDungeons", gg_rct_EasternDungeons },
+    { "EmeraldDream",    gg_rct_EmeraldDream },
 }
 
 -- Known portal unit types (dark portal n006, inter-continent gates n003, water
@@ -55,6 +57,7 @@ local size = BlzGroupGetSize(g)
 
 local edges = {}      -- "src->dst" -> count
 local unknownTypes = {} -- typeId -> count (heuristic-detected portals not in ptset)
+local unknownPts = {}  -- coords of portals whose src/dst continent is "?"
 local lines = {}
 local nPortals = 0
 
@@ -74,6 +77,11 @@ while i < size do
             local key = src .. "->" .. dst
             edges[key] = (edges[key] or 0) + 1
             nPortals = nPortals + 1
+            if (src == "?" or dst == "?") and #unknownPts < 24 then
+                unknownPts[#unknownPts + 1] = (src == "?" and ("S(" .. tostring(R2I(sx)) .. "," .. tostring(R2I(sy)) .. ")") or "")
+                    .. (dst == "?" and ("D(" .. tostring(R2I(dx)) .. "," .. tostring(R2I(dy)) .. ")") or "")
+                    .. "t" .. tostring(id)
+            end
             if not known then
                 unknownTypes[id] = (unknownTypes[id] or 0) + 1
             end
@@ -102,4 +110,4 @@ end
 table.sort(out)
 local res = "portals=" .. tostring(nPortals) .. " | edges: " .. table.concat(out, "  ")
 ProbeLogWrite("[PORTGRAPH] SUMMARY " .. res)
-return res
+return res .. " || unknown: " .. table.concat(unknownPts, " ")

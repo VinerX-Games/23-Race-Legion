@@ -109,13 +109,8 @@ function Trig_GnomesStart_Func002A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A0U9'), GetEnumPlayer())
     SetPlayerAbilityAvailableBJ(false, FourCC('A0UA'), GetEnumPlayer())
 end
-function Trig_GnomesStart_Func002A_BotFilter()
-    if not udg_AiControl[GetPlayerId(GetEnumPlayer())] then
-        Trig_GnomesStart_Func002A()
-    end
-end
 function Trig_GnomesStart_Actions()
-    ForForce(udg_AllPlayers, Trig_GnomesStart_Func002A_BotFilter)
+    ForForce(udg_AllPlayers, Trig_GnomesStart_Func002A)
 end
 --===========================================================================
 function InitTrig_GnomesStart()
