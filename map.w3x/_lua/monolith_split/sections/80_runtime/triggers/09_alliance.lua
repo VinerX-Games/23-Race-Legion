@@ -1,8 +1,4 @@
-    gg_trg_TrainHakkar=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_TrainHakkar, EVENT_PLAYER_UNIT_TRAIN_FINISH)
-    TriggerAddCondition(gg_trg_TrainHakkar, Condition(Trig_TrainHakkar_Conditions))
-    TriggerAddAction(gg_trg_TrainHakkar, Trig_TrainHakkar_Actions)
-end
+
 --===========================================================================
 -- Trigger: AllyOn
 --===========================================================================
@@ -3607,3 +3603,7 @@ function Trig_StartAlliance_Actions()
 end
 --===========================================================================
 function InitTrig_StartAlliance()
+    gg_trg_StartAlliance=CreateTrigger()
+    TriggerRegisterTimerEventSingle(gg_trg_StartAlliance, 0.01)
+    TriggerAddAction(gg_trg_StartAlliance, Trig_StartAlliance_Actions)
+end

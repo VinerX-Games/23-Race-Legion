@@ -1,7 +1,4 @@
-    gg_trg_DisIncomeStart=CreateTrigger()
-    TriggerRegisterTimerExpireEventBJ(gg_trg_DisIncomeStart, udg_IncomeTimerFirst)
-    TriggerAddAction(gg_trg_DisIncomeStart, Trig_DisIncomeStart_Actions)
-end
+
 --===========================================================================
 -- Trigger: Globals
 --===========================================================================
@@ -1470,3 +1467,10 @@ function Trig_Page4_Actions()
 end
 --===========================================================================
 function InitTrig_Page4()
+    gg_trg_Page4=CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Page4, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
+    TriggerAddAction(gg_trg_Page4, function()
+        if GetSpellAbilityId() ~= FourCC('A0QR') then return end
+        Trig_Page4_Actions()
+    end)
+end

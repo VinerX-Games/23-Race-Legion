@@ -1,3 +1,6 @@
+
+-- call ClearEc(GetPlayerId(GetEnumPlayer()))
+-- ***************************************************************************
 -- *  ClearPlayer
 ---@return nothing
 function KillAll()
@@ -46,4 +49,3 @@ function ClearPlayer(p)
 	DestroyGroup(g)
 	g = nil
 end
--- ***************************************************************************

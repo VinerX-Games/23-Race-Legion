@@ -1,3 +1,5 @@
+
+-- ***************************************************************************
 -- *  BuildingTierSystem
 ---@param p player
 ---@return nothing
@@ -16,4 +18,3 @@ function ChangeObjectsCount(pi, phash, addition)
 	SaveInteger(Hash, pi, phash, count + addition)
 	Ptiers(pi)
 end
--- ***************************************************************************

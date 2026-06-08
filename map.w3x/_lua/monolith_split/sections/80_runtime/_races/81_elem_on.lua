@@ -1,3 +1,5 @@
+
+-- ***************************************************************************
 -- *  ElemOn
 ---@return nothing
 function ElemOn()
@@ -6,4 +8,3 @@ function ElemOn()
 	EnableTrigger(gg_trg_ColossalAttackElem)
 	EnableTrigger(gg_trg_MultuAttackWater)
 end
--- ***************************************************************************

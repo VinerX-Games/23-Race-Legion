@@ -1,3 +1,5 @@
+
+-- ***************************************************************************
 -- *  StartForestTrolls
 ---@return nothing
 function StartForestTrolls()
@@ -13,4 +15,3 @@ function StartForestTrolls()
 	EnableTrigger(gg_trg_SetLifeNormal)
 	EnableTrigger(gg_trg_Charge)
 end
--- ***************************************************************************

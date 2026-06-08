@@ -1,3 +1,5 @@
+
+-- ***************************************************************************
 -- *  TryToBuild
 ---@return nothing
 function TryBuild()
@@ -71,4 +73,3 @@ function TryBuild()
 	IssueBuildOrderById(gUnit, gInt, gX, gY)
 	
 end
--- ***************************************************************************

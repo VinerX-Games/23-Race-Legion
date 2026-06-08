@@ -1,11 +1,4 @@
-    gg_trg_Duel=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Duel, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddAction(gg_trg_Duel, function()
-        if GetSpellAbilityId() ~= FourCC('w2ou') then return end
-        if not (IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO)) then return end
-        Trig_Duel_Actions()
-    end)
-end
+
 --===========================================================================
 -- Trigger: RiseDeadWorkers
 --===========================================================================
@@ -2073,3 +2066,8 @@ function Trig_TrainHakkar_Actions()
 end
 --===========================================================================
 function InitTrig_TrainHakkar()
+    gg_trg_TrainHakkar=CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_TrainHakkar, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    TriggerAddCondition(gg_trg_TrainHakkar, Condition(Trig_TrainHakkar_Conditions))
+    TriggerAddAction(gg_trg_TrainHakkar, Trig_TrainHakkar_Actions)
+end

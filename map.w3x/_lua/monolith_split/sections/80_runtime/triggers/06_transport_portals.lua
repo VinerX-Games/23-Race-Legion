@@ -1,11 +1,4 @@
-    gg_trg_Aura_Flagmana_Stoikost_O=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Stoikost_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddAction(gg_trg_Aura_Flagmana_Stoikost_O, function()
-        if GetSpellAbilityId() ~= FourCC('A00C') then return end
-        if not Trig_Aura_Flagmana_Stoikost_O_Conditions() then return end
-        Trig_Aura_Flagmana_Stoikost_O_Actions()
-    end)
-end
+
 --===========================================================================
 -- Trigger: Init
 --===========================================================================
@@ -2333,3 +2326,9 @@ function Trig_MageTpSell_Actions()
 end
 --===========================================================================
 function InitTrig_MageTpSell()
+    gg_trg_MageTpSell=CreateTrigger()
+    DisableTrigger(gg_trg_MageTpSell)
+    TriggerRegisterAnyUnitEventBJ(gg_trg_MageTpSell, EVENT_PLAYER_UNIT_SELL)
+    TriggerAddCondition(gg_trg_MageTpSell, Condition(Trig_MageTpSell_Conditions))
+    TriggerAddAction(gg_trg_MageTpSell, Trig_MageTpSell_Actions)
+end

@@ -1,3 +1,7 @@
+
+-- ***************************************************************************
+-- *  RandomLocationFromUnits
+-- ***************************************************************************
 -- *  CreateRaceCircles
 ---@param p player
 ---@return nothing
@@ -8,4 +12,3 @@ function CreateRaceCircles(p)
 	PanCameraToTimedLocForPlayer(p, l, 0)
 	l = nil
 end
--- ***************************************************************************

@@ -1,8 +1,4 @@
-    gg_trg_TrainGreenSpellSteal=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_TrainGreenSpellSteal, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
-    TriggerAddCondition(gg_trg_TrainGreenSpellSteal, Condition(Trig_TrainGreenSpellSteal_Conditions))
-    TriggerAddAction(gg_trg_TrainGreenSpellSteal, Trig_TrainGreenSpellSteal_Actions)
-end
+
 --===========================================================================
 -- Trigger: Blood1 Copy 3
 --===========================================================================
@@ -3454,3 +3450,8 @@ function Trig_QoggSpawn_Actions()
 end
 --===========================================================================
 function InitTrig_QoggSpawn()
+    gg_trg_QoggSpawn=CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_QoggSpawn, EVENT_PLAYER_UNIT_SPELL_CAST)
+    TriggerAddCondition(gg_trg_QoggSpawn, Condition(Trig_QoggSpawn_Conditions))
+    TriggerAddAction(gg_trg_QoggSpawn, Trig_QoggSpawn_Actions)
+end

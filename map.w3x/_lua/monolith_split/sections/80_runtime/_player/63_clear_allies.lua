@@ -1,3 +1,22 @@
+
+-- ***************************************************************************
+-- *  CommonHash
+-- 
+-- 
+-- // ??? ?????? ???? ????? ??????, ?? ?????
+-- function NumberAdd takes integer Playerid, integer Unitid returns nothing
+--     local integer Cunit = LoadInteger(CommonHash,Playerid, Unitid) + 1
+--     call SaveInteger(CommonHash,Playerid,Unitid,Cunit)
+-- endfunction
+-- 
+-- function NumberRem takes integer Playerid, integer Unitid returns nothing
+--     local integer Cunit = LoadInteger(CommonHash,Playerid, Unitid) - 1
+--     call SaveInteger(CommonHash,Playerid,Unitid,Cunit)
+-- endfunction
+-- 
+-- 
+-- 
+-- ***************************************************************************
 -- *  ClearAllies
 ---@return nothing
 function BrokeOneAlliance()
@@ -10,4 +29,3 @@ function ClearAllies(p)
 	gPlayer = p
 	ForForce(GetPlayersAllies(gPlayer), BrokeOneAlliance)
 end
--- ***************************************************************************

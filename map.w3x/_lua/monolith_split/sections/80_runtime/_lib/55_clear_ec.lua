@@ -1,3 +1,5 @@
+
+-- ***************************************************************************
 -- *  ClearEc
 ---@param pi integer
 ---@return nothing
@@ -12,5 +14,3 @@ function ClearEc(pi)
 	udg_UnitsCount[pi] = 0
 	CityPlayerCount[pi] = 0
 end
--- call ClearEc(GetPlayerId(GetEnumPlayer()))
--- ***************************************************************************

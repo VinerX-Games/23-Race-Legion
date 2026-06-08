@@ -1,3 +1,6 @@
+
+-- ***************************************************************************
+-- 
 -- *  Triggers
 -- 
 -- ***************************************************************************
@@ -2413,3 +2416,11 @@ end
 -- ===========================================================================
 ---@return nothing
 function InitTrig_Demontag()
+	gg_trg_Demontag = CreateTrigger()
+	TriggerRegisterAnyUnitEventBJ(gg_trg_Demontag, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddAction(gg_trg_Demontag, function()
+        if GetSpellAbilityId() ~= FourCC('A146') then return end
+        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
+        Trig_Demontag_Actions()
+    end)
+end

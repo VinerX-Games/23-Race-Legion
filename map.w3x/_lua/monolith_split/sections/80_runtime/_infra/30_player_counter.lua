@@ -1,3 +1,5 @@
+
+-- ***************************************************************************
 -- *  Counter
 ---@return boolean
 function PlayerCounter()
@@ -10,4 +12,3 @@ function startPlayerCounter()
 	return PlayerCounter
 	
 end
--- ***************************************************************************

@@ -1,8 +1,4 @@
-    gg_trg_QoggSpawn=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_QoggSpawn, EVENT_PLAYER_UNIT_SPELL_CAST)
-    TriggerAddCondition(gg_trg_QoggSpawn, Condition(Trig_QoggSpawn_Conditions))
-    TriggerAddAction(gg_trg_QoggSpawn, Trig_QoggSpawn_Actions)
-end
+
 --===========================================================================
 -- Trigger: TurnAi
 --===========================================================================

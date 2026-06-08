@@ -1,3 +1,5 @@
+
+-- ***************************************************************************
 -- *  HordeW2On
 ---@return nothing
 function HordeW2On()
@@ -21,4 +23,3 @@ function HordeW2On()
 	EnableTrigger(gg_trg_DamagerW2)
 	EnableTrigger(gg_trg_TrainW2)
 end
--- ***************************************************************************

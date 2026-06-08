@@ -1,3 +1,6 @@
+
+--  scope initContinentalBoolExprs ends
+-- ***************************************************************************
 -- *  ContinentalTemplates
 ---@param g group
 ---@param fromThisArea boolexpr
@@ -26,4 +29,3 @@ end
 function DestroyRocks(r)
 	EnumDestructablesInRect(r, nil, DestroyRocksAct)
 end
--- ***************************************************************************

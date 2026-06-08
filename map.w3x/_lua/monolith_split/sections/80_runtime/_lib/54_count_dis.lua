@@ -1,3 +1,5 @@
+
+-- ***************************************************************************
 -- *  CountAddDis and CountDelDis
 ---@param u unit
 ---@param pi integer
@@ -202,4 +204,3 @@ function TimedCount(u)
 		DestroyTimer(t)
 	end)
 end
--- ***************************************************************************

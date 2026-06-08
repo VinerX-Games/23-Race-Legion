@@ -1,11 +1,4 @@
-	gg_trg_Demontag = CreateTrigger()
-	TriggerRegisterAnyUnitEventBJ(gg_trg_Demontag, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddAction(gg_trg_Demontag, function()
-        if GetSpellAbilityId() ~= FourCC('A146') then return end
-        if not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit()))) then return end
-        Trig_Demontag_Actions()
-    end)
-end
+
 -- ===========================================================================
 --  Trigger: ResoursesInterface Copy
 -- ===========================================================================
@@ -1463,3 +1456,8 @@ end
 -- ===========================================================================
 ---@return nothing
 function InitTrig_FastResearch()
+	gg_trg_FastResearch = CreateTrigger()
+	TriggerRegisterAnyUnitEventBJ(gg_trg_FastResearch, EVENT_PLAYER_UNIT_RESEARCH_START)
+	TriggerAddCondition(gg_trg_FastResearch, Condition(Trig_FastResearch_Conditions))
+	TriggerAddAction(gg_trg_FastResearch, Trig_FastResearch_Actions)
+end

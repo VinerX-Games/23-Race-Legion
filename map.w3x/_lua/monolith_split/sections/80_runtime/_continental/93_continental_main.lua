@@ -1,3 +1,7 @@
+
+--  elseif HandleMaradon(x, y, g) then
+--  elseif HandleUndercity(x, y, g) then
+-- ***************************************************************************
 -- *  ContinentalMain
 ---@param x group
 ---@return nothing
@@ -204,4 +208,3 @@ function ProcessContinentalStuffNaga(x, y, g)
 	RemWaterPortals(g)
 	RemEmeraldPortals(g)
 end
--- ***************************************************************************

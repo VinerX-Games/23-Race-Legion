@@ -1,3 +1,5 @@
+
+-- ***************************************************************************
 -- *  Settings
 ---@return nothing
 function StartInc()
@@ -18,4 +20,3 @@ function StartInc()
 	RegionAddRect(Allmap, GetWorldBounds())
 	
 end
--- ***************************************************************************

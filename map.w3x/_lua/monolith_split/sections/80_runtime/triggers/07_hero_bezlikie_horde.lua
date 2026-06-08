@@ -1,9 +1,4 @@
-    gg_trg_MageTpSell=CreateTrigger()
-    DisableTrigger(gg_trg_MageTpSell)
-    TriggerRegisterAnyUnitEventBJ(gg_trg_MageTpSell, EVENT_PLAYER_UNIT_SELL)
-    TriggerAddCondition(gg_trg_MageTpSell, Condition(Trig_MageTpSell_Conditions))
-    TriggerAddAction(gg_trg_MageTpSell, Trig_MageTpSell_Actions)
-end
+
 --===========================================================================
 -- Trigger: Deathwing
 --===========================================================================
@@ -2833,3 +2828,11 @@ function Trig_Duel_Actions()
 end
 --===========================================================================
 function InitTrig_Duel()
+    gg_trg_Duel=CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Duel, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddAction(gg_trg_Duel, function()
+        if GetSpellAbilityId() ~= FourCC('w2ou') then return end
+        if not (IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO)) then return end
+        Trig_Duel_Actions()
+    end)
+end

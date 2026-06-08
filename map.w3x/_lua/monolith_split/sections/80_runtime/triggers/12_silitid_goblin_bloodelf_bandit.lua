@@ -1,6 +1,4 @@
-    gg_trg_StartHorde=CreateTrigger()
-    TriggerAddAction(gg_trg_StartHorde, Trig_StartHorde_Actions)
-end
+
 --===========================================================================
 -- Trigger: SilitidsOn
 --===========================================================================
@@ -4762,3 +4760,10 @@ function Trig_AreaOfDeath2_Actions()
 end
 --===========================================================================
 function InitTrig_AreaOfDeath2()
+    gg_trg_AreaOfDeath2=CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_AreaOfDeath2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddAction(gg_trg_AreaOfDeath2, function()
+        if GetSpellAbilityId() ~= FourCC('A1K1') then return end
+        Trig_AreaOfDeath2_Actions()
+    end)
+end

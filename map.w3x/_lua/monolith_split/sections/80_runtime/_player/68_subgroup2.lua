@@ -1,3 +1,5 @@
+
+-- ***************************************************************************
 -- *  SubGroup2
 ---@param count integer
 ---@param sourceGroup group
@@ -18,4 +20,3 @@ function GetRandomSubGroup2(count, sourceGroup)
 	return SubGroup2
 	
 end
--- ***************************************************************************

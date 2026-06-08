@@ -1,3 +1,5 @@
+
+-- ***************************************************************************
 -- *  CapitalEnter
 ---@return nothing
 function aiCapitalEnterAct()
@@ -14,4 +16,3 @@ function aiCapitalEnter(u)
 		ForGroup(gGroup, aiCapitalEnterAct)
 	end
 end
--- ***************************************************************************

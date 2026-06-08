@@ -1,3 +1,6 @@
+
+--  scope init2 ends
+-- ***************************************************************************
 -- *  AllPlayersStart
 ---@return nothing
 function AllPlayersStart()
@@ -29,4 +32,3 @@ function aiStart()
 		gInt = gInt + 1
 	end
 end
--- ***************************************************************************

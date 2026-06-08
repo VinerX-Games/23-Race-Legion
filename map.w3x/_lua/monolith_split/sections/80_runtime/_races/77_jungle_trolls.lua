@@ -1,3 +1,5 @@
+
+-- ***************************************************************************
 -- *  StartJungleTrolls
 ---@return nothing
 function StartJungleTrolls()
@@ -29,4 +31,3 @@ function StartJungleTrolls()
 	EnableTrigger(gg_trg_Gurubashy)
 	
 end
--- ***************************************************************************

@@ -1,8 +1,4 @@
-    gg_trg_Klap_Klap_War_big=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Klap_Klap_War_big, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
-    TriggerAddCondition(gg_trg_Klap_Klap_War_big, Condition(Trig_Klap_Klap_War_big_Conditions))
-    TriggerAddAction(gg_trg_Klap_Klap_War_big, Trig_Klap_Klap_War_big_Actions)
-end
+
 --===========================================================================
 -- Trigger: HordeOn
 --===========================================================================
@@ -2934,3 +2930,6 @@ function Trig_StartHorde_Actions()
 end
 --===========================================================================
 function InitTrig_StartHorde()
+    gg_trg_StartHorde=CreateTrigger()
+    TriggerAddAction(gg_trg_StartHorde, Trig_StartHorde_Actions)
+end

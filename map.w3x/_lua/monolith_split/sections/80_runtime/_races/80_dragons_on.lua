@@ -1,3 +1,5 @@
+
+-- ***************************************************************************
 -- *  DragonsOn2
 ---@return nothing
 function DragonsOn()
@@ -8,4 +10,3 @@ function DragonsOn()
 	EnableTrigger(gg_trg_Navodnenie)
 	EnableTrigger(gg_trg_IzeraSpell)
 end
--- ***************************************************************************

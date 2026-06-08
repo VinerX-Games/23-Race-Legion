@@ -1,7 +1,7 @@
 {
   "source_path": "C:\\Games\\23 Race\\23-Race-Legion\\map.w3x\\war3map.lua",
   "source_sha256": "7eadc67e321df55d2121d5f848d21791533a8453df49e68556ab72d5c954bbf4",
-  "section_count": 97,
+  "section_count": 90,
   "sections": [
     {
       "name": "prelude",
@@ -140,14 +140,6 @@
       "library_name": "AI2"
     },
     {
-      "name": "gen:_infra_00_header",
-      "file": "80_runtime/_infra/00_header.lua",
-      "category": "generated_runtime",
-      "start_line": 0,
-      "end_line": 0,
-      "library_name": null
-    },
-    {
       "name": "gen:_infra_10_globals",
       "file": "80_runtime/_infra/10_globals.lua",
       "category": "generated_runtime",
@@ -276,14 +268,6 @@
       "library_name": null
     },
     {
-      "name": "gen:_lib_62_common_hash",
-      "file": "80_runtime/_lib/62_common_hash.lua",
-      "category": "generated_runtime",
-      "start_line": 0,
-      "end_line": 0,
-      "library_name": null
-    },
-    {
       "name": "gen:_player_63_clear_allies",
       "file": "80_runtime/_player/63_clear_allies.lua",
       "category": "generated_runtime",
@@ -294,14 +278,6 @@
     {
       "name": "gen:_player_64_del_unit",
       "file": "80_runtime/_player/64_del_unit.lua",
-      "category": "generated_runtime",
-      "start_line": 0,
-      "end_line": 0,
-      "library_name": null
-    },
-    {
-      "name": "gen:_player_65_random_locs",
-      "file": "80_runtime/_player/65_random_locs.lua",
       "category": "generated_runtime",
       "start_line": 0,
       "end_line": 0,
@@ -430,38 +406,6 @@
     {
       "name": "gen:_ai_82_ai_points",
       "file": "80_runtime/_ai/82_ai_points.lua",
-      "category": "generated_runtime",
-      "start_line": 0,
-      "end_line": 0,
-      "library_name": null
-    },
-    {
-      "name": "gen:_ai_83_turn_off_ai",
-      "file": "80_runtime/_ai/83_turn_off_ai.lua",
-      "category": "generated_runtime",
-      "start_line": 0,
-      "end_line": 0,
-      "library_name": null
-    },
-    {
-      "name": "gen:_ai_84_globals_start",
-      "file": "80_runtime/_ai/84_globals_start.lua",
-      "category": "generated_runtime",
-      "start_line": 0,
-      "end_line": 0,
-      "library_name": null
-    },
-    {
-      "name": "gen:_ai_85_lib_ai_stuff",
-      "file": "80_runtime/_ai/85_lib_ai_stuff.lua",
-      "category": "generated_runtime",
-      "start_line": 0,
-      "end_line": 0,
-      "library_name": null
-    },
-    {
-      "name": "gen:_ai_86_lib_races",
-      "file": "80_runtime/_ai/86_lib_races.lua",
       "category": "generated_runtime",
       "start_line": 0,
       "end_line": 0,

@@ -1,7 +1,4 @@
-    gg_trg_StartAlliance=CreateTrigger()
-    TriggerRegisterTimerEventSingle(gg_trg_StartAlliance, 0.01)
-    TriggerAddAction(gg_trg_StartAlliance, Trig_StartAlliance_Actions)
-end
+
 --===========================================================================
 -- Trigger: ForsacenStarrt
 --===========================================================================
@@ -3139,3 +3136,8 @@ function Trig_Klap_Klap_War_big_Actions()
 end
 --===========================================================================
 function InitTrig_Klap_Klap_War_big()
+    gg_trg_Klap_Klap_War_big=CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Klap_Klap_War_big, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    TriggerAddCondition(gg_trg_Klap_Klap_War_big, Condition(Trig_Klap_Klap_War_big_Conditions))
+    TriggerAddAction(gg_trg_Klap_Klap_War_big, Trig_Klap_Klap_War_big_Actions)
+end

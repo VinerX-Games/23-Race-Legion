@@ -1,8 +1,4 @@
-	gg_trg_FastResearch = CreateTrigger()
-	TriggerRegisterAnyUnitEventBJ(gg_trg_FastResearch, EVENT_PLAYER_UNIT_RESEARCH_START)
-	TriggerAddCondition(gg_trg_FastResearch, Condition(Trig_FastResearch_Conditions))
-	TriggerAddAction(gg_trg_FastResearch, Trig_FastResearch_Actions)
-end
+
 -- ===========================================================================
 --  Trigger: Only Eastern
 -- ===========================================================================
@@ -1494,3 +1490,7 @@ function Trig_DisIncomeStart_Actions()
 end
 --===========================================================================
 function InitTrig_DisIncomeStart()
+    gg_trg_DisIncomeStart=CreateTrigger()
+    TriggerRegisterTimerExpireEventBJ(gg_trg_DisIncomeStart, udg_IncomeTimerFirst)
+    TriggerAddAction(gg_trg_DisIncomeStart, Trig_DisIncomeStart_Actions)
+end

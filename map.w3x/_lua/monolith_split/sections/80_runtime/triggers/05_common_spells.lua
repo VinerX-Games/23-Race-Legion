@@ -1,10 +1,4 @@
-    gg_trg_Page4=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Page4, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
-    TriggerAddAction(gg_trg_Page4, function()
-        if GetSpellAbilityId() ~= FourCC('A0QR') then return end
-        Trig_Page4_Actions()
-    end)
-end
+
 --===========================================================================
 -- Trigger: Leave Ot
 --===========================================================================
@@ -841,3 +835,11 @@ function Trig_Aura_Flagmana_Stoikost_O_Actions()
 end
 --===========================================================================
 function InitTrig_Aura_Flagmana_Stoikost_O()
+    gg_trg_Aura_Flagmana_Stoikost_O=CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Aura_Flagmana_Stoikost_O, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddAction(gg_trg_Aura_Flagmana_Stoikost_O, function()
+        if GetSpellAbilityId() ~= FourCC('A00C') then return end
+        if not Trig_Aura_Flagmana_Stoikost_O_Conditions() then return end
+        Trig_Aura_Flagmana_Stoikost_O_Actions()
+    end)
+end

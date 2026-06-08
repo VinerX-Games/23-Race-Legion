@@ -1,10 +1,4 @@
-    gg_trg_AreaOfDeath2=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_AreaOfDeath2, EVENT_PLAYER_UNIT_SPELL_EFFECT)
-    TriggerAddAction(gg_trg_AreaOfDeath2, function()
-        if GetSpellAbilityId() ~= FourCC('A1K1') then return end
-        Trig_AreaOfDeath2_Actions()
-    end)
-end
+
 --===========================================================================
 -- Trigger: Global
 --===========================================================================
@@ -2651,3 +2645,8 @@ function Trig_TrainGreenSpellSteal_Actions()
 end
 --===========================================================================
 function InitTrig_TrainGreenSpellSteal()
+    gg_trg_TrainGreenSpellSteal=CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_TrainGreenSpellSteal, EVENT_PLAYER_UNIT_CONSTRUCT_FINISH)
+    TriggerAddCondition(gg_trg_TrainGreenSpellSteal, Condition(Trig_TrainGreenSpellSteal_Conditions))
+    TriggerAddAction(gg_trg_TrainGreenSpellSteal, Trig_TrainGreenSpellSteal_Actions)
+end
