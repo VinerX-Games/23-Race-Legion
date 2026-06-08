@@ -241,7 +241,14 @@ function AiRunProduction(id, pi, u, def)
         ::continue::
     end
     if tArray[0] > 0 then
-        local picked = tArray[GetRandomInt(1, tArray[0])]
+        -- P2: steer toward def.compTarget when AiSmartProduce is on; else random.
+        local picked
+        if AiSmartProduce and def.compTarget ~= nil then
+            picked = AiPickByComposition(pi, def)
+        end
+        if picked == nil then
+            picked = tArray[GetRandomInt(1, tArray[0])]
+        end
         IssueImmediateOrderById(u, picked)
         g_AiOrdered[pi * 1000000 + picked] = true
     end

@@ -521,3 +521,40 @@ function AiFindBuildSpot(pi, builder)
     end
     return nil, nil
 end
+
+-- ====================================================================
+-- Production track P2: unit ordering by target composition (vs weighted random).
+-- Opt-in via global AiSmartProduce + race def.compTarget = { [unitId]=fraction }.
+-- Picks, among the candidate unit ids already gathered in tArray by AiRunProduction
+-- (gates/branch/limit applied), the one with the largest share deficit
+-- (target - current), pulling the army toward the desired mix. Returns nil when
+-- none of the candidates are listed in compTarget -> caller keeps random.
+-- ====================================================================
+AiSmartProduce = AiSmartProduce or false
+
+---@param pi integer
+---@param def table
+---@return integer|nil
+function AiPickByComposition(pi, def)
+    local comp = def.compTarget
+    if comp == nil then return nil end
+    local total = getAiCount(pi, StringHash("Number"))
+    if total < 1 then total = 1 end
+    local bestId, bestDef = nil, -1e30
+    local seen = {}
+    local n = tArray[0]
+    local i = 1
+    while i <= n do
+        local id = tArray[i]
+        if not seen[id] then
+            seen[id] = true
+            local target = comp[id]
+            if target ~= nil then
+                local deficit = target - I2R(getAiCount(pi, id)) / I2R(total)
+                if deficit > bestDef then bestDef = deficit; bestId = id end
+            end
+        end
+        i = i + 1
+    end
+    return bestId
+end
