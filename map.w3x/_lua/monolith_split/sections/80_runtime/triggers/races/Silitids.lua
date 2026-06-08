@@ -622,6 +622,7 @@ function Trig_LichStartUpgrade_Actions()
     
     local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     if udg_AiControl[pi] then
+        GroupRemoveUnit(udg_Ai_buildings[pi], GetTriggerUnit())
         NumberRem(pi, FourCC('e01I'))
     end
      
