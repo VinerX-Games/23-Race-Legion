@@ -33,15 +33,38 @@ AiBrainDefaults = {
     },
 }
 
--- Per-building-type "usefulness" for cluster scoring (production/income nodes >
--- filler). Empty = every building worth the base 1.0. Populate from the map's
--- economy module values later (food + ability levels). [typeId] = value.
+-- Optional per-building-type bonus/override added on top of the live income
+-- valuation below. [typeId] = extra value. Empty by default.
 AiBuildingValue = AiBuildingValue or {}
----@param id integer
+
+-- Live income value of a building instance, mirroring the economy module
+-- AddCountDis (_lib/54_count_dis.lua): food made + income-upgrade abilities
+-- (A0AY *100 | A0SM *75 | A0VS 100) + lumber income (A0B5 *50). This is the real
+-- worth of capturing/denying that enemy economic node — not its HP. A per-type
+-- AiBuildingValue entry is added as a bonus; floored at 1 so plain capturables
+-- still register. Computed per actual unit (ability levels vary at runtime).
+---@param u unit
 ---@return real
-function AiBldValue(id)
-    local v = AiBuildingValue[id]
-    if v == nil then return 1.0 end
+function AiBldValueUnit(u)
+    local v = I2R(GetUnitFoodMade(u))
+    local lay = GetUnitAbilityLevel(u, FourCC('A0AY'))
+    if lay >= 1 then
+        v = v + 100.0 * I2R(lay)
+    else
+        local lsm = GetUnitAbilityLevel(u, FourCC('A0SM'))
+        if lsm >= 1 then
+            v = v + 75.0 * I2R(lsm)
+        elseif GetUnitAbilityLevel(u, FourCC('A0VS')) == 1 then
+            v = v + 100.0
+        end
+    end
+    local lb5 = GetUnitAbilityLevel(u, FourCC('A0B5'))
+    if lb5 > 0 then
+        v = v + 50.0 * I2R(lb5)
+    end
+    local ov = AiBuildingValue[GetUnitTypeId(u)]
+    if ov ~= nil then v = v + ov end
+    if v < 1.0 then v = 1.0 end
     return v
 end
 
@@ -233,7 +256,7 @@ function AiBrainCollectObjectives(pi, wm)
         end
         b.sx = b.sx + x
         b.sy = b.sy + y
-        b.value = b.value + AiBldValue(GetUnitTypeId(u))
+        b.value = b.value + AiBldValueUnit(u)
         b.count = b.count + 1
         if kind == "capital" then b.kind = "capital" end
     end
