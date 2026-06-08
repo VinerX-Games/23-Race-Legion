@@ -28,7 +28,7 @@ function Trig_Unit_Loaded_Func001C()
     return IsUnitInGroup(GetTransportUnitBJ(), udg_TransportingGroup)
 end
 function Trig_Unit_Loaded_Actions()
-    if ( Trig_Unit_Loaded_Func001C() ) then
+    if Trig_Unit_Loaded_Func001C() then
     else
         SetUnitUserData(GetTransportUnitBJ(), udg_TransportingIncrement)
         udg_TransportingUnitArray[udg_TransportingIncrement]=GetTransportUnitBJ()
@@ -92,7 +92,7 @@ function Trig_Remove_Unit_From_LoadedGroup_Actions()
     bj_forLoopAIndexEnd=( udg_TransportingIncrement - 1 )
     while true do
         if bj_forLoopAIndex > bj_forLoopAIndexEnd then break end
-        if ( Trig_Remove_Unit_From_LoadedGroup_Func002Func001C() ) then
+        if Trig_Remove_Unit_From_LoadedGroup_Func002Func001C() then
             GroupRemoveUnitSimple(udg_TempUnit01, udg_LoadedGroupArray[GetForLoopIndexA()])
             udg_TempUnit02=udg_TransportingUnitArray[GetForLoopIndexA()]
         end
@@ -111,7 +111,7 @@ function Trig_TransportingUnitArray_Message_Func001C()
     return IsUnitInGroup(udg_TempUnit02, udg_TransportingGroup)
 end
 function Trig_TransportingUnitArray_Message_Actions()
-    if ( Trig_TransportingUnitArray_Message_Func001C() ) then
+    if Trig_TransportingUnitArray_Message_Func001C() then
         DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "" .. GetUnitName(udg_TempUnit02) ) .. ( "" .. I2S(CountUnitsInGroup(udg_LoadedGroupArray[GetUnitUserData(udg_TempUnit02)])) ) ))
     else
         DisplayTimedTextToForce(GetPlayersAll(), 8.00, ( ( "" .. GetUnitName(udg_TempUnit02) ) .. "." ))
@@ -212,34 +212,34 @@ end
 -- Trigger: Linkor reaserch Obstel O
 --===========================================================================
 function Trig_Linkor_reaserch_Obstel_O_Conditions()
-    return ( GetResearched() == FourCC('R005') )
+    return GetResearched() == FourCC('R005')
 end
 function Trig_Linkor_reaserch_Obstel_O_Func001Func002002()
-    return ( 0 == 0 )
+    return 0 == 0
 end
 function Trig_Linkor_reaserch_Obstel_O_Func001Func004A()
     SetUnitAbilityLevelSwapped(FourCC('A00G'), GetEnumUnit(), 2)
 end
 function Trig_Linkor_reaserch_Obstel_O_Func001C()
-    return ( GetPlayerTechCountSimple(FourCC('R005'), GetOwningPlayer(GetTriggerUnit())) == 2 )
+    return GetPlayerTechCountSimple(FourCC('R005'), GetOwningPlayer(GetTriggerUnit())) == 2
 end
 function Trig_Linkor_reaserch_Obstel_O_Func002Func002002()
-    return ( 0 == 0 )
+    return 0 == 0
 end
 function Trig_Linkor_reaserch_Obstel_O_Func002Func004A()
     SetUnitAbilityLevelSwapped(FourCC('A00G'), GetEnumUnit(), 3)
 end
 function Trig_Linkor_reaserch_Obstel_O_Func002C()
-    return ( GetPlayerTechCountSimple(FourCC('R005'), GetOwningPlayer(GetTriggerUnit())) == 3 )
+    return GetPlayerTechCountSimple(FourCC('R005'), GetOwningPlayer(GetTriggerUnit())) == 3
 end
 function Trig_Linkor_reaserch_Obstel_O_Actions()
-    if ( Trig_Linkor_reaserch_Obstel_O_Func001C() ) then
+    if Trig_Linkor_reaserch_Obstel_O_Func001C() then
         udg_Boolexpr = Trig_Linkor_reaserch_Obstel_O_Func001Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Obstel_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     end
-    if ( Trig_Linkor_reaserch_Obstel_O_Func002C() ) then
+    if Trig_Linkor_reaserch_Obstel_O_Func002C() then
         udg_Boolexpr = Trig_Linkor_reaserch_Obstel_O_Func002Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Obstel_O_Func002Func004A)
@@ -257,22 +257,22 @@ end
 -- Trigger: Naim Obstrel O
 --===========================================================================
 function Trig_Naim_Obstrel_O_Func001C()
-    return ( ( GetUnitAbilityLevelSwapped(FourCC('A00G'), GetTrainedUnit()) == 1 ) )
+    return GetUnitAbilityLevelSwapped(FourCC('A00G'), GetTrainedUnit()) == 1
 end
 function Trig_Naim_Obstrel_O_Conditions()
     return Trig_Naim_Obstrel_O_Func001C()
 end
 function Trig_Naim_Obstrel_O_Func002C()
-    return ( GetPlayerTechCountSimple(FourCC('R005'), GetOwningPlayer(GetTriggerUnit())) == 2 )
+    return GetPlayerTechCountSimple(FourCC('R005'), GetOwningPlayer(GetTriggerUnit())) == 2
 end
 function Trig_Naim_Obstrel_O_Func003C()
-    return ( GetPlayerTechCountSimple(FourCC('R005'), GetOwningPlayer(GetTriggerUnit())) == 3 )
+    return GetPlayerTechCountSimple(FourCC('R005'), GetOwningPlayer(GetTriggerUnit())) == 3
 end
 function Trig_Naim_Obstrel_O_Actions()
-    if ( Trig_Naim_Obstrel_O_Func002C() ) then
+    if Trig_Naim_Obstrel_O_Func002C() then
         SetUnitAbilityLevelSwapped(FourCC('A00G'), GetTrainedUnit(), 2)
     end
-    if ( Trig_Naim_Obstrel_O_Func003C() ) then
+    if Trig_Naim_Obstrel_O_Func003C() then
         SetUnitAbilityLevelSwapped(FourCC('A00G'), GetTrainedUnit(), 3)
     end
 end
@@ -287,34 +287,34 @@ end
 -- Trigger: Linkor reaserch Parusa O
 --===========================================================================
 function Trig_Linkor_reaserch_Parusa_O_Conditions()
-    return ( GetResearched() == FourCC('R006') )
+    return GetResearched() == FourCC('R006')
 end
 function Trig_Linkor_reaserch_Parusa_O_Func001Func002002()
-    return ( 0 == 0 )
+    return 0 == 0
 end
 function Trig_Linkor_reaserch_Parusa_O_Func001Func004A()
     SetUnitAbilityLevelSwapped(FourCC('A00B'), GetEnumUnit(), 2)
 end
 function Trig_Linkor_reaserch_Parusa_O_Func001C()
-    return ( GetPlayerTechCountSimple(FourCC('R006'), GetOwningPlayer(GetTriggerUnit())) == 2 )
+    return GetPlayerTechCountSimple(FourCC('R006'), GetOwningPlayer(GetTriggerUnit())) == 2
 end
 function Trig_Linkor_reaserch_Parusa_O_Func002Func002002()
-    return ( 0 == 0 )
+    return 0 == 0
 end
 function Trig_Linkor_reaserch_Parusa_O_Func002Func004A()
     SetUnitAbilityLevelSwapped(FourCC('A00B'), GetEnumUnit(), 3)
 end
 function Trig_Linkor_reaserch_Parusa_O_Func002C()
-    return ( GetPlayerTechCountSimple(FourCC('R006'), GetOwningPlayer(GetTriggerUnit())) == 3 )
+    return GetPlayerTechCountSimple(FourCC('R006'), GetOwningPlayer(GetTriggerUnit())) == 3
 end
 function Trig_Linkor_reaserch_Parusa_O_Actions()
-    if ( Trig_Linkor_reaserch_Parusa_O_Func001C() ) then
+    if Trig_Linkor_reaserch_Parusa_O_Func001C() then
         udg_Boolexpr = Trig_Linkor_reaserch_Parusa_O_Func001Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Parusa_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     end
-    if ( Trig_Linkor_reaserch_Parusa_O_Func002C() ) then
+    if Trig_Linkor_reaserch_Parusa_O_Func002C() then
         udg_Boolexpr = Trig_Linkor_reaserch_Parusa_O_Func002Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Parusa_O_Func002Func004A)
@@ -332,22 +332,22 @@ end
 -- Trigger: Naim Parusa O
 --===========================================================================
 function Trig_Naim_Parusa_O_Func001C()
-    return ( ( GetUnitAbilityLevelSwapped(FourCC('A00B'), GetTrainedUnit()) == 1 ) )
+    return GetUnitAbilityLevelSwapped(FourCC('A00B'), GetTrainedUnit()) == 1
 end
 function Trig_Naim_Parusa_O_Conditions()
     return Trig_Naim_Parusa_O_Func001C()
 end
 function Trig_Naim_Parusa_O_Func002C()
-    return ( GetPlayerTechCountSimple(FourCC('R006'), GetOwningPlayer(GetTriggerUnit())) == 2 )
+    return GetPlayerTechCountSimple(FourCC('R006'), GetOwningPlayer(GetTriggerUnit())) == 2
 end
 function Trig_Naim_Parusa_O_Func003C()
-    return ( GetPlayerTechCountSimple(FourCC('R006'), GetOwningPlayer(GetTriggerUnit())) == 3 )
+    return GetPlayerTechCountSimple(FourCC('R006'), GetOwningPlayer(GetTriggerUnit())) == 3
 end
 function Trig_Naim_Parusa_O_Actions()
-    if ( Trig_Naim_Parusa_O_Func002C() ) then
+    if Trig_Naim_Parusa_O_Func002C() then
         SetUnitAbilityLevelSwapped(FourCC('A00B'), GetTrainedUnit(), 2)
     end
-    if ( Trig_Naim_Parusa_O_Func003C() ) then
+    if Trig_Naim_Parusa_O_Func003C() then
         SetUnitAbilityLevelSwapped(FourCC('A00B'), GetTrainedUnit(), 3)
     end
 end
@@ -362,34 +362,34 @@ end
 -- Trigger: Linkor Repair O
 --===========================================================================
 function Trig_Linkor_Repair_O_Conditions()
-    return ( GetResearched() == FourCC('R007') )
+    return GetResearched() == FourCC('R007')
 end
 function Trig_Linkor_Repair_O_Func001Func002002()
-    return ( 0 == 0 )
+    return 0 == 0
 end
 function Trig_Linkor_Repair_O_Func001Func004A()
     SetUnitAbilityLevelSwapped(FourCC('A00A'), GetEnumUnit(), 2)
 end
 function Trig_Linkor_Repair_O_Func001C()
-    return ( GetPlayerTechCountSimple(FourCC('R007'), GetOwningPlayer(GetTriggerUnit())) == 2 )
+    return GetPlayerTechCountSimple(FourCC('R007'), GetOwningPlayer(GetTriggerUnit())) == 2
 end
 function Trig_Linkor_Repair_O_Func002Func002002()
-    return ( 0 == 0 )
+    return 0 == 0
 end
 function Trig_Linkor_Repair_O_Func002Func004A()
     SetUnitAbilityLevelSwapped(FourCC('A00A'), GetEnumUnit(), 3)
 end
 function Trig_Linkor_Repair_O_Func002C()
-    return ( GetPlayerTechCountSimple(FourCC('R007'), GetOwningPlayer(GetTriggerUnit())) == 3 )
+    return GetPlayerTechCountSimple(FourCC('R007'), GetOwningPlayer(GetTriggerUnit())) == 3
 end
 function Trig_Linkor_Repair_O_Actions()
-    if ( Trig_Linkor_Repair_O_Func001C() ) then
+    if Trig_Linkor_Repair_O_Func001C() then
         udg_Boolexpr = Trig_Linkor_Repair_O_Func001Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_Repair_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     end
-    if ( Trig_Linkor_Repair_O_Func002C() ) then
+    if Trig_Linkor_Repair_O_Func002C() then
         udg_Boolexpr = Trig_Linkor_Repair_O_Func002Func002002
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_Repair_O_Func002Func004A)
@@ -407,22 +407,22 @@ end
 -- Trigger: Naim Rapair O
 --===========================================================================
 function Trig_Naim_Rapair_O_Func001C()
-    return ( ( GetUnitAbilityLevelSwapped(FourCC('A00A'), GetTrainedUnit()) == 1 ) )
+    return GetUnitAbilityLevelSwapped(FourCC('A00A'), GetTrainedUnit()) == 1
 end
 function Trig_Naim_Rapair_O_Conditions()
     return Trig_Naim_Rapair_O_Func001C()
 end
 function Trig_Naim_Rapair_O_Func002C()
-    return ( GetPlayerTechCountSimple(FourCC('R007'), GetOwningPlayer(GetTriggerUnit())) == 2 )
+    return GetPlayerTechCountSimple(FourCC('R007'), GetOwningPlayer(GetTriggerUnit())) == 2
 end
 function Trig_Naim_Rapair_O_Func003C()
-    return ( GetPlayerTechCountSimple(FourCC('R007'), GetOwningPlayer(GetTriggerUnit())) == 3 )
+    return GetPlayerTechCountSimple(FourCC('R007'), GetOwningPlayer(GetTriggerUnit())) == 3
 end
 function Trig_Naim_Rapair_O_Actions()
-    if ( Trig_Naim_Rapair_O_Func002C() ) then
+    if Trig_Naim_Rapair_O_Func002C() then
         SetUnitAbilityLevelSwapped(FourCC('A00A'), GetTrainedUnit(), 2)
     end
-    if ( Trig_Naim_Rapair_O_Func003C() ) then
+    if Trig_Naim_Rapair_O_Func003C() then
         SetUnitAbilityLevelSwapped(FourCC('A00A'), GetTrainedUnit(), 3)
     end
 end
@@ -452,18 +452,18 @@ function Trig_Abordach_D_or_Ot_Func018Func017Func009Func001C()
     return IsUnitType(GetEnumUnit(), UNIT_TYPE_HERO) and IsUnitLoadedBJ(GetEnumUnit())
 end
 function Trig_Abordach_D_or_Ot_Func018Func017Func009A()
-    if ( Trig_Abordach_D_or_Ot_Func018Func017Func009Func001C() ) then
+    if Trig_Abordach_D_or_Ot_Func018Func017Func009Func001C() then
         KillUnit(GetEnumUnit())
     end
 end
 function Trig_Abordach_D_or_Ot_Func018Func017Func011Func004002()
-    return ( 0 == 0 )
+    return 0 == 0
 end
 function Trig_Abordach_D_or_Ot_Func018Func017Func011Func010Func001C()
-    return ( GetUnitAbilityLevelSwapped(FourCC('A001'), GetEnumUnit()) == 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('A001'), GetEnumUnit()) == 1
 end
 function Trig_Abordach_D_or_Ot_Func018Func017Func011Func010A()
-    if ( Trig_Abordach_D_or_Ot_Func018Func017Func011Func010Func001C() ) then
+    if Trig_Abordach_D_or_Ot_Func018Func017Func011Func010Func001C() then
         UnitAddAbilityBJ(FourCC('A009'), GetEnumUnit())
     end
 end
@@ -474,7 +474,7 @@ function Trig_Abordach_D_or_Ot_Func018Func017C()
     return true
 end
 function Trig_Abordach_D_or_Ot_Func018Func021Func007Func008002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('A001'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('A001'), GetFilterUnit()) >= 1
 end
 function Trig_Abordach_D_or_Ot_Func018Func021Func007Func012A()
     UnitAddAbilityBJ(FourCC('A009'), GetEnumUnit())
@@ -489,7 +489,7 @@ function Trig_Abordach_D_or_Ot_Func018Func021Func015Func001C()
     return IsUnitLoadedBJ(GetEnumUnit())
 end
 function Trig_Abordach_D_or_Ot_Func018Func021Func015A()
-    if ( Trig_Abordach_D_or_Ot_Func018Func021Func015Func001C() ) then
+    if Trig_Abordach_D_or_Ot_Func018Func021Func015Func001C() then
         KillUnit(GetEnumUnit())
     end
 end
@@ -512,7 +512,7 @@ function Trig_Abordach_D_or_Ot_Actions()
     local u = {}
     local p = {}
     local ef = {}
-    if ( Trig_Abordach_D_or_Ot_Func005C() ) then
+    if Trig_Abordach_D_or_Ot_Func005C() then
         return
     end
     u[1]=udg_LocalUnit[1]
@@ -522,7 +522,7 @@ function Trig_Abordach_D_or_Ot_Actions()
     for bj_forLoopAIndex = 1, 9 do
         udg_LocalUnit[1]=u[1]
         udg_LocalUnit[2]=u[2]
-        if ( (true) ) then -- INLINED!!
+        if true then -- INLINED!!
             return
         end
         AddSpecialEffectLocBJ(udg_LocalPosition[1], "ObjectsSpawnmodelsHumanHCancelDeathHCancelDeath.mdl")
@@ -536,7 +536,7 @@ function Trig_Abordach_D_or_Ot_Actions()
         -- --------
         -- --------
         -- ??????? ??????? 1
-        if ( (true) ) then -- INLINED!!
+        if true then -- INLINED!!
             udg_LocalUnit[1]=u[1]
             udg_LocalUnit[2]=u[2]
             TriggerExecute(gg_trg_AbordachSystemDefence2_O)
@@ -544,7 +544,7 @@ function Trig_Abordach_D_or_Ot_Actions()
             GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
             ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func017Func009A)
             GroupClear(udg_LocalOtrad2)
-            if ( (true) ) then -- INLINED!!
+            if true then -- INLINED!!
                 udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func017Func011Func004002
                 GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
                 udg_LocalText2="cffff0000.r"
@@ -559,11 +559,11 @@ function Trig_Abordach_D_or_Ot_Actions()
         -- --------
         -- --------
         -- ??????? ??????? 2
-        if ( (true) ) then -- INLINED!!
+        if true then -- INLINED!!
             udg_LocalUnit[1]=u[1]
             udg_LocalUnit[2]=u[2]
             TriggerExecute(gg_trg_AbordachSystemDefence1_O)
-            if ( (true) ) then -- INLINED!!
+            if true then -- INLINED!!
                 udg_LocalText2="cffff0000.r"
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[1]), 0, 0, udg_LocalText2)
                 udg_LocalText2="cff00ff00r not "
@@ -581,16 +581,16 @@ function Trig_Abordach_D_or_Ot_Actions()
         -- --------
         -- --------
         -- ???????? ???????)))
-        if ( (true) ) then -- INLINED!!
+        if true then -- INLINED!!
         else
         end
-        if ( (true) ) then -- INLINED!!
+        if true then -- INLINED!!
         else
         end
-        if ( (true) ) then -- INLINED!!
+        if true then -- INLINED!!
         else
         end
-        if ( (true) ) then -- INLINED!!
+        if true then -- INLINED!!
         else
         end
         -- ????? ???????? ====
@@ -909,7 +909,7 @@ function Trig_Portal_Connect_Func008Func004Func001Func002C()
     return not (udg_Portal_active[udg_Portal_INDEX_CASTER]) and not (udg_Portal_active[udg_Portal_INDEX_TARGET])
 end
 function Trig_Portal_Connect_Func008Func004Func001C()
-    return ( GetTriggerUnit() == udg_Portal_portal[udg_Portal_INDEX_TARGET] )
+    return GetTriggerUnit() == udg_Portal_portal[udg_Portal_INDEX_TARGET]
 end
 function Trig_Portal_Connect_Func008Func004C()
     return udg_Portal_active[udg_Portal_INDEX_TARGET] and (( GetSpellTargetUnit() ~= udg_Portal_portal[udg_Portal_INDEX_CASTER] ))
@@ -925,7 +925,7 @@ function Trig_Portal_Connect_Actions()
     -- Portal_portal[Portal_INDEX_CASTER] is the sister portal
     -- Portal_portal[Portal_INDEX_TARGET] is the caster portal
     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
-    if ( Trig_Portal_Connect_Func008C() ) then
+    if Trig_Portal_Connect_Func008C() then
         -- TRAVELLER here is the index of the existing sister portal. Therefore, Portal_portal[Portal_INDEX_TRAVELLER] is the caster portal
         -- Anything else indexed to TRAVELLER, however, is for the currently connected sister portal. TRAVELLER is used here to disengage her from the caster
         udg_Portal_INDEX_TRAVELLER=GetUnitUserData(udg_Portal_portal[udg_Portal_INDEX_CASTER])
@@ -948,12 +948,12 @@ function Trig_Portal_Connect_Actions()
         UnitAddAbilityBJ(udg_Portal_SeverAbility, udg_Portal_portal[udg_Portal_INDEX_TARGET])
         UnitAddAbilityBJ(udg_Portal_SeverAbility, udg_Portal_portal[udg_Portal_INDEX_CASTER])
     else
-        if ( Trig_Portal_Connect_Func008Func004C() ) then
+        if Trig_Portal_Connect_Func008Func004C() then
         else
-            if ( Trig_Portal_Connect_Func008Func004Func001C() ) then
+            if Trig_Portal_Connect_Func008Func004Func001C() then
             else
                 -- If the targeted Portal, and the cast, are not active, connect them to one another
-                if ( Trig_Portal_Connect_Func008Func004Func001Func002C() ) then
+                if Trig_Portal_Connect_Func008Func004Func001Func002C() then
                     udg_Portal_active[udg_Portal_INDEX_CASTER]=true
                     udg_Portal_active[udg_Portal_INDEX_TARGET]=true
                     udg_Portal_portal[udg_Portal_INDEX_CASTER]=GetSpellTargetUnit()
@@ -998,16 +998,16 @@ function Trig_Portal_Periodic_Func001Func006Func002Func011Func012Func005C()
     return udg_Portal_missileTargetable[udg_Portal_INDEX_TARGET]
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func011Func012C()
-    return ( udg_Portal_missileSpeed[udg_Portal_INDEX_TARGET] > 0.00 )
+    return udg_Portal_missileSpeed[udg_Portal_INDEX_TARGET] > 0.00
 end
 function Trig_Portal_Periodic_Func001Func006Func002Func011C()
     return udg_Portal_missileUseOwnMovement[udg_Portal_INDEX_TARGET]
 end
 function Trig_Portal_Periodic_Func001Func006Func002C()
-    return ( udg_Portal_delay[udg_Portal_INDEX_CASTER] > 0.00 )
+    return udg_Portal_delay[udg_Portal_INDEX_CASTER] > 0.00
 end
 function Trig_Portal_Periodic_Func001Func006C()
-    return ( DistanceBetweenPoints(udg_Portal_loc1, udg_Portal_loc3) <= udg_Portal_range[udg_Portal_INDEX_TARGET] )
+    return DistanceBetweenPoints(udg_Portal_loc1, udg_Portal_loc3) <= udg_Portal_range[udg_Portal_INDEX_TARGET]
 end
 function Trig_Portal_Periodic_Func001A()
     udg_Portal_traveller=GetEnumUnit()
@@ -1015,9 +1015,9 @@ function Trig_Portal_Periodic_Func001A()
     udg_Portal_INDEX_TARGET=GetUnitUserData(udg_Portal_targeted[udg_Portal_INDEX_CASTER])
     udg_Portal_loc1=GetUnitLoc(udg_Portal_traveller)
     udg_Portal_loc3=GetUnitLoc(udg_Portal_targeted[udg_Portal_INDEX_CASTER])
-    if ( Trig_Portal_Periodic_Func001Func006C() ) then
-        if ( Trig_Portal_Periodic_Func001Func006Func002C() ) then
-            if ( Trig_Portal_Periodic_Func001Func006Func002Func002C() ) then
+    if Trig_Portal_Periodic_Func001Func006C() then
+        if Trig_Portal_Periodic_Func001Func006Func002C() then
+            if Trig_Portal_Periodic_Func001Func006Func002Func002C() then
                 udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER]=true
                 udg_Portal_delayFXAbil[udg_Portal_INDEX_CASTER]=udg_Portal_delayFXAbil[udg_Portal_INDEX_TARGET]
                 UnitAddAbilityBJ(udg_Portal_delayFXAbil[udg_Portal_INDEX_CASTER], udg_Portal_traveller)
@@ -1032,13 +1032,13 @@ function Trig_Portal_Periodic_Func001A()
             RemoveLocation(udg_Portal_loc2)
             udg_Portal_loc2=GetUnitLoc(udg_Portal_portal[udg_Portal_INDEX_TARGET])
             -- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
-            if ( Trig_Portal_Periodic_Func001Func006Func002Func011C() ) then
+            if Trig_Portal_Periodic_Func001Func006Func002Func011C() then
                 CreateNUnitsAtLocFacingLocBJ(1, udg_Portal_missileDummy[udg_Portal_INDEX_TARGET], GetOwningPlayer(udg_Portal_traveller), udg_Portal_loc1, udg_Portal_loc2)
                 udg_Portal_dummy=GetLastCreatedUnit()
-                if ( Trig_Portal_Periodic_Func001Func006Func002Func011Func003C() ) then
+                if Trig_Portal_Periodic_Func001Func006Func002Func011Func003C() then
                     SelectUnitAddForPlayer(udg_Portal_dummy, GetOwningPlayer(udg_Portal_traveller))
                 end
-                if ( Trig_Portal_Periodic_Func001Func006Func002Func011Func004C() ) then
+                if Trig_Portal_Periodic_Func001Func006Func002Func011Func004C() then
                     SetUnitInvulnerable(udg_Portal_dummy, false)
                 end
                 IssuePointOrderLocBJ(udg_Portal_dummy, "move", udg_Portal_loc2)
@@ -1049,13 +1049,13 @@ function Trig_Portal_Periodic_Func001A()
                 GroupAddUnitSimple(udg_Portal_dummy, udg_Portal_teleMissiles)
                 ShowUnitHide(udg_Portal_traveller)
             else
-                if ( Trig_Portal_Periodic_Func001Func006Func002Func011Func012C() ) then
+                if Trig_Portal_Periodic_Func001Func006Func002Func011Func012C() then
                     CreateNUnitsAtLocFacingLocBJ(1, udg_Portal_missileDummy[udg_Portal_INDEX_TARGET], GetOwningPlayer(udg_Portal_traveller), udg_Portal_loc1, udg_Portal_loc2)
                     udg_Portal_dummy=GetLastCreatedUnit()
-                    if ( Trig_Portal_Periodic_Func001Func006Func002Func011Func012Func004C() ) then
+                    if Trig_Portal_Periodic_Func001Func006Func002Func011Func012Func004C() then
                         SelectUnitAddForPlayer(udg_Portal_dummy, GetOwningPlayer(udg_Portal_traveller))
                     end
-                    if ( Trig_Portal_Periodic_Func001Func006Func002Func011Func012Func005C() ) then
+                    if Trig_Portal_Periodic_Func001Func006Func002Func011Func012Func005C() then
                         SetUnitInvulnerable(udg_Portal_dummy, false)
                     end
                     UnitAddAbilityBJ(udg_Portal_missileFXAbil[udg_Portal_INDEX_TARGET], udg_Portal_dummy)
@@ -1084,7 +1084,7 @@ function Trig_Portal_Periodic_Func001A()
             GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_group)
         end
     else
-        if ( Trig_Portal_Periodic_Func001Func006Func001C() ) then
+        if Trig_Portal_Periodic_Func001Func006Func001C() then
             -- This is here in case of a unit being knockbacked outside the Portal's reach
             udg_Portal_isTeleporting[udg_Portal_INDEX_CASTER]=false
             IssueTargetOrderBJ(udg_Portal_traveller, "smart", udg_Portal_targeted[udg_Portal_INDEX_CASTER])
@@ -1101,7 +1101,7 @@ function Trig_Portal_Periodic_Func002Func007Func003Func001Func012C()
     return IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller))
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func001C()
-    return ( DistanceBetweenPoints(udg_Portal_loc1, udg_Portal_loc2) <= udg_Portal_range[udg_Portal_INDEX_TARGET] )
+    return DistanceBetweenPoints(udg_Portal_loc1, udg_Portal_loc2) <= udg_Portal_range[udg_Portal_INDEX_TARGET]
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func002Func013C()
     return IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller))
@@ -1110,10 +1110,10 @@ function Trig_Portal_Periodic_Func002Func007Func003Func002Func014C()
     return IsUnitAliveBJ(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER])
 end
 function Trig_Portal_Periodic_Func002Func007Func003Func002C()
-    return ( DistanceBetweenPoints(udg_Portal_loc1, udg_Portal_loc2) <= ( udg_Portal_missileSpeed[udg_Portal_INDEX_TRAVELLER] / 33.00 ) )
+    return DistanceBetweenPoints(udg_Portal_loc1, udg_Portal_loc2) <= ( udg_Portal_missileSpeed[udg_Portal_INDEX_TRAVELLER] / 33.00 )
 end
 function Trig_Portal_Periodic_Func002Func007Func003C()
-    return ( udg_Portal_missileSpeed[udg_Portal_INDEX_TRAVELLER] > 0.00 )
+    return udg_Portal_missileSpeed[udg_Portal_INDEX_TRAVELLER] > 0.00
 end
 function Trig_Portal_Periodic_Func002Func007Func015C()
     return IsUnitSelected(udg_Portal_traveller, GetOwningPlayer(udg_Portal_traveller))
@@ -1128,11 +1128,11 @@ function Trig_Portal_Periodic_Func002A()
     udg_Portal_INDEX_TRAVELLER=GetUnitUserData(udg_Portal_traveller)
     udg_Portal_INDEX_CASTER=GetUnitUserData(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER])
     udg_Portal_INDEX_TARGET=GetUnitUserData(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER])
-    if ( Trig_Portal_Periodic_Func002Func007C() ) then
+    if Trig_Portal_Periodic_Func002Func007C() then
         udg_Portal_loc1=GetUnitLoc(udg_Portal_traveller)
         udg_Portal_loc2=GetUnitLoc(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER])
-        if ( Trig_Portal_Periodic_Func002Func007Func003C() ) then
-            if ( Trig_Portal_Periodic_Func002Func007Func003Func002C() ) then
+        if Trig_Portal_Periodic_Func002Func007Func003C() then
+            if Trig_Portal_Periodic_Func002Func007Func003Func002C() then
                 ShowUnitShow(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER])
                 udg_Portal_loc3=PolarProjectionBJ(udg_Portal_loc1, GetRandomReal(0.00, udg_Portal_range[GetUnitUserData(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER])]), GetRandomDirectionDeg())
                 SetUnitPositionLoc(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], udg_Portal_loc3)
@@ -1145,11 +1145,11 @@ function Trig_Portal_Periodic_Func002A()
                 IssuePointOrderLocBJ(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], "attack", udg_Portal_loc4)
                 RemoveLocation(udg_Portal_loc4)
                 RemoveLocation(udg_Portal_loc3)
-                if ( Trig_Portal_Periodic_Func002Func007Func003Func002Func013C() ) then
+                if Trig_Portal_Periodic_Func002Func007Func003Func002Func013C() then
                     SelectUnitAddForPlayer(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], GetOwningPlayer(udg_Portal_traveller))
                 end
             else
-                if ( Trig_Portal_Periodic_Func002Func007Func003Func002Func014C() ) then
+                if Trig_Portal_Periodic_Func002Func007Func003Func002Func014C() then
                     udg_Portal_loc3=PolarProjectionBJ(udg_Portal_loc1, ( udg_Portal_missileSpeed[udg_Portal_INDEX_TRAVELLER] / 33.00 ), AngleBetweenPoints(udg_Portal_loc1, udg_Portal_loc2))
                     SetUnitPositionLocFacingLocBJ(udg_Portal_traveller, udg_Portal_loc3, udg_Portal_loc2)
                     RemoveLocation(udg_Portal_loc3)
@@ -1158,7 +1158,7 @@ function Trig_Portal_Periodic_Func002A()
                 end
             end
         else
-            if ( Trig_Portal_Periodic_Func002Func007Func003Func001C() ) then
+            if Trig_Portal_Periodic_Func002Func007Func003Func001C() then
                 ShowUnitShow(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER])
                 SetUnitPositionLoc(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], udg_Portal_loc1)
                 UnitApplyTimedLifeBJ(0.01, FourCC('BTLF'), udg_Portal_traveller)
@@ -1169,11 +1169,11 @@ function Trig_Portal_Periodic_Func002A()
                 udg_Portal_loc4=GetUnitRallyPoint(udg_Portal_portal[udg_Portal_INDEX_TRAVELLER])
                 IssuePointOrderLocBJ(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], "attack", udg_Portal_loc4)
                 RemoveLocation(udg_Portal_loc4)
-                if ( Trig_Portal_Periodic_Func002Func007Func003Func001Func012C() ) then
+                if Trig_Portal_Periodic_Func002Func007Func003Func001Func012C() then
                     SelectUnitAddForPlayer(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], GetOwningPlayer(udg_Portal_traveller))
                 end
             else
-                if ( Trig_Portal_Periodic_Func002Func007Func003Func001Func001C() ) then
+                if Trig_Portal_Periodic_Func002Func007Func003Func001Func001C() then
                 else
                     UnitApplyTimedLifeBJ(0.01, FourCC('BTLF'), udg_Portal_traveller)
                 end
@@ -1191,7 +1191,7 @@ function Trig_Portal_Periodic_Func002A()
         GroupRemoveUnitSimple(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], udg_Portal_group)
         GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_teleMissiles)
         UnitRemoveAbilityBJ(udg_Portal_delayFXAbil[udg_Portal_INDEX_TRAVELLER], udg_Portal_traveller)
-        if ( Trig_Portal_Periodic_Func002Func007Func015C() ) then
+        if Trig_Portal_Periodic_Func002Func007Func015C() then
             SelectUnitAddForPlayer(udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER], GetOwningPlayer(udg_Portal_traveller))
         end
     end
@@ -1202,7 +1202,7 @@ end
 function Trig_Portal_Periodic_Actions()
     ForGroupBJ(udg_Portal_group, Trig_Portal_Periodic_Func001A)
     ForGroupBJ(udg_Portal_teleMissiles, Trig_Portal_Periodic_Func002A)
-    if ( Trig_Portal_Periodic_Func003C() ) then
+    if Trig_Portal_Periodic_Func003C() then
         DisableTrigger(GetTriggeringTrigger())
     end
 end
@@ -1234,16 +1234,16 @@ end
 function Trig_Portal_Target_Actions()
     udg_Portal_INDEX_CASTER=GetUnitUserData(GetTriggerUnit())
     udg_Portal_INDEX_TARGET=GetUnitUserData(GetOrderTargetUnit())
-    if ( Trig_Portal_Target_Func003C() ) then
+    if Trig_Portal_Target_Func003C() then
         DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), 10.00, "TRIGSTR_19362")
     else
-        if ( Trig_Portal_Target_Func003Func001C() ) then
+        if Trig_Portal_Target_Func003Func001C() then
         else
             udg_Portal_targeted[udg_Portal_INDEX_CASTER]=GetOrderTargetUnit()
             GroupAddUnitSimple(GetTriggerUnit(), udg_Portal_group)
             udg_Portal_delay[udg_Portal_INDEX_CASTER]=udg_Portal_delay[udg_Portal_INDEX_TARGET]
             -- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
-            if ( Trig_Portal_Target_Func003Func001Func005C() ) then
+            if Trig_Portal_Target_Func003Func001Func005C() then
                 EnableTrigger(gg_trg_Portal_Periodic)
             end
         end
@@ -1288,22 +1288,22 @@ function Trig_Portal_Death_Conditions()
     return udg_Portal_active[GetUnitUserData(GetTriggerUnit())]
 end
 function Trig_Portal_Death_Func004Func004C()
-    return ( GetTriggerUnit() == udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER] )
+    return GetTriggerUnit() == udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]
 end
 function Trig_Portal_Death_Func004Func005C()
-    return ( udg_Portal_portal[udg_Portal_INDEX_CASTER] == udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER] )
+    return udg_Portal_portal[udg_Portal_INDEX_CASTER] == udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]
 end
 function Trig_Portal_Death_Func004A()
     udg_Portal_traveller=GetEnumUnit()
     udg_Portal_INDEX_TRAVELLER=GetUnitUserData(udg_Portal_traveller)
     UnitRemoveAbilityBJ(udg_Portal_delayFXAbil[udg_Portal_INDEX_CASTER], udg_Portal_traveller)
-    if ( Trig_Portal_Death_Func004Func004C() ) then
+    if Trig_Portal_Death_Func004Func004C() then
         udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=nil
         udg_Portal_delay[udg_Portal_INDEX_TRAVELLER]=0.00
         udg_Portal_isTeleporting[udg_Portal_INDEX_TRAVELLER]=false
         GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_group)
     end
-    if ( Trig_Portal_Death_Func004Func005C() ) then
+    if Trig_Portal_Death_Func004Func005C() then
         udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=nil
         udg_Portal_delay[udg_Portal_INDEX_TRAVELLER]=0.00
         udg_Portal_isTeleporting[udg_Portal_INDEX_TRAVELLER]=false
@@ -1364,22 +1364,22 @@ function Trig_Portal_Disconnect_Conditions()
     return udg_Portal_active[GetUnitUserData(GetTriggerUnit())]
 end
 function Trig_Portal_Disconnect_Func001Func005Func004C()
-    return ( GetTriggerUnit() == udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER] )
+    return GetTriggerUnit() == udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]
 end
 function Trig_Portal_Disconnect_Func001Func005Func005C()
-    return ( udg_Portal_portal[udg_Portal_INDEX_CASTER] == udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER] )
+    return udg_Portal_portal[udg_Portal_INDEX_CASTER] == udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]
 end
 function Trig_Portal_Disconnect_Func001Func005A()
     udg_Portal_traveller=GetEnumUnit()
     udg_Portal_INDEX_TRAVELLER=GetUnitUserData(udg_Portal_traveller)
     UnitRemoveAbilityBJ(udg_Portal_delayFXAbil[udg_Portal_INDEX_CASTER], udg_Portal_traveller)
-    if ( Trig_Portal_Disconnect_Func001Func005Func004C() ) then
+    if Trig_Portal_Disconnect_Func001Func005Func004C() then
         udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=nil
         udg_Portal_delay[udg_Portal_INDEX_TRAVELLER]=0.00
         udg_Portal_isTeleporting[udg_Portal_INDEX_TRAVELLER]=false
         GroupRemoveUnitSimple(udg_Portal_traveller, udg_Portal_group)
     end
-    if ( Trig_Portal_Disconnect_Func001Func005Func005C() ) then
+    if Trig_Portal_Disconnect_Func001Func005Func005C() then
         udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=nil
         udg_Portal_delay[udg_Portal_INDEX_TRAVELLER]=0.00
         udg_Portal_isTeleporting[udg_Portal_INDEX_TRAVELLER]=false
@@ -1387,10 +1387,10 @@ function Trig_Portal_Disconnect_Func001Func005A()
     end
 end
 function Trig_Portal_Disconnect_Func001C()
-    return ( GetSpellAbilityId() == udg_Portal_SeverAbility )
+    return GetSpellAbilityId() == udg_Portal_SeverAbility
 end
 function Trig_Portal_Disconnect_Actions()
-    if ( Trig_Portal_Disconnect_Func001C() ) then
+    if Trig_Portal_Disconnect_Func001C() then
         udg_Portal_INDEX_CASTER=GetUnitUserData(GetTriggerUnit())
         udg_Portal_INDEX_TARGET=GetUnitUserData(udg_Portal_portal[udg_Portal_INDEX_CASTER])
         UnitRemoveAbilityBJ(udg_Portal_SeverAbility, GetTriggerUnit())
@@ -1417,22 +1417,22 @@ end
 -- No Missile, No Delays
 --===========================================================================
 function Trig_Connect_Portal_2_Func001Func003Func002C()
-    return ( GetTriggerUnit() == udg_Portal_portal[udg_Portal_INDEX_TARGET] )
+    return GetTriggerUnit() == udg_Portal_portal[udg_Portal_INDEX_TARGET]
 end
 function Trig_Connect_Portal_2_Func001Func003C()
     return udg_Portal_active[udg_Portal_INDEX_TARGET] and (( GetSpellTargetUnit() ~= udg_Portal_portal[udg_Portal_INDEX_CASTER] ))
 end
 function Trig_Connect_Portal_2_Func001C()
-    return ( GetUnitTypeId(GetSpellTargetUnit()) == GetUnitTypeId(GetTriggerUnit()) )
+    return GetUnitTypeId(GetSpellTargetUnit()) == GetUnitTypeId(GetTriggerUnit())
 end
 function Trig_Connect_Portal_2_Actions()
-    if ( Trig_Connect_Portal_2_Func001C() ) then
+    if Trig_Connect_Portal_2_Func001C() then
         udg_Portal_INDEX_CASTER=GetUnitUserData(GetTriggerUnit())
         udg_Portal_INDEX_TARGET=GetUnitUserData(GetSpellTargetUnit())
-        if ( Trig_Connect_Portal_2_Func001Func003C() ) then
+        if Trig_Connect_Portal_2_Func001Func003C() then
             DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), 10.00, "TRIGSTR_19222")
         else
-            if ( Trig_Connect_Portal_2_Func001Func003Func002C() ) then
+            if Trig_Connect_Portal_2_Func001Func003Func002C() then
                 DisplayTimedTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), 10.00, "TRIGSTR_19228")
             else
                 udg_Portal_ConfigIndex[1]=udg_Portal_INDEX_CASTER
@@ -1612,7 +1612,7 @@ end
 -- Trigger: F2 Start
 --===========================================================================
 function Trig_F2_Start_Conditions()
-    return ( CountLivingPlayerUnitsOfTypeId(FourCC('h0GR'), GetTriggerPlayer()) == 0 )
+    return CountLivingPlayerUnitsOfTypeId(FourCC('h0GR'), GetTriggerPlayer()) == 0
 end
 function Trig_F2_Start_Actions()
     udg_LocalPosition2=GetRectCenter(gg_rct_HostRegion)
@@ -2302,7 +2302,7 @@ end
 -- Trigger: MageTpSell
 --===========================================================================
 function Trig_MageTpSell_Conditions()
-    return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h07A') )
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('h07A')
 end
 function Trig_MageTpSell_Func002Func001C()
     return (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetSoldUnit()) )) and GetPlayerAlliance(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetSoldUnit()), ALLIANCE_SHARED_ADVANCED_CONTROL)
@@ -2315,8 +2315,8 @@ function Trig_MageTpSell_Func002C()
 end
 function Trig_MageTpSell_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
-    if ( Trig_MageTpSell_Func002C() ) then
-        if ( Trig_MageTpSell_Func002Func001C() ) then
+    if Trig_MageTpSell_Func002C() then
+        if Trig_MageTpSell_Func002Func001C() then
             SetUnitOwner(GetSoldUnit(), GetOwningPlayer(GetTriggerUnit()), true)
             AddCountDis(GetSoldUnit() , GetPlayerId(GetOwningPlayer(GetTriggerUnit())))
             DelCountDis(GetSoldUnit() , GetPlayerId(GetOwningPlayer(GetSoldUnit())))

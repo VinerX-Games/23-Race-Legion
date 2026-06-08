@@ -13,7 +13,7 @@ end
 ---@param target unit
 ---@return nothing
 function SpellSleepAOE___DummyCastBuff(caster, target)
-	if (GetUnitState(target, UNIT_STATE_LIFE) > 0.405) then
+	if GetUnitState(target, UNIT_STATE_LIFE) > 0.405 then
 		SetUnitX(SpellSleepAOE___DummyUnit, GetUnitX(target))
 		SetUnitY(SpellSleepAOE___DummyUnit, GetUnitY(target))
 		SetUnitAbilityLevel(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast, GetUnitAbilityLevel(caster, SpellSleepAOE___SpellHero))
@@ -34,7 +34,7 @@ function SpellSleepAOE___anon__1()
 	GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(SpellSleepAOE___anon__2))
 	while true do
 		u = FirstOfGroup(g)
-		if (u == nil) then
+		if u == nil then
 			if true then break end
 		end
 		SpellSleepAOE___DummyCastBuff(GetTriggerUnit(), u)
@@ -53,7 +53,7 @@ function SpellSleepAOE___onInit()
 	UnitAddAbility(SpellSleepAOE___DummyUnit, SpellSleepAOE___SpellCast)
 	i = 0
 	while true do
-		if (i >= bj_MAX_PLAYER_SLOTS) then break end
+		if i >= bj_MAX_PLAYER_SLOTS then break end
 		TriggerRegisterPlayerUnitEvent(t, Player(i), EVENT_PLAYER_UNIT_SPELL_EFFECT, nil)
 		i = i + 1
 	end

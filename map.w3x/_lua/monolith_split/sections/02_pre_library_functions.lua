@@ -24,13 +24,13 @@ GetPlayerUnitTypeCount = GetPlayerUnitTypeCount or function(p, unitid) return 0 
 ---@return integer
 function s__StackTemplate__allocate()
 	local this = si__StackTemplate_F
-	if (this ~= 0) then
+	if this ~= 0 then
 		si__StackTemplate_F = si__StackTemplate_V[this]
 	else
 		si__StackTemplate_I = si__StackTemplate_I + 1
 		this = si__StackTemplate_I
 	end
-	if (this > 8190) then
+	if this > 8190 then
 		return 0
 	end
 	
@@ -53,13 +53,13 @@ end
 ---@return integer
 function s__SanctifiedEnchantment__allocate()
 	local this = si__SanctifiedEnchantment_F
-	if (this ~= 0) then
+	if this ~= 0 then
 		si__SanctifiedEnchantment_F = si__SanctifiedEnchantment_V[this]
 	else
 		si__SanctifiedEnchantment_I = si__SanctifiedEnchantment_I + 1
 		this = si__SanctifiedEnchantment_I
 	end
-	if (this > 8190) then
+	if this > 8190 then
 		return 0
 	end
 	

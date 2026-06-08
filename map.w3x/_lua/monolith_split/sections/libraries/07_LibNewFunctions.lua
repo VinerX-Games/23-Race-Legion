@@ -14,7 +14,7 @@ end
 ---@return nothing
 function GroupPickRandomUnitEnum2()
 	bj_groupRandomConsidered = bj_groupRandomConsidered + 1
-	if (GetRandomInt(1, bj_groupRandomConsidered) == 1) then
+	if GetRandomInt(1, bj_groupRandomConsidered) == 1 then
 		bj_groupRandomCurrentPick = GetEnumUnit()
 	end
 end

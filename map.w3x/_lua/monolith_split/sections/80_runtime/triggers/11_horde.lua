@@ -1764,28 +1764,28 @@ end
 -- Trigger: YesLeft
 --===========================================================================
 function Trig_YesLeft_Func001C()
-    return ( GetPlayerTechMaxAllowedSwap(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0 )
+    return GetPlayerTechMaxAllowedSwap(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0
 end
 function Trig_YesLeft_Func002C()
     return true
 end
 function Trig_YesLeft_Func003C()
-    return ( GetPlayerTechCountSimple(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0 )
+    return GetPlayerTechCountSimple(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0
 end
 function Trig_YesLeft_Func004C()
-    return ( GetPlayerTechMaxAllowedSwap(FourCC('R0D2'), GetOwningPlayer(GetTriggerUnit())) == 0 )
+    return GetPlayerTechMaxAllowedSwap(FourCC('R0D2'), GetOwningPlayer(GetTriggerUnit())) == 0
 end
 function Trig_YesLeft_Actions()
-    if ( Trig_YesLeft_Func001C() ) then
+    if Trig_YesLeft_Func001C() then
         SetPlayerTechMaxAllowedSwap(FourCC('R0DY'), 1, GetOwningPlayer(GetTriggerUnit()))
     end
-    if ( (true) ) then -- INLINED!!
+    if true then -- INLINED!!
         SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
     end
-    if ( Trig_YesLeft_Func003C() ) then
+    if Trig_YesLeft_Func003C() then
         SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
     end
-    if ( Trig_YesLeft_Func004C() ) then
+    if Trig_YesLeft_Func004C() then
         SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
     end
     SetPlayerTechMaxAllowedSwap(FourCC('R0EI'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -1839,7 +1839,7 @@ end
 -- Trigger: StartCommonHome
 --===========================================================================
 function Trig_StartCommonHome_Conditions()
-    return ( GetResearched() == FourCC('R0DY') )
+    return GetResearched() == FourCC('R0DY')
 end
 function Trig_StartCommonHome_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
@@ -1967,7 +1967,7 @@ end
 -- Trigger: BeginCommonHome
 --===========================================================================
 function Trig_BeginCommonHome_Conditions()
-    return ( GetResearched() == FourCC('R0EH') )
+    return GetResearched() == FourCC('R0EH')
 end
 function Trig_BeginCommonHome_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0DX'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -1983,13 +1983,13 @@ end
 -- Trigger: CanselCommonHome
 --===========================================================================
 function Trig_CanselCommonHome_Conditions()
-    return ( GetResearched() == FourCC('R0E9') )
+    return GetResearched() == FourCC('R0E9')
 end
 function Trig_CanselCommonHome_Func001C()
-    return ( GetPlayerTechMaxAllowedSwap(FourCC('R0D1'), GetOwningPlayer(GetTriggerUnit())) == 0 )
+    return GetPlayerTechMaxAllowedSwap(FourCC('R0D1'), GetOwningPlayer(GetTriggerUnit())) == 0
 end
 function Trig_CanselCommonHome_Actions()
-    if ( Trig_CanselCommonHome_Func001C() ) then
+    if Trig_CanselCommonHome_Func001C() then
         SetPlayerTechMaxAllowedSwap(FourCC('R0DX'), 1, GetOwningPlayer(GetTriggerUnit()))
     end
 end
@@ -2008,7 +2008,7 @@ function Trig_CommonHome_Conditions()
 end
 function NoneRadicals()
     local id= GetUnitTypeId(GetFilterUnit())
-    return ( id == FourCC('o01U') or id == FourCC('o01Z') or id == FourCC('o02G') or id == FourCC('o01Y') or id == FourCC('o01S') or id == FourCC('o01E') or id == FourCC('o02L') )
+    return id == FourCC('o01U') or id == FourCC('o01Z') or id == FourCC('o02G') or id == FourCC('o01Y') or id == FourCC('o01S') or id == FourCC('o01E') or id == FourCC('o02L')
 end
 function Trig_CommonHome_Actions()
     local u= GetTriggerUnit()
@@ -2155,7 +2155,7 @@ end
 -- Trigger: StartUnitedOrcs
 --===========================================================================
 function Trig_StartUnitedOrcs_Conditions()
-    return ( GetResearched() == FourCC('R0DX') )
+    return GetResearched() == FourCC('R0DX')
 end
 function Trig_StartUnitedOrcs_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0D1'), 1, GetOwningPlayer(GetTriggerUnit()))
@@ -2270,7 +2270,7 @@ end
 -- Trigger: StartTrueHorde
 --===========================================================================
 function Trig_StartTrueHorde_Conditions()
-    return ( GetResearched() == FourCC('R0E9') )
+    return GetResearched() == FourCC('R0E9')
 end
 function Trig_StartTrueHorde_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0DY'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -2288,13 +2288,13 @@ end
 -- Trigger: CanselTrueHorde
 --===========================================================================
 function Trig_CanselTrueHorde_Conditions()
-    return ( GetResearched() == FourCC('R0E9') )
+    return GetResearched() == FourCC('R0E9')
 end
 function Trig_CanselTrueHorde_Func001C()
-    return ( GetPlayerTechMaxAllowedSwap(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0 )
+    return GetPlayerTechMaxAllowedSwap(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0
 end
 function Trig_CanselTrueHorde_Actions()
-    if ( Trig_CanselTrueHorde_Func001C() ) then
+    if Trig_CanselTrueHorde_Func001C() then
         SetPlayerTechMaxAllowedSwap(FourCC('R0DY'), 1, GetOwningPlayer(GetTriggerUnit()))
     end
 end
@@ -2322,7 +2322,7 @@ function Trig_TrueHorde_Conditions()
 end
 function NoNeORc()
     local id= GetUnitTypeId(GetFilterUnit())
-    return ( id == FourCC('ospw') or id == FourCC('o026') or id == FourCC('o025') or id == FourCC('o024') or id == FourCC('o023') or id == FourCC('o01G') or id == FourCC('o01L') or id == FourCC('o01F') or id == FourCC('o01H') or id == FourCC('otbk') or id == FourCC('o02M') or id == FourCC('o02S') or id == FourCC('o02W') )
+    return id == FourCC('ospw') or id == FourCC('o026') or id == FourCC('o025') or id == FourCC('o024') or id == FourCC('o023') or id == FourCC('o01G') or id == FourCC('o01L') or id == FourCC('o01F') or id == FourCC('o01H') or id == FourCC('otbk') or id == FourCC('o02M') or id == FourCC('o02S') or id == FourCC('o02W')
 end
 function Trig_TrueHorde_Actions()
     local u= GetTriggerUnit()
@@ -2535,7 +2535,7 @@ end
 -- Trigger: StartNeutrals
 --===========================================================================
 function Trig_StartNeutrals_Conditions()
-    return ( GetResearched() == FourCC('R0DZ') )
+    return GetResearched() == FourCC('R0DZ')
 end
 function Trig_StartNeutrals_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0E4'), 1, GetOwningPlayer(GetTriggerUnit()))
@@ -2753,13 +2753,13 @@ end
 -- Trigger: PandaSecondAttack
 --===========================================================================
 function Trig_PandaSecondAttack_Conditions()
-    return ( GetUnitAbilityLevelSwapped(FourCC('A129'), GetAttacker()) > 0 )
+    return GetUnitAbilityLevelSwapped(FourCC('A129'), GetAttacker()) > 0
 end
 function Trig_PandaSecondAttack_Func001C()
-    return ( GetUnitAbilityLevelSwapped(FourCC('A12A'), GetAttacker()) == 0 )
+    return GetUnitAbilityLevelSwapped(FourCC('A12A'), GetAttacker()) == 0
 end
 function Trig_PandaSecondAttack_Actions()
-    if ( Trig_PandaSecondAttack_Func001C() ) then
+    if Trig_PandaSecondAttack_Func001C() then
         UnitAddAbilityBJ(FourCC('A12A'), GetAttacker())
     else
         UnitRemoveAbilityBJ(FourCC('A12A'), GetAttacker())
@@ -2825,7 +2825,7 @@ end
 -- Trigger: Okovi
 --===========================================================================
 function Trig_Okovi_Func002002()
-    return ( 0 == 0 )
+    return 0 == 0
 end
 function Trig_Okovi_Func007A()
     CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
@@ -2860,7 +2860,7 @@ end
 -- Trigger: GarraoshMassBloodlast
 --===========================================================================
 function Trig_GarraoshMassBloodlast_Func002002()
-    return ( GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer )
+    return GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer
 end
 function Trig_GarraoshMassBloodlast_Func007A()
     CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)

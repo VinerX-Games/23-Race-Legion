@@ -2269,7 +2269,7 @@ end
 -- Trigger: BegForever
 --===========================================================================
 function Trig_BegForever_Conditions()
-    return ( GetResearched() == FourCC('R0GX') )
+    return GetResearched() == FourCC('R0GX')
 end
 function Trig_BegForever_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0HR'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -2287,7 +2287,7 @@ end
 -- Trigger: CanForver
 --===========================================================================
 function Trig_CanForver_Conditions()
-    return ( GetResearched() == FourCC('R0GX') )
+    return GetResearched() == FourCC('R0GX')
 end
 function Trig_CanForver_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0HR'), 1, GetOwningPlayer(GetTriggerUnit()))
@@ -2437,7 +2437,7 @@ end
 -- Trigger: BegDec
 --===========================================================================
 function Trig_BegDec_Conditions()
-    return ( GetResearched() == FourCC('R0HE') )
+    return GetResearched() == FourCC('R0HE')
 end
 function Trig_BegDec_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0HG'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -2480,7 +2480,7 @@ end
 -- Trigger: BegUnion
 --===========================================================================
 function Trig_BegUnion_Conditions()
-    return ( GetResearched() == FourCC('R0HF') )
+    return GetResearched() == FourCC('R0HF')
 end
 function Trig_BegUnion_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0HG'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -2706,7 +2706,7 @@ end
 -- Trigger: BegArat
 --===========================================================================
 function Trig_BegArat_Conditions()
-    return ( GetResearched() == FourCC('R0HG') )
+    return GetResearched() == FourCC('R0HG')
 end
 function Trig_BegArat_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0HE'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -2900,7 +2900,7 @@ end
 -- Trigger: BegStorm
 --===========================================================================
 function Trig_BegStorm_Conditions()
-    return ( GetResearched() == FourCC('R0HH') )
+    return GetResearched() == FourCC('R0HH')
 end
 function Trig_BegStorm_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0HE'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -3297,13 +3297,13 @@ end
 -- Trigger: VariarTaunt
 --===========================================================================
 function Trig_VariarTaunt_Func004C()
-    return ( GetUnitAbilityLevelSwapped(FourCC('A1AL'), GetTriggerUnit()) > 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('A1AL'), GetTriggerUnit()) > 1
 end
 function Trig_VariarTaunt_Actions()
     BlzUnitHideAbility(GetTriggerUnit(), FourCC('A1AL'), true)
     UnitAddAbilityBJ(FourCC('A1AK'), GetTriggerUnit())
     UnitAddAbilityBJ(FourCC('A1AJ'), GetTriggerUnit())
-    if ( Trig_VariarTaunt_Func004C() ) then
+    if Trig_VariarTaunt_Func004C() then
         SetUnitAbilityLevelSwapped(FourCC('A1AJ'), GetTriggerUnit(), 2)
         SetUnitAbilityLevelSwapped(FourCC('A1AK'), GetTriggerUnit(), 2)
     end
@@ -3402,19 +3402,19 @@ end
 -- Trigger: PaladinHpSpell
 --===========================================================================
 function Trig_PaladinHpSpell_Conditions()
-    return ( GetUnitAbilityLevelSwapped(FourCC('A0WZ'), GetTriggerUnit()) == 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('A0WZ'), GetTriggerUnit()) == 1
 end
 function Trig_PaladinHpSpell_Func001Func001Func007C()
-    return ( GetUnitLifePercent(GetTriggerUnit()) < 75.00 )
+    return GetUnitLifePercent(GetTriggerUnit()) < 75.00
 end
 function Trig_PaladinHpSpell_Func001Func001C()
-    return ( GetUnitLifePercent(GetTriggerUnit()) < 50.00 )
+    return GetUnitLifePercent(GetTriggerUnit()) < 50.00
 end
 function Trig_PaladinHpSpell_Func001C()
-    return ( GetUnitLifePercent(GetTriggerUnit()) < 25.00 )
+    return GetUnitLifePercent(GetTriggerUnit()) < 25.00
 end
 function Trig_PaladinHpSpell_Actions()
-    if ( Trig_PaladinHpSpell_Func001C() ) then
+    if Trig_PaladinHpSpell_Func001C() then
         UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
         UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
         UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
@@ -3422,7 +3422,7 @@ function Trig_PaladinHpSpell_Actions()
         SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 3)
         SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 3)
     else
-        if ( Trig_PaladinHpSpell_Func001Func001C() ) then
+        if Trig_PaladinHpSpell_Func001Func001C() then
             UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
             UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
             UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
@@ -3430,7 +3430,7 @@ function Trig_PaladinHpSpell_Actions()
             SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 2)
             SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 2)
         else
-            if ( Trig_PaladinHpSpell_Func001Func001Func007C() ) then
+            if Trig_PaladinHpSpell_Func001Func001Func007C() then
                 UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
                 UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
                 UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
@@ -3457,19 +3457,19 @@ end
 -- Trigger: PaladinHpSpell2
 --===========================================================================
 function Trig_PaladinHpSpell2_Conditions()
-    return ( GetUnitAbilityLevelSwapped(FourCC('A0WZ'), GetTriggerUnit()) == 2 )
+    return GetUnitAbilityLevelSwapped(FourCC('A0WZ'), GetTriggerUnit()) == 2
 end
 function Trig_PaladinHpSpell2_Func001Func001Func007C()
-    return ( GetUnitLifePercent(GetTriggerUnit()) < 95.00 )
+    return GetUnitLifePercent(GetTriggerUnit()) < 95.00
 end
 function Trig_PaladinHpSpell2_Func001Func001C()
-    return ( GetUnitLifePercent(GetTriggerUnit()) < 70.00 )
+    return GetUnitLifePercent(GetTriggerUnit()) < 70.00
 end
 function Trig_PaladinHpSpell2_Func001C()
-    return ( GetUnitLifePercent(GetTriggerUnit()) < 45.00 )
+    return GetUnitLifePercent(GetTriggerUnit()) < 45.00
 end
 function Trig_PaladinHpSpell2_Actions()
-    if ( Trig_PaladinHpSpell2_Func001C() ) then
+    if Trig_PaladinHpSpell2_Func001C() then
         UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
         UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
         UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
@@ -3477,7 +3477,7 @@ function Trig_PaladinHpSpell2_Actions()
         SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 3)
         SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 3)
     else
-        if ( Trig_PaladinHpSpell2_Func001Func001C() ) then
+        if Trig_PaladinHpSpell2_Func001Func001C() then
             UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
             UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
             UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())
@@ -3485,7 +3485,7 @@ function Trig_PaladinHpSpell2_Actions()
             SetUnitAbilityLevelSwapped(FourCC('A0WX'), GetTriggerUnit(), 2)
             SetUnitAbilityLevelSwapped(FourCC('A0WW'), GetTriggerUnit(), 2)
         else
-            if ( Trig_PaladinHpSpell2_Func001Func001Func007C() ) then
+            if Trig_PaladinHpSpell2_Func001Func001Func007C() then
                 UnitAddAbilityBJ(FourCC('A0WY'), GetTriggerUnit())
                 UnitAddAbilityBJ(FourCC('A0WX'), GetTriggerUnit())
                 UnitAddAbilityBJ(FourCC('A0WW'), GetTriggerUnit())

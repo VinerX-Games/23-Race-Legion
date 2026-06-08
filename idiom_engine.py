@@ -49,7 +49,19 @@ def seg_of(segments, off):
     return None
 
 
-def run(transform, write=False, reparse=True):
+def fingerprint(tree):
+    out = []
+    for node in a.walk(tree):
+        out.append(type(node).__name__)
+        for v in ("id", "n", "s"):
+            if hasattr(node, v):
+                val = getattr(node, v)
+                if isinstance(val, (str, int, float, bool, type(None))):
+                    out.append(f"{v}={val!r}")
+    return tuple(out)
+
+
+def run(transform, write=False, reparse=True, guard=False):
     text, segments = build_concat()
     tree = a.parse(text)
     repls = transform(text, tree)
@@ -63,11 +75,11 @@ def run(transform, write=False, reparse=True):
             skipped += 1
             continue
         valid.append((start, stop, new, s1))
-    # group by segment
+    # group by segment, compute new text per segment in memory
     by_seg = {}
     for start, stop, new, seg in valid:
         by_seg.setdefault(id(seg), (seg, []))[1].append((start, stop, new))
-    changed_files = 0
+    pending = {}  # rel -> new text
     for seg, items in by_seg.values():
         base, _, rel, ftext = seg
         items.sort(key=lambda r: r[0], reverse=True)
@@ -75,15 +87,34 @@ def run(transform, write=False, reparse=True):
         for start, stop, new in items:
             ls, le = start - base, stop - base
             out = out[:ls] + new + out[le + 1:]
-        if write and out != ftext:
+        if out != ftext:
+            pending[rel] = out
+    # build the would-be new concat and validate
+    parts = []
+    for seg in segments:
+        parts.append(pending.get(seg[2], seg[3]))
+    new_text = "".join(parts)
+    status = "OK"
+    if guard:
+        try:
+            new_tree = a.parse(new_text)
+            if fingerprint(new_tree) != fingerprint(tree):
+                status = "GUARD-MISMATCH (AST changed) — not writing"
+                pending = {}
+        except Exception as ex:  # noqa
+            status = f"GUARD-PARSE-FAIL: {str(ex)[:200]} — not writing"
+            pending = {}
+    changed_files = 0
+    if write:
+        for rel, out in pending.items():
             (SECTIONS / rel).write_text(out, encoding="utf-8", newline="\n")
             changed_files += 1
-        seg[3] = out
-    print(f"replacements={len(valid)} skipped_straddle={skipped} files_changed={changed_files}")
-    if write and reparse:
-        new_text, _ = build_concat()
+    print(f"replacements={len(valid)} skipped_straddle={skipped} "
+          f"files_to_change={len(pending)} files_changed={changed_files} guard={status}")
+    if write and reparse and not guard:
+        rebuilt, _ = build_concat()
         try:
-            a.parse(new_text)
+            a.parse(rebuilt)
             print("REPARSE OK")
         except Exception as ex:  # noqa
             print(f"REPARSE FAIL: {str(ex)[:300]}")

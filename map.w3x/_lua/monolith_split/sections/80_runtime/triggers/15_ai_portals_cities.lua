@@ -1937,7 +1937,7 @@ end
 -- Trigger: UndercityFromRin
 --===========================================================================
 function Trig_UndercityFromRin_Conditions()
-    return ( GetTriggerUnit() == gg_unit_n003_0044 )
+    return GetTriggerUnit() == gg_unit_n003_0044
 end
 function Trig_UndercityFromRin_Actions()
     TeleportUnits(GetTriggerUnit() , gg_rct_UndecityOutTop , 800)
@@ -1953,7 +1953,7 @@ end
 -- Trigger: UndercityFromTopin
 --===========================================================================
 function Trig_UndercityFromTopin_Conditions()
-    return ( GetTriggerUnit() == gg_unit_n003_0046 )
+    return GetTriggerUnit() == gg_unit_n003_0046
 end
 function Trig_UndercityFromTopin_Actions()
     TeleportUnits(GetTriggerUnit() , gg_rct_UndecityOutBot , 800)
@@ -1969,7 +1969,7 @@ end
 -- Trigger: UndercityFromTopOut
 --===========================================================================
 function Trig_UndercityFromTopOut_Conditions()
-    return ( GetTriggerUnit() == gg_unit_n003_0050 )
+    return GetTriggerUnit() == gg_unit_n003_0050
 end
 function Trig_UndercityFromTopOut_Actions()
     TeleportUnits(GetTriggerUnit() , gg_rct_UndercityInR , 800)
@@ -1985,7 +1985,7 @@ end
 -- Trigger: UndercityFromBotOut
 --===========================================================================
 function Trig_UndercityFromBotOut_Conditions()
-    return ( GetTriggerUnit() == gg_unit_n003_0051 )
+    return GetTriggerUnit() == gg_unit_n003_0051
 end
 function Trig_UndercityFromBotOut_Actions()
     TeleportUnits(GetTriggerUnit() , gg_rct_UndercityInTop , 800)
@@ -2161,10 +2161,10 @@ end
 -- Trigger: Emerald Dream TP O Copy
 --===========================================================================
 function Trig_Emerald_Dream_TP_O_Copy_Func001C()
-    return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('H049') )
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('H049')
 end
 function Trig_Emerald_Dream_TP_O_Copy_Actions()
-    if ( Trig_Emerald_Dream_TP_O_Copy_Func001C() ) then
+    if Trig_Emerald_Dream_TP_O_Copy_Func001C() then
         udg_LocalPosition[21]=GetRectCenter(GetPlayableMapRect())
         SetUnitPositionLoc(GetTriggerUnit(), udg_LocalPosition[21])
         DisplayTextToForce(GetForceOfPlayer(GetOwningPlayer(GetTriggerUnit())), "TRIGSTR_10588")
@@ -3186,7 +3186,7 @@ function CheckPosition()
 end
 function CheckPositionT()
     --local real add = 25
-    if ( IsTerrainPathable(x + add, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x + add, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x + add, y + add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y + add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y + add, PATHING_TYPE_FLOATABILITY) ) then
+    if IsTerrainPathable(x + add, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x + add, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x + add, y + add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y + add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y + add, PATHING_TYPE_FLOATABILITY) then
         return true
     end
     DisplayTextToPlayer(udg_LocalPlayer, 0, 0, ".")

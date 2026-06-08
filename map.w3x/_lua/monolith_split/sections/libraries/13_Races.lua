@@ -2267,7 +2267,7 @@ function PereborBuildings_Horde(id, pi, u)
 			end
 		end
 		
-		if ((AiData[(pi)][(FourCC('ofrt'))] or 0) > 0) then	--  INLINED!!
+		if (AiData[(pi)][(FourCC('ofrt'))] or 0) > 0 then	--  INLINED!!
 			AddUnit(FourCC('orai'), 5)	--  
 			AddUnit(FourCC('otau'), 5)	--  
 		end
@@ -2283,7 +2283,7 @@ function PereborBuildings_Horde(id, pi, u)
 			end
 		end
 		
-		if ((AiData[(pi)][(FourCC('ofrt'))] or 0) > 0) then	--  INLINED!!
+		if (AiData[(pi)][(FourCC('ofrt'))] or 0) > 0 then	--  INLINED!!
 			AddUnit(FourCC('okod'), 5)	--  
 		end
 		
@@ -2678,11 +2678,11 @@ function PereborBuildings_Naga(id, pi, u)
 	if id == FourCC('nnsg') then
 		
 		AddUnit(FourCC('n04Z'), 2)	--  Воин волн
-		if ((AiData[(pi)][(FourCC('h0JW'))] or 0) > 0) then	--  INLINED!!
+		if (AiData[(pi)][(FourCC('h0JW'))] or 0) > 0 then	--  INLINED!!
 			AddUnit(FourCC('nsnp'), 2)	--  Варан
 		end
 		
-		if ((AiData[(pi)][(FourCC('h0JX'))] or 0) > 0) then	--  INLINED!!
+		if (AiData[(pi)][(FourCC('h0JX'))] or 0) > 0 then	--  INLINED!!
 			AddUnit(FourCC('nhyc'), 1)	--  Черепаха
 			if MurlocPath then
 				AddUnit(FourCC('n052'), 3)	--  Доп. вариант для пути мурлоков
@@ -2700,7 +2700,7 @@ function PereborBuildings_Naga(id, pi, u)
 		end
 		--  Святилище
 	elseif id == FourCC('nnsa') then
-		if ((AiData[(pi)][(FourCC('h0JX'))] or 0) > 0) then	--  INLINED!!
+		if (AiData[(pi)][(FourCC('h0JX'))] or 0) > 0 then	--  INLINED!!
 			if MurlocPath then
 				AddUnit(FourCC('n053'), 6)	--  Маг
 				AddUnit(FourCC('n054'), 6)	--  Шаман
@@ -2712,7 +2712,7 @@ function PereborBuildings_Naga(id, pi, u)
 		--  Морские врата
 	elseif id == FourCC('n055') then
 		
-		if ((AiData[(pi)][(FourCC('h0JY'))] or 0) > 0) then	--  INLINED!!
+		if (AiData[(pi)][(FourCC('h0JY'))] or 0) > 0 then	--  INLINED!!
 			if MurlocPath then
 				AddUnit(FourCC('n050'), 2)	--  Мурлок-мунтан
 			else

@@ -66,7 +66,7 @@ function ReplaceUnit(whichUnit, newUnitId, unitStateMethod)
 	local oldRatio
 	
 	--  If we have bogus data, don't attempt the replace.
-	if (oldUnit == nil) then
+	if oldUnit == nil then
 		bj_lastReplacedUnit = oldUnit
 		return oldUnit
 	end
@@ -76,17 +76,17 @@ function ReplaceUnit(whichUnit, newUnitId, unitStateMethod)
 	ShowUnit(oldUnit, false)
 	
 	--  Create the replacement unit.
-	if (newUnitId == FourCC('ugol')) then
+	if newUnitId == FourCC('ugol') then
 		newUnit = CreateBlightedGoldmine(GetOwningPlayer(oldUnit), GetUnitX(oldUnit), GetUnitY(oldUnit), GetUnitFacing(oldUnit))
 	else
 		newUnit = CreateUnit(GetOwningPlayer(oldUnit), newUnitId, GetUnitX(oldUnit), GetUnitY(oldUnit), GetUnitFacing(oldUnit))
 	end
 	
 	--  Set the unit's life and mana according to the requested method.
-	if (unitStateMethod == bj_UNIT_STATE_METHOD_RELATIVE) then
+	if unitStateMethod == bj_UNIT_STATE_METHOD_RELATIVE then
 		--  Set the replacement's current/max life ratio to that of the old unit.
 		--  If both units have mana, do the same for mana.
-		if (GetUnitState(oldUnit, UNIT_STATE_MAX_LIFE) > 0) then
+		if GetUnitState(oldUnit, UNIT_STATE_MAX_LIFE) > 0 then
 			oldRatio = GetUnitState(oldUnit, UNIT_STATE_LIFE) / GetUnitState(oldUnit, UNIT_STATE_MAX_LIFE)
 			SetUnitState(newUnit, UNIT_STATE_LIFE, oldRatio * GetUnitState(newUnit, UNIT_STATE_MAX_LIFE))
 		end
@@ -99,7 +99,7 @@ function ReplaceUnit(whichUnit, newUnitId, unitStateMethod)
 		--  Set the replacement's current life to that of the old unit.
 		--  If the new unit has mana, do the same for mana.
 		SetUnitState(newUnit, UNIT_STATE_LIFE, GetUnitState(oldUnit, UNIT_STATE_LIFE))
-		if (GetUnitState(newUnit, UNIT_STATE_MAX_MANA) > 0) then
+		if GetUnitState(newUnit, UNIT_STATE_MAX_MANA) > 0 then
 			SetUnitState(newUnit, UNIT_STATE_MANA, GetUnitState(oldUnit, UNIT_STATE_MANA))
 		end
 	elseif (unitStateMethod == bj_UNIT_STATE_METHOD_DEFAULTS) then
@@ -117,13 +117,13 @@ function ReplaceUnit(whichUnit, newUnitId, unitStateMethod)
 	SetResourceAmount(newUnit, GetResourceAmount(oldUnit))
 	
 	--  If both the old and new units are heroes, handle their hero info.
-	if (IsUnitType(oldUnit, UNIT_TYPE_HERO) and IsUnitType(newUnit, UNIT_TYPE_HERO)) then
+	if IsUnitType(oldUnit, UNIT_TYPE_HERO) and IsUnitType(newUnit, UNIT_TYPE_HERO) then
 		SetHeroXP(newUnit, GetHeroXP(oldUnit), false)
 		
 		index = 0
 		while true do
 			indexItem = UnitItemInSlot(oldUnit, index)
-			if (indexItem ~= nil) then
+			if indexItem ~= nil then
 				UnitRemoveItem(oldUnit, indexItem)
 				UnitAddItem(newUnit, indexItem)
 			end
@@ -161,7 +161,7 @@ function ReplaceUnit2(whichUnit, newUnitId, unitStateMethod)
 	local oldRatio
 	
 	--  If we have bogus data, don't attempt the replace.
-	if (oldUnit == nil) then
+	if oldUnit == nil then
 		bj_lastReplacedUnit = oldUnit
 		return oldUnit
 	end
@@ -171,17 +171,17 @@ function ReplaceUnit2(whichUnit, newUnitId, unitStateMethod)
 	ShowUnit(oldUnit, false)
 	
 	--  Create the replacement unit.
-	if (newUnitId == FourCC('ugol')) then
+	if newUnitId == FourCC('ugol') then
 		newUnit = CreateBlightedGoldmine(GetOwningPlayer(oldUnit), GetUnitX(oldUnit), GetUnitY(oldUnit), GetUnitFacing(oldUnit))
 	else
 		newUnit = CreateUnit(GetOwningPlayer(oldUnit), newUnitId, GetUnitX(oldUnit), GetUnitY(oldUnit), GetUnitFacing(oldUnit))
 	end
 	
 	--  Set the unit's life and mana according to the requested method.
-	if (unitStateMethod == bj_UNIT_STATE_METHOD_RELATIVE) then
+	if unitStateMethod == bj_UNIT_STATE_METHOD_RELATIVE then
 		--  Set the replacement's current/max life ratio to that of the old unit.
 		--  If both units have mana, do the same for mana.
-		if (GetUnitState(oldUnit, UNIT_STATE_MAX_LIFE) > 0) then
+		if GetUnitState(oldUnit, UNIT_STATE_MAX_LIFE) > 0 then
 			oldRatio = GetUnitState(oldUnit, UNIT_STATE_LIFE) / GetUnitState(oldUnit, UNIT_STATE_MAX_LIFE)
 			SetUnitState(newUnit, UNIT_STATE_LIFE, oldRatio * GetUnitState(newUnit, UNIT_STATE_MAX_LIFE))
 		end
@@ -194,7 +194,7 @@ function ReplaceUnit2(whichUnit, newUnitId, unitStateMethod)
 		--  Set the replacement's current life to that of the old unit.
 		--  If the new unit has mana, do the same for mana.
 		SetUnitState(newUnit, UNIT_STATE_LIFE, GetUnitState(oldUnit, UNIT_STATE_LIFE))
-		if (GetUnitState(newUnit, UNIT_STATE_MAX_MANA) > 0) then
+		if GetUnitState(newUnit, UNIT_STATE_MAX_MANA) > 0 then
 			SetUnitState(newUnit, UNIT_STATE_MANA, GetUnitState(oldUnit, UNIT_STATE_MANA))
 		end
 	elseif (unitStateMethod == bj_UNIT_STATE_METHOD_DEFAULTS) then
@@ -212,13 +212,13 @@ function ReplaceUnit2(whichUnit, newUnitId, unitStateMethod)
 	SetResourceAmount(newUnit, GetResourceAmount(oldUnit))
 	
 	--  If both the old and new units are heroes, handle their hero info.
-	if (IsUnitType(oldUnit, UNIT_TYPE_HERO) and IsUnitType(newUnit, UNIT_TYPE_HERO)) then
+	if IsUnitType(oldUnit, UNIT_TYPE_HERO) and IsUnitType(newUnit, UNIT_TYPE_HERO) then
 		SetHeroXP(newUnit, GetHeroXP(oldUnit), false)
 		
 		index = 0
 		while true do
 			indexItem = UnitItemInSlot(oldUnit, index)
-			if (indexItem ~= nil) then
+			if indexItem ~= nil then
 				UnitRemoveItem(oldUnit, indexItem)
 				UnitAddItem(newUnit, indexItem)
 			end

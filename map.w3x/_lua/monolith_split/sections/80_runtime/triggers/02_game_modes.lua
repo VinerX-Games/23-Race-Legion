@@ -142,7 +142,7 @@ function Trig_StartLobby_Func004Func001A()
 end
 ---@return boolean
 function Trig_StartLobby_Func004C()
-	return (udg_LocalInteger == 1)
+	return udg_LocalInteger == 1
 end
 ---@return nothing
 function Trig_StartLobby_Func005Func001A()
@@ -150,7 +150,7 @@ function Trig_StartLobby_Func005Func001A()
 end
 ---@return boolean
 function Trig_StartLobby_Func005C()
-	return (udg_LocalInteger == 2)
+	return udg_LocalInteger == 2
 end
 ---@return nothing
 function Trig_StartLobby_Func006Func001A()
@@ -158,7 +158,7 @@ function Trig_StartLobby_Func006Func001A()
 end
 ---@return boolean
 function Trig_StartLobby_Func006C()
-	return (udg_LocalInteger == 3)
+	return udg_LocalInteger == 3
 end
 ---@return nothing
 function Trig_StartLobby_Func007Func001A()
@@ -166,7 +166,7 @@ function Trig_StartLobby_Func007Func001A()
 end
 ---@return boolean
 function Trig_StartLobby_Func007C()
-	return (udg_LocalInteger == 4)
+	return udg_LocalInteger == 4
 end
 ---@return nothing
 function Trig_StartLobby_Func008Func001A()
@@ -174,17 +174,17 @@ function Trig_StartLobby_Func008Func001A()
 end
 ---@return boolean
 function Trig_StartLobby_Func008C()
-	return (udg_LocalInteger == 5)
+	return udg_LocalInteger == 5
 end
 ---@return boolean
 function Trig_StartLobby_Func015Func003C()
-	return (GetEnumPlayer() ~= Player(0))
+	return GetEnumPlayer() ~= Player(0)
 end
 ---@return nothing
 function Trig_StartLobby_Func015A()
 	CameraSetupApplyForPlayer(true, gg_cam_HostRegion, GetEnumPlayer(), 0)
 	SetCameraFieldForPlayer(GetEnumPlayer(), CAMERA_FIELD_TARGET_DISTANCE, 3400.00, 0.00)
-	if (Trig_StartLobby_Func015Func003C()) then
+	if Trig_StartLobby_Func015Func003C() then
 		udg_LocalPosition2 = GetRandomLocInRect(gg_rct_HostRegion)
 		CreateNUnitsAtLoc(1, FourCC('h0GA'), GetEnumPlayer(), udg_LocalPosition2, bj_UNIT_FACING)
 		RemoveLocation(udg_LocalPosition2)
@@ -194,19 +194,19 @@ end
 function Trig_StartLobby_Actions()
 	udg_LocalPosition2 = GetRectCenter(gg_rct_HostRegion)
 	udg_LocalInteger = GetRandomInt(1, 5)
-	if (Trig_StartLobby_Func004C()) then
+	if Trig_StartLobby_Func004C() then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func004Func001A)
 	end
-	if (Trig_StartLobby_Func005C()) then
+	if Trig_StartLobby_Func005C() then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func005Func001A)
 	end
-	if (Trig_StartLobby_Func006C()) then
+	if Trig_StartLobby_Func006C() then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func006Func001A)
 	end
-	if (Trig_StartLobby_Func007C()) then
+	if Trig_StartLobby_Func007C() then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func007Func001A)
 	end
-	if (Trig_StartLobby_Func008C()) then
+	if Trig_StartLobby_Func008C() then
 		ForForce(udg_AllPlayers, Trig_StartLobby_Func008Func001A)
 	end
 	udg_LocalInteger = 4
@@ -234,7 +234,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_EndLobby_and_Start_game_Func004Func006C()
-	return (udg_Continents[0] == 0)
+	return udg_Continents[0] == 0
 end
 ---@return nothing
 function Trig_EndLobby_and_Start_game_Func004A()
@@ -243,7 +243,7 @@ function Trig_EndLobby_and_Start_game_Func004A()
 	CreateArmyBonusUnit(GetEnumPlayer())
 	FogModifierStop(udg_Visibl[GetConvertedPlayerId(GetEnumPlayer())])
 	DestroyFogModifier(udg_Visibl[GetConvertedPlayerId(GetEnumPlayer())])
-	if (Trig_EndLobby_and_Start_game_Func004Func006C()) then
+	if Trig_EndLobby_and_Start_game_Func004Func006C() then
 		CreateFogModifierRectBJ(true, GetEnumPlayer(), FOG_OF_WAR_VISIBLE, GetPlayableMapRect())
 		FogModifierStop(GetLastCreatedFogModifier())
 		DestroyFogModifier(GetLastCreatedFogModifier())
@@ -319,7 +319,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_LeaveStart_Conditions()
-	return (GetUnitTypeId(GetTriggerUnit()) == FourCC('H049'))
+	return GetUnitTypeId(GetTriggerUnit()) == FourCC('H049')
 end
 ---@return nothing
 function Trig_LeaveStart_Actions()
@@ -649,7 +649,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_MOD_stolica_Start_Copy_Conditions()
-	return (udg_GameMode == 5)
+	return udg_GameMode == 5
 end
 ---@return nothing
 function Trig_MOD_stolica_Start_Copy_Func005A()
@@ -783,7 +783,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_MOD_stolica_Start_Conditions()
-	return (udg_GameMode == 1)
+	return udg_GameMode == 1
 end
 ---@return nothing
 function Trig_MOD_stolica_Start_Func005A()
@@ -847,7 +847,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_MOD_feoda_O_Start_Conditions()
-	return (udg_GameMode == 2)
+	return udg_GameMode == 2
 end
 ---@return nothing
 function Trig_MOD_feoda_O_Start_Func006A()
@@ -891,7 +891,7 @@ function Trig_FeodalDead_Func004Func002Func001Func010A()
 	for bj_forLoopBIndex = 1, 24 do
 		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 		SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetEnumPlayer(), bj_ALLIANCE_UNALLIED)
-		if (Trig_FeodalDead_Func004Func002Func001Func010Func001Func003C()) then
+		if Trig_FeodalDead_Func004Func002Func001Func010Func001Func003C() then
 			ForceRemovePlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetForLoopIndexB()])
 		end
 	end
@@ -922,7 +922,7 @@ function Trig_FeodalDead_Func004Func017Func001C()
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func017A()
-	if (Trig_FeodalDead_Func004Func017Func001C()) then
+	if Trig_FeodalDead_Func004Func017Func001C() then
 		SetUnitOwner(GetEnumUnit(), Player(PLAYER_NEUTRAL_AGGRESSIVE), true)
 	else
 		KillUnit(GetEnumUnit())
@@ -940,14 +940,14 @@ function Trig_FeodalDead_Func004Func020A()
 end
 ---@return boolean
 function Trig_FeodalDead_Func004C()
-	return (GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetAttacker()))
+	return GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetAttacker())
 end
 ---@return nothing
 function Trig_FeodalDead_Actions()
 	SetUnitLifePercentBJ(GetTriggerUnit(), 100)
 	SetUnitInvulnerable(GetTriggerUnit(), true)
 	SetUnitInvulnerable(GetTriggerUnit(), false)
-	if (Trig_FeodalDead_Func004C()) then
+	if Trig_FeodalDead_Func004C() then
 		--  ??????? ??? ??????????
 		DisplayTextToForce(GetPlayersAll(), (GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. "|cffff0000 - ??????????! |r??????)"))
 		ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetTriggerUnit())), Trig_FeodalDead_Func004Func017A)
@@ -958,7 +958,7 @@ function Trig_FeodalDead_Actions()
 	else
 		--  --------------------------------------------------------------------   ??????? ????-?? ????????
 		for bj_forLoopAIndex = 1, 24 do
-			if (Trig_FeodalDead_Func004Func002Func001C()) then
+			if Trig_FeodalDead_Func004Func002Func001C() then
 				for bj_forLoopBIndex = 1, 24 do
 					SetPlayerAllianceStateBJ(GetTriggerPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
 					SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetTriggerPlayer(), bj_ALLIANCE_UNALLIED)

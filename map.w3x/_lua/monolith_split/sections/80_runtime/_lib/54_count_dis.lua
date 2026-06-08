@@ -11,7 +11,7 @@ function AddCountDis(u, pi)
 	end
 	
 	--  ???? ?????? ??? ??? ?????????
-	if (IsUnitType(u, UNIT_TYPE_STRUCTURE) or GetUnitAbilityLevel(u, FourCC('A1IJ')) > 0) then
+	if IsUnitType(u, UNIT_TYPE_STRUCTURE) or GetUnitAbilityLevel(u, FourCC('A1IJ')) > 0 then
 		if IsUnitInGroup(u, udg_BuildedSctructure[1]) then
 			income[pi] = income[pi] + I2R(GetUnitFoodMade(u))
 			
@@ -106,7 +106,7 @@ function DelCountDis(u, pi)
 	
 	-- ????
 	-- ??????
-	if (IsUnitType(u, UNIT_TYPE_STRUCTURE) or GetUnitAbilityLevel(u, FourCC('A1IJ')) > 0) then
+	if IsUnitType(u, UNIT_TYPE_STRUCTURE) or GetUnitAbilityLevel(u, FourCC('A1IJ')) > 0 then
 		
 		if IsUnitInGroup(u, udg_BuildedSctructure[1]) then
 			income[pi] = income[pi] - I2R(GetUnitFoodMade(u))

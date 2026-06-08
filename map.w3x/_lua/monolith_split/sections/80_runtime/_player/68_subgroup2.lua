@@ -9,7 +9,7 @@ function GetRandomSubGroup2(count, sourceGroup)
 	bj_randomSubGroupWant = count
 	bj_randomSubGroupTotal = CountUnitsInGroup(sourceGroup)
 	
-	if (bj_randomSubGroupWant <= 0 or bj_randomSubGroupTotal <= 0) then
+	if bj_randomSubGroupWant <= 0 or bj_randomSubGroupTotal <= 0 then
 		return SubGroup2
 	end
 	

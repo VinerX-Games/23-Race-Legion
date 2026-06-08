@@ -16,7 +16,7 @@ function Trig_Leave_Ot_Actions()
     DisplayTextToForce(udg_AllPlayers, ( GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r" ))
     ClearPlayer(Player(pi))
     FlushChildHashtable(Hash, GetPlayerId(GetTriggerPlayer()))
-    if ( Trig_Leave_Ot_Func005C() ) then
+    if Trig_Leave_Ot_Func005C() then
         ForForce(Vassals[pi], Freedom)
     end
 end
@@ -53,7 +53,7 @@ end
 -- Trigger: Spell Copy 2
 --===========================================================================
 function Trig_Spell_Copy_2_Conditions()
-    return ( GetLearnedSkillBJ() == FourCC('A1BR') )
+    return GetLearnedSkillBJ() == FourCC('A1BR')
 end
 function Trig_Spell_Copy_2_Actions()
     udg_u=GetLearningUnit()
@@ -105,7 +105,7 @@ end
 -- Trigger: AvtoCast
 --===========================================================================
 function Trig_AvtoCast_Conditions()
-    return ( GetUnitStateSwap(UNIT_STATE_LIFE, udg_u) <= 400.00 )
+    return GetUnitStateSwap(UNIT_STATE_LIFE, udg_u) <= 400.00
 end
 function Trig_AvtoCast_Actions()
     IssueImmediateOrderBJ(udg_u, "stomp")
@@ -120,7 +120,7 @@ end
 -- Trigger: DammyDeath
 --===========================================================================
 function Trig_DammyDeath_Conditions()
-    return ( GetUnitTypeId(GetDyingUnit()) == FourCC('h0ML') )
+    return GetUnitTypeId(GetDyingUnit()) == FourCC('h0ML')
 end
 function Trig_DammyDeath_Actions()
     RemoveUnit(GetDyingUnit())
@@ -388,7 +388,7 @@ function Trig_Spell_Dvij_Func004Func007Func002Func005Func002Func001C()
     return IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) and not (IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster))) and not (IsUnitDeadBJ(GetEnumUnit())) and not (IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE))
 end
 function Trig_Spell_Dvij_Func004Func007Func002Func005Func002A()
-    if ( Trig_Spell_Dvij_Func004Func007Func002Func005Func002Func001C() ) then
+    if Trig_Spell_Dvij_Func004Func007Func002Func005Func002Func001C() then
         GroupAddUnitSimple(GetEnumUnit(), udg_Group)
         UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 100.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         udg_To4kaAOE=GetUnitLoc(GetEnumUnit())
@@ -401,16 +401,16 @@ function Trig_Spell_Dvij_Func004Func007Func002Func005Func002A()
     end
 end
 function Trig_Spell_Dvij_Func004Func007Func002Func005C()
-    return ( DistanceBetweenPoints(udg_To4kaDummy, udg_To4kaTarget) <= 75.00 )
+    return DistanceBetweenPoints(udg_To4kaDummy, udg_To4kaTarget) <= 75.00
 end
 function Trig_Spell_Dvij_Func004Func007Func002C()
-    return ( udg_HisloA[0] >= 3 )
+    return udg_HisloA[0] >= 3
 end
 function Trig_Spell_Dvij_Func004Func007Func004Func006Func002Func001C()
     return IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) and not (IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster))) and not (IsUnitDeadBJ(GetEnumUnit())) and not (IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE))
 end
 function Trig_Spell_Dvij_Func004Func007Func004Func006Func002A()
-    if ( Trig_Spell_Dvij_Func004Func007Func004Func006Func002Func001C() ) then
+    if Trig_Spell_Dvij_Func004Func007Func004Func006Func002Func001C() then
         GroupAddUnitSimple(GetEnumUnit(), udg_Group)
         UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         udg_To4kaAOE=GetUnitLoc(GetEnumUnit())
@@ -423,16 +423,16 @@ function Trig_Spell_Dvij_Func004Func007Func004Func006Func002A()
     end
 end
 function Trig_Spell_Dvij_Func004Func007Func004Func006C()
-    return ( DistanceBetweenPoints(udg_To4kaDummy, udg_To4kaTarget) <= 75.00 )
+    return DistanceBetweenPoints(udg_To4kaDummy, udg_To4kaTarget) <= 75.00
 end
 function Trig_Spell_Dvij_Func004Func007Func004C()
-    return ( udg_HisloA[0] == 2 )
+    return udg_HisloA[0] == 2
 end
 function Trig_Spell_Dvij_Func004Func007Func006Func005Func002Func001C()
     return IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster)) and not (IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster))) and not (IsUnitDeadBJ(GetEnumUnit())) and not (IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE))
 end
 function Trig_Spell_Dvij_Func004Func007Func006Func005Func002A()
-    if ( Trig_Spell_Dvij_Func004Func007Func006Func005Func002Func001C() ) then
+    if Trig_Spell_Dvij_Func004Func007Func006Func005Func002Func001C() then
         GroupAddUnitSimple(GetEnumUnit(), udg_Group)
         UnitDamageTargetBJ(udg_Caster, GetEnumUnit(), ( 50.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A1BN'), udg_Caster)) ), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
         udg_To4kaAOE=GetUnitLoc(GetEnumUnit())
@@ -445,10 +445,10 @@ function Trig_Spell_Dvij_Func004Func007Func006Func005Func002A()
     end
 end
 function Trig_Spell_Dvij_Func004Func007Func006Func005C()
-    return ( DistanceBetweenPoints(udg_To4kaDummy, udg_To4kaTarget) <= 75.00 )
+    return DistanceBetweenPoints(udg_To4kaDummy, udg_To4kaTarget) <= 75.00
 end
 function Trig_Spell_Dvij_Func004Func007Func006C()
-    return ( udg_HisloA[0] == 1 )
+    return udg_HisloA[0] == 1
 end
 function Trig_Spell_Dvij_Func004Func007C()
     return udg_LogikaCast
@@ -458,7 +458,7 @@ function Trig_Spell_Dvij_Func004C()
 end
 function Trig_Spell_Dvij_Actions()
     -- ?????????
-    if ( Trig_Spell_Dvij_Func002C() ) then
+    if Trig_Spell_Dvij_Func002C() then
         RemoveUnit(udg_Dummy[0])
         RemoveUnit(udg_Dummy[1])
         RemoveUnit(udg_Dummy[2])
@@ -474,27 +474,27 @@ function Trig_Spell_Dvij_Actions()
         udg_LogikaCast=false
         PauseTimerBJ(true, udg_Timer)
     end
-    if ( (true) ) then -- INLINED!!
+    if true then -- INLINED!!
         udg_To4kaCaster=GetUnitLoc(udg_Caster)
         -- ???????? ???????? ???? ???????? + ?? -  ???? ????? ???????? ? ?????? ???????
         udg_Ygol[1]=( udg_Ygol[1] + 5 )
-        if ( Trig_Spell_Dvij_Func004Func004C() ) then
+        if Trig_Spell_Dvij_Func004Func004C() then
             SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 0.00 + I2R(udg_Ygol[1]) )))
         end
-        if ( Trig_Spell_Dvij_Func004Func005C() ) then
+        if Trig_Spell_Dvij_Func004Func005C() then
             SetUnitPositionLoc(udg_Dummy[1], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 120.00 + I2R(udg_Ygol[1]) )))
         end
-        if ( Trig_Spell_Dvij_Func004Func006C() ) then
+        if Trig_Spell_Dvij_Func004Func006C() then
             SetUnitPositionLoc(udg_Dummy[2], PolarProjectionBJ(udg_To4kaCaster, 100.00, ( 240.00 + I2R(udg_Ygol[1]) )))
         end
-        if ( Trig_Spell_Dvij_Func004Func007C() ) then
+        if Trig_Spell_Dvij_Func004Func007C() then
             -- ?????? ??????? ???
-            if ( Trig_Spell_Dvij_Func004Func007Func002C() ) then
+            if Trig_Spell_Dvij_Func004Func007Func002C() then
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[2])
                 -- ???????? ?????? ???? ?? ?????
                 SetUnitPositionLoc(udg_Dummy[2], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
-                if ( Trig_Spell_Dvij_Func004Func007Func002Func005C() ) then
+                if Trig_Spell_Dvij_Func004Func007Func002Func005C() then
                     -- ??? ????? ? ?????
                     ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func002Func005Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsDemonDarkPortalDarkPortalTarget.mdl")
@@ -507,12 +507,12 @@ function Trig_Spell_Dvij_Actions()
                 RemoveLocation(udg_To4kaTarget)
             end
             -- ?????? ??????? ???
-            if ( Trig_Spell_Dvij_Func004Func007Func004C() ) then
+            if Trig_Spell_Dvij_Func004Func007Func004C() then
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[1])
                 -- ???????? ?????? ???? ?? ?????
                 SetUnitPositionLoc(udg_Dummy[1], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
-                if ( Trig_Spell_Dvij_Func004Func007Func004Func006C() ) then
+                if Trig_Spell_Dvij_Func004Func007Func004Func006C() then
                     -- ??? ????? ? ?????
                     ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func004Func006Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsUndeadDarkRitualDarkRitualTarget.mdl")
@@ -525,12 +525,12 @@ function Trig_Spell_Dvij_Actions()
                 RemoveLocation(udg_To4kaTarget)
             end
             -- ?????? ??????? ???
-            if ( Trig_Spell_Dvij_Func004Func007Func006C() ) then
+            if Trig_Spell_Dvij_Func004Func007Func006C() then
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[0])
                 -- ???????? ?????? ???? ?? ?????
                 SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
-                if ( Trig_Spell_Dvij_Func004Func007Func006Func005C() ) then
+                if Trig_Spell_Dvij_Func004Func007Func006Func005C() then
                     -- ??? ????? ? ?????
                     ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func006Func005Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsUndeadDeathPactDeathPactTarget.mdl")
@@ -567,19 +567,19 @@ function Trig_DieDummy_Func001Func002A()
     RemoveUnit(GetEnumUnit())
 end
 function Trig_DieDummy_Func001C()
-    return ( GetUnitTypeId(GetDyingUnit()) == FourCC('h0MK') )
+    return GetUnitTypeId(GetDyingUnit()) == FourCC('h0MK')
 end
 function Trig_DieDummy_Func002Func002A()
     RemoveUnit(GetEnumUnit())
 end
 function Trig_DieDummy_Func002C()
-    return ( GetUnitTypeId(GetDyingUnit()) == FourCC('h0MJ') )
+    return GetUnitTypeId(GetDyingUnit()) == FourCC('h0MJ')
 end
 function Trig_DieDummy_Actions()
-    if ( Trig_DieDummy_Func001C() ) then
+    if Trig_DieDummy_Func001C() then
         ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('h0MK')), Trig_DieDummy_Func001Func002A)
     end
-    if ( Trig_DieDummy_Func002C() ) then
+    if Trig_DieDummy_Func002C() then
         ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('h0MJ')), Trig_DieDummy_Func002Func002A)
     end
 end
@@ -593,7 +593,7 @@ end
 -- Trigger: Dammi Dead
 --===========================================================================
 function Trig_Dammi_Dead_Conditions()
-    return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('H0BN') )
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('H0BN')
 end
 function Trig_Dammi_Dead_Actions()
     RemoveUnit(GetTriggerUnit())
@@ -663,7 +663,7 @@ end
 -- Trigger: Research Ot
 --===========================================================================
 function Trig_Research_Ot_Conditions()
-    return ( GetResearched() == FourCC('R00P') )
+    return GetResearched() == FourCC('R00P')
 end
 function Trig_Research_Ot_Actions()
     udg_LocalPosition2=GetRandomLocInRect(RectFromCenterSizeBJ(GetUnitLoc(GetTriggerUnit()), 15.00, 15.00))
@@ -696,13 +696,13 @@ end
 -- Trigger: Sdelat Flagman Ot Copy
 --===========================================================================
 function Trig_Sdelat_Flagman_Ot_Copy_Func002002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('A009'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('A009'), GetFilterUnit()) >= 1
 end
 function Trig_Sdelat_Flagman_Ot_Copy_Func005A()
     UnitRemoveAbilityBJ(FourCC('A009'), GetEnumUnit())
 end
 function Trig_Sdelat_Flagman_Ot_Copy_Func019C()
-    return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h06W') )
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('h06W')
 end
 function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     udg_FlagmanEst[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=true
@@ -721,7 +721,7 @@ function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     BlzSetUnitRealFieldBJ(GetTriggerUnit(), UNIT_RF_HP, I2R(BlzGetUnitMaxHP(GetTriggerUnit())))
     UnitAddAbilityBJ(FourCC('A008'), GetTriggerUnit())
     GroupAddUnitSimple(GetTriggerUnit(), udg_Flagmans)
-    if ( Trig_Sdelat_Flagman_Ot_Copy_Func019C() ) then
+    if Trig_Sdelat_Flagman_Ot_Copy_Func019C() then
         UnitRemoveAbilityBJ(FourCC('A0LG'), GetTriggerUnit())
     end
 end
@@ -743,7 +743,7 @@ function Trig_Flagman_die_Ot_Conditions()
     return IsUnitInGroup(GetTriggerUnit(), udg_Flagmans)
 end
 function Trig_Flagman_die_Ot_Func003002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('A001'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('A001'), GetFilterUnit()) >= 1
 end
 function Trig_Flagman_die_Ot_Func006A()
     UnitAddAbilityBJ(FourCC('A009'), GetEnumUnit())

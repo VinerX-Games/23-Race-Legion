@@ -587,7 +587,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Unit_Indexer_Func017Func004C()
-	return (udg_UDexRecycle == 0)
+	return udg_UDexRecycle == 0
 end
 ---@return boolean
 function Trig_Unit_Indexer_Func017C()
@@ -595,15 +595,15 @@ function Trig_Unit_Indexer_Func017C()
 end
 ---@return boolean
 function Trig_Unit_Indexer_Func030Func005C()
-	return (GetUnitUserData(udg_UDexUnits[udg_UDex]) == 0)
+	return GetUnitUserData(udg_UDexUnits[udg_UDex]) == 0
 end
 ---@return boolean
 function Trig_Unit_Indexer_Func030C()
-	return (udg_UDexWasted == 15)
+	return udg_UDexWasted == 15
 end
 ---@return boolean
 function Trig_Unit_Indexer_Func034C()
-	return (GetUnitUserData(GetFilterUnit()) == 0)
+	return GetUnitUserData(GetFilterUnit()) == 0
 end
 ---@return nothing
 function Trig_Unit_Indexer_Actions()
@@ -624,11 +624,11 @@ function IndexUnit()
 	--   
 	--  You can also customize the following block - if conditions are false the (Matching unit) won't be indexed.
 	--   
-	if (Trig_Unit_Indexer_Func017C()) then
+	if Trig_Unit_Indexer_Func017C() then
 		--   
 		--  Generate a unique integer index for this unit
 		--   
-		if (Trig_Unit_Indexer_Func017Func004C()) then
+		if Trig_Unit_Indexer_Func017Func004C() then
 			udg_UDex = (udg_UDexGen + 1)
 			udg_UDexGen = udg_UDex
 		else
@@ -667,12 +667,12 @@ function IndexNewUnit()
 	--  Recycle indices of units no longer in-play every (15) units created
 	--   
 	udg_UDexWasted = (udg_UDexWasted + 1)
-	if (Trig_Unit_Indexer_Func030C()) then
+	if Trig_Unit_Indexer_Func030C() then
 		udg_UDexWasted = 0
 		udg_UDex = udg_UDexNext[0]
 		while true do
 			if udg_UDex == 0 then break end
-			if (Trig_Unit_Indexer_Func030Func005C()) then
+			if Trig_Unit_Indexer_Func030Func005C() then
 				--   
 				--  Remove index from linked list
 				--   
@@ -701,7 +701,7 @@ function IndexNewUnit()
 	--   
 	--  Handle the entering unit (Matching unit)
 	--   
-	if (Trig_Unit_Indexer_Func034C()) then
+	if Trig_Unit_Indexer_Func034C() then
 		IndexUnit()
 	end
 	return false
@@ -1185,7 +1185,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_TLimit_Conditions()
-	return (GetUnitAbilityLevelSwapped(FourCC('A0IQ'), GetConstructedStructure()) ~= 0)
+	return GetUnitAbilityLevelSwapped(FourCC('A0IQ'), GetConstructedStructure()) ~= 0
 end
 ---@return nothing
 function Trig_TLimit_Actions()
@@ -1973,7 +1973,7 @@ function Trig_Cities_Start_2_Func003A()
 	SetUnitState(u, UNIT_STATE_LIFE, 5000)
 	GroupAddUnit(udg_ZahvatBuildings, u)
 	GroupAddUnit(udg_BuildedSctructure[1], u)
-	if (id == FourCC('h08A') or id == FourCC('h08A') or id == FourCC('h004') or id == FourCC('h0B3') or id == FourCC('h081') or id == FourCC('h0AP') or id == FourCC('h00G') or id == FourCC('h08G') or id == FourCC('h05O') or id == FourCC('h089') or id == FourCC('h0AG') or id == FourCC('h097') or id == FourCC('h09Z') or id == FourCC('h088') or id == FourCC('h094') or id == FourCC('h00F') or id == FourCC('h09P') or id == FourCC('h00F') or id == FourCC('h0BB') or id == FourCC('h0E3') or id == FourCC('h06I')) then
+	if id == FourCC('h08A') or id == FourCC('h08A') or id == FourCC('h004') or id == FourCC('h0B3') or id == FourCC('h081') or id == FourCC('h0AP') or id == FourCC('h00G') or id == FourCC('h08G') or id == FourCC('h05O') or id == FourCC('h089') or id == FourCC('h0AG') or id == FourCC('h097') or id == FourCC('h09Z') or id == FourCC('h088') or id == FourCC('h094') or id == FourCC('h00F') or id == FourCC('h09P') or id == FourCC('h00F') or id == FourCC('h0BB') or id == FourCC('h0E3') or id == FourCC('h06I') then
 		GroupAddUnit(PortalBuildingAi, u)
 	end
 	u = nil
@@ -2330,7 +2330,7 @@ end
 ---@return boolean
 ---@return boolean
 function Trig_RazvedEnd_Func002001003()
-	return (GetUnitTypeId(GetFilterUnit()) == FourCC('h0MM'))
+	return GetUnitTypeId(GetFilterUnit()) == FourCC('h0MM')
 end
 ---@return nothing
 function Trig_RazvedEnd_Func002A()

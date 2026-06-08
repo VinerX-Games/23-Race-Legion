@@ -8,7 +8,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Only_Eastern_Func004001002()
-	return (GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1)
+	return GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1
 end
 ---@return nothing
 function Trig_Only_Eastern_Func004A()
@@ -100,39 +100,39 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Continents_set_On_Conditions()
-	return (udg_Continents[0] == 1)
+	return udg_Continents[0] == 1
 end
 ---@return boolean
 function Trig_Continents_set_On_Func004C()
-	return (udg_Continents[1] == 1)
+	return udg_Continents[1] == 1
 end
 ---@return boolean
 function Trig_Continents_set_On_Func005C()
-	return (udg_Continents[2] == 1)
+	return udg_Continents[2] == 1
 end
 ---@return boolean
 function Trig_Continents_set_On_Func006C()
-	return (udg_Continents[3] == 1)
+	return udg_Continents[3] == 1
 end
 ---@return boolean
 function Trig_Continents_set_On_Func007C()
-	return (udg_Continents[4] == 1)
+	return udg_Continents[4] == 1
 end
 ---@return boolean
 function Trig_Continents_set_On_Func008C()
-	return (udg_Continents[5] == 1)
+	return udg_Continents[5] == 1
 end
 ---@return boolean
 function Trig_Continents_set_On_Func009C()
-	return (udg_Continents[6] == 1)
+	return udg_Continents[6] == 1
 end
 ---@return boolean
 function Trig_Continents_set_On_Func010C()
-	return (udg_Continents[7] == 1)
+	return udg_Continents[7] == 1
 end
 ---@return boolean
 function Trig_Continents_set_On_Func013001002()
-	return (GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1)
+	return GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1
 end
 ---@return nothing
 function Trig_Continents_set_On_Func013A()
@@ -143,25 +143,25 @@ function Trig_Continents_set_On_Actions()
 	udg_LocalText2 = ("????? ???????????:|cffffff00 ???????|r")
 	DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
 	udg_LocalText2 = "|cff00ff00????? ???????? ??? ????: |r"
-	if (Trig_Continents_set_On_Func004C()) then
+	if Trig_Continents_set_On_Func004C() then
 		udg_LocalText2 = (udg_LocalText2 .. "????????? ???????????\\" )
     end
-    if ( Trig_Continents_set_On_Func005C() ) then
+    if Trig_Continents_set_On_Func005C() then
         udg_LocalText2=( udg_LocalText2 .. "" )
     end
-    if ( Trig_Continents_set_On_Func006C() ) then
+    if Trig_Continents_set_On_Func006C() then
         udg_LocalText2=( udg_LocalText2 .. "" )
     end
-    if ( Trig_Continents_set_On_Func007C() ) then
+    if Trig_Continents_set_On_Func007C() then
         udg_LocalText2=( udg_LocalText2 .. "" )
     end
-    if ( Trig_Continents_set_On_Func008C() ) then
+    if Trig_Continents_set_On_Func008C() then
         udg_LocalText2=( udg_LocalText2 .. "" )
     end
-    if ( Trig_Continents_set_On_Func009C() ) then
+    if Trig_Continents_set_On_Func009C() then
         udg_LocalText2=( udg_LocalText2 .. "" )
     end
-    if ( Trig_Continents_set_On_Func010C() ) then
+    if Trig_Continents_set_On_Func010C() then
         udg_LocalText2=( udg_LocalText2 .. "" )
     end
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
@@ -180,10 +180,10 @@ end
 -- Trigger: Continents Off
 --===========================================================================
 function Trig_Continents_Off_Conditions()
-    return ( udg_Continents[0] == 0 )
+    return udg_Continents[0] == 0
 end
 function Trig_Continents_Off_Func005001002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1
 end
 function Trig_Continents_Off_Func005A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -382,28 +382,28 @@ end
 -- Trigger: SeeOnlyNeedeed
 --===========================================================================
 function Trig_SeeOnlyNeedeed_Func001C()
-    return ( udg_Continents[1] == 1 )
+    return udg_Continents[1] == 1
 end
 function Trig_SeeOnlyNeedeed_Func002C()
-    return ( udg_Continents[2] == 1 )
+    return udg_Continents[2] == 1
 end
 function Trig_SeeOnlyNeedeed_Func003C()
-    return ( udg_Continents[3] == 1 )
+    return udg_Continents[3] == 1
 end
 function Trig_SeeOnlyNeedeed_Func004C()
-    return ( udg_Continents[4] == 1 )
+    return udg_Continents[4] == 1
 end
 function Trig_SeeOnlyNeedeed_Func005C()
-    return ( udg_Continents[5] == 1 )
+    return udg_Continents[5] == 1
 end
 function Trig_SeeOnlyNeedeed_Func006C()
-    return ( udg_Continents[6] == 1 )
+    return udg_Continents[6] == 1
 end
 function Trig_SeeOnlyNeedeed_Func007C()
-    return ( udg_Continents[7] == 1 )
+    return udg_Continents[7] == 1
 end
 function Trig_SeeOnlyNeedeed_Actions()
-    if ( Trig_SeeOnlyNeedeed_Func001C() ) then
+    if Trig_SeeOnlyNeedeed_Func001C() then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
         FogModifierStop(GetLastCreatedFogModifier())
@@ -411,31 +411,31 @@ function Trig_SeeOnlyNeedeed_Actions()
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
     end
-    if ( Trig_SeeOnlyNeedeed_Func002C() ) then
+    if Trig_SeeOnlyNeedeed_Func002C() then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
     end
-    if ( Trig_SeeOnlyNeedeed_Func003C() ) then
+    if Trig_SeeOnlyNeedeed_Func003C() then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
     end
-    if ( Trig_SeeOnlyNeedeed_Func004C() ) then
+    if Trig_SeeOnlyNeedeed_Func004C() then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
     end
-    if ( Trig_SeeOnlyNeedeed_Func005C() ) then
+    if Trig_SeeOnlyNeedeed_Func005C() then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
     end
-    if ( Trig_SeeOnlyNeedeed_Func006C() ) then
+    if Trig_SeeOnlyNeedeed_Func006C() then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
     end
-    if ( Trig_SeeOnlyNeedeed_Func007C() ) then
+    if Trig_SeeOnlyNeedeed_Func007C() then
         FogModifierStop(GetLastCreatedFogModifier())
         DestroyFogModifier(GetLastCreatedFogModifier())
     end
@@ -465,22 +465,22 @@ end
 -- Trigger: EasternOn 1
 --===========================================================================
 function Trig_EasternOn_1_Conditions()
-    return ( udg_Continents[1] == 1 )
+    return udg_Continents[1] == 1
 end
 function Trig_EasternOn_1_Func003001002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1
 end
 function Trig_EasternOn_1_Func003A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_EasternOn_1_Func004001002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1
 end
 function Trig_EasternOn_1_Func004A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_EasternOn_1_Func005001002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1
 end
 function Trig_EasternOn_1_Func005A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -551,16 +551,16 @@ end
 -- Trigger: KalimOn 2
 --===========================================================================
 function Trig_KalimOn_2_Conditions()
-    return ( udg_Continents[2] == 1 )
+    return udg_Continents[2] == 1
 end
 function Trig_KalimOn_2_Func002001002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1
 end
 function Trig_KalimOn_2_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_KalimOn_2_Func003001002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1
 end
 function Trig_KalimOn_2_Func003A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -631,10 +631,10 @@ end
 -- Trigger: Outland 3
 --===========================================================================
 function Trig_Outland_3_Conditions()
-    return ( udg_Continents[3] == 1 )
+    return udg_Continents[3] == 1
 end
 function Trig_Outland_3_Func002001002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1
 end
 function Trig_Outland_3_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -704,16 +704,16 @@ end
 -- Trigger: NordOn 4
 --===========================================================================
 function Trig_NordOn_4_Conditions()
-    return ( udg_Continents[4] == 1 )
+    return udg_Continents[4] == 1
 end
 function Trig_NordOn_4_Func002001002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1
 end
 function Trig_NordOn_4_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_NordOn_4_Func003001002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1
 end
 function Trig_NordOn_4_Func003A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -784,10 +784,10 @@ end
 -- Trigger: Pandaria 5
 --===========================================================================
 function Trig_Pandaria_5_Conditions()
-    return ( udg_Continents[5] == 1 )
+    return udg_Continents[5] == 1
 end
 function Trig_Pandaria_5_Func002001002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1
 end
 function Trig_Pandaria_5_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -856,10 +856,10 @@ end
 -- Trigger: Argus 6
 --===========================================================================
 function Trig_Argus_6_Conditions()
-    return ( udg_Continents[6] == 1 )
+    return udg_Continents[6] == 1
 end
 function Trig_Argus_6_Func002001002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1
 end
 function Trig_Argus_6_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -928,10 +928,10 @@ end
 -- Trigger: BrokenIsled 7
 --===========================================================================
 function Trig_BrokenIsled_7_Conditions()
-    return ( udg_Continents[7] == 1 )
+    return udg_Continents[7] == 1
 end
 function Trig_BrokenIsled_7_Func002001002()
-    return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
+    return GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1
 end
 function Trig_BrokenIsled_7_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
@@ -1048,7 +1048,7 @@ end
 -- Trigger: StartDarkMode
 --===========================================================================
 function Trig_StartDarkMode_Conditions()
-    return ( udg_SET_VISIBLE_MODE == 1 )
+    return udg_SET_VISIBLE_MODE == 1
 end
 function Trig_StartDarkMode_Func006A()
     FogModifierStop(udg_Visibl[GetConvertedPlayerId(GetEnumPlayer())])
@@ -1074,7 +1074,7 @@ end
 -- Trigger: StartOpenMode
 --===========================================================================
 function Trig_StartOpenMode_Conditions()
-    return ( udg_SET_VISIBLE_MODE == 2 )
+    return udg_SET_VISIBLE_MODE == 2
 end
 function Trig_StartOpenMode_Func002A()
     FogModifierStop(udg_Visibl[GetConvertedPlayerId(GetEnumPlayer())])
@@ -1445,7 +1445,7 @@ function Trig_Timer_Func009Func001A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A0IQ'), GetEnumPlayer())
 end
 function Trig_Timer_Func009C()
-    return ( udg_GameMode == 0 )
+    return udg_GameMode == 0
 end
 function Trig_Timer_Actions()
     udg_AllPlayers=GetPlayersAll()
@@ -1455,7 +1455,7 @@ function Trig_Timer_Actions()
     StartTimerBJ(udg_IncomeTimerFirst, false, 600.00)
     CreateTimerDialogBJ(GetLastCreatedTimerBJ(), "TRIGSTR_7397")
     udg_TimerToDis=GetLastCreatedTimerDialogBJ()
-    if ( Trig_Timer_Func009C() ) then
+    if Trig_Timer_Func009C() then
         ForForce(udg_AllPlayers, Trig_Timer_Func009Func001A)
     end
 end
