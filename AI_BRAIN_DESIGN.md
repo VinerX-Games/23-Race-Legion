@@ -471,11 +471,42 @@ RegisterAiRace(..., {
 - **Г2** — маршрутизация отрядов к цели на другом континенте по графу (вместо
   текущего «плохо ходят через порталы»).
 
-### Журнал реализации
-- **Ф1 (done, scaffolding):** `83_ai_brain.lua` — world model (`AiData[pi].wm`:
-  centroid/armyCount/capHP/threatHome), реестр-резолвер `AiBrainOf`/`AiBrainEnabled`,
-  дефолты `AiBrainDefaults`, тэговый лог `[BRAIN]`. Seam в `PlayerArmy`:
-  `AiBrainEnabled(pi)` → `AiBrainArmyTick` иначе извлечённый `AiArmyLegacyTick`.
-  Инертно: ни одна раса не ставит `brain`, swarm-путь без изменений. Тест мостом:
-  `AiBrainForce[pi]="objective"` включает наблюдательный режим (perceive+log+swarm).
+### Тумблеры и тэги логов (для отладки/тюнинга)
+Всё новое — **opt-in, дефолты выключены**, swarm-поведение не меняется, пока не
+включишь. Через мост (`agent_bridge.py exec`) или хардкодом в коде:
+- `AiBrainForce[pi]="objective"` — включить objective-мозг боту `pi`.
+- `RegisterAiRace(..., brain="objective")` — включить расе насовсем.
+- `AiSmartBuild=true` — детерминированное размещение зданий (П1).
+- `AiSmartProduce=true` + `def.compTarget` у расы — состав найма (П2).
+Лог-тэги (показать: чат `-log on:<TAG>` или `-log allon`; всё тихо по умолчанию):
+`BRAIN` (perceive/общее), `BRAINOBJ` (сбор целей), `BRAINFOC` (фокус/приказ),
+`BRAINDEF` (оборона/recall), `BRAINTP` (логистика), `BRAINBLD` (размещение зданий).
+
+### Журнал реализации (ветка `ai-brain`)
+- **Ф1 done** — `83_ai_brain.lua`: world model (`AiData[pi].wm`), резолвер
+  `AiBrainOf`/`AiBrainEnabled`, `AiBrainDefaults`, тэг-логи. Seam в `PlayerArmy`
+  (`AiArmyLegacyTick` извлечён). Инертно.
+- **Ф2 done** — сбор целей кластерами (`AiBrainCollectObjectives` по
+  `udg_StolicaGroups`+`udg_ZahvatBuildings`, ценность = `AiBldValue`, не ХП),
+  скоринг `AiObjScore`, фокус с гистерезисом `AiBrainPickFocus`, концентрация
+  силы `AiBrainOrderIdleTo`. Нет целей → swarm-фоллбэк.
+- **Ф3 done** — оборона: `wm.defendHome` (угроза/осада столицы) → recall армии
+  домой раньше любого пуша. ТП: `AiBrainTryLogistics` дёргает существующий
+  `RequestPort` (focus-targeted TP — заглушка до графа порталов).
+- **П1 done** — `AiFindBuildSpot` (кольца/секторы от базы, проверка
+  проходимости+spacing), хук в `TryBuild` под `AiSmartBuild`, рандом-фоллбэк.
+- **П2 done** — `AiPickByComposition` (дефицит доли к `compTarget`), хук в
+  `AiRunProduction` под `AiSmartProduce`, рандом-фоллбэк.
+
+### Заблокировано на данные (нужен CLI / игра)
+- **Десант (М1/М2)** — нужны id транспортов по расам (`def.transport`,
+  `transportCap`) и точки высадки; собрать через `HiveWE_cli describe-race` и
+  обкатать мостом. Каркас `port`-режима готов в дизайне (§13), кода ещё нет.
+- **Граф порталов/континентов (Г1/Г2)** — нужна топология (узлы-континенты,
+  рёбра-порталы/корабли). Вероятно строить оффлайн через CLI. Без него
+  focus-targeted ТП и кросс-континентальные цели — заглушки.
+- **Инком-ценность зданий** — `AiBuildingValue` пуст (всё = 1.0); заполнить из
+  модуля экономики карты (пища + уровни абилок). TODO найти модуль.
+- **`compTarget` по расам** — таблицы желаемого состава ещё не заполнены (П2
+  работает, но без данных пик = рандом-фоллбэк).
 ```
