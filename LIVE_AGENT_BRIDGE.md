@@ -39,7 +39,9 @@
 war3map.lua руками** — только split-секции + пересборка.
 
 ## Как пользоваться
-Хелпер агента: `C:\Games\23 Race\agent_bridge.py`
+Хелпер агента (v2, в репозитории): `C:\Games\23 Race\23-Race-Legion\agent_bridge.py`
+**Только этот путь.** Копия на уровень выше (`C:\Games\23 Race\agent_bridge.py`) —
+устаревшая (до-v2, без heartbeat), не использовать: она угадывает seq и отваливается.
 ```
 # 1) поднять карту (держать открытой)
 HiveWE_cli probe-map --map "<...>\map.w3x" --warcraft "F:/Games/Warcraft III" \
