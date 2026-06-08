@@ -113,7 +113,7 @@ Warcraft III: Reforged — кастомная карта Altered Melee с 30+ ф
 | `libraries/12_SanctifiedEnchantment.lua` | Система апгрейдов | 268 |
 | `libraries/13_Races.lua` | Выбор расы, `AiRace` конфигурация | 2867 |
 | `libraries/14_AI2.lua` | AI-система (часть 2) | 166 |
-| `80_runtime/` | **Сгенерированный код** — 73 файла (см. 3.2) | 47K |
+| `80_runtime/` | **Сгенерированный код** — 66 файлов (см. 3.2) | 47K |
 | `81_ai.lua` | AI-регистр рас | 276 |
 | `82_ai_races.lua` | AI-стратегии рас | 1298 |
 | `90_InitCustomTriggers.lua` | `InitCustomTriggers()` — регистрация всех триггеров | 1302 |
@@ -124,16 +124,18 @@ Warcraft III: Reforged — кастомная карта Altered Melee с 30+ ф
 
 ### 3.2 Сгенерированный runtime (`80_runtime/`)
 
-73 файла в 10 подпапках. Все — продукт автоконвертации vJASS→Lua.
+66 файлов в 10 подпапках. Все — продукт автоконвертации vJASS→Lua.
+Файлы нарезаны по границам функций (`resplit_runtime.py`): каждый файл содержит
+только целые функции и парсится самостоятельно.
 
 | Папка | Содержание | Файлов |
 |---|---|---|
-| `_infra/` | `InitGlobals()`, HandleCounter, ReplaceUnit, boolexprs | 5 |
-| `_lib/` | Экономика: `addArmyExp`, `AddCountDis`, `TimedUpdate`, графы | 10 |
-| `_player/` | Управление игроками: `ClearPlayer`, вассалы, города | 7 |
+| `_infra/` | `InitGlobals()`, HandleCounter, ReplaceUnit, boolexprs | 4 |
+| `_lib/` | Экономика: `addArmyExp`, `AddCountDis`, `TimedUpdate`, графы | 9 |
+| `_player/` | Управление игроками: `ClearPlayer`, вассалы, города | 6 |
 | `_ui/` | `UISetup()`, IncomeTooltip | 2 |
 | `_races/` | Enabler-функции: `HordeW2On`, `CultOn`, `DragonsOn`, etc. | 12 |
-| `_ai/` | AI-ядро: `TryAttack`, `TryBuild`, порталы, вода | 12 |
+| `_ai/` | AI-ядро: `TryAttack`, `TryBuild`, порталы, вода | 8 |
 | `_continental/` | Континенты: boolexprs, dungeons, `ProcessContinentalStuff` | 4 |
 | `_features/` | Emerald Dream, Item Drops, Sounds | 3 |
 | `_data/` | Статика: Unit Creation (943 строки), Regions (166), Cameras (107) | 3 |
@@ -205,6 +207,12 @@ Warcraft III: Reforged — кастомная карта Altered Melee с 30+ ф
 |---|---|
 | `python build_map_lua.py` | Собрать `war3map.lua` из split-файлов |
 | `python build_map_lua.py --check-only` | Проверить соответствие SHA256 |
+| `python resplit_runtime.py [--write]` | Пересечь `80_runtime/*` по границам функций (byte-identical) |
+| `idiom_engine.py` | Движок AST-идиоматизации: конкат секций, парс, замены по офсетам, AST-guard |
+| `python idiom_conditions.py --write` | Свернуть condition-функции `if not(E) then return false…` → `return E` |
+| `python idiom_strconcat.py --write` | Строковый `+` → `..` (фикс рантайм-краша) |
+| `python idiom_booltrue.py --write` | Убрать `== true`/`== false`/`~=` |
+| `python idiom_parens.py --write` | Снять лишние скобки в return/if/while/until (AST-guard) |
 | `python -c "from luaparser import ast; ast.parse(...)"` | Проверка синтаксиса Lua |
 | `HiveWE_cli run-map --map map.w3x --warcraft "..."` | Запуск карты |
 | `HiveWE_cli probe-map ...` | Автотест с логами |
