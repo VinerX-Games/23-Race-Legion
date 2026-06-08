@@ -641,36 +641,13 @@ function PlayerArmy()
             ProbeLogWrite("[AI] PlayerArmy processing pi=" .. tostring(pi_army) .. " race=" .. tostring(AiRace[pi_army]))
         end
         ForceRemovePlayer(udg_BotsActive, gPlayer)
-        LazyCount=0
-        if gAllyGroup == nil then
-            gAllyGroup=CreateGroup()
-        end
-        GroupEnumUnitsOfPlayer(gAllyGroup, gPlayer, B_Lazy)
-        
-        if FirstOfGroup(gAllyGroup) ~= nil then
-            udg_LocalInteger=1
-            
-            while true do
-                if udg_LocalInteger > AiMass or FirstOfGroup(gAllyGroup) == nil then break end
-                --set udg_LocalUnit2 = GroupPickRandomUnit(gAllyGroup)
-                
-				udg_LocalUnit2=BlzGroupUnitAt(gAllyGroup, GetRandomInt(0, LazyCount - 1))
-                               
-                GroupRemoveUnit(gAllyGroup, udg_LocalUnit2)
-                LazyCount=LazyCount - 1
-                -- ?????????
-                if GetUnitTypeId(udg_LocalUnit2) == FourCC('h03C') then
-                    if Random(1 , 2) then
-                        IssueImmediateOrder(udg_LocalUnit2, "autoharvestlumber")
-                    else
-                        TryAttack()
-                    end
-                else
-                    TryAttack()
-                end
-                
-                udg_LocalInteger=udg_LocalInteger + 1
-            end
+        -- Brain seam: bots with an active brain go through AiBrainArmyTick;
+        -- everyone else (default) runs the unchanged swarm path. Body lives in
+        -- AiArmyLegacyTick (83_ai_brain.lua). See AI_BRAIN_DESIGN.md.
+        if AiBrainEnabled(pi_army) then
+            AiBrainArmyTick(pi_army, gPlayer)
+        else
+            AiArmyLegacyTick(gPlayer)
         end
     end
     
