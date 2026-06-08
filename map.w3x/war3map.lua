@@ -265,7 +265,9 @@ function BridgeEvalSetupSync()
     ProbeLogWrite("[BRIDGE] eval-sync registered prefix=" .. tostring(BridgeEvalSyncPrefix) .. " chunked")
 end
 _G.EvalNextSeq = 1
-_G.EvalOutFile = "23race_eval_out.pld"
+_G.EvalOutFile = "23race_eval_out.pld"      -- legacy fixed outbox (kept for fallback)
+_G.EvalOutPrefix = "23race_eval_out_"        -- per-seq outbox: <prefix>NNNN.pld
+_G.EvalHbFile = "23race_eval_hb.pld"         -- heartbeat: tells agent the seq we await
 _G.EvalInPrefix = "23race_eval_"
 function EvalHexDec(s)
     local out = {}
@@ -311,6 +313,8 @@ function EvalWriteResult(seq, ok, value)
     total = math.ceil(total / chunk)
     if total < 1 then total = 1 end
     local okf = ok and "1" or "0"
+    -- Per-seq outbox so a later result can never clobber an unread one.
+    local outfile = string.format("%s%04d.pld", EvalOutPrefix, seq)
     pcall(function()
         PreloadGenClear()
         PreloadGenStart()
@@ -318,9 +322,22 @@ function EvalWriteResult(seq, ok, value)
             local part = string.sub(hex, (i - 1) * chunk + 1, i * chunk)
             Preload(tostring(seq) .. "|" .. okf .. "|" .. i .. "|" .. total .. "|" .. part)
         end
-        PreloadGenEnd(EvalOutFile)
+        PreloadGenEnd(outfile)
     end)
     ProbeLogWrite("[EVAL] result seq=" .. tostring(seq) .. " ok=" .. tostring(ok) .. " chunks=" .. total)
+end
+-- Heartbeat: publish the inbox seq we're currently waiting for, so the agent
+-- writes exactly that filename and the two seq counters can never drift apart.
+function EvalWriteHeartbeat()
+    if GetPlayerId(GetLocalPlayer()) ~= 0 then
+        return
+    end
+    pcall(function()
+        PreloadGenClear()
+        PreloadGenStart()
+        Preload("hb|" .. tostring(EvalNextSeq))
+        PreloadGenEnd(EvalHbFile)
+    end)
 end
 function EvalRun(seq, code)
     local chunk, cerr = load("return " .. code)
@@ -347,6 +364,7 @@ function BridgeConsumeEval()
     if current == nil or current == baseline then return end
     BlzSetAbilityTooltip(BridgeCarrierAbilityId, baseline, BridgeCarrierTooltipLevel)
     EvalNextSeq = EvalNextSeq + 1
+    EvalWriteHeartbeat()  -- publish the new seq we now await
     ProbeLogWrite("[EVAL] loaded seq=" .. tostring(EvalNextSeq - 1) .. " file=" .. path)
 end
 function BridgeTick()
@@ -355,6 +373,10 @@ function BridgeTick()
     end
     BridgeElapsed = BridgeElapsed + BridgeTickInterval
     BridgeDebugTicks = BridgeDebugTicks + 1
+    -- Re-publish heartbeat ~1s so a freshly-attached/reset agent re-syncs the seq.
+    if BridgeEvalEnabled and BridgeDebugTicks % 4 == 0 then
+        pcall(EvalWriteHeartbeat)
+    end
     if BridgeDebugTicks <= BridgeDebugMaxTicks then
         ProbeLogWrite("[BRIDGE] tick #" .. tostring(BridgeDebugTicks) .. " elapsed=" .. tostring(BridgeElapsed))
     end
@@ -402,6 +424,7 @@ function BridgeStart()
     BridgePollTimer = timer
     ProbeLogWrite("[BRIDGE] start (live-only) baseline-len=" .. tostring(#flushed))
     BridgeEvalSetupSync()
+    EvalWriteHeartbeat()  -- publish initial seq so the agent syncs from tick 0
     TimerStart(timer, BridgeTickInterval, true, BridgeTick)
 end
 function SetupBridgeChat()

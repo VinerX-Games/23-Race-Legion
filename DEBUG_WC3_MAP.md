@@ -155,6 +155,8 @@ Start-Process -FilePath $cli -ArgumentList "probe-map --map `"C:\Games\23 Race\2
 # -window -nowfpause = окно не паузится при потере фокуса, можно работать в фоне
 
 # 5. Bridge-сессия (после загрузки карты)
+# v2: seq синхронится через heartbeat игры — рассинхрона нет. Если пошли
+# сплошные TIMEOUT и не выправляется: в игре -bridge:restart:, затем reset.
 python agent_bridge.py reset
 
 # Спавн всех AI-рас (pi=2..23):

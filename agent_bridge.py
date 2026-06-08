@@ -3,13 +3,15 @@
 
 No map restart needed. Pairs with the in-map eval channel (BridgeConsumeEval).
 
-Channel:
-  IN  : sequential .pld files  <CustomMapData>/23race_eval_NNNN.pld
+Channel (v2 — heartbeat-synced, atomic, per-seq outbox):
+  IN  : sequential .pld files  <CustomMapData>/23race_eval_NNNN.pld (atomic write)
          payload sent via BlzSendSyncData inside the .pld, chunked if needed:
            eval|<seq>|<chunk_i>|<total>|<hex>
-         + BlzSetAbilityTooltip flag so the game detects the file was loaded.
-  OUT : fixed file              <CustomMapData>/23race_eval_out.pld
-         payload  <seq>|<ok 0/1>|<base64-serialized-result>   (PreloadGenEnd)
+         + BlzSetAbilityTooltip "l<seq>" so the game detects the file was loaded.
+  OUT : per-seq file            <CustomMapData>/23race_eval_out_NNNN.pld
+         payload  <seq>|<ok 0/1>|<idx>|<total>|<hexchunk>     (PreloadGenEnd)
+  HB  : game-published seq      <CustomMapData>/23race_eval_hb.pld -> hb|<seq>
+         the inbox seq the game awaits; the agent writes exactly that -> no drift.
 
 Usage:
   python agent_bridge.py reset                 # call once after each map launch
@@ -27,9 +29,15 @@ for _s in (sys.stdout, sys.stderr):
         pass
 
 CMD_DIR = os.path.join(os.environ["USERPROFILE"], "Documents", "Warcraft III", "CustomMapData")
-EVAL_OUT = os.path.join(CMD_DIR, "23race_eval_out.pld")
+EVAL_OUT = os.path.join(CMD_DIR, "23race_eval_out.pld")          # legacy fixed outbox
+OUT_GLOB = os.path.join(CMD_DIR, "23race_eval_out_[0-9]*.pld")    # per-seq outbox
+HB_FILE = os.path.join(CMD_DIR, "23race_eval_hb.pld")            # game-published seq
 IN_GLOB = os.path.join(CMD_DIR, "23race_eval_[0-9]*.pld")
 IN_RE = re.compile(r"23race_eval_(\d+)\.pld$", re.I)
+
+
+def out_file(seq):
+    return os.path.join(CMD_DIR, "23race_eval_out_%04d.pld" % seq)
 
 # BlzSendSyncData payload limit ~255 chars. We keep hex chunks at 200 to stay safe.
 HEX_CHUNK = 200
@@ -59,13 +67,37 @@ def write_pld(path, seq, hex_code):
         calls.append(
             'call BlzSendSyncData("23RaceEval","eval|%d|%d|%d|%s")\n' % (seq, i + 1, total, chunk)
         )
-    calls.append("call BlzSetAbilityTooltip('AHbz',\"loaded\",0)\n")
-    with open(path, "wb") as f:
-        f.write(PLD_TEMPLATE.format(chunk_calls="".join(calls)).encode("utf-8"))
+    # Per-seq tooltip token (not a constant "loaded"): makes the game's
+    # "tooltip != baseline" load-detection collision-proof across sessions.
+    calls.append("call BlzSetAbilityTooltip('AHbz',\"l%d\",0)\n" % seq)
+    blob = PLD_TEMPLATE.format(chunk_calls="".join(calls)).encode("utf-8")
+    # Atomic publish: the game must never Preloader a half-written file.
+    tmp = path + ".tmp"
+    with open(tmp, "wb") as f:
+        f.write(blob)
+    os.replace(tmp, path)
+
+
+def read_hb():
+    """The seq the running game is currently waiting for, or None if no heartbeat."""
+    try:
+        data = open(HB_FILE, "r", encoding="utf-8", errors="replace").read()
+    except OSError:
+        return None
+    m = re.search(r'Preload\(\s*"hb\|(\d+)"\s*\)', data)
+    return int(m.group(1)) if m else None
 
 
 def next_seq():
-    """Stateless: next inbox seq = (max existing inbox file)+1. Self-syncs with a fresh game after reset()."""
+    """Authoritative seq from the game's heartbeat; never drifts out of sync.
+
+    The game publishes the exact inbox seq it awaits, so we write precisely that
+    filename. Fallback (no heartbeat yet — game not started or pre-v2 map):
+    (max existing inbox file)+1, which self-syncs with a fresh game after reset().
+    """
+    hb = read_hb()
+    if hb is not None:
+        return hb
     n = 0
     for p in glob.glob(IN_GLOB):
         m = IN_RE.search(os.path.basename(p))
@@ -87,10 +119,12 @@ def parse_out(want_seq):
     Chunked format (current):  <seq>|<ok>|<idx>|<total>|<hexchunk>
     Legacy format (fallback):  <seq>|<ok>|<hex>
     """
-    if not os.path.exists(EVAL_OUT):
+    # Per-seq outbox first (v2); fall back to the legacy fixed file.
+    src = out_file(want_seq) if os.path.exists(out_file(want_seq)) else EVAL_OUT
+    if not os.path.exists(src):
         return None
     try:
-        data = open(EVAL_OUT, "r", encoding="utf-8", errors="replace").read()
+        data = open(src, "r", encoding="utf-8", errors="replace").read()
     except OSError:
         return None
     chunks, ok, total, legacy = {}, None, None, None
@@ -113,7 +147,8 @@ def parse_out(want_seq):
 
 def cmd_reset():
     removed = 0
-    for p in glob.glob(IN_GLOB) + [EVAL_OUT]:
+    # Drop inbox, every per-seq outbox, the legacy outbox, and the stale heartbeat.
+    for p in glob.glob(IN_GLOB) + glob.glob(OUT_GLOB) + [EVAL_OUT, HB_FILE]:
         try:
             os.remove(p)
             removed += 1
@@ -125,10 +160,11 @@ def cmd_reset():
 
 def cmd_exec(code, timeout):
     seq = next_seq()
-    try:
-        os.remove(EVAL_OUT)  # drop stale result so we never read a previous one
-    except OSError:
-        pass
+    for stale in (out_file(seq), EVAL_OUT):  # drop stale results so we never read a previous one
+        try:
+            os.remove(stale)
+        except OSError:
+            pass
     hx = code.encode("utf-8").hex()
     write_pld(os.path.join(CMD_DIR, "23race_eval_%04d.pld" % seq), seq, hx)
     deadline = time.time() + timeout
