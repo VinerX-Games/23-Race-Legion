@@ -1764,25 +1764,16 @@ end
 -- Trigger: YesLeft
 --===========================================================================
 function Trig_YesLeft_Func001C()
-    if ( not ( GetPlayerTechMaxAllowedSwap(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
-        return false
-    end
-    return true
+    return ( GetPlayerTechMaxAllowedSwap(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0 )
 end
 function Trig_YesLeft_Func002C()
     return true
 end
 function Trig_YesLeft_Func003C()
-    if ( not ( GetPlayerTechCountSimple(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
-        return false
-    end
-    return true
+    return ( GetPlayerTechCountSimple(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0 )
 end
 function Trig_YesLeft_Func004C()
-    if ( not ( GetPlayerTechMaxAllowedSwap(FourCC('R0D2'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
-        return false
-    end
-    return true
+    return ( GetPlayerTechMaxAllowedSwap(FourCC('R0D2'), GetOwningPlayer(GetTriggerUnit())) == 0 )
 end
 function Trig_YesLeft_Actions()
     if ( Trig_YesLeft_Func001C() ) then
@@ -1852,10 +1843,7 @@ end
 -- Trigger: StartCommonHome
 --===========================================================================
 function Trig_StartCommonHome_Conditions()
-    if ( not ( GetResearched() == FourCC('R0DY') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R0DY') )
 end
 function Trig_StartCommonHome_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0D3'), 1, GetOwningPlayer(GetTriggerUnit()))
@@ -1983,10 +1971,7 @@ end
 -- Trigger: BeginCommonHome
 --===========================================================================
 function Trig_BeginCommonHome_Conditions()
-    if ( not ( GetResearched() == FourCC('R0EH') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R0EH') )
 end
 function Trig_BeginCommonHome_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0DX'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -2002,16 +1987,10 @@ end
 -- Trigger: CanselCommonHome
 --===========================================================================
 function Trig_CanselCommonHome_Conditions()
-    if ( not ( GetResearched() == FourCC('R0E9') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R0E9') )
 end
 function Trig_CanselCommonHome_Func001C()
-    if ( not ( GetPlayerTechMaxAllowedSwap(FourCC('R0D1'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
-        return false
-    end
-    return true
+    return ( GetPlayerTechMaxAllowedSwap(FourCC('R0D1'), GetOwningPlayer(GetTriggerUnit())) == 0 )
 end
 function Trig_CanselCommonHome_Actions()
     if ( Trig_CanselCommonHome_Func001C() ) then
@@ -2181,10 +2160,7 @@ end
 -- Trigger: StartUnitedOrcs
 --===========================================================================
 function Trig_StartUnitedOrcs_Conditions()
-    if ( not ( GetResearched() == FourCC('R0DX') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R0DX') )
 end
 function Trig_StartUnitedOrcs_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0D1'), 1, GetOwningPlayer(GetTriggerUnit()))
@@ -2299,10 +2275,7 @@ end
 -- Trigger: StartTrueHorde
 --===========================================================================
 function Trig_StartTrueHorde_Conditions()
-    if ( not ( GetResearched() == FourCC('R0E9') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R0E9') )
 end
 function Trig_StartTrueHorde_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0DY'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -2320,16 +2293,10 @@ end
 -- Trigger: CanselTrueHorde
 --===========================================================================
 function Trig_CanselTrueHorde_Conditions()
-    if ( not ( GetResearched() == FourCC('R0E9') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R0E9') )
 end
 function Trig_CanselTrueHorde_Func001C()
-    if ( not ( GetPlayerTechMaxAllowedSwap(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
-        return false
-    end
-    return true
+    return ( GetPlayerTechMaxAllowedSwap(FourCC('R0D3'), GetOwningPlayer(GetTriggerUnit())) == 0 )
 end
 function Trig_CanselTrueHorde_Actions()
     if ( Trig_CanselTrueHorde_Func001C() ) then
@@ -2574,10 +2541,7 @@ end
 -- Trigger: StartNeutrals
 --===========================================================================
 function Trig_StartNeutrals_Conditions()
-    if ( not ( GetResearched() == FourCC('R0DZ') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R0DZ') )
 end
 function Trig_StartNeutrals_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0E4'), 1, GetOwningPlayer(GetTriggerUnit()))
@@ -2795,16 +2759,10 @@ end
 -- Trigger: PandaSecondAttack
 --===========================================================================
 function Trig_PandaSecondAttack_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A129'), GetAttacker()) > 0 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitAbilityLevelSwapped(FourCC('A129'), GetAttacker()) > 0 )
 end
 function Trig_PandaSecondAttack_Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A12A'), GetAttacker()) == 0 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitAbilityLevelSwapped(FourCC('A12A'), GetAttacker()) == 0 )
 end
 function Trig_PandaSecondAttack_Actions()
     if ( Trig_PandaSecondAttack_Func001C() ) then

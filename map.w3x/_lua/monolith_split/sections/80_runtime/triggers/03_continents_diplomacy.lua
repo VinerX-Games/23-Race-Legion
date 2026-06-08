@@ -100,59 +100,35 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Continents_set_On_Conditions()
-	if ( not (udg_Continents[0] == 1)) then
-		return false
-	end
-	return true
+	return (udg_Continents[0] == 1)
 end
 ---@return boolean
 function Trig_Continents_set_On_Func004C()
-	if ( not (udg_Continents[1] == 1)) then
-		return false
-	end
-	return true
+	return (udg_Continents[1] == 1)
 end
 ---@return boolean
 function Trig_Continents_set_On_Func005C()
-	if ( not (udg_Continents[2] == 1)) then
-		return false
-	end
-	return true
+	return (udg_Continents[2] == 1)
 end
 ---@return boolean
 function Trig_Continents_set_On_Func006C()
-	if ( not (udg_Continents[3] == 1)) then
-		return false
-	end
-	return true
+	return (udg_Continents[3] == 1)
 end
 ---@return boolean
 function Trig_Continents_set_On_Func007C()
-	if ( not (udg_Continents[4] == 1)) then
-		return false
-	end
-	return true
+	return (udg_Continents[4] == 1)
 end
 ---@return boolean
 function Trig_Continents_set_On_Func008C()
-	if ( not (udg_Continents[5] == 1)) then
-		return false
-	end
-	return true
+	return (udg_Continents[5] == 1)
 end
 ---@return boolean
 function Trig_Continents_set_On_Func009C()
-	if ( not (udg_Continents[6] == 1)) then
-		return false
-	end
-	return true
+	return (udg_Continents[6] == 1)
 end
 ---@return boolean
 function Trig_Continents_set_On_Func010C()
-	if ( not (udg_Continents[7] == 1)) then
-		return false
-	end
-	return true
+	return (udg_Continents[7] == 1)
 end
 ---@return boolean
 function Trig_Continents_set_On_Func013001002()
@@ -211,10 +187,7 @@ end
 -- Trigger: Continents Off
 --===========================================================================
 function Trig_Continents_Off_Conditions()
-    if ( not ( udg_Continents[0] == 0 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[0] == 0 )
 end
 function Trig_Continents_Off_Func005001002()
     return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
@@ -394,19 +367,10 @@ end
 -- Trigger: UseMassProssvet
 --===========================================================================
 function Trig_UseMassProssvet_Func008C()
-    if ( not ( GetItemTypeId(GetManipulatedItem()) == FourCC('I00C') ) ) then
-        return false
-    end
-    if ( not ( udg_Continents[0] == 1 ) ) then
-        return false
-    end
-    return true
+    return (( GetItemTypeId(GetManipulatedItem()) == FourCC('I00C') )) and (( udg_Continents[0] == 1 ))
 end
 function Trig_UseMassProssvet_Conditions()
-    if ( not Trig_UseMassProssvet_Func008C() ) then
-        return false
-    end
-    return true
+    return Trig_UseMassProssvet_Func008C()
 end
 function Trig_UseMassProssvet_Actions()
     TriggerSleepAction(7.00)
@@ -425,46 +389,25 @@ end
 -- Trigger: SeeOnlyNeedeed
 --===========================================================================
 function Trig_SeeOnlyNeedeed_Func001C()
-    if ( not ( udg_Continents[1] == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[1] == 1 )
 end
 function Trig_SeeOnlyNeedeed_Func002C()
-    if ( not ( udg_Continents[2] == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[2] == 1 )
 end
 function Trig_SeeOnlyNeedeed_Func003C()
-    if ( not ( udg_Continents[3] == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[3] == 1 )
 end
 function Trig_SeeOnlyNeedeed_Func004C()
-    if ( not ( udg_Continents[4] == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[4] == 1 )
 end
 function Trig_SeeOnlyNeedeed_Func005C()
-    if ( not ( udg_Continents[5] == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[5] == 1 )
 end
 function Trig_SeeOnlyNeedeed_Func006C()
-    if ( not ( udg_Continents[6] == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[6] == 1 )
 end
 function Trig_SeeOnlyNeedeed_Func007C()
-    if ( not ( udg_Continents[7] == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[7] == 1 )
 end
 function Trig_SeeOnlyNeedeed_Actions()
     if ( Trig_SeeOnlyNeedeed_Func001C() ) then
@@ -536,10 +479,7 @@ end
 -- Trigger: EasternOn 1
 --===========================================================================
 function Trig_EasternOn_1_Conditions()
-    if ( not ( udg_Continents[1] == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[1] == 1 )
 end
 function Trig_EasternOn_1_Func003001002()
     return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
@@ -625,10 +565,7 @@ end
 -- Trigger: KalimOn 2
 --===========================================================================
 function Trig_KalimOn_2_Conditions()
-    if ( not ( udg_Continents[2] == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[2] == 1 )
 end
 function Trig_KalimOn_2_Func002001002()
     return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
@@ -708,10 +645,7 @@ end
 -- Trigger: Outland 3
 --===========================================================================
 function Trig_Outland_3_Conditions()
-    if ( not ( udg_Continents[3] == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[3] == 1 )
 end
 function Trig_Outland_3_Func002001002()
     return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
@@ -784,10 +718,7 @@ end
 -- Trigger: NordOn 4
 --===========================================================================
 function Trig_NordOn_4_Conditions()
-    if ( not ( udg_Continents[4] == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[4] == 1 )
 end
 function Trig_NordOn_4_Func002001002()
     return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
@@ -867,10 +798,7 @@ end
 -- Trigger: Pandaria 5
 --===========================================================================
 function Trig_Pandaria_5_Conditions()
-    if ( not ( udg_Continents[5] == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[5] == 1 )
 end
 function Trig_Pandaria_5_Func002001002()
     return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
@@ -942,10 +870,7 @@ end
 -- Trigger: Argus 6
 --===========================================================================
 function Trig_Argus_6_Conditions()
-    if ( not ( udg_Continents[6] == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[6] == 1 )
 end
 function Trig_Argus_6_Func002001002()
     return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
@@ -1017,10 +942,7 @@ end
 -- Trigger: BrokenIsled 7
 --===========================================================================
 function Trig_BrokenIsled_7_Conditions()
-    if ( not ( udg_Continents[7] == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Continents[7] == 1 )
 end
 function Trig_BrokenIsled_7_Func002001002()
     return ( GetUnitAbilityLevelSwapped(FourCC('Awrp'), GetFilterUnit()) >= 1 )
@@ -1140,10 +1062,7 @@ end
 -- Trigger: StartDarkMode
 --===========================================================================
 function Trig_StartDarkMode_Conditions()
-    if ( not ( udg_SET_VISIBLE_MODE == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_SET_VISIBLE_MODE == 1 )
 end
 function Trig_StartDarkMode_Func006A()
     FogModifierStop(udg_Visibl[GetConvertedPlayerId(GetEnumPlayer())])
@@ -1169,10 +1088,7 @@ end
 -- Trigger: StartOpenMode
 --===========================================================================
 function Trig_StartOpenMode_Conditions()
-    if ( not ( udg_SET_VISIBLE_MODE == 2 ) ) then
-        return false
-    end
-    return true
+    return ( udg_SET_VISIBLE_MODE == 2 )
 end
 function Trig_StartOpenMode_Func002A()
     FogModifierStop(udg_Visibl[GetConvertedPlayerId(GetEnumPlayer())])
@@ -1543,10 +1459,7 @@ function Trig_Timer_Func009Func001A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A0IQ'), GetEnumPlayer())
 end
 function Trig_Timer_Func009C()
-    if ( not ( udg_GameMode == 0 ) ) then
-        return false
-    end
-    return true
+    return ( udg_GameMode == 0 )
 end
 function Trig_Timer_Actions()
     udg_AllPlayers=GetPlayersAll()

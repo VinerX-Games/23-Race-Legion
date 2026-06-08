@@ -340,10 +340,7 @@ end
 -- Trigger: BuildFleCitadel
 --===========================================================================
 function Trig_BuildFleCitadel_Conditions()
-    if ( not ( GetUnitTypeId(GetConstructedStructure()) == FourCC('cD12') ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitTypeId(GetConstructedStructure()) == FourCC('cD12') )
 end
 function Trig_BuildFleCitadel_Actions()
     IssueImmediateOrderBJ(GetConstructedStructure(), "windwalk")

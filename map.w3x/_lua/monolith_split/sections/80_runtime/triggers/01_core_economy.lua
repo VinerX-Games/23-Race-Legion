@@ -587,38 +587,23 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Unit_Indexer_Func017Func004C()
-	if ( not (udg_UDexRecycle == 0)) then
-		return false
-	end
-	return true
+	return (udg_UDexRecycle == 0)
 end
 ---@return boolean
 function Trig_Unit_Indexer_Func017C()
-	if ( not (udg_UnitIndexerEnabled == true)) then
-		return false
-	end
-	return true
+	return (udg_UnitIndexerEnabled == true)
 end
 ---@return boolean
 function Trig_Unit_Indexer_Func030Func005C()
-	if ( not (GetUnitUserData(udg_UDexUnits[udg_UDex]) == 0)) then
-		return false
-	end
-	return true
+	return (GetUnitUserData(udg_UDexUnits[udg_UDex]) == 0)
 end
 ---@return boolean
 function Trig_Unit_Indexer_Func030C()
-	if ( not (udg_UDexWasted == 15)) then
-		return false
-	end
-	return true
+	return (udg_UDexWasted == 15)
 end
 ---@return boolean
 function Trig_Unit_Indexer_Func034C()
-	if ( not (GetUnitUserData(GetFilterUnit()) == 0)) then
-		return false
-	end
-	return true
+	return (GetUnitUserData(GetFilterUnit()) == 0)
 end
 ---@return nothing
 function Trig_Unit_Indexer_Actions()
@@ -877,20 +862,11 @@ function Trig_FarmTier2_Func001Func002C()
 end
 ---@return boolean
 function Trig_FarmTier2_Func001C()
-	if ( not (udg_TierLevel[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] <= 1)) then
-		return false
-	end
-	if ( not Trig_FarmTier2_Func001Func002C()) then
-		return false
-	end
-	return true
+	return ((udg_TierLevel[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] <= 1)) and (Trig_FarmTier2_Func001Func002C())
 end
 ---@return boolean
 function Trig_FarmTier2_Conditions()
-	if ( not Trig_FarmTier2_Func001C()) then
-		return false
-	end
-	return true
+	return Trig_FarmTier2_Func001C()
 end
 ---@return nothing
 function Trig_FarmTier2_Actions()
@@ -963,33 +939,15 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_FarmTier2_Res_Func001Func002Func001C()
-	if ( not (GetPlayerTechCountSimple(FourCC('R0D4'), GetOwningPlayer(GetTriggerUnit())) == 1)) then
-		return false
-	end
-	if ( not (GetResearched() == FourCC('R0D4'))) then
-		return false
-	end
-	return true
+	return ((GetPlayerTechCountSimple(FourCC('R0D4'), GetOwningPlayer(GetTriggerUnit())) == 1)) and ((GetResearched() == FourCC('R0D4')))
 end
 ---@return boolean
 function Trig_FarmTier2_Res_Func001Func002Func002C()
-	if ( not (GetPlayerTechCountSimple(FourCC('R04D'), GetOwningPlayer(GetTriggerUnit())) == 2)) then
-		return false
-	end
-	if ( not (GetResearched() == FourCC('R04D'))) then
-		return false
-	end
-	return true
+	return ((GetPlayerTechCountSimple(FourCC('R04D'), GetOwningPlayer(GetTriggerUnit())) == 2)) and ((GetResearched() == FourCC('R04D')))
 end
 ---@return boolean
 function Trig_FarmTier2_Res_Func001Func002Func003C()
-	if ( not (GetPlayerTechCountSimple(FourCC('R0D9'), GetOwningPlayer(GetTriggerUnit())) == 1)) then
-		return false
-	end
-	if ( not (GetResearched() == FourCC('R0D9'))) then
-		return false
-	end
-	return true
+	return ((GetPlayerTechCountSimple(FourCC('R0D9'), GetOwningPlayer(GetTriggerUnit())) == 1)) and ((GetResearched() == FourCC('R0D9')))
 end
 ---@return boolean
 function Trig_FarmTier2_Res_Func001Func002C()
@@ -1006,20 +964,11 @@ function Trig_FarmTier2_Res_Func001Func002C()
 end
 ---@return boolean
 function Trig_FarmTier2_Res_Func001C()
-	if ( not (udg_TierLevel[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] <= 1)) then
-		return false
-	end
-	if ( not Trig_FarmTier2_Res_Func001Func002C()) then
-		return false
-	end
-	return true
+	return ((udg_TierLevel[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] <= 1)) and (Trig_FarmTier2_Res_Func001Func002C())
 end
 ---@return boolean
 function Trig_FarmTier2_Res_Conditions()
-	if ( not Trig_FarmTier2_Res_Func001C()) then
-		return false
-	end
-	return true
+	return Trig_FarmTier2_Res_Func001C()
 end
 ---@return nothing
 function Trig_FarmTier2_Res_Actions()
@@ -1184,20 +1133,11 @@ function Trig_FarmTier3_Func002Func002C()
 end
 ---@return boolean
 function Trig_FarmTier3_Func002C()
-	if ( not (udg_TierLevel[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] <= 2)) then
-		return false
-	end
-	if ( not Trig_FarmTier3_Func002Func002C()) then
-		return false
-	end
-	return true
+	return ((udg_TierLevel[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] <= 2)) and (Trig_FarmTier3_Func002Func002C())
 end
 ---@return boolean
 function Trig_FarmTier3_Conditions()
-	if ( not Trig_FarmTier3_Func002C()) then
-		return false
-	end
-	return true
+	return Trig_FarmTier3_Func002C()
 end
 ---@return nothing
 function Trig_FarmTier3_Actions()
@@ -1268,33 +1208,15 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_FarmTier3_Res_Func002Func002Func001C()
-	if ( not (GetPlayerTechCountSimple(FourCC('R0D4'), GetOwningPlayer(GetTriggerUnit())) == 2)) then
-		return false
-	end
-	if ( not (GetResearched() == FourCC('R0D4'))) then
-		return false
-	end
-	return true
+	return ((GetPlayerTechCountSimple(FourCC('R0D4'), GetOwningPlayer(GetTriggerUnit())) == 2)) and ((GetResearched() == FourCC('R0D4')))
 end
 ---@return boolean
 function Trig_FarmTier3_Res_Func002Func002Func002C()
-	if ( not (GetPlayerTechCountSimple(FourCC('R04D'), GetOwningPlayer(GetTriggerUnit())) == 4)) then
-		return false
-	end
-	if ( not (GetResearched() == FourCC('R04D'))) then
-		return false
-	end
-	return true
+	return ((GetPlayerTechCountSimple(FourCC('R04D'), GetOwningPlayer(GetTriggerUnit())) == 4)) and ((GetResearched() == FourCC('R04D')))
 end
 ---@return boolean
 function Trig_FarmTier3_Res_Func002Func002Func003C()
-	if ( not (GetPlayerTechCountSimple(FourCC('R0D9'), GetOwningPlayer(GetTriggerUnit())) == 2)) then
-		return false
-	end
-	if ( not (GetResearched() == FourCC('R0D9'))) then
-		return false
-	end
-	return true
+	return ((GetPlayerTechCountSimple(FourCC('R0D9'), GetOwningPlayer(GetTriggerUnit())) == 2)) and ((GetResearched() == FourCC('R0D9')))
 end
 ---@return boolean
 function Trig_FarmTier3_Res_Func002Func002C()
@@ -1311,20 +1233,11 @@ function Trig_FarmTier3_Res_Func002Func002C()
 end
 ---@return boolean
 function Trig_FarmTier3_Res_Func002C()
-	if ( not (udg_TierLevel[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] <= 2)) then
-		return false
-	end
-	if ( not Trig_FarmTier3_Res_Func002Func002C()) then
-		return false
-	end
-	return true
+	return ((udg_TierLevel[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))] <= 2)) and (Trig_FarmTier3_Res_Func002Func002C())
 end
 ---@return boolean
 function Trig_FarmTier3_Res_Conditions()
-	if ( not Trig_FarmTier3_Res_Func002C()) then
-		return false
-	end
-	return true
+	return Trig_FarmTier3_Res_Func002C()
 end
 ---@return nothing
 function Trig_FarmTier3_Res_Actions()
@@ -1392,10 +1305,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_TLimit_Conditions()
-	if ( not (GetUnitAbilityLevelSwapped(FourCC('A0IQ'), GetConstructedStructure()) ~= 0)) then
-		return false
-	end
-	return true
+	return (GetUnitAbilityLevelSwapped(FourCC('A0IQ'), GetConstructedStructure()) ~= 0)
 end
 ---@return nothing
 function Trig_TLimit_Actions()
@@ -2396,10 +2306,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Kontrol_Conditions()
-	if ( not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)) then
-		return false
-	end
-	return true
+	return (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)
 end
 ---@return nothing
 function Trig_Upgrade_Kontrol_Actions()
@@ -2432,10 +2339,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Razved_Conditions()
-	if ( not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)) then
-		return false
-	end
-	return true
+	return (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)
 end
 ---@return nothing
 function Trig_Upgrade_Razved_Actions()
@@ -2488,10 +2392,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Oborona_Conditions()
-	if ( not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)) then
-		return false
-	end
-	return true
+	return (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)
 end
 ---@return nothing
 function Trig_Upgrade_Oborona_Actions()
@@ -2519,10 +2420,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_Upgrade_Mobile_Conditions()
-	if ( not (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)) then
-		return false
-	end
-	return true
+	return (IsUnitSelected(GetTriggerUnit(), GetOwningPlayer(GetTriggerUnit())) == true)
 end
 ---@return nothing
 function Trig_Upgrade_Mobile_Actions()

@@ -1937,10 +1937,7 @@ end
 -- Trigger: UndercityFromRin
 --===========================================================================
 function Trig_UndercityFromRin_Conditions()
-    if ( not ( GetTriggerUnit() == gg_unit_n003_0044 ) ) then
-        return false
-    end
-    return true
+    return ( GetTriggerUnit() == gg_unit_n003_0044 )
 end
 function Trig_UndercityFromRin_Actions()
     TeleportUnits(GetTriggerUnit() , gg_rct_UndecityOutTop , 800)
@@ -1956,10 +1953,7 @@ end
 -- Trigger: UndercityFromTopin
 --===========================================================================
 function Trig_UndercityFromTopin_Conditions()
-    if ( not ( GetTriggerUnit() == gg_unit_n003_0046 ) ) then
-        return false
-    end
-    return true
+    return ( GetTriggerUnit() == gg_unit_n003_0046 )
 end
 function Trig_UndercityFromTopin_Actions()
     TeleportUnits(GetTriggerUnit() , gg_rct_UndecityOutBot , 800)
@@ -1975,10 +1969,7 @@ end
 -- Trigger: UndercityFromTopOut
 --===========================================================================
 function Trig_UndercityFromTopOut_Conditions()
-    if ( not ( GetTriggerUnit() == gg_unit_n003_0050 ) ) then
-        return false
-    end
-    return true
+    return ( GetTriggerUnit() == gg_unit_n003_0050 )
 end
 function Trig_UndercityFromTopOut_Actions()
     TeleportUnits(GetTriggerUnit() , gg_rct_UndercityInR , 800)
@@ -1994,10 +1985,7 @@ end
 -- Trigger: UndercityFromBotOut
 --===========================================================================
 function Trig_UndercityFromBotOut_Conditions()
-    if ( not ( GetTriggerUnit() == gg_unit_n003_0051 ) ) then
-        return false
-    end
-    return true
+    return ( GetTriggerUnit() == gg_unit_n003_0051 )
 end
 function Trig_UndercityFromBotOut_Actions()
     TeleportUnits(GetTriggerUnit() , gg_rct_UndercityInTop , 800)
@@ -2173,10 +2161,7 @@ end
 -- Trigger: Emerald Dream TP O Copy
 --===========================================================================
 function Trig_Emerald_Dream_TP_O_Copy_Func001C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('H049') ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('H049') )
 end
 function Trig_Emerald_Dream_TP_O_Copy_Actions()
     if ( Trig_Emerald_Dream_TP_O_Copy_Func001C() ) then
@@ -2859,13 +2844,7 @@ end
 -- Trigger: Untitled Trigger 011
 --===========================================================================
 function Trig_Untitled_Trigger_011_Conditions()
-    if ( not ( GetTriggerUnit() == gg_unit_n003_0314 ) ) then
-        return false
-    end
-    if ( not ( GetTriggerUnit() == gg_unit_n003_0311 ) ) then
-        return false
-    end
-    return true
+    return (( GetTriggerUnit() == gg_unit_n003_0314 )) and (( GetTriggerUnit() == gg_unit_n003_0311 ))
 end
 function Trig_Untitled_Trigger_011_Actions()
 end

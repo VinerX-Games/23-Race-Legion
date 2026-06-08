@@ -142,10 +142,7 @@ function Trig_StartLobby_Func004Func001A()
 end
 ---@return boolean
 function Trig_StartLobby_Func004C()
-	if ( not (udg_LocalInteger == 1)) then
-		return false
-	end
-	return true
+	return (udg_LocalInteger == 1)
 end
 ---@return nothing
 function Trig_StartLobby_Func005Func001A()
@@ -153,10 +150,7 @@ function Trig_StartLobby_Func005Func001A()
 end
 ---@return boolean
 function Trig_StartLobby_Func005C()
-	if ( not (udg_LocalInteger == 2)) then
-		return false
-	end
-	return true
+	return (udg_LocalInteger == 2)
 end
 ---@return nothing
 function Trig_StartLobby_Func006Func001A()
@@ -164,10 +158,7 @@ function Trig_StartLobby_Func006Func001A()
 end
 ---@return boolean
 function Trig_StartLobby_Func006C()
-	if ( not (udg_LocalInteger == 3)) then
-		return false
-	end
-	return true
+	return (udg_LocalInteger == 3)
 end
 ---@return nothing
 function Trig_StartLobby_Func007Func001A()
@@ -175,10 +166,7 @@ function Trig_StartLobby_Func007Func001A()
 end
 ---@return boolean
 function Trig_StartLobby_Func007C()
-	if ( not (udg_LocalInteger == 4)) then
-		return false
-	end
-	return true
+	return (udg_LocalInteger == 4)
 end
 ---@return nothing
 function Trig_StartLobby_Func008Func001A()
@@ -186,17 +174,11 @@ function Trig_StartLobby_Func008Func001A()
 end
 ---@return boolean
 function Trig_StartLobby_Func008C()
-	if ( not (udg_LocalInteger == 5)) then
-		return false
-	end
-	return true
+	return (udg_LocalInteger == 5)
 end
 ---@return boolean
 function Trig_StartLobby_Func015Func003C()
-	if ( not (GetEnumPlayer() ~= Player(0))) then
-		return false
-	end
-	return true
+	return (GetEnumPlayer() ~= Player(0))
 end
 ---@return nothing
 function Trig_StartLobby_Func015A()
@@ -258,10 +240,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_EndLobby_and_Start_game_Func004Func006C()
-	if ( not (udg_Continents[0] == 0)) then
-		return false
-	end
-	return true
+	return (udg_Continents[0] == 0)
 end
 ---@return nothing
 function Trig_EndLobby_and_Start_game_Func004A()
@@ -346,10 +325,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_LeaveStart_Conditions()
-	if ( not (GetUnitTypeId(GetTriggerUnit()) == FourCC('H049'))) then
-		return false
-	end
-	return true
+	return (GetUnitTypeId(GetTriggerUnit()) == FourCC('H049'))
 end
 ---@return nothing
 function Trig_LeaveStart_Actions()
@@ -436,10 +412,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_UpgradeStolica_Conditions()
-	if ( not (IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) == true)) then
-		return false
-	end
-	return true
+	return (IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) == true)
 end
 ---@return nothing
 function Trig_UpgradeStolica_Actions()
@@ -682,10 +655,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_MOD_stolica_Start_Copy_Conditions()
-	if ( not (udg_GameMode == 5)) then
-		return false
-	end
-	return true
+	return (udg_GameMode == 5)
 end
 ---@return nothing
 function Trig_MOD_stolica_Start_Copy_Func005A()
@@ -819,10 +789,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_MOD_stolica_Start_Conditions()
-	if ( not (udg_GameMode == 1)) then
-		return false
-	end
-	return true
+	return (udg_GameMode == 1)
 end
 ---@return nothing
 function Trig_MOD_stolica_Start_Func005A()
@@ -886,10 +853,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_MOD_feoda_O_Start_Conditions()
-	if ( not (udg_GameMode == 2)) then
-		return false
-	end
-	return true
+	return (udg_GameMode == 2)
 end
 ---@return nothing
 function Trig_MOD_feoda_O_Start_Func006A()
@@ -922,20 +886,11 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_FeodalDead_Conditions()
-	if ( not (IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) == true)) then
-		return false
-	end
-	if ( not (GetUnitLifePercent(GetTriggerUnit()) <= 15.00)) then
-		return false
-	end
-	return true
+	return ((IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) == true)) and ((GetUnitLifePercent(GetTriggerUnit()) <= 15.00))
 end
 ---@return boolean
 function Trig_FeodalDead_Func004Func002Func001Func010Func001Func003C()
-	if ( not (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetForLoopIndexB()]) == true)) then
-		return false
-	end
-	return true
+	return (IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetForLoopIndexB()]) == true)
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func002Func001Func010A()
@@ -957,10 +912,7 @@ function Trig_FeodalDead_Func004Func002Func001Func010A()
 end
 ---@return boolean
 function Trig_FeodalDead_Func004Func002Func001C()
-	if ( not (IsPlayerInForce(GetOwningPlayer(GetAttacker()), udg_Vassals[GetForLoopIndexA()]) == true)) then
-		return false
-	end
-	return true
+	return (IsPlayerInForce(GetOwningPlayer(GetAttacker()), udg_Vassals[GetForLoopIndexA()]) == true)
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func011A()
@@ -973,10 +925,7 @@ function Trig_FeodalDead_Func004Func011A()
 end
 ---@return boolean
 function Trig_FeodalDead_Func004Func017Func001C()
-	if ( not (IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) == true)) then
-		return false
-	end
-	return true
+	return (IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings) == true)
 end
 ---@return nothing
 function Trig_FeodalDead_Func004Func017A()
@@ -998,10 +947,7 @@ function Trig_FeodalDead_Func004Func020A()
 end
 ---@return boolean
 function Trig_FeodalDead_Func004C()
-	if ( not (GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetAttacker()))) then
-		return false
-	end
-	return true
+	return (GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetAttacker()))
 end
 ---@return nothing
 function Trig_FeodalDead_Actions()
@@ -1228,10 +1174,7 @@ end
 -- ===========================================================================
 ---@return boolean
 function Trig_DoNotAttackSenior_Conditions()
-	if ( not (IsPlayerInForce(GetOwningPlayer(GetAttacker()), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttackedUnitBJ()))]) == true)) then
-		return false
-	end
-	return true
+	return (IsPlayerInForce(GetOwningPlayer(GetAttacker()), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttackedUnitBJ()))]) == true)
 end
 ---@return nothing
 function Trig_DoNotAttackSenior_Actions()

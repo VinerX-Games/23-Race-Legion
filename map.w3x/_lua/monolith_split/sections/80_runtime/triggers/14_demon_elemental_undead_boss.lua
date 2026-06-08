@@ -7,10 +7,7 @@ end
 -- Trigger: Blood1 Copy 3
 --===========================================================================
 function Trig_Blood1_Copy_3_Conditions()
-    if ( not ( GetResearched() == FourCC('R08H') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R08H') )
 end
 function Trig_Blood1_Copy_3_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('n026'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -27,10 +24,7 @@ end
 -- Trigger: Blood Copy
 --===========================================================================
 function Trig_Blood_Copy_Conditions()
-    if ( not ( GetResearched() == FourCC('R004') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R004') )
 end
 function Trig_Blood_Copy_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('n025'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -47,10 +41,7 @@ end
 -- Trigger: Blood2 Copy
 --===========================================================================
 function Trig_Blood2_Copy_Conditions()
-    if ( not ( GetResearched() == FourCC('R08I') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R08I') )
 end
 function Trig_Blood2_Copy_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('n02D'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -112,10 +103,7 @@ function Trig_ArhiTep_Func001C()
     return false
 end
 function Trig_ArhiTep_Conditions()
-    if ( not Trig_ArhiTep_Func001C() ) then
-        return false
-    end
-    return true
+    return Trig_ArhiTep_Func001C()
 end
 function Trig_ArhiTep_Actions()
     udg_LocalPosition2=GetRectCenter(gg_rct_ArhiTep)
@@ -133,10 +121,7 @@ end
 -- Trigger: Summon dummy del
 --===========================================================================
 function Trig_Summon_dummy_del_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('u018') ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('u018') )
 end
 function Trig_Summon_dummy_del_Actions()
     RemoveUnit(GetSummonedUnit())
@@ -152,10 +137,7 @@ end
 -- Trigger: Buildings
 --===========================================================================
 function Trig_Buildings_Func010C()
-    if ( not ( GetSpellAbilityId() == FourCC('AUin') ) ) then
-        return false
-    end
-    return true
+    return ( GetSpellAbilityId() == FourCC('AUin') )
 end
 function Trig_Buildings_Actions()
     udg_Spell=GetSpellTargetLoc()
@@ -233,34 +215,19 @@ end
 -- Trigger: ?????????? ??????? 001 Copy
 --===========================================================================
 function Trig_____________________________________001_Copy_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0MQ'), GetAttackedUnitBJ()) >= 1 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitAbilityLevelSwapped(FourCC('A0MQ'), GetAttackedUnitBJ()) >= 1 )
 end
 function Trig_____________________________________001_Copy_Func004Func001Func001Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0NC'), GetAttackedUnitBJ()) == 4 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitAbilityLevelSwapped(FourCC('A0NC'), GetAttackedUnitBJ()) == 4 )
 end
 function Trig_____________________________________001_Copy_Func004Func001Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0NC'), GetAttackedUnitBJ()) == 3 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitAbilityLevelSwapped(FourCC('A0NC'), GetAttackedUnitBJ()) == 3 )
 end
 function Trig_____________________________________001_Copy_Func004Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0NC'), GetAttackedUnitBJ()) == 2 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitAbilityLevelSwapped(FourCC('A0NC'), GetAttackedUnitBJ()) == 2 )
 end
 function Trig_____________________________________001_Copy_Func004C()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0NC'), GetAttackedUnitBJ()) == 1 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitAbilityLevelSwapped(FourCC('A0NC'), GetAttackedUnitBJ()) == 1 )
 end
 function Trig_____________________________________001_Copy_Actions()
     udg_Dm[2]=GetUnitStateSwap(UNIT_STATE_MAX_LIFE, GetAttackedUnitBJ())
@@ -293,10 +260,7 @@ end
 -- Trigger: AuraStart
 --===========================================================================
 function Trig_AuraStart_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h0DT') ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('h0DT') )
 end
 function Trig_AuraStart_Actions()
     UnitAddAbilityBJ(FourCC('A0LU'), GetTriggerUnit())
@@ -447,10 +411,7 @@ end
 -- Trigger: Blood1
 --===========================================================================
 function Trig_Blood1_Conditions()
-    if ( not ( GetResearched() == FourCC('R08H') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R08H') )
 end
 function Trig_Blood1_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('n026'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -467,10 +428,7 @@ end
 -- Trigger: Blood
 --===========================================================================
 function Trig_Blood_Conditions()
-    if ( not ( GetResearched() == FourCC('R004') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R004') )
 end
 function Trig_Blood_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('n025'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -487,10 +445,7 @@ end
 -- Trigger: Blood2
 --===========================================================================
 function Trig_Blood2_Conditions()
-    if ( not ( GetResearched() == FourCC('R08I') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R08I') )
 end
 function Trig_Blood2_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('n02D'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -758,10 +713,7 @@ end
 -- Trigger: gnev1
 --===========================================================================
 function Trig_gnev1_Conditions()
-    if ( not ( GetResearched() == FourCC('R05B') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R05B') )
 end
 function Trig_gnev1_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R05K'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -779,10 +731,7 @@ end
 -- Trigger: necropol
 --===========================================================================
 function Trig_necropol_Conditions()
-    if ( not ( GetResearched() == FourCC('R05K') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R05K') )
 end
 function Trig_necropol_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R05B'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -800,10 +749,7 @@ end
 -- Trigger: gnev2
 --===========================================================================
 function Trig_gnev2_Conditions()
-    if ( not ( GetResearched() == FourCC('R05B') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R05B') )
 end
 function Trig_gnev2_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R05K'), 1, GetOwningPlayer(GetTriggerUnit()))
@@ -820,10 +766,7 @@ end
 -- Trigger: necropol2
 --===========================================================================
 function Trig_necropol2_Conditions()
-    if ( not ( GetResearched() == FourCC('R05K') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R05K') )
 end
 function Trig_necropol2_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R05B'), 1, GetOwningPlayer(GetTriggerUnit()))
@@ -1312,22 +1255,7 @@ end
 -- Trigger: Spell E Dvij
 --===========================================================================
 function Trig_Spell_E_Dvij_Func001Func001Func007Func001C()
-    if ( not ( IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) == true ) ) then
-        return false
-    end
-    if ( not ( IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) == false ) ) then
-        return false
-    end
-    if ( not ( IsUnitInGroup(GetEnumUnit(), udg_Group_E_Glaz[udg_Cikl_E_Glaz]) == false ) ) then
-        return false
-    end
-    if ( not ( IsUnitDeadBJ(GetEnumUnit()) == false ) ) then
-        return false
-    end
-    if ( not ( IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE) == false ) ) then
-        return false
-    end
-    return true
+    return (( IsUnitEnemy(GetEnumUnit(), GetOwningPlayer(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) == true )) and (( IsUnitAlly(GetEnumUnit(), GetOwningPlayer(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])) == false )) and (( IsUnitInGroup(GetEnumUnit(), udg_Group_E_Glaz[udg_Cikl_E_Glaz]) == false )) and (( IsUnitDeadBJ(GetEnumUnit()) == false )) and (( IsUnitType(GetEnumUnit(), UNIT_TYPE_STRUCTURE) == false ))
 end
 function Trig_Spell_E_Dvij_Func001Func001Func007A()
     if ( Trig_Spell_E_Dvij_Func001Func001Func007Func001C() ) then
@@ -1346,22 +1274,13 @@ function Trig_Spell_E_Dvij_Func001Func001Func008Func001C()
     return false
 end
 function Trig_Spell_E_Dvij_Func001Func001Func008Func008C()
-    if ( not ( udg_Antibag_E_Glaz[udg_MUI_E_Glaz] == 0 ) ) then
-        return false
-    end
-    return true
+    return ( udg_Antibag_E_Glaz[udg_MUI_E_Glaz] == 0 )
 end
 function Trig_Spell_E_Dvij_Func001Func001Func008C()
-    if ( not Trig_Spell_E_Dvij_Func001Func001Func008Func001C() ) then
-        return false
-    end
-    return true
+    return Trig_Spell_E_Dvij_Func001Func001Func008Func001C()
 end
 function Trig_Spell_E_Dvij_Func001Func001C()
-    if ( not ( udg_Logika_E_Glaz[udg_Cikl_E_Glaz] == true ) ) then
-        return false
-    end
-    return true
+    return ( udg_Logika_E_Glaz[udg_Cikl_E_Glaz] == true )
 end
 function Trig_Spell_E_Dvij_Actions()
     udg_Cikl_E_Glaz=1
@@ -1506,10 +1425,7 @@ end
 -- Trigger: Spell Copy 2 Copy
 --===========================================================================
 function Trig_Spell_Copy_2_Copy_Conditions()
-    if ( not ( GetLearnedSkillBJ() == FourCC('A1CB') ) ) then
-        return false
-    end
-    return true
+    return ( GetLearnedSkillBJ() == FourCC('A1CB') )
 end
 function Trig_Spell_Copy_2_Copy_Actions()
     udg_u=GetLearningUnit()
@@ -1561,10 +1477,7 @@ end
 -- Trigger: AvtoCast Copy
 --===========================================================================
 function Trig_AvtoCast_Copy_Conditions()
-    if ( not ( GetUnitStateSwap(UNIT_STATE_LIFE, udg_u) <= 400.00 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitStateSwap(UNIT_STATE_LIFE, udg_u) <= 400.00 )
 end
 function Trig_AvtoCast_Copy_Actions()
     IssueImmediateOrderBJ(udg_u, "stomp")
@@ -1579,10 +1492,7 @@ end
 -- Trigger: DammyDeath Copy
 --===========================================================================
 function Trig_DammyDeath_Copy_Func001C()
-    if ( not ( GetUnitTypeId(GetDyingUnit()) == FourCC('h0ML') ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitTypeId(GetDyingUnit()) == FourCC('h0ML') )
 end
 function Trig_DammyDeath_Copy_Actions()
     if ( Trig_DammyDeath_Copy_Func001C() ) then
@@ -1600,22 +1510,13 @@ end
 -- Trigger: TakenDamage
 --===========================================================================
 function Trig_TakenDamage_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A1CA'), GetTriggerUnit()) == 1 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitAbilityLevelSwapped(FourCC('A1CA'), GetTriggerUnit()) == 1 )
 end
 function Trig_TakenDamage_Func001Func001C()
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 50.00 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitLifePercent(GetTriggerUnit()) < 50.00 )
 end
 function Trig_TakenDamage_Func001C()
-    if ( not ( GetUnitLifePercent(GetAttackedUnitBJ()) < 25.00 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitLifePercent(GetAttackedUnitBJ()) < 25.00 )
 end
 function Trig_TakenDamage_Actions()
     if ( Trig_TakenDamage_Func001C() ) then
@@ -1641,16 +1542,10 @@ end
 -- Trigger: LordWave
 --===========================================================================
 function Trig_LordWave_Func010C()
-    if ( not ( GetSpellAbilityId() == FourCC('NQ02') ) ) then
-        return false
-    end
-    return true
+    return ( GetSpellAbilityId() == FourCC('NQ02') )
 end
 function Trig_LordWave_Conditions()
-    if ( not Trig_LordWave_Func010C() ) then
-        return false
-    end
-    return true
+    return Trig_LordWave_Func010C()
 end
 function Trig_LordWave_Func001002003()
     return ( GetUnitTypeId(GetFilterUnit()) == FourCC('lord') )
@@ -1691,16 +1586,10 @@ end
 -- Trigger: MassBaff
 --===========================================================================
 function Trig_MassBaff_Func010C()
-    if ( not ( GetSpellAbilityId() == FourCC('NQ07') ) ) then
-        return false
-    end
-    return true
+    return ( GetSpellAbilityId() == FourCC('NQ07') )
 end
 function Trig_MassBaff_Conditions()
-    if ( not Trig_MassBaff_Func010C() ) then
-        return false
-    end
-    return true
+    return Trig_MassBaff_Func010C()
 end
 function Trig_MassBaff_Func004A()
     UnitAddAbilityBJ(FourCC('NQ08'), GetEnumUnit())
@@ -1735,16 +1624,10 @@ end
 -- Trigger: LordsAssist
 --===========================================================================
 function Trig_LordsAssist_Func010C()
-    if ( not ( GetSpellAbilityId() == FourCC('NQ03') ) ) then
-        return false
-    end
-    return true
+    return ( GetSpellAbilityId() == FourCC('NQ03') )
 end
 function Trig_LordsAssist_Conditions()
-    if ( not Trig_LordsAssist_Func010C() ) then
-        return false
-    end
-    return true
+    return Trig_LordsAssist_Func010C()
 end
 function Trig_LordsAssist_Func001002003()
     return ( GetUnitTypeId(GetFilterUnit()) == FourCC('lord') )
@@ -1791,40 +1674,16 @@ end
 -- Trigger: Lord
 --===========================================================================
 function Trig_Lord_Func001Func001Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('NQ06'), GetTriggerUnit()) == 2 ) ) then
-        return false
-    end
-    if ( not ( CountLivingPlayerUnitsOfTypeId(FourCC('lord'), GetTriggerPlayer()) < 3 ) ) then
-        return false
-    end
-    if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == FourCC('u019') ) ) then
-        return false
-    end
-    return true
+    return (( GetUnitAbilityLevelSwapped(FourCC('NQ06'), GetTriggerUnit()) == 2 )) and (( CountLivingPlayerUnitsOfTypeId(FourCC('lord'), GetTriggerPlayer()) < 3 )) and (( GetUnitTypeId(GetSpellTargetUnit()) == FourCC('u019') ))
 end
 function Trig_Lord_Func001Func001C()
-    if ( not Trig_Lord_Func001Func001Func001C() ) then
-        return false
-    end
-    return true
+    return Trig_Lord_Func001Func001Func001C()
 end
 function Trig_Lord_Func001Func002C()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('NQ06'), GetTriggerUnit()) == 1 ) ) then
-        return false
-    end
-    if ( not ( CountLivingPlayerUnitsOfTypeId(FourCC('lord'), GetTriggerPlayer()) == 0 ) ) then
-        return false
-    end
-    if ( not ( GetUnitTypeId(GetSpellTargetUnit()) == FourCC('u019') ) ) then
-        return false
-    end
-    return true
+    return (( GetUnitAbilityLevelSwapped(FourCC('NQ06'), GetTriggerUnit()) == 1 )) and (( CountLivingPlayerUnitsOfTypeId(FourCC('lord'), GetTriggerPlayer()) == 0 )) and (( GetUnitTypeId(GetSpellTargetUnit()) == FourCC('u019') ))
 end
 function Trig_Lord_Func001C()
-    if ( not Trig_Lord_Func001Func002C() ) then
-        return false
-    end
-    return true
+    return Trig_Lord_Func001Func002C()
 end
 function Trig_Lord_Actions()
     if ( Trig_Lord_Func001C() ) then
@@ -1852,10 +1711,7 @@ end
 -- Trigger: LordBirth
 --===========================================================================
 function Trig_LordBirth_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('lorE') ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('lorE') )
 end
 function Trig_LordBirth_Actions()
     CreateNUnitsAtLoc(1, FourCC('lord'), GetTriggerPlayer(), GetUnitLoc(GetTriggerUnit()), bj_UNIT_FACING)
@@ -1871,10 +1727,7 @@ end
 -- Trigger: NaxramasKills
 --===========================================================================
 function Trig_NaxramasKills_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e00D') ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e00D') )
 end
 function Trig_NaxramasKills_Func003A()
     KillUnit(GetEnumUnit())
@@ -1895,10 +1748,7 @@ end
 -- Trigger: DalaranKills
 --===========================================================================
 function Trig_DalaranKills_Conditions()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e00C') ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitTypeId(GetTriggerUnit()) == FourCC('e00C') )
 end
 function Trig_DalaranKills_Func003A()
     KillUnit(GetEnumUnit())
@@ -1919,49 +1769,16 @@ end
 -- Trigger: StartUlt
 --===========================================================================
 function Trig_StartUlt_Func002C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('MIMH') ) ) then
-        return false
-    end
-    if ( not ( GetSpellAbilityId() == FourCC('MIM6') ) ) then
-        return false
-    end
-    return true
+    return (( GetUnitTypeId(GetTriggerUnit()) == FourCC('MIMH') )) and (( GetSpellAbilityId() == FourCC('MIM6') ))
 end
 function Trig_StartUlt_Conditions()
-    if ( not Trig_StartUlt_Func002C() ) then
-        return false
-    end
-    return true
+    return Trig_StartUlt_Func002C()
 end
 function Trig_StartUlt_Func001Func001C()
-    if ( not ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD) >= 8000 ) ) then
-        return false
-    end
-    if ( not ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) >= 8000 ) ) then
-        return false
-    end
-    if ( not ( CountLivingPlayerUnitsOfTypeId(FourCC('mim1'), GetTriggerPlayer()) < 2 ) ) then
-        return false
-    end
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('MIM6'), GetTriggerUnit()) == 2 ) ) then
-        return false
-    end
-    return true
+    return (( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD) >= 8000 )) and (( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) >= 8000 )) and (( CountLivingPlayerUnitsOfTypeId(FourCC('mim1'), GetTriggerPlayer()) < 2 )) and (( GetUnitAbilityLevelSwapped(FourCC('MIM6'), GetTriggerUnit()) == 2 ))
 end
 function Trig_StartUlt_Func001C()
-    if ( not ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD) >= 8000 ) ) then
-        return false
-    end
-    if ( not ( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) >= 8000 ) ) then
-        return false
-    end
-    if ( not ( CountLivingPlayerUnitsOfTypeId(FourCC('mim1'), GetTriggerPlayer()) < 1 ) ) then
-        return false
-    end
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('MIM6'), GetTriggerUnit()) == 1 ) ) then
-        return false
-    end
-    return true
+    return (( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_GOLD) >= 8000 )) and (( GetPlayerState(GetTriggerPlayer(), PLAYER_STATE_RESOURCE_LUMBER) >= 8000 )) and (( CountLivingPlayerUnitsOfTypeId(FourCC('mim1'), GetTriggerPlayer()) < 1 )) and (( GetUnitAbilityLevelSwapped(FourCC('MIM6'), GetTriggerUnit()) == 1 ))
 end
 function Trig_StartUlt_Actions()
     if ( Trig_StartUlt_Func001C() ) then
@@ -2002,37 +1819,16 @@ end
 -- Trigger: UltSummon
 --===========================================================================
 function Trig_UltSummon_Func003C()
-    if ( not ( GetUnitTypeId(GetTriggerUnit()) == FourCC('MIMH') ) ) then
-        return false
-    end
-    if ( not ( GetSpellAbilityId() == FourCC('MIM4') ) ) then
-        return false
-    end
-    return true
+    return (( GetUnitTypeId(GetTriggerUnit()) == FourCC('MIMH') )) and (( GetSpellAbilityId() == FourCC('MIM4') ))
 end
 function Trig_UltSummon_Conditions()
-    if ( not Trig_UltSummon_Func003C() ) then
-        return false
-    end
-    return true
+    return Trig_UltSummon_Func003C()
 end
 function Trig_UltSummon_Func002Func001C()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('MIM4'), GetTriggerUnit()) == 2 ) ) then
-        return false
-    end
-    if ( not ( CountLivingPlayerUnitsOfTypeId(FourCC('mim1'), GetTriggerPlayer()) < 2 ) ) then
-        return false
-    end
-    return true
+    return (( GetUnitAbilityLevelSwapped(FourCC('MIM4'), GetTriggerUnit()) == 2 )) and (( CountLivingPlayerUnitsOfTypeId(FourCC('mim1'), GetTriggerPlayer()) < 2 ))
 end
 function Trig_UltSummon_Func002C()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('MIM4'), GetTriggerUnit()) == 1 ) ) then
-        return false
-    end
-    if ( not ( CountLivingPlayerUnitsOfTypeId(FourCC('mim1'), GetTriggerPlayer()) == 0 ) ) then
-        return false
-    end
-    return true
+    return (( GetUnitAbilityLevelSwapped(FourCC('MIM4'), GetTriggerUnit()) == 1 )) and (( CountLivingPlayerUnitsOfTypeId(FourCC('mim1'), GetTriggerPlayer()) == 0 ))
 end
 function Trig_UltSummon_Actions()
     if ( Trig_UltSummon_Func002C() ) then
@@ -2250,10 +2046,7 @@ end
 -- Trigger: Name command O
 --===========================================================================
 function Trig_Name_command_O_Conditions()
-    if ( not ( SubStringBJ(GetEventPlayerChatString(), 1, 6) == " - name" ) ) then
-        return false
-    end
-    return true
+    return ( SubStringBJ(GetEventPlayerChatString(), 1, 6) == " - name" )
 end
 function Trig_Name_command_O_Actions()
     local i= GetPlayerId(GetTriggerPlayer())
@@ -2302,10 +2095,7 @@ end
 -- Trigger: UName command
 --===========================================================================
 function Trig_UName_command_Conditions()
-    if ( not ( SubStringBJ(GetEventPlayerChatString(), 1, 7) == " - uname" ) ) then
-        return false
-    end
-    return true
+    return ( SubStringBJ(GetEventPlayerChatString(), 1, 7) == " - uname" )
 end
 function Trig_UName_command_Actions()
     local i= GetPlayerId(GetTriggerPlayer())
@@ -2378,10 +2168,7 @@ function Trig_SecondChance_Func003Func008C()
     return true
 end
 function Trig_SecondChance_Func003C()
-    if ( not Trig_SecondChance_Func003Func008C() ) then
-        return false
-    end
-    return true
+    return Trig_SecondChance_Func003Func008C()
 end
 function SecondChanceTimer()
     local t= GetExpiredTimer()
@@ -2954,13 +2741,7 @@ end
 -- Trigger: Player2VassalTo1 Back Copy
 --===========================================================================
 function Trig_Player2VassalTo1_Back_Copy_Conditions()
-    if ( not ( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) >= 1 ) ) then
-        return false
-    end
-    if ( not ( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) <= 24 ) ) then
-        return false
-    end
-    return true
+    return (( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) >= 1 )) and (( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) <= 24 ))
 end
 function Trig_Player2VassalTo1_Back_Copy_Actions()
     udg_LocalInteger=S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5))
@@ -2978,13 +2759,7 @@ end
 -- Trigger: Player2VassalTo1 Copy
 --===========================================================================
 function Trig_Player2VassalTo1_Copy_Conditions()
-    if ( not ( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) >= 1 ) ) then
-        return false
-    end
-    if ( not ( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) <= 24 ) ) then
-        return false
-    end
-    return true
+    return (( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) >= 1 )) and (( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) <= 24 ))
 end
 function Trig_Player2VassalTo1_Copy_Actions()
     udg_LocalInteger=S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5))
@@ -3403,13 +3178,7 @@ end
 -- Trigger: Qtun Die
 --===========================================================================
 function Trig_Qtun_Die_Conditions()
-    if ( not ( GetTriggerUnit() == gg_unit_n03D_0666 ) ) then
-        return false
-    end
-    if ( not ( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetKillingUnitBJ()) ) ) then
-        return false
-    end
-    return true
+    return (( GetTriggerUnit() == gg_unit_n03D_0666 )) and (( GetOwningPlayer(GetTriggerUnit()) ~= GetOwningPlayer(GetKillingUnitBJ()) ))
 end
 function Trig_Qtun_Die_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -3431,92 +3200,50 @@ end
 -- Trigger: SpawnQtun
 --===========================================================================
 function Trig_SpawnQtun_Func006C()
-    if ( not ( GetTriggerUnit() == gg_unit_n03D_0666 ) ) then
-        return false
-    end
-    if ( not ( GetSpellAbilityId() == FourCC('A0W0') ) ) then
-        return false
-    end
-    if ( not ( GetPlayerController(GetOwningPlayer(GetTriggerUnit())) ~= MAP_CONTROL_USER ) ) then
-        return false
-    end
-    return true
+    return (( GetTriggerUnit() == gg_unit_n03D_0666 )) and (( GetSpellAbilityId() == FourCC('A0W0') )) and (( GetPlayerController(GetOwningPlayer(GetTriggerUnit())) ~= MAP_CONTROL_USER ))
 end
 function Trig_SpawnQtun_Conditions()
-    if ( not Trig_SpawnQtun_Func006C() ) then
-        return false
-    end
-    return true
+    return Trig_SpawnQtun_Func006C()
 end
 function Trig_SpawnQtun_Func002Func002C()
-    if ( not ( udg_LocalInteger2 == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_LocalInteger2 == 1 )
 end
 function Trig_SpawnQtun_Func002Func008A()
     UnitApplyTimedLifeBJ(30.00, FourCC('BTLF'), GetEnumUnit())
     IssuePointOrderLocBJ(GetEnumUnit(), "attack", udg_LocalPosition3)
 end
 function Trig_SpawnQtun_Func002C()
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) >= 75.00 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitLifePercent(GetTriggerUnit()) >= 75.00 )
 end
 function Trig_SpawnQtun_Func003Func002C()
-    if ( not ( udg_LocalInteger2 == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_LocalInteger2 == 1 )
 end
 function Trig_SpawnQtun_Func003Func008A()
     UnitApplyTimedLifeBJ(30.00, FourCC('BTLF'), GetEnumUnit())
     IssuePointOrderLocBJ(GetEnumUnit(), "attack", udg_LocalPosition3)
 end
 function Trig_SpawnQtun_Func003C()
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) <= 75.00 ) ) then
-        return false
-    end
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) >= 50.00 ) ) then
-        return false
-    end
-    return true
+    return (( GetUnitLifePercent(GetTriggerUnit()) <= 75.00 )) and (( GetUnitLifePercent(GetTriggerUnit()) >= 50.00 ))
 end
 function Trig_SpawnQtun_Func004Func002C()
-    if ( not ( udg_LocalInteger2 == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_LocalInteger2 == 1 )
 end
 function Trig_SpawnQtun_Func004Func008A()
     UnitApplyTimedLifeBJ(30.00, FourCC('BTLF'), GetEnumUnit())
     IssuePointOrderLocBJ(GetEnumUnit(), "attack", udg_LocalPosition3)
 end
 function Trig_SpawnQtun_Func004C()
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) <= 50.00 ) ) then
-        return false
-    end
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) >= 25.00 ) ) then
-        return false
-    end
-    return true
+    return (( GetUnitLifePercent(GetTriggerUnit()) <= 50.00 )) and (( GetUnitLifePercent(GetTriggerUnit()) >= 25.00 ))
 end
 function Trig_SpawnQtun_Func005Func002C()
-    if ( not ( udg_LocalInteger2 == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_LocalInteger2 == 1 )
 end
 function Trig_SpawnQtun_Func005Func008A()
     UnitApplyTimedLifeBJ(30.00, FourCC('BTLF'), GetEnumUnit())
     IssuePointOrderLocBJ(GetEnumUnit(), "attack", udg_LocalPosition3)
 end
 function Trig_SpawnQtun_Func005C()
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) <= 50.00 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitLifePercent(GetTriggerUnit()) <= 50.00 )
 end
 function Trig_SpawnQtun_Actions()
     udg_LocalInteger2=GetRandomInt(1, 2)
@@ -3674,10 +3401,7 @@ end
 -- Trigger: Qogg Die
 --===========================================================================
 function Trig_Qogg_Die_Conditions()
-    if ( not ( GetTriggerUnit() == gg_unit_n03A_0657 ) ) then
-        return false
-    end
-    return true
+    return ( GetTriggerUnit() == gg_unit_n03A_0657 )
 end
 function Trig_Qogg_Die_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_20558")
@@ -3697,52 +3421,25 @@ end
 -- Trigger: QoggSpawn
 --===========================================================================
 function Trig_Spell1_Copy_2_Func008C()
-    if ( not ( GetTriggerUnit() == gg_unit_n03A_0657 ) ) then
-        return false
-    end
-    if ( not ( GetSpellAbilityId() == FourCC('A0T7') ) ) then
-        return false
-    end
-    if ( not ( GetPlayerController(GetOwningPlayer(GetTriggerUnit())) ~= MAP_CONTROL_USER ) ) then
-        return false
-    end
-    return true
+    return (( GetTriggerUnit() == gg_unit_n03A_0657 )) and (( GetSpellAbilityId() == FourCC('A0T7') )) and (( GetPlayerController(GetOwningPlayer(GetTriggerUnit())) ~= MAP_CONTROL_USER ))
 end
 function Trig_QoggSpawn_Conditions()
-    if ( not Trig_Spell1_Copy_2_Func008C() ) then
-        return false
-    end
-    return true
+    return Trig_Spell1_Copy_2_Func008C()
 end
 function Trig_Spell1_Copy_2_Func003C()
-    if ( not ( udg_LocalInteger == 1 ) ) then
-        return false
-    end
-    return true
+    return ( udg_LocalInteger == 1 )
 end
 function Trig_Spell1_Copy_2_Func004C()
-    if ( not ( udg_LocalInteger == 2 ) ) then
-        return false
-    end
-    return true
+    return ( udg_LocalInteger == 2 )
 end
 function Trig_Spell1_Copy_2_Func005C()
-    if ( not ( udg_LocalInteger == 3 ) ) then
-        return false
-    end
-    return true
+    return ( udg_LocalInteger == 3 )
 end
 function Trig_Spell1_Copy_2_Func006C()
-    if ( not ( udg_LocalInteger == 4 ) ) then
-        return false
-    end
-    return true
+    return ( udg_LocalInteger == 4 )
 end
 function Trig_Spell1_Copy_2_Func007C()
-    if ( not ( udg_LocalInteger == 5 ) ) then
-        return false
-    end
-    return true
+    return ( udg_LocalInteger == 5 )
 end
 function Trig_QoggSpawn_Actions()
     local u= GetTriggerUnit()

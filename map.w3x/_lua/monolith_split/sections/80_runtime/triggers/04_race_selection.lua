@@ -202,13 +202,7 @@ function Trig_UnitsToBuildingSituation2_Func002C()
     return false
 end
 function Trig_UnitsToBuildingSituation2_Conditions()
-    if ( not ( IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) == true ) ) then
-        return false
-    end
-    if ( not Trig_UnitsToBuildingSituation2_Func002C() ) then
-        return false
-    end
-    return true
+    return (( IsUnitType(GetTriggerUnit(), UNIT_TYPE_STRUCTURE) == true )) and (Trig_UnitsToBuildingSituation2_Func002C())
 end
 function Trig_UnitsToBuildingSituation2_Actions()
     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -254,10 +248,7 @@ function Trig_CanselSituation2_Func001C()
     return false
 end
 function Trig_CanselSituation2_Conditions()
-    if ( not Trig_CanselSituation2_Func001C() ) then
-        return false
-    end
-    return true
+    return Trig_CanselSituation2_Func001C()
 end
 function Trig_CanselSituation2_Actions()
     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))

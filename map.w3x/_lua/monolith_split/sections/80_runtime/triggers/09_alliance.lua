@@ -2234,10 +2234,7 @@ function Trig_BegEvery_Func001C()
     return false
 end
 function Trig_BegEvery_Conditions()
-    if ( not Trig_BegEvery_Func001C() ) then
-        return false
-    end
-    return true
+    return Trig_BegEvery_Func001C()
 end
 function Trig_BegEvery_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0GX'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -2253,40 +2250,13 @@ end
 -- Trigger: CanEvery
 --===========================================================================
 function Trig_CanEvery_Func001Func001C()
-    if ( not ( GetResearched() == FourCC('R0HS') ) ) then
-        return false
-    end
-    if ( not ( GetPlayerTechCountSimple(FourCC('R0HR'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
-        return false
-    end
-    if ( not ( GetPlayerTechCountSimple(FourCC('R0HQ'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
-        return false
-    end
-    return true
+    return (( GetResearched() == FourCC('R0HS') )) and (( GetPlayerTechCountSimple(FourCC('R0HR'), GetOwningPlayer(GetTriggerUnit())) == 0 )) and (( GetPlayerTechCountSimple(FourCC('R0HQ'), GetOwningPlayer(GetTriggerUnit())) == 0 ))
 end
 function Trig_CanEvery_Func001Func002C()
-    if ( not ( GetResearched() == FourCC('R0HR') ) ) then
-        return false
-    end
-    if ( not ( GetPlayerTechCountSimple(FourCC('R0HS'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
-        return false
-    end
-    if ( not ( GetPlayerTechCountSimple(FourCC('R0HQ'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
-        return false
-    end
-    return true
+    return (( GetResearched() == FourCC('R0HR') )) and (( GetPlayerTechCountSimple(FourCC('R0HS'), GetOwningPlayer(GetTriggerUnit())) == 0 )) and (( GetPlayerTechCountSimple(FourCC('R0HQ'), GetOwningPlayer(GetTriggerUnit())) == 0 ))
 end
 function Trig_CanEvery_Func001Func003C()
-    if ( not ( GetResearched() == FourCC('R0HQ') ) ) then
-        return false
-    end
-    if ( not ( GetPlayerTechCountSimple(FourCC('R0HS'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
-        return false
-    end
-    if ( not ( GetPlayerTechCountSimple(FourCC('R0HR'), GetOwningPlayer(GetTriggerUnit())) == 0 ) ) then
-        return false
-    end
-    return true
+    return (( GetResearched() == FourCC('R0HQ') )) and (( GetPlayerTechCountSimple(FourCC('R0HS'), GetOwningPlayer(GetTriggerUnit())) == 0 )) and (( GetPlayerTechCountSimple(FourCC('R0HR'), GetOwningPlayer(GetTriggerUnit())) == 0 ))
 end
 function Trig_CanEvery_Func001C()
     if ( Trig_CanEvery_Func001Func001C() ) then
@@ -2301,10 +2271,7 @@ function Trig_CanEvery_Func001C()
     return false
 end
 function Trig_CanEvery_Conditions()
-    if ( not Trig_CanEvery_Func001C() ) then
-        return false
-    end
-    return true
+    return Trig_CanEvery_Func001C()
 end
 function Trig_CanEvery_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0GX'), 1, GetOwningPlayer(GetTriggerUnit()))
@@ -2320,10 +2287,7 @@ end
 -- Trigger: BegForever
 --===========================================================================
 function Trig_BegForever_Conditions()
-    if ( not ( GetResearched() == FourCC('R0GX') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R0GX') )
 end
 function Trig_BegForever_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0HR'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -2341,10 +2305,7 @@ end
 -- Trigger: CanForver
 --===========================================================================
 function Trig_CanForver_Conditions()
-    if ( not ( GetResearched() == FourCC('R0GX') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R0GX') )
 end
 function Trig_CanForver_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0HR'), 1, GetOwningPlayer(GetTriggerUnit()))
@@ -2494,10 +2455,7 @@ end
 -- Trigger: BegDec
 --===========================================================================
 function Trig_BegDec_Conditions()
-    if ( not ( GetResearched() == FourCC('R0HE') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R0HE') )
 end
 function Trig_BegDec_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0HG'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -2540,10 +2498,7 @@ end
 -- Trigger: BegUnion
 --===========================================================================
 function Trig_BegUnion_Conditions()
-    if ( not ( GetResearched() == FourCC('R0HF') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R0HF') )
 end
 function Trig_BegUnion_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0HG'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -2769,10 +2724,7 @@ end
 -- Trigger: BegArat
 --===========================================================================
 function Trig_BegArat_Conditions()
-    if ( not ( GetResearched() == FourCC('R0HG') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R0HG') )
 end
 function Trig_BegArat_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0HE'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -2966,10 +2918,7 @@ end
 -- Trigger: BegStorm
 --===========================================================================
 function Trig_BegStorm_Conditions()
-    if ( not ( GetResearched() == FourCC('R0HH') ) ) then
-        return false
-    end
-    return true
+    return ( GetResearched() == FourCC('R0HH') )
 end
 function Trig_BegStorm_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0HE'), 0, GetOwningPlayer(GetTriggerUnit()))
@@ -3366,10 +3315,7 @@ end
 -- Trigger: VariarTaunt
 --===========================================================================
 function Trig_VariarTaunt_Func004C()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A1AL'), GetTriggerUnit()) > 1 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitAbilityLevelSwapped(FourCC('A1AL'), GetTriggerUnit()) > 1 )
 end
 function Trig_VariarTaunt_Actions()
     BlzUnitHideAbility(GetTriggerUnit(), FourCC('A1AL'), true)
@@ -3475,28 +3421,16 @@ end
 -- Trigger: PaladinHpSpell
 --===========================================================================
 function Trig_PaladinHpSpell_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0WZ'), GetTriggerUnit()) == 1 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitAbilityLevelSwapped(FourCC('A0WZ'), GetTriggerUnit()) == 1 )
 end
 function Trig_PaladinHpSpell_Func001Func001Func007C()
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 75.00 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitLifePercent(GetTriggerUnit()) < 75.00 )
 end
 function Trig_PaladinHpSpell_Func001Func001C()
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 50.00 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitLifePercent(GetTriggerUnit()) < 50.00 )
 end
 function Trig_PaladinHpSpell_Func001C()
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 25.00 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitLifePercent(GetTriggerUnit()) < 25.00 )
 end
 function Trig_PaladinHpSpell_Actions()
     if ( Trig_PaladinHpSpell_Func001C() ) then
@@ -3542,28 +3476,16 @@ end
 -- Trigger: PaladinHpSpell2
 --===========================================================================
 function Trig_PaladinHpSpell2_Conditions()
-    if ( not ( GetUnitAbilityLevelSwapped(FourCC('A0WZ'), GetTriggerUnit()) == 2 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitAbilityLevelSwapped(FourCC('A0WZ'), GetTriggerUnit()) == 2 )
 end
 function Trig_PaladinHpSpell2_Func001Func001Func007C()
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 95.00 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitLifePercent(GetTriggerUnit()) < 95.00 )
 end
 function Trig_PaladinHpSpell2_Func001Func001C()
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 70.00 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitLifePercent(GetTriggerUnit()) < 70.00 )
 end
 function Trig_PaladinHpSpell2_Func001C()
-    if ( not ( GetUnitLifePercent(GetTriggerUnit()) < 45.00 ) ) then
-        return false
-    end
-    return true
+    return ( GetUnitLifePercent(GetTriggerUnit()) < 45.00 )
 end
 function Trig_PaladinHpSpell2_Actions()
     if ( Trig_PaladinHpSpell2_Func001C() ) then
