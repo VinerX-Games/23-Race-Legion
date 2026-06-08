@@ -301,6 +301,13 @@ function AiRunStrateg(i, pi, p, def)
         warRace(Grades[pi], p)
         return true
     end
+    if i >= 25 then
+        local econTier = MathRound(i / 60)
+        local currentTier = GetPlayerTechCount(p, FourCC('R03Q'), false)
+        if econTier > currentTier and econTier <= 2 then
+            SetPlayerTechResearched(p, FourCC('R03Q'), econTier)
+        end
+    end
     if s.pre and s.pre(i, pi, p) then
     end
     for _, step in ipairs(s.steps) do
