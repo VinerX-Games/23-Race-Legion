@@ -26,28 +26,21 @@ SE = SP / "sections"
 R = "80_runtime/triggers/races/"
 T = "80_runtime/triggers/"
 PLAN = {
-    "80_runtime/triggers/13_subraces_nightelf_naga_illidari_dragon.lua": (
-        R + "NightElf.lua",
+    "80_runtime/triggers/07_hero_bezlikie_horde.lua": (
+        T + "07_mixed_heroes.lua",
         [
-            ("NagaStart", R + "Naga.lua"),
-            ("StartWorgens", R + "Worgens.lua"),
-            ("Red Orden", R + "RedOrden.lua"),
-            ("Draenei Build Abill", R + "Draenei.lua"),
-            ("IllidaryOn", R + "Illidari.lua"),
-            ("InitLimitsVryculls", R + "Vryculs.lua"),
-            ("PoleAstralaDragons", R + "Dragons.lua"),
+            ("StromgardOn", R + "Stromgard.lua"),
+            ("Sluga qqgsarona", R + "Bezlikie.lua"),
+            ("TrainW2", R + "HordeW2.lua"),
         ],
     ),
-    "80_runtime/triggers/14_demon_elemental_undead_boss.lua": (
-        R + "Demon.lua",
-        [
-            ("Units", R + "Elementals.lua"),
-            ("UndeadOn", R + "Scourge.lua"),
-            ("IceTrollsStart", R + "IceTrolls.lua"),
-            ("LordWave", R + "Lords.lua"),
-            ("StartUlt", T + "14_misc_system.lua"),
-            ("KakecCommon", R + "OldGods.lua"),
-        ],
+    "80_runtime/triggers/09_alliance.lua": (
+        R + "Alliance.lua",
+        [],
+    ),
+    "80_runtime/triggers/11_horde.lua": (
+        R + "Horde.lua",
+        [],
     ),
 }
 

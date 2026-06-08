@@ -1,7 +1,7 @@
 {
   "source_path": "C:\\Games\\23 Race\\23-Race-Legion\\map.w3x\\war3map.lua",
   "source_sha256": "5181648a70065e3b8632a083c3946e452fc8f9f5b6538dda68f69226ad9566bb",
-  "section_count": 109,
+  "section_count": 112,
   "sections": [
     {
       "name": "prelude",
@@ -596,8 +596,32 @@
       "library_name": null
     },
     {
-      "name": "gen:triggers_07_hero_bezlikie_horde",
-      "file": "80_runtime/triggers/07_hero_bezlikie_horde.lua",
+      "name": "gen:07_mixed_heroes",
+      "file": "80_runtime/triggers/07_mixed_heroes.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Stromgard",
+      "file": "80_runtime/triggers/races/Stromgard.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:Bezlikie",
+      "file": "80_runtime/triggers/races/Bezlikie.lua",
+      "category": "generated_runtime",
+      "start_line": 0,
+      "end_line": 0,
+      "library_name": null
+    },
+    {
+      "name": "gen:HordeW2",
+      "file": "80_runtime/triggers/races/HordeW2.lua",
       "category": "generated_runtime",
       "start_line": 0,
       "end_line": 0,
@@ -628,8 +652,8 @@
       "library_name": null
     },
     {
-      "name": "gen:triggers_09_alliance",
-      "file": "80_runtime/triggers/09_alliance.lua",
+      "name": "gen:Alliance",
+      "file": "80_runtime/triggers/races/Alliance.lua",
       "category": "generated_runtime",
       "start_line": 0,
       "end_line": 0,
@@ -652,8 +676,8 @@
       "library_name": null
     },
     {
-      "name": "gen:triggers_11_horde",
-      "file": "80_runtime/triggers/11_horde.lua",
+      "name": "gen:Horde",
+      "file": "80_runtime/triggers/races/Horde.lua",
       "category": "generated_runtime",
       "start_line": 0,
       "end_line": 0,
