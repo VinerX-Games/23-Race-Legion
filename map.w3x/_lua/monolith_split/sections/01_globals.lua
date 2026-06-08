@@ -2269,8 +2269,9 @@ IncomeTextFr = nil	---@type framehandle
 CommonHash = setmetatable({}, {__index = function(t, k) local v = {}; t[k] = v; return v end})	---@type hashtable	
 StartLoc = {}	---@type location	
 StartLocCount = 0	---@type integer	
--- location array ChoicedLocs
--- integer ChoicedLocsCount = 0
+AiSpawnIndex = 0	---@type integer
+AiSpawnPoint = {}	---@type table<integer, {x: real, y: real}>
+MIN_SPAWN_DISTANCE = 2500	---@type real
 SubGroup2 = CreateGroup()	---@type group	
 Gfarm = StringHash("Gfarm")	---@type integer	
 Gtier = StringHash("Gtier")	---@type integer	

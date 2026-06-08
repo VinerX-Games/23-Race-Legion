@@ -191,7 +191,7 @@ function createAiPlayer(pi, raceToken)
 
 	-- Задаю место
 
-	udg_LocalPoint = StartLoc[GetRandomInt(0, StartLocCount - 1)]	--  INLINED!!
+	udg_LocalPoint = AiPickSpawnPoint(pi)
 	ProbeLogWrite("[AI] createAiPlayer start location set")
 
 	--  Раса аи (опциональный форс через raceToken, иначе случайно)

@@ -112,6 +112,7 @@ function Trig_Initial_things_Actions()
 	StartInc()
 	InitThings()
 	SetStartLocations()
+	ShuffleStartLoc()
 	--  ------------------------------------------
 	SetMapFlag(MAP_LOCK_ALLIANCE_CHANGES, false)
 	SetMapFlag(MAP_LOCK_ALLIANCE_CHANGES, false)

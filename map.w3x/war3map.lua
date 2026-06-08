@@ -2959,8 +2959,9 @@ IncomeTextFr = nil	---@type framehandle
 CommonHash = setmetatable({}, {__index = function(t, k) local v = {}; t[k] = v; return v end})	---@type hashtable	
 StartLoc = {}	---@type location	
 StartLocCount = 0	---@type integer	
--- location array ChoicedLocs
--- integer ChoicedLocsCount = 0
+AiSpawnIndex = 0	---@type integer
+AiSpawnPoint = {}	---@type table<integer, {x: real, y: real}>
+MIN_SPAWN_DISTANCE = 2500	---@type real
 SubGroup2 = CreateGroup()	---@type group	
 Gfarm = StringHash("Gfarm")	---@type integer	
 Gtier = StringHash("Gtier")	---@type integer	
@@ -4069,6 +4070,71 @@ function RandomLoc()
 	
 	return StartLoc[GetRandomInt(0, StartLocCount - 1)]
 	
+end
+---@return nothing
+function ShuffleStartLoc()
+	local j, tmp
+	for i = StartLocCount - 1, 1, -1 do
+		j = GetRandomInt(0, i)
+		tmp = StartLoc[i]
+		StartLoc[i] = StartLoc[j]
+		StartLoc[j] = tmp
+	end
+end
+---@param x real
+---@param y real
+---@return boolean
+function IsSpawnFarEnough(x, y)
+	for pi, pt in pairs(AiSpawnPoint) do
+		if DistanceBetweenCoords(x, y, pt.x, pt.y) < MIN_SPAWN_DISTANCE then
+			return false
+		end
+	end
+	return true
+end
+---@return real
+function SpawnMinDistToOthers(x, y)
+	local best = 999999.0
+	for pi, pt in pairs(AiSpawnPoint) do
+		local d = DistanceBetweenCoords(x, y, pt.x, pt.y)
+		if d < best then
+			best = d
+		end
+	end
+	return best
+end
+---@param pi integer
+---@return location
+function AiPickSpawnPoint(pi)
+	if StartLocCount == 0 then
+		return nil
+	end
+	local i = AiSpawnIndex
+	while i < StartLocCount do
+		local loc = StartLoc[i]
+		local x, y = GetLocationX(loc), GetLocationY(loc)
+		if IsSpawnFarEnough(x, y) then
+			AiSpawnPoint[pi] = {x = x, y = y}
+			AiSpawnIndex = i + 1
+			return loc
+		end
+		i = i + 1
+	end
+	local bestLoc = StartLoc[AiSpawnIndex] or StartLoc[0]
+	local bestDist = -1.0
+	i = AiSpawnIndex
+	while i < StartLocCount do
+		local loc = StartLoc[i]
+		local d = SpawnMinDistToOthers(GetLocationX(loc), GetLocationY(loc))
+		if d > bestDist then
+			bestDist = d
+			bestLoc = loc
+		end
+		i = i + 1
+	end
+	AiSpawnPoint[pi] = {x = GetLocationX(bestLoc), y = GetLocationY(bestLoc)}
+	AiSpawnIndex = AiSpawnIndex + 1
+	return bestLoc
 end
 -- library RandomLocs ends
 -- library SpellSleepAOE:
@@ -8541,7 +8607,7 @@ function createAiPlayer(pi, raceToken)
 
 	-- Задаю место
 
-	udg_LocalPoint = StartLoc[GetRandomInt(0, StartLocCount - 1)]	--  INLINED!!
+	udg_LocalPoint = AiPickSpawnPoint(pi)
 	ProbeLogWrite("[AI] createAiPlayer start location set")
 
 	--  Раса аи (опциональный форс через raceToken, иначе случайно)
@@ -15366,6 +15432,67 @@ function InitTrig_Cities_Start_2()
 	
 end
 -- ===========================================================================
+--  Легендарки: здание -> герои с ценой > 500, которые в нём тренируются
+-- ===========================================================================
+LegendaryBuildingToHero = {
+	[FourCC('h07Z')] = { FourCC('H018') },
+	[FourCC('h081')] = { FourCC('H028') },
+	[FourCC('h07Y')] = { FourCC('H03J') },
+	[FourCC('h00W')] = { FourCC('H044') },
+	[FourCC('h0NB')] = { FourCC('H052') },
+	[FourCC('h00N')] = { FourCC('H054') },
+	[FourCC('h07F')] = { FourCC('H05H'), FourCC('H0MI') },
+	[FourCC('h07T')] = { FourCC('H05I') },
+	[FourCC('h080')] = { FourCC('U015') },
+	[FourCC('h0F3')] = { FourCC('U015'), FourCC('U035') },
+	[FourCC('h08F')] = { FourCC('N018') },
+	[FourCC('h0O3')] = { FourCC('N019'), FourCC('O02P') },
+	[FourCC('h09Q')] = { FourCC('H0C4') },
+	[FourCC('h0BL')] = { FourCC('N01A') },
+	[FourCC('h0AW')] = { FourCC('E01C') },
+	[FourCC('h0F8')] = { FourCC('E029') },
+	[FourCC('h00J')] = { FourCC('H0HP') },
+	[FourCC('h0GK')] = { FourCC('H0HQ') },
+	[FourCC('h0DR')] = { FourCC('U02F') },
+	[FourCC('h07V')] = { FourCC('N059') },
+	[FourCC('h087')] = { FourCC('H0L4') },
+	[FourCC('h08L')] = { FourCC('U02R') },
+	[FourCC('h00I')] = { FourCC('H0MD'), FourCC('H0OP') },
+	[FourCC('h0N0')] = { FourCC('O055'), FourCC('O05L') },
+	[FourCC('h07U')] = { FourCC('O056') },
+	[FourCC('h00E')] = { FourCC('TrlH') },
+	[FourCC('h0DO')] = { FourCC('MIMH') },
+	[FourCC('h05F')] = { FourCC('W2Og') },
+	[FourCC('h072')] = { FourCC('NERH'), FourCC('U030'), FourCC('U035') },
+	[FourCC('h090')] = { FourCC('NE02') },
+	[FourCC('h09G')] = { FourCC('CM00'), FourCC('FL00') },
+	[FourCC('h09K')] = { FourCC('O06L') },
+}
+
+function GiveBotLegendaryHeroes(u2, p, pi)
+	if not udg_AiControl[pi] then
+		return
+	end
+	local bid = GetUnitTypeId(u2)
+	local heroes = LegendaryBuildingToHero[bid]
+	if heroes == nil then
+		return
+	end
+	local x = GetUnitX(u2)
+	local y = GetUnitY(u2)
+	for _, hid in ipairs(heroes) do
+		local existing = GetUnitsOfPlayerAndTypeId(p, hid)
+		if BlzGroupGetSize(existing) == 0 then
+			SetPlayerTechMaxAllowed(p, hid, 1)
+			local hero = CreateUnit(p, hid, x, y, bj_UNIT_FACING)
+			if hero ~= nil then
+				aiUnitJoins(hero, pi)
+			end
+		end
+	end
+end
+
+-- ===========================================================================
 --  Trigger: DeadSituastion
 -- ===========================================================================
 ---@return boolean
@@ -15442,6 +15569,8 @@ function Trig_DeadSituastion_Actions()
 		aiKilledCity(u3)
 	end
 	
+	
+	GiveBotLegendaryHeroes(u2, p, pi)
 	
 	u = nil
 	u3 = nil
@@ -15899,6 +16028,7 @@ function Trig_Initial_things_Actions()
 	StartInc()
 	InitThings()
 	SetStartLocations()
+	ShuffleStartLoc()
 	--  ------------------------------------------
 	SetMapFlag(MAP_LOCK_ALLIANCE_CHANGES, false)
 	SetMapFlag(MAP_LOCK_ALLIANCE_CHANGES, false)
@@ -38606,6 +38736,7 @@ function Trig_LichStartUpgrade_Actions()
     
     local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     if udg_AiControl[pi] then
+        GroupRemoveUnit(udg_Ai_buildings[pi], GetTriggerUnit())
         NumberRem(pi, FourCC('e01I'))
     end
      
@@ -49734,6 +49865,7 @@ function PereborNavalb()
     i=AiData[pi][StringHash("NumberN")] or 0
     -- ??????? ???? 0 ??? ?????? ????? ?????
     if FirstOfGroup(gGroup) == nil then
+        AiBuyPirateFleet(pi)
         if udg_Octhet then
             DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) .. "0")
         end
@@ -57980,7 +58112,7 @@ RegisterAiRace("Silitids", {
 
         { FourCC('h00C'), 3, 6 }, { FourCC('o015'), 10, 4 },
 
-        { FourCC('e01I'), 8, 4 }, { FourCC('e01L'), 5, 2 },
+        { FourCC('e01L'), 5, 2 },
 
         { FourCC('e00B'), 4, 2 }, { FourCC('o017'), 4, 2 },
 
@@ -58092,6 +58224,14 @@ RegisterAiRace("Silitids", {
 
         },
 
+        [FourCC('e01R')] = {
+
+            { order = "channel",        chance = 5, type = "self" },
+
+            { order = "channel",        chance = 5, type = "point" },
+
+        },
+
         [FourCC('U025')] = {
 
             { order = "earthquake",  chance = 5, type = "immediate" },
@@ -58108,53 +58248,15 @@ RegisterAiRace("Silitids", {
 
         },
 
-    },
+        [FourCC('U023')] = {
 
-    attackerData = {
+            { order = "controlmagic",  chance = 4, type = "target" },
 
-        [FourCC('e01T')] = {
+            { order = "impales",       chance = 5, type = "point" },
 
-            { order = "forkedlightning", chance = 4, type = "point" },
+            { order = "carrionswarm",  chance = 5, type = "point" },
 
-            { order = "parasiteon",      chance = 4, type = "immediate" },
-
-            { order = "carrionswarm",    chance = 4, type = "point" },
-
-        },
-
-        [FourCC('e01U')] = {
-
-            { order = "web", chance = 4, type = "target" },
-
-        },
-
-        [FourCC('u020')] = {
-
-            { order = "replenishmana", chance = 4, type = "immediate" },
-
-            { order = "replenishlife", chance = 4, type = "immediate" },
-
-        },
-
-        [FourCC('u022')] = {
-
-            { order = "devourmagic", chance = 4, type = "target", range = 525 },
-
-        },
-
-        [FourCC('U025')] = {
-
-            { order = "earthquake",  chance = 5, type = "immediate" },
-
-            { order = "hex",         chance = 5, type = "target", notStructure = true },
-
-        },
-
-        [FourCC('U024')] = {
-
-            { order = "locustswarm", chance = 5, type = "immediate" },
-
-            { order = "impales",     chance = 5, type = "point" },
+            { order = "deathpact",     chance = 5, type = "target" },
 
         },
 
@@ -60124,7 +60226,8 @@ function AiArmyLegacyTick(p)
 end
 
 -- Order idle army to a portal unit: "smart" toward it (not attack), give A1GZ
--- portal vision. If army centroid is close enough, activate the portal.
+-- portal vision. Enumerates only idle units within 4000 of the portal (not whole
+-- map). If army centroid is within 2500, activate portal + push units through.
 ---@param pi integer
 ---@param p player
 ---@param portal unit
@@ -60133,8 +60236,10 @@ function AiBrainOrderToPortal(pi, p, portal)
     if gAllyGroup == nil then gAllyGroup = CreateGroup() end
     if gSubGroup == nil then gSubGroup = CreateGroup() end
     CheckPlayer = p
-    GroupEnumUnitsOfPlayer(gAllyGroup, p, B_Lazy)
     local px, py = GetUnitX(portal), GetUnitY(portal)
+    GroupEnumUnitsInRange(gAllyGroup, px, py, 4000, B_LazyF)
+    local allyCount = CountUnitsInGroup(gAllyGroup)
+    if allyCount == 0 then return 0 end
     GroupClear(gSubGroup)
     while true do
         local u = FirstOfGroup(gAllyGroup)
@@ -60149,14 +60254,14 @@ function AiBrainOrderToPortal(pi, p, portal)
     if dist <= 2500 then
         IssueImmediateOrder(portal, "web")
         BlzEndUnitAbilityCooldown(portal, FourCC('A0HY'))
-        BrainLogEvery(pi, "portalact", 8, "portal activate " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)), "BRAINPORTAL")
+        GroupPointOrder(gSubGroup, "smart", px, py)
+        BrainLogEvery(pi, "portalact", 5, "portal activate " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)) .. " allies=" .. tostring(allyCount), "BRAINPORTAL")
     else
         GroupPointOrder(gSubGroup, "smart", px, py)
-        BrainLogEvery(pi, "portalmove", 8, "portal walk to " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)) .. " dist=" .. tostring(R2I(dist)), "BRAINPORTAL")
+        BrainLogEvery(pi, "portalmove", 5, "portal walk to " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)) .. " dist=" .. tostring(R2I(dist)) .. " allies=" .. tostring(allyCount), "BRAINPORTAL")
     end
     GroupClear(gSubGroup)
-    local n = GetLocalizedHotkey("G") -- dummy: count ordered
-    return dist <= 2500 and 0 or 1
+    return allyCount
 end
 
 -- Entry point when a bot has an active brain ("objective"). Perceive → refresh
@@ -60358,6 +60463,174 @@ function AiPickByComposition(pi, def)
     end
     return bestId
 end
+
+-- ====================================================================
+-- Pirate Ports: buy fleet from neutral shipyards (n04K).
+-- Sells: h0OY escort (345g) + h0OX transport (300g).
+-- Toggle: PiratePortEnabled via bridge. Default on.
+-- ====================================================================
+PiratePorts = PiratePorts or {}
+PiratePortEnabled = PiratePortEnabled or true
+
+function AiPiratePortsScan()
+    if #PiratePorts > 0 then return end
+    local g = CreateGroup()
+    GroupEnumUnitsOfPlayer(g, Player(PLAYER_NEUTRAL_PASSIVE), nil)
+    local s = BlzGroupGetSize(g)
+    local i = 0
+    while i < s do
+        local u = BlzGroupUnitAt(g, i)
+        if GetUnitTypeId(u) == FourCC('n04K') then
+            PiratePorts[#PiratePorts + 1] = { unit = u, x = GetUnitX(u), y = GetUnitY(u) }
+        end
+        i = i + 1
+    end
+    DestroyGroup(g)
+    BrainLog(-1, "PiratePorts: scanned n=" .. tostring(#PiratePorts))
+end
+
+if PiratePortEnabled then
+    AiPiratePortsScan()
+end
+
+function AiBuyPirateFleet(pi)
+    if not PiratePortEnabled then return false end
+    if PiratePorts == nil or #PiratePorts == 0 then return false end
+
+    local p = Player(pi)
+    local gold = GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD)
+    if gold < 300 then return false end
+
+    local navyCount = AiData[pi][StringHash("NumberN")] or 0
+    if navyCount >= 6 then return false end
+
+    local cx, cy
+    local cap = playerCapital[pi]
+    if cap ~= nil and UnitAlive(cap) then
+        cx, cy = GetUnitX(cap), GetUnitY(cap)
+    end
+    if cx == nil then
+        local ax, ay, an = 0.0, 0.0, 0
+        local g2 = CreateGroup()
+        GroupEnumUnitsOfPlayer(g2, p, nil)
+        local s2 = BlzGroupGetSize(g2)
+        local j = 0
+        while j < s2 do
+            local u = BlzGroupUnitAt(g2, j)
+            if GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+                ax = ax + GetUnitX(u)
+                ay = ay + GetUnitY(u)
+                an = an + 1
+            end
+            j = j + 1
+        end
+        DestroyGroup(g2)
+        if an > 0 then cx = ax / an; cy = ay / an end
+    end
+    if cx == nil then return false end
+
+    local bestPort, bestDist = nil, 99999999.0
+    for _, port in ipairs(PiratePorts) do
+        local dx = port.x - cx
+        local dy = port.y - cy
+        local d = dx * dx + dy * dy
+        if d < bestDist then bestDist = d; bestPort = port end
+    end
+    if bestPort == nil then return false end
+
+    local hasUnitNear = false
+    local g3 = CreateGroup()
+    GroupEnumUnitsOfPlayer(g3, p, nil)
+    local s3 = BlzGroupGetSize(g3)
+    local k = 0
+    while k < s3 do
+        local u = BlzGroupUnitAt(g3, k)
+        if GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            local dx = GetUnitX(u) - bestPort.x
+            local dy = GetUnitY(u) - bestPort.y
+            if dx * dx + dy * dy < 500.0 * 500.0 then
+                hasUnitNear = true
+                break
+            end
+        end
+        k = k + 1
+    end
+    DestroyGroup(g3)
+
+    if not hasUnitNear then
+        local best, bestD = nil, 99999999.0
+        local g4 = CreateGroup()
+        GroupEnumUnitsOfPlayer(g4, p, nil)
+        local s4 = BlzGroupGetSize(g4)
+        local m = 0
+        while m < s4 do
+            local u = BlzGroupUnitAt(g4, m)
+            if GetUnitState(u, UNIT_STATE_LIFE) > 0.405 and not IsUnitType(u, UNIT_TYPE_HERO) then
+                local dx = GetUnitX(u) - cx
+                local dy = GetUnitY(u) - cy
+                local d = dx * dx + dy * dy
+                if d < bestD then bestD = d; best = u end
+            end
+            m = m + 1
+        end
+        DestroyGroup(g4)
+        if best ~= nil then
+            local bx = bestPort.x + GetRandomReal(-300, 300)
+            local by = bestPort.y + GetRandomReal(-300, 300)
+            IssuePointOrder(best, "move", bx, by)
+            BrainLogEvery(pi, "pirateSend", 20, "sending unit to pirate port dist=" .. tostring(R2I(math.sqrt(bestDist))), "BRAINFOC")
+        end
+        return false
+    end
+
+    local bought = false
+    if gold >= 345 then
+        local r = IssueNeutralImmediateOrderById(p, bestPort.unit, FourCC('h0OY'))
+        if r then
+            local g5 = CreateGroup()
+            GroupEnumUnitsOfPlayer(g5, p, nil)
+            local s5 = BlzGroupGetSize(g5)
+            local n = 0
+            while n < s5 do
+                local u = BlzGroupUnitAt(g5, n)
+                if GetUnitTypeId(u) == FourCC('h0OY') and not IsUnitInGroup(u, udg_Ai_navy[pi]) then
+                    GroupAddUnit(udg_Ai_navy[pi], u)
+                    NumberAdd(pi, StringHash("NumberN"))
+                    BrainLogTag(pi, "BRAINFOC", "pirate buy escort h0OY")
+                    bought = true
+                    break
+                end
+                n = n + 1
+            end
+            DestroyGroup(g5)
+        end
+    end
+
+    gold = GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD)
+    if gold >= 300 then
+        local r = IssueNeutralImmediateOrderById(p, bestPort.unit, FourCC('h0OX'))
+        if r then
+            local g6 = CreateGroup()
+            GroupEnumUnitsOfPlayer(g6, p, nil)
+            local s6 = BlzGroupGetSize(g6)
+            local n = 0
+            while n < s6 do
+                local u = BlzGroupUnitAt(g6, n)
+                if GetUnitTypeId(u) == FourCC('h0OX') and not IsUnitInGroup(u, udg_Ai_navy[pi]) then
+                    GroupAddUnit(udg_Ai_navy[pi], u)
+                    NumberAdd(pi, StringHash("NumberN"))
+                    BrainLogTag(pi, "BRAINFOC", "pirate buy transport h0OX")
+                    bought = true
+                    break
+                end
+                n = n + 1
+            end
+            DestroyGroup(g6)
+        end
+    end
+
+    return bought
+end
 -- ====================================================================
 -- AiPortalGraph: static continent adjacency for inter-continent routing.
 -- Baked from ai_portal_graph_probe.lua (73 portals, 37 directed edges).
@@ -60435,22 +60708,22 @@ end
 
 ---@param x real
 ---@param y real
----@return string|nil continent name
+---@return string|nil continent name (main continents first, sub-zones for uncovered areas)
 function AiContinentOf(x, y)
-    -- Main continents with exclusion logic (order = ProcessContinentalStuff)
+    -- Main continents (ProcessContinentalStuff priority order)
     if RectContainsCoords(gg_rct_Kalim, x, y) and not RectContainsCoords(gg_rct_NordNotKalim, x, y) then
         return "Kalimdor"
     end
-    if (RectContainsCoords(gg_rct_EastenKingdoms, x, y) or RectContainsCoords(gg_rct_EasternDungeons, x, y) or RectContainsCoords(gg_rct_BlackMountain, x, y) or RectContainsCoords(gg_rct_VknotOut, x, y)) and not (RectContainsCoords(gg_rct_OkeaniaNoVk, x, y) or RectContainsCoords(gg_rct_KillDalaran, x, y)) then
+    if (RectContainsCoords(gg_rct_EastenKingdoms, x, y) or RectContainsCoords(gg_rct_VknotOut, x, y)) and not (RectContainsCoords(gg_rct_OkeaniaNoVk, x, y) or RectContainsCoords(gg_rct_KillDalaran, x, y)) then
         return "EasternKingdoms"
     end
-    if RectContainsCoords(gg_rct_Nord, x, y) or RectContainsCoords(gg_rct_Azgel, x, y) or RectContainsCoords(gg_rct_NordNotKalim, x, y) then
+    if RectContainsCoords(gg_rct_Nord, x, y) or RectContainsCoords(gg_rct_NordNotKalim, x, y) then
         return "Northrend"
     end
     if RectContainsCoords(gg_rct_Pandaria, x, y) then
         return "Pandaria"
     end
-    if (RectContainsCoords(gg_rct_Outland, x, y) or RectContainsCoords(gg_rct_OutNoVk, x, y)) and not RectContainsCoords(gg_rct_VknotOut, x, y) then
+    if RectContainsCoords(gg_rct_Outland, x, y) or RectContainsCoords(gg_rct_OutNoVk, x, y) then
         return "Outland"
     end
     if RectContainsCoords(gg_rct_BrokenIsles, x, y) then
@@ -60459,16 +60732,18 @@ function AiContinentOf(x, y)
     if RectContainsCoords(gg_rct_Argus, x, y) then
         return "Argus"
     end
-    -- Sub-zones (in priority order, checked only if not already on a main continent)
+    -- Sub-zones for areas NOT covered by main continental rects.
+    -- Azgel (Nord's neighbour), dungeons etc. checked AFTER mains so inland
+    -- sub-zones (Orgrimmar/Kalimdor etc.) stay as their parent continent.
     local subzones = {
         { "Azgel",          gg_rct_Azgel },
         { "Ankirag",        gg_rct_Ankirag },
         { "BlackMountain",  gg_rct_BlackMountain },
         { "Orgrimmar",      gg_rct_Orgrimmar },
+        { "DeadMines",      gg_rct_DeadMines },
         { "Uldum",          gg_rct_Uldum },
         { "Undercity",      gg_rct_Undercity },
         { "Maradon",        gg_rct_Maradon },
-        { "DeadMines",      gg_rct_DeadMines },
         { "Naxramas",       gg_rct_Naxramas },
         { "EasternDungeons", gg_rct_EasternDungeons },
         { "EmeraldDream",   gg_rct_EmeraldDream },
