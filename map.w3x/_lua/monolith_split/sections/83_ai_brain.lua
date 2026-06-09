@@ -445,6 +445,7 @@ end
 ---@param y real
 ---@return integer
 function AiSquadOrderAtk(g, x, y)
+    ProbeLogWrite("[SQDBG] order-atk x=" .. tostring(R2I(x)) .. " y=" .. tostring(R2I(y)) .. " sz=" .. tostring(BlzGroupGetSize(g)))
     local tmp = CreateGroup()
     local sub = CreateGroup()
     local sz = BlzGroupGetSize(g)
@@ -484,6 +485,7 @@ end
 ---@param y real
 ---@return integer
 function AiSquadOrderMov(g, x, y)
+    ProbeLogWrite("[SQDBG] order-mov x=" .. tostring(R2I(x)) .. " y=" .. tostring(R2I(y)) .. " sz=" .. tostring(BlzGroupGetSize(g)))
     local tmp = CreateGroup()
     local sub = CreateGroup()
     local sz = BlzGroupGetSize(g)
@@ -928,6 +930,7 @@ end
 ---@param pi integer
 ---@param p player
 function AiBrainArmyTick(pi, p)
+    ProbeLogWrite("[SQDBG] AiBrainArmyTick pi=" .. tostring(pi) .. " tick=" .. tostring((AiData[pi].wm or {}).tick or 0))
     local wm = AiBrainPerceive(pi)
     local cfg = AiBrainCfg(pi)
     if wm.objectives == nil or (wm.tick % (cfg.clusterEvery or 8)) == 0 then
@@ -949,6 +952,7 @@ function AiBrainArmyTick(pi, p)
     -- Orphan/squad build every 2 ticks
     if (wm.tick % 2) == 0 then
         local armyGroup = udg_Ai_army[pi]
+        ProbeLogWrite("[SQDBG] orphan-build pi=" .. tostring(pi) .. " army=" .. tostring(armyGroup and BlzGroupGetSize(armyGroup) or 0))
         if armyGroup ~= nil then
             local squads = AiSquadsOf(pi)
             -- Assign orphaned army units to squads
@@ -980,6 +984,7 @@ function AiBrainArmyTick(pi, p)
 
     -- Tick up to 3 squads per frame
     local squads = AiSquadsOf(pi)
+    ProbeLogWrite("[SQDBG] tick-squads pi=" .. tostring(pi) .. " n=" .. tostring(#squads))
     local ticked = 0
     for sid, sq in pairs(squads) do
         if ticked >= 3 then break end
@@ -994,6 +999,8 @@ function AiBrainArmyTick(pi, p)
     end
     -- Pirate fleet: try buying ships every 8 ticks
     if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end
+    -- Diplomat: evaluate alliances & trade every ~30 ticks (~30-60s real time)
+    if (wm.tick % 28) == 0 then AiDiplomatTick(pi) end
 end
 
 -- ====================================================================
