@@ -1305,6 +1305,23 @@ function BrainBuild(pi, wm, race)
         BrainNavalDecision(pi, wm, race)
     end
 
+    -- If nothing to build, send idle workers from buildersT to harvest
+    if built == 0 then
+        local grpT = udg_Ai_buildersT[pi]
+        if grpT ~= nil then
+            local sz = BlzGroupGetSize(grpT)
+            if sz > 0 then
+                local u = BlzGroupUnitAt(grpT, 0)
+                if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+                    and GetUnitCurrentOrder(u) == 0 then
+                    GroupAddUnit(udg_Ai_harvest[pi], u)
+                    GroupRemoveUnit(grpT, u)
+                    IssueImmediateOrder(u, "autoharvestlumber")
+                end
+            end
+        end
+    end
+
     return built
 end
 
