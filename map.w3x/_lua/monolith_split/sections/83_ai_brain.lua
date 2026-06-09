@@ -426,7 +426,8 @@ function AiArmyLegacyTick(p)
 end
 
 -- Order idle army to a portal unit: "smart" toward it (not attack), give A1GZ
--- portal vision. If army centroid is close enough, activate the portal.
+-- portal vision. Enumerates only idle units within 4000 of the portal (not whole
+-- map). If army centroid is within 2500, activate portal + push units through.
 ---@param pi integer
 ---@param p player
 ---@param portal unit
@@ -435,8 +436,10 @@ function AiBrainOrderToPortal(pi, p, portal)
     if gAllyGroup == nil then gAllyGroup = CreateGroup() end
     if gSubGroup == nil then gSubGroup = CreateGroup() end
     CheckPlayer = p
-    GroupEnumUnitsOfPlayer(gAllyGroup, p, B_Lazy)
     local px, py = GetUnitX(portal), GetUnitY(portal)
+    GroupEnumUnitsInRange(gAllyGroup, px, py, 4000, B_LazyF)
+    local allyCount = CountUnitsInGroup(gAllyGroup)
+    if allyCount == 0 then return 0 end
     GroupClear(gSubGroup)
     while true do
         local u = FirstOfGroup(gAllyGroup)
@@ -451,14 +454,14 @@ function AiBrainOrderToPortal(pi, p, portal)
     if dist <= 2500 then
         IssueImmediateOrder(portal, "web")
         BlzEndUnitAbilityCooldown(portal, FourCC('A0HY'))
-        BrainLogEvery(pi, "portalact", 8, "portal activate " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)), "BRAINPORTAL")
+        GroupPointOrder(gSubGroup, "smart", px, py)
+        BrainLogEvery(pi, "portalact", 5, "portal activate " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)) .. " allies=" .. tostring(allyCount), "BRAINPORTAL")
     else
         GroupPointOrder(gSubGroup, "smart", px, py)
-        BrainLogEvery(pi, "portalmove", 8, "portal walk to " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)) .. " dist=" .. tostring(R2I(dist)), "BRAINPORTAL")
+        BrainLogEvery(pi, "portalmove", 5, "portal walk to " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)) .. " dist=" .. tostring(R2I(dist)) .. " allies=" .. tostring(allyCount), "BRAINPORTAL")
     end
     GroupClear(gSubGroup)
-    local n = GetLocalizedHotkey("G") -- dummy: count ordered
-    return dist <= 2500 and 0 or 1
+    return allyCount
 end
 
 -- Entry point when a bot has an active brain ("objective"). Perceive → refresh
@@ -659,4 +662,172 @@ function AiPickByComposition(pi, def)
         i = i + 1
     end
     return bestId
+end
+
+-- ====================================================================
+-- Pirate Ports: buy fleet from neutral shipyards (n04K).
+-- Sells: h0OY escort (345g) + h0OX transport (300g).
+-- Toggle: PiratePortEnabled via bridge. Default on.
+-- ====================================================================
+PiratePorts = PiratePorts or {}
+PiratePortEnabled = PiratePortEnabled or true
+
+function AiPiratePortsScan()
+    if #PiratePorts > 0 then return end
+    local g = CreateGroup()
+    GroupEnumUnitsOfPlayer(g, Player(PLAYER_NEUTRAL_PASSIVE), nil)
+    local s = BlzGroupGetSize(g)
+    local i = 0
+    while i < s do
+        local u = BlzGroupUnitAt(g, i)
+        if GetUnitTypeId(u) == FourCC('n04K') then
+            PiratePorts[#PiratePorts + 1] = { unit = u, x = GetUnitX(u), y = GetUnitY(u) }
+        end
+        i = i + 1
+    end
+    DestroyGroup(g)
+    BrainLog(-1, "PiratePorts: scanned n=" .. tostring(#PiratePorts))
+end
+
+if PiratePortEnabled then
+    AiPiratePortsScan()
+end
+
+function AiBuyPirateFleet(pi)
+    if not PiratePortEnabled then return false end
+    if PiratePorts == nil or #PiratePorts == 0 then return false end
+
+    local p = Player(pi)
+    local gold = GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD)
+    if gold < 300 then return false end
+
+    local navyCount = AiData[pi][StringHash("NumberN")] or 0
+    if navyCount >= 6 then return false end
+
+    local cx, cy
+    local cap = playerCapital[pi]
+    if cap ~= nil and UnitAlive(cap) then
+        cx, cy = GetUnitX(cap), GetUnitY(cap)
+    end
+    if cx == nil then
+        local ax, ay, an = 0.0, 0.0, 0
+        local g2 = CreateGroup()
+        GroupEnumUnitsOfPlayer(g2, p, nil)
+        local s2 = BlzGroupGetSize(g2)
+        local j = 0
+        while j < s2 do
+            local u = BlzGroupUnitAt(g2, j)
+            if GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+                ax = ax + GetUnitX(u)
+                ay = ay + GetUnitY(u)
+                an = an + 1
+            end
+            j = j + 1
+        end
+        DestroyGroup(g2)
+        if an > 0 then cx = ax / an; cy = ay / an end
+    end
+    if cx == nil then return false end
+
+    local bestPort, bestDist = nil, 99999999.0
+    for _, port in ipairs(PiratePorts) do
+        local dx = port.x - cx
+        local dy = port.y - cy
+        local d = dx * dx + dy * dy
+        if d < bestDist then bestDist = d; bestPort = port end
+    end
+    if bestPort == nil then return false end
+
+    local hasUnitNear = false
+    local g3 = CreateGroup()
+    GroupEnumUnitsOfPlayer(g3, p, nil)
+    local s3 = BlzGroupGetSize(g3)
+    local k = 0
+    while k < s3 do
+        local u = BlzGroupUnitAt(g3, k)
+        if GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            local dx = GetUnitX(u) - bestPort.x
+            local dy = GetUnitY(u) - bestPort.y
+            if dx * dx + dy * dy < 500.0 * 500.0 then
+                hasUnitNear = true
+                break
+            end
+        end
+        k = k + 1
+    end
+    DestroyGroup(g3)
+
+    if not hasUnitNear then
+        local best, bestD = nil, 99999999.0
+        local g4 = CreateGroup()
+        GroupEnumUnitsOfPlayer(g4, p, nil)
+        local s4 = BlzGroupGetSize(g4)
+        local m = 0
+        while m < s4 do
+            local u = BlzGroupUnitAt(g4, m)
+            if GetUnitState(u, UNIT_STATE_LIFE) > 0.405 and not IsUnitType(u, UNIT_TYPE_HERO) then
+                local dx = GetUnitX(u) - cx
+                local dy = GetUnitY(u) - cy
+                local d = dx * dx + dy * dy
+                if d < bestD then bestD = d; best = u end
+            end
+            m = m + 1
+        end
+        DestroyGroup(g4)
+        if best ~= nil then
+            local bx = bestPort.x + GetRandomReal(-300, 300)
+            local by = bestPort.y + GetRandomReal(-300, 300)
+            IssuePointOrder(best, "move", bx, by)
+            BrainLogEvery(pi, "pirateSend", 20, "sending unit to pirate port dist=" .. tostring(R2I(math.sqrt(bestDist))), "BRAINFOC")
+        end
+        return false
+    end
+
+    local bought = false
+    if gold >= 345 then
+        local r = IssueNeutralImmediateOrderById(p, bestPort.unit, FourCC('h0OY'))
+        if r then
+            local g5 = CreateGroup()
+            GroupEnumUnitsOfPlayer(g5, p, nil)
+            local s5 = BlzGroupGetSize(g5)
+            local n = 0
+            while n < s5 do
+                local u = BlzGroupUnitAt(g5, n)
+                if GetUnitTypeId(u) == FourCC('h0OY') and not IsUnitInGroup(u, udg_Ai_navy[pi]) then
+                    GroupAddUnit(udg_Ai_navy[pi], u)
+                    NumberAdd(pi, StringHash("NumberN"))
+                    BrainLogTag(pi, "BRAINFOC", "pirate buy escort h0OY")
+                    bought = true
+                    break
+                end
+                n = n + 1
+            end
+            DestroyGroup(g5)
+        end
+    end
+
+    gold = GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD)
+    if gold >= 300 then
+        local r = IssueNeutralImmediateOrderById(p, bestPort.unit, FourCC('h0OX'))
+        if r then
+            local g6 = CreateGroup()
+            GroupEnumUnitsOfPlayer(g6, p, nil)
+            local s6 = BlzGroupGetSize(g6)
+            local n = 0
+            while n < s6 do
+                local u = BlzGroupUnitAt(g6, n)
+                if GetUnitTypeId(u) == FourCC('h0OX') and not IsUnitInGroup(u, udg_Ai_navy[pi]) then
+                    GroupAddUnit(udg_Ai_navy[pi], u)
+                    NumberAdd(pi, StringHash("NumberN"))
+                    BrainLogTag(pi, "BRAINFOC", "pirate buy transport h0OX")
+                    bought = true
+                    break
+                end
+                n = n + 1
+            end
+            DestroyGroup(g6)
+        end
+    end
+
+    return bought
 end

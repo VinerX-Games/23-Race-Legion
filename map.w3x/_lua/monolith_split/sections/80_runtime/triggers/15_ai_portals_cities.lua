@@ -875,6 +875,7 @@ function PereborNavalb()
     i=AiData[pi][StringHash("NumberN")] or 0
     -- ??????? ???? 0 ??? ?????? ????? ?????
     if FirstOfGroup(gGroup) == nil then
+        AiBuyPirateFleet(pi)
         if udg_Octhet then
             DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) .. "0")
         end
