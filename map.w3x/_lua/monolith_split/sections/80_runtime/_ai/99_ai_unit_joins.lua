@@ -12,8 +12,11 @@ function aiUnitJoins(u, pi)
 
     AiDispatchJoin(id, pi, u)
 
-    -- Workers: immediate harvest, PlayerBuilders timer will assign building tasks
+    -- Workers: join builder pool, call TryBuild immediately.
+    -- PlayerBuilders will retry from buildersT pool on timer.
     if IsUnitType(u, UNIT_TYPE_PEON) then
-        IssueImmediateOrder(u, "autoharvestlumber")
+        GroupAddUnit(udg_Ai_builders[pi], u)
+        TryBuild_u = u
+        TryBuild()
     end
 end

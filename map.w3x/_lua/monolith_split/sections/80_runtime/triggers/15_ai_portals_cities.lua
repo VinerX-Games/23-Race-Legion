@@ -533,13 +533,13 @@ function PlayerBuilders()
                 
                 GroupRemoveUnit(gGroup, gUnit)
                 
-                -- ???????
-                if (AiData[pi][StringHash("T")] or 0) >= 12 then
+                -- Send to build if T < builder cap; else harvest
+                if (AiData[pi][StringHash("T")] or 0) >= 80 then
                     NumberAdd(pi , StringHash("HV"))
                     GroupAddUnit(udg_Ai_harvest[pi], gUnit)
                     GroupRemoveUnit(udg_Ai_builders[pi], gUnit)
                     IssueImmediateOrder(gUnit, "autoharvestlumber")
-                else -- ?????????
+                else -- build?
                     NumberAdd(pi , StringHash("T"))
                     GroupAddUnit(udg_Ai_buildersT[pi], gUnit)
                     GroupRemoveUnit(udg_Ai_builders[pi], gUnit)
@@ -569,12 +569,12 @@ function PlayerBuilders()
         end
         
         -- ???????? - ?? ??? ???????? ???? ???????
-        if (AiData[pi][StringHash("T")] or 0) < 12 then
+        if (AiData[pi][StringHash("T")] or 0) < 80 then
             Counter=0
             GroupEnumUnitsOfPlayer(gGroup, gPlayer, Harwest)
             
             while true do
-                if (AiData[pi][StringHash("T")] or 0) > 9 or (AiData[pi][StringHash("HV")] or 0) < 1 then break end
+                if (AiData[pi][StringHash("T")] or 0) > 77 or (AiData[pi][StringHash("HV")] or 0) < 1 then break end
             
                 
                 gUnit=BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
