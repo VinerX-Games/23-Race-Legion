@@ -60917,7 +60917,7 @@ function BrainProduce(pi, wm, race)
     local ordered = 0
     local maxN = AiBrainMaxProduce
     local totalMil = wm.armyCount or 0
-    if totalMil == 0 then return 0 end
+    if totalMil < 1 then totalMil = 1 end  -- avoid div/zero; train at least 1 of each
 
     -- Build deficit list: unitId → (currentRatio, targetRatio, buildingType)
     for unitId, targetRatio in pairs(comp) do
