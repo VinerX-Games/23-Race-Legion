@@ -8629,6 +8629,7 @@ function createAiPlayer(pi, raceToken)
 
 	udg_AiControl[pi] = true
 	ForceAddPlayerSimple(gPlayer, udg_Bots)
+	AiBrainBotListAdd(pi)
 	ProbeLogWrite("[AI] createAiPlayer bot added to Bots force, count=" .. tostring(CountPlayersInForceBJ(udg_Bots)))
 	--  Обычное появление и ресы
 
@@ -8682,16 +8683,18 @@ function createAiPlayer(pi, raceToken)
 	if not AiBrainEnabled(pi) then
 		StartTimerBJ(udg_TimerSmall, false, 1.11 * AiRepeat / 5)
 		ProbeLogWrite("[AI] createAiPlayer TimerSmall started period=" .. tostring(1.11 * AiRepeat / 5))
-	end
-	StartTimerBJ(udg_TimerSmall2, false, 2.12 * AiRepeat / 5)
-	ProbeLogWrite("[AI] createAiPlayer TimerSmall2 started period=" .. tostring(2.12 * AiRepeat / 5))
-	StartTimerBJ(udg_TimerSmall3, false, 3.13 * AiRepeat / 5)
-	ProbeLogWrite("[AI] createAiPlayer TimerSmall3 started period=" .. tostring(3.13 * AiRepeat / 5))
-	-- TimerSmall4 (navy join): disabled in brain mode; BrainNavalFocus handles it
-	if not AiBrainEnabled(pi) then
+		StartTimerBJ(udg_TimerSmall2, false, 2.12 * AiRepeat / 5)
+		ProbeLogWrite("[AI] createAiPlayer TimerSmall2 started period=" .. tostring(2.12 * AiRepeat / 5))
+		-- TimerSmall4 (navy join): disabled in brain mode; BrainNavalFocus handles it
 		StartTimerBJ(udg_TimerSmall4, false, 4.14 * AiRepeat / 5)
 		ProbeLogWrite("[AI] createAiPlayer TimerSmall4 started period=" .. tostring(4.14 * AiRepeat / 5))
+		else
+		-- Brain mode: start PlayerGet1 directly (round-robin, no ForcePickRandom)
+		TimerStart(udg_PlayerGet1, 0.8 * AiRepeat / 5, true, nil)
+		ProbeLogWrite("[AI] createAiPlayer PlayerGet1 started directly (brain round-robin) period=" .. tostring(0.8 * AiRepeat / 5))
 	end
+	StartTimerBJ(udg_TimerSmall3, false, 3.13 * AiRepeat / 5)
+	ProbeLogWrite("[AI] createAiPlayer TimerSmall3 started period=" .. tostring(3.13 * AiRepeat / 5))
 	StartTimerBJ(udg_AiTimerStrateg, true, 15.15 * AiRepeat / 5)
 	ProbeLogWrite("[AI] createAiPlayer AiTimerStrateg started period=" .. tostring(15.15 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerToChangeAi, false, 600.00)
@@ -48853,41 +48856,22 @@ end
 --===========================================================================
 -- ??????? ???????
 function PlayerArmy()
-    gInt=CountPlayersInForceBJ(udg_BotsActive)
-    if gInt == 0 then
-        PauseTimer(udg_PlayerGet1)
-        ResumeTimer(udg_TimerSmall2)
-        TimerStart(udg_TimerSmall2, 3 * AiRepeat / 5, false, nil)
-        if udg_Octhet then
-            DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
+    -- Round-robin: pick next N bots from AiBrainBotList (fair, no random)
+    local batch = AiBrainBatchSize or 1
+    local pis = AiBrainBotListNext(batch)
+    for _, pi_army in ipairs(pis) do
+        local p = Player(pi_army)
+        if AiBrainEnabled(pi_army) then
+            AiBrainArmyTick(pi_army, p)
+        else
+            AiArmyLegacyTick(p)
         end
-    else
-        -- Process N bots per tick (configurable via AiBrainBatchSize)
-        local batch = AiBrainBatchSize or 4
-        local processed = 0
-        while processed < batch and CountPlayersInForceBJ(udg_BotsActive) > 0 do
-            gPlayer=ForcePickRandomPlayer(udg_BotsActive)
-            local pi_army = GetPlayerId(gPlayer)
-            if not (AiData[pi_army][StringHash("Log_PlayerArmy")] or false) then
-                AiData[pi_army][StringHash("Log_PlayerArmy")] = true
-                ProbeLogWrite("[AI] PlayerArmy processing pi=" .. tostring(pi_army) .. " race=" .. tostring(AiRace[pi_army]))
-            end
-            ForceRemovePlayer(udg_BotsActive, gPlayer)
-            if AiBrainEnabled(pi_army) then
-                AiBrainArmyTick(pi_army, gPlayer)
-            else
-                AiArmyLegacyTick(gPlayer)
-            end
-            if not AiBrainEnabled(pi_army) and AiDiplomatEnabled then
-                local dt = (AiDiplomatTicks[pi_army] or 0) + 1
-                AiDiplomatTicks[pi_army] = dt
-                if (dt % 4) == 0 then AiDiplomatTick(pi_army) end
-            end
-            processed = processed + 1
+        if not AiBrainEnabled(pi_army) and AiDiplomatEnabled then
+            local dt = (AiDiplomatTicks[pi_army] or 0) + 1
+            AiDiplomatTicks[pi_army] = dt
+            if (dt % 4) == 0 then AiDiplomatTick(pi_army) end
         end
     end
-    
-    
 end
 --===========================================================================
 function InitTrig_PerebobArmy_Uni()
@@ -59858,6 +59842,44 @@ AiSquads = AiSquads or {}          -- [pi] = { [sid] = squad }   (Phase 2+)
 AiSquadSeq = AiSquadSeq or {}      -- [pi] = next squad id
 AiBrainForce = AiBrainForce or {}  -- [pi] = "objective"|"swarm" override (bridge/test)
 
+-- Round-robin cursor: fair distribution across bots (replaces ForcePickRandomPlayer)
+AiBrainBotList = AiBrainBotList or {}   -- [1..n] = pi, populated at createAiPlayer
+AiBrainCursor = AiBrainCursor or 1      -- current position in list
+
+--- Add a bot to the round-robin list (idempotent).
+function AiBrainBotListAdd(pi)
+    for _, existing in ipairs(AiBrainBotList) do
+        if existing == pi then return end
+    end
+    AiBrainBotList[#AiBrainBotList + 1] = pi
+end
+
+--- Remove a bot.
+function AiBrainBotListRemove(pi)
+    for i, existing in ipairs(AiBrainBotList) do
+        if existing == pi then
+            table.remove(AiBrainBotList, i)
+            if AiBrainCursor > #AiBrainBotList then AiBrainCursor = 1 end
+            return
+        end
+    end
+end
+
+--- Return next N player indices via round-robin.
+function AiBrainBotListNext(n)
+    local out = {}
+    local total = #AiBrainBotList
+    if total == 0 then return out end
+    n = n or 1
+    if AiBrainCursor > total then AiBrainCursor = 1 end
+    for _ = 1, n do
+        out[#out + 1] = AiBrainBotList[AiBrainCursor]
+        AiBrainCursor = AiBrainCursor + 1
+        if AiBrainCursor > total then AiBrainCursor = 1 end
+    end
+    return out
+end
+
 -- Tunables: set via bridge live (AiBrainBatchSize=6) or leave defaults.
 -- All values affect the unified brain tick only; swarm mode ignores them.
 AiBrainBatchSize       = AiBrainBatchSize       or 1   -- bots processed per PlayerGet1 fire
@@ -60957,6 +60979,25 @@ function BrainProduce(pi, wm, race)
 
         -- Find which building produces this unit
         for bldType, rows in pairs(prod) do
+            if bldType == "worker" then
+                if rows.id == unitId then
+                    for _, fromBldType in ipairs(rows.from) do
+                        local bld = AiFindProdBuilding(pi, fromBldType)
+                        if bld ~= nil then
+                            local cap = rows.cap or 999
+                            if getAiCount(pi, unitId) < cap then
+                                local key = pi * 1000000 + unitId
+                                if not g_AiOrdered[key] then
+                                    IssueImmediateOrderById(bld, unitId)
+                                    g_AiOrdered[key] = true
+                                    ordered = ordered + 1
+                                end
+                            end
+                        end
+                    end
+                end
+                goto skipBld
+            end
             if type(rows) ~= "table" then goto skipBld end
             for _, row in ipairs(rows) do
                 local uid = row[1]

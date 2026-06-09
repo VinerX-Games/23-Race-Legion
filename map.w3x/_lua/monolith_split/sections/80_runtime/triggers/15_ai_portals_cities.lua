@@ -635,41 +635,22 @@ end
 --===========================================================================
 -- ??????? ???????
 function PlayerArmy()
-    gInt=CountPlayersInForceBJ(udg_BotsActive)
-    if gInt == 0 then
-        PauseTimer(udg_PlayerGet1)
-        ResumeTimer(udg_TimerSmall2)
-        TimerStart(udg_TimerSmall2, 3 * AiRepeat / 5, false, nil)
-        if udg_Octhet then
-            DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
+    -- Round-robin: pick next N bots from AiBrainBotList (fair, no random)
+    local batch = AiBrainBatchSize or 1
+    local pis = AiBrainBotListNext(batch)
+    for _, pi_army in ipairs(pis) do
+        local p = Player(pi_army)
+        if AiBrainEnabled(pi_army) then
+            AiBrainArmyTick(pi_army, p)
+        else
+            AiArmyLegacyTick(p)
         end
-    else
-        -- Process N bots per tick (configurable via AiBrainBatchSize)
-        local batch = AiBrainBatchSize or 4
-        local processed = 0
-        while processed < batch and CountPlayersInForceBJ(udg_BotsActive) > 0 do
-            gPlayer=ForcePickRandomPlayer(udg_BotsActive)
-            local pi_army = GetPlayerId(gPlayer)
-            if not (AiData[pi_army][StringHash("Log_PlayerArmy")] or false) then
-                AiData[pi_army][StringHash("Log_PlayerArmy")] = true
-                ProbeLogWrite("[AI] PlayerArmy processing pi=" .. tostring(pi_army) .. " race=" .. tostring(AiRace[pi_army]))
-            end
-            ForceRemovePlayer(udg_BotsActive, gPlayer)
-            if AiBrainEnabled(pi_army) then
-                AiBrainArmyTick(pi_army, gPlayer)
-            else
-                AiArmyLegacyTick(gPlayer)
-            end
-            if not AiBrainEnabled(pi_army) and AiDiplomatEnabled then
-                local dt = (AiDiplomatTicks[pi_army] or 0) + 1
-                AiDiplomatTicks[pi_army] = dt
-                if (dt % 4) == 0 then AiDiplomatTick(pi_army) end
-            end
-            processed = processed + 1
+        if not AiBrainEnabled(pi_army) and AiDiplomatEnabled then
+            local dt = (AiDiplomatTicks[pi_army] or 0) + 1
+            AiDiplomatTicks[pi_army] = dt
+            if (dt % 4) == 0 then AiDiplomatTick(pi_army) end
         end
     end
-    
-    
 end
 --===========================================================================
 function InitTrig_PerebobArmy_Uni()

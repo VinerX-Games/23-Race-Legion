@@ -186,6 +186,7 @@ function createAiPlayer(pi, raceToken)
 
 	udg_AiControl[pi] = true
 	ForceAddPlayerSimple(gPlayer, udg_Bots)
+	AiBrainBotListAdd(pi)
 	ProbeLogWrite("[AI] createAiPlayer bot added to Bots force, count=" .. tostring(CountPlayersInForceBJ(udg_Bots)))
 	--  Обычное появление и ресы
 
@@ -239,16 +240,18 @@ function createAiPlayer(pi, raceToken)
 	if not AiBrainEnabled(pi) then
 		StartTimerBJ(udg_TimerSmall, false, 1.11 * AiRepeat / 5)
 		ProbeLogWrite("[AI] createAiPlayer TimerSmall started period=" .. tostring(1.11 * AiRepeat / 5))
-	end
-	StartTimerBJ(udg_TimerSmall2, false, 2.12 * AiRepeat / 5)
-	ProbeLogWrite("[AI] createAiPlayer TimerSmall2 started period=" .. tostring(2.12 * AiRepeat / 5))
-	StartTimerBJ(udg_TimerSmall3, false, 3.13 * AiRepeat / 5)
-	ProbeLogWrite("[AI] createAiPlayer TimerSmall3 started period=" .. tostring(3.13 * AiRepeat / 5))
-	-- TimerSmall4 (navy join): disabled in brain mode; BrainNavalFocus handles it
-	if not AiBrainEnabled(pi) then
+		StartTimerBJ(udg_TimerSmall2, false, 2.12 * AiRepeat / 5)
+		ProbeLogWrite("[AI] createAiPlayer TimerSmall2 started period=" .. tostring(2.12 * AiRepeat / 5))
+		-- TimerSmall4 (navy join): disabled in brain mode; BrainNavalFocus handles it
 		StartTimerBJ(udg_TimerSmall4, false, 4.14 * AiRepeat / 5)
 		ProbeLogWrite("[AI] createAiPlayer TimerSmall4 started period=" .. tostring(4.14 * AiRepeat / 5))
+		else
+		-- Brain mode: start PlayerGet1 directly (round-robin, no ForcePickRandom)
+		TimerStart(udg_PlayerGet1, 0.8 * AiRepeat / 5, true, nil)
+		ProbeLogWrite("[AI] createAiPlayer PlayerGet1 started directly (brain round-robin) period=" .. tostring(0.8 * AiRepeat / 5))
 	end
+	StartTimerBJ(udg_TimerSmall3, false, 3.13 * AiRepeat / 5)
+	ProbeLogWrite("[AI] createAiPlayer TimerSmall3 started period=" .. tostring(3.13 * AiRepeat / 5))
 	StartTimerBJ(udg_AiTimerStrateg, true, 15.15 * AiRepeat / 5)
 	ProbeLogWrite("[AI] createAiPlayer AiTimerStrateg started period=" .. tostring(15.15 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerToChangeAi, false, 600.00)

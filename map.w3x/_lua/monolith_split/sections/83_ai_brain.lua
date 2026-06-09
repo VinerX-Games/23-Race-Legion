@@ -13,6 +13,44 @@ AiSquads = AiSquads or {}          -- [pi] = { [sid] = squad }   (Phase 2+)
 AiSquadSeq = AiSquadSeq or {}      -- [pi] = next squad id
 AiBrainForce = AiBrainForce or {}  -- [pi] = "objective"|"swarm" override (bridge/test)
 
+-- Round-robin cursor: fair distribution across bots (replaces ForcePickRandomPlayer)
+AiBrainBotList = AiBrainBotList or {}   -- [1..n] = pi, populated at createAiPlayer
+AiBrainCursor = AiBrainCursor or 1      -- current position in list
+
+--- Add a bot to the round-robin list (idempotent).
+function AiBrainBotListAdd(pi)
+    for _, existing in ipairs(AiBrainBotList) do
+        if existing == pi then return end
+    end
+    AiBrainBotList[#AiBrainBotList + 1] = pi
+end
+
+--- Remove a bot.
+function AiBrainBotListRemove(pi)
+    for i, existing in ipairs(AiBrainBotList) do
+        if existing == pi then
+            table.remove(AiBrainBotList, i)
+            if AiBrainCursor > #AiBrainBotList then AiBrainCursor = 1 end
+            return
+        end
+    end
+end
+
+--- Return next N player indices via round-robin.
+function AiBrainBotListNext(n)
+    local out = {}
+    local total = #AiBrainBotList
+    if total == 0 then return out end
+    n = n or 1
+    if AiBrainCursor > total then AiBrainCursor = 1 end
+    for _ = 1, n do
+        out[#out + 1] = AiBrainBotList[AiBrainCursor]
+        AiBrainCursor = AiBrainCursor + 1
+        if AiBrainCursor > total then AiBrainCursor = 1 end
+    end
+    return out
+end
+
 -- Tunables: set via bridge live (AiBrainBatchSize=6) or leave defaults.
 -- All values affect the unified brain tick only; swarm mode ignores them.
 AiBrainBatchSize       = AiBrainBatchSize       or 1   -- bots processed per PlayerGet1 fire
@@ -1112,6 +1150,25 @@ function BrainProduce(pi, wm, race)
 
         -- Find which building produces this unit
         for bldType, rows in pairs(prod) do
+            if bldType == "worker" then
+                if rows.id == unitId then
+                    for _, fromBldType in ipairs(rows.from) do
+                        local bld = AiFindProdBuilding(pi, fromBldType)
+                        if bld ~= nil then
+                            local cap = rows.cap or 999
+                            if getAiCount(pi, unitId) < cap then
+                                local key = pi * 1000000 + unitId
+                                if not g_AiOrdered[key] then
+                                    IssueImmediateOrderById(bld, unitId)
+                                    g_AiOrdered[key] = true
+                                    ordered = ordered + 1
+                                end
+                            end
+                        end
+                    end
+                end
+                goto skipBld
+            end
             if type(rows) ~= "table" then goto skipBld end
             for _, row in ipairs(rows) do
                 local uid = row[1]
