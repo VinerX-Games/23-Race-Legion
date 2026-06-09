@@ -340,137 +340,85 @@ function Trig_Undermining_Conditions()
     return GetSpellAbilityId() == UnSkill
 end
 --================================================================================================================================================================================
--- ???? 3 - ???????????? ??????
---================
-function Trig_Undermining_move_units()
-    local t= GetExpiredTimer()
-    local h= GetHandleId(t)
-    local GT= LoadUnitHandle(Hash, h, 1)
-    local un= LoadUnitHandle(Hash, h, 2)
-    local kol= LoadInteger(Hash, h, 3)
-    local lvl
-    local uron
-    ---------
-    SetUnitFlyHeight(un, kol * 20, 0)
-    if LoadBoolean(Hash, h, 4) then
-        kol=kol + 1
-        SaveInteger(Hash, h, 3, kol)
-        if kol >= 13 then
-            SaveBoolean(Hash, h, 4, false)
-        end
-    else
-        kol=kol - 1
-        SaveInteger(Hash, h, 3, kol)
-        if kol <= 1 then
-            SetUnitFlyHeight(un, 0, 0)
-            DestroyTimer(t)
-            FlushChildHashtable(Hash, h)
-            lvl=GetUnitAbilityLevel(GT, UnSkill)
-            uron=UnKofDmg1 * lvl * GetHeroStr(GT, true) + lvl * UnKofDmg2
-            UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
-            DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsDemonDemonBoltImpactDemonBoltImpact.mdl", un, "orign"))
-        end
-    end
-    ---------
-    GT=nil
-    un=nil
-end
---================================================================================================================================================================================
--- ???? 2 - ??????? ?????
---================
-function Trig_Undermining_move_hero()
-    local t= GetExpiredTimer()
-    local h= GetHandleId(t)
-    local GT= LoadUnitHandle(Hash, h, 1)
-    local l= LoadReal(Hash, h, 2)
-    local g= LoadGroupHandle(Hash, h, 3)
-    local x1= LoadReal(Hash, h, 4)
-    local y1= LoadReal(Hash, h, 5)
-    local gg= LoadGroupHandle(Hash, h, 7)
-    local dx= GetUnitX(GT)
-    local dy= GetUnitY(GT)
-    local un
-    local x
-    local y
-    local ugol= UnUgolMT(dx , x1 , dy , y1)
-    local t1
-    local h1
-    ---------
-    x=dx + 70 * Cos(ugol * bj_DEGTORAD)
-    y=dy + 70 * Sin(ugol * bj_DEGTORAD)
-    if UnRastMT(x1 , dx , y1 , dy) > 70 and not IsTerrainPathable(x, y, PATHING_TYPE_FLYABILITY) then
-        SetUnitX(GT, x)
-        SetUnitY(GT, y)
-        SetUnitFacing(GT, ugol)
-        --------------------------------------
-        GroupClear(gg)
-        GroupEnumUnitsInRange(gg, x, y, 150, nil)
-        while true do
-            un=FirstOfGroup(gg)
-            if un == nil then break end
-            if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) and not IsUnitInGroup(un, g) then
-                UnitAddAbility(un, FourCC('Amrf'))
-                UnitRemoveAbility(un, FourCC('Amrf'))
-                t1=CreateTimer()
-                h1=GetHandleId(t1)
-                SaveUnitHandle(Hash, h1, 1, GT)
-                SaveUnitHandle(Hash, h1, 2, un)
-                SaveInteger(Hash, h1, 3, 1)
-                SaveBoolean(Hash, h1, 4, true)
-                GroupAddUnit(g, un)
-                TimerStart(t1, 0.02, true, Trig_Undermining_move_units)
-            end
-            GroupRemoveUnit(gg, un)
-        end
-        -----------------------------------------
-    else
-        DestroyGroup(g)
-        DestroyGroup(gg)
-        DestroyTimer(t)
-        FlushChildHashtable(Hash, h)
-        SetUnitFlyHeight(GT, 0, 0)
-        DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", dx, dy))
-        PauseUnit(GT, false)
-        ShowUnit(GT, true)
-        SelectUnitAddForPlayer(GT, GetOwningPlayer(GT))
-    end
-    ---------
-    GT=nil
-    un=nil
-    g=nil
-    gg=nil
-    t=nil
-    t1=nil
-end
---================================================================================================================================================================================
 -- ???? 2 - ???????? ???????
 --================
 function Trig_Undermining_Actions()
     local GT= GetTriggerUnit()
-    local t= CreateTimer()
-    local h= GetHandleId(t)
     local x= GetUnitX(GT)
     local y= GetUnitY(GT)
     local x1= GetSpellTargetX()
     local y1= GetSpellTargetY()
     local l= UnRastMT(x , x1 , y , y1)
     ---------
-    --call BJDebugMsg("")
-    SaveUnitHandle(Hash, h, 1, GT)
-    SaveReal(Hash, h, 2, l)
-    -- ??????????? ????
     SetSoundPosition(gg_snd_ImpaleHit, x, y, 0)
     SetSoundVolume(gg_snd_ImpaleHit, PercentToInt(100, 127))
     PlaySoundBJ(gg_snd_ImpaleHit)
     ------
-    SaveGroupHandle(Hash, h, 3, CreateGroup())
-    SaveGroupHandle(Hash, h, 7, CreateGroup())
-    SaveReal(Hash, h, 4, x1)
-    SaveReal(Hash, h, 5, y1)
+    local g= CreateGroup()       -- hit tracking
+    local gg= CreateGroup()      -- enum reuse
     PauseUnit(GT, true)
     ShowUnit(GT, false)
     DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.055, true, Trig_Undermining_move_hero) --???????? ???????? ?????
+    local t= CreateTimer()
+    TimerStart(t, 0.055, true, function()
+        local dx= GetUnitX(GT)
+        local dy= GetUnitY(GT)
+        local ugol= UnUgolMT(dx , x1 , dy , y1)
+        ---------
+        local nx=dx + 70 * Cos(ugol * bj_DEGTORAD)
+        local ny=dy + 70 * Sin(ugol * bj_DEGTORAD)
+        if UnRastMT(x1 , dx , y1 , dy) > 70 and not IsTerrainPathable(nx, ny, PATHING_TYPE_FLYABILITY) then
+            SetUnitX(GT, nx)
+            SetUnitY(GT, ny)
+            SetUnitFacing(GT, ugol)
+            --------------------------------------
+            GroupClear(gg)
+            GroupEnumUnitsInRange(gg, nx, ny, 150, nil)
+            while true do
+                local un=FirstOfGroup(gg)
+                if un == nil then break end
+                if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) and not IsUnitInGroup(un, g) then
+                    UnitAddAbility(un, FourCC('Amrf'))
+                    UnitRemoveAbility(un, FourCC('Amrf'))
+                    GroupAddUnit(g, un)
+                    local subUn = un
+                    local subKol = 1
+                    local subUpward = true
+                    local subTimer = CreateTimer()
+                    TimerStart(subTimer, 0.02, true, function()
+                        SetUnitFlyHeight(subUn, subKol * 20, 0)
+                        if subUpward then
+                            subKol = subKol + 1
+                            if subKol >= 13 then
+                                subUpward = false
+                            end
+                        else
+                            subKol = subKol - 1
+                            if subKol <= 1 then
+                                SetUnitFlyHeight(subUn, 0, 0)
+                                DestroyTimer(subTimer)
+                                local lvl=GetUnitAbilityLevel(GT, UnSkill)
+                                local uron=UnKofDmg1 * lvl * GetHeroStr(GT, true) + lvl * UnKofDmg2
+                                UnitDamageTarget(GT, subUn, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
+                                DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsDemonDemonBoltImpactDemonBoltImpact.mdl", subUn, "orign"))
+                            end
+                        end
+                    end)
+                end
+                GroupRemoveUnit(gg, un)
+            end
+            -----------------------------------------
+        else
+            DestroyGroup(g)
+            DestroyGroup(gg)
+            DestroyTimer(t)
+            SetUnitFlyHeight(GT, 0, 0)
+            DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", dx, dy))
+            PauseUnit(GT, false)
+            ShowUnit(GT, true)
+            SelectUnitAddForPlayer(GT, GetOwningPlayer(GT))
+        end
+    end)
     ---------
     GT=nil
     t=nil

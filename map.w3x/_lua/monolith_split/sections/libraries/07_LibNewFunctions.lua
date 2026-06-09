@@ -95,40 +95,16 @@ function Random(Chance, FromAll)
 end
 -- ***************************************************************************
 -- *  RemoveAbilityTimed
----@return nothing
-function RemoveTimedAbilityAct()
-	
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	UnitRemoveAbility(LoadUnitHandle(Hash, id, 1), LoadInteger(Hash, id, 2))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
-end
 ---@param u unit
 ---@param abilid integer
 ---@param time real
 ---@return nothing
 function RemoveAbilityTimed(u, abilid, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, RemoveTimedAbilityAct)
-	SaveUnitHandle(Hash, id, 1, u)
-	SaveInteger(Hash, id, 2, abilid)
-	u = nil
-	t = nil
-end
----@return nothing
-function AddTimedAbilityAct()
-	
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	UnitAddAbility(LoadUnitHandle(Hash, id, 1), LoadInteger(Hash, id, 2))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
+	TimerStart(t, time, false, function()
+		UnitRemoveAbility(u, abilid)
+		DestroyTimer(t)
+	end)
 end
 ---@param u unit
 ---@param abilid integer
@@ -136,29 +112,10 @@ end
 ---@return nothing
 function AddAbilityTimed(u, abilid, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, AddTimedAbilityAct)
-	SaveUnitHandle(Hash, id, 1, u)
-	SaveInteger(Hash, id, 2, abilid)
-	u = nil
-	t = nil
-end
----@return nothing
-function RemoveTimedAbilityActCD()
-	
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	local aid = LoadInteger(Hash, id, 2)
-	local u = LoadUnitHandle(Hash, id, 1)
-	if BlzGetUnitAbilityCooldownRemaining(u, aid) == 0 then
-		UnitRemoveAbility(u, aid)
-	end
-	
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	u = nil
-	
+	TimerStart(t, time, false, function()
+		UnitAddAbility(u, abilid)
+		DestroyTimer(t)
+	end)
 end
 ---@param u unit
 ---@param abilid integer
@@ -166,36 +123,24 @@ end
 ---@return nothing
 function RemoveAbilityTimedCD(u, abilid, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, RemoveTimedAbilityActCD)
-	SaveUnitHandle(Hash, id, 1, u)
-	SaveInteger(Hash, id, 2, abilid)
-	u = nil
-	t = nil
+	TimerStart(t, time, false, function()
+		if BlzGetUnitAbilityCooldownRemaining(u, abilid) == 0 then
+			UnitRemoveAbility(u, abilid)
+		end
+		DestroyTimer(t)
+	end)
 end
 -- ***************************************************************************
 -- *  RemoveEffectTimed
----@return nothing
-function RemoveEffectTimedAct()
-	
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	DestroyEffect(LoadEffectHandle(Hash, id, 1))
-	FlushChildHashtable(Hash, id)
-	DestroyTimer(t)
-	t = nil
-	
-end
 ---@param e effect
 ---@param time real
 ---@return nothing
 function RemoveEffectTimed(e, time)
 	local t = CreateTimer()
-	local id = GetHandleId(t)
-	TimerStart(t, time, false, RemoveEffectTimedAct)
-	SaveEffectHandle(Hash, id, 1, e)
-	e = nil
-	t = nil
+	TimerStart(t, time, false, function()
+		DestroyEffect(e)
+		DestroyTimer(t)
+	end)
 end
 -- ***************************************************************************
 -- *  CapitalFunctions

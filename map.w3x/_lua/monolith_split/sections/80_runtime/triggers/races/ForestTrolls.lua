@@ -56,108 +56,65 @@ end
 --    set t = null
 --endfunction
 --================================================================================================================================================================================
--- ???? 2 - ??????? ?????
---================
-function Trig_Charge_move_hero()
-    local t= GetExpiredTimer()
-    local h= GetHandleId(t)
-    local GT= LoadUnitHandle(Hash, h, 1)
-    local l= LoadReal(Hash, h, 2)
-    local g
-    local x1= LoadReal(Hash, h, 4)
-    local y1= LoadReal(Hash, h, 5)
-    local dx= GetUnitX(GT)
-    local dy= GetUnitY(GT)
-    local un
-    local x
-    local y
-    local uron
-    local lvl
-    local w
-    local ugol= JSTRUgolMT(dx , x1 , dy , y1)
-    local MaxW
-    if l <= 500 then
-        MaxW=l
-    else
-        MaxW=500
-    end
-    ---------
-    x=dx + 25 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
-    y=dy + 25 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
-    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --????????? ??????
-    
-    -- ???? ????? ????
-    if JSTRRastMT(x1 , dx , y1 , dy) > 25 then --and not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
-        -- ??????? ?????
-        SetUnitX(GT, x)
-        SetUnitY(GT, y)
-        SetUnitFacing(GT, ugol)
-        --call SetUnitFlyHeight(GT, w, 0)
-    else
-        DestroyTimer(t)
-        FlushChildHashtable(Hash, h)
-        SetUnitAnimation(GT, "attack")
-        --call SetUnitFlyHeight(GT, 0, 0)
-        DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
-        g=CreateGroup()
-        GroupEnumUnitsInRange(g, dx, dy, 260, nil)
-        while true do
-            un=FirstOfGroup(g)
-            if un == nil then break end
-            lvl=GetUnitAbilityLevel(GT, JSTRSkill)
-            
-            -- ????? - ???????? ?? ?????
-            if IsUnitType(GT, UNIT_TYPE_HERO) then
-                uron=JSTRKofDmg1 * lvl * GetHeroStr(GT, true) + lvl * JSTRKofDmg2
-            else
-                uron=lvl * JSTRKofDmg2 * 4
-            end
-            
-            if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) then
-                UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
-                DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
-            end
-            GroupRemoveUnit(g, un)
-        end
-        DestroyGroup(g)
-    end
-    ---------
-    GT=nil
-    un=nil
-    g=nil
-    t=nil
-end
---================================================================================================================================================================================
 -- ???? 2 - ???????? ???????
 --================
 function Trig_Charge_Actions()
     local GT= GetTriggerUnit()
-    --local group g = CreateGroup()
-    local t= CreateTimer()
-    local h= GetHandleId(t)
     local x= GetUnitX(GT)
     local y= GetUnitY(GT)
     local x1= GetSpellTargetX()
     local y1= GetSpellTargetY()
     local l= JSTRRastMT(x , x1 , y , y1)
-    
+    if l == 0 then l = 1 end
+
     JSTRSkill=GetSpellAbilityId()
+    local skillId = JSTRSkill
     UnitAddAbility(GT, FourCC('Amrf'))
     UnitRemoveAbility(GT, FourCC('Amrf'))
     ---------
-    SaveUnitHandle(Hash, h, 1, GT)
-    if l ~= 0 then
-        SaveReal(Hash, h, 2, l)
-    else
-        SaveReal(Hash, h, 2, 1)
-    end
-    SaveReal(Hash, h, 4, x1)
-    SaveReal(Hash, h, 5, y1)
-    --call DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.025, true, Trig_Charge_move_hero) --???????? ???????? ?????
+    local t= CreateTimer()
+    TimerStart(t, 0.025, true, function()
+        local dx= GetUnitX(GT)
+        local dy= GetUnitY(GT)
+        local ugol= JSTRUgolMT(dx , x1 , dy , y1)
+        local MaxW
+        if l <= 500 then MaxW=l else MaxW=500 end
+        ---------
+        local nx=dx + 25 * Cos(ugol * bj_DEGTORAD)
+        local ny=dy + 25 * Sin(ugol * bj_DEGTORAD)
+        local w=JSTRParabolaZ(MaxW , l , JSTRRastMT(nx , x1 , ny , y1))
+
+        if JSTRRastMT(x1 , dx , y1 , dy) > 25 then
+            SetUnitX(GT, nx)
+            SetUnitY(GT, ny)
+            SetUnitFacing(GT, ugol)
+        else
+            DestroyTimer(t)
+            SetUnitAnimation(GT, "attack")
+            DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
+            local g=CreateGroup()
+            GroupEnumUnitsInRange(g, dx, dy, 260, nil)
+            while true do
+                local un=FirstOfGroup(g)
+                if un == nil then break end
+                local lvl=GetUnitAbilityLevel(GT, skillId)
+                local uron
+                if IsUnitType(GT, UNIT_TYPE_HERO) then
+                    uron=JSTRKofDmg1 * lvl * GetHeroStr(GT, true) + lvl * JSTRKofDmg2
+                else
+                    uron=lvl * JSTRKofDmg2 * 4
+                end
+                if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) then
+                    UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
+                    DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
+                end
+                GroupRemoveUnit(g, un)
+            end
+            DestroyGroup(g)
+        end
+    end)
     ---------
     GT=nil
-    --set g = null
     t=nil
 end
 --===========================================================================
