@@ -3,7 +3,7 @@
 -- Trigger: Leave Ot
 --===========================================================================
 function Trig_Leave_Ot_Func005C()
-    return IsTriggerEnabled(gg_trg_FeodalDead2)
+    return IsTriggerEnabled(gg_trg_FeodalDead)
 end
 function Trig_Leave_Ot_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())

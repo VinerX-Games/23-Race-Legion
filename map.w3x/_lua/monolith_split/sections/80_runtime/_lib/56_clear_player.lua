@@ -45,6 +45,41 @@ function ClearPlayer(p)
 	playerCapital[pi] = nil
 	ArmyExp[pi] = 0.0
 	
+	-- Vassal cleanup when in Feoda mode
+	if IsTriggerEnabled(gg_trg_FeodalDead) and CountPlayersInForceBJ(Vassals[pi]) > 0 then
+		local inheritedSenior = Senior[pi]
+		if FeodalVassalMode == 1 then
+			-- Mode 1: transfer vassals to the senior's senior
+			if inheritedSenior ~= nil then
+				local inheritedPi = GetPlayerId(inheritedSenior)
+				ForForce(Vassals[pi], function()
+					local v = GetEnumPlayer()
+					local vi = GetPlayerId(v)
+					ClearOldAllies(v)
+					Senior[vi] = inheritedSenior
+					ForceAddPlayer(Vassals[inheritedPi], v)
+					NewAlly(v)
+				end)
+				DisplayTextToForce(udg_AllPlayers, GetPlayerName(inheritedSenior) .. " inherited vassals of dead player " .. GetPlayerName(p))
+			else
+				-- No senior — free all vassals
+				ForForce(Vassals[pi], Freedom)
+			end
+		else
+			-- Mode 2: all vassals are eliminated
+			ForForce(Vassals[pi], function()
+				local v = GetEnumPlayer()
+				ClearPlayer(v)
+			end)
+			DisplayTextToForce(udg_AllPlayers, "Vassals of dead player " .. GetPlayerName(p) .. " are eliminated!")
+		end
+		-- Remove ourselves from our senior's vassal force
+		if inheritedSenior ~= nil then
+			ForceRemovePlayer(Vassals[GetPlayerId(inheritedSenior)], Player(pi))
+		end
+	end
+	ForceClear(Vassals[pi])
+	Senior[pi] = nil
 	
 	DestroyGroup(g)
 	g = nil

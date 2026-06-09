@@ -95,12 +95,6 @@ function InitGlobals()
 	
 	udg_Kol_voUnitod = 0
 	udg_StolicaGroups = CreateGroup()
-	i = 0
-	while true do
-		if i > 25 then break end
-		udg_Vassals[i] = CreateForce()
-		i = i + 1
-	end
 	
 	i = 0
 	while true do

@@ -135,7 +135,7 @@ function Trig_Kill_Func002A()
         if IsUnitInGroup(GetEnumUnit(), udg_StolicaGroups) and GetOwningPlayer(GetEnumUnit()) == GetTriggerPlayer() then
             
             if udg_GameMode == 2 then
-                SetUnitLifePercentBJ(GetEnumUnit(), 15.00)
+                HandleVassalization(GetEnumUnit(), GetTriggerPlayer())
             else
                 KillUnit(GetEnumUnit())
                 udg_LocalPlayer=GetTriggerPlayer()
@@ -970,42 +970,6 @@ function InitTrig_KillTestUnits_Command()
     gg_trg_KillTestUnits_Command=CreateTrigger()
     TriggerRegisterPlayerChatEvent(gg_trg_KillTestUnits_Command, Player(0), "kill", true)
     TriggerAddAction(gg_trg_KillTestUnits_Command, Trig_KillTestUnits_Command_Actions)
-end
---===========================================================================
--- Trigger: Player2VassalTo1 Back Copy
---===========================================================================
-function Trig_Player2VassalTo1_Back_Copy_Conditions()
-    return (( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) >= 1 )) and (( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) <= 24 ))
-end
-function Trig_Player2VassalTo1_Back_Copy_Actions()
-    udg_LocalInteger=S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5))
-    SetPlayerAllianceStateBJ(ConvertedPlayer(udg_LocalInteger), Player(0), bj_ALLIANCE_UNALLIED)
-end
---===========================================================================
-function InitTrig_Player2VassalTo1_Back_Copy()
-    gg_trg_Player2VassalTo1_Back_Copy=CreateTrigger()
-    DisableTrigger(gg_trg_Player2VassalTo1_Back_Copy)
-    TriggerRegisterPlayerChatEvent(gg_trg_Player2VassalTo1_Back_Copy, Player(0), " - dv", false)
-    TriggerAddCondition(gg_trg_Player2VassalTo1_Back_Copy, Condition(Trig_Player2VassalTo1_Back_Copy_Conditions))
-    TriggerAddAction(gg_trg_Player2VassalTo1_Back_Copy, Trig_Player2VassalTo1_Back_Copy_Actions)
-end
---===========================================================================
--- Trigger: Player2VassalTo1 Copy
---===========================================================================
-function Trig_Player2VassalTo1_Copy_Conditions()
-    return (( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) >= 1 )) and (( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) <= 24 ))
-end
-function Trig_Player2VassalTo1_Copy_Actions()
-    udg_LocalInteger=S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5))
-    SetPlayerAllianceStateBJ(ConvertedPlayer(udg_LocalInteger), Player(0), bj_ALLIANCE_ALLIED_ADVUNITS)
-end
---===========================================================================
-function InitTrig_Player2VassalTo1_Copy()
-    gg_trg_Player2VassalTo1_Copy=CreateTrigger()
-    DisableTrigger(gg_trg_Player2VassalTo1_Copy)
-    TriggerRegisterPlayerChatEvent(gg_trg_Player2VassalTo1_Copy, Player(0), " - vs", false)
-    TriggerAddCondition(gg_trg_Player2VassalTo1_Copy, Condition(Trig_Player2VassalTo1_Copy_Conditions))
-    TriggerAddAction(gg_trg_Player2VassalTo1_Copy, Trig_Player2VassalTo1_Copy_Actions)
 end
 --===========================================================================
 -- Trigger: Visible Copy

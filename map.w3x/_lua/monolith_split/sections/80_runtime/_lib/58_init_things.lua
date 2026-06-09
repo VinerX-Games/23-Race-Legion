@@ -17,3 +17,28 @@ function InitThings()
 	
 	
 end
+
+-- ===========================================================================
+-- FeodalSetVassalMode — Chat command to switch vassal inheritance mode
+-- ===========================================================================
+---@return nothing
+function FeodalSetVassalMode()
+	local msg = GetEventPlayerChatString()
+	local mode = tonumber(string.sub(msg, 11))
+	if mode == 1 then
+		FeodalVassalMode = 1
+		DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "Vassal inheritance: TRANSFER to senior's senior")
+	elseif mode == 2 then
+		FeodalVassalMode = 2
+		DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "Vassal inheritance: ALL VASSALS LOSE")
+	end
+end
+
+---@return nothing
+function InitTrig_FeodalVassalMode()
+	local trig = CreateTrigger()
+	for i = 0, 23 do
+		TriggerRegisterPlayerChatEvent(trig, Player(i), "-feodmode ", false)
+	end
+	TriggerAddAction(trig, FeodalSetVassalMode)
+end
