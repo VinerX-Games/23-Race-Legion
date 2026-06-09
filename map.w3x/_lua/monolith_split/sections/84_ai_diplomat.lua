@@ -227,12 +227,241 @@ end
 ---@param targetPi integer
 ---@param msg string
 function DipChat(pi, targetPi, msg)
-    local p = Player(pi)
-    local race = AiRaceOf(pi)
-    local name = (race and race.key) or tostring(pi)
-    local full = "[" .. name .. "] " .. msg
+    local full = DiplomatName(pi) .. " " .. msg
     DisplayTimedTextToPlayer(Player(targetPi), 0, 0, 10.0, full)
     DipLog(pi, "chat to " .. tostring(targetPi) .. ": " .. msg)
+end
+
+-- ====================================================================
+-- RP message tables: per-personality flavour quotes for each event.
+-- Picks a random entry from the appropriate table.
+-- Format: AiDiplomatRpMessages[personality][event] = { "msg1", ... }
+-- Events: allyPropose, allyAccept, allyBreak, trade, idle, underAttack
+-- ====================================================================
+AiDiplomatRpMessages = {
+    diplomat = {
+        allyPropose = {
+            "Together we shall prosper.",
+            "I sense a fruitful partnership ahead.",
+            "Let us build bridges, not walls.",
+            "An alliance of mutual benefit.",
+        },
+        allyAccept = {
+            "A new chapter of friendship begins!",
+            "Together, nothing can stop us.",
+            "Our combined strength will be legendary.",
+            "I welcome you as a true friend.",
+        },
+        allyBreak  = {
+            "Perhaps another time, another place.",
+            "The road ahead parts here.",
+            "Our purposes no longer align.",
+            "Farewell, old friend. May we meet again in peace.",
+        },
+        trade = {
+            "A gift from a friend. No strings attached.",
+            "For your prosperity — and ours.",
+            "Share and share alike!",
+        },
+        idle = {
+            "Trade caravans report all is well.",
+            "The markets are stable. A good sign.",
+            "Diplomacy is the greatest weapon.",
+        },
+        underAttack = {
+            "We are under siege! Honoured allies, we need your aid!",
+            "The enemy is at our gates! Any help is welcome!",
+        },
+    },
+    pragmatic = {
+        allyPropose = {
+            "Our interests align. Let us act on it.",
+            "The enemy of my enemy... you know the rest.",
+            "A temporary coalition. Nothing more.",
+        },
+        allyAccept = {
+            "A strategic decision. Do not make me regret it.",
+            "Very well. We stand together — for now.",
+            "This alliance serves us both. Remember that.",
+        },
+        allyBreak  = {
+            "The calculation has changed. We part ways.",
+            "Circumstances no longer favour this union.",
+            "Our priorities have shifted. Farewell.",
+        },
+        trade = {
+            "Strategic resources. Use them wisely.",
+            "A calculated investment.",
+            "Spend it well. I expect results.",
+        },
+        idle = {
+            "The balance of power is... acceptable for now.",
+            "We watch. We wait. We calculate.",
+            "Every alliance is a transaction.",
+        },
+        underAttack = {
+            "We are under assault. Any capable hands, rally to us!",
+            "Defensive protocols engaged. Allies, your turn.",
+        },
+    },
+    traitor = {
+        allyPropose = {
+            "Trust me... for now.",
+            "An alliance of convenience, shall we say?",
+            "I have a proposition you cannot refuse.",
+        },
+        allyAccept = {
+            "Ah, a new... friend. How delightful.",
+            "Yes, yes. Together we shall conquer!",
+            "Your trust is noted. I shall use it... wisely.",
+        },
+        allyBreak  = {
+            "Did you really think we were friends?",
+            "Your usefulness has... expired.",
+            "A knife in the back is still a weapon.",
+            "Nothing personal. Just business.",
+        },
+        trade = {
+            "Take it. The price comes later.",
+            "A token of my... appreciation.",
+        },
+        idle = {
+            "The strong prey on the weak. It is the way of things.",
+            "Opportunity is everywhere. One must simply seize it.",
+            "Loyalty is a currency. Spend it freely, save it wisely.",
+        },
+        underAttack = {
+            "Imbeciles! They dare strike at us!",
+            "They will pay for this insolence!",
+        },
+    },
+    isolationist = {
+        allyPropose = {
+            "We have no need of outsiders.",
+            "Your kind is not welcome here.",
+            "Do not waste your breath.",
+        },
+        allyAccept = {
+            "... unexpected, but acceptable.",
+            "Do not overstep your bounds.",
+        },
+        allyBreak  = {
+            "As it was meant to be.",
+            "The solitude returns. Good.",
+        },
+        trade = {
+            "Do not expect gratitude.",
+            "Do not expect this again.",
+        },
+        idle = {
+            "The outside world is irrelevant.",
+            "Isolation is our greatest strength.",
+        },
+        underAttack = {
+            "Intruders! Defend the brood at all costs!",
+            "Our lands are being violated!",
+        },
+    },
+    loyal = {
+        allyPropose = {
+            "Honour calls us to stand together.",
+            "A bond forged in trust is unbreakable.",
+            "Let our oath be eternal.",
+        },
+        allyAccept = {
+            "By my honour, we are now one.",
+            "I swear to defend our alliance with my life.",
+            "Till the end of days, we stand united.",
+        },
+        allyBreak  = {
+            "A heavy decision, but a necessary one.",
+            "Nothing lasts forever. Not even honour.",
+            "I release you from our bond.",
+        },
+        trade = {
+            "For the cause. Always.",
+            "My sword, my gold — all for our covenant.",
+        },
+        idle = {
+            "Vigilance and honour guide our path.",
+            "True strength comes from unity.",
+            "We remember every debt, every kindness.",
+        },
+        underAttack = {
+            "To arms, brothers! The enemy approaches!",
+            "Our sacred lands are under threat! Rally to us!",
+        },
+    },
+    balanced = {
+        allyPropose = {
+            "Let us hunt together.",
+            "Strength in numbers. Always.",
+            "An alliance could benefit us both.",
+        },
+        allyAccept = {
+            "A worthy partner. Let us begin.",
+            "Together we are stronger.",
+            "I welcome this new alliance.",
+        },
+        allyBreak  = {
+            "The time has come to part ways.",
+            "We walk our own path now.",
+            "Our alliance is no longer needed.",
+        },
+        trade = {
+            "Take it. You need it more.",
+            "A fair exchange for a true ally.",
+        },
+        idle = {
+            "The wilds are quiet today.",
+            "The fire crackles. All is calm.",
+        },
+        underAttack = {
+            "Enemies at the gates! All warriors, defend!",
+            "We are beset! Any aid is welcome!",
+        },
+    },
+}
+
+-- ====================================================================
+-- Pick and broadcast a random RP message for an event.
+-- Throttled: max 1 RP message per bot per 120 ticks.
+-- ====================================================================
+---@param pi integer
+---@param event string  "allyPropose"|"allyAccept"|"allyBreak"|"trade"|"idle"|"underAttack"
+function AiDiplomatRpSay(pi, event)
+    if not AiDiplomatRpEnabled then return end
+    local cfg = AiDiplomatCfg(pi)
+    if cfg == nil then return end
+    local st = AiDiplomatState(pi)
+    local tick = AiDiplomatTicks[pi] or 0
+    if st.lastRpTick ~= nil and tick - st.lastRpTick < 120 then return end
+
+    -- Resolve personality name for RP table lookup
+    local race = AiRaceOf(pi)
+    local persona = "balanced"
+    if race ~= nil and race.diplomat ~= nil then
+        if type(race.diplomat) == "string" then
+            persona = race.diplomat
+        elseif type(race.diplomat) == "table" and race.diplomat.preset ~= nil then
+            persona = race.diplomat.preset
+        elseif type(race.diplomat) == "table" then
+            -- Inline table without preset field: determine personality from key parameters
+            if cfg.loyalty > 0.9 then persona = "loyal"
+            elseif cfg.betrayalChance > 0.15 then persona = "traitor"
+            elseif cfg.allianceDesire > 0.7 then persona = "diplomat"
+            elseif cfg.allianceMax == 0 then persona = "isolationist"
+            end
+        end
+    end
+    local tbl = AiDiplomatRpMessages[persona]
+    if tbl == nil then tbl = AiDiplomatRpMessages["balanced"] end
+    local msgs = tbl[event]
+    if msgs == nil or #msgs == 0 then return end
+
+    local msg = msgs[GetRandomInt(1, #msgs)]
+    DipRpBroadcast(pi, msg)
+    st.lastRpTick = tick
 end
 
 -- ====================================================================
@@ -252,6 +481,14 @@ function AiDiplomatPerceive(pi)
     local capX, capY = GetUnitX(playerCapital[pi]), GetUnitY(playerCapital[pi])
     local myPower = Grades[pi] or 0
     if myPower < 1 then myPower = 1 end
+
+    -- Under-attack detection: capital HP dropped significantly
+    local capHP = GetUnitState(playerCapital[pi], UNIT_STATE_LIFE)
+    local prevHP = st.lastCapitalHP
+    st.lastCapitalHP = capHP
+    if prevHP ~= nil and capHP > 0 and capHP < prevHP - 50 then
+        st.underAttackFired = true
+    end
 
     for otherPi = 0, 23 do
         if otherPi ~= pi then
@@ -393,6 +630,7 @@ function AiDiplomatPropose(pi, otherPi)
     st.pendingOffers[otherPi] = AiDiplomatTicks[pi] or 0
     DipLog(pi, "propose alliance to " .. tostring(otherPi) .. " (" .. GetPlayerName(other) .. ")")
     DipChat(pi, otherPi, "I propose an alliance.")
+    AiDiplomatRpSay(pi, "allyPropose")
     return true
 end
 
@@ -418,6 +656,8 @@ function AiDiplomatAccept(pi, otherPi)
     end
     DipLog(pi, "accepted alliance with " .. tostring(otherPi))
     DipChat(pi, otherPi, "I accept your alliance.")
+    DipBroadcast(DiplomatName(pi) .. " and " .. DiplomatName(otherPi) .. " are now allied!")
+    AiDiplomatRpSay(pi, "allyAccept")
 end
 
 -- ====================================================================
@@ -460,6 +700,8 @@ function AiDiplomatBreak(pi, otherPi, reason)
     if reason ~= nil and reason ~= "" then
         DipChat(pi, otherPi, reason)
     end
+    DipBroadcast(DiplomatName(pi) .. " has broken their alliance with " .. DiplomatName(otherPi) .. ".")
+    AiDiplomatRpSay(pi, "allyBreak")
 end
 
 -- ====================================================================
@@ -496,8 +738,9 @@ function AiDiplomatTrade(pi, otherPi, gold, lumber, reason)
     local reasonStr = reason or ""
     DipLog(pi, "traded to " .. tostring(otherPi) .. " gold=" .. tostring(gold) .. " lumber=" .. tostring(lumber) .. " " .. reasonStr)
     if reasonStr ~= "" then
-        DipChat(pi, otherPi, "Sending " .. tostring(gold) .. "g " .. tostring(lumber) .. "w. " .. reasonStr)
+        DipChat(pi, otherPi, "Sent " .. tostring(gold) .. "g " .. tostring(lumber) .. "w. " .. reasonStr)
     end
+    AiDiplomatRpSay(pi, "trade")
 end
 
 -- ====================================================================
@@ -755,6 +998,17 @@ function AiDiplomatTick(pi)
     DipLogEvery(pi, "summary", 10,
         "allies=" .. tostring(DipAllyCount(pi)) ..
         " relations=" .. tostring(DipRelationCount(pi)))
+
+    -- Idle RP: occasional flavour message (~every 20 ticks)
+    if (tick % 20) == 0 then
+        AiDiplomatRpSay(pi, "idle")
+    end
+
+    -- Under-attack RP: capital HP dropped significantly since last perceive
+    if st.underAttackFired then
+        AiDiplomatRpSay(pi, "underAttack")
+        st.underAttackFired = false
+    end
 end
 
 -- ====================================================================

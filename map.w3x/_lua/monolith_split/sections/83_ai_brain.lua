@@ -573,17 +573,9 @@ end
 function AiSquadPickObj(pi, sq, wm)
     local objs = wm.objectives
     if objs == nil or #objs == 0 then return nil end
-    local sqPow = AiSquadPower(sq.members)
     local best, bestScore = nil, -1e30
     for _, o in ipairs(objs) do
-        local committed = AiObjCommittedPower(pi, o)
-        if o.kind == "capital" then
-            o.score = AiObjScore(pi, wm, o)
-            if committed + sqPow < AiObjNeededPower(pi, o) * 0.4 then o.score = o.score * 1.2 end
-        else
-            if committed >= sqPow * 3.0 then o.score = -1e30
-            else o.score = AiObjScore(pi, wm, o) end
-        end
+        o.score = AiObjScore(pi, wm, o)
         if o.score > bestScore then best = o; bestScore = o.score end
     end
     return best and bestScore > 0 and best or nil
