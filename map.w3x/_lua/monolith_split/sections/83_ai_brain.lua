@@ -16,6 +16,29 @@ AiBrainForce = AiBrainForce or {}  -- [pi] = "objective"|"swarm" override (bridg
 -- Tunables: set via bridge live (AiBrainBatchSize=6) or leave defaults.
 -- All values affect the unified brain tick only; swarm mode ignores them.
 AiBrainBatchSize       = AiBrainBatchSize       or 1   -- bots processed per PlayerGet1 fire
+
+-- ====================================================================
+-- Profiler: cumulative ms per section, dumped every AiProfileEvery ticks.
+-- Bridge: AiProfileReset(pi) to zero; AiProfileDump(pi) for instant read.
+-- ====================================================================
+AiProfileData = AiProfileData or {}   -- [pi] = { perceive=ms, produce=ms, build=ms, focus=ms, naval=ms, reap=ms, orphan=ms, other=ms, ticks=n }
+AiProfileEvery = AiProfileEvery or 30  -- dump to probe log every N brain-ticks per bot
+
+function AiProfileReset(pi)
+    AiProfileData[pi] = { ticks = 0 }
+end
+
+function AiProfileDump(pi)
+    local d = AiProfileData[pi]
+    if not d or d.ticks == 0 then return "no data" end
+    local t = (d.perceive or 0) + (d.produce or 0) + (d.build or 0) + (d.focus or 0) + (d.naval or 0) + (d.reap or 0) + (d.orphan or 0) + (d.other or 0)
+    local parts = {}
+    for _, k in ipairs{"perceive","produce","build","focus","naval","reap","orphan","other"} do
+        local v = d[k] or 0
+        parts[#parts+1] = k .. "=" .. string.format("%.1f", v / d.ticks) .. "ms"
+    end
+    return "[PROF] pi=" .. tostring(pi) .. " ticks=" .. tostring(d.ticks) .. " total=" .. string.format("%.1f", t) .. "ms avg=" .. string.format("%.1f", t / d.ticks) .. "ms | " .. table.concat(parts, " ")
+end
 AiBrainMaxProduce      = AiBrainMaxProduce      or 10  -- max unit-training orders per bot per tick
 AiBrainMaxBuild        = AiBrainMaxBuild        or 3   -- max building-attempts per bot per tick
 AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks
@@ -1363,26 +1386,36 @@ end
 ---@param pi integer
 ---@param p player
 function AiBrainArmyTick(pi, p)
-    ProbeLogWrite("[SQDBG] cp1 pi=" .. tostring(pi))
+    local t0 = os.clock and os.clock() or 0
+    local d = AiProfileData[pi] or { ticks = 0 }
+    AiProfileData[pi] = d
+    d.ticks = d.ticks + 1
+    local function lap(key)
+        if t0 == 0 then return end
+        local now = os.clock()
+        local ms = (now - t0) * 1000
+        d[key] = (d[key] or 0) + ms
+        t0 = now
+    end
+
     local wm = AiBrainPerceive(pi)
     local race = AiRaceOf(pi)
 
-    -- Brain-driven production + building run regardless of objective state
+    lap("perceive")
+
     if race ~= nil then
-        local prodN = BrainProduce(pi, wm, race)
-        local bldN = BrainBuild(pi, wm, race)
-        ProbeLogWrite("[SQDBG] bprod=" .. tostring(prodN) .. " bbld=" .. tostring(bldN))
+        BrainProduce(pi, wm, race)
+        lap("produce")
+        BrainBuild(pi, wm, race)
+        lap("build")
     end
 
-    ProbeLogWrite("[SQDBG] cp2")
     local cfg = AiBrainCfg(pi)
-    ProbeLogWrite("[SQDBG] cp3 objs=" .. tostring(wm.objectives and #wm.objectives or 0))
     if wm.objectives == nil or (wm.tick % (cfg.clusterEvery or 8)) == 0 then
         AiBrainCollectObjectives(pi, wm)
     end
-    if wm.objectives == nil or #wm.objectives == 0 then AiArmyLegacyTick(p); return end
+    if wm.objectives == nil or #wm.objectives == 0 then lap("other"); AiArmyLegacyTick(p); return end
 
-    ProbeLogWrite("[SQDBG] cp4")
     if wm.defendHome and wm.capX ~= nil then
         for _, sq in pairs(AiSquadsOf(pi)) do
             if sq.role == "assault" and sq.state ~= "retreat" then
@@ -1391,17 +1424,14 @@ function AiBrainArmyTick(pi, p)
         end
     end
 
-    ProbeLogWrite("[SQDBG] cp5 reap")
     AiSquadReapDead(pi)
+    lap("reap")
 
-    ProbeLogWrite("[SQDBG] cp6 orphan-build")
     if (wm.tick % 2) == 0 then
         local armyGroup = udg_Ai_army[pi]
         if armyGroup ~= nil then
-            ProbeLogWrite("[SQDBG] cp7 army=" .. tostring(BlzGroupGetSize(armyGroup)))
             local squads = AiSquadsOf(pi)
             local assignedGroup = CreateGroup()
-            ProbeLogWrite("[SQDBG] cp8")
             for _, sq in pairs(squads) do
                 local sz = BlzGroupGetSize(sq.members)
                 local j = 0
@@ -1411,7 +1441,6 @@ function AiBrainArmyTick(pi, p)
                     j = j + 1
                 end
             end
-            ProbeLogWrite("[SQDBG] cp9 assign-orphans")
             local armySz = BlzGroupGetSize(armyGroup)
             local j = 0
             while j < armySz do
@@ -1427,20 +1456,22 @@ function AiBrainArmyTick(pi, p)
             DestroyGroup(assignedGroup)
         end
     end
+    lap("orphan")
 
-    ProbeLogWrite("[SQDBG] cp10 n=" .. tostring(#AiSquadsOf(pi)))
-    -- BRAIN FOCUS: local udg_Ai_army group, no GroupEnumUnitsOfPlayer
-    local orderedF = BrainFocus(pi, p, wm)
-    ProbeLogWrite("[SQDBG] cp10-focus ordered=" .. tostring(orderedF))
+    BrainFocus(pi, p, wm)
+    lap("focus")
 
-    -- Naval focus: idle ships attack (replaces PlayerNavy + TimerSmall4)
     if (wm.tick % 4) == 0 then
-        local navalN = BrainNavalFocus(pi, p)
-        ProbeLogWrite("[SQDBG] cp10-naval ordered=" .. tostring(navalN))
+        BrainNavalFocus(pi, p)
     end
 
     if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end
     if (wm.tick % 4) == 0 then AiDiplomatTick(pi) end
+    lap("other")
+
+    if d.ticks % AiProfileEvery == 0 then
+        ProbeLogWrite(AiProfileDump(pi))
+    end
 end
 
 -- ====================================================================
