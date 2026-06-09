@@ -16732,39 +16732,19 @@ end
 --  Trigger: StolicaAttacked
 -- ===========================================================================
 ---@return nothing
-function CapTimeDel()
-	local t = GetExpiredTimer()
-	local tid = GetHandleId(t)
-	local pi = LoadInteger(Hash, tid, 0)
-	
-	cap_time[pi] = true
-	
-	
-	FlushChildHashtable(Hash, tid)
-	DestroyTimer(t)
-	t = nil
-	
-end
----@return boolean
-function Trig_StolicaAttacked_Conditions()
-	return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups)
-end
----@return nothing
 function Trig_StolicaAttacked_Actions()
-	local t = nil
-	local tid = GetHandleId(t)
-	local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
-	if cap_time[pi] then
-		t = CreateTimer()
-		DisplayTextToPlayer(Player(pi), 0, 0, "TRIGSTR_27508")
-		cap_time[pi] = false
-		SaveInteger(Hash, tid, 0, pi)
-		TimerStart(t, 90, false, CapTimeDel)
-	end
-	
-	
-	t = nil
-	
+    local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    if cap_time[pi] then
+        local t = CreateTimer()
+        DisplayTextToPlayer(Player(pi), 0, 0, "TRIGSTR_27508")
+        cap_time[pi] = false
+        TimerStart(t, 90, false, function()
+            cap_time[pi] = true
+            DestroyTimer(t)
+        end)
+    end
+    
+    
 end
 -- ===========================================================================
 ---@return nothing
@@ -21841,36 +21821,23 @@ end
 --===========================================================================
 -- Trigger: TPrepeat
 --===========================================================================
-function CommandTp()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u= LoadUnitHandle(Hash, id, 0)
-    if u ~= nil and UnitAlive(u) and GetUnitAbilityLevel(u, FourCC('A1IH')) > 0 then
-        IssuePointOrder(u, "darksummoning", LoadReal(Hash, id, 1), LoadReal(Hash, id, 2))
-    
-    
-    else
-        DestroyTimer(t)
-        FlushChildHashtable(Hash, id)
-    
-    end
-    u=nil
-    t=nil
-end
 function Trig_TPrepeat_Actions()
-    local t= CreateTimer()
-    local id= GetHandleId(t)
     local u= GetTriggerUnit()
-    
-    SaveUnitHandle(Hash, id, 0, u)
-    SaveReal(Hash, id, 1, GetSpellTargetX())
-    SaveReal(Hash, id, 2, GetSpellTargetY())
+    local tx= GetSpellTargetX()
+    local ty= GetSpellTargetY()
+    local t= CreateTimer()
     
     BlzUnitHideAbility(u, FourCC('A1IG'), true)
-    RemoveAbilityTimed(u , FourCC('A1IG') , 1)
+    RemoveAbilityTimed(u, FourCC('A1IG'), 1)
     UnitAddAbility(u, FourCC('A1IH'))
     
-    TimerStart(t, RMaxBJ(BlzGetUnitAbilityCooldownRemaining(u, FourCC('A0IO')), 15), true, CommandTp)
+    TimerStart(t, RMaxBJ(BlzGetUnitAbilityCooldownRemaining(u, FourCC('A0IO')), 15), true, function()
+        if UnitAlive(u) and GetUnitAbilityLevel(u, FourCC('A1IH')) > 0 then
+            IssuePointOrder(u, "darksummoning", tx, ty)
+        else
+            DestroyTimer(t)
+        end
+    end)
     t=nil
     u=nil
 end
@@ -25644,31 +25611,16 @@ function Trig_DiyW2_Conditions()
     return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('w2a0')) > 0
     
 end
-function deadEdly()
-    
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u= LoadUnitHandle(Hash, id, 0)
-    local uh= LoadInteger(Hash, id, 1)
-    
-    if u == nil then
-        FlushChildHashtable(Hash, uh)
-    end
-    FlushChildHashtable(Hash, id)
-    DestroyTimer(t)
-    t=nil
-    u=nil
-end
 function Trig_DiyW2_Actions()
     local u= GetTriggerUnit()
     local uh= GetHandleId(u)
-    
     local t= CreateTimer()
-    local id= GetHandleId(t)
-    
-    TimerStart(t, 45, false, deadEdly)
-    SaveUnitHandle(Hash, id, 0, u)
-    SaveInteger(Hash, id, 1, uh)
+    TimerStart(t, 45, false, function()
+        if u == nil then
+            FlushChildHashtable(Hash, uh)
+        end
+        DestroyTimer(t)
+    end)
     t=nil
     u=nil
 end
@@ -45019,105 +44971,53 @@ end
 -- Trigger: FlyDragon
 --===========================================================================
 --================
-function Trig_Charge_move_heroD()
-    local t= GetExpiredTimer()
-    local h= GetHandleId(t)
-    local GT= LoadUnitHandle(Hash, h, 1)
-    local l= LoadReal(Hash, h, 2)
-    local g
-    local x1= LoadReal(Hash, h, 4)
-    local y1= LoadReal(Hash, h, 5)
-    local fl= LoadReal(Hash, h, 6)
-    local dx= GetUnitX(GT)
-    local dy= GetUnitY(GT)
-    local un
-    local x
-    local y
-    local uron
-    local lvl
-    local w
-    local ugol= JSTRUgolMT(dx , x1 , dy , y1)
-    local t1
-    local h1
-    local MaxW
-    if l <= 500 then
-        MaxW=l
-    else
-        MaxW=500
-    end
-    ---------
-    x=dx + 6 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
-    y=dy + 6 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
-    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --????????? ??????
-    
-    -- ???? ????? ????
-    if JSTRRastMT(x1 , dx , y1 , dy) > 25 then --and not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
-        -- ??????? ?????
-        SetUnitX(GT, x)
-        SetUnitY(GT, y)
-        SetUnitFacing(GT, ugol)
-        SetUnitFlyHeight(GT, fl + w, 0)
-        
-    else
-        UnitRemoveAbility(GT, FourCC('A16S')) -- ?????? ?????
-        DestroyEffect(LoadEffectHandle(Hash, h, 6))
-        FlushChildHashtable(Hash, h)
-        DestroyTimer(t)
-        SetUnitAnimation(GT, "Stand")
-        SetUnitFlyHeight(GT, fl, 0)
-        --call DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
-        g=CreateGroup()
-        GroupEnumUnitsInRange(g, dx, dy, 260, nil)
-        while true do
-            un=FirstOfGroup(g)
-            if un == nil then break end
-            lvl=GetUnitAbilityLevel(GT, JSTRSkill)
-                    
-            GroupRemoveUnit(g, un)
-        end
-        DestroyGroup(g)
-    end
-    ---------
-    GT=nil
-    un=nil
-    g=nil
-    t=nil
-    t1=nil
-end
---================================================================================================================================================================================
--- ???? 2 - ???????? ???????
---================
 function Trig_FlyDragon_Actions()
     local GT= GetTriggerUnit()
-    --local group g = CreateGroup()
     local t= CreateTimer()
-    local h= GetHandleId(t)
     local x= GetUnitX(GT)
     local y= GetUnitY(GT)
     local x1= GetSpellTargetX()
     local y1= GetSpellTargetY()
     local l= JSTRRastMT(x , x1 , y , y1)
+    local fl= GetUnitFlyHeight(GT)
     
     JSTRSkill=GetSpellAbilityId()
     UnitAddAbility(GT, FourCC('Amrf'))
-    UnitAddAbility(GT, FourCC('A16S')) -- ?????? ?????
-    
+    UnitAddAbility(GT, FourCC('A16S'))
     UnitRemoveAbility(GT, FourCC('Amrf'))
     ---------
-    SaveUnitHandle(Hash, h, 1, GT)
-    if l ~= 0 then
-        SaveReal(Hash, h, 2, l)
-    else
-        SaveReal(Hash, h, 2, 1)
-    end
-    SaveReal(Hash, h, 4, x1)
-    SaveReal(Hash, h, 5, y1)
-    SaveReal(Hash, h, 6, GetUnitFlyHeight(GT))
-    --call DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.05, true, Trig_Charge_move_heroD) --???????? ???????? ?????
+    TimerStart(t, 0.05, true, function()
+        local dx= GetUnitX(GT)
+        local dy= GetUnitY(GT)
+        local ugol= JSTRUgolMT(dx, x1, dy, y1)
+        local MaxW
+        if l <= 500 then MaxW=l else MaxW=500 end
+        local nx=dx + 6 * Cos(ugol * bj_DEGTORAD)
+        local ny=dy + 6 * Sin(ugol * bj_DEGTORAD)
+        local w=JSTRParabolaZ(MaxW, l, JSTRRastMT(nx, x1, ny, y1))
+        if JSTRRastMT(x1, dx, y1, dy) > 25 then
+            SetUnitX(GT, nx)
+            SetUnitY(GT, ny)
+            SetUnitFacing(GT, ugol)
+            SetUnitFlyHeight(GT, fl + w, 0)
+        else
+            UnitRemoveAbility(GT, FourCC('A16S'))
+            DestroyTimer(t)
+            SetUnitAnimation(GT, "Stand")
+            SetUnitFlyHeight(GT, fl, 0)
+            local g=CreateGroup()
+            GroupEnumUnitsInRange(g, dx, dy, 260, nil)
+            while true do
+                local un=FirstOfGroup(g)
+                if un == nil then break end
+                local lvl=GetUnitAbilityLevel(GT, JSTRSkill)
+                GroupRemoveUnit(g, un)
+            end
+            DestroyGroup(g)
+        end
+    end)
     ---------
     GT=nil
-    --set g = null
     t=nil
 end
 --===========================================================================
@@ -60246,8 +60146,8 @@ AiBrainDefaults = {
     clusterEvery = 8,        -- recompute objective pool every N perceive ticks
     rCluster     = 1600.0,   -- cluster aggregation radius
     rHome        = 2500.0,   -- capital threat scan radius
-    squadCap     = 12,
-    commitMin    = 8,
+    squadCap     = 8,
+    commitMin    = 4,
     guardFrac    = 0.2,
     focusMargin  = 25.0,     -- hysteresis: keep current focus unless beaten by this
     homeThreat   = 20.0,     -- enemy power near capital that triggers defend/recall
@@ -60400,8 +60300,8 @@ AiBrainDefaults = {
     clusterEvery = 8,        -- recompute objective pool every N perceive ticks
     rCluster     = 1600.0,   -- cluster aggregation radius
     rHome        = 2500.0,   -- capital threat scan radius
-    squadCap     = 12,
-    commitMin    = 8,
+    squadCap     = 8,
+    commitMin    = 4,
     guardFrac    = 0.2,
     focusMargin  = 25.0,     -- hysteresis: keep current focus unless beaten by this
     homeThreat   = 20.0,     -- enemy power near capital that triggers defend/recall
@@ -60624,7 +60524,7 @@ end
 
 -- ---- squad system -------------------------------------------------
 -- AiSquads[pi][sid] = { members=group, state, objective, rally={x,y}, role }
-AiSquadCommitMin = AiSquadCommitMin or 8
+AiSquadCommitMin = AiSquadCommitMin or 4
 ProbeLogEnableFlush()
 
 ---@param pi integer

@@ -21,8 +21,8 @@ AiBrainDefaults = {
     clusterEvery = 8,        -- recompute objective pool every N perceive ticks
     rCluster     = 1600.0,   -- cluster aggregation radius
     rHome        = 2500.0,   -- capital threat scan radius
-    squadCap     = 12,
-    commitMin    = 8,
+    squadCap     = 8,
+    commitMin    = 4,
     guardFrac    = 0.2,
     focusMargin  = 25.0,     -- hysteresis: keep current focus unless beaten by this
     homeThreat   = 20.0,     -- enemy power near capital that triggers defend/recall
@@ -175,8 +175,8 @@ AiBrainDefaults = {
     clusterEvery = 8,        -- recompute objective pool every N perceive ticks
     rCluster     = 1600.0,   -- cluster aggregation radius
     rHome        = 2500.0,   -- capital threat scan radius
-    squadCap     = 12,
-    commitMin    = 8,
+    squadCap     = 8,
+    commitMin    = 4,
     guardFrac    = 0.2,
     focusMargin  = 25.0,     -- hysteresis: keep current focus unless beaten by this
     homeThreat   = 20.0,     -- enemy power near capital that triggers defend/recall
@@ -399,7 +399,7 @@ end
 
 -- ---- squad system -------------------------------------------------
 -- AiSquads[pi][sid] = { members=group, state, objective, rally={x,y}, role }
-AiSquadCommitMin = AiSquadCommitMin or 8
+AiSquadCommitMin = AiSquadCommitMin or 4
 ProbeLogEnableFlush()
 
 ---@param pi integer
