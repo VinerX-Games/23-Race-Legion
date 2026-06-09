@@ -6,7 +6,6 @@
 function Pstart(p)
 	local pi = GetPlayerId(p)
 	local phash = StringHash("Pfarm")
-	local count = LoadInteger(Hash, pi, phash)
-	SaveInteger(Hash, pi, phash, count + 1)
-	
+	PData[pi] = PData[pi] or {}
+	PData[pi][phash] = (PData[pi][phash] or 0) + 1
 end

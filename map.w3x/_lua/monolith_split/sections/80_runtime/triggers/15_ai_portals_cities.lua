@@ -3242,7 +3242,7 @@ function Trig_PosadkaDal_Actions()
     local u= GetTriggerUnit()
     local u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), FourCC('n063'), GetUnitX(u), GetUnitY(u) - 65, 0.00)
     SetUnitMoveSpeed(u, 0.0)
-    SaveUnitHandle(Hash, StringHash("Dalaran"), 1, u2)
+    DalaranPortal = u2
     
     
     --???? ??????
@@ -3292,8 +3292,8 @@ function Trig_VzletDal_Conditions()
 end
 function Trig_VzletDal_Actions()
     local u= GetTriggerUnit()
-    RemoveUnit(LoadUnitHandle(Hash, StringHash("Dalaran"), 1))
-    FlushChildHashtable(Hash, StringHash("Dalaran"))
+    RemoveUnit(DalaranPortal)
+    DalaranPortal = nil
     SetUnitMoveSpeed(u, GetUnitDefaultMoveSpeed(u))
     --???? ????????
     BlzSetUnitRealFieldBJ(u, UNIT_RF_FLY_HEIGHT, 400.00)
@@ -3425,7 +3425,7 @@ function Trig_PosadkaNax_Actions()
     local u= GetTriggerUnit()
     local u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), FourCC('n066'), GetUnitX(u), GetUnitY(u) - 65, 0.00)
     SetUnitMoveSpeed(u, 0.0)
-    SaveUnitHandle(Hash, StringHash("Nax"), 1, u2)
+    NaxPortal = u2
     
     
     --???? ??????
@@ -3475,8 +3475,8 @@ function Trig_NaxFly_Conditions()
 end
 function Trig_NaxFly_Actions()
     local u= GetTriggerUnit()
-    RemoveUnit(LoadUnitHandle(Hash, StringHash("Nax"), 1))
-    FlushChildHashtable(Hash, StringHash("Nax"))
+    RemoveUnit(NaxPortal)
+    NaxPortal = nil
     SetUnitMoveSpeed(u, GetUnitDefaultMoveSpeed(u))
     --???? ????????
     BlzSetUnitRealFieldBJ(u, UNIT_RF_FLY_HEIGHT, 400.00)
@@ -3595,7 +3595,7 @@ function Trig_PosadkaTurtle_Actions()
     local u= GetTriggerUnit()
     local u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), FourCC('n075'), GetUnitX(u), GetUnitY(u) + 65, 0.00)
     SetUnitMoveSpeed(u, 0.0)
-    SaveUnitHandle(Hash, StringHash("Turtle"), 1, u2)
+    TurtlePortal = u2
     
     --call DisplayTextToPlayer(Player(0),0,0," - ")
     AddUnitAnimationProperties(u, "Swim", false)
@@ -3642,8 +3642,8 @@ function Trig_TurtleSwim_Conditions()
 end
 function Trig_TurtleSwim_Actions()
     local u= GetTriggerUnit()
-    RemoveUnit(LoadUnitHandle(Hash, StringHash("Turtle"), 1))
-    FlushChildHashtable(Hash, StringHash("Turtle"))
+    RemoveUnit(TurtlePortal)
+    TurtlePortal = nil
     SetUnitMoveSpeed(u, GetUnitDefaultMoveSpeed(u))
     
     AddUnitAnimationProperties(u, "Swim", true)

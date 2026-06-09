@@ -1330,13 +1330,13 @@ end
 function Trig_TotalProductionTrain_Conditions()
     return TotalProduction
 end
+ProductionType = ProductionType or {}
+
 function Trig_TotalProductionTrain_Actions()
     local u= GetTrainedUnit()
     local uh= GetHandleId(u)
-    SaveInteger(Hash, S2I(I2S(uh) .. "a"), 0, GetUnitTypeId(GetTriggerUnit())) --StringHash("lvl"),0)
-    
+    ProductionType[S2I(I2S(uh) .. "a")] = GetUnitTypeId(GetTriggerUnit())
     u=nil
-    --call IssueTrainOrderByIdBJ( GetTriggerUnit(), GetUnitTypeId(GetTrainedUnit()) )
 end
 --===========================================================================
 function InitTrig_TotalProductionTrain()
@@ -1357,13 +1357,13 @@ end
 function Trig_TotalProductionDeath_Actions()
     local u= GetTriggerUnit()
     local uh= GetHandleId(u)
-    local id= LoadInteger(Hash, S2I(I2S(uh) .. "a"), 0)
+    local id= ProductionType[S2I(I2S(uh) .. "a")]
     local p= GetOwningPlayer(u)
     local u2
     local g= CreateGroup()
     udg_LocalInteger5=id
     
-    FlushChildHashtable(Hash, S2I(I2S(uh) .. "a"))
+    ProductionType[S2I(I2S(uh) .. "a")] = nil
     GroupEnumUnitsOfPlayer(g, p, b)
     u2=GroupPickRandomUnit(g)
     if u2 ~= nil then

@@ -212,14 +212,16 @@ end
 --===========================================================================
 -- Trigger: FarmBuild
 --===========================================================================
+PData = PData or {}
+
 function Trig_FarmBuild_Conditions()
     return GetUnitTypeId(GetTriggerUnit()) == FourCC('pa26') or GetUnitTypeId(GetTriggerUnit()) == FourCC('h0NZ')
 end
 function Trig_FarmBuild_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     local phash= StringHash("Pfarm")
-    local count= LoadInteger(Hash, pi, phash)
-    SaveInteger(Hash, pi, phash, count + 1)
+    PData[pi] = PData[pi] or {}
+    PData[pi][phash] = (PData[pi][phash] or 0) + 1
     Ptiers(pi)
 end
 --===========================================================================
@@ -238,9 +240,8 @@ end
 function Trig_FarmLose_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     local phash= StringHash("Pfarm")
-    local count= LoadInteger(Hash, pi, phash)
-    SaveInteger(Hash, pi, phash, count - 1)
-    --call DisplayTextToPlayer(Player(0),0,0,I2S(count-1))
+    PData[pi] = PData[pi] or {}
+    PData[pi][phash] = (PData[pi][phash] or 0) - 1
     Ptiers(pi)
 end
 --===========================================================================
@@ -275,7 +276,8 @@ end
 function Trig_PUnitTrained_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     local phash= StringHash("Pfarm")
-    local count= LoadInteger(Hash, pi, phash)
+    PData[pi] = PData[pi] or {}
+    local count= PData[pi][phash] or 0
     local u= GetTrainedUnit()
     if Random(count , 200) then
         BlzSetUnitMaxHP(u, R2I(BlzGetUnitMaxHP(u) * 1.2))

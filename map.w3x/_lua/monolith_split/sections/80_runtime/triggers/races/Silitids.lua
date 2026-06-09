@@ -602,7 +602,8 @@ function Trig_LichStartUpgrade_Actions()
     local uid= GetHandleId(GetTriggerUnit()) * 10
     local e= AddSpecialEffectTarget("DoodadsDungeonTerrainEggSackEggSack1.mdl", GetTriggerUnit(), "origin")
     BlzSetSpecialEffectColor(e, 255, 102, 0)
-    SaveEffectHandle(Hash, uid, StringHash("Cocon"), e)
+    SilitidData[uid] = SilitidData[uid] or {}
+    SilitidData[uid].Cocon = e
     e=nil
     
     local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -697,11 +698,12 @@ function Trig_LichinkaFinish_Actions()
     GroupClear(udg_LocalOtrad2)
     SetUnitLifePercentBJ(gTriggerUnit, 100)
     
-    
-    e=LoadEffectHandle(Hash, oldid * 10, StringHash("Cocon"))
-    BlzPlaySpecialEffect(e, ANIM_TYPE_DEATH)
-    RemoveEffectTimed(e , 1.5)
-    FlushChildHashtable(Hash, oldid * 10)
+    e = (SilitidData[oldid * 10] and SilitidData[oldid * 10].Cocon) or nil
+    if e then
+        BlzPlaySpecialEffect(e, ANIM_TYPE_DEATH)
+        RemoveEffectTimed(e, 1.5)
+        SilitidData[oldid * 10] = nil
+    end
     
     
     
@@ -868,8 +870,9 @@ end
 --
 function Trig_KokonDead2_Actions()
     local u= GetTriggerUnit()
-    DestroyEffect(LoadEffectHandle(Hash, GetHandleId(u) * 10, StringHash("Cocon")))
-    FlushChildHashtable(Hash, GetHandleId(u) * 10)
+    local e = (SilitidData[GetHandleId(u) * 10] and SilitidData[GetHandleId(u) * 10].Cocon) or nil
+    if e then DestroyEffect(e) end
+    SilitidData[GetHandleId(u) * 10] = nil
     u=nil
 --    set udg_LocalPosition[16] = GetUnitLoc(GetTriggerUnit())
 --    call ForGroupBJ( udg_Kokon, function Trig_KokonDead2_Func002A )

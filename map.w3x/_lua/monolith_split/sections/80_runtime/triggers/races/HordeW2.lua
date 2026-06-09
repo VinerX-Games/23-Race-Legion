@@ -10,8 +10,7 @@ function Trig_TrainW2_Actions()
     local uh= GetHandleId(u)
     local p= GetOwningPlayer(u)
     local r
-    SaveInteger(Hash, uh, 0, 0) --StringHash("lvl"),0)
-    SaveReal(Hash, uh, 1, 0) --StringHash("xp"),0)
+    UHData[uh] = {lvl = 0, xp = 0}
     
     r=GetPlayerTechCount(p, FourCC('w2r3'), true)
     if r > 0 then
@@ -56,7 +55,7 @@ end
 function Trig_DamageBeforeW2_Actions()
     local u= GetEventDamageSource()
     local uh= GetHandleId(u)
-    local lvl= LoadInteger(Hash, uh, 0)
+    local lvl= UHData[uh] and UHData[uh].lvl or 0
     local damage= GetEventDamage()
     
     DisableTrigger(gg_trg_DamageBeforeW2)
@@ -187,7 +186,7 @@ function Trig_DiyGoblinW2_Actions()
     local p= GetOwningPlayer(u)
     local hp= GetUnitState(u, UNIT_STATE_LIFE)
     local uh= GetHandleId(u)
-    local lvl= LoadInteger(Hash, uh, 0)
+    local lvl= UHData[uh] and UHData[uh].lvl or 0
     local Zepp
     local u2
     local g
@@ -240,7 +239,7 @@ function Trig_DiyW2_Actions()
     local t= CreateTimer()
     TimerStart(t, 45, false, function()
         if u == nil then
-            FlushChildHashtable(Hash, uh)
+            UHData[uh] = nil
         end
         DestroyTimer(t)
     end)

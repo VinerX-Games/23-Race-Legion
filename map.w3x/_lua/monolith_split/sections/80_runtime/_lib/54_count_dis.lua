@@ -28,7 +28,8 @@ function AddCountDis(u, pi)
 			
 			if GetUnitAbilityLevel(u, FourCC('A1HS')) > 0 then
 				income[pi] = income[pi] - 5
-				i = LoadInteger(Hash, GetHandleId(u), 0)
+				PlagueOwner = PlagueOwner or {}
+				i = PlagueOwner[GetHandleId(u)] or 0
 				income[i] = income[i] + 5
 			end
 			
@@ -126,9 +127,10 @@ function DelCountDis(u, pi)
 			
 			if GetUnitAbilityLevel(u, FourCC('A1HS')) > 0 then
 				income[pi] = income[pi] + 5
-				i = LoadInteger(Hash, GetHandleId(u), 0)
+				PlagueOwner = PlagueOwner or {}
+				i = PlagueOwner[GetHandleId(u)] or 0
 				income[i] = income[i] - 5
-				FlushChildHashtable(Hash, GetHandleId(u))
+				PlagueOwner[GetHandleId(u)] = nil
 			end
 			
 			

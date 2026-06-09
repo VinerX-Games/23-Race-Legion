@@ -9,7 +9,6 @@ function Trig_Leave_Ot_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
     DisplayTextToForce(udg_AllPlayers, GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r")
     ClearPlayer(Player(pi))
-    FlushChildHashtable(Hash, GetPlayerId(GetTriggerPlayer()))
     if Trig_Leave_Ot_Func005C() then
         ForForce(Vassals[pi], Freedom)
     end

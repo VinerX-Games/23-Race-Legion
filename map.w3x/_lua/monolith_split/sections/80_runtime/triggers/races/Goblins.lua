@@ -617,8 +617,9 @@ end
 function Gtiers()
     local phash= Gfarm
     local puhash= Gtier
-    local count= LoadInteger(Hash, pi, phash)
-    local u= LoadUnitHandle(Hash, pi, puhash)
+    PData[pi] = PData[pi] or {}
+    local count= PData[pi][phash] or 0
+    local u= PData[pi][puhash]
     local id= GetUnitTypeId(u)
    
     if count < 6 then
@@ -630,7 +631,7 @@ function Gtiers()
         KillUnit(u)
         u=CreateUnit(Player(pi), FourCC('h0P6'), 0, 0, 0.0)
     end
-    SaveUnitHandle(Hash, pi, puhash, u)
+    PData[pi][puhash] = u
     u=nil
 end
 function Trig_FarmBuildG_Conditions()

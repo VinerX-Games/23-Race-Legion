@@ -2201,7 +2201,7 @@ gg_unit_n003_0308 = nil	---@type unit
 gg_unit_n003_0305 = nil	---@type unit	
 gg_unit_h0OT_0545 = nil	---@type unit	
 Dummy = FourCC('h05P')	---@type integer	
-Hash = InitHashtable()	---@type hashtable	
+-- Hash removed: all hashtable data migrated to Lua tables/closures
 gForce = CreateForce()	---@type force	
 gGroup = CreateGroup()	---@type group	
 gEnemyGroup = CreateGroup()	---@type group	
