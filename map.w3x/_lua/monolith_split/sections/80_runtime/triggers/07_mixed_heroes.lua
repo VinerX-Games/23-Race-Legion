@@ -355,7 +355,7 @@ function Trig_Undermining_move_units()
     if LoadBoolean(Hash, h, 4) then
         kol=kol + 1
         SaveInteger(Hash, h, 3, kol)
-        if kol >= 25 then
+        if kol >= 13 then
             SaveBoolean(Hash, h, 4, false)
         end
     else
@@ -386,9 +386,9 @@ function Trig_Undermining_move_hero()
     local g= LoadGroupHandle(Hash, h, 3)
     local x1= LoadReal(Hash, h, 4)
     local y1= LoadReal(Hash, h, 5)
+    local gg= LoadGroupHandle(Hash, h, 7)
     local dx= GetUnitX(GT)
     local dy= GetUnitY(GT)
-    local gg= CreateGroup()
     local un
     local x
     local y
@@ -396,24 +396,19 @@ function Trig_Undermining_move_hero()
     local t1
     local h1
     ---------
-    x=dx + 70 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
-    y=dy + 70 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
-    --set w = UnParabolaZ(500, l, UnRastMT(x, x1, y, y1)) //????????? ??????
-    -- ???? ????? ????
+    x=dx + 70 * Cos(ugol * bj_DEGTORAD)
+    y=dy + 70 * Sin(ugol * bj_DEGTORAD)
     if UnRastMT(x1 , dx , y1 , dy) > 70 and not IsTerrainPathable(x, y, PATHING_TYPE_FLYABILITY) then
-        -- ??????? ?????
         SetUnitX(GT, x)
         SetUnitY(GT, y)
         SetUnitFacing(GT, ugol)
-        DestroyEffect(AddSpecialEffect("AbilitiesSpellsUndeadImpaleImpaleMissTarget.mdl", x, y))
         --------------------------------------
-        -- ?????????? ?????? ? ?????? ? ???????????? ??
+        GroupClear(gg)
         GroupEnumUnitsInRange(gg, x, y, 150, nil)
         while true do
             un=FirstOfGroup(gg)
             if un == nil then break end
             if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) and not IsUnitInGroup(un, g) then
-                --call BJDebugMsg("")
                 UnitAddAbility(un, FourCC('Amrf'))
                 UnitRemoveAbility(un, FourCC('Amrf'))
                 t1=CreateTimer()
@@ -423,14 +418,14 @@ function Trig_Undermining_move_hero()
                 SaveInteger(Hash, h1, 3, 1)
                 SaveBoolean(Hash, h1, 4, true)
                 GroupAddUnit(g, un)
-                TimerStart(t1, 0.01, true, Trig_Undermining_move_units)
+                TimerStart(t1, 0.02, true, Trig_Undermining_move_units)
             end
             GroupRemoveUnit(gg, un)
         end
         -----------------------------------------
     else
-        --call BJDebugMsg("")
         DestroyGroup(g)
+        DestroyGroup(gg)
         DestroyTimer(t)
         FlushChildHashtable(Hash, h)
         SetUnitFlyHeight(GT, 0, 0)
@@ -443,9 +438,8 @@ function Trig_Undermining_move_hero()
     GT=nil
     un=nil
     g=nil
-    t=nil
-    DestroyGroup(gg)
     gg=nil
+    t=nil
     t1=nil
 end
 --================================================================================================================================================================================
@@ -470,6 +464,7 @@ function Trig_Undermining_Actions()
     PlaySoundBJ(gg_snd_ImpaleHit)
     ------
     SaveGroupHandle(Hash, h, 3, CreateGroup())
+    SaveGroupHandle(Hash, h, 7, CreateGroup())
     SaveReal(Hash, h, 4, x1)
     SaveReal(Hash, h, 5, y1)
     PauseUnit(GT, true)

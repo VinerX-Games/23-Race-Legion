@@ -3179,8 +3179,6 @@ function Trig_Charge_move_heroV()
     local lvl
     local w
     local ugol= JSTRUgolMT(dx , x1 , dy , y1)
-    local t1
-    local h1
     local MaxW
     if l <= 500 then
         MaxW=l
@@ -3200,7 +3198,6 @@ function Trig_Charge_move_heroV()
         SetUnitFacing(GT, ugol)
         --call SetUnitFlyHeight(GT, w, 0)
     else
-        DestroyEffect(LoadEffectHandle(Hash, h, 6))
         DestroyTimer(t)
         FlushChildHashtable(Hash, h)
         SetUnitAnimation(GT, "attack")
@@ -3223,18 +3220,6 @@ function Trig_Charge_move_heroV()
             if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) then
                 UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
                 DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
-                ----------
-                -- ??????? ????? ? ?????? ??????? ?? ???????
-                if JSTRBoolMove then
-                    ugol=JSTRUgolMT(dx , GetUnitX(un) , dy , GetUnitY(un))
-                    t1=CreateTimer()
-                    h1=GetHandleId(t1)
-                    SaveUnitHandle(Hash, h1, 1, un)
-                    SaveReal(Hash, h1, 2, ugol)
-                    SaveInteger(Hash, h1, 3, 17)
-                    TimerStart(t1, 0.015, true, Trig_JumpSTR_move_units)
-                end
-                ---------- 
             end
             GroupRemoveUnit(g, un)
         end
@@ -3245,7 +3230,6 @@ function Trig_Charge_move_heroV()
     un=nil
     g=nil
     t=nil
-    t1=nil
 end
 --================================================================================================================================================================================
 -- ???? 2 - ???????? ???????

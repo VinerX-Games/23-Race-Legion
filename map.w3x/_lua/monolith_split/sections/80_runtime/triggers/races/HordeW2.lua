@@ -533,22 +533,23 @@ function Ogrimm2()
     local t= GetExpiredTimer()
     local h= GetHandleId(t)
     local un= LoadUnitHandle(Hash, h, 1)
-    local ugol= LoadReal(Hash, h, 2)
-    local kol= LoadInteger(Hash, h, 3)
+    local cosA= LoadReal(Hash, h, 2)
+    local sinA= LoadReal(Hash, h, 3)
+    local kol= LoadInteger(Hash, h, 4)
     local x= GetUnitX(un)
     local y= GetUnitY(un)
-    -- ---------
-    x=x + 10 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
-    y=y + 10 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
-    if kol >= 0 and not IsTerrainPathable(x, y, PATHING_TYPE_FLYABILITY) then
+    ---------
+    x=x + 20 * cosA
+    y=y + 20 * sinA
+    if kol >= 0 then
         SetUnitX(un, x)
         SetUnitY(un, y)
-        SaveInteger(Hash, h, 3, kol - 1)
+        SaveInteger(Hash, h, 4, kol - 1)
     else
         DestroyTimer(t)
         FlushChildHashtable(Hash, h)
     end
-    -- ----------
+    ---------
     un=nil
     t=nil
 end
@@ -593,7 +594,6 @@ function Ogrimm1()
         SetUnitFacing(GT, ugol)
         SetUnitFlyHeight(GT, w, 0)
     else
-        DestroyEffect(LoadEffectHandle(Hash, h, 6))
         DestroyTimer(t)
         FlushChildHashtable(Hash, h)
         SetUnitAnimation(GT, "attack")
@@ -619,9 +619,10 @@ function Ogrimm1()
                 t1=CreateTimer()
                 h1=GetHandleId(t1)
                 SaveUnitHandle(Hash, h1, 1, un)
-                SaveReal(Hash, h1, 2, ugol)
-                SaveInteger(Hash, h1, 3, 17)
-                TimerStart(t1, 0.015, true, Ogrimm2)
+                SaveReal(Hash, h1, 2, Cos(ugol * bj_DEGTORAD))
+                SaveReal(Hash, h1, 3, Sin(ugol * bj_DEGTORAD))
+                SaveInteger(Hash, h1, 4, 9)
+                TimerStart(t1, 0.03, true, Ogrimm2)
                 
                 ---------- 
             end
