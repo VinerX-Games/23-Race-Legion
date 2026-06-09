@@ -651,6 +651,7 @@ function PlayerArmy()
             if (dt % 4) == 0 then AiDiplomatTick(pi_army) end
         end
     end
+    AiBrainLogFlush()
 end
 --===========================================================================
 function InitTrig_PerebobArmy_Uni()

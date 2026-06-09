@@ -48872,6 +48872,7 @@ function PlayerArmy()
             if (dt % 4) == 0 then AiDiplomatTick(pi_army) end
         end
     end
+    AiBrainLogFlush()
 end
 --===========================================================================
 function InitTrig_PerebobArmy_Uni()
@@ -59880,6 +59881,27 @@ function AiBrainBotListNext(n)
     return out
 end
 
+-- ====================================================================
+-- Log buffer: batch ProbeLogWrite calls, flush once per tick or on demand.
+-- Replaces individual ProbeLogWrite calls that cost ~0.1ms each (string
+-- concat + preloader write). Buffer grows, flushed in AiBrainArmyTick exit.
+-- ====================================================================
+AiBrainLogBuf = AiBrainLogBuf or {}
+AiBrainLogMaxLines = AiBrainLogMaxLines or 64
+
+function AiBrainLogAppend(msg)
+    AiBrainLogBuf[#AiBrainLogBuf + 1] = msg
+    if #AiBrainLogBuf >= AiBrainLogMaxLines then
+        AiBrainLogFlush()
+    end
+end
+
+function AiBrainLogFlush()
+    if #AiBrainLogBuf == 0 then return end
+    ProbeLogWrite(table.concat(AiBrainLogBuf, "|"))
+    AiBrainLogBuf = {}
+end
+
 -- Tunables: set via bridge live (AiBrainBatchSize=6) or leave defaults.
 -- All values affect the unified brain tick only; swarm mode ignores them.
 AiBrainBatchSize       = AiBrainBatchSize       or 1   -- bots processed per PlayerGet1 fire
@@ -61356,7 +61378,7 @@ function AiBrainArmyTick(pi, p)
     lap("other")
 
     if d.ticks % AiProfileEvery == 0 then
-        ProbeLogWrite(AiProfileDump(pi))
+        AiBrainLogAppend(AiProfileDump(pi))
     end
 end
 
