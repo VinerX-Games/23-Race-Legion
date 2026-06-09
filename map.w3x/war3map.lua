@@ -11685,14 +11685,14 @@ function TryAttack()
 				
 			GroupClear(gSubGroup)
 			gSubGroupCounter = 0
-			while true do
-				gUnit2 = FirstOfGroup(gAllyGroup)
-				if gUnit2 == nil then break end
-				UnitAddAbility(gUnit2, FourCC('A1GZ'))
-				GroupRemoveUnit(gAllyGroup, gUnit2)
-				GroupAddUnit(gSubGroup, gUnit2)
-				gSubGroupCounter = gSubGroupCounter + 1
-				gUnit2 = nil
+			local gSize = BlzGroupGetSize(gAllyGroup)
+			for gIdx = 1, gSize do
+				gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+				if gUnit2 ~= nil then
+					UnitAddAbility(gUnit2, FourCC('A1GZ'))
+					GroupAddUnit(gSubGroup, gUnit2)
+					gSubGroupCounter = gSubGroupCounter + 1
+				end
 			end
 			-- ?? ??????? ????? ??????
 			if gDx <= 2500 then
@@ -11728,9 +11728,11 @@ function TryAttack()
 				end
 				gSubGroupCounter = 0
 				GroupClear(gSubGroup)
-				while true do
-					gUnit2 = FirstOfGroup(gAllyGroup)
-					
+				local gSize = BlzGroupGetSize(gAllyGroup)
+				local gIdx = 0
+				while gIdx < gSize do
+					gIdx = gIdx + 1
+					gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
 					if gUnit2 == nil then
 						local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
 						if attackLogCount < 10 then
@@ -11742,9 +11744,7 @@ function TryAttack()
 						gSubGroupCounter = 0
 						if true then break end
 					end
-					GroupRemoveUnit(gAllyGroup, gUnit2)
-					
-					
+
 					GroupAddUnit(gSubGroup, gUnit2)
 					gSubGroupCounter = gSubGroupCounter + 1
 					if gSubGroupCounter >= 12 then
@@ -11752,12 +11752,11 @@ function TryAttack()
 						GroupClear(gSubGroup)
 						gSubGroupCounter = 0
 					end
-					
-					--  ???????? ? ???????
+
 					if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
 						ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
 					end
-					
+
 					gUnit2 = nil
 				end
 			end
@@ -11836,14 +11835,14 @@ function TryAttack()
 					
 				GroupClear(gSubGroup)
 				gSubGroupCounter = 0
-				while true do
-					gUnit2 = FirstOfGroup(gAllyGroup)
-					if gUnit2 == nil then break end
-					UnitAddAbility(gUnit2, FourCC('A1GZ'))
-					GroupRemoveUnit(gAllyGroup, gUnit2)
-					GroupAddUnit(gSubGroup, gUnit2)
-					gSubGroupCounter = gSubGroupCounter + 1
-					gUnit2 = nil
+				local gSize = BlzGroupGetSize(gAllyGroup)
+				for gIdx = 1, gSize do
+					gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+					if gUnit2 ~= nil then
+						UnitAddAbility(gUnit2, FourCC('A1GZ'))
+						GroupAddUnit(gSubGroup, gUnit2)
+						gSubGroupCounter = gSubGroupCounter + 1
+					end
 				end
 				-- ?? ??????? ????? ??????
 				if gDx <= 2500 then
@@ -11878,40 +11877,42 @@ function TryAttack()
 					if allyCount == 0 then
 						AiProbeLogLimited(pi_attack, "Log_TryAttack_NoGroupAlliesWide", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=group-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 					end
-					gSubGroupCounter = 0
-					GroupClear(gSubGroup)
-					while true do
-						gUnit2 = FirstOfGroup(gAllyGroup)
-						
-						if gUnit2 == nil then
-							local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
-							if attackLogCount < 10 then
-								AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
-								ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=group-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
-							end
-							GroupPointOrder(gSubGroup, "attack", gX2, gY2)
-							GroupClear(gSubGroup)
-							gSubGroupCounter = 0
-							if true then break end
+				gSubGroupCounter = 0
+				GroupClear(gSubGroup)
+				local gSize = BlzGroupGetSize(gAllyGroup)
+				local gIdx = 0
+				while gIdx < gSize do
+					gIdx = gIdx + 1
+					gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+
+					if gUnit2 == nil then
+						local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
+						if attackLogCount < 10 then
+							AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
+							ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=group-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
 						end
-						GroupRemoveUnit(gAllyGroup, gUnit2)
-						
-						
-						GroupAddUnit(gSubGroup, gUnit2)
-						gSubGroupCounter = gSubGroupCounter + 1
-						if gSubGroupCounter >= 12 then
-							GroupPointOrder(gSubGroup, "attack", gX2, gY2)
-							GroupClear(gSubGroup)
-							gSubGroupCounter = 0
-						end
-						
-						--  ???????? ? ???????
-						if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
-							ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
-						end
-						
-						gUnit2 = nil
+						GroupPointOrder(gSubGroup, "attack", gX2, gY2)
+						GroupClear(gSubGroup)
+						gSubGroupCounter = 0
+						if true then break end
 					end
+
+
+					GroupAddUnit(gSubGroup, gUnit2)
+					gSubGroupCounter = gSubGroupCounter + 1
+					if gSubGroupCounter >= 12 then
+						GroupPointOrder(gSubGroup, "attack", gX2, gY2)
+						GroupClear(gSubGroup)
+						gSubGroupCounter = 0
+					end
+
+					--  ???????? ? ???????
+					if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
+						ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
+					end
+
+					gUnit2 = nil
+				end
 					
 					
 					
@@ -11971,19 +11972,21 @@ function TryAttackN()
 			GroupEnumUnitsInRange(gAllyGroup, x, y, (2000 * AiRadius) / 5, B_LazyN)
 			gSubGroupCounter = 0
 			GroupClear(gSubGroup)
-			
-			while true do
-				u2 = FirstOfGroup(gAllyGroup)
-				
+
+			local gSize = BlzGroupGetSize(gAllyGroup)
+			local gIdx = 0
+			while gIdx < gSize do
+				gIdx = gIdx + 1
+				u2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+
 				if u2 == nil then
 					GroupPointOrder(gSubGroup, "attack", x2, y2)
 					GroupClear(gSubGroup)
 					gSubGroupCounter = 0
 					if true then break end
 				end
-				GroupRemoveUnit(gAllyGroup, u2)
-				
-				
+
+
 				GroupAddUnit(gSubGroup, u2)
 				gSubGroupCounter = gSubGroupCounter + 1
 				if gSubGroupCounter >= 12 then
@@ -15375,19 +15378,18 @@ function Trig_Gob_Potreblenie_Actions()
 	local r = GetPlayerTechCount(p, FourCC('R04N'), true)
 	udg_Boolexpr = Trig_Gob_Potreblenie_Func001002
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
-	while true do
-		u = FirstOfGroup(g)
+	local gSize = BlzGroupGetSize(g)
+	for gIdx = 1, gSize do
+		u = BlzGroupUnitAt(g, gIdx)
 		if u == nil then break end
-		
+
 		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
 		if GetUnitAbilityLevel(u, FourCC('A0A5')) ~= 0 then
 			disincome[pi] = disincome[pi] - (udg_Price * Tax) * (1.60 - (0.10 * (r - 1)))
 			disincome[pi] = disincome[pi] + (udg_Price * Tax) * (1.60 - (0.10 * r))
 		end
-		
-		
-		
-		GroupRemoveUnit(g, u)
+
+
 	end
 	UpdateGraf(pi)
 	GroupClear(udg_LocalOtrad2)
@@ -15428,15 +15430,15 @@ function Trig_Silitid_Potreblenie_Actions()
 	local r = GetPlayerTechCount(p, FourCC('R04N'), true)
 	udg_Boolexpr = HaveSilitidSpell
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
-	while true do
-		u = FirstOfGroup(g)
+	local gSize = BlzGroupGetSize(g)
+	for gIdx = 1, gSize do
+		u = BlzGroupUnitAt(g, gIdx)
 		if u == nil then break end
-		
+
 		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
 		disincome[pi] = disincome[pi] - (udg_Price * Tax / 2)
 		disincome[pi] = disincome[pi] + (udg_Price * Tax / 3)
-		
-		GroupRemoveUnit(g, u)
+
 	end
 	GroupClear(udg_LocalOtrad2)
 	UpdateGraf(pi)
@@ -22815,23 +22817,24 @@ function Trig_F2_2_Actions()
     
     --set g = udg_F_Group[pi+1]
     GroupAddGroup(udg_F_Group[pi + 1], g)
-    while true do
-    
-        u=FirstOfGroup(g)
+    local fgSize = BlzGroupGetSize(g)
+    local fgIdx = 0
+    while fgIdx < fgSize do
+        fgIdx = fgIdx + 1
+        u = BlzGroupUnitAt(g, fgIdx)
         if u == nil then
             GroupPointOrderLoc(g0, "attack", loc)
             if true then break end
         end
-             
+
         if i == 12 then
             GroupPointOrderLoc(g0, "attack", loc)
             i=0
             GroupClear(g0)
-        
+
         end
         i=i + 1
         GroupAddUnit(g0, u)
-        GroupRemoveUnit(g, u)
         u=nil
     end
     DestroyGroup(g)
@@ -22874,14 +22877,16 @@ function Trig_F2_Attack_Point_Actions()
     --set g = udg_F_Group[pi+1]
     GroupAddGroup(udg_F_Group[pi + 1], g)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    while true do
-    
-        u=FirstOfGroup(g)
-        if u == nil or i >= 25 then break end
-        
+    local fgSize = BlzGroupGetSize(g)
+    local fgIdx = 0
+    while fgIdx < fgSize and i < 25 do
+        fgIdx = fgIdx + 1
+        u = BlzGroupUnitAt(g, fgIdx)
+        if u == nil then break end
+
         x=GetUnitX(u)
         y=GetUnitY(u)
-        
+
         GroupEnumUnitsInRange(g0, x, y, 500, OwnUnit)
         GroupEnumUnitsInRange(points, x, y, 7500, IsCityEnemy)
         if FirstOfGroup(points) ~= nil then
@@ -22891,7 +22896,6 @@ function Trig_F2_Attack_Point_Actions()
         end
         GroupRemoveGroup(g, g0)
         GroupClear(g0)
-        GroupRemoveUnit(g, u)
         u=nil
         i=i + 1
     end
@@ -25318,9 +25322,9 @@ function Trig_LumberTest_Actions()
     local centerY
     --call DisplayTextToPlayer(Player(0),0,0,"0")
     GroupAddGroup(udg_FacelessLumberBuildings, g)
-    --call DisplayTextToPlayer(Player(0),0,0, I2S(CountUnitsInGroup(g)))
-    while true do
-        u=FirstOfGroup(g)
+    local gSize = BlzGroupGetSize(g)
+    for gIdx = 1, gSize do
+        u = BlzGroupUnitAt(g, gIdx)
         if u == nil then break end
         
         DisplayTextToPlayer(Player(0), 0, 0, "")
@@ -25349,7 +25353,6 @@ function Trig_LumberTest_Actions()
         
         
         RemoveLocation(l)
-        GroupRemoveUnit(g, u)
         r=nil
         l=nil
         TriggerSleepAction(0.01)
@@ -37269,13 +37272,13 @@ function Trig_CommonHome_Actions()
     g=CreateGroup()
     udg_Boolexpr = NoneRadicals
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
-    while true do
-        u=FirstOfGroup(g)
+    local gSize = BlzGroupGetSize(g)
+    for gIdx = 1, gSize do
+        u = BlzGroupUnitAt(g, gIdx)
         if u == nil then break end
-        
+
         SetUnitOwner(u, Player(24), true)
-        
-        GroupRemoveUnit(g, u)
+
         u=nil
     end
     
@@ -37584,13 +37587,13 @@ function Trig_TrueHorde_Actions()
     g=CreateGroup()
     udg_Boolexpr = NoNeORc
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
-    while true do
-        u=FirstOfGroup(g)
+    local gSize = BlzGroupGetSize(g)
+    for gIdx = 1, gSize do
+        u = BlzGroupUnitAt(g, gIdx)
         if u == nil then break end
-        
+
         KillUnit(u)
-        
-        GroupRemoveUnit(g, u)
+
         u=nil
     end
     
@@ -49853,13 +49856,14 @@ function Trig_PereborBuildings_Code_Func002A()
             local bldGrp = udg_Ai_buildings[gPi]
             local bldOk, bldErr = pcall(function()
                 local manualCount = 0
-                local manualU = FirstOfGroup(bldGrp)
-                while manualU ~= nil do
-                    manualCount = manualCount + 1
-                    local uid = GetUnitTypeId(manualU)
-                    local alive = UnitAlive(manualU)
-                    GroupRemoveUnit(bldGrp, manualU)
-                    manualU = FirstOfGroup(bldGrp)
+                local bldSize = BlzGroupGetSize(bldGrp)
+                for bldIdx = 1, bldSize do
+                    local manualU = BlzGroupUnitAt(bldGrp, bldIdx)
+                    if manualU ~= nil then
+                        manualCount = manualCount + 1
+                        local uid = GetUnitTypeId(manualU)
+                        local alive = UnitAlive(manualU)
+                    end
                 end
                 if manualCount == 0 then
                 end
@@ -50663,11 +50667,10 @@ function aiRep()
     gPlayer=Player(pi)
     BJDebugMsg("" .. GetPlayerName(gPlayer))
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, nil)
-    while true do
-        gUnit=FirstOfGroup(gGroup)
-        if gUnit == nil then
-            if true then break end
-        end
+    local gSize = BlzGroupGetSize(gGroup)
+    for gIdx = 1, gSize do
+        gUnit = BlzGroupUnitAt(gGroup, gIdx)
+        if gUnit == nil then break end
         BJDebugMsg("" .. GetUnitName(gUnit))
         if GetUnitAbilityLevel(gUnit, gDummySpell) == 0 and not IsUnitType(gUnit, UNIT_TYPE_SUMMONED) then
             
@@ -50708,7 +50711,6 @@ function aiRep()
         
         end
         
-        GroupRemoveUnit(gGroup, gUnit)
     end
     
 end
@@ -60238,17 +60240,18 @@ function AiBrainOrderIdleTo(pi, p, x, y)
     GroupEnumUnitsOfPlayer(gAllyGroup, p, B_Lazy)
     GroupClear(gSubGroup)
     local ordered, cnt = 0, 0
-    while true do
-        local u = FirstOfGroup(gAllyGroup)
-        if u == nil then break end
-        GroupRemoveUnit(gAllyGroup, u)
-        GroupAddUnit(gSubGroup, u)
-        cnt = cnt + 1
-        ordered = ordered + 1
-        if cnt >= 12 then
-            GroupPointOrder(gSubGroup, "attack", x, y)
-            GroupClear(gSubGroup)
-            cnt = 0
+    local gSize = BlzGroupGetSize(gAllyGroup)
+    for gIdx = 1, gSize do
+        local u = BlzGroupUnitAt(gAllyGroup, gIdx)
+        if u ~= nil then
+            GroupAddUnit(gSubGroup, u)
+            cnt = cnt + 1
+            ordered = ordered + 1
+            if cnt >= 12 then
+                GroupPointOrder(gSubGroup, "attack", x, y)
+                GroupClear(gSubGroup)
+                cnt = 0
+            end
         end
     end
     if cnt > 0 then
@@ -60335,12 +60338,13 @@ function AiBrainOrderToPortal(pi, p, portal)
     local allyCount = CountUnitsInGroup(gAllyGroup)
     if allyCount == 0 then return 0 end
     GroupClear(gSubGroup)
-    while true do
-        local u = FirstOfGroup(gAllyGroup)
-        if u == nil then break end
-        UnitAddAbility(u, FourCC('A1GZ'))
-        GroupRemoveUnit(gAllyGroup, u)
-        GroupAddUnit(gSubGroup, u)
+    local gSize = BlzGroupGetSize(gAllyGroup)
+    for gIdx = 1, gSize do
+        local u = BlzGroupUnitAt(gAllyGroup, gIdx)
+        if u ~= nil then
+            UnitAddAbility(u, FourCC('A1GZ'))
+            GroupAddUnit(gSubGroup, u)
+        end
     end
     local cx, cy, _ = AiGroupCentroid(udg_Ai_army[pi])
     local dx, dy = cx - px, cy - py

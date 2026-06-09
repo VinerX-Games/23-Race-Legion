@@ -1826,19 +1826,18 @@ function Trig_Gob_Potreblenie_Actions()
 	local r = GetPlayerTechCount(p, FourCC('R04N'), true)
 	udg_Boolexpr = Trig_Gob_Potreblenie_Func001002
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
-	while true do
-		u = FirstOfGroup(g)
+	local gSize = BlzGroupGetSize(g)
+	for gIdx = 1, gSize do
+		u = BlzGroupUnitAt(g, gIdx)
 		if u == nil then break end
-		
+
 		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
 		if GetUnitAbilityLevel(u, FourCC('A0A5')) ~= 0 then
 			disincome[pi] = disincome[pi] - (udg_Price * Tax) * (1.60 - (0.10 * (r - 1)))
 			disincome[pi] = disincome[pi] + (udg_Price * Tax) * (1.60 - (0.10 * r))
 		end
-		
-		
-		
-		GroupRemoveUnit(g, u)
+
+
 	end
 	UpdateGraf(pi)
 	GroupClear(udg_LocalOtrad2)
@@ -1879,15 +1878,15 @@ function Trig_Silitid_Potreblenie_Actions()
 	local r = GetPlayerTechCount(p, FourCC('R04N'), true)
 	udg_Boolexpr = HaveSilitidSpell
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
-	while true do
-		u = FirstOfGroup(g)
+	local gSize = BlzGroupGetSize(g)
+	for gIdx = 1, gSize do
+		u = BlzGroupUnitAt(g, gIdx)
 		if u == nil then break end
-		
+
 		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
 		disincome[pi] = disincome[pi] - (udg_Price * Tax / 2)
 		disincome[pi] = disincome[pi] + (udg_Price * Tax / 3)
-		
-		GroupRemoveUnit(g, u)
+
 	end
 	GroupClear(udg_LocalOtrad2)
 	UpdateGraf(pi)

@@ -43,19 +43,21 @@ function TryAttackN()
 			GroupEnumUnitsInRange(gAllyGroup, x, y, (2000 * AiRadius) / 5, B_LazyN)
 			gSubGroupCounter = 0
 			GroupClear(gSubGroup)
-			
-			while true do
-				u2 = FirstOfGroup(gAllyGroup)
-				
+
+			local gSize = BlzGroupGetSize(gAllyGroup)
+			local gIdx = 0
+			while gIdx < gSize do
+				gIdx = gIdx + 1
+				u2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+
 				if u2 == nil then
 					GroupPointOrder(gSubGroup, "attack", x2, y2)
 					GroupClear(gSubGroup)
 					gSubGroupCounter = 0
 					if true then break end
 				end
-				GroupRemoveUnit(gAllyGroup, u2)
-				
-				
+
+
 				GroupAddUnit(gSubGroup, u2)
 				gSubGroupCounter = gSubGroupCounter + 1
 				if gSubGroupCounter >= 12 then

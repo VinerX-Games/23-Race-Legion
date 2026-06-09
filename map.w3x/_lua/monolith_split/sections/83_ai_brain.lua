@@ -344,17 +344,18 @@ function AiBrainOrderIdleTo(pi, p, x, y)
     GroupEnumUnitsOfPlayer(gAllyGroup, p, B_Lazy)
     GroupClear(gSubGroup)
     local ordered, cnt = 0, 0
-    while true do
-        local u = FirstOfGroup(gAllyGroup)
-        if u == nil then break end
-        GroupRemoveUnit(gAllyGroup, u)
-        GroupAddUnit(gSubGroup, u)
-        cnt = cnt + 1
-        ordered = ordered + 1
-        if cnt >= 12 then
-            GroupPointOrder(gSubGroup, "attack", x, y)
-            GroupClear(gSubGroup)
-            cnt = 0
+    local gSize = BlzGroupGetSize(gAllyGroup)
+    for gIdx = 1, gSize do
+        local u = BlzGroupUnitAt(gAllyGroup, gIdx)
+        if u ~= nil then
+            GroupAddUnit(gSubGroup, u)
+            cnt = cnt + 1
+            ordered = ordered + 1
+            if cnt >= 12 then
+                GroupPointOrder(gSubGroup, "attack", x, y)
+                GroupClear(gSubGroup)
+                cnt = 0
+            end
         end
     end
     if cnt > 0 then
@@ -441,12 +442,13 @@ function AiBrainOrderToPortal(pi, p, portal)
     local allyCount = CountUnitsInGroup(gAllyGroup)
     if allyCount == 0 then return 0 end
     GroupClear(gSubGroup)
-    while true do
-        local u = FirstOfGroup(gAllyGroup)
-        if u == nil then break end
-        UnitAddAbility(u, FourCC('A1GZ'))
-        GroupRemoveUnit(gAllyGroup, u)
-        GroupAddUnit(gSubGroup, u)
+    local gSize = BlzGroupGetSize(gAllyGroup)
+    for gIdx = 1, gSize do
+        local u = BlzGroupUnitAt(gAllyGroup, gIdx)
+        if u ~= nil then
+            UnitAddAbility(u, FourCC('A1GZ'))
+            GroupAddUnit(gSubGroup, u)
+        end
     end
     local cx, cy, _ = AiGroupCentroid(udg_Ai_army[pi])
     local dx, dy = cx - px, cy - py

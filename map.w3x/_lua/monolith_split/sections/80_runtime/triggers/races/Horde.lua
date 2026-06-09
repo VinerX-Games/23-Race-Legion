@@ -2020,13 +2020,13 @@ function Trig_CommonHome_Actions()
     g=CreateGroup()
     udg_Boolexpr = NoneRadicals
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
-    while true do
-        u=FirstOfGroup(g)
+    local gSize = BlzGroupGetSize(g)
+    for gIdx = 1, gSize do
+        u = BlzGroupUnitAt(g, gIdx)
         if u == nil then break end
-        
+
         SetUnitOwner(u, Player(24), true)
-        
-        GroupRemoveUnit(g, u)
+
         u=nil
     end
     
@@ -2335,13 +2335,13 @@ function Trig_TrueHorde_Actions()
     g=CreateGroup()
     udg_Boolexpr = NoNeORc
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
-    while true do
-        u=FirstOfGroup(g)
+    local gSize = BlzGroupGetSize(g)
+    for gIdx = 1, gSize do
+        u = BlzGroupUnitAt(g, gIdx)
         if u == nil then break end
-        
+
         KillUnit(u)
-        
-        GroupRemoveUnit(g, u)
+
         u=nil
     end
     

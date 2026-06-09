@@ -1501,23 +1501,24 @@ function Trig_F2_2_Actions()
     
     --set g = udg_F_Group[pi+1]
     GroupAddGroup(udg_F_Group[pi + 1], g)
-    while true do
-    
-        u=FirstOfGroup(g)
+    local fgSize = BlzGroupGetSize(g)
+    local fgIdx = 0
+    while fgIdx < fgSize do
+        fgIdx = fgIdx + 1
+        u = BlzGroupUnitAt(g, fgIdx)
         if u == nil then
             GroupPointOrderLoc(g0, "attack", loc)
             if true then break end
         end
-             
+
         if i == 12 then
             GroupPointOrderLoc(g0, "attack", loc)
             i=0
             GroupClear(g0)
-        
+
         end
         i=i + 1
         GroupAddUnit(g0, u)
-        GroupRemoveUnit(g, u)
         u=nil
     end
     DestroyGroup(g)
@@ -1560,14 +1561,16 @@ function Trig_F2_Attack_Point_Actions()
     --set g = udg_F_Group[pi+1]
     GroupAddGroup(udg_F_Group[pi + 1], g)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    while true do
-    
-        u=FirstOfGroup(g)
-        if u == nil or i >= 25 then break end
-        
+    local fgSize = BlzGroupGetSize(g)
+    local fgIdx = 0
+    while fgIdx < fgSize and i < 25 do
+        fgIdx = fgIdx + 1
+        u = BlzGroupUnitAt(g, fgIdx)
+        if u == nil then break end
+
         x=GetUnitX(u)
         y=GetUnitY(u)
-        
+
         GroupEnumUnitsInRange(g0, x, y, 500, OwnUnit)
         GroupEnumUnitsInRange(points, x, y, 7500, IsCityEnemy)
         if FirstOfGroup(points) ~= nil then
@@ -1577,7 +1580,6 @@ function Trig_F2_Attack_Point_Actions()
         end
         GroupRemoveGroup(g, g0)
         GroupClear(g0)
-        GroupRemoveUnit(g, u)
         u=nil
         i=i + 1
     end

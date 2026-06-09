@@ -303,9 +303,9 @@ function Trig_LumberTest_Actions()
     local centerY
     --call DisplayTextToPlayer(Player(0),0,0,"0")
     GroupAddGroup(udg_FacelessLumberBuildings, g)
-    --call DisplayTextToPlayer(Player(0),0,0, I2S(CountUnitsInGroup(g)))
-    while true do
-        u=FirstOfGroup(g)
+    local gSize = BlzGroupGetSize(g)
+    for gIdx = 1, gSize do
+        u = BlzGroupUnitAt(g, gIdx)
         if u == nil then break end
         
         DisplayTextToPlayer(Player(0), 0, 0, "")
@@ -334,7 +334,6 @@ function Trig_LumberTest_Actions()
         
         
         RemoveLocation(l)
-        GroupRemoveUnit(g, u)
         r=nil
         l=nil
         TriggerSleepAction(0.01)

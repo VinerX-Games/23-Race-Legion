@@ -115,14 +115,14 @@ function TryAttack()
 				
 			GroupClear(gSubGroup)
 			gSubGroupCounter = 0
-			while true do
-				gUnit2 = FirstOfGroup(gAllyGroup)
-				if gUnit2 == nil then break end
-				UnitAddAbility(gUnit2, FourCC('A1GZ'))
-				GroupRemoveUnit(gAllyGroup, gUnit2)
-				GroupAddUnit(gSubGroup, gUnit2)
-				gSubGroupCounter = gSubGroupCounter + 1
-				gUnit2 = nil
+			local gSize = BlzGroupGetSize(gAllyGroup)
+			for gIdx = 1, gSize do
+				gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+				if gUnit2 ~= nil then
+					UnitAddAbility(gUnit2, FourCC('A1GZ'))
+					GroupAddUnit(gSubGroup, gUnit2)
+					gSubGroupCounter = gSubGroupCounter + 1
+				end
 			end
 			-- ?? ??????? ????? ??????
 			if gDx <= 2500 then
@@ -158,9 +158,11 @@ function TryAttack()
 				end
 				gSubGroupCounter = 0
 				GroupClear(gSubGroup)
-				while true do
-					gUnit2 = FirstOfGroup(gAllyGroup)
-					
+				local gSize = BlzGroupGetSize(gAllyGroup)
+				local gIdx = 0
+				while gIdx < gSize do
+					gIdx = gIdx + 1
+					gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
 					if gUnit2 == nil then
 						local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
 						if attackLogCount < 10 then
@@ -172,9 +174,7 @@ function TryAttack()
 						gSubGroupCounter = 0
 						if true then break end
 					end
-					GroupRemoveUnit(gAllyGroup, gUnit2)
-					
-					
+
 					GroupAddUnit(gSubGroup, gUnit2)
 					gSubGroupCounter = gSubGroupCounter + 1
 					if gSubGroupCounter >= 12 then
@@ -182,12 +182,11 @@ function TryAttack()
 						GroupClear(gSubGroup)
 						gSubGroupCounter = 0
 					end
-					
-					--  ???????? ? ???????
+
 					if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
 						ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
 					end
-					
+
 					gUnit2 = nil
 				end
 			end
@@ -266,14 +265,14 @@ function TryAttack()
 					
 				GroupClear(gSubGroup)
 				gSubGroupCounter = 0
-				while true do
-					gUnit2 = FirstOfGroup(gAllyGroup)
-					if gUnit2 == nil then break end
-					UnitAddAbility(gUnit2, FourCC('A1GZ'))
-					GroupRemoveUnit(gAllyGroup, gUnit2)
-					GroupAddUnit(gSubGroup, gUnit2)
-					gSubGroupCounter = gSubGroupCounter + 1
-					gUnit2 = nil
+				local gSize = BlzGroupGetSize(gAllyGroup)
+				for gIdx = 1, gSize do
+					gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+					if gUnit2 ~= nil then
+						UnitAddAbility(gUnit2, FourCC('A1GZ'))
+						GroupAddUnit(gSubGroup, gUnit2)
+						gSubGroupCounter = gSubGroupCounter + 1
+					end
 				end
 				-- ?? ??????? ????? ??????
 				if gDx <= 2500 then
@@ -308,40 +307,42 @@ function TryAttack()
 					if allyCount == 0 then
 						AiProbeLogLimited(pi_attack, "Log_TryAttack_NoGroupAlliesWide", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=group-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 					end
-					gSubGroupCounter = 0
-					GroupClear(gSubGroup)
-					while true do
-						gUnit2 = FirstOfGroup(gAllyGroup)
-						
-						if gUnit2 == nil then
-							local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
-							if attackLogCount < 10 then
-								AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
-								ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=group-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
-							end
-							GroupPointOrder(gSubGroup, "attack", gX2, gY2)
-							GroupClear(gSubGroup)
-							gSubGroupCounter = 0
-							if true then break end
+				gSubGroupCounter = 0
+				GroupClear(gSubGroup)
+				local gSize = BlzGroupGetSize(gAllyGroup)
+				local gIdx = 0
+				while gIdx < gSize do
+					gIdx = gIdx + 1
+					gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+
+					if gUnit2 == nil then
+						local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
+						if attackLogCount < 10 then
+							AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
+							ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=group-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
 						end
-						GroupRemoveUnit(gAllyGroup, gUnit2)
-						
-						
-						GroupAddUnit(gSubGroup, gUnit2)
-						gSubGroupCounter = gSubGroupCounter + 1
-						if gSubGroupCounter >= 12 then
-							GroupPointOrder(gSubGroup, "attack", gX2, gY2)
-							GroupClear(gSubGroup)
-							gSubGroupCounter = 0
-						end
-						
-						--  ???????? ? ???????
-						if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
-							ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
-						end
-						
-						gUnit2 = nil
+						GroupPointOrder(gSubGroup, "attack", gX2, gY2)
+						GroupClear(gSubGroup)
+						gSubGroupCounter = 0
+						if true then break end
 					end
+
+
+					GroupAddUnit(gSubGroup, gUnit2)
+					gSubGroupCounter = gSubGroupCounter + 1
+					if gSubGroupCounter >= 12 then
+						GroupPointOrder(gSubGroup, "attack", gX2, gY2)
+						GroupClear(gSubGroup)
+						gSubGroupCounter = 0
+					end
+
+					--  ???????? ? ???????
+					if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
+						ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
+					end
+
+					gUnit2 = nil
+				end
 					
 					
 					

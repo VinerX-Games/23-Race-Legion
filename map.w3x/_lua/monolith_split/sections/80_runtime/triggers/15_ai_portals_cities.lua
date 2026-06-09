@@ -794,13 +794,14 @@ function Trig_PereborBuildings_Code_Func002A()
             local bldGrp = udg_Ai_buildings[gPi]
             local bldOk, bldErr = pcall(function()
                 local manualCount = 0
-                local manualU = FirstOfGroup(bldGrp)
-                while manualU ~= nil do
-                    manualCount = manualCount + 1
-                    local uid = GetUnitTypeId(manualU)
-                    local alive = UnitAlive(manualU)
-                    GroupRemoveUnit(bldGrp, manualU)
-                    manualU = FirstOfGroup(bldGrp)
+                local bldSize = BlzGroupGetSize(bldGrp)
+                for bldIdx = 1, bldSize do
+                    local manualU = BlzGroupUnitAt(bldGrp, bldIdx)
+                    if manualU ~= nil then
+                        manualCount = manualCount + 1
+                        local uid = GetUnitTypeId(manualU)
+                        local alive = UnitAlive(manualU)
+                    end
                 end
                 if manualCount == 0 then
                 end
@@ -1604,11 +1605,10 @@ function aiRep()
     gPlayer=Player(pi)
     BJDebugMsg("" .. GetPlayerName(gPlayer))
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, nil)
-    while true do
-        gUnit=FirstOfGroup(gGroup)
-        if gUnit == nil then
-            if true then break end
-        end
+    local gSize = BlzGroupGetSize(gGroup)
+    for gIdx = 1, gSize do
+        gUnit = BlzGroupUnitAt(gGroup, gIdx)
+        if gUnit == nil then break end
         BJDebugMsg("" .. GetUnitName(gUnit))
         if GetUnitAbilityLevel(gUnit, gDummySpell) == 0 and not IsUnitType(gUnit, UNIT_TYPE_SUMMONED) then
             
@@ -1649,7 +1649,6 @@ function aiRep()
         
         end
         
-        GroupRemoveUnit(gGroup, gUnit)
     end
     
 end
