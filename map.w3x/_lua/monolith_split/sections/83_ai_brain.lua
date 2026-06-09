@@ -1001,7 +1001,9 @@ function AiBrainArmyTick(pi, p)
 
     ProbeLogWrite("[SQDBG] cp10 tick-squads n=" .. tostring(#AiSquadsOf(pi)))
     local squads = AiSquadsOf(pi)
+    local ticked = 0
     for sid, sq in pairs(squads) do
+        if ticked >= 6 then break end
         local newState = sq.state
         if sq.state == "muster" then newState = AiSquadTickMuster(pi, sid, sq, p, wm)
         elseif sq.state == "march" then newState = AiSquadTickMarch(pi, sid, sq, p, wm)
@@ -1012,6 +1014,7 @@ function AiBrainArmyTick(pi, p)
             ProbeLogWrite("[SQDBG] pi" .. tostring(pi) .. " sq" .. tostring(sid) .. " " .. sq.state .. "->" .. newState .. " sz=" .. tostring(AiSquadSize(sq.members)))
             sq.state = newState
         end
+        ticked = ticked + 1
     end
     -- Pirate fleet: try buying ships every 8 ticks
     if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end

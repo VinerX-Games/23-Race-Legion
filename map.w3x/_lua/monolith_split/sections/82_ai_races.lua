@@ -1414,6 +1414,12 @@ RegisterAiRace("Horde", {
 
             { at = 17, action = "fleet", wall = FourCC('h0HO') },
 
+            { at = 25, action = "techUp", from = FourCC('ogre'), to = FourCC('ostr'), cap = 3 },
+
+            { at = 55, action = "techUp", from = FourCC('ostr'), to = FourCC('ofrt'), cap = 3 },
+
+            { at = 60, action = "mageTp" },
+
             { action = "random", branches = {
 
                 { {FourCC('ovln'), FourCC('R0F3'), 1}, {FourCC('ovln'), FourCC('R0F4'), 1}, {FourCC('ovln'), FourCC('R0EH'), 1}, {FourCC('ovln'), FourCC('R0EI'), 1} },
