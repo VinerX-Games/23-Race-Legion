@@ -21905,76 +21905,44 @@ end
 --
 -- ? ??????? ???? ????? ?????????
 --===========================================================================
-function damageRadious()
-    local i= 0
-    while true do
-        if i >= times then break end
-        UnitDamagePointLoc(damager, delay + interval * i, damage, destination, radious, Attacktype, Damagetype)
-        i=i + 1
-    end
-end
-  
-function ManabombaNuke()
-    local t= GetExpiredTimer()
-    local tid= GetHandleId(t)
-    local destination= LoadLocationHandle(Hash, tid, 0)
-    local caster= LoadUnitHandle(Hash, tid, 3)
-    RemoveUnit(LoadUnitHandle(Hash, tid, 1))
-    RemoveUnit(LoadUnitHandle(Hash, tid, 2))
-   -- call BJDebugMsg("")
-    RemoveEffectTimed(AddSpecialEffectLocBJ(destination, "war3mapImportedExplosionC.mdx") , 60)
-    --call RemoveEffectTimed( AddSpecialEffectLocBJ( destination, "ForceField03.mdx" ) 20)
-    
-    
-    
-    
-    damageRadious(caster , 0.0 , 375.00 , destination , 70 , 20 , 0.25 , ATTACK_TYPE_CHAOS , DAMAGE_TYPE_MAGIC)
-    damageRadious(caster , 5 , 600.00 , destination , 55 , 12 , 0.25 , ATTACK_TYPE_CHAOS , DAMAGE_TYPE_MAGIC)
-    damageRadious(caster , 8 , 900.00 , destination , 3 , 160 , 0.25 , ATTACK_TYPE_CHAOS , DAMAGE_TYPE_MAGIC)
-    damageRadious(caster , 8 , 375.00 , destination , 5 , 160 , 0.25 , ATTACK_TYPE_CHAOS , DAMAGE_TYPE_MAGIC)
-    
-    
-    UnitRemoveAbility(caster, FourCC('A0TS'))
-    
-    
-    FlushChildHashtable(Hash, tid)
-    PauseTimer(t)
-    DestroyTimer(t)
-    t=nil
-    caster=nil
-    RemoveLocation(destination)
-    destination=nil
-end
 function ManabombaMissle()
     local t= CreateTimer()
-    local tid= GetHandleId(t)
     local l= GetUnitLoc(caster)
     local p= GetOwningPlayer(caster)
+    local dest = destination
     local u1
     local u2
-   --call BJDebugMsg("")
-     
-    -- ?????? ???? ?????????
+    
     UnitRemoveAbility(caster, FourCC('A0TT'))
-    -- ???? ??????
     u1=CreateUnitAtLoc(p, FourCC('h05P'), l, bj_UNIT_FACING)
     BlzSetUnitRealFieldBJ(u1, UNIT_RF_FLY_HEIGHT, GetUnitDefaultFlyHeight(caster))
     UnitAddAbilityBJ(FourCC('A0TU'), u1)
-    -- ???? ??????
-    u2=CreateUnitAtLoc(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC('h0GI'), destination, bj_UNIT_FACING)
+    u2=CreateUnitAtLoc(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC('h0GI'), dest, bj_UNIT_FACING)
     BlzSetUnitRealFieldBJ(u2, UNIT_RF_FLY_HEIGHT, GetUnitDefaultFlyHeight(caster))
-    
-    
     
     SetUnitPathing(u1, false)
     SetUnitPathing(u2, false)
     IssueTargetOrder(u1, "firebolt", u2)
      
-    TimerStart(t, DistanceBetweenPoints(l, destination) / 600.00, false, ManabombaNuke)
-    SaveLocationHandle(Hash, tid, 0, destination)
-    SaveUnitHandle(Hash, tid, 1, u1)
-    SaveUnitHandle(Hash, tid, 2, u2)
-    SaveUnitHandle(Hash, tid, 3, caster)
+    TimerStart(t, DistanceBetweenPoints(l, dest) / 600.00, false, function()
+        RemoveUnit(u1)
+        RemoveUnit(u2)
+        RemoveEffectTimed(AddSpecialEffectLocBJ(dest, "war3mapImportedExplosionC.mdx"), 60)
+        local function dmg(damager, delay, interval, damage, radious, times, Attacktype, Damagetype)
+            local i=0
+            while i < times do
+                UnitDamagePointLoc(damager, delay + interval * i, damage, dest, radious, Attacktype, Damagetype)
+                i=i+1
+            end
+        end
+        dmg(caster, 0.0, 375.00, 70, 20, 0.25, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC)
+        dmg(caster, 5, 600.00, 55, 12, 0.25, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC)
+        dmg(caster, 8, 900.00, 3, 160, 0.25, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC)
+        dmg(caster, 8, 375.00, 5, 160, 0.25, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC)
+        UnitRemoveAbility(caster, FourCC('A0TS'))
+        RemoveLocation(dest)
+        DestroyTimer(t)
+    end)
     
     RemoveLocation(l)
     l=nil
@@ -41676,71 +41644,22 @@ end
 function Trig_BlinkToUnit_attack_Conditions()
     return GetUnitAbilityLevel(GetAttacker(), FourCC('A0MZ')) >= 1 and BlzGetUnitAbilityCooldownRemaining(GetAttacker(), FourCC('A0MZ')) == 0
 end
-function MoveTimedEnd()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    SetUnitPositionLoc(LoadUnitHandle(Hash, id, 1), LoadLocationHandle(Hash, id, 2))
-       
-    RemoveLocation(LoadLocationHandle(Hash, id, 2))
-    FlushChildHashtable(Hash, id)
-    DestroyTimer(t)
-    t=nil
-    
-    
-end
-function MoveTimed()
-    local t= CreateTimer()
-    local id= GetHandleId(t)
-    
-    SaveUnitHandle(Hash, id, 1, u)
-    SaveLocationHandle(Hash, id, 2, l)
-    TimerStart(t, time, false, MoveTimedEnd)
-    
-    t=nil
-end
-function MoveWithOrderTimedEnd()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    SetUnitPositionLoc(LoadUnitHandle(Hash, id, 1), LoadLocationHandle(Hash, id, 2))
-    IssueTargetOrder(LoadUnitHandle(Hash, id, 1), LoadStr(Hash, id, 4), LoadUnitHandle(Hash, id, 3))
-    
-    RemoveLocation(LoadLocationHandle(Hash, id, 2))
-    FlushChildHashtable(Hash, id)
-    DestroyTimer(t)
-    t=nil
-    
-    
-end
-function MoveWithOrderTimed()
-    local t= CreateTimer()
-    local id= GetHandleId(t)
-    
-    SaveUnitHandle(Hash, id, 1, u)
-    SaveLocationHandle(Hash, id, 2, l)
-    SaveUnitHandle(Hash, id, 3, target)
-    SaveStr(Hash, id, 4, order)
-    TimerStart(t, time, false, MoveWithOrderTimedEnd)
- 
-    t=nil
-end
 function Trig_BlinkToUnit_attack_Actions()
     gUnit=GetAttacker()
---
---    call IssueTargetOrderBJ( gUnit, "attack", GetAttackedUnitBJ() )
---    call UnitAddAbility( 'A0N0', gUnit )
---    call SetUnitAbilityLevelSwapped( 'A0N0', gUnit, GetUnitAbilityLevelSwapped('A0MZ', gUnit) )
---    call UnitAddAbility( 'A0N2', gUnit )
---    call SetUnitAbilityLevelSwapped( 'A0N2', gUnit, GetUnitAbilityLevelSwapped('A0MZ', gUnit) )
---    call UnitRemoveAbility( 'A0MZ', gUnit )
---    
-    MoveWithOrderTimed(gUnit , GetTriggerUnit() , GetUnitLoc(GetTriggerUnit()) , "attack" , 0.1)
+    local u = gUnit
+    local target = GetTriggerUnit()
+    local l = GetUnitLoc(GetTriggerUnit())
+    local order = "attack"
+    local time = 0.1
+    local t = CreateTimer()
+    TimerStart(t, time, false, function()
+        SetUnitPositionLoc(u, l)
+        IssueTargetOrder(u, order, target)
+        RemoveLocation(l)
+        DestroyTimer(t)
+    end)
     DummyCastTargetLevel(FourCC('A1MY') , "shadowstrike" , gUnit , GetTriggerUnit() , GetUnitAbilityLevel(gUnit, FourCC('A0MZ')))
-    
     BlzStartUnitAbilityCooldown(gUnit, FourCC('A0MZ'), 3)
---    call UnitAddAbilityBJ( 'A0MZ', gUnit )
---    call SetUnitAbilityLevelSwapped( 'A0MZ', gUnit, GetUnitAbilityLevelSwapped('A0N0', gUnit) )
---    call UnitRemoveAbilityBJ( 'A0N0', gUnit )
---    call UnitRemoveAbilityBJ( 'A0N2', gUnit )
 end
 --===========================================================================
 function InitTrig_BlinkToUnit_attack()
@@ -41756,8 +41675,17 @@ end
 function Trig_BlinkToUnit_Spell_Actions()
     local l1= GetUnitLoc(GetSpellTargetUnit())
     local l2= GetUnitLoc(GetTriggerUnit())
-    
-    MoveWithOrderTimed(GetTriggerUnit() , GetSpellTargetUnit() , l1 , "attack" , DistanceBetweenPoints(l1, l2) / 1200 + 0.4)
+    local u = GetTriggerUnit()
+    local target = GetSpellTargetUnit()
+    local order = "attack"
+    local time = DistanceBetweenPoints(l1, l2) / 1200 + 0.4
+    local t = CreateTimer()
+    TimerStart(t, time, false, function()
+        SetUnitPositionLoc(u, l1)
+        IssueTargetOrder(u, order, target)
+        RemoveLocation(l1)
+        DestroyTimer(t)
+    end)
     RemoveLocation(l2)
     l1=nil
     l2=nil
@@ -47213,15 +47141,6 @@ end
 function Trig_SecondChance_Func003C()
     return Trig_SecondChance_Func003Func008C()
 end
-function SecondChanceTimer()
-    local t= GetExpiredTimer()
-    
-    CheckAndCreateCapital(LoadPlayerHandle(Hash, GetHandleId(t), 0))
-    FlushChildHashtable(Hash, GetHandleId(t))
-    
-    DestroyTimer(t)
-    t=nil
-end
 function Trig_SecondChance_Actions()
     local t= SecondChance[GetPlayerId(ConvertedPlayer(udg_LocalInteger))]
     udg_LocalText2=SubStringBJ(GetEventPlayerChatString(), 12, 13)
@@ -52398,6 +52317,8 @@ end
 -- def.branches = { jt = function(pi) return ... end }
 -- def.gates   = { tier2 = function(pi) return ... end }
 -- ====================================================================
+AiUnitCap = AiUnitCap or 325
+
 ---@param id integer
 ---@param pi integer
 ---@param u unit
@@ -52406,6 +52327,10 @@ end
 function AiRunProduction(id, pi, u, def)
     local prod = def.production
     if not prod then return false end
+    -- Global cap: stop training when army+navy exceeds limit
+    if (getAiCount(pi, StringHash("Number")) + (AiData[pi][StringHash("NumberN")] or 0)) >= AiUnitCap then
+        return false
+    end
     local w = prod.worker
     if w and w.from then
         for _, b in ipairs(w.from) do
@@ -60631,13 +60556,14 @@ end
 ---@param pi integer
 ---@param u unit
 function AiSquadAssign(pi, u)
-    local cfg = AiBrainCfg(pi)
-    local cap = cfg.squadCap or AiBrainDefaults.squadCap
     local squads = AiSquadsOf(pi)
+    local armyCount = AiData[pi].wm and AiData[pi].wm.armyCount or 0
+    -- Dynamic cap: ~5 squads at 200 units, ~3 at 50, min 8
+    local cap = math.max(8, math.ceil(armyCount / 5))
     local bestSid, bestDist = nil, 99999999.0
     local ux, uy = GetUnitX(u), GetUnitY(u)
     for sid, sq in pairs(squads) do
-        if sq.role == "assault" and AiSquadSize(sq.members) < cap then
+        if sq.role == "assault" then
             local cx, cy, _ = AiGroupCentroid(sq.members)
             local dx, dy = ux - cx, uy - cy
             local d = dx * dx + dy * dy
@@ -61097,10 +61023,7 @@ function AiBrainArmyTick(pi, p)
 
     ProbeLogWrite("[SQDBG] cp10 tick-squads n=" .. tostring(#AiSquadsOf(pi)))
     local squads = AiSquadsOf(pi)
-    local ticked = 0
     for sid, sq in pairs(squads) do
-        if ticked >= 6 then break end
-        ProbeLogWrite("[SQDBG] cp11 sq" .. tostring(sid) .. " state=" .. sq.state)
         local newState = sq.state
         if sq.state == "muster" then newState = AiSquadTickMuster(pi, sid, sq, p, wm)
         elseif sq.state == "march" then newState = AiSquadTickMarch(pi, sid, sq, p, wm)
@@ -61111,7 +61034,6 @@ function AiBrainArmyTick(pi, p)
             ProbeLogWrite("[SQDBG] pi" .. tostring(pi) .. " sq" .. tostring(sid) .. " " .. sq.state .. "->" .. newState .. " sz=" .. tostring(AiSquadSize(sq.members)))
             sq.state = newState
         end
-        ticked = ticked + 1
     end
     -- Pirate fleet: try buying ships every 8 ticks
     if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end

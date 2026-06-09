@@ -534,13 +534,14 @@ end
 ---@param pi integer
 ---@param u unit
 function AiSquadAssign(pi, u)
-    local cfg = AiBrainCfg(pi)
-    local cap = cfg.squadCap or AiBrainDefaults.squadCap
     local squads = AiSquadsOf(pi)
+    local armyCount = AiData[pi].wm and AiData[pi].wm.armyCount or 0
+    -- Dynamic cap: ~5 squads at 200 units, ~3 at 50, min 8
+    local cap = math.max(8, math.ceil(armyCount / 5))
     local bestSid, bestDist = nil, 99999999.0
     local ux, uy = GetUnitX(u), GetUnitY(u)
     for sid, sq in pairs(squads) do
-        if sq.role == "assault" and AiSquadSize(sq.members) < cap then
+        if sq.role == "assault" then
             local cx, cy, _ = AiGroupCentroid(sq.members)
             local dx, dy = ux - cx, uy - cy
             local d = dx * dx + dy * dy
@@ -1000,10 +1001,7 @@ function AiBrainArmyTick(pi, p)
 
     ProbeLogWrite("[SQDBG] cp10 tick-squads n=" .. tostring(#AiSquadsOf(pi)))
     local squads = AiSquadsOf(pi)
-    local ticked = 0
     for sid, sq in pairs(squads) do
-        if ticked >= 6 then break end
-        ProbeLogWrite("[SQDBG] cp11 sq" .. tostring(sid) .. " state=" .. sq.state)
         local newState = sq.state
         if sq.state == "muster" then newState = AiSquadTickMuster(pi, sid, sq, p, wm)
         elseif sq.state == "march" then newState = AiSquadTickMarch(pi, sid, sq, p, wm)
@@ -1014,7 +1012,6 @@ function AiBrainArmyTick(pi, p)
             ProbeLogWrite("[SQDBG] pi" .. tostring(pi) .. " sq" .. tostring(sid) .. " " .. sq.state .. "->" .. newState .. " sz=" .. tostring(AiSquadSize(sq.members)))
             sq.state = newState
         end
-        ticked = ticked + 1
     end
     -- Pirate fleet: try buying ships every 8 ticks
     if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end

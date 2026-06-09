@@ -185,6 +185,8 @@ end
 -- def.branches = { jt = function(pi) return ... end }
 -- def.gates   = { tier2 = function(pi) return ... end }
 -- ====================================================================
+AiUnitCap = AiUnitCap or 325
+
 ---@param id integer
 ---@param pi integer
 ---@param u unit
@@ -193,6 +195,10 @@ end
 function AiRunProduction(id, pi, u, def)
     local prod = def.production
     if not prod then return false end
+    -- Global cap: stop training when army+navy exceeds limit
+    if (getAiCount(pi, StringHash("Number")) + (AiData[pi][StringHash("NumberN")] or 0)) >= AiUnitCap then
+        return false
+    end
     local w = prod.worker
     if w and w.from then
         for _, b in ipairs(w.from) do
