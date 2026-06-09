@@ -2983,7 +2983,7 @@ gg_unit_n003_0308 = nil	---@type unit
 gg_unit_n003_0305 = nil	---@type unit	
 gg_unit_h0OT_0545 = nil	---@type unit	
 Dummy = FourCC('h05P')	---@type integer	
-Hash = InitHashtable()	---@type hashtable	
+-- Hash removed: all hashtable data migrated to Lua tables/closures
 gForce = CreateForce()	---@type force	
 gGroup = CreateGroup()	---@type group	
 gEnemyGroup = CreateGroup()	---@type group	
@@ -9959,7 +9959,8 @@ function AddCountDis(u, pi)
 			
 			if GetUnitAbilityLevel(u, FourCC('A1HS')) > 0 then
 				income[pi] = income[pi] - 5
-				i = LoadInteger(Hash, GetHandleId(u), 0)
+				PlagueOwner = PlagueOwner or {}
+				i = PlagueOwner[GetHandleId(u)] or 0
 				income[i] = income[i] + 5
 			end
 			
@@ -10057,9 +10058,10 @@ function DelCountDis(u, pi)
 			
 			if GetUnitAbilityLevel(u, FourCC('A1HS')) > 0 then
 				income[pi] = income[pi] + 5
-				i = LoadInteger(Hash, GetHandleId(u), 0)
+				PlagueOwner = PlagueOwner or {}
+				i = PlagueOwner[GetHandleId(u)] or 0
 				income[i] = income[i] - 5
-				FlushChildHashtable(Hash, GetHandleId(u))
+				PlagueOwner[GetHandleId(u)] = nil
 			end
 			
 			
@@ -10689,9 +10691,8 @@ end
 function Pstart(p)
 	local pi = GetPlayerId(p)
 	local phash = StringHash("Pfarm")
-	local count = LoadInteger(Hash, pi, phash)
-	SaveInteger(Hash, pi, phash, count + 1)
-	
+	PData[pi] = PData[pi] or {}
+	PData[pi][phash] = (PData[pi][phash] or 0) + 1
 end
 -- ***************************************************************************
 -- *  CountForTier
@@ -10700,33 +10701,22 @@ end
 function Ptiers(pi)
 	local phash = StringHash("Pfarm")
 	local puhash = StringHash("Ptier")
-	local count = LoadInteger(Hash, pi, phash)
-	local u = LoadUnitHandle(Hash, pi, puhash)
+	PData[pi] = PData[pi] or {}
+	local count = PData[pi][phash] or 0
+	local u = PData[pi][puhash]
 	local id = GetUnitTypeId(u)
-	
-	
-	
-	-- call DisplayTextToPlayer(Player(0),0,0,GetUnitName(u))
-	-- call DisplayTextToPlayer(Player(0),0,0,I2S(id))
 	
 	if count < 20 then
 		KillUnit(u)
-		
-		
-		
 	elseif count < 55 then
-		
 		KillUnit(u)
 		u = CreateUnit(Player(pi), FourCC('pa24'), 0, 0, 0.0)
-		
 	else
 		KillUnit(u)
 		u = CreateUnit(Player(pi), FourCC('pa25'), 0, 0, 0.0)
-		
-		
 	end
 	
-	SaveUnitHandle(Hash, pi, puhash, u)
+	PData[pi][puhash] = u
 	u = nil
 end
 -- ***************************************************************************
@@ -10783,53 +10773,39 @@ function HordeW2On()
 	EnableTrigger(gg_trg_DamagerW2)
 	EnableTrigger(gg_trg_TrainW2)
 end
--- ***************************************************************************
+
+UHData = UHData or {}
 -- *  XpLevelW2
 ---@param u unit
 ---@param addXp real
 ---@return nothing
 function AddXp(u, addXp)
 	local uh = GetHandleId(u)
-	local lvl = LoadInteger(Hash, uh, 0)
-	local xp = LoadReal(Hash, uh, 1)
+	local d = UHData[uh]
+	if d == nil then d = {lvl = 0, xp = 0} end
+	local lvl = d.lvl
+	local xp = d.xp
 	local r
-	
 	
 	if lvl < 10 then
 		xp = xp + addXp
-		
-		while true do
-			
-			if xp < 100 + 25 * lvl then break end
-			
-			
+		while xp >= 100 + 25 * lvl do
 			r = GetUnitLifePercent(u)
 			BlzSetUnitMaxHP(u, MathRound(BlzGetUnitMaxHP(u) * 1.035))
 			SetUnitLifePercentBJ(u, r)
-			
 			r = GetUnitManaPercent(u)
 			BlzSetUnitMaxMana(u, MathRound(BlzGetUnitMaxMana(u) * 1.035))
 			SetUnitManaPercentBJ(u, r)
 			BlzSetUnitBaseDamage(u, MathRound(BlzGetUnitBaseDamage(u, 0) * 1.04), 0)
 			BlzSetUnitBaseDamage(u, MathRound(BlzGetUnitBaseDamage(u, 1) * 1.04), 1)
-			
-			
-			
-			
-			
 			xp = xp - (100 + 25 * lvl)
 			lvl = lvl + 1
-			
 			SetUnitAbilityLevel(u, FourCC('w2a0'), lvl)
-			
 		end
-		
-		
-		
-		SaveInteger(Hash, uh, 0, lvl)	-- StringHash("lvl"),lvl)
-		SaveReal(Hash, uh, 1, xp)	-- StringHash("xp"),xp)
+		d.lvl = lvl
+		d.xp = xp
+		UHData[uh] = d
 	end
-	
 end
 -- ***************************************************************************
 -- *  CultOn
@@ -10942,16 +10918,16 @@ end
 function Gstart(p)
 	local pi = GetPlayerId(p)
 	local phash = Gfarm
-	local count = LoadInteger(Hash, pi, phash)
-	SaveInteger(Hash, pi, phash, count + 1)
+	PData[pi] = PData[pi] or {}
+	PData[pi][phash] = (PData[pi][phash] or 0) + 1
 end
 ---@param pi integer
 ---@param phash integer
 ---@param addition integer
 ---@return nothing
 function ChangeObjectsCount(pi, phash, addition)
-	local count = LoadInteger(Hash, pi, phash)
-	SaveInteger(Hash, pi, phash, count + addition)
+	PData[pi] = PData[pi] or {}
+	PData[pi][phash] = (PData[pi][phash] or 0) + addition
 	Ptiers(pi)
 end
 -- ***************************************************************************
@@ -18578,13 +18554,13 @@ end
 function Trig_TotalProductionTrain_Conditions()
     return TotalProduction
 end
+ProductionType = ProductionType or {}
+
 function Trig_TotalProductionTrain_Actions()
     local u= GetTrainedUnit()
     local uh= GetHandleId(u)
-    SaveInteger(Hash, S2I(I2S(uh) .. "a"), 0, GetUnitTypeId(GetTriggerUnit())) --StringHash("lvl"),0)
-    
+    ProductionType[S2I(I2S(uh) .. "a")] = GetUnitTypeId(GetTriggerUnit())
     u=nil
-    --call IssueTrainOrderByIdBJ( GetTriggerUnit(), GetUnitTypeId(GetTrainedUnit()) )
 end
 --===========================================================================
 function InitTrig_TotalProductionTrain()
@@ -18605,13 +18581,13 @@ end
 function Trig_TotalProductionDeath_Actions()
     local u= GetTriggerUnit()
     local uh= GetHandleId(u)
-    local id= LoadInteger(Hash, S2I(I2S(uh) .. "a"), 0)
+    local id= ProductionType[S2I(I2S(uh) .. "a")]
     local p= GetOwningPlayer(u)
     local u2
     local g= CreateGroup()
     udg_LocalInteger5=id
     
-    FlushChildHashtable(Hash, S2I(I2S(uh) .. "a"))
+    ProductionType[S2I(I2S(uh) .. "a")] = nil
     GroupEnumUnitsOfPlayer(g, p, b)
     u2=GroupPickRandomUnit(g)
     if u2 ~= nil then
@@ -20179,7 +20155,6 @@ function Trig_Leave_Ot_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
     DisplayTextToForce(udg_AllPlayers, GetPlayerName(GetTriggerPlayer()) .. "cffff0000 - r")
     ClearPlayer(Player(pi))
-    FlushChildHashtable(Hash, GetPlayerId(GetTriggerPlayer()))
     if Trig_Leave_Ot_Func005C() then
         ForForce(Vassals[pi], Freedom)
     end
@@ -23516,14 +23491,16 @@ end
 --===========================================================================
 -- Trigger: FarmBuild
 --===========================================================================
+PData = PData or {}
+
 function Trig_FarmBuild_Conditions()
     return GetUnitTypeId(GetTriggerUnit()) == FourCC('pa26') or GetUnitTypeId(GetTriggerUnit()) == FourCC('h0NZ')
 end
 function Trig_FarmBuild_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     local phash= StringHash("Pfarm")
-    local count= LoadInteger(Hash, pi, phash)
-    SaveInteger(Hash, pi, phash, count + 1)
+    PData[pi] = PData[pi] or {}
+    PData[pi][phash] = (PData[pi][phash] or 0) + 1
     Ptiers(pi)
 end
 --===========================================================================
@@ -23542,9 +23519,8 @@ end
 function Trig_FarmLose_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     local phash= StringHash("Pfarm")
-    local count= LoadInteger(Hash, pi, phash)
-    SaveInteger(Hash, pi, phash, count - 1)
-    --call DisplayTextToPlayer(Player(0),0,0,I2S(count-1))
+    PData[pi] = PData[pi] or {}
+    PData[pi][phash] = (PData[pi][phash] or 0) - 1
     Ptiers(pi)
 end
 --===========================================================================
@@ -23579,7 +23555,8 @@ end
 function Trig_PUnitTrained_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     local phash= StringHash("Pfarm")
-    local count= LoadInteger(Hash, pi, phash)
+    PData[pi] = PData[pi] or {}
+    local count= PData[pi][phash] or 0
     local u= GetTrainedUnit()
     if Random(count , 200) then
         BlzSetUnitMaxHP(u, R2I(BlzGetUnitMaxHP(u) * 1.2))
@@ -25206,8 +25183,7 @@ function Trig_TrainW2_Actions()
     local uh= GetHandleId(u)
     local p= GetOwningPlayer(u)
     local r
-    SaveInteger(Hash, uh, 0, 0) --StringHash("lvl"),0)
-    SaveReal(Hash, uh, 1, 0) --StringHash("xp"),0)
+    UHData[uh] = {lvl = 0, xp = 0}
     
     r=GetPlayerTechCount(p, FourCC('w2r3'), true)
     if r > 0 then
@@ -25252,7 +25228,7 @@ end
 function Trig_DamageBeforeW2_Actions()
     local u= GetEventDamageSource()
     local uh= GetHandleId(u)
-    local lvl= LoadInteger(Hash, uh, 0)
+    local lvl= UHData[uh] and UHData[uh].lvl or 0
     local damage= GetEventDamage()
     
     DisableTrigger(gg_trg_DamageBeforeW2)
@@ -25383,7 +25359,7 @@ function Trig_DiyGoblinW2_Actions()
     local p= GetOwningPlayer(u)
     local hp= GetUnitState(u, UNIT_STATE_LIFE)
     local uh= GetHandleId(u)
-    local lvl= LoadInteger(Hash, uh, 0)
+    local lvl= UHData[uh] and UHData[uh].lvl or 0
     local Zepp
     local u2
     local g
@@ -25436,7 +25412,7 @@ function Trig_DiyW2_Actions()
     local t= CreateTimer()
     TimerStart(t, 45, false, function()
         if u == nil then
-            FlushChildHashtable(Hash, uh)
+            UHData[uh] = nil
         end
         DestroyTimer(t)
     end)
@@ -38069,7 +38045,8 @@ function Trig_LichStartUpgrade_Actions()
     local uid= GetHandleId(GetTriggerUnit()) * 10
     local e= AddSpecialEffectTarget("DoodadsDungeonTerrainEggSackEggSack1.mdl", GetTriggerUnit(), "origin")
     BlzSetSpecialEffectColor(e, 255, 102, 0)
-    SaveEffectHandle(Hash, uid, StringHash("Cocon"), e)
+    SilitidData[uid] = SilitidData[uid] or {}
+    SilitidData[uid].Cocon = e
     e=nil
     
     local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -38164,11 +38141,12 @@ function Trig_LichinkaFinish_Actions()
     GroupClear(udg_LocalOtrad2)
     SetUnitLifePercentBJ(gTriggerUnit, 100)
     
-    
-    e=LoadEffectHandle(Hash, oldid * 10, StringHash("Cocon"))
-    BlzPlaySpecialEffect(e, ANIM_TYPE_DEATH)
-    RemoveEffectTimed(e , 1.5)
-    FlushChildHashtable(Hash, oldid * 10)
+    e = (SilitidData[oldid * 10] and SilitidData[oldid * 10].Cocon) or nil
+    if e then
+        BlzPlaySpecialEffect(e, ANIM_TYPE_DEATH)
+        RemoveEffectTimed(e, 1.5)
+        SilitidData[oldid * 10] = nil
+    end
     
     
     
@@ -38335,8 +38313,9 @@ end
 --
 function Trig_KokonDead2_Actions()
     local u= GetTriggerUnit()
-    DestroyEffect(LoadEffectHandle(Hash, GetHandleId(u) * 10, StringHash("Cocon")))
-    FlushChildHashtable(Hash, GetHandleId(u) * 10)
+    local e = (SilitidData[GetHandleId(u) * 10] and SilitidData[GetHandleId(u) * 10].Cocon) or nil
+    if e then DestroyEffect(e) end
+    SilitidData[GetHandleId(u) * 10] = nil
     u=nil
 --    set udg_LocalPosition[16] = GetUnitLoc(GetTriggerUnit())
 --    call ForGroupBJ( udg_Kokon, function Trig_KokonDead2_Func002A )
@@ -39537,8 +39516,9 @@ end
 function Gtiers()
     local phash= Gfarm
     local puhash= Gtier
-    local count= LoadInteger(Hash, pi, phash)
-    local u= LoadUnitHandle(Hash, pi, puhash)
+    PData[pi] = PData[pi] or {}
+    local count= PData[pi][phash] or 0
+    local u= PData[pi][puhash]
     local id= GetUnitTypeId(u)
    
     if count < 6 then
@@ -39550,7 +39530,7 @@ function Gtiers()
         KillUnit(u)
         u=CreateUnit(Player(pi), FourCC('h0P6'), 0, 0, 0.0)
     end
-    SaveUnitHandle(Hash, pi, puhash, u)
+    PData[pi][puhash] = u
     u=nil
 end
 function Trig_FarmBuildG_Conditions()
@@ -51430,7 +51410,7 @@ function Trig_PosadkaDal_Actions()
     local u= GetTriggerUnit()
     local u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), FourCC('n063'), GetUnitX(u), GetUnitY(u) - 65, 0.00)
     SetUnitMoveSpeed(u, 0.0)
-    SaveUnitHandle(Hash, StringHash("Dalaran"), 1, u2)
+    DalaranPortal = u2
     
     
     --???? ??????
@@ -51480,8 +51460,8 @@ function Trig_VzletDal_Conditions()
 end
 function Trig_VzletDal_Actions()
     local u= GetTriggerUnit()
-    RemoveUnit(LoadUnitHandle(Hash, StringHash("Dalaran"), 1))
-    FlushChildHashtable(Hash, StringHash("Dalaran"))
+    RemoveUnit(DalaranPortal)
+    DalaranPortal = nil
     SetUnitMoveSpeed(u, GetUnitDefaultMoveSpeed(u))
     --???? ????????
     BlzSetUnitRealFieldBJ(u, UNIT_RF_FLY_HEIGHT, 400.00)
@@ -51613,7 +51593,7 @@ function Trig_PosadkaNax_Actions()
     local u= GetTriggerUnit()
     local u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), FourCC('n066'), GetUnitX(u), GetUnitY(u) - 65, 0.00)
     SetUnitMoveSpeed(u, 0.0)
-    SaveUnitHandle(Hash, StringHash("Nax"), 1, u2)
+    NaxPortal = u2
     
     
     --???? ??????
@@ -51663,8 +51643,8 @@ function Trig_NaxFly_Conditions()
 end
 function Trig_NaxFly_Actions()
     local u= GetTriggerUnit()
-    RemoveUnit(LoadUnitHandle(Hash, StringHash("Nax"), 1))
-    FlushChildHashtable(Hash, StringHash("Nax"))
+    RemoveUnit(NaxPortal)
+    NaxPortal = nil
     SetUnitMoveSpeed(u, GetUnitDefaultMoveSpeed(u))
     --???? ????????
     BlzSetUnitRealFieldBJ(u, UNIT_RF_FLY_HEIGHT, 400.00)
@@ -51783,7 +51763,7 @@ function Trig_PosadkaTurtle_Actions()
     local u= GetTriggerUnit()
     local u2= CreateUnit(Player(PLAYER_NEUTRAL_PASSIVE), FourCC('n075'), GetUnitX(u), GetUnitY(u) + 65, 0.00)
     SetUnitMoveSpeed(u, 0.0)
-    SaveUnitHandle(Hash, StringHash("Turtle"), 1, u2)
+    TurtlePortal = u2
     
     --call DisplayTextToPlayer(Player(0),0,0," - ")
     AddUnitAnimationProperties(u, "Swim", false)
@@ -51830,8 +51810,8 @@ function Trig_TurtleSwim_Conditions()
 end
 function Trig_TurtleSwim_Actions()
     local u= GetTriggerUnit()
-    RemoveUnit(LoadUnitHandle(Hash, StringHash("Turtle"), 1))
-    FlushChildHashtable(Hash, StringHash("Turtle"))
+    RemoveUnit(TurtlePortal)
+    TurtlePortal = nil
     SetUnitMoveSpeed(u, GetUnitDefaultMoveSpeed(u))
     
     AddUnitAnimationProperties(u, "Swim", true)
@@ -60848,36 +60828,12 @@ function AiBrainArmyTick(pi, p)
     ProbeLogWrite("[SQDBG] cp10 n=" .. tostring(#AiSquadsOf(pi)))
     ProbeLogWrite("[SQDBG] cp10-get")
     local squads = AiSquadsOf(pi)
-    ProbeLogWrite("[SQDBG] cp10-type t=" .. type(squads))
-    ProbeLogWrite("[SQDBG] cp10a iter-start")
-    local ticked = 0
-    for sid, sq in pairs(squads) do
-        if ticked >= 6 then break end
-        ProbeLogWrite("[SQDBG] cp10b sq" .. tostring(sid) .. " sqtype=" .. type(sq))
-        if sq == nil then ProbeLogWrite("[SQDBG] cp10c nil-sq skip"); break end
-        local newState = sq.state
-        local ok, err = pcall(function()
-            if sq == nil or sq.members == nil then
-                error("nil squad or members")
-            end
-            if sq.state == "muster" then newState = AiSquadTickMuster(pi, sid, sq, p, wm)
-            elseif sq.state == "march" then newState = AiSquadTickMarch(pi, sid, sq, p, wm)
-            elseif sq.state == "engage" then newState = AiSquadTickEngage(pi, sid, sq, p, wm)
-            elseif sq.state == "retreat" then newState = AiSquadTickRetreat(pi, sid, sq, p, wm)
-            end
-        end)
-        if not ok then
-            ProbeLogWrite("[SQDBG] squad-err sq" .. tostring(sid) .. " state=" .. sq.state .. " err=" .. tostring(err))
-        end
-        if newState ~= sq.state then
-            ProbeLogWrite("[SQDBG] pi" .. tostring(pi) .. " sq" .. tostring(sid) .. " " .. sq.state .. "->" .. newState .. " sz=" .. tostring(AiSquadSize(sq.members)))
-            sq.state = newState
-        end
-        ticked = ticked + 1
+    -- SQUAD TICK DISABLED: use Phase-1 focus concentration
+    local focus = AiBrainPickFocus(pi, wm)
+    if focus ~= nil then
+        local ordered = AiBrainOrderIdleTo(pi, p, focus.x, focus.y)
     end
-    -- Pirate fleet: try buying ships every 8 ticks
     if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end
-    -- Diplomat: evaluate alliances & trade every ~30 ticks (~30-60s real time)
     if (wm.tick % 28) == 0 then AiDiplomatTick(pi) end
 end
 
@@ -61270,7 +61226,7 @@ end
 function DipBroadcast(msg)
     for i = 0, 23 do
         local p = Player(i)
-        if p ~= nil and playerCapital[i] ~= nil and GetPlayerState(p, PLAYER_STATE_RESOURCE_FOOD_USED) >= 0 then
+        if p ~= nil and playerCapital[i] ~= nil then
             DisplayTimedTextToPlayer(p, 0, 0, 10.0, msg)
         end
     end

@@ -1038,36 +1038,12 @@ function AiBrainArmyTick(pi, p)
     ProbeLogWrite("[SQDBG] cp10 n=" .. tostring(#AiSquadsOf(pi)))
     ProbeLogWrite("[SQDBG] cp10-get")
     local squads = AiSquadsOf(pi)
-    ProbeLogWrite("[SQDBG] cp10-type t=" .. type(squads))
-    ProbeLogWrite("[SQDBG] cp10a iter-start")
-    local ticked = 0
-    for sid, sq in pairs(squads) do
-        if ticked >= 6 then break end
-        ProbeLogWrite("[SQDBG] cp10b sq" .. tostring(sid) .. " sqtype=" .. type(sq))
-        if sq == nil then ProbeLogWrite("[SQDBG] cp10c nil-sq skip"); break end
-        local newState = sq.state
-        local ok, err = pcall(function()
-            if sq == nil or sq.members == nil then
-                error("nil squad or members")
-            end
-            if sq.state == "muster" then newState = AiSquadTickMuster(pi, sid, sq, p, wm)
-            elseif sq.state == "march" then newState = AiSquadTickMarch(pi, sid, sq, p, wm)
-            elseif sq.state == "engage" then newState = AiSquadTickEngage(pi, sid, sq, p, wm)
-            elseif sq.state == "retreat" then newState = AiSquadTickRetreat(pi, sid, sq, p, wm)
-            end
-        end)
-        if not ok then
-            ProbeLogWrite("[SQDBG] squad-err sq" .. tostring(sid) .. " state=" .. sq.state .. " err=" .. tostring(err))
-        end
-        if newState ~= sq.state then
-            ProbeLogWrite("[SQDBG] pi" .. tostring(pi) .. " sq" .. tostring(sid) .. " " .. sq.state .. "->" .. newState .. " sz=" .. tostring(AiSquadSize(sq.members)))
-            sq.state = newState
-        end
-        ticked = ticked + 1
+    -- SQUAD TICK DISABLED: use Phase-1 focus concentration
+    local focus = AiBrainPickFocus(pi, wm)
+    if focus ~= nil then
+        local ordered = AiBrainOrderIdleTo(pi, p, focus.x, focus.y)
     end
-    -- Pirate fleet: try buying ships every 8 ticks
     if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end
-    -- Diplomat: evaluate alliances & trade every ~30 ticks (~30-60s real time)
     if (wm.tick % 28) == 0 then AiDiplomatTick(pi) end
 end
 

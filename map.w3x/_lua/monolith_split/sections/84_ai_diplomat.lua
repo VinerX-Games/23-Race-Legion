@@ -111,7 +111,7 @@ end
 function DipBroadcast(msg)
     for i = 0, 23 do
         local p = Player(i)
-        if p ~= nil and playerCapital[i] ~= nil and GetPlayerState(p, PLAYER_STATE_RESOURCE_FOOD_USED) >= 0 then
+        if p ~= nil and playerCapital[i] ~= nil then
             DisplayTimedTextToPlayer(p, 0, 0, 10.0, msg)
         end
     end
