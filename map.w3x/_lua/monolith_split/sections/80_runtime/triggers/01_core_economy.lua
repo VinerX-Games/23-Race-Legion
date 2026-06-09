@@ -2004,6 +2004,67 @@ function InitTrig_Cities_Start_2()
 	
 end
 -- ===========================================================================
+--  Легендарки: здание -> герои с ценой > 500, которые в нём тренируются
+-- ===========================================================================
+LegendaryBuildingToHero = {
+	[FourCC('h07Z')] = { FourCC('H018') },
+	[FourCC('h081')] = { FourCC('H028') },
+	[FourCC('h07Y')] = { FourCC('H03J') },
+	[FourCC('h00W')] = { FourCC('H044') },
+	[FourCC('h0NB')] = { FourCC('H052') },
+	[FourCC('h00N')] = { FourCC('H054') },
+	[FourCC('h07F')] = { FourCC('H05H'), FourCC('H0MI') },
+	[FourCC('h07T')] = { FourCC('H05I') },
+	[FourCC('h080')] = { FourCC('U015') },
+	[FourCC('h0F3')] = { FourCC('U015'), FourCC('U035') },
+	[FourCC('h08F')] = { FourCC('N018') },
+	[FourCC('h0O3')] = { FourCC('N019'), FourCC('O02P') },
+	[FourCC('h09Q')] = { FourCC('H0C4') },
+	[FourCC('h0BL')] = { FourCC('N01A') },
+	[FourCC('h0AW')] = { FourCC('E01C') },
+	[FourCC('h0F8')] = { FourCC('E029') },
+	[FourCC('h00J')] = { FourCC('H0HP') },
+	[FourCC('h0GK')] = { FourCC('H0HQ') },
+	[FourCC('h0DR')] = { FourCC('U02F') },
+	[FourCC('h07V')] = { FourCC('N059') },
+	[FourCC('h087')] = { FourCC('H0L4') },
+	[FourCC('h08L')] = { FourCC('U02R') },
+	[FourCC('h00I')] = { FourCC('H0MD'), FourCC('H0OP') },
+	[FourCC('h0N0')] = { FourCC('O055'), FourCC('O05L') },
+	[FourCC('h07U')] = { FourCC('O056') },
+	[FourCC('h00E')] = { FourCC('TrlH') },
+	[FourCC('h0DO')] = { FourCC('MIMH') },
+	[FourCC('h05F')] = { FourCC('W2Og') },
+	[FourCC('h072')] = { FourCC('NERH'), FourCC('U030'), FourCC('U035') },
+	[FourCC('h090')] = { FourCC('NE02') },
+	[FourCC('h09G')] = { FourCC('CM00'), FourCC('FL00') },
+	[FourCC('h09K')] = { FourCC('O06L') },
+}
+
+function GiveBotLegendaryHeroes(u2, p, pi)
+	if not udg_AiControl[pi] then
+		return
+	end
+	local bid = GetUnitTypeId(u2)
+	local heroes = LegendaryBuildingToHero[bid]
+	if heroes == nil then
+		return
+	end
+	local x = GetUnitX(u2)
+	local y = GetUnitY(u2)
+	for _, hid in ipairs(heroes) do
+		local existing = GetUnitsOfPlayerAndTypeId(p, hid)
+		if BlzGroupGetSize(existing) == 0 then
+			SetPlayerTechMaxAllowed(p, hid, 1)
+			local hero = CreateUnit(p, hid, x, y, bj_UNIT_FACING)
+			if hero ~= nil then
+				aiUnitJoins(hero, pi)
+			end
+		end
+	end
+end
+
+-- ===========================================================================
 --  Trigger: DeadSituastion
 -- ===========================================================================
 ---@return boolean
@@ -2080,6 +2141,8 @@ function Trig_DeadSituastion_Actions()
 		aiKilledCity(u3)
 	end
 	
+	
+	GiveBotLegendaryHeroes(u2, p, pi)
 	
 	u = nil
 	u3 = nil
