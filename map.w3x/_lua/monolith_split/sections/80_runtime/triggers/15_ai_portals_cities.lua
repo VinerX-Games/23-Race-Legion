@@ -644,27 +644,28 @@ function PlayerArmy()
             DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
         end
     else
-            --?????? ????????? ????
-        gPlayer=ForcePickRandomPlayer(udg_BotsActive)
-        local pi_army = GetPlayerId(gPlayer)
-        if not (AiData[pi_army][StringHash("Log_PlayerArmy")] or false) then
-            AiData[pi_army][StringHash("Log_PlayerArmy")] = true
-            ProbeLogWrite("[AI] PlayerArmy processing pi=" .. tostring(pi_army) .. " race=" .. tostring(AiRace[pi_army]))
-        end
-        ForceRemovePlayer(udg_BotsActive, gPlayer)
-        -- Brain seam: bots with an active brain go through AiBrainArmyTick;
-        -- everyone else (default) runs the unchanged swarm path. Body lives in
-        -- AiArmyLegacyTick (83_ai_brain.lua). See AI_BRAIN_DESIGN.md.
-        if AiBrainEnabled(pi_army) then
-            AiBrainArmyTick(pi_army, gPlayer)
-        else
-            AiArmyLegacyTick(gPlayer)
-        end
-        -- Diplomat: swarm bots also get diplomat ticks (throttled ~every 28th call per bot)
-        if not AiBrainEnabled(pi_army) and AiDiplomatEnabled then
-            local dt = (AiDiplomatTicks[pi_army] or 0) + 1
-            AiDiplomatTicks[pi_army] = dt
-            if (dt % 4) == 0 then AiDiplomatTick(pi_army) end
+        -- Process N bots per tick (configurable via AiBrainBatchSize)
+        local batch = AiBrainBatchSize or 4
+        local processed = 0
+        while processed < batch and CountPlayersInForceBJ(udg_BotsActive) > 0 do
+            gPlayer=ForcePickRandomPlayer(udg_BotsActive)
+            local pi_army = GetPlayerId(gPlayer)
+            if not (AiData[pi_army][StringHash("Log_PlayerArmy")] or false) then
+                AiData[pi_army][StringHash("Log_PlayerArmy")] = true
+                ProbeLogWrite("[AI] PlayerArmy processing pi=" .. tostring(pi_army) .. " race=" .. tostring(AiRace[pi_army]))
+            end
+            ForceRemovePlayer(udg_BotsActive, gPlayer)
+            if AiBrainEnabled(pi_army) then
+                AiBrainArmyTick(pi_army, gPlayer)
+            else
+                AiArmyLegacyTick(gPlayer)
+            end
+            if not AiBrainEnabled(pi_army) and AiDiplomatEnabled then
+                local dt = (AiDiplomatTicks[pi_army] or 0) + 1
+                AiDiplomatTicks[pi_army] = dt
+                if (dt % 4) == 0 then AiDiplomatTick(pi_army) end
+            end
+            processed = processed + 1
         end
     end
     
@@ -783,6 +784,8 @@ function Trig_PereborBuildings_Code_Func002A()
     
     udg_LocalInteger2=GetPlayerId(gPlayer)
     gPi=GetPlayerId(gPlayer)
+    -- Brain mode: production handled by BrainProduce, skip perebor
+    if AiBrainEnabled(gPi) then return end
     Counter=0
     -- Reconcile g_AiCounts with actual Ai_units (drift guard for morph races like Ents)
     local syncTick = AiData[gPi][StringHash("SyncTick")] or 0

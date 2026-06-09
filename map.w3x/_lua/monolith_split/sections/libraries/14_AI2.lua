@@ -235,8 +235,11 @@ function createAiPlayer(pi, raceToken)
 	--  Данные ИИшки
 	--  Таймеры ИИ
 	
-	StartTimerBJ(udg_TimerSmall, false, 1.11 * AiRepeat / 5)
-	ProbeLogWrite("[AI] createAiPlayer TimerSmall started period=" .. tostring(1.11 * AiRepeat / 5))
+	-- TimerSmall (builders): disabled in brain mode; BrainBuild handles it
+	if not AiBrainEnabled(pi) then
+		StartTimerBJ(udg_TimerSmall, false, 1.11 * AiRepeat / 5)
+		ProbeLogWrite("[AI] createAiPlayer TimerSmall started period=" .. tostring(1.11 * AiRepeat / 5))
+	end
 	StartTimerBJ(udg_TimerSmall2, false, 2.12 * AiRepeat / 5)
 	ProbeLogWrite("[AI] createAiPlayer TimerSmall2 started period=" .. tostring(2.12 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerSmall3, false, 3.13 * AiRepeat / 5)

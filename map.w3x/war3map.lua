@@ -3599,7 +3599,8 @@ function AiLimitsSet()
 	
 	AiMass = IMaxBJ(8 - gInt, 4)
 	AiRepeat = 1 + IMinBJ(R2I(gInt / 5), 3)
-	ProbeLogWrite("[AI] AiLimitsSet Bots=" .. tostring(gInt) .. " AiLimit=" .. tostring(AiLimit) .. " AiMass=" .. tostring(AiMass) .. " AiRepeat=" .. tostring(AiRepeat))
+	AiBrainBatchSize = IMaxBJ(2, R2I((gInt + 3) / 4))  -- ~4-tick cycle for all bots
+	ProbeLogWrite("[AI] AiLimitsSet Bots=" .. tostring(gInt) .. " AiLimit=" .. tostring(AiLimit) .. " AiMass=" .. tostring(AiMass) .. " AiRepeat=" .. tostring(AiRepeat) .. " AiBrainBatchSize=" .. tostring(AiBrainBatchSize))
 end
 ---@return nothing
 function SetBools()
@@ -8677,8 +8678,11 @@ function createAiPlayer(pi, raceToken)
 	--  Данные ИИшки
 	--  Таймеры ИИ
 	
-	StartTimerBJ(udg_TimerSmall, false, 1.11 * AiRepeat / 5)
-	ProbeLogWrite("[AI] createAiPlayer TimerSmall started period=" .. tostring(1.11 * AiRepeat / 5))
+	-- TimerSmall (builders): disabled in brain mode; BrainBuild handles it
+	if not AiBrainEnabled(pi) then
+		StartTimerBJ(udg_TimerSmall, false, 1.11 * AiRepeat / 5)
+		ProbeLogWrite("[AI] createAiPlayer TimerSmall started period=" .. tostring(1.11 * AiRepeat / 5))
+	end
 	StartTimerBJ(udg_TimerSmall2, false, 2.12 * AiRepeat / 5)
 	ProbeLogWrite("[AI] createAiPlayer TimerSmall2 started period=" .. tostring(2.12 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerSmall3, false, 3.13 * AiRepeat / 5)
@@ -48816,27 +48820,28 @@ function PlayerArmy()
             DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
         end
     else
-            --?????? ????????? ????
-        gPlayer=ForcePickRandomPlayer(udg_BotsActive)
-        local pi_army = GetPlayerId(gPlayer)
-        if not (AiData[pi_army][StringHash("Log_PlayerArmy")] or false) then
-            AiData[pi_army][StringHash("Log_PlayerArmy")] = true
-            ProbeLogWrite("[AI] PlayerArmy processing pi=" .. tostring(pi_army) .. " race=" .. tostring(AiRace[pi_army]))
-        end
-        ForceRemovePlayer(udg_BotsActive, gPlayer)
-        -- Brain seam: bots with an active brain go through AiBrainArmyTick;
-        -- everyone else (default) runs the unchanged swarm path. Body lives in
-        -- AiArmyLegacyTick (83_ai_brain.lua). See AI_BRAIN_DESIGN.md.
-        if AiBrainEnabled(pi_army) then
-            AiBrainArmyTick(pi_army, gPlayer)
-        else
-            AiArmyLegacyTick(gPlayer)
-        end
-        -- Diplomat: swarm bots also get diplomat ticks (throttled ~every 28th call per bot)
-        if not AiBrainEnabled(pi_army) and AiDiplomatEnabled then
-            local dt = (AiDiplomatTicks[pi_army] or 0) + 1
-            AiDiplomatTicks[pi_army] = dt
-            if (dt % 4) == 0 then AiDiplomatTick(pi_army) end
+        -- Process N bots per tick (configurable via AiBrainBatchSize)
+        local batch = AiBrainBatchSize or 4
+        local processed = 0
+        while processed < batch and CountPlayersInForceBJ(udg_BotsActive) > 0 do
+            gPlayer=ForcePickRandomPlayer(udg_BotsActive)
+            local pi_army = GetPlayerId(gPlayer)
+            if not (AiData[pi_army][StringHash("Log_PlayerArmy")] or false) then
+                AiData[pi_army][StringHash("Log_PlayerArmy")] = true
+                ProbeLogWrite("[AI] PlayerArmy processing pi=" .. tostring(pi_army) .. " race=" .. tostring(AiRace[pi_army]))
+            end
+            ForceRemovePlayer(udg_BotsActive, gPlayer)
+            if AiBrainEnabled(pi_army) then
+                AiBrainArmyTick(pi_army, gPlayer)
+            else
+                AiArmyLegacyTick(gPlayer)
+            end
+            if not AiBrainEnabled(pi_army) and AiDiplomatEnabled then
+                local dt = (AiDiplomatTicks[pi_army] or 0) + 1
+                AiDiplomatTicks[pi_army] = dt
+                if (dt % 4) == 0 then AiDiplomatTick(pi_army) end
+            end
+            processed = processed + 1
         end
     end
     
@@ -48955,6 +48960,8 @@ function Trig_PereborBuildings_Code_Func002A()
     
     udg_LocalInteger2=GetPlayerId(gPlayer)
     gPi=GetPlayerId(gPlayer)
+    -- Brain mode: production handled by BrainProduce, skip perebor
+    if AiBrainEnabled(gPi) then return end
     Counter=0
     -- Reconcile g_AiCounts with actual Ai_units (drift guard for morph races like Ents)
     local syncTick = AiData[gPi][StringHash("SyncTick")] or 0
@@ -59809,6 +59816,15 @@ AiSquads = AiSquads or {}          -- [pi] = { [sid] = squad }   (Phase 2+)
 AiSquadSeq = AiSquadSeq or {}      -- [pi] = next squad id
 AiBrainForce = AiBrainForce or {}  -- [pi] = "objective"|"swarm" override (bridge/test)
 
+-- Tunables: set via bridge live (AiBrainBatchSize=6) or leave defaults.
+-- All values affect the unified brain tick only; swarm mode ignores them.
+AiBrainBatchSize       = AiBrainBatchSize       or 4   -- bots processed per PlayerGet1 fire
+AiBrainMaxProduce      = AiBrainMaxProduce      or 5   -- max unit-training orders per bot per tick
+AiBrainMaxBuild        = AiBrainMaxBuild        or 3   -- max building-attempts per bot per tick
+AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks
+AiBrainNavalEvery      = AiBrainNavalEvery      or 60  -- naval-check every N brain-ticks
+AiBrainNavalStartTick  = AiBrainNavalStartTick  or 300 -- first naval check after this many brain-ticks (~5min)
+
 -- Tunables (global defaults; races may override via def.brainWeights). Phase 2+
 -- consumes the weights; Phase 1 uses only the geometry/threat radii.
 AiBrainDefaults = {
@@ -60771,6 +60787,324 @@ function AiBrainOrderToPortal(pi, p, portal)
     return allyCount
 end
 
+-- ====================================================================
+-- Brain-driven production helpers: find a free building of a type, count
+-- buildings of a type, find a free worker — all without GroupEnumUnitsOfPlayer.
+-- ====================================================================
+
+---@param pi integer
+---@param bldType integer
+---@return unit|nil
+function AiFindProdBuilding(pi, bldType)
+    local grp = udg_Ai_buildings[pi]
+    if grp == nil then return nil end
+    local sz = BlzGroupGetSize(grp)
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(grp, i)
+        if u ~= nil and GetUnitTypeId(u) == bldType
+            and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            return u
+        end
+    end
+    return nil
+end
+
+---@param pi integer
+---@param bldType integer
+---@return integer
+function AiCountBuildingsOfType(pi, bldType)
+    local grp = udg_Ai_buildings[pi]
+    if grp == nil then return 0 end
+    local n = 0
+    local sz = BlzGroupGetSize(grp)
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(grp, i)
+        if u ~= nil and GetUnitTypeId(u) == bldType
+            and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            n = n + 1
+        end
+    end
+    return n
+end
+
+---@param pi integer
+---@return unit|nil
+function AiFindFreeWorker(pi)
+    -- Try builders pool first, then buildersT, then pull from harvest
+    local function alive(u)
+        return u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+    end
+    local grp = udg_Ai_builders[pi]
+    if grp ~= nil then
+        local sz = BlzGroupGetSize(grp)
+        for i = 0, sz - 1 do
+            local u = BlzGroupUnitAt(grp, i)
+            if alive(u) then return u end
+        end
+    end
+    local grpT = udg_Ai_buildersT[pi]
+    if grpT ~= nil then
+        local sz = BlzGroupGetSize(grpT)
+        for i = 0, sz - 1 do
+            local u = BlzGroupUnitAt(grpT, i)
+            if alive(u) and GetUnitCurrentOrder(u) == 0 then return u end
+        end
+    end
+    local grpH = udg_Ai_harvest[pi]
+    if grpH ~= nil then
+        local sz = BlzGroupGetSize(grpH)
+        for i = 0, sz - 1 do
+            local u = BlzGroupUnitAt(grpH, i)
+            if alive(u) then return u end
+        end
+    end
+    return nil
+end
+
+-- ====================================================================
+-- BrainProduce: scan compTarget → deficit → find building → issue train order.
+-- No random, no GroupEnum. Configurable via AiBrainMaxProduce.
+-- ====================================================================
+
+---@param pi integer
+---@param wm table
+---@param race table
+---@return integer
+function BrainProduce(pi, wm, race)
+    local prod = race.production
+    local comp = race.compTarget
+    if not prod or not comp then return 0 end
+
+    local ordered = 0
+    local maxN = AiBrainMaxProduce
+    local totalMil = wm.armyCount or 0
+    if totalMil == 0 then return 0 end
+
+    -- Build deficit list: unitId → (currentRatio, targetRatio, buildingType)
+    for unitId, targetRatio in pairs(comp) do
+        if ordered >= maxN then break end
+        if type(unitId) ~= "number" or targetRatio == nil then goto skipUnit end
+
+        local current = getAiCount(pi, unitId) or 0
+        if current < 0 then current = 0 end
+        local currentRatio = current / totalMil
+        if currentRatio >= targetRatio then goto skipUnit end
+
+        -- Find which building produces this unit
+        for bldType, rows in pairs(prod) do
+            if type(rows) ~= "table" then goto skipBld end
+            for _, row in ipairs(rows) do
+                local uid = row[1]
+                if uid ~= nil and uid ~= 0 then
+                    if uid == unitId then
+                        local bld = AiFindProdBuilding(pi, bldType)
+                        if bld ~= nil then
+                            local key = pi * 1000000 + unitId
+                            if not g_AiOrdered[key] then
+                                IssueImmediateOrderById(bld, unitId)
+                                g_AiOrdered[key] = true
+                                ordered = ordered + 1
+                            end
+                        end
+                        goto skipBld
+                    end
+                elseif row.branch then
+                    local pick
+                    if race.branches and race.branches[row.branch] then
+                        pick = race.branches[row.branch](pi)
+                    end
+                    pick = pick and row.black or row.other
+                    if pick == unitId then
+                        local bld = AiFindProdBuilding(pi, bldType)
+                        if bld ~= nil then
+                            local key = pi * 1000000 + unitId
+                            if not g_AiOrdered[key] then
+                                IssueImmediateOrderById(bld, unitId)
+                                g_AiOrdered[key] = true
+                                ordered = ordered + 1
+                            end
+                        end
+                        goto skipBld
+                    end
+                end
+            end
+            ::skipBld::
+        end
+        ::skipUnit::
+    end
+
+    return ordered
+end
+
+-- ====================================================================
+-- BrainBuild: read race.buildings → find unbuilt → free worker → TryBuild.
+-- Expansion + naval decisions on schedule. Configurable via AiBrainMaxBuild,
+-- AiBrainExpansionEvery, AiBrainNavalEvery.
+-- ====================================================================
+
+---@param pi integer
+---@param wm table
+---@param race table
+---@return integer
+function BrainBuild(pi, wm, race)
+    local buildOrder = race.buildings
+    if not buildOrder then return 0 end
+
+    local built = 0
+    local maxN = AiBrainMaxBuild
+
+    for _, bldType in ipairs(buildOrder) do
+        if built >= maxN then break end
+        if type(bldType) ~= "number" then goto skipBld end
+
+        local count = AiCountBuildingsOfType(pi, bldType)
+        local limit = (AiBuildingLimits and AiBuildingLimits[bldType]) or 1
+        if count >= limit then goto skipBld end
+
+        local worker = AiFindFreeWorker(pi)
+        if worker ~= nil then
+            TryBuild_u = worker
+            TryBuildWithType(bldType)
+            built = built + 1
+        end
+        ::skipBld::
+    end
+
+    -- Expansion check: brain decides to seed a new cluster far from capital
+    if wm.tick % AiBrainExpansionEvery == 0 then
+        BrainExpandDecision(pi, wm, race)
+    end
+
+    -- Naval check: build shipyard / fleet after startup delay
+    if wm.tick > AiBrainNavalStartTick and wm.tick % AiBrainNavalEvery == 0 then
+        BrainNavalDecision(pi, wm, race)
+    end
+
+    return built
+end
+
+---@param pi integer
+---@param wm table
+---@param race table
+function BrainExpandDecision(pi, wm, race)
+    -- Pick a random expansion spot far from capital (AiBuildingRadius*7)
+    local cx, cy = wm.capX, wm.capY
+    if cx == nil then return end
+    local ex = cx + AiBuildingRadius * 7 * Cos(GetRandomReal(0, 360) * bj_DEGTORAD)
+    local ey = cy + AiBuildingRadius * 7 * Sin(GetRandomReal(0, 360) * bj_DEGTORAD)
+    local worker = AiFindFreeWorker(pi)
+    if worker ~= nil then
+        IssuePointOrder(worker, "move", ex, ey)
+        BrainLogEvery(pi, "brainexpd", 30, "expand to " .. tostring(R2I(ex)) .. "," .. tostring(R2I(ey)), "BRAINEXP")
+    end
+end
+
+---@param pi integer
+---@param wm table
+---@param race table
+function BrainNavalDecision(pi, wm, race)
+    -- If already has a shipyard, skip
+    local wallType = race.wall
+    if wallType == nil then return end
+    if AiCountBuildingsOfType(pi, wallType) > 0 then return end
+
+    -- Find water point near capital
+    local cx, cy = wm.capX, wm.capY
+    if cx == nil then return end
+    if udg_WaterPoints ~= nil then
+        local best, bestD = nil, 99999999.0
+        for _, wp in ipairs(udg_WaterPoints) do
+            local dx = wp.x - cx
+            local dy = wp.y - cy
+            local d = dx * dx + dy * dy
+            if d < bestD then bestD = d; best = wp end
+        end
+        if best ~= nil then
+            local worker = AiFindFreeWorker(pi)
+            if worker ~= nil then
+                TryBuild_u = worker
+                TryBuildWithType(wallType, best.x, best.y)
+                BrainLogEvery(pi, "brainnavy", 30, "shipyard at water point", "BRAINNAVY")
+            end
+        end
+    end
+end
+
+--- Deterministic TryBuild variant: place a specific building type at a forced spot
+--- or via AiFindBuildSpot. Skips random water-point and far-walk.
+---@param bldType integer
+---@param fx real|nil
+---@param fy real|nil
+function TryBuildWithType(bldType, fx, fy)
+    local u = TryBuild_u
+    if u == nil or bldType == nil then return end
+    local pi = GetPlayerId(GetOwningPlayer(u))
+
+    GroupAddUnit(udg_Ai_buildersT[pi], u)
+    GroupRemoveUnit(udg_Ai_builders[pi], u)
+    GroupRemoveUnit(udg_Ai_harvest[pi], u)
+
+    if fx ~= nil and fy ~= nil then
+        IssueBuildOrderById(u, bldType, fx, fy)
+        return
+    end
+
+    if AiSmartBuild then
+        local bx, by = AiFindBuildSpot(pi, u)
+        if bx ~= nil then
+            IssueBuildOrderById(u, bldType, bx, by)
+            return
+        end
+    end
+    local ux, uy = GetUnitX(u), GetUnitY(u)
+    ux = ux + AiBuildingRadius * Cos(GetRandomReal(0, 360) * bj_DEGTORAD)
+    uy = uy + AiBuildingRadius * Sin(GetRandomReal(0, 360) * bj_DEGTORAD)
+    IssueBuildOrderById(u, bldType, ux, uy)
+end
+
+-- ====================================================================
+-- BrainFocus: pick best objective, order idle army units there.
+-- Uses local udg_Ai_army[pi] group — no GroupEnumUnitsOfPlayer.
+-- ====================================================================
+
+---@param pi integer
+---@param p player
+---@param wm table
+---@return integer
+function BrainFocus(pi, p, wm)
+    local focus = AiBrainPickFocus(pi, wm)
+    if focus == nil then return 0 end
+
+    local army = udg_Ai_army[pi]
+    if army == nil then return 0 end
+    local armySz = BlzGroupGetSize(army)
+    if armySz == 0 then return 0 end
+
+    if gSubGroup == nil then gSubGroup = CreateGroup() end
+    GroupClear(gSubGroup)
+
+    local cnt = 0
+    for i = 0, armySz - 1 do
+        local u = BlzGroupUnitAt(army, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            local o = GetUnitCurrentOrder(u)
+            if o == 0 or o == 851972 or o == 851976 then
+                GroupAddUnit(gSubGroup, u)
+                cnt = cnt + 1
+                if cnt % 12 == 0 then
+                    GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
+                    GroupClear(gSubGroup)
+                end
+            end
+        end
+    end
+    if BlzGroupGetSize(gSubGroup) > 0 then
+        GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
+        GroupClear(gSubGroup)
+    end
+    return cnt
+end
+
 -- Entry point when a bot has an active brain ("objective"). Perceive → refresh
 -- objectives on schedule → pick a focus (force concentration) → order idle army
 -- there. Falls back to swarm when there are no objectives.
@@ -60779,6 +61113,15 @@ end
 function AiBrainArmyTick(pi, p)
     ProbeLogWrite("[SQDBG] cp1 pi=" .. tostring(pi))
     local wm = AiBrainPerceive(pi)
+    local race = AiRaceOf(pi)
+
+    -- Brain-driven production + building run regardless of objective state
+    if race ~= nil then
+        local prodN = BrainProduce(pi, wm, race)
+        local bldN = BrainBuild(pi, wm, race)
+        ProbeLogWrite("[SQDBG] bprod=" .. tostring(prodN) .. " bbld=" .. tostring(bldN))
+    end
+
     ProbeLogWrite("[SQDBG] cp2")
     local cfg = AiBrainCfg(pi)
     ProbeLogWrite("[SQDBG] cp3 objs=" .. tostring(wm.objectives and #wm.objectives or 0))
@@ -60834,41 +61177,10 @@ function AiBrainArmyTick(pi, p)
     end
 
     ProbeLogWrite("[SQDBG] cp10 n=" .. tostring(#AiSquadsOf(pi)))
-    ProbeLogWrite("[SQDBG] cp10-get")
-    local squads = AiSquadsOf(pi)
-    -- SQUAD FSM DISABLED (crashes WC3 silently, no Lua error caught)
-    local focus = AiBrainPickFocus(pi, wm)
-    if focus ~= nil then
-        -- Order ALL idle combat units (heroes included), not just udg_Ai_army
-        if gAllyGroup == nil then gAllyGroup = CreateGroup() end
-        if gSubGroup == nil then gSubGroup = CreateGroup() end
-        GroupClear(gAllyGroup)
-        GroupClear(gSubGroup)
-        GroupEnumUnitsOfPlayer(gAllyGroup, p, nil)
-        local cnt = 0
-        while true do
-            local u = FirstOfGroup(gAllyGroup)
-            if u == nil then break end
-            GroupRemoveUnit(gAllyGroup, u)
-            if GetUnitState(u, UNIT_STATE_LIFE) > 0.405
-                and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
-                and not IsUnitType(u, UNIT_TYPE_PEON) then
-                local o = GetUnitCurrentOrder(u)
-                if o == 0 or o == 851972 or o == 851976 then
-                    GroupAddUnit(gSubGroup, u)
-                    cnt = cnt + 1
-                    if cnt % 12 == 0 then
-                        GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
-                        GroupClear(gSubGroup)
-                    end
-                end
-            end
-        end
-        if BlzGroupGetSize(gSubGroup) > 0 then
-            GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
-            GroupClear(gSubGroup)
-        end
-    end
+    -- BRAIN FOCUS: local udg_Ai_army group, no GroupEnumUnitsOfPlayer
+    local orderedF = BrainFocus(pi, p, wm)
+    ProbeLogWrite("[SQDBG] cp10-focus ordered=" .. tostring(orderedF))
+
     if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end
     if (wm.tick % 4) == 0 then AiDiplomatTick(pi) end
 end
