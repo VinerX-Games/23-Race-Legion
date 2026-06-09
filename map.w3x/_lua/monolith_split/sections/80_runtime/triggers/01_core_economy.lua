@@ -2045,8 +2045,9 @@ LegendaryBuildingToHero = {
 --  Если раса не указана (nil) — легендарка доступна любой расе
 -- ===========================================================================
 LegendaryBuildingToRace = {
-	[FourCC('h07Z')] = "Scarlet",
-	[FourCC('h081')] = "Scarlet",
+	[FourCC('h07Z')] = "Stromgard",
+	[FourCC('h081')] = "Stromgard",
+	[FourCC('h087')] = "Stromgard",
 	[FourCC('h07Y')] = "Scarlet",
 	[FourCC('h00N')] = "Scarlet",
 	[FourCC('h00W')] = "BloodElves",
@@ -2067,6 +2068,8 @@ LegendaryBuildingToRace = {
 	[FourCC('h0F3')] = "Undead",
 	[FourCC('h0NB')] = "Dalaran",
 	[FourCC('h0DR')] = "Demons",
+	[FourCC('h05F')] = "HordeW2",
+	[FourCC('h09Q')] = "Vrykul",
 }
 
 function GiveBotLegendaryHeroes(u2, p, pi)

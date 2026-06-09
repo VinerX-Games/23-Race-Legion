@@ -15,7 +15,7 @@ AiBrainForce = AiBrainForce or {}  -- [pi] = "objective"|"swarm" override (bridg
 
 -- Tunables: set via bridge live (AiBrainBatchSize=6) or leave defaults.
 -- All values affect the unified brain tick only; swarm mode ignores them.
-AiBrainBatchSize       = AiBrainBatchSize       or 2   -- bots processed per PlayerGet1 fire
+AiBrainBatchSize       = AiBrainBatchSize       or 1   -- bots processed per PlayerGet1 fire
 AiBrainMaxProduce      = AiBrainMaxProduce      or 10  -- max unit-training orders per bot per tick
 AiBrainMaxBuild        = AiBrainMaxBuild        or 3   -- max building-attempts per bot per tick
 AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks
