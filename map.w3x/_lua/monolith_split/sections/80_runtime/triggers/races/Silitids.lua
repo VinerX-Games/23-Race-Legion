@@ -252,88 +252,71 @@ function InitTrig_ChoseUnits2()
     end)
 end
 --===========================================================================
--- Trigger: MainSpawn2
---===========================================================================
-function Trig_MainSpawn2_Conditions()
-    return GetUnitTypeId(GetConstructedStructure()) == FourCC('e01H')
-end
-function spawnlich()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u= LoadUnitHandle(Hash, id, 1)
-    local typeid= GetUnitTypeId(u)
-    local uid= GetHandleId(u)
-    local currentCount= LoadInteger(Hash, uid, 1)
-    local x= GetUnitX(u)
-    local y= GetUnitY(u)
+local function _silitidSpawnTick(timer_hive)
+    local u = timer_hive
+    local typeid = GetUnitTypeId(u)
+    local uid = GetHandleId(u)
+    local d = SilitidData[uid]
+    if d == nil then d = {count = 0} end
+    local x = GetUnitX(u)
+    local y = GetUnitY(u)
     local u2
-    local p= GetOwningPlayer(u)
-    --call DisplayTextToPlayer(Player(0),0,0,""+I2S(currentCount))
-    if currentCount < 3 and UnitAlive(u) then
-        u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
+    local p = GetOwningPlayer(u)
+    if d.count < 3 and UnitAlive(u) then
+        u2 = CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
         SetUnitTimeScale(u2, 0.25)
-        SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
-        SaveBoolean(Hash, GetHandleId(u2), 2, true)
-        currentCount=currentCount + 1
+        SilitidData[GetHandleId(u2)] = {parentHive = u, spawned = true}
+        d.count = d.count + 1
         if udg_AiControl[GetPlayerId(p)] then
             GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
             NumberAdd(GetPlayerId(p), FourCC('e01I'))
         end
         if typeid == FourCC('e021') then
-            u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
+            u2 = CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
-            SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
-            SaveBoolean(Hash, GetHandleId(u2), 2, true)
-            currentCount=currentCount + 1
+            SilitidData[GetHandleId(u2)] = {parentHive = u, spawned = true}
+            d.count = d.count + 1
             if udg_AiControl[GetPlayerId(p)] then
                 GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
                 NumberAdd(GetPlayerId(p), FourCC('e01I'))
             end
         elseif typeid == FourCC('e020') then
-            u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
+            u2 = CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
-            SaveBoolean(Hash, GetHandleId(u2), 2, true)
-            SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
+            SilitidData[GetHandleId(u2)] = {parentHive = u, spawned = true}
             if udg_AiControl[GetPlayerId(p)] then
                 GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
                 NumberAdd(GetPlayerId(p), FourCC('e01I'))
             end
-            u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
+            u2 = CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
-            SaveBoolean(Hash, GetHandleId(u2), 2, true)
-            SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
+            SilitidData[GetHandleId(u2)] = {parentHive = u, spawned = true}
             if udg_AiControl[GetPlayerId(p)] then
                 GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
                 NumberAdd(GetPlayerId(p), FourCC('e01I'))
             end
-            currentCount=currentCount + 2
+            d.count = d.count + 2
         end
-        
+        SilitidData[uid] = d
     else
-        FlushChildHashtable(Hash, id)
-        PauseTimer(t)
+        d.spawning = false
+        SilitidData[uid] = d
+        local t = GetExpiredTimer()
         DestroyTimer(t)
-        t=nil
-        SaveBoolean(Hash, uid, 1, false)
-        p=nil
     end
-    SaveInteger(Hash, uid, 1, currentCount)
-    t=nil
-    u=nil
-    u2=nil
-    p=nil
+end
+
+local function _startSilitidSpawner(hive)
+    local t = CreateTimer()
+    SilitidData[GetHandleId(hive)] = {count = 0, spawning = true}
+    TimerStart(t, 25, true, function() _silitidSpawnTick(hive) end)
+end
+--===========================================================================
+function Trig_MainSpawn2_Conditions()
+    return GetUnitTypeId(GetConstructedStructure()) == FourCC('e01H')
 end
 function Trig_MainSpawn2_Actions()
-    local t= CreateTimer()
-    local id= GetHandleId(t)
-    local uid= GetHandleId(GetConstructedStructure())
-    TimerStart(t, 25, true, spawnlich)
-    SaveUnitHandle(Hash, id, 1, GetConstructedStructure())
-    SaveInteger(Hash, uid, 1, 0)
-    SaveBoolean(Hash, uid, 2, true)
-    
-    t=nil
-    
+    _startSilitidSpawner(GetConstructedStructure())
 end
 --===========================================================================
 function InitTrig_MainSpawn2()
@@ -347,28 +330,26 @@ end
 -- Trigger: LichDead
 --===========================================================================
 function Trig_LichDead_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == FourCC('e01I') and LoadBoolean(Hash, GetHandleId(GetTriggerUnit()), 2)
+    local d = SilitidData[GetHandleId(GetTriggerUnit())]
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('e01I') and d ~= nil and d.spawned == true
 end
 function Trig_LichDead_Actions()
-    local oldid= GetHandleId(GetTriggerUnit())
-    local u2= LoadUnitHandle(Hash, oldid, 1)
-    local id= GetHandleId(u2)
-    local currentCount= LoadInteger(Hash, id, 1) - 1
-    local t
-    FlushChildHashtable(Hash, oldid)
+    local oldid = GetHandleId(GetTriggerUnit())
+    local oldData = SilitidData[oldid]
+    if oldData == nil then return end
+    local u2 = oldData.parentHive
+    if u2 == nil then SilitidData[oldid] = nil; return end
+    local id = GetHandleId(u2)
+    local d = SilitidData[id]
+    if d == nil then d = {count = 0} end
+    d.count = d.count - 1
     
-    SaveInteger(Hash, id, 1, currentCount)
+    SilitidData[id] = d
+    SilitidData[oldid] = nil
     
-    
-    if UnitAlive(u2) and currentCount < 3 and not LoadBoolean(Hash, id, 2) then
-        t=CreateTimer()
-        TimerStart(t, 25, true, spawnlich)
-        SaveBoolean(Hash, id, 2, true)
+    if UnitAlive(u2) and d.count < 3 and not d.spawning then
+        _startSilitidSpawner(u2)
     end
-    
-    
-    t=nil
-    u2=nil
 end
 --===========================================================================
 function InitTrig_LichDead()
@@ -385,7 +366,7 @@ function Trig_YleyDead_Conditions()
     return GetUnitTypeId(GetTriggerUnit()) == FourCC('e01H')
 end
 function Trig_YleyDead_Actions()
-    FlushChildHashtable(Hash, GetHandleId(GetTriggerUnit()))
+    SilitidData[GetHandleId(GetTriggerUnit())] = nil
 end
 --===========================================================================
 function InitTrig_YleyDead()
@@ -668,31 +649,25 @@ function ItIsHive()
     return id == FourCC('e01H') or id == FourCC('e020') or id == FourCC('e021')
 end
 function Trig_LichinkaFinish_Actions()
-    local i= GetPlayerId(gPlayer)
-    --local unit u = gTriggerUnit 
-    local id= GetUnitTypeId(gTriggerUnit)
-    local e
+    local i = GetPlayerId(gPlayer)
+    local id = GetUnitTypeId(gTriggerUnit)
     
+    local oldid = GetHandleId(gTriggerUnit)
+    local oldData = SilitidData[oldid]
+    if oldData == nil then return end
+    local u2 = oldData.parentHive
+    if u2 == nil then SilitidData[oldid] = nil; return end
+    local id2 = GetHandleId(u2)
+    local d = SilitidData[id2]
+    if d == nil then d = {count = 0} end
+    d.count = d.count - 1
     
-    --???? ?????? ??????
-    local oldid= GetHandleId(gTriggerUnit)
-    local u2= LoadUnitHandle(Hash, oldid, 1)
-    local id2= GetHandleId(u2)
-    local currentCount= LoadInteger(Hash, id2, 1) - 1
-    local t
-    FlushChildHashtable(Hash, oldid)
+    SilitidData[id2] = d
+    SilitidData[oldid] = nil
     
-    SaveInteger(Hash, id2, 1, currentCount)
-    
-    
-    if UnitAlive(u2) and currentCount < 3 and not LoadBoolean(Hash, oldid, 1) then
-        t=CreateTimer()
-        TimerStart(t, 25, true, spawnlich)
-        SaveUnitHandle(Hash, GetHandleId(t), 1, u2)
-        SaveBoolean(Hash, id2, 1, true)
+    if UnitAlive(u2) and d.count < 3 and not d.spawning then
+        _startSilitidSpawner(u2)
     end
-    t=nil
-    u2=nil
     
     
     

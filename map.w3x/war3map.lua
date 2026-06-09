@@ -10244,101 +10244,61 @@ function ClearPlayer(p)
 end
 -- ***************************************************************************
 -- *  TimedUpdate
----@return nothing
-function TimedUpdateCheck()
-	local t = GetExpiredTimer()
-	local id = GetHandleId(t)
-	local u = LoadUnitHandle(Hash, id, 1)
-	local p = LoadPlayerHandle(Hash, id, 2)
-	local currentLevel = LoadInteger(Hash, id, 3)
-	
-	
-	
-	local levels = 4
-	local pi = GetPlayerId(p)
-	
-	if GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1N9')) > 0 then
-		levels = levels - 2
-	end
-	
-	
-	if GetOwningPlayer(u) == p and UnitAlive(u) and currentLevel <= levels then
-		
-		-- Development
-		BlzStartUnitAbilityCooldown(u, FourCC('A10G'), 300)
-		-- call BlzSetUnitAbilityCooldown(u,'A10G',1,300)
-		
-		-- Golda
-		if GetUnitAbilityLevel(u, FourCC('A0AY')) == 0 then
-			UnitAddAbility(u, FourCC('A0AY'))
-			income[pi] = income[pi] + 100
-			
-			
-		elseif GetUnitAbilityLevel(u, FourCC('A0AY')) < levels then
-			income[pi] = income[pi] + 100
-			IncUnitAbilityLevel(u, FourCC('A0AY'))
-			
-		else	-- if GetUnitAbilityLevel(u, FourCC('A0AY')) >= levels then
-			income[pi] = income[pi] + 100
-			UnitRemoveAbility(u, FourCC('A0AZ'))
-			
-			
-		end
-		
-		-- Lumber
-		if GetUnitAbilityLevel(u, FourCC('A0B5')) == 0 then
-			UnitAddAbility(u, FourCC('A0B5'))
-			incomeW[pi] = incomeW[pi] + 50.00
-		elseif GetUnitAbilityLevel(u, FourCC('A0B5')) < levels then
-			IncUnitAbilityLevel(u, FourCC('A0B5'))
-			incomeW[pi] = incomeW[pi] + 50.00
-		else	-- if GetUnitAbilityLevel( u,FourCC('A0B5') ) >= levels then
-			UnitRemoveAbility(u, FourCC('A0B1'))
-			
-		end
-		
-		if GetUnitAbilityLevel(u, FourCC('A0AY')) + GetUnitAbilityLevel(u, FourCC('A0B5')) >= levels * 2 then
-			-- ????????
-			BlzUnitHideAbility(u, FourCC('A10G'), true)
-			BlzUnitDisableAbility(u, FourCC('A10G'), true, true)
-			
-			
-		end
-		
-		UpdateGraf(pi)
-		u = nil
-		p = nil
-		SaveInteger(Hash, id, 3, currentLevel + 1)
-		TimerStart(t, 300, false, TimedUpdateCheck)
-		t = nil
-		
-	else
-		u = nil
-		p = nil
-        FlushChildHashtable(Hash, id)
-        DestroyTimer(t)
-        t = nil
-	end
-end
 ---@param u unit
 ---@param p player
 ---@return nothing
 function TimedUpdate(u, p)
-	local t = CreateTimer()
-	local id = GetHandleId(t)
-	
-	UnitAddAbility(u, FourCC('A10G'))
-	BlzStartUnitAbilityCooldown(u, FourCC('A10G'), 300)
-	TimerStart(t, 300, false, TimedUpdateCheck)
-	SaveUnitHandle(Hash, id, 1, u)
-	SavePlayerHandle(Hash, id, 2, p)
-	SaveInteger(Hash, id, 3, 1)
-	
-	u = nil
-	p = nil
-	t = nil
-	
-	
+    local currentLevel = 1
+    local pi = GetPlayerId(p)
+    
+    UnitAddAbility(u, FourCC('A10G'))
+    BlzStartUnitAbilityCooldown(u, FourCC('A10G'), 300)
+    
+    local function tick(tt)
+        local levels = 4
+        if GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1N9')) > 0 then
+            levels = levels - 2
+        end
+        
+        if GetOwningPlayer(u) == p and UnitAlive(u) and currentLevel <= levels then
+            BlzStartUnitAbilityCooldown(u, FourCC('A10G'), 300)
+            
+            if GetUnitAbilityLevel(u, FourCC('A0AY')) == 0 then
+                UnitAddAbility(u, FourCC('A0AY'))
+                income[pi] = income[pi] + 100
+            elseif GetUnitAbilityLevel(u, FourCC('A0AY')) < levels then
+                income[pi] = income[pi] + 100
+                IncUnitAbilityLevel(u, FourCC('A0AY'))
+            else
+                income[pi] = income[pi] + 100
+                UnitRemoveAbility(u, FourCC('A0AZ'))
+            end
+            
+            if GetUnitAbilityLevel(u, FourCC('A0B5')) == 0 then
+                UnitAddAbility(u, FourCC('A0B5'))
+                incomeW[pi] = incomeW[pi] + 50.00
+            elseif GetUnitAbilityLevel(u, FourCC('A0B5')) < levels then
+                IncUnitAbilityLevel(u, FourCC('A0B5'))
+                incomeW[pi] = incomeW[pi] + 50.00
+            else
+                UnitRemoveAbility(u, FourCC('A0B1'))
+            end
+            
+            if GetUnitAbilityLevel(u, FourCC('A0AY')) + GetUnitAbilityLevel(u, FourCC('A0B5')) >= levels * 2 then
+                BlzUnitHideAbility(u, FourCC('A10G'), true)
+                BlzUnitDisableAbility(u, FourCC('A10G'), true, true)
+            end
+            
+            UpdateGraf(pi)
+            currentLevel = currentLevel + 1
+            TimerStart(tt, 300, false, function() tick(tt) end)
+        else
+            DestroyTimer(tt)
+        end
+    end
+    
+    local t = CreateTimer()
+    TimerStart(t, 300, false, function() tick(t) end)
 end
 -- ***************************************************************************
 -- *  InitThings
@@ -12174,9 +12134,20 @@ function aiUnitJoins(u, pi)
 
     AiDispatchJoin(id, pi, u)
 
-    -- Workers: issue harvest immediately instead of waiting for PlayerBuilders tick
+    -- Workers: if under builder target, try building; else harvest
     if IsUnitType(u, UNIT_TYPE_PEON) then
-        IssueImmediateOrder(u, "autoharvestlumber")
+        local T = AiData[pi][StringHash("T")] or 0
+        local totalWrk = getAiCount(pi, StringHash("T")) + (AiData[pi][StringHash("HV")] or 0)
+        local desiredBld = AiBuildersTarget(pi, totalWrk)
+        if T < desiredBld then
+            NumberAdd(pi, StringHash("T"))
+            GroupAddUnit(udg_Ai_buildersT[pi], u)
+            GroupRemoveUnit(udg_Ai_builders[pi], u)
+            TryBuild_u = u
+            TryBuild()
+        else
+            IssueImmediateOrder(u, "autoharvestlumber")
+        end
     end
 end
 -- ***************************************************************************
@@ -60425,6 +60396,28 @@ function AiBrainPerceive(pi)
     return wm
 end
 
+-- ---- builder pacing -----------------------------------------------
+-- Returns desired number of active builders (building, not harvesting).
+-- Early game: aggressive building. Mid game: balanced. Late: less.
+-- totalWrk = T + HV (builders + harvesters). Race can override via AiBuildersCfg.
+AiBuildersCfg = AiBuildersCfg or {
+    minBld = 5,    -- minimum builders always
+    maxBld = 20,   -- maximum builders at peak
+    frac    = 0.35, -- fraction of workers that should be building
+}
+---@param pi integer
+---@param totalWrk integer total workers (builders + harvesters)
+---@return integer desired builder count
+function AiBuildersTarget(pi, totalWrk)
+    local cfg = AiBuildersCfg
+    local r = AiRaceOf(pi)
+    if r ~= nil and r.buildersCfg ~= nil then cfg = r.buildersCfg end
+    local bld = math.floor(totalWrk * (cfg.frac or 0.35))
+    if bld < (cfg.minBld or 5) then bld = cfg.minBld end
+    if bld > (cfg.maxBld or 20) then bld = cfg.maxBld end
+    return bld
+end
+
 -- ---- squad system -------------------------------------------------
 -- AiSquads[pi][sid] = { members=group, state, objective, rally={x,y}, role }
 AiSquadCommitMin = AiSquadCommitMin or 4
@@ -60525,9 +60518,13 @@ end
 ---@param y real
 ---@return integer
 function AiSquadOrderMov(g, x, y)
+    ProbeLogWrite("[SQDBG] ordmov-enter")
     local tmp = CreateGroup()
+    ProbeLogWrite("[SQDBG] ordmov-cr1")
     local sub = CreateGroup()
+    ProbeLogWrite("[SQDBG] ordmov-cr2")
     local sz = BlzGroupGetSize(g)
+    ProbeLogWrite("[SQDBG] ordmov-sz=" .. tostring(sz))
     local k = 0
     while k < sz do
         local u = BlzGroupUnitAt(g, k)
@@ -60551,6 +60548,7 @@ function AiSquadOrderMov(g, x, y)
         end
     end
     if BlzGroupGetSize(sub) > 0 then
+        ProbeLogWrite("[SQDBG] ordmov-gpo")
         GroupPointOrder(sub, "smart", x, y)
         GroupClear(sub)
     end
@@ -60655,11 +60653,20 @@ end
 
 -- FSM handlers
 function AiSquadTickMuster(pi, sid, sq, p, wm)
-    if AiSquadSize(sq.members) >= (AiBrainCfg(pi).commitMin or AiSquadCommitMin) then
+    ProbeLogWrite("[SQDBG] muster-enter sq" .. tostring(sid))
+    ProbeLogWrite("[SQDBG] muster-sz-start")
+    local sz = AiSquadSize(sq.members)
+    ProbeLogWrite("[SQDBG] muster-sz=" .. tostring(sz))
+    local cfg = AiBrainCfg(pi)
+    ProbeLogWrite("[SQDBG] muster-cfg cm=" .. tostring(cfg.commitMin or AiSquadCommitMin))
+    if sz >= (cfg.commitMin or AiSquadCommitMin) then
+        ProbeLogWrite("[SQDBG] muster-pickobj")
         local obj = AiSquadPickObj(pi, sq, wm)
-        if obj ~= nil then sq.objective = obj; return "march" end
+        if obj ~= nil then ProbeLogWrite("[SQDBG] muster->march"); sq.objective = obj; return "march" end
     end
+    ProbeLogWrite("[SQDBG] muster-ordmov rx=" .. tostring(R2I(sq.rally.x)) .. " ry=" .. tostring(R2I(sq.rally.y)))
     AiSquadOrderMov(sq.members, sq.rally.x, sq.rally.y)
+    ProbeLogWrite("[SQDBG] muster-done")
     return "muster"
 end
 
@@ -61033,10 +61040,18 @@ function AiBrainArmyTick(pi, p)
     for sid, sq in pairs(squads) do
         if ticked >= 6 then break end
         local newState = sq.state
-        if sq.state == "muster" then newState = AiSquadTickMuster(pi, sid, sq, p, wm)
-        elseif sq.state == "march" then newState = AiSquadTickMarch(pi, sid, sq, p, wm)
-        elseif sq.state == "engage" then newState = AiSquadTickEngage(pi, sid, sq, p, wm)
-        elseif sq.state == "retreat" then newState = AiSquadTickRetreat(pi, sid, sq, p, wm)
+        local ok, err = pcall(function()
+            if sq == nil or sq.members == nil then
+                error("nil squad or members")
+            end
+            if sq.state == "muster" then newState = AiSquadTickMuster(pi, sid, sq, p, wm)
+            elseif sq.state == "march" then newState = AiSquadTickMarch(pi, sid, sq, p, wm)
+            elseif sq.state == "engage" then newState = AiSquadTickEngage(pi, sid, sq, p, wm)
+            elseif sq.state == "retreat" then newState = AiSquadTickRetreat(pi, sid, sq, p, wm)
+            end
+        end)
+        if not ok then
+            ProbeLogWrite("[SQDBG] squad-err sq" .. tostring(sid) .. " state=" .. sq.state .. " err=" .. tostring(err))
         end
         if newState ~= sq.state then
             ProbeLogWrite("[SQDBG] pi" .. tostring(pi) .. " sq" .. tostring(sid) .. " " .. sq.state .. "->" .. newState .. " sz=" .. tostring(AiSquadSize(sq.members)))

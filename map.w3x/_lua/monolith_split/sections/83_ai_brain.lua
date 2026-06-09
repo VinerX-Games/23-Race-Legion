@@ -397,6 +397,28 @@ function AiBrainPerceive(pi)
     return wm
 end
 
+-- ---- builder pacing -----------------------------------------------
+-- Returns desired number of active builders (building, not harvesting).
+-- Early game: aggressive building. Mid game: balanced. Late: less.
+-- totalWrk = T + HV (builders + harvesters). Race can override via AiBuildersCfg.
+AiBuildersCfg = AiBuildersCfg or {
+    minBld = 5,    -- minimum builders always
+    maxBld = 20,   -- maximum builders at peak
+    frac    = 0.35, -- fraction of workers that should be building
+}
+---@param pi integer
+---@param totalWrk integer total workers (builders + harvesters)
+---@return integer desired builder count
+function AiBuildersTarget(pi, totalWrk)
+    local cfg = AiBuildersCfg
+    local r = AiRaceOf(pi)
+    if r ~= nil and r.buildersCfg ~= nil then cfg = r.buildersCfg end
+    local bld = math.floor(totalWrk * (cfg.frac or 0.35))
+    if bld < (cfg.minBld or 5) then bld = cfg.minBld end
+    if bld > (cfg.maxBld or 20) then bld = cfg.maxBld end
+    return bld
+end
+
 -- ---- squad system -------------------------------------------------
 -- AiSquads[pi][sid] = { members=group, state, objective, rally={x,y}, role }
 AiSquadCommitMin = AiSquadCommitMin or 4
@@ -497,9 +519,13 @@ end
 ---@param y real
 ---@return integer
 function AiSquadOrderMov(g, x, y)
+    ProbeLogWrite("[SQDBG] ordmov-enter")
     local tmp = CreateGroup()
+    ProbeLogWrite("[SQDBG] ordmov-cr1")
     local sub = CreateGroup()
+    ProbeLogWrite("[SQDBG] ordmov-cr2")
     local sz = BlzGroupGetSize(g)
+    ProbeLogWrite("[SQDBG] ordmov-sz=" .. tostring(sz))
     local k = 0
     while k < sz do
         local u = BlzGroupUnitAt(g, k)
@@ -523,6 +549,7 @@ function AiSquadOrderMov(g, x, y)
         end
     end
     if BlzGroupGetSize(sub) > 0 then
+        ProbeLogWrite("[SQDBG] ordmov-gpo")
         GroupPointOrder(sub, "smart", x, y)
         GroupClear(sub)
     end
@@ -627,11 +654,20 @@ end
 
 -- FSM handlers
 function AiSquadTickMuster(pi, sid, sq, p, wm)
-    if AiSquadSize(sq.members) >= (AiBrainCfg(pi).commitMin or AiSquadCommitMin) then
+    ProbeLogWrite("[SQDBG] muster-enter sq" .. tostring(sid))
+    ProbeLogWrite("[SQDBG] muster-sz-start")
+    local sz = AiSquadSize(sq.members)
+    ProbeLogWrite("[SQDBG] muster-sz=" .. tostring(sz))
+    local cfg = AiBrainCfg(pi)
+    ProbeLogWrite("[SQDBG] muster-cfg cm=" .. tostring(cfg.commitMin or AiSquadCommitMin))
+    if sz >= (cfg.commitMin or AiSquadCommitMin) then
+        ProbeLogWrite("[SQDBG] muster-pickobj")
         local obj = AiSquadPickObj(pi, sq, wm)
-        if obj ~= nil then sq.objective = obj; return "march" end
+        if obj ~= nil then ProbeLogWrite("[SQDBG] muster->march"); sq.objective = obj; return "march" end
     end
+    ProbeLogWrite("[SQDBG] muster-ordmov rx=" .. tostring(R2I(sq.rally.x)) .. " ry=" .. tostring(R2I(sq.rally.y)))
     AiSquadOrderMov(sq.members, sq.rally.x, sq.rally.y)
+    ProbeLogWrite("[SQDBG] muster-done")
     return "muster"
 end
 
@@ -1005,10 +1041,18 @@ function AiBrainArmyTick(pi, p)
     for sid, sq in pairs(squads) do
         if ticked >= 6 then break end
         local newState = sq.state
-        if sq.state == "muster" then newState = AiSquadTickMuster(pi, sid, sq, p, wm)
-        elseif sq.state == "march" then newState = AiSquadTickMarch(pi, sid, sq, p, wm)
-        elseif sq.state == "engage" then newState = AiSquadTickEngage(pi, sid, sq, p, wm)
-        elseif sq.state == "retreat" then newState = AiSquadTickRetreat(pi, sid, sq, p, wm)
+        local ok, err = pcall(function()
+            if sq == nil or sq.members == nil then
+                error("nil squad or members")
+            end
+            if sq.state == "muster" then newState = AiSquadTickMuster(pi, sid, sq, p, wm)
+            elseif sq.state == "march" then newState = AiSquadTickMarch(pi, sid, sq, p, wm)
+            elseif sq.state == "engage" then newState = AiSquadTickEngage(pi, sid, sq, p, wm)
+            elseif sq.state == "retreat" then newState = AiSquadTickRetreat(pi, sid, sq, p, wm)
+            end
+        end)
+        if not ok then
+            ProbeLogWrite("[SQDBG] squad-err sq" .. tostring(sid) .. " state=" .. sq.state .. " err=" .. tostring(err))
         end
         if newState ~= sq.state then
             ProbeLogWrite("[SQDBG] pi" .. tostring(pi) .. " sq" .. tostring(sid) .. " " .. sq.state .. "->" .. newState .. " sz=" .. tostring(AiSquadSize(sq.members)))
