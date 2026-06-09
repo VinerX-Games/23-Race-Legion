@@ -1,4 +1,5 @@
 
+SilitidData = SilitidData or {}
 --===========================================================================
 -- Trigger: SilitidsOn
 --===========================================================================
@@ -306,9 +307,12 @@ local function _silitidSpawnTick(timer_hive)
     end
 end
 
-local function _startSilitidSpawner(hive)
+function StartSilitidSpawner(hive)
     local t = CreateTimer()
-    SilitidData[GetHandleId(hive)] = {count = 0, spawning = true}
+    local hid = GetHandleId(hive)
+    local d = SilitidData[hid] or {count = 0}
+    d.spawning = true
+    SilitidData[hid] = d
     TimerStart(t, 25, true, function() _silitidSpawnTick(hive) end)
 end
 --===========================================================================
@@ -316,7 +320,7 @@ function Trig_MainSpawn2_Conditions()
     return GetUnitTypeId(GetConstructedStructure()) == FourCC('e01H')
 end
 function Trig_MainSpawn2_Actions()
-    _startSilitidSpawner(GetConstructedStructure())
+    StartSilitidSpawner(GetConstructedStructure())
 end
 --===========================================================================
 function InitTrig_MainSpawn2()
@@ -348,7 +352,7 @@ function Trig_LichDead_Actions()
     SilitidData[oldid] = nil
     
     if UnitAlive(u2) and d.count < 3 and not d.spawning then
-        _startSilitidSpawner(u2)
+        StartSilitidSpawner(u2)
     end
 end
 --===========================================================================
@@ -666,7 +670,7 @@ function Trig_LichinkaFinish_Actions()
     SilitidData[oldid] = nil
     
     if UnitAlive(u2) and d.count < 3 and not d.spawning then
-        _startSilitidSpawner(u2)
+        StartSilitidSpawner(u2)
     end
     
     
