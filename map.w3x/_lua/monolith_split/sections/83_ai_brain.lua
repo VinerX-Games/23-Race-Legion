@@ -1040,28 +1040,7 @@ function AiBrainArmyTick(pi, p)
     ProbeLogWrite("[SQDBG] cp10 n=" .. tostring(#AiSquadsOf(pi)))
     ProbeLogWrite("[SQDBG] cp10-get")
     local squads = AiSquadsOf(pi)
-    -- SQUAD FSM TICK (guarded against destroyed group handles)
-    local FSM_HANDLERS = { muster = AiSquadTickMuster, march = AiSquadTickMarch, engage = AiSquadTickEngage, retreat = AiSquadTickRetreat }
-    local orderedFsm = 0
-    for i, sq in ipairs(squads) do
-        if sq ~= nil and sq.state ~= nil then
-            local ok = pcall(function()
-                if sq.members == nil then return end
-                local newState = sq.state
-                local handler = FSM_HANDLERS[newState]
-                if handler then
-                    sq.state = handler(pi, i, sq, p, wm)
-                    orderedFsm = orderedFsm + 1
-                end
-            end)
-            if not ok then
-                ProbeLogWrite("[SQDBG] squad-err sq" .. tostring(i))
-            end
-        end
-    end
-    ProbeLogWrite("[SQDBG] cp10-fsm-done ordered=" .. tostring(orderedFsm))
-
-    -- Phase 1 backup: order remaining idle combat units to focus
+    -- SQUAD FSM DISABLED (crashes WC3 silently, no Lua error caught)
     local focus = AiBrainPickFocus(pi, wm)
     if focus ~= nil then
         -- Order ALL idle combat units (heroes included), not just udg_Ai_army

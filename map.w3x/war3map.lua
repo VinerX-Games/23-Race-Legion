@@ -60833,28 +60833,7 @@ function AiBrainArmyTick(pi, p)
     ProbeLogWrite("[SQDBG] cp10 n=" .. tostring(#AiSquadsOf(pi)))
     ProbeLogWrite("[SQDBG] cp10-get")
     local squads = AiSquadsOf(pi)
-    -- SQUAD FSM TICK (guarded against destroyed group handles)
-    local FSM_HANDLERS = { muster = AiSquadTickMuster, march = AiSquadTickMarch, engage = AiSquadTickEngage, retreat = AiSquadTickRetreat }
-    local orderedFsm = 0
-    for i, sq in ipairs(squads) do
-        if sq ~= nil and sq.state ~= nil then
-            local ok = pcall(function()
-                if sq.members == nil then return end
-                local newState = sq.state
-                local handler = FSM_HANDLERS[newState]
-                if handler then
-                    sq.state = handler(pi, i, sq, p, wm)
-                    orderedFsm = orderedFsm + 1
-                end
-            end)
-            if not ok then
-                ProbeLogWrite("[SQDBG] squad-err sq" .. tostring(i))
-            end
-        end
-    end
-    ProbeLogWrite("[SQDBG] cp10-fsm-done ordered=" .. tostring(orderedFsm))
-
-    -- Phase 1 backup: order remaining idle combat units to focus
+    -- SQUAD FSM DISABLED (crashes WC3 silently, no Lua error caught)
     local focus = AiBrainPickFocus(pi, wm)
     if focus ~= nil then
         -- Order ALL idle combat units (heroes included), not just udg_Ai_army
@@ -61274,13 +61253,13 @@ function DiplomatName(pi)
 end
 
 -- ====================================================================
--- Broadcast: send a message to all alive players (humans + bots).
+-- Broadcast: send a message to all players (humans + bots).
 -- ====================================================================
 ---@param msg string
 function DipBroadcast(msg)
     for i = 0, 23 do
         local p = Player(i)
-        if p ~= nil and playerCapital[i] ~= nil then
+        if p ~= nil then
             DisplayTimedTextToPlayer(p, 0, 0, 10.0, msg)
         end
     end
@@ -61650,20 +61629,32 @@ function AiDiplomatPerceive(pi)
     local cfg = AiDiplomatCfg(pi)
     local me = Player(pi)
     if me == nil then return end
-    if playerCapital[pi] == nil or GetUnitState(playerCapital[pi], UNIT_STATE_LIFE) <= 0.405 then
-        return  -- dead bot, no diplomacy
-    end
 
-    local capX, capY = GetUnitX(playerCapital[pi]), GetUnitY(playerCapital[pi])
+    local capX, capY = 0.0, 0.0
+    local hasCap = false
+    local cap = playerCapital[pi]
+    if cap ~= nil and GetUnitState(cap, UNIT_STATE_LIFE) > 0.405 then
+        capX, capY = GetUnitX(cap), GetUnitY(cap)
+        hasCap = true
+    elseif udg_Ai_army[pi] ~= nil and FirstOfGroup(udg_Ai_army[pi]) ~= nil then
+        -- No capital yet: use army centroid as fallback anchor
+        capX, capY, _ = AiGroupCentroid(udg_Ai_army[pi])
+        hasCap = true
+    end
+    -- If no anchor at all (no capital + no army), still track relations
+    -- but with proximity=0 for everyone.
+
     local myPower = Grades[pi] or 0
     if myPower < 1 then myPower = 1 end
 
     -- Under-attack detection: capital HP dropped significantly
-    local capHP = GetUnitState(playerCapital[pi], UNIT_STATE_LIFE)
-    local prevHP = st.lastCapitalHP
-    st.lastCapitalHP = capHP
-    if prevHP ~= nil and capHP > 0 and capHP < prevHP - 50 then
-        st.underAttackFired = true
+    if hasCap then
+        local capHP = GetUnitState(cap, UNIT_STATE_LIFE)
+        local prevHP = st.lastCapitalHP
+        st.lastCapitalHP = capHP
+        if prevHP ~= nil and capHP > 0 and capHP < prevHP - 50 then
+            st.underAttackFired = true
+        end
     end
 
     for otherPi = 0, 23 do
@@ -61673,16 +61664,19 @@ function AiDiplomatPerceive(pi)
                 local otherCap = playerCapital[otherPi]
                 if otherCap ~= nil and GetUnitState(otherCap, UNIT_STATE_LIFE) > 0.405 then
                     local otherPower = Grades[otherPi] or 0
-                    local ox, oy = GetUnitX(otherCap), GetUnitY(otherCap)
-                    local dx, dy = capX - ox, capY - oy
-                    local dist = SquareRoot(dx * dx + dy * dy)
-                    local maxDist = 60000.0
-                    local proximity = 1.0 - math.min(dist / maxDist, 1.0)
-
-                    -- Perceived threat: how dangerous they are to us (power * proximity)
-                    local perceivedThreat = (otherPower / math.max(myPower, 1)) * proximity
-                    if IsPlayerEnemy(other, me) then
-                        perceivedThreat = perceivedThreat * 1.5
+                    local proximity = 0.0
+                    local perceivedThreat = 0.0
+                    if hasCap then
+                        local ox, oy = GetUnitX(otherCap), GetUnitY(otherCap)
+                        local dx, dy = capX - ox, capY - oy
+                        local dist = SquareRoot(dx * dx + dy * dy)
+                        local maxDist = 60000.0
+                        proximity = 1.0 - math.min(dist / maxDist, 1.0)
+                        -- Perceived threat: how dangerous they are to us (power * proximity)
+                        perceivedThreat = (otherPower / math.max(myPower, 1)) * proximity
+                        if IsPlayerEnemy(other, me) then
+                            perceivedThreat = perceivedThreat * 1.5
+                        end
                     end
 
                     -- Update or create relations entry
