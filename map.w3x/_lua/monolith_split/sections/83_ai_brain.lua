@@ -445,10 +445,8 @@ end
 ---@param y real
 ---@return integer
 function AiSquadOrderAtk(g, x, y)
-    if gSubGroup == nil then gSubGroup = CreateGroup() end
-    if gAllyGroup == nil then gAllyGroup = CreateGroup() end
-    GroupClear(gSubGroup)
-    GroupClear(gAllyGroup)
+    local tmp = CreateGroup()
+    local sub = CreateGroup()
     local sz = BlzGroupGetSize(g)
     local k = 0
     while k < sz do
@@ -456,26 +454,28 @@ function AiSquadOrderAtk(g, x, y)
         if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
             and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
             and not IsUnitType(u, UNIT_TYPE_PEON) then
-            GroupAddUnit(gAllyGroup, u)
+            GroupAddUnit(tmp, u)
         end
         k = k + 1
     end
     local ordered = 0
     while true do
-        local u = FirstOfGroup(gAllyGroup)
+        local u = FirstOfGroup(tmp)
         if u == nil then break end
-        GroupRemoveUnit(gAllyGroup, u)
-        GroupAddUnit(gSubGroup, u)
+        GroupRemoveUnit(tmp, u)
+        GroupAddUnit(sub, u)
         ordered = ordered + 1
         if ordered % 12 == 0 then
-            GroupPointOrder(gSubGroup, "attack", x, y)
-            GroupClear(gSubGroup)
+            GroupPointOrder(sub, "attack", x, y)
+            GroupClear(sub)
         end
     end
-    if BlzGroupGetSize(gSubGroup) > 0 then
-        GroupPointOrder(gSubGroup, "attack", x, y)
-        GroupClear(gSubGroup)
+    if BlzGroupGetSize(sub) > 0 then
+        GroupPointOrder(sub, "attack", x, y)
+        GroupClear(sub)
     end
+    DestroyGroup(tmp)
+    DestroyGroup(sub)
     return ordered
 end
 
@@ -484,10 +484,8 @@ end
 ---@param y real
 ---@return integer
 function AiSquadOrderMov(g, x, y)
-    if gSubGroup == nil then gSubGroup = CreateGroup() end
-    if gAllyGroup == nil then gAllyGroup = CreateGroup() end
-    GroupClear(gSubGroup)
-    GroupClear(gAllyGroup)
+    local tmp = CreateGroup()
+    local sub = CreateGroup()
     local sz = BlzGroupGetSize(g)
     local k = 0
     while k < sz do
@@ -495,26 +493,28 @@ function AiSquadOrderMov(g, x, y)
         if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
             and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
             and not IsUnitType(u, UNIT_TYPE_PEON) then
-            GroupAddUnit(gAllyGroup, u)
+            GroupAddUnit(tmp, u)
         end
         k = k + 1
     end
     local ordered = 0
     while true do
-        local u = FirstOfGroup(gAllyGroup)
+        local u = FirstOfGroup(tmp)
         if u == nil then break end
-        GroupRemoveUnit(gAllyGroup, u)
-        GroupAddUnit(gSubGroup, u)
+        GroupRemoveUnit(tmp, u)
+        GroupAddUnit(sub, u)
         ordered = ordered + 1
         if ordered % 12 == 0 then
-            GroupPointOrder(gSubGroup, "smart", x, y)
-            GroupClear(gSubGroup)
+            GroupPointOrder(sub, "smart", x, y)
+            GroupClear(sub)
         end
     end
-    if BlzGroupGetSize(gSubGroup) > 0 then
-        GroupPointOrder(gSubGroup, "smart", x, y)
-        GroupClear(gSubGroup)
+    if BlzGroupGetSize(sub) > 0 then
+        GroupPointOrder(sub, "smart", x, y)
+        GroupClear(sub)
     end
+    DestroyGroup(tmp)
+    DestroyGroup(sub)
     return ordered
 end
 
