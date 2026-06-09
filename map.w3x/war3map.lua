@@ -25978,108 +25978,79 @@ end
 --===========================================================================
 -- Trigger: Duel
 --===========================================================================
-function Duel()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u= LoadUnitHandle(Hash, id, 0)
-    local u2= LoadUnitHandle(Hash, id, 1)
-    local l1=GetUnitLoc(u)
-    local l2=GetUnitLoc(u2)
-    UnitRemoveAbility(u, FourCC('Avul'))
-    UnitRemoveAbility(u2, FourCC('Avul'))
-    PauseUnit(u, true)
-    PauseUnit(u2, true)
-    SetUnitAnimation(u, "attack")
-    SetUnitAnimation(u2, "attack")
-    SetUnitLookAt(u, "bone_chest", u2, 0, 0, 0)
-    SetUnitLookAt(u2, "bone_chest", u, 0, 0, 0)
-    
-    
-    UnitDamageTargetBJ(u, u2, BlzGetUnitBaseDamage(u, 1), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
-    if UnitAlive(u2) then
-         UnitDamageTargetBJ(u2, u, BlzGetUnitBaseDamage(u, 1), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
-    end
-   
-    UnitAddAbility(u, FourCC('Avul'))
-    UnitAddAbility(u2, FourCC('Avul'))
-    if not UnitAlive(u) then
-        PauseUnit(u, false)
-        PauseUnit(u2, false)
-        SetUnitAnimation(u, "death")
-        SetUnitAnimation(u2, "stand")
-        UnitAddAbility(u2, FourCC('w2oz'))
-        IssueImmediateOrder(u2, "howlofterror")
-            UnitRemoveAbility(u, FourCC('Avul'))
-        UnitRemoveAbility(u2, FourCC('Avul'))
-        FlushChildHashtable(Hash, id)
-        PauseTimer(t)
-        DestroyTimer(t)
-        
-        ResetUnitLookAt(u)
-        ResetUnitLookAt(u2)
-        
-    elseif not UnitAlive(u2) then
-        PauseUnit(u, false)
-        PauseUnit(u2, false)
-        SetUnitAnimation(u, "stand")
-        SetUnitAnimation(u2, "death")
-        UnitAddAbility(u, FourCC('w2oz'))
-        IssueImmediateOrder(u, "howlofterror")
-        UnitRemoveAbility(u, FourCC('Avul'))
-        UnitRemoveAbility(u2, FourCC('Avul'))
-        FlushChildHashtable(Hash, id)
-        PauseTimer(t)
-        DestroyTimer(t)
-        
-        ResetUnitLookAt(u)
-        ResetUnitLookAt(u2)
-        
-    elseif u == nil or u2 == nil or DistanceBetweenPoints(l1, l2) > 500 then
-        PauseUnit(u, false)
-        PauseUnit(u2, false)
-        SetUnitAnimation(u, "stand")
-        SetUnitAnimation(u2, "stand")
-        ResetUnitLookAt(u)
-        ResetUnitLookAt(u2)
-        UnitRemoveAbility(u, FourCC('Avul'))
-        UnitRemoveAbility(u2, FourCC('Avul'))
-        FlushChildHashtable(Hash, id)
-        PauseTimer(t)
-        DestroyTimer(t)
-        
-    
-    end
-    t=nil
-    u=nil
-    u2=nil
-    
-    RemoveLocation(l1)
-    RemoveLocation(l2)
-    l1=nil
-    l2=nil
-end
 function Trig_Duel_Actions()
     local u= GetTriggerUnit()
     local u2= GetSpellTargetUnit()
     local t= CreateTimer()
-    local id= GetHandleId(t)
     
-    TimerStart(t, 1, true, Duel)
-    SaveUnitHandle(Hash, id, 0, u)
-    SaveUnitHandle(Hash, id, 1, u2)
+    TimerStart(t, 1, true, function()
+        local l1=GetUnitLoc(u)
+        local l2=GetUnitLoc(u2)
+        UnitRemoveAbility(u, FourCC('Avul'))
+        UnitRemoveAbility(u2, FourCC('Avul'))
+        PauseUnit(u, true)
+        PauseUnit(u2, true)
+        SetUnitAnimation(u, "attack")
+        SetUnitAnimation(u2, "attack")
+        SetUnitLookAt(u, "bone_chest", u2, 0, 0, 0)
+        SetUnitLookAt(u2, "bone_chest", u, 0, 0, 0)
+        
+        UnitDamageTargetBJ(u, u2, BlzGetUnitBaseDamage(u, 1), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
+        if UnitAlive(u2) then
+             UnitDamageTargetBJ(u2, u, BlzGetUnitBaseDamage(u, 1), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
+        end
+       
+        UnitAddAbility(u, FourCC('Avul'))
+        UnitAddAbility(u2, FourCC('Avul'))
+        if not UnitAlive(u) then
+            PauseUnit(u, false)
+            PauseUnit(u2, false)
+            SetUnitAnimation(u, "death")
+            SetUnitAnimation(u2, "stand")
+            UnitAddAbility(u2, FourCC('w2oz'))
+            IssueImmediateOrder(u2, "howlofterror")
+            UnitRemoveAbility(u, FourCC('Avul'))
+            UnitRemoveAbility(u2, FourCC('Avul'))
+            PauseTimer(t)
+            DestroyTimer(t)
+            ResetUnitLookAt(u)
+            ResetUnitLookAt(u2)
+        elseif not UnitAlive(u2) then
+            PauseUnit(u, false)
+            PauseUnit(u2, false)
+            SetUnitAnimation(u, "stand")
+            SetUnitAnimation(u2, "death")
+            UnitAddAbility(u, FourCC('w2oz'))
+            IssueImmediateOrder(u, "howlofterror")
+            UnitRemoveAbility(u, FourCC('Avul'))
+            UnitRemoveAbility(u2, FourCC('Avul'))
+            PauseTimer(t)
+            DestroyTimer(t)
+            ResetUnitLookAt(u)
+            ResetUnitLookAt(u2)
+        elseif u == nil or u2 == nil or DistanceBetweenPoints(l1, l2) > 500 then
+            PauseUnit(u, false)
+            PauseUnit(u2, false)
+            SetUnitAnimation(u, "stand")
+            SetUnitAnimation(u2, "stand")
+            ResetUnitLookAt(u)
+            ResetUnitLookAt(u2)
+            UnitRemoveAbility(u, FourCC('Avul'))
+            UnitRemoveAbility(u2, FourCC('Avul'))
+            PauseTimer(t)
+            DestroyTimer(t)
+        end
+        RemoveLocation(l1)
+        RemoveLocation(l2)
+        l1=nil
+        l2=nil
+    end)
     
     UnitAddAbility(u, FourCC('Avul'))
     UnitAddAbility(u2, FourCC('Avul'))
-    
-    
-    --call SaveInteger(Hash,id,1, 'w2aW')
-    --call SaveInteger(Hash,id,2, 0)
-    --call SaveInteger(Hash,id,3, GetUnitAbilityLevel(u,'w2aW'))
-    --call SaveLocationHandle(Hash,id,4, GetSpellTargetLoc())
     t=nil
     u=nil
     u2=nil
-    
 end
 --===========================================================================
 function InitTrig_Duel()
@@ -47267,12 +47238,13 @@ function Trig_SecondChance_Actions()
         ForGroupBJ(GetUnitsOfPlayerMatching(ConvertedPlayer(udg_LocalInteger), Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
     
         if udg_GameMode == 1 or udg_GameMode == 2 then
-            if t == nil then
-                t=CreateTimer()
-                SecondChance[GetPlayerId(ConvertedPlayer(udg_LocalInteger))]=t
-            end
-            TimerStart(t, 60 * 15, false, SecondChanceTimer)
-            SavePlayerHandle(Hash, GetHandleId(t), 0, ConvertedPlayer(udg_LocalInteger))
+            local p = ConvertedPlayer(udg_LocalInteger)
+            t=CreateTimer()
+            SecondChance[GetPlayerId(p)]=t
+            TimerStart(t, 60 * 15, false, function()
+                CheckAndCreateCapital(p)
+                DestroyTimer(t)
+            end)
         end
     end
     t=nil
@@ -47295,12 +47267,12 @@ function BridgeRaceSelect(target_index)
     udg_LocalInteger = target_index
     ForGroupBJ(GetUnitsOfPlayerMatching(target_player, Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
     if udg_GameMode == 1 or udg_GameMode == 2 then
-        if t == nil then
-            t=CreateTimer()
-            SecondChance[GetPlayerId(target_player)]=t
-        end
-        TimerStart(t, 60 * 15, false, SecondChanceTimer)
-        SavePlayerHandle(Hash, GetHandleId(t), 0, target_player)
+        t=CreateTimer()
+        SecondChance[GetPlayerId(target_player)]=t
+        TimerStart(t, 60 * 15, false, function()
+            CheckAndCreateCapital(target_player)
+            DestroyTimer(t)
+        end)
     end
     ProbeLogWrite("[BRIDGE] race_select target=" .. tostring(target_index))
     target_player = nil
@@ -60693,6 +60665,7 @@ end
 ---@param pi integer
 function AiSquadReapDead(pi)
     local squads = AiSquadsOf(pi)
+    local toRemove = {}
     for sid, sq in pairs(squads) do
         local g = sq.members
         local i = 0
@@ -60702,6 +60675,14 @@ function AiSquadReapDead(pi)
             elseif GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then GroupRemoveUnit(g, u)
             else i = i + 1 end
         end
+        -- Remove empty squads (dead units accumulated, squad becomes hollow)
+        if AiSquadSize(g) == 0 then
+            DestroyGroup(g)
+            toRemove[#toRemove + 1] = sid
+        end
+    end
+    for _, sid in ipairs(toRemove) do
+        squads[sid] = nil
     end
 end
 
@@ -61118,7 +61099,7 @@ function AiBrainArmyTick(pi, p)
     local squads = AiSquadsOf(pi)
     local ticked = 0
     for sid, sq in pairs(squads) do
-        if ticked >= 3 then break end
+        if ticked >= 6 then break end
         ProbeLogWrite("[SQDBG] cp11 sq" .. tostring(sid) .. " state=" .. sq.state)
         local newState = sq.state
         if sq.state == "muster" then newState = AiSquadTickMuster(pi, sid, sq, p, wm)

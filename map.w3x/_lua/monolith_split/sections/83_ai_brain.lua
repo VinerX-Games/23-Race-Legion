@@ -568,6 +568,7 @@ end
 ---@param pi integer
 function AiSquadReapDead(pi)
     local squads = AiSquadsOf(pi)
+    local toRemove = {}
     for sid, sq in pairs(squads) do
         local g = sq.members
         local i = 0
@@ -577,6 +578,14 @@ function AiSquadReapDead(pi)
             elseif GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then GroupRemoveUnit(g, u)
             else i = i + 1 end
         end
+        -- Remove empty squads (dead units accumulated, squad becomes hollow)
+        if AiSquadSize(g) == 0 then
+            DestroyGroup(g)
+            toRemove[#toRemove + 1] = sid
+        end
+    end
+    for _, sid in ipairs(toRemove) do
+        squads[sid] = nil
     end
 end
 
@@ -993,7 +1002,7 @@ function AiBrainArmyTick(pi, p)
     local squads = AiSquadsOf(pi)
     local ticked = 0
     for sid, sq in pairs(squads) do
-        if ticked >= 3 then break end
+        if ticked >= 6 then break end
         ProbeLogWrite("[SQDBG] cp11 sq" .. tostring(sid) .. " state=" .. sq.state)
         local newState = sq.state
         if sq.state == "muster" then newState = AiSquadTickMuster(pi, sid, sq, p, wm)
