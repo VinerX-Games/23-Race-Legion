@@ -898,7 +898,6 @@ udg_Kokon = nil	---@type group
 udg_SpawnLichinok = {}	---@type group	
 udg_Kol_voUnitod = 0	---@type integer	
 udg_StolicaGroups = nil	---@type group	
-udg_Vassals = {}	---@type force	
 udg_TunnelGroup = {}	---@type group	
 udg_playersingame = 0	---@type integer	
 udg_numberofforces = {}	---@type integer	
@@ -1410,10 +1409,8 @@ gg_trg_MOD_feoda_O_Set = nil	---@type trigger
 gg_trg_MOD_feoda_O_Set_Spell = nil	---@type trigger	
 gg_trg_MOD_feoda_O_Start = nil	---@type trigger	
 gg_trg_FeodalDead = nil	---@type trigger	
-gg_trg_FeodalDead2 = nil	---@type trigger	
-gg_trg_DoNotAttackSenior = nil	---@type trigger	
+gg_trg_FeodalCapitalDamage = nil	---@type trigger	
 gg_trg_DoNotAttackSenior2 = nil	---@type trigger	
-gg_trg_AllPlayers_and_vassals = nil	---@type trigger	
 gg_trg_RepairToMuch_O = nil	---@type trigger	
 gg_trg_DominationButton = nil	---@type trigger	
 gg_trg_Domination_start = nil	---@type trigger	
@@ -2640,8 +2637,6 @@ gg_trg_Setlvl = nil	---@type trigger
 gg_trg_A1 = nil	---@type trigger	
 gg_trg_Second_O = nil	---@type trigger	
 gg_trg_KillTestUnits_Command = nil	---@type trigger	
-gg_trg_Player2VassalTo1_Back_Copy = nil	---@type trigger	
-gg_trg_Player2VassalTo1_Copy = nil	---@type trigger	
 gg_trg_Visible_Copy = nil	---@type trigger	
 gg_trg_Player2VassalTo1 = nil	---@type trigger	
 gg_trg_Player2VassalTo1_Back = nil	---@type trigger	
@@ -3143,6 +3138,7 @@ cap_time = {}	---@type boolean
 Vassals = {}	---@type force	
 Senior = {}	---@type player	
 Capital = {}	---@type unit	
+FeodalVassalMode = 1	---@type integer	
 ThirdColumn = {}	---@type multiboarditem	
 CityCount = 0	---@type integer	
 CityPlayerCount = {}	---@type integer	
@@ -8855,12 +8851,6 @@ function InitGlobals()
 	
 	udg_Kol_voUnitod = 0
 	udg_StolicaGroups = CreateGroup()
-	i = 0
-	while true do
-		if i > 25 then break end
-		udg_Vassals[i] = CreateForce()
-		i = i + 1
-	end
 	
 	i = 0
 	while true do
@@ -10268,6 +10258,41 @@ function ClearPlayer(p)
 	playerCapital[pi] = nil
 	ArmyExp[pi] = 0.0
 	
+	-- Vassal cleanup when in Feoda mode
+	if IsTriggerEnabled(gg_trg_FeodalDead) and CountPlayersInForceBJ(Vassals[pi]) > 0 then
+		local inheritedSenior = Senior[pi]
+		if FeodalVassalMode == 1 then
+			-- Mode 1: transfer vassals to the senior's senior
+			if inheritedSenior ~= nil then
+				local inheritedPi = GetPlayerId(inheritedSenior)
+				ForForce(Vassals[pi], function()
+					local v = GetEnumPlayer()
+					local vi = GetPlayerId(v)
+					ClearOldAllies(v)
+					Senior[vi] = inheritedSenior
+					ForceAddPlayer(Vassals[inheritedPi], v)
+					NewAlly(v)
+				end)
+				DisplayTextToForce(udg_AllPlayers, GetPlayerName(inheritedSenior) .. " inherited vassals of dead player " .. GetPlayerName(p))
+			else
+				-- No senior — free all vassals
+				ForForce(Vassals[pi], Freedom)
+			end
+		else
+			-- Mode 2: all vassals are eliminated
+			ForForce(Vassals[pi], function()
+				local v = GetEnumPlayer()
+				ClearPlayer(v)
+			end)
+			DisplayTextToForce(udg_AllPlayers, "Vassals of dead player " .. GetPlayerName(p) .. " are eliminated!")
+		end
+		-- Remove ourselves from our senior's vassal force
+		if inheritedSenior ~= nil then
+			ForceRemovePlayer(Vassals[GetPlayerId(inheritedSenior)], Player(pi))
+		end
+	end
+	ForceClear(Vassals[pi])
+	Senior[pi] = nil
 	
 	DestroyGroup(g)
 	g = nil
@@ -10387,6 +10412,31 @@ function InitThings()
 	end
 	
 	
+end
+
+-- ===========================================================================
+-- FeodalSetVassalMode — Chat command to switch vassal inheritance mode
+-- ===========================================================================
+---@return nothing
+function FeodalSetVassalMode()
+	local msg = GetEventPlayerChatString()
+	local mode = tonumber(string.sub(msg, 11))
+	if mode == 1 then
+		FeodalVassalMode = 1
+		DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "Vassal inheritance: TRANSFER to senior's senior")
+	elseif mode == 2 then
+		FeodalVassalMode = 2
+		DisplayTextToPlayer(GetTriggerPlayer(), 0, 0, "Vassal inheritance: ALL VASSALS LOSE")
+	end
+end
+
+---@return nothing
+function InitTrig_FeodalVassalMode()
+	local trig = CreateTrigger()
+	for i = 0, 23 do
+		TriggerRegisterPlayerChatEvent(trig, Player(i), "-feodmode ", false)
+	end
+	TriggerAddAction(trig, FeodalSetVassalMode)
 end
 -- ***************************************************************************
 -- *  PlayerUI
@@ -12172,14 +12222,17 @@ end
 ---@param pi integer
 ---@return nothing
 function aiUnitJoins(u, pi)
-	local id = GetUnitTypeId(u)
-	
-	GroupAddUnit(udg_Ai_units[pi], u)
-	-- call UnitApplyTimedLife( u,'BTLF',1200.00)
-	NumberAdd(pi, id)
-	
-	AiDispatchJoin(id, pi, u)
-	
+    local id = GetUnitTypeId(u)
+
+    GroupAddUnit(udg_Ai_units[pi], u)
+    NumberAdd(pi, id)
+
+    AiDispatchJoin(id, pi, u)
+
+    -- Workers: issue harvest immediately instead of waiting for PlayerBuilders tick
+    if IsUnitType(u, UNIT_TYPE_PEON) then
+        IssueImmediateOrder(u, "autoharvestlumber")
+    end
 end
 -- ***************************************************************************
 -- *  CapitalEnter
@@ -16893,8 +16946,9 @@ function Trig_MOD_feoda_O_Start_Actions()
 	EnableTrigger(gg_trg_MakeStolica)
 	EnableTrigger(gg_trg_UpgradeStolica)
 	EnableTrigger(gg_trg_StolicaTime)
-	EnableTrigger(gg_trg_FeodalDead2)
+	EnableTrigger(gg_trg_FeodalDead)
 	EnableTrigger(gg_trg_DoNotAttackSenior2)
+	EnableTrigger(gg_trg_FeodalCapitalDamage)
 	SetMapFlag(MAP_LOCK_ALLIANCE_CHANGES, true)
 	SetMapFlag(MAP_ALLIANCE_CHANGES_HIDDEN, true)
 end
@@ -16907,139 +16961,11 @@ function InitTrig_MOD_feoda_O_Start()
 	TriggerAddCondition(gg_trg_MOD_feoda_O_Start, Condition(Trig_MOD_feoda_O_Start_Conditions))
 	TriggerAddAction(gg_trg_MOD_feoda_O_Start, Trig_MOD_feoda_O_Start_Actions)
 end
+
 -- ===========================================================================
---  Trigger: FeodalDead
+--  Trigger: FeodalDead — Capital vassalization on attack (HP <= 15%)
 -- ===========================================================================
----@return boolean
-function Trig_FeodalDead_Conditions()
-	return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) and ((GetUnitLifePercent(GetTriggerUnit()) <= 15.00))
-end
----@return boolean
-function Trig_FeodalDead_Func004Func002Func001Func010Func001Func003C()
-	return IsPlayerInForce(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetForLoopIndexB()])
-end
----@return nothing
-function Trig_FeodalDead_Func004Func002Func001Func010A()
-	for bj_forLoopBIndex = 1, 24 do
-		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
-		SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetEnumPlayer(), bj_ALLIANCE_UNALLIED)
-		if Trig_FeodalDead_Func004Func002Func001Func010Func001Func003C() then
-			ForceRemovePlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetForLoopIndexB()])
-		end
-	end
-	ForceAddPlayerSimple(GetEnumPlayer(), udg_Vassals[GetConvertedPlayerId(ConvertedPlayer(GetForLoopIndexA()))])
-	SetPlayerAllianceStateBJ(GetEnumPlayer(), GetOwningPlayer(GetAttacker()), bj_ALLIANCE_ALLIED_VISION)
-	SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_ALLIED_UNITS)
-	SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
-	SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
-	SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetEnumPlayer(), bj_ALLIANCE_ALLIED_VISION)
-	DisplayTextToForce(GetPlayersAll(), GetPlayerName(GetEnumPlayer()) .. (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA()))))
-end
----@return boolean
-function Trig_FeodalDead_Func004Func002Func001C()
-	return IsPlayerInForce(GetOwningPlayer(GetAttacker()), udg_Vassals[GetForLoopIndexA()])
-end
----@return nothing
-function Trig_FeodalDead_Func004Func011A()
-	DisplayTextToForce(GetPlayersAll(), GetPlayerName(GetEnumPlayer()) .. (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker()))))
-	ForceAddPlayerSimple(GetEnumPlayer(), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))])
-	for bj_forLoopBIndex = 1, 24 do
-		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
-		SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetEnumPlayer(), bj_ALLIANCE_UNALLIED)
-	end
-end
----@return boolean
-function Trig_FeodalDead_Func004Func017Func001C()
-	return IsUnitInGroup(GetEnumUnit(), udg_ZahvatBuildings)
-end
----@return nothing
-function Trig_FeodalDead_Func004Func017A()
-	if Trig_FeodalDead_Func004Func017Func001C() then
-		SetUnitOwner(GetEnumUnit(), Player(PLAYER_NEUTRAL_AGGRESSIVE), true)
-	else
-		KillUnit(GetEnumUnit())
-		RemoveUnit(GetEnumUnit())
-	end
-end
----@return nothing
-function Trig_FeodalDead_Func004Func020A()
-	DisplayTextToForce(GetPlayersAll(), GetPlayerName(GetEnumPlayer()) .. (" ??????????? ?? ?????? " .. GetPlayerName(GetOwningPlayer(GetTriggerUnit()))))
-	for bj_forLoopAIndex = 1, 24 do
-		SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
-		SetPlayerAllianceStateBJ(GetEnumPlayer(), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_UNALLIED)
-		SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_UNALLIED)
-	end
-end
----@return boolean
-function Trig_FeodalDead_Func004C()
-	return GetOwningPlayer(GetTriggerUnit()) == GetOwningPlayer(GetAttacker())
-end
----@return nothing
-function Trig_FeodalDead_Actions()
-	SetUnitLifePercentBJ(GetTriggerUnit(), 100)
-	SetUnitInvulnerable(GetTriggerUnit(), true)
-	SetUnitInvulnerable(GetTriggerUnit(), false)
-	if Trig_FeodalDead_Func004C() then
-		--  ??????? ??? ??????????
-		DisplayTextToForce(GetPlayersAll(), GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. "|cffff0000 - ??????????! |r??????)")
-		ForGroupBJ(GetUnitsOfPlayerAll(GetOwningPlayer(GetTriggerUnit())), Trig_FeodalDead_Func004Func017A)
-		SetPlayerAbilityAvailableBJ(true, FourCC('A0IQ'), GetOwningPlayer(GetTriggerUnit()))
-		--  ??????? ???????? ??????????. ?? ????????!
-		ForForce(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))], Trig_FeodalDead_Func004Func020A)
-		ForceClear(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
-	else
-		--  --------------------------------------------------------------------   ??????? ????-?? ????????
-		for bj_forLoopAIndex = 1, 24 do
-			if Trig_FeodalDead_Func004Func002Func001C() then
-				for bj_forLoopBIndex = 1, 24 do
-					SetPlayerAllianceStateBJ(GetTriggerPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
-					SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetTriggerPlayer(), bj_ALLIANCE_UNALLIED)
-				end
-				--  ???? ??????
-				--  ???????????? ??????? ???????
-				DisplayTextToForce(GetPlayersAll(), GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. (" - ???? ???????? ?????? " .. GetPlayerName(ConvertedPlayer(GetForLoopIndexA()))))
-				ForceAddPlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetConvertedPlayerId(ConvertedPlayer(GetForLoopIndexA()))])
-				SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), ConvertedPlayer(GetForLoopIndexA()), bj_ALLIANCE_ALLIED_UNITS)
-				SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)
-				SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexA()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)
-				--  ???????????? ???????? ??????? ???????
-				ForForce(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttackedUnitBJ()))], Trig_FeodalDead_Func004Func002Func001Func010A)
-				ForceClear(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
-				SetForceAllianceStateBJ(udg_Vassals[GetForLoopIndexA()], udg_Vassals[GetForLoopIndexA()], bj_ALLIANCE_ALLIED_VISION)
-				SetForceAllianceStateBJ(udg_Vassals[GetForLoopIndexA()], GetForceOfPlayer(GetOwningPlayer(GetAttacker())), bj_ALLIANCE_ALLIED_UNITS)
-				return
-			end
-		end
-		--  --------------------------------------------------------------------   ?????? ????-?? ????????
-		--  ???????????? ??????? ???????
-		for bj_forLoopBIndex = 1, 24 do
-			SetPlayerAllianceStateBJ(GetTriggerPlayer(), ConvertedPlayer(GetForLoopIndexB()), bj_ALLIANCE_UNALLIED)
-			SetPlayerAllianceStateBJ(ConvertedPlayer(GetForLoopIndexB()), GetTriggerPlayer(), bj_ALLIANCE_UNALLIED)
-		end
-		DisplayTextToForce(GetPlayersAll(), GetPlayerName(GetOwningPlayer(GetTriggerUnit())) .. (" - ???? ???????? ?????? " .. GetPlayerName(GetOwningPlayer(GetAttacker()))))
-		ForceAddPlayerSimple(GetOwningPlayer(GetTriggerUnit()), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))])
-		SetPlayerAllianceStateBJ(GetOwningPlayer(GetTriggerUnit()), GetOwningPlayer(GetAttacker()), bj_ALLIANCE_ALLIED_UNITS)
-		SetPlayerAllianceStateBJ(GetOwningPlayer(GetAttacker()), GetOwningPlayer(GetTriggerUnit()), bj_ALLIANCE_ALLIED_VISION)
-		--  ???????????? ???????? ??????? ???????
-		ForForce(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttackedUnitBJ()))], Trig_FeodalDead_Func004Func011A)
-		SetForceAllianceStateBJ(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))], udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))], bj_ALLIANCE_ALLIED_VISION)
-		SetForceAllianceStateBJ(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttacker()))], GetForceOfPlayer(GetOwningPlayer(GetAttacker())), bj_ALLIANCE_ALLIED_UNITS)
-		ForceClear(udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))])
-	end
-end
--- ===========================================================================
----@return nothing
-function InitTrig_FeodalDead()
-	gg_trg_FeodalDead = CreateTrigger()
-	DisableTrigger(gg_trg_FeodalDead)
-	TriggerRegisterAnyUnitEventBJ(gg_trg_FeodalDead, EVENT_PLAYER_UNIT_ATTACKED)
-	TriggerAddCondition(gg_trg_FeodalDead, Condition(Trig_FeodalDead_Conditions))
-	TriggerAddAction(gg_trg_FeodalDead, Trig_FeodalDead_Actions)
-end
--- ===========================================================================
---  Trigger: FeodalDead2
--- ===========================================================================
--- 3 ??? ??????
+-- 3 sec invulnerability after capture
 ---@return nothing
 function CapTime()
 	local u = udg_LocalUnit3
@@ -17089,130 +17015,134 @@ function ChangeAlly()
 	p = nil
 	p0 = nil
 end
----@return boolean
-function Trig_FeodalDead2_Conditions()
-	return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) and GetUnitLifePercent(GetTriggerUnit()) <= 15.00
-end
+
+-- ===========================================================================
+-- HandleVassalization — Core vassalization logic shared by attack and damage paths
+-- ===========================================================================
+---@param capital unit
+---@param attacker player
 ---@return nothing
-function Trig_FeodalDead2_Actions()
-	local p = GetOwningPlayer(GetTriggerUnit())
+function HandleVassalization(capital, attacker)
+	local p = GetOwningPlayer(capital)
 	local pi = GetPlayerId(p)
-	
-	local p2 = GetOwningPlayer(GetAttacker())
+	local p2 = attacker
 	local pi2 = GetPlayerId(p2)
-	
 	local pi3
 	local p3
 	
-	
-	
-	-- ?????? ??????????
+	-- Suicide case
 	if p == p2 then
-		
 		ClearPlayer(p)
 		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ????? ?????????? ???? ??????? - ??????")
 		ForForce(Vassals[pi], Freedom)
-		
-		p = nil
-		p2 = nil
-		p3 = nil
-		return 
+		return
 	end
 	
-	
-	
-	
-	udg_LocalUnit3 = GetTriggerUnit()
-	ExecuteFunc("CapTime")
-	
-	
-	
-	-- ???????? ?????????
+	-- Captured by a free player
 	if Senior[pi2] == nil then
-		-- ??????????
 		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ??????? ???????? ??????? " .. GetPlayerName(p2))
+		-- Free defender
 		if Senior[pi] == nil then
-			
 			Senior[pi] = p2
 			ForceAddPlayer(Vassals[pi2], p)
 			NewAlly(p)
-			
 			if CountPlayersInForceBJ(Vassals[pi]) ~= 0 then
 				udg_LocalPlayer = p2
 				ForForce(Vassals[pi], ChangeAlly)
 			end
-			
-			-- ?????? ???????
+		-- Someone else's vassal
 		else
 			ClearOldAllies(p)
 			Senior[pi] = p2
 			ForceAddPlayer(Vassals[pi2], p)
 			NewAlly(p)
-			
 		end
-		-- ???????? ???-?? ??????
+	-- Captured by a vassal
 	else
 		p3 = Senior[pi2]
 		pi3 = GetPlayerId(p3)
 		DisplayTextToForce(udg_AllPlayers, GetPlayerName(p) .. " - ??????? ???????? ??????? " .. GetPlayerName(p3))
-		-- ??????????
+		-- Free defender
 		if Senior[pi] == nil then
-			
 			Senior[pi] = p3
 			ForceAddPlayer(Vassals[pi3], p)
 			NewAlly(p)
-			
 			if CountPlayersInForceBJ(Vassals[pi]) ~= 0 then
 				udg_LocalPlayer = p3
 				ForForce(Vassals[pi], ChangeAlly)
 			end
-			
-			
-			-- ?????? ???????
+		-- Someone else's vassal
 		else
 			ClearOldAllies(p)
 			Senior[pi] = p3
 			ForceAddPlayer(Vassals[pi3], p)
 			NewAlly(p)
-			
 		end
-		
 	end
-	
-	-- set u = nil
-	p = nil
-	p2 = nil
-	p3 = nil
 end
+
 -- ===========================================================================
----@return nothing
-function InitTrig_FeodalDead2()
-	gg_trg_FeodalDead2 = CreateTrigger()
-	DisableTrigger(gg_trg_FeodalDead2)
-	TriggerRegisterAnyUnitEventBJ(gg_trg_FeodalDead2, EVENT_PLAYER_UNIT_ATTACKED)
-	TriggerAddCondition(gg_trg_FeodalDead2, Condition(Trig_FeodalDead2_Conditions))
-	TriggerAddAction(gg_trg_FeodalDead2, Trig_FeodalDead2_Actions)
-end
--- ===========================================================================
---  Trigger: DoNotAttackSenior
+-- FeodalDead trigger — fires on EVENT_PLAYER_UNIT_ATTACKED when capital HP <= 15%
 -- ===========================================================================
 ---@return boolean
-function Trig_DoNotAttackSenior_Conditions()
-	return IsPlayerInForce(GetOwningPlayer(GetAttacker()), udg_Vassals[GetConvertedPlayerId(GetOwningPlayer(GetAttackedUnitBJ()))])
+function Trig_FeodalDead_Conditions()
+	return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups) and GetUnitLifePercent(GetTriggerUnit()) <= 15.00
 end
 ---@return nothing
-function Trig_DoNotAttackSenior_Actions()
-	IssueImmediateOrderBJ(GetAttacker(), "stop")
+function Trig_FeodalDead_Actions()
+	local capital = GetTriggerUnit()
+	local attacker = GetOwningPlayer(GetAttacker())
+	
+	udg_LocalUnit3 = capital
+	CapTime()
+	
+	HandleVassalization(capital, attacker)
 end
 -- ===========================================================================
 ---@return nothing
-function InitTrig_DoNotAttackSenior()
-	gg_trg_DoNotAttackSenior = CreateTrigger()
-	DisableTrigger(gg_trg_DoNotAttackSenior)
-	TriggerRegisterAnyUnitEventBJ(gg_trg_DoNotAttackSenior, EVENT_PLAYER_UNIT_ATTACKED)
-	TriggerAddCondition(gg_trg_DoNotAttackSenior, Condition(Trig_DoNotAttackSenior_Conditions))
-	TriggerAddAction(gg_trg_DoNotAttackSenior, Trig_DoNotAttackSenior_Actions)
+function InitTrig_FeodalDead()
+	gg_trg_FeodalDead = CreateTrigger()
+	DisableTrigger(gg_trg_FeodalDead)
+	TriggerRegisterAnyUnitEventBJ(gg_trg_FeodalDead, EVENT_PLAYER_UNIT_ATTACKED)
+	TriggerAddCondition(gg_trg_FeodalDead, Condition(Trig_FeodalDead_Conditions))
+	TriggerAddAction(gg_trg_FeodalDead, Trig_FeodalDead_Actions)
 end
+
+-- ===========================================================================
+-- FeodalCapitalDamage — fires on EVENT_PLAYER_UNIT_DAMAGED
+-- Catches fatal damage from spells, DoTs, and one-shots that bypass the attack event
+-- ===========================================================================
+---@return boolean
+function Trig_FeodalCapitalDamage_Conditions()
+	return IsTriggerEnabled(gg_trg_FeodalDead) and IsUnitInGroup(BlzGetEventDamageTarget(), udg_StolicaGroups)
+end
+---@return nothing
+function Trig_FeodalCapitalDamage_Actions()
+	local capital = BlzGetEventDamageTarget()
+	local damage = GetEventDamage()
+	local hp = GetUnitState(capital, UNIT_STATE_LIFE)
+	
+	if hp - damage > 0.5 then
+		return
+	end
+	
+	-- Fatal damage: cancel it, heal, and vassalize
+	BlzSetEventDamage(0.0)
+	SetUnitLifePercentBJ(capital, 14.0)
+	
+	local attacker = GetOwningPlayer(BlzGetEventDamageSource())
+	HandleVassalization(capital, attacker)
+end
+-- ===========================================================================
+---@return nothing
+function InitTrig_FeodalCapitalDamage()
+	gg_trg_FeodalCapitalDamage = CreateTrigger()
+	DisableTrigger(gg_trg_FeodalCapitalDamage)
+	TriggerRegisterAnyUnitEventBJ(gg_trg_FeodalCapitalDamage, EVENT_PLAYER_UNIT_DAMAGED)
+	TriggerAddCondition(gg_trg_FeodalCapitalDamage, Condition(Trig_FeodalCapitalDamage_Conditions))
+	TriggerAddAction(gg_trg_FeodalCapitalDamage, Trig_FeodalCapitalDamage_Actions)
+end
+
 -- ===========================================================================
 --  Trigger: DoNotAttackSenior2
 -- ===========================================================================
@@ -17233,24 +17163,7 @@ function InitTrig_DoNotAttackSenior2()
 	TriggerAddCondition(gg_trg_DoNotAttackSenior2, Condition(Trig_DoNotAttackSenior2_Conditions))
 	TriggerAddAction(gg_trg_DoNotAttackSenior2, Trig_DoNotAttackSenior2_Actions)
 end
--- ===========================================================================
---  Trigger: AllPlayers and vassals
--- ===========================================================================
----@return nothing
-function Trig_AllPlayers_and_vassals_Actions()
-	for bj_forLoopAIndex = 1, 24 do
-		DisplayTextToForce(GetPlayersAll(), GetPlayerName(ConvertedPlayer(GetForLoopIndexA())))
-		DisplayTextToForce(GetPlayersAll(), "TRIGSTR_19436")
-		DisplayTextToForce(GetPlayersAll(), I2S(CountPlayersInForceBJ(udg_Vassals[GetConvertedPlayerId(ConvertedPlayer(GetForLoopIndexA()))])))
-	end
-end
--- ===========================================================================
----@return nothing
-function InitTrig_AllPlayers_and_vassals()
-	gg_trg_AllPlayers_and_vassals = CreateTrigger()
-	TriggerRegisterPlayerChatEvent(gg_trg_AllPlayers_and_vassals, Player(0), "-feodifo", true)
-	TriggerAddAction(gg_trg_AllPlayers_and_vassals, Trig_AllPlayers_and_vassals_Actions)
-end
+
 -- ===========================================================================
 --  Trigger: DominationButton
 -- ===========================================================================
@@ -20474,7 +20387,7 @@ end
 -- Trigger: Leave Ot
 --===========================================================================
 function Trig_Leave_Ot_Func005C()
-    return IsTriggerEnabled(gg_trg_FeodalDead2)
+    return IsTriggerEnabled(gg_trg_FeodalDead)
 end
 function Trig_Leave_Ot_Actions()
     local pi= GetPlayerId(GetTriggerPlayer())
@@ -47483,7 +47396,7 @@ function Trig_Kill_Func002A()
         if IsUnitInGroup(GetEnumUnit(), udg_StolicaGroups) and GetOwningPlayer(GetEnumUnit()) == GetTriggerPlayer() then
             
             if udg_GameMode == 2 then
-                SetUnitLifePercentBJ(GetEnumUnit(), 15.00)
+                HandleVassalization(GetEnumUnit(), GetTriggerPlayer())
             else
                 KillUnit(GetEnumUnit())
                 udg_LocalPlayer=GetTriggerPlayer()
@@ -48318,42 +48231,6 @@ function InitTrig_KillTestUnits_Command()
     gg_trg_KillTestUnits_Command=CreateTrigger()
     TriggerRegisterPlayerChatEvent(gg_trg_KillTestUnits_Command, Player(0), "kill", true)
     TriggerAddAction(gg_trg_KillTestUnits_Command, Trig_KillTestUnits_Command_Actions)
-end
---===========================================================================
--- Trigger: Player2VassalTo1 Back Copy
---===========================================================================
-function Trig_Player2VassalTo1_Back_Copy_Conditions()
-    return (( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) >= 1 )) and (( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) <= 24 ))
-end
-function Trig_Player2VassalTo1_Back_Copy_Actions()
-    udg_LocalInteger=S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5))
-    SetPlayerAllianceStateBJ(ConvertedPlayer(udg_LocalInteger), Player(0), bj_ALLIANCE_UNALLIED)
-end
---===========================================================================
-function InitTrig_Player2VassalTo1_Back_Copy()
-    gg_trg_Player2VassalTo1_Back_Copy=CreateTrigger()
-    DisableTrigger(gg_trg_Player2VassalTo1_Back_Copy)
-    TriggerRegisterPlayerChatEvent(gg_trg_Player2VassalTo1_Back_Copy, Player(0), " - dv", false)
-    TriggerAddCondition(gg_trg_Player2VassalTo1_Back_Copy, Condition(Trig_Player2VassalTo1_Back_Copy_Conditions))
-    TriggerAddAction(gg_trg_Player2VassalTo1_Back_Copy, Trig_Player2VassalTo1_Back_Copy_Actions)
-end
---===========================================================================
--- Trigger: Player2VassalTo1 Copy
---===========================================================================
-function Trig_Player2VassalTo1_Copy_Conditions()
-    return (( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) >= 1 )) and (( S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) <= 24 ))
-end
-function Trig_Player2VassalTo1_Copy_Actions()
-    udg_LocalInteger=S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5))
-    SetPlayerAllianceStateBJ(ConvertedPlayer(udg_LocalInteger), Player(0), bj_ALLIANCE_ALLIED_ADVUNITS)
-end
---===========================================================================
-function InitTrig_Player2VassalTo1_Copy()
-    gg_trg_Player2VassalTo1_Copy=CreateTrigger()
-    DisableTrigger(gg_trg_Player2VassalTo1_Copy)
-    TriggerRegisterPlayerChatEvent(gg_trg_Player2VassalTo1_Copy, Player(0), " - vs", false)
-    TriggerAddCondition(gg_trg_Player2VassalTo1_Copy, Condition(Trig_Player2VassalTo1_Copy_Conditions))
-    TriggerAddAction(gg_trg_Player2VassalTo1_Copy, Trig_Player2VassalTo1_Copy_Actions)
 end
 --===========================================================================
 -- Trigger: Visible Copy
@@ -61357,7 +61234,11 @@ function AiObjScore(pi, wm, o)
     local kindBase = (w.kind and w.kind[o.kind]) or 0
     local dx = (wm.cx or 0.0) - o.x
     local dy = (wm.cy or 0.0) - o.y
-    local dist = SquareRoot(dx * dx + dy * dy)
+    local dist = math.max(SquareRoot(dx * dx + dy * dy), 100.0)
+    if o.kind == "capture" then
+        local prox = 4000.0 / dist
+        return kindBase + (w.value or 1.0) * o.value + prox
+    end
     return kindBase + (w.value or 1.0) * o.value - (w.dist or 0.002) * dist
 end
 
@@ -61595,6 +61476,8 @@ function AiBrainArmyTick(pi, p)
         sq.state = newState
         ticked = ticked + 1
     end
+    -- Pirate fleet: try buying ships every 8 ticks
+    if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end
 end
 
 -- ====================================================================
@@ -61825,6 +61708,7 @@ function AiBuyPirateFleet(pi)
     end
 
     local bought = false
+    if not UnitAlive(bestPort.unit) then return false end
     if gold >= 345 then
         local r = IssueNeutralImmediateOrderById(p, bestPort.unit, FourCC('h0OY'))
         if r then
@@ -62169,6 +62053,7 @@ function InitCustomTriggers()
     InitTrig_ResoursesInterface_Copy()
     InitTrig_MainInfo()
     InitTrig_Initial_things()
+    InitTrig_FeodalVassalMode()
     InitTrig_StartLobby()
     InitTrig_EndLobby_and_Start_game()
     InitTrig_AddMinute()
@@ -62193,10 +62078,8 @@ function InitCustomTriggers()
     InitTrig_MOD_feoda_O_Set_Spell()
     InitTrig_MOD_feoda_O_Start()
     InitTrig_FeodalDead()
-    InitTrig_FeodalDead2()
-    InitTrig_DoNotAttackSenior()
+    InitTrig_FeodalCapitalDamage()
     InitTrig_DoNotAttackSenior2()
-    InitTrig_AllPlayers_and_vassals()
     InitTrig_DominationButton()
     InitTrig_Domination_start()
     InitTrig_DomCheckCommand()
@@ -63227,8 +63110,6 @@ function InitCustomTriggers()
     InitTrig_A1()
     InitTrig_Second_O()
     InitTrig_KillTestUnits_Command()
-    InitTrig_Player2VassalTo1_Back_Copy()
-    InitTrig_Player2VassalTo1_Copy()
     InitTrig_Visible_Copy()
     InitTrig_Player2VassalTo1()
     InitTrig_Player2VassalTo1_Back()

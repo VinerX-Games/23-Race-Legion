@@ -750,7 +750,11 @@ function AiObjScore(pi, wm, o)
     local kindBase = (w.kind and w.kind[o.kind]) or 0
     local dx = (wm.cx or 0.0) - o.x
     local dy = (wm.cy or 0.0) - o.y
-    local dist = SquareRoot(dx * dx + dy * dy)
+    local dist = math.max(SquareRoot(dx * dx + dy * dy), 100.0)
+    if o.kind == "capture" then
+        local prox = 4000.0 / dist
+        return kindBase + (w.value or 1.0) * o.value + prox
+    end
     return kindBase + (w.value or 1.0) * o.value - (w.dist or 0.002) * dist
 end
 
@@ -988,6 +992,8 @@ function AiBrainArmyTick(pi, p)
         sq.state = newState
         ticked = ticked + 1
     end
+    -- Pirate fleet: try buying ships every 8 ticks
+    if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end
 end
 
 -- ====================================================================
@@ -1218,6 +1224,7 @@ function AiBuyPirateFleet(pi)
     end
 
     local bought = false
+    if not UnitAlive(bestPort.unit) then return false end
     if gold >= 345 then
         local r = IssueNeutralImmediateOrderById(p, bestPort.unit, FourCC('h0OY'))
         if r then
