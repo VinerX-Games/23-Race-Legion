@@ -75,16 +75,16 @@ end
 
 ---@param x real
 ---@param y real
----@return string|nil continent name
+---@return string|nil continent name (main continents first, sub-zones for uncovered areas)
 function AiContinentOf(x, y)
-    -- Main continents with exclusion logic (order = ProcessContinentalStuff)
+    -- Main continents (ProcessContinentalStuff priority order)
     if RectContainsCoords(gg_rct_Kalim, x, y) and not RectContainsCoords(gg_rct_NordNotKalim, x, y) then
         return "Kalimdor"
     end
-    if (RectContainsCoords(gg_rct_EastenKingdoms, x, y) or RectContainsCoords(gg_rct_EasternDungeons, x, y) or RectContainsCoords(gg_rct_BlackMountain, x, y) or RectContainsCoords(gg_rct_VknotOut, x, y)) and not (RectContainsCoords(gg_rct_OkeaniaNoVk, x, y) or RectContainsCoords(gg_rct_KillDalaran, x, y)) then
+    if (RectContainsCoords(gg_rct_EastenKingdoms, x, y) or RectContainsCoords(gg_rct_VknotOut, x, y)) and not (RectContainsCoords(gg_rct_OkeaniaNoVk, x, y) or RectContainsCoords(gg_rct_KillDalaran, x, y)) then
         return "EasternKingdoms"
     end
-    if RectContainsCoords(gg_rct_Nord, x, y) or RectContainsCoords(gg_rct_Azgel, x, y) or RectContainsCoords(gg_rct_NordNotKalim, x, y) then
+    if RectContainsCoords(gg_rct_Nord, x, y) or RectContainsCoords(gg_rct_NordNotKalim, x, y) then
         return "Northrend"
     end
     if RectContainsCoords(gg_rct_Pandaria, x, y) then
@@ -99,16 +99,18 @@ function AiContinentOf(x, y)
     if RectContainsCoords(gg_rct_Argus, x, y) then
         return "Argus"
     end
-    -- Sub-zones (in priority order, checked only if not already on a main continent)
+    -- Sub-zones for areas NOT covered by main continental rects.
+    -- Azgel (Nord's neighbour), dungeons etc. checked AFTER mains so inland
+    -- sub-zones (Orgrimmar/Kalimdor etc.) stay as their parent continent.
     local subzones = {
         { "Azgel",          gg_rct_Azgel },
         { "Ankirag",        gg_rct_Ankirag },
         { "BlackMountain",  gg_rct_BlackMountain },
         { "Orgrimmar",      gg_rct_Orgrimmar },
+        { "DeadMines",      gg_rct_DeadMines },
         { "Uldum",          gg_rct_Uldum },
         { "Undercity",      gg_rct_Undercity },
         { "Maradon",        gg_rct_Maradon },
-        { "DeadMines",      gg_rct_DeadMines },
         { "Naxramas",       gg_rct_Naxramas },
         { "EasternDungeons", gg_rct_EasternDungeons },
         { "EmeraldDream",   gg_rct_EmeraldDream },

@@ -58114,6 +58114,10 @@ RegisterAiRace("Silitids", {
 
         { FourCC('e01L'), 5, 2 },
 
+        { FourCC('e01K'), 7, 2 },
+
+        { FourCC('e01M'), 7, 2, gate = "tier2" },
+
         { FourCC('e00B'), 4, 2 }, { FourCC('o017'), 4, 2 },
 
     },
@@ -58185,6 +58189,16 @@ RegisterAiRace("Silitids", {
             { at = 20, action = "tryBuy" },
 
             { at = 25, action = "techUp", from = FourCC('e01H'), to = FourCC('e021'), cap = 3 },
+
+            { at = 30, action = "research", rows = {
+                {FourCC('e01K'), FourCC('R089'), 1},
+                {FourCC('e01K'), FourCC('R08B'), 1},
+            }},
+
+            { at = 45, action = "research", rows = {
+                {FourCC('e01M'), FourCC('R08C'), 1},
+                {FourCC('e01M'), FourCC('R08E'), 1},
+            }},
 
             { at = 55, action = "techUp", from = FourCC('e021'), to = FourCC('e020'), cap = 3 },
 
@@ -60723,7 +60737,7 @@ function AiContinentOf(x, y)
     if RectContainsCoords(gg_rct_Pandaria, x, y) then
         return "Pandaria"
     end
-    if RectContainsCoords(gg_rct_Outland, x, y) or RectContainsCoords(gg_rct_OutNoVk, x, y) then
+    if (RectContainsCoords(gg_rct_Outland, x, y) or RectContainsCoords(gg_rct_OutNoVk, x, y)) and not RectContainsCoords(gg_rct_VknotOut, x, y) then
         return "Outland"
     end
     if RectContainsCoords(gg_rct_BrokenIsles, x, y) then
