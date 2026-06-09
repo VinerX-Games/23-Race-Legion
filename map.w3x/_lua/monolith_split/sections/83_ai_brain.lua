@@ -388,6 +388,7 @@ end
 -- ---- squad system -------------------------------------------------
 -- AiSquads[pi][sid] = { members=group, state, objective, rally={x,y}, role }
 AiSquadCommitMin = AiSquadCommitMin or 8
+ProbeLogEnableFlush()
 
 ---@param pi integer
 ---@return table
@@ -928,14 +929,17 @@ end
 ---@param pi integer
 ---@param p player
 function AiBrainArmyTick(pi, p)
+    ProbeLogWrite("[SQDBG] cp1 pi=" .. tostring(pi))
     local wm = AiBrainPerceive(pi)
+    ProbeLogWrite("[SQDBG] cp2")
     local cfg = AiBrainCfg(pi)
+    ProbeLogWrite("[SQDBG] cp3 objs=" .. tostring(wm.objectives and #wm.objectives or 0))
     if wm.objectives == nil or (wm.tick % (cfg.clusterEvery or 8)) == 0 then
         AiBrainCollectObjectives(pi, wm)
     end
     if wm.objectives == nil or #wm.objectives == 0 then AiArmyLegacyTick(p); return end
 
-    -- Defense: flag squads to retreat
+    ProbeLogWrite("[SQDBG] cp4")
     if wm.defendHome and wm.capX ~= nil then
         for _, sq in pairs(AiSquadsOf(pi)) do
             if sq.role == "assault" and sq.state ~= "retreat" then
@@ -944,15 +948,17 @@ function AiBrainArmyTick(pi, p)
         end
     end
 
+    ProbeLogWrite("[SQDBG] cp5 reap")
     AiSquadReapDead(pi)
 
-    -- Orphan/squad build every 2 ticks
+    ProbeLogWrite("[SQDBG] cp6 orphan-build")
     if (wm.tick % 2) == 0 then
         local armyGroup = udg_Ai_army[pi]
         if armyGroup ~= nil then
+            ProbeLogWrite("[SQDBG] cp7 army=" .. tostring(BlzGroupGetSize(armyGroup)))
             local squads = AiSquadsOf(pi)
-            -- Assign orphaned army units to squads
             local assignedGroup = CreateGroup()
+            ProbeLogWrite("[SQDBG] cp8")
             for _, sq in pairs(squads) do
                 local sz = BlzGroupGetSize(sq.members)
                 local j = 0
@@ -962,6 +968,7 @@ function AiBrainArmyTick(pi, p)
                     j = j + 1
                 end
             end
+            ProbeLogWrite("[SQDBG] cp9 assign-orphans")
             local armySz = BlzGroupGetSize(armyGroup)
             local j = 0
             while j < armySz do
@@ -978,11 +985,12 @@ function AiBrainArmyTick(pi, p)
         end
     end
 
-    -- Tick up to 3 squads per frame
+    ProbeLogWrite("[SQDBG] cp10 tick-squads n=" .. tostring(#AiSquadsOf(pi)))
     local squads = AiSquadsOf(pi)
     local ticked = 0
     for sid, sq in pairs(squads) do
         if ticked >= 3 then break end
+        ProbeLogWrite("[SQDBG] cp11 sq" .. tostring(sid) .. " state=" .. sq.state)
         local newState = sq.state
         if sq.state == "muster" then newState = AiSquadTickMuster(pi, sid, sq, p, wm)
         elseif sq.state == "march" then newState = AiSquadTickMarch(pi, sid, sq, p, wm)

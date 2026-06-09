@@ -91,6 +91,42 @@ AiDiplomatPresets = {
 }
 
 AiDiplomatEnabled = AiDiplomatEnabled or true
+AiDiplomatRpEnabled = AiDiplomatRpEnabled or true
+
+-- ====================================================================
+-- Name helper: "[RaceName (Slot#)]" — disambiguates duplicate races.
+-- ====================================================================
+---@param pi integer
+---@return string
+function DiplomatName(pi)
+    local race = AiRaceOf(pi)
+    local raceName = (race and race.key) or "Unknown"
+    return "[" .. raceName .. " (" .. tostring(pi) .. ")]"
+end
+
+-- ====================================================================
+-- Broadcast: send a message to all alive players (humans + bots).
+-- ====================================================================
+---@param msg string
+function DipBroadcast(msg)
+    for i = 0, 23 do
+        local p = Player(i)
+        if p ~= nil and playerCapital[i] ~= nil and GetPlayerState(p, PLAYER_STATE_RESOURCE_FOOD_USED) >= 0 then
+            DisplayTimedTextToPlayer(p, 0, 0, 10.0, msg)
+        end
+    end
+end
+
+-- ====================================================================
+-- RP broadcast: "[RaceName (Slot#)] says: message"
+-- ====================================================================
+---@param pi integer
+---@param msg string
+function DipRpBroadcast(pi, msg)
+    local full = DiplomatName(pi) .. " says: \"" .. msg .. "\""
+    DipBroadcast(full)
+    DipLog(pi, "[RP] " .. msg)
+end
 
 -- ====================================================================
 -- Resolve diplomat config for a bot. Returns nil if the race has no

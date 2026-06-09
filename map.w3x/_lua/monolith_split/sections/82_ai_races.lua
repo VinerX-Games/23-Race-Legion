@@ -341,7 +341,7 @@ RegisterAiRace("Scarlet", {
     upgrade = UpgradeScarlet,
 
 
-    diplomat = "balanced",
+    diplomat = "pragmatic",
 
     brain = "objective",
 
@@ -652,7 +652,7 @@ RegisterAiRace("BloodElves", {
     wall = FourCC('h011'),
 
 
-    diplomat = "balanced",
+    diplomat = "pragmatic",
 
     brain = "objective",
 
@@ -934,11 +934,7 @@ RegisterAiRace("Goblins", {
     wall = FourCC('h0D7'),
 
 
-    diplomat = {
-        preset = "balanced",
-        betrayalChance = 0.08,
-        allianceDesire = 0.6,
-    },
+    diplomat = "diplomat",
 
     brain = "objective",
 
@@ -1242,7 +1238,7 @@ RegisterAiRace("Naga", {
     continentalNaga = true,
 
 
-    diplomat = "balanced",
+    diplomat = "traitor",
 
     brain = "objective",
 
@@ -2425,7 +2421,7 @@ RegisterAiRace("HordeW2", {
     wall = FourCC('w20u'),
 
 
-    diplomat = "balanced",
+    diplomat = "pragmatic",
 
     brain = "objective",
 
@@ -2661,7 +2657,7 @@ RegisterAiRace("Nerubs", {
     naval = aiNavalTrain_Common,
 
 
-    diplomat = "balanced",
+    diplomat = "isolationist",
 
     brain = "objective",
 
@@ -3328,7 +3324,7 @@ RegisterAiRace("Bandits", {
     wall = FourCC('h03Q'),
 
 
-    diplomat = "balanced",
+    diplomat = "traitor",
 
     brain = "objective",
 
@@ -3950,7 +3946,7 @@ RegisterAiRace("Demons", {
     wall = FourCC('n02C'),
 
 
-    diplomat = "balanced",
+    diplomat = "isolationist",
 
     brain = "objective",
 
@@ -4144,7 +4140,7 @@ RegisterAiRace("Draenei", {
     join = Join_Draenei,
 
 
-    diplomat = "balanced",
+    diplomat = "loyal",
 
     brain = "objective",
 
@@ -4371,7 +4367,7 @@ RegisterAiRace("Stromgard", {
     wall = FourCC('h0HG'),
 
 
-    diplomat = "balanced",
+    diplomat = "pragmatic",
 
     brain = "objective",
 
@@ -4588,7 +4584,7 @@ RegisterAiRace("Illidari", {
     wall = FourCC('h0EN'),
 
 
-    diplomat = "balanced",
+    diplomat = "pragmatic",
 
     brain = "objective",
 
@@ -4797,7 +4793,7 @@ RegisterAiRace("Worgen", {
     wall = FourCC('h0JT'),
 
 
-    diplomat = "balanced",
+    diplomat = "loyal",
 
     brain = "objective",
 
@@ -5522,7 +5518,7 @@ RegisterAiRace("Silitids", {
     join = Join_Silitids,
 
 
-    diplomat = "balanced",
+    diplomat = "isolationist",
 
     brain = "objective",
 
@@ -5738,7 +5734,7 @@ RegisterAiRace("Pandarens", {
     wall = FourCC('h0P5'),
 
 
-    diplomat = "balanced",
+    diplomat = "diplomat",
 
     brain = "objective",
 
@@ -5947,7 +5943,7 @@ RegisterAiRace("Bezlikie", {
     wall = FourCC('h0K3'),
 
 
-    diplomat = "balanced",
+    diplomat = "isolationist",
 
     brain = "objective",
 
@@ -6154,7 +6150,7 @@ RegisterAiRace("Vrykul", {
     join = Join_Vrykul,
 
 
-    diplomat = "balanced",
+    diplomat = "pragmatic",
 
     brain = "objective",
 
@@ -6358,7 +6354,7 @@ RegisterAiRace("KulTiras", {
     wall = FourCC('h0E7'),
 
 
-    diplomat = "balanced",
+    diplomat = "pragmatic",
 
     brain = "objective",
 
@@ -6598,7 +6594,7 @@ RegisterAiRace("Dalaran", {
     join = Join_Dalaran,
 
 
-    diplomat = "balanced",
+    diplomat = "diplomat",
 
     brain = "objective",
 
@@ -7039,7 +7035,7 @@ RegisterAiRace("FelOrc", {
     join = Join_FelOrc,
 
 
-    diplomat = "balanced",
+    diplomat = "isolationist",
 
     brain = "objective",
 
@@ -7254,7 +7250,7 @@ RegisterAiRace("Ents", {
     wall = FourCC('e02I'),
 
 
-    diplomat = "balanced",
+    diplomat = "loyal",
 
     brain = "objective",
 
