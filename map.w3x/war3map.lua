@@ -48961,6 +48961,8 @@ function Trig_PereborBuildings_Code_Func002A()
     AiData[gPi][StringHash("SyncTick")] = syncTick + 1
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_OnlyNeaded)
     local numberCount = AiData[gPi][StringHash("Number")] or 0
+    -- Live army count: use wm.armyCount, fall back to monotonic Number counter
+    local liveArmy = (AiData[gPi].wm and AiData[gPi].wm.armyCount) or numberCount
     -- ??????? ???? 0 ??? ????? ??????
     if FirstOfGroup(gGroup) == nil then
         if not (AiData[gPi][StringHash("Log_PereborNoBld")] or false) then
@@ -48992,7 +48994,7 @@ function Trig_PereborBuildings_Code_Func002A()
             DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) .. " - ")
         end
         return
-    elseif numberCount > AiLimit then
+    elseif liveArmy >= AiLimit then
         if not (AiData[gPi][StringHash("Log_PereborOverLimit")] or false) then
             AiData[gPi][StringHash("Log_PereborOverLimit")] = true
         end
@@ -49059,7 +49061,7 @@ function PereborNavalb()
     
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, p, B_NavalBases)
-    i=AiData[pi][StringHash("NumberN")] or 0
+    i=(udg_Ai_navy[pi] and BlzGroupGetSize(udg_Ai_navy[pi])) or 0
     -- ??????? ???? 0 ??? ?????? ????? ?????
     if FirstOfGroup(gGroup) == nil then
         AiBuyPirateFleet(pi)
@@ -52091,7 +52093,7 @@ function AiRunProduction(id, pi, u, def)
     local prod = def.production
     if not prod then return false end
     -- Global cap: stop training when live army+navy exceeds limit
-    if (AiData[pi].wm and AiData[pi].wm.armyCount or 0) + (AiData[pi][StringHash("NumberN")] or 0) >= AiUnitCap then
+    if (AiData[pi].wm and AiData[pi].wm.armyCount or 0) + ((udg_Ai_navy[pi] and BlzGroupGetSize(udg_Ai_navy[pi])) or 0) >= AiUnitCap then
         return false
     end
     local w = prod.worker
@@ -60104,7 +60106,8 @@ end
 function AiGroupCentroid(g)
     if g == nil then return 0.0, 0.0, 0 end
     local sx, sy, n = 0.0, 0.0, 0
-    local size = BlzGroupGetSize(g)
+    local ok, size = pcall(BlzGroupGetSize, g)
+    if not ok then return 0.0, 0.0, 0 end
     local i = 0
     while i < size do
         local u = BlzGroupUnitAt(g, i)
@@ -60236,7 +60239,8 @@ end
 function AiSquadSize(g)
     if g == nil then return 0 end
     local n = 0
-    local sz = BlzGroupGetSize(g)
+    local ok, sz = pcall(BlzGroupGetSize, g)
+    if not ok then return 0 end
     local i = 0
     while i < sz do
         local u = BlzGroupUnitAt(g, i)
@@ -60829,7 +60833,28 @@ function AiBrainArmyTick(pi, p)
     ProbeLogWrite("[SQDBG] cp10 n=" .. tostring(#AiSquadsOf(pi)))
     ProbeLogWrite("[SQDBG] cp10-get")
     local squads = AiSquadsOf(pi)
-    -- SQUAD TICK DISABLED: use Phase-1 focus concentration
+    -- SQUAD FSM TICK (guarded against destroyed group handles)
+    local FSM_HANDLERS = { muster = AiSquadTickMuster, march = AiSquadTickMarch, engage = AiSquadTickEngage, retreat = AiSquadTickRetreat }
+    local orderedFsm = 0
+    for i, sq in ipairs(squads) do
+        if sq ~= nil and sq.state ~= nil then
+            local ok = pcall(function()
+                if sq.members == nil then return end
+                local newState = sq.state
+                local handler = FSM_HANDLERS[newState]
+                if handler then
+                    sq.state = handler(pi, i, sq, p, wm)
+                    orderedFsm = orderedFsm + 1
+                end
+            end)
+            if not ok then
+                ProbeLogWrite("[SQDBG] squad-err sq" .. tostring(i))
+            end
+        end
+    end
+    ProbeLogWrite("[SQDBG] cp10-fsm-done ordered=" .. tostring(orderedFsm))
+
+    -- Phase 1 backup: order remaining idle combat units to focus
     local focus = AiBrainPickFocus(pi, wm)
     if focus ~= nil then
         -- Order ALL idle combat units (heroes included), not just udg_Ai_army
@@ -61011,7 +61036,7 @@ function AiBuyPirateFleet(pi)
     local gold = GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD)
     if gold < 300 then return false end
 
-    local navyCount = AiData[pi][StringHash("NumberN")] or 0
+    local navyCount = (udg_Ai_navy[pi] and BlzGroupGetSize(udg_Ai_navy[pi])) or 0
     if navyCount >= 6 then return false end
 
     local cx, cy
@@ -61715,7 +61740,10 @@ function AiDiplomatEvaluate(pi, otherPi)
     local powerRatio = otherPower / math.max(myPower, 1)
 
     -- Base score components (each 0..1 approx)
-    local threatPenalty = 1.0 - math.min(rel.threat * cfg.threatWeight, 1.0)
+    -- Shared enemies reduce mutual threat perception (FFA fix: when all are
+    -- enemies, the ones who share foes are natural allies).
+    local sharedThreatReduction = math.min(rel.sharedEnemies * 0.08, 0.7)
+    local threatPenalty = math.min(1.0 - math.min(rel.threat * cfg.threatWeight, 1.0) + sharedThreatReduction, 1.0)
     local sharedEnemyBonus = math.min(rel.sharedEnemies * 0.2 * cfg.allyAgainstThreat, 1.0)
     local strongerBonus = math.min(powerRatio * cfg.allyWithStronger, 1.0) -- 1.0 only if they're stronger
     local proximityFactor = rel.proximity * cfg.proximityWeight
@@ -62096,6 +62124,9 @@ function AiDiplomatTick(pi)
         DipLog(pi, "diplomat initialised cfg.allianceMax=" .. tostring(cfg.allianceMax) ..
             " cfg.allianceDesire=" .. tostring(cfg.allianceDesire) ..
             " cfg.loyalty=" .. tostring(cfg.loyalty))
+        DipBroadcast(DiplomatName(pi) .. " diplomat active. " ..
+            "desire=" .. tostring(R2I(cfg.allianceDesire * 100)) ..
+            "% loyalty=" .. tostring(R2I(cfg.loyalty * 100)) .. "%")
     end
 
     -- Perceive every tick

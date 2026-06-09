@@ -313,7 +313,8 @@ end
 function AiGroupCentroid(g)
     if g == nil then return 0.0, 0.0, 0 end
     local sx, sy, n = 0.0, 0.0, 0
-    local size = BlzGroupGetSize(g)
+    local ok, size = pcall(BlzGroupGetSize, g)
+    if not ok then return 0.0, 0.0, 0 end
     local i = 0
     while i < size do
         local u = BlzGroupUnitAt(g, i)
@@ -445,7 +446,8 @@ end
 function AiSquadSize(g)
     if g == nil then return 0 end
     local n = 0
-    local sz = BlzGroupGetSize(g)
+    local ok, sz = pcall(BlzGroupGetSize, g)
+    if not ok then return 0 end
     local i = 0
     while i < sz do
         local u = BlzGroupUnitAt(g, i)
@@ -1038,7 +1040,28 @@ function AiBrainArmyTick(pi, p)
     ProbeLogWrite("[SQDBG] cp10 n=" .. tostring(#AiSquadsOf(pi)))
     ProbeLogWrite("[SQDBG] cp10-get")
     local squads = AiSquadsOf(pi)
-    -- SQUAD TICK DISABLED: use Phase-1 focus concentration
+    -- SQUAD FSM TICK (guarded against destroyed group handles)
+    local FSM_HANDLERS = { muster = AiSquadTickMuster, march = AiSquadTickMarch, engage = AiSquadTickEngage, retreat = AiSquadTickRetreat }
+    local orderedFsm = 0
+    for i, sq in ipairs(squads) do
+        if sq ~= nil and sq.state ~= nil then
+            local ok = pcall(function()
+                if sq.members == nil then return end
+                local newState = sq.state
+                local handler = FSM_HANDLERS[newState]
+                if handler then
+                    sq.state = handler(pi, i, sq, p, wm)
+                    orderedFsm = orderedFsm + 1
+                end
+            end)
+            if not ok then
+                ProbeLogWrite("[SQDBG] squad-err sq" .. tostring(i))
+            end
+        end
+    end
+    ProbeLogWrite("[SQDBG] cp10-fsm-done ordered=" .. tostring(orderedFsm))
+
+    -- Phase 1 backup: order remaining idle combat units to focus
     local focus = AiBrainPickFocus(pi, wm)
     if focus ~= nil then
         -- Order ALL idle combat units (heroes included), not just udg_Ai_army
@@ -1220,7 +1243,7 @@ function AiBuyPirateFleet(pi)
     local gold = GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD)
     if gold < 300 then return false end
 
-    local navyCount = AiData[pi][StringHash("NumberN")] or 0
+    local navyCount = (udg_Ai_navy[pi] and BlzGroupGetSize(udg_Ai_navy[pi])) or 0
     if navyCount >= 6 then return false end
 
     local cx, cy

@@ -792,6 +792,8 @@ function Trig_PereborBuildings_Code_Func002A()
     AiData[gPi][StringHash("SyncTick")] = syncTick + 1
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_OnlyNeaded)
     local numberCount = AiData[gPi][StringHash("Number")] or 0
+    -- Live army count: use wm.armyCount, fall back to monotonic Number counter
+    local liveArmy = (AiData[gPi].wm and AiData[gPi].wm.armyCount) or numberCount
     -- ??????? ???? 0 ??? ????? ??????
     if FirstOfGroup(gGroup) == nil then
         if not (AiData[gPi][StringHash("Log_PereborNoBld")] or false) then
@@ -823,7 +825,7 @@ function Trig_PereborBuildings_Code_Func002A()
             DisplayTimedTextFromPlayer(gPlayer, 0, 0, 4, GetPlayerName(gPlayer) .. " - ")
         end
         return
-    elseif numberCount > AiLimit then
+    elseif liveArmy >= AiLimit then
         if not (AiData[gPi][StringHash("Log_PereborOverLimit")] or false) then
             AiData[gPi][StringHash("Log_PereborOverLimit")] = true
         end
@@ -890,7 +892,7 @@ function PereborNavalb()
     
     Counter=0
     GroupEnumUnitsOfPlayer(gGroup, p, B_NavalBases)
-    i=AiData[pi][StringHash("NumberN")] or 0
+    i=(udg_Ai_navy[pi] and BlzGroupGetSize(udg_Ai_navy[pi])) or 0
     -- ??????? ???? 0 ??? ?????? ????? ?????
     if FirstOfGroup(gGroup) == nil then
         AiBuyPirateFleet(pi)

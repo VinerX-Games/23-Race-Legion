@@ -571,7 +571,10 @@ function AiDiplomatEvaluate(pi, otherPi)
     local powerRatio = otherPower / math.max(myPower, 1)
 
     -- Base score components (each 0..1 approx)
-    local threatPenalty = 1.0 - math.min(rel.threat * cfg.threatWeight, 1.0)
+    -- Shared enemies reduce mutual threat perception (FFA fix: when all are
+    -- enemies, the ones who share foes are natural allies).
+    local sharedThreatReduction = math.min(rel.sharedEnemies * 0.08, 0.7)
+    local threatPenalty = math.min(1.0 - math.min(rel.threat * cfg.threatWeight, 1.0) + sharedThreatReduction, 1.0)
     local sharedEnemyBonus = math.min(rel.sharedEnemies * 0.2 * cfg.allyAgainstThreat, 1.0)
     local strongerBonus = math.min(powerRatio * cfg.allyWithStronger, 1.0) -- 1.0 only if they're stronger
     local proximityFactor = rel.proximity * cfg.proximityWeight
@@ -952,6 +955,9 @@ function AiDiplomatTick(pi)
         DipLog(pi, "diplomat initialised cfg.allianceMax=" .. tostring(cfg.allianceMax) ..
             " cfg.allianceDesire=" .. tostring(cfg.allianceDesire) ..
             " cfg.loyalty=" .. tostring(cfg.loyalty))
+        DipBroadcast(DiplomatName(pi) .. " diplomat active. " ..
+            "desire=" .. tostring(R2I(cfg.allianceDesire * 100)) ..
+            "% loyalty=" .. tostring(R2I(cfg.loyalty * 100)) .. "%")
     end
 
     -- Perceive every tick

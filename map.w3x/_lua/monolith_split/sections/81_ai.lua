@@ -196,7 +196,7 @@ function AiRunProduction(id, pi, u, def)
     local prod = def.production
     if not prod then return false end
     -- Global cap: stop training when live army+navy exceeds limit
-    if (AiData[pi].wm and AiData[pi].wm.armyCount or 0) + (AiData[pi][StringHash("NumberN")] or 0) >= AiUnitCap then
+    if (AiData[pi].wm and AiData[pi].wm.armyCount or 0) + ((udg_Ai_navy[pi] and BlzGroupGetSize(udg_Ai_navy[pi])) or 0) >= AiUnitCap then
         return false
     end
     local w = prod.worker
