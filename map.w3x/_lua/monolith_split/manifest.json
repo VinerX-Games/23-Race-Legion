@@ -868,6 +868,14 @@
       "library_name": null
     },
     {
+      "name": "ai_diplomat",
+      "file": "84_ai_diplomat.lua",
+      "category": "library",
+      "start_line": null,
+      "end_line": null,
+      "library_name": null
+    },
+    {
       "name": "ai_portal_graph",
       "file": "85_ai_portal_graph.lua",
       "category": "library",
