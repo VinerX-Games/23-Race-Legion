@@ -485,6 +485,20 @@ function SetupBridgeChat()
             end
             return
         end
+        if op == "handle" then
+            if arg == "on" then
+                HandleCounter_Start()
+            elseif arg == "off" then
+                HandleCounter_Stop()
+            elseif arg == "toggle" then
+                HandleCounter_Toggle()
+            elseif arg == "status" then
+                local msg = "handle=" .. tostring(HandleCounterEnabled)
+                ProbeLogWrite("[BRIDGE] handle status " .. msg)
+                DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cff00ff00[BRIDGE] handle: " .. msg .. "|r")
+            end
+            return
+        end
         if op == "restart" then
             -- Restart the LOOP (timer), not the seq. EvalNextSeq stays monotonic;
             -- rewinding it would reuse Preloader-cached filenames and wedge the bridge.
@@ -568,6 +582,28 @@ function SetupLogChat()
         end
     end)
 end
+function SetupHandleCounterChat()
+    local trigger = CreateTrigger()
+    for i = 0, 23 do
+        TriggerRegisterPlayerChatEvent(trigger, Player(i), "-handle", false)
+    end
+    TriggerAddAction(trigger, function()
+        local text = GetEventPlayerChatString()
+        local op = string.match(text, "^%-handle%s+(%S+)")
+        if op == "on" then
+            HandleCounter_Start()
+        elseif op == "off" then
+            HandleCounter_Stop()
+        elseif op == "toggle" then
+            HandleCounter_Toggle()
+        elseif op == "status" then
+            local msg = "Handle Counter: " .. (HandleCounterEnabled and "ON" or "OFF")
+            DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cff00ff00[HC] " .. msg .. "|r")
+        else
+            DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffffcc00[HC] Usage: -handle on|off|toggle|status|r")
+        end
+    end)
+end
 -- ============================================================
 -- Safe callback wrapper (debug.traceback disabled in WC3)
 -- ============================================================
@@ -638,6 +674,62 @@ end)
 wrap("EnumItemsInRect", function(r, filter, fn)
     return _orig.EnumItemsInRect(r, filter, safeCall(fn, "EnumItems"))
 end)
+-- ============================================================
+-- Centralized event dispatcher
+-- Monkey-patches TriggerRegisterAnyUnitEventBJ to route ALL
+-- triggers of the same event type through ONE native trigger.
+-- Instead of 248 native C->Lua calls per spell cast (one per
+-- registered trigger), we get 1 call + Lua-level dispatch.
+-- This eliminates the dominant overhead of fragmented GUI/JASS
+-- trigger registration at zero changes to existing InitTrig_* code.
+--
+-- How it works:
+--   1. InitTrig_ calls TriggerRegisterAnyUnitEventBJ(trig, eventId)
+--   2. Our patch stores `trig` in CentralEventLists[eventId]
+--   3. A single native trigger (CentralTriggers[eventId]) fires
+--   4. The dispatch action iterates registered triggers:
+--      - Checks IsTriggerEnabled() (respects DisableTrigger)
+--      - Calls TriggerEvaluate() (runs conditions, short-circuits)
+--      - If conditions pass, calls TriggerExecute() (runs actions)
+--
+-- To add a new event handler: just write InitTrig_ as usual.
+-- The dispatcher is transparent — zero API change for devs.
+-- ============================================================
+_G.EventCentralized = true
+do
+    local _orig_RegisterAnyUnit = TriggerRegisterAnyUnitEventBJ
+    local CentralTriggers = {}
+    local CentralEventLists = {}  -- [eventId] = {trig, trig, ...}
+
+    local function EnsureCentralTrigger(eventId)
+        if CentralTriggers[eventId] then return end
+        local ct = CreateTrigger()
+        CentralTriggers[eventId] = ct
+        CentralEventLists[eventId] = {}
+        _orig_RegisterAnyUnit(ct, eventId)
+        TriggerAddAction(ct, function()
+            local trigs = CentralEventLists[eventId]
+            if not trigs then return end
+            for _, trig in ipairs(trigs) do
+                if IsTriggerEnabled(trig) then
+                    if TriggerEvaluate(trig) then
+                        TriggerExecute(trig)
+                    end
+                end
+            end
+        end)
+    end
+
+    TriggerRegisterAnyUnitEventBJ = function(trig, eventId)
+        if trig ~= nil and eventId ~= nil then
+            EnsureCentralTrigger(eventId)
+            CentralEventLists[eventId][#CentralEventLists[eventId] + 1] = trig
+        end
+        return trig
+    end
+end
+print("[CORE] Event dispatcher active (centralized TriggerRegisterAnyUnitEventBJ)")
+
 -- ============================================================
 -- Init queue + MarkGameStarted error display
 -- ============================================================
@@ -9414,17 +9506,20 @@ end
 -- *  Map
 --  ??????? ??????
 ---@return nothing
+HandleCounterTimer = nil
+HandleCounterBoard = nil
+HandleCounterEnabled = false
+
+---@return nothing
 function HandleCounter_Update()
 	local i = 0
-	local id = 0
 	local P = {}
 	local result = 0
 	while true do
 		if i >= 50 then break end
 		i = i + 1
 		P[i] = Location(0, 0)
-		id = GetHandleId(P[i])
-		result = result + (id - 0x100000)
+		result = result + (GetHandleId(P[i]) - 0x100000)
 	end
 	result = result / i - i / 2
 	while true do
@@ -9433,22 +9528,48 @@ function HandleCounter_Update()
 		if i <= 1 then break end
 		i = i - 1
 	end
-	LeaderboardSetItemValue(udg_HandleBoard, 0, R2I(result))
+	LeaderboardSetItemValue(HandleCounterBoard, 0, R2I(result))
 end
 ---@return nothing
-function HandleCounter_Actions()
-	udg_HandleBoard = CreateLeaderboard()
-	LeaderboardSetLabel(udg_HandleBoard, "Handle Counter")
-	PlayerSetLeaderboard(GetLocalPlayer(), udg_HandleBoard)
-	LeaderboardDisplay(udg_HandleBoard, true)
-	LeaderboardAddItem(udg_HandleBoard, "Handles", 0, Player(0))
-	LeaderboardSetSizeByItemCount(udg_HandleBoard, 1)
+function HandleCounter_Init()
+	HandleCounterBoard = CreateLeaderboard()
+	LeaderboardSetLabel(HandleCounterBoard, "Handle Counter")
+	PlayerSetLeaderboard(GetLocalPlayer(), HandleCounterBoard)
+	LeaderboardDisplay(HandleCounterBoard, true)
+	LeaderboardAddItem(HandleCounterBoard, "Handles", 0, Player(0))
+	LeaderboardSetSizeByItemCount(HandleCounterBoard, 1)
+	LeaderboardDisplay(HandleCounterBoard, false)
+end
+---@return nothing
+function HandleCounter_Start()
+	if HandleCounterEnabled then return end
+	HandleCounterEnabled = true
+	if HandleCounterBoard == nil then HandleCounter_Init() end
+	LeaderboardDisplay(HandleCounterBoard, true)
 	HandleCounter_Update()
-	TimerStart(GetExpiredTimer(), 0.05, true, HandleCounter_Update)
+	HandleCounterTimer = CreateTimer()
+	TimerStart(HandleCounterTimer, 0.05, true, HandleCounter_Update)
+end
+---@return nothing
+function HandleCounter_Stop()
+	if not HandleCounterEnabled then return end
+	HandleCounterEnabled = false
+	if HandleCounterTimer ~= nil then
+		DestroyTimer(HandleCounterTimer)
+		HandleCounterTimer = nil
+	end
+	if HandleCounterBoard ~= nil then
+		LeaderboardDisplay(HandleCounterBoard, false)
+		LeaderboardSetItemValue(HandleCounterBoard, 0, 0)
+	end
+end
+---@return nothing
+function HandleCounter_Toggle()
+	if HandleCounterEnabled then HandleCounter_Stop() else HandleCounter_Start() end
 end
 ---@return nothing
 function InitTrig_HandleCounter()
-	TimerStart(CreateTimer(), 0, false, HandleCounter_Actions)
+	HandleCounter_Init()
 end
 --  ????? ???????? ??????
 ---@return nothing
@@ -23881,7 +24002,7 @@ function Trig_Undermining_move_units()
     if LoadBoolean(Hash, h, 4) then
         kol=kol + 1
         SaveInteger(Hash, h, 3, kol)
-        if kol >= 25 then
+        if kol >= 13 then
             SaveBoolean(Hash, h, 4, false)
         end
     else
@@ -23912,9 +24033,9 @@ function Trig_Undermining_move_hero()
     local g= LoadGroupHandle(Hash, h, 3)
     local x1= LoadReal(Hash, h, 4)
     local y1= LoadReal(Hash, h, 5)
+    local gg= LoadGroupHandle(Hash, h, 7)
     local dx= GetUnitX(GT)
     local dy= GetUnitY(GT)
-    local gg= CreateGroup()
     local un
     local x
     local y
@@ -23922,24 +24043,19 @@ function Trig_Undermining_move_hero()
     local t1
     local h1
     ---------
-    x=dx + 70 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
-    y=dy + 70 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
-    --set w = UnParabolaZ(500, l, UnRastMT(x, x1, y, y1)) //????????? ??????
-    -- ???? ????? ????
+    x=dx + 70 * Cos(ugol * bj_DEGTORAD)
+    y=dy + 70 * Sin(ugol * bj_DEGTORAD)
     if UnRastMT(x1 , dx , y1 , dy) > 70 and not IsTerrainPathable(x, y, PATHING_TYPE_FLYABILITY) then
-        -- ??????? ?????
         SetUnitX(GT, x)
         SetUnitY(GT, y)
         SetUnitFacing(GT, ugol)
-        DestroyEffect(AddSpecialEffect("AbilitiesSpellsUndeadImpaleImpaleMissTarget.mdl", x, y))
         --------------------------------------
-        -- ?????????? ?????? ? ?????? ? ???????????? ??
+        GroupClear(gg)
         GroupEnumUnitsInRange(gg, x, y, 150, nil)
         while true do
             un=FirstOfGroup(gg)
             if un == nil then break end
             if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) and not IsUnitInGroup(un, g) then
-                --call BJDebugMsg("")
                 UnitAddAbility(un, FourCC('Amrf'))
                 UnitRemoveAbility(un, FourCC('Amrf'))
                 t1=CreateTimer()
@@ -23949,14 +24065,14 @@ function Trig_Undermining_move_hero()
                 SaveInteger(Hash, h1, 3, 1)
                 SaveBoolean(Hash, h1, 4, true)
                 GroupAddUnit(g, un)
-                TimerStart(t1, 0.01, true, Trig_Undermining_move_units)
+                TimerStart(t1, 0.02, true, Trig_Undermining_move_units)
             end
             GroupRemoveUnit(gg, un)
         end
         -----------------------------------------
     else
-        --call BJDebugMsg("")
         DestroyGroup(g)
+        DestroyGroup(gg)
         DestroyTimer(t)
         FlushChildHashtable(Hash, h)
         SetUnitFlyHeight(GT, 0, 0)
@@ -23969,9 +24085,8 @@ function Trig_Undermining_move_hero()
     GT=nil
     un=nil
     g=nil
-    t=nil
-    DestroyGroup(gg)
     gg=nil
+    t=nil
     t1=nil
 end
 --================================================================================================================================================================================
@@ -23996,6 +24111,7 @@ function Trig_Undermining_Actions()
     PlaySoundBJ(gg_snd_ImpaleHit)
     ------
     SaveGroupHandle(Hash, h, 3, CreateGroup())
+    SaveGroupHandle(Hash, h, 7, CreateGroup())
     SaveReal(Hash, h, 4, x1)
     SaveReal(Hash, h, 5, y1)
     PauseUnit(GT, true)
@@ -25456,8 +25572,6 @@ function Trig_JumpSTR_move_hero()
     local lvl
     local w
     local ugol= JSTRUgolMT(dx , x1 , dy , y1)
-    local t1
-    local h1
     local MaxW
     if l <= 500 then
         MaxW=l
@@ -25477,7 +25591,6 @@ function Trig_JumpSTR_move_hero()
         SetUnitFacing(GT, ugol)
         SetUnitFlyHeight(GT, w, 0)
     else
-        DestroyEffect(LoadEffectHandle(Hash, h, 6))
         DestroyTimer(t)
         FlushChildHashtable(Hash, h)
         SetUnitAnimation(GT, "attack")
@@ -25500,18 +25613,6 @@ function Trig_JumpSTR_move_hero()
             if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) then
                 UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
                 DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
-                ----------
-                -- ??????? ????? ? ?????? ??????? ?? ???????
-                if JSTRBoolMove then
-                    ugol=JSTRUgolMT(dx , GetUnitX(un) , dy , GetUnitY(un))
-                    t1=CreateTimer()
-                    h1=GetHandleId(t1)
-                    SaveUnitHandle(Hash, h1, 1, un)
-                    SaveReal(Hash, h1, 2, ugol)
-                    SaveInteger(Hash, h1, 3, 17)
-                    TimerStart(t1, 0.015, true, Trig_JumpSTR_move_units)
-                end
-                ---------- 
             end
             GroupRemoveUnit(g, un)
         end
@@ -25522,7 +25623,6 @@ function Trig_JumpSTR_move_hero()
     un=nil
     g=nil
     t=nil
-    t1=nil
 end
 --================================================================================================================================================================================
 -- ???? 2 - ???????? ???????
@@ -26101,22 +26201,23 @@ function Ogrimm2()
     local t= GetExpiredTimer()
     local h= GetHandleId(t)
     local un= LoadUnitHandle(Hash, h, 1)
-    local ugol= LoadReal(Hash, h, 2)
-    local kol= LoadInteger(Hash, h, 3)
+    local cosA= LoadReal(Hash, h, 2)
+    local sinA= LoadReal(Hash, h, 3)
+    local kol= LoadInteger(Hash, h, 4)
     local x= GetUnitX(un)
     local y= GetUnitY(un)
-    -- ---------
-    x=x + 10 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
-    y=y + 10 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
-    if kol >= 0 and not IsTerrainPathable(x, y, PATHING_TYPE_FLYABILITY) then
+    ---------
+    x=x + 20 * cosA
+    y=y + 20 * sinA
+    if kol >= 0 then
         SetUnitX(un, x)
         SetUnitY(un, y)
-        SaveInteger(Hash, h, 3, kol - 1)
+        SaveInteger(Hash, h, 4, kol - 1)
     else
         DestroyTimer(t)
         FlushChildHashtable(Hash, h)
     end
-    -- ----------
+    ---------
     un=nil
     t=nil
 end
@@ -26161,7 +26262,6 @@ function Ogrimm1()
         SetUnitFacing(GT, ugol)
         SetUnitFlyHeight(GT, w, 0)
     else
-        DestroyEffect(LoadEffectHandle(Hash, h, 6))
         DestroyTimer(t)
         FlushChildHashtable(Hash, h)
         SetUnitAnimation(GT, "attack")
@@ -26187,9 +26287,10 @@ function Ogrimm1()
                 t1=CreateTimer()
                 h1=GetHandleId(t1)
                 SaveUnitHandle(Hash, h1, 1, un)
-                SaveReal(Hash, h1, 2, ugol)
-                SaveInteger(Hash, h1, 3, 17)
-                TimerStart(t1, 0.015, true, Ogrimm2)
+                SaveReal(Hash, h1, 2, Cos(ugol * bj_DEGTORAD))
+                SaveReal(Hash, h1, 3, Sin(ugol * bj_DEGTORAD))
+                SaveInteger(Hash, h1, 4, 9)
+                TimerStart(t1, 0.03, true, Ogrimm2)
                 
                 ---------- 
             end
@@ -27119,8 +27220,6 @@ function Trig_Charge_move_hero()
     local lvl
     local w
     local ugol= JSTRUgolMT(dx , x1 , dy , y1)
-    local t1
-    local h1
     local MaxW
     if l <= 500 then
         MaxW=l
@@ -27140,7 +27239,6 @@ function Trig_Charge_move_hero()
         SetUnitFacing(GT, ugol)
         --call SetUnitFlyHeight(GT, w, 0)
     else
-        DestroyEffect(LoadEffectHandle(Hash, h, 6))
         DestroyTimer(t)
         FlushChildHashtable(Hash, h)
         SetUnitAnimation(GT, "attack")
@@ -27163,18 +27261,6 @@ function Trig_Charge_move_hero()
             if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) then
                 UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
                 DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
-                ----------
-                -- ??????? ????? ? ?????? ??????? ?? ???????
-                if JSTRBoolMove then
-                    ugol=JSTRUgolMT(dx , GetUnitX(un) , dy , GetUnitY(un))
-                    t1=CreateTimer()
-                    h1=GetHandleId(t1)
-                    SaveUnitHandle(Hash, h1, 1, un)
-                    SaveReal(Hash, h1, 2, ugol)
-                    SaveInteger(Hash, h1, 3, 17)
-                    TimerStart(t1, 0.015, true, Trig_JumpSTR_move_units)
-                end
-                ---------- 
             end
             GroupRemoveUnit(g, un)
         end
@@ -27185,7 +27271,6 @@ function Trig_Charge_move_hero()
     un=nil
     g=nil
     t=nil
-    t1=nil
 end
 --================================================================================================================================================================================
 -- ???? 2 - ???????? ???????
@@ -31614,8 +31699,6 @@ function Trig_Charge_move_heroV()
     local lvl
     local w
     local ugol= JSTRUgolMT(dx , x1 , dy , y1)
-    local t1
-    local h1
     local MaxW
     if l <= 500 then
         MaxW=l
@@ -31635,7 +31718,6 @@ function Trig_Charge_move_heroV()
         SetUnitFacing(GT, ugol)
         --call SetUnitFlyHeight(GT, w, 0)
     else
-        DestroyEffect(LoadEffectHandle(Hash, h, 6))
         DestroyTimer(t)
         FlushChildHashtable(Hash, h)
         SetUnitAnimation(GT, "attack")
@@ -31658,18 +31740,6 @@ function Trig_Charge_move_heroV()
             if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) then
                 UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
                 DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
-                ----------
-                -- ??????? ????? ? ?????? ??????? ?? ???????
-                if JSTRBoolMove then
-                    ugol=JSTRUgolMT(dx , GetUnitX(un) , dy , GetUnitY(un))
-                    t1=CreateTimer()
-                    h1=GetHandleId(t1)
-                    SaveUnitHandle(Hash, h1, 1, un)
-                    SaveReal(Hash, h1, 2, ugol)
-                    SaveInteger(Hash, h1, 3, 17)
-                    TimerStart(t1, 0.015, true, Trig_JumpSTR_move_units)
-                end
-                ---------- 
             end
             GroupRemoveUnit(g, un)
         end
@@ -31680,7 +31750,6 @@ function Trig_Charge_move_heroV()
     un=nil
     g=nil
     t=nil
-    t1=nil
 end
 --================================================================================================================================================================================
 -- ???? 2 - ???????? ???????
@@ -49110,6 +49179,17 @@ function BridgeDispatchCommand(op, arg, sequence)
         ProbeLogWrite("[BRIDGE] ping seq=" .. tostring(sequence) .. " arg=" .. tostring(arg))
         return
     end
+    if op == "handle" then
+        if arg == "on" then
+            HandleCounter_Start()
+        elseif arg == "off" then
+            HandleCounter_Stop()
+        elseif arg == "toggle" then
+            HandleCounter_Toggle()
+        end
+        ProbeLogWrite("[BRIDGE] handle op=" .. tostring(arg) .. " seq=" .. tostring(sequence))
+        return
+    end
     -- arg ????? ???? "N" ??? "N:race" (???? ???????????, ?????????)
     local targetStr, raceTok = string.match(tostring(arg), "^(%d+):?(%S*)")
     local target = tonumber(targetStr)
@@ -62529,6 +62609,7 @@ function main()
     OnInit.fn(SetupCodexPingChat, "SetupCodexPingChat")
     OnInit.fn(SetupLogChat, "SetupLogChat")
     OnInit.fn(SetupBridgeChat, "SetupBridgeChat")
+    OnInit.fn(SetupHandleCounterChat, "SetupHandleCounterChat")
     OnInit.fn(BridgeStart, "BridgeStart")
     OnInit.fn(DeferredUISetup, "DeferredUISetup")
     OnInit.fn(Face2, "Face2")
