@@ -387,54 +387,27 @@ end
 --===========================================================================
 -- Trigger: SpellArrow
 --===========================================================================
-function FireDark()
-    
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u= LoadUnitHandle(Hash, id, 0)
-    --local integer aid = LoadInteger(Hash,id,1)
-    local times= LoadInteger(Hash, id, 2)
-    local level= LoadInteger(Hash, id, 3)
-    local loc= LoadLocationHandle(Hash, id, 4)
-    local u2= CreateUnit(GetOwningPlayer(u), Dummy, GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
-    SetUnitFlyHeight(u2, 100.00, 10)
-    UnitAddAbility(u2, FourCC('w2aE'))
-    SetUnitAbilityLevel(u2, FourCC('w2aE'), level)
-    IssuePointOrderLoc(u2, "carrionswarm", loc)
-    RemoveUnitTimed(u2 , 2)
-    
-    
-    times=times + 1
-    SaveInteger(Hash, id, 2, times)
-    if times > 8 then
-        RemoveLocation(loc)
-        FlushChildHashtable(Hash, id)
-        PauseTimer(t)
-        DestroyTimer(t)
-    end
-    
-    
-    u=nil
-    u2=nil
-    t=nil
-    
-    loc=nil
-end
 function Trig_SpellArrow_Actions()
-    local u= GetTriggerUnit()
-    
-    local t= CreateTimer()
-    local id= GetHandleId(t)
-    
-    TimerStart(t, 0.35, true, FireDark)
-    SaveUnitHandle(Hash, id, 0, u)
-    --call SaveInteger(Hash,id,1, 'w2aW')
-    SaveInteger(Hash, id, 2, 0)
-    SaveInteger(Hash, id, 3, GetUnitAbilityLevel(u, FourCC('w2aW')))
-    SaveLocationHandle(Hash, id, 4, GetSpellTargetLoc())
+    local u = GetTriggerUnit()
+    local level = GetUnitAbilityLevel(u, FourCC('w2aW'))
+    local loc = GetSpellTargetLoc()
+    local times = 0
+    local t = CreateTimer()
+    TimerStart(t, 0.35, true, function()
+        local u2 = CreateUnit(GetOwningPlayer(u), Dummy, GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
+        SetUnitFlyHeight(u2, 100.00, 10)
+        UnitAddAbility(u2, FourCC('w2aE'))
+        SetUnitAbilityLevel(u2, FourCC('w2aE'), level)
+        IssuePointOrderLoc(u2, "carrionswarm", loc)
+        RemoveUnitTimed(u2, 2)
+        times = times + 1
+        if times > 8 then
+            RemoveLocation(loc)
+            DestroyTimer(t)
+        end
+    end)
     t=nil
     u=nil
-    
 end
 --===========================================================================
 function InitTrig_SpellArrow()

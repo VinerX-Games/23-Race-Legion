@@ -235,92 +235,44 @@ function AllowedPosition()
     end
     return false
 end
-function KillIf()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u= LoadUnitHandle(Hash, id, 0)
-    --local integer uid = StringHash( I2S(GetHandleId(u))+"k")
-    local time= LoadInteger(Hash, id, 1)
-    local e= LoadEffectHandle(Hash, id, 2)
-    
-    
-    if time > 0 then
-        if GetUnitAbilityLevel(u, FourCC('A0U6')) == 0 or AllowedPosition(u) then
-            UnitRemoveAbility(u, FourCC('A0U6'))
-            UnitRemoveAbility(u, FourCC('B05M'))
-            DestroyEffect(e)
-            DestroyTimer(t)
-            FlushChildHashtable(Hash, id)
-        
-        else
-            time=time - 2
-            SaveInteger(Hash, id, 1, time)
-        
-        end
-        
-        
-        
-    
-    
-    else
-        KillUnit(u)
-        DestroyEffect(e)
-        DestroyTimer(t)
-        FlushChildHashtable(Hash, id)
-        
-    end
-    
-    t=nil
-    u=nil
-    e=nil
-end
-function Continents()
-    local t= CreateTimer()
-    local id= GetHandleId(t)
-    
-    --local integer uid = StringHash( I2S(GetHandleId(u))+"k")
+function Continents(u)
     local e
     if AllowedPosition(u) then
         if GetUnitAbilityLevel(u, FourCC('A0U6')) > 0 then
             UnitRemoveAbility(u, FourCC('A0U6'))
             UnitRemoveAbility(u, FourCC('B05M'))
         end
-        
-        
     else
         if IsUnitType(u, UNIT_TYPE_STRUCTURE) then
             ExplodeUnitBJ(u)
-            
-        elseif GetUnitTypeId(u) == FourCC('H049') then
-            
-            
-        else
+        elseif GetUnitTypeId(u) ~= FourCC('H049') then
             if GetUnitAbilityLevel(u, FourCC('A0U6')) > 0 then
                 SetUnitPosition(u, 0, 0)
                 DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "")
-                
-                
-                --call SaveInteger(Hash,id,1,30)
-                
             else
                 UnitAddAbility(u, FourCC('A0U6'))
-                e=AddSpecialEffectTarget("AbilitiesSpellsOtherTalkToMeTalkToMe", u, "overhead")
-                --call TriggerExecute( gg_trg_GoHome_No_fine )
-                
-                
-                TimerStart(t, 2, true, KillIf)
-                --call SaveTimerHandle(Hash,uid,0,t)
-                SaveUnitHandle(Hash, id, 0, u)
-                SaveInteger(Hash, id, 1, 30)
-                SaveEffectHandle(Hash, id, 2, e)
+                e = AddSpecialEffectTarget("AbilitiesSpellsOtherTalkToMeTalkToMe", u, "overhead")
+                local time = 30
+                local t = CreateTimer()
+                TimerStart(t, 2, true, function()
+                    if time > 0 then
+                        if GetUnitAbilityLevel(u, FourCC('A0U6')) == 0 or AllowedPosition(u) then
+                            UnitRemoveAbility(u, FourCC('A0U6'))
+                            UnitRemoveAbility(u, FourCC('B05M'))
+                            DestroyEffect(e)
+                            DestroyTimer(t)
+                        else
+                            time = time - 2
+                        end
+                    else
+                        KillUnit(u)
+                        DestroyEffect(e)
+                        DestroyTimer(t)
+                    end
+                end)
             end
-            
         end
     end
-    
-    t=nil
-    u=nil
-    e=nil
 end
 --===========================================================================
 -- Trigger: LeaveNeadedRegions

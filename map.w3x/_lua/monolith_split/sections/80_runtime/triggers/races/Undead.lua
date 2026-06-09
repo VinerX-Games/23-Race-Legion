@@ -556,64 +556,43 @@ end
 --===========================================================================
 -- Trigger: PlagueOnBuilding
 --===========================================================================
-function Plague()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local time= LoadInteger(Hash, id, 1)
-    local e
-    local u= LoadUnitHandle(Hash, id, 0)
-    --??????
-    if time == 0 and UnitAlive(u) and u ~= nil then
-        UnitAddAbility(u, FourCC('A1HS'))
-        e=AddSpecialEffectTargetUnitBJ("overhead", u, "CultOfDamnedPlagueCloudTargetLight.mdx")
-        SaveEffectHandle(Hash, id, 2, e)
-        
-    --??????
-    elseif time < 30 and UnitAlive(u) and u ~= nil then
-        SaveInteger(Hash, id, 1, time + 1)
-        
-    --?????
-    else
-        if UnitAlive(u) then
-            income[LoadInteger(Hash, GetHandleId(u), 0)]=income[LoadInteger(Hash, GetHandleId(u), 0)] - 5
-            income[GetPlayerId(GetOwningPlayer(u))]=income[GetPlayerId(GetOwningPlayer(u))] + 5
-        end
-        UnitRemoveAbility(u, FourCC('A1HS'))
-        DestroyEffect(LoadEffectHandle(Hash, id, 2))
-        FlushChildHashtable(Hash, id)
-        PauseTimer(t)
-        DestroyTimer(t)
-    
-    end
-    e=nil
-    t=nil
-    u=nil
-end
+PlagueOwner = PlagueOwner or {}
+
 function Trig_PlagueOnBuilding_Actions()
-    local t= CreateTimer()
-    local id= GetHandleId(t)
-    local u= GetSpellTargetUnit()
+    local caster = GetTriggerUnit()
+    local u = GetSpellTargetUnit()
     if u ~= nil then
-        if GetUnitAbilityLevel(u, FourCC('A1HS')) < 1 and IsPlayerEnemy(GetOwningPlayer(u), GetOwningPlayer(GetTriggerUnit())) then
-            --??????
-            
+        if GetUnitAbilityLevel(u, FourCC('A1HS')) < 1 and IsPlayerEnemy(GetOwningPlayer(u), GetOwningPlayer(caster)) then
             if GetUnitFoodMade(u) > 0 then
-                income[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=income[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 5
-                income[GetPlayerId(GetOwningPlayer(u))]=income[GetPlayerId(GetOwningPlayer(u))] - 5
+                income[GetPlayerId(GetOwningPlayer(caster))] = income[GetPlayerId(GetOwningPlayer(caster))] + 5
+                income[GetPlayerId(GetOwningPlayer(u))] = income[GetPlayerId(GetOwningPlayer(u))] - 5
             end
-            
-            SaveInteger(Hash, GetHandleId(u), 0, GetPlayerId(GetOwningPlayer(GetTriggerUnit())))
-            SaveUnitHandle(Hash, id, 0, u)
-            SaveInteger(Hash, id, 1, 0)
-            TimerStart(t, 1.00, true, Plague)
+            PlagueOwner[GetHandleId(u)] = GetPlayerId(GetOwningPlayer(caster))
+            local time = 0
+            local e
+            local t = CreateTimer()
+            TimerStart(t, 1.00, true, function()
+                if time == 0 and UnitAlive(u) then
+                    UnitAddAbility(u, FourCC('A1HS'))
+                    e = AddSpecialEffectTargetUnitBJ("overhead", u, "CultOfDamnedPlagueCloudTargetLight.mdx")
+                    time = time + 1
+                elseif time < 30 and UnitAlive(u) then
+                    time = time + 1
+                else
+                    if UnitAlive(u) then
+                        income[PlagueOwner[GetHandleId(u)] or 0] = (PlagueOwner[GetHandleId(u)] and income[PlagueOwner[GetHandleId(u)]] or 0) - 5
+                        income[GetPlayerId(GetOwningPlayer(u))] = income[GetPlayerId(GetOwningPlayer(u))] + 5
+                    end
+                    UnitRemoveAbility(u, FourCC('A1HS'))
+                    if e then DestroyEffect(e) end
+                    DestroyTimer(t)
+                end
+            end)
         else
-            --????????
-            SaveInteger(Hash, id, 1, 1)
-        
+            local t = CreateTimer()
+            TimerStart(t, 1.00, true, function() DestroyTimer(t) end)
         end
     end
-    t=nil
-    
 end
 --===========================================================================
 function InitTrig_PlagueOnBuilding()
@@ -632,8 +611,7 @@ function Trig_UnitTrained_Conditions()
 end
 function Trig_UnitTrained_Actions()
     local u2
-    local id=  LoadInteger(Hash, GetHandleId(GetTriggerUnit()), 0)
-    
+    local id = PlagueOwner[GetHandleId(GetTriggerUnit())] or 0
     u2=CreateUnit(Player(id), FourCC('h05P'), GetUnitX(GetTrainedUnit()), GetUnitY(GetTrainedUnit()), bj_UNIT_FACING)
     UnitAddAbility(u2, FourCC('cDau'))
     IssueTargetOrder(u2, "parasite", GetTrainedUnit())

@@ -408,37 +408,26 @@ end
 function Trig_BuidingThatSellRecruts_Conditions()
     return GetUnitTypeId(GetConstructedStructure()) == FourCC('h0NX') -- ????????? ??????, ??????
 end
-function NewMember()
-    
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u= LoadUnitHandle(Hash, id, 1)
-    local uid= GetHandleId(u)
-    if UnitAlive(u) then
-        SaveInteger(Hash, uid, 1, IMaxBJ(LoadInteger(Hash, uid, 1) + 1, 3))
-    
-    else
-        
-        FlushChildHashtable(Hash, id)
-        FlushChildHashtable(Hash, uid)
-        DestroyTimer(t)
-    end
-    t=nil
-    u=nil
-end
+BezlikieStock = BezlikieStock or {}
+
 function Trig_BuidingThatSellRecruts_Actions()
-    local u= GetConstructedStructure()
-    local t= CreateTimer()
-    local id= GetHandleId(t)
-    local uid= GetHandleId(u)
-    local startCount= 1
+    local u = GetConstructedStructure()
+    local uid = GetHandleId(u)
+    local startCount = 1
+    BezlikieStock[uid] = startCount
     UnitAddAbility(u, FourCC('Asud'))
-    AddUnitToStock(u, FourCC('h0NC'), startCount, 3) --???? ??????? ?????????
-    AddUnitToStock(u, FourCC('h0NL'), startCount, 3) --???? ??????? ?????????
-    
-    TimerStart(t, 30, true, NewMember)
-    SaveUnitHandle(Hash, id, 1, u)
-    SaveInteger(Hash, uid, 1, startCount)
+    AddUnitToStock(u, FourCC('h0NC'), startCount, 3)
+    AddUnitToStock(u, FourCC('h0NL'), startCount, 3)
+    local t = CreateTimer()
+    TimerStart(t, 30, true, function()
+        if UnitAlive(u) then
+            local cnt = BezlikieStock[uid] or 0
+            BezlikieStock[uid] = math.min(cnt + 1, 3)
+        else
+            BezlikieStock[uid] = nil
+            DestroyTimer(t)
+        end
+    end)
     u=nil
     t=nil
 end
@@ -459,10 +448,11 @@ function Trig_BuidingSell_Conditions()
     return GetUnitTypeId(GetSellingUnit()) == FourCC('h0NX') -- ????????? ??????, ??????
 end
 function Trig_BuidingSell_Actions()
-    local u= GetSellingUnit()
-    local uid= GetHandleId(u)
-    local currentCount= LoadInteger(Hash, uid, 1)
-    SaveInteger(Hash, uid, 1, currentCount - 1)
+    local u = GetSellingUnit()
+    local uid = GetHandleId(u)
+    local currentCount = BezlikieStock[uid]
+    if currentCount == nil then return end
+    BezlikieStock[uid] = currentCount - 1
     RemoveUnitFromStock(u, FourCC('h0NC')) --???? ??????? ?????????
     RemoveUnitFromStock(u, FourCC('h0NL')) --???? ??????? ?????????
     
