@@ -8687,8 +8687,11 @@ function createAiPlayer(pi, raceToken)
 	ProbeLogWrite("[AI] createAiPlayer TimerSmall2 started period=" .. tostring(2.12 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerSmall3, false, 3.13 * AiRepeat / 5)
 	ProbeLogWrite("[AI] createAiPlayer TimerSmall3 started period=" .. tostring(3.13 * AiRepeat / 5))
-	StartTimerBJ(udg_TimerSmall4, false, 4.14 * AiRepeat / 5)
-	ProbeLogWrite("[AI] createAiPlayer TimerSmall4 started period=" .. tostring(4.14 * AiRepeat / 5))
+	-- TimerSmall4 (navy join): disabled in brain mode; BrainNavalFocus handles it
+	if not AiBrainEnabled(pi) then
+		StartTimerBJ(udg_TimerSmall4, false, 4.14 * AiRepeat / 5)
+		ProbeLogWrite("[AI] createAiPlayer TimerSmall4 started period=" .. tostring(4.14 * AiRepeat / 5))
+	end
 	StartTimerBJ(udg_AiTimerStrateg, true, 15.15 * AiRepeat / 5)
 	ProbeLogWrite("[AI] createAiPlayer AiTimerStrateg started period=" .. tostring(15.15 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerToChangeAi, false, 600.00)
@@ -59819,7 +59822,7 @@ AiBrainForce = AiBrainForce or {}  -- [pi] = "objective"|"swarm" override (bridg
 -- Tunables: set via bridge live (AiBrainBatchSize=6) or leave defaults.
 -- All values affect the unified brain tick only; swarm mode ignores them.
 AiBrainBatchSize       = AiBrainBatchSize       or 4   -- bots processed per PlayerGet1 fire
-AiBrainMaxProduce      = AiBrainMaxProduce      or 5   -- max unit-training orders per bot per tick
+AiBrainMaxProduce      = AiBrainMaxProduce      or 10  -- max unit-training orders per bot per tick
 AiBrainMaxBuild        = AiBrainMaxBuild        or 3   -- max building-attempts per bot per tick
 AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks
 AiBrainNavalEvery      = AiBrainNavalEvery      or 60  -- naval-check every N brain-ticks
@@ -61105,6 +61108,39 @@ function BrainFocus(pi, p, wm)
     return cnt
 end
 
+-- ====================================================================
+-- BrainNavalFocus: iterate udg_Ai_navy[pi] (local group, no enum), send
+-- idle naval units via TryAttackN. Replaces PlayerNavy + TimerSmall4.
+-- ====================================================================
+
+---@param pi integer
+---@param p player
+---@return integer
+function BrainNavalFocus(pi, p)
+    local navy = udg_Ai_navy[pi]
+    if navy == nil then return 0 end
+    local sz = BlzGroupGetSize(navy)
+    if sz == 0 then return 0 end
+
+    local processed = 0
+    local maxN = AiBrainMaxProduce -- reuse the same cap, or dedicated naval cap
+
+    for i = 0, sz - 1 do
+        if processed >= maxN then break end
+        local u = BlzGroupUnitAt(navy, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            local o = GetUnitCurrentOrder(u)
+            if o == 0 or o == 851972 or o == 851976 then
+                CheckPlayer = p
+                udg_LocalUnit3 = u
+                TryAttackN()
+                processed = processed + 1
+            end
+        end
+    end
+    return processed
+end
+
 -- Entry point when a bot has an active brain ("objective"). Perceive → refresh
 -- objectives on schedule → pick a focus (force concentration) → order idle army
 -- there. Falls back to swarm when there are no objectives.
@@ -61180,6 +61216,12 @@ function AiBrainArmyTick(pi, p)
     -- BRAIN FOCUS: local udg_Ai_army group, no GroupEnumUnitsOfPlayer
     local orderedF = BrainFocus(pi, p, wm)
     ProbeLogWrite("[SQDBG] cp10-focus ordered=" .. tostring(orderedF))
+
+    -- Naval focus: idle ships attack (replaces PlayerNavy + TimerSmall4)
+    if (wm.tick % 4) == 0 then
+        local navalN = BrainNavalFocus(pi, p)
+        ProbeLogWrite("[SQDBG] cp10-naval ordered=" .. tostring(navalN))
+    end
 
     if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end
     if (wm.tick % 4) == 0 then AiDiplomatTick(pi) end

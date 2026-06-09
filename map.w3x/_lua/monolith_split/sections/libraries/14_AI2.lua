@@ -244,8 +244,11 @@ function createAiPlayer(pi, raceToken)
 	ProbeLogWrite("[AI] createAiPlayer TimerSmall2 started period=" .. tostring(2.12 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerSmall3, false, 3.13 * AiRepeat / 5)
 	ProbeLogWrite("[AI] createAiPlayer TimerSmall3 started period=" .. tostring(3.13 * AiRepeat / 5))
-	StartTimerBJ(udg_TimerSmall4, false, 4.14 * AiRepeat / 5)
-	ProbeLogWrite("[AI] createAiPlayer TimerSmall4 started period=" .. tostring(4.14 * AiRepeat / 5))
+	-- TimerSmall4 (navy join): disabled in brain mode; BrainNavalFocus handles it
+	if not AiBrainEnabled(pi) then
+		StartTimerBJ(udg_TimerSmall4, false, 4.14 * AiRepeat / 5)
+		ProbeLogWrite("[AI] createAiPlayer TimerSmall4 started period=" .. tostring(4.14 * AiRepeat / 5))
+	end
 	StartTimerBJ(udg_AiTimerStrateg, true, 15.15 * AiRepeat / 5)
 	ProbeLogWrite("[AI] createAiPlayer AiTimerStrateg started period=" .. tostring(15.15 * AiRepeat / 5))
 	StartTimerBJ(udg_TimerToChangeAi, false, 600.00)
