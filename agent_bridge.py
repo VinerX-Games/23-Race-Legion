@@ -19,7 +19,7 @@ Usage:
   python agent_bridge.py exec --file snippet.lua
   python agent_bridge.py exec "..." --timeout 12
 """
-import sys, os, re, time, glob, argparse
+import sys, os, re, time, glob, argparse, ctypes
 
 # Russian Windows consoles default to cp1251 and crash on UTF-8 output; force UTF-8.
 for _s in (sys.stdout, sys.stderr):
@@ -145,6 +145,46 @@ def parse_out(want_seq):
     return None
 
 
+def wait_for_file(filepath, deadline):
+    """Wait for a file to appear using WinAPI ReadDirectoryChangesW.
+    Returns True if the file appeared before deadline, False on timeout.
+    Falls back to tight polling if the WinAPI setup fails."""
+    if os.path.exists(filepath):
+        return True
+    dirpath = os.path.dirname(filepath)
+    filename = os.path.basename(filepath)
+    kernel32 = ctypes.windll.kernel32
+    hDir = kernel32.CreateFileW(
+        dirpath, 0x0001, 0x0007, None, 3, 0x02000000, None)
+    if hDir == -1:
+        while time.time() < deadline:
+            if os.path.exists(filepath):
+                return True
+            time.sleep(0.05)
+        return False
+    try:
+        buf = ctypes.create_string_buffer(4096)
+        bytes_returned = ctypes.c_ulong(0)
+        need = filename.encode("utf-16-le")
+        while True:
+            remaining_ms = int((deadline - time.time()) * 1000)
+            if remaining_ms <= 0:
+                break
+            wait = min(remaining_ms, 500)
+            ok = kernel32.ReadDirectoryChangesW(
+                hDir, buf, len(buf), False, 0x00000001,
+                ctypes.byref(bytes_returned), None, None)
+            if ok and bytes_returned.value > 0:
+                if need in buf.raw[:bytes_returned.value]:
+                    time.sleep(0.05)
+                    return True
+            if os.path.exists(filepath):
+                return True
+    finally:
+        kernel32.CloseHandle(hDir)
+    return os.path.exists(filepath)
+
+
 def cmd_reset():
     removed = 0
     # Drop inbox, every per-seq outbox, the legacy outbox, and the stale heartbeat.
@@ -158,7 +198,7 @@ def cmd_reset():
     return 0
 
 
-def cmd_exec(code, timeout):
+def cmd_exec(code, timeout, use_watch=False):
     seq = next_seq()
     for stale in (out_file(seq), EVAL_OUT):  # drop stale results so we never read a previous one
         try:
@@ -168,13 +208,21 @@ def cmd_exec(code, timeout):
     hx = code.encode("utf-8").hex()
     write_pld(os.path.join(CMD_DIR, "23race_eval_%04d.pld" % seq), seq, hx)
     deadline = time.time() + timeout
-    while time.time() < deadline:
-        r = parse_out(seq)
-        if r and r[0] == seq:
-            _, ok, val = r
-            print(("OK   " if ok else "ERR  ") + val)
-            return 0 if ok else 2
-        time.sleep(0.2)
+    if use_watch:
+        if wait_for_file(out_file(seq), deadline):
+            r = parse_out(seq)
+            if r and r[0] == seq:
+                _, ok, val = r
+                print(("OK   " if ok else "ERR  ") + val)
+                return 0 if ok else 2
+    else:
+        while time.time() < deadline:
+            r = parse_out(seq)
+            if r and r[0] == seq:
+                _, ok, val = r
+                print(("OK   " if ok else "ERR  ") + val)
+                return 0 if ok else 2
+            time.sleep(0.2)
     print("TIMEOUT: no result for seq=%d within %ss (is the map running + reset done?)" % (seq, timeout))
     return 1
 
@@ -187,6 +235,8 @@ def main():
     pe.add_argument("code", nargs="?", default=None, help="Lua source (expression or statements)")
     pe.add_argument("--file", help="read Lua from a file instead")
     pe.add_argument("--timeout", type=float, default=8.0)
+    pe.add_argument("--watch", action="store_true", default=False,
+                    help="wait for result file via WinAPI filesystem watch instead of polling")
     a = ap.parse_args()
     if a.cmd == "reset":
         return cmd_reset()
@@ -194,7 +244,7 @@ def main():
         code = open(a.file, "r", encoding="utf-8").read() if a.file else a.code
         if not code:
             ap.error("provide Lua code or --file")
-        return cmd_exec(code, a.timeout)
+        return cmd_exec(code, a.timeout, a.watch)
     return 0
 
 
