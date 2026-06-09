@@ -93,7 +93,7 @@ AiBuildingValue = AiBuildingValue or {
     [FourCC('h0G0')] = 40,
     [FourCC('h0G3')] = 20,
     [FourCC('h0G7')] = 30,
-    [FourCC('h0GH')] = 10,
+    --[FourCC('h0GH')] = 10, --Туннель нерубов
     [FourCC('h0GZ')] = 20,
     [FourCC('h0H0')] = 50,
     [FourCC('h0H1')] = 80,
@@ -1041,10 +1041,38 @@ function AiBrainArmyTick(pi, p)
     -- SQUAD TICK DISABLED: use Phase-1 focus concentration
     local focus = AiBrainPickFocus(pi, wm)
     if focus ~= nil then
-        local ordered = AiBrainOrderIdleTo(pi, p, focus.x, focus.y)
+        -- Order ALL idle combat units (heroes included), not just udg_Ai_army
+        if gAllyGroup == nil then gAllyGroup = CreateGroup() end
+        if gSubGroup == nil then gSubGroup = CreateGroup() end
+        GroupClear(gAllyGroup)
+        GroupClear(gSubGroup)
+        GroupEnumUnitsOfPlayer(gAllyGroup, p, nil)
+        local cnt = 0
+        while true do
+            local u = FirstOfGroup(gAllyGroup)
+            if u == nil then break end
+            GroupRemoveUnit(gAllyGroup, u)
+            if GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+                and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
+                and not IsUnitType(u, UNIT_TYPE_PEON) then
+                local o = GetUnitCurrentOrder(u)
+                if o == 0 or o == 851972 or o == 851976 then
+                    GroupAddUnit(gSubGroup, u)
+                    cnt = cnt + 1
+                    if cnt % 12 == 0 then
+                        GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
+                        GroupClear(gSubGroup)
+                    end
+                end
+            end
+        end
+        if BlzGroupGetSize(gSubGroup) > 0 then
+            GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
+            GroupClear(gSubGroup)
+        end
     end
     if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end
-    if (wm.tick % 28) == 0 then AiDiplomatTick(pi) end
+    if (wm.tick % 4) == 0 then AiDiplomatTick(pi) end
 end
 
 -- ====================================================================

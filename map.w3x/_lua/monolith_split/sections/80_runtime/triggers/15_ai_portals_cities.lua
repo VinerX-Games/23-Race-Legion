@@ -664,7 +664,7 @@ function PlayerArmy()
         if not AiBrainEnabled(pi_army) and AiDiplomatEnabled then
             local dt = (AiDiplomatTicks[pi_army] or 0) + 1
             AiDiplomatTicks[pi_army] = dt
-            if (dt % 28) == 0 then AiDiplomatTick(pi_army) end
+            if (dt % 4) == 0 then AiDiplomatTick(pi_army) end
         end
     end
     

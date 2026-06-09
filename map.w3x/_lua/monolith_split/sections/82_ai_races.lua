@@ -2529,7 +2529,7 @@ RegisterAiRace("Nerubs", {
 
         seed = FourCC('h0GH'),
 
-        { FourCC('h0CO'), 4, 4 }, { FourCC('h0GH'), 18, 4 },
+        { FourCC('h0CO'), 4, 4 }, --{ FourCC('h0GH'), 18, 4 }, --Туннель нерубов
 
         { FourCC('h0CR'), 10, 4 }, { FourCC('h0CS'), 5, 2 },
 
@@ -2584,7 +2584,7 @@ RegisterAiRace("Nerubs", {
 
     ecoWeights = {
 
-        [FourCC('h0GH')] = 1, [FourCC('h0CO')] = 2,
+        --[FourCC('h0GH')] = 1, --Туннель нерубов [FourCC('h0CO')] = 2,
 
         [FourCC('h0CP')] = 5, [FourCC('h0CQ')] = 8,
 

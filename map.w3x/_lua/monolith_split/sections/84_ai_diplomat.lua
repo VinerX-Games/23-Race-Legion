@@ -425,7 +425,7 @@ AiDiplomatRpMessages = {
 
 -- ====================================================================
 -- Pick and broadcast a random RP message for an event.
--- Throttled: max 1 RP message per bot per 120 ticks.
+-- Throttled: max 1 RP message per bot per 3 diplomat ticks.
 -- ====================================================================
 ---@param pi integer
 ---@param event string  "allyPropose"|"allyAccept"|"allyBreak"|"trade"|"idle"|"underAttack"
@@ -435,7 +435,7 @@ function AiDiplomatRpSay(pi, event)
     if cfg == nil then return end
     local st = AiDiplomatState(pi)
     local tick = AiDiplomatTicks[pi] or 0
-    if st.lastRpTick ~= nil and tick - st.lastRpTick < 120 then return end
+    if st.lastRpTick ~= nil and tick - st.lastRpTick < 3 then return end
 
     -- Resolve personality name for RP table lookup
     local race = AiRaceOf(pi)

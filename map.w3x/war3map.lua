@@ -12021,7 +12021,19 @@ function TryBuild()
     GroupRemoveUnit(udg_Ai_builders[gPi], gUnit)
     GroupRemoveUnit(udg_Ai_harvest[gPi], gUnit)
 
-    -- 1) Build something — always try first
+    gInt = AiData[gPi][StringHash("NumberPorts")] or 0
+    if gInt < 3 and AiRaceUsesWaterPoint(gPi) and Random(1, 15) and GoToWaterPoint(gPi, gUnit, gX, gY) then
+        return
+    end
+
+    -- 4% chance: walk far away to expand to a new base location
+    if Random(1, 25) then
+        gX = gX + AiBuildingRadius * 7 * Cos(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
+        gY = gY + AiBuildingRadius * 7 * Sin(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
+        IssuePointOrder(gUnit, "move", gX, gY)
+        return
+    end
+
     gInt = AiDispatchChooseBuild(gPi)
     if AiSmartBuild then
         local bx, by = AiFindBuildSpot(gPi, gUnit)
@@ -12048,20 +12060,9 @@ function aiUnitJoins(u, pi)
 
     AiDispatchJoin(id, pi, u)
 
-    -- Workers: if under builder target, try building; else harvest
+    -- Workers: immediate harvest, PlayerBuilders timer will assign building tasks
     if IsUnitType(u, UNIT_TYPE_PEON) then
-        local T = AiData[pi][StringHash("T")] or 0
-        local totalWrk = getAiCount(pi, StringHash("T")) + (AiData[pi][StringHash("HV")] or 0)
-        local desiredBld = AiBuildersTarget(pi, totalWrk)
-        if T < desiredBld then
-            NumberAdd(pi, StringHash("T"))
-            GroupAddUnit(udg_Ai_buildersT[pi], u)
-            GroupRemoveUnit(udg_Ai_builders[pi], u)
-            TryBuild_u = u
-            TryBuild()
-        else
-            IssueImmediateOrder(u, "autoharvestlumber")
-        end
+        IssueImmediateOrder(u, "autoharvestlumber")
     end
 end
 -- ***************************************************************************
@@ -48832,7 +48833,7 @@ function PlayerArmy()
         if not AiBrainEnabled(pi_army) and AiDiplomatEnabled then
             local dt = (AiDiplomatTicks[pi_army] or 0) + 1
             AiDiplomatTicks[pi_army] = dt
-            if (dt % 28) == 0 then AiDiplomatTick(pi_army) end
+            if (dt % 4) == 0 then AiDiplomatTick(pi_army) end
         end
     end
     
@@ -52089,8 +52090,8 @@ AiUnitCap = AiUnitCap or 325
 function AiRunProduction(id, pi, u, def)
     local prod = def.production
     if not prod then return false end
-    -- Global cap: stop training when army+navy exceeds limit
-    if (getAiCount(pi, StringHash("Number")) + (AiData[pi][StringHash("NumberN")] or 0)) >= AiUnitCap then
+    -- Global cap: stop training when live army+navy exceeds limit
+    if (AiData[pi].wm and AiData[pi].wm.armyCount or 0) + (AiData[pi][StringHash("NumberN")] or 0) >= AiUnitCap then
         return false
     end
     local w = prod.worker
@@ -55033,7 +55034,7 @@ RegisterAiRace("Nerubs", {
 
         seed = FourCC('h0GH'),
 
-        { FourCC('h0CO'), 4, 4 }, { FourCC('h0GH'), 18, 4 },
+        { FourCC('h0CO'), 4, 4 }, --{ FourCC('h0GH'), 18, 4 }, --Туннель нерубов
 
         { FourCC('h0CR'), 10, 4 }, { FourCC('h0CS'), 5, 2 },
 
@@ -55088,7 +55089,7 @@ RegisterAiRace("Nerubs", {
 
     ecoWeights = {
 
-        [FourCC('h0GH')] = 1, [FourCC('h0CO')] = 2,
+        --[FourCC('h0GH')] = 1, --Туннель нерубов [FourCC('h0CO')] = 2,
 
         [FourCC('h0CP')] = 5, [FourCC('h0CQ')] = 8,
 
@@ -59883,7 +59884,7 @@ AiBuildingValue = AiBuildingValue or {
     [FourCC('h0G0')] = 40,
     [FourCC('h0G3')] = 20,
     [FourCC('h0G7')] = 30,
-    [FourCC('h0GH')] = 10,
+    --[FourCC('h0GH')] = 10, --Туннель нерубов
     [FourCC('h0GZ')] = 20,
     [FourCC('h0H0')] = 50,
     [FourCC('h0H1')] = 80,
@@ -60831,10 +60832,38 @@ function AiBrainArmyTick(pi, p)
     -- SQUAD TICK DISABLED: use Phase-1 focus concentration
     local focus = AiBrainPickFocus(pi, wm)
     if focus ~= nil then
-        local ordered = AiBrainOrderIdleTo(pi, p, focus.x, focus.y)
+        -- Order ALL idle combat units (heroes included), not just udg_Ai_army
+        if gAllyGroup == nil then gAllyGroup = CreateGroup() end
+        if gSubGroup == nil then gSubGroup = CreateGroup() end
+        GroupClear(gAllyGroup)
+        GroupClear(gSubGroup)
+        GroupEnumUnitsOfPlayer(gAllyGroup, p, nil)
+        local cnt = 0
+        while true do
+            local u = FirstOfGroup(gAllyGroup)
+            if u == nil then break end
+            GroupRemoveUnit(gAllyGroup, u)
+            if GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+                and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
+                and not IsUnitType(u, UNIT_TYPE_PEON) then
+                local o = GetUnitCurrentOrder(u)
+                if o == 0 or o == 851972 or o == 851976 then
+                    GroupAddUnit(gSubGroup, u)
+                    cnt = cnt + 1
+                    if cnt % 12 == 0 then
+                        GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
+                        GroupClear(gSubGroup)
+                    end
+                end
+            end
+        end
+        if BlzGroupGetSize(gSubGroup) > 0 then
+            GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
+            GroupClear(gSubGroup)
+        end
     end
     if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end
-    if (wm.tick % 28) == 0 then AiDiplomatTick(pi) end
+    if (wm.tick % 4) == 0 then AiDiplomatTick(pi) end
 end
 
 -- ====================================================================
@@ -61540,7 +61569,7 @@ AiDiplomatRpMessages = {
 
 -- ====================================================================
 -- Pick and broadcast a random RP message for an event.
--- Throttled: max 1 RP message per bot per 120 ticks.
+-- Throttled: max 1 RP message per bot per 3 diplomat ticks.
 -- ====================================================================
 ---@param pi integer
 ---@param event string  "allyPropose"|"allyAccept"|"allyBreak"|"trade"|"idle"|"underAttack"
@@ -61550,7 +61579,7 @@ function AiDiplomatRpSay(pi, event)
     if cfg == nil then return end
     local st = AiDiplomatState(pi)
     local tick = AiDiplomatTicks[pi] or 0
-    if st.lastRpTick ~= nil and tick - st.lastRpTick < 120 then return end
+    if st.lastRpTick ~= nil and tick - st.lastRpTick < 3 then return end
 
     -- Resolve personality name for RP table lookup
     local race = AiRaceOf(pi)
