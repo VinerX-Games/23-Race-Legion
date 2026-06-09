@@ -340,4 +340,79 @@ end
 | 9 | Dynamic compTarget (3.2) | — | контрит врага | средняя |
 | 10 | Merge Strateg (6.2) | -1 таймер | — | низкая |
 
+---
+
+## Профайлер: замеры времени в лайве
+
+### Как это работает
+
+`AiBrainArmyTick` оборачивает каждую секцию в замер через `os.clock()`:
+
+```lua
+local t0 = os.clock()
+AiBrainPerceive(pi)    -- perceive
+d.s[1] += (os.clock() - t0) * 1000
+
+t0 = os.clock()
+BrainProduce(...)      -- produce
+BrainBuild(...)        -- build
+d.s[2] += (os.clock() - t0) * 1000
+
+t0 = os.clock()
+AiSquadReapDead(pi)    -- squad
+d.s[5] += (os.clock() - t0) * 1000
+
+t0 = os.clock()
+BrainFocus(...)        -- focus
+d.s[6] += (os.clock() - t0) * 1000
+```
+
+Каждые `AiProfileEvery` (30) тиков бота — дамп в лог через `AiBrainLogAppend`.
+
+### Секции профайлера
+
+| Индекс | Секция | Что измеряет |
+|--------|--------|-------------|
+| s[1] | perceive | AiBrainPerceive (wm, dead cleanup, power count) |
+| s[2] | produce+build | BrainProduce + BrainBuild |
+| s[3] | objectives | AiBrainCollectObjectives |
+| s[4] | legacy | AiArmyLegacyTick (fallback) |
+| s[5] | squad | AiSquadReapDead + orphan assign |
+| s[6] | focus | BrainFocus (army group iterate + orders) |
+| s[7] | other | naval, pirate, diplomat |
+
+### Чтение через бридж
+
+```python
+# сбросить данные
+agent_bridge.py exec "AiProfileData={}; return'ok'"
+
+# через N секунд — снять
+agent_bridge.py exec "local d=AiProfileData[8]; if d then local s=d.s; return string.format('t=%d P=%d PB=%d SQ=%d F=%d O=%d', d.ticks, (s[1]or 0)/d.ticks, (s[2]or 0)/d.ticks, (s[5]or 0)/d.ticks, (s[6]or 0)/d.ticks, (s[7]or 0)/d.ticks) end"
+# → "t=12 P=0 PB=2 SQ=1 F=4 O=0"
+```
+
+### Лог-буфер
+
+`AiBrainLogBuf` аккумулирует сообщения через `AiBrainLogAppend(msg)`. 
+Flush — в конце `PlayerArmy` через `AiBrainLogFlush()`. 
+Максимум строк до принудительного flush: `AiBrainLogMaxLines` (64).
+
+Заменяет прямой `ProbeLogWrite` — убирает накладные расходы на частые записи в прелоадер.
+
+### Результаты замеров (batch=1, период=1с, 16 ботов)
+
+| Секция | ms/тик | Примечание |
+|--------|--------|-----------|
+| perceive | ~0 | быстрый, только group size |
+| produce+build | ~2 | compTarget lookup + building scan |
+| objectives | ~7 | кластеризация целей |
+| squad | ~1 | reaping dead units |
+| focus | ~3 | итерация army group + order |
+| **Итого** | **~12** | влезает в кадр (16ms) |
+
+**Исторически** (с SQDBG логами + GroupEnumUnitsOfPlayer): **115ms** на бота.
+Логи съедали ~100ms.
+
+
 **Первая фаза (ближайшая)**: №1 + №2 + №3 — максимальный прирост производительности.

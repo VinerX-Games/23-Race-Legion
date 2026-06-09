@@ -98,8 +98,8 @@ function AiProfileDump(pi)
     end
     return "[PROF] pi=" .. tostring(pi) .. " ticks=" .. tostring(d.ticks) .. " total=" .. string.format("%.1f", t) .. "ms avg=" .. string.format("%.1f", t / d.ticks) .. "ms | " .. table.concat(parts, " ")
 end
-AiBrainMaxProduce      = AiBrainMaxProduce      or 10  -- max unit-training orders per bot per tick
-AiBrainMaxBuild        = AiBrainMaxBuild        or 3   -- max building-attempts per bot per tick
+AiBrainMaxProduce      = AiBrainMaxProduce      or 20  -- max unit-training orders per bot per tick
+AiBrainMaxBuild        = AiBrainMaxBuild        or 6   -- max building-attempts per bot per tick
 AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks
 AiBrainNavalEvery      = AiBrainNavalEvery      or 60  -- naval-check every N brain-ticks
 AiBrainNavalStartTick  = AiBrainNavalStartTick  or 300 -- first naval check after this many brain-ticks (~5min)
