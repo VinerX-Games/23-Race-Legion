@@ -8287,14 +8287,7 @@ function startSilitids(pi)
     AiData[pi][StringHash("Race")] = "SL"
     SetPlayerTechResearchedSwap(FourCC('R0BV'), 1, p)
     ConditionalTriggerExecute(gg_trg_SilitidsOn)
-    local t = CreateTimer()
-    local tid = GetHandleId(t)
-    local hid = GetHandleId(hive)
-    TimerStart(t, 25, true, spawnlich)
-    SaveUnitHandle(Hash, tid, 1, hive)
-    SaveInteger(Hash, hid, 1, 0)
-    SaveBoolean(Hash, hid, 2, true)
-    t = nil
+    StartSilitidSpawner(hive)
     SetPlayerName(p, "Silitids (" .. I2S(pi + 1) .. ")")
     AiRace[pi] = "Silitids"
     ProbeLogWrite("[AI] startSilitids pi=" .. tostring(pi) .. " workers=8e01G building=1e01H")
@@ -14200,7 +14193,7 @@ function IndexNewUnit()
 				--  Remove index from linked list
 				--   
 				ndex = udg_UDexNext[udg_UDex]
-				udg_UDexNext[udg_UDexPrevudg_UDex] = ndex
+				udg_UDexNext[udg_UDexPrev[udg_UDex]] = ndex
 				udg_UDexPrev[ndex] = udg_UDexPrev[udg_UDex]
 				udg_UDexPrev[udg_UDex] = 0
 				--   
@@ -17545,92 +17538,44 @@ function AllowedPosition()
     end
     return false
 end
-function KillIf()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u= LoadUnitHandle(Hash, id, 0)
-    --local integer uid = StringHash( I2S(GetHandleId(u))+"k")
-    local time= LoadInteger(Hash, id, 1)
-    local e= LoadEffectHandle(Hash, id, 2)
-    
-    
-    if time > 0 then
-        if GetUnitAbilityLevel(u, FourCC('A0U6')) == 0 or AllowedPosition(u) then
-            UnitRemoveAbility(u, FourCC('A0U6'))
-            UnitRemoveAbility(u, FourCC('B05M'))
-            DestroyEffect(e)
-            DestroyTimer(t)
-            FlushChildHashtable(Hash, id)
-        
-        else
-            time=time - 2
-            SaveInteger(Hash, id, 1, time)
-        
-        end
-        
-        
-        
-    
-    
-    else
-        KillUnit(u)
-        DestroyEffect(e)
-        DestroyTimer(t)
-        FlushChildHashtable(Hash, id)
-        
-    end
-    
-    t=nil
-    u=nil
-    e=nil
-end
-function Continents()
-    local t= CreateTimer()
-    local id= GetHandleId(t)
-    
-    --local integer uid = StringHash( I2S(GetHandleId(u))+"k")
+function Continents(u)
     local e
     if AllowedPosition(u) then
         if GetUnitAbilityLevel(u, FourCC('A0U6')) > 0 then
             UnitRemoveAbility(u, FourCC('A0U6'))
             UnitRemoveAbility(u, FourCC('B05M'))
         end
-        
-        
     else
         if IsUnitType(u, UNIT_TYPE_STRUCTURE) then
             ExplodeUnitBJ(u)
-            
-        elseif GetUnitTypeId(u) == FourCC('H049') then
-            
-            
-        else
+        elseif GetUnitTypeId(u) ~= FourCC('H049') then
             if GetUnitAbilityLevel(u, FourCC('A0U6')) > 0 then
                 SetUnitPosition(u, 0, 0)
                 DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, "")
-                
-                
-                --call SaveInteger(Hash,id,1,30)
-                
             else
                 UnitAddAbility(u, FourCC('A0U6'))
-                e=AddSpecialEffectTarget("AbilitiesSpellsOtherTalkToMeTalkToMe", u, "overhead")
-                --call TriggerExecute( gg_trg_GoHome_No_fine )
-                
-                
-                TimerStart(t, 2, true, KillIf)
-                --call SaveTimerHandle(Hash,uid,0,t)
-                SaveUnitHandle(Hash, id, 0, u)
-                SaveInteger(Hash, id, 1, 30)
-                SaveEffectHandle(Hash, id, 2, e)
+                e = AddSpecialEffectTarget("AbilitiesSpellsOtherTalkToMeTalkToMe", u, "overhead")
+                local time = 30
+                local t = CreateTimer()
+                TimerStart(t, 2, true, function()
+                    if time > 0 then
+                        if GetUnitAbilityLevel(u, FourCC('A0U6')) == 0 or AllowedPosition(u) then
+                            UnitRemoveAbility(u, FourCC('A0U6'))
+                            UnitRemoveAbility(u, FourCC('B05M'))
+                            DestroyEffect(e)
+                            DestroyTimer(t)
+                        else
+                            time = time - 2
+                        end
+                    else
+                        KillUnit(u)
+                        DestroyEffect(e)
+                        DestroyTimer(t)
+                    end
+                end)
             end
-            
         end
     end
-    
-    t=nil
-    u=nil
-    e=nil
 end
 --===========================================================================
 -- Trigger: LeaveNeadedRegions
@@ -25138,37 +25083,26 @@ end
 function Trig_BuidingThatSellRecruts_Conditions()
     return GetUnitTypeId(GetConstructedStructure()) == FourCC('h0NX') -- ????????? ??????, ??????
 end
-function NewMember()
-    
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u= LoadUnitHandle(Hash, id, 1)
-    local uid= GetHandleId(u)
-    if UnitAlive(u) then
-        SaveInteger(Hash, uid, 1, IMaxBJ(LoadInteger(Hash, uid, 1) + 1, 3))
-    
-    else
-        
-        FlushChildHashtable(Hash, id)
-        FlushChildHashtable(Hash, uid)
-        DestroyTimer(t)
-    end
-    t=nil
-    u=nil
-end
+BezlikieStock = BezlikieStock or {}
+
 function Trig_BuidingThatSellRecruts_Actions()
-    local u= GetConstructedStructure()
-    local t= CreateTimer()
-    local id= GetHandleId(t)
-    local uid= GetHandleId(u)
-    local startCount= 1
+    local u = GetConstructedStructure()
+    local uid = GetHandleId(u)
+    local startCount = 1
+    BezlikieStock[uid] = startCount
     UnitAddAbility(u, FourCC('Asud'))
-    AddUnitToStock(u, FourCC('h0NC'), startCount, 3) --???? ??????? ?????????
-    AddUnitToStock(u, FourCC('h0NL'), startCount, 3) --???? ??????? ?????????
-    
-    TimerStart(t, 30, true, NewMember)
-    SaveUnitHandle(Hash, id, 1, u)
-    SaveInteger(Hash, uid, 1, startCount)
+    AddUnitToStock(u, FourCC('h0NC'), startCount, 3)
+    AddUnitToStock(u, FourCC('h0NL'), startCount, 3)
+    local t = CreateTimer()
+    TimerStart(t, 30, true, function()
+        if UnitAlive(u) then
+            local cnt = BezlikieStock[uid] or 0
+            BezlikieStock[uid] = math.min(cnt + 1, 3)
+        else
+            BezlikieStock[uid] = nil
+            DestroyTimer(t)
+        end
+    end)
     u=nil
     t=nil
 end
@@ -25189,10 +25123,11 @@ function Trig_BuidingSell_Conditions()
     return GetUnitTypeId(GetSellingUnit()) == FourCC('h0NX') -- ????????? ??????, ??????
 end
 function Trig_BuidingSell_Actions()
-    local u= GetSellingUnit()
-    local uid= GetHandleId(u)
-    local currentCount= LoadInteger(Hash, uid, 1)
-    SaveInteger(Hash, uid, 1, currentCount - 1)
+    local u = GetSellingUnit()
+    local uid = GetHandleId(u)
+    local currentCount = BezlikieStock[uid]
+    if currentCount == nil then return end
+    BezlikieStock[uid] = currentCount - 1
     RemoveUnitFromStock(u, FourCC('h0NC')) --???? ??????? ?????????
     RemoveUnitFromStock(u, FourCC('h0NL')) --???? ??????? ?????????
     
@@ -25703,54 +25638,27 @@ end
 --===========================================================================
 -- Trigger: SpellArrow
 --===========================================================================
-function FireDark()
-    
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u= LoadUnitHandle(Hash, id, 0)
-    --local integer aid = LoadInteger(Hash,id,1)
-    local times= LoadInteger(Hash, id, 2)
-    local level= LoadInteger(Hash, id, 3)
-    local loc= LoadLocationHandle(Hash, id, 4)
-    local u2= CreateUnit(GetOwningPlayer(u), Dummy, GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
-    SetUnitFlyHeight(u2, 100.00, 10)
-    UnitAddAbility(u2, FourCC('w2aE'))
-    SetUnitAbilityLevel(u2, FourCC('w2aE'), level)
-    IssuePointOrderLoc(u2, "carrionswarm", loc)
-    RemoveUnitTimed(u2 , 2)
-    
-    
-    times=times + 1
-    SaveInteger(Hash, id, 2, times)
-    if times > 8 then
-        RemoveLocation(loc)
-        FlushChildHashtable(Hash, id)
-        PauseTimer(t)
-        DestroyTimer(t)
-    end
-    
-    
-    u=nil
-    u2=nil
-    t=nil
-    
-    loc=nil
-end
 function Trig_SpellArrow_Actions()
-    local u= GetTriggerUnit()
-    
-    local t= CreateTimer()
-    local id= GetHandleId(t)
-    
-    TimerStart(t, 0.35, true, FireDark)
-    SaveUnitHandle(Hash, id, 0, u)
-    --call SaveInteger(Hash,id,1, 'w2aW')
-    SaveInteger(Hash, id, 2, 0)
-    SaveInteger(Hash, id, 3, GetUnitAbilityLevel(u, FourCC('w2aW')))
-    SaveLocationHandle(Hash, id, 4, GetSpellTargetLoc())
+    local u = GetTriggerUnit()
+    local level = GetUnitAbilityLevel(u, FourCC('w2aW'))
+    local loc = GetSpellTargetLoc()
+    local times = 0
+    local t = CreateTimer()
+    TimerStart(t, 0.35, true, function()
+        local u2 = CreateUnit(GetOwningPlayer(u), Dummy, GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
+        SetUnitFlyHeight(u2, 100.00, 10)
+        UnitAddAbility(u2, FourCC('w2aE'))
+        SetUnitAbilityLevel(u2, FourCC('w2aE'), level)
+        IssuePointOrderLoc(u2, "carrionswarm", loc)
+        RemoveUnitTimed(u2, 2)
+        times = times + 1
+        if times > 8 then
+            RemoveLocation(loc)
+            DestroyTimer(t)
+        end
+    end)
     t=nil
     u=nil
-    
 end
 --===========================================================================
 function InitTrig_SpellArrow()
@@ -26558,64 +26466,44 @@ end
 --===========================================================================
 -- Trigger: PlagueOnBuilding
 --===========================================================================
-function Plague()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local time= LoadInteger(Hash, id, 1)
-    local e
-    local u= LoadUnitHandle(Hash, id, 0)
-    --??????
-    if time == 0 and UnitAlive(u) and u ~= nil then
-        UnitAddAbility(u, FourCC('A1HS'))
-        e=AddSpecialEffectTargetUnitBJ("overhead", u, "CultOfDamnedPlagueCloudTargetLight.mdx")
-        SaveEffectHandle(Hash, id, 2, e)
-        
-    --??????
-    elseif time < 30 and UnitAlive(u) and u ~= nil then
-        SaveInteger(Hash, id, 1, time + 1)
-        
-    --?????
-    else
-        if UnitAlive(u) then
-            income[LoadInteger(Hash, GetHandleId(u), 0)]=income[LoadInteger(Hash, GetHandleId(u), 0)] - 5
-            income[GetPlayerId(GetOwningPlayer(u))]=income[GetPlayerId(GetOwningPlayer(u))] + 5
-        end
-        UnitRemoveAbility(u, FourCC('A1HS'))
-        DestroyEffect(LoadEffectHandle(Hash, id, 2))
-        FlushChildHashtable(Hash, id)
-        PauseTimer(t)
-        DestroyTimer(t)
-    
-    end
-    e=nil
-    t=nil
-    u=nil
-end
+PlagueOwner = PlagueOwner or {}
+
 function Trig_PlagueOnBuilding_Actions()
-    local t= CreateTimer()
-    local id= GetHandleId(t)
-    local u= GetSpellTargetUnit()
+    local caster = GetTriggerUnit()
+    local u = GetSpellTargetUnit()
     if u ~= nil then
-        if GetUnitAbilityLevel(u, FourCC('A1HS')) < 1 and IsPlayerEnemy(GetOwningPlayer(u), GetOwningPlayer(GetTriggerUnit())) then
-            --??????
-            
+        if GetUnitAbilityLevel(u, FourCC('A1HS')) < 1 and IsPlayerEnemy(GetOwningPlayer(u), GetOwningPlayer(caster)) then
             if GetUnitFoodMade(u) > 0 then
-                income[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=income[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 5
-                income[GetPlayerId(GetOwningPlayer(u))]=income[GetPlayerId(GetOwningPlayer(u))] - 5
+                income[GetPlayerId(GetOwningPlayer(caster))] = income[GetPlayerId(GetOwningPlayer(caster))] + 5
+                income[GetPlayerId(GetOwningPlayer(u))] = income[GetPlayerId(GetOwningPlayer(u))] - 5
             end
-            
-            SaveInteger(Hash, GetHandleId(u), 0, GetPlayerId(GetOwningPlayer(GetTriggerUnit())))
-            SaveUnitHandle(Hash, id, 0, u)
-            SaveInteger(Hash, id, 1, 0)
-            TimerStart(t, 1.00, true, Plague)
+            PlagueOwner[GetHandleId(u)] = GetPlayerId(GetOwningPlayer(caster))
+            local time = 0
+            local e
+            local t = CreateTimer()
+            TimerStart(t, 1.00, true, function()
+                if time == 0 and UnitAlive(u) then
+                    UnitAddAbility(u, FourCC('A1HS'))
+                    e = AddSpecialEffectTargetUnitBJ("overhead", u, "CultOfDamnedPlagueCloudTargetLight.mdx")
+                    time = time + 1
+                elseif time < 30 and UnitAlive(u) then
+                    time = time + 1
+                else
+                    if UnitAlive(u) then
+                        local casterPi = PlagueOwner[GetHandleId(u)] or 0
+                        income[casterPi] = income[casterPi] - 5
+                        income[GetPlayerId(GetOwningPlayer(u))] = income[GetPlayerId(GetOwningPlayer(u))] + 5
+                    end
+                    UnitRemoveAbility(u, FourCC('A1HS'))
+                    if e then DestroyEffect(e) end
+                    DestroyTimer(t)
+                end
+            end)
         else
-            --????????
-            SaveInteger(Hash, id, 1, 1)
-        
+            local t = CreateTimer()
+            TimerStart(t, 1.00, true, function() DestroyTimer(t) end)
         end
     end
-    t=nil
-    
 end
 --===========================================================================
 function InitTrig_PlagueOnBuilding()
@@ -26634,8 +26522,7 @@ function Trig_UnitTrained_Conditions()
 end
 function Trig_UnitTrained_Actions()
     local u2
-    local id=  LoadInteger(Hash, GetHandleId(GetTriggerUnit()), 0)
-    
+    local id = PlagueOwner[GetHandleId(GetTriggerUnit())] or 0
     u2=CreateUnit(Player(id), FourCC('h05P'), GetUnitX(GetTrainedUnit()), GetUnitY(GetTrainedUnit()), bj_UNIT_FACING)
     UnitAddAbility(u2, FourCC('cDau'))
     IssueTargetOrder(u2, "parasite", GetTrainedUnit())
@@ -37634,6 +37521,7 @@ function InitTrig_StartHorde()
     gg_trg_StartHorde=CreateTrigger()
     TriggerAddAction(gg_trg_StartHorde, Trig_StartHorde_Actions)
 end
+SilitidData = SilitidData or {}
 --===========================================================================
 -- Trigger: SilitidsOn
 --===========================================================================
@@ -37887,88 +37775,74 @@ function InitTrig_ChoseUnits2()
     end)
 end
 --===========================================================================
--- Trigger: MainSpawn2
---===========================================================================
-function Trig_MainSpawn2_Conditions()
-    return GetUnitTypeId(GetConstructedStructure()) == FourCC('e01H')
-end
-function spawnlich()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u= LoadUnitHandle(Hash, id, 1)
-    local typeid= GetUnitTypeId(u)
-    local uid= GetHandleId(u)
-    local currentCount= LoadInteger(Hash, uid, 1)
-    local x= GetUnitX(u)
-    local y= GetUnitY(u)
+local function _silitidSpawnTick(timer_hive)
+    local u = timer_hive
+    local typeid = GetUnitTypeId(u)
+    local uid = GetHandleId(u)
+    local d = SilitidData[uid]
+    if d == nil then d = {count = 0} end
+    local x = GetUnitX(u)
+    local y = GetUnitY(u)
     local u2
-    local p= GetOwningPlayer(u)
-    --call DisplayTextToPlayer(Player(0),0,0,""+I2S(currentCount))
-    if currentCount < 3 and UnitAlive(u) then
-        u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
+    local p = GetOwningPlayer(u)
+    if d.count < 3 and UnitAlive(u) then
+        u2 = CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
         SetUnitTimeScale(u2, 0.25)
-        SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
-        SaveBoolean(Hash, GetHandleId(u2), 2, true)
-        currentCount=currentCount + 1
+        SilitidData[GetHandleId(u2)] = {parentHive = u, spawned = true}
+        d.count = d.count + 1
         if udg_AiControl[GetPlayerId(p)] then
             GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
             NumberAdd(GetPlayerId(p), FourCC('e01I'))
         end
         if typeid == FourCC('e021') then
-            u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
+            u2 = CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
-            SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
-            SaveBoolean(Hash, GetHandleId(u2), 2, true)
-            currentCount=currentCount + 1
+            SilitidData[GetHandleId(u2)] = {parentHive = u, spawned = true}
+            d.count = d.count + 1
             if udg_AiControl[GetPlayerId(p)] then
                 GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
                 NumberAdd(GetPlayerId(p), FourCC('e01I'))
             end
         elseif typeid == FourCC('e020') then
-            u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
+            u2 = CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
-            SaveBoolean(Hash, GetHandleId(u2), 2, true)
-            SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
+            SilitidData[GetHandleId(u2)] = {parentHive = u, spawned = true}
             if udg_AiControl[GetPlayerId(p)] then
                 GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
                 NumberAdd(GetPlayerId(p), FourCC('e01I'))
             end
-            u2=CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
+            u2 = CreateUnit(p, FourCC('e01I'), x, y, bj_UNIT_FACING)
             SetUnitTimeScale(u2, 0.25)
-            SaveBoolean(Hash, GetHandleId(u2), 2, true)
-            SaveUnitHandle(Hash, GetHandleId(u2), 1, u)
+            SilitidData[GetHandleId(u2)] = {parentHive = u, spawned = true}
             if udg_AiControl[GetPlayerId(p)] then
                 GroupAddUnit(udg_Ai_buildings[GetPlayerId(p)], u2)
                 NumberAdd(GetPlayerId(p), FourCC('e01I'))
             end
-            currentCount=currentCount + 2
+            d.count = d.count + 2
         end
-        
+        SilitidData[uid] = d
     else
-        FlushChildHashtable(Hash, id)
-        PauseTimer(t)
+        d.spawning = false
+        SilitidData[uid] = d
+        local t = GetExpiredTimer()
         DestroyTimer(t)
-        t=nil
-        SaveBoolean(Hash, uid, 1, false)
-        p=nil
     end
-    SaveInteger(Hash, uid, 1, currentCount)
-    t=nil
-    u=nil
-    u2=nil
-    p=nil
+end
+
+function StartSilitidSpawner(hive)
+    local t = CreateTimer()
+    local hid = GetHandleId(hive)
+    local d = SilitidData[hid] or {count = 0}
+    d.spawning = true
+    SilitidData[hid] = d
+    TimerStart(t, 25, true, function() _silitidSpawnTick(hive) end)
+end
+--===========================================================================
+function Trig_MainSpawn2_Conditions()
+    return GetUnitTypeId(GetConstructedStructure()) == FourCC('e01H')
 end
 function Trig_MainSpawn2_Actions()
-    local t= CreateTimer()
-    local id= GetHandleId(t)
-    local uid= GetHandleId(GetConstructedStructure())
-    TimerStart(t, 25, true, spawnlich)
-    SaveUnitHandle(Hash, id, 1, GetConstructedStructure())
-    SaveInteger(Hash, uid, 1, 0)
-    SaveBoolean(Hash, uid, 2, true)
-    
-    t=nil
-    
+    StartSilitidSpawner(GetConstructedStructure())
 end
 --===========================================================================
 function InitTrig_MainSpawn2()
@@ -37982,28 +37856,26 @@ end
 -- Trigger: LichDead
 --===========================================================================
 function Trig_LichDead_Conditions()
-    return GetUnitTypeId(GetTriggerUnit()) == FourCC('e01I') and LoadBoolean(Hash, GetHandleId(GetTriggerUnit()), 2)
+    local d = SilitidData[GetHandleId(GetTriggerUnit())]
+    return GetUnitTypeId(GetTriggerUnit()) == FourCC('e01I') and d ~= nil and d.spawned == true
 end
 function Trig_LichDead_Actions()
-    local oldid= GetHandleId(GetTriggerUnit())
-    local u2= LoadUnitHandle(Hash, oldid, 1)
-    local id= GetHandleId(u2)
-    local currentCount= LoadInteger(Hash, id, 1) - 1
-    local t
-    FlushChildHashtable(Hash, oldid)
+    local oldid = GetHandleId(GetTriggerUnit())
+    local oldData = SilitidData[oldid]
+    if oldData == nil then return end
+    local u2 = oldData.parentHive
+    if u2 == nil then SilitidData[oldid] = nil; return end
+    local id = GetHandleId(u2)
+    local d = SilitidData[id]
+    if d == nil then d = {count = 0} end
+    d.count = d.count - 1
     
-    SaveInteger(Hash, id, 1, currentCount)
+    SilitidData[id] = d
+    SilitidData[oldid] = nil
     
-    
-    if UnitAlive(u2) and currentCount < 3 and not LoadBoolean(Hash, id, 2) then
-        t=CreateTimer()
-        TimerStart(t, 25, true, spawnlich)
-        SaveBoolean(Hash, id, 2, true)
+    if UnitAlive(u2) and d.count < 3 and not d.spawning then
+        StartSilitidSpawner(u2)
     end
-    
-    
-    t=nil
-    u2=nil
 end
 --===========================================================================
 function InitTrig_LichDead()
@@ -38020,7 +37892,7 @@ function Trig_YleyDead_Conditions()
     return GetUnitTypeId(GetTriggerUnit()) == FourCC('e01H')
 end
 function Trig_YleyDead_Actions()
-    FlushChildHashtable(Hash, GetHandleId(GetTriggerUnit()))
+    SilitidData[GetHandleId(GetTriggerUnit())] = nil
 end
 --===========================================================================
 function InitTrig_YleyDead()
@@ -38303,31 +38175,25 @@ function ItIsHive()
     return id == FourCC('e01H') or id == FourCC('e020') or id == FourCC('e021')
 end
 function Trig_LichinkaFinish_Actions()
-    local i= GetPlayerId(gPlayer)
-    --local unit u = gTriggerUnit 
-    local id= GetUnitTypeId(gTriggerUnit)
-    local e
+    local i = GetPlayerId(gPlayer)
+    local id = GetUnitTypeId(gTriggerUnit)
     
+    local oldid = GetHandleId(gTriggerUnit)
+    local oldData = SilitidData[oldid]
+    if oldData == nil then return end
+    local u2 = oldData.parentHive
+    if u2 == nil then SilitidData[oldid] = nil; return end
+    local id2 = GetHandleId(u2)
+    local d = SilitidData[id2]
+    if d == nil then d = {count = 0} end
+    d.count = d.count - 1
     
-    --???? ?????? ??????
-    local oldid= GetHandleId(gTriggerUnit)
-    local u2= LoadUnitHandle(Hash, oldid, 1)
-    local id2= GetHandleId(u2)
-    local currentCount= LoadInteger(Hash, id2, 1) - 1
-    local t
-    FlushChildHashtable(Hash, oldid)
+    SilitidData[id2] = d
+    SilitidData[oldid] = nil
     
-    SaveInteger(Hash, id2, 1, currentCount)
-    
-    
-    if UnitAlive(u2) and currentCount < 3 and not LoadBoolean(Hash, oldid, 1) then
-        t=CreateTimer()
-        TimerStart(t, 25, true, spawnlich)
-        SaveUnitHandle(Hash, GetHandleId(t), 1, u2)
-        SaveBoolean(Hash, id2, 1, true)
+    if UnitAlive(u2) and d.count < 3 and not d.spawning then
+        StartSilitidSpawner(u2)
     end
-    t=nil
-    u2=nil
     
     
     
@@ -61034,11 +60900,16 @@ function AiBrainArmyTick(pi, p)
         end
     end
 
-    ProbeLogWrite("[SQDBG] cp10 tick-squads n=" .. tostring(#AiSquadsOf(pi)))
+    ProbeLogWrite("[SQDBG] cp10 n=" .. tostring(#AiSquadsOf(pi)))
+    ProbeLogWrite("[SQDBG] cp10-get")
     local squads = AiSquadsOf(pi)
+    ProbeLogWrite("[SQDBG] cp10-type t=" .. type(squads))
+    ProbeLogWrite("[SQDBG] cp10a iter-start")
     local ticked = 0
     for sid, sq in pairs(squads) do
         if ticked >= 6 then break end
+        ProbeLogWrite("[SQDBG] cp10b sq" .. tostring(sid) .. " sqtype=" .. type(sq))
+        if sq == nil then ProbeLogWrite("[SQDBG] cp10c nil-sq skip"); break end
         local newState = sq.state
         local ok, err = pcall(function()
             if sq == nil or sq.members == nil then

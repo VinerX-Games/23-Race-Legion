@@ -680,7 +680,7 @@ function IndexNewUnit()
 				--  Remove index from linked list
 				--   
 				ndex = udg_UDexNext[udg_UDex]
-				udg_UDexNext[udg_UDexPrevudg_UDex] = ndex
+				udg_UDexNext[udg_UDexPrev[udg_UDex]] = ndex
 				udg_UDexPrev[ndex] = udg_UDexPrev[udg_UDex]
 				udg_UDexPrev[udg_UDex] = 0
 				--   

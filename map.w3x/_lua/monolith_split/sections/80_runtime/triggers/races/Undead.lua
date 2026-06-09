@@ -580,7 +580,8 @@ function Trig_PlagueOnBuilding_Actions()
                     time = time + 1
                 else
                     if UnitAlive(u) then
-                        income[PlagueOwner[GetHandleId(u)] or 0] = (PlagueOwner[GetHandleId(u)] and income[PlagueOwner[GetHandleId(u)]] or 0) - 5
+                        local casterPi = PlagueOwner[GetHandleId(u)] or 0
+                        income[casterPi] = income[casterPi] - 5
                         income[GetPlayerId(GetOwningPlayer(u))] = income[GetPlayerId(GetOwningPlayer(u))] + 5
                     end
                     UnitRemoveAbility(u, FourCC('A1HS'))

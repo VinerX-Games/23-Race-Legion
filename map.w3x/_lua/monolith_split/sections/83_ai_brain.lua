@@ -1035,11 +1035,16 @@ function AiBrainArmyTick(pi, p)
         end
     end
 
-    ProbeLogWrite("[SQDBG] cp10 tick-squads n=" .. tostring(#AiSquadsOf(pi)))
+    ProbeLogWrite("[SQDBG] cp10 n=" .. tostring(#AiSquadsOf(pi)))
+    ProbeLogWrite("[SQDBG] cp10-get")
     local squads = AiSquadsOf(pi)
+    ProbeLogWrite("[SQDBG] cp10-type t=" .. type(squads))
+    ProbeLogWrite("[SQDBG] cp10a iter-start")
     local ticked = 0
     for sid, sq in pairs(squads) do
         if ticked >= 6 then break end
+        ProbeLogWrite("[SQDBG] cp10b sq" .. tostring(sid) .. " sqtype=" .. type(sq))
+        if sq == nil then ProbeLogWrite("[SQDBG] cp10c nil-sq skip"); break end
         local newState = sq.state
         local ok, err = pcall(function()
             if sq == nil or sq.members == nil then
