@@ -344,7 +344,7 @@ RegisterAiRace("Scarlet", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -653,7 +653,7 @@ RegisterAiRace("BloodElves", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -933,7 +933,7 @@ RegisterAiRace("Goblins", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -1235,7 +1235,7 @@ RegisterAiRace("Naga", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -1578,7 +1578,7 @@ RegisterAiRace("Horde", {
 
     brainWeights = {
 
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
 
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
 
@@ -1894,7 +1894,7 @@ RegisterAiRace("JungleTrolls", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -2184,7 +2184,7 @@ RegisterAiRace("ForestTrolls", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -2410,7 +2410,7 @@ RegisterAiRace("HordeW2", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -2644,7 +2644,7 @@ RegisterAiRace("Nerubs", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -2876,7 +2876,7 @@ RegisterAiRace("Forsaken", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -3106,7 +3106,7 @@ RegisterAiRace("Alliance", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -3305,7 +3305,7 @@ RegisterAiRace("Bandits", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -3663,7 +3663,7 @@ RegisterAiRace("Undead", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -3923,7 +3923,7 @@ RegisterAiRace("Demons", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -4115,7 +4115,7 @@ RegisterAiRace("Draenei", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -4340,7 +4340,7 @@ RegisterAiRace("Stromgard", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -4555,7 +4555,7 @@ RegisterAiRace("Illidari", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -4762,7 +4762,7 @@ RegisterAiRace("Worgen", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -4975,7 +4975,7 @@ RegisterAiRace("Ogres", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -5226,7 +5226,7 @@ RegisterAiRace("Gnomes", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -5481,7 +5481,7 @@ RegisterAiRace("Silitids", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -5695,7 +5695,7 @@ RegisterAiRace("Pandarens", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -5902,7 +5902,7 @@ RegisterAiRace("Bezlikie", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -6107,7 +6107,7 @@ RegisterAiRace("Vrykul", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -6309,7 +6309,7 @@ RegisterAiRace("KulTiras", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -6547,7 +6547,7 @@ RegisterAiRace("Dalaran", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -6762,7 +6762,7 @@ RegisterAiRace("IceTrolls", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -6984,7 +6984,7 @@ RegisterAiRace("FelOrc", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,
@@ -7197,7 +7197,7 @@ RegisterAiRace("Ents", {
     brain = "objective",
 
     brainWeights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
         focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
         rHome = 2500.0, rCluster = 1600.0,

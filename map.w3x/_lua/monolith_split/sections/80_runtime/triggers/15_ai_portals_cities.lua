@@ -1606,7 +1606,7 @@ function aiRep()
     BJDebugMsg("" .. GetPlayerName(gPlayer))
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, nil)
     local gSize = BlzGroupGetSize(gGroup)
-    for gIdx = 1, gSize do
+    for gIdx = gSize, 1, -1 do
         gUnit = BlzGroupUnitAt(gGroup, gIdx)
         if gUnit == nil then break end
         BJDebugMsg("" .. GetUnitName(gUnit))

@@ -28,14 +28,178 @@ AiBrainDefaults = {
     homeThreat   = 20.0,     -- enemy power near capital that triggers defend/recall
     tpDist       = 6000.0,   -- focus farther than this -> consider TP logistics
     weights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
     },
 }
 
 -- Optional per-building-type bonus/override added on top of the live income
 -- valuation below. [typeId] = extra value. Empty by default.
-AiBuildingValue = AiBuildingValue or {}
+AiBuildingValue = AiBuildingValue or {
+    [FourCC('e00N')] = 10,
+    [FourCC('e01H')] = 20,
+    [FourCC('e01J')] = 10,
+    [FourCC('e020')] = 80,
+    [FourCC('e021')] = 50,
+    [FourCC('e02B')] = 20,
+    [FourCC('e02C')] = 50,
+    [FourCC('e02D')] = 80,
+    [FourCC('h007')] = 20,
+    [FourCC('h008')] = 50,
+    [FourCC('h009')] = 80,
+    [FourCC('h00A')] = 10,
+    [FourCC('h015')] = 20,
+    [FourCC('h016')] = 50,
+    [FourCC('h017')] = 80,
+    [FourCC('h01X')] = 20,
+    [FourCC('h01Y')] = 50,
+    [FourCC('h01Z')] = 80,
+    [FourCC('h024')] = 10,
+    [FourCC('h030')] = 20,
+    [FourCC('h031')] = 10,
+    [FourCC('h04A')] = 80,
+    [FourCC('h04B')] = 50,
+    [FourCC('h04C')] = 20,
+    [FourCC('h04M')] = 10,
+    [FourCC('h05C')] = 10,
+    [FourCC('h05U')] = 20,
+    [FourCC('h05V')] = 50,
+    [FourCC('h05W')] = 80,
+    [FourCC('h05Y')] = 10,
+    [FourCC('h070')] = 40,
+    [FourCC('h077')] = 10,
+    [FourCC('h0BQ')] = 20,
+    [FourCC('h0BR')] = 50,
+    [FourCC('h0BS')] = 80,
+    [FourCC('h0BT')] = 10,
+    [FourCC('h0CO')] = 20,
+    [FourCC('h0CP')] = 50,
+    [FourCC('h0CQ')] = 80,
+    [FourCC('h0DS')] = 10,
+    [FourCC('h0DU')] = 20,
+    [FourCC('h0DV')] = 50,
+    [FourCC('h0DW')] = 80,
+    [FourCC('h0E9')] = 20,
+    [FourCC('h0EA')] = 50,
+    [FourCC('h0EB')] = 80,
+    [FourCC('h0EC')] = 10,
+    [FourCC('h0FI')] = 10,
+    [FourCC('h0FK')] = 20,
+    [FourCC('h0FL')] = 10,
+    [FourCC('h0FR')] = 50,
+    [FourCC('h0FS')] = 80,
+    [FourCC('h0FY')] = 20,
+    [FourCC('h0FZ')] = 40,
+    [FourCC('h0G0')] = 40,
+    [FourCC('h0G3')] = 20,
+    [FourCC('h0G7')] = 30,
+    [FourCC('h0GH')] = 10,
+    [FourCC('h0GZ')] = 20,
+    [FourCC('h0H0')] = 50,
+    [FourCC('h0H1')] = 80,
+    [FourCC('h0H2')] = 10,
+    [FourCC('h0HZ')] = 20,
+    [FourCC('h0I7')] = 50,
+    [FourCC('h0I8')] = 80,
+    [FourCC('h0IK')] = 20,
+    [FourCC('h0IL')] = 80,
+    [FourCC('h0IM')] = 10,
+    [FourCC('h0JD')] = 10,
+    [FourCC('h0JL')] = 80,
+    [FourCC('h0JP')] = 20,
+    [FourCC('h0JQ')] = 50,
+    [FourCC('h0JX')] = 60,
+    [FourCC('h0JY')] = 80,
+    [FourCC('h0MS')] = 20,
+    [FourCC('h0MT')] = 20,
+    [FourCC('h0MU')] = 30,
+    [FourCC('h0MV')] = 10,
+    [FourCC('h0MY')] = 20,
+    [FourCC('h0N0')] = 30,
+    [FourCC('h0N1')] = 50,
+    [FourCC('h0N2')] = 10,
+    [FourCC('h0N3')] = 20,
+    [FourCC('h0N5')] = 20,
+    [FourCC('h0N6')] = 80,
+    [FourCC('h0N7')] = 20,
+    [FourCC('h0N8')] = 50,
+    [FourCC('h0N9')] = 80,
+    [FourCC('hcas')] = 80,
+    [FourCC('hhou')] = 10,
+    [FourCC('hkee')] = 50,
+    [FourCC('htow')] = 20,
+    [FourCC('n014')] = 20,
+    [FourCC('nnfm')] = 10,
+    [FourCC('nntt')] = 40,
+    [FourCC('o035')] = 20,
+    [FourCC('o036')] = 10,
+    [FourCC('o03D')] = 50,
+    [FourCC('o03E')] = 80,
+    [FourCC('o046')] = 20,
+    [FourCC('o047')] = 50,
+    [FourCC('o048')] = 80,
+    [FourCC('o04C')] = 10,
+    [FourCC('o05V')] = 20,
+    [FourCC('o05W')] = 50,
+    [FourCC('o05X')] = 80,
+    [FourCC('o060')] = 10,
+    [FourCC('oalt')] = 30,
+    [FourCC('obar')] = 30,
+    [FourCC('obea')] = 20,
+    [FourCC('ofor')] = 20,
+    [FourCC('ofrt')] = 80,
+    [FourCC('ogre')] = 40,
+    [FourCC('ostr')] = 60,
+    [FourCC('otrb')] = 10,
+    [FourCC('pa23')] = 20,
+    [FourCC('pa24')] = 50,
+    [FourCC('pa25')] = 80,
+    [FourCC('pa26')] = 10,
+    [FourCC('u00F')] = 50,
+    [FourCC('u00G')] = 80,
+    [FourCC('u00H')] = 10,
+    [FourCC('u02E')] = 10,
+    [FourCC('w20e')] = 80,
+    [FourCC('w20q')] = 20,
+    [FourCC('w20w')] = 50,
+    [FourCC('w20y')] = 10,
+}          -- [pi] = { [sid] = squad }   (Phase 2+)
+AiSquadSeq = AiSquadSeq or {}      -- [pi] = next squad id
+AiBrainForce = AiBrainForce or {}  -- [pi] = "objective"|"swarm" override (bridge/test)
+
+-- Tunables (global defaults; races may override via def.brainWeights). Phase 2+
+-- consumes the weights; Phase 1 uses only the geometry/threat radii.
+AiBrainDefaults = {
+    brain        = "swarm",
+    topK         = 8,        -- objectives kept per player
+    clusterEvery = 8,        -- recompute objective pool every N perceive ticks
+    rCluster     = 1600.0,   -- cluster aggregation radius
+    rHome        = 2500.0,   -- capital threat scan radius
+    squadCap     = 12,
+    commitMin    = 8,
+    guardFrac    = 0.2,
+    focusMargin  = 25.0,     -- hysteresis: keep current focus unless beaten by this
+    homeThreat   = 20.0,     -- enemy power near capital that triggers defend/recall
+    tpDist       = 6000.0,   -- focus farther than this -> consider TP logistics
+    weights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+    },
+}
+
+-- Optional per-building-type bonus/override added on top of the live income
+-- valuation below. [typeId] = extra value. Empty by default.
+AiBuildingValue = AiBuildingValue or {
+    [FourCC('ogre')] = 30,  [FourCC('ostr')] = 40,  [FourCC('ofrt')] = 50,
+    [FourCC('h00V')] = 30,  [FourCC('h00W')] = 40,  [FourCC('h00X')] = 50,
+    [FourCC('h00A')] = 30,  [FourCC('h00B')] = 40,  [FourCC('h00C')] = 50,
+    [FourCC('h02Z')] = 30,  [FourCC('h030')] = 40,  [FourCC('h031')] = 50,
+    [FourCC('unp1')] = 30,  [FourCC('unp2')] = 40,  [FourCC('unpl')] = 50,
+    [FourCC('o029')] = 30,  [FourCC('o02A')] = 40,  [FourCC('o02B')] = 50,
+    [FourCC('hvlt')] = 30,  [FourCC('hkee')] = 40,  [FourCC('hcas')] = 50,
+    [FourCC('h0AO')] = 14,  [FourCC('h0AP')] = 20,  [FourCC('h0AQ')] = 30,
+    [FourCC('h0AL')] = 14,  [FourCC('h0AM')] = 20,  [FourCC('h0AN')] = 30,
+}
 
 -- Live income value of a building instance, mirroring the economy module
 -- AddCountDis (_lib/54_count_dis.lua): food made + income-upgrade abilities
@@ -221,13 +385,301 @@ function AiBrainPerceive(pi)
     return wm
 end
 
--- ---- squad bookkeeping (stubs; populated in Phase 2) ---------------
+-- ---- squad system -------------------------------------------------
+-- AiSquads[pi][sid] = { members=group, state, objective, rally={x,y}, role }
+AiSquadCommitMin = AiSquadCommitMin or 8
+
 ---@param pi integer
 ---@return table
 function AiSquadsOf(pi)
     local t = AiSquads[pi]
     if t == nil then t = {}; AiSquads[pi] = t end
     return t
+end
+
+---@param pi integer
+---@return integer
+function AiSquadNextId(pi)
+    local id = (AiSquadSeq[pi] or 0) + 1
+    AiSquadSeq[pi] = id
+    return id
+end
+
+---@param g group
+---@return integer
+function AiSquadSize(g)
+    if g == nil then return 0 end
+    local n = 0
+    local sz = BlzGroupGetSize(g)
+    local i = 0
+    while i < sz do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            n = n + 1
+        end
+        i = i + 1
+    end
+    return n
+end
+
+---@param g group
+---@return real
+function AiSquadPower(g)
+    local pow = 0.0
+    if g == nil then return pow end
+    local sz = BlzGroupGetSize(g)
+    local i = 0
+    while i < sz do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            pow = pow + AiUnitPower(u)
+        end
+        i = i + 1
+    end
+    return pow
+end
+
+-- Order squad members to attack-move via temp copy (safe for persistent groups).
+---@param g group
+---@param x real
+---@param y real
+---@return integer
+function AiSquadOrderAtk(g, x, y)
+    if gSubGroup == nil then gSubGroup = CreateGroup() end
+    if gAllyGroup == nil then gAllyGroup = CreateGroup() end
+    GroupClear(gSubGroup)
+    GroupClear(gAllyGroup)
+    local sz = BlzGroupGetSize(g)
+    local k = 0
+    while k < sz do
+        local u = BlzGroupUnitAt(g, k)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
+            and not IsUnitType(u, UNIT_TYPE_PEON) then
+            GroupAddUnit(gAllyGroup, u)
+        end
+        k = k + 1
+    end
+    local ordered = 0
+    while true do
+        local u = FirstOfGroup(gAllyGroup)
+        if u == nil then break end
+        GroupRemoveUnit(gAllyGroup, u)
+        GroupAddUnit(gSubGroup, u)
+        ordered = ordered + 1
+        if ordered % 12 == 0 then
+            GroupPointOrder(gSubGroup, "attack", x, y)
+            GroupClear(gSubGroup)
+        end
+    end
+    if BlzGroupGetSize(gSubGroup) > 0 then
+        GroupPointOrder(gSubGroup, "attack", x, y)
+        GroupClear(gSubGroup)
+    end
+    return ordered
+end
+
+---@param g group
+---@param x real
+---@param y real
+---@return integer
+function AiSquadOrderMov(g, x, y)
+    if gSubGroup == nil then gSubGroup = CreateGroup() end
+    if gAllyGroup == nil then gAllyGroup = CreateGroup() end
+    GroupClear(gSubGroup)
+    GroupClear(gAllyGroup)
+    local sz = BlzGroupGetSize(g)
+    local k = 0
+    while k < sz do
+        local u = BlzGroupUnitAt(g, k)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
+            and not IsUnitType(u, UNIT_TYPE_PEON) then
+            GroupAddUnit(gAllyGroup, u)
+        end
+        k = k + 1
+    end
+    local ordered = 0
+    while true do
+        local u = FirstOfGroup(gAllyGroup)
+        if u == nil then break end
+        GroupRemoveUnit(gAllyGroup, u)
+        GroupAddUnit(gSubGroup, u)
+        ordered = ordered + 1
+        if ordered % 12 == 0 then
+            GroupPointOrder(gSubGroup, "smart", x, y)
+            GroupClear(gSubGroup)
+        end
+    end
+    if BlzGroupGetSize(gSubGroup) > 0 then
+        GroupPointOrder(gSubGroup, "smart", x, y)
+        GroupClear(gSubGroup)
+    end
+    return ordered
+end
+
+---@param pi integer
+---@param u unit
+function AiSquadAssign(pi, u)
+    local cfg = AiBrainCfg(pi)
+    local cap = cfg.squadCap or AiBrainDefaults.squadCap
+    local squads = AiSquadsOf(pi)
+    local bestSid, bestDist = nil, 99999999.0
+    local ux, uy = GetUnitX(u), GetUnitY(u)
+    for sid, sq in pairs(squads) do
+        if sq.role == "assault" and AiSquadSize(sq.members) < cap then
+            local cx, cy, _ = AiGroupCentroid(sq.members)
+            local dx, dy = ux - cx, uy - cy
+            local d = dx * dx + dy * dy
+            if d < bestDist then bestDist = d; bestSid = sid end
+        end
+    end
+    if bestSid ~= nil then
+        local sq = squads[bestSid]
+        GroupAddUnit(sq.members, u)
+        return
+    end
+    local sid = AiSquadNextId(pi)
+    local rx, ry
+    local capU = playerCapital[pi]
+    if capU ~= nil and GetUnitState(capU, UNIT_STATE_LIFE) > 0.405 then
+        rx, ry = GetUnitX(capU), GetUnitY(capU)
+    else
+        rx, ry = ux, uy
+    end
+    local g = CreateGroup()
+    GroupAddUnit(g, u)
+    squads[sid] = { members = g, state = "muster", objective = nil, rally = { x = rx, y = ry }, role = "assault" }
+end
+
+---@param pi integer
+function AiSquadReapDead(pi)
+    local squads = AiSquadsOf(pi)
+    for sid, sq in pairs(squads) do
+        local g = sq.members
+        local i = 0
+        while i < BlzGroupGetSize(g) do
+            local u = BlzGroupUnitAt(g, i)
+            if u == nil then i = i + 1
+            elseif GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then GroupRemoveUnit(g, u)
+            else i = i + 1 end
+        end
+    end
+end
+
+---@param pi integer
+---@return table|nil
+function AiSquadPickObj(pi, sq, wm)
+    local objs = wm.objectives
+    if objs == nil or #objs == 0 then return nil end
+    local sqPow = AiSquadPower(sq.members)
+    local best, bestScore = nil, -1e30
+    for _, o in ipairs(objs) do
+        local committed = AiObjCommittedPower(pi, o)
+        if o.kind == "capital" then
+            o.score = AiObjScore(pi, wm, o)
+            if committed + sqPow < AiObjNeededPower(pi, o) * 0.4 then o.score = o.score * 1.2 end
+        else
+            if committed >= sqPow * 3.0 then o.score = -1e30
+            else o.score = AiObjScore(pi, wm, o) end
+        end
+        if o.score > bestScore then best = o; bestScore = o.score end
+    end
+    return best and bestScore > 0 and best or nil
+end
+
+---@param pi integer
+---@param o table
+---@return real
+function AiObjNeededPower(pi, o)
+    local pow = AiEnemyPowerAround(Player(pi), o.x, o.y, 1600.0)
+    if o.kind == "capital" then pow = pow * 1.5 end
+    return math.max(pow, 5.0)
+end
+
+---@param pi integer
+---@param o table
+---@return real
+function AiObjCommittedPower(pi, o)
+    local pwr = 0.0
+    for _, sq in pairs(AiSquadsOf(pi)) do
+        if sq.objective ~= nil and sq.objective.key == o.key then
+            pwr = pwr + AiSquadPower(sq.members)
+        end
+    end
+    return pwr
+end
+
+-- FSM handlers
+function AiSquadTickMuster(pi, sid, sq, p, wm)
+    if AiSquadSize(sq.members) >= (AiBrainCfg(pi).commitMin or AiSquadCommitMin) then
+        local obj = AiSquadPickObj(pi, sq, wm)
+        if obj ~= nil then sq.objective = obj; return "march" end
+    end
+    AiSquadOrderMov(sq.members, sq.rally.x, sq.rally.y)
+    return "muster"
+end
+
+function AiSquadTickMarch(pi, sid, sq, p, wm)
+    local obj = sq.objective
+    if obj == nil then return "muster" end
+    local alive = false
+    if wm.objectives ~= nil then for _, o in ipairs(wm.objectives) do if o.key == obj.key then alive = true; break end end end
+    if not alive then sq.objective = nil; return "muster" end
+    local cx, cy, _ = AiGroupCentroid(sq.members)
+    local d = SquareRoot((cx - obj.x) * (cx - obj.x) + (cy - obj.y) * (cy - obj.y))
+    if d < 600.0 or AiEnemyPowerAround(p, cx, cy, 800.0) > 1.0 then return "engage" end
+    local oc, sc = AiContinentOf(obj.x, obj.y), AiContinentOf(cx, cy)
+    if oc ~= nil and sc ~= nil and oc ~= sc then
+        local m = AiFindMageOnContinent(pi, oc)
+        if m ~= nil then gPi = pi; gPlayer = p; PortTo(m); return "march" end
+        local rt = AiPortalRoute(sc, oc)
+        if rt ~= nil and #rt >= 2 then local portal = AiFindPortal(rt[1], rt[2])
+            if portal ~= nil then AiSquadOrderMov(sq.members, GetUnitX(portal), GetUnitY(portal)); return "march" end
+        end
+        AiBrainTryLogistics(pi, p, obj, wm)
+    end
+    AiSquadOrderAtk(sq.members, obj.x, obj.y)
+    return "march"
+end
+
+function AiSquadTickEngage(pi, sid, sq, p, wm)
+    local sz = AiSquadSize(sq.members)
+    if sz == 0 then return "muster" end
+    if wm.defendHome then sq.rally.x, sq.rally.y = wm.capX, wm.capY; return "retreat" end
+    local obj = sq.objective
+    local alive = false
+    if obj ~= nil and wm.objectives ~= nil then for _, o in ipairs(wm.objectives) do if o.key == obj.key then alive = true; break end end end
+    if not alive then
+        sq.objective = AiSquadPickObj(pi, sq, wm)
+        if sq.objective ~= nil then return "march" end
+        sq.rally.x, sq.rally.y = wm.capX or 0.0, wm.capY or 0.0; return "retreat"
+    end
+    if sz < (AiBrainCfg(pi).commitMin or AiSquadCommitMin) / 2 then
+        sq.rally.x, sq.rally.y = wm.capX or 0.0, wm.capY or 0.0; return "retreat"
+    end
+    if obj ~= nil then AiSquadOrderAtk(sq.members, obj.x, obj.y) end
+    return "engage"
+end
+
+function AiSquadTickRetreat(pi, sid, sq, p, wm)
+    if AiSquadSize(sq.members) == 0 then return "muster" end
+    local rx, ry = wm.capX or sq.rally.x, wm.capY or sq.rally.y
+    sq.rally.x, sq.rally.y = rx, ry
+    local cx, cy, _ = AiGroupCentroid(sq.members)
+    local d = SquareRoot((cx - rx) * (cx - rx) + (cy - ry) * (cy - ry))
+    if d < 800.0 and not (wm.defendHome or false) then return "muster" end
+    AiSquadOrderMov(sq.members, rx, ry)
+    return "retreat"
+end
+
+-- Wrap aiUnitJoinsArmy for brain bots
+do
+    local _orig = aiUnitJoinsArmy
+    function aiUnitJoinsArmy(u, pi)
+        _orig(u, pi)
+        if AiBrainEnabled(pi) then AiSquadAssign(pi, u) end
+    end
 end
 
 -- ---- objectives (cluster collection + scoring) ---------------------
@@ -468,93 +920,73 @@ end
 
 -- Entry point when a bot has an active brain ("objective"). Perceive → refresh
 -- objectives on schedule → pick a focus (force concentration) → order idle army
--- there. Falls back to swarm when there are no objectives. Phase 3 adds defense
--- recall + TP logistics; persistent squad FSM is a later refinement.
+-- there. Falls back to swarm when there are no objectives.
 ---@param pi integer
 ---@param p player
 function AiBrainArmyTick(pi, p)
     local wm = AiBrainPerceive(pi)
-    BrainLogEvery(pi, "perceive", 5,
-        "perceive army=" .. tostring(wm.armyCount)
-        .. " threatHome=" .. tostring(R2I(wm.threatHome or 0))
-        .. " capHP=" .. tostring(R2I(wm.capHP or 0)))
-
-    -- Defense takes priority: recall the field army home when the capital is
-    -- threatened or actively under siege. The standing AiCapitalGuard reserve is
-    -- already parked at the capital (aiUnitJoinsCapitalGuard).
-    if wm.defendHome and wm.capX ~= nil then
-        local recalled = AiBrainOrderIdleTo(pi, p, wm.capX, wm.capY)
-        BrainLogEvery(pi, "defend", 3, "DEFEND threatHome=" .. tostring(R2I(wm.threatHome or 0))
-            .. " capHP=" .. tostring(R2I(wm.capHP or 0)) .. " siege=" .. tostring(wm.capSiege)
-            .. " recalled=" .. tostring(recalled), "BRAINDEF")
-        return
-    end
-
     local cfg = AiBrainCfg(pi)
-    local every = cfg.clusterEvery or AiBrainDefaults.clusterEvery
-    if wm.objectives == nil or (wm.tick % every) == 0 then
+    if wm.objectives == nil or (wm.tick % (cfg.clusterEvery or 8)) == 0 then
         AiBrainCollectObjectives(pi, wm)
     end
+    if wm.objectives == nil or #wm.objectives == 0 then AiArmyLegacyTick(p); return end
 
-    local focus = AiBrainPickFocus(pi, wm)
-    if focus == nil then
-        BrainLogEvery(pi, "nofocus", 5, "no objectives -> swarm fallback")
-        AiArmyLegacyTick(p)
-        return
-    end
-
-    local focusContinent = AiContinentOf(focus.x, focus.y)
-    local armyContinent = wm.armyContinent
-    BrainLogEvery(pi, "focusinfo", 8, "focus " .. tostring(focusContinent or "?") .. " army " .. tostring(armyContinent or "?"))
-
-    -- Cross-continent focus: try targeted TP first, then portal walk.
-    if focusContinent ~= nil and armyContinent ~= nil and focusContinent ~= armyContinent then
-        -- (A) Targeted TP: teleport army to a mage already on the focus continent.
-        local targetMage = AiFindMageOnContinent(pi, focusContinent)
-        if targetMage ~= nil then
-            BrainLogEvery(pi, "tptarget", 3,
-                "targeted TP " .. tostring(armyContinent) .. "->" .. tostring(focusContinent)
-                .. " mage at " .. tostring(R2I(GetUnitX(targetMage))) .. "," .. tostring(R2I(GetUnitY(targetMage))),
-                "BRAINTP")
-            gPi = pi
-            gPlayer = p
-            PortTo(targetMage)
-            return
-        end
-
-        -- (B) Portal walk: find a chain of portals to the focus continent.
-        local route = AiPortalRoute(armyContinent, focusContinent)
-        if route ~= nil and #route >= 2 then
-            local portal = AiFindPortal(route[1], route[2])
-            if portal ~= nil then
-                BrainLogEvery(pi, "portalroute", 5,
-                    "portal route " .. route[1] .. "->" .. route[2]
-                    .. " (" .. #route .. " hops to " .. focusContinent .. ")",
-                    "BRAINPORTAL")
-                AiBrainOrderToPortal(pi, p, portal)
-                return
-            else
-                BrainLogEvery(pi, "portalnope", 10,
-                    "portal route exists but no portal unit found for " .. route[1] .. "->" .. route[2],
-                    "BRAINPORTAL")
+    -- Defense: flag squads to retreat
+    if wm.defendHome and wm.capX ~= nil then
+        for _, sq in pairs(AiSquadsOf(pi)) do
+            if sq.role == "assault" and sq.state ~= "retreat" then
+                sq.state = "retreat"; sq.rally.x, sq.rally.y = wm.capX, wm.capY
             end
         end
-
-        -- (C) TP logistics fallback: old behaviour (port to any enemy).
-        if AiBrainTryLogistics(pi, p, focus, wm) then return end
     end
 
-    -- Same continent: standard logistics + force concentration.
-    AiBrainTryLogistics(pi, p, focus, wm)
-    local ordered = AiBrainOrderIdleTo(pi, p, focus.x, focus.y)
-    if wm.focusKey ~= wm.lastLoggedFocus then
-        wm.lastLoggedFocus = wm.focusKey
-        BrainLogTag(pi, "BRAINFOC", "focus kind=" .. tostring(focus.kind)
-            .. " x=" .. tostring(R2I(focus.x)) .. " y=" .. tostring(R2I(focus.y))
-            .. " val=" .. tostring(R2I(focus.value)) .. " cnt=" .. tostring(focus.count)
-            .. " score=" .. tostring(R2I(focus.score or 0)) .. " ordered=" .. tostring(ordered))
-    else
-        BrainLogEvery(pi, "act", 8, "focus stable ordered=" .. tostring(ordered))
+    AiSquadReapDead(pi)
+
+    -- Orphan/squad build every 2 ticks
+    if (wm.tick % 2) == 0 then
+        local armyGroup = udg_Ai_army[pi]
+        if armyGroup ~= nil then
+            local squads = AiSquadsOf(pi)
+            -- Assign orphaned army units to squads
+            local assignedGroup = CreateGroup()
+            for _, sq in pairs(squads) do
+                local sz = BlzGroupGetSize(sq.members)
+                local j = 0
+                while j < sz do
+                    local u = BlzGroupUnitAt(sq.members, j)
+                    if u ~= nil then GroupAddUnit(assignedGroup, u) end
+                    j = j + 1
+                end
+            end
+            local armySz = BlzGroupGetSize(armyGroup)
+            local j = 0
+            while j < armySz do
+                local u = BlzGroupUnitAt(armyGroup, j)
+                if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+                    and not IsUnitType(u, UNIT_TYPE_PEON)
+                    and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
+                    and not IsUnitInGroup(u, assignedGroup) then
+                    AiSquadAssign(pi, u)
+                end
+                j = j + 1
+            end
+            DestroyGroup(assignedGroup)
+        end
+    end
+
+    -- Tick up to 3 squads per frame
+    local squads = AiSquadsOf(pi)
+    local ticked = 0
+    for sid, sq in pairs(squads) do
+        if ticked >= 3 then break end
+        local newState = sq.state
+        if sq.state == "muster" then newState = AiSquadTickMuster(pi, sid, sq, p, wm)
+        elseif sq.state == "march" then newState = AiSquadTickMarch(pi, sid, sq, p, wm)
+        elseif sq.state == "engage" then newState = AiSquadTickEngage(pi, sid, sq, p, wm)
+        elseif sq.state == "retreat" then newState = AiSquadTickRetreat(pi, sid, sq, p, wm)
+        end
+        sq.state = newState
+        ticked = ticked + 1
     end
 end
 
@@ -564,7 +996,7 @@ end
 -- random ring stays the fallback). Searches expanding rings/sectors around the
 -- capital (or builder) for the nearest placeable, non-crowded spot. Tag BRAINBLD.
 -- ====================================================================
-AiSmartBuild = AiSmartBuild or false
+AiSmartBuild = AiSmartBuild or true
 
 ---@return boolean
 function f_AnyStructure()
@@ -637,7 +1069,7 @@ end
 -- (target - current), pulling the army toward the desired mix. Returns nil when
 -- none of the candidates are listed in compTarget -> caller keeps random.
 -- ====================================================================
-AiSmartProduce = AiSmartProduce or false
+AiSmartProduce = AiSmartProduce or true
 
 ---@param pi integer
 ---@param def table

@@ -1562,10 +1562,10 @@ function Trig_F2_Attack_Point_Actions()
     GroupAddGroup(udg_F_Group[pi + 1], g)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     local fgSize = BlzGroupGetSize(g)
-    local fgIdx = 0
-    while fgIdx < fgSize and i < 25 do
-        fgIdx = fgIdx + 1
+    local fgIdx = fgSize
+    while fgIdx >= 1 and i < 25 do
         u = BlzGroupUnitAt(g, fgIdx)
+        fgIdx = fgIdx - 1
         if u == nil then break end
 
         x=GetUnitX(u)

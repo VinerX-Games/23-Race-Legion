@@ -2336,7 +2336,7 @@ function Trig_TrueHorde_Actions()
     udg_Boolexpr = NoNeORc
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
     local gSize = BlzGroupGetSize(g)
-    for gIdx = 1, gSize do
+    for gIdx = gSize, 1, -1 do
         u = BlzGroupUnitAt(g, gIdx)
         if u == nil then break end
 

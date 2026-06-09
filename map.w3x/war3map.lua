@@ -11727,44 +11727,44 @@ function TryAttack()
 					AiProbeLogLimited(pi_attack, "Log_TryAttack_NoGroupAlliesFast", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=group-fast targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 				end
 				gSubGroupCounter = 0
-				GroupClear(gSubGroup)
-				local gSize = BlzGroupGetSize(gAllyGroup)
-				local gIdx = 0
-				while gIdx < gSize do
-					gIdx = gIdx + 1
-					gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
-					if gUnit2 == nil then
-						local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
-						if attackLogCount < 10 then
-							AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
-							ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=group targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
-						end
-						GroupPointOrder(gSubGroup, "attack", gX2, gY2)
-						GroupClear(gSubGroup)
-						gSubGroupCounter = 0
-						if true then break end
-					end
+            GroupClear(gSubGroup)
+                local gSize = BlzGroupGetSize(gAllyGroup)
+                local gIdx = gSize
+                while gIdx >= 1 do
+                    gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+                    gIdx = gIdx - 1
+                    if gUnit2 == nil then
+                        local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
+                        if attackLogCount < 10 then
+                            AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
+                            ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=group targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
+                        end
+                        GroupPointOrder(gSubGroup, "attack", gX2, gY2)
+                        GroupClear(gSubGroup)
+                        gSubGroupCounter = 0
+                        if true then break end
+                    end
 
-					GroupAddUnit(gSubGroup, gUnit2)
-					gSubGroupCounter = gSubGroupCounter + 1
-					if gSubGroupCounter >= 12 then
-						GroupPointOrder(gSubGroup, "attack", gX2, gY2)
-						GroupClear(gSubGroup)
-						gSubGroupCounter = 0
-					end
+                    if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
+                        gUnit2 = ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
+                    end
 
-					if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
-						ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
-					end
+                    GroupAddUnit(gSubGroup, gUnit2)
+                    gSubGroupCounter = gSubGroupCounter + 1
+                    if gSubGroupCounter >= 12 then
+                        GroupPointOrder(gSubGroup, "attack", gX2, gY2)
+                        GroupClear(gSubGroup)
+                        gSubGroupCounter = 0
+                    end
 
-					gUnit2 = nil
-				end
-			end
-		end
-		
-		
-		-- // ????????? ????????????, ???????? ?????????? ?????? ???? ?? ?????? ???? ?? ?????? ?????
-	else
+                    gUnit2 = nil
+                end
+            end
+        end
+        
+        
+        -- // ????????? ????????????, ???????? ?????????? ?????? ???? ?? ?????? ???? ?? ?????? ?????
+    else
 		
 		
 		i = 0
@@ -11878,40 +11878,39 @@ function TryAttack()
 						AiProbeLogLimited(pi_attack, "Log_TryAttack_NoGroupAlliesWide", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=group-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 					end
 				gSubGroupCounter = 0
-				GroupClear(gSubGroup)
-				local gSize = BlzGroupGetSize(gAllyGroup)
-				local gIdx = 0
-				while gIdx < gSize do
-					gIdx = gIdx + 1
-					gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+			GroupClear(gSubGroup)
+                local gSize = BlzGroupGetSize(gAllyGroup)
+                local gIdx = gSize
+                while gIdx >= 1 do
+                    gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+                    gIdx = gIdx - 1
 
-					if gUnit2 == nil then
-						local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
-						if attackLogCount < 10 then
-							AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
-							ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=group-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
-						end
-						GroupPointOrder(gSubGroup, "attack", gX2, gY2)
-						GroupClear(gSubGroup)
-						gSubGroupCounter = 0
-						if true then break end
-					end
+                    if gUnit2 == nil then
+                        local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
+                        if attackLogCount < 10 then
+                            AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
+                            ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=group-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
+                        end
+                        GroupPointOrder(gSubGroup, "attack", gX2, gY2)
+                        GroupClear(gSubGroup)
+                        gSubGroupCounter = 0
+                        if true then break end
+                    end
 
+                    --  ???????? ? ???????
+                    if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
+                        gUnit2 = ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
+                    end
 
-					GroupAddUnit(gSubGroup, gUnit2)
-					gSubGroupCounter = gSubGroupCounter + 1
-					if gSubGroupCounter >= 12 then
-						GroupPointOrder(gSubGroup, "attack", gX2, gY2)
-						GroupClear(gSubGroup)
-						gSubGroupCounter = 0
-					end
+                    GroupAddUnit(gSubGroup, gUnit2)
+                    gSubGroupCounter = gSubGroupCounter + 1
+                    if gSubGroupCounter >= 12 then
+                        GroupPointOrder(gSubGroup, "attack", gX2, gY2)
+                        GroupClear(gSubGroup)
+                        gSubGroupCounter = 0
+                    end
 
-					--  ???????? ? ???????
-					if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
-						ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
-					end
-
-					gUnit2 = nil
+                    gUnit2 = nil
 				end
 					
 					
@@ -22878,10 +22877,10 @@ function Trig_F2_Attack_Point_Actions()
     GroupAddGroup(udg_F_Group[pi + 1], g)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     local fgSize = BlzGroupGetSize(g)
-    local fgIdx = 0
-    while fgIdx < fgSize and i < 25 do
-        fgIdx = fgIdx + 1
+    local fgIdx = fgSize
+    while fgIdx >= 1 and i < 25 do
         u = BlzGroupUnitAt(g, fgIdx)
+        fgIdx = fgIdx - 1
         if u == nil then break end
 
         x=GetUnitX(u)
@@ -37588,7 +37587,7 @@ function Trig_TrueHorde_Actions()
     udg_Boolexpr = NoNeORc
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
     local gSize = BlzGroupGetSize(g)
-    for gIdx = 1, gSize do
+    for gIdx = gSize, 1, -1 do
         u = BlzGroupUnitAt(g, gIdx)
         if u == nil then break end
 
@@ -50668,7 +50667,7 @@ function aiRep()
     BJDebugMsg("" .. GetPlayerName(gPlayer))
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, nil)
     local gSize = BlzGroupGetSize(gGroup)
-    for gIdx = 1, gSize do
+    for gIdx = gSize, 1, -1 do
         gUnit = BlzGroupUnitAt(gGroup, gIdx)
         if gUnit == nil then break end
         BJDebugMsg("" .. GetUnitName(gUnit))
@@ -53726,6 +53725,27 @@ RegisterAiRace("Scarlet", {
 
     upgrade = UpgradeScarlet,
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('h066')] = 0.3529,
+        [FourCC('h039')] = 0.2353,
+        [FourCC('h03B')] = 0.0588,
+        [FourCC('n007')] = 0.0588,
+        [FourCC('o00I')] = 0.0588,
+        [FourCC('h03F')] = 0.0588,
+        [FourCC('h03D')] = 0.0588,
+        [FourCC('h03I')] = 0.0588,
+        [FourCC('h03G')] = 0.0588,
+    },
 })
 
 
@@ -54014,6 +54034,26 @@ RegisterAiRace("BloodElves", {
 
     wall = FourCC('h011'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('h03Y')] = 0.2727,
+        [FourCC('h03Z')] = 0.2727,
+        [FourCC('h03X')] = 0.1818,
+        [FourCC('h046')] = 0.0909,
+        [FourCC('h03V')] = 0.0455,
+        [FourCC('n00I')] = 0.0455,
+        [FourCC('e001')] = 0.0455,
+        [FourCC('e030')] = 0.0455,
+    },
 })
 
 
@@ -54274,6 +54314,38 @@ RegisterAiRace("Goblins", {
 
     wall = FourCC('h0D7'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('h06Y')] = 0.0851,
+        [FourCC('h06R')] = 0.0638,
+        [FourCC('h06T')] = 0.0638,
+        [FourCC('o00X')] = 0.0638,
+        [FourCC('h06P')] = 0.0638,
+        [FourCC('h06Q')] = 0.0638,
+        [FourCC('h06L')] = 0.0638,
+        [FourCC('h06N')] = 0.0638,
+        [FourCC('h078')] = 0.0638,
+        [FourCC('h06M')] = 0.0638,
+        [FourCC('n00V')] = 0.0426,
+        [FourCC('h06S')] = 0.0426,
+        [FourCC('h06U')] = 0.0426,
+        [FourCC('o00W')] = 0.0426,
+        [FourCC('o00Y')] = 0.0426,
+        [FourCC('h06K')] = 0.0426,
+        [FourCC('H0BD')] = 0.0213,
+        [FourCC('Galh')] = 0.0213,
+        [FourCC('Gmex')] = 0.0213,
+        [FourCC('h060')] = 0.0213,
+    },
 })
 
 
@@ -54544,6 +54616,35 @@ RegisterAiRace("Naga", {
 
     continentalNaga = true,
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('n053')] = 0.1579,
+        [FourCC('n054')] = 0.1579,
+        [FourCC('nnsw')] = 0.1053,
+        [FourCC('n052')] = 0.0789,
+        [FourCC('nmyr')] = 0.0789,
+        [FourCC('n04Z')] = 0.0526,
+        [FourCC('nsnp')] = 0.0526,
+        [FourCC('n050')] = 0.0526,
+        [FourCC('nnrg')] = 0.0526,
+        [FourCC('nhyc')] = 0.0263,
+        [FourCC('n051')] = 0.0263,
+        [FourCC('n056')] = 0.0263,
+        [FourCC('nwgs')] = 0.0263,
+        [FourCC('N07A')] = 0.0263,
+        [FourCC('H0JV')] = 0.0263,
+        [FourCC('H0OZ')] = 0.0263,
+        [FourCC('H0JU')] = 0.0263,
+    },
 })
 
 
@@ -54858,6 +54959,54 @@ RegisterAiRace("Horde", {
 
     wall = FourCC('h0HO'),
 
+    brain = "objective",
+
+    brainWeights = {
+
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+
+        rHome = 2500.0, rCluster = 1600.0,
+
+        clusterEvery = 8, topK = 8,
+
+    },
+
+    compTarget = {
+
+        [FourCC('oshm')] = 0.20,
+
+        [FourCC('orai')] = 0.125,
+
+        [FourCC('otau')] = 0.125,
+
+        [FourCC('okod')] = 0.125,
+
+        [FourCC('o029')] = 0.075,
+
+        [FourCC('o01P')] = 0.075,
+
+        [FourCC('o01N')] = 0.05,
+
+        [FourCC('ogru')] = 0.05,
+
+        [FourCC('o02B')] = 0.05,
+
+        [FourCC('ohun')] = 0.05,
+
+        [FourCC('o01W')] = 0.05,
+
+        [FourCC('ocat')] = 0.05,
+
+        [FourCC('h0CY')] = 0.05,
+
+        [FourCC('o022')] = 0.025,
+
+    },
+
 })
 
 
@@ -55126,6 +55275,32 @@ RegisterAiRace("JungleTrolls", {
 
     wall = FourCC('h0N2'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('o04M')] = 0.1316,
+        [FourCC('o04L')] = 0.1053,
+        [FourCC('o04U')] = 0.1053,
+        [FourCC('o04N')] = 0.1053,
+        [FourCC('o04P')] = 0.1053,
+        [FourCC('o04O')] = 0.0789,
+        [FourCC('o04R')] = 0.0789,
+        [FourCC('o04S')] = 0.0789,
+        [FourCC('o05J')] = 0.0526,
+        [FourCC('o05G')] = 0.0526,
+        [FourCC('o05E')] = 0.0263,
+        [FourCC('O054')] = 0.0263,
+        [FourCC('O05A')] = 0.0263,
+        [FourCC('O05D')] = 0.0263,
+    },
 })
 
 
@@ -55390,6 +55565,31 @@ RegisterAiRace("ForestTrolls", {
 
     wall = FourCC('h0N4'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('o04V')] = 0.2000,
+        [FourCC('o04X')] = 0.1333,
+        [FourCC('o04W')] = 0.1111,
+        [FourCC('o050')] = 0.0889,
+        [FourCC('o053')] = 0.0889,
+        [FourCC('o04Y')] = 0.0667,
+        [FourCC('o051')] = 0.0667,
+        [FourCC('o052')] = 0.0667,
+        [FourCC('o04Z')] = 0.0667,
+        [FourCC('o05F')] = 0.0444,
+        [FourCC('o05M')] = 0.0222,
+        [FourCC('o05N')] = 0.0222,
+        [FourCC('o05O')] = 0.0222,
+    },
 })
 
 
@@ -55466,12 +55666,6 @@ RegisterAiRace("HordeW2", {
 
     production = {
 
-        [FourCC('w20q')] = { {FourCC('w200'),3,limit=20} },
-
-        [FourCC('w20w')] = { {FourCC('w200'),3,limit=20} },
-
-        [FourCC('w20e')] = { {FourCC('w200'),3,limit=20} },
-
         [FourCC('w20r')] = {
 
             {FourCC('w203'), 4}, {FourCC('w204'), 4}, {FourCC('w208'), 3,gate="tier2"},
@@ -55500,7 +55694,8 @@ RegisterAiRace("HordeW2", {
 
         [FourCC('w212')] = { {FourCC('w213'), 3} },
 
-    },
+        worker = { id = FourCC('w200'), cap = 20, from = { FourCC('w20q'), FourCC('w20w'), FourCC('w20e') } },
+},
 
     ecoWeights = {
 
@@ -55596,6 +55791,33 @@ RegisterAiRace("HordeW2", {
 
     wall = FourCC('w20u'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('w200')] = 0.2045,
+        [FourCC('w203')] = 0.0909,
+        [FourCC('w204')] = 0.0909,
+        [FourCC('w208')] = 0.0682,
+        [FourCC('w206')] = 0.0682,
+        [FourCC('w205')] = 0.0682,
+        [FourCC('w211')] = 0.0682,
+        [FourCC('w202')] = 0.0682,
+        [FourCC('w213')] = 0.0682,
+        [FourCC('w201')] = 0.0455,
+        [FourCC('w207')] = 0.0455,
+        [FourCC('w209')] = 0.0455,
+        [FourCC('W200')] = 0.0227,
+        [FourCC('W201')] = 0.0227,
+        [FourCC('W202')] = 0.0227,
+    },
 })
 
 
@@ -55694,12 +55916,6 @@ RegisterAiRace("Nerubs", {
 
     production = {
 
-        [FourCC('h0CO')] = { {FourCC('h0BE'),3,limit=20} },
-
-        [FourCC('h0CP')] = { {FourCC('h0BE'),3,limit=20} },
-
-        [FourCC('h0CQ')] = { {FourCC('h0BE'),3,limit=20} },
-
         [FourCC('h0CR')] = {
 
             {FourCC('u01J'), 4}, {FourCC('u01G'), 4}, {FourCC('u01F'), 3},
@@ -55726,7 +55942,8 @@ RegisterAiRace("Nerubs", {
 
         },
 
-    },
+        worker = { id = FourCC('h0BE'), cap = 20, from = { FourCC('h0CO'), FourCC('h0CP'), FourCC('h0CQ') } },
+},
 
     ecoWeights = {
 
@@ -55808,6 +56025,31 @@ RegisterAiRace("Nerubs", {
 
     naval = aiNavalTrain_Common,
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('h0BE')] = 0.2308,
+        [FourCC('u01J')] = 0.1026,
+        [FourCC('u01G')] = 0.1026,
+        [FourCC('u01F')] = 0.0769,
+        [FourCC('u01C')] = 0.0769,
+        [FourCC('u01I')] = 0.0769,
+        [FourCC('u01H')] = 0.0769,
+        [FourCC('u01D')] = 0.0769,
+        [FourCC('u01K')] = 0.0513,
+        [FourCC('u01B')] = 0.0513,
+        [FourCC('U01U')] = 0.0256,
+        [FourCC('U01V')] = 0.0256,
+        [FourCC('U01W')] = 0.0256,
+    },
 })
 
 
@@ -55874,12 +56116,6 @@ RegisterAiRace("Forsaken", {
 
     production = {
 
-        [FourCC('h0JP')] = { {FourCC('h0J5'), 3, limit = 22} },
-
-        [FourCC('h0JQ')] = { {FourCC('h0J5'), 3, limit = 22} },
-
-        [FourCC('h0JL')] = { {FourCC('h0J5'), 3, limit = 22} },
-
         [FourCC('h0JJ')] = {
 
             {FourCC('n04T'), 4}, {FourCC('h0JC'), 4},
@@ -55908,7 +56144,8 @@ RegisterAiRace("Forsaken", {
 
         },
 
-    },
+        worker = { id = FourCC('h0J5'), cap = 22, from = { FourCC('h0JP'), FourCC('h0JQ'), FourCC('h0JL') } },
+},
 
     ecoWeights = {
 
@@ -56020,6 +56257,33 @@ RegisterAiRace("Forsaken", {
 
     wall = FourCC('h0JM'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('h0J5')] = 0.2195,
+        [FourCC('n04T')] = 0.0976,
+        [FourCC('h0JC')] = 0.0976,
+        [FourCC('h0JN')] = 0.0732,
+        [FourCC('n04Y')] = 0.0732,
+        [FourCC('n04X')] = 0.0732,
+        [FourCC('o02X')] = 0.0732,
+        [FourCC('n04U')] = 0.0488,
+        [FourCC('n04V')] = 0.0488,
+        [FourCC('u02C')] = 0.0488,
+        [FourCC('o02Y')] = 0.0488,
+        [FourCC('h0JA')] = 0.0244,
+        [FourCC('N058')] = 0.0244,
+        [FourCC('O031')] = 0.0244,
+        [FourCC('O030')] = 0.0244,
+    },
 })
 
 
@@ -56082,12 +56346,6 @@ RegisterAiRace("Alliance", {
 
     production = {
 
-        [FourCC('htow')] = { {FourCC('hpea'),3,limit=18} },
-
-        [FourCC('hkee')] = { {FourCC('hpea'),3,limit=18} },
-
-        [FourCC('hcas')] = { {FourCC('hpea'),3,limit=18} },
-
         [FourCC('hbar')] = {
 
             {FourCC('hfoo'), 4}, {FourCC('hkni'), 3},
@@ -56112,7 +56370,8 @@ RegisterAiRace("Alliance", {
 
         },
 
-    },
+        worker = { id = FourCC('hpea'), cap = 18, from = { FourCC('htow'), FourCC('hkee'), FourCC('hcas') } },
+},
 
     ecoWeights = {
 
@@ -56228,6 +56487,28 @@ RegisterAiRace("Alliance", {
 
     wall = FourCC('hgtw'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('hpea')] = 0.3000,
+        [FourCC('hfoo')] = 0.1333,
+        [FourCC('hkni')] = 0.1000,
+        [FourCC('hrif')] = 0.1000,
+        [FourCC('hsor')] = 0.1000,
+        [FourCC('hmpr')] = 0.1000,
+        [FourCC('hmtm')] = 0.0667,
+        [FourCC('Hpal')] = 0.0333,
+        [FourCC('Hamg')] = 0.0333,
+        [FourCC('Hmkg')] = 0.0333,
+    },
 })
 
 
@@ -56290,12 +56571,6 @@ RegisterAiRace("Bandits", {
 
     production = {
 
-        [FourCC('h007')] = { {FourCC('h002'),3,limit=18} },
-
-        [FourCC('h008')] = { {FourCC('h002'),3,limit=18} },
-
-        [FourCC('h009')] = { {FourCC('h002'),3,limit=18} },
-
         [FourCC('h00B')] = {
 
             {FourCC('h003'), 4}, {FourCC('h005'), 3}, {FourCC('h006'), 2},
@@ -56324,7 +56599,8 @@ RegisterAiRace("Bandits", {
 
         },
 
-    },
+        worker = { id = FourCC('h002'), cap = 18, from = { FourCC('h007'), FourCC('h008'), FourCC('h009') } },
+},
 
     ecoWeights = {
 
@@ -56410,6 +56686,37 @@ RegisterAiRace("Bandits", {
 
     wall = FourCC('h03Q'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('h002')] = 0.1837,
+        [FourCC('h003')] = 0.0816,
+        [FourCC('n000')] = 0.0816,
+        [FourCC('h005')] = 0.0612,
+        [FourCC('n002')] = 0.0612,
+        [FourCC('h02Q')] = 0.0612,
+        [FourCC('h00P')] = 0.0612,
+        [FourCC('h029')] = 0.0612,
+        [FourCC('h006')] = 0.0408,
+        [FourCC('n004')] = 0.0408,
+        [FourCC('h02R')] = 0.0408,
+        [FourCC('h02S')] = 0.0408,
+        [FourCC('h00S')] = 0.0408,
+        [FourCC('h02A')] = 0.0408,
+        [FourCC('h00U')] = 0.0204,
+        [FourCC('h02B')] = 0.0204,
+        [FourCC('H03S')] = 0.0204,
+        [FourCC('H047')] = 0.0204,
+        [FourCC('H048')] = 0.0204,
+    },
 })
 
 
@@ -56470,12 +56777,6 @@ RegisterAiRace("Undead", {
 
     production = {
 
-        [FourCC('n014')] = { {FourCC('u00P'),3,limit=18} },
-
-        [FourCC('u00F')] = { {FourCC('u00P'),3,limit=18} },
-
-        [FourCC('u00G')] = { {FourCC('u00P'),3,limit=18} },
-
         [FourCC('n012')] = {
 
             {FourCC('n011'), 3}, {FourCC('n013'), 2}, {FourCC('u03E'), 2},
@@ -56500,7 +56801,8 @@ RegisterAiRace("Undead", {
 
         },
 
-    },
+        worker = { id = FourCC('u00P'), cap = 18, from = { FourCC('n014'), FourCC('u00F'), FourCC('u00G') } },
+},
 
     ecoWeights = {
 
@@ -56742,6 +57044,31 @@ RegisterAiRace("Undead", {
 
     wall = FourCC('u00I'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('u00P')] = 0.2500,
+        [FourCC('u00A')] = 0.1111,
+        [FourCC('n011')] = 0.0833,
+        [FourCC('u00B')] = 0.0833,
+        [FourCC('u00C')] = 0.0833,
+        [FourCC('u008')] = 0.0833,
+        [FourCC('n013')] = 0.0556,
+        [FourCC('u03E')] = 0.0556,
+        [FourCC('u00D')] = 0.0556,
+        [FourCC('u00E')] = 0.0556,
+        [FourCC('U00O')] = 0.0278,
+        [FourCC('U00V')] = 0.0278,
+        [FourCC('U00U')] = 0.0278,
+    },
 })
 
 
@@ -56804,12 +57131,6 @@ RegisterAiRace("Demons", {
 
     production = {
 
-        [FourCC('h0DU')] = { {FourCC('e02Y'),3,limit=20} },
-
-        [FourCC('h0DV')] = { {FourCC('e02Y'),3,limit=20} },
-
-        [FourCC('h0DW')] = { {FourCC('e02Y'),3,limit=20} },
-
         [FourCC('h0DY')] = {
 
             {FourCC('n025'), 4}, {FourCC('n023'), 4}, {FourCC('n026'), 3},
@@ -56836,7 +57157,8 @@ RegisterAiRace("Demons", {
 
         },
 
-    },
+        worker = { id = FourCC('e02Y'), cap = 20, from = { FourCC('h0DU'), FourCC('h0DV'), FourCC('h0DW') } },
+},
 
     ecoWeights = {
 
@@ -56982,6 +57304,33 @@ RegisterAiRace("Demons", {
 
     wall = FourCC('n02C'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('e02Y')] = 0.2143,
+        [FourCC('n025')] = 0.0952,
+        [FourCC('n023')] = 0.0952,
+        [FourCC('n026')] = 0.0714,
+        [FourCC('n027')] = 0.0714,
+        [FourCC('n024')] = 0.0714,
+        [FourCC('n020')] = 0.0714,
+        [FourCC('n02D')] = 0.0476,
+        [FourCC('n02E')] = 0.0476,
+        [FourCC('n022')] = 0.0476,
+        [FourCC('n021')] = 0.0476,
+        [FourCC('n028')] = 0.0476,
+        [FourCC('N02F')] = 0.0238,
+        [FourCC('N02A')] = 0.0238,
+        [FourCC('U028')] = 0.0238,
+    },
 })
 
 
@@ -57042,12 +57391,6 @@ RegisterAiRace("Draenei", {
 
     production = {
 
-        [FourCC('h015')] = { {FourCC('h012'),3,limit=18} },
-
-        [FourCC('h016')] = { {FourCC('h012'),3,limit=18} },
-
-        [FourCC('h017')] = { {FourCC('h012'),3,limit=18} },
-
         [FourCC('h033')] = {
 
             {FourCC('h01S'), 3}, {FourCC('h01P'), 3}, {FourCC('e000'), 4},
@@ -57078,7 +57421,8 @@ RegisterAiRace("Draenei", {
 
         },
 
-    },
+        worker = { id = FourCC('h012'), cap = 18, from = { FourCC('h015'), FourCC('h016'), FourCC('h017') } },
+},
 
     ecoWeights = {
 
@@ -57152,6 +57496,34 @@ RegisterAiRace("Draenei", {
 
     join = Join_Draenei,
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('h012')] = 0.1957,
+        [FourCC('e000')] = 0.0870,
+        [FourCC('n005')] = 0.0870,
+        [FourCC('h01S')] = 0.0652,
+        [FourCC('h01P')] = 0.0652,
+        [FourCC('h01R')] = 0.0652,
+        [FourCC('h059')] = 0.0652,
+        [FourCC('h01U')] = 0.0652,
+        [FourCC('h01Q')] = 0.0652,
+        [FourCC('h01O')] = 0.0435,
+        [FourCC('h01T')] = 0.0435,
+        [FourCC('h05E')] = 0.0435,
+        [FourCC('h05D')] = 0.0435,
+        [FourCC('H05K')] = 0.0217,
+        [FourCC('H05L')] = 0.0217,
+        [FourCC('H05M')] = 0.0217,
+    },
 })
 
 
@@ -57214,12 +57586,6 @@ RegisterAiRace("Stromgard", {
 
     production = {
 
-        [FourCC('h0GZ')] = { {FourCC('h0G9'),3,limit=18} },
-
-        [FourCC('h0H0')] = { {FourCC('h0G9'),3,limit=18} },
-
-        [FourCC('h0H1')] = { {FourCC('h0G9'),3,limit=18} },
-
         [FourCC('h0H4')] = {
 
             {FourCC('h0F4'), 3}, {FourCC('h0GT'), 3}, {FourCC('h0GU'), 2},
@@ -57252,7 +57618,8 @@ RegisterAiRace("Stromgard", {
 
         },
 
-    },
+        worker = { id = FourCC('h0G9'), cap = 18, from = { FourCC('h0GZ'), FourCC('h0H0'), FourCC('h0H1') } },
+},
 
     ecoWeights = {
 
@@ -57354,6 +57721,32 @@ RegisterAiRace("Stromgard", {
 
     wall = FourCC('h0HG'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('h0G9')] = 0.2432,
+        [FourCC('h0F4')] = 0.0811,
+        [FourCC('h0GT')] = 0.0811,
+        [FourCC('h0GX')] = 0.0811,
+        [FourCC('h0GW')] = 0.0811,
+        [FourCC('h0L3')] = 0.0811,
+        [FourCC('h0GU')] = 0.0541,
+        [FourCC('h0GS')] = 0.0541,
+        [FourCC('h0GV')] = 0.0541,
+        [FourCC('h0GY')] = 0.0541,
+        [FourCC('h0HD')] = 0.0541,
+        [FourCC('H0HB')] = 0.0270,
+        [FourCC('H0HL')] = 0.0270,
+        [FourCC('H0HA')] = 0.0270,
+    },
 })
 
 
@@ -57416,12 +57809,6 @@ RegisterAiRace("Illidari", {
 
     production = {
 
-        [FourCC('h0E9')] = { {FourCC('h0EI'),3,limit=18} },
-
-        [FourCC('h0EA')] = { {FourCC('h0EI'),3,limit=18} },
-
-        [FourCC('h0EB')] = { {FourCC('h0EI'),3,limit=18} },
-
         [FourCC('h0EE')] = {
 
             {FourCC('h0EJ'), 3}, {FourCC('o01A'), 3}, {FourCC('o01B'), 2}, {FourCC('o019'), 2},
@@ -57452,7 +57839,8 @@ RegisterAiRace("Illidari", {
 
         },
 
-    },
+        worker = { id = FourCC('h0EI'), cap = 18, from = { FourCC('h0E9'), FourCC('h0EA'), FourCC('h0EB') } },
+},
 
     ecoWeights = {
 
@@ -57548,6 +57936,34 @@ RegisterAiRace("Illidari", {
 
     wall = FourCC('h0EN'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('h0EI')] = 0.2000,
+        [FourCC('n02O')] = 0.0889,
+        [FourCC('h0EJ')] = 0.0667,
+        [FourCC('o01A')] = 0.0667,
+        [FourCC('h0EK')] = 0.0667,
+        [FourCC('h0EL')] = 0.0667,
+        [FourCC('n02M')] = 0.0667,
+        [FourCC('h04Y')] = 0.0667,
+        [FourCC('h04Z')] = 0.0667,
+        [FourCC('o01B')] = 0.0444,
+        [FourCC('o019')] = 0.0444,
+        [FourCC('n02N')] = 0.0444,
+        [FourCC('h050')] = 0.0444,
+        [FourCC('H043')] = 0.0222,
+        [FourCC('E01W')] = 0.0222,
+        [FourCC('E025')] = 0.0222,
+    },
 })
 
 
@@ -57608,10 +58024,6 @@ RegisterAiRace("Worgen", {
 
     production = {
 
-        [FourCC('h0IK')] = { {FourCC('h0IT'),3,limit=18} },
-
-        [FourCC('h0IL')] = { {FourCC('h0IT'),3,limit=18} },
-
         [FourCC('h0IO')] = {
 
             {FourCC('h0IU'), 3}, {FourCC('h0IV'), 3}, {FourCC('o02T'), 2},
@@ -57636,7 +58048,8 @@ RegisterAiRace("Worgen", {
 
         },
 
-    },
+        worker = { id = FourCC('h0IT'), cap = 18, from = { FourCC('h0IK'), FourCC('h0IL') } },
+},
 
     ecoWeights = {
 
@@ -57730,6 +58143,30 @@ RegisterAiRace("Worgen", {
 
     wall = FourCC('h0JT'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('h0IT')] = 0.2069,
+        [FourCC('h0IU')] = 0.1034,
+        [FourCC('h0IV')] = 0.1034,
+        [FourCC('h0IW')] = 0.1034,
+        [FourCC('h0J1')] = 0.1034,
+        [FourCC('o02T')] = 0.0690,
+        [FourCC('h0NA')] = 0.0690,
+        [FourCC('h0J0')] = 0.0690,
+        [FourCC('h0IX')] = 0.0690,
+        [FourCC('H0J2')] = 0.0345,
+        [FourCC('H0J6')] = 0.0345,
+        [FourCC('H0J7')] = 0.0345,
+    },
 })
 
 
@@ -57792,12 +58229,6 @@ RegisterAiRace("Ogres", {
 
     production = {
 
-        [FourCC('o035')] = { {FourCC('o03W'),3,limit=18} },
-
-        [FourCC('o03D')] = { {FourCC('o03W'),3,limit=18} },
-
-        [FourCC('o03E')] = { {FourCC('o03W'),3,limit=18} },
-
         [FourCC('o03A')] = {
 
             {FourCC('o03I'), 3}, {FourCC('o03H'), 3}, {FourCC('o03G'), 2}, {FourCC('o03F'), 2},
@@ -57830,7 +58261,8 @@ RegisterAiRace("Ogres", {
 
         },
 
-    },
+        worker = { id = FourCC('o03W'), cap = 18, from = { FourCC('o035'), FourCC('o03D'), FourCC('o03E') } },
+},
 
     ecoWeights = {
 
@@ -57924,6 +58356,38 @@ RegisterAiRace("Ogres", {
 
     wall = FourCC('o038'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('o03W')] = 0.1800,
+        [FourCC('o03I')] = 0.0600,
+        [FourCC('o03H')] = 0.0600,
+        [FourCC('o03L')] = 0.0600,
+        [FourCC('o03P')] = 0.0600,
+        [FourCC('o03U')] = 0.0600,
+        [FourCC('o03T')] = 0.0600,
+        [FourCC('o03G')] = 0.0400,
+        [FourCC('o03F')] = 0.0400,
+        [FourCC('o03M')] = 0.0400,
+        [FourCC('o03K')] = 0.0400,
+        [FourCC('o03N')] = 0.0400,
+        [FourCC('o03O')] = 0.0400,
+        [FourCC('o03V')] = 0.0400,
+        [FourCC('o03Q')] = 0.0400,
+        [FourCC('o03R')] = 0.0400,
+        [FourCC('o03S')] = 0.0400,
+        [FourCC('N05L')] = 0.0200,
+        [FourCC('N05K')] = 0.0200,
+        [FourCC('N05J')] = 0.0200,
+    },
 })
 
 
@@ -57984,12 +58448,6 @@ RegisterAiRace("Gnomes", {
 
     production = {
 
-        [FourCC('h0FK')] = { {FourCC('h0FA'),3,limit=18} },
-
-        [FourCC('h0FR')] = { {FourCC('h0FA'),3,limit=18} },
-
-        [FourCC('h0FS')] = { {FourCC('h0FA'),3,limit=18} },
-
         [FourCC('h0G3')] = {
 
             {FourCC('h0FC'), 3}, {FourCC('h0FB'), 2}, {FourCC('h0FD'), 2},
@@ -58022,7 +58480,8 @@ RegisterAiRace("Gnomes", {
 
         },
 
-    },
+        worker = { id = FourCC('h0FA'), cap = 18, from = { FourCC('h0FK'), FourCC('h0FR'), FourCC('h0FS') } },
+},
 
     ecoWeights = {
 
@@ -58148,6 +58607,44 @@ RegisterAiRace("Gnomes", {
 
     wall = FourCC('h0FZ'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('h0FA')] = 0.1500,
+        [FourCC('h0FC')] = 0.0500,
+        [FourCC('h0FP')] = 0.0500,
+        [FourCC('h0G1')] = 0.0500,
+        [FourCC('h0FQ')] = 0.0500,
+        [FourCC('h0FB')] = 0.0333,
+        [FourCC('h0FD')] = 0.0333,
+        [FourCC('h0FE')] = 0.0333,
+        [FourCC('h0FU')] = 0.0333,
+        [FourCC('h0FM')] = 0.0333,
+        [FourCC('h0FX')] = 0.0333,
+        [FourCC('h0G4')] = 0.0333,
+        [FourCC('h0G5')] = 0.0333,
+        [FourCC('h0FH')] = 0.0333,
+        [FourCC('h0G2')] = 0.0333,
+        [FourCC('h0FW')] = 0.0333,
+        [FourCC('h0FV')] = 0.0333,
+        [FourCC('h0FN')] = 0.0333,
+        [FourCC('h0FO')] = 0.0333,
+        [FourCC('h0FJ')] = 0.0333,
+        [FourCC('h0FF')] = 0.0333,
+        [FourCC('h0FG')] = 0.0333,
+        [FourCC('h0FT')] = 0.0333,
+        [FourCC('H0GG')] = 0.0167,
+        [FourCC('H0GE')] = 0.0167,
+        [FourCC('H0GC')] = 0.0167,
+    },
 })
 
 
@@ -58212,12 +58709,6 @@ RegisterAiRace("Silitids", {
 
     production = {
 
-        [FourCC('e01H')] = { {FourCC('e01R'),3,limit=18} },
-
-        [FourCC('e021')] = { {FourCC('e01R'),3,limit=18} },
-
-        [FourCC('e020')] = { {FourCC('e01R'),3,limit=18} },
-
         [FourCC('o015')] = {
 
             {FourCC('u020'), 3}, {FourCC('u022'), 3}, {FourCC('e01N'), 2},
@@ -58242,7 +58733,8 @@ RegisterAiRace("Silitids", {
 
         },
 
-    },
+        worker = { id = FourCC('e01R'), cap = 18, from = { FourCC('e01H'), FourCC('e021'), FourCC('e020') } },
+},
 
     ecoWeights = {
 
@@ -58370,6 +58862,35 @@ RegisterAiRace("Silitids", {
 
     join = Join_Silitids,
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('e01R')] = 0.2045,
+        [FourCC('e01G')] = 0.0909,
+        [FourCC('u020')] = 0.0682,
+        [FourCC('u022')] = 0.0682,
+        [FourCC('e01Z')] = 0.0682,
+        [FourCC('e02W')] = 0.0682,
+        [FourCC('e01N')] = 0.0455,
+        [FourCC('e01V')] = 0.0455,
+        [FourCC('e01T')] = 0.0455,
+        [FourCC('e01U')] = 0.0455,
+        [FourCC('e01Q')] = 0.0455,
+        [FourCC('e01S')] = 0.0455,
+        [FourCC('e01O')] = 0.0455,
+        [FourCC('e01P')] = 0.0455,
+        [FourCC('U025')] = 0.0227,
+        [FourCC('U024')] = 0.0227,
+        [FourCC('U023')] = 0.0227,
+    },
 })
 
 
@@ -58432,12 +58953,6 @@ RegisterAiRace("Pandarens", {
 
     production = {
 
-        [FourCC('pa23')] = { {FourCC('pa01'),3,limit=20} },
-
-        [FourCC('pa24')] = { {FourCC('pa01'),3,limit=20} },
-
-        [FourCC('pa25')] = { {FourCC('pa01'),3,limit=20} },
-
         [FourCC('pa28')] = {
 
             {FourCC('pa06'), 3}, {FourCC('pa05'), 3}, {FourCC('pa12'), 2},
@@ -58470,7 +58985,8 @@ RegisterAiRace("Pandarens", {
 
         },
 
-    },
+        worker = { id = FourCC('pa01'), cap = 20, from = { FourCC('pa23'), FourCC('pa24'), FourCC('pa25') } },
+},
 
     ecoWeights = {
 
@@ -58560,6 +59076,38 @@ RegisterAiRace("Pandarens", {
 
     wall = FourCC('h0P5'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('pa01')] = 0.1875,
+        [FourCC('pa06')] = 0.0625,
+        [FourCC('pa05')] = 0.0625,
+        [FourCC('pa04')] = 0.0625,
+        [FourCC('pa08')] = 0.0625,
+        [FourCC('pa29')] = 0.0625,
+        [FourCC('pa12')] = 0.0417,
+        [FourCC('pa11')] = 0.0417,
+        [FourCC('pa22')] = 0.0417,
+        [FourCC('pa10')] = 0.0417,
+        [FourCC('pa14')] = 0.0417,
+        [FourCC('pa13')] = 0.0417,
+        [FourCC('pa07')] = 0.0417,
+        [FourCC('pa35')] = 0.0417,
+        [FourCC('pa38')] = 0.0417,
+        [FourCC('pa09')] = 0.0417,
+        [FourCC('PA36')] = 0.0208,
+        [FourCC('PA37')] = 0.0208,
+        [FourCC('PA38')] = 0.0208,
+        [FourCC('PA40')] = 0.0208,
+    },
 })
 
 
@@ -58620,12 +59168,6 @@ RegisterAiRace("Bezlikie", {
 
     production = {
 
-        [FourCC('h0HZ')] = { {FourCC('u02D'),3,limit=18} },
-
-        [FourCC('h0I7')] = { {FourCC('u02D'),3,limit=18} },
-
-        [FourCC('h0I8')] = { {FourCC('u02D'),3,limit=18} },
-
         [FourCC('h0I1')] = {
 
             {FourCC('h0MO'), 3}, {FourCC('h0MN'), 3}, {FourCC('h0I9'), 2},
@@ -58652,7 +59194,8 @@ RegisterAiRace("Bezlikie", {
 
         },
 
-    },
+        worker = { id = FourCC('u02D'), cap = 18, from = { FourCC('h0HZ'), FourCC('h0I7'), FourCC('h0I8') } },
+},
 
     ecoWeights = {
 
@@ -58740,6 +59283,34 @@ RegisterAiRace("Bezlikie", {
 
     wall = FourCC('h0K3'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('u02D')] = 0.2250,
+        [FourCC('h0MO')] = 0.0750,
+        [FourCC('h0MN')] = 0.0750,
+        [FourCC('h0IE')] = 0.0750,
+        [FourCC('n05I')] = 0.0750,
+        [FourCC('h0I9')] = 0.0500,
+        [FourCC('h0IA')] = 0.0500,
+        [FourCC('h0IB')] = 0.0500,
+        [FourCC('h0ID')] = 0.0500,
+        [FourCC('h0K2')] = 0.0500,
+        [FourCC('h0IF')] = 0.0500,
+        [FourCC('h0IG')] = 0.0500,
+        [FourCC('h0IC')] = 0.0500,
+        [FourCC('U02H')] = 0.0250,
+        [FourCC('U02G')] = 0.0250,
+        [FourCC('U02I')] = 0.0250,
+    },
 })
 
 
@@ -58800,12 +59371,6 @@ RegisterAiRace("Vrykul", {
 
     production = {
 
-        [FourCC('h0BQ')] = { {FourCC('h0C9'),3,limit=18} },
-
-        [FourCC('h0BR')] = { {FourCC('h0C9'),3,limit=18} },
-
-        [FourCC('h0BS')] = { {FourCC('h0C9'),3,limit=18} },
-
         [FourCC('h0BV')] = {
 
             {FourCC('h0AA'), 3}, {FourCC('h0AD'), 3}, {FourCC('h0A5'), 2}, {FourCC('h0A6'), 2},
@@ -58830,7 +59395,8 @@ RegisterAiRace("Vrykul", {
 
         },
 
-    },
+        worker = { id = FourCC('h0C9'), cap = 18, from = { FourCC('h0BQ'), FourCC('h0BR'), FourCC('h0BS') } },
+},
 
     ecoWeights = {
 
@@ -58922,6 +59488,33 @@ RegisterAiRace("Vrykul", {
 
     join = Join_Vrykul,
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('h0C9')] = 0.2368,
+        [FourCC('h0AA')] = 0.0789,
+        [FourCC('h0AD')] = 0.0789,
+        [FourCC('h0BP')] = 0.0789,
+        [FourCC('wk08')] = 0.0789,
+        [FourCC('h0A5')] = 0.0526,
+        [FourCC('h0A6')] = 0.0526,
+        [FourCC('h0A9')] = 0.0526,
+        [FourCC('h0AC')] = 0.0526,
+        [FourCC('h0AE')] = 0.0526,
+        [FourCC('wk02')] = 0.0526,
+        [FourCC('wk00')] = 0.0526,
+        [FourCC('H0C6')] = 0.0263,
+        [FourCC('H0C5')] = 0.0263,
+        [FourCC('H0C7')] = 0.0263,
+    },
 })
 
 
@@ -58984,12 +59577,6 @@ RegisterAiRace("KulTiras", {
 
     production = {
 
-        [FourCC('h01X')] = { {FourCC('h013'),3,limit=18} },
-
-        [FourCC('h01Y')] = { {FourCC('h013'),3,limit=18} },
-
-        [FourCC('h01Z')] = { {FourCC('h013'),3,limit=18} },
-
         [FourCC('h022')] = {
 
             {FourCC('h019'), 3}, {FourCC('h01E'), 3}, {FourCC('h01D'), 2}, {FourCC('h01C'), 2},
@@ -59014,7 +59601,8 @@ RegisterAiRace("KulTiras", {
 
         },
 
-    },
+        worker = { id = FourCC('h013'), cap = 18, from = { FourCC('h01X'), FourCC('h01Y'), FourCC('h01Z') } },
+},
 
     ecoWeights = {
 
@@ -59102,6 +59690,31 @@ RegisterAiRace("KulTiras", {
 
     wall = FourCC('h0E7'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('h013')] = 0.2647,
+        [FourCC('h019')] = 0.0882,
+        [FourCC('h01E')] = 0.0882,
+        [FourCC('h01F')] = 0.0882,
+        [FourCC('h01H')] = 0.0882,
+        [FourCC('h01D')] = 0.0588,
+        [FourCC('h01C')] = 0.0588,
+        [FourCC('h01G')] = 0.0588,
+        [FourCC('h01A')] = 0.0588,
+        [FourCC('h01I')] = 0.0588,
+        [FourCC('H01L')] = 0.0294,
+        [FourCC('H01N')] = 0.0294,
+        [FourCC('H01K')] = 0.0294,
+    },
 })
 
 
@@ -59156,8 +59769,6 @@ RegisterAiRace("Dalaran", {
 
     production = {
 
-        [FourCC('h030')] = { {FourCC('u001'),3,limit=18} },
-
         [FourCC('h02W')] = {
 
             {FourCC('h02J'), 3}, {FourCC('h02K'), 3}, {FourCC('h02M'), 2}, {FourCC('h02P'), 2},
@@ -59182,7 +59793,8 @@ RegisterAiRace("Dalaran", {
 
         },
 
-    },
+        worker = { id = FourCC('u001'), cap = 18, from = { FourCC('h030') } },
+},
 
     ecoWeights = {
 
@@ -59316,6 +59928,32 @@ RegisterAiRace("Dalaran", {
 
     join = Join_Dalaran,
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('u001')] = 0.0968,
+        [FourCC('h02J')] = 0.0968,
+        [FourCC('h02K')] = 0.0968,
+        [FourCC('n00B')] = 0.0968,
+        [FourCC('h02L')] = 0.0968,
+        [FourCC('n00C')] = 0.0968,
+        [FourCC('h02M')] = 0.0645,
+        [FourCC('h02P')] = 0.0645,
+        [FourCC('h02I')] = 0.0645,
+        [FourCC('h02O')] = 0.0645,
+        [FourCC('n00D')] = 0.0645,
+        [FourCC('H04S')] = 0.0323,
+        [FourCC('H04W')] = 0.0323,
+        [FourCC('H04X')] = 0.0323,
+    },
 })
 
 
@@ -59376,12 +60014,6 @@ RegisterAiRace("IceTrolls", {
 
     production = {
 
-        [FourCC('o046')] = { {FourCC('o045'),3,limit=18} },
-
-        [FourCC('o047')] = { {FourCC('o045'),3,limit=18} },
-
-        [FourCC('o048')] = { {FourCC('o045'),3,limit=18} },
-
         [FourCC('o04A')] = {
 
             {FourCC('n05S'), 3}, {FourCC('n05T'), 3}, {FourCC('o04F'), 2},
@@ -59412,7 +60044,8 @@ RegisterAiRace("IceTrolls", {
 
         },
 
-    },
+        worker = { id = FourCC('o045'), cap = 18, from = { FourCC('o046'), FourCC('o047'), FourCC('o048') } },
+},
 
     ecoWeights = {
 
@@ -59510,6 +60143,33 @@ RegisterAiRace("IceTrolls", {
 
     join = Join_IceTrolls,
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('o045')] = 0.2308,
+        [FourCC('n05S')] = 0.0769,
+        [FourCC('n05T')] = 0.0769,
+        [FourCC('n05Z')] = 0.0769,
+        [FourCC('n05Y')] = 0.0769,
+        [FourCC('n05V')] = 0.0769,
+        [FourCC('o04F')] = 0.0513,
+        [FourCC('n05U')] = 0.0513,
+        [FourCC('n07B')] = 0.0513,
+        [FourCC('o04T')] = 0.0513,
+        [FourCC('n05W')] = 0.0513,
+        [FourCC('n05X')] = 0.0513,
+        [FourCC('O04H')] = 0.0256,
+        [FourCC('O04G')] = 0.0256,
+        [FourCC('O04I')] = 0.0256,
+    },
 })
 
 
@@ -59570,12 +60230,6 @@ RegisterAiRace("FelOrc", {
 
     production = {
 
-        [FourCC('o05V')] = { {FourCC('n06B'),3,limit=18} },
-
-        [FourCC('o05W')] = { {FourCC('n06B'),3,limit=18} },
-
-        [FourCC('o05X')] = { {FourCC('n06B'),3,limit=18} },
-
         [FourCC('o05Z')] = {
 
             {FourCC('n06T'), 3}, {FourCC('n06Q'), 3}, {FourCC('n06W'), 2},
@@ -59608,7 +60262,8 @@ RegisterAiRace("FelOrc", {
 
         },
 
-    },
+        worker = { id = FourCC('n06B'), cap = 18, from = { FourCC('o05V'), FourCC('o05W'), FourCC('o05X') } },
+},
 
     ecoWeights = {
 
@@ -59710,6 +60365,42 @@ RegisterAiRace("FelOrc", {
 
     join = Join_FelOrc,
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('n06B')] = 0.1607,
+        [FourCC('n06T')] = 0.0536,
+        [FourCC('n06Q')] = 0.0536,
+        [FourCC('n06R')] = 0.0536,
+        [FourCC('n06V')] = 0.0536,
+        [FourCC('n06W')] = 0.0357,
+        [FourCC('n06L')] = 0.0357,
+        [FourCC('n06M')] = 0.0357,
+        [FourCC('n06J')] = 0.0357,
+        [FourCC('n068')] = 0.0357,
+        [FourCC('n06G')] = 0.0357,
+        [FourCC('n06D')] = 0.0357,
+        [FourCC('n06S')] = 0.0357,
+        [FourCC('n06N')] = 0.0357,
+        [FourCC('n06O')] = 0.0357,
+        [FourCC('n067')] = 0.0357,
+        [FourCC('n06C')] = 0.0357,
+        [FourCC('n06K')] = 0.0357,
+        [FourCC('n06U')] = 0.0357,
+        [FourCC('n069')] = 0.0357,
+        [FourCC('n06A')] = 0.0357,
+        [FourCC('N072')] = 0.0179,
+        [FourCC('N073')] = 0.0179,
+        [FourCC('N06P')] = 0.0179,
+    },
 })
 
 
@@ -59778,12 +60469,6 @@ RegisterAiRace("Ents", {
 
     production = {
 
-        [FourCC('e02B')] = { {FourCC('e02T'),3,limit=18} },
-
-        [FourCC('e02C')] = { {FourCC('e02T'),3,limit=18} },
-
-        [FourCC('e02D')] = { {FourCC('e02T'),3,limit=18} },
-
         [FourCC('e02F')] = {
 
             {FourCC('e02J'), 3}, {FourCC('e02K'), 3}, {FourCC('e02L'), 2},
@@ -59804,7 +60489,8 @@ RegisterAiRace("Ents", {
 
         },
 
-    },
+        worker = { id = FourCC('e02T'), cap = 18, from = { FourCC('e02B'), FourCC('e02C'), FourCC('e02D') } },
+},
 
     ecoWeights = {
 
@@ -59892,6 +60578,31 @@ RegisterAiRace("Ents", {
 
     wall = FourCC('e02I'),
 
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('e02T')] = 0.2727,
+        [FourCC('e02J')] = 0.0909,
+        [FourCC('e02K')] = 0.0909,
+        [FourCC('e02V')] = 0.0909,
+        [FourCC('e02L')] = 0.0606,
+        [FourCC('e02O')] = 0.0606,
+        [FourCC('e03G')] = 0.0606,
+        [FourCC('e03A')] = 0.0606,
+        [FourCC('e02M')] = 0.0606,
+        [FourCC('e02N')] = 0.0606,
+        [FourCC('E02S')] = 0.0303,
+        [FourCC('E02Q')] = 0.0303,
+        [FourCC('E02R')] = 0.0303,
+    },
 })
 
 -- ====================================================================
@@ -59924,14 +60635,178 @@ AiBrainDefaults = {
     homeThreat   = 20.0,     -- enemy power near capital that triggers defend/recall
     tpDist       = 6000.0,   -- focus farther than this -> consider TP logistics
     weights = {
-        kind  = { capital = 100, cluster = 40, capture = 30, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
     },
 }
 
 -- Optional per-building-type bonus/override added on top of the live income
 -- valuation below. [typeId] = extra value. Empty by default.
-AiBuildingValue = AiBuildingValue or {}
+AiBuildingValue = AiBuildingValue or {
+    [FourCC('e00N')] = 10,
+    [FourCC('e01H')] = 20,
+    [FourCC('e01J')] = 10,
+    [FourCC('e020')] = 80,
+    [FourCC('e021')] = 50,
+    [FourCC('e02B')] = 20,
+    [FourCC('e02C')] = 50,
+    [FourCC('e02D')] = 80,
+    [FourCC('h007')] = 20,
+    [FourCC('h008')] = 50,
+    [FourCC('h009')] = 80,
+    [FourCC('h00A')] = 10,
+    [FourCC('h015')] = 20,
+    [FourCC('h016')] = 50,
+    [FourCC('h017')] = 80,
+    [FourCC('h01X')] = 20,
+    [FourCC('h01Y')] = 50,
+    [FourCC('h01Z')] = 80,
+    [FourCC('h024')] = 10,
+    [FourCC('h030')] = 20,
+    [FourCC('h031')] = 10,
+    [FourCC('h04A')] = 80,
+    [FourCC('h04B')] = 50,
+    [FourCC('h04C')] = 20,
+    [FourCC('h04M')] = 10,
+    [FourCC('h05C')] = 10,
+    [FourCC('h05U')] = 20,
+    [FourCC('h05V')] = 50,
+    [FourCC('h05W')] = 80,
+    [FourCC('h05Y')] = 10,
+    [FourCC('h070')] = 40,
+    [FourCC('h077')] = 10,
+    [FourCC('h0BQ')] = 20,
+    [FourCC('h0BR')] = 50,
+    [FourCC('h0BS')] = 80,
+    [FourCC('h0BT')] = 10,
+    [FourCC('h0CO')] = 20,
+    [FourCC('h0CP')] = 50,
+    [FourCC('h0CQ')] = 80,
+    [FourCC('h0DS')] = 10,
+    [FourCC('h0DU')] = 20,
+    [FourCC('h0DV')] = 50,
+    [FourCC('h0DW')] = 80,
+    [FourCC('h0E9')] = 20,
+    [FourCC('h0EA')] = 50,
+    [FourCC('h0EB')] = 80,
+    [FourCC('h0EC')] = 10,
+    [FourCC('h0FI')] = 10,
+    [FourCC('h0FK')] = 20,
+    [FourCC('h0FL')] = 10,
+    [FourCC('h0FR')] = 50,
+    [FourCC('h0FS')] = 80,
+    [FourCC('h0FY')] = 20,
+    [FourCC('h0FZ')] = 40,
+    [FourCC('h0G0')] = 40,
+    [FourCC('h0G3')] = 20,
+    [FourCC('h0G7')] = 30,
+    [FourCC('h0GH')] = 10,
+    [FourCC('h0GZ')] = 20,
+    [FourCC('h0H0')] = 50,
+    [FourCC('h0H1')] = 80,
+    [FourCC('h0H2')] = 10,
+    [FourCC('h0HZ')] = 20,
+    [FourCC('h0I7')] = 50,
+    [FourCC('h0I8')] = 80,
+    [FourCC('h0IK')] = 20,
+    [FourCC('h0IL')] = 80,
+    [FourCC('h0IM')] = 10,
+    [FourCC('h0JD')] = 10,
+    [FourCC('h0JL')] = 80,
+    [FourCC('h0JP')] = 20,
+    [FourCC('h0JQ')] = 50,
+    [FourCC('h0JX')] = 60,
+    [FourCC('h0JY')] = 80,
+    [FourCC('h0MS')] = 20,
+    [FourCC('h0MT')] = 20,
+    [FourCC('h0MU')] = 30,
+    [FourCC('h0MV')] = 10,
+    [FourCC('h0MY')] = 20,
+    [FourCC('h0N0')] = 30,
+    [FourCC('h0N1')] = 50,
+    [FourCC('h0N2')] = 10,
+    [FourCC('h0N3')] = 20,
+    [FourCC('h0N5')] = 20,
+    [FourCC('h0N6')] = 80,
+    [FourCC('h0N7')] = 20,
+    [FourCC('h0N8')] = 50,
+    [FourCC('h0N9')] = 80,
+    [FourCC('hcas')] = 80,
+    [FourCC('hhou')] = 10,
+    [FourCC('hkee')] = 50,
+    [FourCC('htow')] = 20,
+    [FourCC('n014')] = 20,
+    [FourCC('nnfm')] = 10,
+    [FourCC('nntt')] = 40,
+    [FourCC('o035')] = 20,
+    [FourCC('o036')] = 10,
+    [FourCC('o03D')] = 50,
+    [FourCC('o03E')] = 80,
+    [FourCC('o046')] = 20,
+    [FourCC('o047')] = 50,
+    [FourCC('o048')] = 80,
+    [FourCC('o04C')] = 10,
+    [FourCC('o05V')] = 20,
+    [FourCC('o05W')] = 50,
+    [FourCC('o05X')] = 80,
+    [FourCC('o060')] = 10,
+    [FourCC('oalt')] = 30,
+    [FourCC('obar')] = 30,
+    [FourCC('obea')] = 20,
+    [FourCC('ofor')] = 20,
+    [FourCC('ofrt')] = 80,
+    [FourCC('ogre')] = 40,
+    [FourCC('ostr')] = 60,
+    [FourCC('otrb')] = 10,
+    [FourCC('pa23')] = 20,
+    [FourCC('pa24')] = 50,
+    [FourCC('pa25')] = 80,
+    [FourCC('pa26')] = 10,
+    [FourCC('u00F')] = 50,
+    [FourCC('u00G')] = 80,
+    [FourCC('u00H')] = 10,
+    [FourCC('u02E')] = 10,
+    [FourCC('w20e')] = 80,
+    [FourCC('w20q')] = 20,
+    [FourCC('w20w')] = 50,
+    [FourCC('w20y')] = 10,
+}          -- [pi] = { [sid] = squad }   (Phase 2+)
+AiSquadSeq = AiSquadSeq or {}      -- [pi] = next squad id
+AiBrainForce = AiBrainForce or {}  -- [pi] = "objective"|"swarm" override (bridge/test)
+
+-- Tunables (global defaults; races may override via def.brainWeights). Phase 2+
+-- consumes the weights; Phase 1 uses only the geometry/threat radii.
+AiBrainDefaults = {
+    brain        = "swarm",
+    topK         = 8,        -- objectives kept per player
+    clusterEvery = 8,        -- recompute objective pool every N perceive ticks
+    rCluster     = 1600.0,   -- cluster aggregation radius
+    rHome        = 2500.0,   -- capital threat scan radius
+    squadCap     = 12,
+    commitMin    = 8,
+    guardFrac    = 0.2,
+    focusMargin  = 25.0,     -- hysteresis: keep current focus unless beaten by this
+    homeThreat   = 20.0,     -- enemy power near capital that triggers defend/recall
+    tpDist       = 6000.0,   -- focus farther than this -> consider TP logistics
+    weights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+    },
+}
+
+-- Optional per-building-type bonus/override added on top of the live income
+-- valuation below. [typeId] = extra value. Empty by default.
+AiBuildingValue = AiBuildingValue or {
+    [FourCC('ogre')] = 30,  [FourCC('ostr')] = 40,  [FourCC('ofrt')] = 50,
+    [FourCC('h00V')] = 30,  [FourCC('h00W')] = 40,  [FourCC('h00X')] = 50,
+    [FourCC('h00A')] = 30,  [FourCC('h00B')] = 40,  [FourCC('h00C')] = 50,
+    [FourCC('h02Z')] = 30,  [FourCC('h030')] = 40,  [FourCC('h031')] = 50,
+    [FourCC('unp1')] = 30,  [FourCC('unp2')] = 40,  [FourCC('unpl')] = 50,
+    [FourCC('o029')] = 30,  [FourCC('o02A')] = 40,  [FourCC('o02B')] = 50,
+    [FourCC('hvlt')] = 30,  [FourCC('hkee')] = 40,  [FourCC('hcas')] = 50,
+    [FourCC('h0AO')] = 14,  [FourCC('h0AP')] = 20,  [FourCC('h0AQ')] = 30,
+    [FourCC('h0AL')] = 14,  [FourCC('h0AM')] = 20,  [FourCC('h0AN')] = 30,
+}
 
 -- Live income value of a building instance, mirroring the economy module
 -- AddCountDis (_lib/54_count_dis.lua): food made + income-upgrade abilities
@@ -60117,13 +60992,301 @@ function AiBrainPerceive(pi)
     return wm
 end
 
--- ---- squad bookkeeping (stubs; populated in Phase 2) ---------------
+-- ---- squad system -------------------------------------------------
+-- AiSquads[pi][sid] = { members=group, state, objective, rally={x,y}, role }
+AiSquadCommitMin = AiSquadCommitMin or 8
+
 ---@param pi integer
 ---@return table
 function AiSquadsOf(pi)
     local t = AiSquads[pi]
     if t == nil then t = {}; AiSquads[pi] = t end
     return t
+end
+
+---@param pi integer
+---@return integer
+function AiSquadNextId(pi)
+    local id = (AiSquadSeq[pi] or 0) + 1
+    AiSquadSeq[pi] = id
+    return id
+end
+
+---@param g group
+---@return integer
+function AiSquadSize(g)
+    if g == nil then return 0 end
+    local n = 0
+    local sz = BlzGroupGetSize(g)
+    local i = 0
+    while i < sz do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            n = n + 1
+        end
+        i = i + 1
+    end
+    return n
+end
+
+---@param g group
+---@return real
+function AiSquadPower(g)
+    local pow = 0.0
+    if g == nil then return pow end
+    local sz = BlzGroupGetSize(g)
+    local i = 0
+    while i < sz do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            pow = pow + AiUnitPower(u)
+        end
+        i = i + 1
+    end
+    return pow
+end
+
+-- Order squad members to attack-move via temp copy (safe for persistent groups).
+---@param g group
+---@param x real
+---@param y real
+---@return integer
+function AiSquadOrderAtk(g, x, y)
+    if gSubGroup == nil then gSubGroup = CreateGroup() end
+    if gAllyGroup == nil then gAllyGroup = CreateGroup() end
+    GroupClear(gSubGroup)
+    GroupClear(gAllyGroup)
+    local sz = BlzGroupGetSize(g)
+    local k = 0
+    while k < sz do
+        local u = BlzGroupUnitAt(g, k)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
+            and not IsUnitType(u, UNIT_TYPE_PEON) then
+            GroupAddUnit(gAllyGroup, u)
+        end
+        k = k + 1
+    end
+    local ordered = 0
+    while true do
+        local u = FirstOfGroup(gAllyGroup)
+        if u == nil then break end
+        GroupRemoveUnit(gAllyGroup, u)
+        GroupAddUnit(gSubGroup, u)
+        ordered = ordered + 1
+        if ordered % 12 == 0 then
+            GroupPointOrder(gSubGroup, "attack", x, y)
+            GroupClear(gSubGroup)
+        end
+    end
+    if BlzGroupGetSize(gSubGroup) > 0 then
+        GroupPointOrder(gSubGroup, "attack", x, y)
+        GroupClear(gSubGroup)
+    end
+    return ordered
+end
+
+---@param g group
+---@param x real
+---@param y real
+---@return integer
+function AiSquadOrderMov(g, x, y)
+    if gSubGroup == nil then gSubGroup = CreateGroup() end
+    if gAllyGroup == nil then gAllyGroup = CreateGroup() end
+    GroupClear(gSubGroup)
+    GroupClear(gAllyGroup)
+    local sz = BlzGroupGetSize(g)
+    local k = 0
+    while k < sz do
+        local u = BlzGroupUnitAt(g, k)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
+            and not IsUnitType(u, UNIT_TYPE_PEON) then
+            GroupAddUnit(gAllyGroup, u)
+        end
+        k = k + 1
+    end
+    local ordered = 0
+    while true do
+        local u = FirstOfGroup(gAllyGroup)
+        if u == nil then break end
+        GroupRemoveUnit(gAllyGroup, u)
+        GroupAddUnit(gSubGroup, u)
+        ordered = ordered + 1
+        if ordered % 12 == 0 then
+            GroupPointOrder(gSubGroup, "smart", x, y)
+            GroupClear(gSubGroup)
+        end
+    end
+    if BlzGroupGetSize(gSubGroup) > 0 then
+        GroupPointOrder(gSubGroup, "smart", x, y)
+        GroupClear(gSubGroup)
+    end
+    return ordered
+end
+
+---@param pi integer
+---@param u unit
+function AiSquadAssign(pi, u)
+    local cfg = AiBrainCfg(pi)
+    local cap = cfg.squadCap or AiBrainDefaults.squadCap
+    local squads = AiSquadsOf(pi)
+    local bestSid, bestDist = nil, 99999999.0
+    local ux, uy = GetUnitX(u), GetUnitY(u)
+    for sid, sq in pairs(squads) do
+        if sq.role == "assault" and AiSquadSize(sq.members) < cap then
+            local cx, cy, _ = AiGroupCentroid(sq.members)
+            local dx, dy = ux - cx, uy - cy
+            local d = dx * dx + dy * dy
+            if d < bestDist then bestDist = d; bestSid = sid end
+        end
+    end
+    if bestSid ~= nil then
+        local sq = squads[bestSid]
+        GroupAddUnit(sq.members, u)
+        return
+    end
+    local sid = AiSquadNextId(pi)
+    local rx, ry
+    local capU = playerCapital[pi]
+    if capU ~= nil and GetUnitState(capU, UNIT_STATE_LIFE) > 0.405 then
+        rx, ry = GetUnitX(capU), GetUnitY(capU)
+    else
+        rx, ry = ux, uy
+    end
+    local g = CreateGroup()
+    GroupAddUnit(g, u)
+    squads[sid] = { members = g, state = "muster", objective = nil, rally = { x = rx, y = ry }, role = "assault" }
+end
+
+---@param pi integer
+function AiSquadReapDead(pi)
+    local squads = AiSquadsOf(pi)
+    for sid, sq in pairs(squads) do
+        local g = sq.members
+        local i = 0
+        while i < BlzGroupGetSize(g) do
+            local u = BlzGroupUnitAt(g, i)
+            if u == nil then i = i + 1
+            elseif GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then GroupRemoveUnit(g, u)
+            else i = i + 1 end
+        end
+    end
+end
+
+---@param pi integer
+---@return table|nil
+function AiSquadPickObj(pi, sq, wm)
+    local objs = wm.objectives
+    if objs == nil or #objs == 0 then return nil end
+    local sqPow = AiSquadPower(sq.members)
+    local best, bestScore = nil, -1e30
+    for _, o in ipairs(objs) do
+        local committed = AiObjCommittedPower(pi, o)
+        if o.kind == "capital" then
+            o.score = AiObjScore(pi, wm, o)
+            if committed + sqPow < AiObjNeededPower(pi, o) * 0.4 then o.score = o.score * 1.2 end
+        else
+            if committed >= sqPow * 3.0 then o.score = -1e30
+            else o.score = AiObjScore(pi, wm, o) end
+        end
+        if o.score > bestScore then best = o; bestScore = o.score end
+    end
+    return best and bestScore > 0 and best or nil
+end
+
+---@param pi integer
+---@param o table
+---@return real
+function AiObjNeededPower(pi, o)
+    local pow = AiEnemyPowerAround(Player(pi), o.x, o.y, 1600.0)
+    if o.kind == "capital" then pow = pow * 1.5 end
+    return math.max(pow, 5.0)
+end
+
+---@param pi integer
+---@param o table
+---@return real
+function AiObjCommittedPower(pi, o)
+    local pwr = 0.0
+    for _, sq in pairs(AiSquadsOf(pi)) do
+        if sq.objective ~= nil and sq.objective.key == o.key then
+            pwr = pwr + AiSquadPower(sq.members)
+        end
+    end
+    return pwr
+end
+
+-- FSM handlers
+function AiSquadTickMuster(pi, sid, sq, p, wm)
+    if AiSquadSize(sq.members) >= (AiBrainCfg(pi).commitMin or AiSquadCommitMin) then
+        local obj = AiSquadPickObj(pi, sq, wm)
+        if obj ~= nil then sq.objective = obj; return "march" end
+    end
+    AiSquadOrderMov(sq.members, sq.rally.x, sq.rally.y)
+    return "muster"
+end
+
+function AiSquadTickMarch(pi, sid, sq, p, wm)
+    local obj = sq.objective
+    if obj == nil then return "muster" end
+    local alive = false
+    if wm.objectives ~= nil then for _, o in ipairs(wm.objectives) do if o.key == obj.key then alive = true; break end end end
+    if not alive then sq.objective = nil; return "muster" end
+    local cx, cy, _ = AiGroupCentroid(sq.members)
+    local d = SquareRoot((cx - obj.x) * (cx - obj.x) + (cy - obj.y) * (cy - obj.y))
+    if d < 600.0 or AiEnemyPowerAround(p, cx, cy, 800.0) > 1.0 then return "engage" end
+    local oc, sc = AiContinentOf(obj.x, obj.y), AiContinentOf(cx, cy)
+    if oc ~= nil and sc ~= nil and oc ~= sc then
+        local m = AiFindMageOnContinent(pi, oc)
+        if m ~= nil then gPi = pi; gPlayer = p; PortTo(m); return "march" end
+        local rt = AiPortalRoute(sc, oc)
+        if rt ~= nil and #rt >= 2 then local portal = AiFindPortal(rt[1], rt[2])
+            if portal ~= nil then AiSquadOrderMov(sq.members, GetUnitX(portal), GetUnitY(portal)); return "march" end
+        end
+        AiBrainTryLogistics(pi, p, obj, wm)
+    end
+    AiSquadOrderAtk(sq.members, obj.x, obj.y)
+    return "march"
+end
+
+function AiSquadTickEngage(pi, sid, sq, p, wm)
+    local sz = AiSquadSize(sq.members)
+    if sz == 0 then return "muster" end
+    if wm.defendHome then sq.rally.x, sq.rally.y = wm.capX, wm.capY; return "retreat" end
+    local obj = sq.objective
+    local alive = false
+    if obj ~= nil and wm.objectives ~= nil then for _, o in ipairs(wm.objectives) do if o.key == obj.key then alive = true; break end end end
+    if not alive then
+        sq.objective = AiSquadPickObj(pi, sq, wm)
+        if sq.objective ~= nil then return "march" end
+        sq.rally.x, sq.rally.y = wm.capX or 0.0, wm.capY or 0.0; return "retreat"
+    end
+    if sz < (AiBrainCfg(pi).commitMin or AiSquadCommitMin) / 2 then
+        sq.rally.x, sq.rally.y = wm.capX or 0.0, wm.capY or 0.0; return "retreat"
+    end
+    if obj ~= nil then AiSquadOrderAtk(sq.members, obj.x, obj.y) end
+    return "engage"
+end
+
+function AiSquadTickRetreat(pi, sid, sq, p, wm)
+    if AiSquadSize(sq.members) == 0 then return "muster" end
+    local rx, ry = wm.capX or sq.rally.x, wm.capY or sq.rally.y
+    sq.rally.x, sq.rally.y = rx, ry
+    local cx, cy, _ = AiGroupCentroid(sq.members)
+    local d = SquareRoot((cx - rx) * (cx - rx) + (cy - ry) * (cy - ry))
+    if d < 800.0 and not (wm.defendHome or false) then return "muster" end
+    AiSquadOrderMov(sq.members, rx, ry)
+    return "retreat"
+end
+
+-- Wrap aiUnitJoinsArmy for brain bots
+do
+    local _orig = aiUnitJoinsArmy
+    function aiUnitJoinsArmy(u, pi)
+        _orig(u, pi)
+        if AiBrainEnabled(pi) then AiSquadAssign(pi, u) end
+    end
 end
 
 -- ---- objectives (cluster collection + scoring) ---------------------
@@ -60364,93 +61527,73 @@ end
 
 -- Entry point when a bot has an active brain ("objective"). Perceive → refresh
 -- objectives on schedule → pick a focus (force concentration) → order idle army
--- there. Falls back to swarm when there are no objectives. Phase 3 adds defense
--- recall + TP logistics; persistent squad FSM is a later refinement.
+-- there. Falls back to swarm when there are no objectives.
 ---@param pi integer
 ---@param p player
 function AiBrainArmyTick(pi, p)
     local wm = AiBrainPerceive(pi)
-    BrainLogEvery(pi, "perceive", 5,
-        "perceive army=" .. tostring(wm.armyCount)
-        .. " threatHome=" .. tostring(R2I(wm.threatHome or 0))
-        .. " capHP=" .. tostring(R2I(wm.capHP or 0)))
-
-    -- Defense takes priority: recall the field army home when the capital is
-    -- threatened or actively under siege. The standing AiCapitalGuard reserve is
-    -- already parked at the capital (aiUnitJoinsCapitalGuard).
-    if wm.defendHome and wm.capX ~= nil then
-        local recalled = AiBrainOrderIdleTo(pi, p, wm.capX, wm.capY)
-        BrainLogEvery(pi, "defend", 3, "DEFEND threatHome=" .. tostring(R2I(wm.threatHome or 0))
-            .. " capHP=" .. tostring(R2I(wm.capHP or 0)) .. " siege=" .. tostring(wm.capSiege)
-            .. " recalled=" .. tostring(recalled), "BRAINDEF")
-        return
-    end
-
     local cfg = AiBrainCfg(pi)
-    local every = cfg.clusterEvery or AiBrainDefaults.clusterEvery
-    if wm.objectives == nil or (wm.tick % every) == 0 then
+    if wm.objectives == nil or (wm.tick % (cfg.clusterEvery or 8)) == 0 then
         AiBrainCollectObjectives(pi, wm)
     end
+    if wm.objectives == nil or #wm.objectives == 0 then AiArmyLegacyTick(p); return end
 
-    local focus = AiBrainPickFocus(pi, wm)
-    if focus == nil then
-        BrainLogEvery(pi, "nofocus", 5, "no objectives -> swarm fallback")
-        AiArmyLegacyTick(p)
-        return
-    end
-
-    local focusContinent = AiContinentOf(focus.x, focus.y)
-    local armyContinent = wm.armyContinent
-    BrainLogEvery(pi, "focusinfo", 8, "focus " .. tostring(focusContinent or "?") .. " army " .. tostring(armyContinent or "?"))
-
-    -- Cross-continent focus: try targeted TP first, then portal walk.
-    if focusContinent ~= nil and armyContinent ~= nil and focusContinent ~= armyContinent then
-        -- (A) Targeted TP: teleport army to a mage already on the focus continent.
-        local targetMage = AiFindMageOnContinent(pi, focusContinent)
-        if targetMage ~= nil then
-            BrainLogEvery(pi, "tptarget", 3,
-                "targeted TP " .. tostring(armyContinent) .. "->" .. tostring(focusContinent)
-                .. " mage at " .. tostring(R2I(GetUnitX(targetMage))) .. "," .. tostring(R2I(GetUnitY(targetMage))),
-                "BRAINTP")
-            gPi = pi
-            gPlayer = p
-            PortTo(targetMage)
-            return
-        end
-
-        -- (B) Portal walk: find a chain of portals to the focus continent.
-        local route = AiPortalRoute(armyContinent, focusContinent)
-        if route ~= nil and #route >= 2 then
-            local portal = AiFindPortal(route[1], route[2])
-            if portal ~= nil then
-                BrainLogEvery(pi, "portalroute", 5,
-                    "portal route " .. route[1] .. "->" .. route[2]
-                    .. " (" .. #route .. " hops to " .. focusContinent .. ")",
-                    "BRAINPORTAL")
-                AiBrainOrderToPortal(pi, p, portal)
-                return
-            else
-                BrainLogEvery(pi, "portalnope", 10,
-                    "portal route exists but no portal unit found for " .. route[1] .. "->" .. route[2],
-                    "BRAINPORTAL")
+    -- Defense: flag squads to retreat
+    if wm.defendHome and wm.capX ~= nil then
+        for _, sq in pairs(AiSquadsOf(pi)) do
+            if sq.role == "assault" and sq.state ~= "retreat" then
+                sq.state = "retreat"; sq.rally.x, sq.rally.y = wm.capX, wm.capY
             end
         end
-
-        -- (C) TP logistics fallback: old behaviour (port to any enemy).
-        if AiBrainTryLogistics(pi, p, focus, wm) then return end
     end
 
-    -- Same continent: standard logistics + force concentration.
-    AiBrainTryLogistics(pi, p, focus, wm)
-    local ordered = AiBrainOrderIdleTo(pi, p, focus.x, focus.y)
-    if wm.focusKey ~= wm.lastLoggedFocus then
-        wm.lastLoggedFocus = wm.focusKey
-        BrainLogTag(pi, "BRAINFOC", "focus kind=" .. tostring(focus.kind)
-            .. " x=" .. tostring(R2I(focus.x)) .. " y=" .. tostring(R2I(focus.y))
-            .. " val=" .. tostring(R2I(focus.value)) .. " cnt=" .. tostring(focus.count)
-            .. " score=" .. tostring(R2I(focus.score or 0)) .. " ordered=" .. tostring(ordered))
-    else
-        BrainLogEvery(pi, "act", 8, "focus stable ordered=" .. tostring(ordered))
+    AiSquadReapDead(pi)
+
+    -- Orphan/squad build every 2 ticks
+    if (wm.tick % 2) == 0 then
+        local armyGroup = udg_Ai_army[pi]
+        if armyGroup ~= nil then
+            local squads = AiSquadsOf(pi)
+            -- Assign orphaned army units to squads
+            local assignedGroup = CreateGroup()
+            for _, sq in pairs(squads) do
+                local sz = BlzGroupGetSize(sq.members)
+                local j = 0
+                while j < sz do
+                    local u = BlzGroupUnitAt(sq.members, j)
+                    if u ~= nil then GroupAddUnit(assignedGroup, u) end
+                    j = j + 1
+                end
+            end
+            local armySz = BlzGroupGetSize(armyGroup)
+            local j = 0
+            while j < armySz do
+                local u = BlzGroupUnitAt(armyGroup, j)
+                if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+                    and not IsUnitType(u, UNIT_TYPE_PEON)
+                    and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
+                    and not IsUnitInGroup(u, assignedGroup) then
+                    AiSquadAssign(pi, u)
+                end
+                j = j + 1
+            end
+            DestroyGroup(assignedGroup)
+        end
+    end
+
+    -- Tick up to 3 squads per frame
+    local squads = AiSquadsOf(pi)
+    local ticked = 0
+    for sid, sq in pairs(squads) do
+        if ticked >= 3 then break end
+        local newState = sq.state
+        if sq.state == "muster" then newState = AiSquadTickMuster(pi, sid, sq, p, wm)
+        elseif sq.state == "march" then newState = AiSquadTickMarch(pi, sid, sq, p, wm)
+        elseif sq.state == "engage" then newState = AiSquadTickEngage(pi, sid, sq, p, wm)
+        elseif sq.state == "retreat" then newState = AiSquadTickRetreat(pi, sid, sq, p, wm)
+        end
+        sq.state = newState
+        ticked = ticked + 1
     end
 end
 
@@ -60460,7 +61603,7 @@ end
 -- random ring stays the fallback). Searches expanding rings/sectors around the
 -- capital (or builder) for the nearest placeable, non-crowded spot. Tag BRAINBLD.
 -- ====================================================================
-AiSmartBuild = AiSmartBuild or false
+AiSmartBuild = AiSmartBuild or true
 
 ---@return boolean
 function f_AnyStructure()
@@ -60533,7 +61676,7 @@ end
 -- (target - current), pulling the army toward the desired mix. Returns nil when
 -- none of the candidates are listed in compTarget -> caller keeps random.
 -- ====================================================================
-AiSmartProduce = AiSmartProduce or false
+AiSmartProduce = AiSmartProduce or true
 
 ---@param pi integer
 ---@param def table
