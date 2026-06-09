@@ -507,7 +507,7 @@ function PlayerBuilders()
     if CountPlayersInForceBJ(udg_BotsActiveB) == 0 then
         PauseTimer(udg_PlayerGet2)
         ResumeTimer(udg_TimerSmall)
-        TimerStart(udg_TimerSmall, 4 * AiRepeat / 5, false, nil)
+        TimerStart(udg_TimerSmall, 1.5 * AiRepeat / 5, false, nil)
         if udg_Octhet then
             DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
         end
@@ -841,7 +841,7 @@ function Trig_PereborBuildings_Code_Func002A()
     --?????????? ?????? ??????, ??????? ???? ?????? 
        
     bj_forLoopAIndex=1
-    bj_forLoopAIndexEnd=8
+    bj_forLoopAIndexEnd=24
     while true do
         if bj_forLoopAIndex > bj_forLoopAIndexEnd or FirstOfGroup(gGroup) == nil then break end
         gUnit=BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
@@ -868,7 +868,7 @@ function Trig_PereborBuildings_Actions()
     if udg_Octhet then
         DisplayTimedTextFromPlayer(Player(0), 0, 0, 4, "")
     end
-    TimerStart(udg_TimerSmall3, 8.50 * AiRepeat / 5, false, nil)
+    TimerStart(udg_TimerSmall3, 2.0 * AiRepeat / 5, false, nil)
 end
 --===========================================================================
 function InitTrig_PereborBuildings()
