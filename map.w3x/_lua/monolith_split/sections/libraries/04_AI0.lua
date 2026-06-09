@@ -286,7 +286,7 @@ function AiLimitsSet()
 	
 	AiMass = IMaxBJ(8 - gInt, 4)
 	AiRepeat = 1 + IMinBJ(R2I(gInt / 5), 3)
-	AiBrainBatchSize = IMaxBJ(2, R2I((gInt + 3) / 4))  -- ~4-tick cycle for all bots
+	AiBrainBatchSize = 2  -- 2 bots per PlayerGet1 fire (micro-lag distribution)
 	ProbeLogWrite("[AI] AiLimitsSet Bots=" .. tostring(gInt) .. " AiLimit=" .. tostring(AiLimit) .. " AiMass=" .. tostring(AiMass) .. " AiRepeat=" .. tostring(AiRepeat) .. " AiBrainBatchSize=" .. tostring(AiBrainBatchSize))
 end
 ---@return nothing

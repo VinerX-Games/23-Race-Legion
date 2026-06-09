@@ -620,7 +620,7 @@ function Trig_PereborPlayerForArmy_Actions()
     end
     RemoveLocation(LastDestantion)
     ForForce(udg_Bots, AddPlayers)
-    TimerStart(udg_PlayerGet1, 1.25 * AiRepeat / 5, true, nil)
+    TimerStart(udg_PlayerGet1, 0.4 * AiRepeat / 5, true, nil)
 end
 --??????
 --===========================================================================

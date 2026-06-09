@@ -3599,7 +3599,7 @@ function AiLimitsSet()
 	
 	AiMass = IMaxBJ(8 - gInt, 4)
 	AiRepeat = 1 + IMinBJ(R2I(gInt / 5), 3)
-	AiBrainBatchSize = IMaxBJ(2, R2I((gInt + 3) / 4))  -- ~4-tick cycle for all bots
+	AiBrainBatchSize = 2  -- 2 bots per PlayerGet1 fire (micro-lag distribution)
 	ProbeLogWrite("[AI] AiLimitsSet Bots=" .. tostring(gInt) .. " AiLimit=" .. tostring(AiLimit) .. " AiMass=" .. tostring(AiMass) .. " AiRepeat=" .. tostring(AiRepeat) .. " AiBrainBatchSize=" .. tostring(AiBrainBatchSize))
 end
 ---@return nothing
@@ -15485,6 +15485,35 @@ LegendaryBuildingToHero = {
 	[FourCC('h09K')] = { FourCC('O06L') },
 }
 
+-- ===========================================================================
+--  Легендарки: здание -> раса AI (ключ из AiRaces), которой принадлежит здание
+--  Если раса не указана (nil) — легендарка доступна любой расе
+-- ===========================================================================
+LegendaryBuildingToRace = {
+	[FourCC('h07Z')] = "Scarlet",
+	[FourCC('h081')] = "Scarlet",
+	[FourCC('h07Y')] = "Scarlet",
+	[FourCC('h00N')] = "Scarlet",
+	[FourCC('h00W')] = "BloodElves",
+	[FourCC('h07F')] = "BloodElves",
+	[FourCC('h07T')] = "BloodElves",
+	[FourCC('h08F')] = "Goblins",
+	[FourCC('h0BL')] = "Goblins",
+	[FourCC('h0O3')] = "Goblins",
+	[FourCC('h07V')] = "Forsaken",
+	[FourCC('h08L')] = "Silitids",
+	[FourCC('h00I')] = "Alliance",
+	[FourCC('h0N0')] = "JungleTrolls",
+	[FourCC('h07U')] = "ForestTrolls",
+	[FourCC('h09K')] = "IceTrolls",
+	[FourCC('h072')] = "Undead",
+	[FourCC('h09G')] = "Undead",
+	[FourCC('h080')] = "Undead",
+	[FourCC('h0F3')] = "Undead",
+	[FourCC('h0NB')] = "Dalaran",
+	[FourCC('h0DR')] = "Demons",
+}
+
 function GiveBotLegendaryHeroes(u2, p, pi)
 	if not udg_AiControl[pi] then
 		return
@@ -15493,6 +15522,13 @@ function GiveBotLegendaryHeroes(u2, p, pi)
 	local heroes = LegendaryBuildingToHero[bid]
 	if heroes == nil then
 		return
+	end
+	local requiredRace = LegendaryBuildingToRace[bid]
+	if requiredRace ~= nil then
+		local botRace = AiRace[pi]
+		if botRace ~= requiredRace then
+			return
+		end
 	end
 	local x = GetUnitX(u2)
 	local y = GetUnitY(u2)
@@ -48799,7 +48835,7 @@ function Trig_PereborPlayerForArmy_Actions()
     end
     RemoveLocation(LastDestantion)
     ForForce(udg_Bots, AddPlayers)
-    TimerStart(udg_PlayerGet1, 1.25 * AiRepeat / 5, true, nil)
+    TimerStart(udg_PlayerGet1, 0.4 * AiRepeat / 5, true, nil)
 end
 --??????
 --===========================================================================
@@ -59821,7 +59857,7 @@ AiBrainForce = AiBrainForce or {}  -- [pi] = "objective"|"swarm" override (bridg
 
 -- Tunables: set via bridge live (AiBrainBatchSize=6) or leave defaults.
 -- All values affect the unified brain tick only; swarm mode ignores them.
-AiBrainBatchSize       = AiBrainBatchSize       or 4   -- bots processed per PlayerGet1 fire
+AiBrainBatchSize       = AiBrainBatchSize       or 2   -- bots processed per PlayerGet1 fire
 AiBrainMaxProduce      = AiBrainMaxProduce      or 10  -- max unit-training orders per bot per tick
 AiBrainMaxBuild        = AiBrainMaxBuild        or 3   -- max building-attempts per bot per tick
 AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks

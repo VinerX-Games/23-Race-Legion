@@ -2040,6 +2040,35 @@ LegendaryBuildingToHero = {
 	[FourCC('h09K')] = { FourCC('O06L') },
 }
 
+-- ===========================================================================
+--  Легендарки: здание -> раса AI (ключ из AiRaces), которой принадлежит здание
+--  Если раса не указана (nil) — легендарка доступна любой расе
+-- ===========================================================================
+LegendaryBuildingToRace = {
+	[FourCC('h07Z')] = "Scarlet",
+	[FourCC('h081')] = "Scarlet",
+	[FourCC('h07Y')] = "Scarlet",
+	[FourCC('h00N')] = "Scarlet",
+	[FourCC('h00W')] = "BloodElves",
+	[FourCC('h07F')] = "BloodElves",
+	[FourCC('h07T')] = "BloodElves",
+	[FourCC('h08F')] = "Goblins",
+	[FourCC('h0BL')] = "Goblins",
+	[FourCC('h0O3')] = "Goblins",
+	[FourCC('h07V')] = "Forsaken",
+	[FourCC('h08L')] = "Silitids",
+	[FourCC('h00I')] = "Alliance",
+	[FourCC('h0N0')] = "JungleTrolls",
+	[FourCC('h07U')] = "ForestTrolls",
+	[FourCC('h09K')] = "IceTrolls",
+	[FourCC('h072')] = "Undead",
+	[FourCC('h09G')] = "Undead",
+	[FourCC('h080')] = "Undead",
+	[FourCC('h0F3')] = "Undead",
+	[FourCC('h0NB')] = "Dalaran",
+	[FourCC('h0DR')] = "Demons",
+}
+
 function GiveBotLegendaryHeroes(u2, p, pi)
 	if not udg_AiControl[pi] then
 		return
@@ -2048,6 +2077,13 @@ function GiveBotLegendaryHeroes(u2, p, pi)
 	local heroes = LegendaryBuildingToHero[bid]
 	if heroes == nil then
 		return
+	end
+	local requiredRace = LegendaryBuildingToRace[bid]
+	if requiredRace ~= nil then
+		local botRace = AiRace[pi]
+		if botRace ~= requiredRace then
+			return
+		end
 	end
 	local x = GetUnitX(u2)
 	local y = GetUnitY(u2)
