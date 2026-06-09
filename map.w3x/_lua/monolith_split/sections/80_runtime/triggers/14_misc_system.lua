@@ -404,15 +404,6 @@ end
 function Trig_SecondChance_Func003C()
     return Trig_SecondChance_Func003Func008C()
 end
-function SecondChanceTimer()
-    local t= GetExpiredTimer()
-    
-    CheckAndCreateCapital(LoadPlayerHandle(Hash, GetHandleId(t), 0))
-    FlushChildHashtable(Hash, GetHandleId(t))
-    
-    DestroyTimer(t)
-    t=nil
-end
 function Trig_SecondChance_Actions()
     local t= SecondChance[GetPlayerId(ConvertedPlayer(udg_LocalInteger))]
     udg_LocalText2=SubStringBJ(GetEventPlayerChatString(), 12, 13)
@@ -429,12 +420,13 @@ function Trig_SecondChance_Actions()
         ForGroupBJ(GetUnitsOfPlayerMatching(ConvertedPlayer(udg_LocalInteger), Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
     
         if udg_GameMode == 1 or udg_GameMode == 2 then
-            if t == nil then
-                t=CreateTimer()
-                SecondChance[GetPlayerId(ConvertedPlayer(udg_LocalInteger))]=t
-            end
-            TimerStart(t, 60 * 15, false, SecondChanceTimer)
-            SavePlayerHandle(Hash, GetHandleId(t), 0, ConvertedPlayer(udg_LocalInteger))
+            local p = ConvertedPlayer(udg_LocalInteger)
+            t=CreateTimer()
+            SecondChance[GetPlayerId(p)]=t
+            TimerStart(t, 60 * 15, false, function()
+                CheckAndCreateCapital(p)
+                DestroyTimer(t)
+            end)
         end
     end
     t=nil
@@ -457,12 +449,12 @@ function BridgeRaceSelect(target_index)
     udg_LocalInteger = target_index
     ForGroupBJ(GetUnitsOfPlayerMatching(target_player, Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
     if udg_GameMode == 1 or udg_GameMode == 2 then
-        if t == nil then
-            t=CreateTimer()
-            SecondChance[GetPlayerId(target_player)]=t
-        end
-        TimerStart(t, 60 * 15, false, SecondChanceTimer)
-        SavePlayerHandle(Hash, GetHandleId(t), 0, target_player)
+        t=CreateTimer()
+        SecondChance[GetPlayerId(target_player)]=t
+        TimerStart(t, 60 * 15, false, function()
+            CheckAndCreateCapital(target_player)
+            DestroyTimer(t)
+        end)
     end
     ProbeLogWrite("[BRIDGE] race_select target=" .. tostring(target_index))
     target_player = nil

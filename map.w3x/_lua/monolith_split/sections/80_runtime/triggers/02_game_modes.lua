@@ -696,39 +696,19 @@ end
 --  Trigger: StolicaAttacked
 -- ===========================================================================
 ---@return nothing
-function CapTimeDel()
-	local t = GetExpiredTimer()
-	local tid = GetHandleId(t)
-	local pi = LoadInteger(Hash, tid, 0)
-	
-	cap_time[pi] = true
-	
-	
-	FlushChildHashtable(Hash, tid)
-	DestroyTimer(t)
-	t = nil
-	
-end
----@return boolean
-function Trig_StolicaAttacked_Conditions()
-	return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups)
-end
----@return nothing
 function Trig_StolicaAttacked_Actions()
-	local t = nil
-	local tid = GetHandleId(t)
-	local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
-	if cap_time[pi] then
-		t = CreateTimer()
-		DisplayTextToPlayer(Player(pi), 0, 0, "TRIGSTR_27508")
-		cap_time[pi] = false
-		SaveInteger(Hash, tid, 0, pi)
-		TimerStart(t, 90, false, CapTimeDel)
-	end
-	
-	
-	t = nil
-	
+    local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    if cap_time[pi] then
+        local t = CreateTimer()
+        DisplayTextToPlayer(Player(pi), 0, 0, "TRIGSTR_27508")
+        cap_time[pi] = false
+        TimerStart(t, 90, false, function()
+            cap_time[pi] = true
+            DestroyTimer(t)
+        end)
+    end
+    
+    
 end
 -- ===========================================================================
 ---@return nothing

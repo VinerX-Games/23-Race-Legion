@@ -668,36 +668,23 @@ end
 --===========================================================================
 -- Trigger: TPrepeat
 --===========================================================================
-function CommandTp()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u= LoadUnitHandle(Hash, id, 0)
-    if u ~= nil and UnitAlive(u) and GetUnitAbilityLevel(u, FourCC('A1IH')) > 0 then
-        IssuePointOrder(u, "darksummoning", LoadReal(Hash, id, 1), LoadReal(Hash, id, 2))
-    
-    
-    else
-        DestroyTimer(t)
-        FlushChildHashtable(Hash, id)
-    
-    end
-    u=nil
-    t=nil
-end
 function Trig_TPrepeat_Actions()
-    local t= CreateTimer()
-    local id= GetHandleId(t)
     local u= GetTriggerUnit()
-    
-    SaveUnitHandle(Hash, id, 0, u)
-    SaveReal(Hash, id, 1, GetSpellTargetX())
-    SaveReal(Hash, id, 2, GetSpellTargetY())
+    local tx= GetSpellTargetX()
+    local ty= GetSpellTargetY()
+    local t= CreateTimer()
     
     BlzUnitHideAbility(u, FourCC('A1IG'), true)
-    RemoveAbilityTimed(u , FourCC('A1IG') , 1)
+    RemoveAbilityTimed(u, FourCC('A1IG'), 1)
     UnitAddAbility(u, FourCC('A1IH'))
     
-    TimerStart(t, RMaxBJ(BlzGetUnitAbilityCooldownRemaining(u, FourCC('A0IO')), 15), true, CommandTp)
+    TimerStart(t, RMaxBJ(BlzGetUnitAbilityCooldownRemaining(u, FourCC('A0IO')), 15), true, function()
+        if UnitAlive(u) and GetUnitAbilityLevel(u, FourCC('A1IH')) > 0 then
+            IssuePointOrder(u, "darksummoning", tx, ty)
+        else
+            DestroyTimer(t)
+        end
+    end)
     t=nil
     u=nil
 end
@@ -765,76 +752,44 @@ end
 --
 -- ? ??????? ???? ????? ?????????
 --===========================================================================
-function damageRadious()
-    local i= 0
-    while true do
-        if i >= times then break end
-        UnitDamagePointLoc(damager, delay + interval * i, damage, destination, radious, Attacktype, Damagetype)
-        i=i + 1
-    end
-end
-  
-function ManabombaNuke()
-    local t= GetExpiredTimer()
-    local tid= GetHandleId(t)
-    local destination= LoadLocationHandle(Hash, tid, 0)
-    local caster= LoadUnitHandle(Hash, tid, 3)
-    RemoveUnit(LoadUnitHandle(Hash, tid, 1))
-    RemoveUnit(LoadUnitHandle(Hash, tid, 2))
-   -- call BJDebugMsg("")
-    RemoveEffectTimed(AddSpecialEffectLocBJ(destination, "war3mapImportedExplosionC.mdx") , 60)
-    --call RemoveEffectTimed( AddSpecialEffectLocBJ( destination, "ForceField03.mdx" ) 20)
-    
-    
-    
-    
-    damageRadious(caster , 0.0 , 375.00 , destination , 70 , 20 , 0.25 , ATTACK_TYPE_CHAOS , DAMAGE_TYPE_MAGIC)
-    damageRadious(caster , 5 , 600.00 , destination , 55 , 12 , 0.25 , ATTACK_TYPE_CHAOS , DAMAGE_TYPE_MAGIC)
-    damageRadious(caster , 8 , 900.00 , destination , 3 , 160 , 0.25 , ATTACK_TYPE_CHAOS , DAMAGE_TYPE_MAGIC)
-    damageRadious(caster , 8 , 375.00 , destination , 5 , 160 , 0.25 , ATTACK_TYPE_CHAOS , DAMAGE_TYPE_MAGIC)
-    
-    
-    UnitRemoveAbility(caster, FourCC('A0TS'))
-    
-    
-    FlushChildHashtable(Hash, tid)
-    PauseTimer(t)
-    DestroyTimer(t)
-    t=nil
-    caster=nil
-    RemoveLocation(destination)
-    destination=nil
-end
 function ManabombaMissle()
     local t= CreateTimer()
-    local tid= GetHandleId(t)
     local l= GetUnitLoc(caster)
     local p= GetOwningPlayer(caster)
+    local dest = destination
     local u1
     local u2
-   --call BJDebugMsg("")
-     
-    -- ?????? ???? ?????????
+    
     UnitRemoveAbility(caster, FourCC('A0TT'))
-    -- ???? ??????
     u1=CreateUnitAtLoc(p, FourCC('h05P'), l, bj_UNIT_FACING)
     BlzSetUnitRealFieldBJ(u1, UNIT_RF_FLY_HEIGHT, GetUnitDefaultFlyHeight(caster))
     UnitAddAbilityBJ(FourCC('A0TU'), u1)
-    -- ???? ??????
-    u2=CreateUnitAtLoc(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC('h0GI'), destination, bj_UNIT_FACING)
+    u2=CreateUnitAtLoc(Player(PLAYER_NEUTRAL_AGGRESSIVE), FourCC('h0GI'), dest, bj_UNIT_FACING)
     BlzSetUnitRealFieldBJ(u2, UNIT_RF_FLY_HEIGHT, GetUnitDefaultFlyHeight(caster))
-    
-    
     
     SetUnitPathing(u1, false)
     SetUnitPathing(u2, false)
     IssueTargetOrder(u1, "firebolt", u2)
      
-    TimerStart(t, DistanceBetweenPoints(l, destination) / 600.00, false, ManabombaNuke)
-    SaveLocationHandle(Hash, tid, 0, destination)
-    SaveUnitHandle(Hash, tid, 1, u1)
-    SaveUnitHandle(Hash, tid, 2, u2)
-    SaveUnitHandle(Hash, tid, 3, caster)
+    TimerStart(t, DistanceBetweenPoints(l, dest) / 600.00, false, function()
+        RemoveUnit(u1)
+        RemoveUnit(u2)
+        RemoveEffectTimed(AddSpecialEffectLocBJ(dest, "war3mapImportedExplosionC.mdx"), 60)
+        local function dmg(damager, delay, interval, damage, radious, times, Attacktype, Damagetype)
+            local i=0
+            while i < times do
+                UnitDamagePointLoc(damager, delay + interval * i, damage, dest, radious, Attacktype, Damagetype)
+                i=i+1
+            end
+        end
+        dmg(caster, 0.0, 375.00, 70, 20, 0.25, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC)
+        dmg(caster, 5, 600.00, 55, 12, 0.25, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC)
+        dmg(caster, 8, 900.00, 3, 160, 0.25, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC)
+        dmg(caster, 8, 375.00, 5, 160, 0.25, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_MAGIC)
+        UnitRemoveAbility(caster, FourCC('A0TS'))
+        RemoveLocation(dest)
+        DestroyTimer(t)
+    end)
     
     RemoveLocation(l)
     l=nil

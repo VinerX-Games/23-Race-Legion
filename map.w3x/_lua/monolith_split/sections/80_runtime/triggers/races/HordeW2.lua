@@ -234,31 +234,16 @@ function Trig_DiyW2_Conditions()
     return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('w2a0')) > 0
     
 end
-function deadEdly()
-    
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u= LoadUnitHandle(Hash, id, 0)
-    local uh= LoadInteger(Hash, id, 1)
-    
-    if u == nil then
-        FlushChildHashtable(Hash, uh)
-    end
-    FlushChildHashtable(Hash, id)
-    DestroyTimer(t)
-    t=nil
-    u=nil
-end
 function Trig_DiyW2_Actions()
     local u= GetTriggerUnit()
     local uh= GetHandleId(u)
-    
     local t= CreateTimer()
-    local id= GetHandleId(t)
-    
-    TimerStart(t, 45, false, deadEdly)
-    SaveUnitHandle(Hash, id, 0, u)
-    SaveInteger(Hash, id, 1, uh)
+    TimerStart(t, 45, false, function()
+        if u == nil then
+            FlushChildHashtable(Hash, uh)
+        end
+        DestroyTimer(t)
+    end)
     t=nil
     u=nil
 end
@@ -616,108 +601,79 @@ end
 --===========================================================================
 -- Trigger: Duel
 --===========================================================================
-function Duel()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    local u= LoadUnitHandle(Hash, id, 0)
-    local u2= LoadUnitHandle(Hash, id, 1)
-    local l1=GetUnitLoc(u)
-    local l2=GetUnitLoc(u2)
-    UnitRemoveAbility(u, FourCC('Avul'))
-    UnitRemoveAbility(u2, FourCC('Avul'))
-    PauseUnit(u, true)
-    PauseUnit(u2, true)
-    SetUnitAnimation(u, "attack")
-    SetUnitAnimation(u2, "attack")
-    SetUnitLookAt(u, "bone_chest", u2, 0, 0, 0)
-    SetUnitLookAt(u2, "bone_chest", u, 0, 0, 0)
-    
-    
-    UnitDamageTargetBJ(u, u2, BlzGetUnitBaseDamage(u, 1), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
-    if UnitAlive(u2) then
-         UnitDamageTargetBJ(u2, u, BlzGetUnitBaseDamage(u, 1), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
-    end
-   
-    UnitAddAbility(u, FourCC('Avul'))
-    UnitAddAbility(u2, FourCC('Avul'))
-    if not UnitAlive(u) then
-        PauseUnit(u, false)
-        PauseUnit(u2, false)
-        SetUnitAnimation(u, "death")
-        SetUnitAnimation(u2, "stand")
-        UnitAddAbility(u2, FourCC('w2oz'))
-        IssueImmediateOrder(u2, "howlofterror")
-            UnitRemoveAbility(u, FourCC('Avul'))
-        UnitRemoveAbility(u2, FourCC('Avul'))
-        FlushChildHashtable(Hash, id)
-        PauseTimer(t)
-        DestroyTimer(t)
-        
-        ResetUnitLookAt(u)
-        ResetUnitLookAt(u2)
-        
-    elseif not UnitAlive(u2) then
-        PauseUnit(u, false)
-        PauseUnit(u2, false)
-        SetUnitAnimation(u, "stand")
-        SetUnitAnimation(u2, "death")
-        UnitAddAbility(u, FourCC('w2oz'))
-        IssueImmediateOrder(u, "howlofterror")
-        UnitRemoveAbility(u, FourCC('Avul'))
-        UnitRemoveAbility(u2, FourCC('Avul'))
-        FlushChildHashtable(Hash, id)
-        PauseTimer(t)
-        DestroyTimer(t)
-        
-        ResetUnitLookAt(u)
-        ResetUnitLookAt(u2)
-        
-    elseif u == nil or u2 == nil or DistanceBetweenPoints(l1, l2) > 500 then
-        PauseUnit(u, false)
-        PauseUnit(u2, false)
-        SetUnitAnimation(u, "stand")
-        SetUnitAnimation(u2, "stand")
-        ResetUnitLookAt(u)
-        ResetUnitLookAt(u2)
-        UnitRemoveAbility(u, FourCC('Avul'))
-        UnitRemoveAbility(u2, FourCC('Avul'))
-        FlushChildHashtable(Hash, id)
-        PauseTimer(t)
-        DestroyTimer(t)
-        
-    
-    end
-    t=nil
-    u=nil
-    u2=nil
-    
-    RemoveLocation(l1)
-    RemoveLocation(l2)
-    l1=nil
-    l2=nil
-end
 function Trig_Duel_Actions()
     local u= GetTriggerUnit()
     local u2= GetSpellTargetUnit()
     local t= CreateTimer()
-    local id= GetHandleId(t)
     
-    TimerStart(t, 1, true, Duel)
-    SaveUnitHandle(Hash, id, 0, u)
-    SaveUnitHandle(Hash, id, 1, u2)
+    TimerStart(t, 1, true, function()
+        local l1=GetUnitLoc(u)
+        local l2=GetUnitLoc(u2)
+        UnitRemoveAbility(u, FourCC('Avul'))
+        UnitRemoveAbility(u2, FourCC('Avul'))
+        PauseUnit(u, true)
+        PauseUnit(u2, true)
+        SetUnitAnimation(u, "attack")
+        SetUnitAnimation(u2, "attack")
+        SetUnitLookAt(u, "bone_chest", u2, 0, 0, 0)
+        SetUnitLookAt(u2, "bone_chest", u, 0, 0, 0)
+        
+        UnitDamageTargetBJ(u, u2, BlzGetUnitBaseDamage(u, 1), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
+        if UnitAlive(u2) then
+             UnitDamageTargetBJ(u2, u, BlzGetUnitBaseDamage(u, 1), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
+        end
+       
+        UnitAddAbility(u, FourCC('Avul'))
+        UnitAddAbility(u2, FourCC('Avul'))
+        if not UnitAlive(u) then
+            PauseUnit(u, false)
+            PauseUnit(u2, false)
+            SetUnitAnimation(u, "death")
+            SetUnitAnimation(u2, "stand")
+            UnitAddAbility(u2, FourCC('w2oz'))
+            IssueImmediateOrder(u2, "howlofterror")
+            UnitRemoveAbility(u, FourCC('Avul'))
+            UnitRemoveAbility(u2, FourCC('Avul'))
+            PauseTimer(t)
+            DestroyTimer(t)
+            ResetUnitLookAt(u)
+            ResetUnitLookAt(u2)
+        elseif not UnitAlive(u2) then
+            PauseUnit(u, false)
+            PauseUnit(u2, false)
+            SetUnitAnimation(u, "stand")
+            SetUnitAnimation(u2, "death")
+            UnitAddAbility(u, FourCC('w2oz'))
+            IssueImmediateOrder(u, "howlofterror")
+            UnitRemoveAbility(u, FourCC('Avul'))
+            UnitRemoveAbility(u2, FourCC('Avul'))
+            PauseTimer(t)
+            DestroyTimer(t)
+            ResetUnitLookAt(u)
+            ResetUnitLookAt(u2)
+        elseif u == nil or u2 == nil or DistanceBetweenPoints(l1, l2) > 500 then
+            PauseUnit(u, false)
+            PauseUnit(u2, false)
+            SetUnitAnimation(u, "stand")
+            SetUnitAnimation(u2, "stand")
+            ResetUnitLookAt(u)
+            ResetUnitLookAt(u2)
+            UnitRemoveAbility(u, FourCC('Avul'))
+            UnitRemoveAbility(u2, FourCC('Avul'))
+            PauseTimer(t)
+            DestroyTimer(t)
+        end
+        RemoveLocation(l1)
+        RemoveLocation(l2)
+        l1=nil
+        l2=nil
+    end)
     
     UnitAddAbility(u, FourCC('Avul'))
     UnitAddAbility(u2, FourCC('Avul'))
-    
-    
-    --call SaveInteger(Hash,id,1, 'w2aW')
-    --call SaveInteger(Hash,id,2, 0)
-    --call SaveInteger(Hash,id,3, GetUnitAbilityLevel(u,'w2aW'))
-    --call SaveLocationHandle(Hash,id,4, GetSpellTargetLoc())
     t=nil
     u=nil
     u2=nil
-    
 end
 --===========================================================================
 function InitTrig_Duel()

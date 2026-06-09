@@ -77,71 +77,22 @@ end
 function Trig_BlinkToUnit_attack_Conditions()
     return GetUnitAbilityLevel(GetAttacker(), FourCC('A0MZ')) >= 1 and BlzGetUnitAbilityCooldownRemaining(GetAttacker(), FourCC('A0MZ')) == 0
 end
-function MoveTimedEnd()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    SetUnitPositionLoc(LoadUnitHandle(Hash, id, 1), LoadLocationHandle(Hash, id, 2))
-       
-    RemoveLocation(LoadLocationHandle(Hash, id, 2))
-    FlushChildHashtable(Hash, id)
-    DestroyTimer(t)
-    t=nil
-    
-    
-end
-function MoveTimed()
-    local t= CreateTimer()
-    local id= GetHandleId(t)
-    
-    SaveUnitHandle(Hash, id, 1, u)
-    SaveLocationHandle(Hash, id, 2, l)
-    TimerStart(t, time, false, MoveTimedEnd)
-    
-    t=nil
-end
-function MoveWithOrderTimedEnd()
-    local t= GetExpiredTimer()
-    local id= GetHandleId(t)
-    SetUnitPositionLoc(LoadUnitHandle(Hash, id, 1), LoadLocationHandle(Hash, id, 2))
-    IssueTargetOrder(LoadUnitHandle(Hash, id, 1), LoadStr(Hash, id, 4), LoadUnitHandle(Hash, id, 3))
-    
-    RemoveLocation(LoadLocationHandle(Hash, id, 2))
-    FlushChildHashtable(Hash, id)
-    DestroyTimer(t)
-    t=nil
-    
-    
-end
-function MoveWithOrderTimed()
-    local t= CreateTimer()
-    local id= GetHandleId(t)
-    
-    SaveUnitHandle(Hash, id, 1, u)
-    SaveLocationHandle(Hash, id, 2, l)
-    SaveUnitHandle(Hash, id, 3, target)
-    SaveStr(Hash, id, 4, order)
-    TimerStart(t, time, false, MoveWithOrderTimedEnd)
- 
-    t=nil
-end
 function Trig_BlinkToUnit_attack_Actions()
     gUnit=GetAttacker()
---
---    call IssueTargetOrderBJ( gUnit, "attack", GetAttackedUnitBJ() )
---    call UnitAddAbility( 'A0N0', gUnit )
---    call SetUnitAbilityLevelSwapped( 'A0N0', gUnit, GetUnitAbilityLevelSwapped('A0MZ', gUnit) )
---    call UnitAddAbility( 'A0N2', gUnit )
---    call SetUnitAbilityLevelSwapped( 'A0N2', gUnit, GetUnitAbilityLevelSwapped('A0MZ', gUnit) )
---    call UnitRemoveAbility( 'A0MZ', gUnit )
---    
-    MoveWithOrderTimed(gUnit , GetTriggerUnit() , GetUnitLoc(GetTriggerUnit()) , "attack" , 0.1)
+    local u = gUnit
+    local target = GetTriggerUnit()
+    local l = GetUnitLoc(GetTriggerUnit())
+    local order = "attack"
+    local time = 0.1
+    local t = CreateTimer()
+    TimerStart(t, time, false, function()
+        SetUnitPositionLoc(u, l)
+        IssueTargetOrder(u, order, target)
+        RemoveLocation(l)
+        DestroyTimer(t)
+    end)
     DummyCastTargetLevel(FourCC('A1MY') , "shadowstrike" , gUnit , GetTriggerUnit() , GetUnitAbilityLevel(gUnit, FourCC('A0MZ')))
-    
     BlzStartUnitAbilityCooldown(gUnit, FourCC('A0MZ'), 3)
---    call UnitAddAbilityBJ( 'A0MZ', gUnit )
---    call SetUnitAbilityLevelSwapped( 'A0MZ', gUnit, GetUnitAbilityLevelSwapped('A0N0', gUnit) )
---    call UnitRemoveAbilityBJ( 'A0N0', gUnit )
---    call UnitRemoveAbilityBJ( 'A0N2', gUnit )
 end
 --===========================================================================
 function InitTrig_BlinkToUnit_attack()
@@ -157,8 +108,17 @@ end
 function Trig_BlinkToUnit_Spell_Actions()
     local l1= GetUnitLoc(GetSpellTargetUnit())
     local l2= GetUnitLoc(GetTriggerUnit())
-    
-    MoveWithOrderTimed(GetTriggerUnit() , GetSpellTargetUnit() , l1 , "attack" , DistanceBetweenPoints(l1, l2) / 1200 + 0.4)
+    local u = GetTriggerUnit()
+    local target = GetSpellTargetUnit()
+    local order = "attack"
+    local time = DistanceBetweenPoints(l1, l2) / 1200 + 0.4
+    local t = CreateTimer()
+    TimerStart(t, time, false, function()
+        SetUnitPositionLoc(u, l1)
+        IssueTargetOrder(u, order, target)
+        RemoveLocation(l1)
+        DestroyTimer(t)
+    end)
     RemoveLocation(l2)
     l1=nil
     l2=nil

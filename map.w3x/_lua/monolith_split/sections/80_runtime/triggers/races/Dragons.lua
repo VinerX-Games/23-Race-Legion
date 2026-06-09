@@ -68,105 +68,53 @@ end
 -- Trigger: FlyDragon
 --===========================================================================
 --================
-function Trig_Charge_move_heroD()
-    local t= GetExpiredTimer()
-    local h= GetHandleId(t)
-    local GT= LoadUnitHandle(Hash, h, 1)
-    local l= LoadReal(Hash, h, 2)
-    local g
-    local x1= LoadReal(Hash, h, 4)
-    local y1= LoadReal(Hash, h, 5)
-    local fl= LoadReal(Hash, h, 6)
-    local dx= GetUnitX(GT)
-    local dy= GetUnitY(GT)
-    local un
-    local x
-    local y
-    local uron
-    local lvl
-    local w
-    local ugol= JSTRUgolMT(dx , x1 , dy , y1)
-    local t1
-    local h1
-    local MaxW
-    if l <= 500 then
-        MaxW=l
-    else
-        MaxW=500
-    end
-    ---------
-    x=dx + 6 * Cos(ugol * bj_DEGTORAD) --????????? ????????? ?
-    y=dy + 6 * Sin(ugol * bj_DEGTORAD) --????????? ????????? ?
-    w=JSTRParabolaZ(MaxW , l , JSTRRastMT(x , x1 , y , y1)) --????????? ??????
-    
-    -- ???? ????? ????
-    if JSTRRastMT(x1 , dx , y1 , dy) > 25 then --and not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then
-        -- ??????? ?????
-        SetUnitX(GT, x)
-        SetUnitY(GT, y)
-        SetUnitFacing(GT, ugol)
-        SetUnitFlyHeight(GT, fl + w, 0)
-        
-    else
-        UnitRemoveAbility(GT, FourCC('A16S')) -- ?????? ?????
-        DestroyEffect(LoadEffectHandle(Hash, h, 6))
-        FlushChildHashtable(Hash, h)
-        DestroyTimer(t)
-        SetUnitAnimation(GT, "Stand")
-        SetUnitFlyHeight(GT, fl, 0)
-        --call DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
-        g=CreateGroup()
-        GroupEnumUnitsInRange(g, dx, dy, 260, nil)
-        while true do
-            un=FirstOfGroup(g)
-            if un == nil then break end
-            lvl=GetUnitAbilityLevel(GT, JSTRSkill)
-                    
-            GroupRemoveUnit(g, un)
-        end
-        DestroyGroup(g)
-    end
-    ---------
-    GT=nil
-    un=nil
-    g=nil
-    t=nil
-    t1=nil
-end
---================================================================================================================================================================================
--- ???? 2 - ???????? ???????
---================
 function Trig_FlyDragon_Actions()
     local GT= GetTriggerUnit()
-    --local group g = CreateGroup()
     local t= CreateTimer()
-    local h= GetHandleId(t)
     local x= GetUnitX(GT)
     local y= GetUnitY(GT)
     local x1= GetSpellTargetX()
     local y1= GetSpellTargetY()
     local l= JSTRRastMT(x , x1 , y , y1)
+    local fl= GetUnitFlyHeight(GT)
     
     JSTRSkill=GetSpellAbilityId()
     UnitAddAbility(GT, FourCC('Amrf'))
-    UnitAddAbility(GT, FourCC('A16S')) -- ?????? ?????
-    
+    UnitAddAbility(GT, FourCC('A16S'))
     UnitRemoveAbility(GT, FourCC('Amrf'))
     ---------
-    SaveUnitHandle(Hash, h, 1, GT)
-    if l ~= 0 then
-        SaveReal(Hash, h, 2, l)
-    else
-        SaveReal(Hash, h, 2, 1)
-    end
-    SaveReal(Hash, h, 4, x1)
-    SaveReal(Hash, h, 5, y1)
-    SaveReal(Hash, h, 6, GetUnitFlyHeight(GT))
-    --call DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
-    TimerStart(t, 0.05, true, Trig_Charge_move_heroD) --???????? ???????? ?????
+    TimerStart(t, 0.05, true, function()
+        local dx= GetUnitX(GT)
+        local dy= GetUnitY(GT)
+        local ugol= JSTRUgolMT(dx, x1, dy, y1)
+        local MaxW
+        if l <= 500 then MaxW=l else MaxW=500 end
+        local nx=dx + 6 * Cos(ugol * bj_DEGTORAD)
+        local ny=dy + 6 * Sin(ugol * bj_DEGTORAD)
+        local w=JSTRParabolaZ(MaxW, l, JSTRRastMT(nx, x1, ny, y1))
+        if JSTRRastMT(x1, dx, y1, dy) > 25 then
+            SetUnitX(GT, nx)
+            SetUnitY(GT, ny)
+            SetUnitFacing(GT, ugol)
+            SetUnitFlyHeight(GT, fl + w, 0)
+        else
+            UnitRemoveAbility(GT, FourCC('A16S'))
+            DestroyTimer(t)
+            SetUnitAnimation(GT, "Stand")
+            SetUnitFlyHeight(GT, fl, 0)
+            local g=CreateGroup()
+            GroupEnumUnitsInRange(g, dx, dy, 260, nil)
+            while true do
+                local un=FirstOfGroup(g)
+                if un == nil then break end
+                local lvl=GetUnitAbilityLevel(GT, JSTRSkill)
+                GroupRemoveUnit(g, un)
+            end
+            DestroyGroup(g)
+        end
+    end)
     ---------
     GT=nil
-    --set g = null
     t=nil
 end
 --===========================================================================
