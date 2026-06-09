@@ -660,6 +660,12 @@ function PlayerArmy()
         else
             AiArmyLegacyTick(gPlayer)
         end
+        -- Diplomat: swarm bots also get diplomat ticks (throttled ~every 28th call per bot)
+        if not AiBrainEnabled(pi_army) and AiDiplomatEnabled then
+            local dt = (AiDiplomatTicks[pi_army] or 0) + 1
+            AiDiplomatTicks[pi_army] = dt
+            if (dt % 28) == 0 then AiDiplomatTick(pi_army) end
+        end
     end
     
     

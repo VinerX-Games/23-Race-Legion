@@ -53283,6 +53283,8 @@ RegisterAiRace("Scarlet", {
     upgrade = UpgradeScarlet,
 
 
+    diplomat = "balanced",
+
     brain = "objective",
 
     brainWeights = {
@@ -53591,6 +53593,8 @@ RegisterAiRace("BloodElves", {
 
     wall = FourCC('h011'),
 
+
+    diplomat = "balanced",
 
     brain = "objective",
 
@@ -54179,6 +54183,8 @@ RegisterAiRace("Naga", {
 
     continentalNaga = true,
 
+
+    diplomat = "balanced",
 
     brain = "objective",
 
@@ -54841,6 +54847,8 @@ RegisterAiRace("JungleTrolls", {
     wall = FourCC('h0N2'),
 
 
+    diplomat = "balanced",
+
     brain = "objective",
 
     brainWeights = {
@@ -55131,6 +55139,8 @@ RegisterAiRace("ForestTrolls", {
     wall = FourCC('h0N4'),
 
 
+    diplomat = "balanced",
+
     brain = "objective",
 
     brainWeights = {
@@ -55356,6 +55366,8 @@ RegisterAiRace("HordeW2", {
 
     wall = FourCC('w20u'),
 
+
+    diplomat = "balanced",
 
     brain = "objective",
 
@@ -55590,6 +55602,8 @@ RegisterAiRace("Nerubs", {
 
     naval = aiNavalTrain_Common,
 
+
+    diplomat = "balanced",
 
     brain = "objective",
 
@@ -56256,6 +56270,8 @@ RegisterAiRace("Bandits", {
     wall = FourCC('h03Q'),
 
 
+    diplomat = "balanced",
+
     brain = "objective",
 
     brainWeights = {
@@ -56876,6 +56892,8 @@ RegisterAiRace("Demons", {
     wall = FourCC('n02C'),
 
 
+    diplomat = "balanced",
+
     brain = "objective",
 
     brainWeights = {
@@ -57067,6 +57085,8 @@ RegisterAiRace("Draenei", {
 
     join = Join_Draenei,
 
+
+    diplomat = "balanced",
 
     brain = "objective",
 
@@ -57293,6 +57313,8 @@ RegisterAiRace("Stromgard", {
     wall = FourCC('h0HG'),
 
 
+    diplomat = "balanced",
+
     brain = "objective",
 
     brainWeights = {
@@ -57508,6 +57530,8 @@ RegisterAiRace("Illidari", {
     wall = FourCC('h0EN'),
 
 
+    diplomat = "balanced",
+
     brain = "objective",
 
     brainWeights = {
@@ -57714,6 +57738,8 @@ RegisterAiRace("Worgen", {
 
     wall = FourCC('h0JT'),
 
+
+    diplomat = "balanced",
 
     brain = "objective",
 
@@ -57927,6 +57953,8 @@ RegisterAiRace("Ogres", {
 
     wall = FourCC('o038'),
 
+
+    diplomat = "balanced",
 
     brain = "objective",
 
@@ -58436,6 +58464,8 @@ RegisterAiRace("Silitids", {
     join = Join_Silitids,
 
 
+    diplomat = "balanced",
+
     brain = "objective",
 
     brainWeights = {
@@ -58650,6 +58680,8 @@ RegisterAiRace("Pandarens", {
     wall = FourCC('h0P5'),
 
 
+    diplomat = "balanced",
+
     brain = "objective",
 
     brainWeights = {
@@ -58857,6 +58889,8 @@ RegisterAiRace("Bezlikie", {
     wall = FourCC('h0K3'),
 
 
+    diplomat = "balanced",
+
     brain = "objective",
 
     brainWeights = {
@@ -59062,6 +59096,8 @@ RegisterAiRace("Vrykul", {
     join = Join_Vrykul,
 
 
+    diplomat = "balanced",
+
     brain = "objective",
 
     brainWeights = {
@@ -59263,6 +59299,8 @@ RegisterAiRace("KulTiras", {
 
     wall = FourCC('h0E7'),
 
+
+    diplomat = "balanced",
 
     brain = "objective",
 
@@ -59502,6 +59540,8 @@ RegisterAiRace("Dalaran", {
     join = Join_Dalaran,
 
 
+    diplomat = "balanced",
+
     brain = "objective",
 
     brainWeights = {
@@ -59716,6 +59756,8 @@ RegisterAiRace("IceTrolls", {
 
     join = Join_IceTrolls,
 
+
+    diplomat = "balanced",
 
     brain = "objective",
 
@@ -59939,6 +59981,8 @@ RegisterAiRace("FelOrc", {
     join = Join_FelOrc,
 
 
+    diplomat = "balanced",
+
     brain = "objective",
 
     brainWeights = {
@@ -60151,6 +60195,8 @@ RegisterAiRace("Ents", {
 
     wall = FourCC('e02I'),
 
+
+    diplomat = "balanced",
 
     brain = "objective",
 
@@ -60625,7 +60671,6 @@ end
 ---@param y real
 ---@return integer
 function AiSquadOrderAtk(g, x, y)
-    ProbeLogWrite("[SQDBG] order-atk x=" .. tostring(R2I(x)) .. " y=" .. tostring(R2I(y)) .. " sz=" .. tostring(BlzGroupGetSize(g)))
     local tmp = CreateGroup()
     local sub = CreateGroup()
     local sz = BlzGroupGetSize(g)
@@ -60665,7 +60710,6 @@ end
 ---@param y real
 ---@return integer
 function AiSquadOrderMov(g, x, y)
-    ProbeLogWrite("[SQDBG] order-mov x=" .. tostring(R2I(x)) .. " y=" .. tostring(R2I(y)) .. " sz=" .. tostring(BlzGroupGetSize(g)))
     local tmp = CreateGroup()
     local sub = CreateGroup()
     local sz = BlzGroupGetSize(g)
@@ -61110,7 +61154,6 @@ end
 ---@param pi integer
 ---@param p player
 function AiBrainArmyTick(pi, p)
-    ProbeLogWrite("[SQDBG] AiBrainArmyTick pi=" .. tostring(pi) .. " tick=" .. tostring((AiData[pi].wm or {}).tick or 0))
     local wm = AiBrainPerceive(pi)
     local cfg = AiBrainCfg(pi)
     if wm.objectives == nil or (wm.tick % (cfg.clusterEvery or 8)) == 0 then
@@ -61132,7 +61175,6 @@ function AiBrainArmyTick(pi, p)
     -- Orphan/squad build every 2 ticks
     if (wm.tick % 2) == 0 then
         local armyGroup = udg_Ai_army[pi]
-        ProbeLogWrite("[SQDBG] orphan-build pi=" .. tostring(pi) .. " army=" .. tostring(armyGroup and BlzGroupGetSize(armyGroup) or 0))
         if armyGroup ~= nil then
             local squads = AiSquadsOf(pi)
             -- Assign orphaned army units to squads
@@ -61164,7 +61206,6 @@ function AiBrainArmyTick(pi, p)
 
     -- Tick up to 3 squads per frame
     local squads = AiSquadsOf(pi)
-    ProbeLogWrite("[SQDBG] tick-squads pi=" .. tostring(pi) .. " n=" .. tostring(#squads))
     local ticked = 0
     for sid, sq in pairs(squads) do
         if ticked >= 3 then break end
@@ -61174,7 +61215,10 @@ function AiBrainArmyTick(pi, p)
         elseif sq.state == "engage" then newState = AiSquadTickEngage(pi, sid, sq, p, wm)
         elseif sq.state == "retreat" then newState = AiSquadTickRetreat(pi, sid, sq, p, wm)
         end
-        sq.state = newState
+        if newState ~= sq.state then
+            ProbeLogWrite("[SQDBG] pi" .. tostring(pi) .. " sq" .. tostring(sid) .. " " .. sq.state .. "->" .. newState .. " sz=" .. tostring(AiSquadSize(sq.members)))
+            sq.state = newState
+        end
         ticked = ticked + 1
     end
     -- Pirate fleet: try buying ships every 8 ticks
