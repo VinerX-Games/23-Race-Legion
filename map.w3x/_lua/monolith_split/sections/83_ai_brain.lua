@@ -1152,14 +1152,37 @@ end
 function BrainProduce(pi, wm, race)
     local prod = race.production
     local comp = race.compTarget
-    if not prod or not comp then return 0 end
+    if not prod then return 0 end
 
     local ordered = 0
     local maxN = AiBrainMaxProduce
-    local totalMil = wm.armyCount or 0
-    if totalMil < 1 then totalMil = 1 end  -- avoid div/zero; train at least 1 of each
 
-    -- Build deficit list: unitId → (currentRatio, targetRatio, buildingType)
+    -- 1) Workers: train independently of compTarget, always up to cap
+    local w = prod.worker
+    if w and w.from and w.id then
+        local wCnt = getAiCount(pi, w.id) or 0
+        if wCnt < (w.cap or 40) then
+            for _, fromBldType in ipairs(w.from) do
+                local bld = AiFindProdBuilding(pi, fromBldType)
+                if bld ~= nil then
+                    local key = pi * 1000000 + w.id
+                    if not g_AiOrdered[key] then
+                        IssueImmediateOrderById(bld, w.id)
+                        g_AiOrdered[key] = true
+                        ordered = ordered + 1
+                    end
+                    break  -- one worker order per tick is enough
+                end
+            end
+        end
+    end
+
+    if not comp then return ordered end
+
+    local totalMil = wm.armyCount or 0
+    if totalMil < 1 then totalMil = 1 end
+
+    -- 2) Military: scan compTarget for deficit, find building, issue order
     for unitId, targetRatio in pairs(comp) do
         if ordered >= maxN then break end
         if type(unitId) ~= "number" or targetRatio == nil then goto skipUnit end
@@ -1171,25 +1194,7 @@ function BrainProduce(pi, wm, race)
 
         -- Find which building produces this unit
         for bldType, rows in pairs(prod) do
-            if bldType == "worker" then
-                if rows.id == unitId then
-                    for _, fromBldType in ipairs(rows.from) do
-                        local bld = AiFindProdBuilding(pi, fromBldType)
-                        if bld ~= nil then
-                            local cap = rows.cap or 999
-                            if getAiCount(pi, unitId) < cap then
-                                local key = pi * 1000000 + unitId
-                                if not g_AiOrdered[key] then
-                                    IssueImmediateOrderById(bld, unitId)
-                                    g_AiOrdered[key] = true
-                                    ordered = ordered + 1
-                                end
-                            end
-                        end
-                    end
-                end
-                goto skipBld
-            end
+            if bldType == "worker" then goto skipBld end
             if type(rows) ~= "table" then goto skipBld end
             for _, row in ipairs(rows) do
                 local uid = row[1]
