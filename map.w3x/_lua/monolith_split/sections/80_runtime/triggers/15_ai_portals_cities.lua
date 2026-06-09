@@ -120,6 +120,17 @@ function BridgeDispatchCommand(op, arg, sequence)
         ProbeLogWrite("[BRIDGE] ping seq=" .. tostring(sequence) .. " arg=" .. tostring(arg))
         return
     end
+    if op == "handle" then
+        if arg == "on" then
+            HandleCounter_Start()
+        elseif arg == "off" then
+            HandleCounter_Stop()
+        elseif arg == "toggle" then
+            HandleCounter_Toggle()
+        end
+        ProbeLogWrite("[BRIDGE] handle op=" .. tostring(arg) .. " seq=" .. tostring(sequence))
+        return
+    end
     -- arg ????? ???? "N" ??? "N:race" (???? ???????????, ?????????)
     local targetStr, raceTok = string.match(tostring(arg), "^(%d+):?(%S*)")
     local target = tonumber(targetStr)

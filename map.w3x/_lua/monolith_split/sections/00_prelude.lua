@@ -485,6 +485,20 @@ function SetupBridgeChat()
             end
             return
         end
+        if op == "handle" then
+            if arg == "on" then
+                HandleCounter_Start()
+            elseif arg == "off" then
+                HandleCounter_Stop()
+            elseif arg == "toggle" then
+                HandleCounter_Toggle()
+            elseif arg == "status" then
+                local msg = "handle=" .. tostring(HandleCounterEnabled)
+                ProbeLogWrite("[BRIDGE] handle status " .. msg)
+                DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cff00ff00[BRIDGE] handle: " .. msg .. "|r")
+            end
+            return
+        end
         if op == "restart" then
             -- Restart the LOOP (timer), not the seq. EvalNextSeq stays monotonic;
             -- rewinding it would reuse Preloader-cached filenames and wedge the bridge.
@@ -568,6 +582,28 @@ function SetupLogChat()
         end
     end)
 end
+function SetupHandleCounterChat()
+    local trigger = CreateTrigger()
+    for i = 0, 23 do
+        TriggerRegisterPlayerChatEvent(trigger, Player(i), "-handle", false)
+    end
+    TriggerAddAction(trigger, function()
+        local text = GetEventPlayerChatString()
+        local op = string.match(text, "^%-handle%s+(%S+)")
+        if op == "on" then
+            HandleCounter_Start()
+        elseif op == "off" then
+            HandleCounter_Stop()
+        elseif op == "toggle" then
+            HandleCounter_Toggle()
+        elseif op == "status" then
+            local msg = "Handle Counter: " .. (HandleCounterEnabled and "ON" or "OFF")
+            DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cff00ff00[HC] " .. msg .. "|r")
+        else
+            DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffffcc00[HC] Usage: -handle on|off|toggle|status|r")
+        end
+    end)
+end
 -- ============================================================
 -- Safe callback wrapper (debug.traceback disabled in WC3)
 -- ============================================================
@@ -638,6 +674,62 @@ end)
 wrap("EnumItemsInRect", function(r, filter, fn)
     return _orig.EnumItemsInRect(r, filter, safeCall(fn, "EnumItems"))
 end)
+-- ============================================================
+-- Centralized event dispatcher
+-- Monkey-patches TriggerRegisterAnyUnitEventBJ to route ALL
+-- triggers of the same event type through ONE native trigger.
+-- Instead of 248 native C->Lua calls per spell cast (one per
+-- registered trigger), we get 1 call + Lua-level dispatch.
+-- This eliminates the dominant overhead of fragmented GUI/JASS
+-- trigger registration at zero changes to existing InitTrig_* code.
+--
+-- How it works:
+--   1. InitTrig_ calls TriggerRegisterAnyUnitEventBJ(trig, eventId)
+--   2. Our patch stores `trig` in CentralEventLists[eventId]
+--   3. A single native trigger (CentralTriggers[eventId]) fires
+--   4. The dispatch action iterates registered triggers:
+--      - Checks IsTriggerEnabled() (respects DisableTrigger)
+--      - Calls TriggerEvaluate() (runs conditions, short-circuits)
+--      - If conditions pass, calls TriggerExecute() (runs actions)
+--
+-- To add a new event handler: just write InitTrig_ as usual.
+-- The dispatcher is transparent — zero API change for devs.
+-- ============================================================
+_G.EventCentralized = true
+do
+    local _orig_RegisterAnyUnit = TriggerRegisterAnyUnitEventBJ
+    local CentralTriggers = {}
+    local CentralEventLists = {}  -- [eventId] = {trig, trig, ...}
+
+    local function EnsureCentralTrigger(eventId)
+        if CentralTriggers[eventId] then return end
+        local ct = CreateTrigger()
+        CentralTriggers[eventId] = ct
+        CentralEventLists[eventId] = {}
+        _orig_RegisterAnyUnit(ct, eventId)
+        TriggerAddAction(ct, function()
+            local trigs = CentralEventLists[eventId]
+            if not trigs then return end
+            for _, trig in ipairs(trigs) do
+                if IsTriggerEnabled(trig) then
+                    if TriggerEvaluate(trig) then
+                        TriggerExecute(trig)
+                    end
+                end
+            end
+        end)
+    end
+
+    TriggerRegisterAnyUnitEventBJ = function(trig, eventId)
+        if trig ~= nil and eventId ~= nil then
+            EnsureCentralTrigger(eventId)
+            CentralEventLists[eventId][#CentralEventLists[eventId] + 1] = trig
+        end
+        return trig
+    end
+end
+print("[CORE] Event dispatcher active (centralized TriggerRegisterAnyUnitEventBJ)")
+
 -- ============================================================
 -- Init queue + MarkGameStarted error display
 -- ============================================================

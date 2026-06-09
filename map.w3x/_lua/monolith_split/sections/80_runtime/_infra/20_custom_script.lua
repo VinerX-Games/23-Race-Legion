@@ -8,17 +8,20 @@
 -- *  Map
 --  ??????? ??????
 ---@return nothing
+HandleCounterTimer = nil
+HandleCounterBoard = nil
+HandleCounterEnabled = false
+
+---@return nothing
 function HandleCounter_Update()
 	local i = 0
-	local id = 0
 	local P = {}
 	local result = 0
 	while true do
 		if i >= 50 then break end
 		i = i + 1
 		P[i] = Location(0, 0)
-		id = GetHandleId(P[i])
-		result = result + (id - 0x100000)
+		result = result + (GetHandleId(P[i]) - 0x100000)
 	end
 	result = result / i - i / 2
 	while true do
@@ -27,22 +30,48 @@ function HandleCounter_Update()
 		if i <= 1 then break end
 		i = i - 1
 	end
-	LeaderboardSetItemValue(udg_HandleBoard, 0, R2I(result))
+	LeaderboardSetItemValue(HandleCounterBoard, 0, R2I(result))
 end
 ---@return nothing
-function HandleCounter_Actions()
-	udg_HandleBoard = CreateLeaderboard()
-	LeaderboardSetLabel(udg_HandleBoard, "Handle Counter")
-	PlayerSetLeaderboard(GetLocalPlayer(), udg_HandleBoard)
-	LeaderboardDisplay(udg_HandleBoard, true)
-	LeaderboardAddItem(udg_HandleBoard, "Handles", 0, Player(0))
-	LeaderboardSetSizeByItemCount(udg_HandleBoard, 1)
+function HandleCounter_Init()
+	HandleCounterBoard = CreateLeaderboard()
+	LeaderboardSetLabel(HandleCounterBoard, "Handle Counter")
+	PlayerSetLeaderboard(GetLocalPlayer(), HandleCounterBoard)
+	LeaderboardDisplay(HandleCounterBoard, true)
+	LeaderboardAddItem(HandleCounterBoard, "Handles", 0, Player(0))
+	LeaderboardSetSizeByItemCount(HandleCounterBoard, 1)
+	LeaderboardDisplay(HandleCounterBoard, false)
+end
+---@return nothing
+function HandleCounter_Start()
+	if HandleCounterEnabled then return end
+	HandleCounterEnabled = true
+	if HandleCounterBoard == nil then HandleCounter_Init() end
+	LeaderboardDisplay(HandleCounterBoard, true)
 	HandleCounter_Update()
-	TimerStart(GetExpiredTimer(), 0.05, true, HandleCounter_Update)
+	HandleCounterTimer = CreateTimer()
+	TimerStart(HandleCounterTimer, 0.05, true, HandleCounter_Update)
+end
+---@return nothing
+function HandleCounter_Stop()
+	if not HandleCounterEnabled then return end
+	HandleCounterEnabled = false
+	if HandleCounterTimer ~= nil then
+		DestroyTimer(HandleCounterTimer)
+		HandleCounterTimer = nil
+	end
+	if HandleCounterBoard ~= nil then
+		LeaderboardDisplay(HandleCounterBoard, false)
+		LeaderboardSetItemValue(HandleCounterBoard, 0, 0)
+	end
+end
+---@return nothing
+function HandleCounter_Toggle()
+	if HandleCounterEnabled then HandleCounter_Stop() else HandleCounter_Start() end
 end
 ---@return nothing
 function InitTrig_HandleCounter()
-	TimerStart(CreateTimer(), 0, false, HandleCounter_Actions)
+	HandleCounter_Init()
 end
 --  ????? ???????? ??????
 ---@return nothing
