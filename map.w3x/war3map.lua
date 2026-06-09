@@ -10315,9 +10315,9 @@ function TimedUpdateCheck()
 	else
 		u = nil
 		p = nil
-		DestroyTimer(t)
-		t = nil
-		FlushChildHashtable(Hash, id)
+        FlushChildHashtable(Hash, id)
+        DestroyTimer(t)
+        t = nil
 	end
 end
 ---@param u unit
@@ -21970,10 +21970,10 @@ function ManabombaNuke()
     UnitRemoveAbility(caster, FourCC('A0TS'))
     
     
+    FlushChildHashtable(Hash, tid)
     PauseTimer(t)
     DestroyTimer(t)
     t=nil
-    FlushChildHashtable(Hash, tid)
     caster=nil
     RemoveLocation(destination)
     destination=nil
@@ -25243,9 +25243,9 @@ function NewMember()
     
     else
         
-        DestroyTimer(t)
         FlushChildHashtable(Hash, id)
         FlushChildHashtable(Hash, uid)
+        DestroyTimer(t)
     end
     t=nil
     u=nil
@@ -25653,8 +25653,9 @@ function deadEdly()
     
     if u == nil then
         FlushChildHashtable(Hash, uh)
-    
     end
+    FlushChildHashtable(Hash, id)
+    DestroyTimer(t)
     t=nil
     u=nil
 end
@@ -26719,9 +26720,9 @@ function Plague()
         end
         UnitRemoveAbility(u, FourCC('A1HS'))
         DestroyEffect(LoadEffectHandle(Hash, id, 2))
+        FlushChildHashtable(Hash, id)
         PauseTimer(t)
         DestroyTimer(t)
-        FlushChildHashtable(Hash, id)
     
     end
     e=nil
@@ -38082,11 +38083,11 @@ function spawnlich()
         end
         
     else
+        FlushChildHashtable(Hash, id)
         PauseTimer(t)
         DestroyTimer(t)
         t=nil
         SaveBoolean(Hash, uid, 1, false)
-        FlushChildHashtable(Hash, id)
         p=nil
     end
     SaveInteger(Hash, uid, 1, currentCount)
@@ -41758,6 +41759,7 @@ function MoveTimedEnd()
     SetUnitPositionLoc(LoadUnitHandle(Hash, id, 1), LoadLocationHandle(Hash, id, 2))
        
     RemoveLocation(LoadLocationHandle(Hash, id, 2))
+    FlushChildHashtable(Hash, id)
     DestroyTimer(t)
     t=nil
     
@@ -41780,6 +41782,7 @@ function MoveWithOrderTimedEnd()
     IssueTargetOrder(LoadUnitHandle(Hash, id, 1), LoadStr(Hash, id, 4), LoadUnitHandle(Hash, id, 3))
     
     RemoveLocation(LoadLocationHandle(Hash, id, 2))
+    FlushChildHashtable(Hash, id)
     DestroyTimer(t)
     t=nil
     
@@ -45058,8 +45061,8 @@ function Trig_Charge_move_heroD()
     else
         UnitRemoveAbility(GT, FourCC('A16S')) -- ?????? ?????
         DestroyEffect(LoadEffectHandle(Hash, h, 6))
-        DestroyTimer(t)
         FlushChildHashtable(Hash, h)
+        DestroyTimer(t)
         SetUnitAnimation(GT, "Stand")
         SetUnitFlyHeight(GT, fl, 0)
         --call DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
@@ -60585,6 +60588,18 @@ function AiBrainPerceive(pi)
     if wm == nil then wm = {}; AiData[pi].wm = wm end
     wm.tick = (wm.tick or 0) + 1
 
+    -- Clean dead units from udg_Ai_army (some races do KillUnit/ReplaceUnit)
+    local armyGroup = udg_Ai_army[pi]
+    if armyGroup ~= nil then
+        local i = 0
+        while i < BlzGroupGetSize(armyGroup) do
+            local u = BlzGroupUnitAt(armyGroup, i)
+            if u == nil then i = i + 1
+            elseif GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then GroupRemoveUnit(armyGroup, u)
+            else i = i + 1 end
+        end
+    end
+
     local cx, cy, n = AiGroupCentroid(udg_Ai_army[pi])
     wm.cx, wm.cy, wm.armyCount = cx, cy, n
     wm.armyContinent = n > 0 and AiContinentOf(cx, cy) or nil
@@ -61955,9 +61970,16 @@ function AiDiplomatRpSay(pi, event)
             end
         end
     end
-    local tbl = AiDiplomatRpMessages[persona]
-    if tbl == nil then tbl = AiDiplomatRpMessages["balanced"] end
-    local msgs = tbl[event]
+    -- Race-specific RP messages override personality table
+    local msgs = nil
+    if race ~= nil and race.diplomatRp ~= nil and race.diplomatRp[event] ~= nil then
+        msgs = race.diplomatRp[event]
+    end
+    if msgs == nil then
+        local tbl = AiDiplomatRpMessages[persona]
+        if tbl == nil then tbl = AiDiplomatRpMessages["balanced"] end
+        msgs = tbl[event]
+    end
     if msgs == nil or #msgs == 0 then return end
 
     local msg = msgs[GetRandomInt(1, #msgs)]

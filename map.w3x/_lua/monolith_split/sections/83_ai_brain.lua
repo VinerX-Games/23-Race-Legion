@@ -363,6 +363,18 @@ function AiBrainPerceive(pi)
     if wm == nil then wm = {}; AiData[pi].wm = wm end
     wm.tick = (wm.tick or 0) + 1
 
+    -- Clean dead units from udg_Ai_army (some races do KillUnit/ReplaceUnit)
+    local armyGroup = udg_Ai_army[pi]
+    if armyGroup ~= nil then
+        local i = 0
+        while i < BlzGroupGetSize(armyGroup) do
+            local u = BlzGroupUnitAt(armyGroup, i)
+            if u == nil then i = i + 1
+            elseif GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then GroupRemoveUnit(armyGroup, u)
+            else i = i + 1 end
+        end
+    end
+
     local cx, cy, n = AiGroupCentroid(udg_Ai_army[pi])
     wm.cx, wm.cy, wm.armyCount = cx, cy, n
     wm.armyContinent = n > 0 and AiContinentOf(cx, cy) or nil
