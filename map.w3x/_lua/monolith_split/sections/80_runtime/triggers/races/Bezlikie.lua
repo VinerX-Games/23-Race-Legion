@@ -419,9 +419,9 @@ function NewMember()
     
     else
         
-        DestroyTimer(t)
         FlushChildHashtable(Hash, id)
         FlushChildHashtable(Hash, uid)
+        DestroyTimer(t)
     end
     t=nil
     u=nil

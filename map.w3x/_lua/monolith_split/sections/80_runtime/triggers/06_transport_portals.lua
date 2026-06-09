@@ -797,10 +797,10 @@ function ManabombaNuke()
     UnitRemoveAbility(caster, FourCC('A0TS'))
     
     
+    FlushChildHashtable(Hash, tid)
     PauseTimer(t)
     DestroyTimer(t)
     t=nil
-    FlushChildHashtable(Hash, tid)
     caster=nil
     RemoveLocation(destination)
     destination=nil

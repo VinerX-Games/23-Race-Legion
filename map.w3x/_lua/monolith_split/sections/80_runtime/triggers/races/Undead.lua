@@ -580,9 +580,9 @@ function Plague()
         end
         UnitRemoveAbility(u, FourCC('A1HS'))
         DestroyEffect(LoadEffectHandle(Hash, id, 2))
+        FlushChildHashtable(Hash, id)
         PauseTimer(t)
         DestroyTimer(t)
-        FlushChildHashtable(Hash, id)
     
     end
     e=nil

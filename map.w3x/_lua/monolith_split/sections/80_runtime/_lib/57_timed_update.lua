@@ -72,9 +72,9 @@ function TimedUpdateCheck()
 	else
 		u = nil
 		p = nil
-		DestroyTimer(t)
-		t = nil
-		FlushChildHashtable(Hash, id)
+        FlushChildHashtable(Hash, id)
+        DestroyTimer(t)
+        t = nil
 	end
 end
 ---@param u unit

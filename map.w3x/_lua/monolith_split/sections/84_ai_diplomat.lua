@@ -454,9 +454,16 @@ function AiDiplomatRpSay(pi, event)
             end
         end
     end
-    local tbl = AiDiplomatRpMessages[persona]
-    if tbl == nil then tbl = AiDiplomatRpMessages["balanced"] end
-    local msgs = tbl[event]
+    -- Race-specific RP messages override personality table
+    local msgs = nil
+    if race ~= nil and race.diplomatRp ~= nil and race.diplomatRp[event] ~= nil then
+        msgs = race.diplomatRp[event]
+    end
+    if msgs == nil then
+        local tbl = AiDiplomatRpMessages[persona]
+        if tbl == nil then tbl = AiDiplomatRpMessages["balanced"] end
+        msgs = tbl[event]
+    end
     if msgs == nil or #msgs == 0 then return end
 
     local msg = msgs[GetRandomInt(1, #msgs)]

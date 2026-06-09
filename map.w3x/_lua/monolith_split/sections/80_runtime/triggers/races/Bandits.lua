@@ -83,6 +83,7 @@ function MoveTimedEnd()
     SetUnitPositionLoc(LoadUnitHandle(Hash, id, 1), LoadLocationHandle(Hash, id, 2))
        
     RemoveLocation(LoadLocationHandle(Hash, id, 2))
+    FlushChildHashtable(Hash, id)
     DestroyTimer(t)
     t=nil
     
@@ -105,6 +106,7 @@ function MoveWithOrderTimedEnd()
     IssueTargetOrder(LoadUnitHandle(Hash, id, 1), LoadStr(Hash, id, 4), LoadUnitHandle(Hash, id, 3))
     
     RemoveLocation(LoadLocationHandle(Hash, id, 2))
+    FlushChildHashtable(Hash, id)
     DestroyTimer(t)
     t=nil
     

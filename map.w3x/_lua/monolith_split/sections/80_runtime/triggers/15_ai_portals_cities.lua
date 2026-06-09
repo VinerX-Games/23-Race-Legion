@@ -901,7 +901,7 @@ function PereborNavalb()
         u=nil
         return
         
-    elseif i > (AiData[pi][StringHash("Number")] or 0) / 3 then
+    elseif i > 12 then
         if udg_Octhet then
             DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) .. "")
         end

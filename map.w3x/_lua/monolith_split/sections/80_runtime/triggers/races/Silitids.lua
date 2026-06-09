@@ -310,11 +310,11 @@ function spawnlich()
         end
         
     else
+        FlushChildHashtable(Hash, id)
         PauseTimer(t)
         DestroyTimer(t)
         t=nil
         SaveBoolean(Hash, uid, 1, false)
-        FlushChildHashtable(Hash, id)
         p=nil
     end
     SaveInteger(Hash, uid, 1, currentCount)

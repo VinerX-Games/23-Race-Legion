@@ -110,8 +110,8 @@ function Trig_Charge_move_heroD()
     else
         UnitRemoveAbility(GT, FourCC('A16S')) -- ?????? ?????
         DestroyEffect(LoadEffectHandle(Hash, h, 6))
-        DestroyTimer(t)
         FlushChildHashtable(Hash, h)
+        DestroyTimer(t)
         SetUnitAnimation(GT, "Stand")
         SetUnitFlyHeight(GT, fl, 0)
         --call DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))

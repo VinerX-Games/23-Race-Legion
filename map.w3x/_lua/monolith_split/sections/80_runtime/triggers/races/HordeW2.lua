@@ -243,8 +243,9 @@ function deadEdly()
     
     if u == nil then
         FlushChildHashtable(Hash, uh)
-    
     end
+    FlushChildHashtable(Hash, id)
+    DestroyTimer(t)
     t=nil
     u=nil
 end
