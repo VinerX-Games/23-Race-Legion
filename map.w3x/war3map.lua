@@ -60956,13 +60956,35 @@ function BrainBuild(pi, wm, race)
     local built = 0
     local maxN = AiBrainMaxBuild
 
-    for _, bldType in ipairs(buildOrder) do
+    -- Handle seed building first (named key)
+    local seedType = buildOrder.seed
+    if seedType and type(seedType) == "number" then
+        local count = AiCountBuildingsOfType(pi, seedType)
+        if count < 1 then
+            local worker = AiFindFreeWorker(pi)
+            if worker ~= nil then
+                TryBuild_u = worker
+                TryBuildWithType(seedType)
+                built = built + 1
+            end
+        end
+    end
+
+    -- Handle array entries: each is { bldType, limit, ... }
+    for _, row in ipairs(buildOrder) do
         if built >= maxN then break end
+        local bldType = row[1]
         if type(bldType) ~= "number" then goto skipBld end
 
+        local limit = row[2] or 1
         local count = AiCountBuildingsOfType(pi, bldType)
-        local limit = (AiBuildingLimits and AiBuildingLimits[bldType]) or 1
         if count >= limit then goto skipBld end
+
+        -- Check gate (tier2, etc.) if present
+        if row.gate then
+            local gateFn = race.gates and race.gates[row.gate]
+            if gateFn and not gateFn(pi) then goto skipBld end
+        end
 
         local worker = AiFindFreeWorker(pi)
         if worker ~= nil then
