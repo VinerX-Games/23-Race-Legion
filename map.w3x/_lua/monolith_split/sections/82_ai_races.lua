@@ -3463,13 +3463,21 @@ RegisterAiRace("Undead", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
+            { at = 17, action = "research", rows = {
 
-                { {FourCC('u00L'),FourCC('Abds'),6},{FourCC('u00L'),FourCC('Arlm'),6} },
+                {FourCC('u00L'),FourCC('Abds'),6},{FourCC('u00L'),FourCC('Arlm'),6},
+
+            }},
+
+            { at = 17, action = "random", branches = {
 
                 { {FourCC('u00M'),FourCC('Abds'),6} },
 
-                { {FourCC('u00N'),FourCC('Abds'),6} },
+            }},
+
+            { at = 35, gate = "tier2", action = "research", rows = {
+
+                {FourCC('u00N'),FourCC('Abds'),6},
 
             }},
 
@@ -3478,102 +3486,6 @@ RegisterAiRace("Undead", {
             { at = 25, action = "techUp", from = FourCC('n014'), to = FourCC('u00F'), cap = 3 },
 
             { at = 55, action = "techUp", from = FourCC('u00F'), to = FourCC('u00G'), cap = 3 },
-
-        },
-
-    },
-
-    attackerData = {
-
-        [FourCC('u00A')] = {
-
-            { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
-
-        },
-
-        [FourCC('u00B')] = {
-
-            { order = "web",    chance = 4, type = "target" },
-
-            { order = "burrow", chance = 4, type = "immediate" },
-
-        },
-
-        [FourCC('u00C')] = {
-
-            { order = "raisedead",     chance = 4, type = "point" },
-
-            { order = "cripple",       chance = 4, type = "target" },
-
-            { order = "unholyfrenzy",  chance = 4, type = "target" },
-
-        },
-
-        [FourCC('u008')] = {
-
-            { order = "curse",             chance = 4, type = "target" },
-
-            { order = "antimagicshell",    chance = 4, type = "target" },
-
-            { order = "possession",        chance = 4, type = "target" },
-
-        },
-
-        [FourCC('u00D')] = {
-
-            { order = "cannibalize", chance = 4, type = "immediate", hp = 50 },
-
-        },
-
-        [FourCC('u00E')] = {
-
-            { order = "exhumecorpses", chance = 4, type = "immediate" },
-
-        },
-
-        [FourCC('u03E')] = {
-
-            { order = "devourmagic", chance = 4, type = "target", range = 525 },
-
-        },
-
-        [FourCC('U00O')] = {
-
-            { order = "deathcoil",    chance = 5, type = "target" },
-
-            { order = "deathpact",    chance = 5, type = "target" },
-
-            { order = "animatedead",  chance = 5, type = "immediate" },
-
-        },
-
-        [FourCC('U00V')] = {
-
-            { order = "frostnova",    chance = 5, type = "target" },
-
-            { order = "frostarmor",   chance = 5, type = "target" },
-
-            { order = "darkritual",   chance = 5, type = "target" },
-
-        },
-
-        [FourCC('U00U')] = {
-
-            { order = "impales",      chance = 5, type = "point" },
-
-            { order = "carrionswarm", chance = 5, type = "point" },
-
-            { order = "locustswarm",  chance = 5, type = "immediate" },
-
-        },
-
-    },
-
-    attackedData = {
-
-        [FourCC('u00A')] = {
-
-            { order = "cannibalize", chance = 3, type = "immediate", hp = 50 },
 
         },
 
