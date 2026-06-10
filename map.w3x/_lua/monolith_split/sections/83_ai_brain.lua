@@ -1271,6 +1271,15 @@ function AiRecycleBuilders(pi, maxMove)
     local grpH = udg_Ai_harvest[pi]
     if grpH == nil then return end
     local now = AiBrainTickCounter or 0
+    -- GC stale reservations
+    if now % 60 == 0 then
+        for k, t in pairs(g_BuildSpotReserved) do
+            if now - t >= g_BuildReserveTicks then g_BuildSpotReserved[k] = nil end
+        end
+        for k, t in pairs(g_BuildTypeInFlight) do
+            if now - t >= g_BuildReserveTicks then g_BuildTypeInFlight[k] = nil end
+        end
+    end
     local sz = BlzGroupGetSize(grpT)
     -- Collect victims FIRST (never mutate the group while iterating it by index —
     -- that is an engine footgun); move + order them after the read loop.
@@ -1529,14 +1538,27 @@ function TryBuildWithType(bldType, fx, fy)
     local u = TryBuild_u
     if u == nil or bldType == nil then return end
     local pi = GetPlayerId(GetOwningPlayer(u))
+    -- Prevent duplicate build orders for same building type by same player
+    local typeKey = pi .. "|" .. bldType
+    local now = AiBrainTickCounter or 0
+    if g_BuildTypeInFlight[typeKey] and now - g_BuildTypeInFlight[typeKey] < g_BuildReserveTicks then
+        return
+    end
+    g_BuildTypeInFlight[typeKey] = now
 
     GroupAddUnit(udg_Ai_buildersT[pi], u)
     GroupRemoveUnit(udg_Ai_builders[pi], u)
     GroupRemoveUnit(udg_Ai_harvest[pi], u)
     -- E3 anti-thrash: stamp so this worker is left to walk+build for a window.
-    AiBuildClaim[u] = AiBrainTickCounter or 0
+    AiBuildClaim[u] = now
+
+    local function reserve(x, y)
+        local key = pi .. "," .. R2I(x) .. "," .. R2I(y)
+        g_BuildSpotReserved[key] = now
+    end
 
     if fx ~= nil and fy ~= nil then
+        reserve(fx, fy)
         IssueBuildOrderById(u, bldType, fx, fy)
         return
     end
@@ -1544,6 +1566,7 @@ function TryBuildWithType(bldType, fx, fy)
     if AiSmartBuild then
         local bx, by = AiFindBuildSpot(pi, u)
         if bx ~= nil then
+            reserve(bx, by)
             IssueBuildOrderById(u, bldType, bx, by)
             return
         end
@@ -1555,13 +1578,15 @@ function TryBuildWithType(bldType, fx, fy)
         local ux = ux0 + AiBuildingRadius * Cos(ang)
         local uy = uy0 + AiBuildingRadius * Sin(ang)
         if AiBuildPlaceable(ux, uy) then
+            reserve(ux, uy)
             IssueBuildOrderById(u, bldType, ux, uy)
             return
         end
     end
     -- last resort: issue anyway so the worker isn't stranded without an order
-    IssueBuildOrderById(u, bldType,
-        ux0 + AiBuildingRadius * Cos(0), uy0 + AiBuildingRadius * Sin(0))
+    local rx, ry = ux0 + AiBuildingRadius * Cos(0), uy0 + AiBuildingRadius * Sin(0)
+    reserve(rx, ry)
+    IssueBuildOrderById(u, bldType, rx, ry)
 end
 
 -- ====================================================================
@@ -1873,6 +1898,10 @@ end
 ---@param y real
 ---@param radius real
 ---@return boolean
+g_BuildSpotReserved = g_BuildSpotReserved or {}   -- ["pi,x,y"] = tick (spot claimed by worker en route)
+g_BuildTypeInFlight = g_BuildTypeInFlight or {}   -- [pi.."|"..bldType] = tick (building type has worker en route)
+g_BuildReserveTicks = g_BuildReserveTicks or 40   -- how long a reservation lives
+
 function AiBuildSpotOccupied(x, y, radius)
     AiBuildScanGroup = AiBuildScanGroup or CreateGroup()
     GroupEnumUnitsInRange(AiBuildScanGroup, x, y, radius, nil)
@@ -1881,6 +1910,18 @@ function AiBuildSpotOccupied(x, y, radius)
         local u = BlzGroupUnitAt(AiBuildScanGroup, i)
         if u ~= nil and IsUnitType(u, UNIT_TYPE_STRUCTURE) and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
             return true
+        end
+    end
+    -- Check reserved spots (workers en route)
+    local now = AiBrainTickCounter or 0
+    for key, t in pairs(g_BuildSpotReserved) do
+        if now - t < g_BuildReserveTicks then
+            local px, py, pr = key:match("^(%-?%d+),(%-?%d+),(%-?%d+)$")
+            if px then
+                local dx = x - tonumber(px)
+                local dy = y - tonumber(py)
+                if dx*dx + dy*dy < radius*radius then return true end
+            end
         end
     end
     return false
