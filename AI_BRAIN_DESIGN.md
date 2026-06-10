@@ -558,4 +558,206 @@ RegisterAiRace(..., {
   модуля экономики карты (пища + уровни абилок). TODO найти модуль.
 - **`compTarget` по расам** — таблицы желаемого состава ещё не заполнены (П2
   работает, но без данных пик = рандом-фоллбэк).
+
+---
+
+## §19. Статус реализации (июнь 2026) — что сделано на деле
+
+### 19.1 Отличия от дизайна
+
+Дизайн предполагал три слоя (Perceive → Plan → Act) с FSM отрядов. Реализация
+отклонилась по двум причинам:
+
+1. **FSM отрядов крашит C++** — краш между проверкой `type(sq)=table` и входом
+   в `pcall(function()...)`. Не ловится ни Lua-ошибкой, ни pcall. FSM **отключён**,
+   отряды только трекаются (назначение, reaping), но не тикаются по состояниям.
+
+2. **Производительность** — отдельные таймеры под стройку/найм/флот/армию давали
+   микролаги. Всё сведено в **один unified brain tick** (PlayerGet1), боты
+   обрабатываются round-robin с настраиваемым batch.
+
+### 19.2 Текущая архитектура
+
+```
+PlayerGet1 (период 0.8*AiRepeat/5 ≈ 0.64с, periodic)
+  └→ PlayerArmy: AiBrainBotListNext(batch) → round-robin, честная очередь
+      └→ AiBrainArmyTick(pi, p):           // 1 бот за вызов (batch=1-2)
+           ├─ AiBrainPerceive              // wm, dead cleanup
+           ├─ BrainProduce                 // compTarget → ордера зданиям (+ worker)
+           ├─ BrainBuild                   // buildOrder → рабочие + TryBuildWithType
+           ├─ AiBrainCollectObjectives     // раз в clusterEvery тиков
+           ├─ AiSquadReapDead              // чистка мёртвых из отрядов
+           ├─ BrainFocus                   // udg_Ai_army → attack-move на фокус
+           ├─ BrainNavalFocus              // udg_Ai_navy → TryAttackN (раз в 4 тика)
+           ├─ AiBuyPirateFleet             // покупка пиратов (раз в 8 тиков)
+           └─ AiDiplomatTick               // дипломат (раз в 4 тика)
+
+Активные таймеры в brain-режиме:
+  PlayerGet1      — unified brain tick (0.64с)    ← единственный
+  TimerSmall3     — только PereborNavalBases (флот)
+  AiTimerStrateg  — инжект золота/дерева (15с)
+  aiFixer          — ремонт (1800с)
+
+Отключены в brain-режиме:
+  TimerSmall      — PlayerBuilders (стройка)
+  TimerSmall2     — (заменён прямым стартом PlayerGet1)
+  TimerSmall4     — PlayerNavy (navy join)
+```
+
+### 19.3 Что работает
+
+| Компонент | Статус | Примечание |
+|-----------|--------|-----------|
+| Unified brain tick | ✓ | 1 таймер, round-robin очередь |
+| BrainProduce (найм) | ✓ | compTarget + отдельно workers, до 20 ордеров/тик |
+| BrainBuild (стройка) | ✓ | buildOrder → AiFindBuildSpot, до 6 зданий/тик |
+| Harvest fallback | ✓ | idle рабочие уходят в лес если нечего строить |
+| BrainFocus (атака) | ✓ | локальная группа udg_Ai_army, без GroupEnumUnitsOfPlayer |
+| BrainNavalFocus | ✓ | итерация udg_Ai_navy, TryAttackN для idle |
+| AiBuyPirateFleet | ✓ | покупка пиратов с проверкой золота |
+| Squad tracking | ✓ | назначение, reaping, без FSM |
+| Round-robin очередь | ✓ | AiBrainBotList + курсор, без ForcePickRandomPlayer |
+| Профайлер | ✓ | AiProfileData, замеры по секциям, дамп в лог |
+| Лог-буфер | ✓ | AiBrainLogBuf, батчинг ProbeLogWrite |
+| Per-race toggle | ✓ | `brain="objective"/"swarm"`, per-race + AiBrainForce |
+| Все параметры конфигурируемы | ✓ | через бридж в лайве |
+
+### 19.4 Что отключено / требует фикса
+
+| Компонент | Статус | Причина |
+|-----------|--------|--------|
+| Squad FSM | ✗ отключён | C++ краш, не ловится Lua |
+| PereborBuildings (brain) | ✗ skipped | заменён BrainProduce |
+| PlayerBuilders (brain) | ✗ остановлен | заменён BrainBuild |
+| TimerSmall2 (brain) | ✗ не нужен | PlayerGet1 стартует напрямую |
+| TimerSmall4 (brain) | ✗ остановлен | заменён BrainNavalFocus |
+| Expansion FSM | ✗ заглушка | только random far-walk |
+| Dynamic compTarget | ✗ не реализован | compTarget статичен |
+| Pre-computed build grid | ✗ не реализован | AiFindBuildSpot = 72 луча |
+| Objectives cache | ✗ не реализован | пересчёт каждый кластерный тик |
+| Prod mapping cache | ✗ не реализован | поиск здания по unitId каждый раз |
+
+### 19.5 Конфигурируемые параметры (bridge live)
+
+```lua
+AiBrainBatchSize       = 2    -- ботов за PlayerGet1 fire
+AiBrainMaxProduce      = 20   -- макс ордеров найма за тик на бота
+AiBrainMaxBuild        = 6    -- макс попыток стройки за тик на бота
+AiBrainExpansionEvery  = 30   -- проверка экспансии каждые N тиков
+AiBrainNavalEvery      = 60   -- проверка флота каждые N тиков
+AiBrainNavalStartTick  = 300  -- первый naval-чек после N тиков (~5 мин)
+AiBrainBatchSize       = 2    -- дефолт 1, max безопасный ~4
+AiProfileEvery         = 30   -- дамп профайлера каждые N тиков бота
+AiBrainLogMaxLines     = 64   -- макс строк до принудительного flush
+```
+
+### 19.6 Замеры производительности
+
+Среднее время AiBrainArmyTick на бота (batch=1, 16 ботов, без SQDBG логов):
+
+| Секция | ms |
+|--------|----|
+| Perceive | ~0 |
+| Produce+Build | ~2 |
+| Objectives | ~7 |
+| Squad reap | ~1 |
+| Focus | ~3 |
+| Other | ~0 |
+| **Итого** | **~12** |
+
+Кадр = 16.6ms. 12ms < кадр → без лага.
+
+Исторически (с ProbeLogWrite на каждом шаге + GroupEnumUnitsOfPlayer): **115ms**.
+
+---
+
+## §20. Векторы улучшения ИИ (следующие шаги)
+
+### 20.1 Умная стройка — Pre-computed Building Grid
+
+**Проблема**: AiFindBuildSpot делает 72 луча на каждое здание. При 6 зданиях/тик =
+432 луча/бота/тик.
+
+**Решение**: предвычислить сетку клеток карты (cell = 512×512). Для каждой клетки:
+- pathable (террайн), water, occupied (юнит-здание). 
+- При старте бота: BFS от столицы по сетке, пометить свободные пятна.
+- TryBuild: взять ближайшее свободное пятно → O(1).
+
+**Эффект**: 72 луча → 1 lookup. ~70× быстрее. Можно поднять AiBrainMaxBuild до 12-15.
+
+### 20.2 Умный найм — Resource Guard + Dynamic compTarget
+
+**Проблема**: BrainProduce не проверяет золото перед ордером. Может заказать юнита
+без ресурсов → ордер молча теряется.
+
+**Решение**:
+- `BlzGetUnitGoldCost(id)` / `BlzGetUnitWoodCost(id)` → пропускать если не хватает.
+- **Dynamic compTarget**: раз в 30-60 тиков сканировать вражескую армию → если
+  враг имеет много ranged → поднять долю щитов/кавалерии в compTarget.
+
+### 20.3 Умный фокус — Split Focus + Retreat
+
+**Проблема**: вся армия идёт на одну точку. 200 юнитов бегут убивать 3 крипов.
+
+**Решение**:
+- **Split focus**: топ-2 объекта, 60%/30% армии на каждый.
+- **Retreat logic**: перед атакой проверить `enemyPower > myPower * 1.5` → взять
+  более слабую цель.
+- **Capture priority**: точки с низким HP (почти захваченные) получают бонус к скору.
+
+### 20.4 Умная экспансия — Expansion FSM
+
+**Проблема**: `BrainExpandDecision` — слепой far-walk без гарантии что там можно строиться.
+
+**Решение**: стейт-машина:
+```
+idle → scouting (послать разведчика проверить grid)
+     → seeding (3-5 рабочих + seed building)
+     → growing (построить production у нового кластера)
+     → established (можно следующий)
+```
+
+### 20.5 Squad per-target (без FSM)
+
+**Проблема**: отряды только трекаются, не используются для ордеров.
+
+**Решение**: без стейт-машины (она крашит), просто назначать каждому отряду свою цель:
+```lua
+for _, sq in pairs(AiSquadsOf(pi)) do
+    local target = AiPickSquadTarget(pi, sq, wm)
+    if target then
+        AiSquadOrderAtk(sq.members, target.x, target.y)
+    end
+end
+```
+Нет FSM → нет краша. Просто brain раздаёт цели отрядам напрямую.
+
+### 20.6 Кеширование (CPU)
+
+- **Prod mapping**: `AiUnitToBuilding[raceKey][unitId] = {bldType, row}` — строить
+  один раз при старте расы, O(1) в BrainProduce.
+- **Objective distances**: кешировать при сборе, обновлять только при движении армии.
+- **Squad centroid**: хранить в squad, обновлять флагом dirty при изменении группы.
+
+### 20.7 Глобальное — слить Strateg в мозг
+
+Убрать отдельный `AiTimerStrateg` (инжект ресурсов). Перенести в мозго-тик по модулю:
+```lua
+if wm.tick % strategInterval == 0 then AiInjectResources(pi, wm) end
+```
+
+---
+
+## Приоритеты (рекомендуемый порядок)
+
+| № | Вектор | Влияние | Сложность |
+|---|--------|---------|-----------|
+| 1 | Build grid (20.1) | **огромное** — 70× быстрее стройка | средняя |
+| 2 | Resource guard (20.2) | среднее — не тратит ордера впустую | низкая |
+| 3 | Split focus (20.3) | среднее — умнее атака | низкая |
+| 4 | Squad per-target (20.5) | среднее — использует отряды | низкая |
+| 5 | Prod cache (20.6) | малое — O(N×M)→O(1) | низкая |
+| 6 | Dynamic compTarget (20.2) | среднее — контрит врага | средняя |
+| 7 | Expansion FSM (20.4) | среднее — умная экспансия | высокая |
+| 8 | Merge Strateg (20.7) | малое — -1 таймер | низкая |
 ```
