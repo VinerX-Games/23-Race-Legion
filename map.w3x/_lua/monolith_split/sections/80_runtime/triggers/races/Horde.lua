@@ -76,6 +76,10 @@ function aiFixTrainBefore(oldUnit, pi)
         if Navy ~= nil then GroupRemoveUnit(Navy, oldUnit) end
         if Port ~= nil then GroupRemoveUnit(Port, oldUnit) end
         if udg_Ai_navy[pi] ~= nil then GroupRemoveUnit(udg_Ai_navy[pi], oldUnit) end
+        -- Register stale handle: EPA skips these to avoid 0x6C crash
+        if gStaleBlacklist ~= nil then
+            gStaleBlacklist[GetHandleId(oldUnit)] = AiBrainTickCounter or 0
+        end
         NumberRem(pi , GetUnitTypeId(oldUnit))
         NumberRem(pi , StringHash("Number"))
         return true

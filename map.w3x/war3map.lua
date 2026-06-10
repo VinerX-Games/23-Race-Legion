@@ -34741,6 +34741,10 @@ function aiFixTrainBefore(oldUnit, pi)
         if Navy ~= nil then GroupRemoveUnit(Navy, oldUnit) end
         if Port ~= nil then GroupRemoveUnit(Port, oldUnit) end
         if udg_Ai_navy[pi] ~= nil then GroupRemoveUnit(udg_Ai_navy[pi], oldUnit) end
+        -- Register stale handle: EPA skips these to avoid 0x6C crash
+        if gStaleBlacklist ~= nil then
+            gStaleBlacklist[GetHandleId(oldUnit)] = AiBrainTickCounter or 0
+        end
         NumberRem(pi , GetUnitTypeId(oldUnit))
         NumberRem(pi , StringHash("Number"))
         return true
@@ -59992,8 +59996,10 @@ end
 -- All values affect the unified brain tick only; swarm mode ignores them.
 AiBrainBatchSize       = AiBrainBatchSize       or 1   -- bots processed per PlayerGet1 fire
 
--- 4.4: Throttle AiEnemyPowerAround region scans to reduce crash exposure ~10x.
--- Per-bot cache for threatHome; refresh every AiEpaRefreshEvery perceive ticks.
+-- 4.4: Throttle AiEnemyPowerAround region scans; stale-handle blacklist safety.
+gStaleBlacklist = gStaleBlacklist or {} -- [handleId] = tick when freed (aiFixTrainBefore)
+gStaleBlacklistGcEvery = gStaleBlacklistGcEvery or 120  -- clean old entries every N ticks
+gStaleBlacklistMaxAge = gStaleBlacklistMaxAge or 600     -- keep entries for ~300s
 AiThreatHomeCache = AiThreatHomeCache or {} -- [pi] = { val, tick }
 AiEpaRefreshEvery = AiEpaRefreshEvery or 4  -- recalc every N perceives
 AiEpaObjRefreshEvery = AiEpaObjRefreshEvery or 8  -- recalcy obj/squad EPA every N ticks
@@ -60358,14 +60364,29 @@ end
 function AiEnemyPowerAround(p, x, y, radius)
     AiBrainScanGroup = AiBrainScanGroup or CreateGroup()
     GroupEnumUnitsInRange(AiBrainScanGroup, x, y, radius, nil)
+    -- GC blacklist periodically
+    local now = AiBrainTickCounter or 0
+    local gcAge = gStaleBlacklistMaxAge or 600
+    if now % (gStaleBlacklistGcEvery or 120) == 0 then
+        for hid, t in pairs(gStaleBlacklist) do
+            if now - t > gcAge then gStaleBlacklist[hid] = nil end
+        end
+    end
     local pow = 0.0
     local sz = BlzGroupGetSize(AiBrainScanGroup)
     local i = 0
     while i < sz do
         local u = BlzGroupUnitAt(AiBrainScanGroup, i)
-        if u ~= nil and IsPlayerEnemy(GetOwningPlayer(u), p)
-            and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
-            pow = pow + AiUnitPower(u)
+        if u ~= nil then
+            -- Safe checks first: handleId blacklist + hidden + owner + enemy
+            local hid = GetHandleId(u)
+            if gStaleBlacklist[hid] == nil and not IsUnitHidden(u) then
+                local owner = GetOwningPlayer(u)
+                if owner ~= nil and IsPlayerEnemy(owner, p)
+                    and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+                    pow = pow + AiUnitPower(u)
+                end
+            end
         end
         i = i + 1
     end
@@ -60443,13 +60464,13 @@ function AiBrainPerceive(pi)
     if cap ~= nil and GetUnitState(cap, UNIT_STATE_LIFE) > 0.405 then
         wm.capX, wm.capY = GetUnitX(cap), GetUnitY(cap)
         wm.capHP = GetUnitState(cap, UNIT_STATE_LIFE)
-        -- EPA disabled: area scan crashes on stale handles. Use capHP drop as threat signal.
-        local prevHP = wm._prevCapHP
-        wm._prevCapHP = wm.capHP
-        if prevHP ~= nil and wm.capHP > 0 and wm.capHP < prevHP then
-            wm.threatHome = (prevHP - wm.capHP) + 1.0
+        local cache = AiThreatHomeCache[pi]
+        if cache ~= nil and cache.val ~= nil and (wm.tick % (AiEpaRefreshEvery or 4)) ~= 0 then
+            wm.threatHome = cache.val
         else
-            wm.threatHome = 0
+            wm.threatHome = AiEnemyPowerAround(Player(pi), wm.capX, wm.capY, cfg.rHome or AiBrainDefaults.rHome)
+            if cache == nil then cache = {}; AiThreatHomeCache[pi] = cache end
+            cache.val = wm.threatHome
         end
     else
         wm.capHP = 0
@@ -60700,9 +60721,13 @@ end
 ---@param o table
 ---@return real
 function AiObjNeededPower(pi, o)
-    -- EPA disabled: area scan crashes on stale handles. Return safe minimum.
-    local pow = 0
-    if o._epaPowCache ~= nil then pow = o._epaPowCache end
+    local now = AiBrainTickCounter or 0
+    local stale = o._epaPowCache ~= nil and (now - (o._epaPowTick or 0)) < (AiEpaObjRefreshEvery or 8)
+    if not stale then
+        o._epaPowCache = AiEnemyPowerAround(Player(pi), o.x, o.y, 1600.0)
+        o._epaPowTick = now
+    end
+    local pow = o._epaPowCache or 0
     if o.kind == "capital" then pow = pow * 1.5 end
     return math.max(pow, 5.0)
 end
@@ -60748,8 +60773,12 @@ function AiSquadTickMarch(pi, sid, sq, p, wm)
     local cx, cy, _ = AiGroupCentroid(sq.members)
     local d = SquareRoot((cx - obj.x) * (cx - obj.x) + (cy - obj.y) * (cy - obj.y))
     if d < 600.0 then return "engage" end
-    -- EPA disabled: area scan crashes on stale handles. Engage when close to objective.
-    if d < 1200.0 then return "engage" end
+    local nowSq = AiBrainTickCounter or 0
+    if sq._epaCacheVal == nil or (nowSq - (sq._epaCacheTick or 0)) >= (AiEpaObjRefreshEvery or 8) then
+        sq._epaCacheVal = AiEnemyPowerAround(p, cx, cy, 800.0)
+        sq._epaCacheTick = nowSq
+    end
+    if sq._epaCacheVal > 1.0 then return "engage" end
     local oc, sc = AiContinentOf(obj.x, obj.y), AiContinentOf(cx, cy)
     if oc ~= nil and sc ~= nil and oc ~= sc then
         local m = AiFindMageOnContinent(pi, oc)

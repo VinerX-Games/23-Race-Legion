@@ -26,27 +26,29 @@ local function wrap(name, getctx)
   return name .. ":ok"
 end
 
--- STEP 4.1: Instrumented AiEnemyPowerAround — logs EVERY enumerated unit's identity
--- RIGHT BEFORE GetUnitState, so the last crumb names the exact killer unit.
--- Even if GetHandleId/GetUnitX crash on a freed handle, each read is pcall'd.
+-- Instrumented AiEnemyPowerAround: per-unit crumb BEFORE GetUnitState.
+-- Uses the real (blacklist-safe) EPA, with per-unit logging added.
 local _origAiEnemyPowerAround = _G["AiEnemyPowerAround"]
 if type(_origAiEnemyPowerAround) == "function" then
   _G["AiEnemyPowerAround"] = function(p, x, y, radius)
     CrumbDepth = CrumbDepth + 1
     Crumb("AiEnemyPowerAround")
     CrumbDepth = CrumbDepth - 1
-    -- Copy-paste the real function body, adding per-unit cribs.
-    -- Use _G to avoid recursive call.
     local scanGroup = _G["AiBrainScanGroup"] or CreateGroup()
     _G["AiBrainScanGroup"] = scanGroup
     GroupEnumUnitsInRange(scanGroup, x, y, radius, nil)
+    local now = _G["AiBrainTickCounter"] or 0
+    local gcAge = (_G["gStaleBlacklistMaxAge"] or 600)
+    if now % (_G["gStaleBlacklistGcEvery"] or 120) == 0 then
+      local bl = _G["gStaleBlacklist"]
+      if bl ~= nil then for hid, t in pairs(bl) do if now - t > gcAge then bl[hid] = nil end end end
+    end
     local pow = 0.0
     local sz = BlzGroupGetSize(scanGroup)
     local i = 0
     while i < sz do
       local u = BlzGroupUnitAt(scanGroup, i)
       if u ~= nil then
-        -- Crumb BEFORE GetUnitState — survives the crash
         local hid, ux, uy, uhid, utype = "?", "?", "?", "?", "?"
         pcall(function() hid = GetHandleId(u) end)
         pcall(function() ux = R2I(GetUnitX(u)) end)
@@ -57,10 +59,13 @@ if type(_origAiEnemyPowerAround) == "function" then
         Crumb("EPA u=" .. tostring(hid) .. " x=" .. tostring(ux) .. " y=" .. tostring(uy)
           .. " hid=" .. uhid .. " type=" .. utype)
         CrumbDepth = CrumbDepth - 1
-        -- original check — THIS is where the crash happens
-        if GetUnitState(u, UNIT_STATE_LIFE) > 0.405
-            and IsPlayerEnemy(GetOwningPlayer(u), p) then
-          pow = pow + (_G["AiUnitPower"] ~= nil and _G["AiUnitPower"](u) or 0)
+        local bl = _G["gStaleBlacklist"]
+        if bl == nil or bl[hid] == nil then
+          local owner = GetOwningPlayer(u)
+          if owner ~= nil and IsPlayerEnemy(owner, p)
+              and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            pow = pow + (_G["AiUnitPower"] ~= nil and _G["AiUnitPower"](u) or 0)
+          end
         end
       end
       i = i + 1
