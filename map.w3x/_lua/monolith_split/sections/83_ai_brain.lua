@@ -28,7 +28,9 @@ AiRaceValidated = AiRaceValidated or {} -- [raceKey] = true once validated
 -- spot every 0.6s tick (the observed cause of builds never completing). Past the
 -- window an idle claimed worker = failed build → recycled to harvest.
 AiBuildClaim = AiBuildClaim or {}       -- [unit] = brain tick when last sent to build
-AiBuildClaimTicks = AiBuildClaimTicks or 20 -- ~12s at 0.6s/tick
+AiBuildRingStart = AiBuildRingStart or 500  -- first ring radius from anchor
+AiBuildRingStep  = AiBuildRingStep  or 500  -- step between rings
+AiBuildMinSpacing = AiBuildMinSpacing or 500 -- minimum spacing between buildings
 
 -- Round-robin cursor: fair distribution across bots (replaces ForcePickRandomPlayer)
 AiBrainBotList = AiBrainBotList or {}   -- [1..n] = pi, populated at createAiPlayer
@@ -1958,11 +1960,11 @@ end
 ---@param phase integer
 ---@return real|nil, real|nil
 function AiScanBuildRings(ax, ay, rad, phase)
-    local minSpacing = 750
+    local minSpacing = AiBuildMinSpacing
     local sectors = 12
     local ring = 0
-    while ring < 10 do                    -- search farther out (dense/corner bases)
-        local r = 750 + ring * 750
+    while ring < 10 do
+        local r = AiBuildRingStart + ring * AiBuildRingStep
         local s = 0
         while s < sectors do
             local ang = (I2R(s + phase) / I2R(sectors)) * 2.0 * bj_PI
