@@ -125,6 +125,7 @@ function AiProfileDump(pi)
 end
 AiBrainMaxProduce      = AiBrainMaxProduce      or 20  -- max unit-training orders per bot per tick
 AiBrainMaxBuild        = AiBrainMaxBuild        or 6   -- max building-attempts per bot per tick
+g_AiOrdered = g_AiOrdered or {}                        -- per-bot+unit training guard
 AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks
 AiBrainNavalEvery      = AiBrainNavalEvery      or 60  -- naval-check every N brain-ticks
 AiBrainNavalStartTick  = AiBrainNavalStartTick  or 300 -- first naval check after this many brain-ticks (~5min)
@@ -561,13 +562,14 @@ function AiBrainPerceive(pi)
     if cap ~= nil and GetUnitState(cap, UNIT_STATE_LIFE) > 0.405 then
         wm.capX, wm.capY = GetUnitX(cap), GetUnitY(cap)
         wm.capHP = GetUnitState(cap, UNIT_STATE_LIFE)
-        local cache = AiThreatHomeCache[pi]
-        if cache ~= nil and cache.val ~= nil and (wm.tick % (AiEpaRefreshEvery or 4)) ~= 0 then
-            wm.threatHome = cache.val
+        -- EPA permanently disabled: 100s of RemoveUnit paths can't all get aiFixTrainBefore.
+        -- Use capHP drop as threat signal + self-defence from army presence.
+        local prevHP = wm._prevCapHP
+        wm._prevCapHP = wm.capHP
+        if prevHP ~= nil and wm.capHP > 0 and wm.capHP < prevHP then
+            wm.threatHome = (prevHP - wm.capHP) + 1.0
         else
-            wm.threatHome = AiEnemyPowerAround(Player(pi), wm.capX, wm.capY, cfg.rHome or AiBrainDefaults.rHome)
-            if cache == nil then cache = {}; AiThreatHomeCache[pi] = cache end
-            cache.val = wm.threatHome
+            wm.threatHome = 0
         end
     else
         wm.capHP = 0
@@ -870,12 +872,7 @@ function AiSquadTickMarch(pi, sid, sq, p, wm)
     local cx, cy, _ = AiGroupCentroid(sq.members)
     local d = SquareRoot((cx - obj.x) * (cx - obj.x) + (cy - obj.y) * (cy - obj.y))
     if d < 600.0 then return "engage" end
-    local nowSq = AiBrainTickCounter or 0
-    if sq._epaCacheVal == nil or (nowSq - (sq._epaCacheTick or 0)) >= (AiEpaObjRefreshEvery or 8) then
-        sq._epaCacheVal = AiEnemyPowerAround(p, cx, cy, 800.0)
-        sq._epaCacheTick = nowSq
-    end
-    if sq._epaCacheVal > 1.0 then return "engage" end
+    if d < 1200.0 then return "engage" end
     local oc, sc = AiContinentOf(obj.x, obj.y), AiContinentOf(cx, cy)
     if oc ~= nil and sc ~= nil and oc ~= sc then
         local m = AiFindMageOnContinent(pi, oc)
