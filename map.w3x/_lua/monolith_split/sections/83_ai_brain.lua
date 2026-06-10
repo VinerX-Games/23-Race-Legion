@@ -13,6 +13,23 @@ AiSquads = AiSquads or {}          -- [pi] = { [sid] = squad }   (Phase 2+)
 AiSquadSeq = AiSquadSeq or {}      -- [pi] = next squad id
 AiBrainForce = AiBrainForce or {}  -- [pi] = "objective"|"swarm" override (bridge/test)
 
+-- Robustness (Track R): isolate a faulty bot/race so it never stalls the whole AI.
+-- AiBotFaults[pi] counts Lua errors caught in the protected tick; when it crosses
+-- AiBotFaultLimit within a session the bot is quarantined (skipped, retried later).
+AiBotFaults = AiBotFaults or {}        -- [pi] = error count (lifetime)
+AiBotQuarantine = AiBotQuarantine or {} -- [pi] = tick until which bot is skipped
+AiBotFaultLimit = AiBotFaultLimit or 8  -- faults before quarantine
+AiBotQuarantineTicks = AiBotQuarantineTicks or 120 -- how long to sit out
+AiRaceValidated = AiRaceValidated or {} -- [raceKey] = true once validated
+
+-- Economy (Track E): build-order anti-thrash. When a worker is sent to build we
+-- stamp the current brain tick; for AiBuildClaimTicks afterwards the worker is left
+-- alone (walking → constructing) instead of being re-grabbed and re-ordered to a new
+-- spot every 0.6s tick (the observed cause of builds never completing). Past the
+-- window an idle claimed worker = failed build → recycled to harvest.
+AiBuildClaim = AiBuildClaim or {}       -- [unit] = brain tick when last sent to build
+AiBuildClaimTicks = AiBuildClaimTicks or 8 -- ~5s at 0.64s/tick
+
 -- Round-robin cursor: fair distribution across bots (replaces ForcePickRandomPlayer)
 AiBrainBotList = AiBrainBotList or {}   -- [1..n] = pi, populated at createAiPlayer
 AiBrainCursor = AiBrainCursor or 1      -- current position in list
@@ -445,12 +462,50 @@ function AiEnemyPowerAround(p, x, y, radius)
     return AiBrainPowAcc
 end
 
+-- E2 (shared logic): AI bots are never assigned a capital — only Scourge calls
+-- MakeFakeCapital, and human capitals come from a player-cast ability. So
+-- playerCapital[pi] is nil for every bot, which silently disables build-anchoring,
+-- defense recall and expansion for ALL races. Lazily adopt the bot's own
+-- capital-able building (ability A0IQ, like HaveCapitalAbility but without the
+-- UnitAlive-returns-nil pitfall) as the base anchor. Cheap once set (nil+alive guard).
+AiCapEnumGroup = AiCapEnumGroup or nil
+---@param pi integer
+function AiEnsureCapital(pi)
+    local cap = playerCapital[pi]
+    if cap ~= nil and GetUnitState(cap, UNIT_STATE_LIFE) > 0.405 then return end
+    playerCapital[pi] = nil
+    if AiCapEnumGroup == nil then AiCapEnumGroup = CreateGroup() end
+    local g = AiCapEnumGroup
+    GroupEnumUnitsOfPlayer(g, Player(pi), nil)
+    local sz = BlzGroupGetSize(g)
+    local pick = nil
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and GetUnitAbilityLevel(u, FourCC('A0IQ')) ~= 0 then
+            pick = u
+            break
+        end
+    end
+    GroupClear(g)
+    if pick ~= nil then
+        playerCapital[pi] = pick
+        -- NB: intentionally NOT calling aiCapitalEnter here — it runs a nested
+        -- GroupEnumUnitsInRange/ForGroup, and a reentrant enum during the brain tick
+        -- is an engine-stability risk. We only need the anchor reference.
+        BrainLogTag(pi, "BRAIN", "adopted base anchor (capital) type="
+            .. tostring(GetUnitTypeId(pick)))
+    end
+end
+
 -- ---- perceive (slow, 1 player/tick) --------------------------------
 -- Builds/updates the shared world model in AiData[pi].wm. Objective collection
 -- is deferred to Phase 2; Phase 1 captures army geometry + home threat only.
 ---@param pi integer
 ---@return table
 function AiBrainPerceive(pi)
+    -- Ensure a base anchor exists (self-guards: enums only while unset/dead).
+    AiEnsureCapital(pi)
     local wm = AiData[pi].wm
     if wm == nil then wm = {}; AiData[pi].wm = wm end
     wm.tick = (wm.tick or 0) + 1
@@ -1109,10 +1164,12 @@ end
 ---@param pi integer
 ---@return unit|nil
 function AiFindFreeWorker(pi)
-    -- Try builders pool first, then buildersT, then pull from harvest
+    -- Try builders pool first, then buildersT (only ones NOT mid-build-claim),
+    -- then pull from harvest.
     local function alive(u)
         return u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
     end
+    local now = AiBrainTickCounter or 0
     local grp = udg_Ai_builders[pi]
     if grp ~= nil then
         local sz = BlzGroupGetSize(grp)
@@ -1126,7 +1183,11 @@ function AiFindFreeWorker(pi)
         local sz = BlzGroupGetSize(grpT)
         for i = 0, sz - 1 do
             local u = BlzGroupUnitAt(grpT, i)
-            if alive(u) and GetUnitCurrentOrder(u) == 0 then return u end
+            -- idle AND past its claim window (its previous build genuinely failed)
+            if alive(u) and GetUnitCurrentOrder(u) == 0 then
+                local c = AiBuildClaim[u]
+                if c == nil or (now - c) >= AiBuildClaimTicks then return u end
+            end
         end
     end
     local grpH = udg_Ai_harvest[pi]
@@ -1138,6 +1199,48 @@ function AiFindFreeWorker(pi)
         end
     end
     return nil
+end
+
+-- E3: recycle idle build-pool workers back to harvesting. A worker that is idle
+-- (order==0) and past its build-claim window did not complete a build → return it to
+-- the lumber line instead of letting it pile up in buildersT (harvest=0 across all
+-- bots was the smoking gun). Bounded per call to avoid order spam.
+---@param pi integer
+---@param maxMove integer
+function AiRecycleBuilders(pi, maxMove)
+    local grpT = udg_Ai_buildersT[pi]
+    if grpT == nil then return end
+    local grpH = udg_Ai_harvest[pi]
+    if grpH == nil then return end
+    local now = AiBrainTickCounter or 0
+    local sz = BlzGroupGetSize(grpT)
+    -- Collect victims FIRST (never mutate the group while iterating it by index —
+    -- that is an engine footgun); move + order them after the read loop.
+    local victims = nil
+    local found = 0
+    local cap = maxMove or 4
+    local i = 0
+    while i < sz and found < cap do
+        local u = BlzGroupUnitAt(grpT, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and GetUnitCurrentOrder(u) == 0 then
+            local c = AiBuildClaim[u]
+            if c == nil or (now - c) >= AiBuildClaimTicks then
+                if victims == nil then victims = {} end
+                found = found + 1
+                victims[found] = u
+            end
+        end
+        i = i + 1
+    end
+    if victims == nil then return end
+    for k = 1, found do
+        local u = victims[k]
+        GroupRemoveUnit(grpT, u)
+        GroupAddUnit(grpH, u)
+        AiBuildClaim[u] = nil
+        IssueImmediateOrder(u, "autoharvestlumber")
+    end
 end
 
 -- ====================================================================
@@ -1305,22 +1408,9 @@ function BrainBuild(pi, wm, race)
         BrainNavalDecision(pi, wm, race)
     end
 
-    -- If nothing to build, send idle workers from buildersT to harvest
-    if built == 0 then
-        local grpT = udg_Ai_buildersT[pi]
-        if grpT ~= nil then
-            local sz = BlzGroupGetSize(grpT)
-            if sz > 0 then
-                local u = BlzGroupUnitAt(grpT, 0)
-                if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
-                    and GetUnitCurrentOrder(u) == 0 then
-                    GroupAddUnit(udg_Ai_harvest[pi], u)
-                    GroupRemoveUnit(grpT, u)
-                    IssueImmediateOrder(u, "autoharvestlumber")
-                end
-            end
-        end
-    end
+    -- E3: every tick, drain idle/failed workers from buildersT back to harvest
+    -- (not just when built==0) so the build pool can't clog and lumber keeps flowing.
+    AiRecycleBuilders(pi, 4)
 
     return built
 end
@@ -1385,6 +1475,8 @@ function TryBuildWithType(bldType, fx, fy)
     GroupAddUnit(udg_Ai_buildersT[pi], u)
     GroupRemoveUnit(udg_Ai_builders[pi], u)
     GroupRemoveUnit(udg_Ai_harvest[pi], u)
+    -- E3 anti-thrash: stamp so this worker is left to walk+build for a window.
+    AiBuildClaim[u] = AiBrainTickCounter or 0
 
     if fx ~= nil and fy ~= nil then
         IssueBuildOrderById(u, bldType, fx, fy)
@@ -1398,10 +1490,20 @@ function TryBuildWithType(bldType, fx, fy)
             return
         end
     end
-    local ux, uy = GetUnitX(u), GetUnitY(u)
-    ux = ux + AiBuildingRadius * Cos(GetRandomReal(0, 360) * bj_DEGTORAD)
-    uy = uy + AiBuildingRadius * Sin(GetRandomReal(0, 360) * bj_DEGTORAD)
-    IssueBuildOrderById(u, bldType, ux, uy)
+    -- Random fallback: try a few rings, but only commit to a footprint-clear spot.
+    local ux0, uy0 = GetUnitX(u), GetUnitY(u)
+    for _ = 1, 8 do
+        local ang = GetRandomReal(0, 360) * bj_DEGTORAD
+        local ux = ux0 + AiBuildingRadius * Cos(ang)
+        local uy = uy0 + AiBuildingRadius * Sin(ang)
+        if AiBuildPlaceable(ux, uy) then
+            IssueBuildOrderById(u, bldType, ux, uy)
+            return
+        end
+    end
+    -- last resort: issue anyway so the worker isn't stranded without an order
+    IssueBuildOrderById(u, bldType,
+        ux0 + AiBuildingRadius * Cos(0), uy0 + AiBuildingRadius * Sin(0))
 end
 
 -- ====================================================================
@@ -1485,7 +1587,128 @@ end
 -- there. Falls back to swarm when there are no objectives.
 ---@param pi integer
 ---@param p player
+-- R4: race-data validator. Runs once per race (first time a bot of that race ticks).
+-- Logs structural problems under tag BRAINVALID so the systemic race-fragility
+-- (most races economically stuck) becomes visible data instead of a silent stall.
+-- Never throws (called inside pcall); never blocks the bot.
+---@param rk string
+function AiValidateRace(rk)
+    local race = AiRaces and AiRaces[rk]
+    if race == nil then
+        BrainLogTag(0, "BRAINVALID", "race '" .. tostring(rk) .. "' has NO def")
+        return
+    end
+    local problems = {}
+
+    -- Worker production: needed to ever build/expand.
+    local prod = race.production
+    if prod == nil then
+        problems[#problems + 1] = "no .production table"
+    else
+        local w = prod.worker
+        if w == nil then
+            problems[#problems + 1] = "no production.worker"
+        else
+            if w.id == nil then problems[#problems + 1] = "worker.id nil" end
+            if w.from == nil or #w.from == 0 then
+                problems[#problems + 1] = "worker.from empty (cannot train workers)"
+            end
+        end
+    end
+
+    -- Buildings: build order must reference numeric type ids.
+    local blds = race.buildings
+    if blds == nil then
+        problems[#problems + 1] = "no .buildings table"
+    else
+        if blds.seed ~= nil and type(blds.seed) ~= "number" then
+            problems[#problems + 1] = "buildings.seed not a number"
+        end
+        local n = 0
+        for _, row in ipairs(blds) do
+            n = n + 1
+            if type(row[1]) ~= "number" then
+                problems[#problems + 1] = "buildings[" .. n .. "][1] not a number"
+            end
+        end
+        if n == 0 and blds.seed == nil then
+            problems[#problems + 1] = "buildings list empty"
+        end
+    end
+
+    -- compTarget: every targeted unit should have a producer building, else its
+    -- order silently no-ops and the army never reaches target composition.
+    local comp = race.compTarget
+    if comp ~= nil and prod ~= nil then
+        for unitId, _ in pairs(comp) do
+            if type(unitId) == "number" then
+                local found = false
+                for bldType, rows in pairs(prod) do
+                    if bldType ~= "worker" and type(rows) == "table" then
+                        for _, row in ipairs(rows) do
+                            if row[1] == unitId
+                                or (row.branch and (row.black == unitId or row.other == unitId)) then
+                                found = true; break
+                            end
+                        end
+                    end
+                    if found then break end
+                end
+                if not found then
+                    problems[#problems + 1] = "compTarget unit " .. tostring(unitId)
+                        .. " has no producer building"
+                end
+            end
+        end
+    end
+
+    if #problems == 0 then
+        BrainLogTag(0, "BRAINVALID", "race '" .. rk .. "' OK")
+    else
+        BrainLogTag(0, "BRAINVALID", "race '" .. rk .. "' problems: "
+            .. table.concat(problems, "; "))
+    end
+end
+
+-- R1/R2/R3: protected wrapper. A Lua error in one bot's tick is caught, counted,
+-- and (past AiBotFaultLimit) quarantines that bot for a while — the round-robin and
+-- every other bot keep running. NOTE: a hard C++ crash (e.g. the old squad FSM) is
+-- NOT catchable here; this guards the far more common Lua-level errors that race-data
+-- fragility produces. See AI_OVERHAUL_PLAN.md §2 (Track R).
 function AiBrainArmyTick(pi, p)
+    -- Quarantine: skip a repeatedly-faulting bot for a window, then retry.
+    local qUntil = AiBotQuarantine[pi]
+    if qUntil ~= nil then
+        if AiBrainTickCounter ~= nil and AiBrainTickCounter < qUntil then return end
+        AiBotQuarantine[pi] = nil  -- window elapsed, give it another chance
+    end
+    local ok, err = pcall(AiBrainArmyTickInner, pi, p)
+    if not ok then
+        AiBotFaults[pi] = (AiBotFaults[pi] or 0) + 1
+        AiBrainLogTagSafe(pi, "BRAINERR", "tick fault #" .. tostring(AiBotFaults[pi])
+            .. " pi=" .. tostring(pi) .. " err=" .. tostring(err))
+        if AiBotFaults[pi] >= AiBotFaultLimit then
+            AiBotQuarantine[pi] = (AiBrainTickCounter or 0) + AiBotQuarantineTicks
+            AiBotFaults[pi] = 0  -- reset the window counter
+            AiBrainLogTagSafe(pi, "BRAINERR", "pi=" .. tostring(pi)
+                .. " QUARANTINED for " .. tostring(AiBotQuarantineTicks) .. " ticks")
+        end
+    end
+end
+
+-- BRAINERR logging that can't itself throw (used inside the fault handler).
+function AiBrainLogTagSafe(pi, tag, msg)
+    pcall(function() BrainLogTag(pi, tag, msg) end)
+end
+
+function AiBrainArmyTickInner(pi, p)
+    AiBrainTickCounter = (AiBrainTickCounter or 0) + 1
+    -- R4: validate this bot's race once, log any data problems (does not block).
+    local rk = AiRace[pi]
+    if rk ~= nil and not AiRaceValidated[rk] then
+        AiRaceValidated[rk] = true
+        pcall(AiValidateRace, rk)
+    end
     local t0 = os.clock and os.clock() or 0
     local d = AiProfileData[pi] or { ticks = 0 }
     AiProfileData[pi] = d
@@ -1601,12 +1824,30 @@ end
 
 -- IsTerrainPathable is inverted: true == blocked for that pathing type (matches
 -- the `not IsTerrainPathable(..WALKABILITY)` idiom used in 98_ai_build.lua).
+-- E1: a single-point check passes spots whose full FOOTPRINT collides (water/cliff
+-- at a corner) — the engine then silently rejects IssueBuildOrderById and the worker
+-- goes idle (observed root cause of the stuck build pipeline). So sample the center
+-- plus a ring of points spanning the building footprint; reject if ANY is blocked.
 ---@param x real
 ---@param y real
+---@param half? real  half-footprint radius to sample (default ~one build cell)
 ---@return boolean
-function AiBuildPlaceable(x, y)
-    if IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then return false end   -- blocked
-    if IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY) then return false end  -- water
+function AiBuildPlaceable(x, y, half)
+    half = half or (AiBuildingRadius and AiBuildingRadius * 0.2) or 192.0
+    -- Center must be walkable (not cliff/blocked) and not water.
+    if IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then return false end
+    if IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY) then return false end
+    -- Footprint ring: sample WATER only. Walkability under the center's neighbours is
+    -- often "blocked" simply because friendly buildings sit there (dense base) — that
+    -- is a spacing concern (AiBuildSpotOccupied), not a terrain one, and sampling it
+    -- locked dense bases out of building entirely. Water at a footprint corner, though,
+    -- makes the engine silently reject the order — that we must catch.
+    local offs = { {half,0},{-half,0},{0,half},{0,-half} }
+    for i = 1, 4 do
+        if IsTerrainPathable(x + offs[i][1], y + offs[i][2], PATHING_TYPE_FLOATABILITY) then
+            return false
+        end
+    end
     return true
 end
 
@@ -1614,22 +1855,18 @@ end
 ---@param pi integer
 ---@param builder unit
 ---@return real|nil, real|nil
-function AiFindBuildSpot(pi, builder)
-    local rad = AiBuildingRadius
-    if rad == nil or rad <= 0 then rad = 256.0 end
-    local ax, ay
-    local cap = playerCapital[pi]
-    if cap ~= nil and GetUnitState(cap, UNIT_STATE_LIFE) > 0.405 then
-        ax, ay = GetUnitX(cap), GetUnitY(cap)
-    else
-        ax, ay = GetUnitX(builder), GetUnitY(builder)
-    end
-    local minSpacing = rad * 1.4
+-- Expanding-ring scan around one anchor; returns first placeable, non-crowded spot.
+---@param ax real
+---@param ay real
+---@param rad real
+---@param phase integer
+---@return real|nil, real|nil
+function AiScanBuildRings(ax, ay, rad, phase)
+    local minSpacing = rad * 0.9          -- allow tighter packing than the old 1.4
     local sectors = 12
-    local phase = pi % sectors            -- vary the start angle per player
     local ring = 0
-    while ring < 6 do
-        local r = rad * 2.0 + ring * rad * 1.5
+    while ring < 10 do                    -- search farther out (dense/corner bases)
+        local r = rad * 1.5 + ring * rad * 1.2
         local s = 0
         while s < sectors do
             local ang = (I2R(s + phase) / I2R(sectors)) * 2.0 * bj_PI
@@ -1641,6 +1878,29 @@ function AiFindBuildSpot(pi, builder)
             s = s + 1
         end
         ring = ring + 1
+    end
+    return nil, nil
+end
+
+-- Nearest placeable spot. Prefer the capital anchor (keeps the base clustered); if
+-- that base is hemmed in (dense/corner — every nearby cell blocked), fall back to the
+-- builder's own position, which is what produced working bases before the capital
+-- anchor existed. Returns x,y or nil,nil.
+---@param pi integer
+---@param builder unit
+---@return real|nil, real|nil
+function AiFindBuildSpot(pi, builder)
+    local rad = AiBuildingRadius
+    if rad == nil or rad <= 0 then rad = 256.0 end
+    local phase = pi % 12
+    local cap = playerCapital[pi]
+    if cap ~= nil and GetUnitState(cap, UNIT_STATE_LIFE) > 0.405 then
+        local x, y = AiScanBuildRings(GetUnitX(cap), GetUnitY(cap), rad, phase)
+        if x ~= nil then return x, y end
+    end
+    -- fallback: around the builder itself
+    if builder ~= nil then
+        return AiScanBuildRings(GetUnitX(builder), GetUnitY(builder), rad, phase)
     end
     return nil, nil
 end
