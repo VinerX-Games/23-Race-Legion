@@ -1081,6 +1081,11 @@ function WritePlayerName()
     DisplayTextToForce(udg_AllPlayers, "" .. GetPlayerName(GetEnumPlayer()))
 end
 function Trig_StartAlly_Actions()
+    -- Suppress nested re-entry: when ClearAllies is unallying a player, each change
+    -- re-fires this handler synchronously. Without this guard the handler would call
+    -- ClearAllies again (clobbering global gPlayer/gForce mid-iteration) and the
+    -- cascade hard-crashes the engine under AI-diplomat alliance churn.
+    if gAllianceClearing then return end
     local p= GetTriggerPlayer()
     local AllyCount= 0
     ForceEnumAllies(gForce, p, nil)

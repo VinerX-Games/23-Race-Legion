@@ -10604,11 +10604,21 @@ function BrokeOneAlliance()
 	SetPlayerAllianceStateBJ(gPlayer, GetEnumPlayer(), bj_ALLIANCE_UNALLIED)
 	SetPlayerAllianceStateBJ(GetEnumPlayer(), gPlayer, bj_ALLIANCE_UNALLIED)
 end
+-- Reentrancy guard: each SetPlayerAllianceStateBJ above fires gg_trg_StartAlly
+-- SYNCHRONOUSLY, which (when a player is over DipMode) calls ClearAllies again —
+-- re-entering this ForForce and clobbering the global gPlayer mid-iteration. With
+-- the AI diplomat churning alliances on 20+ bots this nested cascade overflows and
+-- hard-crashes the engine (uncatchable in Lua). gAllianceClearing makes the nested
+-- StartAlly a no-op (see Trig_StartAlly_Actions) so the cascade can't recurse.
+gAllianceClearing = gAllianceClearing or false
 ---@param p player
 ---@return nothing
 function ClearAllies(p)
+	if gAllianceClearing then return end
+	gAllianceClearing = true
 	gPlayer = p
 	ForForce(GetPlayersAllies(gPlayer), BrokeOneAlliance)
+	gAllianceClearing = false
 end
 -- ***************************************************************************
 -- *  DelUnitStart
@@ -18358,6 +18368,11 @@ function WritePlayerName()
     DisplayTextToForce(udg_AllPlayers, "" .. GetPlayerName(GetEnumPlayer()))
 end
 function Trig_StartAlly_Actions()
+    -- Suppress nested re-entry: when ClearAllies is unallying a player, each change
+    -- re-fires this handler synchronously. Without this guard the handler would call
+    -- ClearAllies again (clobbering global gPlayer/gForce mid-iteration) and the
+    -- cascade hard-crashes the engine under AI-diplomat alliance churn.
+    if gAllianceClearing then return end
     local p= GetTriggerPlayer()
     local AllyCount= 0
     ForceEnumAllies(gForce, p, nil)
@@ -61947,6 +61962,12 @@ AiDiplomatPresets = {
 AiDiplomatEnabled = AiDiplomatEnabled or true
 AiDiplomatRpEnabled = AiDiplomatRpEnabled or true
 
+-- Churn dampening (anti "ally then immediately drop"): a freshly-formed alliance
+-- is protected from weakness/no-threat breaks for MinAllyAge ticks, and after a
+-- break the pair can't re-ally for ReallyCooldown ticks. Betrayal is exempt.
+AiDiplomatMinAllyAge = AiDiplomatMinAllyAge or 40
+AiDiplomatReallyCooldown = AiDiplomatReallyCooldown or 60
+
 -- ====================================================================
 -- Name helper: "[RaceName (Slot#)]" — disambiguates duplicate races.
 -- ====================================================================
@@ -62010,10 +62031,8 @@ function AiDiplomatCfg(pi)
         if pre ~= nil then
             for k, v in pairs(pre) do cfg[k] = v end
         end
-        return cfg
-    end
     -- If raw is a table: apply preset first, then overrides.
-    if type(raw) == "table" then
+    elseif type(raw) == "table" then
         if raw.preset ~= nil then
             local pre = AiDiplomatPresets[raw.preset]
             if pre ~= nil then
@@ -62023,6 +62042,13 @@ function AiDiplomatCfg(pi)
         for k, v in pairs(raw) do
             if k ~= "preset" then cfg[k] = v end
         end
+    end
+    -- Respect the map's global alliance cap (DipMode). If a bot is allowed more
+    -- allies than DipMode, the StartAlly trigger force-clears it the moment it
+    -- exceeds — which both looks like alliance churn ("ally then instantly drop")
+    -- and drives the ClearAllies cascade. DipMode==0 means "no cap".
+    if DipMode ~= nil and DipMode > 0 and cfg.allianceMax > DipMode then
+        cfg.allianceMax = DipMode
     end
     return cfg
 end
@@ -62530,6 +62556,8 @@ function AiDiplomatAccept(pi, otherPi)
     st.allies[otherPi] = true
     st.pendingOffers[otherPi] = nil
     st.pendingRequests[otherPi] = nil
+    if st.alliedAt == nil then st.alliedAt = {} end
+    st.alliedAt[otherPi] = AiDiplomatTicks[pi] or 0
     if st.relations[otherPi] ~= nil then
         st.relations[otherPi].trust = math.min((st.relations[otherPi].trust or 0.3) + 0.3, 1.0)
     end
@@ -62572,6 +62600,11 @@ function AiDiplomatBreak(pi, otherPi, reason)
     st.allies[otherPi] = nil
     st.pendingOffers[otherPi] = nil
     st.pendingRequests[otherPi] = nil
+    if st.brokeAt == nil then st.brokeAt = {} end
+    st.brokeAt[otherPi] = AiDiplomatTicks[pi] or 0
+    if st.alliedAt ~= nil then st.alliedAt[otherPi] = nil end
+    -- allow this pair to be re-detected as a fresh proposal later
+    if st.processedProposals ~= nil then st.processedProposals[otherPi] = nil end
     if st.relations[otherPi] ~= nil then
         st.relations[otherPi].trust = math.max((st.relations[otherPi].trust or 0.5) - 0.5, 0.0)
     end
@@ -62639,6 +62672,13 @@ function AiDiplomatConsiderAlly(pi, otherPi)
     local allyCount = DipAllyCount(pi)
     if allyCount >= cfg.allianceMax then return false, nil end
 
+    -- Re-ally cooldown: don't immediately re-propose to someone we just broke with.
+    local st0 = AiDiplomatState(pi)
+    if st0.brokeAt ~= nil and st0.brokeAt[otherPi] ~= nil then
+        local since = (AiDiplomatTicks[pi] or 0) - st0.brokeAt[otherPi]
+        if since < AiDiplomatReallyCooldown then return false, nil end
+    end
+
     local score = AiDiplomatEvaluate(pi, otherPi)
     local threshold = 1.0 - cfg.allianceDesire * 0.7 -- desire 0→thresh=1.0, desire 1→thresh=0.3
 
@@ -62673,17 +62713,24 @@ function AiDiplomatConsiderBreak(pi, otherPi)
     local rel = st.relations[otherPi]
     if rel == nil then return true, "You are no longer relevant." end
 
-    -- 1. Ally is too weak
-    local otherPower = Grades[otherPi] or 0
-    local myPower = Grades[pi] or 1
-    local weakness = 1.0 - (otherPower / math.max(myPower, 1))
-    if weakness > cfg.breakOnWeakness then
-        return true, "You have grown too weak to be useful."
-    end
+    -- Young alliances are protected from circumstantial breaks (weakness / no
+    -- common threat) so power/proximity noise can't make bots ally-and-drop every
+    -- few ticks. Betrayal (4) and the rare random break (3) are still allowed.
+    local tickNow = AiDiplomatTicks[pi] or 0
+    local allyAge = tickNow - ((st.alliedAt and st.alliedAt[otherPi]) or 0)
+    if allyAge >= AiDiplomatMinAllyAge then
+        -- 1. Ally is too weak
+        local otherPower = Grades[otherPi] or 0
+        local myPower = Grades[pi] or 1
+        local weakness = 1.0 - (otherPower / math.max(myPower, 1))
+        if weakness > cfg.breakOnWeakness then
+            return true, "You have grown too weak to be useful."
+        end
 
-    -- 2. No common threat anymore
-    if rel.sharedEnemies == 0 and cfg.breakOnNoThreat > 0.5 then
-        return true, "Our common enemy is gone. This alliance no longer serves me."
+        -- 2. No common threat anymore
+        if rel.sharedEnemies == 0 and cfg.breakOnNoThreat > 0.5 then
+            return true, "Our common enemy is gone. This alliance no longer serves me."
+        end
     end
 
     -- 3. Base random break chance (scaled by inverse of loyalty)
