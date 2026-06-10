@@ -28,7 +28,7 @@ AiRaceValidated = AiRaceValidated or {} -- [raceKey] = true once validated
 -- spot every 0.6s tick (the observed cause of builds never completing). Past the
 -- window an idle claimed worker = failed build → recycled to harvest.
 AiBuildClaim = AiBuildClaim or {}       -- [unit] = brain tick when last sent to build
-AiBuildClaimTicks = AiBuildClaimTicks or 8 -- ~5s at 0.64s/tick
+AiBuildClaimTicks = AiBuildClaimTicks or 40 -- ~24s at 0.6s/tick (was 8, workers need time to walk)
 
 -- Round-robin cursor: fair distribution across bots (replaces ForcePickRandomPlayer)
 AiBrainBotList = AiBrainBotList or {}   -- [1..n] = pi, populated at createAiPlayer
@@ -1958,11 +1958,11 @@ end
 ---@param phase integer
 ---@return real|nil, real|nil
 function AiScanBuildRings(ax, ay, rad, phase)
-    local minSpacing = rad * 0.9          -- allow tighter packing than the old 1.4
+    local minSpacing = 750
     local sectors = 12
     local ring = 0
     while ring < 10 do                    -- search farther out (dense/corner bases)
-        local r = rad * 1.5 + ring * rad * 1.2
+        local r = 750 + ring * 750
         local s = 0
         while s < sectors do
             local ang = (I2R(s + phase) / I2R(sectors)) * 2.0 * bj_PI
@@ -1989,14 +1989,16 @@ function AiFindBuildSpot(pi, builder)
     local rad = AiBuildingRadius
     if rad == nil or rad <= 0 then rad = 256.0 end
     local phase = pi % 12
+    -- Prefer builder's position: worker can reach it immediately, rapid initial expansion
+    if builder ~= nil then
+        local x, y = AiScanBuildRings(GetUnitX(builder), GetUnitY(builder), rad, phase)
+        if x ~= nil then return x, y end
+    end
+    -- Fallback: capital anchor for base clustering
     local cap = playerCapital[pi]
     if cap ~= nil and GetUnitState(cap, UNIT_STATE_LIFE) > 0.405 then
         local x, y = AiScanBuildRings(GetUnitX(cap), GetUnitY(cap), rad, phase)
         if x ~= nil then return x, y end
-    end
-    -- fallback: around the builder itself
-    if builder ~= nil then
-        return AiScanBuildRings(GetUnitX(builder), GetUnitY(builder), rad, phase)
     end
     return nil, nil
 end
