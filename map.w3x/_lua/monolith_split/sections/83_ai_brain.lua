@@ -124,7 +124,7 @@ function AiProfileDump(pi)
     return "[PROF] pi=" .. tostring(pi) .. " ticks=" .. tostring(d.ticks) .. " total=" .. string.format("%.1f", t) .. "ms avg=" .. string.format("%.1f", t / d.ticks) .. "ms | " .. table.concat(parts, " ")
 end
 AiBrainMaxProduce      = AiBrainMaxProduce      or 20  -- max unit-training orders per bot per tick
-AiBrainMaxBuild        = AiBrainMaxBuild        or 6   -- max building-attempts per bot per tick
+AiBrainMaxBuild        = AiBrainMaxBuild        or 10  -- max building-attempts per bot per tick
 g_AiOrdered = g_AiOrdered or {}                        -- per-bot+unit training guard
 AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks
 AiBrainNavalEvery      = AiBrainNavalEvery      or 60  -- naval-check every N brain-ticks
@@ -1276,9 +1276,6 @@ function AiRecycleBuilders(pi, maxMove)
         for k, t in pairs(g_BuildSpotReserved) do
             if now - t >= g_BuildReserveTicks then g_BuildSpotReserved[k] = nil end
         end
-        for k, t in pairs(g_BuildTypeInFlight) do
-            if now - t >= g_BuildReserveTicks then g_BuildTypeInFlight[k] = nil end
-        end
     end
     local sz = BlzGroupGetSize(grpT)
     -- Collect victims FIRST (never mutate the group while iterating it by index —
@@ -1289,10 +1286,12 @@ function AiRecycleBuilders(pi, maxMove)
     local i = 0
     while i < sz and found < cap do
         local u = BlzGroupUnitAt(grpT, i)
-        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
-            and GetUnitCurrentOrder(u) == 0 then
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
             local c = AiBuildClaim[u]
-            if c == nil or (now - c) >= AiBuildClaimTicks then
+            local expired = c ~= nil and (now - c) >= AiBuildClaimTicks
+            -- Recycle idle workers with old claims, OR stuck workers (any order) with expired claims
+            if (GetUnitCurrentOrder(u) == 0 and (c == nil or expired))
+                or expired then
                 if victims == nil then victims = {} end
                 found = found + 1
                 victims[found] = u
@@ -1538,19 +1537,12 @@ function TryBuildWithType(bldType, fx, fy)
     local u = TryBuild_u
     if u == nil or bldType == nil then return end
     local pi = GetPlayerId(GetOwningPlayer(u))
-    -- Prevent duplicate build orders for same building type by same player
-    local typeKey = pi .. "|" .. bldType
-    local now = AiBrainTickCounter or 0
-    if g_BuildTypeInFlight[typeKey] and now - g_BuildTypeInFlight[typeKey] < g_BuildReserveTicks then
-        return
-    end
-    g_BuildTypeInFlight[typeKey] = now
 
     GroupAddUnit(udg_Ai_buildersT[pi], u)
     GroupRemoveUnit(udg_Ai_builders[pi], u)
     GroupRemoveUnit(udg_Ai_harvest[pi], u)
-    -- E3 anti-thrash: stamp so this worker is left to walk+build for a window.
-    AiBuildClaim[u] = now
+    AiBuildClaim[u] = AiBrainTickCounter or 0
+    local now = AiBrainTickCounter or 0
 
     local function reserve(x, y)
         local key = pi .. "," .. R2I(x) .. "," .. R2I(y)
@@ -1899,7 +1891,6 @@ end
 ---@param radius real
 ---@return boolean
 g_BuildSpotReserved = g_BuildSpotReserved or {}   -- ["pi,x,y"] = tick (spot claimed by worker en route)
-g_BuildTypeInFlight = g_BuildTypeInFlight or {}   -- [pi.."|"..bldType] = tick (building type has worker en route)
 g_BuildReserveTicks = g_BuildReserveTicks or 40   -- how long a reservation lives
 
 function AiBuildSpotOccupied(x, y, radius)
