@@ -61803,7 +61803,7 @@ function AiBuildPlaceable(x, y, half)
     half = half or (AiBuildingRadius and AiBuildingRadius * 0.2) or 192.0
     -- Center must be walkable (not cliff/blocked) and not water.
     if IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then return false end
-    if IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY) then return false end
+    if not IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY) then return false end
     -- Footprint ring: sample WATER only. Walkability under the center's neighbours is
     -- often "blocked" simply because friendly buildings sit there (dense base) — that
     -- is a spacing concern (AiBuildSpotOccupied), not a terrain one, and sampling it
@@ -61811,7 +61811,7 @@ function AiBuildPlaceable(x, y, half)
     -- makes the engine silently reject the order — that we must catch.
     local offs = { {half,0},{-half,0},{0,half},{0,-half} }
     for i = 1, 4 do
-        if IsTerrainPathable(x + offs[i][1], y + offs[i][2], PATHING_TYPE_FLOATABILITY) then
+        if not IsTerrainPathable(x + offs[i][1], y + offs[i][2], PATHING_TYPE_FLOATABILITY) then
             return false
         end
     end

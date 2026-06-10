@@ -51,6 +51,23 @@ end
 
 **Как искать**: grep по всем `.lua` на `UnitAlive`, проверить каждый в контексте `if not` или `return UnitAlive(...) and ...`.
 
+### 1b. IsTerrainPathable + FLOATABILITY: вода vs суша
+
+`IsTerrainPathable` **инвертирован**: `true` = pathing type ЗАБЛОКИРОВАН.
+
+| Значение | WALKABILITY | FLOATABILITY |
+|---|---|---|
+| `true` | ходить **нельзя** (скала/препятствие) | плавать **нельзя** (**суша**) |
+| `false` | ходить **можно** (проходимо) | плавать **можно** (**вода**) |
+
+**Проверка на сушу** (строительство): `IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY)` → `true` = суша, `false` = вода.
+
+**Распространённая ошибка**: `if IsTerrainPathable(x, y, FLOATABILITY) then return false end` —
+бракует **сушу** (float blocked), пропускает воду. Правильно: `if not IsTerrainPathable(x, y, FLOATABILITY) then return false end` — бракует воду, пропускает сушу.
+
+Обнаружено 2026-06-11: `AiBuildPlaceable` в `83_ai_brain.lua` использовал инвертированную проверку,
+из-за чего все сухопутные пятна браковались, а водные — пропускались. Боты на суше не могли строить.
+
 ### 2. tArray[0] vs tArray0 — индексация массива
 
 В JASS `tArray[tArray[0]]` — это «элемент массива tArray по индексу, равному значению в tArray[0]». Конвертер ошибочно дал `tArray[tArray0]`, где `tArray0` — отдельная неинициализированная переменная (всегда 0). Все данные пишутся в слот-счётчик.
