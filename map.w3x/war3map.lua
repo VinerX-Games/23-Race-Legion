@@ -59931,7 +59931,7 @@ AiRaceValidated = AiRaceValidated or {} -- [raceKey] = true once validated
 -- spot every 0.6s tick (the observed cause of builds never completing). Past the
 -- window an idle claimed worker = failed build → recycled to harvest.
 AiBuildClaim = AiBuildClaim or {}       -- [unit] = brain tick when last sent to build
-AiBuildClaimTicks = AiBuildClaimTicks or 40 -- ~24s at 0.6s/tick (was 8, workers need time to walk)
+AiBuildClaimTicks = AiBuildClaimTicks or 20 -- ~12s at 0.6s/tick
 
 -- Round-robin cursor: fair distribution across bots (replaces ForcePickRandomPlayer)
 AiBrainBotList = AiBrainBotList or {}   -- [1..n] = pi, populated at createAiPlayer
