@@ -1865,8 +1865,17 @@ function CheckNearCapitals()
     local u= GetTriggerUnit()
     
     udg_LocalPlayer=GetOwningPlayer(city)
-    GroupEnumUnitsInRange(g, GetUnitX(city), GetUnitY(city), 3050, CapitalOfEnemy)
-    if FirstOfGroup(g) ~= nil then
+    GroupEnumUnitsInRange(g, GetUnitX(city), GetUnitY(city), 3050, nil)
+    local found = false
+    local sz = BlzGroupGetSize(g)
+    for i = 0, sz - 1 do
+        local eu = BlzGroupUnitAt(g, i)
+        if eu ~= nil and IsUnitInGroup(eu, udg_StolicaGroups) and IsPlayerEnemy(GetOwningPlayer(eu), udg_LocalPlayer) then
+            found = true
+            break
+        end
+    end
+    if found then
         DisplayTextToPlayer(udg_LocalPlayer, 0, 0, "(3)")
         g=nil
         return false
@@ -3334,7 +3343,9 @@ function Trig_DalDiy_Func002A()
     KillUnit(GetEnumUnit())
 end
 function Trig_DalDiy_Func003A()
-    RemoveUnit(GetEnumUnit())
+    local u = GetEnumUnit()
+    aiFixTrainBefore(u, GetPlayerId(GetOwningPlayer(u)))
+    RemoveUnit(u)
 end
 function Trig_DalDiy_Actions()
     ForGroupBJ(GetUnitsInRectAll(gg_rct_RenameDeath), Trig_DalDiy_Func002A)
@@ -3517,7 +3528,9 @@ function Trig_NaxDiy_Func002A()
     KillUnit(GetEnumUnit())
 end
 function Trig_NaxDiy_Func003A()
-    RemoveUnit(GetEnumUnit())
+    local u = GetEnumUnit()
+    aiFixTrainBefore(u, GetPlayerId(GetOwningPlayer(u)))
+    RemoveUnit(u)
 end
 function Trig_NaxDiy_Actions()
     ForGroupBJ(GetUnitsInRectAll(gg_rct_Naxramas), Trig_NaxDiy_Func002A)

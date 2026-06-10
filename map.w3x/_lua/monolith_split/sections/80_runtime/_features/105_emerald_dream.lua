@@ -36,27 +36,26 @@ end
 function checkGreenArea()
 	local u
 	GroupClear(gGroup)
-	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, alienToDream)
+	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, nil)
 	while true do
 		u = FirstOfGroup(gGroup)
-		
-		
-		if u ~= nil and GetUnitAbilityLevel(u, FourCC('A1LR')) == 0 then
-			-- call BJDebugMsg("??????????"+GetUnitName(u))
-			u = nil
-			
-			WakeGreenUp()
-			return 
+		if u ~= nil then
+			-- Inline alienToDream check: alive, non-structure, non-dummy, non-WRP
+			if GetUnitAbilityLevel(u, FourCC('A1LR')) == 0
+				and UnitAlive(u)
+				and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
+				and GetUnitTypeId(u) ~= Dummy
+				and GetUnitAbilityLevel(u, FourCC('Awrp')) == 0 then
+					u = nil
+					WakeGreenUp()
+					return 
+				end
 		end
-		
 		if u == nil then break end
-		
 		GroupRemoveUnit(gGroup, u)
 		u = nil
-		
 	end
 	GroupClear(gGroup)
-	-- call BJDebugMsg("????? ????")
 	SleepGreen()
 	u = nil
 end

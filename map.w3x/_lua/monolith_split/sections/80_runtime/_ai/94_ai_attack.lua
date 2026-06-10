@@ -12,17 +12,50 @@ function TryPortalMovement(u, l__gEnemyGroup, l__gX, l__gY, i)
 	if i == 0 then
 		i = 20
 	end
-	
+
 	Counter = 0
 	EnemyCapital = nil
-	if abilityLevel == 1 then
-		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnitP)
-	elseif abilityLevel >= 2 then
-		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnit)
+	local radius = 3000.00 * (Pow(1.5, I2R(i)))
+	local useP = (abilityLevel ~= 2)
+	GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, radius, nil)
+	if abilityLevel >= 2 then
 		UnitRemoveAbility(u, FourCC('A1GZ'))
-	else
-		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnitP)
 	end
+	-- Post-enum filter loop: same logic as f_EnemyUnitP/f_EnemyUnit but safe (Lua context)
+	local sz = BlzGroupGetSize(l__gEnemyGroup)
+	local keep = {}
+	local ki = 0
+	for idx = 0, sz - 1 do
+		local eu = BlzGroupUnitAt(l__gEnemyGroup, idx)
+		if eu ~= nil and GetUnitState(eu, UNIT_STATE_LIFE) > 0.405 then
+			local ep = GetOwningPlayer(eu)
+			if IsPlayerEnemy(ep, CheckPlayer) then
+				local isWaygate = WaygateIsActive(eu)
+				if useP then
+					-- f_EnemyUnitP: keep if alive-enemy OR (waygate and not navy/mage)
+					local keepIt = true
+					if isWaygate and (IsUnitInGroup(eu, Navy) or GetUnitAbilityLevel(eu, FourCC('A1MS')) > 0) then
+						keepIt = false
+					end
+					if keepIt then
+						Counter = Counter + 1
+						if IsUnitInGroup(eu, udg_StolicaGroups) then EnemyCapital = eu end
+						ki = ki + 1; keep[ki] = eu
+					end
+				else
+					-- f_EnemyUnit: keep if alive-enemy AND NOT (waygate/navy/mage)
+					if not isWaygate and not IsUnitInGroup(eu, Navy) and GetUnitAbilityLevel(eu, FourCC('A1MS')) == 0 then
+						Counter = Counter + 1
+						if IsUnitInGroup(eu, udg_StolicaGroups) then EnemyCapital = eu end
+						ki = ki + 1; keep[ki] = eu
+					end
+				end
+			end
+		end
+	end
+	-- Rebuild group with kept units only
+	GroupClear(l__gEnemyGroup)
+	for j = 1, ki do GroupAddUnit(l__gEnemyGroup, keep[j]) end
 	
 	-- trace: check if dark portal waygates (n006) are alive/active
 	local pi = GetPlayerId(GetOwningPlayer(u))
@@ -56,6 +89,24 @@ function TryAttack()
 	end
 	
 	CheckPlayer = gPlayer
+	-- Safe post-filter: replaces B_LazyF Condition filter on gAllyGroup.
+	-- Removes units that fail IsAiCombatRetaskable + IsUnitInGroup(army), returns count.
+	local function LazyFilterAllyGroup(g)
+		local armyGrp = udg_Ai_army[GetPlayerId(CheckPlayer)]
+		local count = 0
+		local sz = BlzGroupGetSize(g)
+		local i = 0
+		while i < sz do
+			local u = BlzGroupUnitAt(g, i)
+			if u ~= nil and IsAiCombatRetaskable(u) and armyGrp ~= nil and IsUnitInGroup(u, armyGrp) then
+				count = count + 1; i = i + 1
+			else
+				if u ~= nil then GroupRemoveUnit(g, u) end
+				sz = sz - 1
+			end
+		end
+		return count
+	end
 	-- // ??????? ????????????
 	if Random(1, 8) then
 		
@@ -107,8 +158,8 @@ function TryAttack()
 				gDx = gX - gX2
 				gDy = gY - gY2
 				gDx = SquareRoot(gDx * gDx + gDy * gDy)
-				GroupEnumUnitsInRange(gAllyGroup, gX, gY, 2500 * AiRadius / 5, B_LazyF)
-				local allyCount = CountUnitsInGroup(gAllyGroup)
+				GroupEnumUnitsInRange(gAllyGroup, gX, gY, 2500 * AiRadius / 5, nil)
+				local allyCount = LazyFilterAllyGroup(gAllyGroup)
 				
 				
 				-- ? ????? ?????? ????? ???????? ??????? ???????
@@ -151,8 +202,8 @@ function TryAttack()
 				--  ???????? ??????
 			else
 				-- set CheckPlayer = gPlayer
-				GroupEnumUnitsInRange(gAllyGroup, gX, gY, 1500 * AiRadius / 5, B_LazyF)
-				local allyCount = CountUnitsInGroup(gAllyGroup)
+				GroupEnumUnitsInRange(gAllyGroup, gX, gY, 1500 * AiRadius / 5, nil)
+				local allyCount = LazyFilterAllyGroup(gAllyGroup)
 				if allyCount == 0 then
 					AiProbeLogLimited(pi_attack, "Log_TryAttack_NoGroupAlliesFast", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=group-fast targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 				end
@@ -257,8 +308,8 @@ function TryAttack()
 					gDx = gX - gX2
 					gDy = gY - gY2
 					gDx = SquareRoot(gDx * gDx + gDy * gDy)
-					GroupEnumUnitsInRange(gAllyGroup, gX, gY, 2500 * AiRadius / 5, B_LazyF)
-					local allyCount = CountUnitsInGroup(gAllyGroup)
+					GroupEnumUnitsInRange(gAllyGroup, gX, gY, 2500 * AiRadius / 5, nil)
+					local allyCount = LazyFilterAllyGroup(gAllyGroup)
 					
 					
 					-- ? ????? ?????? ????? ???????? ??????? ???????
@@ -302,8 +353,8 @@ function TryAttack()
 					-- ????? ?????? ????? ? ????? ???????
 					
 					-- set CheckPlayer = gPlayer
-					GroupEnumUnitsInRange(gAllyGroup, gX, gY, 1500 * AiRadius / 5, B_LazyF)
-					local allyCount = CountUnitsInGroup(gAllyGroup)
+					GroupEnumUnitsInRange(gAllyGroup, gX, gY, 1500 * AiRadius / 5, nil)
+					local allyCount = LazyFilterAllyGroup(gAllyGroup)
 					if allyCount == 0 then
 						AiProbeLogLimited(pi_attack, "Log_TryAttack_NoGroupAlliesWide", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=group-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 					end

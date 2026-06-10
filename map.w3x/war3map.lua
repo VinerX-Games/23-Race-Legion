@@ -9815,8 +9815,8 @@ function addArmyExp(u, pi)
 			gReal = I2R(GetUnitGoldCost(gId) or 0) * 0.02
 		end
 	end
-	ArmyExp[pi] = ArmyExp[pi] + gReal
-	ArmyExp[gPi] = RMaxBJ(0, ArmyExp[gPi] - gReal * 0.9)
+	ArmyExp[pi] = (ArmyExp[pi] or 0) + gReal
+	ArmyExp[gPi] = RMaxBJ(0, (ArmyExp[gPi] or 0) - gReal * 0.9)
 	--  call BJDebugMsg( GetUnitName(u)+" "+R2S(ArmyExp[pi]))
 end
 -- ????????????? ????? ?? ????
@@ -11535,17 +11535,50 @@ function TryPortalMovement(u, l__gEnemyGroup, l__gX, l__gY, i)
 	if i == 0 then
 		i = 20
 	end
-	
+
 	Counter = 0
 	EnemyCapital = nil
-	if abilityLevel == 1 then
-		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnitP)
-	elseif abilityLevel >= 2 then
-		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnit)
+	local radius = 3000.00 * (Pow(1.5, I2R(i)))
+	local useP = (abilityLevel ~= 2)
+	GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, radius, nil)
+	if abilityLevel >= 2 then
 		UnitRemoveAbility(u, FourCC('A1GZ'))
-	else
-		GroupEnumUnitsInRange(l__gEnemyGroup, l__gX, l__gY, 3000.00 * (Pow(1.5, I2R(i))), udg_B_EnemyUnitP)
 	end
+	-- Post-enum filter loop: same logic as f_EnemyUnitP/f_EnemyUnit but safe (Lua context)
+	local sz = BlzGroupGetSize(l__gEnemyGroup)
+	local keep = {}
+	local ki = 0
+	for idx = 0, sz - 1 do
+		local eu = BlzGroupUnitAt(l__gEnemyGroup, idx)
+		if eu ~= nil and GetUnitState(eu, UNIT_STATE_LIFE) > 0.405 then
+			local ep = GetOwningPlayer(eu)
+			if IsPlayerEnemy(ep, CheckPlayer) then
+				local isWaygate = WaygateIsActive(eu)
+				if useP then
+					-- f_EnemyUnitP: keep if alive-enemy OR (waygate and not navy/mage)
+					local keepIt = true
+					if isWaygate and (IsUnitInGroup(eu, Navy) or GetUnitAbilityLevel(eu, FourCC('A1MS')) > 0) then
+						keepIt = false
+					end
+					if keepIt then
+						Counter = Counter + 1
+						if IsUnitInGroup(eu, udg_StolicaGroups) then EnemyCapital = eu end
+						ki = ki + 1; keep[ki] = eu
+					end
+				else
+					-- f_EnemyUnit: keep if alive-enemy AND NOT (waygate/navy/mage)
+					if not isWaygate and not IsUnitInGroup(eu, Navy) and GetUnitAbilityLevel(eu, FourCC('A1MS')) == 0 then
+						Counter = Counter + 1
+						if IsUnitInGroup(eu, udg_StolicaGroups) then EnemyCapital = eu end
+						ki = ki + 1; keep[ki] = eu
+					end
+				end
+			end
+		end
+	end
+	-- Rebuild group with kept units only
+	GroupClear(l__gEnemyGroup)
+	for j = 1, ki do GroupAddUnit(l__gEnemyGroup, keep[j]) end
 	
 	-- trace: check if dark portal waygates (n006) are alive/active
 	local pi = GetPlayerId(GetOwningPlayer(u))
@@ -11579,6 +11612,24 @@ function TryAttack()
 	end
 	
 	CheckPlayer = gPlayer
+	-- Safe post-filter: replaces B_LazyF Condition filter on gAllyGroup.
+	-- Removes units that fail IsAiCombatRetaskable + IsUnitInGroup(army), returns count.
+	local function LazyFilterAllyGroup(g)
+		local armyGrp = udg_Ai_army[GetPlayerId(CheckPlayer)]
+		local count = 0
+		local sz = BlzGroupGetSize(g)
+		local i = 0
+		while i < sz do
+			local u = BlzGroupUnitAt(g, i)
+			if u ~= nil and IsAiCombatRetaskable(u) and armyGrp ~= nil and IsUnitInGroup(u, armyGrp) then
+				count = count + 1; i = i + 1
+			else
+				if u ~= nil then GroupRemoveUnit(g, u) end
+				sz = sz - 1
+			end
+		end
+		return count
+	end
 	-- // ??????? ????????????
 	if Random(1, 8) then
 		
@@ -11630,8 +11681,8 @@ function TryAttack()
 				gDx = gX - gX2
 				gDy = gY - gY2
 				gDx = SquareRoot(gDx * gDx + gDy * gDy)
-				GroupEnumUnitsInRange(gAllyGroup, gX, gY, 2500 * AiRadius / 5, B_LazyF)
-				local allyCount = CountUnitsInGroup(gAllyGroup)
+				GroupEnumUnitsInRange(gAllyGroup, gX, gY, 2500 * AiRadius / 5, nil)
+				local allyCount = LazyFilterAllyGroup(gAllyGroup)
 				
 				
 				-- ? ????? ?????? ????? ???????? ??????? ???????
@@ -11674,8 +11725,8 @@ function TryAttack()
 				--  ???????? ??????
 			else
 				-- set CheckPlayer = gPlayer
-				GroupEnumUnitsInRange(gAllyGroup, gX, gY, 1500 * AiRadius / 5, B_LazyF)
-				local allyCount = CountUnitsInGroup(gAllyGroup)
+				GroupEnumUnitsInRange(gAllyGroup, gX, gY, 1500 * AiRadius / 5, nil)
+				local allyCount = LazyFilterAllyGroup(gAllyGroup)
 				if allyCount == 0 then
 					AiProbeLogLimited(pi_attack, "Log_TryAttack_NoGroupAlliesFast", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=group-fast targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 				end
@@ -11780,8 +11831,8 @@ function TryAttack()
 					gDx = gX - gX2
 					gDy = gY - gY2
 					gDx = SquareRoot(gDx * gDx + gDy * gDy)
-					GroupEnumUnitsInRange(gAllyGroup, gX, gY, 2500 * AiRadius / 5, B_LazyF)
-					local allyCount = CountUnitsInGroup(gAllyGroup)
+					GroupEnumUnitsInRange(gAllyGroup, gX, gY, 2500 * AiRadius / 5, nil)
+					local allyCount = LazyFilterAllyGroup(gAllyGroup)
 					
 					
 					-- ? ????? ?????? ????? ???????? ??????? ???????
@@ -11825,8 +11876,8 @@ function TryAttack()
 					-- ????? ?????? ????? ? ????? ???????
 					
 					-- set CheckPlayer = gPlayer
-					GroupEnumUnitsInRange(gAllyGroup, gX, gY, 1500 * AiRadius / 5, B_LazyF)
-					local allyCount = CountUnitsInGroup(gAllyGroup)
+					GroupEnumUnitsInRange(gAllyGroup, gX, gY, 1500 * AiRadius / 5, nil)
+					local allyCount = LazyFilterAllyGroup(gAllyGroup)
 					if allyCount == 0 then
 						AiProbeLogLimited(pi_attack, "Log_TryAttack_NoGroupAlliesWide", 8, "[AIARMY] no-allies pi=" .. tostring(pi_attack) .. " mode=group-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)))
 					end
@@ -12151,27 +12202,26 @@ end
 function checkGreenArea()
 	local u
 	GroupClear(gGroup)
-	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, alienToDream)
+	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, nil)
 	while true do
 		u = FirstOfGroup(gGroup)
-		
-		
-		if u ~= nil and GetUnitAbilityLevel(u, FourCC('A1LR')) == 0 then
-			-- call BJDebugMsg("??????????"+GetUnitName(u))
-			u = nil
-			
-			WakeGreenUp()
-			return 
+		if u ~= nil then
+			-- Inline alienToDream check: alive, non-structure, non-dummy, non-WRP
+			if GetUnitAbilityLevel(u, FourCC('A1LR')) == 0
+				and UnitAlive(u)
+				and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
+				and GetUnitTypeId(u) ~= Dummy
+				and GetUnitAbilityLevel(u, FourCC('Awrp')) == 0 then
+					u = nil
+					WakeGreenUp()
+					return 
+				end
 		end
-		
 		if u == nil then break end
-		
 		GroupRemoveUnit(gGroup, u)
 		u = nil
-		
 	end
 	GroupClear(gGroup)
-	-- call BJDebugMsg("????? ????")
 	SleepGreen()
 	u = nil
 end
@@ -21793,8 +21843,17 @@ function Trig_NoTpNearCapital_Actions()
     local u= GetTriggerUnit()
    
     udg_LocalPlayer=GetOwningPlayer(u)
-    GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 1350.00, CapitalOfEnemy)
-    if FirstOfGroup(g) ~= nil then
+    GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 1350.00, nil)
+    local found = false
+    local sz = BlzGroupGetSize(g)
+    for i = 0, sz - 1 do
+        local eu = BlzGroupUnitAt(g, i)
+        if eu ~= nil and IsUnitInGroup(eu, udg_StolicaGroups) and IsPlayerEnemy(GetOwningPlayer(eu), udg_LocalPlayer) then
+            found = true
+            break
+        end
+    end
+    if found then
         IssueImmediateOrder(u, "stop")
         DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, " - ")
     end
@@ -22062,6 +22121,7 @@ function Trig_Portal_Periodic_Func001A()
                 udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=udg_Portal_traveller
                 GroupAddUnitSimple(udg_Portal_dummy, udg_Portal_teleMissiles)
                 ShowUnitHide(udg_Portal_traveller)
+                SetUnitPosition(udg_Portal_traveller, -10000, -10000) -- 4.2: off-map, prevent enum crash
             else
                 if Trig_Portal_Periodic_Func001Func006Func002Func011Func012C() then
                     CreateNUnitsAtLocFacingLocBJ(1, udg_Portal_missileDummy[udg_Portal_INDEX_TARGET], GetOwningPlayer(udg_Portal_traveller), udg_Portal_loc1, udg_Portal_loc2)
@@ -22081,6 +22141,7 @@ function Trig_Portal_Periodic_Func001A()
                     SetUnitPathing(udg_Portal_dummy, false)
                     GroupAddUnitSimple(udg_Portal_dummy, udg_Portal_teleMissiles)
                     ShowUnitHide(udg_Portal_traveller)
+                    SetUnitPosition(udg_Portal_traveller, -10000, -10000) -- 4.2: off-map, prevent enum crash
                 else
                     RemoveLocation(udg_Portal_loc3)
                     udg_Portal_INDEX_TRAVELLER=GetUnitUserData(udg_Portal_portal[udg_Portal_INDEX_TARGET])
@@ -24581,8 +24642,12 @@ function Trig_UpSystem_Func001C()
 end
 function Trig_UpSystem_Actions()
     if Trig_UpSystem_Func001C() then
-        udg_LocalUnit2=GetKillingUnitBJ()
-        ReplaceUnit(udg_LocalUnit2 , FourCC('h0HE') , bj_UNIT_STATE_METHOD_RELATIVE)
+        local u = GetKillingUnitBJ()
+        local pi = GetPlayerId(GetOwningPlayer(u))
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit(u , FourCC('h0HE') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
+        udg_LocalUnit2 = GetLastReplacedUnitBJ()
     else
         IncUnitAbilityLevelSwapped(FourCC('A0VI'), GetKillingUnitBJ())
     end
@@ -28069,6 +28134,7 @@ function Trig_AK1T1_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AT1" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -28165,6 +28231,7 @@ function Trig_AK1T2_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AT2" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -28363,6 +28430,7 @@ function Trig_AK1T3_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AT3" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -28524,6 +28592,7 @@ function Trig_AK1Cav_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["ACav" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -28670,6 +28739,7 @@ function Trig_AK2T1_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AK1" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -28823,6 +28893,7 @@ function Trig_AK2T2_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AK2" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -28995,6 +29066,7 @@ function Trig_AK2T3_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AK3" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -29173,6 +29245,7 @@ function Trig_AM1_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AM1" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -29340,6 +29413,7 @@ function Trig_AM2_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AM2" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -29460,6 +29534,7 @@ function Trig_AM3_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AM3" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -29598,6 +29673,7 @@ function Trig_AE1_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AE1" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -29766,6 +29842,7 @@ function Trig_AE2_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AEE2" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -29915,6 +29992,7 @@ function Trig_AN1_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AN1" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -30045,6 +30123,7 @@ function Trig_AN2_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AN2" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -34657,8 +34736,11 @@ end
 function aiFixTrainBefore(oldUnit, pi)
     
     if udg_AiControl[pi] then
-        --call GroupRemoveUnit( udg_Ai_army[pi],oldUnit )
-        --call GroupRemoveUnit( udg_Ai_units[pi],oldUnit )
+        if udg_Ai_army[pi] ~= nil then GroupRemoveUnit(udg_Ai_army[pi], oldUnit) end
+        if udg_Ai_units[pi] ~= nil then GroupRemoveUnit(udg_Ai_units[pi], oldUnit) end
+        if Navy ~= nil then GroupRemoveUnit(Navy, oldUnit) end
+        if Port ~= nil then GroupRemoveUnit(Port, oldUnit) end
+        if udg_Ai_navy[pi] ~= nil then GroupRemoveUnit(udg_Ai_navy[pi], oldUnit) end
         NumberRem(pi , GetUnitTypeId(oldUnit))
         NumberRem(pi , StringHash("Number"))
         return true
@@ -37634,14 +37716,21 @@ function Trig_QTunServe_Func005001002()
     return IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups)
 end
 function Trig_QTunServe_Func005A()
-    GroupRemoveUnitSimple(GetEnumUnit(), udg_StolicaGroups)
-    ReplaceUnitBJ(GetEnumUnit(), GetUnitTypeId(GetEnumUnit()), bj_UNIT_STATE_METHOD_RELATIVE)
+    local u = GetEnumUnit()
+    local pi = GetPlayerId(GetOwningPlayer(u))
+    GroupRemoveUnitSimple(u, udg_StolicaGroups)
+    aiFixTrainBefore(u, pi)
+    ReplaceUnitBJ(u, GetUnitTypeId(u), bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
 end
 function Trig_QTunServe_Func009A()
     UnitShareVisionBJ(true, gg_unit_n03D_0666, GetEnumPlayer())
 end
 function Trig_QTunServe_Actions()
-    RemoveUnit(GetTrainedUnit())
+    local u = GetTrainedUnit()
+    local pi = GetPlayerId(GetOwningPlayer(u))
+    aiFixTrainBefore(u, pi)
+    RemoveUnit(u)
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_38642")
     ForGroupBJ(GetUnitsInRectOfPlayer(gg_rct_Ankirag, Player(PLAYER_NEUTRAL_AGGRESSIVE)), Trig_QTunServe_Func003A)
     ForForce(GetPlayersAll(), Trig_QTunServe_Func004A)
@@ -41727,28 +41816,38 @@ function Trig_Dovorougenie_Code_Func004C()
     return GetUnitTypeId(GetTriggerUnit()) == FourCC('n000')
 end
 function Trig_Dovorougenie_Code_O_Actions()
+    local u = GetTriggerUnit()
+    local pi = GetPlayerId(GetOwningPlayer(u))
     if Trig_Dovorougenie_Code_Func001C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('h005') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('h005') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
     if Trig_Dovorougenie_Code_Func002C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('h00S') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('h00S') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
     if Trig_Dovorougenie_Code_Func003C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('h02A') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('h02A') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
     if Trig_Dovorougenie_Code_Func004C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('n002') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('n002') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
 end
@@ -41780,28 +41879,38 @@ function Trig_Dovorougenie_2t_Code_Func004C()
     return GetUnitTypeId(GetTriggerUnit()) == FourCC('n002')
 end
 function Trig_Dovorougenie_2t_Code_O_Actions()
+    local u = GetTriggerUnit()
+    local pi = GetPlayerId(GetOwningPlayer(u))
     if Trig_Dovorougenie_2t_Code_Func001C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('h006') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('h006') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
     if Trig_Dovorougenie_2t_Code_Func002C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('h00U') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('h00U') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
     if Trig_Dovorougenie_2t_Code_Func003C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('h02B') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('h02B') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
     if Trig_Dovorougenie_2t_Code_Func004C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('n004') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('n004') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
 end
@@ -41829,11 +41938,14 @@ function Trig_Dovorougenie_3t_O_Func002C()
     return GetUnitTypeId(GetTriggerUnit()) == FourCC('h006')
 end
 function Trig_Dovorougenie_3t_O_Actions()
-    local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    local u = GetTriggerUnit()
+    local i= GetPlayerId(GetOwningPlayer(u))
     if Trig_Dovorougenie_3t_O_Func002C() then
-    ReplaceUnit2(GetTriggerUnit() , FourCC('h00Q') , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainBefore(u, i)
+    ReplaceUnit2(u , FourCC('h00Q') , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(GetLastReplacedUnitBJ(), i)
     if Trig_Dovorougenie_3t_O_Func002Func002C() then
-        SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+        SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
     end
 end
     MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
@@ -41915,13 +42027,21 @@ function Trig_Pirats_O_Copy_Func005002()
     return GetUnitTypeId(GetFilterUnit()) == FourCC('h00Y')
 end
 function Trig_Pirats_O_Copy_Func008A()
-    ReplaceUnit(GetEnumUnit() , FourCC('h03L') , bj_UNIT_STATE_METHOD_RELATIVE)
+    local u = GetEnumUnit()
+    local pi = GetPlayerId(GetOwningPlayer(u))
+    aiFixTrainBefore(u, pi)
+    ReplaceUnit(u , FourCC('h03L') , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
 end
 function Trig_Pirats_O_Copy_Func010002()
     return GetUnitTypeId(GetFilterUnit()) == FourCC('h00Z')
 end
 function Trig_Pirats_O_Copy_Func013A()
-    ReplaceUnit(GetEnumUnit() , FourCC('h03K') , bj_UNIT_STATE_METHOD_RELATIVE)
+    local u = GetEnumUnit()
+    local pi = GetPlayerId(GetOwningPlayer(u))
+    aiFixTrainBefore(u, pi)
+    ReplaceUnit(u , FourCC('h03K') , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
 end
 function Trig_Pirats_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('h03L'), - 1, GetOwningPlayer(GetTriggerUnit()))
@@ -50110,8 +50230,17 @@ function CheckNearCapitals()
     local u= GetTriggerUnit()
     
     udg_LocalPlayer=GetOwningPlayer(city)
-    GroupEnumUnitsInRange(g, GetUnitX(city), GetUnitY(city), 3050, CapitalOfEnemy)
-    if FirstOfGroup(g) ~= nil then
+    GroupEnumUnitsInRange(g, GetUnitX(city), GetUnitY(city), 3050, nil)
+    local found = false
+    local sz = BlzGroupGetSize(g)
+    for i = 0, sz - 1 do
+        local eu = BlzGroupUnitAt(g, i)
+        if eu ~= nil and IsUnitInGroup(eu, udg_StolicaGroups) and IsPlayerEnemy(GetOwningPlayer(eu), udg_LocalPlayer) then
+            found = true
+            break
+        end
+    end
+    if found then
         DisplayTextToPlayer(udg_LocalPlayer, 0, 0, "(3)")
         g=nil
         return false
@@ -51579,7 +51708,9 @@ function Trig_DalDiy_Func002A()
     KillUnit(GetEnumUnit())
 end
 function Trig_DalDiy_Func003A()
-    RemoveUnit(GetEnumUnit())
+    local u = GetEnumUnit()
+    aiFixTrainBefore(u, GetPlayerId(GetOwningPlayer(u)))
+    RemoveUnit(u)
 end
 function Trig_DalDiy_Actions()
     ForGroupBJ(GetUnitsInRectAll(gg_rct_RenameDeath), Trig_DalDiy_Func002A)
@@ -51762,7 +51893,9 @@ function Trig_NaxDiy_Func002A()
     KillUnit(GetEnumUnit())
 end
 function Trig_NaxDiy_Func003A()
-    RemoveUnit(GetEnumUnit())
+    local u = GetEnumUnit()
+    aiFixTrainBefore(u, GetPlayerId(GetOwningPlayer(u)))
+    RemoveUnit(u)
 end
 function Trig_NaxDiy_Actions()
     ForGroupBJ(GetUnitsInRectAll(gg_rct_Naxramas), Trig_NaxDiy_Func002A)
@@ -59859,6 +59992,12 @@ end
 -- All values affect the unified brain tick only; swarm mode ignores them.
 AiBrainBatchSize       = AiBrainBatchSize       or 1   -- bots processed per PlayerGet1 fire
 
+-- 4.4: Throttle AiEnemyPowerAround region scans to reduce crash exposure ~10x.
+-- Per-bot cache for threatHome; refresh every AiEpaRefreshEvery perceive ticks.
+AiThreatHomeCache = AiThreatHomeCache or {} -- [pi] = { val, tick }
+AiEpaRefreshEvery = AiEpaRefreshEvery or 4  -- recalc every N perceives
+AiEpaObjRefreshEvery = AiEpaObjRefreshEvery or 8  -- recalcy obj/squad EPA every N ticks
+
 -- ====================================================================
 -- Profiler: cumulative ms per section, dumped every AiProfileEvery ticks.
 -- Bridge: AiProfileReset(pi) to zero; AiProfileDump(pi) for instant read.
@@ -60224,8 +60363,8 @@ function AiEnemyPowerAround(p, x, y, radius)
     local i = 0
     while i < sz do
         local u = BlzGroupUnitAt(AiBrainScanGroup, i)
-        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
-            and IsPlayerEnemy(GetOwningPlayer(u), p) then
+        if u ~= nil and IsPlayerEnemy(GetOwningPlayer(u), p)
+            and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
             pow = pow + AiUnitPower(u)
         end
         i = i + 1
@@ -60304,7 +60443,14 @@ function AiBrainPerceive(pi)
     if cap ~= nil and GetUnitState(cap, UNIT_STATE_LIFE) > 0.405 then
         wm.capX, wm.capY = GetUnitX(cap), GetUnitY(cap)
         wm.capHP = GetUnitState(cap, UNIT_STATE_LIFE)
-        wm.threatHome = AiEnemyPowerAround(Player(pi), wm.capX, wm.capY, cfg.rHome or AiBrainDefaults.rHome)
+        -- EPA disabled: area scan crashes on stale handles. Use capHP drop as threat signal.
+        local prevHP = wm._prevCapHP
+        wm._prevCapHP = wm.capHP
+        if prevHP ~= nil and wm.capHP > 0 and wm.capHP < prevHP then
+            wm.threatHome = (prevHP - wm.capHP) + 1.0
+        else
+            wm.threatHome = 0
+        end
     else
         wm.capHP = 0
         wm.threatHome = 0
@@ -60554,7 +60700,9 @@ end
 ---@param o table
 ---@return real
 function AiObjNeededPower(pi, o)
-    local pow = AiEnemyPowerAround(Player(pi), o.x, o.y, 1600.0)
+    -- EPA disabled: area scan crashes on stale handles. Return safe minimum.
+    local pow = 0
+    if o._epaPowCache ~= nil then pow = o._epaPowCache end
     if o.kind == "capital" then pow = pow * 1.5 end
     return math.max(pow, 5.0)
 end
@@ -60599,7 +60747,9 @@ function AiSquadTickMarch(pi, sid, sq, p, wm)
     if not alive then sq.objective = nil; return "muster" end
     local cx, cy, _ = AiGroupCentroid(sq.members)
     local d = SquareRoot((cx - obj.x) * (cx - obj.x) + (cy - obj.y) * (cy - obj.y))
-    if d < 600.0 or AiEnemyPowerAround(p, cx, cy, 800.0) > 1.0 then return "engage" end
+    if d < 600.0 then return "engage" end
+    -- EPA disabled: area scan crashes on stale handles. Engage when close to objective.
+    if d < 1200.0 then return "engage" end
     local oc, sc = AiContinentOf(obj.x, obj.y), AiContinentOf(cx, cy)
     if oc ~= nil and sc ~= nil and oc ~= sc then
         local m = AiFindMageOnContinent(pi, oc)
@@ -60768,7 +60918,20 @@ function AiBrainOrderIdleTo(pi, p, x, y)
     if gSubGroup == nil then gSubGroup = CreateGroup() end
     CheckPlayer = p
     LazyCount = 0
-    GroupEnumUnitsOfPlayer(gAllyGroup, p, B_Lazy)
+    GroupEnumUnitsOfPlayer(gAllyGroup, p, nil)
+    -- Safe post-filter: remove units that fail IsAiCombatRetaskable + army membership
+    local armyGrp = udg_Ai_army[pi]
+    local sz = BlzGroupGetSize(gAllyGroup)
+    local i = 0
+    while i < sz do
+        local u = BlzGroupUnitAt(gAllyGroup, i)
+        if u ~= nil and IsAiCombatRetaskable(u) and armyGrp ~= nil and IsUnitInGroup(u, armyGrp) then
+            LazyCount = LazyCount + 1; i = i + 1
+        else
+            if u ~= nil then GroupRemoveUnit(gAllyGroup, u) end
+            sz = sz - 1
+        end
+    end
     GroupClear(gSubGroup)
     local ordered, cnt = 0, 0
     local gSize = BlzGroupGetSize(gAllyGroup)
@@ -61589,9 +61752,15 @@ end
 ---@return boolean
 function AiBuildSpotOccupied(x, y, radius)
     AiBuildScanGroup = AiBuildScanGroup or CreateGroup()
-    AiStructCond = AiStructCond or Condition(f_AnyStructure)
-    GroupEnumUnitsInRange(AiBuildScanGroup, x, y, radius, AiStructCond)
-    return FirstOfGroup(AiBuildScanGroup) ~= nil
+    GroupEnumUnitsInRange(AiBuildScanGroup, x, y, radius, nil)
+    local sz = BlzGroupGetSize(AiBuildScanGroup)
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(AiBuildScanGroup, i)
+        if u ~= nil and IsUnitType(u, UNIT_TYPE_STRUCTURE) and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            return true
+        end
+    end
+    return false
 end
 
 -- IsTerrainPathable is inverted: true == blocked for that pathing type (matches

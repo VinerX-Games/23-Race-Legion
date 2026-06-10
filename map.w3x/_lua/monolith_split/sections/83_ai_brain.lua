@@ -93,6 +93,12 @@ end
 -- All values affect the unified brain tick only; swarm mode ignores them.
 AiBrainBatchSize       = AiBrainBatchSize       or 1   -- bots processed per PlayerGet1 fire
 
+-- 4.4: Throttle AiEnemyPowerAround region scans to reduce crash exposure ~10x.
+-- Per-bot cache for threatHome; refresh every AiEpaRefreshEvery perceive ticks.
+AiThreatHomeCache = AiThreatHomeCache or {} -- [pi] = { val, tick }
+AiEpaRefreshEvery = AiEpaRefreshEvery or 4  -- recalc every N perceives
+AiEpaObjRefreshEvery = AiEpaObjRefreshEvery or 8  -- recalcy obj/squad EPA every N ticks
+
 -- ====================================================================
 -- Profiler: cumulative ms per section, dumped every AiProfileEvery ticks.
 -- Bridge: AiProfileReset(pi) to zero; AiProfileDump(pi) for instant read.
@@ -458,8 +464,8 @@ function AiEnemyPowerAround(p, x, y, radius)
     local i = 0
     while i < sz do
         local u = BlzGroupUnitAt(AiBrainScanGroup, i)
-        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
-            and IsPlayerEnemy(GetOwningPlayer(u), p) then
+        if u ~= nil and IsPlayerEnemy(GetOwningPlayer(u), p)
+            and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
             pow = pow + AiUnitPower(u)
         end
         i = i + 1
@@ -538,7 +544,14 @@ function AiBrainPerceive(pi)
     if cap ~= nil and GetUnitState(cap, UNIT_STATE_LIFE) > 0.405 then
         wm.capX, wm.capY = GetUnitX(cap), GetUnitY(cap)
         wm.capHP = GetUnitState(cap, UNIT_STATE_LIFE)
-        wm.threatHome = AiEnemyPowerAround(Player(pi), wm.capX, wm.capY, cfg.rHome or AiBrainDefaults.rHome)
+        -- EPA disabled: area scan crashes on stale handles. Use capHP drop as threat signal.
+        local prevHP = wm._prevCapHP
+        wm._prevCapHP = wm.capHP
+        if prevHP ~= nil and wm.capHP > 0 and wm.capHP < prevHP then
+            wm.threatHome = (prevHP - wm.capHP) + 1.0
+        else
+            wm.threatHome = 0
+        end
     else
         wm.capHP = 0
         wm.threatHome = 0
@@ -788,7 +801,9 @@ end
 ---@param o table
 ---@return real
 function AiObjNeededPower(pi, o)
-    local pow = AiEnemyPowerAround(Player(pi), o.x, o.y, 1600.0)
+    -- EPA disabled: area scan crashes on stale handles. Return safe minimum.
+    local pow = 0
+    if o._epaPowCache ~= nil then pow = o._epaPowCache end
     if o.kind == "capital" then pow = pow * 1.5 end
     return math.max(pow, 5.0)
 end
@@ -833,7 +848,9 @@ function AiSquadTickMarch(pi, sid, sq, p, wm)
     if not alive then sq.objective = nil; return "muster" end
     local cx, cy, _ = AiGroupCentroid(sq.members)
     local d = SquareRoot((cx - obj.x) * (cx - obj.x) + (cy - obj.y) * (cy - obj.y))
-    if d < 600.0 or AiEnemyPowerAround(p, cx, cy, 800.0) > 1.0 then return "engage" end
+    if d < 600.0 then return "engage" end
+    -- EPA disabled: area scan crashes on stale handles. Engage when close to objective.
+    if d < 1200.0 then return "engage" end
     local oc, sc = AiContinentOf(obj.x, obj.y), AiContinentOf(cx, cy)
     if oc ~= nil and sc ~= nil and oc ~= sc then
         local m = AiFindMageOnContinent(pi, oc)
@@ -1002,7 +1019,20 @@ function AiBrainOrderIdleTo(pi, p, x, y)
     if gSubGroup == nil then gSubGroup = CreateGroup() end
     CheckPlayer = p
     LazyCount = 0
-    GroupEnumUnitsOfPlayer(gAllyGroup, p, B_Lazy)
+    GroupEnumUnitsOfPlayer(gAllyGroup, p, nil)
+    -- Safe post-filter: remove units that fail IsAiCombatRetaskable + army membership
+    local armyGrp = udg_Ai_army[pi]
+    local sz = BlzGroupGetSize(gAllyGroup)
+    local i = 0
+    while i < sz do
+        local u = BlzGroupUnitAt(gAllyGroup, i)
+        if u ~= nil and IsAiCombatRetaskable(u) and armyGrp ~= nil and IsUnitInGroup(u, armyGrp) then
+            LazyCount = LazyCount + 1; i = i + 1
+        else
+            if u ~= nil then GroupRemoveUnit(gAllyGroup, u) end
+            sz = sz - 1
+        end
+    end
     GroupClear(gSubGroup)
     local ordered, cnt = 0, 0
     local gSize = BlzGroupGetSize(gAllyGroup)
@@ -1823,9 +1853,15 @@ end
 ---@return boolean
 function AiBuildSpotOccupied(x, y, radius)
     AiBuildScanGroup = AiBuildScanGroup or CreateGroup()
-    AiStructCond = AiStructCond or Condition(f_AnyStructure)
-    GroupEnumUnitsInRange(AiBuildScanGroup, x, y, radius, AiStructCond)
-    return FirstOfGroup(AiBuildScanGroup) ~= nil
+    GroupEnumUnitsInRange(AiBuildScanGroup, x, y, radius, nil)
+    local sz = BlzGroupGetSize(AiBuildScanGroup)
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(AiBuildScanGroup, i)
+        if u ~= nil and IsUnitType(u, UNIT_TYPE_STRUCTURE) and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            return true
+        end
+    end
+    return false
 end
 
 -- IsTerrainPathable is inverted: true == blocked for that pathing type (matches

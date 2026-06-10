@@ -727,8 +727,17 @@ function Trig_NoTpNearCapital_Actions()
     local u= GetTriggerUnit()
    
     udg_LocalPlayer=GetOwningPlayer(u)
-    GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 1350.00, CapitalOfEnemy)
-    if FirstOfGroup(g) ~= nil then
+    GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 1350.00, nil)
+    local found = false
+    local sz = BlzGroupGetSize(g)
+    for i = 0, sz - 1 do
+        local eu = BlzGroupUnitAt(g, i)
+        if eu ~= nil and IsUnitInGroup(eu, udg_StolicaGroups) and IsPlayerEnemy(GetOwningPlayer(eu), udg_LocalPlayer) then
+            found = true
+            break
+        end
+    end
+    if found then
         IssueImmediateOrder(u, "stop")
         DisplayTextToPlayer(GetOwningPlayer(u), 0, 0, " - ")
     end
@@ -996,6 +1005,7 @@ function Trig_Portal_Periodic_Func001A()
                 udg_Portal_targeted[udg_Portal_INDEX_TRAVELLER]=udg_Portal_traveller
                 GroupAddUnitSimple(udg_Portal_dummy, udg_Portal_teleMissiles)
                 ShowUnitHide(udg_Portal_traveller)
+                SetUnitPosition(udg_Portal_traveller, -10000, -10000) -- 4.2: off-map, prevent enum crash
             else
                 if Trig_Portal_Periodic_Func001Func006Func002Func011Func012C() then
                     CreateNUnitsAtLocFacingLocBJ(1, udg_Portal_missileDummy[udg_Portal_INDEX_TARGET], GetOwningPlayer(udg_Portal_traveller), udg_Portal_loc1, udg_Portal_loc2)
@@ -1015,6 +1025,7 @@ function Trig_Portal_Periodic_Func001A()
                     SetUnitPathing(udg_Portal_dummy, false)
                     GroupAddUnitSimple(udg_Portal_dummy, udg_Portal_teleMissiles)
                     ShowUnitHide(udg_Portal_traveller)
+                    SetUnitPosition(udg_Portal_traveller, -10000, -10000) -- 4.2: off-map, prevent enum crash
                 else
                     RemoveLocation(udg_Portal_loc3)
                     udg_Portal_INDEX_TRAVELLER=GetUnitUserData(udg_Portal_portal[udg_Portal_INDEX_TARGET])

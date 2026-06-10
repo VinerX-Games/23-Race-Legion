@@ -169,6 +169,7 @@ function Trig_AK1T1_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AT1" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -265,6 +266,7 @@ function Trig_AK1T2_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AT2" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -463,6 +465,7 @@ function Trig_AK1T3_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AT3" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -624,6 +627,7 @@ function Trig_AK1Cav_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["ACav" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -770,6 +774,7 @@ function Trig_AK2T1_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AK1" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -923,6 +928,7 @@ function Trig_AK2T2_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AK2" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -1095,6 +1101,7 @@ function Trig_AK2T3_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AK3" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -1273,6 +1280,7 @@ function Trig_AM1_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AM1" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -1440,6 +1448,7 @@ function Trig_AM2_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AM2" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -1560,6 +1569,7 @@ function Trig_AM3_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AM3" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -1698,6 +1708,7 @@ function Trig_AE1_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AE1" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -1866,6 +1877,7 @@ function Trig_AE2_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AEE2" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -2015,6 +2027,7 @@ function Trig_AN1_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AN1" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    
@@ -2145,6 +2158,7 @@ function Trig_AN2_Actions()
     i=GetRandomInt(1, i)
     b=CommonHash[pi]["AN2" .. i] or 0
     
+    aiFixTrainBefore(GetTrainedUnit(), pi)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
     
    

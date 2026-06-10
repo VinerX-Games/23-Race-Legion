@@ -71,8 +71,11 @@ end
 function aiFixTrainBefore(oldUnit, pi)
     
     if udg_AiControl[pi] then
-        --call GroupRemoveUnit( udg_Ai_army[pi],oldUnit )
-        --call GroupRemoveUnit( udg_Ai_units[pi],oldUnit )
+        if udg_Ai_army[pi] ~= nil then GroupRemoveUnit(udg_Ai_army[pi], oldUnit) end
+        if udg_Ai_units[pi] ~= nil then GroupRemoveUnit(udg_Ai_units[pi], oldUnit) end
+        if Navy ~= nil then GroupRemoveUnit(Navy, oldUnit) end
+        if Port ~= nil then GroupRemoveUnit(Port, oldUnit) end
+        if udg_Ai_navy[pi] ~= nil then GroupRemoveUnit(udg_Ai_navy[pi], oldUnit) end
         NumberRem(pi , GetUnitTypeId(oldUnit))
         NumberRem(pi , StringHash("Number"))
         return true

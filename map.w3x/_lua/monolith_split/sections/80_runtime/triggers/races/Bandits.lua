@@ -321,28 +321,38 @@ function Trig_Dovorougenie_Code_Func004C()
     return GetUnitTypeId(GetTriggerUnit()) == FourCC('n000')
 end
 function Trig_Dovorougenie_Code_O_Actions()
+    local u = GetTriggerUnit()
+    local pi = GetPlayerId(GetOwningPlayer(u))
     if Trig_Dovorougenie_Code_Func001C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('h005') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('h005') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
     if Trig_Dovorougenie_Code_Func002C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('h00S') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('h00S') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
     if Trig_Dovorougenie_Code_Func003C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('h02A') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('h02A') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
     if Trig_Dovorougenie_Code_Func004C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('n002') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('n002') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
 end
@@ -374,28 +384,38 @@ function Trig_Dovorougenie_2t_Code_Func004C()
     return GetUnitTypeId(GetTriggerUnit()) == FourCC('n002')
 end
 function Trig_Dovorougenie_2t_Code_O_Actions()
+    local u = GetTriggerUnit()
+    local pi = GetPlayerId(GetOwningPlayer(u))
     if Trig_Dovorougenie_2t_Code_Func001C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('h006') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('h006') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
     if Trig_Dovorougenie_2t_Code_Func002C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('h00U') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('h00U') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
     if Trig_Dovorougenie_2t_Code_Func003C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('h02B') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('h02B') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
     if Trig_Dovorougenie_2t_Code_Func004C() then
-        ReplaceUnit2(GetTriggerUnit() , FourCC('n004') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit2(u , FourCC('n004') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
         if Trig_Dovorougenie_3t_O_Copy_Func001C() then
-            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+            SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
         end
     end
 end
@@ -423,11 +443,14 @@ function Trig_Dovorougenie_3t_O_Func002C()
     return GetUnitTypeId(GetTriggerUnit()) == FourCC('h006')
 end
 function Trig_Dovorougenie_3t_O_Actions()
-    local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
+    local u = GetTriggerUnit()
+    local i= GetPlayerId(GetOwningPlayer(u))
     if Trig_Dovorougenie_3t_O_Func002C() then
-    ReplaceUnit2(GetTriggerUnit() , FourCC('h00Q') , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainBefore(u, i)
+    ReplaceUnit2(u , FourCC('h00Q') , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(GetLastReplacedUnitBJ(), i)
     if Trig_Dovorougenie_3t_O_Func002Func002C() then
-        SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(GetTriggerUnit()))
+        SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
     end
 end
     MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
@@ -509,13 +532,21 @@ function Trig_Pirats_O_Copy_Func005002()
     return GetUnitTypeId(GetFilterUnit()) == FourCC('h00Y')
 end
 function Trig_Pirats_O_Copy_Func008A()
-    ReplaceUnit(GetEnumUnit() , FourCC('h03L') , bj_UNIT_STATE_METHOD_RELATIVE)
+    local u = GetEnumUnit()
+    local pi = GetPlayerId(GetOwningPlayer(u))
+    aiFixTrainBefore(u, pi)
+    ReplaceUnit(u , FourCC('h03L') , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
 end
 function Trig_Pirats_O_Copy_Func010002()
     return GetUnitTypeId(GetFilterUnit()) == FourCC('h00Z')
 end
 function Trig_Pirats_O_Copy_Func013A()
-    ReplaceUnit(GetEnumUnit() , FourCC('h03K') , bj_UNIT_STATE_METHOD_RELATIVE)
+    local u = GetEnumUnit()
+    local pi = GetPlayerId(GetOwningPlayer(u))
+    aiFixTrainBefore(u, pi)
+    ReplaceUnit(u , FourCC('h03K') , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
 end
 function Trig_Pirats_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('h03L'), - 1, GetOwningPlayer(GetTriggerUnit()))

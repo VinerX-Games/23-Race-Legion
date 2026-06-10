@@ -139,8 +139,12 @@ function Trig_UpSystem_Func001C()
 end
 function Trig_UpSystem_Actions()
     if Trig_UpSystem_Func001C() then
-        udg_LocalUnit2=GetKillingUnitBJ()
-        ReplaceUnit(udg_LocalUnit2 , FourCC('h0HE') , bj_UNIT_STATE_METHOD_RELATIVE)
+        local u = GetKillingUnitBJ()
+        local pi = GetPlayerId(GetOwningPlayer(u))
+        aiFixTrainBefore(u, pi)
+        ReplaceUnit(u , FourCC('h0HE') , bj_UNIT_STATE_METHOD_RELATIVE)
+        aiFixTrainAfter(GetLastReplacedUnitBJ(), pi)
+        udg_LocalUnit2 = GetLastReplacedUnitBJ()
     else
         IncUnitAbilityLevelSwapped(FourCC('A0VI'), GetKillingUnitBJ())
     end

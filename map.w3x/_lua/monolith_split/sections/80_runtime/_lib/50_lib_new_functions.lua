@@ -29,8 +29,8 @@ function addArmyExp(u, pi)
 			gReal = I2R(GetUnitGoldCost(gId) or 0) * 0.02
 		end
 	end
-	ArmyExp[pi] = ArmyExp[pi] + gReal
-	ArmyExp[gPi] = RMaxBJ(0, ArmyExp[gPi] - gReal * 0.9)
+	ArmyExp[pi] = (ArmyExp[pi] or 0) + gReal
+	ArmyExp[gPi] = RMaxBJ(0, (ArmyExp[gPi] or 0) - gReal * 0.9)
 	--  call BJDebugMsg( GetUnitName(u)+" "+R2S(ArmyExp[pi]))
 end
 -- ????????????? ????? ?? ????
