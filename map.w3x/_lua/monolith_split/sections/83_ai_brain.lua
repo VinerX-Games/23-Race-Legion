@@ -437,29 +437,35 @@ function AiGroupCentroid(g)
     return sx / n, sy / n, n
 end
 
-AiBrainPowAcc = 0.0
----@return boolean
-function f_BrainEnemyPow()
-    local u = GetFilterUnit()
-    if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 and IsPlayerEnemy(GetOwningPlayer(u), CheckPlayer) then
-        AiBrainPowAcc = AiBrainPowAcc + AiUnitPower(u)
-    end
-    return false
-end
-
 -- Summed enemy power within `radius` of (x,y), as seen by player p. One enum.
+-- CRASH FIX (the recurring 0x6C ACCESS_VIOLATION, localized here by breadcrumb): the
+-- old version enumerated with a Lua Condition filter (f_BrainEnemyPow) that had a
+-- side effect (accumulating into a global). The engine evaluates that Lua filter
+-- per-unit DURING the native enum; on a unit in a transitional state it dereferenced
+-- a null unit (+0x6C) and hard-crashed (uncatchable). Safe pattern (matches
+-- AiGroupCentroid/AiSquadPower): collect with NO filter, then iterate in Lua with
+-- nil+alive guards — the engine never runs Lua mid-enum.
 ---@param p player
 ---@param x real
 ---@param y real
 ---@param radius real
 ---@return real
 function AiEnemyPowerAround(p, x, y, radius)
-    CheckPlayer = p
-    AiBrainPowAcc = 0.0
-    AiBrainEnemyPowCond = AiBrainEnemyPowCond or Condition(f_BrainEnemyPow)
     AiBrainScanGroup = AiBrainScanGroup or CreateGroup()
-    GroupEnumUnitsInRange(AiBrainScanGroup, x, y, radius, AiBrainEnemyPowCond)
-    return AiBrainPowAcc
+    GroupEnumUnitsInRange(AiBrainScanGroup, x, y, radius, nil)
+    local pow = 0.0
+    local sz = BlzGroupGetSize(AiBrainScanGroup)
+    local i = 0
+    while i < sz do
+        local u = BlzGroupUnitAt(AiBrainScanGroup, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and IsPlayerEnemy(GetOwningPlayer(u), p) then
+            pow = pow + AiUnitPower(u)
+        end
+        i = i + 1
+    end
+    GroupClear(AiBrainScanGroup)
+    return pow
 end
 
 -- E2 (shared logic): AI bots are never assigned a capital — only Scourge calls
