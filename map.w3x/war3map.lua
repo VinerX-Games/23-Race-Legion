@@ -57962,7 +57962,7 @@ RegisterAiRace("Silitids", {
 
         seed = FourCC('e01J'),
 
-        { FourCC('e01H'), 6, 8 }, { FourCC('h00C'), 3, 6 }, 
+        { FourCC('e01H'), 16, 8 }, { FourCC('h00C'), 3, 6 }, 
 
         { FourCC('o015'), 10, 4 }, { FourCC('e01J'), 18, 4 },
 
