@@ -12106,14 +12106,10 @@ function TryBuild()
         return
     end
 
-    -- 4% chance: walk far away to expand to a new base location
-    if Random(1, 25) then
-        gX = gX + AiBuildingRadius * 7 * Cos(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
-        gY = gY + AiBuildingRadius * 7 * Sin(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
-        IssuePointOrder(gUnit, "move", gX, gY)
-        return
-    end
-
+    -- NB: the old "4% chance: walk 7x build-radius away with a bare move order" was
+    -- removed — it sent workers far from base with no follow-up build, so they just
+    -- wandered off and sat idle (observed: groups of lost workers, drained build/
+    -- harvest force). Map expansion comes from the army capturing neutral cities.
     gInt = AiDispatchChooseBuild(gPi)
     if AiSmartBuild then
         local bx, by = AiFindBuildSpot(gPi, gUnit)
@@ -54715,9 +54711,9 @@ RegisterAiRace("ForestTrolls", {
 
     production = {
 
-        [FourCC('h0MT')] = {
+        worker = { id = FourCC('o04V'), cap = 20, from = { FourCC('h0MT'), FourCC('h0N8'), FourCC('h0N9') } },
 
-            { FourCC('o04V'), 3, limit = 20 },
+        [FourCC('h0MT')] = {
 
             { FourCC('o04X'), 1 },
 
@@ -54725,15 +54721,11 @@ RegisterAiRace("ForestTrolls", {
 
         [FourCC('h0N8')] = {
 
-            { FourCC('o04V'), 3, limit = 20 },
-
             { FourCC('o04X'), 1 },
 
         },
 
         [FourCC('h0N9')] = {
-
-            { FourCC('o04V'), 3, limit = 20 },
 
             { FourCC('o04X'), 1 },
 
@@ -61391,16 +61383,13 @@ end
 ---@param wm table
 ---@param race table
 function BrainExpandDecision(pi, wm, race)
-    -- Pick a random expansion spot far from capital (AiBuildingRadius*7)
-    local cx, cy = wm.capX, wm.capY
-    if cx == nil then return end
-    local ex = cx + AiBuildingRadius * 7 * Cos(GetRandomReal(0, 360) * bj_DEGTORAD)
-    local ey = cy + AiBuildingRadius * 7 * Sin(GetRandomReal(0, 360) * bj_DEGTORAD)
-    local worker = AiFindFreeWorker(pi)
-    if worker ~= nil then
-        IssuePointOrder(worker, "move", ex, ey)
-        BrainLogEvery(pi, "brainexpd", 30, "expand to " .. tostring(R2I(ex)) .. "," .. tostring(R2I(ey)), "BRAINEXP")
-    end
+    -- DISABLED: this used to grab a free worker and "move" it AiBuildingRadius*7 away
+    -- with no follow-up build order — the worker walked far from base and sat idle,
+    -- one of the causes of "groups of workers wandering off" and a drain on the build/
+    -- harvest pool. Real map expansion happens by the army capturing neutral cities
+    -- (StolicaGroups / ZahvatBuildings objectives). Kept as a no-op so the call site
+    -- and any future real expansion logic have a home.
+    return
 end
 
 ---@param pi integer
@@ -61977,7 +61966,17 @@ end
 
 function AiBuyPirateFleet(pi)
     if not PiratePortEnabled then return false end
-    if PiratePorts == nil or #PiratePorts == 0 then return false end
+    if PiratePorts == nil or #PiratePorts == 0 then
+        -- The boot-time AiPiratePortsScan() ran before CreateAllUnits, so it always
+        -- found 0. Retry now that units exist; cap tries so a truly portless map
+        -- doesn't re-enumerate every call forever.
+        AiPiratePortsScanTries = (AiPiratePortsScanTries or 0)
+        if AiPiratePortsScanTries < 12 then
+            AiPiratePortsScanTries = AiPiratePortsScanTries + 1
+            AiPiratePortsScan()
+        end
+        if PiratePorts == nil or #PiratePorts == 0 then return false end
+    end
 
     local p = Player(pi)
     local gold = GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD)

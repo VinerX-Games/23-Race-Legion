@@ -18,14 +18,10 @@ function TryBuild()
         return
     end
 
-    -- 4% chance: walk far away to expand to a new base location
-    if Random(1, 25) then
-        gX = gX + AiBuildingRadius * 7 * Cos(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
-        gY = gY + AiBuildingRadius * 7 * Sin(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
-        IssuePointOrder(gUnit, "move", gX, gY)
-        return
-    end
-
+    -- NB: the old "4% chance: walk 7x build-radius away with a bare move order" was
+    -- removed — it sent workers far from base with no follow-up build, so they just
+    -- wandered off and sat idle (observed: groups of lost workers, drained build/
+    -- harvest force). Map expansion comes from the army capturing neutral cities.
     gInt = AiDispatchChooseBuild(gPi)
     if AiSmartBuild then
         local bx, by = AiFindBuildSpot(gPi, gUnit)

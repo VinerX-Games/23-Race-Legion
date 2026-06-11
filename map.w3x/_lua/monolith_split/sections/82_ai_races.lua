@@ -2010,9 +2010,9 @@ RegisterAiRace("ForestTrolls", {
 
     production = {
 
-        [FourCC('h0MT')] = {
+        worker = { id = FourCC('o04V'), cap = 20, from = { FourCC('h0MT'), FourCC('h0N8'), FourCC('h0N9') } },
 
-            { FourCC('o04V'), 3, limit = 20 },
+        [FourCC('h0MT')] = {
 
             { FourCC('o04X'), 1 },
 
@@ -2020,15 +2020,11 @@ RegisterAiRace("ForestTrolls", {
 
         [FourCC('h0N8')] = {
 
-            { FourCC('o04V'), 3, limit = 20 },
-
             { FourCC('o04X'), 1 },
 
         },
 
         [FourCC('h0N9')] = {
-
-            { FourCC('o04V'), 3, limit = 20 },
 
             { FourCC('o04X'), 1 },
 
