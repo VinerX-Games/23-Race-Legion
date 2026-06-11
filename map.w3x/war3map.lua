@@ -61398,15 +61398,60 @@ function BrainProduce(pi, wm, race)
     -- don't stall growth. E.g. 2 footmen out of 7 army = 28% looks ok but 2 < 30*0.09=2.7.
     local ratioBase = math.max(totalMil, AiBrainMinArmy)
 
+    -- R15: only distribute ratios across UNITS THAT CAN ACTUALLY BE TRAINED.
+    -- Most races have 1-2 trainable units out of 5-13 listed — the rest require
+    -- tech or different buildings. If we include untrainable units in the budget,
+    -- the trainable ones hit their ratio at 3-5 army and growth stalls.
+    local trainableSum = 0.0
+    local isTrainable = {}
+    for unitId, targetRatio in pairs(comp) do
+        if type(unitId) ~= "number" then goto nextSum end
+        -- Check if any building can produce this unit
+        for bldType, rows in pairs(prod) do
+            if bldType == "worker" then goto nextBldSum end
+            if type(rows) ~= "table" then goto nextBldSum end
+            if not isBldType[bldType] then goto nextBldSum end
+            for _, row in ipairs(rows) do
+                if row[1] == unitId then
+                    if AiFindProdBuilding(pi, bldType) ~= nil then
+                        isTrainable[unitId] = true
+                        trainableSum = trainableSum + targetRatio
+                        goto found
+                    end
+                elseif row.branch then
+                    local pick
+                    if race.branches and race.branches[row.branch] then
+                        pick = race.branches[row.branch](pi)
+                    end
+                    pick = pick and row.black or row.other
+                    if pick == unitId then
+                        if AiFindProdBuilding(pi, bldType) ~= nil then
+                            isTrainable[unitId] = true
+                            trainableSum = trainableSum + targetRatio
+                            goto found
+                        end
+                    end
+                end
+            end
+            ::found::
+            ::nextBldSum::
+        end
+        ::nextSum::
+    end
+    if trainableSum <= 0 then trainableSum = 1.0 end  -- avoid div/zero
+
     -- 2) Military: scan compTarget for deficit, find building, issue order
     for unitId, targetRatio in pairs(comp) do
         if ordered >= maxN then break end
         if type(unitId) ~= "number" or targetRatio == nil then goto skipUnit end
+        if not isTrainable[unitId] then goto skipUnit end  -- R15: skip untrainable
 
         local current = getAiCount(pi, unitId) or 0
         if current < 0 then current = 0 end
+        -- R15: scale target to only-trainable pool. E.g. 9% out of 18% total → 50%
+        local scaledTarget = targetRatio / trainableSum
         local currentRatio = current / ratioBase
-        if currentRatio >= targetRatio then goto skipUnit end
+        if currentRatio >= scaledTarget then goto skipUnit end
 
         -- Find which building produces this unit
         for bldType, rows in pairs(prod) do
