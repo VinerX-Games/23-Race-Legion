@@ -8664,22 +8664,24 @@ function createAiPlayer(pi, raceToken)
 	
 	-- R7: give bots a player-style capital (10000 HP, 30 armor, in StolicaGroups).
 	-- Without this, bots have no capital → no death-on-capital-lost mechanic.
+	-- Use GroupEnumUnitsOfPlayer because udg_Ai_buildings[pi] may be empty yet
+	-- (join triggers fire asynchronously after race spawning).
 	local race = AiRaceOf(pi)
 	if race and race.buildings and race.buildings.seed then
 		local seedType = race.buildings.seed
-		local bldGrp = udg_Ai_buildings[pi]
-		if bldGrp then
-			local sz = BlzGroupGetSize(bldGrp)
-			for i = 0, sz - 1 do
-				local u = BlzGroupUnitAt(bldGrp, i)
-				if u ~= nil and GetUnitTypeId(u) == seedType
-					and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
-					MakeCapital(u)
-					ProbeLogWrite("[AI] createAiPlayer capital set pi=" .. tostring(pi) .. " type=" .. tostring(seedType))
-					break
-				end
+		local enumG = CreateGroup()
+		GroupEnumUnitsOfPlayer(enumG, gPlayer, nil)
+		local sz = BlzGroupGetSize(enumG)
+		for i = 0, sz - 1 do
+			local u = BlzGroupUnitAt(enumG, i)
+			if u ~= nil and GetUnitTypeId(u) == seedType
+				and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+				MakeCapital(u)
+				ProbeLogWrite("[AI] createAiPlayer capital set pi=" .. tostring(pi) .. " type=" .. tostring(seedType))
+				break
 			end
 		end
+		DestroyGroup(enumG)
 	end
 	
 	udg_LocalText2 = GetPlayerName(gPlayer)
