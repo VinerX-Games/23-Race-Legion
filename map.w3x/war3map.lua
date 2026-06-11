@@ -60935,11 +60935,18 @@ function AiObjScore(pi, wm, o)
     local dx = (wm.cx or 0.0) - o.x
     local dy = (wm.cy or 0.0) - o.y
     local dist = math.max(SquareRoot(dx * dx + dy * dy), 100.0)
+
+    -- R11: heavily penalise objectives on a different continent — straight-line
+    -- distance is misleading across water; land units walk to the shore and stop.
+    local capCont = wm.cx and AiContinentOf(wm.cx, wm.cy)
+    local objCont = AiContinentOf(o.x, o.y)
+    local waterPenalty = (capCont and objCont and capCont ~= objCont) and 0.05 or 1.0
+
     if o.kind == "capture" then
         local prox = 4000.0 / dist
-        return kindBase + (w.value or 1.0) * o.value + prox
+        return (kindBase + (w.value or 1.0) * o.value + prox) * waterPenalty
     end
-    return kindBase + (w.value or 1.0) * o.value - (w.dist or 0.002) * dist
+    return (kindBase + (w.value or 1.0) * o.value - (w.dist or 0.002) * dist) * waterPenalty
 end
 
 -- Highest-scoring objective with hysteresis: stick to current focus unless a
