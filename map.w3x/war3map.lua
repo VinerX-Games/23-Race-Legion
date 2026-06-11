@@ -61602,9 +61602,12 @@ end
 ---@param wm table
 ---@param race table
 function BrainNavalDecision(pi, wm, race)
-    local wallType = race.wall
-    if wallType == nil then return end
-    if AiCountBuildingsOfType(pi, wallType) >= AiBrainMaxPorts then return end
+    local shipType = race.wall
+    if shipType == nil then return end
+    -- R8b: race.wall is a defensive tower for some races (Forsaken h0JM, etc.),
+    -- not a shipyard. Only build if it's a known shipyard type.
+    if not AiTransportTypes[shipType] then return end
+    if AiCountBuildingsOfType(pi, shipType) >= AiBrainMaxPorts then return end
 
     -- Find water point near capital
     local cx, cy = wm.capX, wm.capY
@@ -61621,7 +61624,7 @@ function BrainNavalDecision(pi, wm, race)
             local worker = AiFindFreeWorker(pi)
             if worker ~= nil then
                 TryBuild_u = worker
-                TryBuildWithType(wallType, best.x, best.y)
+                TryBuildWithType(shipType, best.x, best.y)
                 BrainLogEvery(pi, "brainnavy", 30, "shipyard at water point", "BRAINNAVY")
             end
         end
