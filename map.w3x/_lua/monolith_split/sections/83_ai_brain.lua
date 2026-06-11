@@ -129,7 +129,8 @@ function AiProfileDump(pi)
 end
 AiBrainMaxProduce      = AiBrainMaxProduce      or 20  -- max unit-training orders per bot per tick
 AiBrainMaxBuild        = AiBrainMaxBuild        or 10  -- max building-attempts per bot per tick
-g_AiOrdered = g_AiOrdered or {}                        -- per-bot+unit training guard
+g_AiOrdered = g_AiOrdered or {}                        -- per-bot+unit training guard: [key] = last_tick
+AiRetrainInterval = AiRetrainInterval or 15            -- ticks between re-issue of same unit order
 AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks
 AiBrainNavalEvery      = AiBrainNavalEvery      or 60  -- naval-check every N brain-ticks
 AiBrainNavalStartTick  = AiBrainNavalStartTick  or 300 -- first naval check after this many brain-ticks (~5min)
@@ -1385,6 +1386,7 @@ function BrainProduce(pi, wm, race)
 
     local ordered = 0
     local maxN = AiBrainMaxProduce
+    local now = AiBrainTickCounter or 0
 
     -- 1) Workers: train independently of compTarget, always up to cap
     local w = prod.worker
@@ -1395,9 +1397,10 @@ function BrainProduce(pi, wm, race)
                 local bld = AiFindProdBuilding(pi, fromBldType)
                 if bld ~= nil then
                     local key = pi * 1000000 + w.id
-                    if not g_AiOrdered[key] then
+                    local last = g_AiOrdered[key]
+                    if not last or (now - last) > AiRetrainInterval then
                         IssueImmediateOrderById(bld, w.id)
-                        g_AiOrdered[key] = true
+                        g_AiOrdered[key] = now
                         ordered = ordered + 1
                     end
                     break  -- one worker order per tick is enough
@@ -1432,9 +1435,10 @@ function BrainProduce(pi, wm, race)
                         local bld = AiFindProdBuilding(pi, bldType)
                         if bld ~= nil then
                             local key = pi * 1000000 + unitId
-                            if not g_AiOrdered[key] then
+                            local last = g_AiOrdered[key]
+                            if not last or (now - last) > AiRetrainInterval then
                                 IssueImmediateOrderById(bld, unitId)
-                                g_AiOrdered[key] = true
+                                g_AiOrdered[key] = now
                                 ordered = ordered + 1
                             end
                         end
@@ -1450,9 +1454,10 @@ function BrainProduce(pi, wm, race)
                         local bld = AiFindProdBuilding(pi, bldType)
                         if bld ~= nil then
                             local key = pi * 1000000 + unitId
-                            if not g_AiOrdered[key] then
+                            local last = g_AiOrdered[key]
+                            if not last or (now - last) > AiRetrainInterval then
                                 IssueImmediateOrderById(bld, unitId)
-                                g_AiOrdered[key] = true
+                                g_AiOrdered[key] = now
                                 ordered = ordered + 1
                             end
                         end
@@ -1657,28 +1662,55 @@ function BrainFocus(pi, p, wm)
     if focus == nil then return 0 end
 
     local army = udg_Ai_army[pi]
-    if army == nil then return 0 end
-    local armySz = BlzGroupGetSize(army)
-    if armySz == 0 then return 0 end
 
     if gSubGroup == nil then gSubGroup = CreateGroup() end
     GroupClear(gSubGroup)
 
     local cnt = 0
-    for i = 0, armySz - 1 do
-        local u = BlzGroupUnitAt(army, i)
-        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
-            local o = GetUnitCurrentOrder(u)
-            if o == 0 or o == 851972 or o == 851976 then
-                GroupAddUnit(gSubGroup, u)
-                cnt = cnt + 1
-                if cnt % 12 == 0 then
-                    GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
-                    GroupClear(gSubGroup)
+
+    -- Process main army group
+    if army ~= nil then
+        local armySz = BlzGroupGetSize(army)
+        for i = 0, armySz - 1 do
+            local u = BlzGroupUnitAt(army, i)
+            if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+                local o = GetUnitCurrentOrder(u)
+                if o == 0 or o == 851972 or o == 851976 then
+                    GroupAddUnit(gSubGroup, u)
+                    cnt = cnt + 1
+                    if cnt % 12 == 0 then
+                        GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
+                        GroupClear(gSubGroup)
+                    end
                 end
             end
         end
     end
+
+    -- R6: races with workerFighter (Undead ghouls) — pull idle harvest workers into combat
+    local race = AiRaceOf(pi)
+    if race and race.workerFighter then
+        local wfId = race.workerFighter
+        local grpH = udg_Ai_harvest[pi]
+        if grpH ~= nil then
+            local szH = BlzGroupGetSize(grpH)
+            for j = 0, szH - 1 do
+                local u = BlzGroupUnitAt(grpH, j)
+                if u ~= nil
+                    and GetUnitTypeId(u) == wfId
+                    and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+                    and GetUnitCurrentOrder(u) == 0 then
+                    GroupAddUnit(gSubGroup, u)
+                    cnt = cnt + 1
+                    if cnt % 12 == 0 then
+                        GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
+                        GroupClear(gSubGroup)
+                    end
+                end
+            end
+        end
+    end
+
     if BlzGroupGetSize(gSubGroup) > 0 then
         GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
         GroupClear(gSubGroup)

@@ -3394,6 +3394,8 @@ RegisterAiRace("Undead", {
 
     start = startUndead,
 
+    workerFighter = FourCC('u00P'),  -- ghouls harvest wood AND fight
+
     buildings = {
 
         seed = FourCC('u00H'),
@@ -5254,9 +5256,9 @@ RegisterAiRace("Silitids", {
 
         seed = FourCC('e01J'),
 
-        { FourCC('e01H'), 4, 4 }, { FourCC('e01J'), 18, 4 },
+        { FourCC('e01H'), 6, 8 }, { FourCC('h00C'), 3, 6 }, 
 
-        { FourCC('h00C'), 3, 6 }, { FourCC('o015'), 10, 4 },
+        { FourCC('o015'), 10, 4 }, { FourCC('e01J'), 18, 4 },
 
         { FourCC('e01L'), 5, 2 },
 
