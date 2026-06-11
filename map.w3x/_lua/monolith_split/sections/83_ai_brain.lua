@@ -187,7 +187,7 @@ AiBrainDefaults = {
     homeThreat   = 20.0,     -- enemy power near capital that triggers defend/recall
     tpDist       = 6000.0,   -- focus farther than this -> consider TP logistics
     weights = {
-        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 150, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
     },
 }
@@ -341,7 +341,7 @@ AiBrainDefaults = {
     homeThreat   = 20.0,     -- enemy power near capital that triggers defend/recall
     tpDist       = 6000.0,   -- focus farther than this -> consider TP logistics
     weights = {
-        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        kind  = { capital = 100, cluster = 40, capture = 150, weak = 20, front = 15 },
         value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
     },
 }
@@ -1049,7 +1049,7 @@ function AiObjScore(pi, wm, o)
     local waterPenalty = (diffCont and not isAmphib) and 0.05 or 1.0
 
     if o.kind == "capture" then
-        local prox = 4000.0 / dist
+        local prox = 8000.0 / dist
         return (kindBase + (w.value or 1.0) * o.value + prox) * waterPenalty
     end
     return (kindBase + (w.value or 1.0) * o.value - (w.dist or 0.002) * dist) * waterPenalty
