@@ -58083,7 +58083,12 @@ RegisterAiRace("Silitids", {
 
         },
 
-        worker = { id = FourCC('e01R'), cap = 18, from = { FourCC('e01H'), FourCC('e021'), FourCC('e020') } },
+        -- The real builder is e01G (Трутень / Drone, type=Peon, builds= all hives &
+        -- structures), trained from the auto-spawned e01I eggs. The old config named
+        -- e01R (Мать роя / Swarm Mother — a caster with no `builds`) as the worker, so
+        -- BrainProduce trained casters as "workers" (they fell through to the army) and
+        -- never maintained a drone workforce → no free builder → hives/economy stalled.
+        worker = { id = FourCC('e01G'), cap = 18, from = { FourCC('e01I') } },
 },
 
     ecoWeights = {
