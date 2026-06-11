@@ -60960,9 +60960,13 @@ function AiObjScore(pi, wm, o)
 
     -- R11: heavily penalise objectives on a different continent — straight-line
     -- distance is misleading across water; land units walk to the shore and stop.
+    -- Skip for amphibious races (Naga can swim).
+    local race = AiRaceOf(pi)
+    local isAmphib = race and (race.continentalNaga == true)
     local capCont = wm.cx and AiContinentOf(wm.cx, wm.cy)
     local objCont = AiContinentOf(o.x, o.y)
-    local waterPenalty = (capCont and objCont and capCont ~= objCont) and 0.05 or 1.0
+    local diffCont = (capCont and objCont and capCont ~= objCont)
+    local waterPenalty = (diffCont and not isAmphib) and 0.05 or 1.0
 
     if o.kind == "capture" then
         local prox = 4000.0 / dist
