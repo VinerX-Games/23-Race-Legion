@@ -138,6 +138,7 @@ AiBrainMaxPorts        = AiBrainMaxPorts        or 20  -- max shipyards/ports pe
 AiBrainLandingEvery     = AiBrainLandingEvery     or 16  -- landing tick every N brain-ticks
 AiBrainLandingRadius    = AiBrainLandingRadius    or 800 -- load/unload radius
 AiBrainLandingMaxTransports = AiBrainLandingMaxTransports or 6  -- max transports to load per tick
+AiBrainMinArmy = AiBrainMinArmy or 30  -- train regardless of ratio until total army reaches this
 
 -- R10: known transport unit types (from all shipyards + pirate). Maps shipyard→transport.
 AiTransportTypes = {
@@ -1452,6 +1453,9 @@ function BrainProduce(pi, wm, race)
 
     local totalMil = wm.armyCount or 0
     if totalMil < 1 then totalMil = 1 end
+    -- R12: when army is small, use AiBrainMinArmy as baseline so proportions
+    -- don't stall growth. E.g. 2 footmen out of 7 army = 28% looks ok but 2 < 30*0.09=2.7.
+    local ratioBase = math.max(totalMil, AiBrainMinArmy)
 
     -- 2) Military: scan compTarget for deficit, find building, issue order
     for unitId, targetRatio in pairs(comp) do
@@ -1460,7 +1464,7 @@ function BrainProduce(pi, wm, race)
 
         local current = getAiCount(pi, unitId) or 0
         if current < 0 then current = 0 end
-        local currentRatio = current / totalMil
+        local currentRatio = current / ratioBase
         if currentRatio >= targetRatio then goto skipUnit end
 
         -- Find which building produces this unit
