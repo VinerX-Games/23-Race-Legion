@@ -8662,6 +8662,26 @@ function createAiPlayer(pi, raceToken)
 	end
 	ProbeLogWrite("[AI] createAiPlayer race=" .. tostring(AiRace[pi]) .. " set")
 	
+	-- R7: give bots a player-style capital (10000 HP, 30 armor, in StolicaGroups).
+	-- Without this, bots have no capital → no death-on-capital-lost mechanic.
+	local race = AiRaceOf(pi)
+	if race and race.buildings and race.buildings.seed then
+		local seedType = race.buildings.seed
+		local bldGrp = udg_Ai_buildings[pi]
+		if bldGrp then
+			local sz = BlzGroupGetSize(bldGrp)
+			for i = 0, sz - 1 do
+				local u = BlzGroupUnitAt(bldGrp, i)
+				if u ~= nil and GetUnitTypeId(u) == seedType
+					and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+					MakeCapital(u)
+					ProbeLogWrite("[AI] createAiPlayer capital set pi=" .. tostring(pi) .. " type=" .. tostring(seedType))
+					break
+				end
+			end
+		end
+	end
+	
 	udg_LocalText2 = GetPlayerName(gPlayer)
 	udg_LocalText2 = (I2S(pi + 1) .. ". ") .. udg_LocalText2
 	local ownerIndex = EnsureMultiboardPlayerRow(pi)
@@ -61288,6 +61308,17 @@ function BrainProduce(pi, wm, race)
     local maxN = AiBrainMaxProduce
     local now = AiBrainTickCounter or 0
 
+    -- R7: build a set of legitimate producer building types — skip production
+    -- entries whose bldType is NOT an actual building (e.g. Silitids larva e01I).
+    local isBldType = {}
+    local buildList = race.buildings
+    if buildList then
+        isBldType[buildList.seed] = true
+        for _, row in ipairs(buildList) do
+            if type(row[1]) == "number" then isBldType[row[1]] = true end
+        end
+    end
+
     -- 1) Workers: train independently of compTarget, always up to cap
     local w = prod.worker
     if w and w.from and w.id then
@@ -61328,6 +61359,7 @@ function BrainProduce(pi, wm, race)
         for bldType, rows in pairs(prod) do
             if bldType == "worker" then goto skipBld end
             if type(rows) ~= "table" then goto skipBld end
+            if not isBldType[bldType] then goto skipBld end  -- R7: skip non-buildings (larva, eggs, etc.)
             for _, row in ipairs(rows) do
                 local uid = row[1]
                 if uid ~= nil and uid ~= 0 then

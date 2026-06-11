@@ -1388,6 +1388,17 @@ function BrainProduce(pi, wm, race)
     local maxN = AiBrainMaxProduce
     local now = AiBrainTickCounter or 0
 
+    -- R7: build a set of legitimate producer building types — skip production
+    -- entries whose bldType is NOT an actual building (e.g. Silitids larva e01I).
+    local isBldType = {}
+    local buildList = race.buildings
+    if buildList then
+        isBldType[buildList.seed] = true
+        for _, row in ipairs(buildList) do
+            if type(row[1]) == "number" then isBldType[row[1]] = true end
+        end
+    end
+
     -- 1) Workers: train independently of compTarget, always up to cap
     local w = prod.worker
     if w and w.from and w.id then
@@ -1428,6 +1439,7 @@ function BrainProduce(pi, wm, race)
         for bldType, rows in pairs(prod) do
             if bldType == "worker" then goto skipBld end
             if type(rows) ~= "table" then goto skipBld end
+            if not isBldType[bldType] then goto skipBld end  -- R7: skip non-buildings (larva, eggs, etc.)
             for _, row in ipairs(rows) do
                 local uid = row[1]
                 if uid ~= nil and uid ~= 0 then
