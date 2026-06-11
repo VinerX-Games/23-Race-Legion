@@ -61638,8 +61638,8 @@ function BrainBuildOne(pi, race, row)
     if worker == nil then return 0 end
 
     TryBuild_u = worker
-    TryBuildWithType(bldType)
-    return 1
+    if TryBuildWithType(bldType) then return 1 end
+    return 0
 end
 
 ---@param pi integer
@@ -61732,13 +61732,14 @@ function BrainStrategTick(pi, p, race, wm)
 end
 
 --- Deterministic TryBuild variant: place a specific building type at a forced spot
---- or via AiFindBuildSpot. Skips random water-point and far-walk.
+--- or via AiFindBuildSpot. Returns true if a build order was issued, false if no spot.
 ---@param bldType integer
 ---@param fx real|nil
 ---@param fy real|nil
+---@return boolean
 function TryBuildWithType(bldType, fx, fy)
     local u = TryBuild_u
-    if u == nil or bldType == nil then return end
+    if u == nil or bldType == nil then return false end
     local pi = GetPlayerId(GetOwningPlayer(u))
 
     GroupAddUnit(udg_Ai_buildersT[pi], u)
@@ -61755,7 +61756,7 @@ function TryBuildWithType(bldType, fx, fy)
     if fx ~= nil and fy ~= nil then
         reserve(fx, fy)
         IssueBuildOrderById(u, bldType, fx, fy)
-        return
+        return true
     end
 
     if AiSmartBuild then
@@ -61763,7 +61764,7 @@ function TryBuildWithType(bldType, fx, fy)
         if bx ~= nil then
             reserve(bx, by)
             IssueBuildOrderById(u, bldType, bx, by)
-            return
+            return true
         end
     end
     -- Random fallback: try a few rings, but only commit to a footprint-clear spot.
@@ -61775,13 +61776,15 @@ function TryBuildWithType(bldType, fx, fy)
         if AiBuildPlaceable(ux, uy) then
             reserve(ux, uy)
             IssueBuildOrderById(u, bldType, ux, uy)
-            return
+            return true
         end
     end
-    -- last resort: issue anyway so the worker isn't stranded without an order
-    local rx, ry = ux0 + AiBuildingRadius * Cos(0), uy0 + AiBuildingRadius * Sin(0)
-    reserve(rx, ry)
-    IssueBuildOrderById(u, bldType, rx, ry)
+    -- R17: if no placeable spot found, return worker to harvest immediately
+    -- instead of stranding them at an unplaceable last-resort spot.
+    GroupAddUnit(udg_Ai_harvest[pi], u)
+    GroupRemoveUnit(udg_Ai_buildersT[pi], u)
+    AiBuildClaim[u] = nil
+    IssueImmediateOrder(u, "autoharvestlumber")
 end
 
 -- ====================================================================
