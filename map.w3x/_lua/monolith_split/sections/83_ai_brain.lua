@@ -29,9 +29,10 @@ AiRaceValidated = AiRaceValidated or {} -- [raceKey] = true once validated
 -- window an idle claimed worker = failed build → recycled to harvest.
 AiBuildClaim = AiBuildClaim or {}       -- [unit] = brain tick when last sent to build
 AiBuildClaimTicks = AiBuildClaimTicks or 20  -- ticks a claimed worker is left alone before recycle/reuse
-AiBuildRingStart = AiBuildRingStart or 500  -- first ring radius from anchor
-AiBuildRingStep  = AiBuildRingStep  or 500  -- step between rings
-AiBuildMinSpacing = AiBuildMinSpacing or 500 -- minimum spacing between buildings
+AiBuildRingStart = AiBuildRingStart or 300  -- first ring radius from anchor
+AiBuildRingStep  = AiBuildRingStep  or 300  -- step between rings
+AiBuildMinSpacing = AiBuildMinSpacing or 300 -- minimum spacing between buildings (tighter = denser base, builds complete near home)
+AiBuildRingCount = AiBuildRingCount or 14   -- how many rings to scan outward
 
 -- Round-robin cursor: fair distribution across bots (replaces ForcePickRandomPlayer)
 AiBrainBotList = AiBrainBotList or {}   -- [1..n] = pi, populated at createAiPlayer
@@ -1227,7 +1228,14 @@ function AiCountBuildingsOfType(pi, bldType)
         local u = BlzGroupUnitAt(grp, i)
         if u ~= nil and GetUnitTypeId(u) == bldType
             and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
-            n = n + 1
+            -- R5: skip incomplete buildings (HP < max HP). Channeling races
+            -- leave pristine foundations when the builder is yanked/killed.
+            local maxHp = BlzGetUnitMaxHP(u)
+            if maxHp > 1 and GetUnitState(u, UNIT_STATE_LIFE) < maxHp - 0.5 then
+                -- incomplete — don't count; BrainResumeBuildings will fix it
+            else
+                n = n + 1
+            end
         end
     end
     return n
@@ -1255,11 +1263,9 @@ function AiFindFreeWorker(pi)
         local sz = BlzGroupGetSize(grpT)
         for i = 0, sz - 1 do
             local u = BlzGroupUnitAt(grpT, i)
-            -- idle AND past its claim window (its previous build genuinely failed)
-            if alive(u) and GetUnitCurrentOrder(u) == 0 then
-                local c = AiBuildClaim[u]
-                if c == nil or (now - c) >= AiBuildClaimTicks then return u end
-            end
+            -- Any idle worker in buildersT is available — claim guard is redundant
+            -- now that AiRecycleBuilders no longer yanks channeling workers.
+            if alive(u) and GetUnitCurrentOrder(u) == 0 then return u end
         end
     end
     local grpH = udg_Ai_harvest[pi]
@@ -1303,9 +1309,9 @@ function AiRecycleBuilders(pi, maxMove)
         if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
             local c = AiBuildClaim[u]
             local expired = c ~= nil and (now - c) >= AiBuildClaimTicks
-            -- Recycle idle workers with old claims, OR stuck workers (any order) with expired claims
-            if (GetUnitCurrentOrder(u) == 0 and (c == nil or expired))
-                or expired then
+            -- Recycle ONLY idle workers (order==0) with no claim or expired claim.
+            -- NEVER touch workers with a current order (channeling build, moving, etc.)
+            if GetUnitCurrentOrder(u) == 0 and (c == nil or expired) then
                 if victims == nil then victims = {} end
                 found = found + 1
                 victims[found] = u
@@ -1321,6 +1327,46 @@ function AiRecycleBuilders(pi, maxMove)
         AiBuildClaim[u] = nil
         IssueImmediateOrder(u, "autoharvestlumber")
     end
+end
+
+-- ====================================================================
+-- R5: resume stalled construction — scan udg_Ai_buildings for incomplete
+-- buildings (HP < max HP) and send idle workers to repair/resume them.
+-- Fixes channeling races where a worker was killed or (before the
+-- channeling-yank fix) recycled mid-build, permanently stalling the site.
+-- ====================================================================
+
+---@param pi integer
+---@return integer
+function BrainResumeBuildings(pi)
+    local grp = udg_Ai_buildings[pi]
+    if grp == nil then return 0 end
+    local sz = BlzGroupGetSize(grp)
+    if sz == 0 then return 0 end
+
+    local resumed = 0
+    local maxN = AiBrainMaxBuild
+
+    for i = 0, sz - 1 do
+        if resumed >= maxN then break end
+        local b = BlzGroupUnitAt(grp, i)
+        if b ~= nil and GetUnitState(b, UNIT_STATE_LIFE) > 0.405 then
+            local hp = GetUnitState(b, UNIT_STATE_LIFE)
+            local maxHp = BlzGetUnitMaxHP(b)
+            if maxHp > 1 and hp < maxHp - 0.5 then
+                local worker = AiFindFreeWorker(pi)
+                if worker ~= nil then
+                    GroupAddUnit(udg_Ai_buildersT[pi], worker)
+                    GroupRemoveUnit(udg_Ai_builders[pi], worker)
+                    GroupRemoveUnit(udg_Ai_harvest[pi], worker)
+                    AiBuildClaim[worker] = AiBrainTickCounter or 0
+                    IssueTargetOrder(worker, "repair", b)
+                    resumed = resumed + 1
+                end
+            end
+        end
+    end
+    return resumed
 end
 
 -- ====================================================================
@@ -1487,6 +1533,11 @@ function BrainBuild(pi, wm, race)
     if wm.tick > AiBrainNavalStartTick and wm.tick % AiBrainNavalEvery == 0 then
         BrainNavalDecision(pi, wm, race)
     end
+
+    -- R5: resume stalled construction before recycling idle workers.
+    -- Channeling races (Human, Forsaken) need the worker to stay; if the
+    -- original builder was killed/recycled, the building site stays incomplete.
+    BrainResumeBuildings(pi)
 
     -- E3: every tick, drain idle/failed workers from buildersT back to harvest
     -- (not just when built==0) so the build pool can't clog and lumber keeps flowing.
@@ -1972,7 +2023,7 @@ function AiScanBuildRings(ax, ay, rad, phase)
     local minSpacing = AiBuildMinSpacing
     local sectors = 12
     local ring = 0
-    while ring < 10 do
+    while ring < (AiBuildRingCount or 14) do
         local r = AiBuildRingStart + ring * AiBuildRingStep
         local s = 0
         while s < sectors do

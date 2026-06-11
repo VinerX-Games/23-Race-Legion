@@ -296,16 +296,19 @@ function TryBuy(p, ePoints)
 	
 	local u
 	local itemId
+	local itemGoldCost = 1000
 	GroupEnumUnitsOfPlayer(gGroup, p, LiveHero)
 	u = GroupPickRandomUnit2(gGroup)
 	if u ~= nil then
-		-- Use the hero's ACTUAL inventory size, not a hardcoded 6. Heroes with
-		-- fewer slots stayed "not full" by the >=6 test, so UnitAddItem(Swapped)
-		-- silently failed and left the freshly-created item lying on the ground.
 		local invSize = UnitInventorySize(u)
 		if invSize <= 0 then invSize = 6 end
+
+		-- Don't destroy items the hero already owns. If the inventory is
+		-- genuinely full we just skip the purchase this tick — the hero will
+		-- have another chance when a slot opens naturally.
 		if UnitInventoryCount(u) >= invSize then
-			RemoveItem(UnitItemInSlot(u, GetRandomInt(0, invSize - 1)))
+			u = nil
+			return
 		end
 
 		gInt = GetRandomInt(1, 6)
@@ -357,11 +360,13 @@ function TryBuy(p, ePoints)
 		
 		
 		if itemId ~= nil and GetInventoryIndexOfItemTypeBJ(u, itemId) == 0 then
-			local it = UnitAddItemById(u, itemId)
-			-- If it couldn't be carried (full / non-carriable), don't litter the
-			-- map with a dropped item — remove it instead of leaving it on the ground.
-			if it ~= nil and not UnitHasItem(u, it) then
-				RemoveItem(it)
+			if GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) >= itemGoldCost then
+				local it = UnitAddItemById(u, itemId)
+				if it ~= nil and UnitHasItem(u, it) then
+					SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) - itemGoldCost)
+				elseif it ~= nil then
+					RemoveItem(it)
+				end
 			end
 		end
 

@@ -999,12 +999,12 @@ function AiDiplomatTick(pi)
     AiDiplomatTicks[pi] = tick
 
     if tick == 1 then
-        DipLog(pi, "diplomat initialised cfg.allianceMax=" .. tostring(cfg.allianceMax) ..
-            " cfg.allianceDesire=" .. tostring(cfg.allianceDesire) ..
-            " cfg.loyalty=" .. tostring(cfg.loyalty))
-        DipBroadcast(DiplomatName(pi) .. " diplomat active. " ..
-            "desire=" .. tostring(R2I(cfg.allianceDesire * 100)) ..
-            "% loyalty=" .. tostring(R2I(cfg.loyalty * 100)) .. "%")
+        --DipLog(pi, "diplomat initialised cfg.allianceMax=" .. tostring(cfg.allianceMax) ..
+        --    " cfg.allianceDesire=" .. tostring(cfg.allianceDesire) ..
+        --    " cfg.loyalty=" .. tostring(cfg.loyalty))
+        --DipBroadcast(DiplomatName(pi) .. " diplomat active. " ..
+        --    "desire=" .. tostring(R2I(cfg.allianceDesire * 100)) ..
+        --    "% loyalty=" .. tostring(R2I(cfg.loyalty * 100)) .. "%")
     end
 
     -- Perceive every tick
