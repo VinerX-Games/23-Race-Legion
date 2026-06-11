@@ -50,6 +50,8 @@ RegisterAiRace("Scarlet", {
 
     production = {
 
+        worker = { id = FourCC('h014'), cap = 20, from = { FourCC('h05U'), FourCC('h05V'), FourCC('h05W') } },
+
         [FourCC('h05Z')] = {
 
             { FourCC('h03B'), 1 },
@@ -709,11 +711,7 @@ RegisterAiRace("Goblins", {
 
     production = {
 
-        [FourCC('h070')] = {
-
-            { FourCC('n00V'), 2, limit = 25 },
-
-        },
+        worker = { id = FourCC('n00V'), cap = 25, from = { FourCC('h070') } },
 
         [FourCC('h074')] = {
 
@@ -2580,7 +2578,7 @@ RegisterAiRace("Nerubs", {
 
     ecoWeights = {
 
-        --[FourCC('h0GH')] = 1, --Туннель нерубов [FourCC('h0CO')] = 2,
+        [FourCC('h0CO')] = 2,  -- main hall (was accidentally commented out with h0GH -> Nerubs eco stuck at 0)
 
         [FourCC('h0CP')] = 5, [FourCC('h0CQ')] = 8,
 
