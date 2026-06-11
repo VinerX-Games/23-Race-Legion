@@ -127,6 +127,7 @@ function AiProfileDump(pi)
     end
     return "[PROF] pi=" .. tostring(pi) .. " ticks=" .. tostring(d.ticks) .. " total=" .. string.format("%.1f", t) .. "ms avg=" .. string.format("%.1f", t / d.ticks) .. "ms | " .. table.concat(parts, " ")
 end
+AiDiplomatEnabled = false  -- R14: disable diplomacy entirely (chat spam, CPU, unwanted alliances)
 AiBrainMaxProduce      = AiBrainMaxProduce      or 20  -- max unit-training orders per bot per tick
 AiBrainMaxBuild        = AiBrainMaxBuild        or 10  -- max building-attempts per bot per tick
 g_AiOrdered = g_AiOrdered or {}                        -- per-bot+unit training guard: [key] = last_tick
