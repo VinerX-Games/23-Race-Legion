@@ -133,8 +133,22 @@ g_AiOrdered = g_AiOrdered or {}                        -- per-bot+unit training 
 AiRetrainInterval = AiRetrainInterval or 15            -- ticks between re-issue of same unit order
 AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks
 AiBrainNavalEvery      = AiBrainNavalEvery      or 15  -- naval-check every N brain-ticks
-AiBrainNavalStartTick  = AiBrainNavalStartTick  or 30  -- first naval check after N brain-ticks (~5min w/ 16 bots)
-AiBrainMaxPorts        = AiBrainMaxPorts        or 8   -- max shipyards/ports per bot
+AiBrainNavalStartTick  = AiBrainNavalStartTick  or 23  -- first naval check after N brain-ticks (~4min w/ 16 bots)
+AiBrainMaxPorts        = AiBrainMaxPorts        or 20  -- max shipyards/ports per bot
+AiBrainLandingEvery     = AiBrainLandingEvery     or 16  -- landing tick every N brain-ticks
+AiBrainLandingRadius    = AiBrainLandingRadius    or 800 -- load/unload radius
+AiBrainLandingMaxTransports = AiBrainLandingMaxTransports or 6  -- max transports to load per tick
+
+-- R10: known transport unit types (from all shipyards + pirate). Maps shipyard→transport.
+AiTransportTypes = {
+    [FourCC('h0D1')] = FourCC('h0D2'), [FourCC('h0D8')] = FourCC('h0D9'),
+    [FourCC('h03R')] = FourCC('h00X'), [FourCC('h011')] = FourCC('h00X'),
+    [FourCC('h0D3')] = FourCC('h0D4'), [FourCC('h0HO')] = FourCC('h0D4'),
+    [FourCC('h0E7')] = FourCC('h0E5'),
+    [FourCC('h0OX')]    = FourCC('h0OX'),  -- pirate transport (use as self)
+}
+AiTransportSet = {}
+for _, t in pairs(AiTransportTypes) do AiTransportSet[t] = true end
 
 -- Tunables (global defaults; races may override via def.brainWeights). Phase 2+
 -- consumes the weights; Phase 1 uses only the geometry/threat radii.
@@ -1517,29 +1531,38 @@ function BrainBuild(pi, wm, race)
         end
     end
 
-    -- Handle array entries: each is { bldType, limit, ... }
+    -- R9: separate production buildings (barracks, etc.) from other buildings.
+    -- Production buildings get priority — they make army, which captures cities.
+    -- A production building is one listed as a key in race.production (excluding "worker").
+    local prodKeys = {}
+    if race.production then
+        for k, _ in pairs(race.production) do
+            if type(k) == "number" then prodKeys[k] = true end
+        end
+    end
+
+    local prodRows, otherRows = {}, {}
     for _, row in ipairs(buildOrder) do
-        if built >= maxN then break end
         local bldType = row[1]
-        if type(bldType) ~= "number" then goto skipBld end
-
-        local limit = row[2] or 1
-        local count = AiCountBuildingsOfType(pi, bldType)
-        if count >= limit then goto skipBld end
-
-        -- Check gate (tier2, etc.) if present
-        if row.gate then
-            local gateFn = race.gates and race.gates[row.gate]
-            if gateFn and not gateFn(pi) then goto skipBld end
+        if type(bldType) == "number" then
+            if prodKeys[bldType] then
+                prodRows[#prodRows + 1] = row
+            else
+                otherRows[#otherRows + 1] = row
+            end
         end
+    end
 
-        local worker = AiFindFreeWorker(pi)
-        if worker ~= nil then
-            TryBuild_u = worker
-            TryBuildWithType(bldType)
-            built = built + 1
-        end
-        ::skipBld::
+    -- PASS 1: production buildings first
+    for _, row in ipairs(prodRows) do
+        if built >= maxN then break end
+        built = built + BrainBuildOne(pi, race, row)
+    end
+
+    -- PASS 2: everything else
+    for _, row in ipairs(otherRows) do
+        if built >= maxN then break end
+        built = built + BrainBuildOne(pi, race, row)
     end
 
     -- Expansion check: brain decides to seed a new cluster far from capital
@@ -1562,6 +1585,32 @@ function BrainBuild(pi, wm, race)
     AiRecycleBuilders(pi, 4)
 
     return built
+end
+
+-- Helper: try to build one row from the buildings table. Returns 1 if built, 0 otherwise.
+---@param pi integer
+---@param race table
+---@param row table
+---@return integer
+function BrainBuildOne(pi, race, row)
+    local bldType = row[1]
+    if type(bldType) ~= "number" then return 0 end
+
+    local limit = row[2] or 1
+    local count = AiCountBuildingsOfType(pi, bldType)
+    if count >= limit then return 0 end
+
+    if row.gate then
+        local gateFn = race.gates and race.gates[row.gate]
+        if gateFn and not gateFn(pi) then return 0 end
+    end
+
+    local worker = AiFindFreeWorker(pi)
+    if worker == nil then return 0 end
+
+    TryBuild_u = worker
+    TryBuildWithType(bldType)
+    return 1
 end
 
 ---@param pi integer
@@ -1751,14 +1800,145 @@ function BrainNavalFocus(pi, p)
         if processed >= maxN then break end
         local u = BlzGroupUnitAt(navy, i)
         if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
-            local o = GetUnitCurrentOrder(u)
-            if o == 0 or o == 851972 or o == 851976 then
-                CheckPlayer = p
-                udg_LocalUnit3 = u
-                TryAttackN()
+            if not AiTransportSet[GetUnitTypeId(u)] then  -- transports handled by BrainLandingTick
+                local o = GetUnitCurrentOrder(u)
+                if o == 0 or o == 851972 or o == 851976 then
+                    CheckPlayer = p
+                    udg_LocalUnit3 = u
+                    TryAttackN()
+                    processed = processed + 1
+                end
+            end
+        end
+    end
+    return processed
+end
+
+-- ====================================================================
+-- R10: Amphibious landing (десант). Load idle army onto transports, sail to
+-- enemy shore, unload. Transports are detected by unit type (AiTransportSet).
+-- ====================================================================
+
+-- Pick a landing target: enemy objective that's water-separated from capital.
+---@param pi integer
+---@param wm table
+---@return table|nil  {x, y, name}
+function AiBrainPickLandingTarget(pi, wm)
+    local objs = wm.objectives
+    if objs == nil or #objs == 0 then return nil end
+    local cx, cy = wm.capX, wm.capY
+    if cx == nil then return nil end
+
+    -- Prefer enemy capitals / ZahvatBuildings that are far (>3000) from ours
+    local best, bestScore = nil, -1
+    for _, obj in ipairs(objs) do
+        local dx = obj.x - cx
+        local dy = obj.y - cy
+        local d = dx * dx + dy * dy
+        -- Score: prefer distant enemy capitals
+        local sc = d
+        if obj.kind == "capital" then sc = sc * 3
+        elseif obj.kind == "city" then sc = sc * 2
+        end
+        if d > 3000 * 3000 and sc > bestScore then
+            bestScore = sc; best = obj
+        end
+    end
+    return best
+end
+
+-- Count loaded units on a transport (units with the transport as their current order target).
+-- WC3 doesn't expose cargo count, so we approximate: if transport is moving/has "load" order
+-- from nearby units, it's busy. We track by AI-side state table.
+AiLandingState = AiLandingState or {}  -- [unit] = { phase, targetX, targetY }
+
+---@param pi integer
+---@param p player
+---@param wm table
+---@return integer
+function BrainLandingTick(pi, p, wm)
+    if wm.tick < AiBrainNavalStartTick then return 0 end  -- no ports yet
+    local race = AiRaceOf(pi)
+    if race and (race.key == "Naga" or race.key == "naga") then return 0 end  -- Naga skip
+
+    local army = udg_Ai_army[pi]
+    local navy = udg_Ai_navy[pi]
+    if navy == nil then return 0 end
+
+    local sz = BlzGroupGetSize(navy)
+    if sz == 0 then return 0 end
+
+    local target = AiBrainPickLandingTarget(pi, wm)
+    local tx, ty = nil, nil
+    if target ~= nil then tx, ty = target.x, target.y end
+
+    local processed = 0
+    local maxN = AiBrainLandingMaxTransports
+
+    for i = 0, sz - 1 do
+        if processed >= maxN then break end
+        local u = BlzGroupUnitAt(navy, i)
+        if u == nil then goto nextShip end
+        if GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then goto nextShip end
+        local uid = GetUnitTypeId(u)
+        if not AiTransportSet[uid] then goto nextShip end  -- combat ship, skip
+
+        local order = GetUnitCurrentOrder(u)
+        local st = AiLandingState[u]
+        local ux, uy = GetUnitX(u), GetUnitY(u)
+
+        if tx ~= nil and st ~= nil and st.phase == "loaded" then
+            -- Sailing to target
+            local dx = ux - tx; local dy = uy - ty
+            local dist = dx * dx + dy * dy
+            if dist < AiBrainLandingRadius * AiBrainLandingRadius then
+                -- Arrived: unload
+                IssueImmediateOrder(u, "unloadall")
+                st.phase = "done"
+                AiLandingState[u] = nil
+                processed = processed + 1
+            elseif order == 0 or order == 851972 then
+                -- Keep sailing
+                IssuePointOrder(u, "move", tx, ty)
+                processed = processed + 1
+            end
+        elseif tx ~= nil and (st == nil or st.phase == "idle") and order == 0 then
+            -- Idle transport: load nearby army
+            if army ~= nil then
+                local loaded = false
+                local asz = BlzGroupGetSize(army)
+                for j = 0, asz - 1 do
+                    local a = BlzGroupUnitAt(army, j)
+                    if a == nil then goto nextArmy end
+                    if GetUnitState(a, UNIT_STATE_LIFE) <= 0.405 then goto nextArmy end
+                    if IsUnitType(a, UNIT_TYPE_HERO) then goto nextArmy end
+                    local ao = GetUnitCurrentOrder(a)
+                    if ao ~= 0 and ao ~= 851972 and ao ~= 851976 then goto nextArmy end
+                    local ax, ay = GetUnitX(a), GetUnitY(a)
+                    local adx = ax - ux; local ady = ay - uy
+                    if adx * adx + ady * ady < AiBrainLandingRadius * AiBrainLandingRadius then
+                        IssueTargetOrder(a, "load", u)
+                        loaded = true
+                        -- Stop after loading 6 units per transport
+                        if j - i >= 6 then break end
+                    end
+                    ::nextArmy::
+                end
+                if loaded then
+                    AiLandingState[u] = { phase = "loaded", targetX = tx, targetY = ty }
+                    processed = processed + 1
+                end
+            end
+        elseif st ~= nil and st.phase == "done" and order == 0 then
+            -- Empty after unload: return to port
+            local cx, cy = wm.capX, wm.capY
+            if cx ~= nil then
+                IssuePointOrder(u, "move", cx, cy)
+                AiLandingState[u] = { phase = "returning" }
                 processed = processed + 1
             end
         end
+        ::nextShip::
     end
     return processed
 end
@@ -1967,6 +2147,10 @@ function AiBrainArmyTickInner(pi, p)
 
     if (wm.tick % 4) == 0 then
         BrainNavalFocus(pi, p)
+    end
+
+    if (wm.tick % AiBrainLandingEvery) == 0 then
+        BrainLandingTick(pi, p, wm)
     end
 
     if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end
