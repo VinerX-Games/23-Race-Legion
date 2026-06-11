@@ -321,6 +321,21 @@ function AiRunStrateg(i, pi, p, def)
             SetPlayerTechResearched(p, FourCC('R03Q'), econTier)
         end
     end
+    -- Grade prereq unlock: several races' weapon/armor upgrades were cloned from the
+    -- vanilla human tree and still carry requires=hkee/hcas (a Keep/Castle the custom
+    -- race never builds), so the upgrade can NEVER be researched and Grades[pi] sticks
+    -- at 0. Grant the vanilla hall prereqs as pure tech-gate satisfiers (no building is
+    -- created) so the cloned upgrades unlock at the matching eco tier. Harmless for
+    -- races whose upgrades don't reference them.
+    if GetPlayerTechCount(p, FourCC('htow'), false) < 1 then
+        SetPlayerTechResearched(p, FourCC('htow'), 1)
+    end
+    if i >= 25 and GetPlayerTechCount(p, FourCC('hkee'), false) < 1 then
+        SetPlayerTechResearched(p, FourCC('hkee'), 1)
+    end
+    if i >= 55 and GetPlayerTechCount(p, FourCC('hcas'), false) < 1 then
+        SetPlayerTechResearched(p, FourCC('hcas'), 1)
+    end
     if s.pre and s.pre(i, pi, p) then
     end
     for _, step in ipairs(s.steps) do

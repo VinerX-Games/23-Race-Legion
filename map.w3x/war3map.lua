@@ -52461,6 +52461,21 @@ function AiRunStrateg(i, pi, p, def)
             SetPlayerTechResearched(p, FourCC('R03Q'), econTier)
         end
     end
+    -- Grade prereq unlock: several races' weapon/armor upgrades were cloned from the
+    -- vanilla human tree and still carry requires=hkee/hcas (a Keep/Castle the custom
+    -- race never builds), so the upgrade can NEVER be researched and Grades[pi] sticks
+    -- at 0. Grant the vanilla hall prereqs as pure tech-gate satisfiers (no building is
+    -- created) so the cloned upgrades unlock at the matching eco tier. Harmless for
+    -- races whose upgrades don't reference them.
+    if GetPlayerTechCount(p, FourCC('htow'), false) < 1 then
+        SetPlayerTechResearched(p, FourCC('htow'), 1)
+    end
+    if i >= 25 and GetPlayerTechCount(p, FourCC('hkee'), false) < 1 then
+        SetPlayerTechResearched(p, FourCC('hkee'), 1)
+    end
+    if i >= 55 and GetPlayerTechCount(p, FourCC('hcas'), false) < 1 then
+        SetPlayerTechResearched(p, FourCC('hcas'), 1)
+    end
     if s.pre and s.pre(i, pi, p) then
     end
     for _, step in ipairs(s.steps) do
@@ -55546,14 +55561,24 @@ RegisterAiRace("Forsaken", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
+            -- Forge (h0JO) weapon/armor grades — the real 6/6 upgrades. The old
+            -- entries issued abilities (Arlm=Return Lumber, Abds=Blight Dispel),
+            -- which never fire RESEARCH_FINISH so Grades[pi] stayed 0.
+            { at = 17, action = "research", rows = {
+                { FourCC('h0JO'), FourCC('R0FJ'), 6 },  -- Iron Swords (weapon)
+                { FourCC('h0JO'), FourCC('R0FK'), 6 },  -- Iron Armor
+                { FourCC('h0JO'), FourCC('R0FL'), 6 },  -- Iron Projectiles
+                { FourCC('h0JO'), FourCC('R0FM'), 6 },  -- Light Armor
+                { FourCC('h0JO'), FourCC('R0FI'), 6 },  -- Improved Tools
+            }},
 
-                { {FourCC('h0JO'), FourCC('Arlm'), 6} },
-
-                { {FourCC('h0JK'), FourCC('Abds'), 6} },
-
-                { {FourCC('h0JJ'), FourCC('Abds'), 6},{FourCC('h0JI'), FourCC('Abds'), 6} },
-
+            -- Unit/spell upgrades from death workshop + laboratory (real R-upgrades)
+            { at = 30, action = "research", rows = {
+                { FourCC('h0JK'), FourCC('R0FN'), 1 },  -- Banshee initiation
+                { FourCC('h0JK'), FourCC('R0FO'), 1 },  -- Mage training
+                { FourCC('h0JK'), FourCC('R0FZ'), 1 },  -- Val'kyr empowerment
+                { FourCC('h0JK'), FourCC('R0G0'), 1 },  -- Assassin training
+                { FourCC('h0JI'), FourCC('R0FB'), 1 },  -- Enhance lethality
             }},
 
             { at = 20, action = "tryBuy" },

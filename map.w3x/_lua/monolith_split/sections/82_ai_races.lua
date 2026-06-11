@@ -2796,14 +2796,24 @@ RegisterAiRace("Forsaken", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
+            -- Forge (h0JO) weapon/armor grades — the real 6/6 upgrades. The old
+            -- entries issued abilities (Arlm=Return Lumber, Abds=Blight Dispel),
+            -- which never fire RESEARCH_FINISH so Grades[pi] stayed 0.
+            { at = 17, action = "research", rows = {
+                { FourCC('h0JO'), FourCC('R0FJ'), 6 },  -- Iron Swords (weapon)
+                { FourCC('h0JO'), FourCC('R0FK'), 6 },  -- Iron Armor
+                { FourCC('h0JO'), FourCC('R0FL'), 6 },  -- Iron Projectiles
+                { FourCC('h0JO'), FourCC('R0FM'), 6 },  -- Light Armor
+                { FourCC('h0JO'), FourCC('R0FI'), 6 },  -- Improved Tools
+            }},
 
-                { {FourCC('h0JO'), FourCC('Arlm'), 6} },
-
-                { {FourCC('h0JK'), FourCC('Abds'), 6} },
-
-                { {FourCC('h0JJ'), FourCC('Abds'), 6},{FourCC('h0JI'), FourCC('Abds'), 6} },
-
+            -- Unit/spell upgrades from death workshop + laboratory (real R-upgrades)
+            { at = 30, action = "research", rows = {
+                { FourCC('h0JK'), FourCC('R0FN'), 1 },  -- Banshee initiation
+                { FourCC('h0JK'), FourCC('R0FO'), 1 },  -- Mage training
+                { FourCC('h0JK'), FourCC('R0FZ'), 1 },  -- Val'kyr empowerment
+                { FourCC('h0JK'), FourCC('R0G0'), 1 },  -- Assassin training
+                { FourCC('h0JI'), FourCC('R0FB'), 1 },  -- Enhance lethality
             }},
 
             { at = 20, action = "tryBuy" },
