@@ -55380,6 +55380,8 @@ RegisterAiRace("Nerubs", {
 
     wall = FourCC('u01A'),
 
+    shipyard = FourCC('h0D1'),  -- Undead Верфь (wall is Nerub Tower)
+
     naval = aiNavalTrain_Common,
 
 
@@ -55615,6 +55617,8 @@ RegisterAiRace("Forsaken", {
     join = Join_Forsaken,
 
     wall = FourCC('h0JM'),
+
+    shipyard = FourCC('h0D1'),  -- Undead Верфь (wall is a defensive tower)
 
 
     diplomat = "traitor",
@@ -56322,6 +56326,8 @@ RegisterAiRace("Undead", {
     join = Join_Undead,
 
     wall = FourCC('u00I'),
+
+    shipyard = FourCC('h0D1'),  -- Undead Верфь (wall is Spirit Tower)
 
 
     diplomat = "isolationist",
@@ -61652,10 +61658,12 @@ end
 ---@param race table
 function BrainNavalDecision(pi, wm, race)
     local shipType = race.wall
-    if shipType == nil then return end
     -- R8b: race.wall is a defensive tower for some races (Forsaken h0JM, etc.),
-    -- not a shipyard. Only build if it's a known shipyard type.
-    if not AiTransportTypes[shipType] then return end
+    -- not a shipyard. Fall back to race.shipyard if set.
+    if shipType == nil or not AiTransportTypes[shipType] then
+        shipType = race.shipyard
+    end
+    if shipType == nil or not AiTransportTypes[shipType] then return end
     if AiCountBuildingsOfType(pi, shipType) >= AiBrainMaxPorts then return end
 
     -- Find water point near capital. Try points in distance order;

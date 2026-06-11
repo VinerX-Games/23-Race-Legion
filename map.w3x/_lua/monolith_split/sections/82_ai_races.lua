@@ -2654,6 +2654,8 @@ RegisterAiRace("Nerubs", {
 
     wall = FourCC('u01A'),
 
+    shipyard = FourCC('h0D1'),  -- Undead Верфь (wall is Nerub Tower)
+
     naval = aiNavalTrain_Common,
 
 
@@ -2889,6 +2891,8 @@ RegisterAiRace("Forsaken", {
     join = Join_Forsaken,
 
     wall = FourCC('h0JM'),
+
+    shipyard = FourCC('h0D1'),  -- Undead Верфь (wall is a defensive tower)
 
 
     diplomat = "traitor",
@@ -3596,6 +3600,8 @@ RegisterAiRace("Undead", {
     join = Join_Undead,
 
     wall = FourCC('u00I'),
+
+    shipyard = FourCC('h0D1'),  -- Undead Верфь (wall is Spirit Tower)
 
 
     diplomat = "isolationist",
