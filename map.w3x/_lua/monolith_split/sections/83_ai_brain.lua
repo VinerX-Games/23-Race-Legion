@@ -138,7 +138,27 @@ AiBrainMaxPorts        = AiBrainMaxPorts        or 20  -- max shipyards/ports pe
 AiBrainLandingEvery     = AiBrainLandingEvery     or 16  -- landing tick every N brain-ticks
 AiBrainLandingRadius    = AiBrainLandingRadius    or 800 -- load/unload radius
 AiBrainLandingMaxTransports = AiBrainLandingMaxTransports or 6  -- max transports to load per tick
-AiBrainMinArmy = AiBrainMinArmy or 30  -- train regardless of ratio until total army reaches this
+AiBrainMinArmy = AiBrainMinArmy or 50  -- train regardless of ratio until total army reaches this
+
+-- R8 fix: udg_WaterPoints was never initialized → BrainNavalDecision skipped entirely.
+-- Hardcode the water points from GoToWaterPoint (97_ai_water.lua) so shipyards get built.
+if udg_WaterPoints == nil then
+    udg_WaterPoints = {
+        -- Eastern Kingdoms
+        { x = 30150, y = -3454 }, { x = 25504, y = -16284 },
+        { x = 19258, y = 5665 },  { x = 10979, y = 10501 },
+        -- Kalim
+        { x = -28610, y = 16300 }, { x = -15796, y = -10105 },
+        { x = -12405, y = 96678 }, { x = -27443, y = 11058 },
+        -- Nord
+        { x = -4711, y = 20912 },  { x = 8753, y = 22230 },
+        { x = 1273, y = 20088 },   { x = -15652, y = 21381 },
+        -- BrokenIsles
+        { x = 2500, y = 12654 },   { x = 4121, y = 621 },
+        -- Pandaria
+        { x = -9460, y = -12451 }, { x = -3941, y = -22869 },
+    }
+end
 
 -- R10: known transport unit types (from all shipyards + pirate). Maps shipyard→transport.
 AiTransportTypes = {
@@ -1592,6 +1612,12 @@ function BrainBuild(pi, wm, race)
         BrainNavalDecision(pi, wm, race)
     end
 
+    -- R13: tier-up buildings (techUp from strategData.steps). Upgrades town halls,
+    -- hives, etc. so tier2 production buildings unlock.
+    if race.strategData and race.strategData.steps then
+        BrainStrategTick(pi, p, race, wm)
+    end
+
     -- R5: resume stalled construction before recycling idle workers.
     -- Channeling races (Human, Forsaken) need the worker to stay; if the
     -- original builder was killed/recycled, the building site stays incomplete.
@@ -1670,6 +1696,42 @@ function BrainNavalDecision(pi, wm, race)
                 BrainLogEvery(pi, "brainnavy", 30, "shipyard at water point", "BRAINNAVY")
             end
         end
+    end
+end
+
+-- ====================================================================
+-- R13: tier-up buildings from strategData.steps (techUp). Upgrades town halls,
+-- hives, etc. so tier2 production buildings unlock. Called every brain tick.
+-- ====================================================================
+---@param pi integer
+---@param p player
+---@param race table
+---@param wm table
+function BrainStrategTick(pi, p, race, wm)
+    local steps = race.strategData.steps
+    if not steps then return end
+    for _, step in ipairs(steps) do
+        if step.action ~= "techUp" then goto nextStep end
+        if not step.at or wm.tick <= step.at then goto nextStep end
+        if step.gate then
+            local g = race.gates and race.gates[step.gate]
+            if g and not g(pi) then goto nextStep end
+        end
+        local cap = step.cap or 3
+        if getAiCount(pi, step.to) >= cap then goto nextStep end
+        -- Find a building of type step.from and upgrade it
+        local grp = udg_Ai_buildings[pi]
+        if not grp then goto nextStep end
+        local sz = BlzGroupGetSize(grp)
+        for i = 0, sz - 1 do
+            local u = BlzGroupUnitAt(grp, i)
+            if u ~= nil and GetUnitTypeId(u) == step.from
+                and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+                IssueImmediateOrderById(u, step.to)
+                break  -- one upgrade per tick
+            end
+        end
+        ::nextStep::
     end
 end
 
