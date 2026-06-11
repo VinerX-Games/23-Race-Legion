@@ -132,8 +132,9 @@ AiBrainMaxBuild        = AiBrainMaxBuild        or 10  -- max building-attempts 
 g_AiOrdered = g_AiOrdered or {}                        -- per-bot+unit training guard: [key] = last_tick
 AiRetrainInterval = AiRetrainInterval or 15            -- ticks between re-issue of same unit order
 AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks
-AiBrainNavalEvery      = AiBrainNavalEvery      or 60  -- naval-check every N brain-ticks
-AiBrainNavalStartTick  = AiBrainNavalStartTick  or 300 -- first naval check after this many brain-ticks (~5min)
+AiBrainNavalEvery      = AiBrainNavalEvery      or 15  -- naval-check every N brain-ticks
+AiBrainNavalStartTick  = AiBrainNavalStartTick  or 30  -- first naval check after N brain-ticks (~5min w/ 16 bots)
+AiBrainMaxPorts        = AiBrainMaxPorts        or 8   -- max shipyards/ports per bot
 
 -- Tunables (global defaults; races may override via def.brainWeights). Phase 2+
 -- consumes the weights; Phase 1 uses only the geometry/threat radii.
@@ -1580,10 +1581,9 @@ end
 ---@param wm table
 ---@param race table
 function BrainNavalDecision(pi, wm, race)
-    -- If already has a shipyard, skip
     local wallType = race.wall
     if wallType == nil then return end
-    if AiCountBuildingsOfType(pi, wallType) > 0 then return end
+    if AiCountBuildingsOfType(pi, wallType) >= AiBrainMaxPorts then return end
 
     -- Find water point near capital
     local cx, cy = wm.capX, wm.capY
