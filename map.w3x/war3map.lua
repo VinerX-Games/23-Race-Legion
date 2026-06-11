@@ -61658,23 +61658,28 @@ function BrainNavalDecision(pi, wm, race)
     if not AiTransportTypes[shipType] then return end
     if AiCountBuildingsOfType(pi, shipType) >= AiBrainMaxPorts then return end
 
-    -- Find water point near capital
+    -- Find water point near capital. Try points in distance order;
+    -- skip occupied ones so multiple shipyards don't all pile on one spot.
     local cx, cy = wm.capX, wm.capY
     if cx == nil then return end
     if udg_WaterPoints ~= nil then
-        local best, bestD = nil, 99999999.0
+        -- Sort water points by distance to capital (simple O(n^2), n=16)
+        local indexed = {}
         for _, wp in ipairs(udg_WaterPoints) do
-            local dx = wp.x - cx
-            local dy = wp.y - cy
-            local d = dx * dx + dy * dy
-            if d < bestD then bestD = d; best = wp end
+            local dx = wp.x - cx; local dy = wp.y - cy
+            wp._dist = dx * dx + dy * dy
+            indexed[#indexed + 1] = wp
         end
-        if best ~= nil then
-            local worker = AiFindFreeWorker(pi)
-            if worker ~= nil then
-                TryBuild_u = worker
-                TryBuildWithType(shipType, best.x, best.y)
-                BrainLogEvery(pi, "brainnavy", 30, "shipyard at water point", "BRAINNAVY")
+        table.sort(indexed, function(a, b) return a._dist < b._dist end)
+        local worker = AiFindFreeWorker(pi)
+        if worker ~= nil then
+            for _, wp in ipairs(indexed) do
+                if AiBuildPlaceable(wp.x, wp.y) then
+                    TryBuild_u = worker
+                    TryBuildWithType(shipType, wp.x, wp.y)
+                    BrainLogEvery(pi, "brainnavy", 30, "shipyard at water point", "BRAINNAVY")
+                    break
+                end
             end
         end
     end
