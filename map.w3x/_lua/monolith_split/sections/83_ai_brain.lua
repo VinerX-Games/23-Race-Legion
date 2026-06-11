@@ -1328,10 +1328,40 @@ function AiFindFreeWorker(pi)
     return nil
 end
 
--- E3: recycle idle build-pool workers back to harvesting. A worker that is idle
--- (order==0) and past its build-claim window did not complete a build → return it to
--- the lumber line instead of letting it pile up in buildersT (harvest=0 across all
--- bots was the smoking gun). Bounded per call to avoid order spam.
+-- Is this worker actually constructing? True if an OWN incomplete structure sits
+-- within build range of the worker. Used to protect channeling builders (Human/
+-- Forsaken peasants stand at the site) from being recycled, while still freeing
+-- workers that merely hold a stale order (852018 harvest/move, etc.) but aren't
+-- building anything — the buildersT-clog that drains harvest to 0 for some races.
+---@param pi integer
+---@param u unit
+---@return boolean
+function AiWorkerIsBuilding(pi, u)
+    local p = Player(pi)
+    if gWorkerProbe == nil then gWorkerProbe = CreateGroup() end
+    GroupEnumUnitsInRange(gWorkerProbe, GetUnitX(u), GetUnitY(u), 256, nil)
+    local sz = BlzGroupGetSize(gWorkerProbe)
+    local building = false
+    for k = 0, sz - 1 do
+        local b = BlzGroupUnitAt(gWorkerProbe, k)
+        if b ~= nil and GetOwningPlayer(b) == p
+            and IsUnitType(b, UNIT_TYPE_STRUCTURE)
+            and GetUnitState(b, UNIT_STATE_LIFE) > 0.405
+            and GetUnitStatePercent(b, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE) < 99.0 then
+            building = true
+            break
+        end
+    end
+    GroupClear(gWorkerProbe)
+    return building
+end
+
+-- E3: recycle stuck/idle build-pool workers back to harvesting. A worker past its
+-- build-claim window that is NOT adjacent to an own incomplete structure isn't
+-- building anything → return it to the lumber line instead of letting it pile up in
+-- buildersT (harvest=0 across several races was the smoking gun — stuck workers held
+-- order 852018/852017 forever and never went idle). Channeling builders (next to an
+-- incomplete structure) are preserved. Bounded per call to avoid order spam.
 ---@param pi integer
 ---@param maxMove integer
 function AiRecycleBuilders(pi, maxMove)
@@ -1357,10 +1387,12 @@ function AiRecycleBuilders(pi, maxMove)
         local u = BlzGroupUnitAt(grpT, i)
         if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
             local c = AiBuildClaim[u]
-            local expired = c ~= nil and (now - c) >= AiBuildClaimTicks
-            -- Recycle ONLY idle workers (order==0) with no claim or expired claim.
-            -- NEVER touch workers with a current order (channeling build, moving, etc.)
-            if GetUnitCurrentOrder(u) == 0 and (c == nil or expired) then
+            local expired = c == nil or (now - c) >= AiBuildClaimTicks
+            -- Recycle when the claim window has passed AND the worker is not actually
+            -- building (no own incomplete structure nearby). This frees both idle
+            -- (order==0) workers and ones stuck holding a stale harvest/move order,
+            -- while protecting active channeling builders (nearby incomplete bld).
+            if expired and not AiWorkerIsBuilding(pi, u) then
                 if victims == nil then victims = {} end
                 found = found + 1
                 victims[found] = u
@@ -1683,7 +1715,7 @@ function BrainBuild(pi, wm, race)
 
     -- E3: every tick, drain idle/failed workers from buildersT back to harvest
     -- (not just when built==0) so the build pool can't clog and lumber keeps flowing.
-    AiRecycleBuilders(pi, 4)
+    AiRecycleBuilders(pi, 6)
 
     return built
 end

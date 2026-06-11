@@ -519,9 +519,31 @@ function PlayerBuilders()
             ProbeLogWrite("[AI] PlayerBuilders processing pi=" .. tostring(pi) .. " race=" .. tostring(AiRace[pi]))
         end
         ForceRemovePlayer(udg_BotsActiveB, gPlayer)
-            
-    
-        
+
+        -- Brain bots manage building themselves (BrainBuild + AiFindFreeWorker
+        -- borrows from harvest on demand). The legacy routing below floods the
+        -- build pool and DRAINS harvest into builders while AiData["T"]<80,
+        -- which empties the harvest line (H=0) and starves the economy →
+        -- no free workers → grade/research buildings never built → grade stuck 0.
+        -- For brain bots: park all unassigned (Ai_builders) idle workers on
+        -- harvest and skip the legacy flood/drain entirely.
+        if AiBrainEnabled(pi) then
+            GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_LazyW)
+            local guard = 0
+            while guard <= AiMass + 8 do
+                gUnit = FirstOfGroup(gGroup)
+                if gUnit == nil then break end
+                GroupRemoveUnit(gGroup, gUnit)
+                GroupRemoveUnit(udg_Ai_builders[pi], gUnit)
+                GroupAddUnit(udg_Ai_harvest[pi], gUnit)
+                IssueImmediateOrder(gUnit, "autoharvestlumber")
+                guard = guard + 1
+            end
+            GroupClear(gGroup)
+            gUnit = nil
+            return
+        end
+
         -- ??????? ?????? !!!
         --???????????????? ???????
         GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_LazyW)
