@@ -59931,6 +59931,7 @@ AiRaceValidated = AiRaceValidated or {} -- [raceKey] = true once validated
 -- spot every 0.6s tick (the observed cause of builds never completing). Past the
 -- window an idle claimed worker = failed build → recycled to harvest.
 AiBuildClaim = AiBuildClaim or {}       -- [unit] = brain tick when last sent to build
+AiBuildClaimTicks = AiBuildClaimTicks or 20  -- ticks a claimed worker is left alone before recycle/reuse
 AiBuildRingStart = AiBuildRingStart or 500  -- first ring radius from anchor
 AiBuildRingStep  = AiBuildRingStep  or 500  -- step between rings
 AiBuildMinSpacing = AiBuildMinSpacing or 500 -- minimum spacing between buildings
