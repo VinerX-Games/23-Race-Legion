@@ -1405,12 +1405,18 @@ function BrainProduce(pi, wm, race)
 
     -- R7: build a set of legitimate producer building types — skip production
     -- entries whose bldType is NOT an actual building (e.g. Silitids larva e01I).
+    -- ALSO include production keys so non-structure producers (larvae, eggs) work.
     local isBldType = {}
     local buildList = race.buildings
     if buildList then
         isBldType[buildList.seed] = true
         for _, row in ipairs(buildList) do
             if type(row[1]) == "number" then isBldType[row[1]] = true end
+        end
+    end
+    if prod then
+        for k, _ in pairs(prod) do
+            if type(k) == "number" then isBldType[k] = true end
         end
     end
 
