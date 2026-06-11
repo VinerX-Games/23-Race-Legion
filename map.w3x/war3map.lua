@@ -52461,20 +52461,24 @@ function AiRunStrateg(i, pi, p, def)
             SetPlayerTechResearched(p, FourCC('R03Q'), econTier)
         end
     end
-    -- Grade prereq unlock: several races' weapon/armor upgrades were cloned from the
-    -- vanilla human tree and still carry requires=hkee/hcas (a Keep/Castle the custom
-    -- race never builds), so the upgrade can NEVER be researched and Grades[pi] sticks
-    -- at 0. Grant the vanilla hall prereqs as pure tech-gate satisfiers (no building is
-    -- created) so the cloned upgrades unlock at the matching eco tier. Harmless for
-    -- races whose upgrades don't reference them.
-    if GetPlayerTechCount(p, FourCC('htow'), false) < 1 then
-        SetPlayerTechResearched(p, FourCC('htow'), 1)
+    -- Grade prereq unlock: most races' weapon/armor upgrades were cloned from a vanilla
+    -- tech tree and still carry requires = the vanilla tier hall (Keep/Stronghold/Halls
+    -- of the Dead/Tree of Ages, etc.) — buildings these custom races never build, so the
+    -- upgrade can NEVER be researched and Grades[pi] sticks at 0. The custom race's own
+    -- tier buildings already satisfy the higher upgrade levels; only the vanilla level-1
+    -- gate blocks it. Grant the vanilla tier prereqs (all four base races) as pure
+    -- tech-gate satisfiers — no building is created — so the cloned upgrades unlock at
+    -- the matching eco tier. Harmless for races whose upgrades don't reference them.
+    local function grantTech(code)
+        if GetPlayerTechCount(p, code, false) < 1 then SetPlayerTechResearched(p, code, 1) end
     end
-    if i >= 25 and GetPlayerTechCount(p, FourCC('hkee'), false) < 1 then
-        SetPlayerTechResearched(p, FourCC('hkee'), 1)
+    -- tier 1 (always): Town Hall / Great Hall / Necropolis / Tree of Life
+    grantTech(FourCC('htow')); grantTech(FourCC('ogre')); grantTech(FourCC('unpl')); grantTech(FourCC('etol'))
+    if i >= 25 then  -- tier 2: Keep / Stronghold / Halls of the Dead / Tree of Ages
+        grantTech(FourCC('hkee')); grantTech(FourCC('ostr')); grantTech(FourCC('unp1')); grantTech(FourCC('etoa'))
     end
-    if i >= 55 and GetPlayerTechCount(p, FourCC('hcas'), false) < 1 then
-        SetPlayerTechResearched(p, FourCC('hcas'), 1)
+    if i >= 55 then  -- tier 3: Castle / Fortress / Black Citadel / Tree of Eternity
+        grantTech(FourCC('hcas')); grantTech(FourCC('ofrt')); grantTech(FourCC('unp2')); grantTech(FourCC('etoe'))
     end
     if s.pre and s.pre(i, pi, p) then
     end
@@ -55355,14 +55359,14 @@ RegisterAiRace("Nerubs", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('h0CS'),FourCC('Abds'),6},{FourCC('h0CS'),FourCC('Arlm'),6} },
-
-                { {FourCC('h0CR'),FourCC('Abds'),6} },
-
-                { {FourCC('h0CT'),FourCC('Abds'),6},{FourCC('h0CV'),FourCC('Abds'),6} },
-
+            -- Real Nerub grades from the Vault (h0CS): forelimb (weapon) + torso/belly
+            -- armor + blood/carapace/health/limb/nerub mutations + tools.
+            { at = 17, action = "research", rows = {
+                {FourCC('h0CS'),FourCC('R074'),6},  -- strong forelimbs (weapon)
+                {FourCC('h0CS'),FourCC('R075'),6},  -- torso armor
+                {FourCC('h0CS'),FourCC('R076'),6},  -- belly armor
+                {FourCC('h0CS'),FourCC('R070'),6},  -- carapace mutation
+                {FourCC('h0CS'),FourCC('R06Z'),6},  -- blood mutation
             }},
 
             { at = 20, action = "tryBuy" },
@@ -56238,22 +56242,15 @@ RegisterAiRace("Undead", {
 
         steps = {
 
+            -- Real Undead grades from the Graveyard (u00L): monster weapon/armor +
+            -- unholy weapon/armor + tools. Old rows issued abilities (Abds/Arlm) that
+            -- never fire RESEARCH_FINISH so Grades stayed 0.
             { at = 17, action = "research", rows = {
-
-                {FourCC('u00L'),FourCC('Abds'),6},{FourCC('u00L'),FourCC('Arlm'),6},
-
-            }},
-
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('u00M'),FourCC('Abds'),6} },
-
-            }},
-
-            { at = 35, gate = "tier2", action = "research", rows = {
-
-                {FourCC('u00N'),FourCC('Abds'),6},
-
+                {FourCC('u00L'),FourCC('R05N'),6},  -- monster attack (weapon)
+                {FourCC('u00L'),FourCC('R05P'),6},  -- monster armor
+                {FourCC('u00L'),FourCC('R05O'),6},  -- unholy strength (weapon)
+                {FourCC('u00L'),FourCC('R05Q'),6},  -- unholy armor
+                {FourCC('u00L'),FourCC('R0DQ'),6},  -- improved tools
             }},
 
             { at = 20, action = "tryBuy" },
@@ -57198,12 +57195,13 @@ RegisterAiRace("Illidari", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('h0EM'),FourCC('Abds'),6},{FourCC('h0EH'),FourCC('Arlm'),6} },
-
-                { {FourCC('h0EE'),FourCC('Abds'),6} },
-
+            -- Real Illidari grades from the Forge (h0EM): fel weapon/armor + mastery.
+            { at = 17, action = "research", rows = {
+                {FourCC('h0EM'),FourCC('R08T'),6},  -- cursed weapon
+                {FourCC('h0EM'),FourCC('R08U'),6},  -- defiled armor
+                {FourCC('h0EM'),FourCC('R08W'),6},  -- fel weapon
+                {FourCC('h0EM'),FourCC('R08V'),6},  -- fel reinforcement
+                {FourCC('h0EM'),FourCC('R08X'),6},  -- magic mastery
             }},
 
             { at = 20, action = "tryBuy" },
@@ -58773,12 +58771,16 @@ RegisterAiRace("Vrykul", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('h0BW'),FourCC('Abds'),6},{FourCC('h0BW'),FourCC('Arlm'),6} },
-
-                { {FourCC('h0BV'),FourCC('Abds'),6} },
-
+            -- Real Vrykul grades from the Lumber Mill (h0BW): iron weapon/armor +
+            -- marksmanship + studded armor + axes + sword/defense mastery.
+            { at = 17, action = "research", rows = {
+                {FourCC('h0BW'),FourCC('R069'),6},  -- iron swords
+                {FourCC('h0BW'),FourCC('R06A'),6},  -- iron armor
+                {FourCC('h0BW'),FourCC('R06B'),6},  -- marksmanship
+                {FourCC('h0BW'),FourCC('R06C'),6},  -- studded leather armor
+                {FourCC('h0BW'),FourCC('R06D'),6},  -- improved axes
+                {FourCC('h0BW'),FourCC('R06E'),6},  -- sword mastery
+                {FourCC('h0BW'),FourCC('R06F'),6},  -- defense mastery
             }},
 
             { at = 20, action = "tryBuy" },
@@ -59173,12 +59175,14 @@ RegisterAiRace("Dalaran", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('h02Y'),FourCC('Abds'),6},{FourCC('h02Y'),FourCC('Arlm'),6} },
-
-                { {FourCC('h02W'),FourCC('Abds'),6} },
-
+            -- Real Dalaran grades from the Magic Forge (h02Y): magic swords, cloth
+            -- cloak (armor), staff empowerment, fire/ice defense.
+            { at = 17, action = "research", rows = {
+                {FourCC('h02Y'),FourCC('R00Q'),6},  -- magic swords (weapon)
+                {FourCC('h02Y'),FourCC('R00T'),6},  -- cloth cloak (armor)
+                {FourCC('h02Y'),FourCC('R012'),6},  -- staff empowerment
+                {FourCC('h02Y'),FourCC('R013'),6},  -- fire defense
+                {FourCC('h02Y'),FourCC('R014'),6},  -- ice defense
             }},
 
             { at = 20, action = "tryBuy" },
@@ -59648,12 +59652,13 @@ RegisterAiRace("FelOrc", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('o05T'),FourCC('Abds'),6},{FourCC('o05T'),FourCC('Arlm'),6} },
-
-                { {FourCC('o05Z'),FourCC('Abds'),6} },
-
+            -- Real FelOrc grades from the Lumber Mill (o05T): steel melee/ranged
+            -- weapon + steel armor + improved saws (tools).
+            { at = 17, action = "research", rows = {
+                {FourCC('o05T'),FourCC('R0JS'),6},  -- steel melee weapon
+                {FourCC('o05T'),FourCC('R0JQ'),6},  -- iron ranged weapon
+                {FourCC('o05T'),FourCC('R0JR'),6},  -- steel armor
+                {FourCC('o05T'),FourCC('R0K1'),6},  -- improved saws
             }},
 
             { at = 20, action = "tryBuy" },
@@ -59877,12 +59882,13 @@ RegisterAiRace("Ents", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('e02F'),FourCC('Abds'),6} },
-
-                { {FourCC('e02H'),FourCC('Abds'),6} },
-
+            -- Real Ents grades from the War Tree (e02F): poison sap, mana/life core
+            -- empowerment, war mastery.
+            { at = 17, action = "research", rows = {
+                {FourCC('e02F'),FourCC('R09K'),6},  -- poison sap
+                {FourCC('e02F'),FourCC('R0AH'),6},  -- war mastery
+                {FourCC('e02F'),FourCC('R09N'),6},  -- mana core empowerment
+                {FourCC('e02F'),FourCC('R0AF'),6},  -- life core empowerment
             }},
 
             { at = 20, action = "tryBuy" },
@@ -61368,11 +61374,17 @@ function AiRecycleBuilders(pi, maxMove)
         if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
             local c = AiBuildClaim[u]
             local expired = c == nil or (now - c) >= AiBuildClaimTicks
+            -- Naval builders walk far to an open-water shipyard spot, so during the
+            -- long approach there's no incomplete structure next to them — without this
+            -- grace the proximity check below would recycle them mid-walk and the
+            -- shipyard would never start. Protect them for a longer window.
+            local navalUntil = AiNavalBuildUntil[u]
+            local navalBusy = navalUntil ~= nil and now < navalUntil
             -- Recycle when the claim window has passed AND the worker is not actually
             -- building (no own incomplete structure nearby). This frees both idle
             -- (order==0) workers and ones stuck holding a stale harvest/move order,
             -- while protecting active channeling builders (nearby incomplete bld).
-            if expired and not AiWorkerIsBuilding(pi, u) then
+            if expired and not navalBusy and not AiWorkerIsBuilding(pi, u) then
                 if victims == nil then victims = {} end
                 found = found + 1
                 victims[found] = u
@@ -61386,6 +61398,7 @@ function AiRecycleBuilders(pi, maxMove)
         GroupRemoveUnit(grpT, u)
         GroupAddUnit(grpH, u)
         AiBuildClaim[u] = nil
+        AiNavalBuildUntil[u] = nil
         IssueImmediateOrder(u, "autoharvestlumber")
     end
 end
@@ -61742,6 +61755,74 @@ end
 ---@param pi integer
 ---@param wm table
 ---@param race table
+-- Terrain helpers. Engine semantics (verified live): a WATER tile is blocked for
+-- WALKABILITY and open for FLOATABILITY; a LAND tile is the reverse.
+local function AiTerrainWater(x, y) return not IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY) end
+local function AiTerrainLand(x, y)  return not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) end
+
+-- A shipyard (h0D1 etc.) has preventplace=unfloat and a 4x4 footprint, so it can ONLY
+-- be placed on OPEN WATER: the center and its whole footprint must be floatable. A
+-- ground worker still builds it, so reachable shore (land) must be nearby. The old
+-- code called AiBuildPlaceable (land-only — it rejects every water tile) on the far
+-- hardcoded udg_WaterPoints, so the order was always rejected and navy stayed 0.
+-- This sampling pattern was confirmed live: the issued build order was accepted.
+local function AiNavalFootprintWater(x, y)
+    if not AiTerrainWater(x, y) then return false end
+    local r1, r2 = 256.0, 128.0
+    local o = { {r1,0},{-r1,0},{0,r1},{0,-r1},{r1,r1},{-r1,-r1},{r1,-r1},{-r1,r1},
+                {r2,0},{-r2,0},{0,r2},{0,-r2} }
+    for i = 1, 12 do
+        if not AiTerrainWater(x + o[i][1], y + o[i][2]) then return false end
+    end
+    return true
+end
+local function AiNavalLandWithin(x, y, rad)
+    for i = 0, 11 do
+        local a = (I2R(i) / 12.0) * 2.0 * bj_PI
+        if AiTerrainLand(x + rad * Cos(a), y + rad * Sin(a)) then return true end
+    end
+    return false
+end
+
+-- A worker sent to build a shipyard is protected from build-pool recycling until this
+-- tick (it walks far to open water with no incomplete structure beside it en route).
+AiNavalBuildUntil = AiNavalBuildUntil or {}
+AiNavalBuildGrace = AiNavalBuildGrace or 120  -- ticks to walk to nearby coast + raise a shipyard
+
+-- Open-water-near-shore shipyard spots around the capital, nearest first. Cached per
+-- bot (the terrain scan is heavy and water doesn't move).
+g_NavalSpots = g_NavalSpots or {}
+---@param pi integer
+---@param cx real
+---@param cy real
+---@return table
+-- Only consider water reasonably close to the capital. For a coastal capital the
+-- nearest open-water-near-shore spot is its OWN coastline (a ground worker can reach
+-- it). For an inland capital the nearest such spot is across other land/water and the
+-- worker can't path to it — so we cap the range and simply skip naval there instead of
+-- stranding a worker trekking across the map.
+AiNavalMaxRange = AiNavalMaxRange or 5000.0
+function AiFindNavalSpots(pi, cx, cy)
+    if g_NavalSpots[pi] ~= nil then return g_NavalSpots[pi] end
+    local spots = {}
+    local r = 384.0
+    while r <= AiNavalMaxRange and #spots < 8 do
+        local s = 0
+        while s < 36 do
+            local ang = (I2R(s) / 36.0) * 2.0 * bj_PI
+            local x = cx + r * Cos(ang)
+            local y = cy + r * Sin(ang)
+            if AiNavalFootprintWater(x, y) and AiNavalLandWithin(x, y, 640.0) then
+                spots[#spots + 1] = { x = x, y = y }
+            end
+            s = s + 1
+        end
+        r = r + 384.0
+    end
+    g_NavalSpots[pi] = spots
+    return spots
+end
+
 function BrainNavalDecision(pi, wm, race)
     local shipType = race.wall
     -- R8b: race.wall is a defensive tower for some races (Forsaken h0JM, etc.),
@@ -61752,29 +61833,26 @@ function BrainNavalDecision(pi, wm, race)
     if shipType == nil or not AiTransportTypes[shipType] then return end
     if AiCountBuildingsOfType(pi, shipType) >= AiBrainMaxPorts then return end
 
-    -- Find water point near capital. Try points in distance order;
-    -- skip occupied ones so multiple shipyards don't all pile on one spot.
     local cx, cy = wm.capX, wm.capY
     if cx == nil then return end
-    if udg_WaterPoints ~= nil then
-        -- Sort water points by distance to capital (simple O(n^2), n=16)
-        local indexed = {}
-        for _, wp in ipairs(udg_WaterPoints) do
-            local dx = wp.x - cx; local dy = wp.y - cy
-            wp._dist = dx * dx + dy * dy
-            indexed[#indexed + 1] = wp
-        end
-        table.sort(indexed, function(a, b) return a._dist < b._dist end)
-        local worker = AiFindFreeWorker(pi)
-        if worker ~= nil then
-            for _, wp in ipairs(indexed) do
-                if AiBuildPlaceable(wp.x, wp.y) then
-                    TryBuild_u = worker
-                    TryBuildWithType(shipType, wp.x, wp.y)
-                    BrainLogEvery(pi, "brainnavy", 30, "shipyard at water point", "BRAINNAVY")
-                    break
-                end
+    local spots = AiFindNavalSpots(pi, cx, cy)
+    if #spots == 0 then return end
+    local worker = AiFindFreeWorker(pi)
+    if worker == nil then return end
+    -- Pick the nearest spot not recently committed (reservation prevents piling every
+    -- shipyard on the same point before the first finishes).
+    local now = AiBrainTickCounter or 0
+    for _, sp in ipairs(spots) do
+        local key = pi .. ",nav," .. R2I(sp.x) .. "," .. R2I(sp.y)
+        local resAt = g_BuildSpotReserved[key]
+        if resAt == nil or (now - resAt) >= g_BuildReserveTicks then
+            g_BuildSpotReserved[key] = now
+            TryBuild_u = worker
+            if TryBuildWithType(shipType, sp.x, sp.y) then
+                AiNavalBuildUntil[worker] = now + AiNavalBuildGrace
             end
+            BrainLogEvery(pi, "brainnavy", 30, "shipyard at open water", "BRAINNAVY")
+            return
         end
     end
 end

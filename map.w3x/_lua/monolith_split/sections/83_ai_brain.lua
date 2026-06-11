@@ -1388,11 +1388,17 @@ function AiRecycleBuilders(pi, maxMove)
         if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
             local c = AiBuildClaim[u]
             local expired = c == nil or (now - c) >= AiBuildClaimTicks
+            -- Naval builders walk far to an open-water shipyard spot, so during the
+            -- long approach there's no incomplete structure next to them — without this
+            -- grace the proximity check below would recycle them mid-walk and the
+            -- shipyard would never start. Protect them for a longer window.
+            local navalUntil = AiNavalBuildUntil[u]
+            local navalBusy = navalUntil ~= nil and now < navalUntil
             -- Recycle when the claim window has passed AND the worker is not actually
             -- building (no own incomplete structure nearby). This frees both idle
             -- (order==0) workers and ones stuck holding a stale harvest/move order,
             -- while protecting active channeling builders (nearby incomplete bld).
-            if expired and not AiWorkerIsBuilding(pi, u) then
+            if expired and not navalBusy and not AiWorkerIsBuilding(pi, u) then
                 if victims == nil then victims = {} end
                 found = found + 1
                 victims[found] = u
@@ -1406,6 +1412,7 @@ function AiRecycleBuilders(pi, maxMove)
         GroupRemoveUnit(grpT, u)
         GroupAddUnit(grpH, u)
         AiBuildClaim[u] = nil
+        AiNavalBuildUntil[u] = nil
         IssueImmediateOrder(u, "autoharvestlumber")
     end
 end
@@ -1762,6 +1769,74 @@ end
 ---@param pi integer
 ---@param wm table
 ---@param race table
+-- Terrain helpers. Engine semantics (verified live): a WATER tile is blocked for
+-- WALKABILITY and open for FLOATABILITY; a LAND tile is the reverse.
+local function AiTerrainWater(x, y) return not IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY) end
+local function AiTerrainLand(x, y)  return not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) end
+
+-- A shipyard (h0D1 etc.) has preventplace=unfloat and a 4x4 footprint, so it can ONLY
+-- be placed on OPEN WATER: the center and its whole footprint must be floatable. A
+-- ground worker still builds it, so reachable shore (land) must be nearby. The old
+-- code called AiBuildPlaceable (land-only — it rejects every water tile) on the far
+-- hardcoded udg_WaterPoints, so the order was always rejected and navy stayed 0.
+-- This sampling pattern was confirmed live: the issued build order was accepted.
+local function AiNavalFootprintWater(x, y)
+    if not AiTerrainWater(x, y) then return false end
+    local r1, r2 = 256.0, 128.0
+    local o = { {r1,0},{-r1,0},{0,r1},{0,-r1},{r1,r1},{-r1,-r1},{r1,-r1},{-r1,r1},
+                {r2,0},{-r2,0},{0,r2},{0,-r2} }
+    for i = 1, 12 do
+        if not AiTerrainWater(x + o[i][1], y + o[i][2]) then return false end
+    end
+    return true
+end
+local function AiNavalLandWithin(x, y, rad)
+    for i = 0, 11 do
+        local a = (I2R(i) / 12.0) * 2.0 * bj_PI
+        if AiTerrainLand(x + rad * Cos(a), y + rad * Sin(a)) then return true end
+    end
+    return false
+end
+
+-- A worker sent to build a shipyard is protected from build-pool recycling until this
+-- tick (it walks far to open water with no incomplete structure beside it en route).
+AiNavalBuildUntil = AiNavalBuildUntil or {}
+AiNavalBuildGrace = AiNavalBuildGrace or 120  -- ticks to walk to nearby coast + raise a shipyard
+
+-- Open-water-near-shore shipyard spots around the capital, nearest first. Cached per
+-- bot (the terrain scan is heavy and water doesn't move).
+g_NavalSpots = g_NavalSpots or {}
+---@param pi integer
+---@param cx real
+---@param cy real
+---@return table
+-- Only consider water reasonably close to the capital. For a coastal capital the
+-- nearest open-water-near-shore spot is its OWN coastline (a ground worker can reach
+-- it). For an inland capital the nearest such spot is across other land/water and the
+-- worker can't path to it — so we cap the range and simply skip naval there instead of
+-- stranding a worker trekking across the map.
+AiNavalMaxRange = AiNavalMaxRange or 5000.0
+function AiFindNavalSpots(pi, cx, cy)
+    if g_NavalSpots[pi] ~= nil then return g_NavalSpots[pi] end
+    local spots = {}
+    local r = 384.0
+    while r <= AiNavalMaxRange and #spots < 8 do
+        local s = 0
+        while s < 36 do
+            local ang = (I2R(s) / 36.0) * 2.0 * bj_PI
+            local x = cx + r * Cos(ang)
+            local y = cy + r * Sin(ang)
+            if AiNavalFootprintWater(x, y) and AiNavalLandWithin(x, y, 640.0) then
+                spots[#spots + 1] = { x = x, y = y }
+            end
+            s = s + 1
+        end
+        r = r + 384.0
+    end
+    g_NavalSpots[pi] = spots
+    return spots
+end
+
 function BrainNavalDecision(pi, wm, race)
     local shipType = race.wall
     -- R8b: race.wall is a defensive tower for some races (Forsaken h0JM, etc.),
@@ -1772,29 +1847,26 @@ function BrainNavalDecision(pi, wm, race)
     if shipType == nil or not AiTransportTypes[shipType] then return end
     if AiCountBuildingsOfType(pi, shipType) >= AiBrainMaxPorts then return end
 
-    -- Find water point near capital. Try points in distance order;
-    -- skip occupied ones so multiple shipyards don't all pile on one spot.
     local cx, cy = wm.capX, wm.capY
     if cx == nil then return end
-    if udg_WaterPoints ~= nil then
-        -- Sort water points by distance to capital (simple O(n^2), n=16)
-        local indexed = {}
-        for _, wp in ipairs(udg_WaterPoints) do
-            local dx = wp.x - cx; local dy = wp.y - cy
-            wp._dist = dx * dx + dy * dy
-            indexed[#indexed + 1] = wp
-        end
-        table.sort(indexed, function(a, b) return a._dist < b._dist end)
-        local worker = AiFindFreeWorker(pi)
-        if worker ~= nil then
-            for _, wp in ipairs(indexed) do
-                if AiBuildPlaceable(wp.x, wp.y) then
-                    TryBuild_u = worker
-                    TryBuildWithType(shipType, wp.x, wp.y)
-                    BrainLogEvery(pi, "brainnavy", 30, "shipyard at water point", "BRAINNAVY")
-                    break
-                end
+    local spots = AiFindNavalSpots(pi, cx, cy)
+    if #spots == 0 then return end
+    local worker = AiFindFreeWorker(pi)
+    if worker == nil then return end
+    -- Pick the nearest spot not recently committed (reservation prevents piling every
+    -- shipyard on the same point before the first finishes).
+    local now = AiBrainTickCounter or 0
+    for _, sp in ipairs(spots) do
+        local key = pi .. ",nav," .. R2I(sp.x) .. "," .. R2I(sp.y)
+        local resAt = g_BuildSpotReserved[key]
+        if resAt == nil or (now - resAt) >= g_BuildReserveTicks then
+            g_BuildSpotReserved[key] = now
+            TryBuild_u = worker
+            if TryBuildWithType(shipType, sp.x, sp.y) then
+                AiNavalBuildUntil[worker] = now + AiNavalBuildGrace
             end
+            BrainLogEvery(pi, "brainnavy", 30, "shipyard at open water", "BRAINNAVY")
+            return
         end
     end
 end

@@ -321,20 +321,24 @@ function AiRunStrateg(i, pi, p, def)
             SetPlayerTechResearched(p, FourCC('R03Q'), econTier)
         end
     end
-    -- Grade prereq unlock: several races' weapon/armor upgrades were cloned from the
-    -- vanilla human tree and still carry requires=hkee/hcas (a Keep/Castle the custom
-    -- race never builds), so the upgrade can NEVER be researched and Grades[pi] sticks
-    -- at 0. Grant the vanilla hall prereqs as pure tech-gate satisfiers (no building is
-    -- created) so the cloned upgrades unlock at the matching eco tier. Harmless for
-    -- races whose upgrades don't reference them.
-    if GetPlayerTechCount(p, FourCC('htow'), false) < 1 then
-        SetPlayerTechResearched(p, FourCC('htow'), 1)
+    -- Grade prereq unlock: most races' weapon/armor upgrades were cloned from a vanilla
+    -- tech tree and still carry requires = the vanilla tier hall (Keep/Stronghold/Halls
+    -- of the Dead/Tree of Ages, etc.) — buildings these custom races never build, so the
+    -- upgrade can NEVER be researched and Grades[pi] sticks at 0. The custom race's own
+    -- tier buildings already satisfy the higher upgrade levels; only the vanilla level-1
+    -- gate blocks it. Grant the vanilla tier prereqs (all four base races) as pure
+    -- tech-gate satisfiers — no building is created — so the cloned upgrades unlock at
+    -- the matching eco tier. Harmless for races whose upgrades don't reference them.
+    local function grantTech(code)
+        if GetPlayerTechCount(p, code, false) < 1 then SetPlayerTechResearched(p, code, 1) end
     end
-    if i >= 25 and GetPlayerTechCount(p, FourCC('hkee'), false) < 1 then
-        SetPlayerTechResearched(p, FourCC('hkee'), 1)
+    -- tier 1 (always): Town Hall / Great Hall / Necropolis / Tree of Life
+    grantTech(FourCC('htow')); grantTech(FourCC('ogre')); grantTech(FourCC('unpl')); grantTech(FourCC('etol'))
+    if i >= 25 then  -- tier 2: Keep / Stronghold / Halls of the Dead / Tree of Ages
+        grantTech(FourCC('hkee')); grantTech(FourCC('ostr')); grantTech(FourCC('unp1')); grantTech(FourCC('etoa'))
     end
-    if i >= 55 and GetPlayerTechCount(p, FourCC('hcas'), false) < 1 then
-        SetPlayerTechResearched(p, FourCC('hcas'), 1)
+    if i >= 55 then  -- tier 3: Castle / Fortress / Black Citadel / Tree of Eternity
+        grantTech(FourCC('hcas')); grantTech(FourCC('ofrt')); grantTech(FourCC('unp2')); grantTech(FourCC('etoe'))
     end
     if s.pre and s.pre(i, pi, p) then
     end

@@ -2590,14 +2590,14 @@ RegisterAiRace("Nerubs", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('h0CS'),FourCC('Abds'),6},{FourCC('h0CS'),FourCC('Arlm'),6} },
-
-                { {FourCC('h0CR'),FourCC('Abds'),6} },
-
-                { {FourCC('h0CT'),FourCC('Abds'),6},{FourCC('h0CV'),FourCC('Abds'),6} },
-
+            -- Real Nerub grades from the Vault (h0CS): forelimb (weapon) + torso/belly
+            -- armor + blood/carapace/health/limb/nerub mutations + tools.
+            { at = 17, action = "research", rows = {
+                {FourCC('h0CS'),FourCC('R074'),6},  -- strong forelimbs (weapon)
+                {FourCC('h0CS'),FourCC('R075'),6},  -- torso armor
+                {FourCC('h0CS'),FourCC('R076'),6},  -- belly armor
+                {FourCC('h0CS'),FourCC('R070'),6},  -- carapace mutation
+                {FourCC('h0CS'),FourCC('R06Z'),6},  -- blood mutation
             }},
 
             { at = 20, action = "tryBuy" },
@@ -3473,22 +3473,15 @@ RegisterAiRace("Undead", {
 
         steps = {
 
+            -- Real Undead grades from the Graveyard (u00L): monster weapon/armor +
+            -- unholy weapon/armor + tools. Old rows issued abilities (Abds/Arlm) that
+            -- never fire RESEARCH_FINISH so Grades stayed 0.
             { at = 17, action = "research", rows = {
-
-                {FourCC('u00L'),FourCC('Abds'),6},{FourCC('u00L'),FourCC('Arlm'),6},
-
-            }},
-
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('u00M'),FourCC('Abds'),6} },
-
-            }},
-
-            { at = 35, gate = "tier2", action = "research", rows = {
-
-                {FourCC('u00N'),FourCC('Abds'),6},
-
+                {FourCC('u00L'),FourCC('R05N'),6},  -- monster attack (weapon)
+                {FourCC('u00L'),FourCC('R05P'),6},  -- monster armor
+                {FourCC('u00L'),FourCC('R05O'),6},  -- unholy strength (weapon)
+                {FourCC('u00L'),FourCC('R05Q'),6},  -- unholy armor
+                {FourCC('u00L'),FourCC('R0DQ'),6},  -- improved tools
             }},
 
             { at = 20, action = "tryBuy" },
@@ -4433,12 +4426,13 @@ RegisterAiRace("Illidari", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('h0EM'),FourCC('Abds'),6},{FourCC('h0EH'),FourCC('Arlm'),6} },
-
-                { {FourCC('h0EE'),FourCC('Abds'),6} },
-
+            -- Real Illidari grades from the Forge (h0EM): fel weapon/armor + mastery.
+            { at = 17, action = "research", rows = {
+                {FourCC('h0EM'),FourCC('R08T'),6},  -- cursed weapon
+                {FourCC('h0EM'),FourCC('R08U'),6},  -- defiled armor
+                {FourCC('h0EM'),FourCC('R08W'),6},  -- fel weapon
+                {FourCC('h0EM'),FourCC('R08V'),6},  -- fel reinforcement
+                {FourCC('h0EM'),FourCC('R08X'),6},  -- magic mastery
             }},
 
             { at = 20, action = "tryBuy" },
@@ -6008,12 +6002,16 @@ RegisterAiRace("Vrykul", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('h0BW'),FourCC('Abds'),6},{FourCC('h0BW'),FourCC('Arlm'),6} },
-
-                { {FourCC('h0BV'),FourCC('Abds'),6} },
-
+            -- Real Vrykul grades from the Lumber Mill (h0BW): iron weapon/armor +
+            -- marksmanship + studded armor + axes + sword/defense mastery.
+            { at = 17, action = "research", rows = {
+                {FourCC('h0BW'),FourCC('R069'),6},  -- iron swords
+                {FourCC('h0BW'),FourCC('R06A'),6},  -- iron armor
+                {FourCC('h0BW'),FourCC('R06B'),6},  -- marksmanship
+                {FourCC('h0BW'),FourCC('R06C'),6},  -- studded leather armor
+                {FourCC('h0BW'),FourCC('R06D'),6},  -- improved axes
+                {FourCC('h0BW'),FourCC('R06E'),6},  -- sword mastery
+                {FourCC('h0BW'),FourCC('R06F'),6},  -- defense mastery
             }},
 
             { at = 20, action = "tryBuy" },
@@ -6408,12 +6406,14 @@ RegisterAiRace("Dalaran", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('h02Y'),FourCC('Abds'),6},{FourCC('h02Y'),FourCC('Arlm'),6} },
-
-                { {FourCC('h02W'),FourCC('Abds'),6} },
-
+            -- Real Dalaran grades from the Magic Forge (h02Y): magic swords, cloth
+            -- cloak (armor), staff empowerment, fire/ice defense.
+            { at = 17, action = "research", rows = {
+                {FourCC('h02Y'),FourCC('R00Q'),6},  -- magic swords (weapon)
+                {FourCC('h02Y'),FourCC('R00T'),6},  -- cloth cloak (armor)
+                {FourCC('h02Y'),FourCC('R012'),6},  -- staff empowerment
+                {FourCC('h02Y'),FourCC('R013'),6},  -- fire defense
+                {FourCC('h02Y'),FourCC('R014'),6},  -- ice defense
             }},
 
             { at = 20, action = "tryBuy" },
@@ -6883,12 +6883,13 @@ RegisterAiRace("FelOrc", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('o05T'),FourCC('Abds'),6},{FourCC('o05T'),FourCC('Arlm'),6} },
-
-                { {FourCC('o05Z'),FourCC('Abds'),6} },
-
+            -- Real FelOrc grades from the Lumber Mill (o05T): steel melee/ranged
+            -- weapon + steel armor + improved saws (tools).
+            { at = 17, action = "research", rows = {
+                {FourCC('o05T'),FourCC('R0JS'),6},  -- steel melee weapon
+                {FourCC('o05T'),FourCC('R0JQ'),6},  -- iron ranged weapon
+                {FourCC('o05T'),FourCC('R0JR'),6},  -- steel armor
+                {FourCC('o05T'),FourCC('R0K1'),6},  -- improved saws
             }},
 
             { at = 20, action = "tryBuy" },
@@ -7112,12 +7113,13 @@ RegisterAiRace("Ents", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('e02F'),FourCC('Abds'),6} },
-
-                { {FourCC('e02H'),FourCC('Abds'),6} },
-
+            -- Real Ents grades from the War Tree (e02F): poison sap, mana/life core
+            -- empowerment, war mastery.
+            { at = 17, action = "research", rows = {
+                {FourCC('e02F'),FourCC('R09K'),6},  -- poison sap
+                {FourCC('e02F'),FourCC('R0AH'),6},  -- war mastery
+                {FourCC('e02F'),FourCC('R09N'),6},  -- mana core empowerment
+                {FourCC('e02F'),FourCC('R0AF'),6},  -- life core empowerment
             }},
 
             { at = 20, action = "tryBuy" },
