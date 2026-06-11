@@ -1194,14 +1194,25 @@ function AiFindProdBuilding(pi, bldType)
     local grp = udg_Ai_buildings[pi]
     if grp == nil then return nil end
     local sz = BlzGroupGetSize(grp)
+    -- Return the HEALTHIEST matching building, not just the first. A building still
+    -- under construction ramps its HP from ~10% up to 100% and REJECTS train orders;
+    -- the first-in-group is frequently a constructing one. (Observed: Illidari built
+    -- 10 barracks but trained 0 units — AiFindProdBuilding kept handing BrainProduce a
+    -- half-built barracks, so IssueImmediateOrderById silently returned false every
+    -- tick. Training from a >=99% barracks worked immediately.) Preferring max HP%
+    -- skips constructing buildings whenever a completed one of the same type exists,
+    -- and still returns the best available (e.g. a damaged-but-complete one) otherwise.
+    local best, bestPct = nil, -1.0
     for i = 0, sz - 1 do
         local u = BlzGroupUnitAt(grp, i)
         if u ~= nil and GetUnitTypeId(u) == bldType
             and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
-            return u
+            local pct = GetUnitStatePercent(u, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE)
+            if pct >= 99.0 then return u end  -- complete & healthy: take it immediately
+            if pct > bestPct then best = u; bestPct = pct end
         end
     end
-    return nil
+    return best
 end
 
 ---@param pi integer
