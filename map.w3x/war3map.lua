@@ -61491,11 +61491,19 @@ function BrainBuild(pi, wm, race)
 
     -- R9: separate production buildings (barracks, etc.) from other buildings.
     -- Production buildings get priority — they make army, which captures cities.
-    -- A production building is one listed as a key in race.production (excluding "worker").
+    -- A production building is one listed as a key in race.production (excluding "worker"),
+    -- OR a building that trains workers (worker.from).
     local prodKeys = {}
     if race.production then
         for k, _ in pairs(race.production) do
             if type(k) == "number" then prodKeys[k] = true end
+        end
+        -- R14: buildings that train workers get production priority (e.g. Silitids hives)
+        local wk = race.production.worker
+        if wk and wk.from then
+            for _, fromBld in ipairs(wk.from) do
+                prodKeys[fromBld] = true
+            end
         end
     end
 
