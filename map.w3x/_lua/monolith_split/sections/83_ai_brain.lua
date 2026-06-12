@@ -1072,7 +1072,13 @@ function AiObjScore(pi, wm, o)
     -- priority and won't suicide into a 10000-HP capital; armyCount 30 -> 2x base,
     -- 60 -> 3x, 90+ -> 4x, at which point capitals dominate and the army concentrates.
     local armyBoost = 1.0 + math.min((wm.armyCount or 0) / 30.0, 3.0)
-    return (kindBase * armyBoost + (w.value or 1.0) * o.value - (w.dist or 0.002) * dist) * waterPenalty
+    -- Additive army push: a big neutral-capture CLUSTER (many buildings in one cell)
+    -- accumulates huge o.value and outscored even a 4x-boosted capital, so titans
+    -- (Horde U=96) kept capturing and never assaulted. armyCount*20 makes a strong
+    -- army's capital priority decisively dominate capture clusters (96 -> +1920),
+    -- while a small army adds little and keeps developing/capturing first.
+    local armyPush = (wm.armyCount or 0) * 20.0
+    return (kindBase * armyBoost + armyPush + (w.value or 1.0) * o.value - (w.dist or 0.002) * dist) * waterPenalty
 end
 
 -- Highest-scoring objective with hysteresis: stick to current focus unless a
