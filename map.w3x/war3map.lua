@@ -8151,6 +8151,29 @@ function startBandits(pi)
 end
 ---@param pi integer
 ---@return nothing
+function startCult(pi)
+    local p = Player(pi)
+    -- Cult of the Damned: acolyte (cD02) worker + Necropolis (cD26). Mirrors the
+    -- player race-selection path (3 acolytes, R0J4/R0J5, CultOn) so an AI bot gets
+    -- the same starting kit and cult mechanics (zombies/plague/skeletons) enabled.
+    CreateNUnitsAtLoc(3, FourCC('cD02'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('cD26'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    NumberSet(pi, FourCC('cD02'), 3)
+    NumberSet(pi, FourCC('cD26'), 1)
+    AiData[pi][StringHash("Race")] = "CD"
+    SetPlayerTechResearchedSwap(FourCC('R0J4'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, p)
+    if CultOn then CultOn() end
+    SetPlayerName(p, "Cult of the Damned (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Cult"
+    ProbeLogWrite("[AI] startCult pi=" .. tostring(pi) .. " workers=3cD02 building=1cD26")
+end
+---@param pi integer
+---@return nothing
 function startUndead(pi)
     local p = Player(pi)
     CreateNUnitsAtLoc(3, FourCC('u00P'), p, udg_LocalPoint, bj_UNIT_FACING)
@@ -56476,6 +56499,95 @@ RegisterAiRace("Undead", {
         [FourCC('U00O')] = 0.0278,
         [FourCC('U00V')] = 0.0278,
         [FourCC('U00U')] = 0.0278,
+    },
+})
+
+
+
+-- ====================================================================
+-- Cult of the Damned (Культ Проклятых). A fully playable race that was never
+-- ported to the AI: own building set (cD*) + acolyte worker cD02, shares only the
+-- Undead Верфь (h0D1). Modeled on the Undead entry (same acolyte base). Single-tier
+-- (Necropolis cD26 does not tier-up). Grades are real research upgrades at the
+-- Graveyard cD31. FIRST VERSION — validate live (worker pooling, build order, no
+-- freeze/crash) on next launch; unit ratios are best-effort without live data.
+-- ====================================================================
+---@param id integer
+---@param pi integer
+---@param u unit
+function Join_Cult(id, pi, u)
+    if id == FourCC('cD02') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Cult", {
+    tokens = {"cult", "damned", "cultofdamned", "cultofthedamned", "kp"},
+    weight = 1,
+    altar = FourCC('cD30'),
+    start = startCult,
+    buildings = {
+        seed = FourCC('cD26'),
+        { FourCC('cD26'), 4, 4 }, { FourCC('cD29'), 6, 4 },
+        { FourCC('cD28'), 8, 4 }, { FourCC('cD27'), 6, 4 },
+        { FourCC('cD30'), 2, 6 }, { FourCC('cD31'), 2, 6 },
+        { FourCC('cD12'), 4, 4 },
+    },
+    production = {
+        [FourCC('cD29')] = {
+            {FourCC('cD03'), 3}, {FourCC('cD05'), 2}, {FourCC('cD08'), 2}, {FourCC('cD13'), 2},
+        },
+        [FourCC('cD28')] = {
+            {FourCC('cD11'), 3}, {FourCC('cD10'), 2}, {FourCC('cD09'), 2}, {FourCC('cD14'), 2},
+        },
+        [FourCC('cD27')] = {
+            {FourCC('cD19'), 2}, {FourCC('cD18'), 2}, {FourCC('cD22'), 2},
+            {FourCC('cD33'), 1}, {FourCC('cD34'), 1}, {FourCC('cD35'), 1},
+        },
+        [FourCC('cD30')] = {
+            {FourCC('CD01'), 1, limit = 1}, {FourCC('U02X'), 1, limit = 1},
+        },
+        worker = { id = FourCC('cD02'), cap = 18, from = { FourCC('cD26') } },
+    },
+    ecoWeights = {
+        [FourCC('cD26')] = 2, [FourCC('cD29')] = 4,
+        [FourCC('cD28')] = 5, [FourCC('cD27')] = 6,
+    },
+    strategData = {
+        gradeCap = 100,
+        steps = {
+            -- Cult grades from the Graveyard (cD31) — real research upgrades.
+            { at = 17, action = "research", rows = {
+                {FourCC('cD31'), FourCC('cDr0'), 6},
+                {FourCC('cD31'), FourCC('cDr1'), 6},
+                {FourCC('cD31'), FourCC('cDr3'), 6},
+                {FourCC('cD31'), FourCC('cDr4'), 6},
+                {FourCC('cD31'), FourCC('cDR4'), 6},
+                {FourCC('cD31'), FourCC('cDR9'), 6},
+            }},
+            { at = 20, action = "tryBuy" },
+        },
+    },
+    shipyard = FourCC('h0D1'),  -- shared Undead Верфь (cult worker builds h0D1; everything else is its own)
+    join = Join_Cult,
+    diplomat = "isolationist",
+    brain = "objective",
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('cD02')] = 0.25,
+        [FourCC('cD03')] = 0.10, [FourCC('cD05')] = 0.08, [FourCC('cD08')] = 0.08, [FourCC('cD13')] = 0.08,
+        [FourCC('cD11')] = 0.08, [FourCC('cD10')] = 0.06, [FourCC('cD09')] = 0.06, [FourCC('cD14')] = 0.06,
+        [FourCC('cD19')] = 0.05, [FourCC('cD18')] = 0.05, [FourCC('cD22')] = 0.05,
+        [FourCC('CD01')] = 0.03, [FourCC('U02X')] = 0.03,
     },
 })
 

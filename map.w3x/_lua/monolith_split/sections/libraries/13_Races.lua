@@ -3284,6 +3284,29 @@ function startBandits(pi)
 end
 ---@param pi integer
 ---@return nothing
+function startCult(pi)
+    local p = Player(pi)
+    -- Cult of the Damned: acolyte (cD02) worker + Necropolis (cD26). Mirrors the
+    -- player race-selection path (3 acolytes, R0J4/R0J5, CultOn) so an AI bot gets
+    -- the same starting kit and cult mechanics (zombies/plague/skeletons) enabled.
+    CreateNUnitsAtLoc(3, FourCC('cD02'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('cD26'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    NumberSet(pi, FourCC('cD02'), 3)
+    NumberSet(pi, FourCC('cD26'), 1)
+    AiData[pi][StringHash("Race")] = "CD"
+    SetPlayerTechResearchedSwap(FourCC('R0J4'), 1, p)
+    SetPlayerTechResearchedSwap(FourCC('R0J5'), 1, p)
+    if CultOn then CultOn() end
+    SetPlayerName(p, "Cult of the Damned (" .. I2S(pi + 1) .. ")")
+    AiRace[pi] = "Cult"
+    ProbeLogWrite("[AI] startCult pi=" .. tostring(pi) .. " workers=3cD02 building=1cD26")
+end
+---@param pi integer
+---@return nothing
 function startUndead(pi)
     local p = Player(pi)
     CreateNUnitsAtLoc(3, FourCC('u00P'), p, udg_LocalPoint, bj_UNIT_FACING)
