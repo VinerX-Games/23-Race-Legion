@@ -2322,6 +2322,11 @@ AiCaptureSquadFrac    = AiCaptureSquadFrac    or 0.35   -- fraction of army for 
 AiCaptureSquadMin     = AiCaptureSquadMin     or 4      -- but at least this many...
 AiCaptureSquadArmyMin = AiCaptureSquadArmyMin or 8      -- ...only if army >= this
 AiCaptureSquadEvery   = AiCaptureSquadEvery   or 3      -- run every N army ticks
+AiCaptureSquadDisableArmy = AiCaptureSquadDisableArmy or 35 -- once army >= this, STOP peeling
+                                                            -- units to neutrals: a strong bot must
+                                                            -- concentrate its whole force on enemy
+                                                            -- capitals (else captures starve the
+                                                            -- assault and nobody gets eliminated).
 
 -- Find nearest uncaptured neutral ZahvatBuilding on the bot's own continent.
 ---@param pi integer
@@ -2365,6 +2370,10 @@ function BrainCaptureSquad(pi, p, wm)
     if army == nil then return 0 end
     local armySz = BlzGroupGetSize(army)
     if armySz < AiCaptureSquadArmyMin then return 0 end
+    -- Strong army: stand down the capture detail so the FULL force concentrates on
+    -- enemy capitals via BrainFocus. Without this, 35% kept peeling to neutrals and
+    -- assaults never had the mass to break a 10000-HP capital (eliminations stalled).
+    if armySz >= AiCaptureSquadDisableArmy then return 0 end
 
     local tx, ty = AiFindOwnContinentNeutral(pi, wm)
     if tx == nil then return 0 end
