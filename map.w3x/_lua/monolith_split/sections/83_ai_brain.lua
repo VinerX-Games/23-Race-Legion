@@ -28,7 +28,10 @@ AiRaceValidated = AiRaceValidated or {} -- [raceKey] = true once validated
 -- spot every 0.6s tick (the observed cause of builds never completing). Past the
 -- window an idle claimed worker = failed build → recycled to harvest.
 AiBuildClaim = AiBuildClaim or {}       -- [unit] = brain tick when last sent to build
-AiBuildClaimTicks = AiBuildClaimTicks or 20  -- ticks a claimed worker is left alone before recycle/reuse
+AiBuildClaimTicks = AiBuildClaimTicks or 40  -- ticks a claimed worker is left alone before recycle/reuse
+                                              -- (raised 20->40: a structure takes 30-60s to finish, ~0.8s/tick,
+                                              -- so 20 recycled channeling builders mid-build and the foundation
+                                              -- stalled — froze Naga/Pandarens. Proximity check still guards beyond this.)
 AiBuildRingStart = AiBuildRingStart or 300  -- first ring radius from anchor
 AiBuildRingStep  = AiBuildRingStep  or 300  -- step between rings
 AiBuildMinSpacing = AiBuildMinSpacing or 300 -- minimum spacing between buildings (tighter = denser base, builds complete near home)
@@ -1338,8 +1341,16 @@ end
 ---@return boolean
 function AiWorkerIsBuilding(pi, u)
     local p = Player(pi)
+    -- A worker actively repairing/resuming a structure is building even if it is
+    -- still walking toward it (no incomplete structure within range yet). 852024 =
+    -- "repair" (the order BrainResumeBuildings issues to finish a stalled foundation).
+    local ord = GetUnitCurrentOrder(u)
+    if ord == 852024 then return true end
     if gWorkerProbe == nil then gWorkerProbe = CreateGroup() end
-    GroupEnumUnitsInRange(gWorkerProbe, GetUnitX(u), GetUnitY(u), 256, nil)
+    -- 400, not 256: a 4x4 building's centre sits ~256-300 from where a channeling
+    -- builder stands at the footprint edge, so 256 missed large structures and the
+    -- builder got recycled mid-build. 400 covers the largest footprints.
+    GroupEnumUnitsInRange(gWorkerProbe, GetUnitX(u), GetUnitY(u), 400, nil)
     local sz = BlzGroupGetSize(gWorkerProbe)
     local building = false
     for k = 0, sz - 1 do
