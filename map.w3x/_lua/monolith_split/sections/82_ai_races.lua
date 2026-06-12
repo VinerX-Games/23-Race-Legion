@@ -336,6 +336,8 @@ RegisterAiRace("Scarlet", {
 
     join = Join_Skarlet,
 
+    shipyard = FourCC('h011'),  -- human worker (hpea) -> human Верфь (no wall building)
+
     strateg = Strateg_Scarlet,
 
     strategEC = Strateg_Scarlet_EC,
@@ -4074,6 +4076,8 @@ RegisterAiRace("Draenei", {
 
     join = Join_Draenei,
 
+    shipyard = FourCC('h011'),  -- human worker (hpea) -> human Верфь (no wall building)
+
 
     diplomat = "loyal",
 
@@ -5467,6 +5471,8 @@ RegisterAiRace("Silitids", {
     },
 
     join = Join_Silitids,
+
+    shipyard = FourCC('h0D8'),  -- night-elf worker (ewsp) -> night-elf Верфь (no wall building)
 
 
     diplomat = "isolationist",
