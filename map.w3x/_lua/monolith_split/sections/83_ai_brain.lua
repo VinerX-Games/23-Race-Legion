@@ -2285,6 +2285,107 @@ function AiValidateRace(rk)
     end
 end
 
+-- ====================================================================
+-- BrainCaptureSquad: dedicated same-continent neutral-capture detail.
+--
+-- Problem this solves: BrainFocus picks the single highest-scoring objective
+-- and sends the whole army there. Enemy capitals outscore neutral capture
+-- points (kindBase), so a bot will ignore an uncaptured neutral building
+-- *sitting on its own continent* and march everyone off to attack an enemy.
+-- The user observed bots leaving their home continent half-uncaptured.
+--
+-- Fix: every few ticks, peel off a fixed fraction of the army and send it to
+-- the nearest uncaptured neutral ZahvatBuilding that is on the bot's OWN
+-- continent (AiContinentOf match). Units are chosen by group index so the
+-- same detail stays on capture duty across ticks (no random thrash). This
+-- runs AFTER BrainFocus, so it overrides the focus order for that subset only.
+-- ====================================================================
+AiCaptureSquadFrac    = AiCaptureSquadFrac    or 0.35   -- fraction of army for capture
+AiCaptureSquadMin     = AiCaptureSquadMin     or 4      -- but at least this many...
+AiCaptureSquadArmyMin = AiCaptureSquadArmyMin or 8      -- ...only if army >= this
+AiCaptureSquadEvery   = AiCaptureSquadEvery   or 3      -- run every N army ticks
+
+-- Find nearest uncaptured neutral ZahvatBuilding on the bot's own continent.
+---@param pi integer
+---@param wm table
+---@return real|nil, real|nil
+function AiFindOwnContinentNeutral(pi, wm)
+    local g = udg_ZahvatBuildings
+    if g == nil or wm.cx == nil then return nil, nil end
+    local me = Player(pi)
+    local capCont = AiContinentOf(wm.cx, wm.cy)
+    if capCont == nil then return nil, nil end
+    local bestX, bestY, bestD = nil, nil, 1e30
+    local n = BlzGroupGetSize(g)
+    local i = 0
+    while i < n do
+        local u = BlzGroupUnitAt(g, i)
+        i = i + 1
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            local owner = GetOwningPlayer(u)
+            -- still neutral / not ours and not an ally's
+            if owner ~= me and not IsPlayerAlly(owner, me) then
+                local x, y = GetUnitX(u), GetUnitY(u)
+                if AiContinentOf(x, y) == capCont then
+                    local dx, dy = wm.cx - x, wm.cy - y
+                    local d = dx * dx + dy * dy
+                    if d < bestD then bestD = d; bestX = x; bestY = y end
+                end
+            end
+        end
+    end
+    return bestX, bestY
+end
+
+---@param pi integer
+---@param p player
+---@param wm table
+---@return integer ordered count
+function BrainCaptureSquad(pi, p, wm)
+    if (wm.tick % AiCaptureSquadEvery) ~= 0 then return 0 end
+    local army = udg_Ai_army[pi]
+    if army == nil then return 0 end
+    local armySz = BlzGroupGetSize(army)
+    if armySz < AiCaptureSquadArmyMin then return 0 end
+
+    local tx, ty = AiFindOwnContinentNeutral(pi, wm)
+    if tx == nil then return 0 end
+
+    local want = R2I(armySz * AiCaptureSquadFrac)
+    if want < AiCaptureSquadMin then want = AiCaptureSquadMin end
+
+    if gSubGroup == nil then gSubGroup = CreateGroup() end
+    GroupClear(gSubGroup)
+    local cnt, ordered = 0, 0
+    local i = 0
+    while i < armySz and ordered < want do
+        local u = BlzGroupUnitAt(army, i)
+        i = i + 1
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and not IsUnitType(u, UNIT_TYPE_PEON)
+            and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
+            GroupAddUnit(gSubGroup, u)
+            cnt = cnt + 1
+            ordered = ordered + 1
+            if cnt >= 12 then
+                GroupPointOrder(gSubGroup, "attack", tx, ty)
+                GroupClear(gSubGroup)
+                cnt = 0
+            end
+        end
+    end
+    if cnt > 0 then
+        GroupPointOrder(gSubGroup, "attack", tx, ty)
+        GroupClear(gSubGroup)
+    end
+    if ordered > 0 then
+        BrainLogEvery(pi, "capsquad", 4, "capture detail n=" .. tostring(ordered)
+            .. " -> own-continent neutral (" .. tostring(R2I(tx)) .. ","
+            .. tostring(R2I(ty)) .. ")", "BRAINCAP")
+    end
+    return ordered
+end
+
 -- R1/R2/R3: protected wrapper. A Lua error in one bot's tick is caught, counted,
 -- and (past AiBotFaultLimit) quarantines that bot for a while — the round-robin and
 -- every other bot keep running. NOTE: a hard C++ crash (e.g. the old squad FSM) is
@@ -2398,6 +2499,9 @@ function AiBrainArmyTickInner(pi, p)
 
     BrainFocus(pi, p, wm)
     lap("focus")
+
+    BrainCaptureSquad(pi, p, wm)
+    lap("capsquad")
 
     if (wm.tick % 4) == 0 then
         BrainNavalFocus(pi, p)

@@ -49,7 +49,7 @@ function Trig_KalecDead_Func004A()
 end
 function Trig_KalecDead_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateItemLoc(FourCC('I01U'), udg_LocalPosition2)
+    SpawnGroundItem(FourCC('I01U'), GetLocationX(udg_LocalPosition2), GetLocationY(udg_LocalPosition2))
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_25200")
     ForForce(udg_AllPlayers, Trig_KalecDead_Func004A)
     DisableTrigger(gg_trg_KalecStart)
@@ -87,7 +87,7 @@ end
 -- Trigger: ShaDead
 --===========================================================================
 function Trig_ShaDead_Actions()
-    CreateItem(FourCC('I021'), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()))
+    SpawnGroundItem(FourCC('I021'), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()))
     DisplayTextToForce(udg_AllPlayers2, ".")
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnit()), PLAYER_STATE_RESOURCE_GOLD)
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnit()), PLAYER_STATE_RESOURCE_LUMBER)
@@ -184,7 +184,7 @@ function Trig_Qtun_Die_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_2385")
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_GOLD)
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_LUMBER)
-    CreateItemLoc(FourCC('I01R'), udg_LocalPosition2)
+    SpawnGroundItem(FourCC('I01R'), GetLocationX(udg_LocalPosition2), GetLocationY(udg_LocalPosition2))
     RemoveLocation(udg_LocalPosition2)
     DisableTrigger(GetTriggeringTrigger())
 end
@@ -402,7 +402,7 @@ function Trig_Qogg_Die_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_20558")
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_GOLD)
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_LUMBER)
-    CreateItemLoc(FourCC('I01Q'), GetUnitLoc(GetTriggerUnit()))
+    SpawnGroundItem(FourCC('I01Q'), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()))
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================

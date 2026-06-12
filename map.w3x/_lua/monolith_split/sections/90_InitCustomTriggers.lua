@@ -1,4 +1,5 @@
 function InitCustomTriggers()
+    InitTrig_ItemLitterCleanup()
     InitTrig_sek5()
     InitTrig_RRR()
     --Function not found: call InitTrig_RemoveUnitTimed()

@@ -25,13 +25,13 @@ function Trig_Ult_Actions()
     local i= GetRandomInt(1, 4)
     
     if i == 1 then
-        CreateItem(FourCC('I01X'), GetLocationX(loc), GetLocationY(loc))
+        SpawnGroundItem(FourCC('I01X'), GetLocationX(loc), GetLocationY(loc))
     elseif i == 2 then
-        CreateItem(FourCC('I01V'), GetLocationX(loc), GetLocationY(loc))
+        SpawnGroundItem(FourCC('I01V'), GetLocationX(loc), GetLocationY(loc))
     elseif i == 3 then
-        CreateItem(FourCC('I01Y'), GetLocationX(loc), GetLocationY(loc))
+        SpawnGroundItem(FourCC('I01Y'), GetLocationX(loc), GetLocationY(loc))
     else
-        CreateItem(FourCC('I01W'), GetLocationX(loc), GetLocationY(loc))
+        SpawnGroundItem(FourCC('I01W'), GetLocationX(loc), GetLocationY(loc))
     end
     
     RemoveLocation(loc)

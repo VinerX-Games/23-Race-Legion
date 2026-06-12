@@ -12298,6 +12298,54 @@ function Unit000387_DropItems()
 	bj_lastDyingWidget = nil
 	DestroyTrigger(GetTriggeringTrigger())
 end
+
+-- ***************************************************************************
+-- *  Spell-spawned item litter cleanup
+-- *
+-- *  Several hero spells spawn an item on the ground (Forsaken ult, Old Gods
+-- *  spells). The caster is meant to walk over and pick it up, but AI heroes
+-- *  never do, so the items pile up by the hundreds over a long game. Each
+-- *  spawned item is registered here and removed if it is still lying on the
+-- *  ground (not in anyone's inventory) after a grace window — long enough for
+-- *  a human to grab it, short enough that AI litter does not accumulate.
+-- ***************************************************************************
+g_SpawnedItems = g_SpawnedItems or {}
+ItemLitterGraceSec = ItemLitterGraceSec or 45.0
+ItemLitterTickSec  = ItemLitterTickSec  or 10.0
+
+---@param itemId integer
+---@param x real
+---@param y real
+---@return item
+function SpawnGroundItem(itemId, x, y)
+	local it = CreateItem(itemId, x, y)
+	g_SpawnedItems[#g_SpawnedItems + 1] = { item = it, age = 0.0 }
+	return it
+end
+
+function ItemLitterCleanup()
+	local kept = {}
+	for _, e in ipairs(g_SpawnedItems) do
+		local it = e.item
+		if it ~= nil and GetItemTypeId(it) ~= 0 and GetWidgetLife(it) > 0.0 then
+			if IsItemOwned(it) then
+				-- picked up into an inventory — stop tracking, leave it alone
+			else
+				e.age = e.age + ItemLitterTickSec
+				if e.age >= ItemLitterGraceSec then
+					RemoveItem(it)
+				else
+					kept[#kept + 1] = e
+				end
+			end
+		end
+	end
+	g_SpawnedItems = kept
+end
+
+function InitTrig_ItemLitterCleanup()
+	TimerStart(CreateTimer(), ItemLitterTickSec, true, ItemLitterCleanup)
+end
 -- ***************************************************************************
 -- 
 -- *  Sound Assets
@@ -31576,13 +31624,13 @@ function Trig_Ult_Actions()
     local i= GetRandomInt(1, 4)
     
     if i == 1 then
-        CreateItem(FourCC('I01X'), GetLocationX(loc), GetLocationY(loc))
+        SpawnGroundItem(FourCC('I01X'), GetLocationX(loc), GetLocationY(loc))
     elseif i == 2 then
-        CreateItem(FourCC('I01V'), GetLocationX(loc), GetLocationY(loc))
+        SpawnGroundItem(FourCC('I01V'), GetLocationX(loc), GetLocationY(loc))
     elseif i == 3 then
-        CreateItem(FourCC('I01Y'), GetLocationX(loc), GetLocationY(loc))
+        SpawnGroundItem(FourCC('I01Y'), GetLocationX(loc), GetLocationY(loc))
     else
-        CreateItem(FourCC('I01W'), GetLocationX(loc), GetLocationY(loc))
+        SpawnGroundItem(FourCC('I01W'), GetLocationX(loc), GetLocationY(loc))
     end
     
     RemoveLocation(loc)
@@ -47963,7 +48011,7 @@ function Trig_KalecDead_Func004A()
 end
 function Trig_KalecDead_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    CreateItemLoc(FourCC('I01U'), udg_LocalPosition2)
+    SpawnGroundItem(FourCC('I01U'), GetLocationX(udg_LocalPosition2), GetLocationY(udg_LocalPosition2))
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_25200")
     ForForce(udg_AllPlayers, Trig_KalecDead_Func004A)
     DisableTrigger(gg_trg_KalecStart)
@@ -48001,7 +48049,7 @@ end
 -- Trigger: ShaDead
 --===========================================================================
 function Trig_ShaDead_Actions()
-    CreateItem(FourCC('I021'), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()))
+    SpawnGroundItem(FourCC('I021'), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()))
     DisplayTextToForce(udg_AllPlayers2, ".")
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnit()), PLAYER_STATE_RESOURCE_GOLD)
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnit()), PLAYER_STATE_RESOURCE_LUMBER)
@@ -48098,7 +48146,7 @@ function Trig_Qtun_Die_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_2385")
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_GOLD)
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_LUMBER)
-    CreateItemLoc(FourCC('I01R'), udg_LocalPosition2)
+    SpawnGroundItem(FourCC('I01R'), GetLocationX(udg_LocalPosition2), GetLocationY(udg_LocalPosition2))
     RemoveLocation(udg_LocalPosition2)
     DisableTrigger(GetTriggeringTrigger())
 end
@@ -48316,7 +48364,7 @@ function Trig_Qogg_Die_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_20558")
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_GOLD)
     AdjustPlayerStateBJ(20000, GetOwningPlayer(GetKillingUnitBJ()), PLAYER_STATE_RESOURCE_LUMBER)
-    CreateItemLoc(FourCC('I01Q'), GetUnitLoc(GetTriggerUnit()))
+    SpawnGroundItem(FourCC('I01Q'), GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()))
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================
@@ -62271,6 +62319,107 @@ function AiValidateRace(rk)
     end
 end
 
+-- ====================================================================
+-- BrainCaptureSquad: dedicated same-continent neutral-capture detail.
+--
+-- Problem this solves: BrainFocus picks the single highest-scoring objective
+-- and sends the whole army there. Enemy capitals outscore neutral capture
+-- points (kindBase), so a bot will ignore an uncaptured neutral building
+-- *sitting on its own continent* and march everyone off to attack an enemy.
+-- The user observed bots leaving their home continent half-uncaptured.
+--
+-- Fix: every few ticks, peel off a fixed fraction of the army and send it to
+-- the nearest uncaptured neutral ZahvatBuilding that is on the bot's OWN
+-- continent (AiContinentOf match). Units are chosen by group index so the
+-- same detail stays on capture duty across ticks (no random thrash). This
+-- runs AFTER BrainFocus, so it overrides the focus order for that subset only.
+-- ====================================================================
+AiCaptureSquadFrac    = AiCaptureSquadFrac    or 0.35   -- fraction of army for capture
+AiCaptureSquadMin     = AiCaptureSquadMin     or 4      -- but at least this many...
+AiCaptureSquadArmyMin = AiCaptureSquadArmyMin or 8      -- ...only if army >= this
+AiCaptureSquadEvery   = AiCaptureSquadEvery   or 3      -- run every N army ticks
+
+-- Find nearest uncaptured neutral ZahvatBuilding on the bot's own continent.
+---@param pi integer
+---@param wm table
+---@return real|nil, real|nil
+function AiFindOwnContinentNeutral(pi, wm)
+    local g = udg_ZahvatBuildings
+    if g == nil or wm.cx == nil then return nil, nil end
+    local me = Player(pi)
+    local capCont = AiContinentOf(wm.cx, wm.cy)
+    if capCont == nil then return nil, nil end
+    local bestX, bestY, bestD = nil, nil, 1e30
+    local n = BlzGroupGetSize(g)
+    local i = 0
+    while i < n do
+        local u = BlzGroupUnitAt(g, i)
+        i = i + 1
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            local owner = GetOwningPlayer(u)
+            -- still neutral / not ours and not an ally's
+            if owner ~= me and not IsPlayerAlly(owner, me) then
+                local x, y = GetUnitX(u), GetUnitY(u)
+                if AiContinentOf(x, y) == capCont then
+                    local dx, dy = wm.cx - x, wm.cy - y
+                    local d = dx * dx + dy * dy
+                    if d < bestD then bestD = d; bestX = x; bestY = y end
+                end
+            end
+        end
+    end
+    return bestX, bestY
+end
+
+---@param pi integer
+---@param p player
+---@param wm table
+---@return integer ordered count
+function BrainCaptureSquad(pi, p, wm)
+    if (wm.tick % AiCaptureSquadEvery) ~= 0 then return 0 end
+    local army = udg_Ai_army[pi]
+    if army == nil then return 0 end
+    local armySz = BlzGroupGetSize(army)
+    if armySz < AiCaptureSquadArmyMin then return 0 end
+
+    local tx, ty = AiFindOwnContinentNeutral(pi, wm)
+    if tx == nil then return 0 end
+
+    local want = R2I(armySz * AiCaptureSquadFrac)
+    if want < AiCaptureSquadMin then want = AiCaptureSquadMin end
+
+    if gSubGroup == nil then gSubGroup = CreateGroup() end
+    GroupClear(gSubGroup)
+    local cnt, ordered = 0, 0
+    local i = 0
+    while i < armySz and ordered < want do
+        local u = BlzGroupUnitAt(army, i)
+        i = i + 1
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and not IsUnitType(u, UNIT_TYPE_PEON)
+            and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
+            GroupAddUnit(gSubGroup, u)
+            cnt = cnt + 1
+            ordered = ordered + 1
+            if cnt >= 12 then
+                GroupPointOrder(gSubGroup, "attack", tx, ty)
+                GroupClear(gSubGroup)
+                cnt = 0
+            end
+        end
+    end
+    if cnt > 0 then
+        GroupPointOrder(gSubGroup, "attack", tx, ty)
+        GroupClear(gSubGroup)
+    end
+    if ordered > 0 then
+        BrainLogEvery(pi, "capsquad", 4, "capture detail n=" .. tostring(ordered)
+            .. " -> own-continent neutral (" .. tostring(R2I(tx)) .. ","
+            .. tostring(R2I(ty)) .. ")", "BRAINCAP")
+    end
+    return ordered
+end
+
 -- R1/R2/R3: protected wrapper. A Lua error in one bot's tick is caught, counted,
 -- and (past AiBotFaultLimit) quarantines that bot for a while — the round-robin and
 -- every other bot keep running. NOTE: a hard C++ crash (e.g. the old squad FSM) is
@@ -62384,6 +62533,9 @@ function AiBrainArmyTickInner(pi, p)
 
     BrainFocus(pi, p, wm)
     lap("focus")
+
+    BrainCaptureSquad(pi, p, wm)
+    lap("capsquad")
 
     if (wm.tick % 4) == 0 then
         BrainNavalFocus(pi, p)
@@ -64134,6 +64286,7 @@ function AiFindMageOnContinent(pi, continent)
     return nil
 end
 function InitCustomTriggers()
+    InitTrig_ItemLitterCleanup()
     InitTrig_sek5()
     InitTrig_RRR()
     --Function not found: call InitTrig_RemoveUnitTimed()
