@@ -1055,7 +1055,14 @@ function AiObjScore(pi, wm, o)
         local prox = 8000.0 / dist
         return (kindBase + (w.value or 1.0) * o.value + prox) * waterPenalty
     end
-    return (kindBase + (w.value or 1.0) * o.value - (w.dist or 0.002) * dist) * waterPenalty
+    -- capital: scale priority with the attacker's own army so a strong bot commits to
+    -- crushing an enemy capital instead of perpetually re-capturing neutrals (capture
+    -- base 150 > capital base 100, so without this the army never graduates to killing
+    -- capitals — bots were never eliminating each other). A small army keeps low capital
+    -- priority and won't suicide into a 10000-HP capital; armyCount 30 -> 2x base,
+    -- 60 -> 3x, 90+ -> 4x, at which point capitals dominate and the army concentrates.
+    local armyBoost = 1.0 + math.min((wm.armyCount or 0) / 30.0, 3.0)
+    return (kindBase * armyBoost + (w.value or 1.0) * o.value - (w.dist or 0.002) * dist) * waterPenalty
 end
 
 -- Highest-scoring objective with hysteresis: stick to current focus unless a

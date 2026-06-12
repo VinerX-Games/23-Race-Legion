@@ -59,6 +59,7 @@ for pi = 0, 23 do
 end
 DestroyGroup(g)
 local nn = math.max(tot.n, 1)
-out[#out+1] = string.format("TOTALS n=%d avgU=%.1f avgS=%.1f navy=%d transp=%d avgGrd=%.1f cap=%d capAlive=%d/%d  t=%.0fs",
-    tot.n, tot.units/nn, tot.struct/nn, tot.navy, tot.transp, tot.grade/nn, tot.cap, tot.capAlive, tot.n, GetTimeOfDay())
+local eliminated = tot.n - tot.capAlive
+out[#out+1] = string.format("TOTALS n=%d avgU=%.1f avgS=%.1f navy=%d transp=%d avgGrd=%.1f cap=%d alive=%d ELIMINATED=%d",
+    tot.n, tot.units/nn, tot.struct/nn, tot.navy, tot.transp, tot.grade/nn, tot.cap, tot.capAlive, eliminated)
 return table.concat(out, "\n")
