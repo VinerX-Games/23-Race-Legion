@@ -4943,7 +4943,7 @@ end
 ---@return nothing
 function MakeGrade(gamer, GradeUnit, Grade)
 	local b = nil
-	
+
 	udg_LocalInteger5 = GradeUnit
 	Counter = 0
 	b = Condition(ThisType)
@@ -4951,8 +4951,23 @@ function MakeGrade(gamer, GradeUnit, Grade)
 	gUnit = BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
 	if gUnit ~= nil then
 		IssueImmediateOrderById(gUnit, Grade)
+	elseif Counter == 0 then
+		-- Fallback: the race's grade rows point at a host building this race never
+		-- builds (e.g. Vrykul's weapon/armor upgrades were keyed to a Lumber Mill it
+		-- owns 0 of), so the research order has nothing to fire on and Grades stick at
+		-- 0 forever despite a huge economy. When no host building exists, grant the
+		-- upgrade directly (SetPlayerTechResearched bypasses building/requirements, same
+		-- as the vanilla-prereq grant in AiRunStrateg) and bump the grade counter by
+		-- hand, since SetPlayerTechResearched does NOT fire EVENT_PLAYER_UNIT_RESEARCH_FINISH.
+		-- Only AI-controlled bots: human players research the normal way.
+		local pi = GetPlayerId(gamer)
+		if udg_AiControl and udg_AiControl[pi] then
+			local cur = GetPlayerTechCount(gamer, Grade, false)
+			SetPlayerTechResearched(gamer, Grade, cur + 1)
+			Grades[pi] = (Grades[pi] or 0) + 1
+		end
 	end
-	
+
 	DestroyBoolExpr(b)
 	b = nil
 end
@@ -62546,7 +62561,7 @@ function AiBrainArmyTickInner(pi, p)
     end
 
     if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end
-    if (wm.tick % 4) == 0 then AiDiplomatTick(pi) end
+    if AiDiplomatEnabled and (wm.tick % 4) == 0 then AiDiplomatTick(pi) end
     lap("other")
 
     if d.ticks % AiProfileEvery == 0 then
@@ -62992,8 +63007,12 @@ AiDiplomatPresets = {
     },
 }
 
-AiDiplomatEnabled = AiDiplomatEnabled or true
-AiDiplomatRpEnabled = AiDiplomatRpEnabled or true
+-- Diplomacy module disabled entirely (user request): bot-to-bot alliances,
+-- resource exchange and chat RP are off. NOTE: `or true` re-enabled this even
+-- after 83_ai_brain set it false (load order 83<84, false or true == true), so
+-- it is now hard-set to false here, the last word on the flag.
+AiDiplomatEnabled = false
+AiDiplomatRpEnabled = false
 
 -- Churn dampening (anti "ally then immediately drop"): a freshly-formed alliance
 -- is protected from weakness/no-threat breaks for MinAllyAge ticks, and after a

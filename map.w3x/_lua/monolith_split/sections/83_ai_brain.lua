@@ -2512,7 +2512,7 @@ function AiBrainArmyTickInner(pi, p)
     end
 
     if (wm.tick % 8) == 0 then AiBuyPirateFleet(pi) end
-    if (wm.tick % 4) == 0 then AiDiplomatTick(pi) end
+    if AiDiplomatEnabled and (wm.tick % 4) == 0 then AiDiplomatTick(pi) end
     lap("other")
 
     if d.ticks % AiProfileEvery == 0 then

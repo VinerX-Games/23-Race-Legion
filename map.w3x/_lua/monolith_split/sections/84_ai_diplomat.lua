@@ -90,8 +90,12 @@ AiDiplomatPresets = {
     },
 }
 
-AiDiplomatEnabled = AiDiplomatEnabled or true
-AiDiplomatRpEnabled = AiDiplomatRpEnabled or true
+-- Diplomacy module disabled entirely (user request): bot-to-bot alliances,
+-- resource exchange and chat RP are off. NOTE: `or true` re-enabled this even
+-- after 83_ai_brain set it false (load order 83<84, false or true == true), so
+-- it is now hard-set to false here, the last word on the flag.
+AiDiplomatEnabled = false
+AiDiplomatRpEnabled = false
 
 -- Churn dampening (anti "ally then immediately drop"): a freshly-formed alliance
 -- is protected from weakness/no-threat breaks for MinAllyAge ticks, and after a

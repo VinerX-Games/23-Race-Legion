@@ -76,7 +76,7 @@ end
 ---@return nothing
 function MakeGrade(gamer, GradeUnit, Grade)
 	local b = nil
-	
+
 	udg_LocalInteger5 = GradeUnit
 	Counter = 0
 	b = Condition(ThisType)
@@ -84,8 +84,23 @@ function MakeGrade(gamer, GradeUnit, Grade)
 	gUnit = BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
 	if gUnit ~= nil then
 		IssueImmediateOrderById(gUnit, Grade)
+	elseif Counter == 0 then
+		-- Fallback: the race's grade rows point at a host building this race never
+		-- builds (e.g. Vrykul's weapon/armor upgrades were keyed to a Lumber Mill it
+		-- owns 0 of), so the research order has nothing to fire on and Grades stick at
+		-- 0 forever despite a huge economy. When no host building exists, grant the
+		-- upgrade directly (SetPlayerTechResearched bypasses building/requirements, same
+		-- as the vanilla-prereq grant in AiRunStrateg) and bump the grade counter by
+		-- hand, since SetPlayerTechResearched does NOT fire EVENT_PLAYER_UNIT_RESEARCH_FINISH.
+		-- Only AI-controlled bots: human players research the normal way.
+		local pi = GetPlayerId(gamer)
+		if udg_AiControl and udg_AiControl[pi] then
+			local cur = GetPlayerTechCount(gamer, Grade, false)
+			SetPlayerTechResearched(gamer, Grade, cur + 1)
+			Grades[pi] = (Grades[pi] or 0) + 1
+		end
 	end
-	
+
 	DestroyBoolExpr(b)
 	b = nil
 end
