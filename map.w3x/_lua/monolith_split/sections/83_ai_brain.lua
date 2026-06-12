@@ -1857,23 +1857,49 @@ g_NavalSpots = g_NavalSpots or {}
 -- it). For an inland capital the nearest such spot is across other land/water and the
 -- worker can't path to it — so we cap the range and simply skip naval there instead of
 -- stranding a worker trekking across the map.
-AiNavalMaxRange = AiNavalMaxRange or 5000.0
+AiNavalMaxRange = AiNavalMaxRange or 8000.0
 function AiFindNavalSpots(pi, cx, cy)
     if g_NavalSpots[pi] ~= nil then return g_NavalSpots[pi] end
     local spots = {}
-    local r = 384.0
-    while r <= AiNavalMaxRange and #spots < 8 do
-        local s = 0
-        while s < 36 do
-            local ang = (I2R(s) / 36.0) * 2.0 * bj_PI
-            local x = cx + r * Cos(ang)
-            local y = cy + r * Sin(ang)
-            if AiNavalFootprintWater(x, y) and AiNavalLandWithin(x, y, 640.0) then
-                spots[#spots + 1] = { x = x, y = y }
+    -- 1) PREFER the designer-placed shallow-water points (udg_WaterPoints). These are
+    -- curated valid shipyard locations sitting AT THE SHORELINE; the strict 12-point
+    -- footprint scan rejects most of them (their footprint samples touch land), which
+    -- is why shipyards were barely built. The actual game placement accepts them (live
+    -- test-builds at these points returned true), so trust them with only a center-water
+    -- check, nearest-first, within range of the capital.
+    if type(udg_WaterPoints) == "table" then
+        local cand = {}
+        local i = 1
+        while udg_WaterPoints[i] ~= nil do
+            local p = udg_WaterPoints[i]
+            if p.x ~= nil then
+                local dx, dy = cx - p.x, cy - p.y
+                local d = SquareRoot(dx * dx + dy * dy)
+                if d <= AiNavalMaxRange and AiTerrainWater(p.x, p.y) then
+                    cand[#cand + 1] = { x = p.x, y = p.y, d = d }
+                end
             end
-            s = s + 1
+            i = i + 1
         end
-        r = r + 384.0
+        table.sort(cand, function(a, b) return a.d < b.d end)
+        for _, c in ipairs(cand) do spots[#spots + 1] = { x = c.x, y = c.y } end
+    end
+    -- 2) Fall back to the ring scan only when no designated point is in range.
+    if #spots == 0 then
+        local r = 384.0
+        while r <= AiNavalMaxRange and #spots < 8 do
+            local s = 0
+            while s < 36 do
+                local ang = (I2R(s) / 36.0) * 2.0 * bj_PI
+                local x = cx + r * Cos(ang)
+                local y = cy + r * Sin(ang)
+                if AiNavalFootprintWater(x, y) and AiNavalLandWithin(x, y, 640.0) then
+                    spots[#spots + 1] = { x = x, y = y }
+                end
+                s = s + 1
+            end
+            r = r + 384.0
+        end
     end
     g_NavalSpots[pi] = spots
     return spots
