@@ -931,6 +931,8 @@ RegisterAiRace("Goblins", {
 
     wall = FourCC('h0D7'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "diplomat",
 
@@ -1230,6 +1232,8 @@ RegisterAiRace("Naga", {
     naval = aiNavalTrain_Naga,
 
     wall = FourCC('n04L'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
     usesWaterPoint = false,
 
@@ -1904,6 +1908,8 @@ RegisterAiRace("JungleTrolls", {
 
     wall = FourCC('h0N2'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "balanced",
 
@@ -2192,6 +2198,8 @@ RegisterAiRace("ForestTrolls", {
 
     wall = FourCC('h0N4'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "balanced",
 
@@ -2419,6 +2427,8 @@ RegisterAiRace("HordeW2", {
     join = Join_HordeW2,
 
     wall = FourCC('w20u'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
 
     diplomat = "pragmatic",
@@ -3136,6 +3146,8 @@ RegisterAiRace("Alliance", {
 
     wall = FourCC('hgtw'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "loyal",
 
@@ -3336,6 +3348,8 @@ RegisterAiRace("Bandits", {
     join = Join_Bandits,
 
     wall = FourCC('h03Q'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
 
     diplomat = "traitor",
@@ -3868,6 +3882,8 @@ RegisterAiRace("Demons", {
 
     wall = FourCC('n02C'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "isolationist",
 
@@ -4289,6 +4305,8 @@ RegisterAiRace("Stromgard", {
 
     wall = FourCC('h0HG'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "pragmatic",
 
@@ -4507,6 +4525,8 @@ RegisterAiRace("Illidari", {
 
     wall = FourCC('h0EN'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "pragmatic",
 
@@ -4715,6 +4735,8 @@ RegisterAiRace("Worgen", {
     join = Join_Worgen,
 
     wall = FourCC('h0JT'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
 
     diplomat = "loyal",
@@ -4930,6 +4952,8 @@ RegisterAiRace("Ogres", {
     join = Join_Ogres,
 
     wall = FourCC('o038'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
 
     diplomat = "balanced",
@@ -5183,6 +5207,8 @@ RegisterAiRace("Gnomes", {
     join = Join_Gnomes,
 
     wall = FourCC('h0FZ'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
 
     diplomat = "diplomat",
@@ -5662,6 +5688,8 @@ RegisterAiRace("Pandarens", {
 
     wall = FourCC('h0P5'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "diplomat",
 
@@ -5870,6 +5898,8 @@ RegisterAiRace("Bezlikie", {
     join = Join_Bezlikie,
 
     wall = FourCC('h0K3'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
 
     diplomat = "isolationist",
@@ -7190,6 +7220,8 @@ RegisterAiRace("Ents", {
     join = Join_Ents,
 
     wall = FourCC('e02I'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
 
     diplomat = "loyal",

@@ -1843,7 +1843,11 @@ end
 -- A worker sent to build a shipyard is protected from build-pool recycling until this
 -- tick (it walks far to open water with no incomplete structure beside it en route).
 AiNavalBuildUntil = AiNavalBuildUntil or {}
-AiNavalBuildGrace = AiNavalBuildGrace or 120  -- ticks to walk to nearby coast + raise a shipyard
+AiNavalBuildGrace = AiNavalBuildGrace or 360  -- ticks a shipyard-builder is protected from
+                                              -- recycle. Raised 120->360: with the distance cap
+                                              -- removed a worker may trek far across the map to a
+                                              -- designated water point, so it needs longer before
+                                              -- the build pool reclaims it.
 
 -- Open-water-near-shore shipyard spots around the capital, nearest first. Cached per
 -- bot (the terrain scan is heavy and water doesn't move).
@@ -1875,7 +1879,9 @@ function AiFindNavalSpots(pi, cx, cy)
             if p.x ~= nil then
                 local dx, dy = cx - p.x, cy - p.y
                 local d = SquareRoot(dx * dx + dy * dy)
-                if d <= AiNavalMaxRange and AiTerrainWater(p.x, p.y) then
+                -- No distance cap (user request): try every designated water point,
+                -- nearest-first, regardless of how far it is — the worker will walk to it.
+                if AiTerrainWater(p.x, p.y) then
                     cand[#cand + 1] = { x = p.x, y = p.y, d = d }
                 end
             end

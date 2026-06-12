@@ -53763,6 +53763,8 @@ RegisterAiRace("Goblins", {
 
     wall = FourCC('h0D7'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "diplomat",
 
@@ -54062,6 +54064,8 @@ RegisterAiRace("Naga", {
     naval = aiNavalTrain_Naga,
 
     wall = FourCC('n04L'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
     usesWaterPoint = false,
 
@@ -54736,6 +54740,8 @@ RegisterAiRace("JungleTrolls", {
 
     wall = FourCC('h0N2'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "balanced",
 
@@ -55024,6 +55030,8 @@ RegisterAiRace("ForestTrolls", {
 
     wall = FourCC('h0N4'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "balanced",
 
@@ -55251,6 +55259,8 @@ RegisterAiRace("HordeW2", {
     join = Join_HordeW2,
 
     wall = FourCC('w20u'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
 
     diplomat = "pragmatic",
@@ -55968,6 +55978,8 @@ RegisterAiRace("Alliance", {
 
     wall = FourCC('hgtw'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "loyal",
 
@@ -56168,6 +56180,8 @@ RegisterAiRace("Bandits", {
     join = Join_Bandits,
 
     wall = FourCC('h03Q'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
 
     diplomat = "traitor",
@@ -56700,6 +56714,8 @@ RegisterAiRace("Demons", {
 
     wall = FourCC('n02C'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "isolationist",
 
@@ -57121,6 +57137,8 @@ RegisterAiRace("Stromgard", {
 
     wall = FourCC('h0HG'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "pragmatic",
 
@@ -57339,6 +57357,8 @@ RegisterAiRace("Illidari", {
 
     wall = FourCC('h0EN'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "pragmatic",
 
@@ -57547,6 +57567,8 @@ RegisterAiRace("Worgen", {
     join = Join_Worgen,
 
     wall = FourCC('h0JT'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
 
     diplomat = "loyal",
@@ -57762,6 +57784,8 @@ RegisterAiRace("Ogres", {
     join = Join_Ogres,
 
     wall = FourCC('o038'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
 
     diplomat = "balanced",
@@ -58015,6 +58039,8 @@ RegisterAiRace("Gnomes", {
     join = Join_Gnomes,
 
     wall = FourCC('h0FZ'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
 
     diplomat = "diplomat",
@@ -58494,6 +58520,8 @@ RegisterAiRace("Pandarens", {
 
     wall = FourCC('h0P5'),
 
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+
 
     diplomat = "diplomat",
 
@@ -58702,6 +58730,8 @@ RegisterAiRace("Bezlikie", {
     join = Join_Bezlikie,
 
     wall = FourCC('h0K3'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
 
     diplomat = "isolationist",
@@ -60022,6 +60052,8 @@ RegisterAiRace("Ents", {
     join = Join_Ents,
 
     wall = FourCC('e02I'),
+
+    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
 
 
     diplomat = "loyal",
@@ -61897,7 +61929,11 @@ end
 -- A worker sent to build a shipyard is protected from build-pool recycling until this
 -- tick (it walks far to open water with no incomplete structure beside it en route).
 AiNavalBuildUntil = AiNavalBuildUntil or {}
-AiNavalBuildGrace = AiNavalBuildGrace or 120  -- ticks to walk to nearby coast + raise a shipyard
+AiNavalBuildGrace = AiNavalBuildGrace or 360  -- ticks a shipyard-builder is protected from
+                                              -- recycle. Raised 120->360: with the distance cap
+                                              -- removed a worker may trek far across the map to a
+                                              -- designated water point, so it needs longer before
+                                              -- the build pool reclaims it.
 
 -- Open-water-near-shore shipyard spots around the capital, nearest first. Cached per
 -- bot (the terrain scan is heavy and water doesn't move).
@@ -61929,7 +61965,9 @@ function AiFindNavalSpots(pi, cx, cy)
             if p.x ~= nil then
                 local dx, dy = cx - p.x, cy - p.y
                 local d = SquareRoot(dx * dx + dy * dy)
-                if d <= AiNavalMaxRange and AiTerrainWater(p.x, p.y) then
+                -- No distance cap (user request): try every designated water point,
+                -- nearest-first, regardless of how far it is — the worker will walk to it.
+                if AiTerrainWater(p.x, p.y) then
                     cand[#cand + 1] = { x = p.x, y = p.y, d = d }
                 end
             end
