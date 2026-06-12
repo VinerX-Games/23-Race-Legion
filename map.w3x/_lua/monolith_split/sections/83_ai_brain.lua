@@ -170,6 +170,7 @@ AiTransportTypes = {
     [FourCC('h03R')] = FourCC('h00X'), [FourCC('h011')] = FourCC('h00X'),
     [FourCC('h0D3')] = FourCC('h0D4'), [FourCC('h0HO')] = FourCC('h0D4'),
     [FourCC('h0E7')] = FourCC('h0E5'),
+    [FourCC('h0D7')] = FourCC('h06U'),  -- Goblins' own Верфь (wall) -> Murloc transport
     [FourCC('h0OX')]    = FourCC('h0OX'),  -- pirate transport (use as self)
 }
 AiTransportSet = {}

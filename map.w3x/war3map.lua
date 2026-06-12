@@ -53761,9 +53761,7 @@ RegisterAiRace("Goblins", {
 
     naval = aiNavalTrain_Goblins,
 
-    wall = FourCC('h0D7'),
-
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    wall = FourCC('h0D7'),  -- Goblins' own Верфь (registered in AiTransportTypes); wall IS the shipyard
 
 
     diplomat = "diplomat",
@@ -54063,9 +54061,7 @@ RegisterAiRace("Naga", {
 
     naval = aiNavalTrain_Naga,
 
-    wall = FourCC('n04L'),
-
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    wall = FourCC('n04L'),  -- Naga Serpent's Lair (amphibious race, continentalNaga); no transport shipyard needed
 
     usesWaterPoint = false,
 
@@ -54740,7 +54736,7 @@ RegisterAiRace("JungleTrolls", {
 
     wall = FourCC('h0N2'),
 
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    shipyard = FourCC('h0HO'),  -- orc worker (opeo) -> orc/goblin Верфь
 
 
     diplomat = "balanced",
@@ -55030,7 +55026,7 @@ RegisterAiRace("ForestTrolls", {
 
     wall = FourCC('h0N4'),
 
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    shipyard = FourCC('h0HO'),  -- orc worker (opeo) -> orc/goblin Верфь
 
 
     diplomat = "balanced",
@@ -55260,7 +55256,7 @@ RegisterAiRace("HordeW2", {
 
     wall = FourCC('w20u'),
 
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    shipyard = FourCC('h0HO'),  -- orc worker (opeo) -> orc/goblin Верфь
 
 
     diplomat = "pragmatic",
@@ -55978,7 +55974,7 @@ RegisterAiRace("Alliance", {
 
     wall = FourCC('hgtw'),
 
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    shipyard = FourCC('h011'),  -- human worker (hpea) -> human Верфь
 
 
     diplomat = "loyal",
@@ -56181,7 +56177,7 @@ RegisterAiRace("Bandits", {
 
     wall = FourCC('h03Q'),
 
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    shipyard = FourCC('h011'),  -- human worker (hpea) -> human Верфь
 
 
     diplomat = "traitor",
@@ -56714,7 +56710,7 @@ RegisterAiRace("Demons", {
 
     wall = FourCC('n02C'),
 
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    shipyard = FourCC('h0D8'),  -- night-elf worker (ewsp) -> night-elf Верфь
 
 
     diplomat = "isolationist",
@@ -57137,7 +57133,7 @@ RegisterAiRace("Stromgard", {
 
     wall = FourCC('h0HG'),
 
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    shipyard = FourCC('h011'),  -- human worker (hpea) -> human Верфь
 
 
     diplomat = "pragmatic",
@@ -57357,7 +57353,7 @@ RegisterAiRace("Illidari", {
 
     wall = FourCC('h0EN'),
 
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    shipyard = FourCC('h011'),  -- human worker (hpea) -> human Верфь
 
 
     diplomat = "pragmatic",
@@ -57568,7 +57564,7 @@ RegisterAiRace("Worgen", {
 
     wall = FourCC('h0JT'),
 
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    shipyard = FourCC('h011'),  -- human worker (hpea) -> human Верфь
 
 
     diplomat = "loyal",
@@ -57785,7 +57781,7 @@ RegisterAiRace("Ogres", {
 
     wall = FourCC('o038'),
 
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    shipyard = FourCC('h0HO'),  -- orc worker (opeo) -> orc/goblin Верфь
 
 
     diplomat = "balanced",
@@ -58040,7 +58036,7 @@ RegisterAiRace("Gnomes", {
 
     wall = FourCC('h0FZ'),
 
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    shipyard = FourCC('h011'),  -- human worker (hpea) -> human Верфь
 
 
     diplomat = "diplomat",
@@ -58520,7 +58516,7 @@ RegisterAiRace("Pandarens", {
 
     wall = FourCC('h0P5'),
 
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    shipyard = FourCC('h011'),  -- human worker (hpea) -> human Верфь
 
 
     diplomat = "diplomat",
@@ -60053,7 +60049,7 @@ RegisterAiRace("Ents", {
 
     wall = FourCC('e02I'),
 
-    shipyard = FourCC('h0D1'),  -- standard shared Верфь (wall is not a shipyard)
+    shipyard = FourCC('h0D8'),  -- night-elf worker (ewsp) -> night-elf Верфь
 
 
     diplomat = "loyal",
@@ -60256,6 +60252,7 @@ AiTransportTypes = {
     [FourCC('h03R')] = FourCC('h00X'), [FourCC('h011')] = FourCC('h00X'),
     [FourCC('h0D3')] = FourCC('h0D4'), [FourCC('h0HO')] = FourCC('h0D4'),
     [FourCC('h0E7')] = FourCC('h0E5'),
+    [FourCC('h0D7')] = FourCC('h06U'),  -- Goblins' own Верфь (wall) -> Murloc transport
     [FourCC('h0OX')]    = FourCC('h0OX'),  -- pirate transport (use as self)
 }
 AiTransportSet = {}
