@@ -1014,6 +1014,16 @@ function AiBrainCollectObjectives(pi, wm)
     end
 
     scanGroup(udg_StolicaGroups, "capital")
+    -- udg_StolicaGroups is only populated by MakeCapital; bots that got their capital
+    -- via MakeFakeCapital (the common AI path) set playerCapital[pi] but were NEVER
+    -- added to the group, so it sits EMPTY and the brain saw 0 enemy capitals -> it
+    -- never attacked anyone and nobody got eliminated. Collect capitals from the
+    -- reliable playerCapital[] array too (consider() filters to living enemies).
+    if playerCapital ~= nil then
+        for cpi = 0, 23 do
+            consider(playerCapital[cpi], "capital")
+        end
+    end
     scanGroup(udg_ZahvatBuildings, "capture")
 
     local objs = {}
