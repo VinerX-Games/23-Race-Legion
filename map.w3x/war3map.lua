@@ -48575,16 +48575,59 @@ end
 -- Trigger: CreateAi
 --===========================================================================
 function Trig_CreateAi_Conditions()
-    return S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) >= 1 and S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) <= 24
+    local s = GetEventPlayerChatString()
+    return string.find(s, "^%-ai%s*[%d,%-]+") ~= nil
 end
 function Trig_CreateAi_Actions()
-    -- ??????: "-aiN" ??? "-aiN <????>" (???? ???????????, ?????????: jt, be, scarlet, goblins, naga, horde)
+    -- Formats: -aiN, -aiN race, -aiN,M, -aiN-M, -aiN,M,P-Q (mixed)
     local s = GetEventPlayerChatString()
-    local numStr, raceStr = string.match(s, "^%-ai%s*(%d+)%s*(%S*)")
-    gPi = (tonumber(numStr) or 1) - 1
+    local numsPart, raceStr = string.match(s, "^%-ai%s+([%d,%-]+)%s*(%S*)")
+    if not numsPart then
+        -- fallback: try tight format -aiN (no space)
+        numsPart, raceStr = string.match(s, "^%-ai([%d,%-]+)%s*(%S*)")
+    end
+    if not numsPart then
+        ProbeLogWrite("[CHAT] -ai parse failed: " .. s)
+        return
+    end
     if raceStr == "" then raceStr = nil end
-    ProbeLogWrite("[CHAT] -ai target=" .. tostring(gPi + 1) .. " race=" .. tostring(raceStr or "random"))
-    createAiPlayer(gPi, raceStr)
+    ProbeLogWrite("[CHAT] -ai raw=" .. tostring(numsPart) .. " race=" .. tostring(raceStr or "random"))
+
+    -- Expand items like "2-7" or "5" into individual player numbers (1..24)
+    local items = {}
+    local str = numsPart
+    while #str > 0 do
+        local lo, hi = string.match(str, "^(%d+)%-(%d+)")
+        if lo then
+            local l = tonumber(lo)
+            local h = tonumber(hi)
+            if l < 1 then l = 1 end
+            if h > 24 then h = 24 end
+            if l > h then l, h = h, l end
+            for n = l, h do
+                items[#items + 1] = n
+            end
+            str = string.gsub(str, "^%d+%-%d+", "", 1)
+        else
+            local num = string.match(str, "^(%d+)")
+            if num then
+                local n = tonumber(num)
+                if n >= 1 and n <= 24 then
+                    items[#items + 1] = n
+                end
+                str = string.gsub(str, "^%d+", "", 1)
+            else
+                break
+            end
+        end
+        -- Skip comma/space separator
+        str = string.gsub(str, "^[,%s]+", "")
+    end
+
+    for _, pi in ipairs(items) do
+        ProbeLogWrite("[CHAT] -ai spawning player " .. tostring(pi))
+        createAiPlayer(pi - 1, raceStr)
+    end
 end
 --===========================================================================
 function InitTrig_CreateAi()
