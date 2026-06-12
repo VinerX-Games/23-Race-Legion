@@ -60618,11 +60618,19 @@ function AiEnsureCapital(pi)
     end
     GroupClear(g)
     if pick ~= nil then
-        playerCapital[pi] = pick
-        -- NB: intentionally NOT calling aiCapitalEnter here — it runs a nested
-        -- GroupEnumUnitsInRange/ForGroup, and a reentrant enum during the brain tick
-        -- is an engine-stability risk. We only need the anchor reference.
-        BrainLogTag(pi, "BRAIN", "adopted base anchor (capital) type="
+        -- Apply the FULL player-style capital treatment, not just a reference. The
+        -- original createAiPlayer MakeCapital almost never runs (the seed building
+        -- doesn't exist yet when createAiPlayer fires — buildings spawn async), so bots
+        -- were left with a plain ~1500-HP building as "capital": no 10000 HP, no armor,
+        -- no shared vision, and NOT in udg_StolicaGroups — which also disabled the
+        -- destroy-capital=defeat mechanic for every bot. MakeCapital sets HP 10000,
+        -- armor 30, sight, vision-sharing, registers the StolicaAttacked/death triggers,
+        -- adds to StolicaGroups, and sets playerCapital[pi]. It does NOT call
+        -- aiCapitalEnter (the nested-enum path the old comment warned about), so it is
+        -- safe inside the perceive tick (checkMovingCity/unitShareVisionAll are plain
+        -- player loops, no group enum).
+        MakeCapital(pick)
+        BrainLogTag(pi, "BRAIN", "adopted + MakeCapital base anchor type="
             .. tostring(GetUnitTypeId(pick)))
     end
 end
