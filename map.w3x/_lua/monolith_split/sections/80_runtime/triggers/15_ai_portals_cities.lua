@@ -174,7 +174,23 @@ function BridgeDispatchCommand(op, arg, sequence)
         ProbeLogWrite("[BRIDGE] handle op=" .. tostring(arg) .. " seq=" .. tostring(sequence))
         return
     end
-    -- arg ????? ???? "N" ??? "N:race" (???? ???????????, ?????????)
+    if op == "ally" then
+        local offMode, numsPart = string.match(tostring(arg), "^(off):(.+)$")
+        local enable = true
+        if numsPart then
+            enable = false
+        else
+            numsPart = tostring(arg)
+        end
+        if not numsPart or #numsPart == 0 then
+            error("ally requires player list, e.g. ally:2,3,5-7 or ally:off:2,5")
+        end
+        local players = ParseAllyList(numsPart)
+        SetAllyControl(players, enable)
+        ProbeLogWrite("[BRIDGE] ally " .. (enable and "on" or "off") .. " players=" .. tostring(numsPart))
+        return
+    end
+    -- arg must be "N" or "N:race" (for remaining numeric-target commands)
     local targetStr, raceTok = string.match(tostring(arg), "^(%d+):?(%S*)")
     local target = tonumber(targetStr)
     if target == nil then

@@ -975,107 +975,75 @@ function InitTrig_Visible_Copy()
     TriggerRegisterPlayerChatEvent(gg_trg_Visible_Copy, Player(0), " - v", true)
     TriggerAddAction(gg_trg_Visible_Copy, Trig_Visible_Copy_Actions)
 end
---===========================================================================
--- Trigger: Player2VassalTo1
---===========================================================================
-function Trig_Player2VassalTo1_Actions()
-    SetPlayerAllianceStateBJ(Player(1), Player(0), bj_ALLIANCE_ALLIED_ADVUNITS)
+-- Helper: parse "2,3,5-7" into array of player numbers (1..24)
+function ParseAllyList(s)
+    local items = {}
+    while #s > 0 do
+        local lo, hi = string.match(s, "^(%d+)%-(%d+)")
+        if lo then
+            local l = tonumber(lo); local h = tonumber(hi)
+            if l < 1 then l = 1 end
+            if h > 24 then h = 24 end
+            if l > h then l, h = h, l end
+            for n = l, h do items[#items + 1] = n end
+            s = string.gsub(s, "^%d+%-%d+", "", 1)
+        else
+            local num = string.match(s, "^(%d+)")
+            if num then
+                local n = tonumber(num)
+                if n >= 1 and n <= 24 then items[#items + 1] = n end
+                s = string.gsub(s, "^%d+", "", 1)
+            else break end
+        end
+        s = string.gsub(s, "^[,%s]+", "")
+    end
+    return items
 end
---===========================================================================
-function InitTrig_Player2VassalTo1()
-    gg_trg_Player2VassalTo1=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Player2VassalTo1, Player(0), "b1", true)
-    TriggerAddAction(gg_trg_Player2VassalTo1, Trig_Player2VassalTo1_Actions)
+
+-- Set ally shared control (ALLIED_ADVUNITS) for a list of player numbers (1-based)
+function SetAllyControl(players, enable)
+    for _, pi in ipairs(players) do
+        if enable then
+            SetPlayerAllianceStateBJ(Player(pi - 1), Player(0), bj_ALLIANCE_ALLIED_ADVUNITS)
+        else
+            SetPlayerAllianceStateBJ(Player(pi - 1), Player(0), bj_ALLIANCE_UNALLIED)
+        end
+    end
 end
+
 --===========================================================================
--- Trigger: Player2VassalTo1 Back
+-- Trigger: AllyControl (-ally)
+--  Usage: -ally 2,3,5-7       — share control of players 2,3,5,6,7
+--         -ally off 2,3,5-7   — revoke shared control
+--  Also available via bridge: op="ally", arg="2,3,5-7" / arg="off:2,3,5-7"
+--  Also via live eval: SetAllyControl(ParseAllyList("2,3,5-7"), true)
 --===========================================================================
-function Trig_Player2VassalTo1_Back_Actions()
-    SetPlayerAllianceStateBJ(Player(1), Player(0), bj_ALLIANCE_UNALLIED)
+function Trig_AllyControl_Conditions()
+    local s = GetEventPlayerChatString()
+    return string.find(s, "^%-ally%s") ~= nil
 end
---===========================================================================
-function InitTrig_Player2VassalTo1_Back()
-    gg_trg_Player2VassalTo1_Back=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Player2VassalTo1_Back, Player(0), "b2", true)
-    TriggerAddAction(gg_trg_Player2VassalTo1_Back, Trig_Player2VassalTo1_Back_Actions)
+function Trig_AllyControl_Actions()
+    local s = GetEventPlayerChatString()
+    local offMode, numsPart = string.match(s, "^%-ally%s+([oO][fF][fF])%s+([%d,%-]+)")
+    local enable = true
+    if numsPart then
+        enable = false
+    else
+        numsPart = string.match(s, "^%-ally%s+([%d,%-]+)")
+    end
+    if not numsPart then
+        ProbeLogWrite("[CHAT] -ally parse failed: " .. s)
+        return
+    end
+    local players = ParseAllyList(numsPart)
+    ProbeLogWrite("[CHAT] -ally " .. (enable and "on" or "off") .. " players=" .. tostring(numsPart))
+    SetAllyControl(players, enable)
 end
---===========================================================================
--- Trigger: Player3VassalTo1
---===========================================================================
-function Trig_Player3VassalTo1_Actions()
-    SetPlayerAllianceStateBJ(Player(2), Player(0), bj_ALLIANCE_ALLIED_ADVUNITS)
-end
---===========================================================================
-function InitTrig_Player3VassalTo1()
-    gg_trg_Player3VassalTo1=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Player3VassalTo1, Player(0), "c1", true)
-    TriggerAddAction(gg_trg_Player3VassalTo1, Trig_Player3VassalTo1_Actions)
-end
---===========================================================================
--- Trigger: Player3VassalTo1 Back
---===========================================================================
-function Trig_Player3VassalTo1_Back_Actions()
-    SetPlayerAllianceStateBJ(Player(2), Player(0), bj_ALLIANCE_UNALLIED)
-end
---===========================================================================
-function InitTrig_Player3VassalTo1_Back()
-    gg_trg_Player3VassalTo1_Back=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Player3VassalTo1_Back, Player(0), "c2", true)
-    TriggerAddAction(gg_trg_Player3VassalTo1_Back, Trig_Player3VassalTo1_Back_Actions)
-end
---===========================================================================
--- Trigger: AnyPlayerVassalToFirst
---===========================================================================
-function Trig_AnyPlayerVassalToFirst_Conditions()
-    return S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) >= 1 and S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) <= 24
-end
-function Trig_AnyPlayerVassalToFirst_Actions()
-    local pi
-    pi=S2I(SubStringBJ(GetEventPlayerChatString(), 4, 5)) - 1
-    SetPlayerAllianceStateBJ(Player(pi), Player(0), bj_ALLIANCE_ALLIED_ADVUNITS)
-end
---===========================================================================
-function InitTrig_AnyPlayerVassalToFirst()
-    gg_trg_AnyPlayerVassalToFirst=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_AnyPlayerVassalToFirst, Player(0), " - vs", false)
-    TriggerAddAction(gg_trg_AnyPlayerVassalToFirst, Trig_AnyPlayerVassalToFirst_Actions)
-    TriggerAddCondition(gg_trg_AnyPlayerVassalToFirst, Condition(Trig_AnyPlayerVassalToFirst_Conditions))
-end
---===========================================================================
--- Trigger: AnyPlayerVassalToFirstOff
---===========================================================================
-function Trig_AnyPlayerVassalToFirstOff_Conditions()
-    return S2I(SubStringBJ(GetEventPlayerChatString(), 7, 8)) >= 1 and S2I(SubStringBJ(GetEventPlayerChatString(), 7, 8)) <= 24
-end
-function Trig_AnyPlayerVassalToFirstOff_Actions()
-    local pi
-    pi=S2I(SubStringBJ(GetEventPlayerChatString(), 7, 8)) - 1
-    SetPlayerAllianceStateBJ(Player(pi), Player(0), bj_ALLIANCE_UNALLIED)
-end
---===========================================================================
-function InitTrig_AnyPlayerVassalToFirstOff()
-    gg_trg_AnyPlayerVassalToFirstOff=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_AnyPlayerVassalToFirstOff, Player(0), " - vsoff", false)
-    TriggerAddAction(gg_trg_AnyPlayerVassalToFirstOff, Trig_AnyPlayerVassalToFirstOff_Actions)
-    TriggerAddCondition(gg_trg_AnyPlayerVassalToFirstOff, Condition(Trig_AnyPlayerVassalToFirstOff_Conditions))
-end
---===========================================================================
--- Trigger: P1 Vs P2 P3 P4
---===========================================================================
-function Trig_P1_Vs_P2_P3_P4_Actions()
-    SetPlayerAllianceStateBJ(Player(2), Player(1), bj_ALLIANCE_ALLIED_VISION)
-    SetPlayerAllianceStateBJ(Player(3), Player(1), bj_ALLIANCE_ALLIED_VISION)
-    SetPlayerAllianceStateBJ(Player(1), Player(2), bj_ALLIANCE_ALLIED_VISION)
-    SetPlayerAllianceStateBJ(Player(3), Player(2), bj_ALLIANCE_ALLIED_VISION)
-    SetPlayerAllianceStateBJ(Player(2), Player(3), bj_ALLIANCE_ALLIED_VISION)
-    SetPlayerAllianceStateBJ(Player(1), Player(3), bj_ALLIANCE_ALLIED_VISION)
-    DisplayTextToForce(GetPlayersAll(), "TRIGSTR_5704")
-end
---===========================================================================
-function InitTrig_P1_Vs_P2_P3_P4()
-    gg_trg_P1_Vs_P2_P3_P4=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_P1_Vs_P2_P3_P4, Player(0), "Pv3C", true)
-    TriggerAddAction(gg_trg_P1_Vs_P2_P3_P4, Trig_P1_Vs_P2_P3_P4_Actions)
+function InitTrig_AllyControl()
+    gg_trg_AllyControl = CreateTrigger()
+    TriggerRegisterPlayerChatEvent(gg_trg_AllyControl, Player(0), "-ally", false)
+    TriggerAddCondition(gg_trg_AllyControl, Condition(Trig_AllyControl_Conditions))
+    TriggerAddAction(gg_trg_AllyControl, Trig_AllyControl_Actions)
 end
 --===========================================================================
 -- Trigger: ResO
