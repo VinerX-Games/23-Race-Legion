@@ -3300,8 +3300,8 @@ end
 ---@param pi integer
 ---@return nothing
 function turnOffAi(pi)
-	if  not udg_AiControl[gPi] then
-		return 
+	if  not udg_AiControl[pi] then
+		return
 	end
 	
 	udg_AiControl[pi] = false
@@ -4550,63 +4550,39 @@ function TryBuy(p, ePoints)
 		local invSize = UnitInventorySize(u)
 		if invSize <= 0 then invSize = 6 end
 
-		-- Don't destroy items the hero already owns. If the inventory is
-		-- genuinely full we just skip the purchase this tick — the hero will
-		-- have another chance when a slot opens naturally.
 		if UnitInventoryCount(u) >= invSize then
 			u = nil
 			return
 		end
 
-		gInt = GetRandomInt(1, 6)
-		if ePoints < 35 then
-			if gInt == 1 then
-				itemId = FourCC('I02S')
-			elseif gInt == 2 then
-				itemId = FourCC('I030')
-			elseif gInt == 3 then
-				itemId = FourCC('I02Z')
-			elseif gInt == 4 then
-				itemId = FourCC('I02Y')
-			elseif gInt == 5 then
-				itemId = FourCC('I02T')
-			elseif gInt == 6 then
-				itemId = FourCC('I02X')
-			end
-		elseif ePoints < 150 then
-			
-			if gInt == 1 then
-				itemId = FourCC('I010')
-			elseif gInt == 2 then
-				itemId = FourCC('I01A')
-			elseif gInt == 3 then
-				itemId = FourCC('I02Z')
-			elseif gInt == 4 then
-				itemId = FourCC('I01P')
-			elseif gInt == 5 then
-				itemId = FourCC('I002')
-			elseif gInt == 6 then
-				itemId = FourCC('I003')
-			end
-		else
-			
-			if gInt == 1 then
-				itemId = FourCC('I00W')
-			elseif gInt == 2 then
-				itemId = FourCC('I030')
-			elseif gInt == 3 then
-				itemId = FourCC('I011')
-			elseif gInt == 4 then
-				itemId = FourCC('I00F')
-			elseif gInt == 5 then
-				itemId = FourCC('I017')
-			elseif gInt == 6 then
-				itemId = FourCC('I01C')
+		-- Build set of item types the hero already owns (manual scan avoids
+		-- GetInventoryIndexOfItemTypeBJ bugs and WC3's no-duplicate-items rule)
+		local owned = {}
+		for s = 0, invSize - 1 do
+			local slotItem = UnitItemInSlot(u, s)
+			if slotItem ~= nil then
+				owned[GetItemTypeId(slotItem)] = true
 			end
 		end
-		
-		
-		if itemId ~= nil and GetInventoryIndexOfItemTypeBJ(u, itemId) == 0 then
+
+		-- Collect available items from the tier (skip already-owned)
+		local available = {}
+		local tierItems
+		if ePoints < 35 then
+			tierItems = {FourCC('I02S'), FourCC('I030'), FourCC('I02Z'), FourCC('I02Y'), FourCC('I02T'), FourCC('I02X')}
+		elseif ePoints < 150 then
+			tierItems = {FourCC('I010'), FourCC('I01A'), FourCC('I02Z'), FourCC('I01P'), FourCC('I002'), FourCC('I003')}
+		else
+			tierItems = {FourCC('I00W'), FourCC('I030'), FourCC('I011'), FourCC('I00F'), FourCC('I017'), FourCC('I01C')}
+		end
+		for _, tid in ipairs(tierItems) do
+			if not owned[tid] then
+				available[#available + 1] = tid
+			end
+		end
+
+		if #available > 0 then
+			itemId = available[GetRandomInt(1, #available)]
 			if GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) >= itemGoldCost then
 				local it = UnitAddItemById(u, itemId)
 				if it ~= nil and UnitHasItem(u, it) then
@@ -8328,14 +8304,18 @@ end
 ---@return nothing
 function startSilitids(pi)
     local p = Player(pi)
-    CreateNUnitsAtLoc(8, FourCC('e01G'), p, udg_LocalPoint, bj_UNIT_FACING)
+    -- 12 starting drones (was 8): Silitid builders only replenish via the slow egg-
+    -- spawner (shared with army production), so the early build pool was starved and
+    -- structures crawled. A bigger seed lets BrainBuild run several sites in parallel
+    -- until the first extra hives come online. See [[ai-brain-mode-production]].
+    CreateNUnitsAtLoc(12, FourCC('e01G'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
     CreateNUnitsAtLoc(1, FourCC('e01H'), p, udg_LocalPoint, bj_UNIT_FACING)
     local hive = GetLastCreatedUnit()
     GroupAddUnit(udg_Ai_units[pi], hive)
     GroupAddUnit(udg_Ai_buildings[pi], hive)
-    NumberSet(pi, FourCC('e01G'), 8)
+    NumberSet(pi, FourCC('e01G'), 12)
     NumberSet(pi, FourCC('e01H'), 1)
     AiData[pi][StringHash("Race")] = "SL"
     SetPlayerTechResearchedSwap(FourCC('R0BV'), 1, p)
@@ -10278,6 +10258,11 @@ function ClearPlayer(p)
 	SetPlayerAbilityAvailable(Player(pi), FourCC('A0IQ'), true)
 	ClearEc(pi)
 	turnOffAi(pi)
+	-- The brain round-robin (PlayerArmy → AiBrainArmyTick) iterates AiBrainBotList,
+	-- which turnOffAi does NOT touch (it only drops the legacy udg_Bots membership).
+	-- Without this, a defeated bot keeps getting perceive/produce/build ticks every
+	-- cycle — wasted CPU and a chance for AiEnsureCapital to re-adopt a stray unit.
+	if AiBrainBotListRemove ~= nil then AiBrainBotListRemove(pi) end
 	UpdateGraf(pi)
 	playerCapital[pi] = nil
 	ArmyExp[pi] = 0.0
@@ -41801,7 +41786,14 @@ end
 --===========================================================================
 function Trig_Del1FromTable_C_Actions()
     local i= GetPlayerId(udg_LocalPlayer)
-    MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i + 1]))
+    -- Guard: MultiboardItemOwnerIndex[i] is only populated for players who have a
+    -- multiboard row (picked a race / are tracked). For an untracked player id this
+    -- was nil, so `nil * 2 + 1` threw "arithmetic on a nil value" every time the
+    -- reinforcement triggers fired. udg_LocalPlayer / udg_UnitsCount are plain globals
+    -- (identical on all clients), so the early return is deterministic and desync-safe.
+    local oi = MultiboardItemOwnerIndex[i]
+    if oi == nil then return end
+    MultiboardSetItemValue(MultiboardItem[oi * 2 + 1], I2S(udg_UnitsCount[i + 1] or 0))
     i=0
 end
 --===========================================================================
@@ -57645,12 +57637,21 @@ RegisterAiRace("Worgen", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
+            -- Real weapon/armor research (was Abds placeholders = no-ops, so Worgen's
+            -- grades stuck at 0 and its army never upgraded). h0IQ is the blacksmith;
+            -- R0EM..R0EP are 6-level, R0EQ is 3-level. Tier-2 forges h0IR/h0IS unlock
+            -- the higher upgrades once tier2 is reached.
+            { at = 17, action = "research", rows = {
+                {FourCC('h0IQ'), FourCC('R0EM'), 6}, {FourCC('h0IQ'), FourCC('R0EN'), 6},
+                {FourCC('h0IQ'), FourCC('R0EO'), 6}, {FourCC('h0IQ'), FourCC('R0EP'), 6},
+                {FourCC('h0IQ'), FourCC('R0EQ'), 3},
+            }},
 
-                { {FourCC('h0IQ'),FourCC('Abds'),6} },
-
-                { {FourCC('h0IO'),FourCC('Abds'),6} },
-
+            { at = 35, gate = "tier2", action = "research", rows = {
+                {FourCC('h0IR'), FourCC('R0IP'), 3}, {FourCC('h0IR'), FourCC('R0F6'), 3},
+                {FourCC('h0IR'), FourCC('R0F5'), 3}, {FourCC('h0IR'), FourCC('R0EZ'), 3},
+                {FourCC('h0IS'), FourCC('R0F1'), 3}, {FourCC('h0IS'), FourCC('R0F0'), 3},
+                {FourCC('h0IS'), FourCC('R0F2'), 3},
             }},
 
             { at = 20, action = "tryBuy" },
@@ -58300,6 +58301,18 @@ RegisterAiRace("Silitids", {
     },
 
     production = {
+
+        -- Hive e01H is the economic ENGINE: each one runs the egg-spawner (e01I eggs ->
+        -- drones + army). Listing it as a production key makes BrainBuild treat it as a
+        -- PASS-1 priority building (built before defensive/eco rows) so the egg->drone->
+        -- army supply ramps. Without this the hive sat in low-priority PASS 2 and the
+        -- drone count stayed ~8-9 (build pool starved, few structures). e01R = Swarm
+        -- Mother, the only thing a hive trains directly (kept low so it's not spammed).
+        [FourCC('e01H')] = {
+
+            {FourCC('e01R'), 1, limit = 2},
+
+        },
 
         [FourCC('o015')] = {
 
@@ -60386,6 +60399,12 @@ AiBrainLandingEvery     = AiBrainLandingEvery     or 16  -- landing tick every N
 AiBrainLandingRadius    = AiBrainLandingRadius    or 800 -- load/unload radius
 AiBrainLandingMaxTransports = AiBrainLandingMaxTransports or 6  -- max transports to load per tick
 AiBrainMinArmy = AiBrainMinArmy or 50  -- train regardless of ratio until total army reaches this
+-- R16: army-SIZE target, decoupled from current size. The old code used
+-- ratioBase = max(totalMil, AiBrainMinArmy); once army passed MinArmy the per-unit
+-- targets summed to exactly the *current* total, so net growth pressure vanished and
+-- every army plateaued at ~MinArmy. We now drive composition toward an absolute
+-- desired size so deficits persist until the bot is actually big (food-gated below).
+AiBrainDesiredArmy = AiBrainDesiredArmy or 120  -- composition is filled up to this many units (food permitting)
 
 -- R8 fix: udg_WaterPoints was never initialized → BrainNavalDecision skipped entirely.
 -- Hardcode the water points from GoToWaterPoint (97_ai_water.lua) so shipyards get built.
@@ -61803,9 +61822,24 @@ function BrainProduce(pi, wm, race)
 
     local totalMil = wm.armyCount or 0
     if totalMil < 1 then totalMil = 1 end
-    -- R12: when army is small, use AiBrainMinArmy as baseline so proportions
-    -- don't stall growth. E.g. 2 footmen out of 7 army = 28% looks ok but 2 < 30*0.09=2.7.
-    local ratioBase = math.max(totalMil, AiBrainMinArmy)
+    -- R16: drive composition toward an absolute desired size, NOT toward the current
+    -- size. ratioBase = max(totalMil, AiBrainDesiredArmy) keeps per-unit targets above
+    -- the current counts until the army actually reaches DesiredArmy, so growth never
+    -- stalls at MinArmy. Food headroom is the real ceiling (gated just below).
+    local ratioBase = math.max(totalMil, AiBrainDesiredArmy)
+
+    -- R16: food gate. If the bot is supply-capped there is no point spamming train
+    -- orders (they just fail). Stop military production when food headroom is gone;
+    -- workers were already handled above and are cheap. A small margin lets a farm/
+    -- upkeep building finish before we resume.
+    do
+        local pl = Player(pi)
+        local foodCap  = GetPlayerState(pl, PLAYER_STATE_RESOURCE_FOOD_CAP)
+        local foodUsed = GetPlayerState(pl, PLAYER_STATE_RESOURCE_FOOD_USED)
+        if foodCap > 0 and foodUsed >= foodCap then
+            return ordered  -- supply-capped: skip military this tick
+        end
+    end
 
     -- R15: only distribute ratios across UNITS THAT CAN ACTUALLY BE TRAINED.
     -- Most races have 1-2 trainable units out of 5-13 listed — the rest require
@@ -62474,32 +62508,44 @@ function BrainLandingTick(pi, p, wm)
                 IssuePointOrder(u, "move", tx, ty)
                 processed = processed + 1
             end
-        elseif tx ~= nil and (st == nil or st.phase == "idle") and order == 0 then
-            -- Idle transport: load nearby army
+        elseif tx ~= nil and (st == nil or st.phase == "idle") then
+            -- Idle/empty transport: load nearby army. If no army is within the load
+            -- radius, the transport must SAIL TO the army first — previously it sat at
+            -- its home port forever while the army stalled at a different shore, so a
+            -- pickup never happened and no landing was ever observed.
+            local loadedCnt = 0
             if army ~= nil then
-                local loaded = false
                 local asz = BlzGroupGetSize(army)
                 for j = 0, asz - 1 do
+                    if loadedCnt >= 6 then break end
                     local a = BlzGroupUnitAt(army, j)
                     if a == nil then goto nextArmy end
                     if GetUnitState(a, UNIT_STATE_LIFE) <= 0.405 then goto nextArmy end
                     if IsUnitType(a, UNIT_TYPE_HERO) then goto nextArmy end
-                    local ao = GetUnitCurrentOrder(a)
-                    if ao ~= 0 and ao ~= 851972 and ao ~= 851976 then goto nextArmy end
+                    -- Load whoever is near, regardless of their current order — "load"
+                    -- interrupts it cleanly. (The old order whitelist excluded the very
+                    -- attack-move order the shore-stalled army was actually holding.)
                     local ax, ay = GetUnitX(a), GetUnitY(a)
                     local adx = ax - ux; local ady = ay - uy
                     if adx * adx + ady * ady < AiBrainLandingRadius * AiBrainLandingRadius then
                         IssueTargetOrder(a, "load", u)
-                        loaded = true
-                        -- Stop after loading 6 units per transport
-                        if j - i >= 6 then break end
+                        loadedCnt = loadedCnt + 1
                     end
                     ::nextArmy::
                 end
-                if loaded then
-                    AiLandingState[u] = { phase = "loaded", targetX = tx, targetY = ty }
-                    processed = processed + 1
-                end
+            end
+            if loadedCnt > 0 then
+                AiLandingState[u] = { phase = "loaded", targetX = tx, targetY = ty }
+                BrainLogTag(pi, "LAND", "transport loaded " .. tostring(loadedCnt)
+                    .. " -> sail (" .. tostring(R2I(tx)) .. "," .. tostring(R2I(ty)) .. ")")
+                processed = processed + 1
+            elseif (order == 0 or order == 851986 or order == 851971) and wm.cx ~= nil then
+                -- No army in range: sail toward the army's gathering point to fetch it.
+                IssuePointOrder(u, "move", wm.cx, wm.cy)
+                AiLandingState[u] = { phase = "idle" }
+                BrainLogTag(pi, "LAND", "transport sailing to army pickup ("
+                    .. tostring(R2I(wm.cx)) .. "," .. tostring(R2I(wm.cy)) .. ")")
+                processed = processed + 1
             end
         elseif st ~= nil and st.phase == "done" and order == 0 then
             -- Empty after unload: return to port

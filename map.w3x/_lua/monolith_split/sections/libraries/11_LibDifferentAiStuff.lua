@@ -303,63 +303,39 @@ function TryBuy(p, ePoints)
 		local invSize = UnitInventorySize(u)
 		if invSize <= 0 then invSize = 6 end
 
-		-- Don't destroy items the hero already owns. If the inventory is
-		-- genuinely full we just skip the purchase this tick — the hero will
-		-- have another chance when a slot opens naturally.
 		if UnitInventoryCount(u) >= invSize then
 			u = nil
 			return
 		end
 
-		gInt = GetRandomInt(1, 6)
-		if ePoints < 35 then
-			if gInt == 1 then
-				itemId = FourCC('I02S')
-			elseif gInt == 2 then
-				itemId = FourCC('I030')
-			elseif gInt == 3 then
-				itemId = FourCC('I02Z')
-			elseif gInt == 4 then
-				itemId = FourCC('I02Y')
-			elseif gInt == 5 then
-				itemId = FourCC('I02T')
-			elseif gInt == 6 then
-				itemId = FourCC('I02X')
-			end
-		elseif ePoints < 150 then
-			
-			if gInt == 1 then
-				itemId = FourCC('I010')
-			elseif gInt == 2 then
-				itemId = FourCC('I01A')
-			elseif gInt == 3 then
-				itemId = FourCC('I02Z')
-			elseif gInt == 4 then
-				itemId = FourCC('I01P')
-			elseif gInt == 5 then
-				itemId = FourCC('I002')
-			elseif gInt == 6 then
-				itemId = FourCC('I003')
-			end
-		else
-			
-			if gInt == 1 then
-				itemId = FourCC('I00W')
-			elseif gInt == 2 then
-				itemId = FourCC('I030')
-			elseif gInt == 3 then
-				itemId = FourCC('I011')
-			elseif gInt == 4 then
-				itemId = FourCC('I00F')
-			elseif gInt == 5 then
-				itemId = FourCC('I017')
-			elseif gInt == 6 then
-				itemId = FourCC('I01C')
+		-- Build set of item types the hero already owns (manual scan avoids
+		-- GetInventoryIndexOfItemTypeBJ bugs and WC3's no-duplicate-items rule)
+		local owned = {}
+		for s = 0, invSize - 1 do
+			local slotItem = UnitItemInSlot(u, s)
+			if slotItem ~= nil then
+				owned[GetItemTypeId(slotItem)] = true
 			end
 		end
-		
-		
-		if itemId ~= nil and GetInventoryIndexOfItemTypeBJ(u, itemId) == 0 then
+
+		-- Collect available items from the tier (skip already-owned)
+		local available = {}
+		local tierItems
+		if ePoints < 35 then
+			tierItems = {FourCC('I02S'), FourCC('I030'), FourCC('I02Z'), FourCC('I02Y'), FourCC('I02T'), FourCC('I02X')}
+		elseif ePoints < 150 then
+			tierItems = {FourCC('I010'), FourCC('I01A'), FourCC('I02Z'), FourCC('I01P'), FourCC('I002'), FourCC('I003')}
+		else
+			tierItems = {FourCC('I00W'), FourCC('I030'), FourCC('I011'), FourCC('I00F'), FourCC('I017'), FourCC('I01C')}
+		end
+		for _, tid in ipairs(tierItems) do
+			if not owned[tid] then
+				available[#available + 1] = tid
+			end
+		end
+
+		if #available > 0 then
+			itemId = available[GetRandomInt(1, #available)]
 			if GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) >= itemGoldCost then
 				local it = UnitAddItemById(u, itemId)
 				if it ~= nil and UnitHasItem(u, it) then
