@@ -272,3 +272,152 @@ AiCuratedNavalSpots = {
     Pandaria = { {-10112,-13632}, {-7680,-10880}, {-7744,-10240}, {-3328,-10880}, {-1216,-12416}, {1152,-20608}, {-2816,-22912}, {-8768,-20160}, {-896,-14720}, {-9152,-17024}, {-832,-13376}, {-2240,-11072}, {640,-22272}, {-640,-12736}, {-4352,-22656}, {-10112,-10624}, {-3840,-22208}, {-2112,-22912}, {-10048,-9920}, {-2944,-11456}, {64,-21952}, {1664,-20928} },
     BrokenIsles = { {256,11584}, {768,12032}, {1856,12608}, {2432,1344}, {-1088,3520}, {1024,1728} },
 }
+
+-- ====================================================================
+-- WEB-PORTAL MASS-TELEPORT (sell-based network), used by the AI for BIG armies.
+-- A walk-on waygate funnels one unit at a time and a large blob collision-jams
+-- on the gate tile (observed: 173-unit Horde army stuck at the Dark Portal, 0
+-- crossings). The map's real mass-movement is the sell network: buying h0P0 at a
+-- portal shop makes it cast "web" -> a per-portal SPELL_FINISH trigger calls
+-- TeleportUnits(portal, destRect, R), moving everything within R to destRect.
+-- We reuse the SAME (portal -> destRect, radius) data but teleport ONLY the bot's
+-- own eligible army (SetUnitPosition), so we don't drag neutrals/enemies and we
+-- avoid the map TeleportUnits' bare-function boolexpr fault. See [[portal-sell-teleport]].
+--
+-- Spec rows are {portalGlobalSuffix, destRectName, radius}. Resolved lazily once
+-- (preplaced units/rects are static) into AiWebPortals with src/dst continents.
+AiWebPortalSpecs = {
+    {"n003_0044","UndecityOutTop",800}, {"n003_0046","UndecityOutBot",800}, {"n003_0050","UndercityInR",800},
+    {"n003_0051","UndercityInTop",800}, {"n003_0516","OrgrimmarTopIn",800}, {"n003_0514","OrgrimmarBotIn",800},
+    {"n003_0517","OrgrimmarTopOut",800}, {"n003_0518","OrgrimmarBotOut",800}, {"n003_0521","DeadminersOut",800},
+    {"n003_0420","DeadminerIn",800}, {"n003_0943","DarkM_4",1200}, {"n003_0942","DarkM_3",1200},
+    {"n003_0940","DarkM_1",1200}, {"n003_0941","DarkM_2",1200}, {"n01Y_0889","ED_1",750},
+    {"n01Y_1012","ED_1_B",750}, {"n01Y_0934","ED_2",750}, {"n01Y_1013","ED_2_b",750},
+    {"n01Y_0896","ED_3",750}, {"n01Y_1014","ED_3_b",750}, {"n01Y_1015","ED_4_b",750},
+    {"n01Y_0897","ED_4",750}, {"n01Z_1016","ED_5",750}, {"n01Z_1017","ED_5_B",750},
+    {"n006_0023","DarkPortal1",1200}, {"n006_0438","DarkPortal2",1200}, {"n001_0845","Region_009",1200},
+    {"n04O_0136","Region_010",1200}, {"n00W_0442","EKportalAlterac",1200}, {"n00W_0589","OutlandNagrand",1200},
+    {"n00W_0446","Region_013",1200}, {"n001_0847","Region_014",1200}, {"n065_0125","ArgusShip",1200},
+    {"n00W_0848","Broken_Island",1200}, {"n01B_0849","Region_017",1200}, {"n01B_0850","Region_018",1200},
+    {"n003_0098","Nord_5",1200}, {"n003_0060","AzNer_5",650}, {"n003_0097","AzNer_2",1200},
+    {"n003_1004","Nord4",1200}, {"n003_1002","Nord_1",1200}, {"n003_0995","AzNer1",1200},
+    {"n01Y_0578","Teldrasil",1200}, {"n01Y_0580","Darnas",1200}, {"n003_0118","QtunIn",1200},
+    {"n003_0117","QtunIn2",1200}, {"n003_0124","QtunOut",1200}, {"n003_0123","QtunOu2",1200},
+    {"n003_0308","MarodonOut",900}, {"n003_0311","MarodonOut2",900}, {"n003_0305","MarodonIn",900},
+    {"n003_0314","MarodonIn2",900}, {"n003_0025","GnomreganIn",1200}, {"n003_0018","GnomreganOut",1200},
+    {"n003_0024","Stalgorn",1200}, {"n003_0019","StalgornOut",1200}, {"n003_0028","TrainIn",1200},
+    {"n003_0149","TrainOut",1200}, {"n003_0021","GrimBatolOut",1200}, {"n003_0022","GrimBatolIn",1200},
+    {"n003_0027","UldamanIn",1200}, {"n003_0020","UldamanOut",1200}, {"n003_0126","NaxOut",1200},
+    {"n003_0588","DalaranOut",1200}, {"n060_0350","Silvermoon",1200}, {"n060_0287","QuelIsland",1200},
+    {"n003_0090","TurtleOut",800},
+}
+
+AiWebPortals = nil          -- resolved cache: list of {unit,rect,x,y,radius,srcCont,dstCont}
+AiWebPortalGraph = nil      -- adjacency over the WEB network: [srcCont][dstCont] = true
+AiWebPortalCast = AiWebPortalCast or {}  -- [unit handle string] = tick of last teleport (cooldown)
+
+function AiBuildWebPortalCache()
+    if AiWebPortals ~= nil then return end
+    AiWebPortals = {}
+    AiWebPortalGraph = {}
+    for _, spec in ipairs(AiWebPortalSpecs) do
+        local u = _G["gg_unit_" .. spec[1]]
+        local r = _G["gg_rct_" .. spec[2]]
+        if u ~= nil and r ~= nil then
+            local px, py = GetUnitX(u), GetUnitY(u)
+            local sc = AiContinentOf(px, py)
+            local dc = AiContinentOf(GetRectCenterX(r), GetRectCenterY(r))
+            if sc ~= nil and dc ~= nil and sc ~= dc then
+                AiWebPortals[#AiWebPortals + 1] = {
+                    unit = u, rect = r, x = px, y = py,
+                    radius = spec[3], srcCont = sc, dstCont = dc,
+                }
+                local nb = AiWebPortalGraph[sc]
+                if nb == nil then nb = {}; AiWebPortalGraph[sc] = nb end
+                nb[dc] = true
+            end
+        end
+    end
+    ProbeLogWrite("[WEBPORT] cache built: " .. tostring(#AiWebPortals) .. " cross-zone web-portals")
+end
+
+-- BFS over the WEB-portal network (NOT the waygate graph) so every hop is guaranteed
+-- to have an actual web-portal we can fire. Returns the continent path {src,...,dst} or nil.
+---@return table|nil
+function AiWebRoute(src, dst)
+    if src == nil or dst == nil then return nil end
+    if src == dst then return { src } end
+    AiBuildWebPortalCache()
+    local q = { { node = src, path = { src } } }
+    local visited = { [src] = true }
+    local head = 1
+    while head <= #q do
+        local cur = q[head]; head = head + 1
+        local nb = AiWebPortalGraph[cur.node]
+        if nb ~= nil then
+            for n, _ in pairs(nb) do
+                if n == dst then
+                    local p = {}
+                    for _, v in ipairs(cur.path) do p[#p + 1] = v end
+                    p[#p + 1] = dst
+                    return p
+                end
+                if not visited[n] then
+                    visited[n] = true
+                    local np = {}
+                    for _, v in ipairs(cur.path) do np[#np + 1] = v end
+                    np[#np + 1] = n
+                    q[#q + 1] = { node = n, path = np }
+                end
+            end
+        end
+    end
+    return nil
+end
+
+-- Nearest web-portal on srcCont whose dest == dstCont, to (x,y). nil if none.
+---@return table|nil
+function AiFindWebPortal(srcCont, dstCont, x, y)
+    AiBuildWebPortalCache()
+    local best, bestd = nil, nil
+    for _, wp in ipairs(AiWebPortals) do
+        if wp.srcCont == srcCont and wp.dstCont == dstCont
+           and GetUnitState(wp.unit, UNIT_STATE_LIFE) > 0.405 then
+            local dx, dy = x - wp.x, y - wp.y
+            local d = dx * dx + dy * dy
+            if bestd == nil or d < bestd then best, bestd = wp, d end
+        end
+    end
+    return best
+end
+
+-- Teleport ONLY player pi's eligible army units within `radius` of the portal into
+-- `rect` (scattered). Skips structures, peons (harvesters), and waygate units. Caps
+-- at 150 like the map's native. Returns count moved.
+---@return integer
+function AiPortalTeleport(pi, portal, rect, radius)
+    local army = udg_Ai_army and udg_Ai_army[pi]
+    if army == nil then return 0 end
+    local px, py = GetUnitX(portal), GetUnitY(portal)
+    local minx, maxx = GetRectMinX(rect), GetRectMaxX(rect)
+    local miny, maxy = GetRectMinY(rect), GetRectMaxY(rect)
+    local r2 = radius * radius
+    local moved = 0
+    local sz = BlzGroupGetSize(army)
+    local i = 0
+    while i < sz and moved < 150 do
+        local u = BlzGroupUnitAt(army, i)
+        i = i + 1
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+           and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
+           and not IsUnitType(u, UNIT_TYPE_PEON)
+           and GetUnitAbilityLevel(u, FourCC('Awrp')) == 0 then
+            local dx, dy = GetUnitX(u) - px, GetUnitY(u) - py
+            if dx * dx + dy * dy <= r2 then
+                SetUnitPosition(u, GetRandomReal(minx, maxx), GetRandomReal(miny, maxy))
+                moved = moved + 1
+            end
+        end
+    end
+    return moved
+end

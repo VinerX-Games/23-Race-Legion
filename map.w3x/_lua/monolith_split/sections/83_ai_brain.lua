@@ -2616,6 +2616,102 @@ function BrainFocus(pi, p, wm)
 end
 
 -- ====================================================================
+-- BrainWebPortalTick: mass-teleport a BIG gathered army across continents via the
+-- sell-portal network instead of trickling it through a walk-on waygate (which a
+-- large blob collision-jams on — observed 173-unit Horde army stuck @ Dark Portal,
+-- 0 crossings). BrainFocus already MOVES cross-continent units onto the co-located
+-- waygate, so they gather at the web-portal naturally; once enough are within its
+-- teleport radius we fire AiPortalTeleport (own-army only). See [[portal-sell-teleport]].
+-- ====================================================================
+AiWebTpEnabled    = (AiWebTpEnabled == nil) and true or AiWebTpEnabled
+AiWebMinArmy      = AiWebMinArmy      or 16   -- only mass-TP armies this big (small ones just walk)
+AiWebGatherFrac   = AiWebGatherFrac   or 0.40 -- fire once this fraction of the army is at the portal
+AiWebMinGathered  = AiWebMinGathered  or 10   -- ...but never fewer than this many units
+AiWebCooldownTicks = AiWebCooldownTicks or 16 -- per-portal cooldown (lets stragglers re-gather)
+
+---@param pi integer
+---@param p player
+---@param wm table
+function BrainWebPortalTick(pi, p, wm)
+    if not AiWebTpEnabled then return end
+    if wm == nil or wm.defendHome then return end   -- under home siege: stay and defend
+    local army = udg_Ai_army[pi]
+    if army == nil then return end
+
+    -- Where do we want to go? The current single-front objective.
+    local focus = AiBrainPickFocus(pi, wm)
+    if focus == nil then return end
+    local oc = AiContinentOf(focus.x, focus.y)
+    if oc == nil then return end
+
+    -- Bucket the army's military units by the continent/zone they're standing on. A split
+    -- army (e.g. half stranded in a dungeon, half on the mainland) gets each cluster handled
+    -- on its own, so a group trapped behind a jammy walk-on waygate is teleported out toward
+    -- the objective hop by hop.
+    local sz = BlzGroupGetSize(army)
+    local buckets = {}   -- cont -> {n, sumx, sumy}
+    local mil = 0
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(army, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+           and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) then
+            local ux, uy = GetUnitX(u), GetUnitY(u)
+            local c = AiContinentOf(ux, uy)
+            if c ~= nil then
+                local b = buckets[c]
+                if b == nil then b = { n = 0, sx = 0.0, sy = 0.0 }; buckets[c] = b end
+                b.n = b.n + 1; b.sx = b.sx + ux; b.sy = b.sy + uy
+                mil = mil + 1
+            end
+        end
+    end
+    if mil < AiWebMinArmy then return end            -- small army: walk-on is fine
+
+    local now = AiBrainTickCounter or 0
+    -- Consider the biggest off-objective cluster first (most units to unstick).
+    local bestCont, bestN
+    for c, b in pairs(buckets) do
+        if c ~= oc and (bestN == nil or b.n > bestN) then bestCont, bestN = c, b.n end
+    end
+    if bestCont == nil then return end               -- everyone already on the objective continent
+    local b = buckets[bestCont]
+    if b.n < AiWebMinGathered then return end        -- too few here to bother mass-TPing
+    local cx, cy = b.sx / b.n, b.sy / b.n
+
+    -- Route this cluster toward the objective over the WEB network so the next hop always
+    -- has a real portal; pick the nearest such portal to the cluster centroid.
+    local rt = AiWebRoute(bestCont, oc)
+    local nextCont = (rt ~= nil and #rt >= 2) and rt[2] or oc
+    local wp = AiFindWebPortal(bestCont, nextCont, cx, cy)
+    if wp == nil then return end
+
+    -- Per-portal cooldown so we don't re-TP the same trickle every tick.
+    local key = tostring(wp.unit)
+    local last = AiWebPortalCast[key]
+    if last ~= nil and (now - last) < AiWebCooldownTicks then return end
+
+    -- Only fire once a real chunk of this cluster has gathered within the portal's radius.
+    local need = math.max(AiWebMinGathered, math.ceil(b.n * AiWebGatherFrac))
+    local within, r2 = 0, wp.radius * wp.radius
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(army, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+           and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) then
+            local dx, dy = GetUnitX(u) - wp.x, GetUnitY(u) - wp.y
+            if dx * dx + dy * dy <= r2 then within = within + 1 end
+        end
+    end
+    if within < need then return end                 -- still gathering; BrainFocus keeps herding them
+
+    local moved = AiPortalTeleport(pi, wp.unit, wp.rect, wp.radius)
+    AiWebPortalCast[key] = now
+    if moved > 0 then
+        BrainLogTag(pi, "BRAINWEB", "mass-TP " .. tostring(moved) .. " units "
+            .. tostring(bestCont) .. " -> " .. tostring(wp.dstCont) .. " (obj " .. tostring(oc) .. ")")
+    end
+end
+
+-- ====================================================================
 -- BrainNavalFocus: iterate udg_Ai_navy[pi] (local group, no enum), send
 -- idle naval units via TryAttackN. Replaces PlayerNavy + TimerSmall4.
 -- ====================================================================
@@ -3113,6 +3209,13 @@ function AiBrainArmyTickInner(pi, p)
 
     BrainCaptureSquad(pi, p, wm)
     lap("capsquad")
+
+    -- Mass-teleport a big gathered army across continents (sell-portal network) instead
+    -- of jamming it on a walk-on waygate. Runs in both single-front and FSM modes.
+    if (wm.tick % AiFocusEvery) == 0 then
+        BrainWebPortalTick(pi, p, wm)
+    end
+    lap("webtp")
 
     if (wm.tick % 4) == 0 then
         BrainNavalFocus(pi, p)
