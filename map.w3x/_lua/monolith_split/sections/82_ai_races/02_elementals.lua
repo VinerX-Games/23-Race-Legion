@@ -1,0 +1,2 @@
+-- Legacy split file kept as a stub.
+-- Active AI race files are listed in manifest.json.

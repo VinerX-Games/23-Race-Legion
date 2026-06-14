@@ -5,14 +5,14 @@
 | Инструмент | Команда |
 |---|---|
 | Сборка Lua-скрипта | `python build_map_lua.py` |
-| Проверка синтаксиса | `python -c "from luaparser import ast; ast.parse(open('map.w3x/war3map.lua','rb').read())"` |
+| Проверка синтаксиса | `python -c "from pathlib import Path; from luaparser import ast; ast.parse(Path('map.w3x/war3map.lua').read_text(encoding='utf-8')); print('OK')"` |
 | Запуск карты | `HiveWE_cli run-map --map map.w3x --warcraft "F:/Games/Warcraft III"` |
-| Автотест с логами | `HiveWE_cli probe-map --map map.w3x --warcraft "F:/..." --click-after 60 --wait 220 --bridge-script "140:create_ai:2" --probe-log 23Race_probe_log.pld` |
+| Автотест с логами | `HiveWE_cli probe-map --map map.w3x --warcraft "F:/..." --click-after 60 --wait 300 --bridge-script "170:create_ai:2" --probe-log 23Race_probe_log.pld` |
 
 Параметры probe-map:
 - `--click-after 60` — клик в окно WC3 через 60с (пропускает меню)
-- `--wait 220` — общее время ожидания (клик + 2×Enter по 5с + загрузка + игра)
-- `--bridge-script "140:create_ai:2"` — создать AI игрока 2 через bridge на 140й секунде
+- `--wait 300` — общее время ожидания (клик + увеличенный запас до Enter + загрузка + игра)
+- `--bridge-script "170:create_ai:2"` — создать AI игрока 2 через bridge на 170й секунде
 - `--probe-log file.pld` — куда писать preload-лог
 
 Лог лежит в `%USERPROFILE%\Documents\Warcraft III\CustomMapData\23Race_probe_log.pld`.
@@ -154,7 +154,7 @@ ACCESS_VIOLATION (Failed to read address 0x6C at instruction 0x7FF6..CC59)
 ### Шаг 2: Запустить probe-map
 
 ```bash
-HiveWE_cli probe-map --map map.w3x --warcraft "F:/..." --click-after 60 --wait 220 --bridge-script "140:create_ai:2" --probe-log 23Race_probe_log.pld
+HiveWE_cli probe-map --map map.w3x --warcraft "F:/..." --click-after 60 --wait 300 --bridge-script "170:create_ai:2" --probe-log 23Race_probe_log.pld
 ```
 
 ### Шаг 3: Читать лог
@@ -222,9 +222,16 @@ rm -f "$env:USERPROFILE\Documents\Warcraft III\CustomMapData\23race_eval_"*.pld
 # 4. Probe (важно: detached-запуск чтобы WC3 не закрылся при Ctrl+C)
 # Обычный запуск — WC3 умрёт если прервать процесс. Используй Start-Process:
 $cli = "C:\Games\HiveWE_VinerX_Edition\build\Release\Release\HiveWE_cli.exe"
-Start-Process -FilePath $cli -ArgumentList "probe-map --map `"C:\Games\23 Race\23-Race-Legion\map.w3x`" --warcraft `"F:\Games\Warcraft III`" --args `"-window -nowfpause`" --click-after 60 --wait 300 --bridge-script 140:create_ai:2 --probe-log 23Race_probe_log.pld --keep-open" -NoNewWindow
+Start-Process -FilePath $cli -ArgumentList "probe-map --map `"C:\Games\23 Race\23-Race-Legion\map.w3x`" --warcraft `"F:\Games\Warcraft III`" --args `"-window -nowfpause`" --click-after 60 --wait 360 --bridge-script 170:create_ai:2 --probe-log 23Race_probe_log.pld --keep-open" -NoNewWindow
 
 # -window -nowfpause = окно не паузится при потере фокуса, можно работать в фоне
+
+# 4a. Практика для долгой загрузки и модальных окон:
+# - если есть сомнение, сделать screenshot экрана до и после Enter;
+# - если после загрузки появилось модальное окно/ошибка, отдельный Enter по живому окну
+#   Warcraft III может сработать лучше, чем ранний Enter внутри probe-map;
+# - для удалённой диагностики screenshot рабочего стола допустим и полезен: он быстро
+#   показывает, висит ли игра на "Загрузка...", ждёт ли подтверждение окна, или уже вошла в карту.
 
 # 5. Bridge-сессия (после загрузки карты)
 # v2: seq синхронится через heartbeat игры — рассинхрона нет. Если пошли

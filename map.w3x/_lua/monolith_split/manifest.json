@@ -1,7 +1,7 @@
 {
   "source_path": "C:\\Games\\23 Race\\23-Race-Legion\\map.w3x\\war3map.lua",
   "source_sha256": "5181648a70065e3b8632a083c3946e452fc8f9f5b6538dda68f69226ad9566bb",
-  "section_count": 114,
+  "section_count": 147,
   "sections": [
     {
       "name": "prelude",
@@ -854,6 +854,262 @@
     {
       "name": "ai_races",
       "file": "82_ai_races.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_scarlet",
+      "file": "82_ai_races/01_scarlet.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_blood_elves",
+      "file": "82_ai_races/02_blood_elves.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_goblins",
+      "file": "82_ai_races/03_goblins.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_naga",
+      "file": "82_ai_races/04_naga.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_horde",
+      "file": "82_ai_races/05_horde.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_jungle_trolls",
+      "file": "82_ai_races/06_jungle_trolls.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_forest_trolls",
+      "file": "82_ai_races/07_forest_trolls.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_horde_w2",
+      "file": "82_ai_races/08_horde_w2.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_nerubs",
+      "file": "82_ai_races/09_nerubs.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_forsaken",
+      "file": "82_ai_races/10_forsaken.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_alliance",
+      "file": "82_ai_races/11_alliance.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_bandits",
+      "file": "82_ai_races/12_bandits.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_undead",
+      "file": "82_ai_races/13_undead.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_cult",
+      "file": "82_ai_races/14_cult.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_demons",
+      "file": "82_ai_races/15_demons.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_draenei",
+      "file": "82_ai_races/16_draenei.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_stromgard",
+      "file": "82_ai_races/17_stromgard.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_illidari",
+      "file": "82_ai_races/18_illidari.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_worgen",
+      "file": "82_ai_races/19_worgen.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_ogres",
+      "file": "82_ai_races/20_ogres.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_gnomes",
+      "file": "82_ai_races/21_gnomes.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_silitids",
+      "file": "82_ai_races/22_silitids.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_pandarens",
+      "file": "82_ai_races/23_pandarens.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_bezlikie",
+      "file": "82_ai_races/24_bezlikie.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_vrykul",
+      "file": "82_ai_races/25_vrykul.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_kul_tiras",
+      "file": "82_ai_races/26_kul_tiras.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_dalaran",
+      "file": "82_ai_races/27_dalaran.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_ice_trolls",
+      "file": "82_ai_races/28_ice_trolls.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_fel_orc",
+      "file": "82_ai_races/29_fel_orc.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_ents",
+      "file": "82_ai_races/30_ents.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_dragons",
+      "file": "82_ai_races/31_dragons.lua",
+      "category": "library",
+      "start_line": 61961,
+      "end_line": 63258,
+      "library_name": null
+    },
+    {
+      "name": "ai_race_elementals",
+      "file": "82_ai_races/32_elementals.lua",
       "category": "library",
       "start_line": 61961,
       "end_line": 63258,

@@ -1,5 +1,5 @@
 """
-Validates all AI race definitions in 82_ai_races.lua
+Validates AI race definitions from the 82_ai_races.lua header plus 82_ai_races/*.lua
 Checks:
 - Required fields (tokens, weight, altar, start)
 - Buildings: seed, duplicate IDs, gate references
@@ -11,9 +11,12 @@ Checks:
 """
 import re
 import os
+from pathlib import Path
 from collections import defaultdict
 
-RACES_FILE = r"map.w3x\_lua\monolith_split\sections\82_ai_races.lua"
+RACES_ROOT = Path(r"map.w3x\_lua\monolith_split\sections")
+RACES_FILE = str(RACES_ROOT / "82_ai_races.lua")
+RACE_EXTRA_DIR = RACES_ROOT / "82_ai_races"
 LIB_RACES_FILE = r"map.w3x\_lua\monolith_split\sections\libraries\13_Races.lua"
 
 # Read all rawcodes from the world editor files and lua code to get valid IDs
@@ -39,9 +42,26 @@ def extract_fourcc_from_file(filepath):
     return codes
 
 
+def extract_fourcc_from_text(content):
+    codes = set()
+    matches = re.findall(r"FourCC\('([^']+)'\)", content)
+    for m in matches:
+        if len(m) == 4:
+            codes.add(m)
+    return codes
+
+
 def read_file(filepath):
     with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
         return f.read()
+
+
+def read_race_sources():
+    parts = [read_file(RACES_FILE)]
+    if RACE_EXTRA_DIR.is_dir():
+        for path in sorted(RACE_EXTRA_DIR.glob("*.lua")):
+            parts.append("\n\n" + read_file(str(path)))
+    return "".join(parts)
 
 
 def extract_race_blocks(content):
@@ -446,8 +466,8 @@ def main():
     print("AI RACE VALIDATOR")
     print("=" * 70)
 
-    content = read_file(RACES_FILE)
-    all_fourccs = extract_fourcc_from_file(RACES_FILE)
+    content = read_race_sources()
+    all_fourccs = extract_fourcc_from_text(content)
 
     # Also get fourccs from the main data library for cross-reference
     try:
