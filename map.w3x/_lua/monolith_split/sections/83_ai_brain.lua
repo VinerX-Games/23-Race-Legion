@@ -1651,6 +1651,44 @@ function AiFindFreeWorker(pi)
     return nil
 end
 
+---@param pi integer
+---@param minCount integer|nil
+---@return integer
+function AiEnsureBuilderReserve(pi, minCount)
+    local want = minCount or 2
+    local grp = udg_Ai_builders[pi]
+    local grpH = udg_Ai_harvest[pi]
+    if grp == nil or grpH == nil then return 0 end
+
+    local aliveBuilders = 0
+    local sz = BlzGroupGetSize(grp)
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(grp, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            aliveBuilders = aliveBuilders + 1
+            if aliveBuilders >= want then
+                return 0
+            end
+        end
+    end
+
+    local moved = 0
+    local szH = BlzGroupGetSize(grpH)
+    for i = 0, szH - 1 do
+        if aliveBuilders + moved >= want then break end
+        local u = BlzGroupUnitAt(grpH, i)
+        if u ~= nil
+            and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and GetUnitCurrentOrder(u) ~= 851972
+            and GetUnitCurrentOrder(u) ~= 851976 then
+            GroupAddUnit(grp, u)
+            GroupRemoveUnit(grpH, u)
+            moved = moved + 1
+        end
+    end
+    return moved
+end
+
 -- Is this worker actually constructing? True if an OWN incomplete structure sits
 -- within build range of the worker. Used to protect channeling builders (Human/
 -- Forsaken peasants stand at the site) from being recycled, while still freeing
@@ -2036,6 +2074,8 @@ end
 function BrainBuild(pi, wm, race)
     local buildOrder = race.buildings
     if not buildOrder then return 0 end
+
+    AiEnsureBuilderReserve(pi, 3)
 
     local built = 0
     local maxN = AiBrainMaxBuild
