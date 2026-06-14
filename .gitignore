@@ -1,0 +1,9 @@
+/wc3link
+
+# AI-session scratch files (one-off bridge scripts, diagnostics, dumps)
+_*.lua
+_verf_*.txt
+_verf_*.json
+_cli_races.json
+probe_detached.*
+tmp_screen*.png
