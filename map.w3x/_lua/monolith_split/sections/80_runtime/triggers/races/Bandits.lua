@@ -193,7 +193,14 @@ end
 --===========================================================================
 function Trig_Del1FromTable_C_Actions()
     local i= GetPlayerId(udg_LocalPlayer)
-    MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i + 1]))
+    -- Guard: MultiboardItemOwnerIndex[i] is only populated for players who have a
+    -- multiboard row (picked a race / are tracked). For an untracked player id this
+    -- was nil, so `nil * 2 + 1` threw "arithmetic on a nil value" every time the
+    -- reinforcement triggers fired. udg_LocalPlayer / udg_UnitsCount are plain globals
+    -- (identical on all clients), so the early return is deterministic and desync-safe.
+    local oi = MultiboardItemOwnerIndex[i]
+    if oi == nil then return end
+    MultiboardSetItemValue(MultiboardItem[oi * 2 + 1], I2S(udg_UnitsCount[i + 1] or 0))
     i=0
 end
 --===========================================================================

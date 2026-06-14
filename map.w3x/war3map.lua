@@ -8103,6 +8103,12 @@ function startAlliance(pi)
     SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, p)
     ConditionalTriggerExecute(gg_trg_AllyOn)
+    -- Precompute the Karazm replace-table counts (AT1_0/AK1_0/...). StartAlliance's
+    -- 0.01s timer runs ForForce(udg_AllPlayers,...) but udg_AllPlayers is still nil
+    -- then, so it's a no-op for everyone; humans recover via sub-race RESEARCH_FINISH
+    -- triggers, but a brain bot trains hfoo before researching → counts nil → b=0 →
+    -- ReplaceUnit(unit,0) deletes the trained unit and spawns nothing. Seed them here.
+    if AcountAll ~= nil then AcountAll(p) end
     SetPlayerName(p, "Alliance (" .. I2S(pi + 1) .. ")")
     AiRace[pi] = "Alliance"
     ProbeLogWrite("[AI] startAlliance pi=" .. tostring(pi) .. " workers=5hpea building=1htow")
@@ -8662,6 +8668,7 @@ function createAiPlayer(pi, raceToken)
 	udg_AiControl[pi] = true
 	ForceAddPlayerSimple(gPlayer, udg_Bots)
 	AiBrainBotListAdd(pi)
+	if AiApplyBotHandicap ~= nil then AiApplyBotHandicap(pi) end  -- bot HP/dmg advantage dials (neutral by default)
 	ProbeLogWrite("[AI] createAiPlayer bot added to Bots force, count=" .. tostring(CountPlayersInForceBJ(udg_Bots)))
 	--  Обычное появление и ресы
 
@@ -18964,6 +18971,26 @@ function GetPlayerNameCut(p)
     end
     return s3
 end
+-- Reforged player-color hex (enum order 0..23 matches classic). Used to tint
+-- multiboard player names by their in-game color.
+Ai_PlayerColorHex = {
+    [0]="ff0303",[1]="0042ff",[2]="1ce6b9",[3]="540081",[4]="fffc01",[5]="fe8a0e",
+    [6]="20c000",[7]="e55bb0",[8]="959697",[9]="7ebff1",[10]="106246",[11]="4e2a04",
+    [12]="9b0000",[13]="0000c3",[14]="00eaff",[15]="be00fe",[16]="ebcd87",[17]="f8a48b",
+    [18]="bfff80",[19]="dcb9eb",[20]="282828",[21]="ebf0ff",[22]="00781e",[23]="a46f33",
+}
+---@param p player
+---@param s string
+---@return string s wrapped in the player's color code (or unchanged if unknown)
+function PlayerColorHexWrap(p, s)
+    local pc = GetPlayerColor(p)
+    local k = 0
+    while k <= 23 do
+        if pc == ConvertPlayerColor(k) then return "|cff" .. Ai_PlayerColorHex[k] .. s .. "|r" end
+        k = k + 1
+    end
+    return s
+end
 ---@param pi integer
 ---@return integer|nil
 function EnsureMultiboardPlayerRow(pi)
@@ -18984,7 +19011,7 @@ function EnsureMultiboardPlayerRow(pi)
     MultiboardItem[ownerIndex * 2]=MultiboardGetItem(Multiboard, ownerIndex, 0)
     MultiboardItem[ownerIndex * 2 + 1]=MultiboardGetItem(Multiboard, ownerIndex, 1)
     udg_LocalText2=I2S(GetConvertedPlayerId(Player(pi))) .. "." .. GetPlayerNameCut(Player(pi))
-    MultiboardSetItemValue(MultiboardItem[ownerIndex * 2], udg_LocalText2)
+    MultiboardSetItemValue(MultiboardItem[ownerIndex * 2], PlayerColorHexWrap(Player(pi), udg_LocalText2))
     MultiboardSetItemWidth(MultiboardItem[ownerIndex * 2], 0.14)
     MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi] or 0))
     MultiboardSetItemWidth(MultiboardItem[ownerIndex * 2 + 1], 0.06)
@@ -19028,7 +19055,7 @@ function Trig_StartTableCode_Actions()
             udg_LocalText2=I2S(GetConvertedPlayerId(Player(i))) .. "." .. GetPlayerNameCut(Player(i))
                         
             --set udg_LocalText2 = SubString(udg_LocalText2, 0, StringLength(udg_LocalText2)-4 )
-            MultiboardSetItemValue(MultiboardItem[max * 2], udg_LocalText2)
+            MultiboardSetItemValue(MultiboardItem[max * 2], PlayerColorHexWrap(Player(i), udg_LocalText2))
             MultiboardSetItemWidth(MultiboardItem[max * 2], 0.14)
             MultiboardSetItemValue(MultiboardItem[max * 2 + 1], "0")
             MultiboardSetItemWidth(MultiboardItem[max * 2 + 1], 0.06)
@@ -28229,7 +28256,9 @@ function Trig_AK1T1_Actions()
     b=CommonHash[pi]["AT1" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -28326,7 +28355,9 @@ function Trig_AK1T2_Actions()
     b=CommonHash[pi]["AT2" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -28525,7 +28556,9 @@ function Trig_AK1T3_Actions()
     b=CommonHash[pi]["AT3" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -28687,7 +28720,9 @@ function Trig_AK1Cav_Actions()
     b=CommonHash[pi]["ACav" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -28834,7 +28869,9 @@ function Trig_AK2T1_Actions()
     b=CommonHash[pi]["AK1" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -28988,7 +29025,9 @@ function Trig_AK2T2_Actions()
     b=CommonHash[pi]["AK2" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -29161,7 +29200,9 @@ function Trig_AK2T3_Actions()
     b=CommonHash[pi]["AK3" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -29340,7 +29381,9 @@ function Trig_AM1_Actions()
     b=CommonHash[pi]["AM1" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -29508,7 +29551,9 @@ function Trig_AM2_Actions()
     b=CommonHash[pi]["AM2" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -29629,7 +29674,9 @@ function Trig_AM3_Actions()
     b=CommonHash[pi]["AM3" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -29768,7 +29815,9 @@ function Trig_AE1_Actions()
     b=CommonHash[pi]["AE1" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -29937,7 +29986,9 @@ function Trig_AE2_Actions()
     b=CommonHash[pi]["AEE2" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -30087,7 +30138,9 @@ function Trig_AN1_Actions()
     b=CommonHash[pi]["AN1" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -30218,7 +30271,9 @@ function Trig_AN2_Actions()
     b=CommonHash[pi]["AN2" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -47839,12 +47894,33 @@ function Trig_AllyControl_Actions()
     local players = ParseAllyList(numsPart)
     ProbeLogWrite("[CHAT] -ally " .. (enable and "on" or "off") .. " players=" .. tostring(numsPart))
     SetAllyControl(players, enable)
+    ReshowArmyBoard()
+end
+-- Becoming allied with shared units makes WC3 show its native ally-resource panel,
+-- which contends for the same screen slot and displaces/minimizes our army multiboard.
+-- The board isn't destroyed, just hidden — re-assert it shortly after the change so it
+-- pops back. Also exposed as the "-board" chat command.
+function ReshowArmyBoard()
+    if Multiboard == nil then return end
+    local t = CreateTimer()
+    TimerStart(t, 0.8, false, function()
+        MultiboardDisplay(Multiboard, true)
+        MultiboardMinimize(Multiboard, false)
+        DestroyTimer(GetExpiredTimer())
+    end)
 end
 function InitTrig_AllyControl()
     gg_trg_AllyControl = CreateTrigger()
     TriggerRegisterPlayerChatEvent(gg_trg_AllyControl, Player(0), "-ally", false)
     TriggerAddCondition(gg_trg_AllyControl, Condition(Trig_AllyControl_Conditions))
     TriggerAddAction(gg_trg_AllyControl, Trig_AllyControl_Actions)
+
+    -- Manual re-show fallback if the native ally panel keeps the board hidden.
+    local b = CreateTrigger()
+    for i = 0, 23 do
+        TriggerRegisterPlayerChatEvent(b, Player(i), "-board", true)
+    end
+    TriggerAddAction(b, ReshowArmyBoard)
 end
 --===========================================================================
 -- Trigger: ResO
@@ -52872,14 +52948,8 @@ function AiDispatchUpgrade(pi, id)
         race.upgrade(pi, id)
     end
 end
--- Automatically split from 81_ai.lua: race definitions + join functions
-
--- Load order: after 81_ai.lua (engines must exist before races register)
-
-
-
-
-
+-- AI race registry header.
+-- Concrete race registrations live in sections/82_ai_races/*.lua.
 RegisterAiRace("Scarlet", {
 
     tokens = {"scarlet", "so"},
@@ -53242,9 +53312,6 @@ RegisterAiRace("Scarlet", {
         [FourCC('h03G')] = 0.0588,
     },
 })
-
-
-
 RegisterAiRace("BloodElves", {
 
     tokens = {"be", "bloodelves", "ek"},
@@ -53552,9 +53619,6 @@ RegisterAiRace("BloodElves", {
         [FourCC('e030')] = 0.0455,
     },
 })
-
-
-
 RegisterAiRace("Goblins", {
 
     tokens = {"goblins", "gob"},
@@ -53842,9 +53906,6 @@ RegisterAiRace("Goblins", {
         [FourCC('h060')] = 0.0213,
     },
 })
-
-
-
 RegisterAiRace("Naga", {
 
     tokens = {"naga"},
@@ -54143,9 +54204,6 @@ RegisterAiRace("Naga", {
         [FourCC('H0JU')] = 0.0263,
     },
 })
-
-
-
 RegisterAiRace("Horde", {
 
     tokens = {"horde"},
@@ -54513,9 +54571,6 @@ RegisterAiRace("Horde", {
     },
 
 })
-
-
-
 RegisterAiRace("JungleTrolls", {
 
     tokens = {"jt", "jungletrolls", "trolls"},
@@ -54829,7 +54884,6 @@ RegisterAiRace("JungleTrolls", {
 ---@param u unit
 
 ---@return nothing
-
 function Join_ForestTrolls(id, pi, u)
 
     if id == FourCC('o04V') then
@@ -55108,7 +55162,6 @@ RegisterAiRace("ForestTrolls", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_HordeW2(id, pi, u)
 
     if id == FourCC('w200') then
@@ -55340,7 +55393,6 @@ RegisterAiRace("HordeW2", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Nerubs(id, pi, u)
 
     if id == FourCC('h0BE') then
@@ -55576,7 +55628,6 @@ RegisterAiRace("Nerubs", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Forsaken(id, pi, u)
 
     if id == FourCC('h0J5') then
@@ -55824,7 +55875,6 @@ RegisterAiRace("Forsaken", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Alliance(id, pi, u)
 
     if id == FourCC('hpea') then
@@ -56053,7 +56103,6 @@ RegisterAiRace("Alliance", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Bandits(id, pi, u)
 
     if id == FourCC('h002') then
@@ -56265,7 +56314,6 @@ RegisterAiRace("Bandits", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Undead(id, pi, u)
 
     if id == FourCC('u00P') then
@@ -56567,7 +56615,10 @@ RegisterAiRace("Cult", {
             {FourCC('cD33'), 1}, {FourCC('cD34'), 1}, {FourCC('cD35'), 1},
         },
         [FourCC('cD30')] = {
-            {FourCC('CD01'), 1, limit = 1}, {FourCC('U02X'), 1, limit = 1},
+            -- Altar cD30 trains THREE heroes (CD01, U02X, CD02) — the config was missing
+            -- the third (CD02, uppercase ≠ the worker cD02). All three now buildable so the
+            -- Cult fields a full hero roster like every other race.
+            {FourCC('CD01'), 1, limit = 1}, {FourCC('U02X'), 1, limit = 1}, {FourCC('CD02'), 1, limit = 1},
         },
         worker = { id = FourCC('cD02'), cap = 18, from = { FourCC('cD26') } },
     },
@@ -56606,7 +56657,7 @@ RegisterAiRace("Cult", {
         [FourCC('cD03')] = 0.10, [FourCC('cD05')] = 0.08, [FourCC('cD08')] = 0.08, [FourCC('cD13')] = 0.08,
         [FourCC('cD11')] = 0.08, [FourCC('cD10')] = 0.06, [FourCC('cD09')] = 0.06, [FourCC('cD14')] = 0.06,
         [FourCC('cD19')] = 0.05, [FourCC('cD18')] = 0.05, [FourCC('cD22')] = 0.05,
-        [FourCC('CD01')] = 0.03, [FourCC('U02X')] = 0.03,
+        [FourCC('CD01')] = 0.03, [FourCC('U02X')] = 0.03, [FourCC('CD02')] = 0.03,
     },
 })
 
@@ -56617,7 +56668,6 @@ RegisterAiRace("Cult", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Demons(id, pi, u)
 
     if id == FourCC('e02Y') then
@@ -56883,7 +56933,6 @@ RegisterAiRace("Demons", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Draenei(id, pi, u)
 
     if id == FourCC('h012') then
@@ -57080,7 +57129,6 @@ RegisterAiRace("Draenei", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Stromgard(id, pi, u)
 
     if id == FourCC('h0G9') then
@@ -57307,7 +57355,6 @@ RegisterAiRace("Stromgard", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Illidari(id, pi, u)
 
     if id == FourCC('h0EI') then
@@ -57529,7 +57576,6 @@ RegisterAiRace("Illidari", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Worgen(id, pi, u)
 
     if id == FourCC('h0IT') then
@@ -57745,7 +57791,6 @@ RegisterAiRace("Worgen", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Ogres(id, pi, u)
 
     if id == FourCC('o03W') then
@@ -57970,7 +58015,6 @@ RegisterAiRace("Ogres", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Gnomes(id, pi, u)
 
     if id == FourCC('h0FA') then
@@ -58076,44 +58120,34 @@ RegisterAiRace("Gnomes", {
 
         steps = {
 
-            { at = 17, action = "random", branches = {
-
-                { {FourCC('h0FY'), FourCC('R0B7'), 1} },
-
-                { {FourCC('h0FY'), FourCC('R0B8'), 1} },
-
-                { {FourCC('h0FY'), FourCC('R0BJ'), 1} },
-
+            -- Core 6-level weapon/armor grades live on the MAIN HALL line (h0FK/h0FR/h0FS
+            -- all research R0CT/R0CU). The old config never researched these and hosted
+            -- every other grade on h0FY/h0G0, which do NOT carry those upgrades (the
+            -- R0B*/R0C* specials are all on the armory h0FZ) — so every order silently
+            -- failed and Gnomes sat at grd~0. Each upgrade is now hosted on the building
+            -- that actually carries it (verified via object `researches`). When the hall is
+            -- teched up past h0FK the MakeGrade fallback grants R0CT/R0CU directly.
+            { at = 12, action = "research", rows = {
+                {FourCC('h0FK'), FourCC('R0CT'), 6}, {FourCC('h0FK'), FourCC('R0CU'), 6},
             }},
 
-            { at = 35, action = "random", branches = {
-
-                { {FourCC('h0G0'), FourCC('R0BA'), 1} },
-
-                { {FourCC('h0G0'), FourCC('R0B5'), 1} },
-
-                { {FourCC('h0G0'), FourCC('R0BI'), 1} },
-
-                { {FourCC('h0G0'), FourCC('R0BB'), 1} },
-
+            { at = 30, action = "research", rows = {
+                {FourCC('h0FY'), FourCC('R0CX'), 6}, {FourCC('h0G0'), FourCC('R0CW'), 6},
+                {FourCC('h0G3'), FourCC('R0CV'), 6},
             }},
 
-            { at = 55, action = "random", branches = {
-
-                { {FourCC('h0G0'), FourCC('R0BC'), 1}, {FourCC('h0G0'), FourCC('R0BH'), 1} },
-
-                { {FourCC('h0G0'), FourCC('R0BE'), 1} },
-
-                { {FourCC('h0G0'), FourCC('R0BD'), 1}, {FourCC('h0G0'), FourCC('R0C0'), 1} },
-
-                { {FourCC('h0G0'), FourCC('R0BF'), 1}, {FourCC('h0G0'), FourCC('R0BG'), 1} },
-
+            -- Special single-level unlocks — all on the armory h0FZ (were wrongly h0FY/h0G0).
+            { at = 25, action = "random", branches = {
+                { {FourCC('h0FZ'), FourCC('R0B7'), 1} },
+                { {FourCC('h0FZ'), FourCC('R0B8'), 1} },
+                { {FourCC('h0FZ'), FourCC('R0BJ'), 1} },
+                { {FourCC('h0FZ'), FourCC('R0BA'), 1} },
             }},
 
-            { at = 70, action = "random", branches = {
-
-                { {FourCC('h0G0'), FourCC('R0C1'), 1}, {FourCC('h0G0'), FourCC('R0CR'), 1} },
-
+            { at = 45, action = "random", branches = {
+                { {FourCC('h0FZ'), FourCC('R0BB'), 1}, {FourCC('h0FZ'), FourCC('R0BC'), 1} },
+                { {FourCC('h0FZ'), FourCC('R0BE'), 1}, {FourCC('h0FZ'), FourCC('R0BD'), 1} },
+                { {FourCC('h0FZ'), FourCC('R0BF'), 1}, {FourCC('h0FZ'), FourCC('R0BG'), 1} },
             }},
 
             { at = 20, action = "tryBuy" },
@@ -58231,7 +58265,6 @@ RegisterAiRace("Gnomes", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Silitids(id, pi, u)
 
     if id == FourCC('e01G') then
@@ -58255,6 +58288,8 @@ RegisterAiRace("Silitids", {
     tokens = {"silitid", "silitids", "qiraji"},
 
     weight = 1,
+
+    desiredArmy = 220,  -- swarm race: field a bigger army than the global default (120)
 
     altar = FourCC('h00C'),
 
@@ -58407,11 +58442,10 @@ RegisterAiRace("Silitids", {
         },
 
         [FourCC('e01R')] = {
-
-            { order = "channel",        chance = 5, type = "self" },
-
-            { order = "channel",        chance = 5, type = "point" },
-
+            -- A0ZU "Создать личинку" (Create Larva): Channel-based, order "channel", no target.
+            { order = "channel",        chance = 4, type = "immediate" },
+            -- A0KQ "Волна исцеления" (Healing Wave): heals a damaged ally in range.
+            { order = "healingwave",    chance = 4, type = "heal", allyRange = 700 },
         },
 
         [FourCC('U025')] = {
@@ -58498,7 +58532,6 @@ RegisterAiRace("Silitids", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Pandarens(id, pi, u)
 
     if id == FourCC('pa01') then
@@ -58719,7 +58752,6 @@ RegisterAiRace("Pandarens", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Bezlikie(id, pi, u)
 
     if id == FourCC('u02D') then
@@ -58926,7 +58958,6 @@ RegisterAiRace("Bezlikie", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Vrykul(id, pi, u)
 
     if id == FourCC('h0C9') then
@@ -59136,7 +59167,6 @@ RegisterAiRace("Vrykul", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_KulTiras(id, pi, u)
 
     if id == FourCC('h013') then
@@ -59338,7 +59368,6 @@ RegisterAiRace("KulTiras", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Dalaran(id, pi, u)
 
     if id == FourCC('u001') then
@@ -59581,7 +59610,6 @@ RegisterAiRace("Dalaran", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_IceTrolls(id, pi, u)
 
     if id == FourCC('o045') then
@@ -59799,7 +59827,6 @@ RegisterAiRace("IceTrolls", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_FelOrc(id, pi, u)
 
     if id == FourCC('n06B') then
@@ -60033,7 +60060,6 @@ RegisterAiRace("FelOrc", {
 ---@param pi integer
 
 ---@param u unit
-
 function Join_Ents(id, pi, u)
 
     if id == FourCC('e02T') then
@@ -60237,7 +60263,376 @@ RegisterAiRace("Ents", {
         [FourCC('E02R')] = 0.0303,
     },
 })
+-- Split AI race definition: Dragons
 
+---@param pi integer
+---@return nothing
+function startDragons(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('o01D'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('dra0'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    NumberSet(pi, FourCC('o01D'), 5)
+    NumberSet(pi, FourCC('dra0'), 1)
+    AiData[pi][StringHash("Race")] = "DR"
+    SetPlayerTechResearchedSwap(FourCC('R0BY'), 1, p)
+    SetPlayerName(p, "Dragons (" .. I2S(pi + 1) .. ")")
+    DragonsOn()
+    AiRace[pi] = "Dragons"
+    ProbeLogWrite("[AI] startDragons pi=" .. tostring(pi) .. " workers=5o01D building=1dra0")
+end
+
+---@param id integer
+---@param pi integer
+---@param u unit
+---@return nothing
+function Join_Dragons(id, pi, u)
+    if id == FourCC('o01D') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif id == FourCC('h0D9') or id == FourCC('h0DA') or id == FourCC('h0DB') then
+        GroupAddUnit(udg_Ai_navy[pi], u)
+        NumberAdd(pi, StringHash("NumberN"))
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Dragons", {
+
+    tokens = {"dragon", "dragons"},
+
+    weight = 1,
+
+    altar = FourCC('n03Z'),
+
+    start = startDragons,
+
+    buildings = {
+
+        seed = FourCC('dra0'),
+
+        { FourCC('dra0'), 1, 4 },
+        { FourCC('h0F9'), 6, 2 },
+        { FourCC('n03I'), 4, 1 },
+        { FourCC('n03Z'), 4, 4 },
+        { FourCC('n041'), 4, 4 },
+        { FourCC('n042'), 4, 4 },
+        { FourCC('n043'), 4, 4 },
+        { FourCC('n044'), 2, 2 },
+        { FourCC('h0D8'), 2, 1 },
+
+    },
+
+    production = {
+
+        worker = { id = FourCC('o01D'), cap = 12, from = {
+            FourCC('dra0'),
+            FourCC('n03Z'),
+            FourCC('n041'),
+            FourCC('n042'),
+            FourCC('n043'),
+            FourCC('n044'),
+        } },
+
+        [FourCC('dra0')] = {
+            { FourCC('n03F'), 3 },
+        },
+
+        [FourCC('n03Z')] = {
+            { FourCC('N040'), 1, limit = 1 },
+            { FourCC('n03Q'), 4 },
+            { FourCC('n03R'), 3 },
+            { FourCC('n03S'), 2 },
+        },
+
+        [FourCC('n041')] = {
+            { FourCC('N047'), 1, limit = 1 },
+            { FourCC('n03T'), 4 },
+            { FourCC('n03U'), 3 },
+            { FourCC('n03V'), 2 },
+        },
+
+        [FourCC('n042')] = {
+            { FourCC('N046'), 1, limit = 1 },
+            { FourCC('n03K'), 4 },
+            { FourCC('n03L'), 3 },
+            { FourCC('n03M'), 2 },
+        },
+
+        [FourCC('n043')] = {
+            { FourCC('N045'), 1, limit = 1 },
+            { FourCC('n03W'), 4 },
+            { FourCC('n03X'), 3 },
+            { FourCC('n03Y'), 2 },
+        },
+
+        [FourCC('n044')] = {
+            { FourCC('n03N'), 4 },
+            { FourCC('n03O'), 3 },
+            { FourCC('n03P'), 2 },
+            { FourCC('n05Q'), 2 },
+        },
+
+    },
+
+    ecoWeights = {
+
+        [FourCC('dra0')] = 2,
+        [FourCC('h0F9')] = 1,
+        [FourCC('n03Z')] = 4,
+        [FourCC('n041')] = 4,
+        [FourCC('n042')] = 4,
+        [FourCC('n043')] = 4,
+        [FourCC('n044')] = 5,
+
+    },
+
+    strategData = {
+
+        gradeCap = 100,
+
+        steps = {
+            { at = 20, action = "tryBuy" },
+        },
+
+    },
+
+    join = Join_Dragons,
+
+    naval = aiNavalTrain_Common,
+
+    shipyard = FourCC('h0D8'),
+
+    wall = FourCC('h0D8'),
+
+    diplomat = "isolationist",
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('o01D')] = 0.1923,
+        [FourCC('n03Q')] = 0.1154,
+        [FourCC('n03T')] = 0.1154,
+        [FourCC('n03K')] = 0.1154,
+        [FourCC('n03W')] = 0.1154,
+        [FourCC('n03N')] = 0.0769,
+        [FourCC('n03R')] = 0.0769,
+        [FourCC('n03U')] = 0.0769,
+        [FourCC('n03L')] = 0.0769,
+        [FourCC('n03X')] = 0.0769,
+        [FourCC('n05Q')] = 0.0385,
+        [FourCC('N040')] = 0.0154,
+        [FourCC('N047')] = 0.0154,
+        [FourCC('N046')] = 0.0154,
+        [FourCC('N045')] = 0.0154,
+    },
+})
+-- Split AI race definition: Elementals
+
+---@param pi integer
+---@return nothing
+function startElementals(pi)
+    local p = Player(pi)
+    CreateNUnitsAtLoc(5, FourCC('e00F'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
+    GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
+    CreateNUnitsAtLoc(1, FourCC('h0EQ'), p, udg_LocalPoint, bj_UNIT_FACING)
+    GroupAddUnit(udg_Ai_units[pi], GetLastCreatedUnit())
+    GroupAddUnit(udg_Ai_buildings[pi], GetLastCreatedUnit())
+    NumberSet(pi, FourCC('e00F'), 5)
+    NumberSet(pi, FourCC('h0EQ'), 1)
+    AiData[pi][StringHash("Race")] = "EL"
+    SetPlayerTechResearchedSwap(FourCC('R0A2'), 1, p)
+    SetPlayerName(p, "Elementals (" .. I2S(pi + 1) .. ")")
+    ElemOn()
+    AiRace[pi] = "Elementals"
+    ProbeLogWrite("[AI] startElementals pi=" .. tostring(pi) .. " workers=5e00F building=1h0EQ")
+end
+
+---@param id integer
+---@param pi integer
+---@param u unit
+---@return nothing
+function Join_Elementals(id, pi, u)
+    if id == FourCC('e00F') then
+        GroupAddUnit(udg_Ai_builders[pi], u)
+    elseif aiUnitJoinsCapitalGuard(u, pi) then
+    else
+        aiUnitJoinsArmy(u, pi)
+    end
+end
+
+RegisterAiRace("Elementals", {
+
+    tokens = {"element", "elemental", "elementals", "elem"},
+
+    weight = 1,
+
+    altar = FourCC('h0EY'),
+
+    start = startElementals,
+
+    buildings = {
+
+        seed = FourCC('h0EQ'),
+
+        { FourCC('h0EQ'), 1, 4 },
+        { FourCC('h0ER'), 3, 5 },
+        { FourCC('h0ES'), 3, 6 },
+        { FourCC('h0EO'), 8, 4 },
+        { FourCC('h0EP'), 2, 1 },
+        { FourCC('h0ET'), 8, 4 },
+        { FourCC('h0EU'), 8, 4 },
+        { FourCC('h0EV'), 4, 2 },
+        { FourCC('h0EW'), 8, 4 },
+        { FourCC('h0EX'), 4, 2 },
+        { FourCC('h0EY'), 3, 6 },
+
+    },
+
+    gates = {
+
+        tier2 = function(pi) return getAiCount(pi, FourCC('h0ER')) >= 1 or getAiCount(pi, FourCC('h0ES')) >= 1 end,
+        tier3 = function(pi) return getAiCount(pi, FourCC('h0ES')) >= 1 end,
+        tier3_fire = function(pi) return getAiCount(pi, FourCC('h0ES')) >= 1 and getAiCount(pi, FourCC('h0EO')) >= 1 end,
+        tier3_water = function(pi) return getAiCount(pi, FourCC('h0ES')) >= 1 and getAiCount(pi, FourCC('h0ET')) >= 1 end,
+
+    },
+
+    production = {
+
+        worker = { id = FourCC('e00F'), cap = 18, from = {
+            FourCC('h0EQ'),
+            FourCC('h0ER'),
+            FourCC('h0ES'),
+        } },
+
+        [FourCC('h0EO')] = {
+            { FourCC('n02R'), 4 },
+            { FourCC('n02S'), 3, gate = "tier2" },
+            { FourCC('n036'), 2, gate = "tier2" },
+            { FourCC('h0F1'), 1, gate = "tier3_fire" },
+            { FourCC('n07O'), 1, gate = "tier3_fire" },
+        },
+
+        [FourCC('h0ET')] = {
+            { FourCC('n02U'), 4 },
+            { FourCC('n02T'), 3, gate = "tier2" },
+            { FourCC('n02Z'), 2, gate = "tier2" },
+            { FourCC('n07C'), 2, gate = "tier2" },
+            { FourCC('n032'), 1, gate = "tier3_water" },
+            { FourCC('n07T'), 1, gate = "tier3_water" },
+        },
+
+        [FourCC('h0EU')] = {
+            { FourCC('n02Q'), 4 },
+            { FourCC('n02V'), 3, gate = "tier2" },
+            { FourCC('n07P'), 2, gate = "tier2" },
+            { FourCC('n02P'), 1, gate = "tier3" },
+            { FourCC('n07R'), 1, gate = "tier3" },
+            { FourCC('n07U'), 1, gate = "tier3" },
+        },
+
+        [FourCC('h0EW')] = {
+            { FourCC('n02W'), 4 },
+            { FourCC('n02X'), 3, gate = "tier2" },
+            { FourCC('n07V'), 2, gate = "tier2" },
+            { FourCC('n02Y'), 1, gate = "tier3" },
+            { FourCC('n031'), 1, gate = "tier3" },
+            { FourCC('n033'), 1, gate = "tier3" },
+            { FourCC('n034'), 1, gate = "tier3_fire" },
+            { FourCC('n035'), 1, gate = "tier3_water" },
+            { FourCC('n07N'), 1, gate = "tier3_fire" },
+            { FourCC('n07Q'), 1, gate = "tier3" },
+            { FourCC('n07S'), 1, gate = "tier3" },
+        },
+
+        [FourCC('h0ES')] = {
+            { FourCC('n07W'), 1, limit = 1 },
+            { FourCC('n07X'), 1, limit = 1 },
+            { FourCC('n07Y'), 1, limit = 1 },
+            { FourCC('n07Z'), 1, limit = 1 },
+        },
+
+        [FourCC('h0EY')] = {
+            { FourCC('H0EZ'), 1, limit = 1 },
+            { FourCC('H0F0'), 1, limit = 1 },
+            { FourCC('N037'), 1, limit = 1 },
+        },
+
+    },
+
+    ecoWeights = {
+
+        [FourCC('h0EQ')] = 1,
+        [FourCC('h0ER')] = 5,
+        [FourCC('h0ES')] = 8,
+
+    },
+
+    strategData = {
+
+        gradeCap = 100,
+
+        steps = {
+            { at = 17, action = "research", rows = {
+                { FourCC('h0EV'), FourCC('R09G'), 6 },
+                { FourCC('h0EV'), FourCC('R09H'), 6 },
+                { FourCC('h0EV'), FourCC('R09I'), 6 },
+                { FourCC('h0EV'), FourCC('R09J'), 6 },
+            }},
+            { at = 20, action = "tryBuy" },
+            { at = 25, action = "techUp", from = FourCC('h0EQ'), to = FourCC('h0ER'), cap = 3 },
+            { at = 55, action = "techUp", from = FourCC('h0ER'), to = FourCC('h0ES'), cap = 3 },
+        },
+
+    },
+
+    join = Join_Elementals,
+
+    wall = FourCC('h0EP'),
+
+    diplomat = "balanced",
+
+    brain = "objective",
+
+    brainWeights = {
+        kind  = { capital = 100, cluster = 40, capture = 60, weak = 20, front = 15 },
+        value = 1.0, dist = 0.002, claim = 25.0, siege = 0.5,
+        focusMargin = 30.0, homeThreat = 20.0, tpDist = 6000.0,
+        rHome = 2500.0, rCluster = 1600.0,
+        clusterEvery = 8, topK = 8,
+    },
+    compTarget = {
+        [FourCC('e00F')] = 0.2000,
+        [FourCC('n02R')] = 0.1000,
+        [FourCC('n02U')] = 0.1000,
+        [FourCC('n02Q')] = 0.1000,
+        [FourCC('n02W')] = 0.1000,
+        [FourCC('n02S')] = 0.0600,
+        [FourCC('n02T')] = 0.0600,
+        [FourCC('n02V')] = 0.0600,
+        [FourCC('n02X')] = 0.0600,
+        [FourCC('n07W')] = 0.0200,
+        [FourCC('n07X')] = 0.0200,
+        [FourCC('n07Y')] = 0.0200,
+        [FourCC('n07Z')] = 0.0200,
+        [FourCC('H0EZ')] = 0.0100,
+        [FourCC('H0F0')] = 0.0100,
+        [FourCC('N037')] = 0.0100,
+    },
+})
 -- ====================================================================
 -- AI Brain (Phase 1 scaffolding): world model + squads + objective brain.
 -- See AI_BRAIN_DESIGN.md. Behavior-inert by default: no race sets `brain`,
@@ -60375,12 +60770,21 @@ AiBrainMaxProduce      = AiBrainMaxProduce      or 20  -- max unit-training orde
 AiBrainMaxBuild        = AiBrainMaxBuild        or 10  -- max building-attempts per bot per tick
 g_AiOrdered = g_AiOrdered or {}                        -- per-bot+unit training guard: [key] = last_tick
 AiRetrainInterval = AiRetrainInterval or 15            -- ticks between re-issue of same unit order
+AiLimitedBuildTicks = AiLimitedBuildTicks or 120       -- a limited unit (hero) ordered within this
+                                                       -- many ticks counts as filling its slot, so a
+                                                       -- slow-building hero isn't ordered 2-3x before
+                                                       -- getAiCount sees it (Cult had 2x CD02).
 AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks
 AiBrainNavalEvery      = AiBrainNavalEvery      or 15  -- naval-check every N brain-ticks
 AiBrainNavalStartTick  = AiBrainNavalStartTick  or 23  -- first naval check after N brain-ticks (~4min w/ 16 bots)
 AiBrainMaxPorts        = AiBrainMaxPorts        or 20  -- max shipyards/ports per bot
 AiBrainLandingEvery     = AiBrainLandingEvery     or 16  -- landing tick every N brain-ticks
 AiBrainLandingRadius    = AiBrainLandingRadius    or 800 -- load/unload radius
+-- Perf (profiler showed BrainFocus = the dominant per-tick cost, ~50%+, and reap 2nd):
+-- BrainFocus only re-tasks IDLE units, so running it every single brain-tick is wasteful.
+-- Throttle it + reap to alternating ticks (focus on odd, reap on even, aligned with the
+-- every-2-tick orphan/squad scan) — roughly halves both hotspots and spreads the load.
+AiFocusEvery            = AiFocusEvery            or 2   -- run BrainFocus every N brain-ticks
 AiBrainLandingMaxTransports = AiBrainLandingMaxTransports or 6  -- max transports to load per tick
 AiBrainMinArmy = AiBrainMinArmy or 50  -- train regardless of ratio until total army reaches this
 -- R16: army-SIZE target, decoupled from current size. The old code used
@@ -60389,6 +60793,57 @@ AiBrainMinArmy = AiBrainMinArmy or 50  -- train regardless of ratio until total 
 -- every army plateaued at ~MinArmy. We now drive composition toward an absolute
 -- desired size so deficits persist until the bot is actually big (food-gated below).
 AiBrainDesiredArmy = AiBrainDesiredArmy or 120  -- composition is filled up to this many units (food permitting)
+
+-- GLOBAL size multiplier. One knob that scales DOWN how much every bot fields — army, fleet
+-- (ports) AND each building type's count — to cut the total unit/building count and reduce lag.
+-- Applied per-type and ROUNDED UP (max(1,ceil)) so nothing a bot needs gets zeroed: at 0.5 a
+-- building capped at 4 -> 2, a hall capped at 1 -> 1, DesiredArmy 120 -> 60. 1.0 = no change.
+AiSizeScale = AiSizeScale or 1.0
+---@param n number
+---@return integer
+function AiScaled(n)
+    local s = AiSizeScale or 1.0
+    if s >= 1.0 then return n end
+    local r = math.ceil(n * s)
+    if r < 1 then r = 1 end
+    return r
+end
+
+-- ====================================================================
+-- Bot advantage regulation. Three dials let you trade bot COUNT vs bot STRENGTH:
+--   * army size : AiBrainDesiredArmy (global) / race.desiredArmy (per-race)
+--   * unit HP   : AiBotHPMult   (per-player HP handicap, 1.0 = like a player)
+--   * unit dmg  : AiBotDmgMult  (per-player damage handicap, 1.0 = like a player)
+-- Defaults are NEUTRAL (1.0) — bots play exactly like players until you dial them.
+-- Examples: "few player-like bots" = mults 1.0, DesiredArmy 120. "Many strong bots with
+-- small armies" = AiBotHPMult/DmgMult 1.5-2.0 + a low DesiredArmy (e.g. 40-60). Applied
+-- per bot in createAiPlayer; the handicap scales ALL of that bot's units (current+future).
+-- ====================================================================
+AiBotHPMult  = AiBotHPMult  or 1.0
+AiBotDmgMult = AiBotDmgMult or 1.0
+---@param pi integer
+function AiApplyBotHandicap(pi)
+    local p = Player(pi)
+    SetPlayerHandicap(p, AiBotHPMult)
+    if SetPlayerHandicapDamage ~= nil then SetPlayerHandicapDamage(p, AiBotDmgMult) end
+end
+
+-- Map-wide advantage auras for bots (apply the "Преимущество" buff aia0). Each entry is
+-- {abilityId, level}. aib0 = Endurance/Command (+5%..+50% attack & move speed at lvl 1..10),
+-- aib1 = Devotion (+armor, up to +7). Both have area=99999 (whole map) targeting player,self,
+-- so ONE carrier (the capital) buffs the bot's entire army. Empty list = OFF (default).
+-- Set e.g. AiBotAuras = {{FourCC('aib0'),6},{FourCC('aib1'),6}} to test small-but-strong bots.
+AiBotAuras = AiBotAuras or {}
+---@param pi integer
+function AiApplyBotAuras(pi)
+    if #AiBotAuras == 0 then return end
+    local cap = playerCapital[pi]
+    if cap == nil or GetUnitState(cap, UNIT_STATE_LIFE) <= 0.405 then return end
+    for _, a in ipairs(AiBotAuras) do
+        if GetUnitAbilityLevel(cap, a[1]) == 0 then UnitAddAbility(cap, a[1]) end
+        SetUnitAbilityLevel(cap, a[1], a[2])
+    end
+end
 
 -- R8 fix: udg_WaterPoints was never initialized → BrainNavalDecision skipped entirely.
 -- Hardcode the water points from GoToWaterPoint (97_ai_water.lua) so shipyards get built.
@@ -60832,6 +61287,86 @@ end
 -- Builds/updates the shared world model in AiData[pi].wm. Objective collection
 -- is deferred to Phase 2; Phase 1 captures army geometry + home threat only.
 ---@param pi integer
+-- Compact a unit group in place: drop NIL slots (left by RemoveUnit — these can't be
+-- GroupRemoveUnit'd by reference) and dead units. The whole codebase does 100s of
+-- RemoveUnit/ReplaceUnit without pulling the unit from the AI pools first, so the
+-- groups silently fill with nils — BlzGroupGetSize inflates (army 14% nil, buildersT
+-- 61%, navy 100% nil → BrainLandingTick saw zero ships), counts/centroids/ratios skew,
+-- and iteration wastes cycles. Rebuild via a temp group since nils have no handle.
+gAiCompactTmp = gAiCompactTmp or nil
+function AiCompactGroup(g)
+    if g == nil then return end
+    if gAiCompactTmp == nil then gAiCompactTmp = CreateGroup() end
+    GroupClear(gAiCompactTmp)
+    local sz = BlzGroupGetSize(g)
+    local dirty = false
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            GroupAddUnit(gAiCompactTmp, u)
+        else
+            dirty = true
+        end
+    end
+    if dirty then
+        GroupClear(g)
+        GroupAddGroup(gAiCompactTmp, g)
+    end
+    GroupClear(gAiCompactTmp)
+end
+
+-- Heroes are trained/revived through paths that never call aiUnitJoinsArmy, so for brain
+-- bots they were NEVER in udg_Ai_army → BrainFocus never moved or fought them. They idled
+-- at the capital forever, just soaking up tryBuy items (live: pi=7's 2 heroes sat full-
+-- inventory at the BrokenIsles portal while the army was elsewhere). Enlist any live hero
+-- not yet in the army so it marches and fights with everyone else. 1 bot/tick (amortized).
+AiBrainHeroEnumGrp = AiBrainHeroEnumGrp or CreateGroup()
+function AiBrainEnlistHeroes(pi)
+    local army = udg_Ai_army[pi]
+    if army == nil then return end
+    local g = AiBrainHeroEnumGrp
+    GroupClear(g)
+    GroupEnumUnitsOfPlayer(g, Player(pi), LiveHero)
+    local sz = BlzGroupGetSize(g)
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil and not IsUnitInGroup(u, army) then
+            GroupAddUnit(army, u)
+            if AiSquadAssign ~= nil then AiSquadAssign(pi, u) end
+        end
+    end
+    GroupClear(g)
+end
+
+-- One enum of the player's units → { [unitTypeId] = aliveCount }. Reused table to avoid
+-- per-tick garbage. Ground truth for cap/limit checks where the drifting g_AiCounts lies.
+AiBrainAcountGrp = AiBrainAcountGrp or CreateGroup()
+function AiBrainActualCounts(pi, reuse)
+    local t = reuse or {}
+    for k in pairs(t) do t[k] = nil end
+    local army = udg_Ai_army[pi]
+    local g = AiBrainAcountGrp
+    GroupClear(g)
+    GroupEnumUnitsOfPlayer(g, Player(pi), nil)
+    local sz = BlzGroupGetSize(g)
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            local id = GetUnitTypeId(u)
+            t[id] = (t[id] or 0) + 1
+            -- Perf: fold hero-enlist into this SAME pass (was a second full per-player enum
+            -- every tick). Enlist any live hero not yet in the army so the brain moves/fights
+            -- it (heroes never go through aiUnitJoinsArmy).
+            if army ~= nil and IsUnitType(u, UNIT_TYPE_HERO) and not IsUnitInGroup(u, army) then
+                GroupAddUnit(army, u)
+                if AiSquadAssign ~= nil then AiSquadAssign(pi, u) end
+            end
+        end
+    end
+    GroupClear(g)
+    return t
+end
+
 ---@return table
 function AiBrainPerceive(pi)
     -- Ensure a base anchor exists (self-guards: enums only while unset/dead).
@@ -60840,17 +61375,22 @@ function AiBrainPerceive(pi)
     if wm == nil then wm = {}; AiData[pi].wm = wm end
     wm.tick = (wm.tick or 0) + 1
 
-    -- Clean dead units from udg_Ai_army (some races do KillUnit/ReplaceUnit)
-    local armyGroup = udg_Ai_army[pi]
-    if armyGroup ~= nil then
-        local i = 0
-        while i < BlzGroupGetSize(armyGroup) do
-            local u = BlzGroupUnitAt(armyGroup, i)
-            if u == nil then i = i + 1
-            elseif GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then GroupRemoveUnit(armyGroup, u)
-            else i = i + 1 end
-        end
-    end
+    AiApplyBotAuras(pi)  -- map-wide advantage auras (no-op unless AiBotAuras configured)
+
+    -- Purge nil/dead from this bot's pools (1 bot/tick via round-robin, so amortized).
+    -- Must run before centroid/count/produce so sizes and ratios are accurate.
+    AiCompactGroup(udg_Ai_army[pi])
+    AiCompactGroup(udg_Ai_navy[pi])
+    AiCompactGroup(udg_Ai_buildersT[pi])
+    AiCompactGroup(udg_Ai_builders[pi])
+    AiCompactGroup(udg_Ai_buildings[pi])
+    AiCompactGroup(udg_Ai_harvest[pi])
+
+    -- Actual live unit-type counts (one enum/tick, 1 bot/tick via round-robin). getAiCount
+    -- reads a hashtable counter (g_AiCounts) that DRIFTS — deaths/morphs/RemoveUnit paths
+    -- don't all call NumberRem, so e.g. Silitids drones read 18 while 0 are alive, and the
+    -- worker block never retrains. wm.acount is the ground truth for cap/limit checks.
+    wm.acount = AiBrainActualCounts(pi, wm.acount)
 
     local cx, cy, n = AiGroupCentroid(udg_Ai_army[pi])
     wm.cx, wm.cy, wm.armyCount = cx, cy, n
@@ -61005,13 +61545,9 @@ end
 ---@param y real
 ---@return integer
 function AiSquadOrderMov(g, x, y)
-    ProbeLogWrite("[SQDBG] ordmov-enter")
     local tmp = CreateGroup()
-    ProbeLogWrite("[SQDBG] ordmov-cr1")
     local sub = CreateGroup()
-    ProbeLogWrite("[SQDBG] ordmov-cr2")
     local sz = BlzGroupGetSize(g)
-    ProbeLogWrite("[SQDBG] ordmov-sz=" .. tostring(sz))
     local k = 0
     while k < sz do
         local u = BlzGroupUnitAt(g, k)
@@ -61035,7 +61571,6 @@ function AiSquadOrderMov(g, x, y)
         end
     end
     if BlzGroupGetSize(sub) > 0 then
-        ProbeLogWrite("[SQDBG] ordmov-gpo")
         GroupPointOrder(sub, "smart", x, y)
         GroupClear(sub)
     end
@@ -61049,22 +61584,56 @@ end
 function AiSquadAssign(pi, u)
     local squads = AiSquadsOf(pi)
     local armyCount = AiData[pi].wm and AiData[pi].wm.armyCount or 0
-    -- Dynamic cap: ~5 squads at 200 units, ~3 at 50, min 8
-    local cap = math.max(8, math.ceil(armyCount / 5))
-    local bestSid, bestDist = nil, 99999999.0
-    local ux, uy = GetUnitX(u), GetUnitY(u)
-    for sid, sq in pairs(squads) do
-        if sq.role == "assault" then
-            local cx, cy, _ = AiGroupCentroid(sq.members)
-            local dx, dy = ux - cx, uy - cy
-            local d = dx * dx + dy * dy
-            if d < bestDist then bestDist = d; bestSid = sid end
+
+    -- Capital garrison: keep ONE defense-role squad filled to a FRACTION (AiGarrisonPct) of the
+    -- army. Non-hero units go here first (heroes roam with the assault). It holds at the capital
+    -- and never marches to far objectives, so the home is never left wide open — but early game
+    -- the target is ~0-1 (tiny army) so almost everyone still goes capturing nearby points.
+    local capU = playerCapital[pi]
+    if capU ~= nil and GetUnitState(capU, UNIT_STATE_LIFE) > 0.405
+        and not IsUnitType(u, UNIT_TYPE_HERO) then
+        local target = math.ceil(armyCount * (AiGarrisonPct or 0.20))
+        if target > (AiGarrisonMax or 9999) then target = AiGarrisonMax end
+        if target >= 1 then
+            local defSq = nil
+            for _, sq in pairs(squads) do if sq.role == "defense" then defSq = sq; break end end
+            if defSq == nil then
+                local sid = AiSquadNextId(pi)
+                local g = CreateGroup(); GroupAddUnit(g, u)
+                squads[sid] = { members = g, state = "defense", objective = nil,
+                    rally = { x = GetUnitX(capU), y = GetUnitY(capU) }, role = "defense" }
+                return
+            elseif AiSquadSize(defSq.members) < target then
+                GroupAddUnit(defSq.members, u)
+                return
+            end
         end
     end
-    if bestSid ~= nil then
-        local sq = squads[bestSid]
-        GroupAddUnit(sq.members, u)
-        return
+
+    -- Assault: scale the NUMBER of squads with army size instead of dumping everyone into one.
+    -- Add to the nearest assault squad that still has ROOM (< AiSquadTargetSize); only spin up
+    -- a new squad when every existing one is full AND we're under AiSquadMaxCount. So a small
+    -- army = one small squad, a big army = several full squads (the count grows on its own).
+    local ux, uy = GetUnitX(u), GetUnitY(u)
+    local assaultCount = 0
+    local roomSid, roomDist = nil, 1.0e30   -- nearest assault squad with room
+    local anySid, anyDist = nil, 1.0e30     -- nearest assault squad of any (overflow fallback)
+    for sid, sq in pairs(squads) do
+        if sq.role == "assault" then
+            assaultCount = assaultCount + 1
+            local cx, cy, _ = AiGroupCentroid(sq.members)
+            local d = (ux - cx) * (ux - cx) + (uy - cy) * (uy - cy)
+            if d < anyDist then anyDist = d; anySid = sid end
+            if AiSquadSize(sq.members) < (AiSquadTargetSize or 24) and d < roomDist then
+                roomDist = d; roomSid = sid
+            end
+        end
+    end
+    if roomSid ~= nil then
+        GroupAddUnit(squads[roomSid].members, u); return
+    end
+    if assaultCount >= (AiSquadMaxCount or 6) and anySid ~= nil then
+        GroupAddUnit(squads[anySid].members, u); return  -- at the cap: overflow into nearest
     end
     local sid = AiSquadNextId(pi)
     local rx, ry
@@ -61085,13 +61654,20 @@ function AiSquadReapDead(pi)
     local toRemove = {}
     for sid, sq in pairs(squads) do
         local g = sq.members
-        local i = 0
-        while i < BlzGroupGetSize(g) do
+        -- Snapshot size ONCE, collect dead, then remove. The old loop re-read
+        -- BlzGroupGetSize every iteration and did GroupRemoveUnit WITHOUT advancing i —
+        -- if a stale handle read dead but didn't actually leave the group, i never moved
+        -- and size never shrank => infinite loop (the squad-FSM hang risk). No mutation
+        -- during indexed iteration now.
+        local sz = BlzGroupGetSize(g)
+        local dead = {}
+        for i = 0, sz - 1 do
             local u = BlzGroupUnitAt(g, i)
-            if u == nil then i = i + 1
-            elseif GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then GroupRemoveUnit(g, u)
-            else i = i + 1 end
+            if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then
+                dead[#dead + 1] = u
+            end
         end
+        for _, u in ipairs(dead) do GroupRemoveUnit(g, u) end
         -- Remove empty squads (dead units accumulated, squad becomes hollow)
         if AiSquadSize(g) == 0 then
             DestroyGroup(g)
@@ -61100,6 +61676,48 @@ function AiSquadReapDead(pi)
     end
     for _, sid in ipairs(toRemove) do
         squads[sid] = nil
+    end
+end
+
+-- ====================================================================
+-- Squad FSM dispatcher (OPT-IN). The army normally moves as a single front via
+-- BrainFocus; flip AiSquadFsmEnabled=true to instead command the bot's squads through
+-- the muster/march/engage/retreat FSM (a couple of squads, not dozens — AiSquadAssign
+-- funnels units into the nearest existing squad so the count stays low). Crash-proofing
+-- the user asked for: (1) compact each squad's group first so handlers never touch a nil/
+-- stale handle; (2) pcall-isolate every handler so a fault logs + skips instead of taking
+-- down the tick; (3) apply exactly ONE validated transition per squad per tick — no
+-- re-entry loop. Disabled by default so current behaviour is unchanged.
+-- ====================================================================
+AiSquadFsmEnabled = AiSquadFsmEnabled or false
+AiSquadFsmStates = nil  -- built lazily (handlers are defined further down the file)
+function AiSquadFsmTick(pi, p, wm)
+    if AiSquadFsmStates == nil then
+        AiSquadFsmStates = {
+            muster  = AiSquadTickMuster,  march   = AiSquadTickMarch,
+            engage  = AiSquadTickEngage,  retreat = AiSquadTickRetreat,
+            defense = AiSquadTickDefense,
+        }
+    end
+    local squads = AiSquadsOf(pi)
+    for sid, sq in pairs(squads) do
+        if sq ~= nil and sq.members ~= nil then
+            AiCompactGroup(sq.members)  -- purge nil/dead BEFORE any handler reads the group
+            if AiSquadSize(sq.members) > 0 then
+                local st = sq.state or "muster"
+                local handler = AiSquadFsmStates[st]
+                if handler == nil then sq.state = "muster"; handler = AiSquadTickMuster end
+                local ok, newState = pcall(handler, pi, sid, sq, p, wm)
+                if ok then
+                    if type(newState) == "string" and AiSquadFsmStates[newState] ~= nil then
+                        sq.state = newState  -- one transition; next tick re-enters fresh
+                    end
+                else
+                    AiBrainLogTagSafe(pi, "SQERR", "squad " .. tostring(sid)
+                        .. " state=" .. tostring(st) .. " err=" .. tostring(newState))
+                end
+            end
+        end
     end
 end
 
@@ -61145,21 +61763,19 @@ function AiObjCommittedPower(pi, o)
 end
 
 -- FSM handlers
+AiMusterTimeout = AiMusterTimeout or 20  -- bot-ticks a small squad musters before committing anyway
 function AiSquadTickMuster(pi, sid, sq, p, wm)
-    ProbeLogWrite("[SQDBG] muster-enter sq" .. tostring(sid))
-    ProbeLogWrite("[SQDBG] muster-sz-start")
     local sz = AiSquadSize(sq.members)
-    ProbeLogWrite("[SQDBG] muster-sz=" .. tostring(sz))
     local cfg = AiBrainCfg(pi)
-    ProbeLogWrite("[SQDBG] muster-cfg cm=" .. tostring(cfg.commitMin or AiSquadCommitMin))
-    if sz >= (cfg.commitMin or AiSquadCommitMin) then
-        ProbeLogWrite("[SQDBG] muster-pickobj")
+    sq.musterTicks = (sq.musterTicks or 0) + 1
+    -- Commit at the threshold OR after waiting too long with whatever we've got. A bot whose
+    -- whole army is below commitMin (e.g. 3 units, weak/slow economy) otherwise musters at the
+    -- capital FOREVER and looks totally passive — better to march the trickle than never attack.
+    if sz >= (cfg.commitMin or AiSquadCommitMin) or (sz >= 1 and sq.musterTicks >= AiMusterTimeout) then
         local obj = AiSquadPickObj(pi, sq, wm)
-        if obj ~= nil then ProbeLogWrite("[SQDBG] muster->march"); sq.objective = obj; return "march" end
+        if obj ~= nil then sq.objective = obj; sq.musterTicks = 0; return "march" end
     end
-    ProbeLogWrite("[SQDBG] muster-ordmov rx=" .. tostring(R2I(sq.rally.x)) .. " ry=" .. tostring(R2I(sq.rally.y)))
     AiSquadOrderMov(sq.members, sq.rally.x, sq.rally.y)
-    ProbeLogWrite("[SQDBG] muster-done")
     return "muster"
 end
 
@@ -61215,6 +61831,35 @@ function AiSquadTickRetreat(pi, sid, sq, p, wm)
     if d < 800.0 and not (wm.defendHome or false) then return "muster" end
     AiSquadOrderMov(sq.members, rx, ry)
     return "retreat"
+end
+
+-- Garrison: a "defense"-role squad never marches to far objectives — it holds at the capital
+-- and engages whatever sieges it. This is the standing home guard (the assault squads still
+-- get recalled on top via the defendHome retreat). Without it a bot sends its WHOLE single
+-- front out and an enemy strolls into the undefended capital (live: a Goblin walked up to a
+-- Silitid capital unopposed). Stays in state "defense" forever.
+-- Home-guard size as a FRACTION of the bot's army (not a flat count): early game the army is
+-- small so the garrison is tiny (almost everyone goes capturing nearby points), and it scales
+-- up proportionally as the army grows. AiGarrisonMax is an optional absolute cap.
+AiGarrisonPct = AiGarrisonPct or 0.20   -- 20% of the army held back to defend the capital
+AiGarrisonMax = AiGarrisonMax or 9999   -- hard cap on garrison size (off by default)
+-- Assault squad sizing (count scales with army instead of one giant blob). A new assault squad
+-- spins up only when every existing one is full (AiSquadTargetSize) and we're under the cap.
+AiSquadTargetSize = AiSquadTargetSize or 24  -- target units per assault squad
+AiSquadMaxCount   = AiSquadMaxCount   or 6   -- max assault squads (overflow into nearest beyond)
+function AiSquadTickDefense(pi, sid, sq, p, wm)
+    if AiSquadSize(sq.members) == 0 then return "defense" end
+    local cx, cy = wm.capX, wm.capY
+    if cx == nil then return "defense" end
+    sq.rally.x, sq.rally.y = cx, cy
+    if wm.defendHome then
+        AiSquadOrderAtk(sq.members, cx, cy)  -- under siege: attack-move at home acquires attackers
+    else
+        local gx, gy, _ = AiGroupCentroid(sq.members)
+        local dx, dy = gx - cx, gy - cy
+        if (dx * dx + dy * dy) > (900.0 * 900.0) then AiSquadOrderMov(sq.members, cx, cy) end
+    end
+    return "defense"
 end
 
 -- Wrap aiUnitJoinsArmy for brain bots
@@ -61314,7 +61959,29 @@ function AiObjScore(pi, wm, o)
     local capCont = wm.cx and AiContinentOf(wm.cx, wm.cy)
     local objCont = AiContinentOf(o.x, o.y)
     local diffCont = (capCont and objCont and capCont ~= objCont)
-    local waterPenalty = (diffCont and not isAmphib) and 0.05 or 1.0
+    local waterPenalty = 1.0
+    if diffCont and not isAmphib then
+        -- Portal-aware: a continent reachable by a waygate route (e.g. BrokenIsles->Argus,
+        -- the ONLY neighbour of BrokenIsles) is reachable on foot through the portal, so it
+        -- must NOT score the same as a truly cross-water landmass. Before this, a BrokenIsles
+        -- bot rated its portal-linked Argus enemy at the same crushing 0.05 as unreachable
+        -- continents and wandered toward the wrong shore instead of taking the portal.
+        -- AiSquadTickMarch already routes a cross-continent squad to the portal — this just
+        -- makes the FOCUS actually pick the portal-reachable enemy. One hop 0.6, decaying.
+        local rt = AiPortalRoute(capCont, objCont)
+        if rt ~= nil and #rt >= 2 then
+            waterPenalty = 0.6 - 0.08 * (#rt - 2)
+            if waterPenalty < 0.3 then waterPenalty = 0.3 end
+        else
+            -- No waygate route AND not amphibious = unreachable by land (needs naval desant,
+            -- not yet reliable). Must score BELOW any portal-reachable target, otherwise a
+            -- huge-base enemy capital (armyBoost+armyPush) still wins even at 0.05 and the
+            -- army fixates on a continent it can't get to (live: Argus bot stuck on the
+            -- Pandaria capital @3999 while ignoring portal-reachable BrokenIsles/Kalimdor).
+            -- 0.001 keeps relative order among unreachable objs but lets reachable ones win.
+            waterPenalty = 0.001
+        end
+    end
 
     if o.kind == "capture" then
         local prox = 8000.0 / dist
@@ -61521,7 +62188,12 @@ end
 ---@param pi integer
 ---@param bldType integer
 ---@return unit|nil
-function AiFindProdBuilding(pi, bldType)
+-- `used` (optional): a per-tick set of handle ids already handed out, so successive train
+-- orders in ONE BrainProduce pass go to DIFFERENT buildings. Without this, every order piled
+-- onto the same first-complete building (which can only train one at a time), so a bot with
+-- 97 production buildings + capped gold still fielded a tiny army — most orders silently
+-- failed. Spreading across distinct buildings lets them train in parallel.
+function AiFindProdBuilding(pi, bldType, used)
     local grp = udg_Ai_buildings[pi]
     if grp == nil then return nil end
     local sz = BlzGroupGetSize(grp)
@@ -61537,12 +62209,17 @@ function AiFindProdBuilding(pi, bldType)
     for i = 0, sz - 1 do
         local u = BlzGroupUnitAt(grp, i)
         if u ~= nil and GetUnitTypeId(u) == bldType
-            and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and (used == nil or not used[GetHandleId(u)]) then
             local pct = GetUnitStatePercent(u, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE)
-            if pct >= 99.0 then return u end  -- complete & healthy: take it immediately
+            if pct >= 99.0 then
+                if used ~= nil then used[GetHandleId(u)] = true end
+                return u  -- complete & healthy: take it immediately
+            end
             if pct > bestPct then best = u; bestPct = pct end
         end
     end
+    if best ~= nil and used ~= nil then used[GetHandleId(best)] = true end
     return best
 end
 
@@ -61760,6 +62437,9 @@ function BrainProduce(pi, wm, race)
     local comp = race.compTarget
     if not prod then return 0 end
 
+    -- Per-tick set of production buildings already issued an order, so each train order this
+    -- pass goes to a DIFFERENT building (parallel training instead of piling on one).
+    local usedBld = {}
     local ordered = 0
     local maxN = AiBrainMaxProduce
     local now = AiBrainTickCounter or 0
@@ -61784,10 +62464,10 @@ function BrainProduce(pi, wm, race)
     -- 1) Workers: train independently of compTarget, always up to cap
     local w = prod.worker
     if w and w.from and w.id then
-        local wCnt = getAiCount(pi, w.id) or 0
+        local wCnt = (wm.acount and wm.acount[w.id]) or 0  -- actual live count (getAiCount drifts)
         if wCnt < (w.cap or 40) then
             for _, fromBldType in ipairs(w.from) do
-                local bld = AiFindProdBuilding(pi, fromBldType)
+                local bld = AiFindProdBuilding(pi, fromBldType, usedBld)
                 if bld ~= nil then
                     local key = pi * 1000000 + w.id
                     local last = g_AiOrdered[key]
@@ -61802,15 +62482,47 @@ function BrainProduce(pi, wm, race)
         end
     end
 
+    -- 1b) HERO PRIORITY: train altar units (heroes) before the mass army drains the gold.
+    -- Heroes have a tiny compTarget ratio (~0.03) and high cost, so in the gold-starved
+    -- general loop below they lose every gold race and never get built (live: Alliance bot
+    -- gold=0, 0 heroes despite 2 altars). Every race's heroes sit at race.altar, so issuing
+    -- those first — up to each row's limit — is a general fix. Order fails harmlessly when
+    -- gold is short and retries next tick; issuing FIRST means the hero grabs gold before
+    -- cheaper army orders spend it below the hero's cost.
+    if race.altar ~= nil and prod[race.altar] ~= nil then
+        for _, row in ipairs(prod[race.altar]) do
+            if ordered >= maxN then break end
+            local hid = row[1]
+            if hid ~= nil and hid ~= 0 then
+                local cur = (wm.acount and wm.acount[hid]) or 0  -- actual live count (getAiCount drifts → hero dupes)
+                local lim = row.limit or row[2] or 1
+                local lk = pi * 1000000 + hid
+                local ll = g_AiOrdered[lk]
+                local inFlight = (ll ~= nil and (now - ll) < AiLimitedBuildTicks) and 1 or 0
+                if cur + inFlight < lim then
+                    local bld = AiFindProdBuilding(pi, race.altar, usedBld)
+                    if bld ~= nil then
+                        IssueImmediateOrderById(bld, hid)
+                        g_AiOrdered[lk] = now
+                        ordered = ordered + 1
+                    end
+                end
+            end
+        end
+    end
+
     if not comp then return ordered end
 
     local totalMil = wm.armyCount or 0
     if totalMil < 1 then totalMil = 1 end
     -- R16: drive composition toward an absolute desired size, NOT toward the current
-    -- size. ratioBase = max(totalMil, AiBrainDesiredArmy) keeps per-unit targets above
-    -- the current counts until the army actually reaches DesiredArmy, so growth never
-    -- stalls at MinArmy. Food headroom is the real ceiling (gated just below).
-    local ratioBase = math.max(totalMil, AiBrainDesiredArmy)
+    -- size. ratioBase = max(totalMil, desired) keeps per-unit targets above the current
+    -- counts until the army actually reaches `desired`, so growth never stalls at MinArmy.
+    -- Food headroom is the real ceiling (gated just below). Per-race override: a config
+    -- `desiredArmy` field lets swarm races (Silitids etc.) field bigger numbers than the
+    -- global default without touching everyone else.
+    local desired = AiScaled(race.desiredArmy or AiBrainDesiredArmy)
+    local ratioBase = math.max(totalMil, desired)
 
     -- R16: food gate. If the bot is supply-capped there is no point spamming train
     -- orders (they just fail). Stop military production when food headroom is gone;
@@ -61873,7 +62585,7 @@ function BrainProduce(pi, wm, race)
         if type(unitId) ~= "number" or targetRatio == nil then goto skipUnit end
         if not isTrainable[unitId] then goto skipUnit end  -- R15: skip untrainable
 
-        local current = getAiCount(pi, unitId) or 0
+        local current = (wm.acount and wm.acount[unitId]) or getAiCount(pi, unitId) or 0  -- actual live count
         if current < 0 then current = 0 end
         -- R15: scale target to only-trainable pool. E.g. 9% out of 18% total → 50%
         local scaledTarget = targetRatio / trainableSum
@@ -61889,7 +62601,17 @@ function BrainProduce(pi, wm, race)
                 local uid = row[1]
                 if uid ~= nil and uid ~= 0 then
                     if uid == unitId then
-                        local bld = AiFindProdBuilding(pi, bldType)
+                        -- Respect a per-row hard cap (e.g. heroes limit=1). Count units
+                        -- still IN TRAINING (ordered within AiLimitedBuildTicks) toward the
+                        -- cap — getAiCount only sees finished units, so a slow hero was
+                        -- ordered 2-3x before the first appeared (Cult got 2x CD02).
+                        if row.limit then
+                            local lk = pi * 1000000 + unitId
+                            local ll = g_AiOrdered[lk]
+                            local inFlight = (ll ~= nil and (now - ll) < AiLimitedBuildTicks) and 1 or 0
+                            if current + inFlight >= row.limit then goto skipBld end
+                        end
+                        local bld = AiFindProdBuilding(pi, bldType, usedBld)
                         if bld ~= nil then
                             local key = pi * 1000000 + unitId
                             local last = g_AiOrdered[key]
@@ -61908,7 +62630,13 @@ function BrainProduce(pi, wm, race)
                     end
                     pick = pick and row.black or row.other
                     if pick == unitId then
-                        local bld = AiFindProdBuilding(pi, bldType)
+                        if row.limit then
+                            local lk = pi * 1000000 + unitId
+                            local ll = g_AiOrdered[lk]
+                            local inFlight = (ll ~= nil and (now - ll) < AiLimitedBuildTicks) and 1 or 0
+                            if current + inFlight >= row.limit then goto skipBld end
+                        end
+                        local bld = AiFindProdBuilding(pi, bldType, usedBld)
                         if bld ~= nil then
                             local key = pi * 1000000 + unitId
                             local last = g_AiOrdered[key]
@@ -62040,7 +62768,7 @@ function BrainBuildOne(pi, race, row)
     local bldType = row[1]
     if type(bldType) ~= "number" then return 0 end
 
-    local limit = row[2] or 1
+    local limit = AiScaled(row[2] or 1)  -- per-type building count, scaled by AiSizeScale (round up)
     local count = AiCountBuildingsOfType(pi, bldType)
     if count >= limit then return 0 end
 
@@ -62123,54 +62851,130 @@ g_NavalSpots = g_NavalSpots or {}
 -- it). For an inland capital the nearest such spot is across other land/water and the
 -- worker can't path to it — so we cap the range and simply skip naval there instead of
 -- stranding a worker trekking across the map.
-AiNavalMaxRange = AiNavalMaxRange or 8000.0
+AiNavalMaxRange = AiNavalMaxRange or 10000.0
 function AiFindNavalSpots(pi, cx, cy)
     if g_NavalSpots[pi] ~= nil then return g_NavalSpots[pi] end
-    local spots = {}
-    -- 1) PREFER the designer-placed shallow-water points (udg_WaterPoints). These are
-    -- curated valid shipyard locations sitting AT THE SHORELINE; the strict 12-point
-    -- footprint scan rejects most of them (their footprint samples touch land), which
-    -- is why shipyards were barely built. The actual game placement accepts them (live
-    -- test-builds at these points returned true), so trust them with only a center-water
-    -- check, nearest-first, within range of the capital.
+    local cand = {}
+    -- 0) Curated hand-placed spots on the bot's OWN continent (same landmass = a ground
+    --    worker can always path there, so NO range cap needed). These are exact coords where
+    --    a shipyard was successfully built during testing, so they're guaranteed buildable
+    --    and cover coastlines the capital ring-scan misses. Highest priority.
+    if AiCuratedNavalSpots ~= nil then
+        local capCont = AiContinentOf(cx, cy)
+        local list = capCont and AiCuratedNavalSpots[capCont]
+        if list ~= nil then
+            for _, sp in ipairs(list) do
+                local dx, dy = cx - sp[1], cy - sp[2]
+                cand[#cand + 1] = { x = sp[1], y = sp[2], d = SquareRoot(dx * dx + dy * dy) }
+            end
+        end
+    end
+    -- WHY the rework (session 2): removing the distance cap (earlier request) made every
+    -- bot target the globally-nearest designated point even when it sat 12k-17k away on a
+    -- DIFFERENT landmass — a land worker can't path there, so the build order issued but
+    -- the shipyard was never placed (live: nearest WaterPoint for some bots = 16986). So
+    -- we now bound BOTH sources to AiNavalMaxRange and, crucially, also scan the bot's OWN
+    -- coastline (contiguous from the capital = actually reachable).
+    -- 1) Designer-placed points within reach (curated shoreline spots, center-water only —
+    --    their footprint corners touch land so the strict footprint scan would reject them).
     if type(udg_WaterPoints) == "table" then
-        local cand = {}
         local i = 1
         while udg_WaterPoints[i] ~= nil do
             local p = udg_WaterPoints[i]
             if p.x ~= nil then
                 local dx, dy = cx - p.x, cy - p.y
                 local d = SquareRoot(dx * dx + dy * dy)
-                -- No distance cap (user request): try every designated water point,
-                -- nearest-first, regardless of how far it is — the worker will walk to it.
-                if AiTerrainWater(p.x, p.y) then
+                if d <= AiNavalMaxRange and AiTerrainWater(p.x, p.y) then
                     cand[#cand + 1] = { x = p.x, y = p.y, d = d }
                 end
             end
             i = i + 1
         end
-        table.sort(cand, function(a, b) return a.d < b.d end)
-        for _, c in ipairs(cand) do spots[#spots + 1] = { x = c.x, y = c.y } end
     end
-    -- 2) Fall back to the ring scan only when no designated point is in range.
-    if #spots == 0 then
-        local r = 384.0
-        while r <= AiNavalMaxRange and #spots < 8 do
-            local s = 0
-            while s < 36 do
-                local ang = (I2R(s) / 36.0) * 2.0 * bj_PI
-                local x = cx + r * Cos(ang)
-                local y = cy + r * Sin(ang)
-                if AiNavalFootprintWater(x, y) and AiNavalLandWithin(x, y, 640.0) then
-                    spots[#spots + 1] = { x = x, y = y }
-                end
-                s = s + 1
+    -- 2) Ring-scan the bot's OWN coastline (open-water-near-shore within reach). These are
+    --    contiguous with the capital so a ground worker can always path to them.
+    local r = 384.0
+    while r <= AiNavalMaxRange and #cand < 12 do
+        local s = 0
+        while s < 36 do
+            local ang = (I2R(s) / 36.0) * 2.0 * bj_PI
+            local x = cx + r * Cos(ang)
+            local y = cy + r * Sin(ang)
+            if AiNavalFootprintWater(x, y) and AiNavalLandWithin(x, y, 700.0) then
+                cand[#cand + 1] = { x = x, y = y, d = r }
             end
-            r = r + 384.0
+            s = s + 1
         end
+        r = r + 384.0
+    end
+    table.sort(cand, function(a, b) return a.d < b.d end)
+    local spots = {}
+    for _, c in ipairs(cand) do spots[#spots + 1] = { x = c.x, y = c.y } end
+    -- 3) Last resort for an island/inland bot with NO spot in range: allow the far
+    --    designated points so it at least attempts (better than never trying).
+    if #spots == 0 and type(udg_WaterPoints) == "table" then
+        local far = {}
+        local i = 1
+        while udg_WaterPoints[i] ~= nil do
+            local p = udg_WaterPoints[i]
+            if p.x ~= nil and AiTerrainWater(p.x, p.y) then
+                local dx, dy = cx - p.x, cy - p.y
+                far[#far + 1] = { x = p.x, y = p.y, d = SquareRoot(dx * dx + dy * dy) }
+            end
+            i = i + 1
+        end
+        table.sort(far, function(a, b) return a.d < b.d end)
+        for _, c in ipairs(far) do spots[#spots + 1] = { x = c.x, y = c.y } end
     end
     g_NavalSpots[pi] = spots
     return spots
+end
+
+-- Scan rings outward from (x,y) for the nearest buildable open-water-near-shore spot.
+-- Returns spot coords or nil. Bounded radius so it stays cheap when called per-worker.
+local function AiNavalSpotNear(x, y, maxr)
+    local r = 256.0
+    while r <= maxr do
+        local s = 0
+        while s < 16 do
+            local ang = (I2R(s) / 16.0) * 2.0 * bj_PI
+            local px, py = x + r * Cos(ang), y + r * Sin(ang)
+            if AiNavalFootprintWater(px, py) and AiNavalLandWithin(px, py, 700.0) then
+                return px, py
+            end
+            s = s + 1
+        end
+        r = r + 256.0
+    end
+    return nil, nil
+end
+
+-- "Shallow water under the builder": find an existing idle/harvesting worker that already
+-- stands next to buildable open water and return (worker, spotX, spotY). Catches coastlines
+-- the capital-ring scan misses (island expansions, coastal goldmines) with no long trek.
+-- Stops at the first qualifying worker; bounded worker count keeps the per-tick cost low.
+local function AiNavalOpportunistic(pi)
+    local checked = 0
+    local function scan(grp, idleOnly)
+        if grp == nil then return nil end
+        local sz = BlzGroupGetSize(grp)
+        for i = 0, sz - 1 do
+            local u = BlzGroupUnitAt(grp, i)
+            if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+               and (not idleOnly or GetUnitCurrentOrder(u) == 0) then
+                checked = checked + 1
+                local sx, sy = AiNavalSpotNear(GetUnitX(u), GetUnitY(u), 768.0)
+                if sx ~= nil then return u, sx, sy end
+                if checked >= 12 then return nil end
+            end
+        end
+        return nil
+    end
+    local u, sx, sy = scan(udg_Ai_harvest[pi], false)
+    if u ~= nil then return u, sx, sy end
+    u, sx, sy = scan(udg_Ai_builders[pi], false)
+    if u ~= nil then return u, sx, sy end
+    return scan(udg_Ai_buildersT[pi], true)
 end
 
 function BrainNavalDecision(pi, wm, race)
@@ -62181,8 +62985,28 @@ function BrainNavalDecision(pi, wm, race)
         shipType = race.shipyard
     end
     if shipType == nil or not AiTransportTypes[shipType] then return end
-    if AiCountBuildingsOfType(pi, shipType) >= AiBrainMaxPorts then return end
+    if AiCountBuildingsOfType(pi, shipType) >= AiScaled(AiBrainMaxPorts) then return end
 
+    local now = AiBrainTickCounter or 0
+
+    -- PASS A: opportunistic "shallow water under the builder" — build at a worker already
+    -- standing on the coast (no trek, distributes shipyards along the whole shoreline).
+    local ow, osx, osy = AiNavalOpportunistic(pi)
+    if ow ~= nil then
+        local key = pi .. ",nav," .. R2I(osx) .. "," .. R2I(osy)
+        local resAt = g_BuildSpotReserved[key]
+        if resAt == nil or (now - resAt) >= g_BuildReserveTicks then
+            TryBuild_u = ow
+            if TryBuildWithType(shipType, osx, osy) then
+                g_BuildSpotReserved[key] = now
+                AiNavalBuildUntil[ow] = now + AiNavalBuildGrace
+                BrainLogEvery(pi, "brainnavy", 30, "shipyard under builder", "BRAINNAVY")
+                return
+            end
+        end
+    end
+
+    -- PASS B: capital-ring spots (a free worker walks to the nearest open-water spot).
     local cx, cy = wm.capX, wm.capY
     if cx == nil then return end
     local spots = AiFindNavalSpots(pi, cx, cy)
@@ -62191,18 +63015,20 @@ function BrainNavalDecision(pi, wm, race)
     if worker == nil then return end
     -- Pick the nearest spot not recently committed (reservation prevents piling every
     -- shipyard on the same point before the first finishes).
-    local now = AiBrainTickCounter or 0
     for _, sp in ipairs(spots) do
         local key = pi .. ",nav," .. R2I(sp.x) .. "," .. R2I(sp.y)
         local resAt = g_BuildSpotReserved[key]
         if resAt == nil or (now - resAt) >= g_BuildReserveTicks then
-            g_BuildSpotReserved[key] = now
             TryBuild_u = worker
+            -- Only reserve + return when the order actually ISSUES. Previously we
+            -- returned after the first unreserved spot even if TryBuild failed, so one
+            -- bad spot blocked all others for that whole naval tick.
             if TryBuildWithType(shipType, sp.x, sp.y) then
+                g_BuildSpotReserved[key] = now
                 AiNavalBuildUntil[worker] = now + AiNavalBuildGrace
+                BrainLogEvery(pi, "brainnavy", 30, "shipyard at open water", "BRAINNAVY")
+                return
             end
-            BrainLogEvery(pi, "brainnavy", 30, "shipyard at open water", "BRAINNAVY")
-            return
         end
     end
 end
@@ -62312,28 +63138,56 @@ function BrainFocus(pi, p, wm)
     local focus = AiBrainPickFocus(pi, wm)
     if focus == nil then return 0 end
 
-    local army = udg_Ai_army[pi]
+    -- BrainFocus is the LIVE army-command path (the AiSquadTick* FSM with portal routing is
+    -- never dispatched). The army is a SINGLE front (one objective), but each unit's order
+    -- depends on ITS OWN continent, NOT the army centroid: a unit already on the objective
+    -- continent attacks the objective; a unit still behind a portal MOVES onto the waygate
+    -- toward it. Centroid routing told units that had ALREADY crossed to walk back to the
+    -- origin-side portal — the "orc reached Pandaria but his units run back to Kalimdor" bug.
+    local oc = AiContinentOf(focus.x, focus.y)
 
-    if gSubGroup == nil then gSubGroup = CreateGroup() end
-    GroupClear(gSubGroup)
+    -- Kick the TP machinery if a port-mage already sits on the objective continent.
+    if oc ~= nil then
+        local sc = wm.cx and AiContinentOf(wm.cx, wm.cy)
+        if sc ~= nil and sc ~= oc then
+            local m = AiFindMageOnContinent(pi, oc)
+            if m ~= nil then gPi = pi; gPlayer = p; PortTo(m) end
+        end
+    end
+
+    -- Memoize (continent -> {x,y,order}) so AiContinentOf is the only per-unit cost. MOVE
+    -- (not attack) onto a waygate so units step through instead of stopping to fight near it.
+    local destCache = {}
+    local function targetFor(ux, uy)
+        local uc = AiContinentOf(ux, uy)
+        if uc == nil or oc == nil or uc == oc then return focus.x, focus.y, "attack" end
+        local c = destCache[uc]
+        if c ~= nil then return c.x, c.y, c.ord end
+        local rx, ry, ro = focus.x, focus.y, "attack"
+        local rt = AiPortalRoute(uc, oc)
+        if rt ~= nil and #rt >= 2 then
+            local portal = AiFindPortal(rt[1], rt[2])
+            if portal ~= nil then rx, ry, ro = GetUnitX(portal), GetUnitY(portal), "move" end
+        end
+        destCache[uc] = { x = rx, y = ry, ord = ro }
+        return rx, ry, ro
+    end
 
     local cnt = 0
+    local function orderIdle(u)
+        local tx, ty, ord = targetFor(GetUnitX(u), GetUnitY(u))
+        IssuePointOrder(u, ord, tx, ty)
+        cnt = cnt + 1
+    end
 
-    -- Process main army group
+    local army = udg_Ai_army[pi]
     if army ~= nil then
         local armySz = BlzGroupGetSize(army)
         for i = 0, armySz - 1 do
             local u = BlzGroupUnitAt(army, i)
             if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
                 local o = GetUnitCurrentOrder(u)
-                if o == 0 or o == 851972 or o == 851976 then
-                    GroupAddUnit(gSubGroup, u)
-                    cnt = cnt + 1
-                    if cnt % 12 == 0 then
-                        GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
-                        GroupClear(gSubGroup)
-                    end
-                end
+                if o == 0 or o == 851972 or o == 851976 then orderIdle(u) end
             end
         end
     end
@@ -62347,24 +63201,11 @@ function BrainFocus(pi, p, wm)
             local szH = BlzGroupGetSize(grpH)
             for j = 0, szH - 1 do
                 local u = BlzGroupUnitAt(grpH, j)
-                if u ~= nil
-                    and GetUnitTypeId(u) == wfId
+                if u ~= nil and GetUnitTypeId(u) == wfId
                     and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
-                    and GetUnitCurrentOrder(u) == 0 then
-                    GroupAddUnit(gSubGroup, u)
-                    cnt = cnt + 1
-                    if cnt % 12 == 0 then
-                        GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
-                        GroupClear(gSubGroup)
-                    end
-                end
+                    and GetUnitCurrentOrder(u) == 0 then orderIdle(u) end
             end
         end
-    end
-
-    if BlzGroupGetSize(gSubGroup) > 0 then
-        GroupPointOrder(gSubGroup, "attack", focus.x, focus.y)
-        GroupClear(gSubGroup)
     end
     return cnt
 end
@@ -62820,7 +63661,9 @@ function AiBrainArmyTickInner(pi, p)
         end
     end
 
-    AiSquadReapDead(pi)
+    if (wm.tick % 2) == 0 then
+        AiSquadReapDead(pi)
+    end
     lap("reap")
 
     if (wm.tick % 2) == 0 then
@@ -62854,7 +63697,13 @@ function AiBrainArmyTickInner(pi, p)
     end
     lap("orphan")
 
-    BrainFocus(pi, p, wm)
+    if (wm.tick % AiFocusEvery) == 1 then
+        if AiSquadFsmEnabled then
+            AiSquadFsmTick(pi, p, wm)  -- opt-in squad FSM (commands squads instead of single front)
+        else
+            BrainFocus(pi, p, wm)
+        end
+    end
     lap("focus")
 
     BrainCaptureSquad(pi, p, wm)
@@ -62935,18 +63784,21 @@ end
 ---@return boolean
 function AiBuildPlaceable(x, y, half)
     half = half or (AiBuildingRadius and AiBuildingRadius * 0.2) or 192.0
-    -- Center must be walkable (not cliff/blocked) and not water.
+    -- Center must be walkable (rejects cliffs AND deep water — deep water is non-walkable).
+    -- SHALLOW water is walkable, so it's now allowed: an island/coastal bot can build on it
+    -- (physically valid in this map). Previously we also rejected every floatable tile, which
+    -- locked island Silitids out of building their base entirely.
     if IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY) then return false end
-    if not IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY) then return false end
-    -- Footprint ring: sample WATER only. Walkability under the center's neighbours is
-    -- often "blocked" simply because friendly buildings sit there (dense base) — that
-    -- is a spacing concern (AiBuildSpotOccupied), not a terrain one, and sampling it
-    -- locked dense bases out of building entirely. Water at a footprint corner, though,
-    -- makes the engine silently reject the order — that we must catch.
+    -- Footprint ring: reject only DEEP water (floatable AND non-walkable). A friendly building
+    -- on a corner is non-walkable but NOT floatable (land under it), so it's allowed (dense
+    -- base, the reason we don't sample walkability alone). Shallow-water corners (walkable) are
+    -- allowed; deep-water corners make the engine silently reject the order, so we catch those.
     local offs = { {half,0},{-half,0},{0,half},{0,-half} }
     for i = 1, 4 do
-        if not IsTerrainPathable(x + offs[i][1], y + offs[i][2], PATHING_TYPE_FLOATABILITY) then
-            return false
+        local fx, fy = x + offs[i][1], y + offs[i][2]
+        if (not IsTerrainPathable(fx, fy, PATHING_TYPE_FLOATABILITY))
+            and IsTerrainPathable(fx, fy, PATHING_TYPE_WALKABILITY) then
+            return false  -- deep water corner
         end
     end
     return true
@@ -64448,12 +65300,14 @@ end
 ---@param y real
 ---@return string|nil continent name (main continents first, sub-zones for uncovered areas)
 function AiContinentOf(x, y)
-    -- Main continents (ProcessContinentalStuff priority order)
+    -- Main continents — MUST mirror ProcessContinentalStuff's order (93_continental_main.lua):
+    -- Kalim, Nord, Pandaria, Outland, BrokenIsles, Argus, THEN EasternKingdoms LAST. The EK
+    -- rect is huge and overlaps Outland/Nord/Pandaria, so it must be the lowest-priority main
+    -- or it steals their overlap zones (live bug: a Horde army physically in Outland read as
+    -- "EasternKingdoms" → portal routing broke, army walked direct). The gg_rct_VknotOut
+    -- exclusion in Outland ("восточки НЕ запределье") still hands the EK-overlap strip to EK.
     if RectContainsCoords(gg_rct_Kalim, x, y) and not RectContainsCoords(gg_rct_NordNotKalim, x, y) then
         return "Kalimdor"
-    end
-    if (RectContainsCoords(gg_rct_EastenKingdoms, x, y) or RectContainsCoords(gg_rct_VknotOut, x, y)) and not (RectContainsCoords(gg_rct_OkeaniaNoVk, x, y) or RectContainsCoords(gg_rct_KillDalaran, x, y)) then
-        return "EasternKingdoms"
     end
     if RectContainsCoords(gg_rct_Nord, x, y) or RectContainsCoords(gg_rct_NordNotKalim, x, y) then
         return "Northrend"
@@ -64469,6 +65323,9 @@ function AiContinentOf(x, y)
     end
     if RectContainsCoords(gg_rct_Argus, x, y) then
         return "Argus"
+    end
+    if (RectContainsCoords(gg_rct_EastenKingdoms, x, y) or RectContainsCoords(gg_rct_VknotOut, x, y)) and not (RectContainsCoords(gg_rct_OkeaniaNoVk, x, y) or RectContainsCoords(gg_rct_KillDalaran, x, y)) then
+        return "EasternKingdoms"
     end
     -- Sub-zones for areas NOT covered by main continental rects.
     -- Azgel (Nord's neighbour), dungeons etc. checked AFTER mains so inland
@@ -64491,6 +65348,19 @@ function AiContinentOf(x, y)
             return sz[1]
         end
     end
+    -- Fallback: a point inside a main rect but carved out by an EXCLUSION (e.g. an enemy
+    -- capital sitting in the OkeaniaNoVk ocean-strip of EK) must NOT return nil — a nil
+    -- objective continent makes portal routing give up and walk direct (live: Outland Horde
+    -- had its target read nil => route(Outland->nil)=nil => marched out on foot instead of
+    -- taking the Outland->EK portal). Exclusions only resolve overlap PRIORITY above; here we
+    -- ignore them so any point within a continent's rect still names that continent.
+    if RectContainsCoords(gg_rct_Kalim, x, y) then return "Kalimdor" end
+    if RectContainsCoords(gg_rct_Nord, x, y) then return "Northrend" end
+    if RectContainsCoords(gg_rct_Pandaria, x, y) then return "Pandaria" end
+    if RectContainsCoords(gg_rct_Outland, x, y) then return "Outland" end
+    if RectContainsCoords(gg_rct_BrokenIsles, x, y) then return "BrokenIsles" end
+    if RectContainsCoords(gg_rct_Argus, x, y) then return "Argus" end
+    if RectContainsCoords(gg_rct_EastenKingdoms, x, y) then return "EasternKingdoms" end
     return nil
 end
 
@@ -64533,13 +65403,16 @@ end
 AiPortalUnitCache = AiPortalUnitCache or {}
 AiPortalCacheBuilt = AiPortalCacheBuilt or false
 
--- Portal unit type ids included in the cache
-AiPortalTypeSet = {
-    [FourCC('n003')] = true,
-    [FourCC('n006')] = true,
-    [FourCC('n01Y')] = true,
-    [FourCC('n01Z')] = true,
-}
+-- Water portal (naval-only) — excluded from land routing, matching the baked graph.
+AiPortalWaterType = FourCC('n01D')
+
+-- The old hardcoded AiPortalTypeSet {n003,n006,n01Y,n01Z} MISSED the real land portals
+-- between several continents (live scan found n065/n00W = BrokenIsles<->Argus, n01B =
+-- Kalimdor<->Argus, n04O, n001 — none were in the set), so AiFindPortal returned nil for
+-- BrokenIsles->Argus and a cross-portal squad fell through to walking into the sea. We now
+-- detect ANY waygate (non-zero destination) by its destination, excluding water portals —
+-- future-proof against new portal unit types.
+AiPortalTypeSet = nil  -- deprecated; kept nil so any stale reference fails loudly
 
 function AiBuildPortalCache()
     if AiPortalCacheBuilt then return end
@@ -64550,12 +65423,11 @@ function AiBuildPortalCache()
     local i = 0
     while i < size do
         local u = BlzGroupUnitAt(AiPortalScanGroup, i)
-        if u ~= nil then
-            local id = GetUnitTypeId(u)
-            if AiPortalTypeSet[id] then
+        if u ~= nil and GetUnitTypeId(u) ~= AiPortalWaterType then
+            local dx = WaygateGetDestinationX(u)
+            local dy = WaygateGetDestinationY(u)
+            if dx ~= 0.0 or dy ~= 0.0 then  -- it's an actual waygate with a destination
                 local sx, sy = GetUnitX(u), GetUnitY(u)
-                local dx = WaygateGetDestinationX(u)
-                local dy = WaygateGetDestinationY(u)
                 local src = AiContinentOf(sx, sy)
                 local dst = AiContinentOf(dx, dy)
                 if src ~= nil and dst ~= nil and src ~= dst then
@@ -64612,6 +65484,17 @@ function AiFindMageOnContinent(pi, continent)
     end
     return nil
 end
+
+-- Curated shipyard spots: exact coords where shipyards were hand-placed on open
+-- water during live testing (guaranteed buildable). Keyed by continent so a bot
+-- only gets spots on its OWN landmass (worker can path there). Deduped @600u.
+AiCuratedNavalSpots = {
+    Kalimdor = { {-15680,-10816}, {-15936,-9728}, {-20736,-16640}, {-29184,2432}, {-15168,-9024}, {-28416,-4160}, {-27904,-5376}, {-14272,-5312}, {-25856,-16768}, {-26368,-16000}, {-14720,5888}, {-13312,-4608}, {-13696,-5120}, {-16000,768}, {-14208,5376}, {-13376,1088}, {-13440,1792}, {-13760,9536}, {-28160,15040}, {-27392,14848} },
+    EasternKingdoms = { {23936,29440}, {22080,19840}, {25408,29184}, {22720,19648}, {29248,10816}, {23360,29888}, {24512,29056}, {28352,21376}, {29184,13568}, {7552,7360}, {8256,22848}, {28224,22016}, {8000,8256}, {9024,21632}, {8896,24768}, {8576,22144}, {12800,-9472}, {27712,-9536}, {13632,-6336}, {15744,-17024}, {12352,-10944}, {26304,4544}, {15360,-14400}, {9664,6144}, {18944,832}, {25088,-16192}, {25600,3840}, {14336,-13312}, {18560,6144}, {17984,5440}, {27840,-5568}, {29888,-128}, {11200,15488}, {10560,14912}, {15616,-16384}, {29376,1024}, {13312,-7104}, {29696,-832}, {17408,-17536}, {18368,-17472}, {11136,10176}, {20928,2688}, {20160,1344}, {28352,-3584}, {27200,-6464}, {30144,-3456}, {26112,-15872}, {29824,-2624}, {19392,5504}, {9536,6848}, {26688,-15616}, {27392,-13120}, {14720,-13824}, {19008,64}, {14656,16192}, {16256,-16448}, {21696,17792}, {12480,-10176}, {26432,5376}, {28160,-10176}, {13824,16320}, {21056,18240} },
+    Northrend = { {-768,29440}, {-8320,29696}, {-4672,20672}, {-3072,20672}, {-8896,29376}, {-3840,20608}, {-16256,22080}, {-16256,20160}, {-16384,20864}, {-12224,17856}, {-11584,18368}, {-12928,18240}, {-11264,18944}, {-16192,21440}, {-13376,25664} },
+    Pandaria = { {-10112,-13632}, {-7680,-10880}, {-7744,-10240}, {-3328,-10880}, {-1216,-12416}, {1152,-20608}, {-2816,-22912}, {-8768,-20160}, {-896,-14720}, {-9152,-17024}, {-832,-13376}, {-2240,-11072}, {640,-22272}, {-640,-12736}, {-4352,-22656}, {-10112,-10624}, {-3840,-22208}, {-2112,-22912}, {-10048,-9920}, {-2944,-11456}, {64,-21952}, {1664,-20928} },
+    BrokenIsles = { {256,11584}, {768,12032}, {1856,12608}, {2432,1344}, {-1088,3520}, {1024,1728} },
+}
 function InitCustomTriggers()
     InitTrig_ItemLitterCleanup()
     InitTrig_sek5()

@@ -2,8 +2,8 @@
 ---@param pi integer
 ---@return nothing
 function turnOffAi(pi)
-	if  not udg_AiControl[gPi] then
-		return 
+	if  not udg_AiControl[pi] then
+		return
 	end
 	
 	udg_AiControl[pi] = false

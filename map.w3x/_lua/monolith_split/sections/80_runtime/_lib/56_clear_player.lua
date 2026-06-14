@@ -41,6 +41,11 @@ function ClearPlayer(p)
 	SetPlayerAbilityAvailable(Player(pi), FourCC('A0IQ'), true)
 	ClearEc(pi)
 	turnOffAi(pi)
+	-- The brain round-robin (PlayerArmy → AiBrainArmyTick) iterates AiBrainBotList,
+	-- which turnOffAi does NOT touch (it only drops the legacy udg_Bots membership).
+	-- Without this, a defeated bot keeps getting perceive/produce/build ticks every
+	-- cycle — wasted CPU and a chance for AiEnsureCapital to re-adopt a stray unit.
+	if AiBrainBotListRemove ~= nil then AiBrainBotListRemove(pi) end
 	UpdateGraf(pi)
 	playerCapital[pi] = nil
 	ArmyExp[pi] = 0.0

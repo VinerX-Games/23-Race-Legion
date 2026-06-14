@@ -1038,12 +1038,33 @@ function Trig_AllyControl_Actions()
     local players = ParseAllyList(numsPart)
     ProbeLogWrite("[CHAT] -ally " .. (enable and "on" or "off") .. " players=" .. tostring(numsPart))
     SetAllyControl(players, enable)
+    ReshowArmyBoard()
+end
+-- Becoming allied with shared units makes WC3 show its native ally-resource panel,
+-- which contends for the same screen slot and displaces/minimizes our army multiboard.
+-- The board isn't destroyed, just hidden — re-assert it shortly after the change so it
+-- pops back. Also exposed as the "-board" chat command.
+function ReshowArmyBoard()
+    if Multiboard == nil then return end
+    local t = CreateTimer()
+    TimerStart(t, 0.8, false, function()
+        MultiboardDisplay(Multiboard, true)
+        MultiboardMinimize(Multiboard, false)
+        DestroyTimer(GetExpiredTimer())
+    end)
 end
 function InitTrig_AllyControl()
     gg_trg_AllyControl = CreateTrigger()
     TriggerRegisterPlayerChatEvent(gg_trg_AllyControl, Player(0), "-ally", false)
     TriggerAddCondition(gg_trg_AllyControl, Condition(Trig_AllyControl_Conditions))
     TriggerAddAction(gg_trg_AllyControl, Trig_AllyControl_Actions)
+
+    -- Manual re-show fallback if the native ally panel keeps the board hidden.
+    local b = CreateTrigger()
+    for i = 0, 23 do
+        TriggerRegisterPlayerChatEvent(b, Player(i), "-board", true)
+    end
+    TriggerAddAction(b, ReshowArmyBoard)
 end
 --===========================================================================
 -- Trigger: ResO

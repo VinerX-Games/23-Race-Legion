@@ -3260,6 +3260,12 @@ function startAlliance(pi)
     SetPlayerTechResearchedSwap(FourCC('R0HY'), 1, p)
     SetPlayerTechResearchedSwap(FourCC('R0KK'), 1, p)
     ConditionalTriggerExecute(gg_trg_AllyOn)
+    -- Precompute the Karazm replace-table counts (AT1_0/AK1_0/...). StartAlliance's
+    -- 0.01s timer runs ForForce(udg_AllPlayers,...) but udg_AllPlayers is still nil
+    -- then, so it's a no-op for everyone; humans recover via sub-race RESEARCH_FINISH
+    -- triggers, but a brain bot trains hfoo before researching → counts nil → b=0 →
+    -- ReplaceUnit(unit,0) deletes the trained unit and spawns nothing. Seed them here.
+    if AcountAll ~= nil then AcountAll(p) end
     SetPlayerName(p, "Alliance (" .. I2S(pi + 1) .. ")")
     AiRace[pi] = "Alliance"
     ProbeLogWrite("[AI] startAlliance pi=" .. tostring(pi) .. " workers=5hpea building=1htow")
@@ -3461,14 +3467,18 @@ end
 ---@return nothing
 function startSilitids(pi)
     local p = Player(pi)
-    CreateNUnitsAtLoc(8, FourCC('e01G'), p, udg_LocalPoint, bj_UNIT_FACING)
+    -- 12 starting drones (was 8): Silitid builders only replenish via the slow egg-
+    -- spawner (shared with army production), so the early build pool was starved and
+    -- structures crawled. A bigger seed lets BrainBuild run several sites in parallel
+    -- until the first extra hives come online. See [[ai-brain-mode-production]].
+    CreateNUnitsAtLoc(12, FourCC('e01G'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
     CreateNUnitsAtLoc(1, FourCC('e01H'), p, udg_LocalPoint, bj_UNIT_FACING)
     local hive = GetLastCreatedUnit()
     GroupAddUnit(udg_Ai_units[pi], hive)
     GroupAddUnit(udg_Ai_buildings[pi], hive)
-    NumberSet(pi, FourCC('e01G'), 8)
+    NumberSet(pi, FourCC('e01G'), 12)
     NumberSet(pi, FourCC('e01H'), 1)
     AiData[pi][StringHash("Race")] = "SL"
     SetPlayerTechResearchedSwap(FourCC('R0BV'), 1, p)

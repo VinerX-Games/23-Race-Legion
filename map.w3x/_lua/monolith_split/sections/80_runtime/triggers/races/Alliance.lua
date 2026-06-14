@@ -170,7 +170,9 @@ function Trig_AK1T1_Actions()
     b=CommonHash[pi]["AT1" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -267,7 +269,9 @@ function Trig_AK1T2_Actions()
     b=CommonHash[pi]["AT2" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -466,7 +470,9 @@ function Trig_AK1T3_Actions()
     b=CommonHash[pi]["AT3" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -628,7 +634,9 @@ function Trig_AK1Cav_Actions()
     b=CommonHash[pi]["ACav" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -775,7 +783,9 @@ function Trig_AK2T1_Actions()
     b=CommonHash[pi]["AK1" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -929,7 +939,9 @@ function Trig_AK2T2_Actions()
     b=CommonHash[pi]["AK2" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -1102,7 +1114,9 @@ function Trig_AK2T3_Actions()
     b=CommonHash[pi]["AK3" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -1281,7 +1295,9 @@ function Trig_AM1_Actions()
     b=CommonHash[pi]["AM1" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -1449,7 +1465,9 @@ function Trig_AM2_Actions()
     b=CommonHash[pi]["AM2" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -1570,7 +1588,9 @@ function Trig_AM3_Actions()
     b=CommonHash[pi]["AM3" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -1709,7 +1729,9 @@ function Trig_AE1_Actions()
     b=CommonHash[pi]["AE1" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -1878,7 +1900,9 @@ function Trig_AE2_Actions()
     b=CommonHash[pi]["AEE2" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -2028,7 +2052,9 @@ function Trig_AN1_Actions()
     b=CommonHash[pi]["AN1" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')
@@ -2159,7 +2185,9 @@ function Trig_AN2_Actions()
     b=CommonHash[pi]["AN2" .. i] or 0
     
     aiFixTrainBefore(GetTrainedUnit(), pi)
+    if b == 0 then b = GetUnitTypeId(GetTrainedUnit()) end -- never replace into id 0 (would delete with no spawn)
     u=ReplaceUnit(GetTrainedUnit() , b , bj_UNIT_STATE_METHOD_RELATIVE)
+    aiFixTrainAfter(u, pi) -- re-enlist the replacement into the AI army (else bot can't control it)
     
    
     --call UnitAddAbility(u,'OR00')

@@ -72,6 +72,26 @@ function GetPlayerNameCut(p)
     end
     return s3
 end
+-- Reforged player-color hex (enum order 0..23 matches classic). Used to tint
+-- multiboard player names by their in-game color.
+Ai_PlayerColorHex = {
+    [0]="ff0303",[1]="0042ff",[2]="1ce6b9",[3]="540081",[4]="fffc01",[5]="fe8a0e",
+    [6]="20c000",[7]="e55bb0",[8]="959697",[9]="7ebff1",[10]="106246",[11]="4e2a04",
+    [12]="9b0000",[13]="0000c3",[14]="00eaff",[15]="be00fe",[16]="ebcd87",[17]="f8a48b",
+    [18]="bfff80",[19]="dcb9eb",[20]="282828",[21]="ebf0ff",[22]="00781e",[23]="a46f33",
+}
+---@param p player
+---@param s string
+---@return string s wrapped in the player's color code (or unchanged if unknown)
+function PlayerColorHexWrap(p, s)
+    local pc = GetPlayerColor(p)
+    local k = 0
+    while k <= 23 do
+        if pc == ConvertPlayerColor(k) then return "|cff" .. Ai_PlayerColorHex[k] .. s .. "|r" end
+        k = k + 1
+    end
+    return s
+end
 ---@param pi integer
 ---@return integer|nil
 function EnsureMultiboardPlayerRow(pi)
@@ -92,7 +112,7 @@ function EnsureMultiboardPlayerRow(pi)
     MultiboardItem[ownerIndex * 2]=MultiboardGetItem(Multiboard, ownerIndex, 0)
     MultiboardItem[ownerIndex * 2 + 1]=MultiboardGetItem(Multiboard, ownerIndex, 1)
     udg_LocalText2=I2S(GetConvertedPlayerId(Player(pi))) .. "." .. GetPlayerNameCut(Player(pi))
-    MultiboardSetItemValue(MultiboardItem[ownerIndex * 2], udg_LocalText2)
+    MultiboardSetItemValue(MultiboardItem[ownerIndex * 2], PlayerColorHexWrap(Player(pi), udg_LocalText2))
     MultiboardSetItemWidth(MultiboardItem[ownerIndex * 2], 0.14)
     MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi] or 0))
     MultiboardSetItemWidth(MultiboardItem[ownerIndex * 2 + 1], 0.06)
@@ -136,7 +156,7 @@ function Trig_StartTableCode_Actions()
             udg_LocalText2=I2S(GetConvertedPlayerId(Player(i))) .. "." .. GetPlayerNameCut(Player(i))
                         
             --set udg_LocalText2 = SubString(udg_LocalText2, 0, StringLength(udg_LocalText2)-4 )
-            MultiboardSetItemValue(MultiboardItem[max * 2], udg_LocalText2)
+            MultiboardSetItemValue(MultiboardItem[max * 2], PlayerColorHexWrap(Player(i), udg_LocalText2))
             MultiboardSetItemWidth(MultiboardItem[max * 2], 0.14)
             MultiboardSetItemValue(MultiboardItem[max * 2 + 1], "0")
             MultiboardSetItemWidth(MultiboardItem[max * 2 + 1], 0.06)

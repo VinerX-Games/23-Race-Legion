@@ -187,6 +187,7 @@ function createAiPlayer(pi, raceToken)
 	udg_AiControl[pi] = true
 	ForceAddPlayerSimple(gPlayer, udg_Bots)
 	AiBrainBotListAdd(pi)
+	if AiApplyBotHandicap ~= nil then AiApplyBotHandicap(pi) end  -- bot HP/dmg advantage dials (neutral by default)
 	ProbeLogWrite("[AI] createAiPlayer bot added to Bots force, count=" .. tostring(CountPlayersInForceBJ(udg_Bots)))
 	--  Обычное появление и ресы
 
