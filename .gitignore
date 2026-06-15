@@ -7,3 +7,4 @@ _verf_*.json
 _cli_races.json
 probe_detached.*
 tmp_screen*.png
+/tmp

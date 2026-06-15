@@ -9,3 +9,128 @@
 {"ts":"2026-06-11T21:12:37.277Z","command":"set-field","type":"upgrade","id":"R0FJ","field":"requires1","old":"hkee","new":""}
 {"ts":"2026-06-11T21:13:47.166Z","command":"batch-edit","type":"upgrade","field":"requires1","count_changed":34,"changes":[{"id":"R0FK","old":"hkee","new":"","written":true},{"id":"R0FL","old":"hkee","new":"","written":true},{"id":"R0FM","old":"hkee","new":"","written":true},{"id":"R0FN","old":"unp2","new":"","written":true},{"id":"R0FO","old":"unp2","new":"","written":true},{"id":"R0G0","old":"unp2","new":"","written":true},{"id":"R05N","old":"unp1","new":"","written":true},{"id":"R05P","old":"unp1","new":"","written":true},{"id":"R05O","old":"unp1","new":"","written":true},{"id":"R05Q","old":"unp1","new":"","written":true},{"id":"R08T","old":"etoa","new":"","written":true},{"id":"R08U","old":"etoa","new":"","written":true},{"id":"R08W","old":"hkee","new":"","written":true},{"id":"R08V","old":"hkee","new":"","written":true},{"id":"R08X","old":"etoa","new":"","written":true},{"id":"R069","old":"hkee","new":"","written":true},{"id":"R06A","old":"hkee","new":"","written":true},{"id":"R06B","old":"etoa","new":"","written":true},{"id":"R06C","old":"hkee","new":"","written":true},{"id":"R06E","old":"hkee","new":"","written":true},{"id":"R06F","old":"hkee","new":"","written":true},{"id":"R00Q","old":"hkee","new":"","written":true},{"id":"R00T","old":"hkee","new":"","written":true},{"id":"R012","old":"hkee","new":"","written":true},{"id":"R013","old":"hkee","new":"","written":true},{"id":"R014","old":"hkee","new":"","written":true},{"id":"R0JS","old":"ostr","new":"","written":true},{"id":"R0JQ","old":"ostr","new":"","written":true},{"id":"R0JR","old":"ostr","new":"","written":true},{"id":"R074","old":"unp1","new":"","written":true},{"id":"R075","old":"unp1","new":"","written":true},{"id":"R076","old":"unp1","new":"","written":true},{"id":"R070","old":"unp1","new":"","written":true},{"id":"R06Z","old":"unp1","new":"","written":true}]}
 {"ts":"2026-06-11T21:13:48.048Z","command":"set-field","type":"upgrade","id":"R0FB","field":"requires","old":"unp2","new":""}
+{"ts":"2026-06-14T18:25:34.234Z","command":"copy-object","type":"unit","source":"o02G","new_id":"xd01","name":"Чернокнижник Темной Орды"}
+{"ts":"2026-06-14T18:25:46.790Z","command":"copy-object","type":"unit","source":"o03F","new_id":"xd02","name":"Осадный огр"}
+{"ts":"2026-06-14T18:25:59.212Z","command":"copy-object","type":"unit","source":"n05Q","new_id":"xd03","name":"Черный драконид"}
+{"ts":"2026-06-14T18:26:11.676Z","command":"copy-object","type":"unit","source":"o01X","new_id":"xd04","name":"Копьеметатель Драконьей Пасти"}
+{"ts":"2026-06-14T18:26:30.864Z","command":"copy-object","type":"unit","source":"o01Z","new_id":"xd05","name":"Всадник Драконьей Пасти"}
+{"ts":"2026-06-14T18:26:46.949Z","command":"copy-object","type":"unit","source":"o02G","new_id":"xd06","name":"Укротитель драконов"}
+{"ts":"2026-06-14T18:28:22.620Z","command":"set-field","type":"unit","id":"xd01","field":"file","old":"units\\orc\\Shaman\\Shaman","new":"units\\creeps\\ChaosWarlockGreen\\ChaosWarlockGreen.mdl"}
+{"ts":"2026-06-14T18:28:35.089Z","command":"set-field","type":"unit","id":"xd01","field":"art","old":"ReplaceableTextures\\CommandButtons\\BTNShaman.blp","new":"ReplaceableTextures\\CommandButtons\\BTNChaosWarlockGreen.blp"}
+{"ts":"2026-06-14T18:28:36.271Z","command":"set-field","type":"unit","id":"xd01","field":"goldcost","old":"130","new":"185"}
+{"ts":"2026-06-14T18:28:37.370Z","command":"set-field","type":"unit","id":"xd01","field":"lumbercost","old":"20","new":"20"}
+{"ts":"2026-06-14T18:28:38.444Z","command":"set-field","type":"unit","id":"xd01","field":"abillist","old":"Ablo,Alsh,Apg2,Aion","new":"Ablo,Alsh,Aprg,Aion,A1LS,A1OJ"}
+{"ts":"2026-06-14T18:28:39.415Z","command":"set-field","type":"unit","id":"xd01","field":"modelscale","old":"1","new":"0.800000"}
+{"ts":"2026-06-14T18:28:40.360Z","command":"set-field","type":"unit","id":"xd01","field":"editorsuffix","old":"","new":"(Темная Орда)"}
+{"ts":"2026-06-14T18:28:41.308Z","command":"set-field","type":"unit","id":"xd02","field":"file","old":"units\\orc\\Grunt\\Grunt","new":"Ogre/OgreWarlordnoteamcolor.mdl"}
+{"ts":"2026-06-14T18:28:42.373Z","command":"set-field","type":"unit","id":"xd02","field":"art","old":"ReplaceableTextures\\CommandButtons\\BTNGrunt.blp","new":"Ogre/BTNOgreCommander.blp"}
+{"ts":"2026-06-14T18:28:43.398Z","command":"set-field","type":"unit","id":"xd02","field":"goldcost","old":"200","new":"385"}
+{"ts":"2026-06-14T18:28:44.359Z","command":"set-field","type":"unit","id":"xd02","field":"lumbercost","old":"0","new":"130"}
+{"ts":"2026-06-14T18:28:45.393Z","command":"set-field","type":"unit","id":"xd02","field":"abillist","old":"Asal,Aion,Aobs","new":"A178,A176"}
+{"ts":"2026-06-14T18:28:46.535Z","command":"set-field","type":"unit","id":"xd02","field":"modelscale","old":"1.1","new":"1.200000"}
+{"ts":"2026-06-14T18:28:47.434Z","command":"set-field","type":"unit","id":"xd02","field":"editorsuffix","old":"","new":"(Темная Орда)"}
+{"ts":"2026-06-14T18:28:48.378Z","command":"set-field","type":"unit","id":"xd03","field":"file","old":"Units\\Creeps\\DragonSpawnPurple\\DragonSpawnPurple","new":"Units\\Creeps\\DragonSpawnBlue\\DragonSpawnBlue.mdl"}
+{"ts":"2026-06-14T18:28:49.325Z","command":"set-field","type":"unit","id":"xd03","field":"art","old":"ReplaceableTextures\\CommandButtons\\BTNBlueDragonSpawn.blp","new":"ReplaceableTextures/CommandButtons/BTNIconBlackDragonSpawn.blp"}
+{"ts":"2026-06-14T18:28:50.331Z","command":"set-field","type":"unit","id":"xd03","field":"goldcost","old":"300","new":"250"}
+{"ts":"2026-06-14T18:28:51.377Z","command":"set-field","type":"unit","id":"xd03","field":"lumbercost","old":"0","new":"50"}
+{"ts":"2026-06-14T18:28:52.741Z","command":"set-field","type":"unit","id":"xd03","field":"abillist","old":"ACev","new":"A1BF,A0RL,A0RE"}
+{"ts":"2026-06-14T18:28:53.711Z","command":"set-field","type":"unit","id":"xd03","field":"modelscale","old":"1.15","new":"1.15"}
+{"ts":"2026-06-14T18:28:54.882Z","command":"set-field","type":"unit","id":"xd03","field":"editorsuffix","old":"","new":"(Темная Орда)"}
+{"ts":"2026-06-14T18:28:55.997Z","command":"set-field","type":"unit","id":"xd04","field":"file","old":"units\\orc\\HeadHunter\\HeadHunter","new":"Horde\\OrcSpearThrower.mdl"}
+{"ts":"2026-06-14T18:28:57.003Z","command":"set-field","type":"unit","id":"xd04","field":"art","old":"ReplaceableTextures\\CommandButtons\\BTNHeadhunter.blp","new":"ReplaceableTextures\\CommandButtons\\BTN_Horde_Strel2.blp"}
+{"ts":"2026-06-14T18:28:58.002Z","command":"set-field","type":"unit","id":"xd04","field":"goldcost","old":"140","new":"165"}
+{"ts":"2026-06-14T18:28:59.064Z","command":"set-field","type":"unit","id":"xd04","field":"lumbercost","old":"20","new":"20"}
+{"ts":"2026-06-14T18:29:00.005Z","command":"set-field","type":"unit","id":"xd04","field":"abillist","old":"Sbsk,Aion,Absk,Aobk,Aotr","new":"Aven,A0ZA,A1LO,A1OJ"}
+{"ts":"2026-06-14T18:29:00.933Z","command":"set-field","type":"unit","id":"xd04","field":"modelscale","old":"1","new":"1"}
+{"ts":"2026-06-14T18:29:01.838Z","command":"set-field","type":"unit","id":"xd04","field":"editorsuffix","old":"","new":"(Драконья Пасть)"}
+{"ts":"2026-06-14T18:29:02.792Z","command":"set-field","type":"unit","id":"xd05","field":"file","old":"units\\orc\\WolfRider\\WolfRider","new":"Horde\\ThunderlordRaider.mdl"}
+{"ts":"2026-06-14T18:29:03.765Z","command":"set-field","type":"unit","id":"xd05","field":"art","old":"ReplaceableTextures\\CommandButtons\\BTNRaider.blp","new":"ReplaceableTextures\\CommandButtons\\BTNRaider.blp"}
+{"ts":"2026-06-14T18:29:04.808Z","command":"set-field","type":"unit","id":"xd05","field":"goldcost","old":"180","new":"210"}
+{"ts":"2026-06-14T18:29:05.778Z","command":"set-field","type":"unit","id":"xd05","field":"lumbercost","old":"40","new":"40"}
+{"ts":"2026-06-14T18:29:06.976Z","command":"set-field","type":"unit","id":"xd05","field":"abillist","old":"Aens,Asal,Aion","new":"Asal,A0Z7,A1OJ"}
+{"ts":"2026-06-14T18:29:08.013Z","command":"set-field","type":"unit","id":"xd05","field":"modelscale","old":"1","new":"0.800000"}
+{"ts":"2026-06-14T18:29:08.947Z","command":"set-field","type":"unit","id":"xd05","field":"editorsuffix","old":"","new":"(Драконья Пасть)"}
+{"ts":"2026-06-14T18:29:10.345Z","command":"set-field","type":"unit","id":"xd06","field":"file","old":"units\\orc\\Shaman\\Shaman","new":"units\\creeps\\ChaosWarlockGreen\\ChaosWarlockGreen.mdl"}
+{"ts":"2026-06-14T18:29:11.314Z","command":"set-field","type":"unit","id":"xd06","field":"art","old":"ReplaceableTextures\\CommandButtons\\BTNShaman.blp","new":"ReplaceableTextures\\CommandButtons\\BTNChaosWarlockGreen.blp"}
+{"ts":"2026-06-14T18:29:12.298Z","command":"set-field","type":"unit","id":"xd06","field":"goldcost","old":"130","new":"185"}
+{"ts":"2026-06-14T18:29:13.273Z","command":"set-field","type":"unit","id":"xd06","field":"lumbercost","old":"20","new":"20"}
+{"ts":"2026-06-14T18:29:14.284Z","command":"set-field","type":"unit","id":"xd06","field":"abillist","old":"Ablo,Alsh,Apg2,Aion","new":"Ablo,Alsh,Aprg,Aion,A1LS,A1OJ"}
+{"ts":"2026-06-14T18:29:15.205Z","command":"set-field","type":"unit","id":"xd06","field":"modelscale","old":"1","new":"0.800000"}
+{"ts":"2026-06-14T18:29:16.140Z","command":"set-field","type":"unit","id":"xd06","field":"editorsuffix","old":"","new":"(Драконья Пасть)"}
+{"ts":"2026-06-14T18:34:06.551Z","command":"copy-object","type":"unit","source":"n03N","new_id":"xd07","name":"|cffdcb496Черный дракончик|r"}
+{"ts":"2026-06-14T18:34:26.899Z","command":"set-field","type":"unit","id":"xd01","field":"name","old":"Чернокнижник Темной Орды","new":"|cffdcb496Чернокнижник Темной Орды|r"}
+{"ts":"2026-06-14T18:34:27.821Z","command":"set-field","type":"unit","id":"xd01","field":"editorsuffix","old":"(Темная Орда)","new":"(Орда Второй войны - Темная Орда)"}
+{"ts":"2026-06-14T18:34:28.719Z","command":"set-field","type":"unit","id":"xd02","field":"name","old":"Осадный огр","new":"|cffdcb496Осадный огр|r"}
+{"ts":"2026-06-14T18:34:29.780Z","command":"set-field","type":"unit","id":"xd02","field":"editorsuffix","old":"(Темная Орда)","new":"(Орда Второй войны - Темная Орда)"}
+{"ts":"2026-06-14T18:34:30.682Z","command":"set-field","type":"unit","id":"xd03","field":"name","old":"Черный драконид","new":"|cffdcb496Черный драконид|r"}
+{"ts":"2026-06-14T18:34:31.604Z","command":"set-field","type":"unit","id":"xd03","field":"editorsuffix","old":"(Темная Орда)","new":"(Орда Второй войны - Темная Орда)"}
+{"ts":"2026-06-14T18:34:32.494Z","command":"set-field","type":"unit","id":"xd04","field":"name","old":"Копьеметатель Драконьей Пасти","new":"|cffdcb496Копьеметатель Драконьей Пасти|r"}
+{"ts":"2026-06-14T18:34:33.424Z","command":"set-field","type":"unit","id":"xd04","field":"editorsuffix","old":"(Драконья Пасть)","new":"(Орда Второй войны - Драконья Пасть)"}
+{"ts":"2026-06-14T18:34:34.333Z","command":"set-field","type":"unit","id":"xd05","field":"name","old":"Всадник Драконьей Пасти","new":"|cffdcb496Всадник Драконьей Пасти|r"}
+{"ts":"2026-06-14T18:34:35.259Z","command":"set-field","type":"unit","id":"xd05","field":"editorsuffix","old":"(Драконья Пасть)","new":"(Орда Второй войны - Драконья Пасть)"}
+{"ts":"2026-06-14T18:34:36.157Z","command":"set-field","type":"unit","id":"xd06","field":"name","old":"Укротитель драконов","new":"|cffdcb496Укротитель драконов|r"}
+{"ts":"2026-06-14T18:34:37.075Z","command":"set-field","type":"unit","id":"xd06","field":"editorsuffix","old":"(Драконья Пасть)","new":"(Орда Второй войны - Драконья Пасть)"}
+{"ts":"2026-06-14T18:34:38.005Z","command":"set-field","type":"unit","id":"xd07","field":"editorsuffix","old":"","new":"(Орда Второй войны - Темная Орда)"}
+{"ts":"2026-06-14T18:34:38.988Z","command":"set-field","type":"unit","id":"xd07","field":"file","old":"units\\creeps\\BlackDragonWelp\\BlackDragonWelp","new":"units\\creeps\\BlackDragonWelp\\BlackDragonWelp"}
+{"ts":"2026-06-14T18:34:40.101Z","command":"set-field","type":"unit","id":"xd07","field":"art","old":"ReplaceableTextures\\CommandButtons\\BTNBlackDragon.blp","new":"ReplaceableTextures\\CommandButtons\\BTNBlackDragon.blp"}
+{"ts":"2026-06-14T18:34:41.064Z","command":"set-field","type":"unit","id":"xd07","field":"goldcost","old":"215","new":"200"}
+{"ts":"2026-06-14T18:34:42.183Z","command":"set-field","type":"unit","id":"xd07","field":"lumbercost","old":"20","new":"20"}
+{"ts":"2026-06-14T18:34:43.084Z","command":"set-field","type":"unit","id":"xd07","field":"abillist","old":"","new":"A0QO,A0RE"}
+{"ts":"2026-06-14T18:34:44.050Z","command":"set-field","type":"unit","id":"xd07","field":"modelscale","old":"0.7","new":"0.700000"}
+{"ts":"2026-06-14T18:41:22.393Z","command":"set-field","type":"unit","id":"w20r","field":"trains","old":"w208,w203,w204","new":"w208,w203,w204,xd04"}
+{"ts":"2026-06-14T18:41:34.225Z","command":"set-field","type":"unit","id":"w20i","field":"trains","old":"w207,w201,w206","new":"w207,w201,w206,xd02,xd05"}
+{"ts":"2026-06-14T18:41:46.997Z","command":"set-field","type":"unit","id":"w20t","field":"trains","old":"w209,w211,w205","new":"w209,w211,w205,xd01,xd06"}
+{"ts":"2026-06-14T18:41:58.759Z","command":"set-field","type":"unit","id":"w210","field":"trains","old":"w202","new":"w202,xd07"}
+{"ts":"2026-06-14T18:42:10.966Z","command":"set-field","type":"unit","id":"w212","field":"trains","old":"w213","new":"w213,xd03"}
+{"ts":"2026-06-14T18:51:59.811Z","command":"copy-object","type":"unit","source":"W202","new_id":"xd08","name":"|cffdcb496Мэйм Блэкхенд|r"}
+{"ts":"2026-06-14T18:52:00.080Z","command":"set-field","type":"unit","id":"xd01","field":"editorsuffix","old":"(Орда Второй войны - Темная Орда)","new":"(Ор2 - Темная Орда)"}
+{"ts":"2026-06-14T18:54:17.492Z","command":"set-field","type":"unit","id":"xd02","field":"editorsuffix","old":"(Орда Второй войны - Темная Орда)","new":"(Ор2 - Темная Орда)"}
+{"ts":"2026-06-14T18:54:18.159Z","command":"set-field","type":"unit","id":"xd07","field":"editorsuffix","old":"(Орда Второй войны - Темная Орда)","new":"(Ор2 - Темная Орда)"}
+{"ts":"2026-06-14T18:54:18.647Z","command":"set-field","type":"unit","id":"xd04","field":"editorsuffix","old":"(Орда Второй войны - Драконья Пасть)","new":"(Ор2 - Драконья Пасть)"}
+{"ts":"2026-06-14T18:54:19.102Z","command":"set-field","type":"unit","id":"xd03","field":"editorsuffix","old":"(Орда Второй войны - Темная Орда)","new":"(Ор2 - Темная Орда)"}
+{"ts":"2026-06-14T18:54:19.157Z","command":"set-field","type":"unit","id":"xd06","field":"editorsuffix","old":"(Орда Второй войны - Драконья Пасть)","new":"(Ор2 - Драконья Пасть)"}
+{"ts":"2026-06-14T18:54:22.189Z","command":"set-field","type":"unit","id":"xd05","field":"editorsuffix","old":"(Орда Второй войны - Драконья Пасть)","new":"(Ор2 - Драконья Пасть)"}
+{"ts":"2026-06-14T18:54:54.389Z","command":"set-field","type":"unit","id":"W202","field":"name","old":"TRIGSTR_11880","new":"|cffdcb496Мэйм Блэкхенд|r"}
+{"ts":"2026-06-14T18:54:55.818Z","command":"set-field","type":"unit","id":"W202","field":"editorsuffix","old":"","new":"(Ор2 - Темная Орда)"}
+{"ts":"2026-06-14T18:54:56.719Z","command":"set-field","type":"unit","id":"W202","field":"art","old":"Horde2/BTNH2_HeroRange.blp","new":"Horde2/BTNH2_HeroRange.blp"}
+{"ts":"2026-06-14T18:54:57.853Z","command":"set-field","type":"unit","id":"W202","field":"campaign","old":"0","new":"0"}
+{"ts":"2026-06-14T18:54:58.476Z","command":"set-field","type":"unit","id":"W202","field":"propernames","old":"TRIGSTR_11881","new":"Мэйм"}
+{"ts":"2026-06-14T18:54:59.719Z","command":"set-field","type":"unit","id":"W202","field":"file","old":"Horde2/HeroZulJin.mdl","new":"Horde2/MaimBlackhandBrown.mdx"}
+{"ts":"2026-06-14T19:27:23.235Z","command":"copy-object","type":"upgrade","source":"R0FE","new_id":"xdR1","name":"Темная Орда"}
+{"ts":"2026-06-14T19:27:24.408Z","command":"copy-object","type":"upgrade","source":"R0FE","new_id":"xdR2","name":"Клан Драконьей Пасти"}
+{"ts":"2026-06-14T19:27:51.732Z","command":"set-field","type":"upgrade","id":"xdR1","field":"base1","old":"","new":"0"}
+{"ts":"2026-06-14T19:27:52.772Z","command":"set-field","type":"upgrade","id":"xdR1","field":"mod2","old":"","new":"0"}
+{"ts":"2026-06-14T19:27:53.733Z","command":"set-field","type":"upgrade","id":"xdR1","field":"goldbase","old":"100","new":"150"}
+{"ts":"2026-06-14T19:27:54.708Z","command":"set-field","type":"upgrade","id":"xdR1","field":"lumberbase","old":"100","new":"50"}
+{"ts":"2026-06-14T19:27:55.680Z","command":"set-field","type":"upgrade","id":"xdR1","field":"timebase","old":"60","new":"20"}
+{"ts":"2026-06-14T19:27:56.673Z","command":"set-field","type":"upgrade","id":"xdR1","field":"art1","old":"ReplaceableTextures\\CommandButtons\\BTNGlyph.blp","new":"ReplaceableTextures\\CommandButtons\\BTNChaosWarlock.blp"}
+{"ts":"2026-06-14T19:27:57.612Z","command":"set-field","type":"upgrade","id":"xdR1","field":"name1","old":"Знак ночного зрения","new":"Темная Орда"}
+{"ts":"2026-06-14T19:27:58.584Z","command":"set-field","type":"upgrade","id":"xdR1","field":"editorsuffix1","old":"(Upgrade)","new":"(Ор2 - подраса)"}
+{"ts":"2026-06-14T19:27:59.661Z","command":"set-field","type":"upgrade","id":"xdR1","field":"tip1","old":"","new":"Принять путь Темной Орды"}
+{"ts":"2026-06-14T19:28:00.755Z","command":"set-field","type":"upgrade","id":"xdR1","field":"ubertip1","old":"","new":"Превращает вашу Орду Второй Войны в |cffff0000Темную Орду|r: тяжелые осадные огры, чернокнижники, чёрные дракончики и драконид. Сильнее в затяжной войне. |n|cffffcc00Выбор окончателен и исключает Клан Драконьей Пасти.|r"}
+{"ts":"2026-06-14T19:28:01.697Z","command":"set-field","type":"upgrade","id":"xdR2","field":"base1","old":"","new":"0"}
+{"ts":"2026-06-14T19:28:02.643Z","command":"set-field","type":"upgrade","id":"xdR2","field":"mod2","old":"","new":"0"}
+{"ts":"2026-06-14T19:28:03.632Z","command":"set-field","type":"upgrade","id":"xdR2","field":"goldbase","old":"100","new":"150"}
+{"ts":"2026-06-14T19:28:04.612Z","command":"set-field","type":"upgrade","id":"xdR2","field":"lumberbase","old":"100","new":"50"}
+{"ts":"2026-06-14T19:28:05.776Z","command":"set-field","type":"upgrade","id":"xdR2","field":"timebase","old":"60","new":"20"}
+{"ts":"2026-06-14T19:28:06.769Z","command":"set-field","type":"upgrade","id":"xdR2","field":"art1","old":"ReplaceableTextures\\CommandButtons\\BTNGlyph.blp","new":"ReplaceableTextures\\CommandButtons\\BTNRedDragon.blp"}
+{"ts":"2026-06-14T19:28:07.821Z","command":"set-field","type":"upgrade","id":"xdR2","field":"name1","old":"Знак ночного зрения","new":"Клан Драконьей Пасти"}
+{"ts":"2026-06-14T19:28:08.823Z","command":"set-field","type":"upgrade","id":"xdR2","field":"editorsuffix1","old":"(Upgrade)","new":"(Ор2 - подраса)"}
+{"ts":"2026-06-14T19:28:09.809Z","command":"set-field","type":"upgrade","id":"xdR2","field":"tip1","old":"","new":"Связаться с кланом Драконьей Пасти"}
+{"ts":"2026-06-14T19:28:10.843Z","command":"set-field","type":"upgrade","id":"xdR2","field":"ubertip1","old":"","new":"Превращает вашу Орду Второй Войны в |cffff5454Клан Драконьей Пасти|r: копьеметатели, всадники и укротители драконов, взрослая драконья элита. Быстрее выходит в пик силы. |n|cffffcc00Выбор окончателен и исключает Темную Орду.|r"}
+{"ts":"2026-06-14T19:28:22.979Z","command":"set-field","type":"unit","id":"w20q","field":"researches","old":"w2r3","new":"w2r3,xdR1,xdR2"}
+{"ts":"2026-06-14T20:01:16.014Z","command":"set-field","type":"unit","id":"W202","field":"file","old":"Horde2/HeroZulJin.mdl","new":"Horde2/MaimBlackhandBrown.mdl"}
+{"ts":"2026-06-14T20:28:35.425Z","command":"set-field","type":"upgrade","id":"xdR1","field":"buttonpos","old":"","new":"2"}
+{"ts":"2026-06-14T20:28:37.093Z","command":"set-field","type":"upgrade","id":"xdR1","field":"buttonpos2","old":"","new":"0"}
+{"ts":"2026-06-14T20:28:38.659Z","command":"set-field","type":"upgrade","id":"xdR2","field":"buttonpos","old":"","new":"3"}
+{"ts":"2026-06-14T20:28:40.189Z","command":"set-field","type":"upgrade","id":"xdR2","field":"buttonpos2","old":"","new":"0"}
+{"ts":"2026-06-15T14:30:22.820Z","command":"copy-object","type":"unit","source":"W202","new_id":"W203","name":"Мэйм Блэкхенд"}
+{"ts":"2026-06-15T14:30:23.837Z","command":"set-field","type":"unit","id":"W203","field":"file","old":"units\\orc\\HeroBladeMaster\\HeroBladeMaster","new":"Horde2/MaimBlackhandBrown.mdl"}
+{"ts":"2026-06-15T14:30:24.859Z","command":"set-field","type":"unit","id":"W203","field":"name","old":"Мэйм Блэкхенд","new":"|cffdcb496Мэйм Блэкхенд|r"}
+{"ts":"2026-06-15T14:30:25.775Z","command":"set-field","type":"unit","id":"W203","field":"editorsuffix","old":"","new":"(Ор2 - Темная Орда)"}
+{"ts":"2026-06-15T14:30:26.669Z","command":"set-field","type":"unit","id":"W203","field":"buttonpos","old":"0","new":"1"}
+{"ts":"2026-06-15T14:30:27.649Z","command":"set-field","type":"unit","id":"W203","field":"buttonpos2","old":"2","new":"2"}
+{"ts":"2026-06-15T14:30:28.903Z","command":"set-field","type":"unit","id":"W202","field":"file","old":"Horde2/HeroZulJin.mdl","new":"Horde2/HeroZulJin.mdl"}
+{"ts":"2026-06-15T14:30:30.247Z","command":"set-field","type":"unit","id":"W202","field":"name","old":"TRIGSTR_11880","new":"|cffdcb496Предводитель троллей|r"}
+{"ts":"2026-06-15T14:30:31.209Z","command":"set-field","type":"unit","id":"W202","field":"editorsuffix","old":"(Ор2 - Темная Орда)","new":"(Ор2)"}
+{"ts":"2026-06-15T14:30:46.420Z","command":"set-field","type":"unit","id":"w20a","field":"trains","old":"W200,W202,W201","new":"W200,W202,W201,W203"}

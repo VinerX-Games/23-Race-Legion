@@ -228,7 +228,11 @@ Warcraft III: Reforged — кастомная карта Altered Melee с 30+ ф
 | `python -c "from luaparser import ast; ast.parse(...)"` | Проверка синтаксиса Lua |
 | `HiveWE_cli run-map --map map.w3x --warcraft "..."` | Запуск карты |
 | `HiveWE_cli probe-map ...` | Автотест с логами |
+| `HiveWE_cli dump-objects --map "data/test map" --type unit --fields name --max 100000` | Дамп оригинальных имён WC3 (фолбэк-таблица: `data/wc3_name_fallback.tsv`) |
 | `python agent_bridge.py exec "..."` | Bridge-команды в живой игре |
+
+> Путь `--warcraft "F:/Games/Warcraft III"` **всегда в кавычках** (пробел), либо не
+> указывать вовсе — CLI берёт его из реестра HiveWE как фолбэк.
 
 Подробные инструкции дебага: [DEBUG_WC3_MAP.md](DEBUG_WC3_MAP.md).
 

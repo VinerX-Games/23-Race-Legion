@@ -17,6 +17,39 @@
 
 Лог лежит в `%USERPROFILE%\Documents\Warcraft III\CustomMapData\23Race_probe_log.pld`.
 
+> **`--warcraft` и пробелы в пути.** Путь `F:/Games/Warcraft III` содержит пробел —
+> **всегда брать в кавычки**: `--warcraft "F:/Games/Warcraft III"`. Без кавычек шелл
+> рвёт путь по пробелу, в `--warcraft` попадёт только `F:/Games/Warcraft`, `III`
+> улетит в игнорируемые позиционные аргументы → `failed to open ... CASC`.
+> Альтернатива: **вообще не передавать `--warcraft`** — CLI берёт путь из реестра
+> HiveWE (`HKCU\Software\HiveWE\HiveWE\warcraftDirectory`) как фолбэк, и там строка
+> резолвится целиком (space-safe). Сам CLI пробелы обрабатывает корректно, баг
+> только в кавычках на стороне вызова.
+
+---
+
+## Чтение оригинальных данных WC3 (object-data команды)
+
+Те же `HiveWE_cli` команды читают базовые данные WC3 (юниты/предметы/абилки/…) из
+CASC. Требуют `--map <папка>` (база CASC мёрджится поверх объектами карты); для
+«чистых» оригиналов подойдёт пустая `data/test map` из репо редактора.
+
+| Задача | Команда |
+|---|---|
+| Имя объекта по rawcode | `HiveWE_cli get-object --map "data/test map" --type unit --id hfoo --fields name` |
+| Поиск по имени | `HiveWE_cli search-objects --map "data/test map" --type ability --query "буря"` |
+| Дамп всей таблицы имён | `HiveWE_cli dump-objects --map "data/test map" --type unit --fields name --max 100000` |
+
+`--type`: `unit|item|ability|upgrade|doodad|destructible|buff`. Имена в RU-локали
+(кириллица), вывод — JSON в UTF-8. `--warcraft` можно не указывать (фолбэк из реестра).
+
+**Оригинальные таблицы имён как фолбэк CLI.** Полный дамп (3200 имён, все 7 типов,
+`type<TAB>id<TAB>name`) закоммичен в `HiveWE_VinerX_Edition/data/wc3_name_fallback.tsv`.
+Это **активный фолбэк**: когда живые данные WC3 (CASC) недоступны, map-only ветки
+`show-building` / `list-race-objects` / `list-all-races` подтягивают имена базовых
+объектов из этого файла вместо пустых строк. Кастомные rawcode'ы карты в таблице нет
+(только оригинальные id). Регенерация — командой `dump-objects` выше.
+
 ---
 
 ## Универсальное логирование (preload + War3Log)

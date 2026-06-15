@@ -1008,6 +1008,7 @@ end
 --===========================================================================
 function Trig_Race_HordeW2_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    HordeW2SetSubrace(GetOwningPlayer(GetTriggerUnit()), "base")
     CreateNUnitsAtLoc(5, FourCC('w200'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
     --call ConditionalTriggerExecute( gg_trg_AllyOn )
@@ -1019,6 +1020,9 @@ function Trig_Race_HordeW2_Actions()
     --call Pstart(GetOwningPlayer(GetTriggerUnit()))
     RemoveLocation(udg_LocalPosition2)
     HordeW2On()
+    HordeW2ApplySubraceRoster(GetOwningPlayer(GetTriggerUnit()))
+    HordeW2ApplyDragonPreset(GetOwningPlayer(GetTriggerUnit()))
+    HordeW2EnableSubraceChoice(GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Race_HordeW2()
@@ -1221,11 +1225,15 @@ function Trig_Race_Random_Actions()
     
     -- Horde W2
     if racechance == incN() then
+        HordeW2SetSubrace(p, "base")
         CreateNUnitsAtLoc(5, FourCC('w200'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, p)
         SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
         SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, p)
         HordeW2On()
+        HordeW2ApplySubraceRoster(p)
+        HordeW2ApplyDragonPreset(p)
+        HordeW2EnableSubraceChoice(p)
     end
     --Pandarens
     if racechance == incN() then

@@ -8003,6 +8003,7 @@ end
 ---@return nothing
 function startHordeW2(pi)
     local p = Player(pi)
+    local subrace = HordeW2PickBotSubrace(pi)
     CreateNUnitsAtLoc(5, FourCC('w200'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
@@ -8012,14 +8013,16 @@ function startHordeW2(pi)
     NumberSet(pi, FourCC('w200'), 5)
     NumberSet(pi, FourCC('w20q'), 1)
     AiData[pi][StringHash("Race")] = "H2"
-    SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, p)
-    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
-    SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, p)
-    SetPlayerName(p, "Horde W2 (" .. I2S(pi + 1) .. ")")
-    HordeW2On()
-    AiRace[pi] = "HordeW2"
-    ProbeLogWrite("[AI] startHordeW2 pi=" .. tostring(pi) .. " workers=5w200 building=1w20q")
-end
+      SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, p)
+      SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
+      SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, p)
+      SetPlayerName(p, "Horde W2 " .. HordeW2GetSubraceLabel(pi) .. " (" .. I2S(pi + 1) .. ")")
+      HordeW2On()
+      HordeW2ApplySubraceRoster(p)
+      HordeW2ApplyDragonPreset(p)
+      AiRace[pi] = "HordeW2"
+      ProbeLogWrite("[AI] startHordeW2 pi=" .. tostring(pi) .. " subrace=" .. tostring(subrace) .. " workers=5w200 building=1w20q")
+  end
 ---@param pi integer
 ---@return nothing
 function startNerubs(pi)
@@ -8479,7 +8482,8 @@ function startEnts(pi)
     AiRace[pi] = "Ents"
     ProbeLogWrite("[AI] startEnts pi=" .. tostring(pi) .. " workers=5e02T building=1e02B")
 end
--- library Races ends-- library AI2:
+-- library Races ends
+-- library AI2:
 ---@param p player
 ---@return nothing
 function SetLimits(p)
@@ -8647,6 +8651,19 @@ function StartAiRaceByToken(pi, token)
 		return false
 	end
 	token = string.lower(token)
+	if token == "hordew2dark" or token == "hw2dark" or token == "darkhorde" then
+		HordeW2SetSubrace(pi, "dark")
+		HordeW2SetSubraceForced(pi, true)
+		token = "hordew2"
+	elseif token == "hordew2dragonmaw" or token == "hw2dragonmaw" or token == "dragonmaw" then
+		HordeW2SetSubrace(pi, "dragonmaw")
+		HordeW2SetSubraceForced(pi, true)
+		token = "hordew2"
+	elseif token == "hordew2base" or token == "hw2base" then
+		HordeW2SetSubrace(pi, "base")
+		HordeW2SetSubraceForced(pi, true)
+		token = "hordew2"
+	end
 	ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " token=" .. tostring(token))
 	local race = AiRaceByToken(token)
 	if race == nil then
@@ -10861,6 +10878,199 @@ function HordeW2On()
 end
 
 UHData = UHData or {}
+HordeW2SubraceByPlayer = HordeW2SubraceByPlayer or {}
+-- Set true when a bot's subrace was explicitly chosen (via -ai token); blocks the
+-- random bot pick so a forced "base"/"dark"/"dragonmaw" is respected.
+HordeW2SubraceForced = HordeW2SubraceForced or {}
+-- When true, HordeW2 bots without a forced subrace roll a random branch so the AI
+-- actually exercises the dark/dragonmaw rosters in normal games.
+if HordeW2BotRandomSubrace == nil then HordeW2BotRandomSubrace = true end
+
+local function HordeW2ResolvePi(pOrPi)
+	if type(pOrPi) == "number" then
+		return pOrPi
+	end
+	if pOrPi == nil then
+		return nil
+	end
+	return GetPlayerId(pOrPi)
+end
+
+---@param key string|nil
+---@return string
+function HordeW2NormalizeSubrace(key)
+	if key == nil or key == "" then
+		return "base"
+	end
+	key = string.lower(key)
+	if key == "dark" or key == "darkhorde" or key == "temnayaorda" then
+		return "dark"
+	end
+	if key == "dragonmaw" or key == "dragonmawclan" or key == "dragon" then
+		return "dragonmaw"
+	end
+	return "base"
+end
+
+---@param pOrPi player|integer
+---@param key string|nil
+---@return string
+function HordeW2SetSubrace(pOrPi, key)
+	local pi = HordeW2ResolvePi(pOrPi)
+	if pi == nil then
+		return "base"
+	end
+	local normalized = HordeW2NormalizeSubrace(key)
+	HordeW2SubraceByPlayer[pi] = normalized
+	return normalized
+end
+
+-- Mark a player's subrace as explicitly forced (or clear the flag).
+---@param pOrPi player|integer
+---@param forced boolean
+---@return nothing
+function HordeW2SetSubraceForced(pOrPi, forced)
+	local pi = HordeW2ResolvePi(pOrPi)
+	if pi == nil then
+		return
+	end
+	HordeW2SubraceForced[pi] = forced and true or nil
+end
+
+-- For a bot: unless its subrace was forced via token, roll a random branch.
+-- Returns the resulting subrace key.
+---@param pOrPi player|integer
+---@return string
+function HordeW2PickBotSubrace(pOrPi)
+	local pi = HordeW2ResolvePi(pOrPi)
+	if pi == nil then
+		return "base"
+	end
+	if HordeW2SubraceForced[pi] or not HordeW2BotRandomSubrace then
+		return HordeW2GetSubrace(pi)
+	end
+	local roll = GetRandomInt(0, 2)
+	local key = "base"
+	if roll == 1 then
+		key = "dark"
+	elseif roll == 2 then
+		key = "dragonmaw"
+	end
+	HordeW2SubraceByPlayer[pi] = key
+	return key
+end
+
+---@param pOrPi player|integer
+---@return string
+function HordeW2GetSubrace(pOrPi)
+	local pi = HordeW2ResolvePi(pOrPi)
+	if pi == nil then
+		return "base"
+	end
+	return HordeW2SubraceByPlayer[pi] or "base"
+end
+
+---@param pOrPi player|integer
+---@return string
+function HordeW2GetSubraceLabel(pOrPi)
+	local subrace = HordeW2GetSubrace(pOrPi)
+	if subrace == "dark" then
+		return "Dark Horde"
+	elseif subrace == "dragonmaw" then
+		return "Dragonmaw"
+	end
+	return "Base"
+end
+
+---@param pOrPi player|integer
+---@return real
+function HordeW2GetXpFactor(pOrPi)
+	local subrace = HordeW2GetSubrace(pOrPi)
+	if subrace == "dark" then
+		return 0.85
+	elseif subrace == "dragonmaw" then
+		return 1.15
+	end
+	return 1.0
+end
+
+---@param pOrPi player|integer
+---@return integer
+function HordeW2GetVeterancyCap(pOrPi)
+	local subrace = HordeW2GetSubrace(pOrPi)
+	if subrace == "dragonmaw" then
+		return 8
+	end
+	return 10
+end
+
+---@param p player
+---@return nothing
+function HordeW2ApplyDragonPreset(p)
+	local subrace = HordeW2GetSubrace(p)
+	if subrace == "dark" then
+		SetPlayerTechResearchedSwap(FourCC('w292'), 1, p)
+		SetPlayerAbilityAvailableBJ(true, FourCC('w290'), p)
+		SetPlayerAbilityAvailableBJ(false, FourCC('w294'), p)
+		SetPlayerAbilityAvailableBJ(false, FourCC('w297'), p)
+		SetPlayerAbilityAvailableBJ(false, FourCC('w295'), p)
+	elseif subrace == "dragonmaw" then
+		SetPlayerTechResearchedSwap(FourCC('w293'), 1, p)
+		SetPlayerAbilityAvailableBJ(false, FourCC('w294'), p)
+		SetPlayerAbilityAvailableBJ(false, FourCC('w297'), p)
+		SetPlayerAbilityAvailableBJ(false, FourCC('w295'), p)
+	end
+end
+
+---@param p player
+---@return nothing
+function HordeW2ApplySubraceRoster(p)
+	local subrace = HordeW2GetSubrace(p)
+
+	SetPlayerTechMaxAllowedSwap(FourCC('xd01'), 0, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('xd02'), 0, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('xd03'), 0, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('xd04'), 0, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('xd05'), 0, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('xd06'), 0, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('xd07'), 0, p)
+
+	SetPlayerTechMaxAllowedSwap(FourCC('w201'), -1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('w202'), -1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('w203'), -1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('w205'), -1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('w206'), -1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('w213'), -1, p)
+
+	-- Heroes (uppercase rawcodes). All branches keep W200 + W201 (Cho'gall).
+	-- The 3rd slot: W202 Troll Leader on base/dragonmaw, W203 Maim on Dark Horde
+	-- (full unit swap, same altar card slot — never both visible).
+	SetPlayerTechMaxAllowedSwap(FourCC('W201'), -1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('W202'), -1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('W203'), 0, p)
+
+	if subrace == "dark" then
+		-- Dark Horde replaces the Troll Leader with Maim Blackhand.
+		SetPlayerTechMaxAllowedSwap(FourCC('W202'), 0, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('W203'), -1, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('w202'), 0, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('w205'), 0, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('w206'), 0, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('w213'), 0, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('xd01'), -1, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('xd02'), -1, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('xd03'), -1, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('xd07'), -1, p)
+	elseif subrace == "dragonmaw" then
+		SetPlayerTechMaxAllowedSwap(FourCC('w201'), 0, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('w203'), 0, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('w205'), 0, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('xd04'), -1, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('xd05'), -1, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('xd06'), -1, p)
+	end
+end
+
 -- *  XpLevelW2
 ---@param u unit
 ---@param addXp real
@@ -10871,10 +11081,11 @@ function AddXp(u, addXp)
 	if d == nil then d = {lvl = 0, xp = 0} end
 	local lvl = d.lvl
 	local xp = d.xp
+	local maxLvl = HordeW2GetVeterancyCap(GetOwningPlayer(u))
 	local r
 	
-	if lvl < 10 then
-		xp = xp + addXp
+	if lvl < maxLvl then
+		xp = xp + addXp * HordeW2GetXpFactor(GetOwningPlayer(u))
 		while xp >= 100 + 25 * lvl do
 			r = GetUnitLifePercent(u)
 			BlzSetUnitMaxHP(u, MathRound(BlzGetUnitMaxHP(u) * 1.035))
@@ -10887,12 +11098,17 @@ function AddXp(u, addXp)
 			xp = xp - (100 + 25 * lvl)
 			lvl = lvl + 1
 			SetUnitAbilityLevel(u, FourCC('w2a0'), lvl)
+			if lvl >= maxLvl then
+				xp = 0
+				break
+			end
 		end
 		d.lvl = lvl
 		d.xp = xp
 		UHData[uh] = d
 	end
 end
+
 -- ***************************************************************************
 -- *  CultOn
 ---@return nothing
@@ -19907,6 +20123,7 @@ end
 --===========================================================================
 function Trig_Race_HordeW2_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
+    HordeW2SetSubrace(GetOwningPlayer(GetTriggerUnit()), "base")
     CreateNUnitsAtLoc(5, FourCC('w200'), GetOwningPlayer(GetSpellAbilityUnit()), udg_LocalPosition2, bj_UNIT_FACING)
     RemoveUnit(GetSpellAbilityUnit())
     --call ConditionalTriggerExecute( gg_trg_AllyOn )
@@ -19918,6 +20135,9 @@ function Trig_Race_HordeW2_Actions()
     --call Pstart(GetOwningPlayer(GetTriggerUnit()))
     RemoveLocation(udg_LocalPosition2)
     HordeW2On()
+    HordeW2ApplySubraceRoster(GetOwningPlayer(GetTriggerUnit()))
+    HordeW2ApplyDragonPreset(GetOwningPlayer(GetTriggerUnit()))
+    HordeW2EnableSubraceChoice(GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_Race_HordeW2()
@@ -20120,11 +20340,15 @@ function Trig_Race_Random_Actions()
     
     -- Horde W2
     if racechance == incN() then
+        HordeW2SetSubrace(p, "base")
         CreateNUnitsAtLoc(5, FourCC('w200'), p, l, bj_UNIT_FACING)
         SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, p)
         SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
         SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, p)
         HordeW2On()
+        HordeW2ApplySubraceRoster(p)
+        HordeW2ApplyDragonPreset(p)
+        HordeW2EnableSubraceChoice(p)
     end
     --Pandarens
     if racechance == incN() then
@@ -20393,6 +20617,7 @@ function InitTrig_Page4()
         Trig_Page4_Actions()
     end)
 end
+
 --===========================================================================
 -- Trigger: Leave Ot
 --===========================================================================
@@ -25552,6 +25777,7 @@ function Trig_AlmostDiyW2_Actions()
     local u= GetTriggerUnit()
     local Damage= GetEventDamage()
     local hp= GetUnitState(u, UNIT_STATE_LIFE)
+    local rescueBonus=0
     local Zepp
     local u2
     local g
@@ -25559,7 +25785,10 @@ function Trig_AlmostDiyW2_Actions()
     
     
     
-    if hp - Damage < 1 and Random(5 + GetPlayerTechCount(GetOwningPlayer(u), FourCC('w2rq'), true) , 10) then
+    if HordeW2GetSubrace(GetOwningPlayer(u)) == "dragonmaw" then
+        rescueBonus = 1
+    end
+    if hp - Damage < 1 and Random(5 + GetPlayerTechCount(GetOwningPlayer(u), FourCC('w2rq'), true) + rescueBonus , 10) then
         
         udg_LocalPlayer=GetOwningPlayer(u)
         Zepp=Condition(FZepp)
@@ -26093,6 +26322,90 @@ function InitTrig_Duel()
         Trig_Duel_Actions()
     end)
 end
+--===========================================================================
+-- HordeW2 subrace selection (player-facing, Naga-style mutually exclusive research)
+--   xdR1 = Темная Орда (dark)   xdR2 = Клан Драконьей Пасти (dragonmaw)
+--===========================================================================
+
+-- Offer both subrace researches to a player (default branch stays "base").
+---@param p player
+---@return nothing
+function HordeW2EnableSubraceChoice(p)
+    SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 1, p)
+end
+
+-- Lock both subrace researches once a branch is committed.
+---@param p player
+---@return nothing
+function HordeW2LockSubraceChoice(p)
+    SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 0, p)
+end
+
+-- RESEARCH_START: starting one branch hides the other so only one can be in progress.
+function Trig_HordeW2SubStart_Actions()
+    local r= GetResearched()
+    local p= GetOwningPlayer(GetTriggerUnit())
+    if r == FourCC('xdR1') then
+        SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 0, p)
+    elseif r == FourCC('xdR2') then
+        SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 0, p)
+    end
+end
+function InitTrig_HordeW2SubStart()
+    gg_trg_HordeW2SubStart=CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_HordeW2SubStart, EVENT_PLAYER_UNIT_RESEARCH_START)
+    TriggerAddAction(gg_trg_HordeW2SubStart, function()
+        local r= GetResearched()
+        if r ~= FourCC('xdR1') and r ~= FourCC('xdR2') then return end
+        Trig_HordeW2SubStart_Actions()
+    end)
+end
+-- RESEARCH_CANCEL: cancelling re-opens the other branch.
+function Trig_HordeW2SubCancel_Actions()
+    local r= GetResearched()
+    local p= GetOwningPlayer(GetTriggerUnit())
+    if r == FourCC('xdR1') then
+        SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 1, p)
+    elseif r == FourCC('xdR2') then
+        SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 1, p)
+    end
+end
+function InitTrig_HordeW2SubCancel()
+    gg_trg_HordeW2SubCancel=CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_HordeW2SubCancel, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    TriggerAddAction(gg_trg_HordeW2SubCancel, function()
+        local r= GetResearched()
+        if r ~= FourCC('xdR1') and r ~= FourCC('xdR2') then return end
+        Trig_HordeW2SubCancel_Actions()
+    end)
+end
+-- RESEARCH_FINISH: commit the branch — swap roster, apply dragon preset, lock the choice.
+function Trig_HordeW2SubFinish_Actions()
+    local r= GetResearched()
+    local p= GetOwningPlayer(GetTriggerUnit())
+    if r == FourCC('xdR1') then
+        HordeW2SetSubrace(p, "dark")
+    elseif r == FourCC('xdR2') then
+        HordeW2SetSubrace(p, "dragonmaw")
+    else
+        return
+    end
+    HordeW2ApplySubraceRoster(p)
+    HordeW2ApplyDragonPreset(p)
+    HordeW2LockSubraceChoice(p)
+end
+function InitTrig_HordeW2SubFinish()
+    gg_trg_HordeW2SubFinish=CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_HordeW2SubFinish, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    TriggerAddAction(gg_trg_HordeW2SubFinish, function()
+        local r= GetResearched()
+        if r ~= FourCC('xdR1') and r ~= FourCC('xdR2') then return end
+        Trig_HordeW2SubFinish_Actions()
+    end)
+end
+
 --===========================================================================
 -- Trigger: RiseDeadWorkers
 --===========================================================================
@@ -55224,37 +55537,102 @@ RegisterAiRace("HordeW2", {
 
         end,
 
+        dark = function(pi)
+            return HordeW2GetSubrace(pi) == "dark"
+        end,
+
+        dragonmaw = function(pi)
+            return HordeW2GetSubrace(pi) == "dragonmaw"
+        end,
+
+        base = function(pi)
+            return HordeW2GetSubrace(pi) == "base"
+        end,
+
+        not_dragonmaw = function(pi)
+            return HordeW2GetSubrace(pi) ~= "dragonmaw"
+        end,
+
+        not_dark = function(pi)
+            return HordeW2GetSubrace(pi) ~= "dark"
+        end,
+
+    },
+
+    branches = {
+
+        dark = function(pi)
+            return HordeW2GetSubrace(pi) == "dark"
+        end,
+
+        dragonmaw = function(pi)
+            return HordeW2GetSubrace(pi) == "dragonmaw"
+        end,
+
     },
 
     production = {
 
         [FourCC('w20r')] = {
 
-            {FourCC('w203'), 4}, {FourCC('w204'), 4}, {FourCC('w208'), 3,gate="tier2"},
+            {FourCC('w203'), 4, gate = "not_dragonmaw"},
+            {FourCC('w204'), 3, gate = "base"},
+            {FourCC('w204'), 5, gate = "dark"},
+            {FourCC('xd04'), 4, gate = "dragonmaw"},
+            {FourCC('w208'), 3, gate = "tier2"},
+            {FourCC('w208'), 4, gate = "dark"},
+            {FourCC('w208'), 4, gate = "dragonmaw"},
 
         },
 
         [FourCC('w20i')] = {
 
-            {FourCC('w201'), 2}, {FourCC('w206'), 3}, {FourCC('w207'), 2,gate="tier2"},
+            {FourCC('w201'), 2, gate = "base"},
+            {FourCC('w201'), 1, gate = "dark"},
+            {FourCC('xd05'), 3, gate = "dragonmaw"},
+            {FourCC('w206'), 3, gate = "base"},
+            {FourCC('xd02'), 4, gate = "dark"},
+            {FourCC('w206'), 1, gate = "dragonmaw"},
+            {FourCC('w207'), 2, gate = "tier2"},
+            {FourCC('w207'), 3, gate = "dark"},
+            {FourCC('w207'), 1, gate = "dragonmaw"},
 
         },
 
         [FourCC('w20t')] = {
 
-            {FourCC('w205'), 3}, {FourCC('w209'), 2,gate="tier2"}, {FourCC('w211'), 3},
+            {FourCC('w205'), 3, gate = "base"},
+            {FourCC('xd01'), 4, gate = "dark"},
+            {FourCC('xd06'), 4, gate = "dragonmaw"},
+            {FourCC('w209'), 2, gate = "tier2"},
+            {FourCC('w209'), 3, gate = "dark"},
+            {FourCC('w209'), 1, gate = "dragonmaw"},
+            {FourCC('w211'), 3, gate = "base"},
+            {FourCC('w211'), 2, gate = "dark"},
+            {FourCC('w211'), 4, gate = "dragonmaw"},
 
         },
 
         [FourCC('w20a')] = {
 
-            {FourCC('W200'), 1, limit = 1}, {FourCC('W201'), 1, limit = 1}, {FourCC('W202'), 1, limit = 1},
+            {FourCC('W200'), 1, limit = 1},
+            {FourCC('W201'), 1, limit = 1},
+            {FourCC('W202'), 1, gate = "not_dark", limit = 1},
+            {FourCC('W203'), 1, gate = "dark", limit = 1},
 
         },
 
-        [FourCC('w210')] = { {FourCC('w202'), 3} },
+        [FourCC('w210')] = {
+            {FourCC('w202'), 2, gate = "base"},
+            {FourCC('xd07'), 2, gate = "dark"},
+            {FourCC('w202'), 4, gate = "dragonmaw"},
+        },
 
-        [FourCC('w212')] = { {FourCC('w213'), 3} },
+        [FourCC('w212')] = {
+            {FourCC('w213'), 2, gate = "base"},
+            {FourCC('xd03'), 4, gate = "dark"},
+            {FourCC('w213'), 1, gate = "dragonmaw"},
+        },
 
         worker = { id = FourCC('w200'), cap = 20, from = { FourCC('w20q'), FourCC('w20w'), FourCC('w20e') } },
 },
@@ -55272,6 +55650,16 @@ RegisterAiRace("HordeW2", {
         gradeCap = 100,
 
         steps = {
+
+            { before = 20, action = "research", rows = {
+                {FourCC('w20r'), FourCC('w2r7'), 4},
+                {FourCC('w20r'), FourCC('w2r8'), 4},
+            }, gate = "dark"},
+
+            { before = 20, action = "research", rows = {
+                {FourCC('w20t'), FourCC('w2r4'), 4},
+                {FourCC('w20t'), FourCC('w2r6'), 4},
+            }, gate = "dragonmaw"},
 
             { at = 17, action = "random", branches = {
 
@@ -55321,6 +55709,22 @@ RegisterAiRace("HordeW2", {
 
         },
 
+        [FourCC('xd01')] = {
+
+            { order = "bloodlust", chance = 4, type = "target" },
+
+            { order = "lightningshield", chance = 5, type = "target" },
+
+        },
+
+        [FourCC('xd06')] = {
+
+            { order = "bloodlust", chance = 4, type = "target" },
+
+            { order = "purge", chance = 5, type = "target" },
+
+        },
+
         [FourCC('w209')] = {
 
             { order = "frostarmor", chance = 4, type = "target" },
@@ -55347,6 +55751,12 @@ RegisterAiRace("HordeW2", {
 
         },
 
+        [FourCC('xd05')] = {
+
+            { order = "ensnare", chance = 4, type = "target" },
+
+        },
+
     },
 
     join = Join_HordeW2,
@@ -55369,20 +55779,28 @@ RegisterAiRace("HordeW2", {
     },
     compTarget = {
         [FourCC('w200')] = 0.2045,
-        [FourCC('w203')] = 0.0909,
+        [FourCC('w203')] = 0.0750,
         [FourCC('w204')] = 0.0909,
-        [FourCC('w208')] = 0.0682,
-        [FourCC('w206')] = 0.0682,
+        [FourCC('xd04')] = 0.0800,
+        [FourCC('w208')] = 0.0800,
+        [FourCC('w206')] = 0.0400,
+        [FourCC('xd02')] = 0.0600,
         [FourCC('w205')] = 0.0682,
+        [FourCC('xd01')] = 0.0500,
+        [FourCC('xd06')] = 0.0500,
         [FourCC('w211')] = 0.0682,
-        [FourCC('w202')] = 0.0682,
-        [FourCC('w213')] = 0.0682,
+        [FourCC('w202')] = 0.0800,
+        [FourCC('w213')] = 0.0800,
+        [FourCC('xd03')] = 0.0500,
+        [FourCC('xd05')] = 0.0500,
+        [FourCC('xd07')] = 0.0400,
         [FourCC('w201')] = 0.0455,
         [FourCC('w207')] = 0.0455,
         [FourCC('w209')] = 0.0455,
         [FourCC('W200')] = 0.0227,
         [FourCC('W201')] = 0.0227,
         [FourCC('W202')] = 0.0227,
+        [FourCC('W203')] = 0.0227,
     },
 })
 
@@ -62286,6 +62704,44 @@ function AiFindFreeWorker(pi)
     return nil
 end
 
+---@param pi integer
+---@param minCount integer|nil
+---@return integer
+function AiEnsureBuilderReserve(pi, minCount)
+    local want = minCount or 2
+    local grp = udg_Ai_builders[pi]
+    local grpH = udg_Ai_harvest[pi]
+    if grp == nil or grpH == nil then return 0 end
+
+    local aliveBuilders = 0
+    local sz = BlzGroupGetSize(grp)
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(grp, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
+            aliveBuilders = aliveBuilders + 1
+            if aliveBuilders >= want then
+                return 0
+            end
+        end
+    end
+
+    local moved = 0
+    local szH = BlzGroupGetSize(grpH)
+    for i = 0, szH - 1 do
+        if aliveBuilders + moved >= want then break end
+        local u = BlzGroupUnitAt(grpH, i)
+        if u ~= nil
+            and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and GetUnitCurrentOrder(u) ~= 851972
+            and GetUnitCurrentOrder(u) ~= 851976 then
+            GroupAddUnit(grp, u)
+            GroupRemoveUnit(grpH, u)
+            moved = moved + 1
+        end
+    end
+    return moved
+end
+
 -- Is this worker actually constructing? True if an OWN incomplete structure sits
 -- within build range of the worker. Used to protect channeling builders (Human/
 -- Forsaken peasants stand at the site) from being recycled, while still freeing
@@ -62671,6 +63127,8 @@ end
 function BrainBuild(pi, wm, race)
     local buildOrder = race.buildings
     if not buildOrder then return 0 end
+
+    AiEnsureBuilderReserve(pi, 3)
 
     local built = 0
     local maxN = AiBrainMaxBuild
@@ -63211,6 +63669,102 @@ function BrainFocus(pi, p, wm)
 end
 
 -- ====================================================================
+-- BrainWebPortalTick: mass-teleport a BIG gathered army across continents via the
+-- sell-portal network instead of trickling it through a walk-on waygate (which a
+-- large blob collision-jams on — observed 173-unit Horde army stuck @ Dark Portal,
+-- 0 crossings). BrainFocus already MOVES cross-continent units onto the co-located
+-- waygate, so they gather at the web-portal naturally; once enough are within its
+-- teleport radius we fire AiPortalTeleport (own-army only). See [[portal-sell-teleport]].
+-- ====================================================================
+AiWebTpEnabled    = (AiWebTpEnabled == nil) and true or AiWebTpEnabled
+AiWebMinArmy      = AiWebMinArmy      or 16   -- only mass-TP armies this big (small ones just walk)
+AiWebGatherFrac   = AiWebGatherFrac   or 0.40 -- fire once this fraction of the army is at the portal
+AiWebMinGathered  = AiWebMinGathered  or 10   -- ...but never fewer than this many units
+AiWebCooldownTicks = AiWebCooldownTicks or 16 -- per-portal cooldown (lets stragglers re-gather)
+
+---@param pi integer
+---@param p player
+---@param wm table
+function BrainWebPortalTick(pi, p, wm)
+    if not AiWebTpEnabled then return end
+    if wm == nil or wm.defendHome then return end   -- under home siege: stay and defend
+    local army = udg_Ai_army[pi]
+    if army == nil then return end
+
+    -- Where do we want to go? The current single-front objective.
+    local focus = AiBrainPickFocus(pi, wm)
+    if focus == nil then return end
+    local oc = AiContinentOf(focus.x, focus.y)
+    if oc == nil then return end
+
+    -- Bucket the army's military units by the continent/zone they're standing on. A split
+    -- army (e.g. half stranded in a dungeon, half on the mainland) gets each cluster handled
+    -- on its own, so a group trapped behind a jammy walk-on waygate is teleported out toward
+    -- the objective hop by hop.
+    local sz = BlzGroupGetSize(army)
+    local buckets = {}   -- cont -> {n, sumx, sumy}
+    local mil = 0
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(army, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+           and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) then
+            local ux, uy = GetUnitX(u), GetUnitY(u)
+            local c = AiContinentOf(ux, uy)
+            if c ~= nil then
+                local b = buckets[c]
+                if b == nil then b = { n = 0, sx = 0.0, sy = 0.0 }; buckets[c] = b end
+                b.n = b.n + 1; b.sx = b.sx + ux; b.sy = b.sy + uy
+                mil = mil + 1
+            end
+        end
+    end
+    if mil < AiWebMinArmy then return end            -- small army: walk-on is fine
+
+    local now = AiBrainTickCounter or 0
+    -- Consider the biggest off-objective cluster first (most units to unstick).
+    local bestCont, bestN
+    for c, b in pairs(buckets) do
+        if c ~= oc and (bestN == nil or b.n > bestN) then bestCont, bestN = c, b.n end
+    end
+    if bestCont == nil then return end               -- everyone already on the objective continent
+    local b = buckets[bestCont]
+    if b.n < AiWebMinGathered then return end        -- too few here to bother mass-TPing
+    local cx, cy = b.sx / b.n, b.sy / b.n
+
+    -- Route this cluster toward the objective over the WEB network so the next hop always
+    -- has a real portal; pick the nearest such portal to the cluster centroid.
+    local rt = AiWebRoute(bestCont, oc)
+    local nextCont = (rt ~= nil and #rt >= 2) and rt[2] or oc
+    local wp = AiFindWebPortal(bestCont, nextCont, cx, cy)
+    if wp == nil then return end
+
+    -- Per-portal cooldown so we don't re-TP the same trickle every tick.
+    local key = tostring(wp.unit)
+    local last = AiWebPortalCast[key]
+    if last ~= nil and (now - last) < AiWebCooldownTicks then return end
+
+    -- Only fire once a real chunk of this cluster has gathered within the portal's radius.
+    local need = math.max(AiWebMinGathered, math.ceil(b.n * AiWebGatherFrac))
+    local within, r2 = 0, wp.radius * wp.radius
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(army, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+           and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON) then
+            local dx, dy = GetUnitX(u) - wp.x, GetUnitY(u) - wp.y
+            if dx * dx + dy * dy <= r2 then within = within + 1 end
+        end
+    end
+    if within < need then return end                 -- still gathering; BrainFocus keeps herding them
+
+    local moved = AiPortalTeleport(pi, wp.unit, wp.rect, wp.radius)
+    AiWebPortalCast[key] = now
+    if moved > 0 then
+        BrainLogTag(pi, "BRAINWEB", "mass-TP " .. tostring(moved) .. " units "
+            .. tostring(bestCont) .. " -> " .. tostring(wp.dstCont) .. " (obj " .. tostring(oc) .. ")")
+    end
+end
+
+-- ====================================================================
 -- BrainNavalFocus: iterate udg_Ai_navy[pi] (local group, no enum), send
 -- idle naval units via TryAttackN. Replaces PlayerNavy + TimerSmall4.
 -- ====================================================================
@@ -63708,6 +64262,13 @@ function AiBrainArmyTickInner(pi, p)
 
     BrainCaptureSquad(pi, p, wm)
     lap("capsquad")
+
+    -- Mass-teleport a big gathered army across continents (sell-portal network) instead
+    -- of jamming it on a walk-on waygate. Runs in both single-front and FSM modes.
+    if (wm.tick % AiFocusEvery) == 0 then
+        BrainWebPortalTick(pi, p, wm)
+    end
+    lap("webtp")
 
     if (wm.tick % 4) == 0 then
         BrainNavalFocus(pi, p)
@@ -65495,6 +66056,155 @@ AiCuratedNavalSpots = {
     Pandaria = { {-10112,-13632}, {-7680,-10880}, {-7744,-10240}, {-3328,-10880}, {-1216,-12416}, {1152,-20608}, {-2816,-22912}, {-8768,-20160}, {-896,-14720}, {-9152,-17024}, {-832,-13376}, {-2240,-11072}, {640,-22272}, {-640,-12736}, {-4352,-22656}, {-10112,-10624}, {-3840,-22208}, {-2112,-22912}, {-10048,-9920}, {-2944,-11456}, {64,-21952}, {1664,-20928} },
     BrokenIsles = { {256,11584}, {768,12032}, {1856,12608}, {2432,1344}, {-1088,3520}, {1024,1728} },
 }
+
+-- ====================================================================
+-- WEB-PORTAL MASS-TELEPORT (sell-based network), used by the AI for BIG armies.
+-- A walk-on waygate funnels one unit at a time and a large blob collision-jams
+-- on the gate tile (observed: 173-unit Horde army stuck at the Dark Portal, 0
+-- crossings). The map's real mass-movement is the sell network: buying h0P0 at a
+-- portal shop makes it cast "web" -> a per-portal SPELL_FINISH trigger calls
+-- TeleportUnits(portal, destRect, R), moving everything within R to destRect.
+-- We reuse the SAME (portal -> destRect, radius) data but teleport ONLY the bot's
+-- own eligible army (SetUnitPosition), so we don't drag neutrals/enemies and we
+-- avoid the map TeleportUnits' bare-function boolexpr fault. See [[portal-sell-teleport]].
+--
+-- Spec rows are {portalGlobalSuffix, destRectName, radius}. Resolved lazily once
+-- (preplaced units/rects are static) into AiWebPortals with src/dst continents.
+AiWebPortalSpecs = {
+    {"n003_0044","UndecityOutTop",800}, {"n003_0046","UndecityOutBot",800}, {"n003_0050","UndercityInR",800},
+    {"n003_0051","UndercityInTop",800}, {"n003_0516","OrgrimmarTopIn",800}, {"n003_0514","OrgrimmarBotIn",800},
+    {"n003_0517","OrgrimmarTopOut",800}, {"n003_0518","OrgrimmarBotOut",800}, {"n003_0521","DeadminersOut",800},
+    {"n003_0420","DeadminerIn",800}, {"n003_0943","DarkM_4",1200}, {"n003_0942","DarkM_3",1200},
+    {"n003_0940","DarkM_1",1200}, {"n003_0941","DarkM_2",1200}, {"n01Y_0889","ED_1",750},
+    {"n01Y_1012","ED_1_B",750}, {"n01Y_0934","ED_2",750}, {"n01Y_1013","ED_2_b",750},
+    {"n01Y_0896","ED_3",750}, {"n01Y_1014","ED_3_b",750}, {"n01Y_1015","ED_4_b",750},
+    {"n01Y_0897","ED_4",750}, {"n01Z_1016","ED_5",750}, {"n01Z_1017","ED_5_B",750},
+    {"n006_0023","DarkPortal1",1200}, {"n006_0438","DarkPortal2",1200}, {"n001_0845","Region_009",1200},
+    {"n04O_0136","Region_010",1200}, {"n00W_0442","EKportalAlterac",1200}, {"n00W_0589","OutlandNagrand",1200},
+    {"n00W_0446","Region_013",1200}, {"n001_0847","Region_014",1200}, {"n065_0125","ArgusShip",1200},
+    {"n00W_0848","Broken_Island",1200}, {"n01B_0849","Region_017",1200}, {"n01B_0850","Region_018",1200},
+    {"n003_0098","Nord_5",1200}, {"n003_0060","AzNer_5",650}, {"n003_0097","AzNer_2",1200},
+    {"n003_1004","Nord4",1200}, {"n003_1002","Nord_1",1200}, {"n003_0995","AzNer1",1200},
+    {"n01Y_0578","Teldrasil",1200}, {"n01Y_0580","Darnas",1200}, {"n003_0118","QtunIn",1200},
+    {"n003_0117","QtunIn2",1200}, {"n003_0124","QtunOut",1200}, {"n003_0123","QtunOu2",1200},
+    {"n003_0308","MarodonOut",900}, {"n003_0311","MarodonOut2",900}, {"n003_0305","MarodonIn",900},
+    {"n003_0314","MarodonIn2",900}, {"n003_0025","GnomreganIn",1200}, {"n003_0018","GnomreganOut",1200},
+    {"n003_0024","Stalgorn",1200}, {"n003_0019","StalgornOut",1200}, {"n003_0028","TrainIn",1200},
+    {"n003_0149","TrainOut",1200}, {"n003_0021","GrimBatolOut",1200}, {"n003_0022","GrimBatolIn",1200},
+    {"n003_0027","UldamanIn",1200}, {"n003_0020","UldamanOut",1200}, {"n003_0126","NaxOut",1200},
+    {"n003_0588","DalaranOut",1200}, {"n060_0350","Silvermoon",1200}, {"n060_0287","QuelIsland",1200},
+    {"n003_0090","TurtleOut",800},
+}
+
+AiWebPortals = nil          -- resolved cache: list of {unit,rect,x,y,radius,srcCont,dstCont}
+AiWebPortalGraph = nil      -- adjacency over the WEB network: [srcCont][dstCont] = true
+AiWebPortalCast = AiWebPortalCast or {}  -- [unit handle string] = tick of last teleport (cooldown)
+
+function AiBuildWebPortalCache()
+    if AiWebPortals ~= nil then return end
+    AiWebPortals = {}
+    AiWebPortalGraph = {}
+    for _, spec in ipairs(AiWebPortalSpecs) do
+        local u = _G["gg_unit_" .. spec[1]]
+        local r = _G["gg_rct_" .. spec[2]]
+        if u ~= nil and r ~= nil then
+            local px, py = GetUnitX(u), GetUnitY(u)
+            local sc = AiContinentOf(px, py)
+            local dc = AiContinentOf(GetRectCenterX(r), GetRectCenterY(r))
+            if sc ~= nil and dc ~= nil and sc ~= dc then
+                AiWebPortals[#AiWebPortals + 1] = {
+                    unit = u, rect = r, x = px, y = py,
+                    radius = spec[3], srcCont = sc, dstCont = dc,
+                }
+                local nb = AiWebPortalGraph[sc]
+                if nb == nil then nb = {}; AiWebPortalGraph[sc] = nb end
+                nb[dc] = true
+            end
+        end
+    end
+    ProbeLogWrite("[WEBPORT] cache built: " .. tostring(#AiWebPortals) .. " cross-zone web-portals")
+end
+
+-- BFS over the WEB-portal network (NOT the waygate graph) so every hop is guaranteed
+-- to have an actual web-portal we can fire. Returns the continent path {src,...,dst} or nil.
+---@return table|nil
+function AiWebRoute(src, dst)
+    if src == nil or dst == nil then return nil end
+    if src == dst then return { src } end
+    AiBuildWebPortalCache()
+    local q = { { node = src, path = { src } } }
+    local visited = { [src] = true }
+    local head = 1
+    while head <= #q do
+        local cur = q[head]; head = head + 1
+        local nb = AiWebPortalGraph[cur.node]
+        if nb ~= nil then
+            for n, _ in pairs(nb) do
+                if n == dst then
+                    local p = {}
+                    for _, v in ipairs(cur.path) do p[#p + 1] = v end
+                    p[#p + 1] = dst
+                    return p
+                end
+                if not visited[n] then
+                    visited[n] = true
+                    local np = {}
+                    for _, v in ipairs(cur.path) do np[#np + 1] = v end
+                    np[#np + 1] = n
+                    q[#q + 1] = { node = n, path = np }
+                end
+            end
+        end
+    end
+    return nil
+end
+
+-- Nearest web-portal on srcCont whose dest == dstCont, to (x,y). nil if none.
+---@return table|nil
+function AiFindWebPortal(srcCont, dstCont, x, y)
+    AiBuildWebPortalCache()
+    local best, bestd = nil, nil
+    for _, wp in ipairs(AiWebPortals) do
+        if wp.srcCont == srcCont and wp.dstCont == dstCont
+           and GetUnitState(wp.unit, UNIT_STATE_LIFE) > 0.405 then
+            local dx, dy = x - wp.x, y - wp.y
+            local d = dx * dx + dy * dy
+            if bestd == nil or d < bestd then best, bestd = wp, d end
+        end
+    end
+    return best
+end
+
+-- Teleport ONLY player pi's eligible army units within `radius` of the portal into
+-- `rect` (scattered). Skips structures, peons (harvesters), and waygate units. Caps
+-- at 150 like the map's native. Returns count moved.
+---@return integer
+function AiPortalTeleport(pi, portal, rect, radius)
+    local army = udg_Ai_army and udg_Ai_army[pi]
+    if army == nil then return 0 end
+    local px, py = GetUnitX(portal), GetUnitY(portal)
+    local minx, maxx = GetRectMinX(rect), GetRectMaxX(rect)
+    local miny, maxy = GetRectMinY(rect), GetRectMaxY(rect)
+    local r2 = radius * radius
+    local moved = 0
+    local sz = BlzGroupGetSize(army)
+    local i = 0
+    while i < sz and moved < 150 do
+        local u = BlzGroupUnitAt(army, i)
+        i = i + 1
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+           and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
+           and not IsUnitType(u, UNIT_TYPE_PEON)
+           and GetUnitAbilityLevel(u, FourCC('Awrp')) == 0 then
+            local dx, dy = GetUnitX(u) - px, GetUnitY(u) - py
+            if dx * dx + dy * dy <= r2 then
+                SetUnitPosition(u, GetRandomReal(minx, maxx), GetRandomReal(miny, maxy))
+                moved = moved + 1
+            end
+        end
+    end
+    return moved
+end
 function InitCustomTriggers()
     InitTrig_ItemLitterCleanup()
     InitTrig_sek5()
@@ -65868,6 +66578,9 @@ function InitCustomTriggers()
     InitTrig_DragonMage()
     InitTrig_OgrimmCharge()
     InitTrig_Duel()
+    InitTrig_HordeW2SubStart()
+    InitTrig_HordeW2SubCancel()
+    InitTrig_HordeW2SubFinish()
     InitTrig_RiseDeadWorkers()
     InitTrig_SummonCase()
     InitTrig_UpgradeSkelets()

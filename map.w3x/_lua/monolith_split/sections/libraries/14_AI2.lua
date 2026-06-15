@@ -166,6 +166,19 @@ function StartAiRaceByToken(pi, token)
 		return false
 	end
 	token = string.lower(token)
+	if token == "hordew2dark" or token == "hw2dark" or token == "darkhorde" then
+		HordeW2SetSubrace(pi, "dark")
+		HordeW2SetSubraceForced(pi, true)
+		token = "hordew2"
+	elseif token == "hordew2dragonmaw" or token == "hw2dragonmaw" or token == "dragonmaw" then
+		HordeW2SetSubrace(pi, "dragonmaw")
+		HordeW2SetSubraceForced(pi, true)
+		token = "hordew2"
+	elseif token == "hordew2base" or token == "hw2base" then
+		HordeW2SetSubrace(pi, "base")
+		HordeW2SetSubraceForced(pi, true)
+		token = "hordew2"
+	end
 	ProbeLogWrite("[AI] StartAiRaceByToken pi=" .. tostring(pi) .. " token=" .. tostring(token))
 	local race = AiRaceByToken(token)
 	if race == nil then

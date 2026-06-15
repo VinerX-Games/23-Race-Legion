@@ -116,6 +116,7 @@ function Trig_AlmostDiyW2_Actions()
     local u= GetTriggerUnit()
     local Damage= GetEventDamage()
     local hp= GetUnitState(u, UNIT_STATE_LIFE)
+    local rescueBonus=0
     local Zepp
     local u2
     local g
@@ -123,7 +124,10 @@ function Trig_AlmostDiyW2_Actions()
     
     
     
-    if hp - Damage < 1 and Random(5 + GetPlayerTechCount(GetOwningPlayer(u), FourCC('w2rq'), true) , 10) then
+    if HordeW2GetSubrace(GetOwningPlayer(u)) == "dragonmaw" then
+        rescueBonus = 1
+    end
+    if hp - Damage < 1 and Random(5 + GetPlayerTechCount(GetOwningPlayer(u), FourCC('w2rq'), true) + rescueBonus , 10) then
         
         udg_LocalPlayer=GetOwningPlayer(u)
         Zepp=Condition(FZepp)
@@ -655,5 +659,88 @@ function InitTrig_Duel()
         if GetSpellAbilityId() ~= FourCC('w2ou') then return end
         if not (IsUnitType(GetSpellTargetUnit(), UNIT_TYPE_HERO)) then return end
         Trig_Duel_Actions()
+    end)
+end
+--===========================================================================
+-- HordeW2 subrace selection (player-facing, Naga-style mutually exclusive research)
+--   xdR1 = Темная Орда (dark)   xdR2 = Клан Драконьей Пасти (dragonmaw)
+--===========================================================================
+
+-- Offer both subrace researches to a player (default branch stays "base").
+---@param p player
+---@return nothing
+function HordeW2EnableSubraceChoice(p)
+    SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 1, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 1, p)
+end
+
+-- Lock both subrace researches once a branch is committed.
+---@param p player
+---@return nothing
+function HordeW2LockSubraceChoice(p)
+    SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 0, p)
+    SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 0, p)
+end
+
+-- RESEARCH_START: starting one branch hides the other so only one can be in progress.
+function Trig_HordeW2SubStart_Actions()
+    local r= GetResearched()
+    local p= GetOwningPlayer(GetTriggerUnit())
+    if r == FourCC('xdR1') then
+        SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 0, p)
+    elseif r == FourCC('xdR2') then
+        SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 0, p)
+    end
+end
+function InitTrig_HordeW2SubStart()
+    gg_trg_HordeW2SubStart=CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_HordeW2SubStart, EVENT_PLAYER_UNIT_RESEARCH_START)
+    TriggerAddAction(gg_trg_HordeW2SubStart, function()
+        local r= GetResearched()
+        if r ~= FourCC('xdR1') and r ~= FourCC('xdR2') then return end
+        Trig_HordeW2SubStart_Actions()
+    end)
+end
+-- RESEARCH_CANCEL: cancelling re-opens the other branch.
+function Trig_HordeW2SubCancel_Actions()
+    local r= GetResearched()
+    local p= GetOwningPlayer(GetTriggerUnit())
+    if r == FourCC('xdR1') then
+        SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 1, p)
+    elseif r == FourCC('xdR2') then
+        SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 1, p)
+    end
+end
+function InitTrig_HordeW2SubCancel()
+    gg_trg_HordeW2SubCancel=CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_HordeW2SubCancel, EVENT_PLAYER_UNIT_RESEARCH_CANCEL)
+    TriggerAddAction(gg_trg_HordeW2SubCancel, function()
+        local r= GetResearched()
+        if r ~= FourCC('xdR1') and r ~= FourCC('xdR2') then return end
+        Trig_HordeW2SubCancel_Actions()
+    end)
+end
+-- RESEARCH_FINISH: commit the branch — swap roster, apply dragon preset, lock the choice.
+function Trig_HordeW2SubFinish_Actions()
+    local r= GetResearched()
+    local p= GetOwningPlayer(GetTriggerUnit())
+    if r == FourCC('xdR1') then
+        HordeW2SetSubrace(p, "dark")
+    elseif r == FourCC('xdR2') then
+        HordeW2SetSubrace(p, "dragonmaw")
+    else
+        return
+    end
+    HordeW2ApplySubraceRoster(p)
+    HordeW2ApplyDragonPreset(p)
+    HordeW2LockSubraceChoice(p)
+end
+function InitTrig_HordeW2SubFinish()
+    gg_trg_HordeW2SubFinish=CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_HordeW2SubFinish, EVENT_PLAYER_UNIT_RESEARCH_FINISH)
+    TriggerAddAction(gg_trg_HordeW2SubFinish, function()
+        local r= GetResearched()
+        if r ~= FourCC('xdR1') and r ~= FourCC('xdR2') then return end
+        Trig_HordeW2SubFinish_Actions()
     end)
 end

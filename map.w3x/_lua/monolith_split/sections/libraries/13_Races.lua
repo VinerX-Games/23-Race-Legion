@@ -3160,6 +3160,7 @@ end
 ---@return nothing
 function startHordeW2(pi)
     local p = Player(pi)
+    local subrace = HordeW2PickBotSubrace(pi)
     CreateNUnitsAtLoc(5, FourCC('w200'), p, udg_LocalPoint, bj_UNIT_FACING)
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_units[pi])
     GroupAddGroup(GetLastCreatedGroup(), udg_Ai_builders[pi])
@@ -3169,14 +3170,16 @@ function startHordeW2(pi)
     NumberSet(pi, FourCC('w200'), 5)
     NumberSet(pi, FourCC('w20q'), 1)
     AiData[pi][StringHash("Race")] = "H2"
-    SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, p)
-    SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
-    SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, p)
-    SetPlayerName(p, "Horde W2 (" .. I2S(pi + 1) .. ")")
-    HordeW2On()
-    AiRace[pi] = "HordeW2"
-    ProbeLogWrite("[AI] startHordeW2 pi=" .. tostring(pi) .. " workers=5w200 building=1w20q")
-end
+      SetPlayerTechResearchedSwap(FourCC('R0KB'), 1, p)
+      SetPlayerTechResearchedSwap(FourCC('R0KC'), 1, p)
+      SetPlayerTechResearchedSwap(FourCC('R0KD'), 1, p)
+      SetPlayerName(p, "Horde W2 " .. HordeW2GetSubraceLabel(pi) .. " (" .. I2S(pi + 1) .. ")")
+      HordeW2On()
+      HordeW2ApplySubraceRoster(p)
+      HordeW2ApplyDragonPreset(p)
+      AiRace[pi] = "HordeW2"
+      ProbeLogWrite("[AI] startHordeW2 pi=" .. tostring(pi) .. " subrace=" .. tostring(subrace) .. " workers=5w200 building=1w20q")
+  end
 ---@param pi integer
 ---@return nothing
 function startNerubs(pi)
