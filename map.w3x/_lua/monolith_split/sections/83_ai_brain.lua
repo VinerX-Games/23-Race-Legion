@@ -2598,11 +2598,24 @@ function BrainFocus(pi, p, wm)
         if uc == nil or oc == nil or uc == oc then return focus.x, focus.y, "attack" end
         local c = destCache[uc]
         if c ~= nil then return c.x, c.y, c.ord end
-        local rx, ry, ro = focus.x, focus.y, "attack"
+        -- Cross-continent: route to a PORTAL, never attack-move straight at the off-continent
+        -- objective (that walks the army into the sea / strands it — the live "goes south
+        -- instead of the portal" bug). Try a waygate hop first, then the WEB (sell) portal
+        -- network (most continent links are n003 web portals, so AiFindPortal returns nil and
+        -- we MUST fall back to web). If neither exists, return nil order = hold (naval desant
+        -- handles ocean-separated targets; the scorer already buries portal-unreachable ones).
+        local rx, ry, ro = nil, nil, nil
         local rt = AiPortalRoute(uc, oc)
         if rt ~= nil and #rt >= 2 then
             local portal = AiFindPortal(rt[1], rt[2])
             if portal ~= nil then rx, ry, ro = GetUnitX(portal), GetUnitY(portal), "move" end
+        end
+        if ro == nil then
+            local wrt = AiWebRoute(uc, oc)
+            if wrt ~= nil and #wrt >= 2 then
+                local wp = AiFindWebPortal(wrt[1], wrt[2], ux, uy)
+                if wp ~= nil then rx, ry, ro = wp.x, wp.y, "move" end
+            end
         end
         destCache[uc] = { x = rx, y = ry, ord = ro }
         return rx, ry, ro
@@ -2611,6 +2624,7 @@ function BrainFocus(pi, p, wm)
     local cnt = 0
     local function orderIdle(u)
         local tx, ty, ord = targetFor(GetUnitX(u), GetUnitY(u))
+        if ord == nil then return end   -- cross-water, no portal route: hold (don't swim)
         IssuePointOrder(u, ord, tx, ty)
         cnt = cnt + 1
     end
