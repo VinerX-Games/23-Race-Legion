@@ -2848,6 +2848,10 @@ AiLandingState = AiLandingState or {}  -- [unit] = { phase, targetX, targetY }
 ---@param p player
 ---@param wm table
 ---@return integer
+-- wm.ticks the transport HOLDS at the embark spot for the army to walk over and board
+-- before it sails to the target. (Landing runs every AiBrainLandingEvery wm.ticks.)
+AiLandingLoadDwell = AiLandingLoadDwell or 2
+
 function BrainLandingTick(pi, p, wm)
     if wm.tick < AiBrainNavalStartTick then return 0 end  -- no ports yet
     local race = AiRaceOf(pi)
@@ -2856,15 +2860,23 @@ function BrainLandingTick(pi, p, wm)
     local army = udg_Ai_army[pi]
     local navy = udg_Ai_navy[pi]
     if navy == nil then return 0 end
-
     local sz = BlzGroupGetSize(navy)
     if sz == 0 then return 0 end
 
     local target = AiBrainPickLandingTarget(pi, wm)
-    -- sail/unload at the near-shore open-water spot, not the inland objective (target.x/y)
-    local tx, ty = nil, nil
-    if target ~= nil then tx, ty = target.sailX, target.sailY end
+    if target == nil then return 0 end
+    local tx, ty = target.sailX, target.sailY   -- near-shore UNLOAD point by the enemy coast
 
+    -- Embark spot: open water beside the army's OWN coast. Phased flow per transport:
+    -- sail to embark FIRST -> arrive & hold -> THEN order army to "load" (they walk over and
+    -- board) -> sail to the target's unload point -> unloadall. Sailing before loading avoids
+    -- the moving ship pulling boarders around. Dwell is counted in wm.ticks (deterministic).
+    local homeCont = (wm.capX and AiContinentOf(wm.capX, wm.capY)) or (wm.cx and AiContinentOf(wm.cx, wm.cy))
+    local ex, ey = AiNearestNavalSpot(homeCont, wm.cx or wm.capX, wm.cy or wm.capY)
+    if ex == nil then ex, ey = wm.cx or wm.capX, wm.cy or wm.capY end
+
+    local R2 = AiBrainLandingRadius * AiBrainLandingRadius
+    local now = wm.tick
     local processed = 0
     local maxN = AiBrainLandingMaxTransports
 
@@ -2873,74 +2885,56 @@ function BrainLandingTick(pi, p, wm)
         local u = BlzGroupUnitAt(navy, i)
         if u == nil then goto nextShip end
         if GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then goto nextShip end
-        local uid = GetUnitTypeId(u)
-        if not AiTransportSet[uid] then goto nextShip end  -- combat ship, skip
+        if not AiTransportSet[GetUnitTypeId(u)] then goto nextShip end  -- combat ship, skip
 
         local order = GetUnitCurrentOrder(u)
         local st = AiLandingState[u]
         local ux, uy = GetUnitX(u), GetUnitY(u)
 
-        if tx ~= nil and st ~= nil and st.phase == "loaded" then
-            -- Sailing to target
-            local dx = ux - tx; local dy = uy - ty
-            local dist = dx * dx + dy * dy
-            if dist < AiBrainLandingRadius * AiBrainLandingRadius then
-                -- Arrived: unload
+        if st ~= nil and st.phase == "loaded" then
+            local dx, dy = ux - tx, uy - ty
+            if dx * dx + dy * dy < R2 then
                 IssueImmediateOrder(u, "unloadall")
-                st.phase = "done"
-                AiLandingState[u] = nil
-                processed = processed + 1
+                AiLandingState[u] = { phase = "done", t = now }
             elseif order == 0 or order == 851972 then
-                -- Keep sailing
                 IssuePointOrder(u, "move", tx, ty)
-                processed = processed + 1
             end
-        elseif tx ~= nil and (st == nil or st.phase == "idle") then
-            -- Idle/empty transport: load nearby army. If no army is within the load
-            -- radius, the transport must SAIL TO the army first — previously it sat at
-            -- its home port forever while the army stalled at a different shore, so a
-            -- pickup never happened and no landing was ever observed.
-            local loadedCnt = 0
+            processed = processed + 1
+        elseif st ~= nil and st.phase == "loading" then
+            -- holding at the embark spot: order nearest army units to board (they walk over)
+            local k = 0
             if army ~= nil then
                 local asz = BlzGroupGetSize(army)
                 for j = 0, asz - 1 do
-                    if loadedCnt >= 6 then break end
+                    if k >= 6 then break end
                     local a = BlzGroupUnitAt(army, j)
-                    if a == nil then goto nextArmy end
-                    if GetUnitState(a, UNIT_STATE_LIFE) <= 0.405 then goto nextArmy end
-                    if IsUnitType(a, UNIT_TYPE_HERO) then goto nextArmy end
-                    -- Load whoever is near, regardless of their current order — "load"
-                    -- interrupts it cleanly. (The old order whitelist excluded the very
-                    -- attack-move order the shore-stalled army was actually holding.)
-                    local ax, ay = GetUnitX(a), GetUnitY(a)
-                    local adx = ax - ux; local ady = ay - uy
-                    if adx * adx + ady * ady < AiBrainLandingRadius * AiBrainLandingRadius then
+                    if a ~= nil and GetUnitState(a, UNIT_STATE_LIFE) > 0.405
+                       and not IsUnitType(a, UNIT_TYPE_HERO) then
                         IssueTargetOrder(a, "load", u)
-                        loadedCnt = loadedCnt + 1
+                        k = k + 1
                     end
-                    ::nextArmy::
                 end
             end
-            if loadedCnt > 0 then
-                AiLandingState[u] = { phase = "loaded", targetX = tx, targetY = ty }
-                BrainLogTag(pi, "LAND", "transport loaded " .. tostring(loadedCnt)
-                    .. " -> sail (" .. tostring(R2I(tx)) .. "," .. tostring(R2I(ty)) .. ")")
-                processed = processed + 1
-            elseif (order == 0 or order == 851986 or order == 851971) and wm.cx ~= nil then
-                -- No army in range: sail toward the army's gathering point to fetch it.
-                IssuePointOrder(u, "move", wm.cx, wm.cy)
-                AiLandingState[u] = { phase = "idle" }
-                BrainLogTag(pi, "LAND", "transport sailing to army pickup ("
-                    .. tostring(R2I(wm.cx)) .. "," .. tostring(R2I(wm.cy)) .. ")")
-                processed = processed + 1
+            if (now - (st.t or now)) >= AiLandingLoadDwell then
+                AiLandingState[u] = { phase = "loaded", t = now }
+                IssuePointOrder(u, "move", tx, ty)
+                BrainLogTag(pi, "LAND", "loaded -> sail (" .. tostring(R2I(tx)) .. "," .. tostring(R2I(ty)) .. ")")
             end
+            processed = processed + 1
+        elseif st == nil or st.phase == "toEmbark" then
+            local dx, dy = ux - ex, uy - ey
+            if dx * dx + dy * dy < R2 then
+                IssueImmediateOrder(u, "stop")           -- arrived & hold; load starts next tick
+                AiLandingState[u] = { phase = "loading", t = now }
+            else
+                if st == nil or order == 0 then IssuePointOrder(u, "move", ex, ey) end
+                AiLandingState[u] = { phase = "toEmbark", t = now }
+            end
+            processed = processed + 1
         elseif st ~= nil and st.phase == "done" and order == 0 then
-            -- Empty after unload: return to port
-            local cx, cy = wm.capX, wm.capY
-            if cx ~= nil then
-                IssuePointOrder(u, "move", cx, cy)
-                AiLandingState[u] = { phase = "returning" }
-                processed = processed + 1
+            if wm.capX ~= nil then
+                IssuePointOrder(u, "move", wm.capX, wm.capY)
+                AiLandingState[u] = { phase = "returning", t = now }
             end
         end
         ::nextShip::
