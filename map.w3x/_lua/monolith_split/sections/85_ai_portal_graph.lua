@@ -73,10 +73,48 @@ local function AiContinentRectCount(entry)
     return n
 end
 
+-- Central OCEAN islands (Zandalar/Kul Tiras/etc.) hand-marked in the editor as Island_*
+-- regions. The rect-based continent model can't see them: they either read nil (no main
+-- rect covers them) or get swallowed by a huge overlapping rect (islands inside the
+-- EasternKingdoms rect). We treat each as its own pseudo-continent so a bot on/attacking
+-- one routes by naval desant. Each island borders the single great ocean (basin 0) and its
+-- `spots` are open-water landing points beside its OWN shore, verified reachable from the
+-- open ocean by the HiveWE pathing CLI (that island's foot land within ~700u, water path
+-- from mid-ocean confirmed). Baked from the editor regions; rects are [l,b,r,t] world.
+AiCentralIslands = {
+    { name="Island_Zandalar", l=-3328, b=-10208, r=2720, t=-2464, spots={ {-2816,-2208}, {-2304,-10464}, {-2304,-2208}, {-1792,-10464} } },
+    { name="Island_Kezn", l=-11232, b=-4416, r=-5920, t=672, spots={ {-11232,928}, {-10720,928}, {-10208,928}, {-9696,928} } },
+    { name="Island_Kultias", l=5600, b=-5056, r=11456, t=608, spots={ {5600,-5312}, {6112,-5312}, {6112,864}, {6624,-5312} } },
+    { name="Island_Vaishir", l=4576, b=-12160, r=11616, t=-5440, spots={ {5088,-12416}, {5600,-12416}, {6112,-12416}, {6624,-12416} } },
+    { name="Island_Pirate", l=8320, b=-16768, r=12064, t=-12608, spots={ {8320,-17024}, {8320,-12352}, {8832,-17024}, {8832,-12352} } },
+    { name="Island_TolBarad", l=8128, b=1664, r=10016, t=3552, spots={ {8128,1408}, {8128,3808}, {8640,1408}, {8640,3808} } },
+    { name="Island_MoonIsland", l=28704, b=-14816, r=30592, t=-11744, spots={ {28704,-15072}, {28704,-11488}, {29216,-15072}, {29216,-11488} } },
+    { name="Island_TimelessIsland", l=3680, b=-20800, r=5504, t=-19008, spots={ {3680,-21056}, {3680,-18752}, {4192,-21056}, {4192,-18752} } },
+    { name="Island_ScarlteHarbor", l=-14560, b=26976, r=-10112, t=30720, spots={ {-14560,26720}, {-14048,26720}, {-13536,26720}, {-13024,26720} } },
+    { name="Island_Feralas", l=-30272, b=-6304, r=-28608, t=-3744, spots={ {-30272,-6560}, {-30272,-3488}, {-29760,-6560}, {-29760,-3488} } },
+}
+
+-- Central island whose rect contains (x,y), or nil. Checked FIRST in AiContinentOf so an
+-- island inside a bigger continent rect (e.g. within EasternKingdoms) resolves to itself.
+---@param x real
+---@param y real
+---@return string|nil
+function AiCentralIslandAt(x, y)
+    for _, isl in ipairs(AiCentralIslands) do
+        if x >= isl.l and x <= isl.r and y >= isl.b and y <= isl.t then
+            return isl.name
+        end
+    end
+    return nil
+end
+
 ---@param x real
 ---@param y real
 ---@return string|nil continent name (main continents first, sub-zones for uncovered areas)
 function AiContinentOf(x, y)
+    -- Central ocean islands take priority — their rects sit inside main-continent rects.
+    local centralIsle = AiCentralIslandAt(x, y)
+    if centralIsle ~= nil then return centralIsle end
     -- Main continents — MUST mirror ProcessContinentalStuff's order (93_continental_main.lua):
     -- Kalim, Nord, Pandaria, Outland, BrokenIsles, Argus, THEN EasternKingdoms LAST. The EK
     -- rect is huge and overlaps Outland/Nord/Pandaria, so it must be the lowest-priority main
@@ -272,6 +310,44 @@ AiCuratedNavalSpots = {
     Pandaria = { {-10112,-13632}, {-7680,-10880}, {-7744,-10240}, {-3328,-10880}, {-1216,-12416}, {1152,-20608}, {-2816,-22912}, {-8768,-20160}, {-896,-14720}, {-9152,-17024}, {-832,-13376}, {-2240,-11072}, {640,-22272}, {-640,-12736}, {-4352,-22656}, {-10112,-10624}, {-3840,-22208}, {-2112,-22912}, {-10048,-9920}, {-2944,-11456}, {64,-21952}, {1664,-20928} },
     BrokenIsles = { {256,11584}, {768,12032}, {1856,12608}, {2432,1344}, {-1088,3520}, {1024,1728} },
 }
+
+-- Fold the central-island landing spots into AiCuratedNavalSpots under their pseudo-continent
+-- name, so AiContinentOceanBordering / AiNearestNavalSpot / AiFindNavalSpots all treat an
+-- island bot exactly like a mainland one (build a shipyard on its own coast, be a valid
+-- desant source and target). Keyed by the same name AiContinentOf returns for the island.
+for _, isl in ipairs(AiCentralIslands) do
+    AiCuratedNavalSpots[isl.name] = isl.spots
+end
+
+-- Ocean-bordering = the continent has curated open-water naval spots. Every spot was
+-- verified (HiveWE pathing CLI) to sit on the single great ocean (water basin 0) that
+-- touches Kalimdor/EK/Northrend/Pandaria/BrokenIsles. Dimensions & dungeons (Argus,
+-- Outland, Undercity, Orgrimmar, DeadMines, ...) have NO spots — their landmass is
+-- void-walled and unreachable by sea, so desant must NEVER target them (portal-only).
+---@param continent string|nil
+---@return boolean
+function AiContinentOceanBordering(continent)
+    return continent ~= nil and AiCuratedNavalSpots[continent] ~= nil
+end
+
+-- Nearest curated naval spot (open water near a shore) on `continent` to (x,y). This is a
+-- point a transport can actually sail to; an unloadall there drops troops on the adjacent
+-- coast. Returns nil if the continent has no spots (not ocean-bordering).
+---@param continent string|nil
+---@param x real
+---@param y real
+---@return real|nil, real|nil
+function AiNearestNavalSpot(continent, x, y)
+    local list = continent and AiCuratedNavalSpots[continent]
+    if list == nil then return nil, nil end
+    local bx, by, bd = nil, nil, nil
+    for _, s in ipairs(list) do
+        local dx, dy = s[1] - x, s[2] - y
+        local d = dx * dx + dy * dy
+        if bd == nil or d < bd then bx, by, bd = s[1], s[2], d end
+    end
+    return bx, by
+end
 
 -- ====================================================================
 -- WEB-PORTAL MASS-TELEPORT (sell-based network), used by the AI for BIG armies.

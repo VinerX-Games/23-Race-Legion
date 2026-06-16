@@ -1337,13 +1337,18 @@ function AiObjScore(pi, wm, o)
         if rt ~= nil and #rt >= 2 then
             waterPenalty = 0.6 - 0.08 * (#rt - 2)
             if waterPenalty < 0.3 then waterPenalty = 0.3 end
+        elseif AiContinentOceanBordering(capCont) and AiContinentOceanBordering(objCont) then
+            -- No waygate route, but BOTH continents border the single great ocean → the army
+            -- can reach it by naval desant (BrainLandingTick sails transports to the target's
+            -- coast). Score it like a ~2-hop portal target so the focus actually commits to a
+            -- cross-water enemy instead of treating it as unreachable.
+            waterPenalty = 0.35
         else
-            -- No waygate route AND not amphibious = unreachable by land (needs naval desant,
-            -- not yet reliable). Must score BELOW any portal-reachable target, otherwise a
-            -- huge-base enemy capital (armyBoost+armyPush) still wins even at 0.05 and the
-            -- army fixates on a continent it can't get to (live: Argus bot stuck on the
-            -- Pandaria capital @3999 while ignoring portal-reachable BrokenIsles/Kalimdor).
-            -- 0.001 keeps relative order among unreachable objs but lets reachable ones win.
+            -- No waygate route, and not reachable by sea either (a void-walled dimension or
+            -- dungeon — Argus/Outland/Undercity/... have no ocean coast). Genuinely
+            -- unreachable: keep it negligible so a huge-base enemy capital here can't pull the
+            -- army onto a continent it can't get to (live: Argus bot stuck on the Pandaria
+            -- capital @3999). 0.001 keeps relative order among unreachable objs.
             waterPenalty = 0.001
         end
     end
@@ -2761,22 +2766,38 @@ function AiBrainPickLandingTarget(pi, wm)
     local cx, cy = wm.capX, wm.capY
     if cx == nil then return nil end
 
-    -- Prefer enemy capitals / ZahvatBuildings that are far (>3000) from ours
-    local best, bestScore = nil, -1
+    -- Desant only makes sense FROM an ocean-bordering home TO a DIFFERENT ocean-bordering
+    -- continent (both on the single great ocean). Same-continent targets are walked to; and
+    -- dimensions/dungeons (no naval spots, void-walled — e.g. Argus, Outland) are portal-only,
+    -- so a transport must never be sent at them. Without this gate the old code picked the
+    -- farthest enemy regardless of water and sailed straight at its inland tile, stalling.
+    local homeCont = AiContinentOf(cx, cy)
+    if not AiContinentOceanBordering(homeCont) then return nil end
+
+    -- Prefer distant enemy capitals/cities on a reachable continent.
+    local best, bestScore, bestCont = nil, -1, nil
     for _, obj in ipairs(objs) do
-        local dx = obj.x - cx
-        local dy = obj.y - cy
-        local d = dx * dx + dy * dy
-        -- Score: prefer distant enemy capitals
-        local sc = d
-        if obj.kind == "capital" then sc = sc * 3
-        elseif obj.kind == "city" then sc = sc * 2
-        end
-        if d > 3000 * 3000 and sc > bestScore then
-            bestScore = sc; best = obj
+        local objCont = AiContinentOf(obj.x, obj.y)
+        if objCont ~= nil and objCont ~= homeCont and AiContinentOceanBordering(objCont) then
+            local dx = obj.x - cx
+            local dy = obj.y - cy
+            local d = dx * dx + dy * dy
+            local sc = d
+            if obj.kind == "capital" then sc = sc * 3
+            elseif obj.kind == "city" then sc = sc * 2
+            end
+            if d > 3000 * 3000 and sc > bestScore then
+                bestScore = sc; best = obj; bestCont = objCont
+            end
         end
     end
-    return best
+    if best == nil then return nil end
+
+    -- Sail to the open-water spot nearest the target's coast, NOT the inland objective —
+    -- transports can't path onto land, so an unloadall near the shore is what lands troops.
+    local sx, sy = AiNearestNavalSpot(bestCont, best.x, best.y)
+    if sx == nil then return nil end
+    return { x = best.x, y = best.y, name = best.name, sailX = sx, sailY = sy, continent = bestCont }
 end
 
 -- Count loaded units on a transport (units with the transport as their current order target).
@@ -2801,8 +2822,9 @@ function BrainLandingTick(pi, p, wm)
     if sz == 0 then return 0 end
 
     local target = AiBrainPickLandingTarget(pi, wm)
+    -- sail/unload at the near-shore open-water spot, not the inland objective (target.x/y)
     local tx, ty = nil, nil
-    if target ~= nil then tx, ty = target.x, target.y end
+    if target ~= nil then tx, ty = target.sailX, target.sailY end
 
     local processed = 0
     local maxN = AiBrainLandingMaxTransports
