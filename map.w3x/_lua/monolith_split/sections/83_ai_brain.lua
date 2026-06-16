@@ -140,10 +140,16 @@ AiLimitedBuildTicks = AiLimitedBuildTicks or 120       -- a limited unit (hero) 
                                                        -- slow-building hero isn't ordered 2-3x before
                                                        -- getAiCount sees it (Cult had 2x CD02).
 AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks
-AiBrainNavalEvery      = AiBrainNavalEvery      or 15  -- naval-check every N brain-ticks
+AiBrainNavalEvery      = AiBrainNavalEvery      or 6   -- naval-check every N brain-ticks (was 15:
+                                                       -- with 1 bot/~10s a shipyard attempt fired
+                                                       -- only every ~2.5min; the multi-step desant
+                                                       -- handshake then took many minutes. 6 keeps
+                                                       -- it responsive without flooding orders.)
 AiBrainNavalStartTick  = AiBrainNavalStartTick  or 23  -- first naval check after N brain-ticks (~4min w/ 16 bots)
 AiBrainMaxPorts        = AiBrainMaxPorts        or 20  -- max shipyards/ports per bot
-AiBrainLandingEvery     = AiBrainLandingEvery     or 16  -- landing tick every N brain-ticks
+AiBrainLandingEvery     = AiBrainLandingEvery     or 6   -- landing tick every N brain-ticks (was 16 ->
+                                                         -- ~2.7min/step; phased desant needs to step
+                                                         -- through toEmbark/loading/loaded faster)
 AiBrainLandingRadius    = AiBrainLandingRadius    or 800 -- load/unload radius
 -- Perf (profiler showed BrainFocus = the dominant per-tick cost, ~50%+, and reap 2nd):
 -- BrainFocus only re-tasks IDLE units, so running it every single brain-tick is wasteful.
