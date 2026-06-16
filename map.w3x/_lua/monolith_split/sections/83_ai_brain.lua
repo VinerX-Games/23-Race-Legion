@@ -1156,13 +1156,30 @@ function AiSquadTickMarch(pi, sid, sq, p, wm)
     if d < 1200.0 then return "engage" end
     local oc, sc = AiContinentOf(obj.x, obj.y), AiContinentOf(cx, cy)
     if oc ~= nil and sc ~= nil and oc ~= sc then
+        -- Cross-continent: must reach the objective via a portal/teleport. NEVER fall through
+        -- to a direct attack-move (walks the army straight at an off-continent target = into the
+        -- sea / stuck "in the south" — the live bug). Try, in order: mage TP, a waygate on the
+        -- first hop, then the WEB (sell) portal network (most continent links are n003 web
+        -- portals, NOT waygates, so AiFindPortal returns nil and we must fall back to web).
         local m = AiFindMageOnContinent(pi, oc)
         if m ~= nil then gPi = pi; gPlayer = p; PortTo(m); return "march" end
         local rt = AiPortalRoute(sc, oc)
-        if rt ~= nil and #rt >= 2 then local portal = AiFindPortal(rt[1], rt[2])
+        if rt ~= nil and #rt >= 2 then
+            local portal = AiFindPortal(rt[1], rt[2])
             if portal ~= nil then AiSquadOrderMov(sq.members, GetUnitX(portal), GetUnitY(portal)); return "march" end
         end
+        -- Web-portal fallback: route over the web graph and march to the first hop's web portal
+        -- (BrainWebPortalTick performs the actual mass-teleport once the army gathers there).
+        local wrt = AiWebRoute(sc, oc)
+        if wrt ~= nil and #wrt >= 2 then
+            local wp = AiFindWebPortal(wrt[1], wrt[2], cx, cy)
+            if wp ~= nil then AiSquadOrderMov(sq.members, wp.x, wp.y); return "march" end
+        end
+        -- No usable portal to the objective's continent: don't march into the sea. Nudge the
+        -- TP logistics and drop this objective so the focus re-picks a reachable one.
         AiBrainTryLogistics(pi, p, obj, wm)
+        sq.objective = nil
+        return "muster"
     end
     AiSquadOrderAtk(sq.members, obj.x, obj.y)
     return "march"
@@ -1353,9 +1370,17 @@ function AiObjScore(pi, wm, o)
         end
     end
 
+    -- Per-bot deterministic jitter (±6%) so multiple bots don't all stack on the SAME top
+    -- target (live: 5 bots beelined one capital, adjacent bots ignored each other). Hashing
+    -- (pi, objective cell) perturbs each bot's ranking differently, spreading them across
+    -- targets, while staying deterministic (no desync) and small enough not to invert clear
+    -- value gaps. Capture/capital ties (scores within ~3%) get broken per-bot.
+    local jh = (pi * 1103515245 + R2I(o.x) * 40503 + R2I(o.y) * 12345) % 100000
+    local jitter = 1.0 + (jh / 100000.0 - 0.5) * 0.12
+
     if o.kind == "capture" then
         local prox = 8000.0 / dist
-        return (kindBase + (w.value or 1.0) * o.value + prox) * waterPenalty
+        return (kindBase + (w.value or 1.0) * o.value + prox) * waterPenalty * jitter
     end
     -- capital: scale priority with the attacker's own army so a strong bot commits to
     -- crushing an enemy capital instead of perpetually re-capturing neutrals (capture
@@ -1370,7 +1395,7 @@ function AiObjScore(pi, wm, o)
     -- army's capital priority decisively dominate capture clusters (96 -> +1920),
     -- while a small army adds little and keeps developing/capturing first.
     local armyPush = (wm.armyCount or 0) * 20.0
-    return (kindBase * armyBoost + armyPush + (w.value or 1.0) * o.value - (w.dist or 0.002) * dist) * waterPenalty
+    return (kindBase * armyBoost + armyPush + (w.value or 1.0) * o.value - (w.dist or 0.002) * dist) * waterPenalty * jitter
 end
 
 -- Highest-scoring objective with hysteresis: stick to current focus unless a
