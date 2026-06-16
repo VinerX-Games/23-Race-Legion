@@ -2620,6 +2620,14 @@ end
 ---@return integer
 function BrainFocus(pi, p, wm)
     local focus = AiBrainPickFocus(pi, wm)
+    -- DYNAMIC DEFENSE: under home siege, override the offensive focus and recall the whole
+    -- army to the capital to engage attackers. The FSM's defend/retreat states are dormant
+    -- (AiSquadFsmEnabled=false), so without this the live single-front bot kept marching off
+    -- on offense while an enemy razed its undefended capital (live bug). A capital-centred
+    -- pseudo-focus makes targetFor() attack-move every unit home (same-continent => "attack").
+    if wm.defendHome and wm.capX ~= nil then
+        focus = { x = wm.capX, y = wm.capY, kind = "defend", key = "DEFEND" }
+    end
     if focus == nil then return 0 end
 
     -- BrainFocus is the LIVE army-command path (the AiSquadTick* FSM with portal routing is
