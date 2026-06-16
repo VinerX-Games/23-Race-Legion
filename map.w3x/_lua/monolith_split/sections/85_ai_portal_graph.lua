@@ -468,10 +468,13 @@ function AiFindWebPortal(srcCont, dstCont, x, y)
 end
 
 -- Teleport ONLY player pi's eligible army units within `radius` of the portal into
--- `rect` (scattered). Skips structures, peons (harvesters), and waygate units. Caps
--- at 150 like the map's native. Returns count moved.
+-- `rect` (scattered). Skips structures, peons (harvesters), waygate units, and any unit
+-- in `skip` (handle->true), used to keep the home garrison from being shipped off on an
+-- offensive mass-TP (live: a bot teleported its whole army incl. the defense squad across
+-- a continent and left its capital naked). Caps at 150 like the map's native. Returns moved.
+---@param skip table|nil  -- optional set [unit]=true to exclude (e.g. the defense squad)
 ---@return integer
-function AiPortalTeleport(pi, portal, rect, radius)
+function AiPortalTeleport(pi, portal, rect, radius, skip)
     local army = udg_Ai_army and udg_Ai_army[pi]
     if army == nil then return 0 end
     local px, py = GetUnitX(portal), GetUnitY(portal)
@@ -487,6 +490,7 @@ function AiPortalTeleport(pi, portal, rect, radius)
         if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
            and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
            and not IsUnitType(u, UNIT_TYPE_PEON)
+           and (skip == nil or not skip[u])
            and GetUnitAbilityLevel(u, FourCC('Awrp')) == 0 then
             local dx, dy = GetUnitX(u) - px, GetUnitY(u) - py
             if dx * dx + dy * dy <= r2 then

@@ -2733,7 +2733,21 @@ function BrainWebPortalTick(pi, p, wm)
     end
     if within < need then return end                 -- still gathering; BrainFocus keeps herding them
 
-    local moved = AiPortalTeleport(pi, wp.unit, wp.rect, wp.radius)
+    -- Never ship the home garrison off on an offensive teleport — collect the defense
+    -- squad(s) as a skip-set so the capital keeps its guard (live: a bot mass-TP'd its
+    -- whole army incl. the defense squad across a continent, leaving the capital naked).
+    local garrison = nil
+    for _, sq in pairs(AiSquadsOf(pi)) do
+        if sq.role == "defense" and sq.members ~= nil then
+            local gsz = BlzGroupGetSize(sq.members)
+            for gi = 0, gsz - 1 do
+                local gu = BlzGroupUnitAt(sq.members, gi)
+                if gu ~= nil then garrison = garrison or {}; garrison[gu] = true end
+            end
+        end
+    end
+
+    local moved = AiPortalTeleport(pi, wp.unit, wp.rect, wp.radius, garrison)
     AiWebPortalCast[key] = now
     if moved > 0 then
         BrainLogTag(pi, "BRAINWEB", "mass-TP " .. tostring(moved) .. " units "
