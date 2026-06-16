@@ -1044,6 +1044,55 @@ function AiSquadReapDead(pi)
     end
 end
 
+-- Recovery for the teleport-hang: a mage/Zahvat caster (darksummoning) can die or be
+-- interrupted mid-channel, leaving the units it was porting idle with a stale order, far
+-- from home AND the front AND the army — they hang forever (the old periodic aiRep re-scan
+-- used to un-stick them). This is the lightweight replacement: (1) purge dead casters from
+-- the AiUnitsToPort queue so the TP system stops trying to use them; (2) re-mobilize
+-- orphaned IDLE military units (idle + far from capital + far from the army blob) by sending
+-- them back to rejoin the army. Conservative thresholds + a per-call cap so it never thrashes
+-- legitimately-deployed units (those aren't idle).
+AiRecoverEvery = AiRecoverEvery or 4      -- run every N brain-ticks
+AiRecoverFar   = AiRecoverFar   or 5000.0 -- "orphaned" if this far from BOTH home and the army
+function AiBrainRecoverStranded(pi, wm)
+    -- 1) purge dead/nil TP casters from the port queue
+    local q = AiUnitsToPort and AiUnitsToPort[pi]
+    if q ~= nil then
+        local qs = BlzGroupGetSize(q)
+        local dead = {}
+        for i = 0, qs - 1 do
+            local u = BlzGroupUnitAt(q, i)
+            if u == nil or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then dead[#dead + 1] = u end
+        end
+        for _, u in ipairs(dead) do if u ~= nil then GroupRemoveUnit(q, u) end end
+    end
+    -- 2) re-mobilize orphaned idle units back to the army centroid
+    local army = udg_Ai_army[pi]
+    if army == nil or wm.cx == nil then return end
+    local cx, cy = wm.cx, wm.cy
+    local capx, capy = wm.capX, wm.capY
+    local far2 = AiRecoverFar * AiRecoverFar
+    local sz = BlzGroupGetSize(army)
+    local moved = 0
+    for i = 0, sz - 1 do
+        if moved >= 12 then break end
+        local u = BlzGroupUnitAt(army, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+           and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON)
+           and GetUnitCurrentOrder(u) == 0 then
+            local ux, uy = GetUnitX(u), GetUnitY(u)
+            local dcx, dcy = ux - cx, uy - cy
+            local dC = dcx * dcx + dcy * dcy
+            local dH = far2 + 1.0
+            if capx ~= nil then local dhx, dhy = ux - capx, uy - capy; dH = dhx * dhx + dhy * dhy end
+            if dC > far2 and dH > far2 then
+                IssuePointOrder(u, "move", cx, cy)   -- rejoin the army blob
+                moved = moved + 1
+            end
+        end
+    end
+end
+
 -- ====================================================================
 -- Squad FSM dispatcher (OPT-IN). The army normally moves as a single front via
 -- BrainFocus; flip AiSquadFsmEnabled=true to instead command the bot's squads through
@@ -3233,6 +3282,9 @@ function AiBrainArmyTickInner(pi, p)
 
     if (wm.tick % 2) == 0 then
         AiSquadReapDead(pi)
+    end
+    if (wm.tick % AiRecoverEvery) == 0 then
+        AiBrainRecoverStranded(pi, wm)
     end
     lap("reap")
 
