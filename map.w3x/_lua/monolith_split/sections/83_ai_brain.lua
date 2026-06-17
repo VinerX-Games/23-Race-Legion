@@ -2558,21 +2558,18 @@ end
 ---@param p player
 ---@param race table
 ---@param wm table
--- Self-merge cast (Cult "Плотеобработка"/MeatDeal etc.): the race's signature mechanic that
--- COLLAPSES a cluster of the bot's own small units into one bigger unit. Data-driven via
--- race.mergeCast = { ability, caster, order, consumeAbil, range, minCluster, chance }. A free
--- caster unit (type `caster`, owning ability `ability`) point-casts `order` at the centroid of
--- a cluster of >= minCluster friendly units carrying `consumeAbil`, within `range`. Gated by a
--- small per-call chance + run every few ticks so it merges occasionally, as intended.
+-- Self-merge cast(s) (Cult "Плотеобработка"/MeatDeal on cD05, "Костесборка"/BoneDeal on cD03):
+-- a race's signature mechanic that COLLAPSES a cluster of the bot's own small units into one
+-- bigger unit. Data-driven via race.mergeCast = a LIST of specs, each
+--   { ability, caster, order, consumeAbil, range, minCluster, chance }
+-- so a race can have several (meat + bone). For each spec a free caster unit (type `caster`,
+-- owning `ability`) point-casts `order` at the centroid of a cluster of >= minCluster friendly
+-- units carrying `consumeAbil` within `range`, gated by a small per-spec chance.
 ---@param pi integer
----@param wm table
----@param race table
-function BrainMergeTick(pi, wm, race)
-    local mc = race.mergeCast
-    if mc == nil then return end
+---@param army group
+---@param mc table
+local function BrainMergeCastOne(pi, army, mc)
     if GetRandomInt(1, 100) > (mc.chance or 8) then return end
-    local army = udg_Ai_army[pi]
-    if army == nil then return end
     local sz = BlzGroupGetSize(army)
     local caster = nil
     for i = 0, sz - 1 do
@@ -2602,6 +2599,19 @@ function BrainMergeTick(pi, wm, race)
     DestroyGroup(g)
     if n >= (mc.minCluster or 5) then
         IssuePointOrder(caster, mc.order or "channel", sxc / n, syc / n)
+    end
+end
+
+---@param pi integer
+---@param wm table
+---@param race table
+function BrainMergeTick(pi, wm, race)
+    local specs = race.mergeCast
+    if specs == nil then return end
+    local army = udg_Ai_army[pi]
+    if army == nil then return end
+    for _, mc in ipairs(specs) do
+        BrainMergeCastOne(pi, army, mc)
     end
 end
 
