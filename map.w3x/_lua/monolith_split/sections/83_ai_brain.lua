@@ -1521,6 +1521,49 @@ function AiBrainPickFocus(pi, wm)
     return best
 end
 
+-- Is continent b reachable from a by LAND (same landmass, waygate route, or web-portal route)?
+-- Used to keep the land army on objectives it can actually walk/teleport to; across-water-only
+-- targets are left to the naval desant system.
+---@param a string|nil
+---@param b string|nil
+---@return boolean
+function AiLandReachable(a, b)
+    if a == nil or b == nil then return false end
+    if a == b then return true end
+    local rt = AiPortalRoute(a, b); if rt ~= nil and #rt >= 2 then return true end
+    local wrt = AiWebRoute(a, b);   if wrt ~= nil and #wrt >= 2 then return true end
+    return false
+end
+
+-- Best objective the bot's LAND army can actually reach from continent `home`. Reuses the
+-- o.score already computed by AiBrainPickFocus this tick (falls back to scoring if absent).
+---@param pi integer
+---@param wm table
+---@param home string
+---@return table|nil
+function AiBrainPickLandFocus(pi, wm, home)
+    local objs = wm.objectives
+    if objs == nil then return nil end
+    -- Memoize reachability per CONTINENT (~25) — AiLandReachable runs AiPortalRoute +
+    -- AiWebRoute graph-BFS, far too costly to call once per objective (~200 objs would mean
+    -- ~200 BFS per tick → the game stalls). Same home for the whole call, so cache by objCont.
+    local reachCache = {}
+    local function reach(oc)
+        if oc == nil then return false end
+        local v = reachCache[oc]
+        if v == nil then v = AiLandReachable(home, oc); reachCache[oc] = v end
+        return v
+    end
+    local best, bestScore = nil, -1e30
+    for _, o in ipairs(objs) do
+        if reach(AiContinentOf(o.x, o.y)) then
+            local s = o.score or AiObjScore(pi, wm, o)
+            if s > bestScore then bestScore = s; best = o end
+        end
+    end
+    return best
+end
+
 -- Order all currently-idle army units (B_Lazy) toward (x,y) as attack-move, in
 -- chunks. Concentration of force: everyone converges on one point instead of
 -- each picking a random local enemy. Used for both focus push and defend recall.
@@ -1749,12 +1792,21 @@ function AiFindFreeWorker(pi)
         return u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
     end
     local now = AiBrainTickCounter or 0
+    -- A worker dispatched to build a far open-water shipyard is mid-trek with no incomplete
+    -- structure beside it yet; without skipping it here, the very next economy-build tick
+    -- re-grabs it (the builders pool returns the first alive worker) and re-tasks it off the
+    -- walk, so the shipyard never starts (live: Alliance in Pandaria, 0 shipyards in 230+
+    -- ticks, nearest spot 2388u away). AiNavalBuildUntil reserves it for the whole approach.
+    local function navalBusy(u)
+        local nu = AiNavalBuildUntil[u]
+        return nu ~= nil and now < nu
+    end
     local grp = udg_Ai_builders[pi]
     if grp ~= nil then
         local sz = BlzGroupGetSize(grp)
         for i = 0, sz - 1 do
             local u = BlzGroupUnitAt(grp, i)
-            if alive(u) then return u end
+            if alive(u) and not navalBusy(u) then return u end
         end
     end
     local grpT = udg_Ai_buildersT[pi]
@@ -1764,7 +1816,7 @@ function AiFindFreeWorker(pi)
             local u = BlzGroupUnitAt(grpT, i)
             -- Any idle worker in buildersT is available — claim guard is redundant
             -- now that AiRecycleBuilders no longer yanks channeling workers.
-            if alive(u) and GetUnitCurrentOrder(u) == 0 then return u end
+            if alive(u) and GetUnitCurrentOrder(u) == 0 and not navalBusy(u) then return u end
         end
     end
     local grpH = udg_Ai_harvest[pi]
@@ -1772,7 +1824,7 @@ function AiFindFreeWorker(pi)
         local sz = BlzGroupGetSize(grpH)
         for i = 0, sz - 1 do
             local u = BlzGroupUnitAt(grpH, i)
-            if alive(u) then return u end
+            if alive(u) and not navalBusy(u) then return u end
         end
     end
     return nil
@@ -2767,6 +2819,19 @@ function BrainFocus(pi, p, wm)
     -- pseudo-focus makes targetFor() attack-move every unit home (same-continent => "attack").
     if wm.defendHome and wm.capX ~= nil then
         focus = { x = wm.capX, y = wm.capY, kind = "defend", key = "DEFEND" }
+    elseif focus ~= nil then
+        -- If the global #1 objective sits on a continent this bot's LAND army can't reach
+        -- (no same-landmass / waygate / web route), per-unit targetFor() would tell every land
+        -- unit to HOLD — the army then idles at base even when reachable local objectives exist
+        -- (live: Alliance in isolated Pandaria with an 88-strong army sat home while a Kalimdor
+        -- capital was the global #1; a Pandaria capture scoring 370 went ignored). Naval desant
+        -- (BrainLandingTick) handles the across-water push on its own; meanwhile re-point the
+        -- land army at the best objective it CAN reach so it keeps fighting.
+        local home = (wm.cx ~= nil) and AiContinentOf(wm.cx, wm.cy) or nil
+        if home ~= nil and not AiLandReachable(home, AiContinentOf(focus.x, focus.y)) then
+            local lf = AiBrainPickLandFocus(pi, wm, home)
+            if lf ~= nil then focus = lf end
+        end
     end
     if focus == nil then return 0 end
 
