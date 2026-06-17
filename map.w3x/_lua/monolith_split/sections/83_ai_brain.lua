@@ -2535,6 +2535,21 @@ function BrainStrategTick(pi, p, race, wm)
     local steps = race.strategData.steps
     if not steps then return end
     for _, step in ipairs(steps) do
+        if step.action == "research" then
+            -- Military "grades" (weapon/armor/tools/etc.) declared in strategData. The brain
+            -- previously handled ONLY techUp, so every "research" step was silently skipped and
+            -- grades stuck at 0 for most races (live: FelOrc/KulTiras/Worgen/Dragons/ForestTrolls
+            -- grades pinned at 0.0). Each row is {hostBuilding, researchId, levelCap}.
+            -- MakeGradeCheckCap researches it at the host building, or (AI bots only) grants it
+            -- directly when the race owns no such building — the same path the legacy
+            -- AiRunStrateg used. Throttled so it doesn't re-issue every single tick.
+            if step.at and wm.tick > step.at and step.rows and (wm.tick % 4) == 0 then
+                for _, row in ipairs(step.rows) do
+                    MakeGradeCheckCap(p, row[1], row[2], row[3])
+                end
+            end
+            goto nextStep
+        end
         if step.action ~= "techUp" then goto nextStep end
         if not step.at or wm.tick <= step.at then goto nextStep end
         if step.gate then
