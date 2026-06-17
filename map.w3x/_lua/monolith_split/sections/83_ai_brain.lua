@@ -140,12 +140,13 @@ AiLimitedBuildTicks = AiLimitedBuildTicks or 120       -- a limited unit (hero) 
                                                        -- slow-building hero isn't ordered 2-3x before
                                                        -- getAiCount sees it (Cult had 2x CD02).
 AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks
-AiBrainNavalEvery      = AiBrainNavalEvery      or 6   -- naval-check every N brain-ticks (was 15:
+AiBrainNavalEvery      = AiBrainNavalEvery      or 4   -- naval-check every N brain-ticks (was 15:
                                                        -- with 1 bot/~10s a shipyard attempt fired
                                                        -- only every ~2.5min; the multi-step desant
-                                                       -- handshake then took many minutes. 6 keeps
-                                                       -- it responsive without flooding orders.)
-AiBrainNavalStartTick  = AiBrainNavalStartTick  or 23  -- first naval check after N brain-ticks (~4min w/ 16 bots)
+                                                       -- handshake then took many minutes. 4 keeps
+                                                       -- fleet-building responsive without flooding.)
+AiBrainNavalStartTick  = AiBrainNavalStartTick  or 12  -- first naval check after N brain-ticks (lowered
+                                                       -- 23->12: start the fleet ~2x sooner)
 AiBrainMaxPorts        = AiBrainMaxPorts        or 20  -- max shipyards/ports per bot
 AiMaxHeroes            = AiMaxHeroes            or 3   -- safety ceiling on a bot's TOTAL heroes. The
                                                        -- REAL limit is the hero FOOD budget (cap ceiling

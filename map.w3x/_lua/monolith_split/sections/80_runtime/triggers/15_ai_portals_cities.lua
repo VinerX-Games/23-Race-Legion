@@ -969,7 +969,7 @@ function PereborNavalb()
         u=nil
         return
         
-    elseif i > 12 then
+    elseif i > 18 then  -- bot fleet ceiling (was 12): allow bigger fleets / more desant transports
         if udg_Octhet then
             DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) .. "")
         end
