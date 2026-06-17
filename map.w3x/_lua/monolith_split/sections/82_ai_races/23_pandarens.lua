@@ -98,6 +98,16 @@ RegisterAiRace("Pandarens", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('pa28'),FourCC('PA90'),3},  -- melee
+                {FourCC('pa32'),FourCC('PA87'),2},  -- armor
+                {FourCC('pa32'),FourCC('PA88'),2},  -- melee
+                {FourCC('pa30'),FourCC('PA80'),6},  -- armor
+                {FourCC('pa30'),FourCC('PA81'),6},  -- melee
+                {FourCC('pa30'),FourCC('PA84'),6},  -- armor
+                {FourCC('pa30'),FourCC('PA93'),6},  -- melee
+            }},
+
 
             { at = 17, action = "random", branches = {
 

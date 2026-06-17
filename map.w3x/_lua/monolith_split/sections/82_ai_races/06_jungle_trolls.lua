@@ -129,6 +129,10 @@ RegisterAiRace("JungleTrolls", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h0N3'),FourCC('R0I8'),6},  -- melee
+            }},
+
 
             { at = 17, action = "random", branches = {
 

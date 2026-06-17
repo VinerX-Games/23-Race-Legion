@@ -98,6 +98,12 @@ RegisterAiRace("Ogres", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('o03B'),FourCC('R0GL'),6},  -- melee
+                {FourCC('o03B'),FourCC('R0GM'),6},  -- armor
+                {FourCC('o03B'),FourCC('R0GN'),6},  -- ranged
+            }},
+
 
             { at = 17, action = "random", branches = {
 

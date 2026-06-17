@@ -90,6 +90,15 @@ RegisterAiRace("Bezlikie", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h0I2'),FourCC('R0EW'),3},  -- melee
+                {FourCC('h0I2'),FourCC('R0EX'),3},  -- melee
+                {FourCC('h0I2'),FourCC('R0GD'),3},  -- melee
+                {FourCC('h0I4'),FourCC('R0EV'),3},  -- melee
+                {FourCC('h0I6'),FourCC('R0ER'),6},  -- armor
+                {FourCC('h0I6'),FourCC('R0ET'),6},  -- melee
+            }},
+
 
             { at = 17, action = "random", branches = {
 

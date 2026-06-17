@@ -98,6 +98,16 @@ RegisterAiRace("Stromgard", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h0H4'),FourCC('R0DN'),2},  -- armor
+                {FourCC('h0H5'),FourCC('R0DM'),6},  -- armor
+                {FourCC('h0H6'),FourCC('R0DA'),6},  -- melee
+                {FourCC('h0H6'),FourCC('R0DB'),6},  -- ranged
+                {FourCC('h0H6'),FourCC('R0DC'),6},  -- armor
+                {FourCC('h0H6'),FourCC('R0DD'),6},  -- ranged
+                {FourCC('h0H6'),FourCC('R0DE'),6},  -- armor
+            }},
+
 
             { at = 17, action = "random", branches = {
 

@@ -90,6 +90,14 @@ RegisterAiRace("Alliance", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('hbla'),FourCC('R0HO'),6},  -- ranged
+                {FourCC('hbla'),FourCC('Rhar'),6},  -- armor
+                {FourCC('hbla'),FourCC('Rhla'),6},  -- armor
+                {FourCC('hbla'),FourCC('Rhme'),6},  -- melee
+                {FourCC('hbla'),FourCC('Rhra'),6},  -- ranged
+            }},
+
 
             { at = 17, action = "random", branches = {
 

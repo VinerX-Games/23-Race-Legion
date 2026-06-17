@@ -92,6 +92,13 @@ RegisterAiRace("Demons", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h0DZ'),FourCC('R08J'),6},  -- melee
+                {FourCC('h0DZ'),FourCC('R08K'),6},  -- armor
+                {FourCC('h0DZ'),FourCC('R08L'),6},  -- ranged
+                {FourCC('h0DZ'),FourCC('R08M'),6},  -- armor
+            }},
+
 
             { at = 17, action = "random", branches = {
 

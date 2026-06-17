@@ -131,6 +131,14 @@ RegisterAiRace("Dragons", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('n03I'),FourCC('R0AV'),6},  -- melee
+                {FourCC('n03I'),FourCC('R0AW'),6},  -- melee
+                {FourCC('n03I'),FourCC('R0AX'),6},  -- melee
+                {FourCC('n03I'),FourCC('R0AY'),6},  -- melee
+                {FourCC('n03I'),FourCC('R0AZ'),6},  -- melee
+            }},
+
             { at = 20, action = "tryBuy" },
         },
 

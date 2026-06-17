@@ -90,6 +90,15 @@ RegisterAiRace("KulTiras", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h023'),FourCC('R0KL'),6},  -- armor
+                {FourCC('h020'),FourCC('R035'),6},  -- ranged
+                {FourCC('h020'),FourCC('R036'),6},  -- melee
+                {FourCC('h020'),FourCC('R037'),6},  -- armor
+                {FourCC('h020'),FourCC('R038'),6},  -- armor
+                {FourCC('h020'),FourCC('R039'),6},  -- ranged
+            }},
+
 
             { at = 17, action = "random", branches = {
 

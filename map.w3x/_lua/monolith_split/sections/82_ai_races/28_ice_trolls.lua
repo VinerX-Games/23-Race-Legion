@@ -94,6 +94,12 @@ RegisterAiRace("IceTrolls", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('o04B'),FourCC('R0HZ'),6},  -- melee
+                {FourCC('o04B'),FourCC('R0I0'),6},  -- armor
+                {FourCC('o04B'),FourCC('R0I1'),6},  -- ranged
+            }},
+
 
             { at = 17, action = "random", branches = {
 

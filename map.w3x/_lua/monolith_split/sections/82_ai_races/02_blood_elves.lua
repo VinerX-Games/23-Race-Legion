@@ -91,6 +91,14 @@ RegisterAiRace("BloodElves", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h04Q'),FourCC('R01N'),6},  -- armor
+                {FourCC('h04R'),FourCC('R01K'),6},  -- melee
+                {FourCC('h04R'),FourCC('R01L'),6},  -- armor
+                {FourCC('h04R'),FourCC('R01M'),6},  -- armor
+                {FourCC('h04R'),FourCC('R01R'),6},  -- melee
+            }},
+
 
             { at = 17, action = "random", branches = {
 

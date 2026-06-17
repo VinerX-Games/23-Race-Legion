@@ -94,6 +94,15 @@ RegisterAiRace("Bandits", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h03O'),FourCC('R00J'),6},  -- melee
+                {FourCC('h03O'),FourCC('R00L'),6},  -- melee
+                {FourCC('h03O'),FourCC('R00M'),6},  -- armor
+                {FourCC('h03O'),FourCC('R00N'),6},  -- armor
+                {FourCC('h03O'),FourCC('R00X'),6},  -- melee
+                {FourCC('h03P'),FourCC('R00V'),6},  -- armor
+            }},
+
 
             { at = 17, action = "random", branches = {
 

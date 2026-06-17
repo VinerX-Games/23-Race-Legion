@@ -135,6 +135,10 @@ RegisterAiRace("ForestTrolls", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h0N7'),FourCC('R0IU'),6},  -- melee
+            }},
+
 
             { at = 17, action = "random", branches = {
 

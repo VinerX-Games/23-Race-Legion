@@ -94,6 +94,12 @@ RegisterAiRace("Draenei", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h055'),FourCC('R023'),6},  -- melee
+                {FourCC('h055'),FourCC('R024'),6},  -- armor
+                {FourCC('h055'),FourCC('R02P'),6},  -- melee
+            }},
+
 
             { at = 17, action = "random", branches = {
 
