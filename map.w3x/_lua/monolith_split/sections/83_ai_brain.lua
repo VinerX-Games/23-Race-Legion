@@ -2443,6 +2443,12 @@ AiNavalBuildGrace = AiNavalBuildGrace or 360  -- ticks a shipyard-builder is pro
                                               -- removed a worker may trek far across the map to a
                                               -- designated water point, so it needs longer before
                                               -- the build pool reclaims it.
+-- Progress tracking so a STUCK naval worker (blocked path, can't reach the open-water spot)
+-- doesn't hold its reservation idle for the whole grace window while no replacement is sent.
+-- [unit] = { x, y, lastDist, lastCheck, building }
+AiNavalBuildSpot     = AiNavalBuildSpot     or {}
+AiNavalProgressEvery = AiNavalProgressEvery or 6     -- ticks between progress checks
+AiNavalProgressMin   = AiNavalProgressMin   or 150.0 -- must close at least this much per check, else stuck
 
 -- Open-water-near-shore shipyard spots around the capital, nearest first. Cached per
 -- bot (the terrain scan is heavy and water doesn't move).
@@ -2582,7 +2588,60 @@ local function AiNavalOpportunistic(pi)
     return scan(udg_Ai_buildersT[pi], true)
 end
 
+-- Free a worker from its naval-build reservation so it (or a replacement) can be re-assigned.
+local function AiNavalReleaseWorker(u)
+    AiNavalBuildUntil[u] = nil
+    AiNavalBuildSpot[u] = nil
+end
+
+-- Watch the bot's in-flight shipyard-builders. A worker walking to a far open-water spot has
+-- no incomplete structure beside it yet, so it's only protected by AiNavalBuildUntil — if it
+-- gets STUCK on the way it would hold that reservation idle for the whole grace and the
+-- shipyard would never start. Release it when: it died, its build order dropped (idle), or it
+-- isn't closing the distance to its target spot. On a stuck release we keep the SPOT reserved
+-- so the next BrainNavalDecision pass sends a (different) worker to a DIFFERENT spot. While the
+-- worker is actually constructing, refresh its grace so it isn't reclaimed mid-build.
+function AiNavalSupervise(pi)
+    local now = AiBrainTickCounter or 0
+    local function check(grp)
+        if grp == nil then return end
+        local sz = BlzGroupGetSize(grp)
+        for i = 0, sz - 1 do
+            local u = BlzGroupUnitAt(grp, i)
+            local s = (u ~= nil) and AiNavalBuildSpot[u] or nil
+            if s ~= nil then
+                if GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then
+                    AiNavalReleaseWorker(u)
+                elseif AiWorkerIsBuilding(pi, u) then
+                    s.building = true
+                    AiNavalBuildUntil[u] = now + AiNavalBuildGrace  -- protect through construction
+                elseif s.building then
+                    AiNavalReleaseWorker(u)                          -- was building, now idle => done/abandoned
+                elseif GetUnitCurrentOrder(u) == 0 then
+                    AiNavalReleaseWorker(u)                          -- never started, order dropped
+                elseif (now - (s.lastCheck or 0)) >= AiNavalProgressEvery then
+                    local dx, dy = GetUnitX(u) - s.x, GetUnitY(u) - s.y
+                    local d = SquareRoot(dx * dx + dy * dy)
+                    if s.lastDist ~= nil and d > s.lastDist - AiNavalProgressMin then
+                        -- not closing the gap => stuck: free the worker, keep the spot reserved
+                        -- so the next pass tries another spot with a fresh worker.
+                        g_BuildSpotReserved[pi .. ",nav," .. R2I(s.x) .. "," .. R2I(s.y)] = now
+                        AiNavalReleaseWorker(u)
+                        BrainLogEvery(pi, "brainnavystuck", 30, "naval worker stuck, reassigning", "BRAINNAVY")
+                    else
+                        s.lastDist = d; s.lastCheck = now
+                    end
+                end
+            end
+        end
+    end
+    check(udg_Ai_builders[pi])
+    check(udg_Ai_buildersT[pi])
+    check(udg_Ai_harvest[pi])
+end
+
 function BrainNavalDecision(pi, wm, race)
+    AiNavalSupervise(pi)
     local shipType = race.wall
     -- R8b: race.wall is a defensive tower for some races (Forsaken h0JM, etc.),
     -- not a shipyard. Fall back to race.shipyard if set.
@@ -2605,6 +2664,8 @@ function BrainNavalDecision(pi, wm, race)
             if TryBuildWithType(shipType, osx, osy) then
                 g_BuildSpotReserved[key] = now
                 AiNavalBuildUntil[ow] = now + AiNavalBuildGrace
+                local dx, dy = GetUnitX(ow) - osx, GetUnitY(ow) - osy
+                AiNavalBuildSpot[ow] = { x = osx, y = osy, lastDist = SquareRoot(dx * dx + dy * dy), lastCheck = now }
                 BrainLogEvery(pi, "brainnavy", 30, "shipyard under builder", "BRAINNAVY")
                 return
             end
@@ -2631,6 +2692,8 @@ function BrainNavalDecision(pi, wm, race)
             if TryBuildWithType(shipType, sp.x, sp.y) then
                 g_BuildSpotReserved[key] = now
                 AiNavalBuildUntil[worker] = now + AiNavalBuildGrace
+                local dx, dy = GetUnitX(worker) - sp.x, GetUnitY(worker) - sp.y
+                AiNavalBuildSpot[worker] = { x = sp.x, y = sp.y, lastDist = SquareRoot(dx * dx + dy * dy), lastCheck = now }
                 BrainLogEvery(pi, "brainnavy", 30, "shipyard at open water", "BRAINNAVY")
                 return
             end
