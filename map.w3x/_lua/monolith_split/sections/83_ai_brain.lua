@@ -1322,53 +1322,88 @@ end
 ---@param pi integer
 ---@param wm table
 ---@return table
+-- Shared objective-candidate snapshot. The raw scan — every living capture building +
+-- enemy capital, each costing GetUnitState + GetUnitX/Y + AiBldValueUnit (4-5 ability-level
+-- lookups) — is bot-INDEPENDENT, yet the old per-bot CollectObjectives re-ran it in full for
+-- EVERY bot over the same ~227 ZahvatBuildings (profiled at ~22ms/bot → a recurring frame
+-- hitch and the "reap" phase blowup). Build the heavy list ONCE per AiObjCacheEvery ticks;
+-- each bot then only buckets the cheap cached entries by its own cell size + ally/enemy.
+AiObjCacheEvery = AiObjCacheEvery or 8
+AiObjCandCache = AiObjCandCache or { tick = -99999, list = {} }
+function AiObjCandidates()
+    local now = AiBrainTickCounter or 0
+    local c = AiObjCandCache
+    if (now - c.tick) < AiObjCacheEvery and #c.list > 0 then return c.list end
+    local list = {}
+    local seen = {}
+    local function add(u, kind)
+        if u == nil or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then return end
+        local hid = GetHandleId(u)
+        if seen[hid] then return end
+        seen[hid] = true
+        list[#list + 1] = { x = GetUnitX(u), y = GetUnitY(u), value = AiBldValueUnit(u),
+            owner = GetOwningPlayer(u), kind = kind }
+    end
+    -- capitals first so a unit present in both StolicaGroups and playerCapital[] keeps
+    -- kind="capital" (and is not double-counted, unlike the old twin-scan).
+    local sg = udg_StolicaGroups
+    if sg ~= nil then
+        local n = BlzGroupGetSize(sg)
+        for i = 0, n - 1 do add(BlzGroupUnitAt(sg, i), "capital") end
+    end
+    -- bots that got their capital via MakeFakeCapital set playerCapital[pi] but were never
+    -- added to udg_StolicaGroups, so that group sits near-empty -> scan playerCapital[] too.
+    if playerCapital ~= nil then
+        for cpi = 0, 23 do add(playerCapital[cpi], "capital") end
+    end
+    local zg = udg_ZahvatBuildings
+    if zg ~= nil then
+        local n = BlzGroupGetSize(zg)
+        for i = 0, n - 1 do add(BlzGroupUnitAt(zg, i), "capture") end
+    end
+    c.list = list
+    c.tick = now
+    return list
+end
+
 function AiBrainCollectObjectives(pi, wm)
     local cfg = AiBrainCfg(pi)
     local cell = cfg.rCluster or AiBrainDefaults.rCluster
     local me = Player(pi)
     local buckets = {}
 
-    local function consider(u, kind)
-        if u == nil or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then return end
-        local owner = GetOwningPlayer(u)
-        if owner == me or IsPlayerAlly(owner, me) then return end
-        if kind == "capital" and not IsPlayerEnemy(owner, me) then return end
-        local x, y = GetUnitX(u), GetUnitY(u)
-        local key = R2I(x / cell) * 100000 + R2I(y / cell)
-        local b = buckets[key]
-        if b == nil then
-            b = { sx = 0.0, sy = 0.0, value = 0.0, count = 0, kind = kind }
-            buckets[key] = b
-        end
-        b.sx = b.sx + x
-        b.sy = b.sy + y
-        b.value = b.value + AiBldValueUnit(u)
-        b.count = b.count + 1
-        if kind == "capital" then b.kind = "capital" end
+    -- memoize hostility per owner-player (<=24) instead of per candidate (~227)
+    local allyCache, enemyCache = {}, {}
+    local function isAlly(o)
+        local id = GetPlayerId(o); local v = allyCache[id]
+        if v == nil then v = IsPlayerAlly(o, me); allyCache[id] = v end
+        return v
+    end
+    local function isEnemy(o)
+        local id = GetPlayerId(o); local v = enemyCache[id]
+        if v == nil then v = IsPlayerEnemy(o, me); enemyCache[id] = v end
+        return v
     end
 
-    local function scanGroup(g, kind)
-        if g == nil then return end
-        local n = BlzGroupGetSize(g)
-        local i = 0
-        while i < n do
-            consider(BlzGroupUnitAt(g, i), kind)
-            i = i + 1
+    for _, cand in ipairs(AiObjCandidates()) do
+        local owner = cand.owner
+        local kind = cand.kind
+        if owner ~= me and not isAlly(owner)
+           and not (kind == "capital" and not isEnemy(owner)) then
+            local x, y = cand.x, cand.y
+            local key = R2I(x / cell) * 100000 + R2I(y / cell)
+            local b = buckets[key]
+            if b == nil then
+                b = { sx = 0.0, sy = 0.0, value = 0.0, count = 0, kind = kind }
+                buckets[key] = b
+            end
+            b.sx = b.sx + x
+            b.sy = b.sy + y
+            b.value = b.value + cand.value
+            b.count = b.count + 1
+            if kind == "capital" then b.kind = "capital" end
         end
     end
-
-    scanGroup(udg_StolicaGroups, "capital")
-    -- udg_StolicaGroups is only populated by MakeCapital; bots that got their capital
-    -- via MakeFakeCapital (the common AI path) set playerCapital[pi] but were NEVER
-    -- added to the group, so it sits EMPTY and the brain saw 0 enemy capitals -> it
-    -- never attacked anyone and nobody got eliminated. Collect capitals from the
-    -- reliable playerCapital[] array too (consider() filters to living enemies).
-    if playerCapital ~= nil then
-        for cpi = 0, 23 do
-            consider(playerCapital[cpi], "capital")
-        end
-    end
-    scanGroup(udg_ZahvatBuildings, "capture")
 
     local objs = {}
     for key, b in pairs(buckets) do
