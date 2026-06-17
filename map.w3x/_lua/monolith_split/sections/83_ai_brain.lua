@@ -2260,6 +2260,9 @@ function BrainBuild(pi, wm, race)
     if race.strategData and race.strategData.steps then
         BrainStrategTick(pi, p, race, wm)
     end
+    if race.mergeCast ~= nil and (wm.tick % 5) == 0 then
+        BrainMergeTick(pi, wm, race)
+    end
 
     -- R5: resume stalled construction before recycling idle workers.
     -- Channeling races (Human, Forsaken) need the worker to stay; if the
@@ -2555,6 +2558,53 @@ end
 ---@param p player
 ---@param race table
 ---@param wm table
+-- Self-merge cast (Cult "Плотеобработка"/MeatDeal etc.): the race's signature mechanic that
+-- COLLAPSES a cluster of the bot's own small units into one bigger unit. Data-driven via
+-- race.mergeCast = { ability, caster, order, consumeAbil, range, minCluster, chance }. A free
+-- caster unit (type `caster`, owning ability `ability`) point-casts `order` at the centroid of
+-- a cluster of >= minCluster friendly units carrying `consumeAbil`, within `range`. Gated by a
+-- small per-call chance + run every few ticks so it merges occasionally, as intended.
+---@param pi integer
+---@param wm table
+---@param race table
+function BrainMergeTick(pi, wm, race)
+    local mc = race.mergeCast
+    if mc == nil then return end
+    if GetRandomInt(1, 100) > (mc.chance or 8) then return end
+    local army = udg_Ai_army[pi]
+    if army == nil then return end
+    local sz = BlzGroupGetSize(army)
+    local caster = nil
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(army, i)
+        if u ~= nil and GetUnitTypeId(u) == mc.caster
+           and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+           and GetUnitAbilityLevel(u, mc.ability) > 0
+           and GetUnitCurrentOrder(u) == 0 then
+            caster = u; break
+        end
+    end
+    if caster == nil then return end
+    local cx, cy = GetUnitX(caster), GetUnitY(caster)
+    local g = CreateGroup()
+    GroupEnumUnitsInRange(g, cx, cy, mc.range or 700.0, nil)
+    local gs = BlzGroupGetSize(g)
+    local n, sxc, syc = 0, 0.0, 0.0
+    local pl = Player(pi)
+    for i = 0, gs - 1 do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil and GetOwningPlayer(u) == pl
+           and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+           and GetUnitAbilityLevel(u, mc.consumeAbil) > 0 then
+            n = n + 1; sxc = sxc + GetUnitX(u); syc = syc + GetUnitY(u)
+        end
+    end
+    DestroyGroup(g)
+    if n >= (mc.minCluster or 5) then
+        IssuePointOrder(caster, mc.order or "channel", sxc / n, syc / n)
+    end
+end
+
 function BrainStrategTick(pi, p, race, wm)
     local steps = race.strategData.steps
     if not steps then return end

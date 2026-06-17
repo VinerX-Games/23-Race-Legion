@@ -42,6 +42,12 @@ RegisterAiRace("Cult", {
         [FourCC('cD26')] = 2, [FourCC('cD29')] = 4,
         [FourCC('cD28')] = 5, [FourCC('cD27')] = 6,
     },
+    -- Signature mechanic: the Defiler (cD05, ability cDa5 "Плотеобработка") COLLAPSES a cluster
+    -- of the bot's own meat units (cDa6: cD09/cD10/cD14/cD11) into one bigger abomination
+    -- (cD10->cD09/cD14->cD00 by summed HP). BrainMergeTick fires it occasionally on a cluster.
+    mergeCast = { ability = FourCC('cDa5'), caster = FourCC('cD05'), order = "channel",
+                  consumeAbil = FourCC('cDa6'), range = 700.0, minCluster = 5, chance = 12 },
+
     strategData = {
         gradeCap = 100,
         steps = {
