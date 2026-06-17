@@ -147,6 +147,13 @@ AiBrainNavalEvery      = AiBrainNavalEvery      or 6   -- naval-check every N br
                                                        -- it responsive without flooding orders.)
 AiBrainNavalStartTick  = AiBrainNavalStartTick  or 23  -- first naval check after N brain-ticks (~4min w/ 16 bots)
 AiBrainMaxPorts        = AiBrainMaxPorts        or 20  -- max shipyards/ports per bot
+AiMaxHeroes            = AiMaxHeroes            or 3   -- safety ceiling on a bot's TOTAL heroes. The
+                                                       -- REAL limit is the hero FOOD budget (cap ceiling
+                                                       -- 3; army costs 0 food, a hero ~2 → ~1 hero),
+                                                       -- now applied to bots in createAiPlayer. This
+                                                       -- count is just a backstop = the 3-food ceiling.
+                                                       -- Per-race override race.maxHeroes (Dragons=1,
+                                                       -- whose altar heroes are mutually exclusive).
 AiBrainLandingEvery     = AiBrainLandingEvery     or 6   -- landing tick every N brain-ticks (was 16 ->
                                                          -- ~2.7min/step; phased desant needs to step
                                                          -- through toEmbark/loading/loaded faster)
@@ -1978,8 +1985,24 @@ function BrainProduce(pi, wm, race)
     -- gold is short and retries next tick; issuing FIRST means the hero grabs gold before
     -- cheaper army orders spend it below the hero's cost.
     if race.altar ~= nil and prod[race.altar] ~= nil then
+        -- TOTAL hero cap. The map's LimitHero trigger only caps each hero TYPE to 1, with no
+        -- overall limit, so the bot trained ONE OF EVERY altar hero (Cult: CD01+CD02+CD03 = 3)
+        -- while a human picks a single hero. Count live + in-flight heroes across ALL altar rows
+        -- and stop at AiMaxHeroes so bots field the same hero count a player does. Tunable per
+        -- race later via race.maxHeroes if some race is meant to have more.
+        local heroMax = race.maxHeroes or AiMaxHeroes
+        local heroCount = 0
+        for _, row in ipairs(prod[race.altar]) do
+            local hid = row[1]
+            if hid ~= nil and hid ~= 0 then
+                heroCount = heroCount + ((wm.acount and wm.acount[hid]) or 0)
+                local ll = g_AiOrdered[pi * 1000000 + hid]
+                if ll ~= nil and (now - ll) < AiLimitedBuildTicks then heroCount = heroCount + 1 end
+            end
+        end
         for _, row in ipairs(prod[race.altar]) do
             if ordered >= maxN then break end
+            if heroCount >= heroMax then break end  -- bot already at its hero quota
             local hid = row[1]
             if hid ~= nil and hid ~= 0 then
                 local cur = (wm.acount and wm.acount[hid]) or 0  -- actual live count (getAiCount drifts → hero dupes)
@@ -1993,6 +2016,7 @@ function BrainProduce(pi, wm, race)
                         IssueImmediateOrderById(bld, hid)
                         g_AiOrdered[lk] = now
                         ordered = ordered + 1
+                        heroCount = heroCount + 1
                     end
                 end
             end

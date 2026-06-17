@@ -44,6 +44,10 @@ RegisterAiRace("Dragons", {
 
     altar = FourCC('n03Z'),
 
+    -- Dragons' altar heroes are mutually exclusive (pick ONE); the 3-food hero budget alone
+    -- could otherwise let a second cheap one in. Hard-cap the hero COUNT to 1.
+    maxHeroes = 1,
+
     start = startDragons,
 
     buildings = {

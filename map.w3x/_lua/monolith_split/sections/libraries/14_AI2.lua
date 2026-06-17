@@ -198,6 +198,13 @@ function createAiPlayer(pi, raceToken)
 	ProbeLogWrite("[AI] createAiPlayer TurnAi executed")
 
 	udg_AiControl[pi] = true
+	-- Hero food budget: at game init every player gets PLAYER_STATE_FOOD_CAP_CEILING=3
+	-- (02_game_modes Trig_Initial_things). Army units cost 0 food here — food is purely the
+	-- HERO budget (a hero eats ~2 of 3, so a human fields ~1 hero). Bots spawned via
+	-- createAiPlayer skipped that init, so they had an unbounded food cap and trained one of
+	-- EVERY altar hero. Apply the same 3-food ceiling so a bot's heroes are limited like a player's.
+	SetPlayerState(gPlayer, PLAYER_STATE_FOOD_CAP_CEILING, 3)
+	SetPlayerState(gPlayer, PLAYER_STATE_RESOURCE_FOOD_USED, 0)
 	ForceAddPlayerSimple(gPlayer, udg_Bots)
 	AiBrainBotListAdd(pi)
 	if AiApplyBotHandicap ~= nil then AiApplyBotHandicap(pi) end  -- bot HP/dmg advantage dials (neutral by default)
