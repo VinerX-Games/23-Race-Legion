@@ -5,7 +5,7 @@ __pycache__/
 *.pyc
 
 # Lua scratch (one-off bridge snippets)
-/lua_scratch/*.lua
+/scripts/lua_scratch/*.lua
 
 # AI-session scratch files (one-off bridge scripts, diagnostics, dumps)
 /_*.lua
@@ -15,3 +15,5 @@ _cli_races.json
 probe_detached.*
 tmp_screen*.png
 /tmp
+hivewe.log
+results.txt
