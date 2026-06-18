@@ -2417,12 +2417,19 @@ local function AiTerrainLand(x, y)  return not IsTerrainPathable(x, y, PATHING_T
 -- code called AiBuildPlaceable (land-only — it rejects every water tile) on the far
 -- hardcoded udg_WaterPoints, so the order was always rejected and navy stayed 0.
 -- This sampling pattern was confirmed live: the issued build order was accepted.
+-- The shipyard footprint is ~4x4 pathing cells (pathtex 4x4SimpleSolid, ~128 world
+-- units across), so we only need water within ~128u of the center — NOT the old ±256
+-- (a 512-wide pocket). The over-wide check rejected every normal near-shore spot the
+-- way a human player places a shipyard (on the shallow band right off the coast), so
+-- the ring-scan returned almost nothing and most bots built zero shipyards. ±128/±64
+-- matches the real footprint and lets the narrow shallow band (only ~4% of the map)
+-- qualify.
 local function AiNavalFootprintWater(x, y)
     if not AiTerrainWater(x, y) then return false end
-    local r1, r2 = 256.0, 128.0
-    local o = { {r1,0},{-r1,0},{0,r1},{0,-r1},{r1,r1},{-r1,-r1},{r1,-r1},{-r1,r1},
+    local r1, r2 = 128.0, 64.0
+    local o = { {r1,0},{-r1,0},{0,r1},{0,-r1},
                 {r2,0},{-r2,0},{0,r2},{0,-r2} }
-    for i = 1, 12 do
+    for i = 1, 8 do
         if not AiTerrainWater(x + o[i][1], y + o[i][2]) then return false end
     end
     return true
@@ -2475,8 +2482,17 @@ function AiFindNavalSpots(pi, cx, cy)
         local list = capCont and AiCuratedNavalSpots[capCont]
         if list ~= nil then
             for _, sp in ipairs(list) do
-                local dx, dy = cx - sp[1], cy - sp[2]
-                cand[#cand + 1] = { x = sp[1], y = sp[2], d = SquareRoot(dx * dx + dy * dy) }
+                -- Validate against LIVE terrain: the spot must be water (floatable, or the
+                -- shipyard's preventplace=unfloat rejects it) AND have walkable shore within
+                -- 700u (else no ground worker can reach it to build). Hand-baked region-edge
+                -- spots that landed in open deep water far from any shore (e.g. Island_Vaishir,
+                -- whose 4 spots sit off the capital's foot-island across a shallow gap) fail
+                -- this and are dropped, so the bot falls through to its own contiguous coastal
+                -- ring-scan instead of forever ordering a worker to an unreachable point.
+                if AiTerrainWater(sp[1], sp[2]) and AiNavalLandWithin(sp[1], sp[2], 700.0) then
+                    local dx, dy = cx - sp[1], cy - sp[2]
+                    cand[#cand + 1] = { x = sp[1], y = sp[2], d = SquareRoot(dx * dx + dy * dy) }
+                end
             end
         end
     end
@@ -2495,7 +2511,8 @@ function AiFindNavalSpots(pi, cx, cy)
             if p.x ~= nil then
                 local dx, dy = cx - p.x, cy - p.y
                 local d = SquareRoot(dx * dx + dy * dy)
-                if d <= AiNavalMaxRange and AiTerrainWater(p.x, p.y) then
+                if d <= AiNavalMaxRange and AiTerrainWater(p.x, p.y)
+                    and AiNavalLandWithin(p.x, p.y, 700.0) then
                     cand[#cand + 1] = { x = p.x, y = p.y, d = d }
                 end
             end
