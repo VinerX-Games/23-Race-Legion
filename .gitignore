@@ -1,5 +1,9 @@
 /wc3link
 
+# Python cache
+__pycache__/
+*.pyc
+
 # AI-session scratch files (one-off bridge scripts, diagnostics, dumps)
 _*.lua
 _verf_*.txt
