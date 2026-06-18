@@ -26,7 +26,7 @@ _G.BridgeDispatchCommand = nil
 _G.BridgePollTimer = nil
 _G.BridgeDebugTicks = 0
 _G.BridgeDebugMaxTicks = 0
-_G.BridgeEvalEnabled = true
+_G.BridgeEvalEnabled = false
 _G.BridgeEvalSyncPrefix = "23RaceEval"
 _G.BridgeEvalSyncTrigger = nil
 _G.BridgeEvalLoopPaused = false
@@ -8683,6 +8683,13 @@ function createAiPlayer(pi, raceToken)
 	ProbeLogWrite("[AI] createAiPlayer TurnAi executed")
 
 	udg_AiControl[pi] = true
+	-- Hero food budget: at game init every player gets PLAYER_STATE_FOOD_CAP_CEILING=3
+	-- (02_game_modes Trig_Initial_things). Army units cost 0 food here — food is purely the
+	-- HERO budget (a hero eats ~2 of 3, so a human fields ~1 hero). Bots spawned via
+	-- createAiPlayer skipped that init, so they had an unbounded food cap and trained one of
+	-- EVERY altar hero. Apply the same 3-food ceiling so a bot's heroes are limited like a player's.
+	SetPlayerState(gPlayer, PLAYER_STATE_FOOD_CAP_CEILING, 3)
+	SetPlayerState(gPlayer, PLAYER_STATE_RESOURCE_FOOD_USED, 0)
 	ForceAddPlayerSimple(gPlayer, udg_Bots)
 	AiBrainBotListAdd(pi)
 	if AiApplyBotHandicap ~= nil then AiApplyBotHandicap(pi) end  -- bot HP/dmg advantage dials (neutral by default)
@@ -49796,7 +49803,7 @@ function PereborNavalb()
         u=nil
         return
         
-    elseif i > 12 then
+    elseif i > 18 then  -- bot fleet ceiling (was 12): allow bigger fleets / more desant transports
         if udg_Octhet then
             DisplayTimedTextFromPlayer(p, 0, 0, 4, GetPlayerName(p) .. "")
         end
@@ -53718,6 +53725,14 @@ RegisterAiRace("BloodElves", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h04Q'),FourCC('R01N'),6},  -- armor
+                {FourCC('h04R'),FourCC('R01K'),6},  -- melee
+                {FourCC('h04R'),FourCC('R01L'),6},  -- armor
+                {FourCC('h04R'),FourCC('R01M'),6},  -- armor
+                {FourCC('h04R'),FourCC('R01R'),6},  -- melee
+            }},
+
 
             { at = 17, action = "random", branches = {
 
@@ -55015,6 +55030,10 @@ RegisterAiRace("JungleTrolls", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h0N3'),FourCC('R0I8'),6},  -- melee
+            }},
+
 
             { at = 17, action = "random", branches = {
 
@@ -55334,6 +55353,10 @@ RegisterAiRace("ForestTrolls", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h0N7'),FourCC('R0IU'),6},  -- melee
+            }},
+
 
             { at = 17, action = "random", branches = {
 
@@ -56385,6 +56408,14 @@ RegisterAiRace("Alliance", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('hbla'),FourCC('R0HO'),6},  -- ranged
+                {FourCC('hbla'),FourCC('Rhar'),6},  -- armor
+                {FourCC('hbla'),FourCC('Rhla'),6},  -- armor
+                {FourCC('hbla'),FourCC('Rhme'),6},  -- melee
+                {FourCC('hbla'),FourCC('Rhra'),6},  -- ranged
+            }},
+
 
             { at = 17, action = "random", branches = {
 
@@ -56617,6 +56648,15 @@ RegisterAiRace("Bandits", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h03O'),FourCC('R00J'),6},  -- melee
+                {FourCC('h03O'),FourCC('R00L'),6},  -- melee
+                {FourCC('h03O'),FourCC('R00M'),6},  -- armor
+                {FourCC('h03O'),FourCC('R00N'),6},  -- armor
+                {FourCC('h03O'),FourCC('R00X'),6},  -- melee
+                {FourCC('h03P'),FourCC('R00V'),6},  -- armor
+            }},
+
 
             { at = 17, action = "random", branches = {
 
@@ -57044,6 +57084,19 @@ RegisterAiRace("Cult", {
         [FourCC('cD26')] = 2, [FourCC('cD29')] = 4,
         [FourCC('cD28')] = 5, [FourCC('cD27')] = 6,
     },
+    -- Signature mechanic — COLLAPSE a cluster of own small units into one bigger one. Two casters:
+    --  MEAT: Defiler cD05, ability cDa5 "Плотеобработка", eats meat units (cDa6: cD09/cD10/cD14/
+    --        cD11) -> cD10->cD09/cD14->cD00 by summed HP.
+    --  BONE: Necromancer cD03, ability cDar "Костесборка", eats skeletons (cDat: cD18/19/22/33/34/35).
+    -- Both abilities are Channel-based (order "channel"); each caster's other abilities are NOT
+    -- channel, so the order is unambiguous. BrainMergeTick fires them occasionally on a cluster.
+    mergeCast = {
+        { ability = FourCC('cDa5'), caster = FourCC('cD05'), order = "channel",
+          consumeAbil = FourCC('cDa6'), range = 700.0, minCluster = 5, chance = 12 },
+        { ability = FourCC('cDar'), caster = FourCC('cD03'), order = "channel",
+          consumeAbil = FourCC('cDat'), range = 700.0, minCluster = 5, chance = 12 },
+    },
+
     strategData = {
         gradeCap = 100,
         steps = {
@@ -57180,6 +57233,13 @@ RegisterAiRace("Demons", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h0DZ'),FourCC('R08J'),6},  -- melee
+                {FourCC('h0DZ'),FourCC('R08K'),6},  -- armor
+                {FourCC('h0DZ'),FourCC('R08L'),6},  -- ranged
+                {FourCC('h0DZ'),FourCC('R08M'),6},  -- armor
+            }},
+
 
             { at = 17, action = "random", branches = {
 
@@ -57447,6 +57507,12 @@ RegisterAiRace("Draenei", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h055'),FourCC('R023'),6},  -- melee
+                {FourCC('h055'),FourCC('R024'),6},  -- armor
+                {FourCC('h055'),FourCC('R02P'),6},  -- melee
+            }},
+
 
             { at = 17, action = "random", branches = {
 
@@ -57647,6 +57713,16 @@ RegisterAiRace("Stromgard", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h0H4'),FourCC('R0DN'),2},  -- armor
+                {FourCC('h0H5'),FourCC('R0DM'),6},  -- armor
+                {FourCC('h0H6'),FourCC('R0DA'),6},  -- melee
+                {FourCC('h0H6'),FourCC('R0DB'),6},  -- ranged
+                {FourCC('h0H6'),FourCC('R0DC'),6},  -- armor
+                {FourCC('h0H6'),FourCC('R0DD'),6},  -- ranged
+                {FourCC('h0H6'),FourCC('R0DE'),6},  -- armor
+            }},
+
 
             { at = 17, action = "random", branches = {
 
@@ -58309,6 +58385,12 @@ RegisterAiRace("Ogres", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('o03B'),FourCC('R0GL'),6},  -- melee
+                {FourCC('o03B'),FourCC('R0GM'),6},  -- armor
+                {FourCC('o03B'),FourCC('R0GN'),6},  -- ranged
+            }},
+
 
             { at = 17, action = "random", branches = {
 
@@ -59050,6 +59132,16 @@ RegisterAiRace("Pandarens", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('pa28'),FourCC('PA90'),3},  -- melee
+                {FourCC('pa32'),FourCC('PA87'),2},  -- armor
+                {FourCC('pa32'),FourCC('PA88'),2},  -- melee
+                {FourCC('pa30'),FourCC('PA80'),6},  -- armor
+                {FourCC('pa30'),FourCC('PA81'),6},  -- melee
+                {FourCC('pa30'),FourCC('PA84'),6},  -- armor
+                {FourCC('pa30'),FourCC('PA93'),6},  -- melee
+            }},
+
 
             { at = 17, action = "random", branches = {
 
@@ -59262,6 +59354,15 @@ RegisterAiRace("Bezlikie", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h0I2'),FourCC('R0EW'),3},  -- melee
+                {FourCC('h0I2'),FourCC('R0EX'),3},  -- melee
+                {FourCC('h0I2'),FourCC('R0GD'),3},  -- melee
+                {FourCC('h0I4'),FourCC('R0EV'),3},  -- melee
+                {FourCC('h0I6'),FourCC('R0ER'),6},  -- armor
+                {FourCC('h0I6'),FourCC('R0ET'),6},  -- melee
+            }},
+
 
             { at = 17, action = "random", branches = {
 
@@ -59677,6 +59778,15 @@ RegisterAiRace("KulTiras", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('h023'),FourCC('R0KL'),6},  -- armor
+                {FourCC('h020'),FourCC('R035'),6},  -- ranged
+                {FourCC('h020'),FourCC('R036'),6},  -- melee
+                {FourCC('h020'),FourCC('R037'),6},  -- armor
+                {FourCC('h020'),FourCC('R038'),6},  -- armor
+                {FourCC('h020'),FourCC('R039'),6},  -- ranged
+            }},
+
 
             { at = 17, action = "random", branches = {
 
@@ -60124,6 +60234,12 @@ RegisterAiRace("IceTrolls", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('o04B'),FourCC('R0HZ'),6},  -- melee
+                {FourCC('o04B'),FourCC('R0I0'),6},  -- armor
+                {FourCC('o04B'),FourCC('R0I1'),6},  -- ranged
+            }},
+
 
             { at = 17, action = "random", branches = {
 
@@ -60727,6 +60843,10 @@ RegisterAiRace("Dragons", {
 
     altar = FourCC('n03Z'),
 
+    -- Dragons' altar heroes are mutually exclusive (pick ONE); the 3-food hero budget alone
+    -- could otherwise let a second cheap one in. Hard-cap the hero COUNT to 1.
+    maxHeroes = 1,
+
     start = startDragons,
 
     buildings = {
@@ -60814,6 +60934,14 @@ RegisterAiRace("Dragons", {
         gradeCap = 100,
 
         steps = {
+            { at = 17, action = "research", rows = {
+                {FourCC('n03I'),FourCC('R0AV'),6},  -- melee
+                {FourCC('n03I'),FourCC('R0AW'),6},  -- melee
+                {FourCC('n03I'),FourCC('R0AX'),6},  -- melee
+                {FourCC('n03I'),FourCC('R0AY'),6},  -- melee
+                {FourCC('n03I'),FourCC('R0AZ'),6},  -- melee
+            }},
+
             { at = 20, action = "tryBuy" },
         },
 
@@ -61193,10 +61321,24 @@ AiLimitedBuildTicks = AiLimitedBuildTicks or 120       -- a limited unit (hero) 
                                                        -- slow-building hero isn't ordered 2-3x before
                                                        -- getAiCount sees it (Cult had 2x CD02).
 AiBrainExpansionEvery  = AiBrainExpansionEvery  or 30  -- expansion-check every N brain-ticks
-AiBrainNavalEvery      = AiBrainNavalEvery      or 15  -- naval-check every N brain-ticks
-AiBrainNavalStartTick  = AiBrainNavalStartTick  or 23  -- first naval check after N brain-ticks (~4min w/ 16 bots)
+AiBrainNavalEvery      = AiBrainNavalEvery      or 4   -- naval-check every N brain-ticks (was 15:
+                                                       -- with 1 bot/~10s a shipyard attempt fired
+                                                       -- only every ~2.5min; the multi-step desant
+                                                       -- handshake then took many minutes. 4 keeps
+                                                       -- fleet-building responsive without flooding.)
+AiBrainNavalStartTick  = AiBrainNavalStartTick  or 12  -- first naval check after N brain-ticks (lowered
+                                                       -- 23->12: start the fleet ~2x sooner)
 AiBrainMaxPorts        = AiBrainMaxPorts        or 20  -- max shipyards/ports per bot
-AiBrainLandingEvery     = AiBrainLandingEvery     or 16  -- landing tick every N brain-ticks
+AiMaxHeroes            = AiMaxHeroes            or 3   -- safety ceiling on a bot's TOTAL heroes. The
+                                                       -- REAL limit is the hero FOOD budget (cap ceiling
+                                                       -- 3; army costs 0 food, a hero ~2 → ~1 hero),
+                                                       -- now applied to bots in createAiPlayer. This
+                                                       -- count is just a backstop = the 3-food ceiling.
+                                                       -- Per-race override race.maxHeroes (Dragons=1,
+                                                       -- whose altar heroes are mutually exclusive).
+AiBrainLandingEvery     = AiBrainLandingEvery     or 6   -- landing tick every N brain-ticks (was 16 ->
+                                                         -- ~2.7min/step; phased desant needs to step
+                                                         -- through toEmbark/loading/loaded faster)
 AiBrainLandingRadius    = AiBrainLandingRadius    or 800 -- load/unload radius
 -- Perf (profiler showed BrainFocus = the dominant per-tick cost, ~50%+, and reap 2nd):
 -- BrainFocus only re-tasks IDLE units, so running it every single brain-tick is wasteful.
@@ -62097,6 +62239,55 @@ function AiSquadReapDead(pi)
     end
 end
 
+-- Recovery for the teleport-hang: a mage/Zahvat caster (darksummoning) can die or be
+-- interrupted mid-channel, leaving the units it was porting idle with a stale order, far
+-- from home AND the front AND the army — they hang forever (the old periodic aiRep re-scan
+-- used to un-stick them). This is the lightweight replacement: (1) purge dead casters from
+-- the AiUnitsToPort queue so the TP system stops trying to use them; (2) re-mobilize
+-- orphaned IDLE military units (idle + far from capital + far from the army blob) by sending
+-- them back to rejoin the army. Conservative thresholds + a per-call cap so it never thrashes
+-- legitimately-deployed units (those aren't idle).
+AiRecoverEvery = AiRecoverEvery or 4      -- run every N brain-ticks
+AiRecoverFar   = AiRecoverFar   or 5000.0 -- "orphaned" if this far from BOTH home and the army
+function AiBrainRecoverStranded(pi, wm)
+    -- 1) purge dead/nil TP casters from the port queue
+    local q = AiUnitsToPort and AiUnitsToPort[pi]
+    if q ~= nil then
+        local qs = BlzGroupGetSize(q)
+        local dead = {}
+        for i = 0, qs - 1 do
+            local u = BlzGroupUnitAt(q, i)
+            if u == nil or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then dead[#dead + 1] = u end
+        end
+        for _, u in ipairs(dead) do if u ~= nil then GroupRemoveUnit(q, u) end end
+    end
+    -- 2) re-mobilize orphaned idle units back to the army centroid
+    local army = udg_Ai_army[pi]
+    if army == nil or wm.cx == nil then return end
+    local cx, cy = wm.cx, wm.cy
+    local capx, capy = wm.capX, wm.capY
+    local far2 = AiRecoverFar * AiRecoverFar
+    local sz = BlzGroupGetSize(army)
+    local moved = 0
+    for i = 0, sz - 1 do
+        if moved >= 12 then break end
+        local u = BlzGroupUnitAt(army, i)
+        if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+           and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and not IsUnitType(u, UNIT_TYPE_PEON)
+           and GetUnitCurrentOrder(u) == 0 then
+            local ux, uy = GetUnitX(u), GetUnitY(u)
+            local dcx, dcy = ux - cx, uy - cy
+            local dC = dcx * dcx + dcy * dcy
+            local dH = far2 + 1.0
+            if capx ~= nil then local dhx, dhy = ux - capx, uy - capy; dH = dhx * dhx + dhy * dhy end
+            if dC > far2 and dH > far2 then
+                IssuePointOrder(u, "move", cx, cy)   -- rejoin the army blob
+                moved = moved + 1
+            end
+        end
+    end
+end
+
 -- ====================================================================
 -- Squad FSM dispatcher (OPT-IN). The army normally moves as a single front via
 -- BrainFocus; flip AiSquadFsmEnabled=true to instead command the bot's squads through
@@ -62209,13 +62400,30 @@ function AiSquadTickMarch(pi, sid, sq, p, wm)
     if d < 1200.0 then return "engage" end
     local oc, sc = AiContinentOf(obj.x, obj.y), AiContinentOf(cx, cy)
     if oc ~= nil and sc ~= nil and oc ~= sc then
+        -- Cross-continent: must reach the objective via a portal/teleport. NEVER fall through
+        -- to a direct attack-move (walks the army straight at an off-continent target = into the
+        -- sea / stuck "in the south" — the live bug). Try, in order: mage TP, a waygate on the
+        -- first hop, then the WEB (sell) portal network (most continent links are n003 web
+        -- portals, NOT waygates, so AiFindPortal returns nil and we must fall back to web).
         local m = AiFindMageOnContinent(pi, oc)
         if m ~= nil then gPi = pi; gPlayer = p; PortTo(m); return "march" end
         local rt = AiPortalRoute(sc, oc)
-        if rt ~= nil and #rt >= 2 then local portal = AiFindPortal(rt[1], rt[2])
+        if rt ~= nil and #rt >= 2 then
+            local portal = AiFindPortal(rt[1], rt[2])
             if portal ~= nil then AiSquadOrderMov(sq.members, GetUnitX(portal), GetUnitY(portal)); return "march" end
         end
+        -- Web-portal fallback: route over the web graph and march to the first hop's web portal
+        -- (BrainWebPortalTick performs the actual mass-teleport once the army gathers there).
+        local wrt = AiWebRoute(sc, oc)
+        if wrt ~= nil and #wrt >= 2 then
+            local wp = AiFindWebPortal(wrt[1], wrt[2], cx, cy)
+            if wp ~= nil then AiSquadOrderMov(sq.members, wp.x, wp.y); return "march" end
+        end
+        -- No usable portal to the objective's continent: don't march into the sea. Nudge the
+        -- TP logistics and drop this objective so the focus re-picks a reachable one.
         AiBrainTryLogistics(pi, p, obj, wm)
+        sq.objective = nil
+        return "muster"
     end
     AiSquadOrderAtk(sq.members, obj.x, obj.y)
     return "march"
@@ -62296,53 +62504,88 @@ end
 ---@param pi integer
 ---@param wm table
 ---@return table
+-- Shared objective-candidate snapshot. The raw scan — every living capture building +
+-- enemy capital, each costing GetUnitState + GetUnitX/Y + AiBldValueUnit (4-5 ability-level
+-- lookups) — is bot-INDEPENDENT, yet the old per-bot CollectObjectives re-ran it in full for
+-- EVERY bot over the same ~227 ZahvatBuildings (profiled at ~22ms/bot → a recurring frame
+-- hitch and the "reap" phase blowup). Build the heavy list ONCE per AiObjCacheEvery ticks;
+-- each bot then only buckets the cheap cached entries by its own cell size + ally/enemy.
+AiObjCacheEvery = AiObjCacheEvery or 8
+AiObjCandCache = AiObjCandCache or { tick = -99999, list = {} }
+function AiObjCandidates()
+    local now = AiBrainTickCounter or 0
+    local c = AiObjCandCache
+    if (now - c.tick) < AiObjCacheEvery and #c.list > 0 then return c.list end
+    local list = {}
+    local seen = {}
+    local function add(u, kind)
+        if u == nil or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then return end
+        local hid = GetHandleId(u)
+        if seen[hid] then return end
+        seen[hid] = true
+        list[#list + 1] = { x = GetUnitX(u), y = GetUnitY(u), value = AiBldValueUnit(u),
+            owner = GetOwningPlayer(u), kind = kind }
+    end
+    -- capitals first so a unit present in both StolicaGroups and playerCapital[] keeps
+    -- kind="capital" (and is not double-counted, unlike the old twin-scan).
+    local sg = udg_StolicaGroups
+    if sg ~= nil then
+        local n = BlzGroupGetSize(sg)
+        for i = 0, n - 1 do add(BlzGroupUnitAt(sg, i), "capital") end
+    end
+    -- bots that got their capital via MakeFakeCapital set playerCapital[pi] but were never
+    -- added to udg_StolicaGroups, so that group sits near-empty -> scan playerCapital[] too.
+    if playerCapital ~= nil then
+        for cpi = 0, 23 do add(playerCapital[cpi], "capital") end
+    end
+    local zg = udg_ZahvatBuildings
+    if zg ~= nil then
+        local n = BlzGroupGetSize(zg)
+        for i = 0, n - 1 do add(BlzGroupUnitAt(zg, i), "capture") end
+    end
+    c.list = list
+    c.tick = now
+    return list
+end
+
 function AiBrainCollectObjectives(pi, wm)
     local cfg = AiBrainCfg(pi)
     local cell = cfg.rCluster or AiBrainDefaults.rCluster
     local me = Player(pi)
     local buckets = {}
 
-    local function consider(u, kind)
-        if u == nil or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then return end
-        local owner = GetOwningPlayer(u)
-        if owner == me or IsPlayerAlly(owner, me) then return end
-        if kind == "capital" and not IsPlayerEnemy(owner, me) then return end
-        local x, y = GetUnitX(u), GetUnitY(u)
-        local key = R2I(x / cell) * 100000 + R2I(y / cell)
-        local b = buckets[key]
-        if b == nil then
-            b = { sx = 0.0, sy = 0.0, value = 0.0, count = 0, kind = kind }
-            buckets[key] = b
-        end
-        b.sx = b.sx + x
-        b.sy = b.sy + y
-        b.value = b.value + AiBldValueUnit(u)
-        b.count = b.count + 1
-        if kind == "capital" then b.kind = "capital" end
+    -- memoize hostility per owner-player (<=24) instead of per candidate (~227)
+    local allyCache, enemyCache = {}, {}
+    local function isAlly(o)
+        local id = GetPlayerId(o); local v = allyCache[id]
+        if v == nil then v = IsPlayerAlly(o, me); allyCache[id] = v end
+        return v
+    end
+    local function isEnemy(o)
+        local id = GetPlayerId(o); local v = enemyCache[id]
+        if v == nil then v = IsPlayerEnemy(o, me); enemyCache[id] = v end
+        return v
     end
 
-    local function scanGroup(g, kind)
-        if g == nil then return end
-        local n = BlzGroupGetSize(g)
-        local i = 0
-        while i < n do
-            consider(BlzGroupUnitAt(g, i), kind)
-            i = i + 1
+    for _, cand in ipairs(AiObjCandidates()) do
+        local owner = cand.owner
+        local kind = cand.kind
+        if owner ~= me and not isAlly(owner)
+           and not (kind == "capital" and not isEnemy(owner)) then
+            local x, y = cand.x, cand.y
+            local key = R2I(x / cell) * 100000 + R2I(y / cell)
+            local b = buckets[key]
+            if b == nil then
+                b = { sx = 0.0, sy = 0.0, value = 0.0, count = 0, kind = kind }
+                buckets[key] = b
+            end
+            b.sx = b.sx + x
+            b.sy = b.sy + y
+            b.value = b.value + cand.value
+            b.count = b.count + 1
+            if kind == "capital" then b.kind = "capital" end
         end
     end
-
-    scanGroup(udg_StolicaGroups, "capital")
-    -- udg_StolicaGroups is only populated by MakeCapital; bots that got their capital
-    -- via MakeFakeCapital (the common AI path) set playerCapital[pi] but were NEVER
-    -- added to the group, so it sits EMPTY and the brain saw 0 enemy capitals -> it
-    -- never attacked anyone and nobody got eliminated. Collect capitals from the
-    -- reliable playerCapital[] array too (consider() filters to living enemies).
-    if playerCapital ~= nil then
-        for cpi = 0, 23 do
-            consider(playerCapital[cpi], "capital")
-        end
-    end
-    scanGroup(udg_ZahvatBuildings, "capture")
 
     local objs = {}
     for key, b in pairs(buckets) do
@@ -62406,9 +62649,17 @@ function AiObjScore(pi, wm, o)
         end
     end
 
+    -- Per-bot deterministic jitter (±6%) so multiple bots don't all stack on the SAME top
+    -- target (live: 5 bots beelined one capital, adjacent bots ignored each other). Hashing
+    -- (pi, objective cell) perturbs each bot's ranking differently, spreading them across
+    -- targets, while staying deterministic (no desync) and small enough not to invert clear
+    -- value gaps. Capture/capital ties (scores within ~3%) get broken per-bot.
+    local jh = (pi * 1103515245 + R2I(o.x) * 40503 + R2I(o.y) * 12345) % 100000
+    local jitter = 1.0 + (jh / 100000.0 - 0.5) * 0.12
+
     if o.kind == "capture" then
         local prox = 8000.0 / dist
-        return (kindBase + (w.value or 1.0) * o.value + prox) * waterPenalty
+        return (kindBase + (w.value or 1.0) * o.value + prox) * waterPenalty * jitter
     end
     -- capital: scale priority with the attacker's own army so a strong bot commits to
     -- crushing an enemy capital instead of perpetually re-capturing neutrals (capture
@@ -62423,7 +62674,7 @@ function AiObjScore(pi, wm, o)
     -- army's capital priority decisively dominate capture clusters (96 -> +1920),
     -- while a small army adds little and keeps developing/capturing first.
     local armyPush = (wm.armyCount or 0) * 20.0
-    return (kindBase * armyBoost + armyPush + (w.value or 1.0) * o.value - (w.dist or 0.002) * dist) * waterPenalty
+    return (kindBase * armyBoost + armyPush + (w.value or 1.0) * o.value - (w.dist or 0.002) * dist) * waterPenalty * jitter
 end
 
 -- Highest-scoring objective with hysteresis: stick to current focus unless a
@@ -62449,6 +62700,49 @@ function AiBrainPickFocus(pi, wm)
         return cur
     end
     wm.focusKey = best.key
+    return best
+end
+
+-- Is continent b reachable from a by LAND (same landmass, waygate route, or web-portal route)?
+-- Used to keep the land army on objectives it can actually walk/teleport to; across-water-only
+-- targets are left to the naval desant system.
+---@param a string|nil
+---@param b string|nil
+---@return boolean
+function AiLandReachable(a, b)
+    if a == nil or b == nil then return false end
+    if a == b then return true end
+    local rt = AiPortalRoute(a, b); if rt ~= nil and #rt >= 2 then return true end
+    local wrt = AiWebRoute(a, b);   if wrt ~= nil and #wrt >= 2 then return true end
+    return false
+end
+
+-- Best objective the bot's LAND army can actually reach from continent `home`. Reuses the
+-- o.score already computed by AiBrainPickFocus this tick (falls back to scoring if absent).
+---@param pi integer
+---@param wm table
+---@param home string
+---@return table|nil
+function AiBrainPickLandFocus(pi, wm, home)
+    local objs = wm.objectives
+    if objs == nil then return nil end
+    -- Memoize reachability per CONTINENT (~25) — AiLandReachable runs AiPortalRoute +
+    -- AiWebRoute graph-BFS, far too costly to call once per objective (~200 objs would mean
+    -- ~200 BFS per tick → the game stalls). Same home for the whole call, so cache by objCont.
+    local reachCache = {}
+    local function reach(oc)
+        if oc == nil then return false end
+        local v = reachCache[oc]
+        if v == nil then v = AiLandReachable(home, oc); reachCache[oc] = v end
+        return v
+    end
+    local best, bestScore = nil, -1e30
+    for _, o in ipairs(objs) do
+        if reach(AiContinentOf(o.x, o.y)) then
+            local s = o.score or AiObjScore(pi, wm, o)
+            if s > bestScore then bestScore = s; best = o end
+        end
+    end
     return best
 end
 
@@ -62680,12 +62974,21 @@ function AiFindFreeWorker(pi)
         return u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
     end
     local now = AiBrainTickCounter or 0
+    -- A worker dispatched to build a far open-water shipyard is mid-trek with no incomplete
+    -- structure beside it yet; without skipping it here, the very next economy-build tick
+    -- re-grabs it (the builders pool returns the first alive worker) and re-tasks it off the
+    -- walk, so the shipyard never starts (live: Alliance in Pandaria, 0 shipyards in 230+
+    -- ticks, nearest spot 2388u away). AiNavalBuildUntil reserves it for the whole approach.
+    local function navalBusy(u)
+        local nu = AiNavalBuildUntil[u]
+        return nu ~= nil and now < nu
+    end
     local grp = udg_Ai_builders[pi]
     if grp ~= nil then
         local sz = BlzGroupGetSize(grp)
         for i = 0, sz - 1 do
             local u = BlzGroupUnitAt(grp, i)
-            if alive(u) then return u end
+            if alive(u) and not navalBusy(u) then return u end
         end
     end
     local grpT = udg_Ai_buildersT[pi]
@@ -62695,7 +62998,7 @@ function AiFindFreeWorker(pi)
             local u = BlzGroupUnitAt(grpT, i)
             -- Any idle worker in buildersT is available — claim guard is redundant
             -- now that AiRecycleBuilders no longer yanks channeling workers.
-            if alive(u) and GetUnitCurrentOrder(u) == 0 then return u end
+            if alive(u) and GetUnitCurrentOrder(u) == 0 and not navalBusy(u) then return u end
         end
     end
     local grpH = udg_Ai_harvest[pi]
@@ -62703,7 +63006,7 @@ function AiFindFreeWorker(pi)
         local sz = BlzGroupGetSize(grpH)
         for i = 0, sz - 1 do
             local u = BlzGroupUnitAt(grpH, i)
-            if alive(u) then return u end
+            if alive(u) and not navalBusy(u) then return u end
         end
     end
     return nil
@@ -62951,8 +63254,24 @@ function BrainProduce(pi, wm, race)
     -- gold is short and retries next tick; issuing FIRST means the hero grabs gold before
     -- cheaper army orders spend it below the hero's cost.
     if race.altar ~= nil and prod[race.altar] ~= nil then
+        -- TOTAL hero cap. The map's LimitHero trigger only caps each hero TYPE to 1, with no
+        -- overall limit, so the bot trained ONE OF EVERY altar hero (Cult: CD01+CD02+CD03 = 3)
+        -- while a human picks a single hero. Count live + in-flight heroes across ALL altar rows
+        -- and stop at AiMaxHeroes so bots field the same hero count a player does. Tunable per
+        -- race later via race.maxHeroes if some race is meant to have more.
+        local heroMax = race.maxHeroes or AiMaxHeroes
+        local heroCount = 0
+        for _, row in ipairs(prod[race.altar]) do
+            local hid = row[1]
+            if hid ~= nil and hid ~= 0 then
+                heroCount = heroCount + ((wm.acount and wm.acount[hid]) or 0)
+                local ll = g_AiOrdered[pi * 1000000 + hid]
+                if ll ~= nil and (now - ll) < AiLimitedBuildTicks then heroCount = heroCount + 1 end
+            end
+        end
         for _, row in ipairs(prod[race.altar]) do
             if ordered >= maxN then break end
+            if heroCount >= heroMax then break end  -- bot already at its hero quota
             local hid = row[1]
             if hid ~= nil and hid ~= 0 then
                 local cur = (wm.acount and wm.acount[hid]) or 0  -- actual live count (getAiCount drifts → hero dupes)
@@ -62966,6 +63285,7 @@ function BrainProduce(pi, wm, race)
                         IssueImmediateOrderById(bld, hid)
                         g_AiOrdered[lk] = now
                         ordered = ordered + 1
+                        heroCount = heroCount + 1
                     end
                 end
             end
@@ -63209,6 +63529,9 @@ function BrainBuild(pi, wm, race)
     if race.strategData and race.strategData.steps then
         BrainStrategTick(pi, p, race, wm)
     end
+    if race.mergeCast ~= nil and (wm.tick % 5) == 0 then
+        BrainMergeTick(pi, wm, race)
+    end
 
     -- R5: resume stalled construction before recycling idle workers.
     -- Channeling races (Human, Forsaken) need the worker to stay; if the
@@ -63301,6 +63624,12 @@ AiNavalBuildGrace = AiNavalBuildGrace or 360  -- ticks a shipyard-builder is pro
                                               -- removed a worker may trek far across the map to a
                                               -- designated water point, so it needs longer before
                                               -- the build pool reclaims it.
+-- Progress tracking so a STUCK naval worker (blocked path, can't reach the open-water spot)
+-- doesn't hold its reservation idle for the whole grace window while no replacement is sent.
+-- [unit] = { x, y, lastDist, lastCheck, building }
+AiNavalBuildSpot     = AiNavalBuildSpot     or {}
+AiNavalProgressEvery = AiNavalProgressEvery or 6     -- ticks between progress checks
+AiNavalProgressMin   = AiNavalProgressMin   or 150.0 -- must close at least this much per check, else stuck
 
 -- Open-water-near-shore shipyard spots around the capital, nearest first. Cached per
 -- bot (the terrain scan is heavy and water doesn't move).
@@ -63440,7 +63769,60 @@ local function AiNavalOpportunistic(pi)
     return scan(udg_Ai_buildersT[pi], true)
 end
 
+-- Free a worker from its naval-build reservation so it (or a replacement) can be re-assigned.
+local function AiNavalReleaseWorker(u)
+    AiNavalBuildUntil[u] = nil
+    AiNavalBuildSpot[u] = nil
+end
+
+-- Watch the bot's in-flight shipyard-builders. A worker walking to a far open-water spot has
+-- no incomplete structure beside it yet, so it's only protected by AiNavalBuildUntil — if it
+-- gets STUCK on the way it would hold that reservation idle for the whole grace and the
+-- shipyard would never start. Release it when: it died, its build order dropped (idle), or it
+-- isn't closing the distance to its target spot. On a stuck release we keep the SPOT reserved
+-- so the next BrainNavalDecision pass sends a (different) worker to a DIFFERENT spot. While the
+-- worker is actually constructing, refresh its grace so it isn't reclaimed mid-build.
+function AiNavalSupervise(pi)
+    local now = AiBrainTickCounter or 0
+    local function check(grp)
+        if grp == nil then return end
+        local sz = BlzGroupGetSize(grp)
+        for i = 0, sz - 1 do
+            local u = BlzGroupUnitAt(grp, i)
+            local s = (u ~= nil) and AiNavalBuildSpot[u] or nil
+            if s ~= nil then
+                if GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then
+                    AiNavalReleaseWorker(u)
+                elseif AiWorkerIsBuilding(pi, u) then
+                    s.building = true
+                    AiNavalBuildUntil[u] = now + AiNavalBuildGrace  -- protect through construction
+                elseif s.building then
+                    AiNavalReleaseWorker(u)                          -- was building, now idle => done/abandoned
+                elseif GetUnitCurrentOrder(u) == 0 then
+                    AiNavalReleaseWorker(u)                          -- never started, order dropped
+                elseif (now - (s.lastCheck or 0)) >= AiNavalProgressEvery then
+                    local dx, dy = GetUnitX(u) - s.x, GetUnitY(u) - s.y
+                    local d = SquareRoot(dx * dx + dy * dy)
+                    if s.lastDist ~= nil and d > s.lastDist - AiNavalProgressMin then
+                        -- not closing the gap => stuck: free the worker, keep the spot reserved
+                        -- so the next pass tries another spot with a fresh worker.
+                        g_BuildSpotReserved[pi .. ",nav," .. R2I(s.x) .. "," .. R2I(s.y)] = now
+                        AiNavalReleaseWorker(u)
+                        BrainLogEvery(pi, "brainnavystuck", 30, "naval worker stuck, reassigning", "BRAINNAVY")
+                    else
+                        s.lastDist = d; s.lastCheck = now
+                    end
+                end
+            end
+        end
+    end
+    check(udg_Ai_builders[pi])
+    check(udg_Ai_buildersT[pi])
+    check(udg_Ai_harvest[pi])
+end
+
 function BrainNavalDecision(pi, wm, race)
+    AiNavalSupervise(pi)
     local shipType = race.wall
     -- R8b: race.wall is a defensive tower for some races (Forsaken h0JM, etc.),
     -- not a shipyard. Fall back to race.shipyard if set.
@@ -63463,6 +63845,8 @@ function BrainNavalDecision(pi, wm, race)
             if TryBuildWithType(shipType, osx, osy) then
                 g_BuildSpotReserved[key] = now
                 AiNavalBuildUntil[ow] = now + AiNavalBuildGrace
+                local dx, dy = GetUnitX(ow) - osx, GetUnitY(ow) - osy
+                AiNavalBuildSpot[ow] = { x = osx, y = osy, lastDist = SquareRoot(dx * dx + dy * dy), lastCheck = now }
                 BrainLogEvery(pi, "brainnavy", 30, "shipyard under builder", "BRAINNAVY")
                 return
             end
@@ -63489,6 +63873,8 @@ function BrainNavalDecision(pi, wm, race)
             if TryBuildWithType(shipType, sp.x, sp.y) then
                 g_BuildSpotReserved[key] = now
                 AiNavalBuildUntil[worker] = now + AiNavalBuildGrace
+                local dx, dy = GetUnitX(worker) - sp.x, GetUnitY(worker) - sp.y
+                AiNavalBuildSpot[worker] = { x = sp.x, y = sp.y, lastDist = SquareRoot(dx * dx + dy * dy), lastCheck = now }
                 BrainLogEvery(pi, "brainnavy", 30, "shipyard at open water", "BRAINNAVY")
                 return
             end
@@ -63504,10 +63890,82 @@ end
 ---@param p player
 ---@param race table
 ---@param wm table
+-- Self-merge cast(s) (Cult "Плотеобработка"/MeatDeal on cD05, "Костесборка"/BoneDeal on cD03):
+-- a race's signature mechanic that COLLAPSES a cluster of the bot's own small units into one
+-- bigger unit. Data-driven via race.mergeCast = a LIST of specs, each
+--   { ability, caster, order, consumeAbil, range, minCluster, chance }
+-- so a race can have several (meat + bone). For each spec a free caster unit (type `caster`,
+-- owning `ability`) point-casts `order` at the centroid of a cluster of >= minCluster friendly
+-- units carrying `consumeAbil` within `range`, gated by a small per-spec chance.
+---@param pi integer
+---@param army group
+---@param mc table
+local function BrainMergeCastOne(pi, army, mc)
+    if GetRandomInt(1, 100) > (mc.chance or 8) then return end
+    local sz = BlzGroupGetSize(army)
+    local caster = nil
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(army, i)
+        if u ~= nil and GetUnitTypeId(u) == mc.caster
+           and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+           and GetUnitAbilityLevel(u, mc.ability) > 0
+           and GetUnitCurrentOrder(u) == 0 then
+            caster = u; break
+        end
+    end
+    if caster == nil then return end
+    local cx, cy = GetUnitX(caster), GetUnitY(caster)
+    local g = CreateGroup()
+    GroupEnumUnitsInRange(g, cx, cy, mc.range or 700.0, nil)
+    local gs = BlzGroupGetSize(g)
+    local n, sxc, syc = 0, 0.0, 0.0
+    local pl = Player(pi)
+    for i = 0, gs - 1 do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil and GetOwningPlayer(u) == pl
+           and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+           and GetUnitAbilityLevel(u, mc.consumeAbil) > 0 then
+            n = n + 1; sxc = sxc + GetUnitX(u); syc = syc + GetUnitY(u)
+        end
+    end
+    DestroyGroup(g)
+    if n >= (mc.minCluster or 5) then
+        IssuePointOrder(caster, mc.order or "channel", sxc / n, syc / n)
+    end
+end
+
+---@param pi integer
+---@param wm table
+---@param race table
+function BrainMergeTick(pi, wm, race)
+    local specs = race.mergeCast
+    if specs == nil then return end
+    local army = udg_Ai_army[pi]
+    if army == nil then return end
+    for _, mc in ipairs(specs) do
+        BrainMergeCastOne(pi, army, mc)
+    end
+end
+
 function BrainStrategTick(pi, p, race, wm)
     local steps = race.strategData.steps
     if not steps then return end
     for _, step in ipairs(steps) do
+        if step.action == "research" then
+            -- Military "grades" (weapon/armor/tools/etc.) declared in strategData. The brain
+            -- previously handled ONLY techUp, so every "research" step was silently skipped and
+            -- grades stuck at 0 for most races (live: FelOrc/KulTiras/Worgen/Dragons/ForestTrolls
+            -- grades pinned at 0.0). Each row is {hostBuilding, researchId, levelCap}.
+            -- MakeGradeCheckCap researches it at the host building, or (AI bots only) grants it
+            -- directly when the race owns no such building — the same path the legacy
+            -- AiRunStrateg used. Throttled so it doesn't re-issue every single tick.
+            if step.at and wm.tick > step.at and step.rows and (wm.tick % 4) == 0 then
+                for _, row in ipairs(step.rows) do
+                    MakeGradeCheckCap(p, row[1], row[2], row[3])
+                end
+            end
+            goto nextStep
+        end
         if step.action ~= "techUp" then goto nextStep end
         if not step.at or wm.tick <= step.at then goto nextStep end
         if step.gate then
@@ -63599,6 +64057,27 @@ end
 ---@return integer
 function BrainFocus(pi, p, wm)
     local focus = AiBrainPickFocus(pi, wm)
+    -- DYNAMIC DEFENSE: under home siege, override the offensive focus and recall the whole
+    -- army to the capital to engage attackers. The FSM's defend/retreat states are dormant
+    -- (AiSquadFsmEnabled=false), so without this the live single-front bot kept marching off
+    -- on offense while an enemy razed its undefended capital (live bug). A capital-centred
+    -- pseudo-focus makes targetFor() attack-move every unit home (same-continent => "attack").
+    if wm.defendHome and wm.capX ~= nil then
+        focus = { x = wm.capX, y = wm.capY, kind = "defend", key = "DEFEND" }
+    elseif focus ~= nil then
+        -- If the global #1 objective sits on a continent this bot's LAND army can't reach
+        -- (no same-landmass / waygate / web route), per-unit targetFor() would tell every land
+        -- unit to HOLD — the army then idles at base even when reachable local objectives exist
+        -- (live: Alliance in isolated Pandaria with an 88-strong army sat home while a Kalimdor
+        -- capital was the global #1; a Pandaria capture scoring 370 went ignored). Naval desant
+        -- (BrainLandingTick) handles the across-water push on its own; meanwhile re-point the
+        -- land army at the best objective it CAN reach so it keeps fighting.
+        local home = (wm.cx ~= nil) and AiContinentOf(wm.cx, wm.cy) or nil
+        if home ~= nil and not AiLandReachable(home, AiContinentOf(focus.x, focus.y)) then
+            local lf = AiBrainPickLandFocus(pi, wm, home)
+            if lf ~= nil then focus = lf end
+        end
+    end
     if focus == nil then return 0 end
 
     -- BrainFocus is the LIVE army-command path (the AiSquadTick* FSM with portal routing is
@@ -63626,11 +64105,24 @@ function BrainFocus(pi, p, wm)
         if uc == nil or oc == nil or uc == oc then return focus.x, focus.y, "attack" end
         local c = destCache[uc]
         if c ~= nil then return c.x, c.y, c.ord end
-        local rx, ry, ro = focus.x, focus.y, "attack"
+        -- Cross-continent: route to a PORTAL, never attack-move straight at the off-continent
+        -- objective (that walks the army into the sea / strands it — the live "goes south
+        -- instead of the portal" bug). Try a waygate hop first, then the WEB (sell) portal
+        -- network (most continent links are n003 web portals, so AiFindPortal returns nil and
+        -- we MUST fall back to web). If neither exists, return nil order = hold (naval desant
+        -- handles ocean-separated targets; the scorer already buries portal-unreachable ones).
+        local rx, ry, ro = nil, nil, nil
         local rt = AiPortalRoute(uc, oc)
         if rt ~= nil and #rt >= 2 then
             local portal = AiFindPortal(rt[1], rt[2])
             if portal ~= nil then rx, ry, ro = GetUnitX(portal), GetUnitY(portal), "move" end
+        end
+        if ro == nil then
+            local wrt = AiWebRoute(uc, oc)
+            if wrt ~= nil and #wrt >= 2 then
+                local wp = AiFindWebPortal(wrt[1], wrt[2], ux, uy)
+                if wp ~= nil then rx, ry, ro = wp.x, wp.y, "move" end
+            end
         end
         destCache[uc] = { x = rx, y = ry, ord = ro }
         return rx, ry, ro
@@ -63639,6 +64131,7 @@ function BrainFocus(pi, p, wm)
     local cnt = 0
     local function orderIdle(u)
         local tx, ty, ord = targetFor(GetUnitX(u), GetUnitY(u))
+        if ord == nil then return end   -- cross-water, no portal route: hold (don't swim)
         IssuePointOrder(u, ord, tx, ty)
         cnt = cnt + 1
     end
@@ -63761,7 +64254,21 @@ function BrainWebPortalTick(pi, p, wm)
     end
     if within < need then return end                 -- still gathering; BrainFocus keeps herding them
 
-    local moved = AiPortalTeleport(pi, wp.unit, wp.rect, wp.radius)
+    -- Never ship the home garrison off on an offensive teleport — collect the defense
+    -- squad(s) as a skip-set so the capital keeps its guard (live: a bot mass-TP'd its
+    -- whole army incl. the defense squad across a continent, leaving the capital naked).
+    local garrison = nil
+    for _, sq in pairs(AiSquadsOf(pi)) do
+        if sq.role == "defense" and sq.members ~= nil then
+            local gsz = BlzGroupGetSize(sq.members)
+            for gi = 0, gsz - 1 do
+                local gu = BlzGroupUnitAt(sq.members, gi)
+                if gu ~= nil then garrison = garrison or {}; garrison[gu] = true end
+            end
+        end
+    end
+
+    local moved = AiPortalTeleport(pi, wp.unit, wp.rect, wp.radius, garrison)
     AiWebPortalCast[key] = now
     if moved > 0 then
         BrainLogTag(pi, "BRAINWEB", "mass-TP " .. tostring(moved) .. " units "
@@ -63862,6 +64369,10 @@ AiLandingState = AiLandingState or {}  -- [unit] = { phase, targetX, targetY }
 ---@param p player
 ---@param wm table
 ---@return integer
+-- wm.ticks the transport HOLDS at the embark spot for the army to walk over and board
+-- before it sails to the target. (Landing runs every AiBrainLandingEvery wm.ticks.)
+AiLandingLoadDwell = AiLandingLoadDwell or 2
+
 function BrainLandingTick(pi, p, wm)
     if wm.tick < AiBrainNavalStartTick then return 0 end  -- no ports yet
     local race = AiRaceOf(pi)
@@ -63870,15 +64381,23 @@ function BrainLandingTick(pi, p, wm)
     local army = udg_Ai_army[pi]
     local navy = udg_Ai_navy[pi]
     if navy == nil then return 0 end
-
     local sz = BlzGroupGetSize(navy)
     if sz == 0 then return 0 end
 
     local target = AiBrainPickLandingTarget(pi, wm)
-    -- sail/unload at the near-shore open-water spot, not the inland objective (target.x/y)
-    local tx, ty = nil, nil
-    if target ~= nil then tx, ty = target.sailX, target.sailY end
+    if target == nil then return 0 end
+    local tx, ty = target.sailX, target.sailY   -- near-shore UNLOAD point by the enemy coast
 
+    -- Embark spot: open water beside the army's OWN coast. Phased flow per transport:
+    -- sail to embark FIRST -> arrive & hold -> THEN order army to "load" (they walk over and
+    -- board) -> sail to the target's unload point -> unloadall. Sailing before loading avoids
+    -- the moving ship pulling boarders around. Dwell is counted in wm.ticks (deterministic).
+    local homeCont = (wm.capX and AiContinentOf(wm.capX, wm.capY)) or (wm.cx and AiContinentOf(wm.cx, wm.cy))
+    local ex, ey = AiNearestNavalSpot(homeCont, wm.cx or wm.capX, wm.cy or wm.capY)
+    if ex == nil then ex, ey = wm.cx or wm.capX, wm.cy or wm.capY end
+
+    local R2 = AiBrainLandingRadius * AiBrainLandingRadius
+    local now = wm.tick
     local processed = 0
     local maxN = AiBrainLandingMaxTransports
 
@@ -63887,74 +64406,56 @@ function BrainLandingTick(pi, p, wm)
         local u = BlzGroupUnitAt(navy, i)
         if u == nil then goto nextShip end
         if GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then goto nextShip end
-        local uid = GetUnitTypeId(u)
-        if not AiTransportSet[uid] then goto nextShip end  -- combat ship, skip
+        if not AiTransportSet[GetUnitTypeId(u)] then goto nextShip end  -- combat ship, skip
 
         local order = GetUnitCurrentOrder(u)
         local st = AiLandingState[u]
         local ux, uy = GetUnitX(u), GetUnitY(u)
 
-        if tx ~= nil and st ~= nil and st.phase == "loaded" then
-            -- Sailing to target
-            local dx = ux - tx; local dy = uy - ty
-            local dist = dx * dx + dy * dy
-            if dist < AiBrainLandingRadius * AiBrainLandingRadius then
-                -- Arrived: unload
+        if st ~= nil and st.phase == "loaded" then
+            local dx, dy = ux - tx, uy - ty
+            if dx * dx + dy * dy < R2 then
                 IssueImmediateOrder(u, "unloadall")
-                st.phase = "done"
-                AiLandingState[u] = nil
-                processed = processed + 1
+                AiLandingState[u] = { phase = "done", t = now }
             elseif order == 0 or order == 851972 then
-                -- Keep sailing
                 IssuePointOrder(u, "move", tx, ty)
-                processed = processed + 1
             end
-        elseif tx ~= nil and (st == nil or st.phase == "idle") then
-            -- Idle/empty transport: load nearby army. If no army is within the load
-            -- radius, the transport must SAIL TO the army first — previously it sat at
-            -- its home port forever while the army stalled at a different shore, so a
-            -- pickup never happened and no landing was ever observed.
-            local loadedCnt = 0
+            processed = processed + 1
+        elseif st ~= nil and st.phase == "loading" then
+            -- holding at the embark spot: order nearest army units to board (they walk over)
+            local k = 0
             if army ~= nil then
                 local asz = BlzGroupGetSize(army)
                 for j = 0, asz - 1 do
-                    if loadedCnt >= 6 then break end
+                    if k >= 6 then break end
                     local a = BlzGroupUnitAt(army, j)
-                    if a == nil then goto nextArmy end
-                    if GetUnitState(a, UNIT_STATE_LIFE) <= 0.405 then goto nextArmy end
-                    if IsUnitType(a, UNIT_TYPE_HERO) then goto nextArmy end
-                    -- Load whoever is near, regardless of their current order — "load"
-                    -- interrupts it cleanly. (The old order whitelist excluded the very
-                    -- attack-move order the shore-stalled army was actually holding.)
-                    local ax, ay = GetUnitX(a), GetUnitY(a)
-                    local adx = ax - ux; local ady = ay - uy
-                    if adx * adx + ady * ady < AiBrainLandingRadius * AiBrainLandingRadius then
+                    if a ~= nil and GetUnitState(a, UNIT_STATE_LIFE) > 0.405
+                       and not IsUnitType(a, UNIT_TYPE_HERO) then
                         IssueTargetOrder(a, "load", u)
-                        loadedCnt = loadedCnt + 1
+                        k = k + 1
                     end
-                    ::nextArmy::
                 end
             end
-            if loadedCnt > 0 then
-                AiLandingState[u] = { phase = "loaded", targetX = tx, targetY = ty }
-                BrainLogTag(pi, "LAND", "transport loaded " .. tostring(loadedCnt)
-                    .. " -> sail (" .. tostring(R2I(tx)) .. "," .. tostring(R2I(ty)) .. ")")
-                processed = processed + 1
-            elseif (order == 0 or order == 851986 or order == 851971) and wm.cx ~= nil then
-                -- No army in range: sail toward the army's gathering point to fetch it.
-                IssuePointOrder(u, "move", wm.cx, wm.cy)
-                AiLandingState[u] = { phase = "idle" }
-                BrainLogTag(pi, "LAND", "transport sailing to army pickup ("
-                    .. tostring(R2I(wm.cx)) .. "," .. tostring(R2I(wm.cy)) .. ")")
-                processed = processed + 1
+            if (now - (st.t or now)) >= AiLandingLoadDwell then
+                AiLandingState[u] = { phase = "loaded", t = now }
+                IssuePointOrder(u, "move", tx, ty)
+                BrainLogTag(pi, "LAND", "loaded -> sail (" .. tostring(R2I(tx)) .. "," .. tostring(R2I(ty)) .. ")")
             end
+            processed = processed + 1
+        elseif st == nil or st.phase == "toEmbark" then
+            local dx, dy = ux - ex, uy - ey
+            if dx * dx + dy * dy < R2 then
+                IssueImmediateOrder(u, "stop")           -- arrived & hold; load starts next tick
+                AiLandingState[u] = { phase = "loading", t = now }
+            else
+                if st == nil or order == 0 then IssuePointOrder(u, "move", ex, ey) end
+                AiLandingState[u] = { phase = "toEmbark", t = now }
+            end
+            processed = processed + 1
         elseif st ~= nil and st.phase == "done" and order == 0 then
-            -- Empty after unload: return to port
-            local cx, cy = wm.capX, wm.capY
-            if cx ~= nil then
-                IssuePointOrder(u, "move", cx, cy)
-                AiLandingState[u] = { phase = "returning" }
-                processed = processed + 1
+            if wm.capX ~= nil then
+                IssuePointOrder(u, "move", wm.capX, wm.capY)
+                AiLandingState[u] = { phase = "returning", t = now }
             end
         end
         ::nextShip::
@@ -64239,6 +64740,9 @@ function AiBrainArmyTickInner(pi, p)
 
     if (wm.tick % 2) == 0 then
         AiSquadReapDead(pi)
+    end
+    if (wm.tick % AiRecoverEvery) == 0 then
+        AiBrainRecoverStranded(pi, wm)
     end
     lap("reap")
 
@@ -66274,10 +66778,13 @@ function AiFindWebPortal(srcCont, dstCont, x, y)
 end
 
 -- Teleport ONLY player pi's eligible army units within `radius` of the portal into
--- `rect` (scattered). Skips structures, peons (harvesters), and waygate units. Caps
--- at 150 like the map's native. Returns count moved.
+-- `rect` (scattered). Skips structures, peons (harvesters), waygate units, and any unit
+-- in `skip` (handle->true), used to keep the home garrison from being shipped off on an
+-- offensive mass-TP (live: a bot teleported its whole army incl. the defense squad across
+-- a continent and left its capital naked). Caps at 150 like the map's native. Returns moved.
+---@param skip table|nil  -- optional set [unit]=true to exclude (e.g. the defense squad)
 ---@return integer
-function AiPortalTeleport(pi, portal, rect, radius)
+function AiPortalTeleport(pi, portal, rect, radius, skip)
     local army = udg_Ai_army and udg_Ai_army[pi]
     if army == nil then return 0 end
     local px, py = GetUnitX(portal), GetUnitY(portal)
@@ -66293,6 +66800,7 @@ function AiPortalTeleport(pi, portal, rect, radius)
         if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
            and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
            and not IsUnitType(u, UNIT_TYPE_PEON)
+           and (skip == nil or not skip[u])
            and GetUnitAbilityLevel(u, FourCC('Awrp')) == 0 then
             local dx, dy = GetUnitX(u) - px, GetUnitY(u) - py
             if dx * dx + dy * dy <= r2 then
