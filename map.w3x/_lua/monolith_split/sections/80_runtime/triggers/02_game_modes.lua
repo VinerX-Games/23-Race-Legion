@@ -20,13 +20,13 @@ function Trig_ResoursesInterface_Copy_Actions()
 	
 	if balance[pi] > 0 then
 		BlzFrameSetText(IncomeTextFr, "|cffbeffa0" .. I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "|cffbeffa0????????")
+		BlzFrameSetText(tooltipTitle, "|cffbeffa0Net income")
 	elseif balance[pi] == 0 then
 		BlzFrameSetText(IncomeTextFr, I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "??????? ??????")
+		BlzFrameSetText(tooltipTitle, "Net income is balanced")
 	else
 		BlzFrameSetText(IncomeTextFr, "|cffffb4a0" .. I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "|cffffb4a0???????")
+		BlzFrameSetText(tooltipTitle, "|cffffb4a0Net loss")
 	end
 	-- set balance[pi]=income[pi]-disincome[pi]+corruption[pi]-logistic[pi]+additional[pi]
 	
@@ -41,13 +41,13 @@ function Trig_ResoursesInterface_Copy_Actions()
 	end
 	
 	-- ?????????
-	text2 = "|n|cffbeffa0?????? * ???. ???? ? ?????|r - (|cffffb4a0???????|r+|cffffb4a0?????????|r)"
+	text2 = "|n|cffbeffa0Income × modifiers and ally tax|r − (|cffffb4a0upkeep|r + |cffffb4a0logistics|r)"
 	if GetPlayerTechCount(p, FourCC('R07E'), true) > 0 then
-		text2 = text2 .. "+?????????"
+		text2 = text2 .. " + corruption income"
 	end
 	
 	if GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) > 0 then
-		text2 = text2 .. " ? ?????????????"
+		text2 = text2 .. " + bonus income"
 	end
 	-- set text = "?????("+R2S(income[pi])+")-??????("+R2S()+")|n-?????????("+R2S(logistic[pi])+")"+"|n ?????? ???????? ? ??????????"
 	BlzFrameSetText(tooltipBody, text .. text2)

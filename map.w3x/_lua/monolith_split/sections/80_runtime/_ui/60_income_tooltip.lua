@@ -27,8 +27,8 @@ function Face2()
 	BlzFrameSetPoint(tooltip, FRAMEPOINT_BOTTOM, face, FRAMEPOINT_TOP, 0.0, -0.1)
 	BlzFrameSetSize(tooltip, 0.03, 0.03)
 	
-	BlzFrameSetText(tooltipBody, "????? = ??????-???????")
-	BlzFrameSetText(tooltipTitle, "?????")
+	BlzFrameSetText(tooltipBody, "Income × modifiers − expenses")
+	BlzFrameSetText(tooltipTitle, "Net income")
 	
 	BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 	

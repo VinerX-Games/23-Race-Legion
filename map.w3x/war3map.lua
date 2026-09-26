@@ -10440,6 +10440,10 @@ function InitTrig_FeodalVassalMode()
 end
 -- ***************************************************************************
 -- *  PlayerUI
+local imageTest
+local minimapBorder
+local commandBorder
+
 ---@return nothing
 function UISetup()
 	-- Local Variables
@@ -10450,13 +10454,13 @@ function UISetup()
 		ProbeLogWrite("[UI] skipped: required frames missing")
 		return
 	end
-	framehandlefh = nil
-	framehandlechatButton = nil
-	framehandlequestButton = nil
-	framehandleallyButton = nil
-	framehandleMiniMap = nil
-	framehandlegridButtons = nil
-	framehandleimageTest = BlzCreateFrameByType("BACKDROP", "image", consoleBackdrop, "ButtonBackdropTemplate", 0)
+	local fh
+	local chatButton
+	local questButton
+	local allyButton
+	local MiniMap
+	local gridButtons
+	imageTest = imageTest or BlzCreateFrameByType("BACKDROP", "image", consoleBackdrop, "ButtonBackdropTemplate", 0)
 	
 	-- Top UI & System Buttons
 	fh = upperButtonBar
@@ -10501,9 +10505,16 @@ function UISetup()
 	-- set fh = BlzGetFrameByName("ConsoleUI", 0)
 	-- set fh = BlzFrameGetChild(fh, 7)
 	fh = BlzGetFrameByName("ConsoleBottomBar", 0)
-	fh = BlzFrameGetChild(fh, 3)
-	BlzFrameClearAllPoints(fh)
-	BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.09, 0.179)
+	if fh ~= nil then
+		fh = BlzFrameGetChild(fh, 3)
+		if fh ~= nil then
+			fh = BlzFrameGetChild(fh, 0)
+			if fh ~= nil then
+				BlzFrameClearAllPoints(fh)
+				BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.09, 0.179)
+			end
+		end
+	end
 	
 	-- Remove Deadspace
 	fh = BlzGetFrameByName("ConsoleUI", 0)
@@ -10541,7 +10552,8 @@ function UISetup()
 	BlzFrameSetTexture(fh, "UI\\ButtonBorder.dds", 0, true)
 	
 	-- Minimap Border
-	fh = BlzCreateFrameByType("BACKDROP", "MinimapBorder", MiniMap, "", 0)
+	minimapBorder = minimapBorder or BlzCreateFrameByType("BACKDROP", "MinimapBorder", MiniMap, "", 0)
+	fh = minimapBorder
 	BlzFrameSetPoint(fh, FRAMEPOINT_TOPLEFT, MiniMap, FRAMEPOINT_TOPLEFT, 0, 0)
 	BlzFrameSetPoint(fh, FRAMEPOINT_BOTTOMRIGHT, MiniMap, FRAMEPOINT_BOTTOMRIGHT, 0, 0)
 	BlzFrameSetTexture(fh, "UI\\MiniMapBorder.dds", 0, true)
@@ -10567,7 +10579,8 @@ function UISetup()
 	BlzFrameSetAbsPoint(fh, FRAMEPOINT_TOPRIGHT, 0.770, 0.141)
 	
 	-- Command buttons border
-	fh = BlzCreateFrameByType("BACKDROP", "CommandBorder", MiniMap, "", 0)
+	commandBorder = commandBorder or BlzCreateFrameByType("BACKDROP", "CommandBorder", MiniMap, "", 0)
+	fh = commandBorder
 	BlzFrameSetPoint(fh, FRAMEPOINT_TOPLEFT, gridButtons, FRAMEPOINT_TOPLEFT, -0.007, 0.007)
 	BlzFrameSetPoint(fh, FRAMEPOINT_BOTTOMRIGHT, gridButtons, FRAMEPOINT_BOTTOMRIGHT, 0.0025, -0.005)
 	BlzFrameSetTexture(fh, "UI\\CommandCard.dds", 0, true)
@@ -10577,15 +10590,26 @@ function UISetup()
 	-- 	call ForceUICancel()
 	
 	--  Expand TextArea
-	BlzFrameSetPoint(BlzGetFrameByName("QuestDisplay", 0), FRAMEPOINT_TOPLEFT, BlzGetFrameByName("QuestDetailsTitle", 0), FRAMEPOINT_BOTTOMLEFT, 0.003, -0.003)
-	BlzFrameSetPoint(BlzGetFrameByName("QuestDisplay", 0), FRAMEPOINT_BOTTOMRIGHT, BlzGetFrameByName("QuestDisplayBackdrop", 0), FRAMEPOINT_BOTTOMRIGHT, -0.003, 0.)
+	local questDisplay = BlzGetFrameByName("QuestDisplay", 0)
+	local questTitle = BlzGetFrameByName("QuestDetailsTitle", 0)
+	local questDisplayBackdrop = BlzGetFrameByName("QuestDisplayBackdrop", 0)
+	local questBackdrop = BlzGetFrameByName("QuestBackdrop", 0)
+	local questAcceptButton = BlzGetFrameByName("QuestAcceptButton", 0)
+	if questDisplay ~= nil and questTitle ~= nil and questDisplayBackdrop ~= nil then
+		BlzFrameSetPoint(questDisplay, FRAMEPOINT_TOPLEFT, questTitle, FRAMEPOINT_BOTTOMLEFT, 0.003, -0.003)
+		BlzFrameSetPoint(questDisplay, FRAMEPOINT_BOTTOMRIGHT, questDisplayBackdrop, FRAMEPOINT_BOTTOMRIGHT, -0.003, 0.)
+	end
 	
 	--  Relocate button
-	BlzFrameSetPoint(BlzGetFrameByName("QuestDisplayBackdrop", 0), FRAMEPOINT_BOTTOM, BlzGetFrameByName("QuestBackdrop", 0), FRAMEPOINT_BOTTOM, 0., 0.017)
-	BlzFrameClearAllPoints(BlzGetFrameByName("QuestAcceptButton", 0))
-	BlzFrameSetPoint(BlzGetFrameByName("QuestAcceptButton", 0), FRAMEPOINT_TOPRIGHT, BlzGetFrameByName("QuestBackdrop", 0), FRAMEPOINT_TOPRIGHT, -0.016, -0.016)
-	BlzFrameSetText(BlzGetFrameByName("QuestAcceptButton", 0), "?")
-	BlzFrameSetSize(BlzGetFrameByName("QuestAcceptButton", 0), 0.03, 0.03)
+	if questDisplayBackdrop ~= nil and questBackdrop ~= nil then
+		BlzFrameSetPoint(questDisplayBackdrop, FRAMEPOINT_BOTTOM, questBackdrop, FRAMEPOINT_BOTTOM, 0., 0.017)
+	end
+	if questAcceptButton ~= nil and questBackdrop ~= nil then
+		BlzFrameClearAllPoints(questAcceptButton)
+		BlzFrameSetPoint(questAcceptButton, FRAMEPOINT_TOPRIGHT, questBackdrop, FRAMEPOINT_TOPRIGHT, -0.016, -0.016)
+		BlzFrameSetText(questAcceptButton, "×")
+		BlzFrameSetSize(questAcceptButton, 0.03, 0.03)
+	end
 	
 	--  Add back ally resource icons
 	BlzFrameSetTexture(BlzGetFrameByName("InfoPanelIconAllyGoldIcon", 7), "UI\\RGReplacement.dds", 0, false)
@@ -10598,6 +10622,7 @@ end
 function init___Init()
 	UISetup()
 end
+
 --  scope init ends
 -- ***************************************************************************
 -- *  IncomeTooltip
@@ -10626,8 +10651,8 @@ function Face2()
 	BlzFrameSetPoint(tooltip, FRAMEPOINT_BOTTOM, face, FRAMEPOINT_TOP, 0.0, -0.1)
 	BlzFrameSetSize(tooltip, 0.03, 0.03)
 	
-	BlzFrameSetText(tooltipBody, "????? = ??????-???????")
-	BlzFrameSetText(tooltipTitle, "?????")
+	BlzFrameSetText(tooltipBody, "Income × modifiers − expenses")
+	BlzFrameSetText(tooltipTitle, "Net income")
 	
 	BlzFrameSetTexture(face, "ResourceBar222.tga", 0, true)
 	
@@ -10637,6 +10662,7 @@ end
 function init2___Init()
 	Face2()
 end
+
 --  scope init2 ends
 -- ***************************************************************************
 -- *  AllPlayersStart
@@ -16387,13 +16413,13 @@ function Trig_ResoursesInterface_Copy_Actions()
 	
 	if balance[pi] > 0 then
 		BlzFrameSetText(IncomeTextFr, "|cffbeffa0" .. I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "|cffbeffa0????????")
+		BlzFrameSetText(tooltipTitle, "|cffbeffa0Net income")
 	elseif balance[pi] == 0 then
 		BlzFrameSetText(IncomeTextFr, I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "??????? ??????")
+		BlzFrameSetText(tooltipTitle, "Net income is balanced")
 	else
 		BlzFrameSetText(IncomeTextFr, "|cffffb4a0" .. I2S(R2I(balance[pi])))
-		BlzFrameSetText(tooltipTitle, "|cffffb4a0???????")
+		BlzFrameSetText(tooltipTitle, "|cffffb4a0Net loss")
 	end
 	-- set balance[pi]=income[pi]-disincome[pi]+corruption[pi]-logistic[pi]+additional[pi]
 	
@@ -16408,13 +16434,13 @@ function Trig_ResoursesInterface_Copy_Actions()
 	end
 	
 	-- ?????????
-	text2 = "|n|cffbeffa0?????? * ???. ???? ? ?????|r - (|cffffb4a0???????|r+|cffffb4a0?????????|r)"
+	text2 = "|n|cffbeffa0Income × modifiers and ally tax|r − (|cffffb4a0upkeep|r + |cffffb4a0logistics|r)"
 	if GetPlayerTechCount(p, FourCC('R07E'), true) > 0 then
-		text2 = text2 .. "+?????????"
+		text2 = text2 .. " + corruption income"
 	end
 	
 	if GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) > 0 then
-		text2 = text2 .. " ? ?????????????"
+		text2 = text2 .. " + bonus income"
 	end
 	-- set text = "?????("+R2S(income[pi])+")-??????("+R2S()+")|n-?????????("+R2S(logistic[pi])+")"+"|n ?????? ???????? ? ??????????"
 	BlzFrameSetText(tooltipBody, text .. text2)
@@ -17669,6 +17695,7 @@ function InitTrig_FastResearch()
 	TriggerAddCondition(gg_trg_FastResearch, Condition(Trig_FastResearch_Conditions))
 	TriggerAddAction(gg_trg_FastResearch, Trig_FastResearch_Actions)
 end
+
 -- ===========================================================================
 --  Trigger: Only Eastern
 -- ===========================================================================
