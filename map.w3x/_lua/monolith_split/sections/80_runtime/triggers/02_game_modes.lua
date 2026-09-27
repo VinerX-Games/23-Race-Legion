@@ -695,6 +695,10 @@ end
 -- ===========================================================================
 --  Trigger: StolicaAttacked
 -- ===========================================================================
+---@return boolean
+function Trig_StolicaAttacked_Conditions()
+	return IsUnitInGroup(GetTriggerUnit(), udg_StolicaGroups)
+end
 ---@return nothing
 function Trig_StolicaAttacked_Actions()
     local pi = GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
