@@ -14513,7 +14513,7 @@ function IndexUnit()
 		--   
 		--  Use a doubly-linked list to store all active indexes
 		--   
-		udg_UDexPrev[udg_UDexNext0] = udg_UDex
+		udg_UDexPrev[udg_UDexNext[0]] = udg_UDex
 		udg_UDexNext[udg_UDex] = udg_UDexNext[0]
 		udg_UDexNext[0] = udg_UDex
 		--   
