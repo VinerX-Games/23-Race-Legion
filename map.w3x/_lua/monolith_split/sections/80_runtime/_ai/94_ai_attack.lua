@@ -331,7 +331,7 @@ function TryAttack()
 					AiProbeLogLimited(pi_attack, "Log_TryAttack_PortalNearby", 8, "[AIARMY] portal-near pi=" .. tostring(pi_attack) .. " targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount))
 					
 					SetPortalTeleportOwner(gEnemy, gPlayer)
-				IssueImmediateOrder(gEnemy, "web")
+					IssueImmediateOrder(gEnemy, "web")
 					BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
 					
 				-- ?? ??????? ???? ???
