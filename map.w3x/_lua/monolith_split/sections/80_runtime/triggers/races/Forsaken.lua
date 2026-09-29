@@ -414,6 +414,7 @@ function Trig_Usual_Actions()
         UnitAddAbility(u, FourCC('A13L'))
         BlzStartUnitAbilityCooldown(u, FourCC('A13L'), 19.5)
         BlzStartUnitAbilityCooldown(u, FourCC('A13J'), 45)
+        GroupRemoveUnit(g, u)
         u=nil
     end
     
@@ -482,6 +483,7 @@ function Trig_Korroz_Actions()
         UnitAddAbility(u, FourCC('A13Q'))
         BlzStartUnitAbilityCooldown(u, FourCC('A13Q'), 19.5)
         BlzStartUnitAbilityCooldown(u, FourCC('A13J'), 45)
+        GroupRemoveUnit(g, u)
         u=nil
     end
     
@@ -552,6 +554,7 @@ function Trig_Safety_Actions()
         UnitAddAbility(u, FourCC('A13P'))
         BlzStartUnitAbilityCooldown(u, FourCC('A13P'), 19.5)
         BlzStartUnitAbilityCooldown(u, FourCC('A13J'), 45)
+        GroupRemoveUnit(g, u)
         u=nil
     end
     
