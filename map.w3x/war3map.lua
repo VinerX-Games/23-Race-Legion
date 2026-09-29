@@ -12160,7 +12160,7 @@ function TryAttack()
 					AiProbeLogLimited(pi_attack, "Log_TryAttack_PortalNearby", 8, "[AIARMY] portal-near pi=" .. tostring(pi_attack) .. " targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount))
 					
 					SetPortalTeleportOwner(gEnemy, gPlayer)
-				IssueImmediateOrder(gEnemy, "web")
+					IssueImmediateOrder(gEnemy, "web")
 					BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
 					
 				-- ?? ??????? ???? ???
@@ -15696,7 +15696,7 @@ function Trig_Gob_Potreblenie_Actions()
 	udg_Boolexpr = Trig_Gob_Potreblenie_Func001002
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
 	local gSize = BlzGroupGetSize(g)
-	for gIdx = 0, gSize - 1 do
+	for gIdx = 1, gSize do
 		u = BlzGroupUnitAt(g, gIdx)
 		if u == nil then break end
 
@@ -15748,7 +15748,7 @@ function Trig_Silitid_Potreblenie_Actions()
 	udg_Boolexpr = HaveSilitidSpell
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
 	local gSize = BlzGroupGetSize(g)
-	for gIdx = 0, gSize - 1 do
+	for gIdx = 1, gSize do
 		u = BlzGroupUnitAt(g, gIdx)
 		if u == nil then break end
 
@@ -25425,7 +25425,7 @@ function Trig_LumberTest_Actions()
     --call DisplayTextToPlayer(Player(0),0,0,"0")
     GroupAddGroup(udg_FacelessLumberBuildings, g)
     local gSize = BlzGroupGetSize(g)
-    for gIdx = 0, gSize - 1 do
+    for gIdx = 1, gSize do
         u = BlzGroupUnitAt(g, gIdx)
         if u == nil then break end
         
@@ -37194,7 +37194,7 @@ function Trig_CommonHome_Actions()
     udg_Boolexpr = NoneRadicals
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
     local gSize = BlzGroupGetSize(g)
-    for gIdx = 0, gSize - 1 do
+    for gIdx = 1, gSize do
         u = BlzGroupUnitAt(g, gIdx)
         if u == nil then break end
 
