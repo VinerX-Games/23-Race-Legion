@@ -1229,14 +1229,31 @@ function AiSquadTickMarch(pi, sid, sq, p, wm)
         local rt = AiPortalRoute(sc, oc)
         if rt ~= nil and #rt >= 2 then
             local portal = AiFindPortal(rt[1], rt[2])
-            if portal ~= nil then AiSquadOrderMov(sq.members, GetUnitX(portal), GetUnitY(portal)); return "march" end
+            if portal ~= nil then
+                local px, py = GetUnitX(portal), GetUnitY(portal)
+                local pd = SquareRoot((cx - px) * (cx - px) + (cy - py) * (cy - py))
+                if pd > 900.0 then
+                    AiSquadOrderAtk(sq.members, px, py)
+                else
+                    AiSquadOrderMov(sq.members, px, py)
+                end
+                return "march"
+            end
         end
         -- Web-portal fallback: route over the web graph and march to the first hop's web portal
         -- (BrainWebPortalTick performs the actual mass-teleport once the army gathers there).
         local wrt = AiWebRoute(sc, oc)
         if wrt ~= nil and #wrt >= 2 then
             local wp = AiFindWebPortal(wrt[1], wrt[2], cx, cy)
-            if wp ~= nil then AiSquadOrderMov(sq.members, wp.x, wp.y); return "march" end
+            if wp ~= nil then
+                local pd = SquareRoot((cx - wp.x) * (cx - wp.x) + (cy - wp.y) * (cy - wp.y))
+                if pd > 900.0 then
+                    AiSquadOrderAtk(sq.members, wp.x, wp.y)
+                else
+                    AiSquadOrderMov(sq.members, wp.x, wp.y)
+                end
+                return "march"
+            end
         end
         -- No usable portal to the objective's continent: don't march into the sea. Nudge the
         -- TP logistics and drop this objective so the focus re-picks a reachable one.
@@ -1595,7 +1612,7 @@ function AiBrainOrderIdleTo(pi, p, x, y)
     GroupClear(gSubGroup)
     local ordered, cnt = 0, 0
     local gSize = BlzGroupGetSize(gAllyGroup)
-    for gIdx = 1, gSize do
+    for gIdx = 0, gSize - 1 do
         local u = BlzGroupUnitAt(gAllyGroup, gIdx)
         if u ~= nil then
             GroupAddUnit(gSubGroup, u)
@@ -1704,13 +1721,14 @@ function AiBrainOrderToPortal(pi, p, portal)
     local dx, dy = cx - px, cy - py
     local dist = SquareRoot(dx * dx + dy * dy)
     if dist <= 2500 then
+        SetPortalTeleportOwner(portal, p)
         IssueImmediateOrder(portal, "web")
         BlzEndUnitAbilityCooldown(portal, FourCC('A0HY'))
         GroupPointOrder(gSubGroup, "smart", px, py)
         BrainLogEvery(pi, "portalact", 5, "portal activate " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)) .. " allies=" .. tostring(allyCount), "BRAINPORTAL")
     else
-        GroupPointOrder(gSubGroup, "smart", px, py)
-        BrainLogEvery(pi, "portalmove", 5, "portal walk to " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)) .. " dist=" .. tostring(R2I(dist)) .. " allies=" .. tostring(allyCount), "BRAINPORTAL")
+        GroupPointOrder(gSubGroup, "attack", px, py)
+        BrainLogEvery(pi, "portalmove", 5, "portal attack-move to " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)) .. " dist=" .. tostring(R2I(dist)) .. " allies=" .. tostring(allyCount), "BRAINPORTAL")
     end
     GroupClear(gSubGroup)
     return allyCount
