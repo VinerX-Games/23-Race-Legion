@@ -8,7 +8,7 @@ function AllPlayersStart()
 	
 	
 	while true do
-		if gInt >= 23 then break end
+		if gInt > 23 then break end
 		
 		if GetPlayerSlotState(Player(gInt)) == PLAYER_SLOT_STATE_PLAYING then
 			ForceAddPlayer(udg_AllPlayers, Player(gInt))
@@ -25,7 +25,7 @@ end
 function aiStart()
 	gInt = 0
 	while true do
-		if gInt >= 23 then break end
+		if gInt > 23 then break end
 		if GetPlayerController(Player(gInt)) == MAP_CONTROL_COMPUTER then
 			createAiPlayer(gInt)
 		end
