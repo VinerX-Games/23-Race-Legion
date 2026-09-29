@@ -167,7 +167,7 @@ function TryAttack()
 			GroupClear(gSubGroup)
 			gSubGroupCounter = 0
 			local gSize = BlzGroupGetSize(gAllyGroup)
-			for gIdx = 1, gSize do
+			for gIdx = 0, gSize - 1 do
 				gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
 				if gUnit2 ~= nil then
 					UnitAddAbility(gUnit2, FourCC('A1GZ'))
@@ -178,6 +178,7 @@ function TryAttack()
 			-- ?? ??????? ????? ??????
 			if gDx <= 2500 then
 				
+				SetPortalTeleportOwner(gEnemy, gPlayer)
 				IssueImmediateOrder(gEnemy, "web")
 				BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
 				
@@ -191,7 +192,7 @@ function TryAttack()
 					AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
 					ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
 				end
-				GroupPointOrder(gSubGroup, "smart", gX2, gY2)
+				GroupPointOrder(gSubGroup, "attack", gX2, gY2)
 				GroupClear(gSubGroup)
 				gSubGroupCounter = 0
 			end
@@ -317,7 +318,7 @@ function TryAttack()
 				GroupClear(gSubGroup)
 				gSubGroupCounter = 0
 				local gSize = BlzGroupGetSize(gAllyGroup)
-				for gIdx = 1, gSize do
+				for gIdx = 0, gSize - 1 do
 					gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
 					if gUnit2 ~= nil then
 						UnitAddAbility(gUnit2, FourCC('A1GZ'))
@@ -329,7 +330,8 @@ function TryAttack()
 				if gDx <= 2500 then
 					AiProbeLogLimited(pi_attack, "Log_TryAttack_PortalNearby", 8, "[AIARMY] portal-near pi=" .. tostring(pi_attack) .. " targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount))
 					
-					IssueImmediateOrder(gEnemy, "web")
+					SetPortalTeleportOwner(gEnemy, gPlayer)
+				IssueImmediateOrder(gEnemy, "web")
 					BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
 					
 				-- ?? ??????? ???? ???
@@ -342,7 +344,7 @@ function TryAttack()
 						AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
 						ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
 					end
-					GroupPointOrder(gSubGroup, "smart", gX2, gY2)
+					GroupPointOrder(gSubGroup, "attack", gX2, gY2)
 					GroupClear(gSubGroup)
 					gSubGroupCounter = 0
 				end
