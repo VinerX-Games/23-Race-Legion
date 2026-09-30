@@ -62485,7 +62485,11 @@ function AiSquadTickMarch(pi, sid, sq, p, wm)
             if portal ~= nil then
                 local px, py = GetUnitX(portal), GetUnitY(portal)
                 local pd = SquareRoot((cx - px) * (cx - px) + (cy - py) * (cy - py))
-                if pd > 900.0 then AiSquadOrderAtk(sq.members, px, py) else AiSquadOrderMov(sq.members, px, py) end
+                if pd > 900.0 then
+                    AiSquadOrderAtk(sq.members, px, py)
+                else
+                    AiSquadOrderMov(sq.members, px, py)
+                end
                 return "march"
             end
         end
@@ -62496,7 +62500,11 @@ function AiSquadTickMarch(pi, sid, sq, p, wm)
             local wp = AiFindWebPortal(wrt[1], wrt[2], cx, cy)
             if wp ~= nil then
                 local pd = SquareRoot((cx - wp.x) * (cx - wp.x) + (cy - wp.y) * (cy - wp.y))
-                if pd > 900.0 then AiSquadOrderAtk(sq.members, wp.x, wp.y) else AiSquadOrderMov(sq.members, wp.x, wp.y) end
+                if pd > 900.0 then
+                    AiSquadOrderAtk(sq.members, wp.x, wp.y)
+                else
+                    AiSquadOrderMov(sq.members, wp.x, wp.y)
+                end
                 return "march"
             end
         end
@@ -62955,7 +62963,7 @@ function AiBrainOrderToPortal(pi, p, portal)
     if allyCount == 0 then return 0 end
     GroupClear(gSubGroup)
     local gSize = BlzGroupGetSize(gAllyGroup)
-    for gIdx = 0, gSize - 1 do
+    for gIdx = 1, gSize do
         local u = BlzGroupUnitAt(gAllyGroup, gIdx)
         if u ~= nil then
             UnitAddAbility(u, FourCC('A1GZ'))
