@@ -1911,12 +1911,25 @@ end
 --===========================================================================
 -- Trigger: PortalSell
 --===========================================================================
+PortalTeleportOwnerByPortal = PortalTeleportOwnerByPortal or {}
+
+---@param portal unit
+---@param p player
+function SetPortalTeleportOwner(portal, p)
+    if portal ~= nil then
+        PortalTeleportOwnerByPortal[GetHandleId(portal)] = p
+    end
+end
+
 function Trig_PortalSell_Conditions()
     return GetUnitTypeId(GetSoldUnit()) == FourCC('h0P0')
 end
 function Trig_PortalSell_Actions()
-    IssueImmediateOrderBJ(GetTriggerUnit(), "web")
-    RemoveUnit(GetSoldUnit())
+    local portal = GetTriggerUnit()
+    local sold = GetSoldUnit()
+    SetPortalTeleportOwner(portal, GetOwningPlayer(sold))
+    IssueImmediateOrderBJ(portal, "web")
+    RemoveUnit(sold)
 end
 --===========================================================================
 function InitTrig_PortalSell()
@@ -1972,38 +1985,61 @@ end
 --===========================================================================
 -- Trigger: PortalCommonFunction
 --===========================================================================
+PortalTeleportOwner = PortalTeleportOwner or nil
+
 function PortalConditions()
-    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Sch5')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A001')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1M3')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Awrp')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A00A')) == 0
+    local u = GetFilterUnit()
+    return u ~= nil and PortalTeleportOwner ~= nil and GetOwningPlayer(u) == PortalTeleportOwner
+        and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(u, FourCC('Sch5')) == 0
+        and GetUnitAbilityLevel(u, FourCC('A001')) == 0 and GetUnitAbilityLevel(u, FourCC('A1M3')) == 0
+        and GetUnitAbilityLevel(u, FourCC('Awrp')) == 0 and GetUnitAbilityLevel(u, FourCC('A00A')) == 0
 end
 function TeleportUnitsEach()
-    SetUnitPosition(GetEnumUnit(), GetRandomReal(GetRectMinX(gRect), GetRectMaxX(gRect)), GetRandomReal(GetRectMinY(gRect), GetRectMaxY(gRect)))
-    RemoveLocation(gLoc)
-    EnterGreen(GetEnumUnit())
+    local u = GetEnumUnit()
+    SetUnitPosition(u, GetRandomReal(GetRectMinX(gRect), GetRectMaxX(gRect)), GetRandomReal(GetRectMinY(gRect), GetRectMaxY(gRect)))
+    EnterGreen(u)
 end
 ---@param portal unit
 ---@param rect rect
 ---@param radius real
 function TeleportUnits(portal, rect, radius)
+    local portalHandle = GetHandleId(portal)
     gLoc=GetUnitLoc(portal)
     gRect=rect
-    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditions, 150)
-    ForGroup(gGroup, TeleportUnitsEach)
-    GroupClear(gGroup)
+    PortalTeleportOwner=PortalTeleportOwnerByPortal[portalHandle]
+    if PortalTeleportOwner ~= nil then
+        GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditions, 150)
+        ForGroup(gGroup, TeleportUnitsEach)
+        GroupClear(gGroup)
+    end
+    PortalTeleportOwnerByPortal[portalHandle]=nil
+    PortalTeleportOwner=nil
     RemoveLocation(gLoc)
 end
 -- ?? ??? ??? ????
 function PortalConditionsED()
-    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Sch5')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A001')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1M3')) == 0 and GetUnitTypeId(GetFilterUnit()) ~= FourCC('n01W') and GetUnitTypeId(GetFilterUnit()) ~= FourCC('n01X') and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Awrp')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1LR')) >= 1
+    local u = GetFilterUnit()
+    return u ~= nil and PortalTeleportOwner ~= nil and GetOwningPlayer(u) == PortalTeleportOwner
+        and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(u, FourCC('Sch5')) == 0
+        and GetUnitAbilityLevel(u, FourCC('A001')) == 0 and GetUnitAbilityLevel(u, FourCC('A1M3')) == 0
+        and GetUnitTypeId(u) ~= FourCC('n01W') and GetUnitTypeId(u) ~= FourCC('n01X')
+        and GetUnitAbilityLevel(u, FourCC('Awrp')) == 0 and GetUnitAbilityLevel(u, FourCC('A1LR')) >= 1
 end
 ---@param portal unit
 ---@param rect rect
 ---@param radius real
 function TeleportUnitsED(portal, rect, radius)
+    local portalHandle = GetHandleId(portal)
     gLoc=GetUnitLoc(portal)
     gRect=rect
-    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditionsED, 150)
-    ForGroup(gGroup, TeleportUnitsEach)
-    GroupClear(gGroup)
+    PortalTeleportOwner=PortalTeleportOwnerByPortal[portalHandle]
+    if PortalTeleportOwner ~= nil then
+        GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditionsED, 150)
+        ForGroup(gGroup, TeleportUnitsEach)
+        GroupClear(gGroup)
+    end
+    PortalTeleportOwnerByPortal[portalHandle]=nil
+    PortalTeleportOwner=nil
     RemoveLocation(gLoc)
 end
 --===========================================================================
