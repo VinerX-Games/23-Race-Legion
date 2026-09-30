@@ -10672,7 +10672,7 @@ function AllPlayersStart()
 	
 	
 	while true do
-		if gInt >= 23 then break end
+		if gInt > 23 then break end
 		
 		if GetPlayerSlotState(Player(gInt)) == PLAYER_SLOT_STATE_PLAYING then
 			ForceAddPlayer(udg_AllPlayers, Player(gInt))
@@ -10689,7 +10689,7 @@ end
 function aiStart()
 	gInt = 0
 	while true do
-		if gInt >= 23 then break end
+		if gInt > 23 then break end
 		if GetPlayerController(Player(gInt)) == MAP_CONTROL_COMPUTER then
 			createAiPlayer(gInt)
 		end
@@ -11996,7 +11996,7 @@ function TryAttack()
 			GroupClear(gSubGroup)
 			gSubGroupCounter = 0
 			local gSize = BlzGroupGetSize(gAllyGroup)
-			for gIdx = 1, gSize do
+			for gIdx = 0, gSize - 1 do
 				gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
 				if gUnit2 ~= nil then
 					UnitAddAbility(gUnit2, FourCC('A1GZ'))
@@ -12007,6 +12007,7 @@ function TryAttack()
 			-- ?? ??????? ????? ??????
 			if gDx <= 2500 then
 				
+				SetPortalTeleportOwner(gEnemy, gPlayer)
 				IssueImmediateOrder(gEnemy, "web")
 				BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
 				
@@ -12020,7 +12021,7 @@ function TryAttack()
 					AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
 					ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
 				end
-				GroupPointOrder(gSubGroup, "smart", gX2, gY2)
+				GroupPointOrder(gSubGroup, "attack", gX2, gY2)
 				GroupClear(gSubGroup)
 				gSubGroupCounter = 0
 			end
@@ -12146,7 +12147,7 @@ function TryAttack()
 				GroupClear(gSubGroup)
 				gSubGroupCounter = 0
 				local gSize = BlzGroupGetSize(gAllyGroup)
-				for gIdx = 1, gSize do
+				for gIdx = 0, gSize - 1 do
 					gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
 					if gUnit2 ~= nil then
 						UnitAddAbility(gUnit2, FourCC('A1GZ'))
@@ -12158,6 +12159,7 @@ function TryAttack()
 				if gDx <= 2500 then
 					AiProbeLogLimited(pi_attack, "Log_TryAttack_PortalNearby", 8, "[AIARMY] portal-near pi=" .. tostring(pi_attack) .. " targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount))
 					
+					SetPortalTeleportOwner(gEnemy, gPlayer)
 					IssueImmediateOrder(gEnemy, "web")
 					BlzEndUnitAbilityCooldown(gEnemy, FourCC('A0HY'))
 					
@@ -12171,7 +12173,7 @@ function TryAttack()
 						AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
 						ProbeLogWrite("[AIARMY] attack-order pi=" .. tostring(pi_attack) .. " via=portal-wide targetId=" .. tostring(GetUnitTypeId(gEnemy)) .. " allies=" .. tostring(allyCount) .. " x=" .. tostring(gX2) .. " y=" .. tostring(gY2))
 					end
-					GroupPointOrder(gSubGroup, "smart", gX2, gY2)
+					GroupPointOrder(gSubGroup, "attack", gX2, gY2)
 					GroupClear(gSubGroup)
 					gSubGroupCounter = 0
 				end
@@ -32438,6 +32440,7 @@ function Trig_Usual_Actions()
         UnitAddAbility(u, FourCC('A13L'))
         BlzStartUnitAbilityCooldown(u, FourCC('A13L'), 19.5)
         BlzStartUnitAbilityCooldown(u, FourCC('A13J'), 45)
+        GroupRemoveUnit(g, u)
         u=nil
     end
     
@@ -32506,6 +32509,7 @@ function Trig_Korroz_Actions()
         UnitAddAbility(u, FourCC('A13Q'))
         BlzStartUnitAbilityCooldown(u, FourCC('A13Q'), 19.5)
         BlzStartUnitAbilityCooldown(u, FourCC('A13J'), 45)
+        GroupRemoveUnit(g, u)
         u=nil
     end
     
@@ -32576,6 +32580,7 @@ function Trig_Safety_Actions()
         UnitAddAbility(u, FourCC('A13P'))
         BlzStartUnitAbilityCooldown(u, FourCC('A13P'), 19.5)
         BlzStartUnitAbilityCooldown(u, FourCC('A13J'), 45)
+        GroupRemoveUnit(g, u)
         u=nil
     end
     
@@ -50772,12 +50777,25 @@ end
 --===========================================================================
 -- Trigger: PortalSell
 --===========================================================================
+PortalTeleportOwnerByPortal = PortalTeleportOwnerByPortal or {}
+
+---@param portal unit
+---@param p player
+function SetPortalTeleportOwner(portal, p)
+    if portal ~= nil then
+        PortalTeleportOwnerByPortal[GetHandleId(portal)] = p
+    end
+end
+
 function Trig_PortalSell_Conditions()
     return GetUnitTypeId(GetSoldUnit()) == FourCC('h0P0')
 end
 function Trig_PortalSell_Actions()
-    IssueImmediateOrderBJ(GetTriggerUnit(), "web")
-    RemoveUnit(GetSoldUnit())
+    local portal = GetTriggerUnit()
+    local sold = GetSoldUnit()
+    SetPortalTeleportOwner(portal, GetOwningPlayer(sold))
+    IssueImmediateOrderBJ(portal, "web")
+    RemoveUnit(sold)
 end
 --===========================================================================
 function InitTrig_PortalSell()
@@ -50833,38 +50851,61 @@ end
 --===========================================================================
 -- Trigger: PortalCommonFunction
 --===========================================================================
+PortalTeleportOwner = PortalTeleportOwner or nil
+
 function PortalConditions()
-    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Sch5')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A001')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1M3')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Awrp')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A00A')) == 0
+    local u = GetFilterUnit()
+    return u ~= nil and PortalTeleportOwner ~= nil and GetOwningPlayer(u) == PortalTeleportOwner
+        and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(u, FourCC('Sch5')) == 0
+        and GetUnitAbilityLevel(u, FourCC('A001')) == 0 and GetUnitAbilityLevel(u, FourCC('A1M3')) == 0
+        and GetUnitAbilityLevel(u, FourCC('Awrp')) == 0 and GetUnitAbilityLevel(u, FourCC('A00A')) == 0
 end
 function TeleportUnitsEach()
-    SetUnitPosition(GetEnumUnit(), GetRandomReal(GetRectMinX(gRect), GetRectMaxX(gRect)), GetRandomReal(GetRectMinY(gRect), GetRectMaxY(gRect)))
-    RemoveLocation(gLoc)
-    EnterGreen(GetEnumUnit())
+    local u = GetEnumUnit()
+    SetUnitPosition(u, GetRandomReal(GetRectMinX(gRect), GetRectMaxX(gRect)), GetRandomReal(GetRectMinY(gRect), GetRectMaxY(gRect)))
+    EnterGreen(u)
 end
 ---@param portal unit
 ---@param rect rect
 ---@param radius real
 function TeleportUnits(portal, rect, radius)
+    local portalHandle = GetHandleId(portal)
     gLoc=GetUnitLoc(portal)
     gRect=rect
-    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditions, 150)
-    ForGroup(gGroup, TeleportUnitsEach)
-    GroupClear(gGroup)
+    PortalTeleportOwner=PortalTeleportOwnerByPortal[portalHandle]
+    if PortalTeleportOwner ~= nil then
+        GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditions, 150)
+        ForGroup(gGroup, TeleportUnitsEach)
+        GroupClear(gGroup)
+    end
+    PortalTeleportOwnerByPortal[portalHandle]=nil
+    PortalTeleportOwner=nil
     RemoveLocation(gLoc)
 end
 -- ?? ??? ??? ????
 function PortalConditionsED()
-    return not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Sch5')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A001')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1M3')) == 0 and GetUnitTypeId(GetFilterUnit()) ~= FourCC('n01W') and GetUnitTypeId(GetFilterUnit()) ~= FourCC('n01X') and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Awrp')) == 0 and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A1LR')) >= 1
+    local u = GetFilterUnit()
+    return u ~= nil and PortalTeleportOwner ~= nil and GetOwningPlayer(u) == PortalTeleportOwner
+        and not IsUnitType(u, UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(u, FourCC('Sch5')) == 0
+        and GetUnitAbilityLevel(u, FourCC('A001')) == 0 and GetUnitAbilityLevel(u, FourCC('A1M3')) == 0
+        and GetUnitTypeId(u) ~= FourCC('n01W') and GetUnitTypeId(u) ~= FourCC('n01X')
+        and GetUnitAbilityLevel(u, FourCC('Awrp')) == 0 and GetUnitAbilityLevel(u, FourCC('A1LR')) >= 1
 end
 ---@param portal unit
 ---@param rect rect
 ---@param radius real
 function TeleportUnitsED(portal, rect, radius)
+    local portalHandle = GetHandleId(portal)
     gLoc=GetUnitLoc(portal)
     gRect=rect
-    GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditionsED, 150)
-    ForGroup(gGroup, TeleportUnitsEach)
-    GroupClear(gGroup)
+    PortalTeleportOwner=PortalTeleportOwnerByPortal[portalHandle]
+    if PortalTeleportOwner ~= nil then
+        GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditionsED, 150)
+        ForGroup(gGroup, TeleportUnitsEach)
+        GroupClear(gGroup)
+    end
+    PortalTeleportOwnerByPortal[portalHandle]=nil
+    PortalTeleportOwner=nil
     RemoveLocation(gLoc)
 end
 --===========================================================================
@@ -62437,14 +62478,23 @@ function AiSquadTickMarch(pi, sid, sq, p, wm)
         local rt = AiPortalRoute(sc, oc)
         if rt ~= nil and #rt >= 2 then
             local portal = AiFindPortal(rt[1], rt[2])
-            if portal ~= nil then AiSquadOrderMov(sq.members, GetUnitX(portal), GetUnitY(portal)); return "march" end
+            if portal ~= nil then
+                local px, py = GetUnitX(portal), GetUnitY(portal)
+                local pd = SquareRoot((cx - px) * (cx - px) + (cy - py) * (cy - py))
+                if pd > 900.0 then AiSquadOrderAtk(sq.members, px, py) else AiSquadOrderMov(sq.members, px, py) end
+                return "march"
+            end
         end
         -- Web-portal fallback: route over the web graph and march to the first hop's web portal
         -- (BrainWebPortalTick performs the actual mass-teleport once the army gathers there).
         local wrt = AiWebRoute(sc, oc)
         if wrt ~= nil and #wrt >= 2 then
             local wp = AiFindWebPortal(wrt[1], wrt[2], cx, cy)
-            if wp ~= nil then AiSquadOrderMov(sq.members, wp.x, wp.y); return "march" end
+            if wp ~= nil then
+                local pd = SquareRoot((cx - wp.x) * (cx - wp.x) + (cy - wp.y) * (cy - wp.y))
+                if pd > 900.0 then AiSquadOrderAtk(sq.members, wp.x, wp.y) else AiSquadOrderMov(sq.members, wp.x, wp.y) end
+                return "march"
+            end
         end
         -- No usable portal to the objective's continent: don't march into the sea. Nudge the
         -- TP logistics and drop this objective so the focus re-picks a reachable one.
@@ -62803,7 +62853,7 @@ function AiBrainOrderIdleTo(pi, p, x, y)
     GroupClear(gSubGroup)
     local ordered, cnt = 0, 0
     local gSize = BlzGroupGetSize(gAllyGroup)
-    for gIdx = 1, gSize do
+    for gIdx = 0, gSize - 1 do
         local u = BlzGroupUnitAt(gAllyGroup, gIdx)
         if u ~= nil then
             GroupAddUnit(gSubGroup, u)
@@ -62901,7 +62951,7 @@ function AiBrainOrderToPortal(pi, p, portal)
     if allyCount == 0 then return 0 end
     GroupClear(gSubGroup)
     local gSize = BlzGroupGetSize(gAllyGroup)
-    for gIdx = 1, gSize do
+    for gIdx = 0, gSize - 1 do
         local u = BlzGroupUnitAt(gAllyGroup, gIdx)
         if u ~= nil then
             UnitAddAbility(u, FourCC('A1GZ'))
@@ -62912,13 +62962,14 @@ function AiBrainOrderToPortal(pi, p, portal)
     local dx, dy = cx - px, cy - py
     local dist = SquareRoot(dx * dx + dy * dy)
     if dist <= 2500 then
+        SetPortalTeleportOwner(portal, p)
         IssueImmediateOrder(portal, "web")
         BlzEndUnitAbilityCooldown(portal, FourCC('A0HY'))
         GroupPointOrder(gSubGroup, "smart", px, py)
         BrainLogEvery(pi, "portalact", 5, "portal activate " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)) .. " allies=" .. tostring(allyCount), "BRAINPORTAL")
     else
-        GroupPointOrder(gSubGroup, "smart", px, py)
-        BrainLogEvery(pi, "portalmove", 5, "portal walk to " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)) .. " dist=" .. tostring(R2I(dist)) .. " allies=" .. tostring(allyCount), "BRAINPORTAL")
+        GroupPointOrder(gSubGroup, "attack", px, py)
+        BrainLogEvery(pi, "portalmove", 5, "portal attack-move to " .. tostring(R2I(px)) .. "," .. tostring(R2I(py)) .. " dist=" .. tostring(R2I(dist)) .. " allies=" .. tostring(allyCount), "BRAINPORTAL")
     end
     GroupClear(gSubGroup)
     return allyCount
