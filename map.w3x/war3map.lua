@@ -40188,7 +40188,7 @@ end
 --===========================================================================
 -- Trigger: FarmBuildG
 --===========================================================================
-function Gtiers()
+function Gtiers(pi)
     local phash= Gfarm
     local puhash= Gtier
     PData[pi] = PData[pi] or {}
