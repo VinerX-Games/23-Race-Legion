@@ -26,7 +26,7 @@ _G.BridgeDispatchCommand = nil
 _G.BridgePollTimer = nil
 _G.BridgeDebugTicks = 0
 _G.BridgeDebugMaxTicks = 0
-_G.BridgeEvalEnabled = true
+_G.BridgeEvalEnabled = false
 _G.BridgeEvalSyncPrefix = "23RaceEval"
 _G.BridgeEvalSyncTrigger = nil
 _G.BridgeEvalLoopPaused = false
@@ -408,7 +408,7 @@ function BridgeTick()
     end
 end
 function BridgeStart()
-    if BridgePollTimer ~= nil then
+    if not BridgeEvalEnabled or BridgePollTimer ~= nil then
         return
     end
     -- Skip stale eval files from previous session: force-read current tooltip
@@ -447,6 +447,7 @@ function SetupBridgeChat()
         if op == "eval" then
             if arg == "on" then
                 BridgeEvalEnabled = true
+                BridgeStart()
                 ProbeLogWrite("[BRIDGE] eval enabled")
                 DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cff00ff00[BRIDGE] eval ON|r")
             elseif arg == "off" then
@@ -455,6 +456,7 @@ function SetupBridgeChat()
                 DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffff0000[BRIDGE] eval OFF|r")
             elseif arg == "toggle" then
                 BridgeEvalEnabled = not BridgeEvalEnabled
+                if BridgeEvalEnabled then BridgeStart() end
                 ProbeLogWrite("[BRIDGE] eval toggled to " .. tostring(BridgeEvalEnabled))
                 DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffffcc00[BRIDGE] eval " .. (BridgeEvalEnabled and "ON" or "OFF") .. "|r")
             elseif arg == "status" then

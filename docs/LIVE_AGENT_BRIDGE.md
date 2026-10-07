@@ -39,6 +39,9 @@
 war3map.lua руками** — только split-секции + пересборка.
 
 ## Как пользоваться
+В релизной карте мост выключен по умолчанию: таймер опроса и heartbeat не запускаются.
+Для диагностики включите его вручную в игре командой `-bridge:eval:on`.
+
 Хелпер агента (v2, в репозитории): `C:\Games\23 Race\23-Race-Legion\agent_bridge.py`
 **Только этот путь.** Копия на уровень выше (`C:\Games\23 Race\agent_bridge.py`) —
 устаревшая (до-v2, без heartbeat), не использовать: она угадывает seq и отваливается.
@@ -50,7 +53,7 @@ python agent_bridge.py reset
 HiveWE_cli probe-map --map "<...>\map.w3x" --warcraft "F:/Games/Warcraft III" \
   --keep-open --wait 95 --click-after 50 --probe-log 23Race_probe_log.pld
 
-# 3) проверить свежий heartbeat и затем гнать Lua сколько угодно
+# 3) в игре отправить -bridge:eval:on, затем проверить свежий heartbeat
 python agent_bridge.py exec "return 1"
 python agent_bridge.py exec "return AiRace[15]"
 python agent_bridge.py exec --file snippet.lua

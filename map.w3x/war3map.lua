@@ -26,7 +26,7 @@ _G.BridgeDispatchCommand = nil
 _G.BridgePollTimer = nil
 _G.BridgeDebugTicks = 0
 _G.BridgeDebugMaxTicks = 0
-_G.BridgeEvalEnabled = true
+_G.BridgeEvalEnabled = false
 _G.BridgeEvalSyncPrefix = "23RaceEval"
 _G.BridgeEvalSyncTrigger = nil
 _G.BridgeEvalLoopPaused = false
@@ -408,7 +408,7 @@ function BridgeTick()
     end
 end
 function BridgeStart()
-    if BridgePollTimer ~= nil then
+    if not BridgeEvalEnabled or BridgePollTimer ~= nil then
         return
     end
     -- Skip stale eval files from previous session: force-read current tooltip
@@ -447,6 +447,7 @@ function SetupBridgeChat()
         if op == "eval" then
             if arg == "on" then
                 BridgeEvalEnabled = true
+                BridgeStart()
                 ProbeLogWrite("[BRIDGE] eval enabled")
                 DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cff00ff00[BRIDGE] eval ON|r")
             elseif arg == "off" then
@@ -455,6 +456,7 @@ function SetupBridgeChat()
                 DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffff0000[BRIDGE] eval OFF|r")
             elseif arg == "toggle" then
                 BridgeEvalEnabled = not BridgeEvalEnabled
+                if BridgeEvalEnabled then BridgeStart() end
                 ProbeLogWrite("[BRIDGE] eval toggled to " .. tostring(BridgeEvalEnabled))
                 DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 5.00, "|cffffcc00[BRIDGE] eval " .. (BridgeEvalEnabled and "ON" or "OFF") .. "|r")
             elseif arg == "status" then
@@ -4351,93 +4353,80 @@ end
 ---@param x real
 ---@param y real
 ---@return unit
+local function AiTeleportOwnsUnit(pi, u)
+	return udg_AiControl[pi] == true and u ~= nil and UnitAlive(u) and GetOwningPlayer(u) == Player(pi)
+end
+
 function ChoseRandomSpot(dest, pi, x, y)
-	Counter = 0
-	CheckPlayer = Player(pi)
-	GroupEnumUnitsInRange(gGroup, x, y, 3200, b_OwnBuldingsInRange)
-	return BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
-end
---  Создает мага тп и делат теп по позиции выбранного юнита
----@param dest unit
----@param u2 unit
----@param pi integer
----@return nothing
-function MakeTPMage(dest, u2, pi)
-	gX = GetUnitX(dest)
-	gY = GetUnitY(dest)
-	if (AiData[pi][gMageTP] or 0) < 10 and GetUnitAbilityLevel(dest, FourCC('A1RD')) == 0 then
-		gUnit3 = ChoseRandomSpot(dest, pi, gX, gY)
-		if gUnit3 ~= nil then
-			gX = GetUnitX(gUnit3)
-			gY = GetUnitY(gUnit3)
-		else
-			gUnit = CreateUnit(Player(pi), FourCC('h07A'), gX, gY, 0)
+	local group = CreateGroup()
+	GroupEnumUnitsInRange(group, x, y, 3200, nil)
+	local buildings = {}
+	for i = 0, BlzGroupGetSize(group) - 1 do
+		local u = BlzGroupUnitAt(group, i)
+		if AiTeleportOwnsUnit(pi, u) and IsUnitType(u, UNIT_TYPE_STRUCTURE) then
+			buildings[#buildings + 1] = u
 		end
-		RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl", gX, gY), 3)
-		IssuePointOrder(gUnit, "darksummoning", GetUnitX(u2), GetUnitY(u2))
-		GroupAddUnit(udg_Ai_army[pi], gUnit)
-		GroupAddUnit(AiUnitsToPort[pi], gUnit)
-		NumberAdd(pi, gMageTP)
-		AddAbilityTimed(dest, FourCC('A1RD'), 8)
 	end
-	
+	DestroyGroup(group)
+	if #buildings == 0 then return nil end
+	return buildings[GetRandomInt(1, #buildings)]
 end
---  Выбирает юнита которого можно тепнуть к выбранному юниту
----@param u unit
----@return nothing
-function PortTo(u)
-	
-	gPlayer = GetOwningPlayer(u)
-	gPi = GetPlayerId(gPlayer)
-	
-	LazyCount = 0
-	GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_Lazy)
-	gUnit2 = BlzGroupUnitAt(gGroup, GetRandomInt(0, LazyCount - 1))
-	
-	--  Точка
+
+function MakeTPMage(dest, u2, pi)
+	if not AiTeleportOwnsUnit(pi, dest) or not AiTeleportOwnsUnit(pi, u2) then return end
+	if getAiCount(pi, gMageTP) >= 10 or GetUnitAbilityLevel(dest, FourCC('A1RD')) > 0 then return end
+	local x, y = GetUnitX(dest), GetUnitY(dest)
+	local building = ChoseRandomSpot(dest, pi, x, y)
+	if building ~= nil then x, y = GetUnitX(building), GetUnitY(building) end
+	local mage = CreateUnit(Player(pi), gMageTP, x, y, 0)
+	if mage == nil then return end
+	GroupAddUnit(udg_Ai_army[pi], mage)
+	GroupAddUnit(AiUnitsToPort[pi], mage)
+	NumberAdd(pi, gMageTP)
+	AddAbilityTimed(dest, FourCC('A1RD'), 8)
+	RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl", x, y), 3)
+	IssuePointOrder(mage, "darksummoning", GetUnitX(u2), GetUnitY(u2))
+end
+
+local function AiTeleportPickArmyUnit(pi, fast)
+	local group = CreateGroup()
+	GroupEnumUnitsOfPlayer(group, Player(pi), nil)
+	local army = {}
+	for i = 0, BlzGroupGetSize(group) - 1 do
+		local u = BlzGroupUnitAt(group, i)
+		if AiTeleportOwnsUnit(pi, u) and IsUnitInGroup(u, udg_Ai_army[pi])
+			and (fast or IsAiCombatRetaskable(u)) then
+			army[#army + 1] = u
+		end
+	end
+	DestroyGroup(group)
+	if #army == 0 then return nil end
+	return army[GetRandomInt(1, #army)]
+end
+
+local function AiTeleportTo(u, fast)
+	if u == nil or not UnitAlive(u) then return end
+	local pi = GetPlayerId(GetOwningPlayer(u))
+	if not AiTeleportOwnsUnit(pi, u) then return end
+	local target = AiTeleportPickArmyUnit(pi, fast)
+	if target == nil then return end
 	if IsUnitInGroup(u, udg_ZahvatBuildings) then
 		UnitAddAbility(u, FourCC('A0Y4'))
-		IssuePointOrder(u, "darksummoning", GetUnitX(gUnit2), GetUnitY(gUnit2))
-		
-		--  Дополнительно маг тп
-		if Random(1, 4) then
-			MakeTPMage(u, gUnit2, gPi)
-		end
-		--  Маг тп 
+		IssuePointOrder(u, "darksummoning", GetUnitX(target), GetUnitY(target))
+		if Random(1, 4) then MakeTPMage(u, target, pi) end
 	elseif GetUnitTypeId(u) == gMageTP then
-		IssuePointOrder(u, "darksummoning", GetUnitX(gUnit2), GetUnitY(gUnit2))
+		IssuePointOrder(u, "darksummoning", GetUnitX(target), GetUnitY(target))
 	else
-		
-		MakeTPMage(u, gUnit2, gPi)
+		MakeTPMage(u, target, pi)
 	end
-	
 end
---  Выбирает юнита которого можно тепнуть к выбранному юниту
----@param u unit
----@return nothing
+
+function PortTo(u)
+	AiTeleportTo(u, false)
+end
+
 function PortToFast(u)
-	
-	gPlayer = GetOwningPlayer(u)
-	gPi = GetPlayerId(gPlayer)
-	
-	LazyCount = 0
-	GroupEnumUnitsOfPlayer(gGroup, gPlayer, B_InAiArmy)
-	gUnit2 = BlzGroupUnitAt(gGroup, GetRandomInt(0, LazyCount - 1))
-	
-	--  Точка
-	if IsUnitInGroup(gAttacked, udg_ZahvatBuildings) then
-		UnitAddAbility(u, FourCC('A0Y4'))
-		IssuePointOrder(u, "darksummoning", GetUnitX(gUnit2), GetUnitY(gUnit2))
-		
-		--  Дополнительно маг тп
-		if Random(1, 4) then
-			MakeTPMage(u, gUnit2, gPi)
-		end
-		--  Здание
-	else
-		MakeTPMage(u, gUnit2, gPi)
-	end
-	
+	AiTeleportTo(u, true)
 end
 -- ***************************************************************************
 -- *  WakPortToAction
@@ -4453,43 +4442,27 @@ end
 ---@return nothing
 function TryPort()
 	local pi = TryPort_pi
-	local u
-	
-	u = GroupPickRandomUnit2(AiUnitsToPort[pi])
-	if u ~= nil then
-		CheckPlayer = Player(pi)
-		if HasEnemyNear(u) ~= nil then
-			PortTo(u)
-		end
+	if udg_AiControl[pi] ~= true then return end
+	local u = GroupPickRandomUnit2(AiUnitsToPort[pi])
+	if not AiTeleportOwnsUnit(pi, u) then
+		if u ~= nil then GroupRemoveUnit(AiUnitsToPort[pi], u) end
+		return
 	end
-	
-	u = nil
-	
+	if HasEnemyNear(u) then PortTo(u) end
 end
 -- ***************************************************************************
 -- *  RequestPort
---  Выбирает юнитов к которым можно тепнуться и делает к ним теп
 ---@param u unit
----@return nothing
 function RequestPort(u)
-	gPlayer = GetOwningPlayer(u)
-	gPi = GetPlayerId(gPlayer)
-	gInt = 0
-	while true do
-		if gInt > 3 then break end
-		
-		u = GroupPickRandomUnit2(AiUnitsToPort[gPi])
-		if u ~= nil then
-			CheckPlayer = gPlayer
-			if HasEnemyNear(u) ~= nil then
-				PortTo(u)
-			end
-			if true then break end
-		end
-		gInt = gInt + 1
-		
+	if u == nil or not UnitAlive(u) then return end
+	local pi = GetPlayerId(GetOwningPlayer(u))
+	if udg_AiControl[pi] ~= true then return end
+	local caster = GroupPickRandomUnit2(AiUnitsToPort[pi])
+	if not AiTeleportOwnsUnit(pi, caster) then
+		if caster ~= nil then GroupRemoveUnit(AiUnitsToPort[pi], caster) end
+		return
 	end
-	
+	if HasEnemyNear(caster) then PortTo(caster) end
 end
 -- ***************************************************************************
 -- *  WarRace
@@ -4602,17 +4575,19 @@ end
 ---@param pi integer
 ---@return nothing
 function MakeMageTp(pi)
+	if udg_AiControl[pi] ~= true then return end
 	local race = AiRaces[AiRace[pi]]
 	local mageUnit = (race and race.mageTpUnit) or FourCC('h07A')
-	GroupEnumUnitsOfPlayer(gGroup, Player(pi), Altars)
-	if FirstOfGroup(gGroup) ~= nil then
-		gUnit2 = GroupPickRandomUnit2(gGroup)
-		gUnit = CreateUnit(Player(pi), mageUnit, GetUnitX(gUnit2), GetUnitY(gUnit2), 0)
-		GroupAddUnit(udg_Ai_army[pi], gUnit)
-		GroupAddUnit(AiUnitsToPort[pi], gUnit)
-		NumberAdd(pi, FourCC('h07A'))
-		
-	end
+	local group = CreateGroup()
+	GroupEnumUnitsOfPlayer(group, Player(pi), Altars)
+	local altar = GroupPickRandomUnit2(group)
+	DestroyGroup(group)
+	if altar == nil then return end
+	local mage = CreateUnit(Player(pi), mageUnit, GetUnitX(altar), GetUnitY(altar), 0)
+	if mage == nil then return end
+	GroupAddUnit(udg_Ai_army[pi], mage)
+	GroupAddUnit(AiUnitsToPort[pi], mage)
+	NumberAdd(pi, FourCC('h07A'))
 end
 -- ***************************************************************************
 -- *  LibDifferentAiStuff End
