@@ -430,6 +430,20 @@ end
 function Capitals()
 	return IsUnitInGroup(GetFilterUnit(), udg_StolicaGroups)
 end
+local capitalsFilter
+local haveCapitalAbilityFilter
+local function CapitalsBoolExpr()
+	if capitalsFilter == nil then
+		capitalsFilter = Condition(Capitals)
+	end
+	return capitalsFilter
+end
+local function HaveCapitalAbilityBoolExpr()
+	if haveCapitalAbilityFilter == nil then
+		haveCapitalAbilityFilter = Condition(HaveCapitalAbility)
+	end
+	return haveCapitalAbilityFilter
+end
 ---@return boolean
 ---@param u unit
 ---@param flag boolean
@@ -479,7 +493,7 @@ end
 ---@return nothing
 function MakeFakeCapital(p)
 	local u
-	GroupEnumUnitsOfPlayer(gGroup, p, HaveCapitalAbility)
+	GroupEnumUnitsOfPlayer(gGroup, p, HaveCapitalAbilityBoolExpr())
 	u = BlzGroupUnitAt(gGroup, GetRandomInt(0, BlzGroupGetSize(gGroup) - 1))
 	playerCapital[GetPlayerId(p)] = u
 	aiCapitalEnter(u)
@@ -568,12 +582,12 @@ end
 function CheckAndCreateCapital(p)
 	local u
 	local g = CreateGroup()
-	GroupEnumUnitsOfPlayer(g, p, Capitals)
+	GroupEnumUnitsOfPlayer(g, p, CapitalsBoolExpr())
 	if BlzGroupGetSize(g) == 0 then	-- ??????? ???
 		
 		GroupClear(g)
 		Counter = 0
-		GroupEnumUnitsOfPlayer(g, p, HaveCapitalAbility)
+		GroupEnumUnitsOfPlayer(g, p, HaveCapitalAbilityBoolExpr())
 		
 		if BlzGroupGetSize(g) > 0 then
 			u = BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))

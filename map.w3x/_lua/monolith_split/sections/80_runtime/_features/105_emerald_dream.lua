@@ -5,6 +5,13 @@
 function greencreature()
 	return GetUnitAbilityLevel(GetFilterUnit(), FourCC('A0LR')) > 0
 end
+local greencreatureFilter
+local function GreenCreatureFilter()
+	if greencreatureFilter == nil then
+		greencreatureFilter = Condition(greencreature)
+	end
+	return greencreatureFilter
+end
 ---@return boolean
 function alienToDream()
 	return UnitAlive(GetFilterUnit()) and GetUnitAbilityLevel(GetFilterUnit(), FourCC('A0LR')) == 0 and  not IsUnitType(GetFilterUnit(), UNIT_TYPE_STRUCTURE) and GetUnitTypeId(GetFilterUnit()) ~= Dummy and GetUnitAbilityLevel(GetFilterUnit(), FourCC('Awrp')) == 0
@@ -21,14 +28,14 @@ function SleepGreenEach()
 end
 ---@return nothing
 function WakeGreenUp()
-	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, greencreature)
+	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, GreenCreatureFilter())
 	ForGroup(gGroup, WakeGreenUpEach)
 	GroupClear(gGroup)
 end
 ---@return nothing
 function SleepGreen()
 	-- call BJDebugMsg("??????")
-	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, greencreature)
+	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, GreenCreatureFilter())
 	ForGroup(gGroup, SleepGreenEach)
 	GroupClear(gGroup)
 end
