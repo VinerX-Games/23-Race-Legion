@@ -32,11 +32,13 @@ function TryBuild()
         local bx, by = AiFindBuildSpot(gPi, gUnit)
         if bx ~= nil then
             BrainLogEvery(gPi, "build", 6, "smart spot x=" .. tostring(R2I(bx)) .. " y=" .. tostring(R2I(by)) .. " build=" .. tostring(gInt), "BRAINBLD")
+            AiReserveBuilding(gPi, gUnit, gInt)
             IssueBuildOrderById(gUnit, gInt, bx, by)
             return
         end
     end
     gX = gX + AiBuildingRadius * Cos(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
     gY = gY + AiBuildingRadius * Sin(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
+    AiReserveBuilding(gPi, gUnit, gInt)
     IssueBuildOrderById(gUnit, gInt, gX, gY)
 end

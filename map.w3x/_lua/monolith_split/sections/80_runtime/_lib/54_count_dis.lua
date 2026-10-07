@@ -11,6 +11,7 @@ function AddCountDis(u, pi)
 	if u == nil then
 		return 
 	end
+	if income[pi] == nil then return end
 	
 	--  ???? ?????? ??? ??? ?????????
 	if IsUnitType(u, UNIT_TYPE_STRUCTURE) or GetUnitAbilityLevel(u, FourCC('A1IJ')) > 0 then
@@ -105,6 +106,7 @@ function DelCountDis(u, pi)
 	if u == nil then
 		return 
 	end
+	if income[pi] == nil then return end
 	
 	
 	-- ????

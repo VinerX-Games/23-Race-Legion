@@ -131,7 +131,7 @@ end
 function AiRunChooseBuildings(pi, def)
     local list = def.buildings
     tArray[0] = 0
-    if list.seed ~= nil and getAiCount(pi, list.seed) < (list.seedLimit or 1) then
+    if list.seed ~= nil and AiCountBuildingOrders(pi, list.seed) < (list.seedLimit or 1) then
         AddBuilding(list.seed, 1)
     end
     for _, row in ipairs(list) do
@@ -140,7 +140,7 @@ function AiRunChooseBuildings(pi, def)
             local g = def.gates and def.gates[row.gate]
             gateOk = (g == nil) or g(pi)
         end
-        if gateOk and getAiCount(pi, row[1]) < row[2] then
+        if gateOk and AiCountBuildingOrders(pi, row[1]) < row[2] then
             AddBuilding(row[1], row[3])
         end
     end

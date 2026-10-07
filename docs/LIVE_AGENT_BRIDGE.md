@@ -56,6 +56,16 @@ python agent_bridge.py exec "return AiRace[15]"
 python agent_bridge.py exec --file snippet.lua
 python agent_bridge.py exec "return AiRace[15]" --watch --timeout 12
 ```
+
+После создания бота можно проверить действующие лимиты зданий вместе с
+незавершёнными фундаментами:
+
+```powershell
+python agent_bridge.py exec "AiBuildCapProbeSlot=2"
+python agent_bridge.py exec --file tests/live_ai_build_caps.lua
+```
+
+Если `AiBuildCapProbeSlot` не задан, скрипт проверяет все активные AI-слоты.
 Печатает `OK <значение>` / `ERR <сообщение>` / `TIMEOUT`. Первый exec сразу после
 загрузки может словить таймаут (heartbeat ещё не записан) — просто повторить, seq
 самосинхронизируется (v2: повтор больше не уводит счётчик в рассинхрон).

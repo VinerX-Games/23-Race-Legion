@@ -1303,6 +1303,7 @@ function aiUnitBuildingJoins(structure, pi)
     GroupAddUnit(udg_Ai_buildings[pi], structure)
     GroupAddUnit(udg_Ai_units[pi], structure)
     NumberAdd(pi , id)
+    AiReleaseBuildingReservation(pi, id)
     if playerCapital[pi] ~= nil and DistanceBetweenUnits(playerCapital[pi] , structure) <= 3000 then
         GroupAddUnit(AiCapitalBuildigs[pi], structure)
     end

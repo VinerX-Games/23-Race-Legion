@@ -36,6 +36,8 @@ AiBuildRingStart = AiBuildRingStart or 300  -- first ring radius from anchor
 AiBuildRingStep  = AiBuildRingStep  or 300  -- step between rings
 AiBuildMinSpacing = AiBuildMinSpacing or 300 -- minimum spacing between buildings (tighter = denser base, builds complete near home)
 AiBuildRingCount = AiBuildRingCount or 14   -- how many rings to scan outward
+AiPendingBuildReservations = AiPendingBuildReservations or {} -- [pi][rawcode] = queued worker reservations
+AiBuildReservationTicks = AiBuildReservationTicks or AiBuildClaimTicks
 
 -- Round-robin cursor: fair distribution across bots (replaces ForcePickRandomPlayer)
 AiBrainBotList = AiBrainBotList or {}   -- [1..n] = pi, populated at createAiPlayer
@@ -1789,17 +1791,55 @@ function AiCountBuildingsOfType(pi, bldType)
         local u = BlzGroupUnitAt(grp, i)
         if u ~= nil and GetUnitTypeId(u) == bldType
             and GetUnitState(u, UNIT_STATE_LIFE) > 0.405 then
-            -- R5: skip incomplete buildings (HP < max HP). Channeling races
-            -- leave pristine foundations when the builder is yanked/killed.
-            local maxHp = BlzGetUnitMaxHP(u)
-            if maxHp > 1 and GetUnitState(u, UNIT_STATE_LIFE) < maxHp - 0.5 then
-                -- incomplete — don't count; BrainResumeBuildings will fix it
-            else
-                n = n + 1
-            end
+            -- Count live foundations so repeated brain ticks see in-progress builds.
+            n = n + 1
         end
     end
-    return n
+    return n + AiPendingBuildCount(pi, bldType)
+end
+
+function AiPendingBuildCount(pi, bldType)
+    local byType = AiPendingBuildReservations[pi]
+    local queue = byType and byType[bldType]
+    if queue == nil then return 0 end
+    local wm = AiData[pi] and AiData[pi].wm
+    local now = wm and wm.tick or 0
+    for i = #queue, 1, -1 do
+        if now >= queue[i].expiresAt then table.remove(queue, i) end
+    end
+    if #queue == 0 then
+        byType[bldType] = nil
+        return 0
+    end
+    return #queue
+end
+
+function AiReserveBuilding(pi, worker, bldType)
+    local byType = AiPendingBuildReservations[pi]
+    if byType == nil then byType = {}; AiPendingBuildReservations[pi] = byType end
+    local queue = byType[bldType]
+    if queue == nil then queue = {}; byType[bldType] = queue end
+    local wm = AiData[pi] and AiData[pi].wm
+    local now = wm and wm.tick or 0
+    local expiresAt = now + AiBuildReservationTicks
+    local navalUntil = AiNavalBuildUntil and AiNavalBuildUntil[worker]
+    local globalNow = AiBrainTickCounter or 0
+    if navalUntil ~= nil and navalUntil > globalNow then
+        expiresAt = math.max(expiresAt, now + navalUntil - globalNow + AiBuildReservationTicks)
+    end
+    queue[#queue + 1] = { worker = worker, expiresAt = expiresAt }
+end
+
+function AiReleaseBuildingReservation(pi, bldType)
+    local byType = AiPendingBuildReservations[pi]
+    local queue = byType and byType[bldType]
+    if queue == nil then return end
+    table.remove(queue, 1)
+    if #queue == 0 then byType[bldType] = nil end
+end
+
+function AiCountBuildingOrders(pi, bldType)
+    return getAiCount(pi, bldType) + AiPendingBuildCount(pi, bldType)
 end
 
 ---@param pi integer
@@ -2299,7 +2339,8 @@ function BrainBuild(pi, wm, race)
     local seedType = buildOrder.seed
     if seedType and type(seedType) == "number" then
         local count = AiCountBuildingsOfType(pi, seedType)
-        if count < 1 then
+        local seedLimit = AiScaled(buildOrder.seedLimit or 1)
+        if count < seedLimit then
             local worker = AiFindFreeWorker(pi)
             if worker ~= nil then
                 TryBuild_u = worker
@@ -2868,6 +2909,7 @@ function TryBuildWithType(bldType, fx, fy)
 
     if fx ~= nil and fy ~= nil then
         reserve(fx, fy)
+        AiReserveBuilding(pi, u, bldType)
         IssueBuildOrderById(u, bldType, fx, fy)
         return true
     end
@@ -2876,6 +2918,7 @@ function TryBuildWithType(bldType, fx, fy)
         local bx, by = AiFindBuildSpot(pi, u)
         if bx ~= nil then
             reserve(bx, by)
+            AiReserveBuilding(pi, u, bldType)
             IssueBuildOrderById(u, bldType, bx, by)
             return true
         end
@@ -2888,6 +2931,7 @@ function TryBuildWithType(bldType, fx, fy)
         local uy = uy0 + AiBuildingRadius * Sin(ang)
         if AiBuildPlaceable(ux, uy) then
             reserve(ux, uy)
+            AiReserveBuilding(pi, u, bldType)
             IssueBuildOrderById(u, bldType, ux, uy)
             return true
         end
