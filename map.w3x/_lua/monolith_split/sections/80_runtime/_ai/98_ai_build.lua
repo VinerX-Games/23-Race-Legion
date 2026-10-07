@@ -23,6 +23,11 @@ function TryBuild()
     -- wandered off and sat idle (observed: groups of lost workers, drained build/
     -- harvest force). Map expansion comes from the army capturing neutral cities.
     gInt = AiDispatchChooseBuild(gPi)
+    if gInt == nil or gInt == 0 then
+        GroupRemoveUnit(udg_Ai_buildersT[gPi], gUnit)
+        GroupAddUnit(udg_Ai_harvest[gPi], gUnit)
+        return
+    end
     if AiSmartBuild then
         local bx, by = AiFindBuildSpot(gPi, gUnit)
         if bx ~= nil then

@@ -43,14 +43,15 @@ war3map.lua руками** — только split-секции + пересбо�
 **Только этот путь.** Копия на уровень выше (`C:\Games\23 Race\agent_bridge.py`) —
 устаревшая (до-v2, без heartbeat), не использовать: она угадывает seq и отваливается.
 ```
-# 1) поднять карту (держать открытой)
+# 1) очистить очередь ПЕРЕД запуском, пока игра закрыта
+python agent_bridge.py reset
+
+# 2) поднять карту (держать открытой)
 HiveWE_cli probe-map --map "<...>\map.w3x" --warcraft "F:/Games/Warcraft III" \
   --keep-open --wait 95 --click-after 50 --probe-log 23Race_probe_log.pld
 
-# 2) один раз после запуска
-python agent_bridge.py reset
-
-# 3) гнать Lua сколько угодно
+# 3) проверить свежий heartbeat и затем гнать Lua сколько угодно
+python agent_bridge.py exec "return 1"
 python agent_bridge.py exec "return AiRace[15]"
 python agent_bridge.py exec --file snippet.lua
 python agent_bridge.py exec "return AiRace[15]" --watch --timeout 12

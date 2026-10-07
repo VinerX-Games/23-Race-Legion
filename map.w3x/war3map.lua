@@ -12419,6 +12419,11 @@ function TryBuild()
     -- wandered off and sat idle (observed: groups of lost workers, drained build/
     -- harvest force). Map expansion comes from the army capturing neutral cities.
     gInt = AiDispatchChooseBuild(gPi)
+    if gInt == nil or gInt == 0 then
+        GroupRemoveUnit(udg_Ai_buildersT[gPi], gUnit)
+        GroupAddUnit(udg_Ai_harvest[gPi], gUnit)
+        return
+    end
     if AiSmartBuild then
         local bx, by = AiFindBuildSpot(gPi, gUnit)
         if bx ~= nil then
@@ -12431,6 +12436,7 @@ function TryBuild()
     gY = gY + AiBuildingRadius * Sin(GetRandomReal(0.00, 360.00) * bj_DEGTORAD)
     IssueBuildOrderById(gUnit, gInt, gX, gY)
 end
+
 -- ***************************************************************************
 -- *  AiUnitJoins
 ---@param u unit
@@ -52865,8 +52871,10 @@ end
 ---@return integer
 function AiRunChooseBuildings(pi, def)
     local list = def.buildings
-    tArray[0] = 1
-    tArray[1] = list.seed
+    tArray[0] = 0
+    if list.seed ~= nil and getAiCount(pi, list.seed) < (list.seedLimit or 1) then
+        AddBuilding(list.seed, 1)
+    end
     for _, row in ipairs(list) do
         local gateOk = true
         if row.gate ~= nil then
@@ -52876,6 +52884,9 @@ function AiRunChooseBuildings(pi, def)
         if gateOk and getAiCount(pi, row[1]) < row[2] then
             AddBuilding(row[1], row[3])
         end
+    end
+    if tArray[0] == 0 then
+        return 0
     end
     return tArray[GetRandomInt(1, tArray[0])]
 end

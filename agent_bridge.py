@@ -187,14 +187,20 @@ def wait_for_file(filepath, deadline):
 
 def cmd_reset():
     removed = 0
+    failures = []
     # Drop inbox, every per-seq outbox, the legacy outbox, and the stale heartbeat.
     for p in glob.glob(IN_GLOB) + glob.glob(OUT_GLOB) + [EVAL_OUT, HB_FILE]:
         try:
             os.remove(p)
             removed += 1
-        except OSError:
+        except FileNotFoundError:
             pass
+        except OSError as exc:
+            failures.append("%s (%s)" % (os.path.basename(p), type(exc).__name__))
     print("reset: cleared %d bridge file(s)" % removed)
+    if failures:
+        print("reset: failed to clear " + ", ".join(failures))
+        return 1
     return 0
 
 
