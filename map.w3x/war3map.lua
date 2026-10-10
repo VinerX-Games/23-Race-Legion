@@ -801,12 +801,12 @@ LIBRARY_ArmyBonus = true	---@type boolean
 -- endglobals from ArmyBonus
 -- globals from Global:
 LIBRARY_Global = true	---@type boolean	
-Global_Hash = InitHashtable()	---@type hashtable	
-Global_Timer = CreateTimer()	---@type timer	
+Global_Hash = nil	---@type hashtable	
+Global_Timer = nil	---@type timer	
 -- ==========================================
-Global_TempGroup = CreateGroup()	---@type group	
-Global_TempRect = Rect(0, 0, 0, 0)	---@type rect	
-Global_TempLoc = Location(0, 0)	---@type location	
+Global_TempGroup = nil	---@type group	
+Global_TempRect = nil	---@type rect	
+Global_TempLoc = nil	---@type location	
 -- ==========================================
 Global___TempUnitArray = {}	---@type unit	
 Global___TempIntArray = {}	---@type integer	
@@ -2986,11 +2986,11 @@ gg_unit_n003_0305 = nil	---@type unit
 gg_unit_h0OT_0545 = nil	---@type unit	
 Dummy = FourCC('h05P')	---@type integer	
 -- Hash removed: all hashtable data migrated to Lua tables/closures
-gForce = CreateForce()	---@type force	
-gGroup = CreateGroup()	---@type group	
-gEnemyGroup = CreateGroup()	---@type group	
-gAllyGroup = CreateGroup()	---@type group	
-gSubGroup = CreateGroup()	---@type group	
+gForce = nil	---@type force	
+gGroup = nil	---@type group	
+gEnemyGroup = nil	---@type group	
+gAllyGroup = nil	---@type group	
+gSubGroup = nil	---@type group	
 gSubGroupCounter = 0	---@type integer	
 -- gLoc	---@type location	
 -- gRect	---@type rect	
@@ -3028,6 +3028,7 @@ gDummySpell = FourCC('A0Z5')	---@type integer
 ArmyExp = {}	---@type real	
 ArmyExpBonus = {}	---@type unit	
 ArmyPowerColumn = {}	---@type multiboarditem	
+ArmyPowerColumnHeader = nil	---@type multiboarditem	
 income = {}	---@type real	
 incomeW = {}	---@type real	
 disincome = {}	---@type real	
@@ -3037,7 +3038,7 @@ balance = {}	---@type real
 additional = {}	---@type real	
 IncomeMod = 1	---@type real	
 Tax = 0.15	---@type real	
-Allmap = CreateRegion()	---@type region	
+Allmap = nil	---@type region	
 AllyTax = {}	---@type real	
 face = nil	---@type framehandle	
 faceHover = nil	---@type framehandle	
@@ -3051,7 +3052,11 @@ StartLocCount = 0	---@type integer
 AiSpawnIndex = 0	---@type integer
 AiSpawnPoint = {}	---@type table<integer, {x: real, y: real}>
 MIN_SPAWN_DISTANCE = 2500	---@type real
-SubGroup2 = CreateGroup()	---@type group	
+AiUnitsToPort = {}	---@type group
+AiCapitalGuard = {}	---@type group
+AiCapitalBuildigs = {}	---@type group
+Grades = {}	---@type integer
+SubGroup2 = nil	---@type group	
 Gfarm = StringHash("Gfarm")	---@type integer	
 Gtier = StringHash("Gtier")	---@type integer	
 PointForAi = {}	---@type location	
@@ -3062,15 +3067,15 @@ AiRepeat = 5	---@type integer
 AiRadius = 6	---@type integer	
 AiLimit = 150	---@type integer	
 AiBuildingRadius = 1000	---@type real	
-udg_BotsActive = CreateForce()	---@type force	
-udg_BotsActiveB = CreateForce()	---@type force	
-udg_BotsActiveN = CreateForce()	---@type force	
+udg_BotsActive = nil	---@type force	
+udg_BotsActiveB = nil	---@type force	
+udg_BotsActiveN = nil	---@type force	
 --  Таймеры ИИ
-udg_TimerSmall4 = CreateTimer()	---@type timer	
-udg_PlayerGet2 = CreateTimer()	---@type timer	
-udg_PlayerGet1 = CreateTimer()	---@type timer	
-udg_PlayerGet4 = CreateTimer()	---@type timer	
-aiFixer = CreateTimer()	---@type timer	
+udg_TimerSmall4 = nil	---@type timer	
+udg_PlayerGet2 = nil	---@type timer	
+udg_PlayerGet1 = nil	---@type timer	
+udg_PlayerGet4 = nil	---@type timer	
+aiFixer = nil	---@type timer	
 udg_B_EnemyUnitP = nil	---@type boolexpr	
 udg_B_EnemyUnit = nil	---@type boolexpr	
 udg_B_EnemyUnitN = nil	---@type boolexpr	
@@ -3101,8 +3106,8 @@ CheckPlayer = nil	---@type player
 LastDestantion = nil	---@type location	
 LastDestantionN = nil	---@type location	
 Ochet = false	---@type boolean	
-TryPortal = CreateGroup()	---@type group	
-AfterPortal = CreateGroup()	---@type group	
+TryPortal = nil	---@type group	
+AfterPortal = nil	---@type group	
 AiRace = {}	---@type string	
 BonusUnit = {}	---@type unit	
 udg_B_InKalim = nil	---@type boolexpr	
@@ -3131,8 +3136,8 @@ LastDisincome = {}	---@type integer
 LastBalance = {}	---@type integer	
 DisOn = false	---@type boolean	
 EcLog = false	---@type boolean	
-DeadGroup = CreateGroup()	---@type group	
-PortalBuildingAi = CreateGroup()	---@type group	
+DeadGroup = nil	---@type group	
+PortalBuildingAi = nil	---@type group	
 ModeBuildingI = 0	---@type integer	
 ModeBuilding = nil	---@type unit	
 playerCapital = {}	---@type unit	
@@ -3142,6 +3147,7 @@ Senior = {}	---@type player
 Capital = {}	---@type unit	
 FeodalVassalMode = 1	---@type integer	
 ThirdColumn = {}	---@type multiboarditem	
+ThirdColumnHeader = nil	---@type multiboarditem	
 CityCount = 0	---@type integer	
 CityPlayerCount = {}	---@type integer	
 PercentWin = 65	---@type integer	
@@ -3166,16 +3172,16 @@ JSTRKofDmg2 = 50	---@type real
 JSTRBoolMove = false	---@type boolean	
 Bwonsamdy = {}	---@type unit	
 SecondChance = {}	---@type timer	
-Observers = CreateForce()	---@type force	
+Observers = nil	---@type force	
 OwnGold = {}	---@type integer	
 OwnLumber = {}	---@type integer	
 GoldDifference = {}	---@type integer	
 LumberDifference = {}	---@type integer	
 NotOwnRes = {}	---@type boolean	
 -- TryBuild_u	---@type unit	
-DeadGroupAi = CreateGroup()	---@type group	
-Navy = CreateGroup()	---@type group	
-Port = CreateGroup()	---@type group	
+DeadGroupAi = nil	---@type group	
+Navy = nil	---@type group	
+Port = nil	---@type group	
 DalaranOutType = FourCC('h0NB')	---@type integer	
 DalaranOut = gg_unit_e00C_0590	---@type unit	
 AbilityAp = FourCC('A1FZ')	---@type integer	
@@ -3582,16 +3588,15 @@ end
 --  
 ---@return nothing
 function SetPortalGroup()
-	
-	local i = 0
-	
-	while true do
-		if i >= 24 then break end
-		AiUnitsToPort[i] = CreateGroup()
-		AiCapitalGuard[i] = CreateGroup()
-		AiCapitalBuildigs[i] = CreateGroup()
-		Grades[i] = 0
-		i = i + 1
+	if AiUnitsToPort == nil then AiUnitsToPort = {} end
+	if AiCapitalGuard == nil then AiCapitalGuard = {} end
+	if AiCapitalBuildigs == nil then AiCapitalBuildigs = {} end
+	if Grades == nil then Grades = {} end
+	for i = 0, 23 do
+		if AiUnitsToPort[i] == nil then AiUnitsToPort[i] = CreateGroup() end
+		if AiCapitalGuard[i] == nil then AiCapitalGuard[i] = CreateGroup() end
+		if AiCapitalBuildigs[i] == nil then AiCapitalBuildigs[i] = CreateGroup() end
+		if Grades[i] == nil then Grades[i] = 0 end
 	end
 end
 ---@return nothing
@@ -3626,7 +3631,7 @@ function SetBools()
 	udg_B_EnemyUnitN = Condition(f_EnemyUnitN)
 	udg_B_EnemyUnit = Condition(f_EnemyUnit)
 	udg_B_EnemyUnitP = Condition(f_EnemyUnitP)
-	PortB = Condition(f_PortB)
+	if PortB == nil then PortB = Condition(f_PortB) end
 	FixZ = Condition(f_FixZ)
 	LiveHero = Condition(f_LiveHero)
 	
@@ -3903,6 +3908,11 @@ end
 -- ==========================================
 ---@return nothing
 function Global___Init()
+	Global_Hash = InitHashtable()
+	Global_Timer = CreateTimer()
+	Global_TempGroup = CreateGroup()
+	Global_TempRect = Rect(0, 0, 0, 0)
+	Global_TempLoc = Location(0, 0)
 	TimerStart(Global_Timer, 999999, false, nil)
 end
 -- library Global ends
@@ -4121,9 +4131,12 @@ end
 ---@param y real
 ---@return boolean
 function IsSpawnFarEnough(x, y)
-	for pi, pt in pairs(AiSpawnPoint) do
+	for pi = 0, bj_MAX_PLAYERS - 1 do
+		local pt = AiSpawnPoint[pi]
+		if pt ~= nil then
 		if DistanceBetweenCoords(x, y, pt.x, pt.y) < MIN_SPAWN_DISTANCE then
 			return false
+		end
 		end
 	end
 	return true
@@ -4131,10 +4144,13 @@ end
 ---@return real
 function SpawnMinDistToOthers(x, y)
 	local best = 999999.0
-	for pi, pt in pairs(AiSpawnPoint) do
+	for pi = 0, bj_MAX_PLAYERS - 1 do
+		local pt = AiSpawnPoint[pi]
+		if pt ~= nil then
 		local d = DistanceBetweenCoords(x, y, pt.x, pt.y)
 		if d < best then
 			best = d
+		end
 		end
 	end
 	return best
@@ -8741,23 +8757,23 @@ function createAiPlayer(pi, raceToken)
 	
 	-- TimerSmall (builders): disabled in brain mode; BrainBuild handles it
 	if not AiBrainEnabled(pi) then
-		StartTimerBJ(udg_TimerSmall, false, 1.11 * AiRepeat / 5)
+		TimerStart(udg_TimerSmall, 1.11 * AiRepeat / 5, false, nil)
 		ProbeLogWrite("[AI] createAiPlayer TimerSmall started period=" .. tostring(1.11 * AiRepeat / 5))
-		StartTimerBJ(udg_TimerSmall2, false, 2.12 * AiRepeat / 5)
+		TimerStart(udg_TimerSmall2, 2.12 * AiRepeat / 5, false, nil)
 		ProbeLogWrite("[AI] createAiPlayer TimerSmall2 started period=" .. tostring(2.12 * AiRepeat / 5))
 		-- TimerSmall4 (navy join): disabled in brain mode; BrainNavalFocus handles it
-		StartTimerBJ(udg_TimerSmall4, false, 4.14 * AiRepeat / 5)
+		TimerStart(udg_TimerSmall4, 4.14 * AiRepeat / 5, false, nil)
 		ProbeLogWrite("[AI] createAiPlayer TimerSmall4 started period=" .. tostring(4.14 * AiRepeat / 5))
 		else
 		-- Brain mode: start PlayerGet1 directly (round-robin, no ForcePickRandom)
 		TimerStart(udg_PlayerGet1, 0.8 * AiRepeat / 5, true, nil)
 		ProbeLogWrite("[AI] createAiPlayer PlayerGet1 started directly (brain round-robin) period=" .. tostring(0.8 * AiRepeat / 5))
 	end
-	StartTimerBJ(udg_TimerSmall3, false, 3.13 * AiRepeat / 5)
+	TimerStart(udg_TimerSmall3, 3.13 * AiRepeat / 5, false, nil)
 	ProbeLogWrite("[AI] createAiPlayer TimerSmall3 started period=" .. tostring(3.13 * AiRepeat / 5))
-	StartTimerBJ(udg_AiTimerStrateg, true, 15.15 * AiRepeat / 5)
+	TimerStart(udg_AiTimerStrateg, 15.15 * AiRepeat / 5, true, nil)
 	ProbeLogWrite("[AI] createAiPlayer AiTimerStrateg started period=" .. tostring(15.15 * AiRepeat / 5))
-	StartTimerBJ(udg_TimerToChangeAi, false, 600.00)
+	TimerStart(udg_TimerToChangeAi, 600.00, false, nil)
 	TimerStart(aiFixer, 1800.00, true, nil)
 	ProbeLogWrite("[AI] createAiPlayer DONE pi=" .. tostring(pi) .. " race=" .. tostring(AiRace[pi]) .. " AiRepeat=" .. tostring(AiRepeat))
 end
@@ -8778,6 +8794,26 @@ end
 -- ***************************************************************************
 ---@return nothing
 function InitGlobals()
+	gForce = CreateForce()
+	gGroup = CreateGroup()
+	gEnemyGroup = CreateGroup()
+	gAllyGroup = CreateGroup()
+	gSubGroup = CreateGroup()
+	Allmap = CreateRegion()
+	SubGroup2 = CreateGroup()
+	udg_BotsActive = CreateForce()
+	udg_BotsActiveB = CreateForce()
+	udg_BotsActiveN = CreateForce()
+	TryPortal = CreateGroup()
+	AfterPortal = CreateGroup()
+	DeadGroup = CreateGroup()
+	PortalBuildingAi = CreateGroup()
+	Observers = CreateForce()
+	DeadGroupAi = CreateGroup()
+	Navy = CreateGroup()
+	Port = CreateGroup()
+	SetPortalGroup()
+	FixEcAliveFilter = Condition(UnitAliveBool)
 	local i = 0
 	i = 0
 	while true do
@@ -8788,6 +8824,11 @@ function InitGlobals()
 	
 	udg_IncomeTimerFirst = CreateTimer()
 	udg_IncomeTimerSecond = CreateTimer()
+	udg_TimerSmall4 = CreateTimer()
+	udg_PlayerGet2 = CreateTimer()
+	udg_PlayerGet1 = CreateTimer()
+	udg_PlayerGet4 = CreateTimer()
+	aiFixer = CreateTimer()
 	udg_LocalOtrad = CreateGroup()
 	i = 0
 	while true do
@@ -9495,6 +9536,7 @@ function SaveIntegerIfPresent(hash, parent, child, value)
         SaveInteger(hash, parent, child, value)
     end
 end
+
 -- ***************************************************************************
 -- 
 -- *  Custom Script Code
@@ -9884,23 +9926,23 @@ end
 ---@return nothing
 function ExpandTableArmyExpr()
 	local i = 0
-	local l__max = 1
 	MultiboardSetColumnCount(Multiboard, 4)
 	
 	
-	ArmyPowerColumn[24] = MultiboardGetItem(Multiboard, 0, 3)
-	MultiboardSetItemValue(ArmyPowerColumn[24], "Опыт")
-	MultiboardSetItemWidth(ArmyPowerColumn[24], 0.06)
-	MultiboardReleaseItem(ArmyPowerColumn[24])
+	local header = MultiboardGetItem(Multiboard, 0, 3)
+	ArmyPowerColumnHeader = header
+	MultiboardSetItemValue(header, "Опыт")
+	MultiboardSetItemWidth(header, 0.06)
+	MultiboardReleaseItem(header)
 	
 	while true do
 		if i > 23 then break end
 		ArmyExp[i] = 0.001
-		if GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING or IsPlayerInForce(Player(i), udg_Bots) then
-			ArmyPowerColumn[i] = MultiboardGetItem(Multiboard, l__max, 3)
+		local ownerIndex = MultiboardItemOwnerIndex[i]
+		if ownerIndex ~= nil then
+			ArmyPowerColumn[i] = MultiboardGetItem(Multiboard, ownerIndex, 3)
 			MultiboardSetItemValue(ArmyPowerColumn[i], "0")
 			MultiboardSetItemWidth(ArmyPowerColumn[i], 0.06)
-			l__max = l__max + 1
 		end
 		i = i + 1
 		
@@ -9913,34 +9955,47 @@ function ExpandTableArmyExpr()
 	
 	
 end
+
 -- ***************************************************************************
 -- *  UpdateGraph
 ---@param pi integer
 ---@return nothing
 function PercentGraph(pi)
-	if ThirdColumn[pi] == nil and EnsureMultiboardPlayerRow(pi) == nil then
-		return
+	local ownerIndex = MultiboardItemOwnerIndex[pi]
+	if ownerIndex == nil and EnsureMultiboardPlayerRow(pi) == nil then return end
+	local item = ThirdColumn[pi]
+	if item == nil and ownerIndex ~= nil then
+		item = MultiboardGetItem(Multiboard, ownerIndex, 2)
+		ThirdColumn[pi] = item
 	end
-	MultiboardSetItemValue(ThirdColumn[pi], R2SW_Polyfill(I2R(CityPlayerCount[pi]) * 100.0 / I2R(CityCount)) .. "%")
+	if item ~= nil then
+		local count = CityCount or 0
+		local pct = count > 0 and I2R(CityPlayerCount[pi] or 0) * 100.0 / I2R(count) or 0.0
+		MultiboardSetItemValue(item, R2SW_Polyfill(pct) .. "%")
+	end
 end
 ---@param pi integer
 ---@return nothing
 function ArmyExpGraph(pi)
-	if ArmyPowerColumn[pi] == nil and EnsureMultiboardPlayerRow(pi) == nil then
-		return
+	local ownerIndex = MultiboardItemOwnerIndex[pi]
+	if ownerIndex == nil and EnsureMultiboardPlayerRow(pi) == nil then return end
+	local item = ArmyPowerColumn[pi]
+	if item == nil and ownerIndex ~= nil then
+		item = MultiboardGetItem(Multiboard, ownerIndex, 3)
+		ArmyPowerColumn[pi] = item
 	end
-	MultiboardSetItemValue(ArmyPowerColumn[pi], R2SW_Polyfill(ArmyExp[pi]))
+	if item ~= nil then MultiboardSetItemValue(item, R2SW_Polyfill(ArmyExp[pi] or 0.001)) end
 end
 ---@param pi integer
 ---@return nothing
 function UpdateGraf(pi)
 	local p = Player(pi)
 	local ownerIndex = EnsureMultiboardPlayerRow(pi)
-	local r = R2I(udg_UnitsCount[pi] / 25.00)
+	local r = R2I((udg_UnitsCount[pi] or 0) / 25.00)
 	logistic[pi] = (500 + 100 * (r - 1)) / 2 * r	--  ??????????
 	
 	-- ????? ??????????? ????????
-	if GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) >= 1 then
+	if (udg_MainPrice[pi] or 0) ~= 0 and GetPlayerTechCount(p, FourCC('R0DV'), true) + GetPlayerTechCount(p, FourCC('R0GZ'), true) >= 1 then
 		additional[pi] = disincome[pi] * (udg_MainPrice[pi] / (-100.0))
 	end
 	
@@ -9955,11 +10010,12 @@ function UpdateGraf(pi)
 	if ownerIndex == nil then
 		return
 	end
-	MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi]))
+	MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi] or 0))
 	PercentGraph(pi)
 	ArmyExpGraph(pi)
 	
 end
+
 -- ***************************************************************************
 -- *  Enter
 ---@param u unit
@@ -9975,10 +10031,11 @@ function Enter(u)
 	if ownerIndex == nil then
 		return
 	end
-	MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi]))
+	MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi] or 0))
 	
 	
 end
+
 -- ***************************************************************************
 -- *  Settings
 ---@return nothing
@@ -10013,6 +10070,7 @@ function AddCountDis(u, pi)
 		return 
 	end
 	if income[pi] == nil then return end
+	udg_UnitsCount[pi] = udg_UnitsCount[pi] or 0
 	
 	--  ???? ?????? ??? ??? ?????????
 	if IsUnitType(u, UNIT_TYPE_STRUCTURE) or GetUnitAbilityLevel(u, FourCC('A1IJ')) > 0 then
@@ -10094,7 +10152,7 @@ function AddCountDis(u, pi)
 	
 	
 	
-	UpdateGraf(pi)
+	if MultiboardItemOwnerIndex[pi] ~= nil then UpdateGraf(pi) end
 	
 end
 ---@param u unit
@@ -10108,6 +10166,7 @@ function DelCountDis(u, pi)
 		return 
 	end
 	if income[pi] == nil then return end
+	udg_UnitsCount[pi] = udg_UnitsCount[pi] or 0
 	
 	
 	-- ????
@@ -10198,7 +10257,7 @@ function DelCountDis(u, pi)
 		
 	end
 	
-	UpdateGraf(pi)
+	if MultiboardItemOwnerIndex[pi] ~= nil then UpdateGraf(pi) end
 	u = nil
 end
 ---@return nothing
@@ -10256,6 +10315,7 @@ end
 ---@return nothing
 function ClearPlayer(p)
 	local pi = GetPlayerId(p)
+	if pi < 0 or pi > 23 then return end
 	local g = CreateGroup()
 	
 	GroupEnumUnitsOfPlayer(g, p, nil)
@@ -10272,6 +10332,7 @@ function ClearPlayer(p)
 	-- Without this, a defeated bot keeps getting perceive/produce/build ticks every
 	-- cycle — wasted CPU and a chance for AiEnsureCapital to re-adopt a stray unit.
 	if AiBrainBotListRemove ~= nil then AiBrainBotListRemove(pi) end
+	DestroyGroup(g)
 	UpdateGraf(pi)
 	playerCapital[pi] = nil
 	ArmyExp[pi] = 0.0
@@ -10312,9 +10373,9 @@ function ClearPlayer(p)
 	ForceClear(Vassals[pi])
 	Senior[pi] = nil
 	
-	DestroyGroup(g)
 	g = nil
 end
+
 -- ***************************************************************************
 -- *  TimedUpdate
 ---@param u unit
@@ -11045,6 +11106,7 @@ function HordeW2ApplySubraceRoster(p)
 	SetPlayerTechMaxAllowedSwap(FourCC('xd05'), 0, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('xd06'), 0, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('xd07'), 0, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('W200'), 1, p)
 
 	SetPlayerTechMaxAllowedSwap(FourCC('w201'), -1, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('w202'), -1, p)
@@ -11056,14 +11118,14 @@ function HordeW2ApplySubraceRoster(p)
 	-- Heroes (uppercase rawcodes). All branches keep W200 + W201 (Cho'gall).
 	-- The 3rd slot: W202 Troll Leader on base/dragonmaw, W203 Maim on Dark Horde
 	-- (full unit swap, same altar card slot — never both visible).
-	SetPlayerTechMaxAllowedSwap(FourCC('W201'), -1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('W202'), -1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('W201'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('W202'), 1, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('W203'), 0, p)
 
 	if subrace == "dark" then
 		-- Dark Horde replaces the Troll Leader with Maim Blackhand.
 		SetPlayerTechMaxAllowedSwap(FourCC('W202'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('W203'), -1, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('W203'), 1, p)
 		SetPlayerTechMaxAllowedSwap(FourCC('w202'), 0, p)
 		SetPlayerTechMaxAllowedSwap(FourCC('w205'), 0, p)
 		SetPlayerTechMaxAllowedSwap(FourCC('w206'), 0, p)
@@ -11074,7 +11136,7 @@ function HordeW2ApplySubraceRoster(p)
 		SetPlayerTechMaxAllowedSwap(FourCC('xd07'), -1, p)
 	elseif subrace == "dragonmaw" then
 		SetPlayerTechMaxAllowedSwap(FourCC('w201'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('w203'), 0, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('W203'), 0, p)
 		SetPlayerTechMaxAllowedSwap(FourCC('w205'), 0, p)
 		SetPlayerTechMaxAllowedSwap(FourCC('xd04'), -1, p)
 		SetPlayerTechMaxAllowedSwap(FourCC('xd05'), -1, p)
@@ -15591,6 +15653,7 @@ end
 ---@return nothing
 function FixEcEnum()
 	local u = GetEnumUnit()
+	if u == nil or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then return end
 	local pi = GetPlayerId(GetOwningPlayer(u))
 	
 	if GetUnitAbilityLevel(u, FourCC('AHad')) > 0 then
@@ -15609,11 +15672,12 @@ end
 ---@return nothing
 function FixEc(pi)
 	local r
+	if pi < 0 or pi > 23 then return end
 	local g = CreateGroup()
 	ClearEc(pi)
 	
 	
-	GroupEnumUnitsOfPlayer(g, Player(pi), b)
+	GroupEnumUnitsOfPlayer(g, Player(pi), nil)
 	ForGroup(g, FixEcEnum)
 	
 	if udg_GameMode == 3 then
@@ -15623,8 +15687,6 @@ function FixEc(pi)
 	
 	DestroyGroup(g)
 	g = nil
-	DestroyBoolExpr(b)
-	b = nil
 end
 ---@return nothing
 function FixEcAll()
@@ -15633,10 +15695,9 @@ function FixEcAll()
 	
 	
 	while true do
-		if i >= 23 then break end
+		if i >= 24 then break end
 		
 		FixEc(i)
-		DisplayTextToPlayer(Player(i), 0, 0, "????????? ???? ??????? ??????????? ????? ???????? ?????????????? ?????, ??? ???????????????? ???????")
 		i = i + 1
 	end
 	
@@ -16388,6 +16449,7 @@ function InitTrig_Demontag()
         Trig_Demontag_Actions()
     end)
 end
+
 -- ===========================================================================
 --  Trigger: ResoursesInterface Copy
 -- ===========================================================================
@@ -16396,6 +16458,7 @@ function Trig_ResoursesInterface_Copy_Actions()
 	
 	local p = GetLocalPlayer()
 	local pi = GetPlayerId(p)
+	if pi < 0 or pi > 23 then return end
 	local text
 	local text2
 	local other = corruption[pi] + additional[pi]
@@ -16598,9 +16661,10 @@ function Trig_StartLobby_Actions()
 	TriggerSleepAction(I2R(udg_LocalInteger))
 	ForForce(udg_AllPlayers, Trig_StartLobby_Func015A)
 	RemoveLocation(udg_LocalPosition2)
-	StartTimerBJ(udg_LobbyTime, false, 60.00)
-	CreateTimerDialogBJ(GetLastCreatedTimerBJ(), "TRIGSTR_19360")
-	udg_LobbyTimerWindows = GetLastCreatedTimerDialogBJ()
+	TimerStart(udg_LobbyTime, 60.00, false, nil)
+	udg_LobbyTimerWindows = CreateTimerDialog(udg_LobbyTime)
+	TimerDialogSetTitle(udg_LobbyTimerWindows, GetLocalizedString("TRIGSTR_19360"))
+	TimerDialogDisplay(udg_LobbyTimerWindows, true)
 	CreateNUnitsAtLoc(1, FourCC('n04G'), Player(0), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
 	ModeBuilding = GetLastCreatedUnit()
 	SelectUnitForPlayerSingle(GetLastCreatedUnit(), Player(0))
@@ -16666,7 +16730,7 @@ end
 ---@return boolean
 ---@return nothing
 function Trig_AddMinute_Actions()
-	StartTimerBJ(udg_LobbyTime, false, TimerGetRemaining(udg_LobbyTime) + 60.00)
+	TimerStart(udg_LobbyTime, TimerGetRemaining(udg_LobbyTime) + 60.00, false, nil)
 	DisableTrigger(GetTriggeringTrigger())
 end
 -- ===========================================================================
@@ -16685,7 +16749,7 @@ end
 ---@return boolean
 ---@return nothing
 function Trig_StartGameFast_Actions()
-	StartTimerBJ(udg_LobbyTime, false, 5.00)
+	TimerStart(udg_LobbyTime, 5.00, false, nil)
 end
 -- ===========================================================================
 ---@return nothing
@@ -17496,23 +17560,22 @@ end
 ---@return nothing
 function ExpandTable()
 	local i = 0
-	local l__max = 1
 	MultiboardSetColumnCount(Multiboard, 3)
 	
 	
-	ThirdColumn[24] = MultiboardGetItem(Multiboard, 0, 2)
-	MultiboardSetItemValue(ThirdColumn[24], "Точек,%")
-	MultiboardSetItemWidth(ThirdColumn[24], 0.06)
-	MultiboardReleaseItem(ThirdColumn[24])
+	ThirdColumnHeader = MultiboardGetItem(Multiboard, 0, 2)
+	MultiboardSetItemValue(ThirdColumnHeader, "Точек,%")
+	MultiboardSetItemWidth(ThirdColumnHeader, 0.06)
+	MultiboardReleaseItem(ThirdColumnHeader)
 	
 	while true do
 		if i > 23 then break end
 		CityPlayerCount[i] = 0
-		if GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING or IsPlayerInForce(Player(i), udg_Bots) then
-			ThirdColumn[i] = MultiboardGetItem(Multiboard, l__max, 2)
+		local ownerIndex = MultiboardItemOwnerIndex[i]
+		if ownerIndex ~= nil then
+			ThirdColumn[i] = MultiboardGetItem(Multiboard, ownerIndex, 2)
 			MultiboardSetItemValue(ThirdColumn[i], "0.000%")
 			MultiboardSetItemWidth(ThirdColumn[i], 0.06)
-			l__max = l__max + 1
 		end
 		i = i + 1
 		
@@ -17874,7 +17937,7 @@ function Trig_Continents_set_On_Actions()
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
     EnableTrigger(gg_trg_LeaveNeadedRegions)
     ForGroupBJ(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Continents_set_On_Func013001002)), Trig_Continents_set_On_Func013A)
-    StartTimerBJ(udg_TimerToCont, false, 0.50)
+    TimerStart(udg_TimerToCont, 0.50, false, nil)
 end
 --===========================================================================
 function InitTrig_Continents_set_On()
@@ -19113,12 +19176,14 @@ function Trig_Timer_Func009C()
 end
 function Trig_Timer_Actions()
     udg_AllPlayers=GetPlayersAll()
-    StartTimerBJ(udg_IncomeTimerSecond, true, I2R(udg_SET_TimerTime))
-    CreateTimerDialogBJ(GetLastCreatedTimerBJ(), "TRIGSTR_4633")
-    udg_TimerSecond=GetLastCreatedTimerDialogBJ()
-    StartTimerBJ(udg_IncomeTimerFirst, false, 600.00)
-    CreateTimerDialogBJ(GetLastCreatedTimerBJ(), "TRIGSTR_7397")
-    udg_TimerToDis=GetLastCreatedTimerDialogBJ()
+    TimerStart(udg_IncomeTimerSecond, I2R(udg_SET_TimerTime), true, nil)
+    udg_TimerSecond=CreateTimerDialog(udg_IncomeTimerSecond)
+    TimerDialogSetTitle(udg_TimerSecond, GetLocalizedString("TRIGSTR_4633"))
+    TimerDialogDisplay(udg_TimerSecond, true)
+    TimerStart(udg_IncomeTimerFirst, 600.00, false, nil)
+    udg_TimerToDis=CreateTimerDialog(udg_IncomeTimerFirst)
+    TimerDialogSetTitle(udg_TimerToDis, GetLocalizedString("TRIGSTR_7397"))
+    TimerDialogDisplay(udg_TimerToDis, true)
     if Trig_Timer_Func009C() then
         ForForce(udg_AllPlayers, Trig_Timer_Func009Func001A)
     end
@@ -19135,7 +19200,7 @@ end
 function Trig_ChangeTimerHost_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_19902")
     udg_SET_TimerTime=S2I(SubStringBJ(GetEventPlayerChatString(), 7, 8))
-    StartTimerBJ(udg_IncomeTimerSecond, true, I2R(udg_SET_TimerTime))
+    TimerStart(udg_IncomeTimerSecond, I2R(udg_SET_TimerTime), true, nil)
 end
 --===========================================================================
 function InitTrig_ChangeTimerHost()
@@ -19162,6 +19227,7 @@ function InitTrig_DisIncomeStart()
     TriggerRegisterTimerExpireEventBJ(gg_trg_DisIncomeStart, udg_IncomeTimerFirst)
     TriggerAddAction(gg_trg_DisIncomeStart, Trig_DisIncomeStart_Actions)
 end
+
 --===========================================================================
 -- Trigger: Globals
 --===========================================================================
@@ -19176,40 +19242,42 @@ end
 ---@return nothing
 function InitColorCommands()
 	local COLOR_MAP = {
-		[" - colorred"] = PLAYER_COLOR_RED,
-		[" - colorblue"] = PLAYER_COLOR_BLUE,
-		[" - colorpurple"] = PLAYER_COLOR_PURPLE,
-		[" - colorteal"] = PLAYER_COLOR_CYAN,
-		[" - coloryellow"] = PLAYER_COLOR_YELLOW,
-		[" - colororange"] = PLAYER_COLOR_ORANGE,
-		[" - colorgreen"] = PLAYER_COLOR_GREEN,
-		[" - colorpink"] = PLAYER_COLOR_PINK,
-		[" - colorgray"] = PLAYER_COLOR_LIGHT_GRAY,
-		[" - colorlight - blue"] = PLAYER_COLOR_LIGHT_BLUE,
-		[" - colordark - green"] = PLAYER_COLOR_AQUA,
-		[" - colorbrown"] = PLAYER_COLOR_BROWN,
-		[" - colormaroon"] = PLAYER_COLOR_MAROON,
-		[" - colornavy"] = PLAYER_COLOR_NAVY,
-		[" - colorturquoise"] = PLAYER_COLOR_TURQUOISE,
-		[" - colorviolet"] = PLAYER_COLOR_VIOLET,
-		[" - colorwheat"] = PLAYER_COLOR_WHEAT,
-		[" - colorpeach"] = PLAYER_COLOR_PEACH,
-		[" - colormint"] = PLAYER_COLOR_MINT,
-		[" - colorlavender"] = PLAYER_COLOR_LAVENDER,
-		[" - colorcoal"] = PLAYER_COLOR_COAL,
-		[" - colorsnow"] = PLAYER_COLOR_SNOW,
-		[" - coloremerald"] = PLAYER_COLOR_EMERALD,
-		[" - colorpeanut"] = PLAYER_COLOR_PEANUT,
+		["-colorred"] = PLAYER_COLOR_RED,
+		["-colorblue"] = PLAYER_COLOR_BLUE,
+		["-colorpurple"] = PLAYER_COLOR_PURPLE,
+		["-colorteal"] = PLAYER_COLOR_CYAN,
+		["-coloryellow"] = PLAYER_COLOR_YELLOW,
+		["-colororange"] = PLAYER_COLOR_ORANGE,
+		["-colorgreen"] = PLAYER_COLOR_GREEN,
+		["-colorpink"] = PLAYER_COLOR_PINK,
+		["-colorgray"] = PLAYER_COLOR_LIGHT_GRAY,
+		["-colorlight-blue"] = PLAYER_COLOR_LIGHT_BLUE,
+		["-colordark-green"] = PLAYER_COLOR_AQUA,
+		["-colorbrown"] = PLAYER_COLOR_BROWN,
+		["-colormaroon"] = PLAYER_COLOR_MAROON,
+		["-colornavy"] = PLAYER_COLOR_NAVY,
+		["-colorturquoise"] = PLAYER_COLOR_TURQUOISE,
+		["-colorviolet"] = PLAYER_COLOR_VIOLET,
+		["-colorwheat"] = PLAYER_COLOR_WHEAT,
+		["-colorpeach"] = PLAYER_COLOR_PEACH,
+		["-colormint"] = PLAYER_COLOR_MINT,
+		["-colorlavender"] = PLAYER_COLOR_LAVENDER,
+		["-colorcoal"] = PLAYER_COLOR_COAL,
+		["-colorsnow"] = PLAYER_COLOR_SNOW,
+		["-coloremerald"] = PLAYER_COLOR_EMERALD,
+		["-colorpeanut"] = PLAYER_COLOR_PEANUT,
 	}
 
 	local t = CreateTrigger()
 	for i = 0, 23 do
-		for cmd, _ in pairs(COLOR_MAP) do
-			TriggerRegisterPlayerChatEvent(t, Player(i), cmd, true)
-		end
+		TriggerRegisterPlayerChatEvent(t, Player(i), "color", true)
 	end
 	TriggerAddAction(t, function()
-		local color = COLOR_MAP[GetEventPlayerChatString()]
+		local command = string.lower(string.gsub(GetEventPlayerChatString(), "%s+", ""))
+		if string.sub(command, 1, 1) ~= "-" then
+			command = "-" .. command
+		end
+		local color = COLOR_MAP[command]
 		if color then
 			SetPlayerColorBJ(GetTriggerPlayer(), color, true)
 		end
@@ -19280,12 +19348,12 @@ function EnsureMultiboardPlayerRow(pi)
     MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi] or 0))
     MultiboardSetItemWidth(MultiboardItem[ownerIndex * 2 + 1], 0.06)
 
-    if ThirdColumn[24] ~= nil then
+    if ThirdColumnHeader ~= nil then
         ThirdColumn[pi]=MultiboardGetItem(Multiboard, ownerIndex, 2)
         MultiboardSetItemValue(ThirdColumn[pi], "0.000%")
         MultiboardSetItemWidth(ThirdColumn[pi], 0.06)
     end
-    if ArmyPowerColumn[24] ~= nil then
+    if ArmyPowerColumnHeader ~= nil then
         ArmyPowerColumn[pi]=MultiboardGetItem(Multiboard, ownerIndex, 3)
         MultiboardSetItemValue(ArmyPowerColumn[pi], R2SW_Polyfill(ArmyExp[pi] or 0.001))
         MultiboardSetItemWidth(ArmyPowerColumn[pi], 0.06)
@@ -19294,6 +19362,10 @@ function EnsureMultiboardPlayerRow(pi)
     return ownerIndex
 end
 function Trig_StartTableCode_Actions()
+	if Multiboard ~= nil then
+		MultiboardDisplay(Multiboard, true)
+		return
+	end
     local i= 0
     udg_PlayersCount=CountPlayersInForceBJ(GetPlayersMatching(Condition(ActivePlayers)))
     udg_PlayersCount=udg_PlayersCount + CountPlayersInForceBJ(udg_Bots)
@@ -19310,6 +19382,7 @@ function Trig_StartTableCode_Actions()
     MultiboardSetItemWidth(MultiboardItem[1], 0.06)
     MultiboardReleaseItem(MultiboardItem[0])
     MultiboardReleaseItem(MultiboardItem[1])
+    max = 0
     while true do
         if GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING or IsPlayerInForce(Player(i), udg_Bots) or udg_AiControl[i] then
             max=max + 1
@@ -19321,7 +19394,7 @@ function Trig_StartTableCode_Actions()
             --set udg_LocalText2 = SubString(udg_LocalText2, 0, StringLength(udg_LocalText2)-4 )
             MultiboardSetItemValue(MultiboardItem[max * 2], PlayerColorHexWrap(Player(i), udg_LocalText2))
             MultiboardSetItemWidth(MultiboardItem[max * 2], 0.14)
-            MultiboardSetItemValue(MultiboardItem[max * 2 + 1], "0")
+            MultiboardSetItemValue(MultiboardItem[max * 2 + 1], I2S(udg_UnitsCount[i] or 0))
             MultiboardSetItemWidth(MultiboardItem[max * 2 + 1], 0.06)
         end
         i=i + 1
@@ -19363,7 +19436,7 @@ end
 function Trig_UnitsToBuildingSituation2_Actions()
     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] - 1
-    MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
+    UpdateGraf(i)
     i=0
 end
 --===========================================================================
@@ -19385,7 +19458,7 @@ end
 function Trig_CanselSituation2_Actions()
     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 1
-    MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
+    UpdateGraf(i)
     i=0
 end
 --===========================================================================
@@ -20975,7 +21048,7 @@ function Trig_Spell_Copy_Actions()
     udg_Dummy[1]=GetLastCreatedUnit()
     CreateNUnitsAtLoc(1, FourCC('h0MJ'), GetOwningPlayer(udg_Caster), PolarProjectionBJ(udg_To4kaCaster, 100.00, 240.00), bj_UNIT_FACING)
     udg_Dummy[2]=GetLastCreatedUnit()
-    StartTimerBJ(udg_Timer, true, 0.03)
+    TimerStart(udg_Timer, 0.03, true, nil)
 end
 --===========================================================================
 function InitTrig_Spell_Copy()
@@ -21509,6 +21582,7 @@ function InitTrig_Aura_Flagmana_Stoikost_O()
         Trig_Aura_Flagmana_Stoikost_O_Actions()
     end)
 end
+
 --===========================================================================
 -- Trigger: Init
 --===========================================================================
@@ -23848,7 +23922,7 @@ end
 -- Trigger: LimitHero Exep
 --===========================================================================
 function Trig_LimitHero_Exep_Conditions()
-    return IsUnitType(GetTrainedUnit(), UNIT_TYPE_HERO)
+    return IsUnitIdType(GetTrainedUnitType(), UNIT_TYPE_HERO)
 end
 function Trig_LimitHero_Exep_Actions()
     SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), GetTrainedUnitType(), 1)
@@ -24896,6 +24970,7 @@ function InitTrig_Pribavka_k_zoloty()
         Trig_Pribavka_k_zoloty_Actions()
     end)
 end
+
 --===========================================================================
 -- Trigger: StromgardOn
 --===========================================================================
@@ -26379,6 +26454,7 @@ end
 ---@param p player
 ---@return nothing
 function HordeW2EnableSubraceChoice(p)
+    HordeW2ApplySubraceRoster(p)
     SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 1, p)
     SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 1, p)
 end
@@ -42472,7 +42548,7 @@ function Trig_Dovorougenie_3t_O_Actions()
         SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
     end
 end
-    MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
+    UpdateGraf(i)
     i=0
 end
 --===========================================================================
@@ -42877,6 +42953,7 @@ function InitTrig_AreaOfDeath2()
         Trig_AreaOfDeath2_Actions()
     end)
 end
+
 --===========================================================================
 -- Trigger: Global
 --===========================================================================
@@ -43666,7 +43743,6 @@ function Trig_StartBuildingTree_Actions()
     disincome[pi]=disincome[pi] - 6
     udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
     UpdateGraf(pi)
-    Enter(GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_StartBuildingTree()
@@ -43689,7 +43765,6 @@ function Trig_CanselBuildingTree_Actions()
     disincome[pi]=disincome[pi] + 6
     udg_UnitsCount[pi]=udg_UnitsCount[pi] + 1
     UpdateGraf(pi)
-    Enter(GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_CanselBuildingTree()
@@ -43714,6 +43789,7 @@ function InitTrig_GuadrianSpell()
         Trig_GuadrianSpell_Actions()
     end)
 end
+
 --===========================================================================
 -- Trigger: NagaStart
 --===========================================================================
@@ -45647,7 +45723,6 @@ function Trig_StartBuildingDEmon_Actions()
     disincome[pi]=disincome[pi] - 6
     udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
     UpdateGraf(pi)
-    Enter(GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_StartBuildingDEmon()
@@ -45668,7 +45743,6 @@ function Trig_CanselBuilding_Copy_Actions()
     udg_UnitsCount[pi]=udg_UnitsCount[pi] + 1
     disincome[pi]=disincome[pi] + 6
     UpdateGraf(pi)
-    Enter(GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_CanselBuilding_Copy()
@@ -45955,6 +46029,7 @@ function InitTrig_SomeDemonSpell()
         Trig_SomeDemonSpell_Actions()
     end)
 end
+
 --===========================================================================
 -- Trigger: Units
 --===========================================================================
@@ -46705,7 +46780,7 @@ function Trig_Spell_E_Copy_Actions()
     PauseUnitBJ(true, udg_Caster_E_Glaz[udg_MUI_E_Glaz])
     SetUnitAnimation(udg_Caster_E_Glaz[udg_MUI_E_Glaz], "attackwalkstandspin")
     udg_Logika_E_Glaz[udg_MUI_E_Glaz]=true
-    StartTimerBJ(udg_Timer_E_Glaz, true, 0.03)
+    TimerStart(udg_Timer_E_Glaz, 0.03, true, nil)
 end
 --===========================================================================
 function InitTrig_Spell_E_Copy()
@@ -46992,6 +47067,7 @@ function InitTrig_TakenDamage()
     TriggerAddCondition(gg_trg_TakenDamage, Condition(Trig_TakenDamage_Conditions))
     TriggerAddAction(gg_trg_TakenDamage, Trig_TakenDamage_Actions)
 end
+
 --===========================================================================
 -- Trigger: LordWave
 --===========================================================================
@@ -52856,7 +52932,12 @@ function AiRunChooseBuildings(pi, def)
     if list.seed ~= nil and AiCountBuildingOrders(pi, list.seed) < (list.seedLimit or 1) then
         AddBuilding(list.seed, 1)
     end
+    local rows = {}
     for _, row in ipairs(list) do
+        rows[#rows + 1] = row
+    end
+    table.sort(rows, function(a, b) return a[1] < b[1] end)
+    for _, row in ipairs(rows) do
         local gateOk = true
         if row.gate ~= nil then
             local g = def.gates and def.gates[row.gate]
@@ -61365,6 +61446,13 @@ function AiBrainLogFlush()
     AiBrainLogBuf = {}
 end
 
+function AiBrainSortedKeys(t)
+    local keys = {}
+    for key in pairs(t) do keys[#keys + 1] = key end
+    table.sort(keys)
+    return keys
+end
+
 -- Tunables: set via bridge live (AiBrainBatchSize=6) or leave defaults.
 -- All values affect the unified brain tick only; swarm mode ignores them.
 AiBrainBatchSize       = AiBrainBatchSize       or 1   -- bots processed per PlayerGet1 fire
@@ -61417,13 +61505,6 @@ AiBrainNavalEvery      = AiBrainNavalEvery      or 4   -- naval-check every N br
 AiBrainNavalStartTick  = AiBrainNavalStartTick  or 12  -- first naval check after N brain-ticks (lowered
                                                        -- 23->12: start the fleet ~2x sooner)
 AiBrainMaxPorts        = AiBrainMaxPorts        or 20  -- max shipyards/ports per bot
-AiMaxHeroes            = AiMaxHeroes            or 3   -- safety ceiling on a bot's TOTAL heroes. The
-                                                       -- REAL limit is the hero FOOD budget (cap ceiling
-                                                       -- 3; army costs 0 food, a hero ~2 → ~1 hero),
-                                                       -- now applied to bots in createAiPlayer. This
-                                                       -- count is just a backstop = the 3-food ceiling.
-                                                       -- Per-race override race.maxHeroes (Dragons=1,
-                                                       -- whose altar heroes are mutually exclusive).
 AiBrainLandingEvery     = AiBrainLandingEvery     or 6   -- landing tick every N brain-ticks (was 16 ->
                                                          -- ~2.7min/step; phased desant needs to step
                                                          -- through toEmbark/loading/loaded faster)
@@ -61968,10 +62049,11 @@ end
 -- at the capital forever, just soaking up tryBuy items (live: pi=7's 2 heroes sat full-
 -- inventory at the BrokenIsles portal while the army was elsewhere). Enlist any live hero
 -- not yet in the army so it marches and fights with everyone else. 1 bot/tick (amortized).
-AiBrainHeroEnumGrp = AiBrainHeroEnumGrp or CreateGroup()
+AiBrainHeroEnumGrp = AiBrainHeroEnumGrp or nil
 function AiBrainEnlistHeroes(pi)
     local army = udg_Ai_army[pi]
     if army == nil then return end
+    if AiBrainHeroEnumGrp == nil then AiBrainHeroEnumGrp = CreateGroup() end
     local g = AiBrainHeroEnumGrp
     GroupClear(g)
     GroupEnumUnitsOfPlayer(g, Player(pi), LiveHero)
@@ -61988,11 +62070,12 @@ end
 
 -- One enum of the player's units → { [unitTypeId] = aliveCount }. Reused table to avoid
 -- per-tick garbage. Ground truth for cap/limit checks where the drifting g_AiCounts lies.
-AiBrainAcountGrp = AiBrainAcountGrp or CreateGroup()
+AiBrainAcountGrp = AiBrainAcountGrp or nil
 function AiBrainActualCounts(pi, reuse)
     local t = reuse or {}
     for k in pairs(t) do t[k] = nil end
     local army = udg_Ai_army[pi]
+    if AiBrainAcountGrp == nil then AiBrainAcountGrp = CreateGroup() end
     local g = AiBrainAcountGrp
     GroupClear(g)
     GroupEnumUnitsOfPlayer(g, Player(pi), nil)
@@ -62244,7 +62327,10 @@ function AiSquadAssign(pi, u)
         if target > (AiGarrisonMax or 9999) then target = AiGarrisonMax end
         if target >= 1 then
             local defSq = nil
-            for _, sq in pairs(squads) do if sq.role == "defense" then defSq = sq; break end end
+            for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+                local sq = squads[sid]
+                if sq.role == "defense" then defSq = sq; break end
+            end
             if defSq == nil then
                 local sid = AiSquadNextId(pi)
                 local g = CreateGroup(); GroupAddUnit(g, u)
@@ -62266,7 +62352,8 @@ function AiSquadAssign(pi, u)
     local assaultCount = 0
     local roomSid, roomDist = nil, 1.0e30   -- nearest assault squad with room
     local anySid, anyDist = nil, 1.0e30     -- nearest assault squad of any (overflow fallback)
-    for sid, sq in pairs(squads) do
+    for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+        local sq = squads[sid]
         if sq.role == "assault" then
             assaultCount = assaultCount + 1
             local cx, cy, _ = AiGroupCentroid(sq.members)
@@ -62300,7 +62387,8 @@ end
 function AiSquadReapDead(pi)
     local squads = AiSquadsOf(pi)
     local toRemove = {}
-    for sid, sq in pairs(squads) do
+    for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+        local sq = squads[sid]
         local g = sq.members
         -- Snapshot size ONCE, collect dead, then remove. The old loop re-read
         -- BlzGroupGetSize every iteration and did GroupRemoveUnit WITHOUT advancing i —
@@ -62397,7 +62485,8 @@ function AiSquadFsmTick(pi, p, wm)
         }
     end
     local squads = AiSquadsOf(pi)
-    for sid, sq in pairs(squads) do
+    for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+        local sq = squads[sid]
         if sq ~= nil and sq.members ~= nil then
             AiCompactGroup(sq.members)  -- purge nil/dead BEFORE any handler reads the group
             if AiSquadSize(sq.members) > 0 then
@@ -62426,7 +62515,10 @@ function AiSquadPickObj(pi, sq, wm)
     local best, bestScore = nil, -1e30
     for _, o in ipairs(objs) do
         o.score = AiObjScore(pi, wm, o)
-        if o.score > bestScore then best = o; bestScore = o.score end
+        if o.score > bestScore or (o.score == bestScore and best ~= nil and o.stableKey < best.stableKey) then
+            best = o
+            bestScore = o.score
+        end
     end
     return best and bestScore > 0 and best or nil
 end
@@ -62451,7 +62543,9 @@ end
 ---@return real
 function AiObjCommittedPower(pi, o)
     local pwr = 0.0
-    for _, sq in pairs(AiSquadsOf(pi)) do
+    local squads = AiSquadsOf(pi)
+    for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+        local sq = squads[sid]
         if sq.objective ~= nil and sq.objective.key == o.key then
             pwr = pwr + AiSquadPower(sq.members)
         end
@@ -62625,11 +62719,15 @@ function AiObjCandidates()
     local seen = {}
     local function add(u, kind)
         if u == nil or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then return end
-        local hid = GetHandleId(u)
-        if seen[hid] then return end
-        seen[hid] = true
-        list[#list + 1] = { x = GetUnitX(u), y = GetUnitY(u), value = AiBldValueUnit(u),
-            owner = GetOwningPlayer(u), kind = kind }
+        if seen[u] then return end
+        seen[u] = true
+        local x, y = GetUnitX(u), GetUnitY(u)
+        local owner = GetOwningPlayer(u)
+        local typeId = GetUnitTypeId(u)
+        local stableKey = string.format("%02d:%08d:%+012.2f:%+012.2f:%s",
+            GetPlayerId(owner), typeId, x, y, kind)
+        list[#list + 1] = { stableKey = stableKey, x = x, y = y, value = AiBldValueUnit(u),
+            owner = owner, kind = kind }
     end
     -- capitals first so a unit present in both StolicaGroups and playerCapital[] keeps
     -- kind="capital" (and is not double-counted, unlike the old twin-scan).
@@ -62648,6 +62746,7 @@ function AiObjCandidates()
         local n = BlzGroupGetSize(zg)
         for i = 0, n - 1 do add(BlzGroupUnitAt(zg, i), "capture") end
     end
+    table.sort(list, function(a, b) return a.stableKey < b.stableKey end)
     c.list = list
     c.tick = now
     return list
@@ -62693,9 +62792,16 @@ function AiBrainCollectObjectives(pi, wm)
     end
 
     local objs = {}
-    for key, b in pairs(buckets) do
+    local bucketKeys = {}
+    for key in pairs(buckets) do
+        bucketKeys[#bucketKeys + 1] = key
+    end
+    table.sort(bucketKeys)
+    for _, key in ipairs(bucketKeys) do
+        local b = buckets[key]
         objs[#objs + 1] = {
-            key = key, kind = b.kind, count = b.count, value = b.value,
+            key = key, stableKey = string.format("%010d", key),
+            kind = b.kind, count = b.count, value = b.value,
             x = b.sx / b.count, y = b.sy / b.count, score = 0.0,
         }
     end
@@ -62797,7 +62903,10 @@ function AiBrainPickFocus(pi, wm)
     local cur, curScore = nil, nil
     for _, o in ipairs(objs) do
         o.score = AiObjScore(pi, wm, o)
-        if o.score > bestScore then best = o; bestScore = o.score end
+        if o.score > bestScore or (o.score == bestScore and best ~= nil and o.stableKey < best.stableKey) then
+            best = o
+            bestScore = o.score
+        end
         if wm.focusKey ~= nil and o.key == wm.focusKey then cur = o; curScore = o.score end
     end
     local margin = AiBrainCfg(pi).focusMargin or AiBrainDefaults.focusMargin
@@ -62845,7 +62954,10 @@ function AiBrainPickLandFocus(pi, wm, home)
     for _, o in ipairs(objs) do
         if reach(AiContinentOf(o.x, o.y)) then
             local s = o.score or AiObjScore(pi, wm, o)
-            if s > bestScore then bestScore = s; best = o end
+            if s > bestScore or (s == bestScore and best ~= nil and o.stableKey < best.stableKey) then
+                bestScore = s
+                best = o
+            end
         end
     end
     return best
@@ -63028,18 +63140,17 @@ function AiFindProdBuilding(pi, bldType, used)
     -- tick. Training from a >=99% barracks worked immediately.) Preferring max HP%
     -- skips constructing buildings whenever a completed one of the same type exists,
     -- and still returns the best available (e.g. a damaged-but-complete one) otherwise.
-    local best, bestPct = nil, -1.0
+    local best, bestPct, bestX, bestY = nil, -1.0, nil, nil
     for i = 0, sz - 1 do
         local u = BlzGroupUnitAt(grp, i)
         if u ~= nil and GetUnitTypeId(u) == bldType
             and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
             and (used == nil or not used[GetHandleId(u)]) then
             local pct = GetUnitStatePercent(u, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE)
-            if pct >= 99.0 then
-                if used ~= nil then used[GetHandleId(u)] = true end
-                return u  -- complete & healthy: take it immediately
+            local x, y = GetUnitX(u), GetUnitY(u)
+            if pct > bestPct or (pct == bestPct and (best == nil or x < bestX or (x == bestX and y < bestY))) then
+                best, bestPct, bestX, bestY = u, pct, x, y
             end
-            if pct > bestPct then best = u; bestPct = pct end
         end
     end
     if best ~= nil and used ~= nil then used[GetHandleId(best)] = true end
@@ -63347,7 +63458,7 @@ function BrainProduce(pi, wm, race)
 
     -- Per-tick set of production buildings already issued an order, so each train order this
     -- pass goes to a DIFFERENT building (parallel training instead of piling on one).
-    local usedBld = {}
+    local usedBldUnits = {}
     local ordered = 0
     local maxN = AiBrainMaxProduce
     local now = AiBrainTickCounter or 0
@@ -63368,6 +63479,20 @@ function BrainProduce(pi, wm, race)
             if type(k) == "number" then isBldType[k] = true end
         end
     end
+    local prodBuildingTypes = {}
+    for bldType in pairs(isBldType) do
+        prodBuildingTypes[#prodBuildingTypes + 1] = bldType
+    end
+    table.sort(prodBuildingTypes)
+    local compUnitTypes = {}
+    if comp then
+        for unitId in pairs(comp) do
+            if type(unitId) == "number" then
+                compUnitTypes[#compUnitTypes + 1] = unitId
+            end
+        end
+        table.sort(compUnitTypes)
+    end
 
     -- 1) Workers: train independently of compTarget, always up to cap
     local w = prod.worker
@@ -63375,7 +63500,7 @@ function BrainProduce(pi, wm, race)
         local wCnt = (wm.acount and wm.acount[w.id]) or 0  -- actual live count (getAiCount drifts)
         if wCnt < (w.cap or 40) then
             for _, fromBldType in ipairs(w.from) do
-                local bld = AiFindProdBuilding(pi, fromBldType, usedBld)
+                local bld = AiFindProdBuilding(pi, fromBldType, usedBldUnits)
                 if bld ~= nil then
                     local key = pi * 1000000 + w.id
                     local last = g_AiOrdered[key]
@@ -63398,24 +63523,8 @@ function BrainProduce(pi, wm, race)
     -- gold is short and retries next tick; issuing FIRST means the hero grabs gold before
     -- cheaper army orders spend it below the hero's cost.
     if race.altar ~= nil and prod[race.altar] ~= nil then
-        -- TOTAL hero cap. The map's LimitHero trigger only caps each hero TYPE to 1, with no
-        -- overall limit, so the bot trained ONE OF EVERY altar hero (Cult: CD01+CD02+CD03 = 3)
-        -- while a human picks a single hero. Count live + in-flight heroes across ALL altar rows
-        -- and stop at AiMaxHeroes so bots field the same hero count a player does. Tunable per
-        -- race later via race.maxHeroes if some race is meant to have more.
-        local heroMax = race.maxHeroes or AiMaxHeroes
-        local heroCount = 0
-        for _, row in ipairs(prod[race.altar]) do
-            local hid = row[1]
-            if hid ~= nil and hid ~= 0 then
-                heroCount = heroCount + ((wm.acount and wm.acount[hid]) or 0)
-                local ll = g_AiOrdered[pi * 1000000 + hid]
-                if ll ~= nil and (now - ll) < AiLimitedBuildTicks then heroCount = heroCount + 1 end
-            end
-        end
         for _, row in ipairs(prod[race.altar]) do
             if ordered >= maxN then break end
-            if heroCount >= heroMax then break end  -- bot already at its hero quota
             local hid = row[1]
             if hid ~= nil and hid ~= 0 then
                 local cur = (wm.acount and wm.acount[hid]) or 0  -- actual live count (getAiCount drifts → hero dupes)
@@ -63424,12 +63533,11 @@ function BrainProduce(pi, wm, race)
                 local ll = g_AiOrdered[lk]
                 local inFlight = (ll ~= nil and (now - ll) < AiLimitedBuildTicks) and 1 or 0
                 if cur + inFlight < lim then
-                    local bld = AiFindProdBuilding(pi, race.altar, usedBld)
+                    local bld = AiFindProdBuilding(pi, race.altar, usedBldUnits)
                     if bld ~= nil then
                         IssueImmediateOrderById(bld, hid)
                         g_AiOrdered[lk] = now
                         ordered = ordered + 1
-                        heroCount = heroCount + 1
                     end
                 end
             end
@@ -63468,11 +63576,11 @@ function BrainProduce(pi, wm, race)
     -- the trainable ones hit their ratio at 3-5 army and growth stalls.
     local trainableSum = 0.0
     local isTrainable = {}
-    for unitId, targetRatio in pairs(comp) do
-        if type(unitId) ~= "number" then goto nextSum end
+    for _, unitId in ipairs(compUnitTypes) do
+        local targetRatio = comp[unitId]
         -- Check if any building can produce this unit
-        for bldType, rows in pairs(prod) do
-            if bldType == "worker" then goto nextBldSum end
+        for _, bldType in ipairs(prodBuildingTypes) do
+            local rows = prod[bldType]
             if type(rows) ~= "table" then goto nextBldSum end
             if not isBldType[bldType] then goto nextBldSum end
             for _, row in ipairs(rows) do
@@ -63500,14 +63608,14 @@ function BrainProduce(pi, wm, race)
             ::found::
             ::nextBldSum::
         end
-        ::nextSum::
     end
     if trainableSum <= 0 then trainableSum = 1.0 end  -- avoid div/zero
 
     -- 2) Military: scan compTarget for deficit, find building, issue order
-    for unitId, targetRatio in pairs(comp) do
+    for _, unitId in ipairs(compUnitTypes) do
+        local targetRatio = comp[unitId]
         if ordered >= maxN then break end
-        if type(unitId) ~= "number" or targetRatio == nil then goto skipUnit end
+        if targetRatio == nil then goto skipUnit end
         if not isTrainable[unitId] then goto skipUnit end  -- R15: skip untrainable
 
         local current = (wm.acount and wm.acount[unitId]) or getAiCount(pi, unitId) or 0  -- actual live count
@@ -63518,8 +63626,8 @@ function BrainProduce(pi, wm, race)
         if currentRatio >= scaledTarget then goto skipUnit end
 
         -- Find which building produces this unit
-        for bldType, rows in pairs(prod) do
-            if bldType == "worker" then goto skipBld end
+        for _, bldType in ipairs(prodBuildingTypes) do
+            local rows = prod[bldType]
             if type(rows) ~= "table" then goto skipBld end
             if not isBldType[bldType] then goto skipBld end  -- R7: skip non-buildings (larva, eggs, etc.)
             for _, row in ipairs(rows) do
@@ -63536,7 +63644,7 @@ function BrainProduce(pi, wm, race)
                             local inFlight = (ll ~= nil and (now - ll) < AiLimitedBuildTicks) and 1 or 0
                             if current + inFlight >= row.limit then goto skipBld end
                         end
-                        local bld = AiFindProdBuilding(pi, bldType, usedBld)
+                        local bld = AiFindProdBuilding(pi, bldType, usedBldUnits)
                         if bld ~= nil then
                             local key = pi * 1000000 + unitId
                             local last = g_AiOrdered[key]
@@ -63561,7 +63669,7 @@ function BrainProduce(pi, wm, race)
                             local inFlight = (ll ~= nil and (now - ll) < AiLimitedBuildTicks) and 1 or 0
                             if current + inFlight >= row.limit then goto skipBld end
                         end
-                        local bld = AiFindProdBuilding(pi, bldType, usedBld)
+                        local bld = AiFindProdBuilding(pi, bldType, usedBldUnits)
                         if bld ~= nil then
                             local key = pi * 1000000 + unitId
                             local last = g_AiOrdered[key]
@@ -63634,6 +63742,11 @@ function BrainBuild(pi, wm, race)
             end
         end
     end
+    local prodBuildingTypes = {}
+    for bldType in pairs(prodKeys) do
+        prodBuildingTypes[#prodBuildingTypes + 1] = bldType
+    end
+    table.sort(prodBuildingTypes)
 
     local prodRows, otherRows = {}, {}
     for _, row in ipairs(buildOrder) do
@@ -64386,7 +64499,13 @@ function BrainWebPortalTick(pi, p, wm)
     local now = AiBrainTickCounter or 0
     -- Consider the biggest off-objective cluster first (most units to unstick).
     local bestCont, bestN
-    for c, b in pairs(buckets) do
+    local bucketKeys = {}
+    for c in pairs(buckets) do
+        bucketKeys[#bucketKeys + 1] = c
+    end
+    table.sort(bucketKeys)
+    for _, c in ipairs(bucketKeys) do
+        local b = buckets[c]
         if c ~= oc and (bestN == nil or b.n > bestN) then bestCont, bestN = c, b.n end
     end
     if bestCont == nil then return end               -- everyone already on the objective continent
@@ -64423,7 +64542,9 @@ function BrainWebPortalTick(pi, p, wm)
     -- squad(s) as a skip-set so the capital keeps its guard (live: a bot mass-TP'd its
     -- whole army incl. the defense squad across a continent, leaving the capital naked).
     local garrison = nil
-    for _, sq in pairs(AiSquadsOf(pi)) do
+    local squads = AiSquadsOf(pi)
+    for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+        local sq = squads[sid]
         if sq.role == "defense" and sq.members ~= nil then
             local gsz = BlzGroupGetSize(sq.members)
             for gi = 0, gsz - 1 do
@@ -64511,7 +64632,7 @@ function AiBrainPickLandingTarget(pi, wm)
             if obj.kind == "capital" then sc = sc * 3
             elseif obj.kind == "city" then sc = sc * 2
             end
-            if d > 3000 * 3000 and sc > bestScore then
+            if d > 3000 * 3000 and (sc > bestScore or (sc == bestScore and best ~= nil and obj.stableKey < best.stableKey)) then
                 bestScore = sc; best = obj; bestCont = objCont
             end
         end
@@ -64686,24 +64807,37 @@ function AiValidateRace(rk)
     -- order silently no-ops and the army never reaches target composition.
     local comp = race.compTarget
     if comp ~= nil and prod ~= nil then
-        for unitId, _ in pairs(comp) do
+        local validationProdTypes = {}
+        for bldType, rows in pairs(prod) do
+            if bldType ~= "worker" and type(rows) == "table" and type(bldType) == "number" then
+                validationProdTypes[#validationProdTypes + 1] = bldType
+            end
+        end
+        table.sort(validationProdTypes)
+        local compUnitTypes = {}
+        for unitId in pairs(comp) do
             if type(unitId) == "number" then
-                local found = false
-                for bldType, rows in pairs(prod) do
-                    if bldType ~= "worker" and type(rows) == "table" then
-                        for _, row in ipairs(rows) do
-                            if row[1] == unitId
-                                or (row.branch and (row.black == unitId or row.other == unitId)) then
-                                found = true; break
-                            end
+                compUnitTypes[#compUnitTypes + 1] = unitId
+            end
+        end
+        table.sort(compUnitTypes)
+        for _, unitId in ipairs(compUnitTypes) do
+            local found = false
+            for _, bldType in ipairs(validationProdTypes) do
+                local rows = prod[bldType]
+                if type(rows) == "table" then
+                    for _, row in ipairs(rows) do
+                        if row[1] == unitId
+                            or (row.branch and (row.black == unitId or row.other == unitId)) then
+                            found = true; break
                         end
                     end
-                    if found then break end
                 end
-                if not found then
-                    problems[#problems + 1] = "compTarget unit " .. tostring(unitId)
-                        .. " has no producer building"
-                end
+                if found then break end
+            end
+            if not found then
+                problems[#problems + 1] = "compTarget unit " .. tostring(unitId)
+                    .. " has no producer building"
             end
         end
     end
@@ -64896,7 +65030,9 @@ function AiBrainArmyTickInner(pi, p)
     if wm.objectives == nil or #wm.objectives == 0 then lap("other"); AiArmyLegacyTick(p); return end
 
     if wm.defendHome and wm.capX ~= nil then
-        for _, sq in pairs(AiSquadsOf(pi)) do
+        local squads = AiSquadsOf(pi)
+        for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+            local sq = squads[sid]
             if sq.role == "assault" and sq.state ~= "retreat" then
                 sq.state = "retreat"; sq.rally.x, sq.rally.y = wm.capX, wm.capY
             end
@@ -64916,7 +65052,8 @@ function AiBrainArmyTickInner(pi, p)
         if armyGroup ~= nil then
             local squads = AiSquadsOf(pi)
             local assignedGroup = CreateGroup()
-            for _, sq in pairs(squads) do
+            for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+                local sq = squads[sid]
                 local sz = BlzGroupGetSize(sq.members)
                 local j = 0
                 while j < sz do
