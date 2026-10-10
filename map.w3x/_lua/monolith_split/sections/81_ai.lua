@@ -134,7 +134,12 @@ function AiRunChooseBuildings(pi, def)
     if list.seed ~= nil and AiCountBuildingOrders(pi, list.seed) < (list.seedLimit or 1) then
         AddBuilding(list.seed, 1)
     end
+    local rows = {}
     for _, row in ipairs(list) do
+        rows[#rows + 1] = row
+    end
+    table.sort(rows, function(a, b) return a[1] < b[1] end)
+    for _, row in ipairs(rows) do
         local gateOk = true
         if row.gate ~= nil then
             local g = def.gates and def.gates[row.gate]

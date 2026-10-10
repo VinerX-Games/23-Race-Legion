@@ -30,6 +30,7 @@ end
 ---@return nothing
 function ClearPlayer(p)
 	local pi = GetPlayerId(p)
+	if pi < 0 or pi > 23 then return end
 	local g = CreateGroup()
 	
 	GroupEnumUnitsOfPlayer(g, p, nil)
@@ -46,6 +47,7 @@ function ClearPlayer(p)
 	-- Without this, a defeated bot keeps getting perceive/produce/build ticks every
 	-- cycle — wasted CPU and a chance for AiEnsureCapital to re-adopt a stray unit.
 	if AiBrainBotListRemove ~= nil then AiBrainBotListRemove(pi) end
+	DestroyGroup(g)
 	UpdateGraf(pi)
 	playerCapital[pi] = nil
 	ArmyExp[pi] = 0.0
@@ -86,6 +88,5 @@ function ClearPlayer(p)
 	ForceClear(Vassals[pi])
 	Senior[pi] = nil
 	
-	DestroyGroup(g)
 	g = nil
 end

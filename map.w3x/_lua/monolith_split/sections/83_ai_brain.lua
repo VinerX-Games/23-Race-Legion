@@ -98,6 +98,13 @@ function AiBrainLogFlush()
     AiBrainLogBuf = {}
 end
 
+function AiBrainSortedKeys(t)
+    local keys = {}
+    for key in pairs(t) do keys[#keys + 1] = key end
+    table.sort(keys)
+    return keys
+end
+
 -- Tunables: set via bridge live (AiBrainBatchSize=6) or leave defaults.
 -- All values affect the unified brain tick only; swarm mode ignores them.
 AiBrainBatchSize       = AiBrainBatchSize       or 1   -- bots processed per PlayerGet1 fire
@@ -150,13 +157,6 @@ AiBrainNavalEvery      = AiBrainNavalEvery      or 4   -- naval-check every N br
 AiBrainNavalStartTick  = AiBrainNavalStartTick  or 12  -- first naval check after N brain-ticks (lowered
                                                        -- 23->12: start the fleet ~2x sooner)
 AiBrainMaxPorts        = AiBrainMaxPorts        or 20  -- max shipyards/ports per bot
-AiMaxHeroes            = AiMaxHeroes            or 3   -- safety ceiling on a bot's TOTAL heroes. The
-                                                       -- REAL limit is the hero FOOD budget (cap ceiling
-                                                       -- 3; army costs 0 food, a hero ~2 → ~1 hero),
-                                                       -- now applied to bots in createAiPlayer. This
-                                                       -- count is just a backstop = the 3-food ceiling.
-                                                       -- Per-race override race.maxHeroes (Dragons=1,
-                                                       -- whose altar heroes are mutually exclusive).
 AiBrainLandingEvery     = AiBrainLandingEvery     or 6   -- landing tick every N brain-ticks (was 16 ->
                                                          -- ~2.7min/step; phased desant needs to step
                                                          -- through toEmbark/loading/loaded faster)
@@ -701,10 +701,11 @@ end
 -- at the capital forever, just soaking up tryBuy items (live: pi=7's 2 heroes sat full-
 -- inventory at the BrokenIsles portal while the army was elsewhere). Enlist any live hero
 -- not yet in the army so it marches and fights with everyone else. 1 bot/tick (amortized).
-AiBrainHeroEnumGrp = AiBrainHeroEnumGrp or CreateGroup()
+AiBrainHeroEnumGrp = AiBrainHeroEnumGrp or nil
 function AiBrainEnlistHeroes(pi)
     local army = udg_Ai_army[pi]
     if army == nil then return end
+    if AiBrainHeroEnumGrp == nil then AiBrainHeroEnumGrp = CreateGroup() end
     local g = AiBrainHeroEnumGrp
     GroupClear(g)
     GroupEnumUnitsOfPlayer(g, Player(pi), LiveHero)
@@ -721,11 +722,12 @@ end
 
 -- One enum of the player's units → { [unitTypeId] = aliveCount }. Reused table to avoid
 -- per-tick garbage. Ground truth for cap/limit checks where the drifting g_AiCounts lies.
-AiBrainAcountGrp = AiBrainAcountGrp or CreateGroup()
+AiBrainAcountGrp = AiBrainAcountGrp or nil
 function AiBrainActualCounts(pi, reuse)
     local t = reuse or {}
     for k in pairs(t) do t[k] = nil end
     local army = udg_Ai_army[pi]
+    if AiBrainAcountGrp == nil then AiBrainAcountGrp = CreateGroup() end
     local g = AiBrainAcountGrp
     GroupClear(g)
     GroupEnumUnitsOfPlayer(g, Player(pi), nil)
@@ -977,7 +979,10 @@ function AiSquadAssign(pi, u)
         if target > (AiGarrisonMax or 9999) then target = AiGarrisonMax end
         if target >= 1 then
             local defSq = nil
-            for _, sq in pairs(squads) do if sq.role == "defense" then defSq = sq; break end end
+            for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+                local sq = squads[sid]
+                if sq.role == "defense" then defSq = sq; break end
+            end
             if defSq == nil then
                 local sid = AiSquadNextId(pi)
                 local g = CreateGroup(); GroupAddUnit(g, u)
@@ -999,7 +1004,8 @@ function AiSquadAssign(pi, u)
     local assaultCount = 0
     local roomSid, roomDist = nil, 1.0e30   -- nearest assault squad with room
     local anySid, anyDist = nil, 1.0e30     -- nearest assault squad of any (overflow fallback)
-    for sid, sq in pairs(squads) do
+    for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+        local sq = squads[sid]
         if sq.role == "assault" then
             assaultCount = assaultCount + 1
             local cx, cy, _ = AiGroupCentroid(sq.members)
@@ -1033,7 +1039,8 @@ end
 function AiSquadReapDead(pi)
     local squads = AiSquadsOf(pi)
     local toRemove = {}
-    for sid, sq in pairs(squads) do
+    for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+        local sq = squads[sid]
         local g = sq.members
         -- Snapshot size ONCE, collect dead, then remove. The old loop re-read
         -- BlzGroupGetSize every iteration and did GroupRemoveUnit WITHOUT advancing i —
@@ -1130,7 +1137,8 @@ function AiSquadFsmTick(pi, p, wm)
         }
     end
     local squads = AiSquadsOf(pi)
-    for sid, sq in pairs(squads) do
+    for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+        local sq = squads[sid]
         if sq ~= nil and sq.members ~= nil then
             AiCompactGroup(sq.members)  -- purge nil/dead BEFORE any handler reads the group
             if AiSquadSize(sq.members) > 0 then
@@ -1159,7 +1167,10 @@ function AiSquadPickObj(pi, sq, wm)
     local best, bestScore = nil, -1e30
     for _, o in ipairs(objs) do
         o.score = AiObjScore(pi, wm, o)
-        if o.score > bestScore then best = o; bestScore = o.score end
+        if o.score > bestScore or (o.score == bestScore and best ~= nil and o.stableKey < best.stableKey) then
+            best = o
+            bestScore = o.score
+        end
     end
     return best and bestScore > 0 and best or nil
 end
@@ -1184,7 +1195,9 @@ end
 ---@return real
 function AiObjCommittedPower(pi, o)
     local pwr = 0.0
-    for _, sq in pairs(AiSquadsOf(pi)) do
+    local squads = AiSquadsOf(pi)
+    for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+        local sq = squads[sid]
         if sq.objective ~= nil and sq.objective.key == o.key then
             pwr = pwr + AiSquadPower(sq.members)
         end
@@ -1358,11 +1371,15 @@ function AiObjCandidates()
     local seen = {}
     local function add(u, kind)
         if u == nil or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then return end
-        local hid = GetHandleId(u)
-        if seen[hid] then return end
-        seen[hid] = true
-        list[#list + 1] = { x = GetUnitX(u), y = GetUnitY(u), value = AiBldValueUnit(u),
-            owner = GetOwningPlayer(u), kind = kind }
+        if seen[u] then return end
+        seen[u] = true
+        local x, y = GetUnitX(u), GetUnitY(u)
+        local owner = GetOwningPlayer(u)
+        local typeId = GetUnitTypeId(u)
+        local stableKey = string.format("%02d:%08d:%+012.2f:%+012.2f:%s",
+            GetPlayerId(owner), typeId, x, y, kind)
+        list[#list + 1] = { stableKey = stableKey, x = x, y = y, value = AiBldValueUnit(u),
+            owner = owner, kind = kind }
     end
     -- capitals first so a unit present in both StolicaGroups and playerCapital[] keeps
     -- kind="capital" (and is not double-counted, unlike the old twin-scan).
@@ -1381,6 +1398,7 @@ function AiObjCandidates()
         local n = BlzGroupGetSize(zg)
         for i = 0, n - 1 do add(BlzGroupUnitAt(zg, i), "capture") end
     end
+    table.sort(list, function(a, b) return a.stableKey < b.stableKey end)
     c.list = list
     c.tick = now
     return list
@@ -1426,9 +1444,16 @@ function AiBrainCollectObjectives(pi, wm)
     end
 
     local objs = {}
-    for key, b in pairs(buckets) do
+    local bucketKeys = {}
+    for key in pairs(buckets) do
+        bucketKeys[#bucketKeys + 1] = key
+    end
+    table.sort(bucketKeys)
+    for _, key in ipairs(bucketKeys) do
+        local b = buckets[key]
         objs[#objs + 1] = {
-            key = key, kind = b.kind, count = b.count, value = b.value,
+            key = key, stableKey = string.format("%010d", key),
+            kind = b.kind, count = b.count, value = b.value,
             x = b.sx / b.count, y = b.sy / b.count, score = 0.0,
         }
     end
@@ -1530,7 +1555,10 @@ function AiBrainPickFocus(pi, wm)
     local cur, curScore = nil, nil
     for _, o in ipairs(objs) do
         o.score = AiObjScore(pi, wm, o)
-        if o.score > bestScore then best = o; bestScore = o.score end
+        if o.score > bestScore or (o.score == bestScore and best ~= nil and o.stableKey < best.stableKey) then
+            best = o
+            bestScore = o.score
+        end
         if wm.focusKey ~= nil and o.key == wm.focusKey then cur = o; curScore = o.score end
     end
     local margin = AiBrainCfg(pi).focusMargin or AiBrainDefaults.focusMargin
@@ -1578,7 +1606,10 @@ function AiBrainPickLandFocus(pi, wm, home)
     for _, o in ipairs(objs) do
         if reach(AiContinentOf(o.x, o.y)) then
             local s = o.score or AiObjScore(pi, wm, o)
-            if s > bestScore then bestScore = s; best = o end
+            if s > bestScore or (s == bestScore and best ~= nil and o.stableKey < best.stableKey) then
+                bestScore = s
+                best = o
+            end
         end
     end
     return best
@@ -1761,18 +1792,17 @@ function AiFindProdBuilding(pi, bldType, used)
     -- tick. Training from a >=99% barracks worked immediately.) Preferring max HP%
     -- skips constructing buildings whenever a completed one of the same type exists,
     -- and still returns the best available (e.g. a damaged-but-complete one) otherwise.
-    local best, bestPct = nil, -1.0
+    local best, bestPct, bestX, bestY = nil, -1.0, nil, nil
     for i = 0, sz - 1 do
         local u = BlzGroupUnitAt(grp, i)
         if u ~= nil and GetUnitTypeId(u) == bldType
             and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
             and (used == nil or not used[GetHandleId(u)]) then
             local pct = GetUnitStatePercent(u, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE)
-            if pct >= 99.0 then
-                if used ~= nil then used[GetHandleId(u)] = true end
-                return u  -- complete & healthy: take it immediately
+            local x, y = GetUnitX(u), GetUnitY(u)
+            if pct > bestPct or (pct == bestPct and (best == nil or x < bestX or (x == bestX and y < bestY))) then
+                best, bestPct, bestX, bestY = u, pct, x, y
             end
-            if pct > bestPct then best = u; bestPct = pct end
         end
     end
     if best ~= nil and used ~= nil then used[GetHandleId(best)] = true end
@@ -2080,7 +2110,7 @@ function BrainProduce(pi, wm, race)
 
     -- Per-tick set of production buildings already issued an order, so each train order this
     -- pass goes to a DIFFERENT building (parallel training instead of piling on one).
-    local usedBld = {}
+    local usedBldUnits = {}
     local ordered = 0
     local maxN = AiBrainMaxProduce
     local now = AiBrainTickCounter or 0
@@ -2101,6 +2131,20 @@ function BrainProduce(pi, wm, race)
             if type(k) == "number" then isBldType[k] = true end
         end
     end
+    local prodBuildingTypes = {}
+    for bldType in pairs(isBldType) do
+        prodBuildingTypes[#prodBuildingTypes + 1] = bldType
+    end
+    table.sort(prodBuildingTypes)
+    local compUnitTypes = {}
+    if comp then
+        for unitId in pairs(comp) do
+            if type(unitId) == "number" then
+                compUnitTypes[#compUnitTypes + 1] = unitId
+            end
+        end
+        table.sort(compUnitTypes)
+    end
 
     -- 1) Workers: train independently of compTarget, always up to cap
     local w = prod.worker
@@ -2108,7 +2152,7 @@ function BrainProduce(pi, wm, race)
         local wCnt = (wm.acount and wm.acount[w.id]) or 0  -- actual live count (getAiCount drifts)
         if wCnt < (w.cap or 40) then
             for _, fromBldType in ipairs(w.from) do
-                local bld = AiFindProdBuilding(pi, fromBldType, usedBld)
+                local bld = AiFindProdBuilding(pi, fromBldType, usedBldUnits)
                 if bld ~= nil then
                     local key = pi * 1000000 + w.id
                     local last = g_AiOrdered[key]
@@ -2131,24 +2175,8 @@ function BrainProduce(pi, wm, race)
     -- gold is short and retries next tick; issuing FIRST means the hero grabs gold before
     -- cheaper army orders spend it below the hero's cost.
     if race.altar ~= nil and prod[race.altar] ~= nil then
-        -- TOTAL hero cap. The map's LimitHero trigger only caps each hero TYPE to 1, with no
-        -- overall limit, so the bot trained ONE OF EVERY altar hero (Cult: CD01+CD02+CD03 = 3)
-        -- while a human picks a single hero. Count live + in-flight heroes across ALL altar rows
-        -- and stop at AiMaxHeroes so bots field the same hero count a player does. Tunable per
-        -- race later via race.maxHeroes if some race is meant to have more.
-        local heroMax = race.maxHeroes or AiMaxHeroes
-        local heroCount = 0
-        for _, row in ipairs(prod[race.altar]) do
-            local hid = row[1]
-            if hid ~= nil and hid ~= 0 then
-                heroCount = heroCount + ((wm.acount and wm.acount[hid]) or 0)
-                local ll = g_AiOrdered[pi * 1000000 + hid]
-                if ll ~= nil and (now - ll) < AiLimitedBuildTicks then heroCount = heroCount + 1 end
-            end
-        end
         for _, row in ipairs(prod[race.altar]) do
             if ordered >= maxN then break end
-            if heroCount >= heroMax then break end  -- bot already at its hero quota
             local hid = row[1]
             if hid ~= nil and hid ~= 0 then
                 local cur = (wm.acount and wm.acount[hid]) or 0  -- actual live count (getAiCount drifts → hero dupes)
@@ -2157,12 +2185,11 @@ function BrainProduce(pi, wm, race)
                 local ll = g_AiOrdered[lk]
                 local inFlight = (ll ~= nil and (now - ll) < AiLimitedBuildTicks) and 1 or 0
                 if cur + inFlight < lim then
-                    local bld = AiFindProdBuilding(pi, race.altar, usedBld)
+                    local bld = AiFindProdBuilding(pi, race.altar, usedBldUnits)
                     if bld ~= nil then
                         IssueImmediateOrderById(bld, hid)
                         g_AiOrdered[lk] = now
                         ordered = ordered + 1
-                        heroCount = heroCount + 1
                     end
                 end
             end
@@ -2201,11 +2228,11 @@ function BrainProduce(pi, wm, race)
     -- the trainable ones hit their ratio at 3-5 army and growth stalls.
     local trainableSum = 0.0
     local isTrainable = {}
-    for unitId, targetRatio in pairs(comp) do
-        if type(unitId) ~= "number" then goto nextSum end
+    for _, unitId in ipairs(compUnitTypes) do
+        local targetRatio = comp[unitId]
         -- Check if any building can produce this unit
-        for bldType, rows in pairs(prod) do
-            if bldType == "worker" then goto nextBldSum end
+        for _, bldType in ipairs(prodBuildingTypes) do
+            local rows = prod[bldType]
             if type(rows) ~= "table" then goto nextBldSum end
             if not isBldType[bldType] then goto nextBldSum end
             for _, row in ipairs(rows) do
@@ -2233,14 +2260,14 @@ function BrainProduce(pi, wm, race)
             ::found::
             ::nextBldSum::
         end
-        ::nextSum::
     end
     if trainableSum <= 0 then trainableSum = 1.0 end  -- avoid div/zero
 
     -- 2) Military: scan compTarget for deficit, find building, issue order
-    for unitId, targetRatio in pairs(comp) do
+    for _, unitId in ipairs(compUnitTypes) do
+        local targetRatio = comp[unitId]
         if ordered >= maxN then break end
-        if type(unitId) ~= "number" or targetRatio == nil then goto skipUnit end
+        if targetRatio == nil then goto skipUnit end
         if not isTrainable[unitId] then goto skipUnit end  -- R15: skip untrainable
 
         local current = (wm.acount and wm.acount[unitId]) or getAiCount(pi, unitId) or 0  -- actual live count
@@ -2251,8 +2278,8 @@ function BrainProduce(pi, wm, race)
         if currentRatio >= scaledTarget then goto skipUnit end
 
         -- Find which building produces this unit
-        for bldType, rows in pairs(prod) do
-            if bldType == "worker" then goto skipBld end
+        for _, bldType in ipairs(prodBuildingTypes) do
+            local rows = prod[bldType]
             if type(rows) ~= "table" then goto skipBld end
             if not isBldType[bldType] then goto skipBld end  -- R7: skip non-buildings (larva, eggs, etc.)
             for _, row in ipairs(rows) do
@@ -2269,7 +2296,7 @@ function BrainProduce(pi, wm, race)
                             local inFlight = (ll ~= nil and (now - ll) < AiLimitedBuildTicks) and 1 or 0
                             if current + inFlight >= row.limit then goto skipBld end
                         end
-                        local bld = AiFindProdBuilding(pi, bldType, usedBld)
+                        local bld = AiFindProdBuilding(pi, bldType, usedBldUnits)
                         if bld ~= nil then
                             local key = pi * 1000000 + unitId
                             local last = g_AiOrdered[key]
@@ -2294,7 +2321,7 @@ function BrainProduce(pi, wm, race)
                             local inFlight = (ll ~= nil and (now - ll) < AiLimitedBuildTicks) and 1 or 0
                             if current + inFlight >= row.limit then goto skipBld end
                         end
-                        local bld = AiFindProdBuilding(pi, bldType, usedBld)
+                        local bld = AiFindProdBuilding(pi, bldType, usedBldUnits)
                         if bld ~= nil then
                             local key = pi * 1000000 + unitId
                             local last = g_AiOrdered[key]
@@ -2367,6 +2394,11 @@ function BrainBuild(pi, wm, race)
             end
         end
     end
+    local prodBuildingTypes = {}
+    for bldType in pairs(prodKeys) do
+        prodBuildingTypes[#prodBuildingTypes + 1] = bldType
+    end
+    table.sort(prodBuildingTypes)
 
     local prodRows, otherRows = {}, {}
     for _, row in ipairs(buildOrder) do
@@ -3119,7 +3151,13 @@ function BrainWebPortalTick(pi, p, wm)
     local now = AiBrainTickCounter or 0
     -- Consider the biggest off-objective cluster first (most units to unstick).
     local bestCont, bestN
-    for c, b in pairs(buckets) do
+    local bucketKeys = {}
+    for c in pairs(buckets) do
+        bucketKeys[#bucketKeys + 1] = c
+    end
+    table.sort(bucketKeys)
+    for _, c in ipairs(bucketKeys) do
+        local b = buckets[c]
         if c ~= oc and (bestN == nil or b.n > bestN) then bestCont, bestN = c, b.n end
     end
     if bestCont == nil then return end               -- everyone already on the objective continent
@@ -3156,7 +3194,9 @@ function BrainWebPortalTick(pi, p, wm)
     -- squad(s) as a skip-set so the capital keeps its guard (live: a bot mass-TP'd its
     -- whole army incl. the defense squad across a continent, leaving the capital naked).
     local garrison = nil
-    for _, sq in pairs(AiSquadsOf(pi)) do
+    local squads = AiSquadsOf(pi)
+    for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+        local sq = squads[sid]
         if sq.role == "defense" and sq.members ~= nil then
             local gsz = BlzGroupGetSize(sq.members)
             for gi = 0, gsz - 1 do
@@ -3244,7 +3284,7 @@ function AiBrainPickLandingTarget(pi, wm)
             if obj.kind == "capital" then sc = sc * 3
             elseif obj.kind == "city" then sc = sc * 2
             end
-            if d > 3000 * 3000 and sc > bestScore then
+            if d > 3000 * 3000 and (sc > bestScore or (sc == bestScore and best ~= nil and obj.stableKey < best.stableKey)) then
                 bestScore = sc; best = obj; bestCont = objCont
             end
         end
@@ -3419,24 +3459,37 @@ function AiValidateRace(rk)
     -- order silently no-ops and the army never reaches target composition.
     local comp = race.compTarget
     if comp ~= nil and prod ~= nil then
-        for unitId, _ in pairs(comp) do
+        local validationProdTypes = {}
+        for bldType, rows in pairs(prod) do
+            if bldType ~= "worker" and type(rows) == "table" and type(bldType) == "number" then
+                validationProdTypes[#validationProdTypes + 1] = bldType
+            end
+        end
+        table.sort(validationProdTypes)
+        local compUnitTypes = {}
+        for unitId in pairs(comp) do
             if type(unitId) == "number" then
-                local found = false
-                for bldType, rows in pairs(prod) do
-                    if bldType ~= "worker" and type(rows) == "table" then
-                        for _, row in ipairs(rows) do
-                            if row[1] == unitId
-                                or (row.branch and (row.black == unitId or row.other == unitId)) then
-                                found = true; break
-                            end
+                compUnitTypes[#compUnitTypes + 1] = unitId
+            end
+        end
+        table.sort(compUnitTypes)
+        for _, unitId in ipairs(compUnitTypes) do
+            local found = false
+            for _, bldType in ipairs(validationProdTypes) do
+                local rows = prod[bldType]
+                if type(rows) == "table" then
+                    for _, row in ipairs(rows) do
+                        if row[1] == unitId
+                            or (row.branch and (row.black == unitId or row.other == unitId)) then
+                            found = true; break
                         end
                     end
-                    if found then break end
                 end
-                if not found then
-                    problems[#problems + 1] = "compTarget unit " .. tostring(unitId)
-                        .. " has no producer building"
-                end
+                if found then break end
+            end
+            if not found then
+                problems[#problems + 1] = "compTarget unit " .. tostring(unitId)
+                    .. " has no producer building"
             end
         end
     end
@@ -3629,7 +3682,9 @@ function AiBrainArmyTickInner(pi, p)
     if wm.objectives == nil or #wm.objectives == 0 then lap("other"); AiArmyLegacyTick(p); return end
 
     if wm.defendHome and wm.capX ~= nil then
-        for _, sq in pairs(AiSquadsOf(pi)) do
+        local squads = AiSquadsOf(pi)
+        for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+            local sq = squads[sid]
             if sq.role == "assault" and sq.state ~= "retreat" then
                 sq.state = "retreat"; sq.rally.x, sq.rally.y = wm.capX, wm.capY
             end
@@ -3649,7 +3704,8 @@ function AiBrainArmyTickInner(pi, p)
         if armyGroup ~= nil then
             local squads = AiSquadsOf(pi)
             local assignedGroup = CreateGroup()
-            for _, sq in pairs(squads) do
+            for _, sid in ipairs(AiBrainSortedKeys(squads)) do
+                local sq = squads[sid]
                 local sz = BlzGroupGetSize(sq.members)
                 local j = 0
                 while j < sz do
