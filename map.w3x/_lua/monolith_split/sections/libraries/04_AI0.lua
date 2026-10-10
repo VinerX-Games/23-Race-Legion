@@ -267,16 +267,15 @@ end
 --  
 ---@return nothing
 function SetPortalGroup()
-	
-	local i = 0
-	
-	while true do
-		if i >= 24 then break end
-		AiUnitsToPort[i] = CreateGroup()
-		AiCapitalGuard[i] = CreateGroup()
-		AiCapitalBuildigs[i] = CreateGroup()
-		Grades[i] = 0
-		i = i + 1
+	if AiUnitsToPort == nil then AiUnitsToPort = {} end
+	if AiCapitalGuard == nil then AiCapitalGuard = {} end
+	if AiCapitalBuildigs == nil then AiCapitalBuildigs = {} end
+	if Grades == nil then Grades = {} end
+	for i = 0, 23 do
+		if AiUnitsToPort[i] == nil then AiUnitsToPort[i] = CreateGroup() end
+		if AiCapitalGuard[i] == nil then AiCapitalGuard[i] = CreateGroup() end
+		if AiCapitalBuildigs[i] == nil then AiCapitalBuildigs[i] = CreateGroup() end
+		if Grades[i] == nil then Grades[i] = 0 end
 	end
 end
 ---@return nothing
@@ -311,7 +310,7 @@ function SetBools()
 	udg_B_EnemyUnitN = Condition(f_EnemyUnitN)
 	udg_B_EnemyUnit = Condition(f_EnemyUnit)
 	udg_B_EnemyUnitP = Condition(f_EnemyUnitP)
-	PortB = Condition(f_PortB)
+	if PortB == nil then PortB = Condition(f_PortB) end
 	FixZ = Condition(f_FixZ)
 	LiveHero = Condition(f_LiveHero)
 	

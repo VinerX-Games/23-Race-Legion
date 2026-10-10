@@ -14,6 +14,26 @@
 -- ***************************************************************************
 ---@return nothing
 function InitGlobals()
+	gForce = CreateForce()
+	gGroup = CreateGroup()
+	gEnemyGroup = CreateGroup()
+	gAllyGroup = CreateGroup()
+	gSubGroup = CreateGroup()
+	Allmap = CreateRegion()
+	SubGroup2 = CreateGroup()
+	udg_BotsActive = CreateForce()
+	udg_BotsActiveB = CreateForce()
+	udg_BotsActiveN = CreateForce()
+	TryPortal = CreateGroup()
+	AfterPortal = CreateGroup()
+	DeadGroup = CreateGroup()
+	PortalBuildingAi = CreateGroup()
+	Observers = CreateForce()
+	DeadGroupAi = CreateGroup()
+	Navy = CreateGroup()
+	Port = CreateGroup()
+	SetPortalGroup()
+	FixEcAliveFilter = Condition(UnitAliveBool)
 	local i = 0
 	i = 0
 	while true do
@@ -24,6 +44,11 @@ function InitGlobals()
 	
 	udg_IncomeTimerFirst = CreateTimer()
 	udg_IncomeTimerSecond = CreateTimer()
+	udg_TimerSmall4 = CreateTimer()
+	udg_PlayerGet2 = CreateTimer()
+	udg_PlayerGet1 = CreateTimer()
+	udg_PlayerGet4 = CreateTimer()
+	aiFixer = CreateTimer()
 	udg_LocalOtrad = CreateGroup()
 	i = 0
 	while true do

@@ -121,7 +121,7 @@ function Trig_Spell_E_Copy_Actions()
     PauseUnitBJ(true, udg_Caster_E_Glaz[udg_MUI_E_Glaz])
     SetUnitAnimation(udg_Caster_E_Glaz[udg_MUI_E_Glaz], "attackwalkstandspin")
     udg_Logika_E_Glaz[udg_MUI_E_Glaz]=true
-    StartTimerBJ(udg_Timer_E_Glaz, true, 0.03)
+    TimerStart(udg_Timer_E_Glaz, 0.03, true, nil)
 end
 --===========================================================================
 function InitTrig_Spell_E_Copy()

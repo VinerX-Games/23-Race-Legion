@@ -1728,6 +1728,7 @@ end
 ---@return nothing
 function FixEcEnum()
 	local u = GetEnumUnit()
+	if u == nil or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then return end
 	local pi = GetPlayerId(GetOwningPlayer(u))
 	
 	if GetUnitAbilityLevel(u, FourCC('AHad')) > 0 then
@@ -1746,11 +1747,12 @@ end
 ---@return nothing
 function FixEc(pi)
 	local r
+	if pi < 0 or pi > 23 then return end
 	local g = CreateGroup()
 	ClearEc(pi)
 	
 	
-	GroupEnumUnitsOfPlayer(g, Player(pi), b)
+	GroupEnumUnitsOfPlayer(g, Player(pi), nil)
 	ForGroup(g, FixEcEnum)
 	
 	if udg_GameMode == 3 then
@@ -1760,8 +1762,6 @@ function FixEc(pi)
 	
 	DestroyGroup(g)
 	g = nil
-	DestroyBoolExpr(b)
-	b = nil
 end
 ---@return nothing
 function FixEcAll()
@@ -1770,10 +1770,9 @@ function FixEcAll()
 	
 	
 	while true do
-		if i >= 23 then break end
+		if i >= 24 then break end
 		
 		FixEc(i)
-		DisplayTextToPlayer(Player(i), 0, 0, "????????? ???? ??????? ??????????? ????? ???????? ?????????????? ?????, ??? ???????????????? ???????")
 		i = i + 1
 	end
 	

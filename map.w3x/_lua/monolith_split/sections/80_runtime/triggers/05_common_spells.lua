@@ -308,7 +308,7 @@ function Trig_Spell_Copy_Actions()
     udg_Dummy[1]=GetLastCreatedUnit()
     CreateNUnitsAtLoc(1, FourCC('h0MJ'), GetOwningPlayer(udg_Caster), PolarProjectionBJ(udg_To4kaCaster, 100.00, 240.00), bj_UNIT_FACING)
     udg_Dummy[2]=GetLastCreatedUnit()
-    StartTimerBJ(udg_Timer, true, 0.03)
+    TimerStart(udg_Timer, 0.03, true, nil)
 end
 --===========================================================================
 function InitTrig_Spell_Copy()

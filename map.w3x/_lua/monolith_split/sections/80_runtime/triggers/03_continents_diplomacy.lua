@@ -163,7 +163,7 @@ function Trig_Continents_set_On_Actions()
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
     EnableTrigger(gg_trg_LeaveNeadedRegions)
     ForGroupBJ(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Continents_set_On_Func013001002)), Trig_Continents_set_On_Func013A)
-    StartTimerBJ(udg_TimerToCont, false, 0.50)
+    TimerStart(udg_TimerToCont, 0.50, false, nil)
 end
 --===========================================================================
 function InitTrig_Continents_set_On()
@@ -1402,12 +1402,14 @@ function Trig_Timer_Func009C()
 end
 function Trig_Timer_Actions()
     udg_AllPlayers=GetPlayersAll()
-    StartTimerBJ(udg_IncomeTimerSecond, true, I2R(udg_SET_TimerTime))
-    CreateTimerDialogBJ(GetLastCreatedTimerBJ(), "TRIGSTR_4633")
-    udg_TimerSecond=GetLastCreatedTimerDialogBJ()
-    StartTimerBJ(udg_IncomeTimerFirst, false, 600.00)
-    CreateTimerDialogBJ(GetLastCreatedTimerBJ(), "TRIGSTR_7397")
-    udg_TimerToDis=GetLastCreatedTimerDialogBJ()
+    TimerStart(udg_IncomeTimerSecond, I2R(udg_SET_TimerTime), true, nil)
+    udg_TimerSecond=CreateTimerDialog(udg_IncomeTimerSecond)
+    TimerDialogSetTitle(udg_TimerSecond, GetLocalizedString("TRIGSTR_4633"))
+    TimerDialogDisplay(udg_TimerSecond, true)
+    TimerStart(udg_IncomeTimerFirst, 600.00, false, nil)
+    udg_TimerToDis=CreateTimerDialog(udg_IncomeTimerFirst)
+    TimerDialogSetTitle(udg_TimerToDis, GetLocalizedString("TRIGSTR_7397"))
+    TimerDialogDisplay(udg_TimerToDis, true)
     if Trig_Timer_Func009C() then
         ForForce(udg_AllPlayers, Trig_Timer_Func009Func001A)
     end
@@ -1424,7 +1426,7 @@ end
 function Trig_ChangeTimerHost_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_19902")
     udg_SET_TimerTime=S2I(SubStringBJ(GetEventPlayerChatString(), 7, 8))
-    StartTimerBJ(udg_IncomeTimerSecond, true, I2R(udg_SET_TimerTime))
+    TimerStart(udg_IncomeTimerSecond, I2R(udg_SET_TimerTime), true, nil)
 end
 --===========================================================================
 function InitTrig_ChangeTimerHost()

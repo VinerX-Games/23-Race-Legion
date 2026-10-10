@@ -48,9 +48,12 @@ end
 ---@param y real
 ---@return boolean
 function IsSpawnFarEnough(x, y)
-	for pi, pt in pairs(AiSpawnPoint) do
+	for pi = 0, bj_MAX_PLAYERS - 1 do
+		local pt = AiSpawnPoint[pi]
+		if pt ~= nil then
 		if DistanceBetweenCoords(x, y, pt.x, pt.y) < MIN_SPAWN_DISTANCE then
 			return false
+		end
 		end
 	end
 	return true
@@ -58,10 +61,13 @@ end
 ---@return real
 function SpawnMinDistToOthers(x, y)
 	local best = 999999.0
-	for pi, pt in pairs(AiSpawnPoint) do
+	for pi = 0, bj_MAX_PLAYERS - 1 do
+		local pt = AiSpawnPoint[pi]
+		if pt ~= nil then
 		local d = DistanceBetweenCoords(x, y, pt.x, pt.y)
 		if d < best then
 			best = d
+		end
 		end
 	end
 	return best

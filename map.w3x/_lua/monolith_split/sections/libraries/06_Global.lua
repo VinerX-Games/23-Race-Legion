@@ -251,6 +251,11 @@ end
 -- ==========================================
 ---@return nothing
 function Global___Init()
+	Global_Hash = InitHashtable()
+	Global_Timer = CreateTimer()
+	Global_TempGroup = CreateGroup()
+	Global_TempRect = Rect(0, 0, 0, 0)
+	Global_TempLoc = Location(0, 0)
 	TimerStart(Global_Timer, 999999, false, nil)
 end
 -- library Global ends
