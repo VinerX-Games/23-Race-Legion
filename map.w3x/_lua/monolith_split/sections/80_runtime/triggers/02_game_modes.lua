@@ -7,6 +7,7 @@ function Trig_ResoursesInterface_Copy_Actions()
 	
 	local p = GetLocalPlayer()
 	local pi = GetPlayerId(p)
+	if pi < 0 or pi > 23 then return end
 	local text
 	local text2
 	local other = corruption[pi] + additional[pi]
@@ -209,9 +210,10 @@ function Trig_StartLobby_Actions()
 	TriggerSleepAction(I2R(udg_LocalInteger))
 	ForForce(udg_AllPlayers, Trig_StartLobby_Func015A)
 	RemoveLocation(udg_LocalPosition2)
-	StartTimerBJ(udg_LobbyTime, false, 60.00)
-	CreateTimerDialogBJ(GetLastCreatedTimerBJ(), "TRIGSTR_19360")
-	udg_LobbyTimerWindows = GetLastCreatedTimerDialogBJ()
+	TimerStart(udg_LobbyTime, 60.00, false, nil)
+	udg_LobbyTimerWindows = CreateTimerDialog(udg_LobbyTime)
+	TimerDialogSetTitle(udg_LobbyTimerWindows, GetLocalizedString("TRIGSTR_19360"))
+	TimerDialogDisplay(udg_LobbyTimerWindows, true)
 	CreateNUnitsAtLoc(1, FourCC('n04G'), Player(0), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
 	ModeBuilding = GetLastCreatedUnit()
 	SelectUnitForPlayerSingle(GetLastCreatedUnit(), Player(0))
@@ -277,7 +279,7 @@ end
 ---@return boolean
 ---@return nothing
 function Trig_AddMinute_Actions()
-	StartTimerBJ(udg_LobbyTime, false, TimerGetRemaining(udg_LobbyTime) + 60.00)
+	TimerStart(udg_LobbyTime, TimerGetRemaining(udg_LobbyTime) + 60.00, false, nil)
 	DisableTrigger(GetTriggeringTrigger())
 end
 -- ===========================================================================
@@ -296,7 +298,7 @@ end
 ---@return boolean
 ---@return nothing
 function Trig_StartGameFast_Actions()
-	StartTimerBJ(udg_LobbyTime, false, 5.00)
+	TimerStart(udg_LobbyTime, 5.00, false, nil)
 end
 -- ===========================================================================
 ---@return nothing
@@ -1107,23 +1109,22 @@ end
 ---@return nothing
 function ExpandTable()
 	local i = 0
-	local l__max = 1
 	MultiboardSetColumnCount(Multiboard, 3)
 	
 	
-	ThirdColumn[24] = MultiboardGetItem(Multiboard, 0, 2)
-	MultiboardSetItemValue(ThirdColumn[24], "Точек,%")
-	MultiboardSetItemWidth(ThirdColumn[24], 0.06)
-	MultiboardReleaseItem(ThirdColumn[24])
+	ThirdColumnHeader = MultiboardGetItem(Multiboard, 0, 2)
+	MultiboardSetItemValue(ThirdColumnHeader, "Точек,%")
+	MultiboardSetItemWidth(ThirdColumnHeader, 0.06)
+	MultiboardReleaseItem(ThirdColumnHeader)
 	
 	while true do
 		if i > 23 then break end
 		CityPlayerCount[i] = 0
-		if GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING or IsPlayerInForce(Player(i), udg_Bots) then
-			ThirdColumn[i] = MultiboardGetItem(Multiboard, l__max, 2)
+		local ownerIndex = MultiboardItemOwnerIndex[i]
+		if ownerIndex ~= nil then
+			ThirdColumn[i] = MultiboardGetItem(Multiboard, ownerIndex, 2)
 			MultiboardSetItemValue(ThirdColumn[i], "0.000%")
 			MultiboardSetItemWidth(ThirdColumn[i], 0.06)
-			l__max = l__max + 1
 		end
 		i = i + 1
 		
