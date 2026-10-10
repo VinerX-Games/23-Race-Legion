@@ -670,6 +670,7 @@ end
 ---@param p player
 ---@return nothing
 function HordeW2EnableSubraceChoice(p)
+    HordeW2ApplySubraceRoster(p)
     SetPlayerTechMaxAllowedSwap(FourCC('xdR1'), 1, p)
     SetPlayerTechMaxAllowedSwap(FourCC('xdR2'), 1, p)
 end

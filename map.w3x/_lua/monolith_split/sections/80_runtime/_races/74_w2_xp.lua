@@ -157,6 +157,7 @@ function HordeW2ApplySubraceRoster(p)
 	SetPlayerTechMaxAllowedSwap(FourCC('xd05'), 0, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('xd06'), 0, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('xd07'), 0, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('W200'), 1, p)
 
 	SetPlayerTechMaxAllowedSwap(FourCC('w201'), -1, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('w202'), -1, p)
@@ -168,14 +169,14 @@ function HordeW2ApplySubraceRoster(p)
 	-- Heroes (uppercase rawcodes). All branches keep W200 + W201 (Cho'gall).
 	-- The 3rd slot: W202 Troll Leader on base/dragonmaw, W203 Maim on Dark Horde
 	-- (full unit swap, same altar card slot — never both visible).
-	SetPlayerTechMaxAllowedSwap(FourCC('W201'), -1, p)
-	SetPlayerTechMaxAllowedSwap(FourCC('W202'), -1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('W201'), 1, p)
+	SetPlayerTechMaxAllowedSwap(FourCC('W202'), 1, p)
 	SetPlayerTechMaxAllowedSwap(FourCC('W203'), 0, p)
 
 	if subrace == "dark" then
 		-- Dark Horde replaces the Troll Leader with Maim Blackhand.
 		SetPlayerTechMaxAllowedSwap(FourCC('W202'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('W203'), -1, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('W203'), 1, p)
 		SetPlayerTechMaxAllowedSwap(FourCC('w202'), 0, p)
 		SetPlayerTechMaxAllowedSwap(FourCC('w205'), 0, p)
 		SetPlayerTechMaxAllowedSwap(FourCC('w206'), 0, p)
@@ -186,7 +187,7 @@ function HordeW2ApplySubraceRoster(p)
 		SetPlayerTechMaxAllowedSwap(FourCC('xd07'), -1, p)
 	elseif subrace == "dragonmaw" then
 		SetPlayerTechMaxAllowedSwap(FourCC('w201'), 0, p)
-		SetPlayerTechMaxAllowedSwap(FourCC('w203'), 0, p)
+		SetPlayerTechMaxAllowedSwap(FourCC('W203'), 0, p)
 		SetPlayerTechMaxAllowedSwap(FourCC('w205'), 0, p)
 		SetPlayerTechMaxAllowedSwap(FourCC('xd04'), -1, p)
 		SetPlayerTechMaxAllowedSwap(FourCC('xd05'), -1, p)

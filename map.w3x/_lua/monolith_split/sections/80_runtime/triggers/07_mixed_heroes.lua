@@ -37,7 +37,7 @@ end
 -- Trigger: LimitHero Exep
 --===========================================================================
 function Trig_LimitHero_Exep_Conditions()
-    return IsUnitType(GetTrainedUnit(), UNIT_TYPE_HERO)
+    return IsUnitIdType(GetTrainedUnitType(), UNIT_TYPE_HERO)
 end
 function Trig_LimitHero_Exep_Actions()
     SetPlayerTechMaxAllowed(GetOwningPlayer(GetTriggerUnit()), GetTrainedUnitType(), 1)
