@@ -47,23 +47,23 @@ end
 ---@return nothing
 function ExpandTableArmyExpr()
 	local i = 0
-	local l__max = 1
 	MultiboardSetColumnCount(Multiboard, 4)
 	
 	
-	ArmyPowerColumn[24] = MultiboardGetItem(Multiboard, 0, 3)
-	MultiboardSetItemValue(ArmyPowerColumn[24], "Опыт")
-	MultiboardSetItemWidth(ArmyPowerColumn[24], 0.06)
-	MultiboardReleaseItem(ArmyPowerColumn[24])
+	local header = MultiboardGetItem(Multiboard, 0, 3)
+	ArmyPowerColumnHeader = header
+	MultiboardSetItemValue(header, "Опыт")
+	MultiboardSetItemWidth(header, 0.06)
+	MultiboardReleaseItem(header)
 	
 	while true do
 		if i > 23 then break end
 		ArmyExp[i] = 0.001
-		if GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING or IsPlayerInForce(Player(i), udg_Bots) then
-			ArmyPowerColumn[i] = MultiboardGetItem(Multiboard, l__max, 3)
+		local ownerIndex = MultiboardItemOwnerIndex[i]
+		if ownerIndex ~= nil then
+			ArmyPowerColumn[i] = MultiboardGetItem(Multiboard, ownerIndex, 3)
 			MultiboardSetItemValue(ArmyPowerColumn[i], "0")
 			MultiboardSetItemWidth(ArmyPowerColumn[i], 0.06)
-			l__max = l__max + 1
 		end
 		i = i + 1
 		

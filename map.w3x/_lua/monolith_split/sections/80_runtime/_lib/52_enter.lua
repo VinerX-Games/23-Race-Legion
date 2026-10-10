@@ -14,7 +14,7 @@ function Enter(u)
 	if ownerIndex == nil then
 		return
 	end
-	MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi]))
+	MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi] or 0))
 	
 	
 end

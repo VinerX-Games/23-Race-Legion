@@ -170,7 +170,6 @@ function Trig_StartBuildingDEmon_Actions()
     disincome[pi]=disincome[pi] - 6
     udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
     UpdateGraf(pi)
-    Enter(GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_StartBuildingDEmon()
@@ -191,7 +190,6 @@ function Trig_CanselBuilding_Copy_Actions()
     udg_UnitsCount[pi]=udg_UnitsCount[pi] + 1
     disincome[pi]=disincome[pi] + 6
     UpdateGraf(pi)
-    Enter(GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_CanselBuilding_Copy()

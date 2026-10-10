@@ -788,7 +788,6 @@ function Trig_StartBuildingTree_Actions()
     disincome[pi]=disincome[pi] - 6
     udg_UnitsCount[pi]=udg_UnitsCount[pi] - 1
     UpdateGraf(pi)
-    Enter(GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_StartBuildingTree()
@@ -811,7 +810,6 @@ function Trig_CanselBuildingTree_Actions()
     disincome[pi]=disincome[pi] + 6
     udg_UnitsCount[pi]=udg_UnitsCount[pi] + 1
     UpdateGraf(pi)
-    Enter(GetTriggerUnit())
 end
 --===========================================================================
 function InitTrig_CanselBuildingTree()

@@ -460,7 +460,7 @@ function Trig_Dovorougenie_3t_O_Actions()
         SelectUnitAddForPlayer(GetLastReplacedUnitBJ(), GetOwningPlayer(u))
     end
 end
-    MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
+    UpdateGraf(i)
     i=0
 end
 --===========================================================================

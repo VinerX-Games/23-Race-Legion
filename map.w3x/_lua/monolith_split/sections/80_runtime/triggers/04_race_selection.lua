@@ -13,40 +13,42 @@ end
 ---@return nothing
 function InitColorCommands()
 	local COLOR_MAP = {
-		[" - colorred"] = PLAYER_COLOR_RED,
-		[" - colorblue"] = PLAYER_COLOR_BLUE,
-		[" - colorpurple"] = PLAYER_COLOR_PURPLE,
-		[" - colorteal"] = PLAYER_COLOR_CYAN,
-		[" - coloryellow"] = PLAYER_COLOR_YELLOW,
-		[" - colororange"] = PLAYER_COLOR_ORANGE,
-		[" - colorgreen"] = PLAYER_COLOR_GREEN,
-		[" - colorpink"] = PLAYER_COLOR_PINK,
-		[" - colorgray"] = PLAYER_COLOR_LIGHT_GRAY,
-		[" - colorlight - blue"] = PLAYER_COLOR_LIGHT_BLUE,
-		[" - colordark - green"] = PLAYER_COLOR_AQUA,
-		[" - colorbrown"] = PLAYER_COLOR_BROWN,
-		[" - colormaroon"] = PLAYER_COLOR_MAROON,
-		[" - colornavy"] = PLAYER_COLOR_NAVY,
-		[" - colorturquoise"] = PLAYER_COLOR_TURQUOISE,
-		[" - colorviolet"] = PLAYER_COLOR_VIOLET,
-		[" - colorwheat"] = PLAYER_COLOR_WHEAT,
-		[" - colorpeach"] = PLAYER_COLOR_PEACH,
-		[" - colormint"] = PLAYER_COLOR_MINT,
-		[" - colorlavender"] = PLAYER_COLOR_LAVENDER,
-		[" - colorcoal"] = PLAYER_COLOR_COAL,
-		[" - colorsnow"] = PLAYER_COLOR_SNOW,
-		[" - coloremerald"] = PLAYER_COLOR_EMERALD,
-		[" - colorpeanut"] = PLAYER_COLOR_PEANUT,
+		["-colorred"] = PLAYER_COLOR_RED,
+		["-colorblue"] = PLAYER_COLOR_BLUE,
+		["-colorpurple"] = PLAYER_COLOR_PURPLE,
+		["-colorteal"] = PLAYER_COLOR_CYAN,
+		["-coloryellow"] = PLAYER_COLOR_YELLOW,
+		["-colororange"] = PLAYER_COLOR_ORANGE,
+		["-colorgreen"] = PLAYER_COLOR_GREEN,
+		["-colorpink"] = PLAYER_COLOR_PINK,
+		["-colorgray"] = PLAYER_COLOR_LIGHT_GRAY,
+		["-colorlight-blue"] = PLAYER_COLOR_LIGHT_BLUE,
+		["-colordark-green"] = PLAYER_COLOR_AQUA,
+		["-colorbrown"] = PLAYER_COLOR_BROWN,
+		["-colormaroon"] = PLAYER_COLOR_MAROON,
+		["-colornavy"] = PLAYER_COLOR_NAVY,
+		["-colorturquoise"] = PLAYER_COLOR_TURQUOISE,
+		["-colorviolet"] = PLAYER_COLOR_VIOLET,
+		["-colorwheat"] = PLAYER_COLOR_WHEAT,
+		["-colorpeach"] = PLAYER_COLOR_PEACH,
+		["-colormint"] = PLAYER_COLOR_MINT,
+		["-colorlavender"] = PLAYER_COLOR_LAVENDER,
+		["-colorcoal"] = PLAYER_COLOR_COAL,
+		["-colorsnow"] = PLAYER_COLOR_SNOW,
+		["-coloremerald"] = PLAYER_COLOR_EMERALD,
+		["-colorpeanut"] = PLAYER_COLOR_PEANUT,
 	}
 
 	local t = CreateTrigger()
 	for i = 0, 23 do
-		for cmd, _ in pairs(COLOR_MAP) do
-			TriggerRegisterPlayerChatEvent(t, Player(i), cmd, true)
-		end
+		TriggerRegisterPlayerChatEvent(t, Player(i), "color", true)
 	end
 	TriggerAddAction(t, function()
-		local color = COLOR_MAP[GetEventPlayerChatString()]
+		local command = string.lower(string.gsub(GetEventPlayerChatString(), "%s+", ""))
+		if string.sub(command, 1, 1) ~= "-" then
+			command = "-" .. command
+		end
+		local color = COLOR_MAP[command]
 		if color then
 			SetPlayerColorBJ(GetTriggerPlayer(), color, true)
 		end
@@ -117,12 +119,12 @@ function EnsureMultiboardPlayerRow(pi)
     MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 1], I2S(udg_UnitsCount[pi] or 0))
     MultiboardSetItemWidth(MultiboardItem[ownerIndex * 2 + 1], 0.06)
 
-    if ThirdColumn[24] ~= nil then
+    if ThirdColumnHeader ~= nil then
         ThirdColumn[pi]=MultiboardGetItem(Multiboard, ownerIndex, 2)
         MultiboardSetItemValue(ThirdColumn[pi], "0.000%")
         MultiboardSetItemWidth(ThirdColumn[pi], 0.06)
     end
-    if ArmyPowerColumn[24] ~= nil then
+    if ArmyPowerColumnHeader ~= nil then
         ArmyPowerColumn[pi]=MultiboardGetItem(Multiboard, ownerIndex, 3)
         MultiboardSetItemValue(ArmyPowerColumn[pi], R2SW_Polyfill(ArmyExp[pi] or 0.001))
         MultiboardSetItemWidth(ArmyPowerColumn[pi], 0.06)
@@ -131,6 +133,10 @@ function EnsureMultiboardPlayerRow(pi)
     return ownerIndex
 end
 function Trig_StartTableCode_Actions()
+	if Multiboard ~= nil then
+		MultiboardDisplay(Multiboard, true)
+		return
+	end
     local i= 0
     udg_PlayersCount=CountPlayersInForceBJ(GetPlayersMatching(Condition(ActivePlayers)))
     udg_PlayersCount=udg_PlayersCount + CountPlayersInForceBJ(udg_Bots)
@@ -147,6 +153,7 @@ function Trig_StartTableCode_Actions()
     MultiboardSetItemWidth(MultiboardItem[1], 0.06)
     MultiboardReleaseItem(MultiboardItem[0])
     MultiboardReleaseItem(MultiboardItem[1])
+    max = 0
     while true do
         if GetPlayerSlotState(Player(i)) == PLAYER_SLOT_STATE_PLAYING or IsPlayerInForce(Player(i), udg_Bots) or udg_AiControl[i] then
             max=max + 1
@@ -158,7 +165,7 @@ function Trig_StartTableCode_Actions()
             --set udg_LocalText2 = SubString(udg_LocalText2, 0, StringLength(udg_LocalText2)-4 )
             MultiboardSetItemValue(MultiboardItem[max * 2], PlayerColorHexWrap(Player(i), udg_LocalText2))
             MultiboardSetItemWidth(MultiboardItem[max * 2], 0.14)
-            MultiboardSetItemValue(MultiboardItem[max * 2 + 1], "0")
+            MultiboardSetItemValue(MultiboardItem[max * 2 + 1], I2S(udg_UnitsCount[i] or 0))
             MultiboardSetItemWidth(MultiboardItem[max * 2 + 1], 0.06)
         end
         i=i + 1
@@ -200,7 +207,7 @@ end
 function Trig_UnitsToBuildingSituation2_Actions()
     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] - 1
-    MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
+    UpdateGraf(i)
     i=0
 end
 --===========================================================================
@@ -222,7 +229,7 @@ end
 function Trig_CanselSituation2_Actions()
     local i= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
     udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))]=udg_UnitsCount[GetPlayerId(GetOwningPlayer(GetTriggerUnit()))] + 1
-    MultiboardSetItemValue(MultiboardItem[MultiboardItemOwnerIndex[i] * 2 + 1], I2S(udg_UnitsCount[i]))
+    UpdateGraf(i)
     i=0
 end
 --===========================================================================

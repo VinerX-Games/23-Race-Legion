@@ -12,6 +12,7 @@ function AddCountDis(u, pi)
 		return 
 	end
 	if income[pi] == nil then return end
+	udg_UnitsCount[pi] = udg_UnitsCount[pi] or 0
 	
 	--  ???? ?????? ??? ??? ?????????
 	if IsUnitType(u, UNIT_TYPE_STRUCTURE) or GetUnitAbilityLevel(u, FourCC('A1IJ')) > 0 then
@@ -93,7 +94,7 @@ function AddCountDis(u, pi)
 	
 	
 	
-	UpdateGraf(pi)
+	if MultiboardItemOwnerIndex[pi] ~= nil then UpdateGraf(pi) end
 	
 end
 ---@param u unit
@@ -107,6 +108,7 @@ function DelCountDis(u, pi)
 		return 
 	end
 	if income[pi] == nil then return end
+	udg_UnitsCount[pi] = udg_UnitsCount[pi] or 0
 	
 	
 	-- ????
@@ -197,7 +199,7 @@ function DelCountDis(u, pi)
 		
 	end
 	
-	UpdateGraf(pi)
+	if MultiboardItemOwnerIndex[pi] ~= nil then UpdateGraf(pi) end
 	u = nil
 end
 ---@return nothing
