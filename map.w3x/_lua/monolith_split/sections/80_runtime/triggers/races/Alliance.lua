@@ -2344,7 +2344,7 @@ end
 --
 -- ????????? ?????????? ????? ????????
 --===========================================================================
-function EndBranch()
+function EndBranch(p)
     --New Allies
     SetPlayerTechMaxAllowed(p, FourCC('R0HS'), 0)
     SetPlayerTechMaxAllowed(p, FourCC('R0H5'), 0)
@@ -3154,7 +3154,7 @@ function Trig_MassMolot_Actions()
     local l= GetUnitLoc(GetTriggerUnit())
     local p= GetOwningPlayer(GetTriggerUnit())
     
-    local bex = EnemEl
+    local bex = CachedFilter(EnemEl)
     local level= GetUnitAbilityLevelSwapped(FourCC('AHtb'), GetTriggerUnit())
     local g= CreateGroup()
     local u

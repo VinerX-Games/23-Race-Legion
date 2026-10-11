@@ -211,11 +211,9 @@ function TryAttack()
 				gSubGroupCounter = 0
             GroupClear(gSubGroup)
                 local gSize = BlzGroupGetSize(gAllyGroup)
-                local gIdx = gSize
-                while gIdx >= 1 do
-                    gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
-                    gIdx = gIdx - 1
-                    if gUnit2 == nil then
+                local gIdx = gSize - 1
+                while true do
+                    if gIdx < 0 then
                         local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
                         if attackLogCount < 10 then
                             AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
@@ -224,8 +222,11 @@ function TryAttack()
                         GroupPointOrder(gSubGroup, "attack", gX2, gY2)
                         GroupClear(gSubGroup)
                         gSubGroupCounter = 0
-                        if true then break end
+                        break
                     end
+                    gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+                    gIdx = gIdx - 1
+                    if gUnit2 == nil then goto continue_ally end
 
                     if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
                         gUnit2 = ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
@@ -240,6 +241,7 @@ function TryAttack()
                     end
 
                     gUnit2 = nil
+                    ::continue_ally::
                 end
             end
         end
@@ -363,12 +365,9 @@ function TryAttack()
 				gSubGroupCounter = 0
 			GroupClear(gSubGroup)
                 local gSize = BlzGroupGetSize(gAllyGroup)
-                local gIdx = gSize
-                while gIdx >= 1 do
-                    gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
-                    gIdx = gIdx - 1
-
-                    if gUnit2 == nil then
+                local gIdx = gSize - 1
+                while true do
+                    if gIdx < 0 then
                         local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
                         if attackLogCount < 10 then
                             AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
@@ -377,8 +376,11 @@ function TryAttack()
                         GroupPointOrder(gSubGroup, "attack", gX2, gY2)
                         GroupClear(gSubGroup)
                         gSubGroupCounter = 0
-                        if true then break end
+                        break
                     end
+                    gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+                    gIdx = gIdx - 1
+                    if gUnit2 == nil then goto continue_ally end
 
                     --  ???????? ? ???????
                     if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
@@ -394,6 +396,7 @@ function TryAttack()
                     end
 
                     gUnit2 = nil
+                    ::continue_ally::
 				end
 					
 					

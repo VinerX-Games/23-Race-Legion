@@ -1,3 +1,17 @@
+-- Ленивый кэш boolexpr по функции-фильтру: GroupEnum*/TriggerAddCondition ждут
+-- Filter(f), а не голую функцию. Создаётся при первом вызове (не на корневом уровне
+-- скрипта), по таблице не итерируемся -> детерминизм не страдает.
+local cachedFilters = {}
+---@param f function
+---@return boolexpr
+function CachedFilter(f)
+	local b = cachedFilters[f]
+	if b == nil then
+		b = Filter(f)
+		cachedFilters[f] = b
+	end
+	return b
+end
 -- NOTE: vJASS->Lua emitted an EMPTY stub here (`function UnitAlive(u) end`) which
 -- shadowed the engine native and returned nil for every call -> broke ALL AI combat
 -- (IsAiCombatRetaskable / enemy filters / navy filter never matched). Real life-based

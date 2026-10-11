@@ -233,8 +233,8 @@ end
 ---@return nothing
 function s__StackTemplate_destroy(this)
 	if s__StackTemplate_NOW[this] > 0 then
-		s__StackTemplate_STACK[s__StackTemplate_NOWthis] = s__StackTemplate_STACK[s__StackTemplate_COUNT]
-		s__StackTemplate_NOW[s__StackTemplate_STACKs__StackTemplate_NOWthis] = s__StackTemplate_NOW[this]
+		s__StackTemplate_STACK[s__StackTemplate_NOW[this]] = s__StackTemplate_STACK[s__StackTemplate_COUNT]
+		s__StackTemplate_NOW[s__StackTemplate_STACK[s__StackTemplate_NOW[this]]] = s__StackTemplate_NOW[this]
 		s__StackTemplate_STACK[s__StackTemplate_COUNT] = 0
 		s__StackTemplate_COUNT = s__StackTemplate_COUNT - 1
 	end
@@ -245,7 +245,7 @@ function s__StackTemplate_create()
 	local this = s__StackTemplate__allocate()
 	s__StackTemplate_COUNT = s__StackTemplate_COUNT + 1
 	s__StackTemplate_STACK[s__StackTemplate_COUNT] = this
-	s__StackTemplate_NOW[s__StackTemplate_STACKs__StackTemplate_COUNT] = s__StackTemplate_COUNT
+	s__StackTemplate_NOW[s__StackTemplate_STACK[s__StackTemplate_COUNT]] = s__StackTemplate_COUNT
 	return this
 end
 -- ==========================================

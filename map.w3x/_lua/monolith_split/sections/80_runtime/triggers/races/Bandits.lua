@@ -560,12 +560,12 @@ function Trig_Pirats_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('h03K'), - 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('h00Y'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('h00Z'), 0, GetOwningPlayer(GetTriggerUnit()))
-    udg_Boolexpr = Trig_Pirats_O_Copy_Func005002
+    udg_Boolexpr = CachedFilter(Trig_Pirats_O_Copy_Func005002)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Pirats_O_Copy_Func008A)
     GroupClear(udg_LocalOtrad2)
-    udg_Boolexpr = Trig_Pirats_O_Copy_Func010002
+    udg_Boolexpr = CachedFilter(Trig_Pirats_O_Copy_Func010002)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Pirats_O_Copy_Func013A)
@@ -748,19 +748,19 @@ function Trig_ResearhRobbery_Func003C()
 end
 function Trig_ResearhRobbery_Actions()
     if Trig_ResearhRobbery_Func001C() then
-        udg_Boolexpr = Trig_ResearhRobbery_Func001Func001002
+        udg_Boolexpr = CachedFilter(Trig_ResearhRobbery_Func001Func001002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     end
     if Trig_ResearhRobbery_Func002C() then
-        udg_Boolexpr = Trig_ResearhRobbery_Func002Func001002
+        udg_Boolexpr = CachedFilter(Trig_ResearhRobbery_Func002Func001002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
     end
     if Trig_ResearhRobbery_Func003C() then
-        udg_Boolexpr = Trig_ResearhRobbery_Func003Func001002
+        udg_Boolexpr = CachedFilter(Trig_ResearhRobbery_Func003Func001002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func003Func004A)
         GroupClear(udg_LocalOtrad2)

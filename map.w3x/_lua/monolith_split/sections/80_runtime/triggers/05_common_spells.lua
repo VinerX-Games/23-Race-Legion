@@ -699,7 +699,7 @@ function Trig_Sdelat_Flagman_Ot_Copy_Func019C()
 end
 function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     udg_FlagmanEst[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=true
-    udg_Boolexpr = Trig_Sdelat_Flagman_Ot_Copy_Func002002
+    udg_Boolexpr = CachedFilter(Trig_Sdelat_Flagman_Ot_Copy_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Sdelat_Flagman_Ot_Copy_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -746,7 +746,7 @@ function Trig_Flagman_die_Ot_Actions()
     local p= GetOwningPlayer(u)
     udg_FlagmanEst[GetConvertedPlayerId(p)]=false
     udg_LocalOtrad=GetUnitsOfPlayerAll(p)
-    udg_Boolexpr = Trig_Flagman_die_Ot_Func003002
+    udg_Boolexpr = CachedFilter(Trig_Flagman_die_Ot_Func003002)
     udg_LocalPlayer=GetOwningPlayer(u)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Flagman_die_Ot_Func006A)

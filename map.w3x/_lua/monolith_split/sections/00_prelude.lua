@@ -427,12 +427,31 @@ function BridgeStart()
     EvalWriteHeartbeat()  -- publish initial seq so the agent syncs from tick 0
     TimerStart(timer, BridgeTickInterval, true, BridgeTick)
 end
+-- Отладочные чат-команды (-bridge:, -log, -handle, -codexping) меняют союзы,
+-- создают ИИ и исполняют Lua — в мультиплеере их нельзя давать всем игрокам.
+-- Разрешены только когда в игре один живой человек (одиночная игра / probe-map)
+-- или явно включён DebugChatForce. Слоты одинаковы у всех клиентов -> без десинка.
+DebugChatForce = false
+function DebugChatAllowed()
+    if DebugChatForce then
+        return true
+    end
+    local humans = 0
+    for i = 0, 23 do
+        local p = Player(i)
+        if GetPlayerSlotState(p) == PLAYER_SLOT_STATE_PLAYING and GetPlayerController(p) == MAP_CONTROL_USER then
+            humans = humans + 1
+        end
+    end
+    return humans <= 1
+end
 function SetupBridgeChat()
     local trigger = CreateTrigger()
     for i = 0, 23 do
         TriggerRegisterPlayerChatEvent(trigger, Player(i), "-bridge:", false)
     end
     TriggerAddAction(trigger, function()
+        if not DebugChatAllowed() then return end
         local text = GetEventPlayerChatString()
         local rest = string.sub(text, 9)
         local sep = string.find(rest, ":", 1, true)
@@ -534,6 +553,7 @@ function SetupCodexPingChat()
         TriggerRegisterPlayerChatEvent(trigger, Player(i), "-codexping", true)
     end
     TriggerAddAction(trigger, function()
+        if not DebugChatAllowed() then return end
         local player_name = GetPlayerName(GetTriggerPlayer())
         local chat_text = GetEventPlayerChatString()
         ProbeLogWrite("[PING] player=" .. tostring(player_name) .. " text=" .. tostring(chat_text))
@@ -546,9 +566,14 @@ function SetupLogChat()
         TriggerRegisterPlayerChatEvent(trigger, Player(i), "-log", false)
     end
     TriggerAddAction(trigger, function()
+        if not DebugChatAllowed() then return end
         local text = GetEventPlayerChatString()
         local args = string.sub(text, 5)
-        local logOp, logTag = string.match(args, "^%s*(on|off|toggle|allon|alloff|list)%s*(.*)")
+        -- Lua-паттерны не знают альтернации "|": берём первое слово и сверяем вручную.
+        local logOp, logTag = string.match(args, "^%s*(%a+)%s*(.*)")
+        if logOp ~= "on" and logOp ~= "off" and logOp ~= "toggle" and logOp ~= "allon" and logOp ~= "alloff" and logOp ~= "list" then
+            logOp = nil
+        end
         if logOp == nil then
             local msg = "Usage: -log <on|off|toggle|allon|alloff|list> [TAG]"
             DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 10.00, "|cffffcc00" .. msg .. "|r")
@@ -590,6 +615,7 @@ function SetupHandleCounterChat()
         TriggerRegisterPlayerChatEvent(trigger, Player(i), "-handle", false)
     end
     TriggerAddAction(trigger, function()
+        if not DebugChatAllowed() then return end
         local text = GetEventPlayerChatString()
         local op = string.match(text, "^%-handle%s+(%S+)")
         if op == "on" then

@@ -2025,11 +2025,11 @@ function Trig_CommonHome_Actions()
     
     --End other races
     g=CreateGroup()
-    udg_Boolexpr = NoneRadicals
+    udg_Boolexpr = CachedFilter(NoneRadicals)
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
     local gSize = BlzGroupGetSize(g)
     for gIdx = 1, gSize do
-        u = BlzGroupUnitAt(g, gIdx)
+        u = BlzGroupUnitAt(g, gIdx - 1)
         if u == nil then break end
 
         SetUnitOwner(u, Player(24), true)
@@ -2340,11 +2340,11 @@ function Trig_TrueHorde_Actions()
     
     --End other races
     g=CreateGroup()
-    udg_Boolexpr = NoNeORc
+    udg_Boolexpr = CachedFilter(NoNeORc)
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
     local gSize = BlzGroupGetSize(g)
     for gIdx = gSize, 1, -1 do
-        u = BlzGroupUnitAt(g, gIdx)
+        u = BlzGroupUnitAt(g, gIdx - 1)
         if u == nil then break end
 
         KillUnit(u)
@@ -2807,7 +2807,7 @@ end
 function Trig_ThrallMolnya_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr = EnemEl
+    udg_Boolexpr = CachedFilter(EnemEl)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 400, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -2841,7 +2841,7 @@ function Trig_Okovi_Func007A()
 end
 function Trig_Okovi_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr = Trig_Okovi_Func002002
+    udg_Boolexpr = CachedFilter(Trig_Okovi_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 225, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -2877,7 +2877,7 @@ end
 function Trig_GarraoshMassBloodlast_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr = Trig_GarraoshMassBloodlast_Func002002
+    udg_Boolexpr = CachedFilter(Trig_GarraoshMassBloodlast_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 500, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())

@@ -19,7 +19,7 @@ end
 function Trig_PoleAstralaDragons_Actions()
     udg_LocalPosition[14]=GetUnitLoc(GetTriggerUnit())
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr = Trig_PoleAstralaDragons_Func003002
+    udg_Boolexpr = CachedFilter(Trig_PoleAstralaDragons_Func003002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 200, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PoleAstralaDragons_Func005A)
     RemoveLocation(udg_LocalPosition[14])

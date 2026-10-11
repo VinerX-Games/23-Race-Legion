@@ -175,14 +175,14 @@ function Trig_MassPosadka2_Actions()
     -- ???????? ??????? (? ??????? ??????) ? ??????, ?????? ????????? ?????
     udg_LocalInteger=0
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr = Trig_MassPosadka_Copy_Func006002
+    udg_Boolexpr = CachedFilter(Trig_MassPosadka_Copy_Func006002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroup(udg_LocalOtrad2, Trig_MassPosadka_Copy_Func008A)
     
     
     
     -- ????? ?????? ?? ?????? ?? ???????? ? ?? ??????.
-    udg_Boolexpr = Trig_MassPosadka_Copy_Func010002
+    udg_Boolexpr = CachedFilter(Trig_MassPosadka_Copy_Func010002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 250, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     
@@ -227,13 +227,13 @@ function Trig_Linkor_reaserch_Obstel_O_Func002C()
 end
 function Trig_Linkor_reaserch_Obstel_O_Actions()
     if Trig_Linkor_reaserch_Obstel_O_Func001C() then
-        udg_Boolexpr = Trig_Linkor_reaserch_Obstel_O_Func001Func002002
+        udg_Boolexpr = CachedFilter(Trig_Linkor_reaserch_Obstel_O_Func001Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Obstel_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     end
     if Trig_Linkor_reaserch_Obstel_O_Func002C() then
-        udg_Boolexpr = Trig_Linkor_reaserch_Obstel_O_Func002Func002002
+        udg_Boolexpr = CachedFilter(Trig_Linkor_reaserch_Obstel_O_Func002Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Obstel_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -302,13 +302,13 @@ function Trig_Linkor_reaserch_Parusa_O_Func002C()
 end
 function Trig_Linkor_reaserch_Parusa_O_Actions()
     if Trig_Linkor_reaserch_Parusa_O_Func001C() then
-        udg_Boolexpr = Trig_Linkor_reaserch_Parusa_O_Func001Func002002
+        udg_Boolexpr = CachedFilter(Trig_Linkor_reaserch_Parusa_O_Func001Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Parusa_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     end
     if Trig_Linkor_reaserch_Parusa_O_Func002C() then
-        udg_Boolexpr = Trig_Linkor_reaserch_Parusa_O_Func002Func002002
+        udg_Boolexpr = CachedFilter(Trig_Linkor_reaserch_Parusa_O_Func002Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Parusa_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -377,13 +377,13 @@ function Trig_Linkor_Repair_O_Func002C()
 end
 function Trig_Linkor_Repair_O_Actions()
     if Trig_Linkor_Repair_O_Func001C() then
-        udg_Boolexpr = Trig_Linkor_Repair_O_Func001Func002002
+        udg_Boolexpr = CachedFilter(Trig_Linkor_Repair_O_Func001Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_Repair_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     end
     if Trig_Linkor_Repair_O_Func002C() then
-        udg_Boolexpr = Trig_Linkor_Repair_O_Func002Func002002
+        udg_Boolexpr = CachedFilter(Trig_Linkor_Repair_O_Func002Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_Repair_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -533,12 +533,12 @@ function Trig_Abordach_D_or_Ot_Actions()
             udg_LocalUnit[1]=u[1]
             udg_LocalUnit[2]=u[2]
             TriggerExecute(gg_trg_AbordachSystemDefence2_O)
-            udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func017Func005002
+            udg_Boolexpr = CachedFilter(Trig_Abordach_D_or_Ot_Func018Func017Func005002)
             GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
             ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func017Func009A)
             GroupClear(udg_LocalOtrad2)
             if true then -- INLINED!!
-                udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func017Func011Func004002
+                udg_Boolexpr = CachedFilter(Trig_Abordach_D_or_Ot_Func018Func017Func011Func004002)
                 GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
                 udg_LocalText2="cffff0000.r"
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[2]), 0, 0, udg_LocalText2)
@@ -561,12 +561,12 @@ function Trig_Abordach_D_or_Ot_Actions()
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[1]), 0, 0, udg_LocalText2)
                 udg_LocalText2="cff00ff00r not "
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[2]), 0, 0, udg_LocalText2)
-                udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func021Func007Func008002
+                udg_Boolexpr = CachedFilter(Trig_Abordach_D_or_Ot_Func018Func021Func007Func008002)
                 GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
                 ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func021Func007Func012A)
                 GroupClear(udg_LocalOtrad2)
             end
-            udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func021Func011002
+            udg_Boolexpr = CachedFilter(Trig_Abordach_D_or_Ot_Func018Func021Func011002)
             GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
             ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func021Func015A)
             return
@@ -761,7 +761,7 @@ end
 --
 -- ? ??????? ???? ????? ?????????
 --===========================================================================
-function ManabombaMissle()
+function ManabombaMissle(caster, destination)
     local t= CreateTimer()
     local l= GetUnitLoc(caster)
     local p= GetOwningPlayer(caster)
@@ -1467,15 +1467,13 @@ function Trig_F2_2_Actions()
     
     --set g = udg_F_Group[pi+1]
     GroupAddGroup(udg_F_Group[pi + 1], g)
-    local fgSize = BlzGroupGetSize(g)
-    local fgIdx = 0
-    while fgIdx < fgSize do
-        fgIdx = fgIdx + 1
-        u = BlzGroupUnitAt(g, fgIdx)
+    while true do
+        u = FirstOfGroup(g)
         if u == nil then
             GroupPointOrderLoc(g0, "attack", loc)
-            if true then break end
+            break
         end
+        GroupRemoveUnit(g, u)
 
         if i == 12 then
             GroupPointOrderLoc(g0, "attack", loc)
@@ -1512,7 +1510,7 @@ function OwnUnit()
     return GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer
 end
 function IsCityEnemy()
-    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('AHad')) >= 0 and GetOwningPlayer(GetFilterUnit()) ~= udg_LocalPlayer
+    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('AHad')) > 0 and GetOwningPlayer(GetFilterUnit()) ~= udg_LocalPlayer
 end
 function Trig_F2_Attack_Point_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -1527,24 +1525,22 @@ function Trig_F2_Attack_Point_Actions()
     --set g = udg_F_Group[pi+1]
     GroupAddGroup(udg_F_Group[pi + 1], g)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    local fgSize = BlzGroupGetSize(g)
-    local fgIdx = fgSize
-    while fgIdx >= 1 and i < 25 do
-        u = BlzGroupUnitAt(g, fgIdx)
-        fgIdx = fgIdx - 1
+    while i < 25 do
+        u = FirstOfGroup(g)
         if u == nil then break end
+        GroupRemoveUnit(g, u)
 
         x=GetUnitX(u)
         y=GetUnitY(u)
 
-        GroupEnumUnitsInRange(g0, x, y, 500, OwnUnit)
-        GroupEnumUnitsInRange(points, x, y, 7500, IsCityEnemy)
+        GroupEnumUnitsInRange(g0, x, y, 500, CachedFilter(OwnUnit))
+        GroupEnumUnitsInRange(points, x, y, 7500, CachedFilter(IsCityEnemy))
         if FirstOfGroup(points) ~= nil then
             u2=BlzGroupUnitAt(points, GetRandomInt(0, BlzGroupGetSize(points) - 1))
             GroupPointOrder(g0, "attack", GetUnitX(u2), GetUnitY(u2))
                 
         end
-        GroupRemoveGroup(g, g0)
+        GroupRemoveGroup(g0, g)
         GroupClear(g0)
         u=nil
         i=i + 1
@@ -1741,7 +1737,7 @@ end
 function Trig_F2_Map_2_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     --set udg_Boolexpr = Condition(function Trig_F2_Map_2_Func001002)
-    GroupEnumUnitsInRect(udg_LocalOtrad2, GetPlayableMapRect(), F2_targets)
+    GroupEnumUnitsInRect(udg_LocalOtrad2, GetPlayableMapRect(), CachedFilter(F2_targets))
    
    
 --   
@@ -1893,7 +1889,7 @@ end
 function Trig_F2_AreaMidBig_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     --set udg_Boolexpr = Condition(function Trig_F2_AreaMidBig_Func002002)
-    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 2500, F2_targets)
+    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 2500, CachedFilter(F2_targets))
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func004001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func005001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func006001002)), udg_LocalOtrad2 )
@@ -2040,7 +2036,7 @@ end
 --endfunction
 function Trig_F2_AreaMid_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 1000, F2_targets)
+    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 1000, CachedFilter(F2_targets))
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func004001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func005001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func006001002)), udg_LocalOtrad2 )
@@ -2188,7 +2184,7 @@ end
 --
 function Trig_F2_AreaSmall_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 500, F2_targets)
+    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 500, CachedFilter(F2_targets))
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func004001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func005001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func006001002)), udg_LocalOtrad2 )

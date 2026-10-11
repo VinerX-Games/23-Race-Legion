@@ -132,7 +132,7 @@ function Trig_MassSglaz_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex = EnemEl
+    bex = CachedFilter(EnemEl)
     GroupEnumUnitsInRangeOfLoc(g, l, 110 + 50 * level, bex)
     
     RemoveLocation(l)
@@ -583,7 +583,7 @@ function Trig_Help_Actions()
     local u= GetTriggerUnit()
     local u2= nil
     local g= CreateGroup()
-    local b
+    local b = CachedFilter(AllyToKill)
     local l
     
     DisableTrigger(GetTriggeringTrigger())
@@ -604,7 +604,6 @@ function Trig_Help_Actions()
         end
     end
     DestroyGroup(g)
-    DestroyBoolExpr(b)
     g=nil
     b=nil
     l=nil
@@ -675,7 +674,7 @@ function Trig_HelpButton_Actions()
     local u= GetTriggerUnit()
     local u2= nil
     local g= CreateGroup()
-    local b
+    local b = CachedFilter(AllyToKill)
     local l
     
     DisableTrigger(GetTriggeringTrigger())
@@ -701,7 +700,6 @@ function Trig_HelpButton_Actions()
         
     end
     DestroyGroup(g)
-    DestroyBoolExpr(b)
     g=nil
     b=nil
     l=nil
@@ -741,7 +739,7 @@ function BrokenBlood()
     local u= udg_LocalUnit3
     local u2= udg_LocalUnit2
     local g= CreateGroup()
-    local b
+    local b = CachedFilter(EnemyToBlood)
     local e= AddSpecialEffectTargetUnitBJ("overhead", u2, "Trolls / RedsplashMissilebyRas.mdx")
     local i= 0
     --call DisplayTextToPlayer(Player(0),0,0,"2"+GetUnitName(u2))
@@ -783,7 +781,6 @@ function BrokenBlood()
     
     UnitRemoveAbility(u2, FourCC('A1DE'))
     DestroyGroup(g)
-    DestroyBoolExpr(b)
     g=nil
     b=nil
     e=nil

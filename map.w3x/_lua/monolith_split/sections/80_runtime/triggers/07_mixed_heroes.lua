@@ -321,10 +321,10 @@ end
 --================================================================================================================================================================================
 -- ???? 0 - ??? ???????
 --================
-function UnUgolMT()
+function UnUgolMT(x1, x2, y1, y2)
     return bj_RADTODEG * Atan2(y2 - y1, x2 - x1)
 end
-function UnRastMT()
+function UnRastMT(x1, x2, y1, y2)
     local dx= x2 - x1
     local dy= y2 - y1
     return SquareRoot(dx * dx + dy * dy)
@@ -445,7 +445,7 @@ function Trig_PassiveAdal_Actions()
     local g= CreateGroup()
     local u= GetTriggerUnit()
     local u2
-    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 500, Adal, 1)
+    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 500, CachedFilter(Adal), 1)
     u2=FirstOfGroup(g)
     if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1L6')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --??????
         SetUnitManaBJ(u2, GetUnitState(u2, UNIT_STATE_MANA) - 50)

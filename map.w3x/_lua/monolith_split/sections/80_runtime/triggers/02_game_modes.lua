@@ -1039,7 +1039,7 @@ function Trig_FeodalCapitalDamage_Actions()
 	BlzSetEventDamage(0.0)
 	SetUnitLifePercentBJ(capital, 14.0)
 	
-	local attacker = GetOwningPlayer(BlzGetEventDamageSource())
+	local attacker = GetOwningPlayer(GetEventDamageSource())
 	HandleVassalization(capital, attacker)
 end
 -- ===========================================================================

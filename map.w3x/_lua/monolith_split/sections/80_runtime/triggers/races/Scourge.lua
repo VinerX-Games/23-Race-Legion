@@ -177,7 +177,7 @@ function Trig_ArthasCoils_Func007A()
 end
 function Trig_ArthasCoils_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr = Trig_ArthasCoils_Func002002
+    udg_Boolexpr = CachedFilter(Trig_ArthasCoils_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 125, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -212,7 +212,7 @@ function Trig_ArthasNova_Func007A()
 end
 function Trig_ArthasNova_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    udg_Boolexpr = Trig_ArthasNova_Func002002
+    udg_Boolexpr = CachedFilter(Trig_ArthasNova_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 240, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -309,7 +309,7 @@ function Trig_PassiveTalisra_Actions()
     local u2
     local p= GetOwningPlayer(u)
     local pi= GetPlayerId(p)
-    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 650, Talisra, 1)
+    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 650, CachedFilter(Talisra), 1)
     u2=FirstOfGroup(g)
     if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1OS')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --??????
         SetUnitManaBJ(u2, GetUnitState(u2, UNIT_STATE_MANA) - 50)

@@ -305,7 +305,7 @@ function Trig_Potreblenie_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC('A0A5'), GetOwningPlayer(GetTriggerUnit()))
         return
     end
-    udg_Boolexpr = Trig_Potreblenie_Func002002
+    udg_Boolexpr = CachedFilter(Trig_Potreblenie_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Potreblenie_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -355,7 +355,7 @@ function Trig_BracResearch_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC('A0A6'), GetOwningPlayer(GetTriggerUnit()))
         return
     end
-    udg_Boolexpr = Trig_BracResearch_Func002002
+    udg_Boolexpr = CachedFilter(Trig_BracResearch_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_BracResearch_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -405,7 +405,7 @@ function Trig_PodjogResearch_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC('A0AR'), GetOwningPlayer(GetTriggerUnit()))
         return
     end
-    udg_Boolexpr = Trig_PodjogResearch_Func002002
+    udg_Boolexpr = CachedFilter(Trig_PodjogResearch_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PodjogResearch_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -455,7 +455,7 @@ function Trig_PodruvResearc_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC('A0A9'), GetOwningPlayer(GetTriggerUnit()))
         return
     end
-    udg_Boolexpr = Trig_PodruvResearc_Func002002
+    udg_Boolexpr = CachedFilter(Trig_PodruvResearc_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PodruvResearc_Func005A)
     GroupClear(udg_LocalOtrad2)

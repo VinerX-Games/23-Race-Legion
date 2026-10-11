@@ -135,7 +135,7 @@ function Trig_AlmostDiyW2_Actions()
         GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 1000, Zepp, 5)
         
         
-        u2=BlzGroupUnitAt(g, GetRandomInt(1, BlzGroupGetSize(g)))
+        u2=BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
         if u2 ~= nil and UnitAlive(u2) then
             
             RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanFlakCannonsFlakTarget.mdl", GetUnitX(u), GetUnitY(u)) , 1)
@@ -206,7 +206,7 @@ function Trig_DiyGoblinW2_Actions()
         GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 1000, Zepp, 5)
         
         
-        u2=BlzGroupUnitAt(g, GetRandomInt(1, BlzGroupGetSize(g)))
+        u2=BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
         if u2 ~= nil and UnitAlive(u2) then
                    
             RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanFlakCannonsFlakTarget.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
@@ -343,7 +343,7 @@ function Trig_SpellMassAxes_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex = EnemEl
+    bex = CachedFilter(EnemEl)
     GroupEnumUnitsInRangeOfLoc(g, l, 150, bex)
     
     if FirstOfGroup(g) == nil then

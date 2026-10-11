@@ -869,7 +869,7 @@ function Trig_PereborBuildings_Code_Func002A()
             local bldOk, bldErr = pcall(function()
                 local manualCount = 0
                 local bldSize = BlzGroupGetSize(bldGrp)
-                for bldIdx = 1, bldSize do
+                for bldIdx = 0, bldSize - 1 do
                     local manualU = BlzGroupUnitAt(bldGrp, bldIdx)
                     if manualU ~= nil then
                         manualCount = manualCount + 1
@@ -1569,11 +1569,11 @@ end
 --===========================================================================
 -- Trigger: MainFloatUnits
 --===========================================================================
-function isShip()
+function isShip(id)
     return id == FourCC('h00X') or id == FourCC('h00Y') or id == FourCC('h00Z') or id == FourCC('h0CZ') or id == FourCC('h0D2') or id == FourCC('h0D0') or id == FourCC('h0D5') or id == FourCC('h0D4') or id == FourCC('h0D6') or id == FourCC('h0DB') or id == FourCC('h0D9') or id == FourCC('h0DA') or id == FourCC('h0E6') or id == FourCC('h0E5') or id == FourCC('h0E8') or id == FourCC('h03L') or id == FourCC('h03K') or id == FourCC('h06W') or id == FourCC('h0DM') or id == FourCC('h06V') or id == FourCC('h06X') --???????
     
 end
-function aiShipJoins()
+function aiShipJoins(u, pi)
     GroupAddUnit(Navy, u)
     GroupAddUnit(udg_Ai_navy[pi], u)
 end
@@ -1612,14 +1612,14 @@ end
 --===========================================================================
 -- Trigger: PortUnits
 --===========================================================================
-function isNavalBase()
-    return id == FourCC('h0D1') or id == FourCC('h0D8') or id == FourCC('h03R') or id == FourCC('h0D3') or id == FourCC('h0E7') or id == FourCC('h011') or id == FourCC('h0D7') or id == FourCC('u01A') or gId == FourCC('n04L') or gId == FourCC('h0HO') -- ????????? ??? ???? ??????
+function isNavalBase(id)
+    return id == FourCC('h0D1') or id == FourCC('h0D8') or id == FourCC('h03R') or id == FourCC('h0D3') or id == FourCC('h0E7') or id == FourCC('h011') or id == FourCC('h0D7') or id == FourCC('u01A') or id == FourCC('n04L') or id == FourCC('h0HO') -- ????????? ??? ???? ??????
 end
 function Trig_PortUnits_Conditions()
     gUnit=GetConstructingStructure()
     return isNavalBase(GetUnitTypeId(gUnit))
 end
-function aiNavalBaseJoin()
+function aiNavalBaseJoin(u)
     NumberAdd(GetPlayerId(GetOwningPlayer(u)) , StringHash("NumberPorts"))
     GroupAddUnit(Port, u)
 end
@@ -1655,7 +1655,7 @@ end
 --===========================================================================
 -- Trigger: AiRep
 --===========================================================================
-function aiRep()
+function aiRep(pi)
     if not udg_AiControl[pi] then
         return
     end
@@ -1682,7 +1682,7 @@ function aiRep()
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, nil)
     local gSize = BlzGroupGetSize(gGroup)
     for gIdx = gSize, 1, -1 do
-        gUnit = BlzGroupUnitAt(gGroup, gIdx)
+        gUnit = BlzGroupUnitAt(gGroup, gIdx - 1)
         if gUnit == nil then break end
         BJDebugMsg("" .. GetUnitName(gUnit))
         if GetUnitAbilityLevel(gUnit, gDummySpell) == 0 and not IsUnitType(gUnit, UNIT_TYPE_SUMMONED) then
@@ -1735,7 +1735,7 @@ function aiRepUnvul_act()
     
 end
 -- ??????? ?????
-function aiRepUnvul()
+function aiRepUnvul(pi)
     if not udg_AiControl[pi] then
         return
     end
@@ -1955,7 +1955,7 @@ end
 --===========================================================================
 -- Trigger: CheckNearCapitals
 --===========================================================================
-function CheckNearCapitals()
+function CheckNearCapitals(city)
     local g= CreateGroup()
     local u= GetTriggerUnit()
     
@@ -1972,6 +1972,7 @@ function CheckNearCapitals()
     end
     if found then
         DisplayTextToPlayer(udg_LocalPlayer, 0, 0, "(3)")
+        DestroyGroup(g)
         g=nil
         return false
     end
@@ -2009,7 +2010,7 @@ function TeleportUnits(portal, rect, radius)
     gRect=rect
     PortalTeleportOwner=PortalTeleportOwnerByPortal[portalHandle]
     if PortalTeleportOwner ~= nil then
-        GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditions, 150)
+        GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, CachedFilter(PortalConditions), 150)
         ForGroup(gGroup, TeleportUnitsEach)
         GroupClear(gGroup)
     end
@@ -2035,7 +2036,7 @@ function TeleportUnitsED(portal, rect, radius)
     gRect=rect
     PortalTeleportOwner=PortalTeleportOwnerByPortal[portalHandle]
     if PortalTeleportOwner ~= nil then
-        GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditionsED, 150)
+        GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, CachedFilter(PortalConditionsED), 150)
         ForGroup(gGroup, TeleportUnitsEach)
         GroupClear(gGroup)
     end
@@ -3286,7 +3287,7 @@ end
 --===========================================================================
 -- Trigger: NoTpNearCapitalDalNax
 --===========================================================================
-function CheckPosition()
+function CheckPosition(x, y, add)
     return not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY)
   
   -- if not (IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY)) then

@@ -115,7 +115,7 @@ end
 function Trig_MassInvis_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr = MI2
+    udg_Boolexpr = CachedFilter(MI2)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 650, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -624,7 +624,7 @@ function Trig_MassMindControl2_Func007A()
 end
 function Trig_MassMindControl2_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr = Trig_MassMindControl2_Func002002
+    udg_Boolexpr = CachedFilter(Trig_MassMindControl2_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 225, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())

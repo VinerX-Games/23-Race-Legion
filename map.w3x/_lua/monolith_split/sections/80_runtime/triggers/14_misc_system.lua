@@ -623,7 +623,7 @@ end
 --===========================================================================
 -- Trigger: ArchontMode
 --===========================================================================
-function CorrectNumber()
+function CorrectNumber(pi2)
     return pi2 >= 0 and pi2 <= 24
 end
 function Trig_ArchontMode_Actions()

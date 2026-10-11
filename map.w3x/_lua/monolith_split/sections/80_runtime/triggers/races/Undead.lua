@@ -77,7 +77,6 @@ function Trig_Untitled_Trigger_003_Func001001003()
     return GetUnitAbilityLevel(GetFilterUnit(), FourCC('cDa6')) > 0 and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and UnitAlive(GetFilterUnit())
 end
 function Trig_MeatDeal_Actions()
-    local Boolexpr
     local caster= GetTriggerUnit()
     local target
     local eachUnit
@@ -89,7 +88,7 @@ function Trig_MeatDeal_Actions()
     local Efficiency= 0.5 + GetPlayerTechCount(p, FourCC('cDR5'), true) * 0.05
     local count= 0
     udg_LocalPlayer=p
-    GroupEnumUnitsInRangeCounted(g, GetSpellTargetX(), GetSpellTargetY(), 275, Boolexpr, 12)
+    GroupEnumUnitsInRangeCounted(g, GetSpellTargetX(), GetSpellTargetY(), 275, CachedFilter(Trig_Untitled_Trigger_003_Func001001003), 12)
     
     --if target == null then
         target=FirstOfGroup(g)
@@ -99,8 +98,6 @@ function Trig_MeatDeal_Actions()
     if target == nil then
         
         DestroyGroup(g)
-        DestroyBoolExpr(Boolexpr)
-        Boolexpr=nil
         g=nil
         caster=nil
         target=nil
@@ -167,8 +164,6 @@ function Trig_MeatDeal_Actions()
         --call AddCountDis(target,GetPlayerId(GetOwningPlayer(target)))
     end
     
-    DestroyBoolExpr(Boolexpr)
-    Boolexpr=nil
     DestroyGroup(g)
     g=nil
     caster=nil
@@ -191,7 +186,6 @@ function BoneCheck()
     return GetUnitAbilityLevel(GetFilterUnit(), FourCC('cDat')) > 0 and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and UnitAlive(GetFilterUnit())
 end
 function Trig_BoneDeal_Actions()
-    local Boolexpr
     local caster= GetTriggerUnit()
     local target
     local eachUnit
@@ -204,7 +198,7 @@ function Trig_BoneDeal_Actions()
     local count= 0
     
     udg_LocalPlayer=p
-    GroupEnumUnitsInRangeCounted(g, GetSpellTargetX(), GetSpellTargetY(), 275, Boolexpr, 12)
+    GroupEnumUnitsInRangeCounted(g, GetSpellTargetX(), GetSpellTargetY(), 275, CachedFilter(BoneCheck), 12)
     
     --if target == null then
         target=FirstOfGroup(g)
@@ -214,8 +208,6 @@ function Trig_BoneDeal_Actions()
     if target == nil then
         
         DestroyGroup(g)
-        DestroyBoolExpr(Boolexpr)
-        Boolexpr=nil
         g=nil
         caster=nil
         target=nil
@@ -275,8 +267,6 @@ function Trig_BoneDeal_Actions()
         --call AddCountDis(target,GetPlayerId(GetOwningPlayer(target)))
     end
     
-    DestroyBoolExpr(Boolexpr)
-    Boolexpr=nil
     DestroyGroup(g)
     g=nil
     caster=nil
@@ -490,7 +480,7 @@ function Trig_MassIceArrow_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex = EnemEl
+    bex = CachedFilter(EnemEl)
     GroupEnumUnitsInRangeOfLoc(g, l, 150, bex)
     
     if FirstOfGroup(g) == nil then

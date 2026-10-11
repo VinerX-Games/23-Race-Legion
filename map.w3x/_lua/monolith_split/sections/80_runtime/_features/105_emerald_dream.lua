@@ -26,18 +26,30 @@ function SleepGreenEach()
 	PauseUnit(GetEnumUnit(), true)
 	-- call UnitWakeUp(GetEnumUnit())
 end
+-- Своя группа: WakeGreenUp вызывается из ForGroup(gGroup, ...) телепорта порталов
+-- (TeleportUnitsEach -> EnterGreen) и из checkGreenArea, перебирающей gGroup.
+-- Enum/GroupClear той же gGroup внутри перебора -> краш ACCESS_VIOLATION.
+local greenGroup
+local function GreenGroup()
+	if greenGroup == nil then
+		greenGroup = CreateGroup()
+	end
+	return greenGroup
+end
 ---@return nothing
 function WakeGreenUp()
-	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, GreenCreatureFilter())
-	ForGroup(gGroup, WakeGreenUpEach)
-	GroupClear(gGroup)
+	local g = GreenGroup()
+	GroupEnumUnitsInRect(g, gg_rct_EmeraldDream, GreenCreatureFilter())
+	ForGroup(g, WakeGreenUpEach)
+	GroupClear(g)
 end
 ---@return nothing
 function SleepGreen()
 	-- call BJDebugMsg("??????")
-	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, GreenCreatureFilter())
-	ForGroup(gGroup, SleepGreenEach)
-	GroupClear(gGroup)
+	local g = GreenGroup()
+	GroupEnumUnitsInRect(g, gg_rct_EmeraldDream, GreenCreatureFilter())
+	ForGroup(g, SleepGreenEach)
+	GroupClear(g)
 end
 ---@return nothing
 function checkGreenArea()

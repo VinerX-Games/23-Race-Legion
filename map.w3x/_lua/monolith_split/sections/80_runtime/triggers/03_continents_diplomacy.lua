@@ -205,7 +205,7 @@ end
 --===========================================================================
 -- Trigger: ItsFineOrNot
 --===========================================================================
-function AllowedPosition()
+function AllowedPosition(u)
     local x= GetUnitX(u)
     local y= GetUnitY(u)
     

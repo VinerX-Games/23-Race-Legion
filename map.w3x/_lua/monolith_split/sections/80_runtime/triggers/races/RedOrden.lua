@@ -324,7 +324,7 @@ function Trig_NoDeath_Actions()
     local g= CreateGroup()
     local u
     local u2
-    GroupEnumUnitsOfPlayer(g, GetOwningPlayer(GetTriggerUnit()), Boolexpr)
+    GroupEnumUnitsOfPlayer(g, GetOwningPlayer(GetTriggerUnit()), CachedFilter(BrokenBuilding))
     
     if Random(1 , 2) then
         u=FirstOfGroup(g)
@@ -339,7 +339,6 @@ function Trig_NoDeath_Actions()
     end
     --call ForGroupBJ( GetUnitsOfPlayerAndTypeId(Player(0), 'hfoo'), function Trig_NoDeath_Func001A )
     
-    DestroyBoolExpr(Boolexpr)
     DestroyGroup(g)
     u=nil
     u2=nil

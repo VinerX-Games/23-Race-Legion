@@ -157,7 +157,7 @@ function s__SanctifiedEnchantment_Function()
 	local this = LoadInteger(Global_Hash, GetHandleId(((GetTriggeringTrigger()))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (-1))	--  INLINED!!
 	if GetTriggerEventId() == EVENT_GAME_TIMER_EXPIRED then
 		s__SanctifiedEnchantment_Time[this] = s__SanctifiedEnchantment_Time[this] + s__SanctifiedEnchantment_Date
-		if s__SanctifiedEnchantment_Time[this] >= SanctifiedEnchantment_BuffDuration[s__SanctifiedEnchantment_Levelthis] or GetUnitAbilityLevel(s__SanctifiedEnchantment_Target[this], SanctifiedEnchantment_SkillBuffStatusId) == 0 then
+		if s__SanctifiedEnchantment_Time[this] >= SanctifiedEnchantment_BuffDuration[s__SanctifiedEnchantment_Level[this]] or GetUnitAbilityLevel(s__SanctifiedEnchantment_Target[this], SanctifiedEnchantment_SkillBuffStatusId) == 0 then
 			s__SanctifiedEnchantment_destroy(this)
 		end
 	else

@@ -853,10 +853,11 @@ function AiDiplomatConsiderBreak(pi, otherPi)
     -- few ticks. Betrayal (4) and the rare random break (3) are still allowed.
     local tickNow = AiDiplomatTicks[pi] or 0
     local allyAge = tickNow - ((st.alliedAt and st.alliedAt[otherPi]) or 0)
+    -- Сила нужна и проверке слабости (1), и предательству (4) — считать вне if.
+    local otherPower = Grades[otherPi] or 0
+    local myPower = Grades[pi] or 1
     if allyAge >= AiDiplomatMinAllyAge then
         -- 1. Ally is too weak
-        local otherPower = Grades[otherPi] or 0
-        local myPower = Grades[pi] or 1
         local weakness = 1.0 - (otherPower / math.max(myPower, 1))
         if weakness > cfg.breakOnWeakness then
             return true, "You have grown too weak to be useful."

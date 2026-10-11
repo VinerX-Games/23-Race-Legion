@@ -427,12 +427,31 @@ function BridgeStart()
     EvalWriteHeartbeat()  -- publish initial seq so the agent syncs from tick 0
     TimerStart(timer, BridgeTickInterval, true, BridgeTick)
 end
+-- Отладочные чат-команды (-bridge:, -log, -handle, -codexping) меняют союзы,
+-- создают ИИ и исполняют Lua — в мультиплеере их нельзя давать всем игрокам.
+-- Разрешены только когда в игре один живой человек (одиночная игра / probe-map)
+-- или явно включён DebugChatForce. Слоты одинаковы у всех клиентов -> без десинка.
+DebugChatForce = false
+function DebugChatAllowed()
+    if DebugChatForce then
+        return true
+    end
+    local humans = 0
+    for i = 0, 23 do
+        local p = Player(i)
+        if GetPlayerSlotState(p) == PLAYER_SLOT_STATE_PLAYING and GetPlayerController(p) == MAP_CONTROL_USER then
+            humans = humans + 1
+        end
+    end
+    return humans <= 1
+end
 function SetupBridgeChat()
     local trigger = CreateTrigger()
     for i = 0, 23 do
         TriggerRegisterPlayerChatEvent(trigger, Player(i), "-bridge:", false)
     end
     TriggerAddAction(trigger, function()
+        if not DebugChatAllowed() then return end
         local text = GetEventPlayerChatString()
         local rest = string.sub(text, 9)
         local sep = string.find(rest, ":", 1, true)
@@ -534,6 +553,7 @@ function SetupCodexPingChat()
         TriggerRegisterPlayerChatEvent(trigger, Player(i), "-codexping", true)
     end
     TriggerAddAction(trigger, function()
+        if not DebugChatAllowed() then return end
         local player_name = GetPlayerName(GetTriggerPlayer())
         local chat_text = GetEventPlayerChatString()
         ProbeLogWrite("[PING] player=" .. tostring(player_name) .. " text=" .. tostring(chat_text))
@@ -546,9 +566,14 @@ function SetupLogChat()
         TriggerRegisterPlayerChatEvent(trigger, Player(i), "-log", false)
     end
     TriggerAddAction(trigger, function()
+        if not DebugChatAllowed() then return end
         local text = GetEventPlayerChatString()
         local args = string.sub(text, 5)
-        local logOp, logTag = string.match(args, "^%s*(on|off|toggle|allon|alloff|list)%s*(.*)")
+        -- Lua-паттерны не знают альтернации "|": берём первое слово и сверяем вручную.
+        local logOp, logTag = string.match(args, "^%s*(%a+)%s*(.*)")
+        if logOp ~= "on" and logOp ~= "off" and logOp ~= "toggle" and logOp ~= "allon" and logOp ~= "alloff" and logOp ~= "list" then
+            logOp = nil
+        end
         if logOp == nil then
             local msg = "Usage: -log <on|off|toggle|allon|alloff|list> [TAG]"
             DisplayTimedTextToPlayer(GetTriggerPlayer(), 0, 0, 10.00, "|cffffcc00" .. msg .. "|r")
@@ -590,6 +615,7 @@ function SetupHandleCounterChat()
         TriggerRegisterPlayerChatEvent(trigger, Player(i), "-handle", false)
     end
     TriggerAddAction(trigger, function()
+        if not DebugChatAllowed() then return end
         local text = GetEventPlayerChatString()
         local op = string.match(text, "^%-handle%s+(%S+)")
         if op == "on" then
@@ -3215,6 +3241,20 @@ s__SanctifiedEnchantment_Time = {}	---@type real
 s__SanctifiedEnchantment_Trigger = {}	---@type trigger	
 ---@param u unit
 ---@return boolean
+-- Ленивый кэш boolexpr по функции-фильтру: GroupEnum*/TriggerAddCondition ждут
+-- Filter(f), а не голую функцию. Создаётся при первом вызове (не на корневом уровне
+-- скрипта), по таблице не итерируемся -> детерминизм не страдает.
+local cachedFilters = {}
+---@param f function
+---@return boolexpr
+function CachedFilter(f)
+	local b = cachedFilters[f]
+	if b == nil then
+		b = Filter(f)
+		cachedFilters[f] = b
+	end
+	return b
+end
 -- NOTE: vJASS->Lua emitted an EMPTY stub here (`function UnitAlive(u) end`) which
 -- shadowed the engine native and returned nil for every call -> broke ALL AI combat
 -- (IsAiCombatRetaskable / enemy filters / navy filter never matched). Real life-based
@@ -3890,8 +3930,8 @@ end
 ---@return nothing
 function s__StackTemplate_destroy(this)
 	if s__StackTemplate_NOW[this] > 0 then
-		s__StackTemplate_STACK[s__StackTemplate_NOWthis] = s__StackTemplate_STACK[s__StackTemplate_COUNT]
-		s__StackTemplate_NOW[s__StackTemplate_STACKs__StackTemplate_NOWthis] = s__StackTemplate_NOW[this]
+		s__StackTemplate_STACK[s__StackTemplate_NOW[this]] = s__StackTemplate_STACK[s__StackTemplate_COUNT]
+		s__StackTemplate_NOW[s__StackTemplate_STACK[s__StackTemplate_NOW[this]]] = s__StackTemplate_NOW[this]
 		s__StackTemplate_STACK[s__StackTemplate_COUNT] = 0
 		s__StackTemplate_COUNT = s__StackTemplate_COUNT - 1
 	end
@@ -3902,7 +3942,7 @@ function s__StackTemplate_create()
 	local this = s__StackTemplate__allocate()
 	s__StackTemplate_COUNT = s__StackTemplate_COUNT + 1
 	s__StackTemplate_STACK[s__StackTemplate_COUNT] = this
-	s__StackTemplate_NOW[s__StackTemplate_STACKs__StackTemplate_COUNT] = s__StackTemplate_COUNT
+	s__StackTemplate_NOW[s__StackTemplate_STACK[s__StackTemplate_COUNT]] = s__StackTemplate_COUNT
 	return this
 end
 -- ==========================================
@@ -4767,7 +4807,7 @@ function s__SanctifiedEnchantment_Function()
 	local this = LoadInteger(Global_Hash, GetHandleId(((GetTriggeringTrigger()))), 10000 + JASS_MAX_ARRAY_SIZE * s__SanctifiedEnchantment_Key + (-1))	--  INLINED!!
 	if GetTriggerEventId() == EVENT_GAME_TIMER_EXPIRED then
 		s__SanctifiedEnchantment_Time[this] = s__SanctifiedEnchantment_Time[this] + s__SanctifiedEnchantment_Date
-		if s__SanctifiedEnchantment_Time[this] >= SanctifiedEnchantment_BuffDuration[s__SanctifiedEnchantment_Levelthis] or GetUnitAbilityLevel(s__SanctifiedEnchantment_Target[this], SanctifiedEnchantment_SkillBuffStatusId) == 0 then
+		if s__SanctifiedEnchantment_Time[this] >= SanctifiedEnchantment_BuffDuration[s__SanctifiedEnchantment_Level[this]] or GetUnitAbilityLevel(s__SanctifiedEnchantment_Target[this], SanctifiedEnchantment_SkillBuffStatusId) == 0 then
 			s__SanctifiedEnchantment_destroy(this)
 		end
 	else
@@ -9612,13 +9652,6 @@ function InitTrig_HandleCounter()
 	HandleCounter_Init()
 end
 --  ????? ???????? ??????
----@return nothing
-function ReturnFPS()
-	framehandlefps = BlzGetFrameByName("ResourceBarFrame", 0)
-	BlzFrameSetVisible(fps, true)
-	BlzFrameClearAllPoints(fps)
-	BlzFrameSetAbsPoint(fps, FRAMEPOINT_CENTER, 0.95, 0.62)
-end
 -- ***************************************************************************
 -- *  Replace
 --  ????? ???????????? ????????????, ??? ???? ????? "???????? ?????? ??????"
@@ -12080,11 +12113,9 @@ function TryAttack()
 				gSubGroupCounter = 0
             GroupClear(gSubGroup)
                 local gSize = BlzGroupGetSize(gAllyGroup)
-                local gIdx = gSize
-                while gIdx >= 1 do
-                    gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
-                    gIdx = gIdx - 1
-                    if gUnit2 == nil then
+                local gIdx = gSize - 1
+                while true do
+                    if gIdx < 0 then
                         local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
                         if attackLogCount < 10 then
                             AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
@@ -12093,8 +12124,11 @@ function TryAttack()
                         GroupPointOrder(gSubGroup, "attack", gX2, gY2)
                         GroupClear(gSubGroup)
                         gSubGroupCounter = 0
-                        if true then break end
+                        break
                     end
+                    gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+                    gIdx = gIdx - 1
+                    if gUnit2 == nil then goto continue_ally end
 
                     if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
                         gUnit2 = ReplaceUnit2(gUnit2, GetUnitTypeId(gUnit2), bj_UNIT_STATE_METHOD_RELATIVE)
@@ -12109,6 +12143,7 @@ function TryAttack()
                     end
 
                     gUnit2 = nil
+                    ::continue_ally::
                 end
             end
         end
@@ -12232,12 +12267,9 @@ function TryAttack()
 				gSubGroupCounter = 0
 			GroupClear(gSubGroup)
                 local gSize = BlzGroupGetSize(gAllyGroup)
-                local gIdx = gSize
-                while gIdx >= 1 do
-                    gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
-                    gIdx = gIdx - 1
-
-                    if gUnit2 == nil then
+                local gIdx = gSize - 1
+                while true do
+                    if gIdx < 0 then
                         local attackLogCount = AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] or 0
                         if attackLogCount < 10 then
                             AiData[pi_attack][StringHash("Log_TryAttackOrderCount")] = attackLogCount + 1
@@ -12246,8 +12278,11 @@ function TryAttack()
                         GroupPointOrder(gSubGroup, "attack", gX2, gY2)
                         GroupClear(gSubGroup)
                         gSubGroupCounter = 0
-                        if true then break end
+                        break
                     end
+                    gUnit2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+                    gIdx = gIdx - 1
+                    if gUnit2 == nil then goto continue_ally end
 
                     --  ???????? ? ???????
                     if GetUnitAbilityLevel(gUnit2, FourCC('Bvul')) > 0 then
@@ -12263,6 +12298,7 @@ function TryAttack()
                     end
 
                     gUnit2 = nil
+                    ::continue_ally::
 				end
 					
 					
@@ -12327,24 +12363,23 @@ function TryAttackN()
 			local gSize = BlzGroupGetSize(gAllyGroup)
 			local gIdx = 0
 			while gIdx < gSize do
-				gIdx = gIdx + 1
 				u2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+				gIdx = gIdx + 1
 
-				if u2 == nil then
-					GroupPointOrder(gSubGroup, "attack", x2, y2)
-					GroupClear(gSubGroup)
-					gSubGroupCounter = 0
-					if true then break end
+				if u2 ~= nil then
+					GroupAddUnit(gSubGroup, u2)
+					gSubGroupCounter = gSubGroupCounter + 1
+					if gSubGroupCounter >= 12 then
+						GroupPointOrder(gSubGroup, "attack", x2, y2)
+						GroupClear(gSubGroup)
+						gSubGroupCounter = 0
+					end
 				end
-
-
-				GroupAddUnit(gSubGroup, u2)
-				gSubGroupCounter = gSubGroupCounter + 1
-				if gSubGroupCounter >= 12 then
-					GroupPointOrder(gSubGroup, "attack", x2, y2)
-					GroupClear(gSubGroup)
-					gSubGroupCounter = 0
-				end
+			end
+			if gSubGroupCounter > 0 then
+				GroupPointOrder(gSubGroup, "attack", x2, y2)
+				GroupClear(gSubGroup)
+				gSubGroupCounter = 0
 			end
 			
 			gInt = 11
@@ -12544,18 +12579,30 @@ function SleepGreenEach()
 	PauseUnit(GetEnumUnit(), true)
 	-- call UnitWakeUp(GetEnumUnit())
 end
+-- Своя группа: WakeGreenUp вызывается из ForGroup(gGroup, ...) телепорта порталов
+-- (TeleportUnitsEach -> EnterGreen) и из checkGreenArea, перебирающей gGroup.
+-- Enum/GroupClear той же gGroup внутри перебора -> краш ACCESS_VIOLATION.
+local greenGroup
+local function GreenGroup()
+	if greenGroup == nil then
+		greenGroup = CreateGroup()
+	end
+	return greenGroup
+end
 ---@return nothing
 function WakeGreenUp()
-	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, GreenCreatureFilter())
-	ForGroup(gGroup, WakeGreenUpEach)
-	GroupClear(gGroup)
+	local g = GreenGroup()
+	GroupEnumUnitsInRect(g, gg_rct_EmeraldDream, GreenCreatureFilter())
+	ForGroup(g, WakeGreenUpEach)
+	GroupClear(g)
 end
 ---@return nothing
 function SleepGreen()
 	-- call BJDebugMsg("??????")
-	GroupEnumUnitsInRect(gGroup, gg_rct_EmeraldDream, GreenCreatureFilter())
-	ForGroup(gGroup, SleepGreenEach)
-	GroupClear(gGroup)
+	local g = GreenGroup()
+	GroupEnumUnitsInRect(g, gg_rct_EmeraldDream, GreenCreatureFilter())
+	ForGroup(g, SleepGreenEach)
+	GroupClear(g)
 end
 ---@return nothing
 function checkGreenArea()
@@ -14168,29 +14215,33 @@ function Trig_RRR_Func001001003()
 	
 end
 ---@return nothing
-function Trig_RRR_Func001A()
-	
-	local l = PolarProjectionBJ(GetUnitLoc(GetEnumUnit()), 7.00 + (4.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2))), GetUnitFacing(GetEnumUnit()) + 180.00)
-	--  ??? ?????????? ???????? ?? ???????? ?????? 7+ 3 ?????? ???
-	
-	--  ??? ???????? ?? ???????? ????? ?????????? ?? ??????????
-	SetUnitPositionLoc(GetEnumUnit(), l)
-	--  ???? ?????? 0.04 ??? 1+ 2 ?????? ??? 
-	UnitDamageTargetBJ(udg_LocalUnit2, GetEnumUnit(), 1.00 + (2.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2))), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
-	
-	--  ???????? ??????????
-	l = nil
-	RemoveLocation(l)
-	
+-- Аура Груула (период 0.04 с): враги в радиусе отталкиваются и получают урон.
+-- Раньше: каждый тик утекали группа, boolexpr и 2 локации на врага (25 раз/с).
+-- Своя группа (не gGroup): урон запускает триггеры, которые могут трогать gGroup.
+local gruulGroup
+local function GruulPush(gruul)
+	local lvl = I2R(GetUnitAbilityLevel(gruul, FourCC('A18Q')))
+	local dist = 7.00 + 4.00 * lvl
+	local dmg = 1.00 + 2.00 * lvl
+	if gruulGroup == nil then
+		gruulGroup = CreateGroup()
+	end
+	udg_LocalUnit2 = gruul
+	GroupEnumUnitsInRange(gruulGroup, GetUnitX(gruul), GetUnitY(gruul), 450.00 + 55.00 * lvl, CachedFilter(Trig_RRR_Func001001003))
+	while true do
+		local u = FirstOfGroup(gruulGroup)
+		if u == nil then break end
+		GroupRemoveUnit(gruulGroup, u)
+		local a = (GetUnitFacing(u) + 180.00) * bj_DEGTORAD
+		SetUnitPosition(u, GetUnitX(u) + dist * Cos(a), GetUnitY(u) + dist * Sin(a))
+		UnitDamageTarget(gruul, u, dmg, true, false, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL, WEAPON_TYPE_WHOKNOWS)
+	end
 end
 ---@return nothing
 function GruulForce()
-	
 	local pi = GetPlayerId(GetEnumPlayer())
 	if Gruul[pi] ~= nil then
-		udg_LocalUnit2 = Gruul[pi]
-		ForGroup(GetUnitsInRangeOfLocMatching(450.00 + (55.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), Gruul[pi]))), GetUnitLoc(Gruul[pi]), Condition(Trig_RRR_Func001001003)), Trig_RRR_Func001A)
-		
+		GruulPush(Gruul[pi])
 	end
 end
 ---@return nothing
@@ -14316,7 +14367,7 @@ end
 ---@return nothing
 function GlobalIssue(unitid, p, order)
 	gInt = unitid
-	GroupEnumUnitsOfPlayer(gGroup, p, typeBool)
+	GroupEnumUnitsOfPlayer(gGroup, p, CachedFilter(typeBool))
 	GroupImmediateOrder(gGroup, order)
 end
 -- ===========================================================================
@@ -14407,11 +14458,11 @@ function MassSpell(caster, unitability, dammyAbility, order, targetloc, radious,
 	--  call BJDebugMsg("?????????")
 	udg_LocalPlayer = p
 	if targetOwning == 1 then
-		bex = isEnemy
+		bex = CachedFilter(isEnemy)
 	elseif targetOwning == 2 then
-		bex = isAlly
+		bex = CachedFilter(isAlly)
 	else
-		bex = isOwner
+		bex = CachedFilter(isOwner)
 	end
 	
 	if targetloc == nil then
@@ -15149,7 +15200,7 @@ function Trig_GnomeNotToMuch_Actions()
 	local p = GetOwningPlayer(GetTriggerUnit())
 	local pi = GetPlayerId(p)
 	local Tl = udg_TierLevel[GetConvertedPlayerId(p)]
-	udg_Boolexpr = Type_1
+	udg_Boolexpr = CachedFilter(Type_1)
 	
 	if GetUnitTypeId(GetTriggerUnit()) ~= FourCC('h0FL') then	--  ???????? ??? ?????
 		income[pi] = income[pi] + 40
@@ -15748,11 +15799,11 @@ function Trig_Gob_Potreblenie_Actions()
 	local pi = GetPlayerId(p)
 	local u
 	local r = GetPlayerTechCount(p, FourCC('R04N'), true)
-	udg_Boolexpr = Trig_Gob_Potreblenie_Func001002
+	udg_Boolexpr = CachedFilter(Trig_Gob_Potreblenie_Func001002)
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
 	local gSize = BlzGroupGetSize(g)
 	for gIdx = 1, gSize do
-		u = BlzGroupUnitAt(g, gIdx)
+		u = BlzGroupUnitAt(g, gIdx - 1)
 		if u == nil then break end
 
 		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
@@ -15800,11 +15851,11 @@ function Trig_Silitid_Potreblenie_Actions()
 	local pi = GetPlayerId(p)
 	local u
 	local r = GetPlayerTechCount(p, FourCC('R04N'), true)
-	udg_Boolexpr = HaveSilitidSpell
+	udg_Boolexpr = CachedFilter(HaveSilitidSpell)
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
 	local gSize = BlzGroupGetSize(g)
 	for gIdx = 1, gSize do
-		u = BlzGroupUnitAt(g, gIdx)
+		u = BlzGroupUnitAt(g, gIdx - 1)
 		if u == nil then break end
 
 		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
@@ -16367,7 +16418,7 @@ end
 ---@return nothing
 function Trig_RazvedEnd_Actions()
 	local g = CreateGroup()
-	GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 1500, Boolexpr)
+	GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 1500, CachedFilter(Trig_RazvedEnd_Func002001003))
 	
 	RemoveUnit(FirstOfGroup(g))
 	DestroyGroup(g)
@@ -17490,7 +17541,7 @@ function Trig_FeodalCapitalDamage_Actions()
 	BlzSetEventDamage(0.0)
 	SetUnitLifePercentBJ(capital, 14.0)
 	
-	local attacker = GetOwningPlayer(BlzGetEventDamageSource())
+	local attacker = GetOwningPlayer(GetEventDamageSource())
 	HandleVassalization(capital, attacker)
 end
 -- ===========================================================================
@@ -17979,7 +18030,7 @@ end
 --===========================================================================
 -- Trigger: ItsFineOrNot
 --===========================================================================
-function AllowedPosition()
+function AllowedPosition(u)
     local x= GetUnitX(u)
     local y= GetUnitY(u)
     
@@ -21439,7 +21490,7 @@ function Trig_Sdelat_Flagman_Ot_Copy_Func019C()
 end
 function Trig_Sdelat_Flagman_Ot_Copy_Actions()
     udg_FlagmanEst[GetConvertedPlayerId(GetOwningPlayer(GetTriggerUnit()))]=true
-    udg_Boolexpr = Trig_Sdelat_Flagman_Ot_Copy_Func002002
+    udg_Boolexpr = CachedFilter(Trig_Sdelat_Flagman_Ot_Copy_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Sdelat_Flagman_Ot_Copy_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -21486,7 +21537,7 @@ function Trig_Flagman_die_Ot_Actions()
     local p= GetOwningPlayer(u)
     udg_FlagmanEst[GetConvertedPlayerId(p)]=false
     udg_LocalOtrad=GetUnitsOfPlayerAll(p)
-    udg_Boolexpr = Trig_Flagman_die_Ot_Func003002
+    udg_Boolexpr = CachedFilter(Trig_Flagman_die_Ot_Func003002)
     udg_LocalPlayer=GetOwningPlayer(u)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Flagman_die_Ot_Func006A)
@@ -21759,14 +21810,14 @@ function Trig_MassPosadka2_Actions()
     -- ???????? ??????? (? ??????? ??????) ? ??????, ?????? ????????? ?????
     udg_LocalInteger=0
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr = Trig_MassPosadka_Copy_Func006002
+    udg_Boolexpr = CachedFilter(Trig_MassPosadka_Copy_Func006002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroup(udg_LocalOtrad2, Trig_MassPosadka_Copy_Func008A)
     
     
     
     -- ????? ?????? ?? ?????? ?? ???????? ? ?? ??????.
-    udg_Boolexpr = Trig_MassPosadka_Copy_Func010002
+    udg_Boolexpr = CachedFilter(Trig_MassPosadka_Copy_Func010002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 250, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     
@@ -21811,13 +21862,13 @@ function Trig_Linkor_reaserch_Obstel_O_Func002C()
 end
 function Trig_Linkor_reaserch_Obstel_O_Actions()
     if Trig_Linkor_reaserch_Obstel_O_Func001C() then
-        udg_Boolexpr = Trig_Linkor_reaserch_Obstel_O_Func001Func002002
+        udg_Boolexpr = CachedFilter(Trig_Linkor_reaserch_Obstel_O_Func001Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Obstel_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     end
     if Trig_Linkor_reaserch_Obstel_O_Func002C() then
-        udg_Boolexpr = Trig_Linkor_reaserch_Obstel_O_Func002Func002002
+        udg_Boolexpr = CachedFilter(Trig_Linkor_reaserch_Obstel_O_Func002Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Obstel_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -21886,13 +21937,13 @@ function Trig_Linkor_reaserch_Parusa_O_Func002C()
 end
 function Trig_Linkor_reaserch_Parusa_O_Actions()
     if Trig_Linkor_reaserch_Parusa_O_Func001C() then
-        udg_Boolexpr = Trig_Linkor_reaserch_Parusa_O_Func001Func002002
+        udg_Boolexpr = CachedFilter(Trig_Linkor_reaserch_Parusa_O_Func001Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Parusa_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     end
     if Trig_Linkor_reaserch_Parusa_O_Func002C() then
-        udg_Boolexpr = Trig_Linkor_reaserch_Parusa_O_Func002Func002002
+        udg_Boolexpr = CachedFilter(Trig_Linkor_reaserch_Parusa_O_Func002Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_reaserch_Parusa_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -21961,13 +22012,13 @@ function Trig_Linkor_Repair_O_Func002C()
 end
 function Trig_Linkor_Repair_O_Actions()
     if Trig_Linkor_Repair_O_Func001C() then
-        udg_Boolexpr = Trig_Linkor_Repair_O_Func001Func002002
+        udg_Boolexpr = CachedFilter(Trig_Linkor_Repair_O_Func001Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_Repair_O_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     end
     if Trig_Linkor_Repair_O_Func002C() then
-        udg_Boolexpr = Trig_Linkor_Repair_O_Func002Func002002
+        udg_Boolexpr = CachedFilter(Trig_Linkor_Repair_O_Func002Func002002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_Linkor_Repair_O_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -22117,12 +22168,12 @@ function Trig_Abordach_D_or_Ot_Actions()
             udg_LocalUnit[1]=u[1]
             udg_LocalUnit[2]=u[2]
             TriggerExecute(gg_trg_AbordachSystemDefence2_O)
-            udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func017Func005002
+            udg_Boolexpr = CachedFilter(Trig_Abordach_D_or_Ot_Func018Func017Func005002)
             GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
             ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func017Func009A)
             GroupClear(udg_LocalOtrad2)
             if true then -- INLINED!!
-                udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func017Func011Func004002
+                udg_Boolexpr = CachedFilter(Trig_Abordach_D_or_Ot_Func018Func017Func011Func004002)
                 GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
                 udg_LocalText2="cffff0000.r"
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[2]), 0, 0, udg_LocalText2)
@@ -22145,12 +22196,12 @@ function Trig_Abordach_D_or_Ot_Actions()
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[1]), 0, 0, udg_LocalText2)
                 udg_LocalText2="cff00ff00r not "
                 DisplayTextToPlayer(GetOwningPlayer(udg_LocalUnit[2]), 0, 0, udg_LocalText2)
-                udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func021Func007Func008002
+                udg_Boolexpr = CachedFilter(Trig_Abordach_D_or_Ot_Func018Func021Func007Func008002)
                 GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
                 ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func021Func007Func012A)
                 GroupClear(udg_LocalOtrad2)
             end
-            udg_Boolexpr = Trig_Abordach_D_or_Ot_Func018Func021Func011002
+            udg_Boolexpr = CachedFilter(Trig_Abordach_D_or_Ot_Func018Func021Func011002)
             GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
             ForGroupBJ(udg_LocalOtrad2, Trig_Abordach_D_or_Ot_Func018Func021Func015A)
             return
@@ -22345,7 +22396,7 @@ end
 --
 -- ? ??????? ???? ????? ?????????
 --===========================================================================
-function ManabombaMissle()
+function ManabombaMissle(caster, destination)
     local t= CreateTimer()
     local l= GetUnitLoc(caster)
     local p= GetOwningPlayer(caster)
@@ -23051,15 +23102,13 @@ function Trig_F2_2_Actions()
     
     --set g = udg_F_Group[pi+1]
     GroupAddGroup(udg_F_Group[pi + 1], g)
-    local fgSize = BlzGroupGetSize(g)
-    local fgIdx = 0
-    while fgIdx < fgSize do
-        fgIdx = fgIdx + 1
-        u = BlzGroupUnitAt(g, fgIdx)
+    while true do
+        u = FirstOfGroup(g)
         if u == nil then
             GroupPointOrderLoc(g0, "attack", loc)
-            if true then break end
+            break
         end
+        GroupRemoveUnit(g, u)
 
         if i == 12 then
             GroupPointOrderLoc(g0, "attack", loc)
@@ -23096,7 +23145,7 @@ function OwnUnit()
     return GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer
 end
 function IsCityEnemy()
-    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('AHad')) >= 0 and GetOwningPlayer(GetFilterUnit()) ~= udg_LocalPlayer
+    return GetUnitAbilityLevel(GetFilterUnit(), FourCC('AHad')) > 0 and GetOwningPlayer(GetFilterUnit()) ~= udg_LocalPlayer
 end
 function Trig_F2_Attack_Point_Actions()
     local pi= GetPlayerId(GetOwningPlayer(GetTriggerUnit()))
@@ -23111,24 +23160,22 @@ function Trig_F2_Attack_Point_Actions()
     --set g = udg_F_Group[pi+1]
     GroupAddGroup(udg_F_Group[pi + 1], g)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    local fgSize = BlzGroupGetSize(g)
-    local fgIdx = fgSize
-    while fgIdx >= 1 and i < 25 do
-        u = BlzGroupUnitAt(g, fgIdx)
-        fgIdx = fgIdx - 1
+    while i < 25 do
+        u = FirstOfGroup(g)
         if u == nil then break end
+        GroupRemoveUnit(g, u)
 
         x=GetUnitX(u)
         y=GetUnitY(u)
 
-        GroupEnumUnitsInRange(g0, x, y, 500, OwnUnit)
-        GroupEnumUnitsInRange(points, x, y, 7500, IsCityEnemy)
+        GroupEnumUnitsInRange(g0, x, y, 500, CachedFilter(OwnUnit))
+        GroupEnumUnitsInRange(points, x, y, 7500, CachedFilter(IsCityEnemy))
         if FirstOfGroup(points) ~= nil then
             u2=BlzGroupUnitAt(points, GetRandomInt(0, BlzGroupGetSize(points) - 1))
             GroupPointOrder(g0, "attack", GetUnitX(u2), GetUnitY(u2))
                 
         end
-        GroupRemoveGroup(g, g0)
+        GroupRemoveGroup(g0, g)
         GroupClear(g0)
         u=nil
         i=i + 1
@@ -23325,7 +23372,7 @@ end
 function Trig_F2_Map_2_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     --set udg_Boolexpr = Condition(function Trig_F2_Map_2_Func001002)
-    GroupEnumUnitsInRect(udg_LocalOtrad2, GetPlayableMapRect(), F2_targets)
+    GroupEnumUnitsInRect(udg_LocalOtrad2, GetPlayableMapRect(), CachedFilter(F2_targets))
    
    
 --   
@@ -23477,7 +23524,7 @@ end
 function Trig_F2_AreaMidBig_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     --set udg_Boolexpr = Condition(function Trig_F2_AreaMidBig_Func002002)
-    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 2500, F2_targets)
+    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 2500, CachedFilter(F2_targets))
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func004001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func005001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMidBig_Func006001002)), udg_LocalOtrad2 )
@@ -23624,7 +23671,7 @@ end
 --endfunction
 function Trig_F2_AreaMid_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 1000, F2_targets)
+    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 1000, CachedFilter(F2_targets))
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func004001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func005001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaMid_Func006001002)), udg_LocalOtrad2 )
@@ -23772,7 +23819,7 @@ end
 --
 function Trig_F2_AreaSmall_Actions()
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 500, F2_targets)
+    GroupEnumUnitsInRange(udg_LocalOtrad2, GetSpellTargetX(), GetSpellTargetY(), 500, CachedFilter(F2_targets))
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func004001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func005001002)), udg_LocalOtrad2 )
 --    call GroupRemoveGroup( GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(function Trig_F2_AreaSmall_Func006001002)), udg_LocalOtrad2 )
@@ -24206,10 +24253,10 @@ end
 --================================================================================================================================================================================
 -- ???? 0 - ??? ???????
 --================
-function UnUgolMT()
+function UnUgolMT(x1, x2, y1, y2)
     return bj_RADTODEG * Atan2(y2 - y1, x2 - x1)
 end
-function UnRastMT()
+function UnRastMT(x1, x2, y1, y2)
     local dx= x2 - x1
     local dy= y2 - y1
     return SquareRoot(dx * dx + dy * dy)
@@ -24330,7 +24377,7 @@ function Trig_PassiveAdal_Actions()
     local g= CreateGroup()
     local u= GetTriggerUnit()
     local u2
-    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 500, Adal, 1)
+    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 500, CachedFilter(Adal), 1)
     u2=FirstOfGroup(g)
     if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1L6')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --??????
         SetUnitManaBJ(u2, GetUnitState(u2, UNIT_STATE_MANA) - 50)
@@ -25513,7 +25560,7 @@ function Trig_LumberTest_Actions()
     GroupAddGroup(udg_FacelessLumberBuildings, g)
     local gSize = BlzGroupGetSize(g)
     for gIdx = 1, gSize do
-        u = BlzGroupUnitAt(g, gIdx)
+        u = BlzGroupUnitAt(g, gIdx - 1)
         if u == nil then break end
         
         DisplayTextToPlayer(Player(0), 0, 0, "")
@@ -25689,15 +25736,15 @@ end
 --================================================================================================================================================================================
 -- ???? 0 - ??? ???????
 --================
-function JSTRUgolMT()
+function JSTRUgolMT(x1, x2, y1, y2)
     return bj_RADTODEG * Atan2(y2 - y1, x2 - x1)
 end
-function JSTRRastMT()
+function JSTRRastMT(x1, x2, y1, y2)
     local dx= x2 - x1
     local dy= y2 - y1
     return SquareRoot(dx * dx + dy * dy)
 end
-function JSTRParabolaZ()
+function JSTRParabolaZ(h, d, x)
   return ( 4 * h / d ) * ( d - x ) * ( x / d )
 end
 --h - ???????????? ?????? ? ?????? ?? ???????? ?????????? (x = d / 2),
@@ -25919,7 +25966,7 @@ function Trig_AlmostDiyW2_Actions()
         GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 1000, Zepp, 5)
         
         
-        u2=BlzGroupUnitAt(g, GetRandomInt(1, BlzGroupGetSize(g)))
+        u2=BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
         if u2 ~= nil and UnitAlive(u2) then
             
             RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanFlakCannonsFlakTarget.mdl", GetUnitX(u), GetUnitY(u)) , 1)
@@ -25990,7 +26037,7 @@ function Trig_DiyGoblinW2_Actions()
         GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 1000, Zepp, 5)
         
         
-        u2=BlzGroupUnitAt(g, GetRandomInt(1, BlzGroupGetSize(g)))
+        u2=BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
         if u2 ~= nil and UnitAlive(u2) then
                    
             RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanFlakCannonsFlakTarget.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
@@ -26127,7 +26174,7 @@ function Trig_SpellMassAxes_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex = EnemEl
+    bex = CachedFilter(EnemEl)
     GroupEnumUnitsInRangeOfLoc(g, l, 150, bex)
     
     if FirstOfGroup(g) == nil then
@@ -26608,7 +26655,6 @@ function Trig_Untitled_Trigger_003_Func001001003()
     return GetUnitAbilityLevel(GetFilterUnit(), FourCC('cDa6')) > 0 and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and UnitAlive(GetFilterUnit())
 end
 function Trig_MeatDeal_Actions()
-    local Boolexpr
     local caster= GetTriggerUnit()
     local target
     local eachUnit
@@ -26620,7 +26666,7 @@ function Trig_MeatDeal_Actions()
     local Efficiency= 0.5 + GetPlayerTechCount(p, FourCC('cDR5'), true) * 0.05
     local count= 0
     udg_LocalPlayer=p
-    GroupEnumUnitsInRangeCounted(g, GetSpellTargetX(), GetSpellTargetY(), 275, Boolexpr, 12)
+    GroupEnumUnitsInRangeCounted(g, GetSpellTargetX(), GetSpellTargetY(), 275, CachedFilter(Trig_Untitled_Trigger_003_Func001001003), 12)
     
     --if target == null then
         target=FirstOfGroup(g)
@@ -26630,8 +26676,6 @@ function Trig_MeatDeal_Actions()
     if target == nil then
         
         DestroyGroup(g)
-        DestroyBoolExpr(Boolexpr)
-        Boolexpr=nil
         g=nil
         caster=nil
         target=nil
@@ -26698,8 +26742,6 @@ function Trig_MeatDeal_Actions()
         --call AddCountDis(target,GetPlayerId(GetOwningPlayer(target)))
     end
     
-    DestroyBoolExpr(Boolexpr)
-    Boolexpr=nil
     DestroyGroup(g)
     g=nil
     caster=nil
@@ -26722,7 +26764,6 @@ function BoneCheck()
     return GetUnitAbilityLevel(GetFilterUnit(), FourCC('cDat')) > 0 and GetOwningPlayer(GetFilterUnit()) == udg_LocalPlayer and UnitAlive(GetFilterUnit())
 end
 function Trig_BoneDeal_Actions()
-    local Boolexpr
     local caster= GetTriggerUnit()
     local target
     local eachUnit
@@ -26735,7 +26776,7 @@ function Trig_BoneDeal_Actions()
     local count= 0
     
     udg_LocalPlayer=p
-    GroupEnumUnitsInRangeCounted(g, GetSpellTargetX(), GetSpellTargetY(), 275, Boolexpr, 12)
+    GroupEnumUnitsInRangeCounted(g, GetSpellTargetX(), GetSpellTargetY(), 275, CachedFilter(BoneCheck), 12)
     
     --if target == null then
         target=FirstOfGroup(g)
@@ -26745,8 +26786,6 @@ function Trig_BoneDeal_Actions()
     if target == nil then
         
         DestroyGroup(g)
-        DestroyBoolExpr(Boolexpr)
-        Boolexpr=nil
         g=nil
         caster=nil
         target=nil
@@ -26806,8 +26845,6 @@ function Trig_BoneDeal_Actions()
         --call AddCountDis(target,GetPlayerId(GetOwningPlayer(target)))
     end
     
-    DestroyBoolExpr(Boolexpr)
-    Boolexpr=nil
     DestroyGroup(g)
     g=nil
     caster=nil
@@ -27021,7 +27058,7 @@ function Trig_MassIceArrow_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex = EnemEl
+    bex = CachedFilter(EnemEl)
     GroupEnumUnitsInRangeOfLoc(g, l, 150, bex)
     
     if FirstOfGroup(g) == nil then
@@ -27366,11 +27403,21 @@ end
 function Trig_ReturnDamage_Conditions()
     return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1GQ')) > 0
 end
+-- Фильтр был потерян ещё в JASS (local boolexpr b без значения) -> счётчик
+-- всегда 0 и способность не срабатывала. Считает живых врагов (как AllyToKill).
+function ReturnDamageEnemy()
+    local u= GetFilterUnit()
+    if UnitAlive(u) and IsPlayerEnemy(GetOwningPlayer(u), udg_LocalPlayer) and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
+        udg_LocalInteger2=udg_LocalInteger2 + 1
+        return true
+    end
+    return false
+end
 function Trig_ReturnDamage_Actions()
     local u= GetTriggerUnit()
     local u2= nil
     local g= CreateGroup()
-    local b
+    local b = CachedFilter(ReturnDamageEnemy)
     local l
     local damage= GetEventDamage() * 1.30
     DisableTrigger(GetTriggeringTrigger())
@@ -27389,7 +27436,6 @@ function Trig_ReturnDamage_Actions()
         end
     end
     DestroyGroup(g)
-    DestroyBoolExpr(b)
     g=nil
     b=nil
     l=nil
@@ -27596,7 +27642,7 @@ function Trig_MassSetca_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex = EnemEl
+    bex = CachedFilter(EnemEl)
     GroupEnumUnitsInRangeOfLoc(g, l, 100 + 45 * level, bex)
     
     RemoveLocation(l)
@@ -27653,7 +27699,7 @@ function Trig_MassFrenzy_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex = FFrenzy
+    bex = CachedFilter(FFrenzy)
     GroupEnumUnitsInRangeOfLocCounted(g, l, 400, bex, 4)
     
     RemoveLocation(l)
@@ -27826,7 +27872,7 @@ function Trig_MassSglaz_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex = EnemEl
+    bex = CachedFilter(EnemEl)
     GroupEnumUnitsInRangeOfLoc(g, l, 110 + 50 * level, bex)
     
     RemoveLocation(l)
@@ -28277,7 +28323,7 @@ function Trig_Help_Actions()
     local u= GetTriggerUnit()
     local u2= nil
     local g= CreateGroup()
-    local b
+    local b = CachedFilter(AllyToKill)
     local l
     
     DisableTrigger(GetTriggeringTrigger())
@@ -28298,7 +28344,6 @@ function Trig_Help_Actions()
         end
     end
     DestroyGroup(g)
-    DestroyBoolExpr(b)
     g=nil
     b=nil
     l=nil
@@ -28369,7 +28414,7 @@ function Trig_HelpButton_Actions()
     local u= GetTriggerUnit()
     local u2= nil
     local g= CreateGroup()
-    local b
+    local b = CachedFilter(AllyToKill)
     local l
     
     DisableTrigger(GetTriggeringTrigger())
@@ -28395,7 +28440,6 @@ function Trig_HelpButton_Actions()
         
     end
     DestroyGroup(g)
-    DestroyBoolExpr(b)
     g=nil
     b=nil
     l=nil
@@ -28435,7 +28479,7 @@ function BrokenBlood()
     local u= udg_LocalUnit3
     local u2= udg_LocalUnit2
     local g= CreateGroup()
-    local b
+    local b = CachedFilter(EnemyToBlood)
     local e= AddSpecialEffectTargetUnitBJ("overhead", u2, "Trolls / RedsplashMissilebyRas.mdx")
     local i= 0
     --call DisplayTextToPlayer(Player(0),0,0,"2"+GetUnitName(u2))
@@ -28477,7 +28521,6 @@ function BrokenBlood()
     
     UnitRemoveAbility(u2, FourCC('A1DE'))
     DestroyGroup(g)
-    DestroyBoolExpr(b)
     g=nil
     b=nil
     e=nil
@@ -30867,7 +30910,7 @@ end
 --
 -- ????????? ?????????? ????? ????????
 --===========================================================================
-function EndBranch()
+function EndBranch(p)
     --New Allies
     SetPlayerTechMaxAllowed(p, FourCC('R0HS'), 0)
     SetPlayerTechMaxAllowed(p, FourCC('R0H5'), 0)
@@ -31677,7 +31720,7 @@ function Trig_MassMolot_Actions()
     local l= GetUnitLoc(GetTriggerUnit())
     local p= GetOwningPlayer(GetTriggerUnit())
     
-    local bex = EnemEl
+    local bex = CachedFilter(EnemEl)
     local level= GetUnitAbilityLevelSwapped(FourCC('AHtb'), GetTriggerUnit())
     local g= CreateGroup()
     local u
@@ -32229,7 +32272,7 @@ end
 function Trig_MassInvis_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr = MI2
+    udg_Boolexpr = CachedFilter(MI2)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 650, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -32738,7 +32781,7 @@ function Trig_MassMindControl2_Func007A()
 end
 function Trig_MassMindControl2_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr = Trig_MassMindControl2_Func002002
+    udg_Boolexpr = CachedFilter(Trig_MassMindControl2_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 225, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -37279,11 +37322,11 @@ function Trig_CommonHome_Actions()
     
     --End other races
     g=CreateGroup()
-    udg_Boolexpr = NoneRadicals
+    udg_Boolexpr = CachedFilter(NoneRadicals)
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
     local gSize = BlzGroupGetSize(g)
     for gIdx = 1, gSize do
-        u = BlzGroupUnitAt(g, gIdx)
+        u = BlzGroupUnitAt(g, gIdx - 1)
         if u == nil then break end
 
         SetUnitOwner(u, Player(24), true)
@@ -37594,11 +37637,11 @@ function Trig_TrueHorde_Actions()
     
     --End other races
     g=CreateGroup()
-    udg_Boolexpr = NoNeORc
+    udg_Boolexpr = CachedFilter(NoNeORc)
     GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
     local gSize = BlzGroupGetSize(g)
     for gIdx = gSize, 1, -1 do
-        u = BlzGroupUnitAt(g, gIdx)
+        u = BlzGroupUnitAt(g, gIdx - 1)
         if u == nil then break end
 
         KillUnit(u)
@@ -38061,7 +38104,7 @@ end
 function Trig_ThrallMolnya_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr = EnemEl
+    udg_Boolexpr = CachedFilter(EnemEl)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 400, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -38095,7 +38138,7 @@ function Trig_Okovi_Func007A()
 end
 function Trig_Okovi_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr = Trig_Okovi_Func002002
+    udg_Boolexpr = CachedFilter(Trig_Okovi_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 225, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -38131,7 +38174,7 @@ end
 function Trig_GarraoshMassBloodlast_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
-    udg_Boolexpr = Trig_GarraoshMassBloodlast_Func002002
+    udg_Boolexpr = CachedFilter(Trig_GarraoshMassBloodlast_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 500, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -38379,9 +38422,9 @@ function Trig_ChoseLich_Actions()
     local i= 0
     local p= GetOwningPlayer(GetTriggerUnit())
     ClearSelectionForPlayer(p)
-    udg_Boolexpr = HaveSpell
+    udg_Boolexpr = CachedFilter(HaveSpell)
     GroupEnumUnitsSelected(g, p, udg_Boolexpr)
-    udg_Boolexpr = Trig_ChoseLich_Func003002
+    udg_Boolexpr = CachedFilter(Trig_ChoseLich_Func003002)
     
     while true do
         u1=FirstOfGroup(g)
@@ -38437,7 +38480,7 @@ function Trig_ChoseUnits2_Actions()
     local g= CreateGroup()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPosition3=GetSpellTargetLoc()
-    udg_Boolexpr = OnlyOrganic
+    udg_Boolexpr = CachedFilter(OnlyOrganic)
     GroupEnumUnitsInRange(g, GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 400, udg_Boolexpr)
     GroupPointOrder(g, "attack", GetSpellTargetX(), GetSpellTargetY())
     
@@ -38617,7 +38660,7 @@ function Trig_TweenChange_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local bex = Brothers
+    local bex = CachedFilter(Brothers)
     local u2
     local x= GetUnitX(u)
     local y= GetUnitY(u)
@@ -38661,7 +38704,7 @@ function Trig_TweenBrothersRev_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local bex = Brothers
+    local bex = CachedFilter(Brothers)
     local u2
     
     GroupEnumUnitsOfPlayer(g, p, bex)
@@ -38702,7 +38745,7 @@ function Trig_TweenBrothersDead_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local bex = Brothers
+    local bex = CachedFilter(Brothers)
     local u2
     
     GroupEnumUnitsOfPlayer(g, p, bex)
@@ -39096,7 +39139,7 @@ function Trig_SpellBook_Actions()
     local g= CreateGroup()
     local i= 0
     
-    udg_Boolexpr = HaveSpell
+    udg_Boolexpr = CachedFilter(HaveSpell)
     GroupEnumUnitsSelected(g, GetOwningPlayer(GetTriggerUnit()), udg_Boolexpr)
     while true do
             u1=FirstOfGroup(g)
@@ -39963,7 +40006,7 @@ function Trig_Potreblenie_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC('A0A5'), GetOwningPlayer(GetTriggerUnit()))
         return
     end
-    udg_Boolexpr = Trig_Potreblenie_Func002002
+    udg_Boolexpr = CachedFilter(Trig_Potreblenie_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Potreblenie_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -40013,7 +40056,7 @@ function Trig_BracResearch_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC('A0A6'), GetOwningPlayer(GetTriggerUnit()))
         return
     end
-    udg_Boolexpr = Trig_BracResearch_Func002002
+    udg_Boolexpr = CachedFilter(Trig_BracResearch_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_BracResearch_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -40063,7 +40106,7 @@ function Trig_PodjogResearch_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC('A0AR'), GetOwningPlayer(GetTriggerUnit()))
         return
     end
-    udg_Boolexpr = Trig_PodjogResearch_Func002002
+    udg_Boolexpr = CachedFilter(Trig_PodjogResearch_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PodjogResearch_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -40113,7 +40156,7 @@ function Trig_PodruvResearc_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC('A0A9'), GetOwningPlayer(GetTriggerUnit()))
         return
     end
-    udg_Boolexpr = Trig_PodruvResearc_Func002002
+    udg_Boolexpr = CachedFilter(Trig_PodruvResearc_Func002002)
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PodruvResearc_Func005A)
     GroupClear(udg_LocalOtrad2)
@@ -42648,12 +42691,12 @@ function Trig_Pirats_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('h03K'), - 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('h00Y'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('h00Z'), 0, GetOwningPlayer(GetTriggerUnit()))
-    udg_Boolexpr = Trig_Pirats_O_Copy_Func005002
+    udg_Boolexpr = CachedFilter(Trig_Pirats_O_Copy_Func005002)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Pirats_O_Copy_Func008A)
     GroupClear(udg_LocalOtrad2)
-    udg_Boolexpr = Trig_Pirats_O_Copy_Func010002
+    udg_Boolexpr = CachedFilter(Trig_Pirats_O_Copy_Func010002)
     udg_LocalPlayer=GetOwningPlayer(GetTriggerUnit())
     GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_Pirats_O_Copy_Func013A)
@@ -42836,19 +42879,19 @@ function Trig_ResearhRobbery_Func003C()
 end
 function Trig_ResearhRobbery_Actions()
     if Trig_ResearhRobbery_Func001C() then
-        udg_Boolexpr = Trig_ResearhRobbery_Func001Func001002
+        udg_Boolexpr = CachedFilter(Trig_ResearhRobbery_Func001Func001002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func001Func004A)
         GroupClear(udg_LocalOtrad2)
     end
     if Trig_ResearhRobbery_Func002C() then
-        udg_Boolexpr = Trig_ResearhRobbery_Func002Func001002
+        udg_Boolexpr = CachedFilter(Trig_ResearhRobbery_Func002Func001002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func002Func004A)
         GroupClear(udg_LocalOtrad2)
     end
     if Trig_ResearhRobbery_Func003C() then
-        udg_Boolexpr = Trig_ResearhRobbery_Func003Func001002
+        udg_Boolexpr = CachedFilter(Trig_ResearhRobbery_Func003Func001002)
         GroupEnumUnitsOfPlayer(udg_LocalOtrad2, udg_LocalPlayer, udg_Boolexpr)
         ForGroupBJ(udg_LocalOtrad2, Trig_ResearhRobbery_Func003Func004A)
         GroupClear(udg_LocalOtrad2)
@@ -44570,7 +44613,7 @@ function Trig_NoDeath_Actions()
     local g= CreateGroup()
     local u
     local u2
-    GroupEnumUnitsOfPlayer(g, GetOwningPlayer(GetTriggerUnit()), Boolexpr)
+    GroupEnumUnitsOfPlayer(g, GetOwningPlayer(GetTriggerUnit()), CachedFilter(BrokenBuilding))
     
     if Random(1 , 2) then
         u=FirstOfGroup(g)
@@ -44585,7 +44628,6 @@ function Trig_NoDeath_Actions()
     end
     --call ForGroupBJ( GetUnitsOfPlayerAndTypeId(Player(0), 'hfoo'), function Trig_NoDeath_Func001A )
     
-    DestroyBoolExpr(Boolexpr)
     DestroyGroup(g)
     u=nil
     u2=nil
@@ -45380,7 +45422,7 @@ end
 function Trig_PoleAstralaDragons_Actions()
     udg_LocalPosition[14]=GetUnitLoc(GetTriggerUnit())
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr = Trig_PoleAstralaDragons_Func003002
+    udg_Boolexpr = CachedFilter(Trig_PoleAstralaDragons_Func003002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 200, udg_Boolexpr)
     ForGroupBJ(udg_LocalOtrad2, Trig_PoleAstralaDragons_Func005A)
     RemoveLocation(udg_LocalPosition[14])
@@ -46497,7 +46539,7 @@ function Trig_ArthasCoils_Func007A()
 end
 function Trig_ArthasCoils_Actions()
     udg_LocalPosition2=GetSpellTargetLoc()
-    udg_Boolexpr = Trig_ArthasCoils_Func002002
+    udg_Boolexpr = CachedFilter(Trig_ArthasCoils_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 125, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -46532,7 +46574,7 @@ function Trig_ArthasNova_Func007A()
 end
 function Trig_ArthasNova_Actions()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    udg_Boolexpr = Trig_ArthasNova_Func002002
+    udg_Boolexpr = CachedFilter(Trig_ArthasNova_Func002002)
     GroupEnumUnitsInRangeOfLoc(udg_LocalOtrad2, udg_LocalPosition2, 240, udg_Boolexpr)
     RemoveLocation(udg_LocalPosition2)
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
@@ -46629,7 +46671,7 @@ function Trig_PassiveTalisra_Actions()
     local u2
     local p= GetOwningPlayer(u)
     local pi= GetPlayerId(p)
-    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 650, Talisra, 1)
+    GroupEnumUnitsInRangeCounted(g, GetUnitX(u), GetUnitY(u), 650, CachedFilter(Talisra), 1)
     u2=FirstOfGroup(g)
     if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1OS')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --??????
         SetUnitManaBJ(u2, GetUnitState(u2, UNIT_STATE_MANA) - 50)
@@ -47919,7 +47961,7 @@ end
 --===========================================================================
 -- Trigger: ArchontMode
 --===========================================================================
-function CorrectNumber()
+function CorrectNumber(pi2)
     return pi2 >= 0 and pi2 <= 24
 end
 function Trig_ArchontMode_Actions()
@@ -49823,7 +49865,7 @@ function Trig_PereborBuildings_Code_Func002A()
             local bldOk, bldErr = pcall(function()
                 local manualCount = 0
                 local bldSize = BlzGroupGetSize(bldGrp)
-                for bldIdx = 1, bldSize do
+                for bldIdx = 0, bldSize - 1 do
                     local manualU = BlzGroupUnitAt(bldGrp, bldIdx)
                     if manualU ~= nil then
                         manualCount = manualCount + 1
@@ -50523,11 +50565,11 @@ end
 --===========================================================================
 -- Trigger: MainFloatUnits
 --===========================================================================
-function isShip()
+function isShip(id)
     return id == FourCC('h00X') or id == FourCC('h00Y') or id == FourCC('h00Z') or id == FourCC('h0CZ') or id == FourCC('h0D2') or id == FourCC('h0D0') or id == FourCC('h0D5') or id == FourCC('h0D4') or id == FourCC('h0D6') or id == FourCC('h0DB') or id == FourCC('h0D9') or id == FourCC('h0DA') or id == FourCC('h0E6') or id == FourCC('h0E5') or id == FourCC('h0E8') or id == FourCC('h03L') or id == FourCC('h03K') or id == FourCC('h06W') or id == FourCC('h0DM') or id == FourCC('h06V') or id == FourCC('h06X') --???????
     
 end
-function aiShipJoins()
+function aiShipJoins(u, pi)
     GroupAddUnit(Navy, u)
     GroupAddUnit(udg_Ai_navy[pi], u)
 end
@@ -50566,14 +50608,14 @@ end
 --===========================================================================
 -- Trigger: PortUnits
 --===========================================================================
-function isNavalBase()
-    return id == FourCC('h0D1') or id == FourCC('h0D8') or id == FourCC('h03R') or id == FourCC('h0D3') or id == FourCC('h0E7') or id == FourCC('h011') or id == FourCC('h0D7') or id == FourCC('u01A') or gId == FourCC('n04L') or gId == FourCC('h0HO') -- ????????? ??? ???? ??????
+function isNavalBase(id)
+    return id == FourCC('h0D1') or id == FourCC('h0D8') or id == FourCC('h03R') or id == FourCC('h0D3') or id == FourCC('h0E7') or id == FourCC('h011') or id == FourCC('h0D7') or id == FourCC('u01A') or id == FourCC('n04L') or id == FourCC('h0HO') -- ????????? ??? ???? ??????
 end
 function Trig_PortUnits_Conditions()
     gUnit=GetConstructingStructure()
     return isNavalBase(GetUnitTypeId(gUnit))
 end
-function aiNavalBaseJoin()
+function aiNavalBaseJoin(u)
     NumberAdd(GetPlayerId(GetOwningPlayer(u)) , StringHash("NumberPorts"))
     GroupAddUnit(Port, u)
 end
@@ -50609,7 +50651,7 @@ end
 --===========================================================================
 -- Trigger: AiRep
 --===========================================================================
-function aiRep()
+function aiRep(pi)
     if not udg_AiControl[pi] then
         return
     end
@@ -50636,7 +50678,7 @@ function aiRep()
     GroupEnumUnitsOfPlayer(gGroup, gPlayer, nil)
     local gSize = BlzGroupGetSize(gGroup)
     for gIdx = gSize, 1, -1 do
-        gUnit = BlzGroupUnitAt(gGroup, gIdx)
+        gUnit = BlzGroupUnitAt(gGroup, gIdx - 1)
         if gUnit == nil then break end
         BJDebugMsg("" .. GetUnitName(gUnit))
         if GetUnitAbilityLevel(gUnit, gDummySpell) == 0 and not IsUnitType(gUnit, UNIT_TYPE_SUMMONED) then
@@ -50689,7 +50731,7 @@ function aiRepUnvul_act()
     
 end
 -- ??????? ?????
-function aiRepUnvul()
+function aiRepUnvul(pi)
     if not udg_AiControl[pi] then
         return
     end
@@ -50909,7 +50951,7 @@ end
 --===========================================================================
 -- Trigger: CheckNearCapitals
 --===========================================================================
-function CheckNearCapitals()
+function CheckNearCapitals(city)
     local g= CreateGroup()
     local u= GetTriggerUnit()
     
@@ -50926,6 +50968,7 @@ function CheckNearCapitals()
     end
     if found then
         DisplayTextToPlayer(udg_LocalPlayer, 0, 0, "(3)")
+        DestroyGroup(g)
         g=nil
         return false
     end
@@ -50963,7 +51006,7 @@ function TeleportUnits(portal, rect, radius)
     gRect=rect
     PortalTeleportOwner=PortalTeleportOwnerByPortal[portalHandle]
     if PortalTeleportOwner ~= nil then
-        GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditions, 150)
+        GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, CachedFilter(PortalConditions), 150)
         ForGroup(gGroup, TeleportUnitsEach)
         GroupClear(gGroup)
     end
@@ -50989,7 +51032,7 @@ function TeleportUnitsED(portal, rect, radius)
     gRect=rect
     PortalTeleportOwner=PortalTeleportOwnerByPortal[portalHandle]
     if PortalTeleportOwner ~= nil then
-        GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, PortalConditionsED, 150)
+        GroupEnumUnitsInRangeOfLocCounted(gGroup, gLoc, radius, CachedFilter(PortalConditionsED), 150)
         ForGroup(gGroup, TeleportUnitsEach)
         GroupClear(gGroup)
     end
@@ -52240,7 +52283,7 @@ end
 --===========================================================================
 -- Trigger: NoTpNearCapitalDalNax
 --===========================================================================
-function CheckPosition()
+function CheckPosition(x, y, add)
     return not IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY)
   
   -- if not (IsTerrainPathable(x, y, PATHING_TYPE_WALKABILITY)) then
@@ -63091,7 +63134,7 @@ function AiBrainOrderToPortal(pi, p, portal)
     if allyCount == 0 then return 0 end
     GroupClear(gSubGroup)
     local gSize = BlzGroupGetSize(gAllyGroup)
-    for gIdx = 1, gSize do
+    for gIdx = 0, gSize - 1 do
         local u = BlzGroupUnitAt(gAllyGroup, gIdx)
         if u ~= nil then
             UnitAddAbility(u, FourCC('A1GZ'))
@@ -63785,7 +63828,7 @@ function BrainBuild(pi, wm, race)
     -- R13: tier-up buildings (techUp from strategData.steps). Upgrades town halls,
     -- hives, etc. so tier2 production buildings unlock.
     if race.strategData and race.strategData.steps then
-        BrainStrategTick(pi, p, race, wm)
+        BrainStrategTick(pi, Player(pi), race, wm)
     end
     if race.mergeCast ~= nil and (wm.tick % 5) == 0 then
         BrainMergeTick(pi, wm, race)
@@ -66319,10 +66362,11 @@ function AiDiplomatConsiderBreak(pi, otherPi)
     -- few ticks. Betrayal (4) and the rare random break (3) are still allowed.
     local tickNow = AiDiplomatTicks[pi] or 0
     local allyAge = tickNow - ((st.alliedAt and st.alliedAt[otherPi]) or 0)
+    -- Сила нужна и проверке слабости (1), и предательству (4) — считать вне if.
+    local otherPower = Grades[otherPi] or 0
+    local myPower = Grades[pi] or 1
     if allyAge >= AiDiplomatMinAllyAge then
         -- 1. Ally is too weak
-        local otherPower = Grades[otherPi] or 0
-        local myPower = Grades[pi] or 1
         local weakness = 1.0 - (otherPower / math.max(myPower, 1))
         if weakness > cfg.breakOnWeakness then
             return true, "You have grown too weak to be useful."

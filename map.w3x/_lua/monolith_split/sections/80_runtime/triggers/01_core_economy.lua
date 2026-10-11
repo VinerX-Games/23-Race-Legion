@@ -243,29 +243,33 @@ function Trig_RRR_Func001001003()
 	
 end
 ---@return nothing
-function Trig_RRR_Func001A()
-	
-	local l = PolarProjectionBJ(GetUnitLoc(GetEnumUnit()), 7.00 + (4.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2))), GetUnitFacing(GetEnumUnit()) + 180.00)
-	--  ??? ?????????? ???????? ?? ???????? ?????? 7+ 3 ?????? ???
-	
-	--  ??? ???????? ?? ???????? ????? ?????????? ?? ??????????
-	SetUnitPositionLoc(GetEnumUnit(), l)
-	--  ???? ?????? 0.04 ??? 1+ 2 ?????? ??? 
-	UnitDamageTargetBJ(udg_LocalUnit2, GetEnumUnit(), 1.00 + (2.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), udg_LocalUnit2))), ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL)
-	
-	--  ???????? ??????????
-	l = nil
-	RemoveLocation(l)
-	
+-- Аура Груула (период 0.04 с): враги в радиусе отталкиваются и получают урон.
+-- Раньше: каждый тик утекали группа, boolexpr и 2 локации на врага (25 раз/с).
+-- Своя группа (не gGroup): урон запускает триггеры, которые могут трогать gGroup.
+local gruulGroup
+local function GruulPush(gruul)
+	local lvl = I2R(GetUnitAbilityLevel(gruul, FourCC('A18Q')))
+	local dist = 7.00 + 4.00 * lvl
+	local dmg = 1.00 + 2.00 * lvl
+	if gruulGroup == nil then
+		gruulGroup = CreateGroup()
+	end
+	udg_LocalUnit2 = gruul
+	GroupEnumUnitsInRange(gruulGroup, GetUnitX(gruul), GetUnitY(gruul), 450.00 + 55.00 * lvl, CachedFilter(Trig_RRR_Func001001003))
+	while true do
+		local u = FirstOfGroup(gruulGroup)
+		if u == nil then break end
+		GroupRemoveUnit(gruulGroup, u)
+		local a = (GetUnitFacing(u) + 180.00) * bj_DEGTORAD
+		SetUnitPosition(u, GetUnitX(u) + dist * Cos(a), GetUnitY(u) + dist * Sin(a))
+		UnitDamageTarget(gruul, u, dmg, true, false, ATTACK_TYPE_HERO, DAMAGE_TYPE_NORMAL, WEAPON_TYPE_WHOKNOWS)
+	end
 end
 ---@return nothing
 function GruulForce()
-	
 	local pi = GetPlayerId(GetEnumPlayer())
 	if Gruul[pi] ~= nil then
-		udg_LocalUnit2 = Gruul[pi]
-		ForGroup(GetUnitsInRangeOfLocMatching(450.00 + (55.00 * I2R(GetUnitAbilityLevelSwapped(FourCC('A18Q'), Gruul[pi]))), GetUnitLoc(Gruul[pi]), Condition(Trig_RRR_Func001001003)), Trig_RRR_Func001A)
-		
+		GruulPush(Gruul[pi])
 	end
 end
 ---@return nothing
@@ -391,7 +395,7 @@ end
 ---@return nothing
 function GlobalIssue(unitid, p, order)
 	gInt = unitid
-	GroupEnumUnitsOfPlayer(gGroup, p, typeBool)
+	GroupEnumUnitsOfPlayer(gGroup, p, CachedFilter(typeBool))
 	GroupImmediateOrder(gGroup, order)
 end
 -- ===========================================================================
@@ -482,11 +486,11 @@ function MassSpell(caster, unitability, dammyAbility, order, targetloc, radious,
 	--  call BJDebugMsg("?????????")
 	udg_LocalPlayer = p
 	if targetOwning == 1 then
-		bex = isEnemy
+		bex = CachedFilter(isEnemy)
 	elseif targetOwning == 2 then
-		bex = isAlly
+		bex = CachedFilter(isAlly)
 	else
-		bex = isOwner
+		bex = CachedFilter(isOwner)
 	end
 	
 	if targetloc == nil then
@@ -1224,7 +1228,7 @@ function Trig_GnomeNotToMuch_Actions()
 	local p = GetOwningPlayer(GetTriggerUnit())
 	local pi = GetPlayerId(p)
 	local Tl = udg_TierLevel[GetConvertedPlayerId(p)]
-	udg_Boolexpr = Type_1
+	udg_Boolexpr = CachedFilter(Type_1)
 	
 	if GetUnitTypeId(GetTriggerUnit()) ~= FourCC('h0FL') then	--  ???????? ??? ?????
 		income[pi] = income[pi] + 40
@@ -1823,11 +1827,11 @@ function Trig_Gob_Potreblenie_Actions()
 	local pi = GetPlayerId(p)
 	local u
 	local r = GetPlayerTechCount(p, FourCC('R04N'), true)
-	udg_Boolexpr = Trig_Gob_Potreblenie_Func001002
+	udg_Boolexpr = CachedFilter(Trig_Gob_Potreblenie_Func001002)
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
 	local gSize = BlzGroupGetSize(g)
 	for gIdx = 1, gSize do
-		u = BlzGroupUnitAt(g, gIdx)
+		u = BlzGroupUnitAt(g, gIdx - 1)
 		if u == nil then break end
 
 		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
@@ -1875,11 +1879,11 @@ function Trig_Silitid_Potreblenie_Actions()
 	local pi = GetPlayerId(p)
 	local u
 	local r = GetPlayerTechCount(p, FourCC('R04N'), true)
-	udg_Boolexpr = HaveSilitidSpell
+	udg_Boolexpr = CachedFilter(HaveSilitidSpell)
 	GroupEnumUnitsOfPlayer(g, p, udg_Boolexpr)
 	local gSize = BlzGroupGetSize(g)
 	for gIdx = 1, gSize do
-		u = BlzGroupUnitAt(g, gIdx)
+		u = BlzGroupUnitAt(g, gIdx - 1)
 		if u == nil then break end
 
 		udg_Price = GetUnitGoldCost(GetUnitTypeId(u)) or 0
@@ -2442,7 +2446,7 @@ end
 ---@return nothing
 function Trig_RazvedEnd_Actions()
 	local g = CreateGroup()
-	GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 1500, Boolexpr)
+	GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 1500, CachedFilter(Trig_RazvedEnd_Func002001003))
 	
 	RemoveUnit(FirstOfGroup(g))
 	DestroyGroup(g)

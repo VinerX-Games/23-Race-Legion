@@ -1743,7 +1743,7 @@ function AiBrainOrderToPortal(pi, p, portal)
     if allyCount == 0 then return 0 end
     GroupClear(gSubGroup)
     local gSize = BlzGroupGetSize(gAllyGroup)
-    for gIdx = 1, gSize do
+    for gIdx = 0, gSize - 1 do
         local u = BlzGroupUnitAt(gAllyGroup, gIdx)
         if u ~= nil then
             UnitAddAbility(u, FourCC('A1GZ'))
@@ -2437,7 +2437,7 @@ function BrainBuild(pi, wm, race)
     -- R13: tier-up buildings (techUp from strategData.steps). Upgrades town halls,
     -- hives, etc. so tier2 production buildings unlock.
     if race.strategData and race.strategData.steps then
-        BrainStrategTick(pi, p, race, wm)
+        BrainStrategTick(pi, Player(pi), race, wm)
     end
     if race.mergeCast ~= nil and (wm.tick % 5) == 0 then
         BrainMergeTick(pi, wm, race)

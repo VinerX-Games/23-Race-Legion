@@ -305,7 +305,7 @@ function Trig_LumberTest_Actions()
     GroupAddGroup(udg_FacelessLumberBuildings, g)
     local gSize = BlzGroupGetSize(g)
     for gIdx = 1, gSize do
-        u = BlzGroupUnitAt(g, gIdx)
+        u = BlzGroupUnitAt(g, gIdx - 1)
         if u == nil then break end
         
         DisplayTextToPlayer(Player(0), 0, 0, "")
@@ -481,15 +481,15 @@ end
 --================================================================================================================================================================================
 -- ???? 0 - ??? ???????
 --================
-function JSTRUgolMT()
+function JSTRUgolMT(x1, x2, y1, y2)
     return bj_RADTODEG * Atan2(y2 - y1, x2 - x1)
 end
-function JSTRRastMT()
+function JSTRRastMT(x1, x2, y1, y2)
     local dx= x2 - x1
     local dy= y2 - y1
     return SquareRoot(dx * dx + dy * dy)
 end
-function JSTRParabolaZ()
+function JSTRParabolaZ(h, d, x)
   return ( 4 * h / d ) * ( d - x ) * ( x / d )
 end
 --h - ???????????? ?????? ? ?????? ?? ???????? ?????????? (x = d / 2),

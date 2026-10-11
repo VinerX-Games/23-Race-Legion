@@ -175,11 +175,21 @@ end
 function Trig_ReturnDamage_Conditions()
     return GetUnitAbilityLevel(GetTriggerUnit(), FourCC('A1GQ')) > 0
 end
+-- Фильтр был потерян ещё в JASS (local boolexpr b без значения) -> счётчик
+-- всегда 0 и способность не срабатывала. Считает живых врагов (как AllyToKill).
+function ReturnDamageEnemy()
+    local u= GetFilterUnit()
+    if UnitAlive(u) and IsPlayerEnemy(GetOwningPlayer(u), udg_LocalPlayer) and not IsUnitType(u, UNIT_TYPE_STRUCTURE) then
+        udg_LocalInteger2=udg_LocalInteger2 + 1
+        return true
+    end
+    return false
+end
 function Trig_ReturnDamage_Actions()
     local u= GetTriggerUnit()
     local u2= nil
     local g= CreateGroup()
-    local b
+    local b = CachedFilter(ReturnDamageEnemy)
     local l
     local damage= GetEventDamage() * 1.30
     DisableTrigger(GetTriggeringTrigger())
@@ -198,7 +208,6 @@ function Trig_ReturnDamage_Actions()
         end
     end
     DestroyGroup(g)
-    DestroyBoolExpr(b)
     g=nil
     b=nil
     l=nil
@@ -405,7 +414,7 @@ function Trig_MassSetca_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex = EnemEl
+    bex = CachedFilter(EnemEl)
     GroupEnumUnitsInRangeOfLoc(g, l, 100 + 45 * level, bex)
     
     RemoveLocation(l)
@@ -462,7 +471,7 @@ function Trig_MassFrenzy_Actions()
     local u2
     local i= 0
     udg_LocalPlayer=p
-    bex = FFrenzy
+    bex = CachedFilter(FFrenzy)
     GroupEnumUnitsInRangeOfLocCounted(g, l, 400, bex, 4)
     
     RemoveLocation(l)

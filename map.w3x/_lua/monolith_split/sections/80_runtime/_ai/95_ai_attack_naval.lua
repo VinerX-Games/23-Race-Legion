@@ -47,24 +47,23 @@ function TryAttackN()
 			local gSize = BlzGroupGetSize(gAllyGroup)
 			local gIdx = 0
 			while gIdx < gSize do
-				gIdx = gIdx + 1
 				u2 = BlzGroupUnitAt(gAllyGroup, gIdx)
+				gIdx = gIdx + 1
 
-				if u2 == nil then
-					GroupPointOrder(gSubGroup, "attack", x2, y2)
-					GroupClear(gSubGroup)
-					gSubGroupCounter = 0
-					if true then break end
+				if u2 ~= nil then
+					GroupAddUnit(gSubGroup, u2)
+					gSubGroupCounter = gSubGroupCounter + 1
+					if gSubGroupCounter >= 12 then
+						GroupPointOrder(gSubGroup, "attack", x2, y2)
+						GroupClear(gSubGroup)
+						gSubGroupCounter = 0
+					end
 				end
-
-
-				GroupAddUnit(gSubGroup, u2)
-				gSubGroupCounter = gSubGroupCounter + 1
-				if gSubGroupCounter >= 12 then
-					GroupPointOrder(gSubGroup, "attack", x2, y2)
-					GroupClear(gSubGroup)
-					gSubGroupCounter = 0
-				end
+			end
+			if gSubGroupCounter > 0 then
+				GroupPointOrder(gSubGroup, "attack", x2, y2)
+				GroupClear(gSubGroup)
+				gSubGroupCounter = 0
 			end
 			
 			gInt = 11

@@ -184,9 +184,9 @@ function Trig_ChoseLich_Actions()
     local i= 0
     local p= GetOwningPlayer(GetTriggerUnit())
     ClearSelectionForPlayer(p)
-    udg_Boolexpr = HaveSpell
+    udg_Boolexpr = CachedFilter(HaveSpell)
     GroupEnumUnitsSelected(g, p, udg_Boolexpr)
-    udg_Boolexpr = Trig_ChoseLich_Func003002
+    udg_Boolexpr = CachedFilter(Trig_ChoseLich_Func003002)
     
     while true do
         u1=FirstOfGroup(g)
@@ -242,7 +242,7 @@ function Trig_ChoseUnits2_Actions()
     local g= CreateGroup()
     udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
     udg_LocalPosition3=GetSpellTargetLoc()
-    udg_Boolexpr = OnlyOrganic
+    udg_Boolexpr = CachedFilter(OnlyOrganic)
     GroupEnumUnitsInRange(g, GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 400, udg_Boolexpr)
     GroupPointOrder(g, "attack", GetSpellTargetX(), GetSpellTargetY())
     
@@ -422,7 +422,7 @@ function Trig_TweenChange_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local bex = Brothers
+    local bex = CachedFilter(Brothers)
     local u2
     local x= GetUnitX(u)
     local y= GetUnitY(u)
@@ -466,7 +466,7 @@ function Trig_TweenBrothersRev_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local bex = Brothers
+    local bex = CachedFilter(Brothers)
     local u2
     
     GroupEnumUnitsOfPlayer(g, p, bex)
@@ -507,7 +507,7 @@ function Trig_TweenBrothersDead_Actions()
     local id= GetUnitTypeId(u)
     local p= GetOwningPlayer(u)
     local g= CreateGroup()
-    local bex = Brothers
+    local bex = CachedFilter(Brothers)
     local u2
     
     GroupEnumUnitsOfPlayer(g, p, bex)
@@ -901,7 +901,7 @@ function Trig_SpellBook_Actions()
     local g= CreateGroup()
     local i= 0
     
-    udg_Boolexpr = HaveSpell
+    udg_Boolexpr = CachedFilter(HaveSpell)
     GroupEnumUnitsSelected(g, GetOwningPlayer(GetTriggerUnit()), udg_Boolexpr)
     while true do
             u1=FirstOfGroup(g)
