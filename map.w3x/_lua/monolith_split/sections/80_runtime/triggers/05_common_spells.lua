@@ -459,6 +459,7 @@ function Trig_Spell_Dvij_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC('A1BM'), GetOwningPlayer(udg_Caster))
         SetPlayerAbilityAvailableBJ(true, FourCC('A1BN'), GetOwningPlayer(udg_Caster))
         RemoveLocation(udg_To4kaCaster)
+        udg_To4kaCaster=nil
         udg_Dummy[0]=nil
         udg_Dummy[1]=nil
         udg_Dummy[2]=nil
@@ -468,17 +469,21 @@ function Trig_Spell_Dvij_Actions()
         PauseTimerBJ(true, udg_Timer)
     end
     if true then -- INLINED!!
+        -- Пересоздаётся каждый тик (0.03 с): старую точку освобождать.
+        if udg_To4kaCaster ~= nil then
+            RemoveLocation(udg_To4kaCaster)
+        end
         udg_To4kaCaster=GetUnitLoc(udg_Caster)
         -- ???????? ???????? ???? ???????? + ?? -  ???? ????? ???????? ? ?????? ???????
         udg_Ygol[1]=udg_Ygol[1] + 5
         if Trig_Spell_Dvij_Func004Func004C() then
-            SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaCaster, 100.00, 0.00 + I2R(udg_Ygol[1])))
+            SetUnitPolarLoc(udg_Dummy[0], udg_To4kaCaster, 100.00, 0.00 + I2R(udg_Ygol[1]))
         end
         if Trig_Spell_Dvij_Func004Func005C() then
-            SetUnitPositionLoc(udg_Dummy[1], PolarProjectionBJ(udg_To4kaCaster, 100.00, 120.00 + I2R(udg_Ygol[1])))
+            SetUnitPolarLoc(udg_Dummy[1], udg_To4kaCaster, 100.00, 120.00 + I2R(udg_Ygol[1]))
         end
         if Trig_Spell_Dvij_Func004Func006C() then
-            SetUnitPositionLoc(udg_Dummy[2], PolarProjectionBJ(udg_To4kaCaster, 100.00, 240.00 + I2R(udg_Ygol[1])))
+            SetUnitPolarLoc(udg_Dummy[2], udg_To4kaCaster, 100.00, 240.00 + I2R(udg_Ygol[1]))
         end
         if Trig_Spell_Dvij_Func004Func007C() then
             -- ?????? ??????? ???
@@ -486,10 +491,10 @@ function Trig_Spell_Dvij_Actions()
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[2])
                 -- ???????? ?????? ???? ?? ?????
-                SetUnitPositionLoc(udg_Dummy[2], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
+                SetUnitPolarLoc(udg_Dummy[2], udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget))
                 if Trig_Spell_Dvij_Func004Func007Func002Func005C() then
                     -- ??? ????? ? ?????
-                    ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func002Func005Func002A)
+                    ForGroupDestroy(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func002Func005Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsDemonDarkPortalDarkPortalTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                     RemoveUnit(udg_Dummy[2])
@@ -504,10 +509,10 @@ function Trig_Spell_Dvij_Actions()
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[1])
                 -- ???????? ?????? ???? ?? ?????
-                SetUnitPositionLoc(udg_Dummy[1], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
+                SetUnitPolarLoc(udg_Dummy[1], udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget))
                 if Trig_Spell_Dvij_Func004Func007Func004Func006C() then
                     -- ??? ????? ? ?????
-                    ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func004Func006Func002A)
+                    ForGroupDestroy(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func004Func006Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsUndeadDarkRitualDarkRitualTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                     RemoveUnit(udg_Dummy[1])
@@ -522,10 +527,10 @@ function Trig_Spell_Dvij_Actions()
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[0])
                 -- ???????? ?????? ???? ?? ?????
-                SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
+                SetUnitPolarLoc(udg_Dummy[0], udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget))
                 if Trig_Spell_Dvij_Func004Func007Func006Func005C() then
                     -- ??? ????? ? ?????
-                    ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func006Func005Func002A)
+                    ForGroupDestroy(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func006Func005Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsUndeadDeathPactDeathPactTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                     RemoveUnit(udg_Dummy[0])
@@ -570,10 +575,10 @@ function Trig_DieDummy_Func002C()
 end
 function Trig_DieDummy_Actions()
     if Trig_DieDummy_Func001C() then
-        ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('h0MK')), Trig_DieDummy_Func001Func002A)
+        ForGroupDestroy(GetUnitsOfTypeIdAll(FourCC('h0MK')), Trig_DieDummy_Func001Func002A)
     end
     if Trig_DieDummy_Func002C() then
-        ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('h0MJ')), Trig_DieDummy_Func002Func002A)
+        ForGroupDestroy(GetUnitsOfTypeIdAll(FourCC('h0MJ')), Trig_DieDummy_Func002Func002A)
     end
 end
 --===========================================================================
@@ -677,7 +682,7 @@ function Trig_NO_ENOTS_Func001A()
     RemoveUnit(GetEnumUnit())
 end
 function Trig_NO_ENOTS_Actions()
-    ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('ft02')), Trig_NO_ENOTS_Func001A)
+    ForGroupDestroy(GetUnitsOfTypeIdAll(FourCC('ft02')), Trig_NO_ENOTS_Func001A)
 end
 --===========================================================================
 function InitTrig_NO_ENOTS()

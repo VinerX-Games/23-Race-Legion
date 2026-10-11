@@ -96,7 +96,7 @@ function Trig_MassHEX_Func001A()
     IssueTargetOrderBJ(GetLastCreatedUnit(), "hex", GetEnumUnit())
 end
 function Trig_MassHEX_Actions()
-    ForGroupBJ(GetUnitsInRangeOfLocAll(300.00, GetSpellTargetLoc()), Trig_MassHEX_Func001A)
+    ForGroupDestroy(GetUnitsInRangeOfLocAll(300.00, GetSpellTargetLoc()), Trig_MassHEX_Func001A)
 end
 --===========================================================================
 function InitTrig_MassHEX()
@@ -417,7 +417,7 @@ function Trig_SecondChance_Actions()
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_GOLD, 5000)
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_LUMBER, 5000)
         
-        ForGroupBJ(GetUnitsOfPlayerMatching(ConvertedPlayer(udg_LocalInteger), Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
+        ForGroupDestroy(GetUnitsOfPlayerMatching(ConvertedPlayer(udg_LocalInteger), Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
     
         if udg_GameMode == 1 or udg_GameMode == 2 then
             local p = ConvertedPlayer(udg_LocalInteger)
@@ -446,7 +446,7 @@ function BridgeRaceSelect(target_index)
     SetPlayerStateBJ(target_player, PLAYER_STATE_RESOURCE_GOLD, 5000)
     SetPlayerStateBJ(target_player, PLAYER_STATE_RESOURCE_LUMBER, 5000)
     udg_LocalInteger = target_index
-    ForGroupBJ(GetUnitsOfPlayerMatching(target_player, Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
+    ForGroupDestroy(GetUnitsOfPlayerMatching(target_player, Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
     if udg_GameMode == 1 or udg_GameMode == 2 then
         t=CreateTimer()
         SecondChance[GetPlayerId(target_player)]=t
@@ -872,7 +872,7 @@ function Trig_KillTestUnits_O_Copy_Func003A()
 end
 function Trig_KillTestUnits___OFF_ME_Actions()
     GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, Condition(Trig_KillTestUnits_O_Copy_Func001002))
-    ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_O_Copy_Func003A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_O_Copy_Func003A)
     GroupClear(udg_LocalOtrad2)
 end
 --===========================================================================
@@ -891,7 +891,7 @@ function Trig_Setlvl_Func001A()
     SetHeroLevelBJ(GetEnumUnit(), S2I(SubStringBJ(GetEventPlayerChatString(), 8, 10)), false)
 end
 function Trig_Setlvl_Actions()
-    ForGroupBJ(GetUnitsOfPlayerMatching(GetTriggerPlayer(), Condition(Trig_Setlvl_Func001001002)), Trig_Setlvl_Func001A)
+    ForGroupDestroy(GetUnitsOfPlayerMatching(GetTriggerPlayer(), Condition(Trig_Setlvl_Func001001002)), Trig_Setlvl_Func001A)
 end
 --===========================================================================
 function InitTrig_Setlvl()
@@ -908,7 +908,7 @@ function Trig_A1_Func001A()
     UnitAddAbilityBJ(FourCC('A0IQ'), GetEnumUnit())
 end
 function Trig_A1_Actions()
-    ForGroupBJ(GetUnitsSelectedAll(Player(0)), Trig_A1_Func001A)
+    ForGroupDestroy(GetUnitsSelectedAll(Player(0)), Trig_A1_Func001A)
 end
 --===========================================================================
 function InitTrig_A1()
@@ -951,7 +951,7 @@ function Trig_KillTestUnits_Command_Func003A()
 end
 function Trig_KillTestUnits_Command_Actions()
     GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, Condition(Trig_KillTestUnits_Command_Func001002))
-    ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_Command_Func003A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_Command_Func003A)
     GroupClear(udg_LocalOtrad2)
 end
 --===========================================================================
@@ -1138,7 +1138,7 @@ function LimitTrainDestroy()
 end
 function Trig_DestroyTrain_Actions()
     RemoveUnit(GetTrainedUnit())
-    ForGroupBJ(GetUnitsInRectAll(gg_rct_TrainArea), Trig_DestroyTrain_Func002A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_TrainArea), Trig_DestroyTrain_Func002A)
     CreateDestructableLoc(FourCC('B01R'), GetRectCenter(gg_rct_Region_143), 0.0, 3, 0)
     CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 0, 200.00)), GetRandomDirectionDeg(), 1, 0)
     CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 0, - 200.00)), GetRandomDirectionDeg(), 1, 0)

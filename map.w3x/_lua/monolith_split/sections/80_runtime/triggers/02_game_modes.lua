@@ -257,7 +257,7 @@ function Trig_EndLobby_and_Start_game_Actions()
 	DestroyTimerDialogBJ(udg_LobbyTimerWindows)
 	DisplayTextToForce(GetPlayersAll(), "TRIGSTR_19369")
 	ForForce(udg_AllPlayers, Trig_EndLobby_and_Start_game_Func004A)
-	ForGroupBJ(GetUnitsInRectAll(gg_rct_HostReg2), Trig_EndLobby_and_Start_game_Func005A)
+	ForGroupDestroy(GetUnitsInRectAll(gg_rct_HostReg2), Trig_EndLobby_and_Start_game_Func005A)
 	DisableTrigger(gg_trg_SaveSelection)
 	BlzEnableSelections(true, true)
 	RemoveUnit(ModeBuilding)	--  INLINED!!

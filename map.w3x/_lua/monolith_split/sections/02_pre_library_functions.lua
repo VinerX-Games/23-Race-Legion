@@ -12,6 +12,23 @@ function CachedFilter(f)
 	end
 	return b
 end
+-- GUI-идиома `ForGroupBJ(GetUnits...(...), f)` без bj_wantDestroyGroup теряла группу
+-- на каждом вызове. Для свежесозданной группы: перебрать и уничтожить.
+---@param g group
+---@param f function
+function ForGroupDestroy(g, f)
+	ForGroup(g, f)
+	DestroyGroup(g)
+end
+-- `SetUnitPositionLoc(u, PolarProjectionBJ(l, d, a))` создавала (и теряла) локацию.
+---@param u unit
+---@param l location
+---@param dist real
+---@param angle real
+function SetUnitPolarLoc(u, l, dist, angle)
+	local a = angle * bj_DEGTORAD
+	SetUnitPosition(u, GetLocationX(l) + dist * Cos(a), GetLocationY(l) + dist * Sin(a))
+end
 -- NOTE: vJASS->Lua emitted an EMPTY stub here (`function UnitAlive(u) end`) which
 -- shadowed the engine native and returned nil for every call -> broke ALL AI combat
 -- (IsAiCombatRetaskable / enemy filters / navy filter never matched). Real life-based

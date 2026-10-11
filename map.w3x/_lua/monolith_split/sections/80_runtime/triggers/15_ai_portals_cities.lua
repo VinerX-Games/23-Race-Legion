@@ -3471,8 +3471,8 @@ function Trig_DalDiy_Func003A()
     RemoveUnit(u)
 end
 function Trig_DalDiy_Actions()
-    ForGroupBJ(GetUnitsInRectAll(gg_rct_RenameDeath), Trig_DalDiy_Func002A)
-    ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('n063')), Trig_DalDiy_Func003A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_RenameDeath), Trig_DalDiy_Func002A)
+    ForGroupDestroy(GetUnitsOfTypeIdAll(FourCC('n063')), Trig_DalDiy_Func003A)
     TriggerExecute(gg_trg_DallKill)
     DisableTrigger(GetTriggeringTrigger())
     
@@ -3656,8 +3656,8 @@ function Trig_NaxDiy_Func003A()
     RemoveUnit(u)
 end
 function Trig_NaxDiy_Actions()
-    ForGroupBJ(GetUnitsInRectAll(gg_rct_Naxramas), Trig_NaxDiy_Func002A)
-    ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('n066')), Trig_NaxDiy_Func003A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_Naxramas), Trig_NaxDiy_Func002A)
+    ForGroupDestroy(GetUnitsOfTypeIdAll(FourCC('n066')), Trig_NaxDiy_Func003A)
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================
@@ -3803,8 +3803,8 @@ function Trig_TurtleDiy_Conditions()
     return GetUnitTypeId(GetTriggerUnit()) == FourCC('e00E')
 end
 function Trig_TurtleDiy_Actions()
-    ForGroupBJ(GetUnitsInRectAll(gg_rct_TurtleIsland), Trig_NaxDiy_Func002A)
-    ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('n075')), Trig_NaxDiy_Func003A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_TurtleIsland), Trig_NaxDiy_Func002A)
+    ForGroupDestroy(GetUnitsOfTypeIdAll(FourCC('n075')), Trig_NaxDiy_Func003A)
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================

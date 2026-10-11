@@ -3263,6 +3263,23 @@ function CachedFilter(f)
 	end
 	return b
 end
+-- GUI-идиома `ForGroupBJ(GetUnits...(...), f)` без bj_wantDestroyGroup теряла группу
+-- на каждом вызове. Для свежесозданной группы: перебрать и уничтожить.
+---@param g group
+---@param f function
+function ForGroupDestroy(g, f)
+	ForGroup(g, f)
+	DestroyGroup(g)
+end
+-- `SetUnitPositionLoc(u, PolarProjectionBJ(l, d, a))` создавала (и теряла) локацию.
+---@param u unit
+---@param l location
+---@param dist real
+---@param angle real
+function SetUnitPolarLoc(u, l, dist, angle)
+	local a = angle * bj_DEGTORAD
+	SetUnitPosition(u, GetLocationX(l) + dist * Cos(a), GetLocationY(l) + dist * Sin(a))
+end
 -- NOTE: vJASS->Lua emitted an EMPTY stub here (`function UnitAlive(u) end`) which
 -- shadowed the engine native and returned nil for every call -> broke ALL AI combat
 -- (IsAiCombatRetaskable / enemy filters / navy filter never matched). Real life-based
@@ -16768,7 +16785,7 @@ function Trig_EndLobby_and_Start_game_Actions()
 	DestroyTimerDialogBJ(udg_LobbyTimerWindows)
 	DisplayTextToForce(GetPlayersAll(), "TRIGSTR_19369")
 	ForForce(udg_AllPlayers, Trig_EndLobby_and_Start_game_Func004A)
-	ForGroupBJ(GetUnitsInRectAll(gg_rct_HostReg2), Trig_EndLobby_and_Start_game_Func005A)
+	ForGroupDestroy(GetUnitsInRectAll(gg_rct_HostReg2), Trig_EndLobby_and_Start_game_Func005A)
 	DisableTrigger(gg_trg_SaveSelection)
 	BlzEnableSelections(true, true)
 	RemoveUnit(ModeBuilding)	--  INLINED!!
@@ -17849,7 +17866,7 @@ function Trig_Only_Eastern_Actions()
 	DisplayTextToForce(udg_AllPlayers, "TRIGSTR_19899")
 	EnableTrigger(gg_trg_Leave_Easten)
 	EnableTrigger(gg_trg_Back_Easten)
-	ForGroupBJ(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Only_Eastern_Func004001002)), Trig_Only_Eastern_Func004A)
+	ForGroupDestroy(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Only_Eastern_Func004001002)), Trig_Only_Eastern_Func004A)
 end
 -- ===========================================================================
 ---@return nothing
@@ -17996,7 +18013,7 @@ function Trig_Continents_set_On_Actions()
     end
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
     EnableTrigger(gg_trg_LeaveNeadedRegions)
-    ForGroupBJ(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Continents_set_On_Func013001002)), Trig_Continents_set_On_Func013A)
+    ForGroupDestroy(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Continents_set_On_Func013001002)), Trig_Continents_set_On_Func013A)
     TimerStart(udg_TimerToCont, 0.50, false, nil)
 end
 --===========================================================================
@@ -18026,7 +18043,7 @@ end
 function Trig_Continents_Off_Actions()
     udg_LocalText2="cffffff00r"
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
-    ForGroupBJ(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Continents_Off_Func005001002)), Trig_Continents_Off_Func005A)
+    ForGroupDestroy(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Continents_Off_Func005001002)), Trig_Continents_Off_Func005A)
     ForForce(udg_AllPlayers, Trig_Continents_Off_Func006A)
 end
 --===========================================================================
@@ -18268,9 +18285,9 @@ function Trig_EasternOn_1_Func005A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_EasternOn_1_Actions()
-    ForGroupBJ(GetUnitsInRectMatching(gg_rct_EastenKingdoms, Condition(Trig_EasternOn_1_Func003001002)), Trig_EasternOn_1_Func003A)
-    ForGroupBJ(GetUnitsInRectMatching(gg_rct_EasternDungeons, Condition(Trig_EasternOn_1_Func004001002)), Trig_EasternOn_1_Func004A)
-    ForGroupBJ(GetUnitsInRectMatching(gg_rct_BlackMountain, Condition(Trig_EasternOn_1_Func005001002)), Trig_EasternOn_1_Func005A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_EastenKingdoms, Condition(Trig_EasternOn_1_Func003001002)), Trig_EasternOn_1_Func003A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_EasternDungeons, Condition(Trig_EasternOn_1_Func004001002)), Trig_EasternOn_1_Func004A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_BlackMountain, Condition(Trig_EasternOn_1_Func005001002)), Trig_EasternOn_1_Func005A)
 end
 --===========================================================================
 function InitTrig_EasternOn_1()
@@ -18348,8 +18365,8 @@ function Trig_KalimOn_2_Func003A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_KalimOn_2_Actions()
-    ForGroupBJ(GetUnitsInRectMatching(gg_rct_Kalim, Condition(Trig_KalimOn_2_Func002001002)), Trig_KalimOn_2_Func002A)
-    ForGroupBJ(GetUnitsInRectMatching(gg_rct_Ankirag, Condition(Trig_KalimOn_2_Func003001002)), Trig_KalimOn_2_Func003A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Kalim, Condition(Trig_KalimOn_2_Func002001002)), Trig_KalimOn_2_Func002A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Ankirag, Condition(Trig_KalimOn_2_Func003001002)), Trig_KalimOn_2_Func003A)
 end
 --===========================================================================
 function InitTrig_KalimOn_2()
@@ -18422,7 +18439,7 @@ function Trig_Outland_3_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_Outland_3_Actions()
-    ForGroupBJ(GetUnitsInRectMatching(gg_rct_Outland, Condition(Trig_Outland_3_Func002001002)), Trig_Outland_3_Func002A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Outland, Condition(Trig_Outland_3_Func002001002)), Trig_Outland_3_Func002A)
 end
 --===========================================================================
 function InitTrig_Outland_3()
@@ -18501,8 +18518,8 @@ function Trig_NordOn_4_Func003A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_NordOn_4_Actions()
-    ForGroupBJ(GetUnitsInRectMatching(gg_rct_Nord, Condition(Trig_NordOn_4_Func002001002)), Trig_NordOn_4_Func002A)
-    ForGroupBJ(GetUnitsInRectMatching(gg_rct_Azgel, Condition(Trig_NordOn_4_Func003001002)), Trig_NordOn_4_Func003A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Nord, Condition(Trig_NordOn_4_Func002001002)), Trig_NordOn_4_Func002A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Azgel, Condition(Trig_NordOn_4_Func003001002)), Trig_NordOn_4_Func003A)
 end
 --===========================================================================
 function InitTrig_NordOn_4()
@@ -18575,7 +18592,7 @@ function Trig_Pandaria_5_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_Pandaria_5_Actions()
-    ForGroupBJ(GetUnitsInRectMatching(gg_rct_Pandaria, Condition(Trig_Pandaria_5_Func002001002)), Trig_Pandaria_5_Func002A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Pandaria, Condition(Trig_Pandaria_5_Func002001002)), Trig_Pandaria_5_Func002A)
 end
 --===========================================================================
 function InitTrig_Pandaria_5()
@@ -18647,7 +18664,7 @@ function Trig_Argus_6_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_Argus_6_Actions()
-    ForGroupBJ(GetUnitsInRectMatching(gg_rct_Argus, Condition(Trig_Argus_6_Func002001002)), Trig_Argus_6_Func002A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Argus, Condition(Trig_Argus_6_Func002001002)), Trig_Argus_6_Func002A)
 end
 --===========================================================================
 function InitTrig_Argus_6()
@@ -18719,7 +18736,7 @@ function Trig_BrokenIsled_7_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_BrokenIsled_7_Actions()
-    ForGroupBJ(GetUnitsInRectMatching(gg_rct_Broken_Island, Condition(Trig_BrokenIsled_7_Func002001002)), Trig_BrokenIsled_7_Func002A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Broken_Island, Condition(Trig_BrokenIsled_7_Func002001002)), Trig_BrokenIsled_7_Func002A)
 end
 --===========================================================================
 function InitTrig_BrokenIsled_7()
@@ -21259,6 +21276,7 @@ function Trig_Spell_Dvij_Actions()
         SetPlayerAbilityAvailableBJ(false, FourCC('A1BM'), GetOwningPlayer(udg_Caster))
         SetPlayerAbilityAvailableBJ(true, FourCC('A1BN'), GetOwningPlayer(udg_Caster))
         RemoveLocation(udg_To4kaCaster)
+        udg_To4kaCaster=nil
         udg_Dummy[0]=nil
         udg_Dummy[1]=nil
         udg_Dummy[2]=nil
@@ -21268,17 +21286,21 @@ function Trig_Spell_Dvij_Actions()
         PauseTimerBJ(true, udg_Timer)
     end
     if true then -- INLINED!!
+        -- Пересоздаётся каждый тик (0.03 с): старую точку освобождать.
+        if udg_To4kaCaster ~= nil then
+            RemoveLocation(udg_To4kaCaster)
+        end
         udg_To4kaCaster=GetUnitLoc(udg_Caster)
         -- ???????? ???????? ???? ???????? + ?? -  ???? ????? ???????? ? ?????? ???????
         udg_Ygol[1]=udg_Ygol[1] + 5
         if Trig_Spell_Dvij_Func004Func004C() then
-            SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaCaster, 100.00, 0.00 + I2R(udg_Ygol[1])))
+            SetUnitPolarLoc(udg_Dummy[0], udg_To4kaCaster, 100.00, 0.00 + I2R(udg_Ygol[1]))
         end
         if Trig_Spell_Dvij_Func004Func005C() then
-            SetUnitPositionLoc(udg_Dummy[1], PolarProjectionBJ(udg_To4kaCaster, 100.00, 120.00 + I2R(udg_Ygol[1])))
+            SetUnitPolarLoc(udg_Dummy[1], udg_To4kaCaster, 100.00, 120.00 + I2R(udg_Ygol[1]))
         end
         if Trig_Spell_Dvij_Func004Func006C() then
-            SetUnitPositionLoc(udg_Dummy[2], PolarProjectionBJ(udg_To4kaCaster, 100.00, 240.00 + I2R(udg_Ygol[1])))
+            SetUnitPolarLoc(udg_Dummy[2], udg_To4kaCaster, 100.00, 240.00 + I2R(udg_Ygol[1]))
         end
         if Trig_Spell_Dvij_Func004Func007C() then
             -- ?????? ??????? ???
@@ -21286,10 +21308,10 @@ function Trig_Spell_Dvij_Actions()
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[2])
                 -- ???????? ?????? ???? ?? ?????
-                SetUnitPositionLoc(udg_Dummy[2], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
+                SetUnitPolarLoc(udg_Dummy[2], udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget))
                 if Trig_Spell_Dvij_Func004Func007Func002Func005C() then
                     -- ??? ????? ? ?????
-                    ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func002Func005Func002A)
+                    ForGroupDestroy(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func002Func005Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsDemonDarkPortalDarkPortalTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                     RemoveUnit(udg_Dummy[2])
@@ -21304,10 +21326,10 @@ function Trig_Spell_Dvij_Actions()
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[1])
                 -- ???????? ?????? ???? ?? ?????
-                SetUnitPositionLoc(udg_Dummy[1], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
+                SetUnitPolarLoc(udg_Dummy[1], udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget))
                 if Trig_Spell_Dvij_Func004Func007Func004Func006C() then
                     -- ??? ????? ? ?????
-                    ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func004Func006Func002A)
+                    ForGroupDestroy(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func004Func006Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsUndeadDarkRitualDarkRitualTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                     RemoveUnit(udg_Dummy[1])
@@ -21322,10 +21344,10 @@ function Trig_Spell_Dvij_Actions()
                 udg_To4kaTarget=GetUnitLoc(udg_Target)
                 udg_To4kaDummy=GetUnitLoc(udg_Dummy[0])
                 -- ???????? ?????? ???? ?? ?????
-                SetUnitPositionLoc(udg_Dummy[0], PolarProjectionBJ(udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget)))
+                SetUnitPolarLoc(udg_Dummy[0], udg_To4kaDummy, 50.00, AngleBetweenPoints(udg_To4kaDummy, udg_To4kaTarget))
                 if Trig_Spell_Dvij_Func004Func007Func006Func005C() then
                     -- ??? ????? ? ?????
-                    ForGroupBJ(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func006Func005Func002A)
+                    ForGroupDestroy(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func006Func005Func002A)
                     AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsUndeadDeathPactDeathPactTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                     RemoveUnit(udg_Dummy[0])
@@ -21370,10 +21392,10 @@ function Trig_DieDummy_Func002C()
 end
 function Trig_DieDummy_Actions()
     if Trig_DieDummy_Func001C() then
-        ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('h0MK')), Trig_DieDummy_Func001Func002A)
+        ForGroupDestroy(GetUnitsOfTypeIdAll(FourCC('h0MK')), Trig_DieDummy_Func001Func002A)
     end
     if Trig_DieDummy_Func002C() then
-        ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('h0MJ')), Trig_DieDummy_Func002Func002A)
+        ForGroupDestroy(GetUnitsOfTypeIdAll(FourCC('h0MJ')), Trig_DieDummy_Func002Func002A)
     end
 end
 --===========================================================================
@@ -21477,7 +21499,7 @@ function Trig_NO_ENOTS_Func001A()
     RemoveUnit(GetEnumUnit())
 end
 function Trig_NO_ENOTS_Actions()
-    ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('ft02')), Trig_NO_ENOTS_Func001A)
+    ForGroupDestroy(GetUnitsOfTypeIdAll(FourCC('ft02')), Trig_NO_ENOTS_Func001A)
 end
 --===========================================================================
 function InitTrig_NO_ENOTS()
@@ -25285,7 +25307,7 @@ function Trig_Sluga_qqgsarona_Actions()
     RemoveUnit(gg_unit_n03B_0659)
     ForForce(GetPlayersAll(), Trig_Sluga_qqgsarona_Func010A)
     -- --
-    ForGroupBJ(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(Trig_Sluga_qqgsarona_Func012001002)), Trig_Sluga_qqgsarona_Func012A)
+    ForGroupDestroy(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(Trig_Sluga_qqgsarona_Func012001002)), Trig_Sluga_qqgsarona_Func012A)
     GroupAddUnitSimple(gg_unit_n03A_0657, udg_StolicaGroups)
     BlzSetUnitStringFieldBJ(gg_unit_n03A_0657, UNIT_SF_NAME, "cffd45e19r" .. GetUnitName(gg_unit_n03A_0657))
     ForForce(GetPlayersAll(), Trig_Sluga_qqgsarona_Func017A)
@@ -37594,7 +37616,7 @@ function Trig_Replace_Func001A()
     ReplaceUnit2(GetEnumUnit() , FourCC('O02Z') , bj_UNIT_STATE_METHOD_RELATIVE)
 end
 function Reptaur()
-    ForGroupBJ(GetUnitsOfPlayerAndTypeId(udg_LocalPlayer, FourCC('Otch')), Trig_Replace_Func001A)
+    ForGroupDestroy(GetUnitsOfPlayerAndTypeId(udg_LocalPlayer, FourCC('Otch')), Trig_Replace_Func001A)
 end
 --===========================================================================
 -- Trigger: TrueHorde
@@ -37677,7 +37699,7 @@ function Trig_TrueHorde_Actions()
     --call ChangeEliteUnitsNow(p,pi)
     
     udg_LocalPlayer=p
-    ForGroupBJ(GetUnitsOfPlayerAndTypeId(udg_LocalPlayer, FourCC('Otch')), Trig_Replace_Func001A) -- INLINED!!
+    ForGroupDestroy(GetUnitsOfPlayerAndTypeId(udg_LocalPlayer, FourCC('Otch')), Trig_Replace_Func001A) -- INLINED!!
     
     p=nil
     u=nil
@@ -38350,9 +38372,9 @@ function Trig_QTunServe_Actions()
     aiFixTrainBefore(u, pi)
     RemoveUnit(u)
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_38642")
-    ForGroupBJ(GetUnitsInRectOfPlayer(gg_rct_Ankirag, Player(PLAYER_NEUTRAL_AGGRESSIVE)), Trig_QTunServe_Func003A)
+    ForGroupDestroy(GetUnitsInRectOfPlayer(gg_rct_Ankirag, Player(PLAYER_NEUTRAL_AGGRESSIVE)), Trig_QTunServe_Func003A)
     ForForce(GetPlayersAll(), Trig_QTunServe_Func004A)
-    ForGroupBJ(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(Trig_QTunServe_Func005001002)), Trig_QTunServe_Func005A)
+    ForGroupDestroy(GetUnitsOfPlayerMatching(GetOwningPlayer(GetTriggerUnit()), Condition(Trig_QTunServe_Func005001002)), Trig_QTunServe_Func005A)
     GroupAddUnitSimple(gg_unit_n03D_0666, udg_StolicaGroups)
     BlzSetUnitStringFieldBJ(gg_unit_n03D_0666, UNIT_SF_NAME, "cffd45e19r" .. GetUnitName(gg_unit_n03D_0666))
     TriggerRegisterUnitEvent(gg_trg_StolicaAttacked, gg_unit_n03D_0666, EVENT_UNIT_ATTACKED)
@@ -46841,11 +46863,10 @@ function Trig_Spell_E_Dvij_Actions()
         if Trig_Spell_E_Dvij_Func001Func001C() then
             udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz]=udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz] + 0.02
             udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz]=GetUnitLoc(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])
-            SetUnitPositionLoc(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], PolarProjectionBJ(udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz], 60.00, GetUnitFacing(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])))
+            SetUnitPolarLoc(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz], 60.00, GetUnitFacing(udg_Caster_E_Glaz[udg_Cikl_E_Glaz]))
             AddSpecialEffectLocBJ(udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz], "CosmicBall.mdx")
             DestroyEffectBJ(GetLastCreatedEffectBJ())
-            bj_wantDestroyGroup=true
-            ForGroupBJ(GetUnitsInRangeOfLocAll(150.00, udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz]), Trig_Spell_E_Dvij_Func001Func001Func007A)
+            ForGroupDestroy(GetUnitsInRangeOfLocAll(150.00, udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz]), Trig_Spell_E_Dvij_Func001Func001Func007A)
             if Trig_Spell_E_Dvij_Func001Func001Func008C() then
                 GroupClear(udg_Group_E_Glaz[udg_Cikl_E_Glaz])
                 SetUnitPathing(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], true)
@@ -47411,7 +47432,7 @@ function Trig_MassHEX_Func001A()
     IssueTargetOrderBJ(GetLastCreatedUnit(), "hex", GetEnumUnit())
 end
 function Trig_MassHEX_Actions()
-    ForGroupBJ(GetUnitsInRangeOfLocAll(300.00, GetSpellTargetLoc()), Trig_MassHEX_Func001A)
+    ForGroupDestroy(GetUnitsInRangeOfLocAll(300.00, GetSpellTargetLoc()), Trig_MassHEX_Func001A)
 end
 --===========================================================================
 function InitTrig_MassHEX()
@@ -47732,7 +47753,7 @@ function Trig_SecondChance_Actions()
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_GOLD, 5000)
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_LUMBER, 5000)
         
-        ForGroupBJ(GetUnitsOfPlayerMatching(ConvertedPlayer(udg_LocalInteger), Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
+        ForGroupDestroy(GetUnitsOfPlayerMatching(ConvertedPlayer(udg_LocalInteger), Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
     
         if udg_GameMode == 1 or udg_GameMode == 2 then
             local p = ConvertedPlayer(udg_LocalInteger)
@@ -47761,7 +47782,7 @@ function BridgeRaceSelect(target_index)
     SetPlayerStateBJ(target_player, PLAYER_STATE_RESOURCE_GOLD, 5000)
     SetPlayerStateBJ(target_player, PLAYER_STATE_RESOURCE_LUMBER, 5000)
     udg_LocalInteger = target_index
-    ForGroupBJ(GetUnitsOfPlayerMatching(target_player, Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
+    ForGroupDestroy(GetUnitsOfPlayerMatching(target_player, Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
     if udg_GameMode == 1 or udg_GameMode == 2 then
         t=CreateTimer()
         SecondChance[GetPlayerId(target_player)]=t
@@ -48187,7 +48208,7 @@ function Trig_KillTestUnits_O_Copy_Func003A()
 end
 function Trig_KillTestUnits___OFF_ME_Actions()
     GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, Condition(Trig_KillTestUnits_O_Copy_Func001002))
-    ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_O_Copy_Func003A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_O_Copy_Func003A)
     GroupClear(udg_LocalOtrad2)
 end
 --===========================================================================
@@ -48206,7 +48227,7 @@ function Trig_Setlvl_Func001A()
     SetHeroLevelBJ(GetEnumUnit(), S2I(SubStringBJ(GetEventPlayerChatString(), 8, 10)), false)
 end
 function Trig_Setlvl_Actions()
-    ForGroupBJ(GetUnitsOfPlayerMatching(GetTriggerPlayer(), Condition(Trig_Setlvl_Func001001002)), Trig_Setlvl_Func001A)
+    ForGroupDestroy(GetUnitsOfPlayerMatching(GetTriggerPlayer(), Condition(Trig_Setlvl_Func001001002)), Trig_Setlvl_Func001A)
 end
 --===========================================================================
 function InitTrig_Setlvl()
@@ -48223,7 +48244,7 @@ function Trig_A1_Func001A()
     UnitAddAbilityBJ(FourCC('A0IQ'), GetEnumUnit())
 end
 function Trig_A1_Actions()
-    ForGroupBJ(GetUnitsSelectedAll(Player(0)), Trig_A1_Func001A)
+    ForGroupDestroy(GetUnitsSelectedAll(Player(0)), Trig_A1_Func001A)
 end
 --===========================================================================
 function InitTrig_A1()
@@ -48266,7 +48287,7 @@ function Trig_KillTestUnits_Command_Func003A()
 end
 function Trig_KillTestUnits_Command_Actions()
     GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, Condition(Trig_KillTestUnits_Command_Func001002))
-    ForGroupBJ(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_Command_Func003A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_Command_Func003A)
     GroupClear(udg_LocalOtrad2)
 end
 --===========================================================================
@@ -48453,7 +48474,7 @@ function LimitTrainDestroy()
 end
 function Trig_DestroyTrain_Actions()
     RemoveUnit(GetTrainedUnit())
-    ForGroupBJ(GetUnitsInRectAll(gg_rct_TrainArea), Trig_DestroyTrain_Func002A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_TrainArea), Trig_DestroyTrain_Func002A)
     CreateDestructableLoc(FourCC('B01R'), GetRectCenter(gg_rct_Region_143), 0.0, 3, 0)
     CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 0, 200.00)), GetRandomDirectionDeg(), 1, 0)
     CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 0, - 200.00)), GetRandomDirectionDeg(), 1, 0)
@@ -52441,8 +52462,8 @@ function Trig_DalDiy_Func003A()
     RemoveUnit(u)
 end
 function Trig_DalDiy_Actions()
-    ForGroupBJ(GetUnitsInRectAll(gg_rct_RenameDeath), Trig_DalDiy_Func002A)
-    ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('n063')), Trig_DalDiy_Func003A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_RenameDeath), Trig_DalDiy_Func002A)
+    ForGroupDestroy(GetUnitsOfTypeIdAll(FourCC('n063')), Trig_DalDiy_Func003A)
     TriggerExecute(gg_trg_DallKill)
     DisableTrigger(GetTriggeringTrigger())
     
@@ -52626,8 +52647,8 @@ function Trig_NaxDiy_Func003A()
     RemoveUnit(u)
 end
 function Trig_NaxDiy_Actions()
-    ForGroupBJ(GetUnitsInRectAll(gg_rct_Naxramas), Trig_NaxDiy_Func002A)
-    ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('n066')), Trig_NaxDiy_Func003A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_Naxramas), Trig_NaxDiy_Func002A)
+    ForGroupDestroy(GetUnitsOfTypeIdAll(FourCC('n066')), Trig_NaxDiy_Func003A)
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================
@@ -52773,8 +52794,8 @@ function Trig_TurtleDiy_Conditions()
     return GetUnitTypeId(GetTriggerUnit()) == FourCC('e00E')
 end
 function Trig_TurtleDiy_Actions()
-    ForGroupBJ(GetUnitsInRectAll(gg_rct_TurtleIsland), Trig_NaxDiy_Func002A)
-    ForGroupBJ(GetUnitsOfTypeIdAll(FourCC('n075')), Trig_NaxDiy_Func003A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_TurtleIsland), Trig_NaxDiy_Func002A)
+    ForGroupDestroy(GetUnitsOfTypeIdAll(FourCC('n075')), Trig_NaxDiy_Func003A)
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================

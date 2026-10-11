@@ -163,11 +163,10 @@ function Trig_Spell_E_Dvij_Actions()
         if Trig_Spell_E_Dvij_Func001Func001C() then
             udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz]=udg_Dalnost_E_Glaz[udg_Cikl_E_Glaz] + 0.02
             udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz]=GetUnitLoc(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])
-            SetUnitPositionLoc(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], PolarProjectionBJ(udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz], 60.00, GetUnitFacing(udg_Caster_E_Glaz[udg_Cikl_E_Glaz])))
+            SetUnitPolarLoc(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz], 60.00, GetUnitFacing(udg_Caster_E_Glaz[udg_Cikl_E_Glaz]))
             AddSpecialEffectLocBJ(udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz], "CosmicBall.mdx")
             DestroyEffectBJ(GetLastCreatedEffectBJ())
-            bj_wantDestroyGroup=true
-            ForGroupBJ(GetUnitsInRangeOfLocAll(150.00, udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz]), Trig_Spell_E_Dvij_Func001Func001Func007A)
+            ForGroupDestroy(GetUnitsInRangeOfLocAll(150.00, udg_To4kaCaster_E_Glaz[udg_Cikl_E_Glaz]), Trig_Spell_E_Dvij_Func001Func001Func007A)
             if Trig_Spell_E_Dvij_Func001Func001Func008C() then
                 GroupClear(udg_Group_E_Glaz[udg_Cikl_E_Glaz])
                 SetUnitPathing(udg_Caster_E_Glaz[udg_Cikl_E_Glaz], true)

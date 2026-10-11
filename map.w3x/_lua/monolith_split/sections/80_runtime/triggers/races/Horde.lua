@@ -2315,7 +2315,7 @@ function Trig_Replace_Func001A()
     ReplaceUnit2(GetEnumUnit() , FourCC('O02Z') , bj_UNIT_STATE_METHOD_RELATIVE)
 end
 function Reptaur()
-    ForGroupBJ(GetUnitsOfPlayerAndTypeId(udg_LocalPlayer, FourCC('Otch')), Trig_Replace_Func001A)
+    ForGroupDestroy(GetUnitsOfPlayerAndTypeId(udg_LocalPlayer, FourCC('Otch')), Trig_Replace_Func001A)
 end
 --===========================================================================
 -- Trigger: TrueHorde
@@ -2398,7 +2398,7 @@ function Trig_TrueHorde_Actions()
     --call ChangeEliteUnitsNow(p,pi)
     
     udg_LocalPlayer=p
-    ForGroupBJ(GetUnitsOfPlayerAndTypeId(udg_LocalPlayer, FourCC('Otch')), Trig_Replace_Func001A) -- INLINED!!
+    ForGroupDestroy(GetUnitsOfPlayerAndTypeId(udg_LocalPlayer, FourCC('Otch')), Trig_Replace_Func001A) -- INLINED!!
     
     p=nil
     u=nil
