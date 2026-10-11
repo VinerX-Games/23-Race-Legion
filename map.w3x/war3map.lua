@@ -14729,7 +14729,8 @@ end
 -- ===========================================================================
 ---@return nothing
 function Trig_AiScore0_Actions()
-	BJDebugMsg(R2SW_Polyfill(ArmyExp[0]))
+	if not DebugChatAllowed() then return end
+	BJDebugMsg(R2SW_Polyfill(ArmyExp[0] or 0))
 end
 -- ===========================================================================
 ---@return nothing
@@ -49179,7 +49180,11 @@ function BridgeDispatchCommand(op, arg, sequence)
         return
     end
     if op == "log" then
-        local logOp, logTag = string.match(tostring(arg), "^(on|off|toggle|allon|alloff|list):?(.*)")
+        -- Lua-паттерны не знают альтернации "|": слово + ручная проверка.
+        local logOp, logTag = string.match(tostring(arg), "^(%a+):?(.*)")
+        if logOp ~= "on" and logOp ~= "off" and logOp ~= "toggle" and logOp ~= "allon" and logOp ~= "alloff" and logOp ~= "list" then
+            logOp = nil
+        end
         if logOp == "allon" then
             LogFilterAll = true
             ProbeLogWrite("[LOG] filter all_on")

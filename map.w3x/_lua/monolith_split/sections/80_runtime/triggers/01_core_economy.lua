@@ -749,7 +749,8 @@ end
 -- ===========================================================================
 ---@return nothing
 function Trig_AiScore0_Actions()
-	BJDebugMsg(R2SW_Polyfill(ArmyExp[0]))
+	if not DebugChatAllowed() then return end
+	BJDebugMsg(R2SW_Polyfill(ArmyExp[0] or 0))
 end
 -- ===========================================================================
 ---@return nothing
