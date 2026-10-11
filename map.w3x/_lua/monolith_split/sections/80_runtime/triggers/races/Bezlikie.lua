@@ -272,7 +272,6 @@ function TT2()
     local f= GetEnumDestructable()
     local l= Location(GetDestructableX(f), GetDestructableY(f))
     
-    DisplayTextToPlayer(Player(0), 0, 0, "")
     AdjustPlayerStateBJ(5, p, PLAYER_STATE_RESOURCE_LUMBER)
     
     
@@ -308,7 +307,6 @@ function Trig_LumberTest_Actions()
         u = BlzGroupUnitAt(g, gIdx - 1)
         if u == nil then break end
         
-        DisplayTextToPlayer(Player(0), 0, 0, "")
         udg_LocalPlayer=GetOwningPlayer(u)
         l=GetUnitLoc(u)
         --call EnumDestructablesInCircleBJ( 500.00, l, function TT2 )
@@ -324,7 +322,6 @@ function Trig_LumberTest_Actions()
         bj_enumDestructableRadius=radius
         r=GetRectFromCircleBJ(l, radius)
         --set r = Rect(centerX - radius, centerY - radius, centerX + radius, centerY + radius)
-        DisplayTextToPlayer(Player(0), 0, 0, "2")
         EnumDestructablesInRect(r, filterEnumDestructablesInCircleBJ, TT2)
         RemoveRect(r)
         
