@@ -15,7 +15,7 @@ function Trig_Only_Eastern_Actions()
 	DisplayTextToForce(udg_AllPlayers, "TRIGSTR_19899")
 	EnableTrigger(gg_trg_Leave_Easten)
 	EnableTrigger(gg_trg_Back_Easten)
-	ForGroupDestroy(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Only_Eastern_Func004001002)), Trig_Only_Eastern_Func004A)
+	ForGroupDestroy(GetUnitsInRectMatching(GetPlayableMapRect(), CachedFilter(Trig_Only_Eastern_Func004001002)), Trig_Only_Eastern_Func004A)
 end
 -- ===========================================================================
 ---@return nothing
@@ -162,7 +162,7 @@ function Trig_Continents_set_On_Actions()
     end
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
     EnableTrigger(gg_trg_LeaveNeadedRegions)
-    ForGroupDestroy(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Continents_set_On_Func013001002)), Trig_Continents_set_On_Func013A)
+    ForGroupDestroy(GetUnitsInRectMatching(GetPlayableMapRect(), CachedFilter(Trig_Continents_set_On_Func013001002)), Trig_Continents_set_On_Func013A)
     TimerStart(udg_TimerToCont, 0.50, false, nil)
 end
 --===========================================================================
@@ -192,7 +192,7 @@ end
 function Trig_Continents_Off_Actions()
     udg_LocalText2="cffffff00r"
     DisplayTextToForce(GetPlayersAll(), udg_LocalText2)
-    ForGroupDestroy(GetUnitsInRectMatching(GetPlayableMapRect(), Condition(Trig_Continents_Off_Func005001002)), Trig_Continents_Off_Func005A)
+    ForGroupDestroy(GetUnitsInRectMatching(GetPlayableMapRect(), CachedFilter(Trig_Continents_Off_Func005001002)), Trig_Continents_Off_Func005A)
     ForForce(udg_AllPlayers, Trig_Continents_Off_Func006A)
 end
 --===========================================================================
@@ -434,9 +434,9 @@ function Trig_EasternOn_1_Func005A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_EasternOn_1_Actions()
-    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_EastenKingdoms, Condition(Trig_EasternOn_1_Func003001002)), Trig_EasternOn_1_Func003A)
-    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_EasternDungeons, Condition(Trig_EasternOn_1_Func004001002)), Trig_EasternOn_1_Func004A)
-    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_BlackMountain, Condition(Trig_EasternOn_1_Func005001002)), Trig_EasternOn_1_Func005A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_EastenKingdoms, CachedFilter(Trig_EasternOn_1_Func003001002)), Trig_EasternOn_1_Func003A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_EasternDungeons, CachedFilter(Trig_EasternOn_1_Func004001002)), Trig_EasternOn_1_Func004A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_BlackMountain, CachedFilter(Trig_EasternOn_1_Func005001002)), Trig_EasternOn_1_Func005A)
 end
 --===========================================================================
 function InitTrig_EasternOn_1()
@@ -514,8 +514,8 @@ function Trig_KalimOn_2_Func003A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_KalimOn_2_Actions()
-    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Kalim, Condition(Trig_KalimOn_2_Func002001002)), Trig_KalimOn_2_Func002A)
-    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Ankirag, Condition(Trig_KalimOn_2_Func003001002)), Trig_KalimOn_2_Func003A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Kalim, CachedFilter(Trig_KalimOn_2_Func002001002)), Trig_KalimOn_2_Func002A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Ankirag, CachedFilter(Trig_KalimOn_2_Func003001002)), Trig_KalimOn_2_Func003A)
 end
 --===========================================================================
 function InitTrig_KalimOn_2()
@@ -588,7 +588,7 @@ function Trig_Outland_3_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_Outland_3_Actions()
-    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Outland, Condition(Trig_Outland_3_Func002001002)), Trig_Outland_3_Func002A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Outland, CachedFilter(Trig_Outland_3_Func002001002)), Trig_Outland_3_Func002A)
 end
 --===========================================================================
 function InitTrig_Outland_3()
@@ -667,8 +667,8 @@ function Trig_NordOn_4_Func003A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_NordOn_4_Actions()
-    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Nord, Condition(Trig_NordOn_4_Func002001002)), Trig_NordOn_4_Func002A)
-    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Azgel, Condition(Trig_NordOn_4_Func003001002)), Trig_NordOn_4_Func003A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Nord, CachedFilter(Trig_NordOn_4_Func002001002)), Trig_NordOn_4_Func002A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Azgel, CachedFilter(Trig_NordOn_4_Func003001002)), Trig_NordOn_4_Func003A)
 end
 --===========================================================================
 function InitTrig_NordOn_4()
@@ -741,7 +741,7 @@ function Trig_Pandaria_5_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_Pandaria_5_Actions()
-    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Pandaria, Condition(Trig_Pandaria_5_Func002001002)), Trig_Pandaria_5_Func002A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Pandaria, CachedFilter(Trig_Pandaria_5_Func002001002)), Trig_Pandaria_5_Func002A)
 end
 --===========================================================================
 function InitTrig_Pandaria_5()
@@ -813,7 +813,7 @@ function Trig_Argus_6_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_Argus_6_Actions()
-    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Argus, Condition(Trig_Argus_6_Func002001002)), Trig_Argus_6_Func002A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Argus, CachedFilter(Trig_Argus_6_Func002001002)), Trig_Argus_6_Func002A)
 end
 --===========================================================================
 function InitTrig_Argus_6()
@@ -885,7 +885,7 @@ function Trig_BrokenIsled_7_Func002A()
     WaygateActivateBJ(true, GetEnumUnit())
 end
 function Trig_BrokenIsled_7_Actions()
-    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Broken_Island, Condition(Trig_BrokenIsled_7_Func002001002)), Trig_BrokenIsled_7_Func002A)
+    ForGroupDestroy(GetUnitsInRectMatching(gg_rct_Broken_Island, CachedFilter(Trig_BrokenIsled_7_Func002001002)), Trig_BrokenIsled_7_Func002A)
 end
 --===========================================================================
 function InitTrig_BrokenIsled_7()

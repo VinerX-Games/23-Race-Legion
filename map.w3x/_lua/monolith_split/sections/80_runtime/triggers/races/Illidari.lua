@@ -395,7 +395,7 @@ function Trig_Sand_Strike_Loop_Actions()
                 RemoveLocation(udg_SSpointmovecaster[udg_SSinteger[2]])
                 udg_SSpointmovecaster[udg_SSinteger[2]]=PolarProjectionBJ(udg_SSpointcaster[udg_SSinteger[2]], I2R(udg_SS[udg_SSinteger[2]]), udg_SSfacing[udg_SSinteger[2]] - 180.00)
             end
-            udg_SSgroup[udg_SSinteger[2]]=GetUnitsInRangeOfLocMatching(150.00, udg_SSpointcaster[udg_SSinteger[2]], Condition(Trig_Sand_Strike_Loop_Func001Func001Func004002003))
+            udg_SSgroup[udg_SSinteger[2]]=GetUnitsInRangeOfLocMatching(150.00, udg_SSpointcaster[udg_SSinteger[2]], CachedFilter(Trig_Sand_Strike_Loop_Func001Func001Func004002003))
             udg_SS[udg_SSinteger[2]]=udg_SS[udg_SSinteger[2]] - 1
             SetUnitPositionLoc(udg_SScaster[udg_SSinteger[2]], udg_SSpointmovecaster[udg_SSinteger[2]])
             ForGroupBJ(udg_SSgroup[udg_SSinteger[2]], Trig_Sand_Strike_Loop_Func001Func001Func007A)

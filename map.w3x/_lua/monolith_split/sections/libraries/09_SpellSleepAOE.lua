@@ -31,7 +31,7 @@ function SpellSleepAOE___anon__1()
 	local y = GetLocationY(loc)
 	local g = CreateGroup()
 	local u
-	GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), Condition(SpellSleepAOE___anon__2))
+	GroupEnumUnitsInRange(g, x, y, I2R(SpellSleepAOE___getRange(GetUnitAbilityLevel(GetTriggerUnit(), SpellSleepAOE___SpellHero))), CachedFilter(SpellSleepAOE___anon__2))
 	while true do
 		u = FirstOfGroup(g)
 		if u == nil then

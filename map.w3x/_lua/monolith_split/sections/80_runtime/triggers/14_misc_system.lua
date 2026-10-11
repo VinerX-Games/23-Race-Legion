@@ -417,7 +417,7 @@ function Trig_SecondChance_Actions()
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_GOLD, 5000)
         SetPlayerStateBJ(ConvertedPlayer(udg_LocalInteger), PLAYER_STATE_RESOURCE_LUMBER, 5000)
         
-        ForGroupDestroy(GetUnitsOfPlayerMatching(ConvertedPlayer(udg_LocalInteger), Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
+        ForGroupDestroy(GetUnitsOfPlayerMatching(ConvertedPlayer(udg_LocalInteger), CachedFilter(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
     
         if udg_GameMode == 1 or udg_GameMode == 2 then
             local p = ConvertedPlayer(udg_LocalInteger)
@@ -446,7 +446,7 @@ function BridgeRaceSelect(target_index)
     SetPlayerStateBJ(target_player, PLAYER_STATE_RESOURCE_GOLD, 5000)
     SetPlayerStateBJ(target_player, PLAYER_STATE_RESOURCE_LUMBER, 5000)
     udg_LocalInteger = target_index
-    ForGroupDestroy(GetUnitsOfPlayerMatching(target_player, Condition(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
+    ForGroupDestroy(GetUnitsOfPlayerMatching(target_player, CachedFilter(Trig_SecondChance_Func003Func007001002)), Trig_SecondChance_Func003Func007A)
     if udg_GameMode == 1 or udg_GameMode == 2 then
         t=CreateTimer()
         SecondChance[GetPlayerId(target_player)]=t
@@ -871,7 +871,7 @@ function Trig_KillTestUnits_O_Copy_Func003A()
     p=nil
 end
 function Trig_KillTestUnits___OFF_ME_Actions()
-    GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, Condition(Trig_KillTestUnits_O_Copy_Func001002))
+    GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, CachedFilter(Trig_KillTestUnits_O_Copy_Func001002))
     ForGroupDestroy(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_O_Copy_Func003A)
     GroupClear(udg_LocalOtrad2)
 end
@@ -891,7 +891,7 @@ function Trig_Setlvl_Func001A()
     SetHeroLevelBJ(GetEnumUnit(), S2I(SubStringBJ(GetEventPlayerChatString(), 8, 10)), false)
 end
 function Trig_Setlvl_Actions()
-    ForGroupDestroy(GetUnitsOfPlayerMatching(GetTriggerPlayer(), Condition(Trig_Setlvl_Func001001002)), Trig_Setlvl_Func001A)
+    ForGroupDestroy(GetUnitsOfPlayerMatching(GetTriggerPlayer(), CachedFilter(Trig_Setlvl_Func001001002)), Trig_Setlvl_Func001A)
 end
 --===========================================================================
 function InitTrig_Setlvl()
@@ -950,7 +950,7 @@ function Trig_KillTestUnits_Command_Func003A()
     
 end
 function Trig_KillTestUnits_Command_Actions()
-    GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, Condition(Trig_KillTestUnits_Command_Func001002))
+    GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, CachedFilter(Trig_KillTestUnits_Command_Func001002))
     ForGroupDestroy(GetUnitsInRectAll(gg_rct_TestRegion), Trig_KillTestUnits_Command_Func003A)
     GroupClear(udg_LocalOtrad2)
 end

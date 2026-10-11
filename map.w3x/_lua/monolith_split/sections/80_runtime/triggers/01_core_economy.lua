@@ -728,7 +728,7 @@ function InitializeUnitIndexer()
 	re = nil
 	r = nil
 	while true do
-		GroupEnumUnitsOfPlayer(bj_lastCreatedGroup, Player(i), Filter(IndexUnit))
+		GroupEnumUnitsOfPlayer(bj_lastCreatedGroup, Player(i), CachedFilter(IndexUnit))
 		i = i + 1
 		if i == 16 then break end
 	end
@@ -1986,7 +1986,7 @@ function Trig_Cities_Start_2_Func003A()
 end
 ---@return nothing
 function Trig_Cities_Start_2_Actions()
-	GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, Condition(ItIsCity))
+	GroupEnumUnitsInRect(udg_LocalOtrad2, bj_mapInitialPlayableArea, CachedFilter(ItIsCity))
 	ForGroup(udg_LocalOtrad2, Trig_Cities_Start_2_Func003A)
 	GroupClear(udg_LocalOtrad2)
 end
