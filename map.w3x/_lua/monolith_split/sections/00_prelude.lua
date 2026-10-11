@@ -41,11 +41,19 @@ local function logExtractTag(message)
     local tag = string.match(tostring(message), "^%[([A-Z][A-Z0-9%-]*)%]")
     return tag
 end
+-- Кольцевой буфер последних ProbeLogMax строк: table.remove(lines, 1) на 2000
+-- элементах сдвигал весь массив при каждой записи (O(n) в горячих путях ИИ).
+local ProbeLogMax = 2000
+local probeLogHead = 0   -- индекс самой старой строки - 1 (по модулю ProbeLogMax)
+local probeLogCount = 0
 function ProbeLogWrite(message)
     local lines = ProbeLogLines
-    lines[#lines + 1] = probeLogSanitize(message)
-    if #lines > 2000 then
-        table.remove(lines, 1)
+    if probeLogCount < ProbeLogMax then
+        probeLogCount = probeLogCount + 1
+        lines[probeLogCount] = probeLogSanitize(message)
+    else
+        probeLogHead = probeLogHead % ProbeLogMax + 1
+        lines[probeLogHead] = probeLogSanitize(message)
     end
     local allow = LogFilterAll
     if not allow then
@@ -65,8 +73,8 @@ function ProbeLogWrite(message)
     pcall(function()
         PreloadGenClear()
         PreloadGenStart()
-        for i = 1, #lines do
-            Preload(lines[i])
+        for k = 1, probeLogCount do
+            Preload(lines[(probeLogHead + k - 1) % ProbeLogMax + 1])
         end
         PreloadGenEnd(ProbeLogFile)
     end)

@@ -41,11 +41,19 @@ local function logExtractTag(message)
     local tag = string.match(tostring(message), "^%[([A-Z][A-Z0-9%-]*)%]")
     return tag
 end
+-- Кольцевой буфер последних ProbeLogMax строк: table.remove(lines, 1) на 2000
+-- элементах сдвигал весь массив при каждой записи (O(n) в горячих путях ИИ).
+local ProbeLogMax = 2000
+local probeLogHead = 0   -- индекс самой старой строки - 1 (по модулю ProbeLogMax)
+local probeLogCount = 0
 function ProbeLogWrite(message)
     local lines = ProbeLogLines
-    lines[#lines + 1] = probeLogSanitize(message)
-    if #lines > 2000 then
-        table.remove(lines, 1)
+    if probeLogCount < ProbeLogMax then
+        probeLogCount = probeLogCount + 1
+        lines[probeLogCount] = probeLogSanitize(message)
+    else
+        probeLogHead = probeLogHead % ProbeLogMax + 1
+        lines[probeLogHead] = probeLogSanitize(message)
     end
     local allow = LogFilterAll
     if not allow then
@@ -65,8 +73,8 @@ function ProbeLogWrite(message)
     pcall(function()
         PreloadGenClear()
         PreloadGenStart()
-        for i = 1, #lines do
-            Preload(lines[i])
+        for k = 1, probeLogCount do
+            Preload(lines[(probeLogHead + k - 1) % ProbeLogMax + 1])
         end
         PreloadGenEnd(ProbeLogFile)
     end)
@@ -22320,8 +22328,6 @@ function Trig_TPrepeat_Actions()
             DestroyTimer(t)
         end
     end)
-    t=nil
-    u=nil
 end
 --===========================================================================
 function InitTrig_TPrepeat()
@@ -22437,8 +22443,6 @@ function ManabombaMissle(caster, destination)
     
     RemoveLocation(l)
     l=nil
-    u1=nil
-    u2=nil
 end
   
 --===========================================================================
@@ -24354,8 +24358,6 @@ function Trig_Undermining_Actions()
         end
     end)
     ---------
-    GT=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_Undermining()
@@ -25683,8 +25685,6 @@ function Trig_BuidingThatSellRecruts_Actions()
             DestroyTimer(t)
         end
     end)
-    u=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_BuidingThatSellRecruts()
@@ -25817,8 +25817,6 @@ function Trig_JumpSTR_Actions()
         end
     end)
     ---------
-    GT=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_JumpSTR()
@@ -26078,8 +26076,6 @@ function Trig_DiyW2_Actions()
         end
         DestroyTimer(t)
     end)
-    t=nil
-    u=nil
 end
 --===========================================================================
 function InitTrig_DiyW2()
@@ -26240,8 +26236,6 @@ function Trig_SpellArrow_Actions()
             DestroyTimer(t)
         end
     end)
-    t=nil
-    u=nil
 end
 --===========================================================================
 function InitTrig_SpellArrow()
@@ -26393,8 +26387,6 @@ function Trig_OgrimmCharge_Actions()
         end
     end)
     ---------
-    GT=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_OgrimmCharge()
@@ -26478,9 +26470,6 @@ function Trig_Duel_Actions()
     
     UnitAddAbility(u, FourCC('Avul'))
     UnitAddAbility(u2, FourCC('Avul'))
-    t=nil
-    u=nil
-    u2=nil
 end
 --===========================================================================
 function InitTrig_Duel()
@@ -27342,8 +27331,6 @@ function Trig_Charge_Actions()
         end
     end)
     ---------
-    GT=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_Charge()
@@ -27385,8 +27372,6 @@ function Trig_ZacliatieOfLive_Actions()
 		DestroyTimer(t)
 	end)
     
-    u=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_ZacliatieOfLive()
@@ -27556,8 +27541,6 @@ function Trig_WantAxe_Actions()
 	end)
     
     u=nil
-    u2=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_WantAxe()
@@ -31826,8 +31809,6 @@ function Trig_VarianCharge_Actions()
         end
     end)
     ---------
-    GT=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_VarianCharge()
@@ -39930,7 +39911,6 @@ function Trig_CorrupPlus_Actions()
 	end)
     
     
-    t=nil
 end
 --===========================================================================
 function InitTrig_CorrupPlus()
@@ -39974,7 +39954,6 @@ function Trig_CorrupMinus_Actions()
     
    
     
-    t=nil
 end
 --===========================================================================
 function InitTrig_CorrupMinus()
@@ -42251,7 +42230,6 @@ function Trig_BlinkToUnit_Spell_Actions()
         DestroyTimer(t)
     end)
     RemoveLocation(l2)
-    l1=nil
     l2=nil
 end
 --===========================================================================
@@ -45211,7 +45189,7 @@ function Trig_Sand_Strike_Loop_Func001Func001Func007A()
     if Trig_Sand_Strike_Loop_Func001Func001Func007Func004C() then
         SetUnitPositionLoc(udg_SSpicked[udg_SSinteger[2]], udg_SSpointmovepicked[udg_SSinteger[2]])
     end
-    UnitDamageTargetBJ(udg_SScaster[udg_SSinteger[2]], udg_SSpicked[udg_SSinteger[3]], udg_SSdamage[udg_SSinteger[2]], ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+    UnitDamageTargetBJ(udg_SScaster[udg_SSinteger[2]], udg_SSpicked[udg_SSinteger[2]], udg_SSdamage[udg_SSinteger[2]], ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
     udg_SSpicked[udg_SSinteger[2]]=nil
     RemoveLocation(udg_SSpointpicked[udg_SSinteger[2]])
     RemoveLocation(udg_SSpointmovepicked[udg_SSinteger[2]])
@@ -45517,8 +45495,6 @@ function Trig_FlyDragon_Actions()
         end
     end)
     ---------
-    GT=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_FlyDragon()
@@ -47767,7 +47743,6 @@ function Trig_SecondChance_Actions()
             end)
         end
     end
-    t=nil
 end
 --===========================================================================
 function InitTrig_SecondChance()
@@ -47795,8 +47770,6 @@ function BridgeRaceSelect(target_index)
         end)
     end
     ProbeLogWrite("[BRIDGE] race_select target=" .. tostring(target_index))
-    target_player = nil
-    t = nil
 end
 --===========================================================================
 -- Trigger: GG

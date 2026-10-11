@@ -114,8 +114,6 @@ function Trig_Charge_Actions()
         end
     end)
     ---------
-    GT=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_Charge()
@@ -157,8 +155,6 @@ function Trig_ZacliatieOfLive_Actions()
 		DestroyTimer(t)
 	end)
     
-    u=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_ZacliatieOfLive()
@@ -328,8 +324,6 @@ function Trig_WantAxe_Actions()
 	end)
     
     u=nil
-    u2=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_WantAxe()

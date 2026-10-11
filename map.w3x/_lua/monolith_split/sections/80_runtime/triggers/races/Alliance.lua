@@ -3260,8 +3260,6 @@ function Trig_VarianCharge_Actions()
         end
     end)
     ---------
-    GT=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_VarianCharge()

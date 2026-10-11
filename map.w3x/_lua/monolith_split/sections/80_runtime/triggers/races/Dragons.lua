@@ -114,8 +114,6 @@ function Trig_FlyDragon_Actions()
         end
     end)
     ---------
-    GT=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_FlyDragon()

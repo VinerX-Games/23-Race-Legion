@@ -685,8 +685,6 @@ function Trig_TPrepeat_Actions()
             DestroyTimer(t)
         end
     end)
-    t=nil
-    u=nil
 end
 --===========================================================================
 function InitTrig_TPrepeat()
@@ -802,8 +800,6 @@ function ManabombaMissle(caster, destination)
     
     RemoveLocation(l)
     l=nil
-    u1=nil
-    u2=nil
 end
   
 --===========================================================================

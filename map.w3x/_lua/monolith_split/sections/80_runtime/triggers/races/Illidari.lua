@@ -370,7 +370,7 @@ function Trig_Sand_Strike_Loop_Func001Func001Func007A()
     if Trig_Sand_Strike_Loop_Func001Func001Func007Func004C() then
         SetUnitPositionLoc(udg_SSpicked[udg_SSinteger[2]], udg_SSpointmovepicked[udg_SSinteger[2]])
     end
-    UnitDamageTargetBJ(udg_SScaster[udg_SSinteger[2]], udg_SSpicked[udg_SSinteger[3]], udg_SSdamage[udg_SSinteger[2]], ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+    UnitDamageTargetBJ(udg_SScaster[udg_SSinteger[2]], udg_SSpicked[udg_SSinteger[2]], udg_SSdamage[udg_SSinteger[2]], ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
     udg_SSpicked[udg_SSinteger[2]]=nil
     RemoveLocation(udg_SSpointpicked[udg_SSinteger[2]])
     RemoveLocation(udg_SSpointmovepicked[udg_SSinteger[2]])

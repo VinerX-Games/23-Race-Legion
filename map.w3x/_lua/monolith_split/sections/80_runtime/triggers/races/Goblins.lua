@@ -229,7 +229,6 @@ function Trig_CorrupPlus_Actions()
 	end)
     
     
-    t=nil
 end
 --===========================================================================
 function InitTrig_CorrupPlus()
@@ -273,7 +272,6 @@ function Trig_CorrupMinus_Actions()
     
    
     
-    t=nil
 end
 --===========================================================================
 function InitTrig_CorrupMinus()

@@ -247,8 +247,6 @@ function Trig_DiyW2_Actions()
         end
         DestroyTimer(t)
     end)
-    t=nil
-    u=nil
 end
 --===========================================================================
 function InitTrig_DiyW2()
@@ -409,8 +407,6 @@ function Trig_SpellArrow_Actions()
             DestroyTimer(t)
         end
     end)
-    t=nil
-    u=nil
 end
 --===========================================================================
 function InitTrig_SpellArrow()
@@ -562,8 +558,6 @@ function Trig_OgrimmCharge_Actions()
         end
     end)
     ---------
-    GT=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_OgrimmCharge()
@@ -647,9 +641,6 @@ function Trig_Duel_Actions()
     
     UnitAddAbility(u, FourCC('Avul'))
     UnitAddAbility(u2, FourCC('Avul'))
-    t=nil
-    u=nil
-    u2=nil
 end
 --===========================================================================
 function InitTrig_Duel()

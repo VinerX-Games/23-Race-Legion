@@ -428,8 +428,6 @@ function Trig_BuidingThatSellRecruts_Actions()
             DestroyTimer(t)
         end
     end)
-    u=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_BuidingThatSellRecruts()
@@ -562,8 +560,6 @@ function Trig_JumpSTR_Actions()
         end
     end)
     ---------
-    GT=nil
-    t=nil
 end
 --===========================================================================
 function InitTrig_JumpSTR()

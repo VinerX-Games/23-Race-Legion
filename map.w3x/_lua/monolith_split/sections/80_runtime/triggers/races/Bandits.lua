@@ -120,7 +120,6 @@ function Trig_BlinkToUnit_Spell_Actions()
         DestroyTimer(t)
     end)
     RemoveLocation(l2)
-    l1=nil
     l2=nil
 end
 --===========================================================================

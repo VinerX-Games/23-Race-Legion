@@ -429,7 +429,6 @@ function Trig_SecondChance_Actions()
             end)
         end
     end
-    t=nil
 end
 --===========================================================================
 function InitTrig_SecondChance()
@@ -457,8 +456,6 @@ function BridgeRaceSelect(target_index)
         end)
     end
     ProbeLogWrite("[BRIDGE] race_select target=" .. tostring(target_index))
-    target_player = nil
-    t = nil
 end
 --===========================================================================
 -- Trigger: GG
