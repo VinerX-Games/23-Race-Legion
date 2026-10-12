@@ -932,6 +932,7 @@ end
 ---@param attacker player
 ---@return nothing
 function HandleVassalization(capital, attacker)
+	if not capital or not attacker then return end
 	local p = GetOwningPlayer(capital)
 	local pi = GetPlayerId(p)
 	local p2 = attacker

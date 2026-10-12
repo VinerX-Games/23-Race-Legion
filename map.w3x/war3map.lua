@@ -17460,6 +17460,7 @@ end
 ---@param attacker player
 ---@return nothing
 function HandleVassalization(capital, attacker)
+	if not capital or not attacker then return end
 	local p = GetOwningPlayer(capital)
 	local pi = GetPlayerId(p)
 	local p2 = attacker
@@ -21025,19 +21026,21 @@ end
 -- Trigger: Pole astrala Elems
 --===========================================================================
 function Trig_Pole_astrala_Elems_Func003A()
-    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
-    UnitAddAbilityBJ(FourCC('AHbn'), GetLastCreatedUnit())
-    SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped(FourCC('AHbn'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A0OT'), GetTriggerUnit()))
-    IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
-    udg_LocalUnit2=GetLastCreatedUnit()
-    TriggerExecute(gg_trg_ToKill2)
+    local target = GetEnumUnit()
+    local caster = GetTriggerUnit()
+    local p = GetOwningPlayer(caster)
+    local dummy = CreateUnit(p, FourCC('H0BN'), GetUnitX(caster), GetUnitY(caster), bj_UNIT_FACING)
+    UnitAddAbility(dummy, FourCC('AHbn'))
+    SetUnitManaBJ(dummy, 1111111.00)
+    SetUnitAbilityLevel(dummy, FourCC('AHbn'), GetUnitAbilityLevel(caster, FourCC('A0OT')))
+    IssueTargetOrder(dummy, "banish", target)
+    RemoveUnitTimed(dummy, 2.0)
 end
 function Trig_Pole_astrala_Elems_Actions()
-    udg_LocalOtrad=GetUnitsInRangeOfLocAll(200.00, GetSpellTargetLoc())
-    udg_LocalPosition[14]=GetUnitLoc(GetTriggerUnit())
-    ForGroupBJ(udg_LocalOtrad, Trig_Pole_astrala_Elems_Func003A)
-    RemoveLocation(udg_LocalPosition[14])
+    local g = CreateGroup()
+    GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 200.00, nil)
+    ForGroup(g, Trig_Pole_astrala_Elems_Func003A)
+    DestroyGroup(g)
 end
 --===========================================================================
 function InitTrig_Pole_astrala_Elems()
@@ -21052,18 +21055,20 @@ end
 -- Trigger: ItemPoleAstrala
 --===========================================================================
 function Trig_ItemPoleAstrala_Func003A()
-    CreateNUnitsAtLoc(1, FourCC('H0BN'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
-    UnitAddAbilityBJ(FourCC('AHbn'), GetLastCreatedUnit())
-    SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    IssueTargetOrderBJ(GetLastCreatedUnit(), "banish", GetEnumUnit())
-    udg_LocalUnit2=GetLastCreatedUnit()
-    TriggerExecute(gg_trg_ToKill2)
+    local target = GetEnumUnit()
+    local caster = GetTriggerUnit()
+    local p = GetOwningPlayer(caster)
+    local dummy = CreateUnit(p, FourCC('H0BN'), GetUnitX(caster), GetUnitY(caster), bj_UNIT_FACING)
+    UnitAddAbility(dummy, FourCC('AHbn'))
+    SetUnitManaBJ(dummy, 1111111.00)
+    IssueTargetOrder(dummy, "banish", target)
+    RemoveUnitTimed(dummy, 2.0)
 end
 function Trig_ItemPoleAstrala_Actions()
-    udg_LocalOtrad=GetUnitsInRangeOfLocAll(83.00, GetSpellTargetLoc())
-    udg_LocalPosition[14]=GetUnitLoc(GetTriggerUnit())
-    ForGroupBJ(udg_LocalOtrad, Trig_ItemPoleAstrala_Func003A)
-    RemoveLocation(udg_LocalPosition[14])
+    local g = CreateGroup()
+    GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 83.00, nil)
+    ForGroup(g, Trig_ItemPoleAstrala_Func003A)
+    DestroyGroup(g)
 end
 --===========================================================================
 function InitTrig_ItemPoleAstrala()
@@ -21078,19 +21083,21 @@ end
 -- Trigger: AntiMagic Item
 --===========================================================================
 function Trig_AntiMagic_Item_Func003A()
-    CreateNUnitsAtLoc(1, FourCC('H0GB'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition[14], bj_UNIT_FACING)
-    UnitAddAbilityBJ(FourCC('A0TI'), GetLastCreatedUnit())
-    SetUnitManaBJ(GetLastCreatedUnit(), 1111111.00)
-    SetUnitAbilityLevelSwapped(FourCC('A0TI'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('A0TB'), GetTriggerUnit()))
-    IssueTargetOrderBJ(GetLastCreatedUnit(), "antimagicshell", GetEnumUnit())
-    udg_LocalUnit2=GetLastCreatedUnit()
-    TriggerExecute(gg_trg_ToKill2)
+    local target = GetEnumUnit()
+    local caster = GetTriggerUnit()
+    local p = GetOwningPlayer(caster)
+    local dummy = CreateUnit(p, FourCC('H0GB'), GetUnitX(caster), GetUnitY(caster), bj_UNIT_FACING)
+    UnitAddAbility(dummy, FourCC('A0TI'))
+    SetUnitManaBJ(dummy, 1111111.00)
+    SetUnitAbilityLevel(dummy, FourCC('A0TI'), GetUnitAbilityLevel(caster, FourCC('A0TB')))
+    IssueTargetOrder(dummy, "antimagicshell", target)
+    RemoveUnitTimed(dummy, 2.0)
 end
 function Trig_AntiMagic_Item_Actions()
-    udg_LocalOtrad=GetUnitsInRangeOfLocAll(200.00, GetSpellTargetLoc())
-    udg_LocalPosition[14]=GetUnitLoc(GetTriggerUnit())
-    ForGroupBJ(udg_LocalOtrad, Trig_AntiMagic_Item_Func003A)
-    RemoveLocation(udg_LocalPosition[14])
+    local g = CreateGroup()
+    GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 200.00, nil)
+    ForGroup(g, Trig_AntiMagic_Item_Func003A)
+    DestroyGroup(g)
 end
 --===========================================================================
 function InitTrig_AntiMagic_Item()
@@ -21113,18 +21120,16 @@ end
 --===========================================================================
 function Trig_Spell_Copy_Actions()
     udg_Caster=GetSpellAbilityUnit()
-    udg_To4kaCaster=GetUnitLoc(udg_Caster)
     udg_Logika=true
     udg_HisloA[0]=4
     SetPlayerAbilityAvailableBJ(false, FourCC('A1BN'), GetOwningPlayer(udg_Caster))
     SetPlayerAbilityAvailableBJ(true, FourCC('A1BM'), GetOwningPlayer(udg_Caster))
     UnitAddAbilityBJ(FourCC('A1BM'), udg_Caster)
-    CreateNUnitsAtLoc(1, FourCC('h0MJ'), GetOwningPlayer(udg_Caster), PolarProjectionBJ(udg_To4kaCaster, 100.00, 0.00), bj_UNIT_FACING)
-    udg_Dummy[0]=GetLastCreatedUnit()
-    CreateNUnitsAtLoc(1, FourCC('h0MJ'), GetOwningPlayer(udg_Caster), PolarProjectionBJ(udg_To4kaCaster, 100.00, 120.00), bj_UNIT_FACING)
-    udg_Dummy[1]=GetLastCreatedUnit()
-    CreateNUnitsAtLoc(1, FourCC('h0MJ'), GetOwningPlayer(udg_Caster), PolarProjectionBJ(udg_To4kaCaster, 100.00, 240.00), bj_UNIT_FACING)
-    udg_Dummy[2]=GetLastCreatedUnit()
+    local cx, cy = GetUnitX(udg_Caster), GetUnitY(udg_Caster)
+    local p = GetOwningPlayer(udg_Caster)
+    udg_Dummy[0] = CreateUnit(p, FourCC('h0MJ'), cx + 100.0, cy, bj_UNIT_FACING)
+    udg_Dummy[1] = CreateUnit(p, FourCC('h0MJ'), cx - 50.0, cy + 86.6, bj_UNIT_FACING)
+    udg_Dummy[2] = CreateUnit(p, FourCC('h0MJ'), cx - 50.0, cy - 86.6, bj_UNIT_FACING)
     TimerStart(udg_Timer, 0.03, true, nil)
 end
 --===========================================================================
@@ -21312,7 +21317,7 @@ function Trig_Spell_Dvij_Actions()
                 if Trig_Spell_Dvij_Func004Func007Func002Func005C() then
                     -- ??? ????? ? ?????
                     ForGroupDestroy(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func002Func005Func002A)
-                    AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsDemonDarkPortalDarkPortalTarget.mdl")
+                    AddSpecialEffectLocBJ(udg_To4kaTarget, "Abilities\\Spells\\Demon\\DarkPortal\\DarkPortalTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                     RemoveUnit(udg_Dummy[2])
                     udg_Target=nil
@@ -21330,7 +21335,7 @@ function Trig_Spell_Dvij_Actions()
                 if Trig_Spell_Dvij_Func004Func007Func004Func006C() then
                     -- ??? ????? ? ?????
                     ForGroupDestroy(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func004Func006Func002A)
-                    AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsUndeadDarkRitualDarkRitualTarget.mdl")
+                    AddSpecialEffectLocBJ(udg_To4kaTarget, "Abilities\\Spells\\Undead\\DarkRitual\\DarkRitualTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                     RemoveUnit(udg_Dummy[1])
                     udg_Target=nil
@@ -21348,7 +21353,7 @@ function Trig_Spell_Dvij_Actions()
                 if Trig_Spell_Dvij_Func004Func007Func006Func005C() then
                     -- ??? ????? ? ?????
                     ForGroupDestroy(GetUnitsInRangeOfLocAll(200.00, udg_To4kaTarget), Trig_Spell_Dvij_Func004Func007Func006Func005Func002A)
-                    AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsUndeadDeathPactDeathPactTarget.mdl")
+                    AddSpecialEffectLocBJ(udg_To4kaTarget, "Abilities\\Spells\\Undead\\DeathPact\\DeathPactTarget.mdl")
                     DestroyEffectBJ(GetLastCreatedEffectBJ())
                     RemoveUnit(udg_Dummy[0])
                     udg_Target=nil
@@ -21438,12 +21443,27 @@ end
 -- Trigger: Fireball
 --===========================================================================
 function Trig_Fireball_Actions()
-    local fireballtarget
-    fireballtarget=GetSpellTargetUnit()
-    PolledWait(DistanceBetweenPoints(GetUnitLoc(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit())) / 1000.00)
-    udg_unit=fireballtarget
-    UnitDamageTargetBJ(GetSpellAbilityUnit(), udg_unit, I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSpellAbilityUnit(), false)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
-    fireballtarget=nil
+    local caster = GetSpellAbilityUnit()
+    local target = GetSpellTargetUnit()
+    if not caster or not target then return end
+    local cx, cy = GetUnitX(caster), GetUnitY(caster)
+    local tx, ty = GetUnitX(target), GetUnitY(target)
+    local dx, dy = tx - cx, ty - cy
+    local dist = math.sqrt(dx * dx + dy * dy)
+    local delay = dist / 1000.0
+    if delay <= 0.03 then
+        local dmg = I2R(GetHeroStatBJ(bj_HEROSTAT_INT, caster, false))
+        UnitDamageTargetBJ(caster, target, dmg, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
+    else
+        local t = CreateTimer()
+        TimerStart(t, delay, false, function()
+            DestroyTimer(t)
+            if UnitAlive(target) then
+                local dmg = I2R(GetHeroStatBJ(bj_HEROSTAT_INT, caster, false))
+                UnitDamageTargetBJ(caster, target, dmg, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
+            end
+        end)
+    end
 end
 --===========================================================================
 function InitTrig_Fireball()
@@ -21458,17 +21478,32 @@ end
 -- Trigger: Fire Arrow
 --===========================================================================
 function Trig_Fire_Arrow_Actions()
-    local firearrowtarget
-    firearrowtarget=GetSpellTargetUnit()
-    PolledWait(DistanceBetweenPoints(GetUnitLoc(GetSpellAbilityUnit()), GetUnitLoc(GetSpellTargetUnit())) / 1500.00)
-    udg_unit=firearrowtarget
-    UnitDamageTargetBJ(GetSpellAbilityUnit(), udg_unit, I2R(GetHeroStatBJ(bj_HEROSTAT_INT, GetSpellAbilityUnit(), false)), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
-    firearrowtarget=nil
+    local caster = GetSpellAbilityUnit()
+    local target = GetSpellTargetUnit()
+    if not caster or not target then return end
+    local cx, cy = GetUnitX(caster), GetUnitY(caster)
+    local tx, ty = GetUnitX(target), GetUnitY(target)
+    local dx, dy = tx - cx, ty - cy
+    local dist = math.sqrt(dx * dx + dy * dy)
+    local delay = dist / 1500.0
+    if delay <= 0.03 then
+        local dmg = I2R(GetHeroStatBJ(bj_HEROSTAT_INT, caster, false))
+        UnitDamageTargetBJ(caster, target, dmg, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
+    else
+        local t = CreateTimer()
+        TimerStart(t, delay, false, function()
+            DestroyTimer(t)
+            if UnitAlive(target) then
+                local dmg = I2R(GetHeroStatBJ(bj_HEROSTAT_INT, caster, false))
+                UnitDamageTargetBJ(caster, target, dmg, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_COLD)
+            end
+        end)
+    end
 end
 --===========================================================================
 function InitTrig_Fire_Arrow()
     gg_trg_Fire_Arrow=CreateTrigger()
-    TriggerRegisterAnyUnitEventBJ(gg_trg_Fire_Arrow, EVENT_PLAYER_UNIT_SPELL_CAST)
+    TriggerRegisterAnyUnitEventBJ(gg_trg_Fire_Arrow, EVENT_PLAYER_UNIT_SPELL_EFFECT)
     TriggerAddAction(gg_trg_Fire_Arrow, function()
         if GetSpellAbilityId() ~= FourCC('A044') then return end
         Trig_Fire_Arrow_Actions()
@@ -21481,9 +21516,11 @@ function Trig_Research_Ot_Conditions()
     return GetResearched() == FourCC('R00P')
 end
 function Trig_Research_Ot_Actions()
-    udg_LocalPosition2=GetRandomLocInRect(RectFromCenterSizeBJ(GetUnitLoc(GetTriggerUnit()), 15.00, 15.00))
-    CreateNUnitsAtLoc(1, FourCC('o00F'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
+    local u = GetTriggerUnit()
+    if not u then return end
+    local x = GetUnitX(u) + (math.random() * 30.0 - 15.0)
+    local y = GetUnitY(u) + (math.random() * 30.0 - 15.0)
+    CreateUnit(GetOwningPlayer(u), FourCC('o00F'), x, y, bj_UNIT_FACING)
 end
 --===========================================================================
 function InitTrig_Research_Ot()
@@ -22184,10 +22221,10 @@ function Trig_Abordach_D_or_Ot_Actions()
         if true then -- INLINED!!
             return
         end
-        AddSpecialEffectLocBJ(udg_LocalPosition[1], "ObjectsSpawnmodelsHumanHCancelDeathHCancelDeath.mdl")
+        AddSpecialEffectLocBJ(udg_LocalPosition[1], "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl")
         udg_LocalspecialEffect[1]=GetLastCreatedEffectBJ()
         ef[1]=udg_LocalspecialEffect[1]
-        AddSpecialEffectLocBJ(udg_LocalPosition[2], "ObjectsSpawnmodelsHumanHCancelDeathHCancelDeath.mdl")
+        AddSpecialEffectLocBJ(udg_LocalPosition[2], "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl")
         udg_LocalspecialEffect[2]=GetLastCreatedEffectBJ()
         ef[2]=udg_LocalspecialEffect[2]
         RemoveLocation(udg_LocalPosition[1])
@@ -22447,7 +22484,7 @@ function ManabombaMissle(caster, destination)
     TimerStart(t, DistanceBetweenPoints(l, dest) / 600.00, false, function()
         RemoveUnit(u1)
         RemoveUnit(u2)
-        RemoveEffectTimed(AddSpecialEffectLocBJ(dest, "war3mapImportedExplosionC.mdx"), 60)
+        RemoveEffectTimed(AddSpecialEffectLocBJ(dest, "war3mapImported\\ExplosionC.mdx"), 60)
         local function dmg(damager, delay, interval, damage, radious, times, Attacktype, Damagetype)
             local i=0
             while i < times do
@@ -23062,9 +23099,9 @@ function Trig_Connect_Portal_2_Actions()
                     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
                     -- CONFIGURE HERE
                     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
-                    udg_Portal_departureFX[udg_Portal_ConfigIndex[GetForLoopIndexA()]]="AbilitiesSpellsHumanMassTeleportMassTeleportCaster.mdl"
-                    udg_Portal_arrivalFX[udg_Portal_ConfigIndex[GetForLoopIndexA()]]="AbilitiesSpellsHumanMassTeleportMassTeleportTarget.mdl"
-                    udg_Portal_activeFX[udg_Portal_ConfigIndex[GetForLoopIndexA()]]="AbilitiesSpellsOrcVoodooVoodooAura.mdl"
+                    udg_Portal_departureFX[udg_Portal_ConfigIndex[GetForLoopIndexA()]]="Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl"
+                    udg_Portal_arrivalFX[udg_Portal_ConfigIndex[GetForLoopIndexA()]]="Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTarget.mdl"
+                    udg_Portal_activeFX[udg_Portal_ConfigIndex[GetForLoopIndexA()]]="Abilities\\Spells\\Orc\\Voodoo\\VoodooAura.mdl"
                     udg_Portal_range[udg_Portal_ConfigIndex[GetForLoopIndexA()]]=180.00
                     udg_Portal_delay[udg_Portal_ConfigIndex[GetForLoopIndexA()]]=0.00
                     udg_Portal_missileSpeed[udg_Portal_ConfigIndex[GetForLoopIndexA()]]=0.00
@@ -24319,7 +24356,7 @@ function Trig_Undermining_Actions()
     local gg= CreateGroup()      -- enum reuse
     PauseUnit(GT, true)
     ShowUnit(GT, false)
-    DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
+    DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl", x, y))
     local t= CreateTimer()
     TimerStart(t, 0.055, true, function()
         local dx= GetUnitX(GT)
@@ -24361,7 +24398,7 @@ function Trig_Undermining_Actions()
                                 local lvl=GetUnitAbilityLevel(GT, UnSkill)
                                 local uron=UnKofDmg1 * lvl * GetHeroStr(GT, true) + lvl * UnKofDmg2
                                 UnitDamageTarget(GT, subUn, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
-                                DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsDemonDemonBoltImpactDemonBoltImpact.mdl", subUn, "orign"))
+                                DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl", subUn, "orign"))
                             end
                         end
                     end)
@@ -24374,7 +24411,7 @@ function Trig_Undermining_Actions()
             DestroyGroup(gg)
             DestroyTimer(t)
             SetUnitFlyHeight(GT, 0, 0)
-            DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", dx, dy))
+            DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl", dx, dy))
             PauseUnit(GT, false)
             ShowUnit(GT, true)
             SelectUnitAddForPlayer(GT, GetOwningPlayer(GT))
@@ -24407,7 +24444,7 @@ function Trig_PassiveAdal_Actions()
     if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1L6')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --??????
         SetUnitManaBJ(u2, GetUnitState(u2, UNIT_STATE_MANA) - 50)
         SetUnitLifePercentBJ(u, 50)
-        RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanResurrectResurrectTarget.mdl", GetUnitX(u), GetUnitY(u)) , 3)
+        RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl", GetUnitX(u), GetUnitY(u)) , 3)
     end
     
     DestroyGroup(g)
@@ -25792,7 +25829,7 @@ function Trig_JumpSTR_Actions()
     UnitAddAbility(GT, FourCC('Amrf'))
     UnitRemoveAbility(GT, FourCC('Amrf'))
     ---------
-    DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
+    DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl", x, y))
     local t= CreateTimer()
     TimerStart(t, 0.025, true, function()
         local dx= GetUnitX(GT)
@@ -25814,7 +25851,7 @@ function Trig_JumpSTR_Actions()
             DestroyTimer(t)
             SetUnitAnimation(GT, "attack")
             SetUnitFlyHeight(GT, 0, 0)
-            DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
+            DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl", dx, dy))
             local g=CreateGroup()
             GroupEnumUnitsInRange(g, dx, dy, 260, nil)
             while true do
@@ -25829,7 +25866,7 @@ function Trig_JumpSTR_Actions()
                 end
                 if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) then
                     UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
-                    DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
+                    DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageDeathCaster.mdl", un, "orign"))
                 end
                 GroupRemoveUnit(g, un)
             end
@@ -25987,7 +26024,7 @@ function Trig_AlmostDiyW2_Actions()
         u2=BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
         if u2 ~= nil and UnitAlive(u2) then
             
-            RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanFlakCannonsFlakTarget.mdl", GetUnitX(u), GetUnitY(u)) , 1)
+            RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\FlakCannons\\FlakTarget.mdl", GetUnitX(u), GetUnitY(u)) , 1)
             SetUnitState(u, UNIT_STATE_LIFE, hp + Damage)
             SetUnitPosition(u, GetUnitX(u2), GetUnitY(u2))
             IssueTargetOrder(u, "smart", u2)
@@ -26058,7 +26095,7 @@ function Trig_DiyGoblinW2_Actions()
         u2=BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
         if u2 ~= nil and UnitAlive(u2) then
                    
-            RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanFlakCannonsFlakTarget.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
+            RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\FlakCannons\\FlakTarget.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
             CreateUnit(p, FourCC('w206'), GetUnitX(u2), GetUnitY(u2), 0.0)
             AddXp(u2 , 100 * lvl + 25 * lvl)
         end
@@ -26150,7 +26187,7 @@ function Trig_RuneExplode_Conditions()
 end
 function Trig_RuneExplode_Actions()
     local u= GetTriggerUnit()
-    RemoveEffectTimed(AddSpecialEffect("AbilitiesWeaponsBoltBoltImpact.mdl", GetUnitX(u), GetUnitY(u)) , 2)
+    RemoveEffectTimed(AddSpecialEffect("Abilities\\Weapons\\Bolt\\BoltImpact.mdl", GetUnitX(u), GetUnitY(u)) , 2)
     u=nil
 end
 --===========================================================================
@@ -26350,7 +26387,7 @@ function Trig_OgrimmCharge_Actions()
     UnitAddAbility(GT, FourCC('Amrf'))
     UnitRemoveAbility(GT, FourCC('Amrf'))
     ---------
-    DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
+    DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl", x, y))
     local t= CreateTimer()
     TimerStart(t, 0.025, true, function()
         local dx= GetUnitX(GT)
@@ -26372,7 +26409,7 @@ function Trig_OgrimmCharge_Actions()
             DestroyTimer(t)
             SetUnitAnimation(GT, "attack")
             SetUnitFlyHeight(GT, 0, 0)
-            DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
+            DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl", dx, dy))
             local g=CreateGroup()
             GroupEnumUnitsInRange(g, dx, dy, 260, nil)
             while true do
@@ -26382,7 +26419,7 @@ function Trig_OgrimmCharge_Actions()
                 local uron=1.3 * lvl * GetHeroStr(GT, true) + lvl * 50
                 if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) then
                     UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
-                    DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
+                    DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageDeathCaster.mdl", un, "orign"))
                     local knockUn = un
                     local knockAngle=JSTRUgolMT(dx , GetUnitX(un) , dy , GetUnitY(un))
                     local knockCos = Cos(knockAngle * bj_DEGTORAD)
@@ -26706,7 +26743,7 @@ function Trig_MeatDeal_Actions()
                 DelCountDis(eachUnit , GetPlayerId(GetOwningPlayer(eachUnit)))
                 
                 RemoveUnit(eachUnit)
-                RemoveEffectTimed(AddSpecialEffect("ObjectsSpawnmodelsNightElfEntBirthTargetEntBirthTarget.mdl", GetUnitX(eachUnit), GetUnitY(eachUnit)) , 2)
+                RemoveEffectTimed(AddSpecialEffect("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl", GetUnitX(eachUnit), GetUnitY(eachUnit)) , 2)
             end
             
         end
@@ -27151,7 +27188,7 @@ function Trig_PlagueOnBuilding_Actions()
             TimerStart(t, 1.00, true, function()
                 if time == 0 and UnitAlive(u) then
                     UnitAddAbility(u, FourCC('A1HS'))
-                    e = AddSpecialEffectTargetUnitBJ("overhead", u, "CultOfDamnedPlagueCloudTargetLight.mdx")
+                    e = AddSpecialEffectTargetUnitBJ("overhead", u, "CultOfDamned\\PlagueCloudTargetLight.mdx")
                     time = time + 1
                 elseif time < 30 and UnitAlive(u) then
                     time = time + 1
@@ -27328,7 +27365,7 @@ function Trig_Charge_Actions()
         else
             DestroyTimer(t)
             SetUnitAnimation(GT, "attack")
-            DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
+            DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl", dx, dy))
             local g=CreateGroup()
             GroupEnumUnitsInRange(g, dx, dy, 260, nil)
             while true do
@@ -27343,7 +27380,7 @@ function Trig_Charge_Actions()
                 end
                 if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) then
                     UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
-                    DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
+                    DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageDeathCaster.mdl", un, "orign"))
                 end
                 GroupRemoveUnit(g, un)
             end
@@ -27961,7 +27998,7 @@ function Trig_SpellDamageReturn_Actions()
     local hp= GetUnitState(u, UNIT_STATE_LIFE) * 0.6
     local seconds= 7
     local i= 0
-    local e= AddSpecialEffectTargetUnitBJ("Chest", u, "AbilitiesSpellsItemsVampiricPotionVampPotionCaster.mdl")
+    local e= AddSpecialEffectTargetUnitBJ("Chest", u, "Abilities\\Spells\\Items\\VampiricPotion\\VampPotionCaster.mdl")
     UnitDamageTargetBJ(u, u, hp, ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
     
     while true do
@@ -27999,7 +28036,7 @@ function Trig_DamageConvert_Actions()
     local u= GetEventDamageSource()
     local level= GetUnitAbilityLevel(u, FourCC('A1E5'))
     local damage= GetEventDamage()
-    local e= AddSpecialEffectTargetUnitBJ("Chest", u, "AbilitiesSpellsItemsVampiricPotionVampPotionCaster.mdl")
+    local e= AddSpecialEffectTargetUnitBJ("Chest", u, "Abilities\\Spells\\Items\\VampiricPotion\\VampPotionCaster.mdl")
     SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) + damage * ( 0.04 * level ))
   
     
@@ -28208,7 +28245,7 @@ function Trig_DamagePercent_Actions()
     local seconds= 7
     local u= GetEventDamageSource()
     local u2= GetTriggerUnit()
-    local e= AddSpecialEffectTargetUnitBJ("overhead", u2, "AbilitiesSpellsUndeadCurseCurseTarget.mdl")
+    local e= AddSpecialEffectTargetUnitBJ("overhead", u2, "Abilities\\Spells\\Undead\\Curse\\CurseTarget.mdl")
     local i= 0
     --call DisplayTextToPlayer(Player(0),0,0,"2"+GetUnitName(u2))
      
@@ -31806,7 +31843,7 @@ function Trig_VarianCharge_Actions()
         else
             DestroyTimer(t)
             SetUnitAnimation(GT, "attack")
-            DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
+            DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl", dx, dy))
             local g=CreateGroup()
             GroupEnumUnitsInRange(g, dx, dy, 260, nil)
             while true do
@@ -31821,7 +31858,7 @@ function Trig_VarianCharge_Actions()
                 end
                 if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) then
                     UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
-                    DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
+                    DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageDeathCaster.mdl", un, "orign"))
                 end
                 GroupRemoveUnit(g, un)
             end
@@ -38846,7 +38883,7 @@ end
 function Trig_LichStartUpgrade_Actions()
     --local integer i = GetPlayerId( GetOwningPlayer( GetTriggerUnit( ) ) )
     local uid= GetHandleId(GetTriggerUnit()) * 10
-    local e= AddSpecialEffectTarget("DoodadsDungeonTerrainEggSackEggSack1.mdl", GetTriggerUnit(), "origin")
+    local e= AddSpecialEffectTarget("Doodads\\Dungeon\\Terrain\\EggSack\\EggSack1.mdl", GetTriggerUnit(), "origin")
     BlzSetSpecialEffectColor(e, 255, 102, 0)
     SilitidData[uid] = SilitidData[uid] or {}
     SilitidData[uid].Cocon = e
@@ -40296,7 +40333,7 @@ function Trig_GazloySpellheals_Actions()
     local u= GetEventDamageSource()
     local level= GetUnitAbilityLevel(u, FourCC('A1KK'))
     local damage= GetEventDamage()
-    local e= AddSpecialEffectTargetUnitBJ("Chest", u, "AbilitiesSpellsItemsVampiricPotionVampPotionCaster.mdl")
+    local e= AddSpecialEffectTargetUnitBJ("Chest", u, "Abilities\\Spells\\Items\\VampiricPotion\\VampPotionCaster.mdl")
     SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) + damage * ( 0.01 * level ))
   
     
@@ -41079,7 +41116,7 @@ function Trig_Arcana_Conditions()
     return Trig_Arcana_Func009C()
 end
 function Trig_Arcana_Func002A()
-    BlzSetUnitName(GetEnumUnit(), "cff8080ffr")
+    BlzSetUnitName(GetEnumUnit(), "|cff8080ffКолодец арканы|r")
 end
 function Trig_Arcana_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -41153,7 +41190,7 @@ function Trig_Fel_Conditions()
     return Trig_Fel_Func007C()
 end
 function Trig_Fel_Func002A()
-    BlzSetUnitName(GetEnumUnit(), "cff80ff80r")
+    BlzSetUnitName(GetEnumUnit(), "|cff80ff80Колодец скверны|r")
 end
 function Trig_Fel_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -41244,7 +41281,7 @@ function Trig_Void_Conditions()
     return Trig_Void_Func008C()
 end
 function Trig_Void_Func002A()
-    BlzSetUnitName(GetEnumUnit(), "cffff00ffr")
+    BlzSetUnitName(GetEnumUnit(), "|cffff00ffКолодец бездны|r")
 end
 function Trig_Void_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -41361,7 +41398,7 @@ function Trig_Light_Conditions()
     return Trig_Light_Func008C()
 end
 function Trig_Light_Func003A()
-    BlzSetUnitName(GetEnumUnit(), "cffffff00r")
+    BlzSetUnitName(GetEnumUnit(), "|cffffff00Колодец света|r")
 end
 function Trig_Light_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -41389,7 +41426,7 @@ function Trig_ArcanaBuild_Conditions()
     return Trig_ArcanaBuild_Func001C()
 end
 function Trig_ArcanaBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "cff8080ffr")
+    BlzSetUnitName(GetTriggerUnit(), "|cff8080ffКолодец арканы|r")
 end
 --===========================================================================
 function InitTrig_ArcanaBuild()
@@ -41409,7 +41446,7 @@ function Trig_FelBuild_Conditions()
     return Trig_FelBuild_Func001C()
 end
 function Trig_FelBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "cff80ff80r")
+    BlzSetUnitName(GetTriggerUnit(), "|cff80ff80Колодец скверны|r")
 end
 --===========================================================================
 function InitTrig_FelBuild()
@@ -41429,7 +41466,7 @@ function Trig_VoidBuild_Conditions()
     return Trig_VoidBuild_Func001C()
 end
 function Trig_VoidBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "cffff00ffrr")
+    BlzSetUnitName(GetTriggerUnit(), "|cffff00ffКолодец бездны|r")
 end
 --===========================================================================
 function InitTrig_VoidBuild()
@@ -41449,7 +41486,7 @@ function Trig_LigthBuild_Conditions()
     return Trig_LigthBuild_Func001C()
 end
 function Trig_LigthBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "cffffff00r")
+    BlzSetUnitName(GetTriggerUnit(), "|cffffff00Колодец света|r")
 end
 --===========================================================================
 function InitTrig_LigthBuild()
@@ -42283,7 +42320,7 @@ function Trig_Edvin_Ult_Actions()
             
             SetUnitX(u, GetUnitX(u2))
             SetUnitY(u, GetUnitY(u2))
-            RemoveEffectTimed(AddSpecialEffect("ObjectsSpawnmodelsHumanHumanBloodHumanBloodLarge1.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
+            RemoveEffectTimed(AddSpecialEffect("Objects\\Spawnmodels\\Human\\HumanBlood\\HumanBloodLarge1.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
             UnitDamageTargetBJ(u, u2, 300 * GetUnitAbilityLevel(u, FourCC('A0N4')) + 2 * GetHeroAgi(u, true), ATTACK_TYPE_HERO, DAMAGE_TYPE_FORCE)
                  
             
@@ -45169,7 +45206,7 @@ function Trig_SandStrike_Actions()
     udg_SSpointcaster[udg_SSinteger[1]]=GetUnitLoc(udg_SScaster[udg_SSinteger[1]])
     udg_SSdamage[udg_SSinteger[1]]=5.00 + I2R(GetUnitAbilityLevelSwapped(FourCC('A0NF'), udg_SScaster[udg_SSinteger[1]]))
     udg_SStargetpoint[udg_SSinteger[1]]=GetSpellTargetLoc()
-    udg_SSeffect[udg_SSinteger[1]]="AbilitiesWeaponsAncientProtectorMissileAncientProtectorMissile.mdl"
+    udg_SSeffect[udg_SSinteger[1]]="Abilities\\Weapons\\AncientProtectorMissile\\AncientProtectorMissile.mdl"
     udg_SS[udg_SSinteger[1]]=GetUnitAbilityLevelSwapped(FourCC('A0NF'), udg_SScaster[udg_SSinteger[1]]) + 30
     PauseUnitBJ(true, GetTriggerUnit())
     RemoveLocation(udg_SSpointcaster[udg_SSinteger[1]])
@@ -45722,10 +45759,10 @@ function Trig_Buildings_Func010C()
 end
 function Trig_Buildings_Actions()
     udg_Spell=GetSpellTargetLoc()
-    AddSpecialEffectLocBJ(udg_Spell, "UnitsDemonInfernalInfernalBirth.mdl")
+    AddSpecialEffectLocBJ(udg_Spell, "Units\\Demon\\Infernal\\InfernalBirth.mdl")
     BlzSetSpecialEffectTime(GetLastCreatedEffectBJ(), 0.01)
     TriggerSleepAction(0.70)
-    AddSpecialEffectLocBJ(udg_Spell, "AbilitiesSpellsUndeadDarksummoningDarkSummonTarget.mdl")
+    AddSpecialEffectLocBJ(udg_Spell, "Abilities\\Spells\\Undead\\Darksummoning\\DarkSummonTarget.mdl")
     BlzSetSpecialEffectScale(GetLastCreatedEffectBJ(), 1.80)
     BlzSetSpecialEffectTime(GetLastCreatedEffectBJ(), 1.00)
     udg_effect=GetLastCreatedEffectBJ()
@@ -45734,7 +45771,7 @@ function Trig_Buildings_Actions()
         DestroyEffectBJ(udg_effect)
         CreateNUnitsAtLoc(1, FourCC('ndmg'), GetOwningPlayer(GetTriggerUnit()), udg_Spell, bj_UNIT_FACING)
         TriggerSleepAction(0.20)
-        AddSpecialEffectLocBJ(udg_Spell, "AbilitiesSpellsHumanFlameStrikeFlameStrikeTarget.mdl")
+        AddSpecialEffectLocBJ(udg_Spell, "Abilities\\Spells\\Human\\FlameStrike\\FlameStrikeTarget.mdl")
         udg_effect=GetLastCreatedEffectBJ()
         TriggerSleepAction(0.20)
         DestroyEffectBJ(udg_effect)
@@ -46679,8 +46716,8 @@ function Trig_PassiveTalisra_Actions()
             SetUnitY(u, GetUnitY(playerCapital[pi]))
             SetUnitLifePercentBJ(u, 10)
             SetUnitLifeBJ(u, GetUnitState(u, UNIT_STATE_LIFE) + GetEventDamage())
-            RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanMassTeleportMassTeleportCaster.mdl", GetUnitX(u), GetUnitY(u)) , 3)
-            RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanMassTeleportMassTeleportCaster.mdl", GetUnitX(playerCapital[pi]), GetUnitY(playerCapital[pi])) , 3)
+            RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl", GetUnitX(u), GetUnitY(u)) , 3)
+            RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl", GetUnitX(playerCapital[pi]), GetUnitY(playerCapital[pi])) , 3)
         end
     end
     
@@ -46920,7 +46957,7 @@ function Trig_Spell_E2_Actions()
     --call DisplayTextToPlayer(Player(0),0,0,"")
     udg_To4kaTarget=GetUnitLoc(u)
     UnitDamageTargetBJ(GetEventDamageSource(), u, I2R(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)), ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
-    AddSpecialEffectLocBJ(udg_To4kaTarget, "AbilitiesSpellsOtherCrushingWaveCrushingWaveDamage.mdl")
+    AddSpecialEffectLocBJ(udg_To4kaTarget, "Abilities\\Spells\\Other\\CrushingWave\\CrushingWaveDamage.mdl")
     DestroyEffectBJ(GetLastCreatedEffectBJ())
     CreateTextTagLocBJ("cff00ff00 .. " .. I2S(GetHeroStatBJ(bj_HEROSTAT_AGI, GetEventDamageSource(), true)), udg_To4kaTarget, 140.00, 9.00, 100, 100, 100, 0)
     SetTextTagVelocityBJ(GetLastCreatedTextTag(), 150.00, 90)
@@ -47120,27 +47157,43 @@ end
 function Trig_LordWave_Func002002003()
     return GetUnitTypeId(GetFilterUnit()) == FourCC('nq01')
 end
-function Trig_LordWave_Func004A()
-    UnitAddAbilityBJ(FourCC('NQ14'), GetEnumUnit())
-    SetUnitAbilityLevelSwapped(FourCC('NQ14'), GetEnumUnit(), GetUnitAbilityLevelSwapped(FourCC('NQ14'), GetTriggerUnit()))
-    IssuePointOrderLocBJ(GetEnumUnit(), "carrionswarm", GetSpellTargetLoc())
-    BlzUnitHideAbility(GetEnumUnit(), FourCC('NQ14'), true)
-    DestroyGroup(udg_AllLords)
-end
-function Trig_LordWave_Func009A()
-    UnitRemoveAbilityBJ(FourCC('NQ14'), GetEnumUnit())
-    DestroyGroup(udg_AllLords)
-end
 function Trig_LordWave_Actions()
-    udg_AllLords=GetUnitsInRangeOfLocMatching(700.00, GetSpellTargetLoc(), CachedFilter(Trig_LordWave_Func001002003))
-    udg_MellLord=GetUnitsInRangeOfLocMatching(700.00, GetSpellTargetLoc(), CachedFilter(Trig_LordWave_Func002002003))
-    GroupAddGroup(udg_MellLord, udg_AllLords)
-    ForGroupBJ(udg_AllLords, Trig_LordWave_Func004A)
-    TriggerSleepAction(6.00)
-    udg_AllLords=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('lord'))
-    udg_MellLord=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('nq01'))
-    GroupAddGroup(udg_MellLord, udg_AllLords)
-    ForGroupBJ(udg_AllLords, Trig_LordWave_Func009A)
+    local caster = GetTriggerUnit()
+    local spellLvl = GetUnitAbilityLevel(caster, FourCC('NQ14'))
+    local tx, ty = GetSpellTargetX(), GetSpellTargetY()
+    local g = CreateGroup()
+    local gMell = CreateGroup()
+    GroupEnumUnitsInRange(g, tx, ty, 700.0, CachedFilter(Trig_LordWave_Func001002003))
+    GroupEnumUnitsInRange(gMell, tx, ty, 700.0, CachedFilter(Trig_LordWave_Func002002003))
+    GroupAddGroup(gMell, g)
+    DestroyGroup(gMell)
+
+    local affected = CreateGroup()
+    local sz = BlzGroupGetSize(g)
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil then
+            UnitAddAbility(u, FourCC('NQ14'))
+            SetUnitAbilityLevel(u, FourCC('NQ14'), spellLvl)
+            IssuePointOrder(u, "carrionswarm", tx, ty)
+            BlzUnitHideAbility(u, FourCC('NQ14'), true)
+            GroupAddUnit(affected, u)
+        end
+    end
+    DestroyGroup(g)
+
+    local t = CreateTimer()
+    TimerStart(t, 6.0, false, function()
+        DestroyTimer(t)
+        local afSz = BlzGroupGetSize(affected)
+        for i = 0, afSz - 1 do
+            local u = BlzGroupUnitAt(affected, i)
+            if u ~= nil then
+                UnitRemoveAbility(u, FourCC('NQ14'))
+            end
+        end
+        DestroyGroup(affected)
+    end)
 end
 --===========================================================================
 function InitTrig_LordWave()
@@ -47158,27 +47211,41 @@ end
 function Trig_MassBaff_Conditions()
     return Trig_MassBaff_Func010C()
 end
-function Trig_MassBaff_Func004A()
-    UnitAddAbilityBJ(FourCC('NQ08'), GetEnumUnit())
-    SetUnitAbilityLevelSwapped(FourCC('NQ08'), GetEnumUnit(), GetUnitAbilityLevelSwapped(FourCC('NQ07'), GetTriggerUnit()))
-    IssueImmediateOrderBJ(GetEnumUnit(), "roar")
-    BlzUnitHideAbility(GetEnumUnit(), FourCC('NQ08'), true)
-    DestroyGroup(udg_AllLords)
-end
-function Trig_MassBaff_Func009A()
-    UnitRemoveAbilityBJ(FourCC('NQ08'), GetEnumUnit())
-    DestroyGroup(udg_AllLords)
-end
 function Trig_MassBaff_Actions()
-    udg_AllLords=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('lord'))
-    udg_MellLord=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('nq01'))
-    GroupAddGroup(udg_MellLord, udg_AllLords)
-    ForGroupBJ(udg_AllLords, Trig_MassBaff_Func004A)
-    TriggerSleepAction(3.00)
-    udg_AllLords=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('lord'))
-    udg_MellLord=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('nq01'))
-    GroupAddGroup(udg_MellLord, udg_AllLords)
-    ForGroupBJ(udg_AllLords, Trig_MassBaff_Func009A)
+    local caster = GetTriggerUnit()
+    local p = GetTriggerPlayer()
+    local spellLvl = GetUnitAbilityLevel(caster, FourCC('NQ07'))
+    local g = GetUnitsOfPlayerAndTypeId(p, FourCC('lord'))
+    local gMell = GetUnitsOfPlayerAndTypeId(p, FourCC('nq01'))
+    GroupAddGroup(gMell, g)
+    DestroyGroup(gMell)
+
+    local affected = CreateGroup()
+    local sz = BlzGroupGetSize(g)
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil then
+            UnitAddAbility(u, FourCC('NQ08'))
+            SetUnitAbilityLevel(u, FourCC('NQ08'), spellLvl)
+            IssueImmediateOrder(u, "roar")
+            BlzUnitHideAbility(u, FourCC('NQ08'), true)
+            GroupAddUnit(affected, u)
+        end
+    end
+    DestroyGroup(g)
+
+    local t = CreateTimer()
+    TimerStart(t, 3.0, false, function()
+        DestroyTimer(t)
+        local afSz = BlzGroupGetSize(affected)
+        for i = 0, afSz - 1 do
+            local u = BlzGroupUnitAt(affected, i)
+            if u ~= nil then
+                UnitRemoveAbility(u, FourCC('NQ08'))
+            end
+        end
+        DestroyGroup(affected)
+    end)
 end
 --===========================================================================
 function InitTrig_MassBaff()
@@ -47202,33 +47269,44 @@ end
 function Trig_LordsAssist_Func002002003()
     return GetUnitTypeId(GetFilterUnit()) == FourCC('nq01')
 end
-function Trig_LordsAssist_Func004A()
-    UnitAddAbilityBJ(FourCC('NQ09'), GetEnumUnit())
-    SetUnitAbilityLevelSwapped(FourCC('NQ09'), GetEnumUnit(), GetUnitAbilityLevelSwapped(FourCC('NQ03'), GetTriggerUnit()))
-    IssueTargetOrderBJ(GetEnumUnit(), "manaburn", GetSpellTargetUnit())
-    BlzUnitHideAbility(GetEnumUnit(), FourCC('NQ09'), true)
-    DestroyGroup(udg_AllLords)
-end
-function Trig_LordsAssist_Func006002003()
-    return GetUnitTypeId(GetFilterUnit()) == FourCC('lord')
-end
-function Trig_LordsAssist_Func007002003()
-    return GetUnitTypeId(GetFilterUnit()) == FourCC('nq01')
-end
-function Trig_LordsAssist_Func009A()
-    UnitRemoveAbilityBJ(FourCC('NQ09'), GetEnumUnit())
-    DestroyGroup(udg_AllLords)
-end
 function Trig_LordsAssist_Actions()
-    udg_AllLords=GetUnitsInRangeOfLocMatching(512, GetSpellTargetLoc(), CachedFilter(Trig_LordsAssist_Func001002003))
-    udg_MellLord=GetUnitsInRangeOfLocMatching(512, GetSpellTargetLoc(), CachedFilter(Trig_LordsAssist_Func002002003))
-    GroupAddGroup(udg_MellLord, udg_AllLords)
-    ForGroupBJ(udg_AllLords, Trig_LordsAssist_Func004A)
-    TriggerSleepAction(3.00)
-    udg_AllLords=GetUnitsInRangeOfLocMatching(512, GetSpellTargetLoc(), CachedFilter(Trig_LordsAssist_Func006002003))
-    udg_MellLord=GetUnitsInRangeOfLocMatching(512, GetSpellTargetLoc(), CachedFilter(Trig_LordsAssist_Func007002003))
-    GroupAddGroup(udg_MellLord, udg_AllLords)
-    ForGroupBJ(udg_AllLords, Trig_LordsAssist_Func009A)
+    local caster = GetTriggerUnit()
+    local spellTarget = GetSpellTargetUnit()
+    local spellLvl = GetUnitAbilityLevel(caster, FourCC('NQ03'))
+    local tx, ty = GetSpellTargetX(), GetSpellTargetY()
+    local g = CreateGroup()
+    local gMell = CreateGroup()
+    GroupEnumUnitsInRange(g, tx, ty, 512.0, CachedFilter(Trig_LordsAssist_Func001002003))
+    GroupEnumUnitsInRange(gMell, tx, ty, 512.0, CachedFilter(Trig_LordsAssist_Func002002003))
+    GroupAddGroup(gMell, g)
+    DestroyGroup(gMell)
+
+    local affected = CreateGroup()
+    local sz = BlzGroupGetSize(g)
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil then
+            UnitAddAbility(u, FourCC('NQ09'))
+            SetUnitAbilityLevel(u, FourCC('NQ09'), spellLvl)
+            IssueTargetOrder(u, "manaburn", spellTarget)
+            BlzUnitHideAbility(u, FourCC('NQ09'), true)
+            GroupAddUnit(affected, u)
+        end
+    end
+    DestroyGroup(g)
+
+    local t = CreateTimer()
+    TimerStart(t, 3.0, false, function()
+        DestroyTimer(t)
+        local afSz = BlzGroupGetSize(affected)
+        for i = 0, afSz - 1 do
+            local u = BlzGroupUnitAt(affected, i)
+            if u ~= nil then
+                UnitRemoveAbility(u, FourCC('NQ09'))
+            end
+        end
+        DestroyGroup(affected)
+    end)
 end
 --===========================================================================
 function InitTrig_LordsAssist()
@@ -47281,7 +47359,8 @@ function Trig_LordBirth_Conditions()
     return GetUnitTypeId(GetTriggerUnit()) == FourCC('lorE')
 end
 function Trig_LordBirth_Actions()
-    CreateNUnitsAtLoc(1, FourCC('lord'), GetTriggerPlayer(), GetUnitLoc(GetTriggerUnit()), bj_UNIT_FACING)
+    local u = GetTriggerUnit()
+    CreateUnit(GetTriggerPlayer(), FourCC('lord'), GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
 end
 --===========================================================================
 function InitTrig_LordBirth()
@@ -47301,8 +47380,7 @@ function Trig_NaxramasKills_Func003A()
 end
 function Trig_NaxramasKills_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_3138")
-    udg_NaxramasKills=GetUnitsInRectAll(gg_rct_DeathNaxramas)
-    ForGroupBJ(udg_NaxramasKills, Trig_NaxramasKills_Func003A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_DeathNaxramas), Trig_NaxramasKills_Func003A)
 end
 --===========================================================================
 function InitTrig_NaxramasKills()
@@ -47322,8 +47400,7 @@ function Trig_DalaranKills_Func003A()
 end
 function Trig_DalaranKills_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_3139")
-    udg_DalaranKills=GetUnitsInRectAll(gg_rct_DeathDalaran)
-    ForGroupBJ(udg_DalaranKills, Trig_DalaranKills_Func003A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_DeathDalaran), Trig_DalaranKills_Func003A)
 end
 --===========================================================================
 function InitTrig_DalaranKills()
@@ -47398,17 +47475,17 @@ function Trig_UltSummon_Func002C()
     return (( GetUnitAbilityLevelSwapped(FourCC('MIM4'), GetTriggerUnit()) == 1 )) and (( CountLivingPlayerUnitsOfTypeId(FourCC('mim1'), GetTriggerPlayer()) == 0 ))
 end
 function Trig_UltSummon_Actions()
+    local u = GetTriggerUnit()
+    local p = GetOwningPlayer(u)
     if Trig_UltSummon_Func002C() then
-        CreateNUnitsAtLoc(1, FourCC('mim1'), GetOwningPlayer(GetTriggerUnit()), GetUnitLoc(GetTriggerUnit()), bj_UNIT_FACING)
-        SetUnitAnimation(GetLastCreatedUnit(), "birth")
-        UnitRemoveAbilityBJ(FourCC('MIM4'), GetTriggerUnit())
+        local summoned = CreateUnit(p, FourCC('mim1'), GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
+        SetUnitAnimation(summoned, "birth")
+        UnitRemoveAbilityBJ(FourCC('MIM4'), u)
     else
         if Trig_UltSummon_Func002Func001C() then
-            CreateNUnitsAtLoc(1, FourCC('mim1'), GetOwningPlayer(GetTriggerUnit()), GetUnitLoc(GetTriggerUnit()), bj_UNIT_FACING)
-            SetUnitAnimation(GetLastCreatedUnit(), "birth")
-            UnitRemoveAbilityBJ(FourCC('MIM4'), GetTriggerUnit())
-        else
-            DoNothing()
+            local summoned = CreateUnit(p, FourCC('mim1'), GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
+            SetUnitAnimation(summoned, "birth")
+            UnitRemoveAbilityBJ(FourCC('MIM4'), u)
         end
     end
 end
@@ -47423,13 +47500,21 @@ end
 -- Trigger: MassHEX
 --===========================================================================
 function Trig_MassHEX_Func001A()
-    CreateNUnitsAtLoc(1, FourCC('repD'), GetTriggerPlayer(), GetUnitLoc(GetEnumUnit()), bj_UNIT_FACING)
-    UnitAddAbilityBJ(FourCC('VLJ5'), GetLastCreatedUnit())
-    SetUnitAbilityLevelSwapped(FourCC('VLJ5'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('VLJ1'), GetTriggerUnit()))
-    IssueTargetOrderBJ(GetLastCreatedUnit(), "hex", GetEnumUnit())
+    local target = GetEnumUnit()
+    local p = GetTriggerPlayer()
+    if target ~= nil and UnitAlive(target) and IsPlayerEnemy(GetOwningPlayer(target), p) and not IsUnitType(target, UNIT_TYPE_STRUCTURE) then
+        local dummy = CreateUnit(p, FourCC('repD'), GetUnitX(target), GetUnitY(target), bj_UNIT_FACING)
+        UnitAddAbility(dummy, FourCC('VLJ5'))
+        SetUnitAbilityLevel(dummy, FourCC('VLJ5'), GetUnitAbilityLevel(GetTriggerUnit(), FourCC('VLJ1')))
+        IssueTargetOrder(dummy, "hex", target)
+        RemoveUnitTimed(dummy, 2.0)
+    end
 end
 function Trig_MassHEX_Actions()
-    ForGroupDestroy(GetUnitsInRangeOfLocAll(300.00, GetSpellTargetLoc()), Trig_MassHEX_Func001A)
+    local g = CreateGroup()
+    GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 300.00, nil)
+    ForGroup(g, Trig_MassHEX_Func001A)
+    DestroyGroup(g)
 end
 --===========================================================================
 function InitTrig_MassHEX()
@@ -48472,16 +48557,15 @@ end
 function Trig_DestroyTrain_Actions()
     RemoveUnit(GetTrainedUnit())
     ForGroupDestroy(GetUnitsInRectAll(gg_rct_TrainArea), Trig_DestroyTrain_Func002A)
-    CreateDestructableLoc(FourCC('B01R'), GetRectCenter(gg_rct_Region_143), 0.0, 3, 0)
-    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 0, 200.00)), GetRandomDirectionDeg(), 1, 0)
-    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 0, - 200.00)), GetRandomDirectionDeg(), 1, 0)
-    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 650.00, 200.00)), GetRandomDirectionDeg(), 1, 0)
-    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 650.00, - 200.00)), GetRandomDirectionDeg(), 1, 0)
-    
-    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 1300.00, 200.00)), GetRandomDirectionDeg(), 1, 0)
-    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 1300.00, - 200.00)), GetRandomDirectionDeg(), 1, 0)
-    
-    CreateDestructableLoc(FourCC('B01R'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 1300.00, 0.00)), GetRandomDirectionDeg(), 3, 0)
+    local cx, cy = GetRectCenterX(gg_rct_Region_143), GetRectCenterY(gg_rct_Region_143)
+    CreateDestructable(FourCC('B01R'), cx, cy, 0.0, 3, 0)
+    CreateDestructable(FourCC('B01S'), cx, cy + 200.00, GetRandomDirectionDeg(), 1, 0)
+    CreateDestructable(FourCC('B01S'), cx, cy - 200.00, GetRandomDirectionDeg(), 1, 0)
+    CreateDestructable(FourCC('B01S'), cx + 650.00, cy + 200.00, GetRandomDirectionDeg(), 1, 0)
+    CreateDestructable(FourCC('B01S'), cx + 650.00, cy - 200.00, GetRandomDirectionDeg(), 1, 0)
+    CreateDestructable(FourCC('B01S'), cx + 1300.00, cy + 200.00, GetRandomDirectionDeg(), 1, 0)
+    CreateDestructable(FourCC('B01S'), cx + 1300.00, cy - 200.00, GetRandomDirectionDeg(), 1, 0)
+    CreateDestructable(FourCC('B01R'), cx + 1300.00, cy, GetRandomDirectionDeg(), 3, 0)
     RemoveUnit(gg_unit_n003_0149)
     RemoveUnit(gg_unit_n003_0028)
     ForForce(udg_AllPlayers, LimitTrainDestroy)
@@ -48833,18 +48917,11 @@ end
 -- Trigger: Qogg HP 24k O
 --===========================================================================
 function Trig_Qogg_HP_24k_O_Actions()
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_1)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_2)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_3)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_4)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
+    local p = Player(PLAYER_NEUTRAL_AGGRESSIVE)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_1), GetRectCenterY(gg_rct_Yog1_1), bj_UNIT_FACING)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_2), GetRectCenterY(gg_rct_Yog1_2), bj_UNIT_FACING)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_3), GetRectCenterY(gg_rct_Yog1_3), bj_UNIT_FACING)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_4), GetRectCenterY(gg_rct_Yog1_4), bj_UNIT_FACING)
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================
@@ -48857,18 +48934,11 @@ end
 -- Trigger: Qogg HP 17k O
 --===========================================================================
 function Trig_Qogg_HP_17k_O_Actions()
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_5)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_6)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_6), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_7)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_7), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_8)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_8), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
+    local p = Player(PLAYER_NEUTRAL_AGGRESSIVE)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_5), GetRectCenterY(gg_rct_Yog1_5), bj_UNIT_FACING)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_6), GetRectCenterY(gg_rct_Yog1_6), bj_UNIT_FACING)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_7), GetRectCenterY(gg_rct_Yog1_7), bj_UNIT_FACING)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_8), GetRectCenterY(gg_rct_Yog1_8), bj_UNIT_FACING)
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================
@@ -50935,9 +51005,9 @@ end
 -- Trigger: PortalFix
 --===========================================================================
 function Trig_PortalFix_Actions()
-    WaygateSetDestinationLocBJ(gg_unit_n003_0020, GetRectCenter(gg_rct_UldamanOut))
-    WaygateSetDestinationLocBJ(gg_unit_n003_0588, GetRectCenter(gg_rct_DalaranOut))
-    WaygateSetDestinationLocBJ(gg_unit_n003_0126, GetRectCenter(gg_rct_NaxOut))
+    WaygateSetDestination(gg_unit_n003_0020, GetRectCenterX(gg_rct_UldamanOut), GetRectCenterY(gg_rct_UldamanOut))
+    WaygateSetDestination(gg_unit_n003_0588, GetRectCenterX(gg_rct_DalaranOut), GetRectCenterY(gg_rct_DalaranOut))
+    WaygateSetDestination(gg_unit_n003_0126, GetRectCenterX(gg_rct_NaxOut), GetRectCenterY(gg_rct_NaxOut))
 end
 --===========================================================================
 function InitTrig_PortalFix()
@@ -52287,7 +52357,7 @@ function CheckPosition(x, y, add)
    -- endif
     
 end
-function CheckPositionT()
+function CheckPositionT(x, y, add)
     --local real add = 25
     if IsTerrainPathable(x + add, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x + add, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x + add, y + add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y + add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y + add, PATHING_TYPE_FLOATABILITY) then
         return true
@@ -65512,6 +65582,7 @@ end
 AiDiplomat = AiDiplomat or {}              -- [pi] = runtime state
 AiDiplomatTicks = AiDiplomatTicks or {}    -- [pi] = internal tick counter
 AiDiplomatProposalTime = AiDiplomatProposalTime or {} -- [pi] = { [other_pi]=time }
+AiDiplomatProposalTimeout = AiDiplomatProposalTimeout or 30
 
 -- ====================================================================
 -- Personality presets: each is a table of parameter overrides.
@@ -68766,8 +68837,8 @@ function main()
         30720.0 - GetCameraMargin(CAMERA_MARGIN_TOP),
         30720.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT),
         - 30720.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM))
-    SetDayNightModels("EnvironmentDNCDNCLordaeronDNCLordaeronTerrainDNCLordaeronTerrain.mdl",
-                       "EnvironmentDNCDNCLordaeronDNCLordaeronUnitDNCLordaeronUnit.mdl")
+    SetDayNightModels("Environment\\DNC\\DNCLordaeron\\DNCLordaeronTerrain\\DNCLordaeronTerrain.mdl",
+                       "Environment\\DNC\\DNCLordaeron\\DNCLordaeronUnit\\DNCLordaeronUnit.mdl")
     SetTerrainFogEx(0, 4000.0, 8000.0, 0.500, 0.706, 1.000, 1.000)
     SetWaterBaseColor(190, 190, 160, 255)
     NewSoundEnvironment("Default")

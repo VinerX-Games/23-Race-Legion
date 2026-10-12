@@ -330,7 +330,7 @@ function Trig_SandStrike_Actions()
     udg_SSpointcaster[udg_SSinteger[1]]=GetUnitLoc(udg_SScaster[udg_SSinteger[1]])
     udg_SSdamage[udg_SSinteger[1]]=5.00 + I2R(GetUnitAbilityLevelSwapped(FourCC('A0NF'), udg_SScaster[udg_SSinteger[1]]))
     udg_SStargetpoint[udg_SSinteger[1]]=GetSpellTargetLoc()
-    udg_SSeffect[udg_SSinteger[1]]="AbilitiesWeaponsAncientProtectorMissileAncientProtectorMissile.mdl"
+    udg_SSeffect[udg_SSinteger[1]]="Abilities\\Weapons\\AncientProtectorMissile\\AncientProtectorMissile.mdl"
     udg_SS[udg_SSinteger[1]]=GetUnitAbilityLevelSwapped(FourCC('A0NF'), udg_SScaster[udg_SSinteger[1]]) + 30
     PauseUnitBJ(true, GetTriggerUnit())
     RemoveLocation(udg_SSpointcaster[udg_SSinteger[1]])

@@ -594,7 +594,7 @@ function Trig_GazloySpellheals_Actions()
     local u= GetEventDamageSource()
     local level= GetUnitAbilityLevel(u, FourCC('A1KK'))
     local damage= GetEventDamage()
-    local e= AddSpecialEffectTargetUnitBJ("Chest", u, "AbilitiesSpellsItemsVampiricPotionVampPotionCaster.mdl")
+    local e= AddSpecialEffectTargetUnitBJ("Chest", u, "Abilities\\Spells\\Items\\VampiricPotion\\VampPotionCaster.mdl")
     SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) + damage * ( 0.01 * level ))
   
     

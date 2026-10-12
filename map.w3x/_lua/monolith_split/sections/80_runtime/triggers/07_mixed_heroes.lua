@@ -360,7 +360,7 @@ function Trig_Undermining_Actions()
     local gg= CreateGroup()      -- enum reuse
     PauseUnit(GT, true)
     ShowUnit(GT, false)
-    DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
+    DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl", x, y))
     local t= CreateTimer()
     TimerStart(t, 0.055, true, function()
         local dx= GetUnitX(GT)
@@ -402,7 +402,7 @@ function Trig_Undermining_Actions()
                                 local lvl=GetUnitAbilityLevel(GT, UnSkill)
                                 local uron=UnKofDmg1 * lvl * GetHeroStr(GT, true) + lvl * UnKofDmg2
                                 UnitDamageTarget(GT, subUn, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
-                                DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsDemonDemonBoltImpactDemonBoltImpact.mdl", subUn, "orign"))
+                                DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Demon\\DemonBoltImpact\\DemonBoltImpact.mdl", subUn, "orign"))
                             end
                         end
                     end)
@@ -415,7 +415,7 @@ function Trig_Undermining_Actions()
             DestroyGroup(gg)
             DestroyTimer(t)
             SetUnitFlyHeight(GT, 0, 0)
-            DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", dx, dy))
+            DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl", dx, dy))
             PauseUnit(GT, false)
             ShowUnit(GT, true)
             SelectUnitAddForPlayer(GT, GetOwningPlayer(GT))
@@ -448,7 +448,7 @@ function Trig_PassiveAdal_Actions()
     if GetRandomInt(1, 4) + 0.25 * GetUnitAbilityLevel(u2, FourCC('A1L6')) > 3 and GetUnitState(u2, UNIT_STATE_MANA) > 50 then --??????
         SetUnitManaBJ(u2, GetUnitState(u2, UNIT_STATE_MANA) - 50)
         SetUnitLifePercentBJ(u, 50)
-        RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanResurrectResurrectTarget.mdl", GetUnitX(u), GetUnitY(u)) , 3)
+        RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\Resurrect\\ResurrectTarget.mdl", GetUnitX(u), GetUnitY(u)) , 3)
     end
     
     DestroyGroup(g)

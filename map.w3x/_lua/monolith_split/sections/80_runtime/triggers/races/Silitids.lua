@@ -607,7 +607,7 @@ end
 function Trig_LichStartUpgrade_Actions()
     --local integer i = GetPlayerId( GetOwningPlayer( GetTriggerUnit( ) ) )
     local uid= GetHandleId(GetTriggerUnit()) * 10
-    local e= AddSpecialEffectTarget("DoodadsDungeonTerrainEggSackEggSack1.mdl", GetTriggerUnit(), "origin")
+    local e= AddSpecialEffectTarget("Doodads\\Dungeon\\Terrain\\EggSack\\EggSack1.mdl", GetTriggerUnit(), "origin")
     BlzSetSpecialEffectColor(e, 255, 102, 0)
     SilitidData[uid] = SilitidData[uid] or {}
     SilitidData[uid].Cocon = e

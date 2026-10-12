@@ -65,17 +65,17 @@ function Trig_UltSummon_Func002C()
     return (( GetUnitAbilityLevelSwapped(FourCC('MIM4'), GetTriggerUnit()) == 1 )) and (( CountLivingPlayerUnitsOfTypeId(FourCC('mim1'), GetTriggerPlayer()) == 0 ))
 end
 function Trig_UltSummon_Actions()
+    local u = GetTriggerUnit()
+    local p = GetOwningPlayer(u)
     if Trig_UltSummon_Func002C() then
-        CreateNUnitsAtLoc(1, FourCC('mim1'), GetOwningPlayer(GetTriggerUnit()), GetUnitLoc(GetTriggerUnit()), bj_UNIT_FACING)
-        SetUnitAnimation(GetLastCreatedUnit(), "birth")
-        UnitRemoveAbilityBJ(FourCC('MIM4'), GetTriggerUnit())
+        local summoned = CreateUnit(p, FourCC('mim1'), GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
+        SetUnitAnimation(summoned, "birth")
+        UnitRemoveAbilityBJ(FourCC('MIM4'), u)
     else
         if Trig_UltSummon_Func002Func001C() then
-            CreateNUnitsAtLoc(1, FourCC('mim1'), GetOwningPlayer(GetTriggerUnit()), GetUnitLoc(GetTriggerUnit()), bj_UNIT_FACING)
-            SetUnitAnimation(GetLastCreatedUnit(), "birth")
-            UnitRemoveAbilityBJ(FourCC('MIM4'), GetTriggerUnit())
-        else
-            DoNothing()
+            local summoned = CreateUnit(p, FourCC('mim1'), GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
+            SetUnitAnimation(summoned, "birth")
+            UnitRemoveAbilityBJ(FourCC('MIM4'), u)
         end
     end
 end
@@ -90,13 +90,21 @@ end
 -- Trigger: MassHEX
 --===========================================================================
 function Trig_MassHEX_Func001A()
-    CreateNUnitsAtLoc(1, FourCC('repD'), GetTriggerPlayer(), GetUnitLoc(GetEnumUnit()), bj_UNIT_FACING)
-    UnitAddAbilityBJ(FourCC('VLJ5'), GetLastCreatedUnit())
-    SetUnitAbilityLevelSwapped(FourCC('VLJ5'), GetLastCreatedUnit(), GetUnitAbilityLevelSwapped(FourCC('VLJ1'), GetTriggerUnit()))
-    IssueTargetOrderBJ(GetLastCreatedUnit(), "hex", GetEnumUnit())
+    local target = GetEnumUnit()
+    local p = GetTriggerPlayer()
+    if target ~= nil and UnitAlive(target) and IsPlayerEnemy(GetOwningPlayer(target), p) and not IsUnitType(target, UNIT_TYPE_STRUCTURE) then
+        local dummy = CreateUnit(p, FourCC('repD'), GetUnitX(target), GetUnitY(target), bj_UNIT_FACING)
+        UnitAddAbility(dummy, FourCC('VLJ5'))
+        SetUnitAbilityLevel(dummy, FourCC('VLJ5'), GetUnitAbilityLevel(GetTriggerUnit(), FourCC('VLJ1')))
+        IssueTargetOrder(dummy, "hex", target)
+        RemoveUnitTimed(dummy, 2.0)
+    end
 end
 function Trig_MassHEX_Actions()
-    ForGroupDestroy(GetUnitsInRangeOfLocAll(300.00, GetSpellTargetLoc()), Trig_MassHEX_Func001A)
+    local g = CreateGroup()
+    GroupEnumUnitsInRange(g, GetSpellTargetX(), GetSpellTargetY(), 300.00, nil)
+    ForGroup(g, Trig_MassHEX_Func001A)
+    DestroyGroup(g)
 end
 --===========================================================================
 function InitTrig_MassHEX()
@@ -1139,16 +1147,15 @@ end
 function Trig_DestroyTrain_Actions()
     RemoveUnit(GetTrainedUnit())
     ForGroupDestroy(GetUnitsInRectAll(gg_rct_TrainArea), Trig_DestroyTrain_Func002A)
-    CreateDestructableLoc(FourCC('B01R'), GetRectCenter(gg_rct_Region_143), 0.0, 3, 0)
-    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 0, 200.00)), GetRandomDirectionDeg(), 1, 0)
-    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 0, - 200.00)), GetRandomDirectionDeg(), 1, 0)
-    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 650.00, 200.00)), GetRandomDirectionDeg(), 1, 0)
-    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 650.00, - 200.00)), GetRandomDirectionDeg(), 1, 0)
-    
-    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 1300.00, 200.00)), GetRandomDirectionDeg(), 1, 0)
-    CreateDestructableLoc(FourCC('B01S'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 1300.00, - 200.00)), GetRandomDirectionDeg(), 1, 0)
-    
-    CreateDestructableLoc(FourCC('B01R'), GetRectCenter(OffsetRectBJ(gg_rct_Region_143, 1300.00, 0.00)), GetRandomDirectionDeg(), 3, 0)
+    local cx, cy = GetRectCenterX(gg_rct_Region_143), GetRectCenterY(gg_rct_Region_143)
+    CreateDestructable(FourCC('B01R'), cx, cy, 0.0, 3, 0)
+    CreateDestructable(FourCC('B01S'), cx, cy + 200.00, GetRandomDirectionDeg(), 1, 0)
+    CreateDestructable(FourCC('B01S'), cx, cy - 200.00, GetRandomDirectionDeg(), 1, 0)
+    CreateDestructable(FourCC('B01S'), cx + 650.00, cy + 200.00, GetRandomDirectionDeg(), 1, 0)
+    CreateDestructable(FourCC('B01S'), cx + 650.00, cy - 200.00, GetRandomDirectionDeg(), 1, 0)
+    CreateDestructable(FourCC('B01S'), cx + 1300.00, cy + 200.00, GetRandomDirectionDeg(), 1, 0)
+    CreateDestructable(FourCC('B01S'), cx + 1300.00, cy - 200.00, GetRandomDirectionDeg(), 1, 0)
+    CreateDestructable(FourCC('B01R'), cx + 1300.00, cy, GetRandomDirectionDeg(), 3, 0)
     RemoveUnit(gg_unit_n003_0149)
     RemoveUnit(gg_unit_n003_0028)
     ForForce(udg_AllPlayers, LimitTrainDestroy)

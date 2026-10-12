@@ -153,7 +153,7 @@ function Trig_Edvin_Ult_Actions()
             
             SetUnitX(u, GetUnitX(u2))
             SetUnitY(u, GetUnitY(u2))
-            RemoveEffectTimed(AddSpecialEffect("ObjectsSpawnmodelsHumanHumanBloodHumanBloodLarge1.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
+            RemoveEffectTimed(AddSpecialEffect("Objects\\Spawnmodels\\Human\\HumanBlood\\HumanBloodLarge1.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
             UnitDamageTargetBJ(u, u2, 300 * GetUnitAbilityLevel(u, FourCC('A0N4')) + 2 * GetHeroAgi(u, true), ATTACK_TYPE_HERO, DAMAGE_TYPE_FORCE)
                  
             

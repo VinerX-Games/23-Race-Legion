@@ -316,7 +316,7 @@ function Trig_Arcana_Conditions()
     return Trig_Arcana_Func009C()
 end
 function Trig_Arcana_Func002A()
-    BlzSetUnitName(GetEnumUnit(), "cff8080ffr")
+    BlzSetUnitName(GetEnumUnit(), "|cff8080ffКолодец арканы|r")
 end
 function Trig_Arcana_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -390,7 +390,7 @@ function Trig_Fel_Conditions()
     return Trig_Fel_Func007C()
 end
 function Trig_Fel_Func002A()
-    BlzSetUnitName(GetEnumUnit(), "cff80ff80r")
+    BlzSetUnitName(GetEnumUnit(), "|cff80ff80Колодец скверны|r")
 end
 function Trig_Fel_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -481,7 +481,7 @@ function Trig_Void_Conditions()
     return Trig_Void_Func008C()
 end
 function Trig_Void_Func002A()
-    BlzSetUnitName(GetEnumUnit(), "cffff00ffr")
+    BlzSetUnitName(GetEnumUnit(), "|cffff00ffКолодец бездны|r")
 end
 function Trig_Void_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -598,7 +598,7 @@ function Trig_Light_Conditions()
     return Trig_Light_Func008C()
 end
 function Trig_Light_Func003A()
-    BlzSetUnitName(GetEnumUnit(), "cffffff00r")
+    BlzSetUnitName(GetEnumUnit(), "|cffffff00Колодец света|r")
 end
 function Trig_Light_Actions()
     udg_LocalOtrad=GetUnitsOfPlayerAndTypeId(GetOwningPlayer(GetTriggerUnit()), FourCC('h04F'))
@@ -626,7 +626,7 @@ function Trig_ArcanaBuild_Conditions()
     return Trig_ArcanaBuild_Func001C()
 end
 function Trig_ArcanaBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "cff8080ffr")
+    BlzSetUnitName(GetTriggerUnit(), "|cff8080ffКолодец арканы|r")
 end
 --===========================================================================
 function InitTrig_ArcanaBuild()
@@ -646,7 +646,7 @@ function Trig_FelBuild_Conditions()
     return Trig_FelBuild_Func001C()
 end
 function Trig_FelBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "cff80ff80r")
+    BlzSetUnitName(GetTriggerUnit(), "|cff80ff80Колодец скверны|r")
 end
 --===========================================================================
 function InitTrig_FelBuild()
@@ -666,7 +666,7 @@ function Trig_VoidBuild_Conditions()
     return Trig_VoidBuild_Func001C()
 end
 function Trig_VoidBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "cffff00ffrr")
+    BlzSetUnitName(GetTriggerUnit(), "|cffff00ffКолодец бездны|r")
 end
 --===========================================================================
 function InitTrig_VoidBuild()
@@ -686,7 +686,7 @@ function Trig_LigthBuild_Conditions()
     return Trig_LigthBuild_Func001C()
 end
 function Trig_LigthBuild_Actions()
-    BlzSetUnitName(GetTriggerUnit(), "cffffff00r")
+    BlzSetUnitName(GetTriggerUnit(), "|cffffff00Колодец света|r")
 end
 --===========================================================================
 function InitTrig_LigthBuild()

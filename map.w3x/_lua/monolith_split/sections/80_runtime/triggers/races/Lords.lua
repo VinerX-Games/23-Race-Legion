@@ -14,27 +14,43 @@ end
 function Trig_LordWave_Func002002003()
     return GetUnitTypeId(GetFilterUnit()) == FourCC('nq01')
 end
-function Trig_LordWave_Func004A()
-    UnitAddAbilityBJ(FourCC('NQ14'), GetEnumUnit())
-    SetUnitAbilityLevelSwapped(FourCC('NQ14'), GetEnumUnit(), GetUnitAbilityLevelSwapped(FourCC('NQ14'), GetTriggerUnit()))
-    IssuePointOrderLocBJ(GetEnumUnit(), "carrionswarm", GetSpellTargetLoc())
-    BlzUnitHideAbility(GetEnumUnit(), FourCC('NQ14'), true)
-    DestroyGroup(udg_AllLords)
-end
-function Trig_LordWave_Func009A()
-    UnitRemoveAbilityBJ(FourCC('NQ14'), GetEnumUnit())
-    DestroyGroup(udg_AllLords)
-end
 function Trig_LordWave_Actions()
-    udg_AllLords=GetUnitsInRangeOfLocMatching(700.00, GetSpellTargetLoc(), CachedFilter(Trig_LordWave_Func001002003))
-    udg_MellLord=GetUnitsInRangeOfLocMatching(700.00, GetSpellTargetLoc(), CachedFilter(Trig_LordWave_Func002002003))
-    GroupAddGroup(udg_MellLord, udg_AllLords)
-    ForGroupBJ(udg_AllLords, Trig_LordWave_Func004A)
-    TriggerSleepAction(6.00)
-    udg_AllLords=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('lord'))
-    udg_MellLord=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('nq01'))
-    GroupAddGroup(udg_MellLord, udg_AllLords)
-    ForGroupBJ(udg_AllLords, Trig_LordWave_Func009A)
+    local caster = GetTriggerUnit()
+    local spellLvl = GetUnitAbilityLevel(caster, FourCC('NQ14'))
+    local tx, ty = GetSpellTargetX(), GetSpellTargetY()
+    local g = CreateGroup()
+    local gMell = CreateGroup()
+    GroupEnumUnitsInRange(g, tx, ty, 700.0, CachedFilter(Trig_LordWave_Func001002003))
+    GroupEnumUnitsInRange(gMell, tx, ty, 700.0, CachedFilter(Trig_LordWave_Func002002003))
+    GroupAddGroup(gMell, g)
+    DestroyGroup(gMell)
+
+    local affected = CreateGroup()
+    local sz = BlzGroupGetSize(g)
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil then
+            UnitAddAbility(u, FourCC('NQ14'))
+            SetUnitAbilityLevel(u, FourCC('NQ14'), spellLvl)
+            IssuePointOrder(u, "carrionswarm", tx, ty)
+            BlzUnitHideAbility(u, FourCC('NQ14'), true)
+            GroupAddUnit(affected, u)
+        end
+    end
+    DestroyGroup(g)
+
+    local t = CreateTimer()
+    TimerStart(t, 6.0, false, function()
+        DestroyTimer(t)
+        local afSz = BlzGroupGetSize(affected)
+        for i = 0, afSz - 1 do
+            local u = BlzGroupUnitAt(affected, i)
+            if u ~= nil then
+                UnitRemoveAbility(u, FourCC('NQ14'))
+            end
+        end
+        DestroyGroup(affected)
+    end)
 end
 --===========================================================================
 function InitTrig_LordWave()
@@ -52,27 +68,41 @@ end
 function Trig_MassBaff_Conditions()
     return Trig_MassBaff_Func010C()
 end
-function Trig_MassBaff_Func004A()
-    UnitAddAbilityBJ(FourCC('NQ08'), GetEnumUnit())
-    SetUnitAbilityLevelSwapped(FourCC('NQ08'), GetEnumUnit(), GetUnitAbilityLevelSwapped(FourCC('NQ07'), GetTriggerUnit()))
-    IssueImmediateOrderBJ(GetEnumUnit(), "roar")
-    BlzUnitHideAbility(GetEnumUnit(), FourCC('NQ08'), true)
-    DestroyGroup(udg_AllLords)
-end
-function Trig_MassBaff_Func009A()
-    UnitRemoveAbilityBJ(FourCC('NQ08'), GetEnumUnit())
-    DestroyGroup(udg_AllLords)
-end
 function Trig_MassBaff_Actions()
-    udg_AllLords=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('lord'))
-    udg_MellLord=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('nq01'))
-    GroupAddGroup(udg_MellLord, udg_AllLords)
-    ForGroupBJ(udg_AllLords, Trig_MassBaff_Func004A)
-    TriggerSleepAction(3.00)
-    udg_AllLords=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('lord'))
-    udg_MellLord=GetUnitsOfPlayerAndTypeId(GetTriggerPlayer(), FourCC('nq01'))
-    GroupAddGroup(udg_MellLord, udg_AllLords)
-    ForGroupBJ(udg_AllLords, Trig_MassBaff_Func009A)
+    local caster = GetTriggerUnit()
+    local p = GetTriggerPlayer()
+    local spellLvl = GetUnitAbilityLevel(caster, FourCC('NQ07'))
+    local g = GetUnitsOfPlayerAndTypeId(p, FourCC('lord'))
+    local gMell = GetUnitsOfPlayerAndTypeId(p, FourCC('nq01'))
+    GroupAddGroup(gMell, g)
+    DestroyGroup(gMell)
+
+    local affected = CreateGroup()
+    local sz = BlzGroupGetSize(g)
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil then
+            UnitAddAbility(u, FourCC('NQ08'))
+            SetUnitAbilityLevel(u, FourCC('NQ08'), spellLvl)
+            IssueImmediateOrder(u, "roar")
+            BlzUnitHideAbility(u, FourCC('NQ08'), true)
+            GroupAddUnit(affected, u)
+        end
+    end
+    DestroyGroup(g)
+
+    local t = CreateTimer()
+    TimerStart(t, 3.0, false, function()
+        DestroyTimer(t)
+        local afSz = BlzGroupGetSize(affected)
+        for i = 0, afSz - 1 do
+            local u = BlzGroupUnitAt(affected, i)
+            if u ~= nil then
+                UnitRemoveAbility(u, FourCC('NQ08'))
+            end
+        end
+        DestroyGroup(affected)
+    end)
 end
 --===========================================================================
 function InitTrig_MassBaff()
@@ -96,33 +126,44 @@ end
 function Trig_LordsAssist_Func002002003()
     return GetUnitTypeId(GetFilterUnit()) == FourCC('nq01')
 end
-function Trig_LordsAssist_Func004A()
-    UnitAddAbilityBJ(FourCC('NQ09'), GetEnumUnit())
-    SetUnitAbilityLevelSwapped(FourCC('NQ09'), GetEnumUnit(), GetUnitAbilityLevelSwapped(FourCC('NQ03'), GetTriggerUnit()))
-    IssueTargetOrderBJ(GetEnumUnit(), "manaburn", GetSpellTargetUnit())
-    BlzUnitHideAbility(GetEnumUnit(), FourCC('NQ09'), true)
-    DestroyGroup(udg_AllLords)
-end
-function Trig_LordsAssist_Func006002003()
-    return GetUnitTypeId(GetFilterUnit()) == FourCC('lord')
-end
-function Trig_LordsAssist_Func007002003()
-    return GetUnitTypeId(GetFilterUnit()) == FourCC('nq01')
-end
-function Trig_LordsAssist_Func009A()
-    UnitRemoveAbilityBJ(FourCC('NQ09'), GetEnumUnit())
-    DestroyGroup(udg_AllLords)
-end
 function Trig_LordsAssist_Actions()
-    udg_AllLords=GetUnitsInRangeOfLocMatching(512, GetSpellTargetLoc(), CachedFilter(Trig_LordsAssist_Func001002003))
-    udg_MellLord=GetUnitsInRangeOfLocMatching(512, GetSpellTargetLoc(), CachedFilter(Trig_LordsAssist_Func002002003))
-    GroupAddGroup(udg_MellLord, udg_AllLords)
-    ForGroupBJ(udg_AllLords, Trig_LordsAssist_Func004A)
-    TriggerSleepAction(3.00)
-    udg_AllLords=GetUnitsInRangeOfLocMatching(512, GetSpellTargetLoc(), CachedFilter(Trig_LordsAssist_Func006002003))
-    udg_MellLord=GetUnitsInRangeOfLocMatching(512, GetSpellTargetLoc(), CachedFilter(Trig_LordsAssist_Func007002003))
-    GroupAddGroup(udg_MellLord, udg_AllLords)
-    ForGroupBJ(udg_AllLords, Trig_LordsAssist_Func009A)
+    local caster = GetTriggerUnit()
+    local spellTarget = GetSpellTargetUnit()
+    local spellLvl = GetUnitAbilityLevel(caster, FourCC('NQ03'))
+    local tx, ty = GetSpellTargetX(), GetSpellTargetY()
+    local g = CreateGroup()
+    local gMell = CreateGroup()
+    GroupEnumUnitsInRange(g, tx, ty, 512.0, CachedFilter(Trig_LordsAssist_Func001002003))
+    GroupEnumUnitsInRange(gMell, tx, ty, 512.0, CachedFilter(Trig_LordsAssist_Func002002003))
+    GroupAddGroup(gMell, g)
+    DestroyGroup(gMell)
+
+    local affected = CreateGroup()
+    local sz = BlzGroupGetSize(g)
+    for i = 0, sz - 1 do
+        local u = BlzGroupUnitAt(g, i)
+        if u ~= nil then
+            UnitAddAbility(u, FourCC('NQ09'))
+            SetUnitAbilityLevel(u, FourCC('NQ09'), spellLvl)
+            IssueTargetOrder(u, "manaburn", spellTarget)
+            BlzUnitHideAbility(u, FourCC('NQ09'), true)
+            GroupAddUnit(affected, u)
+        end
+    end
+    DestroyGroup(g)
+
+    local t = CreateTimer()
+    TimerStart(t, 3.0, false, function()
+        DestroyTimer(t)
+        local afSz = BlzGroupGetSize(affected)
+        for i = 0, afSz - 1 do
+            local u = BlzGroupUnitAt(affected, i)
+            if u ~= nil then
+                UnitRemoveAbility(u, FourCC('NQ09'))
+            end
+        end
+        DestroyGroup(affected)
+    end)
 end
 --===========================================================================
 function InitTrig_LordsAssist()
@@ -175,7 +216,8 @@ function Trig_LordBirth_Conditions()
     return GetUnitTypeId(GetTriggerUnit()) == FourCC('lorE')
 end
 function Trig_LordBirth_Actions()
-    CreateNUnitsAtLoc(1, FourCC('lord'), GetTriggerPlayer(), GetUnitLoc(GetTriggerUnit()), bj_UNIT_FACING)
+    local u = GetTriggerUnit()
+    CreateUnit(GetTriggerPlayer(), FourCC('lord'), GetUnitX(u), GetUnitY(u), bj_UNIT_FACING)
 end
 --===========================================================================
 function InitTrig_LordBirth()
@@ -195,8 +237,7 @@ function Trig_NaxramasKills_Func003A()
 end
 function Trig_NaxramasKills_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_3138")
-    udg_NaxramasKills=GetUnitsInRectAll(gg_rct_DeathNaxramas)
-    ForGroupBJ(udg_NaxramasKills, Trig_NaxramasKills_Func003A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_DeathNaxramas), Trig_NaxramasKills_Func003A)
 end
 --===========================================================================
 function InitTrig_NaxramasKills()
@@ -216,8 +257,7 @@ function Trig_DalaranKills_Func003A()
 end
 function Trig_DalaranKills_Actions()
     DisplayTextToForce(GetPlayersAll(), "TRIGSTR_3139")
-    udg_DalaranKills=GetUnitsInRectAll(gg_rct_DeathDalaran)
-    ForGroupBJ(udg_DalaranKills, Trig_DalaranKills_Func003A)
+    ForGroupDestroy(GetUnitsInRectAll(gg_rct_DeathDalaran), Trig_DalaranKills_Func003A)
 end
 --===========================================================================
 function InitTrig_DalaranKills()

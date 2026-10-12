@@ -91,7 +91,7 @@ function Trig_Charge_Actions()
         else
             DestroyTimer(t)
             SetUnitAnimation(GT, "attack")
-            DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
+            DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl", dx, dy))
             local g=CreateGroup()
             GroupEnumUnitsInRange(g, dx, dy, 260, nil)
             while true do
@@ -106,7 +106,7 @@ function Trig_Charge_Actions()
                 end
                 if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) then
                     UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
-                    DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
+                    DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageDeathCaster.mdl", un, "orign"))
                 end
                 GroupRemoveUnit(g, un)
             end

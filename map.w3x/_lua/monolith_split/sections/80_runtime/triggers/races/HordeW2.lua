@@ -138,7 +138,7 @@ function Trig_AlmostDiyW2_Actions()
         u2=BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
         if u2 ~= nil and UnitAlive(u2) then
             
-            RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanFlakCannonsFlakTarget.mdl", GetUnitX(u), GetUnitY(u)) , 1)
+            RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\FlakCannons\\FlakTarget.mdl", GetUnitX(u), GetUnitY(u)) , 1)
             SetUnitState(u, UNIT_STATE_LIFE, hp + Damage)
             SetUnitPosition(u, GetUnitX(u2), GetUnitY(u2))
             IssueTargetOrder(u, "smart", u2)
@@ -209,7 +209,7 @@ function Trig_DiyGoblinW2_Actions()
         u2=BlzGroupUnitAt(g, GetRandomInt(0, BlzGroupGetSize(g) - 1))
         if u2 ~= nil and UnitAlive(u2) then
                    
-            RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanFlakCannonsFlakTarget.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
+            RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\FlakCannons\\FlakTarget.mdl", GetUnitX(u2), GetUnitY(u2)) , 1)
             CreateUnit(p, FourCC('w206'), GetUnitX(u2), GetUnitY(u2), 0.0)
             AddXp(u2 , 100 * lvl + 25 * lvl)
         end
@@ -301,7 +301,7 @@ function Trig_RuneExplode_Conditions()
 end
 function Trig_RuneExplode_Actions()
     local u= GetTriggerUnit()
-    RemoveEffectTimed(AddSpecialEffect("AbilitiesWeaponsBoltBoltImpact.mdl", GetUnitX(u), GetUnitY(u)) , 2)
+    RemoveEffectTimed(AddSpecialEffect("Abilities\\Weapons\\Bolt\\BoltImpact.mdl", GetUnitX(u), GetUnitY(u)) , 2)
     u=nil
 end
 --===========================================================================
@@ -501,7 +501,7 @@ function Trig_OgrimmCharge_Actions()
     UnitAddAbility(GT, FourCC('Amrf'))
     UnitRemoveAbility(GT, FourCC('Amrf'))
     ---------
-    DestroyEffect(AddSpecialEffect("AbilitiesSpellsOtherVolcanoVolcanoDeath.mdl", x, y))
+    DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Other\\Volcano\\VolcanoDeath.mdl", x, y))
     local t= CreateTimer()
     TimerStart(t, 0.025, true, function()
         local dx= GetUnitX(GT)
@@ -523,7 +523,7 @@ function Trig_OgrimmCharge_Actions()
             DestroyTimer(t)
             SetUnitAnimation(GT, "attack")
             SetUnitFlyHeight(GT, 0, 0)
-            DestroyEffect(AddSpecialEffect("AbilitiesSpellsOrcWarStompWarStompCaster.mdl", dx, dy))
+            DestroyEffect(AddSpecialEffect("Abilities\\Spells\\Orc\\WarStomp\\WarStompCaster.mdl", dx, dy))
             local g=CreateGroup()
             GroupEnumUnitsInRange(g, dx, dy, 260, nil)
             while true do
@@ -533,7 +533,7 @@ function Trig_OgrimmCharge_Actions()
                 local uron=1.3 * lvl * GetHeroStr(GT, true) + lvl * 50
                 if not IsUnitType(un, UNIT_TYPE_STRUCTURE) and IsUnitEnemy(un, GetOwningPlayer(GT)) and not IsUnitType(un, UNIT_TYPE_DEAD) and not IsUnitType(un, UNIT_TYPE_FLYING) then
                     UnitDamageTarget(GT, un, uron, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_UNIVERSAL, WEAPON_TYPE_WHOKNOWS)
-                    DestroyEffect(AddSpecialEffectTarget("AbilitiesSpellsOrcMirrorImageMirrorImageDeathCaster.mdl", un, "orign"))
+                    DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Orc\\MirrorImage\\MirrorImageDeathCaster.mdl", un, "orign"))
                     local knockUn = un
                     local knockAngle=JSTRUgolMT(dx , GetUnitX(un) , dy , GetUnitY(un))
                     local knockCos = Cos(knockAngle * bj_DEGTORAD)

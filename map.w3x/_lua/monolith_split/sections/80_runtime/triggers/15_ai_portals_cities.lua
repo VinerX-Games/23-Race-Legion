@@ -1947,9 +1947,9 @@ end
 -- Trigger: PortalFix
 --===========================================================================
 function Trig_PortalFix_Actions()
-    WaygateSetDestinationLocBJ(gg_unit_n003_0020, GetRectCenter(gg_rct_UldamanOut))
-    WaygateSetDestinationLocBJ(gg_unit_n003_0588, GetRectCenter(gg_rct_DalaranOut))
-    WaygateSetDestinationLocBJ(gg_unit_n003_0126, GetRectCenter(gg_rct_NaxOut))
+    WaygateSetDestination(gg_unit_n003_0020, GetRectCenterX(gg_rct_UldamanOut), GetRectCenterY(gg_rct_UldamanOut))
+    WaygateSetDestination(gg_unit_n003_0588, GetRectCenterX(gg_rct_DalaranOut), GetRectCenterY(gg_rct_DalaranOut))
+    WaygateSetDestination(gg_unit_n003_0126, GetRectCenterX(gg_rct_NaxOut), GetRectCenterY(gg_rct_NaxOut))
 end
 --===========================================================================
 function InitTrig_PortalFix()
@@ -3299,7 +3299,7 @@ function CheckPosition(x, y, add)
    -- endif
     
 end
-function CheckPositionT()
+function CheckPositionT(x, y, add)
     --local real add = 25
     if IsTerrainPathable(x + add, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x + add, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x + add, y + add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x, y + add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y - add, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y, PATHING_TYPE_FLOATABILITY) and IsTerrainPathable(x - add, y + add, PATHING_TYPE_FLOATABILITY) then
         return true

@@ -218,7 +218,7 @@ function Trig_SpellDamageReturn_Actions()
     local hp= GetUnitState(u, UNIT_STATE_LIFE) * 0.6
     local seconds= 7
     local i= 0
-    local e= AddSpecialEffectTargetUnitBJ("Chest", u, "AbilitiesSpellsItemsVampiricPotionVampPotionCaster.mdl")
+    local e= AddSpecialEffectTargetUnitBJ("Chest", u, "Abilities\\Spells\\Items\\VampiricPotion\\VampPotionCaster.mdl")
     UnitDamageTargetBJ(u, u, hp, ATTACK_TYPE_HERO, DAMAGE_TYPE_UNIVERSAL)
     
     while true do
@@ -256,7 +256,7 @@ function Trig_DamageConvert_Actions()
     local u= GetEventDamageSource()
     local level= GetUnitAbilityLevel(u, FourCC('A1E5'))
     local damage= GetEventDamage()
-    local e= AddSpecialEffectTargetUnitBJ("Chest", u, "AbilitiesSpellsItemsVampiricPotionVampPotionCaster.mdl")
+    local e= AddSpecialEffectTargetUnitBJ("Chest", u, "Abilities\\Spells\\Items\\VampiricPotion\\VampPotionCaster.mdl")
     SetUnitState(u, UNIT_STATE_LIFE, GetUnitState(u, UNIT_STATE_LIFE) + damage * ( 0.04 * level ))
   
     
@@ -465,7 +465,7 @@ function Trig_DamagePercent_Actions()
     local seconds= 7
     local u= GetEventDamageSource()
     local u2= GetTriggerUnit()
-    local e= AddSpecialEffectTargetUnitBJ("overhead", u2, "AbilitiesSpellsUndeadCurseCurseTarget.mdl")
+    local e= AddSpecialEffectTargetUnitBJ("overhead", u2, "Abilities\\Spells\\Undead\\Curse\\CurseTarget.mdl")
     local i= 0
     --call DisplayTextToPlayer(Player(0),0,0,"2"+GetUnitName(u2))
      

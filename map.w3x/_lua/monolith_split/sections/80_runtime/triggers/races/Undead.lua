@@ -119,7 +119,7 @@ function Trig_MeatDeal_Actions()
                 DelCountDis(eachUnit , GetPlayerId(GetOwningPlayer(eachUnit)))
                 
                 RemoveUnit(eachUnit)
-                RemoveEffectTimed(AddSpecialEffect("ObjectsSpawnmodelsNightElfEntBirthTargetEntBirthTarget.mdl", GetUnitX(eachUnit), GetUnitY(eachUnit)) , 2)
+                RemoveEffectTimed(AddSpecialEffect("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl", GetUnitX(eachUnit), GetUnitY(eachUnit)) , 2)
             end
             
         end
@@ -564,7 +564,7 @@ function Trig_PlagueOnBuilding_Actions()
             TimerStart(t, 1.00, true, function()
                 if time == 0 and UnitAlive(u) then
                     UnitAddAbility(u, FourCC('A1HS'))
-                    e = AddSpecialEffectTargetUnitBJ("overhead", u, "CultOfDamnedPlagueCloudTargetLight.mdx")
+                    e = AddSpecialEffectTargetUnitBJ("overhead", u, "CultOfDamned\\PlagueCloudTargetLight.mdx")
                     time = time + 1
                 elseif time < 30 and UnitAlive(u) then
                     time = time + 1

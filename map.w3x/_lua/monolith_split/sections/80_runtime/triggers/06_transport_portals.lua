@@ -518,10 +518,10 @@ function Trig_Abordach_D_or_Ot_Actions()
         if true then -- INLINED!!
             return
         end
-        AddSpecialEffectLocBJ(udg_LocalPosition[1], "ObjectsSpawnmodelsHumanHCancelDeathHCancelDeath.mdl")
+        AddSpecialEffectLocBJ(udg_LocalPosition[1], "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl")
         udg_LocalspecialEffect[1]=GetLastCreatedEffectBJ()
         ef[1]=udg_LocalspecialEffect[1]
-        AddSpecialEffectLocBJ(udg_LocalPosition[2], "ObjectsSpawnmodelsHumanHCancelDeathHCancelDeath.mdl")
+        AddSpecialEffectLocBJ(udg_LocalPosition[2], "Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl")
         udg_LocalspecialEffect[2]=GetLastCreatedEffectBJ()
         ef[2]=udg_LocalspecialEffect[2]
         RemoveLocation(udg_LocalPosition[1])
@@ -781,7 +781,7 @@ function ManabombaMissle(caster, destination)
     TimerStart(t, DistanceBetweenPoints(l, dest) / 600.00, false, function()
         RemoveUnit(u1)
         RemoveUnit(u2)
-        RemoveEffectTimed(AddSpecialEffectLocBJ(dest, "war3mapImportedExplosionC.mdx"), 60)
+        RemoveEffectTimed(AddSpecialEffectLocBJ(dest, "war3mapImported\\ExplosionC.mdx"), 60)
         local function dmg(damager, delay, interval, damage, radious, times, Attacktype, Damagetype)
             local i=0
             while i < times do
@@ -1396,9 +1396,9 @@ function Trig_Connect_Portal_2_Actions()
                     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
                     -- CONFIGURE HERE
                     -- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- -------- --------
-                    udg_Portal_departureFX[udg_Portal_ConfigIndex[GetForLoopIndexA()]]="AbilitiesSpellsHumanMassTeleportMassTeleportCaster.mdl"
-                    udg_Portal_arrivalFX[udg_Portal_ConfigIndex[GetForLoopIndexA()]]="AbilitiesSpellsHumanMassTeleportMassTeleportTarget.mdl"
-                    udg_Portal_activeFX[udg_Portal_ConfigIndex[GetForLoopIndexA()]]="AbilitiesSpellsOrcVoodooVoodooAura.mdl"
+                    udg_Portal_departureFX[udg_Portal_ConfigIndex[GetForLoopIndexA()]]="Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl"
+                    udg_Portal_arrivalFX[udg_Portal_ConfigIndex[GetForLoopIndexA()]]="Abilities\\Spells\\Human\\MassTeleport\\MassTeleportTarget.mdl"
+                    udg_Portal_activeFX[udg_Portal_ConfigIndex[GetForLoopIndexA()]]="Abilities\\Spells\\Orc\\Voodoo\\VoodooAura.mdl"
                     udg_Portal_range[udg_Portal_ConfigIndex[GetForLoopIndexA()]]=180.00
                     udg_Portal_delay[udg_Portal_ConfigIndex[GetForLoopIndexA()]]=0.00
                     udg_Portal_missileSpeed[udg_Portal_ConfigIndex[GetForLoopIndexA()]]=0.00

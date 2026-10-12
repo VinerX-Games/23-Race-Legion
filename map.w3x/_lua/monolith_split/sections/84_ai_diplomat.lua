@@ -7,6 +7,7 @@
 AiDiplomat = AiDiplomat or {}              -- [pi] = runtime state
 AiDiplomatTicks = AiDiplomatTicks or {}    -- [pi] = internal tick counter
 AiDiplomatProposalTime = AiDiplomatProposalTime or {} -- [pi] = { [other_pi]=time }
+AiDiplomatProposalTimeout = AiDiplomatProposalTimeout or 30
 
 -- ====================================================================
 -- Personality presets: each is a table of parameter overrides.

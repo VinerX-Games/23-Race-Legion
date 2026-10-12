@@ -23,8 +23,8 @@ function main()
         30720.0 - GetCameraMargin(CAMERA_MARGIN_TOP),
         30720.0 - GetCameraMargin(CAMERA_MARGIN_RIGHT),
         - 30720.0 + GetCameraMargin(CAMERA_MARGIN_BOTTOM))
-    SetDayNightModels("EnvironmentDNCDNCLordaeronDNCLordaeronTerrainDNCLordaeronTerrain.mdl",
-                       "EnvironmentDNCDNCLordaeronDNCLordaeronUnitDNCLordaeronUnit.mdl")
+    SetDayNightModels("Environment\\DNC\\DNCLordaeron\\DNCLordaeronTerrain\\DNCLordaeronTerrain.mdl",
+                       "Environment\\DNC\\DNCLordaeron\\DNCLordaeronUnit\\DNCLordaeronUnit.mdl")
     SetTerrainFogEx(0, 4000.0, 8000.0, 0.500, 0.706, 1.000, 1.000)
     SetWaterBaseColor(190, 190, 160, 255)
     NewSoundEnvironment("Default")

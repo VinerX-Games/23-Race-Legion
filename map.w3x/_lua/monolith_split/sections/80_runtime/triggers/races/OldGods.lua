@@ -323,18 +323,11 @@ end
 -- Trigger: Qogg HP 24k O
 --===========================================================================
 function Trig_Qogg_HP_24k_O_Actions()
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_1)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_2)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_3)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_4)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
+    local p = Player(PLAYER_NEUTRAL_AGGRESSIVE)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_1), GetRectCenterY(gg_rct_Yog1_1), bj_UNIT_FACING)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_2), GetRectCenterY(gg_rct_Yog1_2), bj_UNIT_FACING)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_3), GetRectCenterY(gg_rct_Yog1_3), bj_UNIT_FACING)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_4), GetRectCenterY(gg_rct_Yog1_4), bj_UNIT_FACING)
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================
@@ -347,18 +340,11 @@ end
 -- Trigger: Qogg HP 17k O
 --===========================================================================
 function Trig_Qogg_HP_17k_O_Actions()
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_5)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_5), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_6)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_6), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_7)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_7), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
-    udg_LocalPosition2=GetRectCenter(gg_rct_Yog1_8)
-    CreateNUnitsAtLoc(1, FourCC('n04C'), Player(PLAYER_NEUTRAL_AGGRESSIVE), GetRectCenter(gg_rct_Yog1_8), bj_UNIT_FACING)
-    RemoveLocation(udg_LocalPosition2)
+    local p = Player(PLAYER_NEUTRAL_AGGRESSIVE)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_5), GetRectCenterY(gg_rct_Yog1_5), bj_UNIT_FACING)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_6), GetRectCenterY(gg_rct_Yog1_6), bj_UNIT_FACING)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_7), GetRectCenterY(gg_rct_Yog1_7), bj_UNIT_FACING)
+    CreateUnit(p, FourCC('n04C'), GetRectCenterX(gg_rct_Yog1_8), GetRectCenterY(gg_rct_Yog1_8), bj_UNIT_FACING)
     DisableTrigger(GetTriggeringTrigger())
 end
 --===========================================================================

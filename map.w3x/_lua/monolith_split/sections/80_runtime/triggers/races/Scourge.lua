@@ -321,8 +321,8 @@ function Trig_PassiveTalisra_Actions()
             SetUnitY(u, GetUnitY(playerCapital[pi]))
             SetUnitLifePercentBJ(u, 10)
             SetUnitLifeBJ(u, GetUnitState(u, UNIT_STATE_LIFE) + GetEventDamage())
-            RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanMassTeleportMassTeleportCaster.mdl", GetUnitX(u), GetUnitY(u)) , 3)
-            RemoveEffectTimed(AddSpecialEffect("AbilitiesSpellsHumanMassTeleportMassTeleportCaster.mdl", GetUnitX(playerCapital[pi]), GetUnitY(playerCapital[pi])) , 3)
+            RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl", GetUnitX(u), GetUnitY(u)) , 3)
+            RemoveEffectTimed(AddSpecialEffect("Abilities\\Spells\\Human\\MassTeleport\\MassTeleportCaster.mdl", GetUnitX(playerCapital[pi]), GetUnitY(playerCapital[pi])) , 3)
         end
     end
     
