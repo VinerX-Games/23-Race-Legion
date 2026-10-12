@@ -4,31 +4,18 @@
 -- *  AllPlayersStart
 ---@return nothing
 function AllPlayersStart()
-	gInt = 0
-	
-	
-	while true do
-		if gInt > 23 then break end
-		
-		if GetPlayerSlotState(Player(gInt)) == PLAYER_SLOT_STATE_PLAYING then
-			ForceAddPlayer(udg_AllPlayers, Player(gInt))
-			ForceAddPlayer(udg_AllPlayers2, Player(gInt))
+	for pi = 0, 23 do
+		if GetPlayerSlotState(Player(pi)) == PLAYER_SLOT_STATE_PLAYING then
+			ForceAddPlayer(udg_AllPlayers, Player(pi))
+			ForceAddPlayer(udg_AllPlayers2, Player(pi))
 		end
-		
-		
-		gInt = gInt + 1
 	end
-	
-	
 end
 ---@return nothing
 function aiStart()
-	gInt = 0
-	while true do
-		if gInt > 23 then break end
-		if GetPlayerController(Player(gInt)) == MAP_CONTROL_COMPUTER then
-			createAiPlayer(gInt)
+	for pi = 0, 23 do
+		if GetPlayerController(Player(pi)) == MAP_CONTROL_COMPUTER then
+			createAiPlayer(pi)
 		end
-		gInt = gInt + 1
 	end
 end

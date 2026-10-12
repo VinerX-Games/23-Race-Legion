@@ -10766,32 +10766,19 @@ end
 -- *  AllPlayersStart
 ---@return nothing
 function AllPlayersStart()
-	gInt = 0
-	
-	
-	while true do
-		if gInt > 23 then break end
-		
-		if GetPlayerSlotState(Player(gInt)) == PLAYER_SLOT_STATE_PLAYING then
-			ForceAddPlayer(udg_AllPlayers, Player(gInt))
-			ForceAddPlayer(udg_AllPlayers2, Player(gInt))
+	for pi = 0, 23 do
+		if GetPlayerSlotState(Player(pi)) == PLAYER_SLOT_STATE_PLAYING then
+			ForceAddPlayer(udg_AllPlayers, Player(pi))
+			ForceAddPlayer(udg_AllPlayers2, Player(pi))
 		end
-		
-		
-		gInt = gInt + 1
 	end
-	
-	
 end
 ---@return nothing
 function aiStart()
-	gInt = 0
-	while true do
-		if gInt > 23 then break end
-		if GetPlayerController(Player(gInt)) == MAP_CONTROL_COMPUTER then
-			createAiPlayer(gInt)
+	for pi = 0, 23 do
+		if GetPlayerController(Player(pi)) == MAP_CONTROL_COMPUTER then
+			createAiPlayer(pi)
 		end
-		gInt = gInt + 1
 	end
 end
 -- ***************************************************************************
@@ -18064,7 +18051,7 @@ function AllowedPosition(u)
     if udg_Continents[1] == 1 and ( RectContainsCoords(gg_rct_EastenKingdoms, x, y) or RectContainsCoords(gg_rct_BlackMountain, x, y) or RectContainsCoords(gg_rct_EasternDungeons, x, y) ) then
         return true
     end
-    if udg_Continents[2] == 1 and ( RectContainsCoords(gg_rct_Kalim, x, y) or RectContainsCoords(gg_rct_Ankirag, x, y) and RectContainsCoords(gg_rct_Maradon, x, y) and RectContainsCoords(gg_rct_Orgrimmar, x, y) ) then
+    if udg_Continents[2] == 1 and ( RectContainsCoords(gg_rct_Kalim, x, y) or RectContainsCoords(gg_rct_Ankirag, x, y) or RectContainsCoords(gg_rct_Maradon, x, y) or RectContainsCoords(gg_rct_Orgrimmar, x, y) ) then
         return true
     end
     if udg_Continents[3] == 1 and ( RectContainsCoords(gg_rct_Outland, x, y) ) then

@@ -212,7 +212,7 @@ function AllowedPosition(u)
     if udg_Continents[1] == 1 and ( RectContainsCoords(gg_rct_EastenKingdoms, x, y) or RectContainsCoords(gg_rct_BlackMountain, x, y) or RectContainsCoords(gg_rct_EasternDungeons, x, y) ) then
         return true
     end
-    if udg_Continents[2] == 1 and ( RectContainsCoords(gg_rct_Kalim, x, y) or RectContainsCoords(gg_rct_Ankirag, x, y) and RectContainsCoords(gg_rct_Maradon, x, y) and RectContainsCoords(gg_rct_Orgrimmar, x, y) ) then
+    if udg_Continents[2] == 1 and ( RectContainsCoords(gg_rct_Kalim, x, y) or RectContainsCoords(gg_rct_Ankirag, x, y) or RectContainsCoords(gg_rct_Maradon, x, y) or RectContainsCoords(gg_rct_Orgrimmar, x, y) ) then
         return true
     end
     if udg_Continents[3] == 1 and ( RectContainsCoords(gg_rct_Outland, x, y) ) then
