@@ -3533,6 +3533,7 @@ function f_LazyT()
 end
 ---@return boolean
 function f_PortB()
+	if not CheckId or not AiUnitsToPort or not AiUnitsToPort[CheckId] then return false end
 	return IsUnitInGroup(GetFilterUnit(), AiUnitsToPort[CheckId])
 end
 ---@return boolean
@@ -16742,9 +16743,8 @@ function Trig_StartLobby_Actions()
 	udg_LobbyTimerWindows = CreateTimerDialog(udg_LobbyTime)
 	TimerDialogSetTitle(udg_LobbyTimerWindows, GetLocalizedString("TRIGSTR_19360"))
 	TimerDialogDisplay(udg_LobbyTimerWindows, true)
-	CreateNUnitsAtLoc(1, FourCC('n04G'), Player(0), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
-	ModeBuilding = GetLastCreatedUnit()
-	SelectUnitForPlayerSingle(GetLastCreatedUnit(), Player(0))
+	ModeBuilding = CreateUnit(Player(0), FourCC('n04G'), GetRectCenterX(GetPlayableMapRect()), GetRectCenterY(GetPlayableMapRect()), bj_UNIT_FACING)
+	SelectUnitForPlayerSingle(ModeBuilding, Player(0))
 end
 -- ===========================================================================
 ---@return nothing
@@ -38515,15 +38515,13 @@ function OnlyOrganic()
     return GetUnitTypeId(GetFilterUnit()) == FourCC('e02W') and not IsUnitType(GetFilterUnit(), UNIT_TYPE_PEON)
 end
 function Trig_ChoseUnits2_Actions()
-    local g= CreateGroup()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    udg_LocalPosition3=GetSpellTargetLoc()
+    local u = GetTriggerUnit()
+    if not u then return end
+    local g = CreateGroup()
     udg_Boolexpr = CachedFilter(OnlyOrganic)
-    GroupEnumUnitsInRange(g, GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 400, udg_Boolexpr)
+    GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 400, udg_Boolexpr)
     GroupPointOrder(g, "attack", GetSpellTargetX(), GetSpellTargetY())
-    
     DestroyGroup(g)
-    g=nil
 end
 --===========================================================================
 function InitTrig_ChoseUnits2()
@@ -38923,14 +38921,15 @@ function Trig_LichinkaFinish_Conditions()
     return GetUnitAbilityLevel(gTriggerUnit, FourCC('A1JE')) > 0
 end
 function OrderAfterUleyFinish()
-    local l= GetUnitRallyPoint(GetEnumUnit())
-    udg_LocalPosition[17]=l
-    if GetUnitTypeId(gTriggerUnit) == FourCC('e01G') then
-        IssueTargetOrder(gTriggerUnit, "harvest", GetUnitRallyDestructable(GetEnumUnit()))
-    else
-        IssuePointOrderLoc(gTriggerUnit, "attack", l)
+    local l = GetUnitRallyPoint(GetEnumUnit())
+    if l then
+        if GetUnitTypeId(gTriggerUnit) == FourCC('e01G') then
+            IssueTargetOrder(gTriggerUnit, "harvest", GetUnitRallyDestructable(GetEnumUnit()))
+        else
+            IssuePointOrderLoc(gTriggerUnit, "attack", l)
+        end
+        RemoveLocation(l)
     end
-    l=nil
 end
 function ItIsHive()
     local id= GetUnitTypeId(GetFilterUnit())
@@ -48839,71 +48838,48 @@ function Trig_SpawnQtun_Func005C()
     return GetUnitLifePercent(GetTriggerUnit()) <= 50.00
 end
 function Trig_SpawnQtun_Actions()
-    udg_LocalInteger2=GetRandomInt(1, 2)
-    if Trig_SpawnQtun_Func002C() then
-        if Trig_SpawnQtun_Func002Func002C() then
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp2)
-        else
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
-        end
-        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
-        udg_LocalInteger2=udg_LocalInteger * 2
-        udg_LocalOtrad=GetLastCreatedGroup()
-        udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
-        ForGroupBJ(udg_LocalOtrad, Trig_SpawnQtun_Func002Func008A)
-        GroupClear(udg_LocalOtrad)
-        RemoveLocation(udg_LocalPosition2)
-        RemoveLocation(udg_LocalPosition3)
+    local cthun = GetTriggerUnit()
+    if not cthun then return end
+    local maxHp = I2R(BlzGetUnitMaxHP(cthun))
+    local curHp = GetUnitState(cthun, UNIT_STATE_LIFE)
+    local hpPct = GetUnitLifePercent(cthun)
+    local p = GetOwningPlayer(cthun)
+    local targetUnit = gg_unit_n03D_0666
+    local tx, ty = GetUnitX(targetUnit), GetUnitY(targetUnit)
+
+    local isSp2 = (GetRandomInt(1, 2) == 1)
+    local spawnRect = isSp2 and gg_rct_QtunSp2 or gg_rct_QtunSp1
+    local sx, sy = GetRectCenterX(spawnRect), GetRectCenterY(spawnRect)
+
+    local hpLostK = R2I((maxHp - curHp) / 1000.0)
+
+    local unitType = nil
+    local count = 0
+
+    if hpPct >= 75.0 then
+        count = hpLostK * 2
+        unitType = FourCC('e01P')
+    elseif hpPct >= 50.0 then
+        count = hpLostK * 4
+        unitType = FourCC('e01P')
+    elseif hpPct >= 25.0 then
+        count = hpLostK * 1
+        unitType = FourCC('e01Q')
+    else
+        count = hpLostK * 1
+        unitType = FourCC('e01P')
     end
-    if Trig_SpawnQtun_Func003C() then
-        udg_LocalInteger2=GetRandomInt(1, 2)
-        if Trig_SpawnQtun_Func003Func002C() then
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp2)
-        else
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
+
+    if unitType and count > 0 then
+        for _ = 1, count do
+            local spawnX = sx + (math.random() * 60.0 - 30.0)
+            local spawnY = sy + (math.random() * 60.0 - 30.0)
+            local u = CreateUnit(p, unitType, spawnX, spawnY, bj_UNIT_FACING)
+            if u then
+                UnitApplyTimedLifeBJ(30.00, FourCC('BTLF'), u)
+                IssuePointOrder(u, "attack", tx, ty)
+            end
         end
-        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
-        udg_LocalInteger2=udg_LocalInteger * 4
-        udg_LocalOtrad=GetLastCreatedGroup()
-        udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
-        ForGroupBJ(udg_LocalOtrad, Trig_SpawnQtun_Func003Func008A)
-        GroupClear(udg_LocalOtrad)
-        RemoveLocation(udg_LocalPosition2)
-        RemoveLocation(udg_LocalPosition3)
-    end
-    if Trig_SpawnQtun_Func004C() then
-        udg_LocalInteger2=GetRandomInt(1, 2)
-        if Trig_SpawnQtun_Func004Func002C() then
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp2)
-        else
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
-        end
-        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
-        udg_LocalInteger2=udg_LocalInteger * 1
-        CreateNUnitsAtLoc(udg_LocalInteger2, FourCC('e01Q'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-        udg_LocalOtrad=GetLastCreatedGroup()
-        udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
-        ForGroupBJ(udg_LocalOtrad, Trig_SpawnQtun_Func004Func008A)
-        GroupClear(udg_LocalOtrad)
-        RemoveLocation(udg_LocalPosition2)
-        RemoveLocation(udg_LocalPosition3)
-    end
-    if Trig_SpawnQtun_Func005C() then
-        udg_LocalInteger2=GetRandomInt(1, 2)
-        if Trig_SpawnQtun_Func005Func002C() then
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp2)
-        else
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
-        end
-        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
-        udg_LocalInteger2=udg_LocalInteger * 1
-        CreateNUnitsAtLoc(udg_LocalInteger2, FourCC('e01P'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-        udg_LocalOtrad=GetLastCreatedGroup()
-        udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
-        ForGroupBJ(udg_LocalOtrad, Trig_SpawnQtun_Func005Func008A)
-        GroupClear(udg_LocalOtrad)
-        RemoveLocation(udg_LocalPosition2)
-        RemoveLocation(udg_LocalPosition3)
     end
 end
 --===========================================================================
@@ -52394,11 +52370,11 @@ function Trig_StartDal_Func002A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A1F7'), GetEnumPlayer())
 end
 function Trig_StartDal_Actions()
-    IssuePointOrderLocBJ(gg_unit_e00C_0590, "flamestrike", GetUnitLoc(gg_unit_e00C_0590))
+    local x, y = GetUnitX(gg_unit_e00C_0590), GetUnitY(gg_unit_e00C_0590)
+    IssuePointOrder(gg_unit_e00C_0590, "flamestrike", x, y)
     ForForce(udg_AllPlayers, Trig_StartDal_Func002A)
-    WaygateSetDestinationLocBJ(gg_unit_n003_0588, GetUnitLoc(gg_unit_e00C_0590))
+    WaygateSetDestination(gg_unit_n003_0588, x, y)
     WaygateActivateBJ(true, gg_unit_n003_0588)
-    WaygateSetDestinationLocBJ(gg_unit_n003_0588, GetUnitLoc(gg_unit_e00C_0590))
 end
 --===========================================================================
 function InitTrig_StartDal()
@@ -52582,11 +52558,11 @@ function Trig_NaxStart_Func002A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A1GV'), GetEnumPlayer())
 end
 function Trig_NaxStart_Actions()
-    IssuePointOrderLocBJ(gg_unit_e00D_0080, "flamestrike", GetUnitLoc(gg_unit_e00D_0080))
+    local x, y = GetUnitX(gg_unit_e00D_0080), GetUnitY(gg_unit_e00D_0080)
+    IssuePointOrder(gg_unit_e00D_0080, "flamestrike", x, y)
     ForForce(udg_AllPlayers, Trig_NaxStart_Func002A)
-    WaygateSetDestinationLocBJ(gg_unit_n003_0126, GetUnitLoc(gg_unit_e00D_0080))
+    WaygateSetDestination(gg_unit_n003_0126, x, y)
     WaygateActivateBJ(true, gg_unit_n003_0126)
-    WaygateSetDestinationLocBJ(gg_unit_n003_0126, GetUnitLoc(gg_unit_e00D_0080))
 end
 --===========================================================================
 function InitTrig_NaxStart()
@@ -52754,11 +52730,11 @@ function Trig_TurtleStart_Copy_Func002A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A1M1'), GetEnumPlayer())
 end
 function Trig_TurtleStart_Actions()
-    IssuePointOrderLocBJ(gg_unit_e00E_0085, "flamestrike", GetUnitLoc(gg_unit_e00E_0085))
+    local x, y = GetUnitX(gg_unit_e00E_0085), GetUnitY(gg_unit_e00E_0085)
+    IssuePointOrder(gg_unit_e00E_0085, "flamestrike", x, y)
     ForForce(udg_AllPlayers, Trig_TurtleStart_Copy_Func002A)
-    WaygateSetDestinationLocBJ(gg_unit_n003_0090, GetUnitLoc(gg_unit_e00E_0085))
+    WaygateSetDestination(gg_unit_n003_0090, x, y)
     WaygateActivateBJ(true, gg_unit_n003_0090)
-    WaygateSetDestinationLocBJ(gg_unit_n003_0090, GetUnitLoc(gg_unit_e00E_0085))
 end
 --===========================================================================
 function InitTrig_TurtleStart()

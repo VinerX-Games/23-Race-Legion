@@ -147,6 +147,7 @@ function f_LazyT()
 end
 ---@return boolean
 function f_PortB()
+	if not CheckId or not AiUnitsToPort or not AiUnitsToPort[CheckId] then return false end
 	return IsUnitInGroup(GetFilterUnit(), AiUnitsToPort[CheckId])
 end
 ---@return boolean

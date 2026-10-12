@@ -3336,11 +3336,11 @@ function Trig_StartDal_Func002A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A1F7'), GetEnumPlayer())
 end
 function Trig_StartDal_Actions()
-    IssuePointOrderLocBJ(gg_unit_e00C_0590, "flamestrike", GetUnitLoc(gg_unit_e00C_0590))
+    local x, y = GetUnitX(gg_unit_e00C_0590), GetUnitY(gg_unit_e00C_0590)
+    IssuePointOrder(gg_unit_e00C_0590, "flamestrike", x, y)
     ForForce(udg_AllPlayers, Trig_StartDal_Func002A)
-    WaygateSetDestinationLocBJ(gg_unit_n003_0588, GetUnitLoc(gg_unit_e00C_0590))
+    WaygateSetDestination(gg_unit_n003_0588, x, y)
     WaygateActivateBJ(true, gg_unit_n003_0588)
-    WaygateSetDestinationLocBJ(gg_unit_n003_0588, GetUnitLoc(gg_unit_e00C_0590))
 end
 --===========================================================================
 function InitTrig_StartDal()
@@ -3524,11 +3524,11 @@ function Trig_NaxStart_Func002A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A1GV'), GetEnumPlayer())
 end
 function Trig_NaxStart_Actions()
-    IssuePointOrderLocBJ(gg_unit_e00D_0080, "flamestrike", GetUnitLoc(gg_unit_e00D_0080))
+    local x, y = GetUnitX(gg_unit_e00D_0080), GetUnitY(gg_unit_e00D_0080)
+    IssuePointOrder(gg_unit_e00D_0080, "flamestrike", x, y)
     ForForce(udg_AllPlayers, Trig_NaxStart_Func002A)
-    WaygateSetDestinationLocBJ(gg_unit_n003_0126, GetUnitLoc(gg_unit_e00D_0080))
+    WaygateSetDestination(gg_unit_n003_0126, x, y)
     WaygateActivateBJ(true, gg_unit_n003_0126)
-    WaygateSetDestinationLocBJ(gg_unit_n003_0126, GetUnitLoc(gg_unit_e00D_0080))
 end
 --===========================================================================
 function InitTrig_NaxStart()
@@ -3696,11 +3696,11 @@ function Trig_TurtleStart_Copy_Func002A()
     SetPlayerAbilityAvailableBJ(false, FourCC('A1M1'), GetEnumPlayer())
 end
 function Trig_TurtleStart_Actions()
-    IssuePointOrderLocBJ(gg_unit_e00E_0085, "flamestrike", GetUnitLoc(gg_unit_e00E_0085))
+    local x, y = GetUnitX(gg_unit_e00E_0085), GetUnitY(gg_unit_e00E_0085)
+    IssuePointOrder(gg_unit_e00E_0085, "flamestrike", x, y)
     ForForce(udg_AllPlayers, Trig_TurtleStart_Copy_Func002A)
-    WaygateSetDestinationLocBJ(gg_unit_n003_0090, GetUnitLoc(gg_unit_e00E_0085))
+    WaygateSetDestination(gg_unit_n003_0090, x, y)
     WaygateActivateBJ(true, gg_unit_n003_0090)
-    WaygateSetDestinationLocBJ(gg_unit_n003_0090, GetUnitLoc(gg_unit_e00E_0085))
 end
 --===========================================================================
 function InitTrig_TurtleStart()

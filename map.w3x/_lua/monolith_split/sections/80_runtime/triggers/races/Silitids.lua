@@ -239,15 +239,13 @@ function OnlyOrganic()
     return GetUnitTypeId(GetFilterUnit()) == FourCC('e02W') and not IsUnitType(GetFilterUnit(), UNIT_TYPE_PEON)
 end
 function Trig_ChoseUnits2_Actions()
-    local g= CreateGroup()
-    udg_LocalPosition2=GetUnitLoc(GetTriggerUnit())
-    udg_LocalPosition3=GetSpellTargetLoc()
+    local u = GetTriggerUnit()
+    if not u then return end
+    local g = CreateGroup()
     udg_Boolexpr = CachedFilter(OnlyOrganic)
-    GroupEnumUnitsInRange(g, GetUnitX(GetTriggerUnit()), GetUnitY(GetTriggerUnit()), 400, udg_Boolexpr)
+    GroupEnumUnitsInRange(g, GetUnitX(u), GetUnitY(u), 400, udg_Boolexpr)
     GroupPointOrder(g, "attack", GetSpellTargetX(), GetSpellTargetY())
-    
     DestroyGroup(g)
-    g=nil
 end
 --===========================================================================
 function InitTrig_ChoseUnits2()
@@ -647,14 +645,15 @@ function Trig_LichinkaFinish_Conditions()
     return GetUnitAbilityLevel(gTriggerUnit, FourCC('A1JE')) > 0
 end
 function OrderAfterUleyFinish()
-    local l= GetUnitRallyPoint(GetEnumUnit())
-    udg_LocalPosition[17]=l
-    if GetUnitTypeId(gTriggerUnit) == FourCC('e01G') then
-        IssueTargetOrder(gTriggerUnit, "harvest", GetUnitRallyDestructable(GetEnumUnit()))
-    else
-        IssuePointOrderLoc(gTriggerUnit, "attack", l)
+    local l = GetUnitRallyPoint(GetEnumUnit())
+    if l then
+        if GetUnitTypeId(gTriggerUnit) == FourCC('e01G') then
+            IssueTargetOrder(gTriggerUnit, "harvest", GetUnitRallyDestructable(GetEnumUnit()))
+        else
+            IssuePointOrderLoc(gTriggerUnit, "attack", l)
+        end
+        RemoveLocation(l)
     end
-    l=nil
 end
 function ItIsHive()
     local id= GetUnitTypeId(GetFilterUnit())

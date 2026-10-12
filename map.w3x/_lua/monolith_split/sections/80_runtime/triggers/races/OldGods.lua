@@ -245,71 +245,48 @@ function Trig_SpawnQtun_Func005C()
     return GetUnitLifePercent(GetTriggerUnit()) <= 50.00
 end
 function Trig_SpawnQtun_Actions()
-    udg_LocalInteger2=GetRandomInt(1, 2)
-    if Trig_SpawnQtun_Func002C() then
-        if Trig_SpawnQtun_Func002Func002C() then
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp2)
-        else
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
-        end
-        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
-        udg_LocalInteger2=udg_LocalInteger * 2
-        udg_LocalOtrad=GetLastCreatedGroup()
-        udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
-        ForGroupBJ(udg_LocalOtrad, Trig_SpawnQtun_Func002Func008A)
-        GroupClear(udg_LocalOtrad)
-        RemoveLocation(udg_LocalPosition2)
-        RemoveLocation(udg_LocalPosition3)
+    local cthun = GetTriggerUnit()
+    if not cthun then return end
+    local maxHp = I2R(BlzGetUnitMaxHP(cthun))
+    local curHp = GetUnitState(cthun, UNIT_STATE_LIFE)
+    local hpPct = GetUnitLifePercent(cthun)
+    local p = GetOwningPlayer(cthun)
+    local targetUnit = gg_unit_n03D_0666
+    local tx, ty = GetUnitX(targetUnit), GetUnitY(targetUnit)
+
+    local isSp2 = (GetRandomInt(1, 2) == 1)
+    local spawnRect = isSp2 and gg_rct_QtunSp2 or gg_rct_QtunSp1
+    local sx, sy = GetRectCenterX(spawnRect), GetRectCenterY(spawnRect)
+
+    local hpLostK = R2I((maxHp - curHp) / 1000.0)
+
+    local unitType = nil
+    local count = 0
+
+    if hpPct >= 75.0 then
+        count = hpLostK * 2
+        unitType = FourCC('e01P')
+    elseif hpPct >= 50.0 then
+        count = hpLostK * 4
+        unitType = FourCC('e01P')
+    elseif hpPct >= 25.0 then
+        count = hpLostK * 1
+        unitType = FourCC('e01Q')
+    else
+        count = hpLostK * 1
+        unitType = FourCC('e01P')
     end
-    if Trig_SpawnQtun_Func003C() then
-        udg_LocalInteger2=GetRandomInt(1, 2)
-        if Trig_SpawnQtun_Func003Func002C() then
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp2)
-        else
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
+
+    if unitType and count > 0 then
+        for _ = 1, count do
+            local spawnX = sx + (math.random() * 60.0 - 30.0)
+            local spawnY = sy + (math.random() * 60.0 - 30.0)
+            local u = CreateUnit(p, unitType, spawnX, spawnY, bj_UNIT_FACING)
+            if u then
+                UnitApplyTimedLifeBJ(30.00, FourCC('BTLF'), u)
+                IssuePointOrder(u, "attack", tx, ty)
+            end
         end
-        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
-        udg_LocalInteger2=udg_LocalInteger * 4
-        udg_LocalOtrad=GetLastCreatedGroup()
-        udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
-        ForGroupBJ(udg_LocalOtrad, Trig_SpawnQtun_Func003Func008A)
-        GroupClear(udg_LocalOtrad)
-        RemoveLocation(udg_LocalPosition2)
-        RemoveLocation(udg_LocalPosition3)
-    end
-    if Trig_SpawnQtun_Func004C() then
-        udg_LocalInteger2=GetRandomInt(1, 2)
-        if Trig_SpawnQtun_Func004Func002C() then
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp2)
-        else
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
-        end
-        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
-        udg_LocalInteger2=udg_LocalInteger * 1
-        CreateNUnitsAtLoc(udg_LocalInteger2, FourCC('e01Q'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-        udg_LocalOtrad=GetLastCreatedGroup()
-        udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
-        ForGroupBJ(udg_LocalOtrad, Trig_SpawnQtun_Func004Func008A)
-        GroupClear(udg_LocalOtrad)
-        RemoveLocation(udg_LocalPosition2)
-        RemoveLocation(udg_LocalPosition3)
-    end
-    if Trig_SpawnQtun_Func005C() then
-        udg_LocalInteger2=GetRandomInt(1, 2)
-        if Trig_SpawnQtun_Func005Func002C() then
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp2)
-        else
-            udg_LocalPosition2=GetRectCenter(gg_rct_QtunSp1)
-        end
-        udg_LocalInteger=R2I(( I2R(BlzGetUnitMaxHP(GetTriggerUnit())) - GetUnitStateSwap(UNIT_STATE_LIFE, GetTriggerUnit()) ) / 1000.00)
-        udg_LocalInteger2=udg_LocalInteger * 1
-        CreateNUnitsAtLoc(udg_LocalInteger2, FourCC('e01P'), GetOwningPlayer(GetTriggerUnit()), udg_LocalPosition2, bj_UNIT_FACING)
-        udg_LocalOtrad=GetLastCreatedGroup()
-        udg_LocalPosition3=GetUnitLoc(gg_unit_n03D_0666)
-        ForGroupBJ(udg_LocalOtrad, Trig_SpawnQtun_Func005Func008A)
-        GroupClear(udg_LocalOtrad)
-        RemoveLocation(udg_LocalPosition2)
-        RemoveLocation(udg_LocalPosition3)
     end
 end
 --===========================================================================

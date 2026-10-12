@@ -214,9 +214,8 @@ function Trig_StartLobby_Actions()
 	udg_LobbyTimerWindows = CreateTimerDialog(udg_LobbyTime)
 	TimerDialogSetTitle(udg_LobbyTimerWindows, GetLocalizedString("TRIGSTR_19360"))
 	TimerDialogDisplay(udg_LobbyTimerWindows, true)
-	CreateNUnitsAtLoc(1, FourCC('n04G'), Player(0), GetRectCenter(GetPlayableMapRect()), bj_UNIT_FACING)
-	ModeBuilding = GetLastCreatedUnit()
-	SelectUnitForPlayerSingle(GetLastCreatedUnit(), Player(0))
+	ModeBuilding = CreateUnit(Player(0), FourCC('n04G'), GetRectCenterX(GetPlayableMapRect()), GetRectCenterY(GetPlayableMapRect()), bj_UNIT_FACING)
+	SelectUnitForPlayerSingle(ModeBuilding, Player(0))
 end
 -- ===========================================================================
 ---@return nothing
