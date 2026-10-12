@@ -43692,6 +43692,7 @@ function Trig_KrugBeg_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('Reib'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('R0G6'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('R0G7'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0LC'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechResearchedSwap(FourCC('R0GB'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
@@ -43712,6 +43713,7 @@ function Trig_KrugCan_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('Remk'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('Remg'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('Reib'), 1, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0LC'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_KrugCan()
@@ -43737,6 +43739,7 @@ function Trig_KrugFin_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('esen'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('e00I'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('e00H'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0LC'), 0, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
 function InitTrig_KrugFin()
@@ -43761,6 +43764,7 @@ function Trig_ElfBegFin_Actions()
     SetPlayerTechMaxAllowedSwap(FourCC('R0G9'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('R0GA'), 0, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechMaxAllowedSwap(FourCC('R0G8'), 0, GetOwningPlayer(GetTriggerUnit()))
+    SetPlayerTechMaxAllowedSwap(FourCC('R0LC'), 1, GetOwningPlayer(GetTriggerUnit()))
     SetPlayerTechResearchedSwap(FourCC('R0GB'), 1, GetOwningPlayer(GetTriggerUnit()))
 end
 --===========================================================================
@@ -43866,6 +43870,479 @@ function InitTrig_GuadrianSpell()
         Trig_GuadrianSpell_Actions()
     end)
 end
+
+--===========================================================================
+-- GLOBAL MECHANIC: ПОДЖИГАНИЕ (IGNITE)
+--===========================================================================
+udg_IgniteData = udg_IgniteData or {}
+local IgniteTimer = nil
+
+local function ProcessIgniteTicks()
+    local activeCount = 0
+    for h, data in pairs(udg_IgniteData) do
+        local target = data.target
+        if target == nil or not UnitAlive(target) then
+            if data.effect then
+                DestroyEffect(data.effect)
+                data.effect = nil
+            end
+            udg_IgniteData[h] = nil
+        else
+            local remainingStacks = {}
+            for i = 1, #data.stacks do
+                local st = data.stacks[i]
+                st.remaining = st.remaining - 0.5
+                if st.remaining > 0 then
+                    table.insert(remainingStacks, st)
+                end
+            end
+            data.stacks = remainingStacks
+
+            local stackCount = #data.stacks
+            if stackCount == 0 then
+                if data.effect then
+                    DestroyEffect(data.effect)
+                    data.effect = nil
+                end
+                udg_IgniteData[h] = nil
+            else
+                activeCount = activeCount + 1
+                local dmg = stackCount * 1.0
+                local src = data.source
+                if src == nil or not UnitAlive(src) then
+                    src = target
+                end
+                UnitDamageTarget(src, target, dmg, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_MAGIC, WEAPON_TYPE_WHOKNOWS)
+            end
+        end
+    end
+
+    if activeCount == 0 and IgniteTimer ~= nil then
+        PauseTimer(IgniteTimer)
+        DestroyTimer(IgniteTimer)
+        IgniteTimer = nil
+    end
+end
+
+function ApplyIgnite(target, stacks, duration, sourceUnit)
+    if target == nil or not UnitAlive(target) then return end
+    if IsUnitType(target, UNIT_TYPE_STRUCTURE) or IsUnitType(target, UNIT_TYPE_MECHANICAL) then return end
+    if stacks == nil or stacks <= 0 then stacks = 1 end
+    if duration == nil or duration <= 0 then duration = 5.0 end
+
+    local h = GetHandleId(target)
+    local data = udg_IgniteData[h]
+    if not data then
+        data = {
+            target = target,
+            source = sourceUnit,
+            stacks = {},
+            effect = AddSpecialEffectTarget("Abilities\\Spells\\Other\\BreathOfFire\\BreathOfFireDamage.mdl", target, "chest")
+        }
+        udg_IgniteData[h] = data
+    else
+        if sourceUnit ~= nil then
+            data.source = sourceUnit
+        end
+        if data.effect == nil then
+            data.effect = AddSpecialEffectTarget("Abilities\\Spells\\Other\\BreathOfFire\\BreathOfFireDamage.mdl", target, "chest")
+        end
+    end
+
+    for i = 1, stacks do
+        if #data.stacks < 3 then
+            table.insert(data.stacks, { remaining = duration, source = sourceUnit })
+        else
+            local minIdx = 1
+            local minRem = data.stacks[1].remaining
+            for j = 2, #data.stacks do
+                if data.stacks[j].remaining < minRem then
+                    minRem = data.stacks[j].remaining
+                    minIdx = j
+                end
+            end
+            if duration > minRem then
+                data.stacks[minIdx].remaining = duration
+                data.stacks[minIdx].source = sourceUnit
+            end
+        end
+    end
+
+    if IgniteTimer == nil then
+        IgniteTimer = CreateTimer()
+        TimerStart(IgniteTimer, 0.5, true, ProcessIgniteTicks)
+    end
+end
+_G.ApplyIgnite = ApplyIgnite
+
+--===========================================================================
+-- LUNAR WARRIOR: ТАНЕЦ ПОЛУМЕСЯЦА (CRESCENT DANCE)
+--===========================================================================
+local IsUnitDashing_Crescent = {}
+
+local function IsPointWalkable(px, py)
+    -- In Warcraft 3, IsTerrainPathable returns TRUE when BLOCKED, FALSE when WALKABLE
+    return not IsTerrainPathable(px, py, PATHING_TYPE_WALKABILITY)
+end
+
+function Trig_CrescentDance_Conditions()
+    local attacker = GetAttacker()
+    if attacker == nil or not UnitAlive(attacker) then return false end
+    if GetUnitAbilityLevel(attacker, FourCC('A0EF')) == 0 then return false end
+    if GetPlayerTechCount(GetOwningPlayer(attacker), FourCC('R0LC'), true) == 0 then return false end
+    local h = GetHandleId(attacker)
+    if IsUnitDashing_Crescent[h] then return false end
+    if GetRandomInt(1, 100) > 15 then return false end
+
+    local target = GetTriggerUnit()
+    if target == nil or not UnitAlive(target) then return false end
+    if not IsUnitEnemy(target, GetOwningPlayer(attacker)) then return false end
+    if IsUnitType(target, UNIT_TYPE_STRUCTURE) or IsUnitType(target, UNIT_TYPE_FLYING) then return false end
+
+    return true
+end
+
+function Trig_CrescentDance_Actions()
+    local attacker = GetAttacker()
+    local target = GetTriggerUnit()
+    local h = GetHandleId(attacker)
+
+    local ax, ay = GetUnitX(attacker), GetUnitY(attacker)
+    local tx, ty = GetUnitX(target), GetUnitY(target)
+    local dx = tx - ax
+    local dy = ty - ay
+    local dist = math.sqrt(dx * dx + dy * dy)
+    if dist < 1.0 then dist = 1.0 end
+    local ux = dx / dist
+    local uy = dy / dist
+
+    -- Landing point B: behind target by 120 units
+    local bx = tx + ux * 120.0
+    local by = ty + uy * 120.0
+
+    if not IsPointWalkable(bx, by) then
+        return -- Landing spot is blocked; execute normal attack
+    end
+
+    -- Perpendicular unit vectors: left (-uy, ux), right (uy, -ux)
+    local perpLx, perpLy = -uy, ux
+    local perpRx, perpRy = uy, -ux
+
+    local arcOffset = 135.0
+    local ctrlLx = tx + perpLx * arcOffset
+    local ctrlLy = ty + perpLy * arcOffset
+    local ctrlRx = tx + perpRx * arcOffset
+    local ctrlRy = ty + perpRy * arcOffset
+
+    local left_ok = IsPointWalkable(ctrlLx, ctrlLy) and IsPointWalkable(0.5 * (ax + ctrlLx), 0.5 * (ay + ctrlLy)) and IsPointWalkable(0.5 * (ctrlLx + bx), 0.5 * (ctrlLy + by))
+    local right_ok = IsPointWalkable(ctrlRx, ctrlRy) and IsPointWalkable(0.5 * (ax + ctrlRx), 0.5 * (ay + ctrlRy)) and IsPointWalkable(0.5 * (ctrlRx + bx), 0.5 * (ctrlLy + by))
+
+    local ctrlX, ctrlY
+    if left_ok and right_ok then
+        if GetRandomInt(1, 2) == 1 then
+            ctrlX, ctrlY = ctrlLx, ctrlLy
+        else
+            ctrlX, ctrlY = ctrlRx, ctrlRy
+        end
+    elseif left_ok then
+        ctrlX, ctrlY = ctrlLx, ctrlLy
+    elseif right_ok then
+        ctrlX, ctrlY = ctrlRx, ctrlRy
+    else
+        return -- Neither crescent flank is walkable; execute normal attack
+    end
+
+    -- Crescent dance starts: interrupt normal attack
+    IssueImmediateOrder(attacker, "stop")
+    IsUnitDashing_Crescent[h] = true
+    SetUnitAnimation(attacker, "attack")
+    DestroyEffect(AddSpecialEffect("Abilities\\Spells\\NightElf\\Blink\\BlinkCaster.mdl", ax, ay))
+
+    local baseDmg = BlzGetUnitBaseDamage(attacker, 0)
+    if baseDmg <= 0 then baseDmg = 25 end
+    local slashDmg = baseDmg * 0.5
+
+    local step = 0
+    local hitTable = {}
+    local grp = CreateGroup()
+    local dashTimer = CreateTimer()
+
+    TimerStart(dashTimer, 0.03125, true, function()
+        step = step + 1
+        local t = step / 8.0
+        local t0 = 1.0 - t
+
+        if not UnitAlive(attacker) then
+            IsUnitDashing_Crescent[h] = nil
+            DestroyGroup(grp)
+            PauseTimer(dashTimer)
+            DestroyTimer(dashTimer)
+            return
+        end
+
+        local curX = t0 * t0 * ax + 2.0 * t0 * t * ctrlX + t * t * bx
+        local curY = t0 * t0 * ay + 2.0 * t0 * t * ctrlY + t * t * by
+
+        SetUnitX(attacker, curX)
+        SetUnitY(attacker, curY)
+
+        if step % 2 == 0 then
+            DestroyEffect(AddSpecialEffect("Abilities\\Spells\\NightElf\\Blink\\BlinkCaster.mdl", curX, curY))
+        end
+
+        GroupEnumUnitsInRange(grp, curX, curY, 130.0, nil)
+        while true do
+            local enemy = FirstOfGroup(grp)
+            if enemy == nil then break end
+            GroupRemoveUnit(grp, enemy)
+            local eh = GetHandleId(enemy)
+            if not hitTable[eh] and UnitAlive(enemy) and IsUnitEnemy(enemy, GetOwningPlayer(attacker)) and not IsUnitType(enemy, UNIT_TYPE_STRUCTURE) and not IsUnitType(enemy, UNIT_TYPE_FLYING) then
+                hitTable[eh] = true
+                UnitDamageTarget(attacker, enemy, slashDmg, true, false, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL, WEAPON_TYPE_WHOKNOWS)
+                DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\NightElf\\FanOfKnives\\FanOfKnivesTarget.mdl", enemy, "chest"))
+            end
+        end
+
+        if step >= 8 then
+            IsUnitDashing_Crescent[h] = nil
+            DestroyGroup(grp)
+            PauseTimer(dashTimer)
+            DestroyTimer(dashTimer)
+
+            if UnitAlive(target) then
+                local finalTx, finalTy = GetUnitX(target), GetUnitY(target)
+                local faceAngle = bj_RADTODEG * Atan2(finalTy - curY, finalTx - curX)
+                SetUnitFacing(attacker, faceAngle)
+                IssueTargetOrder(attacker, "attack", target)
+            end
+        end
+    end)
+end
+
+function InitTrig_CrescentDance()
+    gg_trg_CrescentDance = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_CrescentDance, EVENT_PLAYER_UNIT_ATTACKED)
+    TriggerAddCondition(gg_trg_CrescentDance, Condition(Trig_CrescentDance_Conditions))
+    TriggerAddAction(gg_trg_CrescentDance, Trig_CrescentDance_Actions)
+
+    BlzSetAbilityTooltip(FourCC('A0EF'), "Танец полумесяца", 0)
+    BlzSetAbilityExtendedTooltip(FourCC('A0EF'), "С вероятностью 15% при атаке воин совершает стремительный перекат полумесяцем за спину противника, нанося всем врагам на пути 50% от своего базового урона.", 0)
+    BlzSetAbilityIcon(FourCC('A0EF'), "ReplaceableTextures\\CommandButtons\\BTNAmbush.blp")
+    BlzSetAbilityPosX(FourCC('A0EF'), 1)
+    BlzSetAbilityPosY(FourCC('A0EF'), 2)
+end
+
+--===========================================================================
+-- DRUID-OWL: АСТРАЛЬНЫЕ ФАЗЫ (СОЛНЦЕ И ЛУНА)
+--===========================================================================
+Owl_Phase = Owl_Phase or {}
+Owl_HeadFX = Owl_HeadFX or {}
+
+function UpdateOwlAstralVisuals(u)
+    if u == nil or not UnitAlive(u) then return end
+    local h = GetHandleId(u)
+    local phase = Owl_Phase[h] or "solar"
+
+    if Owl_HeadFX[h] then
+        DestroyEffect(Owl_HeadFX[h])
+        Owl_HeadFX[h] = nil
+    end
+
+    if phase == "solar" then
+        SetUnitVertexColor(u, 255, 210, 180, 255)
+        Owl_HeadFX[h] = AddSpecialEffectTarget("Abilities\\Weapons\\FireBall\\FireBallMissile.mdl", u, "overhead")
+    else
+        SetUnitVertexColor(u, 180, 210, 255, 255)
+        Owl_HeadFX[h] = AddSpecialEffectTarget("Abilities\\Weapons\\AvengerMissile\\AvengerMissile.mdl", u, "overhead")
+    end
+end
+
+function InitOwlUnit(u)
+    if u == nil then return end
+    local h = GetHandleId(u)
+    if Owl_Phase[h] == nil then
+        Owl_Phase[h] = "solar"
+        UnitAddAbility(u, FourCC('ACfb'))
+        UnitRemoveAbility(u, FourCC('Anhe'))
+        UpdateOwlAstralVisuals(u)
+    end
+end
+
+function Trig_DruidOwl_SpellEffect_Actions()
+    local spellId = GetSpellAbilityId()
+    local caster = GetTriggerUnit()
+    local uid = GetUnitTypeId(caster)
+    local isOwl = (uid == FourCC('n05D') or uid == FourCC('n05G'))
+
+    if spellId == FourCC('Absk') and isOwl then
+        UnitRemoveAbility(caster, FourCC('Bbsk'))
+        BlzStartUnitAbilityCooldown(caster, FourCC('Absk'), 2.50)
+
+        local h = GetHandleId(caster)
+        if Owl_Phase[h] == "lunar" then
+            Owl_Phase[h] = "solar"
+            UnitRemoveAbility(caster, FourCC('Anhe'))
+            UnitAddAbility(caster, FourCC('ACfb'))
+        else
+            Owl_Phase[h] = "lunar"
+            UnitRemoveAbility(caster, FourCC('ACfb'))
+            UnitAddAbility(caster, FourCC('Anhe'))
+        end
+        UpdateOwlAstralVisuals(caster)
+
+    elseif spellId == FourCC('ACfb') and isOwl then
+        local target = GetSpellTargetUnit()
+        if target and UnitAlive(target) then
+            ApplyIgnite(target, 1, 6.0, caster)
+        end
+        BlzStartUnitAbilityCooldown(caster, FourCC('ACfb'), 9.00)
+        SetUnitState(caster, UNIT_STATE_MANA, GetUnitState(caster, UNIT_STATE_MANA) + 10.0)
+
+    elseif spellId == FourCC('Anhe') and isOwl then
+        local target = GetSpellTargetUnit()
+        if target and UnitAlive(target) then
+            SetWidgetLife(target, GetWidgetLife(target) + 35.0)
+            DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\NightElf\\Starfall\\StarfallTarget.mdl", target, "origin"))
+        end
+        BlzStartUnitAbilityCooldown(caster, FourCC('Anhe'), 9.00)
+        SetUnitState(caster, UNIT_STATE_MANA, GetUnitState(caster, UNIT_STATE_MANA) - 60.0)
+
+    elseif spellId == FourCC('A164') and isOwl then
+        -- Transformation between n05D and n05G
+        local morphTimer = CreateTimer()
+        TimerStart(morphTimer, 0.15, false, function()
+            local t = GetExpiredTimer()
+            if UnitAlive(caster) then
+                local h = GetHandleId(caster)
+                if Owl_Phase[h] == "lunar" then
+                    UnitRemoveAbility(caster, FourCC('ACfb'))
+                    UnitAddAbility(caster, FourCC('Anhe'))
+                else
+                    UnitRemoveAbility(caster, FourCC('Anhe'))
+                    UnitAddAbility(caster, FourCC('ACfb'))
+                end
+                UpdateOwlAstralVisuals(caster)
+            end
+            DestroyTimer(t)
+        end)
+    end
+end
+
+function Trig_DruidOwl_Damage_Actions()
+    if not BlzGetEventIsAttack() then return end
+    local src = GetEventDamageSource()
+    if src == nil or not UnitAlive(src) then return end
+    local uid = GetUnitTypeId(src)
+    if uid ~= FourCC('n05D') and uid ~= FourCC('n05G') then return end
+
+    local target = GetTriggerUnit()
+    if target == nil or not UnitAlive(target) then return end
+
+    local sh = GetHandleId(src)
+    if Owl_Phase[sh] == nil then
+        InitOwlUnit(src)
+    end
+
+    if Owl_Phase[sh] == "solar" then
+        ApplyIgnite(target, 1, 5.0, src)
+    elseif Owl_Phase[sh] == "lunar" then
+        local sx, sy = GetUnitX(src), GetUnitY(src)
+        local srcPlayer = GetOwningPlayer(src)
+        local grp = CreateGroup()
+        GroupEnumUnitsInRange(grp, sx, sy, 500.0, nil)
+
+        local lowestAlly = nil
+        local lowestMana = 9999999.0
+
+        while true do
+            local ally = FirstOfGroup(grp)
+            if ally == nil then break end
+            GroupRemoveUnit(grp, ally)
+
+            if UnitAlive(ally) and IsUnitAlly(ally, srcPlayer) and not IsUnitType(ally, UNIT_TYPE_STRUCTURE) and not IsUnitType(ally, UNIT_TYPE_MECHANICAL) and not IsUnitType(ally, UNIT_TYPE_DEAD) then
+                local maxMana = BlzGetUnitMaxMana(ally)
+                if maxMana > 0 then
+                    local curMana = GetUnitState(ally, UNIT_STATE_MANA)
+                    if curMana < maxMana and curMana < lowestMana then
+                        lowestMana = curMana
+                        lowestAlly = ally
+                    end
+                end
+            end
+        end
+        DestroyGroup(grp)
+
+        if lowestAlly ~= nil then
+            local newMana = GetUnitState(lowestAlly, UNIT_STATE_MANA) + 10.0
+            SetUnitState(lowestAlly, UNIT_STATE_MANA, newMana)
+            DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIma\\AImaTarget.mdl", lowestAlly, "origin"))
+        end
+    end
+end
+
+function Trig_DruidOwl_Death_Actions()
+    local u = GetTriggerUnit()
+    local uid = GetUnitTypeId(u)
+    if uid == FourCC('n05D') or uid == FourCC('n05G') then
+        local h = GetHandleId(u)
+        if Owl_HeadFX[h] then
+            DestroyEffect(Owl_HeadFX[h])
+            Owl_HeadFX[h] = nil
+        end
+    end
+end
+
+function Trig_DruidOwl_Train_Actions()
+    local u = GetTrainedUnit()
+    if GetUnitTypeId(u) == FourCC('n05D') then
+        InitOwlUnit(u)
+    end
+end
+
+function InitTrig_DruidOwlAstralPhases()
+    gg_trg_DruidOwl_Spell = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_DruidOwl_Spell, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    TriggerAddAction(gg_trg_DruidOwl_Spell, Trig_DruidOwl_SpellEffect_Actions)
+
+    gg_trg_DruidOwl_Damage = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_DruidOwl_Damage, EVENT_PLAYER_UNIT_DAMAGED)
+    TriggerAddAction(gg_trg_DruidOwl_Damage, Trig_DruidOwl_Damage_Actions)
+
+    gg_trg_DruidOwl_Death = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_DruidOwl_Death, EVENT_PLAYER_UNIT_DEATH)
+    TriggerAddAction(gg_trg_DruidOwl_Death, Trig_DruidOwl_Death_Actions)
+
+    gg_trg_DruidOwl_Train = CreateTrigger()
+    TriggerRegisterAnyUnitEventBJ(gg_trg_DruidOwl_Train, EVENT_PLAYER_UNIT_TRAIN_FINISH)
+    TriggerAddAction(gg_trg_DruidOwl_Train, Trig_DruidOwl_Train_Actions)
+
+    -- Stance button
+    BlzSetAbilityTooltip(FourCC('Absk'), "Астральная фаза", 0)
+    BlzSetAbilityExtendedTooltip(FourCC('Absk'), "Переключает астральную фазу друида между Солнцем и Луной.|n|n|cffffaa00Фаза Солнца:|r|n• Атаки поджигают врага (до 3 стаков, 1 ед. урона раз в 0.5 сек).|n• Заклинание: «Солнечный ожог» (40 урона + поджигание на 6 сек, 65 маны, 9 сек КД).|n|n|cff99bbffФаза Луны:|r|n• Атаки восполняют 10 маны союзнику с наименьшей маной в радиусе 500.|n• Заклинание: «Звездный луч» (исцеляет 50 ед. здоровья, 65 маны, 9 сек КД).|n|nПерезарядка: 2.5 сек.", 0)
+    BlzSetAbilityIcon(FourCC('Absk'), "ReplaceableTextures\\CommandButtons\\BTNMoonStone.blp")
+    BlzSetAbilityPosX(FourCC('Absk'), 0)
+    BlzSetAbilityPosY(FourCC('Absk'), 2)
+
+    -- Solar Burn
+    BlzSetAbilityTooltip(FourCC('ACfb'), "Солнечный ожог", 0)
+    BlzSetAbilityExtendedTooltip(FourCC('ACfb'), "Поражает врага сгустком солнечного пламени, нанося 40 единиц магического урона и накладывая 1 эффект поджигания на 6 сек.|n|nЗатраты маны: 65.|nВремя восстановления: 9 сек.", 0)
+    BlzSetAbilityIcon(FourCC('ACfb'), "ReplaceableTextures\\CommandButtons\\BTNSearingArrows.blp")
+    BlzSetAbilityPosX(FourCC('ACfb'), 1)
+    BlzSetAbilityPosY(FourCC('ACfb'), 2)
+
+    -- Star Ray
+    BlzSetAbilityTooltip(FourCC('Anhe'), "Звездный луч", 0)
+    BlzSetAbilityExtendedTooltip(FourCC('Anhe'), "Направляет чистый свет звезд на раненого союзника, восполняя 50 единиц здоровья.|n|nЗатраты маны: 65.|nВремя восстановления: 9 сек.", 0)
+    BlzSetAbilityIcon(FourCC('Anhe'), "ReplaceableTextures\\CommandButtons\\BTNStarfall.blp")
+    BlzSetAbilityActivatedTooltip(FourCC('Anhe'), "Звездный луч", 0)
+    BlzSetAbilityActivatedExtendedTooltip(FourCC('Anhe'), "Направляет чистый свет звезд на раненого союзника, восполняя 50 единиц здоровья.|n|nЗатраты маны: 65.|nВремя восстановления: 9 сек.", 0)
+    BlzSetAbilityActivatedIcon(FourCC('Anhe'), "ReplaceableTextures\\CommandButtons\\BTNStarfall.blp")
+    BlzSetAbilityPosX(FourCC('Anhe'), 1)
+    BlzSetAbilityPosY(FourCC('Anhe'), 2)
+    BlzSetAbilityActivatedPosX(FourCC('Anhe'), 1)
+    BlzSetAbilityActivatedPosY(FourCC('Anhe'), 2)
+end
+
 
 --===========================================================================
 -- Trigger: NagaStart
@@ -68129,6 +68606,8 @@ function InitCustomTriggers()
     InitTrig_StartBuildingTree()
     InitTrig_CanselBuildingTree()
     InitTrig_GuadrianSpell()
+    InitTrig_CrescentDance()
+    InitTrig_DruidOwlAstralPhases()
     InitTrig_NagaStart()
     InitTrig_Coatl()
     InitTrig_MurlokCan()

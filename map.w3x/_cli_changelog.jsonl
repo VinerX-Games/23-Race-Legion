@@ -134,3 +134,23 @@
 {"ts":"2026-06-15T14:30:30.247Z","command":"set-field","type":"unit","id":"W202","field":"name","old":"TRIGSTR_11880","new":"|cffdcb496Предводитель троллей|r"}
 {"ts":"2026-06-15T14:30:31.209Z","command":"set-field","type":"unit","id":"W202","field":"editorsuffix","old":"(Ор2 - Темная Орда)","new":"(Ор2)"}
 {"ts":"2026-06-15T14:30:46.420Z","command":"set-field","type":"unit","id":"w20a","field":"trains","old":"W200,W202,W201","new":"W200,W202,W201,W203"}
+{"ts":"2026-10-12T18:06:09.606Z","command":"set-field","type":"unit","id":"e00I","field":"name","old":"TRIGSTR_27293","new":"|cffbebedcЛунный воин|r"}
+{"ts":"2026-10-12T18:06:21.587Z","command":"set-field","type":"unit","id":"e00I","field":"tip","old":"TRIGSTR_27294","new":"Обучить |cffbebedcЛунный воин|r"}
+{"ts":"2026-10-12T18:06:49.665Z","command":"set-field","type":"unit","id":"e00I","field":"ubertip","old":"TRIGSTR_31703","new":"Ловкий эльфийский боец ближнего боя с парными глефами. Владеет «Танцем полумесяца», позволяющим совершать стремительные перекаты вокруг врагов с рассекающим уроном."}
+{"ts":"2026-10-12T18:10:20.408Z","command":"set-field","type":"unit","id":"n05D","field":"abillist","old":"A164,ACbl","new":"A164,Absk,ACfb"}
+{"ts":"2026-10-12T18:13:27.732Z","command":"set-field","type":"unit","id":"n05G","field":"abillist","old":"A164,ACbh","new":"A164,ACbh,Absk,ACfb"}
+{"ts":"2026-10-12T18:23:07.210Z","command":"set-field","type":"upgrade","id":"R0GA","field":"goldbase","old":"430","new":"430"}
+{"ts":"2026-10-12T18:25:04.681Z","command":"copy-object","type":"upgrade","source":"R0G7","new_id":"R0LC"}
+{"ts":"2026-10-12T18:26:14.705Z","command":"set-field","type":"upgrade","id":"R0LC","field":"name1","old":"Знак хищника","new":"|cffbebedcТанец полумесяца|r"}
+{"ts":"2026-10-12T18:26:24.509Z","command":"set-field","type":"upgrade","id":"R0LC","field":"tip1","old":"Исследовать «Знак хищника»","new":"Исследовать |cffbebedcТанец полумесяца|r"}
+{"ts":"2026-10-12T18:26:25.148Z","command":"set-field","type":"upgrade","id":"R0LC","field":"ubertip1","old":"Позволяет друидам-хищникам применять «Рев» в облике медведя.","new":"Обучает Лунных воинов «Танцу полумесяца».|n|nС вероятностью 15% при атаке воин совершает стремительный перекат полумесяцем за спину противника, нанося всем врагам на пути 50% от своего базового урона."}
+{"ts":"2026-10-12T18:26:25.823Z","command":"set-field","type":"upgrade","id":"R0LC","field":"art1","old":"ReplaceableTextures\\CommandButtons\\BTNEnchantedBears.blp","new":"ReplaceableTextures\\CommandButtons\\BTNAmbush.blp"}
+{"ts":"2026-10-12T18:26:26.509Z","command":"set-field","type":"upgrade","id":"R0LC","field":"hotkey1","old":"M","new":"C"}
+{"ts":"2026-10-12T18:26:27.159Z","command":"set-field","type":"upgrade","id":"R0LC","field":"goldbase","old":"25","new":"125"}
+{"ts":"2026-10-12T18:26:27.831Z","command":"set-field","type":"upgrade","id":"R0LC","field":"lumberbase","old":"100","new":"100"}
+{"ts":"2026-10-12T18:26:28.495Z","command":"set-field","type":"upgrade","id":"R0LC","field":"timebase","old":"20","new":"30"}
+{"ts":"2026-10-12T18:26:29.166Z","command":"set-field","type":"upgrade","id":"R0LC","field":"buttonpos","old":"1","new":"2"}
+{"ts":"2026-10-12T18:26:29.872Z","command":"set-field","type":"upgrade","id":"R0LC","field":"buttonpos2","old":"1","new":"2"}
+{"ts":"2026-10-12T18:26:30.572Z","command":"set-field","type":"upgrade","id":"R0LC","field":"requires","old":"Redc","new":"etoa,edcm"}
+{"ts":"2026-10-12T18:26:31.248Z","command":"set-field","type":"upgrade","id":"R0LC","field":"requires1","old":"","new":"etoa,edcm"}
+{"ts":"2026-10-12T18:26:47.527Z","command":"set-field","type":"unit","id":"eaom","field":"researches","old":"R0GA,R0G9,R0G7,Reib,Remk,Remg,Repb","new":"R0GA,R0G9,R0G7,Reib,Remk,Remg,Repb,R0LC"}
