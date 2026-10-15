@@ -897,7 +897,8 @@ function AiSquadOrderAtk(g, x, y)
         local u = BlzGroupUnitAt(g, k)
         if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
             and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
-            and not IsUnitType(u, UNIT_TYPE_PEON) then
+            and not IsUnitType(u, UNIT_TYPE_PEON)
+            and not AiCombatProtected(u) then
             GroupAddUnit(tmp, u)
         end
         k = k + 1
@@ -936,7 +937,8 @@ function AiSquadOrderMov(g, x, y)
         local u = BlzGroupUnitAt(g, k)
         if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
             and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
-            and not IsUnitType(u, UNIT_TYPE_PEON) then
+            and not IsUnitType(u, UNIT_TYPE_PEON)
+            and not AiCombatProtected(u) then
             GroupAddUnit(tmp, u)
         end
         k = k + 1
@@ -1109,7 +1111,9 @@ function AiBrainRecoverStranded(pi, wm)
             local dH = far2 + 1.0
             if capx ~= nil then local dhx, dhy = ux - capx, uy - capy; dH = dhx * dhx + dhy * dhy end
             if dC > far2 and dH > far2 then
-                IssuePointOrder(u, "move", cx, cy)   -- rejoin the army blob
+                if not AiCombatProtected(u) then
+                    IssuePointOrder(u, "move", cx, cy)   -- rejoin the army blob
+                end
                 moved = moved + 1
             end
         end
@@ -3060,6 +3064,7 @@ function BrainFocus(pi, p, wm)
 
     local cnt = 0
     local function orderIdle(u)
+        if AiCombatProtected(u) then return end
         local tx, ty, ord = targetFor(GetUnitX(u), GetUnitY(u))
         if ord == nil then return end   -- cross-water, no portal route: hold (don't swim)
         IssuePointOrder(u, ord, tx, ty)
@@ -3666,6 +3671,7 @@ function AiBrainArmyTickInner(pi, p)
     local wm = AiBrainPerceive(pi)
     local race = AiRaceOf(pi)
 
+    AiCombatTick(pi, wm, race)
     lap("perceive")
 
     if race ~= nil then

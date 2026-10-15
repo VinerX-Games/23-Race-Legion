@@ -289,6 +289,26 @@ function TryBuy(p, ePoints)
 			end
 		end
 
+        -- Keep consumables available before filling the remaining slots with gear.
+        local consumable = nil
+        if not owned[FourCC('phea')] and not owned[FourCC('pghe')] then
+            consumable = FourCC('phea')
+        elseif not owned[FourCC('pman')] and not owned[FourCC('pgma')]
+            and GetUnitState(u, UNIT_STATE_MAX_MANA) > 0 then
+            consumable = FourCC('pman')
+        end
+        if consumable ~= nil then
+            if GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) >= 150 then
+                local it = UnitAddItemById(u, consumable)
+                if it ~= nil and UnitHasItem(u, it) then
+                    SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) - 150)
+                elseif it ~= nil then
+                    RemoveItem(it)
+                end
+            end
+            return
+        end
+
 		-- Collect available items from the tier (skip already-owned)
 		local available = {}
 		local tierItems

@@ -1155,6 +1155,7 @@ function Trig_AttackerAi_Actions()
 end
 --===========================================================================
 function InitTrig_AttackerAi()
+    AiCombatInit()
     gg_trg_AttackerAi=CreateTrigger()
     DisableTrigger(gg_trg_AttackerAi)
     TriggerRegisterAnyUnitEventBJ(gg_trg_AttackerAi, EVENT_PLAYER_UNIT_ATTACKED)

@@ -89,6 +89,7 @@ function IsAiCombatRetaskable(u)
 	if IsUnitType(u, UNIT_TYPE_STRUCTURE) or IsUnitType(u, UNIT_TYPE_PEON) then
 		return false
 	end
+	if AiCombatProtected ~= nil and AiCombatProtected(u) then return false end
 	-- "Lazy" = not committed to an order. Only retask idle-ish units (orders
 	-- 851972 / 851976 / 0). Units already attacking/moving are left alone so the
 	-- army doesn't get re-targeted every tick (was the re-tasking churn bug).

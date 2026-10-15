@@ -2254,7 +2254,9 @@ balance = {}	---@type real
 additional = {}	---@type real	
 IncomeMod = 1	---@type real	
 Tax = 0.15	---@type real	
-Allmap = nil	---@type region	
+-- Keep this region before main: deferring it to InitGlobals regresses movement.
+-- Confirmed by the fec12de region1 / other22 Warcraft comparison.
+Allmap = CreateRegion()	---@type region	
 AllyTax = {}	---@type real	
 face = nil	---@type framehandle	
 faceHover = nil	---@type framehandle	

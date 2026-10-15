@@ -55,6 +55,31 @@ RegisterAiRace("Cult", {
           consumeAbil = FourCC('cDat'), range = 700.0, minCluster = 5, chance = 12 },
     },
 
+    attackerData = {
+        [FourCC('CD01')] = {
+            { order = "deathcoil", needAbil = FourCC('A0CO'), chance = 2, notStructure = true },
+            { order = "roar", needAbil = FourCC('A0CP'), type = "immediate", chance = 2 },
+            { order = "fanofknives", needAbil = FourCC('A0CQ'), type = "immediate", range = 400, chance = 2 },
+        },
+        [FourCC('U02X')] = {
+            { order = "frostnova", needAbil = FourCC('AUfn'), chance = 2, notStructure = true },
+            -- Channel uses DataF=acidbomb; editor Order=blackarrowon is not its cast order.
+            { order = "acidbomb", needAbil = FourCC('A1HE'), type = "point", range = 750, chance = 2 },
+            { order = "deathanddecay", needAbil = FourCC('AUdd'), type = "point", chance = 3 },
+        },
+        [FourCC('CD02')] = {
+            -- Firelord summon is 852667 in the engine; OrderId("slimemonster") returns 0.
+            { orderId = 852667, needAbil = FourCC('A0CL'), type = "immediate", chance = 2 },
+            { order = "raisedead", needAbil = FourCC('A1IL'), type = "immediate", chance = 2 },
+            { order = "animatedead", needAbil = FourCC('A0CN'), type = "immediate", chance = 3 },
+        },
+    },
+    getLvlData = {
+        [FourCC('CD01')] = { ult = FourCC('A0CQ'), skills = { FourCC('A0CO'), FourCC('A0CP'), FourCC('A0CR') } },
+        [FourCC('U02X')] = { ult = FourCC('AUdd'), skills = { FourCC('AUfn'), FourCC('A1HE'), FourCC('AUdr') } },
+        [FourCC('CD02')] = { ult = FourCC('A0CN'), skills = { FourCC('A1IL'), FourCC('A0CL'), FourCC('A0CM') } },
+    },
+
     strategData = {
         gradeCap = 100,
         steps = {

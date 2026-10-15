@@ -123,7 +123,7 @@ RegisterAiRace("Alliance", {
 
         [FourCC('Hpal')] = {
 
-            { order = "holybolt",     chance = 5, type = "target" },
+            { order = "holybolt",     chance = 2, type = "heal", needAbil = FourCC('AHhb') },
 
             { order = "divineshield", chance = 5, type = "immediate" },
 
@@ -137,7 +137,7 @@ RegisterAiRace("Alliance", {
 
             { order = "waterelemental",  chance = 5, type = "immediate" },
 
-            { order = "massteleport",    chance = 5, type = "immediate" },
+            -- Mass teleport belongs to army logistics, not a random combat cast.
 
         },
 
@@ -157,7 +157,7 @@ RegisterAiRace("Alliance", {
 
             { order = "polymorph",    chance = 4, type = "target", notStructure = true },
 
-            { order = "invisibility", chance = 4, type = "target" },
+            { order = "invisibility", chance = 4, type = "ally" },
 
         },
 
@@ -167,7 +167,7 @@ RegisterAiRace("Alliance", {
 
             { order = "dispel",     chance = 4, type = "point", range = 490 },
 
-            { order = "innerfire",  chance = 4, type = "target" },
+            { order = "innerfire",  chance = 4, type = "ally" },
 
         },
 

@@ -444,13 +444,14 @@ function AiRunAttacker(id, u, target, p, def)
     if tbl == nil then
         return false
     end
+    if AiCombatProtected(u) then return true end
     if tbl.pre ~= nil then
         for _, pre in ipairs(tbl.pre) do
             if GetRandomInt(1, pre.chance or 1) == 1 then
                 if pre.terrain == "water" and not IsTerrainPathable(GetUnitX(u), GetUnitY(u), PATHING_TYPE_WALKABILITY) then
                     if pre.notAbil == nil or GetUnitAbilityLevel(u, pre.notAbil) == 0 then
-                        _castAbility(u, pre, nil, nil)
-                        if pre.ret then
+                        local accepted = _castAbility(u, pre, nil, nil)
+                        if accepted and pre.ret then
                             return true
                         end
                     end
@@ -458,7 +459,6 @@ function AiRunAttacker(id, u, target, p, def)
             end
         end
     end
-    local unitAbils = tbl[#tbl] and tbl or tbl -- detect array-or-map
     local entries = tbl[id]
     if entries == nil then
         for _, entry in ipairs(tbl) do
@@ -486,12 +486,10 @@ function AiRunAttacker(id, u, target, p, def)
                 if SquareRoot(dx * dx + dy * dy) > entry.range then
                     -- skip: too far
                 else
-                    _castAbility(u, entry, target, p)
-                    break
+                    if _castAbility(u, entry, target, p) then return true end
                 end
             else
-                _castAbility(u, entry, target, p)
-                break
+                if _castAbility(u, entry, target, p) then return true end
             end
         end
     end
@@ -506,24 +504,42 @@ end
 ---@param target unit|nil
 ---@param p player|nil
 function _castAbility(u, entry, target, p)
+    if u == nil or GetUnitTypeId(u) == 0 or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then return false end
+    if AiCombatProtected(u) then return false end
+    if entry.needAbil ~= nil and GetUnitAbilityLevel(u, entry.needAbil) == 0 then return false end
     local tp = entry.type or "target"
     if tp == "immediate" then
-        IssueImmediateOrder(u, entry.order)
-    elseif tp == "heal" and p ~= nil then
-        gUnit2 = nil
-        gGroup = gGroup or CreateGroup()
-        GroupEnumUnitsInRange(gGroup, GetUnitX(target), GetUnitY(target), entry.allyRange or 550, ToHeal)
-        gUnit2 = GroupPickRandomUnit2(gGroup)
-        if gUnit2 ~= nil then
-            IssueTargetOrder(u, entry.order, gUnit2)
+        if entry.orderId ~= nil then
+            return AiCombatOrderResult(u, IssueImmediateOrderById(u, entry.orderId))
         end
+        return AiCombatOrderResult(u, IssueImmediateOrder(u, entry.order))
+    elseif tp == "heal" then
+        -- Own group and explicit owner: casting can reenter other native callbacks.
+        local group = CreateGroup()
+        GroupEnumUnitsInRange(group, GetUnitX(u), GetUnitY(u), entry.allyRange or 550, nil)
+        local best, lowest = nil, 100
+        for i = 0, BlzGroupGetSize(group) - 1 do
+            local ally = BlzGroupUnitAt(group, i)
+            if ally ~= nil and GetUnitTypeId(ally) ~= 0
+                and GetUnitState(ally, UNIT_STATE_LIFE) > 0.405
+                and IsUnitAlly(ally, GetOwningPlayer(u))
+                and not IsUnitType(ally, UNIT_TYPE_STRUCTURE) then
+                local hp = GetUnitStatePercent(ally, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE)
+                if hp < lowest then best, lowest = ally, hp end
+            end
+        end
+        DestroyGroup(group)
+        if best ~= nil then return AiCombatOrderResult(u, IssueTargetOrder(u, entry.order, best)) end
     elseif tp == "point" and target ~= nil then
-        IssuePointOrder(u, entry.order, GetUnitX(target), GetUnitY(target))
+        return AiCombatOrderResult(u, IssuePointOrder(u, entry.order, GetUnitX(target), GetUnitY(target)))
+    elseif tp == "ally" then
+        return AiCombatOrderResult(u, IssueTargetOrder(u, entry.order, u))
     elseif tp == "self" then
-        IssuePointOrder(u, entry.order, GetUnitX(u), GetUnitY(u))
+        return AiCombatOrderResult(u, IssuePointOrder(u, entry.order, GetUnitX(u), GetUnitY(u)))
     elseif target ~= nil then
-        IssueTargetOrder(u, entry.order, target)
+        return AiCombatOrderResult(u, IssueTargetOrder(u, entry.order, target))
     end
+    return false
 end
 
 function _castAbilityEntry(u, id, target, entries)
@@ -531,8 +547,7 @@ function _castAbilityEntry(u, id, target, entries)
         if entry.needAbil ~= nil and GetUnitAbilityLevel(u, entry.needAbil) == 0 then
             -- skip
         elseif GetRandomInt(1, entry.chance or 4) == 1 then
-            _castAbility(u, entry, target, nil)
-            break
+            if _castAbility(u, entry, target, nil) then return true end
         end
     end
     return false
@@ -571,8 +586,7 @@ function AiRunAttacked(u, pi, def)
     end
     for _, entry in ipairs(entries) do
         if GetRandomInt(1, entry.chance or 4) == 1 then
-            _castAbility(u, entry, nil, nil)
-            break
+            if _castAbility(u, entry, nil, nil) then break end
         end
     end
     return true
@@ -605,12 +619,27 @@ function AiRunGetLvl(u, def)
     if cfg == nil then
         return false
     end
-    local lvl = GetHeroLevel(u)
-    if lvl == 6 or lvl == 10 then
-        SelectHeroSkill(u, cfg.ult or 0)
-    elseif cfg.skills ~= nil then
-        local i = GetRandomInt(1, #cfg.skills)
-        SelectHeroSkill(u, cfg.skills[i])
+    -- Retry eligible skills until every saved point is spent; a rejected skill
+    -- must not strand points until the next level event.
+    for _ = 1, GetHeroSkillPoints(u) do
+        local spent = false
+        local function learn(skill)
+            if skill == nil or skill == 0 then return false end
+            local before = GetHeroSkillPoints(u)
+            SelectHeroSkill(u, skill)
+            return GetHeroSkillPoints(u) < before
+        end
+        if GetHeroLevel(u) >= 6 then spent = learn(cfg.ult) end
+        if not spent and cfg.skills ~= nil and #cfg.skills > 0 then
+            local first = GetRandomInt(1, #cfg.skills)
+            for offset = 0, #cfg.skills - 1 do
+                if learn(cfg.skills[(first + offset - 1) % #cfg.skills + 1]) then
+                    spent = true
+                    break
+                end
+            end
+        end
+        if not spent then break end
     end
     return true
 end
@@ -636,4 +665,138 @@ function AiDispatchUpgrade(pi, id)
     if race ~= nil and race.upgrade ~= nil then
         race.upgrade(pi, id)
     end
+end
+
+-- Combat state belongs to the bot; spell events distinguish accepted orders
+-- from effects that actually fired. No local-player reads or wall-clock timing.
+function AiCombatState(u)
+    local pi = GetPlayerId(GetOwningPlayer(u))
+    AiData[pi] = AiData[pi] or {}
+    local d = AiData[pi]
+    d.combat = d.combat or {}
+    d.combat[u] = d.combat[u] or {}
+    return d.combat[u], d
+end
+
+function AiCombatProtected(u)
+    if u == nil then return false end
+    local state, d = AiCombatState(u)
+    return state.retreat == true or state.casting == true
+        or (state.pending ~= nil and (d.combatTick or 0) < state.pending)
+end
+
+function AiCombatOrderResult(u, accepted)
+    local state, d = AiCombatState(u)
+    d.castOrders = (d.castOrders or 0) + 1
+    if accepted then
+        d.castAccepted = (d.castAccepted or 0) + 1
+        if d.wm ~= nil then state.pending = (d.combatTick or 0) + 2 end
+    end
+    return accepted == true
+end
+
+function AiCombatSpellEvent()
+    local u = GetTriggerUnit()
+    local pi = GetPlayerId(GetOwningPlayer(u))
+    if not udg_AiControl[pi] then return end
+    local state, d = AiCombatState(u)
+    local event = GetTriggerEventId()
+    if event == EVENT_PLAYER_UNIT_SPELL_CHANNEL then
+        state.casting = true
+    elseif event == EVENT_PLAYER_UNIT_SPELL_EFFECT then
+        d.castEffects = d.castEffects or {}
+        local id = GetSpellAbilityId()
+        d.castEffects[id] = (d.castEffects[id] or 0) + 1
+    elseif event == EVENT_PLAYER_UNIT_SPELL_ENDCAST then
+        state.casting, state.pending = nil, nil
+    elseif event == EVENT_PLAYER_UNIT_DEATH then
+        d.combat[u] = nil
+    end
+end
+
+function AiCombatInit()
+    local t = CreateTrigger()
+    for _, event in ipairs({EVENT_PLAYER_UNIT_SPELL_CHANNEL, EVENT_PLAYER_UNIT_SPELL_EFFECT,
+        EVENT_PLAYER_UNIT_SPELL_ENDCAST, EVENT_PLAYER_UNIT_DEATH}) do
+        TriggerRegisterAnyUnitEventBJ(t, event)
+    end
+    TriggerAddAction(t, AiCombatSpellEvent)
+end
+
+function AiHeroCombatTick(pi, u, wm, race)
+    local state = AiCombatState(u)
+    if race ~= nil then AiRunGetLvl(u, race) end
+    local hp = GetUnitStatePercent(u, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE)
+    if not state.casting then
+        for slot = 0, UnitInventorySize(u) - 1 do
+            local item = UnitItemInSlot(u, slot)
+            if item ~= nil then
+                local id = GetItemTypeId(item)
+                local heal = id == FourCC('phea') or id == FourCC('pghe')
+                local mana = id == FourCC('pman') or id == FourCC('pgma')
+                local shield = id == FourCC('pnvu') or id == FourCC('pnvl')
+                if (heal and hp < 55) or (shield and hp < 25)
+                    or (mana and GetUnitStatePercent(u, UNIT_STATE_MANA, UNIT_STATE_MAX_MANA) < 25) then
+                    if UnitUseItem(u, item) then break end
+                end
+            end
+        end
+    end
+    hp = GetUnitStatePercent(u, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE)
+    if hp < 30 then state.retreat = true end
+    if hp >= 70 then state.retreat = nil end
+    if state.retreat and wm.capX ~= nil and wm.capY ~= nil then
+        -- Survival may interrupt a channel, but army commands cannot recall this hero.
+        IssuePointOrder(u, "move", wm.capX, wm.capY)
+    end
+end
+
+function AiCombatTick(pi, wm, race)
+    local d = AiData[pi]
+    d.combatTick = (d.combatTick or 0) + 1
+    local army = udg_Ai_army[pi]
+    if army == nil then return end
+    local size = BlzGroupGetSize(army)
+    for i = 0, size - 1 do
+        local u = BlzGroupUnitAt(army, i)
+        if u ~= nil and GetUnitTypeId(u) ~= 0 and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and IsUnitType(u, UNIT_TYPE_HERO) then AiHeroCombatTick(pi, u, wm, race) end
+    end
+    -- Bounded round-robin sensing also reaches support units which never attack.
+    if size == 0 or race == nil or race.attackerData == nil then return end
+    local cursor = d.combatCursor or 0
+    for offset = 0, math.min(size, 8) - 1 do
+        local u = BlzGroupUnitAt(army, (cursor + offset) % size)
+        if u ~= nil and GetUnitTypeId(u) ~= 0 and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and not AiCombatProtected(u)
+            and (race.attackerData[GetUnitTypeId(u)] ~= nil
+                or #race.attackerData > 0 or race.attackerData.post ~= nil) then
+            local group = CreateGroup()
+            GroupEnumUnitsInRange(group, GetUnitX(u), GetUnitY(u), 800, nil)
+            local target, score = nil, -1
+            for j = 0, BlzGroupGetSize(group) - 1 do
+                local enemy = BlzGroupUnitAt(group, j)
+                if enemy ~= nil and GetUnitTypeId(enemy) ~= 0
+                    and GetUnitState(enemy, UNIT_STATE_LIFE) > 0.405
+                    and IsUnitEnemy(enemy, Player(pi)) and IsUnitVisible(enemy, Player(pi))
+                    and not IsUnitType(enemy, UNIT_TYPE_STRUCTURE) then
+                    local value = 100 - GetUnitStatePercent(enemy, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE)
+                    if IsUnitType(enemy, UNIT_TYPE_HERO) then value = value + 40 end
+                    if GetUnitState(enemy, UNIT_STATE_MAX_MANA) > 0 then value = value + 20 end
+                    if value > score then target, score = enemy, value end
+                end
+            end
+            DestroyGroup(group)
+            if target ~= nil then
+                AiRunAttacker(GetUnitTypeId(u), u, target, Player(pi), race)
+            else
+                -- Wounded allies still need healing after the last enemy falls.
+                for _, entry in ipairs(race.attackerData[GetUnitTypeId(u)] or {}) do
+                    if entry.type == "heal" and GetRandomInt(1, entry.chance or 5) == 1
+                        and _castAbility(u, entry, nil, Player(pi)) then break end
+                end
+            end
+        end
+    end
+    d.combatCursor = (cursor + math.min(size, 8)) % size
 end

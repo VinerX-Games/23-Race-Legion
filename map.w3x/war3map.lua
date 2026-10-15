@@ -3072,7 +3072,9 @@ balance = {}	---@type real
 additional = {}	---@type real	
 IncomeMod = 1	---@type real	
 Tax = 0.15	---@type real	
-Allmap = nil	---@type region	
+-- Keep this region before main: deferring it to InitGlobals regresses movement.
+-- Confirmed by the fec12de region1 / other22 Warcraft comparison.
+Allmap = CreateRegion()	---@type region	
 AllyTax = {}	---@type real	
 face = nil	---@type framehandle	
 faceHover = nil	---@type framehandle	
@@ -3475,6 +3477,7 @@ function IsAiCombatRetaskable(u)
 	if IsUnitType(u, UNIT_TYPE_STRUCTURE) or IsUnitType(u, UNIT_TYPE_PEON) then
 		return false
 	end
+	if AiCombatProtected ~= nil and AiCombatProtected(u) then return false end
 	-- "Lazy" = not committed to an order. Only retask idle-ish units (orders
 	-- 851972 / 851976 / 0). Units already attacking/moving are left alone so the
 	-- army doesn't get re-targeted every tick (was the re-tasking churn bug).
@@ -4619,6 +4622,26 @@ function TryBuy(p, ePoints)
 				owned[GetItemTypeId(slotItem)] = true
 			end
 		end
+
+        -- Keep consumables available before filling the remaining slots with gear.
+        local consumable = nil
+        if not owned[FourCC('phea')] and not owned[FourCC('pghe')] then
+            consumable = FourCC('phea')
+        elseif not owned[FourCC('pman')] and not owned[FourCC('pgma')]
+            and GetUnitState(u, UNIT_STATE_MAX_MANA) > 0 then
+            consumable = FourCC('pman')
+        end
+        if consumable ~= nil then
+            if GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) >= 150 then
+                local it = UnitAddItemById(u, consumable)
+                if it ~= nil and UnitHasItem(u, it) then
+                    SetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD, GetPlayerState(p, PLAYER_STATE_RESOURCE_GOLD) - 150)
+                elseif it ~= nil then
+                    RemoveItem(it)
+                end
+            end
+            return
+        end
 
 		-- Collect available items from the tier (skip already-owned)
 		local available = {}
@@ -8865,7 +8888,6 @@ function InitGlobals()
 	gEnemyGroup = CreateGroup()
 	gAllyGroup = CreateGroup()
 	gSubGroup = CreateGroup()
-	Allmap = CreateRegion()
 	SubGroup2 = CreateGroup()
 	udg_BotsActive = CreateForce()
 	udg_BotsActiveB = CreateForce()
@@ -50653,6 +50675,7 @@ function Trig_AttackerAi_Actions()
 end
 --===========================================================================
 function InitTrig_AttackerAi()
+    AiCombatInit()
     gg_trg_AttackerAi=CreateTrigger()
     DisableTrigger(gg_trg_AttackerAi)
     TriggerRegisterAnyUnitEventBJ(gg_trg_AttackerAi, EVENT_PLAYER_UNIT_ATTACKED)
@@ -53791,13 +53814,14 @@ function AiRunAttacker(id, u, target, p, def)
     if tbl == nil then
         return false
     end
+    if AiCombatProtected(u) then return true end
     if tbl.pre ~= nil then
         for _, pre in ipairs(tbl.pre) do
             if GetRandomInt(1, pre.chance or 1) == 1 then
                 if pre.terrain == "water" and not IsTerrainPathable(GetUnitX(u), GetUnitY(u), PATHING_TYPE_WALKABILITY) then
                     if pre.notAbil == nil or GetUnitAbilityLevel(u, pre.notAbil) == 0 then
-                        _castAbility(u, pre, nil, nil)
-                        if pre.ret then
+                        local accepted = _castAbility(u, pre, nil, nil)
+                        if accepted and pre.ret then
                             return true
                         end
                     end
@@ -53805,7 +53829,6 @@ function AiRunAttacker(id, u, target, p, def)
             end
         end
     end
-    local unitAbils = tbl[#tbl] and tbl or tbl -- detect array-or-map
     local entries = tbl[id]
     if entries == nil then
         for _, entry in ipairs(tbl) do
@@ -53833,12 +53856,10 @@ function AiRunAttacker(id, u, target, p, def)
                 if SquareRoot(dx * dx + dy * dy) > entry.range then
                     -- skip: too far
                 else
-                    _castAbility(u, entry, target, p)
-                    break
+                    if _castAbility(u, entry, target, p) then return true end
                 end
             else
-                _castAbility(u, entry, target, p)
-                break
+                if _castAbility(u, entry, target, p) then return true end
             end
         end
     end
@@ -53853,24 +53874,42 @@ end
 ---@param target unit|nil
 ---@param p player|nil
 function _castAbility(u, entry, target, p)
+    if u == nil or GetUnitTypeId(u) == 0 or GetUnitState(u, UNIT_STATE_LIFE) <= 0.405 then return false end
+    if AiCombatProtected(u) then return false end
+    if entry.needAbil ~= nil and GetUnitAbilityLevel(u, entry.needAbil) == 0 then return false end
     local tp = entry.type or "target"
     if tp == "immediate" then
-        IssueImmediateOrder(u, entry.order)
-    elseif tp == "heal" and p ~= nil then
-        gUnit2 = nil
-        gGroup = gGroup or CreateGroup()
-        GroupEnumUnitsInRange(gGroup, GetUnitX(target), GetUnitY(target), entry.allyRange or 550, ToHeal)
-        gUnit2 = GroupPickRandomUnit2(gGroup)
-        if gUnit2 ~= nil then
-            IssueTargetOrder(u, entry.order, gUnit2)
+        if entry.orderId ~= nil then
+            return AiCombatOrderResult(u, IssueImmediateOrderById(u, entry.orderId))
         end
+        return AiCombatOrderResult(u, IssueImmediateOrder(u, entry.order))
+    elseif tp == "heal" then
+        -- Own group and explicit owner: casting can reenter other native callbacks.
+        local group = CreateGroup()
+        GroupEnumUnitsInRange(group, GetUnitX(u), GetUnitY(u), entry.allyRange or 550, nil)
+        local best, lowest = nil, 100
+        for i = 0, BlzGroupGetSize(group) - 1 do
+            local ally = BlzGroupUnitAt(group, i)
+            if ally ~= nil and GetUnitTypeId(ally) ~= 0
+                and GetUnitState(ally, UNIT_STATE_LIFE) > 0.405
+                and IsUnitAlly(ally, GetOwningPlayer(u))
+                and not IsUnitType(ally, UNIT_TYPE_STRUCTURE) then
+                local hp = GetUnitStatePercent(ally, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE)
+                if hp < lowest then best, lowest = ally, hp end
+            end
+        end
+        DestroyGroup(group)
+        if best ~= nil then return AiCombatOrderResult(u, IssueTargetOrder(u, entry.order, best)) end
     elseif tp == "point" and target ~= nil then
-        IssuePointOrder(u, entry.order, GetUnitX(target), GetUnitY(target))
+        return AiCombatOrderResult(u, IssuePointOrder(u, entry.order, GetUnitX(target), GetUnitY(target)))
+    elseif tp == "ally" then
+        return AiCombatOrderResult(u, IssueTargetOrder(u, entry.order, u))
     elseif tp == "self" then
-        IssuePointOrder(u, entry.order, GetUnitX(u), GetUnitY(u))
+        return AiCombatOrderResult(u, IssuePointOrder(u, entry.order, GetUnitX(u), GetUnitY(u)))
     elseif target ~= nil then
-        IssueTargetOrder(u, entry.order, target)
+        return AiCombatOrderResult(u, IssueTargetOrder(u, entry.order, target))
     end
+    return false
 end
 
 function _castAbilityEntry(u, id, target, entries)
@@ -53878,8 +53917,7 @@ function _castAbilityEntry(u, id, target, entries)
         if entry.needAbil ~= nil and GetUnitAbilityLevel(u, entry.needAbil) == 0 then
             -- skip
         elseif GetRandomInt(1, entry.chance or 4) == 1 then
-            _castAbility(u, entry, target, nil)
-            break
+            if _castAbility(u, entry, target, nil) then return true end
         end
     end
     return false
@@ -53918,8 +53956,7 @@ function AiRunAttacked(u, pi, def)
     end
     for _, entry in ipairs(entries) do
         if GetRandomInt(1, entry.chance or 4) == 1 then
-            _castAbility(u, entry, nil, nil)
-            break
+            if _castAbility(u, entry, nil, nil) then break end
         end
     end
     return true
@@ -53952,12 +53989,27 @@ function AiRunGetLvl(u, def)
     if cfg == nil then
         return false
     end
-    local lvl = GetHeroLevel(u)
-    if lvl == 6 or lvl == 10 then
-        SelectHeroSkill(u, cfg.ult or 0)
-    elseif cfg.skills ~= nil then
-        local i = GetRandomInt(1, #cfg.skills)
-        SelectHeroSkill(u, cfg.skills[i])
+    -- Retry eligible skills until every saved point is spent; a rejected skill
+    -- must not strand points until the next level event.
+    for _ = 1, GetHeroSkillPoints(u) do
+        local spent = false
+        local function learn(skill)
+            if skill == nil or skill == 0 then return false end
+            local before = GetHeroSkillPoints(u)
+            SelectHeroSkill(u, skill)
+            return GetHeroSkillPoints(u) < before
+        end
+        if GetHeroLevel(u) >= 6 then spent = learn(cfg.ult) end
+        if not spent and cfg.skills ~= nil and #cfg.skills > 0 then
+            local first = GetRandomInt(1, #cfg.skills)
+            for offset = 0, #cfg.skills - 1 do
+                if learn(cfg.skills[(first + offset - 1) % #cfg.skills + 1]) then
+                    spent = true
+                    break
+                end
+            end
+        end
+        if not spent then break end
     end
     return true
 end
@@ -53983,6 +54035,140 @@ function AiDispatchUpgrade(pi, id)
     if race ~= nil and race.upgrade ~= nil then
         race.upgrade(pi, id)
     end
+end
+
+-- Combat state belongs to the bot; spell events distinguish accepted orders
+-- from effects that actually fired. No local-player reads or wall-clock timing.
+function AiCombatState(u)
+    local pi = GetPlayerId(GetOwningPlayer(u))
+    AiData[pi] = AiData[pi] or {}
+    local d = AiData[pi]
+    d.combat = d.combat or {}
+    d.combat[u] = d.combat[u] or {}
+    return d.combat[u], d
+end
+
+function AiCombatProtected(u)
+    if u == nil then return false end
+    local state, d = AiCombatState(u)
+    return state.retreat == true or state.casting == true
+        or (state.pending ~= nil and (d.combatTick or 0) < state.pending)
+end
+
+function AiCombatOrderResult(u, accepted)
+    local state, d = AiCombatState(u)
+    d.castOrders = (d.castOrders or 0) + 1
+    if accepted then
+        d.castAccepted = (d.castAccepted or 0) + 1
+        if d.wm ~= nil then state.pending = (d.combatTick or 0) + 2 end
+    end
+    return accepted == true
+end
+
+function AiCombatSpellEvent()
+    local u = GetTriggerUnit()
+    local pi = GetPlayerId(GetOwningPlayer(u))
+    if not udg_AiControl[pi] then return end
+    local state, d = AiCombatState(u)
+    local event = GetTriggerEventId()
+    if event == EVENT_PLAYER_UNIT_SPELL_CHANNEL then
+        state.casting = true
+    elseif event == EVENT_PLAYER_UNIT_SPELL_EFFECT then
+        d.castEffects = d.castEffects or {}
+        local id = GetSpellAbilityId()
+        d.castEffects[id] = (d.castEffects[id] or 0) + 1
+    elseif event == EVENT_PLAYER_UNIT_SPELL_ENDCAST then
+        state.casting, state.pending = nil, nil
+    elseif event == EVENT_PLAYER_UNIT_DEATH then
+        d.combat[u] = nil
+    end
+end
+
+function AiCombatInit()
+    local t = CreateTrigger()
+    for _, event in ipairs({EVENT_PLAYER_UNIT_SPELL_CHANNEL, EVENT_PLAYER_UNIT_SPELL_EFFECT,
+        EVENT_PLAYER_UNIT_SPELL_ENDCAST, EVENT_PLAYER_UNIT_DEATH}) do
+        TriggerRegisterAnyUnitEventBJ(t, event)
+    end
+    TriggerAddAction(t, AiCombatSpellEvent)
+end
+
+function AiHeroCombatTick(pi, u, wm, race)
+    local state = AiCombatState(u)
+    if race ~= nil then AiRunGetLvl(u, race) end
+    local hp = GetUnitStatePercent(u, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE)
+    if not state.casting then
+        for slot = 0, UnitInventorySize(u) - 1 do
+            local item = UnitItemInSlot(u, slot)
+            if item ~= nil then
+                local id = GetItemTypeId(item)
+                local heal = id == FourCC('phea') or id == FourCC('pghe')
+                local mana = id == FourCC('pman') or id == FourCC('pgma')
+                local shield = id == FourCC('pnvu') or id == FourCC('pnvl')
+                if (heal and hp < 55) or (shield and hp < 25)
+                    or (mana and GetUnitStatePercent(u, UNIT_STATE_MANA, UNIT_STATE_MAX_MANA) < 25) then
+                    if UnitUseItem(u, item) then break end
+                end
+            end
+        end
+    end
+    hp = GetUnitStatePercent(u, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE)
+    if hp < 30 then state.retreat = true end
+    if hp >= 70 then state.retreat = nil end
+    if state.retreat and wm.capX ~= nil and wm.capY ~= nil then
+        -- Survival may interrupt a channel, but army commands cannot recall this hero.
+        IssuePointOrder(u, "move", wm.capX, wm.capY)
+    end
+end
+
+function AiCombatTick(pi, wm, race)
+    local d = AiData[pi]
+    d.combatTick = (d.combatTick or 0) + 1
+    local army = udg_Ai_army[pi]
+    if army == nil then return end
+    local size = BlzGroupGetSize(army)
+    for i = 0, size - 1 do
+        local u = BlzGroupUnitAt(army, i)
+        if u ~= nil and GetUnitTypeId(u) ~= 0 and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and IsUnitType(u, UNIT_TYPE_HERO) then AiHeroCombatTick(pi, u, wm, race) end
+    end
+    -- Bounded round-robin sensing also reaches support units which never attack.
+    if size == 0 or race == nil or race.attackerData == nil then return end
+    local cursor = d.combatCursor or 0
+    for offset = 0, math.min(size, 8) - 1 do
+        local u = BlzGroupUnitAt(army, (cursor + offset) % size)
+        if u ~= nil and GetUnitTypeId(u) ~= 0 and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
+            and not AiCombatProtected(u)
+            and (race.attackerData[GetUnitTypeId(u)] ~= nil
+                or #race.attackerData > 0 or race.attackerData.post ~= nil) then
+            local group = CreateGroup()
+            GroupEnumUnitsInRange(group, GetUnitX(u), GetUnitY(u), 800, nil)
+            local target, score = nil, -1
+            for j = 0, BlzGroupGetSize(group) - 1 do
+                local enemy = BlzGroupUnitAt(group, j)
+                if enemy ~= nil and GetUnitTypeId(enemy) ~= 0
+                    and GetUnitState(enemy, UNIT_STATE_LIFE) > 0.405
+                    and IsUnitEnemy(enemy, Player(pi)) and IsUnitVisible(enemy, Player(pi))
+                    and not IsUnitType(enemy, UNIT_TYPE_STRUCTURE) then
+                    local value = 100 - GetUnitStatePercent(enemy, UNIT_STATE_LIFE, UNIT_STATE_MAX_LIFE)
+                    if IsUnitType(enemy, UNIT_TYPE_HERO) then value = value + 40 end
+                    if GetUnitState(enemy, UNIT_STATE_MAX_MANA) > 0 then value = value + 20 end
+                    if value > score then target, score = enemy, value end
+                end
+            end
+            DestroyGroup(group)
+            if target ~= nil then
+                AiRunAttacker(GetUnitTypeId(u), u, target, Player(pi), race)
+            else
+                -- Wounded allies still need healing after the last enemy falls.
+                for _, entry in ipairs(race.attackerData[GetUnitTypeId(u)] or {}) do
+                    if entry.type == "heal" and GetRandomInt(1, entry.chance or 5) == 1
+                        and _castAbility(u, entry, nil, Player(pi)) then break end
+                end
+            end
+        end
+    end
+    d.combatCursor = (cursor + math.min(size, 8)) % size
 end
 -- AI race registry header.
 -- Concrete race registrations live in sections/82_ai_races/*.lua.
@@ -57157,7 +57343,7 @@ RegisterAiRace("Alliance", {
 
         [FourCC('Hpal')] = {
 
-            { order = "holybolt",     chance = 5, type = "target" },
+            { order = "holybolt",     chance = 2, type = "heal", needAbil = FourCC('AHhb') },
 
             { order = "divineshield", chance = 5, type = "immediate" },
 
@@ -57171,7 +57357,7 @@ RegisterAiRace("Alliance", {
 
             { order = "waterelemental",  chance = 5, type = "immediate" },
 
-            { order = "massteleport",    chance = 5, type = "immediate" },
+            -- Mass teleport belongs to army logistics, not a random combat cast.
 
         },
 
@@ -57191,7 +57377,7 @@ RegisterAiRace("Alliance", {
 
             { order = "polymorph",    chance = 4, type = "target", notStructure = true },
 
-            { order = "invisibility", chance = 4, type = "target" },
+            { order = "invisibility", chance = 4, type = "ally" },
 
         },
 
@@ -57201,7 +57387,7 @@ RegisterAiRace("Alliance", {
 
             { order = "dispel",     chance = 4, type = "point", range = 490 },
 
-            { order = "innerfire",  chance = 4, type = "target" },
+            { order = "innerfire",  chance = 4, type = "ally" },
 
         },
 
@@ -57811,6 +57997,31 @@ RegisterAiRace("Cult", {
           consumeAbil = FourCC('cDa6'), range = 700.0, minCluster = 5, chance = 12 },
         { ability = FourCC('cDar'), caster = FourCC('cD03'), order = "channel",
           consumeAbil = FourCC('cDat'), range = 700.0, minCluster = 5, chance = 12 },
+    },
+
+    attackerData = {
+        [FourCC('CD01')] = {
+            { order = "deathcoil", needAbil = FourCC('A0CO'), chance = 2, notStructure = true },
+            { order = "roar", needAbil = FourCC('A0CP'), type = "immediate", chance = 2 },
+            { order = "fanofknives", needAbil = FourCC('A0CQ'), type = "immediate", range = 400, chance = 2 },
+        },
+        [FourCC('U02X')] = {
+            { order = "frostnova", needAbil = FourCC('AUfn'), chance = 2, notStructure = true },
+            -- Channel uses DataF=acidbomb; editor Order=blackarrowon is not its cast order.
+            { order = "acidbomb", needAbil = FourCC('A1HE'), type = "point", range = 750, chance = 2 },
+            { order = "deathanddecay", needAbil = FourCC('AUdd'), type = "point", chance = 3 },
+        },
+        [FourCC('CD02')] = {
+            -- Firelord summon is 852667 in the engine; OrderId("slimemonster") returns 0.
+            { orderId = 852667, needAbil = FourCC('A0CL'), type = "immediate", chance = 2 },
+            { order = "raisedead", needAbil = FourCC('A1IL'), type = "immediate", chance = 2 },
+            { order = "animatedead", needAbil = FourCC('A0CN'), type = "immediate", chance = 3 },
+        },
+    },
+    getLvlData = {
+        [FourCC('CD01')] = { ult = FourCC('A0CQ'), skills = { FourCC('A0CO'), FourCC('A0CP'), FourCC('A0CR') } },
+        [FourCC('U02X')] = { ult = FourCC('AUdd'), skills = { FourCC('AUfn'), FourCC('A1HE'), FourCC('AUdr') } },
+        [FourCC('CD02')] = { ult = FourCC('A0CN'), skills = { FourCC('A1IL'), FourCC('A0CL'), FourCC('A0CM') } },
     },
 
     strategData = {
@@ -62794,7 +63005,8 @@ function AiSquadOrderAtk(g, x, y)
         local u = BlzGroupUnitAt(g, k)
         if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
             and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
-            and not IsUnitType(u, UNIT_TYPE_PEON) then
+            and not IsUnitType(u, UNIT_TYPE_PEON)
+            and not AiCombatProtected(u) then
             GroupAddUnit(tmp, u)
         end
         k = k + 1
@@ -62833,7 +63045,8 @@ function AiSquadOrderMov(g, x, y)
         local u = BlzGroupUnitAt(g, k)
         if u ~= nil and GetUnitState(u, UNIT_STATE_LIFE) > 0.405
             and not IsUnitType(u, UNIT_TYPE_STRUCTURE)
-            and not IsUnitType(u, UNIT_TYPE_PEON) then
+            and not IsUnitType(u, UNIT_TYPE_PEON)
+            and not AiCombatProtected(u) then
             GroupAddUnit(tmp, u)
         end
         k = k + 1
@@ -63006,7 +63219,9 @@ function AiBrainRecoverStranded(pi, wm)
             local dH = far2 + 1.0
             if capx ~= nil then local dhx, dhy = ux - capx, uy - capy; dH = dhx * dhx + dhy * dhy end
             if dC > far2 and dH > far2 then
-                IssuePointOrder(u, "move", cx, cy)   -- rejoin the army blob
+                if not AiCombatProtected(u) then
+                    IssuePointOrder(u, "move", cx, cy)   -- rejoin the army blob
+                end
                 moved = moved + 1
             end
         end
@@ -64957,6 +65172,7 @@ function BrainFocus(pi, p, wm)
 
     local cnt = 0
     local function orderIdle(u)
+        if AiCombatProtected(u) then return end
         local tx, ty, ord = targetFor(GetUnitX(u), GetUnitY(u))
         if ord == nil then return end   -- cross-water, no portal route: hold (don't swim)
         IssuePointOrder(u, ord, tx, ty)
@@ -65563,6 +65779,7 @@ function AiBrainArmyTickInner(pi, p)
     local wm = AiBrainPerceive(pi)
     local race = AiRaceOf(pi)
 
+    AiCombatTick(pi, wm, race)
     lap("perceive")
 
     if race ~= nil then
