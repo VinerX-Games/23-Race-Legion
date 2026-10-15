@@ -98,15 +98,15 @@ end
 --===========================================================================
 function Trig_CreateAi_Conditions()
     local s = GetEventPlayerChatString()
-    return string.find(s, "^%-ai%s*[%d,%-]+") ~= nil
+    return string.find(s, "^%-?ai%s*[%d,%-]+") ~= nil
 end
 function Trig_CreateAi_Actions()
     -- Formats: -aiN, -aiN race, -aiN,M, -aiN-M, -aiN,M,P-Q (mixed)
     local s = GetEventPlayerChatString()
-    local numsPart, raceStr = string.match(s, "^%-ai%s+([%d,%-]+)%s*(%S*)")
+    local numsPart, raceStr = string.match(s, "^%-?ai%s+([%d,%-]+)%s*(%S*)")
     if not numsPart then
         -- fallback: try tight format -aiN (no space)
-        numsPart, raceStr = string.match(s, "^%-ai([%d,%-]+)%s*(%S*)")
+        numsPart, raceStr = string.match(s, "^%-?ai([%d,%-]+)%s*(%S*)")
     end
     if not numsPart then
         ProbeLogWrite("[CHAT] -ai parse failed: " .. s)
@@ -154,7 +154,7 @@ end
 --===========================================================================
 function InitTrig_CreateAi()
     gg_trg_CreateAi=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_CreateAi, Player(0), "-ai", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_CreateAi, Player(0), "ai", false)
     TriggerAddCondition(gg_trg_CreateAi, Condition(Trig_CreateAi_Conditions))
     TriggerAddAction(gg_trg_CreateAi, Trig_CreateAi_Actions)
 end

@@ -5004,7 +5004,10 @@ function MakeGrade(gamer, GradeUnit, Grade)
 	Counter = 0
 	b = Condition(ThisType)
 	GroupEnumUnitsOfPlayer(gGroup, gamer, b)
-	gUnit = BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
+	gUnit = nil
+	if Counter > 0 then
+		gUnit = BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
+	end
 	if gUnit ~= nil then
 		IssueImmediateOrderById(gUnit, Grade)
 	elseif Counter == 0 then
@@ -5033,7 +5036,12 @@ end
 ---@param Cap integer
 ---@return nothing
 function MakeGradeCheckCap(gamer, GradeUnit, Grade, Cap)
-	if GetPlayerTechCount(gamer, Grade, true) <= Cap then
+	local pi = GetPlayerId(gamer)
+	if Cap > 1 and udg_AiControl[pi] then
+		local economy = AiData[pi].researchEconomy or 0
+		Cap = math.min(Cap, math.max(0, math.floor((economy - 25) / 15) + 1))
+	end
+	if GetPlayerTechCount(gamer, Grade, true) < Cap then
 		MakeGrade(gamer, GradeUnit, Grade)
 	end
 end
@@ -19357,7 +19365,7 @@ function InitColorCommands()
 
 	local t = CreateTrigger()
 	for i = 0, 23 do
-		TriggerRegisterPlayerChatEvent(t, Player(i), "color", true)
+		TriggerRegisterPlayerChatEvent(t, Player(i), "", false)
 	end
 	TriggerAddAction(t, function()
 		local command = string.lower(string.gsub(GetEventPlayerChatString(), "%s+", ""))
@@ -19367,8 +19375,17 @@ function InitColorCommands()
 		local color = COLOR_MAP[command]
 		if color then
 			SetPlayerColorBJ(GetTriggerPlayer(), color, true)
+			RefreshPlayerNameRow(GetTriggerPlayer())
 		end
 	end)
+end
+
+function RefreshPlayerNameRow(p)
+    local row = EnsureMultiboardPlayerRow(GetPlayerId(p))
+    if row ~= nil then
+        local text = I2S(GetConvertedPlayerId(p)) .. "." .. GetPlayerNameCut(p)
+        MultiboardSetItemValue(MultiboardItem[row * 2], PlayerColorHexWrap(p, text))
+    end
 end
 -- Trigger: StartTableCode
 --===========================================================================
@@ -48182,49 +48199,31 @@ end
 --===========================================================================
 -- Trigger: Name command O
 --===========================================================================
+function ChatCommandArgument(command)
+    local key, value = string.match(GetEventPlayerChatString(), "^%s*%-%s*(%a+)%s+(.+)$")
+    if not key or string.lower(key) ~= command then return nil end
+    value = string.match(value, "^%s*(.-)%s*$")
+    if string.sub(value, 1, 1) == '"' and string.sub(value, -1) == '"' then
+        value = string.match(string.sub(value, 2, -2), "^%s*(.-)%s*$")
+    end
+    if value == "" then return nil end
+    return value
+end
 function Trig_Name_command_O_Conditions()
-    return SubStringBJ(GetEventPlayerChatString(), 1, 6) == " - name"
+    return ChatCommandArgument("name") ~= nil
 end
 function Trig_Name_command_O_Actions()
-    local i= GetPlayerId(GetTriggerPlayer())
-    local ownerIndex
-    udg_LocalText2=GetEventPlayerChatString()
-    udg_LocalText2=SubStringBJ(udg_LocalText2, 7, 50)
-    SetPlayerName(GetTriggerPlayer(), udg_LocalText2)
-    ownerIndex=EnsureMultiboardPlayerRow(i)
-    udg_LocalText2=I2S(GetConvertedPlayerId(GetTriggerPlayer())) .. "." .. udg_LocalText2
-    if ownerIndex ~= nil then
-        MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 0], udg_LocalText2)
-    end
-    i=0
+    local name = ChatCommandArgument("name")
+    if not name then return end
+    SetPlayerName(GetTriggerPlayer(), name)
+    RefreshPlayerNameRow(GetTriggerPlayer())
 end
 --===========================================================================
 function InitTrig_Name_command_O()
     gg_trg_Name_command_O=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(0), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(1), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(2), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(3), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(4), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(5), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(6), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(7), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(8), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(9), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(10), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(11), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(12), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(13), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(14), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(15), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(16), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(17), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(18), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(20), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(19), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(21), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(22), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(23), " - name", false)
+    for i = 0, 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(i), "", false)
+    end
     TriggerAddCondition(gg_trg_Name_command_O, Condition(Trig_Name_command_O_Conditions))
     TriggerAddAction(gg_trg_Name_command_O, Trig_Name_command_O_Actions)
 end
@@ -48232,21 +48231,22 @@ end
 -- Trigger: UName command
 --===========================================================================
 function Trig_UName_command_Conditions()
-    return SubStringBJ(GetEventPlayerChatString(), 1, 7) == " - uname"
+    return ChatCommandArgument("uname") ~= nil
 end
 function Trig_UName_command_Actions()
-    local i= GetPlayerId(GetTriggerPlayer())
+    local name = ChatCommandArgument("uname")
+    if not name then return end
     local u
     local g= CreateGroup()
-    udg_LocalText2=GetEventPlayerChatString()
-    udg_LocalText2=SubStringBJ(udg_LocalText2, 7, 50)
     
     SyncSelections()
     GroupEnumUnitsSelected(g, GetTriggerPlayer(), nil)
     while true do
         u=FirstOfGroup(g)
         if u == nil then break end
-        BlzSetUnitName(u, udg_LocalText2)
+        if GetOwningPlayer(u) == GetTriggerPlayer() then
+            BlzSetUnitName(u, name)
+        end
         
         GroupRemoveUnit(g, u)
     
@@ -48265,7 +48265,7 @@ function InitTrig_UName_command()
     
     while true do
         if i > 23 then break end
-        TriggerRegisterPlayerChatEvent(gg_trg_UName_command, Player(i), " - uname", false)
+        TriggerRegisterPlayerChatEvent(gg_trg_UName_command, Player(i), "", false)
     
         
         
@@ -49618,15 +49618,15 @@ end
 --===========================================================================
 function Trig_CreateAi_Conditions()
     local s = GetEventPlayerChatString()
-    return string.find(s, "^%-ai%s*[%d,%-]+") ~= nil
+    return string.find(s, "^%-?ai%s*[%d,%-]+") ~= nil
 end
 function Trig_CreateAi_Actions()
     -- Formats: -aiN, -aiN race, -aiN,M, -aiN-M, -aiN,M,P-Q (mixed)
     local s = GetEventPlayerChatString()
-    local numsPart, raceStr = string.match(s, "^%-ai%s+([%d,%-]+)%s*(%S*)")
+    local numsPart, raceStr = string.match(s, "^%-?ai%s+([%d,%-]+)%s*(%S*)")
     if not numsPart then
         -- fallback: try tight format -aiN (no space)
-        numsPart, raceStr = string.match(s, "^%-ai([%d,%-]+)%s*(%S*)")
+        numsPart, raceStr = string.match(s, "^%-?ai([%d,%-]+)%s*(%S*)")
     end
     if not numsPart then
         ProbeLogWrite("[CHAT] -ai parse failed: " .. s)
@@ -49674,7 +49674,7 @@ end
 --===========================================================================
 function InitTrig_CreateAi()
     gg_trg_CreateAi=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_CreateAi, Player(0), "-ai", false)
+    TriggerRegisterPlayerChatEvent(gg_trg_CreateAi, Player(0), "ai", false)
     TriggerAddCondition(gg_trg_CreateAi, Condition(Trig_CreateAi_Conditions))
     TriggerAddAction(gg_trg_CreateAi, Trig_CreateAi_Actions)
 end
@@ -53778,6 +53778,7 @@ end
 ---@param pi integer
 ---@param p player
 function AiDispatchStrateg(i, pi, p)
+    AiData[pi].researchEconomy = i
     local race = AiRaceOf(pi)
     if race ~= nil then
         if race.strategData ~= nil and AiRunStrateg(i, pi, p, race) then
@@ -53787,6 +53788,24 @@ function AiDispatchStrateg(i, pi, p)
             race.strateg(i, pi, p)
         end
     end
+end
+
+function AiResearchEconomy(pi, p, race)
+    local score = 0
+    local weights = race.ecoWeights or {}
+    local group = CreateGroup()
+    GroupEnumUnitsOfPlayer(group, p, nil)
+    for index = 0, BlzGroupGetSize(group) - 1 do
+        local u = BlzGroupUnitAt(group, index)
+        if IsUnitInGroup(u, udg_ZahvatBuildings) then
+            score = score + 8
+        else
+            score = score + (weights[GetUnitTypeId(u)] or 0)
+        end
+    end
+    DestroyGroup(group)
+    AiData[pi].researchEconomy = score
+    return score
 end
 
 ---@param id integer
@@ -64987,6 +65006,7 @@ function BrainMergeTick(pi, wm, race)
 end
 
 function BrainStrategTick(pi, p, race, wm)
+    local economy = AiResearchEconomy(pi, p, race)
     local steps = race.strategData.steps
     if not steps then return end
     for _, step in ipairs(steps) do
@@ -64998,7 +65018,9 @@ function BrainStrategTick(pi, p, race, wm)
             -- MakeGradeCheckCap researches it at the host building, or (AI bots only) grants it
             -- directly when the race owns no such building — the same path the legacy
             -- AiRunStrateg used. Throttled so it doesn't re-issue every single tick.
-            if step.at and wm.tick > step.at and step.rows and (wm.tick % 4) == 0 then
+            local gate = step.gate and race.gates and race.gates[step.gate]
+            if (not step.at or economy > step.at) and (not step.before or economy < step.before)
+                and (not gate or gate(pi)) and step.rows and (wm.tick % 4) == 0 then
                 for _, row in ipairs(step.rows) do
                     MakeGradeCheckCap(p, row[1], row[2], row[3])
                 end
@@ -65006,7 +65028,8 @@ function BrainStrategTick(pi, p, race, wm)
             goto nextStep
         end
         if step.action ~= "techUp" then goto nextStep end
-        if not step.at or wm.tick <= step.at then goto nextStep end
+        if step.at and economy <= step.at then goto nextStep end
+        if step.before and economy >= step.before then goto nextStep end
         if step.gate then
             local g = race.gates and race.gates[step.gate]
             if g and not g(pi) then goto nextStep end

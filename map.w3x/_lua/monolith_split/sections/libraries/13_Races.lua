@@ -81,7 +81,10 @@ function MakeGrade(gamer, GradeUnit, Grade)
 	Counter = 0
 	b = Condition(ThisType)
 	GroupEnumUnitsOfPlayer(gGroup, gamer, b)
-	gUnit = BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
+	gUnit = nil
+	if Counter > 0 then
+		gUnit = BlzGroupUnitAt(gGroup, GetRandomInt(0, Counter - 1))
+	end
 	if gUnit ~= nil then
 		IssueImmediateOrderById(gUnit, Grade)
 	elseif Counter == 0 then
@@ -110,7 +113,12 @@ end
 ---@param Cap integer
 ---@return nothing
 function MakeGradeCheckCap(gamer, GradeUnit, Grade, Cap)
-	if GetPlayerTechCount(gamer, Grade, true) <= Cap then
+	local pi = GetPlayerId(gamer)
+	if Cap > 1 and udg_AiControl[pi] then
+		local economy = AiData[pi].researchEconomy or 0
+		Cap = math.min(Cap, math.max(0, math.floor((economy - 25) / 15) + 1))
+	end
+	if GetPlayerTechCount(gamer, Grade, true) < Cap then
 		MakeGrade(gamer, GradeUnit, Grade)
 	end
 end

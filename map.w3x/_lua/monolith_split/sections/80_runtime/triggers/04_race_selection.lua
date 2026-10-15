@@ -41,7 +41,7 @@ function InitColorCommands()
 
 	local t = CreateTrigger()
 	for i = 0, 23 do
-		TriggerRegisterPlayerChatEvent(t, Player(i), "color", true)
+		TriggerRegisterPlayerChatEvent(t, Player(i), "", false)
 	end
 	TriggerAddAction(t, function()
 		local command = string.lower(string.gsub(GetEventPlayerChatString(), "%s+", ""))
@@ -51,8 +51,17 @@ function InitColorCommands()
 		local color = COLOR_MAP[command]
 		if color then
 			SetPlayerColorBJ(GetTriggerPlayer(), color, true)
+			RefreshPlayerNameRow(GetTriggerPlayer())
 		end
 	end)
+end
+
+function RefreshPlayerNameRow(p)
+    local row = EnsureMultiboardPlayerRow(GetPlayerId(p))
+    if row ~= nil then
+        local text = I2S(GetConvertedPlayerId(p)) .. "." .. GetPlayerNameCut(p)
+        MultiboardSetItemValue(MultiboardItem[row * 2], PlayerColorHexWrap(p, text))
+    end
 end
 -- Trigger: StartTableCode
 --===========================================================================

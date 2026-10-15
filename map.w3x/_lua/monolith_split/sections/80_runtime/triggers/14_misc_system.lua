@@ -287,49 +287,31 @@ end
 --===========================================================================
 -- Trigger: Name command O
 --===========================================================================
+function ChatCommandArgument(command)
+    local key, value = string.match(GetEventPlayerChatString(), "^%s*%-%s*(%a+)%s+(.+)$")
+    if not key or string.lower(key) ~= command then return nil end
+    value = string.match(value, "^%s*(.-)%s*$")
+    if string.sub(value, 1, 1) == '"' and string.sub(value, -1) == '"' then
+        value = string.match(string.sub(value, 2, -2), "^%s*(.-)%s*$")
+    end
+    if value == "" then return nil end
+    return value
+end
 function Trig_Name_command_O_Conditions()
-    return SubStringBJ(GetEventPlayerChatString(), 1, 6) == " - name"
+    return ChatCommandArgument("name") ~= nil
 end
 function Trig_Name_command_O_Actions()
-    local i= GetPlayerId(GetTriggerPlayer())
-    local ownerIndex
-    udg_LocalText2=GetEventPlayerChatString()
-    udg_LocalText2=SubStringBJ(udg_LocalText2, 7, 50)
-    SetPlayerName(GetTriggerPlayer(), udg_LocalText2)
-    ownerIndex=EnsureMultiboardPlayerRow(i)
-    udg_LocalText2=I2S(GetConvertedPlayerId(GetTriggerPlayer())) .. "." .. udg_LocalText2
-    if ownerIndex ~= nil then
-        MultiboardSetItemValue(MultiboardItem[ownerIndex * 2 + 0], udg_LocalText2)
-    end
-    i=0
+    local name = ChatCommandArgument("name")
+    if not name then return end
+    SetPlayerName(GetTriggerPlayer(), name)
+    RefreshPlayerNameRow(GetTriggerPlayer())
 end
 --===========================================================================
 function InitTrig_Name_command_O()
     gg_trg_Name_command_O=CreateTrigger()
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(0), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(1), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(2), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(3), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(4), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(5), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(6), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(7), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(8), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(9), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(10), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(11), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(12), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(13), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(14), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(15), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(16), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(17), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(18), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(20), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(19), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(21), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(22), " - name", false)
-    TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(23), " - name", false)
+    for i = 0, 23 do
+        TriggerRegisterPlayerChatEvent(gg_trg_Name_command_O, Player(i), "", false)
+    end
     TriggerAddCondition(gg_trg_Name_command_O, Condition(Trig_Name_command_O_Conditions))
     TriggerAddAction(gg_trg_Name_command_O, Trig_Name_command_O_Actions)
 end
@@ -337,21 +319,22 @@ end
 -- Trigger: UName command
 --===========================================================================
 function Trig_UName_command_Conditions()
-    return SubStringBJ(GetEventPlayerChatString(), 1, 7) == " - uname"
+    return ChatCommandArgument("uname") ~= nil
 end
 function Trig_UName_command_Actions()
-    local i= GetPlayerId(GetTriggerPlayer())
+    local name = ChatCommandArgument("uname")
+    if not name then return end
     local u
     local g= CreateGroup()
-    udg_LocalText2=GetEventPlayerChatString()
-    udg_LocalText2=SubStringBJ(udg_LocalText2, 7, 50)
     
     SyncSelections()
     GroupEnumUnitsSelected(g, GetTriggerPlayer(), nil)
     while true do
         u=FirstOfGroup(g)
         if u == nil then break end
-        BlzSetUnitName(u, udg_LocalText2)
+        if GetOwningPlayer(u) == GetTriggerPlayer() then
+            BlzSetUnitName(u, name)
+        end
         
         GroupRemoveUnit(g, u)
     
@@ -370,7 +353,7 @@ function InitTrig_UName_command()
     
     while true do
         if i > 23 then break end
-        TriggerRegisterPlayerChatEvent(gg_trg_UName_command, Player(i), " - uname", false)
+        TriggerRegisterPlayerChatEvent(gg_trg_UName_command, Player(i), "", false)
     
         
         

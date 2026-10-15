@@ -408,6 +408,7 @@ end
 ---@param pi integer
 ---@param p player
 function AiDispatchStrateg(i, pi, p)
+    AiData[pi].researchEconomy = i
     local race = AiRaceOf(pi)
     if race ~= nil then
         if race.strategData ~= nil and AiRunStrateg(i, pi, p, race) then
@@ -417,6 +418,24 @@ function AiDispatchStrateg(i, pi, p)
             race.strateg(i, pi, p)
         end
     end
+end
+
+function AiResearchEconomy(pi, p, race)
+    local score = 0
+    local weights = race.ecoWeights or {}
+    local group = CreateGroup()
+    GroupEnumUnitsOfPlayer(group, p, nil)
+    for index = 0, BlzGroupGetSize(group) - 1 do
+        local u = BlzGroupUnitAt(group, index)
+        if IsUnitInGroup(u, udg_ZahvatBuildings) then
+            score = score + 8
+        else
+            score = score + (weights[GetUnitTypeId(u)] or 0)
+        end
+    end
+    DestroyGroup(group)
+    AiData[pi].researchEconomy = score
+    return score
 end
 
 ---@param id integer

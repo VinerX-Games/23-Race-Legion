@@ -2879,6 +2879,7 @@ function BrainMergeTick(pi, wm, race)
 end
 
 function BrainStrategTick(pi, p, race, wm)
+    local economy = AiResearchEconomy(pi, p, race)
     local steps = race.strategData.steps
     if not steps then return end
     for _, step in ipairs(steps) do
@@ -2890,7 +2891,9 @@ function BrainStrategTick(pi, p, race, wm)
             -- MakeGradeCheckCap researches it at the host building, or (AI bots only) grants it
             -- directly when the race owns no such building — the same path the legacy
             -- AiRunStrateg used. Throttled so it doesn't re-issue every single tick.
-            if step.at and wm.tick > step.at and step.rows and (wm.tick % 4) == 0 then
+            local gate = step.gate and race.gates and race.gates[step.gate]
+            if (not step.at or economy > step.at) and (not step.before or economy < step.before)
+                and (not gate or gate(pi)) and step.rows and (wm.tick % 4) == 0 then
                 for _, row in ipairs(step.rows) do
                     MakeGradeCheckCap(p, row[1], row[2], row[3])
                 end
@@ -2898,7 +2901,8 @@ function BrainStrategTick(pi, p, race, wm)
             goto nextStep
         end
         if step.action ~= "techUp" then goto nextStep end
-        if not step.at or wm.tick <= step.at then goto nextStep end
+        if step.at and economy <= step.at then goto nextStep end
+        if step.before and economy >= step.before then goto nextStep end
         if step.gate then
             local g = race.gates and race.gates[step.gate]
             if g and not g(pi) then goto nextStep end
