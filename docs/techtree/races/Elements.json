@@ -1,0 +1,1664 @@
+{
+ "race": "Elements",
+ "start_units": [
+  "e00F"
+ ],
+ "start_tech": [
+  "R0A2"
+ ],
+ "lua": [
+  {
+   "file": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/04_race_selection.lua",
+   "symbol": "Trig_Race_Elements_O_Actions"
+  }
+ ],
+ "objects": {
+  "A01C": {
+   "type": "ability",
+   "name": "Свечение героя",
+   "levels": 1
+  },
+  "A01N": {
+   "type": "ability",
+   "name": "Пламя феникса",
+   "hotkey": "E",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A01R": {
+   "type": "ability",
+   "name": "Аура мороза",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A01S": {
+   "type": "ability",
+   "name": "Кольцо огня",
+   "levels": 1
+  },
+  "A0CE": {
+   "type": "ability",
+   "name": "Морозный доспех",
+   "hotkey": "E",
+   "levels": 1
+  },
+  "A0I3": {
+   "type": "ability",
+   "name": "Небольшой скачок",
+   "hotkey": "C",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A0IQ": {
+   "type": "ability",
+   "name": "Обозначить столицу",
+   "hotkey": "X",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A0LI": {
+   "type": "ability",
+   "name": "Обмен золота на дерево",
+   "hotkey": "S",
+   "levels": 1
+  },
+  "A0LJ": {
+   "type": "ability",
+   "name": "Обмен дерева на золото",
+   "hotkey": "A",
+   "levels": 1
+  },
+  "A0OZ": {
+   "type": "ability",
+   "name": "Поджег",
+   "levels": 1
+  },
+  "A0P2": {
+   "type": "ability",
+   "name": "Каменная кожа",
+   "hero": true,
+   "hotkey": "E",
+   "levels": 4
+  },
+  "A0P4": {
+   "type": "ability",
+   "name": "Бросок валуна",
+   "hero": true,
+   "hotkey": "Q",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A0P7": {
+   "type": "ability",
+   "name": "Кольцо огня",
+   "hero": true,
+   "hotkey": "R",
+   "levels": 2,
+   "hero_level_req": 6
+  },
+  "A0P9": {
+   "type": "ability",
+   "name": "Скачок",
+   "hero": true,
+   "hotkey": "W",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A0PA": {
+   "type": "ability",
+   "name": "Ловкий как ветер",
+   "hero": true,
+   "hotkey": "E",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A0PG": {
+   "type": "ability",
+   "name": "Громовой удар",
+   "hotkey": "Q",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A0PH": {
+   "type": "ability",
+   "name": "Поджог",
+   "levels": 1,
+   "requires": [
+    "R09R"
+   ]
+  },
+  "A0Q8": {
+   "type": "ability",
+   "name": "Сожжение доспехов",
+   "hotkey": "Q",
+   "levels": 1,
+   "requires": [
+    "R09R"
+   ],
+   "requires_amount": 2
+  },
+  "A0Q9": {
+   "type": "ability",
+   "name": "Рассекающий удар",
+   "levels": 1,
+   "requires": [
+    "R09S"
+   ]
+  },
+  "A0QA": {
+   "type": "ability",
+   "name": "Критический удар",
+   "levels": 1,
+   "hero_level_req": 1,
+   "requires": [
+    "R0A0"
+   ]
+  },
+  "A0QC": {
+   "type": "ability",
+   "name": "Ледяные стрелы",
+   "hotkey": "Q",
+   "levels": 2,
+   "hero_level_req": 1,
+   "requires": [
+    "R09U"
+   ]
+  },
+  "A0QD": {
+   "type": "ability",
+   "name": "Кольцо льда",
+   "hotkey": "W",
+   "levels": 1,
+   "hero_level_req": 1,
+   "requires": [
+    "R09V"
+   ]
+  },
+  "A0QE": {
+   "type": "ability",
+   "name": "Пламя жизни",
+   "hotkey": "W",
+   "levels": 1,
+   "requires_amount": 2
+  },
+  "A0QF": {
+   "type": "ability",
+   "name": "Сокрушение",
+   "levels": 2,
+   "requires": [
+    "R09Y"
+   ]
+  },
+  "A0QG": {
+   "type": "ability",
+   "name": "Снижение урона от способностей",
+   "levels": 1
+  },
+  "A0QH": {
+   "type": "ability",
+   "name": "Кристалы антимагии",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A0QI": {
+   "type": "ability",
+   "name": "Бросок валуна",
+   "hotkey": "Q",
+   "levels": 1
+  },
+  "A0QM": {
+   "type": "ability",
+   "name": "Невосприимчивость к магии",
+   "levels": 1,
+   "requires": [
+    "R09W"
+   ]
+  },
+  "A0QN": {
+   "type": "ability",
+   "name": "Элементали",
+   "hotkey": "Q",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A0W7": {
+   "type": "ability",
+   "name": "Вода",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A0W8": {
+   "type": "ability",
+   "name": "Земля",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A0W9": {
+   "type": "ability",
+   "name": "Огонь",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A0WA": {
+   "type": "ability",
+   "name": "Воздух",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A18B": {
+   "type": "ability",
+   "name": "Тёмный призыв",
+   "hotkey": "W",
+   "levels": 1
+  },
+  "A1LE": {
+   "type": "ability",
+   "name": "Множественная атака",
+   "hero": true,
+   "levels": 4
+  },
+  "A1MQ": {
+   "type": "ability",
+   "name": "Ускользание",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A1MR": {
+   "type": "ability",
+   "name": "Морозный доспех",
+   "hero": true,
+   "hotkey": "|cffebc56cСтрелок Кул-Тираса|r",
+   "levels": 4
+  },
+  "AEtq": {
+   "type": "ability",
+   "name": "Покой",
+   "hero": true,
+   "hotkey": "R",
+   "levels": 2,
+   "hero_level_req": 6
+  },
+  "AHfs": {
+   "type": "ability",
+   "name": "Огненный столб",
+   "hero": true,
+   "hotkey": "Q",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "AHpx": {
+   "type": "ability",
+   "name": "Феникс",
+   "hero": true,
+   "hotkey": "R",
+   "levels": 2,
+   "hero_level_req": 6
+  },
+  "AInv": {
+   "type": "ability",
+   "name": "Инвентарь",
+   "levels": 1
+  },
+  "ANic": {
+   "type": "ability",
+   "name": "Испепеление",
+   "hero": true,
+   "hotkey": "E",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "ANlm": {
+   "type": "ability",
+   "name": "Призыв порождения лавы",
+   "hero": true,
+   "hotkey": "W",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "Aadm": {
+   "type": "ability",
+   "name": "Рассеяние чар",
+   "hotkey": "B",
+   "levels": 1,
+   "requires": [
+    "Resi"
+   ]
+  },
+  "Abds": {
+   "type": "ability",
+   "name": "Слабое рассеивание чумы",
+   "levels": 1
+  },
+  "Adis": {
+   "type": "ability",
+   "name": "Рассеивание чар",
+   "hotkey": "Q",
+   "levels": 1
+  },
+  "Adtn": {
+   "type": "ability",
+   "name": "Взорваться",
+   "hotkey": "D",
+   "levels": 1
+  },
+  "Aren": {
+   "type": "ability",
+   "name": "Обновление",
+   "hotkey": "R",
+   "levels": 1
+  },
+  "Argl": {
+   "type": "ability",
+   "name": "Вернуть золото и древесину",
+   "levels": 1
+  },
+  "Ault": {
+   "type": "ability",
+   "name": "Ночное зрение",
+   "levels": 1,
+   "requires": [
+    "Reuv"
+   ]
+  },
+  "Awha": {
+   "type": "ability",
+   "name": "Добывать ресурсы",
+   "hotkey": "G",
+   "levels": 1
+  },
+  "H0EZ": {
+   "type": "hero",
+   "name": "Кристальный владыка",
+   "base": "Hmkg",
+   "time": 55,
+   "food": 1,
+   "gold": 400,
+   "hotkey": "W",
+   "hp": 700,
+   "lumber": 100
+  },
+  "H0F0": {
+   "type": "hero",
+   "name": "Мастер ветра",
+   "base": "Hblm",
+   "time": 55,
+   "food": 1,
+   "gold": 400,
+   "hotkey": "Q",
+   "hp": 700,
+   "lumber": 100
+  },
+  "N037": {
+   "type": "hero",
+   "name": "Повелитель огня",
+   "base": "Nfir",
+   "time": 55,
+   "food": 1,
+   "gold": 425,
+   "hotkey": "E",
+   "hp": 1000,
+   "lumber": 135
+  },
+  "R01N": {
+   "type": "upgrade",
+   "name": "Улучшенная кладка",
+   "gold": 250,
+   "gold_per_level": 500,
+   "lumber": 250,
+   "lumber_per_level": 500,
+   "levels": 6,
+   "requires": [
+    "hkee"
+   ],
+   "time": 30,
+   "time_per_level": 15
+  },
+  "R09C": {
+   "type": "upgrade",
+   "name": "Огонь",
+   "gold": 1500,
+   "lumber": 1000,
+   "levels": 1,
+   "time": 40
+  },
+  "R09D": {
+   "type": "upgrade",
+   "name": "Вода",
+   "gold": 1500,
+   "lumber": 1000,
+   "levels": 1,
+   "time": 40
+  },
+  "R09E": {
+   "type": "upgrade",
+   "name": "Земля",
+   "gold": 1500,
+   "lumber": 1000,
+   "levels": 1,
+   "time": 40
+  },
+  "R09F": {
+   "type": "upgrade",
+   "name": "Воздух",
+   "gold": 1500,
+   "lumber": 1000,
+   "levels": 1,
+   "time": 40
+  },
+  "R09G": {
+   "type": "upgrade",
+   "name": "Огонь",
+   "gold": 500,
+   "gold_per_level": 1000,
+   "lumber": 450,
+   "lumber_per_level": 900,
+   "levels": 6,
+   "requires": [
+    "hkee"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R09H": {
+   "type": "upgrade",
+   "name": "Вода",
+   "gold": 500,
+   "gold_per_level": 1000,
+   "lumber": 450,
+   "lumber_per_level": 900,
+   "levels": 6,
+   "requires": [
+    "hkee"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R09I": {
+   "type": "upgrade",
+   "name": "Земля",
+   "gold": 500,
+   "gold_per_level": 1000,
+   "lumber": 450,
+   "lumber_per_level": 900,
+   "levels": 6,
+   "requires": [
+    "hkee"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R09J": {
+   "type": "upgrade",
+   "name": "Ветер",
+   "gold": 500,
+   "gold_per_level": 1000,
+   "lumber": 450,
+   "lumber_per_level": 900,
+   "levels": 6,
+   "requires": [
+    "hkee"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R09Q": {
+   "type": "upgrade",
+   "name": "Ярость",
+   "gold": 430,
+   "lumber": 430,
+   "levels": 1,
+   "time": 40
+  },
+  "R09R": {
+   "type": "upgrade",
+   "name": "Повышение температуры",
+   "gold": 540,
+   "lumber": 650,
+   "levels": 2,
+   "requires": [
+    "h0ER",
+    "R09C"
+   ],
+   "time": 40
+  },
+  "R09S": {
+   "type": "upgrade",
+   "name": "Рассекающий удар",
+   "gold": 560,
+   "lumber": 760,
+   "levels": 1,
+   "requires": [
+    "R09C"
+   ],
+   "time": 40
+  },
+  "R09T": {
+   "type": "upgrade",
+   "name": "Магия воды",
+   "gold": 430,
+   "gold_per_level": 430,
+   "lumber": 430,
+   "levels": 1,
+   "time": 40
+  },
+  "R09U": {
+   "type": "upgrade",
+   "name": "Ледяные стрелы",
+   "gold": 430,
+   "lumber": 540,
+   "levels": 2,
+   "requires": [
+    "R09D"
+   ],
+   "time": 40
+  },
+  "R09V": {
+   "type": "upgrade",
+   "name": "Магия морей",
+   "gold": 470,
+   "gold_per_level": 450,
+   "lumber": 760,
+   "lumber_per_level": 435,
+   "levels": 2,
+   "requires": [
+    "R09D",
+    "h0ER"
+   ],
+   "time": 40
+  },
+  "R09W": {
+   "type": "upgrade",
+   "name": "",
+   "only_required": true,
+   "gold": 450,
+   "gold_per_level": 250,
+   "lumber": 150,
+   "lumber_per_level": 150,
+   "levels": 1,
+   "requires": [
+    "ostr",
+    "o03B",
+    "o03D"
+   ],
+   "time": 40
+  },
+  "R09X": {
+   "type": "upgrade",
+   "name": "Каменное здоровье",
+   "gold": 650,
+   "gold_per_level": 650,
+   "lumber": 740,
+   "lumber_per_level": 740,
+   "levels": 3,
+   "requires": [
+    "h0ER"
+   ],
+   "time": 40
+  },
+  "R09Y": {
+   "type": "upgrade",
+   "name": "Сокрушение",
+   "gold": 540,
+   "lumber": 800,
+   "levels": 1,
+   "requires": [
+    "h0ES"
+   ],
+   "time": 40
+  },
+  "R09Z": {
+   "type": "upgrade",
+   "name": "Легкость воздуха",
+   "gold": 450,
+   "gold_per_level": 450,
+   "lumber": 555,
+   "lumber_per_level": 555,
+   "levels": 2,
+   "time": 40
+  },
+  "R0A0": {
+   "type": "upgrade",
+   "name": "Критический удар",
+   "gold": 560,
+   "lumber": 540,
+   "levels": 1,
+   "requires": [
+    "h0ER"
+   ],
+   "time": 40
+  },
+  "R0A1": {
+   "type": "upgrade",
+   "name": "Ярость грома",
+   "gold": 870,
+   "lumber": 1200,
+   "levels": 1,
+   "requires": [
+    "h0ES"
+   ],
+   "time": 40
+  },
+  "R0A2": {
+   "type": "upgrade",
+   "name": "Элементали",
+   "levels": 1
+  },
+  "R0DS": {
+   "type": "upgrade",
+   "name": "Улучшенная добыча",
+   "gold": 100,
+   "gold_per_level": 250,
+   "levels": 5,
+   "time": 60,
+   "time_per_level": 15
+  },
+  "Resi": {
+   "type": "upgrade",
+   "name": "Рассеяние чар",
+   "gold": 320,
+   "lumber": 560,
+   "levels": 1,
+   "time": 45
+  },
+  "Reuv": {
+   "type": "upgrade",
+   "name": "",
+   "only_required": true,
+   "gold": 50,
+   "lumber": 50,
+   "levels": 1,
+   "requires": [
+    "etoa"
+   ],
+   "time": 45
+  },
+  "Rgfo": {
+   "type": "upgrade",
+   "name": "Знак укрепления",
+   "gold": 100,
+   "gold_per_level": 50,
+   "lumber": 100,
+   "lumber_per_level": 50,
+   "levels": 3,
+   "time": 60,
+   "time_per_level": 15
+  },
+  "Rhac": {
+   "type": "upgrade",
+   "name": "Улучшенная кладка — уровень 1",
+   "gold": 125,
+   "gold_per_level": 500,
+   "lumber": 50,
+   "lumber_per_level": 450,
+   "levels": 3,
+   "requires": [
+    "hkee"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "e00F": {
+   "type": "unit",
+   "name": "Дух стихий",
+   "base": "ewsp",
+   "time": 14,
+   "gold": 70,
+   "hotkey": "Q",
+   "hp": 125
+  },
+  "h0EO": {
+   "type": "building",
+   "name": "Огненные недра",
+   "base": "hbar",
+   "time": 60,
+   "gold": 360,
+   "hotkey": "F",
+   "hp": 1500,
+   "lumber": 500
+  },
+  "h0EP": {
+   "type": "building",
+   "name": "Магическая башня",
+   "base": "hatw",
+   "time": 50,
+   "gold": 250,
+   "hotkey": "Z",
+   "hp": 500,
+   "lumber": 150
+  },
+  "h0EQ": {
+   "type": "building",
+   "name": "Скопление стихий",
+   "base": "htow",
+   "time": 180,
+   "food_made": 50,
+   "gold": 385,
+   "hotkey": "Q",
+   "hp": 1500,
+   "lumber": 205
+  },
+  "h0ER": {
+   "type": "building",
+   "name": "Наполнитель стихий",
+   "base": "hkee",
+   "time": 140,
+   "food_made": 100,
+   "gold": 4500,
+   "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4500
+  },
+  "h0ES": {
+   "type": "building",
+   "name": "Стихийный Бастион",
+   "base": "hcas",
+   "time": 140,
+   "food_made": 150,
+   "gold": 12000,
+   "hotkey": "Z",
+   "hp": 2500,
+   "lumber": 12000,
+   "requires": [
+    "h0EY"
+   ]
+  },
+  "h0ET": {
+   "type": "building",
+   "name": "Морской басейн",
+   "base": "hbar",
+   "time": 60,
+   "gold": 450,
+   "hotkey": "R",
+   "hp": 1500,
+   "lumber": 270
+  },
+  "h0EU": {
+   "type": "building",
+   "name": "Ветролом",
+   "base": "hbar",
+   "time": 60,
+   "gold": 340,
+   "hotkey": "W",
+   "hp": 1500,
+   "lumber": 450
+  },
+  "h0EV": {
+   "type": "building",
+   "name": "Элементальная мастерская",
+   "base": "hbla",
+   "time": 70,
+   "gold": 140,
+   "hotkey": "D",
+   "hp": 1500,
+   "lumber": 40
+  },
+  "h0EW": {
+   "type": "building",
+   "name": "Каменоломня",
+   "base": "hbar",
+   "time": 60,
+   "gold": 400,
+   "hotkey": "E",
+   "hp": 1500,
+   "lumber": 340
+  },
+  "h0EX": {
+   "type": "building",
+   "name": "Стихийный кристалл",
+   "base": "hhou",
+   "time": 35,
+   "food_made": 40,
+   "gold": 300,
+   "hotkey": "A",
+   "hp": 500,
+   "lumber": 150
+  },
+  "h0EY": {
+   "type": "building",
+   "name": "Алтарь Пространства",
+   "base": "halt",
+   "time": 60,
+   "food_made": 3,
+   "gold": 180,
+   "hotkey": "S",
+   "hp": 900,
+   "lumber": 50
+  },
+  "h0F1": {
+   "type": "unit",
+   "name": "Огненная птица",
+   "base": "hphx",
+   "time": 54,
+   "gold": 360,
+   "hotkey": "R",
+   "hp": 650,
+   "lumber": 120,
+   "requires": [
+    "h0ES"
+   ]
+  },
+  "h0L5": {
+   "type": "building",
+   "name": "Магическая башня",
+   "base": "hatw",
+   "time": 50,
+   "gold": 10000,
+   "hotkey": "Z",
+   "hp": 500,
+   "lumber": 10000,
+   "requires": [
+    "R09C"
+   ]
+  },
+  "hkee": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 140,
+   "food_made": 100,
+   "gold": 4500,
+   "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4500
+  },
+  "n02P": {
+   "type": "unit",
+   "name": "Штормовой Элементаль",
+   "base": "nmyr",
+   "time": 48,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 325,
+   "hotkey": "R",
+   "hp": 700,
+   "lumber": 110,
+   "requires": [
+    "h0ES"
+   ]
+  },
+  "n02Q": {
+   "type": "unit",
+   "name": "Элементаль Ветра",
+   "base": "nmyr",
+   "time": 25,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 170,
+   "hotkey": "Q",
+   "hp": 450
+  },
+  "n02R": {
+   "type": "unit",
+   "name": "Элементаль Огня",
+   "base": "nmyr",
+   "time": 26,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 160,
+   "hotkey": "Q",
+   "hp": 550
+  },
+  "n02S": {
+   "type": "unit",
+   "name": "Возжигатель",
+   "base": "nmyr",
+   "time": 33,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 220,
+   "hotkey": "W",
+   "hp": 500,
+   "lumber": 75,
+   "requires": [
+    "h0ER",
+    "R09C"
+   ]
+  },
+  "n02T": {
+   "type": "unit",
+   "name": "Элементаль Морей",
+   "base": "nmyr",
+   "time": 35,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 235,
+   "hotkey": "E",
+   "hp": 450,
+   "lumber": 80,
+   "requires": [
+    "h0ER",
+    "R09D"
+   ]
+  },
+  "n02U": {
+   "type": "unit",
+   "name": "Элементаль Воды",
+   "base": "nmyr",
+   "time": 24,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 175,
+   "hotkey": "Q",
+   "hp": 500
+  },
+  "n02V": {
+   "type": "unit",
+   "name": "Грозовой Элементаль",
+   "base": "nmyr",
+   "time": 32,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 215,
+   "hotkey": "W",
+   "hp": 500,
+   "lumber": 70,
+   "requires": [
+    "R09F",
+    "R09D"
+   ]
+  },
+  "n02W": {
+   "type": "unit",
+   "name": "Элементаль Земли",
+   "base": "ngrk",
+   "time": 26,
+   "gold": 150,
+   "hotkey": "Q",
+   "hp": 600
+  },
+  "n02X": {
+   "type": "unit",
+   "name": "Каменный голем",
+   "base": "ngst",
+   "time": 38,
+   "gold": 260,
+   "hotkey": "E",
+   "hp": 750,
+   "lumber": 90,
+   "requires": [
+    "h0ER"
+   ]
+  },
+  "n02Y": {
+   "type": "unit",
+   "name": "Гранитный голем",
+   "base": "nggr",
+   "time": 48,
+   "gold": 330,
+   "hotkey": "R",
+   "hp": 900,
+   "lumber": 110,
+   "requires": [
+    "h0ES",
+    "R09E"
+   ]
+  },
+  "n02Z": {
+   "type": "unit",
+   "name": "Грязевой Элементаль",
+   "base": "nmyr",
+   "time": 33,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 210,
+   "hotkey": "E",
+   "hp": 500,
+   "lumber": 70
+  },
+  "n031": {
+   "type": "unit",
+   "name": "Кристальный голем",
+   "base": "nggr",
+   "time": 55,
+   "gold": 295,
+   "hotkey": "A",
+   "hp": 950,
+   "lumber": 85,
+   "requires": [
+    "h0ES"
+   ]
+  },
+  "n032": {
+   "type": "unit",
+   "name": "Рифовый Эементаль",
+   "base": "nsel",
+   "time": 57,
+   "gold": 385,
+   "hotkey": "R",
+   "hp": 700,
+   "lumber": 130,
+   "requires": [
+    "h0ES",
+    "R09D"
+   ]
+  },
+  "n033": {
+   "type": "unit",
+   "name": "Яростный голем",
+   "base": "nggr",
+   "time": 50,
+   "gold": 315,
+   "hotkey": "R",
+   "hp": 1250,
+   "lumber": 90,
+   "requires": [
+    "h0ES"
+   ]
+  },
+  "n034": {
+   "type": "unit",
+   "name": "Огненный голем",
+   "base": "nggr",
+   "time": 55,
+   "gold": 295,
+   "hotkey": "R",
+   "hp": 1250,
+   "lumber": 95,
+   "requires": [
+    "h0ES"
+   ]
+  },
+  "n035": {
+   "type": "unit",
+   "name": "Ледяной Голем",
+   "base": "nggr",
+   "time": 55,
+   "gold": 290,
+   "hotkey": "R",
+   "hp": 1250,
+   "lumber": 90,
+   "requires": [
+    "h0ES"
+   ]
+  },
+  "n036": {
+   "type": "unit",
+   "name": "Гончая пламени",
+   "base": "nmyr",
+   "time": 32,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 200,
+   "hotkey": "W",
+   "hp": 650,
+   "lumber": 70,
+   "requires": [
+    "R09C"
+   ]
+  },
+  "n07C": {
+   "type": "unit",
+   "name": "Элементаль Океана",
+   "base": "nmyr",
+   "time": 24,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 175,
+   "hotkey": "Q",
+   "hp": 500
+  },
+  "n07N": {
+   "type": "unit",
+   "name": "Огненный Страж",
+   "base": "nmyr",
+   "time": 25,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 170,
+   "hotkey": "Q",
+   "hp": 450
+  },
+  "n07O": {
+   "type": "unit",
+   "name": "Рядовой стрелок",
+   "base": "nmyr",
+   "time": 25,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 170,
+   "hotkey": "Q",
+   "hp": 450
+  },
+  "n07P": {
+   "type": "unit",
+   "name": "Воздушный волк",
+   "base": "nmyr",
+   "time": 25,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 170,
+   "hotkey": "Q",
+   "hp": 450
+  },
+  "n07Q": {
+   "type": "unit",
+   "name": "Воитель бури",
+   "base": "nmyr",
+   "time": 25,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 170,
+   "hotkey": "Q",
+   "hp": 450
+  },
+  "n07R": {
+   "type": "unit",
+   "name": "Загробник Бури",
+   "base": "nmyr",
+   "time": 25,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 170,
+   "hotkey": "Q",
+   "hp": 450
+  },
+  "n07S": {
+   "type": "unit",
+   "name": "Янтарный Загробник",
+   "base": "nmyr",
+   "time": 25,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 170,
+   "hotkey": "Q",
+   "hp": 450
+  },
+  "n07T": {
+   "type": "unit",
+   "name": "Загробник Глубин",
+   "base": "nmyr",
+   "time": 25,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 170,
+   "hotkey": "Q",
+   "hp": 450
+  },
+  "n07U": {
+   "type": "unit",
+   "name": ""
+  },
+  "n07V": {
+   "type": "unit",
+   "name": "Песчанный Элементаль",
+   "base": "ngrk",
+   "time": 26,
+   "gold": 150,
+   "hotkey": "Q",
+   "hp": 600
+  },
+  "n07W": {
+   "type": "unit",
+   "name": "Особый Земли",
+   "base": "nmyr",
+   "time": 25,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 170,
+   "hotkey": "Q",
+   "hp": 450
+  },
+  "n07X": {
+   "type": "unit",
+   "name": "Особый Воды",
+   "base": "nmyr",
+   "time": 25,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 170,
+   "hotkey": "Q",
+   "hp": 450
+  },
+  "n07Y": {
+   "type": "unit",
+   "name": "Особый Огня",
+   "base": "nmyr",
+   "time": 25,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 170,
+   "hotkey": "Q",
+   "hp": 450
+  },
+  "n07Z": {
+   "type": "unit",
+   "name": "Особый Ветра",
+   "base": "nmyr",
+   "time": 25,
+   "equivalents": [
+    "nmys"
+   ],
+   "gold": 170,
+   "hotkey": "Q",
+   "hp": 450
+  }
+ },
+ "edges": [
+  "A0PH requires R09R",
+  "A0Q8 requires R09R",
+  "A0Q9 requires R09S",
+  "A0QA requires R0A0",
+  "A0QC requires R09U",
+  "A0QD requires R09V",
+  "A0QF requires R09Y",
+  "A0QM requires R09W",
+  "Aadm requires Resi",
+  "Ault requires Reuv",
+  "H0EZ has-ability A01C",
+  "H0EZ has-ability AInv",
+  "H0EZ hero-ability A0P2",
+  "H0EZ hero-ability A0P4",
+  "H0EZ hero-ability A1MR",
+  "H0EZ hero-ability AEtq",
+  "H0F0 has-ability AInv",
+  "H0F0 hero-ability A0P9",
+  "H0F0 hero-ability A0PA",
+  "H0F0 hero-ability A1LE",
+  "H0F0 hero-ability AHpx",
+  "N037 has-ability AInv",
+  "N037 hero-ability A0P7",
+  "N037 hero-ability AHfs",
+  "N037 hero-ability ANic",
+  "N037 hero-ability ANlm",
+  "R01N requires hkee",
+  "R09G requires hkee",
+  "R09H requires hkee",
+  "R09I requires hkee",
+  "R09J requires hkee",
+  "R09R requires R09C",
+  "R09R requires h0ER",
+  "R09S requires R09C",
+  "R09U requires R09D",
+  "R09V requires R09D",
+  "R09V requires h0ER",
+  "R09X requires h0ER",
+  "R09Y requires h0ES",
+  "R0A0 requires h0ER",
+  "R0A1 requires h0ES",
+  "Rhac requires hkee",
+  "e00F builds h0EO",
+  "e00F builds h0EP",
+  "e00F builds h0EQ",
+  "e00F builds h0ET",
+  "e00F builds h0EU",
+  "e00F builds h0EV",
+  "e00F builds h0EW",
+  "e00F builds h0EX",
+  "e00F builds h0EY",
+  "e00F has-ability A0I3",
+  "e00F has-ability Adtn",
+  "e00F has-ability Aren",
+  "e00F has-ability Ault",
+  "e00F has-ability Awha",
+  "e00F researches R0DS",
+  "h0EO has-ability Abds",
+  "h0EO researches R09Q",
+  "h0EO researches R09R",
+  "h0EO researches R09S",
+  "h0EO researches Rgfo",
+  "h0EO researches Rhac",
+  "h0EO trains h0F1",
+  "h0EO trains n02R",
+  "h0EO trains n02S",
+  "h0EO trains n036",
+  "h0EO trains n07O",
+  "h0EP has-ability A0OZ",
+  "h0EP morphs-to h0L5",
+  "h0EP researches R09G",
+  "h0EQ has-ability A0IQ",
+  "h0EQ has-ability A0LI",
+  "h0EQ has-ability A0LJ",
+  "h0EQ has-ability Argl",
+  "h0EQ morphs-to h0ER",
+  "h0EQ researches Rgfo",
+  "h0EQ researches Rhac",
+  "h0EQ trains e00F",
+  "h0ER has-ability A0IQ",
+  "h0ER has-ability A0LI",
+  "h0ER has-ability A0LJ",
+  "h0ER has-ability Argl",
+  "h0ER morphs-to h0ES",
+  "h0ER researches Rgfo",
+  "h0ER researches Rhac",
+  "h0ER trains e00F",
+  "h0ES has-ability A0IQ",
+  "h0ES has-ability A0LI",
+  "h0ES has-ability A0LJ",
+  "h0ES has-ability A0W7",
+  "h0ES has-ability A0W8",
+  "h0ES has-ability A0W9",
+  "h0ES has-ability A0WA",
+  "h0ES has-ability Argl",
+  "h0ES requires h0EY",
+  "h0ES researches Rgfo",
+  "h0ES researches Rhac",
+  "h0ES trains e00F",
+  "h0ES trains n07W",
+  "h0ES trains n07X",
+  "h0ES trains n07Y",
+  "h0ES trains n07Z",
+  "h0ET researches R09T",
+  "h0ET researches R09U",
+  "h0ET researches R09V",
+  "h0ET researches Resi",
+  "h0ET researches Rgfo",
+  "h0ET researches Rhac",
+  "h0ET trains n02T",
+  "h0ET trains n02U",
+  "h0ET trains n02Z",
+  "h0ET trains n032",
+  "h0ET trains n07C",
+  "h0ET trains n07T",
+  "h0EU researches R09Z",
+  "h0EU researches R0A0",
+  "h0EU researches R0A1",
+  "h0EU researches Rgfo",
+  "h0EU researches Rhac",
+  "h0EU trains n02P",
+  "h0EU trains n02Q",
+  "h0EU trains n02V",
+  "h0EU trains n07P",
+  "h0EU trains n07R",
+  "h0EU trains n07U",
+  "h0EV researches R01N",
+  "h0EV researches R09G",
+  "h0EV researches R09H",
+  "h0EV researches R09I",
+  "h0EV researches R09J",
+  "h0EV researches R0DS",
+  "h0EV researches Rgfo",
+  "h0EW researches R09X",
+  "h0EW researches R09Y",
+  "h0EW researches Rgfo",
+  "h0EW researches Rhac",
+  "h0EW trains n02W",
+  "h0EW trains n02X",
+  "h0EW trains n02Y",
+  "h0EW trains n031",
+  "h0EW trains n033",
+  "h0EW trains n034",
+  "h0EW trains n035",
+  "h0EW trains n07N",
+  "h0EW trains n07Q",
+  "h0EW trains n07S",
+  "h0EW trains n07V",
+  "h0EX has-ability Abds",
+  "h0EX researches Rgfo",
+  "h0EX researches Rhac",
+  "h0EY researches Rgfo",
+  "h0EY researches Rhac",
+  "h0EY trains H0EZ",
+  "h0EY trains H0F0",
+  "h0EY trains N037",
+  "h0F1 has-ability A01N",
+  "h0F1 has-ability A01S",
+  "h0F1 has-ability A0QE",
+  "h0F1 requires h0ES",
+  "h0F1 researches R09C",
+  "h0F1 researches R09D",
+  "h0F1 researches R09E",
+  "h0F1 researches R09F",
+  "h0F1 researches R09G",
+  "h0F1 researches R09Q",
+  "h0L5 has-ability A0OZ",
+  "h0L5 has-ability A18B",
+  "h0L5 requires R09C",
+  "h0L5 researches A0OZ",
+  "h0L5 researches R09G",
+  "n02P has-ability A1MQ",
+  "n02P requires h0ES",
+  "n02P researches R09C",
+  "n02P researches R09D",
+  "n02P researches R09E",
+  "n02P researches R09F",
+  "n02P researches R09J",
+  "n02P researches R09Z",
+  "n02Q has-ability A1MQ",
+  "n02Q researches R09C",
+  "n02Q researches R09D",
+  "n02Q researches R09E",
+  "n02Q researches R09F",
+  "n02Q researches R09J",
+  "n02Q researches R09Z",
+  "n02R has-ability A01S",
+  "n02R researches R09C",
+  "n02R researches R09D",
+  "n02R researches R09E",
+  "n02R researches R09F",
+  "n02R researches R09G",
+  "n02R researches R09Q",
+  "n02S has-ability A01S",
+  "n02S has-ability A0PH",
+  "n02S has-ability A0Q8",
+  "n02S requires R09C",
+  "n02S requires h0ER",
+  "n02S researches R09C",
+  "n02S researches R09D",
+  "n02S researches R09E",
+  "n02S researches R09F",
+  "n02S researches R09G",
+  "n02S researches R09Q",
+  "n02S researches R09R",
+  "n02T has-ability A0CE",
+  "n02T has-ability A0QC",
+  "n02T has-ability Adis",
+  "n02T requires R09D",
+  "n02T requires h0ER",
+  "n02T researches R09C",
+  "n02T researches R09D",
+  "n02T researches R09E",
+  "n02T researches R09F",
+  "n02T researches R09H",
+  "n02T researches R09U",
+  "n02U has-ability Aadm",
+  "n02U researches R09C",
+  "n02U researches R09D",
+  "n02U researches R09E",
+  "n02U researches R09F",
+  "n02U researches R09H",
+  "n02U researches R09T",
+  "n02V has-ability A0QA",
+  "n02V has-ability A1MQ",
+  "n02V requires R09D",
+  "n02V requires R09F",
+  "n02V researches R09C",
+  "n02V researches R09D",
+  "n02V researches R09E",
+  "n02V researches R09F",
+  "n02V researches R09J",
+  "n02V researches R09Z",
+  "n02W researches R09C",
+  "n02W researches R09D",
+  "n02W researches R09E",
+  "n02W researches R09F",
+  "n02W researches R09I",
+  "n02W researches R09X",
+  "n02X has-ability A0QI",
+  "n02X requires h0ER",
+  "n02X researches R09C",
+  "n02X researches R09D",
+  "n02X researches R09E",
+  "n02X researches R09F",
+  "n02X researches R09I",
+  "n02X researches R09X",
+  "n02Y has-ability A0PG",
+  "n02Y requires R09E",
+  "n02Y requires h0ES",
+  "n02Y researches R09C",
+  "n02Y researches R09D",
+  "n02Y researches R09E",
+  "n02Y researches R09F",
+  "n02Y researches R09I",
+  "n02Y researches R09X",
+  "n02Z researches R09C",
+  "n02Z researches R09D",
+  "n02Z researches R09E",
+  "n02Z researches R09F",
+  "n02Z researches R09I",
+  "n02Z researches R09X",
+  "n031 has-ability A0PG",
+  "n031 has-ability A0QG",
+  "n031 has-ability A0QH",
+  "n031 requires h0ES",
+  "n031 researches R09C",
+  "n031 researches R09D",
+  "n031 researches R09E",
+  "n031 researches R09F",
+  "n031 researches R09I",
+  "n031 researches R09X",
+  "n032 has-ability A0QD",
+  "n032 requires R09D",
+  "n032 requires h0ES",
+  "n032 researches R09C",
+  "n032 researches R09D",
+  "n032 researches R09E",
+  "n032 researches R09F",
+  "n032 researches R09H",
+  "n032 researches R09V",
+  "n033 has-ability A0QF",
+  "n033 has-ability A0QI",
+  "n033 has-ability A0QM",
+  "n033 requires h0ES",
+  "n033 researches R09C",
+  "n033 researches R09D",
+  "n033 researches R09E",
+  "n033 researches R09F",
+  "n033 researches R09I",
+  "n033 researches R09X",
+  "n034 has-ability A01S",
+  "n034 requires h0ES",
+  "n034 researches R09C",
+  "n034 researches R09D",
+  "n034 researches R09E",
+  "n034 researches R09F",
+  "n034 researches R09G",
+  "n034 researches R09Q",
+  "n035 has-ability A01R",
+  "n035 requires h0ES",
+  "n035 researches R09C",
+  "n035 researches R09D",
+  "n035 researches R09E",
+  "n035 researches R09F",
+  "n035 researches R09H",
+  "n036 has-ability A0Q9",
+  "n036 requires R09C",
+  "n036 researches R09C",
+  "n036 researches R09D",
+  "n036 researches R09E",
+  "n036 researches R09F",
+  "n036 researches R09G",
+  "n036 researches R09Q",
+  "n07C has-ability Aadm",
+  "n07C researches R09C",
+  "n07C researches R09D",
+  "n07C researches R09E",
+  "n07C researches R09F",
+  "n07C researches R09H",
+  "n07C researches R09T",
+  "n07N has-ability A1MQ",
+  "n07N researches R09C",
+  "n07N researches R09D",
+  "n07N researches R09E",
+  "n07N researches R09F",
+  "n07N researches R09J",
+  "n07N researches R09Z",
+  "n07O has-ability A1MQ",
+  "n07O researches R09C",
+  "n07O researches R09D",
+  "n07O researches R09E",
+  "n07O researches R09F",
+  "n07O researches R09J",
+  "n07O researches R09Z",
+  "n07P has-ability A1MQ",
+  "n07P researches R09C",
+  "n07P researches R09D",
+  "n07P researches R09E",
+  "n07P researches R09F",
+  "n07P researches R09J",
+  "n07P researches R09Z",
+  "n07Q has-ability A1MQ",
+  "n07Q researches R09C",
+  "n07Q researches R09D",
+  "n07Q researches R09E",
+  "n07Q researches R09F",
+  "n07Q researches R09J",
+  "n07Q researches R09Z",
+  "n07R has-ability A1MQ",
+  "n07R researches R09C",
+  "n07R researches R09D",
+  "n07R researches R09E",
+  "n07R researches R09F",
+  "n07R researches R09J",
+  "n07R researches R09Z",
+  "n07S has-ability A1MQ",
+  "n07S researches R09C",
+  "n07S researches R09D",
+  "n07S researches R09E",
+  "n07S researches R09F",
+  "n07S researches R09J",
+  "n07S researches R09Z",
+  "n07T has-ability A1MQ",
+  "n07T researches R09C",
+  "n07T researches R09D",
+  "n07T researches R09E",
+  "n07T researches R09F",
+  "n07T researches R09J",
+  "n07T researches R09Z",
+  "n07V researches R09C",
+  "n07V researches R09D",
+  "n07V researches R09E",
+  "n07V researches R09F",
+  "n07V researches R09I",
+  "n07V researches R09X",
+  "n07W has-ability A1MQ",
+  "n07W researches R09C",
+  "n07W researches R09D",
+  "n07W researches R09E",
+  "n07W researches R09F",
+  "n07W researches R09J",
+  "n07W researches R09Z",
+  "n07X has-ability A1MQ",
+  "n07X researches R09C",
+  "n07X researches R09D",
+  "n07X researches R09E",
+  "n07X researches R09F",
+  "n07X researches R09J",
+  "n07X researches R09Z",
+  "n07Y has-ability A1MQ",
+  "n07Y researches R09C",
+  "n07Y researches R09D",
+  "n07Y researches R09E",
+  "n07Y researches R09F",
+  "n07Y researches R09J",
+  "n07Y researches R09Z",
+  "n07Z has-ability A1MQ",
+  "n07Z researches R09C",
+  "n07Z researches R09D",
+  "n07Z researches R09E",
+  "n07Z researches R09F",
+  "n07Z researches R09J",
+  "n07Z researches R09Z",
+  "race:Elements lua-start-tech R0A2",
+  "race:Elements lua-starts-with e00F"
+ ]
+}

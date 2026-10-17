@@ -1,0 +1,1904 @@
+{
+ "race": "IceTrols",
+ "start_units": [
+  "o045"
+ ],
+ "start_tech": [
+  "R0L1"
+ ],
+ "lua": [
+  {
+   "file": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/04_race_selection.lua",
+   "symbol": "Trig_Race_IceTrols_Actions"
+  }
+ ],
+ "objects": {
+  "A00A": {
+   "type": "ability",
+   "name": "Починка",
+   "hotkey": "R",
+   "levels": 3,
+   "hero_level_req": 1,
+   "requires": [
+    "R007"
+   ]
+  },
+  "A00B": {
+   "type": "ability",
+   "name": "Тактическое ускорение",
+   "hotkey": "E",
+   "levels": 3,
+   "requires": [
+    "R006"
+   ]
+  },
+  "A00I": {
+   "type": "ability",
+   "name": "Магическая посадка",
+   "hotkey": "W",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A0I3": {
+   "type": "ability",
+   "name": "Небольшой скачок",
+   "hotkey": "C",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A0IQ": {
+   "type": "ability",
+   "name": "Обозначить столицу",
+   "hotkey": "X",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A0LI": {
+   "type": "ability",
+   "name": "Обмен золота на дерево",
+   "hotkey": "S",
+   "levels": 1
+  },
+  "A0LJ": {
+   "type": "ability",
+   "name": "Обмен дерева на золото",
+   "hotkey": "A",
+   "levels": 1
+  },
+  "A0W1": {
+   "type": "ability",
+   "name": "Грозовая атака",
+   "levels": 1
+  },
+  "A0Z5": {
+   "type": "ability",
+   "name": "ДАММИ - ВНЕ ЭКОНОМИКИ",
+   "hotkey": "C",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A10O": {
+   "type": "ability",
+   "name": "Опутывание",
+   "hotkey": "E",
+   "levels": 1
+  },
+  "A15N": {
+   "type": "ability",
+   "name": "Зона ремонта",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A1CA": {
+   "type": "ability",
+   "name": "Второе дыхание",
+   "levels": 1,
+   "requires": [
+    "Rhri"
+   ]
+  },
+  "A1CB": {
+   "type": "ability",
+   "name": "Неуязвимость",
+   "hero": true,
+   "hotkey": "W",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A1CC": {
+   "type": "ability",
+   "name": "Рассекающий удар",
+   "hero": true,
+   "hotkey": "E",
+   "levels": 4
+  },
+  "A1CD": {
+   "type": "ability",
+   "name": "Воплощение Лоа",
+   "hero": true,
+   "hotkey": "R",
+   "levels": 2,
+   "hero_level_req": 6
+  },
+  "A1CE": {
+   "type": "ability",
+   "name": "Всплеск ярости",
+   "hero": true,
+   "hotkey": "Q",
+   "levels": 4,
+   "requires": [
+    "Robk"
+   ]
+  },
+  "A1CL": {
+   "type": "ability",
+   "name": "Рассеивание заклинаний",
+   "hotkey": "W",
+   "levels": 1,
+   "requires": [
+    "R0EU"
+   ]
+  },
+  "A1CM": {
+   "type": "ability",
+   "name": "Ice Arrow",
+   "hotkey": "Q",
+   "levels": 1
+  },
+  "A1CN": {
+   "type": "ability",
+   "name": "Злоба Лоа",
+   "hotkey": "W",
+   "levels": 1,
+   "requires": [
+    "R0I4"
+   ],
+   "requires_amount": 1
+  },
+  "A1CO": {
+   "type": "ability",
+   "name": "Исцеление",
+   "hotkey": "Q",
+   "levels": 1
+  },
+  "A1CP": {
+   "type": "ability",
+   "name": "Морозный доспех",
+   "hotkey": "E",
+   "levels": 1,
+   "requires": [
+    "R0EU"
+   ],
+   "requires_amount": 2
+  },
+  "A1CR": {
+   "type": "ability",
+   "name": "Разрывающие удары",
+   "levels": 1,
+   "requires": [
+    "R0I6"
+   ]
+  },
+  "A1CS": {
+   "type": "ability",
+   "name": "Сильный удар",
+   "levels": 1,
+   "requires": [
+    "R0I6"
+   ],
+   "requires_amount": 2
+  },
+  "A1CT": {
+   "type": "ability",
+   "name": "Рассекающий удар",
+   "levels": 1
+  },
+  "A1CV": {
+   "type": "ability",
+   "name": "Кольцо льда",
+   "hotkey": "E",
+   "levels": 1,
+   "requires": [
+    "R0I5"
+   ],
+   "requires_amount": 2
+  },
+  "A1CW": {
+   "type": "ability",
+   "name": "Критический удар",
+   "levels": 1
+  },
+  "A1D6": {
+   "type": "ability",
+   "name": "Сокрушение",
+   "levels": 2,
+   "requires": [
+    "R0IG"
+   ]
+  },
+  "A1D7": {
+   "type": "ability",
+   "name": "Берсерк",
+   "hotkey": "W",
+   "levels": 1,
+   "requires": [
+    "R0IG"
+   ],
+   "requires_amount": 2
+  },
+  "A1DA": {
+   "type": "ability",
+   "name": "Рывок",
+   "hero": true,
+   "hotkey": "E",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A1DL": {
+   "type": "ability",
+   "name": "Огненная стрела",
+   "hero": true,
+   "hotkey": "W",
+   "levels": 4
+  },
+  "A1DP": {
+   "type": "ability",
+   "name": "Невосприимчивость к магии",
+   "levels": 1,
+   "requires": [
+    "R0I5"
+   ]
+  },
+  "A1DR": {
+   "type": "ability",
+   "name": "Яростный удар",
+   "hero": true,
+   "hotkey": "Q",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A1DS": {
+   "type": "ability",
+   "name": "Мощь тролля",
+   "hero": true,
+   "hotkey": "W",
+   "levels": 4
+  },
+  "A1EB": {
+   "type": "ability",
+   "name": "Вихрь клинков",
+   "hero": true,
+   "hotkey": "R",
+   "levels": 2,
+   "hero_level_req": 6
+  },
+  "A1EC": {
+   "type": "ability",
+   "name": "Аура меткости",
+   "hero": true,
+   "hotkey": "E",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A1ED": {
+   "type": "ability",
+   "name": "Веер шакрамов",
+   "hero": true,
+   "hotkey": "W",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A1EE": {
+   "type": "ability",
+   "name": "Большой шакрам",
+   "hero": true,
+   "hotkey": "Q",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A1EF": {
+   "type": "ability",
+   "name": "Ускользание",
+   "hero": true,
+   "hotkey": "R",
+   "levels": 2,
+   "hero_level_req": 6
+  },
+  "A1EG": {
+   "type": "ability",
+   "name": "Ледяные тролли Драккари",
+   "hotkey": "E",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A1FF": {
+   "type": "ability",
+   "name": "СПОСОБНОСТЬ: Наносит сокрушительный удар, поражающий врагов поблизости от основной цели на 17% урона.",
+   "levels": 1
+  },
+  "A1FR": {
+   "type": "ability",
+   "name": "Ритуал поклонения",
+   "hotkey": "E",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A1FS": {
+   "type": "ability",
+   "name": "Чрезвычайные меры",
+   "hotkey": "R",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A1FU": {
+   "type": "ability",
+   "name": "Муссон",
+   "hotkey": "W",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A1FV": {
+   "type": "ability",
+   "name": "Цепная молния",
+   "hotkey": "Q",
+   "levels": 1
+  },
+  "A1FX": {
+   "type": "ability",
+   "name": "Реинкарнация",
+   "levels": 1,
+   "hero_level_req": 6,
+   "requires": [
+    "o06K"
+   ]
+  },
+  "A1FY": {
+   "type": "ability",
+   "name": "Ярость",
+   "hotkey": "E",
+   "levels": 1,
+   "requires": [
+    "o06I"
+   ]
+  },
+  "A1KB": {
+   "type": "ability",
+   "name": "Защита столицы",
+   "levels": 1
+  },
+  "A1OV": {
+   "type": "ability",
+   "name": "Воскрешение падших",
+   "hotkey": "E",
+   "levels": 2,
+   "requires": [
+    "R09L\r\nR09L"
+   ],
+   "requires_amount": 2
+  },
+  "A1OW": {
+   "type": "ability",
+   "name": "Угасание жизни",
+   "hotkey": "Q",
+   "levels": 1
+  },
+  "A1P4": {
+   "type": "ability",
+   "name": "Похищение жизни",
+   "hotkey": "W",
+   "levels": 1,
+   "requires": [
+    "R09L"
+   ]
+  },
+  "A1P5": {
+   "type": "ability",
+   "name": "Призыв змеи",
+   "hotkey": "E",
+   "levels": 1,
+   "hero_level_req": 1,
+   "requires": [
+    "R0I4"
+   ],
+   "requires_amount": 2
+  },
+  "A1P6": {
+   "type": "ability",
+   "name": "Проклятый шепот",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A1P9": {
+   "type": "ability",
+   "name": "Аура Рунока",
+   "levels": 1,
+   "requires": [
+    "o06I"
+   ]
+  },
+  "A1PA": {
+   "type": "ability",
+   "name": "Аура Акали",
+   "levels": 1,
+   "requires": [
+    "o06J"
+   ]
+  },
+  "A1PB": {
+   "type": "ability",
+   "name": "Дикий натиск",
+   "hotkey": "W",
+   "levels": 1,
+   "hero_level_req": 6
+  },
+  "A1PC": {
+   "type": "ability",
+   "name": "Раздвоенная молния",
+   "hotkey": "E",
+   "levels": 1,
+   "requires": [
+    "o06J"
+   ]
+  },
+  "A1PI": {
+   "type": "ability",
+   "name": "Пожирание магии",
+   "hotkey": "W",
+   "levels": 1
+  },
+  "A1PJ": {
+   "type": "ability",
+   "name": "Магический обстел",
+   "hotkey": "E",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "AInv": {
+   "type": "ability",
+   "name": "Инвентарь",
+   "levels": 1
+  },
+  "AOhw": {
+   "type": "ability",
+   "name": "Волна исцеления",
+   "hero": true,
+   "hotkey": "Q",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "AOsw": {
+   "type": "ability",
+   "name": "Змеиный идол",
+   "hero": true,
+   "hotkey": "E",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "AOvd": {
+   "type": "ability",
+   "name": "Страшное вуду",
+   "hero": true,
+   "hotkey": "R",
+   "levels": 2,
+   "hero_level_req": 6
+  },
+  "Abds": {
+   "type": "ability",
+   "name": "Слабое рассеивание чумы",
+   "levels": 1
+  },
+  "Ahar": {
+   "type": "ability",
+   "name": "Добывать ресурсы",
+   "hotkey": "G",
+   "levels": 1
+  },
+  "Aorb": {
+   "type": "ability",
+   "name": "Укрепленные стены",
+   "levels": 1,
+   "requires": [
+    "Rorb"
+   ]
+  },
+  "Arbr": {
+   "type": "ability",
+   "name": "Укрепленные землянки",
+   "levels": 1
+  },
+  "Arep": {
+   "type": "ability",
+   "name": "Ремонтировать",
+   "hotkey": "R",
+   "levels": 1
+  },
+  "Argl": {
+   "type": "ability",
+   "name": "Вернуть золото и древесину",
+   "levels": 1
+  },
+  "Arlm": {
+   "type": "ability",
+   "name": "Вернуть древесину",
+   "levels": 1
+  },
+  "Aspi": {
+   "type": "ability",
+   "name": "Шипастые укрепления",
+   "levels": 1
+  },
+  "O04G": {
+   "type": "hero",
+   "name": "Темный охотник",
+   "base": "Oshd",
+   "time": 55,
+   "food": 1,
+   "gold": 400,
+   "hotkey": "Q",
+   "hp": 700,
+   "lumber": 100
+  },
+  "O04H": {
+   "type": "hero",
+   "name": "Военачальник",
+   "base": "Obla",
+   "time": 55,
+   "food": 1,
+   "gold": 400,
+   "hotkey": "E",
+   "hp": 700,
+   "lumber": 100
+  },
+  "O04I": {
+   "type": "hero",
+   "name": "Жрец Лоа",
+   "base": "Oshd",
+   "time": 55,
+   "food": 1,
+   "gold": 400,
+   "hotkey": "W",
+   "hp": 700,
+   "lumber": 100
+  },
+  "O04K": {
+   "type": "hero",
+   "name": "Вместилище Лоа",
+   "base": "Obla",
+   "time": 55,
+   "food": 1,
+   "gold": 400,
+   "hotkey": "S",
+   "hp": 250,
+   "lumber": 350
+  },
+  "R002": {
+   "type": "upgrade",
+   "name": "Орудия флота — уровень 1",
+   "gold": 500,
+   "gold_per_level": 200,
+   "lumber": 1200,
+   "lumber_per_level": 300,
+   "levels": 6,
+   "requires": [
+    "hkee"
+   ],
+   "time": 80,
+   "time_per_level": 15
+  },
+  "R003": {
+   "type": "upgrade",
+   "name": "Укреплённый корпус — уровень 1",
+   "gold": 900,
+   "gold_per_level": 300,
+   "lumber": 500,
+   "lumber_per_level": 200,
+   "levels": 6,
+   "requires": [
+    "hkee"
+   ],
+   "time": 80,
+   "time_per_level": 15
+  },
+  "R004": {
+   "type": "upgrade",
+   "name": "Улучшение до Кровавого Палача",
+   "gold": 600,
+   "lumber": 500,
+   "levels": 1,
+   "requires": [
+    "ofrt",
+    "ofor",
+    "h0DV"
+   ],
+   "time": 40
+  },
+  "R005": {
+   "type": "upgrade",
+   "name": "Обстрел — уровень 1",
+   "gold": 500,
+   "gold_per_level": 150,
+   "lumber": 500,
+   "lumber_per_level": 150,
+   "levels": 5,
+   "requires": [
+    "hcas"
+   ],
+   "time": 90
+  },
+  "R006": {
+   "type": "upgrade",
+   "name": "Дополнительные паруса — уровень 1",
+   "gold": 500,
+   "gold_per_level": 150,
+   "lumber": 500,
+   "lumber_per_level": 150,
+   "levels": 3,
+   "requires": [
+    "hcas"
+   ],
+   "time": 90
+  },
+  "R007": {
+   "type": "upgrade",
+   "name": "Починка — уровень 1",
+   "gold": 500,
+   "gold_per_level": 150,
+   "lumber": 500,
+   "lumber_per_level": 150,
+   "levels": 3,
+   "requires": [
+    "hcas"
+   ],
+   "time": 90
+  },
+  "R09L": {
+   "type": "upgrade",
+   "name": "Азы загробного мира — уровень 1",
+   "gold": 430,
+   "gold_per_level": 540,
+   "lumber": 450,
+   "lumber_per_level": 470,
+   "levels": 3,
+   "requires": [
+    "ostr",
+    "ofor"
+   ],
+   "time": 35
+  },
+  "R09P": {
+   "type": "upgrade",
+   "name": "Тёмные элементы — уровень 1",
+   "gold": 430,
+   "gold_per_level": 540,
+   "lumber": 450,
+   "lumber_per_level": 470,
+   "levels": 3,
+   "requires": [
+    "ostr",
+    "ofor",
+    "o048"
+   ],
+   "time": 35
+  },
+  "R0AD": {
+   "type": "upgrade",
+   "name": "Поглощение Рунока — уровень 1",
+   "gold": 750,
+   "gold_per_level": 750,
+   "lumber": 750,
+   "lumber_per_level": 750,
+   "levels": 3,
+   "requires": [
+    "ostr",
+    "ofor"
+   ],
+   "time": 35
+  },
+  "R0AI": {
+   "type": "upgrade",
+   "name": "Поглощение Акали — уровень 1",
+   "gold": 750,
+   "gold_per_level": 750,
+   "lumber": 750,
+   "lumber_per_level": 750,
+   "levels": 3,
+   "requires": [
+    "ostr",
+    "ofor"
+   ],
+   "time": 35
+  },
+  "R0AJ": {
+   "type": "upgrade",
+   "name": "Поглощение Мам'Тота — уровень 1",
+   "gold": 750,
+   "gold_per_level": 750,
+   "lumber": 750,
+   "lumber_per_level": 750,
+   "levels": 3,
+   "requires": [
+    "ostr",
+    "ofor"
+   ],
+   "time": 35
+  },
+  "R0EU": {
+   "type": "upgrade",
+   "name": "Познания жреца",
+   "gold": 460,
+   "gold_per_level": 350,
+   "lumber": 200,
+   "lumber_per_level": 300,
+   "levels": 2,
+   "requires": [
+    "ofrt"
+   ],
+   "time": 60
+  },
+  "R0HZ": {
+   "type": "upgrade",
+   "name": "Оружие ближнего боя — уровень 1",
+   "gold": 500,
+   "gold_per_level": 1000,
+   "lumber": 450,
+   "lumber_per_level": 900,
+   "levels": 6,
+   "requires": [
+    "ostr"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R0I0": {
+   "type": "upgrade",
+   "name": "Стальная броня — уровень 1",
+   "gold": 500,
+   "gold_per_level": 1000,
+   "lumber": 450,
+   "lumber_per_level": 900,
+   "levels": 6,
+   "requires": [
+    "ostr"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R0I1": {
+   "type": "upgrade",
+   "name": "Оружие дальнего боя — уровень 1",
+   "gold": 500,
+   "gold_per_level": 1000,
+   "lumber": 450,
+   "lumber_per_level": 900,
+   "levels": 6,
+   "requires": [
+    "ostr"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R0I2": {
+   "type": "upgrade",
+   "name": "Тролльская регенерация — уровень 1",
+   "gold": 430,
+   "gold_per_level": 540,
+   "lumber": 450,
+   "lumber_per_level": 470,
+   "levels": 6,
+   "requires": [
+    "ostr",
+    "ofor"
+   ],
+   "time": 35
+  },
+  "R0I3": {
+   "type": "upgrade",
+   "name": "Живучесть Драккари — уровень 1",
+   "gold": 400,
+   "gold_per_level": 540,
+   "lumber": 550,
+   "lumber_per_level": 470,
+   "levels": 6,
+   "requires": [
+    "ostr",
+    "ofor"
+   ],
+   "time": 35
+  },
+  "R0I4": {
+   "type": "upgrade",
+   "name": "Знания Лоа",
+   "gold": 540,
+   "gold_per_level": 350,
+   "lumber": 340,
+   "lumber_per_level": 300,
+   "levels": 2,
+   "requires": [
+    "ofrt"
+   ],
+   "time": 60
+  },
+  "R0I5": {
+   "type": "upgrade",
+   "name": "Дикая магия льда — уровень 1",
+   "gold": 430,
+   "gold_per_level": 540,
+   "lumber": 450,
+   "lumber_per_level": 470,
+   "levels": 3,
+   "requires": [
+    "ostr",
+    "ofor",
+    "o048"
+   ],
+   "time": 35
+  },
+  "R0I6": {
+   "type": "upgrade",
+   "name": "Тренировка зверей — уровень 1",
+   "gold": 390,
+   "gold_per_level": 540,
+   "lumber": 430,
+   "lumber_per_level": 470,
+   "levels": 3,
+   "requires": [
+    "ostr",
+    "ofor"
+   ],
+   "time": 35
+  },
+  "R0I7": {
+   "type": "upgrade",
+   "name": "Облегченные топоры",
+   "gold": 430,
+   "gold_per_level": 540,
+   "lumber": 450,
+   "lumber_per_level": 470,
+   "levels": 3,
+   "requires": [
+    "ostr",
+    "ofor"
+   ],
+   "time": 35
+  },
+  "R0IE": {
+   "type": "upgrade",
+   "name": "Тренировки троллей — уровень 1",
+   "gold": 470,
+   "gold_per_level": 540,
+   "lumber": 400,
+   "lumber_per_level": 470,
+   "levels": 3,
+   "requires": [
+    "ostr",
+    "ofor",
+    "o047"
+   ],
+   "time": 35
+  },
+  "R0IF": {
+   "type": "upgrade",
+   "name": "Улучшенные топоры",
+   "gold": 100,
+   "gold_per_level": 450,
+   "levels": 6,
+   "time": 50,
+   "time_per_level": 10
+  },
+  "R0IG": {
+   "type": "upgrade",
+   "name": "Бесчисленные бои — уровень 1",
+   "gold": 370,
+   "gold_per_level": 600,
+   "lumber": 450,
+   "lumber_per_level": 470,
+   "levels": 2,
+   "requires": [
+    "ostr",
+    "ofor"
+   ],
+   "time": 35
+  },
+  "R0IX": {
+   "type": "upgrade",
+   "name": "Чрезвычайные меры",
+   "levels": 1,
+   "requires": [
+    "ostr",
+    "ofor"
+   ],
+   "time": 35
+  },
+  "R0IY": {
+   "type": "upgrade",
+   "name": "Ритуал поклонения",
+   "levels": 1,
+   "requires": [
+    "ostr",
+    "ofor"
+   ],
+   "time": 35
+  },
+  "R0L1": {
+   "type": "upgrade",
+   "name": "Ледяные тролли",
+   "levels": 1
+  },
+  "Rgfo": {
+   "type": "upgrade",
+   "name": "Знак укрепления",
+   "gold": 100,
+   "gold_per_level": 50,
+   "lumber": 100,
+   "lumber_per_level": 50,
+   "levels": 3,
+   "time": 60,
+   "time_per_level": 15
+  },
+  "Rhri": {
+   "type": "upgrade",
+   "name": "",
+   "only_required": true,
+   "gold": 340,
+   "lumber": 125,
+   "levels": 1,
+   "requires": [
+    "hkee"
+   ],
+   "time": 30
+  },
+  "Robk": {
+   "type": "upgrade",
+   "name": "",
+   "only_required": true,
+   "gold": 75,
+   "lumber": 175,
+   "levels": 1,
+   "requires": [
+    "ofrt",
+    "ofor"
+   ],
+   "time": 40
+  },
+  "Rorb": {
+   "type": "upgrade",
+   "name": "Укрепленные стены",
+   "gold": 450,
+   "lumber": 175,
+   "levels": 1,
+   "requires": [
+    "ostr"
+   ],
+   "time": 60
+  },
+  "Rosp": {
+   "type": "upgrade",
+   "name": "Шипастые укрепления — уровень 1",
+   "gold": 450,
+   "gold_per_level": 600,
+   "lumber": 300,
+   "lumber_per_level": 600,
+   "levels": 2,
+   "requires": [
+    "ostr"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "S00F": {
+   "type": "unknown",
+   "name": ""
+  },
+  "Sch5": {
+   "type": "unknown",
+   "name": ""
+  },
+  "Sdro": {
+   "type": "unknown",
+   "name": ""
+  },
+  "Slo3": {
+   "type": "unknown",
+   "name": ""
+  },
+  "h0D4": {
+   "type": "unit",
+   "name": "Транспорт",
+   "base": "hbot",
+   "time": 22,
+   "gold": 250,
+   "hotkey": "Q",
+   "hp": 750,
+   "lumber": 200
+  },
+  "h0DV": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 240,
+   "food_made": 100,
+   "gold": 4000,
+   "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4000
+  },
+  "h0HK": {
+   "type": "unit",
+   "name": "Тяжелый корабль Орды",
+   "base": "hbsh",
+   "time": 50,
+   "gold": 850,
+   "hotkey": "E",
+   "hp": 1200,
+   "lumber": 1000
+  },
+  "h0HN": {
+   "type": "unit",
+   "name": "Легкий корабль Орды",
+   "base": "hdes",
+   "time": 30,
+   "gold": 450,
+   "hotkey": "W",
+   "hp": 600,
+   "lumber": 450
+  },
+  "h0HO": {
+   "type": "building",
+   "name": "Верфь",
+   "base": "hshy",
+   "time": 90,
+   "gold": 500,
+   "hotkey": "C",
+   "hp": 2000,
+   "lumber": 700
+  },
+  "hcas": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 140,
+   "food_made": 150,
+   "gold": 12000,
+   "hotkey": "Z",
+   "hp": 2500,
+   "lumber": 12000,
+   "requires": [
+    "halt"
+   ]
+  },
+  "hkee": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 140,
+   "food_made": 100,
+   "gold": 4500,
+   "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4500
+  },
+  "n05S": {
+   "type": "unit",
+   "name": "Воитель",
+   "base": "nitr",
+   "time": 20,
+   "gold": 130,
+   "hotkey": "Q",
+   "hp": 550,
+   "lumber": 45
+  },
+  "n05T": {
+   "type": "unit",
+   "name": "Охотник",
+   "base": "nitt",
+   "time": 27,
+   "gold": 175,
+   "hotkey": "W",
+   "hp": 400,
+   "lumber": 60
+  },
+  "n05U": {
+   "type": "unit",
+   "name": "Жрец",
+   "base": "nith",
+   "time": 49,
+   "gold": 325,
+   "hotkey": "Q",
+   "hp": 450,
+   "lumber": 110,
+   "requires": [
+    "o047"
+   ]
+  },
+  "n05V": {
+   "type": "unit",
+   "name": "Белый медведь",
+   "base": "nplg",
+   "time": 36,
+   "gold": 240,
+   "hotkey": "Q",
+   "hp": 900,
+   "lumber": 80
+  },
+  "n05W": {
+   "type": "unit",
+   "name": "Лютый мамонт",
+   "base": "nmdr",
+   "time": 53,
+   "gold": 350,
+   "hotkey": "W",
+   "hp": 1300,
+   "lumber": 120,
+   "requires": [
+    "o048"
+   ]
+  },
+  "n05X": {
+   "type": "unit",
+   "name": "Магнатавр-разрушитель",
+   "base": "nmgd",
+   "time": 48,
+   "gold": 320,
+   "hotkey": "E",
+   "hp": 900,
+   "lumber": 110,
+   "requires": [
+    "o048",
+    "o049"
+   ]
+  },
+  "n05Y": {
+   "type": "unit",
+   "name": "Берсерк",
+   "base": "nitr",
+   "time": 42,
+   "gold": 280,
+   "hotkey": "Q",
+   "hp": 1250,
+   "lumber": 95,
+   "requires": [
+    "o049"
+   ]
+  },
+  "n05Z": {
+   "type": "unit",
+   "name": "Жрец Лоа",
+   "base": "nith",
+   "time": 38,
+   "gold": 250,
+   "hotkey": "W",
+   "hp": 450,
+   "lumber": 85,
+   "requires": [
+    "o047"
+   ]
+  },
+  "n061": {
+   "type": "unit",
+   "name": "Рунок",
+   "base": "nplg",
+   "time": 75,
+   "gold": 1700,
+   "hotkey": "Q",
+   "hp": 5000,
+   "lumber": 1300,
+   "requires": [
+    "o047",
+    "R0IY"
+   ]
+  },
+  "n062": {
+   "type": "unit",
+   "name": "Мам'тот",
+   "base": "nmdr",
+   "time": 75,
+   "gold": 2000,
+   "hotkey": "E",
+   "hp": 6000,
+   "lumber": 1000,
+   "requires": [
+    "o047",
+    "R0IY"
+   ]
+  },
+  "n07B": {
+   "type": "unit",
+   "name": "Взыватель душ",
+   "base": "nith",
+   "time": 46,
+   "gold": 305,
+   "hotkey": "E",
+   "hp": 450,
+   "lumber": 105,
+   "requires": [
+    "o047"
+   ]
+  },
+  "o013": {
+   "type": "building",
+   "name": "Сторожевая башня",
+   "base": "owtw",
+   "time": 60,
+   "gold": 110,
+   "hotkey": "Z",
+   "hp": 500,
+   "lumber": 80
+  },
+  "o045": {
+   "type": "unit",
+   "name": "Работник",
+   "base": "opeo",
+   "time": 15,
+   "gold": 80,
+   "hotkey": "Q",
+   "hp": 250
+  },
+  "o046": {
+   "type": "building",
+   "name": "Дом вождей",
+   "base": "ogre",
+   "time": 135,
+   "food_made": 50,
+   "gold": 385,
+   "hotkey": "Q",
+   "hp": 1500,
+   "lumber": 185
+  },
+  "o047": {
+   "type": "building",
+   "name": "Дом предков",
+   "base": "ostr",
+   "time": 140,
+   "food_made": 100,
+   "gold": 4500,
+   "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4500,
+   "requires": [
+    "o049"
+   ]
+  },
+  "o048": {
+   "type": "building",
+   "name": "Храм Лоа",
+   "base": "ofrt",
+   "time": 140,
+   "food_made": 150,
+   "gold": 12000,
+   "hotkey": "Z",
+   "hp": 2500,
+   "lumber": 12000,
+   "requires": [
+    "o049"
+   ]
+  },
+  "o049": {
+   "type": "building",
+   "name": "Ледяной алтарь",
+   "base": "oalt",
+   "time": 60,
+   "food_made": 3,
+   "gold": 180,
+   "hotkey": "S",
+   "hp": 900,
+   "lumber": 50
+  },
+  "o04A": {
+   "type": "building",
+   "name": "Солдатский лагерь",
+   "base": "obar",
+   "time": 60,
+   "gold": 400,
+   "hotkey": "W",
+   "hp": 1200,
+   "lumber": 50
+  },
+  "o04B": {
+   "type": "building",
+   "name": "Мастерская",
+   "base": "ofor",
+   "time": 70,
+   "gold": 205,
+   "hotkey": "E",
+   "hp": 1000
+  },
+  "o04C": {
+   "type": "building",
+   "name": "Берлога",
+   "base": "otrb",
+   "time": 50,
+   "food_made": 40,
+   "gold": 300,
+   "hotkey": "A",
+   "hp": 600,
+   "lumber": 100
+  },
+  "o04D": {
+   "type": "building",
+   "name": "Катакомбы",
+   "base": "obea",
+   "time": 60,
+   "gold": 350,
+   "hotkey": "F",
+   "hp": 1100,
+   "lumber": 140,
+   "requires": [
+    "o048"
+   ]
+  },
+  "o04E": {
+   "type": "building",
+   "name": "Обитель духов",
+   "base": "osld",
+   "time": 70,
+   "gold": 400,
+   "hotkey": "R",
+   "hp": 800,
+   "lumber": 135,
+   "requires": [
+    "o047"
+   ]
+  },
+  "o04F": {
+   "type": "unit",
+   "name": "Катапульта",
+   "base": "ocat",
+   "time": 27,
+   "gold": 180,
+   "hotkey": "E",
+   "hp": 425,
+   "lumber": 60,
+   "requires": [
+    "o04B",
+    "o047"
+   ]
+  },
+  "o04J": {
+   "type": "building",
+   "name": "Зверинец",
+   "base": "obea",
+   "time": 60,
+   "gold": 350,
+   "hotkey": "D",
+   "hp": 1100,
+   "lumber": 140,
+   "requires": [
+    "o047"
+   ]
+  },
+  "o04T": {
+   "type": "unit",
+   "name": "Голем",
+   "base": "ohun",
+   "time": 56,
+   "gold": 370,
+   "hotkey": "W",
+   "hp": 900,
+   "lumber": 125
+  },
+  "o05B": {
+   "type": "unit",
+   "name": "Акали",
+   "base": "oosc",
+   "time": 75,
+   "gold": 2300,
+   "hotkey": "W",
+   "hp": 4000,
+   "lumber": 700,
+   "requires": [
+    "o047",
+    "R0IY"
+   ]
+  },
+  "o06H": {
+   "type": "building",
+   "name": "Алтарь Лоа",
+   "base": "oalt",
+   "time": 75,
+   "food_made": 3,
+   "gold": 750,
+   "hotkey": "X",
+   "hp": 1500,
+   "lumber": 500,
+   "requires": [
+    "o04B"
+   ]
+  },
+  "o06I": {
+   "type": "building",
+   "name": "Алтарь Рунока",
+   "base": "oalt",
+   "time": 75,
+   "food_made": 3,
+   "gold": 750,
+   "hotkey": "A",
+   "hp": 2500,
+   "lumber": 500
+  },
+  "o06J": {
+   "type": "building",
+   "name": "Алтарь Акали",
+   "base": "oalt",
+   "time": 75,
+   "food_made": 3,
+   "gold": 750,
+   "hotkey": "S",
+   "hp": 2500,
+   "lumber": 500
+  },
+  "o06K": {
+   "type": "building",
+   "name": "Алтарь Мам'Тота",
+   "base": "oalt",
+   "time": 75,
+   "food_made": 3,
+   "gold": 750,
+   "hotkey": "D",
+   "hp": 2500,
+   "lumber": 500
+  },
+  "ofor": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 70,
+   "gold": 205,
+   "hotkey": "E",
+   "hp": 1000
+  },
+  "ofrt": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 140,
+   "food_made": 150,
+   "gold": 12000,
+   "hotkey": "Z",
+   "hp": 2500,
+   "lumber": 12000
+  },
+  "ostr": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 140,
+   "food_made": 100,
+   "gold": 4500,
+   "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4500,
+   "requires": [
+    "oalt"
+   ]
+  }
+ },
+ "edges": [
+  "A00A requires R007",
+  "A00B requires R006",
+  "A1CA requires Rhri",
+  "A1CE requires Robk",
+  "A1CL requires R0EU",
+  "A1CN requires R0I4",
+  "A1CP requires R0EU",
+  "A1CR requires R0I6",
+  "A1CS requires R0I6",
+  "A1CV requires R0I5",
+  "A1D6 requires R0IG",
+  "A1D7 requires R0IG",
+  "A1DP requires R0I5",
+  "A1FX requires o06K",
+  "A1FY requires o06I",
+  "A1OV requires R09L\r\nR09L",
+  "A1P4 requires R09L",
+  "A1P5 requires R0I4",
+  "A1P9 requires o06I",
+  "A1PA requires o06J",
+  "A1PC requires o06J",
+  "Aorb requires Rorb",
+  "O04G has-ability A1CA",
+  "O04G has-ability AInv",
+  "O04G hero-ability A1DL",
+  "O04G hero-ability AOhw",
+  "O04G hero-ability AOsw",
+  "O04G hero-ability AOvd",
+  "O04G researches R0I2",
+  "O04G researches R0I3",
+  "O04H has-ability A1CA",
+  "O04H has-ability AInv",
+  "O04H hero-ability A1DA",
+  "O04H hero-ability A1DR",
+  "O04H hero-ability A1DS",
+  "O04H hero-ability A1EB",
+  "O04H researches R0I2",
+  "O04H researches R0I3",
+  "O04I has-ability A1CA",
+  "O04I has-ability AInv",
+  "O04I hero-ability A1EC",
+  "O04I hero-ability A1ED",
+  "O04I hero-ability A1EE",
+  "O04I hero-ability A1EF",
+  "O04I researches R0I2",
+  "O04I researches R0I3",
+  "O04K has-ability A1CA",
+  "O04K has-ability AInv",
+  "O04K hero-ability A1CB",
+  "O04K hero-ability A1CC",
+  "O04K hero-ability A1CD",
+  "O04K hero-ability A1CE",
+  "O04K researches R0I2",
+  "O04K researches R0I3",
+  "R002 requires hkee",
+  "R003 requires hkee",
+  "R004 requires h0DV",
+  "R004 requires ofor",
+  "R004 requires ofrt",
+  "R005 requires hcas",
+  "R006 requires hcas",
+  "R007 requires hcas",
+  "R09L requires ofor",
+  "R09L requires ostr",
+  "R09P requires o048",
+  "R09P requires ofor",
+  "R09P requires ostr",
+  "R0AD requires ofor",
+  "R0AD requires ostr",
+  "R0AI requires ofor",
+  "R0AI requires ostr",
+  "R0AJ requires ofor",
+  "R0AJ requires ostr",
+  "R0EU requires ofrt",
+  "R0HZ requires ostr",
+  "R0I0 requires ostr",
+  "R0I1 requires ostr",
+  "R0I2 requires ofor",
+  "R0I2 requires ostr",
+  "R0I3 requires ofor",
+  "R0I3 requires ostr",
+  "R0I4 requires ofrt",
+  "R0I5 requires o048",
+  "R0I5 requires ofor",
+  "R0I5 requires ostr",
+  "R0I6 requires ofor",
+  "R0I6 requires ostr",
+  "R0I7 requires ofor",
+  "R0I7 requires ostr",
+  "R0IE requires o047",
+  "R0IE requires ofor",
+  "R0IE requires ostr",
+  "R0IG requires ofor",
+  "R0IG requires ostr",
+  "R0IX requires ofor",
+  "R0IX requires ostr",
+  "R0IY requires ofor",
+  "R0IY requires ostr",
+  "Rorb requires ostr",
+  "Rosp requires ostr",
+  "h0D4 has-ability A00A",
+  "h0D4 has-ability A00B",
+  "h0D4 has-ability A00I",
+  "h0D4 has-ability Sch5",
+  "h0D4 has-ability Sdro",
+  "h0D4 has-ability Slo3",
+  "h0D4 researches R003",
+  "h0D4 researches R004",
+  "h0D4 researches R006",
+  "h0D4 researches R007",
+  "h0HK has-ability A0Z5",
+  "h0HN has-ability A0Z5",
+  "h0HN researches R002",
+  "h0HN researches R003",
+  "h0HN researches R004",
+  "h0HN researches R005",
+  "h0HN researches R007",
+  "h0HO has-ability A15N",
+  "h0HO researches R002",
+  "h0HO researches R003",
+  "h0HO researches R005",
+  "h0HO researches R006",
+  "h0HO researches R007",
+  "h0HO trains h0D4",
+  "h0HO trains h0HK",
+  "h0HO trains h0HN",
+  "n05S has-ability A1CA",
+  "n05S has-ability A1FF",
+  "n05S researches R0AD",
+  "n05S researches R0AI",
+  "n05S researches R0AJ",
+  "n05S researches R0HZ",
+  "n05S researches R0I0",
+  "n05S researches R0I2",
+  "n05S researches R0I3",
+  "n05S researches R0I7",
+  "n05S researches R0IE",
+  "n05S researches R0IX",
+  "n05T has-ability A10O",
+  "n05T has-ability A1CA",
+  "n05T has-ability A1CW",
+  "n05T has-ability A1FF",
+  "n05T researches R0AD",
+  "n05T researches R0AI",
+  "n05T researches R0AJ",
+  "n05T researches R0I0",
+  "n05T researches R0I1",
+  "n05T researches R0I2",
+  "n05T researches R0I3",
+  "n05T researches R0I7",
+  "n05T researches R0IE",
+  "n05T researches R0IX",
+  "n05U has-ability A1CA",
+  "n05U has-ability A1CL",
+  "n05U has-ability A1CO",
+  "n05U has-ability A1CP",
+  "n05U has-ability A1FF",
+  "n05U requires o047",
+  "n05U researches R0AD",
+  "n05U researches R0AI",
+  "n05U researches R0AJ",
+  "n05U researches R0EU",
+  "n05U researches R0I0",
+  "n05U researches R0I1",
+  "n05U researches R0I2",
+  "n05U researches R0I3",
+  "n05U researches R0IE",
+  "n05U researches R0IX",
+  "n05V has-ability A1CR",
+  "n05V has-ability A1CS",
+  "n05V researches R0HZ",
+  "n05V researches R0I0",
+  "n05V researches R0I6",
+  "n05V researches R0IY",
+  "n05W has-ability A1CT",
+  "n05W requires o048",
+  "n05W researches R0HZ",
+  "n05W researches R0I0",
+  "n05W researches R0I6",
+  "n05W researches R0IX",
+  "n05X has-ability A1CM",
+  "n05X has-ability A1CV",
+  "n05X has-ability A1DP",
+  "n05X requires o048",
+  "n05X requires o049",
+  "n05X researches R0HZ",
+  "n05X researches R0I0",
+  "n05X researches R0I5",
+  "n05X researches R0I6",
+  "n05X researches R0IY",
+  "n05Y has-ability A1CA",
+  "n05Y has-ability A1D6",
+  "n05Y has-ability A1D7",
+  "n05Y has-ability A1FF",
+  "n05Y requires o049",
+  "n05Y researches R0AD",
+  "n05Y researches R0AI",
+  "n05Y researches R0AJ",
+  "n05Y researches R0HZ",
+  "n05Y researches R0I0",
+  "n05Y researches R0I2",
+  "n05Y researches R0I3",
+  "n05Y researches R0IE",
+  "n05Y researches R0IG",
+  "n05Y researches R0IX",
+  "n05Z has-ability A1CA",
+  "n05Z has-ability A1CM",
+  "n05Z has-ability A1CN",
+  "n05Z has-ability A1FF",
+  "n05Z has-ability A1P5",
+  "n05Z requires o047",
+  "n05Z researches R0AD",
+  "n05Z researches R0AI",
+  "n05Z researches R0AJ",
+  "n05Z researches R0I0",
+  "n05Z researches R0I1",
+  "n05Z researches R0I2",
+  "n05Z researches R0I3",
+  "n05Z researches R0I4",
+  "n05Z researches R0IE",
+  "n05Z researches R0IX",
+  "n061 has-ability A1CR",
+  "n061 has-ability A1CS",
+  "n061 has-ability A1FY",
+  "n061 has-ability A1P9",
+  "n061 requires R0IY",
+  "n061 requires o047",
+  "n061 researches R0HZ",
+  "n061 researches R0I0",
+  "n061 researches R0I6",
+  "n062 has-ability A1CT",
+  "n062 has-ability A1FX",
+  "n062 has-ability A1PB",
+  "n062 has-ability S00F",
+  "n062 requires R0IY",
+  "n062 requires o047",
+  "n062 researches R0HZ",
+  "n062 researches R0I0",
+  "n062 researches R0I6",
+  "n07B has-ability A1CA",
+  "n07B has-ability A1OV",
+  "n07B has-ability A1OW",
+  "n07B has-ability A1P4",
+  "n07B requires o047",
+  "n07B researches R09L",
+  "n07B researches R0AD",
+  "n07B researches R0AI",
+  "n07B researches R0AJ",
+  "n07B researches R0I0",
+  "n07B researches R0I1",
+  "n07B researches R0I2",
+  "n07B researches R0I3",
+  "n07B researches R0IE",
+  "n07B researches R0IX",
+  "o013 has-ability Abds",
+  "o013 has-ability Aorb",
+  "o013 has-ability Arbr",
+  "o013 has-ability Aspi",
+  "o013 researches R0I1",
+  "o013 researches Rgfo",
+  "o013 researches Rorb",
+  "o013 researches Rosp",
+  "o045 builds h0HO",
+  "o045 builds o013",
+  "o045 builds o046",
+  "o045 builds o049",
+  "o045 builds o04A",
+  "o045 builds o04B",
+  "o045 builds o04C",
+  "o045 builds o04D",
+  "o045 builds o04E",
+  "o045 builds o04J",
+  "o045 builds o06H",
+  "o045 has-ability A0I3",
+  "o045 has-ability A1CA",
+  "o045 has-ability Ahar",
+  "o045 has-ability Arep",
+  "o045 researches R0AD",
+  "o045 researches R0AI",
+  "o045 researches R0AJ",
+  "o045 researches R0I2",
+  "o045 researches R0I3",
+  "o045 researches R0IE",
+  "o045 researches R0IF",
+  "o045 researches R0IX",
+  "o046 has-ability A0IQ",
+  "o046 has-ability A0LI",
+  "o046 has-ability A0LJ",
+  "o046 has-ability A1FR",
+  "o046 has-ability A1FS",
+  "o046 has-ability Argl",
+  "o046 has-ability Aspi",
+  "o046 morphs-to o047",
+  "o046 researches Rgfo",
+  "o046 researches Rosp",
+  "o046 trains o045",
+  "o047 has-ability A0IQ",
+  "o047 has-ability A0LI",
+  "o047 has-ability A0LJ",
+  "o047 has-ability Argl",
+  "o047 has-ability Aspi",
+  "o047 morphs-to o048",
+  "o047 requires o049",
+  "o047 researches Rgfo",
+  "o047 researches Rosp",
+  "o047 trains o045",
+  "o048 has-ability A0IQ",
+  "o048 has-ability A0LI",
+  "o048 has-ability A0LJ",
+  "o048 has-ability A1KB",
+  "o048 has-ability Argl",
+  "o048 has-ability Aspi",
+  "o048 requires o049",
+  "o048 researches Rgfo",
+  "o048 researches Rosp",
+  "o048 trains o045",
+  "o049 has-ability Aspi",
+  "o049 researches Rgfo",
+  "o049 researches Rosp",
+  "o049 trains O04G",
+  "o049 trains O04H",
+  "o049 trains O04I",
+  "o049 trains O04K",
+  "o04A has-ability Aspi",
+  "o04A researches R0I7",
+  "o04A researches R0IE",
+  "o04A researches Rgfo",
+  "o04A researches Rosp",
+  "o04A trains n05S",
+  "o04A trains n05T",
+  "o04A trains o04F",
+  "o04B has-ability Arlm",
+  "o04B has-ability Aspi",
+  "o04B researches R0HZ",
+  "o04B researches R0I0",
+  "o04B researches R0I1",
+  "o04B researches R0I2",
+  "o04B researches R0I3",
+  "o04B researches R0IF",
+  "o04B researches Rgfo",
+  "o04B researches Rosp",
+  "o04C researches Rgfo",
+  "o04C researches Rorb",
+  "o04C researches Rosp",
+  "o04D has-ability Aspi",
+  "o04D requires o048",
+  "o04D researches R09P",
+  "o04D researches R0IG",
+  "o04D researches Rgfo",
+  "o04D researches Rosp",
+  "o04D trains n05Y",
+  "o04D trains o04T",
+  "o04E has-ability Aspi",
+  "o04E requires o047",
+  "o04E researches R09L",
+  "o04E researches R0EU",
+  "o04E researches R0I4",
+  "o04E researches Rgfo",
+  "o04E researches Rosp",
+  "o04E trains n05U",
+  "o04E trains n05Z",
+  "o04E trains n07B",
+  "o04F requires o047",
+  "o04F requires o04B",
+  "o04F researches R0I0",
+  "o04F researches R0I1",
+  "o04J has-ability Aspi",
+  "o04J requires o047",
+  "o04J researches R0I5",
+  "o04J researches R0I6",
+  "o04J researches Rgfo",
+  "o04J researches Rosp",
+  "o04J trains n05V",
+  "o04J trains n05W",
+  "o04J trains n05X",
+  "o04T has-ability A1P6",
+  "o04T has-ability A1PI",
+  "o04T has-ability A1PJ",
+  "o04T researches R09P",
+  "o04T researches R0HZ",
+  "o04T researches R0I0",
+  "o05B has-ability A0W1",
+  "o05B has-ability A1FU",
+  "o05B has-ability A1FV",
+  "o05B has-ability A1PA",
+  "o05B has-ability A1PC",
+  "o05B requires R0IY",
+  "o05B requires o047",
+  "o05B researches R0HZ",
+  "o05B researches R0I0",
+  "o05B researches R0I6",
+  "o06H has-ability Aspi",
+  "o06H morphs-to o06I",
+  "o06H morphs-to o06J",
+  "o06H morphs-to o06K",
+  "o06H requires o04B",
+  "o06H researches R0AD",
+  "o06H researches R0AI",
+  "o06H researches R0AJ",
+  "o06H researches Rgfo",
+  "o06H researches Rosp",
+  "o06H trains n061",
+  "o06H trains n062",
+  "o06H trains o05B",
+  "o06I has-ability Aspi",
+  "o06I researches R0AD",
+  "o06I researches R0AI",
+  "o06I researches R0AJ",
+  "o06I researches Rgfo",
+  "o06I researches Rosp",
+  "o06I trains n061",
+  "o06J has-ability Aspi",
+  "o06J researches R0AD",
+  "o06J researches R0AI",
+  "o06J researches R0AJ",
+  "o06J researches Rgfo",
+  "o06J researches Rosp",
+  "o06J trains o05B",
+  "o06K has-ability Aspi",
+  "o06K researches R0AD",
+  "o06K researches R0AI",
+  "o06K researches R0AJ",
+  "o06K researches Rgfo",
+  "o06K researches Rosp",
+  "o06K trains n062",
+  "race:IceTrols lua-start-tech R0L1",
+  "race:IceTrols lua-starts-with o045"
+ ]
+}

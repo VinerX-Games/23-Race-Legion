@@ -1,0 +1,1517 @@
+{
+ "race": "Nerubs",
+ "start_units": [
+  "h0BE",
+  "h0CO"
+ ],
+ "start_tech": [
+  "R07N"
+ ],
+ "lua": [
+  {
+   "file": "map.w3x/_lua/monolith_split/sections/80_runtime/triggers/04_race_selection.lua",
+   "symbol": "Trig_Race_Nerubs_O_Actions"
+  },
+  {
+   "file": "map.w3x/_lua/monolith_split/sections/82_ai_races/09_nerubs.lua",
+   "symbol": "Join_Nerubs"
+  },
+  {
+   "file": "map.w3x/_lua/monolith_split/sections/libraries/13_Races.lua",
+   "symbol": "startNerubs"
+  }
+ ],
+ "objects": {
+  "A001": {
+   "type": "ability",
+   "name": "Абордаж!",
+   "hotkey": "Q",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A002": {
+   "type": "ability",
+   "name": "Боковые пушки",
+   "levels": 3
+  },
+  "A003": {
+   "type": "ability",
+   "name": "Боковые пушки линкора",
+   "levels": 3,
+   "requires": [
+    "R005"
+   ]
+  },
+  "A009": {
+   "type": "ability",
+   "name": "Сделать флагманом",
+   "hotkey": "R",
+   "levels": 1
+  },
+  "A00A": {
+   "type": "ability",
+   "name": "Починка",
+   "hotkey": "R",
+   "levels": 3,
+   "hero_level_req": 1,
+   "requires": [
+    "R007"
+   ]
+  },
+  "A00B": {
+   "type": "ability",
+   "name": "Тактическое ускорение",
+   "hotkey": "E",
+   "levels": 3,
+   "requires": [
+    "R006"
+   ]
+  },
+  "A00G": {
+   "type": "ability",
+   "name": "Массированный обстрел",
+   "hotkey": "W",
+   "levels": 3,
+   "hero_level_req": 1,
+   "requires": [
+    "R005"
+   ]
+  },
+  "A00I": {
+   "type": "ability",
+   "name": "Магическая посадка",
+   "hotkey": "W",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A01C": {
+   "type": "ability",
+   "name": "Свечение героя",
+   "levels": 1
+  },
+  "A0H4": {
+   "type": "ability",
+   "name": "Паутина",
+   "hotkey": "Q",
+   "levels": 1
+  },
+  "A0H5": {
+   "type": "ability",
+   "name": "Паутина",
+   "hotkey": "W",
+   "levels": 1,
+   "hero_level_req": 1,
+   "requires": [
+    "R07W"
+   ],
+   "requires_amount": 2
+  },
+  "A0H6": {
+   "type": "ability",
+   "name": "Бритвенно-острая паутина",
+   "hotkey": "E",
+   "levels": 1,
+   "hero_level_req": 1,
+   "requires": [
+    "R07W"
+   ],
+   "requires_amount": 3
+  },
+  "A0H7": {
+   "type": "ability",
+   "name": "Комок паутины",
+   "hotkey": "Q",
+   "levels": 1,
+   "hero_level_req": 1,
+   "requires": [
+    "R07W"
+   ]
+  },
+  "A0H9": {
+   "type": "ability",
+   "name": "Шипастый панцирь",
+   "levels": 1,
+   "hero_level_req": 1,
+   "requires": [
+    "R077"
+   ]
+  },
+  "A0HA": {
+   "type": "ability",
+   "name": "Яд нерубов",
+   "levels": 1,
+   "requires": [
+    "R078"
+   ]
+  },
+  "A0HB": {
+   "type": "ability",
+   "name": "Парализующий яд",
+   "levels": 1,
+   "hero_level_req": 1,
+   "requires": [
+    "R07O"
+   ]
+  },
+  "A0HC": {
+   "type": "ability",
+   "name": "Паучий Паразит",
+   "hotkey": "W",
+   "levels": 1,
+   "requires": [
+    "R07O"
+   ],
+   "requires_amount": 2
+  },
+  "A0HD": {
+   "type": "ability",
+   "name": "Острые конечности",
+   "levels": 1,
+   "hero_level_req": 1,
+   "requires": [
+    "R07T"
+   ]
+  },
+  "A0HE": {
+   "type": "ability",
+   "name": "Командирская аура",
+   "levels": 1,
+   "requires": [
+    "R07R"
+   ]
+  },
+  "A0HF": {
+   "type": "ability",
+   "name": "Сожжение",
+   "levels": 1,
+   "requires": [
+    "R079"
+   ],
+   "requires_amount": 3
+  },
+  "A0HG": {
+   "type": "ability",
+   "name": "Исцеление",
+   "hotkey": "Q",
+   "levels": 1,
+   "requires": [
+    "R07U"
+   ]
+  },
+  "A0HH": {
+   "type": "ability",
+   "name": "Рассеивание заклинаний",
+   "hotkey": "E",
+   "levels": 1,
+   "requires": [
+    "R07U"
+   ],
+   "requires_amount": 2
+  },
+  "A0HI": {
+   "type": "ability",
+   "name": "Ядовитый щит",
+   "hotkey": "W",
+   "levels": 1,
+   "requires": [
+    "R07V"
+   ]
+  },
+  "A0HJ": {
+   "type": "ability",
+   "name": "Толстый Панцирь",
+   "hotkey": "E",
+   "levels": 1,
+   "requires": [
+    "R07S"
+   ]
+  },
+  "A0HK": {
+   "type": "ability",
+   "name": "Антимагический панцирь",
+   "levels": 1,
+   "requires": [
+    "R079"
+   ],
+   "requires_amount": 2
+  },
+  "A0HT": {
+   "type": "ability",
+   "name": "Нерубы",
+   "hotkey": "W",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A0I3": {
+   "type": "ability",
+   "name": "Небольшой скачок",
+   "hotkey": "C",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A0I7": {
+   "type": "ability",
+   "name": "Столб яда",
+   "hero": true,
+   "hotkey": "Q",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A0I9": {
+   "type": "ability",
+   "name": "Эссенция яда",
+   "hero": true,
+   "hotkey": "W",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A0IA": {
+   "type": "ability",
+   "name": "Дар пророка",
+   "hero": true,
+   "hotkey": "E",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A0IB": {
+   "type": "ability",
+   "name": "Критический удар",
+   "hero": true,
+   "hotkey": "|cffb99d66ИССЛЕДОВАНИЕ:|cffced4da Укрепляет жизненную силу органов нерубов, увеличивая базовый запас здоровья на |cffc8e087+75|cffced4da ед.|n|n|cffb99d66Применяется к:|cffced4da|n- Всем воинам армии Нерубов.|n|n|cffb99d66Уровень исследования:|r |cffffffff3/3|r.",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A0IC": {
+   "type": "ability",
+   "name": "Поражающий удар",
+   "hero": true,
+   "levels": 4
+  },
+  "A0ID": {
+   "type": "ability",
+   "name": "Темная стая",
+   "hero": true,
+   "hotkey": "Q",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A0IE": {
+   "type": "ability",
+   "name": "Аура метаморфоз",
+   "hero": true,
+   "hotkey": "R",
+   "levels": 2,
+   "hero_level_req": 6
+  },
+  "A0IF": {
+   "type": "ability",
+   "name": "Пронзание",
+   "hero": true,
+   "hotkey": "Q",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A0IG": {
+   "type": "ability",
+   "name": "Создание кокона",
+   "hero": true,
+   "hotkey": "W",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A0IL": {
+   "type": "ability",
+   "name": "Рассекающий удар",
+   "hero": true,
+   "hotkey": "E",
+   "levels": 4,
+   "hero_level_req": 1
+  },
+  "A0IM": {
+   "type": "ability",
+   "name": "Рой саранчи",
+   "hero": true,
+   "hotkey": "R",
+   "levels": 2,
+   "hero_level_req": 6
+  },
+  "A0IQ": {
+   "type": "ability",
+   "name": "Обозначить столицу",
+   "hotkey": "X",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A0LI": {
+   "type": "ability",
+   "name": "Обмен золота на дерево",
+   "hotkey": "S",
+   "levels": 1
+  },
+  "A0LJ": {
+   "type": "ability",
+   "name": "Обмен дерева на золото",
+   "hotkey": "A",
+   "levels": 1
+  },
+  "A0TQ": {
+   "type": "ability",
+   "name": "Прокопать туннель",
+   "hotkey": "Q",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A15N": {
+   "type": "ability",
+   "name": "Зона ремонта",
+   "levels": 1,
+   "hero_level_req": 1
+  },
+  "A186": {
+   "type": "ability",
+   "name": "Подземные жители",
+   "levels": 1,
+   "requires": [
+    "Rhan"
+   ]
+  },
+  "A1KB": {
+   "type": "ability",
+   "name": "Защита столицы",
+   "levels": 1
+  },
+  "A1M9": {
+   "type": "ability",
+   "name": "Оплетение",
+   "hero": true,
+   "hotkey": "R",
+   "levels": 2,
+   "hero_level_req": 6
+  },
+  "A1PP": {
+   "type": "ability",
+   "name": "Прицельная пальба",
+   "hotkey": "Q",
+   "levels": 1
+  },
+  "AInv": {
+   "type": "ability",
+   "name": "Инвентарь",
+   "levels": 1
+  },
+  "ANha": {
+   "type": "ability",
+   "name": "Добывать ресурсы",
+   "hotkey": "G",
+   "levels": 1
+  },
+  "Abds": {
+   "type": "ability",
+   "name": "Слабое рассеивание чумы",
+   "levels": 1
+  },
+  "Ahrp": {
+   "type": "ability",
+   "name": "Ремонтировать",
+   "hotkey": "R",
+   "levels": 1
+  },
+  "Argl": {
+   "type": "ability",
+   "name": "Вернуть золото и древесину",
+   "levels": 1
+  },
+  "Arlm": {
+   "type": "ability",
+   "name": "Вернуть древесину",
+   "levels": 1
+  },
+  "Asud": {
+   "type": "ability",
+   "name": "Продать войска",
+   "levels": 1
+  },
+  "R002": {
+   "type": "upgrade",
+   "name": "Орудия флота — уровень 1",
+   "gold": 500,
+   "gold_per_level": 200,
+   "lumber": 1200,
+   "lumber_per_level": 300,
+   "levels": 6,
+   "requires": [
+    "hkee"
+   ],
+   "time": 80,
+   "time_per_level": 15
+  },
+  "R003": {
+   "type": "upgrade",
+   "name": "Укреплённый корпус — уровень 1",
+   "gold": 900,
+   "gold_per_level": 300,
+   "lumber": 500,
+   "lumber_per_level": 200,
+   "levels": 6,
+   "requires": [
+    "hkee"
+   ],
+   "time": 80,
+   "time_per_level": 15
+  },
+  "R004": {
+   "type": "upgrade",
+   "name": "Улучшение до Кровавого Палача",
+   "gold": 600,
+   "lumber": 500,
+   "levels": 1,
+   "requires": [
+    "ofrt",
+    "ofor",
+    "h0DV"
+   ],
+   "time": 40
+  },
+  "R005": {
+   "type": "upgrade",
+   "name": "Обстрел — уровень 1",
+   "gold": 500,
+   "gold_per_level": 150,
+   "lumber": 500,
+   "lumber_per_level": 150,
+   "levels": 5,
+   "requires": [
+    "hcas"
+   ],
+   "time": 90
+  },
+  "R006": {
+   "type": "upgrade",
+   "name": "Дополнительные паруса — уровень 1",
+   "gold": 500,
+   "gold_per_level": 150,
+   "lumber": 500,
+   "lumber_per_level": 150,
+   "levels": 3,
+   "requires": [
+    "hcas"
+   ],
+   "time": 90
+  },
+  "R007": {
+   "type": "upgrade",
+   "name": "Починка — уровень 1",
+   "gold": 500,
+   "gold_per_level": 150,
+   "lumber": 500,
+   "lumber_per_level": 150,
+   "levels": 3,
+   "requires": [
+    "hcas"
+   ],
+   "time": 90
+  },
+  "R06Z": {
+   "type": "upgrade",
+   "name": "Мутация крови — уровень 1",
+   "gold": 400,
+   "gold_per_level": 390,
+   "lumber": 390,
+   "lumber_per_level": 390,
+   "levels": 3,
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R070": {
+   "type": "upgrade",
+   "name": "Мутация Панциря — уровень 1",
+   "gold": 150,
+   "gold_per_level": 50,
+   "lumber": 50,
+   "lumber_per_level": 75,
+   "levels": 3,
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R071": {
+   "type": "upgrade",
+   "name": "Мутация здоровья — уровень 1",
+   "gold": 430,
+   "gold_per_level": 430,
+   "lumber": 430,
+   "lumber_per_level": 420,
+   "levels": 3,
+   "requires": [
+    "unp1"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R072": {
+   "type": "upgrade",
+   "name": "Мутация конечностей — уровень 1",
+   "gold": 375,
+   "gold_per_level": 450,
+   "lumber": 350,
+   "lumber_per_level": 350,
+   "levels": 3,
+   "requires": [
+    "unp1"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R073": {
+   "type": "upgrade",
+   "name": "Мутация нерубов — уровень 1",
+   "gold": 455,
+   "gold_per_level": 400,
+   "lumber": 460,
+   "lumber_per_level": 390,
+   "levels": 3,
+   "requires": [
+    "unp1"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R074": {
+   "type": "upgrade",
+   "name": "Сильные передние конечности — уровень 1",
+   "gold": 500,
+   "gold_per_level": 1000,
+   "lumber": 600,
+   "lumber_per_level": 1000,
+   "levels": 6,
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R075": {
+   "type": "upgrade",
+   "name": "Броня туловища — уровень 1",
+   "gold": 500,
+   "gold_per_level": 1000,
+   "lumber": 600,
+   "lumber_per_level": 1000,
+   "levels": 6,
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R076": {
+   "type": "upgrade",
+   "name": "Броня чрева — уровень 1",
+   "gold": 500,
+   "gold_per_level": 1000,
+   "lumber": 600,
+   "lumber_per_level": 1000,
+   "levels": 6,
+   "time": 60,
+   "time_per_level": 15
+  },
+  "R077": {
+   "type": "upgrade",
+   "name": "Шипастый панцирь",
+   "gold": 430,
+   "lumber": 300,
+   "levels": 1,
+   "time": 15
+  },
+  "R078": {
+   "type": "upgrade",
+   "name": "Яд нерубов",
+   "gold": 450,
+   "levels": 1,
+   "time": 15
+  },
+  "R079": {
+   "type": "upgrade",
+   "name": "Мутации Ядовитого неруба — уровень 1",
+   "gold": 655,
+   "levels": 3,
+   "time": 15
+  },
+  "R07N": {
+   "type": "upgrade",
+   "name": "Нерубы",
+   "levels": 1
+  },
+  "R07O": {
+   "type": "upgrade",
+   "name": "Мутация ДНК ядов — уровень 1",
+   "gold": 430,
+   "lumber": 500,
+   "levels": 2,
+   "time": 15
+  },
+  "R07P": {
+   "type": "upgrade",
+   "name": "Паучья слизь",
+   "gold": 350,
+   "levels": 1,
+   "time": 15
+  },
+  "R07Q": {
+   "type": "upgrade",
+   "name": "Сильные конечности",
+   "gold": 150,
+   "lumber": 340,
+   "levels": 1,
+   "time": 15
+  },
+  "R07R": {
+   "type": "upgrade",
+   "name": "Командирская аура",
+   "gold": 450,
+   "lumber": 400,
+   "levels": 1,
+   "time": 15
+  },
+  "R07S": {
+   "type": "upgrade",
+   "name": "Толстый Панцирь",
+   "gold": 450,
+   "lumber": 350,
+   "levels": 1,
+   "time": 15
+  },
+  "R07T": {
+   "type": "upgrade",
+   "name": "Усилить Конечности",
+   "gold": 120,
+   "lumber": 570,
+   "levels": 1,
+   "time": 15
+  },
+  "R07U": {
+   "type": "upgrade",
+   "name": "Знания Нерубов — уровень 1",
+   "gold": 800,
+   "levels": 2,
+   "time": 15
+  },
+  "R07V": {
+   "type": "upgrade",
+   "name": "Ядовитый щит",
+   "gold": 320,
+   "lumber": 200,
+   "levels": 1,
+   "time": 15
+  },
+  "R07W": {
+   "type": "upgrade",
+   "name": "Мастерство плетения — уровень 1",
+   "gold": 340,
+   "lumber": 300,
+   "levels": 3,
+   "time": 15
+  },
+  "R0DR": {
+   "type": "upgrade",
+   "name": "Улучшенные инструменты — уровень 1",
+   "gold": 100,
+   "gold_per_level": 350,
+   "levels": 4,
+   "time": 60,
+   "time_per_level": 30
+  },
+  "Rgfo": {
+   "type": "upgrade",
+   "name": "Знак укрепления",
+   "gold": 100,
+   "gold_per_level": 50,
+   "lumber": 100,
+   "lumber_per_level": 50,
+   "levels": 3,
+   "time": 60,
+   "time_per_level": 15
+  },
+  "Rguv": {
+   "type": "upgrade",
+   "name": "Знак ночного зрения",
+   "gold": 100,
+   "gold_per_level": 50,
+   "lumber": 100,
+   "lumber_per_level": 50,
+   "levels": 1,
+   "time": 60,
+   "time_per_level": 15
+  },
+  "Rhac": {
+   "type": "upgrade",
+   "name": "Улучшенная кладка — уровень 1",
+   "gold": 125,
+   "gold_per_level": 500,
+   "lumber": 50,
+   "lumber_per_level": 450,
+   "levels": 3,
+   "requires": [
+    "hkee"
+   ],
+   "time": 60,
+   "time_per_level": 15
+  },
+  "Rhan": {
+   "type": "upgrade",
+   "name": "",
+   "only_required": true,
+   "gold": 125,
+   "lumber": 125,
+   "levels": 1,
+   "requires": [
+    "hlum",
+    "hbla",
+    "hcas"
+   ],
+   "time": 40
+  },
+  "Sch5": {
+   "type": "unknown",
+   "name": ""
+  },
+  "Sdro": {
+   "type": "unknown",
+   "name": ""
+  },
+  "Slo3": {
+   "type": "unknown",
+   "name": ""
+  },
+  "U01U": {
+   "type": "hero",
+   "name": "Пророк",
+   "base": "Ucrl",
+   "time": 55,
+   "food": 1,
+   "gold": 400,
+   "hotkey": "Z",
+   "hp": 700,
+   "lumber": 100
+  },
+  "U01V": {
+   "type": "hero",
+   "name": "Паучий лорд",
+   "base": "Ucrl",
+   "time": 55,
+   "food": 1,
+   "gold": 400,
+   "hotkey": "X",
+   "hp": 700,
+   "lumber": 100
+  },
+  "U01W": {
+   "type": "hero",
+   "name": "Высший Страж",
+   "base": "Ucrl",
+   "time": 55,
+   "food": 1,
+   "gold": 400,
+   "hotkey": "C",
+   "hp": 700,
+   "lumber": 100
+  },
+  "h0BE": {
+   "type": "unit",
+   "name": "Постройщик",
+   "base": "hpea",
+   "time": 15,
+   "gold": 75,
+   "hotkey": "Q",
+   "hp": 235
+  },
+  "h0CO": {
+   "type": "building",
+   "name": "Залы Нерубов",
+   "base": "htow",
+   "time": 120,
+   "food_made": 40,
+   "gold": 150,
+   "hotkey": "Q",
+   "hp": 1500,
+   "lumber": 205
+  },
+  "h0CP": {
+   "type": "building",
+   "name": "Палаты Нерубов",
+   "base": "hkee",
+   "time": 140,
+   "food_made": 100,
+   "gold": 4000,
+   "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4000
+  },
+  "h0CQ": {
+   "type": "building",
+   "name": "Крепость Нерубов",
+   "base": "hcas",
+   "time": 140,
+   "food_made": 150,
+   "gold": 12000,
+   "hotkey": "Z",
+   "hp": 2500,
+   "lumber": 12000
+  },
+  "h0CR": {
+   "type": "building",
+   "name": "Казармы Нерубов",
+   "base": "hbar",
+   "time": 15,
+   "food_made": 40,
+   "gold": 200,
+   "hotkey": "W",
+   "hp": 1500,
+   "lumber": 310
+  },
+  "h0CS": {
+   "type": "building",
+   "name": "Хранилище",
+   "base": "hlum",
+   "time": 10,
+   "food_made": 40,
+   "gold": 50,
+   "hotkey": "E",
+   "hp": 900
+  },
+  "h0CT": {
+   "type": "building",
+   "name": "Храм Нерубов",
+   "base": "hbar",
+   "time": 10,
+   "food_made": 40,
+   "gold": 550,
+   "hotkey": "R",
+   "hp": 1500,
+   "lumber": 500,
+   "requires": [
+    "h0CP"
+   ]
+  },
+  "h0CU": {
+   "type": "building",
+   "name": "Паучий Алтарь",
+   "base": "halt",
+   "time": 30,
+   "food_made": 40,
+   "gold": 90,
+   "hotkey": "S",
+   "hp": 900,
+   "lumber": 50
+  },
+  "h0CV": {
+   "type": "building",
+   "name": "Святилище Нерубов",
+   "base": "hbar",
+   "time": 45,
+   "food_made": 50,
+   "gold": 100,
+   "hotkey": "D",
+   "hp": 1500,
+   "lumber": 60,
+   "requires": [
+    "h0CP"
+   ]
+  },
+  "h0CZ": {
+   "type": "unit",
+   "name": "Фрегат",
+   "base": "hdes",
+   "time": 30,
+   "gold": 450,
+   "hotkey": "W",
+   "hp": 800,
+   "lumber": 475
+  },
+  "h0D0": {
+   "type": "unit",
+   "name": "Линкор",
+   "base": "hbsh",
+   "time": 50,
+   "gold": 875,
+   "hotkey": "E",
+   "hp": 1400,
+   "lumber": 1000
+  },
+  "h0D1": {
+   "type": "building",
+   "name": "Верфь",
+   "base": "hshy",
+   "time": 90,
+   "gold": 500,
+   "hotkey": "C",
+   "hp": 2000,
+   "lumber": 700
+  },
+  "h0D2": {
+   "type": "unit",
+   "name": "Транспорт",
+   "base": "hbot",
+   "time": 22,
+   "gold": 250,
+   "hotkey": "Q",
+   "hp": 750,
+   "lumber": 200
+  },
+  "h0DV": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 240,
+   "food_made": 100,
+   "gold": 4000,
+   "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4000
+  },
+  "h0GH": {
+   "type": "building",
+   "name": "Туннель нерубов",
+   "base": "halt",
+   "time": 60,
+   "food_made": 40,
+   "gold": 350,
+   "hotkey": "F",
+   "hp": 900,
+   "lumber": 350
+  },
+  "hcas": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 140,
+   "food_made": 150,
+   "gold": 12000,
+   "hotkey": "Z",
+   "hp": 2500,
+   "lumber": 12000,
+   "requires": [
+    "halt"
+   ]
+  },
+  "hkee": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 140,
+   "food_made": 100,
+   "gold": 4500,
+   "hotkey": "Z",
+   "hp": 2000,
+   "lumber": 4500
+  },
+  "ofor": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 70,
+   "gold": 205,
+   "hotkey": "E",
+   "hp": 1000
+  },
+  "ofrt": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 140,
+   "food_made": 150,
+   "gold": 12000,
+   "hotkey": "Z",
+   "hp": 2500,
+   "lumber": 12000
+  },
+  "u019": {
+   "type": "building",
+   "name": "Кокон",
+   "base": "uzig",
+   "time": 50,
+   "food_made": 40,
+   "gold": 300,
+   "hotkey": "Q",
+   "hp": 600,
+   "lumber": 150
+  },
+  "u01A": {
+   "type": "building",
+   "name": "Башня Оплетения",
+   "base": "uzg1",
+   "time": 10,
+   "food_made": 40,
+   "gold": 100,
+   "hotkey": "A",
+   "hp": 600,
+   "lumber": 90,
+   "requires": [
+    "h0CS"
+   ]
+  },
+  "u01B": {
+   "type": "unit",
+   "name": "Нерубский броненосец",
+   "base": "ucry",
+   "time": 42,
+   "equivalents": [
+    "ucrm"
+   ],
+   "gold": 275,
+   "hotkey": "R",
+   "hp": 850,
+   "lumber": 95,
+   "requires": [
+    "h0CQ"
+   ]
+  },
+  "u01C": {
+   "type": "unit",
+   "name": "Кисло-плюй",
+   "base": "ucry",
+   "time": 26,
+   "equivalents": [
+    "ucrm"
+   ],
+   "gold": 170,
+   "hotkey": "Q",
+   "hp": 550,
+   "lumber": 60,
+   "requires": [
+    "h0CP"
+   ]
+  },
+  "u01D": {
+   "type": "unit",
+   "name": "Вязальщик",
+   "base": "ucry",
+   "time": 51,
+   "equivalents": [
+    "ucrm"
+   ],
+   "gold": 340,
+   "hotkey": "W",
+   "hp": 600,
+   "lumber": 115,
+   "requires": [
+    "h0CP"
+   ]
+  },
+  "u01E": {
+   "type": "unit",
+   "name": "Пророк Нерубов",
+   "base": "ucry",
+   "time": 37,
+   "equivalents": [
+    "ucrm"
+   ],
+   "gold": 245,
+   "hotkey": "E",
+   "hp": 575,
+   "lumber": 85,
+   "requires": [
+    "ugrv"
+   ]
+  },
+  "u01F": {
+   "type": "unit",
+   "name": "Ядовитый Неруб",
+   "base": "ucry",
+   "time": 33,
+   "equivalents": [
+    "ucrm"
+   ],
+   "gold": 220,
+   "hotkey": "W",
+   "hp": 575,
+   "lumber": 75,
+   "requires": [
+    "h0CS"
+   ]
+  },
+  "u01G": {
+   "type": "unit",
+   "name": "Воин Нерубов",
+   "base": "ucry",
+   "time": 37,
+   "equivalents": [
+    "ucrm"
+   ],
+   "gold": 245,
+   "hotkey": "E",
+   "hp": 600,
+   "lumber": 85,
+   "requires": [
+    "h0CP"
+   ]
+  },
+  "u01H": {
+   "type": "unit",
+   "name": "Неруб Лекарь",
+   "base": "ucry",
+   "time": 45,
+   "equivalents": [
+    "ucrm"
+   ],
+   "gold": 300,
+   "hotkey": "Q",
+   "hp": 535,
+   "lumber": 100,
+   "requires": [
+    "h0CP"
+   ]
+  },
+  "u01I": {
+   "type": "unit",
+   "name": "Неруб Страж",
+   "base": "ucry",
+   "time": 42,
+   "equivalents": [
+    "ucrm"
+   ],
+   "gold": 280,
+   "hotkey": "E",
+   "hp": 645,
+   "lumber": 95,
+   "requires": [
+    "h0CP"
+   ]
+  },
+  "u01J": {
+   "type": "unit",
+   "name": "Молодой неруб",
+   "base": "ucry",
+   "time": 20,
+   "equivalents": [
+    "ucrm"
+   ],
+   "gold": 130,
+   "hotkey": "Q",
+   "hp": 550,
+   "lumber": 45
+  },
+  "u01K": {
+   "type": "unit",
+   "name": "Глубинный Неруб",
+   "base": "ucry",
+   "time": 27,
+   "equivalents": [
+    "u01L"
+   ],
+   "gold": 180,
+   "hotkey": "W",
+   "hp": 550,
+   "lumber": 60,
+   "requires": [
+    "h0CQ"
+   ]
+  },
+  "ugrv": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 80,
+   "gold": 215,
+   "hotkey": "V",
+   "hp": 900
+  },
+  "unp1": {
+   "type": "unit",
+   "name": "",
+   "only_required": true,
+   "time": 140,
+   "food_made": 10,
+   "gold": 545,
+   "hotkey": "U",
+   "hp": 1750,
+   "lumber": 210
+  }
+ },
+ "edges": [
+  "A003 requires R005",
+  "A00A requires R007",
+  "A00B requires R006",
+  "A00G requires R005",
+  "A0H5 requires R07W",
+  "A0H6 requires R07W",
+  "A0H7 requires R07W",
+  "A0H9 requires R077",
+  "A0HA requires R078",
+  "A0HB requires R07O",
+  "A0HC requires R07O",
+  "A0HD requires R07T",
+  "A0HE requires R07R",
+  "A0HF requires R079",
+  "A0HG requires R07U",
+  "A0HH requires R07U",
+  "A0HI requires R07V",
+  "A0HJ requires R07S",
+  "A0HK requires R079",
+  "A186 requires Rhan",
+  "R002 requires hkee",
+  "R003 requires hkee",
+  "R004 requires h0DV",
+  "R004 requires ofor",
+  "R004 requires ofrt",
+  "R005 requires hcas",
+  "R006 requires hcas",
+  "R007 requires hcas",
+  "R071 requires unp1",
+  "R072 requires unp1",
+  "R073 requires unp1",
+  "Rhac requires hkee",
+  "U01U has-ability AInv",
+  "U01U hero-ability A0I7",
+  "U01U hero-ability A0I9",
+  "U01U hero-ability A0IA",
+  "U01U hero-ability A1M9",
+  "U01V has-ability A01C",
+  "U01V has-ability AInv",
+  "U01V hero-ability A0IB",
+  "U01V hero-ability A0IC",
+  "U01V hero-ability A0ID",
+  "U01V hero-ability A0IE",
+  "U01W has-ability AInv",
+  "U01W hero-ability A0IF",
+  "U01W hero-ability A0IG",
+  "U01W hero-ability A0IL",
+  "U01W hero-ability A0IM",
+  "h0BE builds h0D1",
+  "h0BE builds u019",
+  "h0BE has-ability A0I3",
+  "h0BE has-ability ANha",
+  "h0BE has-ability Ahrp",
+  "h0BE researches R0DR",
+  "h0BE researches Rguv",
+  "h0CO has-ability A0IQ",
+  "h0CO has-ability A0LI",
+  "h0CO has-ability A0LJ",
+  "h0CO has-ability A186",
+  "h0CO has-ability Argl",
+  "h0CO morphs-to h0CP",
+  "h0CO researches Rgfo",
+  "h0CO researches Rhac",
+  "h0CO trains h0BE",
+  "h0CP has-ability A0IQ",
+  "h0CP has-ability A0LI",
+  "h0CP has-ability A0LJ",
+  "h0CP has-ability A186",
+  "h0CP has-ability Argl",
+  "h0CP morphs-to h0CQ",
+  "h0CP researches Rgfo",
+  "h0CP researches Rhac",
+  "h0CP trains h0BE",
+  "h0CQ has-ability A0IQ",
+  "h0CQ has-ability A0LI",
+  "h0CQ has-ability A0LJ",
+  "h0CQ has-ability A186",
+  "h0CQ has-ability A1KB",
+  "h0CQ has-ability Argl",
+  "h0CQ researches Rgfo",
+  "h0CQ researches Rhac",
+  "h0CQ trains h0BE",
+  "h0CR has-ability Abds",
+  "h0CR researches R077",
+  "h0CR researches R078",
+  "h0CR researches R079",
+  "h0CR researches Rgfo",
+  "h0CR researches Rhac",
+  "h0CR trains u01F",
+  "h0CR trains u01G",
+  "h0CR trains u01J",
+  "h0CS has-ability Abds",
+  "h0CS has-ability Arlm",
+  "h0CS researches R06Z",
+  "h0CS researches R070",
+  "h0CS researches R071",
+  "h0CS researches R072",
+  "h0CS researches R073",
+  "h0CS researches R074",
+  "h0CS researches R075",
+  "h0CS researches R076",
+  "h0CS researches R0DR",
+  "h0CS researches Rgfo",
+  "h0CS researches Rhac",
+  "h0CT requires h0CP",
+  "h0CT researches R07O",
+  "h0CT researches R07P",
+  "h0CT researches R07Q",
+  "h0CT researches R07R",
+  "h0CT researches R07S",
+  "h0CT researches R07T",
+  "h0CT researches Rgfo",
+  "h0CT researches Rhac",
+  "h0CT trains u01B",
+  "h0CT trains u01C",
+  "h0CT trains u01I",
+  "h0CT trains u01K",
+  "h0CU has-ability Abds",
+  "h0CU researches Rgfo",
+  "h0CU researches Rhac",
+  "h0CU trains U01U",
+  "h0CU trains U01V",
+  "h0CU trains U01W",
+  "h0CV has-ability Abds",
+  "h0CV requires h0CP",
+  "h0CV researches R07U",
+  "h0CV researches R07V",
+  "h0CV researches R07W",
+  "h0CV researches Rgfo",
+  "h0CV researches Rhac",
+  "h0CV trains u01D",
+  "h0CV trains u01H",
+  "h0CZ has-ability A002",
+  "h0CZ has-ability A009",
+  "h0CZ has-ability A00A",
+  "h0CZ has-ability A00B",
+  "h0CZ has-ability A00G",
+  "h0CZ has-ability A1PP",
+  "h0CZ researches R002",
+  "h0CZ researches R003",
+  "h0CZ researches R004",
+  "h0CZ researches R005",
+  "h0CZ researches R007",
+  "h0D0 has-ability A001",
+  "h0D0 has-ability A003",
+  "h0D0 has-ability A009",
+  "h0D0 has-ability A00A",
+  "h0D0 has-ability A00B",
+  "h0D0 has-ability A00G",
+  "h0D0 researches R002",
+  "h0D0 researches R003",
+  "h0D0 researches R004",
+  "h0D0 researches R005",
+  "h0D0 researches R007",
+  "h0D1 has-ability A15N",
+  "h0D1 researches R002",
+  "h0D1 researches R003",
+  "h0D1 researches R005",
+  "h0D1 researches R006",
+  "h0D1 researches R007",
+  "h0D1 trains h0CZ",
+  "h0D1 trains h0D0",
+  "h0D1 trains h0D2",
+  "h0D2 has-ability A00A",
+  "h0D2 has-ability A00B",
+  "h0D2 has-ability A00I",
+  "h0D2 has-ability Sch5",
+  "h0D2 has-ability Sdro",
+  "h0D2 has-ability Slo3",
+  "h0D2 researches R003",
+  "h0D2 researches R004",
+  "h0D2 researches R006",
+  "h0D2 researches R007",
+  "h0GH has-ability A0TQ",
+  "h0GH researches Rgfo",
+  "h0GH researches Rhac",
+  "race:Nerubs lua-start-tech R07N",
+  "race:Nerubs lua-starts-with h0BE",
+  "race:Nerubs lua-starts-with h0CO",
+  "u019 has-ability Asud",
+  "u019 morphs-to h0CO",
+  "u019 morphs-to h0CR",
+  "u019 morphs-to h0CS",
+  "u019 morphs-to h0CT",
+  "u019 morphs-to h0CU",
+  "u019 morphs-to h0CV",
+  "u019 morphs-to h0GH",
+  "u019 morphs-to u01A",
+  "u019 researches Rgfo",
+  "u01A requires h0CS",
+  "u01A researches R074",
+  "u01B has-ability A0H4",
+  "u01B has-ability A0H9",
+  "u01B has-ability A0HD",
+  "u01B has-ability A0HJ",
+  "u01B requires h0CQ",
+  "u01B researches R06Z",
+  "u01B researches R070",
+  "u01B researches R071",
+  "u01B researches R072",
+  "u01B researches R073",
+  "u01B researches R074",
+  "u01B researches R075",
+  "u01C has-ability A0HB",
+  "u01C has-ability A0HC",
+  "u01C requires h0CP",
+  "u01C researches R06Z",
+  "u01C researches R070",
+  "u01C researches R071",
+  "u01C researches R072",
+  "u01C researches R073",
+  "u01C researches R074",
+  "u01C researches R075",
+  "u01D has-ability A0H5",
+  "u01D has-ability A0H6",
+  "u01D has-ability A0H7",
+  "u01D requires h0CP",
+  "u01D researches R06Z",
+  "u01D researches R070",
+  "u01D researches R071",
+  "u01D researches R072",
+  "u01D researches R073",
+  "u01D researches R074",
+  "u01D researches R076",
+  "u01E requires ugrv",
+  "u01F has-ability A0HA",
+  "u01F has-ability A0HK",
+  "u01F requires h0CS",
+  "u01F researches R06Z",
+  "u01F researches R070",
+  "u01F researches R071",
+  "u01F researches R072",
+  "u01F researches R073",
+  "u01F researches R074",
+  "u01F researches R076",
+  "u01F researches R079",
+  "u01G has-ability A0H4",
+  "u01G has-ability A0HF",
+  "u01G requires h0CP",
+  "u01G researches R06Z",
+  "u01G researches R070",
+  "u01G researches R071",
+  "u01G researches R072",
+  "u01G researches R073",
+  "u01G researches R074",
+  "u01G researches R076",
+  "u01H has-ability A0H4",
+  "u01H has-ability A0HG",
+  "u01H has-ability A0HH",
+  "u01H has-ability A0HI",
+  "u01H requires h0CP",
+  "u01H researches R06Z",
+  "u01H researches R070",
+  "u01H researches R071",
+  "u01H researches R072",
+  "u01H researches R073",
+  "u01H researches R074",
+  "u01H researches R076",
+  "u01H researches R07U",
+  "u01H researches R07V",
+  "u01I has-ability A0H4",
+  "u01I has-ability A0HE",
+  "u01I requires h0CP",
+  "u01I researches R06Z",
+  "u01I researches R070",
+  "u01I researches R071",
+  "u01I researches R072",
+  "u01I researches R073",
+  "u01I researches R074",
+  "u01I researches R076",
+  "u01J has-ability A0H9",
+  "u01J researches R06Z",
+  "u01J researches R070",
+  "u01J researches R071",
+  "u01J researches R072",
+  "u01J researches R073",
+  "u01J researches R074",
+  "u01J researches R075",
+  "u01K has-ability A0H4",
+  "u01K has-ability A0H9",
+  "u01K requires h0CQ",
+  "u01K researches R06Z",
+  "u01K researches R070",
+  "u01K researches R071",
+  "u01K researches R072",
+  "u01K researches R073",
+  "u01K researches R074",
+  "u01K researches R075",
+  "u01K researches R07P",
+  "u01K researches R07Q",
+  "u01K researches R07S"
+ ]
+}

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="850" viewBox="0 0 1100 850">
+  <rect width="1100" height="850" fill="#14191f"/>
+  <g font-family="Segoe UI,Arial,sans-serif">
+    <text x="48" y="58" font-size="28" fill="#e4cfa3">23 Race Legion · Палитра текста</text>
+    <text x="48" y="90" font-size="16" fill="#a6afb8">Единый цветовой язык названий, описаний и сообщений</text>
+    <g font-size="20">
+      <rect x="48" y="125" width="38" height="38" rx="6" fill="#ced4da"/><text x="104" y="151" fill="#ced4da">CED4DA · Основной текст</text>
+      <rect x="48" y="181" width="38" height="38" rx="6" fill="#ffffff"/><text x="104" y="207" fill="#ffffff">FFFFFF · Числа и выделение</text>
+      <rect x="48" y="237" width="38" height="38" rx="6" fill="#c8e087"/><text x="104" y="263" fill="#c8e087">C8E087 · Положительный эффект</text>
+      <rect x="48" y="293" width="38" height="38" rx="6" fill="#e69a8d"/><text x="104" y="319" fill="#e69a8d">E69A8D · Штраф / ошибка</text>
+      <rect x="565" y="125" width="38" height="38" rx="6" fill="#e6c07b"/><text x="621" y="151" fill="#e6c07b">E6C07B · Внимание / условие</text>
+      <rect x="565" y="181" width="38" height="38" rx="6" fill="#e4cfa3"/><text x="621" y="207" fill="#e4cfa3">E4CFA3 · Названия и заголовки</text>
+      <rect x="565" y="237" width="38" height="38" rx="6" fill="#a6afb8"/><text x="621" y="263" fill="#a6afb8">A6AFB8 · Второстепенный текст</text>
+      <rect x="565" y="293" width="38" height="38" rx="6" fill="#a9c7de"/><text x="621" y="319" fill="#a9c7de">A9C7DE · Связанные механики</text>
+    </g>
+    <rect x="48" y="375" width="1004" height="250" rx="8" fill="#20272f" stroke="#766b52"/>
+    <text x="74" y="418" font-size="26" fill="#e4cfa3">Озарённый клинок <tspan fill="#ffffff">[E]</tspan></text>
+    <text x="74" y="448" font-size="17" fill="#a6afb8">Образец оформления описания</text>
+    <text x="74" y="490" font-size="21" fill="#ced4da">Следующая атака наносит <tspan fill="#ffffff">30</tspan> дополнительного урона.</text>
+    <text x="74" y="527" font-size="21" fill="#e6c07b">Требуется не менее <tspan fill="#ffffff">85%</tspan> здоровья.</text>
+    <text x="74" y="564" font-size="21" fill="#ced4da">Полученное лечение сокращает перезарядку <tspan fill="#c8e087">на 2 сек.</tspan></text>
+    <text x="74" y="600" font-size="19" fill="#ced4da">Связанная механика: <tspan fill="#a9c7de">Идол памяти</tspan></text>
+    <rect x="48" y="653" width="1004" height="145" rx="8" fill="#20272f" stroke="#39434d"/>
+    <text x="74" y="691" font-size="21" fill="#c8e087">Исследование завершено.</text>
+    <text x="74" y="729" font-size="21" fill="#e6c07b">Внимание: эффект слабее на героях.</text>
+    <text x="74" y="767" font-size="21" fill="#e69a8d">Недоступно: требуется улучшение главного здания.</text>
+    <text x="48" y="832" font-size="15" fill="#a6afb8">Единый стандарт · Цвет сопровождает смысл текста и не заменяет его.</text>
+  </g>
+</svg>

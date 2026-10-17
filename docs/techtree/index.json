@@ -1,0 +1,569 @@
+{
+ "generated_by": "scripts/export_techtree.py",
+ "races": [
+  {
+   "race": "Bezlikie",
+   "file": "races/Bezlikie.json",
+   "start_units": [
+    "h0HZ",
+    "u02D"
+   ],
+   "counts": {
+    "ability": 61,
+    "building": 11,
+    "hero": 3,
+    "unit": 23,
+    "unknown": 3,
+    "upgrade": 25
+   }
+  },
+  {
+   "race": "IceTrols",
+   "file": "races/IceTrols.json",
+   "start_units": [
+    "o045"
+   ],
+   "counts": {
+    "ability": 70,
+    "building": 16,
+    "hero": 4,
+    "unit": 24,
+    "unknown": 4,
+    "upgrade": 32
+   }
+  },
+  {
+   "race": "Stromgard",
+   "file": "races/Stromgard.json",
+   "start_units": [
+    "h0G9",
+    "h0GZ"
+   ],
+   "counts": {
+    "ability": 50,
+    "building": 14,
+    "hero": 3,
+    "unit": 23,
+    "unknown": 3,
+    "upgrade": 28
+   }
+  },
+  {
+   "race": "Dragon",
+   "file": "races/Dragon.json",
+   "start_units": [
+    "dra0",
+    "dra1",
+    "o01D"
+   ],
+   "counts": {
+    "ability": 67,
+    "building": 9,
+    "hero": 5,
+    "unit": 27,
+    "unknown": 35,
+    "upgrade": 39
+   }
+  },
+  {
+   "race": "Dragon2",
+   "file": "races/Dragon2.json",
+   "start_units": [
+    "o01D"
+   ],
+   "counts": {
+    "ability": 56,
+    "building": 9,
+    "hero": 4,
+    "unit": 26,
+    "unknown": 25,
+    "upgrade": 36
+   }
+  },
+  {
+   "race": "Argvinol",
+   "file": "races/Argvinol.json",
+   "start_units": [
+    "e02T"
+   ],
+   "counts": {
+    "ability": 67,
+    "building": 10,
+    "hero": 3,
+    "unit": 26,
+    "unknown": 3,
+    "upgrade": 24
+   }
+  },
+  {
+   "race": "Elements",
+   "file": "races/Elements.json",
+   "start_units": [
+    "e00F"
+   ],
+   "counts": {
+    "ability": 51,
+    "building": 12,
+    "hero": 3,
+    "unit": 34,
+    "upgrade": 27
+   }
+  },
+  {
+   "race": "Goblins",
+   "file": "races/Goblins.json",
+   "start_units": [
+    "h070",
+    "n00V"
+   ],
+   "counts": {
+    "ability": 68,
+    "building": 12,
+    "hero": 11,
+    "unit": 28,
+    "unknown": 6,
+    "upgrade": 32
+   }
+  },
+  {
+   "race": "Demon",
+   "file": "races/Demon.json",
+   "start_units": [
+    "e02Y",
+    "h0DU"
+   ],
+   "counts": {
+    "ability": 79,
+    "building": 13,
+    "hero": 6,
+    "unit": 23,
+    "unknown": 7,
+    "upgrade": 23
+   }
+  },
+  {
+   "race": "Illidari",
+   "file": "races/Illidari.json",
+   "start_units": [
+    "h0E9",
+    "h0EI"
+   ],
+   "counts": {
+    "ability": 77,
+    "building": 14,
+    "hero": 4,
+    "unit": 23,
+    "unknown": 3,
+    "upgrade": 35
+   }
+  },
+  {
+   "race": "Bandits",
+   "file": "races/Bandits.json",
+   "start_units": [
+    "h002",
+    "h007"
+   ],
+   "counts": {
+    "ability": 76,
+    "building": 19,
+    "hero": 3,
+    "unit": 32,
+    "unknown": 3,
+    "upgrade": 31
+   }
+  },
+  {
+   "race": "Red_Orden",
+   "file": "races/Red_Orden.json",
+   "start_units": [
+    "h014"
+   ],
+   "counts": {
+    "ability": 63,
+    "building": 13,
+    "hero": 3,
+    "unit": 22,
+    "unknown": 3,
+    "upgrade": 36
+   }
+  },
+  {
+   "race": "Undead",
+   "file": "races/Undead.json",
+   "start_units": [
+    "n014",
+    "u00P"
+   ],
+   "counts": {
+    "ability": 74,
+    "building": 14,
+    "hero": 6,
+    "unit": 27,
+    "unknown": 8,
+    "upgrade": 33
+   }
+  },
+  {
+   "race": "Horde",
+   "file": "races/Horde.json",
+   "start_units": [
+    "ogre",
+    "opeo",
+    "w200",
+    "w20q"
+   ],
+   "counts": {
+    "ability": 120,
+    "building": 39,
+    "hero": 14,
+    "unit": 89,
+    "unknown": 73,
+    "upgrade": 79
+   }
+  },
+  {
+   "race": "Blood_Elves",
+   "file": "races/Blood_Elves.json",
+   "start_units": [
+    "h04K"
+   ],
+   "counts": {
+    "ability": 107,
+    "building": 15,
+    "hero": 3,
+    "unit": 28,
+    "unknown": 4,
+    "upgrade": 50
+   }
+  },
+  {
+   "race": "Dalaran",
+   "file": "races/Dalaran.json",
+   "start_units": [
+    "h030",
+    "u001"
+   ],
+   "counts": {
+    "ability": 67,
+    "building": 14,
+    "hero": 3,
+    "unit": 19,
+    "unknown": 3,
+    "upgrade": 33
+   }
+  },
+  {
+   "race": "KulTiras",
+   "file": "races/KulTiras.json",
+   "start_units": [
+    "h013",
+    "h01X"
+   ],
+   "counts": {
+    "ability": 51,
+    "building": 14,
+    "hero": 3,
+    "unit": 19,
+    "unknown": 4,
+    "upgrade": 44
+   }
+  },
+  {
+   "race": "Nocnorogdennue",
+   "file": "races/Nocnorogdennue.json",
+   "start_units": [
+    "h0CJ"
+   ],
+   "counts": {
+    "ability": 60,
+    "building": 12,
+    "hero": 3,
+    "unit": 21,
+    "unknown": 3,
+    "upgrade": 31
+   }
+  },
+  {
+   "race": "Draeneis",
+   "file": "races/Draeneis.json",
+   "start_units": [
+    "h012"
+   ],
+   "counts": {
+    "ability": 80,
+    "building": 12,
+    "hero": 3,
+    "unit": 24,
+    "unknown": 3,
+    "upgrade": 42
+   }
+  },
+  {
+   "race": "Vryculs",
+   "file": "races/Vryculs.json",
+   "start_units": [
+    "h0C9"
+   ],
+   "counts": {
+    "ability": 50,
+    "building": 11,
+    "hero": 3,
+    "unit": 23,
+    "unknown": 10,
+    "upgrade": 32
+   }
+  },
+  {
+   "race": "Kult_Sum_Molota",
+   "file": "races/Kult_Sum_Molota.json",
+   "start_units": [
+    "o00J"
+   ],
+   "counts": {
+    "ability": 56,
+    "building": 9,
+    "hero": 3,
+    "unit": 20,
+    "unknown": 3,
+    "upgrade": 33
+   }
+  },
+  {
+   "race": "Nerubs",
+   "file": "races/Nerubs.json",
+   "start_units": [
+    "h0BE",
+    "h0CO"
+   ],
+   "counts": {
+    "ability": 54,
+    "building": 12,
+    "hero": 3,
+    "unit": 21,
+    "unknown": 3,
+    "upgrade": 32
+   }
+  },
+  {
+   "race": "Silitids",
+   "file": "races/Silitids.json",
+   "start_units": [
+    "e01G",
+    "e01H"
+   ],
+   "counts": {
+    "ability": 65,
+    "building": 15,
+    "hero": 5,
+    "unit": 26,
+    "unknown": 6,
+    "upgrade": 29
+   }
+  },
+  {
+   "race": "Gnomes",
+   "file": "races/Gnomes.json",
+   "start_units": [
+    "h0FA",
+    "h0FK",
+    "h0FX"
+   ],
+   "counts": {
+    "ability": 76,
+    "building": 11,
+    "hero": 3,
+    "unit": 32,
+    "unknown": 4,
+    "upgrade": 68
+   }
+  },
+  {
+   "race": "Gilneas",
+   "file": "races/Gilneas.json",
+   "start_units": [
+    "h0IT"
+   ],
+   "counts": {
+    "ability": 50,
+    "building": 12,
+    "hero": 3,
+    "unit": 19,
+    "unknown": 3,
+    "upgrade": 25
+   }
+  },
+  {
+   "race": "Nagi",
+   "file": "races/Nagi.json",
+   "start_units": [
+    "nmpe"
+   ],
+   "counts": {
+    "ability": 51,
+    "building": 11,
+    "hero": 3,
+    "unit": 17,
+    "unknown": 2,
+    "upgrade": 22
+   }
+  },
+  {
+   "race": "nightelf",
+   "file": "races/nightelf.json",
+   "start_units": [
+    "ewsp"
+   ],
+   "counts": {
+    "ability": 77,
+    "building": 14,
+    "hero": 3,
+    "unit": 27,
+    "unknown": 4,
+    "upgrade": 51
+   }
+  },
+  {
+   "race": "Forsaken",
+   "file": "races/Forsaken.json",
+   "start_units": [
+    "h0J5",
+    "h0JP"
+   ],
+   "counts": {
+    "ability": 82,
+    "building": 12,
+    "hero": 3,
+    "unit": 21,
+    "unknown": 7,
+    "upgrade": 27
+   }
+  },
+  {
+   "race": "Ogres",
+   "file": "races/Ogres.json",
+   "start_units": [
+    "o035",
+    "o03W"
+   ],
+   "counts": {
+    "ability": 61,
+    "building": 13,
+    "hero": 3,
+    "unit": 26,
+    "unknown": 3,
+    "upgrade": 29
+   }
+  },
+  {
+   "race": "Alliance",
+   "file": "races/Alliance.json",
+   "start_units": [
+    "hpea",
+    "htow"
+   ],
+   "counts": {
+    "ability": 77,
+    "building": 17,
+    "hero": 11,
+    "unit": 27,
+    "unknown": 5,
+    "upgrade": 63
+   }
+  },
+  {
+   "race": "JungleTrolls",
+   "file": "races/JungleTrolls.json",
+   "start_units": [
+    "h0N5",
+    "o04Q"
+   ],
+   "counts": {
+    "ability": 79,
+    "building": 10,
+    "hero": 6,
+    "unit": 21,
+    "unknown": 3,
+    "upgrade": 21
+   }
+  },
+  {
+   "race": "FelOrk",
+   "file": "races/FelOrk.json",
+   "start_units": [
+    "n06B"
+   ],
+   "counts": {
+    "ability": 80,
+    "building": 13,
+    "hero": 3,
+    "unit": 40,
+    "unknown": 3,
+    "upgrade": 47
+   }
+  },
+  {
+   "race": "ForestTrolls",
+   "file": "races/ForestTrolls.json",
+   "start_units": [
+    "h0MT",
+    "o04V"
+   ],
+   "counts": {
+    "ability": 72,
+    "building": 12,
+    "hero": 5,
+    "unit": 23,
+    "unknown": 3,
+    "upgrade": 27
+   }
+  },
+  {
+   "race": "CultOfDamned",
+   "file": "races/CultOfDamned.json",
+   "start_units": [
+    "cD02"
+   ],
+   "counts": {
+    "ability": 46,
+    "building": 9,
+    "hero": 3,
+    "unit": 26,
+    "unknown": 33,
+    "upgrade": 17
+   }
+  },
+  {
+   "race": "Pandarens",
+   "file": "races/Pandarens.json",
+   "start_units": [
+    "pa01",
+    "pa23"
+   ],
+   "counts": {
+    "ability": 25,
+    "building": 16,
+    "hero": 4,
+    "unit": 24,
+    "unknown": 64,
+    "upgrade": 18
+   }
+  },
+  {
+   "race": "HordeW2",
+   "file": "races/HordeW2.json",
+   "start_units": [
+    "w200",
+    "w20q"
+   ],
+   "counts": {
+    "ability": 45,
+    "building": 15,
+    "hero": 4,
+    "unit": 30,
+    "unknown": 69,
+    "upgrade": 25
+   }
+  }
+ ]
+}
