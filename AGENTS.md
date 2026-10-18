@@ -1,8 +1,19 @@
 # Repository Guidelines
 
+## Map Name
+
+Since 1.6.515 the map is called **23 Race Forever** (formerly 23 Race Legion). Version numbers continue the Legion
+line without reset: 1.6.514 (last Legion) → 1.6.515 (first Forever) → 1.6.516 …
+
+- In-game name: WTS `STRING 003` = `23 Race Forever 1.6.NNN` (the welcome panel reads the version from it).
+- `version.txt` stays `23_race_1_6_NNN`; release file `23_Race_Forever_v1_6_NNN.w3x`, tag `v23_race_1_6_NNN`.
+- Use "23 Race Forever" in all new texts, docs, release notes and commits. The GitHub repo is still
+  `VinerX-Games/23-Race-Legion`; keep local `23-Race-Legion` paths. "Legion" in Demon race code
+  (Burning Legion, `Fin7Legion`, AI token `legion`) is unrelated to the map name.
+
 ## Project Structure & Module Organization
 
-23 Race Legion is a Warcraft III: Reforged map using Lua 5.3. The unpacked `map.w3x/` directory contains map data, imported models, textures, and other assets.
+23 Race Forever is a Warcraft III: Reforged map using Lua 5.3. The unpacked `map.w3x/` directory contains map data, imported models, textures, and other assets.
 
 - `map.w3x/_lua/monolith_split/sections/`: canonical Lua sources, including runtime triggers, AI modules, and race definitions.
 - `map.w3x/_lua/monolith_split/manifest.json`: section inclusion and concatenation order.

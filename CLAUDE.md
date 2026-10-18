@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Проект
 
-23 Race Legion — карта Warcraft III: Reforged (Altered Melee, Risk-жанр, до 24 игроков, ~37 рас).
+23 Race Forever — карта Warcraft III: Reforged (Altered Melee, Risk-жанр, до 24 игроков, ~37 рас).
 Карта хранится распакованной в `map.w3x/` (object data, ландшафт, тысячи импортов). Скрипт карты —
 Lua 5.3 (WC3-рантайм), автоконвертированный из vJASS; ~69 000 строк. Язык кода, комментариев,
 документации и коммитов — русский (коммиты в стиле conventional commits: `fix(ai): ...`, `chore(release): ...`).
@@ -14,6 +14,17 @@ Lua 5.3 (WC3-рантайм), автоконвертированный из vJAS
 `AI_*.md` (ИИ), `SCRIPTS_ANALYSIS.md` (игровые системы исходного vJASS).
 Текущий аудит кода и список найденных, но не исправленных багов — `docs/AUDIT_TODO.md`
 (анализаторы — `scripts/audit/`).
+
+## Название карты
+
+С версии 1.6.515 карта называется **23 Race Forever** (раньше — 23 Race Legion). Нумерация версий
+продолжает линию Legion без сброса: 1.6.514 (последняя Legion) → 1.6.515 (первая Forever) → 1.6.516 …
+
+- Название в игре — WTS `STRING 003`: `23 Race Forever 1.6.NNN` (из неё же берётся версия для приветственной панели).
+- `version.txt` — по-прежнему `23_race_1_6_NNN`; файл релиза — `23_Race_Forever_v1_6_NNN.w3x`, тег — `v23_race_1_6_NNN`.
+- Во всех новых текстах, доках, релиз-нотах и коммитах писать «23 Race Forever». Репозиторий на GitHub пока
+  `VinerX-Games/23-Race-Legion`, локальные пути вида `23-Race-Legion` не трогать. «Legion» в коде расы
+  Демонов (Пылающий Легион, `Fin7Legion`, токен `legion`) к названию карты не относится.
 
 ## Сборка и проверки
 
@@ -44,7 +55,7 @@ python -m unittest tests.test_ai_teleport.AiTeleportTests.test_empty_army_does_n
   Новый файл секции не попадёт в сборку, пока его не добавить в манифест; порядок в манифесте =
   порядок определения глобалов/функций в итоговом скрипте.
 - Ошибки рантайма приходят с номером строки собранного `war3map.lua`; искать её там, чинить в секции.
-- Релиз: правка `version.txt` (формат `23_race_1_6_NNN`) и строки версии в `docs/PROJECT_MAP.md`.
+- Релиз: правка `version.txt` (формат `23_race_1_6_NNN`), версии в WTS `STRING 003` и строки версии в `docs/PROJECT_MAP.md`.
 
 ## Архитектура Lua-скрипта
 

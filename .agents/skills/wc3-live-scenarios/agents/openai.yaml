@@ -1,0 +1,3 @@
+interface:
+  display_name: "WC3 Live Scenarios"
+  short_description: "Run repeatable Warcraft gameplay assertions"

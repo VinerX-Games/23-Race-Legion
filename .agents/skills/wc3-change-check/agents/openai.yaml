@@ -1,0 +1,3 @@
+interface:
+  display_name: "WC3 Change Check"
+  short_description: "Run focused map checks and inspect failures"
